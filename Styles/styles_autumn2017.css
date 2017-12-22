@@ -1,0 +1,2642 @@
+
+body.v6.autumn2016_home {
+	background: #1b2838;
+}
+
+.autumn2016_takeover_sizer {
+	position: relative;
+	min-height: 180px;
+}
+.winter2017_takeover_sizer {
+	position: relative;
+	min-height: 252px;
+}
+
+.autumn2016_sale_title_ctn {
+	text-align: center;
+}
+
+.autumn2016_tooltip_area {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.autumn2016_title {
+	font-size: 19px;
+	color: #ffffff;
+	letter-spacing: 3px;
+}
+
+.autumn2016_dates {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 2px;
+}
+
+@media screen and (max-width: 910px )
+{
+	/* give the title some drop shadow to help readability on mobile */
+	html.responsive .autumn2016_title {
+		text-shadow: 1px 1px 3px #000000;
+	}
+	html.responsive .autumn2016_dates {
+		text-shadow: 1px 1px 1px #000000;
+	}
+
+	html.responsive .winter2017_takeover_sizer {
+		min-height: 0;
+	}
+}
+@media screen and (max-width: 420px )
+{
+	/* give the title some drop shadow to help readability on mobile */
+	html.responsive .autumn2016_title {
+		font-size: 15px;
+		text-shadow: 1px 1px 1px #000000;
+	}
+	html.responsive .autumn2016_dates {
+		font-size: 12px;
+		text-shadow: 1px 1px 0 #000000;
+	}
+}
+
+.autumn2016_faq_callout {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+
+
+body.v6.winter2017_home .home_page_body_ctn {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2017/home_background_tile.jpg') repeat-x;
+}
+
+body.v6.winter2017_home.resultsday .home_page_body_ctn {
+	background: radial-gradient( #151f2c 0%, #151f2c 80%, #000000 100% );
+}
+
+body.v6.winter2017_home h2.winter {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 27px;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.winter2017_home .home_ctn h4.winter,
+.winter2017_home .home_page_content h4.winter {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
+	color: #c1c1c1;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+@media screen and (max-width: 500px) {
+	html.responsive body.v6.winter2017_home h2 {
+		font-size: 22px;
+	}
+	html.responsive .award_category .awardtitle {
+		font-size: 18px;
+	}
+}
+
+body.v6.winter2017_home h4.with_button {
+	line-height: 24px;
+}
+
+body.v6.winter2017_home h4 .btn_small {
+	vertical-align: middle;
+	margin-left: 8px;
+}
+
+body.v6.winter2017_home h4 .btn_small span {
+	padding: 0 4px;
+	text-transform: none;
+	font-size: 11px;
+}
+
+.home_right_btn {
+	float: right;
+	margin-top: 27px;
+}
+.hardware .home_right_btn {
+	margin-top: 6px;
+}
+
+.winter2017_hardware_banner {
+	position: relative;
+	border-bottom: 1px solid #293d55;
+	margin-bottom: 12px;
+}
+
+.winter2017_hardware_banner .left {
+	float: left;
+	width: 350px;
+	position: relative;
+	z-index: 2;
+}
+
+.winter2017_hardware_banner .right {
+	float: right;
+	width: 300px;
+	text-align: left;
+	padding-bottom: 28px;
+	position: relative;
+	z-index: 2;
+}
+
+.winter2017_hardware_banner .hardware_callout {
+	position: absolute;
+	left: 40%;
+	top: -38px;
+
+}
+
+.winter2017_hardware_banner .alternate_title.hide {
+	display: none;
+}
+
+.winter2017_hardware_banner .alternate_title.show {
+	display: block;
+}
+
+.hardware_carousel_ctn .arrow {
+	top: 13%;
+}
+
+@media screen and (max-width: 780px)
+{
+	html.responsive .winter2017_hardware_banner .left,
+	html.responsive .winter2017_hardware_banner .right
+	{
+		float: none;
+		width: auto;
+	}
+
+	html.responsive	.winter2017_hardware_banner .hardware_callout {
+		position: static;
+		float: right;
+		margin-right: -18px;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .winter2017_hardware_banner h2 {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width: 450px)
+{
+	html.responsive	.winter2017_hardware_banner .hardware_callout {
+		float: none;
+		text-align: center;
+	}
+
+	html.responsive .winter2017_hardware_banner,
+	html.responsive .winter2017_hardware_banner .right {
+		text-align: center;
+	}
+
+	html.responsive .winter2017_hardware_banner .alternate_title.hide {
+		display: block;
+	}
+
+	html.responsive .winter2017_hardware_banner .alternate_title.show {
+		display: none;
+	}
+}
+
+
+.autumn2016_takeover_sizer {
+	position: relative;
+}
+
+.winter2017_dates_callout {
+	position: absolute;
+	left: 0;
+	top: 58%;
+
+	letter-spacing: 0.25em;
+	color: #ffffff;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .winter2017_dates_callout {
+		left: 2%;
+		top: 56%;
+	}
+}
+@media screen and (max-width: 420px )
+{
+}
+
+.steamawards_callout {
+	position: absolute;
+	right: 0;
+	width: 342px;
+	text-align: left;
+	top: 19%;
+	max-width: 46%;
+}
+
+a.steamawards_banner_ctn {
+	display: block;
+	position: absolute;
+	top: 0;
+}
+
+a.steamawards_banner_ctn:hover .steamawards_banner {
+	background: rgba( 255, 255, 255, 1 );
+}
+a.steamawards_banner_ctn:hover .steamawards_banner .awardtitle,
+a.steamawards_banner_ctn:hover .steamawards_banner .writein_title {
+	color: #080808;
+}
+
+.steamawards_banner_ctn .steamawards_header {
+	color: #ffffff;
+	font-size: 13px;
+	letter-spacing: 0.06em;
+	text-shadow: 1px 1px #000000;
+	line-height: 20px;
+	text-transform: uppercase;
+	padding-left: 6px;
+}
+
+.steamawards_banner_ctn .steamawards_banner {
+	padding: 8px 100px 8px 8px;
+	margin-right: 10px;
+	background: rgba( 255, 255, 255, 0.6 );
+}
+
+.writeinday .steamawards_banner_ctn .steamawards_banner {
+	background: linear-gradient( to right, rgba( 255, 255, 255, 0.4 ) 0%, rgba( 255, 255, 255, 0.4 ) 85%, rgba( 255, 255, 255, 0.0 ) 100% );
+	padding-right: 30px;
+	margin-right: 100px;
+}
+.writeinday a.steamawards_banner_ctn:hover .steamawards_banner {
+	background: linear-gradient( to right, rgba( 255, 255, 255, 0.8 ) 0%, rgba( 255, 255, 255, 0.8 ) 85%, rgba( 255, 255, 255, 0.0 ) 100% );
+}
+
+.steamawards_banner .castfortoday {
+	color: #424242;
+	font-size: 12px;
+	text-transform: none;
+}
+
+.steamawards_banner .awardtitle,
+.steamawards_banner .writein_title {
+	font-size: 15px;
+	line-height: 18px;
+	text-shadow: 1px 1px rgba( 0, 0, 0, 0.2 );
+}
+
+a.steamaward_trophylink {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: -136px;
+}
+
+.writeinday a.steamaward_trophylink {
+	right: -230px;
+}
+
+.writeinday a.steamawards_banner_ctn {
+	z-index: 1;
+}
+
+.writeinday .castfortoday {
+	color: #fd7c54;
+	font-size: 11px;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive a.steamaward_trophylink {
+		right: -14%;
+		max-width: 30%;
+	}
+	html.responsive .writeinday a.steamaward_trophylink {
+		right: -22%;
+		max-width: 44%;
+	}
+
+	html.responsive .writeinday .steamawards_banner_ctn .steamawards_banner
+	{
+		margin-right: 0;
+		background: linear-gradient( to right, rgba( 255, 255, 255, 0.5 ) 0%, rgba( 255, 255, 255, 0.5 ) 85%, rgba( 255, 255, 255, 0.0 ) 100% );
+	}
+}
+
+@media screen and (max-width: 620px)
+{
+	html.responsive a.steamaward_trophylink {
+		display: none;
+	}
+
+	html.responsive .steamawards_callout {
+		top: 0;
+	}
+
+	html.responsive .steamawards_banner_ctn .steamawards_banner {
+		padding-right: 8px;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .steamawards_banner_ctn .steamawards_header {
+		font-size: 11px;
+		line-height: 15px;
+	}
+
+	html.responsive .steamawards_banner .castfortoday {
+		font-size: 10px;
+	}
+
+	html.responsive .steamawards_banner .awardtitle,
+	html.responsive .steamawards_banner .writein_title {
+		font-size: 12px;
+		line-height: 14px;
+		text-shadow: 1px 1px rgba( 0, 0, 0, 0.2 );
+	}
+}
+
+@media screen and (max-width: 440px)
+{
+
+	html.responsive .steamawards_banner .castfortoday {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 360px)
+{
+
+	html.responsive .steamawards_banner  {
+		display: none;
+	}
+}
+
+
+.FeaturedBlock {
+	font-size: 0;
+	max-width: 930px;
+	margin: 20px auto;
+}
+
+.FeaturedBlock.First {
+	margin-top: 0;
+}
+.FeaturedBlock.Second {
+	margin-top: 20px;
+}
+
+.FeaturedBlock.First h3 {
+	text-shadow: 1px 1px 1px #000000;
+	margin-bottom: 8px;
+}
+
+.FeaturedBlock img.sale_capsule_image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.FeaturedBlock a.sale_capsule {
+	display: block;
+	margin-bottom: 12px;
+	background: #202020;
+}
+
+.sale_capsule.ds_flagged:not(.ds_wishlist) img.sale_capsule_image {
+	opacity: 0.4;
+	transition: opacity 0.4s;
+}
+
+.sale_capsule.ds_flagged:not(.ds_wishlist):hover img.sale_capsule_image {
+	opacity: 1.0;
+
+	/* webkit workaround for image blurriness*/
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateZ(0) scale(1.0, 1.0);
+}
+
+.FeaturedBlock .ds_flag {
+	box-shadow: 0 0 3px #000;
+}
+
+.twothird_split .large_sale_caps {
+	width: 616px;
+}
+
+.twothird_split.left .large_sale_caps {
+	float: left;
+	margin-right: 12px;
+}
+
+.twothird_split.right .large_sale_caps {
+	float: right;
+	margin-left: 12px;
+}
+
+.twothird_split .small_sale_caps {
+	overflow: hidden;
+	width: auto;
+}
+
+.twothird_split .small_sale_caps a.sale_capsule:first-child {
+	margin-bottom: 7px;
+}
+
+.three_row a.sale_capsule {
+	margin-right: 12px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.three_row a.sale_capsule:last-child {
+	margin-right: 0;
+}
+
+.large_sale_caps a.sale_capsule {
+	width: 616px;
+	height: 353px;
+}
+
+.small_sale_caps a.sale_capsule {
+	width: 302px;
+	height: 173px;
+}
+
+.sale_bottombar {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 5px 8px;
+	text-align: right;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .large_sale_caps a.sale_capsule,
+	html.responsive .small_sale_caps a.sale_capsule {
+		width: auto;
+		height: auto;
+	}
+
+	html.responsive .twothird_split .large_sale_caps {
+		width: 66%;
+	}
+
+	html.responsive .twothird_split.right .large_sale_caps {
+		margin-left: 2%;
+	}
+
+	html.responsive .twothird_split.left .large_sale_caps {
+		margin-right: 2%;
+	}
+
+	html.responsive .three_row a.sale_capsule {
+		width: 32%;
+		margin-right: 2%;
+	}
+
+	html.responsive .three_row a.sale_capsule:last-child {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 580px)
+{
+	html.responsive .twothird_split .large_sale_caps
+	{
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .twothird_split.left .large_sale_caps,
+	html.responsive .twothird_split.right .large_sale_caps{
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	html.responsive .twothird_split .small_sale_caps a.sale_capsule:first-child {
+		margin-bottom: 12px;
+	}
+
+	html.responsive .twothird_split .small_sale_caps  a.sale_capsule {
+		display: inline-block;
+		width: 49%;
+		margin-right: 2%;
+	}
+
+	html.responsive .twothird_split .small_sale_caps a.sale_capsule:last-child {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive .three_row a.sale_capsule {
+		width: 49%;
+		margin-right: 2%;
+	}
+
+	html.responsive .three_row a.sale_capsule:first-child {
+		width: auto;
+		margin-right: 0;
+	}
+}
+
+.FeaturedBlock .ds_flag {
+	top: 25%;
+}
+
+.FeaturedBlock a:not(.btn_small), .tab_content a {
+	position: relative;
+	box-shadow: 0px 0px 4px rgba( 0, 0, 0, 1);
+}
+
+.tab_content .discount_block,
+.FeaturedBlock .discount_block {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+	font-size: 15px;
+	overflow: hidden;
+}
+
+
+
+.TopSellerCapsule img {
+	width: 231px;
+	height: 87px;
+}
+
+.TopSellerCapsule .ds_flag {
+	top: 20px;
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .TopSellerCapsule img {
+		width: 100%;
+		height: auto;
+		min-height: 60px;
+	}
+
+	html.responsive .TopSellerCapsule {
+		width: 24.5%;
+		margin-right: 0.5%;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	html.responsive .TopSellerCapsule {
+		width: 32%;
+		margin-right: 1%;
+	}
+
+	/* 3 per row now, hide 16th so we end at the 15th */
+	html.responsive .tab_content .TopSellerCapsule:nth-child(16) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 520px)
+{
+	html.responsive .TopSellerCapsule {
+		width: 49%;
+		margin-right: 1%;
+	}
+
+	html.responsive .tab_content .TopSellerCapsule:nth-child(15) {
+		display: none;
+	}
+}
+
+.tab_content {
+	font-size: 0;
+}
+
+.home_tab_col {
+	margin-bottom: 30px;
+}
+
+.TopSellerCapsule {
+	display: inline-block;
+	width: 231px;
+	margin: 0 4px 4px 0;
+}
+
+
+.v6 .discount_pct {
+	background-color: #8bb006;
+	color: #000;
+	vertical-align: top;
+}
+
+.v6 .discount_prices > div  {
+	vertical-align: top;
+}
+
+.v6 .discount_block.no_discount .discount_prices .discount_final_price {
+	padding: 0 3px;
+}
+
+.home_smallcaps.medium
+{
+	min-height: 145px;
+	font-size: 0;
+}
+
+.home_smallcaps.medium .home_smallcap {
+	width: 202px;
+	margin-bottom: 1px;
+	float: none;
+	display: inline-block;
+	font-size: 12px;
+}
+
+.home_smallcaps.medium .home_smallcap img {
+	width: 202px;
+	height: 78px;
+}
+
+.wishlist_items_on_sale .ds_flag.ds_wishlist_flag {
+	display: none;
+}
+
+form.steamward_nominate_form {
+	padding: 12px 12px;
+}
+
+.steamaward_nomination_row, .steamaward_nomination_row > label {
+	line-height: 18px;
+}
+
+.steamaward_nomination_row {
+	margin: 10px 0;
+}
+
+.steamaward_nomination_row > * {
+	vertical-align: middle;
+}
+
+.steamaward_nomination_row .radio_ctn {
+	float: left;
+	margin-right: 4px;
+}
+
+.steamaward_nomination_row .steamaward_nomination_content {
+	overflow: hidden;
+}
+
+.steamaward_nomination_row.selected label {
+	color: #67c1f5;
+}
+
+html.responsive.touch .steamaward_nomination_row {
+	margin: 12px 0;
+}
+
+.steamawards_nomination_intro {
+	font-size: 16px;
+	color: #67c1f5;
+}
+
+.writein_ctn {
+}
+
+.writein_ctn label {
+	line-height: 27px;
+	margin-right: 4px;
+}
+
+.writein_ctn .gray_bevel {
+	margin-bottom: 0;
+}
+
+.steamaward_nomination_row.selected .writein_ctn {
+	display: block;
+}
+
+.steamaward_nomination_row.remove_row {
+	margin-top: 24px;
+	/* color: #a94847; */
+}
+
+.steamaward_nominate_gamepage_ctn {
+	padding: 15px 15px 15px 83px;
+	position: relative;
+	color: #ffffff;
+	margin-bottom: 16px;
+background: -webkit-linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););background: linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););}
+
+.steamaward_nominate_award {
+	position: relative;
+	width: 68px;
+}
+
+.steamaward_nominate_award .award_icon {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/autumn2016/steamaward_icon.png') no-repeat center center;
+	width: 178px;
+	height: 227px;
+	position: absolute;
+	top: -63px;
+	left: -114px;
+
+	pointer-events: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+screen and ( min-resolution: 2dppx)
+{
+	.steamaward_nominate_award .award_icon {
+		background-image: url('https://steamcdn-a.akamaihd.net/store/promo/autumn2016/steamaward_icon2x.png');
+		background-size: 100% 100%;
+	}
+}
+
+.gamewinner .steamaward_nominate_award {
+	position: absolute;
+	left: -18px;
+	bottom: 0;
+	pointer-events: none;
+}
+
+.gamewinner .steamaward_nominate_award img {
+	width: 179px;
+	height: auto;
+}
+
+.game_nominate {
+	display: block;
+	background: rgba( 143,91, 131, 0.2 );
+	width: calc( 50% - 57px );
+	float: left;
+	min-height: 70px;
+	padding: 14px 23px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.steamaward_nominate_gamepage_ctn:not(.homepage):not(.gamewinner) .game_nominate:hover {
+	border-color: #ac5999;
+	color: #ffffff;
+}
+
+.game_nominate.steamaward_nominate_full {
+	float: none;
+	width: auto;
+}
+
+
+.steamaward_nominate_left {
+	margin-right: 18px;
+}
+
+.nominate_check_ctn {
+	display: inline-block;
+	position: relative;
+	width: 18px;
+	height: 16px;
+	vertical-align: bottom;
+}
+
+.nominate_check {
+	position: absolute;
+	left: 0;
+	top: -7px;
+	width: 23px;
+	height: 21px;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MkY1OThENTNBREZEMTFFNkE0N0VDMjkwNjQ3ODI5RTMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MkY1OThENTRBREZEMTFFNkE0N0VDMjkwNjQ3ODI5RTMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyRjU5OEQ1MUFERkQxMUU2QTQ3RUMyOTA2NDc4MjlFMyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyRjU5OEQ1MkFERkQxMUU2QTQ3RUMyOTA2NDc4MjlFMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhoAR8sAAAGSSURBVHjarJXPKwRRHMB3B0ukJJyVPfgPOBBJiSJR2M2JOGgvyoFyQQ4uKKUo1y1h2/zIDaUUF38AB9lElEJJsfH51psar5kxa+Zbn96+b+999s177zsT3o6thfxEb3L0V38nvl5A7lN+G6EAA3EdTYY2If38AMWtNGkogRX6j0ZA4i6afSWWeIFLIwBxN80WFKrUNwyx71d+5SLehIglt4g45fdAW2zEpzBpdv4rl1uxp4kfoJ9Vf/mRR5W42JLLQgzxvXWgKS+HUg/iCjiESi0/i/hEH2zKZ+ACalzEEbXHUS0v0nm7CYaiD2rhDOod5EvqEK3xDIOsOusklxXdqn4VHMOANq4HxmzmjyC+c3pUkX9AB1yrXBEkYQ7yoBo2bOZKLuV2QOa75Qna1bbIYYVhGhrVH5Rp825g/K/Tt15FWXknvFtyTdCgzZHyHoa3XOQS53Jf1b11ilU48lIQdkW0CxMO4zMw5bXanCp0GQ5s8gkv2+Gl/OPqHW1GWj2V53D7Er2qA26GNljI9SX0I8AAp1ZZjwFSpF8AAAAASUVORK5CYII=' ) no-repeat center;
+}
+
+.nominate_missing {
+	position: absolute;
+	left: 2px;
+	top: 0;
+	width: 15px;
+	height: 14px;
+	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Mjc4OUI0NzhCMDVEMTFFNkE4Q0M4QzM1QjJDRDhBMjgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Mjc4OUI0NzlCMDVEMTFFNkE4Q0M4QzM1QjJDRDhBMjgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyNzg5QjQ3NkIwNUQxMUU2QThDQzhDMzVCMkNEOEEyOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyNzg5QjQ3N0IwNUQxMUU2QThDQzhDMzVCMkNEOEEyOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps8YSfgAAAEdSURBVHjaYvz//z8DMtAPSGEDUuFA7ArEkkD8HIh3A/HKixvm/EJWy4SmMR9IfYZqBGnohNIg/meoPBwwwmwGSjQCqSAgDgHacJMBDQDl1YHUGiBeB5Svh2sGStgA2UuB2AQo8ZoBBwCqEwVSZ4A4BqjuMMzZmUBciU8jCEDlK6DqGZiApnEDaX8gXstAHFgHxL5AfTwgmzWA+AbQ1J/E6ISquwHSx8RAAQBpBoWsOtAZ7MRogKoDu5YJ6IwvQMZmaDQRA0DqNoP0wZw9HYi7oFHBQCCqOqHqISkMFGdAah4Q7wMqUMOhESS+D4jnQ9UjUhhUQQHU5BVAvAearkHp2wWII4C4HKhxAkbyRMsYEVANsIwBMmgFesYACDAA3jxuq3Q6o5MAAAAASUVORK5CYII=' ) no-repeat center;
+}
+
+.mslight {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.msblack {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.msmedium {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
+
+.msthin {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.msbold {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+.msregular {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+
+
+.epurple {
+	color: #ac5999;
+}
+
+.epurpledark {
+	color: #8f5b83
+}
+
+.game_nominate_line1 {
+	font-size: 17px;
+	line-height: 24px;
+}
+
+.game_nominate_line2 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.game_nominate_line3 {
+	font-size: 13px;
+	line-height: 23px;
+}
+
+.steamaward_nominate_gamepage_ctn:not(.homepage) .game_nominate:not(:hover) .hover_highlight {
+	color: #ffffff;
+}
+
+.game_nominate_yournomination {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 16px;
+}
+
+.game_nominate_yournomination span.categoryname.writein {
+	text-transform: uppercase;
+}
+
+.game_nominate_nonomination {
+	text-align: center;
+	padding-top: 16px;
+}
+
+.game_nominate .game_nominate_collapsed_only {
+	display: none;
+}
+
+@media screen and (max-width: 840px ) {
+	html.responsive .game_nominate,
+	html.responsive .homepage .game_nominate {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .homepage .steamaward_nominate_right {
+		display: none;
+	}
+
+	html.responsive .game_nominate.steamaward_nominate_left {
+		overflow: hidden;
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+	html.responsive .steamaward_nominate_gamepage_ctn.homepage .game_nominate.steamaward_nominate_left {
+		margin-bottom: 0;
+	}
+
+	html.responsive .game_nominate span.game_nominate_collapsed_only {
+		display: inline;
+	}
+
+	html.responsive .game_nominate div.game_nominate_collapsed_only {
+		display: block;
+	}
+
+	html.responsive .game_nominate .game_nominate_noncollapsed_only {
+		display: none;
+	}
+
+	html.responsive .steamaward_nominate_gamepage_ctn.gamepage .award_icon {
+		top: -3px;
+		left: -106px;
+	}
+}
+
+@media screen and (max-width: 480px ) {
+
+	html.responsive .steamaward_nominate_award {
+		display: none;
+	}
+
+	html.responsive	.steamaward_nominate_gamepage_ctn,
+	html.responsive	a.steamaward_nominate_gamepage_ctn.homepage,
+	html.responsive	a.steamaward_nominate_gamepage_ctn.gamewinner,
+	html.responsive	.steamawards_winner_label {
+		padding-left: 15px;
+	}
+	html.responsive	.steamawards_winner_label {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 410px ) {
+	html.responsive .game_nominate_line1 {
+		font-size: 14px;
+	}
+
+	html.responsive .game_nominate_line2 {
+		font-size: 20px;
+	}
+
+	html.responsive .game_nominate_line3 {
+		font-size: 11px;
+	}
+}
+
+a.steamaward_nominate_gamepage_ctn.homepage {
+	display: block;
+	border: 1px solid transparent;
+	padding: 14px 14px 14px 82px;
+	margin-top: 48px;
+	margin-bottom: 36px;
+}
+
+a.steamaward_nominate_gamepage_ctn.gamewinner {
+	display: block;
+	border: 1px solid transparent;
+	padding: 14px 14px 14px 82px;
+	margin-bottom: 36px;
+}
+
+a.steamaward_nominate_gamepage_ctn.homepage:hover,
+a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
+	border-color: #ac5999;
+	color: #ffffff;
+}
+
+.homepage .game_nominate.steamaward_nominate_left {
+	width: calc( 50% - 95px );
+}
+
+.homepage .game_nominate.steamaward_nominate_right {
+	width: calc( 50% - 19px );
+}
+
+.steamaward_nominate_gamepage_ctn.homepage .hover_highlight {
+	color: #ffffff;
+}
+
+/* homepage */
+
+
+.big_button.big_button_2x {
+	width: 460px;
+	max-width: 100%;
+	background-size: cover;
+}
+
+.wishlist_on_sale .ds_flag.ds_wishlist_flag {
+	display: none;
+}
+
+.friends_recently_purchased {
+	margin: 30px auto 0px auto;
+}
+
+.home_cluster_ctn.featured_and_recommended {
+	padding-top: 45px;
+}
+
+.home_ctn.tab_container {
+	margin-top: 48px;
+}
+
+/* faq page */
+
+.faq_background {
+	background-color: #000a1a;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+	height: 750px;
+}
+
+body.steamaward_nominations_faq div#store_header {
+	margin-bottom: 0;
+}
+
+body.steamaward_nominations_faq {
+	color: #9eb3cc;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.faq_sale_title {
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 101px;
+	margin-bottom: 150px;
+}
+
+.faq_content {
+	padding: 0 18px;
+}
+
+.page_content_gallery {
+	max-width: 940px;
+	width: auto;
+	margin: -82px auto 0 auto;
+}
+
+.gallery_ctn {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
+	margin-left: -121px;
+	margin-right: -123px;
+	height: 1031px;
+}
+
+.gallery_ctn .gallery_ctn_title {
+	font-size: 62px;
+	color: #000;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			margin-left: 124px;
+	margin-right: 159px;
+	padding-top: 76px;
+	height: 108px;
+}
+
+@media screen and (max-width: 580px) {
+	.faq_sale_title {
+		background-size: 160% auto ;
+	}
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .gallery_ctn {
+		margin: 0 auto;
+		height: auto;
+		background-position: center top;
+		background-size: 140%;
+	}
+	html.responsive .gallery_ctn .faq_content {
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+}
+
+img.faq_section_title {
+	max-width: 100%;
+}
+
+.gallery_ctn .faq_content {
+	padding-left: 118px;
+	padding-top: 26px;
+	margin-bottom: 39px;
+}
+
+.gallery_ctn img.faq_section_title {
+}
+
+.faq_intro {
+	max-width: 552px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.faq_section {
+	padding: 48px 0;
+}
+
+.faq_section.purple {
+background: -webkit-linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););}
+
+.faq_section.blue {
+background: -webkit-linear-gradient( 130deg, #203f54 0%,#1a2737 100%););background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%););}
+
+.faq_section.yellow {
+background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););background: linear-gradient( 130deg, #323834 0%,#1a2737 100%););}
+
+.nomination_row:not(:last-child) {
+	margin-bottom: 9px;
+}
+
+.nomination_row.needs_divider {
+	border-bottom: 1px solid rgba( 158, 179, 204, 0.09 );
+}
+
+.nomination_row {
+	padding: 21px 18px;
+}
+
+.nomination_row_left {
+	float: left;
+	width: 400px;
+	margin-right: 5%;
+}
+
+.nomination_row_right {
+	overflow: hidden;
+	text-align: center;
+}
+
+.nomination_row.has_nomination {
+	background: rgba( 158, 179, 204, 0.09 );
+}
+
+.nomination_row.has_nomination .category_title,
+.nomination_row.has_nomination .nomination_row_left {
+	opacity: 0.5;
+}
+
+.category_title {
+	font-size: 20px;
+	margin-bottom: 10px;
+	line-height: normal;
+}
+
+.younominated {
+	color: #67c1f5;
+	font-size: 13px;
+	margin-bottom: 8px;
+}
+
+a.younominated_game  {
+	background: rgba( 0, 0, 0, 0.2 );
+	color: #ffffff;
+	font-size: 17px;
+	line-height: 32px;
+	padding: 9px;
+
+	display: block;
+}
+
+.younominated_game img {
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+.nomination_row_right .btn_medium {
+	margin: 0 8px 8px 0;
+}
+
+@media screen and ( max-width: 720px )
+{
+	html.responsive .nomination_row_left {
+		float: none;
+		width: auto;
+		margin-bottom: 8px;
+	}
+}
+
+.faq_section.blue h3 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
+	font-size: 16px;
+	color: #62bbd9;
+	letter-spacing: 1px;
+	margin-bottom: 16px;
+}
+
+.badge_tasks_left, .badge_tasks_right {
+	float: left;
+	width: calc( 50% - 20px );
+}
+
+.badge_task {
+	margin-bottom: 14px;
+	line-height: 17px;
+}
+
+.badge_tasks_left {
+	margin-right: 40px;
+}
+
+@media screen and (max-width: 600px )
+{
+	html.responsive .badge_tasks_left,
+	html.responsive .badge_tasks_right {
+		float: none;
+		width: auto;
+	}
+}
+
+.badge_showcase {
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 30px 20px;
+	margin: 32px 0;
+}
+
+.badge_showcase_title {
+	color: #ead968;
+	font-size: 20px;
+}
+
+.badge_previews {
+	margin: 32px 0;
+}
+
+.badge_preview {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.badge_preview .badge_image_ctn {
+	border: 1px solid transparent;
+	margin-bottom: 18px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.badge_preview .badge_image_ctn img {
+	width: 100%;
+	max-width: 183px;
+	vertical-align: middle;
+}
+
+.badge_preview.inactive {
+	opacity: 0.5;
+}
+
+.badge_preview.current .badge_image_ctn {
+	border-color: #3c7589;
+	background: radial-gradient( #213c4e 0%, #1b2837 100% );
+	box-shadow: 0 0 18px -1px #000000;
+}
+
+.badge_preview.current .badge_preview_status {
+	color: #ead968;
+}
+
+@media screen and (max-width: 700px )
+{
+	html.responsive .badge_preview {
+		width: 50%;
+		margin-bottom: 32px;
+	}
+}
+
+.faq_q {
+	color: #ffffff;
+	font-size: 15px;
+}
+
+.faq_a {
+	font-size: 13px;
+	line-height: 18px;
+	margin-top: 4px;
+	color: #c6d4df;
+}
+
+.faqentry {
+	margin-bottom: 50px;
+}
+
+
+body.v6.steamaward_nominations_faq #footer_spacer {
+	height: 226px;
+}
+
+.autumn2016_home .hardware_ctn.double .hardware_content .right:hover {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2016/banner_hardware_2_bg_hover.jpg' ); ?>' ) no-repeat;
+	background-size: 100% 100%;
+}
+
+.winter2017_home .hardware_ctn.double .hardware_title span {
+	line-height: 17px;
+	margin-top: 2px;
+}
+
+.gallery_frame_ctn .carousel_container {
+	margin: 0 auto;
+	padding: 12px 0 24px 0;
+	max-width: 825px;
+}
+
+.frame {
+	margin-right: 9px;
+	margin-left: 12px;
+	position: relative;
+}
+
+.frame img.frame_spacer {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.frame img.frame_img {
+	display: block;
+}
+
+.frame a.frame_link {
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+}
+
+.frame a.frame_link img {
+	width: 100%;
+	display: block;
+}
+
+.frame a.frame_link.active {
+	z-index: 5;
+	opacity: 1;
+
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-name: anim_frame_appear;
+	-webkit-animation-name: anim_frame_appear;
+}
+
+
+
+@keyframes anim_frame_appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes anim_frame_appear {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+.gallery_label {
+	background: #e6e6e6;
+	color: #000000;
+	padding: 16px;
+	font-size: 17px;
+	margin: 16px auto 32px auto;
+	max-width: 320px;
+	box-shadow: 0px 2px 10px 4px #000000
+}
+
+.gallery_ctn .gallery_label {
+	color: #000000;
+	padding: 1.5%;
+	font-size: 17px;
+	max-width: 371px;
+	margin: 4% 0 4% 15.5%;
+	box-shadow: none;
+	background: transparent;
+}
+
+
+.gallery_label .gallery_title {
+	margin-bottom: 12px;
+	display: none;
+}
+
+.gallery_label .gallery_tag {
+	margin-bottom: 12px;
+}
+
+.gallery_label .gallery_desc {
+	font-size: 14px;
+}
+
+.gallery_label.gallery_tooltip {
+	box-shadow: 0 0 4px 2px #000000;
+	margin: 0;
+	padding: 8px;
+	font-size: 14px;
+}
+
+.gallery_label.gallery_tooltip .gallery_title {
+	margin-bottom: 8px;
+}
+
+.gallery_label.gallery_tooltip .gallery_tag {
+	margin-bottom: 8px;
+}
+.gallery_label .gallery_desc {
+	font-size: 12px;
+}
+
+body.v6.winter2017_home h2.winter {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 27px;
+	color: #ffffff;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.winter2017_home .home_ctn h4.winter,
+.winter2017_home .home_page_content h4.winter {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
+	color: #c1c1c1;
+	text-transform: uppercase;
+	margin-bottom: 8px;
+}
+
+
+.winter2017_home .discovery_queue_ctn {
+	position: relative;
+	overflow: visible;
+	margin-top: 40px;
+	background: -webkit-linear-gradient( 90deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);background: linear-gradient( 90deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);
+}
+
+.category_caps_vr .arrow,
+.category_caps_oldschool .arrow,
+.category_caps_niche .arrow,
+.category_caps_moddable .arrow,
+.wishlist_on_sale .arrow {
+	top: 30%;
+}
+
+.discovery_queue_ctn.sale_discovery_queue_ctn .discovery_queue_ctn.home_ctn {
+	margin-top: 0px;
+}
+
+.sale_discovery_queue_ctn .cards {
+	position: absolute;
+	top: 20px;
+	left: -21px;
+	z-index: 10;
+	width: 113px;
+}
+
+body.v6.winter2017_home .sale_discovery_queue_ctn h2 {
+	margin-left: 100px;
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #6b8198;
+	font-size: 28px;
+	text-transform: none;
+	letter-spacing: normal;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+body.v6.winter2017_home .sale_discovery_queue_ctn h2 a {
+	color: #63baec;
+}
+
+body.v6.winter2017_home .sale_discovery_queue_ctn p {
+	margin-left: 100px;
+	font-size: 17px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+body.v6.winter2017_home .sale_discovery_queue_ctn a:hover {
+	color: #fff
+}
+
+.winter2017_home .discovery_queue_static, .discovery_queue_overlay:hover, .home_page_sign_in_ctn {
+	background: none;
+	border: none;
+	margin-top: 0px;
+}
+
+.steamaward_header_background {
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-color: #000000;
+
+	padding-bottom: 80px;
+}
+
+.steamaward_header_area {
+	text-align: center;
+	max-width: 760px;
+	margin: 0 auto;
+	min-height: 468px;
+	padding: 34px 2% 0 2%;
+}
+
+.steamaward_header_title_rule {
+	width: 60px;
+	height: 1px;
+	margin: 8px auto 0 auto;
+	background: rgba( 255, 255, 255, 0.2 );
+	margin-bottom: 8px;
+}
+
+.steamaward_dates {
+	text-transform: uppercase;
+	color: #9099a1;
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+		}
+
+.steamawards_page {
+	color: #9188b4;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.steamawards_page h1 {
+	text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: #ffffff;
+	font-size: 23px;
+	margin-top: 8px;
+	padding: 0;
+	letter-spacing: 0.1em;
+}
+
+.steamawards_page p {
+	font-size: 13px;
+	line-height: 25px;
+	letter-spacing: 0.075em;
+}
+
+body.v6.steamawards #footer_spacer {
+	height: 207px;
+}
+
+.steamaward_header_todaysaward {
+	margin-top: 250px;
+}
+
+.steamaward_header_todaysaward .todaysaward {
+	color: #ffffff;
+	font-size: 11px;
+	line-height: 25px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
+	text-shadow: 1px 1px 3px #000000;
+}
+
+.awardtitle {
+	font-size: 24px;
+	font-style: italic;
+	text-transform: none;
+	color: #ffffff;
+	letter-spacing: 0.075em;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+.steamaward_nominate_right .awardtitle {
+	font-size: 18px;
+	letter-spacing: normal;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.steamaward_header_todaysaward .awardtitle {
+	font-size: 26px;
+	text-shadow: 0 0 6px #000000;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+@media screen and (max-width: 560px) {
+	html.responsive .steamaward_header_todaysaward:not(.writeinday) {
+		margin-top: 218px;
+	}
+}
+
+.steamaward_castvote {
+	max-width: 943px;
+	padding: 32px;
+	margin: 0 auto;
+	background: rgba( 255, 255, 255, 0.1 );
+	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
+
+	text-align: center;
+}
+
+.steamaward_castvote .awardtitle {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .steamaward_castvote {
+		padding: 32px 2%;
+	}
+	html.responsive .vote_nominations_wrapper {
+		margin: 32px 0;
+	}
+}
+
+.vote_nominations_wrapper {
+	margin: 32px -4px;
+}
+
+.vote_nominations {
+	text-align: center;
+	white-space: nowrap;
+}
+
+.vote_nomination:not(.your_vote) .your_vote_message,
+.vote_nomination.your_vote .btn_vote  {
+	display: none;
+}
+
+.your_vote_message {
+	line-height: 24px;
+}
+
+.vote_nomination img {
+	width: 100%;
+	height: auto;
+	display: block;
+	box-shadow: 0 0 8px #000000;
+	margin-bottom: 12px;
+}
+
+.vote_nomination {
+	display: inline-block;
+	padding: 3px;
+	position: relative;
+	width: 179px;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.vote_nomination:hover {
+	background: rgba(143, 113, 166, 0.5);
+	border: 1px solid #a166f4;
+	box-shadow: 0 0 5px #000;
+}
+.vote_nomination:hover img {
+	box-shadow: 0 0 2px #000000;
+}
+
+.vote_nomination a {
+	display: block;
+}
+
+.award_longdesc {
+	color: #c7d5e0;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.025em;
+	max-width: 680px;
+	margin: 12px auto 0 auto;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.steamaward_list_bg {
+	background-color: #1b2838;
+
+	background: linear-gradient( to bottom, #2f3a49 0%, #1b2838 114px, #1b2838 100% );
+}
+
+.steamaward_content {
+	text-align: center;
+	max-width: 954px;
+	margin: 0 auto;
+	padding: 48px 0 0 0;
+}
+
+.award_lineup_ctn {
+	text-align: center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/Voting_collection.jpg' ) center center no-repeat;
+	min-height: 415px;
+}
+
+.award_lineup_spacer {
+	height: 254px;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .award_lineup_ctn {
+		background-size: 136%;
+		min-height: 0;
+		padding-bottom: 10vw;
+	}
+
+	html.responsive .award_lineup_spacer {
+		height: 25vw;
+	}
+}
+
+.award_category {
+	background: #182432;
+	margin: 0 auto 44px auto;
+	max-width: 954px;
+	position: relative;
+}
+
+.award_category .trophy_image {
+	position: absolute;
+	top: 11px;
+	left: 0;
+	pointer-events: none;
+}
+
+.award_category_contents,
+.award_category_footer {
+	padding-left: 150px;
+	padding-right: 2%;
+}
+
+.award_category_contents {
+	padding-top: 46px;
+	position: relative;
+}
+
+.award_category_contents .awardtitle {
+	margin-bottom: 16px;
+}
+
+.award_category_contents .award_finalists_label {
+	color: #73559b;
+	font-size: 12px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.finalists_list a.finalist {
+	color: rgba( 255, 255, 255, 0.4 );
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	font-size: 14px;
+	padding-right: 6px;	/* for the hover */
+
+	max-width: 100%;
+
+	vertical-align: middle;
+}
+.finalists_list a.finalist:hover {
+	color: rgba( 255, 255, 255, 0.8 );
+}
+
+.finalist_list_entry {
+	line-height: 18px;
+	display: inline-block;
+	max-width: calc( 100% - 24px );
+	margin: 2px 0;
+}
+
+.award_finalists_label, .finalist_list_entry {
+	padding: 0 12px;
+}
+
+.finalist_list_entry.your_vote {
+	background: rgba( 103, 193, 245, 0.4 );
+	box-shadow: 0 0 8px 1px rgba( 103, 193, 245, 0.4 );
+}
+
+.finalist_list_entry.your_vote .your_vote_callout {
+	color: #62bbd9;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.yourvote_area {
+	float: right;
+	position: relative;
+	padding-left: 52px;
+}
+
+.yourvote_check {
+	position: absolute;
+	left: 0;
+	top: -5px;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/yourvote_check.png' ) top left no-repeat;
+	width: 52px;
+	height: 24px;
+}
+
+.yourvote_check {
+
+}
+
+.award_category_footer {
+	margin-top: 16px;
+	padding-left: 162px;
+
+	color: #6d5780;
+	font-size: 12px;
+	line-height: 16px;
+
+	padding-top: 16px;
+	padding-bottom: 8px;
+	min-height: 24px;
+
+	background: #242e3b;
+	background: linear-gradient( to right, rgba(36,46,59,1.0) 0%, rgba(36,46,59,1.0) 75%, rgba(36,46,59,0.0) 100%)
+}
+
+.award_category.past .award_category_footer {
+	padding-top: 8px;
+	min-height: 32px;
+}
+
+@media screen and (max-width: 520px ) {
+	html.responsive .award_category .trophy_image {
+		display: none;
+	}
+
+	html.responsive .award_category_contents,
+	html.responsive .award_category_footer {
+		padding-left: 2%;
+	}
+
+	html.responsive .award_category_contents {
+		padding-top: 12px;
+	}
+}
+
+.faq_qa_intro {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.active_award_category {
+	background-position: center top;
+	position: relative;
+
+	margin-bottom: 44px;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 4px #000;
+	max-width: 954px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #29455b;
+}
+
+.active_award_position {
+	position: relative;
+	max-width: 940px;
+	margin: 0 auto;
+	min-height: 499px;
+
+	text-align: center;
+}
+
+.active_award_position .active_award_today,
+.active_award_position .awardtitle,
+.active_award_position .votenow_btn_ctn {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+.active_award_today {
+	top: 14px;
+
+	font-size: 15px;
+	color: #ffffff;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.active_award_position .awardtitle {
+	top: 262px;
+	text-shadow: 1px 1px 8px #000000;
+}
+
+.active_award_position .votenow_btn_ctn {
+	top: 400px;
+	text-transform: uppercase;
+}
+
+.active_award_position .vote_options {
+	padding-top: 470px;
+	text-transform: uppercase;
+	padding-bottom: 8px;
+}
+
+.active_award_position .vote_options a.vote_option {
+	display: inline-block;
+	color: #ffffff;
+	letter-spacing: 0.075em;
+	margin: 0 6px 6px 6px;
+	padding: 0 6px;
+}
+
+a.votenow_btn {
+	display: inline-block;
+
+	background: #8f71a6;
+
+	background: radial-gradient( ellipse, rgba( 0, 0, 0, 0.0 ) 0%, rgba( 0, 0, 0, 0.15 ) 100% ), #8f71a6;
+
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	box-shadow: 0 0 24px rgba( 0, 0, 0, 0.5);
+
+	line-height: 53px;
+	color: #ffffff;
+
+	padding: 0 20px;
+	min-width: 160px;
+}
+
+a.votenow_btn:hover {
+	background: radial-gradient( ellipse, rgba( 0, 0, 0, 0.0 ) 0%, rgba( 0, 0, 0, 0.25 ) 100% ), #a891ba;
+}
+
+.writein_area {
+	background: #101822;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.writein_date {
+	color: #43627a;
+	font-size: 12px;
+	letter-spacing: 0.2em;
+	line-height: 17px;
+	text-transform: uppercase;
+}
+
+.writein_title {
+	font-size: 30px;
+	color: #ffffff;
+	letter-spacing: 0.075em;
+}
+
+.writein_area > p,
+.writein_area .writein_title
+{
+	margin: 0 2%;
+}
+
+.writein_scroll {
+	overflow-x: auto;
+	margin-bottom: 1px;
+}
+
+.writeins {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2017/Finalist_Community.jpg') center top;
+	width: 980px;
+	min-height: 380px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.writeins .writein {
+	width: 240px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.writeins .writein:nth-child(1) {
+	left: 15px;
+}
+
+.writeins .writein:nth-child(2) {
+	left: 245px;
+}
+
+.writeins .writein:nth-child(3) {
+	left: 467px;
+}
+
+.writeins .writein:nth-child(4) {
+	left: 699px;
+}
+
+.writeins .writein .awardtitle {
+	position: absolute;
+	left: 12px;
+	right: 12px;
+	top: 162px;
+
+	font-size: 20px;
+	text-shadow: 1px 1px 12px #000000;
+	word-wrap: break-word;
+}
+
+.writeins .writein .writein_finalists {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 266px;
+}
+
+.writeins .writein .writein_finalists a.finalist {
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0 4px;
+}
+
+.FeaturedCtn {
+	background: -webkit-linear-gradient( top, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);background: linear-gradient( to bottom, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);	/*margin-bottom: 32px;*/
+	margin-top: 14px;
+	padding-bottom: 16px;
+}
+
+
+
+.steamaward_header_todaysaward.writeinday {
+	margin-top: 390px;
+	margin-bottom: 32px;
+}
+
+.steamaward_winnerstomorrow {
+	max-width: 983px;
+	margin: 0 auto;
+	font-size: 12px;
+	letter-spacing: 0.075em;
+	color: #cd7675;
+	text-align: center;
+	line-height: 18px;
+	padding: 5px 12px;
+	background: -webkit-linear-gradient( left, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);background: linear-gradient( to right, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);}
+
+.steamaward_finalday {
+	color: #cd7675;
+	font-size: 11px;
+	line-height: 25px;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+.steamaward_castvote_writein {
+	text-align: center;
+	margin-bottom: 70px;
+}
+
+.steamaward_castvote_writein .awardtitle {
+	margin-bottom: 5px;
+}
+.steamaward_castvote_writein .vote_nominations_wrapper {
+	margin: 21px -4px;
+}
+
+.steamaward_castvote_writein p {
+	margin-bottom: 8px;
+	letter-spacing: 0px;
+	line-height: 18px;
+	max-width: 600px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.steamaward_header_todaysaward.resultsday {
+	margin-bottom: 48px;
+}
+
+.resultsday .results_announcing  {
+	color: #7193a6;
+	font-size: 11px;
+	line-height: 25px;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+div.thewinners {
+	color: #ffffff;
+	font-size: 50px;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+	text-shadow: 0 0 20px rgba( 255, 255, 255, 0.5 );
+}
+
+div.winners_leadin p {
+	color: #acdbf5;
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.075em;
+}
+
+body.v6.resultsday {
+	background: #000000;
+}
+
+body.resultsday .steamaward_header_background {
+	padding-bottom: 0;
+}
+
+.results_list {
+	overflow: hidden;
+}
+
+.vote_result_ctn {
+	max-width: 943px;
+	padding: 12px 2%;
+	margin: 48px auto 96px auto;
+	background: rgba( 255, 255, 255, 0.1 );
+	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
+
+	text-align: center;
+
+	position: relative;
+}
+
+.vote_result_ctn .trophy_image {
+	position: absolute;
+	left: 0;
+	right: -130px;
+	top: -48px;
+	text-align: center;
+}
+
+.vote_result_ctn .awardtitle {
+	position: relative;
+	margin-top: 140px;
+	min-height: 87px;
+	text-shadow: 1px 1px 1px #000000;
+}
+
+.vote_result_ctn .winner_intro {
+	color: #ffffff;
+	font-size: 11px;
+	letter-spacing: 0.075em;
+	line-height: 25px;
+}
+
+.results_carousel {
+	position: relative;
+}
+
+.results_carousel .winner {
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 5;
+	width: 44%;
+	max-width: 336px;
+}
+
+.results_carousel .winner a,
+.results_carousel .runnerup a {
+	display: block;
+}
+
+.results_carousel .runnerup:hover {
+	z-index: 10;
+}
+
+.results_carousel .winner img,
+.results_carousel .runnerup img {
+	display: block;
+	width: 100%;
+}
+
+.results_carousel .winner img {
+
+	box-shadow: 0 0 7px #28c1e5;
+
+}
+
+.results_carousel .runnerup img {
+	opacity: 0.5;
+
+}
+
+.results_carousel .runnerup:hover img {
+	opacity: 1.0;
+	box-shadow: 0 0 5px 3px #000000;
+}
+
+.results_carousel .runnerup {
+	position: absolute;
+	top: 15%;
+
+	max-width: 180px;
+	width: 18.5%;
+}
+
+.results_carousel .runnerup.pos1 {
+	left: 0;
+}
+.results_carousel .runnerup.pos2 {
+	left: 19%;
+}
+.results_carousel .runnerup.pos3 {
+	right: 19%;
+}
+.results_carousel .runnerup.pos4 {
+	right: 0;
+}
+
+.results_carousel .runnerup.pos1 .your_vote,
+.results_carousel .runnerup.pos2 .your_vote{
+	text-align: left;
+}
+
+.results_carousel .runnerup.pos3 .your_vote,
+.results_carousel .runnerup.pos4 .your_vote{
+	text-align: right;
+}
+
+.results_carousel .your_vote {
+	font-size: 10px;
+	color: #62bbd9;
+	letter-spacing: 0.2em;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-transform: uppercase;
+	padding-top: 4px;
+}
+
+.vote_result_ctn .award_description {
+	padding: 16px 0;
+
+	max-width: 478px;
+	margin: 0 auto;
+}
+
+.vote_result_ctn .award_description p {
+	color: #c7d5e0;
+	font-size: 15px;
+	line-height: 17px;
+	letter-spacing: 0.025em;
+	margin: 8px 0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+@media screen and (max-width: 500px)
+{
+	html.responsive	div.thewinners {
+		font-size: 36px;
+	}
+
+	html.responsive .vote_result_ctn .awardtitle {
+		font-size: 16px;
+	}
+
+	html.responsive .results_carousel .winner {
+		width: auto;
+	}
+
+	html.responsive .runnerups {
+		position: relative;
+		margin: 24px 0 12px 0;
+	}
+
+	html.responsive .runnerups .runnerup.pos1 {
+		position: static;
+	}
+
+	html.responsive .results_carousel .runnerup {
+		top: 0;
+		width: 24.5%;
+	}
+
+	html.responsive .results_carousel .runnerup.pos2 {
+		left: 25%;
+	}
+	html.responsive .results_carousel .runnerup.pos3 {
+		right: 25%;
+	}
+
+	html.responsive .results_carousel .runnerup .your_vote {
+		font-size: 9px;
+		letter-spacing: 0.1em;
+	}
+}
+
+body.resultsday .home_page_takeover_link {
+	padding-bottom: 32px;
+}
+
+body.resultsday .home_ctn.FeaturedCtn {
+	background: -webkit-linear-gradient( 124deg, #3d7190 0%,#29495f 100%););background: linear-gradient( 124deg, #3d7190 0%,#29495f 100%););;
+}
+
+.finalday_block {
+	text-align: center;
+}
+
+.finalday_title {
+	color: #c6d4df;
+	font-size: 66px;
+	line-height: 0.9em;
+	text-transform: uppercase;
+	text-shadow: 0 0 24px rgba( 198, 212, 223, 0.5 );
+	margin: 24px 0 8px 0;
+}
+
+.finalday_subtitle {
+	font-size: 12px;
+	letter-spacing: 0.075em;
+	font-style: italic;
+	color: #8cafc6;
+	margin-bottom: 12px;
+}
+
+.finalday_countdown_ctn {
+	color: #e2f2ff;
+	font-size: 14px;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+.finalday_countdown_ctn .countdown {
+	display: inline-block;
+	white-space: nowrap;
+	text-align: left;
+}
+
+.finalday_rule {
+	height: 1px;
+	background: #000000;
+	margin: 32px 0;
+}
+
+.finalday_topsellinggames {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 27px;
+	line-height: 1.2em;
+}
+
+.finalday_topsellinggames_desc {
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 1.1em;
+}
+
+@media screen and (max-width: 700px) {
+	html.responsive .finalday_title {
+		font-size: 40px;
+	}
+	html.responsive .finalday_topsellinggames {
+		font-size: 22px;
+	}
+	html.responsive .finalday_topsellinggames_desc {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	html.responsive .finalday_title {
+		font-size: 30px;
+	}
+	html.responsive .finalday_topsellinggames {
+		font-size: 18px;
+	}
+	html.responsive .finalday_topsellinggames_desc {
+		font-size: 12px;
+	}
+}
+
+.steamawards_winner_label {
+	font-size: 24px;
+	line-height: 1.25em;
+	padding-left: 83px;
+	text-transform: uppercase;
+}
+
+.winner_award_category {
+	text-transform: uppercase;
+	font-size: 13px;
+	min-height: 53px;
+	margin-bottom: 8px;
+}
+
+.winner_award_category .winner_award_category_name {
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 23px;
+}
+
+.see_all_categories {
+	text-transform: uppercase;
+	color: #b3b3b3;
+	font-size: 11px;
+}
+a.steamaward_nominate_gamepage_ctn.gamewinner:hover .see_all_categories {
+	color: #ffffff;
+}
+
+.steamawards_winner {
+	margin-top: 32px;
+}
+
+@media screen and (max-width: 640px) {
+	html.responsive .steamawards_winner_label {
+		font-size: 18px;
+	}
+}
+
+.vote_nomination_preview_position {
+	position: relative;
+	pointer-events: none;
+}
+
+.vote_nomination_preview_image {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.vote_nomination_preview_image.visible {
+	opacity: 1;
+
+}
+
+.vote_nomination_preview_image > img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 50vh;
+	box-shadow: 0 0 11px 3px #000000;
+}
+
+
+/* More lists */
+
+.lists_more_container {
+	display: flex;
+	padding-bottom: 25px;
+
+}
+
+.lists_more_container.wrapping {
+	flex-wrap: wrap;
+	height: auto;
+}
+
+.lists_more_container.wrapping .item {
+	margin-bottom: 10px;
+	max-width: 225px;
+}
+
+
+.lists_more_container .item {
+	background-blend-mode: overlay;
+	display: flex;
+	width: 100%;
+//max-width: 225px;
+	height: 225px;
+
+	background-size: cover;
+
+	position: relative;
+	color: #fff;
+	overflow: hidden;
+
+	flex-shrink: 1;
+}
+
+.lists_more_container .item_container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	flex-shrink: 1;
+}
+
+.lists_more_container .item:hover {
+	color: #fff;
+	overflow: hidden;
+}
+
+.lists_more_container .item:not(last-child) {
+	margin-right: 10px;
+}
+
+.lists_more_container .item > div {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+	text-align: center;
+//padding: 59% 10% 0 10%;
+	padding: 140px 10% 0 10%;
+}
+
+
+.lists_more_container .item .bg {
+	filter: contrast(150%) grayscale(1);
+	transition: filter 0.5s ease, transform 0.5s ease;
+	transform: scale(1);
+
+	-webkit-backface-visibility: hidden;
+	background-position: center center;
+	background-size: cover;
+}
+.lists_more_container .item:hover .bg {
+	transform: scale(1.1);
+	filter: contrast(100%) grayscale(0);
+
+}
+
+.lists_more_container .item .overlay {
+background: -webkit-linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););background: linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););
+	opacity: 0.6;
+	border-top: 1px solid rgba(255,255,255,0.3);
+	border-left: 1px solid rgba(255,255,255,0.3);
+}
+
+.lists_more_container .item > div div {
+	background-color: #000;
+	padding: 5px;
+	font-size: 16px;
+
+}
+
+.lists_more_container .curator_info {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+.lists_more_container .curator_info img {
+	width: 64px;
+	height: 64px;
+	margin-right: 5px;
+}
+
+.lists_more_container .curator_info > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lists_more_container .curator_info  h2 {
+	margin: 0;
+}
+
+.sale_banner_takeover > div {
+	width: 940px;
+}
+
+.pubg_banner > img {
+	max-width: 100%;
+}
