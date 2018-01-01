@@ -805,7 +805,7 @@ function ReviewsCreate_Load()
 {
 	var rgNameToAppMap = {};
 	LoadCurationList();
-	new CTextInputSuggest( $J( '#app_suggest' ),
+	new CIndexedInputSuggest( $J( '#app_suggest' ),
 		function(a, b)
 		{
 			$J.ajax ( {
@@ -820,17 +820,21 @@ function ReviewsCreate_Load()
 				var rgFormattedResults = [];
 				for( var i=0; i<data.length; i++ )
 				{
-					rgFormattedResults.push(data[i].name);
+					rgFormattedResults.push({
+						html: '<img src="https://steamcdn-a.akamaihd.net/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
+						key: data[i].id
+					});
 					rgNameToAppMap[data[i].name] = data[i].id
 				}
 				b ( rgFormattedResults );
 			});
 		},
-		function( suggestion )
+		function( suggestion, text )
 		{
-			$J('#app_suggest_id').val( rgNameToAppMap[suggestion] );
+			$J('#app_suggest_id').val( suggestion );
 			ReviewsCreate_RedirectIfCreated();
-		});
+		},
+		'popup_block_new with_capsules');
 }
 
 function ReviewsCreate_RedirectIfCreated()
@@ -850,7 +854,7 @@ function ReviewsCreate_RedirectIfCreated()
 
 function ListEdit_Onload( listid, listDetails )
 {
-	console.log(listDetails);
+
 	var g_unListId = listid;
 
 
@@ -902,7 +906,7 @@ function ListManage_Load(  )
 	{
 		$J('#throbber').hide();
 		elContainer.show();
-		console.log(data.list_details);
+
 
 		data.list_details.sort( function( a, b ) {
 			return Math.sign(a.sort_order - b.sort_order)
@@ -952,7 +956,7 @@ function ListManage_UpdateSort( elContainer )
 	{
 		rgListIds.push( rgRows[i].dataset.listId ) ;
 	}
-	console.log(rgListIds);
+
 
 
 	$J.ajax ( {

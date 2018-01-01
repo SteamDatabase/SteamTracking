@@ -2186,6 +2186,7 @@ body.resultsday .steamaward_header_background {
 
 .results_list {
 	overflow: hidden;
+	padding-top: 24px;
 }
 
 .vote_result_ctn {
@@ -2203,8 +2204,8 @@ body.resultsday .steamaward_header_background {
 .vote_result_ctn .trophy_image {
 	position: absolute;
 	left: 0;
-	right: -130px;
-	top: -48px;
+	right: -115px;
+	top: -70px;
 	text-align: center;
 }
 
