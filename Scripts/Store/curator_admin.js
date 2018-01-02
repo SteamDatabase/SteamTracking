@@ -811,7 +811,9 @@ function ReviewsCreate_Load()
 			$J.ajax ( {
 				url: g_strCuratorBaseURL + 'ajaxappsearchsuggest/',
 				data: {
-					term: a
+					term: a,
+					cc: g_strCC,
+					language: g_strLanguage
 				},
 				dataType: 'json',
 				type: 'POST'
