@@ -584,13 +584,18 @@ a.general_btn:hover {
 .rightSectionBrowseBarContent
 {
 	position: relative;
-	background-color: #272f38;
+	background-color: #492909;
 	color: #898989;
 	font-size: 10px;
 	height: 27px;
 	line-height: 27px;
 	padding-left: 8px;
 	text-transform:uppercase;
+	border-left: 3px solid #a55b13;
+	margin-bottom: 20px;
+}
+.rightSectionBrowseBar.toggled .rightSectionBrowseBarContent {
+	margin-bottom: 0px;
 }
 
 .rightSectionBrowseBarArrow
@@ -603,6 +608,8 @@ a.general_btn:hover {
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_section_arrow.png');
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
+	-webkit-filter: brightness(200%); /* Safari 6.0 - 9.0 */
+	filter: brightness(200%);
 }
 
 .rightSectionBrowseBar.toggled .rightSectionBrowseBarArrow
@@ -613,7 +620,7 @@ a.general_btn:hover {
 .rightSectionBrowseBarContent:hover
 {
 	color: #ffffff;
-	background-color: #272f38;
+	background-color: #5f360c;
 }
 
 .rightDetailsBlockHidden
@@ -4076,11 +4083,22 @@ html.responsive #ig_bottom {
 }
 
 #ig_bottom .sidebar .panel.admin {
-	border-color: #a55b13;
+	border-left: 1px solid #a55b13;
 }
 
 .panel.admin .title {
 	color: #a55b13;
+}
+
+.panel.admin img {
+	display: inline;
+	vertical-align: middle;
+}
+.panel.admin .image_link {
+	display: block;
+}
+.panel.admin .image_link a {
+	display: inline-block;
 }
 
 .panel .note {

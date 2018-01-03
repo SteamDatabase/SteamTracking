@@ -285,16 +285,9 @@ textarea.forumtopic_reply_textarea {
 	color: #70beed;
 }
 
-.forum_topic_state {
-	display: inline-block;
-	margin-left: 5px;
-	z-index: 4;
-}
-
-.forum_topic_state img {
-	vertical-align: text-top;
-	width: 14px;
-	height: 14px;
+.forum_topic_answer {
+	width: 12px;
+	height: 12px;
 }
 
 .forum_paging
@@ -646,13 +639,13 @@ textarea.forumtopic_reply_textarea {
 
 .forumtopic_answer .answer_quote {
 	border: 1px solid #457592;
-	color: #7faac3;
+	color: #a1c1d3;
 	padding: 10px;
 	border-radius: 3px;
 	overflow-wrap: break-word;
 }
 .forumtopic_answer .answer_quote a {
-	color: #7faac3;
+	color: #a1c1d3;
 }
 
 .answer_author {
@@ -1734,10 +1727,10 @@ select.subforum_select_control {
 	overflow-x: hidden;
 }
 .commenthistory_comment.deleted, .commenthistory_comment.deleted .comment_item_title a {
-	opacity: .5;
+	opacity: .7;
 }
 .commenthistory_comment.deleted .comment_item_desc {
-	opacity: .5;
+	opacity: .7;
 }
 
 .commenthistory_author {

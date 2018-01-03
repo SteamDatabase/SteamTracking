@@ -475,14 +475,25 @@ function GrindIntoGoo( appid, contextid, itemid )
 			$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 				ShowAlertDialog( strDialogTitle, data.strHTML );
 				ReloadCommunityInventory();
-			}).fail( function() {
-				ShowAlertDialog( strDialogTitle, 'There was an error communicating with the network. Please try again later.' );
+			}).fail( function( xhr ) {
+				if ( xhr.responseJSON && xhr.responseJSON.message )
+				{
+					ShowAlertDialog( 'Action Failed', xhr.responseJSON.message );
+				}
+				else
+				{
+					ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
+				}
 			});
 		});
 	}).fail( function( xhr ) {
 		if ( xhr.responseJSON && xhr.responseJSON.message )
 		{
 			ShowAlertDialog( 'Action Failed', xhr.responseJSON.message );
+		}
+		else
+		{
+			ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
 		}
 	});
 }
