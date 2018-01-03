@@ -1621,7 +1621,7 @@ body.v6.winter2017_home .sale_discovery_queue_ctn a:hover {
 }
 
 body.v6.steamawards #footer_spacer {
-	height: 207px;
+	height: 272px;
 }
 
 .steamaward_header_todaysaward {
@@ -2193,8 +2193,7 @@ body.resultsday .steamaward_header_background {
 	max-width: 943px;
 	padding: 12px 2%;
 	margin: 48px auto 96px auto;
-	background: rgba( 255, 255, 255, 0.1 );
-	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
+	background: -webkit-linear-gradient( top, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);background: linear-gradient( to bottom, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
 
 	text-align: center;
 
