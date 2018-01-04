@@ -83589,6 +83589,13 @@
 			"item_description"		"#TF_dec16_snowmann_Desc"
 			"equip_region"		"hat"
 			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"headphones"		"1"
+				}
+			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/dec16_snowmann/dec16_snowmann"
 			"capabilities"
 			{
@@ -86165,6 +86172,7 @@
 			"item_name"		"#TF_dec17_burning_beanie"
 			"item_description"		"#TF_dec17_burning_beanie_Desc"
 			"equip_region"		"hat"
+			"drop_type"		"drop"
 			"image_inventory"		"backpack/workshop/player/items/pyro/dec17_burning_beanie/dec17_burning_beanie"
 			"capabilities"
 			{
@@ -86313,8 +86321,8 @@
 			{
 				"attach particle effect static"
 				{
-					"attribute_class"	"set_attached_particle_static"
-					"value"	"28"
+					"attribute_class"		"set_attached_particle_static"
+					"value"		"28"
 				}
 			}
 		}
@@ -86325,6 +86333,7 @@
 			"item_name"		"#TF_dec17_puffy_polar_cap"
 			"item_description"		"#TF_dec17_puffy_polar_cap_Desc"
 			"equip_region"		"hat"
+			"drop_type"		"drop"
 			"visuals"
 			{
 				"player_bodygroups"
@@ -86351,6 +86360,7 @@
 			"item_name"		"#TF_dec17_sinners_shade"
 			"item_description"		"#TF_dec17_sinners_shade_Desc"
 			"equip_region"		"hat"
+			"drop_type"		"drop"
 			"propername"		"1"
 			"image_inventory"		"backpack/workshop/player/items/heavy/dec17_sinners_shade/dec17_sinners_shade"
 			"capabilities"
@@ -86391,6 +86401,7 @@
 			"item_name"		"#TF_dec17_polar_bear"
 			"item_description"		"#TF_dec17_polar_bear_Desc"
 			"equip_region"		"hat"
+			"drop_type"		"drop"
 			"image_inventory"		"backpack/workshop/player/items/heavy/dec17_polar_bear/dec17_polar_bear"
 			"capabilities"
 			{
@@ -86516,6 +86527,7 @@
 			"item_name"		"#TF_dec17_caribou_companion"
 			"item_description"		"#TF_dec17_caribou_companion_Desc"
 			"equip_region"		"hat"
+			"drop_type"		"drop"
 			"propername"		"1"
 			"visuals"
 			{
@@ -86548,6 +86560,7 @@
 				"engineer"		"1"
 			}
 		}
+
 
 
 
