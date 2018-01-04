@@ -47919,7 +47919,7 @@
 				"paintable"			"1"
 				"can_craft_count"	"1"
 			}
-			"equip_region"	"engineer_pocket"
+			"equip_region"	"sniper_pocket"
 			"item_type_name"	"#TF_Wearable_Satchel"
 			"item_name"	"#TF_SniperPocketKoala"
 			"item_description"	"#TF_SniperPocketKoala_Desc"
@@ -84739,7 +84739,11 @@
 			"item_name"		"#TF_fall17_pocket_saxton"
 			"item_description"		"#TF_fall17_pocket_saxton_Desc"
 			"item_type_name"		"#TF_Wearable_PocketBuddy"
-			"equip_region"		"belt_misc"
+			"equip_regions"
+			{
+				"sniper_pocket"		"1"
+				"engineer_pocket"		"1"
+			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/fall17_pocket_saxton/fall17_pocket_saxton"
 			"capabilities"
 			{
@@ -86102,7 +86106,11 @@
 			"item_name"		"#TF_dec17_pocket_yeti"
 			"item_description"		"#TF_dec17_pocket_yeti_Desc"
 			"item_type_name"		"#TF_Wearable_PocketBuddy"
-			"equip_region"		"belt_misc"
+			"equip_regions"
+			{
+				"sniper_pocket"		"1"
+				"engineer_pocket"		"1"
+			}
 			"image_inventory"		"backpack/workshop/player/items/all_class/dec17_pocket_yeti/dec17_pocket_yeti"
 			"capabilities"
 			{
