@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.61ee6e48ee8f5004030d0ddc08d84816b012ad7d.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.59a4f861bc91c35e439611ef98d3e8416691c7fd.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -8987,7 +8987,7 @@
 				"defindex": 4020,
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
-				"item_name": "ESL Cologne 2014 Challengers",
+				"item_name": "ESL One Cologne 2014 Legends",
 				"item_description": "This capsule contains a single ESL One Cologne 2014 participant sticker. A portion of the proceeds is shared equally among the included organizations.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -9024,7 +9024,7 @@
 				"defindex": 4021,
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
-				"item_name": "ESL Cologne 2014 Legends",
+				"item_name": "ESL One Cologne 2014 Challengers",
 				"item_description": "This capsule contains a single ESL One Cologne 2014 participant sticker. A portion of the proceeds is shared equally among the included organizations.",
 				"proper_name": false,
 				"item_quality": 4,
@@ -24787,7 +24787,7 @@
 				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.c691b63e039142cf52fab67ab13654651c737373.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.cc5a31363d3d70735c12478fcf4f05b03c452854.png",
 				"image_url_large": "",
 				"capabilities": {
 					"decodable": true
@@ -25058,6 +25058,200 @@
 					}
 				]
 				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_flg",
+				"defindex": 4472,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sticker | Flash Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this sticker support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/flg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flg.1dc34ae57566f1fa5928cf6bd54dd3213d5a13f7.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flg_large.390d1abd733511bd7d12eea45e7f2c4da2293020.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_graffiti_pack_boston2018_flg",
+				"defindex": 4473,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Sealed Graffiti | Flash Gaming | Boston 2018",
+				"item_description": "50% of the proceeds from the sale of this graffiti support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/stickers/boston2018/flg_graffiti",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flg_graffiti.41979b2e0c95ec8a1743f1fec1d7b714dc3c91db.png",
+				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/stickers/boston2018/flg_graffiti_large.0f799ba37e7a875b318dff5130309f2cbfd225d7.png",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_contenders_flg",
+				"defindex": 4474,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Minor Challengers with Flash Gaming (Holo/Foil)",
+				"item_description": "This capsule contains a single Boston 2018 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_contenders_flg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_contenders_flg.bd143afdab76e2390f52296d910e38a0fec9a46e.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 239
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_boston2018_group_contenders_flg",
+				"defindex": 4475,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Minor Challengers with Flash Gaming Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Minor Challengers with Flash Gaming teams at Boston 2018.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_group_contenders_flg",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_group_contenders_flg.72014e2265074dddfeb02c77cf631149ed819fff.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 240
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_bundle_of_all_flg",
+				"defindex": 4476,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Mega Bundle",
+				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.cc5a31363d3d70735c12478fcf4f05b03c452854.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
+			},
+			{
+				"name": "crate_sticker_pack_chickens_capsule",
+				"defindex": 4477,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Mega Bundle",
+				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.cc5a31363d3d70735c12478fcf4f05b03c452854.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "studded_bloodhound_gloves",
@@ -25829,7 +26023,7 @@
 				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.2e72ef3eda986fa153d3483609ac270c909f0560.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.63b459a523e5243c6b227c499760e0d37edae166.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy_large.0633a81c60332d4debd5913073d8830e93f07e5f.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",
@@ -27622,7 +27816,7 @@
 				"image_inventory": "econ/status_icons/collectible_pin_easy_peasy",
 				"min_ilevel": 1,
 				"max_ilevel": 1,
-				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.2e72ef3eda986fa153d3483609ac270c909f0560.png",
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy.63b459a523e5243c6b227c499760e0d37edae166.png",
 				"image_url_large": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/status_icons/collectible_pin_easy_peasy_large.0633a81c60332d4debd5913073d8830e93f07e5f.png",
 				"craft_class": "collectable",
 				"craft_material_type": "tool",

@@ -86079,6 +86079,8 @@
 		"234"		"crate_boston2018_promo_de_cache"
 		"235"		"crate_boston2018_promo_de_train"
 		"236"		"crate_boston2018_promo_de_nuke"
+		"239"		"crate_sticker_pack_boston2018_contenders_flg"
+		"240"		"crate_signature_pack_boston2018_group_players_collection_contenders_flg"
 	}
 	"client_loot_lists"
 	{
@@ -86177,6 +86179,10 @@
 		"boston2018_rare_tyl"
 		{
 			"[boston2018_team_tyl]sticker"		"1"
+		}
+		"boston2018_rare_flg"
+		{
+			"[boston2018_team_flg]sticker"		"1"
 		}
 		"boston2018_rare_eleague"
 		{
@@ -86278,6 +86284,10 @@
 		{
 			"[boston2018_team_tyl_graffiti]spray"		"1"
 		}
+		"boston2018_graffiti_flg"
+		{
+			"[boston2018_team_flg_graffiti]spray"		"1"
+		}
 		"boston2018_graffiti_eleague"
 		{
 			"[boston2018_team_eleague_graffiti]spray"		"1"
@@ -86374,6 +86384,7 @@
 			"[boston2018_team_mfg]sticker"		"1"
 			"[boston2018_team_qb]sticker"		"1"
 			"[boston2018_team_tyl]sticker"		"1"
+			"[boston2018_team_flg]sticker"		"1"
 			"[boston2018_team_eleague]sticker"		"1"
 		}
 		"crate_sticker_pack_boston2018_contenders_mythical"
@@ -86400,10 +86411,47 @@
 			"[boston2018_team_tyl_foil]sticker"		"1"
 			"[boston2018_team_eleague_foil]sticker"		"1"
 		}
+		"crate_sticker_pack_boston2018_contenders_flgonly_mythical"
+		{
+			"[boston2018_team_flg_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_boston2018_contenders_flg_mythical"
+		{
+			"[boston2018_team_spc_holo]sticker"		"1"
+			"[boston2018_team_liq_holo]sticker"		"1"
+			"[boston2018_team_avg_holo]sticker"		"1"
+			"[boston2018_team_ren_holo]sticker"		"1"
+			"[boston2018_team_nv_holo]sticker"		"1"
+			"[boston2018_team_mfg_holo]sticker"		"1"
+			"[boston2018_team_qb_holo]sticker"		"1"
+			"[boston2018_team_flg_holo]sticker"		"1"
+			"[boston2018_team_eleague_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_boston2018_contenders_flgonly_legendary"
+		{
+			"[boston2018_team_flg_foil]sticker"		"1"
+		}
+		"crate_sticker_pack_boston2018_contenders_flg_legendary"
+		{
+			"[boston2018_team_spc_foil]sticker"		"1"
+			"[boston2018_team_liq_foil]sticker"		"1"
+			"[boston2018_team_avg_foil]sticker"		"1"
+			"[boston2018_team_ren_foil]sticker"		"1"
+			"[boston2018_team_nv_foil]sticker"		"1"
+			"[boston2018_team_mfg_foil]sticker"		"1"
+			"[boston2018_team_qb_foil]sticker"		"1"
+			"[boston2018_team_flg_foil]sticker"		"1"
+			"[boston2018_team_eleague_foil]sticker"		"1"
+		}
 		"crate_sticker_pack_boston2018_contenders"
 		{
 			"crate_sticker_pack_boston2018_contenders_mythical"		"1"
 			"crate_sticker_pack_boston2018_contenders_legendary"		"1"
+		}
+		"crate_sticker_pack_boston2018_contenders_flg"
+		{
+			"crate_sticker_pack_boston2018_contenders_flg_mythical"		"1"
+			"crate_sticker_pack_boston2018_contenders_flg_legendary"		"1"
 		}
 		"boston2018_signatures_gamb"
 		{
@@ -86837,6 +86885,24 @@
 			"[boston2018_signature_somebody_foil]sticker"		"1"
 			"[boston2018_signature_somebody_gold]sticker"		"1"
 		}
+		"boston2018_signatures_flg"
+		{
+			"[boston2018_signature_attacker]sticker"		"1"
+			"[boston2018_signature_attacker_foil]sticker"		"1"
+			"[boston2018_signature_attacker_gold]sticker"		"1"
+			"[boston2018_signature_karsa]sticker"		"1"
+			"[boston2018_signature_karsa_foil]sticker"		"1"
+			"[boston2018_signature_karsa_gold]sticker"		"1"
+			"[boston2018_signature_kaze]sticker"		"1"
+			"[boston2018_signature_kaze_foil]sticker"		"1"
+			"[boston2018_signature_kaze_gold]sticker"		"1"
+			"[boston2018_signature_loveyy]sticker"		"1"
+			"[boston2018_signature_loveyy_foil]sticker"		"1"
+			"[boston2018_signature_loveyy_gold]sticker"		"1"
+			"[boston2018_signature_summer]sticker"		"1"
+			"[boston2018_signature_summer_foil]sticker"		"1"
+			"[boston2018_signature_summer_gold]sticker"		"1"
+		}
 		"crate_signature_pack_boston2018_group_legends_rare"
 		{
 			"[boston2018_signature_adrenkz]sticker"		"1"
@@ -87224,6 +87290,159 @@
 			"[boston2018_signature_dd_gold]sticker"		"1"
 			"[boston2018_signature_somebody_gold]sticker"		"1"
 		}
+		"crate_signature_pack_boston2018_group_contenders_flgonly_rare"
+		{
+			"[boston2018_signature_attacker]sticker"		"1"
+			"[boston2018_signature_karsa]sticker"		"1"
+			"[boston2018_signature_kaze]sticker"		"1"
+			"[boston2018_signature_loveyy]sticker"		"1"
+			"[boston2018_signature_summer]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_contenders_flgonly_foil"
+		{
+			"[boston2018_signature_attacker_foil]sticker"		"1"
+			"[boston2018_signature_karsa_foil]sticker"		"1"
+			"[boston2018_signature_kaze_foil]sticker"		"1"
+			"[boston2018_signature_loveyy_foil]sticker"		"1"
+			"[boston2018_signature_summer_foil]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_contenders_flgonly_gold"
+		{
+			"[boston2018_signature_attacker_gold]sticker"		"1"
+			"[boston2018_signature_karsa_gold]sticker"		"1"
+			"[boston2018_signature_kaze_gold]sticker"		"1"
+			"[boston2018_signature_loveyy_gold]sticker"		"1"
+			"[boston2018_signature_summer_gold]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_contenders_flg_rare"
+		{
+			"[boston2018_signature_calyx]sticker"		"1"
+			"[boston2018_signature_maj3r]sticker"		"1"
+			"[boston2018_signature_ngin]sticker"		"1"
+			"[boston2018_signature_paz]sticker"		"1"
+			"[boston2018_signature_xantares]sticker"		"1"
+			"[boston2018_signature_elige]sticker"		"1"
+			"[boston2018_signature_jdm64]sticker"		"1"
+			"[boston2018_signature_nitro]sticker"		"1"
+			"[boston2018_signature_stanislaw]sticker"		"1"
+			"[boston2018_signature_twistzz]sticker"		"1"
+			"[boston2018_signature_buster]sticker"		"1"
+			"[boston2018_signature_dimasick]sticker"		"1"
+			"[boston2018_signature_jame]sticker"		"1"
+			"[boston2018_signature_krizzen]sticker"		"1"
+			"[boston2018_signature_qikert]sticker"		"1"
+			"[boston2018_signature_azr]sticker"		"1"
+			"[boston2018_signature_jks]sticker"		"1"
+			"[boston2018_signature_naf]sticker"		"1"
+			"[boston2018_signature_nifty]sticker"		"1"
+			"[boston2018_signature_ustilo]sticker"		"1"
+			"[boston2018_signature_happy]sticker"		"1"
+			"[boston2018_signature_rpk]sticker"		"1"
+			"[boston2018_signature_scream]sticker"		"1"
+			"[boston2018_signature_sixer]sticker"		"1"
+			"[boston2018_signature_xms]sticker"		"1"
+			"[boston2018_signature_amanek]sticker"		"1"
+			"[boston2018_signature_devoduvek]sticker"		"1"
+			"[boston2018_signature_sgares]sticker"		"1"
+			"[boston2018_signature_shahzam]sticker"		"1"
+			"[boston2018_signature_sick]sticker"		"1"
+			"[boston2018_signature_balblna]sticker"		"1"
+			"[boston2018_signature_boombl4]sticker"		"1"
+			"[boston2018_signature_jmqa]sticker"		"1"
+			"[boston2018_signature_kvik]sticker"		"1"
+			"[boston2018_signature_waterfallz]sticker"		"1"
+			"[boston2018_signature_attacker]sticker"		"1"
+			"[boston2018_signature_karsa]sticker"		"1"
+			"[boston2018_signature_kaze]sticker"		"1"
+			"[boston2018_signature_loveyy]sticker"		"1"
+			"[boston2018_signature_summer]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_contenders_flg_foil"
+		{
+			"[boston2018_signature_calyx_foil]sticker"		"1"
+			"[boston2018_signature_maj3r_foil]sticker"		"1"
+			"[boston2018_signature_ngin_foil]sticker"		"1"
+			"[boston2018_signature_paz_foil]sticker"		"1"
+			"[boston2018_signature_xantares_foil]sticker"		"1"
+			"[boston2018_signature_elige_foil]sticker"		"1"
+			"[boston2018_signature_jdm64_foil]sticker"		"1"
+			"[boston2018_signature_nitro_foil]sticker"		"1"
+			"[boston2018_signature_stanislaw_foil]sticker"		"1"
+			"[boston2018_signature_twistzz_foil]sticker"		"1"
+			"[boston2018_signature_buster_foil]sticker"		"1"
+			"[boston2018_signature_dimasick_foil]sticker"		"1"
+			"[boston2018_signature_jame_foil]sticker"		"1"
+			"[boston2018_signature_krizzen_foil]sticker"		"1"
+			"[boston2018_signature_qikert_foil]sticker"		"1"
+			"[boston2018_signature_azr_foil]sticker"		"1"
+			"[boston2018_signature_jks_foil]sticker"		"1"
+			"[boston2018_signature_naf_foil]sticker"		"1"
+			"[boston2018_signature_nifty_foil]sticker"		"1"
+			"[boston2018_signature_ustilo_foil]sticker"		"1"
+			"[boston2018_signature_happy_foil]sticker"		"1"
+			"[boston2018_signature_rpk_foil]sticker"		"1"
+			"[boston2018_signature_scream_foil]sticker"		"1"
+			"[boston2018_signature_sixer_foil]sticker"		"1"
+			"[boston2018_signature_xms_foil]sticker"		"1"
+			"[boston2018_signature_amanek_foil]sticker"		"1"
+			"[boston2018_signature_devoduvek_foil]sticker"		"1"
+			"[boston2018_signature_sgares_foil]sticker"		"1"
+			"[boston2018_signature_shahzam_foil]sticker"		"1"
+			"[boston2018_signature_sick_foil]sticker"		"1"
+			"[boston2018_signature_balblna_foil]sticker"		"1"
+			"[boston2018_signature_boombl4_foil]sticker"		"1"
+			"[boston2018_signature_jmqa_foil]sticker"		"1"
+			"[boston2018_signature_kvik_foil]sticker"		"1"
+			"[boston2018_signature_waterfallz_foil]sticker"		"1"
+			"[boston2018_signature_attacker_foil]sticker"		"1"
+			"[boston2018_signature_karsa_foil]sticker"		"1"
+			"[boston2018_signature_kaze_foil]sticker"		"1"
+			"[boston2018_signature_loveyy_foil]sticker"		"1"
+			"[boston2018_signature_summer_foil]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_contenders_flg_gold"
+		{
+			"[boston2018_signature_calyx_gold]sticker"		"1"
+			"[boston2018_signature_maj3r_gold]sticker"		"1"
+			"[boston2018_signature_ngin_gold]sticker"		"1"
+			"[boston2018_signature_paz_gold]sticker"		"1"
+			"[boston2018_signature_xantares_gold]sticker"		"1"
+			"[boston2018_signature_elige_gold]sticker"		"1"
+			"[boston2018_signature_jdm64_gold]sticker"		"1"
+			"[boston2018_signature_nitro_gold]sticker"		"1"
+			"[boston2018_signature_stanislaw_gold]sticker"		"1"
+			"[boston2018_signature_twistzz_gold]sticker"		"1"
+			"[boston2018_signature_buster_gold]sticker"		"1"
+			"[boston2018_signature_dimasick_gold]sticker"		"1"
+			"[boston2018_signature_jame_gold]sticker"		"1"
+			"[boston2018_signature_krizzen_gold]sticker"		"1"
+			"[boston2018_signature_qikert_gold]sticker"		"1"
+			"[boston2018_signature_azr_gold]sticker"		"1"
+			"[boston2018_signature_jks_gold]sticker"		"1"
+			"[boston2018_signature_naf_gold]sticker"		"1"
+			"[boston2018_signature_nifty_gold]sticker"		"1"
+			"[boston2018_signature_ustilo_gold]sticker"		"1"
+			"[boston2018_signature_happy_gold]sticker"		"1"
+			"[boston2018_signature_rpk_gold]sticker"		"1"
+			"[boston2018_signature_scream_gold]sticker"		"1"
+			"[boston2018_signature_sixer_gold]sticker"		"1"
+			"[boston2018_signature_xms_gold]sticker"		"1"
+			"[boston2018_signature_amanek_gold]sticker"		"1"
+			"[boston2018_signature_devoduvek_gold]sticker"		"1"
+			"[boston2018_signature_sgares_gold]sticker"		"1"
+			"[boston2018_signature_shahzam_gold]sticker"		"1"
+			"[boston2018_signature_sick_gold]sticker"		"1"
+			"[boston2018_signature_balblna_gold]sticker"		"1"
+			"[boston2018_signature_boombl4_gold]sticker"		"1"
+			"[boston2018_signature_jmqa_gold]sticker"		"1"
+			"[boston2018_signature_kvik_gold]sticker"		"1"
+			"[boston2018_signature_waterfallz_gold]sticker"		"1"
+			"[boston2018_signature_attacker_gold]sticker"		"1"
+			"[boston2018_signature_karsa_gold]sticker"		"1"
+			"[boston2018_signature_kaze_gold]sticker"		"1"
+			"[boston2018_signature_loveyy_gold]sticker"		"1"
+			"[boston2018_signature_summer_gold]sticker"		"1"
+		}
 		"crate_signature_pack_boston2018_group_players_collection_legends"
 		{
 			"contains_stickers_autographed_by_proplayers"		"1"
@@ -87244,6 +87463,20 @@
 			"crate_signature_pack_boston2018_group_contenders_rare"		"1"
 			"crate_signature_pack_boston2018_group_contenders_foil"		"1"
 			"crate_signature_pack_boston2018_group_contenders_gold"		"1"
+		}
+		"crate_signature_pack_boston2018_group_players_collection_contenders_flgonly"
+		{
+			"contains_stickers_autographed_by_proplayers"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flgonly_rare"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flgonly_foil"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flgonly_gold"		"1"
+		}
+		"crate_signature_pack_boston2018_group_players_collection_contenders_flg"
+		{
+			"contains_stickers_autographed_by_proplayers"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flg_rare"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flg_foil"		"1"
+			"crate_signature_pack_boston2018_group_contenders_flg_gold"		"1"
 		}
 		"crate_boston2018_promo_de_inferno"
 		{
@@ -87516,6 +87749,16 @@
 			"prefab"		"boston2018_sticker_capsule_prefab"
 			"item_type"		"self_opening_purchase"
 		}
+		"4472"
+		{
+			"item_name"		"#StoreItem_boston2018_team_flg_sticker"
+			"name"		"crate_sticker_pack_boston2018_flg"
+			"item_description"		"#EventItemDesc_boston2018_sticker_team"
+			"image_inventory"		"econ/stickers/boston2018/flg"
+			"loot_list_name"		"boston2018_rare_flg"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
 		"4430"
 		{
 			"item_name"		"#StoreItem_boston2018_team_eleague_sticker"
@@ -87766,6 +88009,16 @@
 			"prefab"		"boston2018_sticker_capsule_prefab"
 			"item_type"		"self_opening_purchase"
 		}
+		"4473"
+		{
+			"item_name"		"#StoreItem_boston2018_team_flg_graffiti"
+			"name"		"crate_graffiti_pack_boston2018_flg"
+			"item_description"		"#EventItemDesc_boston2018_graffiti_team"
+			"image_inventory"		"econ/stickers/boston2018/flg_graffiti"
+			"loot_list_name"		"boston2018_graffiti_flg"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
 		"4455"
 		{
 			"item_name"		"#StoreItem_boston2018_team_eleague_graffiti"
@@ -87854,6 +88107,32 @@
 				}
 			}
 		}
+		"4474"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_boston2018_contenders_flg"
+			"name"		"crate_sticker_pack_boston2018_contenders_flg"
+			"item_description"		"#CSGO_crate_sticker_pack_boston2018_contenders_flg_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_boston2018_contenders_flg"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"239"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_boston2018_contenders_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_boston2018_contenders_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
 		"4459"
 		{
 			"item_name"		"#CSGO_crate_signature_pack_boston2018_group_legends"
@@ -87902,10 +88181,36 @@
 				}
 			}
 		}
+		"4475"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_boston2018_group_contenders_flg"
+			"name"		"crate_signature_pack_boston2018_group_contenders_flg"
+			"item_description"		"#CSGO_crate_signature_pack_boston2018_group_contenders_flg_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_boston2018_group_contenders_flg"
+			"prefab"		"boston2018_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"240"
+				}
+			}
+		}
 		"4462"
 		{
 			"item_name"		"#CSGO_crate_boston2018_bundle_of_all"
 			"name"		"crate_boston2018_bundle_of_all"
+			"item_description"		"#CSGO_crate_boston2018_bundle_of_all_desc"
+			"image_inventory"		"econ/weapon_cases/boston2018_bundleofall"
+			"loot_list_name"		"boston2018_bundle_of_all"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4476"
+		{
+			"item_name"		"#CSGO_crate_boston2018_bundle_of_all"
+			"name"		"crate_boston2018_bundle_of_all_flg"
 			"item_description"		"#CSGO_crate_boston2018_bundle_of_all_desc"
 			"image_inventory"		"econ/weapon_cases/boston2018_bundleofall"
 			"loot_list_name"		"boston2018_bundle_of_all"
@@ -89085,6 +89390,46 @@
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"74"
 		}
+		"2935"
+		{
+			"name"		"boston2018_team_flg"
+			"item_name"		"#StickerKit_boston2018_team_flg"
+			"description_string"		"#EventItemDesc_boston2018_sticker_team"
+			"sticker_material"		"boston2018/flg"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+		}
+		"2936"
+		{
+			"name"		"boston2018_team_flg_holo"
+			"item_name"		"#StickerKit_boston2018_team_flg_holo"
+			"description_string"		"#EventItemDesc_boston2018_sticker_team"
+			"sticker_material"		"boston2018/flg_holo"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+		}
+		"2937"
+		{
+			"name"		"boston2018_team_flg_foil"
+			"item_name"		"#StickerKit_boston2018_team_flg_foil"
+			"description_string"		"#EventItemDesc_boston2018_sticker_team"
+			"sticker_material"		"boston2018/flg_foil"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+		}
+		"2938"
+		{
+			"name"		"boston2018_team_flg_gold"
+			"item_name"		"#StickerKit_boston2018_team_flg_gold"
+			"description_string"		"#EventItemDesc_boston2018_sticker_team"
+			"sticker_material"		"boston2018/flg_gold"
+			"item_rarity"		"legendary"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+		}
 		"2532"
 		{
 			"name"		"boston2018_team_eleague"
@@ -89364,6 +89709,16 @@
 			"item_rarity"		"rare"
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"74"
+		}
+		"2939"
+		{
+			"name"		"boston2018_team_flg_graffiti"
+			"item_name"		"#StickerKit_boston2018_team_flg"
+			"description_string"		"#EventItemDesc_boston2018_graffiti_team"
+			"sticker_material"		"boston2018/flg_graffiti"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
 		}
 		"2560"
 		{
@@ -93334,6 +93689,171 @@
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"74"
 			"tournament_player_id"		"85131873"
+		}
+		"2940"
+		{
+			"name"		"boston2018_signature_attacker"
+			"item_name"		"#StickerKit_boston2018_signature_attacker"
+			"description_string"		"#StickerKit_desc_boston2018_signature_attacker"
+			"sticker_material"		"boston2018/sig_attacker"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"88001036"
+		}
+		"2941"
+		{
+			"name"		"boston2018_signature_attacker_foil"
+			"item_name"		"#StickerKit_boston2018_signature_attacker_foil"
+			"description_string"		"#StickerKit_desc_boston2018_signature_attacker_foil"
+			"sticker_material"		"boston2018/sig_attacker_foil"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"88001036"
+		}
+		"2942"
+		{
+			"name"		"boston2018_signature_attacker_gold"
+			"item_name"		"#StickerKit_boston2018_signature_attacker_gold"
+			"description_string"		"#StickerKit_desc_boston2018_signature_attacker_gold"
+			"sticker_material"		"boston2018/sig_attacker_gold"
+			"item_rarity"		"ancient"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"88001036"
+		}
+		"2943"
+		{
+			"name"		"boston2018_signature_karsa"
+			"item_name"		"#StickerKit_boston2018_signature_karsa"
+			"description_string"		"#StickerKit_desc_boston2018_signature_karsa"
+			"sticker_material"		"boston2018/sig_karsa"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"85358333"
+		}
+		"2944"
+		{
+			"name"		"boston2018_signature_karsa_foil"
+			"item_name"		"#StickerKit_boston2018_signature_karsa_foil"
+			"description_string"		"#StickerKit_desc_boston2018_signature_karsa_foil"
+			"sticker_material"		"boston2018/sig_karsa_foil"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"85358333"
+		}
+		"2945"
+		{
+			"name"		"boston2018_signature_karsa_gold"
+			"item_name"		"#StickerKit_boston2018_signature_karsa_gold"
+			"description_string"		"#StickerKit_desc_boston2018_signature_karsa_gold"
+			"sticker_material"		"boston2018/sig_karsa_gold"
+			"item_rarity"		"ancient"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"85358333"
+		}
+		"2946"
+		{
+			"name"		"boston2018_signature_kaze"
+			"item_name"		"#StickerKit_boston2018_signature_kaze"
+			"description_string"		"#StickerKit_desc_boston2018_signature_kaze"
+			"sticker_material"		"boston2018/sig_kaze"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"16127541"
+		}
+		"2947"
+		{
+			"name"		"boston2018_signature_kaze_foil"
+			"item_name"		"#StickerKit_boston2018_signature_kaze_foil"
+			"description_string"		"#StickerKit_desc_boston2018_signature_kaze_foil"
+			"sticker_material"		"boston2018/sig_kaze_foil"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"16127541"
+		}
+		"2948"
+		{
+			"name"		"boston2018_signature_kaze_gold"
+			"item_name"		"#StickerKit_boston2018_signature_kaze_gold"
+			"description_string"		"#StickerKit_desc_boston2018_signature_kaze_gold"
+			"sticker_material"		"boston2018/sig_kaze_gold"
+			"item_rarity"		"ancient"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"16127541"
+		}
+		"2949"
+		{
+			"name"		"boston2018_signature_loveyy"
+			"item_name"		"#StickerKit_boston2018_signature_loveyy"
+			"description_string"		"#StickerKit_desc_boston2018_signature_loveyy"
+			"sticker_material"		"boston2018/sig_loveyy"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"48886373"
+		}
+		"2950"
+		{
+			"name"		"boston2018_signature_loveyy_foil"
+			"item_name"		"#StickerKit_boston2018_signature_loveyy_foil"
+			"description_string"		"#StickerKit_desc_boston2018_signature_loveyy_foil"
+			"sticker_material"		"boston2018/sig_loveyy_foil"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"48886373"
+		}
+		"2951"
+		{
+			"name"		"boston2018_signature_loveyy_gold"
+			"item_name"		"#StickerKit_boston2018_signature_loveyy_gold"
+			"description_string"		"#StickerKit_desc_boston2018_signature_loveyy_gold"
+			"sticker_material"		"boston2018/sig_loveyy_gold"
+			"item_rarity"		"ancient"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"48886373"
+		}
+		"2952"
+		{
+			"name"		"boston2018_signature_summer"
+			"item_name"		"#StickerKit_boston2018_signature_summer"
+			"description_string"		"#StickerKit_desc_boston2018_signature_summer"
+			"sticker_material"		"boston2018/sig_summer"
+			"item_rarity"		"rare"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"52964519"
+		}
+		"2953"
+		{
+			"name"		"boston2018_signature_summer_foil"
+			"item_name"		"#StickerKit_boston2018_signature_summer_foil"
+			"description_string"		"#StickerKit_desc_boston2018_signature_summer_foil"
+			"sticker_material"		"boston2018/sig_summer_foil"
+			"item_rarity"		"mythical"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"52964519"
+		}
+		"2954"
+		{
+			"name"		"boston2018_signature_summer_gold"
+			"item_name"		"#StickerKit_boston2018_signature_summer_gold"
+			"description_string"		"#StickerKit_desc_boston2018_signature_summer_gold"
+			"sticker_material"		"boston2018/sig_summer_gold"
+			"item_rarity"		"ancient"
+			"tournament_event_id"		"13"
+			"tournament_team_id"		"79"
+			"tournament_player_id"		"52964519"
 		}
 	}
 	"pro_players"
@@ -109036,6 +109556,76 @@
 				}
 			}
 		}
+		"88001036"
+		{
+			"name"		"Attacker"
+			"code"		"attacker"
+			"dob"		"1997-01-07"
+			"geo"		"CN"
+			"events"
+			{
+				"13"
+				{
+					"team"		"79"
+				}
+			}
+		}
+		"85358333"
+		{
+			"name"		"Karsa"
+			"code"		"karsa"
+			"dob"		"1992-02-29"
+			"geo"		"CN"
+			"events"
+			{
+				"13"
+				{
+					"team"		"79"
+				}
+			}
+		}
+		"16127541"
+		{
+			"name"		"Kaze"
+			"code"		"kaze"
+			"dob"		"1994-07-22"
+			"geo"		"MY"
+			"events"
+			{
+				"13"
+				{
+					"team"		"79"
+				}
+			}
+		}
+		"48886373"
+		{
+			"name"		"LoveYY"
+			"code"		"loveyy"
+			"dob"		"1989-01-09"
+			"geo"		"CN"
+			"events"
+			{
+				"13"
+				{
+					"team"		"79"
+				}
+			}
+		}
+		"52964519"
+		{
+			"name"		"Summer"
+			"code"		"summer"
+			"dob"		"1997-05-16"
+			"geo"		"CN"
+			"events"
+			{
+				"13"
+				{
+					"team"		"79"
+				}
+			}
+		}
 	}
 	"items_game_live"
 	{
@@ -115302,6 +115892,18 @@
 			"crate_sprays_illuminate1_lootlist_rare"		"1"
 			"crate_sprays_illuminate1_lootlist_mythical"		"1"
 			"crate_sprays_illuminate1_lootlist_legendary"		"1"
+		}
+	}
+	"items"
+	{
+		"4477"
+		{
+			"item_name"		"#CSGO_crate_boston2018_bundle_of_all"
+			"name"		"crate_sticker_pack_chickens_capsule"
+			"item_description"		"#CSGO_crate_boston2018_bundle_of_all_desc"
+			"image_inventory"		"econ/weapon_cases/boston2018_bundleofall"
+			"first_sale_date"		"2018/01/04"
+			"prefab"		"weapon_case_base"
 		}
 	}
 }
