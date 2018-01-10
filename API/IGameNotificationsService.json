@@ -46,6 +46,44 @@
             ]
         },
         {
+            "name": "UserCreateSession",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Creates an async game session",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The appid to create the session for."
+                },
+                {
+                    "name": "context",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Game-specified context value the game can used to associate the session with some object on their backend."
+                },
+                {
+                    "name": "title",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "The title of the session to be displayed within each user's list of sessions."
+                },
+                {
+                    "name": "users",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "The initial state of all users in the session."
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user."
+                }
+            ]
+        },
+        {
             "name": "UpdateSession",
             "version": 1,
             "httpmethod": "POST",
@@ -57,6 +95,44 @@
                     "optional": false,
                     "description": "Access key"
                 },
+                {
+                    "name": "sessionid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The sessionid to update."
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The appid of the session to update."
+                },
+                {
+                    "name": "title",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "(Optional) The new title of the session.  If not specified, the title will not be changed."
+                },
+                {
+                    "name": "users",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "(Optional) A list of users whose state will be updated to reflect the given state. If the users are not already in the session, they will be added to it."
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session and all users being added to the session must be friends with the user."
+                }
+            ]
+        },
+        {
+            "name": "UserUpdateSession",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Updates an async game session",
+            "parameters": [
                 {
                     "name": "sessionid",
                     "type": "uint64",
@@ -202,6 +278,32 @@
                     "optional": false,
                     "description": "Access key"
                 },
+                {
+                    "name": "sessionid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The sessionid to delete."
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The appid of the session to delete."
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "(Optional) steamid to make the request on behalf of -- if specified, the user must be in the session."
+                }
+            ]
+        },
+        {
+            "name": "UserDeleteSession",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Deletes an async game session",
+            "parameters": [
                 {
                     "name": "sessionid",
                     "type": "uint64",
