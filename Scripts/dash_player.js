@@ -144,7 +144,8 @@ CDASHPlayer.prototype.Close = function()
 	this.m_tsLiveContentStarted = 0;
 	this.m_rtVODResumeAtTime = 0;
 	this.m_bIsBuffering = true;
-	this.m_bIsPlayingInUI = true;
+	// Keep previously play state... If we were paused, remain paused, and if we were playing, then continue playing when we restart.
+	// this.m_bIsPlayingInUI = true;
 	this.m_nCurrentSeekTime = -1;
 	this.m_nSavedPlaybackRate = 1.0;
 	this.m_bExiting = false;
@@ -875,8 +876,10 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 
 		this.m_elVideoPlayer.currentTime = nStartPlayback;
 
-		if ( this.m_bIsPlayingInUI )
+		if ( this.m_bIsPlayingInUI ) 
+		{
 			this.m_elVideoPlayer.play();
+		}
 
 		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate;
 
@@ -4903,6 +4906,13 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 	var nLastVolume = WebStorage.GetLocal( 'video_volume' );
 	if( nLastVolume == null )
 		nLastVolume = 1;
+
+	// If I start out muted, actually set the volume to zero. At some point, I cannot pinpoint where,
+	// the muted setting on the html video element is ignored.
+	if( this.m_player.m_elVideoPlayer.muted )
+	{
+		nLastVolume = 0;
+	}
 
 	this.SetVolume( nLastVolume );
 

@@ -4,6 +4,7 @@ function CLoginPromptManager( strBaseURL, rgOptions )
 {
 	// normalize with trailing slash
 	this.m_strBaseURL = strBaseURL + ( strBaseURL.substr(-1) == '/' ? '' : '/' ) + ( this.m_bIsMobile ? 'mobilelogin' : 'login' ) + '/';
+	this.m_strSiteBaseURL = strBaseURL; // Actual base url, not the login base url above.
 
 	// read options
 	rgOptions = rgOptions || {};
@@ -648,7 +649,18 @@ CLoginPromptManager.prototype.LoginComplete = function()
 	}
 	else if ( this.m_strRedirectURL != '' )
 	{
-		window.location = this.m_strRedirectURL;
+		// If this isn't one of our URLs, reject anything that looks like it has a protocol in it.
+		if ( this.m_strRedirectURL.match ( /^[^\/]*:/i ) )
+		{
+			if ( this.m_strRedirectURL.replace( /^http:/, 'https:' ).indexOf( this.m_strSiteBaseURL.replace( /^http:/, 'https:') ) !== 0 )
+			{
+				this.m_strRedirectURL = '';
+			}
+		}
+		if( this.m_strRedirectURL  )
+			window.location = this.m_strRedirectURL;
+		else
+			window.location = this.m_strSiteBaseURL
 	}
 	else if ( this.m_bIsMobile )
 	{

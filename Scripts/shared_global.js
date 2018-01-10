@@ -3613,8 +3613,15 @@ FixedElementOnScrollWrapper.prototype.handleScroll = function( bForceRecalc )
 // fnSuggestForTerm will be called with two values, the current string to get suggestions for,
 //	and the callback to invoke with the new values.  You should always invoke the callback per call
 //	to fnSuggestForTerm, but can delay due to ajax if needed.
-function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest )
+function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
 {
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+}
+
+CTextInputSuggest.prototype.Init = function( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+{
+	if( !strCssClass )
+		strCssClass = 'popup_block_new';
 	this.m_bHaveSuggestions = false;
 	this.m_$Input = $InputElement;
 	this.m_fnSuggestForTerm = fnSuggestForTerm;
@@ -3627,7 +3634,7 @@ function CTextInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest )
 	this.m_strLastFocusVal = null;
 
 
-	this.m_$SuggestionsCtn = $J('<div/>', {'class': 'popup_block_new', style: 'display: none;' } );
+	this.m_$SuggestionsCtn = $J('<div/>', {'class': strCssClass, style: 'display: none;' } );
 	this.m_$Suggestions = $J('<div/>', {'class': 'popup_body popup_menu' } );
 	this.m_$SuggestionsCtn.append( this.m_$Suggestions );
 
@@ -3791,6 +3798,78 @@ CTextInputSuggest.prototype.Destroy = function()
 {
 	this.m_$SuggestionsCtn.remove();
 	this.m_$Input.off( '.CTextInputSuggest' );
+};
+
+/**
+ * Similar to CTextInputSuggest, but uses associative arrays instead of just text; useful for when we may have more than one
+ * item with the same text name, or when you want to use HTML in the item name instead of just plaintext
+ *
+ * Each suggestion should include a 'key', and one of the following:
+ * text - Suggestion text (escaped, sets textContents)
+ * html - Raw suggestion html (NOT ESCAPED, sets innerHTML)
+ *
+ * @param $InputElement
+ * @param fnSuggestForTerm
+ * @param fnOnSuggest
+ * @constructor
+ */
+function CIndexedInputSuggest( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass )
+{
+	this.Init( $InputElement, fnSuggestForTerm, fnOnSuggest, strCssClass );
+}
+
+CIndexedInputSuggest.prototype = Object.create(CTextInputSuggest.prototype);;
+
+CIndexedInputSuggest.prototype.OnSuggestionSelected = function( $Suggestion )
+{
+	this.m_$Input.val( $Suggestion.text() );
+
+	this.m_bHaveSuggestions = false;
+	this.m_$Focus = $J();
+	this.HideSuggestions();
+
+	this.m_fnOnSuggest( $Suggestion.data('suggest-key'), $Suggestion.text() );
+};
+
+CIndexedInputSuggest.prototype.SetSuggestions = function( rgSuggestions )
+{
+	var strLastFocus = this.m_strLastFocusVal;
+
+	this.m_$Suggestions.empty();
+
+	this.m_$Focus = $J();
+	this.m_strLastFocus = null;
+
+	if ( rgSuggestions && rgSuggestions.length )
+	{
+		var _this = this;
+		for ( var i = 0; i < rgSuggestions.length; i++ )
+		{
+
+			var $Suggestion = $J('<div/>', {'class': 'suggestion_item popup_menu_item' } );
+			if( rgSuggestions[i].text )
+				$Suggestion.text( rgSuggestions[i].text );
+			else if( rgSuggestions[i].html )
+				$Suggestion.html( rgSuggestions[i].html );
+
+			$Suggestion.data('suggest-key', rgSuggestions[i].key )
+
+			$Suggestion.click( $J.proxy( this.OnSuggestionSelected, this, $Suggestion ) );
+			$Suggestion.mouseenter( $J.proxy( this.SetFocus, this, $Suggestion ) );
+
+			this.m_$Suggestions.append( $Suggestion );
+
+			if ( rgSuggestions[i] == strLastFocus )
+				this.SetFocus( $Suggestion );
+		}
+		this.m_bHaveSuggestions = true;
+		this.ShowSuggestions();
+	}
+	else
+	{
+		this.m_bHaveSuggestions = false;
+		this.HideSuggestions();
+	}
 };
 
 function InitBBCodeVideos( bAllowAutoPlay )

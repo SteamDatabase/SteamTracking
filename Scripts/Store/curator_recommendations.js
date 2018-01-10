@@ -283,7 +283,7 @@ function UpdateRecommendationFilterData( refresh )
 
 function ShowEditHandles()
 {
-	$J('.page_section:not(.editing)').each(function( i, j ){
+	$J('.page_section:not(.editing):not(.header_area)').each(function( i, j ){
 
 		$J('.navigation_bar > a').removeClass('selected');
 		$J('.navigation_bar > a:last-child').addClass('selected');

@@ -48,6 +48,11 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	{
 		this.m_ulViewerToken = 0;
 	}
+
+	if( this.m_IFrameHelper )
+	{
+		this.RegisterParentBroadcastHooks();
+	}
 };
 
 CBroadcastWatch.s_UpdateTimeoutSec = 60;
@@ -336,7 +341,7 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 			// other chat iframe, so it can call RequestChatInfo.
 			else if ( _watch.m_IFrameHelper )
 			{
-				_watch.PostMessageToIFrameParent( 'OnBroadcastIDChanged', { broadcastid: data.broadcastid } );
+				_watch.PostMessageToIFrameParent( 'OnBroadcastIDChanged', { broadcastid: data.broadcastid, broadcaststeamid: _watch.m_ulBroadcastSteamID } );
 			}
 
 			// Hide the loading panel
@@ -516,7 +521,8 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 	}
 
-	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged", { viewer_count: data.viewer_count } );
+	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged",
+		{ viewer_count: data.viewer_count, title: data.title, app_title: data.app_title, appid: data.appid } );
 };
 
 function OpenBroadcastLink()
@@ -792,3 +798,28 @@ CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data
 	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
 };
 
+CBroadcastWatch.prototype.RegisterParentBroadcastHooks = function(  )
+{
+    var _watch = this;
+
+    $J( window ).on(
+		"message",
+		function ( e )
+		{
+			var Msg = e.originalEvent.data;
+			switch( Msg.msg )
+			{
+				case 'pause':
+                    if ( ! _watch.m_player.m_elVideoPlayer.paused )
+					{
+                        _watch.m_playerUI.TogglePlayPause();
+                    }
+
+                    // The player may think its pause but the player state may be out of sync. Set it anyways.
+	                _watch.m_player.SavePlaybackStateFromUI( false );
+                    _watch.m_playerUI.m_bPlayingLiveEdge = false;
+                    break;
+			}
+		}
+	);
+}

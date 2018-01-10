@@ -267,7 +267,7 @@ a.badge_row:hover .badge_view_details {
 
 .salespend_card_drop_info .card_drop_info_progress_bar {
 	border-color: #27282b;
-	background: -webkit-linear-gradient( top, #ac5999 5%, #664503 95%);background: linear-gradient( to bottom, #ac5999 5%, #664503 95%);}
+	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);}
 
 .salespend_card_drop_info .card_drop_info_totalspending {
 	color: #5491cf;

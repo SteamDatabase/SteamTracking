@@ -690,8 +690,7 @@ input.textField {
 }
 
 #error_display {
-	float: left;
-	width: 124px;
+	color: #D2A63B;
 }
 .smallLabel {
 	padding-top: 4px;

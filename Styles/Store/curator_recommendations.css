@@ -391,6 +391,15 @@ body.v6 .page_desc p {
 	color: #f5df67;
 }
 
+.curator_review_date {
+    margin-left: 10px;
+    color: #93b0bb;
+    font-size: 10px;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+
 .curator_featured .screenshots {
 	display: flex;
 	flex-direction: row;

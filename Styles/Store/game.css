@@ -2496,17 +2496,21 @@ img.agegate_img_package {
 }
 
 .prepurchase_rewards_title {
-	font:Arial;
-	font-size:20pt;
-	color:#dfdfde;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size:20pt;
+	color:#ffffff;
 	margin-left:50px;
 	margin-top:-45px;
 }
 
 .prepurchase_rewards_details {
-	font:Arial;
-	font-size:14px;
-	color:#958F8E;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size:14px;
+	color:#acb2b8;
 	margin-left:50px;
 	margin-top:-5px;
 }
@@ -2514,7 +2518,7 @@ img.agegate_img_package {
 span.prepurchase_bar {
 	position: absolute;
 	overflow: hidden;
-	top: 4px;
+	top: 3px;
 }
 
 span.prepurchase_text_achieved {
@@ -2525,9 +2529,32 @@ span.prepurchase_text_achieved {
 }
 
 span.prepurchase_text_normal {
-	color:#958f8e;
+	color:#acb2b8;
 	font-size:12px;
 	float:right;
+}
+.tiers_ctn {
+	height: 80px;
+	position: relative;
+}
+.tiers_row {
+	position: absolute;
+	margin-top: 13px;
+}
+.tier_names {
+	position: relative;
+	left: 2px;
+	top: 48px;
+}
+.reward_ribbon {
+	left:585px;
+	top:-5px;
+	position:absolute;
+	float:right;
+}
+.rewards_section_rule {
+	padding-bottom:10px;
+	display: block;
 }
 
 div.early_access_banner {
@@ -4497,6 +4524,10 @@ div.agegate_text_container > h2 {
 	html.responsive .series_episode .episode_action_col {
 		position: inherit;
 	}
+
+	html.responsive .series_episode .episode_image_col {
+		padding-top: 8px;
+	}
 }
 
 .bundle_simulator_form .bundle_simulator_row {
@@ -4740,6 +4771,10 @@ body.v6 .page_content.notes {
 }
 .referringSteamCurator a {
 	text-decoration: underline;
+}
+.referringSteamCurator .curator_review_date {
+    margin-left: 5px;
+    color: #93b0bb;
 }
 
 .discussion_button_ctn,

@@ -979,7 +979,7 @@ function JoinRequests_ApproveDenyUser( accountID, bApprove )
 {
     $J.post( g_strProcessURL, { 'rgAccounts' : [ accountID ], 'bapprove' : bApprove, 'sessionID': g_sessionID } )
         .done( function( eResult ) {
-            JoinRquests_HandleResponse( eResult );
+	        JoinRequests_HandleResponse( eResult );
         } );
 }
 
@@ -987,7 +987,7 @@ function JoinRequests_RespondToAllJoinRequests( bApprove )
 {
     $J.post( g_strProcessURL, { 'bapprove' : bApprove, "action" : "bulkrespond", 'sessionID': g_sessionID } )
         .done( function( eResult ) {
-            JoinRquests_HandleResponse( eResult );
+	        JoinRequests_HandleResponse( eResult );
         } );
 }
 
@@ -995,11 +995,11 @@ function JoinRequests_RespondToSelectedJoinRequests( bApprove )
 {
     $J.post( g_strProcessURL, $J( "#joinRequestForm" ).serialize() + "&bapprove=" + bApprove )
         .done( function( eResult ) {
-            JoinRquests_HandleResponse( eResult );
+	        JoinRequests_HandleResponse( eResult );
         } );
 }
 
-function JoinRquests_HandleResponse( eResult )
+function JoinRequests_HandleResponse( eResult )
 {
     if ( eResult == 1 )
     {
