@@ -93336,7 +93336,7 @@
 			"item_rarity"		"rare"
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"77"
-			"tournament_player_id"		"2356959"
+			"tournament_player_id"		"23556959"
 		}
 		"2889"
 		{
@@ -93347,7 +93347,7 @@
 			"item_rarity"		"mythical"
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"77"
-			"tournament_player_id"		"2356959"
+			"tournament_player_id"		"23556959"
 		}
 		"2890"
 		{
@@ -93358,7 +93358,7 @@
 			"item_rarity"		"ancient"
 			"tournament_event_id"		"13"
 			"tournament_team_id"		"77"
-			"tournament_player_id"		"2356959"
+			"tournament_player_id"		"23556959"
 		}
 		"2891"
 		{
@@ -109262,7 +109262,7 @@
 				}
 			}
 		}
-		"2356959"
+		"23556959"
 		{
 			"name"		"SicK"
 			"code"		"sick"
