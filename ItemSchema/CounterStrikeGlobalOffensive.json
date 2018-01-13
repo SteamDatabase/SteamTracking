@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.068f12f9207660f1cfb6f7671e21d1b17d26a98f.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.f146bed5e533bfbdaad033cd7fe8e36438d4bf25.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -24781,7 +24781,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
 				"item_name": "Boston 2018 Mega Bundle",
-				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"item_description": "This event bundle contains 48 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 23 participating teams.\n ● One graffiti for each of the 23 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
@@ -25203,7 +25203,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
 				"item_name": "Boston 2018 Mega Bundle",
-				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"item_description": "This event bundle contains 48 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 23 participating teams.\n ● One graffiti for each of the 23 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
@@ -25235,7 +25235,7 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
 				"item_name": "Boston 2018 Mega Bundle",
-				"item_description": "This event bundle contains 50 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 24 participating teams.\n ● One graffiti for each of the 24 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"item_description": "This event bundle contains 48 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 23 participating teams.\n ● One graffiti for each of the 23 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
 				"proper_name": false,
 				"item_quality": 4,
 				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
@@ -25252,6 +25252,112 @@
 						"usable_out_of_game": true
 					}
 				}
+			},
+			{
+				"name": "crate_sticker_pack_boston2018_legends_ntv",
+				"defindex": 4478,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Attending Legends (Holo/Foil)",
+				"item_description": "This capsule contains a single Boston 2018 participant Holo or Foil sticker.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_legends_ntv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_legends_ntv.f6849e658f14aa28d99f37b9d4a722647ba6a33b.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 241
+					}
+				]
+				
+			},
+			{
+				"name": "crate_signature_pack_boston2018_group_legends_ntv",
+				"defindex": 4479,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Attending Legends Autograph Capsule",
+				"item_description": "This capsule contains a single High Grade, Foil, or Gold sticker autographed by one of the players from Legends teams at Boston 2018.\n\n50% of the proceeds from the sale of this capsule support the included players and organizations.\n\nThat sticker can be applied to any weapon you own and can be scraped to look more worn. You can scrape the same sticker multiple times, making it a bit more worn each time, until it is removed from the weapon.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_boston2018_group_legends_ntv",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_boston2018_group_legends_ntv.05488be734f895c6217b670a5f61c7b199ee0633.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					},
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 242
+					}
+				]
+				
+			},
+			{
+				"name": "crate_boston2018_bundle_of_all_ntv",
+				"defindex": 4480,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Boston 2018 Mega Bundle",
+				"item_description": "This event bundle contains 48 items commemorating players and organizations participating in the ELEAGUE 2018 Boston CS:GO Major Championship:\n ● One sticker for each of the 23 participating teams.\n ● One graffiti for each of the 23 participating teams.\n ● One ELEAGUE sticker.\n ● One ELEAGUE graffiti.\n   (Does not include autographs and holo/foil capsules.)\n\n50% of the proceeds from the sale of this event bundle support the included players and organizations.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/boston2018_bundleofall",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/boston2018_bundleofall.cc5a31363d3d70735c12478fcf4f05b03c452854.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "tournament event id",
+						"class": "tournament_event_id",
+						"value": 13
+					}
+				]
+				
 			},
 			{
 				"name": "studded_bloodhound_gloves",

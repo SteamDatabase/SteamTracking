@@ -86081,6 +86081,8 @@
 		"236"		"crate_boston2018_promo_de_nuke"
 		"239"		"crate_sticker_pack_boston2018_contenders_flg"
 		"240"		"crate_signature_pack_boston2018_group_players_collection_contenders_flg"
+		"241"		"crate_sticker_pack_boston2018_legends_ntv"
+		"242"		"crate_signature_pack_boston2018_group_players_collection_legends_ntv"
 	}
 	"client_loot_lists"
 	{
@@ -86316,6 +86318,17 @@
 			"[boston2018_team_nor_holo]sticker"		"1"
 			"[boston2018_team_eleague_holo]sticker"		"1"
 		}
+		"crate_sticker_pack_boston2018_legends_ntv_mythical"
+		{
+			"[boston2018_team_gamb_holo]sticker"		"1"
+			"[boston2018_team_astr_holo]sticker"		"1"
+			"[boston2018_team_vp_holo]sticker"		"1"
+			"[boston2018_team_fntc_holo]sticker"		"1"
+			"[boston2018_team_sk_holo]sticker"		"1"
+			"[boston2018_team_big_holo]sticker"		"1"
+			"[boston2018_team_nor_holo]sticker"		"1"
+			"[boston2018_team_eleague_holo]sticker"		"1"
+		}
 		"crate_sticker_pack_boston2018_legends_legendary"
 		{
 			"[boston2018_team_gamb_foil]sticker"		"1"
@@ -86328,10 +86341,26 @@
 			"[boston2018_team_nor_foil]sticker"		"1"
 			"[boston2018_team_eleague_foil]sticker"		"1"
 		}
+		"crate_sticker_pack_boston2018_legends_ntv_legendary"
+		{
+			"[boston2018_team_gamb_foil]sticker"		"1"
+			"[boston2018_team_astr_foil]sticker"		"1"
+			"[boston2018_team_vp_foil]sticker"		"1"
+			"[boston2018_team_fntc_foil]sticker"		"1"
+			"[boston2018_team_sk_foil]sticker"		"1"
+			"[boston2018_team_big_foil]sticker"		"1"
+			"[boston2018_team_nor_foil]sticker"		"1"
+			"[boston2018_team_eleague_foil]sticker"		"1"
+		}
 		"crate_sticker_pack_boston2018_legends"
 		{
 			"crate_sticker_pack_boston2018_legends_mythical"		"1"
 			"crate_sticker_pack_boston2018_legends_legendary"		"1"
+		}
+		"crate_sticker_pack_boston2018_legends_ntv"
+		{
+			"crate_sticker_pack_boston2018_legends_ntv_mythical"		"1"
+			"crate_sticker_pack_boston2018_legends_ntv_legendary"		"1"
 		}
 		"crate_sticker_pack_boston2018_challengers_rare"
 		{
@@ -86946,6 +86975,44 @@
 			"[boston2018_signature_msl]sticker"		"1"
 			"[boston2018_signature_v4lde]sticker"		"1"
 		}
+		"crate_signature_pack_boston2018_group_legends_ntv_rare"
+		{
+			"[boston2018_signature_adrenkz]sticker"		"1"
+			"[boston2018_signature_dosia]sticker"		"1"
+			"[boston2018_signature_fitch]sticker"		"1"
+			"[boston2018_signature_hobbit]sticker"		"1"
+			"[boston2018_signature_mou]sticker"		"1"
+			"[boston2018_signature_device]sticker"		"1"
+			"[boston2018_signature_dupreeh]sticker"		"1"
+			"[boston2018_signature_gla1ve]sticker"		"1"
+			"[boston2018_signature_kjaerbye]sticker"		"1"
+			"[boston2018_signature_xyp9x]sticker"		"1"
+			"[boston2018_signature_byali]sticker"		"1"
+			"[boston2018_signature_neo]sticker"		"1"
+			"[boston2018_signature_pasha]sticker"		"1"
+			"[boston2018_signature_snax]sticker"		"1"
+			"[boston2018_signature_taz]sticker"		"1"
+			"[boston2018_signature_flusha]sticker"		"1"
+			"[boston2018_signature_golden]sticker"		"1"
+			"[boston2018_signature_jw]sticker"		"1"
+			"[boston2018_signature_krimz]sticker"		"1"
+			"[boston2018_signature_lekro]sticker"		"1"
+			"[boston2018_signature_coldzera]sticker"		"1"
+			"[boston2018_signature_fallen]sticker"		"1"
+			"[boston2018_signature_felps]sticker"		"1"
+			"[boston2018_signature_fer]sticker"		"1"
+			"[boston2018_signature_taco]sticker"		"1"
+			"[boston2018_signature_gobb]sticker"		"1"
+			"[boston2018_signature_keev]sticker"		"1"
+			"[boston2018_signature_legija]sticker"		"1"
+			"[boston2018_signature_nex]sticker"		"1"
+			"[boston2018_signature_tabsen]sticker"		"1"
+			"[boston2018_signature_aizy]sticker"		"1"
+			"[boston2018_signature_cajunb]sticker"		"1"
+			"[boston2018_signature_k0nfig]sticker"		"1"
+			"[boston2018_signature_msl]sticker"		"1"
+			"[boston2018_signature_v4lde]sticker"		"1"
+		}
 		"crate_signature_pack_boston2018_group_legends_foil"
 		{
 			"[boston2018_signature_adrenkz_foil]sticker"		"1"
@@ -86989,6 +87056,44 @@
 			"[boston2018_signature_msl_foil]sticker"		"1"
 			"[boston2018_signature_v4lde_foil]sticker"		"1"
 		}
+		"crate_signature_pack_boston2018_group_legends_ntv_foil"
+		{
+			"[boston2018_signature_adrenkz_foil]sticker"		"1"
+			"[boston2018_signature_dosia_foil]sticker"		"1"
+			"[boston2018_signature_fitch_foil]sticker"		"1"
+			"[boston2018_signature_hobbit_foil]sticker"		"1"
+			"[boston2018_signature_mou_foil]sticker"		"1"
+			"[boston2018_signature_device_foil]sticker"		"1"
+			"[boston2018_signature_dupreeh_foil]sticker"		"1"
+			"[boston2018_signature_gla1ve_foil]sticker"		"1"
+			"[boston2018_signature_kjaerbye_foil]sticker"		"1"
+			"[boston2018_signature_xyp9x_foil]sticker"		"1"
+			"[boston2018_signature_byali_foil]sticker"		"1"
+			"[boston2018_signature_neo_foil]sticker"		"1"
+			"[boston2018_signature_pasha_foil]sticker"		"1"
+			"[boston2018_signature_snax_foil]sticker"		"1"
+			"[boston2018_signature_taz_foil]sticker"		"1"
+			"[boston2018_signature_flusha_foil]sticker"		"1"
+			"[boston2018_signature_golden_foil]sticker"		"1"
+			"[boston2018_signature_jw_foil]sticker"		"1"
+			"[boston2018_signature_krimz_foil]sticker"		"1"
+			"[boston2018_signature_lekro_foil]sticker"		"1"
+			"[boston2018_signature_coldzera_foil]sticker"		"1"
+			"[boston2018_signature_fallen_foil]sticker"		"1"
+			"[boston2018_signature_felps_foil]sticker"		"1"
+			"[boston2018_signature_fer_foil]sticker"		"1"
+			"[boston2018_signature_taco_foil]sticker"		"1"
+			"[boston2018_signature_gobb_foil]sticker"		"1"
+			"[boston2018_signature_keev_foil]sticker"		"1"
+			"[boston2018_signature_legija_foil]sticker"		"1"
+			"[boston2018_signature_nex_foil]sticker"		"1"
+			"[boston2018_signature_tabsen_foil]sticker"		"1"
+			"[boston2018_signature_aizy_foil]sticker"		"1"
+			"[boston2018_signature_cajunb_foil]sticker"		"1"
+			"[boston2018_signature_k0nfig_foil]sticker"		"1"
+			"[boston2018_signature_msl_foil]sticker"		"1"
+			"[boston2018_signature_v4lde_foil]sticker"		"1"
+		}
 		"crate_signature_pack_boston2018_group_legends_gold"
 		{
 			"[boston2018_signature_adrenkz_gold]sticker"		"1"
@@ -87001,6 +87106,44 @@
 			"[boston2018_signature_hen1_gold]sticker"		"1"
 			"[boston2018_signature_kngv_gold]sticker"		"1"
 			"[boston2018_signature_lucas1_gold]sticker"		"1"
+			"[boston2018_signature_device_gold]sticker"		"1"
+			"[boston2018_signature_dupreeh_gold]sticker"		"1"
+			"[boston2018_signature_gla1ve_gold]sticker"		"1"
+			"[boston2018_signature_kjaerbye_gold]sticker"		"1"
+			"[boston2018_signature_xyp9x_gold]sticker"		"1"
+			"[boston2018_signature_byali_gold]sticker"		"1"
+			"[boston2018_signature_neo_gold]sticker"		"1"
+			"[boston2018_signature_pasha_gold]sticker"		"1"
+			"[boston2018_signature_snax_gold]sticker"		"1"
+			"[boston2018_signature_taz_gold]sticker"		"1"
+			"[boston2018_signature_flusha_gold]sticker"		"1"
+			"[boston2018_signature_golden_gold]sticker"		"1"
+			"[boston2018_signature_jw_gold]sticker"		"1"
+			"[boston2018_signature_krimz_gold]sticker"		"1"
+			"[boston2018_signature_lekro_gold]sticker"		"1"
+			"[boston2018_signature_coldzera_gold]sticker"		"1"
+			"[boston2018_signature_fallen_gold]sticker"		"1"
+			"[boston2018_signature_felps_gold]sticker"		"1"
+			"[boston2018_signature_fer_gold]sticker"		"1"
+			"[boston2018_signature_taco_gold]sticker"		"1"
+			"[boston2018_signature_gobb_gold]sticker"		"1"
+			"[boston2018_signature_keev_gold]sticker"		"1"
+			"[boston2018_signature_legija_gold]sticker"		"1"
+			"[boston2018_signature_nex_gold]sticker"		"1"
+			"[boston2018_signature_tabsen_gold]sticker"		"1"
+			"[boston2018_signature_aizy_gold]sticker"		"1"
+			"[boston2018_signature_cajunb_gold]sticker"		"1"
+			"[boston2018_signature_k0nfig_gold]sticker"		"1"
+			"[boston2018_signature_msl_gold]sticker"		"1"
+			"[boston2018_signature_v4lde_gold]sticker"		"1"
+		}
+		"crate_signature_pack_boston2018_group_legends_ntv_gold"
+		{
+			"[boston2018_signature_adrenkz_gold]sticker"		"1"
+			"[boston2018_signature_dosia_gold]sticker"		"1"
+			"[boston2018_signature_fitch_gold]sticker"		"1"
+			"[boston2018_signature_hobbit_gold]sticker"		"1"
+			"[boston2018_signature_mou_gold]sticker"		"1"
 			"[boston2018_signature_device_gold]sticker"		"1"
 			"[boston2018_signature_dupreeh_gold]sticker"		"1"
 			"[boston2018_signature_gla1ve_gold]sticker"		"1"
@@ -87449,6 +87592,13 @@
 			"crate_signature_pack_boston2018_group_legends_rare"		"1"
 			"crate_signature_pack_boston2018_group_legends_foil"		"1"
 			"crate_signature_pack_boston2018_group_legends_gold"		"1"
+		}
+		"crate_signature_pack_boston2018_group_players_collection_legends_ntv"
+		{
+			"contains_stickers_autographed_by_proplayers"		"1"
+			"crate_signature_pack_boston2018_group_legends_ntv_rare"		"1"
+			"crate_signature_pack_boston2018_group_legends_ntv_foil"		"1"
+			"crate_signature_pack_boston2018_group_legends_ntv_gold"		"1"
 		}
 		"crate_signature_pack_boston2018_group_players_collection_challengers"
 		{
@@ -88055,6 +88205,32 @@
 				}
 			}
 		}
+		"4478"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_boston2018_legends_ntv"
+			"name"		"crate_sticker_pack_boston2018_legends_ntv"
+			"item_description"		"#CSGO_crate_sticker_pack_boston2018_legends_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_boston2018_legends_ntv"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"241"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_boston2018_legends_collection"
+					"tag_text"		"#CSGO_crate_sticker_pack_boston2018_legends_tag"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
 		"4457"
 		{
 			"item_name"		"#CSGO_crate_sticker_pack_boston2018_challengers"
@@ -88149,6 +88325,22 @@
 				}
 			}
 		}
+		"4479"
+		{
+			"item_name"		"#CSGO_crate_signature_pack_boston2018_group_legends_ntv"
+			"name"		"crate_signature_pack_boston2018_group_legends_ntv"
+			"item_description"		"#CSGO_crate_signature_pack_boston2018_group_legends_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_boston2018_group_legends_ntv"
+			"prefab"		"boston2018_signature_capsule_prefab"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"242"
+				}
+			}
+		}
 		"4460"
 		{
 			"item_name"		"#CSGO_crate_signature_pack_boston2018_group_challengers"
@@ -88211,6 +88403,16 @@
 		{
 			"item_name"		"#CSGO_crate_boston2018_bundle_of_all"
 			"name"		"crate_boston2018_bundle_of_all_flg"
+			"item_description"		"#CSGO_crate_boston2018_bundle_of_all_desc"
+			"image_inventory"		"econ/weapon_cases/boston2018_bundleofall"
+			"loot_list_name"		"boston2018_bundle_of_all"
+			"prefab"		"boston2018_sticker_capsule_prefab"
+			"item_type"		"self_opening_purchase"
+		}
+		"4480"
+		{
+			"item_name"		"#CSGO_crate_boston2018_bundle_of_all"
+			"name"		"crate_boston2018_bundle_of_all_ntv"
 			"item_description"		"#CSGO_crate_boston2018_bundle_of_all_desc"
 			"image_inventory"		"econ/weapon_cases/boston2018_bundleofall"
 			"loot_list_name"		"boston2018_bundle_of_all"
