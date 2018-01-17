@@ -97,6 +97,14 @@ CBroadcastWatch.prototype.ShowVideoError = function( strError )
 	}
 };
 
+CBroadcastWatch.prototype.IsPlayStateChangeable = function( )
+{
+	return $J( '#PageContents' ).hasClass( 'ShowPlayer' ) &&
+		!$J( '#PageContents').hasClass( 'LoadingVideo' ) &&
+		!$J( '#VideoLoadingText' ).hasClass( 'Error' ) &&
+		!$J( '#PageLoadingText' ).hasClass( 'Error' );
+}
+
 CBroadcastWatch.prototype.SetVideoLoadingText = function( strText )
 {
 	if ( $J( '#PageContents' ).hasClass( 'ShowPlayer' ) )
@@ -800,9 +808,9 @@ CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data
 
 CBroadcastWatch.prototype.RegisterParentBroadcastHooks = function(  )
 {
-    var _watch = this;
+	var _watch = this;
 
-    $J( window ).on(
+	$J( window ).on(
 		"message",
 		function ( e )
 		{
@@ -810,15 +818,20 @@ CBroadcastWatch.prototype.RegisterParentBroadcastHooks = function(  )
 			switch( Msg.msg )
 			{
 				case 'pause':
-                    if ( ! _watch.m_player.m_elVideoPlayer.paused )
+					if ( ! _watch.m_player.m_elVideoPlayer.paused )
 					{
-                        _watch.m_playerUI.TogglePlayPause();
-                    }
+						_watch.m_playerUI.TogglePlayPause();
+					}
 
-                    // The player may think its pause but the player state may be out of sync. Set it anyways.
-	                _watch.m_player.SavePlaybackStateFromUI( false );
-                    _watch.m_playerUI.m_bPlayingLiveEdge = false;
-                    break;
+					// The player may think its pause but the player state may be out of sync. Set it anyways.
+					_watch.m_player.SavePlaybackStateFromUI( false );
+					_watch.m_playerUI.m_bPlayingLiveEdge = false;
+					break;
+				case 'toggleplaypause':
+					if( _watch.IsPlayStateChangeable() ) {
+						_watch.m_playerUI.TogglePlayPause();
+					}
+					break;
 			}
 		}
 	);

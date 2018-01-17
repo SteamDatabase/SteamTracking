@@ -904,7 +904,7 @@
 
 #video_wrapper
 {
-	padding: 1px;
+	padding: 0px; /* to make it flush with the broadcast pop-up view */
 	background-color: black;
 }
 
