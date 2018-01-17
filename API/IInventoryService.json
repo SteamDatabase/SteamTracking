@@ -43,6 +43,12 @@
                     "name": "requestid",
                     "type": "uint64",
                     "optional": false
+                },
+                {
+                    "name": "trade_restriction",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If true, apply the default trade and market restriction times to this item."
                 }
             ]
         },
@@ -88,6 +94,12 @@
                     "name": "requestid",
                     "type": "uint64",
                     "optional": false
+                },
+                {
+                    "name": "trade_restriction",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "If true, apply the default trade and market restriction times to this item."
                 }
             ]
         },

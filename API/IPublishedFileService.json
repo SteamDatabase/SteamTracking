@@ -235,6 +235,18 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Return playtime stats for the specified number of days before today."
+                },
+                {
+                    "name": "return_details",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "By default, if none of the other 'return_*' fields are set, only some voting details are returned. Set this to true to return the default set of details."
+                },
+                {
+                    "name": "strip_description_bbcode",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Strips BBCode from descriptions."
                 }
             ]
         },
@@ -427,6 +439,12 @@
                     "name": "appid",
                     "type": "uint32",
                     "optional": false
+                },
+                {
+                    "name": "strip_description_bbcode",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Strips BBCode from descriptions."
                 }
             ]
         },
@@ -597,6 +615,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Return playtime stats for the specified number of days before today."
+                },
+                {
+                    "name": "strip_description_bbcode",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Strips BBCode from descriptions."
                 }
             ]
         },
