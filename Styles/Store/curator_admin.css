@@ -30,7 +30,7 @@
 }
 
 .admin_nav h4 {
-	color: #67c1f5;
+	color: #8299a1;
 	text-transform: uppercase;
 	padding: 16px 0 0 8px;
 	font-weight: normal;
@@ -338,14 +338,14 @@ body.v6 .reviews_container h3 {
 
 .app_ctn {
 	display: table;
-	color: #212C3D;
+	color: #c6d4df;
 }
 .app_ctn.app_header {
-	background-color: #C6D4DF;
+	background-color: rgba(198, 212, 223, 0.2);
 	width: 100%;
 }
 .app_ctn.app_block {
-	background-color: #C6D4DF;
+	background-color: rgba(198, 212, 223, 0.2);
 	width: 100%;
 	margin: 0px 0px 6px 0px;
 	box-shadow: 0 0 5px #000000;
@@ -367,7 +367,7 @@ body.v6 .reviews_container h3 {
 	font-size: 12px;
 }
 .app_ctn .app_name {
-	color: #212C3D;
+	color: #fff;
 	font-weight: bold;
 	font-size: 16px;
 	max-width: 298px;
@@ -400,7 +400,7 @@ body.v6 .reviews_container h3 {
 }
 
 .app_ctn.app_screenshots {
-	background: -webkit-linear-gradient( top, #8b959c 0px, #C6D4DF 10px);background: linear-gradient( to bottom, #8b959c 0px, #C6D4DF 10px);	width: 100%;
+	background: -webkit-linear-gradient( top, rgba(139, 149, 156, 0.2) 0px, rgba(198, 212, 223, 0.2) 10px);background: linear-gradient( to bottom, rgba(139, 149, 156, 0.2) 0px, rgba(198, 212, 223, 0.2) 10px);	width: 100%;
 }
 .app_ctn.app_screenshots .screenshots {
 	padding-right: 0px;
@@ -419,13 +419,13 @@ body.v6 .reviews_container h3 {
 
 .app_ctn.app_screenshots .creator_intro {
 	font-size: 12px;
-	color: #4a697c;
+	color: #c6d4df;
 	padding-left: 14px;
 }
 .app_ctn.app_screenshots .creator_message {
-	color: #000000;
+	color: #c6d4df;
 	font-size: 14px;
-	padding: 0px 14px 14px 14px;
+	padding: 4px 14px 14px 14px;
 }
 .app_ctn.tags {
 	margin-bottom: 20px;
@@ -478,6 +478,9 @@ body.v6 .reviews_container h3 {
 	color: #000a1a;
 	font-size: 14px;
 	padding: 10px;
+}
+.expires_soon {
+	font-weight: bold;
 }
 
 /** Account linking section */

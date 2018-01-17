@@ -1821,6 +1821,12 @@ a.friend_block_holder:hover {
 	html.responsive .rightcol.game_meta_data .block.recommendation_reasons {
 		padding-left: 30px;
 	}
+	html.responsive .referring_curator {
+		flex-direction: column;
+	}
+	html.responsive .referring_curator .curator_detail_right_ctn {
+		margin-top: 12px;
+	}
 }
 
 @media screen and ( max-width: 625px )
@@ -4728,21 +4734,30 @@ body.v6 .page_content.notes {
 	width: 50px;
 	height: 50px;
 	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+}
+.referring_curator .curator_info_ctn {
+	display: inline-block;
+	position: absolute;
+	padding-left: 8px;
+	margin-top: 8px;
 }
 .referring_curator .blurb {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			margin-left: 14px;
-
+		
 	color: #fff;
 	font-size: 16px;
-	text-shadow: -1px -1px 0px rgba( 0, 0, 0, 0.25);
 
 	display: flex;
 	line-height: 25px;
 	flex-direction: column;
 	justify-content: space-between;
+}
+.referring_curator .curator_detail_right_ctn.no_video .blurb {
+	width: 100%;
 }
 
 .referring_curator .blurb .review_title {
@@ -4757,20 +4772,33 @@ body.v6 .page_content.notes {
 .referring_curator .blurb p {
 	text-indent: -4px;
 	padding-bottom: 8px;
-	padding-top: 2px;
+	padding-top: 6px;
+	font-style: italic;
+}
+
+.referring_curator .blurb .notes {
+	float: right;
+}
+.curator_received {
+	width: 16px;
 }
 
 .referring_curator .curator_detail_right_ctn {
 	display: flex;
+}
+.referring_curator .curator_detail_right_ctn.no_video {
+	width: 100%;
 }
 
 .referringSteamCurator {
 	font-size: 11px;
 	line-height: 9px;
 	padding-bottom: 8px;
+	color: #93b0bb;
 }
 .referringSteamCurator a {
 	text-decoration: underline;
+	color: #93b0bb;
 }
 .referringSteamCurator .curator_review_date {
     margin-left: 5px;

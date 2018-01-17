@@ -472,6 +472,10 @@ pre.results {
 	width: 1004px;
 }
 
+.gameimagepreview .broadcast_side_panel {
+	width: 160px;
+}
+
 #screenshots {
 	position: relative;
 }
@@ -2973,3 +2977,13 @@ h2.giveawayFilter_titleArea {
 	color: #bb4c16;
 }
 
+span.new {
+	color: #A4D007;
+	font-weight: 600;
+	margin-left: 8px;
+}
+
+.override_invalid_image {
+	color: red;
+	font-weight: bold;
+}

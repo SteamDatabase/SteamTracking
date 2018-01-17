@@ -181,11 +181,13 @@ body.v6 .dark_container h4 {
 	margin: 0 auto;
 }
 
-.broadcast_container .broadcastwrapper .EmbeddedPlayer {
+.broadcast_container .broadcastwrapper .EmbeddedPlayer,
+.broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
 	border: none;
-	width: 940px;
-	height: 532px;
-	float: left;
+	/* width: 940px; */
+	height: 528px;
+}
+.broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
 	box-shadow: 0 0 13px #000
 }
 

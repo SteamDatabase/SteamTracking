@@ -560,11 +560,11 @@ body.sale_page_background {
 	margin: 0 auto;
 }
 
-.sale_page_three_section .broadcastwrapper .EmbeddedPlayer {
+.sale_page_three_section .broadcastwrapper .EmbeddedPlayer,
+.sale_page_three_section .broadcastwrapper .VideoContainerPlaceholder {
 	border: none;
-	width: 940px;
+	/* width: 940px; */ /* To size properly in the pop-out */
 	height: 532px;
-	float: left;
 }
 
 .sale_page_three_section .broadcastwrapper .EmbeddedChat {

@@ -184,14 +184,16 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Image', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true },
-		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true },
-		{ name: 'Large Capsule', width: 467, height: 181, path: 'large_capsule|capsule_467x181|assets|large_capsule|image', localized: true },
-		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true },
+		{ name: 'Header Image', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true, overrideable: true },
+		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
+		{ name: 'Large Capsule', width: 467, height: 181, path: 'large_capsule|capsule_467x181|assets|large_capsule|image', localized: true, overrideable: true },
+		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
 		{ name: 'Promo Capsule', width: 220, height: 180, path: 'promo_capsule|capsule_220x180|assets|promo_capsule|image', localized: true },
 		{ name: 'Hi Res Capsule', width: 940, height: 400, path: 'hi_res_capsule|capsule_940x400|assets|hi_res_capsule|image', localized: true },
 		{ name: 'Hi Res Alt Capsule', width: 799, height: 340, path: 'hi_res_alt_capsule|capsule_799x340|assets|hi_res_alt_capsule|image', localized: true },
 		{ name: 'Package Header', width: 707, height: 232, path: 'header_image|header|assets|header_image', localized: true },
+		{ name: 'Broadcast Left Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
+		{ name: 'Broadcast Right Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
 
 		{ name: 'Background', width: 1438, height: 0, path: 'asset|page_bg.jpg|assets|page_background', localized: false },
 		{ name: 'Screenshot', width: 0, height: 0, path: 'screenshot|assets|screenshots|', localized: false },
@@ -468,12 +470,14 @@ function OnImagesLoadComplete( images )
 		targetDiv.append( '<br>' );
 
 		// add type select
+		var bIsAssetOverride = $J( '#alternative_asset_override_name' ).length;
 		var localizedType = false;
 		var imageType = DetermineImageType( image );
 		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this);"></select>');
 		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 		{
-			if( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden )
+			if( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden  &&
+				( !bIsAssetOverride || g_ImageTypes[iImageType].overrideable ) )
 			{
 				var option = $J ( '<option value="' + g_ImageTypes[ iImageType ].name + '">' + g_ImageTypes[ iImageType ].name + '</option>' );
 				option.appendTo ( selectType );
@@ -484,6 +488,13 @@ function OnImagesLoadComplete( images )
 				}
 			}
 		}
+
+		if( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
+		{
+			selectType.addClass( 'override_invalid_image' );
+			$J( '<option value="invalid">Invalid override image size. This will not be saved.</option>' ).appendTo( selectType );
+		}
+
 		selectType.appendTo( targetDiv );
 
 		targetDiv.append( '<br>' );
@@ -538,13 +549,13 @@ function BLanguageInFileName( key, filename )
 	return false;
 }
 
-function SubmitImageUpload( itemID, type )
+function SubmitImageUpload( itemID, type, replaceAssetKeyWithAlt )
 {
 	var previews = $J( '#game_image_drop_preview div.screenshot_upload_preview' );
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type );
+	UploadImages( previews, itemID, type, replaceAssetKeyWithAlt );
 	
 	return false;
 }
@@ -557,11 +568,11 @@ function SubmitScreenshotsUpload( ele, itemID, type )
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type );
+	UploadImages( previews, itemID, type, "" );
 }
 
 // called when user wants to submit images
-function UploadImages( previews, itemID, type )
+function UploadImages( previews, itemID, type, replaceAssetKeyWithAlt )
 {
 	var cScreenshots = 0;
 	var fd = new FormData();
@@ -596,6 +607,12 @@ function UploadImages( previews, itemID, type )
 		if ( imageType.localized )
 			strKey = strKey + '|' + strSelectedLanguage;
 
+		if( replaceAssetKeyWithAlt !== "" )
+		{
+			// Updates the end of the filename and the key for the key-value
+			strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyWithAlt + '|alt_assets|' + replaceAssetKeyWithAlt + '|');
+		}
+
 		// previously just passed file object through to this point, however because
 		// we can now take images from a remote URL, to unify paths we just get the
 		// image data from the loaded Image object
@@ -620,6 +637,13 @@ function UploadImages( previews, itemID, type )
 	{
 		strPostURL = 'https://partner.steamgames.com/admin/game/save/' + itemID + '?activetab=tab_graphicalassets&json=1';
 		strRedirectURL = 'https://partner.steamgames.com/admin/game/edit/' + itemID + '?activetab=tab_graphicalassets';
+	}
+
+	// Add the alt_asset_index
+	if( replaceAssetKeyWithAlt !== "" )
+	{
+		strPostURL += '&alt_asset_index=' + replaceAssetKeyWithAlt;
+		strRedirectURL += '&alt_asset_index=' + replaceAssetKeyWithAlt;
 	}
 
 	$J('#AdminLoading').show();
