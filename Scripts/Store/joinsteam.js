@@ -6,9 +6,9 @@ var g_emailVerificationDialog = null;
 function StartCreationSession()
 {
 	$J.ajax( {
-		method: 'POST',
+		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
-		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val(), captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
+		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
 	})
 	.done( function( data ) {
 
@@ -63,7 +63,7 @@ function AjaxCheckEmailVerified()
 		return;
 
 	$J.ajax( {
-		method: 'POST',
+		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxcheckemailverified',
 		data: { 'creationid' : g_creationSessionID }
 	})
@@ -142,7 +142,7 @@ function CreateAccount()
 	++iAjaxCalls;
 	new Ajax.Request( g_sBaseURL + 'join/verifycaptcha/',
 	  {
-	    method:'get',
+	    type: 'POST',
 	    parameters: { captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value,
 					  email: $('email').value, count : iAjaxCalls },
 	    onSuccess: function(transport){
@@ -315,7 +315,7 @@ function ReallyCreateAccount()
 	++iAjaxCalls;
 		new Ajax.Request( g_sBaseURL + 'join/createaccount/',
 	{
-	    method:'post', 	    parameters: { accountname : $('accountname').value, 
+		type: 'POST', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
 	    			  email : $('email').value,
 				      captchagid : $('captchagid').value,
@@ -402,7 +402,7 @@ function CheckAccountNameAvailability()
 	++iAjaxCalls;
 	new Ajax.Request( g_sBaseURL + 'join/checkavail/',
 	  {
-	    method:'get',
+	    type: 'POST',
 	    parameters: { accountname: strName, count : iAjaxCalls },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
@@ -542,7 +542,7 @@ function CheckPasswordAvail()
 	    ++iAjaxCalls;
 	new Ajax.Request( g_sBaseURL + 'join/checkpasswordavail/',
 	{
-		method:'get',
+		type: 'POST',
 		parameters: { password: document.getElementById('password').value, accountname: strAccountName, count : iAjaxCalls },
 		onSuccess: function(transport){
 			if ( transport.responseJSON )
@@ -623,7 +623,7 @@ function RefreshCaptcha()
 	
 	new Ajax.Request( g_sBaseURL + 'join/refreshcaptcha/',
 	  {
-	    method:'get',
+	  	type: 'POST',
 	    parameters: { count : iAjaxCalls },
 	    onSuccess: function(transport){
 	      if ( transport.responseText ){
