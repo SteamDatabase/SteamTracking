@@ -421,11 +421,11 @@ CreateBuyOrderDialog = {
 		}
 		else if ( transport.responseJSON && transport.responseJSON.success )
 		{
-			this.DisplayError( 'Sorry! We had trouble hearing back from the Steam servers about your order. Double check whether or not your order has actually been created or filled. If not, then please try again later.' + ' (' + transport.responseJSON.success + ')' );
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' + ' (' + transport.responseJSON.success + ')' );
 		}
 		else
 		{
-			this.DisplayError( 'Sorry! We had trouble hearing back from the Steam servers about your order. Double check whether or not your order has actually been created or filled. If not, then please try again later.' );
+			this.DisplayError( 'Sorry! Your buy order could not be placed at this time. Please try again later.' );
 		}
 	},
 
