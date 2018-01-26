@@ -330,6 +330,7 @@ message CStreamingClientCaps {
 	optional int32 maximum_decode_bitrate_kbps = 3;
 	optional int32 maximum_burst_bitrate_kbps = 4;
 	optional bool supports_video_hevc = 5;
+	optional bool disable_steam_store = 6;
 }
 
 message CStreamingClientConfig {

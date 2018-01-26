@@ -1,5 +1,6 @@
 typedef enum EOSType
 {
+    k_EOSTypeWeb = -700, // web
     k_EOSTypePs3os = -300, // ps3os
     k_EOSTypeLinux = -203, // linux
     k_EOSTypeLinux22, // linux22

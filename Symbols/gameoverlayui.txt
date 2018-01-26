@@ -38,7 +38,6 @@
  B CLogger::sm_ThreadSafeQueueLogEvents
  B CLogger::sm_ThreadSafeQueueLogMsgSpew
  B CLogger::sm_bLogOnly
- B CLogger::sm_bPrefixChanged
  B CLogger::sm_bShutDown
  B CLogger::sm_bShuttingDown
  B CLogger::sm_cRef
@@ -47,6 +46,7 @@
  B CLogger::sm_vecLogListeners
  B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
+ B CMsgAckSharedPaintBuffers::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgAuthedSteamDomains::default_instance_
  B CMsgBrowserCreate::default_instance_
@@ -66,6 +66,8 @@
  B CMsgCloseFullScreenFlashIfOpen::default_instance_
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
+ B CMsgDraggableRegionsChanged::default_instance_
+ B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgEnableSteamClientAPI::default_instance_
  B CMsgExecuteJavaScript::default_instance_
  B CMsgExitFullScreen::default_instance_
@@ -295,23 +297,21 @@
  B vgui::g_ButtonSoundNames
  B vgui::g_pIVgui
  B vgui::g_pVGUIApplication
+ CFBooleanGetTypeID
  CFBooleanGetValue
  CFDateCreate
  CFDateFormatterCreate
  CFDateFormatterCreateStringWithDate
- CFDictionaryGetTypeID
- CFDictionaryGetValueIfPresent
  CFGetTypeID
  CFLocaleCopyCurrent
- CFPropertyListCreateFromXMLData
+ CFPreferencesCopyValue
  CFRelease
- CFStringCreateWithCString
+ CFStringCompare
  CFStringGetCString
  CFStringGetFileSystemRepresentation
+ CFStringGetTypeID
  CFURLCopyFileSystemPath
- CFURLCreateDataAndPropertiesFromResource
  CFURLCreateFromFSRef
- CFURLCreateWithFileSystemPath
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -958,6 +958,7 @@
  D VTT for vgui::CFileOpenListPanel
  D VTT for vgui::CNotificationClickPanel
  D VTT for vgui::CTreeViewListControl
+ D VTT for vgui::CaptionGripPanel
  D VTT for vgui::CheckButton
  D VTT for vgui::CheckButtonList
  D VTT for vgui::ClickPanel
@@ -979,6 +980,7 @@
  D VTT for vgui::FrameSystemButton
  D VTT for vgui::FrameTitle
  D VTT for vgui::GraphPanel
+ D VTT for vgui::GripPanel
  D VTT for vgui::HTML
  D VTT for vgui::HTML::CHTMLFindBar
  D VTT for vgui::HTML::CHTMLIMEBar
@@ -1142,7 +1144,6 @@
  D construction vtable for vgui::EditablePanel-in-CTrackItemPanel
  D construction vtable for vgui::EditablePanel-in-CTradeDialog
  D construction vtable for vgui::EditablePanel-in-CreateDirectoryDialog
- D construction vtable for vgui::EditablePanel-in-GridMenu
  D construction vtable for vgui::EditablePanel-in-HTMLComboBoxHost
  D construction vtable for vgui::EditablePanel-in-LayoutDebugDialog
  D construction vtable for vgui::EditablePanel-in-ZooDialog
@@ -1150,14 +1151,12 @@
  D construction vtable for vgui::EditablePanel-in-vgui::CheckButtonList
  D construction vtable for vgui::EditablePanel-in-vgui::DirectorySelectDialog
  D construction vtable for vgui::EditablePanel-in-vgui::EasyNotification
- D construction vtable for vgui::EditablePanel-in-vgui::FileCompletionMenu
  D construction vtable for vgui::EditablePanel-in-vgui::FileOpenDialog
  D construction vtable for vgui::EditablePanel-in-vgui::Frame
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLIMEBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTMLPopup
  D construction vtable for vgui::EditablePanel-in-vgui::InputDialog
- D construction vtable for vgui::EditablePanel-in-vgui::Menu
  D construction vtable for vgui::EditablePanel-in-vgui::MessageBox
  D construction vtable for vgui::EditablePanel-in-vgui::NotificationFrame
  D construction vtable for vgui::EditablePanel-in-vgui::PageDragFrame
@@ -1205,6 +1204,7 @@
  D construction vtable for vgui::FrameButton-in-vgui::FrameCloseButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMaximizeButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMinimizeButton
+ D construction vtable for vgui::GripPanel-in-vgui::CaptionGripPanel
  D construction vtable for vgui::HTML-in-COverlayWebBrowserHTML
  D construction vtable for vgui::HTML-in-CSteamAuthedHTML
  D construction vtable for vgui::HTML-in-vgui::HTMLPopup::PopupHTML
@@ -1359,6 +1359,7 @@
  D construction vtable for vgui::Panel-in-vgui::CFileOpenListPanel
  D construction vtable for vgui::Panel-in-vgui::CNotificationClickPanel
  D construction vtable for vgui::Panel-in-vgui::CTreeViewListControl
+ D construction vtable for vgui::Panel-in-vgui::CaptionGripPanel
  D construction vtable for vgui::Panel-in-vgui::CheckButton
  D construction vtable for vgui::Panel-in-vgui::CheckButtonList
  D construction vtable for vgui::Panel-in-vgui::ClickPanel
@@ -1380,6 +1381,7 @@
  D construction vtable for vgui::Panel-in-vgui::FrameSystemButton
  D construction vtable for vgui::Panel-in-vgui::FrameTitle
  D construction vtable for vgui::Panel-in-vgui::GraphPanel
+ D construction vtable for vgui::Panel-in-vgui::GripPanel
  D construction vtable for vgui::Panel-in-vgui::HTML
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLIMEBar
@@ -1635,6 +1637,11 @@
  D guard variable for vgui::CNotificationClickPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetKBMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetMessageMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::GetKBMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D guard variable for vgui::CheckButton::GetKBMap()::s_pMap
  D guard variable for vgui::CheckButton::GetMessageMap()::s_pMap
  D guard variable for vgui::CheckButtonList::GetKBMap()::s_pMap
@@ -1675,6 +1682,9 @@
  D guard variable for vgui::FrameTitle::GetMessageMap()::s_pMap
  D guard variable for vgui::GraphPanel::GetKBMap()::s_pMap
  D guard variable for vgui::GraphPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::GripPanel::GetKBMap()::s_pMap
+ D guard variable for vgui::GripPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::GripPanel::RequestInfo(KeyValues*)::hksIsResizeBorder
  D guard variable for vgui::HTML::CHTMLFindBar::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLFindBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLIMEBar::GetKBMap()::s_pMap
@@ -1996,6 +2006,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgPostURL>
  D typeinfo for CHTMLProtoBufMsg<CMsgReload>
  D typeinfo for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgScreenDPI>
  D typeinfo for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetFocus>
  D typeinfo for CHTMLProtoBufMsg<CMsgStartRequestResponse>
@@ -2008,11 +2019,13 @@
  D typeinfo for CIngameFPSBanner
  D typeinfo for CIntProperty
  D typeinfo for CItemImageManager
+ D typeinfo for CJSCallbackFunc
  D typeinfo for CJSMethodArgument
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
  D typeinfo for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgAuthedSteamDomains
  D typeinfo for CMsgBrowserCreate
@@ -2032,6 +2045,8 @@
  D typeinfo for CMsgCloseFullScreenFlashIfOpen
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
+ D typeinfo for CMsgDraggableRegionsChanged
+ D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgExecuteJavaScript
  D typeinfo for CMsgExitFullScreen
@@ -2321,13 +2336,14 @@
  D typeinfo for vgui::Button
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
- D typeinfo for vgui::CJSCallbackFunc
- D typeinfo for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
+ D typeinfo for vgui::CJSCallbackFunc_vgui
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
  D typeinfo for vgui::CTypingJumpHandler
  D typeinfo for vgui::CTypingJumpHandler::ITypingJumpClient
+ D typeinfo for vgui::CaptionGripPanel
  D typeinfo for vgui::CheckButton
  D typeinfo for vgui::CheckButtonList
  D typeinfo for vgui::ClickPanel
@@ -2350,6 +2366,7 @@
  D typeinfo for vgui::FrameSystemButton
  D typeinfo for vgui::FrameTitle
  D typeinfo for vgui::GraphPanel
+ D typeinfo for vgui::GripPanel
  D typeinfo for vgui::HTML
  D typeinfo for vgui::HTML::CHTMLFindBar
  D typeinfo for vgui::HTML::CHTMLIMEBar
@@ -2464,6 +2481,14 @@
  D vgui::CTreeViewListControl::GetKBMap()::s_pMap
  D vgui::CTreeViewListControl::GetMessageMap()::s_pMap
  D vgui::CTreeViewListControl::KB_ChainToMap()::chained
+ D vgui::CaptionGripPanel::ChainToAnimationMap()::chained
+ D vgui::CaptionGripPanel::ChainToMap()::chained
+ D vgui::CaptionGripPanel::GetKBMap()::s_pMap
+ D vgui::CaptionGripPanel::GetMessageMap()::s_pMap
+ D vgui::CaptionGripPanel::KB_ChainToMap()::chained
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D vgui::CheckButton::ChainToAnimationMap()::chained
  D vgui::CheckButton::ChainToMap()::chained
  D vgui::CheckButton::GetKBMap()::s_pMap
@@ -2604,6 +2629,12 @@
  D vgui::GraphPanel::GetKBMap()::s_pMap
  D vgui::GraphPanel::GetMessageMap()::s_pMap
  D vgui::GraphPanel::KB_ChainToMap()::chained
+ D vgui::GripPanel::ChainToAnimationMap()::chained
+ D vgui::GripPanel::ChainToMap()::chained
+ D vgui::GripPanel::GetKBMap()::s_pMap
+ D vgui::GripPanel::GetMessageMap()::s_pMap
+ D vgui::GripPanel::KB_ChainToMap()::chained
+ D vgui::GripPanel::RequestInfo(KeyValues*)::hksIsResizeBorder
  D vgui::HTML::CHTMLFindBar::ChainToAnimationMap()::chained
  D vgui::HTML::CHTMLFindBar::ChainToMap()::chained
  D vgui::HTML::CHTMLFindBar::GetKBMap()::s_pMap
@@ -3221,6 +3252,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgPostURL>
  D vtable for CHTMLProtoBufMsg<CMsgReload>
  D vtable for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgScreenDPI>
  D vtable for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D vtable for CHTMLProtoBufMsg<CMsgSetFocus>
  D vtable for CHTMLProtoBufMsg<CMsgStartRequestResponse>
@@ -3233,11 +3265,13 @@
  D vtable for CIngameFPSBanner
  D vtable for CIntProperty
  D vtable for CItemImageManager
+ D vtable for CJSCallbackFunc
  D vtable for CJSMethodArgument
  D vtable for CMSgJumpListMRUApp
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
  D vtable for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
  D vtable for CMsgAuthedSteamDomains
  D vtable for CMsgBrowserCreate
@@ -3257,6 +3291,8 @@
  D vtable for CMsgCloseFullScreenFlashIfOpen
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
+ D vtable for CMsgDraggableRegionsChanged
+ D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgExecuteJavaScript
  D vtable for CMsgExitFullScreen
@@ -3531,13 +3567,14 @@
  D vtable for vgui::Button
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
- D vtable for vgui::CJSCallbackFunc
- D vtable for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
+ D vtable for vgui::CJSCallbackFunc_vgui
+ D vtable for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
  D vtable for vgui::CTypingJumpHandler
  D vtable for vgui::CTypingJumpHandler::ITypingJumpClient
+ D vtable for vgui::CaptionGripPanel
  D vtable for vgui::CheckButton
  D vtable for vgui::CheckButtonList
  D vtable for vgui::ClickPanel
@@ -3560,6 +3597,7 @@
  D vtable for vgui::FrameSystemButton
  D vtable for vgui::FrameTitle
  D vtable for vgui::GraphPanel
+ D vtable for vgui::GripPanel
  D vtable for vgui::HTML
  D vtable for vgui::HTML::CHTMLFindBar
  D vtable for vgui::HTML::CHTMLIMEBar
@@ -3867,6 +3905,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgPostURL>
  R typeinfo name for CHTMLProtoBufMsg<CMsgReload>
  R typeinfo name for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgScreenDPI>
  R typeinfo name for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetFocus>
  R typeinfo name for CHTMLProtoBufMsg<CMsgStartRequestResponse>
@@ -3879,11 +3918,13 @@
  R typeinfo name for CIngameFPSBanner
  R typeinfo name for CIntProperty
  R typeinfo name for CItemImageManager
+ R typeinfo name for CJSCallbackFunc
  R typeinfo name for CJSMethodArgument
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
  R typeinfo name for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgAuthedSteamDomains
  R typeinfo name for CMsgBrowserCreate
@@ -3903,6 +3944,8 @@
  R typeinfo name for CMsgCloseFullScreenFlashIfOpen
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
+ R typeinfo name for CMsgDraggableRegionsChanged
+ R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgExecuteJavaScript
  R typeinfo name for CMsgExitFullScreen
@@ -4274,13 +4317,14 @@
  R typeinfo name for vgui::CBitmapImagePanel
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
- R typeinfo name for vgui::CJSCallbackFunc
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<vgui::CJSCallbackFunc> >
+ R typeinfo name for vgui::CJSCallbackFunc_vgui
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
  R typeinfo name for vgui::CTypingJumpHandler
  R typeinfo name for vgui::CTypingJumpHandler::ITypingJumpClient
+ R typeinfo name for vgui::CaptionGripPanel
  R typeinfo name for vgui::CheckButton
  R typeinfo name for vgui::CheckButtonList
  R typeinfo name for vgui::ClickPanel
@@ -4303,6 +4347,7 @@
  R typeinfo name for vgui::FrameSystemButton
  R typeinfo name for vgui::FrameTitle
  R typeinfo name for vgui::GraphPanel
+ R typeinfo name for vgui::GripPanel
  R typeinfo name for vgui::HTML
  R typeinfo name for vgui::HTML::CHTMLFindBar
  R typeinfo name for vgui::HTML::CHTMLIMEBar
@@ -4497,8 +4542,8 @@
  T CAchievementInfoPanel::KB_ChainToMap()
  T CAchievementInfoPanel::SetAchievement(CGameID, char const*)
  T CAchievementInfoPanel::~CAchievementInfoPanel()
- T CAutoRelease<vgui::CJSCallbackFunc>::Reset(vgui::CJSCallbackFunc*)
- T CAutoRelease<vgui::CJSCallbackFunc>::~CAutoRelease()
+ T CAutoRelease<CJSCallbackFunc>::Reset(CJSCallbackFunc*)
+ T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
  T CBaseDashboardPanel::CBaseDashboardPanel(vgui::Panel*, char const*)
  T CBaseDashboardPanel::ChainToAnimationMap()
  T CBaseDashboardPanel::ChainToMap()
@@ -5318,6 +5363,8 @@
  T CHTMLProtoBufMsg<CMsgReload>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgScreenDPI>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgScreenDPI>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgScreenInformationChanged>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgScreenInformationChanged>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetFocus>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5378,6 +5425,14 @@
  T CItemImageManager::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CItemImageManager::Validate(CValidator&, char const*)
  T CItemImageManager::~CItemImageManager()
+ T CJSCallbackFunc::CJSCallbackFunc(int, unsigned long long)
+ T CJSCallbackFunc::IsValid()
+ T CJSCallbackFunc::MarkInvalid()
+ T CJSCallbackFunc::OnFinalRelease()
+ T CJSCallbackFunc::~CJSCallbackFunc()
+ T CJSMethodArgs::AddBoolean(bool)
+ T CJSMethodArgs::AddObject()
+ T CJSMethodArgs::CJSMethodArgs()
  T CJSMethodArgument::ByteSize() const
  T CJSMethodArgument::CJSMethodArgument()
  T CJSMethodArgument::Clear()
@@ -5391,6 +5446,7 @@
  T CJSMethodArgument::SharedCtor()
  T CJSMethodArgument::SharedDtor()
  T CJSMethodArgument::~CJSMethodArgument()
+ T CJSObject::SetString(char const*, char const*)
  T CJpegSourceMgr::error_exit(jpeg_common_struct*)
  T CJpegSourceMgr::imp_fill_input_buffer(jpeg_decompress_struct*)
  T CJpegSourceMgr::imp_init_source(jpeg_decompress_struct*)
@@ -5493,6 +5549,17 @@
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()
  T CMicroTxnAuthorizeDialog::RequestMicroTxnInfo()
  T CMicroTxnAuthorizeDialog::~CMicroTxnAuthorizeDialog()
+ T CMsgAckSharedPaintBuffers::ByteSize() const
+ T CMsgAckSharedPaintBuffers::CMsgAckSharedPaintBuffers()
+ T CMsgAckSharedPaintBuffers::Clear()
+ T CMsgAckSharedPaintBuffers::GetCachedSize() const
+ T CMsgAckSharedPaintBuffers::GetMetadata() const
+ T CMsgAckSharedPaintBuffers::IsInitialized() const
+ T CMsgAckSharedPaintBuffers::MergeFrom(CMsgAckSharedPaintBuffers const&)
+ T CMsgAckSharedPaintBuffers::New() const
+ T CMsgAckSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAckSharedPaintBuffers::SetCachedSize(int) const
+ T CMsgAckSharedPaintBuffers::~CMsgAckSharedPaintBuffers()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -5711,6 +5778,28 @@
  T CMsgCopy::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCopy::SetCachedSize(int) const
  T CMsgCopy::~CMsgCopy()
+ T CMsgDraggableRegionsChanged::ByteSize() const
+ T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged::Clear()
+ T CMsgDraggableRegionsChanged::GetCachedSize() const
+ T CMsgDraggableRegionsChanged::GetMetadata() const
+ T CMsgDraggableRegionsChanged::IsInitialized() const
+ T CMsgDraggableRegionsChanged::MergeFrom(CMsgDraggableRegionsChanged const&)
+ T CMsgDraggableRegionsChanged::New() const
+ T CMsgDraggableRegionsChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged::~CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged_DraggableRects::ByteSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::CMsgDraggableRegionsChanged_DraggableRects()
+ T CMsgDraggableRegionsChanged_DraggableRects::Clear()
+ T CMsgDraggableRegionsChanged_DraggableRects::GetCachedSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::GetMetadata() const
+ T CMsgDraggableRegionsChanged_DraggableRects::IsInitialized() const
+ T CMsgDraggableRegionsChanged_DraggableRects::MergeFrom(CMsgDraggableRegionsChanged_DraggableRects const&)
+ T CMsgDraggableRegionsChanged_DraggableRects::New() const
+ T CMsgDraggableRegionsChanged_DraggableRects::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged_DraggableRects::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged_DraggableRects::~CMsgDraggableRegionsChanged_DraggableRects()
  T CMsgEnableSteamClientAPI::ByteSize() const
  T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
  T CMsgEnableSteamClientAPI::Clear()
@@ -8194,8 +8283,8 @@
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
- T CSmartPtr<vgui::CJSCallbackFunc>::CSmartPtr(CSmartPtr<vgui::CJSCallbackFunc> const&)
- T CSmartPtr<vgui::CJSCallbackFunc>::operator=(CSmartPtr<vgui::CJSCallbackFunc> const&)
+ T CSmartPtr<CJSCallbackFunc>::CSmartPtr(CSmartPtr<CJSCallbackFunc> const&)
+ T CSmartPtr<CJSCallbackFunc>::operator=(CSmartPtr<CJSCallbackFunc> const&)
  T CSoundSystemSelect::CSoundSystemSelect(vgui::Panel*)
  T CSoundSystemSelect::ChainToAnimationMap()
  T CSoundSystemSelect::ChainToMap()
@@ -8226,7 +8315,7 @@
  T CSteamAuthedHTML::OnStartRequest(char const*, char const*, char const*, bool)
  T CSteamAuthedHTML::OnSupportSystemReportReady(SupportSystemReportReady_t*, bool)
  T CSteamAuthedHTML::OpenURL(char const*, char const*, bool)
- T CSteamAuthedHTML::RequestSupportSystemReport(CSmartPtr<vgui::CJSCallbackFunc>)
+ T CSteamAuthedHTML::RequestSupportSystemReport(CSmartPtr<CJSCallbackFunc>)
  T CSteamAuthedHTML::SetParentalUnlockCookie(char const*, char const*)
  T CSteamAuthedHTML::Validate(CValidator&, char const*)
  T CSteamAuthedHTML::~CSteamAuthedHTML()
@@ -8423,16 +8512,16 @@
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::IJSMethodCallHandler* const&)
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
@@ -8832,6 +8921,11 @@
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::~CUtlVector()
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::GrowVector(int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::InsertBefore(int, CJSCallbackFunc* const&)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<CMusicPage_Details_Album*, CUtlMemory<CMusicPage_Details_Album*> >::GrowVector(int)
  T CUtlVector<CMusicPage_Details_Album*, CUtlMemory<CMusicPage_Details_Album*> >::InsertBefore(int, CMusicPage_Details_Album* const&)
  T CUtlVector<CMusicPage_Details_Album*, CUtlMemory<CMusicPage_Details_Album*> >::ShiftElementsRight(int, int)
@@ -8892,10 +8986,10 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
- T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
@@ -9061,11 +9155,6 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::GrowVector(int)
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::InsertBefore(int, vgui::CJSCallbackFunc* const&)
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::ShiftElementsRight(int, int)
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
@@ -9097,6 +9186,10 @@
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::~CUtlVector()
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::GrowVector(int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::InsertBefore(int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::~CUtlVector()
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::GrowVector(int)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::InsertBefore(int, vgui::IImage* const&)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::ShiftElementsRight(int, int)
@@ -9783,7 +9876,7 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
- T bool vgui::BConvertMsgJSValue<CSmartPtr<vgui::CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<vgui::CJSCallbackFunc>*)
+ T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T delete_JSON_parser
  T gcm_ghash_4bit_mmx
  T gcm_ghash_4bit_x86
@@ -9894,6 +9987,7 @@
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T non-virtual thunk to vgui::HTML::BrowserCrashed()
+ T non-virtual thunk to vgui::HTML::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T non-virtual thunk to vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -10430,8 +10524,12 @@
  T vgui::CFileOpenListPanel::~CFileOpenListPanel()
  T vgui::CFontWidthCache::GetCharWidth(unsigned long, wchar_t, wchar_t, wchar_t)
  T vgui::CFontWidthCache::Validate(CValidator&, char const*)
- T vgui::CJSCallbackFunc::OnFinalRelease()
- T vgui::CJSCallbackFunc::~CJSCallbackFunc()
+ T vgui::CJSCallbackFunc_vgui::Call(CJSMethodArgs&)
+ T vgui::CJSCallbackFunc_vgui::IsValid()
+ T vgui::CJSCallbackFunc_vgui::MarkInvalid()
+ T vgui::CJSCallbackFunc_vgui::OnFinalRelease()
+ T vgui::CJSCallbackFunc_vgui::~CJSCallbackFunc_vgui()
+ T vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -10488,6 +10586,26 @@
  T vgui::CTypingJumpHandler::JumpToTypedString(wchar_t*)
  T vgui::CTypingJumpHandler::OnKeyTyped(wchar_t)
  T vgui::CTypingJumpHandler::Validate(CValidator&, char const*)
+ T vgui::CaptionGripPanel::BeginDrag()
+ T vgui::CaptionGripPanel::CaptionGripPanel(vgui::Frame*, char const*)
+ T vgui::CaptionGripPanel::ChainToAnimationMap()
+ T vgui::CaptionGripPanel::ChainToMap()
+ T vgui::CaptionGripPanel::GetAnimMap()
+ T vgui::CaptionGripPanel::GetClassSize() const
+ T vgui::CaptionGripPanel::GetKBMap()
+ T vgui::CaptionGripPanel::GetMessageMap()
+ T vgui::CaptionGripPanel::GetPanelClassName()
+ T vgui::CaptionGripPanel::GetPanelTopClassName() const
+ T vgui::CaptionGripPanel::IsWithin(int, int)
+ T vgui::CaptionGripPanel::KB_ChainToMap()
+ T vgui::CaptionGripPanel::OnMouseDoublePressed(vgui::MouseCode)
+ T vgui::CaptionGripPanel::OnThink()
+ T vgui::CaptionGripPanel::RequestInfo(KeyValues*)
+ T vgui::CaptionGripPanel::getInsideSnapPosition(int, int, int, int, int&, int&)
+ T vgui::CaptionGripPanel::getOutsideSnapPosition(int, int, int, int, int&, int&)
+ T vgui::CaptionGripPanel::moved(int, int)
+ T vgui::CaptionGripPanel::tryToDock(unsigned int, int&, int&)
+ T vgui::CaptionGripPanel::~CaptionGripPanel()
  T vgui::CheckButton::ApplySchemeSettings(vgui::IScheme*)
  T vgui::CheckButton::ChainToAnimationMap()
  T vgui::CheckButton::ChainToMap()
@@ -10531,15 +10649,20 @@
  T vgui::ClickPanel::ChainToAnimationMap()
  T vgui::ClickPanel::ChainToMap()
  T vgui::ClickPanel::ClickPanel(vgui::Panel*)
+ T vgui::ClickPanel::CommitChanges()
  T vgui::ClickPanel::GetAnimMap()
  T vgui::ClickPanel::GetClassSize() const
  T vgui::ClickPanel::GetKBMap()
  T vgui::ClickPanel::GetMessageMap()
  T vgui::ClickPanel::GetPanelClassName()
  T vgui::ClickPanel::GetPanelTopClassName() const
+ T vgui::ClickPanel::GetPos(int&, int&)
  T vgui::ClickPanel::KB_ChainToMap()
+ T vgui::ClickPanel::OnCursorEntered()
+ T vgui::ClickPanel::OnCursorExited()
  T vgui::ClickPanel::OnMousePressed(vgui::MouseCode)
  T vgui::ClickPanel::Paint()
+ T vgui::ClickPanel::SetVisible(bool)
  T vgui::ClickPanel::Update(int, int, char const*, char const*)
  T vgui::ClickPanel::~ClickPanel()
  T vgui::ComboBox::ActivateItem(int)
@@ -10725,7 +10848,6 @@
  T vgui::EditablePanel::LoadUserConfig(char const*, int)
  T vgui::EditablePanel::MakeReadyForUse()
  T vgui::EditablePanel::OnChildAdded(unsigned int)
- T vgui::EditablePanel::OnChildAppearanceChanged(vgui::Panel*)
  T vgui::EditablePanel::OnChildApplySchemeSettings(vgui::Panel*)
  T vgui::EditablePanel::OnChildRemoved(unsigned int)
  T vgui::EditablePanel::OnChildReorder()
@@ -11037,7 +11159,7 @@
  T vgui::FrameTitle::PerformLayout()
  T vgui::FrameTitle::SetDisabledLook(bool)
  T vgui::FrameTitle::~FrameTitle()
- T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >&, bool*)
+ T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
  T vgui::GetINotificationManager()
@@ -11058,9 +11180,32 @@
  T vgui::GraphPanel::SetUseFixedRange(float, float)
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::GraphPanel::~GraphPanel()
+ T vgui::GripPanel::ApplySchemeSettings(vgui::IScheme*)
+ T vgui::GripPanel::BeginDrag()
+ T vgui::GripPanel::ChainToAnimationMap()
+ T vgui::GripPanel::ChainToMap()
+ T vgui::GripPanel::EndDrag()
+ T vgui::GripPanel::GetAnimMap()
+ T vgui::GripPanel::GetClassSize() const
+ T vgui::GripPanel::GetKBMap()
+ T vgui::GripPanel::GetMessageMap()
+ T vgui::GripPanel::GetPanelClassName()
+ T vgui::GripPanel::GetPanelTopClassName() const
+ T vgui::GripPanel::GetStyleFlags()
+ T vgui::GripPanel::GripPanel(vgui::Frame*, char const*, int, int)
+ T vgui::GripPanel::KB_ChainToMap()
+ T vgui::GripPanel::OnCursorMoved(int, int)
+ T vgui::GripPanel::OnMouseCaptureLost()
+ T vgui::GripPanel::OnMousePressed(vgui::MouseCode)
+ T vgui::GripPanel::OnMouseReleased(vgui::MouseCode)
+ T vgui::GripPanel::Paint()
+ T vgui::GripPanel::PaintBackground()
+ T vgui::GripPanel::RequestInfo(KeyValues*)
+ T vgui::GripPanel::moved(int, int)
+ T vgui::GripPanel::~GripPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
  T vgui::HTML::AddHeader(char const*, char const*)
- T vgui::HTML::AddJSCallback(vgui::CJSCallbackFunc*)
+ T vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -11069,6 +11214,7 @@
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T vgui::HTML::BrowserCrashed()
+ T vgui::HTML::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -11089,7 +11235,7 @@
  T vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
- T vgui::HTML::BrowserNeedsPaint_SDLFullscreenUnderLock(CMsgNeedsPaint const*)
+ T vgui::HTML::BrowserNeedsPaint_SDLFullscreen(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
@@ -11098,7 +11244,6 @@
  T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
- T vgui::HTML::BrowserResize()
  T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
@@ -11224,9 +11369,10 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
- T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*)
- T vgui::HTML::ReleaseJSCallback(vgui::CJSCallbackFunc*)
+ T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*, EJSRegisterMethodType)
+ T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
+ T vgui::HTML::ResizeHTML()
  T vgui::HTML::RunJavascript(char const*)
  T vgui::HTML::SendPendingHTMLMessages()
  T vgui::HTML::SetContextMenuEnabled(bool)
@@ -11567,6 +11713,7 @@
  T vgui::ListPanel::RemoveAll()
  T vgui::ListPanel::RemoveColumn(int)
  T vgui::ListPanel::RemoveItem(int)
+ T vgui::ListPanel::RepaintSingleRow(int)
  T vgui::ListPanel::RereadAllItems()
  T vgui::ListPanel::ResetColumnHeaderCommands()
  T vgui::ListPanel::ResetScrollBar()
@@ -11818,6 +11965,8 @@
  T vgui::Menu::GetAnimMap()
  T vgui::Menu::GetClassSize() const
  T vgui::Menu::GetCurrentlyHighlightedItem()
+ T vgui::Menu::GetDialogVariables()
+ T vgui::Menu::GetDialogVariables_R()
  T vgui::Menu::GetInvalidMenuID()
  T vgui::Menu::GetItemCount()
  T vgui::Menu::GetItemText(int, char*, int)
@@ -12145,7 +12294,7 @@
  T vgui::Panel::GetChildCount()
  T vgui::Panel::GetClassName()
  T vgui::Panel::GetClassSize() const
- T vgui::Panel::GetClipRect(int&, int&, int&, int&)
+ T vgui::Panel::GetClipRect_DO_NOT_CALL(int&, int&, int&, int&)
  T vgui::Panel::GetContainerRegionRect(int&, int&, int&, int&)
  T vgui::Panel::GetContentSize(int&, int&)
  T vgui::Panel::GetCurrentKeyFocus()
@@ -12269,7 +12418,6 @@
  T vgui::Panel::MoveToFront()
  T vgui::Panel::OnAppearanceChanged(vgui::IAppearance*)
  T vgui::Panel::OnChildAdded(unsigned int)
- T vgui::Panel::OnChildAppearanceChanged(vgui::Panel*)
  T vgui::Panel::OnChildApplySchemeSettings(vgui::Panel*)
  T vgui::Panel::OnChildRemoved(unsigned int)
  T vgui::Panel::OnChildReorder()
@@ -13418,7 +13566,7 @@
  T vgui::URLLabel::URLLabel(vgui::Panel*, char const*, char const*, char const*)
  T vgui::URLLabel::Validate(CValidator&, char const*)
  T vgui::URLLabel::~URLLabel()
- T vgui::VGUI_Setup(char const*, bool, vgui::IVGuiSetup::EGraphicsOption*, int, CSysModule**, CSysModule**, CSysModule**, vgui::IHostOfflineMode*)
+ T vgui::VGUI_Setup(char const*, bool, vgui::IVGuiSetup::EGraphicsOption*, vgui::EFriendsUIMode, int, CSysModule**, CSysModule**, CSysModule**, vgui::IHostOfflineMode*)
  T vgui::VGuiControls_Init(char const*, vgui::IVGuiSetup*)
  T vgui::VPanelHandle::Get()
  T vgui::VPanelHandle::Set(unsigned int)
@@ -13489,7 +13637,7 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- T void vgui::JSMethodCallTuple_Helper<CSteamAuthedHTML, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >, CSmartPtr<vgui::CJSCallbackFunc>, 0>(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(CSmartPtr<vgui::CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<vgui::CJSCallbackFunc> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamAuthedHTML, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -13603,7 +13751,6 @@
  __toupper
  __udivdi3
  abort
- access
  alphasort$INODE64
  atoi
  atoll
@@ -13617,6 +13764,8 @@
  b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
  b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
@@ -13655,6 +13804,10 @@
  b (anonymous namespace)::CMsgComboNeedsPaint_reflection_
  b (anonymous namespace)::CMsgCopy_descriptor_
  b (anonymous namespace)::CMsgCopy_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_reflection_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgExecuteJavaScript_descriptor_
@@ -13859,17 +14012,7 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
- b (anonymous namespace)::CaptionGripPanel::ChainToAnimationMap()::chained
- b (anonymous namespace)::CaptionGripPanel::ChainToMap()::chained
- b (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
- b (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
- b (anonymous namespace)::CaptionGripPanel::KB_ChainToMap()::chained
  b (anonymous namespace)::EJSRegisterMethodType_descriptor_
- b (anonymous namespace)::GripPanel::ChainToAnimationMap()::chained
- b (anonymous namespace)::GripPanel::ChainToMap()::chained
- b (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
- b (anonymous namespace)::GripPanel::GetMessageMap()::s_pMap
- b (anonymous namespace)::GripPanel::KB_ChainToMap()::chained
  b (anonymous namespace)::ScrollBarButton::ChainToAnimationMap()::chained
  b (anonymous namespace)::ScrollBarButton::ChainToMap()::chained
  b (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
@@ -13995,10 +14138,6 @@
  b g_pGetSymbolProc
  b g_pSysModuleSteam
  b g_serializedOverlay
- b guard variable for (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
- b guard variable for (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
- b guard variable for (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
- b guard variable for (anonymous namespace)::GripPanel::GetMessageMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -14064,6 +14203,8 @@
  b s_bFirstLogEntry
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
+ b s_cmdFriendsUI
+ b s_hKeyvalue
  b s_netadrResolveCache
  b s_netadrResolveCacheCounter
  b s_netadrResolveCacheMutexEnforceConstruction
@@ -14131,12 +14272,9 @@
  crc32
  d .memset_pattern
  d GetShowFPSCornerOption(int)::k_rgShowFPSCorner
- d VTT for (anonymous namespace)::CaptionGripPanel
- d VTT for (anonymous namespace)::GripPanel
  d VTT for (anonymous namespace)::ScrollBarButton
  d boolconverter
  d colorconverter
- d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
  d floatconverter
@@ -14162,14 +14300,11 @@
  d s_rgchWGAuthedURLs
  d stringconverter
  d textureidconverter
- d typeinfo for (anonymous namespace)::CaptionGripPanel
- d typeinfo for (anonymous namespace)::GripPanel
  d typeinfo for (anonymous namespace)::ScrollBarButton
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned int)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
- d vtable for (anonymous namespace)::CaptionGripPanel
  d vtable for (anonymous namespace)::ScrollBarButton
  dlclose
  dlopen
@@ -14229,6 +14364,9 @@
  inflateReset
  kCFAbsoluteTimeIntervalSince1970
  kCFAllocatorDefault
+ kCFPreferencesAnyApplication
+ kCFPreferencesAnyHost
+ kCFPreferencesCurrentUser
  kill$UNIX2003
  launch_data_alloc
  launch_data_dict_insert
@@ -14314,6 +14452,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
@@ -14333,6 +14472,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
@@ -14444,8 +14585,6 @@
  r sub_end_of_word
  r sub_start_of_word
  r twobppswaptable
- r typeinfo name for (anonymous namespace)::CaptionGripPanel
- r typeinfo name for (anonymous namespace)::GripPanel
  r typeinfo name for (anonymous namespace)::ScrollBarButton
  r utf8_lead_bits
  r verbnames
@@ -14546,43 +14685,6 @@
  strtouq
  swprintf
  t (anonymous namespace)::CLEANUP::~CLEANUP()
- t (anonymous namespace)::CaptionGripPanel::BeginDrag()
- t (anonymous namespace)::CaptionGripPanel::CaptionGripPanel(vgui::Frame*, char const*)
- t (anonymous namespace)::CaptionGripPanel::GetAnimMap()
- t (anonymous namespace)::CaptionGripPanel::GetClassSize() const
- t (anonymous namespace)::CaptionGripPanel::GetKBMap()
- t (anonymous namespace)::CaptionGripPanel::GetMessageMap()
- t (anonymous namespace)::CaptionGripPanel::GetPanelClassName()
- t (anonymous namespace)::CaptionGripPanel::GetPanelTopClassName() const
- t (anonymous namespace)::CaptionGripPanel::OnMouseDoublePressed(vgui::MouseCode)
- t (anonymous namespace)::CaptionGripPanel::OnThink()
- t (anonymous namespace)::CaptionGripPanel::RequestInfo(KeyValues*)
- t (anonymous namespace)::CaptionGripPanel::moved(int, int)
- t (anonymous namespace)::CaptionGripPanel::tryToDock(unsigned int, int&, int&)
- t (anonymous namespace)::CaptionGripPanel::~CaptionGripPanel()
- t (anonymous namespace)::GripPanel::ApplySchemeSettings(vgui::IScheme*)
- t (anonymous namespace)::GripPanel::BeginDrag()
- t (anonymous namespace)::GripPanel::EndDrag()
- t (anonymous namespace)::GripPanel::GetAnimMap()
- t (anonymous namespace)::GripPanel::GetClassSize() const
- t (anonymous namespace)::GripPanel::GetKBMap()
- t (anonymous namespace)::GripPanel::GetMessageMap()
- t (anonymous namespace)::GripPanel::GetPanelClassName()
- t (anonymous namespace)::GripPanel::GetPanelTopClassName() const
- t (anonymous namespace)::GripPanel::GetStyleFlags()
- t (anonymous namespace)::GripPanel::GripPanel(vgui::Frame*, char const*, int, int)
- t (anonymous namespace)::GripPanel::GripPanel_Register::GripPanel_Register()
- t (anonymous namespace)::GripPanel::GripPanel_RegisterKBMap::GripPanel_RegisterKBMap()
- t (anonymous namespace)::GripPanel::GripPanel_RegisterMap::GripPanel_RegisterMap()
- t (anonymous namespace)::GripPanel::OnCursorMoved(int, int)
- t (anonymous namespace)::GripPanel::OnMouseCaptureLost()
- t (anonymous namespace)::GripPanel::OnMousePressed(vgui::MouseCode)
- t (anonymous namespace)::GripPanel::OnMouseReleased(vgui::MouseCode)
- t (anonymous namespace)::GripPanel::Paint()
- t (anonymous namespace)::GripPanel::PaintBackground()
- t (anonymous namespace)::GripPanel::RequestInfo(KeyValues*)
- t (anonymous namespace)::GripPanel::moved(int, int)
- t (anonymous namespace)::GripPanel::~GripPanel()
  t (anonymous namespace)::ScrollBarButton::GetAnimMap()
  t (anonymous namespace)::ScrollBarButton::GetClassSize() const
  t (anonymous namespace)::ScrollBarButton::GetKBMap()
@@ -14600,6 +14702,8 @@
  t BBeginsWithProtocol(char const*)
  t BIsMatchMore(char const*, char const*, int)
  t BlockingWait(int*, unsigned int, int*)
+ t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
+ t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
  t CleanupURL(CUtlString&)
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyString(char const*)
@@ -14729,6 +14833,7 @@
  t _GLOBAL__sub_I_globals.cpp
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
+ t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp

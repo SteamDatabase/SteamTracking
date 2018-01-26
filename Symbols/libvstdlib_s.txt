@@ -86,16 +86,19 @@
  R typeinfo name for IValidate
  R typeinfo name for SteamStdLib::CCommandLine
  R typeinfo name for SteamStdLib::ICommandLine
+ SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+ SteamThreadTools::CThreadEvent::Set()
  SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  SteamThreadTools::CThreadLocalBase::Get() const
  SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
- SteamThreadTools::CThreadSpinRWLock::LockForRead()
- SteamThreadTools::CThreadSpinRWLock::SpinLockForWrite(unsigned int)
- SteamThreadTools::CThreadSpinRWLock::UnlockRead()
- SteamThreadTools::CThreadSpinRWLock::UnlockWrite()
+ SteamThreadTools::CThreadRWLock::LockForWrite()
+ SteamThreadTools::CThreadRWLock::UnlockWrite()
+ SteamThreadTools::CThreadRWLock::WaitForRead()
+ SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
@@ -435,8 +438,8 @@
  T SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  T SteamStdLib::CCommandLineParam::~CCommandLineParam()
  T SteamStdLib::CommandLine()
- T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoRead()
- T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoWrite()
+ T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
+ T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
@@ -650,8 +653,9 @@
  ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
- ThreadInterlockedAssignIf64
+ ThreadInterlockedAssignIf
  ThreadInterlockedDecrement
+ ThreadInterlockedExchange
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
  Warning
@@ -670,11 +674,11 @@
  __stack_chk_guard
  __tolower
  __toupper
- b CStringNormalization::Initialize()::threadonce_1176_25
+ b CStringNormalization::Initialize()::threadonce_1176_24
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted
- b CURLUtils::IsTLD(char const*)::threadonce_118_22
+ b CURLUtils::IsTLD(char const*)::threadonce_118_21
  b DebugStatsSystem::g_DebugStatsSystem
  b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem

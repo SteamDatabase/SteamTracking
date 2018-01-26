@@ -131,6 +131,7 @@
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
+ T CStdMemAlloc::CStdMemAlloc()
  T CStdMemAlloc::ClearMemTrackingStats()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
@@ -525,6 +526,7 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ posix_memalign
  printf
  pthread_cond_destroy
  pthread_cond_wait

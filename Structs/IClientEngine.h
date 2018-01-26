@@ -19,6 +19,7 @@ public:
     virtual unknown_ret GetIClientMatchmaking(int, int, char const*) = 0;
     virtual unknown_ret GetIClientApps(int, int, char const*) = 0;
     virtual unknown_ret GetIClientMatchmakingServers(int, int, char const*) = 0;
+    virtual unknown_ret GetIClientGameSearch(int, int, char const*) = 0;
     virtual unknown_ret RunFrame() = 0;
     virtual unknown_ret GetIPCCallCount() = 0;
     virtual unknown_ret GetIClientUserStats(int, int, char const*) = 0;

@@ -156,6 +156,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/clientvideo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/clregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/cminterface.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/compatmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/configstore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/constants.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/contentupdatecontext.o
@@ -270,6 +271,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_partnerapps.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_player.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_publishedfile.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_qms.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_remoteclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_remoteclient_discovery.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_secrets.steamclient.pb.o
@@ -369,6 +371,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/clientvideo.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/clregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/cminterface.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/compatmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/configstore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/constants.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/contentupdatecontext.o
@@ -483,6 +486,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_partnerapps.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_player.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_publishedfile.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_qms.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_remoteclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_remoteclient_discovery.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_secrets.steamclient.pb.o
@@ -590,6 +594,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/clientvideo.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/cminterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/cminterface.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/compatmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/configstore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/configstore.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/contentupdatecontext.cpp
@@ -925,6 +930,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_player.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_publishedfile.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_publishedfile.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_qms.steamclient.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_qms.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_remoteclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_remoteclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_remoteclient_discovery.pb.cc

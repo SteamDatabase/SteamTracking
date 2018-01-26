@@ -147,7 +147,7 @@
     {
         "id": 336,
         "size": 12,
-        "posted_in": "CUserFriends::RequestFriendRichPresence(unsigned int, CSteamID)"
+        "posted_in": "CClientJobPersonaState::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
         "id": 337,
@@ -348,6 +348,11 @@
         "id": 721,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<HIDDeviceChanged_t>(HIDDeviceChanged_t*)"
+    },
+    {
+        "id": 722,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<OverlayChatBrowserInfoChanged_t>(OverlayChatBrowserInfoChanged_t*)"
     },
     {
         "id": 801,
@@ -2318,5 +2323,30 @@
         "id": 5001,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"
+    },
+    {
+        "id": 5201,
+        "size": 36,
+        "posted_in": "CAPIJobGameSearch::BYieldingRunAPIJob()"
+    },
+    {
+        "id": 5202,
+        "size": 32,
+        "posted_in": "CAPIJobGameSearch::BYieldingRunAPIJob()"
+    },
+    {
+        "id": 5211,
+        "size": 12,
+        "posted_in": "CAPIJobHostSearch::BYieldingRunAPIJob()"
+    },
+    {
+        "id": 5212,
+        "size": 56,
+        "posted_in": "CAPIJobHostSearch::BYieldingRunAPIJob()"
+    },
+    {
+        "id": 5213,
+        "size": 20,
+        "posted_in": "CAPIJobHostSearch::BYieldingRunAPIJob()"
     }
 ]

@@ -1,7 +1,7 @@
 "controller_mappings"
 {
 	"version" "2"
-	"game" "Generic Gamepad"
+	"game" "Generic Gamepad with Launcher Support"
 
 	"group"
 	{
@@ -58,6 +58,7 @@
 		"bindings"
 		{
 			"click"		"xinput_button JOYSTICK_LEFT"
+			"click"     "controller_action SHOW_KEYBOARD"				
 		}
 
 		"settings"

@@ -63,4 +63,7 @@ public:
     virtual unknown_ret GetAppIdForPid(unsigned int) = 0;
     virtual unknown_ret SetClientUIProcess() = 0;
     virtual unknown_ret BIsClientUIInForeground() = 0;
+    virtual unknown_ret SetOverlayChatBrowserInfo(unsigned int, int) = 0;
+    virtual unknown_ret ClearOverlayChatBrowserInfo(unsigned int) = 0;
+    virtual unknown_ret GetOverlayChatBrowserInfo(OverlayChatBrowserInfo_t*, unsigned int, unsigned int*) = 0;
 };

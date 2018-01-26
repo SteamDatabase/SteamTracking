@@ -36,7 +36,7 @@ message CMsgSteamDatagramCertificate {
 	optional .CMsgSteamDatagramCertificate.EKeyType key_type = 1 [default = INVALID];
 	optional bytes key_data = 2;
 	optional fixed64 steam_id = 4;
-	optional fixed32 gameserver_datacenter_id = 5;
+	repeated fixed32 gameserver_datacenter_ids = 5;
 	optional fixed32 time_created = 8;
 	optional fixed32 time_expiry = 9;
 	optional uint32 app_id = 10;

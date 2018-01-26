@@ -17,4 +17,5 @@ typedef enum EAppInfoSection
     k_EAppInfoSectionSysreqs, // sysreqs
     k_EAppInfoSectionCommunity, // community
     k_EAppInfoSectionStore, // store
+    k_EAppInfoSectionLocalization, // localization
 } EAppInfoSection;

@@ -23,7 +23,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/parentalinterpreter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/pipes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/powermanagement.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/registry.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
@@ -239,6 +238,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiurlcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuivrcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamurlcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp

@@ -31,6 +31,7 @@ public:
     virtual unknown_ret IsFriendGameOnConsole(CSteamID) = 0;
     virtual unknown_ret GetFriendSessionStateInfo(CSteamID) = 0;
     virtual unknown_ret GetFriendRestrictions(CSteamID) = 0;
+    virtual unknown_ret GetFriendBroadcastID(CSteamID) = 0;
     virtual unknown_ret GetFriendPersonaNameHistory(CSteamID, int) = 0;
     virtual unknown_ret RequestPersonaNameHistory(CSteamID) = 0;
     virtual unknown_ret GetFriendPersonaNameHistoryAndDate(CSteamID, int, unsigned int*) = 0;

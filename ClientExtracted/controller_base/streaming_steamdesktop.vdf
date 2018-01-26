@@ -30,7 +30,6 @@
             "dpad_south"    "key_press DOWN_ARROW"
             "dpad_east"     "key_press RIGHT_ARROW"
             "dpad_west"     "key_press LEFT_ARROW"
-			"click"		"controller_action SHOW_KEYBOARD"
         }
 		"settings"
 		{
@@ -164,6 +163,19 @@
 					}
 				}
 			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+				}
+			}			
 		}
 		"settings"
 		{

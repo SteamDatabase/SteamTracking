@@ -313,6 +313,27 @@ TenfootFooterPanel.WebFooter
     padding-top: -7.5px;
 }
 
+.OSX #LegendRow Label.LegendButtonBox.CrossButtonBox {
+	font-size: 21px;
+	padding-top: 2.2px;
+	padding-left: 0.2px;
+}
+.OSX #LegendRow Label.LegendButtonBox.CircleButtonBox {
+	font-size: 26px;
+	padding-top: -0.9px;
+	padding-left: -0.5px;
+}
+.OSX #LegendRow Label.LegendButtonBox.SquareButtonBox {
+	font-size: 24px;
+	padding-top: -0.2px;
+	padding-left: -0.8px;
+}
+.OSX #LegendRow Label.LegendButtonBox.TriangleButtonBox {
+	font-size: 26px;
+	padding-top: -2.4px;
+	padding-left: -.9px;
+}
+
 .Linux #LegendRow Label.LegendButtonBox.CrossButtonBox {
 	font-size: 21px;
 	padding-top: .5px;

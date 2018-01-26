@@ -28,15 +28,16 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_opengl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp

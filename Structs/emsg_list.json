@@ -801,7 +801,7 @@
         "emsg": 1630,
         "name": "k_EMsgClientDPContentStatsReport",
         "flags": 6,
-        "server_type": 17
+        "server_type": 16
     },
     {
         "emsg": 4026,
@@ -1707,7 +1707,7 @@
         "emsg": 5548,
         "name": "k_EMsgClientDownloadRateStatistics",
         "flags": 63,
-        "server_type": 17
+        "server_type": 16
     },
     {
         "emsg": 5549,
@@ -2817,6 +2817,12 @@
         "emsg": 9801,
         "name": "k_EMsgClientVoiceCallPreAuthorizeResponse",
         "flags": 59,
+        "server_type": -1
+    },
+    {
+        "emsg": 9802,
+        "name": "k_EMsgClientServerTimestampRequest",
+        "flags": 2,
         "server_type": -1
     }
 ]

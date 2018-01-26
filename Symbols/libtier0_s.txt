@@ -60,6 +60,7 @@
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
+ T CStdMemAlloc::CStdMemAlloc()
  T CStdMemAlloc::ClearMemTrackingStats()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
@@ -347,10 +348,6 @@
  T SteamThreadTools::CThreadSemaphore::Release(long)
  T SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamThreadTools::CThreadSpinRWLock::LockForRead()
- T SteamThreadTools::CThreadSpinRWLock::SpinLockForWrite(unsigned int)
- T SteamThreadTools::CThreadSpinRWLock::UnlockRead()
- T SteamThreadTools::CThreadSpinRWLock::UnlockWrite()
  T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
  T SteamThreadTools::CThreadSyncObject::AssertUseable()
  T SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
@@ -652,7 +649,6 @@
  ceilf
  chdir
  ctime_r
- d CValidator::BExcludeAllocationFromTracking(char const*, int)::fileLineInfoExclude
  d s_SpewOutputFunc
  daylight
  dladdr
@@ -699,6 +695,7 @@
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
+ posix_memalign
  printf
  pthread_attr_init
  pthread_attr_setstacksize

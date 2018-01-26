@@ -46,7 +46,6 @@
  B CLogger::sm_ThreadSafeQueueLogEvents
  B CLogger::sm_ThreadSafeQueueLogMsgSpew
  B CLogger::sm_bLogOnly
- B CLogger::sm_bPrefixChanged
  B CLogger::sm_bShutDown
  B CLogger::sm_bShuttingDown
  B CLogger::sm_cRef
@@ -67,6 +66,7 @@
  B CMsg3DTransformPerspectiveOrigin::default_instance_
  B CMsg3DTransformPerspectiveOrigin_AnimationFrameData::default_instance_
  B CMsg3DTransformPerspective_AnimationFrameData::default_instance_
+ B CMsgAckSharedPaintBuffers::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgAnimationData::default_instance_
  B CMsgAnimationFrameData::default_instance_
@@ -120,6 +120,8 @@
  B CMsgDeletePanel::default_instance_
  B CMsgDeleteParticleSystem::default_instance_
  B CMsgDeleteTexture::default_instance_
+ B CMsgDraggableRegionsChanged::default_instance_
+ B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgDrawFilledRect::default_instance_
  B CMsgDrawTextRegion::default_instance_
  B CMsgDrawTexturedRect::default_instance_
@@ -1180,6 +1182,7 @@
  D typeinfo for CMsg3DTransformPerspectiveOrigin
  D typeinfo for CMsg3DTransformPerspectiveOrigin_AnimationFrameData
  D typeinfo for CMsg3DTransformPerspective_AnimationFrameData
+ D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgAnimationData
  D typeinfo for CMsgAnimationFrameData
@@ -1226,6 +1229,8 @@
  D typeinfo for CMsgDeletePanel
  D typeinfo for CMsgDeleteParticleSystem
  D typeinfo for CMsgDeleteTexture
+ D typeinfo for CMsgDraggableRegionsChanged
+ D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgDrawFilledRect
  D typeinfo for CMsgDrawTextRegion
  D typeinfo for CMsgDrawTexturedRect
@@ -1631,7 +1636,7 @@
  D typeinfo for panorama::CUIEvent1<unsigned long long>
  D typeinfo for panorama::CUIEvent1<void*>
  D typeinfo for panorama::CUIEvent1<vr::EVRState>
- D typeinfo for panorama::CUIEvent1<vr::VREvent_t>
+ D typeinfo for panorama::CUIEvent1<vr::VREvent_t*>
  D typeinfo for panorama::CUIEvent2<char const*, void*>
  D typeinfo for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D typeinfo for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, char const*>
@@ -1832,6 +1837,7 @@
  D vtable for CMsg3DTransformPerspectiveOrigin
  D vtable for CMsg3DTransformPerspectiveOrigin_AnimationFrameData
  D vtable for CMsg3DTransformPerspective_AnimationFrameData
+ D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
  D vtable for CMsgAnimationData
  D vtable for CMsgAnimationFrameData
@@ -1878,6 +1884,8 @@
  D vtable for CMsgDeletePanel
  D vtable for CMsgDeleteParticleSystem
  D vtable for CMsgDeleteTexture
+ D vtable for CMsgDraggableRegionsChanged
+ D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgDrawFilledRect
  D vtable for CMsgDrawTextRegion
  D vtable for CMsgDrawTexturedRect
@@ -2253,7 +2261,7 @@
  D vtable for panorama::CUIEvent1<unsigned long long>
  D vtable for panorama::CUIEvent1<void*>
  D vtable for panorama::CUIEvent1<vr::EVRState>
- D vtable for panorama::CUIEvent1<vr::VREvent_t>
+ D vtable for panorama::CUIEvent1<vr::VREvent_t*>
  D vtable for panorama::CUIEvent2<char const*, void*>
  D vtable for panorama::CUIEvent2<float, panorama::IUIEvent*>
  D vtable for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, char const*>
@@ -2470,6 +2478,7 @@
  R typeinfo name for CMsg3DTransformPerspectiveOrigin
  R typeinfo name for CMsg3DTransformPerspectiveOrigin_AnimationFrameData
  R typeinfo name for CMsg3DTransformPerspective_AnimationFrameData
+ R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgAnimationData
  R typeinfo name for CMsgAnimationFrameData
@@ -2516,6 +2525,8 @@
  R typeinfo name for CMsgDeletePanel
  R typeinfo name for CMsgDeleteParticleSystem
  R typeinfo name for CMsgDeleteTexture
+ R typeinfo name for CMsgDraggableRegionsChanged
+ R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgDrawFilledRect
  R typeinfo name for CMsgDrawTextRegion
  R typeinfo name for CMsgDrawTexturedRect
@@ -3176,7 +3187,7 @@
  R typeinfo name for panorama::CUIEvent1<unsigned long long>
  R typeinfo name for panorama::CUIEvent1<void*>
  R typeinfo name for panorama::CUIEvent1<vr::EVRState>
- R typeinfo name for panorama::CUIEvent1<vr::VREvent_t>
+ R typeinfo name for panorama::CUIEvent1<vr::VREvent_t*>
  R typeinfo name for panorama::CUIEvent2<char const*, void*>
  R typeinfo name for panorama::CUIEvent2<float, panorama::IUIEvent*>
  R typeinfo name for panorama::CUIEvent2<panorama::CPanelPtr<panorama::IUIPanel>, char const*>
@@ -3366,7 +3377,7 @@
  R typeinfo name for v8::ArrayBuffer::Allocator
  R typeinfo name for v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*
  R typeinfo name for vr::EVRState
- R typeinfo name for vr::VREvent_t
+ R typeinfo name for vr::VREvent_t*
  R v8::platform::DefaultPlatform::kMaxThreadPoolSize
  RealGetCallStack
  RealPrintCallStack
@@ -3735,6 +3746,8 @@
  T CCuratorPreferences::New() const
  T CCuratorPreferences::SerializeWithCachedSizesToArray(unsigned char*) const
  T CCuratorPreferences::SetCachedSize(int) const
+ T CCuratorPreferences::SharedCtor()
+ T CCuratorPreferences::SharedDtor()
  T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsValue::CDebugStatsValue(char const*)
@@ -4001,6 +4014,17 @@
  T CMsg3DTransformPerspective_AnimationFrameData::SetCachedSize(int) const
  T CMsg3DTransformPerspective_AnimationFrameData::default_instance()
  T CMsg3DTransformPerspective_AnimationFrameData::~CMsg3DTransformPerspective_AnimationFrameData()
+ T CMsgAckSharedPaintBuffers::ByteSize() const
+ T CMsgAckSharedPaintBuffers::CMsgAckSharedPaintBuffers()
+ T CMsgAckSharedPaintBuffers::Clear()
+ T CMsgAckSharedPaintBuffers::GetCachedSize() const
+ T CMsgAckSharedPaintBuffers::GetMetadata() const
+ T CMsgAckSharedPaintBuffers::IsInitialized() const
+ T CMsgAckSharedPaintBuffers::MergeFrom(CMsgAckSharedPaintBuffers const&)
+ T CMsgAckSharedPaintBuffers::New() const
+ T CMsgAckSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAckSharedPaintBuffers::SetCachedSize(int) const
+ T CMsgAckSharedPaintBuffers::~CMsgAckSharedPaintBuffers()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -4541,6 +4565,28 @@
  T CMsgDeleteTexture::SetCachedSize(int) const
  T CMsgDeleteTexture::default_instance()
  T CMsgDeleteTexture::~CMsgDeleteTexture()
+ T CMsgDraggableRegionsChanged::ByteSize() const
+ T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged::Clear()
+ T CMsgDraggableRegionsChanged::GetCachedSize() const
+ T CMsgDraggableRegionsChanged::GetMetadata() const
+ T CMsgDraggableRegionsChanged::IsInitialized() const
+ T CMsgDraggableRegionsChanged::MergeFrom(CMsgDraggableRegionsChanged const&)
+ T CMsgDraggableRegionsChanged::New() const
+ T CMsgDraggableRegionsChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged::~CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged_DraggableRects::ByteSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::CMsgDraggableRegionsChanged_DraggableRects()
+ T CMsgDraggableRegionsChanged_DraggableRects::Clear()
+ T CMsgDraggableRegionsChanged_DraggableRects::GetCachedSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::GetMetadata() const
+ T CMsgDraggableRegionsChanged_DraggableRects::IsInitialized() const
+ T CMsgDraggableRegionsChanged_DraggableRects::MergeFrom(CMsgDraggableRegionsChanged_DraggableRects const&)
+ T CMsgDraggableRegionsChanged_DraggableRects::New() const
+ T CMsgDraggableRegionsChanged_DraggableRects::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged_DraggableRects::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged_DraggableRects::~CMsgDraggableRegionsChanged_DraggableRects()
  T CMsgDrawFilledRect::ByteSize() const
  T CMsgDrawFilledRect::CMsgDrawFilledRect()
  T CMsgDrawFilledRect::Clear()
@@ -6674,6 +6720,7 @@
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
+ T CStdMemAlloc::CStdMemAlloc()
  T CStdMemAlloc::ClearMemTrackingStats()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
@@ -7544,8 +7591,10 @@
  T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::PercolateUp(int)
  T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::Swap(int, int)
  T CUtlPriorityQueue<panorama::CUIEngine::ScheduledItem_t, bool (*)(panorama::CUIEngine::ScheduledItem_t const&, panorama::CUIEngine::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<panorama::CUIEngine::ScheduledItem_t> >::Validate(CValidator&, char const*)
+ T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::CUtlPtr(CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > > const&)
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::Release()
  T CUtlPtr<CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> > >::SetPtr(CUtlVector<panorama::IUIPanel*, CUtlMemory<panorama::IUIPanel*> >*)
+ T CUtlPtr<panorama::CStyleFileKey>::CUtlPtr(CUtlPtr<panorama::CStyleFileKey> const&)
  T CUtlPtr<panorama::CStyleFileKey>::Release()
  T CUtlPtr<panorama::CStyleFileKey>::Validate(CValidator&, char const*)
  T CUtlPtrArray<panorama::CPanoramaSymbol>::Allocate(unsigned int)
@@ -8681,6 +8730,7 @@
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::InsertBefore(int, panorama::CUIEngine::XHeader_t const&)
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::RemoveAll()
+ T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::ShiftElementsLeft(int, int)
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::ShiftElementsRight(int, int)
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CUIEngine::XHeader_t, CUtlMemory<panorama::CUIEngine::XHeader_t> >::~CUtlVector()
@@ -9497,6 +9547,7 @@
  T bool panorama::DispatchEvent<panorama::VRResetDashboard>(panorama::VRResetDashboard, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRShowKeyboard>(panorama::VRShowKeyboard, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRStatusUpdate, vr::EVRState>(panorama::VRStatusUpdate, panorama::IUIPanel const*, vr::EVRState)
+ T bool panorama::DispatchEvent<panorama::VRUnknownEvent, vr::VREvent_t*>(panorama::VRUnknownEvent, panorama::IUIPanel const*, vr::VREvent_t*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerChangedRepresentation, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerChangedRepresentation, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerEnded, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerEnded, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
  T bool panorama::DispatchEvent<panorama::VideoPlayerInitalized, panorama::CPanoramaVideoPlayer*>(panorama::VideoPlayerInitalized, panorama::IUIPanelClient const*, panorama::CPanoramaVideoPlayer*)
@@ -12190,11 +12241,11 @@
  T panorama::CUIEvent1<vr::EVRState>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
  T panorama::CUIEvent1<vr::EVRState>::Validate(CValidator&, char const*)
  T panorama::CUIEvent1<vr::EVRState>::~CUIEvent1()
- T panorama::CUIEvent1<vr::VREvent_t>::Copy() const
- T panorama::CUIEvent1<vr::VREvent_t>::Dispatch(CUtlAbstractDelegate)
- T panorama::CUIEvent1<vr::VREvent_t>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
- T panorama::CUIEvent1<vr::VREvent_t>::Validate(CValidator&, char const*)
- T panorama::CUIEvent1<vr::VREvent_t>::~CUIEvent1()
+ T panorama::CUIEvent1<vr::VREvent_t*>::Copy() const
+ T panorama::CUIEvent1<vr::VREvent_t*>::Dispatch(CUtlAbstractDelegate)
+ T panorama::CUIEvent1<vr::VREvent_t*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
+ T panorama::CUIEvent1<vr::VREvent_t*>::Validate(CValidator&, char const*)
+ T panorama::CUIEvent1<vr::VREvent_t*>::~CUIEvent1()
  T panorama::CUIEvent2<char const*, void*>::Copy() const
  T panorama::CUIEvent2<char const*, void*>::Dispatch(CUtlAbstractDelegate)
  T panorama::CUIEvent2<char const*, void*>::GetJavaScriptArgs(int*, v8::Handle<v8::Value>**)
@@ -14443,7 +14494,7 @@
  T panorama::VRStatusUpdate::MakeEvent(panorama::IUIPanelClient const*, vr::EVRState)
  T panorama::VRUnknownEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VRUnknownEvent::FormatEventArgs(char const*)
- T panorama::VRUnknownEvent::MakeEvent(panorama::IUIPanelClient const*, vr::VREvent_t)
+ T panorama::VRUnknownEvent::MakeEvent(panorama::IUIPanelClient const*, vr::VREvent_t*)
  T panorama::ValidateGlobalEvents(CValidator&)
  T panorama::ValidatePanel2DFactory(CValidator&)
  T panorama::ValidateStylePropertyFactory(CValidator&)
@@ -15081,6 +15132,7 @@
  T void panorama::PanoramaTypeToV8Param<panorama::InputMessage_t>(panorama::InputMessage_t*, v8::Handle<v8::Value>*)
  T void panorama::PanoramaTypeToV8Param<v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> > >(v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, v8::Handle<v8::Value>*)
  T void panorama::PanoramaTypeToV8Param<void>(void*, v8::Handle<v8::Value>*)
+ T void panorama::PanoramaTypeToV8Param<vr::VREvent_t>(vr::VREvent_t*, v8::Handle<v8::Value>*)
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), bool (CDragStartCallbacks::*)() const, void (CDragStartCallbacks::*)(bool)>(char const*, bool (CDragStartCallbacks::*)() const, void (CDragStartCallbacks::*)(bool), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), bool (panorama::CUIPanel::*)() const, void (panorama::CUIPanel::*)(bool)>(char const*, bool (panorama::CUIPanel::*)() const, void (panorama::CUIPanel::*)(bool), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
  T void panorama::RegisterJSAccessorInternal<void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), int (CDragStartCallbacks::*)() const, void (CDragStartCallbacks::*)(int)>(char const*, int (CDragStartCallbacks::*)() const, void (CDragStartCallbacks::*)(int), void (*)(v8::Local<v8::String>, v8::PropertyCallbackInfo<v8::Value> const&), void (*)(v8::Local<v8::String>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<void> const&), char const*, panorama::RegisterJSType_t)
@@ -15327,6 +15379,8 @@
  b (anonymous namespace)::CMsg3DTransformPerspective_AnimationFrameData_reflection_
  b (anonymous namespace)::CMsg3DTransformPerspective_descriptor_
  b (anonymous namespace)::CMsg3DTransformPerspective_reflection_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgAnimationData_descriptor_
@@ -15419,6 +15473,10 @@
  b (anonymous namespace)::CMsgDeleteParticleSystem_reflection_
  b (anonymous namespace)::CMsgDeleteTexture_descriptor_
  b (anonymous namespace)::CMsgDeleteTexture_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_reflection_
  b (anonymous namespace)::CMsgDrawFilledRect_descriptor_
  b (anonymous namespace)::CMsgDrawFilledRect_reflection_
  b (anonymous namespace)::CMsgDrawTextRegion_descriptor_
@@ -16571,6 +16629,7 @@
  pango_layout_xy_to_index
  pipe
  poll$UNIX2003
+ posix_memalign
  pow
  powf
  printf
@@ -16665,6 +16724,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
@@ -16684,6 +16744,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_

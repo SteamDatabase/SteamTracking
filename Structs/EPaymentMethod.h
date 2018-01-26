@@ -121,6 +121,8 @@ typedef enum EPaymentMethod
     k_EPaymentMethodInterac, // Interac
     k_EPaymentMethodVTCPayCards, // VTC Pay Cards
     k_EPaymentMethodVTCPayOnlineBanking, // VTC Pay Online Banking
+    k_EPaymentMethodVisaElectronBoaCompra, // Visa Electron (BoaCompra)
+    k_EPaymentMethodCafeFunded, // Cafe Funded
     k_EPaymentMethodWallet = 128, // Wallet
     k_EPaymentMethodValve, // Valve
     k_EPaymentMethodSteamPressMaster, // Steam/Press Master

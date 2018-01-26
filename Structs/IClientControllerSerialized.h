@@ -117,6 +117,7 @@ public:
     virtual unknown_ret BControllerHasUniqueConfigForAppID(unsigned int, CUtlString*) = 0;
     virtual unknown_ret DeRegisterController(unsigned int, unsigned int) = 0;
     virtual unknown_ret SendOSKeyboardEvent(char const*) = 0;
+    virtual unknown_ret GetControllerIndexForGamepadIndex(int) = 0;
     virtual unknown_ret GetNumControllersWithDetails() = 0;
     virtual unknown_ret ConvertBindingToNewControllerType(unsigned int, unsigned int) = 0;
     virtual unknown_ret SetControllerActiveAccount(unsigned int, unsigned int) = 0;

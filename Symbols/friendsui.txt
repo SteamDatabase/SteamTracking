@@ -6,6 +6,7 @@
  B CJSMethodArgument::default_instance_
  B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
+ B CMsgAckSharedPaintBuffers::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgAuthedSteamDomains::default_instance_
  B CMsgBrowserCreate::default_instance_
@@ -25,6 +26,8 @@
  B CMsgCloseFullScreenFlashIfOpen::default_instance_
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
+ B CMsgDraggableRegionsChanged::default_instance_
+ B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgEnableSteamClientAPI::default_instance_
  B CMsgExecuteJavaScript::default_instance_
  B CMsgExitFullScreen::default_instance_
@@ -224,21 +227,20 @@
  B vgui::ToolWindow::s_ToolWindows
  B vgui::g_ButtonSoundNames
  CFArrayCreate
+ CFBooleanGetTypeID
  CFBooleanGetValue
  CFDateCreate
  CFDateFormatterCreate
  CFDateFormatterCreateStringWithDate
- CFDictionaryGetTypeID
- CFDictionaryGetValueIfPresent
  CFGetTypeID
  CFLocaleCopyCurrent
- CFPropertyListCreateFromXMLData
+ CFPreferencesCopyValue
  CFRelease
  CFRunLoopGetCurrent
+ CFStringCompare
  CFStringCreateWithCString
  CFStringGetCString
- CFURLCreateDataAndPropertiesFromResource
- CFURLCreateWithFileSystemPath
+ CFStringGetTypeID
  CStringNormalization::Normalize(bool, char const*, char*, int)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
@@ -595,6 +597,11 @@
  D CFriendsNotification::GetMessageMap()::s_pMap
  D CFriendsNotification::KB_ChainToMap()::chained
  D CFriendsNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
+ D CFriendsWebChatVguiFrame::ChainToAnimationMap()::chained
+ D CFriendsWebChatVguiFrame::ChainToMap()::chained
+ D CFriendsWebChatVguiFrame::GetKBMap()::s_pMap
+ D CFriendsWebChatVguiFrame::GetMessageMap()::s_pMap
+ D CFriendsWebChatVguiFrame::KB_ChainToMap()::chained
  D CGameInviteBar::ChainToAnimationMap()::chained
  D CGameInviteBar::ChainToMap()::chained
  D CGameInviteBar::GetKBMap()::s_pMap
@@ -694,6 +701,11 @@
  D HTMLComboBoxHost::GetKBMap()::s_pMap
  D HTMLComboBoxHost::GetMessageMap()::s_pMap
  D HTMLComboBoxHost::KB_ChainToMap()::chained
+ D HTMLFramelessWrapper::ChainToAnimationMap()::chained
+ D HTMLFramelessWrapper::ChainToMap()::chained
+ D HTMLFramelessWrapper::GetKBMap()::s_pMap
+ D HTMLFramelessWrapper::GetMessageMap()::s_pMap
+ D HTMLFramelessWrapper::KB_ChainToMap()::chained
  D LONG_it
  D ListPanelColumnSelectButton::ChainToAnimationMap()::chained
  D ListPanelColumnSelectButton::ChainToMap()::chained
@@ -759,6 +771,7 @@
  D VTT for CFriendsListSectionHeader
  D VTT for CFriendsListSubPanel
  D VTT for CFriendsNotification
+ D VTT for CFriendsWebChatVguiFrame
  D VTT for CGameInviteBar
  D VTT for CGameInviteNotification
  D VTT for CGiftReceivedNotification
@@ -777,6 +790,7 @@
  D VTT for CVoiceTraffic
  D VTT for GridMenu
  D VTT for HTMLComboBoxHost
+ D VTT for HTMLFramelessWrapper
  D VTT for ListPanelColumnSelectButton
  D VTT for ListPanelDragger
  D VTT for SharedLibraryNotification
@@ -787,6 +801,7 @@
  D VTT for vgui::CFileOpenListPanel
  D VTT for vgui::CNotificationClickPanel
  D VTT for vgui::CTreeViewListControl
+ D VTT for vgui::CaptionGripPanel
  D VTT for vgui::CheckButton
  D VTT for vgui::CheckButtonList
  D VTT for vgui::ClickPanel
@@ -807,9 +822,11 @@
  D VTT for vgui::FrameSystemButton
  D VTT for vgui::FrameTitle
  D VTT for vgui::GraphPanel
+ D VTT for vgui::GripPanel
  D VTT for vgui::HTML
  D VTT for vgui::HTML::CHTMLFindBar
  D VTT for vgui::HTML::CHTMLIMEBar
+ D VTT for vgui::HTMLFramelessPopup
  D VTT for vgui::HTMLPopup
  D VTT for vgui::HTMLPopup::PopupHTML
  D VTT for vgui::ImagePanel
@@ -954,6 +971,7 @@
  D construction vtable for vgui::EditablePanel-in-CFriendsDialog
  D construction vtable for vgui::EditablePanel-in-CFriendsFriendsPage
  D construction vtable for vgui::EditablePanel-in-CFriendsNotification
+ D construction vtable for vgui::EditablePanel-in-CFriendsWebChatVguiFrame
  D construction vtable for vgui::EditablePanel-in-CGameInviteBar
  D construction vtable for vgui::EditablePanel-in-CGameInviteNotification
  D construction vtable for vgui::EditablePanel-in-CGiftReceivedNotification
@@ -969,19 +987,17 @@
  D construction vtable for vgui::EditablePanel-in-CVoiceBar
  D construction vtable for vgui::EditablePanel-in-CVoiceChatInviteNotification
  D construction vtable for vgui::EditablePanel-in-CVoiceTraffic
- D construction vtable for vgui::EditablePanel-in-GridMenu
  D construction vtable for vgui::EditablePanel-in-HTMLComboBoxHost
  D construction vtable for vgui::EditablePanel-in-SharedLibraryNotification
  D construction vtable for vgui::EditablePanel-in-vgui::CheckButtonList
  D construction vtable for vgui::EditablePanel-in-vgui::EasyNotification
- D construction vtable for vgui::EditablePanel-in-vgui::FileCompletionMenu
  D construction vtable for vgui::EditablePanel-in-vgui::FileOpenDialog
  D construction vtable for vgui::EditablePanel-in-vgui::Frame
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::EditablePanel-in-vgui::HTMLFramelessPopup
  D construction vtable for vgui::EditablePanel-in-vgui::HTMLPopup
  D construction vtable for vgui::EditablePanel-in-vgui::InputDialog
- D construction vtable for vgui::EditablePanel-in-vgui::Menu
  D construction vtable for vgui::EditablePanel-in-vgui::MessageBox
  D construction vtable for vgui::EditablePanel-in-vgui::NotificationFrame
  D construction vtable for vgui::EditablePanel-in-vgui::PageDragFrame
@@ -1001,10 +1017,12 @@
  D construction vtable for vgui::Frame-in-CFriendGameInviteDialog
  D construction vtable for vgui::Frame-in-CFriendNotificationOptionsDialog
  D construction vtable for vgui::Frame-in-CFriendsDialog
+ D construction vtable for vgui::Frame-in-CFriendsWebChatVguiFrame
  D construction vtable for vgui::Frame-in-CLimitedUserDialog
  D construction vtable for vgui::Frame-in-CPlayersDialog
  D construction vtable for vgui::Frame-in-CSetNicknameDialog
  D construction vtable for vgui::Frame-in-vgui::FileOpenDialog
+ D construction vtable for vgui::Frame-in-vgui::HTMLFramelessPopup
  D construction vtable for vgui::Frame-in-vgui::HTMLPopup
  D construction vtable for vgui::Frame-in-vgui::InputDialog
  D construction vtable for vgui::Frame-in-vgui::MessageBox
@@ -1017,6 +1035,8 @@
  D construction vtable for vgui::FrameButton-in-vgui::FrameCloseButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMaximizeButton
  D construction vtable for vgui::FrameButton-in-vgui::FrameMinimizeButton
+ D construction vtable for vgui::GripPanel-in-vgui::CaptionGripPanel
+ D construction vtable for vgui::HTML-in-HTMLFramelessWrapper
  D construction vtable for vgui::HTML-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::ImagePanel-in-CAvatarOverlayImage
  D construction vtable for vgui::ImagePanel-in-CChatTabPanel
@@ -1140,6 +1160,7 @@
  D construction vtable for vgui::Panel-in-CFriendsListSectionHeader
  D construction vtable for vgui::Panel-in-CFriendsListSubPanel
  D construction vtable for vgui::Panel-in-CFriendsNotification
+ D construction vtable for vgui::Panel-in-CFriendsWebChatVguiFrame
  D construction vtable for vgui::Panel-in-CGameInviteBar
  D construction vtable for vgui::Panel-in-CGameInviteNotification
  D construction vtable for vgui::Panel-in-CGiftReceivedNotification
@@ -1158,6 +1179,7 @@
  D construction vtable for vgui::Panel-in-CVoiceTraffic
  D construction vtable for vgui::Panel-in-GridMenu
  D construction vtable for vgui::Panel-in-HTMLComboBoxHost
+ D construction vtable for vgui::Panel-in-HTMLFramelessWrapper
  D construction vtable for vgui::Panel-in-ListPanelColumnSelectButton
  D construction vtable for vgui::Panel-in-ListPanelDragger
  D construction vtable for vgui::Panel-in-SharedLibraryNotification
@@ -1168,6 +1190,7 @@
  D construction vtable for vgui::Panel-in-vgui::CFileOpenListPanel
  D construction vtable for vgui::Panel-in-vgui::CNotificationClickPanel
  D construction vtable for vgui::Panel-in-vgui::CTreeViewListControl
+ D construction vtable for vgui::Panel-in-vgui::CaptionGripPanel
  D construction vtable for vgui::Panel-in-vgui::CheckButton
  D construction vtable for vgui::Panel-in-vgui::CheckButtonList
  D construction vtable for vgui::Panel-in-vgui::ClickPanel
@@ -1188,9 +1211,11 @@
  D construction vtable for vgui::Panel-in-vgui::FrameSystemButton
  D construction vtable for vgui::Panel-in-vgui::FrameTitle
  D construction vtable for vgui::Panel-in-vgui::GraphPanel
+ D construction vtable for vgui::Panel-in-vgui::GripPanel
  D construction vtable for vgui::Panel-in-vgui::HTML
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLFindBar
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLIMEBar
+ D construction vtable for vgui::Panel-in-vgui::HTMLFramelessPopup
  D construction vtable for vgui::Panel-in-vgui::HTMLPopup
  D construction vtable for vgui::Panel-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-vgui::ImagePanel
@@ -1374,6 +1399,8 @@
  D guard variable for CFriendsListSubPanel::GetMessageMap()::s_pMap
  D guard variable for CFriendsNotification::GetKBMap()::s_pMap
  D guard variable for CFriendsNotification::GetMessageMap()::s_pMap
+ D guard variable for CFriendsWebChatVguiFrame::GetKBMap()::s_pMap
+ D guard variable for CFriendsWebChatVguiFrame::GetMessageMap()::s_pMap
  D guard variable for CGameInviteBar::GetKBMap()::s_pMap
  D guard variable for CGameInviteBar::GetMessageMap()::s_pMap
  D guard variable for CGameInviteNotification::GetKBMap()::s_pMap
@@ -1406,6 +1433,8 @@
  D guard variable for CVoiceTraffic::GetMessageMap()::s_pMap
  D guard variable for HTMLComboBoxHost::GetKBMap()::s_pMap
  D guard variable for HTMLComboBoxHost::GetMessageMap()::s_pMap
+ D guard variable for HTMLFramelessWrapper::GetKBMap()::s_pMap
+ D guard variable for HTMLFramelessWrapper::GetMessageMap()::s_pMap
  D guard variable for ListPanelColumnSelectButton::GetKBMap()::s_pMap
  D guard variable for ListPanelColumnSelectButton::GetMessageMap()::s_pMap
  D guard variable for ListPanelDragger::GetKBMap()::s_pMap
@@ -1424,6 +1453,11 @@
  D guard variable for vgui::CNotificationClickPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetKBMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetMessageMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::GetKBMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D guard variable for vgui::CheckButton::GetKBMap()::s_pMap
  D guard variable for vgui::CheckButton::GetMessageMap()::s_pMap
  D guard variable for vgui::CheckButtonList::GetKBMap()::s_pMap
@@ -1462,12 +1496,17 @@
  D guard variable for vgui::FrameTitle::GetMessageMap()::s_pMap
  D guard variable for vgui::GraphPanel::GetKBMap()::s_pMap
  D guard variable for vgui::GraphPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::GripPanel::GetKBMap()::s_pMap
+ D guard variable for vgui::GripPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::GripPanel::RequestInfo(KeyValues*)::hksIsResizeBorder
  D guard variable for vgui::HTML::CHTMLFindBar::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLFindBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLIMEBar::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLIMEBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::GetMessageMap()::s_pMap
+ D guard variable for vgui::HTMLFramelessPopup::GetKBMap()::s_pMap
+ D guard variable for vgui::HTMLFramelessPopup::GetMessageMap()::s_pMap
  D guard variable for vgui::HTMLPopup::GetKBMap()::s_pMap
  D guard variable for vgui::HTMLPopup::GetMessageMap()::s_pMap
  D guard variable for vgui::HTMLPopup::PopupHTML::GetKBMap()::s_pMap
@@ -1652,7 +1691,6 @@
  D typeinfo for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  D typeinfo for CCallback<CFriendsDialog, LobbyInvite_t, false>
  D typeinfo for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
- D typeinfo for CCallback<CFriendsDialog, OpenChatDialog_t, false>
  D typeinfo for CCallback<CFriendsDialog, ParentalLockChanged_t, false>
  D typeinfo for CCallback<CFriendsDialog, PersonaStateChange_t, false>
  D typeinfo for CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>
@@ -1677,6 +1715,7 @@
  D typeinfo for CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>
  D typeinfo for CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>
  D typeinfo for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
+ D typeinfo for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D typeinfo for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  D typeinfo for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
  D typeinfo for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
@@ -1792,7 +1831,6 @@
  D typeinfo for CFriendsDialog::CCallback_OnLoggedOff
  D typeinfo for CFriendsDialog::CCallback_OnLogonFailure
  D typeinfo for CFriendsDialog::CCallback_OnLogonSuccess
- D typeinfo for CFriendsDialog::CCallback_OnOpenChatDialog
  D typeinfo for CFriendsDialog::CCallback_OnParentalLockChanged
  D typeinfo for CFriendsDialog::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
@@ -1822,9 +1860,12 @@
  D typeinfo for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsNotification
  D typeinfo for CFriendsUIModule
+ D typeinfo for CFriendsUIModule::CCallback_OnOpenChatDialog
  D typeinfo for CFriendsUIModule::CFriendPanelContainerGeneric
  D typeinfo for CFriendsUIModule::CFriendPanelContainerSelf
  D typeinfo for CFriendsUIModule::CFriendPanelContainerSelfAvatar
+ D typeinfo for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
+ D typeinfo for CFriendsWebChatVguiFrame
  D typeinfo for CGameInviteBar
  D typeinfo for CGameInviteNotification
  D typeinfo for CGiftReceivedNotification
@@ -1867,6 +1908,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgPostURL>
  D typeinfo for CHTMLProtoBufMsg<CMsgReload>
  D typeinfo for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgScreenDPI>
  D typeinfo for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetFocus>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
@@ -1884,11 +1926,14 @@
  D typeinfo for CItemImageManager
  D typeinfo for CItemReceivedNotification
  D typeinfo for CJSCallbackFunc
+ D typeinfo for CJSCallbackFunc_HTMLWindow
  D typeinfo for CJSCallbackPromise
  D typeinfo for CJSMethodArgument
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, int>
+ D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -1898,6 +1943,7 @@
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  D typeinfo for CLimitedUserDialog
  D typeinfo for CMSgJumpListMRUApp
+ D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgAuthedSteamDomains
  D typeinfo for CMsgBrowserCreate
@@ -1917,6 +1963,8 @@
  D typeinfo for CMsgCloseFullScreenFlashIfOpen
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
+ D typeinfo for CMsgDraggableRegionsChanged
+ D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgExecuteJavaScript
  D typeinfo for CMsgExitFullScreen
@@ -2063,6 +2111,7 @@
  D typeinfo for ConVar
  D typeinfo for GridMenu
  D typeinfo for HTMLComboBoxHost
+ D typeinfo for HTMLFramelessWrapper
  D typeinfo for IBaseInterface
  D typeinfo for IClientParentalSettings
  D typeinfo for IFriendPanelContainer
@@ -2081,11 +2130,16 @@
  D typeinfo for vgui::Button
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
+ D typeinfo for vgui::CJSCallbackFunc_vgui
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
  D typeinfo for vgui::CTypingJumpHandler
  D typeinfo for vgui::CTypingJumpHandler::ITypingJumpClient
+ D typeinfo for vgui::CaptionGripPanel
  D typeinfo for vgui::CheckButton
  D typeinfo for vgui::CheckButtonList
  D typeinfo for vgui::ClickPanel
@@ -2114,13 +2168,16 @@
  D typeinfo for vgui::FrameSystemButton
  D typeinfo for vgui::FrameTitle
  D typeinfo for vgui::GraphPanel
+ D typeinfo for vgui::GripPanel
  D typeinfo for vgui::HTML
  D typeinfo for vgui::HTML::CHTMLFindBar
  D typeinfo for vgui::HTML::CHTMLIMEBar
+ D typeinfo for vgui::HTMLFramelessPopup
  D typeinfo for vgui::HTMLPopup
  D typeinfo for vgui::HTMLPopup::PopupHTML
  D typeinfo for vgui::IClientPanel
  D typeinfo for vgui::IImage
+ D typeinfo for vgui::IJSMethodCallHandler
  D typeinfo for vgui::IPanelAnimationPropertyConverter
  D typeinfo for vgui::ISectionedListPanelHeader
  D typeinfo for vgui::ISectionedListPanelItem
@@ -2219,6 +2276,14 @@
  D vgui::CTreeViewListControl::GetKBMap()::s_pMap
  D vgui::CTreeViewListControl::GetMessageMap()::s_pMap
  D vgui::CTreeViewListControl::KB_ChainToMap()::chained
+ D vgui::CaptionGripPanel::ChainToAnimationMap()::chained
+ D vgui::CaptionGripPanel::ChainToMap()::chained
+ D vgui::CaptionGripPanel::GetKBMap()::s_pMap
+ D vgui::CaptionGripPanel::GetMessageMap()::s_pMap
+ D vgui::CaptionGripPanel::KB_ChainToMap()::chained
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D vgui::CheckButton::ChainToAnimationMap()::chained
  D vgui::CheckButton::ChainToMap()::chained
  D vgui::CheckButton::GetKBMap()::s_pMap
@@ -2351,6 +2416,12 @@
  D vgui::GraphPanel::GetKBMap()::s_pMap
  D vgui::GraphPanel::GetMessageMap()::s_pMap
  D vgui::GraphPanel::KB_ChainToMap()::chained
+ D vgui::GripPanel::ChainToAnimationMap()::chained
+ D vgui::GripPanel::ChainToMap()::chained
+ D vgui::GripPanel::GetKBMap()::s_pMap
+ D vgui::GripPanel::GetMessageMap()::s_pMap
+ D vgui::GripPanel::KB_ChainToMap()::chained
+ D vgui::GripPanel::RequestInfo(KeyValues*)::hksIsResizeBorder
  D vgui::HTML::CHTMLFindBar::ChainToAnimationMap()::chained
  D vgui::HTML::CHTMLFindBar::ChainToMap()::chained
  D vgui::HTML::CHTMLFindBar::GetKBMap()::s_pMap
@@ -2376,6 +2447,16 @@
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::ChainToAnimationMap()::chained
+ D vgui::HTMLFramelessPopup::ChainToMap()::chained
+ D vgui::HTMLFramelessPopup::GetKBMap()::s_pMap
+ D vgui::HTMLFramelessPopup::GetMessageMap()::s_pMap
+ D vgui::HTMLFramelessPopup::KB_ChainToMap()::chained
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserDraggableRegionsChanged::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
  D vgui::HTMLPopup::ChainToAnimationMap()::chained
  D vgui::HTMLPopup::ChainToMap()::chained
  D vgui::HTMLPopup::GetKBMap()::s_pMap
@@ -2842,7 +2923,6 @@
  D vtable for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  D vtable for CCallback<CFriendsDialog, LobbyInvite_t, false>
  D vtable for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
- D vtable for CCallback<CFriendsDialog, OpenChatDialog_t, false>
  D vtable for CCallback<CFriendsDialog, ParentalLockChanged_t, false>
  D vtable for CCallback<CFriendsDialog, PersonaStateChange_t, false>
  D vtable for CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>
@@ -2867,6 +2947,7 @@
  D vtable for CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>
  D vtable for CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>
  D vtable for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
+ D vtable for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D vtable for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  D vtable for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
  D vtable for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
@@ -2981,7 +3062,6 @@
  D vtable for CFriendsDialog::CCallback_OnLoggedOff
  D vtable for CFriendsDialog::CCallback_OnLogonFailure
  D vtable for CFriendsDialog::CCallback_OnLogonSuccess
- D vtable for CFriendsDialog::CCallback_OnOpenChatDialog
  D vtable for CFriendsDialog::CCallback_OnParentalLockChanged
  D vtable for CFriendsDialog::CCallback_OnPersonaStateChange
  D vtable for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
@@ -3011,9 +3091,12 @@
  D vtable for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D vtable for CFriendsNotification
  D vtable for CFriendsUIModule
+ D vtable for CFriendsUIModule::CCallback_OnOpenChatDialog
  D vtable for CFriendsUIModule::CFriendPanelContainerGeneric
  D vtable for CFriendsUIModule::CFriendPanelContainerSelf
  D vtable for CFriendsUIModule::CFriendPanelContainerSelfAvatar
+ D vtable for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
+ D vtable for CFriendsWebChatVguiFrame
  D vtable for CGameInviteBar
  D vtable for CGameInviteNotification
  D vtable for CGiftReceivedNotification
@@ -3055,6 +3138,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgPostURL>
  D vtable for CHTMLProtoBufMsg<CMsgReload>
  D vtable for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgScreenDPI>
  D vtable for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  D vtable for CHTMLProtoBufMsg<CMsgSetFocus>
  D vtable for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
@@ -3072,11 +3156,14 @@
  D vtable for CItemImageManager
  D vtable for CItemReceivedNotification
  D vtable for CJSCallbackFunc
+ D vtable for CJSCallbackFunc_HTMLWindow
  D vtable for CJSCallbackPromise
  D vtable for CJSMethodArgument
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, int>
+ D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
+ D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -3086,6 +3173,7 @@
  D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  D vtable for CLimitedUserDialog
  D vtable for CMSgJumpListMRUApp
+ D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
  D vtable for CMsgAuthedSteamDomains
  D vtable for CMsgBrowserCreate
@@ -3105,6 +3193,8 @@
  D vtable for CMsgCloseFullScreenFlashIfOpen
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
+ D vtable for CMsgDraggableRegionsChanged
+ D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgExecuteJavaScript
  D vtable for CMsgExitFullScreen
@@ -3248,6 +3338,7 @@
  D vtable for ConVar
  D vtable for GridMenu
  D vtable for HTMLComboBoxHost
+ D vtable for HTMLFramelessWrapper
  D vtable for IHTMLResponses
  D vtable for ListPanelColumnSelectButton
  D vtable for ListPanelDragger
@@ -3257,11 +3348,16 @@
  D vtable for vgui::Button
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
+ D vtable for vgui::CJSCallbackFunc_vgui
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
  D vtable for vgui::CTypingJumpHandler
  D vtable for vgui::CTypingJumpHandler::ITypingJumpClient
+ D vtable for vgui::CaptionGripPanel
  D vtable for vgui::CheckButton
  D vtable for vgui::CheckButtonList
  D vtable for vgui::ClickPanel
@@ -3290,9 +3386,11 @@
  D vtable for vgui::FrameSystemButton
  D vtable for vgui::FrameTitle
  D vtable for vgui::GraphPanel
+ D vtable for vgui::GripPanel
  D vtable for vgui::HTML
  D vtable for vgui::HTML::CHTMLFindBar
  D vtable for vgui::HTML::CHTMLIMEBar
+ D vtable for vgui::HTMLFramelessPopup
  D vtable for vgui::HTMLPopup
  D vtable for vgui::HTMLPopup::PopupHTML
  D vtable for vgui::IClientPanel
@@ -3450,7 +3548,6 @@
  R typeinfo name for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  R typeinfo name for CCallback<CFriendsDialog, LobbyInvite_t, false>
  R typeinfo name for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
- R typeinfo name for CCallback<CFriendsDialog, OpenChatDialog_t, false>
  R typeinfo name for CCallback<CFriendsDialog, ParentalLockChanged_t, false>
  R typeinfo name for CCallback<CFriendsDialog, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CFriendsDialog, PrimaryChatDestinationSet_t, false>
@@ -3475,6 +3572,7 @@
  R typeinfo name for CCallback<CFriendsListSubPanel, FriendsGroupRenamed_t, false>
  R typeinfo name for CCallback<CFriendsListSubPanel, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
+ R typeinfo name for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  R typeinfo name for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
  R typeinfo name for CCallback<CPlayersSubRecentPlayers, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CSharedConnectionController, SharedConnectionMessageReady_t, false>
@@ -3590,7 +3688,6 @@
  R typeinfo name for CFriendsDialog::CCallback_OnLoggedOff
  R typeinfo name for CFriendsDialog::CCallback_OnLogonFailure
  R typeinfo name for CFriendsDialog::CCallback_OnLogonSuccess
- R typeinfo name for CFriendsDialog::CCallback_OnOpenChatDialog
  R typeinfo name for CFriendsDialog::CCallback_OnParentalLockChanged
  R typeinfo name for CFriendsDialog::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsDialog::CCallback_OnPrimaryChatDestinationSet
@@ -3620,9 +3717,12 @@
  R typeinfo name for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsNotification
  R typeinfo name for CFriendsUIModule
+ R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatDialog
  R typeinfo name for CFriendsUIModule::CFriendPanelContainerGeneric
  R typeinfo name for CFriendsUIModule::CFriendPanelContainerSelf
  R typeinfo name for CFriendsUIModule::CFriendPanelContainerSelfAvatar
+ R typeinfo name for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
+ R typeinfo name for CFriendsWebChatVguiFrame
  R typeinfo name for CGameInviteBar
  R typeinfo name for CGameInviteNotification
  R typeinfo name for CGiftReceivedNotification
@@ -3665,6 +3765,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgPostURL>
  R typeinfo name for CHTMLProtoBufMsg<CMsgReload>
  R typeinfo name for CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgScreenDPI>
  R typeinfo name for CHTMLProtoBufMsg<CMsgScreenInformationChanged>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetFocus>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetGameOverlayTargetPIDs>
@@ -3682,11 +3783,14 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CItemReceivedNotification
  R typeinfo name for CJSCallbackFunc
+ R typeinfo name for CJSCallbackFunc_HTMLWindow
  R typeinfo name for CJSCallbackPromise
  R typeinfo name for CJSMethodArgument
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, int>
+ R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -3696,6 +3800,7 @@
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int>
  R typeinfo name for CLimitedUserDialog
  R typeinfo name for CMSgJumpListMRUApp
+ R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgAuthedSteamDomains
  R typeinfo name for CMsgBrowserCreate
@@ -3715,6 +3820,8 @@
  R typeinfo name for CMsgCloseFullScreenFlashIfOpen
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
+ R typeinfo name for CMsgDraggableRegionsChanged
+ R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgExecuteJavaScript
  R typeinfo name for CMsgExitFullScreen
@@ -3969,6 +4076,7 @@
  R typeinfo name for ConVar
  R typeinfo name for GridMenu
  R typeinfo name for HTMLComboBoxHost
+ R typeinfo name for HTMLFramelessWrapper
  R typeinfo name for IBaseInterface
  R typeinfo name for IClientParentalSettings
  R typeinfo name for IFriendPanelContainer
@@ -3989,11 +4097,16 @@
  R typeinfo name for vgui::CBitmapImagePanel
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
+ R typeinfo name for vgui::CJSCallbackFunc_vgui
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
  R typeinfo name for vgui::CTypingJumpHandler
  R typeinfo name for vgui::CTypingJumpHandler::ITypingJumpClient
+ R typeinfo name for vgui::CaptionGripPanel
  R typeinfo name for vgui::CheckButton
  R typeinfo name for vgui::CheckButtonList
  R typeinfo name for vgui::ClickPanel
@@ -4022,13 +4135,16 @@
  R typeinfo name for vgui::FrameSystemButton
  R typeinfo name for vgui::FrameTitle
  R typeinfo name for vgui::GraphPanel
+ R typeinfo name for vgui::GripPanel
  R typeinfo name for vgui::HTML
  R typeinfo name for vgui::HTML::CHTMLFindBar
  R typeinfo name for vgui::HTML::CHTMLIMEBar
+ R typeinfo name for vgui::HTMLFramelessPopup
  R typeinfo name for vgui::HTMLPopup
  R typeinfo name for vgui::HTMLPopup::PopupHTML
  R typeinfo name for vgui::IClientPanel
  R typeinfo name for vgui::IImage
+ R typeinfo name for vgui::IJSMethodCallHandler
  R typeinfo name for vgui::IPanelAnimationPropertyConverter
  R typeinfo name for vgui::ISectionedListPanelHeader
  R typeinfo name for vgui::ISectionedListPanelItem
@@ -4632,9 +4748,6 @@
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(NotifyIncomingCall_t*))
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(NotifyIncomingCall_t*))
  T CCallback<CFriendsDialog, NotifyIncomingCall_t, false>::Run(void*)
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(OpenChatDialog_t*))
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(OpenChatDialog_t*))
- T CCallback<CFriendsDialog, OpenChatDialog_t, false>::Run(void*)
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(ParentalLockChanged_t*))
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(ParentalLockChanged_t*))
  T CCallback<CFriendsDialog, ParentalLockChanged_t, false>::Run(void*)
@@ -4707,6 +4820,9 @@
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::CCallback(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::Register(CFriendsListSubPanel*, void (CFriendsListSubPanel::*)(SteamServersDisconnected_t*))
  T CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>::Run(void*)
+ T CCallback<CFriendsUIModule, OpenChatDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenChatDialog_t*))
+ T CCallback<CFriendsUIModule, OpenChatDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenChatDialog_t*))
+ T CCallback<CFriendsUIModule, OpenChatDialog_t, false>::Run(void*)
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::CCallback(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Register(CParentalCache*, void (CParentalCache::*)(ParentalLockChangeBegin_t*))
  T CCallback<CParentalCache, ParentalLockChangeBegin_t, false>::Run(void*)
@@ -5476,6 +5592,7 @@
  T CFriendSettingsController::Initialize()
  T CFriendSettingsController::RegisterForSettingsChanges(CSmartPtr<CJSCallbackFunc>)
  T CFriendSettingsController::RegisterJSMethods(IHTMLWindow*)
+ T CFriendSettingsController::RegisterJSMethods(vgui::HTML*)
  T CFriendSettingsController::RunFrame()
  T CFriendSettingsController::SetChatFlashMode(int)
  T CFriendSettingsController::SetFriendSettings(CJSObject*)
@@ -5542,7 +5659,6 @@
  T CFriendsDialog::CCallback_OnLoggedOff::Run(void*)
  T CFriendsDialog::CCallback_OnLogonFailure::Run(void*)
  T CFriendsDialog::CCallback_OnLogonSuccess::Run(void*)
- T CFriendsDialog::CCallback_OnOpenChatDialog::Run(void*)
  T CFriendsDialog::CCallback_OnParentalLockChanged::Run(void*)
  T CFriendsDialog::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendsDialog::CCallback_OnPrimaryChatDestinationSet::Run(void*)
@@ -5922,6 +6038,7 @@
  T CFriendsUIModule::BIsVisibleAndFocused()
  T CFriendsUIModule::BShowAvatarsInFriendsList()
  T CFriendsUIModule::BSortFriendsByNameInFriendsList()
+ T CFriendsUIModule::CCallback_OnOpenChatDialog::Run(void*)
  T CFriendsUIModule::CFriendPanelContainerGeneric::AppendContextMenuItems(CSteamID, vgui::Menu*, bool)
  T CFriendsUIModule::CFriendPanelContainerGeneric::BCompactView()
  T CFriendsUIModule::CFriendPanelContainerGeneric::BRightAligned()
@@ -5964,6 +6081,7 @@
  T CFriendsUIModule::CFriendPanelContainerSelfAvatar::ShowMultiUserChatStatus()
  T CFriendsUIModule::CFriendPanelContainerSelfAvatar::ShowOfflineFriends()
  T CFriendsUIModule::CFriendPanelContainerSelfAvatar::ShowSteamIDs()
+ T CFriendsUIModule::CFriendsUIModule()
  T CFriendsUIModule::ConCommandInit(IConCommandBaseAccessor*)
  T CFriendsUIModule::CreateFriendContextMenu(vgui::Panel*, CSteamID&)
  T CFriendsUIModule::GetBasicFriendPanel(vgui::Panel*, CSteamID&, char const*)
@@ -5973,6 +6091,7 @@
  T CFriendsUIModule::HideExtendedCommunity(bool)
  T CFriendsUIModule::Initialize(vgui::IVGuiSetup*)
  T CFriendsUIModule::IsValid()
+ T CFriendsUIModule::OnOpenChatDialog(OpenChatDialog_t*)
  T CFriendsUIModule::OpenChatDialog(CSteamID)
  T CFriendsUIModule::PostInitialize(void* (**)(char const*, int*), int)
  T CFriendsUIModule::RunFrame()
@@ -5986,10 +6105,33 @@
  T CFriendsUIModule::StartInviteToTrade(CSteamID)
  T CFriendsUIModule::~CFriendsUIModule()
  T CFriendsWebChat::Activate()
+ T CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged::CCallbackInternal_OnOverlayChatBrowserInfoChanged()
+ T CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged::Run(void*)
  T CFriendsWebChat::CFriendsWebChat()
- T CFriendsWebChat::Initialize(IHTMLChromeController*)
+ T CFriendsWebChat::GetCommunityBaseURL(CSmartPtr<CJSCallbackPromise>)
+ T CFriendsWebChat::GetOverlayChatBrowserInfo(CSmartPtr<CJSCallbackPromise>)
+ T CFriendsWebChat::Initialize(vgui::EFriendsUIMode, IHTMLChromeController*)
+ T CFriendsWebChat::OnBrowserOpenSteamURL(char const*)
+ T CFriendsWebChat::OnOverlayChatBrowserInfoChanged(OverlayChatBrowserInfoChanged_t*)
+ T CFriendsWebChat::OpenChatDialog(CSteamID)
+ T CFriendsWebChat::RegisterForFriendPostMessage(CSmartPtr<CJSCallbackFunc>)
+ T CFriendsWebChat::RegisterJSMethods(IHTMLWindow*)
+ T CFriendsWebChat::RegisterOverlayChatBrowserInfoChanged(CSmartPtr<CJSCallbackFunc>)
  T CFriendsWebChat::Shutdown()
  T CFriendsWebChat::~CFriendsWebChat()
+ T CFriendsWebChatVguiFrame::CFriendsWebChatVguiFrame()
+ T CFriendsWebChatVguiFrame::ChainToAnimationMap()
+ T CFriendsWebChatVguiFrame::ChainToMap()
+ T CFriendsWebChatVguiFrame::GetAnimMap()
+ T CFriendsWebChatVguiFrame::GetClassSize() const
+ T CFriendsWebChatVguiFrame::GetKBMap()
+ T CFriendsWebChatVguiFrame::GetMessageMap()
+ T CFriendsWebChatVguiFrame::GetPanelClassName()
+ T CFriendsWebChatVguiFrame::GetPanelTopClassName() const
+ T CFriendsWebChatVguiFrame::KB_ChainToMap()
+ T CFriendsWebChatVguiFrame::OnBrowserIndexSet(vgui::HTML*)
+ T CFriendsWebChatVguiFrame::OnBrowserPopupHTMLWindow(char const*, int, int, int, int, bool)
+ T CFriendsWebChatVguiFrame::~CFriendsWebChatVguiFrame()
  T CGameID::IsValid() const
  T CGameInviteBar::ActiveInvite(CSteamID, char const*, unsigned int)
  T CGameInviteBar::CGameInviteBar(CChatRoomDlg*, char const*)
@@ -6129,6 +6271,8 @@
  T CHTMLProtoBufMsg<CMsgReload>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgRequestFullScreenResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgScreenDPI>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgScreenDPI>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgScreenInformationChanged>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgScreenInformationChanged>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetFocus>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -6153,6 +6297,7 @@
  T CHTMLWindow::BrowserClose(CMsgClose const*)
  T CHTMLWindow::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T CHTMLWindow::BrowserCrashed()
+ T CHTMLWindow::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T CHTMLWindow::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T CHTMLWindow::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T CHTMLWindow::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -6228,6 +6373,7 @@
  T CHTMLWindow::SendPendingHTMLMessages()
  T CHTMLWindow::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >*)
  T CHTMLWindow::SetMinSize(unsigned int, unsigned int)
+ T CHTMLWindow::SetOpenSteamURLCallback(CUtlDelegate<void (char const*)>)
  T CHTMLWindow::SetReloadWhenClientFilesChange()
  T CHTMLWindow::SetSize(unsigned int, unsigned int)
  T CHTMLWindow::SetWindowConfigName(char const*)
@@ -6241,6 +6387,7 @@
  T CHTMLWindowController::CloseBrowser(IHTMLWindow*)
  T CHTMLWindowController::CreateBrowser(char const*, int, int, int, int, char const*)
  T CHTMLWindowController::CreateBrowserHelper(char const*, EBrowserType, int, int, int, int, bool, char const*, char const*)
+ T CHTMLWindowController::CreateBrowserHidden(char const*)
  T CHTMLWindowController::CreateGameOverlayBrowser(char const*, int, int, bool)
  T CHTMLWindowController::CreatePopupBrowser(int, int)
  T CHTMLWindowController::CreateTransparentBrowser(char const*, int, int, int, int)
@@ -6293,10 +6440,18 @@
  T CItemReceivedNotification::GetPanelTopClassName() const
  T CItemReceivedNotification::KB_ChainToMap()
  T CItemReceivedNotification::~CItemReceivedNotification()
+ T CJSArray::AddObject()
  T CJSArray::AddString(char const*)
- T CJSCallbackFunc::Call(CJSMethodArgs&)
+ T CJSCallbackFunc::CJSCallbackFunc(int, unsigned long long)
+ T CJSCallbackFunc::IsValid()
+ T CJSCallbackFunc::MarkInvalid()
  T CJSCallbackFunc::OnFinalRelease()
  T CJSCallbackFunc::~CJSCallbackFunc()
+ T CJSCallbackFunc_HTMLWindow::Call(CJSMethodArgs&)
+ T CJSCallbackFunc_HTMLWindow::IsValid()
+ T CJSCallbackFunc_HTMLWindow::MarkInvalid()
+ T CJSCallbackFunc_HTMLWindow::OnFinalRelease()
+ T CJSCallbackFunc_HTMLWindow::~CJSCallbackFunc_HTMLWindow()
  T CJSCallbackPromise::CJSCallbackPromise(CSmartPtr<CJSCallbackFunc>, CSmartPtr<CJSCallbackFunc>)
  T CJSCallbackPromise::~CJSCallbackPromise()
  T CJSMethodArgs::AddArray()
@@ -6318,10 +6473,24 @@
  T CJSMethodArgument::SharedCtor()
  T CJSMethodArgument::SharedDtor()
  T CJSMethodArgument::~CJSMethodArgument()
+ T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSharedConnectionController, unsigned int>::~CJSMethodCallHandler()
  T CJSObject::AddObjectProperty(char const*)
  T CJSObject::SetBoolean(char const*, bool)
  T CJSObject::SetNumber(char const*, int)
+ T CJSObject::SetNumber(char const*, unsigned int)
  T CJSObject::SetString(char const*, char const*)
+ T CJSObject::SetString(char const*, unsigned long long)
  T CJpegSourceMgr::error_exit(jpeg_common_struct*)
  T CJpegSourceMgr::imp_fill_input_buffer(jpeg_decompress_struct*)
  T CJpegSourceMgr::imp_init_source(jpeg_decompress_struct*)
@@ -6382,6 +6551,17 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
+ T CMsgAckSharedPaintBuffers::ByteSize() const
+ T CMsgAckSharedPaintBuffers::CMsgAckSharedPaintBuffers()
+ T CMsgAckSharedPaintBuffers::Clear()
+ T CMsgAckSharedPaintBuffers::GetCachedSize() const
+ T CMsgAckSharedPaintBuffers::GetMetadata() const
+ T CMsgAckSharedPaintBuffers::IsInitialized() const
+ T CMsgAckSharedPaintBuffers::MergeFrom(CMsgAckSharedPaintBuffers const&)
+ T CMsgAckSharedPaintBuffers::New() const
+ T CMsgAckSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAckSharedPaintBuffers::SetCachedSize(int) const
+ T CMsgAckSharedPaintBuffers::~CMsgAckSharedPaintBuffers()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -6600,6 +6780,28 @@
  T CMsgCopy::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCopy::SetCachedSize(int) const
  T CMsgCopy::~CMsgCopy()
+ T CMsgDraggableRegionsChanged::ByteSize() const
+ T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged::Clear()
+ T CMsgDraggableRegionsChanged::GetCachedSize() const
+ T CMsgDraggableRegionsChanged::GetMetadata() const
+ T CMsgDraggableRegionsChanged::IsInitialized() const
+ T CMsgDraggableRegionsChanged::MergeFrom(CMsgDraggableRegionsChanged const&)
+ T CMsgDraggableRegionsChanged::New() const
+ T CMsgDraggableRegionsChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged::~CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged_DraggableRects::ByteSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::CMsgDraggableRegionsChanged_DraggableRects()
+ T CMsgDraggableRegionsChanged_DraggableRects::Clear()
+ T CMsgDraggableRegionsChanged_DraggableRects::GetCachedSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::GetMetadata() const
+ T CMsgDraggableRegionsChanged_DraggableRects::IsInitialized() const
+ T CMsgDraggableRegionsChanged_DraggableRects::MergeFrom(CMsgDraggableRegionsChanged_DraggableRects const&)
+ T CMsgDraggableRegionsChanged_DraggableRects::New() const
+ T CMsgDraggableRegionsChanged_DraggableRects::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged_DraggableRects::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged_DraggableRects::~CMsgDraggableRegionsChanged_DraggableRects()
  T CMsgEnableSteamClientAPI::ByteSize() const
  T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
  T CMsgEnableSteamClientAPI::Clear()
@@ -8227,11 +8429,16 @@
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
- T CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
@@ -8414,6 +8621,7 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::CUtlPtr(CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t> const&)
  T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::Release()
  T CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<int>::Validate(CValidator&, char const*)
@@ -8694,7 +8902,10 @@
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IJSMethodCallHandler*, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
@@ -8838,7 +9049,6 @@
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
- T CUtlVector<vgui::CJSCallbackFunc*, CUtlMemory<vgui::CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
@@ -8876,6 +9086,10 @@
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::~CUtlVector()
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::GrowVector(int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::InsertBefore(int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::~CUtlVector()
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::GrowVector(int)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::InsertBefore(int, vgui::IImage* const&)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::ShiftElementsRight(int, int)
@@ -9561,6 +9775,18 @@
  T HTMLComboBoxHost::PaintBackground()
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
+ T HTMLFramelessWrapper::ChainToAnimationMap()
+ T HTMLFramelessWrapper::ChainToMap()
+ T HTMLFramelessWrapper::GetAnimMap()
+ T HTMLFramelessWrapper::GetClassSize() const
+ T HTMLFramelessWrapper::GetKBMap()
+ T HTMLFramelessWrapper::GetMessageMap()
+ T HTMLFramelessWrapper::GetPanelClassName()
+ T HTMLFramelessWrapper::GetPanelTopClassName() const
+ T HTMLFramelessWrapper::HTMLFramelessWrapper(vgui::HTMLFramelessPopup*, char const*)
+ T HTMLFramelessWrapper::KB_ChainToMap()
+ T HTMLFramelessWrapper::OnSetHTMLTitle(char const*)
+ T HTMLFramelessWrapper::~HTMLFramelessWrapper()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
  T IFriendPanelContainer::BInviteUserToGame(CSteamID const&)
  T IFriendPanelContainer::BOpenProfile()
@@ -9902,6 +10128,10 @@
  T bool BConvertMsgJSValue<int>(IHTMLWindow*, CMsgJSValue const*, int*)
  T bool BConvertMsgJSValue<unsigned int>(IHTMLWindow*, CMsgJSValue const*, unsigned int*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
+ T bool vgui::BConvertMsgJSValue<bool>(vgui::HTML*, CMsgJSValue const*, bool*)
+ T bool vgui::BConvertMsgJSValue<char const*>(vgui::HTML*, CMsgJSValue const*, char const**)
+ T bool vgui::BConvertMsgJSValue<int>(vgui::HTML*, CMsgJSValue const*, int*)
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
@@ -10198,6 +10428,7 @@
  T non-virtual thunk to CHTMLWindow::BrowserClose(CMsgClose const*)
  T non-virtual thunk to CHTMLWindow::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T non-virtual thunk to CHTMLWindow::BrowserCrashed()
+ T non-virtual thunk to CHTMLWindow::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T non-virtual thunk to CHTMLWindow::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to CHTMLWindow::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to CHTMLWindow::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -10245,11 +10476,13 @@
  T non-virtual thunk to CHTMLWindow::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
  T non-virtual thunk to CHTMLWindow::ThreadNotifyPendingPaints()
  T non-virtual thunk to CHTMLWindow::~CHTMLWindow()
+ T non-virtual thunk to HTMLFramelessWrapper::~HTMLFramelessWrapper()
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T non-virtual thunk to vgui::HTML::BrowserCrashed()
+ T non-virtual thunk to vgui::HTML::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T non-virtual thunk to vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T non-virtual thunk to vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -10716,6 +10949,14 @@
  T vgui::CFileOpenListPanel::~CFileOpenListPanel()
  T vgui::CFontWidthCache::GetCharWidth(unsigned long, wchar_t, wchar_t, wchar_t)
  T vgui::CFontWidthCache::Validate(CValidator&, char const*)
+ T vgui::CJSCallbackFunc_vgui::Call(CJSMethodArgs&)
+ T vgui::CJSCallbackFunc_vgui::IsValid()
+ T vgui::CJSCallbackFunc_vgui::MarkInvalid()
+ T vgui::CJSCallbackFunc_vgui::OnFinalRelease()
+ T vgui::CJSCallbackFunc_vgui::~CJSCallbackFunc_vgui()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -10772,6 +11013,26 @@
  T vgui::CTypingJumpHandler::JumpToTypedString(wchar_t*)
  T vgui::CTypingJumpHandler::OnKeyTyped(wchar_t)
  T vgui::CTypingJumpHandler::Validate(CValidator&, char const*)
+ T vgui::CaptionGripPanel::BeginDrag()
+ T vgui::CaptionGripPanel::CaptionGripPanel(vgui::Frame*, char const*)
+ T vgui::CaptionGripPanel::ChainToAnimationMap()
+ T vgui::CaptionGripPanel::ChainToMap()
+ T vgui::CaptionGripPanel::GetAnimMap()
+ T vgui::CaptionGripPanel::GetClassSize() const
+ T vgui::CaptionGripPanel::GetKBMap()
+ T vgui::CaptionGripPanel::GetMessageMap()
+ T vgui::CaptionGripPanel::GetPanelClassName()
+ T vgui::CaptionGripPanel::GetPanelTopClassName() const
+ T vgui::CaptionGripPanel::IsWithin(int, int)
+ T vgui::CaptionGripPanel::KB_ChainToMap()
+ T vgui::CaptionGripPanel::OnMouseDoublePressed(vgui::MouseCode)
+ T vgui::CaptionGripPanel::OnThink()
+ T vgui::CaptionGripPanel::RequestInfo(KeyValues*)
+ T vgui::CaptionGripPanel::getInsideSnapPosition(int, int, int, int, int&, int&)
+ T vgui::CaptionGripPanel::getOutsideSnapPosition(int, int, int, int, int&, int&)
+ T vgui::CaptionGripPanel::moved(int, int)
+ T vgui::CaptionGripPanel::tryToDock(unsigned int, int&, int&)
+ T vgui::CaptionGripPanel::~CaptionGripPanel()
  T vgui::CheckButton::ApplySchemeSettings(vgui::IScheme*)
  T vgui::CheckButton::ChainToAnimationMap()
  T vgui::CheckButton::ChainToMap()
@@ -10820,15 +11081,20 @@
  T vgui::ClickPanel::ChainToAnimationMap()
  T vgui::ClickPanel::ChainToMap()
  T vgui::ClickPanel::ClickPanel(vgui::Panel*)
+ T vgui::ClickPanel::CommitChanges()
  T vgui::ClickPanel::GetAnimMap()
  T vgui::ClickPanel::GetClassSize() const
  T vgui::ClickPanel::GetKBMap()
  T vgui::ClickPanel::GetMessageMap()
  T vgui::ClickPanel::GetPanelClassName()
  T vgui::ClickPanel::GetPanelTopClassName() const
+ T vgui::ClickPanel::GetPos(int&, int&)
  T vgui::ClickPanel::KB_ChainToMap()
+ T vgui::ClickPanel::OnCursorEntered()
+ T vgui::ClickPanel::OnCursorExited()
  T vgui::ClickPanel::OnMousePressed(vgui::MouseCode)
  T vgui::ClickPanel::Paint()
+ T vgui::ClickPanel::SetVisible(bool)
  T vgui::ClickPanel::Update(int, int, char const*, char const*)
  T vgui::ClickPanel::~ClickPanel()
  T vgui::ComboBox::ActivateItem(int)
@@ -11017,7 +11283,6 @@
  T vgui::EditablePanel::LoadUserConfig(char const*, int)
  T vgui::EditablePanel::MakeReadyForUse()
  T vgui::EditablePanel::OnChildAdded(unsigned int)
- T vgui::EditablePanel::OnChildAppearanceChanged(vgui::Panel*)
  T vgui::EditablePanel::OnChildApplySchemeSettings(vgui::Panel*)
  T vgui::EditablePanel::OnChildRemoved(unsigned int)
  T vgui::EditablePanel::OnChildReorder()
@@ -11229,10 +11494,13 @@
  T vgui::Frame::PanelMessageFunc_OnWindowMaximized::InitVar()
  T vgui::Frame::PanelMessageFunc_OnWindowRestored::InitVar()
  T vgui::Frame::PerformLayout()
+ T vgui::Frame::SetCaptionBounds(int, int, int, int)
+ T vgui::Frame::SetClientInset(int, int)
  T vgui::Frame::SetClipToParent(bool)
  T vgui::Frame::SetCloseButtonEnabled(bool)
  T vgui::Frame::SetCloseButtonVisible(bool)
  T vgui::Frame::SetDeleteSelfOnClose(bool)
+ T vgui::Frame::SetFrameCaptionHitTest(CUtlDelegate<bool (int, int)>)
  T vgui::Frame::SetMaximizeButtonVisible(bool)
  T vgui::Frame::SetMenuButtonResponsive(bool)
  T vgui::Frame::SetMenuButtonVisible(bool)
@@ -11330,6 +11598,7 @@
  T vgui::FrameTitle::PerformLayout()
  T vgui::FrameTitle::SetDisabledLook(bool)
  T vgui::FrameTitle::~FrameTitle()
+ T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::FreeStaticAnimationController()
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
@@ -11348,7 +11617,31 @@
  T vgui::GraphPanel::Paint()
  T vgui::GraphPanel::Validate(CValidator&, char const*)
  T vgui::GraphPanel::~GraphPanel()
+ T vgui::GripPanel::ApplySchemeSettings(vgui::IScheme*)
+ T vgui::GripPanel::BeginDrag()
+ T vgui::GripPanel::ChainToAnimationMap()
+ T vgui::GripPanel::ChainToMap()
+ T vgui::GripPanel::EndDrag()
+ T vgui::GripPanel::GetAnimMap()
+ T vgui::GripPanel::GetClassSize() const
+ T vgui::GripPanel::GetKBMap()
+ T vgui::GripPanel::GetMessageMap()
+ T vgui::GripPanel::GetPanelClassName()
+ T vgui::GripPanel::GetPanelTopClassName() const
+ T vgui::GripPanel::GetStyleFlags()
+ T vgui::GripPanel::GripPanel(vgui::Frame*, char const*, int, int)
+ T vgui::GripPanel::KB_ChainToMap()
+ T vgui::GripPanel::OnCursorMoved(int, int)
+ T vgui::GripPanel::OnMouseCaptureLost()
+ T vgui::GripPanel::OnMousePressed(vgui::MouseCode)
+ T vgui::GripPanel::OnMouseReleased(vgui::MouseCode)
+ T vgui::GripPanel::Paint()
+ T vgui::GripPanel::PaintBackground()
+ T vgui::GripPanel::RequestInfo(KeyValues*)
+ T vgui::GripPanel::moved(int, int)
+ T vgui::GripPanel::~GripPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
+ T vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -11357,6 +11650,7 @@
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
  T vgui::HTML::BrowserCrashed()
+ T vgui::HTML::BrowserDraggableRegionsChanged(CMsgDraggableRegionsChanged const*)
  T vgui::HTML::BrowserExitFullScreen(CMsgExitFullScreen const*)
  T vgui::HTML::BrowserFileLoadDialog(CMsgFileLoadDialog const*)
  T vgui::HTML::BrowserFinishedRequest(CMsgFinishedRequest const*)
@@ -11377,7 +11671,7 @@
  T vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
  T vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
- T vgui::HTML::BrowserNeedsPaint_SDLFullscreenUnderLock(CMsgNeedsPaint const*)
+ T vgui::HTML::BrowserNeedsPaint_SDLFullscreen(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
@@ -11386,7 +11680,6 @@
  T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
- T vgui::HTML::BrowserResize()
  T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
@@ -11512,8 +11805,14 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
+ T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*, EJSRegisterMethodType)
+ T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
+ T vgui::HTML::ResizeHTML()
  T vgui::HTML::SendPendingHTMLMessages()
+ T vgui::HTML::SetBrowserIndexCallback(CUtlDelegate<void (vgui::HTML*)>)
+ T vgui::HTML::SetBrowserPopupHTMLWindowHook(CUtlDelegate<IHTMLResponses* (char const*, int, int, int, int, bool)>)
+ T vgui::HTML::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<vgui::HTML::AdditionalRoute_t, CUtlMemory<vgui::HTML::AdditionalRoute_t> >*)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::ShowIMEDialog()
  T vgui::HTML::StopFind()
@@ -11522,6 +11821,32 @@
  T vgui::HTML::TrackHTMLMouseMove(int, int, bool)
  T vgui::HTML::Validate(CValidator&, char const*)
  T vgui::HTML::~HTML()
+ T vgui::HTMLFramelessPopup::ApplySchemeSettings(vgui::IScheme*)
+ T vgui::HTMLFramelessPopup::ChainToAnimationMap()
+ T vgui::HTMLFramelessPopup::ChainToMap()
+ T vgui::HTMLFramelessPopup::FrameCaptionHitTest(int, int)
+ T vgui::HTMLFramelessPopup::GetAnimMap()
+ T vgui::HTMLFramelessPopup::GetClassSize() const
+ T vgui::HTMLFramelessPopup::GetKBMap()
+ T vgui::HTMLFramelessPopup::GetMessageMap()
+ T vgui::HTMLFramelessPopup::GetPanelClassName()
+ T vgui::HTMLFramelessPopup::GetPanelTopClassName() const
+ T vgui::HTMLFramelessPopup::GetPopupHTML()
+ T vgui::HTMLFramelessPopup::HTMLFramelessPopup()
+ T vgui::HTMLFramelessPopup::Initialize(vgui::Panel*, char const*)
+ T vgui::HTMLFramelessPopup::KB_ChainToMap()
+ T vgui::HTMLFramelessPopup::OnBrowserDraggableRegionsChanged(KeyValues*)
+ T vgui::HTMLFramelessPopup::OnCloseWindow()
+ T vgui::HTMLFramelessPopup::OnCustomURL(KeyValues*)
+ T vgui::HTMLFramelessPopup::OnFinishRequest()
+ T vgui::HTMLFramelessPopup::OnStartRequest(KeyValues*)
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserDraggableRegionsChanged::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnCloseWindow::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnCustomURL::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnFinishRequest::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnStartRequest::InitVar()
+ T vgui::HTMLFramelessPopup::PerformLayout()
+ T vgui::HTMLFramelessPopup::~HTMLFramelessPopup()
  T vgui::HTMLPopup::ChainToAnimationMap()
  T vgui::HTMLPopup::ChainToMap()
  T vgui::HTMLPopup::GetAnimMap()
@@ -11811,6 +12136,7 @@
  T vgui::ListPanel::RemoveAll()
  T vgui::ListPanel::RemoveColumn(int)
  T vgui::ListPanel::RemoveItem(int)
+ T vgui::ListPanel::RepaintSingleRow(int)
  T vgui::ListPanel::RereadAllItems()
  T vgui::ListPanel::ResetColumnHeaderCommands()
  T vgui::ListPanel::ResizeColumnToContents(int)
@@ -12057,6 +12383,8 @@
  T vgui::Menu::GetAnimMap()
  T vgui::Menu::GetClassSize() const
  T vgui::Menu::GetCurrentlyHighlightedItem()
+ T vgui::Menu::GetDialogVariables()
+ T vgui::Menu::GetDialogVariables_R()
  T vgui::Menu::GetInvalidMenuID()
  T vgui::Menu::GetItemCount()
  T vgui::Menu::GetItemUserData(int)
@@ -12383,7 +12711,7 @@
  T vgui::Panel::GetChildCount()
  T vgui::Panel::GetClassName()
  T vgui::Panel::GetClassSize() const
- T vgui::Panel::GetClipRect(int&, int&, int&, int&)
+ T vgui::Panel::GetClipRect_DO_NOT_CALL(int&, int&, int&, int&)
  T vgui::Panel::GetContainerRegionRect(int&, int&, int&, int&)
  T vgui::Panel::GetContentSize(int&, int&)
  T vgui::Panel::GetCurrentKeyFocus()
@@ -12504,7 +12832,6 @@
  T vgui::Panel::MoveToFront()
  T vgui::Panel::OnAppearanceChanged(vgui::IAppearance*)
  T vgui::Panel::OnChildAdded(unsigned int)
- T vgui::Panel::OnChildAppearanceChanged(vgui::Panel*)
  T vgui::Panel::OnChildApplySchemeSettings(vgui::Panel*)
  T vgui::Panel::OnChildRemoved(unsigned int)
  T vgui::Panel::OnChildReorder()
@@ -13809,6 +14136,8 @@
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<FriendAlias_t>(FriendAlias_t*)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CHTMLWindow, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CHTMLWindow*, void (CHTMLWindow::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
@@ -13826,12 +14155,14 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
+ T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
  T vpaes_set_decrypt_key
  T vpaes_set_encrypt_key
  ThreadGetCurrentId
+ ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
  ThreadImplOneTimeInit
  ThreadInterlockedCompareExchange
@@ -13935,7 +14266,6 @@
  __udivdi3
  __umoddi3
  abort
- access
  alphasort$INODE64
  arc4random_stir
  atexit
@@ -13950,6 +14280,8 @@
  b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
  b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
@@ -13988,6 +14320,10 @@
  b (anonymous namespace)::CMsgComboNeedsPaint_reflection_
  b (anonymous namespace)::CMsgCopy_descriptor_
  b (anonymous namespace)::CMsgCopy_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_reflection_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgExecuteJavaScript_descriptor_
@@ -14192,17 +14528,7 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
- b (anonymous namespace)::CaptionGripPanel::ChainToAnimationMap()::chained
- b (anonymous namespace)::CaptionGripPanel::ChainToMap()::chained
- b (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
- b (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
- b (anonymous namespace)::CaptionGripPanel::KB_ChainToMap()::chained
  b (anonymous namespace)::EJSRegisterMethodType_descriptor_
- b (anonymous namespace)::GripPanel::ChainToAnimationMap()::chained
- b (anonymous namespace)::GripPanel::ChainToMap()::chained
- b (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
- b (anonymous namespace)::GripPanel::GetMessageMap()::s_pMap
- b (anonymous namespace)::GripPanel::KB_ChainToMap()::chained
  b (anonymous namespace)::ScrollBarButton::ChainToAnimationMap()::chained
  b (anonymous namespace)::ScrollBarButton::ChainToMap()::chained
  b (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
@@ -14236,7 +14562,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_375_27
+ b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback
@@ -14338,10 +14664,6 @@
  b g_pFriendsDialog
  b g_pGetSymbolProc
  b g_pSysModuleSteam
- b guard variable for (anonymous namespace)::CaptionGripPanel::GetKBMap()::s_pMap
- b guard variable for (anonymous namespace)::CaptionGripPanel::GetMessageMap()::s_pMap
- b guard variable for (anonymous namespace)::GripPanel::GetKBMap()::s_pMap
- b guard variable for (anonymous namespace)::GripPanel::GetMessageMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -14411,7 +14733,7 @@
  b s_bDebugVGUI2Messages
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
- b s_cmdFriendsUI
+ b s_hKeyvalue
  b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b ssl_cipher_methods
@@ -14568,8 +14890,6 @@
  d TS_str_reasons
  d UI_str_functs
  d UI_str_reasons
- d VTT for (anonymous namespace)::CaptionGripPanel
- d VTT for (anonymous namespace)::GripPanel
  d VTT for (anonymous namespace)::ScrollBarButton
  d X509V3_str_functs
  d X509V3_str_reasons
@@ -14676,7 +14996,6 @@
  d camellia_256_ofb
  d char_two_def_tt
  d colorconverter
- d construction vtable for (anonymous namespace)::GripPanel-in-(anonymous namespace)::CaptionGripPanel
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
  d construction vtable for vgui::Label-in-(anonymous namespace)::ScrollBarButton
  d curve_list
@@ -14754,14 +15073,11 @@
  d standard_methods
  d stringconverter
  d textureidconverter
- d typeinfo for (anonymous namespace)::CaptionGripPanel
- d typeinfo for (anonymous namespace)::GripPanel
  d typeinfo for (anonymous namespace)::ScrollBarButton
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned int)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
- d vtable for (anonymous namespace)::CaptionGripPanel
  d vtable for (anonymous namespace)::ScrollBarButton
  dlclose
  dlopen
@@ -14818,7 +15134,9 @@
  inflateInit_
  inflateReset
  kCFAbsoluteTimeIntervalSince1970
- kCFAllocatorDefault
+ kCFPreferencesAnyApplication
+ kCFPreferencesAnyHost
+ kCFPreferencesCurrentUser
  kCFRunLoopDefaultMode
  kill$UNIX2003
  launch_data_alloc
@@ -14985,6 +15303,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
@@ -15004,6 +15323,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
@@ -15116,8 +15437,6 @@
  r state_transition_table
  r tag2bit
  r twobppswaptable
- r typeinfo name for (anonymous namespace)::CaptionGripPanel
- r typeinfo name for (anonymous namespace)::GripPanel
  r typeinfo name for (anonymous namespace)::ScrollBarButton
  r utf8_lead_bits
  r zeroes
@@ -15184,43 +15503,6 @@
  strtoul
  strtoull
  swprintf
- t (anonymous namespace)::CaptionGripPanel::BeginDrag()
- t (anonymous namespace)::CaptionGripPanel::CaptionGripPanel(vgui::Frame*, char const*)
- t (anonymous namespace)::CaptionGripPanel::GetAnimMap()
- t (anonymous namespace)::CaptionGripPanel::GetClassSize() const
- t (anonymous namespace)::CaptionGripPanel::GetKBMap()
- t (anonymous namespace)::CaptionGripPanel::GetMessageMap()
- t (anonymous namespace)::CaptionGripPanel::GetPanelClassName()
- t (anonymous namespace)::CaptionGripPanel::GetPanelTopClassName() const
- t (anonymous namespace)::CaptionGripPanel::OnMouseDoublePressed(vgui::MouseCode)
- t (anonymous namespace)::CaptionGripPanel::OnThink()
- t (anonymous namespace)::CaptionGripPanel::RequestInfo(KeyValues*)
- t (anonymous namespace)::CaptionGripPanel::moved(int, int)
- t (anonymous namespace)::CaptionGripPanel::tryToDock(unsigned int, int&, int&)
- t (anonymous namespace)::CaptionGripPanel::~CaptionGripPanel()
- t (anonymous namespace)::GripPanel::ApplySchemeSettings(vgui::IScheme*)
- t (anonymous namespace)::GripPanel::BeginDrag()
- t (anonymous namespace)::GripPanel::EndDrag()
- t (anonymous namespace)::GripPanel::GetAnimMap()
- t (anonymous namespace)::GripPanel::GetClassSize() const
- t (anonymous namespace)::GripPanel::GetKBMap()
- t (anonymous namespace)::GripPanel::GetMessageMap()
- t (anonymous namespace)::GripPanel::GetPanelClassName()
- t (anonymous namespace)::GripPanel::GetPanelTopClassName() const
- t (anonymous namespace)::GripPanel::GetStyleFlags()
- t (anonymous namespace)::GripPanel::GripPanel(vgui::Frame*, char const*, int, int)
- t (anonymous namespace)::GripPanel::GripPanel_Register::GripPanel_Register()
- t (anonymous namespace)::GripPanel::GripPanel_RegisterKBMap::GripPanel_RegisterKBMap()
- t (anonymous namespace)::GripPanel::GripPanel_RegisterMap::GripPanel_RegisterMap()
- t (anonymous namespace)::GripPanel::OnCursorMoved(int, int)
- t (anonymous namespace)::GripPanel::OnMouseCaptureLost()
- t (anonymous namespace)::GripPanel::OnMousePressed(vgui::MouseCode)
- t (anonymous namespace)::GripPanel::OnMouseReleased(vgui::MouseCode)
- t (anonymous namespace)::GripPanel::Paint()
- t (anonymous namespace)::GripPanel::PaintBackground()
- t (anonymous namespace)::GripPanel::RequestInfo(KeyValues*)
- t (anonymous namespace)::GripPanel::moved(int, int)
- t (anonymous namespace)::GripPanel::~GripPanel()
  t (anonymous namespace)::ScrollBarButton::GetAnimMap()
  t (anonymous namespace)::ScrollBarButton::GetClassSize() const
  t (anonymous namespace)::ScrollBarButton::GetKBMap()
@@ -15242,6 +15524,8 @@
  t BN_from_montgomery_word
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t COpenSSLWrapper::Initialize()::$_0::__invoke()
+ t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
+ t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyString(char const*)
  t Create_AnimatingImagePanel()
@@ -15322,6 +15606,7 @@
  t _GLOBAL__sub_I_FriendsListSubPanel.cpp
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
+ t _GLOBAL__sub_I_HTML_js.cpp
  t _GLOBAL__sub_I_HotKeyEntry.cpp
  t _GLOBAL__sub_I_Image.cpp
  t _GLOBAL__sub_I_ImageList.cpp
@@ -15374,11 +15659,13 @@
  t _GLOBAL__sub_I_friendsgroups.cpp
  t _GLOBAL__sub_I_friendsutils.cpp
  t _GLOBAL__sub_I_friendswebchat.cpp
+ t _GLOBAL__sub_I_htmlframelesspopup.cpp
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
  t _GLOBAL__sub_I_htmlwindow.cpp
  t _GLOBAL__sub_I_htmlwindowcontroller.cpp
  t _GLOBAL__sub_I_htmlwindowjs.cpp
+ t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp

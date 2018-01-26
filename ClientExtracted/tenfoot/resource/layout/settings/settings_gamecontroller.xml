@@ -88,9 +88,12 @@
 						<Button id="CalibrateButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerCalibrate();">
 							<Label class="LongDesc" text="#SettingsController_Calibrate" />
 						</Button>
-						<Button id="ExperimentalUpgradeButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade();">
+						<Button id="ExperimentalUpgradeButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade( true );">
 							<Label class="LongDesc" text="EXPERIMENTAL FW" />
 						</Button>
+            <Button id="ExperimentalRollbackButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade( false );">
+              <Label class="LongDesc" text="ROLLBACK FW" />
+            </Button>
             			<Button id="BindControllerButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ShowBindingScreen();">
              	 			<Label class="LongDesc" text="#SettingsController_EnableBindingMode" />
             			</Button>

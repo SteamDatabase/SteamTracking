@@ -1,4 +1,4 @@
-﻿"tenfoot"
+﻿ "tenfoot"
 {
 	"UI_Submit"	"Submit"
 	"UI_Select"	"Select"
@@ -1676,6 +1676,9 @@
 	"Controller_OptOut_Title"			"Configuration Support Disabled"
 	"Controller_OptOut_Desc"			"Configuration support for the {s:controllertype} is disabled.  {s:controllertype} Configuration support must be enabled in Steam's main Controller Settings and Support for this Game must be enabled under this game's Controller Options."
 
+	"Controller_NotAttached_Title"		"No Controller Attached"
+	"Controller_NotAttached_Desc"		"Please attach a controller in order to configure it"
+
 	"Controller_Config_Offline_Title"	"Offline Configuration Editing"
 	"Controller_Config_Offline_Desc"	"You are currently offline.  Your last loaded configuration is available and can be edited, but changes will be lost when returning online.  A local save will be created for these changes."
 
@@ -2129,6 +2132,7 @@
 	"Library_Details_ControllerAction_Set_LED"		"SET LIGHT"
 	"Library_Details_ControllerAction_Toggle_Lizard"		"TOGGLE LIZARD MODE"
 	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY"
+	"Library_Details_ControllerAction_Quit_Application"		"EXIT APPLICATION"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -3410,7 +3414,7 @@
 	"Settings_Family_Sharing_Borrowers" "Select up to 5 people who may use your game library on your authorized computers. The following users have previously logged into Steam on one or more of your shared computers."
 
 	"Settings_RemoteClients_Title" "In-Home Streaming"
-	"Settings_RemoteClients_Description" "Stream gameplay from your Windows PC to other computers detected on your local network. \nTo connect, simply log into this same Steam account on another local device."
+	"Settings_RemoteClients_Description" "Stream gameplay from your computer to other devices detected on your local network. \nTo connect, simply log into this same Steam account on another local device."
 	"Settings_RemoteClients_StreamActiveIntro" "Steam is currently being controlled by another device on your local network."
 	"Settings_RemoteClients_StreamActiveDeviceName" "Remote client device name: {s:clientname}"
 	"Settings_RemoteClients_StreamActiveSettings" "Any changes to the settings below will take effect immediately. Client settings will be stored on the remote client device."
@@ -3967,7 +3971,7 @@
 
 	"HowToStream_Title"					"IN-HOME STREAMING"
 	"HowToStream_ToStream"				"To Stream your {s:apptype}"
-	"HowToStream_Step1"					"Sign in to Steam on your Windows PC using the same Steam account you are signed in with here (account \"{s:account}\")."
+	"HowToStream_Step1"					"Sign in to Steam on your computer using the same Steam account you are signed in with here (account \"{s:account}\")."
 	"HowToStream_Step2"					"If you experience trouble streaming via your wireless network, you may need to connect to your network with a cable for optimal streaming performance."
 
 	"SteamUI_StreamingIntro_Title"		"Welcome to In-Home Streaming"

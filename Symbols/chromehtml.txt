@@ -4,6 +4,7 @@
  B CHTMLPageSecurityInfo::default_instance_
  B CJSMethodArgument::default_instance_
  B CMSgJumpListMRUApp::default_instance_
+ B CMsgAckSharedPaintBuffers::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgAuthedSteamDomains::default_instance_
  B CMsgBrowserCreate::default_instance_
@@ -23,6 +24,8 @@
  B CMsgCloseFullScreenFlashIfOpen::default_instance_
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
+ B CMsgDraggableRegionsChanged::default_instance_
+ B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgEnableSteamClientAPI::default_instance_
  B CMsgExecuteJavaScript::default_instance_
  B CMsgExitFullScreen::default_instance_
@@ -144,6 +147,8 @@
  D typeinfo for CHTMLController::CIPCTaskPost
  D typeinfo for CHTMLHeader
  D typeinfo for CHTMLPageSecurityInfo
+ D typeinfo for CHTMLProtoBufMsg<CMsgAckSharedPaintBuffers>
+ D typeinfo for CHTMLProtoBufMsg<CMsgAuthedSteamDomains>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserCreate>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserReady>
@@ -154,6 +159,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgClearAllCookies>
  D typeinfo for CHTMLProtoBufMsg<CMsgClose>
  D typeinfo for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
+ D typeinfo for CHTMLProtoBufMsg<CMsgDraggableRegionsChanged>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialog>
  D typeinfo for CHTMLProtoBufMsg<CMsgFinishedRequest>
@@ -202,6 +208,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
  D typeinfo for CJSMethodArgument
  D typeinfo for CMSgJumpListMRUApp
+ D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgAuthedSteamDomains
  D typeinfo for CMsgBrowserCreate
@@ -221,6 +228,8 @@
  D typeinfo for CMsgCloseFullScreenFlashIfOpen
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
+ D typeinfo for CMsgDraggableRegionsChanged
+ D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgExecuteJavaScript
  D typeinfo for CMsgExitFullScreen
@@ -345,6 +354,8 @@
  D vtable for CHTMLController::CIPCTaskPost
  D vtable for CHTMLHeader
  D vtable for CHTMLPageSecurityInfo
+ D vtable for CHTMLProtoBufMsg<CMsgAckSharedPaintBuffers>
+ D vtable for CHTMLProtoBufMsg<CMsgAuthedSteamDomains>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserCreate>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserReady>
@@ -355,6 +366,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgClearAllCookies>
  D vtable for CHTMLProtoBufMsg<CMsgClose>
  D vtable for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
+ D vtable for CHTMLProtoBufMsg<CMsgDraggableRegionsChanged>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialog>
  D vtable for CHTMLProtoBufMsg<CMsgFinishedRequest>
@@ -403,6 +415,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
  D vtable for CJSMethodArgument
  D vtable for CMSgJumpListMRUApp
+ D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
  D vtable for CMsgAuthedSteamDomains
  D vtable for CMsgBrowserCreate
@@ -422,6 +435,8 @@
  D vtable for CMsgCloseFullScreenFlashIfOpen
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
+ D vtable for CMsgDraggableRegionsChanged
+ D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgExecuteJavaScript
  D vtable for CMsgExitFullScreen
@@ -538,6 +553,7 @@
  GetCPUInformation()
  GetMiniDumpBuildID
  GetMiniDumpSteamID
+ GetOSType
  Log
  Msg
  OSAtomicCompareAndSwap32Barrier
@@ -555,6 +571,8 @@
  R typeinfo name for CHTMLController::CIPCTaskPost
  R typeinfo name for CHTMLHeader
  R typeinfo name for CHTMLPageSecurityInfo
+ R typeinfo name for CHTMLProtoBufMsg<CMsgAckSharedPaintBuffers>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgAuthedSteamDomains>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserCreate>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserCreateResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserReady>
@@ -565,6 +583,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgClearAllCookies>
  R typeinfo name for CHTMLProtoBufMsg<CMsgClose>
  R typeinfo name for CHTMLProtoBufMsg<CMsgComboNeedsPaint>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgDraggableRegionsChanged>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialog>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFinishedRequest>
@@ -613,6 +632,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgZoomToElementAtPositionResponse>
  R typeinfo name for CJSMethodArgument
  R typeinfo name for CMSgJumpListMRUApp
+ R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgAuthedSteamDomains
  R typeinfo name for CMsgBrowserCreate
@@ -632,6 +652,8 @@
  R typeinfo name for CMsgCloseFullScreenFlashIfOpen
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
+ R typeinfo name for CMsgDraggableRegionsChanged
+ R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgExecuteJavaScript
  R typeinfo name for CMsgExitFullScreen
@@ -858,7 +880,7 @@
  T CHTMLController::ChromeResumeFromValidate()
  T CHTMLController::ClearAllCookies()
  T CHTMLController::CreateBrowserInternal(CHTMLController::BrowserDetails_t const&, int, int)
- T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int, char const*, bool)
+ T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int, char const*, EBrowserType)
  T CHTMLController::CreateOffScreenBrowser(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType)
  T CHTMLController::CreateOpenVROverlayBrowser(IHTMLResponses*, char const*, char const*, int, int, char const*, bool)
  T CHTMLController::CreateTransparentBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int)
@@ -870,6 +892,7 @@
  T CHTMLController::PchWideVineDirectory() const
  T CHTMLController::PushCommand(HTMLCommandBuffer_t*)
  T CHTMLController::QueueCommand(HTMLCommandBuffer_t*)
+ T CHTMLController::RefreshSteamAuthDomains()
  T CHTMLController::ReleaseCommandBuffer(HTMLCommandBuffer_t*)
  T CHTMLController::RemoveBrowser(IHTMLResponses*)
  T CHTMLController::RunFrame()
@@ -911,6 +934,10 @@
  T CHTMLPageSecurityInfo::SharedCtor()
  T CHTMLPageSecurityInfo::SharedDtor()
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
+ T CHTMLProtoBufMsg<CMsgAckSharedPaintBuffers>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgAckSharedPaintBuffers>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgAuthedSteamDomains>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgAuthedSteamDomains>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBrowserCreate>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserCreate>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBrowserCreateResponse>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -931,6 +958,8 @@
  T CHTMLProtoBufMsg<CMsgClose>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgComboNeedsPaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgComboNeedsPaint>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgDraggableRegionsChanged>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgDraggableRegionsChanged>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFileLoadDialog>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -1053,6 +1082,17 @@
  T CMSgJumpListMRUApp::SharedCtor()
  T CMSgJumpListMRUApp::SharedDtor()
  T CMSgJumpListMRUApp::~CMSgJumpListMRUApp()
+ T CMsgAckSharedPaintBuffers::ByteSize() const
+ T CMsgAckSharedPaintBuffers::CMsgAckSharedPaintBuffers()
+ T CMsgAckSharedPaintBuffers::Clear()
+ T CMsgAckSharedPaintBuffers::GetCachedSize() const
+ T CMsgAckSharedPaintBuffers::GetMetadata() const
+ T CMsgAckSharedPaintBuffers::IsInitialized() const
+ T CMsgAckSharedPaintBuffers::MergeFrom(CMsgAckSharedPaintBuffers const&)
+ T CMsgAckSharedPaintBuffers::New() const
+ T CMsgAckSharedPaintBuffers::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAckSharedPaintBuffers::SetCachedSize(int) const
+ T CMsgAckSharedPaintBuffers::~CMsgAckSharedPaintBuffers()
  T CMsgAddHeader::ByteSize() const
  T CMsgAddHeader::CMsgAddHeader()
  T CMsgAddHeader::Clear()
@@ -1271,6 +1311,28 @@
  T CMsgCopy::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCopy::SetCachedSize(int) const
  T CMsgCopy::~CMsgCopy()
+ T CMsgDraggableRegionsChanged::ByteSize() const
+ T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged::Clear()
+ T CMsgDraggableRegionsChanged::GetCachedSize() const
+ T CMsgDraggableRegionsChanged::GetMetadata() const
+ T CMsgDraggableRegionsChanged::IsInitialized() const
+ T CMsgDraggableRegionsChanged::MergeFrom(CMsgDraggableRegionsChanged const&)
+ T CMsgDraggableRegionsChanged::New() const
+ T CMsgDraggableRegionsChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged::~CMsgDraggableRegionsChanged()
+ T CMsgDraggableRegionsChanged_DraggableRects::ByteSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::CMsgDraggableRegionsChanged_DraggableRects()
+ T CMsgDraggableRegionsChanged_DraggableRects::Clear()
+ T CMsgDraggableRegionsChanged_DraggableRects::GetCachedSize() const
+ T CMsgDraggableRegionsChanged_DraggableRects::GetMetadata() const
+ T CMsgDraggableRegionsChanged_DraggableRects::IsInitialized() const
+ T CMsgDraggableRegionsChanged_DraggableRects::MergeFrom(CMsgDraggableRegionsChanged_DraggableRects const&)
+ T CMsgDraggableRegionsChanged_DraggableRects::New() const
+ T CMsgDraggableRegionsChanged_DraggableRects::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDraggableRegionsChanged_DraggableRects::SetCachedSize(int) const
+ T CMsgDraggableRegionsChanged_DraggableRects::~CMsgDraggableRegionsChanged_DraggableRects()
  T CMsgEnableSteamClientAPI::ByteSize() const
  T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
  T CMsgEnableSteamClientAPI::Clear()
@@ -2565,6 +2627,8 @@
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::FastRemove(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
@@ -2695,6 +2759,7 @@
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__swap_out_circular_buffer(std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>&)
  T std::__1::vector<void*, std::__1::allocator<void*> >::__append(unsigned long)
  T std::__1::vector<void*, std::__1::allocator<void*> >::resize(unsigned long)
+ T void Destruct<CUtlString>(CUtlString*)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_left_rotate<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
  T void std::__1::__tree_remove<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -2777,6 +2842,8 @@
  b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
  b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_descriptor_
+ b (anonymous namespace)::CMsgAckSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
@@ -2815,6 +2882,10 @@
  b (anonymous namespace)::CMsgComboNeedsPaint_reflection_
  b (anonymous namespace)::CMsgCopy_descriptor_
  b (anonymous namespace)::CMsgCopy_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
+ b (anonymous namespace)::CMsgDraggableRegionsChanged_reflection_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
  b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgExecuteJavaScript_descriptor_
@@ -3092,6 +3163,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
@@ -3111,6 +3183,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_

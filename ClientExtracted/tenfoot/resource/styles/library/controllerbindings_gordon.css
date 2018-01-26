@@ -2623,6 +2623,11 @@ DropDownMenu.DropDownMenuVisible
     max-height: 250px;
 }
 
+#FrictionMouseJoystickDropDownMenu {
+    width: fieldwidth;
+    max-height: 200px;
+}
+
 .FlowDown
 {
 	flow-children: down;
@@ -2706,6 +2711,7 @@ DropDownMenu.DropDownMenuVisible
 {
 	flow-children: right;
 	margin-bottom: 20px;
+    margin-left: 210px;
 }
 
 #SelectBindingHeader
@@ -2796,7 +2802,7 @@ ChooseBinding
 	padding-left: 30px;
 	padding-top: 20px;
 	height: 520px; 
-	flow-children: right;
+	flow-children: down;
 	opacity-mask: url( "file://{images}/library/keyboardfade.png" ) 0.0;
 
 	transition-property: opacity, opacity-mask;
@@ -2810,6 +2816,13 @@ ChooseBinding #GameActions
 	width: 100%;
 	height: 100%;
 	flow-children: down;
+}
+
+ChooseBinding #RowOfBindings
+{
+	width: 100%;
+	height: 100%;
+	flow-children: right;
 }
 
 ChooseBinding.InGameActionsView #GameActions
@@ -2979,6 +2992,7 @@ ChooseBinding #VirtualMouse
 	background-image: url( "file://{images}/library/mouse.png" );
 	background-position: left 20px top 2px;
 	background-repeat: no-repeat;
+    margin-top: -120px;
 	visibility: visible;
 }
 
@@ -3268,6 +3282,7 @@ ChooseBinding #VirtualGamepad
 	//background-position: absolute center;
 	background-repeat: no-repeat;
 
+    margin-top: -90px;
 	margin-left: -120px;
 	visibility: visible;
 }
@@ -3737,7 +3752,7 @@ ChooseBinding #VirtualMouse
 
 	pre-transform-scale2d: 0.85;
 	margin-left: -30px;
-	margin-top: 30px;
+	margin-top: -40px;
 }
 
 ChooseBinding #mouse_left_button
@@ -3806,7 +3821,7 @@ ChooseBinding #mouse_forward_button
 
 .ShowIcon #VirtualGamepad
 {
-   margin-left: -260px;//95px;
+   margin-left: -95px;
 }
 
 #VirtualGamepad #GamepadTopRow

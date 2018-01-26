@@ -25,7 +25,6 @@
  B CLogger::sm_ThreadSafeQueueLogEvents
  B CLogger::sm_ThreadSafeQueueLogMsgSpew
  B CLogger::sm_bLogOnly
- B CLogger::sm_bPrefixChanged
  B CLogger::sm_bShutDown
  B CLogger::sm_bShuttingDown
  B CLogger::sm_cRef
@@ -739,6 +738,8 @@
  T CCuratorPreferences::New() const
  T CCuratorPreferences::SerializeWithCachedSizesToArray(unsigned char*) const
  T CCuratorPreferences::SetCachedSize(int) const
+ T CCuratorPreferences::SharedCtor()
+ T CCuratorPreferences::SharedDtor()
  T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
@@ -1124,6 +1125,7 @@
  T CStdMemAlloc::AllocCanFail(unsigned long, char const*, int, bool)
  T CStdMemAlloc::AllocTracked(unsigned long)
  T CStdMemAlloc::BIsVirtualHeapInitialized()
+ T CStdMemAlloc::CStdMemAlloc()
  T CStdMemAlloc::ClearMemTrackingStats()
  T CStdMemAlloc::CompactHeap()
  T CStdMemAlloc::CompactIncremental()
@@ -2461,8 +2463,8 @@
  T SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  T SteamStdLib::CCommandLineParam::~CCommandLineParam()
  T SteamStdLib::CommandLine()
- T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoRead()
- T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadSpinRWLock>::~CRWLockAutoWrite()
+ T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
+ T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThread::CThread()
  T SteamThreadTools::CThread::GetName()
  T SteamThreadTools::CThread::GetThreadProc()
@@ -2500,13 +2502,12 @@
  T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadMutex::CThreadMutex()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
+ T SteamThreadTools::CThreadRWLock::LockForWrite()
+ T SteamThreadTools::CThreadRWLock::UnlockWrite()
+ T SteamThreadTools::CThreadRWLock::WaitForRead()
  T SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
  T SteamThreadTools::CThreadSpinLock::TryLock() volatile
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
- T SteamThreadTools::CThreadSpinRWLock::LockForRead()
- T SteamThreadTools::CThreadSpinRWLock::SpinLockForWrite(unsigned int)
- T SteamThreadTools::CThreadSpinRWLock::UnlockRead()
- T SteamThreadTools::CThreadSpinRWLock::UnlockWrite()
  T SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
  T SteamThreadTools::CThreadSyncObject::AssertUseable()
  T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
@@ -2571,7 +2572,6 @@
  T ThreadImplOneTimeInit
  T ThreadInMainThread
  T ThreadInterlockedAssignIf
- T ThreadInterlockedAssignIf64
  T ThreadInterlockedAssignPointerIf
  T ThreadInterlockedDecrement
  T ThreadInterlockedExchange
@@ -3111,7 +3111,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_375_27
+ b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
@@ -3590,6 +3590,7 @@
  operator new[](unsigned long)
  pipe
  poll$UNIX2003
+ posix_memalign
  printf
  pthread_atfork
  pthread_attr_init
