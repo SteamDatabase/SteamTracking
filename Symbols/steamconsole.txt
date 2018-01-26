@@ -23,7 +23,6 @@
  B CLogger::sm_ThreadSafeQueueLogEvents
  B CLogger::sm_ThreadSafeQueueLogMsgSpew
  B CLogger::sm_bLogOnly
- B CLogger::sm_bPrefixChanged
  B CLogger::sm_bShutDown
  B CLogger::sm_bShuttingDown
  B CLogger::sm_cRef
