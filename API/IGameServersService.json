@@ -173,6 +173,11 @@
                     "name": "ban_seconds",
                     "type": "uint32",
                     "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
                 }
             ]
         },
