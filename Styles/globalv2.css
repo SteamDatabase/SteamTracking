@@ -104,7 +104,7 @@ form {
 	padding:0;
 }
 
-input[type=text], input[type=password], select {
+input[type=text], input[type=password], input[type=number], select {
 	color: #909090;
 	background-color: rgba( 0, 0, 0, 0.2 );
 	border: 1px solid #000;

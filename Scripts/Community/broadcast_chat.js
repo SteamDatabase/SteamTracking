@@ -117,6 +117,12 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 		}
 		_chat.m_ulChatID = rgResult.chat_id;
 
+		if( rgResult.blocked ) 		{
+			$J('#chatmessage').attr( 'placeholder', 'Only game owners are allowed to send chat messages during this broadcast.' );
+			$J('#chatmessage').prop( 'disabled', true );
+			$J('#ChatSendButton').prop( 'disabled', true );
+		}
+
 				if ( rgResult.persona_name )
 			_chat.m_strPersonaName = rgResult.persona_name;
 
@@ -453,12 +459,16 @@ CBroadcastChat.prototype.ChatSubmit = function()
 	this.m_webapi.ExecJSONP( 'IBroadcastService', 'PostChatMessage', rgParams, true, null, 15 )
 	.done( function( response )
 	{
+		console.log( "success" );
 		response = response.response;
+		console.log( response );
 		if ( response.result && response.result != 1 )
 		{
 			var strError = "";
 			if ( response.result == 17 )
 				strError = 'You has been muted and can not post messages to this chat';
+			else if( response.result == 40 ) // Note: The UI should block you from this point, but it is a safety net incase something changes during the broadcast
+				strError = 'Only game owners are allowed to send chat messages during this broadcast.';
 			else
 				strError = 'Failed to send chat message: %s'.replace( /%s/, strMessage );
 
@@ -468,7 +478,7 @@ CBroadcastChat.prototype.ChatSubmit = function()
 
 		_chat.DisplayChatMessage( response.persona_name, response.in_game, _chat.m_steamID, strMessage, true );
 	})
-	.fail( function()
+	.fail( function( response )
 	{
 		_chat.DisplayChatError( 'Failed to send chat message: %s'.replace( /%s/, strMessage ) );
 	});

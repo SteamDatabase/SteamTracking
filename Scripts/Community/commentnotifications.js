@@ -38,7 +38,7 @@ function MarkAllRead()
 	g_bMarkAllReadInFlight = true;
 	new Ajax.Request( g_strNotificationURL, {
 				method: 'post',
-				parameters: { action: 'markallread' },
+				parameters: { action: 'markallread', sessionid: g_sessionID },
 				onSuccess: function() {
 
 					// this will mark each post as read

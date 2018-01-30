@@ -1612,11 +1612,16 @@ input.filter_search_box:focus {
 	color: white;
 }
 
-#market_buynow_dialog_accept_ssa, #market_buyorder_dialog_accept_ssa {
+#market_buynow_dialog_accept_ssa,
+#market_buyorder_dialog_accept_ssa,
+#market_multibuy_accept_ssa
+{
 	margin-left: 0;
 }
 
-#market_buynow_dialog_accept_ssa_label, #market_buyorder_dialog_accept_ssa_label {
+#market_buynow_dialog_accept_ssa_label,
+#market_buyorder_dialog_accept_ssa_label,
+#market_multibuy_accept_ssa_label{
 	font-size: 85.7%;
 	color: #B0AEAC;
 }
@@ -1987,6 +1992,90 @@ input.filter_search_box:focus {
 	height: auto;
 	position:absolute;
 	z-index: -1;
+}
+
+.market_multibuy h2
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 22px;
+	padding: 15px;
+	color: white;
+	text-align: center;
+}
+
+.market_multibuy_table
+{
+	width: 100%;
+	border-spacing: 0 10px;
+}
+
+.market_multibuy_table thead td
+{
+	text-align: center;
+}
+
+.market_multibuy_table td
+{
+	height: 30px;
+	padding: 0 5px;
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.market_multibuy_table .market_listing_item_img
+{
+	float: none;
+	vertical-align: middle;
+}
+
+.market_multibuy_warning
+{
+	display: inline-block;
+	font-size: 20px;
+	padding: 20px 10px;
+	cursor: default;
+}
+
+.market_multibuy_warning > img
+{
+	width: 24px;
+	height: 24px;
+}
+
+.market_multibuy_warning_tooltip
+{
+	padding: 8px 12px;
+	width: 281px;
+	border: 1px solid #2D566B;
+
+	background-color: #417A9B;
+	color: #C6D4DF;
+
+	margin: 12px;
+	box-shadow: 0 0 12px #000000;
+	overflow: hidden;
+	word-wrap: break-word;
+
+	text-align: left;
+}
+
+.market_multibuy_quantity
+{
+	width: 4em;
+}
+
+.market_multibuy_status
+{
+	width: 64px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.market_multibuy_table .LoadingThrobber
+{
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 910px) {
