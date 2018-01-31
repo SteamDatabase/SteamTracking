@@ -674,7 +674,7 @@ function ChangeCategory( nNewCategoryID, bAddToHistory, rgExtraHash )
 	{
 
 		// Go to the store base page with the given tab selected
-		var strRedirectURL = 'http://www.dota2.com/store/';
+		var strRedirectURL = 'https://www.dota2.com/store/';
 
 		if ( !g_bIsAppIdDefaultForUniverse )
 		{
@@ -753,7 +753,7 @@ function Common_AddToCartAjax( nDefIndex, strSourceHistory, strSessionID, fnCall
 
 	// Add to cart via AJAX
 	$.post(
-		"http://www.dota2.com/store/cart/",
+		"https://www.dota2.com/store/cart/",
 		rgParams,
 		function( json )
 		{

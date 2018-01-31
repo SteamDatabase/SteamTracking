@@ -445,7 +445,7 @@ h3.BundlesContaining,h3.Recommendations {
 }
 
 .PreviewIcon {
-	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/icon_preview_white.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/icon_preview_white.png');
 	background-repeat: no-repeat;
 	width: 18px;
 	height: 18px;
@@ -696,7 +696,7 @@ div.TreasureBaseItemPreviewButton:hover, div.TreasureBonusItemPreviewButton:hove
 }
 
 .CarouselCells a {
-	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_off.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_off.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
@@ -708,11 +708,11 @@ div.TreasureBaseItemPreviewButton:hover, div.TreasureBonusItemPreviewButton:hove
 }
 
 .CarouselCells a.activeSlide, .CarouselCells a.activeSlide:hover {
-	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_on.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_on.png');
 }
 
 .CarouselCells a:hover {
-	background-image: url('http://cdn.dota2.com/apps/dota2/images/store/ticker_hover.png');
+	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_hover.png');
 }
 
 .CarouselContainer .CarouselImages {
