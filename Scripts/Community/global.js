@@ -129,7 +129,7 @@ var g_whiteListedDomains = [
 function getHostname( str )
 {
 	var re = new RegExp( '^(steam://openurl(_external)?/)?(f|ht)tps?://([^@/?#]*@)?([^/#?]+)', 'im' );
-	return str.match(re)[5].toString();
+	return str.trim().match(re)[5].toString();
 }
 
 function AlertNonSteamSite( elem )
