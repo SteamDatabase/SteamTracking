@@ -2987,3 +2987,7 @@ span.new {
 	color: red;
 	font-weight: bold;
 }
+.broadcaster_id_panel{
+	display: flex;
+	justify-content: space-between;
+}

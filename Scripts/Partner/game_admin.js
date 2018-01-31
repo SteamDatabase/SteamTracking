@@ -549,13 +549,13 @@ function BLanguageInFileName( key, filename )
 	return false;
 }
 
-function SubmitImageUpload( itemID, type, replaceAssetKeyWithAlt )
+function SubmitImageUpload( itemID, type, altAssetIndex, altAssetFilenamePostfix )
 {
 	var previews = $J( '#game_image_drop_preview div.screenshot_upload_preview' );
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type, replaceAssetKeyWithAlt );
+	UploadImages( previews, itemID, type, altAssetIndex, altAssetFilenamePostfix );
 	
 	return false;
 }
@@ -568,11 +568,11 @@ function SubmitScreenshotsUpload( ele, itemID, type )
 	if ( previews.length == 0 )
 		return false;
 
-	UploadImages( previews, itemID, type, "" );
+	UploadImages( previews, itemID, type, "", "" );
 }
 
 // called when user wants to submit images
-function UploadImages( previews, itemID, type, replaceAssetKeyWithAlt )
+function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPostfix )
 {
 	var cScreenshots = 0;
 	var fd = new FormData();
@@ -607,10 +607,10 @@ function UploadImages( previews, itemID, type, replaceAssetKeyWithAlt )
 		if ( imageType.localized )
 			strKey = strKey + '|' + strSelectedLanguage;
 
-		if( replaceAssetKeyWithAlt !== "" )
+		if( replaceAssetKeyPostfix !== "" && altAssetIndex !== "" )
 		{
 			// Updates the end of the filename and the key for the key-value
-			strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyWithAlt + '|alt_assets|' + replaceAssetKeyWithAlt + '|');
+			strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
 		}
 
 		// previously just passed file object through to this point, however because
@@ -640,10 +640,10 @@ function UploadImages( previews, itemID, type, replaceAssetKeyWithAlt )
 	}
 
 	// Add the alt_asset_index
-	if( replaceAssetKeyWithAlt !== "" )
+	if( altAssetIndex !== "" )
 	{
-		strPostURL += '&alt_asset_index=' + replaceAssetKeyWithAlt;
-		strRedirectURL += '&alt_asset_index=' + replaceAssetKeyWithAlt;
+		strPostURL += '&alt_asset_index=' + altAssetIndex;
+		strRedirectURL += '&alt_asset_index=' + altAssetIndex;
 	}
 
 	$J('#AdminLoading').show();
@@ -1342,4 +1342,64 @@ function DeleteRelease( req )
 	} );
 }
 
+function DeleteAssetOverride( nAltAssetIndex, nItemID )
+{
+	ShowConfirmDialog( 'Delete Artwork Override',
+		'Are you sure you want to delete the Artwork Override? This cannot be undone.').done( function()
+	{
+		$J( "#deleting_throbber").show();
+		var onComplete = function( bSuccess )
+		{
+			$J( "#deleting_throbber").hide();
+			if ( !bSuccess )
+			{
+				alert( 'Failed to delete artwork override. Try again later.' );
+			}
+			else
+			{	// Return the default URL
+				window.location = 'https://partner.steamgames.com/admin/game/edit/' + nItemID + '?activetab=tab_graphicalassets';
+			}
+		};
+
+		var params = {};
+		params['alt_asset_index'] = nAltAssetIndex;
+
+		SubmitQuickMessageUpdateAjax( 'https://partner.steamgames.com/admin/game/ajaxdeleteassetoverride/' + nItemID, params, onComplete );
+	} );
+}
+
+function ChooseFriendAsBroadcaster( steamid, nItemID )
+{
+	$J( '#choose_friend_throbber' ).show();
+
+	var params = {};
+	params['steamid'] = steamid;
+	params[ 'sessionid' ] = g_sessionID;
+
+	new Ajax.Request( 'https://partner.steamgames.com/admin/game/ajaxlistfriends/' + nItemID, {
+		method: 'post',
+		requestHeaders: { 'Accept': 'application/json' },
+		parameters: params,
+		onSuccess: function( transport )
+		{
+			$J('#choose_friend_throbber').hide();
+			var dialog = ShowConfirmDialog( 'Choose a broadcaster from my Friends List', $J( transport.responseText ) );
+
+			dialog.SetRemoveContentOnDismissal( false );
+			dialog.done( function()
+			{
+					var chosenSteamID = $J("input[name=friend]:checked").val();
+					if( chosenSteamID)
+					{
+						$J('#BroadcasterSteamID').val( chosenSteamID );
+					}
+			} );
+		},
+		onFailure: function( transport )
+		{
+			$J('#choose_friend_throbber').hide();
+		}
+	});
+	return false;
+}
 
