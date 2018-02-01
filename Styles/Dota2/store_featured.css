@@ -5,7 +5,7 @@
 }
 
 .FeaturedViewHeader {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/featured_cell_header_bg.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/featured_cell_header_bg.png');
 	background-position:center top;
 	background-repeat: no-repeat;
 	width: 300px;
@@ -60,14 +60,14 @@
 	float: right;
 	width: 300px;
 	height: 326px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_spotlight.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_spotlight.png');
 }
 
 .SpotlightTreasureViewContainer {
 	float: right;
 	width: 300px;
 	height: 296px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_spotlight.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_spotlight.png');
 }
 
 .SpotlightTreasureViewContainer .TagContainer {
@@ -78,12 +78,12 @@
 	float: right;
 	width: 300px;
 	asheight: 234px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_spotlight.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_spotlight.png');
 	box-shadow: 0px 0px 20px #49095E;
 }
 
 .AutographedContainer {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/signature_ad.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/signature_ad.png');
 	width: 300px;
 	height: 200px;
 }
@@ -139,7 +139,7 @@
 	width: 300px;
 	height: 350px;
 	margin-bottom: 26px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_popular_tools.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_popular_tools.png');
 }
 
 .TournamentsViewContainer {
@@ -148,7 +148,7 @@
 	width: 300px;
 	height: 350px;
 	margin-bottom: 26px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_popular_tools.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_popular_tools.png');
 }
 
 .InterfaceItemsViewContainer {
@@ -157,7 +157,7 @@
 	width: 300px;
 	height: 550px;
 	margin-bottom: 26px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_popular_tools.png?2');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_popular_tools.png?2');
 }
 
 .FeaturedContainer_Base .ViewAllButtonContainer {
@@ -316,7 +316,7 @@
 }
 
 .MerchView {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/featured_merch.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/featured_merch.png');
 	background-position:center top;
 	background-repeat: no-repeat;
 	width: 300px;
@@ -324,7 +324,7 @@
 }
 
 .MerchViewFooter {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/featured_merch_footer.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/featured_merch_footer.png');
 	background-position:center top;
 	background-repeat: no-repeat;
 	width: 300px;
@@ -356,7 +356,7 @@
 	left: 0;
 	width: 100%;
 	height: 33px;
-	background-image:url('https://cdn.steamstatic.com/apps/dota2/images/store/tab_bar.jpg');
+	background-image:url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/tab_bar.jpg');
 	background-repeat:repeat-x;
 }
 
@@ -475,7 +475,7 @@
 }
 
 .MarketViewContainer .Header {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/featured_market_header.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/featured_market_header.png');
 	background-position:center top;
 	background-repeat: no-repeat;
 	width: 616px;
@@ -538,7 +538,7 @@
 }
 
 .WorkshopViewContainer .Header {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/featured_workshop_header.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/featured_workshop_header.png');
 	background-position:center top;
 	background-repeat: no-repeat;
 	width: 616px;
@@ -608,7 +608,7 @@
 }
 
 .CarouselCells a {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_off.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/ticker_off.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
@@ -620,11 +620,11 @@
 }
 
 .CarouselCells a.activeSlide, .CarouselCells a.activeSlide:hover {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_on.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/ticker_on.png');
 }
 
 .CarouselCells a:hover {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/ticker_hover.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/ticker_hover.png');
 }
 
 .CarouselContainer .CarouselImages {

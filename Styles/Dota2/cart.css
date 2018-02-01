@@ -29,7 +29,7 @@ form input {
 }
 
 #PageBody {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_jug.jpg');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_jug.jpg');
 	background-position: top center;
 	background-repeat: no-repeat;
 	margin-right: auto;
@@ -49,7 +49,7 @@ form input {
 }
 
 #ItemContainer {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/bg_item_container.jpg');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/bg_item_container.jpg');
 	background-repeat: no-repeat;
 	margin-right: auto;
 	margin-left: auto;
@@ -159,21 +159,21 @@ form input {
 }
 
 .btn_checkout_green {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_active_bg.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_active_bg.png');
 }
 .btn_checkout_green .leftcap, .btn_checkout_green .rightcap {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_active_corners.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_active_corners.png');
 }
 
 .btn_checkout_blue {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_blue_bg.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_blue_bg.png');
 }
 .btn_checkout_blue .leftcap, .btn_checkout_blue .rightcap {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_blue_corners.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_blue_corners.png');
 }
 
 .btn_checkout_gray, .btn_checkout_gray .leftcap, .btn_checkout_gray .rightcap {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_gray_comp.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_gray_comp.png');
 }
 
 
@@ -206,14 +206,14 @@ a.btn_checkout_gray, a.btn_checkout_gray:hover {
 }
 
 .btn_checkout_green.disabled, .btn_checkout_gray.disabled {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_inactive_bg.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_inactive_bg.png');
 	color: #626467;
 	cursor: default;
 }
 
 .btn_checkout_green.disabled .leftcap, .btn_checkout_green.disabled .rightcap,
  .btn_checkout_gray.disabled .leftcap, .btn_checkout_gray.disabled .rightcap {
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_inactive_corners.png');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_inactive_corners.png');
 }
 
 .iepopupfix {
@@ -300,7 +300,7 @@ img.iepopupfix_img {
 .btn_checkout_working {
 	width: 121px;
 	height: 28px;
-	background-image: url('https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_working.gif');
+	background-image: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_working.gif');
 
 	color: #626466;
 	font-size: 11px;
@@ -558,7 +558,7 @@ img.iepopupfix_img {
 
 .cart_tab_left_on {
 	position: absolute;
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/checkout_pipeline_undershadow.png );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/checkout_pipeline_undershadow.png );
 	height: 9px;
 	top: 30px;
 	left: 1px;
@@ -575,7 +575,7 @@ img.iepopupfix_img {
 	top: 0px;
 	right: 0px;
 
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/checkout_pipeline_rightshadow.png );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/checkout_pipeline_rightshadow.png );
 }
 
 .cart_tab_on, .cart_tab_off, .cart_tab_inactive {
@@ -600,7 +600,7 @@ img.iepopupfix_img {
 .cart_tab_spacer {
 	width: 4px;
 	height: 8px;
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/checkout_tab_spacer.gif );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/checkout_tab_spacer.gif );
 	background-repeat: no-repeat;
 	margin: 10px 10px;
 }
@@ -645,7 +645,7 @@ img.iepopupfix_img {
 
 .cart_status_message_left, .cart_status_message_right {
 	position: absolute;
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/cart_statusmessage_corners.png );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/cart_statusmessage_corners.png );
 	height: 29px;
 	width: 2px;
 	top: 0px;
@@ -680,7 +680,7 @@ img.iepopupfix_img {
 }
 
 .cart_status_message_arrow {
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/cart_statusmessage_arrow.png );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/cart_statusmessage_arrow.png );
 	height: 9px;
 	width: 18px;
 	margin: 0px auto;
@@ -857,7 +857,7 @@ img.iepopupfix_img {
 
 .cart_coupon_selector_top {
 	height: 12px;
-	background-image: url( 'https://cdn.steamstatic.com/apps/dota2/images/store/shadow_topbottom.png' );
+	background-image: url( 'https://steamcdn-a.akamaihd.net/apps/dota2/images/store/shadow_topbottom.png' );
 	background-repeat: repeat-x;
 	background-position: top;
 	margin-top: -12px;
@@ -1321,7 +1321,7 @@ label.send_choice_txt {
 
 .btn_checkout_print {
 	display: block;
-	background-image: url( https://cdn.steamstatic.com/apps/dota2/images/store/btn_checkout_print.png );
+	background-image: url( https://steamcdn-a.akamaihd.net/apps/dota2/images/store/btn_checkout_print.png );
 	width: 168px;
 	height: 40px;
 }
@@ -1368,7 +1368,7 @@ a.btn_checkout_print, a.btn_checkout_print:hover {
 }
 
 a.trigger, a.activetrigger {
-	background: url(https://cdn.steamstatic.com/apps/dota2/images/store/ico_search_dropdown.gif) no-repeat scroll right center;
+	background: url(https://steamcdn-a.akamaihd.net/apps/dota2/images/store/ico_search_dropdown.gif) no-repeat scroll right center;
 
 	display:block;
 	float:left;
@@ -1889,7 +1889,7 @@ a.CartLink:hover
 }
 
 .cart_table thead tr {
-	background: url('https://cdn.steamstatic.com/apps/dota2/images/store/cart_header.jpg');
+	background: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/store/cart_header.jpg');
 	height: 24px;
 	width:602px;
 }
@@ -1926,7 +1926,7 @@ a.CartLink:hover
 
 #CheckoutSpinner {
 	display: none;
-	background: url('https://cdn.steamstatic.com/apps/dota2/images/throbber.gif') no-repeat 0 0;
+	background: url('https://steamcdn-a.akamaihd.net/apps/dota2/images/throbber.gif') no-repeat 0 0;
 	background-size: 100% 100%;
 	top: 15px;
 	width: 20px;
