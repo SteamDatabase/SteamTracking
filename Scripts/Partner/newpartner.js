@@ -533,6 +533,59 @@ function SignLatestSDA( returnURL )
 	);
 }
 
+function SignLatestVideoSDA( returnURL )
+{
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
+
+	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
+	var agreedToSDA2 = $J( "#agree_to_sda_checkbox2" );
+	var agreedToSDA3 = $J( "#agree_to_sda_checkbox3" );
+	if ( !agreedToSDA1.prop( "checked" ) || !agreedToSDA2.prop( "checked" ) || !agreedToSDA3.prop( "checked" ) )
+	{
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Distribution Agreement before continuing.'  );
+		return;
+	}
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=' + 5,
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steamworks Distribution Agreement. Click OK to continue.' );
+					dialog.done( function() {
+						top.location.href = returnURL;
+					} );
+				}
+				else
+				{
+					if( response.success == 15)
+					ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign the Steamworks Distribution Agreement');
+				else
+					ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+				}
+			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
 function SignLatestCafeAgreement( returnURL )
 {
 	var bHasRequiredFields = true;
