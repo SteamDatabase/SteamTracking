@@ -492,7 +492,7 @@ function OnImagesLoadComplete( images )
 		if( selectType.children().length == 0 ) // If nothing applied, then indicate image not applicable.
 		{
 			selectType.addClass( 'override_invalid_image' );
-			$J( '<option value="invalid">Invalid artwork override image size. This will not be saved.</option>' ).appendTo( selectType );
+			$J( '<option value="invalid">' + "Invalid artwork override image size. This will not be saved." + '</option>' ).appendTo( selectType );
 		}
 
 		selectType.appendTo( targetDiv );
