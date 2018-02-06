@@ -11923,7 +11923,7 @@
 			"operation_start_date"				"2015-07-01 00:00:00" 
 			"stop_adding_to_queue_date"			"2015-10-01 00:00:00" 
 			"stop_giving_to_player_date"		"2015-10-12 00:00:00" 
-			"contracts_end_date"				"2030-01-01 00:00:00" 
+			"contracts_end_date"				"2038-01-01 00:00:00" 
 			"operation_lootlist"				"periodic_quest_drop"
 			"is_campaign"						"1"
 		}
@@ -11936,7 +11936,7 @@
 			"operation_start_date"				"2015-10-07 00:00:00" 
 			"stop_adding_to_queue_date"			"2016-01-01 00:00:00" 
 			"stop_giving_to_player_date"		"2016-01-01 00:00:00" 
-			"contracts_end_date"				"2030-01-01 00:00:00" 
+			"contracts_end_date"				"2038-01-01 00:00:00" 
 			"operation_lootlist"				"timed_reward_invasion_drop"
 		}
 		
@@ -11944,9 +11944,9 @@
 		{
 			"name"								"old crate drops"
 			"operation_start_date"				"2015-10-16 00:00:00" 
-			"stop_adding_to_queue_date"			"2030-01-01 00:00:00" 
-			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
-			"contracts_end_date"				"2030-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2038-01-01 00:00:00" 
+			"stop_giving_to_player_date"		"2038-01-01 00:00:00" 
+			"contracts_end_date"				"2038-01-01 00:00:00" 
 			"operation_lootlist"				"timed_supply_case_drop"
 		}
 
@@ -11956,9 +11956,9 @@
 			"gateway_item_name"					"Unused Campaign 3 Pass"
 			"required_item_name"				"Activated Campaign 3 Pass"
 			"operation_start_date"				"2015-10-16 00:00:00" 
-			"stop_adding_to_queue_date"		"2030-01-01 00:00:00" 
-			"stop_giving_to_player_date"		"2030-01-01 00:00:00" 
-			"contracts_end_date"				"2030-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2018-02-01 00:00:00" 
+			"stop_giving_to_player_date"		"2018-02-01 00:00:00" 
+			"contracts_end_date"				"2018-02-01 00:00:00" 
 			"operation_lootlist"				"timed_reward_operation_drop"
 		}
 
@@ -12012,12 +12012,12 @@
 			"gateway_item_name"					"Unused Campaign 3 Pass"			
 			"required_item_name"				"Activated Campaign 3 Pass"
 			"operation_start_date"				"2017-10-15 00:00:00" 
-			"stop_adding_to_queue_date"			"2018-02-11 00:00:00" 
-			"stop_giving_to_player_date"		"2018-02-11 00:00:00" 
-			"contracts_end_date"				"2030-01-01 00:00:00" 
+			"stop_adding_to_queue_date"			"2038-01-01 00:00:00" 
+			"stop_giving_to_player_date"		"2038-01-01 00:00:00" 
+			"contracts_end_date"				"2038-01-01 00:00:00" 
 			"is_campaign"						"1"
-			"max_drop_count"					"26"
 			"uses_credits"						"1"
+			"operation_lootlist"				"timed_reward_operation_drop"
 		}
 
 		"7"
@@ -114758,7 +114758,7 @@
 				"always_transmit_so"				"1"
 				"never craftable"					"1"
 
-				"deactive date"					"1518408000"	
+				"deactive date"					"2145916800"	
 			}
 			"attributes"
 			{
