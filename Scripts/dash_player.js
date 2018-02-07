@@ -492,7 +492,8 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 
 			xhr.open( 'POST', 'https://store.steampowered.com/video/license/' + this.m_strUniqueId, true );
 		xhr.responseType = 'arraybuffer';
-	xhr.send( event.message );
+	var payload = btoa(String.fromCharCode.apply( null, new Uint8Array( event.message ) ) );
+	xhr.send( payload );
 	xhr.addEventListener( 'readystatechange', function ()
 	{
 		if ( xhr.readyState == xhr.DONE )

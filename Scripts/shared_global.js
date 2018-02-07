@@ -4000,6 +4000,7 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
 		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
 	}
+	BindStoreTooltip( $J('[data-store-tooltip]', elTarget ) );
 }
 
 /**
@@ -4056,7 +4057,6 @@ CAjaxSubPageController.prototype.Navigate = function( strLocation, strPageTitle,
 		$J( elNewContents ).trigger('load');
 
 		_this.InstrumentLinks( _this.elTarget );
-		BindStoreTooltip( $J('[data-store-tooltip]',_this.elTarget) );
 		if( strPageTitle )
 			document.title = strPageTitle;
 
