@@ -151,7 +151,7 @@ h1 span.titletext, h2 span.titletext {
 }
 
 .subsection {
-	margin-bottom: 24px;
+	margin-bottom: 30px;
 }
 
 .sectionDescription {
@@ -564,15 +564,15 @@ pre.results {
 }
 
 .boxlist_item {
-	border: 1px solid #777777;
+	border: 1px solid rgba(255,255,255,0.2);
 	margin-bottom: 12px;
 }
 
 .boxlist_title {
-	background-image:url('../images/bg_tab_inactive.png');
 	background-repeat:repeat-x;
-	background-color: #3D3D3D;
+	background-color: rgba(255,255,255,0.2);
 	padding: 0px 8px;
+	height: 26px;
 }
 
 .boxlist_title span {
@@ -1974,6 +1974,7 @@ html, body { height:100%; }
 	top: 4px;
 	margin-left: -4px;
 	margin-right: 4px;
+	cursor: move;
 }
 
 .dragAndDropHighlight {

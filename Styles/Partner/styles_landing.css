@@ -374,6 +374,9 @@ body{
 			padding-bottom: 10px;
 			font-size: 10px;
 		}
+		.landingRightCol .releasedate {
+			padding-bottom: 5px;
+		}
 
  .iconLink {
 	display: block;
@@ -830,7 +833,13 @@ p {
 		color:#99CCFF;
 		font-size: 12px;
 	}
-	.buttonRow .subText .betaLink:hover {
+	.add_tags_note .betaLink {
+		color: #b6c5ca;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.buttonRow .subText .betaLink:hover,
+	.add_tags_note .betaLink:hover {
 		color:#ffffff;
 	}
 	.buttonRow.parentApp {
@@ -1546,6 +1555,10 @@ span.icon_finances.user_pub_rights { display: inline-block; }
 	margin-top: 8px;
 }
 
+.required.rating_pg {
+	font-size: 17px;
+}
+
 .section.redbox {
 	border: 2px solid #e24044;
 	border-radius: 3px;
@@ -1588,7 +1601,8 @@ span.icon_finances.user_pub_rights { display: inline-block; }
 	font-size: 12px;
 }
 
-.section .grayRule {
+.section .grayRule,
+.subsection .grayRule {
 	margin-bottom: 4px;
 	margin-top: 2px;
 	border-top:	1px solid #444;
@@ -1723,7 +1737,6 @@ span.icon_finances.user_pub_rights { display: inline-block; }
 }
 
 .ttip {
-	cursor: pointer;
 	color: #b6c5ca;
 }
 
