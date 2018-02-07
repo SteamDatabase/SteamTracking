@@ -257,6 +257,7 @@ body.v6 .dark_container h4 {
 	color: #fff;
 	margin: 7px 0 7px 30px;
 	letter-spacing: 2px;
+	white-space: nowrap;
 }
 
 .navigation_bar > a:hover {
@@ -273,7 +274,6 @@ body.v6 .dark_container h4 {
 }
 .navigation_bar > div.report {
 	flex-grow: 1;
-	width: 100%;
 	text-align: right;
 	padding: 6px 0px 0px 0px;
 }

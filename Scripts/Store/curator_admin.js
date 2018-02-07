@@ -213,7 +213,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 			appInfo = g_rgAppsCurated[i];
 	}
 
-	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/close_btn.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'http://cdn.edgecast.steamstatic.com/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
+	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'http://cdn.edgecast.steamstatic.com/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
 		.replace(/%2\$s/, V_EscapeHTML( blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
@@ -332,7 +332,7 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 		}
 
 
-		elContainer.innerHTML = "\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"desc\">\r\n\t\t\t\t<h3>%4$s %2$s<\/h3>\r\n\t\t\t\t<p>%3$s<\/p>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"controls\">\r\n\t\t\t\t<a data-navid=\"review_create\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t<a class=\"delete_btn\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/close_btn.png\"><\/a>\r\n\t\t\t<\/div>\r\n\t\t\t\r\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
+		elContainer.innerHTML = "\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"desc\">\r\n\t\t\t\t<h3>%4$s %2$s<\/h3>\r\n\t\t\t\t<p>%3$s<\/p>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"controls\">\r\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-store-tooltip=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t<a class=\"delete_btn ttip\" data-store-tooltip=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<\/div>\r\n\t\t\t\r\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
 			.replace(/%3\$s/, V_EscapeHTML( recommendationInfo.recommendation.blurb ) )
 			.replace(/%4\$s/, strRecommendationIcon );
 
@@ -584,7 +584,7 @@ function LoadCurationList( fnOnComplete )
 
 function ListManage_DeleteList( elRow, unListId, strListName )
 {
-	var modal = ShowConfirmDialog("Delete this lists?", "Are you sure you want to delete your list, %1$s?".replace(/%1\$s/g, V_EscapeHTML( strListName ) ) );
+	var modal = ShowConfirmDialog("Delete this list?", "Are you sure you want to delete the list: <b>%1$s<\/b>?".replace(/%1\$s/g, V_EscapeHTML( strListName ) ) );
 
 	modal.done(function(  ){
 
@@ -981,7 +981,7 @@ function ListManage_UpdateSort( elContainer )
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div class=\"list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div>\r\n\t\t\t\t\t\t<a data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t\t\t<a href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/close_btn.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
+	var template = "<div class=\"list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-store-tooltip=\"Delete this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\" data-store-tooltip=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();

@@ -100,11 +100,19 @@
 	border-radius: 2px;
 	background: rgba(0,0,0,0.15);
 }
+.titleframe {
+	padding: 16px;
+	border-radius: 2px;
+	background: rgba(0,0,0,0.4);
+}
 
 #listform label, #listform label * {
 	line-height: 24px;
 	vertical-align: middle;
 	font-size: 13px;
+}
+#listform label a {
+	vertical-align: baseline;
 }
 
 .post_review_ctn,
@@ -123,8 +131,9 @@
 
 .css_table > * > * {
 	display: table-cell;
-	padding: 6px 8px;
+	padding: 10px 8px;
 	border-bottom: 1px solid #1b2838;
+	vertical-align: middle;
 }
 
 
@@ -132,7 +141,11 @@
 /* Manage lists table */
 .lists_table .heading > div {
 	text-transform: uppercase;
-	color: #5daedd;
+	color: #8299a1;
+	font-size: 11px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	padding: 2px 8px;
 }
 
 .lists_table{
@@ -141,14 +154,36 @@
 }
 
 .lists_table > *:not(.heading) {
-	background-color: rgba(109,191,234,0.3);
-	color: #6ebfeb;
+	background-color: rgba(255,255,255,0.1);
+	color: #fff;
 	margin: 0 1px;
 }
 
-.lists_table > *:hover {
-	background-color: rgba(255,255,255,0.1);
+.lists_table > *:not(.heading):hover {
+	background-color: rgba(255,255,255,0.2);
 	color: #fff;
+}
+
+.lists_table > * {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 10px 8px;
+	border-bottom: 1px solid #1b2838;
+	vertical-align: middle;
+}
+
+.lists_table > * > *:nth-child(1) {
+	width: 73%;
+}
+.lists_table > * > *:nth-child(2) {
+	width: 10%;
+}
+.lists_table > * > *:nth-child(3) {
+	width: 10%;
+}
+.lists_table > * > *:nth-child(4) {
+	width: 8%;
 }
 
 .admin_content h4 {
@@ -159,7 +194,6 @@
 	font-size: 14px;
 	margin: 5px 0;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #b2b7bd;
 }
 
 .admin_content h4 a {
@@ -169,11 +203,12 @@
 }
 
 .admin_content h5 {
-	color: #67c1f5;
+	color: #8299a1;
 	font-weight: normal;
 	letter-spacing: 1px;
-	font-size: 14px;
-	margin: 5px 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	margin: 8px 0px 0px 0px;
 }
 
 .curator_connect ul {
@@ -206,7 +241,8 @@
 	height: 200px;
 }
 
-.darkframe h4 {
+.darkframe h4,
+.titleframe h4 {
 	border-bottom: none;
 	padding-bottom: 0;
 }
@@ -228,7 +264,7 @@ p {
 			background-color: #0f161f;
 	box-shadow: 1px 1px 1px  rgba( 103, 193, 245, 0.1 );
 	border: none;
-	padding: 4px;
+	padding: 8px;
 	border-radius: 3px;
 	width: 75%;
 	margin: 5px 0;
@@ -245,7 +281,7 @@ p {
 #apps_container > div {
 	display: flex;
 	padding: 5px;
-	margin: 5px 0;
+	margin: 1px 0;
 	background-color: rgba(255,255,255,0.1);
 	cursor: move; /* fallback if grab cursor is unsupported */
 	cursor: grab;
@@ -274,11 +310,22 @@ p {
 	font-size: 16px;
 	font-weight: 300;
 	padding-bottom: 0px;
+	padding-top: 8px;
 }
 
 .list_item {
 	background: rgba( 109, 191, 234, 0.3);
 	margin-bottom: 3px;
+}
+
+.remove_item_from_list {
+	right: 8px;
+	top: 11px;
+	position: relative;
+	opacity: 0.6;
+}
+.remove_item_from_list:hover {
+	opacity: 1.0;
 }
 
 /* Manage lists */
@@ -298,7 +345,12 @@ p {
 
 .reviews_container .delete_btn {
 	cursor: pointer;
-	margin-left: 5px;
+	margin-left: 12px;
+	opacity: 0.6;
+}
+
+.reviews_container .delete_btn:hover {
+	opacity: 1.0;
 }
 
 .reviews_container label > div {
@@ -332,6 +384,11 @@ body.v6 .reviews_container h3 {
 	margin-top: 10px;
 }
 
+.paged_items_paging_summary {
+	color: #8299a1;
+	font-size: 11px;
+}
+
 .pending_games {
 	font-size: 14px;
 }
@@ -350,6 +407,8 @@ body.v6 .reviews_container h3 {
 	margin: 0px 0px 6px 0px;
 	box-shadow: 0 0 5px #000000;
 }
+.app_ctn.app_block.app_reviewed {
+	background: background: -webkit-linear-gradient( left, rgba(198, 212, 223, 0.2) 5%,rgba(198, 212, 223, 0.4) 95%);background: linear-gradient( to right, rgba(198, 212, 223, 0.2) 5%,rgba(198, 212, 223, 0.4) 95%);}
 .app_ctn .tr {
 	display: table-row;
 }
@@ -519,6 +578,38 @@ body.v6 .reviews_container h3 {
 	font-style: italic;
 	color: #DEDEDE;
 }
+.action_ctn {
+	text-align: right;
+}
+
+.delete_list_icon {
+	margin-left: 12px;
+	opacity: 0.6;
+}
+.delete_list_icon:hover {
+	opacity: 1.0;
+}
+
+.edit_list_icon {
+	opacity: 0.6;
+}
+.edit_list_icon:hover {
+	opacity: 1.0;
+}
+
+.stats_review_list .review_title {
+	color: #fff;
+}
+.stats_review_list .edit_review_option {
+	visibility: hidden;
+}
+.stats_review_list:hover .edit_review_option {
+	visibility: visible;
+	opacity: 0.6;
+}
+.stats_review_list .edit_review_option:hover {
+	opacity: 1;
+}
 
 .icon_overview {
 	background-image: url( '/public/images/curators/icon_overview.png' );
@@ -578,6 +669,7 @@ body.v6 .reviews_container h3 {
 	text-transform: uppercase;
 	color: #fff;
 	padding-bottom: 10px;
+	letter-spacing: 1px;
 }
 .stat {
 	font-size: 32px;
@@ -599,6 +691,7 @@ body.v6 .reviews_container h3 {
 }
 .stat_subtitle {
 	font-size: 11px;
+	margin-top: 4px;
 }
 .stat_percentage_change.decrease {
 	color: orangered;
@@ -650,14 +743,16 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 }
 .stats_referral_list th {
 	text-align: left;
-	background-color: rgba( 0, 0, 0, 0.15 );
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #8299a1;
 	padding: 5px;
 	font-weight: normal;
 }
 
 .stats_referral_list td {
 	text-align: left;
-	color: #fff;
+	color: #aebcc5;
 	padding: 5px;
 	background-color: rgba( 255, 255, 255, 0.15 );
 }
@@ -685,8 +780,9 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 
 .ReferralListPaging_paging_summary
 {
-	color: #3b6e8c;
+	color: #8299a1;
 	float: left;
+	font-size: 11px;
 }
 
 .ReferralListPaging_paging_controls

@@ -1264,3 +1264,12 @@ function CollapseLongStrings( strSelector )
 	})
 }
 
+function JSReportProductAction( appId, pageAction, snr )
+{
+	$J.post( 'http://store.steampowered.com//ajaxreportproductaction/' + appId + '/', {
+			'page_action' : pageAction,
+			'snr' : snr
+		}
+	);
+}
+

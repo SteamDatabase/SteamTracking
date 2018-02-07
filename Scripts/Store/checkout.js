@@ -2236,6 +2236,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 					}
 				}	
+				else if ( method.value == 'cafefunded' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Cafe transactions are authorized by paying the cashier in the cafe you are at.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue Transaction';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for cafe customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Once you have paid the cafe cashier, you will receive an email receipt confirming your purchase.';
+					}
+				}	
 			}
 			else
 			{
@@ -3021,7 +3031,7 @@ function UpdatePaymentInfoForm()
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
-		else if ( method.value == 'bitcoin' )
+		else if ( method.value == 'bitcoin' || method == 'cafefunded' )
 		{
 						bShowAddressForm = false || $('billing_country').value == 'US';
 			bShowCountryVerification = $('billing_country').value != 'US';
@@ -4286,6 +4296,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('payment_method_review_text').innerHTML = 'Santander Rio';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
+			else if ( method.value == 'cafefunded' && providerPaymentMethod == 122 )
+			{
+				$('payment_method_review_text').innerHTML = 'Cafe';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}			
 		}
 		
 		$J('#review_address_body').text( $('first_name').value+' '+$('last_name').value );
@@ -4919,6 +4934,12 @@ function DisplayPendingReceiptPage()
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from NovaPlay once you have completed the cash on delivery process.';
 			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'You will shortly receive an email from NovaPlay confirming your order and next steps.  Steam will email you a receipt when payment is received from NovaPlay and your purchase is completed. For questions regarding your payment processing status, please contact <a href="http://steamsupport.novaplay.in">NovaPlay</a>.';
 			break;			
+					
+		case 'cafefunded':
+			$('pending_purchase_summary_payment_method_description').innerHTML = '';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'checkout_receipt_pending_cafefunded_details';
+			break;
+					
 						
 		default:
 			break;
