@@ -28,8 +28,8 @@
 			<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); SwitchToHDMIInput()" selectionpos="0,3">
 				<Label text="#Quit_SwitchToHDMIInput" />
 			</Button>
-			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
-			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); MinimizeApp()" selectionpos="0,4">
+			<Panel class="HorizontalSpace NotLoggedInHidden StreamingHidden" />
+			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden StreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); MinimizeApp()" selectionpos="0,4">
 				<Label id="MinimizeBigPictureLabel" text="#Quit_MinimizeBigPicture" />
 			</Button>
 			<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="QuitApp()" selectionpos="0,5">
@@ -61,14 +61,14 @@
 			</Button>
 
 
-			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
-			<Button id="QuitRestart" class="SystemButton System SystemCanRestart NVStreamingHidden Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(0);" selectionpos="0,12">
+			<Panel class="HorizontalSpace NotLoggedInHidden StreamingHidden" />
+			<Button id="QuitRestart" class="SystemButton System SystemCanRestart StreamingHidden Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(0);" selectionpos="0,12">
 				<Label text="#Quit_Restart" />
 			</Button>
-			<Button id="QuitSleep" class="SystemButton System SystemCanSuspend NVStreamingHidden Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(1);" selectionpos="0,13">
+			<Button id="QuitSleep" class="SystemButton System SystemCanSuspend StreamingHidden Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(1);" selectionpos="0,13">
 				<Label text="#Quit_Sleep" />
 			</Button>
-			<Button id="QuitShutdown" class="SystemButton System SystemCanShutdown Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(2);" selectionpos="0,14">
+			<Button id="QuitShutdown" class="SystemButton System SystemCanShutdown StreamingHidden Button" onactivate="CloseModalDialog(); ConfirmShutdownAction(2);" selectionpos="0,14">
 				<Label text="#Quit_Shutdown" />
 			</Button>
 

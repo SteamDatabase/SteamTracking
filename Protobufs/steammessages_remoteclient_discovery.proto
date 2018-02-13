@@ -124,6 +124,7 @@ message CMsgRemoteDeviceStreamingRequest {
 	optional bool enable_video_streaming = 9 [default = true];
 	optional bool enable_audio_streaming = 10 [default = true];
 	optional bool enable_input_streaming = 11 [default = true];
+	optional bool network_test = 12;
 }
 
 message CMsgRemoteDeviceStreamingCancelRequest {

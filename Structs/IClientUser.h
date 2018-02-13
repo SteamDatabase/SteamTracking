@@ -231,4 +231,5 @@ public:
     virtual unknown_ret AddAppTag(CGameID, char const*) = 0;
     virtual unknown_ret SetAppHidden(CGameID, bool) = 0;
     virtual unknown_ret RequestAccountLinkInfo() = 0;
+    virtual unknown_ret RequestSurveySchedule() = 0;
 };

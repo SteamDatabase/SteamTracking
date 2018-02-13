@@ -112,4 +112,5 @@ typedef enum EControllerSetting
     k_EControllerSettingInterruptable, // interruptable
     k_EControllerSettingSoft_press_sytle, // soft_press_sytle
     k_EControllerSettingActivator_output_axis, // activator_output_axis
+    k_EControllerSettingChord_button, // chord_button
 } EControllerSetting;

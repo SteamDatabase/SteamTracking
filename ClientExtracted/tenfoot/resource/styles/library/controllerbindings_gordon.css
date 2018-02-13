@@ -125,6 +125,27 @@ ControllerBindingsGordon.ScreenSaverMode
     padding-right: 32px;
 }
 
+#PreviewWaterMark
+{
+    visibility: collapse;
+}
+
+#PreviewWaterMark.Preview
+{
+    visibility: visible;
+    opacity: 1%;
+	//transform-origin: 50% 50% initial;
+	//transform: rotatez( -15deg );
+	font-family: platformfont;
+    font-size: 200px;
+    z-index: 1000;
+    color: #75c7fd85;
+	blur: gaussian( 0.25 );
+    horizontal-align: center;
+    vertical-align: top;
+    padding-top: 220px;
+}
+
 #BindingPreviewContainer.Preview
 {
 	width: 100%;
@@ -133,10 +154,11 @@ ControllerBindingsGordon.ScreenSaverMode
     transform-origin: 50% 100% parent-relative;
     horizontal-align: right;
     vertical-align: bottom;
-    wash-color: #00ccff15;
+    wash-color: #359cd899;
 	transition-property: transform;
 	transition-duration: 0.25s, 0.4s !immediate;
 	transition-timing-function: bigpicture-ease-in-out;
+    saturation: 0.35;
 }
 
 #BindingPreviewContainer.PreviewFadeout 
@@ -2623,9 +2645,33 @@ DropDownMenu.DropDownMenuVisible
     max-height: 250px;
 }
 
-#FrictionMouseJoystickDropDownMenu {
+#FrictionMouseJoystickDropDownMenu
+{
     width: fieldwidth;
     max-height: 200px;
+}
+
+#AdaptiveThresholdDropDownMenu
+{
+    width: fieldwidth;
+    max-height: 160px;
+}
+
+#ScrollWheelFrictionDropDownMenu
+{
+    width: fieldwidth;
+    max-height: 170px;
+}
+
+#MouseTriggerClampDropDownMenu
+{
+    width: fieldwidth;
+    max-height: 170px;
+}
+
+#FrictionDropDownMenu {
+    width: fieldwidth;
+    max-height: 170px;
 }
 
 .FlowDown

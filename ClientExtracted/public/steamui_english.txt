@@ -2980,6 +2980,10 @@ for the first time, it is necessary to be logged into Windows as an administrato
 If you continue, you might experience problems running the game."
 "SteamUI_InstallScript_Continue" "Continue anyway"
 
+"SteamUI_3rdPartyRemapper_Title"		"Controller Remapper Detected"
+"SteamUI_3rdPartyRemapper_Description"	"You appear to be using a controller remapping tool for your PS4 controller.  This game uses the Steam Input API, which does not require any remapping software.  The two may conflict if the remapping tool is not disabled."
+
+
 "Steam_CPUSSERequired_Title"	"Steam - unsupported CPU detected"
 "Steam_CPUSSERequired_Info"	"%game% requires a CPU which supports the SSE instruction set.
 

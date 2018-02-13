@@ -8,4 +8,5 @@ typedef enum EControllerActivationType
     k_EControllerActivationTypeLong_press, // long_press
     k_EControllerActivationTypeDouble_press, // double_press
     k_EControllerActivationTypeAnalog, // analog
+    k_EControllerActivationTypeChord, // chord
 } EControllerActivationType;

@@ -324,15 +324,16 @@
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseJoystickPrecision" />
 					<Slider id="DeadzonePrecisionJoystickMouse" direction="horizontal" />
-				</Panel>				
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
+				</Panel>
+        <Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
+          <DropDown id="InvertXMouseMouseJoystick" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CustomCurveExponent" />
 					<Slider id="CustomCurveExponent_mouse_joystick" direction="horizontal" />
 				</Panel>								
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on">
-				  <Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertX" />
-					<DropDown id="InvertXMouseMouseJoystick" />
-				</Panel>		
+	
 				<!-- Touch Menu Mode -->
 				<Panel class="FieldWrapper" modes="touchmenu" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuButtonCount" />

@@ -17,6 +17,7 @@
 			<Label id="PreviewDescription" />
 		</Panel>
 		<Panel id="BindingPreviewContainer">
+      <Label id="PreviewWaterMark" text="#SettingsController_PreviewWaterMark" />
 			<Panel id="BindingsContainer" tabindex="auto" selectionpos="auto">
 				<Panel id="BindingsTitleContainer">
 					<Label id="BindingsTitle" text="#SettingsController_BindingTitle" />

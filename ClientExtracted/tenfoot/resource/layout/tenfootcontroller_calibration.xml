@@ -7,13 +7,23 @@
   <Panel class="TenfootMsgBox TenfootControllerPadCalibrationPopup" tabindex="auto" selectionpos="auto">
 	  <Panel class="TenfootControllerPadCalibrationPopupBody" tabindex="auto">
 		  <Label class="TitleFont" text="#ControllerCalibration_Title" />
-      <Label class="TextFont" text="#ControllerCalibration_Instructions" />
+			<Label class="TextFont" text="#ControllerCalibration_Instructions" />	
+			<Label id="JoystickMsg" class="TextFont" text="#ControllerCalibration_Joystick_Instructions" />
+      <Label id="IMUMsg" class="TextFont" text="#ControllerCalibration_IMU_Instructions" />
       <Panel id="ButtonPanel">
+        <Panel class="CalibrationButton LeftStick">
+          <Label class="SliderLabel" text="#ControllerCalibration_Left_Deadzone" />
+          <Slider id="ControllerCalibration_Left_Deadzone" direction="horizontal" />
+        </Panel>
+        <Panel class="CalibrationButton RightStick">
+          <Label class="SliderLabel" text="#ControllerCalibration_Right_Deadzone" />
+          <Slider id="ControllerCalibration_Right_Deadzone" direction="horizontal" />
+        </Panel>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationStart()">
           <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
         </Button>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CancelButton()">
-          <Label class="CalibrationButtonText" text="#UI_Cancel" />
+          <Label class="CalibrationButtonText" text="#UI_OK" />
         </Button>
       </Panel>
     </Panel>

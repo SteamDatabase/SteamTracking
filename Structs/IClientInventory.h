@@ -27,8 +27,8 @@ public:
     virtual unknown_ret StartPurchase(int const*, unsigned int, unsigned int const*, unsigned int) = 0;
     virtual unknown_ret RequestPrices() = 0;
     virtual unknown_ret GetNumItemsWithPrices() = 0;
-    virtual unknown_ret GetItemsWithPrices(int*, unsigned long long*, unsigned int) = 0;
-    virtual unknown_ret GetItemPrice(int, unsigned long long*) = 0;
+    virtual unknown_ret GetItemsWithPrices(int*, unsigned long long*, unsigned long long*, unsigned int) = 0;
+    virtual unknown_ret GetItemPrice(int, unsigned long long*, unsigned long long*) = 0;
     virtual unknown_ret StartUpdateProperties() = 0;
     virtual unknown_ret RemoveProperty(unsigned long long, unsigned long long, char const*) = 0;
     virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, char const*) = 0;

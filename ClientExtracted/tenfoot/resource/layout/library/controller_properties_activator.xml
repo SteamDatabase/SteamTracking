@@ -81,8 +81,16 @@
 					<Slider id="SoftPress_Threshold" direction="horizontal" />
 					<Slider id="Pressure_Visualization" direction="horizontal" />
 				</Panel>
-		
-			</Panel>
+        <!-- Chord -->
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivatorBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="Chord_Binding" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_ChordButton" />
+          <DropDown id="Chord_ChordButton" />
+        </Panel>        
+      </Panel>
 			<!--
 				Middle Column
 			-->
@@ -172,7 +180,24 @@
 				<Panel class="FieldWrapper" activators="softpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_StartDelay" />
 					<Slider id="SoftPress_StartDelay" direction="horizontal" />
-				</Panel>			
+				</Panel>
+        <!-- Chord -->
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_Toggle" />
+          <DropDown id="Chord_Toggle" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_Interruptable" />
+          <DropDown id="Chord_Interruptable" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_StartDelay" />
+          <Slider id="Chord_StartDelay" direction="horizontal" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_EndDelay" />
+          <Slider id="Chord_EndDelay" direction="horizontal" />
+        </Panel>        
 			</Panel>
 
 			<!--
@@ -239,16 +264,16 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 					<DropDown id="Release_HapticIntensity" />
 				</Panel>
-				<Panel class="FieldWrapper" activators="startpress">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CycleBinding" />
-					<DropDown id="StartPress_CycleBindings" />
-				</Panel>				
 				<Panel class="FieldWrapper" activators="release">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_CycleBinding" />
 					<DropDown id="Release_CycleBindings" />
 				</Panel>				
 				<!-- Start Press -->
-				<Panel class="FieldWrapper" activators="startpress">
+        <Panel class="FieldWrapper" activators="startpress">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CycleBinding" />
+          <DropDown id="StartPress_CycleBindings" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="startpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 					<DropDown id="StartPress_HapticIntensity" />
 				</Panel>
@@ -273,8 +298,25 @@
 				<Panel class="FieldWrapper" activators="softpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RepeatRate" />
 					<Slider id="SoftPress_RepeatRate" direction="horizontal" />
-				</Panel>				
-				
+				</Panel>
+        <!-- Chord -->
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
+          <DropDown id="Chord_HapticIntensity" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_CycleBinding" />
+          <DropDown id="Chord_CycleBindings" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HoldRepeats" />
+          <DropDown id="Chord_HoldRepeats" />
+        </Panel>
+        <Panel class="FieldWrapper" activators="chord">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_RepeatRate" />
+          <Slider id="Chord_RepeatRate" direction="horizontal" />
+        </Panel>
+        
 			</Panel>
 		</Panel>
 
