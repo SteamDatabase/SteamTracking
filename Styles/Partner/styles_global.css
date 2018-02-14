@@ -39,6 +39,10 @@ h2, .title2 {
 	font-size: 12px;
 }
 
+.section .titleHelper {
+	margin-top: 6px;
+}
+
 .valveh2 {
 	color: #ca5029;
 }
@@ -1018,3 +1022,48 @@ p.deprecated.star::before {
 	font-size: 16px;
 }
 
+/* Steamworks community configuration styles */
+.coupons_unavailable {
+    background: #444;
+	margin-top: 18px;
+	margin-left: -10px;
+	padding: 8px;
+
+	position: relative;
+}
+.coupons_unavailable:after {
+	bottom: 100%;
+	left: 20px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #444;
+	border-width: 14px;
+	margin-left: -12px;
+}
+
+.coupons_limited {
+	background: #444;
+	margin-top: 18px;
+	margin-bottom: 20px;
+	padding: 8px;
+	position: relative;
+}
+.coupons_limited:after {
+	bottom: 100%;
+	left: 110px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #444;
+	border-width: 14px;
+	margin-left: -12px;
+}

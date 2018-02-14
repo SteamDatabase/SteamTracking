@@ -2740,6 +2740,9 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	background-color: hsla(202,60%,100%,0.2);
 	cursor: pointer;
 }
+.carousel_container .carousel_thumbs > div:hover {
+	background-color: hsla(202,60%,100%,0.3);
+}
 
 .carousel_container .carousel_thumbs > div.focus {
 	background-color: hsla(202,60%,100%,0.4);

@@ -480,6 +480,57 @@ function SignCyberCafeAgreement()
 	);
 }
 
+function SignOEMProductPurchaseAgreement()
+{
+	if ( !ValidateSigneeInfoOnAgreementPage() )
+	{
+		return;
+	}
+
+	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
+	if ( !agreedToSDA1.prop( "checked" ) )
+	{
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the OEM Product Purchase agreement before continuing.'  );
+		return;
+	}
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsave',
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					top.location.href = response.redirect_url;
+				}
+				else
+				{
+					if ( typeof response.captchagid !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'Error verifying humanity' );
+						UpdateCaptcha( response.captchagid );
+						$J( "#input_captcha" ).val('');
+					}
+					else if ( typeof response.errormsg !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.errormsg );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				}
+			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
 function SignLatestSDA( returnURL )
 {
 	var bHasRequiredFields = true;

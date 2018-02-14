@@ -3,7 +3,7 @@
 function PlayerLog()
 {
 	var args = [ '%c[video]%c', 'color: cornflowerblue;', '' ].concat( Array.prototype.slice.call(arguments) );
-	console.log.apply( console, args );
+		console.log.apply( console, args );
 };
 
 /////////////////////////////////////////////////////////////////
@@ -34,6 +34,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_strUniqueId = "";
 	this.m_fCurrentRepresentationBandwidth = 0;
 	this.m_nCurrentDownloadResolution = 0;
+	this.m_nTrackBufferMS = CDASHPlayer.TRACK_BUFFER_MS;
 
 	// EME-related
 	this.m_tsLastEncryptedEvent = 0;
@@ -183,7 +184,7 @@ CDASHPlayer.prototype.Close = function()
 	this.m_bDroppingFrames = false;
 	this.m_tsDropFramesDetected = 0;
 	this.m_tsLastWindowResize = 0;
-	
+
 	if ( this.m_bIsEmeActive )
 	{
 		this.m_tsLastEncryptedEvent = 0;
@@ -316,7 +317,7 @@ CDASHPlayer.prototype.SetUseHLSManifest = function ( bUseHLSManifest ) {
 CDASHPlayer.prototype.InitializeEME = function()
 {
 	var _player = this;
-	
+
 	// Merge all configurations into a single array per system
 	var keySystemConfigurations = {};
 	for ( var i = 0; i < _player.m_mpd.periods.length; ++i )
@@ -357,7 +358,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 			}
 		}
 	}
-	
+
 	var nTimeBetweenRetriesMs = 500;
 	var nMaxRetries = 10;
 	var nRetries = 0;
@@ -421,7 +422,7 @@ CDASHPlayer.prototype.InitializeEME = function()
 CDASHPlayer.prototype.OnEncrypted = function( event )
 {
 	var _player = this;
-	
+
 	// We can get a dupicate event for the audio and video track starting, but we only want to send one license request.
 	if ( event.timestamp == _player.m_tsLastEncryptedEvent)
 	{
@@ -582,7 +583,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		// If the number of representation changes, then we need to reload the HLS player, which
 		// cause it to re-fetch the master manifest updating its versions of representations.
 		//
-		// The difference in count is sufficient, because we don't tinker with their bitrates unless if 
+		// The difference in count is sufficient, because we don't tinker with their bitrates unless if
 		// we are adding or remove. We don't alter in-flight representations in anyway for broadcast. This is only
 		// for live playback.
 		if( _player.m_bUseHLSManifest && (numRepresentations !== _player.m_mpd.GetMPDRepresentationCount() ) && _player.BIsLiveContent() )
@@ -823,11 +824,13 @@ CDASHPlayer.prototype.BeginPlayback = function()
 
 	if ( this.BIsLiveContent() )
 	{
-		unStartTime = Math.floor( performance.now() - this.m_tsLiveContentStarted );
+		this.m_nTrackBufferMS = CMPDParser.GetSegmentDuration( this.GetCurrentVideoAdaptation() );
+		unStartTime = Math.floor( performance.now() - this.m_tsLiveContentStarted - this.m_nTrackBufferMS );
 	}
 	else
 	{
-		var unVideoDuration = Math.floor( this.m_mpd.GetPeriodDuration(0) ) - ( CDASHPlayer.TRACK_BUFFER_MS / 1000 );
+		this.m_nTrackBufferMS = CDASHPlayer.TRACK_BUFFER_MS;
+		var unVideoDuration = Math.floor( this.m_mpd.GetPeriodDuration(0) ) - ( this.GetTrackBufferMS() / 1000 );
 		if ( 0 < this.m_rtVODResumeAtTime && this.m_rtVODResumeAtTime < unVideoDuration )
 		{
 			unStartTime = this.m_rtVODResumeAtTime * 1000;
@@ -877,7 +880,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 
 		this.m_elVideoPlayer.currentTime = nStartPlayback;
 
-		if ( this.m_bIsPlayingInUI ) 
+		if ( this.m_bIsPlayingInUI )
 		{
 			this.m_elVideoPlayer.play();
 		}
@@ -958,6 +961,10 @@ CDASHPlayer.prototype.OnVideoStalled = function()
 				break;
 			}
 		}
+
+		// increase increase buffer to try and prevent future stalls
+		this.m_nTrackBufferMS += CMPDParser.GetSegmentDuration( this.GetCurrentVideoAdaptation() );
+		this.m_nTrackBufferMS = Math.min( this.m_nTrackBufferMS, CDASHPlayer.TRACK_BUFFER_MS );
 	}
 }
 
@@ -978,7 +985,7 @@ CDASHPlayer.prototype.OnVideoError = function( e )
 		strError = 'not supported';
 	else
 		strError = nCode;
-	
+
 	console.log( 'Video player error: ' + strError );
 	this.CloseWithError( 'mediaelementerror', nCode );
 }
@@ -1039,6 +1046,11 @@ CDASHPlayer.prototype.BIsLiveContent = function()
 	}
 }
 
+CDASHPlayer.prototype.GetTrackBufferMS = function()
+{
+	return this.m_nTrackBufferMS;
+}
+
 CDASHPlayer.prototype.GetPercentBuffered = function()
 {
 	var unVideoBuffered = 0;
@@ -1051,12 +1063,12 @@ CDASHPlayer.prototype.GetPercentBuffered = function()
 
 		if ( this.m_loaders[i].ContainsVideo() )
 		{
-			unVideoBuffered = Math.min( this.m_nVideoBuffer * 100 / CDASHPlayer.TRACK_BUFFER_MS, 100 );
+			unVideoBuffered = Math.min( this.m_nVideoBuffer * 100 / this.GetTrackBufferMS(), 100 );
 		}
 
 		if ( this.m_loaders[i].ContainsAudio() && !this.m_loaders[i].ContainsVideo() )
 		{
-			unAudioBuffered = Math.min( this.m_nAudioBuffer * 100 / CDASHPlayer.TRACK_BUFFER_MS, 100 );
+			unAudioBuffered = Math.min( this.m_nAudioBuffer * 100 / this.GetTrackBufferMS(), 100 );
 		}
 	}
 
@@ -1088,7 +1100,7 @@ CDASHPlayer.prototype.SeekToBufferedEnd = function()
 	if ( nStartPlayback == null )
 		return;
 
-	nStartPlayback -= (CDASHPlayer.TRACK_BUFFER_MS / 1000 );
+	nStartPlayback -= ( this.GetTrackBufferMS() / 1000 );
 	if ( nStartPlayback > 0 )
 		this.m_elVideoPlayer.currentTime = nStartPlayback;
 }
@@ -1104,8 +1116,8 @@ CDASHPlayer.prototype.SeekTo = function( nTime )
 		{
 			if ( this.m_loaders[i].ContainsVideo() || this.m_loaders[i].ContainsAudio() )
 			{
-				minSeek = Math.max( this.m_loaders[i].GetBufferedStart() + ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ), minSeek );
-				maxSeek = Math.min( this.m_loaders[i].GetBufferedEnd() - ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ), maxSeek );
+				minSeek = Math.max( this.m_loaders[i].GetBufferedStart() + ( this.GetTrackBufferMS() / 1000 ), minSeek );
+				maxSeek = Math.min( this.m_loaders[i].GetBufferedEnd() - ( this.GetTrackBufferMS() / 1000 ), maxSeek );
 			}
 		}
 	}
@@ -1154,7 +1166,7 @@ CDASHPlayer.prototype.BIsLiveEdge = function( nTime )
 		{
 			if ( this.m_loaders[i].ContainsVideo() )
 			{
-				if ( this.m_loaders[i].GetBufferedEnd() - nTime < ( CDASHPlayer.TRACK_BUFFER_MS / 1000 ) * 2 )
+				if ( this.m_loaders[i].GetBufferedEnd() - nTime < ( this.GetTrackBufferMS() / 1000 ) * 2 )
 					return true;
 			}
 		}
@@ -1861,7 +1873,7 @@ CDASHPlayer.prototype.StatsDownloadHost = function()
 			return parser.hostname;
 		}
 	}
-	
+
 	return '';
 }
 
@@ -1872,7 +1884,7 @@ CDASHPlayer.prototype.StatsAllBytesReceived = function()
 	{
 		bytes += this.m_loaders[i].GetBytesReceived();
 	}
-	
+
 	return bytes;
 }
 
@@ -1883,7 +1895,7 @@ CDASHPlayer.prototype.StatsAllFailedSegmentDownloads = function()
 	{
 		segments += this.m_loaders[i].GetFailedSegmentDownloads();
 	}
-	
+
 	return segments;
 }
 
@@ -2630,14 +2642,14 @@ CSegmentLoader.prototype.ScheduleNextDownload = function( nAtTime )
 
 	// check if we need to buffer. Keep downloading for dynamic content, minimum amount for VOD
 	var unAmountBuffered = this.GetAmountBuffered( nAtTime );
-	if ( this.m_player.BIsLiveContent() || unAmountBuffered < CDASHPlayer.TRACK_BUFFER_MS )
+	if ( this.m_player.BIsLiveContent() || unAmountBuffered < this.m_player.GetTrackBufferMS() )
 	{
 		this.DownloadNextSegment();
 		return;
 	}
 
-	// if the VOD buffers are close to running out of space, wait to sechedule download of the next segment
-	var nMaxBufferAvailable = ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - CDASHPlayer.TRACK_BUFFER_MS;
+	// if the VOD buffers are close to running out of space, wait to scheduled download of the next segment
+	var nMaxBufferAvailable = ( CDASHPlayer.TRACK_BUFFER_MAX_SEC * 1000 ) - this.m_player.GetTrackBufferMS();
 	if ( unAmountBuffered > nMaxBufferAvailable )
 	{
 		this.m_schWaitForBuffer = setTimeout( function () { _loader.ScheduleNextDownload() }, CDASHPlayer.TRACK_BUFFER_VOD_LOOKAHEAD_MS );
@@ -2653,7 +2665,7 @@ CSegmentLoader.prototype.ScheduleNextDownload = function( nAtTime )
 				_loader.UpdateBuffer();
 				_loader.ScheduleNextDownload();
 			},
-			CDASHPlayer.TRACK_BUFFER_MS / 2 );
+			this.m_player.GetTrackBufferMS() / 2 );
 		return;
 	}
 
@@ -2680,7 +2692,7 @@ CSegmentLoader.prototype.BIsLoaderStalling = function()
 CSegmentLoader.prototype.BIsLoaderBuffered = function()
 {
 	if ( !this.ContainsGame() )
-		return ( this.GetAmountBufferedInPlayer() >= CDASHPlayer.TRACK_BUFFER_MS || this.m_nNextSegment > this.m_nTotalSegments );
+		return ( this.GetAmountBufferedInPlayer() >= this.m_player.GetTrackBufferMS() || this.m_nNextSegment > this.m_nTotalSegments );
 	else
 		return true;
 }
@@ -3223,7 +3235,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 					representation.width = _mpd.ParseInt( xmlRepresentation, 'width');
 					representation.height = _mpd.ParseInt( xmlRepresentation, 'height');
 					representation.frameRate = _mpd.ParseFramerate( xmlRepresentation, 'frameRate' );
-					
+
 					if ( !representation.id || !representation.mimeType || !representation.codecs || !representation.bandwidth  )
 					{
 						bError = true;
@@ -3253,7 +3265,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 
 				adaptationSet.representations.push( representation );
 			});
-			
+
 			// Parse DRM Configurations for adaptation set
 			adaptationSet.keySystems = {};
 			xmlAdaptation.find( 'ContentProtection' ).each( function()
@@ -5425,7 +5437,7 @@ CDASHPlayerUI.prototype.SetTenFootOptionButtonVisible = function( elButton, bVis
 {
 	if ( !this.BInTenFoot() )
 		return;
-	
+
 	if ( bVisible )
 		$J( elButton ).css( 'visibility', 'visible' );
 	else
@@ -5775,7 +5787,7 @@ CDASHPlayerUI.prototype.ToggleFullscreen = function()
 		}
 		catch ( e ) { }
 	}
-	
+
 	var bFullscreen = document.fullscreen || document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || this.m_player.m_elVideoPlayer.webkitDisplayingFullscreen;
 
 	if ( !bFullscreen )
@@ -5846,7 +5858,7 @@ CDASHPlayerUI.prototype.OnProgressClick = function( e, ele )
 		nSeekTo = Math.min( nSeekTo, rgData.nBufferedEnd );
 	}
 
-	if ( this.m_player.BIsLiveContent() && ( rgData.nBufferedEnd - nSeekTo < CDASHPlayer.TRACK_BUFFER_MS / 1000 * 2 ) )
+	if ( this.m_player.BIsLiveContent() && ( rgData.nBufferedEnd - nSeekTo < this.m_player.GetTrackBufferMS() / 1000 * 2 ) )
 	{
 		this.JumpToLive();
 	}
@@ -5898,7 +5910,7 @@ CDASHPlayerUI.prototype.SetProgressBarPreview = function( fPercent )
 	if ( this.m_player.BIsLiveContent() )
 	{
 		nSeekTo = rgData.nBufferedEnd - nSeekTo;
-		if ( nSeekTo < CDASHPlayer.TRACK_BUFFER_MS / 1000 * 2 )
+		if ( nSeekTo < this.m_player.GetTrackBufferMS() / 1000 * 2 )
 			strTime = 'Live';
 		else
 			strTime = '-' + SecondsToTime( nSeekTo );
@@ -6601,7 +6613,7 @@ CDASHPlayerUI.prototype.SetVideoSuggestData = function( strDialogTitle, strGroup
 {
 	this.m_oVideoSuggestData = oData;
 	var _ui = this;
-	
+
 	$J( '#dash_video_suggest_dialog_title' ).html( strDialogTitle );
 	$J( '#dash_video_suggest_group_title' ).html( strGroupTitle );
 	$J( '#dash_video_suggest' ).show();
@@ -6979,7 +6991,7 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 
 	// there may be a track but the cues are empty, so try to get it first and then create if needed
 	var newTextTrack = this.GetTextTrackByCode( closedCaptionCode, role );
-	if ( !newTextTrack ) 
+	if ( !newTextTrack )
 	{
 		var oLabelAndKind = this.GetTextTrackLabelAndKind( closedCaptionCode, role );
 		newTextTrack = this.m_elVideoPlayer.addTextTrack(oLabelAndKind.kind, oLabelAndKind.label, closedCaptionCode);

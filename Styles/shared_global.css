@@ -1653,6 +1653,36 @@ img.dynamiclink_sketchfab_play_overlay_image
 }
 
 
+
+/* ugc with adult content */
+.ugc.app_has_adult_content
+{
+	overflow: hidden;
+}
+.ugc.app_has_adult_content img,
+.ugc.app_has_adult_content div.imgWallItem
+{
+	filter: blur( 30px );
+}
+.ugc.app_has_adult_content.internet_explorer
+{
+	background-color: black;
+}
+.ugc.app_has_adult_content.internet_explorer img
+{
+	opacity: 0;
+	filter: none;
+}
+
+.ugc.app_has_adult_content.internet_explorer div.imgWallItem
+{
+	filter: none;
+	opacity: 0.05;
+}
+
+
+
+
 .adult_content_age_gate {
 	text-align: center;
 	max-width: 460px;
@@ -2047,6 +2077,7 @@ body.v6 #footer_nav .popup_menu .hr{
 	animation-delay: 0.32s;
 	-webkit-animation-delay: 0.32s;
 }
+
 
 @media screen and (max-width: 910px)
 {

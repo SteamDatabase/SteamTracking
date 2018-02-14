@@ -120,12 +120,14 @@ function Blotter_SelectScreenshot( galleryid, screenshotid, spoiler )
 	for( var ss in gallery.shots )
 	{
 		ssid = 'ss_' + galleryid + '_' + gallery.shots[ss].m_id;
-		$(ssid).setAttribute( 'class', 'blotter_screenshot_gallery_image' );
+		$(ssid).removeClassName( 'blotter_screenshot_gallery_image_selected' );
+		$(ssid).addClassName( 'blotter_screenshot_gallery_image' );
 	}
 
 	// turn on the border for the selected image
 	ssid = 'ss_' + galleryid + '_' + screenshotid;
-	$(ssid).setAttribute( 'class', 'blotter_screenshot_gallery_image_selected' );
+	$(ssid).removeClassName( 'blotter_screenshot_gallery' );
+	$(ssid).addClassName( 'blotter_screenshot_gallery_image_selected' );
 }
 
 function Blotter_ScreenshotLoaded( galleryid )

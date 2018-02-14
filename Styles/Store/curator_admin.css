@@ -485,6 +485,8 @@ body.v6 .reviews_container h3 {
 	color: #c6d4df;
 	font-size: 14px;
 	padding: 4px 14px 14px 14px;
+	max-width: 678px;
+	overflow-wrap: break-word;
 }
 .app_ctn.tags {
 	margin-bottom: 20px;
@@ -705,6 +707,17 @@ body.v6 .reviews_container h3 {
 	color: #fff;
 	background: rgba( 255, 255, 255, 0.1);
 	padding: 8px;
+}
+.expiration_warning {
+	font-size: 11px;
+	margin-top: 4px;
+}
+.expiration_warning .new {
+	background-color: #A4D007;
+	color: #000;
+	padding: 2px 6px 2px 4px;
+	font-weight: 500;
+	border-radius: 2px;
 }
 
 .offer_heading {

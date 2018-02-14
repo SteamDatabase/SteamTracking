@@ -68,13 +68,23 @@
 .apphub_ContentGuides .workshopItemCollection
 {
 	display: block;
-	background-color: rgba( 84, 133, 183, 0.4);
+	background-color: rgba( 50, 77, 107, 0.8);
 	margin-bottom: 0px;
 }
 
 .apphub_ContentGuides .workshopItemCollection:hover
 {
-	background-color: rgba( 117, 204, 255, 0.5);
+	background-color: rgba( 59, 91, 127, 0.9);
+}
+.apphub_ContentGuides .workshopItemCollection .workshopItemShortDesc {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding-top: 6px;
+	padding-bottom: 6px;
+}
+.apphub_ContentGuides .workshopItemCollection:hover .workshopItemShortDesc {
+	color: #86adc6;
 }
 
 .apphub_ContentGuides .workshopItemCollection .workshopItem
@@ -100,7 +110,8 @@
 	font-size: 17px;
 	font-weight: normal;
 	border-bottom: 1px #8F98A0 dotted;
-	padding-bottom: 2px;
+	padding-bottom: 5px;
+	line-height: 18px;
 }
 
 .apphub_ContentGuides .workshopBrowsePagingWithBG

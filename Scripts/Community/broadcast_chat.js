@@ -22,6 +22,9 @@ var CBroadcastChat = function( broadcastSteamID )
 	this.m_nLastHeight = 0;
 	this.m_mapMutedUsers = {};
 
+	// Map SteamID to true or false.
+	this.m_mapChannelModeratorUsers = {};
+
 	var _chat = this;
 	$J( document ).on( 'keydown.BroadcastChat', function( e )
 	{
@@ -52,6 +55,11 @@ CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)',
 CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
 CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
 CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","facebook.com","google.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","gdcvault.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us","games-workshop.com","steamcontroller.buka.ru","steamlink.buka.ru","e-clubmalaysia.com","gameplanet.com","degica.com","steamstatic.com","community.csgo.com.cn"];
+
+CBroadcastChat.prototype.SetChannelModerators = function ( mapChannelModerators )
+{
+	this.m_mapChannelModeratorUsers = mapChannelModerators;
+};
 
 CBroadcastChat.prototype.GetChatID = function()
 {
@@ -459,9 +467,7 @@ CBroadcastChat.prototype.ChatSubmit = function()
 	this.m_webapi.ExecJSONP( 'IBroadcastService', 'PostChatMessage', rgParams, true, null, 15 )
 	.done( function( response )
 	{
-		console.log( "success" );
 		response = response.response;
-		console.log( response );
 		if ( response.result && response.result != 1 )
 		{
 			var strError = "";
@@ -493,16 +499,39 @@ CBroadcastChat.prototype.ShowChatMessageMenu = function( elButton )
 	elMenu.data( 'elMessage', elMessage );
 	elMessage.addClass( 'ShowingMenu' );
 
+	elMenu.find( '#MuteOption' ).hide();
+	elMenu.find( '#UnmuteOption' ).hide();
+	elMenu.find( '#MuteOptionHalfDay' ).hide();
+	elMenu.find( '#MuteOptionDay' ).hide();
+	elMenu.find( '#MuteOptionWeek' ).hide();
+	elMenu.find( '#MuteOptionPerm' ).hide();
+	elMenu.find( '#AddModerator' ).hide();
+	elMenu.find( '#RemoveModerator' ).hide();
+
+	var elementSteamID = elMessage.data( 'steamid' );
+
 	// enable options
-	if ( this.IsUserMutedLocally( elMessage.data( 'steamid' ) ) )
+	if ( this.IsUserMutedLocally( elementSteamID ) )
 	{
-		elMenu.find( '#MuteOption' ).hide();
 		elMenu.find( '#UnmuteOption' ).show();
 	}
 	else
 	{
-		elMenu.find( '#MuteOption' ).show();
-		elMenu.find( '#UnmuteOption' ).hide();
+		if( !this.IsUserChannelModerator( elementSteamID ) )
+		{
+			elMenu.find('#MuteOption').show();
+			elMenu.find('#MuteOptionHalfDay').show();
+			elMenu.find('#MuteOptionDay').show();
+			elMenu.find('#MuteOptionWeek').show();
+			elMenu.find('#MuteOptionPerm').show();
+		}
+	}
+
+	// enable the option depending on whether they are a moderator or not.
+	if( this.IsUserChannelModerator( elementSteamID ) ) {
+		elMenu.find( '#RemoveModerator' ).show();
+	} else {
+		elMenu.find('#AddModerator').show();
 	}
 
 	// position modal
@@ -522,17 +551,17 @@ CBroadcastChat.prototype.HideChatMessageMenu = function()
 	this.UpdateScroll();
 };
 
-CBroadcastChat.prototype.MuteChatMessageUser = function()
+CBroadcastChat.prototype.MuteChatMessageUserForSession = function( )
 {
 	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
-	this.MuteUserByMessage( elMessage );
+	this.MuteUserByMessage( elMessage, timeInHours, bPermanent );
 
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
 	this.UpdateScroll();
 };
 
-CBroadcastChat.prototype.UnmuteChatMessageUser = function()
+CBroadcastChat.prototype.UnmuteChatMessageUserForSession = function()
 {
 	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
 	this.UnmuteUserByMessage( elMessage );
@@ -542,12 +571,21 @@ CBroadcastChat.prototype.UnmuteChatMessageUser = function()
 	this.UpdateScroll();
 };
 
-CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
+
+CBroadcastChat.prototype.UpdateModeratorByMessage = function( elMessage, bAdd )
 {
 	var steamID = elMessage.data( 'steamid' );
 	var elChatName = $J( '.tmplChatName', elMessage );
 
-	this.MuteUser( steamID, elChatName.text() );
+	this.MuteUserForSession( steamID, elChatName.text() );
+};
+
+CBroadcastChat.prototype.MuteUserByMessage = function( elMessage, timeInHours, bPermanent )
+{
+	var steamID = elMessage.data( 'steamid' );
+	var elChatName = $J( '.tmplChatName', elMessage, timeInHours, bPermanent );
+
+	this.MuteUserForSession( steamID, elChatName.text() );
 };
 
 CBroadcastChat.prototype.UnmuteUserByMessage = function( elMessage )
@@ -555,10 +593,12 @@ CBroadcastChat.prototype.UnmuteUserByMessage = function( elMessage )
 	var steamID = elMessage.data( 'steamid' );
 	var elChatName = $J( '.tmplChatName', elMessage );
 
-	this.UnmuteUser( steamID, elChatName.text() );
+	this.UnmuteUserForSession( steamID, elChatName.text() );
 };
 
-CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
+// This mute is only tied to the specific sessions. Any users participating in the chat can issue this command
+// and we look at the targets behaviour to apply the mute or not
+CBroadcastChat.prototype.MuteUserForSession = function( steamID, strPersonaName )
 {
 	if ( steamID == this.m_steamID )
 		return;
@@ -599,7 +639,8 @@ CBroadcastChat.prototype.MuteUser = function( steamID, strPersonaName )
 		this.DisplayChatNotification( '%s has been muted'.replace( /%s/, strPersonaName ) );
 };
 
-CBroadcastChat.prototype.UnmuteUser = function( steamID, strPersonaName )
+// Lets the user speak in the sessions, not persisted.
+CBroadcastChat.prototype.UnmuteUserForSession = function( steamID, strPersonaName )
 {
 	if ( steamID == this.m_steamID )
 		return;
@@ -640,6 +681,11 @@ CBroadcastChat.prototype.IsUserMutedLocally = function( steamID )
 		return true;
 
 	return false;
+};
+
+CBroadcastChat.prototype.IsUserChannelModerator = function( steamID )
+{
+	return this.m_mapChannelModeratorUsers["" + steamID ];
 };
 
 CBroadcastChat.prototype.GetMutedUsers = function()
@@ -691,4 +737,101 @@ CBroadcastChat.prototype.OnRemoveUserMessages = function()
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
 	this.UpdateScroll();
+};
+
+// Changes the moderators status of the user on the broadcast channel
+function UpdateBroadcastChatModerator( broadcastSteamID, moderatorSteamID, bAdd, strPersonaName, chat )
+{
+	var $strMessage = ( bAdd ? 'Are you sure you want to add the following user as a moderator? They will be able mute other users on the broadcast chat.' : 'Are you sure you want to remove the following from channel moderator?' );
+	$strMessage += " " + strPersonaName;
+	var dialog = ShowConfirmDialog( 'Change Moderator Status for User?', $strMessage );
+	dialog.done( function() {
+		$J.ajax(
+			{
+				url: 'http://steamcommunity.com/broadcast/ajaxupdatechannelmod/',
+				type: 'POST',
+				data: {
+					broadcaststeamid: broadcastSteamID,
+					moderatorsteamid: moderatorSteamID,
+					bAdd: bAdd ? 1 : 0
+				},
+				dataType: 'json'
+			})
+			.done(function (rgResult) {
+				if (chat) {
+					chat.m_mapChannelModeratorUsers["" + moderatorSteamID] = bAdd;
+					chat.log("Moderator '" + strPersonaName + "' " + (bAdd ? "added." : "removed."));
+				} else {
+					window.location.reload();// broadcast dashboard page, I want to reload after a successful action
+				}
+			})
+			.fail(function (rgResult) {
+				if (chat) {
+					chat.log("Failed to " + (bAdd ? "assign" : "remove") + " '" + strPersonaName + "' as moderator!");
+				}
+			});
+	});
+}
+
+// Set or unset moderators on the broadcast channel
+CBroadcastChat.prototype.OnUpdateModerator = function( bAdd ) {
+	var elMessage = $J('#ChatMessageMenuBackground').data('elMessage');
+	var steamID = elMessage.data('steamid');
+	var strPersonaName = $J('.tmplChatName', elMessage).text();
+
+	if (steamID == this.m_steamID)
+		return;
+
+	UpdateBroadcastChatModerator(  this.m_broadcastSteamID, steamID, bAdd, strPersonaName, this );
+};
+
+// Change the chat mute / shadown mute status
+function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, banType, duration, bPerm, strPersonaName, chat )
+{
+	$J.ajax(
+		{
+			url: 'http://steamcommunity.com/broadcast/ajaxupdateusermute/',
+			type: 'POST',
+			data: {
+				broadcaststeamid: broadcastSteamID,
+				issuersteamid: issuerSteamID,
+				chattersteamid: chatterSteamID,
+				bantype: banType,
+				duration: duration,
+				perm: bPerm ? 1 : 0
+			},
+			dataType: 'json'
+		})
+		.done(function (rgResult) {
+			console.log("hello " + banType );
+			if( chat ) {
+				if( banType == 0 ) {
+					delete chat.m_mapMutedUsers[ chatterSteamID ];
+				} else {
+					chat.m_mapMutedUsers[ chatterSteamID ] = strPersonaName;
+				}
+				chat.log( "User '" + strPersonaName + "' " + (banType == 0 ? "mute cleared." : "muted.") );
+			} else {
+				window.location.reload(); // broadcast dashboard page, I want to reload after a successful action
+			}
+		})
+		.fail(function (rgResult) {
+			console.log("hello2");
+			if( chat ) {
+				chat.log("Failed to update mute for " + strPersonaName );
+			}
+		});
+}
+
+// Change long term mute/shadow mute status for a viewer in the chat message. This change is persisted and associated
+// with the broadcasters channel
+CBroadcastChat.prototype.OnUpdateUserChatBan = function( banType, duration, bPerm ) {
+	var elMessage = $J('#ChatMessageMenuBackground').data('elMessage');
+	var chatterSteamID = elMessage.data('steamid');
+	var strPersonaName = $J('.tmplChatName', elMessage).text();
+
+	if (chatterSteamID == this.m_steamID)
+		return;
+
+	UpdateUserChatBan( this.m_broadcastSteamID, this.m_steamID, chatterSteamID, banType, duration, bPerm, strPersonaName, this );
 };

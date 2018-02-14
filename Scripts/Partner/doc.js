@@ -54,6 +54,9 @@ function updateSelectedSection()
 {
 	if ( location.hash !== '' )
 	{
+				if ( EscapeHTML( location.hash ) !== location.hash )
+			return;
+
 		var $toc = $J( '#docNavigation .current ul' ).first();
 		$toc.find( 'a' ).parents( 'li' ).removeClass( 'currentpath' );
 		var $link = $toc.find( 'a[href=' + location.hash + ']' );

@@ -864,6 +864,7 @@ a.nohover, a.nohover:hover
 	background-color: rgba( 0, 0, 0, 0.5 );
 	padding-left: 1px;
 	padding-top: 2px;
+	overflow: hidden;
 }
 
 .blotter_screenshots_metadata
