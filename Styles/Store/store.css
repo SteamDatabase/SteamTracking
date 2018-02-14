@@ -2765,6 +2765,9 @@ a.cluster_capsule:hover {
 .store_capsule > .capsule.header, .store_capsule > .capsule.headerv5, .store_capsule > .capsule.headerratio, .store_capsule > .capsule.smallcapsule {
 	padding-top: 46.57534246575342%;
 }
+.store_capsule > .capsule.main_capsule {
+	padding-top: 57.3051948051948%;
+}
 
 .store_capsule > .capsule.smallv5 {
 	padding-top: 37.5%

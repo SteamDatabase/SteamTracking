@@ -747,7 +747,7 @@ GDynamicStore = {
 			for ( var i = 0; i < Bundle.m_rgItems.length; i++ )
 			{
 				var BundleItem = Bundle.m_rgItems[i];
-				if ( GDynamicStore.s_rgOwnedPackages[ BundleItem.m_nPackageID ] )
+				if ( !BundleItem.m_nPackageID || GDynamicStore.s_rgOwnedPackages[ BundleItem.m_nPackageID ] )
 					continue;
 
 				if ( BundleItem.m_rgIncludedAppIDs.length )

@@ -427,3 +427,52 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 
 	});
 }
+
+function FillCapsuleContainer( rgItems, $Parent, settings )
+{
+	var settings = $J.extend( {
+		'minItems'			: 6,
+		'maxItems'			: 12,
+		'rowItems'		: 3, // Item count must be divisible by this number
+		'filterRules'		: { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true },
+		'filterRulesFallback': { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }, // Filter rules to use if we don't meet our minItems count
+		'filterRulesApplicable': { games_already_in_library: true, localized: true, displayed_elsewhere: true, only_current_platform: true},
+		'capsuleOptions'	: {},
+		'feature'			: ''
+
+	}, settings);
+
+	if ( !rgItems )
+	{
+		$Parent.hide();
+		return;
+	}
+
+	var rgCapsules = GStoreItemData.FilterItemsForDisplay( rgItems, settings.filterRules, settings.filterRulesApplicable, settings.maxItems, settings.minItems )
+
+	if ( rgCapsules.length < settings.minItems )
+	{
+		rgCapsules = GStoreItemData.FilterItemsForDisplay( rgItems, settings.filterRulesFallback, settings.filterRulesApplicable, settings.maxItems, settings.minItems )
+	}
+
+	while( rgCapsules.length % settings.rowItems != 0 )
+		rgCapsules.pop();
+
+	GDynamicStore.MarkAppDisplayed( rgCapsules );
+
+	if ( rgCapsules.length >= settings.minItems )
+	{
+		var $elTarget = $Parent.find('.capsule_container');
+		var capsuleOptions = settings.capsuleOptions;
+
+		$J.each( rgCapsules, function(idx, oItem) {
+			$elTarget.append( GDynamicStoreHelpers.BuildCapsuleHTML(settings.feature, oItem.appid, oItem.packageid, oItem.bundleid, capsuleOptions) )
+		});
+
+		GDynamicStore.DecorateDynamicItems($elTarget);
+	}
+	else
+	{
+		$Parent.hide();
+	}
+}
