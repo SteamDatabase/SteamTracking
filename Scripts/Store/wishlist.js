@@ -156,16 +156,19 @@ CWishlistController.prototype.BuildElements = function()
 
 	var fnClickTop = function()
 	{
+		var $el = $J(this).closest('.wishlist_row');
+		var appId = $el.data("appId");
 
-		_this.MoveToPosition( this.parentNode.parentNode.parentNode.dataset.appId, 0 );
-		_this.Update( true );
+		_this.MoveToPosition( appId, 0 );
 		_this.OnDrop();
+		_this.Update( true );
 	}
 
 	var fnRemoveFromWishlist = function(e)
 	{
+		var $el = $J(this).closest('.wishlist_row');
+		var nAppId = $el.data("appId");
 
-		var nAppId = this.parentNode.parentNode.parentNode.parentNode.parentNode.dataset.appId;
 		var strName = g_rgAppInfo[nAppId].name
 
 		if( !g_bCanEdit )
@@ -186,16 +189,20 @@ CWishlistController.prototype.BuildElements = function()
 		_this.Update ( true );
 	});
 
-		e.preventDefault();
+		event.preventDefault();
 		return false;
 	}
 
 	var fnDragStart = function(e)
 	{
-		_this.elDragTarget = this.parentNode;
+		var $el = $J(this).closest('.wishlist_row');
+		var appId = $el.data("appId");
+
+
+		_this.elDragTarget = $el[0];
 		_this.elDragTarget.classList.add('dragging');
 
-		_this.nDragAppId = this.parentNode.dataset.appId;
+		_this.nDragAppId = appId;
 		if( !this.elGhostImage )
 		{
 			this.elGhostImage = document.createElement ( 'div' );
@@ -212,6 +219,16 @@ CWishlistController.prototype.BuildElements = function()
 
 		//e.preventDefault();
 		return false;
+	}
+
+	var fnMoveToNumber = function( e )
+	{
+		var $el = $J(this).closest('.wishlist_row');
+		var appId = $el.data("appId");
+
+		_this.MoveToPosition( appId, $J('.order_input',$el ).val() );
+		_this.Update( true );
+		_this.OnDrop();
 	}
 
 	// Build elements
@@ -286,15 +303,16 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%16\$s/g, rgAppInfo.priority )
 
 		);
-		if( false && !g_bSupportsDragAndDrop )
+		if( !g_bSupportsDragAndDrop )
 		{
-			$J('.hover_handle',$el).hide()
+			$J('.hover_handle img',$el).css({'display':'none'})
 		} else {
 			$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
 		}
 
 		$J('.tag',$el).click( fnClickTag );
 		$J('.top',$el).click( fnClickTop );
+		$J('.order_input',$el).on('change submit', fnMoveToNumber );
 		$J('.delete',$el).click( fnRemoveFromWishlist );
 		$J('.game_review_summary',$el).v_tooltip();
 
@@ -462,14 +480,17 @@ CWishlistController.prototype.OnDragOver = function(e)
  */
 CWishlistController.prototype.MoveToPosition = function( unAppId, unPosition )
 {
-	var oldIdx = this.rgAllApps.indexOf(unAppId);
+	var oldIdx = this.rgAllApps.indexOf("" + unAppId);
+
 
 	this.rgAllApps.splice( oldIdx, 1 );
-	this.rgAllApps.splice( unPosition, 0, unAppId );
+	this.rgAllApps.splice( unPosition, 0, "" + unAppId );
 
-	for( var i=1; i<this.rgAllApps.length; i++)
+
+
+	for( var i=0; i<this.rgAllApps.length; i++)
 	{
-		g_rgAppInfo[ this.rgAllApps[i] ].priority = i;
+		g_rgAppInfo[ this.rgAllApps[i] ].priority = i+1;
 	}
 
 }
@@ -498,7 +519,8 @@ CWishlistController.prototype.OnDrop = function(e)
 
 	this.Update ( true );
 
-	e.preventDefault();
+	if( e )
+		e.preventDefault();
 }
 
 CWishlistController.prototype.LoadElement = function( nIndex )
@@ -567,6 +589,8 @@ CWishlistController.prototype.Update = function( bForceSort )
 	{
 		if( this.rgFilterSettings.sort == 'order' )
 			this.rgAllApps.sort( function(a, b ) {
+				if( g_rgAppInfo[b].priority == g_rgAppInfo[a].priority )
+					return 0;
 				if( g_rgAppInfo[b].priority == 0 )
 					return -1;
 				if( g_rgAppInfo[a].priority == 0 )
