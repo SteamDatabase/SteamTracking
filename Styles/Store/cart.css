@@ -2051,6 +2051,29 @@ background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););backgroun
 			font-size: 12px;
 }
 
+.cafefundedinstruction_header .instruction_title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cafefundedinstruction .block {
+  font-size: 16px;
+	margin-top: 5px;	
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.cafefundedinstruction .block .cafefundedinstructionline {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.cafefundedinstruction .block .cafefundedinstructionline .cafefundedinstruction_amount {
+	font-size: 22px;
+}
 
 #wallet_code {
 	width: 450px;
