@@ -8,7 +8,6 @@ var CWishlistController = function()
 	this.elContainer = $elTarget;
 	var _this = this;
 
-	this.rgAllApps = Object.keys(g_rgAppInfo);
 
 	// Usee for the scroll handler.
 	this.nHeaderOffset = $J('#wishlist_ctn').offset().top;
@@ -105,6 +104,49 @@ var CWishlistController = function()
 	});
 
 
+
+
+	this.LoadAdditionalPages();
+
+
+}
+
+CWishlistController.prototype.LoadAdditionalPages = function()
+{
+	this.nPagesToLoad = g_nAdditionalPages;
+	this.nPagesLoaded = 0;
+	var _this = this;
+	console.log(g_nAdditionalPages);
+	for( var i=0; i < this.nPagesToLoad; i++ )
+	{
+		$J.ajax ( {
+			type: "GET",
+			url: g_strWishlistBaseURL + 'wishlistdata/',
+			data: { 'p': i },
+			dataType: 'json'
+		}).done(function(data){
+			_this.OnPageLoaded( data )
+		});
+	}
+
+	if( g_nAdditionalPages == 0 )
+		this.BuildElements();
+}
+
+CWishlistController.prototype.OnPageLoaded = function( data )
+{
+	g_rgAppInfo = Object.assign(data, g_rgAppInfo);
+	this.nPagesLoaded++;
+	console.log(this.nPagesLoaded);
+	if( this.nPagesLoaded == this.nPagesToLoad )
+		this.BuildElements();
+}
+
+CWishlistController.prototype.BuildElements = function()
+{
+	var _this = this;
+	this.rgAllApps = Object.keys(g_rgAppInfo);
+
 	// Callback for when a user clicks on a tag
 	var fnClickTag = function()
 	{
@@ -131,18 +173,18 @@ var CWishlistController = function()
 
 		ShowConfirmDialog("Remove this item from your wishlist?", "Are you sure you want to remove '%1$s' from your wishlist?<br><br>It can be re-added via the store page at any time.".replace(/%1\$s/,V_EscapeHTML(strName))).done(function(){
 
-			$J.ajax({
-				type: "POST",
-				url: g_strWishlistBaseURL + 'remove/',
-				data: {'appid':nAppId, sessionid: g_sessionID}
-			});
-
-			$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
-
-			delete g_rgAppInfo[ nAppId ];
-			_this.rgAllApps = Object.keys(g_rgAppInfo);
-			_this.Update ( true );
+		$J.ajax({
+			type: "POST",
+			url: g_strWishlistBaseURL + 'remove/',
+			data: {'appid':nAppId, sessionid: g_sessionID}
 		});
+
+		$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
+
+		delete g_rgAppInfo[ nAppId ];
+		_this.rgAllApps = Object.keys(g_rgAppInfo);
+		_this.Update ( true );
+	});
 
 		e.preventDefault();
 		return false;
@@ -201,16 +243,16 @@ var CWishlistController = function()
 
 		if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && rgAppInfo['subs'][0].price > 0 )
 		{
-			strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"					.replace(/%1\$s/g,rgAppInfo.subs[0].id)
-					.replace(/%2\$s/g,g_sessionID)
-					.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
-					.replace(/%4\$s/g,strInCartLabel);
+			strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"		.replace(/%1\$s/g,rgAppInfo.subs[0].id)
+			.replace(/%2\$s/g,g_sessionID)
+			.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
+			.replace(/%4\$s/g,strInCartLabel);
 		}
 		else if( rgAppInfo['prerelease'] )
 			strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>Coming soon</span></a>';
 		else if( rgAppInfo['free'] )
 		{
-			strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:ShowGotSteamModal('steam:\/\/run\/%1$s', %2$s, &quot;Play this game now&quot; )\"><span>%3$s<\/span><\/a><\/div>"			.replace ( /%1\$s/g, wishlist.appid  )
+			strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:ShowGotSteamModal('steam:\/\/run\/%1$s', %2$s, &quot;Play this game now&quot; )\"><span>%3$s<\/span><\/a><\/div>"		.replace ( /%1\$s/g, wishlist.appid  )
 			.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
 			.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
 		}
@@ -258,8 +300,8 @@ var CWishlistController = function()
 	});
 
 	this.LoadSettings();
-
-
+	this.Update();
+	$J('#throbber').hide();
 }
 
 CWishlistController.prototype.SetFilterString = function()
