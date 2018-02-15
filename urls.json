@@ -56,6 +56,7 @@
 "Styles/Store/tags.css"                          : "https://store.steampowered.com/public/css/v6/tags.css?__TIME__",
 "Styles/Store/updated_apps.css"                  : "https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__",
 "Styles/Store/digitalgiftcards.css"              : "https://store.steampowered.com/public/css/v6/digitalgiftcards.css?__TIME__",
+"Styles/Store/wishlist.css"                      : "https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__",
 
 //
 // Store CSS (v5, current)
@@ -197,6 +198,7 @@
 "Scripts/Store/supportmessages.js"               : "https://store.steampowered.com/public/javascript/supportmessages.js?__TIME__&l=english",
 "Scripts/Store/video_watch.js"                   : "https://store.steampowered.com/public/javascript/video_watch.js?__TIME__&l=english",
 "Scripts/Store/youraccount.js"                   : "https://store.steampowered.com/public/javascript/youraccount.js?__TIME__&l=english",
+"Scripts/Store/wishlist.js"                      : "https://store.steampowered.com/public/javascript/wishlist.js?__TIME__&l=english",
 
 //
 // Community JS
