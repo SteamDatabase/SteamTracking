@@ -195,6 +195,14 @@ CWishlistController.prototype.BuildElements = function()
 
 	var fnDragStart = function(e)
 	{
+		if( e.target.classList.contains('order_input') )
+		{
+			e.preventDefault ();
+			event.stopPropagation();
+			return false;
+		}
+
+
 		var $el = $J(this).closest('.wishlist_row');
 		var appId = $el.data("appId");
 
@@ -226,9 +234,17 @@ CWishlistController.prototype.BuildElements = function()
 		var $el = $J(this).closest('.wishlist_row');
 		var appId = $el.data("appId");
 
-		_this.MoveToPosition( appId, $J('.order_input',$el ).val() );
+		_this.MoveToPosition( appId, $J('.order_input',$el ).val() - 1 );
 		_this.Update( true );
 		_this.OnDrop();
+
+
+	}
+
+	var fnFocusTextBox = function( e )
+	{
+		$(this).select();
+		e.preventDefault();
 	}
 
 	// Build elements
@@ -313,6 +329,7 @@ CWishlistController.prototype.BuildElements = function()
 		$J('.tag',$el).click( fnClickTag );
 		$J('.top',$el).click( fnClickTop );
 		$J('.order_input',$el).on('change submit', fnMoveToNumber );
+		$J('.order_input',$el).on('focus', fnFocusTextBox );
 		$J('.delete',$el).click( fnRemoveFromWishlist );
 		$J('.game_review_summary',$el).v_tooltip();
 
@@ -491,6 +508,7 @@ CWishlistController.prototype.MoveToPosition = function( unAppId, unPosition )
 	for( var i=0; i<this.rgAllApps.length; i++)
 	{
 		g_rgAppInfo[ this.rgAllApps[i] ].priority = i+1;
+		$J('.order_input', this.rgElements[ this.rgAllApps[i] ] ).val(i+1);
 	}
 
 }

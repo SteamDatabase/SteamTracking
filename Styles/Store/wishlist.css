@@ -211,12 +211,19 @@ body.v6 .wishlist_header h2 {
 	position: absolute;
 	opacity: 1;
 	transition: opacity 300ms;
+	text-align: center;
 
-	display: none;
 }
 
 .hover_handle .order input {
-	width: 40px;
+	width: 22px;
+	color: #6d7985;
+	background-color: #313c48;
+	border-radius: 3px;
+	font-size: 11px;
+	padding: 3px 4px;
+	border: none;
+	text-align: center;
 }
 
 .sorting .hover_handle .top, .sorting .hover_handle .order {
@@ -282,10 +289,12 @@ body.v6 .wishlist_header h2 {
 
 	transition: opacity 300ms;
 	opacity: 0;
+	pointer-events: none;
 }
 
 .dropdown_container.hover {
 	opacity: 1;
+	pointer-events: auto;
 }
 
 .dropdown_container .item {
