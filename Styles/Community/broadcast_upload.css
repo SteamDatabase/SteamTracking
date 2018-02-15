@@ -1,0 +1,66 @@
+
+body
+{
+	
+}
+
+
+#PageContents
+{
+  width: 650px;
+  margin: auto;
+  background: none;
+  text-align: left;
+  min-height: 100%;
+  padding-top: 0px;
+  margin-top: 00px;
+  padding-left: 0;
+  display: block;
+  position: relative;
+}
+
+
+.uploadTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #4d4b49;
+
+}
+.uploadTable > thead > tr {
+    background-color: #2a3f5a;
+    border-left: 1px solid #4d4b49;
+    border-right: 1px solid #4d4b49;
+}
+
+.uploadTable th {
+    color: #82807c;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: left;
+    padding: 4px 14px;
+}
+
+.uploadTable > tbody > tr {
+    border-top: 1px solid #000;
+    border-left: 1px solid #4d4b49;
+    border-right: 1px solid #4d4b49;
+}
+
+.uploadTable > tbody > tr:last-child {
+    border-bottom: 1px solid #4d4b49;
+}
+
+
+.uploadTable td {
+    padding: 5px 14px;
+}
+
+#UploadInfoDelay
+{
+    width: 64px;
+}
+
+.UploadButtonColumn {
+	text-align: right;
+}
