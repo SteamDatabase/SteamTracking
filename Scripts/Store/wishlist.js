@@ -280,7 +280,7 @@ CWishlistController.prototype.SetFilterString = function()
 CWishlistController.prototype.LoadSettings = function()
 {
 	var lsValue = WebStorage.GetLocal('wishlistSettings');
-	console.log(lsValue);
+
 
 	var rgPairs = location.hash.substring(1).split('&');
 	if( rgPairs.length > 0 && rgPairs[0] )
@@ -512,6 +512,7 @@ CWishlistController.prototype.Update = function( bForceSort )
 		this.rgTermMatchedElements[i].removeClass('term_matched')
 	}
 
+	var _this = this;
 
 	if( this.rgFilterSettings.last_sort != this.rgFilterSettings.sort || bForceSort)
 	{
@@ -534,6 +535,14 @@ CWishlistController.prototype.Update = function( bForceSort )
 		else if( this.rgFilterSettings.sort == 'dateadded' )
 			this.rgAllApps.sort( function(a, b ) {
 				return g_rgAppInfo[b].added - g_rgAppInfo[a].added;
+			});
+		else if( this.rgFilterSettings.sort == 'price' )
+			this.rgAllApps.sort( function(a, b ) {
+				return _this.GetCheapestPrice( g_rgAppInfo[a] ) - _this.GetCheapestPrice( g_rgAppInfo[b] );
+			});
+		else if( this.rgFilterSettings.sort == 'name' )
+			this.rgAllApps.sort( function(a, b ) {
+				return g_rgAppInfo[a].name.localeCompare( g_rgAppInfo[b].name );
 			});
 		else
 			console.log("Unknown sort order",this.rgFilterSettings.sort);
@@ -629,6 +638,23 @@ CWishlistController.prototype.UpdateFilterDisplay = function()
 	}
 
 	this.SetFilterString();
+}
+
+CWishlistController.prototype.GetCheapestPrice = function( appInfo )
+{
+	if( appInfo.free )
+		return 0;
+
+	var nCheapestPrice = null;
+
+	for ( var i = 0; i < appInfo.subs.length; i++ )
+	{
+		if( appInfo.subs[i].price > 0 && ( nCheapestPrice == null || appInfo.subs[i].price < nCheapestPrice ) )
+			nCheapestPrice = appInfo.subs[i].price;
+	}
+
+
+	return nCheapestPrice != null ? nCheapestPrice : Number.MAX_SAFE_INTEGER;
 }
 
 
