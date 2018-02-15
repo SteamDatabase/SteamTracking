@@ -283,14 +283,21 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%13\$s/g, rgAppInfo['reviews_percent'] )
 				.replace(/%14\$s/g, rgAppInfo['reviews_total'] )
 				.replace(/%15\$s/g, strAdded )
+				.replace(/%16\$s/g, rgAppInfo.priority )
 
 		);
+		if( false && !g_bSupportsDragAndDrop )
+		{
+			$J('.hover_handle',$el).hide()
+		} else {
+			$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+		}
 
 		$J('.tag',$el).click( fnClickTag );
 		$J('.top',$el).click( fnClickTop );
 		$J('.delete',$el).click( fnRemoveFromWishlist );
 		$J('.game_review_summary',$el).v_tooltip();
-		$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+
 
 
 		_this.rgElements[ "" + wishlist.appid ] = $el;
@@ -460,7 +467,7 @@ CWishlistController.prototype.MoveToPosition = function( unAppId, unPosition )
 	this.rgAllApps.splice( oldIdx, 1 );
 	this.rgAllApps.splice( unPosition, 0, unAppId );
 
-	for( var i=0; i<this.rgAllApps.length; i++)
+	for( var i=1; i<this.rgAllApps.length; i++)
 	{
 		g_rgAppInfo[ this.rgAllApps[i] ].priority = i;
 	}
@@ -560,6 +567,10 @@ CWishlistController.prototype.Update = function( bForceSort )
 	{
 		if( this.rgFilterSettings.sort == 'order' )
 			this.rgAllApps.sort( function(a, b ) {
+				if( g_rgAppInfo[b].priority == 0 )
+					return -1;
+				if( g_rgAppInfo[a].priority == 0 )
+					return 1;
 				return g_rgAppInfo[a].priority - g_rgAppInfo[b].priority;
 			});
 		else if( this.rgFilterSettings.sort == 'salesrank' )

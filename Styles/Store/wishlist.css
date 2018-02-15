@@ -204,8 +204,22 @@ body.v6 .wishlist_header h2 {
 	transition: opacity 300ms;
 
 }
+.hover_handle .order {
+	bottom: 5px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	opacity: 1;
+	transition: opacity 300ms;
 
-.sorting .hover_handle .top {
+	display: none;
+}
+
+.hover_handle .order input {
+	width: 40px;
+}
+
+.sorting .hover_handle .top, .sorting .hover_handle .order {
 	opacity: 0;
 }
 
