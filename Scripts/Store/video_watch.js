@@ -341,7 +341,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'This video has not been processed for streaming.' );
 					break;
 				case 15:
-					_watch.ShowVideoError( 'The video could not be accessed. <br><br>Please ensure the account you are logged in with owns this video.' );
+					_watch.ShowVideoError( 'Sorry, this video is not available to watch.' );
 					break;
 				case 16:
 					_watch.ShowVideoError( 'This video is not currently available to stream.' );
