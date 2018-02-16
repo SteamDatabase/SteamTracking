@@ -1226,6 +1226,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_fiveseven_cu_fiveseven_hyperbeast_heavy"
 			}
+			"199380"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_gs_fiveseven_hot_rod_violet_light"
+			}
+			"199381"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_gs_fiveseven_hot_rod_violet_medium"
+			}
+			"199382"
+			{
+				"icon_path"		"econ/default_generated/weapon_fiveseven_gs_fiveseven_hot_rod_violet_heavy"
+			}
 			"262152"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_so_olive_light"
@@ -1489,6 +1501,18 @@
 			"264866"
 			{
 				"icon_path"		"econ/default_generated/weapon_glock_cu_glock_indigo_heavy"
+			}
+			"264920"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aa_glock_18_urban_moon_fever_light"
+			}
+			"264921"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aa_glock_18_urban_moon_fever_medium"
+			}
+			"264922"
+			{
+				"icon_path"		"econ/default_generated/weapon_glock_aa_glock_18_urban_moon_fever_heavy"
 			}
 			"458808"
 			{
@@ -2030,6 +2054,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_aug_cu_aug_orange_triangle_heavy"
 			}
+			"527048"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_stymphalian_birds_light"
+			}
+			"527049"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_stymphalian_birds_medium"
+			}
+			"527050"
+			{
+				"icon_path"		"econ/default_generated/weapon_aug_gs_aug_stymphalian_birds_heavy"
+			}
 			"589944"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_sp_snake_light"
@@ -2281,6 +2317,18 @@
 			"592474"
 			{
 				"icon_path"		"econ/default_generated/weapon_awp_cu_awp_hannya_heavy"
+			}
+			"592588"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_death_light"
+			}
+			"592589"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_death_medium"
+			}
+			"592590"
+			{
+				"icon_path"		"econ/default_generated/weapon_awp_gs_awp_death_heavy"
 			}
 			"655448"
 			{
@@ -3386,6 +3434,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_hellfire_heavy"
 			}
+			"1051356"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_neo_noir_light"
+			}
+			"1051357"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_neo_noir_medium"
+			}
+			"1051358"
+			{
+				"icon_path"		"econ/default_generated/weapon_m4a1_cu_m4a4_neo_noir_heavy"
+			}
 			"1114124"
 			{
 				"icon_path"		"econ/default_generated/weapon_mac10_so_red_light"
@@ -4178,6 +4238,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_x-ray_machine_heavy"
 			}
+			"1575680"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_white_fang_light"
+			}
+			"1575681"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_white_fang_medium"
+			}
+			"1575682"
+			{
+				"icon_path"		"econ/default_generated/weapon_ump45_cu_ump45_white_fang_heavy"
+			}
 			"1638568"
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_aq_blued_light"
@@ -4429,6 +4501,18 @@
 			"1641158"
 			{
 				"icon_path"		"econ/default_generated/weapon_xm1014_aq_xm1014_ziggy_anarchy_heavy"
+			}
+			"1641224"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_oxide_blaze_light"
+			}
+			"1641225"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_oxide_blaze_medium"
+			}
+			"1641226"
+			{
+				"icon_path"		"econ/default_generated/weapon_xm1014_cu_xm1014_oxide_blaze_heavy"
 			}
 			"1703988"
 			{
@@ -4694,6 +4778,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_all_in_heavy"
 			}
+			"1706704"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_riot_light"
+			}
+			"1706705"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_riot_medium"
+			}
+			"1706706"
+			{
+				"icon_path"		"econ/default_generated/weapon_bizon_cu_bizon_riot_heavy"
+			}
 			"1769600"
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_an_silver_light"
@@ -4910,6 +5006,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mag7_am_mag7_caustic_heavy"
 			}
+			"1772284"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_aq_mag7_swag7_light"
+			}
+			"1772285"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_aq_mag7_swag7_medium"
+			}
+			"1772286"
+			{
+				"icon_path"		"econ/default_generated/weapon_mag7_aq_mag7_swag7_heavy"
+			}
 			"1835120"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_an_navy_light"
@@ -5053,6 +5161,18 @@
 			"1837450"
 			{
 				"icon_path"		"econ/default_generated/weapon_negev_hy_negev_dazzle_heavy"
+			}
+			"1837800"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_lionfish_light"
+			}
+			"1837801"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_lionfish_medium"
+			}
+			"1837802"
+			{
+				"icon_path"		"econ/default_generated/weapon_negev_sp_negev_lionfish_heavy"
 			}
 			"1900564"
 			{
@@ -5858,6 +5978,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_hunter_heavy"
 			}
+			"2099952"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_urban_hazard_light"
+			}
+			"2099953"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_urban_hazard_medium"
+			}
+			"2099954"
+			{
+				"icon_path"		"econ/default_generated/weapon_hkp2000_cu_p2000_urban_hazard_heavy"
+			}
 			"2162708"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp7_hy_ddpat_light"
@@ -6086,6 +6218,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_mp7_sp_mp7_tribal_yellow_heavy"
 			}
+			"2165472"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_gs_mp7_bloodsport_light"
+			}
+			"2165473"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_gs_mp7_bloodsport_medium"
+			}
+			"2165474"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp7_gs_mp7_bloodsport_heavy"
+			}
 			"2228356"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp9_an_red_light"
@@ -6313,6 +6457,18 @@
 			"2230942"
 			{
 				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_goo_heavy"
+			}
+			"2231012"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_black_sand_light"
+			}
+			"2231013"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_black_sand_medium"
+			}
+			"2231014"
+			{
+				"icon_path"		"econ/default_generated/weapon_mp9_cu_mp9_black_sand_heavy"
 			}
 			"2293772"
 			{
@@ -6577,6 +6733,18 @@
 			"2296298"
 			{
 				"icon_path"		"econ/default_generated/weapon_nova_am_nova_sand_heavy"
+			}
+			"2296556"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_gs_nova_anchorite_light"
+			}
+			"2296557"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_gs_nova_anchorite_medium"
+			}
+			"2296558"
+			{
+				"icon_path"		"econ/default_generated/weapon_nova_gs_nova_anchorite_heavy"
 			}
 			"2359356"
 			{
@@ -7346,6 +7514,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_sg556_gs_sg553_phantom_heavy"
 			}
+			"2558712"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_sg533_aloha_light"
+			}
+			"2558713"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_sg533_aloha_medium"
+			}
+			"2558714"
+			{
+				"icon_path"		"econ/default_generated/weapon_sg556_sp_sg533_aloha_heavy"
+			}
 			"2621544"
 			{
 				"icon_path"		"econ/default_generated/weapon_ssg08_sp_short_tape_light"
@@ -8042,6 +8222,18 @@
 			{
 				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usps_blueprint_heavy"
 			}
+			"4000516"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_cut_light"
+			}
+			"4000517"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_cut_medium"
+			}
+			"4000518"
+			{
+				"icon_path"		"econ/default_generated/weapon_usp_silencer_cu_usp_cut_heavy"
+			}
 			"4128816"
 			{
 				"icon_path"		"econ/default_generated/weapon_cz75a_hy_webs_light"
@@ -8365,6 +8557,18 @@
 			"4197038"
 			{
 				"icon_path"		"econ/default_generated/weapon_revolver_gs_r8_llamacannon_heavy"
+			}
+			"4197108"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_gs_revolver_tread_light"
+			}
+			"4197109"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_gs_revolver_tread_medium"
+			}
+			"4197110"
+			{
+				"icon_path"		"econ/default_generated/weapon_revolver_gs_revolver_tread_heavy"
 			}
 			"32768020"
 			{
@@ -11942,6 +12146,54 @@
 			{
 				"icon_path"		"econ/default_generated/sporty_gloves_sporty_green_heavy"
 			}
+			"329686260"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_blue_white_light"
+			}
+			"329686261"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_blue_white_medium"
+			}
+			"329686262"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_blue_white_heavy"
+			}
+			"329686264"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_red_green_light"
+			}
+			"329686265"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_red_green_medium"
+			}
+			"329686266"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_poison_frog_red_green_heavy"
+			}
+			"329686268"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_black_webbing_yellow_light"
+			}
+			"329686269"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_black_webbing_yellow_medium"
+			}
+			"329686270"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_black_webbing_yellow_heavy"
+			}
+			"329686272"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_blue_pink_light"
+			}
+			"329686273"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_blue_pink_medium"
+			}
+			"329686274"
+			{
+				"icon_path"		"econ/default_generated/sporty_gloves_sporty_blue_pink_heavy"
+			}
 			"329751668"
 			{
 				"icon_path"		"econ/default_generated/slick_gloves_slick_black_light"
@@ -11989,6 +12241,54 @@
 			"329751778"
 			{
 				"icon_path"		"econ/default_generated/slick_gloves_slick_snakeskin_yellow_heavy"
+			}
+			"329751780"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_snakeskin_white_light"
+			}
+			"329751781"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_snakeskin_white_medium"
+			}
+			"329751782"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_snakeskin_white_heavy"
+			}
+			"329751784"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_plaid_purple_light"
+			}
+			"329751785"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_plaid_purple_medium"
+			}
+			"329751786"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_plaid_purple_heavy"
+			}
+			"329751788"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_black_orange_light"
+			}
+			"329751789"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_black_orange_medium"
+			}
+			"329751790"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_black_orange_heavy"
+			}
+			"329751792"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_green_grey_light"
+			}
+			"329751793"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_green_grey_medium"
+			}
+			"329751794"
+			{
+				"icon_path"		"econ/default_generated/slick_gloves_slick_stitched_green_grey_heavy"
 			}
 			"329817188"
 			{
@@ -12038,6 +12338,54 @@
 			{
 				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_fabric_orange_camo_heavy"
 			}
+			"329817364"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_blue_skulls_light"
+			}
+			"329817365"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_blue_skulls_medium"
+			}
+			"329817366"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_blue_skulls_heavy"
+			}
+			"329817368"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_geometric_blue_light"
+			}
+			"329817369"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_geometric_blue_medium"
+			}
+			"329817370"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_geometric_blue_heavy"
+			}
+			"329817372"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_ducttape_light"
+			}
+			"329817373"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_ducttape_medium"
+			}
+			"329817374"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_ducttape_heavy"
+			}
+			"329817376"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_green_camo_light"
+			}
+			"329817377"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_green_camo_medium"
+			}
+			"329817378"
+			{
+				"icon_path"		"econ/default_generated/leather_handwraps_handwrap_leathery_fabric_green_camo_heavy"
+			}
 			"329882784"
 			{
 				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_basic_black_light"
@@ -12086,6 +12434,54 @@
 			{
 				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_triangle_blue_heavy"
 			}
+			"329882884"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_choco_boom_light"
+			}
+			"329882885"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_choco_boom_medium"
+			}
+			"329882886"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_choco_boom_heavy"
+			}
+			"329882888"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_basic_green_orange_light"
+			}
+			"329882889"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_basic_green_orange_medium"
+			}
+			"329882890"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_basic_green_orange_heavy"
+			}
+			"329882892"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_yellow_camo_light"
+			}
+			"329882893"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_yellow_camo_medium"
+			}
+			"329882894"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_yellow_camo_heavy"
+			}
+			"329882896"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_trigrid_blue_light"
+			}
+			"329882897"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_trigrid_blue_medium"
+			}
+			"329882898"
+			{
+				"icon_path"		"econ/default_generated/motorcycle_gloves_motorcycle_trigrid_blue_heavy"
+			}
 			"329948344"
 			{
 				"icon_path"		"econ/default_generated/specialist_gloves_specialist_ddpat_green_camo_light"
@@ -12133,6 +12529,102 @@
 			"329948366"
 			{
 				"icon_path"		"econ/default_generated/specialist_gloves_specialist_orange_white_heavy"
+			}
+			"329948468"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_webs_red_light"
+			}
+			"329948469"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_webs_red_medium"
+			}
+			"329948470"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_webs_red_heavy"
+			}
+			"329948472"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_forest_brown_light"
+			}
+			"329948473"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_forest_brown_medium"
+			}
+			"329948474"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_forest_brown_heavy"
+			}
+			"329948476"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_fade_light"
+			}
+			"329948477"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_fade_medium"
+			}
+			"329948478"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_fade_heavy"
+			}
+			"329948480"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_winterhex_light"
+			}
+			"329948481"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_winterhex_medium"
+			}
+			"329948482"
+			{
+				"icon_path"		"econ/default_generated/specialist_gloves_specialist_winterhex_heavy"
+			}
+			"330013988"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_black_green_light"
+			}
+			"330013989"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_black_green_medium"
+			}
+			"330013990"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_black_green_heavy"
+			}
+			"330013992"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_green_leather_mesh_brass_light"
+			}
+			"330013993"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_green_leather_mesh_brass_medium"
+			}
+			"330013994"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_green_leather_mesh_brass_heavy"
+			}
+			"330013996"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_snakeskin_brass_light"
+			}
+			"330013997"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_snakeskin_brass_medium"
+			}
+			"330013998"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_snakeskin_brass_heavy"
+			}
+			"330014000"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_case_hardened_light"
+			}
+			"330014001"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_case_hardened_medium"
+			}
+			"330014002"
+			{
+				"icon_path"		"econ/default_generated/studded_hydra_gloves_bloodhound_hydra_case_hardened_heavy"
 			}
 		}
 	}
@@ -18719,10 +19211,12 @@
 				"damage"		"50"
 				"range"		"4096"
 				"range modifier"		"0.990000"
-				"primary clip size"		"1"
 				"weapon weight"		"0"
 				"max player speed alt"		"250"
 				"itemflag exhaustible"		"1"
+				"primary clip size"		"-1"
+				"primary default clip size"		"1"
+				"secondary default clip size"		"1"
 			}
 			"visuals"
 			{
@@ -18849,6 +19343,10 @@
 			"prefab"		"coupon_prefab"
 		}
 		"coupon_bestiary_capsule_prefab"
+		{
+			"prefab"		"coupon_prefab"
+		}
+		"coupon_comm2018_01_capsule_prefab"
 		{
 			"prefab"		"coupon_prefab"
 		}
@@ -27344,7 +27842,7 @@
 			"icon_default_image"		"materials/icons/inventory_icon_studded_bloodhound_gloves.vtf"
 			"attributes"
 			{
-				"icon display model"		"models/weapons/v_models/arms/glove_sporty/v_glove_bloodhound_icon.mdl"
+				"icon display model"		"models/weapons/v_models/arms/glove_bloodhound/v_glove_bloodhound_icon.mdl"
 			}
 			"used_by_classes"
 			{
@@ -27580,6 +28078,42 @@
 				"PaintableMaterial1"
 				{
 					"Name"		"materials/models/weapons/v_models/arms/glove_specialist/glove_specialist_right.vmt"
+					"ViewmodelDim"		"1024"
+					"WorldDim"		"128"
+					"MirrorPattern"		"1"
+				}
+			}
+		}
+		"5035"
+		{
+			"name"		"studded_hydra_gloves"
+			"prefab"		"hands_paintable"
+			"model_player"		"models/weapons/v_models/arms/glove_bloodhound/v_glove_bloodhound_hydra.mdl"
+			"item_name"		"#CSGO_Wearable_t_studded_hydra_gloves"
+			"item_description"		"#CSGO_Wearable_t_studded_hydra_gloves_Desc"
+			"model_world"		"models/weapons/w_models/arms/w_glove_bloodhound_hydra.mdl"
+			"model_dropped"		"models/weapons/w_models/arms/w_glove_bloodhound_hydra.mdl"
+			"icon_default_image"		"materials/icons/inventory_icon_studded_bloodhound_gloves.vtf"
+			"attributes"
+			{
+				"icon display model"		"models/weapons/v_models/arms/glove_bloodhound/v_glove_bloodhound_hydra_icon.mdl"
+			}
+			"used_by_classes"
+			{
+				"counter-terrorists"		"1"
+				"terrorists"		"1"
+			}
+			"paint_data"
+			{
+				"PaintableMaterial0"
+				{
+					"Name"		"materials/models/weapons/v_models/arms/glove_bloodhound/glove_hydra_left.vmt"
+					"ViewmodelDim"		"1024"
+					"WorldDim"		"128"
+				}
+				"PaintableMaterial1"
+				{
+					"Name"		"materials/models/weapons/v_models/arms/glove_bloodhound/glove_hydra_right.vmt"
 					"ViewmodelDim"		"1024"
 					"WorldDim"		"128"
 					"MirrorPattern"		"1"
@@ -29924,6 +30458,14 @@
 			"item_description"		"#coupon_desc"
 			"loot_list_name"		"coupon loot list - illuminate_sprays_capsule_01"
 			"prefab"		"valve coupon_prefab"
+		}
+		"20137"
+		{
+			"name"		"coupon - comm2018_01_sticker_capsule"
+			"item_name"		"#coupon_comm2018_01_sticker_capsule"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - comm2018_01_sticker_capsule"
+			"prefab"		"coupon_comm2018_01_capsule_prefab"
 		}
 	}
 	"attributes"
@@ -52513,6 +53055,203 @@
 				"$bumpmap"		"models/weapons/customization/glove_slick/normal_no_cross"
 			}
 		}
+		"10041"
+		{
+			"name"		"slick_snakeskin_white"
+			"description_string"		"#PaintKit_slick_snakeskin_white"
+			"description_tag"		"#PaintKit_slick_snakeskin_white_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/slick_snakeskin_white.vmt"
+			"vmt_overrides"
+			{
+				"$bumpmap"		"models/weapons/customization/glove_slick/normal_no_cross"
+			}
+		}
+		"10042"
+		{
+			"name"		"slick_plaid_purple"
+			"description_string"		"#PaintKit_slick_plaid_purple"
+			"description_tag"		"#PaintKit_slick_plaid_purple_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/slick_plaid_purple.vmt"
+			"vmt_overrides"
+			{
+				"$bumpmap"		"models/weapons/customization/glove_slick/normal_no_cross"
+			}
+		}
+		"10043"
+		{
+			"name"		"slick_stitched_black_orange"
+			"description_string"		"#PaintKit_slick_stitched_black_orange"
+			"description_tag"		"#PaintKit_slick_stitched_black_orange_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/slick_stitched_black_orange.vmt"
+			"vmt_overrides"
+			{
+				"$bumpmap"		"models/weapons/customization/glove_slick/normal_stitches"
+			}
+		}
+		"10044"
+		{
+			"name"		"slick_stitched_green_grey"
+			"description_string"		"#PaintKit_slick_slick_stitched_green_grey"
+			"description_tag"		"#PaintKit_slick_slick_stitched_green_grey_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/slick_stitched_green_grey.vmt"
+			"vmt_overrides"
+			{
+				"$bumpmap"		"models/weapons/customization/glove_slick/normal_stitches"
+			}
+		}
+		"10045"
+		{
+			"name"		"sporty_poison_frog_blue_white"
+			"description_string"		"#PaintKit_sporty_poison_frog_blue_white"
+			"description_tag"		"#PaintKit_sporty_poison_frog_blue_white_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/sporty_poison_frog_blue_white.vmt"
+		}
+		"10046"
+		{
+			"name"		"sporty_poison_frog_red_green"
+			"description_string"		"#PaintKit_sporty_poison_frog_red_green"
+			"description_tag"		"#PaintKit_sporty_poison_frog_red_green_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/sporty_poison_frog_red_green.vmt"
+		}
+		"10047"
+		{
+			"name"		"sporty_black_webbing_yellow"
+			"description_string"		"#PaintKit_sporty_black_webbing_yellow"
+			"description_tag"		"#PaintKit_sporty_black_webbing_yellow_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/sporty_black_webbing_yellow.vmt"
+		}
+		"10048"
+		{
+			"name"		"sporty_blue_pink"
+			"description_string"		"#PaintKit_sporty_blue_pink"
+			"description_tag"		"#PaintKit_sporty_blue_pink_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/sporty_blue_pink.vmt"
+		}
+		"10049"
+		{
+			"name"		"motorcycle_choco_boom"
+			"description_string"		"#PaintKit_motorcycle_choco_boom"
+			"description_tag"		"#PaintKit_motorcycle_choco_boom_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/motorcycle_choco_boom.vmt"
+		}
+		"10050"
+		{
+			"name"		"motorcycle_basic_green_orange"
+			"description_string"		"#PaintKit_motorcycle_basic_green_orange"
+			"description_tag"		"#PaintKit_motorcycle_basic_green_orange_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/motorcycle_basic_green_orange.vmt"
+		}
+		"10051"
+		{
+			"name"		"motorcycle_yellow_camo"
+			"description_string"		"#PaintKit_motorcycle_yellow_camo"
+			"description_tag"		"#PaintKit_motorcycle_yellow_camo_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/motorcycle_yellow_camo.vmt"
+		}
+		"10052"
+		{
+			"name"		"motorcycle_trigrid_blue"
+			"description_string"		"#PaintKit_motorcycle_trigrid_blue"
+			"description_tag"		"#PaintKit_motorcycle_trigrid_blue_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/motorcycle_trigrid_blue.vmt"
+		}
+		"10053"
+		{
+			"name"		"handwrap_leathery_fabric_blue_skulls"
+			"description_string"		"#PaintKit_handwrap_leathery_fabric_blue_skulls"
+			"description_tag"		"#PaintKit_handwrap_leathery_fabric_blue_skulls_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/handwrap_leathery_fabric_blue_skulls.vmt"
+		}
+		"10054"
+		{
+			"name"		"handwrap_leathery_fabric_geometric_blue"
+			"description_string"		"#PaintKit_handwrap_leathery_fabric_geometric_blue"
+			"description_tag"		"#PaintKit_handwrap_leathery_fabric_geometric_blue_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/handwrap_leathery_fabric_geometric_blue.vmt"
+		}
+		"10055"
+		{
+			"name"		"handwrap_leathery_ducttape"
+			"description_string"		"#PaintKit_handwrap_leathery_ducttape"
+			"description_tag"		"#PaintKit_handwrap_leathery_ducttape_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/handwrap_leathery_ducttape.vmt"
+			"vmt_overrides"
+			{
+				"$envmap"		"env_cubemap"
+				"$envmaplightscale"		"0.500000"
+				"$basealphaenvmask"		"1"
+				"$fresnelrangestexture"		"models/weapons/customization/materials/material_fresnel"
+				"$phongalbedoboost"		"7"
+				"$envmaplightscaleminmax"		"[-0.05 1.0]"
+			}
+		}
+		"10056"
+		{
+			"name"		"handwrap_leathery_fabric_green_camo"
+			"description_string"		"#PaintKit_handwrap_leathery_fabric_green_camo"
+			"description_tag"		"#PaintKit_handwrap_leathery_fabric_green_camo_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/handwrap_leathery_fabric_green_camo.vmt"
+		}
+		"10057"
+		{
+			"name"		"bloodhound_hydra_black_green"
+			"description_string"		"#PaintKit_bloodhound_hydra_black_green"
+			"description_tag"		"#PaintKit_bloodhound_hydra_black_green_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/bloodhound_hydra_black_green.vmt"
+		}
+		"10058"
+		{
+			"name"		"bloodhound_hydra_green_leather_mesh_brass"
+			"description_string"		"#PaintKit_bloodhound_hydra_green_leather_mesh_brass"
+			"description_tag"		"#PaintKit_bloodhound_hydra_green_leather_mesh_brass_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/bloodhound_hydra_green_leather_mesh_brass.vmt"
+		}
+		"10059"
+		{
+			"name"		"bloodhound_hydra_snakeskin_brass"
+			"description_string"		"#PaintKit_bloodhound_hydra_snakeskin_brass"
+			"description_tag"		"#PaintKit_bloodhound_hydra_snakeskin_brass_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/bloodhound_hydra_snakeskin_brass.vmt"
+		}
+		"10060"
+		{
+			"name"		"bloodhound_hydra_case_hardened"
+			"description_string"		"#PaintKit_bloodhound_hydra_case_hardened"
+			"description_tag"		"#PaintKit_bloodhound_hydra_case_hardened_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/bloodhound_hydra_case_hardened.vmt"
+		}
+		"10061"
+		{
+			"name"		"specialist_webs_red"
+			"description_string"		"#PaintKit_specialist_webs_red"
+			"description_tag"		"#PaintKit_specialist_webs_red_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/specialist_webs_red.vmt"
+		}
+		"10062"
+		{
+			"name"		"specialist_forest_brown"
+			"description_string"		"#PaintKit_specialist_forest_brown"
+			"description_tag"		"#PaintKit_specialist_forest_brown_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/specialist_forest_brown.vmt"
+		}
+		"10063"
+		{
+			"name"		"specialist_fade"
+			"description_string"		"#PaintKit_specialist_fade"
+			"description_tag"		"#PaintKit_specialist_fade_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/specialist_fade.vmt"
+			"vmt_overrides"
+			{
+				"$phongalbedoboost"		"10"
+			}
+		}
+		"10064"
+		{
+			"name"		"specialist_winterhex"
+			"description_string"		"#PaintKit_specialist_winterhex"
+			"description_tag"		"#PaintKit_specialist_winterhex_tag"
+			"vmt_path"		"materials/models/weapons/customization/paints_gloves/specialist_winterhex.vmt"
+		}
 	}
 	"paint_kits_rarity"
 	{
@@ -57813,6 +58552,11 @@
 		{
 			"public_list_contents"		"1"
 			"crate_sprays_illuminate1"		"1"
+		}
+		"coupon loot list - comm2018_01_sticker_capsule"
+		{
+			"public_list_contents"		"1"
+			"crate_sticker_pack_comm2018_01_capsule"		"1"
 		}
 	}
 	"revolving_loot_lists"
@@ -116107,5 +116851,776 @@
 			"first_sale_date"		"2018/01/04"
 			"prefab"		"weapon_case_base"
 		}
+	}
+	"sticker_kits"
+	{
+		"2921"
+		{
+			"name"		"comm2018_01_bullet_rain"
+			"item_name"		"#StickerKit_comm2018_01_bullet_rain"
+			"description_string"		"#StickerKit_desc_comm2018_01_bullet_rain"
+			"sticker_material"		"comm2018_01/bullet_rain"
+			"item_rarity"		"rare"
+		}
+		"2922"
+		{
+			"name"		"comm2018_01_camper"
+			"item_name"		"#StickerKit_comm2018_01_camper"
+			"description_string"		"#StickerKit_desc_comm2018_01_camper"
+			"sticker_material"		"comm2018_01/camper"
+			"item_rarity"		"rare"
+		}
+		"2923"
+		{
+			"name"		"comm2018_01_dessert_eagle"
+			"item_name"		"#StickerKit_comm2018_01_dessert_eagle"
+			"description_string"		"#StickerKit_desc_comm2018_01_dessert_eagle"
+			"sticker_material"		"comm2018_01/dessert_eagle"
+			"item_rarity"		"rare"
+		}
+		"2924"
+		{
+			"name"		"comm2018_01_devouring_flame"
+			"item_name"		"#StickerKit_comm2018_01_devouring_flame"
+			"description_string"		"#StickerKit_desc_comm2018_01_devouring_flame"
+			"sticker_material"		"comm2018_01/devouring_flame"
+			"item_rarity"		"rare"
+		}
+		"2925"
+		{
+			"name"		"comm2018_01_entry_fragger"
+			"item_name"		"#StickerKit_comm2018_01_entry_fragger"
+			"description_string"		"#StickerKit_desc_comm2018_01_entry_fragger"
+			"sticker_material"		"comm2018_01/entry_fragger"
+			"item_rarity"		"rare"
+		}
+		"2926"
+		{
+			"name"		"comm2018_01_friendly_fire"
+			"item_name"		"#StickerKit_comm2018_01_friendly_fire"
+			"description_string"		"#StickerKit_desc_comm2018_01_friendly_fire"
+			"sticker_material"		"comm2018_01/friendly_fire"
+			"item_rarity"		"rare"
+		}
+		"2927"
+		{
+			"name"		"comm2018_01_retake_expert"
+			"item_name"		"#StickerKit_comm2018_01_retake_expert"
+			"description_string"		"#StickerKit_desc_comm2018_01_retake_expert"
+			"sticker_material"		"comm2018_01/retake_expert"
+			"item_rarity"		"rare"
+		}
+		"2928"
+		{
+			"name"		"comm2018_01_small_arms"
+			"item_name"		"#StickerKit_comm2018_01_small_arms"
+			"description_string"		"#StickerKit_desc_comm2018_01_small_arms"
+			"sticker_material"		"comm2018_01/small_arms"
+			"item_rarity"		"rare"
+		}
+		"2929"
+		{
+			"name"		"comm2018_01_devouring_flame_holo"
+			"item_name"		"#StickerKit_comm2018_01_devouring_flame_holo"
+			"description_string"		"#StickerKit_desc_comm2018_01_devouring_flame_holo"
+			"sticker_material"		"comm2018_01/devouring_flame_holo"
+			"item_rarity"		"mythical"
+		}
+		"2930"
+		{
+			"name"		"comm2018_01_friendly_fire_holo"
+			"item_name"		"#StickerKit_comm2018_01_friendly_fire_holo"
+			"description_string"		"#StickerKit_desc_comm2018_01_friendly_fire_holo"
+			"sticker_material"		"comm2018_01/friendly_fire_holo"
+			"item_rarity"		"mythical"
+		}
+		"2931"
+		{
+			"name"		"comm2018_01_retake_expert_holo"
+			"item_name"		"#StickerKit_comm2018_01_retake_expert_holo"
+			"description_string"		"#StickerKit_desc_comm2018_01_retake_expert_holo"
+			"sticker_material"		"comm2018_01/retake_expert_holo"
+			"item_rarity"		"mythical"
+		}
+		"2932"
+		{
+			"name"		"comm2018_01_small_arms_holo"
+			"item_name"		"#StickerKit_comm2018_01_small_arms_holo"
+			"description_string"		"#StickerKit_desc_comm2018_01_small_arms_holo"
+			"sticker_material"		"comm2018_01/small_arms_holo"
+			"item_rarity"		"mythical"
+		}
+		"2933"
+		{
+			"name"		"comm2018_01_bullet_rain_normal"
+			"item_name"		"#StickerKit_comm2018_01_bullet_rain_normal"
+			"description_string"		"#StickerKit_desc_comm2018_01_bullet_rain_normal"
+			"sticker_material"		"comm2018_01/bullet_rain_normal"
+			"item_rarity"		"legendary"
+		}
+		"2934"
+		{
+			"name"		"comm2018_01_camper_normal"
+			"item_name"		"#StickerKit_comm2018_01_camper_normal"
+			"description_string"		"#StickerKit_desc_comm2018_01_camper_normal"
+			"sticker_material"		"comm2018_01/camper_normal"
+			"item_rarity"		"legendary"
+		}
+	}
+	"items"
+	{
+		"4470"
+		{
+			"item_name"		"#CSGO_crate_sticker_pack_comm2018_01_capsule"
+			"name"		"crate_sticker_pack_comm2018_01_capsule"
+			"item_description"		"#CSGO_crate_sticker_pack_comm2018_01_capsule_desc"
+			"image_inventory"		"econ/weapon_cases/crate_sticker_pack_comm2018_01_capsule"
+			"first_sale_date"		"2017/12/11"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"237"
+				}
+			}
+			"tags"
+			{
+				"StickerCapsule"
+				{
+					"tag_value"		"crate_sticker_pack_comm2018_01_capsule_lootlist"
+					"tag_text"		"#CSGO_crate_sticker_pack_comm2018_01_capsule"
+					"tag_group"		"StickerCapsule"
+					"tag_group_text"		"#SFUI_InvTooltip_StickerCapsuleTag"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"237"		"crate_sticker_pack_comm2018_01_capsule_lootlist"
+	}
+	"client_loot_lists"
+	{
+		"crate_sticker_pack_comm2018_01_capsule_rare"
+		{
+			"[comm2018_01_bullet_rain]sticker"		"1"
+			"[comm2018_01_camper]sticker"		"1"
+			"[comm2018_01_dessert_eagle]sticker"		"1"
+			"[comm2018_01_devouring_flame]sticker"		"1"
+			"[comm2018_01_entry_fragger]sticker"		"1"
+			"[comm2018_01_friendly_fire]sticker"		"1"
+			"[comm2018_01_retake_expert]sticker"		"1"
+			"[comm2018_01_small_arms]sticker"		"1"
+		}
+		"crate_sticker_pack_comm2018_01_capsule_mythical"
+		{
+			"[comm2018_01_devouring_flame_holo]sticker"		"1"
+			"[comm2018_01_friendly_fire_holo]sticker"		"1"
+			"[comm2018_01_retake_expert_holo]sticker"		"1"
+			"[comm2018_01_small_arms_holo]sticker"		"1"
+		}
+		"crate_sticker_pack_comm2018_01_capsule_legendary"
+		{
+			"[comm2018_01_bullet_rain_normal]sticker"		"1"
+			"[comm2018_01_camper_normal]sticker"		"1"
+		}
+		"crate_sticker_pack_comm2018_01_capsule_lootlist"
+		{
+			"crate_sticker_pack_comm2018_01_capsule_rare"		"1"
+			"crate_sticker_pack_comm2018_01_capsule_mythical"		"1"
+			"crate_sticker_pack_comm2018_01_capsule_legendary"		"1"
+		}
+	}
+	"paint_kits"
+	{
+		"690"
+		{
+			"name"		"gs_aug_stymphalian_birds"
+			"description_string"		"#PaintKit_gs_aug_stymphalian_birds"
+			"description_tag"		"#PaintKit_gs_aug_stymphalian_birds_Tag"
+			"style"		"9"
+			"pattern"		"workshop/aug_stymphalian_birds"
+			"color0"		"117 109 99"
+			"color1"		"154 157 150"
+			"color2"		"56 69 75"
+			"color3"		"241 203 148"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"100"
+			"phongintensity"		"10"
+			"phongalbedoboost"		"83"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.630000"
+		}
+		"691"
+		{
+			"name"		"gs_awp_death"
+			"description_string"		"#PaintKit_gs_awp_death"
+			"description_tag"		"#PaintKit_gs_awp_death_Tag"
+			"style"		"9"
+			"pattern"		"workshop/awp_death"
+			"color0"		"192 59 0"
+			"color1"		"224 221 192"
+			"color2"		"228 152 119"
+			"color3"		"215 133 0"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"16"
+			"phongalbedoboost"		"65"
+			"view_model_exponent_override_size"		"256"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.640000"
+		}
+		"692"
+		{
+			"name"		"cu_bizon_riot"
+			"description_string"		"#PaintKit_cu_bizon_riot"
+			"description_tag"		"#PaintKit_cu_bizon_riot_Tag"
+			"style"		"7"
+			"pattern"		"workshop/bizon_riot"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"8"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"693"
+		{
+			"name"		"gs_fiveseven_hot_rod_violet"
+			"description_string"		"#PaintKit_gs_fiveseven_hot_rod_violet"
+			"description_tag"		"#PaintKit_gs_fiveseven_hot_rod_violet_Tag"
+			"style"		"9"
+			"pattern"		"workshop/fiveseven_hot_rod_violet"
+			"color0"		"202 202 202"
+			"color1"		"178 178 178"
+			"color2"		"110 110 110"
+			"color3"		"54 54 54"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"0"
+			"phongalbedoboost"		"80"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"694"
+		{
+			"name"		"aa_glock_18_urban_moon_fever"
+			"description_string"		"#PaintKit_aa_glock_18_urban_moon_fever"
+			"description_tag"		"#PaintKit_aa_glock_18_urban_moon_fever_Tag"
+			"style"		"6"
+			"pattern"		"workshop/glock_18_urban_moon_fever"
+			"color0"		"30 16 50"
+			"color1"		"162 41 145"
+			"color2"		"16 6 17"
+			"color3"		"190 191 156"
+			"pattern_scale"		"2.200000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"30"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.800000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"695"
+		{
+			"name"		"cu_m4a4_neo_noir"
+			"description_string"		"#PaintKit_cu_m4a4_neo_noir"
+			"description_tag"		"#PaintKit_cu_m4a4_neo_noir_Tag"
+			"style"		"7"
+			"pattern"		"workshop/m4a4_neo_noir"
+			"use_normal"		"1"
+			"normal"		"workshop/m4a4_neo_noir_normal"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"20"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.900000"
+		}
+		"696"
+		{
+			"name"		"gs_mp7_bloodsport"
+			"description_string"		"#PaintKit_gs_mp7_bloodsport"
+			"description_tag"		"#PaintKit_gs_mp7_bloodsport_Tag"
+			"style"		"9"
+			"pattern"		"workshop/mp7_bloodsport"
+			"color0"		"255 255 255"
+			"color1"		"204 204 204"
+			"color2"		"23 13 13"
+			"color3"		"21 16 16"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"200"
+			"phongintensity"		"12"
+			"phongalbedoboost"		"6"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.650000"
+		}
+		"697"
+		{
+			"name"		"cu_mp9_black_sand"
+			"description_string"		"#PaintKit_cu_mp9_black_sand"
+			"description_tag"		"#PaintKit_cu_mp9_black_sand_Tag"
+			"style"		"7"
+			"pattern"		"workshop/mp9_black_sand"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"698"
+		{
+			"name"		"sp_negev_lionfish"
+			"description_string"		"#PaintKit_sp_negev_lionfish"
+			"description_tag"		"#PaintKit_sp_negev_lionfish_Tag"
+			"style"		"3"
+			"pattern"		"workshop/negev_lionfish"
+			"color0"		"0 0 0"
+			"color1"		"185 55 32"
+			"color2"		"206 200 187"
+			"color3"		"178 75 32"
+			"pattern_scale"		"1.300000"
+			"phongexponent"		"200"
+			"phongintensity"		"10"
+			"ignore_weapon_size_scale"		"0"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"-5.000000"
+			"pattern_rotate_end"		"5.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.550000"
+		}
+		"699"
+		{
+			"name"		"gs_nova_anchorite"
+			"description_string"		"#PaintKit_gs_nova_anchorite"
+			"description_tag"		"#PaintKit_gs_nova_anchorite_Tag"
+			"style"		"9"
+			"pattern"		"workshop/nova_anchorite"
+			"use_normal"		"1"
+			"normal"		"workshop/nova_anchorite_normal"
+			"color0"		"73 46 34"
+			"color1"		"204 204 204"
+			"color2"		"143 143 143"
+			"color3"		"20 20 20"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"32"
+			"phongintensity"		"15"
+			"phongalbedoboost"		"1"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"700"
+		{
+			"name"		"cu_p2000_urban_hazard"
+			"description_string"		"#PaintKit_cu_p2000_urban_hazard"
+			"description_tag"		"#PaintKit_cu_p2000_urban_hazard_Tag"
+			"style"		"7"
+			"pattern"		"workshop/p2000_urban_hazard"
+			"use_normal"		"1"
+			"normal"		"workshop/p2000_urban_hazard_normal"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"225"
+			"phongintensity"		"60"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"701"
+		{
+			"name"		"gs_revolver_tread"
+			"description_string"		"#PaintKit_gs_revolver_tread"
+			"description_tag"		"#PaintKit_gs_revolver_tread_Tag"
+			"style"		"9"
+			"pattern"		"workshop/revolver_tread"
+			"use_normal"		"1"
+			"normal"		"workshop/revolver_tread_normal"
+			"color0"		"128 128 128 255"
+			"color1"		"214 214 214"
+			"color2"		"125 113 103"
+			"color3"		"91 99 100"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"40"
+			"phongalbedoboost"		"40"
+			"view_model_exponent_override_size"		"1024"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"702"
+		{
+			"name"		"sp_sg533_aloha"
+			"description_string"		"#PaintKit_sp_sg533_aloha"
+			"description_tag"		"#PaintKit_sp_sg533_aloha_Tag"
+			"style"		"3"
+			"pattern"		"workshop/sg533_aloha"
+			"color0"		"47 50 57"
+			"color1"		"39 36 31"
+			"color2"		"34 116 169"
+			"color3"		"68 61 99"
+			"pattern_scale"		"2.000000"
+			"phongexponent"		"225"
+			"phongintensity"		"25"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"1.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"1.000000"
+			"pattern_rotate_start"		"25.000000"
+			"pattern_rotate_end"		"300.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.550000"
+		}
+		"703"
+		{
+			"name"		"aq_mag7_swag7"
+			"description_string"		"#PaintKit_aq_mag7_swag7"
+			"description_tag"		"#PaintKit_aq_mag7_swag7_Tag"
+			"style"		"8"
+			"pattern"		"workshop/mag7_swag7"
+			"color0"		"99 100 99"
+			"color1"		"102 153 156"
+			"color2"		"53 82 84"
+			"color3"		"113 165 164"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongalbedoboost"		"254"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.920000"
+		}
+		"704"
+		{
+			"name"		"cu_ump45_white_fang"
+			"description_string"		"#PaintKit_cu_ump45_white_fang"
+			"description_tag"		"#PaintKit_cu_ump45_white_fang_Tag"
+			"style"		"7"
+			"pattern"		"workshop/ump45_white_fang"
+			"use_normal"		"0"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"0"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.800000"
+		}
+		"705"
+		{
+			"name"		"cu_usp_cut"
+			"description_string"		"#PaintKit_cu_usp_cut"
+			"description_tag"		"#PaintKit_cu_usp_cut_Tag"
+			"style"		"7"
+			"pattern"		"workshop/usp_cut"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"30"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"1"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"1.000000"
+		}
+		"706"
+		{
+			"name"		"cu_xm1014_oxide_blaze"
+			"description_string"		"#PaintKit_cu_xm1014_oxide_blaze"
+			"description_tag"		"#PaintKit_cu_xm1014_oxide_blaze_Tag"
+			"style"		"7"
+			"pattern"		"workshop/xm1014_oxide_blaze"
+			"pattern_scale"		"1.000000"
+			"phongexponent"		"255"
+			"phongintensity"		"2"
+			"ignore_weapon_size_scale"		"1"
+			"only_first_material"		"0"
+			"pattern_offset_x_start"		"0.000000"
+			"pattern_offset_x_end"		"0.000000"
+			"pattern_offset_y_start"		"0.000000"
+			"pattern_offset_y_end"		"0.000000"
+			"pattern_rotate_start"		"0.000000"
+			"pattern_rotate_end"		"0.000000"
+			"wear_remap_min"		"0.000000"
+			"wear_remap_max"		"0.700000"
+		}
+	}
+	"items"
+	{
+		"1373"
+		{
+			"name"		"community_19 Key"
+			"item_name"		"#CSGO_crate_key_community_19"
+			"item_description"		"#CSGO_crate_key_community_19_desc"
+			"first_sale_date"		"2017-12-20"
+			"prefab"		"weapon_case_key"
+			"image_inventory"		"econ/tools/crate_key_community_19"
+			"tool"
+			{
+				"restriction"		"crate_community_19"
+			}
+		}
+		"4471"
+		{
+			"item_name"		"#CSGO_crate_community_19"
+			"item_description"		"#CSGO_crate_community_19_desc"
+			"name"		"crate_community_19"
+			"image_inventory"		"econ/weapon_cases/crate_community_19"
+			"prefab"		"weapon_case"
+			"associated_items"
+			{
+				"1373"		"1"
+			}
+			"tool"
+			{
+				"restriction"		"crate_community_19"
+			}
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"238"
+				}
+			}
+			"tags"
+			{
+				"ItemSet"
+				{
+					"tag_value"		"set_community_19"
+					"tag_text"		"#CSGO_set_community_19"
+					"tag_group"		"ItemSet"
+					"tag_group_text"		"#SFUI_InvTooltip_SetTag"
+				}
+			}
+			"loot_list_rare_item_footer"		"#crate_community_15_unusual_lootlist"
+			"loot_list_rare_item_name"		"#crate_community_15_unusual_itemname"
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"238"		"crate_community_19"
+	}
+	"client_loot_lists"
+	{
+		"crate_community_19_rare"
+		{
+			"[cu_bizon_riot]weapon_bizon"		"1"
+			"[gs_fiveseven_hot_rod_violet]weapon_fiveseven"		"1"
+			"[cu_mp9_black_sand]weapon_mp9"		"1"
+			"[cu_p2000_urban_hazard]weapon_hkp2000"		"1"
+			"[gs_revolver_tread]weapon_revolver"		"1"
+			"[sp_sg533_aloha]weapon_sg556"		"1"
+			"[cu_xm1014_oxide_blaze]weapon_xm1014"		"1"
+		}
+		"crate_community_19_mythical"
+		{
+			"[aa_glock_18_urban_moon_fever]weapon_glock"		"1"
+			"[sp_negev_lionfish]weapon_negev"		"1"
+			"[gs_nova_anchorite]weapon_nova"		"1"
+			"[aq_mag7_swag7]weapon_mag7"		"1"
+			"[cu_ump45_white_fang]weapon_ump45"		"1"
+		}
+		"crate_community_19_legendary"
+		{
+			"[gs_aug_stymphalian_birds]weapon_aug"		"1"
+			"[gs_awp_death]weapon_awp"		"1"
+			"[cu_usp_cut]weapon_usp_silencer"		"1"
+		}
+		"crate_community_19_ancient"
+		{
+			"[cu_m4a4_neo_noir]weapon_m4a1"		"1"
+			"[gs_mp7_bloodsport]weapon_mp7"		"1"
+		}
+		"crate_community_19"
+		{
+			"crate_community_19_rare"		"1"
+			"crate_community_19_mythical"		"1"
+			"crate_community_19_legendary"		"1"
+			"crate_community_19_ancient"		"1"
+			"set_community_19_unusual"		"1"
+		}
+	}
+	"item_sets"
+	{
+		"set_community_19"
+		{
+			"name"		"#CSGO_set_community_19"
+			"set_description"		"#CSGO_set_community_19_desc"
+			"is_collection"		"1"
+			"items"
+			{
+				"[cu_bizon_riot]weapon_bizon"		"1"
+				"[gs_fiveseven_hot_rod_violet]weapon_fiveseven"		"1"
+				"[cu_mp9_black_sand]weapon_mp9"		"1"
+				"[cu_p2000_urban_hazard]weapon_hkp2000"		"1"
+				"[gs_revolver_tread]weapon_revolver"		"1"
+				"[sp_sg533_aloha]weapon_sg556"		"1"
+				"[cu_xm1014_oxide_blaze]weapon_xm1014"		"1"
+				"[aa_glock_18_urban_moon_fever]weapon_glock"		"1"
+				"[sp_negev_lionfish]weapon_negev"		"1"
+				"[gs_nova_anchorite]weapon_nova"		"1"
+				"[aq_mag7_swag7]weapon_mag7"		"1"
+				"[cu_ump45_white_fang]weapon_ump45"		"1"
+				"[gs_aug_stymphalian_birds]weapon_aug"		"1"
+				"[gs_awp_death]weapon_awp"		"1"
+				"[cu_usp_cut]weapon_usp_silencer"		"1"
+				"[cu_m4a4_neo_noir]weapon_m4a1"		"1"
+				"[gs_mp7_bloodsport]weapon_mp7"		"1"
+			}
+		}
+	}
+	"paint_kits_rarity"
+	{
+		"slick_snakeskin_white"		"ancient"
+		"slick_plaid_purple"		"ancient"
+		"slick_stitched_black_orange"		"ancient"
+		"slick_stitched_green_grey"		"ancient"
+		"sporty_poison_frog_blue_white"		"ancient"
+		"sporty_poison_frog_red_green"		"ancient"
+		"sporty_black_webbing_yellow"		"ancient"
+		"sporty_blue_pink"		"ancient"
+		"motorcycle_choco_boom"		"ancient"
+		"motorcycle_basic_green_orange"		"ancient"
+		"motorcycle_yellow_camo"		"ancient"
+		"motorcycle_trigrid_blue"		"ancient"
+		"handwrap_leathery_fabric_blue_skulls"		"ancient"
+		"handwrap_leathery_fabric_geometric_blue"		"ancient"
+		"handwrap_leathery_ducttape"		"ancient"
+		"handwrap_leathery_fabric_green_camo"		"ancient"
+		"bloodhound_hydra_black_green"		"ancient"
+		"bloodhound_hydra_green_leather_mesh_brass"		"ancient"
+		"bloodhound_hydra_snakeskin_brass"		"ancient"
+		"bloodhound_hydra_case_hardened"		"ancient"
+		"specialist_webs_red"		"ancient"
+		"specialist_forest_brown"		"ancient"
+		"specialist_fade"		"ancient"
+		"specialist_winterhex"		"ancient"
+		"gs_aug_stymphalian_birds"		"legendary"
+		"gs_awp_death"		"mythical"
+		"cu_bizon_riot"		"rare"
+		"gs_fiveseven_hot_rod_violet"		"rare"
+		"aa_glock_18_urban_moon_fever"		"rare"
+		"cu_m4a4_neo_noir"		"legendary"
+		"gs_mp7_bloodsport"		"ancient"
+		"cu_mp9_black_sand"		"rare"
+		"sp_negev_lionfish"		"mythical"
+		"gs_nova_anchorite"		"mythical"
+		"cu_p2000_urban_hazard"		"uncommon"
+		"gs_revolver_tread"		"rare"
+		"sp_sg533_aloha"		"rare"
+		"aq_mag7_swag7"		"mythical"
+		"cu_ump45_white_fang"		"mythical"
+		"cu_usp_cut"		"mythical"
+		"cu_xm1014_oxide_blaze"		"rare"
 	}
 }

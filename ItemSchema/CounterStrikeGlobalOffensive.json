@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.f146bed5e533bfbdaad033cd7fe8e36438d4bf25.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.616f49be04a1653fea77053b9f600a69f5c58829.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -8369,6 +8369,31 @@
 
 				]
 				
+			},
+			{
+				"name": "community_19 Key",
+				"defindex": 1373,
+				"item_class": "tool",
+				"item_type_name": "Key",
+				"item_name": "Clutch Case Key",
+				"item_description": "This key only opens Clutch cases",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/tools/crate_key_community_19",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/tools/crate_key_community_19.c7c8308a5f6d97485064e6cd1b3cf45fb9eb633c.png",
+				"image_url_large": "",
+				"craft_class": "tool",
+				"craft_material_type": "tool",
+				"tool": {
+					"type": "decoder_ring",
+					"restriction": "crate_community_19",
+					"usage_capabilities": {
+						"decodable": true,
+						"usable_out_of_game": true
+					}
+				}
 			},
 			{
 				"name": "crate_valve_1",
@@ -25060,6 +25085,72 @@
 				
 			},
 			{
+				"name": "crate_sticker_pack_comm2018_01_capsule",
+				"defindex": 4470,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Community Capsule 2018",
+				"item_description": "This capsule contains a variety of stickers from the community Workshop.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_sticker_pack_comm2018_01_capsule",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_sticker_pack_comm2018_01_capsule.d5063fab5ea984bd457f67797a250969bb22e317.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 237
+					}
+				]
+				
+			},
+			{
+				"name": "crate_community_19",
+				"defindex": 4471,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Clutch Case",
+				"item_description": "",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_community_19",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_community_19.982c3a44362ee65b192b359c12d3d3af9ecb56b2.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true,
+					"can_delete": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"restriction": "crate_community_19",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 238
+					}
+				]
+				
+			},
+			{
 				"name": "crate_sticker_pack_boston2018_flg",
 				"defindex": 4472,
 				"item_class": "supply_crate",
@@ -25514,6 +25605,28 @@
 				"item_type_name": "Gloves",
 				"item_name": "Specialist Gloves",
 				"item_description": "Durable, breathable, and stylish; these gloves are designed to take (and give) a beating.",
+				"proper_name": false,
+				"item_quality": 0,
+				"image_inventory": null,
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "",
+				"image_url_large": "",
+				"capabilities": {
+					"paintable": true
+				},
+				"attributes": [
+
+				]
+				
+			},
+			{
+				"name": "studded_hydra_gloves",
+				"defindex": 5035,
+				"item_class": "wearable_item",
+				"item_type_name": "Gloves",
+				"item_name": "Hydra Gloves",
+				"item_description": "These fingerless gloves have been decorated with metal studs and the Operation Hydra logo.",
 				"proper_name": false,
 				"item_quality": 0,
 				"image_inventory": null,
@@ -32327,6 +32440,38 @@
 					}
 				]
 				
+			},
+			{
+				"name": "coupon - comm2018_01_sticker_capsule",
+				"defindex": 20137,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Community Capsule 2018",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 60
+					}
+				]
+				
 			}
 		]
 		,
@@ -34281,6 +34426,30 @@
 					"weapon_revolver",
 					"weapon_ak47",
 					"weapon_p250"
+				]
+				
+			},
+			{
+				"item_set": "set_community_19",
+				"name": "The Clutch Collection",
+				"items": [
+					"weapon_bizon",
+					"weapon_fiveseven",
+					"weapon_mp9",
+					"weapon_hkp2000",
+					"weapon_revolver",
+					"weapon_sg556",
+					"weapon_xm1014",
+					"weapon_glock",
+					"weapon_negev",
+					"weapon_nova",
+					"weapon_mag7",
+					"weapon_ump45",
+					"weapon_aug",
+					"weapon_awp",
+					"weapon_usp_silencer",
+					"weapon_m4a1",
+					"weapon_mp7"
 				]
 				
 			},
