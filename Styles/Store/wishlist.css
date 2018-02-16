@@ -239,6 +239,7 @@ body.v6 .wishlist_header h2 {
 	-moz-user-drag: none;
 	-ms-user-drag: none;
 	user-drag: none;
+	touch-action: none;
 }
 
 .sort_order .hover_handle {
@@ -348,8 +349,10 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 }
 
 .filter_section .wrapper {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	grid-auto-rows: minmax(100px, auto);
 }
 
 .filter_section .category {
@@ -631,6 +634,10 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		text-align: left;
 		order: -1;
 	}
+
+
+	.filter_section .wrapper {
+		grid-template-columns: repeat(2, 1fr);
 }
 
 @media screen and (max-width: 500px) {
@@ -638,7 +645,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		display: none;
 	}
 
-	.wishlist_row .content {
+	.sort_order .wishlist_row .content {
 		margin-left: 40px;
 	}
 

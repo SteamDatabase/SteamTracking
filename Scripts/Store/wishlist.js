@@ -52,12 +52,12 @@ var CWishlistController = function()
 	}
 
 	// Hook up dropdowns
-	$J('#dropdown_sort .item').click(function(){
+	$J('#dropdown_sort .item').on('click', function(){
 		_this.rgFilterSettings['sort'] = this.data('dropdownValue');
 		_this.Update();
 	});
 
-	$J('#tab_filters').click(function(){
+	$J('#tab_filters').on('click',function(e){
 		$J('#tab_filters').toggleClass('hover');
 		$J('#section_filters').toggleClass('hover');
 	})
@@ -84,8 +84,9 @@ var CWishlistController = function()
 	window.addEventListener('resize', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnResize.bind(this));
 	//$elTarget.on('dragover', this.OnDragOver.bind(this));
-	$J('body').on('dragover', this.OnDragOver.bind(this));
+	$J('body').on('dragover touchmove', this.OnDragOver.bind(this));
 	document.body.addEventListener('drop', this.OnDrop.bind(this));
+	document.body.addEventListener('touchend', this.OnDrop.bind(this));
 
 	// Add price brackets, built in JS since they vary by cc
 	var $elPriceCtn = $J('#price_brackets_container');
@@ -161,7 +162,7 @@ CWishlistController.prototype.BuildElements = function()
 		var appId = $el.data("appId");
 
 		_this.MoveToPosition( appId, 0 );
-		_this.OnDrop();
+		_this.SaveOrder();
 		_this.Update( true );
 	}
 
@@ -220,9 +221,12 @@ CWishlistController.prototype.BuildElements = function()
 			document.body.appendChild( this.elGhostImage );
 		}
 
-		e.dataTransfer.setDragImage(this.elGhostImage,0,0);
-		_this.nLastPosition = -1;
-		e.dataTransfer.dropEffect = "move";
+		if( e.dataTransfer )
+		{
+			e.dataTransfer.setDragImage ( this.elGhostImage, 0, 0 );
+			_this.nLastPosition = -1;
+			e.dataTransfer.dropEffect = "move";
+		}
 
 		$J( '#wishlist_ctn' ).addClass ( 'sorting' );
 
@@ -237,7 +241,7 @@ CWishlistController.prototype.BuildElements = function()
 
 		_this.MoveToPosition( appId, $J('.order_input',$el ).val() - 1 );
 		_this.Update( true );
-		_this.OnDrop();
+		_this.SaveOrder();
 
 
 	}
@@ -336,13 +340,14 @@ CWishlistController.prototype.BuildElements = function()
 				$J('.hover_handle img',$el).css({'display':'none'})
 			} else {
 				$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+				$J('.hover_handle img',$el)[0].addEventListener('touchstart', fnDragStart);
 			}
 
-			$J('.tag',$el).click( fnClickTag );
-			$J('.top',$el).click( fnClickTop );
+			$J('.tag',$el).on('click ', fnClickTag );
+			$J('.top',$el).on('click', fnClickTop );
 			$J('.order_input',$el).on('change submit', fnMoveToNumber );
-			$J('.order_input',$el).on('focus', fnFocusTextBox );
-			$J('.delete',$el).click( fnRemoveFromWishlist );
+			$J('.order_input',$el).on('focus touchstart', fnFocusTextBox );
+			$J('.delete',$el).on('click toucnstart', fnRemoveFromWishlist );
 			$J('.game_review_summary',$el).v_tooltip();
 
 
@@ -487,13 +492,19 @@ CWishlistController.prototype.OnDragOver = function(e)
 {
 	if( this.nDragAppId == -1 )
 		return;
-	e.originalEvent.dataTransfer.dropEffect = "move";
 
-	var nPosition = Math.floor( ( e.originalEvent.pageY / this.nRowHeight ) - ( this.nHeaderOffset / this.nRowHeight ) );
+	var nPageY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.originalEvent.pageY;
+
+	if( e.originalEvent.dataTransfer )
+		e.originalEvent.dataTransfer.dropEffect = "move";
+
+	var nPosition = Math.floor( ( nPageY / this.nRowHeight ) - ( this.nHeaderOffset / this.nRowHeight ) );
+
 	if( nPosition < 0 )
 		nPosition = 0;
 
-	$J(this.elDragTarget).css({'top': e.originalEvent.pageY - this.nHeaderOffset - this.nRowHeight / 2});
+
+	$J(this.elDragTarget).css({'top': nPageY - this.nHeaderOffset - this.nRowHeight / 2});
 
 
 	if( this.nLastPosition != nPosition )
@@ -540,10 +551,27 @@ CWishlistController.prototype.MoveToPosition = function( unAppId, unPosition )
  */
 CWishlistController.prototype.OnDrop = function(e)
 {
+	if( !this.elDragTarget )
+		return;
+
 	if( this.elDragTarget != null )
 		this.elDragTarget.classList.remove('dragging');
 	this.elDragTarget = null;
 	this.nDragAppId = -1;
+
+
+	$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
+
+
+	this.SaveOrder();
+	this.Update ( true );
+
+	if( e )
+		e.preventDefault();
+}
+
+CWishlistController.prototype.SaveOrder = function(e)
+{
 	if( !g_bCanEdit )
 		return;
 
@@ -552,14 +580,6 @@ CWishlistController.prototype.OnDrop = function(e)
 		url: g_strWishlistBaseURL + 'reorder/',
 		data: {'appids':this.rgAllApps, sessionid: g_sessionID}
 	});
-
-	$J( '#wishlist_ctn' ).removeClass ( 'sorting' );
-
-
-	this.Update ( true );
-
-	if( e )
-		e.preventDefault();
 }
 
 CWishlistController.prototype.LoadElement = function( nIndex )
