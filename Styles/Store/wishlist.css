@@ -519,6 +519,11 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	color: #ffffff;
 	font-size: 13px;
 }
+
+.discount_block {
+	white-space: nowrap;
+}
+
 .discount_block .discount_prices {
 	background: transparent;
 }
@@ -543,6 +548,20 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 .wishlist_row .title.term_matched {
 	background-color: #d09125 !important;
 	display: table;
+}
+
+.ico_cart {
+	height: 21px;
+	vertical-align: top;
+	margin-top: 4px;
+}
+
+.btn_medium.icon {
+	display: none;
+}
+
+.btn_medium.icon span {
+	padding: 0 3px
 }
 
 @media screen and (max-width: 910px)
@@ -570,15 +589,61 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 	.wishlist_row .platform_icons {
 		margin-top: -25px;
+		pointer-events: none;
+	}
+
+	.purchase_container .btn_medium.noicon {
+		display: none;
+	}
+
+	.purchase_container .btn_medium.icon {
+		display: inline-block;
+	}
+
+	.wishlist_row .earlyaccess {
+		display: none;
+	}
+
+	/* Shrink margins since we're losing vertical space */
+	.wishlist_row .platform_icons {
+		margin-bottom: 4px;
+	}
+	.wishlist_row .title {
+		margin-bottom: 2px;
+	}
+	.wishlist_row .stats {
+		margin-bottom: 3px;
+	}
+
+	.wishlist_row {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.wishlist .controls {
+		margin: 0;
+		flex-direction: column;
+	}
+	.wishlist .controls {
+		margin: 0;
+	}
+	.wishlist .controls > div.search {
+		text-align: left;
+		order: -1;
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
 	.wishlist_row .capsule {
 		display: none;
 	}
 
-	.wishlist_row .hover_handle {
-		display: none;
+	.wishlist_row .content {
+		margin-left: 40px;
+	}
+
+
+	.wishlist_row .earlyaccess {
+		display: inline-block;
 	}
 }

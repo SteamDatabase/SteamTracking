@@ -7,6 +7,7 @@ var CWishlistController = function()
 	var $elTarget = $J('#wishlist_ctn');
 	this.elContainer = $elTarget;
 	var _this = this;
+	this.nElementBuffer = 10; // Additional elements to lode above/below the view window
 
 
 	// Usee for the scroll handler.
@@ -249,101 +250,121 @@ CWishlistController.prototype.BuildElements = function()
 
 	// Build elements
 
-	$J.each( g_rgWishlistData, function( key, wishlist ) {
-		var rgParams = {};
-		var rgAppInfo = g_rgAppInfo[ wishlist.appid ]
-		if( !rgAppInfo )
+	var rgIndexes = Object.keys( g_rgWishlistData );
+	var nIndex = 0;
+	var nYields = 0;
+
+	function YieldingCreateElements( )
+	{
+		// Allow to run for 15ms, then yield back to the browser.
+		var nYieldTime = performance.now() + 15;
+		while(  nIndex < rgIndexes.length && performance.now() < nYieldTime )
 		{
-			// @todo inject placeholder app info here so users can remove dead apps from their wishlists?
-			return;
+			var wishlist = g_rgWishlistData[rgIndexes[nIndex++]]
+
+			var rgParams = {};
+			var rgAppInfo = g_rgAppInfo[ wishlist.appid ]
+			if( !rgAppInfo )
+			{
+				// @todo inject placeholder app info here so users can remove dead apps from their wishlists?
+				continue
+			}
+
+			var strScreenshots = '';
+			for( var i=0; i<rgAppInfo.screenshots.length; i++ )
+			{
+				strScreenshots += '<div data-background-img-src="' + GetScreenshotURL( wishlist.appid, rgAppInfo.screenshots[i],'.600x338' )+ '"></div>'
+			}
+
+			var strTags = '';
+			for( var i=0; i<rgAppInfo.tags.length && i<5; i++ )
+			{
+				strTags += '<div class="tag" data-tag-index="'+i+'">'+rgAppInfo.tags[i]+'</div>';
+			}
+
+			var strEarlyAccess = rgAppInfo.early_access ? '<span class="earlyaccess">Early Access</span>' : '';
+			var strPurchaseArea = '<div class="purchase_area">' + ( rgAppInfo['subs'][0] ? rgAppInfo['subs'][0]['discount_block'] : '' );
+			var strInCartLabel = ( GDynamicStore.s_rgAppsInCart[ wishlist.appid ] ) ? "In Cart" : "Add to Cart";
+
+			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && rgAppInfo['subs'][0].price > 0 )
+			{
+				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/ico\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
+				.replace(/%2\$s/g,g_sessionID)
+				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
+				.replace(/%4\$s/g,strInCartLabel);
+			}
+			else if( rgAppInfo['prerelease'] )
+				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>Coming soon</span></a>';
+			else if( rgAppInfo['free'] )
+			{
+				strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:ShowGotSteamModal('steam:\/\/run\/%1$s', %2$s, &quot;Play this game now&quot; )\"><span>%3$s<\/span><\/a><\/div>"			.replace ( /%1\$s/g, wishlist.appid  )
+				.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
+				.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
+			}
+			else
+				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_info.png"></span></a></div>';
+
+
+
+			var options = {  year: 'numeric', month: 'numeric', day: 'numeric' };
+			var date = new Date(rgAppInfo['added'] * 1000);
+			var strAdded =  "Added on %1$s".replace(/%1\$s/, date.toLocaleDateString(options) );
+			if( g_bCanEdit )
+				strAdded += " ( <div %1$s>remove<\/div> )".replace(/%1\$s/, ' class="delete"' );
+
+			var $el = $J(
+				g_strRowTemplate.replace(/%1\$s/g, wishlist.appid)
+					.replace(/%2\$s/g, rgAppInfo['capsule'])
+					.replace(/%3\$s/g, rgAppInfo['name'] )
+					.replace(/%4\$s/g, rgAppInfo['review_desc'] )
+					.replace(/%5\$s/g, rgAppInfo['release_string'] )
+					.replace(/%6\$s/g, strPurchaseArea )
+					.replace(/%7\$s/g, rgAppInfo['platform_icons'] )
+					.replace(/%8\$s/g, strTags )
+					.replace(/%9\$s/g, strScreenshots )
+					.replace(/%10\$s/g, rgAppInfo['review_css'] )
+					.replace(/%11\$s/g, GStoreItemData.GetAppURL( wishlist.appid, 'wishlist_capsule' ) )
+					.replace(/%12\$s/g, strEarlyAccess )
+					.replace(/%13\$s/g, rgAppInfo['reviews_percent'] )
+					.replace(/%14\$s/g, rgAppInfo['reviews_total'] )
+					.replace(/%15\$s/g, strAdded )
+					.replace(/%16\$s/g, rgAppInfo.priority )
+
+			);
+			if( !g_bSupportsDragAndDrop )
+			{
+				$J('.hover_handle img',$el).css({'display':'none'})
+			} else {
+				$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+			}
+
+			$J('.tag',$el).click( fnClickTag );
+			$J('.top',$el).click( fnClickTop );
+			$J('.order_input',$el).on('change submit', fnMoveToNumber );
+			$J('.order_input',$el).on('focus', fnFocusTextBox );
+			$J('.delete',$el).click( fnRemoveFromWishlist );
+			$J('.game_review_summary',$el).v_tooltip();
+
+
+			_this.rgElements[ "" + wishlist.appid ] = $el;
 		}
 
-		var strScreenshots = '';
-		for( var i=0; i<rgAppInfo.screenshots.length; i++ )
+		if( nIndex < rgIndexes.length )
 		{
-			strScreenshots += '<div style="background-image: url(' + GetScreenshotURL( wishlist.appid, rgAppInfo.screenshots[i],'.600x338' )+ ')"></div>'
-		}
-
-		var strTags = '';
-		for( var i=0; i<rgAppInfo.tags.length && i<5; i++ )
-		{
-			strTags += '<div class="tag" data-tag-index="'+i+'">'+rgAppInfo.tags[i]+'</div>';
-		}
-
-		var strEarlyAccess = rgAppInfo.early_access ? '<span class="earlyaccess">Early Access</span>' : '';
-		var strPurchaseArea = '<div class="purchase_area">' + ( rgAppInfo['subs'][0] ? rgAppInfo['subs'][0]['discount_block'] : '' );
-		var strInCartLabel = ( GDynamicStore.s_rgAppsInCart[ wishlist.appid ] ) ? "In Cart" : "Add to Cart";
-
-		if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && rgAppInfo['subs'][0].price > 0 )
-		{
-			strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"		.replace(/%1\$s/g,rgAppInfo.subs[0].id)
-			.replace(/%2\$s/g,g_sessionID)
-			.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
-			.replace(/%4\$s/g,strInCartLabel);
-		}
-		else if( rgAppInfo['prerelease'] )
-			strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>Coming soon</span></a>';
-		else if( rgAppInfo['free'] )
-		{
-			strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:ShowGotSteamModal('steam:\/\/run\/%1$s', %2$s, &quot;Play this game now&quot; )\"><span>%3$s<\/span><\/a><\/div>"		.replace ( /%1\$s/g, wishlist.appid  )
-			.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
-			.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
-		}
-		else
-			strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a></div>';
-
-
-
-		var options = {  year: 'numeric', month: 'numeric', day: 'numeric' };
-		var date = new Date(rgAppInfo['added'] * 1000);
-		var strAdded =  "Added on %1$s".replace(/%1\$s/, date.toLocaleDateString(options) );
-		if( g_bCanEdit )
-			strAdded += " ( <div %1$s>remove<\/div> )".replace(/%1\$s/, ' class="delete"' );
-
-		var $el = $J(
-			g_strRowTemplate.replace(/%1\$s/g, wishlist.appid)
-				.replace(/%2\$s/g, rgAppInfo['capsule'])
-				.replace(/%3\$s/g, rgAppInfo['name'] )
-				.replace(/%4\$s/g, rgAppInfo['review_desc'] )
-				.replace(/%5\$s/g, rgAppInfo['release_string'] )
-				.replace(/%6\$s/g, strPurchaseArea )
-				.replace(/%7\$s/g, rgAppInfo['platform_icons'] )
-				.replace(/%8\$s/g, strTags )
-				.replace(/%9\$s/g, strScreenshots )
-				.replace(/%10\$s/g, rgAppInfo['review_css'] )
-				.replace(/%11\$s/g, GStoreItemData.GetAppURL( wishlist.appid, 'wishlist_capsule' ) )
-				.replace(/%12\$s/g, strEarlyAccess )
-				.replace(/%13\$s/g, rgAppInfo['reviews_percent'] )
-				.replace(/%14\$s/g, rgAppInfo['reviews_total'] )
-				.replace(/%15\$s/g, strAdded )
-				.replace(/%16\$s/g, rgAppInfo.priority )
-
-		);
-		if( !g_bSupportsDragAndDrop )
-		{
-			$J('.hover_handle img',$el).css({'display':'none'})
+			//console.log("Creation loop taking too long, yielding to browser for paint. Current index is " + nIndex + "/" + rgIndexes.length );
+			nYields++;
+			setTimeout ( YieldingCreateElements, 0 ); // Reschedule after 2ms so the browser has a chance to paint if it wants to.
 		} else {
-			$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+			console.log("Finished building wishlist. Yielded %s times for browser painting", nYields);
+			_this.LoadSettings();
+			_this.Update();
+			$J('#throbber').hide();
 		}
+	}
 
-		$J('.tag',$el).click( fnClickTag );
-		$J('.top',$el).click( fnClickTop );
-		$J('.order_input',$el).on('change submit', fnMoveToNumber );
-		$J('.order_input',$el).on('focus', fnFocusTextBox );
-		$J('.delete',$el).click( fnRemoveFromWishlist );
-		$J('.game_review_summary',$el).v_tooltip();
+	YieldingCreateElements();
 
 
-
-		_this.rgElements[ "" + wishlist.appid ] = $el;
-
-		// No need to attach right now, wait for update()
-		//$elTarget.append($el);
-	});
-
-	this.LoadSettings();
-	this.Update();
-	$J('#throbber').hide();
 }
 
 CWishlistController.prototype.SetFilterString = function()
@@ -433,7 +454,7 @@ CWishlistController.prototype.OnScroll = function()
 
 	var nStart =  Math.floor( scrollTop );
 	var nRows =  Math.floor( nWindowHeight / nRowHeight  );
-	nStart = Math.floor( ( nStart / nRowHeight ) - ( this.nHeaderOffset / nRowHeight ) ) - nWindow;
+	nStart = Math.floor( ( nStart / nRowHeight ) - ( this.nHeaderOffset / nRowHeight ) ) - nWindow - this.nElementBuffer;
 
 
 	if( nStart < 0)
@@ -442,7 +463,7 @@ CWishlistController.prototype.OnScroll = function()
 	//this.marker.css('top',(1+nStart )* nRowHeight + this.nHeaderOffset );
 
 
-	var nEnd = nStart + nRows + nWindow * 2;
+	var nEnd = nStart + nRows + nWindow * 2 + this.nElementBuffer;
 	if( nEnd > this.rgVisibleApps.length )
 		nEnd = this.rgVisibleApps.length;
 
@@ -547,7 +568,15 @@ CWishlistController.prototype.LoadElement = function( nIndex )
 	var unAppId = this.rgVisibleApps[ nIndex ];
 	var $elTarget = this.rgElements[ unAppId ];
 
+	$J('img[data-img-src]', $elTarget).each(function(i, j){
+		if( !j.src )
+			j.src = j.dataset.imgSrc;
+	});
 
+	$J('div[data-background-img-src]', $elTarget).each(function(i, j){
+		if( !j.style.backgroundImage )
+			j.style.backgroundImage = 'url(' + j.dataset.backgroundImgSrc + ')';
+	});
 
 	if ( !this.rgLoadedApps.includes ( unAppId ) )
 	{
@@ -635,8 +664,15 @@ CWishlistController.prototype.Update = function( bForceSort )
 			this.rgAllApps.sort( function(a, b ) {
 				return _this.GetCheapestPrice( g_rgAppInfo[a] ) - _this.GetCheapestPrice( g_rgAppInfo[b] );
 			});
+		else if( this.rgFilterSettings.sort == 'discount' )
+			this.rgAllApps.sort( function(a, b ) {
+				return _this.GetBestDiscount( g_rgAppInfo[b] ) - _this.GetBestDiscount( g_rgAppInfo[a] );
+			});
 		else if( this.rgFilterSettings.sort == 'name' )
 			this.rgAllApps.sort( function(a, b ) {
+				if( !g_rgAppInfo[a].name || !g_rgAppInfo[b].name )
+					return 0;
+
 				return g_rgAppInfo[a].name.localeCompare( g_rgAppInfo[b].name );
 			});
 		else
@@ -752,6 +788,23 @@ CWishlistController.prototype.GetCheapestPrice = function( appInfo )
 	return nCheapestPrice != null ? nCheapestPrice : Number.MAX_SAFE_INTEGER;
 }
 
+CWishlistController.prototype.GetBestDiscount = function( appInfo )
+{
+	if( appInfo.free )
+		return 0;
+
+	var nBestDiscount = 0;
+
+	for ( var i = 0; i < appInfo.subs.length; i++ )
+	{
+		if( appInfo.subs[i].discount_pct > nBestDiscount )
+			nBestDiscount = appInfo.subs[i].discount_pct;
+	}
+
+
+	return nBestDiscount;
+}
+
 
 CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 	var appInfo = g_rgAppInfo[ unAppId ];
@@ -768,7 +821,7 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 		for( var j=0; j<rgTerms.length; j++ )
 		{
 			var bMatchesTerm = false;
-			if( rgTerms[j].length == 0 )
+			if( rgTerms[j].length == 0 || !appInfo.name )
 				continue;
 
 			if ( appInfo.name.toLowerCase().indexOf ( rgTerms[j] ) !== -1 )
