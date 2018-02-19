@@ -2763,7 +2763,6 @@
  R typeinfo name for CUtlMap<CUtlString, panorama::CPanoramaSymbol, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, panorama::CUIEngine::NamedHost_t, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, panorama::ILocalizationString*, int, CDefLess<CUtlString> >
- R typeinfo name for CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>
  R typeinfo name for CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<CUtlString, v8::Persistent<v8::ObjectTemplate, v8::NonCopyablePersistentTraits<v8::ObjectTemplate> >*, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlSymbol, LocalPanelRegistration_t, int, CDefLess<CUtlSymbol> >
@@ -2772,6 +2771,7 @@
  R typeinfo name for CUtlMap<char const*, CUtlString, short, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, panorama::CStyleDefine, short, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>
+ R typeinfo name for CUtlMap<char const*, short, short, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >
  R typeinfo name for CUtlMap<int, panorama::JSGenericCallback_t*, int, CDefLess<int> >
  R typeinfo name for CUtlMap<panorama::AnimationParticleSystemKeyNew_t, panorama::CAnimationParticleSystemNew*, int, CDefLess<panorama::AnimationParticleSystemKeyNew_t> >
@@ -2823,7 +2823,6 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, panorama::CPanoramaSymbol, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CPanoramaSymbol, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, panorama::CUIEngine::NamedHost_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CUIEngine::NamedHost_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, panorama::ILocalizationString*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::ILocalizationString*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, v8::Persistent<v8::ObjectTemplate, v8::NonCopyablePersistentTraits<v8::ObjectTemplate> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, v8::Persistent<v8::ObjectTemplate, v8::NonCopyablePersistentTraits<v8::ObjectTemplate> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, LocalPanelRegistration_t, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, LocalPanelRegistration_t, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2832,6 +2831,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CUtlString, short, bool (*)(char const* const&, char const* const&)>::Node_t, short, CUtlMap<char const*, CUtlString, short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, panorama::CStyleDefine, short, bool (*)(char const* const&, char const* const&)>::Node_t, short, CUtlMap<char const*, panorama::CStyleDefine, short, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::Node_t, int, CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<int, panorama::JSGenericCallback_t*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::JSGenericCallback_t*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<panorama::AnimationParticleSystemKeyNew_t, panorama::CAnimationParticleSystemNew*, int, CDefLess<panorama::AnimationParticleSystemKeyNew_t> >::Node_t, int, CUtlMap<panorama::AnimationParticleSystemKeyNew_t, panorama::CAnimationParticleSystemNew*, int, CDefLess<panorama::AnimationParticleSystemKeyNew_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -7481,10 +7481,6 @@
  T CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Find(CUtlString const&) const
  T CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Insert(CUtlString const&, panorama::PanelDescription_t* const&)
  T CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::PurgeAndDeleteElements()
- T CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Find(CUtlString const&) const
- T CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Insert(CUtlString const&, short const&)
- T CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Validate(CValidator&, char const*)
- T CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::~CUtlMap()
  T CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Find(CUtlString const&) const
  T CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Insert(CUtlString const&, unsigned int const&)
  T CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
@@ -7506,6 +7502,8 @@
  T CUtlMap<char const*, panorama::CStyleDefine, short, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::NextInorderSameKey(int) const
  T CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, short, short, CDefCaselessStringLess>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, short, short, CDefCaselessStringLess>::~CUtlMap()
  T CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Validate(CValidator&, char const*)
  T CUtlMap<int, panorama::JSGenericCallback_t*, int, CDefLess<int> >::PurgeAndDeleteElements()
  T CUtlMap<int, panorama::JSGenericCallback_t*, int, CDefLess<int> >::Validate(CValidator&, char const*)
@@ -7697,12 +7695,6 @@
  T CUtlRBTree<CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::PanelDescription_t*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t const&) const
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t const&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::Node_t, int, CUtlMap<CUtlString, short, int, CDefCaselessCUtlStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, unsigned int, int, CDefCaselessStringLess>::Node_t const&, bool)
@@ -7748,6 +7740,12 @@
  T CUtlRBTree<CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::Node_t, int, CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::Node_t, int, CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::Node_t, int, CUtlMap<char const*, panorama::IUIPanel*, int, CDefStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::Find(CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t const&) const
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::FindInsertionPosition(CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t const&, bool, short&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::Insert(CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, short, short, CDefCaselessStringLess>::Node_t, short, CUtlMap<char const*, short, short, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, panorama::CUIInputEngine::AnalogData_t, int, CDefLess<int> >::Node_t const&, bool)

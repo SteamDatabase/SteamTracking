@@ -7,7 +7,7 @@
 	<Panel class="NotificationRoot RemoteClientConnectedNotification">
 		<Panel class="NotificationFrameConnected" />
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
-		<Label class="NotificationTwoLabelBodyLineOne" text="#Settings_RemoteClients" />
-		<Label class="NotificationTwoLabelBodyLineTwo" text="#Notification_StreamingStarted" />
+		<Label class="NotificationTwoLabelBodyLineOne NotificationTwoLabelBodyLineOneWrap" text="#Settings_RemoteClients" />
+		<Label class="NotificationTwoLabelBodyLineTwo NotificationStyleTwoLabelBodyLineTwoWrap" text="#Notification_StreamingStarted" />
 	</Panel>
 </root>

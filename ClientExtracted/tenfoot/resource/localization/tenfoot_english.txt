@@ -2793,7 +2793,7 @@
 	"Notification_RefreshLogin"				"This account is logged in elsewhere."
 	"Notification_RemoteClientConnected"	"{s:machine} is available for streaming"
 	"Notification_RemoteClientDisconnected"	"{s:machine} is no longer available"
-	"Notification_StreamingStarted"	"Started streaming from {s:hostname} to {s:machine}"
+	"Notification_StreamingStarted"	"Streaming from {s:hostname} to {s:machine}"
 	"Notification_StreamingStopped"	"Stopped streaming to {s:machine}"
 	"Notification_NewTurns"		"You have {d:numItems} new turns waiting"
 	"Notification_NewTurnsSingular"	"You have 1 new turn waiting"

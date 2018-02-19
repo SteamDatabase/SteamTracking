@@ -1456,6 +1456,7 @@
  D guard variable for vgui::CaptionGripPanel::GetKBMap()::s_pMap
  D guard variable for vgui::CaptionGripPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksSnapRange
  D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
  D guard variable for vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D guard variable for vgui::CheckButton::GetKBMap()::s_pMap
@@ -2282,6 +2283,7 @@
  D vgui::CaptionGripPanel::GetMessageMap()::s_pMap
  D vgui::CaptionGripPanel::KB_ChainToMap()::chained
  D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksIsPointInCaptureRegion
+ D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hksSnapRange
  D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_x
  D vgui::CaptionGripPanel::RequestInfo(KeyValues*)::hks_y
  D vgui::CheckButton::ChainToAnimationMap()::chained

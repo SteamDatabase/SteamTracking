@@ -28,8 +28,8 @@
 			<Button id="SwitchToHDMIInput" class="SystemButton StreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); SwitchToHDMIInput()" selectionpos="0,3">
 				<Label text="#Quit_SwitchToHDMIInput" />
 			</Button>
-			<Panel class="HorizontalSpace NotLoggedInHidden StreamingHidden" />
-			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden StreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); MinimizeApp()" selectionpos="0,4">
+			<Panel class="HorizontalSpace NotLoggedInHidden NVStreamingHidden" />
+			<Button id="MinimizeBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="CloseModalDialog(); MinimizeApp()" selectionpos="0,4">
 				<Label id="MinimizeBigPictureLabel" text="#Quit_MinimizeBigPicture" />
 			</Button>
 			<Button id="QuitBigPicture" class="SystemButton NotLoggedInHidden NVStreamingHidden ExitButtons Button" onactivate="QuitApp()" selectionpos="0,5">

@@ -8,6 +8,6 @@
 		<Panel class="NotificationFrameConnected" />
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
 		<Label class="NotificationTwoLabelBodyLineOne" text="#Settings_RemoteClients" />
-		<Label class="NotificationTwoLabelBodyLineTwo" text="#Notification_StreamingStopped" />
+		<Label class="NotificationTwoLabelBodyLineTwo NotificationStyleTwoLabelBodyLineTwoWrap" text="#Notification_StreamingStopped" />
 	</Panel>
 </root>

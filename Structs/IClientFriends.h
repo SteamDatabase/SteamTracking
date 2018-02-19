@@ -204,6 +204,7 @@ public:
     virtual unknown_ret RequestFriendsWhoPlayGame(CGameID) = 0;
     virtual unknown_ret GetCountFriendsWhoPlayGame(CGameID) = 0;
     virtual unknown_ret GetFriendWhoPlaysGame(unsigned int, CGameID) = 0;
+    virtual unknown_ret GetCountFriendsInGame(CGameID) = 0;
     virtual unknown_ret SetPlayedWith(CSteamID) = 0;
     virtual unknown_ret RequestClanOfficerList(CSteamID) = 0;
     virtual unknown_ret GetClanOwner(CSteamID) = 0;
