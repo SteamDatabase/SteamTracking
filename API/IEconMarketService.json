@@ -50,6 +50,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Whether or not to wait until all listings have been canceled before returning the response"
+                },
+                {
+                    "name": "vac",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "This was in response to a VAC ban?"
                 }
             ]
         },
