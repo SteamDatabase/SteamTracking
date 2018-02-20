@@ -21,6 +21,9 @@ body.v6 .wishlist_header h2 {
 }
 
 .wishlist_row {
+	will-change: transform, top;
+	overflow:hidden;
+
 	display: flex;
 	position: absolute;
 	flex-direction: row;
@@ -54,6 +57,53 @@ body.v6 .wishlist_header h2 {
 	transition: margin 300ms
 }
 
+.compact .wishlist_row {
+	padding: 4px;
+	width: calc(100% - 8px);
+	margin-bottom: 4px;
+}
+.compact .wishlist_row .content {
+	position: relative;
+}
+.compact .wishlist_row .title {
+	display: block;
+	flex-grow: 1;
+	margin-bottom: 4px;
+	margin-top: 6px;
+}
+
+.compact .wishlist_row .capsule {
+	width: 162px;
+	height: 75px;
+	margin-right: 10px;
+}
+.compact .wishlist_row .lower_container {
+	margin-top: 0px;
+}
+
+.compact .wishlist_row .capsule img {
+	width: 162px;
+}
+.compact .lower_columns {
+	position: absolute;
+	top: 9px;
+	right: 8px;
+}
+.compact .wishlist_row .stats {
+	margin-top: 0px;
+}
+.compact .wishlist_row .tags,
+.compact .wishlist_row .platform_icons,
+.compact .wishlist_row .screenshots {
+	display: none;
+}
+
+.compact .wishlist_row .purchase_container {
+	position: absolute;
+	top: 33px;
+	right: 8px;
+}
+
 .wishlist_row .capsule .screenshots, .wishlist_row .capsule .screenshots > div {
 	position: absolute;
 	top: 0;
@@ -82,6 +132,7 @@ body.v6 .wishlist_header h2 {
 
 .wishlist_row .stats {
 	flex-grow: 1;
+	flex-shrink:1;
 	display: grid;
 	grid-template-columns: 140px auto;
 	grid-template-rows: auto;
@@ -102,9 +153,14 @@ body.v6 .wishlist_header h2 {
 .wishlist_row .delete:hover {
 	color: #d8dde2;
 }
+.wishlist_row .tags {
+	flex-shrink:1;
+}
 
 .wishlist_row .addedon {
 	margin-top: 5px;
+	white-space:nowrap;
+	flex-shrink:0;
 }
 
 
@@ -147,6 +203,7 @@ body.v6 .wishlist_header h2 {
 	padding: 2px;
 	display: flex;
 	height: 32px;
+	flex-shrink:0;
 }
 
 .wishlist_row .purchase_area a > span {
@@ -163,7 +220,6 @@ body.v6 .wishlist_header h2 {
 
 			display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-bottom: 8px;
 }
@@ -178,6 +234,11 @@ body.v6 .wishlist_header h2 {
 	width: 0px;
 	border-color: rgba(0,0,0,0);
 	transition: width 300ms, border-color 300ms;
+
+	-webkit-user-drag: none;
+	-moz-user-drag: none;
+	-ms-user-drag: none;
+	user-drag: none;
 
 }
 
@@ -257,21 +318,24 @@ body.v6 .wishlist_header h2 {
 	cursor: pointer;
 	height: 20px;
 	transition: background-color 300ms;
+	order: 10;
 }
 .wishlist .controls > div.search {
 	flex-grow: 1;
+	flex-shrink: 1;
 	text-align: right;
 	margin-right: 0;
 	padding-top: 0px;
 	padding-right: 0;
+	order:10;
 }
 
-.wishlist .controls > div.filter_tab.hover{
+.wishlist .controls div.filter_tab.hover{
 	background-color: #808a9c;
 	color: #000;
 }
 
-.wishlist .controls > div.filter_tab.hover > span {
+.wishlist .controls div.filter_tab.hover > span {
 	color: #000;
 
 }
@@ -303,10 +367,25 @@ body.v6 .wishlist_header h2 {
 	color: #fff;
 	padding: 5px 0;
 	cursor: pointer;
+	display: block;
 }
 
 .dropdown_container .item:hover {
 	color: #000;
+}
+
+.settings_tab img {
+	width: 16px;
+}
+
+.wishlist .controls div.settings_tab {
+	display: inline-block;
+	line-height: 25px;
+
+}
+
+.dropdown_spacer {
+	height: 15px;
 }
 
 .filter_section {
@@ -320,13 +399,13 @@ body.v6 .wishlist_header h2 {
 	width: calc(100% - 32px);
 	background-color: #808a9c;
 	padding: 30px;
-	margin-top: -9px;
+	margin-top: -16px;
 	z-index: 2;
 	pointer-events: none;
 
 }
 
-body.v6 .filter_section h3 {
+body.v6 .filter_section h3, body.v6 .category h3 {
 	text-transform: uppercase;
 	color: #222d3d;
 	font-size: 13px;
@@ -340,6 +419,21 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	margin: 2px 0;
 	line-height: 17px;
 	font-size: 12.5px;
+}
+
+#nothing_to_see_here {
+	text-align: center;
+	padding: 75px 0;
+}
+
+#nothing_to_see_here h2 {
+	color: #e5e5e5
+}
+
+#nothing_to_see_here p {
+	font-size: 12px;
+	color: #e5e5e5;
+	margin-top:8px;
 }
 
 .filter_section.hover {
@@ -375,11 +469,11 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	opacity: 1;
 }
 
-.wishlist .controls > div:hover {
+.wishlist .controls  div:hover {
 	color: #fff;
 }
 
-.wishlist .controls > div {
+.wishlist .controls  div {
 	padding: 10px 14px 8px 14px;
 	margin: 0px 15px 0px 0px;
 	color: #9099a1;
@@ -387,14 +481,14 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	white-space: nowrap;
-	user-select: none;
+
 }
 
-.wishlist .controls > div span,
+.wishlist .controls  div span,
 #tab_filters {
 	color: #fff;
 }
-.wishlist .controls > .filter_tab:hover {
+.wishlist .controls  .filter_tab:hover {
 	background: rgba(255,255,255,0.1);
 }
 
@@ -405,8 +499,10 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 }
 
 .wishlist_row .tags, .wishlist_row .addedon {
-	white-space: nowrap;
+
 	font-size: 11px;
+	overflow: hidden;
+	height: 19px;
 }
 
 .wishlist_row .tag {
@@ -473,7 +569,8 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 #wishlist_search {
 	padding: 7px 10px;
-	width: 275px;
+	width: calc( 100% - 70px);
+	box-sizing: border-box;
 	background-color: rgba(0,0,0,0.1);
 	border: 1px solid #000;
 	color: #fff;
@@ -503,6 +600,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	color: #fff;
 	font-size: 13px;
 	cursor: pointer;
+	user-select: none;
 
 }
 #filters_container > div:hover {
@@ -567,6 +665,14 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	padding: 0 3px
 }
 
+
+.wishlist_row .stats .value {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
 @media screen and (max-width: 910px)
 {
 	.wishlist_row .mid_container, .wishlist_row .lower_columns {
@@ -580,6 +686,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	.wishlist_row .capsule {
 		width: 25%;
 		flex-shrink: 0;
+		margin-right: 10px;
 	}
 
 	.wishlist_row .capsule img {
@@ -591,8 +698,9 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	}
 
 	.wishlist_row .platform_icons {
-		margin-top: -25px;
+		margin-top: -32px;
 		pointer-events: none;
+		margin-bottom: 15px;
 	}
 
 	.purchase_container .btn_medium.noicon {
@@ -609,18 +717,27 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 
 	/* Shrink margins since we're losing vertical space */
 	.wishlist_row .platform_icons {
-		margin-bottom: 4px;
+
 	}
 	.wishlist_row .title {
 		margin-bottom: 2px;
+		font-size: 18px;
 	}
 	.wishlist_row .stats {
 		margin-bottom: 3px;
+		display: flex;
+	}
+	.wishlist_row .stats .label {
+		display: none;
+	}
+	.wishlist_row .stats .value {
+		margin-right: 8px;
 	}
 
 	.wishlist_row {
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding: 8px;
+		width: calc(100% - 16px);
+		padding-bottom: 0px;
 	}
 
 	.wishlist .controls {
@@ -632,25 +749,64 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	}
 	.wishlist .controls > div.search {
 		text-align: left;
-		order: -1;
+		order: 5;
 	}
 
 
 	.filter_section .wrapper {
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.compact .wishlist_row .lower_columns {
+		position: absolute;
+		top: 50px;
+		left: 0px;
+	}
+	.compact .wishlist_row .title {
+		font-size: 18px;
+	}
+	.compact .wishlist_row .mid_container {
+		margin-top: -20px;
+	}
+	.compact .wishlist_row .stats {
+		margin-top: 0px;
+		margin-bottom: 25px;
+	}
 }
 
 @media screen and (max-width: 500px) {
-	.wishlist_row .capsule {
+	#wishlist_ctn:not(.compact) .wishlist_row .capsule {
 		display: none;
 	}
 
-	.sort_order .wishlist_row .content {
+	#wishlist_ctn.sort_order:not(.compact) .wishlist_row .content {
 		margin-left: 40px;
 	}
 
 
-	.wishlist_row .earlyaccess {
+	#wishlist_ctn:not(.compact) .wishlist_row .earlyaccess {
 		display: inline-block;
 	}
+
+	#wishlist_ctn.compact .wishlist_row .capsule img {
+		display: none;
+	}
+	#wishlist_ctn.compact .wishlist_row .capsule {
+		width: 0px;
+		height: 75px;
+	}
+
+	.compact .wishlist_row .title {
+		font-size: 15px;
+	}
+	.compact .wishlist_row .value.release_date {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.wishlist_row .title {
+		font-size: 15px;
+	}
+
 }

@@ -84,8 +84,12 @@ var CWishlistController = function()
 	window.addEventListener('resize', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnResize.bind(this));
 	//$elTarget.on('dragover', this.OnDragOver.bind(this));
-	$J('body').on('dragover touchmove', this.OnDragOver.bind(this));
-	document.body.addEventListener('drop', this.OnDrop.bind(this));
+	//$J('body').on('mouseover touchmove', this.OnDragOver.bind(this));
+
+	document.body.addEventListener('mousemove', this.OnDragOver.bind(this));
+	document.body.addEventListener('touchmove', this.OnDragOver.bind(this));
+
+	document.body.addEventListener('mouseup', this.OnDrop.bind(this));
 	document.body.addEventListener('touchend', this.OnDrop.bind(this));
 
 	// Add price brackets, built in JS since they vary by cc
@@ -230,7 +234,7 @@ CWishlistController.prototype.BuildElements = function()
 
 		$J( '#wishlist_ctn' ).addClass ( 'sorting' );
 
-		//e.preventDefault();
+		e.preventDefault();
 		return false;
 	}
 
@@ -292,7 +296,7 @@ CWishlistController.prototype.BuildElements = function()
 
 			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && rgAppInfo['subs'][0].price > 0 )
 			{
-				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/ico\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
+				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"http:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
 				.replace(/%2\$s/g,g_sessionID)
 				.replace(/%3\$s/g,GStoreItemData.rgNavParams.wishlist_cart)
 				.replace(/%4\$s/g,strInCartLabel);
@@ -306,7 +310,7 @@ CWishlistController.prototype.BuildElements = function()
 				.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
 			}
 			else
-				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_info.png"></span></a></div>';
+				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
 
 
 
@@ -339,7 +343,7 @@ CWishlistController.prototype.BuildElements = function()
 			{
 				$J('.hover_handle img',$el).css({'display':'none'})
 			} else {
-				$J('.hover_handle',$el)[0].addEventListener('dragstart', fnDragStart);
+				$J('.hover_handle',$el)[0].addEventListener('mousedown', fnDragStart);
 				$J('.hover_handle img',$el)[0].addEventListener('touchstart', fnDragStart);
 			}
 
@@ -364,6 +368,7 @@ CWishlistController.prototype.BuildElements = function()
 			_this.LoadSettings();
 			_this.Update();
 			$J('#throbber').hide();
+			$J('#total_num_games').text( Object.keys(_this.rgElements).length )
 		}
 	}
 
@@ -376,7 +381,7 @@ CWishlistController.prototype.SetFilterString = function()
 {
 	var strFilterString = '';
 	$J.each(this.rgFilterSettings, function(key, value) {
-		if( !key || key == 'last_sort')
+		if( !key || key == 'last_sort' || key == 'view')
 			return;
 
 		if( strFilterString )
@@ -407,12 +412,24 @@ CWishlistController.prototype.LoadSettings = function()
 		this.rgFilterSettings = lsValue;
 	}
 
+	if( lsValue != null )
+	{
+		this.rgFilterSettings.view = lsValue.view;
+	}
+
+
+
 	if( this.rgFilterSettings.sort )
 		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
 	if( this.rgFilterSettings.type )
 		this.SetDropdownLabel('type', this.rgFilterSettings.type );
 	if( this.rgFilterSettings.term )
 		$J('#wishlist_search').val(this.rgFilterSettings.term);
+	if( this.rgFilterSettings.view )
+	{
+		this.SetViewMode ( this.rgFilterSettings.view );
+		$J('#viewmode_'+V_EscapeHTML(  this.rgFilterSettings.view )).attr('checked',true);
+	}
 
 }
 
@@ -493,10 +510,8 @@ CWishlistController.prototype.OnDragOver = function(e)
 	if( this.nDragAppId == -1 )
 		return;
 
-	var nPageY = e.originalEvent.touches ? e.originalEvent.touches[0].pageY : e.originalEvent.pageY;
 
-	if( e.originalEvent.dataTransfer )
-		e.originalEvent.dataTransfer.dropEffect = "move";
+	var nPageY = e.touches ? e.touches[0].pageY : e.pageY;
 
 	var nPosition = Math.floor( ( nPageY / this.nRowHeight ) - ( this.nHeaderOffset / this.nRowHeight ) );
 
@@ -504,7 +519,8 @@ CWishlistController.prototype.OnDragOver = function(e)
 		nPosition = 0;
 
 
-	$J(this.elDragTarget).css({'top': nPageY - this.nHeaderOffset - this.nRowHeight / 2});
+	this.elDragTarget.style.top = ( nPageY - this.nHeaderOffset - this.nRowHeight / 2 ) + "px"
+
 
 
 	if( this.nLastPosition != nPosition )
@@ -631,6 +647,23 @@ CWishlistController.prototype.SetFilterFromDropdown = function( strFilter, elSou
 	this.Update();
 	this.SaveSettings();
 }
+CWishlistController.prototype.SetViewMode = function( strMode, elSource )
+{
+	if( elSource && !elSource.checked )
+		return;
+
+	if( strMode == "compact")
+		this.elContainer.addClass('compact');
+	else
+		this.elContainer.removeClass('compact');
+
+	this.rgFilterSettings.view = strMode;
+
+	this.SaveSettings();
+
+	this.OnResize();
+
+}
 CWishlistController.prototype.SetSection = function( strSection )
 {
 	$J('.filter_tab').removeClass('selected');
@@ -751,11 +784,19 @@ CWishlistController.prototype.Update = function( bForceSort )
 	this.UpdateFilterDisplay();
 	this.OnScroll();
 	this.OnResize();
+
+	if( this.rgVisibleApps.length == 0 )
+	{
+		$J('#nothing_to_see_here').show();
+	} else {
+		$J('#nothing_to_see_here').hide();
+		console.log(this.rgVisibleApps.length)
+	}
 }
 
 CWishlistController.prototype.UpdateFilterDisplay = function()
 {
-	this.rgIgnoreTagFields = ['sort', 'last_sort','show', 'type', 'term'];
+	this.rgIgnoreTagFields = ['sort', 'last_sort','show', 'type', 'term', 'view'];
 
 	var _this = this;
 	var $elContainer = $J('#filters_container');
