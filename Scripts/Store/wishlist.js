@@ -203,9 +203,7 @@ CWishlistController.prototype.BuildElements = function()
 	{
 		if( e.target.classList.contains('order_input') )
 		{
-			e.preventDefault ();
-			event.stopPropagation();
-			return false;
+			return;
 		}
 
 
@@ -254,6 +252,7 @@ CWishlistController.prototype.BuildElements = function()
 	{
 		$(this).select();
 		e.preventDefault();
+		return false;
 	}
 
 	// Build elements
