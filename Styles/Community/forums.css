@@ -437,12 +437,14 @@ textarea.forumtopic_reply_textarea {
 	margin: 0 4px;
 }
 
-.commentthread_moderatormessages.unread {
-	background-color: #a55b13;
+.commentthread_moderatormessages.unread, .forum_banuser_header.warning, .infractions_flexbox_history > .warning {
+	background-color: #7f460f;
+	color: #e57e1c;
 }
 
-.commentthread_moderatormessages.unread_bans {
-	background-color: #b33b32;
+.commentthread_moderatormessages.unread_bans, .forum_banuser_header.ban, .infractions_flexbox_history > .ban {
+	background-color: #842c25;
+	color: #fb5346;
 }
 
 .commentthread_moderatormessages img {
@@ -1360,10 +1362,77 @@ table.forum_auditlog tr.audit_row_secondary {
 }
 
 .warn_user_text:disabled {
-	color: #8e8e8e;
+	color: #8f98a0;
+}
+
+.forum_banuser_header {
+	padding: 15px;
+	display: block;
+	font-size: 14px;
+	color: #fff;
+}
+
+.forum_banuser_header > .playername {
+	font-weight: bold;
+}
+
+.forum_banuser_infractions {
+	background: rgba(0, 0, 0, .3);
+	padding: 10px;
+	margin-bottom: 14px;
+}
+
+.forum_banuser_infractions > .infractions_flexbox_header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.forum_banuser_infractions > .infractions_flexbox_history {
+	display: flex;
+}
+
+.infractions_flexbox_history > div {
+	padding: 5px;
+	border-radius: 3px;
+	color: #fff;
+	margin-right: 10px;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.infractions_flexbox_history {
+	margin-top: 8px;
+}
+
+.infractions_flexbox_history > .note {
+	background: #5b5b5b;
+	color: #cbcbcb;
+}
+
+.doc_link {
+	display: block;
+	margin-bottom: -45px;
+	margin-top: 45px;
+	
+}
+.doc_link a {
+	display: inline;
+	border-bottom: 1px dotted #ffffff;
+}
+a.view_messages {
+	border-bottom: 1px dotted #ffffff;
+}
+.doc_link a:hover,
+a.view_messages:hover {
+	color: #66c0f4;
+	border-bottom: 1px dotted #66c0f4;
 }
 
 .forum_banuser_subheader {
+	margin: 15px 0 15px 0;
+}
+
+#forum_banuser_form {
 	margin-bottom: 15px;
 }
 

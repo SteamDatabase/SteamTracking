@@ -472,8 +472,24 @@ pre.results {
 	width: 1004px;
 }
 
-.gameimagepreview .broadcast_side_panel {
-	width: 160px;
+.partner_broadcast_side_panel {
+	width: 155px;
+	height: 337px; /* Flush with the bottom */
+	display: inline-block;
+}
+.partner_broadcast_container
+{
+	padding: 15px;
+	letter-spacing: 1px;
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);	width: 910px
+}
+
+.partner_broadcast_table {
+	border-spacing: 0px;
+}
+
+.partner_broadcast_col {
+	padding: 0px;
 }
 
 #screenshots {
@@ -2991,4 +3007,13 @@ span.new {
 .broadcaster_id_panel{
 	display: flex;
 	justify-content: space-between;
+}
+
+.broadcast_template_container{
+	display: flex;
+	flex-direction: column;
+}
+.broadcast_template_radio {
+	display: flex;
+	flex-direction: row;
 }

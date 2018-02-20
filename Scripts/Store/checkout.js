@@ -3037,11 +3037,16 @@ function UpdatePaymentInfoForm()
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
-		else if ( method.value == 'bitcoin' || method == 'cafefunded' )
+		else if ( method.value == 'bitcoin' )
 		{
 						bShowAddressForm = false || $('billing_country').value == 'US';
 			bShowCountryVerification = $('billing_country').value != 'US';
-		}		
+		}
+		else if ( method.value == 'cafefunded' )
+		{
+			bShowAddressForm = false;
+			bShowCountryVerification = true;
+		}	
 		else if ( method.value == 'wechat' )
 		{
 			bShowAddressForm = false;
@@ -4666,6 +4671,12 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 
 				default:
 				{
+					if ( ePaymentType == 122 && g_winExternal )
+					{
+						g_winExternal.close();
+						g_winExternal = false;
+					}
+
 					switch ( eErrorDetail )
 					{
 						default:

@@ -142,6 +142,7 @@ GHomepage = {
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
 			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
+			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
 			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
 			GHomepage.bHideAdultContentViolence = rgParams.bHideAdultContentViolence || false;
 			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || false;
@@ -247,7 +248,7 @@ GHomepage = {
 
 		// CURATORS ( Must be initialized before the main cluster)
 		try {
-			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData );
+			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData, GHomepage.nNumIgnoredCurators );
 		} catch( e ) { OnHomepageException(e); }
 
 
@@ -1773,11 +1774,13 @@ function GetScreenshotURL( appid, filename, sizeStr )
 GSteamCurators = {
 	rgAppsRecommendedByCurators: [],
 	rgSteamCurators: [],
+	nNumIgnoredCurators: 0,
 
-	Init: function( rgSteamCurators, rgApps )
+	Init: function( rgSteamCurators, rgApps, nNumIgnoredCurators )
 	{
 		GSteamCurators.rgSteamCurators = rgSteamCurators;
 		GSteamCurators.rgAppsRecommendedByCurators = rgApps;
+		GSteamCurators.nNumIgnoredCurators = nNumIgnoredCurators;
 
 		GSteamCurators.Render();
 	},
@@ -2107,10 +2110,14 @@ GSteamCurators = {
 				$Curators.append( $Item );
 			}
 		}
-		else
+		else if ( GSteamCurators.nNumIgnoredCurators == 0 )
 		{
 			$J('#steam_curators_not_empty').hide();
 			$J('#steam_curators_empty').show();
+		}
+		else
+		{
+			$J('#steam_curators_not_empty').show();
 		}
 	}
 };

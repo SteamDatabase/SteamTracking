@@ -17,9 +17,10 @@
 
 		}
 
-/* recommended */
-.home_smallcaps.medium .store_capsule {
-	width: 229px;
+/* reviewed app */
+.reviewed_app
+{
+	margin-top: -100px;
 }
 
 /* filters */
@@ -49,25 +50,18 @@
 	margin-left: 8px;
 }
 
-/* right column */
-.curators_searchbox,
-.steam_curators_expand_link,
-.explanation_box {
-	margin-bottom: 10px;
-}
-
-
 /* search */
 
-.curators_searchbox
+.navigation_bar > .curators_searchbox
 {
 	background-color: rgba( 0, 0, 0, 0.4);
 	border-radius: 4px;
 	border: 1px solid black;
 	color: #9099a1;
 	box-shadow: 1px 1px 0px rgba( 103, 121, 147, 0.5 );
-	height: 30px;
 	position: relative;
+	margin-left: auto;
+	height: 14px;
 }
 
 .curators_search_keywords
@@ -75,9 +69,6 @@
 	border: none;
 	background-color: transparent;
 	color: #9099a1;
-	margin-top: 7px;
-	margin-left: 8px;
-	width: 275px;
 	outline: none;
 	font-style: italic;
 }
@@ -89,192 +80,6 @@
 	top: 7px;
 }
 
-/* explanation */
-
-.explanation_box
-{
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
-
-			padding: 15px;
-	border-radius: 4px;
-	background: rgba( 0, 0, 0, 0.3 );
-}
-.explanation_title
-{
-	font-size: 15px;
-	color: #abdaf4;
-}
-
-.explanation_box p
-{
-	font-size: 13px;
-	padding-top: 10px;
-	color: #8f98a0;
-}
-.explanation_box .question
-{
-	color: #3b6e8c;
-	font-size: 15px;
-	padding-top: 20px;
-}
-
-
-/* actual curators */
-
-.steam_curator_header_row
-{
-	padding: 5px;
-	padding-right: 20px;
-	border: 1px solid transparent;
-	background: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 4px;
-	text-transform: uppercase;
-	font-size: 10px;
-	color: #b0aeac;
-}
-
-.steam_curator_row_ctn
-{
-	position: relative;
-	padding-right: 20px;
-	border: 1px solid transparent;
-	background: rgba( 0, 0, 0, 0.2 );
-	margin-bottom: 4px;
-}
-
-a.steam_curator_row
-{
-	display: block;
-	position: relative;
-	height: 110px;
-	overflow: hidden;
-	text-decoration: none;
-}
-a.steam_curator_row:hover
-{
-	text-decoration: none;
-	border-color: rgba( 139, 185, 224, 0.2 );
-}
-
-.following_controls
-{
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}
-.num_followers
-{
-	float: right;
-	padding-top: 20px;
-}
-
-
-
-.steam_curator_avatar
-{
-	float: left;
-	margin-right: 10px;
-	width: 110px;
-}
-.curator_info_ctn.tagline {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 124px;
-}
-.curator_info_ctn.has_review {
-	position: absolute;
-	top: 30px;
-	left: 120px;
-}
-.steam_curator_name
-{
-	font-size: 16px;
-	line-height: 17px;
-    color: #fff;
-	letter-spacing: 1px;
-}
-.steam_curator_recommending
-{
-	padding-top: 5px;
-	text-transform: uppercase;
-    color: #61686D;
-    font-size: 9px;
-	line-height: 11px;
-}
-.steam_curator_desc
-{
-    font-size: 13px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-			line-height: 16px;
-    color: #8F98A0;
-    overflow: hidden;
-    max-width: 390px;
-	margin-right: 95px;
-}
-.recommendation_desc {
-	font-size: 13px;
-	line-height: 16px;
-	color: #c6d4df;
-	font-family: "Motiva Sans", Sans-serif;
-	font-weight: 300;
-	font-style: italic;
-	padding-top: 5px;
-	max-width: 390px;
-	margin-right: 95px;
-}
-.steam_curator_recommended_game_names {
-	padding-top: 10px;
-	max-width: 400px;
-	color: #abdaf4;
-	font-size: 11px;
-}
-
-.steam_curators_recommending_text
-{
-	padding-top: 10px;
-	text-transform: uppercase;
-	color: #61686D;
-	font-size: 9px;
-}
-.steam_curators_recommending
-{
-	padding-top: 5px;
-}
-
-.steam_curator_for_app
-{
-	cursor: pointer;
-	float: left;
-	box-shadow: none;
-	margin-right: 2px;
-	border: solid 1px rgba( 0, 0, 0, 0 );
-
-	width: 48px;
-	height: 48px;
-}
-.steam_curator_for_app a,
-.steam_curator_for_app img {
-	width: 48px;
-	height: 48px;
-	color: #acdbf5;
-}
-.steam_curator_for_app:hover {
-	border: solid 1px #67C1F5;
-}
-.steam_curator_for_app.show_more
-{
-	text-align: center;
-	width: 48px;
-	font-size: 16px;
-	line-height: 47px;
-	color: #acdbf5;
-	background-color: rgba(20,31,44,0.4);
-	box-shadow: none;
-}
 
 /* paging controls */
 .Curators_paging
@@ -361,42 +166,64 @@ a.pagelink:hover {
 	color: #ffffff;
 }
 
-.store_capsule_frame.recently_recommended {
-	margin-bottom: 30px;
-}
+/* top page */
 body.v6 .page_content.curators.header {
 	margin-bottom: 35px;
 }
-.store_capsule_frame.curators_browse > p {
-	color: #abdaf4;
-	margin: 0 0 10px;
-	font-size: 14px;
-	font-family: "Motiva Sans", Sans-serif;
-	font-weight: 300;
-	margin-top: -6px;
+
+/* new */
+
+.light_container.bezel {
+	background: 	linear-gradient( to bottom, rgba(39, 61, 82, 1) 5%, rgba(39, 61, 82, 0) 50%  ),
+	linear-gradient( to right, rgba(27, 40, 53, 0) 10%, rgba(27, 40, 53, 0.95) 25%, rgba(27, 40, 53, 0.95) 75%, rgba(27, 40, 53, 0) 90%  ) 1800px 90%;
+	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.6);
+	background-repeat: no-repeat;
+	background-size: 100% 500px, 2000px 100%;
+
+	background-position: top center;
+
 }
 
-/* for curators reviewing a product */
-.recommendation_stats
-{
-	padding: 14px 14px 0px 14px;
-	color: #62696e;
-	font-size: 11px;
-	margin-bottom: 10px;
-}
-.recommendation_stat
-{
-	padding-left: 10px;
-	float: right;
+.navigation_bar {
+	display: flex;
+	border-bottom: 1px solid #172531;
+	margin-bottom: 25px;
+	margin-top: -5px;
 }
 
-.recommendation_type_ctn img {
-	padding-right: 5px;
+.navigation_bar > * {
+	padding: 8px 20px;
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #fff;
+	margin: 7px 0 7px 30px;
+	letter-spacing: 2px;
+	white-space: nowrap;
 }
 
-.recommendation_readmore {
-	padding: 0px 0px 7px 14px;
-	bottom: 0px;
-	position: absolute;
-	font-size: 11px;
+.navigation_bar > a:hover {
+	background-color: rgba(255,255,255,0.1);
+}
+
+.navigation_bar > a.selected {
+	background-color: #fff;
+	color: #273d52;
+}
+
+.navigation_bar > a:first-child {
+	margin-left: 0;
+}
+.navigation_bar > div.report {
+	flex-grow: 1;
+	text-align: right;
+	padding: 6px 0px 0px 0px;
+}
+
+.navigation_bar > div.report a img {
+	width: 16px;
+	height: 16px;
+	opacity: 0.5;
+}
+.navigation_bar > div.report a:hover img {
+	opacity: 1;
 }

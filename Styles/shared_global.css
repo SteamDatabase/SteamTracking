@@ -798,7 +798,8 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 }
 
 .newmodal_content {
-	background: -webkit-linear-gradient( top, #252b33 5%, #1d1d1d 25%);background: linear-gradient( to bottom, #252b33 5%, #1d1d1d 25%);	background-color: #1d1d1d;
+
+	background-color: #232b34;
 
 	overflow: auto;
 	word-wrap: break-word;

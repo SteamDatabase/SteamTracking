@@ -50,6 +50,13 @@ function FollowCurator( clanID, bFollow )
 	return false;
 }
 
+function IgnoreCurator( clanID, bIgnore )
+{
+	IgnoreCuratorWithCallback( clanID, bIgnore, function( bIgnored ){
+		$J( "#IgnoreControls" ).toggleClass( "ignored", bIgnored );
+	});
+}
+
 function InitSearchFilters()
 {
 	var g_rgTabs = [];

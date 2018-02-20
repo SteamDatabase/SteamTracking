@@ -2379,3 +2379,28 @@ function FollowCuratorWithCallback( clanID, bFollow, onComplete )
 	return false;
 }
 
+function IgnoreCuratorWithCallback( clanID, bIgnore, onComplete )
+{
+	var bHaveUser = ( g_AccountID != 0 );
+	if ( !bHaveUser )
+	{
+		ShowAlertDialog("Please log in", "You must be logged in before you can ignore a Steam Curator");
+		return;
+	}
+
+	$J.post(
+		'http://store.steampowered.com/curators/ajaxignore',
+		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'ignore' : bIgnore ? 1 : 0 },
+		function( data )
+		{
+			onComplete( bIgnore );
+		},
+		'json'
+	).fail( function()
+		{
+			ShowAlertDialog( 'Error', 'There was a problem trying to ignore the Steam Curator.' );
+		}
+	);
+	return false;
+}
+

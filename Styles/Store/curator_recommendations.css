@@ -49,17 +49,22 @@ body.v6 {
 .follow_btn {
 	margin-right: 6px;
 }
+.ignore_btn {
+}
 
-.follow_btn .following span {
+.follow_btn .following span,
+.ignore_btn .following span {
 	border: 1px solid #4e600b;
 	color: #89ad05;
 }
-.follow_btn .following img {
+.follow_btn .following img,
+.ignore_btn .ignoring img {
 	position: relative;
 	top: 2px;
 	left: -5px;
 	opacity: 0.8;
 }
+
 
 
 body.v6 h2 {
@@ -321,10 +326,15 @@ body.v6 h2.curator_name a:hover {
 	color: #66c0f4;
 }
 
-.follow_controls {
+.follow_controls,
+.ignore_controls.ignored {
 	display: inline-flex;
 	margin-top: 6px;
 	background: rgba( 0, 0, 0, 0.2);
+}
+
+.ignore_controls {
+	display: none;
 }
 
 body.v6 .page_desc {

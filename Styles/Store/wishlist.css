@@ -70,6 +70,8 @@ body.v6 .wishlist_header h2 {
 	flex-grow: 1;
 	margin-bottom: 4px;
 	margin-top: 6px;
+	max-width: 500px;
+	font-size: 18px;
 }
 
 .compact .wishlist_row .capsule {
@@ -102,6 +104,10 @@ body.v6 .wishlist_header h2 {
 	position: absolute;
 	top: 33px;
 	right: 8px;
+}
+.compact .wishlist_row .purchase_container .coming_soon_link {
+	margin-top: 11px;
+	display: block;
 }
 
 .wishlist_row .capsule .screenshots, .wishlist_row .capsule .screenshots > div {
@@ -513,6 +519,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	color: #8f98a0;
 	border-radius: 3px;
 	cursor: pointer;
+	height: 13px;
 }
 .wishlist_row .tag:hover {
 	background: rgba(255,255,255,0.1);
@@ -670,6 +677,7 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	max-width: 250px;
 }
 
 
@@ -763,7 +771,8 @@ body.v6 .filter_section label, body.v6 .filter_section input {
 		left: 0px;
 	}
 	.compact .wishlist_row .title {
-		font-size: 18px;
+		font-size: 17px;
+		max-width: 100%;
 	}
 	.compact .wishlist_row .mid_container {
 		margin-top: -20px;
