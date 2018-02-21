@@ -1389,19 +1389,16 @@ table.forum_auditlog tr.audit_row_secondary {
 
 .forum_banuser_infractions > .infractions_flexbox_history {
 	display: flex;
+	flex-flow: wrap;
 }
 
 .infractions_flexbox_history > div {
 	padding: 5px;
 	border-radius: 3px;
 	color: #fff;
-	margin-right: 10px;
+	margin: 8px 10px 0 0;
 	font-size: 11px;
 	text-transform: uppercase;
-}
-
-.infractions_flexbox_history {
-	margin-top: 8px;
 }
 
 .infractions_flexbox_history > .note {
@@ -1428,7 +1425,7 @@ a.view_messages:hover {
 	border-bottom: 1px dotted #66c0f4;
 }
 
-.forum_banuser_subheader {
+.forum_banuser_row_margin {
 	margin: 15px 0 15px 0;
 }
 
@@ -1993,6 +1990,14 @@ h2.forum_modal_detailtitle {
 	.responsive_tab_ctn.forumselector .formselector_select_ctn select {
 		width: 99%;
 	}
+}
+
+@media screen and (max-width: 910px)
+{
+	.doc_link {
+		margin-bottom: 0;
+	}
+
 }
 
 .private_message_dialog_instructions
