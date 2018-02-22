@@ -103,3 +103,11 @@
 	padding: 8px;
 	font-size: 16px;
 }
+
+.ssa_desc {
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			color: #66c0f4;
+}
