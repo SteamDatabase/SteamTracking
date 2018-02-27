@@ -368,16 +368,22 @@ div#news_search {
 
 .newsPostBlock .body h2 {
 	margin-top: 10px;
-	margin-bottom: -10px;
+	margin-bottom: 4px;
+}
+
+.newsPostBlock .body h3 {
+	font-family: "Motiva Sans", Sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	color: #67c1f5;
 }
 
 .body img {
-	float: left;
 	clear: both;
 	margin-right: 12px;
     margin-top: 8px;
 	border-style: none;
-	width: 224px;
+	max-width: 670px;
 }
 .steam_community_announcements .body img {
 	float: none;
@@ -466,8 +472,13 @@ div.autocomplete ul li.selected {
 	text-align:center;
 }
 
-.shacknews .body p {
-	margin-top: 17px;
+.newsPostBlock .body p {
+	margin-bottom: 17px;
+}
+.newsPostBlock hr {
+	border: 0;
+	border-bottom: 1px dashed #c6d4df;
+	background: transparent;
 }
 
 .shacknews div.focalbox img {
@@ -483,6 +494,10 @@ div.autocomplete ul li.selected {
 	float:none;
 	margin:0;
 	padding:0;
+}
+
+.kotaku .body p {
+	margin-bottom: 0px;
 }
 
 .pcgamer .body img {

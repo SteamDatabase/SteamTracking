@@ -3853,5 +3853,24 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	vertical-align: text-top;
 }
 
+.curator_ignored_all_recommended .description {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			background: rgba(0,0,0,0.4);
+	padding: 16px;
+	color: #8f98a0;
+	font-size: 12px;
+	line-height: 16px;
+}
+.curator_ignored_all_recommended a {
+	color: #8f98a0;
+	text-decoration: underline;
+}
+.curator_ignored_all_recommended a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
 
 /* END Store curator capsule */

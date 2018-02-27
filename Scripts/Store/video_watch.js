@@ -168,6 +168,8 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'mediaelementerror.VideoWatchEvents', function( event, nCode ) { _watch.OnPlayerMediaElementError( nCode ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'drmerrordownload.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMDownloadError( description ); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerror_limit.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMLimitError( description ); } );
+	$J( this.m_elVideoPlayer ).on( 'drmerror_vod_limit.VideoWatchEvents', function( event, description ) { _watch.OnPlayerDRMVODLimitError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'hdcperror.VideoWatchEvents', function( event, description ) { _watch.OnPlayerHDCPError( description ); } );
 	$J( this.m_elVideoPlayer ).on( 'logevent.VideoWatchEvents', function( e, strEventName, strEventDesc ) { _watch.OnLogEventToServer( strEventName, strEventDesc ); } );
 	$J( this.m_elVideoPlayer ).on( 'waitingforwidevine.VideoWatchEvents', function() { _watch.SetVideoLoadingText( 'Retrieving additional components required for playback.<br><br>This is a one-time process and may take a few minutes to complete.' ); } );
@@ -294,6 +296,18 @@ CVideoWatch.prototype.OnPlayerDRMDownloadError = function( description )
 	{
 		this.ShowVideoError( 'You must update your version of the Steam client to watch this video.<br><br><a href="https://support.steampowered.com/kb_article.php?ref=8699-OASD-1871">Visit the FAQ</a> for more information on resolving this issue.' );
 	}
+}
+
+CVideoWatch.prototype.OnPlayerDRMLimitError = function( description )
+{
+	this.ShowVideoError( 'There are too many devices on this Steam account attempting to stream videos at this time.<br><br>Please try again in a few minutes.' );
+	this.OnLogEventToServer( 'DRM Limit Error', description );
+}
+
+CVideoWatch.prototype.OnPlayerDRMVODLimitError = function( description )
+{
+	this.ShowVideoError( 'This video rental is being streamed to another device.<br><br>Video rentals can only be accessed on one device at a time.<br><br>Please try again in a few minutes.' );
+	this.OnLogEventToServer( 'DRM VOD Limit Error', description );
 }
 
 CVideoWatch.prototype.OnPlayerHDCPError = function( description )
