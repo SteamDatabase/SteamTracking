@@ -361,7 +361,15 @@ function AnimateSubmitPaymentInfoButton()
 {
 	try 
 	{
-						if ( !g_bInitTransactionCallRunning && !g_bGetFinalPriceRunning && !g_bFinalizeTransactionInProgress && !g_bPollingForTransactionStatus )
+						if ( $J('#paypal-button').is(":visible") )
+		{
+			$J('#submit_payment_info_btn').hide();
+			$J('#submit_payment_info_btn_in_progress').hide();
+			g_bAnimatingSubmitButtonCurrently = false;
+			return;
+		}
+		
+		if ( !g_bInitTransactionCallRunning && !g_bGetFinalPriceRunning && !g_bFinalizeTransactionInProgress && !g_bPollingForTransactionStatus )
 		{
 			$J('#submit_payment_info_btn').show();
 			$J('#submit_payment_info_btn_in_progress').hide();
@@ -754,6 +762,9 @@ function OnInitializeTransactionSuccess( result )
 				$('transaction_id').value = result.transid;
 		var method = $('payment_method');
 		
+		$J('#submit_payment_info_btn').show();
+		$J('#paypal-button').hide();
+		
 				if ( result.paymentmethod == 4 && result.transactionprovider != 5 && method.value != 'storedpaypal' )
 		{
 									
@@ -775,9 +786,52 @@ function OnInitializeTransactionSuccess( result )
 					
 			$('paypaltoken').value = result.paypaltoken;
 			$('external_payment_processor_notice').innerHTML = 'PayPal transactions are authorized through the PayPal web site. Click the button below to open a new web browser window to initiate the transaction.';
-			$('submit_payment_info_btn').href = "javascript:PerformPayPalAuthorization();";
-			$( 'payment_info_form' ).onsubmit = function() { PerformPayPalAuthorization(); return false; };
-			SetButtonInnerHtml('submit_payment_info_btn', 'Begin PayPal Purchase' );
+			
+			if ( false || !g_bUseNewPayPalCheckout )
+			{
+				$('submit_payment_info_btn').href = "javascript:PerformPayPalAuthorization();";
+				$( 'payment_info_form' ).onsubmit = function() { PerformPayPalAuthorization(); return false; };
+				SetButtonInnerHtml('submit_payment_info_btn', 'Begin PayPal Purchase' );
+			}
+			else
+			{
+				$J('#submit_payment_info_btn').hide();
+				$J('#submit_payment_info_btn_in_progress').hide();				
+				$J('#paypal-button').html('');
+				
+				paypal.Button.render({
+					env: 'production',
+
+					commit: true, // Show a 'Pay Now' button
+
+					style: {
+					color: 'gold',
+					shape: 'rect',
+					size: 'small',
+					label: 'paypal',
+					tagline: false
+					},
+
+					payment: function(data, actions) {
+					g_bPayPalAuthInFlight = true;
+					return $J('#paypaltoken').val();
+					},
+
+					onAuthorize: function(data, actions) {
+					OnPayPalSuccess( $J('#transaction_id').val() );
+					},
+
+					onCancel: function(data, actions) {
+					OnPayPalCancel( $J('#transaction_id').val() );
+					},
+
+					onError: function(err) {
+					OnPayPalCancel( $J('transaction_id').val() );
+					}
+				}, '#paypal-button');
+				
+				$J('#paypal-button').show();
+			}
 			
 			$J('#payment_method_previous_button').hide();
 			
@@ -942,7 +996,10 @@ function OnPayPalSuccess( gidTransID )
 {
 		if ( gidTransID && $('transaction_id').value != gidTransID )
 		return;
-	
+		
+	$J('#submit_payment_info_btn').show();
+	$J('#paypal-button').hide();		
+
 		if ( $('is_external_finalize_transaction').value == 1 )
 	{
 				if ( g_bPollingForTransactionStatus )
@@ -1032,6 +1089,9 @@ function OnPayPalCancel( gidTransID )
 		if ( gidTransID && $('transaction_id').value != gidTransID )
 		return;
 
+	$J('#payment_method_previous_button').show();
+	$J('#paypal-button').hide();
+	
 	HandleFinalizeTransactionFailure( 4, 0, false, '' );
 	return true;
 }
