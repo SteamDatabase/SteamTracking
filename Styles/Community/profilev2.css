@@ -897,6 +897,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 	padding-left: 12px;
 	padding-right: 12px;
+
+	cursor: pointer;
 }
 
 .favoritegroup_stats.showcase_stats_row {

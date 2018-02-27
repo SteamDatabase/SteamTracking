@@ -650,7 +650,7 @@ CInventory.prototype.AddInventoryData = function( data )
 			this.LayoutPages();
 			this.show();
 		}
-		else if ( g_ActiveInventory.m_appid == this.m_appid && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
+		else if ( g_ActiveInventory && g_ActiveInventory.m_appid == this.m_appid && g_ActiveInventory.contextid == APPWIDE_CONTEXT )
 		{
 			g_ActiveInventory.m_bNeedsRepagination = true;
 			g_ActiveInventory.LayoutPages();
@@ -713,11 +713,21 @@ CInventory.prototype.MakeElementsDraggable = function()
 {
 	for ( var currencyid in this.m_rgCurrencies )
 	{
+		if ( !this.m_rgCurrencies.hasOwnProperty( currencyid ) )
+		{
+			continue;
+		}
+
 		var asset = this.m_rgCurrencies[currencyid];
 		MakeCurrencyDraggable( asset.element );
 	}
 	for ( var assetid in this.m_rgAssets )
 	{
+		if ( !this.m_rgAssets.hasOwnProperty( assetid ) )
+		{
+			continue;
+		}
+
 		var asset = this.m_rgAssets[assetid];
 		if ( asset.is_stackable )
 		{
@@ -2318,14 +2328,18 @@ var CUser = Class.create( {
 
 		var elInventory = inventory.getInventoryElement();
 		elInventory.hide();
-		$('inventories').insert( elInventory );
 
-		var elTags = inventory.getTagContainer();
-		var elTagHolder = $( 'filter_options' );
-		if( elTagHolder && elTags )
+		if ( $('inventories') )
 		{
-			elTagHolder.insert( elTags );
-			elTagHolder.addClassName( 'filter_collapsed' );
+			$('inventories').insert( elInventory );
+
+			var elTags = inventory.getTagContainer();
+			var elTagHolder = $( 'filter_options' );
+			if ( elTagHolder && elTags )
+			{
+				elTagHolder.insert( elTags );
+				elTagHolder.addClassName( 'filter_collapsed' );
+			}
 		}
 	},
 

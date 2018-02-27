@@ -1681,7 +1681,20 @@ img.dynamiclink_sketchfab_play_overlay_image
 	opacity: 0.05;
 }
 
-
+a.ugc.app_has_adult_content::after
+{
+	content: "";
+	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+a.ugc.app_has_adult_content.dynamiclink_box::after
+{
+	width: 88px;
+}
 
 
 .adult_content_age_gate {

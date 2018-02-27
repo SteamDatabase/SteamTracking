@@ -82,6 +82,37 @@ Steam = {
 };
 
 
+function OpenFriendChat( steamid, accountid )
+{
+	if ( typeof ClientConnectionAPI !== 'undefined' )
+	{
+		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
+			if ( !bSuccess )
+				LaunchWebChat( { friend: accountid } );
+		});
+	}
+	else
+	{
+		LaunchWebChat( { friend: accountid } );
+	}
+}
+
+function OpenGroupChat( steamid )
+{
+	if ( typeof ClientConnectionAPI !== 'undefined' )
+	{
+		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
+			if ( !bSuccess )
+				window.location = 'steam://friends/joinchat/' + steamid;
+		});
+	}
+	else
+	{
+		window.location = 'steam://friends/joinchat/' + steamid;
+	}
+}
+
+
 // proto functions used to accept an id or an element.
 // This can be used to migrate them to returning jquery instead of proto-wrapped element
 function $JFromIDOrElement( elem )
@@ -3131,7 +3162,19 @@ function ToggleFamilyView( bLocked, strURL )
 			'Return to Family View'
 		).done( function() {
 			ShowBlockingWaitDialog( 'Return to Family View' );
-			window.location = strURL;
+
+			$J.ajax( {
+				type: "POST",
+				url: 'https://store.steampowered.com/parental/ajaxlock',
+				data: {
+					sessionid: g_sessionID
+				},
+				dataType: "json",
+				success: function ( data ) {
+					window.location.reload()
+				}
+			});
+
 		});
 	}
 }

@@ -491,8 +491,9 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 
 	var xhr = new XMLHttpRequest();
 
-			xhr.open( 'POST', 'https://store.steampowered.com/video/license/' + this.m_strUniqueId, true );
-		xhr.responseType = 'arraybuffer';
+	
+	xhr.open( 'POST', 'https://store.steampowered.com/video/licenseex/' + this.m_strUniqueId, true );
+	xhr.responseType = 'arraybuffer';
 	var payload = btoa(String.fromCharCode.apply( null, new Uint8Array( event.message ) ) );
 	xhr.send( payload );
 	xhr.addEventListener( 'readystatechange', function ()
@@ -524,10 +525,13 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 			},function( reason ) {
 
 				var msg = 'Update DRM Session Failure: ' + reason + ' [HTTP:' + xhr.status + ']';
+				var errorCode = xhr.status;
 				if ( xhr.status == 500 )
 				{
-					try {
+					try
+					{
 						var jsonResult = JSON.parse( String.fromCharCode.apply( null, new Uint8Array( xhr.response ) ) );
+						errorCode = jsonResult.result;
 						msg += ' [EResult:' + jsonResult.result + ']';
 					}
 					catch ( e ) { }
@@ -535,17 +539,43 @@ CDASHPlayer.prototype.OnMessage = function( session, event )
 
 				PlayerLog( 'Failed to update DRM session: ', msg );
 
-				// only stop playback if it's an initial license request
-				if ( event.messageType == 'license-request' )
-					_player.CloseWithError( 'drmerror', [ msg ] );
+				// renewals give the EME a few attempts to try to renew
+				var bShowRenewError = false;
 
-				// otherwise give the EME a few attempts to try to renew
 				if ( event.messageType == 'license-renewal' )
 				{
 					_player.m_nLicenseRenewalCount++;
 					if ( _player.m_nLicenseRenewalCount > 12 )
-						_player.CloseWithError( 'drmerror', [ msg + ' [Renewal Failure]' ] );
+					{
+						bShowRenewError = true;
+					}
 				}
+
+				// stop playback on initial request or multiple failed renews
+				if ( event.messageType == 'license-request' || bShowRenewError )
+				{
+					if ( errorCode == 25 )
+					{
+						_player.CloseWithError( 'drmerror_limit', [ msg ] );
+					}
+					else if ( errorCode == 29 )
+					{
+						_player.CloseWithError( 'drmerror_vod_limit', [ msg ] );
+					}
+					else
+					{
+						if ( bShowRenewError )
+						{
+							_player.CloseWithError('drmerror', [msg + ' [Renewal Failure]']);
+						}
+						else
+						{
+							_player.CloseWithError('drmerror', [msg]);
+						}
+					}
+				}
+
+
 			});
 		}
 	});

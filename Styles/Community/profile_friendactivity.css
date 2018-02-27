@@ -632,6 +632,7 @@ a.nohover, a.nohover:hover
 
 
 
+
 /* user status block */
 .blotter_userstatus {
 
@@ -865,6 +866,10 @@ a.nohover, a.nohover:hover
 	padding-left: 1px;
 	padding-top: 2px;
 	overflow: hidden;
+}
+.blotter_screenshot_image a {
+	position: relative;
+	display: inline-block;
 }
 
 .blotter_screenshots_metadata

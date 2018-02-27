@@ -7,12 +7,12 @@ body
 
 #PageContents
 {
-  width: 650px;
+  width: 950px;
   margin: auto;
   background: none;
   text-align: left;
   min-height: 100%;
-  padding-top: 0px;
+  padding-top: 40px;
   margin-top: 00px;
   padding-left: 0;
   display: block;

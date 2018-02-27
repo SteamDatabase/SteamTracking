@@ -698,7 +698,14 @@ a.subtle:hover {
 	margin-top: 5px;
 	margin-bottom: 9px;
 	text-transform: uppercase;
-	color: #555555;
+	color: #5d7489;
+}
+
+.announcement_byline a.whiteLink {
+	color: #5d7489;
+}
+.announcement_byline a.whiteLink:hover {
+	color: #66C0F4;
 }
 
 .announcement_body {

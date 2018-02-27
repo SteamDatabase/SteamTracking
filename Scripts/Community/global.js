@@ -755,6 +755,33 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 		});
 }
 
+var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content_violence' : 1 };
+
+function ApplyAdultContentPreferences()
+{
+	var elementsWithAdultContent = $J('.app_has_adult_content');
+	var bHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
+	var bHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
+	{
+		var e = $J( elementsWithAdultContent[i] );
+		if ( e.hasClass( "app_has_adult_content_sex" ) && !bHideAdultContentSex )
+		{
+			e.removeClass( 'app_has_adult_content_sex' );
+		}
+		if ( e.hasClass( "app_has_adult_content_violence" ) && !bHideAdultContentViolence )
+		{
+			e.removeClass( 'app_has_adult_content_violence' );
+		}
+
+		if ( !e.hasClass( "app_has_adult_content_sex" ) && !e.hasClass( "app_has_adult_content_violence" ) )
+		{
+			e.removeClass( 'app_has_adult_content' );
+		}
+	}
+}
+
+
 
 
 

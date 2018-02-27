@@ -1890,6 +1890,11 @@ html, body { height:100%; }
 	width: 380px;
 }
 
+#app_broadcast_title_custom__textarea, #app_broadcast_title_choice__entry
+{
+	width: 500px;
+}
+
 .LocPurchaseNote textarea
 {
 	width: 1000px;

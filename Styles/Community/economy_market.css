@@ -1614,14 +1614,14 @@ input.filter_search_box:focus {
 
 #market_buynow_dialog_accept_ssa,
 #market_buyorder_dialog_accept_ssa,
-#market_multibuy_accept_ssa
+#market_multi_accept_ssa
 {
 	margin-left: 0;
 }
 
 #market_buynow_dialog_accept_ssa_label,
 #market_buyorder_dialog_accept_ssa_label,
-#market_multibuy_accept_ssa_label{
+#market_multi_accept_ssa_label{
 	font-size: 85.7%;
 	color: #B0AEAC;
 }
@@ -1994,7 +1994,8 @@ input.filter_search_box:focus {
 	z-index: -1;
 }
 
-.market_multibuy h2
+.market_multibuy h2,
+.market_multisell h2
 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
@@ -2005,18 +2006,24 @@ input.filter_search_box:focus {
 	text-align: center;
 }
 
-.market_multibuy_table
+.market_multisell .LoadingWrapper
+{
+	max-width: 600px;
+}
+
+.market_multi_table
 {
 	width: 100%;
 	border-spacing: 0 10px;
 }
 
-.market_multibuy_table thead td
+.market_multi_table thead td
 {
 	text-align: center;
+	text-transform: uppercase;
 }
 
-.market_multibuy_table td
+.market_multi_table td
 {
 	height: 30px;
 	padding: 0 5px;
@@ -2024,13 +2031,13 @@ input.filter_search_box:focus {
 	border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.market_multibuy_table .market_listing_item_img
+.market_multi_table .market_listing_item_img
 {
 	float: none;
 	vertical-align: middle;
 }
 
-.market_multibuy_warning
+.market_multi_warning
 {
 	display: inline-block;
 	font-size: 20px;
@@ -2038,13 +2045,13 @@ input.filter_search_box:focus {
 	cursor: default;
 }
 
-.market_multibuy_warning > img
+.market_multi_warning > img
 {
 	width: 24px;
 	height: 24px;
 }
 
-.market_multibuy_warning_tooltip
+.market_multi_warning_tooltip
 {
 	padding: 8px 12px;
 	width: 281px;
@@ -2061,21 +2068,34 @@ input.filter_search_box:focus {
 	text-align: left;
 }
 
-.market_multibuy_quantity
+.market_multi_quantity
 {
 	width: 4em;
 }
 
-.market_multibuy_status
+.market_multisell .market_multi_quantity
+{
+	width: 3em;
+}
+
+.market_multi_status
 {
 	width: 64px;
 	text-align: center;
 	font-size: 30px;
 }
 
-.market_multibuy_table .LoadingThrobber
+.market_multi_table .LoadingThrobber
 {
 	margin-bottom: 0;
+}
+
+#market_multisell_errmsg
+{
+	padding-top: 1em;
+	text-align: center;
+	font-size: 18px;
+	color: #60acde;
 }
 
 @media screen and (max-width: 910px) {
