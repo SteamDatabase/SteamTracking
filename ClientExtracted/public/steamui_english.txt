@@ -4532,9 +4532,9 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_InstallIssue_Ignore" "Ignore"
 
 
-"Steam_VGUIControllerWarning_Title" "Steam Controller"
+"Steam_VGUIControllerWarning_Title" "Steam Input"
 "Steam_VGUIControllerWarning" "Please run Steam in Big Picture mode to make full use of your controller."
-"Steam_VGUIControllerWarningHeader" "Using a Steam Controller?"
+"Steam_VGUIControllerWarningHeader" "Using a controller?"
 
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"
 "Steam_VGUIVRHMDWarning" "Install SteamVR to make full use of your headset with Steam, then use this same button each time you'd like to launch or exit VR using Steam."

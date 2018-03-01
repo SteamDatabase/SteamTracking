@@ -12,7 +12,7 @@
 "Overlay_SettingsDescriptionApp"	"Steam can remain active and present you with in-application Steam Community message notifications as well as with a full friends interface inside your application."
 "Overlay_SettingsEnable"	"Enable the Steam Overlay while in-game"
 "Overlay_SettingsEnableApp"	"Enable Steam Community In-Application"
-"Overlay_SettingsSCTenfootEnable"	"Use the Big Picture Overlay when using a Steam Controller from the desktop"
+"Overlay_SettingsSCTenfootEnable"	"Use the Big Picture Overlay when using a Steam Input enabled controller from the desktop"
 "Overlay_SettingsHotKeyLabel"	"Overlay shortcut keys"
 "Overlay_SettingsScreenshotHotKeyLabel"	"Screenshot shortcut keys"
 "Overlay_SettingsScreenshotActionLabel" "When a screenshot is taken"

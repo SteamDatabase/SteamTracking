@@ -60,7 +60,7 @@ public:
     virtual unknown_ret BAllowAppConfigForController(unsigned int, unsigned int) = 0;
     virtual unknown_ret ResetControllerEnableCache() = 0;
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
-    virtual unknown_ret SetInputGenerated(bool) = 0;
+    virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret BInputGenerated() = 0;
     virtual unknown_ret GetCurrentFocusedAppID(unsigned long long) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;

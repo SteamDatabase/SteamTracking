@@ -2970,10 +2970,11 @@ ChooseBinding .ControllerActionButton
 
 ChooseBinding #actionset_options 
 {
-    visibility: visible;
+    visibility: collapse;
 }
-    
-.LegacyBinding #actionset_options 
+
+.LegacyBinding #actionset_options,
+.HasActionLayers #actionset_options 
 {
     visibility: visible;
 }
@@ -2992,7 +2993,8 @@ ChooseBinding #actionset_options
 }
 
 
-#show_keyboard
+.LegacyBinding #show_keyboard,
+.HasActionLayers #show_keyboard
 {
     margin-left: 0px;
 }
