@@ -30467,6 +30467,14 @@
 			"loot_list_name"		"coupon loot list - comm2018_01_sticker_capsule"
 			"prefab"		"coupon_comm2018_01_capsule_prefab"
 		}
+		"20138"
+		{
+			"name"		"coupon - pins_series_3"
+			"item_name"		"#coupon_pins_series_3"
+			"item_description"		"#coupon_desc"
+			"loot_list_name"		"coupon loot list - pins_series_3"
+			"prefab"		"valve coupon_prefab"
+		}
 	}
 	"attributes"
 	{
@@ -58557,6 +58565,11 @@
 		{
 			"public_list_contents"		"1"
 			"crate_sticker_pack_comm2018_01_capsule"		"1"
+		}
+		"coupon loot list - pins_series_3"
+		{
+			"public_list_contents"		"1"
+			"crate_pins_series_3"		"1"
 		}
 	}
 	"revolving_loot_lists"
@@ -110719,6 +110732,63 @@
 			"crate_pins_series_2_mythical"		"1"
 			"crate_pins_series_2_legendary"		"1"
 			"crate_pins_series_2_ancient"		"1"
+		}
+	}
+	"items"
+	{
+		"4481"
+		{
+			"item_name"		"#CSGO_crate_pins_series_3"
+			"name"		"crate_pins_series_3"
+			"item_description"		"#CSGO_crate_pins_series_3_desc"
+			"image_inventory"		"econ/weapon_cases/crate_pins_series_3"
+			"first_sale_date"		"2018/03/01"
+			"prefab"		"weapon_case_base"
+			"attributes"
+			{
+				"set supply crate series"
+				{
+					"attribute_class"		"supply_crate_series"
+					"value"		"243"
+				}
+			}
+		}
+	}
+	"revolving_loot_lists"
+	{
+		"243"		"crate_pins_series_3"
+	}
+	"client_loot_lists"
+	{
+		"crate_pins_series_3_rare"
+		{
+			"Commodity Pin - Guardian 3"		"1"
+			"Commodity Pin - Canals"		"1"
+			"Commodity Pin - Welcome to the Clutch"		"1"
+			"Commodity Pin - Death Sentence"		"1"
+		}
+		"crate_pins_series_3_mythical"
+		{
+			"Commodity Pin - Inferno 2"		"1"
+			"Commodity Pin - Wildfire"		"1"
+			"Commodity Pin - Easy Peasy"		"1"
+		}
+		"crate_pins_series_3_legendary"
+		{
+			"Commodity Pin - Aces High"		"1"
+			"Commodity Pin - Hydra"		"1"
+		}
+		"crate_pins_series_3_ancient"
+		{
+			"Commodity Pin - Howl"		"1"
+			"Commodity Pin - Brigadier General"		"1"
+		}
+		"crate_pins_series_3"
+		{
+			"crate_pins_series_3_rare"		"1"
+			"crate_pins_series_3_mythical"		"1"
+			"crate_pins_series_3_legendary"		"1"
+			"crate_pins_series_3_ancient"		"1"
 		}
 	}
 	"paint_kits"

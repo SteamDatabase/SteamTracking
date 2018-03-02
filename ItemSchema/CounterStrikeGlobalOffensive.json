@@ -1,7 +1,7 @@
 {
 	"result": {
 		"status": 1,
-		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.616f49be04a1653fea77053b9f600a69f5c58829.txt",
+		"items_game_url": "https://steamcdn-a.akamaihd.net/apps/730/scripts/items/items_game.e5e333e7d949fadeb90874deb745efa0ffd4de7b.txt",
 		"qualities": {
 			"normal": 0,
 			"genuine": 1,
@@ -25451,6 +25451,38 @@
 				
 			},
 			{
+				"name": "crate_pins_series_3",
+				"defindex": 4481,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 3",
+				"item_description": "This capsule contains a single Series 3 collectible pin. Collectible pins can be displayed on your CS:GO profile.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/weapon_cases/crate_pins_series_3",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/weapon_cases/crate_pins_series_3.2c42778f1c923b58c5c96012846fbeca39a29625.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "set supply crate series",
+						"class": "supply_crate_series",
+						"value": 243
+					}
+				]
+				
+			},
+			{
 				"name": "studded_bloodhound_gloves",
 				"defindex": 5027,
 				"item_class": "wearable_item",
@@ -32447,6 +32479,38 @@
 				"item_class": "supply_crate",
 				"item_type_name": "Container",
 				"item_name": "Community Capsule 2018",
+				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
+				"proper_name": false,
+				"item_quality": 4,
+				"image_inventory": "econ/coupon/offer",
+				"min_ilevel": 1,
+				"max_ilevel": 1,
+				"image_url": "https://steamcdn-a.akamaihd.net/apps/730/icons/econ/coupon/offer.2833a681e6fed26656302dd5fee013fcaa85d722.png",
+				"image_url_large": "",
+				"capabilities": {
+					"decodable": true
+				},
+				"tool": {
+					"type": "supply_crate",
+					"usage_capabilities": {
+						"usable_out_of_game": true
+					}
+				},
+				"attributes": [
+					{
+						"name": "expiration date",
+						"class": "expiration_date",
+						"value": 60
+					}
+				]
+				
+			},
+			{
+				"name": "coupon - pins_series_3",
+				"defindex": 20138,
+				"item_class": "supply_crate",
+				"item_type_name": "Container",
+				"item_name": "Collectible Pins Capsule Series 3",
 				"item_description": "You have been selected to receive a limited time offer to purchase this item.",
 				"proper_name": false,
 				"item_quality": 4,
