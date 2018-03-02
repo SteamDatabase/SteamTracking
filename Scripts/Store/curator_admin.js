@@ -319,15 +319,15 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 		{
 			case 0:
 				strRecommendationIcon = "<img src='https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_curator_up.png'>";
-				strRecommendationString = "<span class='color_recommended'><b>Recommended</b> %s<span>";
+				strRecommendationString = "<span class='color_recommended'>Recommended<span>";
 				break;
 			case 1:
 				strRecommendationIcon = "<img src='https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_curator_dn.png'>";
-				strRecommendationString = "<span class='color_not_recommended'><b>Not Recommended</b> %s<span>";
+				strRecommendationString = "<span class='color_not_recommended'>steam_curator_notrecommended<span>";
 				break;
 			case 2:
 				strRecommendationIcon = "<img src='https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_curator_info.png'>";
-				strRecommendationString = "<span class='color_informational'><b>Informational</b> %s<span>";
+				strRecommendationString = "<span class='color_informational'>Informational<span>";
 				break;
 		}
 

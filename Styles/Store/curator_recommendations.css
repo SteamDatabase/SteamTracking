@@ -190,6 +190,7 @@ body.v6 .dark_container h4 {
 .broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
 	border: none;
 	/* width: 940px; */
+	width: 100%;
 	height: 528px;
 }
 .broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
