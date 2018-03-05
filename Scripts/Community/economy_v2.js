@@ -3947,7 +3947,14 @@ SellItemDialog = {
 			crossDomain: true,
 			xhrFields: { withCredentials: true }
 		} ).done( function ( data ) {
-			SellItemDialog.OnSuccess( { responseJSON: data } );
+			if ( data.success )
+			{
+				SellItemDialog.OnSuccess( { responseJSON: data } );
+			}
+			else
+			{
+				SellItemDialog.OnFailure( { responseJSON: data } );
+			}
 		} ).fail( function( jqxhr ) {
 			// jquery doesn't parse json on fail
 			var data = $J.parseJSON( jqxhr.responseText );
