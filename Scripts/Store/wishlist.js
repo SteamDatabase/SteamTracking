@@ -304,9 +304,15 @@ CWishlistController.prototype.BuildElements = function()
 				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>Coming soon</span></a>';
 			else if( rgAppInfo['free'] )
 			{
-				strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"javascript:ShowGotSteamModal('steam:\/\/run\/%1$s', %2$s, &quot;Play this game now&quot; )\"><span>%3$s<\/span><\/a><\/div>"			.replace ( /%1\$s/g, wishlist.appid  )
-				.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
-				.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
+				var strURL = 'steam://run/%1$s';
+				if( !g_bIsInSteamClient )
+					strURL = 'javascript:ShowGotSteamModal(\''+strURL+'\', %2$s, &quot;Play this game now&quot; )';
+
+
+				strPurchaseArea += "<a class=\"btnv6_green_white_innerfade btn_medium\" href=\"%4$s\"><span>%3$s<\/span><\/a><\/div>"					.replace ( /%4\$s/g, strURL  )
+					.replace ( /%1\$s/g, wishlist.appid  )
+					.replace ( /%2\$s/g, V_EscapeHTML( JSON.stringify( rgAppInfo.name ) ) )
+					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
 			}
 			else
 				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
@@ -338,13 +344,10 @@ CWishlistController.prototype.BuildElements = function()
 					.replace(/%16\$s/g, rgAppInfo.priority )
 
 			);
-			if( !g_bSupportsDragAndDrop )
-			{
-				$J('.hover_handle img',$el).css({'display':'none'})
-			} else {
-				$J('.hover_handle',$el)[0].addEventListener('mousedown', fnDragStart);
-				$J('.hover_handle img',$el)[0].addEventListener('touchstart', fnDragStart);
-			}
+		
+			$J('.hover_handle',$el)[0].addEventListener('mousedown', fnDragStart);
+			$J('.hover_handle img',$el)[0].addEventListener('touchstart', fnDragStart);
+
 
 			$J('.tag',$el).on('click ', fnClickTag );
 			$J('.top',$el).on('click', fnClickTop );

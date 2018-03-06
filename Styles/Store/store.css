@@ -3749,6 +3749,7 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 220px;
+	max-width: 225px;
 }
 
 .curator_page .curations > div > a {
@@ -3773,6 +3774,7 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	font-weight: 300;
 	line-height: 17px;
 	padding-right: 12px;
+	word-wrap: break-word;
 }
 
 .curator_page .ignore_button_area {

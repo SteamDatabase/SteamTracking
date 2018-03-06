@@ -505,3 +505,21 @@ input[type=date] {
 .account_vat_setup_padding {
 	padding-bottom: 5px;
 }
+
+.app_age_gate_bypassed {
+	display: inline-block;
+	white-space: nowrap;
+	border-radius: 2px;
+	padding: 0 9px;
+	line-height: 24px;
+	margin: 0 4px 4px 0;
+	background: -webkit-linear-gradient( top, #8aaf05 5%, #6a8704 95%);background: linear-gradient( to bottom, #8aaf05 5%, #6a8704 95%);	color: #ffffff;
+}
+.app_age_gate_bypassed_remove {
+	display: inline-block;
+	cursor: pointer;
+	background: no-repeat center center url('/store/public/images/v6/delete_search_term.png');
+	width: 12px;
+	height: 24px;
+	margin-left: 8px;
+}

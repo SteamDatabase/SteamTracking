@@ -774,6 +774,10 @@ $J(function() {
 			BindStoreTooltip( $J('[data-store-tooltip]', $J ( '#RecommendationsTable' ) ) );
 		} );
 
+		g_oPagingControls.SetResponseHandler( function( response ) {
+			GDynamicStore.DecorateDynamicItems();
+		});
+
 		UpdateRecommendationFilterData ();
 	}
 
