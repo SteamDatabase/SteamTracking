@@ -1696,10 +1696,17 @@ a.ugc.app_has_adult_content.dynamiclink_box::after
 	width: 88px;
 }
 
+.adult_content_age_gate_dialog {
+	text-align: center;
+	margin-bottom: 10px;
+}
+.adult_content_age_gate_dialog img {
+	width: 292px;
+}
 
 .adult_content_age_gate {
 	text-align: center;
-	max-width: 460px;
+	max-width: 560px;
 	margin: 0 auto;
 
 	color: #ffffff;
@@ -1714,6 +1721,24 @@ a.ugc.app_has_adult_content.dynamiclink_box::after
 
 .adult_content_age_gate p {
 	padding: 26px 0;
+	font-size: 22px;
+	line-height: 26px;
+}
+
+.adult_content_age_gate .edit_preferences {
+	border-top: 1px solid #779abc;
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom: 100px;
+}
+
+.adult_content_age_gate #ViewAllForApp {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.adult_content_age_gate .edit_preferences a {
+	text-decoration: underline;
 }
 
 .jsTooltip {

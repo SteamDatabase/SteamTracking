@@ -563,7 +563,7 @@ CGameGooExchangeDialog = {
 		var nMaxOut = Math.floor( amount / nTargetDenomination );
 		if ( nMaxOut <= 0 )
 		{
-			ShowAlertDialog( 'Action Failed', 'You do not have enough ' + currency.name.escapeHTML() + '.' );
+			ShowAlertDialog( 'Action Failed', 'You do not have enough ' + description.escapeHTML() + '.' );
 			return;
 		}
 

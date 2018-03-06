@@ -6337,8 +6337,10 @@ CDASHPlayerUI.prototype.SwitchClosedCaptionLanguageInPlayer = function( strCapti
 
 CDASHPlayerUI.ChangeClosedCaptionDisplay = function( cueKey, cueValue )
 {
-	if ( window.VTTCue && document.styleSheets[document.styleSheets.length-1].addRule )
-		document.styleSheets[document.styleSheets.length-1].addRule( '::cue', cueKey + ":" + cueValue );
+	if ( window.VTTCue && document.styleSheets[document.styleSheets.length-1].insertRule )
+	{
+		document.styleSheets[document.styleSheets.length-1].insertRule("::cue { " + cueKey + ":" + cueValue + " }", document.styleSheets[document.styleSheets.length-1].cssRules.length );
+	}
 }
 
 CDASHPlayerUI.GetSavedClosedCaptionLanguage = function( strUniqueSettingsID )
@@ -7047,26 +7049,37 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 					{
 						// due to crbug https://bugs.chromium.org/p/chromium/issues/detail?id=652745
 						// percentages on line attributes are causing position and size percentage attributes
-						// to be misaligned. Adding this temporary and simple fix until CEF is updated with the real fix
-						if ( rgKeyVal[0] === "line" && rgKeyVal[1].indexOf('%') != -1 )
+						// to be misaligned. Fixed in Chrome 64.
+						var version = 0;
+						var raw = navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./);
+						if ( raw )
 						{
-							// translate the line percentage to one of 5 locations
-							// +ve numbers are at top of screen going down
-							// -ve numbers are from bottom of screen going up
-							var nLineNo = -1;
-							var nLinePerc = parseFloat( rgKeyVal[1] );
-							if ( nLinePerc < 20 )
-								nLineNo = 1;
-							else if ( nLinePerc < 40 )
-								nLineNo = 2;
-							else if ( nLinePerc < 60 )
-								nLineNo = -4;
-							else if ( nLinePerc < 80 )
-								nLineNo = -3;
-							else if ( nLinePerc < 100 )
-								nLineNo = -2;
+							version = parseInt(raw[2], 10);
+						}
 
-							rgKeyVal[1] = nLineNo;
+						if ( version < 64 )
+						{
+							// NOTE: This code exists due to a bug that is fixed in Chrome v64
+							if ( rgKeyVal[0] === "line" && rgKeyVal[1].indexOf('%') != -1 )
+							{
+								// translate the line percentage to one of 5 locations
+								// +ve numbers are at top of screen going down
+								// -ve numbers are from bottom of screen going up
+								var nLineNo = -1;
+								var nLinePerc = parseFloat( rgKeyVal[1] );
+								if ( nLinePerc < 20 )
+									nLineNo = 1;
+								else if ( nLinePerc < 40 )
+									nLineNo = 2;
+								else if ( nLinePerc < 60 )
+									nLineNo = -4;
+								else if ( nLinePerc < 80 )
+									nLineNo = -3;
+								else if ( nLinePerc < 100 )
+									nLineNo = -2;
+
+								rgKeyVal[1] = nLineNo;
+							}
 						}
 
 						// the align tag has changed from middle to center but we have a bunch of VTTs using middle
@@ -7077,12 +7090,14 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 							rgKeyVal[1] = "center";
 						}
 
-						// return this code when crbug is fixed
-						// percentage screen attributes require snapToLines off
-						// if ( rgKeyVal[0] === "line" && newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1 )
-						// {
-						// 	newCue.snapToLines = false;
-						// }
+						// only works in Chrome 64. See above.
+						if ( version >= 64 )
+						{
+							// percentage screen attributes require snapToLines off
+							if (rgKeyVal[0] === "line" && newCue.snapToLines && rgKeyVal[1].indexOf('%') != -1) {
+								newCue.snapToLines = false;
+							}
+						}
 
 						// if the value is a number, then make sure the cue knows it's a number
 						if ( !isNaN( parseFloat( rgKeyVal[1] ) ) )
@@ -7098,11 +7113,11 @@ CVTTCaptionLoader.prototype.AddVTTCuesToNewTrack = function( data, closedCaption
 				}
 			}
 
-			// if no line position was set, set the default
+			// if no line position was set, set a default position
 			if ( typeof newCue["line"] === "undefined" || newCue["line"] == "auto" )
 			{
-				newCue.snapToLines = false;
-				newCue["line"] = CVTTCaptionLoader.s_DefaultLinePosition;
+				newCue.snapToLines = true;
+				newCue["line"] = -3;
 			}
 
 			newTextTrack.addCue( newCue );

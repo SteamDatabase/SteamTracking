@@ -81,20 +81,28 @@ Steam = {
 	}
 };
 
-
 function OpenFriendChat( steamid, accountid )
 {
 	if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
 			if ( !bSuccess )
-				LaunchWebChat( { friend: accountid } );
+			{
+				PromptContinueToWebChat( function() {
+					OpenFriendChatInWebChat( steamid, accountid );
+				} );
+			}
 		});
 	}
 	else
 	{
-		LaunchWebChat( { friend: accountid } );
+		OpenFriendChatInWebChat( steamid, accountid );
 	}
+}
+
+function OpenFriendChatInWebChat( steamid, accountid )
+{
+	LaunchWebChat( { friend: accountid }, {command: 'ShowFriendChatDialog', steamid: steamid} );
 }
 
 function OpenGroupChat( steamid )
@@ -103,13 +111,28 @@ function OpenGroupChat( steamid )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
 			if ( !bSuccess )
-				window.location = 'steam://friends/joinchat/' + steamid;
+			{
+				PromptContinueToWebChat( function() {
+					LaunchWebChat( null, {command: 'ShowFriendChatDialog', steamid: steamid} );
+				} );
+			}
 		});
 	}
 	else
 	{
 		window.location = 'steam://friends/joinchat/' + steamid;
 	}
+}
+
+function PromptContinueToWebChat( fnLaunchWebchat )
+{
+	ShowConfirmDialog( 'Got Steam?', 'We couldn\'t find Steam running on your machine.  Would you like to launch web chat?',
+		'Use web chat' , null, 'Get Steam' ).done( function( choice ) {
+			if ( choice == 'OK' )
+				fnLaunchWebchat();
+			else
+				window.location = 'https://store.steampowered.com/about/'
+	});
 }
 
 
@@ -1470,11 +1493,10 @@ WebStorage = {
 	{
 		var type = ( bSessionOnly ) ? 'session' : 'local';
 
-		var storage = window[type + 'Storage'];
-
 		if ( !window[type + 'Storage'] )
 			return WebStorage.GetCookie( key );
 
+		var storage = window[type + 'Storage'];
 		var value;
 		try {
 			value = storage.getItem(key);
@@ -1509,14 +1531,13 @@ WebStorage = {
 	{
 		var type = ( bSessionOnly ) ? 'session' : 'local';
 
-		var storage = window[type + 'Storage'];
-
 		if ( !window[type + 'Storage'] )
 			return WebStorage.SetCookie( key, value, ( bSessionOnly ) ? null : 365 );
 
 		value = V_ToJSON( value );
 
-		storage.setItem( key, value, type);
+		var storage = window[type + 'Storage'];
+		storage.setItem( key, value );
 	},
 	SetLocalSession: function( key, value )
 	{
@@ -1538,6 +1559,17 @@ WebStorage = {
 	ClearCookie: function( key )
 	{
 		WebStorage.SetCookie(key, null, -1 );
+	},
+	RemoveLocal : function ( key, bSessionOnly )
+	{
+		var type = ( bSessionOnly ) ? 'session' : 'local';
+
+		if ( !window[type + 'Storage'] )
+			return WebStorage.ClearCookie( key );
+
+		var storage = window[type + 'Storage'];
+
+		storage.removeItem( key );
 	}
 };
 
@@ -3119,7 +3151,7 @@ function HideWithFade( elem, speed )
 }
 
 
-function LaunchWebChat( params )
+function LaunchWebChat( params, paramsFriendsUI )
 {
 	var winChat = window.open( '', 'SteamWebChat', 'height=790,width=1015,resize=yes,scrollbars=yes' );
 	if ( !winChat )
@@ -3128,18 +3160,47 @@ function LaunchWebChat( params )
 		return;
 	}
 
-	if ( winChat.location ==  'about:blank' )
+	var bNewPopup = false;
+	var bCrossOrigin = false;
+
+	try {
+		bNewPopup = (winChat.location ==  'about:blank' );
+	}
+	catch ( e )
 	{
-		// created a new window, set the url
+		// cross-origin exception on http pages etc
+		bCrossOrigin = true;
+	}
+
+	if ( bNewPopup )
+	{
 		if ( params )
 			SetValueLocalStorage( 'rgChatStartupParam', V_ToJSON( params ) );
 
-		winChat.location = 'https://steamcommunity.com//chat/';
+		if ( paramsFriendsUI )
+		{
+			var fnBoundMessageListener = function( event )
+			{
+				if ( event.source == winChat && event.data == "FriendsUIReady" &&
+					event.origin == 'https://steamcommunity.com')
+				{
+					winChat.postMessage( paramsFriendsUI, 'https://steamcommunity.com/' );
+					window.removeEventListener( 'message', fnBoundMessageListener );
+				}
+			};
+			window.addEventListener( 'message', fnBoundMessageListener );
+		}
+
+		// created a new window, set the url
+		winChat.location = 'https://steamcommunity.com/chat/';
 	}
 	else
 	{
-		if ( params )
+		if ( params && !bCrossOrigin && winChat.OnWebchatLaunchURL )
 			winChat.OnWebchatLaunchURL( params );
+
+		if ( paramsFriendsUI )
+			winChat.postMessage( paramsFriendsUI, 'https://steamcommunity.com/' );
 	}
 	winChat.focus();
 }

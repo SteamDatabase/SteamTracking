@@ -2019,7 +2019,6 @@ input.filter_search_box:focus {
 
 .market_multi_table thead td
 {
-	text-align: center;
 	text-transform: uppercase;
 }
 
@@ -2037,12 +2036,23 @@ input.filter_search_box:focus {
 	vertical-align: middle;
 }
 
+.market_multi_throbber
+{
+	transform: scale(0.5);
+	margin-left: -10px;
+}
+
 .market_multi_warning
 {
 	display: inline-block;
 	font-size: 20px;
-	padding: 20px 10px;
 	cursor: default;
+	vertical-align: text-top;
+}
+
+.market_multi_warning.market_multi_warning_withimg
+{
+	vertical-align: initial;
 }
 
 .market_multi_warning > img
@@ -2080,7 +2090,7 @@ input.filter_search_box:focus {
 
 .market_multi_status
 {
-	width: 64px;
+	width: 32px;
 	text-align: center;
 	font-size: 30px;
 }

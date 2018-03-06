@@ -64,3 +64,28 @@ body
 .UploadButtonColumn {
 	text-align: right;
 }
+
+.upload_error_msg {
+	color: red;
+	font-weight: bolder;
+	padding: 10px;
+	background-color: #0b2337;
+}
+
+#UploadInfoUrl {
+	font-weight: bolder;
+	padding: 2px;
+	color: white;
+}
+
+.broadcast_upload_note_container
+{
+	border-width: 2px;
+	padding-left: 20px;
+	border: white;
+}
+
+.broadcast_upload_note {
+	background-color: #0b5a7a;
+	padding: 10px;
+}

@@ -760,10 +760,74 @@ var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content
 function ApplyAdultContentPreferences()
 {
 	var elementsWithAdultContent = $J('.app_has_adult_content');
-	var bHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
-	var bHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+	if ( elementsWithAdultContent.length == 0 )
+	{
+		return;
+	}
+
+	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
+	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+
+	// if the user wants to hide anything, look for app overrides
+	var mapAppsWithAgeGatesBypassed = {};
+	if ( bGlobalHideAdultContentSex || bGlobalHideAdultContentViolence )
+	{
+		var rgAppIDs = {};
+		for ( var i = 0; i < elementsWithAdultContent.length; ++i )
+		{
+			var e = $J( elementsWithAdultContent[i] );
+			var appid = e.data('appid');
+			if (Number.isInteger(appid) && appid != 0)
+			{
+				rgAppIDs[appid] = true;
+			}
+		}
+
+		$J.get(
+			'https://steamcommunity.com/my/ajaxgetappagegatesbypassed/',
+			{
+				'sessionid': g_sessionID,
+				'appids': Object.keys( rgAppIDs )
+			}
+		).done( function (data) {
+			if (data.success == 1 )
+			{
+				for (var i = 0; i < data.apps.length; ++i)
+				{
+					var a = data.apps[i];
+					if ( a.bypassed )
+					{
+						mapAppsWithAgeGatesBypassed[a.appid] = true;
+					}
+				}
+			}
+
+			ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, mapAppsWithAgeGatesBypassed, elementsWithAdultContent );
+		} );
+	}
+	else
+	{
+		ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, mapAppsWithAgeGatesBypassed, elementsWithAdultContent );
+	}
+}
+
+function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, mapAppsWithAgeGatesBypassed, elementsWithAdultContent )
+{
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
 	{
+		var e = $J( elementsWithAdultContent[i] );
+
+		var bHideAdultContentSex = bGlobalHideAdultContentSex;
+		var bHideAdultContentViolence = bGlobalHideAdultContentViolence;
+
+		var appid = e.data('appid');
+		if ( Number.isInteger( appid ) && appid != 0 )
+		{
+			var bAppAgeGateBypassed = mapAppsWithAgeGatesBypassed.hasOwnProperty( appid );
+			bHideAdultContentSex &= !bAppAgeGateBypassed;
+			bHideAdultContentViolence &= !bAppAgeGateBypassed;
+		}
+
 		var e = $J( elementsWithAdultContent[i] );
 		if ( e.hasClass( "app_has_adult_content_sex" ) && !bHideAdultContentSex )
 		{
@@ -781,6 +845,74 @@ function ApplyAdultContentPreferences()
 	}
 }
 
+function SetAppAgeGateBypass( appid, bBypass, callbackFunc )
+{
+	// force update
+	WebStorage.RemoveLocal( 'unAppAgeGateBypassVersion', true );
+	var strCookie = 'age_gate_' + appid;
+	WebStorage.SetLocal( strCookie, true, true );
+
+	$J.post(
+		'https://steamcommunity.com/actions/ajaxsetappagegatebypass/',
+		{ 'sessionid': g_sessionID, 'appid' : appid, 'bypass' : bBypass ? 1 : 0 }
+	).done( function( data ) {
+		callbackFunc( data );
+	} );
+}
+
+function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
+{
+	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
+	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+
+	if ( !bGlobalHideAdultContentSex && !bGlobalHideAdultContentViolence )
+	{
+		callbackFunc( false );
+		return;
+	}
+
+	if ( bCheckAppAgeGateBypass && g_steamID )
+	{
+		var url = 'https://steamcommunity.com/my/ajaxgetappagegatesbypassed/';
+		var data = { 'sessionid' : g_sessionID, 'steamid' : g_steamID };
+		data['appids'] = [ appid ];
+
+		var unVersion = WebStorage.GetLocal( 'unAppAgeGateBypassVersion', true );
+		if ( unVersion )
+		{
+			data['v'] = parseInt( unUserdataVersion )
+		}
+
+		$J.get( url, data )
+		.done( function( data ) {
+			var bShowWarning = true;
+
+			if ( data.success == 1 )
+			{
+				for ( var i = 0; i < data.apps.length; ++i )
+				{
+					var a = data.apps[i];
+					if ( a.appid == appid )
+					{
+						bShowWarning = !a.bypassed;
+						break;
+					}
+				}
+			}
+
+			callbackFunc( bShowWarning );
+		} )
+		.fail( function( jqXHR ) {
+			callbackFunc( true );
+		} );
+	}
+	else
+	{
+		var strCookie = 'age_gate_' + appid;
+		var bShowWarning = !WebStorage.GetLocal( strCookie, true );
+		callbackFunc( bShowWarning );
+	}
+}
 
 
 

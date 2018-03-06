@@ -398,12 +398,12 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 CBroadcastChat.prototype.TrimChat = function()
 {
 	var $messages = $J('#ChatMessages');
-	if ( $messages.children().length < 525 )
+	if ( $messages.children().length < 125 )
 		return;
 
 	var $box = $J('#ChatBox');
 	var nPrevHeight = $box[0].scrollHeight;
-	while ( $messages.children().length > 500 )
+	while ( $messages.children().length > 100 )
 	{
 		var $child = $messages.children().first();
 		$child.remove();
