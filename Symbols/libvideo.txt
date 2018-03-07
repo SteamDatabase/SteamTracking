@@ -3481,6 +3481,7 @@
  T CWebSocketConnection::BInternalAsyncDisconnect()
  T CWebSocketConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CWebSocketConnection::BInternalAsyncSendEncodedFrame(CUtlBuffer&)
+ T CWebSocketConnection::BInternalAsyncSendPlaintext(char const*)
  T CWebSocketConnection::BIsSendBlocked(int)
  T CWebSocketConnection::BPollConnection()
  T CWebSocketConnection::CWebSocketConnection()

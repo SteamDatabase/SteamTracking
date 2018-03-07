@@ -2780,7 +2780,7 @@ EdgeScrollBar.Vertical .EdgeScrollButton,
 .BottomMouseScrollRegion
 {
 	width: 250px;
-	height: 80px;
+	height: 60px;
 }
 
 .CursorVisible .EdgeScroller:descendantfocus:hover .EdgeScrollButton,
@@ -2906,5 +2906,10 @@ EdgeScrollBar.Vertical #MaxButton,
 
 .BottomMouseScrollRegion
 {
-	transform: translateY( -90px );
+	transform: translateY( 0px );
+}
+
+.LeftMouseScrollRegion
+{
+	transform: translateX( -10px );
 }

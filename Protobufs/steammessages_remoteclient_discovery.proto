@@ -12,6 +12,7 @@ enum ERemoteClientBroadcastMsg {
 	k_ERemoteDeviceProofResponse = 8;
 	k_ERemoteDeviceAuthorizationCancelRequest = 9;
 	k_ERemoteDeviceStreamingCancelRequest = 10;
+	k_ERemoteClientBroadcastMsgClientIDDeconflict = 11;
 }
 
 enum ERemoteClientService {
@@ -80,6 +81,10 @@ message CMsgRemoteClientBroadcastStatus {
 
 message CMsgRemoteClientBroadcastDiscovery {
 	optional uint32 seq_num = 1;
+	repeated uint64 client_ids = 2;
+}
+
+message CMsgRemoteClientBroadcastClientIDDeconflict {
 	repeated uint64 client_ids = 2;
 }
 

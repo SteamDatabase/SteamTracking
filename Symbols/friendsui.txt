@@ -9381,6 +9381,7 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreateKeyValuesFromJSON(CUtlBuffer&)
+ T CreateKeyValuesFromJSON(char const*, int)
  T DES_SPtrans
  T DES_cfb64_encrypt
  T DES_cfb_encrypt

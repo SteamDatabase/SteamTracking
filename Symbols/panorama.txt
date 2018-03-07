@@ -9081,6 +9081,7 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreateKeyValuesFromJSON(CUtlBuffer&)
+ T CreateKeyValuesFromJSON(char const*, int)
  T CreatePanoramaUIEngineInternal
  T CreateSoundAudioDevice(int, int, int)
  T DefaultCompletionFunc(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)

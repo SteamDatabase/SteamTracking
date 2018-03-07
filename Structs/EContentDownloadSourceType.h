@@ -7,4 +7,5 @@ typedef enum EContentDownloadSourceType
     k_EContentDownloadSourceTypeProxy, // Proxy
     k_EContentDownloadSourceTypeLANPeer, // LANPeer
     k_EContentDownloadSourceTypeSLS, // SLS
+    k_EContentDownloadSourceTypeSteamCache, // SteamCache
 } EContentDownloadSourceType;
