@@ -1,0 +1,123 @@
+"win32"
+{
+	"version"		"1500336374"
+	"d2l_nexon_resources_misc_all"
+	{
+		"file"		"d2l_nexon_resources_misc_all.zip.ac526409e9e445451af483d9ae8327414f1844b4"
+		"size"		"4013702"
+		"sha2"		"e339cf3a386205c79540b391a160ea79ae86ba05ec16fec4b755619a28d0a8d7"
+		"zipvz"		"d2l_nexon_resources_misc_all.zip.vz.6596f073f874e66a5af7a41ca94e54e1b091fcb7_2030550"
+		"sha2vz"		"23b939806b5ac087f50a1ec5fe3dbba98d9e6ad409aaa494811145c90667a14f"
+	}
+	"d2l_nexon_resources_all"
+	{
+		"file"		"d2l_nexon_resources_all.zip.7f85045cd679f3a8f3564d81d4e5dc00c79676e4"
+		"size"		"8149867"
+		"sha2"		"c8adf0702e59512c5b373544ab13f467fa41daa685504014ad51e7b04f6000fc"
+		"zipvz"		"d2l_nexon_resources_all.zip.vz.fa953505bb853d167cb622833852b77dee3412eb_5301844"
+		"sha2vz"		"6b134f501682dc452c43176404ad8d59a98f76c5f94c9d0ce64acbba8b899808"
+	}
+	"d2l_nexon_strings_en_all"
+	{
+		"file"		"d2l_nexon_strings_en_all.zip.32dd8b7ceb01baf21559666145f3e3fd48a53d3f"
+		"size"		"137005"
+		"sha2"		"80e552baa27f024242936f975f9519ce1b7cba0402c90b652b9d6e56bf5c90d5"
+		"zipvz"		"d2l_nexon_strings_en_all.zip.vz.b90dfe2768ba046bed9849d800f7fb5d435068e1_89797"
+		"sha2vz"		"59aaef886326b28ab1fed1aadaa09eaa74e5756081c07d4a2962105af2d9e879"
+	}
+	"d2l_nexon_strings_all"
+	{
+		"file"		"d2l_nexon_strings_all.zip.4fec412f1b3ee813a8fb496c0d6597ace96b1850"
+		"size"		"7007764"
+		"sha2"		"eb737eb80362c99d8d925babcd193bebf8d9161a6a07ad6bb1cdd9533c6a9cb6"
+		"zipvz"		"d2l_nexon_strings_all.zip.vz.c32d97596974cc4015ad4b97d03f0854cb6bae9c_2244207"
+		"sha2vz"		"20af201dc7732dc8b655d5694b0a875a09c18ad60b204277a3105450bbcb46d2"
+	}
+	"d2l_nexon_public_all"
+	{
+		"file"		"d2l_nexon_public_all.zip.508c2088c8b35413673eed9ae58127015e511d17"
+		"size"		"1417016"
+		"sha2"		"e24c732a4fe5c7b45303f5b215de70b7f56a4a40e96e2f34b81b7933774ae695"
+		"zipvz"		"d2l_nexon_public_all.zip.vz.a07116bf87f6d50aa0a88e069d5b557073ab03cf_756394"
+		"sha2vz"		"bd31bce38d082d0b8ae7d5a0830a6dca7c41089c2828f296d6a33f77ea776b56"
+	}
+	"dota2launcher_nexon_all"
+	{
+		"file"		"dota2launcher_nexon_all.zip.0e9afcec8b1bf948fe169655382ca83770e26fc2"
+		"size"		"55259"
+		"sha2"		"bfbef06766f5ecb43f429d5886457fe07516699e37fbef74574daedb4a4cf8b8"
+	}
+	"d2l_nexon_bins_codecs_win32"
+	{
+		"file"		"d2l_nexon_bins_codecs_win32.zip.1934604923fad3f52486defd38232f729d35992f"
+		"size"		"2470869"
+		"sha2"		"44955d1bccdf3b90ef230dbd49084362a439e803ec5d3b1d522e756bf35c2907"
+		"zipvz"		"d2l_nexon_bins_codecs_win32.zip.vz.ba3d0816783becbb7a91e083e197f899666aa7b4_1909020"
+		"sha2vz"		"916df06372e65403d4c2949b285f925585413f0d285466a6f4cc7b6aacdb76a1"
+	}
+	"d2l_nexon_bins_misc_win32"
+	{
+		"file"		"d2l_nexon_bins_misc_win32.zip.2ed9ac6346855284beea74392b60337d7aeacb82"
+		"size"		"4432118"
+		"sha2"		"6bcb519a4972e508c77243e2d55d7013bf1ad53108408544c7cb2e7ff5d53c21"
+		"zipvz"		"d2l_nexon_bins_misc_win32.zip.vz.31aa6830944ae2a7a9d4774fdae5dca013f6c355_3324195"
+		"sha2vz"		"74ab865a1d1d5af5ee9387da682b34c811c836bd106ddfb6916fe9277fbf6e6c"
+	}
+	"d2l_nexon_bins_cef_win32"
+	{
+		"file"		"d2l_nexon_bins_cef_win32.zip.bc78b2132c94ba27b0406573f85ef8171b9dc070"
+		"size"		"36585973"
+		"sha2"		"8c3cbb941cfb90e80edaf93cc30260862dcb9d0c3d2e7e2df0fb888ff65bc125"
+		"zipvz"		"d2l_nexon_bins_cef_win32.zip.vz.50c68d63d1e45a6169ee491a9fc153c455d1c3e0_26971852"
+		"sha2vz"		"23cabe2d244b0ae054ec42b82f733bb90afd049b87391fa1ba4859c2b693b6bd"
+		"win7"
+		{
+			"file"		"d2l_nexon_bins_cef_win32_win7.zip.02766e9afab6ddaa245d9bdf9bf8e7521ca8b45b"
+			"size"		"63950229"
+			"sha2"		"d3468fc00ff77a711b7b8e644975b018edd2d892349a88a301124fd8b9814612"
+			"zipvz"		"d2l_nexon_bins_cef_win32_win7.zip.vz.1f1c9ddaa7ff37af719233916828e4287e9ec9d0_44223023"
+			"sha2vz"		"f976d404676b26c93690aafeaf3f3421c218b71d386fab620be50e1b40788566"
+		}
+	}
+	"d2l_nexon_bins_webhelpers_win32"
+	{
+		"file"		"d2l_nexon_bins_webhelpers_win32.zip.f05be6864748d9f04fa807a6263d05475d7ade43"
+		"size"		"1495546"
+		"sha2"		"91bd40bb5fe54c8c69938a08ded24fe66c16188892b7642bda3fc2c3b73ccf12"
+		"zipvz"		"d2l_nexon_bins_webhelpers_win32.zip.vz.c05f07ba6a52429edb32cd7b40e04d5f638f4697_1095795"
+		"sha2vz"		"0b099ce1f19b753aa9ad0b856a58a3175fc79303b5caa3b61de1d272a82db15e"
+		"win7"
+		{
+			"file"		"d2l_nexon_bins_webhelpers_win32_win7.zip.34c7f6c8b50f79c3f423c4a921dc889263a1288f"
+			"size"		"2290168"
+			"sha2"		"d61f5b2d57cf8fb5835774382374225e2d6d529815a6f7a75cf8d051edd70b79"
+			"zipvz"		"d2l_nexon_bins_webhelpers_win32_win7.zip.vz.02e1b0ec9a9fce4162f219de19d4f4abb051fac0_1360934"
+			"sha2vz"		"94042faefc087351845f74c219804215239e773969ef7381a728681f45434b33"
+		}
+	}
+	"d2l_nexon_bins_win32"
+	{
+		"file"		"d2l_nexon_bins_win32.zip.48d76a2c6df83be8534239e40d8c3be81e348fb4"
+		"size"		"29482321"
+		"sha2"		"edcb05ddc529ec957be0245de54accddf20b5be28bbcb15bfa3f4e2624d99599"
+		"zipvz"		"d2l_nexon_bins_win32.zip.vz.a56b66a4f82fb85c4f94e95179b22b1d74732a2c_16405946"
+		"sha2vz"		"f343a76fb4eb8fe9b9840047cb259883061a4c58cedda896c6638430727ee4ae"
+	}
+	"d2l_nexon_exe_win32"
+	{
+		"file"		"d2l_nexon_exe_win32.zip.3ed42bcd69010c5f08b37448a7cbb22835d04a4a"
+		"size"		"2138035"
+		"sha2"		"4d067f974551d250222d2155aa4fe6875225b2df94c885e1e75699c9d4f419c9"
+		"zipvz"		"d2l_nexon_exe_win32.zip.vz.b1596932f2c64ecbeef8d094d01b6655bee301c7_1366553"
+		"sha2vz"		"e66d6aecb2eb780f738e7a4d4056e4fcd9443511241252c12b2477552602bbc5"
+		"IsBootstrapperPackage"		"1"
+	}
+}
+"kvsign2"
+{
+	"win32"		"285be4dcd231c7d2cb0771973d5a20e57398353a4103a2a02ad6b7dd10d05ae1d18d3a089b64bdfbd93d9d2c41fa50757f68063cc0b8df6c4789080e4a7c560c"
+}
+"kvsignatures"
+{
+	"win32"		"50d04b2078d4efac1ba7b0cd61c85ec1dae708b6f7c91762ddf8ff753ded137a1fc753b344035ae1e274d42e64a033a975f1e0e1c04611729961e0e065d821a85648040bd3b97a15a5c4d5e1ed2e797397aaf25d203a8b6b3f8dc6288d8c0b35984a7917f7e11cfa7d7a3b69423b1891c44100f75605c49be12d99e2f42a0ed5"
+}

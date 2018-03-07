@@ -9,6 +9,7 @@
 "ClientManifest/steam_client_osx"                : "https://steamcdn-a.akamaihd.net/client/steam_client_osx?__TIME__",
 "ClientManifest/csgo_launcher_win32"             : "https://steamcdn-a.akamaihd.net/client/csgo_launcher_win32?__TIME__",
 "ClientManifest/dota2_launcher_win32"            : "https://steamcdn-a.akamaihd.net/client/dota2_launcher_win32?__TIME__",
+"ClientManifest/dota2_launcher_nexon_win32"      : "https://steamcdn-a.akamaihd.net/client/dota2_launcher_nexon_win32?__TIME__",
 
 //
 // Beta Client Manifests
