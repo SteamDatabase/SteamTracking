@@ -5746,7 +5746,6 @@
  T CFriendsDialog::OnLogonFailure(SteamServerConnectFailure_t*)
  T CFriendsDialog::OnLogonSuccess(SteamServersConnected_t*)
  T CFriendsDialog::OnMenuBarLoaded()
- T CFriendsDialog::OnOpenChatDialog(OpenChatDialog_t*)
  T CFriendsDialog::OnOpenSubSettingsVoice()
  T CFriendsDialog::OnParentalLockChanged(ParentalLockChanged_t*)
  T CFriendsDialog::OnPersonaStateChange(PersonaStateChange_t*)

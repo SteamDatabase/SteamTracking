@@ -91,6 +91,7 @@
  B g_pSerializedWorkQueuedEvent
  B g_pVGUIPaintEvent
  B g_szExecutablePath
+ B g_szWindowBlacklist
  CFAllocatorAllocate
  CFAllocatorDeallocate
  CFRelease
@@ -336,6 +337,7 @@
  T CInputHandler::ForceEnableVisibility()
  T CInputHandler::GetLastMouseDelta(int*, int*)
  T CInputHandler::InputAttach()
+ T CInputHandler::IsOverlayDisabledForNativeWindow(unsigned long long)
  T CInputHandler::SendTextToGame(wchar_t const*)
  T CInputHandler::ShowCursor(unsigned int)
  T CInputHandler::ValveDeleteCursor(unsigned long)
