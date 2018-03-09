@@ -2304,12 +2304,12 @@ if ( method.value == 'cafefunded' )
 				}	
 				else if ( method.value == 'cafefunded' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Cafe transactions are authorized by paying the cashier in the cafe you are at.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'This in person transaction will be authorized by $1%s. Click the button to open a new window to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue Transaction';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
-						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for cafe customers';
-						$('col_right_review_payment_tips_info_text').innerHTML = 'Once you have paid the cafe cashier, you will receive an email receipt confirming your purchase.';
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for In Person Transaction';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Once you have paid the cashier, you will receive an email receipt confirming your purchase.';
 					}
 				}	
 			}
@@ -4369,7 +4369,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'cafefunded' && providerPaymentMethod == 122 )
 			{
-				$('payment_method_review_text').innerHTML = 'In Person via Cafe: ' + sSiteName;
+				$('payment_method_review_text').innerHTML = 'In Person Transaction: ' + sSiteName;
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}			
 		}
