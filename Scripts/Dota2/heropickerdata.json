@@ -273,6 +273,7 @@
         "roles": [
             "Initiator",
             "Disabler",
+            "Support",
             "Nuker",
             "Escape",
             "Jungler"
@@ -280,6 +281,7 @@
         "roles_l": [
             "Initiator",
             "Disabler",
+            "Support",
             "Nuker",
             "Escape",
             "Jungler"
@@ -406,6 +408,7 @@
         "atk_l": "Melee",
         "roles": [
             "Carry",
+            "Support",
             "Disabler",
             "Initiator",
             "Durable",
@@ -413,6 +416,7 @@
         ],
         "roles_l": [
             "Carry",
+            "Support",
             "Disabler",
             "Initiator",
             "Durable",
