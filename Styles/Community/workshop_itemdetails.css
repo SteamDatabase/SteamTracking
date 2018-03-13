@@ -1043,9 +1043,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionHighlightVideoEdit .existingMovie
 {
 	position: absolute;
-	top: 30px;
+	top: 33px;
 	left: 130px;
 	width: 200px;
+}
+
+.collectionBackgroundImageEdit .clear_preview_btn,
+.collectionHighlightVideoEdit .clear_preview_btn {
+	float: right;
 }
 
 

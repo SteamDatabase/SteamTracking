@@ -6337,9 +6337,13 @@ CDASHPlayerUI.prototype.SwitchClosedCaptionLanguageInPlayer = function( strCapti
 
 CDASHPlayerUI.ChangeClosedCaptionDisplay = function( cueKey, cueValue )
 {
-	if ( window.VTTCue && document.styleSheets[document.styleSheets.length-1].insertRule )
-	{
-		document.styleSheets[document.styleSheets.length-1].insertRule("::cue { " + cueKey + ":" + cueValue + " }", document.styleSheets[document.styleSheets.length-1].cssRules.length );
+	// need to use a style sheet that is on the same domain as the video player
+	if ( window.VTTCue ) {
+		for (var i = 0; i < document.styleSheets.length; i++) {
+			if (document.styleSheets[i].href == null) {
+				document.styleSheets[i].insertRule("::cue { " + cueKey + ":" + cueValue + " }", document.styleSheets[i].cssRules.length);
+			}
+		}
 	}
 }
 

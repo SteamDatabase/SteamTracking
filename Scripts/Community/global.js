@@ -848,9 +848,9 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 function SetAppAgeGateBypass( appid, bBypass, callbackFunc )
 {
 	// force update
-	WebStorage.RemoveLocal( 'unAppAgeGateBypassVersion', true );
 	var strCookie = 'age_gate_' + appid;
 	WebStorage.SetLocal( strCookie, true, true );
+	WebStorage.SetLocal( 'unAppAgeGateBypassVersion', parseInt( WebStorage.GetLocal( 'unAppAgeGateBypassVersion', true ) || 0 ) + 1, true );
 
 	$J.post(
 		'https://steamcommunity.com/actions/ajaxsetappagegatebypass/',
@@ -880,7 +880,11 @@ function CheckAppAgeGateBypass( appid, bCheckAppAgeGateBypass, callbackFunc )
 		var unVersion = WebStorage.GetLocal( 'unAppAgeGateBypassVersion', true );
 		if ( unVersion )
 		{
-			data['v'] = parseInt( unUserdataVersion )
+			data['v'] = parseInt( unVersion );
+		}
+		else
+		{
+			data['v'] = 1;
 		}
 
 		$J.get( url, data )

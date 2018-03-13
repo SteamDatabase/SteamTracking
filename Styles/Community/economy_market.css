@@ -2088,6 +2088,19 @@ input.filter_search_box:focus {
 	width: 3em;
 }
 
+.market_multi_qtyown
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.market_multi_qtyown_container .market_multi_warning
+{
+	padding-left: 4px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
 .market_multi_status
 {
 	width: 32px;

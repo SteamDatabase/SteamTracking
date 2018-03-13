@@ -245,7 +245,7 @@ background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: l
 	border-bottom: 1px solid #1f1f1f;
 
 	padding: 8px;
-	height: 45px;
+	min-height: 45px;
 	position: relative;
 
 background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);background: linear-gradient( to bottom, #525151 5%, #292827 95%);}
@@ -260,9 +260,16 @@ background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);background: l
 
 .miniprofile_ingame .game_content {
 	padding-left: 128px;
-	padding-top: 6px;
+	padding-top: 2px;
+	overflow: hidden;
 
 	font-size: 12px;
+}
+
+.miniprofile_ingame .game_content .rich_presence {
+	color: rgb( 98, 129, 59 );
+	font-size: 10px;
+	line-height: 12px;
 }
 
 .hover_arrow {
@@ -1705,8 +1712,11 @@ a.ugc.app_has_adult_content.dynamiclink_box::after
 }
 
 .adult_content_age_gate {
-	text-align: center;
-	max-width: 560px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-align: center;
+	max-width: 940px;
 	margin: 0 auto;
 
 	color: #ffffff;
@@ -1717,28 +1727,43 @@ a.ugc.app_has_adult_content.dynamiclink_box::after
 
 .adult_content_age_gate img {
 	max-width: 100%;
+	box-shadow: 0 0 40px rgba(102, 192, 244, 0.4);
 }
 
 .adult_content_age_gate p {
 	padding: 26px 0;
-	font-size: 22px;
+	font-size: 18px;
 	line-height: 26px;
+}
+
+.adult_content_age_gate p.descriptor {
+	padding-top: 5px;
+}
+
+.adult_content_age_gate p.descriptor span {
+	text-decoration: underline #7092a5;
+}
+.adult_content_age_gate label {
+	vertical-align: text-bottom;
 }
 
 .adult_content_age_gate .edit_preferences {
 	border-top: 1px solid #779abc;
-	margin-top: 50px;
+	margin-top: 80px;
 	padding-top: 20px;
 	padding-bottom: 100px;
 }
 
 .adult_content_age_gate #ViewAllForApp {
 	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 }
 
 .adult_content_age_gate .edit_preferences a {
 	text-decoration: underline;
+}
+.adult_content_age_gate .edit_preferences a:hover {
+	color: #66c0f4;
 }
 
 .jsTooltip {

@@ -2750,16 +2750,33 @@ body.flat_page .sectionTabsHR {
 }
 
 .invite_banner {
-	padding: 12px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 12px;
+	background: #5c6e84;
+	border: 1px solid #8F98A0;
+	box-shadow: 0 0 90px rgba(255, 255, 255, 0.2) inset;
+}
+
+.invite_ctn {
+	margin: 0 auto;
+	max-width: 1018px;
 }
 
 .invite_banner .header {
-	padding: 12px;
-	font-size: 14px;
+
+	padding: 12px 12px 0px 12px;
+	font-size: 22px;
+	color: #fff;
+}
+
+.invite_banner p {
+	margin-top: 4px;
 }
 
 .invite_banner .content {
-	padding: 12px;
+	padding: 0px 12px 12px 12px;
 	font-size: 14px;
-	color: #cc3333;
+	color: #fff;
 }
