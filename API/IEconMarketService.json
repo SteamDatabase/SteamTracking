@@ -86,6 +86,38 @@
             ]
         },
         {
+            "name": "LearnItem",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Teaches the market about a kind of item that may be listed on the market in the future.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The app the item belongs to"
+                },
+                {
+                    "name": "class_name",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Asset class property names"
+                },
+                {
+                    "name": "class_value",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Asset class property value"
+                }
+            ]
+        },
+        {
             "name": "GetPopular",
             "version": 1,
             "httpmethod": "GET",

@@ -241,6 +241,69 @@
             ]
         },
         {
+            "name": "SplitItemStack",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Split an item stack into two stacks",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "itemid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "quantity",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "CombineItemStacks",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Combine two stacks of items",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "fromitemid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "destitemid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "quantity",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetPriceSheet",
             "version": 1,
             "httpmethod": "GET",
