@@ -488,7 +488,8 @@ function SignOEMProductPurchaseAgreement()
 	}
 
 	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
-	if ( !agreedToSDA1.prop( "checked" ) )
+	var agreedToSDA2 = $J( "#agree_to_sda_checkbox2" );
+	if ( !agreedToSDA1.prop( "checked" ) || !agreedToSDA2.prop( "checked" ) )
 	{
 		ShowAlertDialog( 'Warning',  'You must agree to the terms in the OEM Product Purchase agreement before continuing.'  );
 		return;
