@@ -525,7 +525,10 @@ body.v6 .cart_rightcol h2 {
 
 
 #purchase_bottom_note_paypalgc {
-	margin-top: 9px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	padding: 10px;
+	background: rgba( 0, 0, 0, 0.2 );
 }
 
 .review_usercontainer {

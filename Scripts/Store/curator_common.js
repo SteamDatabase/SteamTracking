@@ -113,13 +113,11 @@ function ReportAbuse( strAbuseID )
 	var modal = ShowConfirmDialog("Report", strModal, "Report" );
 	var form = modal.GetContent().find('form');
 	modal.done(function( foo ) {
-		var strFormData = form.serialize ();
 
-		$J.ajax ( {
-			url: 'http://steamcommunity.com/actions/ReportAbuse/',
-			data: strFormData,
-			type: 'POST'
-		} ).done ( function () {
+		var rgParams = GetDefaultCommunityAJAXParams( 'actions/ReportAbuse', 'POST' );
+		rgParams.data = form.serialize ();
+
+		$J.ajax ( rgParams ).done ( function () {
 			ShowAlertDialog ( 'Thank You!', 'Thank you for reporting offensive content and helping to keep Steam clean and friendly.' );
 		} ).fail ( function () {
 			ShowAlertDialog ( 'Error', 'There was a problem saving your report.  Please try again later.' );

@@ -2304,7 +2304,7 @@ if ( method.value == 'cafefunded' )
 				}	
 				else if ( method.value == 'cafefunded' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'This in person transaction will be authorized by $1%s. Click the button to open a new window to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'This in person transaction will be authorized by $1%s. Click the button to open a new window to initiate the transaction.'.replace( '$1%s', sSiteName );
 					$('purchase_button_bottom_text').innerHTML = 'Continue Transaction';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -2965,6 +2965,7 @@ function UpdatePaymentInfoForm()
 		var bDisabledPaymentMethod = false;
 		var bShowBankSelection = false;
 		var bPaymentMethodRefundable = rgPaymentMethodProperties[ method.value ].refundable;
+		var bShowCafeFundedInstructions = false;
 		
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
@@ -3106,6 +3107,7 @@ function UpdatePaymentInfoForm()
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
+			bShowCafeFundedInstructions = true;
 		}	
 		else if ( method.value == 'wechat' )
 		{
@@ -3212,8 +3214,11 @@ function UpdatePaymentInfoForm()
 		
 		var strPaymentMethodNotRefundable = !bPaymentMethodRefundable ? 'list-item' : 'none';
 		$('payment_row_not_refundable' ).style.display = strPaymentMethodNotRefundable;
+		
+		var strCafeFundedInstructions = bShowCafeFundedInstructions ? 'list-item' : 'none';
+		$('payment_method_cafe_funded' ).style.display = strCafeFundedInstructions;
 
-		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote ? 'block': 'none';
+		var strPaymentMethodNotes = !bCanBeSplit || !bPaymentMethodRefundable || bShowPaymentSpecificNote || bShowCafeFundedInstructions ? 'block': 'none';
 		$('payment_method_notes' ).style.display = strPaymentMethodNotes;
 	} 
 	catch( e ) 
