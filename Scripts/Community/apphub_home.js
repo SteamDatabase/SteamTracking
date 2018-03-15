@@ -324,6 +324,10 @@ function ValidateVoteSuccess( transport )
 	{
 		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
 	}
+	else if ( transport.responseJSON.success == 15 )
+	{
+		ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. Please make sure that you own this game and that your account is in good standing.' );
+	}
 	else if ( transport.responseJSON.success == 24 )
 	{
 		ShowAlertDialog( 'Error', 'Your account does not meet the requirements to use this feature. <a class="whiteLink" href="https://help.steampowered.com/en/wizard/HelpWithLimitedAccount" target="_blank" rel="noreferrer">Visit Steam Support</a> for more information.' );
@@ -335,6 +339,10 @@ function ValidateVoteSuccess( transport )
 	else if ( transport.responseJSON.success == 17 )
 	{
 		ShowAlertDialog( 'Error', 'Your account has an active Game or VAC Banned and you\'re unable to perform this action as a result.' );
+	}
+	else if ( transport.responseJSON.success == 20 )
+	{
+		ShowAlertDialog( 'Error', 'Voting on this item has ended.' );
 	}
 	else if ( transport.responseJSON.success != 1 )
 	{

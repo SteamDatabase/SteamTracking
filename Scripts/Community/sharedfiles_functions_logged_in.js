@@ -73,6 +73,9 @@ function CheckVoteResultsJSON( json )
 		case 24:
 			ShowAlertDialog( 'Error', 'You must <a href="http://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );
 			return false;
+		case 20:
+			ShowAlertDialog( 'Error', 'Voting on this item has ended. ' );
+			return false;
 		case 1:
 			return true;
 		default:
