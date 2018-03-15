@@ -618,6 +618,7 @@
  T CBaseSurface::SkipNextFrame()
  T CBaseSurface::SolveTraverse(unsigned int, bool)
  T CBaseSurface::StartDragDropText(unsigned int, char const*)
+ T CBaseSurface::SubdividePaintRegion(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> > const&, short (&) [5][4])
  T CBaseSurface::SupportsFeature(vgui::ISurface::SurfaceFeature_e)
  T CBaseSurface::SurfaceGetCursorPos(int&, int&)
  T CBaseSurface::SurfaceSetCursorPos(int, int)

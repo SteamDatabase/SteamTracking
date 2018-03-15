@@ -5,7 +5,7 @@
 		// These are multipliers, to make an edge cost 50% more than
 		// usual, set the multiplier to 1.5
 		"CostForCrossingAtlantic"				5
-		"CostForCrossingPacific"				5
+		"CostForCrossingPacific"				6
 		"EuropeAndAfrica"			4
 		"NorthAndSouthAmerica"		4
 		"AustraliaAndAsia"			9
@@ -170,13 +170,13 @@
 				88 { "dest"	88 }
 				37 { "dest"	37 }
 				41 { }
-				165 { "cost"	Default } // Belarus
+				165 { "cost"	OneWayCellEdge} // Belarus
 				// Backbones
 				66 { "dest"	66	"cost"	1 }
 				129 { "dest"	129	"cost"	1 }
 				15 { "dest"	15	"cost"	LocalBackbone }
 				92 { "dest"	92	"cost"	RegionalBackbone }
-				38 { "dest"	38	"cost"	RegionalBackbone }
+				38 { "dest"	38	"cost"	OneWayCellEdge}
 				// High Cost
 				43
 				{ 
@@ -334,7 +334,7 @@
 			{
 				4 { "dest"	 4  	"cost"	InwardCost }
 				15 { "cost"	InwardCost }
-				129 { "dest"	129  	"cost"	ZeroCost }
+				129 { "dest"	129  	"cost"	1}
 			}
 		}
 
@@ -558,7 +558,7 @@
 			"edges"
 			{
 				66 { "dest"	66 }
-				38 { "dest"	38 }
+				38 { "dest"	38	"cost"	OneWayCellEdge }
 				5 { "dest"	5 }
 				7	{ "dest"	7	"cost"	OneWayCellEdge }				
 				149	{ "dest"	149	"cost"	OneWayCellEdge }				
@@ -627,7 +627,7 @@
 				49 { "dest"	49 }		
 				94 { "dest" 94 	"cost" USToCanada }
 				// Backbones
-				64 { "dest"	64  	"cost"	0.1 }
+				64 { "dest"	64  	"cost"	0.5 }
 				1 { "dest"	1  	"cost"	RegionalBackbone }
 				65 { "dest"	65  	"cost"	RegionalBackbone }
 				66 { "dest"	66  	"cost"	GlobalBackbone }
@@ -823,6 +823,7 @@
 			{
 				// Backbone
 				4 { "dest"	4 	"cost"	RegionalBackbone }
+				5 { "cost"	InwardCost }
 				92 { "dest"	92 	"cost"	GlobalBackbone }
 			}
 		}
@@ -838,7 +839,8 @@
 			"edges"
 			{
 				5 { "cost"	InwardCost }
-				66 { "dest"	66 	"cost"	InwardCost }
+				15 { "cost"	InwardCost }
+				66 { "cost"	InwardCost }
 			}
 		}
 		
@@ -1264,7 +1266,7 @@
 				5 { "dest"	5	"cost"	RegionalBackbone }
 				4 { "dest"	4	"cost"	RegionalBackbone }
 				31 { "dest"	31	"cost"	GlobalBackbone }
-				38 { "dest"	38	"cost"	GlobalBackbone }
+				38 { "dest"	38	"cost"	OneWayCellEdge }
 				// Spokes
 				68 { "dest"	68 }
 				67 { "dest"	67 }							
@@ -1367,6 +1369,7 @@
 			{
 				7 { "dest"	7 }
 				5 { "dest"	5 }
+				38 { "cost"	1 }
 			}
 		}		
 		// #74 San Diego
@@ -1621,7 +1624,7 @@
 				// Backbone
 				5 { "dest"	5	"cost"	LocalBackbone }
 				40 { "dest"	40	"cost"	GlobalBackbone	}
-				38 { "dest"	38	"cost"	RegionalBackbone	}
+				38 { "dest"	38	"cost"	OneWayCellEdge	}
 				// Spokes	
 				42 { "dest"	42 }
 				16 { "dest"	16 }
@@ -1683,6 +1686,7 @@
 			"edges"
 			{
 				4 { "dest"	4	"cost"	InwardCost }
+				14 { "cost"	ZeroCost }
 				129 { "dest"	129	"cost"	InwardCost }
 			}
 		}			
@@ -1729,7 +1733,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				97 				{  					"dest"	97  					"cost"	ZeroCost 				}
+				97 { "dest" 97	"cost"	ZeroCost }
 			}
 		}						
 		// #101 ZA JHB IS Gaming
@@ -1740,7 +1744,7 @@
 			"deprecated"	"1"
 			"edges"
 			{
-				26 { "dest"	26  					"cost"	ZeroCost 				}
+				26 { "dest" 26	"cost"	ZeroCost }
 			}
 		}	
 		// #102 LAN Event - US
@@ -1749,9 +1753,10 @@
 			"name" "LAN Event (USA)"
 			"region"	"usa"
 			"countrycode"	"US"
+			"deprecated"	"1"
 			"edges"
 			{
-				65 				{  					"dest"	65 					"cost"	OneWayCellEdge 				}
+				65 { "dest"	65 "cost" OneWayCellEdge }
 			}
 		}
 		
@@ -1761,9 +1766,10 @@
 			"name" "LAN Event (Europe)"
 			"region"	"europe"
 			"countrycode"	"DE"
+			"deprecated"	"1"
 			"edges"
 			{
-				5  				{  					"dest"	5 					"cost"	OneWayCellEdge 				}
+				5  {"dest"	5 "cost"	OneWayCellEdge	}
 			}
 		}
 				
@@ -1773,9 +1779,10 @@
 			"name" "LAN Event (Asia)"
 			"region"	"asia"
 			"countrycode"	"SG"
+			"deprecated"	"1"
 			"edges"
 			{
-				32  				{  					"dest"	32 					"cost"	OneWayCellEdge 				}
+				32 { "dest"	32 "cost"	OneWayCellEdge	}
 			}
 		}
 		// #105 US Virginia - Comcast
@@ -2465,7 +2472,7 @@
 			"edges"
 			{
 				62 { "dest"	62 }
-				152 { "dest"	152	"cost"	ZeroCost }
+				152 { "dest"	152	"cost"	1 }
 				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}		

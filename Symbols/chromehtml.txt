@@ -553,7 +553,6 @@
  GetCPUInformation()
  GetMiniDumpBuildID
  GetMiniDumpSteamID
- GetOSType
  Log
  Msg
  OSAtomicCompareAndSwap32Barrier
