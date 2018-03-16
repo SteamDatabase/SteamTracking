@@ -594,6 +594,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/clientvideo.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/cminterface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/cminterface.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/compatmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/compatmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/configstore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/configstore.h
