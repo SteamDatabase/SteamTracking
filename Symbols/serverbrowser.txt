@@ -2398,6 +2398,7 @@
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  SteamVProf::CVProfile::~CVProfile()
+ StringAfterPrefix
  T BFileExists(char const*)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
  T BIsValidDirectory(char const*)
@@ -9192,6 +9193,7 @@
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t AddFromIter(vgui::CFileOpenListPanel*, char const*, CDirIterator&, KeyValues*)
  t BBeginsWithProtocol(char const*)
+ t BContainsUnsafeCSS(char const*)
  t BIsMatchMore(char const*, char const*, int)
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()

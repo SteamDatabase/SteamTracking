@@ -14703,6 +14703,7 @@
  t AddFromIter(vgui::CFileOpenListPanel*, char const*, CDirIterator&, KeyValues*)
  t AddModifierToString(char const*, char*, unsigned long)
  t BBeginsWithProtocol(char const*)
+ t BContainsUnsafeCSS(char const*)
  t BIsMatchMore(char const*, char const*, int)
  t BlockingWait(int*, unsigned int, int*)
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()

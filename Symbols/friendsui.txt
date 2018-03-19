@@ -15520,6 +15520,7 @@
  t AddFromIter(vgui::CFileOpenListPanel*, char const*, CDirIterator&, KeyValues*)
  t AddModifierToString(char const*, char*, unsigned long)
  t BBeginsWithProtocol(char const*)
+ t BContainsUnsafeCSS(char const*)
  t BDecodeSerializedMsgFromJS(CUtlBuffer&, char const*)
  t BFriendsNameCollisionCompare(CUtlString const&, CUtlString const&)
  t BIsMatchMore(char const*, char const*, int)
