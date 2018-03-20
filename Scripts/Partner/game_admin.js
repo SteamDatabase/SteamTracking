@@ -1004,7 +1004,7 @@ function CreateMovieForApp( strForm )
 		UpdateRelatedMovieSelects();
 
 		// need to register tooltips
-		newElements.find( '.ttip' ).v_tooltip();
+
 	} )
 	.fail( function( jqXHR, textStatus ) {
 		$J( '#movie_list_processing' ).removeClass( 'processing' );

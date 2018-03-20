@@ -1056,6 +1056,8 @@ input {
 
 .fancyCheckboxLabel {
 	margin-left: 5px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 div + #landingFooter {
@@ -2826,4 +2828,21 @@ div .cdkey_request_details_row
 }
 .newmodal_content .newapptitle b {
 	color: #fff;
+}
+
+#requestkeys_table td {
+	padding: 2px 6px 2px 6px;
+}
+
+#requestkeys_table .packageTagsArrow {
+	padding-left: 0px;
+}
+
+#requestkeys_table tr.checkerboard1,
+#legend_table tr.checkerboard1{
+	background: #385a88;
+}
+
+#legend_table td {
+	padding: 8px 6px 8px 6px;
 }
