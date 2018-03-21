@@ -1709,9 +1709,6 @@ var CCommentThread = Class.create( {
 
 			this.DoTransitionToNewPosts( response, eRenderReason );
 
-			if ( typeof BindCommunityTooltip != 'undefined' )
-				BindCommunityTooltip( $J( $('commentthread_' + this.m_strName + '_posts' ) ).find('[data-community-tooltip]' ) );
-
 			// if we're viewing the most recent page of comments, refresh notifications
 			if ( ( !this.m_rgCommentData['oldestfirst'] && this.m_iCurrentPage == 0 ) ||
 					this.m_rgCommentData['oldestfirst'] && ( this.m_iCurrentPage + 1 ) * this.m_cPageSize > this.m_cTotalCount )

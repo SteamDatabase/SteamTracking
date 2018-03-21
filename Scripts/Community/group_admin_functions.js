@@ -921,7 +921,7 @@ function GroupAnnouncement_ShowHTMLImportDialog( btn, selector )
 	var $HTMLNewlineCheck = $J('<input/>', {type: 'checkbox', id: 'html_newline_check'} );
 	var $Label = $J('<label/>', {'for': 'html_newline_check'}).text( 'Preserve newlines' );
 	$Label.data('community-tooltip', 'In HTML, newlines usually have no effect, but in BBCode they will show as blank lines.  If you used &lt;p&gt; or &lt;br&gt; tags, leave this unchecked.  If you usually use blog software that automatically adds &lt;br&gt; tags for newlines, you will probably want to check this box.' );
-	BindCommunityTooltip( $Label );
+
 	$Dialog.append( $J('<div/>').append( $HTMLNewlineCheck, $Label )) ;
 
 	ShowConfirmDialog( strDialogTitle, $Dialog, 'Convert to BBCode' )

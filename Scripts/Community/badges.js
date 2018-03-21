@@ -1197,8 +1197,6 @@ CBoosterCreatorPage = {
 
 		CBoosterCreatorPage.ToggleActionButton( $Option );
 
-		BindCommunityTooltip( $Option.find( '[data-community-tooltip]' ) );
-
 		if ( bMiniOption )
 			rgBoosterData.$MiniOption = $Option;
 		else
