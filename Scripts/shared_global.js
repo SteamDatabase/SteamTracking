@@ -4107,7 +4107,6 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
 		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
 	}
-	BindTooltips( elTarget );
 }
 
 /**
