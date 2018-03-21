@@ -799,7 +799,7 @@ GDynamicStore = {
 			}
 
 			$CartBtn.data('tooltip-text', strTooltip );
-			BindTooltips( $CartBtn );
+
 		}
 		else if ( !Bundle.m_bMustPurchaseAsSet )
 		{

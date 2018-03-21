@@ -118,7 +118,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		var $Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': tagid } );
 
 		var $Checkbox = $J('<div/>', {'data-tooltip-text': '', 'class': 'app_tag_checkbox' + ( checked && !bReported ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular, tagid ); });
-		BindTooltips( $Checkbox );
+
 		fnSetCheckboxTooltip( $Checkbox );
 
 		$Tag.append( $Checkbox );
@@ -135,7 +135,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				{
 					var $Ban = $J('<div/>', {'class': 'app_tag_ban'} );
 					$Ban.data('tooltip-text', 'Click here to remove this tag from this product.  This option is limited to developers and Steam staff.' );
-					BindTooltips( $Ban );
+
 					$Tag.append( $Ban );
 
 					$Ban.click( function() {
@@ -149,7 +149,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				else
 				{
 					var $Report = $J('<div/>', {'class': 'app_tag_report' + ( bReported ? ' reported' : '' )});
-					BindTooltips($Report);
+
 					fnSetReportTooltip($Report);
 					$Tag.append($Report);
 
@@ -170,7 +170,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		{
 			var $Link = $J('<div/>', {'class': 'app_tag not_browseable' }).text(tag);
 			$Link.data('tooltip-text', 'Not enough items tagged with "%s" yet'.replace( /%s/, $Link.html() ) );
-			BindTooltips( $Link );
+
 			$Tag.append( $Link );
 		}
 
@@ -180,7 +180,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var fnMakeFrequentTag = function( tagid, tag )
 	{
 		var $Tag = $J('<div/>', {'class': 'app_tag previous_tag', 'data-tagid': tagid, 'data-tooltip-text': 'Click here to apply this tag.' }).text( tag ).click( function() { fnApplyTag( tag ) } );
-		BindTooltips( $Tag );
+
 		return $Tag;
 	};
 
@@ -329,7 +329,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				{
 					var $AppTag = $J('<div/>', {'class': 'app_tag not_browseable' }).text( rgUserTags[i].name );
 					$AppTag.data('tooltip-text', 'Not enough items tagged with "%s" yet'.replace( /%s/, $AppTag.html() ) );
-					BindTooltips( $AppTag );
+
 					$YourTagsOnPage.append( $AppTag );
 				}
 			}

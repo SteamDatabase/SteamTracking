@@ -450,7 +450,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 				{
 					filteredReviewScore.addClass( "visible" );
 					filteredReviewScore.html( data.review_score );
-					BindTooltips( $J('#user_reviews_filter_score' ) );
+
 				}
 				else
 				{
