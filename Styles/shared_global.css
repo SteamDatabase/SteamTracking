@@ -392,13 +392,12 @@ span.popup_menu_pulldown_indicator {
 }
 
 .popup_block_new .popup_body {
-	border: 1px solid #82807c;
+	border: 1px solid #171a21;
+
 	position: relative;
 
-	background-color: #3b3938;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/popups/bg_popup.png' );
-	background-repeat: repeat-x;
-	background-position: top;
+	background-color: #171a21;
+
 }
 
 body.v6 .popup_block_new .popup_body.popup_menu {
@@ -408,7 +407,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 .popup_menu .popup_menu_item {
 	display: block;
 	padding: 5px 12px;
-	color: #e5e4dc;
+	color: #b8b6b4;
 
 	text-transform: none;
 	font-size: 13px;
@@ -440,8 +439,8 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 }
 
 .popup_menu .popup_menu_item:hover, .popup_menu .popup_menu_item.focus {
+	color: #ffffff;
 	text-decoration: none;
-	background-color: #212d3d;
 }
 
 
@@ -1064,7 +1063,7 @@ div#global_actions #global_action_menu {
 }
 
 #global_action_menu > * {
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 div#global_actions .user_avatar {
@@ -1122,14 +1121,11 @@ div#global_header .activebg {
 
 #language_pulldown, #account_pulldown {
 	display: inline-block;
-	margin: 1px;
 	padding-left: 4px;
-	line-height: 19px;
+	line-height: 25px;
 }
 
 #language_pulldown.focus, #account_pulldown.focus {
-	margin: 0px;
-	border: 1px solid #82807C;
 	color: #ffffff;
 }
 
@@ -1141,45 +1137,26 @@ div#global_header .activebg {
 	display: inline-block;
 	position: relative;
 	height: 21px;
-	line-height: 21px;
+	line-height: 24px;
 	margin-right: 3px;
 }
 
 .header_installsteam_btn_green .header_installsteam_btn_leftcap, .header_installsteam_btn_green .header_installsteam_btn_rightcap, .header_installsteam_btn_green .header_installsteam_btn_content {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_green.png?v=1' );
+	background-color: #5c7e10;
 }
 
 .header_installsteam_btn_gray .header_installsteam_btn_leftcap, .header_installsteam_btn_gray .header_installsteam_btn_rightcap, .header_installsteam_btn_gray .header_installsteam_btn_content {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_gray.png?v=1' );
-}
-
-.header_installsteam_btn_leftcap {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 24px;
-	height: 21px;
-	background-position: 0px 0px;
-}
-
-.header_installsteam_btn_rightcap {
-	position: absolute;
-	right: 0px;
-	top: 0px;
-	width: 1px;
-	height: 21px;
-	background-position: -24px right;
+	background-color: #616a72;
 }
 
 .header_installsteam_btn_content {
 	display: inline-block;
-	padding-left: 27px;
-	padding-right: 7px;
-	height: 21px;
-	line-height: 21px;
-	background-position: 0px -21px;
-	background-repeat: repeat-x;
+	padding-left: 35px;
+	padding-right: 9px;
+	background-position: 10px 5px;
 
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/btn_header_installsteam_download.png?v=1' );
+	background-repeat:	no-repeat;
 	text-decoration: none;
 	color: #e5e4dc;
 	font-weight: normal;
@@ -1386,12 +1363,21 @@ a.pagelink:hover {
 .header_notification_btn.has_notifications {
 }
 
+#header_notification_dropdown .popup_menu {
+	padding: 2px;
+}
+
 #header_notification_dropdown .popup_menu_item {
-	line-height: 30px;
-	padding: 0 12px 0 12px;
+	line-height: 36px;
+	padding: 0px 8px 0px 8px;
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #bfbfbf;
+}
+
+#header_notification_dropdown .popup_menu_item:hover {
+	color: #ffffff;
+	background-color: #373d44;
 }
 
 #header_notification_dropdown .popup_menu_item.active_inbox_item {
@@ -1403,9 +1389,8 @@ a.pagelink:hover {
 }
 
 .header_notification_dropdown_seperator {
-	margin: 0 7px;
 	height: 1px;
-	background-color: #6b6865;
+	background-color: #262a31;
 }
 
 .notification_icon {

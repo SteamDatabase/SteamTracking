@@ -239,5 +239,5 @@ function InitQueueControls( store_appid, steamworks_appid )
 $J( function() {
 	InitQueueControls( g_oItem.store_appid, g_oItem.store_appid )
 
-	$J('.has_tooltip' ).v_tooltip();
+
 } );

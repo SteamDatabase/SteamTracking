@@ -150,6 +150,7 @@ var CommunitySearch = {
 					$J('#search_results').stop( true, true );
 					$J('#search_results').html( data.html );
 					$J('#search_results').fadeTo( CommunitySearch.m_nTransitionSpeed, 1.0 );
+					BindTooltips( $J( '#search_results' ) );
 				}
 			}
 			else

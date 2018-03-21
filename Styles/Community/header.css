@@ -540,15 +540,15 @@ div#headerSearch {
 }
 
 #abuseDescriptionArea::-webkit-input-placeholder {
-	color: #fff;
+	color: #aaa;
 }
 
 #abuseDescriptionArea::-moz-placeholder {  /* Firefox 19+ */
-	color: #fff;
+	color: #aaa;
 }
 
 #abuseDescriptionArea:-ms-input-placeholder {
-	color: #fff;
+	color: #aaa;
 }
 
 .abuseDescriptionCtn {

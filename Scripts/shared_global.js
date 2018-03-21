@@ -1975,7 +1975,10 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 		this.m_fnPreRequestHandler( params );
 
 	var elLoading = $(this.m_strElementPrefix + '_loading');
-	elLoading.show();
+	if ( elLoading )
+	{
+		elLoading.show();
+	}
 
 	this.m_bLoading = true;
 	new Ajax.Request( this.GetActionURL( '' ), {
@@ -4104,7 +4107,7 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
 		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
 	}
-	BindStoreTooltip( $J('[data-store-tooltip]', elTarget ) );
+	BindTooltips( elTarget );
 }
 
 /**
@@ -4205,5 +4208,50 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 		this.InstrumentLinks( elNewContents );
 	}
 };
+
+function BindTooltips(selector, rgOptions)
+{
+	// Standard tooltips
+	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text' } );
+	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html' } );
+}
+
+/**
+ * Binds standard tooltips for the current site. This function also binds a mutationobserver to bind any future elements without additional work
+ * @param strCSSClass
+ * @constructor
+ */
+
+function SetupTooltips( rgOptions )
+{
+	BindTooltips(document, rgOptions)
+
+	try
+	{
+		var config = {
+			attributes: true,
+			childList: true,
+			subtree: true,
+			attributeFilter: [ "data-tooltip-html", "data-tooltip-text" ]
+		};
+
+		var callback = function ( mutationsList ) {
+			for ( var mutation of mutationsList )
+			{
+				BindTooltips( mutation.addedNodes, rgOptions );
+			}
+		};
+
+		// Create an observer instance linked to the callback function
+		var observer = new MutationObserver ( callback );
+
+		// Start observing the target node for configured mutations
+		observer.observe ( document, config );
+	}
+	catch( e )
+	{
+		// Swallow exceptions for browsers that don't support mutationobservers
+	}
+}
 
 
