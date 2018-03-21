@@ -47,19 +47,7 @@ function Forum_CancelEvent( event )
 function Forum_InitTooltips()
 {
 	// Override default tooltips for forums
-	$J('.forum_topic[data-tooltip-text], .forum_topic_link[data-tooltip-text]').v_tooltip( {
-		'location':'bottom',
-		trackMouse: true,
-		'tooltipClass': 'forum_topic_tooltip',
-		offsetY: 6,
-		fadeSpeed: 0,
-		trackMouseCentered: false,
-		disableOnTouchDevice: true,
-		defaultType: 'text',
-		dataName: 'tooltipText'
-	});
-
-	$J('.forum_topic[data-tooltip-html], .forum_topic_link[data-tooltip-html]').v_tooltip( {
+	$J('.forum_topic[data-tooltip-forum], .forum_topic_link[data-tooltip-forum]').v_tooltip( {
 		'location':'bottom',
 		trackMouse: true,
 		'tooltipClass': 'forum_topic_tooltip',
@@ -68,8 +56,9 @@ function Forum_InitTooltips()
 		trackMouseCentered: false,
 		disableOnTouchDevice: true,
 		defaultType: 'html',
-		dataName: 'tooltipHtml'
+		dataName: 'tooltipForum'
 	});
+
 }
 
 var g_rgForums = {};
