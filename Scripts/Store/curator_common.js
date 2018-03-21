@@ -114,8 +114,11 @@ function ReportAbuse( strAbuseID )
 	var form = modal.GetContent().find('form');
 	modal.done(function( foo ) {
 
-		var rgParams = GetDefaultCommunityAJAXParams( 'actions/ReportAbuse', 'POST' );
-		rgParams.data = form.serialize ();
+		var rgParams = {
+			type: 'POST',
+			url: 'https://store.steampowered.com/actions/ReportAbuse/',
+			data: form.serialize ()
+		};
 
 		$J.ajax ( rgParams ).done ( function () {
 			ShowAlertDialog ( 'Thank You!', 'Thank you for reporting offensive content and helping to keep Steam clean and friendly.' );

@@ -770,14 +770,13 @@ GHomepage = {
 				if ( rgData['review_summary'] )
 				{
 					var reviewSummary = rgData['review_summary'];
-					var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-content": reviewSummary['sReviewScoreTooltip'] } );
+					var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
 					$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall user reviews:') );
 					$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 					if ( reviewSummary['reviewScore'] > 0 )
 					{
 						$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
 					}
-					$elReviewData.v_tooltip();
 
 					$elInfoDiv.append( $elReviewData );
 				}
@@ -1819,10 +1818,9 @@ GSteamCurators = {
 			if ( curatorsCache.hasOwnProperty( clanID ) )
 			{
 				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<div/>', {'class': 'steam_curator_for_app tooltip', 'onclick': "top.location.href='" + curator.link + "'", "data-tooltip-content": V_EscapeHTML( curator.name ) } );
+				var $Curator =  $J('<div/>', {'class': 'steam_curator_for_app tooltip', 'onclick': "top.location.href='" + curator.link + "'", "data-tooltip-text": curator.name } );
 				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
 				$Curator.append( $CuratorImg );
-				$Curator.v_tooltip();
 
 				$Curators.append( $Curator );
 				++numCuratorsAdded;
@@ -1878,10 +1876,9 @@ GSteamCurators = {
 			if ( curatorsCache.hasOwnProperty( clanID ) )
 			{
 				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-content": V_EscapeHTML( curator.name ) } );
+				var $Curator =  $J('<a/>', {'class': 'steam_curator_for_app tooltip', 'href': curator.link, "data-tooltip-text": curator.name } );
 				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
 				$Curator.append( $CuratorImg );
-				$Curator.v_tooltip();
 
 				$Curators.append( $Curator );
 				++numCuratorsAdded;
@@ -1950,10 +1947,9 @@ GSteamCurators = {
 
 
 		// Add the image
-		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-content": V_EscapeHTML( curator.name ) } );
+		var $Curator =  $J('<a/>', {'class': 'tooltip', 'href': curator.link, "data-tooltip-text": curator.name } );
 		var $CuratorImg = $J('<img/>', {'class': '', 'src': GetAvatarURL( curator.strAvatarHash, '_full' ) });
 		$Curator.append( $CuratorImg );
-		$Curator.v_tooltip();
 
 		// Now the text blurb
 		var $CuratorTextCtn = $J('<div/>',{class:'blurb'});

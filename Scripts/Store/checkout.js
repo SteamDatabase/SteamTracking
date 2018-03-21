@@ -710,7 +710,9 @@ function InitializeTransaction()
 								'bSaveBillingAddress' : bSaveBillingAddress ? 1 : 0,
 				'gidPaymentID' : paymentGID,
 				'bUseRemainingSteamAccount' : (g_bUseRemainingSteamAccount ? 1 : 0),
-				'bPreAuthOnly' : (g_bIsUpdateBillingInfoForm ? 1 : 0)
+				'bPreAuthOnly' : (g_bIsUpdateBillingInfoForm ? 1 : 0),
+
+				'sessionid' : g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bInitTransactionCallRunning = false;

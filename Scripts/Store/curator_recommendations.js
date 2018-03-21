@@ -771,7 +771,7 @@ $J(function() {
 		g_oPagingControls.SetPageChangedHandler ( function ( nPage )
 		{
 			$J ( '#RecommendationsTable' ).removeClass ( 'loading' );
-			BindStoreTooltip( $J('[data-store-tooltip]', $J ( '#RecommendationsTable' ) ) );
+			BindTooltips( $J ( '#RecommendationsTable' ) );
 		} );
 
 		g_oPagingControls.SetResponseHandler( function( response ) {

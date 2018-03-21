@@ -798,8 +798,8 @@ GDynamicStore = {
 				$CartBtn.parent().css( 'background', '#000000' );
 			}
 
-			$CartBtn.data('store-tooltip', strTooltip );
-			BindStoreTooltip( $CartBtn );
+			$CartBtn.data('tooltip-text', strTooltip );
+			BindTooltips( $CartBtn );
 		}
 		else if ( !Bundle.m_bMustPurchaseAsSet )
 		{

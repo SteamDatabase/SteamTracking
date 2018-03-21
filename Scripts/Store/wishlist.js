@@ -354,7 +354,6 @@ CWishlistController.prototype.BuildElements = function()
 			$J('.order_input',$el).on('change submit', fnMoveToNumber );
 			$J('.order_input',$el).on('focus touchstart', fnFocusTextBox );
 			$J('.delete',$el).on('click toucnstart', fnRemoveFromWishlist );
-			$J('.game_review_summary',$el).v_tooltip();
 
 
 			_this.rgElements[ "" + wishlist.appid ] = $el;
@@ -419,8 +418,6 @@ CWishlistController.prototype.LoadSettings = function()
 		this.rgFilterSettings.view = lsValue.view;
 	}
 
-
-
 	if( this.rgFilterSettings.sort )
 		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
 	if( this.rgFilterSettings.type )
@@ -449,7 +446,7 @@ CWishlistController.prototype.SaveSettings = function()
 CWishlistController.prototype.SetDropdownLabel = function( strID, strValue )
 {
 	// Since our value mapping data is in a tooltip, we need to first create a virtual DOM from the tooltijp content.
-	var $elTooltip = $J( '<div>' + $J('#dropdown_' + strID).data('tooltipContent') + '</div>' );
+	var $elTooltip = $J( '<div>' + $J('#dropdown_' + strID).data('dropdownHtml') + '</div>' );
 	// Now pop out the label
 	var strLabel = $J( 'div[data-dropdown-value=\'' + V_EscapeHTML(strValue) + '\']', $elTooltip ).text();
 	$J('#label_' + strID).text( strLabel );

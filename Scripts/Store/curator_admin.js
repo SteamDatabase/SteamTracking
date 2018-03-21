@@ -332,7 +332,7 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 		}
 
 
-		elContainer.innerHTML = "\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"desc\">\r\n\t\t\t\t<h3>%4$s %2$s<\/h3>\r\n\t\t\t\t<p>%3$s<\/p>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"controls\">\r\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-store-tooltip=\"Edit this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t<a class=\"delete_btn ttip\" data-store-tooltip=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<\/div>\r\n\t\t\t\r\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
+		elContainer.innerHTML = "\r\n\t\t\t<div>\r\n\t\t\t\t<input type=\"checkbox\" name=\"apps\" value=\"%1$s\">\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"desc\">\r\n\t\t\t\t<h3>%4$s %2$s<\/h3>\r\n\t\t\t\t<p>%3$s<\/p>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"controls\">\r\n\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"review_create\/%1$s\" data-tooltip-text=\"Edit this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\"><\/a>\r\n\t\t\t\t<a class=\"delete_btn ttip\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<\/div>\r\n\t\t\t\r\n\t\t".replace(/%1\$s/g,recommendationInfo.appid).replace(/%2\$s/, V_EscapeHTML( recommendationInfo.app_name ) )
 			.replace(/%3\$s/, V_EscapeHTML( recommendationInfo.recommendation.blurb ) )
 			.replace(/%4\$s/, strRecommendationIcon );
 
@@ -1009,7 +1009,7 @@ function ListManage_UpdateSort( elContainer )
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div class=\"list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-store-tooltip=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\" data-store-tooltip=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
+	var template = "<div class=\"list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();

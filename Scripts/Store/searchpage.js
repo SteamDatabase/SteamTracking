@@ -200,8 +200,8 @@ function SearchCompleted( parameters, transport )
 	if ( typeof GDynamicStore != 'undefined' )
 		GDynamicStore.DecorateDynamicItems( $J('#search_results' ) );
 
-	if ( typeof BindStoreTooltip != 'undefined' )
-		BindStoreTooltip( $J('#search_results [data-store-tooltip]' ) );
+	if ( typeof BindTooltips != 'undefined' )
+		BindTooltips( $J('#search_results' ) );
 
 	if ( g_rgDesiredParameters )
 	{
