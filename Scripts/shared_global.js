@@ -4211,8 +4211,8 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 function BindTooltips(selector, rgOptions)
 {
 	// Standard tooltips
-	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text' } );
-	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html' } );
+	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false } );
+	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false } );
 }
 
 /**
