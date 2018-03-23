@@ -4234,12 +4234,9 @@ function SetupTooltips( rgOptions )
 			attributeFilter: [ "data-tooltip-html", "data-tooltip-text" ]
 		};
 
-		var callback = function ( mutationsList )
-		{
-
-			for ( var i=0; i<mutationsList.length; i++ )
+		var callback = function ( mutationsList ) {
+			for ( var mutation of mutationsList )
 			{
-				var mutation = mutationsList[i];
 				BindTooltips( mutation.addedNodes, rgOptions );
 			}
 		};
