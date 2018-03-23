@@ -495,6 +495,7 @@
  T CBaseSurface::DrawGetTextureMatInfoFactory(int)
  T CBaseSurface::DrawGetTextureSize(int, int&, int&)
  T CBaseSurface::DrawGetUnicodeCharRenderInfo(wchar_t, vgui::CharRenderInfo&)
+ T CBaseSurface::DrawIntersectsDirtyRegion(int, int, int, int)
  T CBaseSurface::DrawOutlinedCircle(int, int, int, int)
  T CBaseSurface::DrawOutlinedRect(int, int, int, int)
  T CBaseSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)

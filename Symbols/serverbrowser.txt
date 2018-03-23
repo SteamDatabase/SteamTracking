@@ -7349,7 +7349,7 @@
  T vgui::Panel::InternalRequestInfo(PanelAnimationMap*, KeyValues*)
  T vgui::Panel::InternalSetCursor()
  T vgui::Panel::InternalSetInfo(PanelAnimationMap*, KeyValues*)
- T vgui::Panel::InvalidateLayout(bool, bool)
+ T vgui::Panel::InvalidateLayout(bool, bool, bool)
  T vgui::Panel::InvalidateStyle()
  T vgui::Panel::IsAutoDeleteSet()
  T vgui::Panel::IsBeingDragged()
