@@ -12940,6 +12940,8 @@
  T vgui::ScrollBarSlider::IsAnimated()
  T vgui::ScrollBarSlider::IsVertical()
  T vgui::ScrollBarSlider::KB_ChainToMap()
+ T vgui::ScrollBarSlider::OnCursorEntered()
+ T vgui::ScrollBarSlider::OnCursorExited()
  T vgui::ScrollBarSlider::OnCursorMoved(int, int)
  T vgui::ScrollBarSlider::OnMouseDoublePressed(vgui::MouseCode)
  T vgui::ScrollBarSlider::OnMousePressed(vgui::MouseCode)
