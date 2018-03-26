@@ -187,6 +187,26 @@
 		"Default"		"0"
 		"selected"		"0"
 	}
+	"DPIScalingCheck" [$LINUX]
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"DPIScalingCheck"
+		"xpos"		"17"
+		"ypos"		"241"
+		"wide"		"430"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"4"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_DPIScaling_Option"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"selected"		"0"
+	}
 	"AutoLaunchCheck"
 	{
 		"ControlName"		"CheckButton"
