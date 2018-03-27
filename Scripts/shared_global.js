@@ -4107,7 +4107,6 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
 		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
 	}
-	BindTooltips( elTarget );
 }
 
 /**
@@ -4212,8 +4211,8 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 function BindTooltips(selector, rgOptions)
 {
 	// Standard tooltips
-	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text' } );
-	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html' } );
+	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false } );
+	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false } );
 }
 
 /**
