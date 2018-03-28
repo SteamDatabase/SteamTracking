@@ -1,0 +1,73 @@
+{
+    "name": "IStoreService",
+    "methods": [
+        {
+            "name": "GetAppList",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets a list of apps available on the Steam Store.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "if_modified_since",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Return only items that have been modified since this date."
+                },
+                {
+                    "name": "have_description_language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Return only items that have a description in this language."
+                },
+                {
+                    "name": "include_games",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include games (defaults to enabled)"
+                },
+                {
+                    "name": "include_dlc",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include DLC"
+                },
+                {
+                    "name": "include_software",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include software items"
+                },
+                {
+                    "name": "include_videos",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include videos and series"
+                },
+                {
+                    "name": "include_hardware",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include hardware"
+                },
+                {
+                    "name": "last_appid",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "For continuations, this is the last appid returned from the previous call."
+                },
+                {
+                    "name": "max_results",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Number of results to return at a time.  Default 10k, max 50k."
+                }
+            ]
+        }
+    ]
+}
