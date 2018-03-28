@@ -410,6 +410,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	color: #b8b6b4;
 
 	text-transform: none;
+	font-family: Motiva Sans, Arial, Helvectica, Verdana, sans-serif;
 	font-size: 13px;
 	font-weight: normal;
 	line-height: normal;
@@ -1401,6 +1402,8 @@ a.pagelink:hover {
 	background-repeat: no-repeat;
 	background-position: center;
 	margin-right: 16px;
+	position: relative;
+	top: -2px;
 
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/header/inbox_icons_sprite.png' );
 }

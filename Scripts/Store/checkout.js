@@ -310,7 +310,7 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 			}
 			else
 			{
-				PollForTransactionStatus( $('transaction_id').value, 40, 15 ); 
+				PollForTransactionStatus( $('transaction_id').value, method.value == 'cafefunded' ? 120 : 40, 15 ); 
 			}
 		}
 		else
@@ -5104,6 +5104,12 @@ function HandlePollForTransactionStatusFailure()
 		{
 			DisplayPendingReceiptPage();
 			return;
+		}
+		
+		if ( method.value == 'cafefunded' )
+		{
+			g_winExternal.close();
+			g_winExternal = false;
 		}
 
 		var error_text = '';

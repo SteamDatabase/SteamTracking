@@ -24,6 +24,10 @@ function StartCreationSession()
 			{
 				strError = 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.';
 			}
+			else if ( data.success == 13 )
+			{
+				strError = 'Please enter a valid email address.';
+			}
 			else if ( data.success == 101 )
 			{
 				new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );

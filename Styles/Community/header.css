@@ -271,13 +271,8 @@ img {
 }
 
 .popup_block .popup_body {
-	border: 1px solid #82807c;
 	position: relative;
-
-	background-color: #3b3938;
-	background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAABCCAIAAAAZuyscAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE5JREFUeNp0jsENACEIBDdUaXzYfw189lCDQDwfZNYhIBi9iaoKACFZaQXLztvNN4MPR8uw7PxzmzFb3Pnb9+Z7qltMs/n+3Yt9yX0CDAAt4VMy+xZJfQAAAABJRU5ErkJggg==' );
-	background-repeat: repeat-x;
-	background-position: top;
+	background-color: #171a21;
 }
 
 .popup_block .header {
@@ -294,9 +289,9 @@ img {
 }
 
 .popup_menu_separator {
-	margin: 8px 12px;
+	margin: 8px;
 	height: 1px;
-	background-color: #898989;
+	background-color: #262a31;
 }
 
 .iepopupfix {

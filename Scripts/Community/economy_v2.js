@@ -4121,7 +4121,7 @@ SellItemDialog = {
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			// Calculate what the buyer pays
-			var publisherFee = typeof this.m_item.description.market_fee != 'undefined' ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
+			var publisherFee = (typeof this.m_item.description.market_fee != 'undefined' && this.m_item.description.market_fee !== null) ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
 			var info = CalculateAmountToSendForDesiredReceivedAmount( nAmount, publisherFee );
 			$('market_sell_buyercurrency_input').value = v_currencyformat( info.amount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );
 
@@ -4137,7 +4137,7 @@ SellItemDialog = {
 		if ( inputValue > 0 && nAmount == parseInt( nAmount ) )
 		{
 			// Calculate what the seller gets
-			var publisherFee = typeof this.m_item.description.market_fee != 'undefined' ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
+			var publisherFee = (typeof this.m_item.description.market_fee != 'undefined' && this.m_item.description.market_fee !== null) ? this.m_item.description.market_fee : g_rgWalletInfo['wallet_publisher_fee_percent_default'];
 			var feeInfo = CalculateFeeAmount( nAmount, publisherFee );
 			nAmount = nAmount - feeInfo.fees;
 			$('market_sell_currency_input').value = v_currencyformat( nAmount, GetCurrencyCode( g_rgWalletInfo['wallet_currency'] ) );

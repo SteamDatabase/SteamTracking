@@ -578,8 +578,7 @@ function UpdateCharacterLimitLabel( elSource, strId, nMaxLen )
 	elTarget.textContent = "%1$s characters remaining".replace(/%1\$s/, nMaxLen - nLength )
 }
 
-
-function LoadCurationList( fnOnComplete )
+function LoadCuratorAssociatedApps( fnOnComplete )
 {
 	if( this.loading )
 		return;
@@ -594,7 +593,7 @@ function LoadCurationList( fnOnComplete )
 	var _this = this;
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxgetrecommendations/',
+		url: g_strCuratorBaseURL + 'ajaxgetassociatedappslist/',
 		data: {
 			sessionid: g_sessionID,
 			count: 1000, 		},
@@ -604,6 +603,8 @@ function LoadCurationList( fnOnComplete )
 		_this.loading = false;
 		_this.loaded = true;
 		g_rgAppsCurated = data.recommendations;
+		$J('#curator_createlist_app_count_throbber').hide();
+		$J('#curator_createlist_app_count').text( 'There are %1$s app(s) available to use in your list.'.replace('%1$s', g_rgAppsCurated.length ) );
 		if( fnOnComplete )
 			fnOnComplete();
 	})
@@ -706,7 +707,7 @@ function ReviewsManage_Load()
 		}
 	);
 
-	LoadCurationList();
+	LoadCuratorAssociatedApps();
 }
 
 
@@ -832,7 +833,7 @@ function Overview_Load()
 function ReviewsCreate_Load()
 {
 	var rgNameToAppMap = {};
-	LoadCurationList();
+	LoadCuratorAssociatedApps();
 	new CIndexedInputSuggest( $J( '#app_suggest' ),
 		function(a, b)
 		{
@@ -901,7 +902,7 @@ function ListEdit_Onload( listid, listDetails )
 		return Math.sign(a.sort_order - b.sort_order)
 	});
 
-	LoadCurationList (function(){
+	LoadCuratorAssociatedApps (function(){
 		for( var i=0; i<listDetails.apps.length; i++)
 		{
 			var recommendation = listDetails.apps[i].recommended_app;
@@ -949,7 +950,6 @@ function ListManage_Load(  )
 			'total_count' : data.total,
 			'pagesize' : pageSize,
 			'action' : ''
-
 		};
 
 		g_oPagingControls = new CAjaxPagingControls( pagingData, g_strCuratorBaseURL + 'ajaxgetlists/' );
@@ -968,9 +968,12 @@ function ListManage_Load(  )
 		} );
 	});
 
-	// Sortable
-
-	elContainer.sortable();
+		elContainer.sortable( {
+		cancel: ".ui-state-disabled",
+		items: "> .list_row",
+		axis: "y",
+		cursor: "move",
+	});
 	elContainer.on( "sortupdate", function( event, ui ) {
 		ListManage_UpdateSort( elContainer[0] );
 	});

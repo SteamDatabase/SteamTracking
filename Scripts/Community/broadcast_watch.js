@@ -361,7 +361,7 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 		}
 		else if ( data.success == 'noservers' )
 		{
-			_watch.ShowVideoError( _watch.AddBroadcasterName( 'Steam is currently experiencing high broadcast load in %s\'s area and is currently unable to reserve a server spot to start this broadcast.<br><br>Additional server capacity will be added throughout the Steam Broadcast beta. Please try again later.' ) );
+			_watch.ShowVideoError( _watch.AddBroadcasterName( 'Steam is currently experiencing high broadcast load in %s\'s area and is currently unable to reserve a server spot to start this broadcast.<br><br>Please try again in a few minutes.' ) );
 		}
 		else if ( data.success == 'system_not_supported' )
 		{
@@ -471,9 +471,9 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	var strTitle = data.title ? data.title : '';
 	var strGameName = data.app_title ? data.app_title : '';
 
-	var strBroadcastURL = 'http://steamcommunity.com/app/' + data.appid + '/broadcasts';
+	var strBroadcastURL = 'https://steamcommunity.com/app/' + data.appid + '/broadcasts';
 	if ( data.appid == 0 )
-		strBroadcastURL = 'http://steamcommunity.com?subsection=broadcasts';
+		strBroadcastURL = 'https://steamcommunity.com?subsection=broadcasts';
 
 	var strStoreURL = 'http://store.steampowered.com/app/' + data.appid;
 	var target = "_blank";

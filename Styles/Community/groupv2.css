@@ -387,7 +387,7 @@ a.group_tab:hover {
 .group_content_header {
 	color: #61686d;
 	font-size: 11px;
-	padding-top: 4px;
+	padding-top: 16px;
 	margin-bottom: 16px;
 	text-transform: uppercase;
 }
@@ -418,19 +418,21 @@ a.readmore_link {
 }
 
 .group_overview_announcement {
-	float: left;
-	width: 302px;
+	/*float: left;
+	width: 302px;*/
 }
 
 .group_overview_announcement.first {
-	border-right: 1px solid #000000;
+	/*border-right: 1px solid #000000;*/
 	padding-right: 10px;
 	margin-right: 10px;
+	padding-bottom: 40px;
 }
 
 .group_overview_announcement_footer {
 	color: #61686d;
 	font-size: 12px;
+	padding-top: 4px;
 }
 
 .group_overview_announcement_content {
@@ -442,8 +444,7 @@ a.readmore_link {
 }
 
 .group_overview_announcement_readmore {
-
-	border-top: 1px solid #35465e;
+	border-top: 1px solid #20364a;
 }
 
 .group_overview_announcement_fade {
@@ -690,7 +691,7 @@ a.subtle:hover {
 .announcement {
 	margin-bottom: 14px;
 	background: rgba( 0, 0, 0, 0.2 );
-	padding: 12px;
+	padding: 26px;
 }
 
 .announcement_byline {
@@ -1162,7 +1163,7 @@ a.headlineLink:hover {
 	height: 25px;
 	line-height: 25px;
 
-	padding: 0px 5px;
+	padding: 5px 5px;
 
 	margin: 9px 0px;
 }
@@ -1174,6 +1175,7 @@ a.headlineLink:hover {
 .group_paging .pagebtn {
 	height: 15px;
 	line-height: 15px;
+	margin: 0 7px;
 }
 
 .search_controls {

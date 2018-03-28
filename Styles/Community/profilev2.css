@@ -353,17 +353,25 @@ background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: l
 }
 
 #profile_action_dropdown .popup_menu_item {
-	line-height: 16px;
-	padding-top: 4px;
-	padding-bottom: 4px;
+	padding: 5px 12px;
+	line-height: 26px;
 }
 
 #profile_action_dropdown .popup_menu_item img {
-	vertical-align: middle;
+	position: relative;
+	top: 3px;
+}
+
+.popup_menu a.popup_menu_item:hover {
+	background-color: #373d44;
 }
 
 .popup_menu .profile_actions_support a.popup_menu_item {
 	color: #cc3333;
+}
+
+.popup_menu .profile_actions_support a.popup_menu_item:hover {
+	background-color: #373d44;
 }
 
 .profile_content {

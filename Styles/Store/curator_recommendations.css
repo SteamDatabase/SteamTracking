@@ -403,6 +403,10 @@ body.v6 .page_desc p {
 .color_informational {
 	color: #f5df67;
 }
+.color_created {
+	color: #67f550;
+}
+
 
 .curator_review_date {
     margin-left: 10px;

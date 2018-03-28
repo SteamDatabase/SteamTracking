@@ -123,6 +123,42 @@
 	margin-top: 8px;
 }
 
+.addfunds_cafe_selection {
+	background: rgba(226,244,255,0.3);
+	padding: 15px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.addfunds_cafe_selection a {
+	border-radius: 4px;
+	text-align: center;
+	display: block;
+	width: 280px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: rgba(128,164,186,1);
+	color: rgba( 96, 122, 140, 1);
+}
+
+.addfunds_cafe_selection .selected {
+	background-color: rgba(39,65,88,1);
+	color: #ffffff;
+}
+
+.addfunds_cafe_selection_text {
+	padding-bottom: 30px;	
+}
+
+.addfunds_cafe_selection_buttons {
+	text-align: center;
+	overflow: hidden;
+}
+
+.addfunds_local_currency {
+	padding-bottom: 20px;
+}
+
 .rule, .inner_rule {
 	border-top: 1px solid #56707F;
 	margin: 5px 0px 10px;

@@ -1023,3 +1023,10 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 	height: 35px;
 	vertical-align: top;
 }
+
+#curator_createlist_app_count_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 14px;
+}

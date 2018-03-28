@@ -274,21 +274,9 @@ function UpdateRecommendationFilterData( refresh )
 
 	if( refresh )
 		g_oPagingControls.GoToPage(0,true);
-/*
-	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/',
-		data: ,
-		type: 'GET',
-		cache: true
-	} ).done( function ( data )
-	{
-		elTarget.innerHTML = data;
-		elTarget.classList.remove('loading');
-	});*/
-
 }
 
-function ShowEditHandles()
+function ShowEditHandles( bIsCreatorHome )
 {
 	$J('.page_section:not(.editing):not(.header_area)').each(function( i, j ){
 
@@ -318,11 +306,27 @@ function ShowEditHandles()
 
 		var elOptions = $J('<form class="edit_options"></form>');
 
-		var elTypeSelect = $J("\r\n\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t<\/select>");
+		var elTypeSelect = null;
+		if( !bIsCreatorHome )
+		{
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
+		}
+		else
+		{
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">My Games carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag (my games)<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag (recommendations)<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted (my games)<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted (recommendations)<\/option>\r\n\t\t\t\t<\/select>");
 
+		}
 		elTypeSelect.val( rgNodeData.type );
 
-		var elSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+		var elSortSelect = null;
+		if( !bIsCreatorHome )
+		{
+			elSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+		}
+		else
+		{
+			elSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+		}
 
 		elSortSelect.val( rgNodeData.sort );
 
@@ -343,6 +347,7 @@ function ShowEditHandles()
 			switch( elTypeSelect.val() )
 			{
 				case 'featured_recommendations':
+				case 'featured_creations':
 					elSortSelect.parent().removeClass('hidden');
 					elListContainer.addClass('hidden');
 					elTagContainer.addClass('hidden');
@@ -353,6 +358,7 @@ function ShowEditHandles()
 					elTagContainer.addClass('hidden');
 					break;
 				case 'featured_tag':
+				case 'featured_tag_creation':
 					elSortSelect.parent().addClass('hidden');
 					elListContainer.addClass('hidden');
 					elTagContainer.removeClass('hidden');
@@ -385,7 +391,7 @@ function ShowEditHandles()
 			} ).done( function ( data )
 			{
 				$container.replaceWith( data );
-				ShowEditHandles();
+				ShowEditHandles( g_bIsCreatorHome );
 			});
 
 			return false;
@@ -750,7 +756,7 @@ function ShowHeaderImageHandle()
 $J(function() {
 	if( location.hash == "#edit" && g_bCanCurateApps)
 	{
-		ShowEditHandles ();
+		ShowEditHandles ( g_bIsCreatorHome );
 		$J('.tag_edit_control').show();
 	}
 

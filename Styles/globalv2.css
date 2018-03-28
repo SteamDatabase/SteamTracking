@@ -408,7 +408,8 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 	font-size: 14px;
 	line-height: 24px;
 	margin-bottom: 1px;
-	padding-bottom: 2px;
+	padding-bottom: 15px;
+	padding-top: 10px;
 }
 .commentthread_header {
 	border-bottom: 1px solid #363f4c;
@@ -492,6 +493,10 @@ body.flat_page > .perf_timing_area .perf_timing_link, body.headerless_page > .pe
 .commentthread_pagelink {
 	cursor: pointer;
 	color: #ffffff;
+}
+
+.commentthread_pagelinks {
+	margin: 0 8px;
 }
 
 .commentthread_pagedropdown {
