@@ -323,6 +323,7 @@
 			"engineer_hair"		"1"			
 			"sniper_vest"		"1"			
 			"medigun_backpack"	"1"
+			"sniper_pocket_left"	"1"
 		}
 		"shared"
 		{
@@ -11912,6 +11913,46 @@
 			}
 		}
 
+		"BlueMoonCosmetics_collection"
+		{
+			"name"				"BlueMoonCosmetics_collection"
+			"description"		"BlueMoonCosmetics_collection_desc"
+			"items"
+			{
+				"ancient"
+				{
+					"Robin Walkers"					"10"
+				}
+				"legendary"
+				{
+					"The Frag Proof Fragger"		"10"
+					"Private Maggot Muncher"		"10"
+					"The Cold Case"					"10"
+				}
+				"mythical"
+				{
+					"Starboard Crusader"			"10"
+					"Scourge of the Sky"			"10"
+					"Veterans Attire"				"10"
+					"The Burning Question"			"10"
+					"Aristotle"						"10"
+					"Blizzard Britches"				"10"
+					"Punk's Pomp"					"10"
+				}
+				"rare"
+				{
+					"The Tundra Top"				"10"
+					"Antarctic Eyewear"				"10"
+					"The Head Hedge"				"10"
+					"Tsar Platinum"					"10"
+					"Sky High Fly Guy"				"10"
+					"The Hot Case"					"10"
+					"Assassin's Attire"				"10"
+					"Wipe Out Wraps"				"10"
+				}
+			}
+		}
+
 	} 
 	"operations"
 	{
@@ -14588,33 +14629,12 @@
 			{
 				"pyro"	"1"
 			}
-			"attributes"
+			"static_attrs"
 			{
-				"crit vs burning players"
-				{
-					"attribute_class"	"or_crit_vs_playercond"
-					"value"	"1"
-				}
-				"damage penalty"
-				{
-					"attribute_class" 	"mult_dmg"
-					"value" "0.67"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"single wep deploy time increased"
-				{
-					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"	"1.75"
-				}
-				"fire rate penalty"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"	"1.2"
-				}
+				"attack_minicrits_and_consumes_burning"	"1"
+				"damage penalty"						"0.67"
+				"single wep holster time increased"		"1.35"
+				"crit mod disabled"						"0"
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -18190,6 +18210,11 @@
 					"attribute_class"	"mult_clipsize"
 					"value"				"0.66"
 				}
+				"repair health to metal ratio DISPLAY ONLY"
+				{
+					"attribute_class"	"repair_health_to_metal_ratio_DISPLAY_ONLY"
+					"value"				"4"
+				}
 			}
 			"visuals"
 			{
@@ -19588,7 +19613,7 @@
 				"damage penalty"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"	"0.7"
+					"value"	"0.8"
 				}
 				"single wep deploy time decreased"
 				{
@@ -20836,6 +20861,10 @@
 			"used_by_classes"
 			{
 				"engineer"	"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 0 -10"				
 			}
 			"mouse_pressed_sound"	"ui/item_metal_weapon_pickup.wav"
 			"drop_sound"		"ui/item_metal_weapon_drop.wav"
@@ -27130,6 +27159,15 @@
 			}
 			"visuals"
 			{
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
+					}
+				}
 				"attached_models_festive"
 				{
 					"0"
@@ -27156,6 +27194,15 @@
 					"0"
 					{
 						"model"	"models/workshop/weapons/c_models/c_holymackerel/c_holymackerel_festivizer.mdl"
+					}
+				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 				}
 			}
@@ -27559,7 +27606,7 @@
 				"jarate duration"
 				{
 					"attribute_class" "jarate_duration"
-					"value" "8"
+					"value" "5"
 				}
 				"crit mod disabled"
 				{
@@ -36222,6 +36269,15 @@
 						"model"	"models/workshop/weapons/c_models/c_soda_popper/c_soda_popper_festivizer.mdl"
 					}
 				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
+					}
+				}
 			}
 		}
 		"449"
@@ -36241,6 +36297,15 @@
 					"0"
 					{
 						"model"	"models/workshop/weapons/c_models/c_winger_pistol/c_winger_pistol_festivizer.mdl"
+					}
+				}
+				"styles"
+				{
+					"0"
+					{
+						"skin_red"	"0"
+						"skin_blu"	"1"
+						"selectable"	"0"
 					}
 				}
 			}
@@ -46577,7 +46642,7 @@
 				"heal on hit for rapidfire"
 				{
 					"attribute_class"	"add_onhit_addhealth"
-					"value"	"7"
+					"value"	"3"
 				}
 				"fire rate bonus"
 				{
@@ -51728,7 +51793,7 @@
 		}
 		"954"
 		{
-			"name"	"The Memory Maker"
+			"name"	"Memory Maker"
 			"first_sale_date"	"2012/11/28"
 			"item_class"	"saxxy"
 			"prefab"	"weapon_melee_allclass"
@@ -51750,7 +51815,6 @@
 			"model_player"	"models/weapons/c_models/c_8mm_camera/c_8mm_camera.mdl"
 			"attach_to_hands"	"1"
 			"item_quality"	"unique"
-			"propername"	"1"
 			"min_ilevel"	"50"
 			"max_ilevel"	"50"
 			"anim_slot" "MELEE_ALLCLASS"
@@ -59631,12 +59695,12 @@
 			"static_attrs"
 			{
 				"min_viewmodel_offset"					"10 0 -9"	
-				"damage force increase hidden"	"1.3"
+				"damage force increase hidden"	"1.5"
 				"taunt attack name"		"TAUNTATK_PYRO_GASBLAST"
 				"taunt attack time"		"4.7"
 				"item_meter_charge_type"						"1"
 				"item_meter_charge_rate"			"30"
-				"holster_anim_time"		"1.1"
+				"holster_anim_time"		"0.8"
 				"falling_impact_radius_pushback"	"1"
 				"thermal_thruster"					"1"
 			}
@@ -59771,6 +59835,14 @@
 			{
 				"damage penalty"					"0.8"
 				"speed_boost_on_hit_enemy"			"1.0"
+			}
+			"attributes"
+			{
+				"disable weapon hiding for animations"
+				{
+					"attribute_class"	"disable_weapon_hiding_for_animations"
+					"value"	"1"
+				}
 			}
 			"visuals"
 			{
@@ -79013,7 +79085,7 @@
 			"prefab"		"no_craft misc"
 			"item_name"		"#TF_dec2014_wally_pocket"
 			"item_description"		"#TF_dec2014_cosmetic_desc"
-			"equip_region"		"sniper_pocket"
+			"equip_region"		"sniper_pocket_left"
 			"image_inventory"		"backpack/workshop/player/items/sniper/dec2014_wally_pocket/dec2014_wally_pocket"
 			"capabilities"
 			{
@@ -86579,6 +86651,517 @@
 				"pyro"		"1"
 				"spy"		"1"
 				"engineer"		"1"
+			}
+		}
+		"30975"
+		{
+			"name"		"Robin Walkers"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_robin_walkers"
+			"item_description"		"#TF_spr18_robin_walkers_Desc"
+			"item_type_name"		"#TF_Wearable_Slippers"
+			"equip_region"		"feet"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes"		"1"
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr18_robin_walkers/spr18_robin_walkers"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/spr18_robin_walkers/spr18_robin_walkers_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30976"
+		{
+			"name"		"The Tundra Top"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_tundra_top"
+			"item_description"		"#TF_spr18_tundra_top_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr18_tundra_top/spr18_tundra_top"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"		"models/workshop/player/items/all_class/spr18_tundra_top/spr18_tundra_top_%s.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30977"
+		{
+			"name"		"Antarctic Eyewear"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_antarctic_eyewear"
+			"item_description"		"#TF_spr18_antarctic_eyewear_Desc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr18_antarctic_eyewear/spr18_antarctic_eyewear"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/spr18_antarctic_eyewear/spr18_antarctic_eyewear_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/spr18_antarctic_eyewear/spr18_antarctic_eyewear_sniper.mdl"
+				"demoman"		"models/workshop/player/items/all_class/spr18_antarctic_eyewear/spr18_antarctic_eyewear_demo.mdl"
+				"engineer"		"models/workshop/player/items/all_class/spr18_antarctic_eyewear/spr18_antarctic_eyewear_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"demoman"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30978"
+		{
+			"name"		"The Head Hedge"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_head_hedge"
+			"item_description"		"#TF_spr18_head_hedge_Desc"
+			"item_type_name"		"#TF_Wearable_Helmet"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/all_class/spr18_head_hedge/spr18_head_hedge"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"sniper"		"models/workshop/player/items/all_class/spr18_head_hedge/spr18_head_hedge_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/spr18_head_hedge/spr18_head_hedge_soldier.mdl"
+			}
+			"used_by_classes"
+			{
+				"sniper"		"1"
+				"soldier"		"1"
+			}
+		}
+		"30979"
+		{
+			"name"		"The Frag Proof Fragger"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_frag_proof_fragger"
+			"item_description"		"#TF_spr18_frag_proof_fragger_Desc"
+			"item_type_name"		"#TF_Wearable_Helmet"
+			"equip_region"		"whole_head"
+			"propername"		"1"
+			"image_inventory"		"backpack/workshop/player/items/demo/spr18_frag_proof_fragger/spr18_frag_proof_fragger"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/demo/spr18_frag_proof_fragger/spr18_frag_proof_fragger.mdl"
+			"used_by_classes"
+			{
+				"demoman"		"1"
+			}
+		}
+		"30980"
+		{
+			"name"		"Tsar Platinum"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_tsar_platinum"
+			"item_description"		"#TF_spr18_tsar_platinum_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/heavy/spr18_tsar_platinum/spr18_tsar_platinum"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/spr18_tsar_platinum/spr18_tsar_platinum.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30981"
+		{
+			"name"		"Starboard Crusader"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_starboard_crusader"
+			"item_description"		"#TF_spr18_starboard_crusader_Desc"
+			"equip_region"		"hat"
+			"image_inventory"		"backpack/workshop/player/items/heavy/spr18_starboard_crusader/spr18_starboard_crusader"
+			"drop_type"		"drop"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/heavy/spr18_starboard_crusader/spr18_starboard_crusader.mdl"
+			"used_by_classes"
+			{
+				"heavy"		"1"
+			}
+		}
+		"30982"
+		{
+			"name"		"Scourge of the Sky"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_scourge_of_the_sky"
+			"item_description"		"#TF_spr18_scourge_of_the_sky_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/medic/spr18_scourge_of_the_sky/spr18_scourge_of_the_sky.mdl"
+			"used_by_classes"
+			{
+				"medic"		"1"
+			}
+		}
+		"30983"
+		{
+			"name"		"Veterans Attire"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_veterans_attire"
+			"item_description"		"#TF_spr18_veterans_attire_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"soldier_coat"
+			"image_inventory"		"backpack/workshop/player/items/soldier/spr18_veterans_attire/spr18_veterans_attire"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/spr18_veterans_attire/spr18_veterans_attire.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30984"
+		{
+			"name"		"Sky High Fly Guy"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_sky_high_fly_guy"
+			"item_description"		"#TF_spr18_sky_high_fly_guy_Desc"
+			"equip_region"		"hat"
+			"drop_type"		"drop"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/spr18_sky_high_fly_guy/spr18_sky_high_fly_guy"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/spr18_sky_high_fly_guy/spr18_sky_high_fly_guy.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+		}
+		"30985"
+		{
+			"name"		"Private Maggot Muncher"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_private_maggot_muncher"
+			"item_description"		"#TF_spr18_private_maggot_muncher_Desc"
+			"item_type_name"		"#TF_Wearable_Mascot"
+			"equip_region"		"necklace"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/soldier/spr18_private_maggot_muncher/spr18_private_maggot_muncher"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/soldier/spr18_private_maggot_muncher/spr18_private_maggot_muncher.mdl"
+			"used_by_classes"
+			{
+				"soldier"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+		}
+		"30986"
+		{
+			"name"		"The Hot Case"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_hot_case"
+			"item_description"		"#TF_spr18_hot_case_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"propername"		"1"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"grenades"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/pyro/spr18_hot_case/spr18_hot_case"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/spr18_hot_case/spr18_hot_case.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30987"
+		{
+			"name"		"The Burning Question"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_burning_question"
+			"item_description"		"#TF_spr18_burning_question_Desc"
+			"equip_region"		"hat"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/pyro/spr18_burning_question/spr18_burning_question.mdl"
+			"used_by_classes"
+			{
+				"pyro"		"1"
+			}
+		}
+		"30988"
+		{
+			"name"		"Aristotle"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_aristotle"
+			"item_description"		"#TF_spr18_aristotle_Desc"
+			"item_type_name"		"#TF_Wearable_Mascot"
+			"equip_region"		"arms"
+			"image_inventory"		"backpack/workshop/player/items/spy/spr18_aristotle/spr18_aristotle"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/spr18_aristotle/spr18_aristotle.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+			"attributes"
+			{
+				"counts as assister is some kind of pet this update is going to be awesome"
+				{
+					"attribute_class"		"counts_as_assister"
+					"value"		"1"
+				}
+			}
+		}
+		"30989"
+		{
+			"name"		"Assassin's Attire"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_assassins_attire"
+			"item_description"		"#TF_spr18_assassins_attire_Desc"
+			"item_type_name"		"#TF_Wearable_Apparel"
+			"equip_region"		"shirt"
+			"image_inventory"		"backpack/workshop/player/items/spy/spr18_assassins_attire/spr18_assassins_attire"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/spy/spr18_assassins_attire/spr18_assassins_attire.mdl"
+			"used_by_classes"
+			{
+				"spy"		"1"
+			}
+		}
+		"30990"
+		{
+			"name"		"Wipe Out Wraps"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_wipe_out_wraps"
+			"item_description"		"#TF_spr18_wipe_out_wraps_Desc"
+			"item_type_name"		"#TF_Wearable_Coat"
+			"equip_region"		"shirt"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"dogtags"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/spr18_wipe_out_wraps/spr18_wipe_out_wraps"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr18_wipe_out_wraps/spr18_wipe_out_wraps.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30991"
+		{
+			"name"		"Blizzard Britches"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_blizzard_britches"
+			"item_description"		"#TF_spr18_blizzard_britches_Desc"
+			"item_type_name"		"#TF_Wearable_Pants"
+			"equip_region"		"pants"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"shoes_socks"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/spr18_blizzard_britches/spr18_blizzard_britches"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr18_blizzard_britches/spr18_blizzard_britches.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
+			}
+		}
+		"30992"
+		{
+			"name"		"The Cold Case"
+			"prefab"		"no_craft misc marketable"
+			"item_name"		"#TF_spr18_cold_case"
+			"item_description"		"#TF_spr18_cold_case_Desc"
+			"item_type_name"		"#TF_Wearable_Cooler"
+			"equip_region"		"back"
+			"propername"		"1"
+			"drop_type"		"drop"
+			"image_inventory"		"backpack/workshop/player/items/engineer/spr18_cold_case/spr18_cold_case"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/engineer/spr18_cold_case/spr18_cold_case.mdl"
+			"used_by_classes"
+			{
+				"engineer"		"1"
+			}
+		}
+		"30993"
+		{
+			"name"		"Punk's Pomp"
+			"prefab"		"no_craft hat marketable"
+			"item_name"		"#TF_spr18_punks_pomp"
+			"item_description"		"#TF_spr18_punks_pomp_Desc"
+			"item_type_name"		"#TF_Wearable_Hair"
+			"equip_region"		"hat"
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"hat"		"1"
+					"headphones"		"1"
+				}
+			}
+			"image_inventory"		"backpack/workshop/player/items/scout/spr18_punks_pomp/spr18_punks_pomp"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+				"paintable"		"1"
+			}
+			"model_player"		"models/workshop/player/items/scout/spr18_punks_pomp/spr18_punks_pomp.mdl"
+			"used_by_classes"
+			{
+				"scout"		"1"
 			}
 		}
 
@@ -106383,6 +106966,7 @@
 			"capabilities"
 			{
 				"paintable"			"1"
+				"nameable"		"1"
 			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
 			"item_name"			"#TF_TournamentMedal_TitaniumTankParticipant2017"
@@ -106655,7 +107239,7 @@
 				"paintable"			"1"
 			}
 			"item_name"			"#TF_TournamentMedal_Ready_Steady_Pan_Helper"
-			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_Helper_Desc"
+			"item_description"	"#TF_TournamentMedal_Ready_Steady_Pan_HelperS3_Desc"
 			"image_inventory"	"backpack/workshop/player/items/all_class/rsp_s03_helper/rsp_s03_helper"
 			"model_player_per_class"
 			{
@@ -107596,6 +108180,1279 @@
 			"visuals"
 			{
 				"skin"	"1"
+			}
+		}
+		"9812"
+		{		
+			"name"				"ozfortress Premier 1st Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_first/ozfortress_sixes_prem_first_demo.mdl"
+		}
+		"9813"
+		{		
+			"name"				"ozfortress Premier 2nd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_second/ozfortress_sixes_prem_second_demo.mdl"
+		}
+		"9814"
+		{		
+			"name"				"ozfortress Premier 3rd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_third/ozfortress_sixes_prem_third_demo.mdl"
+		}
+		"9815"
+		{		
+			"name"				"ozfortress Premier Participant Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Premier_Participant"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_prem_participant/ozfortress_sixes_prem_participant_demo.mdl"
+		}
+		"9816"
+		{		
+			"name"				"ozfortress Intermediate 1st Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9817"
+		{		
+			"name"				"ozfortress Intermediate 2nd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9818"
+		{		
+			"name"				"ozfortress Intermediate 3rd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9819"
+		{		
+			"name"				"ozfortress Intermediate Participant Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Intermediate_Participant"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"9820"
+		{		
+			"name"				"ozfortress Open 1st Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_First_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_first/ozfortress_sixes_regular_first_demo.mdl"
+		}
+		"9821"
+		{		
+			"name"				"ozfortress Open 2nd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Second_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_second/ozfortress_sixes_regular_second_demo.mdl"
+		}
+		"9822"
+		{		
+			"name"				"ozfortress Open 3rd Place Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Third_Place"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_third/ozfortress_sixes_regular_third_demo.mdl"
+		}
+		"9823"
+		{		
+			"name"				"ozfortress Open Participant Season 21"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_OzFortress_Open_Participant"
+			"item_description"	"#TF_TournamentMedal_Season21"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant"
+			"model_player"		"models/workshop/player/items/all_class/ozfortress_sixes_regular_participant/ozfortress_sixes_regular_participant_demo.mdl"
+		}
+		"9824"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season1"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season1_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9825"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 2"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season2"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season2_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9826"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 3"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season3"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season3_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9827"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 4"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season4"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season4_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9828"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 5"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season5"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season5_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9829"
+		{		
+			"name"				"NHBL Sasha Heavyweight Champion Season 6"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Sasha_Season6"
+			"item_description"	"#TF_TournamentMedal_NHBL_Sasha_Season6_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+ 		"9830"
+		{
+			"name"	"Florida LAN 2018 Donator Medal"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_FLAN_Donator_2018"
+			"item_description"	"#TF_TournamentMedal_FLAN_Donator_2018_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan_donator_2018/florida_lan_donator_2018"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/florida_lan_donator_2018/florida_lan_donator_2018_%s.mdl"
+			}
+		}
+ 		"9831"
+		{
+			"name"	"Florida LAN 2018 Participant Medal"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_FLAN_Participant_2018"
+			"item_description"	"#TF_TournamentMedal_FLAN_Participant_2018_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan_participant_2018/florida_lan_participant_2018"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/florida_lan_participant_2018/florida_lan_participant_2018_%s.mdl"
+			}
+		}
+ 		"9832"
+		{
+			"name"	"Florida LAN 2018 Contributor Medal"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_FLAN_Contributor_2018"
+			"item_description"	"#TF_TournamentMedal_FLAN_Contributor_2018_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/florida_lan_contributor_2018/florida_lan_contributor_2018"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/florida_lan_contributor_2018/florida_lan_contributor_2018_%s.mdl"
+			}
+		}
+		"9833"
+		{		
+			"name"				"NHBL Natascha Heavyweight Champion Season 7"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Natasha_Season7"
+			"item_description"	"#TF_TournamentMedal_NHBL_Natasha_Season7_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_first_place/nhbl_first_place_%s.mdl"
+			}
+		}
+		"9834"
+		{		
+			"name"				"NHBL Finals Participant Season 7"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_Participant"
+			"item_description"	"#TF_TournamentMedal_Season7"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_participant/nhbl_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_participant/nhbl_participant_%s.mdl"
+			}
+		}
+		"9835"
+		{		
+			"name"				"NHBL Finals 2nd Place Season 7"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_SecondPlace"
+			"item_description"	"#TF_TournamentMedal_Season7"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_second_place/nhbl_second_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_second_place/nhbl_second_place_%s.mdl"
+			}
+		}
+		"9836"
+		{		
+			"name"				"NHBL Finals 3rd Place Season 7"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_ThirdPlace"
+			"item_description"	"#TF_TournamentMedal_Season7"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_third_place/nhbl_third_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_third_place/nhbl_third_place_%s.mdl"
+			}
+		}
+		"9837"
+		{		
+			"name"				"NHBL Finals 4th Place Season 7"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_NHBL_FourthPlace"
+			"item_description"	"#TF_TournamentMedal_Season7"
+			"image_inventory"	"backpack/workshop/player/items/all_class/nhbl_fourth_place/nhbl_fourth_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/nhbl_fourth_place/nhbl_fourth_place_%s.mdl"
+			}
+		}
+		"9838"
+		{		
+			"name"				"Ultimate Ultiduo 1st Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UltimateUltiduo_First"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ultimate_ultiduo_first/ultimate_ultiduo_first"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/ultimate_ultiduo_first/ultimate_ultiduo_first_%s.mdl"
+			}
+		}
+		"9839"
+		{		
+			"name"				"Ultimate Ultiduo 2nd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UltimateUltiduo_Second"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ultimate_ultiduo_second/ultimate_ultiduo_second"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/ultimate_ultiduo_second/ultimate_ultiduo_second_%s.mdl"
+			}
+		}
+		"9840"
+		{		
+			"name"				"Ultimate Ultiduo 3rd Place Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UltimateUltiduo_Third"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ultimate_ultiduo_third/ultimate_ultiduo_third"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/ultimate_ultiduo_third/ultimate_ultiduo_third_%s.mdl"
+			}
+		}
+		"9841"
+		{		
+			"name"				"Ultimate Ultiduo Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UltimateUltiduo_Participant"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ultimate_ultiduo_participant/ultimate_ultiduo_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/ultimate_ultiduo_participant/ultimate_ultiduo_participant_%s.mdl"
+			}
+		}
+		"9842"
+		{		
+			"name"				"Ultimate Ultiduo Helper Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_UltimateUltiduo_Helper"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/ultimate_ultiduo_helper/ultimate_ultiduo_helper"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/ultimate_ultiduo_helper/ultimate_ultiduo_helper_%s.mdl"
+			}
+		}
+		"9843"
+		{		
+			"name"				"RGLgg Pick Ban Prolander Participant Season 2"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_RGLgg_Prolander_Participant"
+			"item_description"	"#TF_TournamentMedal_Season2"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rglgg_prolander_participant/rglgg_prolander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rglgg_prolander_participant/rglgg_prolander_participant_%s.mdl"
+			}
+		}
+		"9844"
+		{		
+			"name"				"RGLgg One Day Prolander Cup North America Winter 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGLgg_OneDayCup_NA"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rglgg_prolander_one_day_cup/rglgg_prolander_one_day_cup"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rglgg_prolander_one_day_cup/rglgg_prolander_one_day_cup_%s.mdl"
+			}
+		}
+		"9845"
+		{		
+			"name"				"RGLgg One Day Prolander Cup Europe Winter 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_RGLgg_OneDayCup_Europe"
+			"item_description"	"#TF_TournamentMedal_Winter2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/rglgg_prolander_one_day_cup/rglgg_prolander_one_day_cup"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rglgg_prolander_one_day_cup/rglgg_prolander_one_day_cup_%s.mdl"
+			}
+		}
+		"9846"
+		{		
+			"name"				"Palaise MGE Doubles Community Clash Champion Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_Palaise_Champion"
+			"item_description"	"#TF_TournamentMedal_Palaise_Champion_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/palaise_champion/palaise_champion"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/palaise_champion/palaise_champion_%s.mdl"
+			}
+		}
+		"9847"
+		{		
+			"name"				"Palaise MGE Doubles Community Clash Runner-Up Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_Palaise_RunnerUp"
+			"item_description"	"#TF_TournamentMedal_Palaise_RunnerUp_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/palaise_runner_up/palaise_runner_up"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/palaise_runner_up/palaise_runner_up_%s.mdl"
+			}
+		}
+		"9848"
+		{		
+			"name"				"Palaise MGE Doubles Community Clash Contestant Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_Palaise_Contestant"
+			"item_description"	"#TF_TournamentMedal_Palaise_Contestant_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/palaise_contestant/palaise_contestant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/palaise_contestant/palaise_contestant_%s.mdl"
+			}
+		}
+		"9849"
+		{		
+			"name"				"Journey to the East 1st Place"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_jtte_gold"
+			"item_description"	"#TF_TournamentMedal_jtte_winner_desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jtte_gold/jtte_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jtte_gold/jtte_gold_%s.mdl"
+			}
+		}
+		"9850"
+		{		
+			"name"				"Journey to the East 2nd Place"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_jtte_silver"
+			"item_description"	"#TF_TournamentMedal_jtte_winner_desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jtte_silver/jtte_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jtte_silver/jtte_silver_%s.mdl"
+			}
+		}
+		"9851"
+		{		
+			"name"				"Journey to the East 3rd Place"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_jtte_bronze"
+			"item_description"	"#TF_TournamentMedal_jtte_winner_desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jtte_bronze/jtte_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jtte_bronze/jtte_bronze_%s.mdl"
+			}
+		}
+		"9852"
+		{		
+			"name"				"Journey to the East Participant"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_jtte_participant"
+			"item_description"	"#TF_TournamentMedal_jtte_participant_desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/jtte_participant/jtte_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/jtte_participant/jtte_participant_%s.mdl"
+			}
+		}
+		"9853"
+		{		
+			"name"				"Newbie Prolander Cup Gold Medal Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_NPC_gold"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/newbie_prolander_gold/newbie_prolander_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/newbie_prolander_gold/newbie_prolander_gold_%s.mdl"
+			}
+		}
+		"9854"
+		{		
+			"name"				"Newbie Prolander Cup Silver Medal Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_NPC_silver"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/newbie_prolander_silver/newbie_prolander_silver"	
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/newbie_prolander_silver/newbie_prolander_silver_%s.mdl"
+			}
+		}
+		"9855"
+		{		
+			"name"				"Newbie Prolander Cup Bronze Medal Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_NPC_bronze"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/newbie_prolander_bronze/newbie_prolander_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/newbie_prolander_bronze/newbie_prolander_bronze_%s.mdl"
+			}
+		}
+		"9856"
+		{		
+			"name"				"Newbie Prolander Cup Participant Season 1"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_NPC_participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/newbie_prolander_participant/newbie_prolander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/newbie_prolander_participant/newbie_prolander_participant_%s.mdl"
+			}
+		}
+		"9857"
+		{
+			"name"		"ESA Rewind II Tier 1 Donor"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_RewindII_DonorT1"
+			"item_description"		"#TF_TournamentMedal_RewindII_Donor_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_donor_t1/rewind_donor_t1"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rewind_donor_t1/rewind_donor_t1_%s.mdl"
+			}
+		}
+		"9858"
+		{
+			"name"		"ESA Rewind II Tier 2 Donor"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_RewindII_DonorT2"
+			"item_description"		"#TF_TournamentMedal_RewindII_Donor_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_donor_t2/rewind_donor_t2"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rewind_donor_t2/rewind_donor_t2_%s.mdl"
+			}
+		}
+		"9859"
+		{
+			"name"		"ESA Rewind II Tier 3 Donor"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_RewindII_DonorT3"
+			"item_description"		"#TF_TournamentMedal_RewindII_Donor_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_donor_t3/rewind_donor_t3"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rewind_donor_t3/rewind_donor_t3_%s.mdl"
+			}
+		}
+		"9860"
+		{
+			"name"		"ESA Rewind II Top 8"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_RewindII_Top8"
+			"item_description"		"#TF_TournamentMedal_RewindII_Top8_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_top8/rewind_top8"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rewind_top8/rewind_top8_%s.mdl"
+			}
+		}
+		"9861"
+		{
+			"name"		"ESA Rewind II Participant"
+			"prefab"			"tournament_medal"
+			"item_name"		"#TF_TournamentMedal_RewindII_Participant"
+			"item_description"		"#TF_TournamentMedal_RewindII_Participant_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/rewind_open/rewind_open"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/rewind_open/rewind_open_%s.mdl"
+			}
+		}
+		"9862"
+		{		
+			"name"				"ETF2L Highlander Premiership Gold Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9863"
+		{		
+			"name"				"ETF2L Highlander Premiership Silver Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9864"
+		{		
+			"name"				"ETF2L Highlander Premiership Bronze Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9865"
+		{		
+			"name"				"ETF2L Highlander Premiership Participation Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9866"
+		{		
+			"name"				"ETF2L Highlander High Gold Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Gold"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9867"
+		{		
+			"name"				"ETF2L Highlander High Silver Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Silver"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9868"
+		{		
+			"name"				"ETF2L Highlander High Bronze Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9869"
+		{		
+			"name"				"ETF2L Highlander High Participation Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_High_Participation"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9870"
+		{		
+			"name"				"ETF2L Highlander Mid Gold Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9871"
+		{		
+			"name"				"ETF2L Highlander Mid Silver Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9872"
+		{		
+			"name"				"ETF2L Highlander Mid Bronze Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9873"
+		{		
+			"name"				"ETF2L Highlander Mid Playoff Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9874"
+		{		
+			"name"				"ETF2L Highlander Mid Participation Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+  		"9875"
+		{		
+			"name"				"ETF2L Highlander Open Gold Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_1st_place/etf2l_2014_highlander_1st_place_%s.mdl"
+			}
+		}
+		"9876"
+		{		
+			"name"				"ETF2L Highlander Open Silver Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_2nd_place/etf2l_2014_highlander_2nd_place_%s.mdl"
+			}
+		}
+		"9877"
+		{		
+			"name"				"ETF2L Highlander Open Bronze Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_3rd_place/etf2l_2014_highlander_3rd_place_%s.mdl"
+			}
+		}
+		"9878"
+		{		
+			"name"				"ETF2L Highlander Open Playoff Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_group_winner/etf2l_2014_highlander_group_winner_%s.mdl"
+			}
+		}
+		"9879"
+		{		
+			"name"				"ETF2L Highlander Open Participation Medal Season 14"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_Highlander_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season14"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_highlander_participant/etf2l_2014_highlander_participant_%s.mdl"
+			}
+		}
+		"9880"
+		{		
+			"name"				"ETF2L 6v6 Premiership Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9881"
+		{		
+			"name"				"ETF2L 6v6 Premiership Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9882"
+		{		
+			"name"				"ETF2L 6v6 Premiership Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9883"
+		{		
+			"name"				"ETF2L 6v6 Premiership Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Premiership_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9884"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9885"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9886"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9887"
+		{		
+			"name"				"ETF2L 6v6 Division 1 Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division1_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9888"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9889"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9890"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9891"
+		{		
+			"name"				"ETF2L 6v6 Division 2 Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Division2_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9892"
+		{		
+			"name"				"ETF2L 6v6 Mid Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9893"
+		{		
+			"name"				"ETF2L 6v6 Mid Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9894"
+		{		
+			"name"				"ETF2L 6v6 Mid Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9895"
+		{		
+			"name"				"ETF2L 6v6 Mid Playoff Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9896"
+		{		
+			"name"				"ETF2L 6v6 Mid Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Mid_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9897"
+		{		
+			"name"				"ETF2L 6v6 Low Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Low_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9898"
+		{		
+			"name"				"ETF2L 6v6 Low Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Low_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9899"
+		{		
+			"name"				"ETF2L 6v6 Low Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Low_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9900"
+		{		
+			"name"				"ETF2L 6v6 Low Playoff Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Low_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9901"
+		{		
+			"name"				"ETF2L 6v6 Low Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Low_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+  		"9902"
+		{		
+			"name"				"ETF2L 6v6 Open Gold Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Gold"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_1st_place/etf2l_2014_6v6_1st_place_%s.mdl"
+			}
+		}
+		"9903"
+		{		
+			"name"				"ETF2L 6v6 Open Silver Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Silver"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_2nd_place/etf2l_2014_6v6_2nd_place_%s.mdl"
+			}
+		}
+		"9904"
+		{		
+			"name"				"ETF2L 6v6 Open Bronze Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_3rd_place/etf2l_2014_6v6_3rd_place_%s.mdl"
+			}
+		}
+		"9905"
+		{		
+			"name"				"ETF2L 6v6 Open Playoff Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Playoff"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_group_winner/etf2l_2014_6v6_group_winner_%s.mdl"
+			}
+		}
+		"9906"
+		{		
+			"name"				"ETF2L 6v6 Open Participation Medal Season 29"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_ETF2L_6v6_Open_Participation"
+			"item_description"	"#TF_TournamentMedal_Season29"
+			"image_inventory"	"backpack/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/etf2l_2014_6v6_participant/etf2l_2014_6v6_participant_%s.mdl"
+			}
+		}
+		"9907"
+		{		
+			"name"				"Canteen Crasher Platinum Crit Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Platinum"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Platinum_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_platinum/canteen_crasher_platinum"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_platinum/canteen_crasher_platinum_%s.mdl"
+			}
+		}
+		"9908"
+		{		
+			"name"				"Canteen Crasher Gold Uber Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Gold"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Gold_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_gold/canteen_crasher_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_gold/canteen_crasher_gold_%s.mdl"
+			}
+		}
+		"9909"
+		{		
+			"name"				"Canteen Crasher Silver Building Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Silver"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Silver_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_silver/canteen_crasher_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_silver/canteen_crasher_silver_%s.mdl"
+			}
+		}
+		"9910"
+		{		
+			"name"				"Canteen Crasher Bronze Ammo Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Bronze"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Bronze_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_bronze/canteen_crasher_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_bronze/canteen_crasher_bronze_%s.mdl"
+			}
+		}
+		"9911"
+		{		
+			"name"				"Canteen Crasher Iron Recall Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Iron"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Iron_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_iron/canteen_crasher_iron"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_iron/canteen_crasher_iron_%s.mdl"
+			}
+		}
+		"9912"
+		{		
+			"name"				"Canteen Crasher Wood Starter Medal 2018"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"nameable"		"1"
+			}
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Wood"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Wood_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_participant/canteen_crasher_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/canteen_crasher_participant/canteen_crasher_participant_%s.mdl"
 			}
 		}
 
@@ -115193,6 +117050,62 @@
 			"item_quality"		"unique"
 			"mouse_pressed_sound"	"ui/item_bag_pickup.wav"
 			"image_inventory"	"backpack/crafting/ticket_jungle_inferno000002"
+		}
+
+		"5892"
+		{
+			"name"	"Blue Moon Cosmetic Key" 
+			"first_sale_date"	"2018/03/26"
+			"prefab" "eventkey"
+			"item_name"			"#TF_Tool_BlueMoonCosmeticKey"					
+			"item_description"	"#TF_Tool_BlueMoonCosmeticKey_Desc"						
+			"ad_text"			"#TF_Tool_BlueMoonCosmeticKey_AdText" 
+			"image_inventory"	"backpack/crafting/community_cosmetic_bluemoon_key"
+			"tool"
+			{
+				"type"	"decoder_ring"
+				"usage_capabilities"
+				{
+					"decodable"	"1"
+				}
+				"restriction"	"bluemooncosmetic2018"
+			}
+		}
+		"5893" 
+		{
+			"name"	"Blue Moon Cosmetic Case"
+			"first_sale_date"	"2018/03/26"
+			"prefab" "base_cosmetic_case"
+			"tool"
+			{
+				"restriction"	"bluemooncosmetic2018"
+			}
+			"item_name"			"#TF_BlueMoonCosmeticCase"
+			"item_description"	"#TF_BlueMoonCosmeticCase_desc"
+			"ad_text"			"#TF_BlueMoonCosmeticCase_AdText"
+			"image_inventory"	"backpack/player/items/crafting/community_cosmetic_case_bluemoon"
+			"model_player"		"models/player/items/crafting/community_cosmetic_case.mdl"
+			"default_skin"		"1"
+			"static_attrs"
+			{
+				"set supply crate series"		"119"		
+				"hide crate series number"		"1"
+				"decoded by itemdefindex"		"5892"
+				"weapon_allow_inspect"			"1"
+				"use_model_cache_icon"			"1"
+			}
+			"event_desc_footer"			"#Footer_BlueMoonCosmetics"
+			"collection_reference"		"BlueMoonCosmetics_collection"
+			"visuals"
+			{
+				"styles"
+				{
+					"0"
+					{
+						"skin" "1"
+					}
+				}
+			}
 		}
 
 		"5999"				
@@ -132344,6 +134257,16 @@
 			"effect_type"	"positive"
 			"stored_as_integer"	"0"
 		}
+		"880"
+		{
+			"name"	"repair health to metal ratio DISPLAY ONLY"
+			"attribute_class"	"repair_health_to_metal_ratio_DISPLAY_ONLY"
+			"description_string"	"#Attrib_RepairHealthToMetalRatio"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"negative"
+			"stored_as_integer"	"0"
+		}
 
 
 		"1000"
@@ -132928,6 +134851,15 @@
 		{
 			"name"				"force center wrap"
 			"hidden"			"1"
+		}
+		"2067"
+		{
+			"name"	"attack_minicrits_and_consumes_burning"
+			"attribute_class"	"attack_minicrits_and_consumes_burning"
+			"description_string"	"#Attrib_ConsumesBurning"
+			"description_format"	"value_is_additive"
+			"hidden"	"0"
+			"effect_type"	"positive"
 		}
 
 		"3000"
@@ -133672,6 +135604,8 @@
 				"tool target item" "1150" 
 				"tool target item" "1151" 
 				"tool target item" "1153" 
+				"tool target item" "1178" 
+				"tool target item" "1181" 
 				"tool target item" "30665" 
 				"tool target item" "30666" 
 				"tool target item" "30667" 
@@ -137160,6 +139094,11 @@
 			"hide_lootlist"		"1"
 			"loot_list_collection"		"Winter2017Paintkits_collection"
 		}
+		"bluemoon_cosmetic_loot_list_119"
+		{
+			"hide_lootlist"		"1"
+			"loot_list_collection"		"BlueMoonCosmetics_collection"
+		}
 	}
 	"revolving_loot_lists"
 	{
@@ -137278,6 +139217,7 @@
 		"campaign3_collection_2_tier_3"	"116" 
 		"winter2017_cosmetic_loot_list_117"	"117"	
 		"winter2017_war_paint_loot_list_118"	"118"	
+		"bluemoon_cosmetic_loot_list_119"	"119"	
 		
 		
 		"kill_eater_set_demo_a"						"-1"
@@ -146155,6 +148095,7 @@
 			"4"
 			{
 				"system"			"community_sparkle"
+				"draw_in_viewmodel"		"1"
 			}
 			"5"
 			{
@@ -148735,6 +150676,14 @@
 			"MatchGroup_Ladder_6v6"		"1"
 		}
 	}
+	"specialevent_placeholder"
+	{
+		"localized_name"		"#TF_MMCat_EventPlaceholder"
+		"max_excludes"		"0"
+		"valid_match_groups"
+		{
+		}
+	}
 }
 "maps"
 {
@@ -148824,7 +150773,7 @@
 			"3"
 			{
 				"name"		"ctf_sawmill"
-				"enabled"		"0"
+				"enabled"		"1"
 			}
 			"4"
 			{
@@ -148834,7 +150783,7 @@
 			"5"
 			{
 				"name"		"ctf_well"
-				"enabled"		"0"
+				"enabled"		"1"
 			}
 			"6"
 			{
@@ -148859,7 +150808,7 @@
 			"1"
 			{
 				"name"		"cp_5gorge"
-				"enabled"		"0"
+				"enabled"		"1"
 			}
 			"2"
 			{
@@ -149151,6 +151100,11 @@
 				"name"		"koth_probed"
 				"enabled"		"1"
 			}
+			"7"
+			{
+				"name"		"ctf_2fort_invasion"
+				"enabled"		"1"
+			}
 		}
 	}
 	"arena"
@@ -149303,7 +151257,7 @@
 			"1"
 			{
 				"name"		"ctf_foundry"
-				"enabled"		"0"
+				"enabled"		"1"
 			}
 			"2"
 			{
@@ -149427,6 +151381,21 @@
 			}
 		}
 	}
+	"specialevent_placeholder"
+	{
+		"mm_type"		"specialevent_placeholder"
+		"localized_name"		"#GameType_specialevent_placeholder"
+		"localized_desc"		"#Gametype_specialevent_placeholder_Desc"
+		"list_image"		"gametype_specialevent_placeholder"
+		"maplist"
+		{
+			"1"
+			{
+				"name"		"pl_upward"
+				"enabled"		"1"
+			}
+		}
+	}
 	"featured"
 	{
 		"mm_type"		""
@@ -149459,13 +151428,11 @@
 		"statsidentifier"		"1114113"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"2"
@@ -149475,13 +151442,11 @@
 		"statsidentifier"		"1114114"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"3"
@@ -149494,13 +151459,11 @@
 		"authors"		"#cp_vanguard_authors"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"4"
@@ -149510,13 +151473,11 @@
 		"statsidentifier"		"1114116"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"5"
@@ -149526,13 +151487,11 @@
 		"statsidentifier"		"1114117"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"6"
@@ -149545,13 +151504,11 @@
 		"authors"		"#cp_gullywash_final1_authors"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"7"
@@ -149564,13 +151521,11 @@
 		"authors"		"#cp_snakewater_final1_authors"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"8"
@@ -149580,13 +151535,11 @@
 		"statsidentifier"		"1114120"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"9"
@@ -149596,13 +151549,11 @@
 		"statsidentifier"		"131075"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"10"
@@ -149613,13 +151564,11 @@
 		"strangeprefixtoken"		"#TF_Map_Dustbowl_StrangePrefix"
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"11"
@@ -149633,13 +151582,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"	"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"12"
@@ -149654,14 +151601,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"ctf"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"ctf"	"1"
 		}
 	}
 	"13"
@@ -149676,7 +151620,6 @@
 		"rolling_match_target_tags"
 		{
 			"misc"		"1"
-			"core"		"0.2"
 		}
 	}
 	"14"
@@ -149684,6 +151627,14 @@
 		"name"		"ctf_well"
 		"localizedname"		"#TF_Map_ctf_well"
 		"statsidentifier"		"65540"
+		"rolling_match_tags"
+		{
+			"ctf"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"ctf"	"1"
+		}
 		"tags"
 		{
 			"map_has_deep_water"		"1"
@@ -149697,13 +151648,11 @@
 		"strangeprefixtoken"		"#TF_Map_Goldrush_StrangePrefix"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"16"
@@ -149716,13 +151665,11 @@
 		"authors"		"#cp_fastlane_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"17"
@@ -149735,14 +151682,11 @@
 		"authors"		"#ctf_turbine_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"ctf"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"ctf"	"1"
 		}
 	}
 	"18"
@@ -149753,14 +151697,11 @@
 		"strangeprefixtoken"		"#TF_Map_Badwater_StrangePrefix"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"19"
@@ -149773,13 +151714,11 @@
 		"authors"		"#cp_steel_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"20"
@@ -149792,13 +151731,11 @@
 		"authors"		"#cp_egypt_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"21"
@@ -149811,13 +151748,11 @@
 		"authors"		"#cp_junction_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"22"
@@ -149831,13 +151766,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"plr"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"plr"	"1"
 		}
 	}
 	"23"
@@ -149850,14 +151783,11 @@
 		"authors"		"#pl_hoodoo_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"24"
@@ -149871,13 +151801,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"25"
@@ -149887,13 +151815,11 @@
 		"statsidentifier"		"196611"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"26"
@@ -149901,6 +151827,14 @@
 		"name"		"ctf_sawmill"
 		"localizedname"		"#TF_Map_ctf_sawmill"
 		"statsidentifier"		"65538"
+		"rolling_match_tags"
+		{
+			"ctf"	"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"ctf"	"1"
+		}
 		"tags"
 		{
 			"map_has_deep_water"		"1"
@@ -149916,13 +151850,11 @@
 		"authors"		"#cp_yukon_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"28"
@@ -149935,13 +151867,11 @@
 		"authors"		"#koth_harvest_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"29"
@@ -149951,13 +151881,11 @@
 		"statsidentifier"		"65537"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"ctf"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"ctf"	"1"
 		}
 	}
 	"30"
@@ -149974,13 +151902,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"31"
@@ -149991,14 +151917,11 @@
 		"strangeprefixtoken"		"#TF_Map_Upward_StrangePrefix"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"32"
@@ -150009,14 +151932,11 @@
 		"strangeprefixtoken"		"#TF_Map_Hightower_StrangePrefix"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"plr"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"plr"	"1"
 		}
 	}
 	"33"
@@ -150030,13 +151950,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"34"
@@ -150049,13 +151967,11 @@
 		"authors"		"#cp_coldfront_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"35"
@@ -150068,13 +151984,11 @@
 		"authors"		"#cp_mountainlab_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"36"
@@ -150086,12 +152000,9 @@
 		"rolling_match_tags"
 		{
 			"misc"		"1"
-			"popular"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"0.2"
-			"popular"	"0.2"
 			"misc"		"1"
 		}
 	}
@@ -150102,13 +152013,11 @@
 		"statsidentifier"		"262144"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"38"
@@ -150121,14 +152030,11 @@
 		"authors"		"#pl_frontier_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"39"
@@ -150141,13 +152047,11 @@
 		"authors"		"#plr_nightfall_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"plr"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"plr"	"1"
 		}
 	}
 	"40"
@@ -150164,13 +152068,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"41"
@@ -150180,13 +152082,11 @@
 		"statsidentifier"		"196608"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"42"
@@ -150196,13 +152096,11 @@
 		"statsidentifier"		"6"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"43"
@@ -150216,8 +152114,6 @@
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"0.2"
-			"popular"	"0.2"
 			"misc"		"1"
 		}
 	}
@@ -150231,13 +152127,11 @@
 		"authors"		"#koth_king_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"45"
@@ -150250,13 +152144,11 @@
 		"authors"		"#cp_standin_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"46"
@@ -150269,13 +152161,11 @@
 		"authors"		"#cp_process_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"47"
@@ -150288,13 +152178,11 @@
 		"authors"		"#cp_sunshine_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"48"
@@ -150307,13 +152195,11 @@
 		"authors"		"#cp_metalworks_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"49"
@@ -150326,13 +152212,11 @@
 		"authors"		"#pl_swiftwater_final1_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"50"
@@ -150387,13 +152271,11 @@
 		"authors"		"#ctf_landfall_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"ctf"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"ctf"	"1"
 		}
 	}
 	"54"
@@ -150410,8 +152292,6 @@
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"0.2"
-			"popular"	"0.2"
 			"misc"		"1"
 		}
 	}
@@ -150423,6 +152303,14 @@
 		"strangeprefixtoken"		"#TF_Map_2FortInv_StrangePrefix"
 		"maptoken"		"Map Token 2Fort Invasion"
 		"authors"		"#ctf_2fort_invasion_authors"
+		"rolling_match_tags"
+		{
+			"misc"		"1"
+		}
+		"rolling_match_target_tags"
+		{
+			"misc"		"1"
+		}
 		"tags"
 		{
 			"map_has_deep_water"		"1"
@@ -150439,13 +152327,11 @@
 		}
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"cp"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"cp"	"1"
 		}
 	}
 	"57"
@@ -150458,14 +152344,11 @@
 		"authors"		"#koth_suijin_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"58"
@@ -150482,8 +152365,6 @@
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"0.2"
-			"popular"	"0.2"
 			"misc"		"1"
 		}
 	}
@@ -150497,13 +152378,11 @@
 		"authors"		"#koth_highpass_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}
 	}
 	"60"
@@ -150526,13 +152405,11 @@
 		"authors"		"#pl_borneo_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"62"
@@ -150545,13 +152422,11 @@
 		"authors"		"#pl_snowycoast_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}
 	}
 	"63"
@@ -150568,8 +152443,6 @@
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"0.2"
-			"popular"	"0.2"
 			"misc"		"1"
 		}
 	}
@@ -150993,14 +152866,11 @@
 		"localizedname"		"#TF_Map_cp_mercenarypark"
 		"rolling_match_tags"
 		{
-			"core"		"1"
-			"popular"	"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}
 	}
 	"102"
@@ -151012,13 +152882,11 @@
 		"authors"		"#cp_mossrock_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"attack_defend"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"attack_defend"	"1"
 		}	
 	}
 	"103"
@@ -151030,13 +152898,11 @@
 		"authors"		"#koth_lazarus_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}	
 	}
 	"104"
@@ -151048,13 +152914,11 @@
 		"authors"		"#plr_bananabay_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"plr"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"plr"	"1"
 		}	
 	}
 	"105"
@@ -151066,13 +152930,11 @@
 		"authors"		"#pl_enclosure_final_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"payload"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"payload"	"1"
 		}	
 	}
 	"106"
@@ -151084,13 +152946,11 @@
 		"authors"		"#koth_brazil_authors"
 		"rolling_match_tags"
 		{
-			"core"		"1"
+			"koth"	"1"
 		}
 		"rolling_match_target_tags"
 		{
-			"core"		"1"
-			"popular"	"0.2"
-			"misc"		"0.2"
+			"koth"	"1"
 		}	
 	}
 }
