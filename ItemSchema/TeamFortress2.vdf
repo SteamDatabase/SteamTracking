@@ -86922,6 +86922,7 @@
 			"capabilities"
 			{
 				"can_craft_count"		"1"
+				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/soldier/spr18_sky_high_fly_guy/spr18_sky_high_fly_guy.mdl"
 			"used_by_classes"
@@ -86984,6 +86985,7 @@
 			"capabilities"
 			{
 				"can_craft_count"		"1"
+				"paintable"		"1"
 			}
 			"model_player"		"models/workshop/player/items/pyro/spr18_hot_case/spr18_hot_case.mdl"
 			"used_by_classes"
@@ -87162,6 +87164,14 @@
 			"used_by_classes"
 			{
 				"scout"		"1"
+			}
+			"attributes"
+			{
+				"attach particle effect static"
+				{
+					"attribute_class"	"set_attached_particle_static"
+					"value"	"28"
+				}
 			}
 		}
 
