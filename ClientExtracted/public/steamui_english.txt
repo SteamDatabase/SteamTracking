@@ -248,6 +248,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_ReadyToPlay"	"Ready to launch"
 "SteamUI_JoinDialog_ContineLaunch" "Continue launch"
 "SteamUI_JoinDialog_KeyRequestFailed_Title" "Steam - Error"
+"SteamUI_JoinDialog_KeyRequestFailed_Text" "Failed to request product key from Steam, please try again in a few minutes."
 
 "SteamUI_JoinDialog_DataRequest_Text" "Completing installation... %progress%%%"
 "SteamUI_JoinDialog_DataRequestFailed_Title" "Steam - Error"

@@ -408,6 +408,17 @@ SteamControllerHUD
 	border-color: ui_primary_color;
 }
 
+.MouseRegion.MouseRegionRectangle
+{
+    visibility: visible;
+    opacity: 0.75;
+    background-color: #07213588;
+    border-radius: 2%;
+    border: 7px;
+    border-style: solid;
+    border-color: ui_primary_color;
+}
+
 .MouseRegion.MouseRegionEdgeBinding
 {
 	border: 5px;
