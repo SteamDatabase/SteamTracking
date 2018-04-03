@@ -1,0 +1,119 @@
+{
+    "name": "IContentServerConfigService",
+    "methods": [
+        {
+            "name": "SetSteamCacheClientFilters",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Update the client filters for a SteamCache node",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "cache_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Unique ID number"
+                },
+                {
+                    "name": "cache_key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Valid current cache API key"
+                },
+                {
+                    "name": "change_notes",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Notes"
+                },
+                {
+                    "name": "allowed_ip_blocks",
+                    "type": "string",
+                    "optional": false,
+                    "description": "comma-separated list of allowed IP address blocks in CIDR format - blank to clear unfilter"
+                }
+            ]
+        },
+        {
+            "name": "GetSteamCacheNodeParams",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the operational parameters for a SteamCache node (information the node uses to operate).",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "cache_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Unique ID number"
+                },
+                {
+                    "name": "cache_key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Valid current cache API key"
+                }
+            ]
+        },
+        {
+            "name": "SetSteamCachePerformanceStats",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Update the performance/load stats for a SteamCache node",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "cache_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Unique ID number"
+                },
+                {
+                    "name": "cache_key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Valid current cache API key"
+                },
+                {
+                    "name": "mbps_sent",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Outgoing network traffic in Mbps"
+                },
+                {
+                    "name": "mbps_recv",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Incoming network traffic in Mbps"
+                },
+                {
+                    "name": "cpu_percent",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Percent CPU load"
+                },
+                {
+                    "name": "cache_hit_percent",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Percent cache hits"
+                }
+            ]
+        }
+    ]
+}
