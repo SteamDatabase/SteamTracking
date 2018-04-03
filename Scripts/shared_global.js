@@ -4035,7 +4035,7 @@ function LoginUsingSteamClient( baseURL )
 		if ('withCredentials' in new XMLHttpRequest()) { // make sure the browser respects CORS
 			$J.ajax({
 				type: "GET",
-				url: 'http://localhost:27060/auth/?u=public',
+				url: 'http://127.0.0.1:27060/auth/?u=public',
 				dataType: "json",
 				success: function (data) {
 					$J.ajax({
