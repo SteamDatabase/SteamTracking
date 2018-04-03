@@ -8,6 +8,7 @@ function updateArticleSummary( articleSummary ) {
 	$J( '#articleSummaryMakeVisible' ).data( 'currentVisibility', articleSummary.visible );
 	$J( '#articleSummaryHideFromToc' ).prop( 'checked', articleSummary.hide_from_toc );
 	$J( '#articleSummaryHideFromSearch' ).prop( 'checked', articleSummary.hide_from_search );
+	$J( '#articleSummaryLocalizeDraft' ).prop( 'checked', articleSummary.localize_draft );
 	$J( '#articleSummaryPriority' ).val( articleSummary.priority );
 	if ( !Array.isArray( articleSummary.required_partner_capabilities ) || articleSummary.required_partner_capabilities.length == 0 )
 	{
@@ -131,8 +132,9 @@ function updateVisibility( bChangeVisibility ) {
 	var currentVisibility = $J( '#articleSummaryMakeVisible' ).data( 'currentVisibility' );
 	articleSummaryAjax( 'visibility', {
 		visibility: bChangeVisibility ? !currentVisibility : currentVisibility,
-		hideFromToc: $J( '#articleSummaryHideFromToc' ).is(":checked"),
-		hideFromSearch: $J( '#articleSummaryHideFromSearch' ).is(":checked")
+		hideFromToc: $J( '#articleSummaryHideFromToc' ).is( ':checked' ),
+		hideFromSearch: $J( '#articleSummaryHideFromSearch' ).is( ':checked' ),
+		localizeDraft: $J( '#articleSummaryLocalizeDraft' ).is( ':checked' ),
 	} );
 }
 
@@ -141,7 +143,7 @@ $J( document ).ready( function(){
 		if ( $J( this ).data( 'currentVisibility' ) == 0 || confirm( 'Are you sure you want to hide this visible article?' ) )
 			updateVisibility( true );
 	} );
-	$J( '#articleSummaryHideFromToc, #articleSummaryHideFromSearch' ).change( function() { updateVisibility( false ); } );
+	$J( '#articleSummaryHideFromToc, #articleSummaryHideFromSearch, #articleSummaryLocalizeDraft' ).change( function() { updateVisibility( false ); } );
 
 	$J( '#articleSummaryAccess input[name=required]' ).change( function() {
 		if ( this.value == 0 )

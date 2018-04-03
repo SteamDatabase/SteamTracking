@@ -274,7 +274,7 @@ function SetAppWorkshopInfo( appid, hashParams )
 }
 
 // handler for requesting keys
-function SetRequestKeys( appid, requests )
+function SetRequestKeys( appid, requests, fnOnSuccess )
 {
 	AppsAjaxRequest( g_szBaseURL + '/apps/requestkeys/' + appid,
 		{
@@ -286,8 +286,15 @@ function SetRequestKeys( appid, requests )
 			if ( results[ 'success' ] )
 			{
 				// no error, reload page
-				$('AjaxOutput').innerHTML = "Reloading...";
-				RefreshCallback( results );
+				if( fnOnSuccess )
+				{
+					fnOnSuccess()
+				}
+				else
+				{
+					$('AjaxOutput').innerHTML = "Reloading...";
+					RefreshCallback(results);
+				}
 			}
 			else
 			{

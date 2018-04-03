@@ -1329,7 +1329,20 @@ HelpWizard = {
 			else
 			{
 				if ( data.searchError )
-					elSearchError.html( data.errorMsg ).slideDown();
+				{
+					elSearchError.find( '#search_error_title' ).text( data.searchErrorTitle );
+					elSearchError.find( '#search_error_tip' ).text( data.searchErrorTip );
+
+					if ( data.searchDisplayContact )
+					{
+						elSearchError.find( '#search_error_contact_support' ).show();
+					}
+
+					elSearchError.slideDown();
+
+					var elInput = form.find( "input[name='searches']" );
+					elInput.val( elInput.val() + 1 );
+				}
 				else
 					elError.text( data.errorMsg ).slideDown();
 

@@ -532,6 +532,58 @@ function SignOEMProductPurchaseAgreement()
 	);
 }
 
+function SignWalletCodePurchaseAgreement( returnURL )
+{
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
+
+	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
+	if ( !agreedToSDA1.prop("checked") ) {
+		ShowAlertDialog('Warning', 'By selecting the box to the left, you are accepting the Steam Wallet Code Reseller agreement as an authorized representative of the party you identified in the "Company Legal Name" field. These Wallet Code Purchase agreements takes effect upon Valve’s acceptance of it by email notice to you.');
+		return;
+	}
+	
+	var inviteID = $J("#inviteID");
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=' + 10,
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam Wallet Code Reseller Agreement. Click OK to continue.' );
+					dialog.done( function() {
+						top.location.href = response.redirect_url;
+					} );
+				}
+				else
+				{
+					if( response.success == 15)
+						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign this agreement.');
+					else
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+				}
+			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
 function SignLatestSDA( returnURL )
 {
 	var bHasRequiredFields = true;

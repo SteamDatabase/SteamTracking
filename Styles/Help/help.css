@@ -2052,8 +2052,9 @@ a.guide_row {
 	border: 1px solid #3e75a3;
 	background-color: #24445f;
 	margin: 30px 8px 8px 0px;
-	padding: 8px;
+	padding: 16px;
 	display: inline-block;
+	min-width: 90%;
 }
 
 #form_submit_search_error a {
@@ -2062,6 +2063,30 @@ a.guide_row {
 
 #form_submit_search_error a:hover {
 	color: #ffffff;
+}
+
+#form_submit_search_error div {
+	padding: 0 0 20px 0;
+}
+
+#search_error_title {
+	font-size: 16px;
+}
+
+#search_error_contact_support {
+	margin-top: 25px;
+}
+
+.search_error_left {
+	float: left;
+}
+
+.search_error_right {
+	float: right;
+}
+
+.search_error_tip_prefix {
+	color: #66c0f4;
 }
 
 #recovery_code_resent {
