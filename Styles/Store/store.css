@@ -3830,6 +3830,10 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	color: #f5df67;
 }
 
+.color_created {
+	color: #ddd;
+}
+
 .curator_cluster_expanded .carousel_items.curator_featured_tags {
 	display: flex;
 	flex-direction: column;

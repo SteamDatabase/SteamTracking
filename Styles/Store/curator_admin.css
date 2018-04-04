@@ -197,7 +197,7 @@
 }
 
 .admin_content h4 a {
-	text-transform: capitalize;
+	text-transform: none;
 	font-size: 12px;
 	float: right;
 }
@@ -658,8 +658,8 @@ body.v6 .reviews_container h3 {
 	display: inline-block;
 	text-align: center;
 	padding: 10px;
-	height: 80px;
-	width: 212px;
+	height: 86px;
+	width: 201px;
 	background-color: rgba( 255, 255, 255, 0.15 );
 	float: left;
 }
@@ -669,7 +669,7 @@ body.v6 .reviews_container h3 {
 }
 .stats_header_section .title {
 	text-transform: uppercase;
-	color: #fff;
+	color: #bfbfbf;
 	padding-bottom: 10px;
 	letter-spacing: 1px;
 }
@@ -1029,4 +1029,33 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 	flex-direction: row;
 	align-items: center;
 	font-size: 14px;
+}
+
+blockquote#managemygame_default_text {
+	 background: #292929;
+	 border-left: 10px solid #ccc;
+	 margin: 1.5em 10px;
+	 padding: 0.5em 10px;
+	 quotes: "\201C""\201D""\2018""\2019";
+ }
+blockquote#managemygame_default_text:before {
+	color: #ccc;
+	content: open-quote;
+	font-size: 4em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+blockquote#managemygame_default_text p {
+	display: inline;
+}
+
+#creatoradmin_product_choice_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+#creatorhome_managemygame_success {
+	color: limegreen;
 }

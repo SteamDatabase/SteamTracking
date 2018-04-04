@@ -151,20 +151,16 @@ function UpdateTagCount($elTarget)
 	}
 }
 
-function ShowAppSuggestForm( elTarget, listid )
+function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 {
-	if( !listid )
-		return CreateListFromForm( document.getElementById('listform'), ShowAppSuggestForm.bind( this, elTarget ) );
-
 	var $elInput = $J("#review_suggest_input");
-	var $elField = $J("#review_suggest_field");
 	var nAppId = 0;
 
 	var modal = ShowPromptDialog( "Add to list", "Type the name of the item you'd like to add to this list." );
 	modal.done( function(){
 		if( nAppId > 0 )
 		{
-			ListEdit_AddApp ( elTarget, listid, nAppId );
+			fnDoneAction( nAppId );
 			modal.Dismiss();
 		}
 	} );
@@ -179,9 +175,10 @@ function ShowAppSuggestForm( elTarget, listid )
 		{
 			var localeTerm = term.toLocaleLowerCase();
 			var rgMatches = [];
-			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 5; i++)
+			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 10; i++)
 			{
-				if( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+				if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
+					g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
 				{
 					rgMatches.push(g_rgAppsCurated[i].app_name);
 				}
@@ -192,9 +189,9 @@ function ShowAppSuggestForm( elTarget, listid )
 		{
 			for( var i=0; i<g_rgAppsCurated.length; i++)
 			{
-				if( g_rgAppsCurated[i].app_name == suggestion )
+				if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
+					g_rgAppsCurated[i].app_name == suggestion )
 				{
-					//$elField.val( g_rgAppsCurated[i].appid );
 					nAppId = g_rgAppsCurated[i].appid;
 					return;
 				}
@@ -203,6 +200,31 @@ function ShowAppSuggestForm( elTarget, listid )
 		}
 	);
 }
+
+
+function ShowAppSuggestFormForList( elTarget, listid )
+{
+	if( !listid )
+		return CreateListFromForm( document.getElementById('listform'), ShowAppSuggestFormForList.bind( this, elTarget ) );
+
+	ShowAppSuggestForm( elTarget, false, function( nAppID ){
+		if( nAppID > 0 )
+		{
+			ListEdit_AddApp ( elTarget, listid, nAppID );
+		}
+	});
+}
+
+function ShowAppSuggestFormForManageMyGames( elTarget )
+{
+	ShowAppSuggestForm( elTarget, true, function( nAppID ){
+		if( nAppID > 0 )
+		{
+			g_PageController.Navigate ( 'mygames_manage/' + nAppID );
+		}
+	});
+}
+
 
 function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 {
@@ -583,7 +605,9 @@ function LoadCuratorAssociatedApps( fnOnComplete )
 	if( this.loading )
 		return;
 	if( this.loaded )
-	{
+	{   		$J('#curator_createlist_app_count_throbber').hide();
+		$J('#curator_createlist_app_count').text( 'There are %1$s app(s) available to use in your list.'.replace('%1$s', g_rgAppsCurated.length ) );
+
 		if( fnOnComplete )
 			fnOnComplete ();
 		return;
@@ -1057,14 +1081,52 @@ function GetCuratorEditURL( clanID )
 
 function UnlinkExternalAccount( external_account_type, external_account_id, internal_account_type, internal_account_id )
 {
-	//console.log("unlink requested: ext %d int %d id %d", external_account_type, internal_account_type, internal_account_id );
 	PostToURLWithSession( 'https://steamcommunity.com/account_linking/' + internal_account_id + '/unlink/',
 		{ external_account_type : external_account_type, internal_account_type : internal_account_type, redirect_page : GetCuratorEditURL( internal_account_id ), external_account_id : external_account_id } );
 }
 
 function LinkExternalAccount( external_account_type, internal_account_type, internal_account_id, from_page )
 {
-	// console.log("link requested: ext %d int %d id %d", external_account_type, internal_account_type, internal_account_id );
 	PostToURLWithSession( 'https://steamcommunity.com/account_linking/' + internal_account_id + '/begin_link/',
 		{ external_account_type : external_account_type, internal_account_type : internal_account_type, redirect_page: GetCuratorEditURL( internal_account_id )  } );
+}
+
+function MyGameManage_Load( el )
+{
+	$J( el ).on( 'saveform', function ( e ) { console.log( 'Adil save form' ) ; console.log( e ); return false;} );
+	LoadCuratorAssociatedApps();
+}
+
+function CustomizeCreatedApps( elForm )
+{
+	CallFunctionFromForm( elForm, [ 'appid', 'blurb', 'link_url' ], UpdateCustomizationCreatedApp );
+}
+
+function UpdateCustomizationCreatedApp( appid, blurb, link_url )
+{
+
+	$J.ajax ( {
+		url: g_strCuratorBaseURL + 'ajaxupdatecustomizationcreatedapp/',
+		data: {
+			appid: appid,
+			blurb: blurb,
+			link_url: link_url,
+			sessionid: g_sessionID
+		},
+		dataType: 'json',
+		type: 'POST'
+	} ).done( function ( data )
+	{
+		$J( '#creatorhome_managemygame_success' ).text( 'Save successful.' ).show().delay(5000).fadeOut();
+	}).fail( function( data ){
+		var errorText = "";
+		try {
+			response = JSON.parse(data.responseText);
+			errorText = response.success;
+		} catch ( SyntaxError ) {
+			errorText = data.responseText;
+		}
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
+	});
+
 }
