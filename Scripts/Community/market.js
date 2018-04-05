@@ -1690,89 +1690,59 @@ function UpdateSortArrows()
 		elArrow.html( '&#9660' );
 }
 
-var g_nMillisPopularRefresh = 2000;
+var g_nMillisPopularRefresh = 1900;
 var g_bMarketWindowHidden = false;
+var g_nUpdatesQueued = 0;
 
-function CreatePopularItemClosure( data, iLink )
+function CreatePopularItemClosure( item )
 {
 	return function() {
-		var elOldLink = $J('#resultlink_' + iLink);
+		g_nUpdatesQueued--;
 
-		// Don't do anything if none of the data changed
-		if ( g_rgPreviousPopularData == null ||
-			( data.data[iLink].sell_listings == g_rgPreviousPopularData[iLink].sell_listings && data.data[iLink].sell_price == g_rgPreviousPopularData[iLink].sell_price && data.data[iLink].name == g_rgPreviousPopularData[iLink].name ) )
+		var elResult = $J('.market_listing_searchresult[data-appid=' + item.appid + '][data-hash-name="' + item.hash_name.replace( /"/g, "\\\"" ) + '"]' );
+
+		if ( elResult.length )
 		{
-			return;
-		}
+			var elQuantity = elResult.find( '.market_listing_num_listings_qty' );
+			var elPrice = elResult.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
 
-		var elNewLink = $J(data.results_html[iLink]);
-
-		// If the item name changed, replace the whole row
-		if ( data.data[iLink].name != g_rgPreviousPopularData[iLink].name )
-		{
-			elOldLink.empty();
-			elOldLink.append( elNewLink.children() );
-
-			// The link destination can change
-			if ( elOldLink.attr("href") != elNewLink.attr("href") )
+			// Update values and apply some effects for values that changed
+			if ( elQuantity.data( 'qty' ) != item.sell_listings )
 			{
-				elOldLink.attr("href", elNewLink.attr("href") );
-			}
-		}
-		else
-		{
-			// Just update the number of listings and price
-			if ( data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
-			{
-				var elQuantity = elOldLink.find( '.market_listing_num_listings_qty' );
-				var elNewQuantity = elNewLink.find( '.market_listing_num_listings_qty' );
-				elQuantity.html( elNewQuantity.html() );
+				elQuantity.html( item.sell_listings.toLocaleString() );
+				elQuantity.data( 'qty', item.sell_listings );
+
+				elQuantity.css( 'color', '#fff' );
+				elQuantity.animate({
+					color: "#828282"
+				}, 900 );
 			}
 
-			if ( data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
+			if ( elPrice.data( 'price' ) != item.sell_price )
 			{
-				var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
-				var elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span.normal_price ' );
-				elPrice.html( elNewPrice.html() );
+				var elArrow = null;
+				if ( item.sell_price > elPrice.data( 'price' ) )
+				{
+					elArrow = elResult.find( '.market_arrow_up' );
+				}
+				else
+				{
+					elArrow = elResult.find( '.market_arrow_down' );
+				}
 
-				elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span.sale_price ' );
-				elNewPrice = elNewLink.find( '.market_listing_their_price .market_table_value > span.sale_price ' );
-				elPrice.html( elNewPrice.html() );
+				var position = elPrice.position();
+				position.top -= elPrice.height();
+				position.left += elPrice.width() + 2;
+				elArrow.css( 'top', position.top );
+				elArrow.css( 'left', position.left );
+				elArrow.stop();
+				elArrow.show();
+				elArrow.fadeOut( 900 );
+
+				var sCurrencyCode = GetCurrencyCode( g_nWalletCurrency );
+				elPrice.html( v_currencyformat( item.sell_price, sCurrencyCode, g_strCountryCode ) );
+				elPrice.data( 'price', item.sell_price );
 			}
-		}
-
-		// Apply some effects for values that changed
-		if ( data.data[iLink].sell_listings != g_rgPreviousPopularData[iLink].sell_listings )
-		{
-			var elQuantity = elOldLink.find( '.market_listing_num_listings_qty' );
-			elQuantity.css( 'color', '#fff' );
-			elQuantity.animate({
-				color: "#828282"
-			}, 900 );
-		}
-
-		if ( data.data[iLink].sell_price != g_rgPreviousPopularData[iLink].sell_price )
-		{
-			var elArrow = null;
-			var elPrice = elOldLink.find( '.market_listing_their_price .market_table_value > span ' );
-
-			if ( data.data[iLink].sell_price > g_rgPreviousPopularData[iLink].sell_price )
-			{
-				elArrow = elOldLink.find( '.market_arrow_up' );
-			}
-			else
-			{
-				elArrow = elOldLink.find( '.market_arrow_down' );
-			}
-
-			var position = elPrice.position();
-			position.top -= elPrice.height();
-			position.left += elPrice.width() + 2;
-			elArrow.css( 'top', position.top );
-			elArrow.css( 'left', position.left );
-			elArrow.stop();
-			elArrow.show();
-			elArrow.fadeOut( 900 );
 		}
 	};
 }
@@ -1793,59 +1763,69 @@ function v_shuffle( rgArray )
 	return rgArray;
 }
 
-function UpdateFrontPage()
+function SubscribeToPopularItemUpdates()
 {
-	if ( g_bMarketWindowHidden )
+	if ( !("WebSocket" in window) )
 	{
-		setTimeout( UpdateFrontPage, g_nMillisPopularRefresh );
+		console.log( "No web socket support" );
 		return;
 	}
 
-	$J.ajax( {
-		url: 'https://steamcommunity.com/market/popular',
-		type: 'GET',
-		data: {
-			country: g_strCountryCode,
-			language: g_strLanguage,
-			currency: typeof( g_rgWalletInfo ) != 'undefined' ? g_rgWalletInfo['wallet_currency'] : 1,
-			count: g_nResultCount
-		}
-	} ).error( function ( ) {
-		setTimeout( UpdateFrontPage, g_nMillisPopularRefresh );
-	} ).success( function( data ) {
-		if ( data.stop )
+	var socket = new WebSocket( g_strWebSocketURL );
+
+	socket.onopen = function() {
+		var subscribe = { message: "subscribe", seqnum: 1, feed: g_strPopularFeed };
+		socket.send( JSON.stringify( subscribe )  );
+	};
+
+	socket.onerror = function() {
+		var cmsRetry = 90000 + Math.floor(Math.random() * 60000);
+		console.log( "WebSocket error. Retry in " + cmsRetry + "ms." );
+		try
 		{
-			return;
+			socket.close();
 		}
-
-		if ( data.success )
+		catch ( exception )
 		{
-			var nMilliToWaitForRowUpdate = 0;
-
-			// Build a list of rows to be updated
-			var rgElems = [];
-			for ( var i = 0; i < data.results_html.length; i++ )
-			{
-				rgElems.push( i );
-			}
-
-			// Update those rows randomly
-			rgElems = v_shuffle( rgElems );
-
-			for ( var i = 0; i < rgElems.length; i++ )
-			{
-				setTimeout( CreatePopularItemClosure(data, rgElems[i]), nMilliToWaitForRowUpdate );
-				nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / data.results_html.length );
-			}
-
-			setTimeout(
-				function() {
-					g_rgPreviousPopularData = data.data;
-					UpdateFrontPage();
-				}, nMilliToWaitForRowUpdate
-			);
 		}
-	} );
+
+		setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+	};
+
+	socket.onclose = function() {
+		var cmsRetry = 90000 + Math.floor(Math.random() * 60000);
+		console.log( "WebSocket closed. Retry in " + cmsRetry + "ms." );
+		setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+	};
+
+	socket.onmessage = function( oMessage ) {
+		var data = $J.parseJSON( oMessage.data );
+		if ( data && data.message && data.message == "feedupdate" )
+		{
+			if ( data.feed == g_strPopularFeed )
+			{
+				var feed = $J.parseJSON( data.data );
+				if ( !feed || !feed.items )
+				{
+					return;
+				}
+
+				var nMilliToWaitForRowUpdate = 0;
+				var rgItems = v_shuffle( feed.items );
+
+				for ( var i = 0; i < rgItems.length; i++ )
+				{
+					// Don't update if we're too far behind
+					if ( g_nUpdatesQueued <= 20 && !g_bMarketWindowHidden )
+					{
+						g_nUpdatesQueued++;
+						setTimeout( CreatePopularItemClosure( rgItems[i] ), nMilliToWaitForRowUpdate );
+						nMilliToWaitForRowUpdate += ( g_nMillisPopularRefresh / rgItems.length );
+					}
+				}
+			}
+		}
+	};
 }
 
 function ShowAllGames()
