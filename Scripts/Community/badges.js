@@ -500,7 +500,7 @@ function GrindIntoGoo( appid, contextid, itemid )
 
 function ViewBoosterPackStore()
 {
-	window.location = 'http://steamcommunity.com/' + '/tradingcards/boostercreator/';
+	window.location = 'https://steamcommunity.com/' + '/tradingcards/boostercreator/';
 }
 
 CGameGooExchangeDialog = {

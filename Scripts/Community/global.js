@@ -243,7 +243,7 @@ function RecordAJAXPageView( url )
 {
 	if ( typeof ga != "undefined" && ga )
 	{
-		var rgURLs = [ 'http://steamcommunity.com', 'https://steamcommunity.com' ];
+		var rgURLs = [ 'https://steamcommunity.com', 'https://steamcommunity.com' ];
 		for ( var i = 0; i < rgURLs.length; ++i )
 		{
 			var baseURL = rgURLs[i];

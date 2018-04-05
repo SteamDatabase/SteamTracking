@@ -970,11 +970,11 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskViewFriendActivity = 2;
 	{
 		name: "View your Friend Activity page",
-		desc: "See what's going on with your friends on Steam at your <a href=\"http:\/\/steamcommunity.com\/my\/home\">Friend Activity<\/a> page."	},
+		desc: "See what's going on with your friends on Steam at your <a href=\"https:\/\/steamcommunity.com\/my\/home\">Friend Activity<\/a> page."	},
 	//k_ESummerSaleTaskAddToWishlist = 3;
 	{
 		name: "Add to your wishlist",
-		desc: "Find a game you are interested in, and add it to your <a href=\"http:\/\/steamcommunity.com\/my\/wishlist\">Wishlist<\/a>."	},
+		desc: "Find a game you are interested in, and add it to your <a href=\"https:\/\/steamcommunity.com\/my\/wishlist\">Wishlist<\/a>."	},
 	//k_ESummerSaleTaskReviewStorePreferences = 4;
 	{
 		name: "Review your Preferences",
@@ -982,11 +982,11 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskEarnAchievement = 5;
 	{
 		name: "Earn an Achievement",
-		desc: "Play any Steam game in your library, and earn an Achievement. You can check your Achievement progress for any game you own <a href=\"http:\/\/steamcommunity.com\/my\/games\">on your Games page<\/a>."	},
+		desc: "Play any Steam game in your library, and earn an Achievement. You can check your Achievement progress for any game you own <a href=\"https:\/\/steamcommunity.com\/my\/games\">on your Games page<\/a>."	},
 	//k_ESummerSaleTaskVisitBroadcastPage = 6;
 	{
 		name: "Visit the Broadcasts page",
-		desc: "Take a look at the <a href=\"http:\/\/steamcommunity.com?subsection=broadcasts\">Broadcasts<\/a> currently running on the Community."	},
+		desc: "Take a look at the <a href=\"https:\/\/steamcommunity.com?subsection=broadcasts\">Broadcasts<\/a> currently running on the Community."	},
 	//k_ESummerSaleTaskMarkReviewHelpful = 7;
 	{
 		name: "Mark a Review as Helpful ... or not",
@@ -998,7 +998,7 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskViewAProfile = 9;
 	{
 		name: "View a Profile",
-		desc: "Take a look at what <a href=\"http:\/\/steamcommunity.com\/my\/friends\">your friends<\/a> have showcased on their Steam Community Profile."	},
+		desc: "Take a look at what <a href=\"https:\/\/steamcommunity.com\/my\/friends\">your friends<\/a> have showcased on their Steam Community Profile."	},
 	//k_ESummerSaleTaskViewATagPage = 10;
 	{
 		name: "Explore popular tags",
@@ -1014,11 +1014,11 @@ CTaskManager.prototype.rgTaskList = [
 	//k_ESummerSaleTaskUploadAScreenshot = 13;
 	{
 		name: "Visit your screenshot library",
-		desc: "You can take a screenshot in-game (default hotkey is F12) and upload it to Steam; go <a href=\"http:\/\/steamcommunity.com\/my\/screenshots\">visit your uploaded Screenshots<\/a> on the Steam Community."	},
+		desc: "You can take a screenshot in-game (default hotkey is F12) and upload it to Steam; go <a href=\"https:\/\/steamcommunity.com\/my\/screenshots\">visit your uploaded Screenshots<\/a> on the Steam Community."	},
 	//k_ESummerSaleTaskPersonalizeProfile = 14;
 	{
 		name: "Personalize your Steam Community Profile",
-		desc: "There are a lot of ways you can customize <a href=\"http:\/\/steamcommunity.com\/my\/profile\">your profile<\/a> - click the attractive Edit Profile button, and personalize!"	},
+		desc: "There are a lot of ways you can customize <a href=\"https:\/\/steamcommunity.com\/my\/profile\">your profile<\/a> - click the attractive Edit Profile button, and personalize!"	},
 	//k_ESummerSaleTaskPersonalizeDiscoveryQueue = 15;
 	{
 		name: "Customize your Discovery Queue",

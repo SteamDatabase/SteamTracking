@@ -130,9 +130,9 @@ function InitializeCommunityMenu()
 {
 	CommunityDebugOut( "InitializeCommunityMenu" );
 
-	RefreshThumbnails( "GameHubThumb", 'http://steamcommunity.com/apps/apphubthumbs', null, null );
-	RefreshThumbnails( "MarketThumb", 'http://steamcommunity.com/market/marketthumbs', null, null );
-	$.Schedule( g_ThumbnailRefreshTimeSec, function() { RefreshThumbnails( "GameHubThumb", 'http://steamcommunity.com/apps/apphubthumbs', "MarketThumb", 'http://steamcommunity.com/market/marketthumbs' ) } );
+	RefreshThumbnails( "GameHubThumb", 'https://steamcommunity.com/apps/apphubthumbs', null, null );
+	RefreshThumbnails( "MarketThumb", 'https://steamcommunity.com/market/marketthumbs', null, null );
+	$.Schedule( g_ThumbnailRefreshTimeSec, function() { RefreshThumbnails( "GameHubThumb", 'https://steamcommunity.com/apps/apphubthumbs', "MarketThumb", 'https://steamcommunity.com/market/marketthumbs' ) } );
 
 	$("#CommunityContent").AddClass( "LoadingVisible" );
 

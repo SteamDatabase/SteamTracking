@@ -171,7 +171,7 @@ function DismissTradeOfferWindow()
 function MessageWindowOpener( msg )
 {
 		try {
-		window.opener.postMessage( msg, 'http://steamcommunity.com/' );
+		window.opener.postMessage( msg, 'https://steamcommunity.com/' );
 		return;
 	} catch ( e ) {}
 	try {
