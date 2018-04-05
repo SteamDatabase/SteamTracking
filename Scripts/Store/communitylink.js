@@ -3,7 +3,7 @@ var g_rgFriendDataByApp = null;
 function InitFriendRecommendations( rgApps, target, navcontext )
 {
 	new Ajax.Request(
-		'http://store.steampowered.com/friends/frienddata',
+		'https://store.steampowered.com/friends/frienddata',
 		{
 			method: 'get',
 			parameters: { u: g_AccountID },
@@ -37,7 +37,7 @@ function UpdateFriendRecommendations( rgApps, target, navcontext )
 	{
 		new Ajax.Updater(
 				target,
-				'http://store.steampowered.com/friends/renderfriendactivity',
+				'https://store.steampowered.com/friends/renderfriendactivity',
 				{ parameters: { rgAppData: Object.toJSON( rgAppData ), navcontext: navcontext }, method: 'post' }
 			);
 	}

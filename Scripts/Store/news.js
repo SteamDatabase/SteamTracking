@@ -44,7 +44,7 @@ function PullNewsPost( gid ) {
 		{
 			new Ajax.Updater( 
 					content,
-					'http://store.steampowered.com//news/post/' + gid, 
+					'https://store.steampowered.com//news/post/' + gid,
 					{ method: 'get', onComplete: function() { WrapNewsLinks(); } } );
 		}
 	}

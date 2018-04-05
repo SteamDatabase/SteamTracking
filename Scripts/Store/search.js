@@ -20,7 +20,7 @@ function SearchTimeout( elem, value )
 	{
 		var parameters = {term: value, f: 'games' };
 		Object.extend( parameters, g_oSuggestParams );
-		new Ajax.Updater( 'search_suggestion_contents', 'http://store.steampowered.com/search/suggest', 
+		new Ajax.Updater( 'search_suggestion_contents', 'https://store.steampowered.com/search/suggest',
 				{ 
 					parameters: parameters,
 					method: 'GET',

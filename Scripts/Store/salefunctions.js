@@ -19,7 +19,7 @@ function OnVoteClick( voteid, appid )
 
 		g_bVoteInFlight = true;
 		$J.post(
-			'http://store.steampowered.com/salevote',
+			'https://store.steampowered.com/salevote',
 			{sessionid: g_sessionID, voteid: voteid, appid: appid }
 		).done( function (data) {
 				// update display

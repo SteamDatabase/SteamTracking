@@ -33,7 +33,7 @@ function OnCuratorsRendered()
 function FollowCurator( clanID )
 {
 	$J.post(
-		'http://store.steampowered.com/curators/ajaxfollow',
+		'https://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID },
 		function( data )
 		{

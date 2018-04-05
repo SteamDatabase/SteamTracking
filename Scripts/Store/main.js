@@ -35,7 +35,7 @@ function PageTab( tab, delta, max, params )
 		params.count = delta;
 		new Ajax.Updater( 
 				'tab_' + tab + '_items', 
-				'http://store.steampowered.com/search/tab', 
+				'https://store.steampowered.com/search/tab',
 				{ parameters: params, method: 'get', insertion: 'bottom', onComplete: TabCompletionClosure( tab, delta, max ) } );
 		tabMax[tab] = tabStart[tab];
 	}
@@ -196,7 +196,7 @@ function ScrollSmallCaps( name, delta, pageSize, totalCount, params )
 		params.count = pageSize;
 		new Ajax.Updater( 
 				targetid, 
-				'http://store.steampowered.com/search/smallcapscroll', 
+				'https://store.steampowered.com/search/smallcapscroll',
 				{ parameters: params, method: 'get', insertion: 'bottom', onComplete: UpdateSmallCapControl.bind( window, targetid, delta, pageSize, totalCount ) } );
 	}
 	else
@@ -382,7 +382,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 			window.setTimeout( function() {
 				if ( oElemState.bWantsHover && !oElemState.bAjaxRequestMade ) {
 					oElemState.bAjaxRequestMade = true;
-					$J.get( 'http://store.steampowered.com/' + strUrlTarget, rgAjaxParams ).done( function( html )
+					$J.get( 'https://store.steampowered.com/' + strUrlTarget, rgAjaxParams ).done( function( html )
 					{
 						var $Content = $J(html);
 						$Content.hide();
@@ -553,7 +553,7 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 
 function AddToWishlistButton( button, appid, navref )
 {
-	var url = 'http://store.steampowered.com/api/addtowishlist';
+	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 	{
 		MakeNavCookie( navref, url );
@@ -638,7 +638,7 @@ function HideRecommendation( type, itemid, divBtn, elemContainer )
 	
 	$(divBtn).hide();
 	
-	new Ajax.Request( 'http://store.steampowered.com/recommended/ignorerecommendation/', {
+	new Ajax.Request( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 		method: 'post',
 		parameters: parameters,
 		onSuccess: function( transport ) {
@@ -1089,7 +1089,7 @@ function SearchTimeout( $Term, value, $SuggestionsCtn, $Suggestions )
 	{
 		var parameters = {term: value, f: 'games' };
 		$J.extend( parameters, g_oSuggestParams );
-		$J.get( 'http://store.steampowered.com/search/suggest', parameters).done( function( html ) {
+		$J.get( 'https://store.steampowered.com/search/suggest', parameters).done( function( html ) {
 			$Suggestions.html( html );
 			$Suggestions.InstrumentLinks();
 			$Suggestions.find('.match').attr('data-ds-options', 0);
@@ -2364,7 +2364,7 @@ function FollowCuratorWithCallback( clanID, bFollow, onComplete )
 	}
 
 	$J.post(
-		'http://store.steampowered.com/curators/ajaxfollow',
+		'https://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'follow' : bFollow ? 1 : 0 },
 		function( data )
 		{
@@ -2389,7 +2389,7 @@ function IgnoreCuratorWithCallback( clanID, bIgnore, onComplete )
 	}
 
 	$J.post(
-		'http://store.steampowered.com/curators/ajaxignore',
+		'https://store.steampowered.com/curators/ajaxignore',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'ignore' : bIgnore ? 1 : 0 },
 		function( data )
 		{

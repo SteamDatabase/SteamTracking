@@ -328,7 +328,7 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 		return;
 	}
 
-	$J.post( 'http://store.steampowered.com//userreviews/ajaxgetvotes/', {
+	$J.post( 'https://store.steampowered.com//userreviews/ajaxgetvotes/', {
 			'recommendationids' : recommendationIDs
 		}
 	).done( function( response ) {
@@ -357,7 +357,7 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 
 function UserReviewVoteUp( id )
 {
-	UserReview_Rate( id, true, 'http://store.steampowered.com/',
+	UserReview_Rate( id, true, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedUp( id );
@@ -367,7 +367,7 @@ function UserReviewVoteUp( id )
 
 function UserReviewVoteDown( id )
 {
-	UserReview_Rate( id, false, 'http://store.steampowered.com/',
+	UserReview_Rate( id, false, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
 			OnRecommendationVotedDown( id );
@@ -1173,7 +1173,7 @@ function ShowReportDialog( nAppId )
 		if ( eReportTypeSelected )
 		{
 			$J.post(
-				'http://store.steampowered.com/appreport/' + nAppId + '/report/',
+				'https://store.steampowered.com/appreport/' + nAppId + '/report/',
 				{
 					'report_type' : eReportTypeSelected,
 					'report_reason' : content.find( 'textarea' ).val(),
@@ -1266,7 +1266,7 @@ function CollapseLongStrings( strSelector )
 
 function JSReportProductAction( appId, pageAction, snr )
 {
-	$J.post( 'http://store.steampowered.com//ajaxreportproductaction/' + appId + '/', {
+	$J.post( 'https://store.steampowered.com//ajaxreportproductaction/' + appId + '/', {
 			'page_action' : pageAction,
 			'snr' : snr
 		}

@@ -183,7 +183,7 @@ GHomepage = {
 			if ( g_AccountID != 0 )
 			{
 				$J.ajax( {
-					url: "http:\/\/store.steampowered.com\/default\/home_additional\/",
+					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
 
 					},
@@ -321,7 +321,7 @@ GHomepage = {
 		// More Content
 		if( bHaveUser )
 		{
-			$J('#content_more').autoloader({template_url: 'http://store.steampowered.com/explore/render/', recommendations_url: 'http://store.steampowered.com/explore/recommended/', additional_url: 'http://store.steampowered.com/explore/more'});
+			$J('#content_more').autoloader({template_url: 'https://store.steampowered.com/explore/render/', recommendations_url: 'https://store.steampowered.com/explore/recommended/', additional_url: 'https://store.steampowered.com/explore/more'});
 		}
 		else
 		{
@@ -2735,7 +2735,7 @@ CUsabilityTracker.prototype.PostStats = function()
 	this.m_stats.windowHeight = window.innerHeight;
 
 	var strStats = JSON.stringify( this.m_stats );
-	var strURL = "http:\/\/store.steampowered.com\/default\/usabilitytracking\/";
+	var strURL = "https:\/\/store.steampowered.com\/default\/usabilitytracking\/";
 	var bSupportsBeacon = typeof navigator.sendBeacon != 'undefined';
 	if ( bSupportsBeacon )
 	{

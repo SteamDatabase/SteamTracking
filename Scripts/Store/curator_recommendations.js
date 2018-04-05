@@ -23,7 +23,7 @@ function FollowCurator( clanID, bFollow )
 	}
 
 	$J.post(
-		'http://store.steampowered.com/curators/ajaxfollow',
+		'https://store.steampowered.com/curators/ajaxfollow',
 		{ 'clanid' : clanID, 'sessionid' : g_sessionID, 'follow' : bFollow ? 1 : 0 },
 		function( data )
 		{

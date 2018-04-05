@@ -425,7 +425,7 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 		{
 			event.stopPropagation ();
 			$J.ajax ( {
-				url: "http:\/\/store.steampowered.com\/explore\/recommendedreason\/",
+				url: "https:\/\/store.steampowered.com\/explore\/recommendedreason\/",
 				data: {
 					appid: unAppID
 				},
