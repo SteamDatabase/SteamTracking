@@ -11,7 +11,7 @@ body.v6.creatorhome.game_bg {
 
 .creatorhome .page_background {
 	background-size: contain;
-	background-color: rgba(188, 151, 78, 0.4);
+	background-color: rgba(188, 151, 78, 0.2);
 	background-blend-mode: lighten;
 }
 .creatorhome .page_background.lowtint {
@@ -68,6 +68,7 @@ body.v6.creatorhome.game_bg {
 .num_followers_text {
 	text-transform: uppercase;
 	font-size: 10px;
+	margin-top: -4px;
 }
 
 .follow_btn {
@@ -97,6 +98,10 @@ body.v6 h2 {
 			//text-transform: uppercase;
 	font-size: 17px;
 	padding: 5px 0;
+}
+body.v6 .featured_list h2,
+body.v6 .dark_container .featured_list h2 {
+	padding-bottom: 0px;
 }
 
 body.v6 a:hover h2 {
@@ -182,6 +187,9 @@ body.v6 .dark_container h2 {
 
 .dark_container p {
 	color: #7193a6;
+}
+.creatorhome .dark_container p {
+	color: #8f98a0;
 }
 
 body.v6 .dark_container h4 {
@@ -463,6 +471,13 @@ body.v6 .page_desc p {
     font-weight: normal;
     letter-spacing: normal;
 }
+.creatorhome .curator_review_date {
+	color: #8f98a0;
+}
+
+.creatorhome .paged_items_paging_summary {
+	color: #8f98a0;
+}
 
 .curator_featured .screenshots {
 	display: flex;
@@ -716,6 +731,10 @@ body.v6.creatorhome .page_content.browse_reviews {
 	font-weight: 200;
 	font-size: 11px;
 }
+.creatorhome .browse_filters h4 {
+	color: #8f98a0;
+}
+
 #filtertype_container {
 	margin-bottom: 20px;
 }
@@ -788,6 +807,9 @@ body.v6.creatorhome .page_content.browse_reviews {
 	padding: 11px 5px;
 	border-bottom: 1px solid #1e3243;
 
+}
+.creatorhome .browse_content .recommendation {
+	border-bottom: 1px solid #3d4348;
 }
 
 .browse_content .recommendation:hover {
@@ -1038,7 +1060,7 @@ body.v6.creatorhome .page_content.browse_reviews {
 	color: #fff;
 	font-size: 12px;
 	background: rgba( 0, 0, 0, 0.2);
-	padding: 3px 6px 3px 3px;
+	padding: 3px 6px 3px 6px;
 	display: inline-flex;
 }
 
