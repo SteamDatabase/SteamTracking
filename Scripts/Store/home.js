@@ -946,7 +946,7 @@ GHomepage = {
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'recently_updated_desc' } ).text ( oItem.description ) );
 				if ( oItem.announcementid.length != 0 )
 				{
-					var strAnnouncementLink = 'http://steamcommunity.com/ogg/' + oItem.appid + '/announcements/detail/' + oItem.announcementid + '/';
+					var strAnnouncementLink = 'https://steamcommunity.com/ogg/' + oItem.appid + '/announcements/detail/' + oItem.announcementid + '/';
 					var $AnnouncementLink = $J ( '<div/>', {
 						'class': 'recently_updated_announcement_link',
 						'text': 'View Update Details',

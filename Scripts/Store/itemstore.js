@@ -112,7 +112,7 @@ function GetMarketPriceOverview( container, params )
 	var elPriceInfoHeader = $J( '<div/>', { 'style': 'height: 24px;' } );
 
 	var elMarketLink = $J( '<a/>', {
-		'href': 'http://steamcommunity.com/market/listings/' + appid + '/' + encodeURIComponent( strMarketHashName )
+		'href': 'https://steamcommunity.com/market/listings/' + appid + '/' + encodeURIComponent( strMarketHashName )
 	} );
 	elMarketLink.html( 'View in Community Market' );
 	elPriceInfoHeader.append( elMarketLink );
