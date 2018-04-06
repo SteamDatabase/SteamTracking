@@ -9967,6 +9967,7 @@
  T RAND_pseudo_bytes
  T RAND_query_egd_bytes
  T RAND_seed
+ T RAND_set_rand_method
  T RAND_status
  T RC4
  T RC4_options
@@ -14271,7 +14272,6 @@
  __umoddi3
  abort
  alphasort$INODE64
- arc4random_stir
  atexit
  atoi
  b (anonymous namespace)::CCookie_descriptor_
@@ -14567,6 +14567,7 @@
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
  b OneTimeCryptoInitOpenSSL()::threadonce_375_26
+ b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback
@@ -14683,6 +14684,7 @@
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
  b guard variable for IsLocalizedUserTag(char const*)::pstrLocalizedNames
+ b guard variable for RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyCloseOnEscape
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyMaximizeButtonVisible
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeySizeable
@@ -14876,6 +14878,7 @@
  d PKCS12_str_reasons
  d PKCS7_str_functs
  d PKCS7_str_reasons
+ d RAND_PosixCryptoGenRandom
  d RAND_poll.egdsockets
  d RAND_poll.randomfiles
  d RAND_str_functs
@@ -15171,7 +15174,6 @@
  operator new(unsigned long, std::nothrow_t const&)
  operator new[](unsigned long)
  pow
- pthread_atfork
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock
@@ -15528,7 +15530,6 @@
  t BIsMatchMore(char const*, char const*, int)
  t BN_from_montgomery_word
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
- t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
@@ -15582,6 +15583,8 @@
  t OverlayFPSCvarChanged(ConVar*, char const*)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
+ t RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)
+ t RAND_PosixCryptoGenRandom_status()
  t RSA_eay_finish
  t RSA_eay_init
  t RSA_eay_mod_exp

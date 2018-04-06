@@ -23056,6 +23056,7 @@
 		{
 			"name"	"CheatDetectedMinor"
 			"first_sale_date"	"2010/09/29"
+			"expiration_date"	"2014-09-29 06:00:00"
 			"prefab"		"base_misc"
 			"loadondemand"	"1"
 			"hidden"	"1"
@@ -23087,6 +23088,7 @@
 		{
 			"name"	"CheatDetectedMajor"
 			"first_sale_date"	"2010/09/29"
+			"expiration_date"	"2014-09-29 06:00:00"
 			"prefab"		"base_misc"
 			"loadondemand"	"1"
 			"hidden"	"1"
@@ -23118,6 +23120,7 @@
 		{
 			"name"	"CheatDetectedHonesty"
 			"first_sale_date"	"2010/09/29"
+			"expiration_date"	"2014-09-29 06:00:00"
 			"prefab"		"base_misc"
 			"loadondemand"	"1"
 			"hidden"	"1"

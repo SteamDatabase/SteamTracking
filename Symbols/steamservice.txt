@@ -2364,6 +2364,7 @@
  T RAND_pseudo_bytes
  T RAND_query_egd_bytes
  T RAND_seed
+ T RAND_set_rand_method
  T RAND_status
  T RC4
  T RC4_options
@@ -3057,7 +3058,6 @@
  abort
  accept$UNIX2003
  alphasort$INODE64
- arc4random_stir
  atexit
  atoi
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
@@ -3114,6 +3114,7 @@
  b OneTimeCryptoInitOpenSSL()::threadonce_375_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
+ b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b SHA1.m
  b SYS_str_reasons
@@ -3199,6 +3200,7 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for PosixRegistryManager()::s_PosixRegMgr
+ b guard variable for RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b guard variable for SteamStdLib::CommandLine()::g_CmdLine
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
@@ -3343,6 +3345,7 @@
  d PKCS12_str_reasons
  d PKCS7_str_functs
  d PKCS7_str_reasons
+ d RAND_PosixCryptoGenRandom
  d RAND_poll.egdsockets
  d RAND_poll.randomfiles
  d RAND_str_functs
@@ -3592,7 +3595,6 @@
  poll$UNIX2003
  posix_memalign
  printf
- pthread_atfork
  pthread_attr_init
  pthread_attr_setstacksize
  pthread_cond_broadcast
@@ -3809,7 +3811,6 @@
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
- t COpenSSLWrapper::Initialize()::$_0::__invoke()
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t FileSelect(dirent const*)
  t FindSignaturePeer(KeyValues*, char const*, bool)
@@ -3830,6 +3831,8 @@
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::__invoke(void*)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t ProcessRawStack(void**, int, int, CStack&)
+ t RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)
+ t RAND_PosixCryptoGenRandom_status()
  t RSA_eay_finish
  t RSA_eay_init
  t RSA_eay_mod_exp
