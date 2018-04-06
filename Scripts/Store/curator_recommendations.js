@@ -355,11 +355,11 @@ function ShowEditHandles( bIsCreatorHome )
 		var elTypeSelect = null;
 		if( !bIsCreatorHome )
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Carousel of Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
 		}
 		else
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">My Games carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Recommendations carousel<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Featured List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag (my games)<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag (recommendations)<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted (my games)<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted (recommendations)<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Carousel of Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Carousel of Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
 
 		}
 		elTypeSelect.val( rgNodeData.type );

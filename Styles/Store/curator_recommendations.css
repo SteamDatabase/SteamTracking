@@ -199,7 +199,8 @@ body.v6 .dark_container h4 {
 }
 
 .featured_list_container {
-	margin: 10px 0;
+	margin: 10px 0px 0px 0px;
+	padding-bottom: 10px;
 }
 
 .broadcast_title {
@@ -298,8 +299,11 @@ body.v6 .dark_container h4 {
 .navigation_bar {
 	display: flex;
 	border-bottom: 1px solid #172531;
-	margin-bottom: 25px;
+	box-shadow: 0 1px 0px rgba(255, 255, 255, 0.05);
 	margin-top: -5px;
+}
+.creatorhome .navigation_bar {
+	border-bottom: 1px solid rgba(19, 24, 27, 0.5);
 }
 
 .navigation_bar > * {
@@ -648,6 +652,9 @@ body.v6 .page_desc p {
 	background-position: center center;
 	background-size: cover;
 }
+.creatorhome .lists_more_container .item .bg {
+	filter: contrast(150%) grayscale(0.8);
+}
 .lists_more_container .item:hover .bg {
 	transform: scale(1.1);
 	filter: contrast(100%) grayscale(0);
@@ -662,7 +669,7 @@ body.v6 .page_desc p {
 }
 
 .creatorhome .lists_more_container .item .overlay {
-background: -webkit-linear-gradient( 160deg, rgba(188, 151, 78, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););background: linear-gradient( 160deg, rgba(188, 151, 78, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););}
+background: -webkit-linear-gradient( 160deg, hsl(202, 40%, 82%) 5%,hsl(0, 1%, 2%) 95%););background: linear-gradient( 160deg, hsl(202, 40%, 82%) 5%,hsl(0, 1%, 2%) 95%););}
 
 .lists_more_container .item > div div {
 background-color: #000;
@@ -835,7 +842,7 @@ body.v6.creatorhome .page_content.browse_reviews {
 
 .page_section  {
 	position: relative;
-	padding: 15px 0;
+	padding: 25px 0px 0px 0px;
 }
 
 .page_section.featured_list a:hover,
@@ -953,8 +960,7 @@ body.v6.creatorhome .page_content.browse_reviews {
 }
 
 .page_section .edit_options .fieldvalue {
-	background-color: #0f161f;
-	box-shadow: 1px 1px 1px rgba( 103, 193, 245, 0.1 );
+
 	border: none;
 	padding: 5px 10px;
 	border-radius: 3px;
@@ -975,7 +981,12 @@ body.v6.creatorhome .page_content.browse_reviews {
 	margin-top: 4px;
 	-webkit-filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
 	filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3) );
-
+	background: rgba(255, 255, 255, 0.3);
+	padding: 6px;
+	border-radius: 3px;
+}
+.page_section .edit_options img:hover {
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .gray_bevel {

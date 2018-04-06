@@ -3135,8 +3135,7 @@ body.v6 .user_reviews_header span.right {
 
 /* ===== from shared_global.css ====== */
 body.v6 .store_nav .popup_block_new .popup_body,
-body.v6 #footer_nav .popup_block_new .popup_body,
-body.v6.curator>.popup_block_new .popup_body {
+body.v6 #footer_nav .popup_block_new .popup_body {
 background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 8px 5px 8px 5px;
 
 }
