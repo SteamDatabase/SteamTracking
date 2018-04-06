@@ -10,7 +10,7 @@
       <Label id="Explanation" class="TextFont" text="This upgrades the Steam Controller to support experimental features.  These features are for development purposes only and are currently not reversible in Steam. This can only be done through a wired connection. Upgrading can take several minutes!" />
       <Panel id="ButtonPanel">
         <Button id="UpgradeButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="ControllerExperimentalUpgradeStart()">
-          <Label id="UpgradeStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
+          <Label id="UpgradeStatusText" class="CalibrationButtonText" text="#UI_Start" />
         </Button>
         <Button  id="CancelButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="ControllerExperimentalUpgradeCancelButton()">
           <Label id="CancelButtonText" class="CalibrationButtonText" text="#UI_Cancel" />
