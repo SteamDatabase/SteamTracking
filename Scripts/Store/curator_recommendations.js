@@ -185,10 +185,18 @@ function InitPagingControls( oPagingData )
 	InitSearchFilters();
 }
 
-function CuratorFieldToggle( elNode, strValue, bForceReset )
+function CuratorChangeTabs( elNode, strValue )
 {
-	var bReset = elNode.classList.contains('all') || bForceReset;
-	if( bReset )
+	ResetFieldNode( $J('#filtercuation_all'));
+	ResetFieldNode( $J('#filter_app_type_all'));
+	ResetFieldNode( $J('#tagid_filteration_all'));
+
+	CuratorFieldToggle( elNode, strValue, true );
+};
+
+function ResetFieldNode( elNode )
+{
+	if( elNode )
 	{
 		$J('input', elNode.parentNode).each(function(i, j){
 			$J(j).val('');
@@ -197,6 +205,19 @@ function CuratorFieldToggle( elNode, strValue, bForceReset )
 		$J('a', elNode.parentNode).each(function(i, j){
 			$J(j).removeClass('selected');
 		});
+	}
+	$J('a.all', elNode.parentNode).each(function(i, j){
+		$J(j).addClass('selected');
+	});
+
+}
+
+function CuratorFieldToggle( elNode, strValue, bForceReset )
+{
+	var bReset = elNode.classList.contains('all') || bForceReset;
+	if( bReset )
+	{
+				ResetFieldNode( elNode );
 	}
 	else
 	{
@@ -228,7 +249,24 @@ function CuratorFieldToggle( elNode, strValue, bForceReset )
 	UpdateRecommendationFilterData( true );
 }
 
+function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOverride = 0 )
+{
+		if( !( strFacet in rgFacets ) )
+	{
+		return;
+	}
 
+	var rgFacetToCounts = rgFacets[strFacet];
+	var nTotalCount = 0;
+
+	for (var facetIndex in rgFacetToCounts ) {
+		$J( strElementIDPrefix + facetIndex ).text( rgFacetToCounts[facetIndex] );
+
+		nTotalCount += parseInt( rgFacetToCounts[facetIndex] );
+	}
+
+	$J(strElementIDPrefix +"all").text( nCountOverride ? nCountOverride : nTotalCount );
+}
 
 function UpdateRecommendationFilterData( refresh )
 {
@@ -236,8 +274,7 @@ function UpdateRecommendationFilterData( refresh )
 	var elTarget = document.getElementById('RecommendationsTable');
 
 	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
-	var rgTypes = elForm.querySelectorAll('*[name="types"]');
-	var rgSorts = elForm.querySelectorAll('*[name="sort"]');
+	var rgAppTypes = elForm.querySelectorAll('*[name="app_types"]');     	var rgCurations = elForm.querySelectorAll('*[name="curations"]'); 	var rgSorts = elForm.querySelectorAll('*[name="sort"]');
 
 
 	var rgValues = [];
@@ -249,17 +286,25 @@ function UpdateRecommendationFilterData( refresh )
 		}
 	}
 
-	var rgTypeValues = [];
-	for( var j=0; j<rgTypes.length; j++ )
+	var rgCurationValues = [];
+	for( var j=0; j< rgCurations.length; j++ )
 	{
-		if ( rgTypes[ j ].value.length > 0 )
+		if ( rgCurations[ j ].value.length > 0 )
 		{
-			rgTypeValues.push ( rgTypes[ j ].value );
+			rgCurationValues.push ( rgCurations[ j ].value );
+		}
+	}
+
+	var rgAppTypeValues = [];
+	for( var j=0; j < rgAppTypes.length; j++ )
+	{
+		if ( rgAppTypes[ j ].value.length > 0 )
+		{
+			rgAppTypeValues.push ( rgAppTypes[ j ].value );
 		}
 	}
 
 	var strSort = 'recent';
-
 	for( var j=0; j<rgSorts.length; j++ )
 	{
 		if( rgSorts[j].value )
@@ -269,7 +314,8 @@ function UpdateRecommendationFilterData( refresh )
 	g_oPagingControls.SetStaticParameters({
 		"tagids": rgValues.join(','),
 		"sort": strSort,
-		"types": rgTypeValues.join(',')
+		"app_types": rgAppTypeValues.join(','),
+		"curations": rgCurationValues.join(','),
 	});
 
 	if( refresh )
@@ -375,7 +421,7 @@ function ShowEditHandles( bIsCreatorHome )
 			var elForm = elOptions[0];
 
 			$J.ajax ( {
-				url: g_strCuratorBaseURL + 'ajaxupdatepagesection/',
+				url: g_strCuratorAdminURL + 'ajaxupdatepagesection/',
 				data: {
 					sessionid: g_sessionID,
 					type: elTypeSelect.val(),
@@ -553,7 +599,7 @@ function ShowAddFeaturedTagModal()
 		function ()
 		{
 			$J.ajax ( {
-				url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
+				url: g_strCuratorAdminURL + 'ajaxedittagfilters/',
 				data: {
 					sessionid: g_sessionID,
 					add_tagid: unTagId
@@ -582,7 +628,7 @@ function DeleteFeaturedTag( unTagId, strTagName )
 	var modal = ShowConfirmDialog("Remove this tag?", "Are you sure you want to remove '%1$s' from your tag list?".replace(/%1\$s/, V_EscapeHTML( strTagName ) ) );
 	modal.done(function(){
 		$J.ajax ( {
-			url: g_strCuratorBaseURL + 'ajaxedittagfilters/',
+			url: g_strCuratorAdminURL + 'ajaxedittagfilters/',
 			data: {
 				sessionid: g_sessionID,
 				remove_tagid: unTagId
@@ -699,7 +745,7 @@ function ShowHeaderImageHandle()
 	elSave.click( function(){
 
 		$J.ajax ( {
-			url: g_strCuratorBaseURL + 'ajaxupdatepagesection/',
+			url: g_strCuratorAdminURL + 'ajaxupdatepagesection/',
 			data: {
 				sessionid: g_sessionID,
 				takeover: elSelectImage.val()
@@ -716,7 +762,7 @@ function ShowHeaderImageHandle()
 	});
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + '/ajaxgetclanimages/',
+		url: g_strCuratorAdminURL + '/ajaxgetclanimages/',
 		type: 'GET'
 	} ).done( function ( data )
 	{
@@ -777,18 +823,20 @@ $J(function() {
 		g_oPagingControls.SetPageChangedHandler ( function ( nPage )
 		{
 			$J ( '#RecommendationsTable' ).removeClass ( 'loading' );
-
 		} );
 
 		g_oPagingControls.SetResponseHandler( function( response ) {
 			GDynamicStore.DecorateDynamicItems();
+
+						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {
+				var rgFacets = $J.parseJSON(response.rgFacets);
+				UpdateFilterTagCounts( rgFacets, 'type', '#filter_app_type_num_' );
+				UpdateFilterTagCounts( rgFacets, 'tagids', '#filter_tagid_num_', response.total_count );
+			}
 		});
 
 		UpdateRecommendationFilterData ();
 	}
-
-
-
 });
 
 

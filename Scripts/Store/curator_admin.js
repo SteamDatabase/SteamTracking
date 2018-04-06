@@ -1,7 +1,6 @@
 
 var g_rgAppsCurated = [];
 
-
 function CreateListFromForm( elForm, fnOnComplete )
 {
 	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background' ], EditList, fnOnComplete);
@@ -12,7 +11,7 @@ function EditList( listid, title, blurb, state, appids, type, background, fnOnCo
 {
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxeditlist/',
+		url: g_strCuratorAdminURL + 'ajaxeditlist/',
 		data: {
 			listid: listid,
 			title: title,
@@ -51,7 +50,7 @@ function CreateReview( appid, blurb, link_url, recommendation_state, received_co
 {
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxcreatereview/',
+		url: g_strCuratorAdminURL + 'ajaxcreatereview/',
 		data: {
 			appid: appid,
 			blurb: blurb,
@@ -92,7 +91,7 @@ function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, ...rgPreferredTags )
 {
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxupdatecuratordetails/',
+		url: g_strCuratorAdminURL + 'ajaxupdatecuratordetails/',
 		data: {
 			description: description,
 			google_id: google_id,
@@ -253,7 +252,7 @@ function ListEdit_AddApp( elTarget, listid, appid, blurb )
 {
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxaddtolist/',
+		url: g_strCuratorAdminURL + 'ajaxaddtolist/',
 		data: {
 			listid: listid,
 			appid: appid,
@@ -282,7 +281,7 @@ function ListEdit_UpdateSort( elContainer, unListId )
 	}
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxupdatesortorder/',
+		url: g_strCuratorAdminURL + 'ajaxupdatesortorder/',
 		data: {
 			listid: unListId,
 			appids: rgAppIds,
@@ -303,7 +302,7 @@ function ListEdit_UpdateSort( elContainer, unListId )
 function ListEdit_RemoveApp( unListId, unAppId )
 {
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxremovefromlist/',
+		url: g_strCuratorAdminURL + 'ajaxremovefromlist/',
 		data: {
 			listid: unListId,
 			appid: unAppId,
@@ -365,7 +364,7 @@ function ReviewsManage_UpdatePage( rgData, unPage )
 			modal.done(function(  ){
 
 				$J.ajax ( {
-					url: g_strCuratorBaseURL + 'ajaxdeletereview/',
+					url: g_strCuratorAdminURL + 'ajaxdeletereview/',
 					data: {
 						appid: rec.appid,
 						sessionid: g_sessionID
@@ -468,7 +467,7 @@ function AddReviewsToList( rgAppIds, rgFieldsToUpdate, fnOnComplete, somearg )
 
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxaddtolist/',
+		url: g_strCuratorAdminURL + 'ajaxaddtolist/',
 		data: rgData,
 		dataType: 'json',
 		type: 'POST'
@@ -489,7 +488,7 @@ function UpdateMultipleReviews( rgAppIds, rgFieldsToUpdate )
 	rgData['sessionid'] = g_sessionID;
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxupdatemultiplecurations/',
+		url: g_strCuratorAdminURL + 'ajaxupdatemultiplecurations/',
 		data: rgData,
 		dataType: 'json',
 		type: 'POST'
@@ -505,7 +504,7 @@ function UpdateMultipleReviews( rgAppIds, rgFieldsToUpdate )
 function RespondOffer( elem, unClanId, unAppId, strAction )
 {
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxrespondoffer',
+		url: g_strCuratorAdminURL + 'ajaxrespondoffer',
 		data: {
 			sessionid: g_sessionID,
 			clanid: unClanId,
@@ -538,7 +537,7 @@ function RespondOffer( elem, unClanId, unAppId, strAction )
 function ExtendOffers( unClanId )
 {
     $J.ajax ( {
-        url: g_strCuratorBaseURL + 'ajaxextendoffer',
+        url: g_strCuratorAdminURL + 'ajaxextendoffer',
         data: {
             sessionid: g_sessionID,
             clanid: unClanId,
@@ -617,7 +616,7 @@ function LoadCuratorAssociatedApps( fnOnComplete )
 	var _this = this;
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxgetassociatedappslist/',
+		url: g_strCuratorAdminURL + 'ajaxgetassociatedappslist/',
 		data: {
 			sessionid: g_sessionID,
 			count: 1000, 		},
@@ -642,7 +641,7 @@ function ListManage_DeleteList( elRow, unListId, strListName )
 	modal.done(function(  ){
 
 		$J.ajax ( {
-			url: g_strCuratorBaseURL + 'ajaxdeletelist/',
+			url: g_strCuratorAdminURL + 'ajaxdeletelist/',
 			data: {
 				listid: unListId,
 				sessionid: g_sessionID
@@ -668,7 +667,7 @@ function ReviewsManage_Load()
 	};
 	$J('#throbber').show();
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxgetrecommendations/',
+		url: g_strCuratorAdminURL + 'ajaxgetrecommendations/',
 		data: rgData,
 		dataType: 'json',
 		type: 'POST'
@@ -684,7 +683,7 @@ function ReviewsManage_Load()
 			'action' : '',
 		};
 
-		g_oPagingControls = new CAjaxPagingControls( pagingData, g_strCuratorBaseURL + 'ajaxgetrecommendations/' );
+		g_oPagingControls = new CAjaxPagingControls( pagingData, g_strCuratorAdminURL + 'ajaxgetrecommendations/' );
 		g_oPagingControls.SetResponseHandler( function( response ) {
 
 			ReviewsManage_UpdatePage(response.recommendations)
@@ -1017,7 +1016,7 @@ function ListManage_UpdateSort( elContainer )
 
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxupdatelistorder/',
+		url: g_strCuratorAdminURL + 'ajaxupdatelistorder/',
 		data: {
 			listids: rgListIds,
 			sessionid: g_sessionID
@@ -1106,7 +1105,7 @@ function UpdateCustomizationCreatedApp( appid, blurb, link_url )
 {
 
 	$J.ajax ( {
-		url: g_strCuratorBaseURL + 'ajaxupdatecustomizationcreatedapp/',
+		url: g_strCuratorAdminURL + 'ajaxupdatecustomizationcreatedapp/',
 		data: {
 			appid: appid,
 			blurb: blurb,

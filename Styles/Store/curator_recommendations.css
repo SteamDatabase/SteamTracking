@@ -735,9 +735,14 @@ body.v6.creatorhome .page_content.browse_reviews {
 	color: #8f98a0;
 }
 
+#filtercuration_container {
+	margin-bottom: 20px;
+}
+
 #filtertype_container {
 	margin-bottom: 20px;
 }
+
 
 .browse_filters a {
 	display: block;
@@ -1274,4 +1279,8 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);backgro
 }
 .featured_list h2 span {
 	font-weight: 600;
+}
+
+.curator_filter_tag_count {
+	float: right;
 }
