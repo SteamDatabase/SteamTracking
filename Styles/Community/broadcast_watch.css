@@ -466,6 +466,7 @@ body.iframe #ChatWindow
 	width: auto;
 	margin-right: 0;
 	left: 0;
+	background: #2f353d;
 }
 
 #ChatViewerModalBackdrop
@@ -514,9 +515,10 @@ body.iframe #ChatWindow
 	right: 2px;
 	top: 2px;
 
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_exp.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/maximize_icon.png' );
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-size: 17px 20px;
 }
 
 
@@ -548,7 +550,7 @@ body.iframe .ChatBoxViewers
 {
 	width: 22px;
 	height: 20px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_viewers.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 
@@ -565,7 +567,20 @@ body.iframe .ChatBoxViewers
 {
 	width: 17px;
 	height: 20px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_col.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/minimize_icon.png' );
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 17px 20px;
+
+	display: inline-block;
+	margin: 0px 1px;
+}
+
+.ChatPopout
+{
+	width: 17px;
+	height: 20px;
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_exp.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 
@@ -675,7 +690,7 @@ body.iframe #ChatDragHandle
 	height: 12px;
 	border-radius: 2px;
 	background-color: #2b4a63;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/chat_tab.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/chat_tab.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -763,7 +778,7 @@ body.iframe #ChatDragHandle
 
 .ChatMessage.Broadcaster
 {
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/broadcast/live_chat.png' );
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/live_chat.png' );
 	background-repeat: no-repeat;
 	background-position: left 6px;
 }
@@ -807,6 +822,8 @@ body.iframe #ChatDragHandle
 	box-sizing: border-box;
 	resize: none;
 	padding: 5px;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 
@@ -918,12 +935,15 @@ body:not(.iframe) .BroadcastRowShadow
 #BroadcastViewerCount
 {
 	font-size: 14px;
-	margin: 8px 0px 0px 8px;
+	margin: 8px 0px 0px 0px;
 	padding-left: 28px;
-	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_viewers.png' );
+	
+	pointer-events: none;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 22px;
+	text-decoration: none;
 }
 
 #BroadcastInfo
@@ -983,7 +1003,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ReportBroadcast
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_report.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report.png' );
 	background-position: 6px center;
 	background-repeat: no-repeat;
 	padding-left: 28px;
@@ -991,7 +1011,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ReportBroadcast:hover
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_report_white.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report_white.png' );
 }
 
 #ReportBroadcast.Reported,
@@ -1090,7 +1110,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	padding-left: 28px;
 
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_viewers.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_viewers.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
 }
@@ -1108,7 +1128,7 @@ body:not(.iframe) .BroadcastRowShadow
 #ViewerModalUsers .Muted
 {
 	border-radius: 2px;
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_muted.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_muted.png' );
 	background-repeat: no-repeat;
 	background-position: center center;
 	position: absolute;
@@ -1126,7 +1146,7 @@ body:not(.iframe) .BroadcastRowShadow
 
 #ViewerModalUsers .Muted.CanUnmute:hover
 {
-	background-image: url(' https://steamcommunity-a.akamaihd.net/public/images/broadcast/icon_unmute.png' );
+	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_unmute.png' );
 }
 
 #ViewerModalUsers a
@@ -1365,6 +1385,185 @@ body:not(.iframe) .BroadcastRowShadow
     margin-left: 0px;
 }
 
+.store_broadcast_container
+{
+	padding: 15px;
+	letter-spacing: 1px;
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);}
+
+.store_broadcast_title
+{
+	color: #ffffff;
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.store_broadcast_side_panel {
+	max-width: 155px;
+	max-height: 337px; /* Flush with the bottom */
+	flex: 0 10;
+}
+
+.store_inner_broadcast_container {
+	margin-bottom: 0px;
+	margin-top: 10px;
+	background: #000;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.store_inner_broadcast_container .broadcastwrapper  {
+	display: flex;
+	flex: 100 0;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content:space-between;
+}
+.store_inner_broadcast_container .broadcastwrapper .VideoContainerPlaceholder,
+.store_inner_broadcast_container .broadcastwrapper .VideoContainerPlaceholder .VideoContainer,
+.store_inner_broadcast_container .broadcastwrapper .VideoContainerPlaceholder .EmbeddedPlayer {
+	border: none;
+	width: 100%;
+	overflow: hidden;
+	/* width: 600px;*/
+	height: 100%;
+	/* height: 337px; */
+	/* set to 532px; for full height */
+	/* max-width: 600px; */
+	height: 337px;
+}
+
+.store_inner_broadcast_container  .EmbeddedChatWindow,
+.store_inner_broadcast_container  .EmbeddedChat {
+	border: none;
+	height: 337px; /* same size as the video height */
+	width: 310px; /* same size as the two side panels combined */
+}
+
+.store_broadcast_links_container .BroadcastLinkList {
+	float: right;
+	padding: 5px;
+	color: rgb( 108, 141, 161 );
+}
+
+#store_broadcast_links_container .BroadcastLinkList a {
+	color: #7092a5;
+	font-size: 11px;
+	text-decoration: underline;
+}
+#store_broadcast_links_container .BroadcastLinkList a:hover {
+	color: #fff;
+}
+
+.store_broadcast_links_container span {
+	text-decoration: underline;
+}
+
+.store_broadcast_links_container span:hover {
+	color: #c6d4df;
+	cursor: pointer;
+}
+
+#store_broadcast_corner_container {
+	float:right;
+	display: flex;
+	flex-direction: row;
+}
+
+#store_broadcast_change_settings{
+	font-size: 10px;
+	vert: bottom;
+	align-self: flex-end;
+}
+
+.store_broadcast_expander {
+	width: 13px;
+	height: 10px;
+	padding: 4px;
+	border-radius: 3px;
+
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand_large.png');
+	background-repeat: no-repeat;
+	background-size: 13px;
+	background-position: center;
+}
+
+.store_broadcast_expander:hover,
+.store_broadcast_shrinker:hover {
+	background-color: rgba( 255, 255, 255, 0.2);
+
+}
+
+.store_broadcast_shrinker {
+	width: 13px;
+	height: 10px;
+	padding: 4px;
+	border-radius: 3px;
+
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_collapse_large.png');
+	background-repeat: no-repeat;
+	background-size: 13px;
+	background-position: center;
+}
+
+.broadcast_floating {
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	height: 213px;
+	width: 325px;
+	z-index: 100;
+
+	/** Using this to debug why there is space below the video */
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba( 87, 100, 114, 1 );
+}
+
+.PopOutVideoTitleBar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	height: 30px; /* If you change this, also update broadcast_floating height */
+
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);}
+
+.PopOutVideoTitleText {
+	width: 280px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 8px;
+
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.PopOutVideoCloseButton {
+	margin: 8px;
+}
+
+#ChatOnlyContainer{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#ChatOnly {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
     min-height: calc( 100vh );
@@ -1412,6 +1611,39 @@ html.responsive body.broadcast_watch_page .responsive_page_template_content {
 		padding-top: 0;
 	}
 }
+
+@media screen and (max-width: 910px ) {
+	html.responsive .store_broadcast_side_panel {
+		width: 0px; /* Flush with the bottom */
+	}
+	html.responsive .store_inner_broadcast_container .broadcastwrapper  {
+		flex-direction: column;
+	}
+	html.responsive .store_inner_broadcast_container  .EmbeddedChatWindow,
+	html.responsive .store_inner_broadcast_container .EmbeddedChat {
+		width: 100%;
+		height: 205px;
+	}
+}
+
+@media screen and ( max-width: 414px ) {
+	html.responsive .store_inner_broadcast_container .broadcastwrapper .EmbeddedPlayer,
+	html.responsive .store_inner_broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
+		height: 184px;
+	}
+}
+
+@media screen and ( max-width: 375px ) {
+	html.responsive .store_inner_broadcast_container .broadcastwrapper .EmbeddedPlayer,
+	html.responsive .store_inner_broadcast_container .broadcastwrapper .VideoContainerPlaceholder {
+		height: 178px;
+	}
+
+	html.responsive .broadcast_floating {
+		right: 2px;
+	}
+}
+
 
 @media screen and (max-width: 910px)
 {
