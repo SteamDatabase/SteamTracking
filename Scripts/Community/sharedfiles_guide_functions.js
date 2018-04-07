@@ -23,7 +23,7 @@ function CheckForVisibleYouTubeVideos()
 			if ( video.embeddedVideo == null || typeof video.embeddedVideo == "undefined" )
 			{
 				var videoSizeImg = $J('<img/>', {src: 'https://steamcommunity-a.akamaihd.net/public/shared/images/responsive/youtube_16x9_placeholder.gif', 'class': 'placeholder_img'});
-				var videoSrc = "http://www.youtube.com/embed/" + video.id + "?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct";
+				var videoSrc = "https://www.youtube.com/embed/" + video.id + "?showinfo=0&autohide=1&fs=1&hd=1&modestbranding=1&rel=0&showsearch=0&wmode=direct";
 				video.embeddedVideo = new Element( 'iframe', { 'class' : video.classNames().toString(), 'src' : videoSrc, 'frameborder' : 0, 'allowfullscreen' : '1' } );
 				$J(video).append( videoSizeImg, video.embeddedVideo );
 			}
