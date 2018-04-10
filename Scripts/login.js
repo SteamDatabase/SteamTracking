@@ -657,6 +657,8 @@ CLoginPromptManager.prototype.LoginComplete = function()
 				this.m_strRedirectURL = '';
 			}
 		}
+		// browsers treat multiple leading slashes as the end of the protocol specifier
+		if ( this.m_strRedirectURL.match( /^\/\// ) ) { this.m_strRedirectURL = ''; }
 		if( this.m_strRedirectURL  )
 			window.location = this.m_strRedirectURL;
 		else

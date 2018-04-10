@@ -231,8 +231,13 @@ textarea.gray {
 }
 
 .formrow {
+	clear: left;
 	padding-bottom: 5px;
 	margin-bottom: 5px;
+}
+
+.formrow.text {
+	line-height: 17px;
 }
 
 
@@ -366,10 +371,6 @@ select.hourselect,  select.minuteselect {
 
 .widetoolbtn:hover {
 	background-image:url('../images/admin_btn_focus.jpg');
-}
-
-.formrow {
-	clear: left;
 }
 
 .subarea {
@@ -2218,6 +2219,7 @@ html, body { height:100%; }
 }
 .instructions_table_cell.left {
 	padding-right: 10px;
+	min-width: 131px;
 }
 
 .screenshot_upload_preview

@@ -330,3 +330,132 @@
 .avatarBanTimeEnd {
 	margin: 10px 0;
 }
+
+/* react-based profile privacy page */
+.ProfilePrivacyRoot
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #939ea7;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.ProfilePrivacyRoot a
+{
+	color: #dbdbdb;
+}
+
+.ProfilePrivacyRoot_Indent
+{
+	padding-left: 10%;
+}
+
+.ProfilePrivacyHeader
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #66c0f4;
+	font-size: 18px;
+	line-height: 24px;
+
+	margin-bottom: 10px;
+}
+
+.ProfilePrivacyDesc
+{
+	margin-bottom: 18px;
+}
+
+.ProfilePrivacyDropDown
+{
+	display: inline-block;
+	color: #c6d4df;
+	text-decoration: underline;
+	margin-left: 8px;
+	cursor: pointer;
+}
+
+.ProfilePrivacyDropDown:not(.readonly):hover
+{
+	color: #ffffff;
+}
+
+.ProfilePrivacyDropDown_Arrow
+{
+	margin-left: 6px;
+}
+
+.ProfilePrivacyDropDown.readonly
+{
+	text-decoration: none;
+	cursor: default;
+}
+
+.ProfilePrivacyRoot_Indent .ProfilePrivacyHeader
+{
+	font-size: 16px;
+	line-height: 22px;
+	margin-bottom: 4px;
+}
+
+.ProfilePrivacyHR
+{
+	height: 1px;
+	margin: 18px 0;
+	background: linear-gradient( to right, rgba( 61, 77, 94, 1.0 ), rgba( 61, 77, 94, 0.0 ) );
+}
+
+.ProfilePrivacyCheckbox
+{
+	margin-top: 12px;
+	padding-left: 12px;
+}
+
+.ProfilePrivacyCheckbox > label
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.ProfilePrivacyCheckbox_Desc
+{
+	flex: 1;
+	padding-left: 6px;
+	min-width: 0;
+	white-space: pre-line;
+}
+
+.PrivacySaveNotice
+{
+	display: inline-block;
+	color: #737e87;
+	margin-left: 12px;
+}
+
+.PrivacySaveNotice.Error
+{
+	color: red;
+}
+
+.PrivacySaveNotice.Saved
+{
+	animation-duration: 2s;
+	animation-name: PrivacySaveNoticeVanish;
+	opacity: 0;
+}
+
+@keyframes PrivacySaveNoticeVanish
+{
+	from {
+		opacity: 1.0;
+	}
+	75% {
+		opacity: 1.0;
+	}
+	100% {
+		opacity: 0;
+	}
+}

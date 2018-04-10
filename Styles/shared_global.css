@@ -383,6 +383,18 @@ span.popup_menu_pulldown_indicator {
 	box-shadow: 0 0 12px #000000;
 }
 
+.popup_block_new.popup_block_hidden_until_visible
+{
+	opacity: 1.0;
+	transition: opacity 200ms;
+}
+
+.popup_block_new.popup_block_hidden_until_visible:not(.visible)
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .popup_block_new.responsive_slidedown {
