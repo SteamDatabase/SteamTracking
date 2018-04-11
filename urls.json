@@ -156,6 +156,11 @@
 "Styles/shared_responsive.css"                   : "https://steamcommunity.com/public/shared/css/shared_responsive.css?__TIME__",
 
 //
+// WebUI
+//
+"Styles/WebUI/shared_application.css"            : "https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__",
+
+//
 // Holiday CSS
 //
 "Styles/Community/auction.css"                   : "https://steamcommunity.com/public/css/skin_1/auction.css?__TIME__",

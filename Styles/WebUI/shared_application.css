@@ -1,0 +1,201 @@
+/* Style scrollbar elements */
+
+::-webkit-scrollbar,
+.iScrollHorizontalScrollbar,
+.iScrollVerticalScrollbar
+{
+	height: 12px;
+	width: 12px;
+	background: transparent;
+	overflow: visible;
+}
+
+
+/*::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}*/
+
+.iScrollHorizontalScrollbar
+{
+	position: absolute;
+	left: 2px;
+	right: 2px;
+	bottom: 2px;
+	width: 100%;
+}
+
+.iScrollVerticalScrollbar
+{
+	position: absolute;
+	bottom: 2px;
+	top: 2px;
+	right: 2px;
+	height: 100%;
+}
+
+::-webkit-scrollbar-thumb,
+.iScrollIndicator
+{
+	background: #373B42;
+	border-radius: 2px;
+	margin: 4px;
+
+	/*box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .25);*/
+}
+
+::-webkit-scrollbar-thumb
+{
+	min-height: 32px;
+	min-width: 32px;
+}
+
+.iScrollIndicator
+{
+	width: 8px;
+	margin: 1px;
+	position: absolute;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.iScrollIndicator:hover
+{
+	background: #4E5157;
+}
+
+::-webkit-scrollbar-corner
+{
+	background: #202020;
+}
+
+.contextMenu
+{
+	position: absolute;
+
+	background: radial-gradient(ellipse farthest-corner at 50% 0%, rgb(60, 64, 71) 0%, rgb(60, 64, 71) 50%, rgb(51, 54, 61) 100%);
+	box-shadow: 0 10px 32px 0px #000000ab;
+	opacity: 1.0;
+
+	transition: opacity 200ms;
+
+	z-index: 200;
+	user-select: none;
+	padding: 4px;
+}
+
+html.ContextMenuPopup .contextMenu
+{
+	position: static;
+	box-shadow: none;
+	display: inline-block;
+	padding: 0;
+}
+
+html.ContextMenuPopup .contextMenu .contextMenuContents
+{
+	padding: 4px;
+}
+
+html.ContextMenuPopup .contextMenu .contextMenuItem
+{
+	min-width: fit-content;
+}
+
+.ContextMenuFocusContainer:focus
+{
+	outline: none;
+}
+
+.contextMenuContents {
+	display: flex;
+	flex-direction: column;
+	padding: 0px;
+	font-size: 14px;
+}
+
+.contextMenu:not(.visible)
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.contextMenuContents .contextMenuGameName
+{
+	color: #cbdde4;
+}
+
+.contextMenu .contextMenuItem {
+	padding: 4px 6px;
+	line-height: 20px;
+	color: #9ca4a7;
+	border-top: 0.5px solid rgba( 0, 0, 0, .5);
+	border-bottom: 0.5px solid rgba( 0, 0, 0, 0);
+	cursor: default;
+}
+
+.contextMenuContents .contextMenuItem:first-child
+{
+	border-top: 0.5px solid rgba( 0, 0, 0, 0);
+}
+
+.contextMenu .contextMenuItem:hover {
+	background: rgb(90, 96, 105);
+	color: #b8c5c9;
+}
+
+.contextMenu .contextMenuItem.disabled:hover {
+	background: none;
+}
+
+.contextMenuCheckMark
+{
+	width: 10px;
+	min-height: 1px;
+	display: inline-block;
+}
+
+.contextMenuSectionHeader
+{
+	max-width: 190px;
+	line-height: 20px;
+	-webkit-mask-image: -webkit-gradient( linear, 85% 0%, 100% 0%, from( rgba( 0, 0, 0, 1 ) ), to( rgba( 0, 0, 0, 0 ) ) );
+	white-space: nowrap;
+}
+
+.contextMenuSectionContent
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.contextMenuSectionContent .contextMenuItem
+{
+	border-top: none;
+	display: flex;
+}
+
+.contextMenuContents .contextMenuLabel
+{
+	font-size: 12px;
+	line-height: 25px;
+
+
+	padding-left: 6px;
+}
+
+.contextMenuContents .contextMenuItem.disabled
+{
+	color: #666;
+}
+
+.flexRow
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.flexColumn
+{
+	display: flex;
+	flex-direction: column;
+}
