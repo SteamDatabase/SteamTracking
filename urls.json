@@ -154,6 +154,7 @@
 "Styles/shared_global.css"                       : "https://steamcommunity.com/public/shared/css/shared_global.css?__TIME__",
 "Styles/user_reviews.css"                        : "https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__",
 "Styles/shared_responsive.css"                   : "https://steamcommunity.com/public/shared/css/shared_responsive.css?__TIME__",
+"Styles/shared_application.css"                  : "https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__",
 
 //
 // Holiday CSS
@@ -246,6 +247,13 @@
 "Scripts/Community/workshop_home.js"             : "https://steamcommunity.com/public/javascript/workshop_home.js?__TIME__&l=english",
 "Scripts/Community/workshop_previewplayer.js"    : "https://steamcommunity.com/public/javascript/workshop_previewplayer.js?__TIME__&l=english",
 "Scripts/Community/stickers.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/promo/stickers.js?__TIME__&l=english",
+
+//
+// WebUI JS
+//
+"Scripts/WebUI/libraries.js"                     : "https://steamcommunity.com/public/javascript/webui/libraries.js?__TIME__&l=english",
+"Scripts/WebUI/profile.js"                       : "https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english",
+"Scripts/WebUI/profile_manifest.js"              : "https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english",
 
 //
 // Help JS
