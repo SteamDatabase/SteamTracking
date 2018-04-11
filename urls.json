@@ -251,8 +251,6 @@
 //
 // WebUI JS
 //
-"Scripts/WebUI/libraries.js"                     : "https://steamcommunity.com/public/javascript/webui/libraries.js?__TIME__&l=english",
-"Scripts/WebUI/profile.js"                       : "https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english",
 "Scripts/WebUI/profile_manifest.js"              : "https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english",
 
 //
