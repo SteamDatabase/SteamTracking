@@ -566,7 +566,7 @@ function MarkNotInterested( elem, unAppId, snr ) {
 		data: {
 			sessionid: g_sessionID,
 			appid: unAppId,
-			snr: '',
+			snr: snr,
 		},
 		dataType: 'json',
 		type: 'POST',

@@ -176,7 +176,7 @@ function InitSearchFilters()
 
 function InitPagingControls( oPagingData )
 {
-	g_oRecommendations = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcuratorrecommendations/' + oPagingData['clanid'] + '/' );
+	g_oRecommendations = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curator/' + oPagingData['clanid'] + '/ajaxgetcuratorrecommendations/' );
 	g_oRecommendations.SetResponseHandler( function( response ) {
 		OnRecommendationsRendered();
 		$J( "#" + this.m_strElementPrefix + "Rows").InstrumentLinks();
