@@ -4203,10 +4203,13 @@
 
 	"SteamUI_SystemResetConfirmation_Title"	"Restart System"
 	"SteamUI_SystemResetConfirmation_Intro"	"Are you sure you want to do this?"
+	"SteamUI_StreamingSystemResetConfirmation_Intro"	"Are you sure you want to do this?\nIf Steam doesn't start and login automatically at startup you will need to go log into Steam on your computer after it restarts."
 	"SteamUI_SystemSuspendConfirmation_Title"	"Suspend System"
 	"SteamUI_SystemSuspendConfirmation_Intro"	"Are you sure you want to do this?"
+	"SteamUI_StreamingSystemSuspendConfirmation_Intro"	"Are you sure you want to do this?\nIf your computer doesn't support Wake On LAN or is on a different subnet, you will need to manually wake your computer."
 	"SteamUI_SystemShutdownConfirmation_Title"	"Turn Off System"
 	"SteamUI_SystemShutdownConfirmation_Intro"	"Are you sure you want to do this?"
+	"SteamUI_StreamingSystemShutdownConfirmation_Intro"	"Are you sure you want to do this?\nIf your computer doesn't support Wake On LAN or is on a different subnet, you will need to manually start your computer and make sure you are logged into Steam."
 	"SteamUI_SystemPowerConfirmation_Confirm" "Confirm"
 	"SteamUI_SystemPowerConfirmation_Cancel" "Cancel"
 

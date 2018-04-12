@@ -191,13 +191,12 @@ public:
     virtual unknown_ret RequestNotifications() = 0;
     virtual unknown_ret GetAppOwnershipInfo(unsigned int, unsigned int*, unsigned int*, char*) = 0;
     virtual unknown_ret SendGameWebCallback(unsigned int, char const*) = 0;
-    virtual unknown_ret StopStreaming(bool, int) = 0;
     virtual unknown_ret BIsStreamingUIToRemoteDevice() = 0;
     virtual unknown_ret BIsCurrentlyNVStreaming() = 0;
-    virtual unknown_ret RequestStopNVStreaming() = 0;
-    virtual unknown_ret OnBigPictureStreamingResult(bool, void*) = 0;
-    virtual unknown_ret OnBigPictureStreamingDone() = 0;
-    virtual unknown_ret OnBigPictureStreamRestarting() = 0;
+    virtual unknown_ret OnBigPictureForStreamingStartResult(bool, void*) = 0;
+    virtual unknown_ret OnBigPictureForStreamingDone() = 0;
+    virtual unknown_ret OnBigPictureForStreamingRestarting() = 0;
+    virtual unknown_ret StopStreaming() = 0;
     virtual unknown_ret LockParentalLock() = 0;
     virtual unknown_ret UnlockParentalLock(char const*) = 0;
     virtual unknown_ret BIsParentalLockEnabled() = 0;

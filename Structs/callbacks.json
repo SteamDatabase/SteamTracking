@@ -837,12 +837,12 @@
     {
         "id": 968,
         "size": 1,
-        "posted_in": "CUser::StartStreaming(bool, bool, unsigned int, int, char const*)"
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StartStreamingUI_t>(StartStreamingUI_t*)"
     },
     {
         "id": 969,
         "size": 1,
-        "posted_in": "CUser::StopStreaming(bool, int)"
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StopStreamingUI_t>(StopStreamingUI_t*)"
     },
     {
         "id": 970,
@@ -938,6 +938,16 @@
         "id": 990,
         "size": 8,
         "posted_in": "CUser::GetAvailableSeats(unsigned int)"
+    },
+    {
+        "id": 992,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StartBigPictureForStreaming_t>(StartBigPictureForStreaming_t*)"
+    },
+    {
+        "id": 993,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<StopBigPictureForStreaming_t>(StopBigPictureForStreaming_t*)"
     },
     {
         "id": 1001,
@@ -1437,7 +1447,7 @@
     {
         "id": 2601,
         "size": 8,
-        "posted_in": "CUser::OnBigPictureStreamingResult(bool, void*)"
+        "posted_in": "CUser::OnBigPictureForStreamingStartResult(bool, void*)"
     },
     {
         "id": 2602,
@@ -1447,12 +1457,12 @@
     {
         "id": 2603,
         "size": 1,
-        "posted_in": "CUser::OnBigPictureStreamingDone()"
+        "posted_in": "CUser::OnBigPictureForStreamingDone()"
     },
     {
         "id": 2604,
         "size": 1,
-        "posted_in": "CUser::OnBigPictureStreamRestarting()"
+        "posted_in": "CUser::OnBigPictureForStreamingRestarting()"
     },
     {
         "id": 2701,
@@ -1856,7 +1866,7 @@
     },
     {
         "id": 3311,
-        "size": 320,
+        "size": 316,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {

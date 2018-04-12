@@ -5,7 +5,7 @@ public:
     virtual unknown_ret GamepadReservationComplete() = 0;
     virtual unknown_ret StreamingAudioPreparationComplete(bool) = 0;
     virtual unknown_ret StreamingAudioFinished() = 0;
-    virtual unknown_ret ProcessStreamAvailable(unsigned int, bool) = 0;
+    virtual unknown_ret ProcessStreamAvailable(unsigned int) = 0;
     virtual unknown_ret ProcessStreamShutdown() = 0;
     virtual unknown_ret ProcessStreamClientConnected(char const*) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(char const*) = 0;
@@ -32,6 +32,7 @@ public:
     virtual unknown_ret SetStreamingEnabled(bool) = 0;
     virtual unknown_ret StartStream(unsigned long long, unsigned int, int, ERemoteClientStreamEnv, RemoteClientReservedGamepad_t const*, int) = 0;
     virtual unknown_ret BIsRemoteLaunch(CGameID) = 0;
+    virtual unknown_ret BIsBigPictureActiveForStreaming() = 0;
     virtual unknown_ret BIsStreamingSessionActive() = 0;
     virtual unknown_ret BIsStreamingSessionActiveForGame(CGameID) = 0;
     virtual unknown_ret BIsStreamingClientConnected() = 0;
