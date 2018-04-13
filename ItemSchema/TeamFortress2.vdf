@@ -25295,6 +25295,7 @@
 			"static_attrs"
 			{
 				"limited quantity item"		"1"
+				"min_viewmodel_offset"		"10 -2 -9"
 			}
 			"mouse_pressed_sound"	"ui/item_medal_pickup.wav"
 			"drop_sound"		"ui/item_medal_pickup.wav"
@@ -86956,18 +86957,11 @@
 		"30985"
 		{
 			"name"		"Private Maggot Muncher"
-			"prefab"		"no_craft hat marketable"
+			"prefab"		"no_craft misc marketable"
 			"item_name"		"#TF_spr18_private_maggot_muncher"
 			"item_description"		"#TF_spr18_private_maggot_muncher_Desc"
 			"item_type_name"		"#TF_Wearable_Mascot"
 			"equip_region"		"necklace"
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"hat"		"1"
-				}
-			}
 			"image_inventory"		"backpack/workshop/player/items/soldier/spr18_private_maggot_muncher/spr18_private_maggot_muncher"
 			"capabilities"
 			{
@@ -87195,6 +87189,191 @@
 					"attribute_class"		"set_attached_particle_static"
 					"value"		"28"
 				}
+			}
+		}
+		"30994"
+		{
+			"name"		"HLPugs.tf Highlander Cup 1st Place"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_hlpugs_gold"
+			"item_description"		"#TF_hlpugs_gold_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30995"
+		{
+			"name"		"HLPugs.tf Highlander Cup 2nd Place"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_hlpugs_silver"
+			"item_description"		"#TF_hlpugs_silver_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30996"
+		{
+			"name"		"HLPugs.tf Highlander Cup 3rd Place"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_hlpugs_bronze"
+			"item_description"		"#TF_hlpugs_bronze_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30997"
+		{
+			"name"		"HLPugs.tf Highlander Cup Participant"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_hlpugs_participant"
+			"item_description"		"#TF_hlpugs_participant_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
+			}
+		}
+		"30998"
+		{
+			"name"		"HLPugs.tf Highlander Cup Contributor"
+			"prefab"		"no_craft misc"
+			"item_name"		"#TF_hlpugs_contributor"
+			"item_description"		"#TF_hlpugs_contributor_Desc"
+			"equip_region"		"medal"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor"
+			"capabilities"
+			{
+				"can_craft_count"		"1"
+			}
+			"model_player_per_class"
+			{
+				"scout"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_scout.mdl"
+				"sniper"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_sniper.mdl"
+				"soldier"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_soldier.mdl"
+				"demoman"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_demo.mdl"
+				"medic"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_medic.mdl"
+				"heavy"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_heavy.mdl"
+				"pyro"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_pyro.mdl"
+				"spy"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_spy.mdl"
+				"engineer"		"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_engineer.mdl"
+			}
+			"used_by_classes"
+			{
+				"scout"		"1"
+				"sniper"		"1"
+				"soldier"		"1"
+				"demoman"		"1"
+				"medic"		"1"
+				"heavy"		"1"
+				"pyro"		"1"
+				"spy"		"1"
+				"engineer"		"1"
 			}
 		}
 
@@ -109473,15 +109652,15 @@
 		}
 		"9912"
 		{		
-			"name"				"Canteen Crasher Wood Starter Medal 2018"
+			"name"				"Canteen Crasher Rust Starter Medal 2018"
 			"prefab"			"tournament_medal"
 			"capabilities"
 			{
 				"nameable"		"1"
 			}
 			"item_type_name"	"#TF_Wearable_CommunityMedal"
-			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Wood"
-			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Wood_Desc"
+			"item_name"			"#TF_TournamentMedal_Canteen_Crasher_Rust"
+			"item_description"	"#TF_TournamentMedal_Canteen_Crasher_Rust_Desc"
 			"image_inventory"	"backpack/workshop/player/items/all_class/canteen_crasher_participant/canteen_crasher_participant"
 			"model_player_per_class"
 			{
@@ -109613,6 +109792,206 @@
 			"item_description"	"#TF_TournamentMedal_Season13"
 			"image_inventory"	"backpack/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant"
 			"model_player"		"models/workshop/player/items/all_class/asiafortress_participant/asiafortress_participant_demo.mdl"
+		}
+		"9925"
+		{		
+			"name"				"Copenhagen Games Gold Medal 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Copenhagen_Gold"
+			"item_description"	"#TF_TournamentMedal_2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/copenhagen_gold/copenhagen_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/copenhagen_gold/copenhagen_gold_%s.mdl"
+			}
+		}
+		"9926"
+		{		
+			"name"				"Copenhagen Games Silver Medal 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Copenhagen_Silver"
+			"item_description"	"#TF_TournamentMedal_2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/copenhagen_silver/copenhagen_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/copenhagen_silver/copenhagen_silver_%s.mdl"
+			}
+		}
+		"9927"
+		{		
+			"name"				"Copenhagen Games Bronze Medal 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Copenhagen_Bronze"
+			"item_description"	"#TF_TournamentMedal_2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/copenhagen_bronze/copenhagen_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/copenhagen_bronze/copenhagen_bronze_%s.mdl"
+			}
+		}
+		"9928"
+		{		
+			"name"				"Copenhagen Games Iron Medal 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Copenhagen_Iron"
+			"item_description"	"#TF_TournamentMedal_2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/copenhagen_iron/copenhagen_iron"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/copenhagen_iron/copenhagen_iron_%s.mdl"
+			}
+		}
+		"9929"
+		{		
+			"name"				"Copenhagen Games Staff Medal 2018"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_Copenhagen_Staff"
+			"item_description"	"#TF_TournamentMedal_2018"
+			"image_inventory"	"backpack/workshop/player/items/all_class/copenhagen_staff/copenhagen_staff"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/copenhagen_staff/copenhagen_staff_%s.mdl"
+			}
+		}
+  		"9930"
+		{		
+			"name"				"TFCL 6v6 Alpha FC"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_TFCL_Alpha_FC"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_FC_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha_%s.mdl"
+			}
+		}
+  		"9931"
+		{		
+			"name"				"TFCL 6v6 Alpha RK"
+			"prefab"			"tournament_medal"
+			"capabilities"
+			{
+				"paintable"		"1"
+			}
+			"item_name"			"#TF_TournamentMedal_TFCL_Alpha_RK"
+			"item_description"	"#TF_TournamentMedal_TFCL_Alpha_RK_Desc"
+			"image_inventory"	"backpack/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/tfcl_medal_alpha/tfcl_medal_alpha_%s.mdl"
+			}
+		}
+  		"9932"
+		{		
+			"name"				"Gette it Onne Champion Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_GIO_Champion"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gette_it_onne_champion/gette_it_onne_champion"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gette_it_onne_champion/gette_it_onne_champion_%s.mdl"
+			}
+		}
+		"9933"
+		{		
+			"name"				"Gette it Onne Playoffs Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_GIO_Playoffs"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gette_it_onne_playoffs/gette_it_onne_playoffs"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gette_it_onne_playoffs/gette_it_onne_playoffs_%s.mdl"
+			}
+		}
+		"9934"
+		{		
+			"name"				"Gette it Onne Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_GIO_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gette_it_onne_participant/gette_it_onne_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gette_it_onne_participant/gette_it_onne_participant_%s.mdl"
+			}
+		}
+		"9935"
+		{		
+			"name"				"Gette it Onne Helper Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_GIO_Helper"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/gette_it_onne_helper/gette_it_onne_helper"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/gette_it_onne_helper/gette_it_onne_helper_%s.mdl"
+			}
+		}
+  		"9936"
+		{		
+			"name"				"HLPugstf Highlander Cup Gold Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_HLPugs_Gold"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hlpugs_gold/hlpugs_gold_%s.mdl"
+			}
+		}
+		"9937"
+		{		
+			"name"				"HLPugstf Highlander Cup Silver Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_HLPugs_Silver"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hlpugs_silver/hlpugs_silver_%s.mdl"
+			}
+		}
+		"9938"
+		{		
+			"name"				"HLPugstf Highlander Cup Bronze Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_HLPugs_Bronze"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hlpugs_bronze/hlpugs_bronze_%s.mdl"
+			}
+		}
+		"9939"
+		{		
+			"name"				"HLPugstf Highlander Cup Participant Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_HLPugs_Participant"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hlpugs_participant/hlpugs_participant_%s.mdl"
+			}
+		}
+		"9940"
+		{		
+			"name"				"HLPugstf Highlander Cup Contributor Season 1"
+			"prefab"			"tournament_medal"
+			"item_name"			"#TF_TournamentMedal_HLPugs_Contributor"
+			"item_description"	"#TF_TournamentMedal_Season1"
+			"image_inventory"	"backpack/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor"
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_%s.mdl"
+			}
 		}
 
 
