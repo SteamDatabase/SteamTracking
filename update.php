@@ -242,7 +242,8 @@
 				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
 			}
 			
-			$File = __DIR__ . '/' . $File;
+			$OriginalFile = $File;
+			$File = __DIR__ . DIRECTORY_SEPARATOR . $File;
 			
 			$Folder = dirname( $File );
 			
@@ -259,6 +260,11 @@
 			}
 			
 			File_Put_Contents( $File, $Data );
+			
+			if( substr( $OriginalFile, 0, 14 ) === 'Scripts/WebUI/' )
+			{
+				system( 'prettier --write ' . escapeshellarg( $File ) );
+			}
 			
 			return true;
 		}

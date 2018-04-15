@@ -161,6 +161,11 @@
 "Styles/WebUI/shared_application.css"            : "https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__",
 
 //
+// WebUI JS
+//
+"Scripts/WebUI/profile.js"                       : "https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english",
+
+//
 // Holiday CSS
 //
 "Styles/Community/auction.css"                   : "https://steamcommunity.com/public/css/skin_1/auction.css?__TIME__",
