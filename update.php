@@ -67,6 +67,8 @@
 			
 			$Data = JSON_Decode( $Data, true );
 			
+			asort( $Data );
+			
 			foreach( $Data as $File => $URL )
 			{
 				$this->URLsToFetch[ ] = Array(
@@ -254,17 +256,21 @@
 				mkdir( $Folder, 0755, true );
 			}
 			
+			if( substr( $OriginalFile, 0, 14 ) === 'Scripts/WebUI/' )
+			{
+				file_put_contents( $File, $Data );
+				
+				system( 'prettier --write ' . escapeshellarg( $File ) );
+				
+				return true;
+			}
+			
 			if( File_Exists( $File ) && StrCmp( File_Get_Contents( $File ), $Data ) === 0 )
 			{
 				return false;
 			}
 			
 			File_Put_Contents( $File, $Data );
-			
-			if( substr( $OriginalFile, 0, 14 ) === 'Scripts/WebUI/' )
-			{
-				system( 'prettier --write ' . escapeshellarg( $File ) );
-			}
 			
 			return true;
 		}

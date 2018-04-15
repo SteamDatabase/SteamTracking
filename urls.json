@@ -137,7 +137,7 @@
 "Styles/Community/workshop_itemdetails.css"      : "https://steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?__TIME__",
 "Styles/Community/workshop_managecollection.css" : "https://steamcommunity.com/public/css/skin_1/workshop_managecollection.css?__TIME__",
 "Styles/Community/workshop_userfiles.css"        : "https://steamcommunity.com/public/css/skin_1/workshop_userfiles.css?__TIME__",
-"Styles/Community/stickers.css"                  : "https://steamcommunity-a.akamaihd.net/public/css/promo/summer2017/stickers.css?__TIME__",
+"Styles/Community/stickers.css"                  : "https://steamcommunity.com/public/css/promo/summer2017/stickers.css?__TIME__",
 
 //
 // Help CSS
@@ -255,7 +255,7 @@
 "Scripts/Community/workshop_functions.js"        : "https://steamcommunity.com/public/javascript/workshop_functions.js?__TIME__&l=english",
 "Scripts/Community/workshop_home.js"             : "https://steamcommunity.com/public/javascript/workshop_home.js?__TIME__&l=english",
 "Scripts/Community/workshop_previewplayer.js"    : "https://steamcommunity.com/public/javascript/workshop_previewplayer.js?__TIME__&l=english",
-"Scripts/Community/stickers.js"                  : "https://steamcommunity-a.akamaihd.net/public/javascript/promo/stickers.js?__TIME__&l=english",
+"Scripts/Community/stickers.js"                  : "https://steamcommunity.com/public/javascript/promo/stickers.js?__TIME__&l=english",
 
 //
 // Help JS
