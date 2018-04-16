@@ -2184,7 +2184,15 @@ Slider:Selected
 
 .FieldLabel
 {
-	font-size: 28px;
+    font-size: 28px;
+	font-family: platformfont;
+	color: #01caef;
+	margin-bottom: 5px;
+}
+
+.Polish .FieldLabel
+{
+    font-size: 24px;
 	font-family: platformfont;
 	color: #01caef;
 	margin-bottom: 5px;

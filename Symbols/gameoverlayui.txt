@@ -14696,6 +14696,7 @@
  t (anonymous namespace)::ScrollBarButton::GetMessageMap()
  t (anonymous namespace)::ScrollBarButton::GetPanelClassName()
  t (anonymous namespace)::ScrollBarButton::GetPanelTopClassName() const
+ t (anonymous namespace)::ScrollBarButton::OnCursorExited()
  t (anonymous namespace)::ScrollBarButton::OnMouseFocusTicked()
  t (anonymous namespace)::ScrollBarButton::OnMousePressed(vgui::MouseCode)
  t (anonymous namespace)::ScrollBarButton::OnMouseReleased(vgui::MouseCode)
