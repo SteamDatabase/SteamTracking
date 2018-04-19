@@ -787,7 +787,7 @@ GHomepage = {
 
 					for( var i=0; i<rgData.tags.length; i++)
 					{
-						var url = GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
+						var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
 						$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
 					}
 					$elInfoDiv.append($elTagContainer);
@@ -1344,7 +1344,7 @@ GHomepage = {
 			var rgTag = GDynamicStore.s_rgRecommendedTags[i];
 			if ( rgGenreTags.indexOf( rgTag.tagid ) == -1 )
 			{
-				var url = GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgTag.name ) ), 'gutter' );
+				var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgTag.name ) ), 'gutter' );
 				$TagList.append( $J('<a/>', {'class': 'gutter_item', 'href' : url}).text( rgTag.name ) );
 
 				if ( ++cTagsFound >= 5 )

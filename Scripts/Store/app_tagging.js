@@ -1,7 +1,7 @@
 
 function TagLink( tag, language )
 {
-	var url = 'http://store.steampowered.com/tag/';
+	var url = 'https://store.steampowered.com/tag/';
 	if ( language )
 		url += language + '/';
 	else
@@ -240,7 +240,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			{
 				bYourPopularTagsRequested = true;
 
-				var url = 'http://store.steampowered.com/tagdata/myfrequenttags';
+				var url = 'https://store.steampowered.com/tagdata/myfrequenttags';
 				var mytag_version = WebStorage.GetLocal( 'mytag_version', true );
 				if ( mytag_version )
 					url += '?v=' + parseInt( mytag_version );

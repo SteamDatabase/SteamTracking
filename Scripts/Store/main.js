@@ -1,7 +1,7 @@
 
 function GotFlashPopup()
 {
-	var win = window.open( 'http://store.steampowered.com/gotflash','gotflash','width=536,height=546,resize=yes,scrollbars=yes');
+	var win = window.open( 'https://store.steampowered.com/gotflash','gotflash','width=536,height=546,resize=yes,scrollbars=yes');
 	win.focus();
 }
 
@@ -1240,7 +1240,7 @@ function EnsureStoreMenuTagsLoaded( strId )
 				for( var i = 0; i < rgYourPopularTags.length && i < 5; i++ )
 				{
 					var tag = rgYourPopularTags[i];
-					var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
+					var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'https://store.steampowered.com/tag/en/' + encodeURIComponent( tag.name ) });
 					$Link.text( tag.name );
 					$Element.append( $Link );
 				}
@@ -1290,7 +1290,7 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 		else
 		{
 						if( g_AccountID )
-				window.location = 'http://store.steampowered.com/account/languagepreferences/';
+				window.location = 'https://store.steampowered.com/account/languagepreferences/';
 			else if ( window.location.href.match( /[?&]l=/ ) )
 				window.location = window.location.href.replace( /([?&])l=[^&]*&?/, '$1' );
 			else
@@ -2338,7 +2338,7 @@ function RecordAJAXPageView( url )
 {
 	if ( typeof ga != "undefined" && ga )
 	{
-		var rgURLs = [ 'http://store.steampowered.com/', 'https://store.steampowered.com/' ];
+		var rgURLs = [ 'https://store.steampowered.com/', 'https://store.steampowered.com/' ];
 		for ( var i = 0; i < rgURLs.length; ++i )
 		{
 			var baseURL = rgURLs[i];

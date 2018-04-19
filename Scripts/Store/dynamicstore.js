@@ -923,7 +923,7 @@ GDynamicStore = {
 		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 5; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
-							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'http://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name ) });
+							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'https://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name ) });
 						$Link.text( tag.name );
 			$Element.append( $Link );
 		}
@@ -1241,20 +1241,20 @@ GStoreItemData = {
 	GetAppURL: function( unAppID, strFeatureContext, nDepth, nCuratorClanID)
 	{
 		if ( typeof GStoreItemData.rgAppData[ unAppID ] == 'object' && 'url_name' in GStoreItemData.rgAppData[ unAppID ] ) {
-			return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth, nCuratorClanID )
+			return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/app/' + unAppID + '/' + GStoreItemData.rgAppData[ unAppID ].url_name + '/', strFeatureContext, nDepth, nCuratorClanID )
 		}
 
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth, nCuratorClanID )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/app/' + unAppID + '/', strFeatureContext, nDepth, nCuratorClanID )
 	},
 
 	GetPackageURL: function( unPackageID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/sub/' + unPackageID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/sub/' + unPackageID + '/', strFeatureContext, nDepth )
 	},
 
 	GetBundleURL: function( unBundleID, strFeatureContext, nDepth )
 	{
-		return GStoreItemData.AddNavEventParamsToURL( 'http://store.steampowered.com/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
+		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
 	},
 
 	GetHoverParams: function ( unAppID, unPackageID )

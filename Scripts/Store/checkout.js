@@ -129,7 +129,7 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 	$J('#purchase_button_bottom').hide();
 	$J('#purchase_button_inprogress_bottom').show();
 
-	var g_winQiwiWindow = window.open( 'http://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
+	var g_winQiwiWindow = window.open( 'https://store.steampowered.com/qiwi/launchauth', 'qiwiWindow' );
 
 	g_bCreateQiwiInvoiceRunning = true;
 	
@@ -342,7 +342,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 		
-		 window.open( 'http://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+		 window.open( 'https://store.steampowered.com//checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	} 
 	catch( e ) 
 	{
@@ -906,7 +906,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your purchase could not be completed because it looks like you already own one of the games you are trying to buy.  Please check your account and your cart to verify you are buying an item you do not already own.';
 					break;
 				case 57:
-					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'http://store.steampowered.com/account\'>account</a> page.';
+					error_text = 'Your purchase could not be completed because it looks like you already have an existing subscription for the same item.  Please manage your subscription details in your <a href=\'https://store.steampowered.com/account\'>account</a> page.';
 					break;
 				case 31:
 					error_text = 'Your purchase could not be completed because it looks like the currency of funds in your Steam Wallet does not match the currency of this purchase.';
@@ -941,7 +941,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'You cannot complete your transaction because you are attempting to purchase an item that is already included in another packaged item in your cart.  Please check your cart to verify that you are not purchasing an item multiple times.  The most common cause would be purchasing DLC along with a deluxe version of a product that already includes the same DLC.';
 					break;
 				case 23:
-					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'http://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
+					error_text = 'The current payment method does not match the country of the store.  The cart has been converted and the updated total will show on the next page.  You may also review your cart <a href=\'https://store.steampowered.com/cart/country_changed\'>here</a>, or change your payment method below.';
 					break;
 				case 8:
 					error_text = 'Your transaction cannot be completed because you have another pending transaction on your account.';
@@ -953,7 +953,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'This card number is not valid for the payment method you selected.';
 					break;
 				case 56:
-					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
+					error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 					break;
 				case 53:
 					error_text = 'It looks like you\'ve been attempting a lot of purchases in the last few hours.  Please wait a while before trying again.';
@@ -2405,7 +2405,7 @@ function OnGetFinalPriceFailure( eErrorDetail )
 				error_text = 'Your billing information has failed address verification.  Please correct the error or contact support for assistance.';
 				break;
 			case 56:
-				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'http://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
+				error_text = 'Hey big spender, easy does it! Your shopping cart total exceeds our maximum allowable purchase amount. Please <a href=\'https://store.steampowered.com/cart\'>edit the contents of your cart</a> and try again.';
 				break;
 			case 17:
 				var method = $('payment_method');
@@ -4848,7 +4848,7 @@ function OnPurchaseSuccess( result )
 						if ( $('cache_return_url') )
 				window.location = $('cache_return_url').value;
 			else
-				window.location = 'http://store.steampowered.com/account/';
+				window.location = 'https://store.steampowered.com/account/';
 			return true;
 		}
 	
