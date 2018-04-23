@@ -220,6 +220,7 @@
  D typeinfo for CClientModuleManager
  D typeinfo for CClientModuleManagerAsync
  D typeinfo for CClientModuleManagerBase
+ D typeinfo for CClientSecureDesktop
  D typeinfo for CCrossProcessPipe
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
@@ -270,6 +271,7 @@
  D typeinfo for IClientInstallUtils
  D typeinfo for IClientModuleManager
  D typeinfo for IClientProcessMonitor
+ D typeinfo for IClientSecureDesktop
  D typeinfo for IDebugStatsSystem
  D typeinfo for IIPCServer
  D typeinfo for IKeyValuesSystem
@@ -293,6 +295,7 @@
  D vtable for CClientModuleManager
  D vtable for CClientModuleManagerAsync
  D vtable for CClientModuleManagerBase
+ D vtable for CClientSecureDesktop
  D vtable for CCrossProcessPipe
  D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
@@ -357,6 +360,7 @@
  R typeinfo name for CClientModuleManager
  R typeinfo name for CClientModuleManagerAsync
  R typeinfo name for CClientModuleManagerBase
+ R typeinfo name for CClientSecureDesktop
  R typeinfo name for CCrossProcessPipe
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDebugStatsSystem
@@ -418,6 +422,7 @@
  R typeinfo name for IClientInstallUtils
  R typeinfo name for IClientModuleManager
  R typeinfo name for IClientProcessMonitor
+ R typeinfo name for IClientSecureDesktop
  R typeinfo name for IDebugStatsSystem
  R typeinfo name for IIPCServer
  R typeinfo name for IKeyValuesSystem
@@ -686,6 +691,10 @@
  T CClientModuleManagerBase::UnloadModule(unsigned int)
  T CClientModuleManagerBase::UnloadModuleInternal(DynamicModule_s*)
  T CClientModuleManagerBase::~CClientModuleManagerBase()
+ T CClientSecureDesktop::BStartStreaming(char const*)
+ T CClientSecureDesktop::SendSAS()
+ T CClientSecureDesktop::StopStreaming()
+ T CClientSecureDesktop::~CClientSecureDesktop()
  T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::CCompletionPortManager()
  T CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)
@@ -2229,6 +2238,7 @@
  T IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&)
  T IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&)
  T IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&)
+ T IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&)
  T IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&)
  T InitStackWalk()
  T InitializeSpewConfig()
@@ -3909,6 +3919,7 @@
  t _GLOBAL__sub_I_servicemodulemanagerbase.cpp
  t _GLOBAL__sub_I_serviceprocessmonitor.cpp
  t _GLOBAL__sub_I_serviceregistry.cpp
+ t _GLOBAL__sub_I_servicesecuredesktop.cpp
  t _GLOBAL__sub_I_serviceutils_osx.cpp
  t _GLOBAL__sub_I_singleprocesspipe_any.cpp
  t _GLOBAL__sub_I_stat.cpp
