@@ -1403,6 +1403,7 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 #review_create p {
     font-size: 13px;
     margin-bottom: 15px;
+	line-height: 17px;
     color: #8f98a0;
 }
 
@@ -2218,13 +2219,15 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 .review_controls .controlblock.formattinghelp
 {
 	padding: 4px;
+	float: right;
+	margin-right: 0px;
 
 }
 
 .review_received_comp {
 	margin-top: 9px;
 }
-.review_received_comp input {
+.review_received_comp input, .enable_review_comments input {
 	vertical-align: text-top;
 	margin-right: 4px;
 }
@@ -2483,12 +2486,17 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 
 body.recommendgame #review_create {
-	padding-top: 0;
+background: -webkit-linear-gradient( 60deg, #313b46 5%,#566573 95%););background: linear-gradient( 60deg, #313b46 5%,#566573 95%););	padding: 16px;
+	box-shadow: 0 0 30px rgba(102, 192, 244, 0.4);
 }
 
 body.recommendgame #review_create h1  {
 	border-top: none;
 	padding-top: 0;
+}
+
+.controls {
+	margin-top: 4px;
 }
 
 /* filters */

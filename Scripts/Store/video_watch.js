@@ -122,7 +122,7 @@ CVideoWatch.prototype.WaitUnlockH264 = function( rtStart )
 
 CVideoWatch.prototype.BlockedPlaybackMessage = function()
 {
-	this.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
+	this.ShowVideoError( 'Steam Videos can only be watched in the Steam Client.' );
 }
 
 CVideoWatch.prototype.Start = function()
@@ -370,7 +370,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 					_watch.ShowVideoError( 'Sorry, this video is not yet available to watch.' );
 					break;
 				case 82:
-					_watch.ShowVideoError( 'Streaming Videos can only be watched in the Steam Client.' );
+					_watch.ShowVideoError( 'Steam Videos can only be watched in the Steam Client.' );
 					break;
 				default:
 					if ( _watch.m_eUIMode == CDASHPlayerUI.eUIModeDesktop || _watch.m_eUIMode == CDASHPlayerUI.eUIModeMobile )

@@ -526,6 +526,7 @@ GDynamicStore = {
 						'location': 'bottom left',
 						'offsetY': -20,
 						'useClickEvent': true,
+						'useMouseEnterEvent': false,
 						func: GDynamicStore.CapsuleSettingsMenu
 					} );
 

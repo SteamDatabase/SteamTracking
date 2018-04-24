@@ -1,5 +1,11 @@
 /* CSS Document */
 
+body.v6 {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 body.v6.checkout .page_header_ctn {
 	padding-bottom: 47px;
 	margin-bottom: -50px;
@@ -55,11 +61,14 @@ body.v6.login .rightcol .spotlight_block {
 	position: relative;
 }
 
-.checkout_content_box h2
+body.v6 .checkout_content_box h2
 {
 	color: #ffffff;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding-bottom: 5px;
 }
 
 .checkout_content_box h3.tab_header
@@ -1667,7 +1676,7 @@ label.send_choice_txt {
 
 .receipt_confirmation_data {
 	padding-left: 135px;
-	color: #cdcac1;
+	color: #c6d4df;
 }
 
 #receipt_area p, #ackgift_area p {
@@ -2157,6 +2166,7 @@ body.checkout .block .block_header {
 
 body.checkout .block .block_content {
 	padding: 12px;
+	border: none;
 }
 
 @media screen and (max-width: 910px)

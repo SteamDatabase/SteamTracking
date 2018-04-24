@@ -590,14 +590,14 @@ function IgnoreButton( button, appid )
 }
 
 // unlike wishlists, the "divToHide" is only hidden on success
-function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, language, received_compensation, divBtn, onSuccessFunc, divToShowError, navref )
+function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, language, received_compensation, divBtn, onSuccessFunc, divToShowError, navref, bDisableComments )
 {
 	$JFromIDOrElement(divBtn).hide();
 	var url = 'https://store.steampowered.com/friends/recommendgame';
 	if ( navref )
 		MakeNavCookie( navref, url );
 	
-	$J.post( url, {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, received_compensation: received_compensation, sessionid: g_sessionID} )
+	$J.post( url, {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, received_compensation: received_compensation, disable_comments: bDisableComments, sessionid: g_sessionID} )
 		.done( function( data ) {
 			if ( data && data.success )
 			{

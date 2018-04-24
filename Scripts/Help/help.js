@@ -1589,7 +1589,7 @@ HelpWizard = {
 				})
 				.done( function( data )
 				{
-					window.location = 'http://store.steampowered.com/account/forms/6050w/';
+					window.location = 'https://store.steampowered.com/account/forms/6050w/';
 				})
 				.fail( function( xhr )
 				{
@@ -2999,7 +2999,7 @@ function PopupCVV2Explanation()
 			type = 'amex';
 		}
 
-				window.open( 'http://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
+				window.open( 'https://store.steampowered.com/checkout/cvv2explain/?webbasedpurchasing=1&type='+type, '_blank', "height=225,width=225,toolbar=no,menubar=no,resiable=no,scrollbars=no,status=no,titlebar=no" );
 	}
 	catch( e )
 	{

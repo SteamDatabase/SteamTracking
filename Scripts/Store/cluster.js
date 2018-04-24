@@ -468,6 +468,7 @@ Cluster.BuildClusterCapsule = function( unAppID, unPackageID, strStatus, strFeat
 					'tooltipParent': $CapCtn,
 					'offsetY': 0,
 					'useClickEvent': true,
+					'useMouseEnterEvent': false
 				} );
 
 				$elWhyButton.trigger ( 'click' );

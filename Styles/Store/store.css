@@ -140,6 +140,7 @@ body.v6 #footer {
     }
     body.v6 #footer .rule{
         height: 8px;
+		border-top: 1px solid #29363d;
     }
     body.v6 #footer .valve_links {
         margin-top: 8px;
@@ -172,6 +173,10 @@ body.v6.blue #footer {
 
 body.v6 #footer_spacer {
 	height: 290px;
+}
+
+html.force_desktop body.v6 #footer_spacer {
+	height: 345px;
 }
 
 
@@ -3875,6 +3880,25 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 .curator_ignored_all_recommended a:hover {
 	color: #fff;
 	text-decoration: underline;
+}
+
+.content_consumer_rights_notice
+{
+	margin-bottom: 25px;
+}
+
+.content_consumer_rights_notice a {
+	display: block;
+	padding: 25px;
+	font-size: 14pt;
+	font-family: 'Times New Roman';
+	color: #000000;
+	background-color: rgb( 154, 175, 200 );
+}
+
+.content_consumer_rights_notice a:hover {
+	color: #67c1f5;
+	background-color: rgb( 104, 125, 150 );
 }
 
 
