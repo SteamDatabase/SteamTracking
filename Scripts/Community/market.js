@@ -436,7 +436,7 @@ CreateBuyOrderDialog = {
 
 		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] >= price )
 		{
-			window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=' + window.location;
+			window.location = 'https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&returnurl=' + window.location;
 		}
 		else
 		{
@@ -449,7 +449,7 @@ CreateBuyOrderDialog = {
 			}
 			else
 			{
-				window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=' + (price - g_rgWalletInfo['wallet_balance']) + '&returnurl=' + window.location;
+				window.location = 'https://store.steampowered.com/steamaccount/addfunds?marketlisting=1&minneeded=' + (price - g_rgWalletInfo['wallet_balance']) + '&returnurl=' + window.location;
 			}
 		}
 	},
@@ -547,11 +547,11 @@ function Market_ShowBuyOrderPopup( unAppId, sMarketHashName, strMarketItemName )
 	{
 		ShowConfirmDialog(
 				'Cannot place order',
-				'You cannot buy items in the Community Market until you <a href="http://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
+				'You cannot buy items in the Community Market until you <a href="https://store.steampowered.com/steamaccount/addfunds" target="_top">add funds to your Steam Wallet</a> or make a purchase in the Steam store and provide your billing address.',
 				'Add wallet funds',
 				'Cancel'
 		).done( function() {
-			location.href = 'http://store.steampowered.com/steamaccount/addfunds';
+			location.href = 'https://store.steampowered.com/steamaccount/addfunds';
 		} );
 	}
 	else
@@ -776,7 +776,7 @@ BuyItemDialog = {
 	OnAddFunds: function( event ) {
 		event.stop();
 
-		window.location = 'http://store.steampowered.com/steamaccount/addfunds?marketlisting=' + this.m_ulListingId + '&returnurl=' + this.m_sAddFundsReturnURL;
+		window.location = 'https://store.steampowered.com/steamaccount/addfunds?marketlisting=' + this.m_ulListingId + '&returnurl=' + this.m_sAddFundsReturnURL;
 	},
 
 	OnAccept: function( event ) {

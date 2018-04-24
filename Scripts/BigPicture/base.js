@@ -937,7 +937,7 @@ function ToPanel( value )
 // opens content frame to store
 function ShowStoreAppPage( nAppID, strName )
 {
-	var strURL = 'http://store.steampowered.com/app/' + nAppID;
+	var strURL = 'https://store.steampowered.com/app/' + nAppID;
 	$.DispatchEvent( 'OpenRemoteContent', strURL, strName, 2  );
 }
 

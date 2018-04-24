@@ -184,25 +184,23 @@
 
 a.trigger, a.activetrigger {
 	background: url(https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrowDn9x5.gif) no-repeat scroll right center;
-	border-right: 7px solid #000; /* HAAAAAX! */
+	border-right: 7px solid #8f98a0; /* HAAAAAX! */
 	display:block;
 
-	color: #B0AEAC;
+	color: #333;
 	height: 22px;
 	padding-left:8px;
 	padding-right: 20px;
 	overflow: hidden;
 
 
-	background-color: #000;
+	background-color: #8f98a0;
 	border-radius: 3px;
-	color: #e1e1e1;
-	margin: 3px 0;
+	margin: 3px 8px 3px 0px;
 }
 
 .dropcontainer ul {
-	background-color: #000;
-	border-radius: 3px;
+background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);	border-radius: 3px;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
 	list-style-type:none;
@@ -235,13 +233,13 @@ a.trigger, a.activetrigger {
 	padding-right:2px;
 	display:block;
 	text-decoration:none;
-	color:#e1e1e1;
+	color:#333;
 	line-height: 22px;
 	height: 22px;
 }
 .dropcontainer a.highlighted_selection {
 	background:#3196FF;
-	color: #FFFFFF;
+	color: #333;
 	text-decoration: none;
 }
 .dropcontainer{

@@ -1777,6 +1777,10 @@ a.ugc.app_has_adult_content.dynamiclink_box::after
 	text-align: left;
 }
 
+.Tooltip_mark {
+	font-size: 11px;
+}
+
 /* early access tag on reviews*/
 .early_access_review
 {

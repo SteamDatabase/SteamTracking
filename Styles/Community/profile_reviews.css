@@ -21,22 +21,33 @@
 }
 
 .review_box {
+	position: relative;
 	border-top: 1px solid #425a76;
-	background: -moz-linear-gradient(top,  rgba(0,0,0,.4) 0%, rgba(60,61,62,.4) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,.4)), color-stop(100%,rgba(60,61,62,.4)));
-	background: -webkit-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: -o-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: -ms-linear-gradient(top,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	background: linear-gradient(to bottom,  rgba(0,0,0,.4) 0%,rgba(60,61,62,.4) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#3b3c3d',GradientType=0 );
+background: -webkit-linear-gradient( 60deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 60deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););
 	margin-bottom: 26px;
+}
+
+.review_box_bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background-repeat:no-repeat;
+	background-size: cover;
+	-webkit-mask-image: radial-gradient( ellipse farthest-corner at 80px 80px, rgba( 0,0,0, 1 ) 0%, rgba( 0,0,0, 0.6 ) 20%, rgba( 0,0,0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
+	mix-blend-mode: screen;
+	filter: blur(40px) saturate(2);
+	opacity: 0.7;
 }
 
 .review_box .header {
 	padding: 8px 9px;
 	font-size: 12px;
-	color: #898a8c;
-	border-bottom: 1px solid #2e3a4a;
+	color: #8f98a0;
+	border-bottom: 1px solid rgba(226, 230, 234, 0.1);
+	background: rgba(0, 0, 0, 0.1);
 }
 
 .review_box .leftcol {
@@ -88,7 +99,7 @@
 		font-weight: normal; /* normal */
 
 			font-size: 13px;
-	color: #cdcac1;
+	color: #c6d4df;
 	overflow-wrap: break-word;
 
 	clear: left;	/* in responsive mode, will drop below the game logo */
@@ -97,7 +108,7 @@
 .review_box .posted {
 	font-size: 10px;
 	font-style: italic;
-	color: #626366;
+	color: #8f98a0;
 	margin: 19px 8px 8px 8px;
 }
 
@@ -109,13 +120,19 @@
 .review_box .control_block {
 	padding: 8px;
 	line-height: 22px;
+	font-size: 12px;
+	color: #8f98a0;
 }
 
 .review_box .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
-	color: #898a8c;
+	color: #8f98a0;
 	font-size: 12px;
+}
+
+.review_box .early_access_review {
+	margin-left: 8px;
 }
 
 
@@ -139,10 +156,8 @@
 #rightContents .box {
 	background: #1b1b1b;
 	background: rgba(27,27,27,.36);
-	border-radius: 3px;
 	padding: 10px 10px 10px 11px;
-	margin: 0 0 10px 0;
-	border: 1px solid #000;
+	margin: 29px 0 10px 0;
 }
 
 .giantNumber {

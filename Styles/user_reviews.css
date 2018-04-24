@@ -140,10 +140,27 @@ select {
 
 		}
 
+#ReviewEdit {
+	margin-right: 6px;
+}
+
 .review_edit_text_area
 {
-	width: 100%;
+	width: calc(100% - 20px);
 	height: 200px;
+
+	border: 1px solid #233c51;
+	border-radius: 3px;
+	max-width: 800px;
+	background-color: #222b35;
+	color: #d6d7d8;
+	padding: 10px 11px;
+	font-size: 13px;
+
+	font-weight: normal;
+	-webkit-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+	-moz-box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
+	box-shadow: inset 0px 0px 7px rgba( 0, 0, 0, 0.5 );
 }
 
 .review_edit_received_compensation {
@@ -270,7 +287,6 @@ select {
 	border: 1px solid #a55b13;
 	font-size: 13px;
 	margin-top: 25px;
-	margin-bottom: -30px;
 }
 
 .dev_edit_response {
@@ -374,9 +390,19 @@ select {
 	padding-left: 8px;
 }
 
+
 .responsive_review_gameoptions .general_btn {
 	padding: 0;
 	line-height: 27px;
 	margin: 0;
 	border-radius: none;
+}
+
+#UpdateCommentStatus {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+.setting_ctn {
+	padding-left: 8px;
 }

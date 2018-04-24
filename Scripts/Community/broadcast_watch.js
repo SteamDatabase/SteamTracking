@@ -475,7 +475,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	if ( data.appid == 0 )
 		strBroadcastURL = 'https://steamcommunity.com?subsection=broadcasts';
 
-	var strStoreURL = 'http://store.steampowered.com/app/' + data.appid;
+	var strStoreURL = 'https://store.steampowered.com/app/' + data.appid;
 	var target = "_blank";
 	if ( this.m_eClientType == CBroadcastWatch.k_InClient )
 	{

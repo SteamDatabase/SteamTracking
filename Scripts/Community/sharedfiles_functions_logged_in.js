@@ -71,7 +71,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'Your account has an active Game or VAC Banned and you\'re unable to perform this action as a result.' );
 			return false;
 		case 24:
-			ShowAlertDialog( 'Error', 'You must <a href="http://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );
+			ShowAlertDialog( 'Error', 'You must <a href="https://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );
 			return false;
 		case 20:
 			ShowAlertDialog( 'Error', 'Voting on this item has ended. ' );

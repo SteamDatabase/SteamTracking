@@ -145,6 +145,11 @@ function UserReview_Update_Language( recommendationID, language, baseURL, callba
 	UserReview_Update( recommendationID, { 'language' : language }, baseURL, callback );
 }
 
+function UserReview_Update_CommentStatus( recommendationID, bCommentsDisabled, baseURL, callback )
+{
+	UserReview_Update( recommendationID, { 'comments_disabled' : bCommentsDisabled }, baseURL, callback );
+}
+
 function UserReview_Moderate( recommendationID, params, baseURL, callback )
 {
 	params['sessionid'] = g_sessionID;

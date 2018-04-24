@@ -2959,11 +2959,11 @@ function LoadAchievementCounts( appid )
 				var text = '';
 				if ( unlocalized[ 'names' ] )
 				{
-					text += unlocalized[ 'names' ].toString() + " names are completely unlocalized. ";
+					text += "%1$s names are completely unlocalized.".replace(/%1\$s/, unlocalized[ 'names' ].toString() );
 				}
 				if ( unlocalized[ 'descs' ] )
 				{
-					text += unlocalized[ 'descs' ].toString() + " descriptions are completely unlocalized. ";
+					text += "%1$s descriptions are completely unlocalized.".replace(/%1\$s/, unlocalized[ 'descs' ].toString() );
 				}
 				elt.innerHTML = text;
 				elt.style.display = '';
@@ -2992,11 +2992,11 @@ function LoadAchievementCounts( appid )
 
 					if ( cNames < cAchievements )
 					{
-						text = "Missing " + ( cAchievements - cNames ) + " names in " + langName + ". ";
+						text = "Missing %1$s names in %2$s.".replace(/%1\$s/, ( cAchievements - cNames ) ).replace(/%2\$s/, langName ) + " ";
 					}
 					if ( cDescs < cAchievements )
 					{
-						text = text + "Missing " + ( cAchievements - cDescs ) + " descriptions in " + langName + ". ";
+						text = text + "Missing %1$s descriptions in %2$s.".replace(/%1\$s/, ( cAchievements - cDescs ) ).replace(/%2\$s/, langName )  + " ";
 					}
 
 					if ( text != '' )
@@ -3008,7 +3008,7 @@ function LoadAchievementCounts( appid )
 					else if ( lang != 'token' )
 					{
 						elt.style.display = '';
-						elt.innerHTML = g_rgLanguages[ lang ] + " is fully localized.";
+						elt.innerHTML = "%1$s is fully localized.".replace(/%1\$s/, g_rgLanguages[ lang ]);
 						elt.className = "outputSuccess";
 					}
 				}

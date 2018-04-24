@@ -85,12 +85,12 @@ function OpenFriendChat( steamid, accountid )
 {
 	if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
-		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
-			if ( !bSuccess )
+		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
+			if ( !result.success )
 			{
-				PromptContinueToWebChat( function() {
+				PromptContinueToWebChat( result, function() {
 					OpenFriendChatInWebChat( steamid, accountid );
-				} );
+				}, 'steam://friends/message/' + steamid );
 			}
 		});
 	}
@@ -109,12 +109,12 @@ function OpenGroupChat( steamid )
 {
 	if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
-		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( bSuccess ) {
-			if ( !bSuccess )
+		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
+			if ( !result.success )
 			{
-				PromptContinueToWebChat( function() {
+				PromptContinueToWebChat( result, function() {
 					LaunchWebChat( null, {command: 'ShowFriendChatDialog', steamid: steamid} );
-				} );
+				}, 'steam://friends/joinchat/' + steamid );
 			}
 		});
 	}
@@ -124,7 +124,7 @@ function OpenGroupChat( steamid )
 	}
 }
 
-function PromptContinueToWebChat( fnLaunchWebchat )
+function PromptContinueToWebChat( result, fnLaunchWebchat, steamURL )
 {
 	ShowConfirmDialog( 'Got Steam?', 'We couldn\'t find Steam running on your machine.  Would you like to launch web chat?',
 		'Use web chat' , null, 'Get Steam' ).done( function( choice ) {

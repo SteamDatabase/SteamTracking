@@ -33,7 +33,7 @@ function AddActionButton( item, action, container )
 		// Check if the link points to the store.  Since these links come from the
 		// backend they aren't universe aware if you're running against a dev
 		// instance, hence the array of links to check.
-		var rgStoreLinks = [ 'http://store.steampowered.com/', 'http://store.steampowered.com' ];
+		var rgStoreLinks = [ 'https://store.steampowered.com/', 'http://store.steampowered.com' ];
 		var strStoreLinkRemnant = '';
 		for ( i in rgStoreLinks )
 		{
