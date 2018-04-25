@@ -406,3 +406,10 @@ select {
 .setting_ctn {
 	padding-left: 8px;
 }
+
+.review_comments_disabled {
+	background: rgba(0, 0, 0, 0.4);
+	padding: 16px;
+	margin-top: 40px;
+	color: #61686d;
+}
