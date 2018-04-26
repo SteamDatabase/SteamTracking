@@ -109993,6 +109993,24 @@
 				"basename"	"models/workshop/player/items/all_class/hlpugs_contributor/hlpugs_contributor_%s.mdl"
 			}
 		}
+		"9941"
+		{
+			"name"	"The Heartfelt Hero"
+			"prefab"			"tournament_medal"
+			"item_type_name"	"#TF_Wearable_CommunityMedal"
+			"item_name"	"#TF_Medal_HugsTF_2018"
+			"item_description"	"#TF_Medal_HugsTF_2018_Desc"
+			"image_inventory"		"backpack/workshop/player/items/all_class/hugs_tf_medal_2018/hugs_tf_medal_2018"
+			"propername"	"1"
+			"capabilities"
+			{	
+				"paintable"		"1"
+			}
+			"model_player_per_class"
+			{
+				"basename"	"models/workshop/player/items/all_class/hugs_tf_medal_2018/hugs_tf_medal_2018_%s.mdl"
+			}
+		}
 
 
 
