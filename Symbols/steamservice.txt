@@ -692,6 +692,7 @@
  T CClientModuleManagerBase::UnloadModuleInternal(DynamicModule_s*)
  T CClientModuleManagerBase::~CClientModuleManagerBase()
  T CClientSecureDesktop::BStartStreaming(char const*)
+ T CClientSecureDesktop::CClientSecureDesktop()
  T CClientSecureDesktop::SendSAS()
  T CClientSecureDesktop::StopStreaming()
  T CClientSecureDesktop::~CClientSecureDesktop()
