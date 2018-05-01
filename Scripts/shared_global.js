@@ -4068,6 +4068,7 @@ function LoginUsingSteamClient( baseURL )
  * @param strBaseURL Base URL to attach nav params
  * @param strInstanceId Unique flag to look for when scanning for state change events. also determines our data selector
  * 						Only needed if you're using more than one CAjaxSubPageController on the same page.
+ * @param strDefaultLocation Used when no navid is provided
  * @constructor
  */
 var CAjaxSubPageController = function( elTarget, strBaseURL, strInstanceId, strDefaultLocation )
@@ -4107,7 +4108,7 @@ CAjaxSubPageController.prototype.InstrumentLinks = function( elTarget )
 		rgLinks[i].addEventListener('click', this.Navigate.bind(this, rgLinks[i].dataset[ this.strStateID ], rgLinks[i].dataset[ 'title' ] ) );
 		rgLinks[i].href = this.strBaseURL + rgLinks[i].dataset[ this.strStateID ];
 	}
-}
+};
 
 /**
  * Adds 'active' class to link that was clicked or is currently active.
@@ -4124,7 +4125,7 @@ CAjaxSubPageController.prototype.PaintLinks = function( strLocation )
 		else
 			rgLinks[i].classList.remove('active');
 	}
-}
+};
 
 /**
  * Call to navigate the sub-frame.

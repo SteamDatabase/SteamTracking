@@ -334,7 +334,7 @@ webpackJsonp(
           })
         );
       }
-      function m() {
+      function u() {
         return O.createElement(
           "svg",
           {
@@ -363,7 +363,7 @@ webpackJsonp(
           )
         );
       }
-      function u() {
+      function m() {
         return O.createElement(
           "svg",
           {
@@ -821,7 +821,7 @@ webpackJsonp(
           })
         );
       }
-      function S() {
+      function w() {
         return O.createElement(
           "svg",
           {
@@ -869,7 +869,7 @@ webpackJsonp(
           )
         );
       }
-      function w() {
+      function E() {
         return O.createElement(
           "svg",
           {
@@ -893,7 +893,7 @@ webpackJsonp(
           })
         );
       }
-      function E() {
+      function S() {
         return O.createElement(
           "svg",
           {
@@ -1132,7 +1132,7 @@ webpackJsonp(
           )
         );
       }
-      function I() {
+      function k() {
         return O.createElement(
           "svg",
           {
@@ -1205,32 +1205,78 @@ webpackJsonp(
           )
         );
       }
-      (t.s = i),
+      function I() {
+        return O.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_DialogCheck",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          O.createElement(
+            "defs",
+            null,
+            O.createElement(
+              "linearGradient",
+              { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
+              O.createElement("stop", {
+                id: "stop0",
+                offset: "0%",
+                "stop-color": "#00ccff"
+              }),
+              O.createElement("stop", {
+                id: "stop1",
+                offset: "100%",
+                "stop-color": "#2d73ff"
+              })
+            )
+          ),
+          O.createElement("path", {
+            fill: "none",
+            stroke: "url(#linear)",
+            strokeWidth: "24",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            d: "M206.5,45.25L95,210.75l-45.5-63",
+            strokeDasharray: "365.19 365.19",
+            strokeDashoffset: "0.00"
+          })
+        );
+      }
+      (t.t = i),
         (t.b = r),
         (t.c = o),
-        (t.e = s),
-        (t.j = a),
-        (t.k = c),
-        (t.f = l),
-        (t.u = m),
-        (t.r = u),
-        (t.q = p),
-        (t.y = h),
-        (t.z = d),
-        (t.w = v),
-        (t.v = f),
-        (t.h = y),
-        (t.g = _),
-        (t.p = g),
+        (t.f = s),
+        (t.k = a),
+        (t.l = c),
+        (t.g = l),
+        (t.v = u),
+        (t.s = m),
+        (t.r = p),
+        (t.z = h),
+        (t.A = d),
+        (t.x = v),
+        (t.w = f),
+        (t.i = y),
+        (t.h = _),
+        (t.q = g),
         (t.a = b),
-        (t.i = S),
-        (t.n = w),
-        (t.x = E),
-        (t.l = P),
+        (t.j = w),
+        (t.o = E),
+        (t.y = S),
+        (t.m = P),
         (t.d = x),
-        (t.o = C),
-        (t.t = M),
-        (t.m = I);
+        (t.p = C),
+        (t.u = M),
+        (t.n = k),
+        (t.e = I);
       var O = n("Jmof");
       n.n(O);
     },
@@ -1308,7 +1354,27 @@ webpackJsonp(
         var t = void 0;
         return e && (t = e.ownerDocument.defaultView), t;
       }
-      (t.a = i), (t.b = r), (t.f = o), (t.d = s), (t.c = a), (t.e = c);
+      function l(e) {
+        var t = document.createElement("textarea");
+        (t.textContent = e),
+          (t.style.position = "fixed"),
+          document.body.appendChild(t),
+          t.select();
+        try {
+          document.execCommand("copy");
+        } catch (e) {
+          console.warn("Copy to clipboard failed.", e);
+        } finally {
+          document.body.removeChild(t);
+        }
+      }
+      (t.a = i),
+        (t.b = r),
+        (t.g = o),
+        (t.e = s),
+        (t.c = a),
+        (t.f = c),
+        (t.d = l);
     },
     HxNj: function(e, t, n) {
       "use strict";
@@ -1346,7 +1412,7 @@ webpackJsonp(
         var t;
         return (
           (t = e.strReadOnlySetting
-            ? f.createElement(u, { strLabel: e.strReadOnlySetting })
+            ? f.createElement(m, { strLabel: e.strReadOnlySetting })
             : f.createElement(B, {
                 PrivacyStore: e.PrivacyStore,
                 PrivacyKey: e.PrivacyKey,
@@ -1374,7 +1440,7 @@ webpackJsonp(
           e.children
         );
       }
-      function m(e) {
+      function u(e) {
         switch (e.eSaveState) {
           case 1:
             return f.createElement(
@@ -1399,7 +1465,7 @@ webpackJsonp(
             return null;
         }
       }
-      function u(e) {
+      function m(e) {
         return f.createElement(
           "div",
           { className: "ProfilePrivacyDropDown readonly" },
@@ -1445,10 +1511,10 @@ webpackJsonp(
         _ = n("m5yx"),
         g = n("sVhq"),
         b = n("4Dav"),
-        S = (n("kllU"), n("TToO")),
-        w = n("y986"),
-        E = n("mtWM"),
-        P = n.n(E),
+        w = (n("kllU"), n("TToO")),
+        E = n("y986"),
+        S = n("mtWM"),
+        P = n.n(S),
         x = { ProfileURL: "" },
         C = (function() {
           function e(e, t) {
@@ -1550,7 +1616,7 @@ webpackJsonp(
                       i &&
                         i.PrivacySettings &&
                         i.eCommentPermission &&
-                        Object(w.runInAction)(function() {
+                        Object(E.runInAction)(function() {
                           (e.m_PrivacySettings = i.PrivacySettings),
                             (e.m_eCommentPermission = i.eCommentPermission);
                         }),
@@ -1568,23 +1634,23 @@ webpackJsonp(
                   })
               );
             }),
-            S.b([w.observable], e.prototype, "m_PrivacySettings", void 0),
-            S.b([w.observable], e.prototype, "m_eCommentPermission", void 0),
-            S.b([w.observable], e.prototype, "m_eSaveStateByKey", void 0),
-            S.b([w.observable], e.prototype, "m_eCommentSaveState", void 0),
+            w.b([E.observable], e.prototype, "m_PrivacySettings", void 0),
+            w.b([E.observable], e.prototype, "m_eCommentPermission", void 0),
+            w.b([E.observable], e.prototype, "m_eSaveStateByKey", void 0),
+            w.b([E.observable], e.prototype, "m_eCommentSaveState", void 0),
             e
           );
         })(),
         M = n("KLxG"),
-        I = n("JyW5"),
-        O = n("aMRU"),
-        k = n("Mn8c"),
+        k = n("JyW5"),
+        I = n("aMRU"),
+        O = n("Mn8c"),
         L = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.PrivacyStore;
               return f.createElement(
@@ -1632,7 +1698,7 @@ webpackJsonp(
                     Object(g.b)("#ProfilePrivacy_GameLibrary_Desc"),
                     1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                       f.createElement(
-                        N,
+                        D,
                         {
                           PrivacyStore: e,
                           PrivacyKey: "PrivacyPlaytime",
@@ -1665,7 +1731,7 @@ webpackJsonp(
                     ),
                     1 != e.GetPrivacySetting("PrivacyInventory") &&
                       f.createElement(
-                        N,
+                        D,
                         {
                           PrivacyStore: e,
                           PrivacyKey: "PrivacyInventoryGifts",
@@ -1680,7 +1746,7 @@ webpackJsonp(
                     null,
                     Object(g.b)("#ProfilePrivacy_Comments"),
                     ":",
-                    f.createElement(D, { PrivacyStore: e })
+                    f.createElement(N, { PrivacyStore: e })
                   ),
                   f.createElement("div", { className: "ProfilePrivacyHR" }),
                   f.createElement(
@@ -1707,7 +1773,7 @@ webpackJsonp(
                 )
               );
             }),
-            (t = S.b([k.observer], t))
+            (t = w.b([O.observer], t))
           );
         })(f.Component),
         B = (function(e) {
@@ -1715,13 +1781,13 @@ webpackJsonp(
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.OnClick = function(e) {
               var t = this.props.PrivacyStore.GetPrivacySetting(
                 this.props.PrivacyKey
               );
-              Object(I.a)(
-                f.createElement(T, {
+              Object(k.a)(
+                f.createElement(R, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPrivacy: t,
                   eMinPrivacy: this.GetMinPrivacy()
@@ -1764,24 +1830,24 @@ webpackJsonp(
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
-                f.createElement(m, {
+                f.createElement(u, {
                   eSaveState: this.props.PrivacyStore.GetSaveState(
                     this.props.PrivacyKey
                   )
                 })
               );
             }),
-            S.b([M.a], t.prototype, "OnClick", null),
-            S.b([M.a], t.prototype, "OnSettingChanged", null),
-            (t = S.b([k.observer], t))
+            w.b([M.a], t.prototype, "OnClick", null),
+            w.b([M.a], t.prototype, "OnSettingChanged", null),
+            (t = w.b([O.observer], t))
           );
         })(f.Component),
-        N = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.OnCheckboxChecked = function(e) {
               var t = e.currentTarget.checked ? 1 : 3;
               this.props.PrivacyStore.ChangePrivacySetting(
@@ -1815,21 +1881,21 @@ webpackJsonp(
                 )
               );
             }),
-            S.b([M.a], t.prototype, "OnCheckboxChecked", null),
-            (t = S.b([k.observer], t))
+            w.b([M.a], t.prototype, "OnCheckboxChecked", null),
+            (t = w.b([O.observer], t))
           );
         })(B),
-        D = (function(e) {
+        N = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { eSaveState: 0 }), n;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.OnClick = function(e) {
               var t = this.props.PrivacyStore.CommentPermission;
-              Object(I.a)(
-                f.createElement(H, {
+              Object(k.a)(
+                f.createElement(T, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPermission: t,
                   eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
@@ -1864,31 +1930,31 @@ webpackJsonp(
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
-                f.createElement(m, {
+                f.createElement(u, {
                   eSaveState: this.props.PrivacyStore.GetCommentSaveState()
                 })
               );
             }),
-            S.b([M.a], t.prototype, "OnClick", null),
-            S.b([M.a], t.prototype, "OnSettingChanged", null),
-            (t = S.b([k.observer], t))
+            w.b([M.a], t.prototype, "OnClick", null),
+            w.b([M.a], t.prototype, "OnSettingChanged", null),
+            (t = w.b([O.observer], t))
           );
         })(f.Component),
-        T = (function(e) {
+        R = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.render = function() {
               var e = this,
                 t = this.props.eMinPrivacy;
               return f.createElement(
-                O.c,
+                I.c,
                 null,
                 (!t || t >= 3) &&
                   f.createElement(
-                    O.d,
+                    I.d,
                     {
                       onSelected: function() {
                         return e.props.OnChange(3);
@@ -1898,7 +1964,7 @@ webpackJsonp(
                   ),
                 (!t || t >= 2) &&
                   f.createElement(
-                    O.d,
+                    I.d,
                     {
                       onSelected: function() {
                         return e.props.OnChange(2);
@@ -1907,7 +1973,7 @@ webpackJsonp(
                     Object(g.b)("#Privacy_FriendsOnly")
                   ),
                 f.createElement(
-                  O.d,
+                  I.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(1);
@@ -1920,21 +1986,21 @@ webpackJsonp(
             t
           );
         })(f.Component),
-        H = (function(e) {
+        T = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            S.c(t, e),
+            w.c(t, e),
             (t.prototype.render = function() {
               var e = this,
                 t = this.props.eMinPrivacy;
               return f.createElement(
-                O.c,
+                I.c,
                 null,
                 (!t || t >= 3) &&
                   f.createElement(
-                    O.d,
+                    I.d,
                     {
                       onSelected: function() {
                         return e.props.OnChange(1);
@@ -1947,7 +2013,7 @@ webpackJsonp(
                   ),
                 (!t || t >= 2) &&
                   f.createElement(
-                    O.d,
+                    I.d,
                     {
                       onSelected: function() {
                         return e.props.OnChange(0);
@@ -1959,7 +2025,7 @@ webpackJsonp(
                     Object(g.b)("#Privacy_FriendsOnly")
                   ),
                 f.createElement(
-                  O.d,
+                  I.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(2);
@@ -2001,7 +2067,7 @@ webpackJsonp(
         return a.Show(), a;
       }
       n.d(t, "b", function() {
-        return m;
+        return u;
       }),
         (t.a = i);
       var r = n("TToO"),
@@ -2010,7 +2076,7 @@ webpackJsonp(
         a = n("aMRU"),
         c = n("Y6cV"),
         l = n("y986"),
-        m = (function() {
+        u = (function() {
           function e() {}
           return (
             (e.GetBrowserInfoForPopup = function(e) {
@@ -2022,7 +2088,7 @@ webpackJsonp(
             e
           );
         })(),
-        u = (function(e) {
+        m = (function(e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
@@ -2041,7 +2107,7 @@ webpackJsonp(
                 ? (this.m_popupContextMenu = new a.a(
                     e,
                     t,
-                    m.GetBrowserInfoForPopup(this.m_ownerWindow)
+                    u.GetBrowserInfoForPopup(this.m_ownerWindow)
                   ))
                 : ((this.m_embeddedElementInstance = Object(c.b)(
                     this.m_ownerWindow.document
@@ -2059,6 +2125,11 @@ webpackJsonp(
             }),
             (t.prototype.Hide = function() {
               this.InternalHide();
+            }),
+            (t.prototype.HideIfNotInFocus = function() {
+              this.BHasFocus() ||
+                this.BIsFocusInChildHierarchy() ||
+                this.Hide();
             }),
             (t.prototype.InternalHide = function() {
               this.m_bVisible &&
@@ -2085,21 +2156,23 @@ webpackJsonp(
             }),
             (t.prototype.ShowSubMenu = function(e, t) {
               return this.m_elSubmenuItem == e
-                ? null
+                ? (this.m_submenu.TakeFocus(), null)
                 : (this.HideSubMenu(),
                   (this.m_elSubmenuItem = e),
-                  (this.m_submenu = new h(this, t, e)),
+                  (this.m_submenu = new h(this, t(), e)),
                   this.m_submenu.Show(),
                   this.m_submenu);
             }),
             (t.prototype.HideSubMenu = function() {
               this.m_submenu &&
-                (this.BIsFocusInChildHierarchy() &&
-                  this.m_fnTakeFocus &&
-                  this.m_fnTakeFocus(),
+                (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
                 (this.m_elSubmenuItem = null),
                 this.m_submenu.InternalHide(),
                 (this.m_submenu = null));
+            }),
+            (t.prototype.TakeFocus = function() {
+              this.m_popupContextMenu && this.m_popupContextMenu.Focus(),
+                this.m_fnTakeFocus && this.m_fnTakeFocus();
             }),
             (t.prototype.BInternalElementInParentHierarchy = function(e) {
               return (
@@ -2146,7 +2219,7 @@ webpackJsonp(
             r.b([l.observable], t.prototype, "m_bVisible", void 0),
             t
           );
-        })(m),
+        })(u),
         p = (function(e) {
           function t(n, i, r, o, s) {
             var a = e.call(this, i.ownerDocument.defaultView) || this;
@@ -2188,7 +2261,7 @@ webpackJsonp(
             )),
             t
           );
-        })(u),
+        })(m),
         h = (function(e) {
           function t(t, n, i) {
             var r = e.call(this, i.ownerDocument.defaultView) || this;
@@ -2213,11 +2286,16 @@ webpackJsonp(
           return (
             r.c(t, e),
             (t.prototype.Hide = function() {
-              this.m_parentInstance.Hide();
+              var e = this;
+              this.m_popupContextMenu
+                ? window.setTimeout(function() {
+                    e.m_parentInstance.HideIfNotInFocus();
+                  }, 10)
+                : this.m_parentInstance.Hide();
             }),
             t
           );
-        })(u);
+        })(m);
     },
     KLxG: function(e, t, n) {
       "use strict";
@@ -2462,8 +2540,8 @@ and limitations under the License.
         a = n("Mn8c"),
         c = n("Jmof"),
         l = (n.n(c), n("wLXD")),
-        m = (n.n(l), n("z9An")),
-        u = n("EqgU"),
+        u = (n.n(l), n("z9An")),
+        m = n("EqgU"),
         p = n("KLxG"),
         h = n("5Pz3"),
         d = (function(e) {
@@ -2575,12 +2653,15 @@ and limitations under the License.
           }
           return (
             s.c(t, e),
+            (t.prototype.RenderSubMenu = function() {
+              return c.createElement(d, null, this.props.children);
+            }),
             (t.prototype.OnMouseEnter = function(e) {
               var t = this;
               if (this.context.contextMenuInstance) {
                 var n = this.context.contextMenuInstance.ShowSubMenu(
                   e.currentTarget,
-                  c.createElement(d, null, this.props.children)
+                  this.RenderSubMenu
                 );
                 n &&
                   (this.setState({ bActive: !0 }),
@@ -2588,6 +2669,9 @@ and limitations under the License.
                     t.setState({ bActive: !1 });
                   }));
               }
+            }),
+            (t.prototype.OnClick = function(e) {
+              this.OnMouseEnter(e), this.props.onClick && this.props.onClick(e);
             }),
             (t.prototype.render = function() {
               var e = this.props,
@@ -2599,6 +2683,7 @@ and limitations under the License.
                 c.createElement(
                   v,
                   s.a({}, i, {
+                    onClick: this.OnClick,
                     className: n,
                     onMouseEnter: this.OnMouseEnter,
                     onSelected: null,
@@ -2606,7 +2691,7 @@ and limitations under the License.
                   }),
                   t,
                   " ",
-                  c.createElement(h.e, null)
+                  c.createElement(h.f, null)
                 )
               );
             }),
@@ -2615,7 +2700,9 @@ and limitations under the License.
                 return null;
               }
             }),
+            s.b([p.a], t.prototype, "RenderSubMenu", null),
             s.b([p.a], t.prototype, "OnMouseEnter", null),
+            s.b([p.a], t.prototype, "OnClick", null),
             t
           );
         })(c.PureComponent),
@@ -2650,7 +2737,7 @@ and limitations under the License.
                   }));
             }),
             (t.prototype.OnBlur = function(e) {
-              (e.relatedTarget && u.b(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && m.b(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -2681,7 +2768,7 @@ and limitations under the License.
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !u.b(
+                  !m.b(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -2712,50 +2799,54 @@ and limitations under the License.
                   },
                   c = this.props.clientX,
                   l = this.props.clientY,
-                  m = n.innerWidth,
+                  u = n.innerWidth,
                   p = n.innerHeight;
-                o &&
-                  ((c += n.screenLeft),
-                  (l += n.screenTop),
-                  (i = u.c(n, i)),
-                  (m = n.screen.availWidth),
-                  (p = n.screen.availHeight)),
-                  (s.bOverlapHorizontal || s.bOverlapVertical) &&
-                    (c = l = void 0);
-                var h = c || i.left,
-                  d = c || i.right,
-                  v = r.width;
-                s.bMatchWidth && ((v = d - h), (a.menuWidth = v));
-                var f = (s.bOverlapHorizontal ? d : h) - v,
-                  y = f > 0,
-                  _ = m - (s.bOverlapHorizontal ? h : d) - v,
-                  g = _ > 0,
-                  b = (s.bPreferPopLeft || !g) && y;
-                y ||
-                  g ||
-                  ((b = y > g),
+                if (o) {
+                  (c += n.screenLeft), (l += n.screenTop), (i = m.c(n, i));
+                  var h = n.screen,
+                    d = 0,
+                    v = 0;
+                  h.availLeft && (d = h.availLeft),
+                    h.availTop && (v = h.availTop),
+                    (u = d + h.availWidth),
+                    (p = v + h.availHeight);
+                }
+                (s.bOverlapHorizontal || s.bOverlapVertical) &&
+                  (c = l = void 0);
+                var f = c || i.left,
+                  y = c || i.right,
+                  _ = r.width;
+                s.bMatchWidth && ((_ = y - f), (a.menuWidth = _));
+                var g = (s.bOverlapHorizontal ? y : f) - _,
+                  b = g > 0,
+                  w = u - (s.bOverlapHorizontal ? f : y) - _,
+                  E = w > 0,
+                  S = (s.bPreferPopLeft || !E) && b;
+                b ||
+                  E ||
+                  ((S = b > E),
                   s.bFitToWindow &&
-                    ((v += (b ? f : _) - 8), (a.menuWidth = v))),
-                  (!s.bPreferPopLeft && g) || !y
-                    ? (a.menuLeft = s.bOverlapHorizontal ? h : d)
-                    : (a.menuRight = m - (s.bOverlapHorizontal ? d : h));
-                var S = l || i.top,
-                  w = l || i.bottom,
-                  E = r.height;
-                s.bMatchHeight && ((E = w - S), (a.menuHeight = E));
-                var P = (s.bOverlapVertical ? w : S) - E,
-                  x = P > 0,
-                  C = p - (s.bOverlapVertical ? S : w) - E,
-                  M = C > 0,
-                  I = (s.bPreferPopTop || !M) && x;
-                x ||
-                  M ||
-                  ((I = P > C),
+                    ((_ += (S ? g : w) - 8), (a.menuWidth = _))),
+                  (!s.bPreferPopLeft && E) || !b
+                    ? (a.menuLeft = s.bOverlapHorizontal ? f : y)
+                    : (a.menuRight = u - (s.bOverlapHorizontal ? y : f));
+                var P = l || i.top,
+                  x = l || i.bottom,
+                  C = r.height;
+                s.bMatchHeight && ((C = x - P), (a.menuHeight = C));
+                var M = (s.bOverlapVertical ? x : P) - C,
+                  k = M > 0,
+                  I = p - (s.bOverlapVertical ? P : x) - C,
+                  O = I > 0,
+                  L = (s.bPreferPopTop || !O) && k;
+                k ||
+                  O ||
+                  ((L = M > I),
                   s.bFitToWindow &&
-                    ((E += (I ? P : C) - 8), (a.menuHeight = E))),
-                  I
-                    ? (a.menuBottom = p - (s.bOverlapVertical ? w : S))
-                    : (a.menuTop = s.bOverlapVertical ? S : w),
+                    ((C += (L ? M : I) - 8), (a.menuHeight = C))),
+                  L
+                    ? (a.menuBottom = p - (s.bOverlapVertical ? x : P))
+                    : (a.menuTop = s.bOverlapVertical ? P : x),
                   o
                     ? (a.menuHeight || (a.menuHeight = r.height),
                       a.menuWidth || (a.menuWidth = r.width),
@@ -2765,7 +2856,7 @@ and limitations under the License.
                         (a.menuBottom = void 0)),
                       a.menuRight &&
                         !a.menuLeft &&
-                        ((a.menuLeft = m - a.menuRight - a.menuWidth),
+                        ((a.menuLeft = u - a.menuRight - a.menuWidth),
                         (a.menuRight = void 0)))
                     : (a.menuLeft && (a.menuLeft += n.scrollX),
                       a.menuTop && (a.menuTop += n.scrollY),
@@ -2790,35 +2881,44 @@ and limitations under the License.
             }),
             (t.prototype.componentDidMount = function() {}),
             (t.prototype.render = function() {
-              var e = { visibility: this.state.ready ? "visible" : "hidden" };
+              var e = this,
+                t = { visibility: this.state.ready ? "visible" : "hidden" };
               if (this.props.popup) {
-                var t = this.props.popup.window;
+                var n = this.props.element.ownerDocument.defaultView;
                 void 0 !== this.state.menuLeft &&
                   void 0 !== this.state.menuTop &&
-                  t.SteamClient.Window.MoveTo(
-                    Math.floor(this.state.menuLeft),
-                    Math.floor(this.state.menuTop)
-                  ),
                   void 0 !== this.state.menuWidth &&
-                    void 0 !== this.state.menuHeight &&
-                    t.SteamClient.Window.ResizeTo(
-                      Math.ceil(this.state.menuWidth),
-                      Math.ceil(this.state.menuHeight)
-                    );
+                  void 0 !== this.state.menuHeight &&
+                  n.SteamClient.Window.GetWindowRestoreDetails(function(t) {
+                    var i = e.props.popup.window,
+                      r = e.state.menuLeft - n.screenX,
+                      o = e.state.menuTop - n.screenY;
+                    try {
+                      i.SteamClient.Window.PositionWindowRelative(
+                        t,
+                        r,
+                        o,
+                        e.state.menuWidth,
+                        e.state.menuHeight
+                      );
+                    } catch (e) {
+                      console.error(e);
+                    }
+                  });
               } else
                 void 0 !== this.state.menuTop
-                  ? (e.top = this.state.menuTop)
+                  ? (t.top = this.state.menuTop)
                   : void 0 !== this.state.menuBottom &&
-                    (e.bottom = this.state.menuBottom),
+                    (t.bottom = this.state.menuBottom),
                   void 0 !== this.state.menuLeft
-                    ? (e.left = this.state.menuLeft)
+                    ? (t.left = this.state.menuLeft)
                     : void 0 !== this.state.menuRight &&
-                      (e.right = this.state.menuRight),
+                      (t.right = this.state.menuRight),
                   void 0 !== this.state.menuHeight &&
-                    (e.height = this.state.menuHeight),
+                    (t.height = this.state.menuHeight),
                   void 0 !== this.state.menuWidth &&
-                    (e.width = this.state.menuWidth);
-              var n =
+                    (t.width = this.state.menuWidth);
+              var i =
                 this.props.options.strClassName ||
                 (this.props.options.bUseWebStyles
                   ? "popup_block_new popup_block_hidden_until_visible"
@@ -2826,14 +2926,14 @@ and limitations under the License.
               return (
                 this.props.instance.visible &&
                   this.state.ready &&
-                  (n += " visible"),
-                (n += " ContextMenuFocusContainer"),
+                  (i += " visible"),
+                (i += " ContextMenuFocusContainer"),
                 c.createElement(
                   "div",
                   {
-                    className: n,
+                    className: i,
                     ref: this.BindMenuElement,
-                    style: e,
+                    style: t,
                     onBlur: this.OnBlur,
                     onKeyDown: this.OnKeyDown,
                     tabIndex: 0
@@ -2865,14 +2965,14 @@ and limitations under the License.
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: r,
-                eCreationFlags: m.c.ContextMenu
+                eCreationFlags: u.c.ContextMenu
               }) || this;
             return (o.m_menuProps = n), (o.m_children = i), o;
           }
           return (
             s.c(t, e),
             (t.prototype.UpdateParamsBeforeShow = function(e) {
-              var t = u.c(
+              var t = m.c(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -2898,12 +2998,13 @@ and limitations under the License.
             }),
             (t.prototype.OnBlur = function() {}),
             (t.prototype.OnFocus = function() {}),
+            (t.prototype.OnLoad = function() {}),
             (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {}),
             (t.sm_iContextMenuInstance = 0),
             t
           );
-        })(m.a),
+        })(u.a),
         b = "DEBUG_StickyContextMenus";
     },
     kllU: function(e, t, n) {
@@ -2976,7 +3077,11 @@ and limitations under the License.
         return i
           ? (t.length > 0 &&
               (i = i.replace(/%(\d+)\$s/g, function(e, n) {
-                return void 0 !== t[n - 1] ? String(t[n - 1]) : e;
+                if (n <= t.length && n >= 1) {
+                  var i = t[n - 1];
+                  return String(void 0 === i || null === i ? "" : i);
+                }
+                return e;
               })),
             i)
           : e;
@@ -3009,15 +3114,15 @@ and limitations under the License.
       function a(e, t, n) {
         void 0 === t && (t = !1), void 0 === n && (n = !0);
         var r = t ? "#TimeSince_" : "#TimeInterval_";
-        return e >= 2 * m
-          ? i(r + "XYears", Math.floor(e / m))
-          : e >= m
-            ? ((e -= m),
-              e >= 2 * u
-                ? i(r + "1YearXMonths", Math.floor(e / u))
+        return e >= 2 * u
+          ? i(r + "XYears", Math.floor(e / u))
+          : e >= u
+            ? ((e -= u),
+              e >= 2 * m
+                ? i(r + "1YearXMonths", Math.floor(e / m))
                 : i(r + "1Year"))
-            : e >= 2 * u
-              ? i(r + "XMonths", Math.floor(e / u))
+            : e >= 2 * m
+              ? i(r + "XMonths", Math.floor(e / m))
               : e >= 2 * p
                 ? i(r + "XWeeks", Math.floor(e / p))
                 : e >= 2 * h
@@ -3097,8 +3202,8 @@ and limitations under the License.
             e
           );
         })()),
-        m = 31536e3,
-        u = 2628e3,
+        u = 31536e3,
+        m = 2628e3,
         p = 604800,
         h = 86400,
         d = 3600,
@@ -3143,7 +3248,7 @@ and limitations under the License.
           return l;
         }),
         n.d(t, "b", function() {
-          return m;
+          return u;
         }),
         n.d(t, "d", function() {
           return p;
@@ -3237,7 +3342,7 @@ and limitations under the License.
                     r.removeEventListener("blur", this.OnBlurInternal),
                     r.removeEventListener("drop", n.OnDrop),
                     r.removeEventListener("dragover", n.OnDragOver))
-                  : ((a = u.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((a = m.CreatePopup(this.m_strName, this.m_rgParams)),
                     (r = a.popup),
                     (o = a.element),
                     (s = new c(r, o))),
@@ -3263,6 +3368,7 @@ and limitations under the License.
             }),
             (e.prototype.RenderInternal = function(e, t, n) {
               this.Render(e, t),
+                this.OnLoad(),
                 e.SteamClient &&
                   (n
                     ? e.SteamClient.Window.BringToFront()
@@ -3349,15 +3455,19 @@ and limitations under the License.
               enumerable: !0,
               configurable: !0
             }),
-            (e.prototype.GetDimensions = function() {
-              return this.m_popup && !this.m_popup.closed
-                ? {
-                    height: this.m_popup.innerHeight,
-                    width: this.m_popup.innerWidth,
-                    left: this.m_popup.screenX || this.m_popup.screenLeft,
-                    top: this.m_popup.screenY || this.m_popup.screenTop
-                  }
-                : {};
+            (e.prototype.GetWindowRestoreDetails = function() {
+              var e = this;
+              return this.m_popup &&
+                !this.m_popup.closed &&
+                this.m_popup.SteamClient
+                ? new Promise(function(t, n) {
+                    e.m_popup.SteamClient.Window.GetWindowRestoreDetails(
+                      function(e) {
+                        t(e);
+                      }
+                    );
+                  })
+                : Promise.resolve("");
             }),
             (e.prototype.ReleasePopup = function() {
               this.OnClose(), (this.m_popup = null);
@@ -3373,7 +3483,7 @@ and limitations under the License.
             e
           );
         })(),
-        m = (function(e) {
+        u = (function(e) {
           function t(t, n, i, r) {
             var o = e.call(this, t, i) || this;
             return o.SetSavedDimensionsKey(n), (o.m_bExpires = r), o;
@@ -3388,45 +3498,47 @@ and limitations under the License.
             }),
             (t.prototype.UpdateParamsBeforeShow = function(e) {
               return (
-                this.m_strSavedDimensionsKey &&
-                  !e.bIgnoreSavedDimensions &&
-                  (e.dimensions = p.GetSavedDimensions(
-                    this.m_strSavedDimensionsKey,
-                    e.dimensions || {}
-                  )),
+                !this.m_strSavedDimensionsKey ||
+                e.bIgnoreSavedDimensions ||
+                e.strRestoreDetails
+                  ? e.strRestoreDetails &&
+                    p.SetRestoreDetails(
+                      this.m_strSavedDimensionsKey,
+                      e.strRestoreDetails,
+                      this.m_bExpires
+                    )
+                  : (e.strRestoreDetails = p.GetRestoreDetails(
+                      this.m_strSavedDimensionsKey
+                    )),
                 e
               );
             }),
-            (t.prototype.OnResize = function() {
-              var e = this.GetDimensions();
-              void 0 === this.m_rgParams.dimensions.left &&
-                void 0 === this.m_rgParams.dimensions.top &&
-                ((this.m_rgParams.dimensions.left = e.left),
-                (this.m_rgParams.dimensions.top = e.top));
+            (t.prototype.OnLoad = function() {
+              var e = this;
+              this.GetWindowRestoreDetails().then(function(t) {
+                e.m_strInitialRestoreDetails = t;
+              });
             }),
+            (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {
-              var e = this.GetDimensions(),
-                t = this.m_rgParams.dimensions,
-                n = !(
-                  e.height != t.height ||
-                  e.width != t.width ||
-                  (e.left != t.left && void 0 !== t.left) ||
-                  (e.top != t.top && void 0 !== t.top)
-                );
-              this.m_popup &&
-                this.m_strSavedDimensionsKey &&
-                !n &&
-                this.BIsVisible() &&
-                p.SetSavedDimensions(
-                  this.m_strSavedDimensionsKey,
-                  this.GetDimensions(),
-                  this.m_bExpires
-                );
+              var e = this;
+              this.BIsVisible() &&
+                this.GetWindowRestoreDetails().then(function(t) {
+                  var n = e.m_strInitialRestoreDetails == t;
+                  e.m_popup &&
+                    e.m_strSavedDimensionsKey &&
+                    !n &&
+                    p.SetRestoreDetails(
+                      e.m_strSavedDimensionsKey,
+                      t,
+                      e.m_bExpires
+                    );
+                });
             }),
             t
           );
         })(l),
-        u = (function() {
+        m = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -3434,7 +3546,7 @@ and limitations under the License.
               (this.m_rgShutdownCallbacks = []),
               (this.m_rgPopupCreatedCallbacks = []),
               (this.m_unCurrentAccountID = 0),
-              (this.m_mapSavedDimensions = new Map()),
+              (this.m_mapRestoreDetails = new Map()),
               (this.m_bSaveRequired = !1),
               Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
                 .MOBILE_BUILD ||
@@ -3511,29 +3623,31 @@ and limitations under the License.
                 t.target_browser &&
                   (c.push("pid=" + t.target_browser.m_unPID),
                   c.push("browser=" + t.target_browser.m_nBrowserID)),
+                t.strRestoreDetails &&
+                  c.push("restoredetails=" + t.strRestoreDetails),
                 c && (a += "?" + c.join("&"));
               var l = t.owner_window || window,
-                m = l.open(a, e, s, !0);
-              if (!m)
+                u = l.open(a, e, s, !0);
+              if (!u)
                 return (
                   console.log(
                     "Failed to create popup.. browser popup blocker enabled?"
                   ),
                   {}
                 );
-              var u = "";
-              t.html_class && (u = 'class="' + t.html_class + '"');
+              var m = "";
+              t.html_class && (m = 'class="' + t.html_class + '"');
               var p = "";
               t.body_class && (p = 'class="' + t.body_class + '"');
               var h =
                 "<!DOCTYPE html><html " +
-                u +
+                m +
                 "><head><title></title></head><body " +
                 p +
                 '><div id="popup_target"></div></body></html>';
-              m.document.write(h), (m.document.title = o);
+              u.document.write(h), (u.document.title = o);
               for (
-                var d = m.document.getElementsByTagName("head")[0],
+                var d = u.document.getElementsByTagName("head")[0],
                   v = document.getElementsByTagName("link"),
                   f = 0;
                 f < v.length;
@@ -3542,7 +3656,7 @@ and limitations under the License.
                 var y = v[f];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var _ = m.document.createElement("link"), g = 0;
+                    var _ = u.document.createElement("link"), g = 0;
                     g < y.attributes.length;
                     g++
                   ) {
@@ -3553,8 +3667,8 @@ and limitations under the License.
                 }
               }
               return {
-                popup: m,
-                element: m.document.getElementById("popup_target")
+                popup: u,
+                element: u.document.getElementById("popup_target")
               };
             }),
             (e.prototype.BShuttingDown = function() {
@@ -3566,7 +3680,7 @@ and limitations under the License.
             (e.prototype.LoadSavedDimensionStore = function() {
               if (this.m_unCurrentAccountID) {
                 var e = this.GetLocalStorageKey();
-                this.m_mapSavedDimensions = new Map();
+                this.m_mapRestoreDetails = new Map();
                 var t = window.localStorage.getItem(e);
                 if (t)
                   try {
@@ -3574,7 +3688,7 @@ and limitations under the License.
                     if (n)
                       for (var i = 0, r = n; i < r.length; i++) {
                         var o = r[i];
-                        this.m_mapSavedDimensions.set(o[0], o[1]);
+                        this.m_mapRestoreDetails.set(o[0], o[1]);
                       }
                   } catch (e) {}
               }
@@ -3584,46 +3698,50 @@ and limitations under the License.
                 var e = this.GetLocalStorageKey();
                 window.localStorage.setItem(
                   e,
-                  JSON.stringify(this.m_mapSavedDimensions)
+                  JSON.stringify(this.m_mapRestoreDetails)
                 ),
                   (this.m_bSaveRequired = !1);
               }
             }),
             (e.prototype.ClearSavedDimensionStore = function() {
-              this.m_mapSavedDimensions.clear(), (this.m_bSaveRequired = !1);
+              this.m_mapRestoreDetails.clear(), (this.m_bSaveRequired = !1);
             }),
-            (e.prototype.GetSavedDimensions = function(e, t) {
-              if (!this.m_mapSavedDimensions.has(e)) return t;
-              var n = this.m_mapSavedDimensions.get(e);
+            (e.prototype.GetRestoreDetails = function(e) {
+              if (!this.m_mapRestoreDetails.has(e)) return "";
+              var t = this.m_mapRestoreDetails.get(e);
               return (
-                (n.last_used = Date.now()),
+                (t.last_used = Date.now()),
                 (this.m_bSaveRequired = !0),
-                Object.assign({}, t, n.dimensions)
+                t.strRestoreDetails
               );
             }),
-            (e.prototype.SetSavedDimensions = function(e, t, n) {
+            (e.prototype.SetRestoreDetails = function(e, t, n) {
               if (e) {
                 if (t) {
-                  if (this.m_mapSavedDimensions.size > 50) {
+                  if (this.m_mapRestoreDetails.size > 50) {
                     for (
                       var i = null,
                         r = Date.now(),
                         o = 0,
-                        s = Array.from(this.m_mapSavedDimensions.keys());
+                        s = Array.from(this.m_mapRestoreDetails.keys());
                       o < s.length;
                       o++
                     ) {
                       var a = s[o],
-                        c = this.m_mapSavedDimensions.get(a);
+                        c = this.m_mapRestoreDetails.get(a);
                       c.last_used < r &&
                         c.bExpires &&
                         ((r = c.last_used), (i = a));
                     }
-                    i && this.m_mapSavedDimensions.delete(i);
+                    i && this.m_mapRestoreDetails.delete(i);
                   }
-                  var l = { dimensions: t, last_used: Date.now(), bExpires: n };
-                  this.m_mapSavedDimensions.set(e, l);
-                } else this.m_mapSavedDimensions.delete(e);
+                  var l = {
+                    strRestoreDetails: t,
+                    last_used: Date.now(),
+                    bExpires: n
+                  };
+                  this.m_mapRestoreDetails.set(e, l);
+                } else this.m_mapRestoreDetails.delete(e);
                 (this.m_bSaveRequired = !0),
                   this.m_bShuttingDown && this.SaveSavedDimensionStore();
               }
@@ -3631,7 +3749,7 @@ and limitations under the License.
             e
           );
         })(),
-        p = new u();
+        p = new m();
     }
   },
   ["HxNj"]
