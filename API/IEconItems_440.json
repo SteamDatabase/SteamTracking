@@ -28,6 +28,38 @@
             ]
         },
         {
+            "name": "GetSchemaItems",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to return the names in. Defaults to returning string keys."
+                },
+                {
+                    "name": "start",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "The first item id to return. Defaults to 0. Response will indicate next value to query if applicable."
+                }
+            ]
+        },
+        {
+            "name": "GetSchemaOverview",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "language",
+                    "type": "string",
+                    "optional": true,
+                    "description": "The language to return the names in. Defaults to returning string keys."
+                }
+            ]
+        },
+        {
             "name": "GetSchemaURL",
             "version": 1,
             "httpmethod": "GET",
