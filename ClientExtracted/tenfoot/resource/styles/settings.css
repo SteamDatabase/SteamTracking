@@ -3945,3 +3945,33 @@ SettingsPanel_ControllerConfigs .SettingsContent
 {
 	visibility: visible;
 }
+
+#SettingsController_NintendoLayout.NintendoEnabled
+{
+    visibility: visible;
+}
+
+#NintendoLayoutPanel
+{
+    height: 800px;
+}
+#SettingsController_NintendoLayout
+{
+    visibility: collapse;
+}
+
+#NintendoLayoutHelpImage
+{
+    background-repeat: no-repeat no-repeat;
+	background-position: left 60px top 200px;
+    width: 100%;
+    height: 100%;
+    background-image: url("file://{images}/library/controller/controller_standard_layout.png");
+    opacity: 0.8;
+}
+
+
+#NintendoLayoutHelpImage.NintendoLayout
+{
+    background-image: url("file://{images}/library/controller/controller_nintendo_layout.png");
+}

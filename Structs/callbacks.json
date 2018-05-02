@@ -1570,6 +1570,11 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionTriggered_t>(ControllerActionTriggered_t*)"
     },
     {
+        "id": 2731,
+        "size": 1052,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<SavePersonalizationFile_t>(SavePersonalizationFile_t*)"
+    },
+    {
         "id": 2901,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"

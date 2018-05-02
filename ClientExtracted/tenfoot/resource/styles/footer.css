@@ -242,8 +242,24 @@ TenfootFooterPanel.WebFooter
 	background-color: legendbuttonyellow;
 }
 
+#LegendRow Label.LegendButtonBox.SwitchButtonBox,
+#LegendRow Label.LegendButtonBox.MinusButtonBox,
+#LegendRow Label.LegendButtonBox.PlusButtonBox
+{
+	border: 2px solid #606060ff;
+	color: gradient( linear, 0% 0%, 0% 100%, color-stop( 0.0, #ccccccff ), color-stop( 1.0, #606060ff ) );
+	background-color: #222222;
+}
+
+
 #RB_btn_ps4,
-#LB_btn_ps4
+#LB_btn_ps4,
+#A_btn_nintendo,  
+#B_btn_nintendo, 
+#X_btn_nintendo,
+#Y_btn_nintendo,
+#START_btn_nintendo,
+#BACK_btn_nintendo,
 {
     visibility: collapse;
 }
@@ -254,6 +270,12 @@ TenfootFooterPanel.WebFooter
 .PS4Origin #LegendRow Label.LegendButtonBox.YButtonBox,
 .PS4Origin #RB_btn_std,
 .PS4Origin #LB_btn_std,
+.NintendoOrigin #A_btn_std,  
+.NintendoOrigin #B_btn_std, 
+.NintendoOrigin #X_btn_std,
+.NintendoOrigin #Y_btn_std,
+.NintendoOrigin #START_btn_std,
+.NintendoOrigin #BACK_btn_std,
 {
     visibility: collapse;
 }
@@ -267,6 +289,18 @@ TenfootFooterPanel.WebFooter
 {
     visibility: visible;
 	font-family: "Noto Sans CJK JP Regular";
+}
+
+.NintendoOrigin #A_btn_nintendo,  
+.NintendoOrigin #B_btn_nintendo, 
+.NintendoOrigin #X_btn_nintendo,
+.NintendoOrigin #Y_btn_nintendo,
+.NintendoOrigin #RB_btn_nintendo,
+.NintendoOrigin #LB_btn_nintendo,
+.NintendoOrigin #START_btn_nintendo,
+.NintendoOrigin #BACK_btn_nintendo,
+{
+    visibility: visible;
 }
 
 #LegendRow Label.LegendButtonBox.CrossButtonBox,  
@@ -479,9 +513,12 @@ TenfootFooterPanel.WebFooter
 #LegendRow .CircleButtonBox,
 #LegendRow .SquareButtonBox,
 #LegendRow .TriangleButtonBox,
+#LegendRow .SwitchButtonBox,
+#LegendRow .MinusButtonBox,
+#LegendRow .PlusButtonBox
 {
 	border-radius: 50%;
-	border: 2px solid #00000000;
+	border: 2px solid #000000ff;
 	width: 38px;
 	height: 38px;
 	text-align: center;
@@ -503,19 +540,21 @@ TenfootFooterPanel.WebFooter
 .OSX #LegendRow .LBButtonBox,
 .OSX #LegendRow .RBButtonText,
 .OSX #LegendRow .TriggerButtonBox,
+.OSX #LegendRow .SwitchButtonBox,
 .Linux #LegendRow .AButtonBox,
 .Linux #LegendRow .BButtonBox,
 .Linux #LegendRow .XButtonBox,
 .Linux #LegendRow .YButtonBox,
 .Linux #LegendRow .LBButtonBox,
 .Linux #LegendRow .RBButtonText,
+.Linux #LegendRow .SwitchButtonBox
 .Linux #LegendRow .TriggerButtonBox
 {
 	padding-top: 3px;
 }
 
 #LegendRow .STARTButtonBox,
-#LegendRow .BACKButtonBox
+#LegendRow .BACKButtonBox,
 {
 	border-radius: 16px;
 	border: 2px solid #EEEEEEf0;
@@ -533,6 +572,20 @@ TenfootFooterPanel.WebFooter
    
 	background-image: url( "file://{images}/footer/start.png" );
 }
+
+
+#LegendRow Label.LegendButtonBox.MinusButtonBox
+{
+	padding-top: -12px;
+    font-size: 44px;
+}
+
+#LegendRow Label.LegendButtonBox.PlusButtonBox
+{
+	padding-top: -5px;
+    font-size: 36px;
+}
+
 
 .PS4Origin #LegendRow .STARTButtonBox,
 .PS4Origin #LegendRow .BACKButtonBox
@@ -640,6 +693,7 @@ TenfootFooterPanel.WebFooter
 .CursorVisible #LegendRow .CircleButtonBox,
 .CursorVisible #LegendRow .SquareButtonBox,
 .CursorVisible #LegendRow .TriangleButtonBox,
+.CursorVisible #LegendRow .SwitchButtonBox,
 .CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CrossButtonBox,
 .CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.CircleButtonBox,
 .CursorVisible.PS4Origin #LegendRow Label.LegendButtonBox.SquareButtonBox,

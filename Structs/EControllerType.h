@@ -13,6 +13,11 @@ typedef enum EControllerType
     k_EControllerTypeController_ps4, // controller_ps4
     k_EControllerTypeController_wii, // controller_wii
     k_EControllerTypeController_apple, // controller_apple
+    k_EControllerTypeController_android, // controller_android
+    k_EControllerTypeController_switch_pro, // controller_switch_pro
+    k_EControllerTypeController_switch_joycon_left, // controller_switch_joycon_left
+    k_EControllerTypeController_switch_joycon_right, // controller_switch_joycon_right
+    k_EControllerTypeController_switch_joycon_pair, // controller_switch_joycon_pair
     k_EControllerTypeController_keyboard_generic = 400, // controller_keyboard_generic
     k_EControllerTypeController_mouse_generic = 800, // controller_mouse_generic
 } EControllerType;

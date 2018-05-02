@@ -31,6 +31,7 @@ public:
     virtual unknown_ret SetUserLedColor(unsigned int, unsigned char, unsigned char, unsigned char) = 0;
     virtual unknown_ret SetRumble(unsigned int, int, int, unsigned short, unsigned short) = 0;
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
+    virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData*) = 0;
@@ -101,7 +102,10 @@ public:
     virtual unknown_ret GetControllerIdentity(unsigned int, ControllerIdentity_t*) = 0;
     virtual unknown_ret GetControllerSerialNumber(unsigned int, char*, int) = 0;
     virtual unknown_ret GetControllerChipID(unsigned int, char*, int) = 0;
+    virtual unknown_ret BSupportsControllerLEDBrightness(unsigned int) = 0;
     virtual unknown_ret BSupportsControllerLEDColor(unsigned int) = 0;
+    virtual unknown_ret BSupportsControllerRumble(unsigned int) = 0;
+    virtual unknown_ret BSupportsControllerHaptics(unsigned int) = 0;
     virtual unknown_ret SetControllerPairingConnectionState(unsigned int, bool) = 0;
     virtual unknown_ret SetControllerKeyboardMouseState(unsigned int, bool) = 0;
     virtual unknown_ret GetTouchKeysForPopupMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int) = 0;
@@ -140,4 +144,6 @@ public:
     virtual unknown_ret GetControllerActivityByType(EControllerType) = 0;
     virtual unknown_ret GetLastActiveControllerVID() = 0;
     virtual unknown_ret GetLastActiveControllerPID() = 0;
+    virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
+    virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
 };

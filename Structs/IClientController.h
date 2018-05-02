@@ -54,6 +54,7 @@ public:
     virtual unknown_ret SetRumble(unsigned int, int, int, unsigned short, unsigned short) = 0;
     virtual unknown_ret SendIRCode(unsigned int, int, bool, unsigned int) = 0;
     virtual unknown_ret StopIRCode(unsigned int) = 0;
+    virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret BIsStreamingController(unsigned int) = 0;
@@ -134,6 +135,8 @@ public:
     virtual unknown_ret DeRegisterController(unsigned int, unsigned int) = 0;
     virtual unknown_ret SetPersonalizationFile(unsigned int, unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetPersonalizationFileID(unsigned int) = 0;
+    virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
+    virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
     virtual unknown_ret GetTouchKeysForPopupMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int) = 0;
     virtual unknown_ret PopupMenuTouchKeyClicked(unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret CheckMappingForEvents() = 0;

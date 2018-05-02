@@ -75,12 +75,14 @@
 					<Slider id="HoldRepeatIntervalFourButtons" direction="horizontal" />
 				</Panel> -->
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" gameactions="on">
-						<Label class="FieldLabel ABXYLabels" text="Y" />
+						<Label class="FieldLabel ABXYLabels" text="#Gamepad_Y" />
+						<Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_X" />          
 						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Triangle" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="YButtonGA" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" gameactions="on">
-					<Label class="FieldLabel ABXYLabels" text="X" />
+					<Label class="FieldLabel ABXYLabels" text="#Gamepad_X" />
+					<Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_Y" />             
 					<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Square" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="XButtonGA" />
 				</Panel>
@@ -128,7 +130,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBinding_joystick_move" />
 				</Panel>
-				<!-- Joystick Move Mode Advanced -->
+        <Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="on" dependency="MouseOutput" >
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
+          <Slider id="MouseSensitivity_joystick_moveGA" direction="horizontal" />
+        </Panel>
+        <!-- Joystick Move Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="trackpad" visualization="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
 					<DropDown id="AdaptiveCentering_joystick_move" />
@@ -581,7 +587,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertY_joystick_move" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off" dependency="MouseOutput" >
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" gameactions="off" visualization="off" dependency="MouseOutput" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
 					<Slider id="MouseSensitivity_joystick_move" direction="horizontal" />
 				</Panel>
@@ -1076,11 +1082,13 @@
 					</Panel>
 					<Panel class="FieldWrapper" modes="ABXY" gameactions="on" advanced="off">
 						<Label class="FieldLabel ABXYLabels" text="#Gamepad_B" />
+						<Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_A" />               
 						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Circle" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="BButtonGA" />
 					</Panel>
 					<Panel class="FieldWrapper" modes="ABXY" gameactions="on" advanced="off">
 						<Label class="FieldLabel ABXYLabels" text="#Gamepad_A" />
+						<Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_B" />                
 						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_X" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGA" />
 					</Panel>

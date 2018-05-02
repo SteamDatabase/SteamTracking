@@ -114,7 +114,7 @@ DropDownMenu.DropDownMenuVisible
     z-index: msgbox_contextmenu_zindex;
 }
 
-#TurnOnSoundContainer, #TurnOffSoundContainer, #HapticsSettingContainer
+#TurnOnSoundContainer, #TurnOffSoundContainer, #HapticsSettingContainer, #RumbleSettingContainer
 {
     visibility: collapse;
 }
@@ -125,6 +125,11 @@ DropDownMenu.DropDownMenuVisible
 }
 
 .SupportsHaptics #HapticsSettingContainer
+{
+    visibility: visible;
+}
+
+.SupportsRumble #RumbleSettingContainer
 {
     visibility: visible;
 }

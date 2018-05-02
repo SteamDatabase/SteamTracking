@@ -2766,6 +2766,18 @@
         "server_type": -1
     },
     {
+        "emsg": 9513,
+        "name": "k_EMsgClientUnlockHEVC",
+        "flags": 59,
+        "server_type": -1
+    },
+    {
+        "emsg": 9514,
+        "name": "k_EMsgClientUnlockHEVCResponse",
+        "flags": 59,
+        "server_type": -1
+    },
+    {
         "emsg": 9600,
         "name": "k_EMsgClientPlayingSessionState",
         "flags": 2,

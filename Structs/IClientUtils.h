@@ -60,7 +60,7 @@ public:
     virtual unknown_ret SetVRHeadsetStreamingEnabled(unsigned int, bool) = 0;
     virtual unknown_ret GenerateSupportSystemReport() = 0;
     virtual unknown_ret GetSupportSystemReport(char*, unsigned int, unsigned char*, unsigned int) = 0;
-    virtual unknown_ret GetAppIdForPid(unsigned int) = 0;
+    virtual unknown_ret GetAppIdForPid(unsigned int, bool) = 0;
     virtual unknown_ret SetClientUIProcess() = 0;
     virtual unknown_ret BIsClientUIInForeground() = 0;
     virtual unknown_ret SetOverlayChatBrowserInfo(unsigned int, int) = 0;

@@ -11,14 +11,16 @@
 				<ToggleButton class="CheckBox" id="SettingsController_TurnOffOnQuit" text="#SettingsController_TurnOffOnQuit" selectionpos="auto" onactivate="ControllerSetting_TurnOff()" onfocus="OnNonControllerButtonFocused(1);" />
 				<ToggleButton class="CheckBox" id="SettingsController_PS4Support" text="#SettingsController_PS4Support" selectionpos="auto" onactivate="ControllerSetting_PS4Support()" onfocus="OnNonControllerButtonFocused(2);" />
 				<ToggleButton class="CheckBox" id="SettingsController_XBoxSupport" text="#SettingsController_XBoxSupport" selectionpos="auto" onactivate="ControllerSetting_XBoxSupport()" onfocus="OnNonControllerButtonFocused(3);" />
-				<ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused(4);" />
-				<Button id="RecoverFirmware" class="Button" selectionpos="auto" onactivate="ControllerFirmwareRecovery();" onfocus="OnNonControllerButtonFocused(5);">
+				<ToggleButton class="CheckBox" id="SettingsController_SwitchSupport" text="#SettingsController_SwitchSupport" selectionpos="auto" onactivate="ControllerSetting_SwitchSupport()" onfocus="OnNonControllerButtonFocused(4);" />
+        <ToggleButton class="CheckBox" id="SettingsController_NintendoLayout" text="#SettingsController_NintendoLayout" selectionpos="auto" onactivate="ControllerSetting_NintendoLayout()" onfocus="OnNonControllerButtonFocused(5);" />
+        <ToggleButton class="CheckBox" id="SettingsController_GenericGamepadSupport" text="#SettingsController_GenericGamepadSupport" selectionpos="auto" onactivate="ControllerSetting_GenericGamepadSupport()" onfocus="OnNonControllerButtonFocused(6);" />
+				<Button id="RecoverFirmware" class="Button" selectionpos="auto" onactivate="ControllerFirmwareRecovery();" onfocus="OnNonControllerButtonFocused(7);">
 					<Label class="LongDesc" text="#Library_Details_FirmwareRecover" />
 				</Button>
-				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused(6);">
+				<Button id="AddController" class="Button" selectionpos="auto" onactivate="AddWirelessController();" onfocus="OnNonControllerButtonFocused(8);">
 					<Label class="LongDesc" text="#Library_Details_Controller_Add" />
 				</Button>
-				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown" ondescendantfocus="OnNonControllerButtonFocused(7);">
+				<Panel id="SettingsSteamController_ShutdownTime_Panel" class="SettingsController FlowDown" ondescendantfocus="OnNonControllerButtonFocused(9);">
 					<Label class="SettingsLabel" text="#SettingsController_ShutdowntimeHeader" />
 					<DropDown id="SettingsSteamController_ShutdownTime_Dropdown" class="Filter" />			
 				</Panel>
@@ -111,7 +113,12 @@
 				<Label class="TurnOffHelpText" text="#SettingsController_TurnOffSetupText" />
 				<Label class="PS4HelpText" text="#SettingsController_PS4SetupText" />	
 				<Label class="XboxHelpText" text="#SettingsController_XBoxSetupText" />	
-				<Label class="GenericHelpText" text="#SettingsController_GenericJoystickSetupText" />
+				<Label class="SwitchHelpText" text="#SettingsController_SwitchSetupText" />
+        <Panel id="NintendoLayoutPanel">
+          <Label class="NintendoLayoutHelpText" text="#SettingsController_NintendoLayoutSetupText" />
+          <Image id="NintendoLayoutHelpImage" />
+        </Panel>
+        <Label class="GenericHelpText" text="#SettingsController_GenericJoystickSetupText" />
 				<Label class="FirmwareRecovery" text="#SettingsController_FirmwareRecoveryWarning_Body" />
 				<Label class="AddAController" />
 				<Label class="IdleTurnoffHelpText" text="#SettingsController_IdleTurnOffSetupText" />

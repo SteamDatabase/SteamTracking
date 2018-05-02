@@ -5998,7 +5998,8 @@ ParentalButton #ParentalLockImageLocked
 	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
 }
 
-.ControllerOrderContainer.controller_generic
+.ControllerOrderContainer.controller_generic,
+.ControllerOrderContainer.controller_apple
 {
 	background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }
@@ -6096,7 +6097,8 @@ ControllerConfigSelectController #ButtonCancel
 	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
 }
 
-#SelectControllerButton.Button.controller_generic
+#SelectControllerButton.Button.controller_generic,
+#SelectControllerButton.Button.controller_apple,
 {
 	background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }

@@ -26,7 +26,7 @@
 				<Label id="BindingsCreator" text="#SettingsController_BindingCreator" />
 				<Panel id="SetLayerContainer">
 					<Panel id="GameActionSets" selectionpos="auto" onmovedown="SetSwitchInputFocus( Default GameActionSetLayers );" onmoveright="None();"/>
-					<Panel id="GameActionSetLayers" selectionpos="auto" onmovedown="SetSwitchInputFocus( CenterSplit SwapCenterPadModeToUnified PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Default Gyro );" onmoveright="None();"/>
+					<Panel id="GameActionSetLayers" selectionpos="auto" onmovedown="SetSwitchInputFocus( CenterSplit SwapCenterPadModeToUnified PS4 SwapCenterPadModeToSplit PS RightJoystick XBox RightJoystick Apple RightJoystick Default Gyro );" onmoveright="None();"/>
 				</Panel>
 				<Panel id="TopHalfContainer" selectionpos="auto">
 					<Panel class="Background" id="BackgroundController" >
@@ -67,17 +67,17 @@
 					<Panel id="Switches" tabindex="auto" selectionpos="auto" class="ModeContainer">				
 					</Panel>
 					<Panel id="GyroModeContainer">
-						<Button class="ModeWrapper Small" id="Gyro" tabindex="auto" selectionpos="auto" onmoveleft="SetSwitchInputFocus( BackButton );" onmoveright="SetSwitchInputFocus( StartButton );" onmovedown="SetSwitchInputFocus( PS RightJoystick XBox RightJoystick Default ABXYButtons );" onmoveup="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default AddActionSetButton );" onfocus="AddStyle(BackgroundLines, GyroSelected)" onblur="RemoveStyle(BackgroundLines, GyroSelected)"/>
+						<Button class="ModeWrapper Small" id="Gyro" tabindex="auto" selectionpos="auto" onmoveleft="SetSwitchInputFocus( BackButton );" onmoveright="SetSwitchInputFocus( StartButton );" onmovedown="SetSwitchInputFocus( PS RightJoystick XBox RightJoystick SwitchPro RightJoystick Default ABXYButtons );" onmoveup="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default AddActionLayerButton );" onfocus="AddStyle(BackgroundLines, GyroSelected)" onblur="RemoveStyle(BackgroundLines, GyroSelected)"/>
 					</Panel>
 				</Panel>
 			</Panel>
 			<Panel id="ModeContainer" tabindex="auto" selectionpos="auto" >
 				<Button class="ModeWrapper GapRight SteamController" id="LeftTrackpad" onmoveup="SetSwitchInputFocus( AlwaysOn );" onmovedown="None();" onmoveleft="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotOneSelected)" onblur="RemoveStyle(BackgroundLines, SlotOneSelected)"/>
 				<Button class="ModeWrapper GapRight LJoyLeft" id="LeftJoystickLeft" onmoveup="SetSwitchInputFocus( AlwaysOn );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftJoystickSelected)" onblur="RemoveStyle(BackgroundLines, LeftJoystickSelected)"/>
-				<Button class="ModeWrapper GapRight TraditionalController" id="DPad" onmoveup="SetSwitchInputFocus( AlwaysOn );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,DPadSelected)" onblur="RemoveStyle(BackgroundLines, DPadSelected)"/>
-				<Button class="ModeWrapper GapRight LJoyCenter" id="LeftJoystickCenter" onmoveup="SetSwitchInputFocus( Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftJoystickSelected)" onblur="RemoveStyle(BackgroundLines, LeftJoystickSelected)"/>
-				<Button class="ModeWrapper GapRight TraditionalController" id="RightJoystick" onmoveup="SetSwitchInputFocus( XBox Switch:StartButton Default Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
-				<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetSwitchInputFocus( PS Switch:StartButton XBox Switch:StartButton Default Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotABXYSelected)" onblur="RemoveStyle(BackgroundLines, SlotABXYSelected)"/>
+				<Button class="ModeWrapper GapRight TraditionalController" id="DPad" onmoveup="SetSwitchInputFocus( SwitchPro Gyro Default AlwaysOn );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,DPadSelected)" onblur="RemoveStyle(BackgroundLines, DPadSelected)"/>
+				<Button class="ModeWrapper GapRight LJoyCenter" id="LeftJoystickCenter" onmoveup="SetSwitchInputFocus( Apple AlwaysOn Default Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftJoystickSelected)" onblur="RemoveStyle(BackgroundLines, LeftJoystickSelected)"/>
+				<Button class="ModeWrapper GapRight TraditionalController" id="RightJoystick" onmoveup="SetSwitchInputFocus( no_cap_start_button Switch:RightBumperButton Apple Switch:RightBumperButton XBox Switch:StartButton Default Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotThreeSelected)" onblur="RemoveStyle(BackgroundLines, SlotThreeSelected)"/>
+				<Button class="ModeWrapper GapRight" id="ABXYButtons" onmoveup="SetSwitchInputFocus( no_cap_start_button Switch:RightBumperButton Apple Switch:RightBumperButton PS Switch:StartButton XBox Switch:StartButton SwitchPro Switch:StartButton Default Gyro );" onmovedown="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotABXYSelected)" onblur="RemoveStyle(BackgroundLines, SlotABXYSelected)"/>
 				<Button class="ModeWrapper SteamController" id="RightTrackpad" onmoveup="SetSwitchInputFocus( StartButton );" onmovedown="None();" onmoveright="None();" tabindex="auto" selectionpos="auto" onfocus="AddStyle(BackgroundLines,SlotFourSelected)" onblur="RemoveStyle(BackgroundLines, SlotFourSelected)"/>
 			</Panel>		
 

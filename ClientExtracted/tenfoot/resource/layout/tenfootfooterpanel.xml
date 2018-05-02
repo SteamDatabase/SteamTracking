@@ -22,6 +22,7 @@
 						<Panel id="A_Wrapper">
 							<Panel id="A_btn">
 								<Label id="A_btn_std" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
+               	<Label id="A_btn_nintendo" class="LegendButtonBox SwitchButtonBox" text="#UI_BButton" /> 
 								<Label id="A_btn_ps4" class="LegendButtonBox CrossButtonBox" text="#UI_CrossButton" />
 							</Panel>
 							<FooterLabelButton id="A_txt" class="LegendText AButtonText" padevent="pad_a" />
@@ -29,6 +30,7 @@
 						<Panel id="X_Wrapper">
 							<Panel id="X_btn">
 								<Label id="X_btn_std" class="LegendButtonBox XButtonBox" text="#UI_XButton" />
+                <Label id="X_btn_nintendo" class="LegendButtonBox SwitchButtonBox" text="#UI_YButton" /> 
 								<Label id="X_btn_ps4" class="LegendButtonBox SquareButtonBox" text="#UI_SquareButton" />
 							</Panel>
 							<FooterLabelButton id="X_txt" class="LegendText XButtonText" padevent="pad_x" />
@@ -36,13 +38,15 @@
 						<Panel id="Y_Wrapper">
 							<Panel id="Y_btn">
 								<Label id="Y_btn_std" class="LegendButtonBox YButtonBox" text="#UI_YButton" />
-								<Label id="X_btn_ps4" class="LegendButtonBox TriangleButtonBox" text="#UI_TriangleButton" />
+                <Label id="Y_btn_nintendo" class="LegendButtonBox SwitchButtonBox" text="#UI_XButton" /> 
+								<Label id="Y_btn_ps4" class="LegendButtonBox TriangleButtonBox" text="#UI_TriangleButton" />
 							</Panel>
 							<FooterLabelButton id="Y_txt" class="LegendText YButtonText" padevent="pad_y" />
 						</Panel>
 						<Panel id="B_Wrapper">
 							<Panel id="B_btn">
 								<Label id="B_btn_std" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
+                <Label id="B_btn_nintendo" class="LegendButtonBox SwitchButtonBox" text="#UI_AButton" /> 
 								<Label id="B_btn_ps4" class="LegendButtonBox CircleButtonBox" text="#UI_CircleButton" />
 							</Panel>
 							<FooterLabelButton id="B_txt" class="LegendText BButtonText" padevent="pad_b" />
@@ -51,13 +55,19 @@
 					<Panel id="RightWrapper">
 						<Panel id="BACKWrapper">
 							<Panel id="BACKInnerWrapper">
-								<Panel id="BACK_btn" class="LegendButtonBox BACKButtonBox" />
+								<Panel id="BACK_btn" >
+                  <Label id="BACK_btn_std" class="LegendButtonBox BACKButtonBox" />
+                  <Label id="BACK_btn_nintendo" class="LegendButtonBox MinusButtonBox" text="-" />
+                </Panel>
 								<FooterLabelButton id="BACK_txt" class="LegendText BACKButtonText" padevent="pad_back" />
 							</Panel>
 						</Panel>
 						<Panel id="STARTWrapper">
 							<Panel id="STARTInnerWrapper">
-								<Panel id="START_btn" class="LegendButtonBox STARTButtonBox" />
+								<Panel id="START_btn" >
+                  <Label id="START_btn_std" class="LegendButtonBox STARTButtonBox" />
+                  <Label id="START_btn_nintendo" class="LegendButtonBox PlusButtonBox" text="+" />
+                </Panel>
 								<FooterLabelButton id="START_txt" class="LegendText STARTButtonText" padevent="pad_start" />
 							</Panel>
 						</Panel>
