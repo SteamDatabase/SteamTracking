@@ -197,20 +197,6 @@
 				$Data = JSON_Decode( $Data, true );
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
-			else if( SubStr( $File, 0, 13 ) === 'ItemSchemaURL' )
-			{
-				$Data = JSON_Decode( $Data, true );
-				
-				if( isset( $Data[ 'result' ][ 'items_game_url' ] ) )
-				{
-					$this->URLsToFetch[ ] = Array(
-						'URL'  => $Data[ 'result' ][ 'items_game_url' ],
-						'File' => str_replace( 'ItemSchemaURL', 'ItemSchema', $File )
-					);
-				}
-				
-				return true;
-			}
 			// Unzip it
 			else if( SubStr( $File, -4 ) === '.zip' )
 			{

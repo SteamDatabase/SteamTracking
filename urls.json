@@ -388,18 +388,6 @@
 "API/SupportedAPIList.json"                      : "https://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v1/?__KEY__",
 
 //
-// Item Schemas
-//
-"ItemSchema/CounterStrikeGlobalOffensive.json"   : "https://api.steampowered.com/IEconItems_730/GetSchema/v2/?__KEY__&language=english",
-//"ItemSchema/Dota2.json"                          : "https://api.steampowered.com/IEconItems_570/GetSchema/v1/?__KEY__&language=english",
-"ItemSchema/Portal2.json"                        : "https://api.steampowered.com/IEconItems_620/GetSchema/v1/?__KEY__&language=english",
-"ItemSchema/TeamFortress2.json"                  : "https://api.steampowered.com/IEconItems_440/GetSchema/v1/?__KEY__&language=english",
-
-"ItemSchemaURL/CounterStrikeGlobalOffensive.vdf" : "https://api.steampowered.com/IEconItems_730/GetSchemaURL/v2/?__KEY__&language=english",
-"ItemSchemaURL/Dota2.vdf"                        : "https://api.steampowered.com/IEconItems_570/GetSchemaURL/v1/?__KEY__&language=english",
-"ItemSchemaURL/TeamFortress2.vdf"                : "https://api.steampowered.com/IEconItems_440/GetSchemaURL/v1/?__KEY__&language=english",
-
-//
 // Other
 //
 "Random/BPEventBackground.xml"                   : "https://store.steampowered.com/api/bpeventbackground/",
