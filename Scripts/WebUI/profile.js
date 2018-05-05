@@ -22,7 +22,7 @@ webpackJsonp(
     "5Pz3": function(e, t, n) {
       "use strict";
       function i() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -36,14 +36,14 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
           })
         );
       }
       function r() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -53,19 +53,19 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 600 600"
           },
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z"
             }),
-            O.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
+            B.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
           )
         );
       }
       function o() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -77,7 +77,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("polyline", {
+          B.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -87,7 +87,7 @@ webpackJsonp(
             points:
               "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "
           }),
-          O.createElement("polygon", {
+          B.createElement("polygon", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -95,7 +95,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 "
           }),
-          O.createElement("polyline", {
+          B.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -103,7 +103,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "83,60.75 83,133 155,133 "
           }),
-          O.createElement("polyline", {
+          B.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -114,7 +114,7 @@ webpackJsonp(
         );
       }
       function s() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -124,14 +124,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          O.createElement("polygon", {
+          B.createElement("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
           })
         );
       }
       function a() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -141,10 +141,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            O.createElement("path", {
+            B.createElement("path", {
               className: "ColorSelector",
               d:
                 "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
@@ -162,7 +162,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Microphone";
         return (
           e.className && (t += " " + e.className),
-          O.createElement(
+          B.createElement(
             "svg",
             {
               version: "1.1",
@@ -174,128 +174,128 @@ webpackJsonp(
               height: "256px",
               viewBox: "-127.5 664.5 256 256"
             },
-            O.createElement(
+            B.createElement(
               "g",
               { className: "MicBase" },
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement(
+                B.createElement(
                   "g",
                   null,
-                  O.createElement("path", {
+                  B.createElement("path", {
                     d:
                       "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z"
                   }),
-                  O.createElement("path", {
+                  B.createElement("path", {
                     d:
                       "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z"
                   })
                 ),
-                O.createElement(
+                B.createElement(
                   "g",
                   null,
-                  O.createElement("path", {
+                  B.createElement("path", {
                     d:
                       "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z"
                   }),
-                  O.createElement("path", {
+                  B.createElement("path", {
                     d:
                       "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z"
                   })
                 )
               ),
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z"
                 })
               ),
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z"
                 })
               )
             ),
-            O.createElement(
+            B.createElement(
               "g",
               { className: "MicFill" },
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z"
                 })
               ),
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z"
                 })
               )
             ),
-            O.createElement(
+            B.createElement(
               "g",
               { className: "MicStrike", fill: "none", strokeWidth: "1" },
-              O.createElement("line", {
+              B.createElement("line", {
                 x1: "-82.5",
                 y1: "866.5",
                 x2: "83.5",
@@ -306,7 +306,7 @@ webpackJsonp(
         );
       }
       function l() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -316,26 +316,26 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M50,94.8c25,0,45.3-20.1,45.3-44.8S75,5.2,50,5.2S4.7,25.3,4.7,50S25,94.8,50,94.8z M50,9.8c22.5,0,40.7,18.1,40.7,40.2  S72.5,90.2,50,90.2S9.3,72.2,9.3,50S27.5,9.8,50,9.8z"
           }),
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M24.7,43c1.1,0,2-0.9,2-2c0-2.5,2.1-4.6,4.6-4.6S36,38.5,36,41c0,1.1,0.9,2,2,2s2-0.9,2-2c0-4.8-3.9-8.6-8.6-8.6  s-8.6,3.9-8.6,8.6C22.7,42.1,23.6,43,24.7,43z"
           }),
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M62,43c1.1,0,2-0.9,2-2c0-2.5,2.1-4.6,4.6-4.6s4.6,2.1,4.6,4.6c0,1.1,0.9,2,2,2s2-0.9,2-2c0-4.8-3.9-8.6-8.6-8.6  S60,36.2,60,41C60,42.1,60.9,43,62,43z"
           }),
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M50,84.5c16.4,0,29.8-13.3,29.8-29.8c0-1.1-0.9-2-2-2H22.2c-1.1,0-2,0.9-2,2C20.2,71.2,33.6,84.5,50,84.5z M75.7,56.8  C74.6,70,63.5,80.5,50,80.5S25.4,70,24.3,56.8H75.7z"
           })
         );
       }
       function u() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -346,10 +346,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
               fill: "#FFFFFF",
@@ -364,7 +364,7 @@ webpackJsonp(
         );
       }
       function m() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -374,20 +374,20 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("path", {
+            B.createElement("path", {
               fill: "#020202",
               d:
                 "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z"
             }),
-            O.createElement("path", {
+            B.createElement("path", {
               fill: "#020202",
               d:
                 "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z"
             }),
-            O.createElement("path", {
+            B.createElement("path", {
               fill: "#020202",
               d:
                 "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z"
@@ -396,7 +396,7 @@ webpackJsonp(
         );
       }
       function p() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -406,14 +406,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z"
           })
         );
       }
       function h() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -424,10 +424,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "-165 95 100 100"
           },
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("polygon", {
+            B.createElement("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
             })
@@ -435,7 +435,7 @@ webpackJsonp(
         );
       }
       function d() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -448,7 +448,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("line", {
+          B.createElement("line", {
             fill: "none",
             stroke: "#000000",
             strokeWidth: "45",
@@ -458,7 +458,7 @@ webpackJsonp(
             x2: "44",
             y2: "44"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             fill: "none",
             stroke: "#000000",
             strokeWidth: "45",
@@ -471,7 +471,7 @@ webpackJsonp(
         );
       }
       function v() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -484,10 +484,10 @@ webpackJsonp(
             viewBox: "0 0 64 64",
             enableBackground: "new 0 0 64 64"
           },
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("path", {
+            B.createElement("path", {
               className: "Bubble",
               fill: "none",
               strokeMiterlimit: "1",
@@ -496,10 +496,10 @@ webpackJsonp(
                 "M60.1,32.3c0,15.1-12.3,27.3-27.4,27.3 c-5,0-9.7-1.4-13.8-3.7c-1.8-1.1-15,5.4-13.8,3.4c1.7-2.9,5.9-10.3,4.7-12C7,43,5.3,37.8,5.3,32.3C5.3,17.2,17.6,5,32.7,5 C47.8,5,60.1,17.2,60.1,32.3z"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("path", {
+            B.createElement("path", {
               className: "AudioLines",
               opacity: "0",
               strokeWidth: "1px",
@@ -507,10 +507,10 @@ webpackJsonp(
                 "M37.2,51.1c-0.5,0-1-0.1-1.3-0.4c-0.7-0.5-0.7-1.3,0-1.8c6.3-4.4,9.8-10.2,9.8-16.4c0-6.2-3.5-12-9.8-16.4 c-0.7-0.5-0.7-1.3,0-1.8s1.9-0.5,2.6,0c7.1,4.9,10.9,11.4,10.9,18.3c0,6.9-3.9,13.4-10.9,18.3C38.2,51,37.7,51.1,37.2,51.1 M21.4,40.2c0.5,0,0.9-0.1,1.3-0.4c2.8-2,4.3-4.6,4.3-7.3s-1.5-5.4-4.3-7.3c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c2.1,1.5,3.3,3.4,3.3,5.5c0,2.1-1.2,4-3.3,5.5c-0.7,0.5-0.7,1.3,0,1.8C20.4,40.1,20.9,40.2,21.4,40.2 M29.3,45.7 c0.5,0,1-0.1,1.3-0.4c4.9-3.4,7.7-7.9,7.7-12.7c0-4.8-2.7-9.3-7.7-12.7c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c4.2,2.9,6.6,6.8,6.6,10.9c0,4.1-2.3,8-6.6,10.9c-0.7,0.5-0.7,1.3,0,1.8C28.4,45.5,28.8,45.7,29.3,45.7"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "Arrow", opacity: "0" },
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -518,7 +518,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -527,10 +527,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               className: "ExitDoor",
               opacity: "0",
               strokeLinecap: "round",
@@ -541,17 +541,17 @@ webpackJsonp(
                 "32.5,22.1 32.5,17.7 47.7,17.7 47.7,43.8 32.5,43.8 32.5,39.5"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "Microphone" },
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "M40.971,28.593v6.278c0,4.007-4.023,7.284-8.971,7.284c-2.693,0-5.126-0.974-6.765-2.516 c-1.379-1.28-2.207-2.952-2.207-4.769v-6.278l0,0H21.05v6.278c0,0.536,0.064,1.055,0.162,1.573 c0.357,1.752,1.281,3.325,2.627,4.592c1.801,1.702,4.332,2.839,7.17,3.049v4.072H25.3c-0.341,0-0.616,0.438-0.616,0.989 c0,0.552,0.275,0.99,0.616,0.99h5.759h1.882H38.7c0.341,0,0.616-0.438,0.616-0.99c0-0.551-0.275-0.989-0.616-0.989h-5.71v-4.072 c5.58-0.422,9.96-4.396,9.96-9.214v-6.278H40.971z"
             }),
-            O.createElement(
+            B.createElement(
               "g",
               null,
-              O.createElement("path", {
+              B.createElement("path", {
                 d:
                   "M32,39.841c-3.493,0-6.343-2.344-6.343-5.213v-17.85c0-2.871,2.85-5.213,6.343-5.213s6.343,2.342,6.343,5.213v17.85,C38.343,37.497,35.493,39.841,32,39.841z"
               })
@@ -560,7 +560,7 @@ webpackJsonp(
         );
       }
       function f() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -575,22 +575,22 @@ webpackJsonp(
             stroke: "#000",
             strokeWidth: "10px"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             className: "Bubble",
             d:
               "M237,127.8c0,59.1-48.1,107-107.4,107c-19.7,0-38.2-5.3-54.1-14.5c-7.2-4.2-58.8,21.2-54.2,13.4 c6.7-11.3,23-40.3,18.5-47.2c-11.1-16.9-17.6-37-17.6-58.7c0-59.1,48.1-107,107.4-107C188.9,20.8,237,68.7,237,127.8z"
           }),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "ScratchPad" },
-            O.createElement("path", {
+            B.createElement("path", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
               d:
                 "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -600,7 +600,7 @@ webpackJsonp(
               x2: "74.495",
               y2: "54.063"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -610,7 +610,7 @@ webpackJsonp(
               x2: "124.495",
               y2: "54.063"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -621,28 +621,28 @@ webpackJsonp(
               y2: "54.063"
             })
           ),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "115.4",
             x2: "179.4",
             y2: "115.4"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "145.8",
             x2: "143.3",
             y2: "145.8"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "175.9",
             x2: "179.4",
             y2: "175.9"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "TextLines",
             x1: "73.7",
             y1: "82.7",
@@ -655,7 +655,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Headphones";
         return (
           e.className && (t += " " + e.className),
-          O.createElement(
+          B.createElement(
             "svg",
             {
               version: "1.1",
@@ -667,31 +667,31 @@ webpackJsonp(
               height: "256px",
               viewBox: "-305.5 396.5 256 256"
             },
-            O.createElement(
+            B.createElement(
               "g",
               { className: "HeadPhonesBase" },
-              O.createElement(
+              B.createElement(
                 "g",
                 null,
-                O.createElement("path", {
+                B.createElement("path", {
                   fill: "none",
                   d:
                     "M-176.5,418.7c-37,0-69.5,30.2-69.5,64.5v25.3c11.3,2.3,19.9,12.3,19.9,24.3v8.6l100.9-100.9 C-138.2,427.3-156.7,418.7-176.5,418.7z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-226.2,532.9c0-12-8.5-22-19.9-24.3v-25.3c0-34.4,32.5-64.5,69.5-64.5c19.8,0,38.3,8.6,51.2,21.9l6.9-6.9 c-14.8-15.1-35.7-24.9-58.2-24.9c-42.3,0-79.4,34.8-79.4,74.5v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8c0,7.8,3.6,14.7,9.2,19.3 l40.5-40.5V532.9z"
                 }),
-                O.createElement("path", {
+                B.createElement("path", {
                   d:
                     "M-97.1,508.6v-25.3c0-7.5-1.3-14.8-3.8-21.8l-7.9,7.9c1.2,4.5,1.8,9.1,1.8,13.9v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8 c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8v-29.8C-77.2,520.9-85.8,510.9-97.1,508.6z"
                 })
               )
             ),
-            O.createElement(
+            B.createElement(
               "g",
               { className: "HeadphonesStrike" },
-              O.createElement("line", {
+              B.createElement("line", {
                 fill: "none",
                 x1: "-260.5",
                 y1: "598.5",
@@ -699,14 +699,14 @@ webpackJsonp(
                 y2: "432.4"
               })
             ),
-            O.createElement(
+            B.createElement(
               "g",
               { className: "HeadPhonesFill" },
-              O.createElement("path", {
+              B.createElement("path", {
                 d:
                   "M-226.2,562.7v-21.2l-40.5,40.5c4.3,3.5,9.7,5.6,15.6,5.6C-237.3,587.5-226.2,576.4-226.2,562.7z"
               }),
-              O.createElement("path", {
+              B.createElement("path", {
                 d:
                   "M-118.3,433.7l-6.9,6.9c7.9,8.1,13.7,18,16.5,28.8l7.9-7.9C-104.5,451.1-110.5,441.6-118.3,433.7z"
               })
@@ -715,7 +715,7 @@ webpackJsonp(
         );
       }
       function _() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -728,18 +728,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z"
             })
           )
         );
       }
-      function g() {
-        return O.createElement(
+      function b() {
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -751,7 +751,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("circle", {
+          B.createElement("circle", {
             fill: "none",
             strokeWidth: "10",
             strokeMiterlimit: "10",
@@ -759,7 +759,7 @@ webpackJsonp(
             cy: "128",
             r: "95.333"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "horizontalLine",
             fill: "none",
             strokeWidth: "10",
@@ -770,7 +770,7 @@ webpackJsonp(
             x2: "183.333",
             y2: "128"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             className: "verticalLine",
             fill: "none",
             strokeWidth: "10",
@@ -783,8 +783,8 @@ webpackJsonp(
           })
         );
       }
-      function b() {
-        return O.createElement(
+      function g() {
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -797,24 +797,24 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            O.createElement("circle", {
+            B.createElement("circle", {
               cx: "-146.829",
               cy: "343.911",
               r: "33.526"
             })
           ),
-          O.createElement("path", {
+          B.createElement("path", {
             className: "friendBody",
             d:
               "M-212.147,568.323c0-23.589,10.397-44.736,26.843-59.152c-3.352-0.423-6.774-0.65-10.258-0.65h-22.707 c-39.775,0-56.481,28.271-56.481,63.099V613.5c0,0-0.3,16.369,35.917,21.813s73.652,5,73.652,5 C-192.834,628.122-212.147,600.485-212.147,568.323z"
           }),
-          O.createElement("path", {
+          B.createElement("path", {
             className: "plusCircle",
             d:
               "M-133.49,501.333c-36.998,0-66.99,29.992-66.99,66.99s29.993,66.99,66.99,66.99s66.99-29.992,66.99-66.99 S-96.492,501.333-133.49,501.333z M-94.607,573.323h-33.648v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.648 c-2.761,0-5-2.238-5-5s2.239-5,5-5h33.648v-33.412c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.648c2.761,0,5,2.238,5,5 S-91.846,573.323-94.607,573.323z"
@@ -822,7 +822,7 @@ webpackJsonp(
         );
       }
       function w() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -835,18 +835,18 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z"
           }),
-          O.createElement("path", {
+          B.createElement("path", {
             d:
               "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z"
           }),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "invitePlus" },
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -856,7 +856,7 @@ webpackJsonp(
               x2: "101.5",
               y2: "128"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -869,8 +869,8 @@ webpackJsonp(
           )
         );
       }
-      function E() {
-        return O.createElement(
+      function S() {
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -883,7 +883,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
@@ -893,8 +893,8 @@ webpackJsonp(
           })
         );
       }
-      function S() {
-        return O.createElement(
+      function E() {
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -906,42 +906,42 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { className: "Speaker" },
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "SoundWaves" },
-            O.createElement("path", {
+            B.createElement("path", {
               className: "SoundWavesHighest",
               d:
                 "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
             }),
-            O.createElement("path", {
+            B.createElement("path", {
               className: "SoundWavesHigh",
               d:
                 "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
             }),
-            O.createElement("path", {
+            B.createElement("path", {
               className: "SoundWavesMed",
               d:
                 "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
             }),
-            O.createElement("path", {
+            B.createElement("path", {
               className: "SoundWavesLow",
               d:
                 "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "SoundX" },
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -950,7 +950,7 @@ webpackJsonp(
               x2: "223.167",
               y2: "84.5"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -963,7 +963,7 @@ webpackJsonp(
         );
       }
       function P() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -973,14 +973,14 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             className: "Bubble",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             d:
               "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -989,7 +989,7 @@ webpackJsonp(
             x2: "176.184",
             y2: "128.886"
           }),
-          O.createElement("line", {
+          B.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1001,7 +1001,7 @@ webpackJsonp(
         );
       }
       function x() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -1014,10 +1014,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             null,
-            O.createElement("path", {
+            B.createElement("path", {
               d:
                 "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
             })
@@ -1025,7 +1025,7 @@ webpackJsonp(
         );
       }
       function C() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -1038,7 +1038,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement("path", {
+          B.createElement("path", {
             className: "playTriangle",
             d:
               "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
@@ -1046,7 +1046,7 @@ webpackJsonp(
         );
       }
       function M() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -1059,10 +1059,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { className: "time" },
-            O.createElement("circle", {
+            B.createElement("circle", {
               fill: "none",
               strokeWidth: "10",
               strokeMiterlimit: "10",
@@ -1070,7 +1070,7 @@ webpackJsonp(
               cy: "128.014",
               r: "64"
             }),
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1078,10 +1078,10 @@ webpackJsonp(
               points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "arrow" },
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1089,7 +1089,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "199.735,63.66 199.735,192.366 171.207,163.675"
             }),
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1098,10 +1098,10 @@ webpackJsonp(
               points: "199.735,63.66 199.735,192.366 228.266,163.675"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "alphabet" },
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1109,7 +1109,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "70.268,109.934 94.483,63.635 119.77,109.934"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1120,7 +1120,7 @@ webpackJsonp(
               x2: "112.135",
               y2: "97.861"
             }),
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1133,7 +1133,7 @@ webpackJsonp(
         );
       }
       function k() {
-        return O.createElement(
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -1146,10 +1146,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "g",
             { className: "topFlap" },
-            O.createElement("polyline", {
+            B.createElement("polyline", {
               fill: "#FFFFFF",
               strokeWidth: "10",
               strokeLinejoin: "round",
@@ -1157,10 +1157,10 @@ webpackJsonp(
               points: "234.667,94.167 128.667,26.5 21.333,94.167"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "note" },
-            O.createElement("rect", {
+            B.createElement("rect", {
               x: "58.666",
               y: "50",
               fill: "#FFFFFF",
@@ -1171,10 +1171,10 @@ webpackJsonp(
               height: "119.334"
             })
           ),
-          O.createElement(
+          B.createElement(
             "g",
             { className: "baseEnvelope" },
-            O.createElement("polygon", {
+            B.createElement("polygon", {
               fill: "#FFFFFF",
               strokeWidth: "10",
               strokeLinejoin: "round",
@@ -1182,7 +1182,7 @@ webpackJsonp(
               points:
                 "21.333,94.167 21.333,229.501 234.667,229.501 234.667,94.167 127.333,161.834 \t"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinejoin: "round",
@@ -1192,7 +1192,7 @@ webpackJsonp(
               x2: "21.333",
               y2: "229.501"
             }),
-            O.createElement("line", {
+            B.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinejoin: "round",
@@ -1206,7 +1206,32 @@ webpackJsonp(
         );
       }
       function I() {
-        return O.createElement(
+        return B.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Check",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          B.createElement("polyline", {
+            fill: "none",
+            stroke: "#fff",
+            strokeWidth: "24",
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            strokeMiterlimit: "10",
+            points: "49.5,147.75 95,210.75 206.5,45.25 "
+          })
+        );
+      }
+      function O() {
+        return B.createElement(
           "svg",
           {
             version: "1.1",
@@ -1219,30 +1244,63 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          O.createElement(
+          B.createElement(
             "defs",
             null,
-            O.createElement(
+            B.createElement(
               "linearGradient",
               { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              O.createElement("stop", {
+              B.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
-                "stop-color": "#00ccff"
+                stopColor: "#00ccff"
               }),
-              O.createElement("stop", {
+              B.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
-                "stop-color": "#2d73ff"
+                stopColor: "#2d73ff"
+              })
+            ),
+            B.createElement(
+              "filter",
+              { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
+              B.createElement("feOffset", {
+                result: "offOut",
+                in: "SourceAlpha",
+                dx: "20",
+                dy: "20"
+              }),
+              B.createElement("feGaussianBlur", {
+                result: "blurOut",
+                in: "offOut",
+                stdDeviation: "10"
+              }),
+              B.createElement("feBlend", {
+                in: "SourceGraphic",
+                in2: "blurOut",
+                mode: "normal"
               })
             )
           ),
-          O.createElement("path", {
+          B.createElement("path", {
             fill: "none",
             stroke: "url(#linear)",
             strokeWidth: "24",
             strokeLinecap: "round",
-            strokeLinejoin: "round",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: "10",
+            d: "M206.5,45.25L95,210.75l-45.5-63",
+            strokeDasharray: "365.19 365.19",
+            strokeDashoffset: "0.00"
+          }),
+          B.createElement("path", {
+            fill: "none",
+            opacity: ".2",
+            filter: "url(#f1)",
+            stroke: "url(#linear)",
+            strokeWidth: "24",
+            strokeLinecap: "round",
+            strokeLinejoin: "miter",
             strokeMiterlimit: "10",
             d: "M206.5,45.25L95,210.75l-45.5-63",
             strokeDasharray: "365.19 365.19",
@@ -1250,35 +1308,95 @@ webpackJsonp(
           })
         );
       }
-      (t.t = i),
-        (t.b = r),
-        (t.c = o),
-        (t.f = s),
-        (t.k = a),
-        (t.l = c),
-        (t.g = l),
-        (t.v = u),
-        (t.s = m),
-        (t.r = p),
-        (t.z = h),
-        (t.A = d),
-        (t.x = v),
-        (t.w = f),
-        (t.i = y),
-        (t.h = _),
-        (t.q = g),
-        (t.a = b),
-        (t.j = w),
-        (t.o = E),
-        (t.y = S),
-        (t.m = P),
-        (t.d = x),
-        (t.p = C),
-        (t.u = M),
-        (t.n = k),
-        (t.e = I);
-      var O = n("Jmof");
-      n.n(O);
+      function L() {
+        return B.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Caution",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          B.createElement(
+            "g",
+            { className: "triangle" },
+            B.createElement("path", {
+              stroke: "#020202",
+              strokeWidth: "16",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              d: "M127.9,76.632"
+            }),
+            B.createElement("path", {
+              fill: "none",
+              stroke: "#020202",
+              strokeWidth: "11",
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeMiterlimit: "5",
+              d:
+                "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
+            }),
+            B.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+          ),
+          B.createElement(
+            "g",
+            { className: "exclamation" },
+            B.createElement("line", {
+              fill: "none",
+              stroke: "#020202",
+              strokeWidth: "16",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              x1: "127.9",
+              y1: "76.632",
+              x2: "127.9",
+              y2: "160.07"
+            }),
+            B.createElement("path", {
+              fill: "#020202",
+              d:
+                "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
+            })
+          )
+        );
+      }
+      (t.v = i),
+        (t.c = r),
+        (t.e = o),
+        (t.h = s),
+        (t.m = a),
+        (t.n = c),
+        (t.i = l),
+        (t.x = u),
+        (t.u = m),
+        (t.t = p),
+        (t.B = h),
+        (t.C = d),
+        (t.z = v),
+        (t.y = f),
+        (t.k = y),
+        (t.j = _),
+        (t.s = b),
+        (t.a = g),
+        (t.l = w),
+        (t.q = S),
+        (t.A = E),
+        (t.o = P),
+        (t.f = x),
+        (t.r = C),
+        (t.w = M),
+        (t.p = k),
+        (t.d = I),
+        (t.g = O),
+        (t.b = L);
+      var B = n("Jmof");
+      n.n(B);
     },
     EqgU: function(e, t, n) {
       "use strict";
@@ -1381,11 +1499,11 @@ webpackJsonp(
       function i(e) {
         switch (e) {
           case 1:
-            return Object(g.b)("#Privacy_Private");
+            return Object(b.b)("#Privacy_Private");
           case 2:
-            return Object(g.b)("#Privacy_FriendsOnly");
+            return Object(b.b)("#Privacy_FriendsOnly");
           case 3:
-            return Object(g.b)("#Privacy_Public");
+            return Object(b.b)("#Privacy_Public");
           default:
             return "";
         }
@@ -1393,11 +1511,11 @@ webpackJsonp(
       function r(e) {
         switch (e) {
           case 0:
-            return Object(g.b)("#Privacy_FriendsOnly");
+            return Object(b.b)("#Privacy_FriendsOnly");
           case 1:
-            return Object(g.b)("#Privacy_Public");
+            return Object(b.b)("#Privacy_Public");
           case 2:
-            return Object(g.b)("#Privacy_Private");
+            return Object(b.b)("#Privacy_Private");
           default:
             return "";
         }
@@ -1446,19 +1564,19 @@ webpackJsonp(
             return f.createElement(
               "div",
               { className: "PrivacySaveNotice Saving" },
-              Object(g.b)("#Shared_Saving")
+              Object(b.b)("#Shared_Saving")
             );
           case 3:
             return f.createElement(
               "div",
               { className: "PrivacySaveNotice Error" },
-              Object(g.b)("#Error_Error")
+              Object(b.b)("#Error_Error")
             );
           case 2:
             return f.createElement(
               "div",
               { className: "PrivacySaveNotice Saved" },
-              Object(g.b)("#Shared_Saved")
+              Object(b.b)("#Shared_Saved")
             );
           case 0:
           default:
@@ -1489,7 +1607,7 @@ webpackJsonp(
               d(n);
               break;
             default:
-              Object(b.a)(!1, 'unknown component: "' + i + '"');
+              Object(g.a)(!1, 'unknown component: "' + i + '"');
           }
         }
       }
@@ -1502,19 +1620,19 @@ webpackJsonp(
         y.render(f.createElement(L, { PrivacyStore: n }), e);
       }
       function v(e, t, n) {
-        Object(b.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          g.a.InitDirect(n);
+        Object(g.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
+          b.a.InitDirect(n);
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
       var f = n("Jmof"),
         y = n("wLXD"),
         _ = n("m5yx"),
-        g = n("sVhq"),
-        b = n("4Dav"),
+        b = n("sVhq"),
+        g = n("4Dav"),
         w = (n("kllU"), n("TToO")),
-        E = n("y986"),
-        S = n("mtWM"),
-        P = n.n(S),
+        S = n("y986"),
+        E = n("mtWM"),
+        P = n.n(E),
         x = { ProfileURL: "" },
         C = (function() {
           function e(e, t) {
@@ -1606,8 +1724,8 @@ webpackJsonp(
                     if (1 != n.success)
                       return (
                         ShowAlertDialog(
-                          Object(g.b)("#Error_Error"),
-                          Object(g.b)("#Error_CommentEditFailed")
+                          Object(b.b)("#Error_Error"),
+                          Object(b.b)("#Error_CommentEditFailed")
                         ),
                         !1
                       );
@@ -1616,7 +1734,7 @@ webpackJsonp(
                       i &&
                         i.PrivacySettings &&
                         i.eCommentPermission &&
-                        Object(E.runInAction)(function() {
+                        Object(S.runInAction)(function() {
                           (e.m_PrivacySettings = i.PrivacySettings),
                             (e.m_eCommentPermission = i.eCommentPermission);
                         }),
@@ -1626,18 +1744,18 @@ webpackJsonp(
                   .catch(function(e) {
                     return (
                       ShowAlertDialog(
-                        Object(g.b)("#Error_Error"),
-                        Object(g.b)("#Error_CommentEditFailed")
+                        Object(b.b)("#Error_Error"),
+                        Object(b.b)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
                   })
               );
             }),
-            w.b([E.observable], e.prototype, "m_PrivacySettings", void 0),
-            w.b([E.observable], e.prototype, "m_eCommentPermission", void 0),
-            w.b([E.observable], e.prototype, "m_eSaveStateByKey", void 0),
-            w.b([E.observable], e.prototype, "m_eCommentSaveState", void 0),
+            w.b([S.observable], e.prototype, "m_PrivacySettings", void 0),
+            w.b([S.observable], e.prototype, "m_eCommentPermission", void 0),
+            w.b([S.observable], e.prototype, "m_eSaveStateByKey", void 0),
+            w.b([S.observable], e.prototype, "m_eCommentSaveState", void 0),
             e
           );
         })(),
@@ -1660,28 +1778,28 @@ webpackJsonp(
                   a,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(g.b)("#ProfilePrivacy_BasicDetails"),
+                    strLabel: Object(b.b)("#ProfilePrivacy_BasicDetails"),
                     strReadOnlySetting: i(3)
                   },
-                  Object(g.b)("#ProfilePrivacy_BasicDetails_Desc")
+                  Object(b.b)("#ProfilePrivacy_BasicDetails_Desc")
                 ),
                 f.createElement("div", { className: "ProfilePrivacyHR" }),
                 f.createElement(
                   a,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(g.b)("#ProfilePrivacy_Profile"),
+                    strLabel: Object(b.b)("#ProfilePrivacy_Profile"),
                     PrivacyKey: "PrivacyProfile"
                   },
                   f.createElement(
                     "p",
                     null,
-                    Object(g.b)("#ProfilePrivacy_Profile_Desc")
+                    Object(b.b)("#ProfilePrivacy_Profile_Desc")
                   ),
                   f.createElement(
                     "p",
                     null,
-                    Object(g.b)("#ProfilePrivacy_Profile_Desc2")
+                    Object(b.b)("#ProfilePrivacy_Profile_Desc2")
                   )
                 ),
                 f.createElement(
@@ -1691,11 +1809,11 @@ webpackJsonp(
                     a,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(g.b)("#ProfilePrivacy_GameLibrary"),
+                      strLabel: Object(b.b)("#ProfilePrivacy_GameLibrary"),
                       PrivacyKey: "PrivacyOwnedGames",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(g.b)("#ProfilePrivacy_GameLibrary_Desc"),
+                    Object(b.b)("#ProfilePrivacy_GameLibrary_Desc"),
                     1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                       f.createElement(
                         D,
@@ -1704,7 +1822,7 @@ webpackJsonp(
                           PrivacyKey: "PrivacyPlaytime",
                           LimitPrivacyKey: "PrivacyOwnedGames"
                         },
-                        Object(g.b)("#ProfilePrivacy_Playtime")
+                        Object(b.b)("#ProfilePrivacy_Playtime")
                       )
                   ),
                   f.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -1712,21 +1830,21 @@ webpackJsonp(
                     a,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(g.b)("#ProfilePrivacy_Inventory"),
+                      strLabel: Object(b.b)("#ProfilePrivacy_Inventory"),
                       PrivacyKey: "PrivacyInventory",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(g.d)(
+                    Object(b.d)(
                       "#ProfilePrivacy_Inventory_Desc",
                       f.createElement(
                         "a",
                         { href: x.ProfileURL + "inventory/" },
-                        Object(g.b)("#ProfilePrivacy_Inventory_Inventory")
+                        Object(b.b)("#ProfilePrivacy_Inventory_Inventory")
                       ),
                       f.createElement(
                         "a",
                         { href: x.ProfileURL + "inventory/#753_6" },
-                        Object(g.b)("#ProfilePrivacy_Inventory_TradingCards")
+                        Object(b.b)("#ProfilePrivacy_Inventory_TradingCards")
                       )
                     ),
                     1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -1737,14 +1855,14 @@ webpackJsonp(
                           PrivacyKey: "PrivacyInventoryGifts",
                           LimitPrivacyKey: "PrivacyInventory"
                         },
-                        Object(g.b)("#ProfilePrivacy_Gifts")
+                        Object(b.b)("#ProfilePrivacy_Gifts")
                       )
                   ),
                   f.createElement("div", { className: "ProfilePrivacyHR" }),
                   f.createElement(
                     c,
                     null,
-                    Object(g.b)("#ProfilePrivacy_Comments"),
+                    Object(b.b)("#ProfilePrivacy_Comments"),
                     ":",
                     f.createElement(N, { PrivacyStore: e })
                   ),
@@ -1753,20 +1871,20 @@ webpackJsonp(
                     a,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(g.b)("#ProfilePrivacy_UGC"),
-                      strReadOnlySetting: Object(g.b)("#Privacy_PerItem")
+                      strLabel: Object(b.b)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: Object(b.b)("#Privacy_PerItem")
                     },
-                    Object(g.d)(
+                    Object(b.d)(
                       "#ProfilePrivacy_UGC_Desc",
                       f.createElement(
                         "a",
                         { href: x.ProfileURL + "screenshots/" },
-                        Object(g.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                        Object(b.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                       ),
                       f.createElement(
                         "a",
                         { href: x.ProfileURL + "myworkshopfiles/" },
-                        Object(g.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                        Object(b.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                       )
                     )
                   )
@@ -1787,7 +1905,7 @@ webpackJsonp(
                 this.props.PrivacyKey
               );
               Object(k.a)(
-                f.createElement(R, {
+                f.createElement(H, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPrivacy: t,
                   eMinPrivacy: this.GetMinPrivacy()
@@ -1940,7 +2058,7 @@ webpackJsonp(
             (t = w.b([O.observer], t))
           );
         })(f.Component),
-        R = (function(e) {
+        H = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -1960,7 +2078,7 @@ webpackJsonp(
                         return e.props.OnChange(3);
                       }
                     },
-                    Object(g.b)("#Privacy_Public")
+                    Object(b.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   f.createElement(
@@ -1970,7 +2088,7 @@ webpackJsonp(
                         return e.props.OnChange(2);
                       }
                     },
-                    Object(g.b)("#Privacy_FriendsOnly")
+                    Object(b.b)("#Privacy_FriendsOnly")
                   ),
                 f.createElement(
                   I.d,
@@ -1979,7 +2097,7 @@ webpackJsonp(
                       return e.props.OnChange(1);
                     }
                   },
-                  Object(g.b)("#Privacy_Private")
+                  Object(b.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2005,11 +2123,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(1);
                       },
-                      title: Object(g.b)(
+                      title: Object(b.b)(
                         "#Profile_CommentPermission_Public_Desc"
                       )
                     },
-                    Object(g.b)("#Privacy_Public")
+                    Object(b.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   f.createElement(
@@ -2018,11 +2136,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(0);
                       },
-                      title: Object(g.b)(
+                      title: Object(b.b)(
                         "#Profile_CommentPermission_FriendsOnly_Desc"
                       )
                     },
-                    Object(g.b)("#Privacy_FriendsOnly")
+                    Object(b.b)("#Privacy_FriendsOnly")
                   ),
                 f.createElement(
                   I.d,
@@ -2030,11 +2148,11 @@ webpackJsonp(
                     onSelected: function() {
                       return e.props.OnChange(2);
                     },
-                    title: Object(g.b)(
+                    title: Object(b.b)(
                       "#Profile_CommentPermission_Private_Desc"
                     )
                   },
-                  Object(g.b)("#Privacy_Private")
+                  Object(b.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2042,7 +2160,7 @@ webpackJsonp(
           );
         })(f.Component);
       n("3gXU"),
-        (window.AssertMsg = b.a),
+        (window.AssertMsg = g.a),
         document.addEventListener("DOMContentLoaded", function() {
           Object(_.c)(), p(), h();
         }),
@@ -2094,6 +2212,7 @@ webpackJsonp(
             return (
               (n.m_bVisible = !1),
               (n.m_elSubmenuItem = null),
+              (n.m_timerHideSubMenu = 0),
               (n.m_ownerWindow = t),
               n
             );
@@ -2134,7 +2253,7 @@ webpackJsonp(
             (t.prototype.InternalHide = function() {
               this.m_bVisible &&
                 ((this.m_bVisible = !1),
-                this.HideSubMenu(),
+                this.InternalHideSubMenu(),
                 this.m_fnOnHideCallback && this.m_fnOnHideCallback(),
                 this.m_embeddedElementInstance
                   ? this.m_embeddedElementInstance.Hide(300)
@@ -2154,21 +2273,44 @@ webpackJsonp(
               enumerable: !0,
               configurable: !0
             }),
+            Object.defineProperty(t.prototype, "owner_window", {
+              get: function() {
+                return this.m_ownerWindow;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
             (t.prototype.ShowSubMenu = function(e, t) {
               return this.m_elSubmenuItem == e
-                ? (this.m_submenu.TakeFocus(), null)
-                : (this.HideSubMenu(),
+                ? (this.CancelHideSubMenuTimer(),
+                  this.m_submenu.TakeFocus(),
+                  null)
+                : (this.InternalHideSubMenu(),
                   (this.m_elSubmenuItem = e),
                   (this.m_submenu = new h(this, t(), e)),
                   this.m_submenu.Show(),
                   this.m_submenu);
             }),
+            (t.prototype.CancelHideSubMenuTimer = function() {
+              this.m_timerHideSubMenu > 0 &&
+                (clearTimeout(this.m_timerHideSubMenu),
+                (this.m_timerHideSubMenu = 0));
+            }),
             (t.prototype.HideSubMenu = function() {
-              this.m_submenu &&
-                (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
-                (this.m_elSubmenuItem = null),
-                this.m_submenu.InternalHide(),
-                (this.m_submenu = null));
+              var e = this;
+              if (!this.m_submenu) return void this.CancelHideSubMenuTimer();
+              this.m_timerHideSubMenu > 0 ||
+                (this.m_timerHideSubMenu = window.setTimeout(function() {
+                  e.InternalHideSubMenu(), (e.m_timerHideSubMenu = 0);
+                }, 500));
+            }),
+            (t.prototype.InternalHideSubMenu = function() {
+              this.CancelHideSubMenuTimer(),
+                this.m_submenu &&
+                  (this.BIsFocusInChildHierarchy() && this.TakeFocus(),
+                  (this.m_elSubmenuItem = null),
+                  this.m_submenu.InternalHide(),
+                  (this.m_submenu = null));
             }),
             (t.prototype.TakeFocus = function() {
               this.m_popupContextMenu && this.m_popupContextMenu.Focus(),
@@ -2507,13 +2649,13 @@ and limitations under the License.
       }
       function r() {
         return (
-          window.sessionStorage && "true" == window.sessionStorage.getItem(b)
+          window.sessionStorage && "true" == window.sessionStorage.getItem(g)
         );
       }
       function o(e) {
         e
-          ? window.sessionStorage.setItem(b, "true")
-          : window.sessionStorage.removeItem(b);
+          ? window.sessionStorage.setItem(g, "true")
+          : window.sessionStorage.removeItem(g);
       }
       n.d(t, "c", function() {
         return d;
@@ -2531,7 +2673,7 @@ and limitations under the License.
           return _;
         }),
         n.d(t, "a", function() {
-          return g;
+          return b;
         }),
         (t.f = i),
         (t.h = r),
@@ -2653,8 +2795,15 @@ and limitations under the License.
           }
           return (
             s.c(t, e),
+            (t.prototype.OnSubMenuMouseEnter = function() {
+              this.context.contextMenuInstance.CancelHideSubMenuTimer();
+            }),
             (t.prototype.RenderSubMenu = function() {
-              return c.createElement(d, null, this.props.children);
+              return c.createElement(
+                d,
+                { onMouseEnter: this.OnSubMenuMouseEnter },
+                this.props.children
+              );
             }),
             (t.prototype.OnMouseEnter = function(e) {
               var t = this;
@@ -2691,7 +2840,7 @@ and limitations under the License.
                   }),
                   t,
                   " ",
-                  c.createElement(h.f, null)
+                  c.createElement(h.h, null)
                 )
               );
             }),
@@ -2700,6 +2849,7 @@ and limitations under the License.
                 return null;
               }
             }),
+            s.b([p.a], t.prototype, "OnSubMenuMouseEnter", null),
             s.b([p.a], t.prototype, "RenderSubMenu", null),
             s.b([p.a], t.prototype, "OnMouseEnter", null),
             s.b([p.a], t.prototype, "OnClick", null),
@@ -2817,17 +2967,17 @@ and limitations under the License.
                   y = c || i.right,
                   _ = r.width;
                 s.bMatchWidth && ((_ = y - f), (a.menuWidth = _));
-                var g = (s.bOverlapHorizontal ? y : f) - _,
-                  b = g > 0,
+                var b = (s.bOverlapHorizontal ? y : f) - _,
+                  g = b > 0,
                   w = u - (s.bOverlapHorizontal ? f : y) - _,
-                  E = w > 0,
-                  S = (s.bPreferPopLeft || !E) && b;
-                b ||
-                  E ||
-                  ((S = b > E),
+                  S = w > 0,
+                  E = (s.bPreferPopLeft || !S) && g;
+                g ||
+                  S ||
+                  ((E = g > S),
                   s.bFitToWindow &&
-                    ((_ += (S ? g : w) - 8), (a.menuWidth = _))),
-                  (!s.bPreferPopLeft && E) || !b
+                    ((_ += (E ? b : w) - 8), (a.menuWidth = _))),
+                  (!s.bPreferPopLeft && S) || !g
                     ? (a.menuLeft = s.bOverlapHorizontal ? f : y)
                     : (a.menuRight = u - (s.bOverlapHorizontal ? y : f));
                 var P = l || i.top,
@@ -2956,7 +3106,7 @@ and limitations under the License.
             (t = s.b([a.observer], t))
           );
         })(c.Component),
-        g = (function(e) {
+        b = (function(e) {
           function t(n, i, r) {
             var o =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -2983,6 +3133,8 @@ and limitations under the License.
                   width: 350,
                   height: 1
                 }),
+                (e.availscreenwidth = this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
+                (e.availscreenheight = this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
                 e
               );
             }),
@@ -3005,7 +3157,7 @@ and limitations under the License.
             t
           );
         })(u.a),
-        b = "DEBUG_StickyContextMenus";
+        g = "DEBUG_StickyContextMenus";
     },
     kllU: function(e, t, n) {
       "use strict";
@@ -3262,7 +3414,8 @@ and limitations under the License.
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
           (e[(e.Tooltip = 4)] = "Tooltip"),
-          (e[(e.ContextMenu = 8)] = "ContextMenu");
+          (e[(e.ContextMenu = 8)] = "ContextMenu"),
+          (e[(e.Resizable = 16)] = "Resizable");
       })(i || (i = {}));
       var c = (function() {
           function e(e, t) {
@@ -3622,7 +3775,11 @@ and limitations under the License.
                 t.minHeight && c.push("minheight=" + t.minHeight),
                 t.target_browser &&
                   (c.push("pid=" + t.target_browser.m_unPID),
-                  c.push("browser=" + t.target_browser.m_nBrowserID)),
+                  c.push("browser=" + t.target_browser.m_nBrowserID),
+                  t.availscreenwidth &&
+                    t.availscreenheight &&
+                    (c.push("screenavailwidth=" + t.availscreenwidth),
+                    c.push("screenavailheight=" + t.availscreenheight))),
                 t.strRestoreDetails &&
                   c.push("restoredetails=" + t.strRestoreDetails),
                 c && (a += "?" + c.join("&"));
@@ -3656,12 +3813,12 @@ and limitations under the License.
                 var y = v[f];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var _ = u.document.createElement("link"), g = 0;
-                    g < y.attributes.length;
-                    g++
+                    var _ = u.document.createElement("link"), b = 0;
+                    b < y.attributes.length;
+                    b++
                   ) {
-                    var b = y.attributes.item(g);
-                    _.setAttribute(b.name, b.value);
+                    var g = y.attributes.item(b);
+                    _.setAttribute(g.name, g.value);
                   }
                   d.appendChild(_);
                 }

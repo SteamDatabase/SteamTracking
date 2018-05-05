@@ -204,7 +204,12 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 
 .contextMenuContents .contextMenuLabel.contextMenuNotAFriend
 {
-	margin-bottom: -12px;
+}
+
+.contextMenuContents .recentName
+{
+	margin: 4px;
+	color: #ccc;
 }
 
 .contextMenuContents .contextMenuItem.notFriends.disabled
