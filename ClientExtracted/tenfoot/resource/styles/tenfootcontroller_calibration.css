@@ -39,7 +39,7 @@
 	horizontal-align: center;
 	vertical-align: center;
 	width: 620px;
-	height: 460px;
+	height: 620px;
 
 	opacity: 1.0;
 
@@ -83,7 +83,7 @@
     text-align: center;
 }
 
-.JoysticakCalibration Slider
+.JoystickCalibration Slider
 {
     visibility: visible;
 }
@@ -132,8 +132,8 @@ Slider:Selected
     visibility: collapse;
 }
 
-.JoysticakCalibration .LeftStick,
-.JoysticakCalibration .RightStick
+.JoystickCalibration .LeftStick,
+.JoystickCalibration .RightStick
 {
     visibility: visible;
 }

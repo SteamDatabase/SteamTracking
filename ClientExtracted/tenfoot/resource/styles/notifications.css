@@ -211,53 +211,31 @@
 	width: 100%;
 	height: 70px;
 	z-index: notification2_zindex;
-	margin-right: 180px;
-	margin-left: 133px;
+	margin-right: 200px;
+	margin-left: 153px;
 	margin-top: 62px;
 }
 
 .NotificationTwoLabelBodyLineOne
 {
-    font-size: 20px;
 	width: 100%;
 	height: 70px;
 	z-index: notification2_zindex;
-	margin-right: 150px;
-	margin-left: 123px;
+	margin-right: 200px;
+	margin-left: 153px;
 	margin-top: 52px;
 	opacity: 0.5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-.NotificationTwoLabelBodyLineTwo 
+.NotificationTwoLabelBodyLineTwo
 {
-    font-size: 20px;
 	width: 100%;
 	height: 70px;
 	z-index: notification2_zindex;
-	margin-right: 150px;
-	margin-left: 123px;
+	margin-right: 200px;
+	margin-left: 153px;
 	margin-top: 82px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-
-.NotificationTwoLabelBodyLineOneWrap.NotificationTwoLabelBodyLineOne
-{
-    margin-top: 42px;
-    font-size: 18px;
-}
-
-.NotificationStyleTwoLabelBodyLineTwoWrap.NotificationTwoLabelBodyLineTwo
-{
-    font-size: 18px;
-    margin-top: 77px;
-    white-space: normal;
-}
-
 
 .NotificationLargeLabelBody
 {
@@ -267,6 +245,62 @@
 	margin-right: 116px;
 	margin-left: 152px;
 	margin-top: 42px;
+}
+
+.NotificationOneLabelBodyStreaming
+{
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 180px;
+	margin-left: 133px;
+	margin-top: 62px;
+}
+
+.NotificationTwoLabelBodyLineOneStreaming
+{
+    font-size: 20px;
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 100px;
+	margin-left: 113px;
+	margin-top: 52px;
+	opacity: 0.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.NotificationTwoLabelBodyLineTwoStreaming
+{
+    font-size: 20px;
+	width: 100%;
+	height: 70px;
+	z-index: notification2_zindex;
+	margin-right: 100px;
+	margin-left: 113px;
+	margin-top: 82px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.NotificationTwoLabelBodyLineOne.NotificationTwoLabelBodyLineOneWrap
+{
+    margin-top: 42px;
+    margin-left: 113px;
+    font-size: 18px;
+    margin-right: 100px;
+}
+
+.NotificationTwoLabelBodyLineTwo.NotificationStyleTwoLabelBodyLineTwoWrap
+{
+    font-size: 18px;
+    margin-top: 77px;
+    margin-left: 113px;
+    white-space: normal;
+    margin-right: 100px;
 }
 
 .NotificationAvatarText

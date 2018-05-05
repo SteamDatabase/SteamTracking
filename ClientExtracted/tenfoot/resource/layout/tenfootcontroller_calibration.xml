@@ -22,6 +22,9 @@
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationStart()">
           <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
         </Button>
+        <Button id="GyroButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="GyroCalibrationStart()">
+          <Label class="CalibrationButtonText" text="#ControllerCalibration_Gyro" />
+        </Button>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CancelButton()">
           <Label class="CalibrationButtonText" text="#UI_OK" />
         </Button>

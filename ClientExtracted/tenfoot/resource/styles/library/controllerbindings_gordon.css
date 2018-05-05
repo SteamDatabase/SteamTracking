@@ -1492,7 +1492,7 @@ Label.ModeTitle
 .controller_android .BindingButton.AlwaysOn,
 .controller_apple .BindingButton.AlwaysOn
 {
-	margin-top: 128px;
+	margin-top: 24px;
 }
 
 #AlwaysOn.BindingButton Label

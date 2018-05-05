@@ -94,6 +94,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonDistance" />
 					<Slider id="ButtonDistanceFourButtons" direction="horizontal" />
 				</Panel>
+        <!--
 				<Panel class="FieldWrapper" modes="ABXY" devonly="on" sources="trackpad ABXY" gameactions="off" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHaptics" />
 					<DropDown id="TestHaptics" />
@@ -102,7 +103,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHapticSide" />
 					<DropDown id="TestHapticSide" />
 				</Panel>								
-				
+				-->
 				<!-- Single Button Mode -->
 				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonClick" />
@@ -1092,6 +1093,7 @@
 						<Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_X" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGA" />
 					</Panel>
+          <!-- 
 					<Panel class="FieldWrapper" modes="ABXY" devonly="on" sources="trackpad ABXY" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHapticRepeat" />
 						<Slider id="TestHapticRepeat" direction="horizontal" />
@@ -1103,9 +1105,9 @@
 					<Panel class="FieldWrapper" modes="ABXY" devonly="on" sources="trackpad ABXY" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TestHapticOff" />
 						<Slider id="TestHapticOff" direction="horizontal" />
-					</Panel>						
-
-					<!-- Joystick Move Mode -->
+					</Panel>
+          -->
+          <!-- Joystick Move Mode -->
           <Panel class="FieldWrapper" modes="joystickmove" gameactions="off" advanced="off">
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
             <DropDown id="HapticIntensity_joystick_move" />
