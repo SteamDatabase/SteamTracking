@@ -2946,8 +2946,18 @@ input.new_tool_ds {
 	margin-top: 14px;
 	margin-left: 1px;
 }
+
+.bundleFilter_inputArea {
+	margin-right: 0px;
+}
 .bundleFilter_inputArea input {
 	height: 22px;
+	background: rgba(0,0,0,0.3);
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0px hsla(240, 1%, 28%, 1);
+}
+.bundleFilter_inputArea input::placeholder {
+	font-style: italic;
 }
 h2.bundleFilter_titleArea {
 	margin-top: 20px;
@@ -3023,4 +3033,34 @@ span.new {
 .broadcast_template_radio {
 	display: flex;
 	flex-direction: row;
+}
+
+#restrictions_list_wrapper .boxlist_controls {
+	position: relative;
+	top: -10px;
+	right: -10px;
+}
+
+#restrictions_list_wrapper .boxlist_item {
+	width: 1095px;
+	margin-bottom: 15px;
+}
+
+#restrictions_list_wrapper .cdkeyrestriction_edit_info .formrow .formdata {
+	width: 700px;
+}
+
+#restrictions_list_wrapper .cdkeyrestriction {
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#restrictions_list_wrapper .cdkeyrestriction .cdkeyrestriction_edit_info {
+	float: left;
+	max-width: 880px;
+}
+
+#restrictions_list_wrapper .cdkeyrestriction .cdkeyrestriction_last_mod_info {
+	float: right;
+	max-width: 270px;
 }

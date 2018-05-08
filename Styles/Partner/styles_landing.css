@@ -602,7 +602,7 @@ p {
 	.landingTable td, .landingTable .td {
 		font-size: 12px;
 		padding: 7px 7px 7px 7px;
-		background-color: #333333;
+		background-color: rgba(255,255,255,0.1);
 		display: table-cell;
 		vertical-align: middle;
 		

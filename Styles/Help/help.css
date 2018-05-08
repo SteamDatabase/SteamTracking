@@ -4209,3 +4209,34 @@ table {
 #report_abuse_container {
 	max-width: 712px;
 }
+
+.AccountDataTable
+{
+}
+
+.AccountDataTable th
+{
+    background-color: #445468;
+}
+
+.AccountDataTable th, .AccountDataTable td
+{
+    padding: 8px;
+}
+
+.AccountDataTableFooter
+{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.AccountDataLoadMore
+{
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.AccountDataLoadMore:hover
+{
+    color: #66c0f4;
+}
