@@ -1,0 +1,36 @@
+{
+    "name": "IDOTA2Support_570",
+    "methods": [
+        {
+            "name": "GetPersonalData",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "account_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Account ID of user."
+                },
+                {
+                    "name": "table",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Table index"
+                },
+                {
+                    "name": "page",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "Page requested"
+                }
+            ]
+        },
+        {
+            "name": "GetPersonalDataTables",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}
