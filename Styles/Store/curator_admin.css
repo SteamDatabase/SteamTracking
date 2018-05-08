@@ -650,6 +650,10 @@ body.v6 .reviews_container h3 {
 	background-image: url( '/public/images/curators/icon_faq.png' );
 }
 
+.icon_announcement {
+	background-image: url( '/public/images/curators/icon_announcement.png' );
+}
+
 /** stats */
 .stats_header {
 	margin-bottom: 30px;

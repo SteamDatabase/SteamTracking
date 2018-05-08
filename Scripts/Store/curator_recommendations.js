@@ -322,6 +322,24 @@ function UpdateRecommendationFilterData( refresh )
 		g_oPagingControls.GoToPage(0,true);
 }
 
+function GetPresentationStyle( rgNodeData, sectionType )
+{
+	if( rgNodeData.type == sectionType && rgNodeData.presentation )
+		return rgNodeData.presentation;
+
+	switch( sectionType )
+	{
+		case 'featured_recommendations':
+		case 'featured_creations':
+			return 'featuredcarousel';
+		case 'featured_list':
+			return 'bigthengrid';
+		default:
+	}
+
+	return 'circularlist';
+}
+
 function ShowEditHandles( bIsCreatorHome )
 {
 	$J('.page_section:not(.editing):not(.header_area)').each(function( i, j ){
@@ -340,8 +358,6 @@ function ShowEditHandles( bIsCreatorHome )
 		if( !rgNodeData )
 			return;
 
-
-
 		elButton.click( function(){
 			elOptions.show();
 		});
@@ -349,17 +365,16 @@ function ShowEditHandles( bIsCreatorHome )
 		elOverlay.append( elButton );
 		$container.append( elOverlay );
 
-
 		var elOptions = $J('<form class="edit_options"></form>');
 
 		var elTypeSelect = null;
 		if( !bIsCreatorHome )
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Carousel of Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
 		}
 		else
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Carousel of Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Carousel of Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
 
 		}
 		elTypeSelect.val( rgNodeData.type );
@@ -376,6 +391,9 @@ function ShowEditHandles( bIsCreatorHome )
 
 		elSortSelect.val( rgNodeData.sort );
 
+		var elPresentationSelect = $J("\r\n\t\t\t<select name=\"presentation\">\r\n\t\t\t\t<option value=\"featuredcarousel\">Carousel with custom video or screenshot grid<\/option>\r\n\t\t\t\t<option value=\"circularlist\">List of four small capsules<\/option>\r\n\t\t\t\t<option value=\"bigthengrid\">Large capsule followed by four small capsule grid<\/option>\r\n\t\t\t<\/select>");
+
+		elPresentationSelect.val( GetPresentationStyle( rgNodeData, rgNodeData.type ) );
 
 		var elListName = $J('<span class="fieldvalue"></span>').text( rgNodeData.listid_label ? rgNodeData.listid_label : "Select..." );
 		var elListEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
@@ -390,31 +408,35 @@ function ShowEditHandles( bIsCreatorHome )
 		var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
 
 		elTypeSelect.on('change',function(){
+						elSortSelect.parent().addClass('hidden');
+			elPresentationSelect.parent().addClass('hidden');
+			elListContainer.addClass('hidden');
+			elTagContainer.addClass('hidden');
+
 			switch( elTypeSelect.val() )
 			{
 				case 'featured_recommendations':
 				case 'featured_creations':
 					elSortSelect.parent().removeClass('hidden');
-					elListContainer.addClass('hidden');
-					elTagContainer.addClass('hidden');
+					elPresentationSelect.parent().removeClass('hidden');
 					break;
 				case 'featured_list':
-					elSortSelect.parent().addClass('hidden');
+					elPresentationSelect.parent().removeClass('hidden');
 					elListContainer.removeClass('hidden');
-					elTagContainer.addClass('hidden');
 					break;
 				case 'featured_tag':
 				case 'featured_tag_creation':
-					elSortSelect.parent().addClass('hidden');
-					elListContainer.addClass('hidden');
+					elPresentationSelect.parent().removeClass('hidden');
 					elTagContainer.removeClass('hidden');
 					break;
+				case 'discounted_curations':
+				case 'discounted_creations':
+					elPresentationSelect.parent().removeClass('hidden');
 				default:
-					elSortSelect.parent().addClass('hidden');
-					elListContainer.addClass('hidden');
-					elTagContainer.addClass('hidden');
 					break;
 			}
+
+						elPresentationSelect.val( GetPresentationStyle( rgNodeData, elTypeSelect.val() ) );
 		});
 
 		elSave.click( function(){
@@ -430,6 +452,7 @@ function ShowEditHandles( bIsCreatorHome )
 					sort: elSortSelect.val(),
 					tagid_label: elTagName.text(),
 					listid_label: elListName.text(),
+					presentation: elPresentationSelect.val(),
 					index: elForm.parentNode.dataset.index
 				},
 				type: 'POST',
@@ -539,6 +562,7 @@ function ShowEditHandles( bIsCreatorHome )
 
 		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Presentation Style", elPresentationSelect ));
 		elOptions.append( elListContainer );
 		elOptions.append( elTagContainer );
 		elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );

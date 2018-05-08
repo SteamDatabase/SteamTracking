@@ -32,6 +32,8 @@ var CVideoWatch = function( options )
 	this.m_bEnabledAudioDubTrack = false;
 	this.n_LastPlaybackTime = 0;
 	this.m_bSupportsVideoSuggest = true;
+	this.m_oBookmarkData = {};
+	this.g_sessionID = options.sessionID;
 }
 
 CVideoWatch.k_InBrowser = 1;
@@ -156,7 +158,7 @@ CVideoWatch.prototype.Start = function()
 	this.m_playerUI.SetUniqueSettingsID( this.m_nAppId );
 	this.m_playerUI.SetVideoTitle( this.m_strVideoTitle );
 	this.m_playerUI.SetUseSDLFullscreen( this.m_eClientType != CVideoWatch.k_InBrowser );
-   	this.m_playerUI.Init();
+	this.m_playerUI.Init();
 
 	this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_nViewerSteamID );
 	if ( this.m_eUIMode == CDASHPlayerUI.eUIModeTenFoot )
@@ -176,6 +178,12 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'completedwidevine.VideoWatchEvents', function() { } );
 	$J( this.m_elVideoPlayer ).on( 'togglestats.VideoWatchEvents', function() { _watch.ToggleStats(); } );
 	$J( this.m_elVideoPlayer ).on( 'videosuggest.VideoWatchEvents', function( event, oData ) { _watch.OnVideoSuggestClick( oData ); } );
+	$J( this.m_elVideoPlayer ).on( 'setbookmark.VideoWatchEvents', function() { _watch.SetBookmark() } );
+
+	$J( window ).unload(function() {
+        _watch.SetBookmark( false  ); // make this a synchronous call but since it's on close, it should be ok.
+        return null;
+    });
 
 	this.EnforceAppID();
 	this.GetVideoDetails();
@@ -341,6 +349,7 @@ CVideoWatch.prototype.GetVideoDetails = function()
 	{
 		if ( data.success == 'ready' )
 		{
+			_watch.m_oBookmarkData = data.bookmark;
 			_watch.ShowLoadingContentDiv( false );
 			_watch.LoadVideoMPD( data.video_url );
 		}
@@ -407,6 +416,11 @@ CVideoWatch.prototype.LoadVideoMPD = function( url )
 
 CVideoWatch.prototype.SetResumeTimeForAppID = function()
 {
+	if ( this.m_oBookmarkData )
+	{
+		this.m_rtRestartTime = this.m_oBookmarkData.playback_position_in_seconds;
+	}
+
 	if ( this.m_rtRestartTime > -1 )
 	{
 		this.m_player.SetVODResumeTime( this.m_rtRestartTime );
@@ -425,39 +439,110 @@ CVideoWatch.prototype.SetResumeTimeForAppID = function()
 	$J( this.m_elVideoPlayer ).on( 'timeupdate.VideoWatchEvents', function() { _watch.OnTimeUpdatePlayer(); } );
 }
 
+CVideoWatch.prototype.SetBookmark = function( asyncCall )
+{
+	//console.log( 'SetBookmark Called' );
+	var nCurrentTime = parseInt( this.m_player.m_elVideoPlayer.currentTime.toFixed(0) );
+
+	// figure out the captions to get the adaptation id
+	var timedtext_track_id = 0;
+	var strCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
+	if ( strCode && strCode.toUpperCase() !== CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
+	{
+		var ccRole = endsWith( strCode, CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
+		strCode = strCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' );
+		var rgCaptions = this.m_player.GetClosedCaptionsArray();
+		for ( var i = 0; i < rgCaptions.length; i++ )
+		{
+			var caption = rgCaptions[i];
+			if ( caption.code === strCode && ccRole === caption.roles[ 0 ] )
+			{
+				timedtext_track_id = caption.id;
+				break;
+			}
+		}
+	}
+
+	// now post the data up
+	$J.ajax( {
+		type: "POST",
+		url: "https://store.steampowered.com/video/setbookmark/" + this.m_nAppId + "/",
+		dataType: "json",
+		async: asyncCall,
+		data: {
+			'audio_track_id': CDASHPlayerUI.GetSavedAudioTrackSelected( this.m_nAppId ),
+			'hide_from_library': this.m_oBookmarkData ? this.m_oBookmarkData.hide_from_library : 0,
+			'hide_from_watch_history': this.m_oBookmarkData ? this.m_oBookmarkData.hide_from_watch_history : 0,
+			'playback_position_in_seconds': nCurrentTime,
+			'timedtext_track_id': timedtext_track_id,
+			'video_track_id': CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_nAppId ),
+			'sessionid': this.g_sessionID
+		},
+		success: function ( response ) {
+			//console.log( 'SetBookmark OK' );
+		},
+		error: function ( response ) {
+			//console.log( 'SetBookmark Failed' + JSON.stringify( response ) );
+		}
+	} );
+}
+
 CVideoWatch.prototype.OnTimeUpdatePlayer = function()
 {
 	var nCurrentTime = parseInt( this.m_player.m_elVideoPlayer.currentTime.toFixed(0) );
-	if ( this.n_LastPlaybackTime != nCurrentTime )
+	if ( this.n_LastPlaybackTime !== nCurrentTime )
 	{
+		// save locally
 		this.n_LastPlaybackTime = nCurrentTime;
 		WebStorage.SetLocal( "steam_video_watch_last_time_indicator_" + this.m_nAppId, nCurrentTime );
+
+		// once a minute we'll write back the bookmark info
+		if ( ( nCurrentTime % 60 ) === 0 )
+		{
+			this.SetBookmark( true );
+		}
 	}
 }
 
 CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 {
-	var strClosedCaptionCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
-	if ( !strClosedCaptionCode )
-	{
-		if ( !this.m_bEnabledAudioDubTrack )
-		{
-			for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
-			{
-				if ( CVTTCaptionLoader.LanguageCountryCodes[ strCode ].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
-				{
-					if ( this.m_player.GetLanguageForCurrentAudioTrack() == strCode )
-						strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
-					else
-						strClosedCaptionCode = strCode;
+	var strClosedCaptionCode;
 
-					break;
+	// override if there is bookmark data
+	if ( this.m_oBookmarkData )
+	{
+		// find the adaptation from the track id, then get the language code to use from that.
+		var adaptation = this.m_player.GetAdaptationByTrackID( this.m_oBookmarkData.timedtext_track_id );
+		strClosedCaptionCode = adaptation.language;
+		if ( adaptation.roles[0] == CVTTCaptionLoader.s_Caption )
+		{
+			strClosedCaptionCode += CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT;
+		}
+	}
+	else
+	{
+		strClosedCaptionCode = CDASHPlayerUI.GetSavedClosedCaptionLanguage( this.m_nAppId );
+		if ( !strClosedCaptionCode )
+		{
+			if ( !this.m_bEnabledAudioDubTrack )
+			{
+				for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
+				{
+					if ( CVTTCaptionLoader.LanguageCountryCodes[ strCode ].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+					{
+						if ( this.m_player.GetLanguageForCurrentAudioTrack() == strCode )
+							strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
+						else
+							strClosedCaptionCode = strCode;
+
+						break;
+					}
 				}
 			}
-		}
-		else
-		{
-			strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
+			else
+			{
+				strClosedCaptionCode = CDASHPlayerUI.CLOSED_CAPTIONS_NONE;
+			}
 		}
 	}
 
@@ -471,17 +556,26 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 
 CVideoWatch.prototype.SetAudioTrack = function()
 {
-	var strAudioTrackID = CDASHPlayerUI.GetSavedAudioTrackSelected( this.m_nAppId );
+	var strAudioTrackID;
 
-	if ( !strAudioTrackID )
+	// override if we have bookmark data
+	if ( this.m_oBookmarkData )
 	{
-		// determine the best main or dub audio track for the user
-		for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		strAudioTrackID = this.m_oBookmarkData.audio_track_id;
+	}
+	else
+	{
+		strAudioTrackID = CDASHPlayerUI.GetSavedAudioTrackSelected(this.m_nAppId);
+		if ( !strAudioTrackID )
 		{
-			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+			// determine the best main or dub audio track for the user
+			for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
 			{
-				strAudioTrackID = this.m_player.GetAudioTrackIDForLanguage( strCode );
-				break;
+				if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+				{
+					strAudioTrackID = this.m_player.GetAudioTrackIDForLanguage( strCode );
+					break;
+				}
 			}
 		}
 	}
@@ -497,17 +591,26 @@ CVideoWatch.prototype.SetAudioTrack = function()
 
 CVideoWatch.prototype.SetVideoTrack = function()
 {
-	var strVideoTrackID = CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_nAppId );
+	var strVideoTrackID;
 
-	if ( !strVideoTrackID )
+	// override if we have bookmark data
+	if ( this.m_oBookmarkData )
 	{
-		// determine the best main or dub audio track for the user
-		for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
+		strAudioTrackID = this.m_oBookmarkData.video_track_id;
+	}
+	else
+	{
+		strVideoTrackID = CDASHPlayerUI.GetSavedVideoTrackSelected( this.m_nAppId );
+		if ( !strVideoTrackID )
 		{
-			if ( CVTTCaptionLoader.LanguageCountryCodes[strCode].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+			// determine the best main or dub audio track for the user
+			for ( var strCode in CVTTCaptionLoader.LanguageCountryCodes )
 			{
-				strVideoTrackID = this.m_player.GetVideoTrackIDForLanguage( strCode );
-				break;
+				if ( CVTTCaptionLoader.LanguageCountryCodes[ strCode ].steamLanguage.toUpperCase() == this.m_strLanguage.toUpperCase() )
+				{
+					strVideoTrackID = this.m_player.GetVideoTrackIDForLanguage( strCode );
+					break;
+				}
 			}
 		}
 	}
