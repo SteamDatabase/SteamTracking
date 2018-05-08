@@ -1609,19 +1609,25 @@ ControllerBindingButton.BindingButton.Right
 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #112f47 ), to( #13354c ) );
 }
 
-.controller_switch_pro #CaptureButton.BindingButton,
-.controller_switch_pair #CaptureButton.BindingButton
+#CaptureButton.BindingButton
 {
+    visibility: collapse;
+}
+
+.controller_switch_pro #CaptureButton.BindingButton,
+.controller_switch_pair #CaptureButton.BindingButton {
     background-size: 40px 40px;
-	background-image: url("file://{images}/library/controller/input_controller_glyph_capture.png");
+    background-image: url("file://{images}/library/controller/input_controller_glyph_capture.png");
     background-repeat: no-repeat;
-	background-position: 5px 50%;
+    background-position: 5px 50%;
+    visibility: visible;
 }
 
 .controller_switch_pro #CaptureButton.BindingButton Label,
 .controller_switch_pair #CaptureButton.BindingButton Label
 {
 	margin-left: 64px;
+    visibility: visible;
 }
 
 #BackButton.BindingButton

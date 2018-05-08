@@ -2378,6 +2378,7 @@
 
 	"Library_Controller_Property_Value_On"				"On"
 	"Library_Controller_Property_Value_Off"				"Off"
+	"Library_Controller_Property_Value_Toggle"			"Toggle"
 	"Library_Controller_Property_Value_Pressure"		"Analog"
 	"Library_Controller_Property_Value_AnalogEmulation"	"Analog Emulation"
 	"Library_Controller_Property_Value_CrossGate"		"Cross Gate"
@@ -2440,6 +2441,10 @@
 	"Library_Controller_Property_Value_GyroCircle"		"Circle Button"
 	"Library_Controller_Property_Value_GyroSquare"		"Square Button"
 	"Library_Controller_Property_Value_GyroTriangle"	"Triangle Button"
+	"Library_Controller_Property_Value_GyroCross"		"X Button"
+	"Library_Controller_Property_Value_GyroLStick"		"Left Stick Click"
+	"Library_Controller_Property_Value_GyroRStick"		"Right Stick Click"
+	"Library_Controller_Property_Value_GyroCapture"		"Capture Button"
 	"Library_Controller_Property_Value_Gyro_Yaw"		"Yaw"
 	"Library_Controller_Property_Value_Gyro_Roll"		"Roll"
 	"Library_Controller_Property_Value_Gyro_Pointer"	"Pointer Mode"

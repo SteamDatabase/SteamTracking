@@ -326,7 +326,7 @@
 		14
 		{
 			"name" "France - Paris"
-			"region"	"europe"
+			"region"	"france"
 			"countrycode"	"FR"
 			"latitude"	"48.859961"
 			"longitude"	"2.326540"
@@ -935,6 +935,12 @@
 				159 { "dest"	159 }
 				160 { "dest"	160 }
 				148 { "dest"	148 }
+				166 {  }
+				167 {  }
+				168 {  }
+				169 {  }
+				170 {  }
+				171 {  }
 				48 { "dest"	48 }
 				// Backbone-ish
 				33 				{  					"dest"	33 					"cost"	CostToLeaveChina 				}
@@ -1679,7 +1685,7 @@
 		96
 		{
 			"name" "France - Marseille"
-			"region"	"europe"
+			"region"	"france"
 			"countrycode"	"FR"
 			"latitude"	"43.2932"
 			"longitude"	"5.359612"
@@ -2016,14 +2022,14 @@
 			"transit"	"1"
 			"edges"
 			{
-				4  				{  					"dest"	4   					"cost"  EuropeAndAfrica 				}			 				
-				5  				{  					"dest"	5   					"cost"  EuropeAndAfrica 				}
-				125  				{  					"dest"	125 					"cost"	OneWayCellEdge 				}
-				30  				{  					"dest"	30 					"cost"	OneWayCellEdge 				}
-				126  				{  					"dest"	126 					"cost"	OneWayCellEdge 				}
-				131  				{  					"dest"	131 					"cost"	OneWayCellEdge 				}
-				26  				{  					"dest"	26 					"cost"	OneWayCellEdge 				}					
-				127  				{  					"dest"	127 					"cost"	OneWayCellEdge 				}				
+				4 { "dest"	4	"cost"  EuropeAndAfrica	}			 				
+				5 { "dest"	5	"cost"  EuropeAndAfrica }
+				125 { "dest"	125	"cost"	OneWayCellEdge }
+				30 {   "dest"	30	"cost"	OneWayCellEdge }
+				126 {  "dest"	126	"cost"	OneWayCellEdge }
+				131 {  "dest"	131	"cost"	OneWayCellEdge }
+				26 { "dest"	26	"cost"	OneWayCellEdge }					
+				127 { "dest"	127	"cost"	OneWayCellEdge }				
 			}
 		}		
 		124
@@ -2036,6 +2042,7 @@
 			"edges"
 			{
 				92 { "dest"	92 	"cost"	InwardCost  }
+				172 { "cost" 	OneWayCellEdge }
 			}
 		}
 		125
@@ -2488,6 +2495,7 @@
 				62 { "dest"	62 }
 				39 { "dest"	39 }
 				27 { "dest"	27	"cost"	AggregatorCost }
+				173 { "cost"	OneWayCellEdge }
 			}		
 		}			
 		159
@@ -2576,12 +2584,108 @@
 				5 { "cost"	InwardCost  }
 				38 { "cost"	InwardCost  }
 			}		
-		}		
+		}
+		166
+		{
+			"name" "China - Harbin"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"45.777438"
+			"longitude"	"126.577405"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		167
+		{
+			"name" "China - Kunming"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"24.946498"
+			"longitude"	"102.706997"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		168
+		{
+			"name" "China - Qingdao"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"36.061225"
+			"longitude"	"120.380089"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		169
+		{
+			"name" "China - Urumqi"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"43.814962"
+			"longitude"	"87.597942"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		170
+		{
+			"name" "China - Zhengzhou"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"34.745894"
+			"longitude"	"113.661751"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		171
+		{
+			"name" "China - Changsha"
+			"region"	"china"
+			"countrycode"	"CN"
+			"latitude"	"28.200774"
+			"longitude"	"112.963677"
+			"edges"
+			{
+				47 { "dest"	47	"cost"	InwardCost }
+			}		
+		}
+		172
+		{
+			"name" "Caucasus"
+			"region"	"middle east"
+			"countrycode"	"AM"
+			"latitude"	"41.297088"
+			"longitude"	"45.015069"
+			"edges"
+			{
+				124 { "cost"	InwardCost }
+			}		
+		}
+		173
+		{
+			"name" "Central Asia"
+			"region"	"asia"
+			"countrycode"	"UZ"
+			"latitude"	"41.303812"
+			"longitude"	"69.241240"
+			"edges"
+			{
+				158 { "cost"	InwardCost }
+			}		
+		}
 	}
 	"countries"
 	{
 		//"Afghanistan"	
-		"AF"	128
+		"AF"	173
 			
 		//"Albania"		
 		"AL"	43
@@ -2614,7 +2718,7 @@
 		"AR"	116
 		
 		//"Armenia"		
-		"AM"	124
+		"AM"	172
 		
 		//"Aruba"			
 		"AW"	140
@@ -2626,7 +2730,7 @@
 		"AT"	92
 		
 		//"Azerbaijan"	
-		"AZ"	124
+		"AZ"	172
 		
 		//"Bahamas"		
 		"BS"	140
@@ -2818,7 +2922,7 @@
 		"GM"	130
 		
 		//"Georgia"						
-		"GE"	124
+		"GE"	172
 		
 		//"Germany"						
 		"DE"	5
@@ -2935,7 +3039,7 @@
 		"KW"	127
 		
 		//"Kyrgyzstan"					
-		"KG"	158
+		"KG"	173
 		
 		//"Lao People's Democratic Republic"			
 		"LA"	34
@@ -3220,7 +3324,7 @@
 		"TW"	9
 		
 		//"Tajikistan"					
-		"TJ"	158
+		"TJ"	173
 		
 		//"Tanzania	United Republic of"
 		"TZ"	131
@@ -3250,7 +3354,7 @@
 		"TR"	124
 		
 		//"Turkmenistan"					
-		"TM"	158
+		"TM"	173
 		
 		//"Turks and Caicos Islands"			
 		"TC"	140
@@ -3280,7 +3384,7 @@
 		"UY"	116
 		
 		//"Uzbekistan"					
-		"UZ"	158
+		"UZ"	173
 		
 		//"Vanuatu"						
 		"VU"	0

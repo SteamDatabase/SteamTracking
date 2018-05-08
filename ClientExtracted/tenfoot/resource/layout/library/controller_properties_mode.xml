@@ -32,6 +32,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
 				</Panel>
+        <Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
+          <DropDown id="GyroButtonDpad" />
+        </Panel>     
 				<Panel class="FieldWrapper" modes="DPad" advanced="off" gameactions="on"> 
 					<Label class="FieldLabel" text="#Gamepad_Up" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGA" />
@@ -63,7 +67,10 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_AnalogEmulationDutyCyclePct" />
           <Slider id="AnalogEmulationDutyCyclePct" direction="horizontal" />
         </Panel>
-
+        <Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvertDpad" />
+        </Panel>
         <!-- ABXY Mode -->
 				<!-- Now In Activators
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" gameactions="off">
@@ -119,7 +126,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 					<DropDown id="GyroButton_joystick_move" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
+        <Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvert_joystick_move" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
 					<DropDown id="OutputJoystick_joystick_move" />
 				</Panel>
@@ -127,10 +138,6 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="Click_joystick_move" />
 				</Panel>	
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
-					<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBinding_joystick_move" />
-				</Panel>
         <Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="on" dependency="MouseOutput" >
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
           <Slider id="MouseSensitivity_joystick_moveGA" direction="horizontal" />
@@ -167,6 +174,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 					<DropDown id="GyroButton_joystick_mouse" />
 				</Panel>
+        <Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvert_joystick_mouse" />
+        </Panel>        
 				<Panel class="FieldWrapper" modes="joystickmouse" advanced="off" sources="trackpad joystick ABXY button trigger">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="Click_joystick_mouse" />
@@ -270,6 +281,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 					<DropDown id="GyroButtonAbsMouse" />
 				</Panel>
+        <Panel class="FieldWrapper" modes="absmouse" gameactions="off" sources="gyro" advanced="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvertAbsMouse" />
+        </Panel>        
 				<Panel class="FieldWrapper" modes="absmouse" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
 					<Slider id="Sensitivity" direction="horizontal" />
@@ -296,10 +311,6 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
 					<Slider id="MouseTriggerClampAmount" direction="horizontal" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="absmouse" gameactions="off" sources="gyro" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
-					<DropDown id="GyroButtonInvertAbsMouse" />
-				</Panel>
 						
 				<!-- Mouse Joystick Mode -->
 				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger" advanced="off">
@@ -310,7 +321,11 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
 					<DropDown id="GyroButtonMouseJoystick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="off">
+        <Panel class="FieldWrapper" modes="MouseJoystick" gameactions="off" sources="gyro" advanced="off" visualization="off">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
+          <DropDown id="GyroButtonInvertMouseJoystick" />
+        </Panel>
+        <Panel class="FieldWrapper" modes="MouseJoystick" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_Sensitivity" />
           <Label class="FieldLabelDark" text="#Library_Details_FieldLabel_Sensitivity_Mouse_Joystick_Warning"  />
         </Panel>
@@ -827,11 +842,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseGyroRight" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickGyroRight" />
 				</Panel>			
-				<!-- Mouse Joystick Mode Advanced -->
-				<Panel class="FieldWrapper" modes="MouseJoystick" gameactions="off" sources="gyro" advanced="on" visualization="off">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
-					<DropDown id="GyroButtonInvertMouseJoystick" />
-				</Panel>					
+				<!-- Mouse Joystick Mode Advanced -->			
 				<Panel class="FieldWrapper" modes="MouseJoystick" advanced="on" sources="trackpad joystick ABXY button trigger" visualization="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTap" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="DoubleTapMouseJoystick" />
@@ -1041,18 +1052,14 @@
 						<Label class="FieldLabel" text="#Gamepad_Down" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGA" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
-						<DropDown id="GyroButtonDpad" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" advanced="on" sources="gyro">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
-						<Slider id="GyroNeutralAngleDpad" direction="horizontal" />
-					</Panel>
 					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 					</Panel>
+          <Panel class="FieldWrapper" modes="dpad" advanced="off" sources="gyro">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroNeutralAngle" />
+            <Slider id="GyroNeutralAngleDpad" direction="horizontal" />
+          </Panel>          
 					<!-- Dpad Mode Advanced -->
 					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
@@ -1066,10 +1073,6 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
 						<DropDown id="EdgeBindingInvertDpad" />
 					</Panel>
-				<Panel class="FieldWrapper" modes="dpad" gameactions="off" sources="gyro" advanced="on">
-					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
-					<DropDown id="GyroButtonInvertDpad" />
-				</Panel>
 					<!-- ABXY Mode -->
 
 					<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="off">
@@ -1115,11 +1118,12 @@
 					<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputAxis" />
 						<DropDown id="OutputAxis_joystick_move" />
-					</Panel>					
-					<Panel class="FieldWrapper" modes="joystickmove" gameactions="off" sources="gyro" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
-						<DropDown id="GyroButtonInvert_joystick_move" />
-					</Panel>	
+					</Panel>
+          <Panel class="FieldWrapper" modes="joystickmove" advanced="off" gameactions="off">
+            <Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBinding_joystick_move" />
+          </Panel>
+          
           <!-- Joystick Move Mode Advanced -->
 					<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroLockExtents" />
@@ -1150,10 +1154,6 @@
 					<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" advanced="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputAxis" />
 						<DropDown id="OutputAxis_joystick_mouse" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" sources="gyro" advanced="off">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
-						<DropDown id="GyroButtonInvert_joystick_mouse" />
 					</Panel>
 					<!-- Joystick Move Mode Advanced -->
 
@@ -1210,7 +1210,7 @@
             <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
             <Slider id="JoystickCameraMouseSensitivity" direction="horizontal" />
           </Panel>
-				<Panel class="FieldWrapper" modes="joystickcamera" gameactions="off" sources="gyro" advanced="on">
+				<Panel class="FieldWrapper" modes="joystickcamera" gameactions="off" sources="gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
 					<DropDown id="GyroButtonInvertJoystickCamera" />
 				</Panel>
