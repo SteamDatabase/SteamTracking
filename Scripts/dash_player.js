@@ -1232,6 +1232,7 @@ CDASHPlayer.prototype.GetClosedCaptionsArray = function()
 				display: adaptation.language,
 				url: adaptation.representations[0].closedCaptionFile,
 				roles: adaptation.roles,
+				id: adaptation.id
 			};
 
 			for ( var lang in CVTTCaptionLoader.LanguageCountryCodes )
@@ -2756,7 +2757,7 @@ CSegmentLoader.prototype.GetAmountBuffered = function( nAtTime )
 {
 	// include data we haven't fed to player
 	var nBuffered = this.GetAmountBufferedInPlayer( nAtTime );
-   	for ( var i = 0; i < this.m_bufSegments.length; i++ )
+	for ( var i = 0; i < this.m_bufSegments.length; i++ )
 	{
 		nBuffered += this.m_bufSegments[i].duration;
 	}
@@ -6262,14 +6263,14 @@ CDASHPlayerUI.prototype.SetClosedCaptionLanguageInUI = function( strCode )
 		else
 		{
 			var strRestoreLang = 'None';
-			if ( strCode.toUpperCase() != CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
+			if ( strCode.toUpperCase() !== CDASHPlayerUI.CLOSED_CAPTIONS_NONE.toUpperCase() )
 			{
 				var ccRole = endsWith( strCode, CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT ) ? CVTTCaptionLoader.s_Caption : CVTTCaptionLoader.s_Subtitle;
-				var strCode = strCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' );
+				strCode = strCode.replace( CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT, '' );
 
 				strRestoreLang = CVTTCaptionLoader.GetDisplayNameFromCode( strCode );
 
-				if ( ccRole == CVTTCaptionLoader.s_Caption )
+				if ( ccRole === CVTTCaptionLoader.s_Caption )
 				{
 					strRestoreLang += ' (CC)';
 				}
@@ -6375,6 +6376,8 @@ CDASHPlayerUI.prototype.SaveClosedCaptionLanguage = function()
 
 	if ( strCaptionCode != CDASHPlayerUI.CLOSED_CAPTIONS_NONE )
 		$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Caption Language', strCaptionCode ] );
+
+	$J( this.m_player.m_elVideoPlayer ).trigger( 'setbookmark' );
 }
 
 CDASHPlayerUI.prototype.LoadClosedCaptionOptions = function()
@@ -6514,6 +6517,7 @@ CDASHPlayerUI.prototype.SaveAudioTrackSelected = function()
 	WebStorage.SetLocal( "audio_track_" + this.m_strUniqueSettingsID, strAudioTrackSelected );
 
 	$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Audio Track', strAudioTrackSelected ] );
+
 }
 
 
@@ -6590,6 +6594,7 @@ CDASHPlayerUI.prototype.SaveVideoTrackSelected = function()
 	WebStorage.SetLocal( "video_track_" + this.m_strUniqueSettingsID, strVideoTrackSelected );
 
 	$J( this.m_player.m_elVideoPlayer ).trigger( 'logevent', [ 'Video Track', strVideoTrackSelected ] );
+	$J( this.m_player.m_elVideoPlayer ).trigger( 'setbookmark' );
 }
 
 CDASHPlayerUI.prototype.DisplayNotification = function( strNotification, nDisplayTimeMS )
@@ -7272,126 +7277,126 @@ CVTTCaptionLoader.GetDisplayNameFromCode = function( strCode )
 }
 
 CVTTCaptionLoader.LanguageCountryCodes = {
-    "ar-SA":{
-        "displayName":"Arabic",
-        "steamLanguage":"arabic"
-    },
-    "bg-BG":{
-        "displayName":"Bulgarian",
-        "steamLanguage":"bulgarian"
-    },
-    "cs-CZ":{
-        "displayName":"Czech",
-        "steamLanguage":"czech"
-    },
-    "da-DK":{
-        "displayName":"Danish",
-        "steamLanguage":"danish"
-    },
-    "en-US":{
-        "displayName":"English",
-        "steamLanguage":"english"
-    },
-    "fi-FI":{
-        "displayName":"Finnish",
-        "steamLanguage":"finnish"
-    },
-    "fr-FR":{
-        "displayName":"French",
-        "steamLanguage":"french"
-    },
-    "fr-CA":{
-        "displayName":"French-Canada",
-        "steamLanguage":"french_canada"
-    },
-    "de-DE":{
-        "displayName":"German",
-        "steamLanguage":"german"
-    },
-    "el-GR":{
-        "displayName":"Greek",
-        "steamLanguage":"greek"
-    },
-    "es-ES":{
-        "displayName":"Spanish",
-        "steamLanguage":"spanish"
-    },
-    "es-MX":{
-        "displayName":"Spanish - Latin American",
-        "steamLanguage":"mexican"
-    },
-    "hu-HU":{
-        "displayName":"Hungarian",
-        "steamLanguage":"hungarian"
-    },
-    "it-IT":{
-        "displayName":"Italian",
-        "steamLanguage":"italian"
-    },
-    "ja-JP":{
-        "displayName":"Japanese",
-        "steamLanguage":"japanese"
-    },
-    "ko-KR":{
-        "displayName":"Korean",
-        "steamLanguage":"koreana"
-    },
-    "nl-NL":{
-        "displayName":"Dutch",
-        "steamLanguage":"dutch"
-    },
-    "nb-NO":{
-        "displayName":"Norwegian",
-        "steamLanguage":"norwegian"
-    },
-    "pl-PL":{
-        "displayName":"Polish",
-        "steamLanguage":"polish"
-    },
-    "pt-BR":{
-        "displayName":"Portuguese-Brazil",
-        "steamLanguage":"brazilian"
-    },
-    "pt-PT":{
-        "displayName":"Portuguese",
-        "steamLanguage":"portuguese"
-    },
-    "ro-RO":{
-        "displayName":"Romanian",
-        "steamLanguage":"romanian"
-    },
-    "ru-RU":{
-        "displayName":"Russian",
-        "steamLanguage":"russian"
-    },
-    "sv-SE":{
-        "displayName":"Swedish",
-        "steamLanguage":"swedish"
-    },
-    "th-TH":{
-        "displayName":"Thai",
-        "steamLanguage":"thai"
-    },
-    "tr-TR":{
-        "displayName":"Turkish",
-        "steamLanguage":"turkish"
-    },
-    "uk-UA":{
-        "displayName":"Ukrainian",
-        "steamLanguage":"ukrainian"
-    },
-    "vi-VN":{
-        "displayName":"Vietnamese",
-        "steamLanguage":"vietnamese"
-    },
-    "zh-CH":{
-        "displayName":"Simplified Chinese",
-        "steamLanguage":"schinese"
+	"ar-SA":{
+		"displayName":"Arabic",
+		"steamLanguage":"arabic"
 	},
-    "zh-CN":{
-        "displayName":"Traditional Chinese",
-        "steamLanguage":"tchinese"
-    },
+	"bg-BG":{
+		"displayName":"Bulgarian",
+		"steamLanguage":"bulgarian"
+	},
+	"cs-CZ":{
+		"displayName":"Czech",
+		"steamLanguage":"czech"
+	},
+	"da-DK":{
+		"displayName":"Danish",
+		"steamLanguage":"danish"
+	},
+	"en-US":{
+		"displayName":"English",
+		"steamLanguage":"english"
+	},
+	"fi-FI":{
+		"displayName":"Finnish",
+		"steamLanguage":"finnish"
+	},
+	"fr-FR":{
+		"displayName":"French",
+		"steamLanguage":"french"
+	},
+	"fr-CA":{
+		"displayName":"French-Canada",
+		"steamLanguage":"french_canada"
+	},
+	"de-DE":{
+		"displayName":"German",
+		"steamLanguage":"german"
+	},
+	"el-GR":{
+		"displayName":"Greek",
+		"steamLanguage":"greek"
+	},
+	"es-ES":{
+		"displayName":"Spanish",
+		"steamLanguage":"spanish"
+	},
+	"es-MX":{
+		"displayName":"Spanish - Latin American",
+		"steamLanguage":"mexican"
+	},
+	"hu-HU":{
+		"displayName":"Hungarian",
+		"steamLanguage":"hungarian"
+	},
+	"it-IT":{
+		"displayName":"Italian",
+		"steamLanguage":"italian"
+	},
+	"ja-JP":{
+		"displayName":"Japanese",
+		"steamLanguage":"japanese"
+	},
+	"ko-KR":{
+		"displayName":"Korean",
+		"steamLanguage":"koreana"
+	},
+	"nl-NL":{
+		"displayName":"Dutch",
+		"steamLanguage":"dutch"
+	},
+	"nb-NO":{
+		"displayName":"Norwegian",
+		"steamLanguage":"norwegian"
+	},
+	"pl-PL":{
+		"displayName":"Polish",
+		"steamLanguage":"polish"
+	},
+	"pt-BR":{
+		"displayName":"Portuguese-Brazil",
+		"steamLanguage":"brazilian"
+	},
+	"pt-PT":{
+		"displayName":"Portuguese",
+		"steamLanguage":"portuguese"
+	},
+	"ro-RO":{
+		"displayName":"Romanian",
+		"steamLanguage":"romanian"
+	},
+	"ru-RU":{
+		"displayName":"Russian",
+		"steamLanguage":"russian"
+	},
+	"sv-SE":{
+		"displayName":"Swedish",
+		"steamLanguage":"swedish"
+	},
+	"th-TH":{
+		"displayName":"Thai",
+		"steamLanguage":"thai"
+	},
+	"tr-TR":{
+		"displayName":"Turkish",
+		"steamLanguage":"turkish"
+	},
+	"uk-UA":{
+		"displayName":"Ukrainian",
+		"steamLanguage":"ukrainian"
+	},
+	"vi-VN":{
+		"displayName":"Vietnamese",
+		"steamLanguage":"vietnamese"
+	},
+	"zh-CH":{
+		"displayName":"Simplified Chinese",
+		"steamLanguage":"schinese"
+	},
+	"zh-CN":{
+		"displayName":"Traditional Chinese",
+		"steamLanguage":"tchinese"
+	},
 }
 
 //////////////////////////////////////////////////

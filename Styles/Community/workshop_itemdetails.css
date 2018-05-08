@@ -3572,6 +3572,12 @@ h2.stats {
 	color: #ededed;
 }
 
+.workshop_item_revert_dialog_explanation
+{
+	padding-bottom: 10px;
+	width: 500px;
+}
+
 .commentsLink.changeLog
 {
 	padding-bottom: 20px;

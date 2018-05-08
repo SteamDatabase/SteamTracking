@@ -117,6 +117,23 @@
 	cursor: default;
 }
 
+.formRowGroupings {
+	background-color: #303d4a;
+	padding: 2px;
+}
+
+.formRowHR {
+	border-color: #364862;
+}
+
+.formRowMultiLineText {
+	line-height: normal;
+	display: inline-flex;
+}
+
+.formRowInlineHint {
+	color: #6a7177;
+}
 html.responsive .formRow {
 	padding-left: 0;
 }
