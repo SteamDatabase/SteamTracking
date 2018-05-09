@@ -181,9 +181,9 @@ CVideoWatch.prototype.Start = function()
 	$J( this.m_elVideoPlayer ).on( 'setbookmark.VideoWatchEvents', function() { _watch.SetBookmark() } );
 
 	$J( window ).unload(function() {
-        _watch.SetBookmark( false  ); // make this a synchronous call but since it's on close, it should be ok.
-        return null;
-    });
+		_watch.SetBookmark( false  ); // make this a synchronous call but since it's on close, it should be ok.
+		return null;
+	});
 
 	this.EnforceAppID();
 	this.GetVideoDetails();
@@ -513,10 +513,13 @@ CVideoWatch.prototype.SetClosedCaptionLanguage = function()
 	{
 		// find the adaptation from the track id, then get the language code to use from that.
 		var adaptation = this.m_player.GetAdaptationByTrackID( this.m_oBookmarkData.timedtext_track_id );
-		strClosedCaptionCode = adaptation.language;
-		if ( adaptation.roles[0] == CVTTCaptionLoader.s_Caption )
+		if ( adaptation )
 		{
-			strClosedCaptionCode += CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT;
+			strClosedCaptionCode = adaptation.language;
+			if ( adaptation.roles[ 0 ] == CVTTCaptionLoader.s_Caption )
+			{
+				strClosedCaptionCode += CDASHPlayerUI.CLOSED_CAPTIONS_SELECT_EXT;
+			}
 		}
 	}
 	else
