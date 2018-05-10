@@ -1846,7 +1846,6 @@
  T GetIMENullImpl()
  T GetLanguageICUName(ELanguage)
  T GetNoEscCharConversion()
- T GetScreenSizeFromPointImpl(int&, int&, int&, int&, int, int)
  T GetWorkspaceBoundsImpl(int, int, int, int, int&, int&, int&, int&)
  T HKeyGet(ERegKeyRoot)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)

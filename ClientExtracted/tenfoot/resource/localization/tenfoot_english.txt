@@ -1458,6 +1458,7 @@
 	"Checkout_Review_Purchase"					"Purchase"
 	"Checkout_Review_EditPayment"				"Edit Payment Method"
 	"Checkout_Review_AgreeTerms"				"I agree to the terms of the Steam Subscriber Agreement (last updated March 16, 2015.)"
+	"Checkout_Review_AgreeTerms2"				"I agree to the terms of the Steam Subscriber Agreement (last updated {s:ssa_last_update}.)"
 	"Checkout_Review_PaymentMethod"				"Payment Method"
 	"Checkout_Review_GiftOptions"				"Gift Options"
 	"Checkout_Review_BillingAddress"			"Billing Address"
@@ -6585,6 +6586,7 @@
 	"controller_ps4"									"PlayStation 4 Controller"
 	"controller_wii"									"Wii Controller"
 	"controller_apple"									"Apple Controller"
+	"controller_android"								"Android Controller"
 	"controller_switch_pro"								"Nintendo Switch Pro Controller"
 	"controller_switch_joycon_pair"						"Nintendo Switch JoyCon Pair"
 
@@ -6818,4 +6820,17 @@
     "SettingsBluetoothDevice_Type_Gamepad" "Gamepad"
     "SettingsBluetoothDevice_Type_Unknown" "Unknown"
 
+    "ControllerBLEUpdate_Title" "Steam Controller BLE Update"
+    "ControllerBLEUpdate_Body" "This allows the Steam Controller to connect to mobile devices over BLE. This will take several minutes and can only be done through a wired connection. \n\nDo not disconnect your device or it may be damaged!"
+    "ControllerBLERollback_Title" "Steam Controller FW Rollback"
+    "ControllerBLERollback_Body" "This restores the normal Steam Controller firmware. This can only be done through a wired connection.Rolling back will take a minute and cannot be interrupted.\n\nDo not disconnect your device or it may be damaged!"
+    "ControllerBLEUpdate_Title_Part2" "Firmware Update In-Progress"
+    "ControllerBLEUpdate_Body_Part2" "Do not disconnect your device or it may be damaged!"
+    "ControllerBLEUpdate_Title_Done" "Steam Controller BLE Update Successful"
+    "ControllerBLEUpdate_Body_Done" "Go to this link for link on how to use your device. You will have to repair to your dongle before using proprietary radio mode"
+    "ControllerBLEUpdate_Error_Title" "Firmware Update Error!"
+    "ControllerBLEUpdate_Error_Body" "Please make sure your device is plugged in and hit the rollback button"
+    "ControllerBLEUpdate_Button_Done" "Done"
+	"ControllerBLEUpdate_BLEFW" "BLE FW"
+    "ControllerBLEUpdate_Rollback" "ROLLBACK FW"
 }

@@ -45,7 +45,7 @@
 			</Panel>
 			<Panel class="VerticalRule" />
 			<Panel id="PurchaseButtons" class="CheckoutBodyRightColumn">
-				<ToggleButton id="AgreeTerms" class="CheckBox" text="#Checkout_Review_AgreeTerms" />
+				<ToggleButton id="AgreeTerms" class="CheckBox" text="#Checkout_Review_AgreeTerms2" />
 				<Label id="CreditCardSecurityCodeLabel" class="PaymentMethodHeader" text="#Checkout_Review_SecurityCode" />
 				<TextEntry id="ReviewCreditCardSecurityCode" maxchars="4"
 					textinputid="CheckoutFormTextEntryLeft"

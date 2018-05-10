@@ -553,6 +553,7 @@
  GetCPUInformation()
  GetMiniDumpBuildID
  GetMiniDumpSteamID
+ GetOSType
  Log
  Msg
  OSAtomicCompareAndSwap32Barrier
@@ -861,6 +862,7 @@
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CHTMLBaseProtoBufMsg::BDeserializeCrossProc(CUtlBuffer*, EHTMLCommands*, unsigned int*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
+ T CHTMLController::AckSharedPaintBuffer(int)
  T CHTMLController::BClearCacheAndRestartCEF()
  T CHTMLController::BDispatchThreadedPaintCommand(HTMLCommandBuffer_t*)
  T CHTMLController::BExitMasterCEFProcess()

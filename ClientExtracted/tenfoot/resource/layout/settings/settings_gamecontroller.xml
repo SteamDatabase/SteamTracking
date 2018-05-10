@@ -91,10 +91,10 @@
 							<Label class="LongDesc" text="#SettingsController_Calibrate" />
 						</Button>
 						<Button id="ExperimentalUpgradeButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade( true );">
-							<Label class="LongDesc" text="EXPERIMENTAL FW" />
+							<Label class="LongDesc" text="#ControllerBLEUpdate_BLEFW" />
 						</Button>
             <Button id="ExperimentalRollbackButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ControllerExperimentalUpgrade( false );">
-              <Label class="LongDesc" text="ROLLBACK FW" />
+              <Label class="LongDesc" text="#ControllerBLEUpdate_Rollback" />
             </Button>
             			<Button id="BindControllerButton" class="Button ControllerDetailsButton" selectionpos="auto" onactivate="ShowBindingScreen();">
              	 			<Label class="LongDesc" text="#SettingsController_EnableBindingMode" />

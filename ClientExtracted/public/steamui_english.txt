@@ -513,6 +513,11 @@ This should take less than a minute."
 "Steam_MustRestart_Button"		"Restart Steam"
 "Steam_MustRestart_Language"		"You must restart Steam now to change your language settings."
 
+"Steam_ChangeBeta_Title"		"Steam - Beta Participation"
+"Steam_ChangeBeta_Text"			"Do you want to participate in the Steam beta program ?\nSteam will restart in order to receive the beta client."
+"Steam_RemoveBeta_Text"			"Do you want to remove yourself from all beta programs?\nSteam will restart in order to restore the regular client."
+"Steam_ChangeBeta_Button"		"Change Beta"
+
 "Steam_CSConnectionLost_Title"	"Steam - Connection Lost"
 "Steam_CSConnectionLost_Info"	"The connection to the Steam content servers has been lost,\nmaking it impossible to continue running Steam.\nThis could be due to a problem with your Internet connection, or with the \nSteam servers. Please check www.steampowered.com for more info."
 "Steam_CSConnectionLost_Button"	"Exit Steam"
