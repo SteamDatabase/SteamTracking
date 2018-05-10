@@ -3559,13 +3559,14 @@ h2.stats {
 }
 
 /* change log */
-.headline span.change_log_edit
-{
+.changelog.headline {
+	display: inline-block;
 }
-.headline span.change_log_edit a
+span.change_log_edit
 {
-	font-size: 12px;
-	color: #555555;
+	float: right;
+	margin-left: 10px;
+	margin-top: 30px;
 }
 .headline span.change_log_edit:hover a
 {
