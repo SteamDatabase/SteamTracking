@@ -1024,7 +1024,7 @@ webpackJsonp(
           )
         );
       }
-      function C() {
+      function M() {
         return B.createElement(
           "svg",
           {
@@ -1045,7 +1045,7 @@ webpackJsonp(
           })
         );
       }
-      function M() {
+      function C() {
         return B.createElement(
           "svg",
           {
@@ -1389,8 +1389,8 @@ webpackJsonp(
         (t.A = E),
         (t.o = P),
         (t.f = x),
-        (t.r = C),
-        (t.w = M),
+        (t.r = M),
+        (t.w = C),
         (t.p = k),
         (t.d = I),
         (t.g = O),
@@ -1616,7 +1616,7 @@ webpackJsonp(
         try {
           t = JSON.parse(e.getAttribute("data-privacysettings"));
         } catch (e) {}
-        var n = new C(t.PrivacySettings, t.eCommentPermission);
+        var n = new M(t.PrivacySettings, t.eCommentPermission);
         y.render(f.createElement(L, { PrivacyStore: n }), e);
       }
       function v(e, t, n) {
@@ -1634,7 +1634,7 @@ webpackJsonp(
         E = n("mtWM"),
         P = n.n(E),
         x = { ProfileURL: "" },
-        C = (function() {
+        M = (function() {
           function e(e, t) {
             (this.m_eSaveStateByKey = new Map()),
               (this.m_eCommentSaveState = 0),
@@ -1759,7 +1759,7 @@ webpackJsonp(
             e
           );
         })(),
-        M = n("KLxG"),
+        C = n("KLxG"),
         k = n("JyW5"),
         I = n("aMRU"),
         O = n("Mn8c"),
@@ -1905,7 +1905,7 @@ webpackJsonp(
                 this.props.PrivacyKey
               );
               Object(k.a)(
-                f.createElement(H, {
+                f.createElement(T, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPrivacy: t,
                   eMinPrivacy: this.GetMinPrivacy()
@@ -1955,8 +1955,8 @@ webpackJsonp(
                 })
               );
             }),
-            w.b([M.a], t.prototype, "OnClick", null),
-            w.b([M.a], t.prototype, "OnSettingChanged", null),
+            w.b([C.a], t.prototype, "OnClick", null),
+            w.b([C.a], t.prototype, "OnSettingChanged", null),
             (t = w.b([O.observer], t))
           );
         })(f.Component),
@@ -1999,7 +1999,7 @@ webpackJsonp(
                 )
               );
             }),
-            w.b([M.a], t.prototype, "OnCheckboxChecked", null),
+            w.b([C.a], t.prototype, "OnCheckboxChecked", null),
             (t = w.b([O.observer], t))
           );
         })(B),
@@ -2013,7 +2013,7 @@ webpackJsonp(
             (t.prototype.OnClick = function(e) {
               var t = this.props.PrivacyStore.CommentPermission;
               Object(k.a)(
-                f.createElement(T, {
+                f.createElement(H, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPermission: t,
                   eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
@@ -2053,12 +2053,12 @@ webpackJsonp(
                 })
               );
             }),
-            w.b([M.a], t.prototype, "OnClick", null),
-            w.b([M.a], t.prototype, "OnSettingChanged", null),
+            w.b([C.a], t.prototype, "OnClick", null),
+            w.b([C.a], t.prototype, "OnSettingChanged", null),
             (t = w.b([O.observer], t))
           );
         })(f.Component),
-        H = (function(e) {
+        T = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2104,7 +2104,7 @@ webpackJsonp(
             t
           );
         })(f.Component),
-        T = (function(e) {
+        H = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2871,6 +2871,7 @@ and limitations under the License.
                 menuWidth: void 0,
                 menuHeight: void 0
               }),
+              (n.m_mutationObserver = new MutationObserver(n.OnMenuMutation)),
               n
             );
           }
@@ -2878,13 +2879,26 @@ and limitations under the License.
             s.c(t, e),
             (t.prototype.BindMenuElement = function(e) {
               var t = this;
-              (this.m_elMenu = e || void 0),
+              this.m_mutationObserver.disconnect(),
+                e &&
+                  this.m_mutationObserver.observe(e, {
+                    childList: !0,
+                    subtree: !0
+                  }),
+                (this.m_elMenu = e || void 0),
                 this.PositionMenu(),
                 this.state.ready ||
                   (this.props.instance.SetTakeFocus(this.TakeFocus.bind(this)),
                   this.setState({ ready: !0 }, function() {
                     t.TakeFocus();
                   }));
+            }),
+            (t.prototype.OnMenuMutation = function(e, t) {
+              var n = this;
+              void 0 === this.m_iMutationTimeout &&
+                (this.m_iMutationTimeout = window.setTimeout(function() {
+                  (n.m_iMutationTimeout = void 0), n.PositionMenu();
+                }, 100));
             }),
             (t.prototype.OnBlur = function(e) {
               (e.relatedTarget && m.b(e.currentTarget, e.relatedTarget)) ||
@@ -2982,18 +2996,18 @@ and limitations under the License.
                     : (a.menuRight = u - (s.bOverlapHorizontal ? y : f));
                 var P = l || i.top,
                   x = l || i.bottom,
-                  C = r.height;
-                s.bMatchHeight && ((C = x - P), (a.menuHeight = C));
-                var M = (s.bOverlapVertical ? x : P) - C,
-                  k = M > 0,
-                  I = p - (s.bOverlapVertical ? P : x) - C,
+                  M = r.height;
+                s.bMatchHeight && ((M = x - P), (a.menuHeight = M));
+                var C = (s.bOverlapVertical ? x : P) - M,
+                  k = C > 0,
+                  I = p - (s.bOverlapVertical ? P : x) - M,
                   O = I > 0,
                   L = (s.bPreferPopTop || !O) && k;
                 k ||
                   O ||
-                  ((L = M > I),
+                  ((L = C > I),
                   s.bFitToWindow &&
-                    ((C += (L ? M : I) - 8), (a.menuHeight = C))),
+                    ((M += (L ? C : I) - 8), (a.menuHeight = M))),
                   L
                     ? (a.menuBottom = p - (s.bOverlapVertical ? x : P))
                     : (a.menuTop = s.bOverlapVertical ? P : x),
@@ -3029,7 +3043,6 @@ and limitations under the License.
                     this.setState(a);
               }
             }),
-            (t.prototype.componentDidMount = function() {}),
             (t.prototype.render = function() {
               var e = this,
                 t = { visibility: this.state.ready ? "visible" : "hidden" };
@@ -3101,6 +3114,7 @@ and limitations under the License.
               }
             }),
             s.b([p.a], t.prototype, "BindMenuElement", null),
+            s.b([p.a], t.prototype, "OnMenuMutation", null),
             s.b([p.a], t.prototype, "OnBlur", null),
             s.b([p.a], t.prototype, "OnKeyDown", null),
             (t = s.b([a.observer], t))
