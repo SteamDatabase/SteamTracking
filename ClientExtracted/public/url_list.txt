@@ -1083,3 +1083,9 @@ LauncherFrontPage
 	method		"internal"
 	filter		"community"
 }
+
+BLEFirmwareLearnMore
+{	
+	url			"http://link.steampowered.com"
+	method		"external"
+}

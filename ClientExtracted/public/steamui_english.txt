@@ -4550,6 +4550,12 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_VGUIVRHMDOculusHelp" "If you want to use an Oculus Rift with SteamVR <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">follow these instructions</a>."
 "SteamUI_InstallSteamVR" "Install SteamVR"
 
+"Steam_BLEControllerFirmware_Title" "Bluetooth Firmware Update"
+"Steam_BLEControllerFirmware_Header" "Steam Link App"
+"Steam_BLEControllerFirmware_Body" "Extend your Steam gaming experience to your phone, tablet, or TV over your local network.\n\nTo use your Steam Controller with the Steam Link app, you will need the new Bluetooth Firmware update."
+"Steam_BLEControllerFirmware_LearnMore" "Learn More"
+"Steam_BLEControllerFirmware_UpdateNow" "Update Firmware Now"
+
 "Steam_Browser_Disabled" "The Steam Browser is disabled."
 "Steam_Browser_Disabled_KB" "See this Support Article for more Information"
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"

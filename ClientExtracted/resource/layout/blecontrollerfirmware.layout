@@ -1,0 +1,61 @@
+"resource/layout/blecontrollerfirmware.layout"
+{
+	controls
+	{
+		BLEFirmwareUpdate { controlname="Frame" title="#Steam_BLEControllerFirmware_Title" style="BLEFirmwareUpdate" }
+
+		ConfirmTextHeader { controlname="Label" labeltext="#Steam_BLEControllerFirmware_Header" wrap=0 style=ConfirmTextHeader }
+		ConfirmText { controlname="Label" labeltext="#Steam_BLEControllerFirmware_Body" wrap=1 style=ConfirmText }
+
+		BLEFirmwareDontShowCheckButton { controlname="CheckButton" tabposition=4 labeltext="#SteamUI_NotifyTrayHintDialog_DontShow" }
+		LearnMore { controlname="Button" tabposition=1 labeltext="#Steam_BLEControllerFirmware_LearnMore" textalignment=left }
+		UpdateNow { controlname="Button" tabposition=2 labeltext="#Steam_BLEControllerFirmware_UpdateNow" textalignment=left }
+		Close { controlname="Button" tabposition=3 labeltext="#vgui_close" textalignment=left }
+	}
+	
+	styles
+	{
+		BLEFirmwareUpdate
+		{
+			minimum-width = 706
+			minimum-height = 370
+			inset="0 0 0 0"
+			
+			render_bg 
+			{				
+				// background gradient        
+				0="gradient( x0+1, y0, x1-1, y1-45, dialogbg, almostblack )"
+				5="image( x0 + 3, y0 + 3, x1, y1, graphics/blefirmwareupdate )"
+			}			
+		}
+
+		ConfirmTextHeader
+		{
+			textcolor="110 192 236 255"
+			font-size=26
+		}	
+
+		ConfirmText
+		{
+			textcolor="110 192 236 255"
+			font-size=20
+			font-weight=700
+			selectedtextcolor="label2"
+			render_bg {}
+			height=400px
+		}		
+	}
+	
+	layout
+	{
+		region { name="bottom" width=max align=bottom height=45 margin=10 }
+
+		place { control="ConfirmTextHeader" width=435 y=86 margin-left=30 }
+		place { control="ConfirmText" width=295 y=105 margin=20 height=max margin-left=30 spacing=10 dir=down }
+		place { control="ControllerBackground" width=max y=40 height=max margin=15 }
+		place { control="Close" region="bottom" align=right margin-right=20 width=120 height=25  }
+		place { control="UpdateNow" region="bottom" align=right end-right="Close" margin-right=20 width=160 height=25  }
+		place { control="LearnMore" region="bottom" align=right end-right="UpdateNow" margin-right=20 width=120 height=25  }
+		place { control="BLEFirmwareDontShowCheckButton" region="bottom" align=left spacing=5 margin-left=20 }
+	}
+}
