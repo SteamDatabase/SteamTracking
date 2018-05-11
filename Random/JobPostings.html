@@ -1,560 +1,799 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Valve</title>
-	<link rel="shortcut icon" href="../images/favicon.ico" />
-	
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="https://steamcdn-a.akamaihd.net/valvesoftware/images/favicon.ico" />
+		<title>Valve Corporation - Valve Corporation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/prototype-1.6.0.2.js"></script>
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/scriptaculous/scriptaculous.js?load=effects"></script>
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/valvesoftware.js"></script>
-<script type="text/javascript" src="http://www.valvesoftware.com/javascript/jquery-1.11.1.min.js"></script>
-<script type="text/javascript">$J = jQuery.noConflict();
-if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "<scr" + "ipt type=\"text\/javascript\" src=\"javascript\/json2.js\"><\/script>" ); };
-</script>
-	<link rel="stylesheet" type="text/css" href="../main_v2.css" />
+		<link href="https://valvesoftware.com/public/css/global.css?v=fhx8JvGhqo88" rel="stylesheet" type="text/css" >
+<link href="https://valvesoftware.com/public/css/fonts.css?v=dTBuqoXjBPKo" rel="stylesheet" type="text/css" >
+<link href="https://valvesoftware.com/public/css/forms.css?v=_m4Sin0437g9" rel="stylesheet" type="text/css" >
+<link href="https://valvesoftware.com/public/css/jobs.css?v=SoBfCBgcgiQI" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="https://valvesoftware.com/en/public/shared/javascript/jquery-1.8.3.min.js?v=.TZ2NKhB-nliU" ></script>
+<script type="text/javascript">$J = jQuery.noConflict();</script><script type="text/javascript" src="https://valvesoftware.com/en/public/javascript/valvesoftware.js?v=6Omcky7xjBqQ" ></script>
 
-	<script type="text/javascript">
-		function ShowApplication( reqname, reqid, postreq )
-		{
-			// Fade out the job decription and fade in the form
-			$('desc_' + reqid ).fade( {duration: .3, to: 0} );
-			$('application_title').innerHTML = reqname;
-			$('error_container').innerHTML = "";
-			$('fix_errors').innerHTML = "";
-			$('name').value = "";
-			$('email').value = "";
-			$('reqid').value = postreq;
-			$('email_form_container').appear( {duration: .3, to: 1} );
-		}
-	</script>
+<script type="text/javascript">
+</script><script type="text/javascript" src="https://valvesoftware.com/en/public/javascript/jobs.js?v=m0MAAXvhUV4z" ></script>
 
-	
-			<script type="text/javascript">
-			// hide all of the pop up job description divs
-			Event.observe(window, 'load', function() {
-			   $$('div.job_position_description').invoke('hide');
-			});
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 
-			// function to hide popup divs. 
-			function hidePopups(){ 
-				var popups =  document.getElementsByClassName("job_position_description");
-				for(var i = 0; i < popups.length; i++){
-					popups[i].style.display = 'none';
-				}
-			}	
-		</script>
-
-		<script type="text/javascript" language="javascript">  
-			// toggle pop up divs on mouse clicks
-			Event.observe(document, 'dom:loaded', function() {  
-				$$('.job_position_title').each(function(element) {  
-					Event.observe(element, 'click', function(event){   
-						Event.stop(event); 
-						hidePopups();
-						Event.element(event).next(0).toggle(); 
-						$('greyBgId').appear({to: 0.70, duration: .3});
-						$$('div.job_position_description').invoke('setStyle', { opacity: 1});
-					}, false);  
-				});  
-			});  
-			// hide pop up divs when user clicks close button
-			Event.observe(document, 'dom:loaded', function() {  
-				$$('.close_popup').each(function(element) {  
-					Event.observe(element, 'click', function(event){   
-						hidePopups();
-						$('greyBgId').fade({duration: .3, to: 0});
-					}, false);  
-				});  
-			}); 
-			// hide pop up divs when user clicks anywhere not on the job description
-			Event.observe(document, 'dom:loaded', function() {  
-				$$('.grey_background').each(function(element) {  
-					Event.observe(element, 'click', function(event){   
-						Event.stop(event); 
-						hidePopups();
-						$('greyBgId').fade({duration: .3, to: 0});
-					}, false);  
-				});  
-			}); 
-
-		</script>  
-
-		<script type="text/javascript">
-			// close pop window with escape key
-			window.onkeyup = function(event) {
-				if (event.keyCode == 27) {
-					Event.stop(event);  
-					hidePopups();
-					$('greyBgId').fade({duration: .3, to: 0});
-				}
-			}
-			
-			document.onkeypress = function(event) { 
-				if (event == undefined) { 
-					event = window.event; 
-				} 
-				if (event.keyCode == 27) { 
-					//$$('div.job_position_description').invoke('fade', {duration: .4});
-					hidePopups();
-					$('greyBgId').fade( {duration: .3, to: 0});
-				} 
-			}
-			
-		</script>
-		
-		<script type="text/javascript">
-		// Contact email form //
-		Event.observe(document, 'dom:loaded', function() {  
-				$$('#email_form_link').each(function(element) {  
-					Event.observe(element, 'click', function(event){   
-						Event.stop(event);  
-						$$('#email_form_container').invoke('appear');
-						$$('#email_form_container').invoke('setStyle', { opacity: 1});
-						$('greyBgId').appear({to: 0.70, duration: .3});
-					}, false);  
-				});  
-			});  
-		</script>	
 	</head>
+	<body data-vsapp-context="home">
+		<div class="site_wrapper">
+			<header class="main_header">
+				<div class="header_inner_wrapper">
+					<div class="top_nav">
+						<div class="logo">
+							<a href="https://valvesoftware.com/en/about">
+								<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 436 121.06"><defs><clipPath id="clip-path"><rect class="cls-1" x="1" y="-1" width="436" height="124.06"/></clipPath></defs><polygon class="cls-2" points="142.57 36.95 134.84 67.88 151.01 67.88 142.57 36.95"/><g class="cls-3"><path class="cls-2" d="M47.1,24.6l14.1,55.3L75,24.6h15.2L67.9,97.8H54.5L32.7,24.6H47.1z M132.4,24.6h19.7l20.8,73.3h-14.8 l-4.9-18.3h-21.9c0,0-3.8,14.7-4.6,18c-4.4,0.3-15.1,0-15.1,0L132.4,24.6z M208.4,24.6h14.4v60.9h30.7v12.3h-45.1L208.4,24.6z M285.9,24.6L300,79.2l13.7-54.6h14.8l-22.2,73.3h-13l-22.2-73.3L285.9,24.6z M389.5,24.6v9.5h-19.7v10.6h18v9.5h-18v10.9h19.7 v9.5h-30.7v-50H389.5z M0,123.2h436V-1.1H0"/></g></svg>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="header_background_video">
+				</div>
+			</header>
+			<div id="content_outer_wrapper">
+				<div id="content_inner_wrapper">
+					<div id="content" data-content-context="home"><div id="page_background_videos">
+	<video playsinline muted loop autoplay poster="https://steamcdn-a.akamaihd.net/valvesoftware/images/videos/hero.jpg">
+		<source src="https://steamcdn-a.akamaihd.net/valvesoftware/images/videos/hero_fullsize.webm" type="video/webm"
+				media="screen and (min-width:800px)">
+		<source src="https://steamcdn-a.akamaihd.net/valvesoftware/images/videos/hero_fullsize.mp4" type="video/mp4"
+				media="screen and (min-width:800px)">
+	</video>
+</div>
 
-<body>
+<section id="jobs" class="job_skills full_bleed">
+	<div class="section_inner_wrapper">
+		<div class="search_form_wrapper">
+			<div class="row">
+				<div class="col_6 job_skills_title">
+					<h3>
+						<a href="about">We make games, Steam, and hardware. Join us.</a>					</h3>
+					<p>
+						We're seeking collaborators who are the best at what they do. Opportunities at Valve run broad and deep across the following areas, where we're always hiring for all positions.					</p>
+				</div>
+				<div class="col_5 col_offset_1">
+					<form class="search_form">
+						<input type="text"
+							   placeholder="Search Jobs">
+						<button type="button" class="clear_button">Clear</button>
+						<button class="search_button">Search</button>
+					</form>
+				</div>
+			</div>
+			<div class="search_form_results_wrapper">
+				<div class="search_form_results_inner_wrapper">
+					<div class="search_form_results job_openings">
+						<div class="row">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col_12">
+				<ul class="job_tags">
+											<li class="job_tag" data-job_cat="art">
+							<a href="#">Art</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
 
-<!--[if lte IE 7]> <style type="text/css"> .iepoupfix{ display: block; } </style> <![endif]-->
-<div id="header">
-	<div class="mainContainer">
-		<div id="menu_home"><a href="http://www.valvesoftware.com/index.html"><img src="http://www.valvesoftware.com/images/header_logo.png" width="124" height="36" border="0"></a></div>
-		
-		<div class="menu_item" id="games_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_games.png" width="70" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_games_over.png" width="70" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="games_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://www.valvesoftware.com/games/">About Valve Games</a>
-				<div class="rule"></div>
-				<a href="http://www.valvesoftware.com/games/dota2.html">Dota 2</a>
-                <a href="http://www.valvesoftware.com/games/csgo.html">Counter-Strike: Global Offensive</a>
-                <a href="http://www.valvesoftware.com/games/portal2.html">Portal 2</a>
-				<a href="http://www.valvesoftware.com/games/l4d2.html">Left 4 Dead 2</a>
-				<a href="http://www.valvesoftware.com/games/l4d.html">Left 4 Dead</a>
-				<a href="http://www.valvesoftware.com/games/ep2.html">Half-Life 2: Episode Two</a>
-				<a href="http://www.valvesoftware.com/games/portal.html">Portal</a>
-				<a href="http://www.valvesoftware.com/games/tf2.html">Team Fortress 2</a>
-				<a href="http://www.valvesoftware.com/games/ep1.html">Half-Life 2: Episode One</a>
-				<a href="http://www.valvesoftware.com/games/dods.html">Day of Defeat: Source</a>
-				<a href="http://www.valvesoftware.com/games/css.html">Counter-Strike: Source</a>
-				<a href="http://www.valvesoftware.com/games/hl2.html">Half-Life 2</a>
-                <a href="http://www.valvesoftware.com/games/backcatalog.html">Valve Back Catalog</a>
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=2">
+					<h5 class="job_title">
+						3D Character Artist					</h5>
+				</a>
 			</div>
-		</div>
-		
-		<div class="menu_item" id="steam_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_steam.png" width="78" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_steam_over.png" width="78" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="steam_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://store.steampowered.com/about/" target="_blank">About Steam <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a>
-				<a href="http://store.steampowered.com/" target="_blank">Visit Steam <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a>
-				<a href="http://www.steampowered.com/steamworks/" target="_blank">Steamworks <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a>
-				<!-- <a href="http://cafe.steampowered.com/" target="_blank">Cyber Caf&eacute; Program <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a> -->
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=3">
+					<h5 class="job_title">
+						Artist					</h5>
+				</a>
 			</div>
-		</div>
-		
-		<div class="menu_item" id="company_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_company.png" width="95" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_company_over.png" width="95" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="company_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://www.valvesoftware.com/company/">About Valve</a>
-				<a href="http://www.valvesoftware.com/company/people.html">People</a>
-				<a href="http://www.valvesoftware.com/company/publications.html">Publications</a>
-				<a href="http://store.valvesoftware.com/" target="_blank">The Valve Store <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=23">
+					<h5 class="job_title">
+						Technical Artist					</h5>
+				</a>
 			</div>
-		</div>
-				
-		<div class="menu_item" id="jobs_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_jobs.png" width="56" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_jobs_over.png" width="56" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="jobs_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://www.valvesoftware.com/jobs/">Work at Valve</a>
-				<a href="http://www.valvesoftware.com/jobs/job_postings.html">Openings</a>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=30">
+					<h5 class="job_title">
+						Animator					</h5>
+				</a>
 			</div>
-		</div>
-		
-		<div class="menu_item" id="news_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_news.png" width="61" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_news_over.png" width="61" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="news_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://www.valvesoftware.com/news/">Valve News</a>
-				<a href="http://www.valvesoftware.com/news/feeds.html">Feeds</a>
+
+					</div>
+		<div class="row">
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=43">
+					<h5 class="job_title">
+						Effects Artist					</h5>
+				</a>
 			</div>
-		</div>
-		
-		<div class="menu_item" id="contact_menu_link">
-			<img class="menu_item_inactive" src="http://www.valvesoftware.com/images/header_contact.png" width="91" height="21" border="0">
-			<img class="menu_item_active" src="http://www.valvesoftware.com/images/header_contact_over.png" width="91" height="21" border="0">
-		</div>
-		<div class="menu_content_block" id="contact_menu_content" style="display: none;">
-			<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div><div class="iepoupfix"><img class="iepoupfix_img" src="http://www.valvesoftware.com/images/blank.gif"></div>
-			<div class="menu_contents shadow_content">
-				<a href="http://www.valvesoftware.com/contact/">General Contact Info</a>
-				<a href="https://help.steampowered.com/" target="_blank">Steam Support <img src="http://www.valvesoftware.com/images/external.gif" style="padding-bottom:1px" border="0"/></a>
-				<a href="http://www.valvesoftware.com/security/">Security Issues</a>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=49">
+					<h5 class="job_title">
+						3D Environment Artist					</h5>
+				</a>
 			</div>
-		</div>
-		
-		<script type="text/javascript">
-			RegisterFlyout( 'games_menu_link', 'games_menu_content', 'left', 'bottom' );
-			RegisterFlyout( 'steam_menu_link', 'steam_menu_content', 'left', 'bottom' );
-			RegisterFlyout( 'company_menu_link', 'company_menu_content', 'left', 'bottom' );
-			RegisterFlyout( 'news_menu_link', 'news_menu_content', 'left', 'bottom' );
-			RegisterFlyout( 'jobs_menu_link', 'jobs_menu_content', 'left', 'bottom' );
-			RegisterFlyout( 'contact_menu_link', 'contact_menu_content', 'left', 'bottom' );
-		</script>
-		
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=58">
+					<h5 class="job_title">
+						Artist<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
 	</div>
 </div>
 
-<div class='container'>
-	<div id='jobs_top_banner'><h1>Join us</h1>	</div>
-	
-	<div class='content_div' id='copy_intro_p'>
-		<h3>We’re always growing.</h3>
-		<p>Most people think of Valve as a company that makes video games&#151;<br/>and we are.  But we also built the software that powers those games and the platform that lets millions of fans play, share, modify, and build communities around more than 5,000 titles.  That makes us a full-spectrum entertainment studio.  As such, our search for talent has taken us beyond the game industry and into the fields of architecture, economics, psychology, and industrial design.  We’re not just growing.  We’re diversifying.  Where to next?  You tell us.  We’re after talented people with original ideas and the passion to realize them.</p>
-	    <p/>
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="audio-design-engineering">
+							<a href="#">Audio Design & Engineering</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=18">
+					<h5 class="job_title">
+						Sound Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=59">
+					<h5 class="job_title">
+						Audio<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
 	</div>
-	
-	<div id='jobs_bottom_banner' class='bottom_banner_image'></div>
-	
-	<div class='main_content'>	
-		<div id='job_positions'>
-							<div><h3>Check out a few of our job openings:</h3></div>
-								<div class='left_col_text'>
-								<div class='job_position_container' id='3d_character_artist'>
-				<div class='job_position_title'>3D Character Artist</div>
-				<div class='job_position_description' id='desc_2' >
-					<div class='job_position_title_active'>3D Character Artist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for an experienced character artist with a talent for sculpting and character design. Valve has many projects in various stages of production at all times; artists will be expected to apply their skills in a wide variety of ways, depending on the day-to-day needs of these projects. We're interested in artists who share an equal passion for art and games.</p></div><div class='list_title' >Duties:</div><ul><li>Sculpt high-resolution character models in Zbrush, Mudbox or 3DCoat.</li><li>Create clean, low-resolution game topology, uv’s, and textures.</li><li>Work within multi-disciplinary design teams to help bring characters to life while making them work for the game design.</li><li>Collaborate with animators to create characters that can move and perform believably.</li><li>Collaborate with concept artists to revise and improve character designs. </li></ul><div class='list_title' >Requirements:</div><ul><li>Five or more years of modeling experience in film or games</li><li>Ability to model characters in a range of styles with an emphasis on character design</li><li>Hard-surface modeling skills</li><li>Thorough understanding of human anatomy</li><li>Drawing, sculpting, and other traditional art skills a plus</li><li>Take pride in and personal ownership of your work. </li><li>Contribute directly to both the conceptual thinking behind and the physical creation of detailed, high-quality products.</li></ul>					<p><a class='apply_link' onclick="ShowApplication('3D Character Artist', 2, 2 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='3d_environment_artist'>
-				<div class='job_position_title'>3D Environment Artist</div>
-				<div class='job_position_description' id='desc_49' >
-					<div class='job_position_title_active'>3D Environment Artist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for an environment artist skilled at creating 3d architectural models, hard-surface props and foliage. Valve has different projects in various stages of production at all times. Artists will be expected to apply their skills in a wide variety of ways, depending on the day-to-day needs of these projects. We're interested in artists who share an equal passion for art and games.</p></div><div class='list_title' >Duties:</div><ul><li>         Sculpt high-resolution props and hard surface models in Zbrush, 3D Coat, Modo or similar software</li><li>         Create clean, low-resolution game topology and uv’s</li><li>         Produce high quality textures for PBR workflows. (Production experience with Substance Painter/Designer and Quixel Suite a plus) </li><li>Work with game designers in creating worlds that improve the player’s experience</li><li>Design and create believable spaces with a focus on mood and storytelling </li></ul><div class='list_title' >Requirements:</div><ul><li>Five or more years of modeling experience in film or games</li><li>Good understanding of architecture as well as transportation and/or industrial design</li><li>Versatile across different art styles and genres</li><li>         Drawing, sculpting, and other traditional art skills a plus</li><li>Communication skills that allow you to describe your process maturely and succinctly</li><li>Take pride in and personal ownership of your work. </li></ul>					<p><a class='apply_link' onclick="ShowApplication('3D Environment Artist', 49, 49 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='artist'>
-				<div class='job_position_title'>Artist</div>
-				<div class='job_position_description' id='desc_3' >
-					<div class='job_position_title_active'>Artist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for versatile, self-directed artists who have experience in 2D character and world design and enjoy working in a fast-paced, collaborative environment. Your folio should, above all, demonstrate originality, an ability to iterate, and an understanding of color and form. It should also reflect a solid understanding of anatomy and painting, and contain examples that show your awareness and appreciation of Valve’s various Intellectual Properties.</p></div><div class='list_title' >Duties:</div><ul><li>Integrate into a multi-disciplinary team (6-8 people) and continually produce useful concept design based on the group’s collective conversations and decisions.</li><li>Iterate quickly and submit work that solves problems rather than creates them.</li><li>Self-manage and also be aware of the needs and requirements of those around you.</li><li>Generate ideas and use 2D/3D work to communicate those ideas to the team.</li></ul><div class='list_title' >Requirements:</div><ul><li>Working knowledge of 3D packages such as ZBrush, Mudbox, SketchUp, etc.</li><li>Communication skills that allow you to describe your process maturely and succinctly</li><li>Ability to change gears quickly when needed</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Artist', 3, 3 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='economist'>
-				<div class='job_position_title'>Economist</div>
-				<div class='job_position_description' id='desc_4' >
-					<div class='job_position_title_active'>Economist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Valve’s multi-player games, as well as Steam (Valve’s successful trading platform), have allowed for the spontaneous emergence of complex virtual, yet quite real, economies. These economies are replete with rich trading patterns, fascinating ‘institutions’ (which have also sprung up organically), socio-economic conventions, and, generally, a host of economic phenomena that partly reflect what we observe in the analogue world and partly constitute new and unexplored behavioural patterns.</p><p>The task of a Valve economist is to make good use of the incredible wealth of data concerning these social economies, to pose fresh questions about their workings, and to generate methods for converting new knowledge about these economic vistas into tangible ideas that help improve our customers’ experiences. </p></div><div class='list_title' >Duties:</div><ul><li>Research, design, develop, and validate economic models to explain user behavior for all of Valve’s products.</li><li>Design experiments to validate experimental hypotheses for in-game economies.</li><li>Provide insight into short- and long-term behavioral patterns of participants in virtual economies.</li><li>Inform decision-making at Valve by providing quantitative and economic rationale for various lines of inquiry.</li><li>Create new avenues of analysis based on existing economic metrics, as well as generating new domains of data to collect and investigate.</li><li>Collaborate with our business development team to improve the performance of existing pricing strategies and incentives for our customers and partners.</li></ul><div class='list_title' >Requirements:</div><ul><li>Graduate degree in Economics or related field</li><li>Advanced knowledge of statistics</li><li>Four years experience with:<ul class='sub_list'><li>Econometrics/data-mining or related field</li><li>Relevant analysis techniques that inform the creation of economic models</li></ul></li></ul><div class='list_title' >Recommended:</div><ul><li>Proficiency in one or more of the following programming languages: C++, SQL, PHP, or equivalent</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Economist', 4, 4 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='effects_artist'>
-				<div class='job_position_title'>Effects Artist</div>
-				<div class='job_position_description' id='desc_43' >
-					<div class='job_position_title_active'>Effects Artist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for highly experienced and diverse effects artists to solve complex visual problems in a self-directed and efficient way. Applicants should exhibit a strong sense of design, timing and creativity with the ability to also work in a highly technical capacity. Individuals should be comfortable actively identifying effects opportunities, or design and implement effects from scratch to solve existing needs. This can range from longer term tool development to shipping content on a weekly basis.</p><p>Sorry, we do not accept student reels.</p></div><div class='list_title' >Duties:</div><ul><li>Be comfortable creating content in multiple platforms: game engine, UI, linear media, web etc.</li><li>Actively collaborate in small teams of other artists or programmers to quickly iterate and execute content.</li><li>Self-manage time and be aware of opportunities or needs across different company projects.</li></ul><div class='list_title' >Requirements:</div><ul><li>Five or more years of professional experience in effects.</li><li>Expert knowledge in 3D Packages such as Maya or Houdini.</li><li>Scripting or programming experience (Python, C++, etc.)</li><li>Ability to actively communicate and work in groups.</li><li>Ability to self-manage and make good decisions on priorities and timelines.</li><li>Strong reel exhibiting a good understanding of motion, context and art style.</li></ul><p>A portfolio or reel must be included with your application, as well as a detailed breakdown of the work done.</p>					<p><a class='apply_link' onclick="ShowApplication('Effects Artist', 43, 43 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='hardware_electrical_engineer'>
-				<div class='job_position_title'>Hardware - Electrical Engineer</div>
-				<div class='job_position_description' id='desc_5' >
-					<div class='job_position_title_active'>Hardware - Electrical Engineer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>For years, Valve has been all about writing software that provides great gameplay experiences. Now we’re developing hardware to enhance those experiences, and you can be a key part of making that happen. Join our highly motivated team that’s doing hardware design, prototyping, testing, and production across a wide range of platforms. Help us invent whole new gaming experiences around novel hardware for the living room and beyond.</p></div><div class='list_title' >Duties:</div><ul><li>Work with the hardware team to conceive, design, evaluate, and produce new types of input, output, and platform hardware</li><li>Work closely with contract manufacturers to produce prototype and production hardware at scales from tens to millions of units</li></ul><div class='list_title' >Requirements:</div><ul><li>Demonstrated start-to-finish design skills with industry-standard CAD/EDA tools (Altium Designer experience strongly preferred), including schematic entry, PCB layout, component definition, and CAD library management</li><li>Hands-on electronics prototyping experience, including soldering and rework of fine-pitch SMT components</li><li>Strong lab skills, including the use of common test and measurement equipment (oscilloscopes, logic analyzers, etc.) to debug complex electronic circuits</li><li>Experience with embedded systems design and strong knowledge of common digital communication interfaces (USB, SPI, I2C)</li><li>Experience working directly on-site with contract manufacturers</li><li>Ability to think and work across disciplines</li></ul><div class='list_title' >Recommended:</div><ul><li>A proven track record of designing and shipping high-volume consumer electronics products</li><li>Experience in design for manufacture and design for test (DFM/DFT) of electronic devices</li><li>Bachelor’s degree (or equivalent) in electrical engineering or a related field</li><li>5+ years experience in electronics design</li><li>Experience in one or more of the following areas:<ul><li>Analog circuit design and simulation (e.g. SPICE)</li><li>Low-power design for portable devices</li><li>Battery management and charging circuits</li><li>RF/wireless circuit design, including antenna design</li><li>Firmware development for 8, 16, 32-bit microcontrollers (e.g. ARM)</li><li>High speed/HDI board design</li><li>Digital Signal Processing (DSP)</li><li>High speed video interfaces (HDMI, Display Port, LVDS, MIPI)</li><li>Design for EMC</li><li>Regulatory compliance testing (e.g. FCC/CE/UL)</li><li>C/C++ software development</li><li>Test automation</li><li>FPGA/ASIC design</li></ul></li></ul>					<p><a class='apply_link' onclick="ShowApplication('Hardware - Electrical Engineer', 5, 5 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='hardware_industrial_designer'>
-				<div class='job_position_title'>Hardware - Industrial Designer</div>
-				<div class='job_position_description' id='desc_7' >
-					<div class='job_position_title_active'>Hardware - Industrial Designer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As an Industrial Designer at Valve, you will join a world-class group of electrical, mechanical, software engineers and designers who are busily defining new entertainment experiences through both hardware and software. We’re hoping to add your expertise in product design and manufacturing, ergonomics, usability, aesthetics, and surfacing to our team.</p><p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship products, we create and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.</p><p>Valve is traditionally a software company. Open platforms like the PC and Mac are important to us, as they enable us and our partners to have a robust and direct relationship with customers. We’re frustrated by the lack of innovation in the computer hardware space though, so we’re jumping in. Even basic input, the keyboard and mouse, haven’t really changed in any meaningful way over the years. There’s a real void in the marketplace, and opportunities to create compelling user experiences are being overlooked.</p><p>At Valve, our design process really gets going once products are in customers’ hands. Our best work is the result of an ongoing dialog with customers. Through years of shipping software as a service through Steam, our digital distribution platform, this has become fundamental to the way we create great products. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? </p><p>Do you prefer to define the work that you pursue, rather than simply following a vision that’s been set for you? If you’re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can’t wait to see where you’ll take us.</p></div><div class='list_title' >Requirements:</div><ul><li>BS/BA/BFA degree (or equivalent) in industrial design (or equivalent)</li><li>6+ years of professional experience shipping world-class, high-tech hardware products</li><li>A thorough understanding of product design principles</li><li>Highly effective multidisciplinary collaboration skills  </li><li>Personal commitment to quality, attention to detail</li><li>Confidence with 2D and 3D design visualization tools</li><li>Effective, articulate design communication and decision-making skills</li></ul><div class='job_description_intro'><p>Please include with your application an online portfolio of work which conveys your capabilities.</p></div>					<p><a class='apply_link' onclick="ShowApplication('Hardware - Industrial Designer', 7, 7 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='hardware_mechanical_engineer'>
-				<div class='job_position_title'>Hardware - Mechanical Engineer</div>
-				<div class='job_position_description' id='desc_6' >
-					<div class='job_position_title_active'>Hardware - Mechanical Engineer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Valve is looking for talented mechanical engineers that can work within our hardware teams, bring concepts to life and enrich gaming experiences. The ideal candidate has a strong background that includes the following skills: ideation, collaborating, prototyping, 3-D modeling and extensive experience in all facets of manufacturing consumer gaming products.</p></div><div class='list_title' >Responsibilities include:</div><ul><li>Conceptualize, design and develop hardware products through the entire product lifecycle</li><li>Collaborate cross-functionally with other team members to solve technical challenges</li><li>Define, design and prototype individual parts, sub-systems and mechanisms</li><li>Solid understanding and experience in designing and qualifying injection molded, sheetmetal, diecast, soft goods parts</li><li>Create technical specifications and product definition</li><li>Create manufacturable 3D models of parts, sub-systems that meet and/or exceed design intent, function, cost goals and delivered on schedule</li><li>Design parts for manufacturability utilizing standard engineering practices such as GD&T, VSA, DFMEA</li><li>Strong understanding of quality metrics to establish Process Capability</li><li>Work with manufacturing to develop test equipment, fixtures, assembly line setup.</li><li>Product support from inception through sustaining engineering</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Hardware - Mechanical Engineer', 6, 6 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='level_designer'>
-				<div class='job_position_title'>Level Designer</div>
-				<div class='job_position_description' id='desc_9' >
-					<div class='job_position_title_active'>Level Designer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Can you turn a whiteboard concept into a sensational gameplay sequence—or help us figure out why players don’t ever look up when they’re trying to solve puzzles? If so, we need you! We’re looking for level designers to help us create exciting new gameplay experiences. In collaboration with peers from all disciplines (artists, programmers, animators, writers, etc.), you’ll use your skills and knowledge of game design to create imaginative gameplay, produce creative solutions to playtest issues, and quantify and analyze feedback to ensure that players get the most out of every Valve game. </p></div><div class='list_title' >Duties:</div><ul><li>Participate in design sessions to create outline of game experience.</li><li>Build the game world in 3D.</li><li>Use entity scripting to create cinematic sequences of gameplay.</li><li>Work with artists, animators, writers, and programmers to implement elements such as art, animation, story, and design requirements.</li><li>Participate in observed playtesting and create work items based on observations and analysis of playtesting data.</li><li>Manage and prioritize bug lists.</li></ul><div class='list_title' >Requirements:</div><ul><li>Working knowledge of a professional level design tool</li><li>Three years industry experience (or equivalent)</li><li>Experience with programming, art, or architecture a plus</li><li>Experience with shipping projects (professional or amateur) a plus</li><li>Please include recent examples of levels or environments you have made</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Level Designer', 9, 9 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='motion_designer'>
-				<div class='job_position_title'>Motion Designer</div>
-				<div class='job_position_description' id='desc_10' >
-					<div class='job_position_title_active'>Motion Designer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As a Motion Designer at Valve, you will join a world-class group of software engineers, artists, writers, animators and designers who are continually creating and shipping world-class social entertainment experiences. We’re hoping to add your expertise in visual communication, animation, user experience, and motion design to our team. </p><p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship products, we define and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.</p><p>At Valve, our design process really gets going once products are in customers’ hands. Our best work is the result of an ongoing dialog with customers. This is fundamental to the way we create great products. Through years of shipping software as a service through Steam, our digital distribution platform, we’ve learned to include our customers in the entirety of the design process. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? </p><p>Do you prefer to define the work that you pursue, rather than simply following a vision that’s been set for you? If you’re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can’t wait to see where you’ll take us.</p></div><div class='list_title' >Requirements:</div><ul><li>BS/BA/BFA degree (or equivalent) in film, design (or equivalent)</li><li>6+ years of professional experience shipping world-class products in the software, TV or film industry</li><li>A thorough understanding of motion design and film editing principles</li><li>Highly effective multidisciplinary collaboration skills </li><li>Personal commitment to quality, attention to detail</li><li>Confidence with design communication tools</li><li>Effective, articulate design communication and decision-making skills</li><li>An online portfolio of work which conveys your capabilities</li></ul><div class='job_description_intro'><p>Please include with your application an online portfolio of work which conveys your capabilities.</p></div>					<p><a class='apply_link' onclick="ShowApplication('Motion Designer', 10, 10 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='networksystems_engineer'>
-				<div class='job_position_title'>Network/Systems Engineer</div>
-				<div class='job_position_description' id='desc_26' >
-					<div class='job_position_title_active'>Network/Systems Engineer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Valve is looking for network/systems engineers with solid networking foundations to help grow, evolve, and support the critical internal and production infrastructure behind Steam and our award winning games. Deep proficiency with Windows and/or Linux in a large scale heterogeneous server environment is a must, as is a solid grasp of TCP/IP networking and related network technologies.</p><p>A successful candidate will be familiar with both Windows and POSIX systems, have the ability to triage and troubleshoot, capacity plan, and communicate complex technical concepts to colleagues in a rapidly evolving environment.</p></div><div class='list_title' >Duties:</div><ul><li>Capacity planning, architecture, configuration and configuration management, deployment, and ongoing support of internal and production infrastructure supporting millions of concurrently connected users</li><li>Design, implement, and support tools and process to automate and improve infrastructure visibility and supportability</li><li>Collaborate with software engineers to improve supportability, stability, and robustness of custom server software and infrastructure</li><li>Plans and coordinates the implementation of network technologies in support of defined requirements generated by internal customers and growth demands</li><li>Produce Method of Procedures that demonstrate understanding of changes proposed and how the change will be executed with minimal service impact</li><li>Performs analysis and diagnosis of highly complex networking problems</li><li>Build simulated networks in test labs to resolve highly complex problems and compatibility issues</li><li>Generates network configurations for highly complex networks</li><li>Plans and executes highly complex network upgrade and migration activity</li><li>Assists with deployment and strategy of tools and related Network Management Systems</li></ul><div class='list_title' >Requirements:</div><ul><li>Bachelor's degree in computer science, information technology or equivalent</li><li>Strong analysis, trouble shooting, capacity planning, and communication skills</li><li>Self-directed and ability to thrive in a large scale, highly dynamic, and often interrupt driven environment</li>        <li>Proficiency in one or more of the following programming languages: Python, PHP, SQL, C/C++, (or equivalent)</li><li>Experience and proficiency with:<ul class='sub_list'><li>Windows and Linux operating systems, with deep expertise in at least one</li><li>TCP/IP and related networking technologies</li></ul></li><li>Hand-on experience in administration of Cisco and Juniper routing and switching equipment</li><li>Experience with third party web services and content distribution networks</li><li>Expert level knowledge in at least TWO of the following and strong knowledge in all other areas of:<ul class='sub_list'><li>IP networking and LAN Switching</li><li>Dynamic IP Routing protocols (BGP, ISIS, OSPF, PIM Multicast)</li><li>Expertise on latest Juniper and Cisco hardware and operating systems</li><li>Virtualization technologies, both networking (MPLS, VRF, VDC) and compute (VMware, Openstack)</li><li>In-depth knowledge of network management and network availability</li></ul></li></ul><div class='list_title' >Recommended:</div><ul><li>Cisco Certified Network Professional (datacenter, service provider), Juniper Networks Certified Internet Professional (enterprise, service provider) and Microsoft Certified Systems Engineer certification</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Network/Systems Engineer', 26, 26 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='psychologist_researchexperimental'>
-				<div class='job_position_title'>Psychologist (Research/Experimental)</div>
-				<div class='job_position_description' id='desc_11' >
-					<div class='job_position_title_active'>Psychologist (Research/Experimental)</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>In order to create exceptional products that people will use and appreciate, we need to know about human behavior and about the motivations and influences underlying how and why people do what they do. We believe that all game designers are, in a sense, experimental psychologists. That is why we’re looking for an experimental psychologist with superior research skills to apply knowledge and methodologies from psychology to game design and all aspects of Valve’s operations. We want to exploit your experience with experimental design, research methods, statistics, and human behavior to help craft even more compelling gameplay experiences for future Valve titles. We’d also expect you to research and weigh in on any and all topics that are relevant to improving the experiences of our customers, partners, and employees.</p></div><div class='list_title' >Duties:</div><ul><li>Provide relevant insight into human behavior in order to shape gameplay and customer experience.</li><li>Perform statistical analyses on all aspects of Valve’s operations: gameplay, financial, and company data.</li><li>Research compelling new hardware technologies.</li><li>Design experiments to evaluate various gameplay hypotheses and design choices.</li><li>Improve existing playtesting methodologies while incorporating novel techniques to improve best practices.</li><li>Develop innovative ways of acquiring relevant data to answer open questions about all aspects of Valve’s products and business practices.</li></ul><div class='list_title' >Requirements:</div><ul><li>Graduate degree in Psychology (or equivalent) field</li><li>Advanced knowledge of statistics</li><li>Familiarity with one or more of the following pieces of data analysis software: SPSS, Systat, Matlab, R, (or equivalent)</li><li>Four years experience with: <ul class='sub_list'><li>Experimental design/research methods</li><li>Relevant research in cognitive, social, human factors, and related disciplines in psychology</li></ul></li></ul><div class='list_title' >Recommended:</div><ul><li>Proficiency in one or more of the following programming languages: C++, SQL, PHP, (or equivalent)</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Psychologist (Research/Experimental)', 11, 11 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='software_engineer_anti_cheat'>
-				<div class='job_position_title'>Software Engineer - Anti-Cheat</div>
-				<div class='job_position_description' id='desc_12' >
-					<div class='job_position_title_active'>Software Engineer - Anti-Cheat</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Do you have a strong desire to combat cheating in online games? If so, this could be the gig for you. As a Valve Anti-Cheat engineer, you will use your reverse engineering, debugging, and programming skills to bring down cheaters throughout the Steam community. Your familiarity with executable file formats, dynamic link libraries, and process management will help us unravel webs of online cheaters. As part of the Steam Team, you’ll also help deliver all different kinds of digital content to millions of customers.</p></div><div class='list_title' >Duties:</div><ul><li>Research, design, and develop specialized software systems and applications for detection of cheating software or behavior.</li><li>Analyze cheating software that changes the behavior of games.</li><li>Formulate system-testing procedures to ensure the quality and consistency of software systems developed by Valve.</li><li>Manage, design, and develop specialized distributed applications operating on large clusters of machines.</li></ul><div class='list_title' >Requirements:</div><ul><li>Bachelor's degree in computer engineering or applied mathematics (or equivalent)</li><li>Strong analysis, debugging, and reverse engineering skills</li><li>Five years experience with:<ul class='sub_list'><li>C/C++, in-depth knowledge of Windows platforms</li><li>Windows process management, dynamic link libraries, memory management</li><li>Using networking technologies in large-scale systems or gaming platforms</li><li>Taking a computer software product or video game from conception and development through publication and product shipment</li></ul></li></ul>					<p><a class='apply_link' onclick="ShowApplication('Software Engineer - Anti-Cheat', 12, 12 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-						</div> <!-- end left_col div -->
-				<div class='right_col_text'>
-								<div class='job_position_container' id='software_engineer_games'>
-				<div class='job_position_title'>Software Engineer - Games</div>
-				<div class='job_position_description' id='desc_51' >
-					<div class='job_position_title_active'>Software Engineer - Games</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As a software engineer on one of our game teams, you’ll be a key contributor to developing amazing games that millions of customers around the world enjoy. We’re always looking for great engineers who want to help us build the next amazing Valve game, or expand and improve an established hit like <i>Counterstrike: Global Offensive</i>, <i>DOTA 2</i>, or <i>Team Fortress 2</i>. You’ll design and deliver new engine features, new game features, and new ways to delight our customers and drive revenue. You should have experience in all phases of game development, be self-directed, and have a relentless focus on customers. There are opportunities to work on titles across a variety of genres, with both VR and traditional 2D interfaces. Whether you’re a graphics or physics expert, a gameplay or networking specialist, or just an all-around great engineer, there are ways to have a huge impact.</p></div><ul><li>Work as part of one of Valve’s game development teams</li><li>Regularly ship updates to millions of customers, and develop an understanding of our player communities</li><li>Drive the design and iteration of new features and games, making good use of internal and external feedback</li><li>Create measureable success, be self-directed, and prioritize your own workload</li></ul><div class='list_title' >Expected:</div><ul><li>Programming experience, in C++ or a similar language</li>        <li>4+ years of professional software development experience</li><li>Strong software engineering skills</li><li>Demonstrated ability to self-direct, and drive work to completion</li>        <li>Strong communication skills, and the ability to work closely with a team of peers</li></ul><p>This is a senior role, requiring prior industry experience. Unfortunately, we do not currently have openings for recent graduates.</p>					<p><a class='apply_link' onclick="ShowApplication('Software Engineer - Games', 51, 51 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='software_engineer_steam'>
-				<div class='job_position_title'>Software Engineer - Steam</div>
-				<div class='job_position_description' id='desc_14' >
-					<div class='job_position_title_active'>Software Engineer - Steam</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As a senior software engineer on the Steam team, you'll be part of an extremely motivated and experienced group of people. You'll help drive Steam architecture and be a key coding contributor. You'll design and deliver new features to enable new game experiences, deliver all kinds of digital content to millions of customers, enhance community features, and drive revenue. Must be experienced in all phases of a project lifecycle and have great customer focus. May mentor other developers.</p></div><ul><li>Work as part of Valve's core development team, adding features and components to our best-of-breed computer games and pioneering e-commerce platform.</li><li>Regularly ship a variety of products from small internal tools to large-scale web applications used by millions of people per month.</li><li>Directly and meaningfully impact the experience of those players & customers.</li><li>Develop an understanding of Valve's player community and contribute creative design solutions to improve the experience of using Valve's products.</li><li>Follow-through from project inception through design to detailed completion.</li><li>Iterate on solutions based on internal and external (customer) feedback.</li><li>Develop end-to-end data management solutions including database schema, database back-up & management, and performance tuning.</li><li>Participate in design process, gathering requirements with other engineers and designers.</li><li>Create measurable success, be self-directed, and prioritize your own workload.</li></ul><div class='list_title' >Expected:</div><ul><li>5+ years experience building commercial software in C++ or similar language</li><li>Strong programming and fundamental computer science skills</li><li>Experience building high-scale, high-reliability network e-commerce products a plus</li><li>A bachelor's degree in computer science or equivalent</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Software Engineer - Steam', 14, 14 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='software_engineer_steam_ecommerce'>
-				<div class='job_position_title'>Software Engineer - Steam eCommerce</div>
-				<div class='job_position_description' id='desc_13' >
-					<div class='job_position_title_active'>Software Engineer - Steam eCommerce</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Steam sells thousands of individual products to hundreds of millions of users around the world through our digital distribution platform.  The systems we create connect people and game developers in an ecosystem that combines social networking and commerce in a single platform.  Our work includes improving the way we sell products to customers, optimizing how we deliver content to end users, facilitating payments to content creators worldwide, and creating new features for game developers.</p><p>Valve is looking for engineers that have significant experience working on highly scalable distributed systems, building robust services that interface with internal and external service providers, and consuming/instrumenting big data for analytics and reporting.  Valve's work environment is very unique in that we rely on all employees to be self-motivated, accountable, and able to recognize the right opportunities to focus their energies on.  We encourage all applicants to review our <a href="http://www.valvesoftware.com/company/Valve_Handbook_LowRes.pdf" target="_blank">employee handbook</a>.</p><p>If you have the passion to work on evolving the worlds' largest digital distribution and eCommerce platform and think that this is the right place for you, contact us now!  We'd love to hear from you.</p></div><div class='list_title' >Job Expectations:</div><ul><li>Design and implement features and services in C++ at scale</li><li>Research, analyze, and design fraud detection methods</li><li>Troubleshoot application issues and provide possible solutions with appropriate risk assessments</li><li>Support auditing, trending, and reconciliation efforts for financial specialists</li></ul><div class='list_title' >Requirements:</div><ul><li>Five years experience shipping and maintaining production level software in technologies including:<ul class='sub_list'><li>Large scale SQL application experience</li><li>Service and application development in C++ (preferred), Java, or C#</li></ul></li><li>Outstanding written and verbal communication skills with the ability to explain technical design, concepts, and risks to non-developers</li><li>Track record of delivering high-impact and complex projects on time with extremely low defect rates</li><li>Background in online payment processing, analytics, and/or financial auditing systems</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Software Engineer - Steam eCommerce', 13, 13 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='software_engineer_web_applications'>
-				<div class='job_position_title'>Software Engineer - Web Applications</div>
-				<div class='job_position_description' id='desc_17' >
-					<div class='job_position_title_active'>Software Engineer - Web Applications</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>Steam is one of the fastest growing multimedia digital distribution platforms in the industry today. A rich web presence and strong web backend are central to the architecture of Steam. The Steam team and Valve game teams are seeking senior level engineers who can help design, implement, and ship new features on the web in addition to strengthening the web-based architectural components of the platform.</p><p>As a part of our extremely motivated and experienced group of people, you'll work with Valve's game and Steam development teams to add exciting new web-based features to our best-of-breed computer games and pioneering e-commerce platform.</p></div><ul><li>Work as part of Valve's core development team, adding web applications and components to our best-of-breed computer games and pioneering e-commerce platform.</li><li>Regularly ship a variety of products from small internal tools to large-scale web applications used by millions of people per month.</li><li>Directly and meaningfully impact the experience of those players & customers.</li><li>Develop an understanding of Valve's player community and contribute creative web-focused design solutions to improve the experience of using Valve's products</li><li>Improve internal visibility of various game-related and steam-related data</li><li>Follow-through from project inception through design to detailed completion</li><li>Iterate on solutions based on internal and external (customer) feedback</li><li>Develop end-to-end data management solutions including database schema and performance tuning.</li><li>Rapidly prototype web user interfaces</li><li>Participate in design process, gathering requirements with other engineers and designers</li><li>Create measurable success</li><li>Create open and re-usable web application components</li><li>Be self-directed and be able to prioritize your own workload</li></ul><ul><li>BS/BA degree in Computer Science or related field, or equivalent work experience.</li><li>3+ years professional experience in software development</li></ul><div class='list_title' >Experience with many of the following languages and tools is expected:</div><ul><li>PHP or similar web programming language (Java, Python, Ruby, C#/.NET)</li><li>Javascript, AJAX, and Javascript libraries like jQuery</li><li>HTML and CSS</li><li>MS SQL / Oracle / MySQL</li><li>Memcached</li><li>Linux</li><li>C/C++ experience is desirable but not required</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Software Engineer - Web Applications', 17, 17 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='sound_designer'>
-				<div class='job_position_title'>Sound Designer</div>
-				<div class='job_position_description' id='desc_18' >
-					<div class='job_position_title_active'>Sound Designer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for an experienced sound designer and/or interactive audio "integrator" who can help us create sophisticated, emotionally-compelling audio experiences for a variety of media formats and products. You’ll collaborate with a team of broadly-skilled peers to make sound a powerful element in all current and future Valve products, from multimedia ads to video game consoles, PC, and on-line gaming.</p></div><div class='list_title' >Duties:</div><ul><li>Identify audio opportunities and asset needs in Valve commercial and promotional products in a self-driven but collaborative manner.</li><li>Conceptualize, schedule, design, and produce high quality audio assets in accordance with the development and testing cycle of the product.</li><li>Integrate audio in both linear and interactive forms with Valve products using proprietary software. </li><li>Manage all necessary audio assets (sound files, scripts, models, etc.) associated with a product using the necessary software.</li><li>Work with engineers and artists to understand and help develop cutting-edge, proprietary audio technologies.</li><li>Test, debug, and assure the functional quality of all audio in a given product.</li></ul><div class='list_title' >Requirements:</div><ul><li>Bachelor's degree (or equivalent) in digital and analog audio production or audio engineering</li><li>Five years experience in:<ul class='sub_list'><li>Professional quality audio production and all related technologies</li><li>Game engine audio implementation technologies</li><li>Taking a video game or linear equivalent (e.g., film) from conception and development through publication and shipment</li></ul></li></ul><div style='font-weight:bold;'>Please include a reel with your application that includes in-game examples of your audio design and implementation. Please outline the contributions you made to the project and which parts of the reel highlight the value you added to the piece.</div>					<p><a class='apply_link' onclick="ShowApplication('Sound Designer', 18, 18 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='statistician'>
-				<div class='job_position_title'>Statistician</div>
-				<div class='job_position_description' id='desc_19' >
-					<div class='job_position_title_active'>Statistician</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>One thing we have a lot of at Valve is data. Lots and lots of data. And we love using all that information to make better decisions.  To help us do that, we’re looking for an experienced statistician who can perform quantitative analyses on all aspects of Valve’s gameplay, financial, and company data. Intrigued? You’d get to use your extensive statistical knowledge, along with practiced data-mining skills, to derive insights from the immense volumes of data we collect. In addition, you’d improve Valve’s existing metrics collection and analysis techniques by formulating new lines of inquiry into untracked metrics and creating best practices for the analysis of all collected data.</p></div><div class='list_title' >Duties:</div><ul><li>Research, design, develop, and validate statistical models to explain past behavior and to predict future behavior across all Valve products.</li><li>Uncover latent trends in user behavior by mining existing statistical databases.</li><li>Generate new lines of inquiry by creating novel metrics to incorporate into our existing tracking databases.</li><li>Inform decision-making at Valve by providing quantitative rationale for various decision alternatives.</li><li>Empirically evaluate financial projections and game design hypotheses.</li></ul><div class='list_title' >Requirements:</div><ul><li>Graduate degree in Statistics or Applied Mathematics (or equivalent) field</li><li>Extensive proficiency with one or more of the following pieces of data analysis software: SPSS, Systat, Matlab, R, or equivalent</li><li>Four years experience with:<ul class='sub_list'><li>Statistics/data modeling in an applied context</li><li>Relevant statistical techniques to inform the creation of predictive models</li></ul></li></ul><div class='list_title' >Recommended:</div><ul><li>Proficiency in one or more of the following programming languages: C++, SQL, PHP (or equivalent)</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Statistician', 19, 19 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='steam_database_administrator'>
-				<div class='job_position_title'>Steam Database Administrator</div>
-				<div class='job_position_description' id='desc_16' >
-					<div class='job_position_title_active'>Steam Database Administrator</div><div class='close_popup'></div>
-					<div class='job_description_intro'>                <p>The Steam Platform is one of the fastest growing multimedia digital distribution platforms in the industry.  We're looking for hands-on SQL Server database administrators with expertise in multiple disciplines and the ability to deal with all aspects of our database software and hardware implementation needs.</p></div><div class='list_title' >Responsibilities:</div><ul><li>Perform physical database implementation, including index tuning, storage management and partitioning.</li><li>Monitor database and server performance. Troubleshoot, tune, refactor.  Adjust compute and storage capacity as needed.</li>                <li>Help team members implement database-related features, including data modeling, procedural code design, query tuning, and performance management.</li>                <li>Design and implement schemes for data security, system availability, and disaster recovery, including backup, log shipping, mirroring and Always On.</li>               <li>Scope and implement datacenter hardware.</li></ul><div class='list_title' >Requirements:</div><ul>                <li>Bachelor's degree in computer engineering or applied mathematics (or equivalent).</li>                <li>Five+ years of experience with many or all of these aspects of database implementation in Microsoft SQL Server:                <ul class='sub_list'>                                <li>Database administration on high-availability, large-scale systems, including scripting with PowerShell or Python</li>                                <li>Design and management of disk storage systems</li>                                <li>Capacity planning and system integration</li><li>Networking systems</li>                </ul>                </li>                                       </ul><div class='list_title' >Highly desired experience:</div><ul>                <li>MySQL and/or Postgres</li>                <li>Non-relational data systems, such as MongoDB, Cassandra, RethinkDB</li>                <li>Linux</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Steam Database Administrator', 16, 16 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='steam_technical_account_manager'>
-				<div class='job_position_title'>Steam Technical Account Manager</div>
-				<div class='job_position_description' id='desc_21' >
-					<div class='job_position_title_active'>Steam Technical Account Manager</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As a Steam Technical Account Manager, you're the point person for making sure that games and applications are well-integrated with Steam and work properly. Developers and publishers will rely on you to assist with integration of Steamworks features. A working knowledge of C++ is vital to this role, as are good communication and prioritization skills and a clear focus on providing the best possible customer experience. The ability to be self-directed, while still providing excellent service to partners, is critical.</p></div><div class='list_title'>You'll be responsible for:</div><ul><li>Supporting our community of developers and publishers, both one-on-one and through open forums.</li><li>Enhancing the Steam store for customers and partners, by designing and implementing promotional vehicles.</li><li>Setting and enforcing policies for partner behavior on the Steam store.</li><li>Advocating for the best customer experience possible for games distributed on Steam.</li><li>Advising partners about Steam opportunities and collaborating with them to integrate Steam platform features.</li><li>Debugging problems with Steam services.</li><li>Working with different internal groups and partners to create new Steam features, tools and initiatives.</li><li>Writing and maintaining Steamworks documentation.</li></ul><div class='list_title'>Ideal candidates will have:</div><ul><li>C++ and PHP development experience.</li><li>Games industry experience and knowledge.</li><li>Web (HTML/CSS/JS) development experience.</li><li>A wide breadth of technical knowledge.</li><li>Experience working with multiple external partners and customers.</li><li>A wide-ranging view of business strategy.</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Steam Technical Account Manager', 21, 21 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='technical_artist'>
-				<div class='job_position_title'>Technical Artist</div>
-				<div class='job_position_description' id='desc_23' >
-					<div class='job_position_title_active'>Technical Artist</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>We’re looking for highly experienced, versatile and passionate Technical Artists to solve problems, improve our tools and pipelines, and apply ingenuity to our award-winning games!   Applicants must demonstrate a specialized capability as well as general versatility in all aspects of a CG pipeline.  We look for individuals that proactively solve issues and have the flexibility and foresight to research, design and implement cutting-edge tools before artists require them.  Technical Artists should be ready to jump into everyday production and force-multiply our art and technology capabilities.</p><p style='font-weight:bold'>Sorry, we do not accept student reels.</p></div><div class='list_title' >Duties:</div><ul><li>Facilitate communication between departments</li><li>Contribute to project goals in a cross-disciplinary capacity</li><li>Define, research, write and maintain tools for project and studio wide needs</li></ul><div class='list_title' >Requirements:</div><ul><li>Five or more years of professional experience in animation, games or CG industry</li><li>Senior level contribution on a previously shipped linear medium or game product</li><li>Expert experience with 3D software suites preferred (Maya, Zbrush, Modo, etc)</li><li>Python and C++ programming experience preferred</li><li>Ability to self-manage and make responsible decisions about time and project priorities</li><li>Strong collaboration skills</li><li>Bachelor’s or Master’s degree in computer science or engineering equivalent is a plus</li></ul><div class='job_description_intro'><p>Submit a portfolio or reel with your application as well as a detailed description of work found therein.</p></div>					<p><a class='apply_link' onclick="ShowApplication('Technical Artist', 23, 23 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='virtual_reality_engineers'>
-				<div class='job_position_title'>Virtual Reality - Engineers</div>
-				<div class='job_position_description' id='desc_41' >
-					<div class='job_position_title_active'>Virtual Reality - Engineers</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>At Valve we are pushing the boundaries of virtual reality and related technologies. We are looking for versatile, self-directed hardware and software engineers in many disciplines that can help us achieve the next steps in VR. Join the Valve team pursuing hardware design, software development, prototyping, testing, and production as we invent, design, and deliver new experiences to over 100 million customers.</p></div><div class='list_title'>Experience in one or more of the following areas:</div><ul><li>User Interfaces</li><li>Human Computer Interaction</li><li>Controllers</li><li>Computer Vision (Tracking, Photogrammetry, Bundle Adjustment)</li><li>Image-Based Rendering & Light Field Rendering</li><li>Optics & Computational Displays</li><li>Tracking (EKF, State Estimation, Inertial Navigation, Control Theory)</li><li>3D Graphics: Shading, Rendering, Drivers</li><li>Engine Integration (Unity, Unreal)</li><li>Spatialized Audio</li><li>Human Perception & Vision Science</li><li>FPGA / ASIC Development</li><li>Analog / Mixed Signal Circuit Design</li><li>Embedded Firmware</li><li>Video Compression</li><li>Wireless Technologies</li></ul>					<p><a class='apply_link' onclick="ShowApplication('Virtual Reality - Engineers', 41, 41 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='visual__user_experience_designer'>
-				<div class='job_position_title'>Visual & User Experience Designer</div>
-				<div class='job_position_description' id='desc_8' >
-					<div class='job_position_title_active'>Visual & User Experience Designer</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>As a user experience designer at Valve, you will join a world-class group of software engineers, artists, writers, animators and designers who are continually creating and shipping world-class social entertainment experiences. We’re hoping to add your expertise in visual communication, user experience design, usability, writing, and marketing to our team. </p><p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship user interfaces, architectures, layouts and graphics, we create and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.</p><p>At Valve, our design process really gets going once products are in customers’ hands. Our best work is the result of an ongoing dialog with customers. This is fundamental to the way we create great products. Through years of shipping software as a service through Steam, our digital distribution platform, we’ve learned to include our customers in the entirety of the design process. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? </p><p>Do you prefer to define the work that you pursue, rather than simply following a vision that’s been set for you? If you’re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can’t wait to see where you’ll take us.</p></div><div class='list_title' >Requirements:</div><ul><li>BS/BA/BFA degree (or equivalent) in graphic, industrial, or interaction design (or equivalent)</li><li>6+ years of professional experience shipping world-class software and services</li><li>A thorough understanding of graphic and user interaction design principles</li><li>Highly effective multidisciplinary collaboration skills </li><li>Personal commitment to quality, attention to detail</li><li>Confidence with design communication tools</li><li>Effective, articulate design communication and decision-making skills</li><li>An online portfolio of work which conveys your capabilities</li></ul><div class='job_description_intro'><p>Please include with your application an online portfolio of work which conveys your capabilities.</p></div>					<p><a class='apply_link' onclick="ShowApplication('Visual & User Experience Designer', 8, 8 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-					<div class='job_position_container' id='have_a_better_idea'>
-				<div class='job_position_title'>Have a better idea?</div>
-				<div class='job_position_description' id='desc_27' >
-					<div class='job_position_title_active'>Have a better idea?</div><div class='close_popup'></div>
-					<div class='job_description_intro'><p>These job listings are incomplete.  If you don’t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.</p> <p>We don’t have junior-level positions or internships here, so we are looking for highly skilled folks who’ve been in their industry for a few years who can bring in knowledge and expertise we don’t currently possess.</p><div class='list_title' >Requirements:</div><ul><li>4+ years of professional experience</li><li>High-level expertise in your discipline</li></ul></div>					<p><a class='apply_link' onclick="ShowApplication('Have a better idea?', 27, 27 );">Apply for this position</a> ></p>
-				</div>
-			</div>
-						</div> <!-- end right_col div -->
-			
-			<div class="job_position_description" id="email_form_container" style="display:none;">
-				<div class='close_popup'></div>
-				<div class="job_application_title">Apply To: <div id="application_title" style="display:inline"></div></div>
-				<div id="emailFailed"></div>
-				<div id="fix_errors"></div>
-				<div id="error_container" style="color: #CF381E; padding-left: 15px; margin-bottom: 15px;"></div>
-				<form id="email_form" name="email_form" action="email_handler_new.php?posted=1" method="post" enctype="multipart/form-data">
-					<input type="hidden" name="process" id="process" value=1 />
-					<input type="hidden" name="reqid" id="reqid" />
+</div>
 
-					<label for="name">Name</label>
-					<input type="text" name="name" id="name" class="" />
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="business-development">
+							<a href="#">Business Development</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
 
-					<label for="email">Email Address</label>
-					<input type="text" name="email" id="email" class="" />
+									
 
-					<label for="intro">Tell us a little about yourself. (You can also attach a cover letter below.)</label>
-					<textarea id="intro" name="intro" rows="10" cols="30"></textarea>
-
-					<label for="resume">Attach Documents - please make sure to include a resume. (We like .pdf, .doc, and .docx files)</label>
-					<input type="file" name="resume[]" multiple id="resume" class="" />
-
-					<input type="submit" name="submit" id="submit" value="Submit" style="margin-top: 12px;" />
-
-				</form>
-			</div>
-
-			<div class="job_position_description" id="email_success_message" style="display:none;">
-				<div class="job_description_intro">
-					<div class='job_position_title_active'>We got it!</div><div class='close_popup'></div>
-					<p>Your application will be automatically forwarded to postings applicable to your experience, so there's no need to submit more than once.</p>
-					<p>Thank you for your interest in working at Valve.  </p>
-				</div>
-			</div>
-					
-			<script>
-
-				var submitInProgress = false;
-				// js for form submission
-				$J('#email_form').submit( function(event) {
-					event.preventDefault();
-
-					if ( submitInProgress )
-					{
-						console.log( "Submit in progress" );
-						return;
-					}
-
-					submitInProgress = true;
-
-					var form = $J(event.target);
-					var fd = new FormData( form[0] );
-
-					var oParams = {
-						type: form.attr( 'method' ),
-						url: form.attr( 'action' )
-					};
-
-					oParams['data'] = fd;
-					oParams['processData'] = false;
-					oParams['contentType'] = false;
-
-					$J.ajax(
-						oParams
-					).done( function(response)
-					{
-						var json = response;
-						if ( json.success )
-						{
-							// hide form
-							$('email_form_container').fade( {duration: .3, to: 0});
-
-							// show success message!
-							$('email_success_message').appear( {duration: .3, to: 1});
-
-							// clear fields
-							$('email_form').reset();
-						}
-						else
-						{
-							// append error message
-							document.getElementById('emailFailed').innerHTML = "";
-							document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>*Please make sure all fields are filled out correctly.</div>";
+	<div class="col_12">
 
 
-							var errorContainer = document.getElementById("error_container");
-							while (errorContainer.firstChild) {
-								errorContainer.removeChild(errorContainer.firstChild);
-							}
-							json.rgErrors.forEach( function( x ) {
-								var div = document.createElement( 'div' );
-								div.className = 'error_message';
-								div.innerHTML = x;
-								errorContainer.appendChild( div );
-							} );
-						}
-					} )
-					.fail( function( response )
-					{
-						document.getElementById('emailFailed').innerHTML = "";
-						document.getElementById('fix_errors').innerHTML = "<div style='color:#CF381E; margin-bottom: 7px; font-weight: bold;' id='emailErrorMessage'>We were unable to submit your resume at this time. Please try again later.</div>";
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=21">
+					<h5 class="job_title">
+						Steam Technical Account Manager					</h5>
+				</a>
+			</div>
 
-						var errorContainer = document.getElementById("error_container");
-						while (errorContainer.firstChild) {
-							errorContainer.removeChild(errorContainer.firstChild);
-						}
-						var div = document.createElement( 'div' );
-						div.className = 'error_message';
-						div.innerHTML = response.status + " " + response.statusText;
-						errorContainer.appendChild( div );
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=60">
+					<h5 class="job_title">
+						Business Development<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
 
-					} )
-					.always( function( response )
-					{
-						submitInProgress = false;
-					} );
-				} );
+								</div>
+	</div>
+</div>
 
-			</script>
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="data-science">
+							<a href="#">Data Science</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
 
-			<div style='clear:both;'></div>
-		</div>	<!-- end job positions div -->	
-		<div style='clear:both; margin-top:20px;'></div>
-		
-		<div id='jobs_bottom_banner' class='game_bottom_image'></div>
-		<div id="footer">
-        &copy; 2018 Valve Corporation. All rights reserved. Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing Force, Day of Defeat, the Day of Defeat logo, Counter-Strike, the Counter-Strike logo, Source, the Source logo, Counter-Strike: Condition Zero, Portal, the Portal logo, Dota, the Dota 2 logo, and Defense of the Ancients are trademarks and/or registered trademarks of Valve Corporation. All other trademarks are property of their respective owners.<br /><br />
-    	<a class="footer" href="http://www.valvesoftware.com/terms.html">Site Terms of Use</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.valvesoftware.com/privacy.html">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.valvesoftware.com/legal.html">Legal</a>
-</div>	</div> <!-- end main_content div -->
-	
-</div> <!-- end container div -->
-<div style='display:none; margin-top: 0px;' id='greyBgId' class='grey_background'></div>
+									
 
-</body>
+	<div class="col_12">
 
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=4">
+					<h5 class="job_title">
+						Economist					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=11">
+					<h5 class="job_title">
+						Psychologist<span class="job_division">Research/Experimental</span>					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=19">
+					<h5 class="job_title">
+						Statistician					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=61">
+					<h5 class="job_title">
+						Data Science<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="finance">
+							<a href="#">Finance</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=62">
+					<h5 class="job_title">
+						Finance<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="game-design">
+							<a href="#">Game Design</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=4">
+					<h5 class="job_title">
+						Economist					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=9">
+					<h5 class="job_title">
+						Level Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=10">
+					<h5 class="job_title">
+						Motion Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=11">
+					<h5 class="job_title">
+						Psychologist<span class="job_division">Research/Experimental</span>					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=18">
+					<h5 class="job_title">
+						Sound Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=23">
+					<h5 class="job_title">
+						Technical Artist					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=51">
+					<h5 class="job_title">
+						Game Development Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=63">
+					<h5 class="job_title">
+						Game Design<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="hardware-engineering">
+							<a href="#">Hardware Engineering</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=5">
+					<h5 class="job_title">
+						Electrical Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=7">
+					<h5 class="job_title">
+						Industrial Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=41">
+					<h5 class="job_title">
+						Software Engineer for VR & Hardware					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=72">
+					<h5 class="job_title">
+						Optical Engineer					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=74">
+					<h5 class="job_title">
+						Mechanical Engineer<span class="job_division">Research & Development</span>					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=75">
+					<h5 class="job_title">
+						Mechanical Engineer<span class="job_division">Architect</span>					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=64">
+					<h5 class="job_title">
+						Hardware Engineering<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="human-resources">
+							<a href="#">Human Resources</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=65">
+					<h5 class="job_title">
+						Human Resources<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="legal">
+							<a href="#">Legal</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=69">
+					<h5 class="job_title">
+						Legal<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="operations">
+							<a href="#">Operations</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=70">
+					<h5 class="job_title">
+						Operations<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="product-design">
+							<a href="#">Product Design</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=7">
+					<h5 class="job_title">
+						Industrial Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=8">
+					<h5 class="job_title">
+						Visual & User Experience Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=10">
+					<h5 class="job_title">
+						Motion Designer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=66">
+					<h5 class="job_title">
+						Design<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="software-engineering">
+							<a href="#">Software Engineering</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=12">
+					<h5 class="job_title">
+						Anti-Cheat Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=13">
+					<h5 class="job_title">
+						Steam E-Commerce Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=14">
+					<h5 class="job_title">
+						Steam Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=16">
+					<h5 class="job_title">
+						Steam Database Administrator					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=17">
+					<h5 class="job_title">
+						Web Applications Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=23">
+					<h5 class="job_title">
+						Technical Artist					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=36">
+					<h5 class="job_title">
+						SteamOS Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=41">
+					<h5 class="job_title">
+						Software Engineer for VR & Hardware					</h5>
+				</a>
+			</div>
+
+					</div>
+		<div class="row">
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=51">
+					<h5 class="job_title">
+						Game Development Software Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=57">
+					<h5 class="job_title">
+						Software Engineering<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="technical-infrastructure">
+							<a href="#">Technical Infrastructure</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=16">
+					<h5 class="job_title">
+						Steam Database Administrator					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=26">
+					<h5 class="job_title">
+						Network/Systems Engineer					</h5>
+				</a>
+			</div>
+
+									<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=68">
+					<h5 class="job_title">
+						IT<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+											<li class="job_tag" data-job_cat="writing">
+							<a href="#">Writing</a>
+							<div class="job_openings_wrapper">
+								<div class="job_openings_inner_wrapper row">
+
+									
+
+	<div class="col_12">
+
+
+	<div class="job_openings">
+		<div class="row">
+						<div class="job_opening col_3">
+				<a href="https://valvesoftware.com/en/jobs?job_id=67">
+					<h5 class="job_title">
+						Writing<span class="job_division">Other</span>					</h5>
+				</a>
+			</div>
+
+								</div>
+	</div>
+</div>
+
+								</div>
+							</div>
+						</li>
+										<li class="job_tag empty_answer"><a href="https://valvesoftware.com/en/jobs">Did we miss something?</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+					</div>
+					<footer class="main_footer">
+						<div class="main_footer_inner_wrapper">
+							<div class="row">
+								<div class="col_5">
+									<h5 class="business_name"><a href="https://valvesoftware.com/en/valve">Valve Corporation</a></h5>
+									<a class="business_description" href="https://valvesoftware.com/en/about">
+																			</a>
+								</div>
+								<div class="col_3 col_offset_1 footer_nav_wrapper">
+									<nav class="footer_nav">
+										<ul>
+											<li>Contact												<ul>
+													<li>
+														<a href="https://valvesoftware.com/en/people">People</a>
+													</li>
+													<li>
+														<a href="https://valvesoftware.com/en/press/inquiries">Press Inquiries</a>
+													</li>
+												</ul>
+											</li>
+											<li>Stuff												<ul>
+													<li>
+														<a href="https://valvesoftware.com/en/about">About Us</a>
+													</li>
+													<li>
+														<a href="https://valvesoftware.com/en/">Jobs</a>
+													</li>
+													<li>
+														<a href="https://valvesoftware.com/en/legal/site-terms-of-use">Site Terms of Use</a>
+													</li>
+													<li>
+														<a href="https://valvesoftware.com/en/publications">Publications</a>
+													</li>
+													<li>
+														<a href="//store.steampowered.com/privacy_agreement/" target="_blank">Privacy Policy</a>
+													</li>
+													<li>
+														<a href="//store.steampowered.com/legal" target="_blank">Legal</a>
+													</li>
+													<li>
+														<a href="//partner.steamgames.com/" target="_blank">Steam Partners</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="col_3 footer_steam_logos">
+									<div class="steam_logo">
+										<a href="http://store.steampowered.com/" target="_blank">
+											<img src="https://steamcdn-a.akamaihd.net/valvesoftware/images/steam_logo_footer.png">
+										</a>
+									</div>
+									<div class="steamworks_logo">
+										<a href="https://partner.steamgames.com/" target="_blank">
+											<img src="https://steamcdn-a.akamaihd.net/valvesoftware/images/steamworks_logo_footer.png">
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
