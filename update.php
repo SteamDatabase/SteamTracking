@@ -192,7 +192,7 @@
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
 			// Prettify
-			else if( $File === 'Scripts/Dota2/heropickerdata.json' )
+			else if( $File === 'Scripts/Dota2/heropickerdata.json' || $File === 'Random/Jobs.json' )
 			{
 				$Data = JSON_Decode( $Data, true );
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );

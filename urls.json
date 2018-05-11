@@ -397,6 +397,7 @@
 "Random/Publications.html"                       : "https://valvesoftware.com/en/publications",
 "Random/People.html"                             : "https://valvesoftware.com/en/people",
 "Random/About.html"                              : "https://valvesoftware.com/en/about",
+"Random/Jobs.json"                               : "https://valvesoftware.com/en/jobs/job-search",
 "Random/ValveGroup.json"                         : "https://steamcommunity.com/groups/valve/memberslistxml?xml=1",
 "Random/SteamModerators.json"                    : "https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1",
 "Random/SteamDevs.json"                          : "https://steamcommunity.com/groups/steam/memberslistxml?xml=1"
