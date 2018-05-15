@@ -3213,34 +3213,52 @@ function ShowSupportAlerts(url)
 	window.open( url, 'SupportAlerts', 'height=700,width=700,resize=yes,scrollbars=yes' );
 }
 
-function ToggleFamilyView( bLocked, strURL )
+function UnlockFamilyView( strURL )
 {
-	if ( bLocked )
+	window.location = strURL;
+}
+
+function LockFamilyView( bStore )
+{
+	var urlFirst = '';
+	var urlSecond = '';
+	if ( bStore )
 	{
-		window.location = strURL;
+		urlFirst = 'https://store.steampowered.com/';
+		urlSecond = 'https://steamcommunity.com/';
 	}
 	else
 	{
-		ShowConfirmDialog( 'Return to Family View',
-			'Are you sure you want to return to Family View?',
-			'Return to Family View'
-		).done( function() {
-			ShowBlockingWaitDialog( 'Return to Family View' );
-
-			$J.ajax( {
-				type: "POST",
-				url: 'https://store.steampowered.com/parental/ajaxlock',
-				data: {
-					sessionid: g_sessionID
-				},
-				dataType: "json",
-				success: function ( data ) {
-					window.location.reload()
-				}
-			});
-
-		});
+		urlFirst = 'https://steamcommunity.com/';
+		urlSecond = 'https://store.steampowered.com/';
 	}
+
+	ShowConfirmDialog( 'Return to Family View',
+		'Are you sure you want to return to Family View?',
+		'Return to Family View'
+	).done( function() {
+		ShowBlockingWaitDialog( 'Return to Family View' );
+
+		$J.ajax( {
+					type: "POST",
+					url: urlFirst + '/parental/ajaxlock',
+					crossDomain: true,
+					xhrFields: { withCredentials: true },
+					complete: function( jqHXR, textStatus )
+					{
+						$J.ajax( {
+							type: "POST",
+							url: urlSecond + '/parental/ajaxlock',
+							crossDomain: true,
+							xhrFields: { withCredentials: true },
+							complete: function( jqHXR, textStatus )
+							{
+								window.location = urlFirst;
+							}
+						} );
+					}
+		} );
+	} );
 }
 
 function setTimezoneCookies()

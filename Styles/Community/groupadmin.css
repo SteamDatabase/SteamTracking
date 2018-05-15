@@ -117,9 +117,22 @@
 	cursor: default;
 }
 
-.formRowGroupings {
-	background-color: #303d4a;
-	padding: 2px;
+.formRow .formRowGroupings {
+	background-color: rgba(255,255,255,0.1);
+	padding: 12px;
+	font-size: 13px;
+}
+.formRowGroupings input[type="checkbox"] {
+	margin-left: 0px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.formRow .formRowGroupings .formRowMultiLineText.disabled {
+	color: #636c74;
+}
+
+.formRowGroupings .select2-container {
+	margin-left: 26px;
 }
 
 .formRowHR {
@@ -127,7 +140,7 @@
 }
 
 .formRowMultiLineText {
-	line-height: normal;
+	line-height: 20px;
 	display: inline-flex;
 }
 

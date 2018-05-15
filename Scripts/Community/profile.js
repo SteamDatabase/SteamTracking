@@ -66,6 +66,12 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		sessionID: g_sessionID
 	};
 
+	if ( !steamIDInvitee.length )
+	{
+		ShowAlertDialog( 'Error', 'You have not selected any friends.' );
+		return;
+	}
+
 	if ( steamIDInvitee instanceof Array )
 		params.invitee_list = V_ToJSON( steamIDInvitee );
 	else
@@ -78,6 +84,9 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 		Modal && Modal.Dismiss();
 
 		var strMessage = 'Invitation Sent!';
+		if ( steamIDInvitee instanceof Array && steamIDInvitee.length > 1 )
+			strMessage = 'Invitations Sent!';
+
 		ShowAlertDialog( 'Invite to Join Your Group', strMessage );
 	}).fail( function( data ) {
 		Modal && Modal.Dismiss();

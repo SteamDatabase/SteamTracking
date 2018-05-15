@@ -1875,12 +1875,17 @@ div.rule {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/searchbox_workshop_submit.gif' );
 	background-repeat: no-repeat;
 	background-position: right center;
-	background-color: #2a3f5a;
+	background-color: rgba(0,0,0,0.3);
+	box-shadow: 1px 1px 0px rgba(255,255,255,0.1);
+	color: #ffffff;
 	font-size: 12px;
 	padding: 3px;
-	margin-top: -2px;
+	margin-top: -4px;
+}
 
-
+.images_search_container input::-webkit-input-placeholder {
+	font-style: italic;
+	color: #61686d;
 }
 
 @media screen and (max-width: 910px)
@@ -2083,4 +2088,9 @@ div.rule {
 
 .pending_membership_count_high {
 	color: #ca4848;
+}
+
+.groupadmin_content .rightbox_content_header {
+	background: #495665;
+	color: #97a5b4;
 }
