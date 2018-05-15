@@ -1,11 +1,4 @@
 
-.curator .popup_menu .suggestion_item.popup_menu_item {
-	color: #000;
-}
-.curator .popup_menu .suggestion_item.popup_menu_item.focus {
-	color: #fff;
-}
-
 .admin_container {
 	display: flex;
 }
@@ -435,6 +428,13 @@ body.v6 .reviews_container h3 {
 
 .app_ctn .app_accepted {
 	display: flex;
+}
+
+.app_ctn .app_accepted .app_name_ctn {
+	padding-top: 8px;
+}
+.app_ctn .app_accepted .app_name {
+	max-width: 100%;
 }
 
 .accepted_list {
