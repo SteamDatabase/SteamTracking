@@ -38,6 +38,12 @@
                     "description": "Max number of servers to return"
                 }
             ]
+        },
+        {
+            "name": "GetSteamPipeDomains",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
         }
     ]
 }
