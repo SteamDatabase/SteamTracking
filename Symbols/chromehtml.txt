@@ -558,6 +558,7 @@
  Msg
  OSAtomicCompareAndSwap32Barrier
  OSMemoryBarrier
+ Plat_AbsoluteTime
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePathUTF8

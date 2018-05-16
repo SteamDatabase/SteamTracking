@@ -24,7 +24,7 @@ public:
     virtual unknown_ret IsAPICallCompleted(unsigned long long, bool*) = 0;
     virtual unknown_ret GetAPICallFailureReason(unsigned long long) = 0;
     virtual unknown_ret GetAPICallResult(unsigned long long, void*, int, int, bool*) = 0;
-    virtual unknown_ret PostInProcAPICallResult(unsigned long long, void const*, int, int) = 0;
+    virtual unknown_ret SetAPICallResultWithoutPostingCallback(unsigned long long, void const*, int, int) = 0;
     virtual unknown_ret SignalAppsToShutDown() = 0;
     virtual unknown_ret SignalServiceAppsToDisconnect() = 0;
     virtual unknown_ret TerminateAllAppsMultiStep(unsigned int) = 0;
