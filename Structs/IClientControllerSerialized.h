@@ -83,7 +83,9 @@ public:
     virtual unknown_ret GetAllBindings(unsigned int, CUtlVector<BindingAction_t, CUtlMemory<BindingAction_t> >*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*) = 0;
     virtual unknown_ret BIsXInputActiveForController(unsigned int) = 0;
     virtual unknown_ret SwapXInputSlots(unsigned int, unsigned int) = 0;
-    virtual unknown_ret SettingsChanged(bool, unsigned int) = 0;
+    virtual unknown_ret PS4SettingsChanged(bool) = 0;
+    virtual unknown_ret SwitchSettingsChanged(bool) = 0;
+    virtual unknown_ret ControllerSettingsChanged(unsigned int) = 0;
     virtual unknown_ret IsControllerConnected(unsigned int, bool) = 0;
     virtual unknown_ret GetControllerState(unsigned int, SteamControllerStateInternal_t*) = 0;
     virtual unknown_ret TriggerHapticPulse(unsigned int, ESteamControllerPad, unsigned short, unsigned short, unsigned short, unsigned int) = 0;
