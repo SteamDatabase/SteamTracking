@@ -11,7 +11,7 @@ body.v6.creatorhome.game_bg {
 
 .creatorhome .page_background {
 	background-size: contain;
-	background-color: rgba(188, 151, 78, 0.2);
+	background-color: rgba(78, 147, 188, 0.2);
 	background-blend-mode: lighten;
 }
 .creatorhome .page_background.lowtint {
@@ -93,7 +93,7 @@ body.v6.creatorhome.game_bg {
 body.v6 h2 {
 	color: #8f98a0;
 		font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 			//text-transform: uppercase;
 	font-size: 17px;
@@ -111,7 +111,7 @@ body.v6 a:hover h2 {
 body.v6 .carousel_container h2,
 body.v6 .filter_ctn h2 {
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 .dark_container{
@@ -468,12 +468,13 @@ body.v6 .page_desc p {
 
 
 .curator_review_date {
-    margin-left: 10px;
+    margin-left: 0px;
     color: #93b0bb;
     font-size: 10px;
     text-transform: none;
     font-weight: normal;
     letter-spacing: normal;
+	display: inline-block;
 }
 .creatorhome .curator_review_date {
 	color: #8f98a0;
