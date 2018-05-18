@@ -909,6 +909,7 @@
  setrlimit
  setrlimit$UNIX2003
  shm_open
+ shm_unlink
  snprintf
  sscanf
  std::__1::__vector_base_common<true>::__throw_length_error() const

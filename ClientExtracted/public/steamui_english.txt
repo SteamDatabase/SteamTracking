@@ -4402,6 +4402,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_BandwidthUnlimited" 	"Unlimited (increases latency)"
 "Steam_Settings_Streaming_Resolution"	"Limit resolution to"
 "Steam_Settings_Streaming_ResolutionDesktop" 	"Display resolution"
+"Steam_Settings_Streaming_Resolution2160p" 	"3840x2160 (4K)"
+"Steam_Settings_Streaming_Resolution1440p" 	"2560x1440 (1440p)"
 "Steam_Settings_Streaming_Resolution1080p" 	"1920x1080 (1080p)"
 "Steam_Settings_Streaming_Resolution900p" 	"1600x900 (900p)"
 "Steam_Settings_Streaming_Resolution720p" 	"1280x720 (720p)"

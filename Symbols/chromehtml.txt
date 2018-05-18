@@ -3301,6 +3301,7 @@
  sem_wait$UNIX2003
  sendmsg$UNIX2003
  shm_open
+ shm_unlink
  snprintf
  socket
  sprintf

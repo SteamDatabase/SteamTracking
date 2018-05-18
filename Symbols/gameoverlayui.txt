@@ -2,6 +2,7 @@
  .objc_class_name_NSBundle
  .objc_class_name_NSColorSpace
  .objc_class_name_NSEvent
+ .objc_class_name_NSFileManager
  .objc_class_name_NSLocale
  .objc_class_name_NSProcessInfo
  .objc_class_name_NSRunningApplication
@@ -14608,6 +14609,7 @@
  setjmp
  setlocale
  shm_open
+ shm_unlink
  snprintf
  sprintf
  sscanf

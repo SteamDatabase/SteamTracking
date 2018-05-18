@@ -29,6 +29,8 @@
 						<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
 						<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
 							<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
+              <Label id="3840x2160" text="#Settings_RemoteClients_Resolution2160p" />
+              <Label id="2560x1440" text="#Settings_RemoteClients_Resolution1440p" />
 							<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
 							<Label id="1600x900" text="#Settings_RemoteClients_Resolution900p" />
 							<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />

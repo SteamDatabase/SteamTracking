@@ -3479,6 +3479,8 @@
 	"Settings_RemoteClients_BandwidthUnlimited" 	"Unlimited (increases latency)"
 	"Settings_RemoteClients_Resolution"	"Limit resolution to"
 	"Settings_RemoteClients_ResolutionDesktop" 	"Display resolution"
+	"Settings_RemoteClients_Resolution2160p" 	"3840x2160 (4K)"
+	"Settings_RemoteClients_Resolution1440p" 	"2560x1440 (1440p)"
 	"Settings_RemoteClients_Resolution1080p" 	"1920x1080 (1080p)"
 	"Settings_RemoteClients_Resolution900p" 	"1600x900 (900p)"
 	"Settings_RemoteClients_Resolution720p" 	"1280x720 (720p)"
