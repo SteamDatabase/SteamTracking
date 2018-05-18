@@ -2017,7 +2017,7 @@ webpackJsonp(
                 this.props.PrivacyKey
               );
               Object(k.a)(
-                f.createElement(H, {
+                f.createElement(T, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPrivacy: t,
                   eMinPrivacy: this.GetMinPrivacy()
@@ -2125,7 +2125,7 @@ webpackJsonp(
             (t.prototype.OnClick = function(e) {
               var t = this.props.PrivacyStore.CommentPermission;
               Object(k.a)(
-                f.createElement(T, {
+                f.createElement(H, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPermission: t,
                   eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
@@ -2170,7 +2170,7 @@ webpackJsonp(
             (t = w.b([O.observer], t))
           );
         })(f.Component),
-        H = (function(e) {
+        T = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2216,7 +2216,7 @@ webpackJsonp(
             t
           );
         })(f.Component),
-        T = (function(e) {
+        H = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3334,7 +3334,8 @@ and limitations under the License.
           IN_MOBILE: !1,
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
-          SESSIONID: ""
+          SESSIONID: "",
+          BUILD_TIMESTAMP: 0
         },
         s = {
           logged_in: !1,
