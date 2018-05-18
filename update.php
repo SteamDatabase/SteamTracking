@@ -225,7 +225,10 @@
 					return false;
 				}
 				
-				$Data = preg_replace( '/<h3 id="stats_users_[a-z]+">(.+?)<\/h3>/s', '', $Data );
+				if( $File === 'Random/About.html' )
+				{
+					$Data = preg_replace( '/<section>\s+<div class="steam_section">.+?<\/section>\r\n/s', '', $Data );
+				}
 			}
 			else if( SubStr( $File, -4 ) === '.css' ||  SubStr( $File, -3 ) === '.js' )
 			{
