@@ -1238,6 +1238,38 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 }
 
+.purchase_gift_message_box
+{
+	margin-top: 10px;
+	padding: 10px;
+	background-color: rgb( 23, 27, 34 );
+	color: #82909a;
+	min-width: 300px;
+	max-width: 400px;
+}
+
+.purchase_gift_message_box div
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.purchase_rma_details_box
+{
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: rgb( 23, 27, 34 );
+	color: #82909a;
+	min-width: 300px;
+	max-width: 400px;
+}
+
+.purchase_rma_details_help_issue
+{
+	color: #67c1f5;
+}
+
 .purchase_totals .refund_value
 {
 	text-align: right;
@@ -4210,6 +4242,11 @@ table {
 	max-width: 712px;
 }
 
+.AccountDataPage
+{
+	padding-bottom: 40px;
+}
+
 .AccountDataTable
 {
 }
@@ -4239,4 +4276,13 @@ table {
 .AccountDataLoadMore:hover
 {
     color: #66c0f4;
+}
+
+.AccountDataTableDescription
+{
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-size: 12px;
+    margin-bottom: 4px;
 }

@@ -1,16 +1,5 @@
 
 
-var g_player = null;
-
-function OnMovieComplete()
-{
-	if ( g_player )
-	{
-		var activeItem = gPlayer.m_activeItem;
-		setTimeout( function() { g_player.OnMovieComplete( activeItem ) }, 2000 );
-	}
-}
-
 function mute_session( bMuted )
 {
 	SetGameHighlightAudioEnabled( !bMuted );
@@ -178,8 +167,6 @@ function HighlightPlayer( args )
 		if ( bIsHidden )
 			$Ctn.css('visibility','' ).hide();
 	});
-
-	g_player = this;
 }
 
 HighlightPlayer.prototype.HighlightItem = function( elem, bUserAction )
@@ -514,20 +501,6 @@ HighlightPlayer.prototype.StartCycle = function()
 		this.StartTimer();
  }
 
-HighlightPlayer.prototype.OnMovieComplete = function( movieItem )
-{
-	if ( this.m_activeItem.is( movieItem ) )
-	{
-		var movieid = this.GetMovieId( this.m_activeItem );
-		this.Transition();
-
-		if ( this.m_bVideoOnlyMode || BIsUserGameHighlightAudioEnabled() )
-		{
-			this.RecordView( movieid );
-		}
-	}
- }
-
 HighlightPlayer.prototype.OnWebPanelHidden = function()
 {
 	this.StopCycle();
@@ -559,14 +532,6 @@ HighlightPlayer.prototype.mouseOut = function( event )
 		return;
 
 	this.StartCycle();
-};
-
-HighlightPlayer.prototype.RecordView = function( movieid )
-{
-	if ( typeof g_AccountID != 'undefined' && g_AccountID )
-	{
-		$J.get( 'https://store.steampowered.com/videoview/' + movieid + '/' );
-	}
 };
 
 HighlightPlayer.prototype.OnScreenshotClick = function( event, element )

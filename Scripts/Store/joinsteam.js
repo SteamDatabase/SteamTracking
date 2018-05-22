@@ -2,13 +2,17 @@
 var iAjaxCalls = 0;
 var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
+var g_parentalConsentDialog = null;
 
 function StartCreationSession()
 {
+	if ( g_parentalConsentDialog )
+		g_parentalConsentDialog.Dismiss();
+
 	$J.ajax( {
 		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
-		data: { 'email' : $J( '#email' ).val(), 'accountname' : $J( '#accountname' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
+		data: { 'email' : $J( '#email' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
 	})
 	.done( function( data ) {
 
@@ -42,6 +46,44 @@ function StartCreationSession()
 			WaitForEmailVerification();
 		}
 	} );
+}
+
+function StartCreationSessionParentalConsent()
+{
+	$J.ajax( {
+		type: 'POST',
+		url: g_sBaseURL + 'join/ajaxverifyemail',
+		data: { 'email' : $J( '#email' ).val(), 'parental_email' : $J( '#parental_email' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
+	})
+		.done( function( data ) {
+
+			if ( data.success != 1 )
+			{
+				var strError = data.details;
+
+			if ( data.success == 62 )
+				{
+					strError = 'This e-mail address must be different from your own.';
+					new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
+				}
+			else if ( data.success == 13 )
+				{
+					strError = 'Please enter a valid email address.';
+				}
+			else if ( data.success == 101 )
+				{
+					new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
+				}
+
+				ShowError( strError );
+			}
+			else
+			{
+				g_creationSessionID = data.sessionid;
+
+				ParentalConsentRequested();
+			}
+		} );
 }
 
 function WaitForEmailVerification()
@@ -119,7 +161,7 @@ function EmailConfirmedVerified()
 		g_emailVerificationDialog.Dismiss();
 	}
 
-	ReallyCreateAccount();
+	window.location = g_strRedirectURL + ( g_strRedirectURL.indexOf( '?' ) > 0 ? '&' : '?' ) + 'creationid=' + g_creationSessionID;
 }
 
 
@@ -158,7 +200,6 @@ function CreateAccount()
 	      	  //alert(e);
 	      	  	      	  return FinishFormVerification( false );
 	      	}
-	      	
 	      	return FinishFormVerification( result.bCaptchaMatches );
 		  }
 		  
@@ -170,83 +211,23 @@ function CreateAccount()
 	  });
 }
 
+
+function CompleteCreateAccount()
+{
+	return AccountPasswordFormVerification();
+}
+
 function FinishFormVerification( bCaptchaIsValid )
 {
 		var errorString = '';
 
 		var rgBadFields = { 
-		accountname : false, 
-		password : false, 
-		reenter_password : false,
 		email: false,
 		reenter_email: false,
 		captcha_text: false,
 		ssa_body: false
 	}
-	
-	var accountname = $('accountname').value;
-	if ( accountname.length < 3 || accountname.length > 64 )
-	{
-		errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
-		rgBadFields.accountname = true;
-	}
-	else
-	{
-		var bNameOK = true;
-		for( var i=0; i<accountname.length; ++i )
-		{
-			if ( accountname.charAt(i) >= 'a' && accountname.charAt(i) <= 'z' )
-				continue;
-			if ( accountname.charAt(i) >= 'A' && accountname.charAt(i) <= 'Z' )
-				continue;
-			if ( accountname.charAt(i) >= '0' && accountname.charAt(i) <= '9' )
-				continue;
-			if ( accountname.charAt(i) == '_' )
-				continue;
-				
-			bNameOK = false;
-		}
-		if ( !bNameOK )
-		{
-			errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
-			rgBadFields.accountname = true;
-		}
-	}
 
-	if ( !g_bAccountNameAvailable )
-	{
-		errorString += 'The account name you have chosen is not available. Please choose another name.<br/>';
-		rgBadFields.accountname = true;
-	}
-
-	var password =  $('password').value;
-	if ( password.length > 64 )
-	{
-		errorString += 'Please enter a password that is less than 64 characters long.<br/>';
-		rgBadFields.password = true;
-		rgBadFields.reenter_password = true;
-	}
-
-	if ( !g_bPasswordAvailable )
-	{
-		errorString += 'The password you entered is not allowed.  Please select a different password, with at least 8 characters.<br/>';
-		rgBadFields.password = true;
-		rgBadFields.reenter_password = true;
-	}
-	
-	var reenter_password = $('reenter_password').value;
-	if ( reenter_password == '' )
-	{
-		errorString += 'Please fill in the Re-enter password field.<br/>';
-		rgBadFields.reenter_password = true;
-	}
-	else if ( password != reenter_password )
-	{
-		errorString += 'Please enter the same password in both password fields.<br/>';
-		rgBadFields.password = true;
-		rgBadFields.reenter_password = true;
-	}
-	
 	var email = $('email').value;
 	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
 	if ( email == '' || !email_regex.test(email) )
@@ -302,6 +283,184 @@ function FinishFormVerification( bCaptchaIsValid )
 			errorString = '';
 			errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
 		}
+		ShowError( errorString );
+	}
+	else
+	{
+		var rgConsentCountries = [
+			{ countrycode: 'AT', minage : 14 },	// Austria
+			{ countrycode: 'BG', minage : 14 },	// Bulgaria
+			{ countrycode: 'CY', minage : 14 }, // Cyprus
+			{ countrycode: 'IT', minage : 14 }, // Italy
+			{ countrycode: 'CZ', minage : 15 }, // Czech
+			{ countrycode: 'GR', minage : 15 }, // Greece
+			{ countrycode: 'SI', minage : 15 },	// Slovenia
+			{ countrycode: 'HR', minage : 16 }, // Croatia
+			{ countrycode: 'DE', minage : 16 }, // Germany
+			{ countrycode: 'HU', minage : 16 }, // Hungary
+			{ countrycode: 'LT', minage : 16 }, // Lithuania
+			{ countrycode: 'FR', minage : 16 }, // France
+			{ countrycode: 'LU', minage : 16 }, // Luxembourg
+			{ countrycode: 'MT', minage : 16 }, // Malta
+			{ countrycode: 'RO', minage : 16 }, // Romania
+			{ countrycode: 'SK', minage : 16 }, // Slovakia
+			{ countrycode: 'NL', minage : 16 } ]; // Netherlands
+
+		var country_code = $( 'country' ).value;
+
+		$J('#error_display').slideUp();
+
+		var bCheckParentalConsent = false;
+		var nMinAge = 0;
+		for ( let country of rgConsentCountries )
+		{
+			if ( country.countrycode == country_code )
+			{
+				bCheckParentalConsent = true;
+				nMinAge = country.minage;
+				break;
+			}
+		}
+
+		if ( bCheckParentalConsent )
+		{
+			CheckParentalConsent( nMinAge );
+		}
+		else
+		{
+			StartCreationSession();
+		}
+	}
+}
+
+function CheckParentalConsent( nMinAge )
+{
+	var $strDialogContent = $J( '#age_gate_dialog' );
+
+	g_parentalConsentDialog =  ShowDialog( 'Please tell us your age', $strDialogContent, { bExplicitDismissalOnly: true }  );
+
+	$J( '.insert_min_age' ).text( nMinAge );
+	$strDialogContent.show();
+	g_parentalConsentDialog.SetRemoveContentOnDismissal( false );
+	g_parentalConsentDialog.AdjustSizing();
+
+}
+
+function GetParentalConsentEmail()
+{
+	g_parentalConsentDialog.Dismiss();
+
+	var $strDialogContent = $J( '#parental_consent_email_dialog' );
+
+	g_parentalConsentDialog =  ShowDialog( 'Please tell us your age', $strDialogContent, { bExplicitDismissalOnly: true }  );
+
+	$strDialogContent.show();
+	g_parentalConsentDialog.SetRemoveContentOnDismissal( false );
+	g_parentalConsentDialog.AdjustSizing();
+}
+
+function ParentalConsentRequested()
+{
+	g_parentalConsentDialog.Dismiss();
+
+	var $strDialogContent = $J( '#parental_consent_requested_dialog' );
+
+	g_parentalConsentDialog =  ShowDialog( 'E-mail sent', $strDialogContent, { bExplicitDismissalOnly: true }  );
+
+	$J( '.insert_verification_email' ).text( $J( '#email' ).val() );
+	$strDialogContent.show();
+	g_parentalConsentDialog.SetRemoveContentOnDismissal( false );
+	g_parentalConsentDialog.AdjustSizing();
+}
+
+function AccountPasswordFormVerification(  )
+{
+		var errorString = '';
+
+		var rgBadFields = {
+		accountname : false,
+		password : false
+	}
+
+	var accountname = $('accountname').value;
+	if ( accountname.length < 3 || accountname.length > 64 )
+	{
+		errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
+		rgBadFields.accountname = true;
+	}
+	else
+	{
+		var bNameOK = true;
+		for( var i=0; i<accountname.length; ++i )
+		{
+			if ( accountname.charAt(i) >= 'a' && accountname.charAt(i) <= 'z' )
+				continue;
+			if ( accountname.charAt(i) >= 'A' && accountname.charAt(i) <= 'Z' )
+				continue;
+			if ( accountname.charAt(i) >= '0' && accountname.charAt(i) <= '9' )
+				continue;
+			if ( accountname.charAt(i) == '_' )
+				continue;
+
+			bNameOK = false;
+		}
+		if ( !bNameOK )
+		{
+			errorString += 'Please enter an account name that is at least 3 characters long and uses only a-z, A-Z, 0-9 or _ characters.<br/>';
+			rgBadFields.accountname = true;
+		}
+	}
+
+	if ( !g_bAccountNameAvailable )
+	{
+		errorString += 'The account name you have chosen is not available. Please choose another name.<br/>';
+		rgBadFields.accountname = true;
+	}
+
+	var password =  $('password').value;
+	if ( password.length > 64 )
+	{
+		errorString += 'Please enter a password that is less than 64 characters long.<br/>';
+		rgBadFields.password = true;
+		rgBadFields.reenter_password = true;
+	}
+
+	if ( !g_bPasswordAvailable )
+	{
+		errorString += 'The password you entered is not allowed.  Please select a different password, with at least 8 characters.<br/>';
+		rgBadFields.password = true;
+		rgBadFields.reenter_password = true;
+	}
+
+	var reenter_password = $('reenter_password').value;
+	if ( reenter_password == '' )
+	{
+		errorString += 'Please fill in the Re-enter password field.<br/>';
+		rgBadFields.reenter_password = true;
+	}
+	else if ( password != reenter_password )
+	{
+		errorString += 'Please enter the same password in both password fields.<br/>';
+		rgBadFields.password = true;
+		rgBadFields.reenter_password = true;
+	}
+
+		for ( var key in rgBadFields )
+	{
+		if ( rgBadFields[key] )
+			new Effect.Morph( key, {style: 'border-color: #FF9900', duration: 0.5 } )
+		else
+			$(key).style.borderColor = '#82807C';
+	}
+
+		if ( errorString != '' )
+	{
+			var rgErrors = errorString.split( '<br/>' );
+			if ( rgErrors.length > 3 )
+		{
+			errorString = '';
+			errorString = rgErrors[0] + '<br/>' + rgErrors[1] + '<br/>' + 'And find more errors highlighted below.' + '<br/>';
+		}
 
 		ShowError( errorString );
 
@@ -310,7 +469,7 @@ function FinishFormVerification( bCaptchaIsValid )
 	{
 		$J('#error_display').slideUp();
 
-		StartCreationSession();
+		ReallyCreateAccount();
 	}
 }
 
@@ -321,10 +480,6 @@ function ReallyCreateAccount()
 	{
 		type: 'POST', 	    parameters: { accountname : $('accountname').value, 
 	    			  password : $('password').value,
-	    			  email : $('email').value,
-				      captchagid : $('captchagid').value,
-	    			  captcha_text : $('captcha_text').value,
-	    			  i_agree : $('i_agree_check').checked ? '1' : '0',
 	    			  count : iAjaxCalls,
 	    			  lt : $('lt').value,
 					  creation_sessionid : g_creationSessionID },
@@ -381,11 +536,15 @@ function ReallyCreateAccount()
 
 function ShowError( strError )
 {
+	var error_div = 'error_display';
+	if ( g_parentalConsentDialog )
+		error_div = 'error_display_parental';
+
 	$J('#cart_area').show();
-	$J('#error_display').html( strError );
-	$J('#error_display').show();
-	Effect.ScrollTo( 'error_display' );
-	new Effect.Highlight( 'error_display', { endcolor : '#000000', startcolor : '#ff9900' } );
+	$J('#' +  error_div).html( strError );
+	$J('#' + error_div).show();
+	Effect.ScrollTo( error_div );
+	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 
 

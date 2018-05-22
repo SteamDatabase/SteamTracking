@@ -1496,7 +1496,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 			font-size: 20px;
 	position: relative;
-	max-width: 970px;
+	width: 970px;
 	margin: 20px auto 0 auto;
 	display: block;
 }
@@ -1728,6 +1728,10 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 	html.responsive .responsive_home_spotlight_recommended {
 		text-align: center;
+	}
+
+	html.responsive .hardware_ctn.double .hardware_content {
+		max-width: 970px;
 	}
 }
 
