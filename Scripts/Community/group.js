@@ -17,22 +17,36 @@ function InitGroupPage( strGroupBaseURL, strActiveTab )
 	OnGroupHashChange( window.location.hash, true );
 }
 
+function ValidateURLRoot( url, base )
+{
+
+	var elAnchor = document.createElement("a");
+	elAnchor.href = url;
+	return elAnchor.href.startsWith( base );
+}
+
 function OnGroupHashChange( hash, bInitialLoad )
 {
 	var strTab = 'overview';
 	var url = '';
 	if ( hash.length > 1 )
 	{
-		hash = hash.substr(1);	// skip the #
-		var rgMatches = hash.match( /^[^\^]*/ );
+		hash = hash.substr ( 1 );	// skip the #
+		var rgMatches = hash.match ( /^[^\^]*/ );
 
-		if ( rgMatches && rgMatches[0] )
+		if ( rgMatches && rgMatches[ 0 ] )
 		{
-			url = rgMatches[0];
-			url = url.replace( /(\.|%2E)+([\/\\]|%2F|%5C)/g, '' );	//clean out any ./ or ../ in the URL
-			strTab = url.match( /^[a-zA-Z]*/ )[0];
+			url = rgMatches[ 0 ];
+			url = url.replace ( /(\.|%2E)+([\/\\]|%2F|%5C)/g, '' );	//clean out any ./ or ../ in the URL
+			strTab = url.match ( /^[a-zA-Z]*/ )[ 0 ];
 		}
 	}
+	if ( !ValidateURLRoot ( url, "https:\/\/steamcommunity.com\/groups\/") )
+	{
+		console.log("Failed to load URL: %s", url );
+		return;
+	}
+
 
 	if ( url != g_strActiveURL )
 	{

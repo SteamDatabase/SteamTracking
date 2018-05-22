@@ -1616,6 +1616,21 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	font-size: 17px;
 }
 
+.profile_private_info_dropdowns select {
+	width: 200px;
+	height: 30px;
+	margin-bottom: 40px;
+}
+
+.profile_private_info_dropdowns select option {
+	background-color: #1B2838;
+}
+
+.profile_private_info_message {
+	font-size: 20px;
+}
+
+
 .profile_ban_status {
 	margin-bottom: 32px;
 	color: #a94847;
