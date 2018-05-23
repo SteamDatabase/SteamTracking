@@ -535,6 +535,7 @@ message CMsgCanGoBackAndForward {
 message CMsgOpenSteamURL {
 	optional uint32 browser_handle = 1;
 	optional string url = 2;
+	optional string referrer = 3;
 }
 
 message CMsgSetCookie {
