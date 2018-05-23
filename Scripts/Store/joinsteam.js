@@ -544,7 +544,7 @@ function ShowError( strError )
 	$J('#' +  error_div).html( strError );
 	$J('#' + error_div).show();
 	Effect.ScrollTo( error_div );
-	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#ff9900' } );
+	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#f4b786' } );
 }
 
 
