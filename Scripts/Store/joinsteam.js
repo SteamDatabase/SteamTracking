@@ -50,6 +50,16 @@ function StartCreationSession()
 
 function StartCreationSessionParentalConsent()
 {
+	var email = $('parental_email').value;
+	var email_regex = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i
+	if ( email == '' || !email_regex.test(email) )
+	{
+		strError = 'Please enter a valid email address.<br/>';
+		new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
+		ShowError( strError );
+		return;
+	}
+
 	$J.ajax( {
 		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
