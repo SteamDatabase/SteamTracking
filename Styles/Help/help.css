@@ -1870,6 +1870,50 @@ a.guide_row {
 	box-sizing: border-box;
 }
 
+.help_issue_delete
+{
+	background-color: rgba( 0, 0, 0, 0.2 );
+	padding: 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+.help_issue_delete_header
+{
+	margin-bottom:20px;
+	max-width: 680px;
+}
+
+.help_issue_column
+{
+	float:left;
+	width: 40%;
+	margin-right: 50px;
+	padding:10px;
+}
+
+.help_delete_how
+{
+	font-size: 16px;
+	color: white;
+	margin-bottom: 12px;
+}
+
+.help_delete_step
+{
+	padding-bottom: 20px;
+}
+
+.help_delete_step_text
+{
+	color: #c6d4df;
+}
+
+.help_delete_important
+{
+	color: #ef5e30;
+}
+
 .help_issue_details .HighlightedText {
 	color: white;
 }

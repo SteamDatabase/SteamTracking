@@ -1741,6 +1741,29 @@ function CancelPendingPurchase( transid )
 	} );
 }
 
+function CancelAccountDeletion()
+{
+	$J.ajax( {
+		url: 'https://help.steampowered.com/wizard/AjaxCancelAccountDeletion/',
+		type: 'POST',
+		data: g_rgDefaultWizardPageParams,
+	} ).fail( function( jqxhr ) {
+		ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+	} ).done( function( data ) {
+		if ( data.success != 1 )
+		{
+			ShowAlertDialog( 'Cancel Account Deletion', 'Could not contact the servers to cancel account deletion. Please try again or <a href="https://help.steampowered.com/wizard/HelpDeleteAccountRequest" target="_blank" rel="noreferrer">contact Steam Support</a>.' );
+		}
+		else
+		{
+			ShowAlertDialog( 'Cancel Account Deletion', 'Successfully canceled your account deletion.'  )
+			.done( function() {
+				window.location = 'https://help.steampowered.com/';
+			});
+		}
+	} );
+}
+
 // contains all the functions for generating hardware returns & replacements
 HardwareRMA = {
 	m_bDoingAjax: false,
