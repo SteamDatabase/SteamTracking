@@ -163,6 +163,17 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	background: none;
 }
 
+.FriendMenuRoleCheckbox
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.FriendMenuRoleCheckbox .DialogCheckbox
+{
+	margin-right: 8px;
+}
+
 .contextMenuCheckMark
 {
 	width: 4px;
