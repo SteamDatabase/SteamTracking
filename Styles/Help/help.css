@@ -4133,6 +4133,13 @@ ul.attached_file_list {
 	
 }
 
+.data_removed_box {
+	background-color: rgba( 0, 0, 0, .2 );
+	text-align: center;
+	width: 700px;
+	font-size: 22px;
+	padding: 30px 40px 30px 40px;
+
 .help_report_scam {
 	width: 742px;
 	max-width: 742px;
