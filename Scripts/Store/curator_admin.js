@@ -74,6 +74,31 @@ function CreateReview( appid, blurb, link_url, recommendation_state, received_co
 
 }
 
+function UpdateCreatorHomeVanityURL( elForm, bAsync )
+{
+	if( bAsync !== false )
+		bAsync = true;
+
+	var vanity_url = $J( '#vanity_url_id').val();
+	var vanity_partner = $J( '#devhomeadmin_partner_select' ).val();
+
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxupdatecreatorvanityurl/',
+		data: {
+			vanity_url: vanity_url,
+			vanity_partner: vanity_partner,
+			sessionid: g_sessionID,
+			async: bAsync,
+		},
+		dataType: 'json',
+		type: 'POST',
+		async: bAsync
+	} ).done( function ( data ) { }).fail( function( data ){
+		var response = JSON.parse(data.responseText);
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
+	});
+}
+
 function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 {
 	if( bAsync !== false )

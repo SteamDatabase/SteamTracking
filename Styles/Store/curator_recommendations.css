@@ -1092,6 +1092,10 @@ body.v6.creatorhome .page_content.browse_reviews {
 	margin-right: 2px;
 }
 
+body.v6 .page_content.curator_header_ctn {
+	width: 998px;
+}
+
 .header_area, .header_area.editing {
 	display: flex;
 	margin: 0;

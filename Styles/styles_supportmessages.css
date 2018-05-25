@@ -107,6 +107,27 @@
 	position: relative;
 }
 
+.important_alert {
+	background-color: #95423a;
+	padding: 10px;
+}
+
+.delete_dates {
+	background-color: rgba( 0, 0, 0, .2);
+	margin-bottom: 24px;
+	padding: 14px 14px 12px 14px;
+	position: relative;
+}
+
+.delete_section {
+	padding: 10px 0 10px 0;
+}
+
+.delete_main_section {
+	font-size: 14px;
+	color:white;
+}
+
 .transaction_details .transaction_date {
 	position: absolute;
 	left: 14px;

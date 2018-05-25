@@ -1063,3 +1063,7 @@ blockquote#managemygame_default_text p {
 #creatorhome_managemygame_success {
 	color: limegreen;
 }
+
+.select2-container {
+	min-width: 300px;
+}

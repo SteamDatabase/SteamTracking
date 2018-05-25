@@ -999,8 +999,22 @@ td.wht_total {
 	min-height: 124px;
 }
 
+.account_setting_block_short {
+	background: rgba( 0, 0, 0, 0.2 );
+	margin-bottom: 24px;
+	padding-bottom: 10px;
+	min-height: 36px;
+}
+
 .account_setting_sub_block {
 	width: 50%;
+	padding: 1em;
+	float: left;
+	color: #808891;
+	box-sizing: border-box;
+}
+
+.account_setting_sub_block_long {
 	padding: 1em;
 	float: left;
 	color: #808891;
