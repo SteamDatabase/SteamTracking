@@ -93,19 +93,35 @@ function InviteUserToGroup( Modal, groupID, steamIDInvitee )
 
 		var rgResults = data.responseJSON;
 
-        var strAccountListTable = '';
+		var strModalTitle = 'Group Invite Failed';
+        var strAccountListModal = '<div class="ctnClanInviteErrors">';
+        strAccountListModal += rgResults.results ? rgResults.results : 'Error processing your request. Please try again.';
 		if ( rgResults.rgAccounts )
 		{
-            strAccountListTable = '<table class="clanInviteErrorTable" ><thead><tr><th class="inviteTablePersona" >Invited Player</th><th class="inviteTableError">Error</th></tr></thead><tbody>';
+			strAccountListModal += '<div class="ctnClanInviteErrors"><table class="clanInviteErrorTable" ><thead><tr><th class="inviteTablePersona" >Invited Player</th><th class="inviteTableError">Error</th></tr></thead><tbody>';
+			var cAccounts = 0;
 			$J.each( rgResults.rgAccounts, function( accountid, rgError ){
-                strAccountListTable += '<tr>';
-                strAccountListTable += '<td class="inviteTablePersona">' + rgError.persona + '</td>';
-                strAccountListTable += '<td class="inviteTableError">' +rgError.strError + "</td>";
-                strAccountListTable += '</tr>';
+				strAccountListModal += '<tr>';
+				strAccountListModal += '<td class="inviteTablePersona ellipsis">' + rgError.persona + '</td>';
+				strAccountListModal += '<td class="inviteTableError">' + rgError.strError + "</td>";
+				strAccountListModal += '</tr>';
+
+                if ( typeof SelectNone != 'undefined' )
+                {
+	                SelectNone();
+	                $J( '#fr_' + accountid ).addClass( 'groupInviteFailed' );
+                }
+
+				cAccounts++;
 			} );
-            strAccountListTable += '</tbody></table>';
+			strAccountListModal += '</tbody></table>';
+
+            if ( cAccounts > 1 )
+	            strModalTitle = 'Group Invites Failed';
+
 		}
-		ShowAlertDialog( 'Error', rgResults.results ? rgResults.results + strAccountListTable : 'Error processing your request. Please try again.' );
+		strAccountListModal +='</div>';
+		ShowAlertDialog( strModalTitle, strAccountListModal );
 	});
 }
 

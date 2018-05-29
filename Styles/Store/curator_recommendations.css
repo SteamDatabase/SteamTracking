@@ -11,7 +11,7 @@ body.v6.creatorhome.game_bg {
 
 .creatorhome .page_background {
 	background-size: contain;
-	background-color: rgba(78, 147, 188, 0.2);
+	background-color: rgba(188, 151, 78, 0.2);
 	background-blend-mode: lighten;
 }
 .creatorhome .page_background.lowtint {
@@ -21,6 +21,33 @@ body.v6.creatorhome.game_bg {
 	background-color: transparent;
 	background-blend-mode: unset;
 }
+
+.background_header_ctn {
+	position: absolute;
+	width: 100%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	max-width: 1500px;
+	height: 220px;
+	background-position: center;
+	background-repeat:no-repeat;
+	z-index: -1;
+}
+
+
+.background_image_ctn img {
+	overflow: hidden;
+}
+.background_gradient_ctn {
+	position: absolute;
+	width: 100%;
+	max-width: 1500px;
+	height: 220px;
+	background: -webkit-linear-gradient( 90deg, rgba(46, 49, 56, 1) 0%,rgba(46, 49, 56, 0) 15%,rgba(46, 49, 56, 0) 85%,rgba(46, 49, 56, 1) 100%);background: linear-gradient( 90deg, rgba(46, 49, 56, 1) 0%,rgba(46, 49, 56, 0) 15%,rgba(46, 49, 56, 0) 85%,rgba(46, 49, 56, 1) 100%);	overflow: hidden;
+	margin: 0 auto;
+}
+
 
 .browse_content {
 	width: 100%;
@@ -153,13 +180,14 @@ body.v6 .filter_ctn h2 {
 	
 }
 .creatorhome .light_container.bezel {
-	background: #2e3138;
+background: -webkit-linear-gradient( top, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 400px);background: linear-gradient( to bottom, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 400px);
 	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.2);
 	background-repeat: no-repeat;
 	background-size: 100% 500px, 2000px 100%;
 
 	background-position: top center;
-
+	z-index: 1;
+	min-height: 400px;
 }
 
 .creatorhome .pg_about .light_container.bezel {
@@ -1092,9 +1120,6 @@ body.v6.creatorhome .page_content.browse_reviews {
 	margin-right: 2px;
 }
 
-body.v6 .page_content.curator_header_ctn {
-	width: 998px;
-}
 
 .header_area, .header_area.editing {
 	display: flex;
@@ -1299,4 +1324,22 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);backgro
 
 .curator_filter_tag_count {
 	float: right;
+}
+
+/* adjustments for announcements section */
+
+ body.v6 .creator_announcement_browse_adjustment .page_content {
+	transform: translateX(-160px);
+}
+
+.creator_announcement_browse_adjustment .browse_container {
+	transform: translateX(-160px);
+}
+
+.browse_tabs.creator_announcement_browse_adjustment {
+	transform: translateX(-160px);
+}
+
+body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment {
+	transform: translateX(-160px);
 }

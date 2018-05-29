@@ -82,6 +82,11 @@ function UpdateCreatorHomeVanityURL( elForm, bAsync )
 	var vanity_url = $J( '#vanity_url_id').val();
 	var vanity_partner = $J( '#devhomeadmin_partner_select' ).val();
 
+	$J( '#vanity_load_success').hide();
+	$J( '#vanity_load_throbber').show();
+	var Modal = ShowDialog( "Updating custom URL", $J( '#SaveVanityURLPopup').show() );
+	Modal.SetRemoveContentOnDismissal( false );
+
 	$J.ajax ( {
 		url: g_strCuratorAdminURL + 'ajaxupdatecreatorvanityurl/',
 		data: {
@@ -93,7 +98,16 @@ function UpdateCreatorHomeVanityURL( elForm, bAsync )
 		dataType: 'json',
 		type: 'POST',
 		async: bAsync
-	} ).done( function ( data ) { }).fail( function( data ){
+	} ).done( function ( data ) {
+		$J( '#vanity_load_throbber').hide();
+		$J( '#vanity_publisher').attr( 'href', 'https://store.steampowered.com/publisher/' + vanity_url ).text('https://store.steampowered.com/publisher/' + vanity_url);
+		$J( '#vanity_pub').attr( 'href', 'https://store.steampowered.com/pub/' + vanity_url ).text('https://store.steampowered.com/pub/' + vanity_url);
+		$J( '#vanity_developer').attr( 'href', 'https://store.steampowered.com/developer/' + vanity_url ).text('https://store.steampowered.com/developer/' + vanity_url);
+		$J( '#vanity_dev').attr( 'href', 'https://store.steampowered.com/dev/' + vanity_url ).text('https://store.steampowered.com/dev/' + vanity_url);
+		$J( '#vanity_load_success').show();
+	} ).fail( function( data ){
+		$J( '#SaveVanityURLPopup').hide();
+		Modal.Dismiss();
 		var response = JSON.parse(data.responseText);
 		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
 	});
@@ -202,7 +216,8 @@ function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 10; i++)
 			{
 				if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
-					g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+					( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 ||
+						(!isNaN( localeTerm ) && g_rgAppsCurated[i].appid.toString().indexOf( localeTerm ) !== -1 ) ) )
 				{
 					rgMatches.push(g_rgAppsCurated[i].app_name);
 				}
@@ -260,7 +275,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 	}
 
 	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'https://steamcdn-a.akamaihd.net/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
-		.replace(/%2\$s/, V_EscapeHTML( blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
+		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
 
@@ -1060,7 +1075,7 @@ function ListManage_UpdateSort( elContainer )
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, '%2$s' ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
+	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, %2$s ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();
@@ -1068,7 +1083,7 @@ function ListManage_AddRows( rgLists )
 	$J.each(rgLists, function(idx, list ){
 
 		var $el = $J(template.replace(/%1\$s/g, list.listid)
-			.replace(/%2\$s/g, list.title ? V_EscapeHTML( list.title ) : "Untitled List" )
+			.replace(/%2\$s/g, list.title ? V_EscapeHTML( JSON.stringify( list.title ) ) : "Untitled List" )
 			.replace(/%3\$s/g, list.apps.length )
 			.replace(/%4\$s/g, list.list_state == 0 ? "Hidden" : '' )
 		);

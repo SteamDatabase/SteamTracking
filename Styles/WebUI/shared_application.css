@@ -190,7 +190,8 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 {
 	max-width: 190px;
 	line-height: 20px;
-	-webkit-mask-image: -webkit-gradient( linear, 85% 0%, 100% 0%, from( rgba( 0, 0, 0, 1 ) ), to( rgba( 0, 0, 0, 0 ) ) );
+	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0 ) 100% );
+	mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0 ) 100% );
 	white-space: nowrap;
 }
 
@@ -235,6 +236,15 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	flex-direction: row;
 }
 
+.flexRowCentered
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+
+
 .flexColumn
 {
 	display: flex;
@@ -252,5 +262,6 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 
 .scrollMaskVertical
 {
-	-webkit-mask-image: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
+	-webkit-mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
+	mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
 }
