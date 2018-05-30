@@ -9,8 +9,10 @@
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
+ .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSThread
+ .objc_class_name_NSWorkspace
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -75,6 +77,7 @@
  B g_OpenGLRenderer
  B g_bIgnoreChildProcesses
  B g_bIsVRMonitor
+ B g_bLogFrameTiming
  B g_bOverlayEnabled
  B g_iNotificationHorizontalInset
  B g_iNotificationVerticalInset
@@ -134,7 +137,9 @@
  CGSGetWindowBounds
  CGWarpMouseCursorPosition
  D .objc_class_name_CMetalDeviceCache
+ D .objc_class_name_EventHandlers
  D OBJC_CLASS_$_CMetalDeviceCache
+ D OBJC_CLASS_$_EventHandlers
  D OBJC_IVAR_$_CMetalDeviceCache._deviceOverride
  D OBJC_IVAR_$_CMetalDeviceCache._metalLibrary
  D OBJC_IVAR_$_CMetalDeviceCache._screenshotPipeline
@@ -143,6 +148,7 @@
  D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineBGRA8
  D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineRGBA16Float
  D OBJC_METACLASS_$_CMetalDeviceCache
+ D OBJC_METACLASS_$_EventHandlers
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
  D g_iNotificationPosition
@@ -198,6 +204,8 @@
  NSApp
  NSSelectorFromString
  NSStringFromSelector
+ NSWorkspaceApplicationKey
+ NSWorkspaceDidActivateApplicationNotification
  OBJC_CLASS_$_MTLRenderPassDescriptor
  OBJC_CLASS_$_MTLRenderPipelineDescriptor
  OBJC_CLASS_$_MTLTextureDescriptor
@@ -208,8 +216,10 @@
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
+ OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
+ OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
@@ -490,6 +500,7 @@
  T InputOSX_ApplicationIsActive()
  T InputOSX_CocoaRestoreCursor()
  T InputOSX_CocoaSetCursor(unsigned long)
+ T InputOSX_InitFocusObserver()
  T InputOSX_SetCocoaCursorHideShowImpl(void (*)(bool))
  T InputOSX_SetCocoaInputEventHook(EInputOSXHookResult (*)(__CGEvent*))
  T InputOSX_SetCocoaMouseButtonBlockMask(unsigned int)
@@ -724,6 +735,7 @@
  b init
  b s_MainThreadId
  b s_Pid
+ b s_bAppIsInFocus
  b s_bAppUsingCocoaCursor
  b s_bDoLog
  b s_bExternalLeftDragActive
@@ -739,6 +751,7 @@
  b s_nLastMouseX
  b s_nLastMouseY
  b s_pGamestream
+ b s_pLogFile
  b s_pfnCursorHideShow
  b s_pfnInputHookFn
  b s_ptForceMousePosition
@@ -898,7 +911,6 @@
  pthread_setspecific
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  realloc
- rename
  sem_close
  sem_open
  sem_post
@@ -911,6 +923,7 @@
  shm_open
  shm_unlink
  snprintf
+ sprintf
  sscanf
  std::__1::__vector_base_common<true>::__throw_length_error() const
  strcat
@@ -924,6 +937,7 @@
  strrchr
  strstr
  strtoull
+ t +[EventHandlers activeAppDidChange:]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_hide]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_pop]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_unhide]
