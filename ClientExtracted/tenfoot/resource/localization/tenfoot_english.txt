@@ -6824,7 +6824,7 @@
 	"ControllerBLERollback_Title" "Steam Controller FW Rollback"
     "ControllerBLERollback_Body" "This restores the normal Steam Controller firmware. This can only be done through a wired connection. Rolling back will take a minute and cannot be interrupted.\n\nDo not disconnect your device or it may be damaged!"
     "ControllerBLERollback_Title_Done" "Steam Controller FW Rollback Successful"
-	"ControllerBLERollback_Body_Done" "Your device is now restored to normal operation. You will need to re-pair to your Wireless Receiver by hitting the \"Add A Steam Controller\" button and powering on your device with Steam + X."
+	"ControllerBLERollback_Body_Done" "Your device is now restored to normal operation."
 	"ControllerBLERollback_Button_Done" "Done"
     "ControllerBLEUpdate_Title" "Steam Controller BLE Update"
     "ControllerBLEUpdate_Body" "This allows the Steam Controller to connect to mobile devices over Bluetooth Low Energy. This will take several minutes and can only be done through a wired connection. \n\nDo not disconnect your device or it may be damaged!"
