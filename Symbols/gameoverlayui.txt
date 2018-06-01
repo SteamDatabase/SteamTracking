@@ -9499,7 +9499,6 @@
  T GetPanelKeyBindingMapDictionary()
  T GetPanelMessageMapDictionary()
  T GetPchTempTextBuffer_Harmful()
- T GetSecureCommunityBaseURLForUniverse(EUniverse, CUtlString&)
  T GetServerBrowserPingRate(int)
  T GetShowFPSCornerOption(int)
  T GetTGADimensions(int, char*, int*, int*)
