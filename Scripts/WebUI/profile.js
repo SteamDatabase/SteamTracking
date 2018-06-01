@@ -709,7 +709,7 @@ webpackJsonp(
           )
         );
       }
-      function b() {
+      function _() {
         return V.createElement(
           "svg",
           {
@@ -733,7 +733,7 @@ webpackJsonp(
           )
         );
       }
-      function _() {
+      function b() {
         return V.createElement(
           "svg",
           {
@@ -1814,8 +1814,8 @@ webpackJsonp(
         (t.F = f),
         (t.C = v),
         (t.n = y),
-        (t.m = b),
-        (t.w = _),
+        (t.m = _),
+        (t.w = b),
         (t.a = g),
         (t.o = w),
         (t.u = E),
@@ -2018,11 +2018,11 @@ webpackJsonp(
       function i(e) {
         switch (e) {
           case 1:
-            return Object(_.b)("#Privacy_Private");
+            return Object(b.b)("#Privacy_Private");
           case 2:
-            return Object(_.b)("#Privacy_FriendsOnly");
+            return Object(b.b)("#Privacy_FriendsOnly");
           case 3:
-            return Object(_.b)("#Privacy_Public");
+            return Object(b.b)("#Privacy_Public");
           default:
             return "";
         }
@@ -2030,11 +2030,11 @@ webpackJsonp(
       function r(e) {
         switch (e) {
           case 0:
-            return Object(_.b)("#Privacy_FriendsOnly");
+            return Object(b.b)("#Privacy_FriendsOnly");
           case 1:
-            return Object(_.b)("#Privacy_Public");
+            return Object(b.b)("#Privacy_Public");
           case 2:
-            return Object(_.b)("#Privacy_Private");
+            return Object(b.b)("#Privacy_Private");
           default:
             return "";
         }
@@ -2083,19 +2083,19 @@ webpackJsonp(
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saving" },
-              Object(_.b)("#Shared_Saving")
+              Object(b.b)("#Shared_Saving")
             );
           case 3:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Error" },
-              Object(_.b)("#Error_Error")
+              Object(b.b)("#Error_Error")
             );
           case 2:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saved" },
-              Object(_.b)("#Shared_Saved")
+              Object(b.b)("#Shared_Saved")
             );
           case 0:
           default:
@@ -2110,7 +2110,7 @@ webpackJsonp(
         );
       }
       function p() {
-        var e = Object(b.b)("config", "profile_config");
+        var e = Object(_.b)("config", "profile_config");
         e && Object.assign(x, e);
       }
       function h() {
@@ -2140,13 +2140,13 @@ webpackJsonp(
       }
       function f(e, t, n) {
         Object(g.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          _.a.InitDirect(n);
+          b.a.InitDirect(n);
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
       var v = n("Jmof"),
         y = n("wLXD"),
-        b = n("m5yx"),
-        _ = n("sVhq"),
+        _ = n("m5yx"),
+        b = n("sVhq"),
         g = n("4Dav"),
         w = (n("kllU"), n("TToO")),
         E = n("y986"),
@@ -2230,7 +2230,7 @@ webpackJsonp(
               var e = this,
                 t = new FormData();
               return (
-                t.set("sessionid", b.a.SESSIONID),
+                t.set("sessionid", _.a.SESSIONID),
                 t.set("Privacy", JSON.stringify(this.m_PrivacySettings)),
                 t.set(
                   "eCommentPermission",
@@ -2243,8 +2243,8 @@ webpackJsonp(
                     if (1 != n.success)
                       return (
                         ShowAlertDialog(
-                          Object(_.b)("#Error_Error"),
-                          Object(_.b)("#Error_CommentEditFailed")
+                          Object(b.b)("#Error_Error"),
+                          Object(b.b)("#Error_CommentEditFailed")
                         ),
                         !1
                       );
@@ -2263,8 +2263,8 @@ webpackJsonp(
                   .catch(function(e) {
                     return (
                       ShowAlertDialog(
-                        Object(_.b)("#Error_Error"),
-                        Object(_.b)("#Error_CommentEditFailed")
+                        Object(b.b)("#Error_Error"),
+                        Object(b.b)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
@@ -2297,28 +2297,28 @@ webpackJsonp(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(_.b)("#ProfilePrivacy_BasicDetails"),
+                    strLabel: Object(b.b)("#ProfilePrivacy_BasicDetails"),
                     strReadOnlySetting: i(3)
                   },
-                  Object(_.b)("#ProfilePrivacy_BasicDetails_Desc")
+                  Object(b.b)("#ProfilePrivacy_BasicDetails_Desc")
                 ),
                 v.createElement("div", { className: "ProfilePrivacyHR" }),
                 v.createElement(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(_.b)("#ProfilePrivacy_Profile"),
+                    strLabel: Object(b.b)("#ProfilePrivacy_Profile"),
                     PrivacyKey: "PrivacyProfile"
                   },
                   v.createElement(
                     "p",
                     null,
-                    Object(_.b)("#ProfilePrivacy_Profile_Desc")
+                    Object(b.b)("#ProfilePrivacy_Profile_Desc")
                   ),
                   v.createElement(
                     "p",
                     null,
-                    Object(_.b)("#ProfilePrivacy_Profile_Desc2")
+                    Object(b.b)("#ProfilePrivacy_Profile_Desc2")
                   )
                 ),
                 v.createElement(
@@ -2328,11 +2328,11 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_GameLibrary"),
+                      strLabel: Object(b.b)("#ProfilePrivacy_GameLibrary"),
                       PrivacyKey: "PrivacyOwnedGames",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(_.b)("#ProfilePrivacy_GameLibrary_Desc"),
+                    Object(b.b)("#ProfilePrivacy_GameLibrary_Desc"),
                     1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                       v.createElement(
                         B,
@@ -2341,7 +2341,7 @@ webpackJsonp(
                           PrivacyKey: "PrivacyPlaytime",
                           LimitPrivacyKey: "PrivacyOwnedGames"
                         },
-                        Object(_.b)("#ProfilePrivacy_Playtime")
+                        Object(b.b)("#ProfilePrivacy_Playtime")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -2349,21 +2349,21 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_Inventory"),
+                      strLabel: Object(b.b)("#ProfilePrivacy_Inventory"),
                       PrivacyKey: "PrivacyInventory",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(_.d)(
+                    Object(b.d)(
                       "#ProfilePrivacy_Inventory_Desc",
                       v.createElement(
                         "a",
                         { href: x.ProfileURL + "inventory/" },
-                        Object(_.b)("#ProfilePrivacy_Inventory_Inventory")
+                        Object(b.b)("#ProfilePrivacy_Inventory_Inventory")
                       ),
                       v.createElement(
                         "a",
                         { href: x.ProfileURL + "inventory/#753_6" },
-                        Object(_.b)("#ProfilePrivacy_Inventory_TradingCards")
+                        Object(b.b)("#ProfilePrivacy_Inventory_TradingCards")
                       )
                     ),
                     1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -2374,14 +2374,14 @@ webpackJsonp(
                           PrivacyKey: "PrivacyInventoryGifts",
                           LimitPrivacyKey: "PrivacyInventory"
                         },
-                        Object(_.b)("#ProfilePrivacy_Gifts")
+                        Object(b.b)("#ProfilePrivacy_Gifts")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
                   v.createElement(
                     a,
                     null,
-                    Object(_.b)("#ProfilePrivacy_Comments"),
+                    Object(b.b)("#ProfilePrivacy_Comments"),
                     ":",
                     v.createElement(D, { PrivacyStore: e })
                   ),
@@ -2390,20 +2390,20 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_UGC"),
-                      strReadOnlySetting: Object(_.b)("#Privacy_PerItem")
+                      strLabel: Object(b.b)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: Object(b.b)("#Privacy_PerItem")
                     },
-                    Object(_.d)(
+                    Object(b.d)(
                       "#ProfilePrivacy_UGC_Desc",
                       v.createElement(
                         "a",
                         { href: x.ProfileURL + "screenshots/" },
-                        Object(_.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                        Object(b.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                       ),
                       v.createElement(
                         "a",
                         { href: x.ProfileURL + "myworkshopfiles/" },
-                        Object(_.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                        Object(b.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                       )
                     )
                   )
@@ -2463,7 +2463,7 @@ webpackJsonp(
                   v.createElement("img", {
                     className: "ProfilePrivacyDropDown_Arrow",
                     src:
-                      b.a.COMMUNITY_CDN_URL +
+                      _.a.COMMUNITY_CDN_URL +
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
@@ -2563,7 +2563,7 @@ webpackJsonp(
                   v.createElement("img", {
                     className: "ProfilePrivacyDropDown_Arrow",
                     src:
-                      b.a.COMMUNITY_CDN_URL +
+                      _.a.COMMUNITY_CDN_URL +
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
@@ -2597,7 +2597,7 @@ webpackJsonp(
                         return e.props.OnChange(3);
                       }
                     },
-                    Object(_.b)("#Privacy_Public")
+                    Object(b.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -2607,7 +2607,7 @@ webpackJsonp(
                         return e.props.OnChange(2);
                       }
                     },
-                    Object(_.b)("#Privacy_FriendsOnly")
+                    Object(b.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -2616,7 +2616,7 @@ webpackJsonp(
                       return e.props.OnChange(1);
                     }
                   },
-                  Object(_.b)("#Privacy_Private")
+                  Object(b.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2642,11 +2642,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(1);
                       },
-                      title: Object(_.b)(
+                      title: Object(b.b)(
                         "#Profile_CommentPermission_Public_Desc"
                       )
                     },
-                    Object(_.b)("#Privacy_Public")
+                    Object(b.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -2655,11 +2655,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(0);
                       },
-                      title: Object(_.b)(
+                      title: Object(b.b)(
                         "#Profile_CommentPermission_FriendsOnly_Desc"
                       )
                     },
-                    Object(_.b)("#Privacy_FriendsOnly")
+                    Object(b.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -2667,11 +2667,11 @@ webpackJsonp(
                     onSelected: function() {
                       return e.props.OnChange(2);
                     },
-                    title: Object(_.b)(
+                    title: Object(b.b)(
                       "#Profile_CommentPermission_Private_Desc"
                     )
                   },
-                  Object(_.b)("#Privacy_Private")
+                  Object(b.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2681,7 +2681,7 @@ webpackJsonp(
       n("3gXU"),
         (window.AssertMsg = g.a),
         document.addEventListener("DOMContentLoaded", function() {
-          Object(b.c)(), p(), h();
+          Object(_.c)(), p(), h();
         }),
         (window.LocalizationManifestReady = f);
     },
@@ -3189,10 +3189,10 @@ and limitations under the License.
           return y;
         }),
         n.d(t, "g", function() {
-          return b;
+          return _;
         }),
         n.d(t, "a", function() {
-          return _;
+          return b;
         }),
         (t.f = i),
         (t.h = r),
@@ -3375,7 +3375,7 @@ and limitations under the License.
             t
           );
         })(a.PureComponent),
-        b = (function(e) {
+        _ = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -3512,18 +3512,18 @@ and limitations under the License.
                   (a = l = void 0);
                 var v = a || i.left,
                   y = a || i.right,
-                  b = r.width;
-                s.bMatchWidth && ((b = y - v), (c.menuWidth = b));
-                var _ = (s.bOverlapHorizontal ? y : v) - b,
-                  g = _ > 0,
-                  w = m - (s.bOverlapHorizontal ? v : y) - b,
+                  _ = r.width;
+                s.bMatchWidth && ((_ = y - v), (c.menuWidth = _));
+                var b = (s.bOverlapHorizontal ? y : v) - _,
+                  g = b > 0,
+                  w = m - (s.bOverlapHorizontal ? v : y) - _,
                   E = w > 0,
                   S = (s.bPreferPopLeft || !E) && g;
                 g ||
                   E ||
                   ((S = g > E),
                   s.bFitToWindow &&
-                    ((b += (S ? _ : w) - 8), (c.menuWidth = b))),
+                    ((_ += (S ? b : w) - 8), (c.menuWidth = _))),
                   (!s.bPreferPopLeft && E) || !g
                     ? (c.menuLeft = s.bOverlapHorizontal ? v : y)
                     : (c.menuRight = m - (s.bOverlapHorizontal ? y : v));
@@ -3654,7 +3654,7 @@ and limitations under the License.
             (t = s.b([c.observer], t))
           );
         })(a.Component),
-        _ = (function(e) {
+        b = (function(e) {
           function t(n, i, r) {
             var o =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -3689,7 +3689,7 @@ and limitations under the License.
             (t.prototype.Render = function(e, t) {
               l.render(
                 a.createElement(
-                  b,
+                  _,
                   s.a({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
@@ -3747,6 +3747,7 @@ and limitations under the License.
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",
           COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
           STORE_BASE_URL: "",
@@ -4362,14 +4363,14 @@ and limitations under the License.
                 var y = f[v];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var b = m.document.createElement("link"), _ = 0;
-                    _ < y.attributes.length;
-                    _++
+                    var _ = m.document.createElement("link"), b = 0;
+                    b < y.attributes.length;
+                    b++
                   ) {
-                    var g = y.attributes.item(_);
-                    b.setAttribute(g.name, g.value);
+                    var g = y.attributes.item(b);
+                    _.setAttribute(g.name, g.value);
                   }
-                  d.appendChild(b);
+                  d.appendChild(_);
                 }
               }
               return {
