@@ -159,11 +159,13 @@
 // WebUI
 //
 "Styles/WebUI/shared_application.css"            : "https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__",
+"Styles/WebUI/friends.css"                       : "https://steamcommunity.com/public/css/webui/friends.css?__TIME__",
 
 //
 // WebUI JS
 //
 "Scripts/WebUI/profile.js"                       : "https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english",
+"Scripts/WebUI/friends.js"                       : "https://steamcommunity.com/public/javascript/webui/friends.js?__TIME__&l=english",
 
 //
 // Holiday CSS
