@@ -40,6 +40,7 @@ GDynamicStore = {
 
 	s_rgCurators: {},
 	s_rgCurations: {},
+	s_rgCreatorsFollowed: {},
 
 	s_rgPersonalizedBundleData: {},
 	s_rgPlaytestData: {},
@@ -166,6 +167,12 @@ GDynamicStore = {
 				GDynamicStore.s_rgIgnoredPackages = fnConvertToMap( data.rgIgnoredPackages );
 				GDynamicStore.s_rgCurators = data.rgCurators || {};
 				GDynamicStore.s_rgCurations = data.rgCurations || {};
+				if( data.rgCreatorsFollowed )
+				{
+					data.rgCreatorsFollowed.forEach( function( element ) {
+						GDynamicStore.s_rgCreatorsFollowed[element] = element;
+					});
+				}
 				if( data.rgPlaytestData )
 				{
 					GDynamicStore.s_rgPlaytestData = data.rgPlaytestData;
@@ -983,6 +990,26 @@ GDynamicStore = {
 				return {
 					'recommendation_state': GDynamicStore.s_rgCurations[unAppID][unCuratorID],
 					'curator': GDynamicStore.s_rgCurators[unCuratorID]
+				}
+			}
+		}
+		return null;
+	},
+
+	GetCurator: function( clanid )
+	{
+		return GDynamicStore.s_rgCurators[ clanid ];
+	},
+
+	GetMatchingCreatorFollowed: function( rgAppCreatorRelationship )
+	{
+		if( GDynamicStore.s_rgCreatorsFollowed )
+		{
+			for( var clanid in rgAppCreatorRelationship )
+			{
+				if( rgAppCreatorRelationship.hasOwnProperty( clanid ) && clanid in GDynamicStore.s_rgCreatorsFollowed )
+				{
+					return { 'clanid': clanid, 'relationship': rgAppCreatorRelationship[clanid] }
 				}
 			}
 		}

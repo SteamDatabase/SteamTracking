@@ -3148,6 +3148,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 
 
 .store_nav .popup_menu .popup_menu_item,
+.creator .responsive_page_template_content .popup_menu .popup_menu_item,
 .curator .responsive_page_template_content .popup_menu .popup_menu_item,
 .footer_content .popup_menu .popup_menu_item,
 .search_area .popup_body .match,
@@ -3158,6 +3159,8 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 
 .store_nav .popup_menu .popup_menu_item:hover,
 .store_nav .popup_menu .popup_menu_item.focus,
+.creator .popup_menu .popup_menu_item:hover,
+.creator .popup_menu .popup_menu_item.focus,
 .curator .popup_menu .popup_menu_item:hover,
 .curator .popup_menu .popup_menu_item.focus,
 .footer_content .popup_menu .popup_menu_item:hover,

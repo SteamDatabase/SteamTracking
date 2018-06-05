@@ -756,9 +756,56 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 }
 
 var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content_violence' : 1 };
+var g_UGCWithNoBlur = {};
+var g_bLoadedUGCWithNoBlur = false;
+
+function LoadUGCWithNoBlur()
+{
+	if ( g_bLoadedUGCWithNoBlur )
+	{
+		return;
+	}
+
+	var strUGCNoBlur = WebStorage.GetLocal( 'rgUGCNoBlur', false );
+	if ( strUGCNoBlur != null )
+	{
+		g_UGCWithNoBlur = JSON.parse( strUGCNoBlur );
+	}
+}
+
+function SaveUGCWithNoBlur()
+{
+	var keys = Object.keys( g_UGCWithNoBlur );
+	var maxKeys = 1000;
+	if ( keys.length >= maxKeys )
+	{
+		var rgTemp = [];
+		for ( var i = 0; i < keys.length; ++i )
+		{
+			var key = keys[i];
+			var value = g_UGCWithNoBlur[key];
+			rgTemp.push( { v: value['timestamp'], k: key } );
+		}
+		rgTemp.sort( function( a, b ) {
+			if ( a.v > b.v ) { return 1; }
+			if ( a.v < b.v ) { return -1; }
+			return 0;
+		});
+
+		var delta = rgTemp.length - maxKeys;
+		for ( var i = 0; i < rgTemp.length && i < delta; ++i )
+		{
+			var a = rgTemp[i];
+			delete g_UGCWithNoBlur[a.k];
+		}
+	}
+	WebStorage.SetLocal( 'rgUGCNoBlur', JSON.stringify( g_UGCWithNoBlur ), false );
+}
 
 function ApplyAdultContentPreferences()
 {
+	LoadUGCWithNoBlur();
+
 	var elementsWithAdultContent = $J('.app_has_adult_content');
 	if ( elementsWithAdultContent.length == 0 )
 	{
@@ -811,6 +858,105 @@ function ApplyAdultContentPreferences()
 	}
 }
 
+function ShowAdultContentWarningDialog( $Link, appid, publishedFileID, callbackFunc )
+{
+	$J.get(
+		'https://steamcommunity.com/sharedfiles/ajaxgetmaturecontentwarningdialog/',
+		{
+			'appid': appid,
+			'publishedfileid' : publishedFileID
+		}
+	).done( function( data ) {
+		switch( data.success )
+		{
+			case 1:
+			{
+				if ( callbackFunc )
+				{
+					var dialog = ShowConfirmDialog('Content May Not Be Appropriate For All Ages', data['html'], 'View Content' );
+					dialog.done( function ( action ) {
+						if ( callbackFunc )
+						{
+							callbackFunc();
+						}
+					});
+				}
+				else
+				{
+					ShowAlertDialog('Content May Not Be Appropriate For All Ages', data['html'] );
+				}
+			}
+			break;
+
+			default:
+			{
+				if ( callbackFunc )
+				{
+					callbackFunc();
+				}
+			}
+			break;
+		} // switch
+	} );
+}
+
+function UGCAdultContentPreferencesMenu( elSource )
+{
+	var $El = $J(this);
+	var $elSource = $J(elSource.parentNode);
+	$El.empty();
+
+	var appid = $elSource.data('appid');
+	var publishedFileID = $elSource.data('publishedfileid');
+
+	// warning
+	{
+		var fnViewWarning = function ()
+		{
+			ShowAdultContentWarningDialog( $elSource, appid, publishedFileID, null );
+			return true;
+		};
+		var $elViewWarning = $J( '<div/>' ).click( fnViewWarning ).text( 'View Mature Content Warning' ).addClass( 'option' );
+		$El.append( $elViewWarning );
+	}
+
+	if ( $elSource.hasClass( "app_has_adult_content" ) )
+	{
+		var fnUnblur = function ()
+		{
+			$elSource.removeClass('app_has_adult_content');
+			g_UGCWithNoBlur[publishedFileID] = { 'timestamp' : Date.now() };
+			SaveUGCWithNoBlur();
+			return true;
+		};
+		var $elUnblur = $J( '<div/>' ).click( fnUnblur ).text( 'Remove blur for this content only' ).addClass( 'option' );
+		$El.append( $elUnblur );
+	}
+	else
+	{
+		var fnAddBlur = function ()
+		{
+			$elSource.addClass('app_has_adult_content');
+			delete g_UGCWithNoBlur[publishedFileID];
+			SaveUGCWithNoBlur();
+			return true;
+		};
+		var $elAddBlur = $J( '<div/>' ).click( fnAddBlur ).text( 'Blur this content' ).addClass( 'option' );
+		$El.append( $elAddBlur );
+	}
+
+	// preferences
+	{
+		var fnViewPreferences = function ()
+		{
+			top.location.href = 'https://store.steampowered.com//account/preferences/#CommunityContentPreferences';
+			return true;
+		};
+		var $elViewPreferences = $J( '<div/>' ).click( fnViewPreferences ).text( 'Edit Preferences' ).addClass( 'option' );
+		$El.append( $elViewPreferences );
+	}
+}
+
 function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, mapAppsWithAgeGatesBypassed, elementsWithAdultContent )
 {
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
@@ -828,6 +974,9 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 			bHideAdultContentViolence &= !bAppAgeGateBypassed;
 		}
 
+		var publishedFileID = e.data('publishedfileid');
+		var bForceDeBlur = publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID );
+
 		var e = $J( elementsWithAdultContent[i] );
 		if ( e.hasClass( "app_has_adult_content_sex" ) && !bHideAdultContentSex )
 		{
@@ -838,9 +987,56 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 			e.removeClass( 'app_has_adult_content_violence' );
 		}
 
-		if ( !e.hasClass( "app_has_adult_content_sex" ) && !e.hasClass( "app_has_adult_content_violence" ) )
+		if ( bForceDeBlur || ( !e.hasClass( "app_has_adult_content_sex" ) && !e.hasClass( "app_has_adult_content_violence" ) ) )
 		{
 			e.removeClass( 'app_has_adult_content' );
+		}
+
+		// widget
+		{
+			var $elMenu = $J ( '<div></div>', { 'class': 'ugc_options' } ).append($J('<div>'));
+			$elMenu.v_tooltip ( {
+				'tooltipClass': 'ugc_options_tooltip',
+				'location': 'bottom left',
+				'offsetY': -20,
+				'useClickEvent': true,
+				'useMouseEnterEvent': false,
+				'preventDefault' : true,
+				'stopPropagation' : true,
+				func: UGCAdultContentPreferencesMenu
+			} );
+			e.append( $elMenu );
+		}
+
+		// warning
+		if ( e.width() > 100 )
+		{
+			var $elWarning = $J( '<div></div>', { 'class': 'ugc_warning', 'text' : 'Content may not be appropriate for all audiences' } );
+			if ( e.width() > 200 )
+			{
+				$elWarning.addClass( "large" );
+			}
+
+			var $elOptions = $J( '<div></div>' );
+			var $elViewOption = $J( '<div></div>', { 'class' : 'ugc_inline_option', 'text' : 'View Content' } );
+			$elViewOption.click( function() {
+				e.removeClass( 'app_has_adult_content' );
+				e.click();
+				e.addClass( 'app_has_adult_content' );
+				return false;
+			} );
+			$elOptions.append( $elViewOption );
+			$elOptions.append( "&nbsp;|&nbsp;" );
+			var $elPreferencesOption = $J( '<div></div>', { 'class' : 'ugc_inline_option', 'text' : 'Edit Preferences' } );
+			$elPreferencesOption.click( function() {
+				top.location.href = 'https://store.steampowered.com//account/preferences/#CommunityContentPreferences';
+				return false;
+			} );
+			$elOptions.append( $elPreferencesOption );
+
+			$elWarning.append( $elOptions );
+
+			e.append( $elWarning );
 		}
 	}
 }

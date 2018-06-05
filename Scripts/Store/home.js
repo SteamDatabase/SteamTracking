@@ -17,6 +17,8 @@ GHomepage = {
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
 
 	rgCuratedAppsData: [],
+	rgCreatorFollowedAppData: [],
+	rgRecentAppsByCreator: [],
 	rgAppsRecommendedByCurators: [],
 	rgUserNewsFriendsPurchased: {},
 	rgTopSteamCurators: [],
@@ -136,6 +138,21 @@ GHomepage = {
 				for( var i = 0; i < rgRecommendedAppIDs.length; i++ )
 				{
 					GHomepage.rgAppsRecommendedByCurators.push( { appid: rgRecommendedAppIDs[i].appid, recommended_by_curator: true } );
+				}
+			}
+
+			GHomepage.rgCreatorFollowedAppData = rgParams.rgCreatorFollowedAppData || [];
+			if ( GHomepage.rgCreatorFollowedAppData && rgParams.rgCreatorFollowedAppData['apps'] && rgParams.rgCreatorFollowedAppData['apps'].length )
+			{
+								var rgRecentAppIDs = rgParams.rgCreatorFollowedAppData['apps'];
+				var rgCreators = rgParams.rgCreatorFollowedAppData['creator'];
+				for( var i = 0; i < rgRecentAppIDs.length; i++ )
+				{
+										var iCreatorChoice = Math.floor( Math.random() * rgRecentAppIDs[i].filtered_clanids.length );
+					var iClanIDToMatch = rgRecentAppIDs[i].filtered_clanids[ iCreatorChoice ];
+
+										var creator = rgCreators['' + iClanIDToMatch];
+					GHomepage.rgRecentAppsByCreator.push( { appid: rgRecentAppIDs[i].appid, creator_info: creator } );
 				}
 			}
 
@@ -400,6 +417,7 @@ GHomepage = {
 			rgDisplayListCombined = GHomepage.ZipLists(
 				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
 				GHomepage.oDisplayLists.main_cluster, false, // Legacy
+				GHomepage.rgRecentAppsByCreator, true,
 				GHomepage.rgRecommendedGames, true,
 				GHomepage.rgCuratedAppsData.apps, true,
 				GHomepage.rgFriendRecommendations, true
@@ -495,6 +513,7 @@ GHomepage = {
 		return {
 			recommended: GHomepage.GetAppFromList( unAppId, GHomepage.rgRecommendedGames ),
 			recommended_by_curator: GHomepage.GetAppFromList( unAppId, GSteamCurators.rgAppsRecommendedByCurators.apps ),
+			recent_release_by_creator: GHomepage.GetAppFromList( unAppId, GHomepage.rgRecentAppsByCreator ),
 			recommended_by_friend: GHomepage.GetAppFromList( unAppId, GHomepage.rgFriendRecommendations ),
 			top_seller: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.top_sellers ),
 			new_release: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.popular_new ),
@@ -620,6 +639,19 @@ GHomepage = {
 
 			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_byfriends' ));
 
+		}
+		else if( rgRecommendationReasons.recent_release_by_creator )
+		{
+						var creator = rgRecommendationReasons.recent_release_by_creator.creator_info;
+			rgRecommendationReasons.recent_release_by_creator = false;
+
+			var $ReasonLocal = creator.link.indexOf( 'developer/' ) >= 0 ? "<strong>Developed<\/strong> by<br><span>%1$s<\/span>" : "<strong>Published<\/strong> by<br><span>%1$s<\/span>";
+			var $ReasonMain = $J('<div/>').addClass('main').addClass('creator').html( $ReasonLocal.replace("%1$s", V_EscapeHTML( creator.name ) ) );
+			var $ReasonAvatar = $J('<div>').addClass('avatar').append($J('<img>').attr('src', GetAvatarURL( creator.avatar_sha != '0000000000000000000000000000000000000000' ? creator.avatar_sha : "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb", '_medium' ) ) );
+
+			$RecommendedReason.append( $ReasonAvatar );
+			$RecommendedReason.append( $ReasonMain );
+			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_followed_creator' ));
 		}
 		else if( rgRecommendationReasons.recommended_by_curator )
 		{

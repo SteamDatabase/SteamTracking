@@ -1015,6 +1015,7 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: l
 	background-color: rgba(255,255,255,0.1);
 }
 
+.creator .popup_block_new.with_capsules .popup_menu .suggestion_item.popup_menu_item,
 .curator .popup_block_new.with_capsules .popup_menu .suggestion_item.popup_menu_item {
 	padding: 2px 12px;
 	line-height: 35px;

@@ -1705,11 +1705,104 @@ a.ugc.app_has_adult_content::after
 	position: absolute;
 	top: 0;
 	left: 0;
+	pointer-events: none;
 }
 a.ugc.app_has_adult_content.dynamiclink_box::after
 {
 	width: 88px;
 }
+
+a.ugc .ugc_warning
+{
+	display: none;
+}
+a.ugc.app_has_adult_content .ugc_warning
+{
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 25%;
+	left: 0;
+	font-size: 0.75em;
+	vertical-align: top;
+	text-align: center;
+}
+a.ugc.app_has_adult_content .ugc_warning.large
+{
+	font-size: 1.5em;
+}
+
+a.ugc.app_has_adult_content .ugc_warning .ugc_inline_option
+{
+	display: inline-block;
+	text-decoration: underline;
+}
+a.ugc.app_has_adult_content .ugc_warning .ugc_inline_option:hover
+{
+	color: #66C0F4;
+}
+
+/* ugc_options defines the per-ugc preferences dropdown */
+.ugc_options {
+	display: block;
+	position: absolute;
+
+	top: 0px;
+	right: -5px;
+	cursor: pointer;
+	opacity: 0;
+	padding: 5px 5px 0 0;
+	transition: opacity 0.2s, right 0.2s;
+	z-index: 5;
+}
+
+.ugc_options > div {
+	width: 15px;
+	height: 15px;
+
+	background-color: rgba(54,97,125,1);
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand.png');
+	background-position: 4px 4px;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 3px #000;
+}
+
+.ugc_options:hover > div {
+	background-color: #67c1f5;
+	color: #fff;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/v6/icon_expand_white.png');
+}
+
+*:hover > .ugc_options, .ugc_hover.ugc_options {
+	opacity: 1;
+	right: 0px;
+}
+
+.ugc_options_tooltip {
+background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 2px 8px;
+	color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 0 3px #000;
+}
+
+.ugc_options_tooltip > .option  {
+	margin: 5px 0;
+	display: block;
+	cursor: pointer;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 2px;
+	padding: 4px 8px;
+	line-height: normal;
+	font-size: 11px;
+	color: #407898;
+}
+.ugc_options_tooltip > .option:hover {
+	color: #ffffff;
+	background-color: #67c1f5;
+}
+
+
 
 .adult_content_age_gate_dialog {
 	text-align: center;

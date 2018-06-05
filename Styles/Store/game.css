@@ -542,6 +542,13 @@ img.game_header_image_full {
 	box-shadow: 0 0 8px 0 rgba( 0, 0, 0, 0.5 );
 }
 
+.game_area_purchase_game.demo_above_purchase {
+	margin-bottom: 50px;
+
+background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%););background: linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%););	border-top: 1px solid rgba(255,255,255,0.2);
+	border-left: 1px solid rgba(255,255,255,0.2);
+}
+
 .game_area_purchase_game_dropdown_description
 {
 	padding-top: 5px;
@@ -1525,6 +1532,8 @@ a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     margin-right: 4px;
 }
 
+
+.friend_block_holder.creator img,
 .friend_block_holder.curator img {
 	width: 36px;
 	height: 36px;
