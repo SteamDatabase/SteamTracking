@@ -966,7 +966,7 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 		var bHideAdultContentSex = bGlobalHideAdultContentSex;
 		var bHideAdultContentViolence = bGlobalHideAdultContentViolence;
 
-		var appid = e.data('appid');
+		var appid = e.data( 'appid' );
 		if ( Number.isInteger( appid ) && appid != 0 )
 		{
 			var bAppAgeGateBypassed = mapAppsWithAgeGatesBypassed.hasOwnProperty( appid );
@@ -974,7 +974,7 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 			bHideAdultContentViolence &= !bAppAgeGateBypassed;
 		}
 
-		var publishedFileID = e.data('publishedfileid');
+		var publishedFileID = e.data( 'publishedfileid' );
 		var bForceDeBlur = publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID );
 
 		var e = $J( elementsWithAdultContent[i] );
@@ -992,64 +992,81 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 			e.removeClass( 'app_has_adult_content' );
 		}
 
-		// widget
+		if ( e.data( 'ugclinktextonly' ) === 1 )
 		{
-			var $elMenu = $J ( '<div></div>', { 'class': 'ugc_options' } ).append($J('<div>'));
-			$elMenu.v_tooltip ( {
-				'tooltipClass': 'ugc_options_tooltip',
-				'location': 'bottom left',
-				'offsetY': -20,
-				'useClickEvent': true,
-				'useMouseEnterEvent': false,
-				'preventDefault' : true,
-				'stopPropagation' : true,
-				func: UGCAdultContentPreferencesMenu
-			} );
-			e.append( $elMenu );
-		}
 
-		// warning
-		if ( e.width() > 100 )
-		{
-			var $elWarning = $J( '<div></div>', { 'class': 'ugc_warning', 'text' : 'Content may not be appropriate for all audiences' } );
-			if ( e.width() > 200 )
-			{
-				$elWarning.addClass( "large" );
-			}
-
-			var $elOptions = $J( '<div></div>' );
-			var $elViewOption = $J( '<div></div>', { 'class' : 'ugc_inline_option', 'text' : 'View Content' } );
-			$elViewOption.click( function() {
-				e.removeClass( 'app_has_adult_content' );
-				e.click();
-				e.addClass( 'app_has_adult_content' );
-				return false;
-			} );
-			$elOptions.append( $elViewOption );
-			$elOptions.append( "&nbsp;|&nbsp;" );
-			var $elPreferencesOption = $J( '<div></div>', { 'class' : 'ugc_inline_option', 'text' : 'Edit Preferences' } );
-			$elPreferencesOption.click( function() {
-				top.location.href = 'https://store.steampowered.com//account/preferences/#CommunityContentPreferences';
-				return false;
-			} );
-			$elOptions.append( $elPreferencesOption );
-
-			$elWarning.append( $elOptions );
-
-			if ( e.height() > 125 )
-			{
-				e.addClass( "ugc_show_warning_image" );
-			}
-			else
-			{
-				$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
-			}
-
-			e.append( $elWarning );
 		}
 		else
 		{
-			e.addClass( "ugc_show_warning_image" );
+
+			// widget
+			{
+				var $elMenu = $J( '<div></div>', { 'class': 'ugc_options' } ).append( $J( '<div>' ) );
+				$elMenu.v_tooltip( {
+					'tooltipClass': 'ugc_options_tooltip',
+					'location': 'bottom left',
+					'offsetY': -20,
+					'useClickEvent': true,
+					'useMouseEnterEvent': false,
+					'preventDefault': true,
+					'stopPropagation': true,
+					func: UGCAdultContentPreferencesMenu
+				} );
+				e.append( $elMenu );
+			}
+
+			// warning
+			if ( e.width() > 100 )
+			{
+				var $elWarning = $J( '<div></div>', {
+					'class': 'ugc_warning',
+					'text': 'Content may not be appropriate for all audiences'
+				} );
+				if ( e.width() > 200 )
+				{
+					$elWarning.addClass( "large" );
+				}
+
+				var $elOptions = $J( '<div></div>' );
+				var $elViewOption = $J( '<div></div>', {
+					'class': 'ugc_inline_option',
+					'text': 'View Content'
+				} );
+				$elViewOption.click( function () {
+					e.removeClass( 'app_has_adult_content' );
+					e.click();
+					e.addClass( 'app_has_adult_content' );
+					return false;
+				} );
+				$elOptions.append( $elViewOption );
+				$elOptions.append( "&nbsp;|&nbsp;" );
+				var $elPreferencesOption = $J( '<div></div>', {
+					'class': 'ugc_inline_option',
+					'text': 'Edit Preferences'
+				} );
+				$elPreferencesOption.click( function ()	{
+					top.location.href = 'https://store.steampowered.com//account/preferences/#CommunityContentPreferences';
+					return false;
+				} );
+				$elOptions.append( $elPreferencesOption );
+
+				$elWarning.append( $elOptions );
+
+				if ( e.height() > 125 )
+				{
+					e.addClass( "ugc_show_warning_image" );
+				}
+				else
+				{
+					$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
+				}
+
+				e.append( $elWarning );
+			}
+			else
+			{
+				e.addClass( "ugc_show_warning_image" );
+			}
 		}
 	}
 }
