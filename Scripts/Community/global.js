@@ -1036,7 +1036,20 @@ function ApplyAdultContentPreferencesHelper( bGlobalHideAdultContentSex, bGlobal
 
 			$elWarning.append( $elOptions );
 
+			if ( e.height() > 125 )
+			{
+				e.addClass( "ugc_show_warning_image" );
+			}
+			else
+			{
+				$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
+			}
+
 			e.append( $elWarning );
+		}
+		else
+		{
+			e.addClass( "ugc_show_warning_image" );
 		}
 	}
 }
