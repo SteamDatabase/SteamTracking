@@ -807,7 +807,7 @@ HelpWizard = {
 
 		var _this = this;
 		$J.ajax({
-			type: "GET",
+			type: "POST",
 			url: "https://help.steampowered.com/wizard/AjaxCheckPasswordAvailable/",
 			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
 				password: strPassword
