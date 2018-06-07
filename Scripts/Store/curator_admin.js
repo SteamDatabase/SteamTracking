@@ -83,6 +83,7 @@ function UpdateCreatorHomeVanityURL( elForm, bAsync )
 	var vanity_partner = $J( '#devhomeadmin_partner_select' ).val();
 
 	$J( '#vanity_load_success').hide();
+	$J( '#vanity_remove_success').hide();
 	$J( '#vanity_load_throbber').show();
 	var Modal = ShowDialog( "Updating custom URL", $J( '#SaveVanityURLPopup').show() );
 	Modal.SetRemoveContentOnDismissal( false );
@@ -112,6 +113,58 @@ function UpdateCreatorHomeVanityURL( elForm, bAsync )
 		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
 	});
 }
+
+function DeleteCreatorHomeVanityURL( elForm, bAsync )
+{
+	if( bAsync !== false )
+		bAsync = true;
+
+	var vanity_url = $J( '#vanity_url_original').val();
+	var vanity_partner = $J( '#vanity_url_partner_original' ).val();
+	var my_clan_id = $J( '#vanity_url_clanid' ).val();
+
+	$J( '#vanity_load_success').hide();
+	$J( '#vanity_remove_success').hide();
+	$J( '#vanity_load_throbber').show();
+
+	var Modal = ShowDialog( "Removing custom URL", $J( '#SaveVanityURLPopup').show() );
+	Modal.SetRemoveContentOnDismissal( false );
+
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxupdatecreatorvanityurl/',
+		data: {
+			vanity_url: vanity_url,
+			vanity_partner: vanity_partner,
+			remove_vanity: true,
+			sessionid: g_sessionID,
+			async: bAsync,
+		},
+		dataType: 'json',
+		type: 'POST',
+		async: bAsync
+	} ).done( function ( data ) {
+		$J( '#vanity_load_throbber').hide();
+		$J( '#vanity_remove_success').show();
+		$J( '#vanity_url_id').val( '' );
+				window.location.href = 'https://store.steampowered.com/curator/' + my_clan_id + '/admin/curator_edit';
+	} ).fail( function( data ){
+		$J( '#SaveVanityURLPopup').hide();
+		Modal.Dismiss();
+		var response = JSON.parse(data.responseText);
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
+	});
+}
+
+function HandleVanitySelectionChange() {
+	$J('.vanity_warning').hide();
+	var vanity_partner = $J('#devhomeadmin_partner_select').val();
+
+	if ( vanity_partner )
+	{
+		$J( '#vanity_limit_' + vanity_partner ).show( );
+	}
+}
+
 
 function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 {
