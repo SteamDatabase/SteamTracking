@@ -1094,11 +1094,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .myguide_showcase_item_overlay {
 	display: block;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 }
 
 .myguide_showcase_item.left {
