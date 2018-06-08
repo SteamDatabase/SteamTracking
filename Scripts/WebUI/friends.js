@@ -21340,13 +21340,23 @@ and limitations under the License.
             (e.prototype.Focus = function() {
               Rp.UIStore.FocusTabSet(this);
             }),
-            (e.prototype.OnPopupClosed = function() {
-              Rp.UIStore.OnTabSetClosed(this), (this.m_activeTab = void 0);
-              for (var e = 0, t = this.m_vecTabs; e < t.length; e++) {
-                var i = t[e];
-                Rp.UIStore.CloseTab(this.m_browserContext, i, !0);
+            (e.prototype.OnPopupClosed = function(e) {
+              var t = !1;
+              if (
+                (void 0 != e &&
+                  e.SteamClient &&
+                  e.SteamClient.Window &&
+                  e.SteamClient.Window.ProcessShuttingDown &&
+                  (t = e.SteamClient.Window.ProcessShuttingDown()),
+                !t)
+              ) {
+                Rp.UIStore.OnTabSetClosed(this), (this.m_activeTab = void 0);
+                for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
+                  var r = n[i];
+                  Rp.UIStore.CloseTab(this.m_browserContext, r, !0);
+                }
+                this.m_vecTabs.clear();
               }
-              this.m_vecTabs.clear();
             }),
             Object.defineProperty(e.prototype, "is_popup_active", {
               get: function() {
@@ -60880,7 +60890,8 @@ and limitations under the License.
                 this.m_tabSet.GetTabSetIdentifier()
               ),
                 e.prototype.OnClose.call(this),
-                this.m_tabSet && this.m_tabSet.OnPopupClosed(),
+                this.m_tabSet &&
+                  this.m_tabSet.OnPopupClosed(this.m_popup.window),
                 this.UnbindWindowHandlers();
             }),
             (t.prototype.Render = function(e, t) {
@@ -61409,7 +61420,6 @@ and limitations under the License.
               (this.m_iLastChatPopupID = 0),
               (this.m_mapChatBrowserContexts = new Map()),
               (this.m_bSuppressBrowserContextBroadcasting = !1),
-              (this.m_mapBrowserContextBroadcastTimers = new Map()),
               (this.m_bParentalLocked = void 0),
               (this.m_stateToRestoreFrom = void 0),
               (this.m_chatStore = e);
@@ -61560,11 +61570,8 @@ and limitations under the License.
             (e.prototype.ShowAndOrActivateTabByID = function(e, t, i) {
               void 0 === i && (i = !0);
               var n,
-                r = this.GetPerContextChatData(e);
-              this.m_mapBrowserContextBroadcastTimers.has(t) &&
-                (clearTimeout(this.m_mapBrowserContextBroadcastTimers.get(t)),
-                this.m_mapBrowserContextBroadcastTimers.delete(t));
-              var o = this.GetTabSetByUniqueID(r, t);
+                r = this.GetPerContextChatData(e),
+                o = this.GetTabSetByUniqueID(r, t);
               if (o) i && o.tabSet.ActivateTab(o.tab), (n = o.tab);
               else {
                 var a = Rp.SettingsStore.BAlwaysShowChatsInNewWindow();
@@ -61650,15 +61657,6 @@ and limitations under the License.
             (e.prototype.SetFriendsListWindowForContext = function(e, t) {
               this.GetPerContextChatData(e).SetFriendsListWindow(t);
             }),
-            (e.prototype.OnOverlayShutdown = function(e) {
-              if (0 == e.m_unPID)
-                return void AssertMsg(
-                  0 != e.m_unPID,
-                  "Attempting to shutdown an overlay, but it's the desktop?"
-                );
-              var t = this.m_mapChatBrowserContexts.get(e.m_unPID);
-              t && t.SetIsShuttingDown(!0);
-            }),
             (e.prototype.OnOverlayBrowserClosed = function(e, t) {
               var i = this.m_mapChatBrowserContexts.get(e);
               i &&
@@ -61673,7 +61671,7 @@ and limitations under the License.
               this.m_bSuppressBrowserContextBroadcasting ||
                 ((this.m_bSuppressBrowserContextBroadcasting = !0),
                 this.m_mapChatBrowserContexts.forEach(function(n) {
-                  if (!Re(n.browser_context, e) && !n.is_shutting_down) {
+                  if (!Re(n.browser_context, e)) {
                     var r = n.browser_context != Bp;
                     i.ShowAndOrActivateTabByID(n.browser_context, t, r);
                   }
@@ -61683,7 +61681,19 @@ and limitations under the License.
             (e.prototype.BroadcastCloseTabToAllBrowserContexts = function(
               e,
               t
-            ) {}),
+            ) {
+              if (!this.m_bSuppressBrowserContextBroadcasting) {
+                if (Re(e, Bp))
+                  return void this.BroadcastCloseTabToAllBrowserContexts_Internal(
+                    e,
+                    t
+                  );
+                var i = this.m_mapChatBrowserContexts.get(e.m_unPID);
+                i &&
+                  Re(e, i.browser_context) &&
+                  this.BroadcastCloseTabToAllBrowserContexts_Internal(e, t);
+              }
+            }),
             (e.prototype.BroadcastCloseTabToAllBrowserContexts_Internal = function(
               e,
               t
@@ -61693,7 +61703,6 @@ and limitations under the License.
                 ((this.m_bSuppressBrowserContextBroadcasting = !0),
                 this.m_mapChatBrowserContexts.forEach(function(n) {
                   Re(n.browser_context, e) ||
-                    n.is_shutting_down ||
                     i.CloseTabByIDInContext(n.browser_context, t);
                 }),
                 (this.m_bSuppressBrowserContextBroadcasting = !1));
@@ -62044,7 +62053,6 @@ and limitations under the License.
               (this.m_FriendsListWindow = void 0),
               (this.m_PopupWindowRestoreDetails = void 0),
               (this.m_mapTabSetToPopup = new Map()),
-              (this.m_bIsShuttingDown = !1),
               (this.m_ResponsiveWindowState = new Ud());
           }
           return (
@@ -62098,16 +62106,6 @@ and limitations under the License.
             }),
             (e.prototype.SetFriendsListWindow = function(e) {
               this.m_FriendsListWindow = e;
-            }),
-            (e.prototype.SetIsShuttingDown = function(e) {
-              this.m_bIsShuttingDown = e;
-            }),
-            Object.defineProperty(e.prototype, "is_shutting_down", {
-              get: function() {
-                return this.m_bIsShuttingDown;
-              },
-              enumerable: !0,
-              configurable: !0
             }),
             Object.defineProperty(e.prototype, "popup_list", {
               get: function() {
@@ -69678,9 +69676,6 @@ and limitations under the License.
                   break;
                 case "SetPersonaState":
                   Rp.FriendStore.SetUserPersonaState(t.persona_state);
-                  break;
-                case "OnOverlayShutdown":
-                  Rp.UIStore.OnOverlayShutdown(e);
               }
             }),
             (e.prototype.Init = function(e, t, i) {
