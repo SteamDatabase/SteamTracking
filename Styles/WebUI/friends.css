@@ -170,13 +170,12 @@ html.web_chat_frame body
 .singleWindowDivider
 {
 	width: 4px;
-	height: calc( 100% - 6px);
+	height: calc( 100% - 6px );
 	background-color: rgb( 58, 62, 71 );
 	background-color: rgb( 34, 37, 43 );
-
 	min-width: 3px;
 	cursor: ew-resize;
-	border: 0.5px solid rgb(18, 18, 22);
+	border: 0.5px solid rgb( 18, 18, 22 );
 	border-top: 3px solid rgba( 34, 37, 43, .8 );
 	border-bottom: 3px solid rgba( 34, 37, 43, .9 );
 }
@@ -184,7 +183,7 @@ html.web_chat_frame body
 .resizingSingleWindow .singleWindowDivider,
 .singleWindowDivider:hover
 {
-	background-color: rgb(51, 55, 65);
+	background-color: rgb( 51, 55, 65 );
 }
 
 .chat_main:not( .singlewindow ) .friendlist
@@ -241,7 +240,7 @@ body.in_global_drag .friendlist_titlebar
 
 .friendListHeaderContainer
 {
-	min-height: 123px;
+	min-height: 98px;
 	background-color: rgb( 14, 15, 17 );
 	background-color: rgb( 35, 38, 44 );
 	position: relative;
@@ -509,7 +508,7 @@ body.in_global_drag .friendlist_titlebar
 	height: 24px;
 	background-color: rgb( 46, 47, 53 );
 	position: absolute;
-	background: linear-gradient( to right, rgb( 46, 60, 68 ) 0%, rgb( 46, 47, 53 ) 100% );
+	background: linear-gradient( to right, rgb( 58, 62, 70 ) 0%, rgb( 46, 47, 53 ) 100% );
 	right: -34px;
 	top: 26px;
 }
@@ -1073,14 +1072,14 @@ body.in_global_drag .friendlist_titlebar
 
 .confirmInviteRequestContainer .cancelAddFriends .SVGIcon_Arrow polyline
 {
-	stroke: rgb(218, 168, 31);
+	stroke: rgb( 218, 168, 31 );
 	stroke-width: 20px;
 	transition: all .21s ease-in-out;
 }
 
 .confirmInviteRequestContainer .cancelAddFriends:hover .SVGIcon_Arrow polyline
 {
-	stroke: rgb(252, 227, 160);
+	stroke: rgb( 252, 227, 160 );
 	transform: translateY( -32px );
 }
 
@@ -1184,7 +1183,6 @@ body.in_global_drag .friendlist_titlebar
 	margin-right: 6px;
 	display: flex;
 	flex-direction: column;
-
 }
 
 .clanActionButtons button.TextButton
@@ -1196,7 +1194,6 @@ body.in_global_drag .friendlist_titlebar
 {
 	color: #eee;
 }
-
 
 .clanInviteContainer a
 {
@@ -1284,11 +1281,11 @@ body.in_global_drag .friendlist_titlebar
 	justify-content: center;
 }
 
-
 .friendlistListContainer
 {
 	position: relative;
 }
+
 
 /* override any persona state colors if a friend request*/
 
@@ -1365,7 +1362,6 @@ body.in_global_drag .friendlist_titlebar
 	color: rgba( 90, 92, 97, 1 );
 }
 
-
 .friendSearchInput::placeholder
 {
 	color: rgba( 76, 84, 89, .5 );
@@ -1383,9 +1379,8 @@ body.in_global_drag .friendlist_titlebar
 .MemberListOptionsContainer .friendSearchInput:hover::placeholder,
 .MemberListOptionsContainer .friendSearchInput:focus::placeholder
 {
-	color: rgb(104, 106, 112);
+	color: rgb( 104, 106, 112 );
 }
-
 
 .friendSearchInput::selection
 {
@@ -1446,6 +1441,13 @@ body.in_global_drag .friendlist_titlebar
 	color: #666;
 	font-style: normal;
 	font-size: 16px;
+}
+
+.Page_Misc .friend
+{
+	margin-top: 16px;
+	margin-left: 16px;
+	width: 210px;
 }
 
 .SearchActive .friendSearchClear
@@ -2150,9 +2152,8 @@ body.in_global_drag .friendlist_titlebar
 	margin-left: 8px;
 	color: rgba( 145, 194, 87, 0.5 );
 	font-size: 12px;
-	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0.15 ) 100% );
+	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%, rgba( 0, 0, 0, 0.15 ) 100% );
 }
-
 
 .SteamPlayerGroupLines
 {
@@ -2219,6 +2220,7 @@ body.in_global_drag .friendlist_titlebar
 	flex-direction: row-reverse;
 	margin-top: 2px;
 	margin-left: 4px;
+	flex-shrink: 0;
 }
 
 .miniProfileContent .SnoozeContainer
@@ -2263,6 +2265,29 @@ body.in_global_drag .friendlist_titlebar
 {
 	color: rgba( 145, 194, 87, 1 );
 }
+
+.miniProfileContent .miniProfileBlocked,
+.miniProfileContent .miniProfileNotFriends
+{
+	position: absolute;
+	top: 4px;
+	right: 6px;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgba( 184, 156, 80, .75 );
+}
+
+.miniProfileContent .miniProfileBlocked
+{
+	color: rgba( 195, 74, 72, 0.75 );
+}
+
+.miniProfileContent.notFriends .miniProfileBlocked
+{
+	top: 18px;
+}
+
+
 
 .quickAccessFriends .friend.ingame .SnoozeZ
 {
@@ -2449,12 +2474,22 @@ body.in_global_drag .friendlist_titlebar
 .friend .playerName,
 .friend .playerNickname
 {
+	flex: 1;
 	line-height: 16px;
 	overflow: hidden;
 	white-space: nowrap;
-	text-overflow: ellipsis;
+	text-overflow: clip;
 	font-size: 14px;
 	transition: text-overflow 0s linear;
+}
+
+.friend .playerName
+{
+	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) calc( 100% - 6px ), rgba( 0, 0, 0, 0.15 ) 100% );
+	mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) calc( 100% - 6px ), rgba( 0, 0, 0, 0.15 ) 100% );
+	flex: initial;
+	padding-right: 6px;
+	margin-right: -6px;
 }
 
 .ChatTabContent .friend .playerName
@@ -2525,6 +2560,11 @@ body.in_global_drag .friendlist_titlebar
 	margin-top: 2px;
 	margin-bottom: -2px;
 	flex: 1;
+}
+
+.friend.awayOrSnooze .playerNameQuickAccessContainer
+{
+	opacity: .5;
 }
 
 .friend .labelHolder
@@ -2609,7 +2649,7 @@ body.in_global_drag .friendlist_titlebar
 	text-overflow: ellipsis;
 	font-size: 10px;
 	margin-top: -1px;
-	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0.15 ) 100% );
+	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%, rgba( 0, 0, 0, 0.15 ) 100% );
 }
 
 .friend .twoLine .richPresenceLabel
@@ -2880,6 +2920,7 @@ body.in_global_drag .friendlist_titlebar
 {
 	opacity: .5;
 	transform: scale( 1 );
+	cursor: pointer;
 }
 
 .chatTab .chatTabClose .SVGIcon_X_Line line
@@ -3085,7 +3126,7 @@ body.in_global_drag .friendlist_titlebar
 	line-height: 30px;
 	text-align: center;
 	width: calc ( 100% - 12px );
-	z-index: 1;
+	z-index: 10;
 	margin: 0 auto;
 	border-bottom-right-radius: 4px;
 	border-bottom-left-radius: 4px;
@@ -3096,7 +3137,7 @@ body.in_global_drag .friendlist_titlebar
 
 .unreadMessageViolator:hover
 {
-	filter: brightness(1.2);
+	filter: brightness( 1.2 );
 }
 
 .chatTab .chatTabHighlight
@@ -3371,7 +3412,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .chatImageContainer
 {
-	max-width: 600px;
+	max-width: 652px;
 	min-height: 50px;
 	transition-property: min-height;
 	transition-duration: 0s;
@@ -3579,6 +3620,23 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	stroke-width: 0.5px;
 }
 
+.giphyImg .chatImageURL
+{
+	background-image: url( "../../images/webui/giphy_logo.png" );
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+
+}
+
+.giphyImg .chatImageURL svg
+{
+	display: none;
+}
+
+
 .chatImageRestoreControl
 {
 	position: absolute;
@@ -3752,7 +3810,6 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	margin-bottom: 16px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
 .chatFileUploadProgressBarContainer
@@ -4049,6 +4106,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	display: flex;
 	flex-direction: row;
 	transform: translateY( -1px );
+	clear:left;
 }
 
 .OpenGraphFooter .OpenGraphURLButton
@@ -4073,10 +4131,26 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	transition: all 0.2s ease-in-out;
 }
 
+.OpenGraphFooter .OpenGraphURLButton:active .SVGIcon_CopyToClipboard polygon,
+.copyInviteLink:active .SVGIcon_CopyToClipboard polygon,
+.OpenGraphFooter .OpenGraphURLButton:active .SVGIcon_CopyToClipboard polyline,
+.copyInviteLink:active .SVGIcon_CopyToClipboard polyline
+{
+	fill: #fff7;
+	transition: all 0.05s ease-in-out;}
+
 .ChatMessageOpenGraph_Body
 {
 	padding: 8px;
 	position: relative;
+}
+
+.ChatMessageOpenGraph_Body .throbber_center_wrapper
+{
+	float: center;
+	width: fit-content;
+	z-index: 2;
+	margin-top: 32px;;
 }
 
 .OpenGraphContent.ClientFetchesData .ChatMessageOpenGraph_Body
@@ -4300,7 +4374,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .ChatMessageInvite
 {
-	max-width: 655px;
+	max-width: 656px;
 	min-width: 300px;
 	background: radial-gradient( 256px 256px at 20% 20%, rgb( 61, 68, 78 ) 0%, rgb( 41, 44, 51 ) 50%, rgb( 36, 39, 46 ) 100% );
 	color: rgb( 181, 190, 200 );
@@ -4363,25 +4437,78 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .ChatMessageInvite .leftInviteContainer
 {
 	float: left;
-	margin-right: 16px;
 	z-index: 1;
 	padding: 16px;
-	padding-right: 0;
 }
 
 .ChatMessageInvite.gameInviteMsg .leftInviteContainer,
-.ChatMessageInvite.broadcastInviteMsg .leftInviteContainer
+.ChatMessageInvite.broadcastInviteMsg .leftInviteContainer,
+.ChatMessageInvite.broadcastViewRequestMsg .leftInviteContainer
 {
 	position: relative;
 	overflow: hidden;
-	padding-right: 16px;
 	flex: 1;
 	display: flex;
 	align-items: center;
 }
 
+.ChatMessageInvite.broadcastInviteMsg .leftInviteContainer
+{
+	background-color: #000c;
+	background: radial-gradient( 128px 100px at 50% 40%, rgb( 25, 52, 82 ) 0%, rgba( 14, 17, 31, 0.64 ) 100% );
+}
+
+.ChatMessageInvite .DialogButton
+{
+	width: fit-content;
+	padding: 0 16px;
+	min-width: 120px;
+}
+
+.ChatMessageInvite.broadcastInviteMsg .leftInviteContainer .noisePattern
+{
+	background-image: url( "../../images/webui/tvnoise.png" );
+	background-repeat: repeat;
+	background-position: 0 0;
+	animation: noiseAnim 0.4s infinite linear alternate;
+	opacity: 0.06;
+	position: absolute;
+	width: 196px;
+	height: 110px;
+	border-radius: 8px;
+}
+
+@keyframes noiseAnim
+{
+	0%
+	{
+		background-position: 10px 200px;
+	}
+	20%
+	{
+		background-position: -50px 0;
+	}
+	40%
+	{
+		background-position: 100px -10px;
+	}
+	60%
+	{
+		background-position: 0 -150px;
+	}
+	80%
+	{
+		background-position: -100px -30px;
+	}
+	100%
+	{
+		background-position: 160px -60px;
+	}
+}
+
 .ChatMessageInvite.gameInviteMsg .rightInviteContainer,
-.ChatMessageInvite.broadcastInviteMsg .rightInviteContainer
+.ChatMessageInvite.broadcastInviteMsg .rightInviteContainer,
+.ChatMessageInvite.broadcastViewRequestMsg .rightInviteContainer
 {
 	flex: 2;
 }
@@ -4395,7 +4522,12 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
-	padding-left: 0;
+	padding-left: 0px;
+}
+
+.ChatMessageInvite.TradeOfferInvite .rightInviteContainer
+{
+	padding-left: 16px;
 }
 
 .ChatMessageInvite .rightInviteContainer .rightInviteContainerContent
@@ -4427,6 +4559,11 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	background-size: cover;
 	opacity: .5;
 	cursor: pointer;
+}
+
+.msg.ChatMessageInvite .closeButton .SVGIcon_X_Line line
+{
+	stroke-width: 24px;
 }
 
 .msg.ChatMessageInvite .closeButton:hover
@@ -4465,7 +4602,15 @@ input.InviteFriendToChatDialog_LinkInput
 .inviteLinkContainer .DialogInputLabelGroup.inviteLinkDropDown
 {
 	margin: 0px;
+	display: flex;
 }
+
+.inviteLinkContainer .DialogInputLabelGroup.inviteLinkDropDown .DialogDropDown:hover
+{
+	box-shadow: none;
+}
+
+
 
 .inviteLinkContainer .DialogDropDown._DialogInputContainer
 {
@@ -4562,7 +4707,7 @@ input.InviteFriendToChatDialog_LinkInput
 
 .ChatMessageInvite .inviteLabel
 {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 .ChatMessageInvite.Inviter .inviteLabel,
@@ -4626,6 +4771,7 @@ input.InviteFriendToChatDialog_LinkInput
 {
 	flex-direction: row;
 	justify-content: space-between;
+	padding-left: 0;
 }
 
 .ChatMessageInvite .inviteButtonJoinChat
@@ -4669,7 +4815,7 @@ input.InviteFriendToChatDialog_LinkInput
 .ChatMessageInvite.VoiceChannelInvite.GroupAlreadyJoined .groupName,
 .ChatMessageInvite.VoiceChannelInvite.Inviter .groupName
 {
-	margin-bottom: 0px;
+	margin-bottom: 2px;
 }
 
 .ChatMessageInvite.VoiceChannelInvite .VoiceChannelDetails
@@ -4733,7 +4879,7 @@ input.InviteFriendToChatDialog_LinkInput
 .ChatMessageTweet
 {
 	padding: 20px;
-	max-width: 608px;
+	max-width: 616px;
 	margin-bottom: 16px;
 	background: linear-gradient( to right, rgba( 253, 253, 253, 0.15 ) 0%, rgba( 181, 183, 189, 0.1 ) 25%, rgba( 181, 183, 189, 0.05 ) 60%, rgba( 87, 92, 104, .05 ) 100% );
 	color: rgb( 211, 220, 230 );
@@ -4745,6 +4891,7 @@ input.InviteFriendToChatDialog_LinkInput
 .ChatMessageTweet_Header
 {
 	display: flex;
+	margin-bottom: 8px;
 }
 
 .ChatMessageTweet_ProfileImage
@@ -4813,9 +4960,10 @@ input.InviteFriendToChatDialog_LinkInput
 	color: #AAB8C2;
 }
 
-.ChatMessageTweet_Body
+.msg a.ChatMessageTweet_Body
 {
 	margin: 8px 0px;
+	color: rgb( 211, 220, 230 );
 }
 
 .ChatMessageTweet_Body > img
@@ -4961,7 +5109,7 @@ input.InviteFriendToChatDialog_LinkInput
 	left: 49px;
 	width: 87px;
 	text-align: center;
-	color: rgb(116, 192, 105);
+	color: rgb( 116, 192, 105 );
 	background-color: #0005;
 }
 
@@ -5328,6 +5476,11 @@ input.InviteFriendToChatDialog_LinkInput
 	transition-property: width, max-width, border-radius, border, background-color;
 	transition-duration: .3s;
 	display: flex;
+}
+
+.VoiceToggle:focus
+{
+	outline: none;
 }
 
 .VoiceToggle.Active
@@ -6178,8 +6331,8 @@ input.InviteFriendToChatDialog_LinkInput
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 260px;
-	min-width: 200px;
+	max-width: 200px;
+	min-width: 180px;
 	box-shadow: 0 0 22px 0 #00000033;
 	z-index: 1;
 	overflow-y: auto;
@@ -6228,7 +6381,6 @@ input.InviteFriendToChatDialog_LinkInput
 {
 	position: relative;
 }
-
 
 .MemberListColumn .friend .rankIcon > *
 {
@@ -6414,13 +6566,13 @@ input.InviteFriendToChatDialog_LinkInput
 }
 
 .inviteAnotherFriendButton:hover .SVGIcon_Button,
-.chatRoomButton:hover .SVGIcon_Button
+.chatRoomButton:hover:not( .Disabled ) .SVGIcon_Button
 {
 	fill: rgb( 255, 255, 255 );
 }
 
 .inviteAnotherFriendButton:hover .SVGIcon_Button line,
-.chatRoomButton:hover .SVGIcon_Button line
+.chatRoomButton:hover:not( .Disabled ) .SVGIcon_Button line
 {
 	stroke: rgb( 255, 255, 255 );
 }
@@ -6433,7 +6585,7 @@ input.InviteFriendToChatDialog_LinkInput
 }
 
 .inviteAnotherFriendButton:hover .invitePlus,
-.chatRoomButton:hover .invitePlus
+.chatRoomButton:hover:not( .Disabled ) .invitePlus
 {
 	transform: scale( 1.5 );
 }
@@ -6445,6 +6597,12 @@ input.InviteFriendToChatDialog_LinkInput
 	align-self: center;
 	margin: 2px 2px 2px 4px;
 	cursor: pointer;
+}
+
+.chatRoomButton.InviteToGroupChat.Disabled
+{
+	opacity: .25;
+	cursor: default;
 }
 
 .chatRoomButton.ManageNotifications
@@ -6662,13 +6820,9 @@ html.web_chat_frame .perf_timing_area
 	overflow: hidden;
 }
 
-
-
-
 .MultiUserChat .msg.ChatMsgSlashEmote .speakerName
 {
 	width: fit-content !important;
-
 }
 
 .chatWindow .msg.ChatMsgSlashEmote .SpeakerLineBreak .speaker
@@ -6715,9 +6869,10 @@ html.web_chat_frame .perf_timing_area
 }
 
 .SingleUserChat .msg.gameInviteMsg,
-.SingleUserChat .msg.broadcastInviteMsg
+.SingleUserChat .msg.broadcastInviteMsg,
+.SingleUserChat .msg.broadcastViewRequestMsg
 {
-	max-width: 655px;
+	max-width: 656px;
 	display: flex;
 	flex-direction: row;
 	user-select: none;
@@ -6730,7 +6885,8 @@ html.web_chat_frame .perf_timing_area
 }
 
 .gameInviteMsg .productImage,
-.broadcastInviteMsg .productImage
+.broadcastInviteMsg .productImage,
+.broadcastViewRequestMsg .productImage
 {
 	width: 100%;
 	box-shadow: 0 4px 12px 0px #00000088;
@@ -6739,7 +6895,8 @@ html.web_chat_frame .perf_timing_area
 }
 
 .gameInviteMsg .productImage.productImageBlur,
-.broadcastInviteMsg .productImage.productImageBlur
+.broadcastInviteMsg .productImage.productImageBlur,
+.broadcastViewRequestMsg .productImage.productImageBlur
 {
 	width: 100%;
 	height: 100%;
@@ -6756,7 +6913,8 @@ html.web_chat_frame .perf_timing_area
 }
 
 .gameInviteMsg .centerBlock,
-.broadcastInviteMsg .centerBlock
+.broadcastInviteMsg .centerBlock,
+.broadcastViewRequestMsg .centerBlock
 {
 	display: flex;
 	flex-direction: column;
@@ -6770,7 +6928,8 @@ html.web_chat_frame .perf_timing_area
 }
 
 .gameInviteMsg .productName,
-.broadcastInviteMsg .productName
+.broadcastInviteMsg .productName,
+.broadcastViewRequestMsg .productName
 {
 	font-size: 28px;
 	color: white;
@@ -6858,18 +7017,70 @@ html.web_chat_frame .perf_timing_area
 .msg .gameInviteSelf img,
 .msg .gameInviteAccepted img,
 .msg .broadcastInviteDismissed img,
-.msg .broadcastInviteSelf img
+.msg .broadcastInviteSelf img,
+.msg .broadcastViewRequestDismissed img
 {
 	width: 16px;
 	height: 16px;
 	margin-bottom: -2px;
-	margin-right: 8px;
-	margin-left: 8px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+.tradeInviteMsg.tradeInviteSender
+{
+	background: radial-gradient( 256px 256px at 20% 20%, rgb( 61, 68, 78, 0.5 ) 0%, rgb( 41, 44, 51, 0.5 ) 50%, rgb( 36, 39, 46, 0.5 ) 100% ), rgb( 30, 35, 41 );
+	box-shadow: 0 6px 14px 1px #00000011;
+}
+
+.tradeInviteMsg .leftInviteContainer
+{
+	background-color: #1026;
+	background: radial-gradient( 300px 228px at 50% 45%, rgb( 81, 71, 100 ) 0%, rgba( 20, 16, 22, .5 ) 50%, #102 100% );
+}
+
+.tradeInviteMsg.tradeInviteSender .leftInviteContainer
+{
+	min-width: 66px;
+	flex: 0;
+	padding: 0;
+}
+
+.tradeInviteMsg.tradeInviteSender .centerBlock
+{
+	flex: 1;
+	margin-right: 16px;
+}
+
+.tradeInviteMsg.tradeInviteSender .rightInviteContainer
+{
+	flex-direction: row;
+}
+
+.tradeInviteMsg.tradeInviteSender .leftInviteContainer .SVGIcon_Trade
+{
+	width: 48px;
+	margin: 0;
+	padding-left: 8px;
+	float: left;
+}
+
+.tradeInviteMsg.tradeInviteSender .DialogButton.Primary
+{
+	margin-right: 0;
+	align-self: center;
+	flex: 0.4;
+}
+
+.tradeInviteMsg .SVGIcon_Trade
+{
+	width: 104px;
+	margin: auto;
 }
 
 .msg.tradeRequest
 {
-	max-width: 655px;
+	max-width: 656px;
 	background: radial-gradient( 256px 256px at 20% 20%, rgb( 61, 68, 78 ) 0%, rgb( 41, 44, 51 ) 50%, rgb( 36, 39, 46 ) 100% );
 	color: rgb( 181, 190, 200 );
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
@@ -6894,7 +7105,25 @@ html.web_chat_frame .perf_timing_area
 .SingleUserChat .msg.tradeRequest
 {
 	padding: 0 0 3px 0px;
-	margin-left: 92px;
+}
+
+.SingleUserChat .tradeInviteDismissed
+{
+	font-style: italic;
+	color: rgb( 193, 198, 207 );
+}
+
+.SingleUserChat .isCurrentUser .tradeInviteDismissed
+{
+	color: rgb( 150, 154, 161 );
+}
+
+.SingleUserChat .tradeInviteDismissed .SVGIcon_Trade
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 4px;
+	margin-bottom: -2px;
 }
 
 .msg.tradeRequest.tradeRequestCancelled
@@ -7256,7 +7485,7 @@ html.web_chat_frame .perf_timing_area
 	margin-right: 16px;
 }
 
-.MultiUserChat .msg:not(.ChatMsgSlashEmote)
+.MultiUserChat .msg:not( .ChatMsgSlashEmote )
 {
 	padding-left: 32px !important;
 }
@@ -7343,14 +7572,29 @@ html.web_chat_frame .perf_timing_area
 	user-select: none;
 }
 
+.ChatMessageErrorPermissionDeniedAlert .SVGIcon_Lock
+{
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	transform: translateY( 2px );
+}
+
+.ChatMessageErrorPermissionDeniedAlert .SVGIcon_Lock .topLock
+{
+	fill: rgb( 80, 151, 180 );
+}
+
+.ChatMessageErrorPermissionDeniedAlert .SVGIcon_Lock .baseLock
+{
+	stroke: rgb( 80, 151, 180 );
+}
+
 .ChatMessageErrorPermissionDeniedAlert
 {
 	font-size: 12px;
-	background: linear-gradient( to right, teal 0%, teal 40%, rgba( 0, 128, 128, 0.05 ) 100% );
-	padding-left: 8px;
-	letter-spacing: 2px;
-	color: #adadad;
-	user-select: none;
+	color: rgb( 80, 151, 180 );
+	line-height: 18px;
 }
 
 .SingleUserChat .isCurrentUser .msgText
@@ -7391,15 +7635,38 @@ img.emoticon
 {
 	background: linear-gradient( to right, rgba( 7, 10, 14, 0.4 ) 30%, rgba( 7, 10, 14, 0.3 ) 40%, rgba( 7, 10, 14, 0.05 ) 60%, rgba( 7, 10, 14, 0 ) 80% );
 	border-radius: 8px;
-	border-left: 1px dashed #040;
+	border-left: 1px dashed #080;
 	width: 100%;
 	margin: 0;
+	margin-bottom: 16px;
 	padding: 1em;
 	white-space: pre-wrap;
 	box-shadow: 0px 0px 6px rgba( 0, 0, 0, .1 );
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+}
+
+
+/*
+ * /pre styling
+ */
+
+.ChatMsgSlashPre pre
+{
+	color: #FFFFFF;
+	background: linear-gradient( to right, rgba( 7, 10, 14, 0.4 ) 30%, rgba( 7, 10, 14, 0.3 ) 40%, rgba( 7, 10, 14, 0.05 ) 60%, rgba( 7, 10, 14, 0 ) 80% );
+	border-radius: 8px;
+	border-left: 1px dashed #068;
+	width: 100%;
+	margin: 0;
+	margin-bottom: 16px;
+	padding: 1em;
+	white-space: pre-wrap;
+	box-shadow: 0px 0px 6px rgba( 0, 0, 0, .1 );
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
 }
 
 
@@ -7545,16 +7812,16 @@ img.emoticon
 	position: absolute;
 	font-size: 8px;
 	top: 7px;
-	right: -3px;
+	right: -4px;
 	width: 14px;
 	text-align: center;
-	transform: translateX(0px);
+	transform: translateX( 0px );
 	transition: transform .21s ease-in-out;
 }
 
 .friendRequestButton:hover .requestsNumber
 {
-	transform: translateX(1px);
+	transform: translateX( 1px );
 }
 
 .friendRequestButton .SVGIcon_FriendRequest,
@@ -7568,17 +7835,15 @@ img.emoticon
 
 .friendRequestButton .SVGIcon_FriendRequest .redCircle
 {
-	fill: rgb(230, 74, 53);
+	fill: rgb( 230, 74, 53 );
 	transition: fill .21s ease-in-out, transform .21s ease-in-out;
 }
-
 
 .addFriendButton .SVGIcon_AddFriend .plusCircle
 {
 	fill: rgba( 183, 204, 213, 1 );
 	transition: fill .21s ease-in-out, transform .21s ease-in-out;
 }
-
 
 .friendRequestButton .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton .SVGIcon_FriendRequest .friendArm,
@@ -7597,11 +7862,10 @@ img.emoticon
 	transform: translateX( 12px );
 }
 
-
 .friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .redCircle,
 .friendRequestButton:hover .SVGIcon_FriendRequest .redCircle
 {
-	fill: rgb(255, 118, 100);
+	fill: rgb( 255, 118, 100 );
 }
 
 .friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .friendHead,
@@ -7615,7 +7879,7 @@ img.emoticon
 .friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendBody
 {
-	fill: rgb(255, 226, 146);
+	fill: rgb( 255, 226, 146 );
 }
 
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendHead,
@@ -7627,7 +7891,7 @@ img.emoticon
 	fill: rgb( 170, 194, 204 );
 }
 
-.friendRequestButton:hover:not(.friendRequestViewActive) .SVGIcon_FriendRequest .friendArm
+.friendRequestButton:hover:not( .friendRequestViewActive ) .SVGIcon_FriendRequest .friendArm
 {
 	animation-name: FriendRequestWave;
 }
@@ -7639,7 +7903,6 @@ img.emoticon
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in;
 	transform-origin: 25% 55%;
-
 }
 
 @keyframes FriendRequestWave
@@ -7714,24 +7977,24 @@ img.emoticon
 
 .friendsListNeedsUpdate.friendsListVeryOutOfDate
 {
-	background-color: rgba(255, 81, 0, 0.75);
+	background-color: rgba( 255, 81, 0, 0.75 );
 }
 
 .friendsListNeedsUpdate.friendsListVeryOutOfDate:hover
 {
-	background-color: rgba(255, 81, 0, 1);
+	background-color: rgba( 255, 81, 0, 1 );
 }
 
 .friendsListNeedsUpdate
 {
-	background-color: rgba(0, 255, 13, .75);
+	background-color: rgba( 0, 255, 13, .75 );
 	border-radius: 50%;
 	display: flex;
 }
 
 .friendsListNeedsUpdate:hover
 {
-	background-color: rgba(0, 255, 13, 1);
+	background-color: rgba( 0, 255, 13, 1 );
 }
 
 .friendsListNeedsUpdate .SVGIcon_Reload
@@ -7744,12 +8007,12 @@ img.emoticon
 
 .friendsListNeedsUpdate .SVGIcon_Reload path
 {
-	stroke: rgb(35, 38, 44);
+	stroke: rgb( 35, 38, 44 );
 }
 
 .friendsListNeedsUpdate .SVGIcon_Reload polygon
 {
-	fill: rgb(35, 38, 44);
+	fill: rgb( 35, 38, 44 );
 }
 
 .controlZoo
@@ -7938,7 +8201,7 @@ img.emoticon
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	background: rgb(57, 62, 69);
+	background: rgb( 57, 62, 69 );
 	background: black;
 	cursor: pointer;
 	/*border-radius: 3px;*/
@@ -7960,29 +8223,27 @@ img.emoticon
 	width: 18px;
 	height: 18px;
 	padding: 8px;
-	transform: rotateZ(0deg) translateX(4px);
+	transform: rotateZ( 0deg ) translateX( 4px );
 	border-radius: 50%;
-	background: rgb(57, 62, 69);
+	background: rgb( 57, 62, 69 );
 	pointer-events: initial;
 }
 
 .HorizontalMiniSliderArrow .SVGIcon_DoubleArrow polyline
 {
-	stroke: rgb(156, 156, 156);
-	stroke: rgb(116, 127, 148);
+	stroke: rgb( 156, 156, 156 );
+	stroke: rgb( 116, 127, 148 );
 	stroke-width: 32px;
 }
 
-
 .HorizontalMiniSliderArrow .SVGIcon_DoubleArrow:hover polyline
 {
-	stroke: rgb(255, 255, 255);
+	stroke: rgb( 255, 255, 255 );
 }
-
 
 .HorizontalMiniSliderArrow .SVGIcon_DoubleArrow .Arrow1
 {
-	transform: translateX(20px);
+	transform: translateX( 20px );
 }
 
 .HorizontalMiniSliderArrow .SVGIcon_DoubleArrow .Arrow2
@@ -7992,7 +8253,7 @@ img.emoticon
 
 .HorizontalMiniSliderArrow.Right .SVGIcon_DoubleArrow
 {
-	transform: rotateZ(180deg) translateX(4px);
+	transform: rotateZ( 180deg ) translateX( 4px );
 	float: right;
 }
 
@@ -8999,13 +9260,34 @@ body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox
 	border: 1px dashed rgba( 0, 217, 255, .3 );
 	padding: 8px 0px 8px 0;
 	border-radius: 6px;
-	transition: border .32s ease-in-out;
+	transition: all .32s ease-in-out;
 }
 
 body.in_global_drag .quickAccessFriendsMessage
 {
 	border: 1px dashed rgba( 0, 217, 255, 0 );
 }
+
+.quickAccessFriends.emptyQuickAccess .quickAccessFriendsMessageDismiss
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 10px;
+	text-transform: uppercase;
+	background: rgb(24, 92, 108);
+	border-radius: 3px;
+	padding: 0 8px 0 8px;
+	color: white;
+	z-index: 101;
+	cursor: pointer;
+}
+
+.quickAccessFriends.emptyQuickAccess .quickAccessFriendsMessageDismiss:hover
+{
+	background: rgb(59, 162, 185);
+}
+
 
 .quickAccessFriends
 {
@@ -9022,9 +9304,17 @@ body.in_global_drag .quickAccessFriendsMessage
 	transition: height 0.25s ease-in-out;
 }
 
+
+.quickAccessFriends.emptyQuickAccess.hintDismissed
+{
+	height: 0px;
+	margin-top: -6px;
+}
+
 body.in_global_drag .quickAccessFriends.emptyQuickAccess
 {
 	height: 48px;
+	margin-top: 0px;
 }
 
 .quickAccessFriends:not( .emptyQuickAccess )
@@ -9168,7 +9458,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	height: auto;
 }
 
-.chatTab:not(.active) .ChatTabContent .avatarHolder .avatar
+.chatTab:not( .active ) .ChatTabContent .avatarHolder .avatar
 {
 	-webkit-mask: linear-gradient( to bottom, rgba( 0, 0, 0, 1 ) 0px, rgba( 0, 0, 0, 0.4 ) 80%, rgba( 0, 0, 0, 0.2 ) 90%, rgba( 0, 0, 0, 0 ) 100% );
 }
@@ -9190,14 +9480,73 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	height: 84px;
 }
 
+.msg.isCurrentUser .TradeOfferInvite
+{
+	background: radial-gradient( 256px 256px at 20% 20%, rgb( 61, 68, 78, 0.5 ) 0%, rgb( 41, 44, 51, 0.5 ) 50%, rgb( 36, 39, 46, 0.5 ) 100% ), rgb( 30, 35, 41 );
+	box-shadow: 0 6px 14px 1px #00000011;
+}
+
 .TradeOfferInvite .rightInviteContainer
 {
 	overflow: visible;
 }
 
+.msg.isCurrentUser .TradeOfferInvite .rightInviteContainer
+{
+	flex-direction: row;
+}
+
 .TradeOfferInvite_Title
 {
-	font-size: 20px;
+}
+
+.TradeOfferInvite .leftInviteContainer
+{
+	position: relative;
+	background-color: #2043;
+}
+
+.TradeOfferInvite .leftInviteContainer .SVGIcon_Trade
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: rgb( 23, 156, 253 );
+	border-radius: 50%;
+	padding: 6px;
+	bottom: 10px;
+	right: 8px;
+	box-shadow: 0px 2px 16px rgba( 0, 0, 0, 0.8 );
+}
+
+.msg.isCurrentUser .TradeOfferInvite .leftInviteContainer .SVGIcon_Trade
+{
+	width: 14px;
+	height: 14px;
+	padding: 2px;
+}
+
+.TradeOfferInvite .leftInviteContainer .avatarHolder.Large
+{
+	width: 66px;
+	height: 66px;
+	transform: scale( 1 );
+	border-radius: 3px;
+}
+
+.msg.isCurrentUser .TradeOfferInvite .leftInviteContainer .avatarHolder.Large
+{
+	width: 36px;
+	height: 36px;
+	transform: scale( 1 );
+	border-radius: 3px;
+}
+
+.TradeOfferInvite .leftInviteContainer .avatarHolder.Large .avatar
+{
+	border-radius: 4px;
+	border: 1px solid black;
+	filter: none;
 }
 
 .TradeOffer_NoteFromFriendCtn
@@ -9647,28 +9996,28 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 .unread-messages-anim-enter
 {
 	opacity: 0;
-	transform: translateY(-20px);
+	transform: translateY( -20px );
 	transition: all 0.31s ease-in-out;
 }
 
 .unread-messages-anim-appear.unread-messages-anim-appear-active,
 .unread-messages-anim-enter.unread-messages-anim-enter-active
 {
-	transform: translateY(0px);
+	transform: translateY( 0px );
 	opacity: 1;
 	transition: all 0.31s ease-in-out;
 }
 
 .unread-messages-anim-exit
 {
-	transform: translateY(0px);
+	transform: translateY( 0px );
 	opacity: 1;
 	transition: all 0.31s ease-in-out;
 }
 
 .unread-messages-anim-exit.unread-messages-anim-exit-active
 {
-	transform: translateY(-20px);
+	transform: translateY( -20px );
 	opacity: 0;
 	transition: all 0.31s ease-in-out;
 }
@@ -9807,8 +10156,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 .BBCodeYouTubeComponent
 {
 	background: linear-gradient( to right, rgba( 87, 92, 104, 0.3 ) 40%, rgba( 87, 92, 104, .05 ) 100% );
+	background: linear-gradient( to right, rgba( 87, 92, 104, 0.3 ) 40%, rgba( 87, 92, 104, .05 ) 100% );
 	border-radius: 10px;
-	padding: 4px;
+	padding: 8px;
 	box-shadow: 0px 0px 8px rgba( 0, 0, 0, 0.1 );
 	margin-bottom: 12px;
 	display: inline-block;
@@ -9883,7 +10233,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	background: linear-gradient( to right, rgba( 87, 92, 104, 0.3 ) 40%, rgba( 87, 92, 104, .05 ) 100% );
 	max-width: 640px;
 	border-radius: 10px;
-	padding: 4px;
+	padding: 8px;
 	box-shadow: 0px 0px 8px rgba( 0, 0, 0, 0.1 );
 	margin-bottom: 12px;
 }
@@ -10221,7 +10571,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .detailsView
 {
-	padding-top: 0px;
+	padding-top: 4px;
 	box-shadow: inset 2px 2px 8px #00000000;
 	transition: box-shadow .21s ease-in-out, background-color .1s ease-in-out, padding .21s ease-in-out;
 }
@@ -10874,8 +11224,25 @@ button.chatRoomHeaderButton:hover
 
 .VoiceChannelInvite .leftInviteContainer .ChatRoomGroupAvatar
 {
-	/*	box-shadow: 1px 2px 28px rgba( 18, 163, 37, .6 );*/
+	box-shadow: 1px 2px 28px rgba( 18, 163, 37, .6 );
 }
+
+.VoiceChannelInvite.Inviter .leftInviteContainer .ChatRoomGroupAvatar,
+.VoiceChannelInvite.Inviter .leftInviteContainer .ChatRoomGroupAvatar.Small,
+.VoiceChannelInvite.GroupAlreadyJoined .leftInviteContainer .ChatRoomGroupAvatar.Small
+{
+	width: 38px;
+	height: 38px;
+}
+
+.VoiceChannelInvite.Inviter.InviteLink .leftInviteContainer .ChatRoomGroupAvatar,
+.VoiceChannelInvite.Inviter.InviteLink .leftInviteContainer .ChatRoomGroupAvatar.Small,
+.VoiceChannelInvite.GroupAlreadyJoined.InviteLink .leftInviteContainer .ChatRoomGroupAvatar.Small
+{
+	width: 52px;
+	height: 52px;
+}
+
 
 .VoiceChannelInvite .leftInviteContainer .SVGIcon_VoiceRoom
 {
@@ -10892,8 +11259,15 @@ button.chatRoomHeaderButton:hover
 	width: 24px;
 	height: 24px;
 	position: absolute;
-	left: 36px;
-	top: 32px;
+	left: 44px;
+	top: 36px;
+}
+
+.VoiceChannelInvite.GroupAlreadyJoined.InviteLink .leftInviteContainer .SVGIcon_VoiceRoom,
+.VoiceChannelInvite.Inviter.InviteLink .leftInviteContainer .SVGIcon_VoiceRoom
+{
+	left: 58px;
+	top: 37px;
 }
 
 .InviteExpired.VoiceChannelInvite .leftInviteContainer .SVGIcon_VoiceRoom
@@ -10918,7 +11292,7 @@ button.chatRoomHeaderButton:hover
 .inviteButton
 {
 	display: inline-block;
-	height: 32px;
+	min-height: 32px;
 	background-color: rgb( 21, 162, 254 );
 	background: linear-gradient( to right, rgb( 21, 162, 254 ) 0%, rgb( 54, 71, 233 ) 100% );
 	user-select: none;
@@ -11019,15 +11393,18 @@ button.chatRoomHeaderButton:hover
 {
 	font-size: 12px;
 	text-transform: uppercase;
-	margin-right: 4px;
-	margin-top: 3px;
+	margin-right: 2px;
+	margin-top: 2px;
+	color: rgba( 181, 190, 200, .75 );
+	align-self: flex-start;
 }
 
 .inviteURLContainer .copyInviteLink
 {
-	width: 18px;
-	height: 18px;
-	margin-left: 6px;
+	width: 14px;
+	height: 14px;
+	margin-left: 4px;
+	margin-top: 2px;
 	display: inline-block;
 	cursor: pointer;
 }
@@ -11035,16 +11412,15 @@ button.chatRoomHeaderButton:hover
 .ChatMessageInvite .inviteURLLink
 {
 	border-radius: 2px;
-	padding: 2px 6px;
-	background-color: rgba( 173, 174, 175, 0.2 );
+	padding: 0px 4px;
+	background-color: rgba( 173, 174, 175, 0.0 );
 	user-select: text;
 	white-space: nowrap;
 	overflow: hidden;
 	border: none;
 	max-width: 190px;
-	color: rgb( 181, 190, 200 );
+	color: rgba( 181, 190, 200, .5 );
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-	flex: 1;
 }
 
 .ChatMessageInvite.InviteExpired .inviteURLLink
@@ -11096,8 +11472,13 @@ button.chatRoomHeaderButton:hover
 
 .leftInviteContainer .ChatRoomGroupAvatar.EmojiInitials .ChatRoomGroupAvatar_initials
 {
-	padding-top: 36px;
+	padding-top: 6px;
 	text-shadow: 1px 1px 8px #0009;
+}
+
+.Inviter .leftInviteContainer .ChatRoomGroupAvatar.EmojiInitials .ChatRoomGroupAvatar_initials
+{
+	padding-top: 4px;
 }
 
 img.ChatRoomGroupAvatar_Avatar
@@ -11202,6 +11583,18 @@ img.ChatRoomGroupAvatar_Avatar
 	cursor: pointer;
 }
 
+.ChatRoomListGroupItemChatRooms .chatRoomVoiceChannel
+{
+	margin-right: 6px;
+}
+
+.ChatRoomListGroupItemChatRooms .chatRoomVoiceChannel.ActiveVoiceChannel
+{
+	box-shadow: 0px 2px 12px #000a;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
 .ChatRoomListItem.chatRoomVoiceChannel
 {
 	margin-left: 42px;
@@ -11228,9 +11621,10 @@ img.ChatRoomGroupAvatar_Avatar
 .chatRoomVoiceChannel.ActiveVoiceChannel
 {
 	background-color: rgb( 46, 60, 68 );
+	background-color: rgb( 58, 62, 70 );
 	border: 0px solid transparent;
-	border-top: 1px solid rgb( 95, 111, 121 );
-	border-bottom: 1px solid rgb( 95, 111, 121 );
+	/*border-top: 1px solid rgb( 95, 111, 121 );
+	border-bottom: 1px solid rgb( 95, 111, 121 );*/
 	/*box-shadow: 1px 2px 0px rgba( 0, 0, 0, 0 ) inset, 4px 12px 38px rgba( 0, 0, 0, .6 );*/
 }
 
@@ -11387,7 +11781,6 @@ img.ChatRoomGroupAvatar_Avatar
 {
 	opacity: .2;
 	cursor: default;
-
 }
 
 .GroupListChatRoomAddRoomBtn.ChatRoomAddRoomBtn
@@ -11414,7 +11807,7 @@ img.ChatRoomGroupAvatar_Avatar
 	stroke: rgb( 122, 141, 153 );
 }
 
-.ChatRoomAddRoomBtn:hover:not(.NoPermission) .SVGIcon_PlusCircle
+.ChatRoomAddRoomBtn:hover:not( .NoPermission ) .SVGIcon_PlusCircle
 {
 	filter: brightness( 2 );
 }
@@ -12046,8 +12439,7 @@ img.ChatRoomGroupAvatar_Avatar
 .chatRoomTextChannel.ActiveTextChannel
 {
 	background-color: rgb( 46, 60, 68 );
-	border-top: 1px solid rgb( 95, 111, 121 );
-	border-bottom: 1px solid rgb( 95, 111, 121 );
+	background-color: rgb( 58, 62, 70 );
 }
 
 .chatRoomVoiceChannel .chatRoomTextChannel.ActiveTextChannel
@@ -12130,11 +12522,10 @@ img.ChatRoomGroupAvatar_Avatar
 	font-size: 14px;
 	align-self: center;
 	margin-top: 2px;
-    margin-right: 6px;
+	margin-right: 6px;
 	color: white;
 	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
 }
-
 
 .RenameChatRoomInline
 {
@@ -12160,8 +12551,6 @@ img.ChatRoomGroupAvatar_Avatar
 	margin-top: -3px;
 	margin-left: 6px;
 }
-
-
 
 .chatRoomVoiceChannelNameContainer
 {
@@ -12498,8 +12887,8 @@ a.general_btn:hover
 
 .dropGroupInviteDialog .dropGroupInviteDialog_Graphic .ChatRoomGroupAvatar .ChatRoomGroupAvatar_initials
 {
-	padding-top: 12px;
-	font-size: 48px;
+	padding-top: 10px;
+	font-size: 38px;
 }
 
 .dropGroupInviteDialog .dropGroupInviteDialog_Graphic .ChatRoomMultiFriendMore.MultiAvatar
@@ -13080,6 +13469,26 @@ a.general_btn:hover
 {
 	margin: 0;
 }
+
+.ChatMessageInvite.Inviter .ChatRoomGroupAvatar.Small
+{
+	width: 38px;
+	height: 38px;
+}
+
+.ChatMessageInvite.Inviter.InviteLink .ChatRoomGroupAvatar.Small,
+.ChatMessageInvite.GroupAlreadyJoined .ChatRoomGroupAvatar.Small
+{
+	width: 56px;
+	height: 56px;
+}
+
+.ChatMessageInvite.GroupAlreadyJoined .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials,
+.ChatMessageInvite.Inviter .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
+{
+	padding-top: 8px;
+}
+
 
 .ChatRoomMultiFriendAvatar.Small
 {
@@ -13884,9 +14293,10 @@ a.general_btn:hover
 	border: solid white 2px;
 	height: 28px;
 	width: 28px;
-	line-height: 28px;
+	line-height: 26px;
 	text-align: center;
 	cursor: default;
+	margin-top: 2px;
 }
 
 .InviteLandingRoot
@@ -13943,11 +14353,12 @@ a.general_btn:hover
 .backToPermissionsButton
 {
 	margin-bottom: 16px;
+	margin-left: 4px;
 }
 
 .backToPermissionsButton:hover .SVGIcon_DoubleArrow
 {
-	transform: translateX( -5px );
+	transform: translateX( -4px );
 }
 
 .backToPermissionsButton .SVGIcon_DoubleArrow
@@ -14060,17 +14471,19 @@ button.DialogButton.createNewRoleButton svg
 }
 
 .msg .broadcastInviteSelf,
-.msg .broadcastInviteDismissed
+.msg .broadcastInviteDismissed,
+.msg .broadcastViewRequestDismissed
 {
 	font-style: italic;
 }
 
 .broadcastThumbnail
 {
-	width: 166px;
-	height: 100px;
+	width: 196px;
+	height: 110px;
 	display: none;
 	border-radius: 8px;
+	box-shadow: 0px 4px 20px #000a;
 }
 
 .broadcastThumbnail.loaded
@@ -14096,10 +14509,7 @@ button.DialogButton.createNewRoleButton svg
 .betaFeedbackAnchor:hover
 {
 	color: rgba( 0, 217, 255 );
-}
-
-.fakeMiniProfile
-{
-	width: 350px;
-
-}
+	.fakeMiniProfile
+	{
+		width: 350px;
+	}
