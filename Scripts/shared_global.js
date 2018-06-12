@@ -1355,8 +1355,14 @@ function ReplaceDynamicLink( id, strHTML )
 	var el = $J('#'+id);
 	if ( el.length && strHTML.length > 0 )
 	{
-		el.after( strHTML );
+		var newEl = $J( strHTML );
+		el.after( newEl );
 		el.remove();
+
+		if ( typeof window['HandleNewDynamicLink'] === "function" )
+		{
+			HandleNewDynamicLink( newEl );
+		}
 	}
 }
 

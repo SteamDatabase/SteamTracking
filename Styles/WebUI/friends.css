@@ -1860,6 +1860,16 @@ body.in_global_drag .friendlist_titlebar
 	height: 28px;
 }
 
+.chatRoomVoiceChannel.ActiveVoiceChannel .CompactFriendsList .friend.ingame
+{
+	height: 22px;
+}
+
+.chatRoomVoiceChannel.ActiveVoiceChannel .CompactFriendsList .friend.ingame .labelHolder
+{
+	margin-top: 0;
+}
+
 .CompactFriendsList .friend.ingame .avatarHolder
 {
 }
@@ -3703,6 +3713,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	background-size: contain;
 	background-position: 0% 50%;
 	background-repeat: no-repeat;
+	margin-bottom: 6px;
 }
 
 .giphyImg .chatImageURL svg
@@ -3719,6 +3730,9 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	margin-bottom: -4px;
+	padding-right: 2px;
+	padding-left: 2px;
 }
 
 .chatImageRestoreControl
@@ -3888,6 +3902,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	max-width: 80%;
 	display: flex;
 	flex-direction: row;
+	bottom: 0px;
 }
 
 .chatFileUploadProgressContainer
@@ -10523,6 +10538,39 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 }
 
 
+/*-------- fade opacity and collapse height only --------*/
+
+.heightcollapseandfade-anim-appear,
+.heightcollapseandfade-anim-enter
+{
+	opacity: 0;
+	max-height: 0px;
+	transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.heightcollapseandfade-anim-appear.heightcollapseandfade-anim-appear-active,
+.heightcollapseandfade-anim-enter.heightcollapseandfade-anim-enter-active
+{
+	opacity: 1;
+	max-height: 44px;
+	transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.heightcollapseandfade-anim-exit
+{
+	opacity: 1;
+	max-height: 44px;
+	transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out;
+}
+
+.heightcollapseandfade-anim-exit.heightcollapseandfade-anim-exit-active
+{
+	opacity: 0;
+	max-height: 0px;
+	transition: opacity 0.4s ease-in-out, max-height 0.4s ease-in-out, height 0.4s ease-in-out;
+}
+
+
 
 /*-------- activeVoiceControls in main friends list --------*/
 
@@ -11069,9 +11117,15 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .detailsView
 {
+	transition: all .21s ease-in-out;
+}
+
+.ChatRoomListGroupItem.ShowAllChannels .detailsView
+{
 	padding-top: 4px;
-	box-shadow: inset 2px 2px 8px #00000000;
-	transition: box-shadow .21s ease-in-out, background-color .1s ease-in-out, padding .21s ease-in-out;
+	box-shadow: inset 2px 2px 18px #0000003f;
+	background-color: #0002;
+	padding-bottom: 4px;
 }
 
 .ChatRoomListGroupItem.NoChannels .detailsView
