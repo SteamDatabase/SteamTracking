@@ -1726,7 +1726,7 @@ if ( method.value == 'cafefunded' )
 				}				
 				else if ( method.value == 'credit_card_japan' )
 				{
-					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Japanese Credit Card transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Domestic Credit Card transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
 					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
 					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
 					{
@@ -4086,7 +4086,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'credit_card_japan' && providerPaymentMethod == 36 )
 			{
-				$('payment_method_review_text').innerHTML = 'Credit Card (Japan)';
+				$('payment_method_review_text').innerHTML = 'Credit Card (Domestic)';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bank_transfer_japan' && providerPaymentMethod == 37 )
