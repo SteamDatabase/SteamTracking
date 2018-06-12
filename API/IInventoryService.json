@@ -49,6 +49,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "If true, apply the default trade and market restriction times to this item."
+                },
+                {
+                    "name": "is_purchase",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If set, treat requestid as a txnid and create this item as a result of user microtransaction purchase."
                 }
             ]
         },
@@ -100,6 +106,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "If true, apply the default trade and market restriction times to this item."
+                },
+                {
+                    "name": "is_purchase",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If set, treat requestid as a txnid and create this item as a result of user microtransaction purchase."
                 }
             ]
         },
