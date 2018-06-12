@@ -23259,7 +23259,9 @@ and limitations under the License.
               (this.unAccountID = e),
               (this.rtTimestamp = t),
               (this.unOrdinal = i || 0),
-              (this.strMessage = n),
+              n.length > 2048
+                ? (this.strMessage = n.substr(0, 2048))
+                : (this.strMessage = n),
               (this.m_eSlashCommandType = S(n)),
               void 0 !== r &&
                 ((this.eServerMsgType = r),
