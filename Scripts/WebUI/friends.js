@@ -53367,7 +53367,9 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.render = function() {
-              var e = tt.a.COMMUNITY_BASE_URL + "groups/SteamClientBeta";
+              var e =
+                tt.a.COMMUNITY_BASE_URL +
+                "groups/SteamClientBeta/discussions/3/";
               return br.createElement(
                 "div",
                 { className: "betaFeedbackLabel" },

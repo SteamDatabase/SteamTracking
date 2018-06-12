@@ -168,6 +168,7 @@
 //
 "Scripts/WebUI/profile.js"                       : "https://steamcommunity.com/public/javascript/webui/profile.js?__TIME__&l=english",
 "Scripts/WebUI/friends.js"                       : "https://steamcommunity.com/public/javascript/webui/friends.js?__TIME__&l=english",
+"Scripts/WebUI/chathelpers.js"                   : "https://steamcommunity.com/public/javascript/webui/chathelpers.js?__TIME__&l=english",
 
 //
 // Holiday CSS
