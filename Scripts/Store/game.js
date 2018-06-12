@@ -223,14 +223,8 @@ function InitAutocollapse()
 	});
 }
 
-function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
+function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget )
 {
-	if ( !rgRecommendedAppIDs || !rgRecommendedAppIDs.length > 0 || !$J('#recommended_block_content').length )
-	{
-		$J('#recommended_block').hide();
-		return;
-	}
-
 	var rgRecommendationsToShow = [];
 	var nCurScore = 0;
 	for ( var i = 0; i < rgRecommendedAppIDs.length; i++ )
@@ -254,8 +248,8 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 			continue;
 
 		var params = {'class': 'small_cap',
-				'data-ds-appid': unAppID,
-				'href': GStoreItemData.GetAppURL( unAppID, 'recommended' )
+			'data-ds-appid': unAppID,
+			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )
 		};
 
 		var $CapCtn = $J('<a/>', params );
@@ -265,11 +259,33 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 		$CapCtn.append( $J('<h4/>').html( rgItemData.name ) );
 		$CapCtn.append( $J(rgItemData.discount_block).addClass( 'discount_block_inline') );
 
-		$J('#recommended_block_content').append( $CapCtn );
+		elTarget.append( $CapCtn );
 	}
-	GDynamicStore.DecorateDynamicItems( $J('#recommended_block_content') );
-	$J('#recommended_block_content').append( $J('<div/>', { style: 'clear: left;' } ) );
-	$J('#recommended_block_content').trigger('v_contentschanged');
+	GDynamicStore.DecorateDynamicItems( elTarget );
+	elTarget.append( $J('<div/>', { style: 'clear: left;' } ) );
+	elTarget.trigger('v_contentschanged');
+}
+
+function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
+{
+	if ( !rgRecommendedAppIDs || !rgRecommendedAppIDs.length > 0 || !$J('#recommended_block_content').length )
+	{
+		$J('#recommended_block').hide();
+		return;
+	}
+
+	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content') );
+}
+
+function RenderSuccessorAppsBlock( rgSuccessorAppIDs )
+{
+	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 10 || !$J('#successor_apps_block_block_content').length )
+	{
+		$J('#successor_apps_block').hide();
+		return;
+	}
+
+	RenderRecommendBlock( rgSuccessorAppIDs, 'recommend_successor', $J('#successor_apps_block_block_content') );
 }
 
 function ShowEULA( elLink )

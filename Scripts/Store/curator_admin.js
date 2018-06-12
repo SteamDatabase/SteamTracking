@@ -1165,24 +1165,6 @@ function EditCurator_Load( clanID, rgTags )
 		AddTag( $J('#tags_preferred'), rgTags[i] );
 }
 
-
-function GetCuratorEditURL( clanID )
-{
-	return 'https://store.steampowered.com/curator/'+ clanID +'/admin/curator_edit';
-}
-
-function UnlinkExternalAccount( external_account_type, external_account_id, internal_account_type, internal_account_id )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/account_linking/' + internal_account_id + '/unlink/',
-		{ external_account_type : external_account_type, internal_account_type : internal_account_type, redirect_page : GetCuratorEditURL( internal_account_id ), external_account_id : external_account_id } );
-}
-
-function LinkExternalAccount( external_account_type, internal_account_type, internal_account_id, from_page )
-{
-	PostToURLWithSession( 'https://steamcommunity.com/account_linking/' + internal_account_id + '/begin_link/',
-		{ external_account_type : external_account_type, internal_account_type : internal_account_type, redirect_page: GetCuratorEditURL( internal_account_id )  } );
-}
-
 function MyGameManage_Load( el )
 {
 	$J( el ).on( 'saveform', function ( e ) { console.log( 'Adil save form' ) ; console.log( e ); return false;} );

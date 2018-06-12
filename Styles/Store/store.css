@@ -3600,6 +3600,7 @@ body.v6 .quadscreenshot_carousel h2 {
 
 .carousel_container .carousel_thumbs  {
 	text-align: center;
+	min-height: 37px;
 }
 
 .carousel_container .carousel_thumbs > div {

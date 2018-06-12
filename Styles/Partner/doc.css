@@ -231,18 +231,15 @@ td {
 }
 
 .documentation_bbcode h2.bb_subsection {
-	font-size: 18px;
+	font-size: 16px;
+	color: #76accb;
 	margin-bottom: 4px;
 	padding-top: 5px;
-	border-top: 2px solid #2e3037;
+
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 		}
-
-.documentation_bbcode h2:first-child {
-	margin-top: 0;
-}
 
 .documentation_bbcode h2.bb_section > a, .documentation_bbcode h2.bb_subsection > a {
 	display: block;

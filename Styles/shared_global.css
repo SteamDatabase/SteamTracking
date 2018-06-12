@@ -1680,6 +1680,11 @@ img.dynamiclink_sketchfab_play_overlay_image
 {
 	filter: blur( 30px );
 }
+.ugc.banned.has_adult_content img,
+.ugc.banned.has_adult_content.profile_media_item
+{
+	box-shadow: inset 0px 0px 1px 1px #ff0000;
+}
 .ugc.has_adult_content.internet_explorer
 {
 	background-color: black;
@@ -1694,6 +1699,12 @@ img.dynamiclink_sketchfab_play_overlay_image
 {
 	filter: none;
 	opacity: 0.05;
+}
+
+.ugc.has_adult_content .workshopItemDetails,
+.ugc.has_adult_content .myguide_showcase_item
+{
+	opacity: 0.25;
 }
 
 a.ugc.has_adult_content.ugc_show_warning_image::after

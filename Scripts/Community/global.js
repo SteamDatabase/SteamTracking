@@ -818,7 +818,18 @@ function ApplyAdultContentPreferences()
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
 	{
 		var e = $J( elementsWithAdultContent[i] );
-		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, elementsWithAdultContent );
+		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence );
+	}
+}
+
+// override where necessary
+function HandleNewDynamicLink( newDynamicLinkElement )
+{
+	if ( newDynamicLinkElement.hasClass( "has_adult_content" ) )
+	{
+		var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
+		var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+		ApplyAdultContentPreferencesHelper( newDynamicLinkElement, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence );
 	}
 }
 
@@ -921,8 +932,15 @@ function UGCAdultContentPreferencesMenu( elSource )
 	}
 }
 
-function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, elementsWithAdultContent )
+function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence )
 {
+	if ( e.data( 'processed_adult_content') )
+	{
+		return;
+	}
+	
+	e.data( 'processed_adult_content', true );
+
 	var bHideAdultContentSex = bGlobalHideAdultContentSex;
 	var bHideAdultContentViolence = bGlobalHideAdultContentViolence;
 
@@ -935,19 +953,19 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 	{
 		e.removeClass( 'has_adult_content' );
 	}
-	else if ( e.hasClass( "app_has_adult_content_sex" ) || e.hasClass( "app_has_adult_content_violence" ) )
+	else if ( e.hasClass( "maybe_inappropriate_sex" ) || e.hasClass( "maybe_inappropriate_violence" ) )
 	{
-		if ( e.hasClass( "app_has_adult_content_sex" ) && !bHideAdultContentSex )
+		if ( e.hasClass( "maybe_inappropriate_sex" ) && !bHideAdultContentSex )
 		{
-			e.removeClass( 'app_has_adult_content_sex' );
+			e.removeClass( 'maybe_inappropriate_sex' );
 		}
 
-		if ( e.hasClass( "app_has_adult_content_violence" ) && !bHideAdultContentViolence )
+		if ( e.hasClass( "maybe_inappropriate_violence" ) && !bHideAdultContentViolence )
 		{
-			e.removeClass( 'app_has_adult_content_violence' );
+			e.removeClass( 'maybe_inappropriate_violence' );
 		}
 
-		if ( !e.hasClass( "app_has_adult_content_sex" ) && !e.hasClass( "app_has_adult_content_violence" ) )
+		if ( !e.hasClass( "maybe_inappropriate_sex" ) && !e.hasClass( "maybe_inappropriate_violence" ) )
 		{
 			e.removeClass( 'has_adult_content' );
 		}
@@ -993,7 +1011,7 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 		}
 
 		// warning
-		if ( e.width() > 100 && !e.hasClass( 'ugc_show_warning_image' ) )
+		if ( e.width() > 100 && !e.hasClass( 'ugc_show_warning_image' ) && !e.hasClass( 'dynamiclink_box' ) )
 		{
 			var $elWarning = $J( '<div></div>', {
 				'class': 'ugc_warning',

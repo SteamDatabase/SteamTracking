@@ -1689,6 +1689,10 @@ textarea {
 	vertical-align: middle;
 }
 
+.workshopItemPreviewImage.banned {
+	box-shadow: inset 0px 0px 1px 1px #ff0000;
+}
+
 .workshopItemPreviewImage.aspectratio_16x9 {
 	max-height: 112px;
 }
@@ -1737,6 +1741,7 @@ textarea {
 .workshopItem .banned
 {
 	border-color: #ff0000;
+	box-shadow: inset 0px 0px 1px 1px #ff0000;
 }
 
 .workshopItem .incompatible:hover
