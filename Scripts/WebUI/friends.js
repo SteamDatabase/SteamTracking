@@ -21449,21 +21449,20 @@ and limitations under the License.
             }),
             (e.prototype.OnPopupClosed = function(e) {
               var t = !1;
-              if (
-                (void 0 != e &&
-                  e.SteamClient &&
-                  e.SteamClient.Window &&
-                  e.SteamClient.Window.ProcessShuttingDown &&
-                  (t = e.SteamClient.Window.ProcessShuttingDown()),
-                !t)
-              ) {
-                xp.UIStore.OnTabSetClosed(this), (this.m_activeTab = void 0);
-                for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
-                  var r = n[i];
-                  xp.UIStore.CloseTab(this.m_browserContext, r, !0);
-                }
-                this.m_vecTabs.clear();
+              void 0 != e &&
+                e.SteamClient &&
+                e.SteamClient.Window &&
+                e.SteamClient.Window.ProcessShuttingDown &&
+                (t = e.SteamClient.Window.ProcessShuttingDown()),
+                t && xp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                xp.UIStore.OnTabSetClosed(this),
+                (this.m_activeTab = void 0);
+              for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
+                var r = n[i];
+                xp.UIStore.CloseTab(this.m_browserContext, r, !0);
               }
+              this.m_vecTabs.clear(),
+                t && xp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
             }),
             Object.defineProperty(e.prototype, "is_popup_active", {
               get: function() {
@@ -62331,6 +62330,9 @@ and limitations under the License.
                 ),
                 this.m_mapChatBrowserContexts.delete(e));
             }),
+            (e.prototype.SetSuppressBrowserContextBroadcasting = function(e) {
+              this.m_bSuppressBrowserContextBroadcasting = e;
+            }),
             (e.prototype.BroadcastNewTabToAllBrowserContexts = function(e, t) {
               var i = this;
               this.m_bSuppressBrowserContextBroadcasting ||
@@ -69784,7 +69786,8 @@ and limitations under the License.
               ym.ShowPopupFriendsList(e), xp.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
-              xp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID),
+              xp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                xp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID),
                 xp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
                   xp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
                   xp.SetDefaultPopupContext(zp),
@@ -69793,7 +69796,8 @@ and limitations under the License.
                   e.m_unPID,
                   e.m_nBrowserID
                 ),
-                ys.d.ClosePopupsOwnedByBrowser(e);
+                ys.d.ClosePopupsOwnedByBrowser(e),
+                xp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
             }),
             it.b([Xt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
