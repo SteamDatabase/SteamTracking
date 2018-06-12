@@ -184,17 +184,8 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 
 .contextMenu .contextMenuItem.disabled:hover {
 	background: none;
-}
-
-.FriendMenuRoleCheckbox
-{
-	display: flex;
-	flex-direction: row;
-}
-
-.FriendMenuRoleCheckbox .DialogCheckbox
-{
-	margin-right: 8px;
+	color: #9ca4a7;
+	cursor: default;
 }
 
 .contextMenuCheckMark

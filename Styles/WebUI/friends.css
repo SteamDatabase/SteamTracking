@@ -176,8 +176,11 @@ html.web_chat_frame body
 	min-width: 3px;
 	cursor: ew-resize;
 	border: 0.5px solid rgb( 18, 18, 22 );
-	border-top: 3px solid rgba( 34, 37, 43, .8 );
+	border-top: 2px solid rgba( 34, 37, 43, .8 );
 	border-bottom: 3px solid rgba( 34, 37, 43, .9 );
+	position: absolute;
+	z-index: 12;
+	top: 1px;
 }
 
 .resizingSingleWindow .singleWindowDivider,
@@ -409,6 +412,15 @@ body.in_global_drag .friendlist_titlebar
 {
 	width: 26px;
 }
+
+.MemberListOptionsContainer .SVGIcon_DoubleArrow
+{
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	transform: rotateZ(180deg);
+}
+
 
 .socialInputContainer.SearchActive
 {
@@ -1663,6 +1675,8 @@ body.in_global_drag .friendlist_titlebar
 .chatRoomMembers .friendGroup .groupName
 {
 	margin-left: 11px;
+	position: relative;
+	overflow: visible;
 }
 
 .friendGroup.offlineFriends .groupName,
@@ -1837,6 +1851,7 @@ body.in_global_drag .friendlist_titlebar
 	height: 22px;
 	margin: 2px 0px 2px 0px;
 	padding: 4px 0px 4px 12px;
+	transition: all .21s ease-in-out;
 }
 
 .CompactFriendsList .friend.ingame,
@@ -2264,6 +2279,11 @@ body.in_global_drag .friendlist_titlebar
 .friend.ingame .SnoozeZ
 {
 	color: rgba( 145, 194, 87, 1 );
+}
+
+.miniProfileContent .miniProfilePlayer.offline .playerContent .awayStatusLabel
+{
+	font-size: 10px;
 }
 
 .miniProfileContent .miniProfileBlocked,
@@ -2828,6 +2848,60 @@ body.in_global_drag .friendlist_titlebar
 }
 */
 
+.title-area-icon.singleWindowToggle
+{
+	position: absolute;
+	top: 3px;
+	right: 74px;
+	z-index: 10;
+}
+
+.title-area-icon.singleWindowToggle.inOverlay
+{
+	right: 22px;
+}
+
+.singlewindow .title-area-icon.singleWindowToggle
+{
+	display: none;
+}
+
+.singlewindow .ChatTabs .title-area-icon.singleWindowToggle
+{
+	display: block;
+}
+
+.title-area-icon .SVGIcon_SingleWindowToggle
+{
+	width: 14px;
+	height: 14px;
+	margin-top: -2px;
+	margin-left: 4px;
+}
+
+.title-area-icon .SVGIcon_SingleWindowToggle .leftBox
+{
+	transition: transform .21s ease-in-out;
+}
+
+.fullheight:not(.chat_main) .ChatTabs .title-area-icon .SVGIcon_SingleWindowToggle
+{
+	display: none;
+}
+
+.chat_main.singlewindow .ChatTabs .title-area-icon .SVGIcon_SingleWindowToggle
+{
+	display: block;
+	margin-top: 3px;
+}
+
+.ChatTabs .title-area-icon:hover .SVGIcon_SingleWindowToggle .leftBox
+{
+	transform: translateX(-56px);
+
+}
+
+
 .ChatTabsBackButton
 {
 	float: left;
@@ -3232,6 +3306,7 @@ body.in_global_drag .friendlist_titlebar
 	text-align: center;
 	vertical-align: middle;
 	line-height: 100vh;
+	user-select: none;
 }
 
 .chatWindow
@@ -3626,9 +3701,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	width: 32px;
 	height: 32px;
 	background-size: contain;
-	background-position: 50% 50%;
+	background-position: 0% 50%;
 	background-repeat: no-repeat;
-
 }
 
 .giphyImg .chatImageURL svg
@@ -3636,6 +3710,16 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	display: none;
 }
 
+.giphyImg a.chatImageURL .giphyTag
+{
+	margin-left: 32px;
+	margin-top: 8px;
+	color: white;
+	text-shadow: -1px -1px 2px rgb( 0, 0, 0 ), 1px -1px 2px rgb( 0, 0, 0 ), 1px 1px 2px rgb( 0, 0, 0 ),  1px 1px 1px rgb( 0, 0, 0 );
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
 
 .chatImageRestoreControl
 {
@@ -3796,6 +3880,14 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	position: absolute;
 	left: 5px;
 	bottom: 6px;
+}
+
+.msg .chatImageContainer.giphyImg a.chatImageURL
+{
+	width: fit-content;
+	max-width: 80%;
+	display: flex;
+	flex-direction: row;
 }
 
 .chatFileUploadProgressContainer
@@ -4458,11 +4550,20 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	background: radial-gradient( 128px 100px at 50% 40%, rgb( 25, 52, 82 ) 0%, rgba( 14, 17, 31, 0.64 ) 100% );
 }
 
-.ChatMessageInvite .DialogButton
+.ChatMessageInvite .DialogButton,
+.inviteButtonJoinChat
 {
-	width: fit-content;
+	align-self: flex-start;
+	width: auto;
 	padding: 0 16px;
 	min-width: 120px;
+}
+
+.ChatMessageInvite  .rightInviteContainer.rightInvite_Horizontal .DialogButton,
+.rightInviteContainer.rightInvite_Horizontal .inviteButtonJoinChat
+{
+	align-self: center;
+	margin-right: 0;
 }
 
 .ChatMessageInvite.broadcastInviteMsg .leftInviteContainer .noisePattern
@@ -4522,12 +4623,11 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
-	padding-left: 0px;
 }
 
-.ChatMessageInvite.TradeOfferInvite .rightInviteContainer
+.ChatMessageInvite.NoBGSplitInvite .rightInviteContainer
 {
-	padding-left: 16px;
+	padding-left: 0px;
 }
 
 .ChatMessageInvite .rightInviteContainer .rightInviteContainerContent
@@ -4766,31 +4866,14 @@ input.InviteFriendToChatDialog_LinkInput
 	margin-bottom: 0;
 }
 
-.ChatMessageInvite.GroupAlreadyJoined .rightInviteContainer,
-.ChatMessageInvite.Inviter .rightInviteContainer
-{
-	flex-direction: row;
-	justify-content: space-between;
-	padding-left: 0;
-}
-
 .ChatMessageInvite .inviteButtonJoinChat
 {
 	flex-shrink: 0;
-	align-self: flex-start;
 }
 
 .ChatMessageInvite .inviteButton.inviteButtonJoinChat
 {
 	min-height: 32px;
-}
-
-.ChatMessageInvite.GroupAlreadyJoined .inviteButtonJoinChat,
-.ChatMessageInvite.Inviter .inviteButtonJoinChat
-{
-	margin-right: 0;
-	align-self: center;
-	flex: 0.4;
 }
 
 .ChatMessageInvite.Inviter .groupName,
@@ -5160,16 +5243,21 @@ input.InviteFriendToChatDialog_LinkInput
 
 .chatSubmitButton .SVGIcon_Submit
 {
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 	margin-top: 3px;
-	margin-left: 1px;
 }
 
 .chatSubmitButton .SVGIcon_Submit path
 {
 	fill: rgb( 133, 146, 165 );
-	stroke-width: 1px;
+	stroke-width: 2px;
+}
+
+.VoiceToggleIconCtn .SVGIcon_VoiceRoom .Microphone
+{
+	fill: rgb( 132, 146, 164 );
+	transition-duration: 0s;
 }
 
 .OneOnOneVoiceRoomControls
@@ -5496,9 +5584,21 @@ input.InviteFriendToChatDialog_LinkInput
 	background-color: rgba( 97, 253, 151, .3 );
 }
 
-.EmoticonPickerButton
+
+.chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon
 {
-	background-image: none;
+	width: 24px;
+	height: 24px;
+}
+
+.EmoticonPickerButton .SVGIcon_Emoticon path
+{
+	stroke: rgb( 132, 146, 164 );
+}
+
+.EmoticonPickerButton:hover .SVGIcon_Emoticon path
+{
+	stroke: white;
 }
 
 .EmbedButton
@@ -5532,14 +5632,8 @@ input.InviteFriendToChatDialog_LinkInput
 
 .SVGIcon_Button.SVGIcon_Emoticon
 {
-	width: 20px;
-	height: 20px;
-	background-image: none;
-	margin-top: 3px;
-	margin-left: 1px;
-	fill: rgb( 133, 146, 165 );
-	stroke-width: 1px;
-	stroke: rgb( 133, 146, 165 );
+	width: 100%;
+	height: 100%;
 }
 
 .chatSubmitButton.disabled
@@ -5583,9 +5677,9 @@ input.InviteFriendToChatDialog_LinkInput
 
 .activeVoiceControls
 {
-	background: radial-gradient( 64% 124px at 20% 50%, rgb( 28, 147, 49 ) 0%, rgba( 28, 147, 49, 0 ) 100% );
-	border-top: 1px solid transparent;
-	border-bottom: 1px solid transparent;
+	background: #38404b;
+	border-top: 1px solid #78db86;
+	border-bottom: 1px solid #78db86;
 	border-image: url( "data:image/svg+xml;utf8,	<svg xmlns='http://www.w3.org/2000/svg' width='50' height='5'><defs><linearGradient id='ModalGradient'><stop offset='0' stop-color='%2315531a'/><stop offset='0.2' stop-color='%230ffc16'/><stop offset='1' stop-color='%23145319'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23ModalGradient)' width='100%' height='100%'/></g></svg>" ) 10% stretch;
 }
 
@@ -5666,7 +5760,7 @@ input.InviteFriendToChatDialog_LinkInput
 
 .activeVoiceLabels .activeVoiceHeader
 {
-	color: #fff;
+	color: #76d483;
 	letter-spacing: 2px;
 	white-space: nowrap;
 }
@@ -5674,12 +5768,18 @@ input.InviteFriendToChatDialog_LinkInput
 .activeVoiceLabels .activeVoiceName
 {
 	font-size: 12px;
-	color: #0f0;
+	color: #a7d4ad;
 	line-height: 12px;
 	max-height: 24px;
 	/* height is 2x line-height, so two lines will display */
 	overflow: hidden;
 	text-overflow: ellipsis;
+	cursor: pointer;
+}
+
+.activeVoiceLabels .activeVoiceName:hover
+{
+	color: white;
 }
 
 .activeVoiceButtons
@@ -5708,7 +5808,16 @@ input.InviteFriendToChatDialog_LinkInput
 
 .activeVoiceButtonsSpacer
 {
-	display: none;
+	display: block;
+	flex: 1;
+	transition: flex .4s ease-in-out;
+}
+
+.activeVoiceButtonsSpacerAfter
+{
+	display: block;
+	flex: 0;
+	transition: flex .4s ease-in-out;
 }
 
 .emptyChannelNotice
@@ -6327,12 +6436,13 @@ input.InviteFriendToChatDialog_LinkInput
 
 .chatRoomGroupNavColumn
 {
+	position: relative;
 	display: flex;
 	flex: 1;
 	flex-direction: column;
 	justify-content: space-between;
 	max-width: 200px;
-	min-width: 180px;
+	min-width: 200px;
 	box-shadow: 0 0 22px 0 #00000033;
 	z-index: 1;
 	overflow-y: auto;
@@ -6432,7 +6542,7 @@ input.InviteFriendToChatDialog_LinkInput
 {
 	overflow-x: hidden;
 	overflow-y: auto;
-	margin-right: -14px;
+	margin-right: -20px;
 	padding-right: 28px;
 }
 
@@ -6485,33 +6595,342 @@ input.InviteFriendToChatDialog_LinkInput
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	position: relative;
 }
 
+.chatRoomGroupNavCollapseExpand,
 .MemberListOption
 {
-	width: 22px;
-	height: 22px;
+	width: 20px;
+	height: 26px;
 	align-self: center;
-	margin-right: 8px;
+	margin-right: 2px;
 	opacity: 0.5;
 	flex-shrink: 0;
+	cursor: pointer;
+	padding: 4px;
+	transition: all .4s ease-in-out;
 }
 
-.MemberListOption .ExpandArrow
+.chatRoomGroupNavCollapseExpand
 {
-	transform: rotateZ( 0deg );
-	width: 100%;
-	height: 100%;
+	margin-right: 8px;
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	right: -36px;
+	background: radial-gradient( 20px 20px at 50% 50%, rgb( 30, 32, 37 ) 0%, rgba( 30, 32, 37, .87 ) 50%, rgba( 30, 32, 37, .1 ) 80%, #0000 100% ),
+	 linear-gradient( to right, rgba( 30, 32, 37, 1 ) 0px,  rgba( 30, 32, 37, 1 ) 8px, rgba( 30, 32, 37, 0 ) 16px );
+}
+
+.chatRoomGroupNavColumn.chatRoomGroupNavCollapsed
+{
+	min-width: 46px;
+	max-width: 46px;
+
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel:hover,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel:not(.ActiveVoiceChannel):hover
+{
+	overflow: visible;
+	transition-duration: 0s;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel.ActiveVoiceChannel
+{
+	transition: all .4s ease-in-out;
+	width: 42px;
+	overflow: hidden;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover
+{
+	width: 200px;
+	box-shadow: 4px 2px 18px 0px #00000088;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .voicestatusIcon.voiceStatusMic
+{
+	margin-left: -46px;
+	z-index: 2;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .voicestatusIcon.voicestatusIcon.voiceStatusOutput
+{
+	margin-left: 12px;
+	z-index: 2;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .voicestatusIcon.voiceStatusMic
+{
+	margin-left: 0px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .voicestatusIcon.voicestatusIcon.voiceStatusOutput
+{
+	margin-left: 0px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .emptyChannelNotice.Visible
+{
+	opacity: 1;
+	transition-delay: .3s;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceButtonsSpacer
+{
+	flex: 0;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceButtonsSpacerAfter
+{
+	flex: 1;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel.ActiveTextChannel:hover
+{
+	background: linear-gradient( to right, rgba( 58, 62, 70, 1 ) 0px,  rgba( 58, 62, 70, 1 ) 46px, rgba( 58, 62, 70, 0 ) 47px, rgba( 0, 0, 0, 0 ) 100% );
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel.ActiveTextChannel:hover
+{
+
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .VoiceControlPanelButton
+{
+	opacity: 1;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannelName
+{
+	position: absolute;
+	top: 1px;
+	left: 42px;
+	line-height: 28px;
+	pointer-events: none;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel:not(.ActiveVoiceChannel) .chatRoomVoiceChannelName
+{
+	position: absolute;
+	top: 0px;
+	left: 24px;
+	line-height: 28px;
+}
+
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel:not(.ActiveVoiceChannel):hover .chatRoomVoiceChannelName,
+.chatRoomGroupNavCollapsed .chatRoomTextChannel:hover .chatRoomTextChannelName
+{
+	opacity: 1;
+	transition-duration: .21s;
+	background-color: rgb(29, 31, 36);
+	width: fit-content;
+	position: absolute;
+	left: 42px;
+	line-height: 28px;
+	padding: 0px 8px;
+	top: 1px;
+	bottom: -1px;
+	padding-bottom: 4px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel:hover .chatRoomVoiceChannelName
+{
+
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel.ActiveTextChannel:hover .chatRoomTextChannelName
+{
+	background-color: rgba( 58, 62, 70, 1 );
+}
+
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceControls,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .activeVoiceButtons
+{
+
+}
+
+.chatRoomGroupNavCollapsed .CompactFriendsList .friend
+{
+	padding-left: 8px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel
+{
+}
+
+.chatRoomGroupNavCollapsed .ScratchPadConnect
+{
+	opacity: 0;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .chatRoomTextChannel
+{
+	right: -48px;
+	width: 23px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .chatRoomTextChannel
+{
+	right: 109px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .VoiceControlPanelButton.chatEndVoiceChat
+{
+	min-width: 42px;
+	opacity: 1;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .chatRoomTextChannel .chatRoomTextChannelIcon
+{
+	opacity: 0;
+	transition: all .32s ease-in-out;
+}
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .chatRoomTextChannel .chatRoomTextChannelIcon
+{
+	opacity: 1;
+}
+
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .chatRoomTextChannel
+{
+	overflow: visible;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel .chatRoomTextChannel .ChatUnreadMessageIndicator
+{
+	left: -10px;
+	top: 0;
+	opacity: 1;
+	transform: scaleX(-1);;
+	transform-origin: 19% 48%;
+	transition: all .34s ease-in-out;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .chatRoomTextChannel .ChatUnreadMessageIndicator
+{
+	transform: scaleX(1);
+	left: 0px;
+	top: -6px;
+}
+
+.chatRoomGroupNavCollapsed .emptyChannelNotice
+{
+	opacity: 0;
+	transition-duration: .21s;
+	transition-delay: 0s;
+}
+
+.chatRoomGroupNavCollapsed .VoiceControlPanelButton,
+.chatRoomGroupNavCollapsed .friend .labelHolder,
+.chatRoomGroupNavCollapsed .chatRoomTextChannel .chatRoomTextChannelName,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel .chatRoomVoiceChannelName
+{
+	opacity: 0;
+	transition-duration: .21s;
+}
+
+.ChannelTypeTitle .ChannelTypeLabel
+{
+	flex: 1;
+	transition: all .4s ease-in-out;
+	min-width: 0;
+}
+
+.chatRoomGroupNavCollapsed .ChannelTypeTitle .ChatRoomAddRoomBtn
+{
+	flex: 1;
+	margin-left: 52px;
+}
+
+
+.chatRoomGroupNavCollapsed .ChannelTypeTitle .ChannelTypeLabel
+{
+	flex: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.chatRoomGroupNavCollapsed .ChannelTypeTitle
+{
+	transform: translateX( -52px) ;
+}
+
+.chatRoomGroupNavCollapsed .ActiveVoiceChannel .chatRoomVoiceChannelIconGlow
+{
+
+}
+
+.chatRoomGroupNavCollapsed .chatRoomGroupNavCollapseExpand .SVGIcon_DoubleArrow
+{
+	transform: rotateZ( 180deg );
+}
+
+.chatRoomGroupNavCollapsed .chatRoomTextChannel
+{
+	padding-left: 8px;
+}
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannelIcon
+{
+	margin-left: 8px;
+}
+
+
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel.ActiveVoiceChannel:hover .chatRoomVoiceChannelName,
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel.ActiveVoiceChannel:hover .friend .labelHolder
+{
+	opacity: 1;
+}
+
+
+.chatRoomGroupNavCollapsed .chatRoomVoiceChannel .chatRoomTextChannel
+{
+}
+
+.chatRoomGroupNavCollapseExpand .SVGIcon_DoubleArrow,
+.MemberListOption .SVGIcon_DoubleArrow
+{
+	transform: rotateZ( 180deg );
+	width: 16px;
+	height: 16px;
 	opacity: 1;
 	display: block;
 	margin: 0px;
+	margin-top: 4px;
+	transition: all .21s ease-in-out;
 	transition-duration: .24s;
 	cursor: pointer;
 }
 
-.MemberListColumn.MemberListViewCompact .MemberListOption .ExpandArrow
+.chatRoomGroupNavCollapseExpand .SVGIcon_DoubleArrow
 {
-	transform: rotateZ( 180deg );
+	transform: rotateZ( 0deg );
+	opacity: .35;
+}
+
+.chatRoomGroupNavCollapseExpand:hover .SVGIcon_DoubleArrow
+{
+	opacity: 1;
+}
+
+
+.MemberListColumn.MemberListViewCompact .MemberListOption .SVGIcon_DoubleArrow
+{
+	transform: rotateZ( 0deg );
 }
 
 .MemberListOption.SearchActive
@@ -6666,6 +7085,11 @@ input.InviteFriendToChatDialog_LinkInput
 	background-color: rgba( 34, 37, 43, 1 );
 	z-index: 4;
 	transition: all .21s ease-in-out;
+}
+
+.singlewindow .chatWindow .chatEntry
+{
+	padding-left: 10px;
 }
 
 .chatWindow .InsetWindowOpen .chatEntry
@@ -7684,6 +8108,11 @@ img.emoticon
 	background: linear-gradient( to bottom, rgba( 24, 26, 30, 0.8 ) 0%, rgba( 24, 26, 30, 0.5 ) 70%, rgba( 24, 26, 30, 0.2 ) 100% );
 }
 
+.singlewindow .titleBarContainer.ChatTabs
+{
+	padding-left: 4px;
+}
+
 .popup_chat_frame .title-area
 {
 	position: absolute;
@@ -7811,17 +8240,23 @@ img.emoticon
 	color: white;
 	position: absolute;
 	font-size: 8px;
-	top: 7px;
+	top: 11.0px;
 	right: -4px;
-	width: 14px;
+	width: fit-content;
+	min-width: 8px;
+	background-color: rgb(230, 74, 53);
+	border-radius: 16px;
+	line-height: 11.5px;
+	padding: 0 2px;
 	text-align: center;
 	transform: translateX( 0px );
-	transition: transform .21s ease-in-out;
+	transition: all .21s ease-in-out;
 }
 
 .friendRequestButton:hover .requestsNumber
 {
 	transform: translateX( 1px );
+	background-color: rgb( 255, 118, 100 );
 }
 
 .friendRequestButton .SVGIcon_FriendRequest,
@@ -7837,6 +8272,7 @@ img.emoticon
 {
 	fill: rgb( 230, 74, 53 );
 	transition: fill .21s ease-in-out, transform .21s ease-in-out;
+	display: none;
 }
 
 .addFriendButton .SVGIcon_AddFriend .plusCircle
@@ -8801,7 +9237,7 @@ span.mention.me
 
 .chat_modal_background
 {
-	background: rgba( 0, 0, 0, 0.5 );
+	background: rgba( 0, 0, 0, 0.9 );
 	z-index: 7;
 }
 
@@ -9491,13 +9927,10 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	overflow: visible;
 }
 
-.msg.isCurrentUser .TradeOfferInvite .rightInviteContainer
+.rightInviteContainer.rightInvite_Horizontal
 {
 	flex-direction: row;
-}
-
-.TradeOfferInvite_Title
-{
+	justify-content: space-between;
 }
 
 .TradeOfferInvite .leftInviteContainer
@@ -9588,7 +10021,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	display: flex;
 }
 
-.gameGroup:not( .OtherGamesGroup ) .gameGroupContainer
+.gameGroup:not( .OtherGamesGroup ):not( .NonSteamGamesGroup ) .gameGroupContainer
 {
 	background-color: #cde2;
 	background-color: transparent;
@@ -9674,6 +10107,11 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	height: 100%;
 	border: 0px solid transparent;
 	border-radius: 3px;
+}
+
+.SVGIcon_Button .SVGIcon_DoubleArrow
+{
+
 }
 
 .ExpandArrow
@@ -10082,6 +10520,48 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	opacity: 0;
 	max-width: 0px;
 	transition: opacity 0.4s ease-in-out, max-width 0.4s ease-in-out;
+}
+
+
+
+/*-------- activeVoiceControls in main friends list --------*/
+
+.activevoice-anim-appear,
+.activevoice-anim-enter
+{
+	opacity: 0;
+	max-height: 0px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	transition: all 0.32s ease-in-out;
+}
+
+.activevoice-anim-appear.activevoice-anim-appear-active,
+.activevoice-anim-enter.activevoice-anim-enter-active
+{
+	opacity: 1;
+	max-height: 44px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	transition: all 0.32s ease-in-out;
+}
+
+.activevoice-anim-exit
+{
+	opacity: 1;
+	max-height: 44px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	transition: all 0.32s ease-in-out;
+}
+
+.activevoice-anim-exit.activevoice-anim-exit-active
+{
+	opacity: 0;
+	max-height: 0px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	transition: all 0.32s ease-in-out;
 }
 
 
@@ -10510,6 +10990,14 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 .ChatRoomListGroupItem:hover
 {
 	background-color: rgba( 47, 56, 68, .5 );
+
+}
+
+
+
+ .ChatRoomListGroupItem:not(.NonGroupHovered) .ChatRoomListGroupItem_header:hover .chatRoomName
+{
+	color: white;
 }
 
 .ChatRoomListGroupItem .ChatRoomGroupAvatar
@@ -10522,45 +11010,55 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .ChatRoomListGroupItem .openGroupButton
 {
-	opacity: 0.8;
-	transition: opacity .21s ease-in-out, transform .21s ease-in-out;
 	width: 24px;
 	height: 24px;
 	display: block;
-	padding-right: 2px;
 	margin-top: 7px;
 	cursor: pointer;
+	border-radius: 50%;
+	margin-right: 4px;
+	transition: all .16s ease-in-out;
 }
 
-.openGroupButton .ExpandArrow
+.openGroupButton .SVGIcon_DoubleArrow
 {
-	background-size: 16px 16px;
-	background-position: 50% 50%;
-	margin: auto;
+	width: 12px;
+	height: 12px;
+	transform: rotateZ( -90deg );
+	margin-left: 6px;
 	margin-top: 6px;
+	transition: all .16s ease-in-out;
 }
 
-.ChatRoomListGroupItem:hover .openGroupButton,
-.ChatRoomListGroupItem.ShowAllChannels .openGroupButton
+.ChatRoomListGroupItem .openGroupButton .SVGIcon_DoubleArrow polyline
 {
-	opacity: .8;
+	stroke: rgb( 67, 73, 83 );
+	transition: all .16s ease-in-out;
+}
+
+.ChatRoomListGroupItem:hover .openGroupButton:hover .SVGIcon_DoubleArrow polyline
+{
+	stroke: rgb(255, 255, 255);
+}
+
+.ChatRoomListGroupItem_header:hover .openGroupButton .SVGIcon_DoubleArrow polyline
+{
+	stroke: rgb(149, 161, 184);
 }
 
 .ChatRoomListGroupItem .openGroupButton:hover
 {
-	opacity: 1;
+	background-color: rgb( 67, 73, 83 );
 }
 
-.ChatRoomListGroupItem.ShowAllChannels .openGroupButton
+.ChatRoomListGroupItem.ShowAllChannels .openGroupButton .SVGIcon_DoubleArrow
 {
-	opacity: .8;
-	transform: rotateZ( 180deg ) translateX( 0px );
-	transform-origin: 12px 50%;
+	transform: rotateZ( 90deg );
 }
 
 .ChatRoomListGroupItem.ShowAllChannels .openGroupButton:hover
 {
-	opacity: 1;
+
 }
 
 .ChatRoomListGroupItem .ChatRoomGroupAvatar .ChatRoomGroupAvatar_initials
@@ -10618,7 +11116,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .ChatRoomListGroupItem .membersInVoice .SVGIcon_VoiceRoom .Bubble
 {
-	opacity: 0;
+	opacity: 1;
+	stroke: rgba( 104, 110, 115, 0.4 );
 }
 
 .ChatRoomListGroupItem .membersInVoice .SVGIcon_VoiceRoom .Microphone
@@ -10782,6 +11281,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .ChatRoomListGroupItem_header
 {
+	cursor: pointer;
 	display: flex;
 	flex-direction: row;
 	line-height: 20px;
@@ -10978,6 +11478,15 @@ button.chatRoomHeaderButton:hover
 	background: linear-gradient( to bottom, #687ab1 0%, #4e5969 80% );
 }
 
+.InlineVolume .volumePercentage
+{
+	display: inline-block;
+	font-size: 10px;
+	width: 24px;
+	text-align: center;
+	margin-left: 2px;
+}
+
 .chatRoomVoiceChannel:not( .ActiveVoiceChannel ) .VoiceChannelParticipants .ContextMenuButton
 {
 	visibility: collapse;
@@ -11012,6 +11521,12 @@ button.chatRoomHeaderButton:hover
 	display: flex;
 	flex-direction: row;
 	margin-bottom: -4px;
+	margin-right: 82px;
+}
+
+.singlewindow .currentUserContainer .statusAndName
+{
+	margin-right: 0px;
 }
 
 .currentUserContainer .ContextMenuButton
@@ -11572,15 +12087,27 @@ img.ChatRoomGroupAvatar_Avatar
 
 .chatRoomVoiceChannel
 {
+	width: 194px;
 	position: relative;
 	padding-bottom: 3px;
 	background-color: transparent;
-	transition: background-color .24s ease-in-out, box-shadow .24s ease-in-out, margin .24s ease-in-out, border .24s ease-in-out;
+	transition: all .4s ease-in-out;
 	border-radius: 0px;
 	margin: 2px 4px 4px 2px;
 	/*box-shadow: 1px 2px 18px rgba( 0, 0, 0, .5 ) inset, 1px 2px 0px rgba( 0, 0, 0, 0 );*/
 	border: .5px solid rgba( 55, 71, 82, .5 );
 	cursor: pointer;
+
+}
+
+.ChatRoomGroupDialog_contents:not(.InsetWindowOpen) .chatRoomVoiceChannel
+{
+	overflow: hidden;
+}
+
+.chatRoomVoiceChannel.ActiveVoiceChannel
+{
+	width: 200px;
 }
 
 .ChatRoomListGroupItemChatRooms .chatRoomVoiceChannel
@@ -11610,7 +12137,7 @@ img.ChatRoomGroupAvatar_Avatar
 {
 	box-shadow: 1px 1px 4px rgba( 0, 0, 0, .83 ) inset, 1px 2px 0px rgba( 0, 0, 0, 0 );
 	border: .5px solid rgba( 155, 171, 182, .5 );
-	background-color: rgba( 23, 25, 29, 0 );
+	background-color: rgba( 23, 25, 29, 0.5 );
 }
 
 .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel.ActiveVoiceChannel
@@ -11731,7 +12258,7 @@ img.ChatRoomGroupAvatar_Avatar
 	opacity: 0;
 	width: 20px;
 	height: 20px;
-	transition: opacity .21s ease-in-out;
+	transition: all .21s ease-in-out;
 }
 
 .voicestatusIcon .SVGIcon_Button
@@ -11741,9 +12268,36 @@ img.ChatRoomGroupAvatar_Avatar
 	margin-top: 4px;
 }
 
+.avatarHolder .SVGIcon_Volume
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #000a;
+}
+
+.avatarHolder .SVGIcon_Volume .SoundWaves
+{
+	display: none;
+}
+
+.avatarHolder .SVGIcon_Volume .Speaker path
+{
+	fill: #f54;
+}
+
+.avatarHolder .SVGIcon_Volume .SoundX line
+{
+	stroke: #f54;
+	stroke-width: 18px;
+}
+
+
+
 .chatRoomVoiceChannelsGroup,
-.chatRoomTextChannelsGroup,
-.chatRoomDirectMessagesGroup
+.chatRoomTextChannelsGroup
 {
 	color: rgb( 104, 110, 115 );
 }
@@ -11768,6 +12322,8 @@ img.ChatRoomGroupAvatar_Avatar
 	user-select: none;
 	padding: 6px 4px 4px 12px;
 	line-height: 20px;
+	white-space: nowrap;
+	transition: all .4s ease-in-out
 }
 
 .ChatRoomAddRoomBtn
@@ -11775,6 +12331,9 @@ img.ChatRoomGroupAvatar_Avatar
 	background-color: transparent;
 	cursor: pointer;
 	color: blue;
+	transition-property: opacity, transform, flex, margin;
+	transition-duration: .34s, .4s, .4s, .4s;
+	transition-timing-function:  ease-in-out;
 }
 
 .ChatRoomAddRoomBtn.NoPermission
@@ -11866,7 +12425,7 @@ img.ChatRoomGroupAvatar_Avatar
 	padding-left: 12px;
 	border-top: 1px solid transparent;
 	border-bottom: 1px solid transparent;
-	transition: color .32s ease-in-out;
+	transition: all .32s ease-in-out;
 	user-select: none;
 }
 
@@ -11897,6 +12456,7 @@ img.ChatRoomGroupAvatar_Avatar
 	text-overflow: ellipsis;
 	min-width: 0;
 	flex: 1;
+	transition: all .4s ease-in-out;
 }
 
 .chatRoomVoiceChannelName.unsavedVoiceChannel
@@ -11945,6 +12505,7 @@ img.ChatRoomGroupAvatar_Avatar
 	margin-left: 10px;
 	margin-right: -12px;
 	z-index: 1;
+	transition: all .4s ease-in-out;
 }
 
 .chatRoomVoiceChannelIconGlow
@@ -12091,6 +12652,12 @@ img.ChatRoomGroupAvatar_Avatar
 .friendListHeaderContainer .activeVoiceControls .SVGIcon_Headphones
 {
 	fill: rgb( 200, 241, 194 );
+}
+
+.friendListHeaderContainer .activeVoiceControls
+{
+	overflow: hidden;
+	height: 44px;
 }
 
 .VoiceControlPanelButton:hover .SVGIcon_VoiceRoom .Arrow
@@ -13483,10 +14050,16 @@ a.general_btn:hover
 	height: 56px;
 }
 
-.ChatMessageInvite.GroupAlreadyJoined .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials,
-.ChatMessageInvite.Inviter .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
+.ChatMessageInvite.GroupAlreadyJoined .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
 {
 	padding-top: 8px;
+	font-size: 28px;
+}
+
+.ChatMessageInvite.Inviter .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
+{
+	padding-top: 4px;
+	font-size: 20px;
 }
 
 
@@ -13963,6 +14536,7 @@ a.general_btn:hover
 
 .miniProfileHoverInner
 {
+	width: fit-content;
 	margin: 11px;
 	box-shadow: 0 10px 32px 0px #000000ab;
 }
@@ -14306,6 +14880,42 @@ a.general_btn:hover
 	padding: 80px 2%;
 }
 
+.FriendMenuRoleCheckbox .DialogCheckbox
+{
+	margin-right: 8px;
+	display: flex;
+	flex-direction: row;
+}
+
+.FriendMenuRoleCheckbox.disabled .DialogCheckbox
+{
+	background-color: transparent;
+}
+
+
+.FriendMenuRoleCheckbox .DialogCheckbox_Container
+{
+	margin-bottom: 0;
+}
+
+.FriendMenuRoleCheckbox.disabled .DialogCheckbox_Container
+{
+	cursor: default;
+}
+
+.FriendMenuRoleCheckbox .SVGIcon_Crown
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	margin-bottom: -2px;
+}
+
+.FriendMenuRoleCheckbox .SVGIcon_Crown path
+{
+	fill: rgb( 255, 187, 0 );
+}
+
 .roleSubtitle
 {
 	color: #575b64;
@@ -14354,6 +14964,7 @@ a.general_btn:hover
 {
 	margin-bottom: 16px;
 	margin-left: 4px;
+	font-size: 22px;
 }
 
 .backToPermissionsButton:hover .SVGIcon_DoubleArrow
@@ -14363,8 +14974,8 @@ a.general_btn:hover
 
 .backToPermissionsButton .SVGIcon_DoubleArrow
 {
-	width: 12px;
-	height: 12px;
+	width: 18px;
+	height: 18px;
 	margin-bottom: -1px;
 }
 
@@ -14454,6 +15065,38 @@ button.DialogButton.createNewRoleButton svg
 	margin-bottom: 1px;
 }
 
+.meKey .SVGIcon_DialogCheck,
+button.DialogButton.roleButton .SVGIcon_DialogCheck
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	opacity: 0;
+}
+
+.meKey .SVGIcon_DialogCheck path,
+button.DialogButton.roleButton .SVGIcon_DialogCheck path
+{
+	stroke: white;
+}
+
+.meKey .SVGIcon_DialogCheck,
+button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
+.DialogButton.roleButton:disabled .SVGIcon_Button
+{
+	opacity: 0.5;
+}
+
+.meKey .SVGIcon_DialogCheck
+{
+	margin-bottom: -2px;
+}
+
+.meKey
+{
+	float: right;
+}
+
 .SettingsGroup
 {
 	margin-top: 0px;
@@ -14509,7 +15152,4 @@ button.DialogButton.createNewRoleButton svg
 .betaFeedbackAnchor:hover
 {
 	color: rgba( 0, 217, 255 );
-	.fakeMiniProfile
-	{
-		width: 350px;
-	}
+}
