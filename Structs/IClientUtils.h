@@ -66,4 +66,9 @@ public:
     virtual unknown_ret SetOverlayChatBrowserInfo(unsigned int, int) = 0;
     virtual unknown_ret ClearOverlayChatBrowserInfo(unsigned int) = 0;
     virtual unknown_ret GetOverlayChatBrowserInfo(OverlayChatBrowserInfo_t*, unsigned int, unsigned int*) = 0;
+    virtual unknown_ret DispatchClientUINotification(EClientUINotificationType, char const*, unsigned int) = 0;
+    virtual unknown_ret RespondToClientUINotification(unsigned int, bool, unsigned int) = 0;
+    virtual unknown_ret DispatchClientUICommand(char const*, unsigned int) = 0;
+    virtual unknown_ret DispatchComputerActiveStateChange() = 0;
+    virtual unknown_ret DispatchOpenURLInClient(char const*, unsigned int, bool) = 0;
 };

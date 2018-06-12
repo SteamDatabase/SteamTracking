@@ -1085,6 +1085,11 @@ SelectMousePosition
 	vertical-align: bottom;
 }
 
+.ModeWrapper.TouchBumper
+{
+    height: 90px;
+}
+
 .ModeWrapper.Small
 {
 	background-color: #00000000;
@@ -1287,6 +1292,7 @@ SelectMousePosition
 	border:0px;
 }
 
+
 .ModeWrapper.Trigger Label
 {
 	margin-top: 5px;
@@ -1316,10 +1322,14 @@ ControllerBindingButton.BindingButton:focus, Button.Trigger:focus
 	animation-direction: normal;
 }
 
-
+ControllerBindingButton#LeftGripUpperButton.BindingButton,
+ControllerBindingButton#RightGripUpperButton.BindingButton
+{
+    margin-top: 120px;
+}
 
 .ControllerMode
-{
+{   
 	width: 100%;
 	height: fit-children;
 	min-height: 228px;
@@ -1341,6 +1351,23 @@ Label.ModeTitle
 	color: #00ccff;
 	horizontal-align: left;
 	visibility: collapse;
+}
+
+.TouchBumper Label.ModeTitle
+{
+    horizontal-align: left;
+	margin-left: 12px;
+	margin-right: 0px;
+    font-size: 16px;
+    margin-bottom: 4px;
+    visibility: visible;
+}
+
+.TouchBumper.Right Label.ModeTitle
+{
+	margin-left: 0px;
+	margin-right: 12px;
+    horizontal-align: right;
 }
 
 .Small Label.ModeTitle
@@ -1439,15 +1466,18 @@ Label.ModeTitle
     visibility: collapse;
 }
 
-.BindingButton.SteamV2
+.BindingButton.SteamV2,
+.ModeWrapper.SteamV2
 {
     visibility: collapse;
 }
 
-.controller_steamcontroller_headcrab .BindingButton.SteamV2
+.controller_steamcontroller_headcrab .BindingButton.SteamV2,
+.controller_steamcontroller_headcrab .ModeWrapper.SteamV2
 {
     visibility: visible;
 }
+
 
 #StartButton.BindingButton ,
 #BackButton.BindingButton ,
@@ -1463,6 +1493,12 @@ Label.ModeTitle
 .cap_shoulder_buttons #RightBumperButton.BindingButton
 {
     visibility: visible;
+}
+
+.controller_steamcontroller_headcrab #LeftBumperButton.BindingButton,
+.controller_steamcontroller_headcrab #RightBumperButton.BindingButton
+{
+    visibility: collapse;
 }
 
 .BindingButton.AlwaysOn
@@ -1528,7 +1564,7 @@ ControllerBindingButton.BindingButton
 
 .controller_steamcontroller_headcrab ControllerBindingButton.BindingButton
 {
-	height: 82px;
+	height: 72px;
 	margin-bottom: 7px;
 }
 
@@ -1615,7 +1651,9 @@ ControllerBindingButton.BindingButton.Right
 }
 
 .controller_switch_pro #CaptureButton.BindingButton,
-.controller_switch_pair #CaptureButton.BindingButton {
+.controller_switch_pair #CaptureButton.BindingButton
+{
+    visibility: visible;
     background-size: 40px 40px;
     background-image: url("file://{images}/library/controller/input_controller_glyph_capture.png");
     background-repeat: no-repeat;
@@ -1767,7 +1805,11 @@ ControllerPropertiesMode, ControllerPropertiesActivator
 	visibility: visible;
 }
 
-
+.TouchBumper.Right ControllerBindingButton
+{
+    horizontal-align: right;
+	margin-right: 6px;
+}
 
 .ControllerMode ControllerBindingButton Label
 {
@@ -1792,7 +1834,8 @@ ControllerSourceModeTrigger.ControllerMode ControllerBindingButton
 	background-size: 0px 0px;
 }
 
-ControllerSourceModeTrigger #BindingSlotContainer
+ControllerSourceModeTrigger #BindingSlotContainer,
+.ControllerMode .TouchBumper.ControllerBindingButton 
 {
 	flow-children: down;
 	width: 100%;
@@ -1800,6 +1843,13 @@ ControllerSourceModeTrigger #BindingSlotContainer
 	vertical-align: top;
 	margin-top: 0px;
 }
+
+.TouchBumper.Right #BindingSlotContainer
+{
+    horizontal-align: right;
+}
+
+
 
 .ABXYLabels,
 .controller_ps3 .ABXYLabelsPS4,

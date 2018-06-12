@@ -125,12 +125,14 @@
  CGGetDisplaysWithPoint
  CGGetLastMouseDelta
  CGLChoosePixelFormat
+ CGLErrorString
  CGLFlushDrawable
  CGLGetCurrentContext
  CGLGetParameter
  CGLGetSurface
  CGLIsEnabled
  CGLSetCurrentContext
+ CGLTexImageIOSurface2D
  CGMainDisplayID
  CGSForceShowCursor
  CGSGetSurfaceBounds
@@ -198,6 +200,9 @@
  D vtable for std::bad_exception
  D vtable for std::exception
  HideCursor
+ IOSurfaceGetHeight
+ IOSurfaceGetWidth
+ IOSurfaceLookup
  InitCursor
  MTLCopyAllDevices
  MTLCreateSystemDefaultDevice
@@ -372,6 +377,7 @@
  T CMetalRenderer::ValveGetRendererType()
  T CMetalRenderer::ValveGetRendererWindow()
  T CMetalRenderer::ValveGetScreenSize(int&, int&)
+ T CMetalRenderer::ValveGetSharedTextureSupport()
  T CMetalRenderer::ValveIsFullScreen()
  T CMetalRenderer::ValveLoadOrUpdateTexture(int, bool, int, int, unsigned int, unsigned int, int, char*, ETextureFormat, unsigned int, bool*)
  T CMetalRenderer::ValveLockRenderResources()
@@ -777,8 +783,8 @@
  d __block_descriptor_tmp267
  d __block_descriptor_tmp32
  d __block_descriptor_tmp34
- d __block_descriptor_tmp353
- d __block_descriptor_tmp354
+ d __block_descriptor_tmp361
+ d __block_descriptor_tmp362
  d __block_descriptor_tmp39
  d __block_descriptor_tmp58
  d __block_descriptor_tmp60

@@ -34,8 +34,8 @@ public:
     virtual unknown_ret GetBroadcastShowDebugInfo() = 0;
     virtual unknown_ret GetBroadcastShowReminderBanner() = 0;
     virtual unknown_ret GetBroadcastEncoderSetting() = 0;
-    virtual unknown_ret InviteToBroadcast(CSteamID, bool) = 0;
-    virtual unknown_ret IgnoreApprovalRequest(CSteamID) = 0;
+    virtual unknown_ret InviteToBroadcast(CSteamID, bool, unsigned int) = 0;
+    virtual unknown_ret IgnoreApprovalRequest(CSteamID, unsigned int) = 0;
     virtual unknown_ret BroadcastFirstTimeComplete() = 0;
     virtual unknown_ret SetInHomeStreamState(bool) = 0;
     virtual unknown_ret WatchBroadcast(CSteamID) = 0;

@@ -14,4 +14,7 @@ typedef enum EBroadcastUploadResult
     k_EBroadcastUploadResultMissingAudio, // Missing Audio
     k_EBroadcastUploadResultTooFarBehind, // Too Far behind
     k_EBroadcastUploadResultTranscodeBehind, // Transcode Behind
+    k_EBroadcastUploadResultNotAllowedToPlay, // Not allowed to play
+    k_EBroadcastUploadResultServerBusy, // Server Busy
+    k_EBroadcastUploadResultBanned, // Banned
 } EBroadcastUploadResult;

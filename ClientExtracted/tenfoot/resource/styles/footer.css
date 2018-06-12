@@ -349,12 +349,12 @@ TenfootFooterPanel.WebFooter
 
 .OSX #LegendRow Label.LegendButtonBox.CrossButtonBox {
 	font-size: 21px;
-	padding-top: 2.2px;
+	padding-top: 2.6px;
 	padding-left: 0.2px;
 }
 .OSX #LegendRow Label.LegendButtonBox.CircleButtonBox {
 	font-size: 26px;
-	padding-top: -0.9px;
+	padding-top: -2.2px;
 	padding-left: -0.5px;
 }
 .OSX #LegendRow Label.LegendButtonBox.SquareButtonBox {
@@ -364,7 +364,7 @@ TenfootFooterPanel.WebFooter
 }
 .OSX #LegendRow Label.LegendButtonBox.TriangleButtonBox {
 	font-size: 26px;
-	padding-top: -2.4px;
+	padding-top: -3.9px;
 	padding-left: -.9px;
 }
 

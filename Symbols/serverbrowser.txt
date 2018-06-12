@@ -5,12 +5,15 @@
  B CJSMethodArgument::default_instance_
  B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
+ B CMsgAckPIDShuttingDown::default_instance_
  B CMsgAckSharedPaintBuffers::default_instance_
  B CMsgAddHeader::default_instance_
  B CMsgAuthedSteamDomains::default_instance_
+ B CMsgBringWindowToFront::default_instance_
  B CMsgBrowserCreate::default_instance_
  B CMsgBrowserCreateResponse::default_instance_
  B CMsgBrowserErrorStrings::default_instance_
+ B CMsgBrowserPosition::default_instance_
  B CMsgBrowserReady::default_instance_
  B CMsgBrowserRemove::default_instance_
  B CMsgBrowserResized::default_instance_
@@ -47,6 +50,7 @@
  B CMsgGoForward::default_instance_
  B CMsgHidePopup::default_instance_
  B CMsgHideToolTip::default_instance_
+ B CMsgHideWindow::default_instance_
  B CMsgHorizontalScrollBarSize::default_instance_
  B CMsgHorizontalScrollBarSizeResponse::default_instance_
  B CMsgJSAlert::default_instance_
@@ -68,6 +72,8 @@
  B CMsgLoadLocalization::default_instance_
  B CMsgLoadedRequest::default_instance_
  B CMsgLoadingResource::default_instance_
+ B CMsgMaximizeRestoreWindow::default_instance_
+ B CMsgMinimizeWindow::default_instance_
  B CMsgMouseDblClick::default_instance_
  B CMsgMouseDown::default_instance_
  B CMsgMouseLeave::default_instance_
@@ -90,6 +96,7 @@
  B CMsgReload::default_instance_
  B CMsgRequestFullScreen::default_instance_
  B CMsgRequestFullScreenResponse::default_instance_
+ B CMsgResizeGripChanged::default_instance_
  B CMsgSavePageToJPEG::default_instance_
  B CMsgSavePageToJPEGResponse::default_instance_
  B CMsgScalePageToValue::default_instance_
@@ -106,12 +113,16 @@
  B CMsgSetJumpList::default_instance_
  B CMsgSetLocalFileRequestMapping::default_instance_
  B CMsgSetLocalFileRequestMapping_AdditionalRoute::default_instance_
+ B CMsgSetPIDShuttingDown::default_instance_
  B CMsgSetSharedPaintBuffers::default_instance_
  B CMsgSetTargetFrameRate::default_instance_
  B CMsgSetVerticalScroll::default_instance_
+ B CMsgSetWindowPosition::default_instance_
  B CMsgSetZoomLevel::default_instance_
+ B CMsgShowBrowserContextMenu::default_instance_
  B CMsgShowPopup::default_instance_
  B CMsgShowToolTip::default_instance_
+ B CMsgShowWindow::default_instance_
  B CMsgSizePopup::default_instance_
  B CMsgStartRequest::default_instance_
  B CMsgStartRequestResponse::default_instance_
@@ -126,6 +137,7 @@
  B CMsgVerticalScrollBarSize::default_instance_
  B CMsgVerticalScrollBarSizeResponse::default_instance_
  B CMsgViewSource::default_instance_
+ B CMsgWasHidden::default_instance_
  B CMsgZoomToElementAtPosition::default_instance_
  B CMsgZoomToElementAtPositionResponse::default_instance_
  B CMsgZoomToFocusedElement::default_instance_
@@ -204,6 +216,8 @@
  B vgui::Panel::s_DragDropCapture
  B vgui::ToolWindow::s_ToolWindows
  B vgui::g_ButtonSoundNames
+ CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CFBooleanGetTypeID
  CFBooleanGetValue
  CFDateCreate
@@ -837,6 +851,7 @@
  D typeinfo for CHTMLHeader
  D typeinfo for CHTMLPageSecurityInfo
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ D typeinfo for CHTMLProtoBufMsg<CMsgBrowserPosition>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserSize>
  D typeinfo for CHTMLProtoBufMsg<CMsgCopy>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -872,6 +887,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgStopFind>
  D typeinfo for CHTMLProtoBufMsg<CMsgStopLoad>
  D typeinfo for CHTMLProtoBufMsg<CMsgViewSource>
+ D typeinfo for CHTMLProtoBufMsg<CMsgWasHidden>
  D typeinfo for CHintLabel
  D typeinfo for CHistoryGames
  D typeinfo for CIntProperty
@@ -881,12 +897,15 @@
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CModList
  D typeinfo for CModList::CCallback_OnAppDataChanged
+ D typeinfo for CMsgAckPIDShuttingDown
  D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
  D typeinfo for CMsgAuthedSteamDomains
+ D typeinfo for CMsgBringWindowToFront
  D typeinfo for CMsgBrowserCreate
  D typeinfo for CMsgBrowserCreateResponse
  D typeinfo for CMsgBrowserErrorStrings
+ D typeinfo for CMsgBrowserPosition
  D typeinfo for CMsgBrowserReady
  D typeinfo for CMsgBrowserRemove
  D typeinfo for CMsgBrowserResized
@@ -923,6 +942,7 @@
  D typeinfo for CMsgGoForward
  D typeinfo for CMsgHidePopup
  D typeinfo for CMsgHideToolTip
+ D typeinfo for CMsgHideWindow
  D typeinfo for CMsgHorizontalScrollBarSize
  D typeinfo for CMsgHorizontalScrollBarSizeResponse
  D typeinfo for CMsgJSAlert
@@ -944,6 +964,8 @@
  D typeinfo for CMsgLoadLocalization
  D typeinfo for CMsgLoadedRequest
  D typeinfo for CMsgLoadingResource
+ D typeinfo for CMsgMaximizeRestoreWindow
+ D typeinfo for CMsgMinimizeWindow
  D typeinfo for CMsgMouseDblClick
  D typeinfo for CMsgMouseDown
  D typeinfo for CMsgMouseLeave
@@ -966,6 +988,7 @@
  D typeinfo for CMsgReload
  D typeinfo for CMsgRequestFullScreen
  D typeinfo for CMsgRequestFullScreenResponse
+ D typeinfo for CMsgResizeGripChanged
  D typeinfo for CMsgSavePageToJPEG
  D typeinfo for CMsgSavePageToJPEGResponse
  D typeinfo for CMsgScalePageToValue
@@ -982,12 +1005,16 @@
  D typeinfo for CMsgSetJumpList
  D typeinfo for CMsgSetLocalFileRequestMapping
  D typeinfo for CMsgSetLocalFileRequestMapping_AdditionalRoute
+ D typeinfo for CMsgSetPIDShuttingDown
  D typeinfo for CMsgSetSharedPaintBuffers
  D typeinfo for CMsgSetTargetFrameRate
  D typeinfo for CMsgSetVerticalScroll
+ D typeinfo for CMsgSetWindowPosition
  D typeinfo for CMsgSetZoomLevel
+ D typeinfo for CMsgShowBrowserContextMenu
  D typeinfo for CMsgShowPopup
  D typeinfo for CMsgShowToolTip
+ D typeinfo for CMsgShowWindow
  D typeinfo for CMsgSizePopup
  D typeinfo for CMsgStartRequest
  D typeinfo for CMsgStartRequestResponse
@@ -1002,6 +1029,7 @@
  D typeinfo for CMsgVerticalScrollBarSize
  D typeinfo for CMsgVerticalScrollBarSizeResponse
  D typeinfo for CMsgViewSource
+ D typeinfo for CMsgWasHidden
  D typeinfo for CMsgZoomToElementAtPosition
  D typeinfo for CMsgZoomToElementAtPositionResponse
  D typeinfo for CMsgZoomToFocusedElement
@@ -1310,6 +1338,7 @@
  D vgui::HTML::PanelMessageFunc_OnBrowserExitFullScreen::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
+ D vgui::HTML::PanelMessageFunc_OnScreenSizeChanged::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()::bAdded
  D vgui::HTMLPopup::ChainToAnimationMap()::chained
  D vgui::HTMLPopup::ChainToMap()::chained
@@ -1678,6 +1707,7 @@
  D vtable for CHTMLHeader
  D vtable for CHTMLPageSecurityInfo
  D vtable for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ D vtable for CHTMLProtoBufMsg<CMsgBrowserPosition>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserSize>
  D vtable for CHTMLProtoBufMsg<CMsgCopy>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -1713,6 +1743,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgStopFind>
  D vtable for CHTMLProtoBufMsg<CMsgStopLoad>
  D vtable for CHTMLProtoBufMsg<CMsgViewSource>
+ D vtable for CHTMLProtoBufMsg<CMsgWasHidden>
  D vtable for CHintLabel
  D vtable for CHistoryGames
  D vtable for CIntProperty
@@ -1722,12 +1753,15 @@
  D vtable for CMSgJumpListMRUApp
  D vtable for CModList
  D vtable for CModList::CCallback_OnAppDataChanged
+ D vtable for CMsgAckPIDShuttingDown
  D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
  D vtable for CMsgAuthedSteamDomains
+ D vtable for CMsgBringWindowToFront
  D vtable for CMsgBrowserCreate
  D vtable for CMsgBrowserCreateResponse
  D vtable for CMsgBrowserErrorStrings
+ D vtable for CMsgBrowserPosition
  D vtable for CMsgBrowserReady
  D vtable for CMsgBrowserRemove
  D vtable for CMsgBrowserResized
@@ -1764,6 +1798,7 @@
  D vtable for CMsgGoForward
  D vtable for CMsgHidePopup
  D vtable for CMsgHideToolTip
+ D vtable for CMsgHideWindow
  D vtable for CMsgHorizontalScrollBarSize
  D vtable for CMsgHorizontalScrollBarSizeResponse
  D vtable for CMsgJSAlert
@@ -1785,6 +1820,8 @@
  D vtable for CMsgLoadLocalization
  D vtable for CMsgLoadedRequest
  D vtable for CMsgLoadingResource
+ D vtable for CMsgMaximizeRestoreWindow
+ D vtable for CMsgMinimizeWindow
  D vtable for CMsgMouseDblClick
  D vtable for CMsgMouseDown
  D vtable for CMsgMouseLeave
@@ -1807,6 +1844,7 @@
  D vtable for CMsgReload
  D vtable for CMsgRequestFullScreen
  D vtable for CMsgRequestFullScreenResponse
+ D vtable for CMsgResizeGripChanged
  D vtable for CMsgSavePageToJPEG
  D vtable for CMsgSavePageToJPEGResponse
  D vtable for CMsgScalePageToValue
@@ -1823,12 +1861,16 @@
  D vtable for CMsgSetJumpList
  D vtable for CMsgSetLocalFileRequestMapping
  D vtable for CMsgSetLocalFileRequestMapping_AdditionalRoute
+ D vtable for CMsgSetPIDShuttingDown
  D vtable for CMsgSetSharedPaintBuffers
  D vtable for CMsgSetTargetFrameRate
  D vtable for CMsgSetVerticalScroll
+ D vtable for CMsgSetWindowPosition
  D vtable for CMsgSetZoomLevel
+ D vtable for CMsgShowBrowserContextMenu
  D vtable for CMsgShowPopup
  D vtable for CMsgShowToolTip
+ D vtable for CMsgShowWindow
  D vtable for CMsgSizePopup
  D vtable for CMsgStartRequest
  D vtable for CMsgStartRequestResponse
@@ -1843,6 +1885,7 @@
  D vtable for CMsgVerticalScrollBarSize
  D vtable for CMsgVerticalScrollBarSizeResponse
  D vtable for CMsgViewSource
+ D vtable for CMsgWasHidden
  D vtable for CMsgZoomToElementAtPosition
  D vtable for CMsgZoomToElementAtPositionResponse
  D vtable for CMsgZoomToFocusedElement
@@ -1957,7 +2000,7 @@
  GetOSType
  KeyValuesSystemSteam
  Msg
- OSAtomicCompareAndSwap32Barrier
+ OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_CommandLineParamExists
  Plat_FloatTime
@@ -1996,6 +2039,7 @@
  R typeinfo name for CHTMLHeader
  R typeinfo name for CHTMLPageSecurityInfo
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserErrorStrings>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserPosition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserSize>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCopy>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
@@ -2031,6 +2075,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgStopFind>
  R typeinfo name for CHTMLProtoBufMsg<CMsgStopLoad>
  R typeinfo name for CHTMLProtoBufMsg<CMsgViewSource>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgWasHidden>
  R typeinfo name for CHintLabel
  R typeinfo name for CHistoryGames
  R typeinfo name for CIntProperty
@@ -2040,12 +2085,15 @@
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CModList
  R typeinfo name for CModList::CCallback_OnAppDataChanged
+ R typeinfo name for CMsgAckPIDShuttingDown
  R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
  R typeinfo name for CMsgAuthedSteamDomains
+ R typeinfo name for CMsgBringWindowToFront
  R typeinfo name for CMsgBrowserCreate
  R typeinfo name for CMsgBrowserCreateResponse
  R typeinfo name for CMsgBrowserErrorStrings
+ R typeinfo name for CMsgBrowserPosition
  R typeinfo name for CMsgBrowserReady
  R typeinfo name for CMsgBrowserRemove
  R typeinfo name for CMsgBrowserResized
@@ -2082,6 +2130,7 @@
  R typeinfo name for CMsgGoForward
  R typeinfo name for CMsgHidePopup
  R typeinfo name for CMsgHideToolTip
+ R typeinfo name for CMsgHideWindow
  R typeinfo name for CMsgHorizontalScrollBarSize
  R typeinfo name for CMsgHorizontalScrollBarSizeResponse
  R typeinfo name for CMsgJSAlert
@@ -2103,6 +2152,8 @@
  R typeinfo name for CMsgLoadLocalization
  R typeinfo name for CMsgLoadedRequest
  R typeinfo name for CMsgLoadingResource
+ R typeinfo name for CMsgMaximizeRestoreWindow
+ R typeinfo name for CMsgMinimizeWindow
  R typeinfo name for CMsgMouseDblClick
  R typeinfo name for CMsgMouseDown
  R typeinfo name for CMsgMouseLeave
@@ -2125,6 +2176,7 @@
  R typeinfo name for CMsgReload
  R typeinfo name for CMsgRequestFullScreen
  R typeinfo name for CMsgRequestFullScreenResponse
+ R typeinfo name for CMsgResizeGripChanged
  R typeinfo name for CMsgSavePageToJPEG
  R typeinfo name for CMsgSavePageToJPEGResponse
  R typeinfo name for CMsgScalePageToValue
@@ -2141,12 +2193,16 @@
  R typeinfo name for CMsgSetJumpList
  R typeinfo name for CMsgSetLocalFileRequestMapping
  R typeinfo name for CMsgSetLocalFileRequestMapping_AdditionalRoute
+ R typeinfo name for CMsgSetPIDShuttingDown
  R typeinfo name for CMsgSetSharedPaintBuffers
  R typeinfo name for CMsgSetTargetFrameRate
  R typeinfo name for CMsgSetVerticalScroll
+ R typeinfo name for CMsgSetWindowPosition
  R typeinfo name for CMsgSetZoomLevel
+ R typeinfo name for CMsgShowBrowserContextMenu
  R typeinfo name for CMsgShowPopup
  R typeinfo name for CMsgShowToolTip
+ R typeinfo name for CMsgShowWindow
  R typeinfo name for CMsgSizePopup
  R typeinfo name for CMsgStartRequest
  R typeinfo name for CMsgStartRequestResponse
@@ -2161,6 +2217,7 @@
  R typeinfo name for CMsgVerticalScrollBarSize
  R typeinfo name for CMsgVerticalScrollBarSizeResponse
  R typeinfo name for CMsgViewSource
+ R typeinfo name for CMsgWasHidden
  R typeinfo name for CMsgZoomToElementAtPosition
  R typeinfo name for CMsgZoomToElementAtPositionResponse
  R typeinfo name for CMsgZoomToFocusedElement
@@ -2234,7 +2291,7 @@
  R typeinfo name for CUtlVector<int, CUtlMemory<int> >
  R typeinfo name for CUtlVector<short, CUtlMemory<short> >
  R typeinfo name for CUtlVector<unsigned char, CUtlMemory<unsigned char> >
- R typeinfo name for CUtlVector<unsigned int, CUtlMemory<unsigned int> >
+ R typeinfo name for CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >
  R typeinfo name for CUtlVector<unsigned long, CUtlMemory<unsigned long> >
  R typeinfo name for CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >
  R typeinfo name for CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >
@@ -2736,6 +2793,8 @@
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
  T CHTMLProtoBufMsg<CMsgBrowserErrorStrings>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserErrorStrings>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgBrowserPosition>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgBrowserPosition>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgBrowserSize>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgBrowserSize>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgCopy>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2806,6 +2865,8 @@
  T CHTMLProtoBufMsg<CMsgStopLoad>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgViewSource>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgViewSource>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgWasHidden>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgWasHidden>::~CHTMLProtoBufMsg()
  T CHintLabel::CHintLabel(vgui::Panel*, char const*, char const*)
  T CHintLabel::GetAppearance()
  T CHintLabel::GetStyleFlags()
@@ -2926,7 +2987,7 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CModList::AddVGUIListener(unsigned int)
+ T CModList::AddVGUIListener(unsigned long long)
  T CModList::BHasAppID(unsigned int) const
  T CModList::CCallback_OnAppDataChanged::Run(void*)
  T CModList::CModList()
@@ -2943,6 +3004,17 @@
  T CModList::SortMods()
  T CModList::Validate(CValidator&, char const*)
  T CModList::~CModList()
+ T CMsgAckPIDShuttingDown::ByteSize() const
+ T CMsgAckPIDShuttingDown::CMsgAckPIDShuttingDown()
+ T CMsgAckPIDShuttingDown::Clear()
+ T CMsgAckPIDShuttingDown::GetCachedSize() const
+ T CMsgAckPIDShuttingDown::GetMetadata() const
+ T CMsgAckPIDShuttingDown::IsInitialized() const
+ T CMsgAckPIDShuttingDown::MergeFrom(CMsgAckPIDShuttingDown const&)
+ T CMsgAckPIDShuttingDown::New() const
+ T CMsgAckPIDShuttingDown::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgAckPIDShuttingDown::SetCachedSize(int) const
+ T CMsgAckPIDShuttingDown::~CMsgAckPIDShuttingDown()
  T CMsgAckSharedPaintBuffers::ByteSize() const
  T CMsgAckSharedPaintBuffers::CMsgAckSharedPaintBuffers()
  T CMsgAckSharedPaintBuffers::Clear()
@@ -2979,6 +3051,17 @@
  T CMsgAuthedSteamDomains::SetCachedSize(int) const
  T CMsgAuthedSteamDomains::SharedCtor()
  T CMsgAuthedSteamDomains::~CMsgAuthedSteamDomains()
+ T CMsgBringWindowToFront::ByteSize() const
+ T CMsgBringWindowToFront::CMsgBringWindowToFront()
+ T CMsgBringWindowToFront::Clear()
+ T CMsgBringWindowToFront::GetCachedSize() const
+ T CMsgBringWindowToFront::GetMetadata() const
+ T CMsgBringWindowToFront::IsInitialized() const
+ T CMsgBringWindowToFront::MergeFrom(CMsgBringWindowToFront const&)
+ T CMsgBringWindowToFront::New() const
+ T CMsgBringWindowToFront::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBringWindowToFront::SetCachedSize(int) const
+ T CMsgBringWindowToFront::~CMsgBringWindowToFront()
  T CMsgBrowserCreate::ByteSize() const
  T CMsgBrowserCreate::CMsgBrowserCreate()
  T CMsgBrowserCreate::Clear()
@@ -3016,6 +3099,17 @@
  T CMsgBrowserErrorStrings::SharedCtor()
  T CMsgBrowserErrorStrings::SharedDtor()
  T CMsgBrowserErrorStrings::~CMsgBrowserErrorStrings()
+ T CMsgBrowserPosition::ByteSize() const
+ T CMsgBrowserPosition::CMsgBrowserPosition()
+ T CMsgBrowserPosition::Clear()
+ T CMsgBrowserPosition::GetCachedSize() const
+ T CMsgBrowserPosition::GetMetadata() const
+ T CMsgBrowserPosition::IsInitialized() const
+ T CMsgBrowserPosition::MergeFrom(CMsgBrowserPosition const&)
+ T CMsgBrowserPosition::New() const
+ T CMsgBrowserPosition::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgBrowserPosition::SetCachedSize(int) const
+ T CMsgBrowserPosition::~CMsgBrowserPosition()
  T CMsgBrowserReady::ByteSize() const
  T CMsgBrowserReady::CMsgBrowserReady()
  T CMsgBrowserReady::Clear()
@@ -3429,6 +3523,17 @@
  T CMsgHideToolTip::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgHideToolTip::SetCachedSize(int) const
  T CMsgHideToolTip::~CMsgHideToolTip()
+ T CMsgHideWindow::ByteSize() const
+ T CMsgHideWindow::CMsgHideWindow()
+ T CMsgHideWindow::Clear()
+ T CMsgHideWindow::GetCachedSize() const
+ T CMsgHideWindow::GetMetadata() const
+ T CMsgHideWindow::IsInitialized() const
+ T CMsgHideWindow::MergeFrom(CMsgHideWindow const&)
+ T CMsgHideWindow::New() const
+ T CMsgHideWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgHideWindow::SetCachedSize(int) const
+ T CMsgHideWindow::~CMsgHideWindow()
  T CMsgHorizontalScrollBarSize::ByteSize() const
  T CMsgHorizontalScrollBarSize::CMsgHorizontalScrollBarSize()
  T CMsgHorizontalScrollBarSize::Clear()
@@ -3684,6 +3789,28 @@
  T CMsgLoadingResource::SharedCtor()
  T CMsgLoadingResource::SharedDtor()
  T CMsgLoadingResource::~CMsgLoadingResource()
+ T CMsgMaximizeRestoreWindow::ByteSize() const
+ T CMsgMaximizeRestoreWindow::CMsgMaximizeRestoreWindow()
+ T CMsgMaximizeRestoreWindow::Clear()
+ T CMsgMaximizeRestoreWindow::GetCachedSize() const
+ T CMsgMaximizeRestoreWindow::GetMetadata() const
+ T CMsgMaximizeRestoreWindow::IsInitialized() const
+ T CMsgMaximizeRestoreWindow::MergeFrom(CMsgMaximizeRestoreWindow const&)
+ T CMsgMaximizeRestoreWindow::New() const
+ T CMsgMaximizeRestoreWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgMaximizeRestoreWindow::SetCachedSize(int) const
+ T CMsgMaximizeRestoreWindow::~CMsgMaximizeRestoreWindow()
+ T CMsgMinimizeWindow::ByteSize() const
+ T CMsgMinimizeWindow::CMsgMinimizeWindow()
+ T CMsgMinimizeWindow::Clear()
+ T CMsgMinimizeWindow::GetCachedSize() const
+ T CMsgMinimizeWindow::GetMetadata() const
+ T CMsgMinimizeWindow::IsInitialized() const
+ T CMsgMinimizeWindow::MergeFrom(CMsgMinimizeWindow const&)
+ T CMsgMinimizeWindow::New() const
+ T CMsgMinimizeWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgMinimizeWindow::SetCachedSize(int) const
+ T CMsgMinimizeWindow::~CMsgMinimizeWindow()
  T CMsgMouseDblClick::ByteSize() const
  T CMsgMouseDblClick::CMsgMouseDblClick()
  T CMsgMouseDblClick::Clear()
@@ -3938,6 +4065,17 @@
  T CMsgRequestFullScreenResponse::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgRequestFullScreenResponse::SetCachedSize(int) const
  T CMsgRequestFullScreenResponse::~CMsgRequestFullScreenResponse()
+ T CMsgResizeGripChanged::ByteSize() const
+ T CMsgResizeGripChanged::CMsgResizeGripChanged()
+ T CMsgResizeGripChanged::Clear()
+ T CMsgResizeGripChanged::GetCachedSize() const
+ T CMsgResizeGripChanged::GetMetadata() const
+ T CMsgResizeGripChanged::IsInitialized() const
+ T CMsgResizeGripChanged::MergeFrom(CMsgResizeGripChanged const&)
+ T CMsgResizeGripChanged::New() const
+ T CMsgResizeGripChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgResizeGripChanged::SetCachedSize(int) const
+ T CMsgResizeGripChanged::~CMsgResizeGripChanged()
  T CMsgSavePageToJPEG::ByteSize() const
  T CMsgSavePageToJPEG::CMsgSavePageToJPEG()
  T CMsgSavePageToJPEG::Clear()
@@ -4130,6 +4268,17 @@
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedCtor()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedDtor()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::~CMsgSetLocalFileRequestMapping_AdditionalRoute()
+ T CMsgSetPIDShuttingDown::ByteSize() const
+ T CMsgSetPIDShuttingDown::CMsgSetPIDShuttingDown()
+ T CMsgSetPIDShuttingDown::Clear()
+ T CMsgSetPIDShuttingDown::GetCachedSize() const
+ T CMsgSetPIDShuttingDown::GetMetadata() const
+ T CMsgSetPIDShuttingDown::IsInitialized() const
+ T CMsgSetPIDShuttingDown::MergeFrom(CMsgSetPIDShuttingDown const&)
+ T CMsgSetPIDShuttingDown::New() const
+ T CMsgSetPIDShuttingDown::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetPIDShuttingDown::SetCachedSize(int) const
+ T CMsgSetPIDShuttingDown::~CMsgSetPIDShuttingDown()
  T CMsgSetSharedPaintBuffers::ByteSize() const
  T CMsgSetSharedPaintBuffers::CMsgSetSharedPaintBuffers()
  T CMsgSetSharedPaintBuffers::Clear()
@@ -4163,6 +4312,17 @@
  T CMsgSetVerticalScroll::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetVerticalScroll::SetCachedSize(int) const
  T CMsgSetVerticalScroll::~CMsgSetVerticalScroll()
+ T CMsgSetWindowPosition::ByteSize() const
+ T CMsgSetWindowPosition::CMsgSetWindowPosition()
+ T CMsgSetWindowPosition::Clear()
+ T CMsgSetWindowPosition::GetCachedSize() const
+ T CMsgSetWindowPosition::GetMetadata() const
+ T CMsgSetWindowPosition::IsInitialized() const
+ T CMsgSetWindowPosition::MergeFrom(CMsgSetWindowPosition const&)
+ T CMsgSetWindowPosition::New() const
+ T CMsgSetWindowPosition::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetWindowPosition::SetCachedSize(int) const
+ T CMsgSetWindowPosition::~CMsgSetWindowPosition()
  T CMsgSetZoomLevel::ByteSize() const
  T CMsgSetZoomLevel::CMsgSetZoomLevel()
  T CMsgSetZoomLevel::Clear()
@@ -4174,6 +4334,17 @@
  T CMsgSetZoomLevel::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetZoomLevel::SetCachedSize(int) const
  T CMsgSetZoomLevel::~CMsgSetZoomLevel()
+ T CMsgShowBrowserContextMenu::ByteSize() const
+ T CMsgShowBrowserContextMenu::CMsgShowBrowserContextMenu()
+ T CMsgShowBrowserContextMenu::Clear()
+ T CMsgShowBrowserContextMenu::GetCachedSize() const
+ T CMsgShowBrowserContextMenu::GetMetadata() const
+ T CMsgShowBrowserContextMenu::IsInitialized() const
+ T CMsgShowBrowserContextMenu::MergeFrom(CMsgShowBrowserContextMenu const&)
+ T CMsgShowBrowserContextMenu::New() const
+ T CMsgShowBrowserContextMenu::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgShowBrowserContextMenu::SetCachedSize(int) const
+ T CMsgShowBrowserContextMenu::~CMsgShowBrowserContextMenu()
  T CMsgShowPopup::ByteSize() const
  T CMsgShowPopup::CMsgShowPopup()
  T CMsgShowPopup::Clear()
@@ -4198,6 +4369,17 @@
  T CMsgShowToolTip::SharedCtor()
  T CMsgShowToolTip::SharedDtor()
  T CMsgShowToolTip::~CMsgShowToolTip()
+ T CMsgShowWindow::ByteSize() const
+ T CMsgShowWindow::CMsgShowWindow()
+ T CMsgShowWindow::Clear()
+ T CMsgShowWindow::GetCachedSize() const
+ T CMsgShowWindow::GetMetadata() const
+ T CMsgShowWindow::IsInitialized() const
+ T CMsgShowWindow::MergeFrom(CMsgShowWindow const&)
+ T CMsgShowWindow::New() const
+ T CMsgShowWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgShowWindow::SetCachedSize(int) const
+ T CMsgShowWindow::~CMsgShowWindow()
  T CMsgSizePopup::ByteSize() const
  T CMsgSizePopup::CMsgSizePopup()
  T CMsgSizePopup::Clear()
@@ -4362,6 +4544,17 @@
  T CMsgViewSource::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgViewSource::SetCachedSize(int) const
  T CMsgViewSource::~CMsgViewSource()
+ T CMsgWasHidden::ByteSize() const
+ T CMsgWasHidden::CMsgWasHidden()
+ T CMsgWasHidden::Clear()
+ T CMsgWasHidden::GetCachedSize() const
+ T CMsgWasHidden::GetMetadata() const
+ T CMsgWasHidden::IsInitialized() const
+ T CMsgWasHidden::MergeFrom(CMsgWasHidden const&)
+ T CMsgWasHidden::New() const
+ T CMsgWasHidden::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgWasHidden::SetCachedSize(int) const
+ T CMsgWasHidden::~CMsgWasHidden()
  T CMsgZoomToElementAtPosition::ByteSize() const
  T CMsgZoomToElementAtPosition::CMsgZoomToElementAtPosition()
  T CMsgZoomToElementAtPosition::Clear()
@@ -4433,7 +4626,7 @@
  T CServerBrowser::OpenGameInfoDialog(unsigned long long)
  T CServerBrowser::PostInitialize(void* (**)(char const*, int*), int)
  T CServerBrowser::RunFrame()
- T CServerBrowser::SetParent(unsigned int)
+ T CServerBrowser::SetParent(unsigned long long)
  T CServerBrowser::Shutdown()
  T CServerBrowser::Validate(CValidator&, char const*)
  T CServerBrowser::~CServerBrowser()
@@ -4508,6 +4701,8 @@
  T CUtlBuffer::EatCPPComment()
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
+ T CUtlBuffer::Get(void*, int)
+ T CUtlBuffer::GetChar()
  T CUtlBuffer::GetDelimitedCharInternal(CUtlCharConversion*)
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetOverflow(int)
@@ -4578,6 +4773,7 @@
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::AllocNode()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::EnsureCapacity(int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Find(vgui::CFontWidthCache::key_t const&) const
@@ -4587,6 +4783,7 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed(vgui::CFontWidthCache::key_t const&, int*, bool)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Purge()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::RehashNodesInBucket(int)
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Validate(CValidator&, char const*)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::~CUtlHashMap()
  T CUtlLinkedList<CUtlDict<bool, int>*, int>::Free(int)
@@ -4673,6 +4870,7 @@
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(BestMatch_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::Insert(BestMatch_t const&, bool)
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(CKeyBindingsMgr::KBContext_t const&, CKeyBindingsMgr::KBContext_t const&), CDefRBTreeBalanceListener<int> >::Find(CKeyBindingsMgr::KBContext_t const&) const
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(CKeyBindingsMgr::KBContext_t const&, CKeyBindingsMgr::KBContext_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool, int&, bool&, bool&)
@@ -4808,28 +5006,23 @@
  T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::GrowVector(int)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::InsertBefore(int, CModList::mod_t const&)
- T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::~CUtlVector()
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::GrowVector(int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::InsertBefore(int)
- T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
- T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::~CUtlVector()
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::AddToTail(KeyValues const*&&)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::GrowVector(int)
@@ -4837,7 +5030,6 @@
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::~CUtlVector()
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::Validate(CValidator&, char const*)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::~CUtlVector()
  T CUtlVector<MatchMakingKeyValuePair_t, CUtlMemory<MatchMakingKeyValuePair_t> >::AddToTail(MatchMakingKeyValuePair_t&&)
@@ -4846,8 +5038,7 @@
  T CUtlVector<MatchMakingKeyValuePair_t, CUtlMemory<MatchMakingKeyValuePair_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<PanelAnimationMapEntry, CUtlMemory<PanelAnimationMapEntry> >::Validate(CValidator&, char const*)
@@ -4855,31 +5046,26 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::FindAndRemove(char const* const&)
  T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::InsertBefore(int, char const* const&)
- T CUtlVector<char const*, CUtlMemory<char const*> >::ShiftElementsLeft(int, int)
- T CUtlVector<char const*, CUtlMemory<char const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<char const*, CUtlMemory<char const*> >::Remove(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
  T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
- T CUtlVector<char, CUtlMemory<char> >::ShiftElementsRight(int, int)
  T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
  T CUtlVector<float, CUtlMemory<float> >::Validate(CValidator&, char const*)
  T CUtlVector<float, CUtlMemory<float> >::~CUtlVector()
  T CUtlVector<gameserveritem_t, CUtlMemory<gameserveritem_t> >::GrowVector(int)
  T CUtlVector<gameserveritem_t, CUtlMemory<gameserveritem_t> >::InsertBefore(int, gameserveritem_t const&)
- T CUtlVector<gameserveritem_t, CUtlMemory<gameserveritem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<gameserveritem_t, CUtlMemory<gameserveritem_t> >::~CUtlVector()
  T CUtlVector<int, CUtlMemory<int> >::AddToTail(int&&)
  T CUtlVector<int, CUtlMemory<int> >::FindAndRemove(int const&)
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
  T CUtlVector<int, CUtlMemory<int> >::InsertMultipleBefore(int, int, int const*)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsLeft(int, int)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsRight(int, int)
+ T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::Validate(CValidator&, char const*)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::GrowVector(int)
  T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::InsertBefore(int, netadr_t const&)
- T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::ShiftElementsRight(int, int)
  T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::~CUtlVector()
  T CUtlVector<short, CUtlMemory<short> >::AddToTail(short&&)
  T CUtlVector<short, CUtlMemory<short> >::GrowVector(int)
@@ -4887,65 +5073,52 @@
  T CUtlVector<short, CUtlMemory<short> >::~CUtlVector()
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::GrowVector(int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertBefore(int, unsigned char const&)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::Validate(CValidator&, char const*)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Validate(CValidator&, char const*)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::GrowVector(int)
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::InsertBefore(int, unsigned long long const&)
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::Validate(CValidator&, char const*)
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::~CUtlVector()
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::FindAndRemove(unsigned long const&)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::GrowVector(int)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::InsertBefore(int, unsigned long const&)
- T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::ShiftElementsRight(int, int)
+ T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::Remove(int)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::Validate(CValidator&, char const*)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::~CUtlVector()
  T CUtlVector<unsigned short, CUtlMemory<unsigned short> >::AddToTail(unsigned short&&)
  T CUtlVector<unsigned short, CUtlMemory<unsigned short> >::GrowVector(int)
  T CUtlVector<unsigned short, CUtlMemory<unsigned short> >::InsertBefore(int, unsigned short const&)
- T CUtlVector<unsigned short, CUtlMemory<unsigned short> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned short, CUtlMemory<unsigned short> >::~CUtlVector()
  T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::GrowVector(int)
  T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::InsertBefore(int)
- T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::Remove(int)
  T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::AnimationController::ActiveAnimation_t, CUtlMemory<vgui::AnimationController::ActiveAnimation_t> >::~CUtlVector()
  T CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >::GrowVector(int)
  T CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >::InsertBefore(int)
- T CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::AnimationController::AnimCommand_t, CUtlMemory<vgui::AnimationController::AnimCommand_t> >::~CUtlVector()
  T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::GrowVector(int)
  T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::InsertBefore(int)
  T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::RemoveAll()
- T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::AnimationController::AnimSequence_t, CUtlMemory<vgui::AnimationController::AnimSequence_t> >::~CUtlVector()
  T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::GrowVector(int)
  T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::InsertBefore(int)
- T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::Remove(int)
  T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::AnimationController::PostedMessage_t, CUtlMemory<vgui::AnimationController::PostedMessage_t> >::~CUtlVector()
  T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::GrowVector(int)
  T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::InsertBefore(int, vgui::BoundKey_t const&)
  T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::RemoveAll()
- T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::BoundKey_t, CUtlMemory<vgui::BoundKey_t> >::~CUtlVector()
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::GrowVector(int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::InsertBefore(int, vgui::Button* const&)
- T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Button*, CUtlMemory<vgui::Button*> >::~CUtlVector()
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::GrowVector(int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::RemoveMultiple(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::SetCount(int)
- T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::ShiftElementsLeft(int, int)
  T CUtlVector<vgui::CTreeViewListControl::CColumnInfo, CUtlMemory<vgui::CTreeViewListControl::CColumnInfo> >::~CUtlVector()
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::AddToTail(vgui::ClickPanel*&&)
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::GrowVector(int)
@@ -4953,11 +5126,9 @@
  T CUtlVector<vgui::ClickPanel*, CUtlMemory<vgui::ClickPanel*> >::~CUtlVector()
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::GrowVector(int)
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::InsertBefore(int)
- T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::DHANDLE<CDialogGameInfo>, CUtlMemory<vgui::DHANDLE<CDialogGameInfo> > >::~CUtlVector()
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::GrowVector(int)
- T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::SortedFind(vgui::EditablePanel::LayoutPanel_t const&, bool (*)(vgui::EditablePanel::LayoutPanel_t const&, vgui::EditablePanel::LayoutPanel_t const&, void*), void*) const
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::SortedFindLessOrEqual(vgui::EditablePanel::LayoutPanel_t const&, bool (*)(vgui::EditablePanel::LayoutPanel_t const&, vgui::EditablePanel::LayoutPanel_t const&, void*), void*, int, int) const
  T CUtlVector<vgui::EditablePanel::LayoutPanel_t, CUtlMemory<vgui::EditablePanel::LayoutPanel_t> >::~CUtlVector()
@@ -4965,87 +5136,70 @@
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::InsertBefore(int)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::Remove(int)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::RemoveAll()
- T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomCursorCache_t, CUtlMemory<vgui::HTML::CustomCursorCache_t> >::~CUtlVector()
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::GrowVector(int)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::InsertBefore(int)
- T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::HTML::CustomURLHandler_t, CUtlMemory<vgui::HTML::CustomURLHandler_t> >::~CUtlVector()
  T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::GrowVector(int)
  T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::InsertBefore(int)
- T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::HTML::DraggableRegion, CUtlMemory<vgui::HTML::DraggableRegion> >::~CUtlVector()
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::GrowVector(int)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::InsertBefore(int, vgui::IImage* const&)
- T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::IImage*, CUtlMemory<vgui::IImage*> >::~CUtlVector()
  T CUtlVector<vgui::KeyBindingMap_t, CUtlMemory<vgui::KeyBindingMap_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::KeyBindingMap_t, CUtlMemory<vgui::KeyBindingMap_t> >::~CUtlVector()
  T CUtlVector<vgui::Label::TImageInfo, CUtlMemory<vgui::Label::TImageInfo> >::GrowVector(int)
  T CUtlVector<vgui::Label::TImageInfo, CUtlMemory<vgui::Label::TImageInfo> >::InsertBefore(int)
- T CUtlVector<vgui::Label::TImageInfo, CUtlMemory<vgui::Label::TImageInfo> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::Label::TImageInfo, CUtlMemory<vgui::Label::TImageInfo> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::Label::TImageInfo, CUtlMemory<vgui::Label::TImageInfo> >::~CUtlVector()
  T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::GrowVector(int)
  T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::InsertBefore(int)
  T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::RemoveAll()
- T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::ListPanel::section_t, CUtlMemory<vgui::ListPanel::section_t> >::~CUtlVector()
  T CUtlVector<vgui::MenuButton*, CUtlMemory<vgui::MenuButton*> >::GrowVector(int)
  T CUtlVector<vgui::MenuButton*, CUtlMemory<vgui::MenuButton*> >::InsertBefore(int, vgui::MenuButton* const&)
- T CUtlVector<vgui::MenuButton*, CUtlMemory<vgui::MenuButton*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::MenuButton*, CUtlMemory<vgui::MenuButton*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::MenuButton*, CUtlMemory<vgui::MenuButton*> >::~CUtlVector()
  T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::AddToTail(vgui::MenuSeparator*&&)
  T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::GrowVector(int)
  T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::InsertBefore(int, vgui::MenuSeparator* const&)
- T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::MenuSeparator*, CUtlMemory<vgui::MenuSeparator*> >::~CUtlVector()
  T CUtlVector<vgui::MessageMapItem_t, CUtlMemory<vgui::MessageMapItem_t> >::GrowVector(int)
  T CUtlVector<vgui::MessageMapItem_t, CUtlMemory<vgui::MessageMapItem_t> >::InsertBefore(int, vgui::MessageMapItem_t const&)
- T CUtlVector<vgui::MessageMapItem_t, CUtlMemory<vgui::MessageMapItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::MessageMapItem_t, CUtlMemory<vgui::MessageMapItem_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::GrowVector(int)
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::InsertBefore(int, vgui::PHandle const&)
- T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::Remove(int)
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >::~CUtlVector()
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::AddToTail(vgui::Panel*&&)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::FindAndRemove(vgui::Panel* const&)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::GrowVector(int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::InsertBefore(int, vgui::Panel* const&)
- T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::Remove(int)
  T CUtlVector<vgui::Panel*, CUtlMemory<vgui::Panel*> >::~CUtlVector()
  T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::GrowVector(int)
  T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::InsertBefore(int, vgui::PropertySheet::Page_t const&)
- T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::Remove(int)
  T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::PropertySheet::Page_t, CUtlMemory<vgui::PropertySheet::Page_t> >::~CUtlVector()
  T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::GrowVector(int)
  T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::InsertBefore(int, vgui::RichText::LineBreak_t const&)
- T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::Remove(int)
  T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::RichText::LineBreak_t, CUtlMemory<vgui::RichText::LineBreak_t> >::~CUtlVector()
  T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::GrowVector(int)
  T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::InsertBefore(int, vgui::RichText::TFormatStream const&)
  T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::RemoveMultiple(int, int)
- T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::RichText::TFormatStream, CUtlMemory<vgui::RichText::TFormatStream> >::~CUtlVector()
  T CUtlVector<vgui::TextImage::PerLineTrncationData_t, CUtlMemory<vgui::TextImage::PerLineTrncationData_t> >::GrowVector(int)
  T CUtlVector<vgui::TextImage::PerLineTrncationData_t, CUtlMemory<vgui::TextImage::PerLineTrncationData_t> >::InsertMultipleBefore(int, int, vgui::TextImage::PerLineTrncationData_t const*)
- T CUtlVector<vgui::TextImage::PerLineTrncationData_t, CUtlMemory<vgui::TextImage::PerLineTrncationData_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::TextImage::PerLineTrncationData_t, CUtlMemory<vgui::TextImage::PerLineTrncationData_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::TextImage::PerLineTrncationData_t, CUtlMemory<vgui::TextImage::PerLineTrncationData_t> >::~CUtlVector()
  T CUtlVector<vgui::ToolWindow*, CUtlMemory<vgui::ToolWindow*> >::Validate(CValidator&, char const*)
@@ -5054,8 +5208,7 @@
  T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::FindAndRemove(vgui::TreeNode* const&)
  T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::GrowVector(int)
  T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::InsertBefore(int, vgui::TreeNode* const&)
- T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::ShiftElementsLeft(int, int)
- T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::ShiftElementsRight(int, int)
+ T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::Remove(int)
  T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::TreeNode*, CUtlMemory<vgui::TreeNode*> >::~CUtlVector()
  T CUtlVector<vgui::URLLabel*, CUtlMemory<vgui::URLLabel*> >::AddToTail(vgui::URLLabel*&&)
@@ -5065,12 +5218,10 @@
  T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::GrowVector(int)
  T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::InsertBefore(int)
  T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::RemoveAll()
- T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::ShiftElementsRight(int, int)
  T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >::~CUtlVector()
  T CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >::GrowVector(int)
  T CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >::InsertBefore(int, wchar_t* const&)
- T CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >::~CUtlVector()
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
@@ -5080,13 +5231,12 @@
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::GrowVector(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertBefore(int, wchar_t const&)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
+ T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::Remove(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::RemoveMultiple(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::Validate(CValidator&, char const*)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::~CUtlVector()
- T CVACBannedConnRefusedDialog::CVACBannedConnRefusedDialog(unsigned int, char const*)
+ T CVACBannedConnRefusedDialog::CVACBannedConnRefusedDialog(unsigned long long, char const*)
  T CVACBannedConnRefusedDialog::ChainToAnimationMap()
  T CVACBannedConnRefusedDialog::ChainToMap()
  T CVACBannedConnRefusedDialog::GetAnimMap()
@@ -5235,7 +5385,6 @@
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
- T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
@@ -5294,7 +5443,6 @@
  T SteamVProf::CVProfManager::DumpAllThreadProfiles()
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T StringLessThan(char const* const&, char const* const&)
  T Sys_LoadModule(char const*, Sys_Flags)
@@ -5358,11 +5506,13 @@
  T non-virtual thunk to CServerBrowser::IsValid()
  T non-virtual thunk to CServerBrowser::PostInitialize(void* (**)(char const*, int*), int)
  T non-virtual thunk to CServerBrowser::RunFrame()
- T non-virtual thunk to CServerBrowser::SetParent(unsigned int)
+ T non-virtual thunk to CServerBrowser::SetParent(unsigned long long)
  T non-virtual thunk to CServerBrowser::Shutdown()
  T non-virtual thunk to CServerBrowser::~CServerBrowser()
  T non-virtual thunk to CSpectateGames::GetNewServerList()
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
+ T non-virtual thunk to vgui::HTML::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
+ T non-virtual thunk to vgui::HTML::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
  T non-virtual thunk to vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T non-virtual thunk to vgui::HTML::BrowserClose(CMsgClose const*)
  T non-virtual thunk to vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
@@ -5379,6 +5529,7 @@
  T non-virtual thunk to vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserHidePopup(CMsgHidePopup const*)
  T non-virtual thunk to vgui::HTML::BrowserHideToolTip(CMsgHideToolTip const*)
+ T non-virtual thunk to vgui::HTML::BrowserHideWindow(CMsgHideWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T non-virtual thunk to vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
@@ -5387,6 +5538,8 @@
  T non-virtual thunk to vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
+ T non-virtual thunk to vgui::HTML::BrowserMaximizeRestoreWindow(CMsgMaximizeRestoreWindow const*)
+ T non-virtual thunk to vgui::HTML::BrowserMinimizeWindow(CMsgMinimizeWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
  T non-virtual thunk to vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
  T non-virtual thunk to vgui::HTML::BrowserNodeGotFocus(CMsgNodeHasFocus const*)
@@ -5396,6 +5549,7 @@
  T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T non-virtual thunk to vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
  T non-virtual thunk to vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T non-virtual thunk to vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
@@ -5404,8 +5558,11 @@
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
  T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
+ T non-virtual thunk to vgui::HTML::BrowserSetWindowPosition(CMsgSetWindowPosition const*)
+ T non-virtual thunk to vgui::HTML::BrowserShowContextMenu(CMsgShowBrowserContextMenu const*)
  T non-virtual thunk to vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T non-virtual thunk to vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
+ T non-virtual thunk to vgui::HTML::BrowserShowWindow(CMsgShowWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
  T non-virtual thunk to vgui::HTML::BrowserStartRequest(CMsgStartRequest const*)
  T non-virtual thunk to vgui::HTML::BrowserStatusText(CMsgStatusText const*)
@@ -5435,38 +5592,38 @@
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::destroy(std::__1::__tree_node<int, void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
- T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long>)
  T std::__1::__tree<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<int, std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<int, std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long>)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::destroy(std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) const
- T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
- T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
- T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__upper_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
- T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
- T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) const
+ T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__upper_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
+ T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_node_base<void*>*&, int const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -5479,12 +5636,12 @@
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::operator[](int&&)
- T std::__1::pair<int*, int> std::__1::get_temporary_buffer<int>(int)
- T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+ T std::__1::pair<int*, long> std::__1::get_temporary_buffer<int>(long)
+ T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
@@ -5549,7 +5706,7 @@
  T vgui::AnimationController::RunCmd_SetTexture(vgui::AnimationController::PostedMessage_t&)
  T vgui::AnimationController::RunCmd_StopAnimation(vgui::AnimationController::PostedMessage_t&)
  T vgui::AnimationController::RunCmd_StopPanelAnimations(vgui::AnimationController::PostedMessage_t&)
- T vgui::AnimationController::SetScriptFile(unsigned int, char const*, bool)
+ T vgui::AnimationController::SetScriptFile(unsigned long long, char const*, bool)
  T vgui::AnimationController::SetValue(vgui::AnimationController::ActiveAnimation_t&, vgui::Panel*, unsigned short, vgui::AnimationController::Value_t&)
  T vgui::AnimationController::SetupPosition(vgui::AnimationController::AnimCmdAnimate_t&, float*, char const*, int)
  T vgui::AnimationController::StartAnimationSequence(char const*)
@@ -5716,7 +5873,7 @@
  T vgui::CaptionGripPanel::getInsideSnapPosition(int, int, int, int, int&, int&)
  T vgui::CaptionGripPanel::getOutsideSnapPosition(int, int, int, int, int&, int&)
  T vgui::CaptionGripPanel::moved(int, int)
- T vgui::CaptionGripPanel::tryToDock(unsigned int, int&, int&)
+ T vgui::CaptionGripPanel::tryToDock(unsigned long long, int&, int&)
  T vgui::CaptionGripPanel::~CaptionGripPanel()
  T vgui::CheckButton::ApplySchemeSettings(vgui::IScheme*)
  T vgui::CheckButton::ChainToAnimationMap()
@@ -5896,9 +6053,9 @@
  T vgui::EditablePanel::LoadDefaultControlSettings()
  T vgui::EditablePanel::LoadUserConfig(char const*, int)
  T vgui::EditablePanel::MakeReadyForUse()
- T vgui::EditablePanel::OnChildAdded(unsigned int)
+ T vgui::EditablePanel::OnChildAdded(unsigned long long)
  T vgui::EditablePanel::OnChildApplySchemeSettings(vgui::Panel*)
- T vgui::EditablePanel::OnChildRemoved(unsigned int)
+ T vgui::EditablePanel::OnChildRemoved(unsigned long long)
  T vgui::EditablePanel::OnChildReorder()
  T vgui::EditablePanel::OnChildSizeChanged(vgui::Panel*)
  T vgui::EditablePanel::OnClose()
@@ -5906,7 +6063,7 @@
  T vgui::EditablePanel::OnLayoutFileChanged(char const*)
  T vgui::EditablePanel::OnLocalizationFileChanged()
  T vgui::EditablePanel::OnMouseScrolled(int)
- T vgui::EditablePanel::OnRequestFocus(unsigned int)
+ T vgui::EditablePanel::OnRequestFocus(unsigned long long)
  T vgui::EditablePanel::OnSetFocus()
  T vgui::EditablePanel::OnSizeChanged(int, int)
  T vgui::EditablePanel::OnSliderMoved()
@@ -5915,8 +6072,8 @@
  T vgui::EditablePanel::PerformLayout()
  T vgui::EditablePanel::ReloadLayoutFile()
  T vgui::EditablePanel::RequestFocus(int)
- T vgui::EditablePanel::RequestFocusNext(unsigned int)
- T vgui::EditablePanel::RequestFocusPrev(unsigned int)
+ T vgui::EditablePanel::RequestFocusNext(unsigned long long)
+ T vgui::EditablePanel::RequestFocusPrev(unsigned long long)
  T vgui::EditablePanel::RequestInfo(KeyValues*)
  T vgui::EditablePanel::ResolveLayoutChildPointers()
  T vgui::EditablePanel::SaveUserConfig()
@@ -6009,9 +6166,9 @@
  T vgui::FocusNavGroup::FocusNavGroup(vgui::Panel*)
  T vgui::FocusNavGroup::GetCurrentFocus()
  T vgui::FocusNavGroup::GetDefaultPanel()
- T vgui::FocusNavGroup::RequestFocusNext(unsigned int)
- T vgui::FocusNavGroup::RequestFocusPrev(unsigned int)
- T vgui::FocusNavGroup::SetCurrentFocus(unsigned int)
+ T vgui::FocusNavGroup::RequestFocusNext(unsigned long long)
+ T vgui::FocusNavGroup::RequestFocusPrev(unsigned long long)
+ T vgui::FocusNavGroup::SetCurrentFocus(unsigned long long)
  T vgui::FocusNavGroup::SetFocusTopLevel(bool)
  T vgui::FocusNavGroup::~FocusNavGroup()
  T vgui::Frame::Activate()
@@ -6069,7 +6226,7 @@
  T vgui::Frame::MoveToCenterOfScreen()
  T vgui::Frame::MoveToFitOnScreen()
  T vgui::Frame::OnAppShutdown()
- T vgui::Frame::OnChildAdded(unsigned int)
+ T vgui::Frame::OnChildAdded(unsigned long long)
  T vgui::Frame::OnClose()
  T vgui::Frame::OnCloseExternal()
  T vgui::Frame::OnCloseFrameButtonPressed()
@@ -6251,6 +6408,8 @@
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
  T vgui::HTML::BSupportsOffMainThreadPaints()
+ T vgui::HTML::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
+ T vgui::HTML::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
  T vgui::HTML::BrowserCanGoBackandForward(CMsgCanGoBackAndForward const*)
  T vgui::HTML::BrowserClose(CMsgClose const*)
  T vgui::HTML::BrowserComboNeedsPaint(CMsgComboNeedsPaint const*)
@@ -6267,6 +6426,7 @@
  T vgui::HTML::BrowserGetZoomResponse(CMsgGetZoomResponse const*)
  T vgui::HTML::BrowserHidePopup(CMsgHidePopup const*)
  T vgui::HTML::BrowserHideToolTip(CMsgHideToolTip const*)
+ T vgui::HTML::BrowserHideWindow(CMsgHideWindow const*)
  T vgui::HTML::BrowserHorizontalScrollBarSizeResponse(CMsgHorizontalScrollBarSizeResponse const*)
  T vgui::HTML::BrowserJSAlert(CMsgJSAlert const*)
  T vgui::HTML::BrowserJSConfirm(CMsgJSConfirm const*)
@@ -6275,6 +6435,8 @@
  T vgui::HTML::BrowserLinkAtPositionResponse(CMsgLinkAtPositionResponse const*)
  T vgui::HTML::BrowserLoadedRequest(CMsgLoadedRequest const*)
  T vgui::HTML::BrowserLoadingResource(CMsgLoadingResource const*)
+ T vgui::HTML::BrowserMaximizeRestoreWindow(CMsgMaximizeRestoreWindow const*)
+ T vgui::HTML::BrowserMinimizeWindow(CMsgMinimizeWindow const*)
  T vgui::HTML::BrowserNeedsPaint(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsPaint_SDLFullscreen(CMsgNeedsPaint const*)
  T vgui::HTML::BrowserNeedsSharedTexturePaint(CMsgNeedsSharedTexturePaint const*)
@@ -6285,6 +6447,7 @@
  T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
+ T vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
  T vgui::HTML::BrowserResized(CMsgBrowserResized const*)
  T vgui::HTML::BrowserSavePageToJPEGResponse(CMsgSavePageToJPEGResponse const*)
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
@@ -6293,8 +6456,11 @@
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
  T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
+ T vgui::HTML::BrowserSetWindowPosition(CMsgSetWindowPosition const*)
+ T vgui::HTML::BrowserShowContextMenu(CMsgShowBrowserContextMenu const*)
  T vgui::HTML::BrowserShowPopup(CMsgShowPopup const*)
  T vgui::HTML::BrowserShowToolTip(CMsgShowToolTip const*)
+ T vgui::HTML::BrowserShowWindow(CMsgShowWindow const*)
  T vgui::HTML::BrowserSizePopup(CMsgSizePopup const*)
  T vgui::HTML::BrowserStartRequest(CMsgStartRequest const*)
  T vgui::HTML::BrowserStatusText(CMsgStatusText const*)
@@ -6390,6 +6556,7 @@
  T vgui::HTML::OnMove()
  T vgui::HTML::OnOpenNewTab(char const*, bool)
  T vgui::HTML::OnPageLoaded(char const*, char const*, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)> const&)
+ T vgui::HTML::OnScreenSizeChanged(int, int)
  T vgui::HTML::OnSetCursorVGUI(int)
  T vgui::HTML::OnSetFocus()
  T vgui::HTML::OnSetHTMLTitle(char const*)
@@ -6405,6 +6572,7 @@
  T vgui::HTML::PanelMessageFunc_OnBrowserExitFullScreen::InitVar()
  T vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()
  T vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()
+ T vgui::HTML::PanelMessageFunc_OnScreenSizeChanged::InitVar()
  T vgui::HTML::PanelMessageFunc_OnSetCursorVGUI::InitVar()
  T vgui::HTML::PerformLayout()
  T vgui::HTML::PostURL(char const*, char const*, bool)
@@ -6413,6 +6581,8 @@
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::ResizeHTML()
  T vgui::HTML::SendPendingHTMLMessages()
+ T vgui::HTML::SendScreenDimensionsToCEF()
+ T vgui::HTML::SetBrowserHidden(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::ShowIMEDialog()
  T vgui::HTML::StopFind()
@@ -6578,7 +6748,7 @@
  T vgui::Label::OnDialogVariablesChanged(KeyValues*)
  T vgui::Label::OnHotkeyPressed()
  T vgui::Label::OnMousePressed(vgui::MouseCode)
- T vgui::Label::OnRequestFocus(unsigned int)
+ T vgui::Label::OnRequestFocus(unsigned long long)
  T vgui::Label::OnSetText(KeyValues*)
  T vgui::Label::OnSizeChanged(int, int)
  T vgui::Label::Paint()
@@ -6640,6 +6810,7 @@
  T vgui::ListPanel::GetEndItem(bool)
  T vgui::ListPanel::GetItemCount()
  T vgui::ListPanel::GetItemCurrentRow(int)
+ T vgui::ListPanel::GetItemData(int)
  T vgui::ListPanel::GetItemID(char const*)
  T vgui::ListPanel::GetItemIDFromRow(int)
  T vgui::ListPanel::GetItemIDFromUserData(unsigned long)
@@ -6973,8 +7144,8 @@
  T vgui::Menu::Menu(vgui::Panel*, char const*)
  T vgui::Menu::MoveAlongMenuItemList(int, int)
  T vgui::Menu::MoveMenuItem(int, int)
- T vgui::Menu::OnCursorEnteredMenuItem(unsigned int)
- T vgui::Menu::OnCursorExitedMenuItem(unsigned int)
+ T vgui::Menu::OnCursorEnteredMenuItem(unsigned long long)
+ T vgui::Menu::OnCursorExitedMenuItem(unsigned long long)
  T vgui::Menu::OnCursorMoved(int, int)
  T vgui::Menu::OnKeyCodePressed(vgui::KeyCode)
  T vgui::Menu::OnKeyCodeTyped(vgui::KeyCode)
@@ -7033,7 +7204,7 @@
  T vgui::MenuBar::KB_ChainToMap()
  T vgui::MenuBar::LoadMenuFromFile(char const*, vgui::Panel*)
  T vgui::MenuBar::MenuBar(vgui::Panel*, char const*)
- T vgui::MenuBar::OnCursorEnteredMenuButton(unsigned int)
+ T vgui::MenuBar::OnCursorEnteredMenuButton(unsigned long long)
  T vgui::MenuBar::OnKeyCodeTyped(vgui::KeyCode)
  T vgui::MenuBar::OnKeyTyped(wchar_t)
  T vgui::MenuBar::OnLayoutFileChanged(char const*)
@@ -7253,7 +7424,7 @@
  T vgui::Panel::FindPanelAnimationEntry(char const*, PanelAnimationMap*)
  T vgui::Panel::FindSiblingByName(char const*)
  T vgui::Panel::FindTopPanelUnderMouse()
- T vgui::Panel::FindTopPanelUnderMouse_R(CUtlVector<unsigned int, CUtlMemory<unsigned int> >&, int, int, unsigned int)
+ T vgui::Panel::FindTopPanelUnderMouse_R(CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >&, int, int, unsigned long long)
  T vgui::Panel::GetAlpha()
  T vgui::Panel::GetAnimMap()
  T vgui::Panel::GetAppearance()
@@ -7320,7 +7491,7 @@
  T vgui::Panel::HasDragStarted() const
  T vgui::Panel::HasFocus()
  T vgui::Panel::HasHotkey(wchar_t)
- T vgui::Panel::HasParent(unsigned int)
+ T vgui::Panel::HasParent(unsigned long long)
  T vgui::Panel::HasUserConfigSettings()
  T vgui::Panel::Init(int, int, int, int)
  T vgui::Panel::InitPropertyConverters()
@@ -7385,9 +7556,9 @@
  T vgui::Panel::MarkForDeletion()
  T vgui::Panel::MoveToFront()
  T vgui::Panel::OnAppearanceChanged(vgui::IAppearance*)
- T vgui::Panel::OnChildAdded(unsigned int)
+ T vgui::Panel::OnChildAdded(unsigned long long)
  T vgui::Panel::OnChildApplySchemeSettings(vgui::Panel*)
- T vgui::Panel::OnChildRemoved(unsigned int)
+ T vgui::Panel::OnChildRemoved(unsigned long long)
  T vgui::Panel::OnChildReorder()
  T vgui::Panel::OnChildSizeChanged(vgui::Panel*)
  T vgui::Panel::OnCommand(char const*)
@@ -7415,7 +7586,7 @@
  T vgui::Panel::OnKillFocus()
  T vgui::Panel::OnLayoutFileChanged(char const*)
  T vgui::Panel::OnLocalizationFileChanged()
- T vgui::Panel::OnMessage(KeyValues const*, unsigned int)
+ T vgui::Panel::OnMessage(KeyValues const*, unsigned long long)
  T vgui::Panel::OnMouseCaptureLost()
  T vgui::Panel::OnMouseDoublePressed(vgui::MouseCode)
  T vgui::Panel::OnMouseFocusTicked()
@@ -7424,9 +7595,10 @@
  T vgui::Panel::OnMouseScrolled(int)
  T vgui::Panel::OnMouseTriplePressed(vgui::MouseCode)
  T vgui::Panel::OnMove()
- T vgui::Panel::OnOldMessage(KeyValues*, unsigned int)
+ T vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)
  T vgui::Panel::OnPanelDropped(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
- T vgui::Panel::OnRequestFocus(unsigned int)
+ T vgui::Panel::OnPositionChanged(int, int)
+ T vgui::Panel::OnRequestFocus(unsigned long long)
  T vgui::Panel::OnScreenSizeChanged(int, int)
  T vgui::Panel::OnSetAlpha(int)
  T vgui::Panel::OnSetFocus()
@@ -7473,21 +7645,21 @@
  T vgui::Panel::PanelMessageFunc_OnSetFocus::InitVar()
  T vgui::Panel::PanelMessageFunc_OnTick::InitVar()
  T vgui::Panel::PanelMessageFunc_Repaint::InitVar()
- T vgui::Panel::ParentChanged(unsigned int, vgui::Panel*)
+ T vgui::Panel::ParentChanged(unsigned long long, vgui::Panel*)
  T vgui::Panel::ParentLocalToScreen(int&, int&)
  T vgui::Panel::PerformApplySchemeSettings()
  T vgui::Panel::PerformLayout()
  T vgui::Panel::PostActionSignal(KeyValues*)
  T vgui::Panel::PostChildPaint()
- T vgui::Panel::PostMessage(unsigned int, KeyValues*, float)
+ T vgui::Panel::PostMessage(unsigned long long, KeyValues*, float)
  T vgui::Panel::PostMessage(vgui::Panel*, KeyValues*, float)
  T vgui::Panel::PreparePanelMap(vgui::PanelMap_t*)
  T vgui::Panel::QueryInterface(vgui::EInterfaceID)
  T vgui::Panel::RemoveActionSignalTarget(vgui::Panel*)
  T vgui::Panel::Repaint()
  T vgui::Panel::RequestFocus(int)
- T vgui::Panel::RequestFocusNext(unsigned int)
- T vgui::Panel::RequestFocusPrev(unsigned int)
+ T vgui::Panel::RequestFocusNext(unsigned long long)
+ T vgui::Panel::RequestFocusPrev(unsigned long long)
  T vgui::Panel::RequestInfo(KeyValues*)
  T vgui::Panel::ResolveLocalizedTextAndVariables(char const*, wchar_t*, unsigned long)
  T vgui::Panel::ResolveLocalizedTextAndVariables(wchar_t const*, wchar_t*, unsigned long)
@@ -7519,7 +7691,7 @@
  T vgui::Panel::SetPaintAppearanceEnabled(bool)
  T vgui::Panel::SetPaintBackgroundEnabled(bool)
  T vgui::Panel::SetPaintEnabled(bool)
- T vgui::Panel::SetParent(unsigned int)
+ T vgui::Panel::SetParent(unsigned long long)
  T vgui::Panel::SetParent(vgui::Panel*)
  T vgui::Panel::SetPinCorner(vgui::Panel::PinCorner_e, int, int)
  T vgui::Panel::SetPos(int, int)
@@ -7629,6 +7801,7 @@
  T vgui::PropertySheet::OnTabPressed(vgui::Panel*)
  T vgui::PropertySheet::OnTextChanged(vgui::Panel*, wchar_t const*)
  T vgui::PropertySheet::OnThink()
+ T vgui::PropertySheet::PageHasContextMenu(vgui::Panel*) const
  T vgui::PropertySheet::PanelMessageFunc_OnApplyButtonEnable::InitVar()
  T vgui::PropertySheet::PanelMessageFunc_OnOpenContextMenu::InitVar()
  T vgui::PropertySheet::PanelMessageFunc_OnOpenTabPage::InitVar()
@@ -7641,8 +7814,8 @@
  T vgui::PropertySheet::RemoveAllPages(bool)
  T vgui::PropertySheet::RemovePage(vgui::Panel*)
  T vgui::PropertySheet::RequestFocus(int)
- T vgui::PropertySheet::RequestFocusNext(unsigned int)
- T vgui::PropertySheet::RequestFocusPrev(unsigned int)
+ T vgui::PropertySheet::RequestFocusNext(unsigned long long)
+ T vgui::PropertySheet::RequestFocusPrev(unsigned long long)
  T vgui::PropertySheet::ResetAllData()
  T vgui::PropertySheet::SetActivePage(vgui::Panel*)
  T vgui::PropertySheet::SetPageEnabled(char const*, bool)
@@ -8346,7 +8519,7 @@
  T vgui::VGuiControls_Init(char const*, vgui::IVGuiSetup*)
  T vgui::VGuiControls_Shutdown()
  T vgui::VPanelHandle::Get()
- T vgui::VPanelHandle::Set(unsigned int)
+ T vgui::VPanelHandle::Set(unsigned long long)
  T vgui::ValidateGlobals(CValidator&)
  T vgui::Validate_AnimationControllerStatic(CValidator&)
  T vgui::Validate_PanelMessageMapDictionary(CValidator&)
@@ -8378,7 +8551,6 @@
  ThreadInterlockedDecrement
  ThreadIsThreadRunning
  V_AppendSlash
- V_CbMakeAbsolutePath
  V_ComposeFileName
  V_ExtractFileExtension
  V_ExtractFilePath
@@ -8410,6 +8582,7 @@
  V_stristr(char const*, char const*)
  V_strlower_fast
  V_strncat
+ V_strncat_length
  V_strncmp
  V_strncpy
  V_strnicmp
@@ -8439,17 +8612,14 @@
  __cxa_guard_release
  __cxa_pure_virtual
  __cxa_throw
- __divdi3
  __dynamic_cast
  __error
  __gxx_personality_v0
  __maskrune
- __moddi3
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __toupper
- __udivdi3
  alphasort$INODE64
  atoi
  atoll
@@ -8463,18 +8633,24 @@
  b (anonymous namespace)::CJSMethodArgument_reflection_
  b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
  b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
+ b (anonymous namespace)::CMsgAckPIDShuttingDown_descriptor_
+ b (anonymous namespace)::CMsgAckPIDShuttingDown_reflection_
  b (anonymous namespace)::CMsgAckSharedPaintBuffers_descriptor_
  b (anonymous namespace)::CMsgAckSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgAddHeader_descriptor_
  b (anonymous namespace)::CMsgAddHeader_reflection_
  b (anonymous namespace)::CMsgAuthedSteamDomains_descriptor_
  b (anonymous namespace)::CMsgAuthedSteamDomains_reflection_
+ b (anonymous namespace)::CMsgBringWindowToFront_descriptor_
+ b (anonymous namespace)::CMsgBringWindowToFront_reflection_
  b (anonymous namespace)::CMsgBrowserCreateResponse_descriptor_
  b (anonymous namespace)::CMsgBrowserCreateResponse_reflection_
  b (anonymous namespace)::CMsgBrowserCreate_descriptor_
  b (anonymous namespace)::CMsgBrowserCreate_reflection_
  b (anonymous namespace)::CMsgBrowserErrorStrings_descriptor_
  b (anonymous namespace)::CMsgBrowserErrorStrings_reflection_
+ b (anonymous namespace)::CMsgBrowserPosition_descriptor_
+ b (anonymous namespace)::CMsgBrowserPosition_reflection_
  b (anonymous namespace)::CMsgBrowserReady_descriptor_
  b (anonymous namespace)::CMsgBrowserReady_reflection_
  b (anonymous namespace)::CMsgBrowserRemove_descriptor_
@@ -8547,6 +8723,8 @@
  b (anonymous namespace)::CMsgHidePopup_reflection_
  b (anonymous namespace)::CMsgHideToolTip_descriptor_
  b (anonymous namespace)::CMsgHideToolTip_reflection_
+ b (anonymous namespace)::CMsgHideWindow_descriptor_
+ b (anonymous namespace)::CMsgHideWindow_reflection_
  b (anonymous namespace)::CMsgHorizontalScrollBarSizeResponse_descriptor_
  b (anonymous namespace)::CMsgHorizontalScrollBarSizeResponse_reflection_
  b (anonymous namespace)::CMsgHorizontalScrollBarSize_descriptor_
@@ -8589,6 +8767,10 @@
  b (anonymous namespace)::CMsgLoadedRequest_reflection_
  b (anonymous namespace)::CMsgLoadingResource_descriptor_
  b (anonymous namespace)::CMsgLoadingResource_reflection_
+ b (anonymous namespace)::CMsgMaximizeRestoreWindow_descriptor_
+ b (anonymous namespace)::CMsgMaximizeRestoreWindow_reflection_
+ b (anonymous namespace)::CMsgMinimizeWindow_descriptor_
+ b (anonymous namespace)::CMsgMinimizeWindow_reflection_
  b (anonymous namespace)::CMsgMouseDblClick_descriptor_
  b (anonymous namespace)::CMsgMouseDblClick_reflection_
  b (anonymous namespace)::CMsgMouseDown_descriptor_
@@ -8633,6 +8815,8 @@
  b (anonymous namespace)::CMsgRequestFullScreenResponse_reflection_
  b (anonymous namespace)::CMsgRequestFullScreen_descriptor_
  b (anonymous namespace)::CMsgRequestFullScreen_reflection_
+ b (anonymous namespace)::CMsgResizeGripChanged_descriptor_
+ b (anonymous namespace)::CMsgResizeGripChanged_reflection_
  b (anonymous namespace)::CMsgSavePageToJPEGResponse_descriptor_
  b (anonymous namespace)::CMsgSavePageToJPEGResponse_reflection_
  b (anonymous namespace)::CMsgSavePageToJPEG_descriptor_
@@ -8665,18 +8849,26 @@
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_AdditionalRoute_reflection_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_descriptor_
  b (anonymous namespace)::CMsgSetLocalFileRequestMapping_reflection_
+ b (anonymous namespace)::CMsgSetPIDShuttingDown_descriptor_
+ b (anonymous namespace)::CMsgSetPIDShuttingDown_reflection_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_descriptor_
  b (anonymous namespace)::CMsgSetSharedPaintBuffers_reflection_
  b (anonymous namespace)::CMsgSetTargetFrameRate_descriptor_
  b (anonymous namespace)::CMsgSetTargetFrameRate_reflection_
  b (anonymous namespace)::CMsgSetVerticalScroll_descriptor_
  b (anonymous namespace)::CMsgSetVerticalScroll_reflection_
+ b (anonymous namespace)::CMsgSetWindowPosition_descriptor_
+ b (anonymous namespace)::CMsgSetWindowPosition_reflection_
  b (anonymous namespace)::CMsgSetZoomLevel_descriptor_
  b (anonymous namespace)::CMsgSetZoomLevel_reflection_
+ b (anonymous namespace)::CMsgShowBrowserContextMenu_descriptor_
+ b (anonymous namespace)::CMsgShowBrowserContextMenu_reflection_
  b (anonymous namespace)::CMsgShowPopup_descriptor_
  b (anonymous namespace)::CMsgShowPopup_reflection_
  b (anonymous namespace)::CMsgShowToolTip_descriptor_
  b (anonymous namespace)::CMsgShowToolTip_reflection_
+ b (anonymous namespace)::CMsgShowWindow_descriptor_
+ b (anonymous namespace)::CMsgShowWindow_reflection_
  b (anonymous namespace)::CMsgSizePopup_descriptor_
  b (anonymous namespace)::CMsgSizePopup_reflection_
  b (anonymous namespace)::CMsgStartRequestResponse_descriptor_
@@ -8705,6 +8897,8 @@
  b (anonymous namespace)::CMsgVerticalScrollBarSize_reflection_
  b (anonymous namespace)::CMsgViewSource_descriptor_
  b (anonymous namespace)::CMsgViewSource_reflection_
+ b (anonymous namespace)::CMsgWasHidden_descriptor_
+ b (anonymous namespace)::CMsgWasHidden_reflection_
  b (anonymous namespace)::CMsgZoomToElementAtPositionResponse_descriptor_
  b (anonymous namespace)::CMsgZoomToElementAtPositionResponse_reflection_
  b (anonymous namespace)::CMsgZoomToElementAtPosition_descriptor_
@@ -8853,7 +9047,7 @@
  b vec2_invalid
  b vec2_origin
  b vgui::EditablePanel::GetControlString(char const*, char const*)::buf
- b vgui::FocusNavGroup::RequestFocusNext(unsigned int)::stack_depth
+ b vgui::FocusNavGroup::RequestFocusNext(unsigned long long)::stack_depth
  b vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyCloseOnEscape
  b vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyMaximizeButtonVisible
  b vgui::Frame::ApplySingleSetting(KeyValues*)::hKeySizeable
@@ -8898,7 +9092,7 @@
  bootstrap_look_up
  bootstrap_port
  ceilf
- close$UNIX2003
+ close
  cos
  d VTT for (anonymous namespace)::ScrollBarButton
  d boolconverter
@@ -8917,7 +9111,7 @@
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton
- d vgui::Panel::OnOldMessage(KeyValues*, unsigned int)::s_bDebugMessages
+ d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
@@ -8927,15 +9121,15 @@
  dlsym
  dup
  dyld_stub_binder
- fcntl$UNIX2003
+ fcntl
  fflush
  floor
  floorf
  fmod
  fprintf
- fputs$UNIX2003
+ fputs
  free
- fwrite$UNIX2003
+ fwrite
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
@@ -8966,7 +9160,7 @@
  kCFPreferencesAnyApplication
  kCFPreferencesAnyHost
  kCFPreferencesCurrentUser
- kill$UNIX2003
+ kill
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -8983,8 +9177,8 @@
  memmove
  memset
  memset_pattern16
- mmap$UNIX2003
- munmap$UNIX2003
+ mmap
+ munmap
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -9000,12 +9194,15 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CJSMethodArgument_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMSgJumpListMRUApp_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckPIDShuttingDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAckSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAddHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgAuthedSteamDomains_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBringWindowToFront_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreateResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserCreate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserErrorStrings_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserReady_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserRemove_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserResized_offsets_
@@ -9042,6 +9239,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGoForward_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHidePopup_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHideToolTip_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHideWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHorizontalScrollBarSizeResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHorizontalScrollBarSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
@@ -9063,6 +9261,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadLocalization_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgLoadingResource_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMaximizeRestoreWindow_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMinimizeWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseDblClick_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgMouseLeave_offsets_
@@ -9085,6 +9285,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgReload_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgRequestFullScreenResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgRequestFullScreen_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgResizeGripChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSavePageToJPEGResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSavePageToJPEG_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgScalePageToValueResponse_offsets_
@@ -9101,12 +9302,16 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetJumpList_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_AdditionalRoute_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetLocalFileRequestMapping_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetPIDShuttingDown_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetSharedPaintBuffers_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetTargetFrameRate_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetVerticalScroll_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetWindowPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetZoomLevel_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowBrowserContextMenu_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowPopup_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowToolTip_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSizePopup_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequestResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequest_offsets_
@@ -9121,6 +9326,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgVerticalScrollBarSizeResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgVerticalScrollBarSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgViewSource_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgWasHidden_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPositionResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
@@ -9168,14 +9374,14 @@
  strchr
  strcmp
  strcpy
- strerror$UNIX2003
- strftime$UNIX2003
+ strerror
+ strftime
  strlen
  strncpy
  strrchr
  strstr
- strtod$UNIX2003
- strtof$UNIX2003
+ strtod
+ strtof
  strtol
  strtoll
  strtoul
@@ -9319,12 +9525,12 @@
  t _GLOBAL__sub_I_validate_globals.cpp
  t _GLOBAL__sub_I_vgui_controls.cpp
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
- t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
- t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, int)
+ t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
+ t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
  t void std::__1::__stable_sort_move<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*)
  time
  typeinfo for std::exception
- usleep$UNIX2003
+ usleep
  vsnprintf
  vstdlib_wcsicmp
  vstdlib_wcsnicmp

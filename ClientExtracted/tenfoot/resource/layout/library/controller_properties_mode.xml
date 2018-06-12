@@ -17,7 +17,7 @@
 			-->
 			<Panel id="LeftColumn" class="Column">
 				<!-- Top tab -->
-				<Panel class="FieldWrapper" id="ModeTab" modetab="on" sources="trackpad joystick ABXY gyro trigger" >
+				<Panel class="FieldWrapper" id="ModeTab" modetab="on" sources="trackpad joystick ABXY gyro trigger bumper" >
 					<Label class="FieldLabel HideInGameActions" text="#Library_Details_FieldLabel_InputStyle" />
 					<Label class="FieldLabel ShowInGameActions" text="#Library_Details_FieldLabel_InputStyle_GA" />
 					<DropDown id="ModeDropDown" />
@@ -112,11 +112,11 @@
 				</Panel>								
 				-->
 				<!-- Single Button Mode -->
-				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad" advanced="off">
+				<Panel class="FieldWrapper" modes="SingleButton" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="SingleButtonClick" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad" advanced="off">
+				<Panel class="FieldWrapper" modes="SingleButton" sources="trackpad bumper" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ButtonTouch" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="SingleButtonTouch" />
 				</Panel>				
@@ -134,7 +134,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OutputJoystick" />
 					<DropDown id="OutputJoystick_joystick_move" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" sources="trackpad joystick ABXY button trigger">
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="off" sources="trackpad joystick ABXY button trigger bumper">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="Click_joystick_move" />
 				</Panel>	
@@ -178,7 +178,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButtonInvert" />
           <DropDown id="GyroButtonInvert_joystick_mouse" />
         </Panel>        
-				<Panel class="FieldWrapper" modes="joystickmouse" advanced="off" sources="trackpad joystick ABXY button trigger">
+				<Panel class="FieldWrapper" modes="joystickmouse" advanced="off" sources="trackpad joystick ABXY button trigger bumper">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="Click_joystick_mouse" />
 				</Panel>
@@ -217,7 +217,7 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegion_Scale" />
           <Slider id="ScaleMouseRegion" direction="horizontal" />
         </Panel>
-        <Panel class="FieldWrapper" modes="mouseregion" advanced="off" sources="trackpad joystick ABXY button trigger">
+        <Panel class="FieldWrapper" modes="mouseregion" advanced="off" sources="trackpad joystick ABXY button trigger bumper">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseRegionClick" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionClick" />
         </Panel>
@@ -241,7 +241,7 @@
         </Panel>
 
         <!-- Joystick Camera Mode -->
-				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="joystick trackpad" >
+				<Panel class="FieldWrapper" modes="joystickcamera" advanced="off" sources="joystick trackpad bumper" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_JoystickClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="JoystickClickCameraMode" />
 				</Panel>
@@ -273,7 +273,7 @@
 				</Panel>				
 
 				<!-- Mouse Mode -->
-				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger" advanced="off">
+				<Panel class="FieldWrapper" modes="absmouse" sources="trackpad joystick ABXY button trigger bumper" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseClick" />
 				</Panel>				
@@ -313,7 +313,7 @@
 				</Panel>
 						
 				<!-- Mouse Joystick Mode -->
-				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger" advanced="off">
+				<Panel class="FieldWrapper" modes="MouseJoystick" sources="trackpad joystick ABXY button trigger bumper" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AbsMouseClick" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseJoystickClick" />
 				</Panel>
@@ -957,7 +957,7 @@
 				<Panel id="CenterImageRelMouse" class="CenterImage" modes="relmouse" advanced="off"/>
 
 				<!-- ScrollWheel Mode -->
-        <Panel class="FieldWrapper" modes="scrollwheel" advanced="off">
+        <Panel class="FieldWrapper" modes="scrollwheel" sources="trackpad joystick ABXY button gyro" advanced="off">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_ScrollWheelType" />
           <DropDown id="ScrollWheelType" />
         </Panel>
@@ -1052,7 +1052,7 @@
 						<Label class="FieldLabel" text="#Gamepad_Down" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGA" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick" advanced="off" gameactions="off">
+					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick bumper" advanced="off" gameactions="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 					</Panel>

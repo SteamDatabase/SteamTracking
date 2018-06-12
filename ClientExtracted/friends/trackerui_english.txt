@@ -447,6 +447,7 @@
 "Friends_GroupEvent_Title"					"%group% - event started"
 "Friends_GroupEvent_View"						"View event"
 
+"Voice_Settings_NewTabTitle"		"In-Game Voice"
 "Voice_Settings_TabTitle"		"Voice"
 "Steam_RepairAudioDescription"				"(When an audio device is plugged in or removed, you may need to re-detect active audio devices.)"
 "Steam_RepairAudioButton"		"Detect audio devices"
@@ -606,7 +607,7 @@
 "friends_trade_other_cancelled"		"%friend% had asked to trade with you, but has cancelled their request."
 "friends_trade_other_cancelled_timeout" "%friend% had asked to trade with you, but you did not respond in time."
 "friends_trade_too_soon"			"You cannot trade with %friend% because it is too soon to ask them again."
-"friends_trade_too_soon_penalty"	"You cannot trade with %friend% because you have been asking too frequenty - you can try again in a few minutes."
+"friends_trade_too_soon_penalty"	"You cannot trade with %friend% because you have been asking too frequently - you can try again in a few minutes."
 "friends_trade_connection_failed"	"%friend% has not responded to your trade request."
 "friends_trade_you_are_already_trading" "You cannot request a new trade while you are still in another trade session."
 "friends_trade_you_are_already_requesting_trade" "You can only have one outstanding trade request."

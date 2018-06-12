@@ -1,3 +1,4 @@
+
  CVPixelBufferGetBaseAddress
  CVPixelBufferGetBaseAddressOfPlane
  CVPixelBufferGetBytesPerRow
@@ -549,16 +550,19 @@
  atan2
  bsearch
  ceil
+ close
  close$UNIX2003
  cos
  cosh
  exp
  exp2
  fabs
+ fcntl
  fcntl$UNIX2003
  fdopen
  floor
  fprintf
+ fputs
  fputs$UNIX2003
  free
  frexp
@@ -578,19 +582,27 @@
  memmove
  memset
  mkstemp
+ mktime
  mktime$UNIX2003
+ mmap
  mmap$UNIX2003
+ munmap
  munmap$UNIX2003
+ nanosleep
  nanosleep$UNIX2003
+ open
  open$UNIX2003
  posix_memalign
  pow
  pthread_cond_broadcast
  pthread_cond_destroy
+ pthread_cond_init
  pthread_cond_init$UNIX2003
  pthread_cond_signal
+ pthread_cond_wait
  pthread_cond_wait$UNIX2003
  pthread_create
+ pthread_join
  pthread_join$UNIX2003
  pthread_mutex_destroy
  pthread_mutex_init
@@ -605,12 +617,14 @@
  strcmp
  strcspn
  strerror_r
+ strftime
  strftime$UNIX2003
  strlen
  strncmp
  strrchr
  strspn
  strstr
+ strtod
  strtod$UNIX2003
  strtol
  strtoll

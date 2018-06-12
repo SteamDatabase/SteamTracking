@@ -8,6 +8,8 @@ typedef enum EControllerSource
     k_EControllerSourceSwitch, // switch
     k_EControllerSourceLeft_trigger, // left_trigger
     k_EControllerSourceRight_trigger, // right_trigger
+    k_EControllerSourceLeft_bumper, // left_bumper
+    k_EControllerSourceRight_bumper, // right_bumper
     k_EControllerSourceGyro, // gyro
     k_EControllerSourceCenter_trackpad, // center_trackpad
     k_EControllerSourceRight_joystick, // right_joystick

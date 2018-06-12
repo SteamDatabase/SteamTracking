@@ -1,3 +1,4 @@
+
  T avresample_alloc_context
  T avresample_available
  T avresample_build_matrix

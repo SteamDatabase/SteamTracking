@@ -46,7 +46,10 @@
  T BWritingMiniDump
  T BWritingNonFatalMiniDump
  T CCrashHandlerScope::~CCrashHandlerScope()
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  T CFilenamesCache::FindOrCreateFilename(char const*)
  T CFilenamesCache::~CFilenamesCache()
  T CL2Cache::CL2Cache()
@@ -217,6 +220,7 @@
  T GetSpewOutputFunc
  T GetStackTrackingFilter
  T HasStackTrackingFilters
+ T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T InitPME
  T InitStackWalk()
  T InitializeStackTrackingFilters
@@ -286,6 +290,7 @@
  T SetMiniDumpSteamID
  T SetStackTrackingFilter
  T SetWritingMiniDump(bool)
+ T SetWrittenMinidumpForFileLine(char const*, unsigned int)
  T ShouldUseNewAssertDialog
  T ShutdownPME
  T SpewActivate
@@ -293,6 +298,7 @@
  T SpewAndLogChangeIfStillDefault
  T SpewChangeIfStillDefault
  T SpewOutputFunc
+ T SpewWrittenMiniDumps
  T SteamThreadTools::CThread::BHasValidThreadID() const
  T SteamThreadTools::CThread::CThread()
  T SteamThreadTools::CThread::GetCurrentCThread()
@@ -514,20 +520,20 @@
  T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
  T std::__1::__split_buffer<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*>&>::~__split_buffer()
  T std::__1::__split_buffer<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t>&>::~__split_buffer()
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
  T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
  T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::destroy(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
  T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
  T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, int> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, long> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
  T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
  T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__find_equal<FileAndLine_t>(std::__1::__tree_node_base<void*>*&, FileAndLine_t const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__find_equal<std::__1::__value_type<SteamVProf::CVProfNode*, double> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<SteamVProf::CVProfNode*, double> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__find_equal<std::__1::__value_type<char const*, unsigned int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<char const*, unsigned int> const&)
  T std::__1::__vector_base<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::~__vector_base()
@@ -538,7 +544,7 @@
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_unique<std::__1::pair<SteamVProf::CVProfNode*, double> >(std::__1::pair<SteamVProf::CVProfNode*, double>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
- T std::__1::set<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::~set()
+ T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
  T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
@@ -595,7 +601,7 @@
  b GetCRunTimeVersion::rgchVersionStr
  b GetLocalHostname::rgchHostname
  b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::MinidumpsWritten
+ b GetMinidumpsWritten()::s_MinidumpsWritten
  b GetProcessorBrand()::CPUBrand
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
@@ -629,7 +635,7 @@
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b guard variable for _SpewMessageType::autoMutex__
  b s_AssertFailedNotifyFunc

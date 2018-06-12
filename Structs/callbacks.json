@@ -10,11 +10,6 @@
         "posted_in": "CCMInterface::YieldingConnect()"
     },
     {
-        "id": 103,
-        "size": 4,
-        "posted_in": "CCMInterface::ConnectionDisconnected(EResult)"
-    },
-    {
         "id": 113,
         "size": 16,
         "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
@@ -355,6 +350,36 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<OverlayChatBrowserInfoChanged_t>(OverlayChatBrowserInfoChanged_t*)"
     },
     {
+        "id": 723,
+        "size": 24584,
+        "posted_in": "CSteamEngine::DispatchClientUINotification(EClientUINotificationType, char const*, unsigned int)"
+    },
+    {
+        "id": 724,
+        "size": 16,
+        "posted_in": "CSteamEngine::RespondToClientUINotification(unsigned int, bool, unsigned int)"
+    },
+    {
+        "id": 725,
+        "size": 264,
+        "posted_in": "CSteamEngine::DispatchClientUICommand(char const*, unsigned int)"
+    },
+    {
+        "id": 726,
+        "size": 8,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ComputerActiveStateChange_t>(ComputerActiveStateChange_t*)"
+    },
+    {
+        "id": 727,
+        "size": 4,
+        "posted_in": "CUserFriends::SetPersonaStateInternal(EPersonaState, bool)"
+    },
+    {
+        "id": 728,
+        "size": 1032,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<OpenURLInClient_t>(OpenURLInClient_t*)"
+    },
+    {
         "id": 801,
         "size": 2068,
         "posted_in": "CUserFriends::ActivateGameOverlayToUser(char const*, CSteamID)"
@@ -590,6 +615,21 @@
         "posted_in": "CClientJobEmoticonList::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
+        "id": 850,
+        "size": 16,
+        "posted_in": "CUserFriends::JoinChatRoomGroup(unsigned long long, unsigned long long)"
+    },
+    {
+        "id": 852,
+        "size": 32,
+        "posted_in": "CUserFriends::ShowChatRoomGroupInvite(char const*)"
+    },
+    {
+        "id": 853,
+        "size": 8,
+        "posted_in": "CUserFriends::OpenInviteToTradeDialog(CSteamID)"
+    },
+    {
         "id": 901,
         "size": 4108,
         "posted_in": "CClientJobSystemIM::BYieldingRunClientJob(IMsgNetPacket*)"
@@ -678,11 +718,6 @@
         "id": 930,
         "size": 8,
         "posted_in": "CClientJobChangeEmail::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 932,
-        "size": 4,
-        "posted_in": "CClientJobCreateAccount::BYieldingRunAPIJob()"
     },
     {
         "id": 933,
@@ -885,11 +920,6 @@
         "posted_in": "CSteamEngine::CheckForOverlayInstancesNeeded()"
     },
     {
-        "id": 980,
-        "size": 256,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<AccountRecoveryUploadFinished_t>(AccountRecoveryUploadFinished_t*)"
-    },
-    {
         "id": 981,
         "size": 8,
         "posted_in": "CClientJobGetTwoFactorDetails::BYieldingRunAPIJob()"
@@ -921,7 +951,7 @@
     },
     {
         "id": 987,
-        "size": 6,
+        "size": 7,
         "posted_in": "CClientJobPostLogon::PostLogonStateChangeCallback()"
     },
     {
@@ -938,6 +968,11 @@
         "id": 990,
         "size": 8,
         "posted_in": "CUser::GetAvailableSeats(unsigned int)"
+    },
+    {
+        "id": 991,
+        "size": 24,
+        "posted_in": "PostNewSteamAnnouncementStateCallback(CUser*, ENewSteamAnnouncementState, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, unsigned int, unsigned long long)"
     },
     {
         "id": 992,
@@ -2226,8 +2261,8 @@
     },
     {
         "id": 4610,
-        "size": 9,
-        "posted_in": "CClientVideo::InviteToBroadcast(CSteamID, bool)"
+        "size": 16,
+        "posted_in": "CClientVideo::InviteToBroadcast(CSteamID, bool, unsigned int)"
     },
     {
         "id": 4611,

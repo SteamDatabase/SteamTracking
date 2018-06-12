@@ -89,6 +89,7 @@
  kIOMasterPortDefault
  mach_task_self_
  malloc
+ memcmp
  memcpy
  method_setImplementation
  objc_allocateClassPair
@@ -176,6 +177,7 @@
  t initialize_imp(objc_object*, objc_selector*)
  t initializer
  t patch_lazy_pointers(mach_header const*, patch_t*, unsigned long)
+ t replaceMethod(objc_class*, objc_selector*, objc_object* (*)(objc_object*, objc_selector*, ...), objc_object* (**)(objc_object*, objc_selector*, ...))
  t scanMangledField(char const*&, char const*, char const*&, int&)
  t transcribeMethods(objc_class*, glue_class_ro_t*)
  t transcribeProperties(objc_class*, glue_class_ro_t*)

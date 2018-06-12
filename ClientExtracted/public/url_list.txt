@@ -575,7 +575,7 @@ NewsHomePage
 
 LegalInformation
 {
-	url			"http://www.valvesoftware.com/legal.htm"
+	url			"https://store.steampowered.com/legal"
 	method		"internal"
 }
 
@@ -594,6 +594,13 @@ PrivacyPolicy
 CommunitySearchFriends
 {
 	url		"%community%/search/users/"
+	method		"internal"
+	filter		"friends"
+}
+
+CommunityAddFriends
+{
+	url		"%community%/friends/add/"
 	method		"internal"
 	filter		"friends"
 }
@@ -641,6 +648,12 @@ StoreWallet
 	url		"%storehttps%/account/store_transactions/"
 	method	"internal"
 	filter	"profile"
+}
+
+SteamAnnouncements
+{
+	url		"%community%/games/593110/announcements/"
+	method	"internal"
 }
 
 CommunityGroupSearch

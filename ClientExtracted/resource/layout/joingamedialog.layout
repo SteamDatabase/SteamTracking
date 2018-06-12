@@ -36,7 +36,7 @@
 		region { name=box margin-top=20 margin-bottom=20 margin-left=20 margin-right=20 width=max height=max }
 		region { name=ssa margin-top=215 margin-left=20 margin-right=20 width=max height=max }
 			
-		place { controls="InfoLabel" region=box margin-top=15 dir=down align=left width=320  }
+		place { controls="InfoLabel" region=box margin-top=15 dir=down align=left width=max  }
 		place { controls="ThrobberThrobberThrobber" region=box start=InfoLabel dir=down align=left margin-top=15 }
 		place { controls="ReadyToPlayInfoLabel" region=box start=InfoLabel margin-top=10 width=max dir=down }
 		place { controls="ReadyToPlayTimeLabel" region=box start=InfoLabel margin-top=10 margin-left=200 dir=down }

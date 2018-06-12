@@ -159,6 +159,8 @@
 // WebUI
 //
 "Styles/WebUI/shared_application.css"            : "https://steamcommunity.com/public/css/webui/shared_application.css?__TIME__",
+"Styles/WebUI/shared_clientuicontrols.css"       : "https://steamcommunity.com/public/css/webui/shared_clientuicontrols.css?__TIME__",
+"Styles/WebUI/shared_dialog.css"                 : "https://steamcommunity.com/public/css/webui/shared_dialog.css?__TIME__",
 "Styles/WebUI/friends.css"                       : "https://steamcommunity.com/public/css/webui/friends.css?__TIME__",
 
 //

@@ -12,8 +12,12 @@
  B g_VecLoadedModules
  B g_VecPCoroutineMgr
  B g_bPreventCoroutineContinue
+ B g_pFioAsyncFinalize
  B s_NoEscConversion
  B s_StringCharConversion
+ CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::Pop()
@@ -114,7 +118,6 @@
  T CCoroutineMgr::CCoroutineMgr()
  T CCoroutineMgr::PopCoroutineStack()
  T CCoroutineMgr::Validate(CValidator&, char const*)
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
  T CDebugStatsSystem::GetList()
@@ -135,6 +138,11 @@
  T CDefaultCvar::RegisterConCommandBase(ConCommandBase*)
  T CDefaultCvar::Shutdown()
  T CDefaultCvar::UnlinkVariables(int)
+ T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::CFileReader(bool, unsigned int)
+ T CFileReader::Read(void*, unsigned int, unsigned int*)
+ T CFileReader::Seek(long long, EFioSeekMode)
+ T CFileReader::~CFileReader()
  T CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
  T CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
  T CGaussianRandomStream::RandomFloat(float, float)
@@ -198,6 +206,7 @@
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlDict<CUtlString, int>::Insert(char const*, CUtlString const&)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::AllocNode()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::CUtlHashMap()
@@ -227,6 +236,8 @@
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Find(char const* const&) const
+ T CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Insert(char const* const&, CUtlString const&)
  T CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<void*, int, int, CDefLess<void*> >::Validate(CValidator&, char const*)
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Validate(CValidator&, char const*)
@@ -243,6 +254,10 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlRBTree<CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t const&) const
+ T CUtlRBTree<CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CUtlString, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -286,10 +301,10 @@
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, __va_list_tag*)
- T CUtlString::FormatV(char const*, char*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
+ T CUtlString::VFormat(char const*, char*)
  T CUtlStringBuilder::AppendChar(char)
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
@@ -300,20 +315,20 @@
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Swap(CUtlString&)
+ T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
+ T CUtlStringBuilder::VFormat(char const*, char*)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::InsertBefore(int, CCoroutine::vprofNode_t const&)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Remove(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Validate(CValidator&, char const*)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
@@ -324,8 +339,6 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsLeft(int, int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
@@ -333,31 +346,24 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::AddToTail(char const*&&)
  T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::InsertBefore(int, char const* const&)
- T CUtlVector<char const*, CUtlMemory<char const*> >::ShiftElementsLeft(int, int)
- T CUtlVector<char const*, CUtlMemory<char const*> >::ShiftElementsRight(int, int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::AddToTail(int&&)
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsLeft(int, int)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsRight(int, int)
+ T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::Validate(CValidator&, char const*)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddToTail(wchar_t&&)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::GrowVector(int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::InsertMultipleBefore(int, int, wchar_t const*)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::RemoveMultiple(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::SetCount(int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::ShiftElementsRight(int, int)
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::~CUtlVector()
  T CVStdLibDLLValidate::Validate(CValidator&)
  T CValidateAutoPushPop::~CValidateAutoPushPop()
@@ -394,6 +400,11 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T DebugStatsSystem
+ T FioClose(int)
+ T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioGetSize(int, unsigned long long*)
+ T FioRead(int, void*, int, int*)
+ T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T GCoroutineMgr()
  T GetNameFromOSType
  T GetOSDetailString
@@ -456,7 +467,6 @@
  T V_BasicHtmlEntityEncode
  T V_BasicHtmlEntityEncodeBuffer
  T V_CP437CharsToUTF8
- T V_CbMakeAbsolutePath
  T V_ComposeFileName
  T V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
  T V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)
@@ -501,6 +511,7 @@
  T V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  T V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
+ T V_ParseURLQueryString
  T V_RemoveDotSlashes
  T V_ReplaceBadFilenameCharacters
  T V_ReplaceBadFilenameCharactersInPlace
@@ -600,8 +611,9 @@
  T V_stristr(char const*, char const*)
  T V_strlower_fast
  T V_strnappend
- T V_strnappend_strlen
  T V_strncat
+ T V_strncat_length
+ T V_strncat_length_unbounded
  T V_strnchr
  T V_strncmp
  T V_strncpy
@@ -639,7 +651,6 @@
  T __clang_call_terminate
  T _strlwr
  T _strupr
- T cIntToHexDigit(int)
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
  T void Destruct<CUtlString>(CUtlString*)
@@ -668,12 +679,15 @@
  __cxa_guard_abort
  __cxa_guard_acquire
  __cxa_guard_release
+ __error
  __gxx_personality_v0
  __maskrune
+ __moddi3
  __stack_chk_fail
  __stack_chk_guard
  __tolower
  __toupper
+ b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CStringNormalization::Initialize()::threadonce_1176_24
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
@@ -706,6 +720,8 @@
  b s_bHWAccelCRC32
  b s_netadrResolveCacheMutexEnforceConstruction
  chdir
+ close
+ close$UNIX2003
  d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
  d GetOSType::eOSVersion
  d TestForAppleGraphicsUpdateInstalled()::attribs
@@ -721,13 +737,10 @@
  dlopen
  dlsym
  dyld_stub_binder
- fclose
- ferror
- fopen
- fopen$UNIX2003
- fread
+ fcntl
+ fcntl$UNIX2003
  free
- fseeko
+ fstat$INODE64
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
@@ -735,11 +748,14 @@
  getcwd
  log
  longjmp
+ lseek
  memchr
  memcmp
  memcpy
  memmove
  memset
+ open
+ open$UNIX2003
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -773,11 +789,12 @@
  r wszCantBeginLine
  r wszCantBreakRepeated
  r wszCantEndLine
+ read
+ read$UNIX2003
  setjmp
  snprintf
  sprintf
  sscanf
- stat$INODE64
  std::terminate()
  strchr
  strcmp
@@ -841,6 +858,7 @@
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
+ unlink
  vasprintf
  vsnprintf
  vswprintf

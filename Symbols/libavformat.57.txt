@@ -1,3 +1,4 @@
+
  BZ2_bzDecompress
  BZ2_bzDecompressEnd
  BZ2_bzDecompressInit
@@ -190,6 +191,7 @@
  __umoddi3
  __vsnprintf_chk
  abort
+ accept
  accept$UNIX2003
  atoi
  av_add_stable
@@ -372,9 +374,13 @@
  avpriv_report_missing_feature
  avpriv_request_sample
  avpriv_toupper4
+ bind
  bind$UNIX2003
+ close
  close$UNIX2003
+ connect
  connect$UNIX2003
+ fcntl
  fcntl$UNIX2003
  fprintf
  fputc
@@ -388,6 +394,7 @@
  inflate
  inflateEnd
  inflateInit_
+ listen
  listen$UNIX2003
  llrint
  lrint
@@ -398,6 +405,7 @@
  memmove
  memset
  memset_pattern16
+ poll
  poll$UNIX2003
  pthread_once
  round

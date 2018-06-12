@@ -129,6 +129,8 @@ public:
     virtual unknown_ret GetChatRoomName(CSteamID) = 0;
     virtual unknown_ret BGetChatRoomMemberDetails(CSteamID, CSteamID, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret CreateChatRoom(EChatRoomType, unsigned long long, char const*, ELobbyType, CSteamID, CSteamID, CSteamID, unsigned int, unsigned int, unsigned int) = 0;
+    virtual unknown_ret JoinChatRoomGroup(unsigned long long, unsigned long long) = 0;
+    virtual unknown_ret ShowChatRoomGroupInvite(char const*) = 0;
     virtual unknown_ret VoiceCallNew(CSteamID, CSteamID) = 0;
     virtual unknown_ret VoiceCall(CSteamID, CSteamID) = 0;
     virtual unknown_ret VoiceHangUp(CSteamID, int) = 0;
@@ -169,6 +171,7 @@ public:
     virtual unknown_ret GetPeakSample(int, bool) = 0;
     virtual unknown_ret SendResumeRequest(int) = 0;
     virtual unknown_ret OpenChatDialog(CSteamID) = 0;
+    virtual unknown_ret OpenInviteToTradeDialog(CSteamID) = 0;
     virtual unknown_ret StartChatRoomVoiceSpeaking(CSteamID, CSteamID) = 0;
     virtual unknown_ret EndChatRoomVoiceSpeaking(CSteamID, CSteamID) = 0;
     virtual unknown_ret GetFriendLastLogonTime(CSteamID) = 0;
@@ -232,4 +235,7 @@ public:
     virtual unknown_ret GetEmoticonName(int) = 0;
     virtual unknown_ret ClientLinkFilterInit() = 0;
     virtual unknown_ret LinkDisposition(char const*) = 0;
+    virtual unknown_ret GetFriendPersonaName_Public(CSteamID) = 0;
+    virtual unknown_ret GetPlayerNickname_Public(CSteamID) = 0;
+    virtual unknown_ret SetFriendsUIActiveClanChatList(unsigned int*, int) = 0;
 };

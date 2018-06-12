@@ -94,7 +94,9 @@
  T CCrashHandler::SetSteamID(unsigned long long)
  T CCrashHandler::WriteMinidump(void*, unsigned int, void*)
  T CCrashHandlerScope::~CCrashHandlerScope()
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(char const*, char const*)
  T CDirIterator::CurrentFileName()
@@ -234,11 +236,12 @@
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
+ T CUtlStringBuilder::VFormat(char const*, char*)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::FindAndRemove(CHandlerContext* const&)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::GrowVector(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::InsertBefore(int, CHandlerContext* const&)
- T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::Remove(int)
  T CUtlVector<CHandlerContext*, CUtlMemory<CHandlerContext*> >::~CUtlVector()
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
@@ -258,6 +261,7 @@
  T FindSpewGroup(char const*, int*)
  T GetMemAlloc
  T GetOSType
+ T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T InitStackWalk()
  T IsSpewActive
  T MiniDumpUnlock
@@ -275,6 +279,7 @@
  T RealPrintCallStack
  T SetInAssert
  T SetWritingMiniDump(bool)
+ T SetWrittenMinidumpForFileLine(char const*, unsigned int)
  T ShouldUseNewAssertDialog
  T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
  T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
@@ -323,21 +328,19 @@
  T ThreadSleep
  T ThreadWaitForProcessExit
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
- T V_AppendSlash
- T V_CbMakeAbsolutePath
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_FixDoubleSlashes
- T V_MakeAbsolutePath
+ T V_IsAbsolutePath
  T V_RemoveDotSlashes
  T V_StripFilename
  T V_StripTrailingSlash
  T V_UnqualifiedFileName
  T V_pretifymem(float, int, bool)
  T V_snprintf
- T V_strnappend_strlen
- T V_strncat
+ T V_strncat_length
  T V_strncpy
+ T V_vsnprintf
  T WriteMiniDump
  T _DMsg
  T _ExitOnFatalAssert
@@ -370,19 +373,19 @@
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
  T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
  T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::destroy(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
  T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, int> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, long> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__find_equal<FileAndLine_t>(std::__1::__tree_node_base<void*>*&, FileAndLine_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__vector_base<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::~__vector_base()
  T std::__1::__vector_base<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::~__vector_base()
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__insert_unique<std::__1::pair<long long, char const*> >(std::__1::pair<long long, char const*>&&)
- T std::__1::set<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::~set()
+ T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
  T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
@@ -421,7 +424,7 @@
  b ClearWritingMiniDump::fAsserted
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::MinidumpsWritten
+ b GetMinidumpsWritten()::s_MinidumpsWritten
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::g_ThreadMainThreadID
@@ -449,7 +452,7 @@
  b guard variable for CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
@@ -565,7 +568,6 @@
  strcpy
  strlen
  strncasecmp
- strncat
  strncpy
  strrchr
  sysctl

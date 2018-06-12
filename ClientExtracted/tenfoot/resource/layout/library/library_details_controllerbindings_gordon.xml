@@ -59,10 +59,12 @@
 						</Panel>
 					</Panel>				
 					<Panel class="BindingSlotStrip Left" id="Left" tabindex="auto" selectionpos="auto">
-						<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default RightTrigger );" onmovedown="SetSwitchInputFocus( LeftBumperButton );" onmoveleft="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
-					</Panel>
+						<Button class="ModeWrapper Trigger Left Gradient0" id="LeftTrigger" onmoveright="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default RightTrigger );" onmovedown="SetSwitchInputFocus( SCV2 LeftBumper Default LeftBumperButton );" onmoveleft="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftTriggerSelected)" onblur="RemoveStyle(BackgroundLines, LeftTriggerSelected)"/>
+            <Button class="ModeWrapper TouchBumper SteamV2 Left Gradient0" id="LeftBumper" onmoveright="SetSwitchInputFocus( CenterSplit CenterTrackpadLeft PS4 CenterTrackpad Default RightBumper );" onmovedown="SetSwitchInputFocus( LeftGripUpperButton );" onmoveleft="None();" onmoveup="SetInputFocus( LeftTrigger );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,LeftBumperSelected)" onblur="RemoveStyle(BackgroundLines, LeftBumperSelected)"/>
+          </Panel>
 					<Panel class="BindingSlotStrip Right" id="Right" tabindex="auto" selectionpos="auto">
-						<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetSwitchInputFocus( CenterSplit CenterTrackpadRight PS4 CenterTrackpad Default LeftTrigger );" onmovedown="SetSwitchInputFocus( RightBumperButton );" onmoveright="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
+						<Button class="ModeWrapper Trigger Right Gradient0" id="RightTrigger" onmoveleft="SetSwitchInputFocus( CenterSplit CenterTrackpadRight PS4 CenterTrackpad Default LeftTrigger );" onmovedown="SetSwitchInputFocus( SCV2 RightBumper Default RightBumperButton );" onmoveright="None();" onmoveup="SetInputFocus( GameActionSetLayers );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightTriggerSelected)" onblur="RemoveStyle(BackgroundLines, RightTriggerSelected)"/>
+            <Button class="ModeWrapper TouchBumper SteamV2 Right Gradient0" id="RightBumper" onmoveleft="SetSwitchInputFocus( CenterSplit CenterTrackpadRight PS4 CenterTrackpad Default LeftTrigger );" onmovedown="SetSwitchInputFocus( RightGripUpperButton );" onmoveright="None();" onmoveup="SetInputFocus( RightTrigger );" selectionpos="auto" onfocus="AddStyle(BackgroundLines,RightBumperSelected)" onblur="RemoveStyle(BackgroundLines, RightBumperSelected)"/>
 					</Panel>				
 					<Panel id="Switches" tabindex="auto" selectionpos="auto" class="ModeContainer">				
 					</Panel>

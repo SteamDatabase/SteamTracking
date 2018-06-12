@@ -2,6 +2,7 @@
  B CCDDBAppDetailCommon::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
+ B CLocalizationToken::default_instance_
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
  B CLogger::s_VecModuleAddressRanges
@@ -183,9 +184,12 @@
  B stat_client_UDPSocket_RecvPacket
  B stat_client_UDPSocket_SentBytes
  B stat_client_UDPSocket_SentPacket
+ CFArrayAppendValue
  CFArrayCreate
+ CFArrayCreateMutable
  CFArrayGetCount
  CFArrayGetValueAtIndex
+ CFDataCreateWithBytesNoCopy
  CFDictionaryCreateMutable
  CFDictionaryGetValue
  CFDictionarySetValue
@@ -402,13 +406,9 @@
  D typeinfo for CHTTPRequestParam
  D typeinfo for CHTTPResponse
  D typeinfo for CKeyValuesSystem
- D typeinfo for CMsg<MsgChannelEncryptRequest_t>
- D typeinfo for CMsg<MsgChannelEncryptResponse_t>
- D typeinfo for CMsg<MsgChannelEncryptResult_t>
+ D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
- D typeinfo for CMsgBase_t<MsgHdr_t>
- D typeinfo for CMsgBase_t<UDPPktHdr_t>
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
  D typeinfo for CMsgProtobufWrapped
@@ -455,7 +455,6 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for CVConnPkt<ConnectChallenge>
  D typeinfo for CVideoDecoder
  D typeinfo for CVideoDecoder::CQueuedOutput
  D typeinfo for CVideoDecoderLibav
@@ -572,13 +571,9 @@
  D vtable for CHTTPRequestParam
  D vtable for CHTTPResponse
  D vtable for CKeyValuesSystem
- D vtable for CMsg<MsgChannelEncryptRequest_t>
- D vtable for CMsg<MsgChannelEncryptResponse_t>
- D vtable for CMsg<MsgChannelEncryptResult_t>
+ D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
- D vtable for CMsgBase_t<MsgHdr_t>
- D vtable for CMsgBase_t<UDPPktHdr_t>
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
@@ -620,7 +615,6 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for CVConnPkt<ConnectChallenge>
  D vtable for CVideoDecoder
  D vtable for CVideoDecoder::CQueuedOutput
  D vtable for CVideoDecoderLibav
@@ -695,13 +689,9 @@
  R typeinfo name for CHTTPRequestParam
  R typeinfo name for CHTTPResponse
  R typeinfo name for CKeyValuesSystem
- R typeinfo name for CMsg<MsgChannelEncryptRequest_t>
- R typeinfo name for CMsg<MsgChannelEncryptResponse_t>
- R typeinfo name for CMsg<MsgChannelEncryptResult_t>
+ R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
- R typeinfo name for CMsgBase_t<MsgHdr_t>
- R typeinfo name for CMsgBase_t<UDPPktHdr_t>
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
  R typeinfo name for CMsgProtobufWrapped
@@ -818,7 +808,6 @@
  R typeinfo name for CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >
  R typeinfo name for CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
- R typeinfo name for CVConnPkt<ConnectChallenge>
  R typeinfo name for CVideoDecodedFrame
  R typeinfo name for CVideoDecoder
  R typeinfo name for CVideoDecoder::CQueuedOutput
@@ -880,6 +869,10 @@
  R typeinfo name for VideoSegment_t
  SCDynamicStoreCopyProxies
  SCDynamicStoreKeyCreateProxies
+ SecCertificateCreateWithData
+ SecPolicyCreateBasicX509
+ SecTrustCreateWithCertificates
+ SecTrustEvaluate
  T ABGRToARGB
  T ACCESS_DESCRIPTION_free
  T AES_cbc_encrypt
@@ -1361,6 +1354,10 @@
  T CCustomAVIOReadContext::Write(void*, unsigned char*, int)
  T CCustomAVIOReadContext::~CCustomAVIOReadContext()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
  T CDebugStatsSystem::GetList()
@@ -1449,6 +1446,7 @@
  T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*, unsigned int)
  T CHTTPClient::CancelRequest(CHTTPRequestHandle*)
  T CHTTPClient::CreateWorkerThread(CWorkThreadPool*)
+ T CHTTPClient::EnablePlatformCertificateVerification()
  T CHTTPClient::GetSSLContextForClientCert(char const*, char const*)
  T CHTTPClient::HostLookup_t::operator<(CHTTPClient::HostLookup_t const&) const
  T CHTTPClient::RemoveClientConnection(CHTTPClientConnection*)
@@ -1602,6 +1600,19 @@
  T CL2Cache::End()
  T CL2Cache::Start()
  T CL2Cache::~CL2Cache()
+ T CLocalizationToken::ByteSize() const
+ T CLocalizationToken::CLocalizationToken()
+ T CLocalizationToken::Clear()
+ T CLocalizationToken::GetCachedSize() const
+ T CLocalizationToken::GetMetadata() const
+ T CLocalizationToken::IsInitialized() const
+ T CLocalizationToken::MergeFrom(CLocalizationToken const&)
+ T CLocalizationToken::New() const
+ T CLocalizationToken::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CLocalizationToken::SetCachedSize(int) const
+ T CLocalizationToken::SharedCtor()
+ T CLocalizationToken::SharedDtor()
+ T CLocalizationToken::~CLocalizationToken()
  T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
@@ -1662,10 +1673,7 @@
  T CMessageList::TallySendmessage(EMsg, unsigned int)
  T CMessageList::~CMessageList()
  T CMsg<MsgChannelEncryptRequest_t>::CMsg(CIMsgNetPacketAutoRelease&)
- T CMsg<MsgChannelEncryptRequest_t>::~CMsg()
- T CMsg<MsgChannelEncryptResponse_t>::~CMsg()
  T CMsg<MsgChannelEncryptResult_t>::CMsg(CIMsgNetPacketAutoRelease&)
- T CMsg<MsgChannelEncryptResult_t>::~CMsg()
  T CMsgAppRights::ByteSize() const
  T CMsgAppRights::CMsgAppRights()
  T CMsgAppRights::Clear()
@@ -1694,7 +1702,6 @@
  T CMsgBase_t<MsgHdr_t>::CMsgBase_t(unsigned int, unsigned int)
  T CMsgBase_t<MsgHdr_t>::CMsgBase_t(unsigned int, unsigned int, unsigned char*, unsigned int, unsigned int)
  T CMsgBase_t<MsgHdr_t>::~CMsgBase_t()
- T CMsgBase_t<UDPPktHdr_t>::CMsgBase_t(unsigned int, unsigned int)
  T CMsgBase_t<UDPPktHdr_t>::CMsgBase_t(unsigned int, unsigned int, unsigned char*, unsigned int, unsigned int)
  T CMsgBase_t<UDPPktHdr_t>::~CMsgBase_t()
  T CMsgMulti::ByteSize() const
@@ -1940,6 +1947,7 @@
  T COpenSSLConnection::~COpenSSLConnection()
  T COpenSSLContext::BGetSRTPKeyAndSaltLengths(char const*, int*, int*)
  T COpenSSLContext::COpenSSLContext(ESSLConnectionType, ESSLCipherSuite, int, char const*, char const*, char const*, char const*)
+ T COpenSSLContext::EnablePlatformCertificateVerification()
  T COpenSSLContext::FindClientSession(netadr_t, char const*)
  T COpenSSLContext::PostInit(int)
  T COpenSSLContext::PreInit(ESSLConnectionType, ESSLCipherSuite, int, char const*)
@@ -2952,11 +2960,11 @@
  T CUtlString::AssertStringTooLong()
  T CUtlString::Clear()
  T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, __va_list_tag*)
- T CUtlString::FormatV(char const*, char*)
  T CUtlString::TrimWhitespace()
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
+ T CUtlString::VFormat(char const*, char*)
  T CUtlString::~CUtlString()
  T CUtlStringBuilder::Access()
  T CUtlStringBuilder::AppendFormat(char const*, ...)
@@ -2967,6 +2975,10 @@
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Truncate(unsigned long)
+ T CUtlStringBuilder::VAppendFormat(char const*, __va_list_tag*)
+ T CUtlStringBuilder::VAppendFormat(char const*, char*)
+ T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
+ T CUtlStringBuilder::VFormat(char const*, char*)
  T CUtlStringWrap::CUtlStringWrap(char const*)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
@@ -2985,20 +2997,17 @@
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::OnItemAdded()
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::InsertBefore(int, CBaseFrameFunction* const&)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::Remove(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::~CUtlVector()
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Find(CCookieContainer::CCookieInfo const&) const
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::GrowVector(int)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::InsertBefore(int, CCookieContainer::CCookieInfo const&)
+ T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Remove(int)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::RemoveAll()
- T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::ShiftElementsLeft(int, int)
- T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::ShiftElementsRight(int, int)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Validate(CValidator&, char const*)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::~CUtlVector()
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::InsertBefore(int, CCoroutine::vprofNode_t const&)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
@@ -3006,50 +3015,40 @@
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Remove(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FastRemove(int)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FindAndFastRemove(CHTTPClient* const&)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::GrowVector(int)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::InsertBefore(int, CHTTPClient* const&)
- T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::~CUtlVector()
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::GrowVector(int)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::InsertBefore(int, CHTTPClientConnection* const&)
- T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::~CUtlVector()
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::GrowVector(int)
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::RemoveAll()
- T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::SortedFindLessOrEqual(CHTTPRequestCache::CachedFileLRUData_t const&, bool (*)(CHTTPRequestCache::CachedFileLRUData_t const&, CHTTPRequestCache::CachedFileLRUData_t const&, void*), void*, int, int) const
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::~CUtlVector()
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::GrowVector(int)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::InsertBefore(int, CHTTPRequestHandle* const&)
- T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::~CUtlVector()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::GrowVector(int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::InsertBefore(int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::RemoveAll()
- T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::ShiftElementsRight(int, int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::InsertBefore(int)
- T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
- T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::GrowVector(int)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::InsertBefore(int, CUDPConnection::ConnectPingResults_t const&)
- T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::~CUtlVector()
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::FastRemove(int)
@@ -3057,75 +3056,60 @@
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::FindAndFastRemove(CUtlDelegate<void ()> const&)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::GrowVector(int)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::InsertBefore(int, CUtlDelegate<void ()> const&)
- T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::ShiftElementsLeft(int, int)
+ T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveMultiple(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::SetCount(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsLeft(int, int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::GrowVector(int)
  T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::InsertBefore(int, CVideoDecoder::CQueuedOutput* const&)
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::Remove(int)
  T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::GrowVector(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::InsertBefore(int, CVideoFileStream* const&)
- T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::ShiftElementsRight(int, int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::GrowVector(int)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::InsertBefore(int, CVideoFileStream::AvailableByteRange_t const&)
- T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::~CUtlVector()
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::FastRemove(int)
@@ -3133,7 +3117,6 @@
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::GrowVector(int)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::InsertBefore(int)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::InsertBefore(int, CVideoPlayer* const&)
- T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::ShiftElementsRight(int, int)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::~CUtlVector()
  T CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >::AddToTail(CVideoPlayerManager::CVideoThread*&&)
@@ -3142,79 +3125,64 @@
  T CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >::~CUtlVector()
  T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::GrowVector(int)
  T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::InsertBefore(int)
- T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::~CUtlVector()
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::InsertBefore(int, CWorkItem* const&)
- T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::ShiftElementsRight(int, int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::Validate(CValidator&, char const*)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::~CUtlVector()
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::FastRemove(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::GrowVector(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::InsertBefore(int, CWorkThread* const&)
- T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::ShiftElementsRight(int, int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::Validate(CValidator&, char const*)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::GrowVector(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::InsertBefore(int)
- T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::ShiftElementsRight(int, int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::Validate(CValidator&, char const*)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::~CUtlVector()
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
- T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::InsertBefore(int, NetConnectPingResults_t const&)
- T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::ShiftElementsRight(int, int)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::GrowVector(int)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::InsertBefore(int, SteamThreadTools::CThreadMutex* const&)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::ShiftElementsLeft(int, int)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::ShiftElementsRight(int, int)
+ T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Remove(int)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Validate(CValidator&, char const*)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::~CUtlVector()
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::FastRemove(int)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::GrowVector(int)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::InsertBefore(int, TLSTicketKey_t const&)
- T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::ShiftElementsRight(int, int)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::Validate(CValidator&, char const*)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::~CUtlVector()
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::GrowVector(int)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::InsertBefore(int, VideoAdaptationSet_t* const&)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::PurgeAndDeleteElements()
- T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::~CUtlVector()
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::GrowVector(int)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::InsertBefore(int, VideoRepresentation_t* const&)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::PurgeAndDeleteElements()
- T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::~CUtlVector()
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::GrowVector(int)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::InsertBefore(int, VideoSegmentTemplate_t::TimelineSegment_t const&)
- T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::ShiftElementsRight(int, int)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::~CUtlVector()
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::GrowVector(int)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::InsertBefore(int, VideoSegment_t* const&)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::PurgeAndDeleteElements()
- T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
@@ -3222,15 +3190,11 @@
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsLeft(int, int)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsRight(int, int)
+ T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
- T CVConnPkt<ConnectChallenge>::~CVConnPkt()
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidateAutoPushPop::~CValidateAutoPushPop()
@@ -3428,7 +3392,6 @@
  T CVideoPlayer::SeekToTimeStampThread(long long)
  T CVideoPlayer::SetNextRunFrameFunc(long long)
  T CVideoPlayer::SetPlaybackSpeed(float)
- T CVideoPlayer::SetPlaybackStartPositionIfNecessary(long long)
  T CVideoPlayer::SetRepeat(bool)
  T CVideoPlayer::Stop()
  T CVideoPlayer::SuggestMaxVeritcalResolution(int)
@@ -4160,6 +4123,7 @@
  T HMAC_Final
  T HMAC_Init_ex
  T HMAC_Update
+ T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T HashStringCaseless(char const*, unsigned long)
  T I420Scale
  T I420ToARGB
@@ -4423,6 +4387,7 @@
  T SSL_CTX_load_verify_locations
  T SSL_CTX_new
  T SSL_CTX_remove_session
+ T SSL_CTX_set_cert_verify_callback
  T SSL_CTX_set_cipher_list
  T SSL_CTX_set_default_passwd_cb
  T SSL_CTX_set_default_passwd_cb_userdata
@@ -4497,6 +4462,7 @@
  T SetFileTimestamp(char const*, long long)
  T SetInAssert
  T SetWritingMiniDump(bool)
+ T SetWrittenMinidumpForFileLine(char const*, unsigned int)
  T ShouldUseNewAssertDialog
  T ShutdownPlatformSocket(int, int)
  T SortRepresentationByBandwidth(VideoRepresentation_t* const&, VideoRepresentation_t* const&)
@@ -4570,7 +4536,6 @@
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::MarkFrame()
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::CVProfile()
@@ -4663,15 +4628,12 @@
  T VALVE_CRYPTO_dbg_free(void*)
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
- T V_AppendSlash
- T V_CbMakeAbsolutePath
  T V_ExtractDomainFromURL
  T V_FixDoubleSlashes
  T V_FixSlashes
  T V_GetFileExtension
  T V_IsAbsolutePath
  T V_IsValidDomainNameCharacter
- T V_MakeAbsolutePath
  T V_MatchWildcardDNSName
  T V_MatchWildcardString
  T V_RemoveDotSlashes
@@ -4698,8 +4660,8 @@
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
  T V_strlower_fast
- T V_strnappend_strlen
  T V_strncat
+ T V_strncat_length
  T V_strncmp
  T V_strncpy
  T V_strnicmp
@@ -4999,7 +4961,6 @@
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
- T cIntToHexDigit(int)
  T check_defer
  T custom_ext_add
  T custom_ext_init
@@ -5560,9 +5521,9 @@
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>::~__split_buffer()
  T std::__1::__split_buffer<void (*)(), std::__1::allocator<void (*)()>&>::~__split_buffer()
  T std::__1::__split_buffer<void*, std::__1::allocator<void*>&>::~__split_buffer()
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique(int const&)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__node_insert_unique(std::__1::__tree_node<int, void*>*)
@@ -5599,8 +5560,8 @@
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, int> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, long> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
  T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
  T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
@@ -5613,7 +5574,7 @@
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__find_equal<FileAndLine_t>(std::__1::__tree_node_base<void*>*&, FileAndLine_t const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__find_equal<std::__1::__value_type<SteamVProf::CVProfNode*, double> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<SteamVProf::CVProfNode*, double> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__find_equal<std::__1::__value_type<char const*, unsigned int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<char const*, unsigned int> const&)
@@ -5649,7 +5610,7 @@
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
- T std::__1::set<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::~set()
+ T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
@@ -5721,6 +5682,7 @@
  T v2i_GENERAL_NAME_ex
  T void Destruct<CCookieContainer::CCookieInfo>(CCookieContainer::CCookieInfo*)
  T void Destruct<CHTTPRequestCache::CachedFileLRUData_t>(CHTTPRequestCache::CachedFileLRUData_t*)
+ T void Destruct<CUtlString>(CUtlString*)
  T void std::__1::__insertion_sort_3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -5846,6 +5808,8 @@
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
+ b (anonymous namespace)::CLocalizationToken_descriptor_
+ b (anonymous namespace)::CLocalizationToken_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
@@ -5895,7 +5859,7 @@
  b GetMemAlloc::s_StdMemAlloc
  b GetMessageList()::g_theMessageList
  b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::MinidumpsWritten
+ b GetMinidumpsWritten()::s_MinidumpsWritten
  b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
@@ -5989,7 +5953,7 @@
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMessageList()::g_theMessageList
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
@@ -6517,7 +6481,6 @@
  fread
  free
  fseek
- fseeko
  fstat$INODE64
  fsync
  fsync$UNIX2003
@@ -6535,6 +6498,8 @@
  getuid
  gmtime
  ioctl
+ kCFAllocatorDefault
+ kCFAllocatorNull
  kCFProxyAutoConfigurationURLKey
  kCFProxyHostNameKey
  kCFProxyPortNumberKey
@@ -6748,6 +6713,7 @@
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
@@ -6887,6 +6853,7 @@
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
  t CScopeGuardLambdaImpl<CCompletionPortManager::AsyncDispatchHandler(void*)::$_6>::~CScopeGuardLambdaImpl()
  t CopyUriTableProc
+ t CustomVerifyCertificate(x509_store_ctx_st*, void*)
  t DestroyDeclAttTableProc
  t DestroyUriTableProc
  t DetectEncoding
@@ -6908,6 +6875,7 @@
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MemInputsrc
+ t OSXCertFromOpenSSL(x509_st*, OpaqueSecCertificateRef**)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::__invoke(void*)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_0::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t OSXHelpers::CIOPollingHelper::CIOPollingHelper()::$_1::__invoke(void*)

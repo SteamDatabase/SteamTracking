@@ -4,125 +4,125 @@ steam.styles
   {
     // colors section can include colors in "R G B A" form, or references to already defined colors;
     // it can also include just general settings controls can pull from for extra customization
-  
+
     black="0 0 0 255"
-    dark="35 35 35 255"
-    almostBlack="22 22 22 255"
-    almostBlackTrans="22 22 22 204"
+    dark="28 33 42 255"
+    almostBlack="22 25 28 255"
+    almostBlackTrans="22 25 28 204"
     white="255 255 255 255"
-    grey="153 153 153 255"
+    grey="142 152 167 255"
     none="0 0 0 0"
     yellow="255 255 0 255"
-    offwhite="164 164 164 255"
+    offwhite="159 162 168 255"
     dullgreen="216 222 211 255"
     maize="203 191 87 255"
     red="255 51 51 255"
-    darkblue="39 100 130 255"
-    blue="54 143 179 255"
+    darkblue="35 55 75 255"
+    blue="94 109 140 255"
     darkred="128 0 0 255"
     darkpurple="64 0 64 255"
-    
-    dark_blue "2 15 23 255"
-		med_blue "13 52 82 255"
-		bg_blue "10 36 56 255"
-    
+
+    dark_blue "27 44 61 255"
+    med_blue "13 36 82 255"
+    bg_blue "10 25 56 255"
+
     // control colors
-    bordercolor="102 102 102 255"
-    darkcorner="73 73 73 255"
+    bordercolor="82 95 122 255"
+    darkcorner="58 68 88 255"
     buttontext=Text
     buttontextactive=Text
-    
+
     // cool we can define font-families here as well
     basefont="Arial"
     basefont="Helvetica" [$OSX]
-    
+
     // new control colors
-    ButtonFace="102 102 102 200"
-    ButtonFace2="80 80 80 255" // for use in main client list panel column header, some button states
-    ButtonFace3="92 92 92 255" // button cornering pixels
-    ButtonFaceDisabled="102 102 102 15"
-    ButtonFaceHover="99 99 99  240"   /// hover!
-    ButtonFaceActive="102 102 102  240"  // not sure what this state is...
-    ButtonFaceFocus="105 105 105  240"  //  keyboard focus
-    ButtonFaceActiveFocus="105 105 105  255"  // this is the default choice
-    BlueBorder="33 33 33 255"
-    ButtonBorder="89 89 89 255"
-    ButtonBorderSubtle="79 79 79 255"
+    ButtonFace="98 108 119 20"
+    ButtonFace2="67 73 83 255" // for use in main client list panel column header, some button states
+    ButtonFace3="86 93 106 255" // button cornering pixels
+    ButtonFaceDisabled="86 93 106 15"
+    ButtonFaceHover="84 91 104  240"   /// hover!
+    ButtonFaceActive="86 93 106  240"  // not sure what this state is...
+    ButtonFaceFocus="89	97	110  240"  //  keyboard focus
+    ButtonFaceActiveFocus="89 97 110  255"  // this is the default choice
+    BlueBorder="26 31 40 255"
+    ButtonBorder="75 84 102 255"
+    ButtonBorderSubtle="75 84 102 255"
     ButtonBorderPage="124 124 124 255"
-    ButtonBorderDisabled="75 75 75 255"
-    ButtonBorderDisabled2="65 65 65 255"  //cornering pixels
-    ButtonBorderActive="125 125 125 255"
-    ButtonBorderFocus="137 137 137 255"
-    ButtonBorderFocusSubtle="122 122 122 255"
-    
-    Text="207 207 207 255"
-    Text2="180 180 180 255"
-    TextDisabled="99 99 99 255"
-    TextHover="226 226 226 255"
-    TextSelected="239 239 239 255"
-    TextentrySelected="237 237 237 235" // color of any selected text
-    TextSelectedBG="37 89 148 255" // background color of any selected text 
-    TextGlowHover="124 124 124 255"
-    TextGlowSelected="169 169 169 255"
+    ButtonBorderDisabled="112 120 136 255"
+    ButtonBorderDisabled2="52 61 78 255"  //cornering pixels
+    ButtonBorderActive="112 120 137 255"
+    ButtonBorderFocus="125 133 148 255"
+    ButtonBorderFocusSubtle="110 118 134 255"
+
+    Text="200 208 220 255"
+    Text2="178 186 196 255"
+    TextDisabled="102 106 112 255"
+    TextHover="213 217 234 255"
+    TextSelected="228 233 240 255"
+    TextentrySelected="228 233 240 235" // color of any selected text
+    TextSelectedBG="73 86 110 255" // background color of any selected text
+    TextGlowHover="100 110 125 255"
+    TextGlowSelected="163 173 186 255"
     TextGlowHoverSm="123 123 123 255"
     TextGlowSelectedSm="142 142 142 255"
     redborder="169 72 71 255"
 
-    NavLabel="153 153 153 255"
-    Label="168 168 168 255"
-    Label2="111 111 111 255"
-    LabelDisabled="115 115 115 255"
-    LabelFocus="196 196 196 255"
+    NavLabel="149 153 163 255"
+    Label="168 172 179 255"
+    Label2="107 112 123 255"
+    LabelDisabled="109 115 126 255"
+    LabelFocus="197 203 216 255"
 
     SuperNav="white"
     SuperNavHover="white"
-   
-    ScrollGlyph="198 198 198 255"  // the color of the scroll bar arrows
-    ScrollGlyphDisabled="74 74 74 255"
+
+    ScrollGlyph="98 108 119 255"  // the color of the scroll bar arrows
+    ScrollGlyphDisabled="67 73 83 255"
     ScrollGlyphFocus="242 242 242 255"
-    
-    ScrollBG="54 54 54 255" // the color of the scroll bar gutter
-    
-    HeaderClient="53 53 53 255" // the color of the List box header in the main client window
-    HeaderDialog="92 92 92 255" // the color of the list box header in other windows
-    
-    TitleBar="26 26 26 80"
+
+    ScrollBG="53 59 66 255" // the color of the scroll bar gutter
+
+    HeaderClient="42 49 63 255" // the color of the List box header in the main client window
+    HeaderDialog="87 90 97 255" // the color of the list box header in other windows
+
+    TitleBar="21 24 31 80"
     TitleBarFocus="14 31 56 80"
-    MenuBG="68 68 68 255"
-    
-    Focus0="23 51 77 255" // used in window frame borders 
+    MenuBG="57 62 70 255"
+
+    Focus0="23 51 77 255" // used in window frame borders
     Focus="25 55 84 255" // background color of any selected menu or list item
     Focus2="21 70 107 255" 	// background color of view buttons and anything else in focus that needs more 'punch'
-    Focus3="82 82 82 255" 	// background color of highlighted friends 
-    Focus4="67 158 191 255"   // bright cyan used in progress bars   
-    
+    Focus3="75 80 89 255" 	// background color of highlighted friends
+    Focus4="61 102 143 255"   // bright cyan used in progress bars
+
     FocusGrid="85 117 161 240"  	// background color of any grid item
     Highlight="16 53 82 120" 	// same as focus
-    
-    Highlight1="92 193 229 255"    // installing hover color
-    Highlight2="76 159 191 255" 	// installing color 
+
+    Highlight1="118 202 235 255"    // installing hover color
+    Highlight2="76 159 191 255" 	// installing color
     Highlight3="173 69 71 255"    	// red for errors, blocked, etc.
-    Highlight5="24 53 82 255" 	// blue 
+    Highlight5="24 53 82 255" 	// blue
     Highlight5a="30 66 102 255" 	// lighter version of highlight5
     Highlight5b="17 42 86 255" 	// as highlight5 but darker, for non-focused window borders
 
-    BackgroundStartSubtle="20 20 20 155" 
-    BackgroundStartSubtle="31 31 31 45" [$OSX]
-    BackgroundStartSubtlest="22 22 22 100"
-    BackgroundStart="22 22 22 180"
-    BackgroundStartOpaque="35 35 35 255"
-    
-    ClientBG="30 30 30 255"
+    BackgroundStartSubtle="0 13 40 155"
+    BackgroundStartSubtle="0 15 46 45" [$OSX]
+    BackgroundStartSubtlest="0 15 44 100"
+    BackgroundStart="31 35 41 180"
+    BackgroundStartOpaque="31 35 41 255"
+
+    ClientBG="18 26 42 255"
     ClientBGTop="25 32 46 255"
-    ClientGrouper="41 42 46 255"
-    DialogBG="38 38 38 255"
-    DialogBGFade1="56 56 56 255"
-    DialogBGFade2="56 56 56  0"  
-    
-    DarkClientBG="35 35 35 255"
-    DarkDialogBG="38 38 38 255"
-    DarkClientBGTransparent="35 35 35 19"
-    DarkDialogBGTransparent="55 55 55 170"
+    ClientGrouper="40 46 54 255"
+    DialogBG="42 46 51 255"
+    DialogBGFade1="42 46 51 255"
+    DialogBGFade2="42 46 51 0"
+
+    DarkClientBG="31 34 41 255"
+    DarkDialogBG="31 34 41 255"
+    DarkClientBGTransparent="28 31 37 19"
+    DarkDialogBGTransparent="41 47 55 170"
 
     GameDetailsBlueTransparent="71 148 179 60"
     GameDetailsGreenTransparent="71 148 179 160"
@@ -132,37 +132,37 @@ steam.styles
     GameDetailsGreen="71 148 179 255"
     GameDetailsRed="71 148 179 255"
 
-    PropertySheetBG="58 58 58 255"
-    InteriorColor="52 52 52 255"
-    
-    DialogBorder="117 117 117 255" // border color around any dialog
-    
-    FillBG1="62 62 62 255" //gradient colors
-    FillBG2="69 69 69 255"
-    
-    MenuBG1="75 75 75 255" //gradient colors
-    MenuBG2="54 54 54 255"
-    
-    Divider="86 86 86 255"
-    SuperDivider="71 71 71 255"
-    DarkImageBorder="48 48 48 255"
+    PropertySheetBG="50 55 61 255"
+    InteriorColor="46 49 54 255"
+
+    DialogBorder="110 113 119 255" // border color around any dialog
+
+    FillBG1="61 63 66 255" //gradient colors
+    FillBG2="64 65 69 255"
+
+    MenuBG1="56 60 68 255" //gradient colors
+    MenuBG2="41 45 51 255"
+
+    Divider="76 84 93 255"
+    SuperDivider="66 72 80 255"
+    DarkImageBorder="46 50 58 255"
     DarkImageOverlay="0 0 0 80"
-    
+
     inbox_active "158 194 29 255"
 		inbox_active2 "155 199 9 255"
 		inbox_active4 "122 145 71 255"
-		inbox_active5 "85 102 47 255"	
+		inbox_active5 "85 102 47 255"
 
-		
+
 		inbox_inactive "38 38 37 255"
-		inbox_inactive2 "142 194 12 255"	
+		inbox_inactive2 "142 194 12 255"
 		inbox_inactive4 "122 145 71 255"
 		inbox_inactive5 "74 102 29"
-		
+
 		parental_lock_active1 "138 175 6 255"
-		parental_lock_active2 "49 49 49 255"	
+		parental_lock_active2 "49 49 49 255"
 		parental_lock_active4 "122 145 71 255"
-		parental_lock_active5 "85 102 47 255"	
+		parental_lock_active5 "85 102 47 255"
 		green5 "126 166 75 255"
 		green6 "92 126 16 255"
 		green7 "62 90 22 255"
@@ -175,18 +175,20 @@ steam.styles
 
 
 		parental_lock_inactive1 "154 49 48 255"
-		parental_lock_inactive2 "189 79 79 255"	
-		parental_lock_inactive3 "215 90 90 255"	
+		parental_lock_inactive2 "189 79 79 255"
+		parental_lock_inactive3 "215 90 90 255"
 		parental_lock_inactive4 "146 72 71 255"
-		parental_lock_inactive5 "103 48 47 255"	
+		parental_lock_inactive5 "103 48 47 255"
 		red6="38 1 1 255"
 
 		support_lock_ack1 "187 157 47 255"
 		support_lock_ack2 "193 166 67 255"
+		AnnouncementBlue="61 146 175 255"
+
 
     // colors pulled from steamscheme.res
     "ClayBG"      "70 70 70 255"
-    "ClayButtonBG"      "85 85 85 255"        
+    "ClayButtonBG"      "85 85 85 255"
     "ClayEnabled"     "88 88 88 255"
     "ClayKeyFocus"      "92 92 92 255"
     "ClayMouseDown"     "85 85 85 255"
@@ -206,8 +208,8 @@ steam.styles
     "GrayBG"      "73 73 73 255"
     "GrayBG2"     "37 37 37 255"
     "TempGradientTop" "52 52 52 255"
-    
-    
+
+
     DragDrop.DragFrame        "255 255 255 192"
     DragDrop.DropFrame        "150 255 150 255"
 
@@ -231,7 +233,7 @@ steam.styles
     Notifications.StackSize       "3"     // Controls how many panels we will stack before background queuing
 
     ListPanel.TextColor       Text
-    ListPanel.BgColor       none  
+    ListPanel.BgColor       none
     ListPanel.SelectedTextColor     TextentrySelected
     ListPanel.SelectedBgColor     TextSelectedBG
     ListPanel.SelectedOutOfFocusBgColor   ClientBG
@@ -248,11 +250,11 @@ steam.styles
 		Tooltip.Delay=75
 		Tooltip.Anchor=Cursor
 
-	
+
     WizardPanel.HeaderBGColor     HeaderDialog
 
     Menu.TextInset          "6"
-    
+
     PropertySheet.TransitionEffectTime    "0"     // time to change from one tab to another
     PropertySheet.TabGap        1
     PropertySheet.FlashTabColor	"76 159 191 255"
@@ -261,9 +263,9 @@ steam.styles
     RichText.InsetY         7
 
     ScrollBar.Wide          19
-    
+
     SectionedListPanel.CollapserWidth   16
-    
+
     HTML.SearchInsetY 5
     HTML.SearchInsetX 10
     HTML.SearchWide 348
@@ -278,12 +280,12 @@ steam.styles
 
     html.secureurl "126 166 75 255"
     html.insecureurl "173 69 72 255"
-    
+
     MessageBox.ButtonHeight		24
-    
+
     TextEntry.IMEBGColor        "225 225 225 255"
     TextEntry.IMEFGColor        "black"
-    
+
 
     // Friends List colors
     Friends.InGameColor       "144 186 60 255"
@@ -304,34 +306,34 @@ steam.styles
 	Friends.GoldenHoverColor       "255 255 180 255"
 //	Friends.GoldenHoverColor       "248 218 109 255"
 
-  
+
     ChatDialog.URLColor       "text"
     ChatOwnTextColor        "Label"
 		ChatDialog.HistoryColor	"124 124 124 255"
     ChatGradientTop         "39 39 39 255"
     ChatGradientBottom        "104 104 104 255"
-    
+
     AchievementPopup.TitleColor   "Text"
     AchievementPopup.DescriptionColor "180 180 180 255"
-    
-    GiftOnlyInfo.ImagePanelColor  "GrayBG"    
+
+    GiftOnlyInfo.ImagePanelColor  "GrayBG"
 
 		dd_texture_bottom "16 16 16 255"
  }
-  
+
   styles
 	  {
 		downarrow
 		{
-	      image="graphics/icon_down_default"    
+	      image="graphics/icon_down_default"
 		}
-	
+
 		downarrow:hover
 		{
 	      image="graphics/icon_down_hover"
-		
+
 				render_bg {
-				
+
 				//background
 				0="fill( x0 + 5, y0 + 4, x1 - 2, y1 - 4, buttonfaceactive )"
 				//lines around
@@ -339,24 +341,24 @@ steam.styles
 				2="fill(x1 - 2, y0 + 5, x1 - 1, y1 - 5, buttonfaceactive )"  //right
 				}
 		}
-	
+
 		uparrow
 		{
-	      image="graphics/icon_up_default"    
+	      image="graphics/icon_up_default"
 		}
-		
+
 		rightarrow
 		{
-	      image="graphics/icon_right_default"   
+	      image="graphics/icon_right_default"
 		}
-		
+
 		rightarrow:hover
 		{
-	      image="graphics/icon_right_hover"    
+	      image="graphics/icon_right_hover"
 		}
-		
+
 	  Button
-	  {     
+	  {
 		font-family=basefont
 		font-size=13
 		font-weight=400
@@ -369,79 +371,79 @@ steam.styles
 				0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
 			}
 	  }
-	 
+
     "Page Button"
-    {     
+    {
 		render_bg
 		{
 			// background fill
-			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"	
+			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
 		}
     }
-    
+
 	Button:hover
-    {   
+    {
   		textcolor="TextHover"
   		render_bg
-      {     
-        // background fill
-        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"             
-      }
-    }
-
-    "Page Button:hover"
-    {   
-      textcolor="TextHover"
-      render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
+    "Page Button:hover"
+    {
+      textcolor="TextHover"
+      render_bg
+      {
+        // background fill
+        0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
+      }
+    }
+
     Button:focus
     {
 			textcolor="TextHover"
 			render_bg
 	      {
-	        0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"			    
+	        0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
 	      }
     }
-    
+
     "Page Button:focus"
     {
       textcolor="TextHover"
       render_bg
-      {     
+      {
         0="gradient( x0, y0, x1, y1,  buttonfacefocus, propertysheetbg )"
       }
     }
-    
+
     Button:active // this is the left-mouse-currently-pressed state
 		{
        textcolor="TextHover"
        render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
       }
     }
-    
+
     "Page Button:active"
     {
        textcolor="TextHover"
        render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, DialogBG, propertysheetbg )"
       }
     }
-    
+
     Button:selected
     {
       textcolor="TextHover"
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
       }
@@ -451,40 +453,40 @@ steam.styles
     {
       textcolor="TextHover"
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactivefocus, propertysheetbg )"
       }
     }
-    
+
     Button:disabled
     {
       textcolor="LabelDisabled"
       render_bg
-      {     
+      {
         // background fill
-        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
+        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"
       }
-    }   
-    
+    }
+
     "Page Button:disabled"
-    {     
+    {
 			textcolor="LabelDisabled"
       render_bg
       {
 				// background fill
-        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"             
-      }   
+        0="gradient( x0, y0, x1, y1, buttonfacedisabled, buttonfacedisabled )"
+      }
     }
-       
+
     CFriendsListSectionAffordance
-    {     
+    {
       inset="0 0 0 0"
       font-size=14
       font-weight=400
       textcolor="Label"
     }
-    
+
     CFriendsListSectionHeader
     {
       bgcolor=none
@@ -499,10 +501,10 @@ steam.styles
 				0="gradient_horizontal( x0-21, y0+1, x0+230, y1+1, propertysheetbg, Friends.ListHeaderFadeOut )"
 			}
     }
-            
+
     CFriendPanel
     {
-      inset="0 2 0 0"
+      inset="0 0 0 0"
       bgcolor=none
       font-family=basefont
       font-size=14
@@ -519,17 +521,17 @@ steam.styles
       textcolor="Label"
       image="graphics/chkUnselStd"
     }
-  
+
     CheckButton:selected
     {
-      image="graphics/chkSelStd"    
+      image="graphics/chkSelStd"
     }
 
     CheckButton:focus
     {
       textcolor="Text"
       bgcolor=none
-      image="graphics/chkUnselFocus"  
+      image="graphics/chkUnselFocus"
     }
 
     CheckButton:selected:focus
@@ -539,14 +541,14 @@ steam.styles
       bgcolor=none
       image="graphics/chkSelFocus"
     }
-    
+
     CheckButton:disabled
     {
       textcolor="TextDisabled"
       bgcolor=none
       image="graphics/chkUnselDis"
     }
-    
+
     CheckButton:selected:disabled
     {
       textcolor="TextDisabled"
@@ -570,57 +572,57 @@ steam.styles
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render	{      	}  
-			render_bg {				
-					// background gradient        
+        render	{      	}
+			render_bg {
+					// background gradient
 					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 				}
-    } 
-    
+    }
+
     CheckButtonList:scrollbar
     {
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
 				render	{     		}
-    		render_bg {				
-				// background gradient        
+    		render_bg {
+				// background gradient
 				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 				}
-    } 
-    
+    }
+
     "Page CheckButtonList"
     {
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render	{      	}  
+        render	{      	}
 				render_bg
-        {     
+        {
 					// background fill
 					1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
       	}
     }
-    
+
     "Page CheckButtonList:scrollbar"
     {
         inset="1 1 1 1"
         textcolor="text2"
         bgcolor=none
-        render { }   
+        render { }
         render_bg
-        {     
+        {
 					// background fill
 					1="gradient( x0+1, y0, x1-1, y1-2, dialogbg, almostblack )"
     	  }
    	 }
-    
+
     "CheckbuttonList Checkbutton"
-    {textcolor="label"} 
-    
+    {textcolor="label"}
+
     "CheckbuttonList Checkbutton:focus"
-    {textcolor="texthover"} 
-    
+    {textcolor="texthover"}
+
     ComboBox
     {
       inset="3 0 0 0"
@@ -630,226 +632,226 @@ steam.styles
       selectedtextcolor="TextEntrySelected"
       selectedbgcolor="TextSelectedBG"
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
-    
+
     ComboBox:hover
     {
     selectedbgcolor="none"
     selectedtextcolor="Text"
     render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
     ComboBox:focus
     {
     selectedbgcolor="none"
     selectedtextcolor="Text"
     render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
     ComboBox:focus:hover
     {
     selectedbgcolor="none"
     selectedtextcolor="Text"
     render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
     "Page ComboBox"
     {
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
-    
+
     "Page ComboBox:focus"
     {
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
     "Page ComboBox:hover"
     {
       render_bg
-      {     
+      {
         // background fill
         0="gradient(x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
       }
     }
-    
+
     "Page ComboBox:focus:hover"
     {
       render_bg
-      {     
+      {
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
-    
+
+
     ComboBoxButton
-    {      
+    {
 
       bgcolor=none
       padding-left=2
       image="graphics/icon_down_default"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorder )"
       }
     }
-    
+
     ComboBoxButton:hover
     {
       image="graphics/icon_down_hover"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, label )"
       }
     }
-    
+
     ComboBoxButton:focus
     {
 
       bgcolor=none
       image="graphics/icon_down_focus"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive )"
       }
     }
-    
+
     ComboBoxButton:focus:hover
     {
 
       bgcolor=none
       image="graphics/icon_down_default"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
       }
     }
-    
-    
+
+
     "Page ComboBoxButton"
     {
       bgcolor=none
       image="graphics/icon_down_default"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderPage )"
       }
     }
-    
+
     "Page ComboBoxButton:hover"
     {
       image="graphics/icon_down_hover"
        // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
       }
     }
-    
+
     "Page ComboBoxButton:focus"
     {
 
       bgcolor=none
       image="graphics/icon_down_focus"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive  )"
       }
    	}
-    
+
     "Page ComboBoxButton:focus:hover"
     {
       bgcolor=none
       image="graphics/icon_down_focus"
       // just draw a single line to divide it from the text
-      render_bg 
+      render_bg
       {
         0="fill( x0, y0 + 2, x0 + 1, y1 - 4, ButtonBorderActive )"
       }
     }
-    
+
     Divider
     {
       bgcolor="none"
       render
       {
-       0="gradient_horizontal( x0, y1 - 1, x1, y1, divider, propertysheetbg )"     
+       0="gradient_horizontal( x0, y1 - 1, x1, y1, divider, propertysheetbg )"
       }
     }
-    
+
     Frame
     {
     bgcolor="DialogBG"
       render
       {
-        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus )"     
-        1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus )" 
+        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus )"
+        1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus )"
         2="gradient_horizontal( x0, y0, x1, y0 + 1, focus0, ClientBG )"
         3="gradient( x0, y0, x0 + 1, y1, focus0, ClientBG )"
       }
-    } 
-    
+    }
+
     Frame:FrameFocus
     {
     bgcolor="DialogBG"
       render
       {
-        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, focus2 )"     
-        1="gradient( x1 - 1, y0, x1, y1, ClientBG, focus2 )" 
+        0="gradient_horizontal( x0, y1 - 1, x1 + 1, y1, ClientBG, black )"
+        1="gradient( x1 - 1, y0, x1, y1, ClientBG, black )"
         2="gradient_horizontal( x0, y0, x1, y0 + 1, focus, ClientBG )"
         3="gradient( x0, y0, x0 + 1, y1, focus, ClientBG )"
       }
-    } 
-    
+    }
+
     FrameBRGripPanel
     {
       image=graphics/resizer
     }
-    
+
     FrameBRGripPanel:hover
     {
       image=graphics/resizer_over
     }
-    
+
     FrameMinimizeButton
     {
 		render_bg {}
 		image="graphics/win32_win_min"
 		image="graphics/osx_win_dis" [$OSX]
     }
-    
+
     FrameMinimizeButton:hover
-    {  
+    {
 		render_bg {}
 		bgcolor="none"
 		image="graphics/win32_win_min_hover"
@@ -862,14 +864,14 @@ steam.styles
 		bgcolor="none"
 		image="graphics/osx_min_def"
     }
- 
+
 	FrameMinimizeButton:framefocus:hover [$OSX]
     {
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_min_hov"
     }
-	
+
 	FrameMinimizeButton:active [$OSX]
     {
 		render_bg {}
@@ -970,7 +972,7 @@ steam.styles
 		image="graphics/win32_win_close_hover"
 		image="graphics/osx_close_hov" [$OSX]
     }
-    
+
 	FrameCloseButton:framefocus [$OSX]
     {
 		render_bg {}
@@ -991,12 +993,12 @@ steam.styles
 		bgcolor="none"
 		image="graphics/osx_close_down"
     }
-    
+
 	FrameCloseButton:disabled
     {
 		render_bg {}
 		bgcolor="none"
-		image="graphics/win32_win_close_disabled" 
+		image="graphics/win32_win_close_disabled"
 		image="graphics/osx_win_dis" [$OSX]
     }
 
@@ -1015,11 +1017,11 @@ steam.styles
 		render_bg
 			{
 				1="gradient( x0, y0, x1, y0 + 48, titlebar, none )"
-				
+
 			}
     }
 
-    
+
     FrameTitle:framefocus
     {
 		font-family=basefont
@@ -1034,8 +1036,8 @@ steam.styles
 		     2="gradient( x0, y0, x1, y0 + 48, TitleBarfocus, none )"
 	    }
     }
-    
-   
+
+
 	"CFriendsDialog SectionedListPanelInterior"
 	{
 		bgcolor=none
@@ -1046,34 +1048,34 @@ steam.styles
 		textcolor="Text"
 		selectedtextcolor="TextSelected"
 		selectedbgcolor="Focus"
-		shadowtextcolor="TextDisabled"	// the color of disabled line items		
+		shadowtextcolor="TextDisabled"	// the color of disabled line items
 		render
 			{	}
 		render_bg { }
-	}	
-        		
+	}
+
     GraphPanel
     {
 		textcolor=Highlight5
 		bgcolor=none
 		render_bg { }
     }
-    
+
     HTML
     {
 		bgcolor="none"
-		render_bg 
+		render_bg
 			{
 			0="fill( x0, y0, x1, y1, almostblack )" // bg
 	    }
-    inset="2 2 2 2" 
+    inset="2 2 2 2"
     }
 
 	"HTMLFramelessPopup HTML"
 	{
 		inset="0 0 0 0"
 	}
-    
+
     Label
 		{
 		textcolor="Label"
@@ -1083,7 +1085,7 @@ steam.styles
 		font-size=14
 		font-weight=400
  		}
-   
+
     ListPanel
     {
 		bgcolor=none
@@ -1096,16 +1098,16 @@ steam.styles
 		shadowtextcolor="TextDisabled"	// the color of disabled line items
 		inset="0 -1 1 1"
 		render
-		{		}       
-		render_bg 
+		{		}
+		render_bg
 		{
-			// background gradient        
+			// background gradient
 			0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 			1="gradient( x0, y0, x1, y0 + 31, backgroundstartsubtle, none )"
 
 		}
 	}
-      
+
     "Page ListPanel"
 	{
 		font-family=basefont
@@ -1117,14 +1119,14 @@ steam.styles
 		inset="0 -1 1 1"
 		bgcolor=none
     render_bg
-    {     
+    {
  		// background fill
     0="gradient( x0, y0, x1, y0 + 80, Propertysheetbg, BackgroundStartOpaque )"
     1="fill( x0, y0 + 80, x1, y1, BackgroundStartOpaque )"
     2="gradient( x0, y0, x1, y0 + 30, backgroundstartsubtle, none )"
 		}
 	}
-    
+
     "CGamesListPanel"
 	{
       font-family=basefont
@@ -1137,14 +1139,14 @@ steam.styles
       shadowtextcolor="TextDisabled"
       inset="0 -1 1 1"
       render_bg {
-        // background gradient        
+        // background gradient
         0="gradient( x0, y0, x1, y0 + 432, dialogbg, almostblack )"
         1="fill( x0, y0 + 432, x1, y1, almostblack )"
         2="gradient( x0, y0, x1, y0 + 31, dialogbgFade1, dialogbgFade2 )"
 
         }
     }
-  
+
     "GameItem_Uninstalled"
     {
       textcolor="labeldisabled"
@@ -1155,49 +1157,49 @@ steam.styles
       textcolor="label"
       selectedtextcolor="label"
     }
- 
+
     "GameItem_Installed"
     {
       textcolor="text"
       selectedtextcolor="white"
     }
-      
+
     "GameItem_Installed:hover"
     {
       textcolor="white"
       selectedtextcolor="white"
     }
-    
+
     "GameItem_Running"
     {
       textcolor="Friends.InGameColor"
       selectedtextcolor="white"
     }
-    
+
     "GameItem_Running:hover"
     {
       textcolor="white"
       selectedtextcolor="white"
     }
-    
+
     "GameItem_Shortcut"
     {
       textcolor="text"
       selectedtextcolor="white"
     }
-      
+
     "GameItem_Shortcut:hover"
     {
         textcolor="white"
         selectedtextcolor="white"
     }
-    
+
     "GameItem_Mod"
     {
       textcolor="text"
       selectedtextcolor="white"
     }
-      
+
     "GameItem_Mod:hover"
     {
         textcolor="white"
@@ -1209,55 +1211,55 @@ steam.styles
     	textcolor="highlight2"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Updating:hover"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Updating:selected"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Decrypting"
     {
     	textcolor="highlight2"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Decrypting:hover"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Decrypting:selected"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Syncing"
     {
     	textcolor="highlight2"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Syncing:hover"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_Syncing:selected"
     {
     	textcolor="highlight1"
     	selectedtextcolor="highlight1"
     }
-    
+
     "GameItem_LockedSiteLicense"
     {
       textcolor="labeldisabled"
@@ -1268,7 +1270,7 @@ steam.styles
       textcolor="label"
       selectedtextcolor="label"
     }
- 
+
     "GameColumn_BigText"
 		{
 		font-family=basefont
@@ -1276,7 +1278,7 @@ steam.styles
 		font-weight=700
 		textcolor="text"
     }
-    
+
     ListPanelCheckBox
     {
 		font-family=basefont
@@ -1285,18 +1287,18 @@ steam.styles
 		textcolor="Label"
 		image="graphics/chkUnselStd_Sm"
 		inset="0 5 0 0"
-    }   
+    }
 
     ListPanelCheckBox:selected
     {
-		image="graphics/chkSelStd_Sm"    
+		image="graphics/chkSelStd_Sm"
     }
 
 		ListPanelCheckBox:focus
     {
 		textcolor="TextSelected"
 		bgcolor=none
-		image="graphics/chkUnselFocus_Sm"  
+		image="graphics/chkUnselFocus_Sm"
     }
 
     ListPanelCheckBox:selected:focus
@@ -1306,14 +1308,14 @@ steam.styles
 		bgcolor=none
 		image="graphics/chkSelFocus_Sm"
     }
-    
+
     ListPanelCheckBox:disabled
     {
 		textcolor="TextDisabled"
 		bgcolor=none
 		image="graphics/chkUnselDis_Sm"
     }
-    
+
     ListPanelCheckBox:disabled:select
     {
 		textcolor="TextDisabled"
@@ -1321,7 +1323,7 @@ steam.styles
 		//!! bug - this needs to look disabled
 		image="graphics/chkUnselDis"
     }
-    
+
     "ListPanelColumnheader ListPanelCheckBox"
     {
 		font-family=basefont
@@ -1329,15 +1331,15 @@ steam.styles
 		font-weight=400
 		textcolor="Label"
 		image="graphics/chkUnSelFocus_Sm"
-		inset="4 0 0 0"  
+		inset="4 0 0 0"
 		}
-     
+
 		"ListPanelColumnHeader ListPanelCheckBox:selected"
     {
 		inset="4 0 0 0"
-		image="graphics/chkUnSelStd_Sm"    
+		image="graphics/chkUnSelStd_Sm"
     }
-	
+
 		"ListPanelColumnheader ListPanelCheckBox:focus"
     {
       font-family=basefont
@@ -1345,7 +1347,7 @@ steam.styles
       font-weight=400
       textcolor="TextHover"
       image="graphics/chkUnSelFocus_Sm"
-      inset="4 0 0 0"  
+      inset="4 0 0 0"
 		}
 
 	"ListPanelColumnheader ListPanelCheckBox:selected:focus"
@@ -1354,9 +1356,9 @@ steam.styles
       render_bg {}
       bgcolor=none
       image="graphics/chkSelFocus_Sm"
-      inset="4 0 0 0"  
+      inset="4 0 0 0"
     }
-    
+
     ListPanelColumnheader
     {
 		font-family=basefont
@@ -1367,19 +1369,19 @@ steam.styles
 		font-style="uppercase"
 		bgcolor="none"
 		inset="1 3 0 0"
-		render_bg    
+		render_bg
 			{
 				// fill
 				0="fill (x0, y0 + 1, x1, y1 + 1, propertysheetbg)" // bg fill
 				1="fill (x0 + 1, y0 + 1, x1, y0 + 3, propertysheetbg)" // bg fill2
-			}   
+			}
 		}
-    
+
     ListPanelColumnHeader:hover
     {
 		textcolor="Texthover"
     }
-      
+
 	"Csteamrootdialog ListPanelColumnheader"
     {
 		font-family=basefont
@@ -1392,19 +1394,19 @@ steam.styles
 		inset="0 0 0 0"
 		inset="0 1 0 0" [$OSX]
 		padding-top=1
-		render_bg    
+		render_bg
 		{
 			// fill
 			0="fill (x0, y0 + 1, x1, y1, propertysheetbg )" // bg fill
-		}   
+		}
 	}
 
-   
+
     "Csteamrootdialog ListPanelColumnHeader:hover"
     {
 		textcolor="TextHover"
     }
-    
+
    	"Csteamrootdialog ListPanelSectionCollapser"
 	{
 		inset = "0 1 0 1"
@@ -1412,9 +1414,9 @@ steam.styles
 		render_bg
 		{
 			1="fill( x0 , y0, x1, y1 - 1, propertysheetbg  )"
-		}    
+		}
 	}
-	
+
 	  "CGamesPage_Mini ListPanelSectionCollapser"
 	{
 		inset = "0 1 0 1"
@@ -1422,30 +1424,30 @@ steam.styles
 		render_bg
 		{
 			1="fill( x0 , y0, x1, y1 - 1, propertysheetbg  )"
-		}    
+		}
 	}
-    
 
- 
-	ListPanelColumnSelectButton // the games list column chooser  
+
+
+	ListPanelColumnSelectButton // the games list column chooser
 	{
         inset="-3 3 0 0"
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-        }   
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
         }
 	}
-    
+
   ListPanelColumnSelectButton:hover
 	{
         inset="-3 3 0 0"
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
 		  }
@@ -1456,104 +1458,104 @@ steam.styles
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
 		  }
   }
 
-	"CGamesListPanel ListPanelColumnSelectButton"   
+	"CGamesListPanel ListPanelColumnSelectButton"
 	{
         inset="-3 3 0 0"
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse )"
-        }   
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
         }
 	}
-	"CGamesListPanel ListPanelColumnSelectButton:hover"   
+	"CGamesListPanel ListPanelColumnSelectButton:hover"
 	{
         inset="-3 3 0 0"
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }   
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
         }
 	}
-	"CGamesListPanel ListPanelColumnSelectButton:selected"   
+	"CGamesListPanel ListPanelColumnSelectButton:selected"
 	{
         inset="-3 3 0 0"
         render
         {
           0="image( x0 + 3, y0 + 3, x1, y1, graphics/icon_collapse_over )"
-        }  
+        }
         render_bg {
         1="fill( x0 + 1, y0, x1 - 1, y1, propertysheetbg )"
-        } 
+        }
 	}
-   
+
     ListPanelDragger
 	{
 		bgcolor="none"
-		render 
+		render
 		{
 			//fill makes dragger visible
 			0="fill( x0, y0 + 2, x0 + 1, y1 - 3, dialogbg )" // left
 			1="fill (x0, y0, x0+1, y0+3, propertysheetbg )" //dot
 		}
     }
-    
+
     ListPanelInterior
-    {     
+    {
 		inset="3 1 0 0"
 		font-size=15
 		textcolor="text2"
-		bgcolor="none" 
+		bgcolor="none"
     render
-			{				
+			{
 
 			}
-		render_bg 
-			{				
+		render_bg
+			{
 
 			}
-    } 
-    
+    }
+
     ListPanelInterior:scrollbar
-    {     
+    {
 		bgcolor=none
 		inset="3 1 -1 0"
 		textcolor="text2"
 		render
-			{				
+			{
 
 			}
-		render_bg 
-			{				
+		render_bg
+			{
 
 			}
-    } 
+    }
 
 	"CSteamRootDialog ListPanel"
 	{
 		padding-left=2
 		padding-right=2
 	}
-    
+
      "Csteamrootdialog ListPanelInterior"
-    {     
+    {
       inset="3 0 3 0"
 			bgcolor=none
 
 			render_bg {}
 		}
-	
+
 	"Csteamrootdialog ListPanelInterior:scrollbar"
-    {     
+    {
       inset="3 0 -1 0"
 			bgcolor=none
 			render
@@ -1563,60 +1565,60 @@ steam.styles
 			render_bg {}
 
 	}
-	
+
 	"Page ListPanelInterior"
 	{
 		inset="3 1 -1 0"
 		font-size=15
 		bgcolor=none
 		render
-		{		
+		{
 
 		}
-		render_bg 
-		{				
-			// background gradient        
+		render_bg
+		{
+			// background gradient
 			0="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 		}
 	}
-	
+
 	"Page ListPanelInterior:scrollbar"
 	{
 		inset="3 1 -1 0"
 		bgcolor=none
-		render_bg 
-		{				
-			// background gradient        
+		render_bg
+		{
+			// background gradient
 			0="gradient( x0, y0, x1+16, y1, dialogbg, almostblack )"
 		}
 	}
-      
+
     ListPanelSectionHeader
-    {     
+    {
 		inset="2 0 0 0"
 		textcolor=label
 		font-style="uppercase"
 		render_bg
 		{
 			0="gradient_horizontal( x0 - 1, y0, x0 + 250, y1 - 1, propertysheetbg, Friends.ListHeaderFadeOut  )"
-		}    
-    } 
-    
+		}
+    }
+
     ListPanelSectionHeader:hover
-    {     
+    {
         textcolor=texthover
-    } 
-    
+    }
+
 	"ListPanel RichText"
 	{
 		textcolor="Text"
 		font-family=basefont
 		font-size=15
 		bgcolor=none
-		render_bg {} 
+		render_bg {}
 	}
 
-	"ListPanel RichText url" 
+	"ListPanel RichText url"
 	{
 		font-size=15
 		textcolor="Text"
@@ -1626,61 +1628,61 @@ steam.styles
     "ListPanel RichTextInterior"
     {
       bgcolor=DarkDialogBG
-      render_bg {} 
+      render_bg {}
       bgcolor=none
     }
-    
+
     ListPanelSectionCollapser [!$OSX]
     {
-      
+
       bgcolor=none
       render_bg {}
-      image="graphics/icon_collapse" 
+      image="graphics/icon_collapse"
       inset="-4 0 0 0"
       padding-top=-2
       padding-bottom=-2
     }
-    
+
     ListPanelSectionCollapser [$OSX]
     {
       bgcolor=none
-      render_bg {}   
-      image="graphics/icon_collapse_osx" 
+      render_bg {}
+      image="graphics/icon_collapse_osx"
       inset="-4 0 0 0"
       padding-top=-2
       padding-bottom=-2
     }
-    
+
     ListPanelSectionCollapser:hover [!$OSX]
     {
-      image="graphics/icon_collapse_over" 
+      image="graphics/icon_collapse_over"
     }
-    
+
     ListPanelSectionCollapser:hover [$OSX]
     {
-      image="graphics/icon_collapse_over_osx" 
+      image="graphics/icon_collapse_over_osx"
     }
-    
+
     ListPanelSectionCollapser:selected [!$OSX]
     {
-      image="graphics/icon_expand" 
+      image="graphics/icon_expand"
     }
-    
+
     ListPanelSectionCollapser:selected [$OSX]
     {
-      image="graphics/icon_expand_osx" 
+      image="graphics/icon_expand_osx"
     }
-    
+
     ListPanelSectionCollapser:selected:hover [!$OSX]
     {
-      image="graphics/icon_expand_over" 
+      image="graphics/icon_expand_over"
     }
-    
+
      ListPanelSectionCollapser:selected:hover [$OSX]
     {
-      image="graphics/icon_expand_over_osx" 
+      image="graphics/icon_expand_over_osx"
     }
-    
+
 	MainNav
     {
 		textcolor="Label"
@@ -1697,7 +1699,7 @@ steam.styles
 		bgcolor="MenuBG2"
 		padding-right=4
 		inset="2 2 2 2"
-      
+
 		render_bg
 		{
 			0="gradient( x0, y0, x1, y0 + 140, MenuBG1, MenuBG2 )"
@@ -1705,11 +1707,11 @@ steam.styles
 
 
 		}
-      
+
 		render {}
 		corner_rounding=1
     }
-      
+
     MenuBar
     {
 		bgcolor=dialogbg
@@ -1718,42 +1720,42 @@ steam.styles
 		padding-top=2
 		padding-bottom=-2
     }
-    
+
     "Page MenuBar"
     {
 		bgcolor=none
     }
-    
-	"MenuBar MenuButton" 
+
+	"MenuBar MenuButton"
 	{
 		textcolor="buttonborder"
 		padding-right=-2
 		inset="-2 0 2 0"
 	}
-	
- 	"MenuBar MenuButton:frameFocus" 
+
+ 	"MenuBar MenuButton:frameFocus"
 	{
 		textcolor="labeldisabled"
 	}
-	
-	"MenuBar MenuButton:frameFocus:hover" 
+
+	"MenuBar MenuButton:frameFocus:hover"
 	{
 		textcolor="texthover"
 		bgcolor=none
 		render_bg
-   		{    
+   		{
    		}
 	}
-	
-	"MenuBar MenuButton:frameFocus:selected" 
+
+	"MenuBar MenuButton:frameFocus:selected"
 	{
 		textcolor="texthover"
 		bgcolor=none
 		render_bg
-   		{    
+   		{
    		}
 	}
-	
+
 	MenuButton
     {
       font-family=basefont
@@ -1762,18 +1764,18 @@ steam.styles
       textcolor="scrollglyph"
       bgcolor="none"
       render_bg {}
-    }  
-   
+    }
+
   MenuButton:hover
     {
       textcolor="white"
     }
-    
+
   MenuButton:selected
     {
 		textcolor="white"
     }
-        
+
 	MenuItem
     {
 		font-family=basefont
@@ -1785,34 +1787,34 @@ steam.styles
 		bgcolor="none"
 		render_bg {}
     }
-   
+
   MenuItem:selected
     {
 		textcolor="TextHover"
 		bgcolor="none"
     }
-	
+
   MenuItem:hover
     {
 		textcolor="white"
 		bgcolor="none"
     }
-    
+
     MenuItem:disabled
     {
 		textcolor="labeldisabled"
 		shadowtextcolor=none
     }
-    
+
     MenuItem:disabled:hover
     {
 		textcolor="labeldisabled"
 		shadowtextcolor=none
     }
-   
+
     MenuSeparator
     {
-		inset="-4 0 0 0"	
+		inset="-4 0 0 0"
 		textcolor="divider"
 		bgcolor=none
     }
@@ -1826,7 +1828,7 @@ steam.styles
 		render_bg
 		{
 			0="gradient( x0, y0, x1, y0+80, DialogBG, ClientBG )"
-        
+
 			1="gradient_horizontal( x0, y1-1, x1, y1, ClientBG, Highlight5 )"    // bottom
 			2="gradient( x1-1, y0, x1, y1 , ClientBG, Highlight5 )" // right
 			3="fill( x0, y0, x1, y0+1, ClientBG )"  // top
@@ -1835,7 +1837,7 @@ steam.styles
 		render {}
     }
 
-    
+
     Page
     {
 		bgcolor="none"
@@ -1851,12 +1853,12 @@ steam.styles
 		bgcolor="none"
 		render_bg {}
     }
-    
+
     "Page RadioButtonList"
     {
 		bgcolor="DialogBG"
     }
-      
+
 		PageTab
     {
 		textcolor="Label"
@@ -1869,11 +1871,11 @@ steam.styles
 		{
 			// background gradient
 			0="fill( x0, y0 , x1, y1 - 4, PropertySheetBG )"
-			1="fill(x0, y1-2, x1+3000, y1 -1, divider )"		
+			1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
 		}
     }
 
-    
+
     PageTab:selected
     {
 		textcolor="texthover"
@@ -1891,7 +1893,7 @@ steam.styles
 			}
     }
 
-    
+
  	PageTab:hover
     {
 		textcolor="texthover"
@@ -1907,7 +1909,7 @@ steam.styles
 				1="fill(x0, y1-2, x1+3000, y1 -1, divider )"
 			}
     }
-  
+
     PageTab:selected:hover
     {
 		textcolor="texthover"
@@ -1924,7 +1926,7 @@ steam.styles
 		    1="fill(x1, y1-2, x1+3000, y1 - 1, divider )"
 			}
     }
-      
+
   PageTab:Focus
 	  {
 		textcolor="Texthover"
@@ -1946,16 +1948,16 @@ steam.styles
     {
 		image="graphics/tiny_x_hover"
     }
-    
+
     Panel
-	{ 
+	{
 		font-family=basefont
 		font-size=14
 		font-weight=400
 		textcolor="Text"
 		bgcolor="none"
   }
-         	
+
     ProgressBar
     {
 		textcolor="highlight5a"
@@ -1967,9 +1969,9 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-		}   
+		}
 	}
-    
+
 	"Page ProgressBar"
     {
 		textcolor="highlight5a"
@@ -1980,20 +1982,20 @@ steam.styles
 		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
-		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right  
-		}   
+		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
+		}
     }
-	
+
     PropertyPage
     {
 		bgcolor="PropertySheetBG"
     }
-    
+
     "CFriendsDialog PropertySheet"
     {
 		bgcolor="none"
     }
-    
+
     RadioButton
     {
 		font-family=basefont
@@ -2003,14 +2005,14 @@ steam.styles
 		render_bg {}
 		image="graphics/RadUnselStd"
 		bgcolor=none
-    }     
-  
+    }
+
     RadioButton:selected
     {
 		render_bg {}
-		image="graphics/radSelStd"  
+		image="graphics/radSelStd"
     }
-    
+
     RadioButton:focus
     {
 		textcolor="Texthover"
@@ -2020,11 +2022,11 @@ steam.styles
 
     RadioButton:selected:focus
     {
-		textcolor="Texthover"  
+		textcolor="Texthover"
 		bgcolor=none
 		image="graphics/radSelFocus"
     }
-    
+
     RadioButtonList
     {
 		bgcolor="none"
@@ -2032,13 +2034,13 @@ steam.styles
 		render_bg
 			{
 			0="gradient( x0, y0, x1, y1, DialogBG, ClientBG  )"
-			}     
+			}
     }
-        
+
     RichText
     {
 		textcolor="Text"
-		selectedtextcolor="TextSelected"		
+		selectedtextcolor="TextSelected"
 		font-family=basefont
 		font-size=14
 		font-weight=400
@@ -2046,22 +2048,22 @@ steam.styles
 		render_bg
 		{
 		-1="fill( x0 + 1, y0 + 1, x1 - 1, y1 - 1, DialogBG )"
-        
+
 		// lines around
 		1="fill( x0 + 1, y0 + 1, x1 - 1, y0 + 2, ButtonBorder )"  // top
 		2="fill( x0 + 1, y1 - 1, x1 - 1, y1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-		}     
+		}
     }
-         
-    RichTextInterior 
+
+    RichTextInterior
 		{
 		bgcolor=none
     }
-    
+
 	// style of links in a rich text control
-	
+
 	"RichText url"
 	{
 		font-size=14
@@ -2069,26 +2071,26 @@ steam.styles
 		selectedtextcolor="label"
 		font-style=underline
 	}
-	
+
 	"RichText url:hover"
 	{
 		textcolor="Texthover"
 	}
-	
-	"CFriendPanel RichText URL" 
+
+	"CFriendPanel RichText URL"
 		{
 		textcolor="text"
 		font-style=underline
 		font-size=14
 		}
-	
+
 	// style of bold text in a rich text control
 	"RichText bold"
 	{
 		font-size=15
 		font-weight=1000
 	}
-	
+
 	"RichText emphasis"
 	{
 		font-size=15
@@ -2099,7 +2101,7 @@ steam.styles
 	{
 		inset="0 0 0 0"
 	}
-    
+
     ScrollBarButton.up
     {
 		bgcolor=none
@@ -2110,9 +2112,9 @@ steam.styles
 			// background fill
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonface )"
 		}
-		
+
     }
-    
+
     ScrollBarButton.up:hover
     {
 		bgcolor=none
@@ -2124,7 +2126,7 @@ steam.styles
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceActive )"
 		}
     }
-    
+
     ScrollBarButton.up:active
     {
 		inset="-1 2 0 0"
@@ -2146,7 +2148,7 @@ steam.styles
 			0="fill( x0 + 2, y0 + 3, x1 - 4, y1 + 2, buttonfaceDisabled )"
 		}
     }
-	
+
     ScrollBarButton.down
 	{
 		bgcolor=none
@@ -2158,7 +2160,7 @@ steam.styles
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonface )"
 		}
     }
-    
+
     ScrollBarButton.down:hover
 		{
 		inset="-2 0 0 0"
@@ -2169,7 +2171,7 @@ steam.styles
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
 		}
     }
-    
+
     ScrollBarButton.down:active
 		{
 		inset="-2 0 0 0"
@@ -2180,8 +2182,8 @@ steam.styles
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceActive )"
 		}
     }
-    
-    
+
+
      ScrollBarButton.down:disabled
 		{
 		inset="-2 0 0 0"
@@ -2192,118 +2194,118 @@ steam.styles
 			0="fill( x0 + 2, y0 - 1, x1 - 4, y1 - 3, buttonfaceDisabled )"
 		}
     }
-    
+
     ScrollBarButton.left
     {
 		bgcolor=none
 		inset="1 3 0 0"
 		image="graphics/icon_left_default"
-		render_bg 
+		render_bg
 			{
 				// center fill
 				0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFace )"
 			}
     }
-    
+
     ScrollBarButton.left:hover
     {
 
 		image="graphics/icon_left_hover"
 		inset="1 3 0 0"
-		render_bg 
+		render_bg
 			{
 				// center fill
 				0="fill( x0 + 2, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
 	    }
     }
-        
+
     ScrollBarButton.right
     {
 		bgcolor=none
 		image="graphics/icon_right_default"
 		inset="0 2 0 0"
-		render_bg 
+		render_bg
 			{
 				// center fill
 				0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFace )"
 	    }
     }
-        
+
     ScrollBarButton.right:hover
     {
 		image="graphics/icon_right_hover"
 		inset="0 2 0 0"
-		render_bg 
+		render_bg
 			{
 			// center fill
 			0="fill( x0, y0 + 5, x1, y1 - 3, ButtonFaceActive )"
       }
     }
-    
+
     ScrollBarHandle  //vertical scrollbar thumb
     {
 		bgcolor=none
 		image="graphics/icon_scroll_handle"
-		render_bg 
+		render_bg
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFace )"
 		}
     }
-       
+
     "ScrollBarHandle:hover"
     {
 		image="graphics/icon_scroll_handle_over"
-		render_bg 
+		render_bg
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFaceActive )"
 		}
     }
-    
+
     "ScrollBarHandle:active"
     {
 		image="graphics/icon_scroll_handle_over"
-		render_bg 
+		render_bg
 		{
 			// center fill
 			0="fill( x0 + 2, y0 + 6, x1 - 4, y1 - 5, ButtonFaceActive )"
 		}
     }
-    
 
- 
+
+
     "SliderHoriz"  //horizontal scrollbar thumb
     {
 	 	image="graphics/icon_scroll_handle_horiz"
-      render 
+      render
       {
       	// center fill
-        1="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFace )"		
+        1="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFace )"
 			}
     }
-    
+
     "SliderHoriz:hover"
     {
-	
+
 			image="graphics/icon_scroll_handle_over_horiz"
-      render 
+      render
       	{
       	// center fill
-        	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"	
+        	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"
 				}
     }
-    
+
     "SliderHoriz:active"
     {
-	 
+
     	image="graphics/icon_scroll_handle_over_horiz"
       	render {
       	// center fill
-        	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"	
+        	0="fill( x0 + 2, y0 + 6, x1 - 1, y1 - 3, ButtonFaceActive )"
 		}
     }
-    
+
     ScrollBarSlider // gutter
     {
 		bgcolor="none"
@@ -2315,16 +2317,16 @@ steam.styles
 			2="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
 		}
     }
-    
+
     ScrollBarSliderHoriz // gutter
     {
 		bgcolor="none"
 		render{ }
 		render_bg { }
     }
-    
-   
-    "GamesPage_Details ListPanel ScrollBarSlider" // gutter in games list detail view 
+
+
+    "GamesPage_Details ListPanel ScrollBarSlider" // gutter in games list detail view
     {
 		bgcolor="none"
 		render{ }
@@ -2334,13 +2336,13 @@ steam.styles
 			0="gradient( x0 + 2, y0 + 6, x1 - 4, y0 + 200, scrollbg, none)"
 		}
     }
-    
-    ScrollBarSlider:disabled 
+
+    ScrollBarSlider:disabled
     {
 		bgcolor="none"
 		render_bg {}
     }
-    
+
     "ScrollBar SliderHoriz" // gutter
     {
 		bgcolor="dialogbg"
@@ -2349,19 +2351,19 @@ steam.styles
 	"HTML ScrollBar"
 	{
 		bgcolor="none"
-		render_bg { 
+		render_bg {
 			0="fill(x0,y0,x1, y1 - 1, almostblack)"
 		}
 	}
 	"HTML ScrollBar.Horizontal"
 	{
 		bgcolor="none"
-		render_bg { 
+		render_bg {
 			0="fill(x0,y0,x1+25,y1, almostblack)"
 		}
 	}
-	
-	"HTML ScrollBarSlider.Horizontal" 
+
+	"HTML ScrollBarSlider.Horizontal"
 	{
 		bgcolor=none
 		render_bg {
@@ -2378,7 +2380,7 @@ steam.styles
 		{
 		}
 	}
- 
+
     SectionedListPanel
     {
 			bgcolor="propertysheetbg"
@@ -2390,18 +2392,18 @@ steam.styles
 			selectedbgcolor="Focus"
 			bgcolor="none"
 		render
-			{				
+			{
 
 			}
-		      render_bg 
+		      render_bg
       {
        	// background fill
 	   		0="gradient( x0, y0, x1, y0 + 140, dialogbg, almostblack )"
-	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"   		
-      }    
-      inset="1 -1 1 1"  
-    }  
-    
+	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"
+      }
+      inset="1 -1 1 1"
+    }
+
     "CFriendsDialog SectionedListPanel"
     {
       bgcolor="none"
@@ -2412,37 +2414,37 @@ steam.styles
       selectedtextcolor="TextSelected"
       selectedbgcolor="Focus"
       render { }
-      render_bg 
+      render_bg
       {
        	// background fill
 	   		0="gradient( x0, y0, x1, y0 + 140, dialogbg, almostblack )"
-	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"   		
-      }    
+	   		1="fill( x0, y0 + 140, x1, y1, almostblack )"
+      }
     }
-    
+
     SectionedlistpanelCollapser
     {
       render_bg {}
       bgcolor=none
       image="graphics/icon_collapse"
       inset="2 1 0 0"
-    } 
-    
+    }
+
     SectionedListPanelCollapser:hover
     {
       image="graphics/icon_collapse_over"
     }
-    
+
     SectionedListPanelCollapser:selected
     {
       image="graphics/icon_expand"
     }
-    
+
     SectionedListPanelCollapser:selected:hover
     {
       image="graphics/icon_expand_over"
     }
-  
+
     Slider
     {
       font-family=basefont
@@ -2451,28 +2453,28 @@ steam.styles
       textcolor="label"
       font-style=uppercase
     }
-      
+
     Slider:focus
     {
-      textcolor="Text"  
+      textcolor="Text"
     }
-    
+
     StatusLabel
     {
       font-family=basefont
       font-size=14
       font-weight=400
       textcolor="labelfocus"
-      font-style=uppercase   
+      font-style=uppercase
     }
-    
+
     StatusLabelDim
     {
       font-family=basefont
       font-size=14
       font-weight=400
       textcolor="TextDisabled"
-      font-style=normal   
+      font-style=normal
     }
 
     StatusLabel:hover
@@ -2482,7 +2484,7 @@ steam.styles
       font-weight=400
       textcolor="white"
       font-style=uppercase
-    }    
+    }
 
     TextEntry
     {
@@ -2505,10 +2507,10 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-       
-      }     
+
+      }
     }
-    
+
 	"Page TextEntry"
     {
       render
@@ -2519,11 +2521,11 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-      }     
+      }
     }
-    
+
     TextEntry:focus
-    {     
+    {
 		textcolor="TextHover"
 		bgcolor=none
 		render
@@ -2533,11 +2535,11 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
-		}     
+		}
     }
-       
+
     "Page TextEntry:focus"
-    {     
+    {
       textcolor="TextHover"
       render
       {
@@ -2546,12 +2548,12 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus )"  // right
-      }     
+      }
     }
-    
-    
+
+
     TextEntry:disabled
-    {     
+    {
       textcolor="TextDisabled"
       bgcolor="ButtonFaceDisabled"
       render
@@ -2561,9 +2563,9 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderDisabled )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // right
-      }     
+      }
     }
-    
+
 	// The 'empty' style is used for 'hint text' in text entry fields.
 	// If the text box does not have focus and does not have content, a
 	// hint text property will be shown with this style. This is comment
@@ -2573,7 +2575,7 @@ steam.styles
 		font-style=italic
 		textcolor=LabelDisabled
 	}
-	
+
     TextEntryLarge
     {
       font-family=basefont
@@ -2593,11 +2595,11 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorder )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorder )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorder )"  // right
-      }     
+      }
     }
 
     TextEntryLarge:focus
-    {     
+    {
       textcolor="TextHover"
       render
       {
@@ -2606,11 +2608,11 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderFocus  )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderFocus  )"  // right
-      }     
+      }
     }
-    
+
     TextEntryLarge:disabled
-    {     
+    {
       textcolor="TextDisabled"
       bgcolor="ButtonFaceDisabled"
       render
@@ -2620,9 +2622,9 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonBorderDisabled )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonBorderDisabled )"  // right
-      }     
+      }
     }
-    
+
     TextEntryURL
 	{
 		font-family=basefont
@@ -2635,7 +2637,7 @@ steam.styles
 		shadowtextcolor="Text"	// this is the cursor color
 		inset-left=0
 		inset-top=-1
-		render { }			
+		render { }
 	}
 
 	TextEntryURL:Hover
@@ -2648,9 +2650,9 @@ steam.styles
 		2="fill( x0 + 1, y1 - 2, x1 - 1, y1 - 1, ButtonFaceDisabled )"  // bottom
 		3="fill( x0 + 1, y0 + 1, x0 + 2, y1 - 1, ButtonFaceDisabled )"  // left
 		4="fill( x1 - 2, y0 + 1, x1 - 1, y1 - 1, ButtonFaceDisabled )"  // right
-		}			
+		}
 	}
-	
+
 	ToggleButton
     {
       inset="1 0 0 0"
@@ -2662,14 +2664,14 @@ steam.styles
       bgcolor=none
       render_bg
       {
-      
+
         // background fill
 	   0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
-  
+
     ToggleButton:focus
-    {     
+    {
             textcolor="TextHover"
             bgcolor="none"
 	 		render_bg
@@ -2678,22 +2680,22 @@ steam.styles
 			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
 		}
     }
-    
+
     ToggleButton:hover
     {
       textcolor="TextHover"
       bgcolor="none"
       render_bg
-      {     
-        
+      {
+
         // background fill
         0="gradient( x0, y0, x1, y1, buttonfaceactive, propertysheetbg )"
       }
     }
-    
+
     ToggleButton:selected
     {
-      
+
       textcolor="TextHover"
       bgcolor="none"
       render_bg
@@ -2702,8 +2704,8 @@ steam.styles
 		0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
       }
     }
-  
-    
+
+
     "Page ToggleButton"
     {
       font-family=basefont
@@ -2717,7 +2719,7 @@ steam.styles
 			0="gradient( x0, y0, x1, y1, buttonface2, propertysheetbg )"
       }
     }
-    
+
     "Page ToggleButton:hover"
     {
       textcolor="TextHover"
@@ -2727,7 +2729,7 @@ steam.styles
       	0="gradient( x0, y0, x1, y1, buttonfacehover, propertysheetbg )"
       }
     }
-  
+
     "Page ToggleButton:focus"
     {
       textcolor="TextHover"
@@ -2737,7 +2739,7 @@ steam.styles
 				0="gradient( x0, y0, x1, y1, buttonfacefocus, propertysheetbg )"
       }
     }
-   
+
     "Page ToggleButton:selected"
     {
       textcolor="TextHover"
@@ -2747,7 +2749,7 @@ steam.styles
 				0="gradient( x0, y0, x1, y1, backgroundstartopaque, propertysheetbg )"
       }
     }
-    
+
     // the background and frame of a tooltip
     TooltipWindow
     {
@@ -2760,7 +2762,7 @@ steam.styles
 		padding-left=4
         textcolor="Text"
     }
-    
+
     // headline text inside a tooltip
    	tooltip_headline
    	{
@@ -2768,25 +2770,25 @@ steam.styles
    		padding-left=4
    		padding-top=1
    		padding-bottom=0
-   		font-weight=1000   		
+   		font-weight=1000
    	}
-   	
+
     TreeNode
     {
       bgcolor=none
       render_bg {}
     }
-    
+
     TreeNodeImage
     {
       bgcolor=none
     }
-    
+
     TreeViewSubPanel
     {
       bgcolor=none
     }
-  
+
     TreeNodeText
     {
       font-family=basefont
@@ -2798,7 +2800,7 @@ steam.styles
       render {}
       render_bg {}
     }
-  
+
     TreeView
     {
       render_bg
@@ -2810,7 +2812,7 @@ steam.styles
 			2="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorder )"  // bottom
 			3="fill( x0, y0 + 2, x0 + 1, y1 - 2, ButtonBorder )"  // left
 			4="fill( x1 - 1, y0 + 2, x1, y1 - 2, ButtonBorder )"  // right
-        
+
       // single pixel fills in the corners
 			5="fill( x0 + 2, y0, x1 - 2, y0 + 1, ButtonBorderDisabled )"  // top
 			6="fill( x0 + 2, y1 - 1, x1 - 2, y1, ButtonBorderDisabled )"  // bottom
@@ -2824,9 +2826,9 @@ steam.styles
 			16="fill( x1 - 2, y0, x1 - 1, y0 + 1, ButtonBorderDisabled2 )"
 			17="fill( x0 + 1, y1 - 1, x0 + 2, y1, ButtonBorderDisabled2 )"
 			18="fill( x1 - 2, y1 - 1, x1 - 1, y1, ButtonBorderDisabled2 )"
-      }     
+      }
     }
-    
+
     URLLabel
     {
       textcolor="label"
@@ -2836,13 +2838,13 @@ steam.styles
       font-weight=400
       font-style=underline
     }
-    
+
    	URLLabel:Hover
 	{
 	 textcolor="texthover"
 	 font-size=14
 	}
-	
+
 	URLLabelSimple
     {
       textcolor="labelfocus"
@@ -2862,13 +2864,13 @@ steam.styles
       font-weight=400
       font-style=regular
     }
-    
+
   URLLabelSimple:Hover
     {
       font-style=underline
       textcolor="WHITE"
-    }  
-    
+    }
+
 	URLLabelSimple2
     {
       textcolor="labelfocus"
@@ -2888,13 +2890,13 @@ steam.styles
       font-weight=400
       font-style=regular
     }
-    
+
   URLLabelSimple2:Hover
     {
       textcolor="WHITE"
-    }  
+    }
 
-    
+
     // Steam-specific styles
     CConsoleHistory
     {
@@ -2906,34 +2908,34 @@ steam.styles
       font-size=14 [$OSX]
       textcolor="label"
       selectedtextcolor="TextSelected"
-      
+
       render
-			{				
+			{
 
 			}
-			render_bg 
-			{				
-				// background gradient        
+			render_bg
+			{
+				// background gradient
 				1="gradient( x0, y0, x1, y1, dialogbg, almostblack )"
 			}
     }
-    
+
     GameColumnHeaderFavorites
     {
       image="steam/cached/fav_remove"
 
     }
-    
+
     CGamesListFavoritesToggle
     {
       image="steam/cached/fav_addTo"
     }
-    
+
     CGamesListFavoritesToggle:hover
     {
       image="steam/cached/fav_addTo_ovr"
     }
-    
+
     CGamesListFavoritesToggle:selected
     {
       image="steam/cached/fav_remove"
@@ -2959,9 +2961,9 @@ steam.styles
         1="gradient( x0, y0, x1, y0 + 240, propertysheetbg, DarkDialogBG )"
         2="fill( x0, y0 + 240, x1, y1, DarkDialogBG )"
             }
-        inset="1 -1 1 1"  
+        inset="1 -1 1 1"
     }
-   
+
     BackButton
     {
       bgcolor=none
@@ -2969,35 +2971,35 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_back"
     }
-	
+
     BackButton:hover
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_back_down"
     }
-	
+
     BackButton:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_back_down"
     }
-	
+
     BackButton:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_back_disabled"
     }
-	
+
     FullscreenButton
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_controller_bpm"
     }
-    
+
 
     FullscreenButton:hover
     {
@@ -3005,27 +3007,27 @@ steam.styles
       render_bg={}
       image="graphics/icon_controller_bpm_over"
     }
-	
+
     FullscreenButton:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_controller_bpm_down"
     }
-	
+
     FullscreenButton:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_controller_bpm_disabled"
     }
-    
+
     VRButton
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr"
-    }  
+    }
 
     VRButton:hover
     {
@@ -3033,27 +3035,27 @@ steam.styles
       render_bg={}
       image="graphics/icon_vr_over"
     }
-	
+
     VRButton:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr_down"
     }
-	
+
     VRButton:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr_disabled"
     }
-    
+
     VRButtonExit
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr_happy"
-    }  
+    }
 
     VRButtonExit:hover
     {
@@ -3061,21 +3063,21 @@ steam.styles
       render_bg={}
       image="graphics/icon_vr_happy_over"
     }
-	
+
     VRButtonExit:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr_happy_down"
     }
-	
+
     VRButtonExit:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_vr_disabled"
     }
-    
+
     ForwardButton
     {
       bgcolor=none
@@ -3083,28 +3085,28 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_forward"
     }
-    
+
     ForwardButton:hover
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_forward_over"
     }
-	
+
     ForwardButton:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_forward_down"
     }
-	
+
     ForwardButton:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_forward_disabled"
     }
-    
+
     HomeButton
     {
       bgcolor=none
@@ -3112,28 +3114,28 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_home"
     }
-    
+
     HomeButton:hover
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_home_over"
     }
-	
+
     HomeButton:active
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_home_down"
     }
-	
+
     HomeButton:disabled
     {
       bgcolor=none
       render_bg={}
       image="graphics/icon_button_home_disabled"
     }
-	
+
     ReloadButton
     {
       bgcolor=none
@@ -3141,7 +3143,7 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_reload"
     }
-    
+
     ReloadButton:hover
     {
       bgcolor=none
@@ -3162,7 +3164,7 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_reload_disabled"
     }
-    
+
     StopButton
     {
       bgcolor=none
@@ -3170,7 +3172,7 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_stop"
     }
-    
+
     StopButton:hover
     {
       bgcolor=none
@@ -3191,8 +3193,8 @@ steam.styles
       render_bg={}
       image="graphics/icon_button_stop_disabled"
     }
-    
-  
+
+
 	gamedetails-headerlabel
 	{
 		font-size="17"
@@ -3212,7 +3214,7 @@ steam.styles
 		textcolor="GameDetailsRed"
 		font-style="uppercase;"
 	}
- 
+
  	"html-findbar"
  	{
 		font-family=basefont
@@ -3225,16 +3227,16 @@ steam.styles
 		shadowtextcolor="Text"	// this is the cursor color
 		inset-left=0
 		inset-top=0
-		
+
 			render
 		      {
 		        // lines around
 		        0="fill( x0, y0, x0 + 1, y1, ButtonBorder )"
-		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )" 
+		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )"
 		        2="gradient_horizontal( x0, y1 - 1, x1, y1, ButtonBorder, none )"
-		      }     	
+		      }
 	}
-		
+
  	"html-imebar"
  	{
 		font-family=basefont
@@ -3247,16 +3249,16 @@ steam.styles
 		shadowtextcolor="Text"	// this is the cursor color
 		inset-left=0
 		inset-top=0
-		
+
 			render
 		      {
 		        // lines around
 		        0="fill( x0, y0, x0 + 1, y1, ButtonBorder )"
-		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )" 
+		        1="gradient_horizontal( x0, y0, x1, y0 + 1, ButtonBorder, none )"
 		        2="gradient_horizontal( x0, y1 - 1, x1, y1, ButtonBorder, none )"
-		      }     	
+		      }
 	}
-		
+
 	gamedetails-headerlabel-green
 	{
 		font-size="17"
@@ -3276,9 +3278,9 @@ steam.styles
 		font-weight=700
 		font-style="uppercase;"
 	}
-	
+
 	// styles for text used in RichText controls in various places
-	
+
 	console_text_error
 	{
 		textcolor="Highlight3"
@@ -3290,7 +3292,7 @@ steam.styles
 		selectedtextcolor="TextSelected"
 		selectedbgcolor="Focus"
 	}
-	
+
 	console_text
 	{
 		font-family="Lucida Console"
@@ -3300,22 +3302,22 @@ steam.styles
 		font-family="Menlo" [$OSX]
 		font-size=14 [$OSX]
 		textcolor="text"
-		selectedtextcolor="TextSelected"	
+		selectedtextcolor="TextSelected"
 		selectedbgcolor="Focus"
 	}
-	
+
 	friends_chat_text
 	{
 		textcolor="text"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		SelectedBgColor="focus"
 		font-size=16
 	}
-	
+
 	friends_chat_text_self
 	{
 		textcolor="ChatOwnTextColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
@@ -3323,11 +3325,11 @@ steam.styles
 	friends_chat_history
 	{
 		textcolor="ChatDialog.HistoryColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
-	
+
 	friends_chat_event
 	{
 		textcolor="Text"
@@ -3353,11 +3355,11 @@ steam.styles
 		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 	}
-	
+
 	friends_chat_name_ingame
 	{
 		textcolor="Friends.InGameColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
@@ -3365,36 +3367,36 @@ steam.styles
 	friends_chat_name_golden
 	{
 		textcolor="Friends.GoldenColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
 
-	
+
 	friends_chat_self
 	{
 		textcolor="Friends.OnlineColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
-	
+
 	friends_chat_name
 	{
 		textcolor="Friends.OnlineColor"
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		font-size=16
 	}
-	
+
 	friends_chat_accountid
 	{
-		selectedtextcolor="TextentrySelected"	
+		selectedtextcolor="TextentrySelected"
 		selectedbgcolor="focus"
 		textcolor="text"
 		font-size=16
 	}
-	
+
 	friends_chat_securitylink
 	{
 		textcolor="text"
@@ -3403,12 +3405,12 @@ steam.styles
 		font-size=16
 		font-weight=400
 		font-style=underline
-		selectedtextcolor="TextSelected"	
+		selectedtextcolor="TextSelected"
 		selectedbgcolor="Focus"
 	}
-	
+
 		CChatRoomDlg
-		{			
+		{
 			bgcolor="none"
 
 			render
@@ -3421,9 +3423,9 @@ steam.styles
 			}
 
 		}
-		
+
 		ChatListPanel
-		{	
+		{
 		render {}
 
 		render_bg
@@ -3431,8 +3433,8 @@ steam.styles
 						 0="gradient( x0, y0, x1 -16, y1, darkdialogbg, almostblack )"
 			}
 		}
-			
-	
+
+
 	Chat_MenuButton_withChrome
 	{
 		font-family=basefont
@@ -3441,51 +3443,51 @@ steam.styles
 		font-weight=400
 		textcolor="text"
 		bgcolor="none"
-		render_bg 
-		{     
+		render_bg
+		{
 			// background fill
-			0="gradient( x0, y0, x1, y1, buttonface, propertysheetbg )"             
+			0="gradient( x0, y0, x1, y1, buttonface, propertysheetbg )"
 		}
 		minimum-width=120
 	}
-	
+
 	Chat_MenuButton_withChrome:disabled
   {
       textcolor="LabelDisabled"
       render_bg
-      {     
+      {
         // background fill
         0="fill( x0, y0, x1, y1, none )"
-                
+
       }
-    }    
-    
+    }
+
    	// used in friends tooltip and friends list for overriding regular styles with custom colors
    	friends_offline
    	{
    		textcolor="Friends.OfflineColor"
    	}
-   	
+
     friends_offline:hover
    	{
    		textcolor="Friends.OfflineHoverColor"
    	}
-   	
+
    	friends_online
    	{
    		textcolor="Friends.OnlineColor"
    	}
-   	
+
    	friends_online:hover
    	{
    		textcolor="Friends.OnlineHoverColor"
    	}
-   	
+
    	friends_ingame
    	{
    		textcolor="Friends.InGameColor"
    	}
-   	   	
+
    	friends_ingame:hover
    	{
    		textcolor="Friends.InGameHoverColor"
@@ -3495,18 +3497,70 @@ steam.styles
    	{
    		textcolor="Friends.GoldenColor"
    	}
-   	   	
+
    	friends_golden:hover
    	{
    		textcolor="Friends.GoldenHoverColor"
    	}
-   	
+
    	friends_ignored
    	{
    		textcolor="Friends.IgnoredColor"
    	}
 
-   	
+	view_friends [!$OSX]
+	{
+		textcolor="LabelFocus"
+		bgcolor="none"
+		font-family=basefont
+		font-size=14
+		font-weight=400
+		font-style=regular,uppercase
+		padding-top=0
+		padding-right=28
+
+		render_bg
+		{
+			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
+			2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist )"
+		}
+	}
+
+	view_friends [$OSX]
+	{
+		textcolor="LabelFocus"
+		bgcolor="none"
+		font-family=basefont
+		font-size=13
+		font-weight=400
+		font-style=regular,uppercase
+		padding-top=-1
+		padding-left=6
+
+		render_bg
+		{
+			1="image( x0, y0, x1, y1, graphics/glow_friendslist )"
+			2="image( x1-30, y0+20, x0, y0, graphics/icon_friendslist )"
+		}
+	}
+
+	view_friends:Hover
+	{
+		 textcolor="white"
+
+		 render_bg
+		{
+			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
+			2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist_over )"
+		}
+	}
+
+	view_friends:disabled
+	{
+		textcolor="TextDisabled"
+	}
+
+
    	TabPageCloseButton
    	{
    		padding-right=16
@@ -3524,7 +3578,7 @@ steam.styles
 			// top area and graphic
 			0="fill( x0, y0, x1, y1, MenuBg )"
 			1="image( x0, y0, x1, y1, graphics/clienttexture8)"
-			
+
 								// lines around
 				2="fill( x0 + 1, y0, x1 - 1, y0 + 1, blueborder )"  // top
 				3="fill( x0 + 1, y1 - 1, x1 - 1, y1, blueborder )"  // bottom
@@ -3560,16 +3614,16 @@ steam.styles
 			1="fill( x0+6, y0+1, x1-6, y0+2, SuperDivider )"
 		}
 	}
-	
+
 	"NotifyRemoteClientTitle"
 	{
 		textcolor="LabelDisabled"
 	}
-	
+
 	"NotifyRemoteClientInfo"
 	{
 		textcolor="176 172 165 255"
 	}
-	
+
   }
 }

@@ -17,6 +17,12 @@
 	transition-timing-function: linear;
 }
 
+#TouchMenu.Bumper
+{
+    width: 800px;
+    height: 180px;
+}
+
 #TouchMenu.Radial
 {
     border-bottom-left-radius: 50%;
@@ -58,6 +64,13 @@
 #TouchMenuPad.Radial
 {
     border-radius: 50%;
+	background-color: #20202088;
+}
+
+#TouchMenuPad.Bumper
+{
+    width: 770px;
+    height: 110px;
 	background-color: #20202088;
 }
 

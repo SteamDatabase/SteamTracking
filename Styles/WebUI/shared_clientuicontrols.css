@@ -1,0 +1,659 @@
+.ClientUIControls div
+{
+	cursor: default;
+}
+
+.ClientUIControls :focus
+{
+	outline: none !important;
+}
+
+
+#ControlZooContainer
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.DevButton
+{
+	color: yellow;
+	font-size: 18px;
+	text-align: center;
+	height: 32px;
+	border-radius: 4px;
+	padding: 4px 16px;
+	margin: 16px;
+	display: inline-block;
+	max-width: 200px;
+	text-transform: uppercase;
+	background-image: linear-gradient(to bottom, transparent 0%, rgba( 0, 0, 0, .5) 100%);
+	background-color: green;
+	align-content: center;
+	line-height: 32px;
+	border: 1px solid #00ff00;
+	transition-property: background-color;
+	transition-duration: .32s;
+}
+
+.DevButton:hover
+{
+	background-color: yellowgreen;
+}
+
+.DevButton:active
+{
+	background-color: black;
+}
+
+.ClientUIControls input[type="submit"],
+.ButtonLabel,
+.GenericButton
+{
+	color: rgba( 255, 255, 255, .5);
+	text-transform: uppercase;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 200;
+	font-family: 'Montserrat';
+	line-height: 32px;
+	letter-spacing: 2px;
+	padding: 0px 16px;
+	text-overflow: ellipsis;
+	background-image: linear-gradient(to bottom, transparent 10%, rgba( 0, 0, 0, .0) 40%, rgba( 0, 0, 0, .0) 100%);
+	transition-property: transform, color, background-color, background-image;
+	transition-duration: .12s;
+	transition-timing-function: ease-in-out;
+}
+
+.ClientUIControls input[type="submit"],
+.GenericButton
+{
+	max-height: 32px;
+	min-width: 100px;
+	display: inline-block;
+	border: 1px solid black;
+	background-color: rgba( 37, 41, 48, 1);
+	background-image: linear-gradient(to bottom, transparent 50%, rgba( 0, 0, 0, .1) 75%, rgba( 0, 0, 0, .4) 100%);
+	transition-property: background-color, transform;
+	transition-duration: .16s, .16s;
+	transition-timing-function: ease-in-out;
+	margin: 16px;
+	box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, .25);
+}
+
+.ClientUIControls input[type="submit"]:not([disabled]):focus,
+.GenericButton:not([disabled]):focus,
+.ClientUIControls input[type="submit"]:not([disabled]):hover,
+.GenericButton:not([disabled]):hover
+{
+	background-color: rgba( 53, 61, 75, 1);
+	color: white;
+}
+
+.GenericButton .ButtonLabel
+{
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.ClientUIControls input[type="submit"]:not([disabled]):active,
+.GenericButton:not([disabled]):active
+{
+	transform: translateY(1px) scale3d( .98, .98, 1);
+}
+
+
+/*------------------ POPUPS -------------*/
+
+.PopupGeneric
+{
+	max-width: 700px;
+	border-top: solid 1px transparent;
+	border-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='50' height='5'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%2333576C'/><stop offset='0.334' stop-color='%2366C8E4'/><stop offset='1' stop-color='%23314C5A'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+	width: fit-content;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	border-radius: 0px;
+	background: radial-gradient(ellipse farthest-corner at 0 25%, #262A31 0%, #202329 60%, #0A0B0D 140%);
+	opacity: 1;
+	transform: scale3d( 1, 1, 1);
+	box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+	transition-duration: .32s;
+	transition-property: opacity, transform, box-shadow;
+	transition-timing-function: ease-in-out;
+
+}
+
+.ModalAnimation-appear .PopupGeneric,
+.ModalAnimation-leave .PopupGeneric
+{
+	opacity: 0;
+	box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 1);
+	transform: scale3d( .92, .92, 1);
+	transition-duration: .42s;
+}
+
+.PopupGenericContent
+{
+	opacity: 0;
+	display: flex;
+	padding: 32px;
+	text-align: center;
+	flex-flow: column nowrap;
+	transform: scale3d( .85, .85, 1);
+	transition-property: opacity, transform;
+	transition-duration: .22s;
+	transition-delay: 0s;
+	transition-timing-function: ease-in-out;
+}
+
+/* workaround to achieve justify-content without pushing content outside of visible area.
+	see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes#Flex_item_considerations
+*/
+.PopupGenericContent > :first-child
+{
+	margin-top: auto;
+}
+
+.PopupGenericContent > :last-child
+{
+	margin-bottom: auto;
+}
+
+.PopupGeneric.PopupVisible .PopupGenericContent
+{
+	opacity: 1;
+	transform: scale3d( 1, 1, 1);
+	transition-delay: 0.05s;
+	transition-duration: .42s;
+}
+
+.PopupGenericChildren
+{
+}
+
+.PopupGenericTitle
+{
+	font-size: 34px;
+	text-transform: uppercase;
+	color: white;
+	text-align: left;
+	font-family: 'Motiva Sans Light';
+	letter-spacing: 4px;
+	min-width: 300px;
+	margin-bottom: 16px;
+	text-shadow: 4px 4px 8px rgba( 0, 0, 0, .5);
+}
+
+.PopupGenericSubTitle
+{
+	color: rgba(126, 126, 126, 1);
+	font-size: 13px;
+	margin: auto;
+	margin-bottom: 10px;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+.PopupGenericBodyText
+{
+	color: rgba(126, 126, 126, 1);
+	font-size: 16px;
+	margin: auto;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+.PopupGenericControls
+{
+	display: flex;
+	align-self: flex-end;
+	overflow: hidden;
+}
+
+.PopupGeneric.PopupVisible .PopupHangingButton
+{
+	transform: translateY(0px);
+}
+
+.PopupHangingButton:hover
+{
+	background-color: #2C3038;
+}
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton:not(.NegativeButton):hover,
+.PopupHangingButton:active
+{
+	background-color: rgba( 0, 122, 204, .2);
+}
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton.NegativeButton:hover,
+.PopupHangingButton.NegativeButton:active
+{
+	background-color: rgba( 59, 42, 48, 1);
+}
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton:hover
+{
+	transform: translateY(0px);
+	transition-delay: .5s;
+}
+
+.PopupHangingButton
+{
+	flex-grow: 1;
+	flex-basis: 100%;
+	height: 64px;
+	transform: translateY(64px);
+	border: 1px solid black;
+	background-color: rgba( 0, 0, 0, 0);
+	background-image: linear-gradient(to top, transparent 80%, rgba( 0, 0, 0, .1) 90%, rgba( 0, 0, 0, .4) 100%);
+	transition-property: background-color, transform;
+	transition-duration: 0s, .22s;
+	transition-timing-function: ease-in-out;
+}
+
+.PopupGenericControls:first-child .PopupHangingButton
+{
+	border-left: 0px solid black;
+}
+
+.PopupGenericControls:last-child .PopupHangingButton
+{
+	border-right: 0px solid black;
+}
+
+.PopupHangingButton .ButtonLabel
+{
+	line-height: 64px;
+	font-size: 20px;
+}
+
+.PopupHangingButton:hover .ButtonLabel
+{
+	color: white;
+}
+
+.PopupHangingButton:active .ButtonLabel
+{
+	transform: translateY(1px) scale3d(.95, .95, 1);
+	color: rgba( 156, 220, 254, 1);
+}
+
+.PopupHangingButton.NegativeButton:active .ButtonLabel
+{
+	color: rgba( 255, 210, 154, 1);
+}
+
+.PopupGeneric select
+{
+	width: 100%;
+}
+
+.ClientUIControls select
+{
+	-webkit-appearance: menulist;
+	-webkit-rtl-ordering: logical;
+	box-sizing: border-box;
+	align-items: center;
+	white-space: pre;
+	color: #dfe3e6;
+	font-size: 16px;
+	font-family: 'Motiva Sans Light';
+	line-height: 32px;
+	overflow: hidden;
+	padding: 12px 10px;
+	margin-bottom: 30px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 300px;
+	/*cursor: pointer;*/
+	border-radius: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	border: none;
+	background-color: #434953;
+	transition-property: background-color, transform, box-shadow, border;
+	transition-duration: .16s, .16s;
+	transition-timing-function: ease-in-out;
+}
+
+.ClientUIControls select:disabled
+{
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, .25);
+	border: 1px solid rgba( 0, 0, 0, .3);
+	background-color: #1F2023;
+	color: #5D5D5D;
+	cursor: default;
+}
+
+.ClientUIControls select option
+{
+	color: rgba( 255, 255, 255, .5);
+	text-transform: uppercase;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 200;
+	font-family: 'Motiva Sans Light';
+	line-height: 32px;
+	display: block;
+	white-space: pre;
+	font-size: 16px;
+	min-height: 1.2em;
+	padding: 0px 2px 1px;
+}
+
+.ClientUIControls input[type="checkbox"]
+{
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	background-color: rgba( 37, 41, 48, 1);
+	background-image: linear-gradient(to bottom, transparent 50%, rgba( 0, 0, 0, .1) 75%, rgba( 0, 0, 0, .4) 100%);
+	background-size: 100%;
+	border: 1px solid black;
+	box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, .25);
+	border-radius: 3px;
+	vertical-align: middle;
+	margin-right: 8px;
+	transition-property: background-color, border;
+	transition-duration: .32s;
+	transition-timing-function: ease-in-out;
+}
+
+.ClientUIControls input[type="checkbox"]:checked
+{
+	background-color: #63C1FF;
+	padding: 4px;
+}
+
+.ClientUIControls input[type="checkbox"]:hover
+{
+	border-color: #007ACC;
+}
+
+.ClientUIControls input[type="checkbox"]:disabled:hover
+{
+	border-color: black;
+}
+
+.ClientUIControls input[type="checkbox"]:disabled+label
+{
+	color: gray;
+}
+
+.InputLabel
+{
+	color: #939393;
+	transition: color .32s;
+}
+
+.InputLabel:hover
+{
+	color: #63C1FF;
+}
+
+.ClientUIControls input[type="text"],
+.ClientUIControls input[type="password"]
+{
+	height: 32px;
+	box-shadow: inset 2px 2px 8px #000000;
+	border: 0px solid transparent;
+	background-color: rgba(24, 26, 30, 1);
+	color: #555;
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	padding: 0px 14px;
+	transition-property: background-position, box-shadow, background-color, color, padding;
+	transition-duration: .32s;
+	transition-timing-function: ease-in-out;
+}
+
+.ClientUIControls input[type="password"]
+{
+	font-weight: 1200;
+	letter-spacing: 6px;
+}
+
+.ClientUIControls input[type="text"]:focus,
+.ClientUIControls input[type="password"]:focus
+{
+	background-color: rgba(44, 48, 54, 1);
+	box-shadow: inset 0px 0px 4px #000000;
+	outline-width: 0px;
+	color: #aaa;
+	padding-left: 12px;
+	background-position: 2px;
+}
+
+.ClientUIControls input[type="text"]:focus::-webkit-input-placeholder
+{
+	color: rgba(90, 92, 97, 1);
+}
+
+.ClientUIControls input[type="text"]:hover::-webkit-input-placeholder
+{
+	color: rgba(90, 92, 97, 1);
+}
+
+.ClientUIControls ::-webkit-input-placeholder
+{
+	color: rgba(38, 42, 44, 1);
+	font-style: italic;
+	transition: color .32s ease-in-out;
+}
+
+.ClientUIControls input[type="password"]::selection,
+.ClientUIControls input[type="text"]::selection
+{
+	background-color: rgba(138, 175, 192, 1);
+	color: white;
+}
+
+
+.SpecularHighlightContainer
+{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	pointer-events: none;
+}
+
+.SpecularHighlight
+{
+	width: 100%;
+	height: 100%;
+	background: radial-gradient(ellipse farthest-corner at 50% 50%, #ffffff 0%, rgba( 255, 255, 255, 0) 100%);
+	position: absolute;
+	z-index: 10;
+	pointer-events: none;
+	transition-property: opacity, transform;
+	transition-duration: .32s;
+	transition-timing-function: ease-in-out;
+}
+
+.ToggleSlider
+{
+	width: 40px;
+	height: 26px;
+	background: #333;
+	border-radius: 50px;
+	position: relative;
+	box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.ToggleSlider .Slide
+{
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	transition: all .4s ease;
+	/*cursor: pointer;*/
+	position: absolute;
+	top: 4px;
+	left: 3px;
+	z-index: 1;
+	background-color: #888888;
+}
+
+.ToggleSlider input[type=checkbox]
+{
+	display: none;
+}
+
+.ToggleSlider input[type=checkbox]:checked+.Slide
+{
+	left: 18px;
+	background-color: #63c1ff;
+}
+
+.PopupFullWindow .TitleBar {
+	bottom: auto;
+	background-color: rgba( 86, 86, 86, .1 );
+	background: linear-gradient( to right, rgba( 255, 255, 255, 0.1 ) 15%, rgba( 255, 255, 255, 0.2 ) 20%, rgba( 255, 255, 255, 0.03 ) 95% );
+	border-bottom: 1px solid rgba( 0, 0, 0, .2 );
+	height: 24px;
+}
+
+.ModalDialogPopup .PopupFullWindow .TitleBar
+{
+	background: none;
+	background-color: transparent;
+	border: none;
+	height: 64px;
+}
+
+.PopupFullWindow .PopupGeneric {
+	max-width: none;
+	width: auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.PopupFullWindow .PopupGeneric .PopupGenericContent {
+	flex: auto;
+	overflow-y: auto;
+	padding-top: 48px;
+}
+
+.PopupFullWindow .PopupGenericControls {
+	align-self: auto;
+	flex-shrink: 0;
+}
+
+.PopupFullWindow .PopupGenericBodyText {
+	margin: 0;
+	flex: auto;
+}
+
+.PopupFullWindow .PopupGenericChildren {
+	flex: auto;
+}
+
+
+
+.SettingsPageContainer
+{
+	width: 100%;
+	height: 100%;
+}
+
+.SettingsPage
+{
+	padding: 20px;
+	text-align: left;
+}
+
+.SettingsPage .SettingsGroup
+{
+	margin-bottom: 32px;
+}
+
+.SettingsPage .SettingsGroup > *
+{
+	margin-left: 32px;
+}
+
+.SettingsPage .SettingsGroup h1,
+.SettingsPage h1
+{
+	width: 100%;
+	max-width: 1280px;
+	color: white;
+	text-transform: uppercase;
+	background-image: linear-gradient( to right, #2C323C 50%, #212731 75%, rgba( 0, 0, 0, 0 ) 100% );
+	margin-left: 0px;
+	line-height: 38px;
+	border-radius: 2px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 24px;
+	padding: 4px;
+	padding-left: 16px;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	font-size: 24px;
+}
+
+.SettingsPage .SettingsGroup h2,
+.SettingsPage h2
+{
+	width: 100%;
+	color: white;
+	font-size: 18px;
+	margin-left: 16px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 4px;
+	font-weight: lighter;
+}
+
+.SettingsPage div.SettingsFriendsSubGroup
+{
+	margin-left: 8px;
+	margin-bottom: 18px;
+}
+
+.SettingsStringValue
+{
+	font-weight: bold;
+}
+
+.SettingsPage a:hover
+{
+	text-decoration: underline;
+}
+
+.SettingsPage div
+{
+	color: #ddd;
+	font-size: 16px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.SettingsCheckBox
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.SettingsCheckBox div
+{
+	margin-left: 4px;
+}
+
+.SettingsTextInputDiv
+{
+	display: flex;
+	flex-direction: row;
+}
+

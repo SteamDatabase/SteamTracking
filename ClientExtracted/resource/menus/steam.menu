@@ -58,12 +58,14 @@
 		ViewFriends						{	text="#steam_menu_view_friends"			shellcmd="steam://open/friends" }
 		Divider							{}
 		AddFriend						{	text="#steam_menu_add_friend"			shellcmd="steam://friends/add" }
+		EditProfileNameAvatar			{	text="#steam_menu_edit_profile_name_avatar"	shellcmd="steam://url/SteamIDEditPage" }
 		Divider							{}
 		Online							{	text="#friends_online"					shellcmd="steam://friends/status/online"		checkable=1		autocheck=0 }
 		Away							{	text="#friends_away"					shellcmd="steam://friends/status/away"			checkable=1		autocheck=0 }
 		Play							{	text="#friends_lookingtoplay"			shellcmd="steam://friends/status/play"			checkable=1		autocheck=0 }
 		Trade							{	text="#friends_lookingtotrade"			shellcmd="steam://friends/status/trade"			checkable=1		autocheck=0 }
 		Busy							{	text="#friends_busy"					shellcmd="steam://friends/status/busy"			checkable=1		autocheck=0 }
+		Invisible						{	text="#friends_invisible"				shellcmd="steam://friends/status/invisible"		checkable=1		autocheck=0 }
 		Offline							{	text="#friends_offline"					shellcmd="steam://friends/status/offline"		checkable=1		autocheck=0 }
 		Divider							{}
 		SortByName						{	text="#steam_menu_friends_sortbyname"	shellcmd="steam://friends/settings/sortbyname"	checkable=1 }

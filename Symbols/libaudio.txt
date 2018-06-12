@@ -8,6 +8,8 @@
  B s_NoEscConversion
  B s_StringCharConversion
  B s_pAudioController
+ CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -231,7 +233,6 @@
  T CAudioController::Validate(CValidator&, char const*)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CDLLValidate::Validate(CValidator&)
- T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::GetNextPointer()
  T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Init(CSysModule*)
  T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::Release()
@@ -611,8 +612,8 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, __va_list_tag*)
- T CUtlString::FormatV(char const*, char*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
+ T CUtlString::VFormat(char const*, char*)
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
@@ -628,37 +629,33 @@
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::FindAndRemove(CMilesAudioDevice* const&)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::GrowVector(int)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::InsertBefore(int, CMilesAudioDevice* const&)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Remove(int)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Validate(CValidator&, char const*)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::FindAndRemove(IAudioDeviceListener* const&)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::GrowVector(int)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::InsertBefore(int, IAudioDeviceListener* const&)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsLeft(int, int)
- T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::ShiftElementsRight(int, int)
+ T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::Remove(int)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::Validate(CValidator&, char const*)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::~CUtlVector()
  T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::AddToTail(IAudioOutputStream*&&)
  T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::FindAndRemove(IAudioOutputStream* const&)
  T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::GrowVector(int)
- T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::Remove(int)
  T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::Validate(CValidator&, char const*)
  T CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >::~CUtlVector()
  T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::AddToTail(IAudioSound*&&)
  T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::GrowVector(int)
- T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::Remove(int)
  T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::Validate(CValidator&, char const*)
  T CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CreateInterface
@@ -680,15 +677,15 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
- V_CbMakeAbsolutePath
  V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath
- V_MakeAbsolutePath
+ V_RemoveDotSlashes
  V_UnqualifiedFileName
  V_snprintf
  V_stristr(char const*, char const*)
  V_strncat
+ V_strncat_length
  V_strncpy
  V_strnicmp
  _Unwind_Resume
@@ -809,6 +806,5 @@
  t _GLOBAL__sub_I_utlsymbol.cpp
  unlink
  vasprintf
- vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info

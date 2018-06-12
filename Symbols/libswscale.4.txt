@@ -1,3 +1,4 @@
+
  T sws_addVec
  T sws_allocVec
  T sws_alloc_context
@@ -60,8 +61,11 @@
  memcmp
  memcpy
  memset
+ mmap
  mmap$UNIX2003
+ mprotect
  mprotect$UNIX2003
+ munmap
  munmap$UNIX2003
  pow
  sin

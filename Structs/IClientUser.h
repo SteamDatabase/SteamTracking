@@ -59,7 +59,6 @@ public:
     virtual unknown_ret BIsAcademicAccount() = 0;
     virtual unknown_ret BIsPortal2EducationAccount() = 0;
     virtual unknown_ret BIsAlienwareDemoAccount() = 0;
-    virtual unknown_ret CreateAccount(char const*, char const*, char const*) = 0;
     virtual unknown_ret ResetPassword(char const*, char const*, char const*, char const*, char const*, char const*) = 0;
     virtual unknown_ret ValidatePasswordResetCodeAndSendSms(char const*, char const*) = 0;
     virtual unknown_ret TrackNatTraversalStat(CNatTraversalStat const*) = 0;
@@ -216,6 +215,8 @@ public:
     virtual unknown_ret BSetParentalSettings(CUtlBuffer*) = 0;
     virtual unknown_ret BDisableParentalSettings() = 0;
     virtual unknown_ret BGetParentalWebToken(CUtlBuffer*, CUtlBuffer*) = 0;
+    virtual unknown_ret GetCommunityPreference(ECommunityPreference) = 0;
+    virtual unknown_ret SetCommunityPreference(ECommunityPreference, bool) = 0;
     virtual unknown_ret BCanLogonOfflineMode() = 0;
     virtual unknown_ret LogOnOfflineMode() = 0;
     virtual unknown_ret ValidateOfflineLogonTicket(char const*) = 0;
@@ -224,11 +225,12 @@ public:
     virtual unknown_ret SetAsyncNotificationEnabled(unsigned int, bool) = 0;
     virtual unknown_ret BIsOtherSessionPlaying(unsigned int*) = 0;
     virtual unknown_ret BKickOtherPlayingSession() = 0;
-    virtual unknown_ret PerformAccountRecoveryUpload() = 0;
     virtual unknown_ret BIsAccountLockedDown() = 0;
     virtual unknown_ret RemoveAppTag(CGameID, char const*) = 0;
     virtual unknown_ret AddAppTag(CGameID, char const*) = 0;
     virtual unknown_ret SetAppHidden(CGameID, bool) = 0;
     virtual unknown_ret RequestAccountLinkInfo() = 0;
     virtual unknown_ret RequestSurveySchedule() = 0;
+    virtual unknown_ret RequestNewSteamAnnouncementState() = 0;
+    virtual unknown_ret UpdateSteamAnnouncementLastRead(unsigned long long, unsigned int) = 0;
 };

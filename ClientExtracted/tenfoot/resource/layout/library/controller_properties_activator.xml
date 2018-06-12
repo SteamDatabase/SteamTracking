@@ -17,7 +17,7 @@
 			-->
 			<Panel id="LeftColumn" class="Column" selectionpos="10,3">
 				<!-- Top tab -->
-				<Panel class="FieldWrapper" id="ActivatorTab" modetab="on" sources="trackpad joystick ABXY gyro trigger Button" >
+				<Panel class="FieldWrapper" id="ActivatorTab" modetab="on" sources="trackpad joystick ABXY gyro trigger Button bumper" >
 					<Label class="FieldLabel HideInGameActions" text="#Library_Details_FieldLabel_ActivatorType" />
 					<DropDown id="ActivatorDropDown" />
 				</Panel>

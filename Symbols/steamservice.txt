@@ -1,6 +1,7 @@
  B CCDDBAppDetailCommon::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
+ B CLocalizationToken::default_instance_
  B CLogger::s_LogWatchesMutex
  B CLogger::s_ModuleRangeMutex
  B CLogger::s_VecModuleAddressRanges
@@ -230,6 +231,7 @@
  D typeinfo for CIPCServer
  D typeinfo for CIPCServer::CThreadClient
  D typeinfo for CKeyValuesSystem
+ D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
  D typeinfo for CMsgMulti
@@ -305,6 +307,7 @@
  D vtable for CIPCServer
  D vtable for CIPCServer::CThreadClient
  D vtable for CKeyValuesSystem
+ D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
  D vtable for CMsgMulti
@@ -350,8 +353,9 @@
  NSUnLinkModule
  NXFindBestFatArch
  NXGetLocalArchInfo
- OSAtomicCompareAndSwap32Barrier
+ OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
+ R DES_SPtrans
  R k_nCodeSignatureMaxUniverse
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
@@ -370,6 +374,7 @@
  R typeinfo name for CIPCServer
  R typeinfo name for CIPCServer::CThreadClient
  R typeinfo name for CKeyValuesSystem
+ R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
  R typeinfo name for CMsgMulti
@@ -535,6 +540,7 @@
  T BN_CTX_start
  T BN_GENCB_call
  T BN_GF2m_add
+ T BN_GF2m_mod
  T BN_GF2m_mod_arr
  T BN_GF2m_mod_div
  T BN_GF2m_mod_exp_arr
@@ -602,6 +608,8 @@
  T BN_mul
  T BN_mul_word
  T BN_new
+ T BN_nist_mod_224
+ T BN_nist_mod_521
  T BN_nnmod
  T BN_num_bits
  T BN_num_bits_word
@@ -752,6 +760,9 @@
  T CCuratorPreferences::SharedDtor()
  T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
  T CDebugStatsSystem::GetList()
@@ -767,6 +778,11 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
+ T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::CFileReader(bool, unsigned int)
+ T CFileReader::Read(void*, unsigned int, unsigned int*)
+ T CFileReader::Seek(long long, EFioSeekMode)
+ T CFileReader::~CFileReader()
  T CFilenamesCache::FindOrCreateFilename(char const*)
  T CFilenamesCache::~CFilenamesCache()
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
@@ -849,6 +865,19 @@
  T CL2Cache::End()
  T CL2Cache::Start()
  T CL2Cache::~CL2Cache()
+ T CLocalizationToken::ByteSize() const
+ T CLocalizationToken::CLocalizationToken()
+ T CLocalizationToken::Clear()
+ T CLocalizationToken::GetCachedSize() const
+ T CLocalizationToken::GetMetadata() const
+ T CLocalizationToken::IsInitialized() const
+ T CLocalizationToken::MergeFrom(CLocalizationToken const&)
+ T CLocalizationToken::New() const
+ T CLocalizationToken::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CLocalizationToken::SetCachedSize(int) const
+ T CLocalizationToken::SharedCtor()
+ T CLocalizationToken::SharedDtor()
+ T CLocalizationToken::~CLocalizationToken()
  T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
@@ -862,20 +891,20 @@
  T CLogInstance::ShutDownInternal()
  T CLogInstance::Shutdown()
  T CLogInstance::WriteStringToLog(char const*)
- T CLogInstance::WriteToLog(char const*, char*)
+ T CLogInstance::WriteToLog(char const*, __va_list_tag*)
  T CLogInstance::WriteToTextLog(char const*, int)
- T CLogInstance::_LogEvent(char const*, char*)
+ T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
  T CLogger::EmitEventForOtherInstances(CLogEvent*, bool)
- T CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)
+ T CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)
  T CLogger::FlushEventQueue(bool)
  T CLogger::GeneratePrefixFromLogWatchParam(char*, int, char const*, CLogEvent*, bool, bool*)
  T CLogger::PublishLogEvent(CLogEvent*, char const*)
  T CLogger::ReleaseSafe(CLogInstance*)
- T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool)
+ T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool)
  T CMAC_CTX_copy
  T CMAC_CTX_free
  T CMAC_CTX_new
@@ -1056,7 +1085,6 @@
  T CRYPTO_set_locking_callback
  T CRYPTO_set_mem_ex_functions
  T CRYPTO_xts128_encrypt
- T CRefCountServiceBase<false, CRefST>::DoAddRef() const
  T CRefCountServiceBase<false, CRefST>::DoRelease() const
  T CRefCountServiceBase<false, CRefST>::OnFinalRelease()
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
@@ -1283,6 +1311,7 @@
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
  T CUtlBuffer::Get(void*, int)
+ T CUtlBuffer::GetChar()
  T CUtlBuffer::GetDelimitedCharInternal(CUtlCharConversion*)
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetInt()
@@ -1307,7 +1336,7 @@
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
  T CUtlBuffer::SetExternalBuffer(void*, int, int, int)
- T CUtlBuffer::VaScanf(char const*, char*)
+ T CUtlBuffer::VaScanf(char const*, __va_list_tag*)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
@@ -1326,6 +1355,7 @@
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Find(int const&) const
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Purge()
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
@@ -1336,7 +1366,9 @@
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAt(int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CopyFullHashMap(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >&) const
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
@@ -1347,11 +1379,13 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::CUtlHashMap()
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::Purge()
  T CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::~CUtlHashMap()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::AllocNode()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CUtlHashMap()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CopyFullHashMap(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >&) const
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::EnsureCapacity(int)
@@ -1365,7 +1399,9 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAt(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::AllocNode()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::CUtlHashMap()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::EnsureCapacity(int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::Find(unsigned long const&) const
@@ -1377,7 +1413,9 @@
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAll()
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveAt(int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::AllocNode()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CUtlHashMap()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CopyFullHashMap(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >&) const
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::EnsureCapacity(int)
@@ -1388,6 +1426,7 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::~CUtlHashMap()
  T CUtlLinkedList<CBaseScheduledFunction*, int>::AllocInternal(bool)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Free(int)
@@ -1512,6 +1551,7 @@
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
  T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
  T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
@@ -1520,10 +1560,12 @@
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&) const
  T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&) const
  T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&, bool)
@@ -1569,8 +1611,8 @@
  T CUtlString::AssertStringTooLong()
  T CUtlString::Clear()
  T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, char*)
- T CUtlString::VAppendFormat(char const*, char*)
+ T CUtlString::VAppendFormat(char const*, __va_list_tag*)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::AppendChar(char)
  T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
  T CUtlStringBuilder::Data::FreeHeap()
@@ -1581,6 +1623,7 @@
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Swap(CUtlString&)
+ T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
@@ -1591,20 +1634,17 @@
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
  T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::GrowVector(int)
  T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::InsertBefore(int, AllowRegistryAccess_s const&)
- T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::ShiftElementsRight(int, int)
  T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::~CUtlVector()
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::InsertBefore(int, CBaseFrameFunction* const&)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::Remove(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::~CUtlVector()
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::InsertBefore(int, CCoroutine::vprofNode_t const&)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
- T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::ShiftElementsLeft(int, int)
+ T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Remove(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::~CUtlVector()
@@ -1613,11 +1653,9 @@
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::InsertBefore(int)
- T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
- T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t, CUtlMemory<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t> >::~CUtlVector()
@@ -1625,24 +1663,19 @@
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, ClientProcessMonitor::CMonitoredProcess*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, CJob*, CDefEquals<unsigned long long>, CJobMgr::JobHasFunctor_t>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
@@ -1651,33 +1684,27 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsLeft(int, int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::InsertBefore(int, CWorkItem* const&)
- T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::ShiftElementsRight(int, int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::~CUtlVector()
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::FastRemove(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::GrowVector(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::InsertBefore(int, CWorkThread* const&)
- T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::ShiftElementsRight(int, int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::~CUtlVector()
  T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::GrowVector(int)
  T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::InsertBefore(int, ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t const&)
- T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::~CUtlVector()
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::FastRemove(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::GrowVector(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::InsertBefore(int)
- T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::ShiftElementsRight(int, int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::AddToTail(EventHeader_t const*&&)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::GrowVector(int)
@@ -1685,16 +1712,13 @@
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
- T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
@@ -1704,13 +1728,10 @@
  T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsLeft(int, int)
- T CUtlVector<int, CUtlMemory<int> >::ShiftElementsRight(int, int)
+ T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
  T CValObject::ClaimMemoryBlock(void*, unsigned long)
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
@@ -1855,7 +1876,6 @@
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
  T CreateTempFileName(CUtlString*)
  T CreateVProfile
- T DES_SPtrans
  T DES_cfb64_encrypt
  T DES_cfb_encrypt
  T DES_decrypt3
@@ -1926,6 +1946,9 @@
  T EC_EX_DATA_set_data
  T EC_GF2m_simple_method
  T EC_GFp_mont_method
+ T EC_GFp_nistp224_method
+ T EC_GFp_nistp521_method
+ T EC_GFp_nistz256_method
  T EC_GROUP_clear_free
  T EC_GROUP_cmp
  T EC_GROUP_copy
@@ -2209,13 +2232,18 @@
  T EVP_sha384
  T EVP_sha512
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, char*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
  T Error
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
  T FindSpewGroup(char const*, int*)
+ T FioClose(int)
+ T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioGetSize(int, unsigned long long*)
+ T FioRead(int, void*, int, int*)
  T FioRegisterAsyncEnqueue(void (*)(int, CompletionData_t*))
  T FioRegisterAsyncFinalize(void (*)(int, unsigned int))
+ T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T GCoroutineMgr()
  T GScheduledFunctionMgr()
  T GetCStringCharConversion()
@@ -2235,6 +2263,7 @@
  T HMAC_Final
  T HMAC_Init_ex
  T HMAC_Update
+ T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T HashStringCaseless(char const*, unsigned long)
  T IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&)
  T IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&)
@@ -2282,7 +2311,6 @@
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesSystemSteam
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
- T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
@@ -2315,13 +2343,10 @@
  T OPENSSL_atomic_add
  T OPENSSL_cleanse
  T OPENSSL_cpuid_setup
- T OPENSSL_far_spin
  T OPENSSL_ia32_cpuid
  T OPENSSL_ia32_rdrand
  T OPENSSL_ia32_rdseed
- T OPENSSL_indirect_call
  T OPENSSL_init
- T OPENSSL_instrument_halt
  T OPENSSL_rdtsc
  T OPENSSL_showfatal
  T OPENSSL_wipe_cpu
@@ -2378,8 +2403,9 @@
  T RAND_set_rand_method
  T RAND_status
  T RC4
- T RC4_options
  T RC4_set_key
+ T RSAZ_1024_mod_exp_avx2
+ T RSAZ_512_mod_exp
  T RSA_OAEP_PARAMS_free
  T RSA_OAEP_PARAMS_new
  T RSA_PKCS1_SSLeay
@@ -2440,9 +2466,10 @@
  T SSL_library_init
  T SSL_load_error_strings
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
- T SerializeVaArgs(char const*, char*, CUtlBuffer&)
+ T SerializeVaArgs(char const*, __va_list_tag*, CUtlBuffer&)
  T SetInAssert
  T SetWritingMiniDump(bool)
+ T SetWrittenMinidumpForFileLine(char const*, unsigned int)
  T ShouldUseNewAssertDialog
  T ShutdownPlatformSocket(int, int)
  T SteamService_GetIPCServer
@@ -2456,6 +2483,7 @@
  T SteamStdLib::CCommandLine::CreateCmdLine(int, char**)
  T SteamStdLib::CCommandLine::FindParm(SteamStdLib::OpaqueHParamType*) const
  T SteamStdLib::CCommandLine::GetCmdLine() const
+ T SteamStdLib::CCommandLine::GetCommandString(SteamStdLib::OpaqueHParamType*) const
  T SteamStdLib::CCommandLine::GetFirstRegisteredCmd()
  T SteamStdLib::CCommandLine::GetNextRegisteredCmd(SteamStdLib::OpaqueHParamType*)
  T SteamStdLib::CCommandLine::GetParm(int) const
@@ -2495,12 +2523,12 @@
  T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  T SteamThreadTools::CThreadEvent::Reset()
  T SteamThreadTools::CThreadEvent::Set()
- T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
+ T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
  T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  T SteamThreadTools::CThreadLocalBase::Get() const
  T SteamThreadTools::CThreadLocalBase::Set(void*)
  T SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
- T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> > >::~CThreadLocalPtr()
@@ -2510,8 +2538,8 @@
  T SteamThreadTools::CThreadLocalPtr<SteamVProf::CVProfile>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<ThreadMsgBuffer_t>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
- T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadMutex::CThreadMutex()
  T SteamThreadTools::CThreadMutex::~CThreadMutex()
  T SteamThreadTools::CThreadRWLock::LockForWrite()
@@ -2539,7 +2567,6 @@
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::MarkFrame()
  T SteamVProf::CVProfNode::Reset()
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::CVProfile()
@@ -2603,7 +2630,6 @@
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
  T V_AppendSlash
- T V_CbMakeAbsolutePath
  T V_CopyAndFixSlashes
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
@@ -2628,8 +2654,8 @@
  T V_strcat
  T V_stricmp(char const*, char const*)
  T V_stristr(char const*, char const*)
- T V_strnappend_strlen
  T V_strncat
+ T V_strncat_length
  T V_strnchr
  T V_strncmp
  T V_strncpy
@@ -2666,16 +2692,25 @@
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
  T aesni_cbc_encrypt
+ T aesni_cbc_sha1_enc
+ T aesni_cbc_sha256_enc
  T aesni_ccm64_decrypt_blocks
  T aesni_ccm64_encrypt_blocks
  T aesni_ctr32_encrypt_blocks
  T aesni_decrypt
  T aesni_ecb_encrypt
  T aesni_encrypt
+ T aesni_gcm_decrypt
+ T aesni_gcm_encrypt
+ T aesni_multi_cbc_decrypt
+ T aesni_multi_cbc_encrypt
  T aesni_set_decrypt_key
  T aesni_set_encrypt_key
  T aesni_xts_decrypt
  T aesni_xts_encrypt
+ T asm_AES_cbc_encrypt
+ T asm_AES_decrypt
+ T asm_AES_encrypt
  T asn1_do_adb
  T asn1_do_lock
  T asn1_enc_free
@@ -2693,23 +2728,35 @@
  T bn_cmp_words
  T bn_div_words
  T bn_expand2
+ T bn_from_montgomery
+ T bn_gather5
+ T bn_get_bits5
  T bn_mul_add_words
  T bn_mul_comba4
  T bn_mul_comba8
  T bn_mul_mont
+ T bn_mul_mont_gather5
  T bn_mul_normal
  T bn_mul_part_recursive
  T bn_mul_recursive
  T bn_mul_words
+ T bn_power5
+ T bn_scatter5
+ T bn_sqr8x_internal
  T bn_sqr_comba4
  T bn_sqr_comba8
  T bn_sqr_normal
  T bn_sqr_recursive
  T bn_sqr_words
+ T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T bsaes_cbc_encrypt
+ T bsaes_ctr32_encrypt_blocks
+ T bsaes_xts_decrypt
+ T bsaes_xts_encrypt
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
@@ -2777,6 +2824,23 @@
  T ec_GFp_mont_group_finish
  T ec_GFp_mont_group_init
  T ec_GFp_mont_group_set_curve
+ T ec_GFp_nist_field_mul
+ T ec_GFp_nist_field_sqr
+ T ec_GFp_nist_group_copy
+ T ec_GFp_nistp224_group_init
+ T ec_GFp_nistp224_group_set_curve
+ T ec_GFp_nistp224_have_precompute_mult
+ T ec_GFp_nistp224_point_get_affine_coordinates
+ T ec_GFp_nistp224_points_mul
+ T ec_GFp_nistp224_precompute_mult
+ T ec_GFp_nistp521_group_init
+ T ec_GFp_nistp521_group_set_curve
+ T ec_GFp_nistp521_have_precompute_mult
+ T ec_GFp_nistp521_point_get_affine_coordinates
+ T ec_GFp_nistp521_points_mul
+ T ec_GFp_nistp521_precompute_mult
+ T ec_GFp_nistp_points_make_affine_internal
+ T ec_GFp_nistp_recode_scalar_bits
  T ec_GFp_simple_add
  T ec_GFp_simple_cmp
  T ec_GFp_simple_dbl
@@ -2811,13 +2875,30 @@
  T ec_wNAF_precompute_mult
  T ecdh_check
  T ecdsa_check
+ T ecp_nistz256_add
+ T ecp_nistz256_avx2_select_w7
+ T ecp_nistz256_div_by_2
+ T ecp_nistz256_from_mont
+ T ecp_nistz256_mul_by_2
+ T ecp_nistz256_mul_by_3
+ T ecp_nistz256_mul_mont
+ T ecp_nistz256_neg
+ T ecp_nistz256_point_add
+ T ecp_nistz256_point_add_affine
+ T ecp_nistz256_point_double
+ T ecp_nistz256_select_w5
+ T ecp_nistz256_select_w7
+ T ecp_nistz256_sqr_mont
+ T ecp_nistz256_sub
+ T ecp_nistz256_to_mont
  T evp_pkey_set_cb_translate
- T gcm_ghash_4bit_mmx
- T gcm_ghash_4bit_x86
+ T gcm_ghash_4bit
+ T gcm_ghash_avx
  T gcm_ghash_clmul
- T gcm_gmult_4bit_mmx
- T gcm_gmult_4bit_x86
+ T gcm_gmult_4bit
+ T gcm_gmult_avx
  T gcm_gmult_clmul
+ T gcm_init_avx
  T gcm_init_clmul
  T i2a_ASN1_INTEGER
  T i2a_ASN1_OBJECT
@@ -2868,8 +2949,24 @@
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
  T protobuf_AssignDesc_steammessages_5fbase_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
+ T rsaz_1024_gather5_avx2
+ T rsaz_1024_mul_avx2
+ T rsaz_1024_norm2red_avx2
+ T rsaz_1024_red2norm_avx2
+ T rsaz_1024_scatter5_avx2
+ T rsaz_1024_sqr_avx2
+ T rsaz_512_gather4
+ T rsaz_512_mul
+ T rsaz_512_mul_by_one
+ T rsaz_512_mul_gather4
+ T rsaz_512_mul_scatter4
+ T rsaz_512_scatter4
+ T rsaz_512_sqr
+ T rsaz_avx2_eligible
  T sha1_block_data_order
+ T sha1_multi_block
  T sha256_block_data_order
+ T sha256_multi_block
  T sha512_block_data_order
  T sk_find
  T sk_free
@@ -2883,16 +2980,16 @@
  T ssl_load_ciphers
  T ssleay_rand_bytes
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::find<AllocTracking_t>(AllocTracking_t const&)
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
+ T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
  T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::~__hash_table()
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::~__hash_table()
+ T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*)
+ T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::rehash(unsigned long)
+ T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::~__hash_table()
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::clear()
@@ -2900,7 +2997,6 @@
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
- T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
  T std::__1::__split_buffer<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t>&>::~__split_buffer()
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::~__split_buffer()
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::~__split_buffer()
@@ -2908,9 +3004,9 @@
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>::~__split_buffer()
  T std::__1::__split_buffer<void (*)(), std::__1::allocator<void (*)()>&>::~__split_buffer()
  T std::__1::__split_buffer<void*, std::__1::allocator<void*>&>::~__split_buffer()
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__insert_unique(FileAndLine_t const&)
- T std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::destroy(std::__1::__tree_node<FileAndLine_t, void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
+ T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique(int const&)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__node_insert_unique(std::__1::__tree_node<int, void*>*)
@@ -2924,7 +3020,7 @@
  T std::__1::__tree<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<int, std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__map_value_compare<int, std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
- T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::destroy(std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
@@ -2934,24 +3030,24 @@
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__node_insert_unique(std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
  T std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::destroy(std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) const
- T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*) const
- T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
- T std::__1::__tree_iterator<FileAndLine_t, std::__1::__tree_node<FileAndLine_t, void*>*, int> std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::find<FileAndLine_t>(FileAndLine_t const&)
- T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__upper_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
- T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
- T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
- T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::__find_equal<FileAndLine_t>(std::__1::__tree_node_base<void*>*&, FileAndLine_t const&)
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) const
+ T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*) const
+ T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__upper_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__lower_bound<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*)
+ T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__find_equal<int>(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__find_equal<std::__1::__value_type<SteamVProf::CVProfNode*, double> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<SteamVProf::CVProfNode*, double> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__find_equal<std::__1::__value_type<char const*, unsigned int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<char const*, unsigned int> const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -2966,15 +3062,15 @@
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::map<int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<int>, std::__1::allocator<std::__1::pair<int const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > >::operator[](int&&)
- T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
- T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_unique<std::__1::pair<SteamVProf::CVProfNode*, double> >(std::__1::pair<SteamVProf::CVProfNode*, double>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, int>, bool> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
- T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
- T std::__1::set<FileAndLine_t, std::__1::less<FileAndLine_t>, std::__1::allocator<FileAndLine_t> >::~set()
+ T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__insert_unique<std::__1::pair<long long, char const*> >(std::__1::pair<long long, char const*>&&)
+ T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_unique<int>(int&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__insert_unique<std::__1::pair<SteamVProf::CVProfNode*, double> >(std::__1::pair<SteamVProf::CVProfNode*, double>&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<char const*, unsigned int>, std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__insert_unique<std::__1::pair<char const*, unsigned int> >(std::__1::pair<char const*, unsigned int>&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__insert_unique<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__insert_unique<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
+ T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
@@ -3047,27 +3143,22 @@
  __cxa_pure_virtual
  __cxa_rethrow
  __cxa_throw
- __divdi3
  __dynamic_cast
  __error
- __fixunsdfdi
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
  __memmove_chk
  __memset_chk
- __moddi3
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __tolower
  __toupper
- __udivdi3
- __umoddi3
  _dispatch_source_type_read
  _exit
  abort
- accept$UNIX2003
+ accept
  alphasort$INODE64
  atexit
  atoi
@@ -3075,6 +3166,8 @@
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
+ b (anonymous namespace)::CLocalizationToken_descriptor_
+ b (anonymous namespace)::CLocalizationToken_reflection_
  b (anonymous namespace)::CMsgAppRights_descriptor_
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
@@ -3093,14 +3186,15 @@
  b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
  b CCrossProcessPipe::BAcceptConnection(IProcessPipe**)::fAsserted
  b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
+ b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b CIPCServer::Thread_MainLoop()::fAsserted
  b CIPCServer::Thread_MainLoop()::signalWorkThreadPool
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
- b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::fAsserted
- b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::sbAbsoluteMaxHit
+ b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
+ b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
  b CLogger::FlushEventQueue(bool)::cFailedToRemove
  b CLogger::FlushEventQueue(bool)::fAsserted
  b CMAC_Init.zero_iv
@@ -3113,7 +3207,7 @@
  b GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
- b GetMinidumpsWritten()::MinidumpsWritten
+ b GetMinidumpsWritten()::s_MinidumpsWritten
  b GetNetAdrResolveCacheMutex()::mutex
  b GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
@@ -3205,7 +3299,7 @@
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
- b guard variable for GetMinidumpsWritten()::MinidumpsWritten
+ b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
@@ -3279,16 +3373,18 @@
  b threadid_callback
  backtrace
  backtrace_symbols
- bind$UNIX2003
+ bind
  ceilf
- chmod$UNIX2003
- close$UNIX2003
- connect$UNIX2003
+ chmod
+ close
+ connect
  d ASN1_SEQUENCE_ANY_item_tt
  d ASN1_str_functs
  d ASN1_str_reasons
  d BIO_str_functs
  d BIO_str_reasons
+ d BN_nist_mod_224._bignum_nist_p_224_sqr
+ d BN_nist_mod_521._bignum_nist_p_521_sqr
  d BN_str_functs
  d BN_str_reasons
  d BN_value_one.const_one
@@ -3300,7 +3396,6 @@
  d CONF_str_reasons
  d CRYPTO_str_functs
  d CRYPTO_str_reasons
- d Coroutine_Launch(CCoroutine&)::sThisFunctionHasParentFramePointer
  d DH_get_1024_160._bignum_dh1024_160_g
  d DH_get_1024_160._bignum_dh1024_160_p
  d DH_get_1024_160._bignum_dh1024_160_q
@@ -3337,6 +3432,9 @@
  d ECPKPARAMETERS_ch_tt
  d EC_GF2m_simple_method.ret
  d EC_GFp_mont_method.ret
+ d EC_GFp_nistp224_method.ret
+ d EC_GFp_nistp521_method.ret
+ d EC_GFp_nistz256_method.ret
  d EC_PRIVATEKEY_seq_tt
  d EC_str_functs
  d EC_str_reasons
@@ -3394,6 +3492,8 @@
  d X9_62_FIELDID_adbtbl
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
+ d _bignum_nist_p_224
+ d _bignum_nist_p_521
  d aes_128_cbc
  d aes_128_ccm
  d aes_128_cfb
@@ -3427,6 +3527,8 @@
  d aes_256_wrap
  d aes_256_xts
  d aesni_128_cbc
+ d aesni_128_cbc_hmac_sha1_cipher
+ d aesni_128_cbc_hmac_sha256_cipher
  d aesni_128_ccm
  d aesni_128_cfb
  d aesni_128_cfb1
@@ -3446,6 +3548,8 @@
  d aesni_192_gcm
  d aesni_192_ofb
  d aesni_256_cbc
+ d aesni_256_cbc_hmac_sha1_cipher
+ d aesni_256_cbc_hmac_sha256_cipher
  d aesni_256_ccm
  d aesni_256_cfb
  d aesni_256_cfb1
@@ -3560,30 +3664,28 @@
  dlsym
  dyld_stub_binder
  fclose
- fcntl$UNIX2003
- ferror
+ fcntl
  fflush
  fileno
- fopen$UNIX2003
+ fopen
  fprintf
- fread
  free
- fseeko
  fstat$INODE64
- fwrite$UNIX2003
+ fwrite
  getcwd
  getenv
  getpid
  getpwuid
- getsockname$UNIX2003
+ getsockname
  getuid
  ioctl
  kevent
- kill$UNIX2003
+ kill
  kqueue
- listen$UNIX2003
+ listen
  localtime_r
  longjmp
+ lseek
  lstat$INODE64
  mach_absolute_time
  mach_timebase_info
@@ -3595,30 +3697,30 @@
  memset
  mkdir
  mktemp
- mktime$UNIX2003
- nanosleep$UNIX2003
- open$UNIX2003
+ mktime
+ nanosleep
+ open
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
  operator new[](unsigned long)
  pipe
- poll$UNIX2003
+ poll
  posix_memalign
  printf
  pthread_attr_init
  pthread_attr_setstacksize
  pthread_cond_broadcast
  pthread_cond_destroy
- pthread_cond_init$UNIX2003
+ pthread_cond_init
  pthread_cond_signal
  pthread_cond_timedwait_relative_np
- pthread_cond_wait$UNIX2003
+ pthread_cond_wait
  pthread_condattr_destroy
  pthread_condattr_init
  pthread_create
  pthread_getspecific
- pthread_join$UNIX2003
+ pthread_join
  pthread_key_create
  pthread_key_delete
  pthread_kill
@@ -3628,7 +3730,7 @@
  pthread_mutex_lock
  pthread_mutex_trylock
  pthread_mutex_unlock
- pthread_mutexattr_destroy$UNIX2003
+ pthread_mutexattr_destroy
  pthread_mutexattr_init
  pthread_mutexattr_settype
  pthread_self
@@ -3715,6 +3817,10 @@
  r _EC_brainpoolP384t1
  r _EC_brainpoolP512r1
  r _EC_brainpoolP512t1
+ r _nist_p_224
+ r _nist_p_224_sqr
+ r _nist_p_521
+ r _nist_p_521_sqr
  r bf_init
  r default_iv
  r des_skb
@@ -3728,13 +3834,19 @@
  r dh2048_256_p
  r dh2048_256_q
  r dsa_builtin_paramgen2.ggen
+ r ecp_nistz256_precomputed
+ r gmul
  r ln_objs
  r lvalues
+ r nistp224_curve_params
+ r nistp521_curve_params
  r obj_objs
  r odd_parity
+ r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
@@ -3746,19 +3858,20 @@
  r sigoid_srt
  r sn_objs
  r tag2bit
+ r two80
  r zeroes
- read$UNIX2003
+ read
  realloc
- recv$UNIX2003
+ recv
  remove
  rename
  scandir$INODE64
  sched_yield
- select$UNIX2003
- semctl$UNIX2003
+ select$1050
+ semctl
  semop
- send$UNIX2003
- setenv$UNIX2003
+ send
+ setenv
  setjmp
  setsockopt
  shutdown
@@ -3802,14 +3915,14 @@
  strchr
  strcmp
  strcpy
- strerror$UNIX2003
+ strerror
  strlen
  strncasecmp
  strncat
  strncpy
  strrchr
- strtod$UNIX2003
- strtof$UNIX2003
+ strtod
+ strtof
  strtol
  strtoll
  strtoul
@@ -3819,6 +3932,7 @@
  t (anonymous namespace)::CLEANUP::~CLEANUP()
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BN_from_montgomery_word
+ t BN_to_felem
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
@@ -3831,6 +3945,10 @@
  t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t InitTicks()
+ t K256
+ t K256_shaext
+ t K512
+ t K_XX_XX
  t KeyValuesSystem()
  t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
@@ -3859,7 +3977,7 @@
  t SteamVProf::PeakOverAverageCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
  t SteamVProf::TimeCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
  t SteamVProf::TimeLessChildrenCompare(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&)
- t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned int*)
+ t TSQueueBase_PopInternal(TSLHead_t*, unsigned long, unsigned long, unsigned long long*)
  t TSQueueBase_PopInternal_StackAlloc(TSLHead_t*, unsigned long, unsigned long, void*)
  t WriteMiniDumpThread(void*)
  t _GLOBAL__sub_I_SteamServiceClient.cpp
@@ -3948,40 +4066,31 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t _aesni_decrypt2
- t _aesni_decrypt3
- t _aesni_decrypt4
- t _aesni_decrypt6
- t _aesni_encrypt2
- t _aesni_encrypt3
- t _aesni_encrypt4
- t _aesni_encrypt6
  t _aesni_set_encrypt_key
+ t _bn_post4x_internal
+ t _bn_postx4x_internal
+ t _bn_sqr8x_internal
+ t _bn_sqr8x_reduction
+ t _bn_sqrx8x_internal
+ t _bn_sqrx8x_reduction
  t _dopr
- t _mul_1x1_ialu
- t _mul_1x1_mmx
- t _sha1_block_data_order_avx
- t _sha1_block_data_order_shaext
- t _sha1_block_data_order_ssse3
- t _sse_AES_decrypt_compact
- t _sse_AES_encrypt_compact
- t _vpaes_decrypt_core
- t _vpaes_encrypt_core
- t _vpaes_preheat
- t _vpaes_schedule_192_smear
- t _vpaes_schedule_core
- t _vpaes_schedule_mangle
- t _vpaes_schedule_round
- t _vpaes_schedule_transform
- t _x86_AES_decrypt
- t _x86_AES_decrypt_compact
- t _x86_AES_encrypt
- t _x86_AES_encrypt_compact
- t _x86_AES_set_encrypt_key
- t _x86_Camellia_decrypt
- t _x86_Camellia_encrypt
- t _x86_DES_decrypt
- t _x86_DES_encrypt
+ t _ecp_nistz256_add_toq
+ t _ecp_nistz256_add_tox
+ t _ecp_nistz256_mul_by_2q
+ t _ecp_nistz256_mul_by_2x
+ t _ecp_nistz256_mul_montq
+ t _ecp_nistz256_mul_montx
+ t _ecp_nistz256_sqr_montq
+ t _ecp_nistz256_sqr_montx
+ t _ecp_nistz256_sub_fromq
+ t _ecp_nistz256_sub_fromx
+ t _ecp_nistz256_subq
+ t _ecp_nistz256_subx
+ t _rsaz_512_mul
+ t _rsaz_512_mulx
+ t _rsaz_512_reduce
+ t _rsaz_512_reducex
+ t _rsaz_512_subtract
  t aes_cbc_cipher
  t aes_ccm_cipher
  t aes_ccm_ctrl
@@ -4003,10 +4112,37 @@
  t aes_xts_ctrl
  t aes_xts_init_key
  t aesni_cbc_cipher
+ t aesni_cbc_hmac_sha1_cipher
+ t aesni_cbc_hmac_sha1_ctrl
+ t aesni_cbc_hmac_sha1_init_key
+ t aesni_cbc_hmac_sha256_cipher
+ t aesni_cbc_hmac_sha256_ctrl
+ t aesni_cbc_hmac_sha256_init_key
+ t aesni_cbc_sha1_enc_avx
+ t aesni_cbc_sha1_enc_shaext
+ t aesni_cbc_sha1_enc_ssse3
+ t aesni_cbc_sha256_enc_avx
+ t aesni_cbc_sha256_enc_avx2
+ t aesni_cbc_sha256_enc_shaext
+ t aesni_cbc_sha256_enc_xop
  t aesni_ccm_init_key
+ t aesni_ctr32_6x
+ t aesni_ctr32_ghash_6x
+ t aesni_decrypt2
+ t aesni_decrypt3
+ t aesni_decrypt4
+ t aesni_decrypt6
+ t aesni_decrypt8
  t aesni_ecb_cipher
+ t aesni_encrypt2
+ t aesni_encrypt3
+ t aesni_encrypt4
+ t aesni_encrypt6
+ t aesni_encrypt8
  t aesni_gcm_init_key
  t aesni_init_key
+ t aesni_multi_cbc_decrypt_avx
+ t aesni_multi_cbc_encrypt_avx
  t aesni_xts_init_key
  t ameth_cmp_BSEARCH_CMP_FN
  t app_info_LHASH_COMP
@@ -4021,6 +4157,11 @@
  t asn1_template_ex_d2i
  t asn1_template_ex_i2d
  t asn1_template_noexp_d2i
+ t avx2_shortcut
+ t avx_cbc_dec_shortcut
+ t avx_cbc_enc_shortcut
+ t avx_shortcut
+ t batch_mul
  t bf_cbc_cipher
  t bf_cfb64_cipher
  t bf_ecb_cipher
@@ -4029,12 +4170,24 @@
  t bn_c2i
  t bn_expand_internal
  t bn_free
+ t bn_from_mont8x
  t bn_i2c
+ t bn_mul4x_mont
+ t bn_mul4x_mont_gather5
+ t bn_mulx4x_mont
+ t bn_mulx4x_mont_gather5
  t bn_new
+ t bn_powerx5
  t bn_print
  t bn_rand_range
+ t bn_sqr8x_mont
  t bnrand
  t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t bsaes_const
+ t bsaes_decrypt8
+ t bsaes_encrypt8
+ t bsaes_encrypt8_bitslice
+ t bsaes_key_convert
  t camellia_cbc_cipher
  t camellia_cfb1_cipher
  t camellia_cfb8_cipher
@@ -4156,12 +4309,34 @@
  t eckey_pub_encode
  t eckey_pub_print
  t eckey_type2param
+ t ecp_nistz256_avx2_select_w5
+ t ecp_nistz256_get_affine
+ t ecp_nistz256_mult_precompute
+ t ecp_nistz256_point_add_affinex
+ t ecp_nistz256_point_addx
+ t ecp_nistz256_point_doublex
+ t ecp_nistz256_points_mul
+ t ecp_nistz256_pre_comp_clear_free
+ t ecp_nistz256_pre_comp_dup
+ t ecp_nistz256_pre_comp_free
+ t ecp_nistz256_window_have_precompute_mult
  t err_state_LHASH_COMP
  t err_state_LHASH_HASH
  t err_string_data_LHASH_COMP
  t err_string_data_LHASH_HASH
  t ex_class_item_LHASH_COMP
  t ex_class_item_LHASH_HASH
+ t felem_assign
+ t felem_contract
+ t felem_inv
+ t felem_is_zero_int
+ t felem_mul
+ t felem_mul_reduce
+ t felem_one
+ t felem_reduce
+ t felem_square
+ t felem_square_reduce
+ t felem_to_BN
  t final
  t final256
  t final512
@@ -4213,8 +4388,17 @@
  t long_i2c
  t long_new
  t long_print
+ t mul4x_internal
+ t mul_1x1
+ t mulx4x_internal
  t name_funcs_free
  t names_lh_free_LHASH_DOALL
+ t nistp224_pre_comp_clear_free
+ t nistp224_pre_comp_dup
+ t nistp224_pre_comp_free
+ t nistp521_pre_comp_clear_free
+ t nistp521_pre_comp_dup
+ t nistp521_pre_comp_free
  t obj_name_LHASH_COMP
  t obj_name_LHASH_HASH
  t old_dsa_priv_decode
@@ -4277,6 +4461,8 @@
  t pkey_rsa_verify
  t pkey_rsa_verifyrecover
  t pmeth_cmp_BSEARCH_CMP_FN
+ t point_add
+ t point_double
  t pubkey_cb
  t rc4_cipher
  t rc4_hmac_md5_cipher
@@ -4301,7 +4487,28 @@
  t rsa_pub_encode
  t rsa_pub_print
  t rsa_sig_print
+ t select_point
+ t sha1_block_data_order_avx
+ t sha1_block_data_order_avx2
+ t sha1_block_data_order_shaext
+ t sha1_block_data_order_ssse3
+ t sha1_multi_block_avx
+ t sha1_multi_block_avx2
+ t sha1_multi_block_shaext
+ t sha1_update
+ t sha256_block_data_order_avx
+ t sha256_block_data_order_avx2
+ t sha256_block_data_order_shaext
+ t sha256_block_data_order_ssse3
+ t sha256_multi_block_avx
+ t sha256_multi_block_avx2
+ t sha256_multi_block_shaext
+ t sha256_update
+ t sha512_block_data_order_avx
+ t sha512_block_data_order_avx2
+ t sha512_block_data_order_xop
  t sha_block_data_order
+ t shaext_shortcut
  t sid_free
  t sig_cb
  t sig_cmp_BSEARCH_CMP_FN
@@ -4312,6 +4519,7 @@
  t ssleay_rand_pseudo_bytes
  t ssleay_rand_seed
  t ssleay_rand_status
+ t ssse3_shortcut
  t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&>::~__split_buffer()
  t trans_cb
  t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
@@ -4321,10 +4529,27 @@
  t update256
  t update512
  t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t vpaes_consts
+ t vpaes_decrypt_core
+ t vpaes_encrypt_core
+ t vpaes_preheat
+ t vpaes_schedule_192_smear
+ t vpaes_schedule_core
+ t vpaes_schedule_low_round
+ t vpaes_schedule_mangle
+ t vpaes_schedule_round
+ t vpaes_schedule_transform
+ t x86_64_AES_decrypt
+ t x86_64_AES_decrypt_compact
+ t x86_64_AES_encrypt
+ t x86_64_AES_encrypt_compact
+ t x86_64_AES_set_encrypt_key
+ t x86_64_Camellia_decrypt
+ t x86_64_Camellia_encrypt
  time
  typeinfo for std::exception
  unlink
- usleep$UNIX2003
+ usleep
  vasprintf
  vfprintf
  vsnprintf
@@ -4332,4 +4557,4 @@
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  wcstoull
- write$UNIX2003
+ write

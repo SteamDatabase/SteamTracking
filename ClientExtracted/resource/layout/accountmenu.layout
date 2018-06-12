@@ -1,0 +1,64 @@
+"resource/layout/accountmenu.layout"
+{
+	controls
+	{
+		view_profile_button { controlname="Button" style="account_menu_button" labelText="#steam_menu_account_view_profile" }
+		view_account_button { controlname="Button" style="account_menu_button" labelText="#steam_menu_account_details" }
+		view_wallet_button	{ controlname="Button" style="account_menu_button" labelText="#steam_menu_account_wallet" }
+		view_preferences_button { controlname="Button" style="account_menu_button" labelText="#steam_menu_account_preferences" }
+		change_user_button	{ controlname="Button" style="account_menu_button" labelText="#steam_menu_account_logout" }
+		account_name_label	{ controlname="Label"  style="account_menu_label" labelText="%account%" }
+		wallet_amount_label { controlname="Label"  style="account_menu_label" labelText="%wallet%" }
+	}
+	
+	styles
+	{
+		AccountMenuStyle
+		{
+			render_bg
+			{
+				// top area and graphic
+				0="gradient( x0, y0, x1, y1, MenuBG1, MenuBG2 )"
+
+				1="fill( x0 + 1, y0, x1 - 1, y0 + 1, blueborder )"  // top
+				2="fill( x0 + 1, y1 - 1, x1 - 1, y1, blueborder )"  // bottom
+				3="fill( x0, y0 + 1, x0 + 1, y1 - 1, blueborder )"  // left
+				4="fill( x1 - 1, y0 + 1, x1, y1 - 1, blueborder )"  // right
+			}
+		}
+	
+		account_menu_button
+		{
+			font-size=14
+			font-weight=regular
+			textcolor="label"
+			font-style=""
+			render_bg{}
+		}
+		
+		account_menu_label
+		{
+			font-size=14
+			font-weight=regular
+			textcolor="Friends.OnlineColor"
+			font-style=""
+			render_bg{}
+		}
+		
+		account_menu_button:hover
+		{
+			textcolor="SuperNavHover"
+		}
+	}
+	
+	layout
+	{
+		place { control="view_profile_button" align=left margin-left=4 margin-top=4  height=24 }
+		place { control="view_account_button" align=left margin-left=4 margin-top=28 height=24 }
+		place { control="change_user_button"  align=left margin-left=4 margin-top=52 height=24 }
+		place { control="account_name_label"  start="change_user_button" dir="right" height=24 margin-left=-4 }
+		place { control="view_preferences_button" align=left margin-left=4 margin-top=76 height=24 }
+		place { control="view_wallet_button,wallet_amount_label" align=left margin-left=4 margin-top=100 height=24  }
+
+	}
+}

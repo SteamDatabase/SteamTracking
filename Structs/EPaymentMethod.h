@@ -36,9 +36,9 @@ typedef enum EPaymentMethod
     k_EPaymentMethodBeeline, // Beeline
     k_EPaymentMethodKonbini, // Konbini
     k_EPaymentMethodEClubPoints, // EClub Points
-    k_EPaymentMethodCreditCardJapan, // Credit Card (Japan)
-    k_EPaymentMethodBankTransferJapan, // Bank Transfer (Japan)
-    k_EPaymentMethodPayEasyJapan, // Pay Easy (Japan)
+    k_EPaymentMethodCreditCardDegica, // Credit Card (Degica)
+    k_EPaymentMethodBankTransferDegica, // Bank Transfer (Degica)
+    k_EPaymentMethodPayEasyDegica, // Pay Easy (Degica)
     k_EPaymentMethodZong, // Zong
     k_EPaymentMethodCultureVoucher, // Culture Voucher
     k_EPaymentMethodBookVoucher, // Book Voucher
@@ -65,7 +65,7 @@ typedef enum EPaymentMethod
     k_EPaymentMethodCashU, // CashU
     k_EPaymentMethodSantanderRio, // Santander Rio
     k_EPaymentMethodAutoGrant, // Auto Grant
-    k_EPaymentMethodWebMoneyJapan, // WebMoney (Japan)
+    k_EPaymentMethodWebMoneyDegica, // WebMoney (Degica)
     k_EPaymentMethodOneCard, // OneCard
     k_EPaymentMethodPSE, // PSE
     k_EPaymentMethodExito, // Exito
@@ -87,12 +87,12 @@ typedef enum EPaymentMethod
     k_EPaymentMethodTenpay, // Tenpay
     k_EPaymentMethodWeChat, // WeChat
     k_EPaymentMethodCashOnDelivery, // Cash on Delivery
-    k_EPaymentMethodCreditCardIndia, // Credit Card (India)
-    k_EPaymentMethodDebitCardIndia, // Debit Card (India)
-    k_EPaymentMethodNetBankingIndia, // Net Banking (India)
-    k_EPaymentMethodCashCardIndia, // Cash Card (India)
-    k_EPaymentMethodWalletIndia, // Wallet (India)
-    k_EPaymentMethodMobileKorea, // Mobile (Korea)
+    k_EPaymentMethodCreditCardNodwin, // Credit Card (Nodwin)
+    k_EPaymentMethodDebitCardNodwin, // Debit Card (Nodwin)
+    k_EPaymentMethodNetBankingNodwin, // Net Banking (Nodwin)
+    k_EPaymentMethodCashCardNodwin, // Cash Card (Nodwin)
+    k_EPaymentMethodWalletNodwin, // Wallet (Nodwin)
+    k_EPaymentMethodMobileDegica, // Mobile (Degica)
     k_EPaymentMethodNaranja, // Naranja
     k_EPaymentMethodCencosud, // Cencosud
     k_EPaymentMethodCabal, // Cabal
@@ -123,6 +123,8 @@ typedef enum EPaymentMethod
     k_EPaymentMethodVTCPayOnlineBanking, // VTC Pay Online Banking
     k_EPaymentMethodVisaElectronBoaCompra, // Visa Electron (BoaCompra)
     k_EPaymentMethodCafeFunded, // Cafe Funded
+    k_EPaymentMethodOCA, // OCA
+    k_EPaymentMethodLider, // Lider
     k_EPaymentMethodWallet = 128, // Wallet
     k_EPaymentMethodValve, // Valve
     k_EPaymentMethodSteamPressMaster, // Steam/Press Master

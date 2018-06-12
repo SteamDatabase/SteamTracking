@@ -45,6 +45,5 @@ public:
     virtual unknown_ret PollGMSQuery(long long) = 0;
     virtual unknown_ret GetGMSQueryResults(long long, IClientMatchmaking::GMSQueryResult_t*, int) = 0;
     virtual unknown_ret ReleaseGMSQuery(long long) = 0;
-    virtual unknown_ret SendGameServerPingSample(unsigned int, int, PingSample_t const*) = 0;
     virtual unknown_ret EnsureFavoriteGameAccountsUpdated(bool) = 0;
 };

@@ -667,7 +667,7 @@
 		
 		"CSteamRootDialog TextEntryURL"
 		{
-			textcolor="101 101 101 255"		
+			textcolor="101 105 112 255"		
 		}
 		
 		"CSteamRootDialog TextEntryURL:hover"
@@ -677,7 +677,7 @@
 		
 		CUINavButtonNew
 		{
-			textcolor="133 176 223 255"
+			textcolor="133 139 148 255"
 			font-weight=800
 		}
 		

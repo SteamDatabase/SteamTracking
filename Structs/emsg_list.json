@@ -78,12 +78,6 @@
         "server_type": -1
     },
     {
-        "emsg": 708,
-        "name": "k_EMsgClientInformOfCreateAccount",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 710,
         "name": "k_EMsgClientConnectionStats",
         "flags": 2,
@@ -1020,12 +1014,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5406,
-        "name": "k_EMsgClientCreateAccount2",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 5407,
         "name": "k_EMsgClientInformOfResetForgottenPassword",
         "flags": 2,
@@ -1752,18 +1740,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5556,
-        "name": "k_EMsgClientOGSReportString",
-        "flags": 6,
-        "server_type": 39
-    },
-    {
-        "emsg": 5557,
-        "name": "k_EMsgClientOGSReportBug",
-        "flags": 6,
-        "server_type": 39
-    },
-    {
         "emsg": 5558,
         "name": "k_EMsgClientSentLogs",
         "flags": 2,
@@ -1778,62 +1754,62 @@
     {
         "emsg": 5560,
         "name": "k_EMsgAMClientCreateFriendsGroup",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5561,
         "name": "k_EMsgAMClientCreateFriendsGroupResponse",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5562,
         "name": "k_EMsgAMClientDeleteFriendsGroup",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5563,
         "name": "k_EMsgAMClientDeleteFriendsGroupResponse",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5564,
-        "name": "k_EMsgAMClientRenameFriendsGroup",
-        "flags": 2,
-        "server_type": -1
+        "name": "k_EMsgAMClientManageFriendsGroup",
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5565,
-        "name": "k_EMsgAMClientRenameFriendsGroupResponse",
-        "flags": 2,
-        "server_type": -1
+        "name": "k_EMsgAMClientManageFriendsGroupResponse",
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5566,
         "name": "k_EMsgAMClientAddFriendToGroup",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5567,
         "name": "k_EMsgAMClientAddFriendToGroupResponse",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5568,
         "name": "k_EMsgAMClientRemoveFriendFromGroup",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5569,
         "name": "k_EMsgAMClientRemoveFriendFromGroupResponse",
-        "flags": 2,
-        "server_type": -1
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5570,
@@ -1890,12 +1866,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5581,
-        "name": "k_EMsgClientOGSGameServerPingSample",
-        "flags": 6,
-        "server_type": 39
-    },
-    {
         "emsg": 5582,
         "name": "k_EMsgClientCommentNotifications",
         "flags": 2,
@@ -1940,18 +1910,6 @@
     {
         "emsg": 5589,
         "name": "k_EMsgAMClientSetPlayerNicknameResponse",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 5590,
-        "name": "k_EMsgClientCreateAccountProto",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 5591,
-        "name": "k_EMsgClientCreateAccountProtoResponse",
         "flags": 2,
         "server_type": -1
     },
@@ -2317,9 +2275,9 @@
     },
     {
         "emsg": 7005,
-        "name": "k_EMsgClientUDSInviteToGame",
+        "name": "k_EMsgClientInviteToGame",
         "flags": 6,
-        "server_type": 41
+        "server_type": 102
     },
     {
         "emsg": 7301,

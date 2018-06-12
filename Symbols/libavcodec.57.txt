@@ -1,3 +1,4 @@
+
  AudioConverterDispose
  AudioConverterFillComplexBuffer
  AudioConverterGetProperty
@@ -446,10 +447,13 @@
  proc_pidpath
  pthread_cond_broadcast
  pthread_cond_destroy
+ pthread_cond_init
  pthread_cond_init$UNIX2003
  pthread_cond_signal
+ pthread_cond_wait
  pthread_cond_wait$UNIX2003
  pthread_create
+ pthread_join
  pthread_join$UNIX2003
  pthread_mutex_destroy
  pthread_mutex_init

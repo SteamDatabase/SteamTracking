@@ -10,6 +10,7 @@ Protobufs/google/
 *.dic
 *.tmp
 *.webm
+*.swp
 
 ClientExtracted/steam_osx
 ClientExtracted/ubuntu12_32/steam
