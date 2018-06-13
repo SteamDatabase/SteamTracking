@@ -136,6 +136,9 @@
 						<Label id="StoreLabel" class="MainMenuRowLabel" text="#MainMenu_Store" />
 						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
 					</ParentalButton>
+					<ParentalButton id="StoreHidden" class="Button MainMenuButton" tabindex="1" selectionpos="2,20">
+						<Image class="MainMenuCapsuleOver" src="file://{images}/systemmenu/capsule_glow.png" />
+					</ParentalButton>
 					<Button id="LibraryButton" class="Button MainMenuButton" tabindex="2" selectionpos="3,20"  onactivate="ShowLibraryClearBackstack();">
 						<Image class="MainMenuIcon" src="file://{images}/systemmenu/icon_library.png" />
 						<Label id="LibraryLabel" class="MainMenuRowLabel" text="#MainMenu_Library" />

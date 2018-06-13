@@ -15610,6 +15610,7 @@
  b s_cmdForceVGUI
  b s_cmdFriendsUI
  b s_cmdNoFriendsUI
+ b s_cmdUnhideFriendsUI
  b s_hKeyvalue
  b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf

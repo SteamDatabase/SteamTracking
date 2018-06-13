@@ -1502,10 +1502,16 @@ transform: none;
 	transition-timing-function: linear;
 }
 
+#StoreHidden,
+.StoreHidden #StoreButton
+{
+    visibility: collapse;
+}
 
-
-
-
+.StoreHidden #StoreHidden
+{
+    visibility: visible;
+}
 
 
 .ScreenSaverMode MainMenu, .GamesRunning MainMenu
