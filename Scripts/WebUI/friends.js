@@ -46598,7 +46598,7 @@ and limitations under the License.
             }),
             Object.defineProperty(t.prototype, "minimumHeight", {
               get: function() {
-                return 70;
+                return 0;
               },
               enumerable: !0,
               configurable: !0
@@ -68519,109 +68519,106 @@ and limitations under the License.
                 this.state.bIsRestoring && (o += " Restoring"),
                 n == Ch.Error && (o += " FailedToLoad");
               var s = { display: "none" };
-              return (
-                n == Ch.Loaded && (s = { display: "block" }),
+              n == Ch.Loaded && (s = { display: "block" });
+              var c = br.createElement(
+                "span",
+                { className: "giphySearch" },
+                this.GetArgument("giphy_search")
+              );
+              return br.createElement(
+                "div",
+                { className: o, style: r, ref: this.BindImageContainer },
                 br.createElement(
                   "div",
-                  { className: o, style: r, ref: this.BindImageContainer },
+                  {
+                    className: "chatImageMinimized",
+                    onClick: this.handleCollapse,
+                    title: Object(hr.b)("#bbcode_image_minimized_URL") + i
+                  },
+                  Object(hr.b)("#bbcode_image_minimized")
+                ),
+                n == Ch.Loading &&
                   br.createElement(
                     "div",
-                    {
-                      className: "chatImageMinimized",
-                      onClick: this.handleCollapse,
-                      title: Object(hr.b)("#bbcode_image_minimized_URL") + i
-                    },
-                    Object(hr.b)("#bbcode_image_minimized")
+                    { className: "LoadingImage" },
+                    "Loading image: ",
+                    br.createElement(m, { href: i }, i)
                   ),
-                  n == Ch.Loading &&
+                n == Ch.Error &&
+                  br.createElement(
+                    "div",
+                    { className: "FailedToLoadImage" },
+                    br.createElement("span", null, "Failed to load image:"),
+                    " ",
+                    br.createElement(m, { href: i }, i)
+                  ),
+                br.createElement("img", {
+                  style: s,
+                  className: "chatImageFull",
+                  src: e,
+                  srcSet: t,
+                  onLoad: this.OnImageLoad,
+                  onError: this.OnImageError,
+                  onContextMenu: function(e) {
+                    y(e, i);
+                  }
+                }),
+                n == Ch.Loaded &&
+                  br.createElement(
+                    br.Fragment,
+                    null,
                     br.createElement(
                       "div",
-                      { className: "LoadingImage" },
-                      "Loading image: ",
-                      br.createElement(m, { href: i }, i)
+                      {
+                        className: "chatImageRestoreControl",
+                        onClick: this.handleRestore,
+                        title: Object(hr.b)("#bbcode_image_tooltip_restore")
+                      },
+                      br.createElement("div", { className: "restoreImageSize" })
                     ),
-                  n == Ch.Error &&
                     br.createElement(
-                      "div",
-                      { className: "FailedToLoadImage" },
-                      br.createElement("span", null, "Failed to load image:"),
-                      " ",
-                      br.createElement(m, { href: i }, i)
-                    ),
-                  br.createElement("img", {
-                    style: s,
-                    className: "chatImageFull",
-                    src: e,
-                    srcSet: t,
-                    onLoad: this.OnImageLoad,
-                    onError: this.OnImageError,
-                    onContextMenu: function(e) {
-                      y(e, i);
-                    }
-                  }),
-                  n == Ch.Loaded &&
-                    br.createElement(
-                      br.Fragment,
-                      null,
-                      br.createElement(
-                        "div",
-                        {
-                          className: "chatImageRestoreControl",
-                          onClick: this.handleRestore,
-                          title: Object(hr.b)("#bbcode_image_tooltip_restore")
-                        },
-                        br.createElement("div", {
-                          className: "restoreImageSize"
-                        })
-                      ),
-                      br.createElement(
-                        m,
-                        {
-                          className: "chatImageURL",
-                          href: i,
-                          title: a
-                            ? Object(hr.b)(
-                                "#bbcode_image_tooltip_link_giphy",
-                                this.GetArgument("giphy_search")
-                              )
-                            : Object(hr.b)("#bbcode_image_tooltip_link")
-                        },
-                        br.createElement(Bs.z, null),
-                        br.createElement(
-                          "div",
-                          { className: "giphyTag" },
-                          a &&
-                            Object(hr.b)(
-                              "#bbcode_image_link_giphy",
+                      m,
+                      {
+                        className: "chatImageURL",
+                        href: i,
+                        title: a
+                          ? Object(hr.b)(
+                              "#bbcode_image_tooltip_link_giphy",
                               this.GetArgument("giphy_search")
                             )
-                        )
-                      ),
+                          : Object(hr.b)("#bbcode_image_tooltip_link")
+                      },
+                      br.createElement(Bs.z, null),
                       br.createElement(
                         "div",
-                        {
-                          className: "chatImageResizeControl",
-                          onMouseDown: this.OnImageResize,
-                          title: Object(hr.b)("#bbcode_image_tooltip_resize"),
-                          onContextMenu: function(e) {
-                            y(e, i);
-                          }
-                        },
-                        br.createElement(Bs.B, null)
-                      ),
-                      br.createElement(
-                        "div",
-                        {
-                          className: "chatImageCollapseControl",
-                          onClick: this.handleCollapse,
-                          title: this.state.m_bMinimized
-                            ? Object(hr.b)("#bbcode_image_tooltip_uncollapse")
-                            : Object(hr.b)("#bbcode_image_tooltip_collapse")
-                        },
-                        br.createElement(Bs.N, null)
+                        { className: "giphyTag" },
+                        a && Object(hr.d)("#bbcode_image_link_giphy", c)
                       )
+                    ),
+                    br.createElement(
+                      "div",
+                      {
+                        className: "chatImageResizeControl",
+                        onMouseDown: this.OnImageResize,
+                        title: Object(hr.b)("#bbcode_image_tooltip_resize"),
+                        onContextMenu: function(e) {
+                          y(e, i);
+                        }
+                      },
+                      br.createElement(Bs.B, null)
+                    ),
+                    br.createElement(
+                      "div",
+                      {
+                        className: "chatImageCollapseControl",
+                        onClick: this.handleCollapse,
+                        title: this.state.m_bMinimized
+                          ? Object(hr.b)("#bbcode_image_tooltip_uncollapse")
+                          : Object(hr.b)("#bbcode_image_tooltip_collapse")
+                      },
+                      br.createElement(Bs.N, null)
                     )
-                )
+                  )
               );
             }),
             it.b([Xt.a], t.prototype, "handleCollapse", null),

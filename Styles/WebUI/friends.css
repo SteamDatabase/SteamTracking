@@ -3733,6 +3733,13 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	margin-bottom: -4px;
 	padding-right: 2px;
 	padding-left: 2px;
+	font-weight: bold;
+}
+
+.giphyImg a.chatImageURL .giphyTag .giphySearch
+{
+	color: #eee;
+	font-weight: normal;
 }
 
 .chatImageRestoreControl
@@ -3902,7 +3909,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	max-width: 80%;
 	display: flex;
 	flex-direction: row;
-	bottom: 0px;
+	bottom: 3px;
+	left: 8px;
 }
 
 .chatFileUploadProgressContainer
