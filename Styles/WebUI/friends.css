@@ -3583,6 +3583,52 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	max-width: 600px;
 }
 
+.chatVideoPlayControl
+{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	padding: 0px;
+	background-color: rgba( 0, 0, 0, 0.3 );
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+.chatVideoPlayControl .playButtonContainer
+{
+	width: 64px;
+	height: 64px;
+	background-color: #000a;
+	border-radius: 50%;
+	padding: 32px;
+	margin: auto;
+	align-self: center;
+	transition: all .16s ease-in-out;
+}
+
+.chatVideoPlayControl:hover .playButtonContainer
+{
+	background-color: #000f;
+}
+
+.chatVideoPlayControl:hover svg
+{
+	transform: scale(1.2);
+}
+
+.chatVideoPlayControl svg
+{
+	padding-left: 4px;
+	display: block;
+	margin: 0 auto;
+	transition: all .21s ease-in-out;
+}
+
 .chatImageFull
 {
 	width: 100%;
@@ -6510,11 +6556,13 @@ input.InviteFriendToChatDialog_LinkInput
 	width: 46px;
 }
 
+.ChatSpeaker.ChatRoomSpeaker .speaker .rankIcon,
 .MemberListColumn .friend .rankIcon
 {
 	position: relative;
 }
 
+.ChatSpeaker.ChatRoomSpeaker .speaker .rankIcon > *,
 .MemberListColumn .friend .rankIcon > *
 {
 	position: absolute;
@@ -6525,6 +6573,7 @@ input.InviteFriendToChatDialog_LinkInput
 	z-index: 1;
 }
 
+.ChatSpeaker.ChatRoomSpeaker .speaker .rankIcon .SVGIcon_Crown,
 .MemberListColumn .friend .rankIcon .SVGIcon_Crown
 {
 	fill: rgb( 255, 187, 0 );
@@ -6591,12 +6640,14 @@ input.InviteFriendToChatDialog_LinkInput
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	z-index: 2;
 	pointer-events: none;
+	min-width: 34px;
+	text-align: right;
 }
 
 .MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupCountCollapsed
 {
 	opacity: 1;
-	transform: translateX( 16px ) translateY( 6px );
+	transform: translateX( -8px ) translateY( 6px );
 }
 
 .MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupIcon .SVGIcon_Group
@@ -8274,6 +8325,15 @@ img.emoticon
 	text-align: center;
 	transform: translateX( 0px );
 	transition: all .21s ease-in-out;
+	padding-top: 1px;
+}
+
+@media only screen and ( min-resolution: 1.5dppx ) and ( max-resolution: 2dppx )
+{
+	.friendRequestButton .requestsNumber
+	{
+		padding-top: 0;
+	}
 }
 
 .friendRequestButton:hover .requestsNumber
@@ -15009,6 +15069,7 @@ a.general_btn:hover
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: flex-end;
+	margin-right: 14px;
 }
 
 .roleEditHeader .DialogLabel
@@ -15049,12 +15110,42 @@ button.DialogButton.deleteButton
 	min-height: 30px;
 }
 
+.Page_GroupSettings_Permissions .DialogBody
+{
+	display: block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	padding-right: 0px;
+	flex: 0;
+}
+
+.Page_GroupSettings_Permissions .DialogContent_InnerWidth
+{
+	margin-right: 16px;
+	overflow-x: hidden;
+
+
+
+	display: grid;
+	grid-template-rows: fit-content(10px) fit-content(300px) 1fr;
+	grid-template-rows: fit-content(0) fit-content(0) fit-content(0) fit-content(398px) fit-content(0);
+
+	grid-gap: 5px;
+  	box-sizing: border-box;
+}
+
 .Page_GroupSettings_Permissions button.DialogButton.deleteButton
 {
-	align-self: flex-start;
-	padding: 0 16px;
-	min-width: 106px;
-	float: right;
+	width: fit-content;
+	min-width: 232px;
+	margin-left: auto;
+	margin-right: 14px;
+}
+
+.Page_GroupSettings_Permissions .DialogFooter
+{
+	margin-right: 0;
+	margin-top: 8px;
 }
 
 .Page_GroupSettings_Permissions .DialogOnOffToggle.Disabled .DialogToggle_Label
@@ -15125,6 +15216,19 @@ button.DialogButton.createNewRoleButton svg
 {
 	stroke: #aad3ff;
 	margin-bottom: 1px;
+}
+
+button.DialogButton.createNewRoleButton
+{
+	width: fit-content;
+	min-width: 232px;
+	margin-left: auto;
+	margin-right: 14px;
+}
+
+.Page_GroupSettings_Permissions button.DialogButton.deleteButton
+{
+
 }
 
 .meKey .SVGIcon_DialogCheck,

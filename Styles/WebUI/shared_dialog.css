@@ -291,6 +291,7 @@ button.DialogButton::-moz-focus-inner
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader
 {
 	margin-bottom: 16px;
+	margin-right: 0;
 }
 
 .DialogHeader
