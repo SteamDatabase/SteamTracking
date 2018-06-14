@@ -360,6 +360,10 @@ div.rightcol.large {
 	word-wrap: break-word;
 }
 
+.store_tooltip ul {
+	padding-left: 15px;
+}
+
 
 body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .content
 {

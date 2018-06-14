@@ -554,7 +554,7 @@ input[type=date] {
 .app_age_gate_bypassed_remove {
 	display: inline-block;
 	cursor: pointer;
-	background: no-repeat center center url('/store/public/images/v6/delete_search_term.png');
+	background: no-repeat center center url('/public/images/v6/delete_search_term.png');
 	width: 12px;
 	height: 24px;
 	margin-left: 8px;

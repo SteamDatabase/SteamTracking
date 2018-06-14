@@ -1068,3 +1068,13 @@ blockquote#managemygame_default_text p {
 .select2-container {
 	min-width: 300px;
 }
+
+.creator_localization_container {
+	display: flex;
+	justify-content: space-between;
+	width: 77%;
+}
+
+#creator_tagline_localization_label{
+	display: inline-block;
+}

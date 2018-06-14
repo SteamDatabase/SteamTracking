@@ -606,7 +606,7 @@ function ShowAddFeaturedTagModal()
 {
 	var unTagId = false;
 
-	var modal = ShowAutocompleteDialog ( "Add to list", "Type the name of the item you'd like to add to this list.",
+	var modal = ShowAutocompleteDialog ( "Add a tag", "Type the name of the tag you'd like to add to this list.",
 		GetTagSuggestFunc ( g_rgGlobalPopularTags ),
 		function ( suggestion )
 		{

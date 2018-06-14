@@ -9,6 +9,13 @@ function CreateListFromForm( elForm, fnOnComplete )
 
 function EditList( listid, title, blurb, state, appids, type, background, fnOnComplete )
 {
+	var rgTitleAndBlurbsLocs = {};
+	$J( 'input[type=hidden][name^="language"]').each( function() {
+		if( $J(this).val() )
+		{
+			rgTitleAndBlurbsLocs[$J(this).attr('name')] = $J(this).val();
+		}
+	});
 
 	$J.ajax ( {
 		url: g_strCuratorAdminURL + 'ajaxeditlist/',
@@ -20,6 +27,7 @@ function EditList( listid, title, blurb, state, appids, type, background, fnOnCo
 			appids: appids,
 			type: type,
 			background: background,
+			title_blurb_locs: JSON.stringify( rgTitleAndBlurbsLocs ),
 			sessionid: g_sessionID
 		},
 		dataType: 'json',
@@ -182,6 +190,14 @@ function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 
 function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, ...rgPreferredTags )
 {
+		var rgTagLineLocs = {};
+	$J( 'input[type=hidden][name^="language"]').each( function() {
+		if( $J(this).val() )
+		{
+			rgTagLineLocs[$J(this).attr('name')] = $J(this).val();
+		}
+	});
+
 	$J.ajax ( {
 		url: g_strCuratorAdminURL + 'ajaxupdatecuratordetails/',
 		data: {
@@ -196,6 +212,7 @@ function UpdateCurator( bAsync, description, google_id, platform_windows, platfo
 			discussions_url: discussions_url,
 			show_broadcast: show_broadcast,
 			tags_preferred: rgPreferredTags,
+			tagline_locs: JSON.stringify( rgTagLineLocs ),
 			sessionid: g_sessionID,
 			async: bAsync,
 		},
@@ -247,7 +264,7 @@ function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 	var $elInput = $J("#review_suggest_input");
 	var nAppId = 0;
 
-	var modal = ShowPromptDialog( "Add to list", "Type the name of the item you'd like to add to this list." );
+	var modal = ShowPromptDialog( "Add to list", "Type the name of the app you'd like to add to this list.<br>You can use the appid if it is known." );
 	modal.done( function(){
 		if( nAppId > 0 )
 		{
@@ -296,7 +313,7 @@ function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 
 function ShowAppSuggestFormForList( elTarget, listid )
 {
-	if( !listid )
+	if( listid == '' )
 		return CreateListFromForm( document.getElementById('listform'), ShowAppSuggestFormForList.bind( this, elTarget ) );
 
 	ShowAppSuggestForm( elTarget, false, function( nAppID ){
@@ -1178,13 +1195,19 @@ function CustomizeCreatedApps( elForm )
 
 function UpdateCustomizationCreatedApp( appid, blurb, link_url )
 {
+    	var rgBlurbAndURL = {};
+	$J( 'input[type=hidden][name^="language"]').each( function() {
+		if( $J(this).val() )
+		{
+			rgBlurbAndURL[$J(this).attr('name')] = $J(this).val();
+		}
+	});
 
 	$J.ajax ( {
 		url: g_strCuratorAdminURL + 'ajaxupdatecustomizationcreatedapp/',
 		data: {
 			appid: appid,
-			blurb: blurb,
-			link_url: link_url,
+			blurb_link_url: JSON.stringify( rgBlurbAndURL ),
 			sessionid: g_sessionID
 		},
 		dataType: 'json',
