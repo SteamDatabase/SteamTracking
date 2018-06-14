@@ -253,7 +253,7 @@
 				
 				if( $OriginalFile === 'Scripts/WebUI/friends.js' )
 				{
-					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > Protobufs/webui_friendsjs.proto' );
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > Protobufs/WebUI/friends.proto' );
 				}
 				
 				system( 'prettier --write ' . escapeshellarg( $File ) );
