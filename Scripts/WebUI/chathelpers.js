@@ -1500,7 +1500,7 @@ and limitations under the License.
                 : this.m_popup && this.m_popup.focus();
             }),
             (t.prototype.Close = function() {
-              this.RemoveEventListeners(), this.m_popup && this.m_popup.close();
+              this.m_popup && this.m_popup.close();
             }),
             (t.prototype.GetName = function() {
               return this.m_strName;

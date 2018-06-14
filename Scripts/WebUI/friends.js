@@ -62772,14 +62772,23 @@ and limitations under the License.
                 !t.container.BIsClosed() &&
                 t.container.FlashWindow();
             }),
-            (e.prototype.GetPerContextChatData = function(e) {
-              var t = this.m_mapChatBrowserContexts.get(e.m_unPID);
-              return (
-                t ||
-                  ((t = new ip(e)),
-                  this.m_mapChatBrowserContexts.set(e.m_unPID, t)),
-                t
-              );
+            (e.prototype.GetPerContextChatData = function(e, t) {
+              void 0 === t && (t = !1);
+              var i = this.m_mapChatBrowserContexts.get(e.m_unPID);
+              if (!i) {
+                var n = !0;
+                0 != e.m_unPID &&
+                  void 0 != Sm &&
+                  (n = Sm.OverlayStore().HasOverlayInstance(e.m_unPID)),
+                  (i = new ip(e)),
+                  n
+                    ? this.m_mapChatBrowserContexts.set(e.m_unPID, i)
+                    : AssertMsg(
+                        !1,
+                        "Had to prevent instance being added back" + e.m_unPID
+                      );
+              }
+              return i;
             }),
             (e.prototype.GetDefaultTabSetForContext = function(e) {
               return this.GetPerContextChatData(e).default_tabset;
@@ -70385,6 +70394,9 @@ and limitations under the License.
               )),
                 this.OnOverlayChatBrowserInfoChanged();
             }),
+            (e.prototype.HasOverlayInstance = function(e) {
+              return this.m_mapBrowserInfo.has(e);
+            }),
             (e.prototype.OnOverlayChatBrowserInfoChanged = function() {
               var e = this;
               SteamClient.WebChat.GetOverlayChatBrowserInfo()
@@ -70411,7 +70423,7 @@ and limitations under the License.
                     }
                   }
                   i.forEach(function(t, i) {
-                    e.OverlayBrowserClosed(t), e.m_mapBrowserInfo.delete(i);
+                    e.m_mapBrowserInfo.delete(i), e.OverlayBrowserClosed(t);
                   });
                 })
                 .catch(function(e) {
@@ -70423,7 +70435,6 @@ and limitations under the License.
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
               Up.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Up.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID),
                 Up.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
                   Up.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
                   Up.SetDefaultPopupContext(Lp),
@@ -70433,7 +70444,8 @@ and limitations under the License.
                   e.m_nBrowserID
                 ),
                 Cs.d.ClosePopupsOwnedByBrowser(e),
-                Up.UIStore.SetSuppressBrowserContextBroadcasting(!1);
+                Up.UIStore.SetSuppressBrowserContextBroadcasting(!1),
+                Up.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
             }),
             it.b([Xt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
@@ -71124,6 +71136,9 @@ and limitations under the License.
               });
           }
           return (
+            (e.prototype.OverlayStore = function() {
+              return this.m_OverlayStore;
+            }),
             (e.prototype.BNeedsUpdate = function() {
               return this.m_bUpdatedBuildAvailable;
             }),
@@ -72217,7 +72232,7 @@ and limitations under the License.
                 : this.m_popup && this.m_popup.focus();
             }),
             (e.prototype.Close = function() {
-              this.RemoveEventListeners(), this.m_popup && this.m_popup.close();
+              this.m_popup && this.m_popup.close();
             }),
             (e.prototype.GetName = function() {
               return this.m_strName;
