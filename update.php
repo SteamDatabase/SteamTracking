@@ -251,6 +251,11 @@
 			{
 				file_put_contents( $File, $Data );
 				
+				if( $OriginalFile === 'Scripts/WebUI/friends.js' )
+				{
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > Protobufs/webui_friendsjs.proto' );
+				}
+				
 				system( 'prettier --write ' . escapeshellarg( $File ) );
 				
 				return true;
