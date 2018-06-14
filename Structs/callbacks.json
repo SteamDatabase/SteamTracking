@@ -380,6 +380,11 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<OpenURLInClient_t>(OpenURLInClient_t*)"
     },
     {
+        "id": 729,
+        "size": 8,
+        "posted_in": "CSteamEngine::SetCurrentUIMode(EUIMode)"
+    },
+    {
         "id": 801,
         "size": 2068,
         "posted_in": "CUserFriends::ActivateGameOverlayToUser(char const*, CSteamID)"

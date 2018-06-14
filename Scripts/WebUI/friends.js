@@ -2211,18 +2211,23 @@ webpackJsonp(
           document.body.removeChild(t);
         }
       }
+      function u(e) {
+        e.startsWith("steam://openurl/") &&
+          (e = e.slice("steam://openurl/".length)),
+          l(e);
+      }
       (t.a = n),
         (t.b = r),
         (t.h = o),
         (t.f = a),
         (t.d = s),
         (t.g = c),
-        (t.e = l),
+        (t.e = u),
         i.d(t, "c", function() {
-          return d;
+          return p;
         });
-      var u = i("vwkX"),
-        d = (function() {
+      var d = i("vwkX"),
+        p = (function() {
           function e(e) {
             var t = this;
             (this.m_bNeedSort = !1),
@@ -2291,7 +2296,7 @@ webpackJsonp(
                   t(!0);
             }),
             (e.prototype.UnregisterChild = function(e) {
-              u.c(this.m_rgChildren, function(t) {
+              d.c(this.m_rgChildren, function(t) {
                 return t.element == e;
               });
             }),
@@ -30960,13 +30965,13 @@ and limitations under the License.
                   null)
                 : Up.ShowFriendChatDialog(e, this.m_unAccountID, !0);
             }),
-            (e.DefaultFriendSortComparator = function(e, t) {
+            (e.FriendSortStatusComparator = function(e, t) {
               var i = Up.SettingsStore.BForceAlphabeticFriendSorting(),
                 n = e.persona,
                 r = t.persona;
               if (n.is_ingame) {
                 if (!r.is_ingame) return -1;
-                if (i) return e.display_name.localeCompare(t.display_name);
+                if (i) return 0;
                 if (n.is_awayOrSnooze) {
                   if (!r.is_awayOrSnooze) return 1;
                 } else if (r.is_awayOrSnooze) return -1;
@@ -30978,7 +30983,11 @@ and limitations under the License.
                 if (n.is_awayOrSnooze) {
                   if (!r.is_awayOrSnooze) return 1;
                 } else if (r.is_awayOrSnooze) return -1;
-              return e.display_name.localeCompare(t.display_name);
+              return 0;
+            }),
+            (e.DefaultFriendSortComparator = function(t, i) {
+              var n = e.FriendSortStatusComparator(t, i);
+              return 0 != n ? n : t.display_name.localeCompare(i.display_name);
             }),
             (e.FriendSortByLastSeenComparator = function(e, t) {
               var i = e.persona,
@@ -32124,6 +32133,14 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "member_list", {
               get: function() {
+                var e = this.member_list_unsorted;
+                return e.sort(Ka.DefaultFriendSortComparator), e;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "member_list_unsorted", {
+              get: function() {
                 for (
                   var e = [], t = 0, i = this.InternalGetMemberList;
                   t < i.length;
@@ -32138,7 +32155,7 @@ and limitations under the License.
                         (n.persona.is_online && !n.persona.is_ingame)) &&
                         e.push(n)));
                 }
-                return e.sort(Ka.DefaultFriendSortComparator), e;
+                return e;
               },
               enumerable: !0,
               configurable: !0
@@ -32195,6 +32212,7 @@ and limitations under the License.
             it.b([pt.action], e.prototype, "AddMember", null),
             it.b([pt.action], e.prototype, "RemoveMember", null),
             it.b([pt.computed], e.prototype, "member_list", null),
+            it.b([pt.computed], e.prototype, "member_list_unsorted", null),
             it.b([pt.computed], e.prototype, "member_extra_list", null),
             it.b([pt.computed], e.prototype, "member_list_ingame", null),
             e
@@ -37163,9 +37181,12 @@ and limitations under the License.
               return e.m_nBrowserID == t.m_nBrowserID && e.m_unPID == t.m_unPID;
             }),
             (t.prototype.GetVisibilityState = function() {
-              return this.m_tabset && this.m_tabset.is_popup_active
-                ? this.m_tabset.activeTab.GetChatView() == this &&
-                  this.m_tabset.is_popup_visible
+              if (!this.m_tabset || !this.m_tabset.is_popup_active) return 0;
+              var e = void 0;
+              return (
+                this.m_tabset.activeTab &&
+                  (e = this.m_tabset.activeTab.GetChatView()),
+                e == this && this.m_tabset.is_popup_visible
                   ? this.m_tabset.is_popup_focused
                     ? this.m_bScrolledToBottom &&
                       !Up.IdleTracker.BIsUserIdle(60)
@@ -37173,7 +37194,7 @@ and limitations under the License.
                       : 3
                     : 2
                   : 1
-                : 0;
+              );
             }),
             Object.defineProperty(t.prototype, "scroll_height", {
               get: function() {
@@ -47994,16 +48015,44 @@ and limitations under the License.
                 i = this.props.fnOnSearchSelection,
                 n = this.props.chatMemberList,
                 r = this.props.chatView.chat.GetGroup(),
-                o = n.member_list;
-              if (this.props.bSortByRank) {
+                o = n.member_list_unsorted;
+              if (
+                (this.props.searchString &&
+                  this.props.searchString.length &&
+                  (o = this.GetMembersMatchingSearch(
+                    this.props.searchString,
+                    o
+                  )),
+                this.props.eMinRank &&
+                  (o = o.filter(function(t) {
+                    return r.GetMemberRank(t.accountid) >= e.props.eMinRank;
+                  })),
+                this.props.eMaxRank &&
+                  (o = o.filter(function(t) {
+                    return r.GetMemberRank(t.accountid) <= e.props.eMaxRank;
+                  })),
+                o.sort(function(e, t) {
+                  var i = Ka.FriendSortStatusComparator(e, t);
+                  if (0 != i) return i;
+                  var n = e.persona.current_game_name
+                      ? e.persona.current_game_name
+                      : "",
+                    r = t.persona.current_game_name
+                      ? t.persona.current_game_name
+                      : "";
+                  return (
+                    (i = n.localeCompare(r)),
+                    0 != i ? i : e.display_name.localeCompare(t.display_name)
+                  );
+                }),
+                this.props.bSortByRank)
+              ) {
                 var a = {},
                   s = [];
-                o.forEach(function(t) {
-                  var i = r.GetMemberRank(t.accountid);
-                  50 == i && r.BIsClanChatRoom() && (i = 40),
-                    (!e.props.eMinRank || i >= e.props.eMinRank) &&
-                      (!e.props.eMaxRank || i <= e.props.eMaxRank) &&
-                      (a[i] ? a[i].push(t) : ((a[i] = [t]), s.push(i)));
+                o.forEach(function(e) {
+                  var t = r.GetMemberRank(e.accountid);
+                  50 == t && r.BIsClanChatRoom() && (t = 40),
+                    a[t] ? a[t].push(e) : ((a[t] = [e]), s.push(t));
                 }),
                   (o = []),
                   s.sort(function(e, t) {
@@ -48013,22 +48062,8 @@ and limitations under the License.
                   var u = l[c];
                   o.push.apply(o, a[u]);
                 }
-              } else
-                this.props.eMinRank &&
-                  (o = o.filter(function(t) {
-                    return r.GetMemberRank(t.accountid) >= e.props.eMinRank;
-                  }));
-              if (
-                (this.props.eMaxRank &&
-                  (o = o.filter(function(t) {
-                    return r.GetMemberRank(t.accountid) <= e.props.eMaxRank;
-                  })),
-                !o.length && this.props.bHideWhenEmpty)
-              )
-                return null;
-              this.props.searchString &&
-                this.props.searchString.length &&
-                (o = this.GetMembersMatchingSearch(this.props.searchString, o));
+              }
+              if (!o.length && this.props.bHideWhenEmpty) return null;
               var d = t
                 ? null
                 : o.map(function(t) {
@@ -70046,10 +70081,18 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = this.GetArgument("app"),
-                t = tt.a.STORE_BASE_URL + "widget/" + e + "?friendsui=1";
+                t =
+                  "undefined" != typeof SteamClient &&
+                  void 0 !== SteamClient.SharedConnection,
+                i =
+                  tt.a.STORE_BASE_URL +
+                  "widget/" +
+                  e +
+                  "?friendsui=1&inclient=" +
+                  (t ? "1" : "0");
               return br.createElement("iframe", {
                 className: "CBBCodeSteamStore",
-                src: t,
+                src: i,
                 frameBorder: "0",
                 width: "640",
                 height: "190"
@@ -70566,6 +70609,7 @@ and limitations under the License.
           function e() {
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
+              (this.m_hCloseContextTimeout = void 0),
               (this.m_bSupportsAudioWorkletProcessors = !1);
           }
           return (
@@ -70638,12 +70682,24 @@ and limitations under the License.
                   : e && e();
               } else e && e();
             }),
+            (e.prototype.DelayedCleanupContextIfInactive = function() {
+              (this.m_hCloseContextTimeout = void 0),
+                0 == this.m_mapPlaybackObjs.size &&
+                  0 == this.m_bVoiceActive &&
+                  (console.log("(CAudioPlaybackManager) close context"),
+                  this.m_Context.close(),
+                  (this.m_Context = void 0));
+            }),
             (e.prototype.CleanupContextIfUneeded = function() {
               0 == this.m_mapPlaybackObjs.size &&
                 0 == this.m_bVoiceActive &&
-                (console.log("(CAudioPlaybackManager) close context"),
-                this.m_Context.close(),
-                (this.m_Context = void 0));
+                (void 0 != this.m_hCloseContextTimeout &&
+                  (clearTimeout(this.m_hCloseContextTimeout),
+                  (this.m_hCloseContextTimeout = void 0)),
+                (this.m_hCloseContextTimeout = setTimeout(
+                  this.DelayedCleanupContextIfInactive,
+                  1e4
+                )));
             }),
             (e.prototype.OnAudioContextStateChange = function() {
               void 0 != this.m_Context &&
@@ -70658,6 +70714,7 @@ and limitations under the License.
               "m_bSupportsAudioWorkletProcessors",
               void 0
             ),
+            it.b([Xt.a], e.prototype, "DelayedCleanupContextIfInactive", null),
             it.b(
               [pt.action.bound],
               e.prototype,

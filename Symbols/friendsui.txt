@@ -1929,6 +1929,7 @@
  D typeinfo for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D typeinfo for CFriendsNotification
  D typeinfo for CFriendsUIModule
+ D typeinfo for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
@@ -3249,6 +3250,7 @@
  D vtable for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  D vtable for CFriendsNotification
  D vtable for CFriendsUIModule
+ D vtable for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D vtable for CFriendsUIModule::CCallback_OnOpenChatDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
@@ -3697,6 +3699,7 @@
  Plat_GetExecutablePath
  Plat_IsInDebugSession
  Plat_MSTime64
+ Plat_OutputDebugString
  Plat_localtime
  R DES_SPtrans
  R jpeg_aritab
@@ -3954,6 +3957,7 @@
  R typeinfo name for CFriendsListSubPanel::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendsNotification
  R typeinfo name for CFriendsUIModule
+ R typeinfo name for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
@@ -5984,6 +5988,7 @@
  T CFriendsDialog::AppendContextMenuItems(CSteamID, vgui::Menu*, bool)
  T CFriendsDialog::ApplyParentalSettings()
  T CFriendsDialog::ApplySchemeSettings(vgui::IScheme*)
+ T CFriendsDialog::BAllowDesktopFriendsUI()
  T CFriendsDialog::BCanAcceptChatMessagesFromUser(CSteamID const&)
  T CFriendsDialog::BCheckIgnoredFriend(unsigned long long, unsigned long long, char const*)
  T CFriendsDialog::BCompactView()
@@ -6393,6 +6398,8 @@
  T CFriendsUIModule::BIsVisibleAndFocused()
  T CFriendsUIModule::BShowAvatarsInFriendsList()
  T CFriendsUIModule::BSortFriendsByNameInFriendsList()
+ T CFriendsUIModule::CCallbackInternal_OnUIModeChanged::CCallbackInternal_OnUIModeChanged()
+ T CFriendsUIModule::CCallbackInternal_OnUIModeChanged::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenChatDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog::Run(void*)
@@ -6454,6 +6461,7 @@
  T CFriendsUIModule::OnOpenChatRoomGroupDialog(OpenChatRoomGroupDialog_t*)
  T CFriendsUIModule::OnOpenInviteToTradeDialog(OpenInviteToTradeDialog_t*)
  T CFriendsUIModule::OnOpenJoinGameDialog(OpenJoinGameDialog_t*)
+ T CFriendsUIModule::OnUIModeChanged(UIModeChanged_t*)
  T CFriendsUIModule::OpenChatDialog(CSteamID)
  T CFriendsUIModule::PostInitialize(void* (**)(char const*, int*), int)
  T CFriendsUIModule::RunFrame()
@@ -9927,6 +9935,8 @@
  T ClientUtils()
  T ClientVideo()
  T ComboBox_Factory()
+ T CommonKeyCode::KeyCodeToVirtualKey(CommonKeyCode::KeyCode)
+ T CommonKeyCode::WindowsVirtualKeyToKeyCode(int)
  T ConCommandBase::AddFlags(unsigned int)
  T ConCommandBase::Create(char const*, char const*, unsigned long long)
  T ConCommandBase::GetFlags() const
@@ -15418,6 +15428,11 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
+ b CommonKeyCode::InitKeyTranslation()::threadonce_581_40
+ b CommonKeyCode::s_pKeyCodeToVirtualKey
+ b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
+ b CommonKeyCode::s_pVirtualKeyToKeyCode
+ b CommonKeyCode::s_pWindowsVirtualKeyToKeyCode
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
  b ERR_get_state.fallback
  b FriendsUIGetLauncherType()::s_eLauncherType
@@ -15699,6 +15714,7 @@
  d CRYPTO_str_functs
  d CRYPTO_str_reasons
  d CURLHelper::BIsTrustedURL(char const*)::rgpchDomains
+ d CommonKeyCode::keyMap
  d DH_get_1024_160._bignum_dh1024_160_g
  d DH_get_1024_160._bignum_dh1024_160_p
  d DH_get_1024_160._bignum_dh1024_160_q
@@ -16445,6 +16461,7 @@
  t BuildSignatureBuffer_Insecure_BackwardsCompat(KeyValues*, CUtlBuffer&)
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
+ t CommonKeyCode::InitKeyTranslation()
  t ConvertJpegToRawInternal(unsigned char const*, int, CUtlBuffer&, int&, int&, int*, bool)
  t CopyString(char const*)
  t Create_AnimatingImagePanel()
@@ -16572,6 +16589,7 @@
  t _GLOBAL__sub_I_broadcastcontroller.cpp
  t _GLOBAL__sub_I_checksum_crc.cpp
  t _GLOBAL__sub_I_client_api.cpp
+ t _GLOBAL__sub_I_commonkeycode.cpp
  t _GLOBAL__sub_I_constants.cpp
  t _GLOBAL__sub_I_controls.cpp
  t _GLOBAL__sub_I_crypto.cpp

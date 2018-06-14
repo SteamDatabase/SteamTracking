@@ -756,7 +756,7 @@ webpackJsonp(
           )
         );
       }
-      function b() {
+      function g() {
         return A.createElement(
           "svg",
           {
@@ -801,7 +801,7 @@ webpackJsonp(
           })
         );
       }
-      function g() {
+      function b() {
         return A.createElement(
           "svg",
           {
@@ -1966,8 +1966,8 @@ webpackJsonp(
         (t.H = v),
         (t.o = y),
         (t.n = _),
-        (t.y = b),
-        (t.a = g),
+        (t.y = g),
+        (t.a = b),
         (t.m = w),
         (t.p = E),
         (t.w = S),
@@ -2082,18 +2082,23 @@ webpackJsonp(
           document.body.removeChild(t);
         }
       }
+      function m(e) {
+        e.startsWith("steam://openurl/") &&
+          (e = e.slice("steam://openurl/".length)),
+          l(e);
+      }
       (t.a = i),
         (t.b = r),
         (t.h = o),
         (t.f = s),
         (t.d = c),
         (t.g = a),
-        (t.e = l),
+        (t.e = m),
         n.d(t, "c", function() {
-          return u;
+          return p;
         });
-      var m = n("vwkX"),
-        u = (function() {
+      var u = n("vwkX"),
+        p = (function() {
           function e(e) {
             var t = this;
             (this.m_bNeedSort = !1),
@@ -2162,7 +2167,7 @@ webpackJsonp(
                   t(!0);
             }),
             (e.prototype.UnregisterChild = function(e) {
-              m.c(this.m_rgChildren, function(t) {
+              u.c(this.m_rgChildren, function(t) {
                 return t.element == e;
               });
             }),
@@ -2175,11 +2180,11 @@ webpackJsonp(
       function i(e) {
         switch (e) {
           case 1:
-            return Object(b.b)("#Privacy_Private");
+            return Object(g.b)("#Privacy_Private");
           case 2:
-            return Object(b.b)("#Privacy_FriendsOnly");
+            return Object(g.b)("#Privacy_FriendsOnly");
           case 3:
-            return Object(b.b)("#Privacy_Public");
+            return Object(g.b)("#Privacy_Public");
           default:
             return "";
         }
@@ -2187,11 +2192,11 @@ webpackJsonp(
       function r(e) {
         switch (e) {
           case 0:
-            return Object(b.b)("#Privacy_FriendsOnly");
+            return Object(g.b)("#Privacy_FriendsOnly");
           case 1:
-            return Object(b.b)("#Privacy_Public");
+            return Object(g.b)("#Privacy_Public");
           case 2:
-            return Object(b.b)("#Privacy_Private");
+            return Object(g.b)("#Privacy_Private");
           default:
             return "";
         }
@@ -2240,19 +2245,19 @@ webpackJsonp(
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saving" },
-              Object(b.b)("#Shared_Saving")
+              Object(g.b)("#Shared_Saving")
             );
           case 3:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Error" },
-              Object(b.b)("#Error_Error")
+              Object(g.b)("#Error_Error")
             );
           case 2:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saved" },
-              Object(b.b)("#Shared_Saved")
+              Object(g.b)("#Shared_Saved")
             );
           case 0:
           default:
@@ -2283,7 +2288,7 @@ webpackJsonp(
               d(n);
               break;
             default:
-              Object(g.a)(!1, 'unknown component: "' + i + '"');
+              Object(b.a)(!1, 'unknown component: "' + i + '"');
           }
         }
       }
@@ -2296,15 +2301,15 @@ webpackJsonp(
         y.render(v.createElement(L, { PrivacyStore: n }), e);
       }
       function f(e, t, n) {
-        Object(g.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          b.a.InitDirect(n);
+        Object(b.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
+          g.a.InitDirect(n);
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
       var v = n("Jmof"),
         y = n("wLXD"),
         _ = n("m5yx"),
-        b = n("sVhq"),
-        g = n("4Dav"),
+        g = n("sVhq"),
+        b = n("4Dav"),
         w = (n("kllU"), n("TToO")),
         E = n("y986"),
         S = n("mtWM"),
@@ -2400,8 +2405,8 @@ webpackJsonp(
                     if (1 != n.success)
                       return (
                         ShowAlertDialog(
-                          Object(b.b)("#Error_Error"),
-                          Object(b.b)("#Error_CommentEditFailed")
+                          Object(g.b)("#Error_Error"),
+                          Object(g.b)("#Error_CommentEditFailed")
                         ),
                         !1
                       );
@@ -2420,8 +2425,8 @@ webpackJsonp(
                   .catch(function(e) {
                     return (
                       ShowAlertDialog(
-                        Object(b.b)("#Error_Error"),
-                        Object(b.b)("#Error_CommentEditFailed")
+                        Object(g.b)("#Error_Error"),
+                        Object(g.b)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
@@ -2454,28 +2459,28 @@ webpackJsonp(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(b.b)("#ProfilePrivacy_BasicDetails"),
+                    strLabel: Object(g.b)("#ProfilePrivacy_BasicDetails"),
                     strReadOnlySetting: i(3)
                   },
-                  Object(b.b)("#ProfilePrivacy_BasicDetails_Desc")
+                  Object(g.b)("#ProfilePrivacy_BasicDetails_Desc")
                 ),
                 v.createElement("div", { className: "ProfilePrivacyHR" }),
                 v.createElement(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(b.b)("#ProfilePrivacy_Profile"),
+                    strLabel: Object(g.b)("#ProfilePrivacy_Profile"),
                     PrivacyKey: "PrivacyProfile"
                   },
                   v.createElement(
                     "p",
                     null,
-                    Object(b.b)("#ProfilePrivacy_Profile_Desc")
+                    Object(g.b)("#ProfilePrivacy_Profile_Desc")
                   ),
                   v.createElement(
                     "p",
                     null,
-                    Object(b.b)("#ProfilePrivacy_Profile_Desc2")
+                    Object(g.b)("#ProfilePrivacy_Profile_Desc2")
                   )
                 ),
                 v.createElement(
@@ -2485,11 +2490,11 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(b.b)("#ProfilePrivacy_GameLibrary"),
+                      strLabel: Object(g.b)("#ProfilePrivacy_GameLibrary"),
                       PrivacyKey: "PrivacyOwnedGames",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(b.b)("#ProfilePrivacy_GameLibrary_Desc"),
+                    Object(g.b)("#ProfilePrivacy_GameLibrary_Desc"),
                     1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                       v.createElement(
                         B,
@@ -2498,7 +2503,7 @@ webpackJsonp(
                           PrivacyKey: "PrivacyPlaytime",
                           LimitPrivacyKey: "PrivacyOwnedGames"
                         },
-                        Object(b.b)("#ProfilePrivacy_Playtime")
+                        Object(g.b)("#ProfilePrivacy_Playtime")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -2506,21 +2511,21 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(b.b)("#ProfilePrivacy_Inventory"),
+                      strLabel: Object(g.b)("#ProfilePrivacy_Inventory"),
                       PrivacyKey: "PrivacyInventory",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(b.d)(
+                    Object(g.d)(
                       "#ProfilePrivacy_Inventory_Desc",
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "inventory/" },
-                        Object(b.b)("#ProfilePrivacy_Inventory_Inventory")
+                        Object(g.b)("#ProfilePrivacy_Inventory_Inventory")
                       ),
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "inventory/#753_6" },
-                        Object(b.b)("#ProfilePrivacy_Inventory_TradingCards")
+                        Object(g.b)("#ProfilePrivacy_Inventory_TradingCards")
                       )
                     ),
                     1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -2531,14 +2536,14 @@ webpackJsonp(
                           PrivacyKey: "PrivacyInventoryGifts",
                           LimitPrivacyKey: "PrivacyInventory"
                         },
-                        Object(b.b)("#ProfilePrivacy_Gifts")
+                        Object(g.b)("#ProfilePrivacy_Gifts")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
                   v.createElement(
                     a,
                     null,
-                    Object(b.b)("#ProfilePrivacy_Comments"),
+                    Object(g.b)("#ProfilePrivacy_Comments"),
                     ":",
                     v.createElement(D, { PrivacyStore: e })
                   ),
@@ -2547,20 +2552,20 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(b.b)("#ProfilePrivacy_UGC"),
-                      strReadOnlySetting: Object(b.b)("#Privacy_PerItem")
+                      strLabel: Object(g.b)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: Object(g.b)("#Privacy_PerItem")
                     },
-                    Object(b.d)(
+                    Object(g.d)(
                       "#ProfilePrivacy_UGC_Desc",
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "screenshots/" },
-                        Object(b.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                        Object(g.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                       ),
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "myworkshopfiles/" },
-                        Object(b.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                        Object(g.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                       )
                     )
                   )
@@ -2754,7 +2759,7 @@ webpackJsonp(
                         return e.props.OnChange(3);
                       }
                     },
-                    Object(b.b)("#Privacy_Public")
+                    Object(g.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -2764,7 +2769,7 @@ webpackJsonp(
                         return e.props.OnChange(2);
                       }
                     },
-                    Object(b.b)("#Privacy_FriendsOnly")
+                    Object(g.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -2773,7 +2778,7 @@ webpackJsonp(
                       return e.props.OnChange(1);
                     }
                   },
-                  Object(b.b)("#Privacy_Private")
+                  Object(g.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2799,11 +2804,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(1);
                       },
-                      title: Object(b.b)(
+                      title: Object(g.b)(
                         "#Profile_CommentPermission_Public_Desc"
                       )
                     },
-                    Object(b.b)("#Privacy_Public")
+                    Object(g.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -2812,11 +2817,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(0);
                       },
-                      title: Object(b.b)(
+                      title: Object(g.b)(
                         "#Profile_CommentPermission_FriendsOnly_Desc"
                       )
                     },
-                    Object(b.b)("#Privacy_FriendsOnly")
+                    Object(g.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -2824,11 +2829,11 @@ webpackJsonp(
                     onSelected: function() {
                       return e.props.OnChange(2);
                     },
-                    title: Object(b.b)(
+                    title: Object(g.b)(
                       "#Profile_CommentPermission_Private_Desc"
                     )
                   },
-                  Object(b.b)("#Privacy_Private")
+                  Object(g.b)("#Privacy_Private")
                 )
               );
             }),
@@ -2836,7 +2841,7 @@ webpackJsonp(
           );
         })(v.Component);
       n("3gXU"),
-        (window.AssertMsg = g.a),
+        (window.AssertMsg = b.a),
         document.addEventListener("DOMContentLoaded", function() {
           Object(_.c)(), p(), h();
         }),
@@ -3325,13 +3330,13 @@ and limitations under the License.
       }
       function r() {
         return (
-          window.sessionStorage && "true" == window.sessionStorage.getItem(g)
+          window.sessionStorage && "true" == window.sessionStorage.getItem(b)
         );
       }
       function o(e) {
         e
-          ? window.sessionStorage.setItem(g, "true")
-          : window.sessionStorage.removeItem(g);
+          ? window.sessionStorage.setItem(b, "true")
+          : window.sessionStorage.removeItem(b);
       }
       n.d(t, "c", function() {
         return d;
@@ -3349,7 +3354,7 @@ and limitations under the License.
           return _;
         }),
         n.d(t, "a", function() {
-          return b;
+          return g;
         }),
         (t.f = i),
         (t.h = r),
@@ -3671,17 +3676,17 @@ and limitations under the License.
                   y = a || i.right,
                   _ = r.width;
                 s.bMatchWidth && ((_ = y - v), (c.menuWidth = _));
-                var b = (s.bOverlapHorizontal ? y : v) - _,
-                  g = b > 0,
+                var g = (s.bOverlapHorizontal ? y : v) - _,
+                  b = g > 0,
                   w = m - (s.bOverlapHorizontal ? v : y) - _,
                   E = w > 0,
-                  S = (s.bPreferPopLeft || !E) && g;
-                g ||
+                  S = (s.bPreferPopLeft || !E) && b;
+                b ||
                   E ||
-                  ((S = g > E),
+                  ((S = b > E),
                   s.bFitToWindow &&
-                    ((_ += (S ? b : w) - 8), (c.menuWidth = _))),
-                  (!s.bPreferPopLeft && E) || !g
+                    ((_ += (S ? g : w) - 8), (c.menuWidth = _))),
+                  (!s.bPreferPopLeft && E) || !b
                     ? (c.menuLeft = s.bOverlapHorizontal ? v : y)
                     : (c.menuRight = m - (s.bOverlapHorizontal ? y : v));
                 var x = l || i.top,
@@ -3811,7 +3816,7 @@ and limitations under the License.
             (t = s.b([c.observer], t))
           );
         })(a.Component),
-        b = (function(e) {
+        g = (function(e) {
           function t(n, i, r) {
             var o =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -3862,7 +3867,7 @@ and limitations under the License.
             t
           );
         })(m.a),
-        g = "DEBUG_StickyContextMenus";
+        b = "DEBUG_StickyContextMenus";
     },
     kllU: function(e, t, n) {
       "use strict";
@@ -4544,12 +4549,12 @@ and limitations under the License.
                 var y = f[v];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var _ = m.document.createElement("link"), b = 0;
-                    b < y.attributes.length;
-                    b++
+                    var _ = m.document.createElement("link"), g = 0;
+                    g < y.attributes.length;
+                    g++
                   ) {
-                    var g = y.attributes.item(b);
-                    _.setAttribute(g.name, g.value);
+                    var b = y.attributes.item(g);
+                    _.setAttribute(b.name, b.value);
                   }
                   d.appendChild(_);
                 }

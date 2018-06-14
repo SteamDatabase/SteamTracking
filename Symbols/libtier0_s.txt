@@ -746,6 +746,7 @@
  semctl$UNIX2003
  semget
  semop
+ setsid
  sigaction
  signal
  sigprocmask
