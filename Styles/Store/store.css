@@ -3143,6 +3143,16 @@ body.v6 .user_reviews_header span.right {
 	top: -3px;
 }
 
+body.v6 .broadcast_live_stream_icon {
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    overflow: hidden;
+}
+
 /* ===== from shared_global.css ====== */
 body.v6 .store_nav .popup_block_new .popup_body,
 body.v6 #footer_nav .popup_block_new .popup_body {

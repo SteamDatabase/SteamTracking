@@ -565,6 +565,13 @@ GHomepage = {
 		}
 
 
+		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
+		if ( rgAppInfo && rgAppInfo.live_broadcast )
+		{		
+			$ImgCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
+		}
+
+
 		//var $ImgCap = $J('<img/>', { src: rgItemData.main_capsule } );
 		//$ImgCtn.append( $ImgCap );
 		$CapCtn.append( $ImgCtn );
@@ -1315,6 +1322,15 @@ GHomepage = {
 
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
 
+		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
+		if ( rgAppInfo && rgAppInfo.live_broadcast )
+		{
+			$CapCtn.append( 
+					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+			);
+		
+		}
+
 		return $CapCtn;
 	},
 
@@ -1513,6 +1529,10 @@ GHomepage = {
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_cap'}).append( $J('<img/>', {src: strHeaderURL } ) ) );
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_desc'} ).text( strDescription ) );
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_spotlight discount_block_large') : '&nbsp;' ) );
+
+		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
+		if ( rgAppInfo && rgAppInfo.live_broadcast )
+			$Spotlight.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		$Spotlight.append( $J('<div/>', {'style': 'clear: both;' } ) );
 
 		$SpotlightCtn.append(

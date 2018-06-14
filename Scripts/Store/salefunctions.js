@@ -129,14 +129,8 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleBlock( rgTier2, $J('#tier2_target' ) );
 
 	// capsule rows
-	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
-	HomeSaleCapsuleCategory( rgDisplayLists.video, $J('.category_caps_video') );
-	HomeSaleCapsuleCategory( rgDisplayLists.freetoplay, $J('.category_caps_freetoplay') );
 	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
-	HomeSaleCapsuleCategory( rgDisplayLists.oldschool, $J('.category_caps_oldschool') );
-	HomeSaleCapsuleCategory( rgDisplayLists.niche, $J('.category_caps_niche') );
-	HomeSaleCapsuleCategory( rgDisplayLists.moddable, $J('.category_caps_moddable') );
-
+	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )
@@ -251,6 +245,15 @@ function SaleCap( item, strFeatureContext, strDiscountClass )
 
 	$CapCtn.append( $Img );
 	$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
+
+	var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];
+	if ( rgAppInfo && rgAppInfo.live_broadcast )
+	{
+		$CapCtn.append( 
+					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+		);
+		
+	}
 
 	return $CapCtn;
 }
