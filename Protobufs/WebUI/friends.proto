@@ -1,133 +1,3 @@
-message CMsgProtoBufHeader {
-	optional fixed64 steamid = 1;
-	optional int32 client_sessionid = 2;
-	optional uint32 routing_appid = 3;
-	optional fixed64 jobid_source = 10 [default = 18446744073709551615];
-	optional fixed64 jobid_target = 11 [default = 18446744073709551615];
-	optional string target_job_name = 12;
-	optional int32 seq_num = 24;
-	optional int32 eresult = 13 [default = 2];
-	optional string error_message = 14;
-	optional uint32 ip = 15;
-	optional uint32 auth_account_flags = 16;
-	optional uint32 token_source = 22;
-	optional bool admin_spoofing_user = 23;
-	optional int32 transport_error = 17 [default = 1];
-	optional uint64 messageid = 18 [default = 18446744073709551615];
-	optional uint32 publisher_group_id = 19;
-	optional uint32 sysid = 20;
-	optional uint64 trace_tag = 21;
-	optional uint32 webapi_key_id = 25;
-	optional bool is_from_external_source = 26;
-	repeated uint32 forward_to_sysid = 27;
-}
-
-message CMsgMulti {
-	optional uint32 size_unzipped = 1;
-	optional bytes message_body = 2;
-}
-
-message CMsgClientHeartBeat {
-}
-
-message CMsgClientServerTimestampRequest {
-	optional uint64 client_request_timestamp = 1;
-}
-
-message CMsgClientServerTimestampResponse {
-	optional uint64 client_request_timestamp = 1;
-	optional uint64 server_timestamp_ms = 2;
-}
-
-message CMsgClientLogon {
-	optional uint32 protocol_version = 1;
-	optional uint32 obfustucated_private_ip = 2;
-	optional uint32 cell_id = 3;
-	optional uint32 last_session_id = 4;
-	optional uint32 client_package_version = 5;
-	optional string client_language = 6;
-	optional uint32 client_os_type = 7;
-	optional bool should_remember_password = 8;
-	optional string wine_version = 9;
-	optional uint32 ping_ms_from_cell_search = 10;
-	optional uint32 public_ip = 20;
-	optional uint32 qos_level = 21;
-	optional fixed64 client_supplied_steam_id = 22;
-	optional bytes machine_id = 30;
-	optional uint32 launcher_type = 31;
-	optional uint32 ui_mode = 32;
-	optional uint32 chat_mode = 33;
-	optional bytes steam2_auth_ticket = 41;
-	optional string email_address = 42;
-	optional fixed32 rtime32_account_creation = 43;
-	optional string account_name = 50;
-	optional string password = 51;
-	optional string game_server_token = 52;
-	optional string login_key = 60;
-	optional bool was_converted_deprecated_msg = 70;
-	optional string anon_user_target_account_name = 80;
-	optional fixed64 resolved_user_steam_id = 81;
-	optional int32 eresult_sentryfile = 82;
-	optional bytes sha_sentryfile = 83;
-	optional string auth_code = 84;
-	optional int32 otp_type = 85;
-	optional uint32 otp_value = 86;
-	optional string otp_identifier = 87;
-	optional bool steam2_ticket_request = 88;
-	optional bytes sony_psn_ticket = 90;
-	optional string sony_psn_service_id = 91;
-	optional bool create_new_psn_linked_account_if_needed = 92;
-	optional string sony_psn_name = 93;
-	optional int32 game_server_app_id = 94;
-	optional bool steamguard_dont_remember_computer = 95;
-	optional string machine_name = 96;
-	optional string machine_name_userchosen = 97;
-	optional string country_override = 98;
-	optional bool is_steam_box = 99;
-	optional uint64 client_instance_id = 100;
-	optional string two_factor_code = 101;
-	optional bool supports_rate_limit_response = 102;
-	optional string web_logon_nonce = 103;
-	optional int32 priority_reason = 104;
-}
-
-message CMsgClientLogonResponse {
-	optional int32 eresult = 1 [default = 2];
-	optional int32 out_of_game_heartbeat_seconds = 2;
-	optional int32 in_game_heartbeat_seconds = 3;
-	optional uint32 public_ip = 4;
-	optional fixed32 rtime32_server_time = 5;
-	optional uint32 account_flags = 6;
-	optional uint32 cell_id = 7;
-	optional string email_domain = 8;
-	optional bytes steam2_ticket = 9;
-	optional int32 eresult_extended = 10;
-	optional string webapi_authenticate_user_nonce = 11;
-	optional uint32 cell_id_ping_threshold = 12;
-	optional bool use_pics = 13;
-	optional string vanity_url = 14;
-	optional fixed64 client_supplied_steamid = 20;
-	optional string ip_country_code = 21;
-	optional bytes parental_settings = 22;
-	optional bytes parental_setting_signature = 23;
-	optional int32 count_loginfailures_to_migrate = 24;
-	optional int32 count_disconnects_to_migrate = 25;
-	optional int32 ogs_data_report_time_window = 26;
-	optional uint64 client_instance_id = 27;
-	optional bool force_client_update_check = 28;
-}
-
-message CMsgClientInviteToGame {
-	optional fixed64 steam_id_dest = 1;
-	optional fixed64 steam_id_src = 2;
-	optional string connect_string = 3;
-}
-
-message CMsgClientServersAvailable {
-	repeated .CMsgClientServersAvailable_Server_Types_Available server_types_available = 1;
-	optional uint32 server_type_for_auth_services = 2;
-}
-
 message CMsgClientServersAvailable_Server_Types_Available {
 	optional uint32 server = 1;
 	optional bool changed = 2;
@@ -135,10 +5,6 @@ message CMsgClientServersAvailable_Server_Types_Available {
 
 message CMsgClientAMGetPersonaNameHistory_IdInstance {
 	optional fixed64 steamid = 1;
-}
-
-message CMsgClientAMGetPersonaNameHistoryResponse {
-	repeated .CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance responses = 2;
 }
 
 message CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance {
@@ -150,16 +16,6 @@ message CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance {
 message CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance_NameInstance {
 	optional fixed32 name_since = 1;
 	optional string name = 2;
-}
-
-message CMsgClientClanState {
-	optional fixed64 steamid_clan = 1;
-	optional uint32 clan_account_flags = 3;
-	optional .CMsgClientClanState_NameInfo name_info = 4;
-	optional .CMsgClientClanState_UserCounts user_counts = 5;
-	repeated .CMsgClientClanState_Event events = 6;
-	repeated .CMsgClientClanState_Event announcements = 7;
-	optional bool chat_room_private = 8;
 }
 
 message CMsgClientClanState_NameInfo {
@@ -857,13 +713,6 @@ message CMsgClientFriendsList_Friend {
 	optional uint32 efriendrelationship = 2;
 }
 
-message CMsgClientFriendsGroupsList {
-	optional bool bremoval = 1;
-	optional bool bincremental = 2;
-	repeated .CMsgClientFriendsGroupsList_FriendGroup friendGroups = 3;
-	repeated .CMsgClientFriendsGroupsList_FriendGroupsMembership memberships = 4;
-}
-
 message CMsgClientFriendsGroupsList_FriendGroup {
 	optional int32 nGroupID = 1;
 	optional string strGroupName = 2;
@@ -872,29 +721,6 @@ message CMsgClientFriendsGroupsList_FriendGroup {
 message CMsgClientFriendsGroupsList_FriendGroupsMembership {
 	optional fixed64 ulSteamID = 1;
 	optional int32 nGroupID = 2;
-}
-
-message CMsgClientSetPlayerNicknameResponse {
-	optional uint32 eresult = 1;
-}
-
-message CMsgClientRequestFriendData {
-	optional uint32 persona_state_requested = 1;
-	repeated fixed64 friends = 2;
-}
-
-message CMsgClientChangeStatus {
-	optional uint32 persona_state = 1;
-	optional string player_name = 2;
-	optional bool is_auto_generated_name = 3;
-	optional bool high_priority = 4;
-	optional bool persona_set_by_user = 5;
-	optional uint32 persona_state_flags = 6;
-}
-
-message CMsgClientPersonaState {
-	optional uint32 status_flags = 1;
-	repeated .CMsgClientPersonaState_Friend friends = 2;
 }
 
 message CMsgClientPersonaState_Friend {
@@ -932,56 +758,6 @@ message CMsgClientPersonaState_Friend_ClanData {
 message CMsgClientPersonaState_Friend_KV {
 	optional string key = 1;
 	optional string value = 2;
-}
-
-message CMsgClientCreateFriendsGroupResponse {
-	optional uint32 eresult = 1;
-	optional int32 groupid = 2;
-}
-
-message CMsgClientDeleteFriendsGroup {
-	optional fixed64 steamid = 1;
-	optional int32 groupid = 2;
-}
-
-message CMsgClientDeleteFriendsGroupResponse {
-	optional uint32 eresult = 1;
-}
-
-message CMsgClientManageFriendsGroup {
-	optional int32 groupid = 1;
-	optional string groupname = 2;
-	repeated fixed64 steamid_friends_added = 3;
-	repeated fixed64 steamid_friends_removed = 4;
-}
-
-message CMsgClientManageFriendsGroupResponse {
-	optional uint32 eresult = 1;
-}
-
-message CMsgClientAddFriendToGroup {
-	optional int32 groupid = 1;
-	optional fixed64 steamiduser = 2;
-}
-
-message CMsgClientAddFriendToGroupResponse {
-	optional uint32 eresult = 1;
-}
-
-message CMsgClientRemoveFriendFromGroup {
-	optional int32 groupid = 1;
-	optional fixed64 steamiduser = 2;
-}
-
-message CMsgClientRemoveFriendFromGroupResponse {
-	optional uint32 eresult = 1;
-}
-
-message CMsgClientGetEmoticonList {
-}
-
-message CMsgClientEmoticonList {
-	repeated .CMsgClientEmoticonList_Emoticon emoticons = 1;
 }
 
 message CMsgClientEmoticonList_Emoticon {
@@ -1140,21 +916,8 @@ message CMsgTrading_StartSession {
 	optional uint64 other_steamid = 1;
 }
 
-message CMsgCREUpdateUserPublishedItemVoteResponse {
-	optional int32 eresult = 1 [default = 2];
-}
-
-message CMsgCREGetUserPublishedItemVoteDetails {
-	repeated .CMsgCREGetUserPublishedItemVoteDetails_PublishedFileId published_file_ids = 1;
-}
-
 message CMsgCREGetUserPublishedItemVoteDetails_PublishedFileId {
 	optional fixed64 published_file_id = 1;
-}
-
-message CMsgCREGetUserPublishedItemVoteDetailsResponse {
-	optional int32 eresult = 1 [default = 2];
-	repeated .CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail user_item_vote_details = 2;
 }
 
 message CMsgCREGetUserPublishedItemVoteDetailsResponse_UserItemVoteDetail {
@@ -1426,25 +1189,6 @@ message CWebRTCClient_AcknowledgeUpdatedRemoteDescription_Request {
 }
 
 message CWebRTCClient_AcknowledgeUpdatedRemoteDescription_Response {
-}
-
-message ParentalApp {
-	optional uint32 appid = 1;
-	optional bool is_allowed = 2;
-}
-
-message ParentalSettings {
-	optional fixed64 steamid = 1;
-	optional uint32 applist_base_id = 2;
-	optional string applist_base_description = 3;
-	repeated .ParentalApp applist_base = 4;
-	repeated .ParentalApp applist_custom = 5;
-	optional uint32 passwordhashtype = 6;
-	optional bytes salt = 7;
-	optional bytes passwordhash = 8;
-	optional bool is_enabled = 9;
-	optional uint32 enabled_features = 10;
-	optional string recovery_email = 11;
 }
 
 message CParental_EnableParentalSettings_Response {

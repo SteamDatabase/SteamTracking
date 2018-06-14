@@ -1,0 +1,1003 @@
+
+body.v6 {
+   background: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+ .pagecontent {
+     margin: 0 auto;
+	 max-width: 1220px;
+ }
+
+.search_results_none {
+    padding: 16px;
+    font-size: 17px;
+    background: rgba( 0, 0, 0, 0.2);
+	flex-grow: 1;
+}
+.friends_header_bg {
+    height: 127px;
+    margin: 0 auto;
+    background: url( 'https://steamcommunity-a.akamaihd.net/public/images/bg_highlight.png' ) center bottom no-repeat;
+}
+
+.friends_header_container {
+    /*position: relative;*/
+    display: flex;
+    /*max-width: 1240px;*/
+    margin: auto;
+    font-size: 26px;
+}
+.friends_header_ctn {
+    display:flex;
+    margin-left: 32px;
+    margin-top: 30px;
+}
+.friends_header_avatar img {
+    height: 64px;
+    width: 64px;
+    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.25 );
+}
+.friends_header_avatar, .friends_header_name {
+    display: inline-block;
+    float: left;
+}
+.friends_header_name_ctn {
+    display:flex;
+    flex-direction: column;
+}
+.friends_header_name {
+    padding-top: 8px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.friends_header_owner {
+    left: 31px;
+    top: 31px;
+    font-size: 26px;
+}
+
+.friends_header_link {
+    font-size: 13px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+/* nav menu */
+
+.friends_container {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    display: flex;
+    margin: 0px 10px;
+}
+
+.friends_container blockquote {
+    margin: 5px 20px;
+}
+
+.friends_nav {
+    min-width: 250px;
+    margin: 0px 20px 0px 10px;
+    display: block;
+}
+
+.friends_nav a {
+    display: block;
+    padding: 10px 10px;
+}
+
+.friends_nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.friends_nav h4 {
+    color: #7092a5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+
+    padding: 12px 0 0 8px;
+    font-size: 11px;
+}
+
+.friends_nav .hr {
+    height: 1px;
+    background-color: transparent;
+    border-bottom: 1px solid #000;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.friends_nav a.icon_item .title {
+    background-repeat: no-repeat;
+    background-size: 16px 176px;
+    display: inline-block;
+    line-height: 16px;
+    padding-left: 35px;
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=4' );
+}
+
+.invite_row .actions .ico_approve {
+	background-position: 0 0;
+}
+
+@media screen and (max-width: 910px) {
+    html.responsive .friends_container {
+        flex-direction: column;
+    }
+
+    html.responsive .friends_nav {
+        display: block;
+        margin: 0px;
+    }
+
+    html.responsive .friends_nav:not(.expanded) {
+        margin-top: 10px;
+    }
+
+        html.responsive .friends_nav:not(.expanded) > *,
+    html.responsive .friends_nav:not(.expanded) > a {
+        display: none;
+    }
+
+    html.responsive .friends_nav > a.active {
+        display: block;
+	    background: rgba( 103, 193, 245, 0.2 );
+    }
+
+    html.responsive .profile_friends .friends_search_text_box, html.responsive .profile_groups .groups_search_text_box {
+	    width: 100%;
+	    margin: 5px 0 10px;
+    }
+
+	html.responsive .profile_friends #search_text_box.search_your_friends {
+		display: none;
+	}
+
+	html.responsive .profile_friends #search_text_box.search_your_friends.active {
+		display: flex;
+		width: 100%;
+		order: 3;
+		margin: 5px 0;
+	}
+
+	html.responsive .count, html.responsive .em_count {
+		float: none;
+	}
+
+	html.responsive .friend_block_v2 {
+		width: 100%;
+	}
+
+	html.responsive .active .SVGIcon_DownArrowContextMenu {
+		visibility: visible;
+	}
+
+	html.responsive .friends_nav.expanded .SVGIcon_DownArrowContextMenu {
+		visibility: hidden;
+	}
+
+	html.responsive .friends_content {
+		margin-top: 5px;
+	}
+
+	html.responsive .manage_link {
+		text-align: center;
+		margin: 0;
+		flex-grow: 1;
+		min-height: 30px;
+	}
+
+	html.responsive .manage_link img {
+		vertical-align: middle;
+	}
+
+	html.responsive #manage_search_control {
+		margin-right: 10px;
+	}
+
+	html.responsive .profile_friends.title, html.responsive .profile_groups.title {
+		display: none;
+	}
+
+	html.responsive .profile_friends.title_bar, html.responsive  .profile_groups.title_bar {
+		background-color: transparent;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .profile_friends #manage_search_control {
+		display: block;
+	}
+
+	html.responsive .manage_friends_panel.manage {
+		margin-top: 5px;
+	}
+
+	html.responsive #button_manage_image {
+		display: inline;
+	}
+
+	html.responsive .invite_row {
+		padding: 0;
+	}
+
+	html.responsive .invite_row .actions {
+		align-self: center;
+		display: flex;
+		justify-content: space-evenly;
+		flex-grow: 1;
+		background: rgba( 255, 255, 255, .05 );
+	}
+
+	html.responsive .invite_row_left .invite_block_icon {
+		padding-left: 0;
+	}
+
+	html.responsive .invite_row .invite_row_content {
+		padding: 15px;
+		flex: 1 100%;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .invite_block_facebook.add_friend {
+		margin: 0;
+	}
+
+	html.responsive .manage_friends_panel span.row {
+		display: block;
+		margin-left: 0;
+	}
+}
+
+
+.profile_friends #button_manage_image {
+	display: none;
+}
+
+.profile_friends #manage_search_control {
+	display: none;
+}
+
+.SVGIcon_DownArrowContextMenu {
+	fill: rgb( 76, 145, 172 );
+	width:  24px;
+	height: 24px;
+	float: right;
+	visibility: hidden;
+}
+
+.friends_nav .icon_all_friends .title {
+    background-position: 0 0;
+}
+.friends_nav .icon_recent_friends .title {
+    background-position: 0 -16px;
+}
+.friends_nav .icon_pending_friends .title {
+    background-position: 0 -32px;
+}
+.friends_nav .icon_add_friends .title {
+    background-position: 0 -48px;
+}
+.friends_nav .icon_blocked_friends .title {
+    background-position: 0 -64px;
+}
+.friends_nav .icon_all_groups .title {
+     background-position: 0 -80px;
+ }
+.friends_nav .icon_pending_groups .title {
+    background-position: 0 -32px;
+}
+.friends_nav .icon_find_group .title {
+    background-position: 0 -96px;
+}
+.friends_nav .icon_create_group .title {
+    background-position: 0 -48px;
+}
+.friends_nav .icon_all_following .title {
+    background-position: 0 -144px;
+}
+.friends_nav .icon_games_following .title {
+    background-position: 0 -160px;
+}
+
+
+.friends_nav a.active {
+    background-color: rgba(255,255,255,0.1);
+}
+.friends_count {
+    font-weight: bold;
+}
+.friends_limit {
+    font-size: 9px;
+}
+
+.count {
+    float:right;
+    font-size: 11px;
+    color: #7092a5;
+}
+
+.em_count {
+    float: right;
+    font-size: 11px;
+    color: #000;
+    background-color: #a3cf06;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 2px;
+}
+/* content panel */
+
+.friends_content {
+    /* Probably some kind of transition? */
+    transition: opacity 500ms;
+    opacity: 1.0;
+    margin-top: 24px;
+	width: 100%;
+}
+
+.friends_content.loading {
+    opacity: 0.3;
+}
+
+
+.friend_block_v2 {
+    position: relative;
+    height: 48px;
+    margin-bottom: 12px;
+    margin-right: 12px;
+    font-size: 11px;
+    line-height: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: rgba(29, 31, 36, .8);
+    border: 1px solid transparent;
+    /*box-shadow: 0 0 5px rgba( 0, 0, 0, 0.4);*/
+}
+
+.friend_block_v2:hover {
+	box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4);
+	/*transform: scale(1.1);
+	transition: transform .1s ease-in-out;*/
+}
+.friend_block_v2.in-game:hover {
+	box-shadow: 2px 2px 5px rgba( 0, 0, 0, 0.4);
+	/*transform: scale(1.1);
+	transition: transform .1s ease-in-out;*/
+}
+
+.profile_friends .friend_block_v2 {
+    width: 290px;
+}
+
+.profile_friends.responsive_friendblocks {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 13px;
+    padding: 16px;
+    background-color: rgba( 0, 0, 0, 0.2);
+}
+
+.profile_friends .state_block {
+    flex: 1 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #88a4b4;
+    padding-top: 20px;
+    padding-bottom: 4px;
+    font-size: 12px;
+}
+
+.profile_friends.search_results {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 8px 0px 0px 0px;
+}
+
+.friend_block_v2 .friend_block_content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	margin: 15px 12px 12px 12px;
+    font-size: 14px;
+    line-height: 15px;
+    padding-right: 18px;
+}
+
+.friend_block_v2.in-game .friend_block_content,
+#friends_blocked .friend_block_v2 .friend_block_content {
+    margin-top: 10px;
+}
+
+.friend_block_v2 .friend_small_text {
+    font-weight: normal;
+    font-size: 11px;
+    color: #a3cf06;
+}
+
+.friend_block_v2 .friend_game_link {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.friend_block_v2 .playerAvatar {
+    float: left;
+    margin-right: 7px;
+}
+
+.friend_block_v2 .indicator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    line-height: 48px;
+    background-color: #afc0ca;
+    text-align: center;
+    z-index: 1;
+    cursor: default;
+}
+
+/* --- Generic classes related to displaying select/manage actions for any row -- */
+/* Indicator displays only when */
+.selectable .indicator {
+    display: none;
+}
+
+.selectable.manage .indicator {
+    display: inherit;
+}
+
+.selectable.manage.selected {
+    border-style: solid;
+    border-color: #afc0ca;
+    border-width: 1px;
+}
+
+.selectable.selected .indicator {
+    background-color: #799bb3;
+}
+
+.selectable_overlay {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* --- Title bar and search box --- */
+.profile_friends.title_bar,
+.profile_groups.title_bar {
+    flex: 1 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 30px;
+    background-color: #015e80;
+}
+
+.profile_friends.title,
+.profile_groups.title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+    min-width: 250px;
+    padding: 10px 16px;
+}
+
+.friends_search_text_box,
+.groups_search_text_box {
+    margin: 5px;
+    float: left;
+
+    background-color: #274e68;
+    border-radius: 3px;
+    border: 1px solid rgba( 0, 0, 0, 0.3);
+    box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
+    color: #fff;
+
+    outline: none;
+    height: 24px;
+    width: 250px;
+    padding: 0px 6px;
+}
+
+.friends_search_text_box::-webkit-input-placeholder,
+.groups_search_text_box::-webkit-input-placeholder {
+    color: #7092a5;
+    font-style: italic;
+}
+
+.profile_friends.manage_link {
+    text-align: right;
+    margin-left: auto;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.profile_friends.manage_link.active {
+	background: rgba(29, 31, 36, .8);
+}
+
+/* --- Manage friends panel --- */
+.manage_friends_panel {
+    display: none;
+
+    flex: 1 100%;
+    flex-flow: row wrap;
+    width: 100%;
+    min-height: 90px;
+    border-color: #825622;
+    box-shadow: 0 0 0 1px #015e80 inset;
+    background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,.5) 95%);
+    transition: min-height 0.3s, opacity 0.3s ease-in;
+    animation: fadein 2s;
+}
+
+.manage_friends_panel.manage {
+    display: flex;
+}
+
+.manage_friends_panel .row  {
+    flex: 1 100%;
+    margin-left: 16px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.manage_friends_panel .selected_msg.hidden {
+    display: none;
+}
+
+.manage_friends_panel .selected_msg.error {
+    color: #fff;
+}
+
+.manage_friends_panel .row > .selection_type {
+    text-transform: uppercase;
+	margin: 4px 5px;
+}
+
+.manage_friends_panel .row > .selection_type {
+    color: white;
+    cursor: pointer;
+}
+
+.manage_action {
+    margin: 5px;
+}
+
+.dimmed {
+    color: #bbb;
+}
+
+
+.player_avatar {
+    float: left;
+    position: relative;
+    border-radius: 0;
+    margin: 0px 8px 6px 2px;
+    padding: 0;
+}
+
+.player_avatar img {
+    width: 48px;
+    height: 48px;
+    border-radius: 2px;
+}
+
+.friend_block_v2 .player_avatar {
+	margin-left: 0;
+}
+
+/* Add friends page */
+.invite_section_ctn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.invite_section_ctn.invite_link {
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friendsinvite_link_bg.png' );
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.invite_section_ctn .header_row {
+    flex: 1 100%;
+    background-color: #015e80;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+    width: 20%;
+    padding: 10px;
+}
+.invite_section_ctn .header_row span {
+    background-repeat: no-repeat;
+    background-size: 16px 176px;
+    padding-left: 24px;
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=3' );
+    background-position: 0 -112px;
+    display: inline-block;
+    line-height: 16px;
+}
+.invite_section_ctn .header_row span.search_friends {
+    background-position: 0 -96px;
+}
+.invite_section_ctn .header_row span.facebook_link {
+    background-position: 0 -128px;
+}
+
+.invite_section_ctn .content {
+    flex: 1 100%;
+    font-size: 13px;
+    color: rgb(235, 235, 235);
+    background-color: rgba( 0, 0, 0, 0.2);
+    padding: 16px;
+    border-style: none;
+    min-height: 120px;
+}
+
+.noCoplayHistory {
+    background: rgba( 0, 0, 0, 0.2);
+    border: 1px solid #015e80;
+    margin-top: 16px;
+	padding: 16px;
+	width: 100%;
+}
+
+.invite_section_ctn .generate_button {
+    margin: 20px 0;
+    /* TODO: put a little arrow on it */
+}
+
+.invite_section_ctn .table_header {
+    color: #92afba;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 8px 0px;
+}
+
+.invite_section_ctn .table {
+    width:100%;
+    display: table;
+    border-spacing: 0 1px;
+    /*background: #B5C4C9;*/
+    /*color: #252525;*/
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+.invite_section_ctn .table .tr {
+    display: table-row;
+    background: linear-gradient( to right, #e3eaef 5%, #c7d5e0 95%);
+    box-shadow: 0 0 4px rgba(0, 0, 0 ,0.2);
+}
+
+.invite_section_ctn .table .date_cell {
+    display: table-cell;
+    width: 10%;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 10px;
+    color: #7092a5;
+    border-right: 1px solid #68828c;
+    padding: 1px 8px;
+    vertical-align: middle;
+}
+
+.invite_section_ctn .table .copy_cell {
+    display: table-cell;
+    width: 18px;
+    border-right: 1px solid #68828c;
+    padding: 4px 8px;
+}
+
+.invite_section_ctn .table .url_cell {
+    display: table-cell;
+    color: #abdaf4;
+    border-right: 1px solid #68828c;
+    vertical-align: middle;
+    padding: 0px 8px;
+}
+
+.invite_section_ctn .table .revoke_cell {
+    display: table-cell;
+    width: 8px;
+    padding: 4px 8px;
+}
+
+.invite_section_ctn .content .loading {
+    display: none;
+}
+
+.invite_section_ctn .content .no_tokens {
+    display: none;
+}
+.invite_section_ctn .content .list_tokens {
+    display: none;
+}
+
+.url_cell_inner {
+    padding: 6px;
+    margin: 10px 6px;
+    box-shadow: inset 0px 0px 4px #6d8690;
+    border: 1px solid #68828c;
+    border-radius: 4px;
+    background-color: #b8ceda;
+    color: #101c21;
+	word-wrap: break-word;
+	word-break: break-all;
+	-webkit-user-select: all;
+	-moz-user-select: all;
+	-ms-user-select: all;
+	user-select: all;
+}
+
+.copy_button {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 15px;
+    font-size: 12px;
+    position: relative;
+    top: 12px;
+}
+
+.invite_token_list {
+    margin-left: 12px;
+    margin-top: 12px;
+    padding-left: 6px;
+}
+
+#invite_container {
+    display: table-row-group;
+}
+
+.description {
+    max-width: 75%;
+    color: rgb(235, 235, 235);
+
+}
+
+.description_note {
+    color: #7092a5;
+    margin: 10px 0 20px 0;
+    max-width: 75%
+}
+/* Invites page */
+
+.section_text {
+    flex: 1 100%;
+}
+
+/* --- Display of pending invites --- */
+.invite_row {
+    display: flex;
+    flex: 1 100%;
+    margin-top: 4px;
+    background: rgba(29, 31, 36, .8);
+    padding: 8px;
+    position: relative;
+	flex-wrap: wrap;
+}
+
+.invite_row .invite_row_content {
+    padding: 8px;
+	display: flex;
+	flex-grow: 1;
+}
+
+.invite_row_left {
+    display: flex;
+    flex-grow: 1;
+}
+
+.invite_row_left .invite_block_icon {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.invite_row .actions {
+    align-self: center;
+}
+
+.invite_row .actions a {
+	margin: 5px;
+}
+
+.invite_row .indicator {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    line-height: 48px;
+    background-color: #767676;
+    text-align: center;
+    z-index: 1;
+    cursor: default;
+}
+
+.invite_row .select_friend_checkbox {
+    margin: auto;
+}
+.invite_row.manage .actions {
+    display: none;
+}
+
+.invite_row.manage.selected {
+    border-style: solid;
+    border-color: #afc0ca;
+    border-width: 1px;
+}
+
+.invite_row_overlay {
+    display: none;
+}
+.selectable.manage .invite_row_overlay {
+    display: block;
+}
+
+.invite_token_row {
+    padding: 4px;
+}
+.invite_token_url {
+    font-size: 11px;
+}
+
+.event_title {
+    font-weight: bold;
+    font-size: 15px;
+    height: 22px;
+}
+
+.friendPlayerLevel {
+    margin-top: 3px;
+}
+
+.blocked_text {
+    color: #da2525;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.friend_block_link_overlay {
+    display: block;
+    border-right-style: solid;
+    border-width: 4px;
+}
+
+.friend_block_link_overlay.in-game {
+    border-color: #a3cf06;
+}
+.friend_block_link_overlay.online {
+    border-color: #57cbde;
+    color:  #57cbde;
+}
+.friend_block_link_overlay.offline {
+    border-color: #898989;
+}
+
+
+.persona.in-game, a.persona.in-game, .persona.in-game.a {
+    color: #e3ffc2;
+}
+.persona.online, a.persona.online, .persona.online.a {
+    color: #57cbde;
+}
+.persona.offline, a.persona.offline, .persona.offline.a {
+    color: #898989;
+}
+
+.groups_list_ctn,
+.friends_list_ctn,
+.groups_pending_ctn {
+    width: 100%;
+}
+.profile_groups.search_results {
+    display: flex;
+    flex: 1 100%;
+    flex-flow: row wrap;
+    margin: 8px 0px 0px 0px;
+}
+.group_block {
+    flex: 1 100%;
+    margin-top: 4px;
+    background: rgba(29, 31, 36, .8);
+    padding: 8px;
+}
+.group_block_medium {
+    margin-right: 8px;
+}
+.group_block_medium img {
+    border-radius: 4px;
+}
+
+.group_block_details {
+	flex-grow: 1;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.groupTitle {
+    margin-top: 11px;
+    font-size: 17px;
+}
+
+.invite_row .groupTitle {
+	margin: 0;
+}
+
+.memberRow {
+    margin-top: 5px;
+    font-size: 11px;
+}
+.groupLeftBlock {
+    margin: 0;
+    float: right;
+    padding: 0 8px;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+img.facebookLogo {
+	width: 16px;
+	height: 16px;
+}
+
+.invite_block_details  {
+	margin-top: 5px;
+}
+
+.invite_block_facebook .invite_block_icon {
+	padding-left: 0;
+}
+
+.invite_block_facebook {
+	display: flex;
+}
+
+.invite_block_name {
+	flex-grow: 1;
+}
+
+span.invite_action_txt {
+	padding: 0 30px;
+}
+
+.invite_block_facebook.add_friend {
+	margin-right: 20%;
+	flex-wrap: wrap;
+}
+
+.groupInviteFailed {
+	border: 3px solid #95423a;
+}
+
+.ctnClanInviteErrors {
+	max-width: 500px;
+	color: #95423a;
+}

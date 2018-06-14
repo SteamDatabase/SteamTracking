@@ -1,6 +1,30 @@
+const path = require('path');
 const fs = require('fs');
 
-handleFile(fs.readFileSync(process.argv[2]).toString());
+getKnownProtobufMessages("Protobufs", function(knownMessages) {
+	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
+
+	outputProtos(protos.filter((proto) => !knownMessages.has(proto.name)));
+});
+
+function getKnownProtobufMessages(dirName, callback) {
+	const msgRegex = /message ([a-zA-Z]+) \{/g;
+	const knownMessages = new Map();
+	let match;
+
+	fs.readdir(dirName, function(err, files) {
+		files.filter((file) => file.endsWith(".proto")).forEach((file) => {
+			file = fs.readFileSync(path.join(dirName, file)).toString();
+
+			var matches, output = [];
+			while (matches = msgRegex.exec(file)) {
+				knownMessages.set(matches[1], true);
+			}
+		});
+
+		callback(knownMessages);
+	});
+}
 
 function handleFile(file) {
 	// Each message is immediately followed by (xx.Message) so split on that
@@ -36,7 +60,7 @@ function handleFile(file) {
 		});
 	});
 
-	outputProtos(protos);
+	return protos;
 }
 
 function decodeProtobuf(proto) {

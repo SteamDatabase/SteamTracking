@@ -97,7 +97,7 @@
 "Styles/Community/economy_inventory.css"         : "https://steamcommunity.com/public/css/skin_1/economy_inventory.css?__TIME__",
 "Styles/Community/economy_market.css"            : "https://steamcommunity.com/public/css/skin_1/economy_market.css?__TIME__",
 "Styles/Community/forums.css"                    : "https://steamcommunity.com/public/css/skin_1/forums.css?__TIME__",
-"Styles/Community/friendsv2.css"                 : "https://steamcommunity.com/public/css/skin_1/friendsv2.css?__TIME__",
+"Styles/Community/friendsv2.css"                 : "https://steamcommunity.com/public/css/friendsv2.css?__TIME__",
 "Styles/Community/game_achievements.css"         : "https://steamcommunity.com/public/css/skin_1/game_achievements.css?__TIME__",
 "Styles/Community/gamecard_crafting.css"         : "https://steamcommunity.com/public/css/skin_1/gamecard_crafting.css?__TIME__",
 "Styles/Community/global.css"                    : "https://steamcommunity.com/public/css/skin_1/global.css?__TIME__",
@@ -370,25 +370,6 @@
 "Scripts/Partner/packages.js"                    : "https://partner.steamgames.com/public/javascript/packages.js?__TIME__&l=english",
 "Scripts/Partner/storeadmin.js"                  : "https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english",
 "Scripts/Partner/useradmin.js"                   : "https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english",
-
-//
-// Dota 2 CSS
-//
-"Styles/Dota2/store.css"                       : "https://www.dota2.com/public/css/store.css?__TIME__",
-"Styles/Dota2/store_featured.css"              : "https://www.dota2.com/public/css/store_featured.css?__TIME__",
-"Styles/Dota2/itemdetails.css"                 : "https://www.dota2.com/public/css/itemdetails.css?__TIME__",
-"Styles/Dota2/cart.css"                        : "https://www.dota2.com/public/css/cart.css?__TIME__",
-"Styles/Dota2/heropedia.css"                   : "https://www.dota2.com/public/css/heropedia.css?__TIME__",
-
-//
-// Dota 2 JS
-//
-"Scripts/Dota2/storecommon.js"                 : "https://www.dota2.com/public/javascript/storecommon.js?__TIME__&l=english",
-"Scripts/Dota2/store.js"                       : "https://www.dota2.com/public/javascript/store.js?__TIME__&l=english",
-"Scripts/Dota2/itemdetails.js"                 : "https://www.dota2.com/public/javascript/itemdetails.js?__TIME__&l=english",
-"Scripts/Dota2/heropedia.js"                   : "https://www.dota2.com/public/javascript/heropedia.js?__TIME__&l=english",
-"Scripts/Dota2/heropickerdata.json"            : "http://www.dota2.com/jsfeed/heropickerdata?__TIME__&l=english",
-"Scripts/Dota2/tv.js"                          : "http://cdn.dota2.com/apps/dota2/javascript/static/tv.js?__TIME__&l=english",
 
 //
 // API
