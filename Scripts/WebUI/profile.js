@@ -1775,7 +1775,7 @@ webpackJsonp(
           })
         );
       }
-      function G() {
+      function R() {
         return A.createElement(
           "svg",
           {
@@ -1801,7 +1801,7 @@ webpackJsonp(
           })
         );
       }
-      function R() {
+      function G() {
         return A.createElement(
           "svg",
           {
@@ -1986,8 +1986,8 @@ webpackJsonp(
         (t.b = T),
         (t.j = W),
         (t.s = H),
-        (t.u = G),
-        (t.C = R),
+        (t.u = R),
+        (t.C = G),
         (t.E = z),
         (t.A = j),
         (t.J = F);
@@ -4231,6 +4231,15 @@ and limitations under the License.
                 var c;
               }
             }),
+            (e.prototype.RemoveEventListeners = function() {
+              this.window.removeEventListener("beforeunload", this.OnUnload),
+                this.window.removeEventListener("resize", this.OnResizeEvent),
+                this.window.removeEventListener("focus", this.OnFocusInternal),
+                this.window.removeEventListener("blur", this.OnBlurInternal),
+                this.window.removeEventListener("drop", this.OnDrop),
+                this.window.removeEventListener("dragover", this.OnDragOver),
+                this.window.removeEventListener("message", this.OnMessage);
+            }),
             (e.prototype.RenderInternal = function(e, t, n) {
               this.Render(e, t),
                 this.OnLoad(),
@@ -4243,7 +4252,9 @@ and limitations under the License.
               this.OnResize();
             }),
             (e.prototype.OnUnload = function() {
-              p.RemoveTrackedPopup(this), this.OnClose();
+              this.RemoveEventListeners(),
+                p.RemoveTrackedPopup(this),
+                this.OnClose();
             }),
             Object.defineProperty(e.prototype, "browser_info", {
               get: function() {
@@ -4286,7 +4297,7 @@ and limitations under the License.
                 : this.m_popup && this.m_popup.focus();
             }),
             (e.prototype.Close = function() {
-              this.m_popup && this.m_popup.close();
+              this.RemoveEventListeners(), this.m_popup && this.m_popup.close();
             }),
             (e.prototype.GetName = function() {
               return this.m_strName;

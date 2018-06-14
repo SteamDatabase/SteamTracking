@@ -188,25 +188,25 @@ webpackJsonp(
         try {
           e = JSON.parse(t.getAttribute("data-inviteinfo"));
         } catch (t) {}
-        I.sm_rtTimeCur = e.rtTimeCur;
-        var n = new I(e);
+        y.sm_rtTimeCur = e.rtTimeCur;
+        var n = new y(e);
         u.render(c.createElement(C, { controller: n }), t);
       }
       function a(t, e, n) {
         if ("english" !== e)
-          "friendsui" == t ? (E = n) : "shared" == t && (w = n);
-        else if ("shared" == t) R = n;
+          "friendsui" == t ? (E = n) : "shared" == t && (D = n);
+        else if ("shared" == t) L = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
           void 0 !== E ? ((o = E), (i = n)) : (o = n),
-            void 0 !== w ? ((r = w), (s = R)) : (r = R),
+            void 0 !== D ? ((r = D), (s = L)) : (r = L),
             m.a.InitFromObjects(o, i, r, s),
             (E = void 0),
-            (w = void 0),
-            (R = void 0);
+            (D = void 0),
+            (L = void 0);
         }
       }
       Object.defineProperty(e, "__esModule", { value: !0 });
@@ -222,7 +222,7 @@ webpackJsonp(
         v = n("3e1Q"),
         b = n("wzNa"),
         g = n("KLxG"),
-        y = (p.a.COMMUNITY_BASE_URL,
+        I = (p.a.COMMUNITY_BASE_URL,
         (function(t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
@@ -230,7 +230,7 @@ webpackJsonp(
           return (
             d.c(e, t),
             (e.prototype.BIsExpired = function() {
-              return I.sm_rtTimeCur >= this.m_rtTimeExpires;
+              return y.sm_rtTimeCur >= this.m_rtTimeExpires;
             }),
             (e.prototype.InitFromPHPInviteLinkInfo = function(t) {
               this.m_ulChatID = t.chat_id;
@@ -249,10 +249,10 @@ webpackJsonp(
             e
           );
         })(v.b)),
-        I = (function() {
+        y = (function() {
           function t(t) {
             (this.m_bConnectingToClient = !1),
-              (this.m_invite = new y(t.strInviteCode)),
+              (this.m_invite = new I(t.strInviteCode)),
               t.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(t.Invite)
                 : this.m_invite.InitInvalid(),
@@ -321,7 +321,7 @@ webpackJsonp(
                 { className: "InviteLandingRoot" },
                 this.props.controller.BIsInviteValid()
                   ? c.createElement(S, { controller: this.props.controller })
-                  : c.createElement(D, { controller: this.props.controller })
+                  : c.createElement(w, { controller: this.props.controller })
               );
             }),
             (e = d.b([_.observer], e))
@@ -511,7 +511,7 @@ webpackJsonp(
             (e = d.b([_.observer], e))
           );
         })(c.Component),
-        D = (function(t) {
+        w = (function(t) {
           function e() {
             return (null !== t && t.apply(this, arguments)) || this;
           }
@@ -537,7 +537,7 @@ webpackJsonp(
         document.addEventListener("DOMContentLoaded", function() {
           Object(p.c)(), r();
         });
-      var E, w, R;
+      var E, D, L;
       window.LocalizationReady = a;
     },
     DRjr: function(t, e, n) {
@@ -1434,6 +1434,15 @@ and limitations under the License.
                 var a;
               }
             }),
+            (t.prototype.RemoveEventListeners = function() {
+              this.window.removeEventListener("beforeunload", this.OnUnload),
+                this.window.removeEventListener("resize", this.OnResizeEvent),
+                this.window.removeEventListener("focus", this.OnFocusInternal),
+                this.window.removeEventListener("blur", this.OnBlurInternal),
+                this.window.removeEventListener("drop", this.OnDrop),
+                this.window.removeEventListener("dragover", this.OnDragOver),
+                this.window.removeEventListener("message", this.OnMessage);
+            }),
             (t.prototype.RenderInternal = function(t, e, n) {
               this.Render(t, e),
                 this.OnLoad(),
@@ -1446,7 +1455,9 @@ and limitations under the License.
               this.OnResize();
             }),
             (t.prototype.OnUnload = function() {
-              m.RemoveTrackedPopup(this), this.OnClose();
+              this.RemoveEventListeners(),
+                m.RemoveTrackedPopup(this),
+                this.OnClose();
             }),
             Object.defineProperty(t.prototype, "browser_info", {
               get: function() {
@@ -1489,7 +1500,7 @@ and limitations under the License.
                 : this.m_popup && this.m_popup.focus();
             }),
             (t.prototype.Close = function() {
-              this.m_popup && this.m_popup.close();
+              this.RemoveEventListeners(), this.m_popup && this.m_popup.close();
             }),
             (t.prototype.GetName = function() {
               return this.m_strName;
@@ -1740,8 +1751,8 @@ and limitations under the License.
                     g < v.attributes.length;
                     g++
                   ) {
-                    var y = v.attributes.item(g);
-                    b.setAttribute(y.name, y.value);
+                    var I = v.attributes.item(g);
+                    b.setAttribute(I.name, I.value);
                   }
                   d.appendChild(b);
                 }
