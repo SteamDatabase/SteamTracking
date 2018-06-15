@@ -58533,10 +58533,22 @@ and limitations under the License.
         md = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return (i.m_bAcceptDrag = !1), i;
+            return (
+              (i.m_bAcceptDrag = !1),
+              i.props.popup &&
+                i.props.popup.addEventListener("keydown", i.OnHTMLKeyDown),
+              i
+            );
           }
           return (
             it.c(t, e),
+            (t.prototype.componentWillUnmount = function() {
+              this.props.popup &&
+                this.props.popup.removeEventListener(
+                  "keydown",
+                  this.OnHTMLKeyDown
+                );
+            }),
             (t.prototype.OnChatTabRef = function(e) {
               this.m_refChatTabs = e;
             }),
@@ -58605,7 +58617,7 @@ and limitations under the License.
                 );
               }
             }),
-            (t.prototype.OnKeyDown = function(e) {
+            (t.prototype.OnHTMLKeyDown = function(e) {
               if (tt.a.IN_CLIENT) {
                 if (e.ctrlKey && 9 == e.keyCode)
                   return void (e.shiftKey
@@ -58616,6 +58628,8 @@ and limitations under the License.
                     this.props.tabs.activeTab
                   );
               }
+            }),
+            (t.prototype.OnKeyDown = function(e) {
               var t = this.props.tabs.activeTab;
               if (
                 t &&
@@ -58700,6 +58714,7 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragLeave", null),
             it.b([Xt.a], t.prototype, "OnDragOver", null),
             it.b([Xt.a], t.prototype, "OnDrop", null),
+            it.b([Xt.a], t.prototype, "OnHTMLKeyDown", null),
             it.b([Xt.a], t.prototype, "OnKeyDown", null),
             (t = it.b([Os.observer], t))
           );
