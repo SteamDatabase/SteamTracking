@@ -1670,6 +1670,7 @@ body.in_global_drag .friendlist_titlebar
 	display: flex;
 	flex-direction: row;
 	transition: color .2s ease-in-out;
+	cursor: pointer;
 }
 
 .chatRoomMembers .friendGroup .groupName
