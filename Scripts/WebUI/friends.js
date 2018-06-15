@@ -44279,6 +44279,7 @@ and limitations under the License.
                     this.ProcessStatsReport,
                     1e4
                   )),
+                  void 0 != Sm && si.b.BClientConnected().then(function() {}),
                   -1 ==
                     this.m_PeerConnection.localDescription.sdp.indexOf(
                       "mozilla..."
@@ -44509,8 +44510,9 @@ and limitations under the License.
               (this.m_ScheduledInitiate = 0), this.InitiateVoiceChat(e, t);
             }),
             (e.prototype.InitiateVoiceChat = function(e, t) {
-              var i = this,
-                n = yc()(navigator.userAgent);
+              var i = this;
+              void 0 != Sm && si.b.BClientConnected().then(function() {});
+              var n = yc()(navigator.userAgent);
               if ("Chrome" != n.browser.name)
                 return (
                   this.LogMsg(
@@ -55607,7 +55609,8 @@ and limitations under the License.
                       Up.FriendStore.FriendGroupStore.incoming_invites_group),
                     (a = o.map_steamid_to_mutual_friends.get(e.steamid64)),
                     void 0 === a
-                      ? ((n = Object(hr.b)("#FriendGroup_NoMutualFriends")),
+                      ? (Up.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                        (n = Object(hr.b)("#FriendGroup_NoMutualFriends")),
                         (c += " noMutualFriends"))
                       : ((n = Object(hr.c)(
                           "#FriendGroup_YesMutualFriends",
