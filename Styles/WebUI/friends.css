@@ -15309,11 +15309,25 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	font-size: 10px;
 	user-select: none;
 	cursor: default;
+
+	white-space: nowrap;
+}
+
+.audioVoiceLogs
+{
+	margin-left: 8px;
+	margin-right: 4px;
+
+	font-size: 10px;
+	user-select: none;
+	cursor: default;
+	white-space: nowrap;
 }
 
 .betaFeedbackAnchor
 {
 	color: rgba( 0, 217, 255, .5 );
+	text-decoration: underline;
 }
 
 .betaFeedbackAnchor:hover
