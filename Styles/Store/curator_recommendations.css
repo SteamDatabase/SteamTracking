@@ -1409,3 +1409,23 @@ body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment 
 	margin-left: 25px;
 }
 
+.creator_beta_ctn {
+background: -webkit-linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%););background: linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%););		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			width: 100px;
+	height: 33px;
+	text-align: center;
+	font-size: 18px;
+	padding-top: 8px;
+	color: #000;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	box-shadow: 0 0 5px #000;
+	bottom: 5px;
+	position: absolute;
+	right: 0;
+}
+.creator_beta_ctn:hover {
+	color: #fff;
+}

@@ -2862,7 +2862,8 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-		}
+			line-height: 18px;
+}
 .store_main_capsule .reason .main.bytags {
 	padding-top: 0px;
 }
