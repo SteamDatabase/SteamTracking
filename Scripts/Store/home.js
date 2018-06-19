@@ -15,6 +15,7 @@ GHomepage = {
 
 	rgRecommendedGames: [],
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
+	rgRecommendedAppsByCreators: [], // { appid, creatorid }
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -117,6 +118,8 @@ GHomepage = {
 					GHomepage.rgRecommendedGames.push( { appid: rgRecommendedAppIDs[i], recommended: true } );
 				}
 			}
+			
+			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
 
 			if ( g_AccountID == 0 )
 			{
@@ -161,6 +164,7 @@ GHomepage = {
 			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
 			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
 			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
+			GHomepage.rgRecommendedAppsByCreators = v_shuffle( rgParams.rgRecommendedAppsByCreators ) || [];
 			GHomepage.bHideAdultContentViolence = rgParams.bHideAdultContentViolence || false;
 			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || false;
 		} catch( e ) { OnHomepageException(e); }
@@ -246,11 +250,14 @@ GHomepage = {
 		var HomeSettings;
 		var bHaveUser = ( g_AccountID != 0 );
 
+
 		// RECOMMENDED SPOTLIGHTS
 		try {
 			// we render this first, it may "steal" some recommendations from the main cap to show here instead.
 			if ( bHaveUser )
+			{
 				GHomepage.RenderRecommendedForYouSpotlight();
+			}
 		} catch( e ) { OnHomepageException(e); }
 
 
@@ -300,6 +307,12 @@ GHomepage = {
 		try {
 			GHomepage.RenderFriendsRecentlyPurchased();
 		} catch( e ) { OnHomepageException(e); }
+			
+		// Logged in
+		// Recommended Curators
+		try {
+			GHomepage.RenderRecommendedCreatorApps();
+		} catch( e ) { OnHomepageException(e); }			
 
 		// Sidebar
 		// Recommended tags
@@ -395,6 +408,12 @@ GHomepage = {
 		var rgDisplayListCombined = false;
 		GDynamicStore.s_rgDisplayedApps = [];
 
+		if ( GHomepage.bAutumnSaleMainCap && GHomepage.bMergeRecommendationsToHighlights )
+		{
+			$J('.home_cluster_ctn').hide();
+			return;
+		}
+
 		if ( g_AccountID == 0 )
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
@@ -414,14 +433,24 @@ GHomepage = {
 				GHomepage.FilterItemsForDisplay( GHomepage.rgCuratedAppsData.apps, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } ),
 				GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.main_cluster, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
 			);*/
-			rgDisplayListCombined = GHomepage.ZipLists(
-				GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
-				GHomepage.oDisplayLists.main_cluster, false, // Legacy
-				GHomepage.rgRecentAppsByCreator, true,
-				GHomepage.rgRecommendedGames, true,
-				GHomepage.rgCuratedAppsData.apps, true,
-				GHomepage.rgFriendRecommendations, true
-			);
+			
+			if ( GHomepage.bAutumnSaleMainCap )
+			{
+				rgDisplayListCombined = GHomepage.ZipLists(
+					GHomepage.rgRecommendedGames, true
+				);
+			}
+			else
+			{
+				rgDisplayListCombined = GHomepage.ZipLists(
+					GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
+					GHomepage.oDisplayLists.main_cluster, false, // Legacy
+					GHomepage.rgRecentAppsByCreator, true,
+					GHomepage.rgRecommendedGames, true,
+					GHomepage.rgCuratedAppsData.apps, true,
+					GHomepage.rgFriendRecommendations, true
+				);
+			}
 		}
 
 		rgDisplayListCombined = GHomepage.FilterItemsForDisplay(
@@ -915,6 +944,102 @@ GHomepage = {
 
 
 	},
+	
+	
+	RenderRecommendedCreatorApps: function()
+	{
+		var $RecommendedCreators =  $J('.recommended_creators_ctn' );
+		$RecommendedCreators.hide();
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+		);
+		
+		rgCapsulesToRender = [];
+		rgDisplayedCreators = [];
+		rgDisplayedAppIds = [];
+
+		// filter this to one app per creator
+		for ( var i = 0; i < rgCapsules.length; i++ )
+		{
+			if ( rgDisplayedCreators.indexOf( rgCapsules[i].creatorid ) == -1 )
+			{
+				rgDisplayedCreators.push( rgCapsules[i].creatorid );
+				rgDisplayedAppIds.push( rgCapsules[i].appid );
+				rgCapsulesToRender.push( rgCapsules[i] );
+			}
+		}
+
+		// if not enough creators, just fill in the rest
+		if ( rgCapsulesToRender.length < 4 )
+		{
+			for ( var i = 0; i < rgCapsules.length; i++ )
+			{
+				if ( rgDisplayedAppIds.indexOf( rgCapsules[i].appid ) == -1 )
+				{
+					rgCapsulesToRender.push( rgCapsules[i] );
+				}
+				
+				if ( rgCapsulesToRender.length == 4 )
+					break;
+			}
+			
+		}
+
+		if ( rgCapsulesToRender.length > 0 )
+			$RecommendedCreators.show();
+
+		GHomepage.FillPagedCapsuleCarousel( rgCapsulesToRender, $RecommendedCreators,
+			function( oItem, strFeature, rgOptions )
+			{
+				var nAppId = oItem.appid;
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, 0, rgOptions );
+				var $CreatorsCtn = $J('<div class="recommended_creators_container" />');
+				$CapCtn.append($CreatorsCtn);
+
+				var $AvatarsCtn = $J('<div class="avatars" />');
+				$CreatorsCtn.append($AvatarsCtn);
+
+				var $AvatarCap = $J('<a href="%1$s" title="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, oItem.link).replace(/\%2\$s/g, GetAvatarURL( oItem.avatar_sha ) ).replace(/\%3\$s/g, oItem.name) );
+				$AvatarsCtn.append( $AvatarCap );
+				
+				var $Actions = $J('<div class="actions" />');
+				var $FollowLink = $J('<a href="#" class="btn_green_white_innerfade btn_medium" />' );
+				$FollowLink.data('ds-following', oItem.following );
+				$FollowLink.bind('updateFollowState', function () {
+					if ( $FollowLink.data('ds-following') )
+					{
+						$FollowLink.html( 'Following' );
+						$FollowLink.addClass( "following_button" );
+						$FollowLink.removeClass( "follow_button" );
+					}
+					else
+					{
+						$FollowLink.html( 'Follow' );
+						$FollowLink.removeClass( "following_button" );
+						$FollowLink.addClass( "follow_button" );
+					}
+				});
+
+				$FollowLink.trigger('updateFollowState');				
+				
+				$FollowLink.on( 'click', function() {
+					FollowCuratorWithCallback( oItem.creatorid, !$FollowLink.data('ds-following'), function(){
+						$FollowLink.data('ds-following', !$FollowLink.data('ds-following') );
+						$FollowLink.trigger('updateFollowState');				
+					});
+					event.preventDefault();
+				});
+				
+				$Actions.append( $FollowLink );
+				
+				$AvatarsCtn.append( $Actions );
+				return $CapCtn;
+			},	'creator_recommendations', 4
+		);
+	},	
+
+
 
 	RenderSpotlightSection: function()
 	{
@@ -1409,6 +1534,10 @@ GHomepage = {
 	RenderRecommendedForYouSpotlight: function()
 	{
 		var $Element = $J('#home_recommended_spotlight');
+
+		if ( $Element.length == 0 )
+			return;
+
 		var rgGamesShown = [];
 		var nGamesToShow = 1;
 

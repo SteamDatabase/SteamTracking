@@ -2792,6 +2792,17 @@ a.cluster_capsule:hover {
 	bottom: 3px;
 }
 
+#live_streams_carousel .title
+{
+	margin-top: 25px;
+	padding-bottom: 8px;
+	margin-left: 4px;
+}
+
+.live_steam_viewers
+{
+
+}
 
 /* ds_options defines the per-app prefernces dropdown */
 .ds_options {
@@ -3144,13 +3155,21 @@ body.v6 .user_reviews_header span.right {
 }
 
 body.v6 .broadcast_live_stream_icon {
-    height: 20px;
-    background-color: red;
+    height: 13px;
     position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 15px;
+	top: 5px;
+	left: 5px;
     overflow: hidden;
+	background: url( '/public/shared/images/live_red_dot.png' ) #000;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 12px 12px;
+	background-position-x: 4px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	padding: 3px 6px 3px 20px;
+	box-shadow: 0 0 7px #a94847;
 }
 
 /* ===== from shared_global.css ====== */

@@ -86,12 +86,90 @@ function AddItemsIfNotPresent( rgItemsToDisplay, rgItemsFound, cMaxItems )
 
 function HomeRenderFeaturedItems( rgDisplayLists )
 {
-	var rgTier1 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier1, 'home', 9, g_bIsEncore ? 27 : 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
-	);
-	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier2, 'home', 9, g_bIsEncore ? 24 : 18, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
-	);
+	var rgTier1 = [];
+	var rgTier2 = [];
+	
+	var rgSeenAppIds = [];
+	
+	var k_nTier1Max = 15;
+	var k_nTier1RecommendationMax = 7;
+	var k_nTier2Max = 18;
+	
+	if ( GHomepage.bMergeRecommendationsToHighlights )
+	{
+		var rgRecommendedGames = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgRecommendedGames, 'home', 9, 48, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		);
+		
+		rgRecommendedGames = v_shuffle( rgRecommendedGames );
+		
+		var rgTier1Candidates = GHomepage.FilterItemsForDisplay(
+			rgDisplayLists.sale_tier1, 'home', 9, 48, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		);
+
+		var rgTier2Candidates = GHomepage.FilterItemsForDisplay(
+			rgDisplayLists.sale_tier2, 'home', 9, 48, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }		
+		);
+
+		
+		for ( var i = 0; i < rgRecommendedGames.length; i++ )
+		{
+			if ( rgSeenAppIds.indexOf( rgRecommendedGames[i].appid ) !== -1 )
+				continue;
+			
+			// 7 from recommendation into tier1, then overflow into tier2
+			if ( rgTier1.length < k_nTier1RecommendationMax )		
+			{
+				rgTier1.push( rgRecommendedGames[i] );
+			}
+			else
+			{
+				rgTier2.push( rgRecommendedGames[i] );
+			}
+			rgSeenAppIds.push( rgRecommendedGames[i].appid );
+		}
+		
+		// fill up tier1 to 15, then overflow into tier2
+		for ( var i = 0; i < rgTier1Candidates.length; i++ )
+		{
+			if ( rgSeenAppIds.indexOf( rgTier1Candidates[i].appid ) !== -1 )
+				continue;
+
+			if ( rgTier1.length < k_nTier1Max )
+			{
+				rgTier1.push( rgTier1Candidates[i] );
+			}
+			else
+			{
+				rgTier2.push( rgTier1Candidates[i] );
+			}
+			
+			rgSeenAppIds.push( rgTier1Candidates[i].appid );
+		}
+		
+		// fill up rest with tier 2
+		for ( var i = 0; i < rgTier2Candidates.length && rgTier2.length < k_nTier2Max; i++ )
+		{
+			if ( rgSeenAppIds.indexOf( rgTier2Candidates[i].appid ) !== -1 )
+				continue;
+				
+			rgTier2.push( rgTier2Candidates[i] );
+			rgSeenAppIds.push( rgTier2Candidates[i].appid );
+		}
+		
+		rgTier1 = v_shuffle( rgTier1 );
+		rgTier2 = v_shuffle( rgTier2 );
+	}
+	else
+	{
+		rgTier1 = GHomepage.FilterItemsForDisplay(
+			rgDisplayLists.sale_tier1, 'home', 9, k_nTier1Max, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		);
+
+		rgTier2 = GHomepage.FilterItemsForDisplay(
+			rgDisplayLists.sale_tier2, 'home', 9, k_nTier2Max, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
+		);
+	}
 
 	var rgItemsPromotedToTier1 = [];
 	if ( rgTier1.length < 9 )
@@ -131,6 +209,8 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	// capsule rows
 	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
+	
+	GSteamBroadcasts.Init();
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )
@@ -479,3 +559,82 @@ function FillCapsuleContainer( rgItems, $Parent, settings )
 		$Parent.hide();
 	}
 }
+
+GSteamBroadcasts = {
+	Init: function()
+	{
+		GSteamBroadcasts.Render();
+	},
+
+	Render: function()
+	{
+		if ($J('.live_streams_ctn').length == 0 )
+			return;
+
+		$J('.live_streams_ctn').hide();
+			
+		// do an ajax call to get the broadcasters
+		$J.ajax( {
+			url: "https:\/\/store.steampowered.com\/broadcast\/ajaxgetpopularpartnerbroadcasts\/",
+			data: {
+
+			},
+			dataType: 'json',
+			type: 'GET'
+		}).done(function( data ) {
+
+			if ( data.success == 1 && data.filtered.length > 0 )
+			{
+				
+				var rgFiltered = GHomepage.FilterItemsForDisplay(
+					data.filtered, 'home', 1, 3, { displayed_elsewhere: true }
+				);				
+				
+				if ( rgFiltered.length > 0 )
+				{
+					$elTarget = $J('#live_streams_carousel');
+					var $elCapsuleTarget = $J('.carousel_items', $elTarget);
+					
+					var $elPageContainer = $J('<div>', { 'class': 'focus' } );
+
+					for ( var i = 0; i < rgFiltered.length && i < 3; i++ )
+					{
+						var oItem = rgFiltered[i];
+						
+						var params = { 'class': 'store_capsule', 'href': oItem.app_link };
+						var $CapCtn = $J('<a/>', params );
+
+						var $ImgCtn = $J('<div class="capsule headerv5"/>');
+
+						var rgImageProperties = { src: oItem.thumbnail_http_address };
+						var rgDefaultImageProperties = { src: oItem.app_capsule_image };
+
+						$ImgCtn.append( $J('<img/>', rgDefaultImageProperties ) );
+						$ImgCtn.append( $J('<img/>', rgImageProperties ) );
+						$CapCtn.append( $ImgCtn );
+						
+						$Contents = $J('<div/>', {'class': 'title ellipsis' } );
+						$Contents.append( $J('<span/>').html( oItem.app_name + ' (' ) );
+						$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( oItem.viewer_count ) );
+						$Contents.append( $J('<span/>').html( ')' ) );
+						
+						$CapCtn.append( $Contents );
+						$CapCtn.append( 
+								$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+						);
+
+						$elPageContainer.append( $CapCtn );
+					}
+					
+					$elCapsuleTarget.append($elPageContainer);
+
+					$J('.live_streams_ctn').show();
+				}
+			}
+
+		});
+		
+		return;
+	}
+};
+
