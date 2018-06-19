@@ -83,7 +83,11 @@ Steam = {
 
 function OpenFriendChat( steamid, accountid )
 {
-	if ( typeof ClientConnectionAPI !== 'undefined' )
+	if ( Steam.BIsUserInClientOrOverlay() )
+	{
+		window.location = 'steam://friends/message/' + steamid;
+	}
+	else if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
 			if ( !result.success )
@@ -107,7 +111,7 @@ function OpenFriendChatInWebChat( steamid, accountid )
 
 function OpenGroupChat( steamid )
 {
-	if ( typeof ClientConnectionAPI !== 'undefined' )
+	if ( !Steam.BIsUserInClientOrOverlay() && typeof ClientConnectionAPI !== 'undefined' )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
 			if ( !result.success )

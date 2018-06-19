@@ -405,7 +405,7 @@ body.v6 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-	margin: 15px 12px 12px 12px;
+	margin: 12px 12px 12px 12px;
     font-size: 14px;
     line-height: 15px;
     padding-right: 18px;
@@ -420,6 +420,11 @@ body.v6 {
     font-weight: normal;
     font-size: 11px;
     color: #a3cf06;
+}
+
+.friend_block_v2 .friend_last_online_text {
+	font-weight: normal;
+	font-size: 11px;
 }
 
 .friend_block_v2 .friend_game_link {
@@ -778,6 +783,10 @@ body.v6 {
 
 }
 
+.description a {
+	text-decoration: underline;
+}
+
 .description_note {
     color: #7092a5;
     margin: 10px 0 20px 0;
@@ -1000,4 +1009,8 @@ span.invite_action_txt {
 .ctnClanInviteErrors {
 	max-width: 500px;
 	color: #95423a;
+}
+
+.profile_friends.title_bar.pending_sent_invites {
+	margin-top: 30px;
 }

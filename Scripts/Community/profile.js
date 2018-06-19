@@ -152,6 +152,33 @@ function RemoveFriend()
 	} );
 }
 
+function CancelInvite()
+{
+	var steamid = g_rgProfileData['steamid'];
+	var strPersonaName = g_rgProfileData['personaname'];
+
+	ShowConfirmDialog( 'Cancel Invite',
+	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="noreferrer">friend invite link</a>.',
+	'Cancel Invite'
+	).done( function() {
+		$J.post(
+			'https://steamcommunity.com/actions/RemoveFriendAjax',
+			{sessionID: g_sessionID, steamid: steamid }
+		).done( function() {
+			ShowAlertDialog( 'Cancel Invite',
+				'Your invite to %s has been canceled.'.replace( /%s/, strPersonaName )
+		).done( function() {
+				// reload the page when they click OK, so we update friend state
+				window.location.reload();
+			} );
+		} ).fail( function() {
+			ShowAlertDialog( 'Cancel Invite',
+				'Error processing your request. Please try again.'
+		);
+		} );
+	} );
+}
+
 // also used for accepting friend invites
 function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 {
@@ -166,7 +193,7 @@ function AddFriend( bRespondingToInvite, steamid_friend, strPersonaName_friend )
 		{
 			ShowAlertDialog( 'Add Friend' + ' - ' + strPersonaName,
 				'Friend invite sent. They will appear as a friend once they have accepted your invite.'
-			);
+			).done( function() { window.location.reload(); } );
 		}
 		else
 		{

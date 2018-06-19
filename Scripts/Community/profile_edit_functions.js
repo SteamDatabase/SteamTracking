@@ -243,7 +243,7 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 		fnOnChange = SetShowcaseGame;
 
 	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, iSlot, game ); Modal.Dismiss(); };
-	var GameSelector = new CGameSelectorOwnedGames( $Input[0], null, null, fnOnSelect );
+	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect );
 }
 
 function SetShowcaseGame( elSlot, eShowcase, iSlot, game )

@@ -2577,6 +2577,7 @@ CGameSelectorOwnedGames = Class.create( CGameSelector, {
 CGameSelectorOwnedGames.s_rgOwnedGames = null;
 CGameSelectorOwnedGames.s_bLoadInFlight = false;
 CGameSelectorOwnedGames.s_rgOwnedGamesReadyCallbacks = [];
+CGameSelectorOwnedGames.s_rgParams = {};
 CGameSelectorOwnedGames.AreOwnedGamesLoaded = function()
 {
 	return CGameSelectorOwnedGames.s_rgOwnedGames != null;
@@ -2591,10 +2592,12 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 			return;
 
 		CGameSelectorOwnedGames.s_bLoadInFlight = true;
+		var rgParams = CGameSelectorOwnedGames.s_rgParams;
+		rgParams['sessionid'] = g_sessionID;
 
 		new Ajax.Request( 'https://steamcommunity.com/actions/GetOwnedApps/', {
 			method: 'get',
-			parameters: {sessionid: g_sessionID },
+			parameters: rgParams,
 			onSuccess: function( transport )
 			{
 				CGameSelectorOwnedGames.s_rgOwnedGames = transport.responseJSON || [];
@@ -2626,6 +2629,13 @@ CGameSelectorOwnedGames.LoadOwnedGames = function( fnCallback )
 	}
 };
 
+CGameSelectorProfileShowcaseGames = Class.create( CGameSelectorOwnedGames, {
+	initialize: function( $super, elInput, elSuggestionsCtn, elSuggestions, fnOnClick )
+	{
+		CGameSelectorOwnedGames.s_rgParams['for_showcase'] = 1;
+		$super( elInput, elSuggestionsCtn, elSuggestions, fnOnClick );
+	},
+} );
 
 function TargetIsChild( event, selector )
 {

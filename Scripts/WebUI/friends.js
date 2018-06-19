@@ -1707,7 +1707,7 @@ webpackJsonp(
           )
         );
       }
-      function N() {
+      function D() {
         return V.createElement(
           "svg",
           {
@@ -1732,7 +1732,7 @@ webpackJsonp(
           })
         );
       }
-      function D() {
+      function N() {
         return V.createElement(
           "svg",
           {
@@ -1857,7 +1857,7 @@ webpackJsonp(
           })
         );
       }
-      function L() {
+      function x() {
         return V.createElement(
           "svg",
           {
@@ -1883,7 +1883,7 @@ webpackJsonp(
           })
         );
       }
-      function x() {
+      function L() {
         return V.createElement(
           "svg",
           {
@@ -2063,13 +2063,13 @@ webpackJsonp(
         (t.d = k),
         (t.q = T),
         (t.I = G),
-        (t.K = N),
-        (t.c = D),
+        (t.K = D),
+        (t.c = N),
         (t.b = A),
         (t.j = P),
         (t.s = z),
-        (t.u = L),
-        (t.C = x),
+        (t.u = x),
+        (t.C = L),
         (t.E = j),
         (t.A = U),
         (t.J = W);
@@ -7416,7 +7416,7 @@ and limitations under the License.
             );
       }
       function b(e) {
-        var t = Up.RTime32ToDate(e.rtime),
+        var t = Hp.RTime32ToDate(e.rtime),
           i = new Date();
         i.setHours(0, 0, 0, 0);
         var n;
@@ -7452,11 +7452,11 @@ and limitations under the License.
         );
       }
       function C(e, t, i) {
-        var n = Up.FriendStore.GetPlayer(i),
+        var n = Hp.FriendStore.GetPlayer(i),
           r = n.display_name,
-          o = Up.FriendStore.GetPlayer(t),
+          o = Hp.FriendStore.GetPlayer(t),
           a = o.display_name,
-          s = t == Up.FriendStore.self.accountid;
+          s = t == Hp.FriendStore.self.accountid;
         switch (e.result) {
           case 1:
             return Object(hr.b)("#friends_trade_declined", r);
@@ -7554,25 +7554,27 @@ and limitations under the License.
             );
           case 31:
             return Object(hr.b)("#friends_trade_would_exceed_max_asset_count");
+          case 32:
+            return Object(hr.b)("#friends_trade_disabled_in_your_country");
           default:
             return Object(hr.b)("#friends_trade_generic_failure", r);
         }
       }
       function S(e) {
-        if (!e) return Vr.k_ESlashCommandType_None;
-        for (var t in Yr)
+        if (!e) return qr.k_ESlashCommandType_None;
+        for (var t in Xr)
           if (e.startsWith(t)) {
             var i = e.slice(t.length, t.length + 1);
-            return Jr.indexOf(i) < 0 ? Vr.k_ESlashCommandType_None : Yr[t];
+            return Zr.indexOf(i) < 0 ? qr.k_ESlashCommandType_None : Xr[t];
           }
-        return Vr.k_ESlashCommandType_None;
+        return qr.k_ESlashCommandType_None;
       }
       function M(e) {
         var t = S(e);
-        if (t == Vr.k_ESlashCommandType_None) return e;
+        if (t == qr.k_ESlashCommandType_None) return e;
         var i = void 0;
-        for (var n in Yr)
-          if (Yr[n] === t) {
+        for (var n in Xr)
+          if (Xr[n] === t) {
             i = n;
             break;
           }
@@ -7582,8 +7584,8 @@ and limitations under the License.
           o = e.slice(0, 1);
         return (
           "\t" != o ||
-            (t != Vr.k_ESlashCommandType_Code &&
-              t != Vr.k_ESlashCommandType_Pre) ||
+            (t != qr.k_ESlashCommandType_Code &&
+              t != qr.k_ESlashCommandType_Pre) ||
             (r = !1),
           r && (e = e.slice(o.length)),
           e
@@ -7671,7 +7673,7 @@ and limitations under the License.
         return br.createElement(
           I,
           { className: t, bCenterVertically: i },
-          br.createElement(Xs, it.a({}, n))
+          br.createElement(Qs, it.a({}, n))
         );
       }
       function k(e) {
@@ -7725,13 +7727,13 @@ and limitations under the License.
           )
         );
       }
-      function N(e) {
+      function D(e) {
         var t = "DialogHBar" + (e.className ? " " + e.className : "");
         return br.createElement("div", it.a({}, e, { className: t }));
       }
-      function D(e) {
+      function N(e) {
         return br.createElement(
-          Ks,
+          Js,
           null,
           br.createElement(
             k,
@@ -7753,7 +7755,7 @@ and limitations under the License.
         };
       }
       function P(e, t, i) {
-        Be(br.createElement(cc, { friend: t }), i, "NicknameDialog", {
+        Be(br.createElement(uc, { friend: t }), i, "NicknameDialog", {
           strTitle: Object(hr.b)("#Friend_Menu_AddNickname"),
           popupWidth: 640,
           popupHeight: 400
@@ -7761,7 +7763,7 @@ and limitations under the License.
       }
       function z(e) {
         return br.createElement(
-          zu,
+          ju,
           { friend: e.friend, context: null },
           br.createElement(
             "div",
@@ -7772,14 +7774,14 @@ and limitations under the License.
               }
             },
             br.createElement("span", null, e.friend.display_name),
-            br.createElement(Bs.O, null)
+            br.createElement(Is.O, null)
           )
         );
       }
-      function L(e, t, i) {
+      function x(e, t, i) {
         var n = i ? [i.accountid] : [];
         Be(
-          br.createElement(dc, { browserContext: e, rgPreSelectedFriends: n }),
+          br.createElement(hc, { browserContext: e, rgPreSelectedFriends: n }),
           t,
           "CreateFriendCategoryDialog",
           {
@@ -7789,9 +7791,9 @@ and limitations under the License.
           }
         );
       }
-      function x(e, t, i) {
+      function L(e, t, i) {
         Be(
-          br.createElement(dc, {
+          br.createElement(hc, {
             browserContext: e,
             group: t,
             rgPreSelectedFriends: t.member_accountid_list
@@ -7806,10 +7808,10 @@ and limitations under the License.
         );
       }
       function j(e, t, i) {
-        0 == Up.FriendStore.FriendGroupStore.user_groups.length
-          ? L(e, t, i)
+        0 == Hp.FriendStore.FriendGroupStore.user_groups.length
+          ? x(e, t, i)
           : Be(
-              br.createElement(pc, { browserContext: e, friend: i }),
+              br.createElement(mc, { browserContext: e, friend: i }),
               t,
               "AssignFriendCategoryDialog",
               {
@@ -7821,27 +7823,27 @@ and limitations under the License.
       }
       function U(e) {
         switch (e) {
-          case Qc.k_EVoiceCallState_None:
+          case el.k_EVoiceCallState_None:
             return "None";
-          case Qc.k_EVoiceCallState_ScheduledInitiate:
+          case el.k_EVoiceCallState_ScheduledInitiate:
             return "ScheduledInitiate";
-          case Qc.k_EVoiceCallState_RequestedMicAccess:
+          case el.k_EVoiceCallState_RequestedMicAccess:
             return "RequestedMicAccess";
-          case Qc.k_EVoiceCallState_CreatePeerConnection:
+          case el.k_EVoiceCallState_CreatePeerConnection:
             return "CreatePeerConnection";
-          case Qc.k_EVoiceCallState_InitatedWebRTCSession:
+          case el.k_EVoiceCallState_InitatedWebRTCSession:
             return "InitiatedWebRTCSession";
-          case Qc.k_EVoiceCallState_RequestedPermission:
+          case el.k_EVoiceCallState_RequestedPermission:
             return "RequestedPermission";
-          case Qc.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession:
+          case el.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession:
             return "NotifyingVoiceChatOfWebRTCSession";
-          case Qc.k_EVoiceCallState_Connected:
+          case el.k_EVoiceCallState_Connected:
             return "Connected";
         }
       }
       function W(e, t, i, n) {
         return Object(Sr.a)(
-          br.createElement(ll, {
+          br.createElement(dl, {
             browserContext: e,
             context: t,
             friend: i,
@@ -7862,10 +7864,10 @@ and limitations under the License.
         );
       }
       function H(e) {
-        Up.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
+        Hp.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
       }
       function q(e) {
-        Up.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
+        Hp.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
       }
       function K(e, t, i) {
         return Object(Sr.a)(
@@ -7888,7 +7890,7 @@ and limitations under the License.
                 {
                   key: "managegroup",
                   onSelected: function() {
-                    x(e.browserContext, e.group, e.ownerWindow);
+                    L(e.browserContext, e.group, e.ownerWindow);
                   }
                 },
                 Object(hr.b)("#FriendGroup_Menu_Manage")
@@ -7900,7 +7902,7 @@ and limitations under the License.
                 {
                   key: "removegroup",
                   onSelected: function() {
-                    Up.FriendStore.FriendGroupStore.RemoveGroup(e.group);
+                    Hp.FriendStore.FriendGroupStore.RemoveGroup(e.group);
                   }
                 },
                 Object(hr.b)("#FriendGroup_Menu_Remove")
@@ -7915,7 +7917,7 @@ and limitations under the License.
               {
                 key: "creategroup",
                 onSelected: function() {
-                  L(e.browserContext, e.ownerWindow);
+                  x(e.browserContext, e.ownerWindow);
                 }
               },
               Object(hr.b)("#FriendGroup_Menu_CreateGroup")
@@ -7925,7 +7927,7 @@ and limitations under the License.
       }
       function J(e, t) {
         return Object(Sr.a)(
-          br.createElement(gl, {
+          br.createElement(_l, {
             browserContext: e,
             ownerWindow: t.currentTarget.ownerDocument.defaultView
           }),
@@ -7937,9 +7939,9 @@ and limitations under the License.
           r = Ye(null, e);
         return (
           t.BIsClanChatRoom() &&
-            (n = Up.FriendStore.ClanStore.GetClan(t.GetClanID())),
+            (n = Hp.FriendStore.ClanStore.GetClan(t.GetClanID())),
           Object(Sr.a)(
-            br.createElement(yl, {
+            br.createElement(bl, {
               browserContext: r,
               group: t,
               clan: n,
@@ -7954,9 +7956,9 @@ and limitations under the License.
           r = Ye(null, e);
         return (
           t.GetChatGroupIDIfLoaded() &&
-            (n = Up.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
+            (n = Hp.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
           Object(Sr.a)(
-            br.createElement(yl, {
+            br.createElement(bl, {
               browserContext: r,
               group: n,
               clan: t,
@@ -7969,10 +7971,10 @@ and limitations under the License.
       function Q(e, t, i, n, r) {
         return t.GetDefaultChatID() == i
           ? null
-          : vl.BIsMenuEmpty(t, i, !!r)
+          : Cl.BIsMenuEmpty(t, i, !!r)
             ? null
             : Object(Sr.a)(
-                br.createElement(vl, {
+                br.createElement(Cl, {
                   browserContext: e,
                   group: t,
                   roomID: i,
@@ -7984,7 +7986,7 @@ and limitations under the License.
       }
       function $(e, t, i) {
         Be(
-          br.createElement(bl, { group: t, roomID: i }),
+          br.createElement(Sl, { group: t, roomID: i }),
           e,
           "SaveVoiceRoomDialog",
           {
@@ -8001,12 +8003,12 @@ and limitations under the License.
         return br.createElement(
           "div",
           { className: "openGroupButton", title: t, onClick: e.onClick },
-          br.createElement(Bs.j, null)
+          br.createElement(Is.j, null)
         );
       }
       function te(e, t, i) {
         Be(
-          br.createElement(El, {
+          br.createElement(Tl, {
             ownerWin: e,
             groupView: t,
             bVoiceChannel: i,
@@ -8023,7 +8025,7 @@ and limitations under the License.
       }
       function ie(e, t, i, n, r, o) {
         Be(
-          br.createElement(xl, {
+          br.createElement(Ul, {
             browserContext: e,
             chatRoomGroup: i,
             chatRoom: n,
@@ -8050,14 +8052,14 @@ and limitations under the License.
         );
       }
       function re(e, t) {
-        Be(br.createElement(Wl, { groupView: t }), e, "ChatRoomGroupSettings", {
+        Be(br.createElement(Hl, { groupView: t }), e, "ChatRoomGroupSettings", {
           strTitle: Object(hr.b)("#GroupSettings"),
           popupWidth: 842,
           popupHeight: 600
         });
       }
       function oe(e, t) {
-        Be(br.createElement(iu, null), t, Object(hr.b)("#Settings"), {
+        Be(br.createElement(ou, null), t, Object(hr.b)("#Settings"), {
           strTitle: Object(hr.b)("#Settings"),
           popupWidth: 842,
           popupHeight: 720
@@ -8069,7 +8071,7 @@ and limitations under the License.
         var n = 60 * i;
         i < 2 && (n -= 32),
           Be(
-            br.createElement(nu, { group: t.GetGroup() }),
+            br.createElement(au, { group: t.GetGroup() }),
             e,
             "ChatRoomGroupNotificationSettings",
             {
@@ -8129,7 +8131,7 @@ and limitations under the License.
       function ue(e, t, i, n, r) {
         void 0 === n && (n = !1),
           Be(
-            br.createElement(hu, {
+            br.createElement(fu, {
               browserContext: e,
               chatViewToReplace: i,
               bHideChatNameEntry: n,
@@ -8164,7 +8166,7 @@ and limitations under the License.
       }
       function he(e, t, i) {
         return Object(Sr.a)(
-          br.createElement(Du, {
+          br.createElement(zu, {
             browserContext: e,
             appid: t,
             ownerWindow: i.currentTarget.ownerDocument.defaultView
@@ -8174,13 +8176,13 @@ and limitations under the License.
       }
       function me(e) {
         return br.createElement(
-          Hu,
+          Yu,
           {
             target: e.target,
             className: "friendHover miniProfileHover",
             visibilityObserver: e.hoverInstance
           },
-          br.createElement(qu, { hoverInstance: e.hoverInstance })
+          br.createElement(Ju, { hoverInstance: e.hoverInstance })
         );
       }
       function ge(e) {
@@ -8199,7 +8201,7 @@ and limitations under the License.
             )
           );
         var i = function() {
-          Up.EconomyStore.GetTradeOfferURL().then(function(t) {
+          Hp.EconomyStore.GetTradeOfferURL().then(function(t) {
             e.fnInsertText(t);
           });
         };
@@ -8218,7 +8220,7 @@ and limitations under the License.
         var t = e.group.GetGroupID(),
           i = e.group.voiceRoomList.map(function(e) {
             var i = function() {
-              Up.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
+              Hp.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
             };
             return br.createElement(
               Cr.d,
@@ -8255,18 +8257,18 @@ and limitations under the License.
         var n,
           r = !1,
           o = !0;
-        if (e.invitedto instanceof Ka) n = 300;
-        else if (e.invitedto instanceof ds) {
+        if (e.invitedto instanceof Ja) n = 300;
+        else if (e.invitedto instanceof hs) {
           n = 340;
           var a = e.invitedto;
           a.BCanInvite() || a.BHasMember(e.invitee.accountid) || (o = !1);
-        } else if (e.invitedto instanceof cs) {
+        } else if (e.invitedto instanceof us) {
           (r = !0), (n = 340);
           var a = e.invitedto.GetGroup();
           a.BCanInvite() || a.BHasMember(e.invitee.accountid) || (o = !1);
         }
         o
-          ? Be(br.createElement(fd, it.a({}, e)), i, "InviteDialog", {
+          ? Be(br.createElement(vd, it.a({}, e)), i, "InviteDialog", {
               strTitle: r
                 ? Object(hr.b)("#Chat_Actions_InviteFriend_VoiceChat")
                 : Object(hr.b)("#Chat_Actions_DropGroupInvite_Title"),
@@ -8295,13 +8297,13 @@ and limitations under the License.
           i[n - 2] = arguments[n];
         for (var r = [], o = 0, a = i; o < a.length; o++) {
           var s = a[o];
-          s instanceof Ka ? r.push(Ce(e, s)) : r.push(s);
+          s instanceof Ja ? r.push(Ce(e, s)) : r.push(s);
         }
         return hr.d.apply(void 0, [t].concat(r));
       }
       function Ce(e, t) {
         return br.createElement(
-          zu,
+          ju,
           { friend: t, context: e },
           br.createElement("span", null, t.display_name)
         );
@@ -8309,10 +8311,10 @@ and limitations under the License.
       function Se(e, t, i, n, r) {
         if (r);
         else {
-          var o = new gm(n.ownerDocument.defaultView),
-            a = Up.UIStore.GetDefaultTabSetForContext(e);
-          Fs.render(
-            br.createElement(Vd, {
+          var o = new vm(n.ownerDocument.defaultView),
+            a = Hp.UIStore.GetDefaultTabSetForContext(e);
+          Os.render(
+            br.createElement(Kd, {
               friends: t,
               chats: i,
               tabset: a,
@@ -8384,7 +8386,7 @@ and limitations under the License.
       function Fe(e, t, i, n, r, o, a) {
         return new Promise(function(s, c) {
           e(
-            br.createElement(Xd, {
+            br.createElement($d, {
               strTitle: t,
               strDescription: i,
               strOKButtonText: n,
@@ -8400,7 +8402,7 @@ and limitations under the License.
       function we(e, t, i, n) {
         return new Promise(function(r, o) {
           e(
-            br.createElement(Xd, {
+            br.createElement($d, {
               bAlertDialog: !0,
               strTitle: t,
               strDescription: i,
@@ -8443,10 +8445,10 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "closeButton", onClick: e.onEscKeypress },
-                    br.createElement(Bs.O, null)
+                    br.createElement(Is.O, null)
                   )
                 ),
-              br.createElement(ld, null, e.children)
+              br.createElement(pd, null, e.children)
             )
           )
         );
@@ -8460,17 +8462,17 @@ and limitations under the License.
             }
           });
         if (tt.a.USE_POPUPS && n && i) {
-          var s = new Zd(t, Je(t), i, n, a);
+          var s = new ep(t, Je(t), i, n, a);
           s.Show(), (r = s);
-        } else r = Sm.GetModalManager(t).ShowModal(a);
+        } else r = Om.GetModalManager(t).ShowModal(a);
         return r;
       }
       function Re(e) {
         return br.createElement(
           "div",
           { className: "PopupFullWindow", onContextMenu: Me },
-          br.createElement(yu, { hideMinMax: !0, popup: e.popup }),
-          br.createElement(Kd, { ModalManager: Sm.GetModalManager(e.popup) }),
+          br.createElement(Cu, { hideMinMax: !0, popup: e.popup }),
+          br.createElement(Xd, { ModalManager: Om.GetModalManager(e.popup) }),
           e.children
         );
       }
@@ -8515,32 +8517,32 @@ and limitations under the License.
       }
       function Ge(e, t, i) {
         Be(
-          br.createElement(Hp, it.a({}, e, { bIsInviteDialog: !0 })),
+          br.createElement(Yp, it.a({}, e, { bIsInviteDialog: !0 })),
           i,
           "InviteDialog",
           { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }
         );
       }
-      function Ne(e) {
-        if (Mh == yh.Loaded) return void e();
-        if (Mh == yh.NotLoaded) {
+      function De(e) {
+        if (Oh == Ch.Loaded) return void e();
+        if (Oh == Ch.NotLoaded) {
           var t = document.createElement("script");
           t.src = "https://www.youtube.com/iframe_api";
           var i = document.getElementsByTagName("script")[0];
           i.parentNode.insertBefore(t, i),
             (window.onYouTubeIframeAPIReady = Ae);
         }
-        Fh.findIndex(function(t) {
+        Bh.findIndex(function(t) {
           return e == t;
-        }) < 0 && Fh.push(e);
+        }) < 0 && Bh.push(e);
       }
-      function De(e) {
-        Vt.b(Fh, e);
+      function Ne(e) {
+        Vt.b(Bh, e);
       }
       function Ae() {
-        Mh = yh.Loaded;
-        for (var e = 0, t = Fh; e < t.length; e++) (0, t[e])();
-        Fh = [];
+        Oh = Ch.Loaded;
+        for (var e = 0, t = Bh; e < t.length; e++) (0, t[e])();
+        Bh = [];
       }
       function Pe(e) {
         var t = new RegExp(
@@ -8550,35 +8552,35 @@ and limitations under the License.
         return e.match(t)[5].toString();
       }
       function ze() {
-        return Object.assign(xe(), { mention: qh });
-      }
-      function Le() {
-        return Object.assign(xe(), {
-          invite: Dh,
-          gameinvite: Ah,
-          lobbyinvite: Ph,
-          tradeoffer: Uh,
-          broadcastinvite: zh,
-          broadcastviewrequest: Lh
-        });
+        return Object.assign(Le(), { mention: Xh });
       }
       function xe() {
+        return Object.assign(Le(), {
+          invite: xh,
+          gameinvite: Lh,
+          lobbyinvite: jh,
+          tradeoffer: qh,
+          broadcastinvite: Uh,
+          broadcastviewrequest: Wh
+        });
+      }
+      function Le() {
         return {
-          url: Oh,
-          youtube: Bh,
-          filteredurl: Hh,
-          emoticon: Kh,
-          img: Rh,
-          video: Ih,
-          og: kh,
-          tweet: Th,
-          inviteurl: Nh,
-          publishedfile: xh,
-          tradeofferlink: jh,
-          econitem: Vh,
-          steamstore: Yh,
-          broadcast: Wh,
-          oembed: Gh
+          url: Ih,
+          youtube: kh,
+          filteredurl: Jh,
+          emoticon: Zh,
+          img: Th,
+          video: Gh,
+          og: Nh,
+          tweet: Ah,
+          inviteurl: zh,
+          publishedfile: Vh,
+          tradeofferlink: Hh,
+          econitem: Yh,
+          steamstore: Qh,
+          broadcast: Kh,
+          oembed: Ph
         };
       }
       function je() {
@@ -8593,13 +8595,13 @@ and limitations under the License.
           a = r + "?s=" + i + "x" + n,
           s = a + "dpx2x";
         return br.createElement(
-          Eh,
+          Dh,
           it.a({ context: t }, o, { src: a, srcSet: a + " 1x, " + s + " 2x" })
         );
       }
       function We(e) {
         var t = e.args.appid,
-          i = Up.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Hp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(hr.b)(
@@ -8611,7 +8613,7 @@ and limitations under the License.
       }
       function Ve(e) {
         var t = e.args.appid,
-          i = Up.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Hp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(hr.b)(
@@ -8650,12 +8652,12 @@ and limitations under the License.
         };
       }
       function Ke(e, t, i) {
-        Fs.render(br.createElement(em, { friends: e }), t);
+        Os.render(br.createElement(rm, { friends: e }), t);
       }
       function Ye(e, t) {
         var i = Ze(t);
         if (!i && e) {
-          var n = Fs.findDOMNode(e);
+          var n = Os.findDOMNode(e);
           n && n.ownerDocument && (i = n.ownerDocument.defaultView);
         }
         return (
@@ -8667,7 +8669,7 @@ and limitations under the License.
         );
       }
       function Je(e) {
-        var t = xp;
+        var t = Wp;
         return (
           e &&
             (AssertMsg(
@@ -8680,7 +8682,7 @@ and limitations under the License.
       }
       function Xe(e) {
         var t = Je(e);
-        return t && t.m_unPID != xp.m_unPID && t.m_nBrowserID != xp.m_nBrowserID
+        return t && t.m_unPID != Wp.m_unPID && t.m_nBrowserID != Wp.m_nBrowserID
           ? t
           : null;
       }
@@ -8695,7 +8697,7 @@ and limitations under the License.
       }
       function Qe() {
         var e,
-          t = new vm(),
+          t = new Mm(),
           i = null,
           n = !1;
         if (tt.a.IN_CLIENT) {
@@ -8719,19 +8721,19 @@ and limitations under the License.
       }
       function $e(e, t, i) {
         if ("english" !== t)
-          "friendsui" == e ? (Fm = i) : "shared" == e && (wm = i);
-        else if ("shared" == e) Om = i;
+          "friendsui" == e ? (Rm = i) : "shared" == e && (Im = i);
+        else if ("shared" == e) Em = i;
         else {
           var n = void 0,
             r = null,
             o = void 0,
             a = null;
-          void 0 !== Fm ? ((n = Fm), (r = i)) : (n = i),
-            void 0 !== wm ? ((o = wm), (a = Om)) : (o = Om),
+          void 0 !== Rm ? ((n = Rm), (r = i)) : (n = i),
+            void 0 !== Im ? ((o = Im), (a = Em)) : (o = Em),
             hr.a.InitFromObjects(n, r, o, a),
-            (Fm = void 0),
-            (wm = void 0),
-            (Om = void 0);
+            (Rm = void 0),
+            (Im = void 0),
+            (Em = void 0);
         }
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
@@ -11658,7 +11660,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Nt = (ot.Message,
+        Dt = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -11753,7 +11755,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Dt = (ot.Message,
+        Nt = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -11975,13 +11977,13 @@ and limitations under the License.
               ot.Message.setField(this, 2, e);
             }),
             (t.prototype.names = function() {
-              return ot.Message.getRepeatedWrapperField(this, Lt, 3);
+              return ot.Message.getRepeatedWrapperField(this, xt, 3);
             }),
             (t.prototype.set_names = function(e) {
               ot.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (t.prototype.add_names = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 3, e, Lt, t);
+              return ot.Message.addToRepeatedWrapperField(this, 3, e, xt, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -12004,8 +12006,8 @@ and limitations under the License.
                     e.set_steamid(t.readFixed64String());
                     break;
                   case 3:
-                    var i = new Lt();
-                    t.readMessage(i, Lt.deserializeBinaryFromReader),
+                    var i = new xt();
+                    t.readMessage(i, xt.deserializeBinaryFromReader),
                       e.add_names(i);
                     break;
                   default:
@@ -12025,7 +12027,7 @@ and limitations under the License.
                 void 0 !== i && t.writeFixed64String(2, i),
                 (i = e.names()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(3, i, Lt.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, xt.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance";
@@ -12033,7 +12035,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lt = (function(e) {
+        xt = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -12095,7 +12097,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xt = (ot.Message,
+        Lt = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -13861,7 +13863,7 @@ and limitations under the License.
                 return this.m_strGameExtraInfo
                   ? this.m_strGameExtraInfo
                   : this.m_unGamePlayedAppID
-                    ? Up.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
+                    ? Hp.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
                         .m_strName
                     : "";
               },
@@ -13929,7 +13931,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "current_game_rich_presence", {
               get: function() {
                 if (this.m_mapRichPresence.has("steam_display")) {
-                  var e = Up.AppInfoStore.GetRichPresenceLoc(
+                  var e = Hp.AppInfoStore.GetRichPresenceLoc(
                     this.m_unGamePlayedAppID
                   );
                   if (e) return this.GetLocalizedRichPresenceDisplayString(e);
@@ -15582,7 +15584,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ni = (function(e) {
+        Di = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -15644,7 +15646,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Di = (function(e) {
+        Ni = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -15863,7 +15865,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Li = (function(e) {
+        xi = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -15925,7 +15927,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xi = (function(e) {
+        Li = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19283,7 +19285,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Nn = (function(e) {
+        Dn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19362,7 +19364,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Dn = (function(e) {
+        Nn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19620,7 +19622,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ln = (function(e) {
+        xn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19741,7 +19743,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xn = (function(e) {
+        Ln = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -21245,7 +21247,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.RevokeInviteToGroup#1", t, ki);
         }
         function u(e, t) {
-          return e.SendMsg("ChatRoom.CreateRole#1", t, Di);
+          return e.SendMsg("ChatRoom.CreateRole#1", t, Ni);
         }
         function d(e, t) {
           return e.SendMsg("ChatRoom.GetRoles#1", t, Ai);
@@ -21254,7 +21256,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.RenameRole#1", t, zi);
         }
         function h(e, t) {
-          return e.SendMsg("ChatRoom.DeleteRole#1", t, xi);
+          return e.SendMsg("ChatRoom.DeleteRole#1", t, Li);
         }
         function m(e, t) {
           return e.SendMsg("ChatRoom.GetRoleActions#1", t, ji);
@@ -21316,10 +21318,10 @@ and limitations under the License.
         function G(e, t) {
           return e.SendMsg("ChatRoom.CreateInviteLink#1", t, Pn);
         }
-        function N(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, Ln);
-        }
         function D(e, t) {
+          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, xn);
+        }
+        function N(e, t) {
           return e.SendMsg("ChatRoom.GetInviteInfo#1", t, jn);
         }
         function A(e, t) {
@@ -21331,10 +21333,10 @@ and limitations under the License.
         function z(e, t) {
           return e.SendMsg("ChatRoom.GetInviteList#1", t, Qn);
         }
-        function L(e, t) {
+        function x(e, t) {
           return e.SendMsg("ChatRoom.DeleteInviteLink#1", t, qn);
         }
-        function x(e, t) {
+        function L(e, t) {
           return e.SendMsg("ChatRoom.SetSessionActiveChatRoomGroups#1", t, er);
         }
         function j(e, t) {
@@ -21373,13 +21375,13 @@ and limitations under the License.
           (e.GetChatRoomGroupSummary = k),
           (e.AckChatMessage = T),
           (e.CreateInviteLink = G),
-          (e.GetInviteLinkInfo = N),
-          (e.GetInviteInfo = D),
+          (e.GetInviteLinkInfo = D),
+          (e.GetInviteInfo = N),
           (e.GetInviteLinksForGroup = A),
           (e.GetBanList = P),
           (e.GetInviteList = z),
-          (e.DeleteInviteLink = L),
-          (e.SetSessionActiveChatRoomGroups = x),
+          (e.DeleteInviteLink = x),
+          (e.SetSessionActiveChatRoomGroups = L),
           (e.SetUserChatGroupPreferences = j);
       })(lr || (lr = {}));
       var ur;
@@ -21408,7 +21410,7 @@ and limitations under the License.
           }),
           (e.NotifyChatRoomGroupRoomsChangeHandler = {
             name: "ChatRoomClient.NotifyChatRoomGroupRoomsChange#1",
-            request: Nn
+            request: Dn
           }),
           (e.NotifyShouldRejoinChatRoomVoiceChatHandler = {
             name: "ChatRoomClient.NotifyShouldRejoinChatRoomVoiceChat#1",
@@ -21420,7 +21422,7 @@ and limitations under the License.
           }),
           (e.NotifyAckChatMessageEchoHandler = {
             name: "ChatRoomClient.NotifyAckChatMessageEcho#1",
-            request: Dn
+            request: Nn
           });
       })(dr || (dr = {}));
       var pr,
@@ -21556,7 +21558,7 @@ and limitations under the License.
                     }
                     this.m_activeTab = n || this.m_vecTabs[Math.max(t - 1, 0)];
                   } else this.m_activeTab = void 0;
-                0 == this.m_vecTabs.length && Up.UIStore.CloseTabSet(this);
+                0 == this.m_vecTabs.length && Hp.UIStore.CloseTabSet(this);
               }
             }),
             (e.prototype.MoveTabAfter = function(e, t) {
@@ -21569,7 +21571,7 @@ and limitations under the License.
                 Vt.d(this.m_vecTabs, i, Math.min(t, this.m_vecTabs.length - 1));
             }),
             (e.prototype.Focus = function() {
-              Up.UIStore.FocusTabSet(this);
+              Hp.UIStore.FocusTabSet(this);
             }),
             (e.prototype.OnPopupClosed = function(e) {
               var t = !1;
@@ -21578,33 +21580,33 @@ and limitations under the License.
                 e.SteamClient.Window &&
                 e.SteamClient.Window.ProcessShuttingDown &&
                 (t = e.SteamClient.Window.ProcessShuttingDown()),
-                t && Up.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Up.UIStore.OnTabSetClosed(this),
+                t && Hp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Hp.UIStore.OnTabSetClosed(this),
                 (this.m_activeTab = void 0);
               for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
                 var r = n[i];
-                Up.UIStore.CloseTab(this.m_browserContext, r, !0);
+                Hp.UIStore.CloseTab(this.m_browserContext, r, !0);
               }
               this.m_vecTabs.clear(),
-                t && Up.UIStore.SetSuppressBrowserContextBroadcasting(!1);
+                t && Hp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
             }),
             Object.defineProperty(e.prototype, "is_popup_active", {
               get: function() {
-                return Up.UIStore.BIsTabSetActive(this);
+                return Hp.UIStore.BIsTabSetActive(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_visible", {
               get: function() {
-                return Up.UIStore.BIsTabSetVisible(this);
+                return Hp.UIStore.BIsTabSetVisible(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_focused", {
               get: function() {
-                return Up.UIStore.BIsTabSetFocused(this);
+                return Hp.UIStore.BIsTabSetFocused(this);
               },
               enumerable: !0,
               configurable: !0
@@ -21638,7 +21640,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.BIsExpired = function() {
-              return Up.GetServerRTime32() >= this.m_rtTimeExpires;
+              return Hp.GetServerRTime32() >= this.m_rtTimeExpires;
             }),
             (t.prototype.InitFromInviteLinkInfo = function(e) {
               (this.m_ulChatRoomGroupID = e.group_summary().chat_group_id()),
@@ -21683,7 +21685,7 @@ and limitations under the License.
             }),
             (e.prototype.AcceptInvite = function(e, t) {
               var i = this;
-              null == t && (t = Up.GetDefaultBrowserContext());
+              null == t && (t = Hp.GetDefaultBrowserContext());
               var n = dt.Init(fn);
               return (
                 n.Body().set_chat_group_id(e.GetChatRoomGroupID()),
@@ -21702,7 +21704,7 @@ and limitations under the License.
                         e.Body().state(),
                         e.Body().user_chat_state()
                       );
-                      Up.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
+                      Hp.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
                       var o = e.Body().join_chat_id();
                       if (r) {
                         var a = r.GetChatRoom(o);
@@ -21746,7 +21748,7 @@ and limitations under the License.
                 o = this.m_ChatStore.GetChatRoomGroup(e);
               if (o && o.GetChatRoom(t)) r.InitDirectInvite(e, t);
               else {
-                var a = dt.Init(xn);
+                var a = dt.Init(Ln);
                 a
                   .Body()
                   .set_steamid_invitee(
@@ -21817,11 +21819,11 @@ and limitations under the License.
                     (e += "/" + encodeURIComponent(this.connectString))),
                 v(window, e),
                 (this.bAccepted = !0),
-                Up.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Hp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             (e.prototype.DismissInvite = function() {
               (this.bDismissed = !0),
-                Up.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Hp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             it.b([pt.observable], e.prototype, "bDismissed", void 0),
             it.b([pt.observable], e.prototype, "bAccepted", void 0),
@@ -21840,7 +21842,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Up.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Hp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "GameInvites",
                 wr
               ).then(function(t) {
@@ -21879,14 +21881,100 @@ and limitations under the License.
                 this.WriteToLocalStorage());
             }),
             (e.prototype.WriteToLocalStorage = function() {
-              Up.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
+              Hp.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
                 dismisstimes: this.m_mapDismissedInvites
               });
             }),
             e
           );
         })(),
-        Br = (function(e) {
+        Br = (function() {
+          function e() {
+            this.bCollapsed = !1;
+          }
+          return (
+            (e.prototype.IsEmpty = function() {
+              return (
+                !this.bCollapsed &&
+                void 0 === this.nDefaultWidth &&
+                void 0 === this.nDesiredWidth
+              );
+            }),
+            e
+          );
+        })(),
+        Rr = (function() {
+          function e() {
+            this.m_mapEmbed = new pt.ObservableMap();
+          }
+          return (
+            (e.prototype.Init = function() {
+              var e = this;
+              Hp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                "ChatEmbeds",
+                {}
+              ).then(function(t) {
+                e.m_mapEmbed.clear();
+                for (var i in t) {
+                  var n = new Br();
+                  Object.assign(n, t[i]), e.m_mapEmbed.set(i, n);
+                }
+              });
+            }),
+            (e.prototype.GetKey = function(e, t) {
+              return t + "_" + e;
+            }),
+            (e.prototype.EvictOldestIfNecessary = function() {
+              if (this.m_mapEmbed.size > 100) {
+                var e = Array.from(this.m_mapEmbed.keys()).sort()[0];
+                this.m_mapEmbed.delete(e);
+              }
+            }),
+            (e.prototype.GetOrCreateEmbedData = function(e, t) {
+              var i = this.GetKey(e, t),
+                n = this.m_mapEmbed.get(i);
+              return n || ((n = new Br()), (n.bCollapsed = !1)), n;
+            }),
+            (e.prototype.SaveEmbedData = function(e, t, i) {
+              i.IsEmpty()
+                ? this.m_mapEmbed.delete(this.GetKey(e, t))
+                : this.m_mapEmbed.set(this.GetKey(e, t), i),
+                this.EvictOldestIfNecessary(),
+                this.WriteToLocalStorage();
+            }),
+            (e.prototype.WriteToLocalStorage = function() {
+              Hp.SettingsStore.StoreObjectInLocalStorage(
+                "ChatEmbeds",
+                this.m_mapEmbed
+              );
+            }),
+            (e.prototype.GetCollapsedState = function(e, t) {
+              var i = this.m_mapEmbed.get(this.GetKey(e, t));
+              return !(!i || !i.bCollapsed);
+            }),
+            (e.prototype.SetCollapsedState = function(e, t, i) {
+              var n = this.GetOrCreateEmbedData(e, t);
+              (n.bCollapsed = i), this.SaveEmbedData(e, t, n);
+            }),
+            (e.prototype.GetWidths = function(e, t) {
+              var i = this.m_mapEmbed.get(this.GetKey(e, t));
+              if (i && i.nDesiredWidth && i.nDefaultWidth)
+                return {
+                  nDesiredWidth: i.nDesiredWidth,
+                  nDefaultWidth: i.nDefaultWidth
+                };
+            }),
+            (e.prototype.SetWidths = function(e, t, i, n) {
+              var r = this.GetOrCreateEmbedData(e, t);
+              i == n
+                ? (delete r.nDefaultWidth, delete r.nDesiredWidth)
+                : ((r.nDesiredWidth = i), (r.nDefaultWidth = n)),
+                this.SaveEmbedData(e, t, r);
+            }),
+            e
+          );
+        })(),
+        Ir = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -21903,7 +21991,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Rr = (function(e) {
+        Er = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { failedToRender: !1 }), i;
@@ -21924,7 +22012,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Ir = (function() {
+        kr = (function() {
           function e(e) {
             this.m_dictComponents = e;
           }
@@ -21951,12 +22039,12 @@ and limitations under the License.
             }),
             (e.prototype.EndAndStartNewNode = function(e, t, i) {
               void 0 === i && (i = 0), e.push(t);
-              var n = new Tr();
+              var n = new Dr();
               return (n.type = i), n;
             }),
             (e.prototype.Parse_FindBBCodeNodes = function(e) {
               for (
-                var t = [], i = new Tr(), n = !1, r = !1, o = 0;
+                var t = [], i = new Dr(), n = !1, r = !1, o = 0;
                 o < e.length;
                 o++
               ) {
@@ -22054,7 +22142,7 @@ and limitations under the License.
             e
           );
         })(),
-        Er = (function(e) {
+        Tr = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -22098,8 +22186,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Ir),
-        kr = (function(e) {
+        })(kr),
+        Gr = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -22188,8 +22276,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Ir),
-        Tr = (function() {
+        })(kr),
+        Dr = (function() {
           function e() {
             (this.type = 0), (this.text = "");
           }
@@ -22203,8 +22291,8 @@ and limitations under the License.
             e
           );
         })(),
-        Gr = i("Q5FY"),
-        Nr = (function(e) {
+        Nr = i("Q5FY"),
+        Ar = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22288,7 +22376,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Dr = (function(e) {
+        Pr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22350,7 +22438,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ar = (function(e) {
+        zr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22456,7 +22544,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Pr = (function(e) {
+        xr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22517,13 +22605,13 @@ and limitations under the License.
               ot.Message.setField(this, 7, e);
             }),
             (t.prototype.descriptions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Nr, 8);
+              return ot.Message.getRepeatedWrapperField(this, Ar, 8);
             }),
             (t.prototype.set_descriptions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 8, e);
             }),
             (t.prototype.add_descriptions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 8, e, Nr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 8, e, Ar, t);
             }),
             (t.prototype.tradable = function() {
               return ot.Message.getField(this, 9);
@@ -22532,31 +22620,31 @@ and limitations under the License.
               ot.Message.setField(this, 9, e);
             }),
             (t.prototype.actions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Dr, 10);
+              return ot.Message.getRepeatedWrapperField(this, Pr, 10);
             }),
             (t.prototype.set_actions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 10, e);
             }),
             (t.prototype.add_actions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 10, e, Dr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 10, e, Pr, t);
             }),
             (t.prototype.owner_descriptions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Nr, 11);
+              return ot.Message.getRepeatedWrapperField(this, Ar, 11);
             }),
             (t.prototype.set_owner_descriptions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 11, e);
             }),
             (t.prototype.add_owner_descriptions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 11, e, Nr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 11, e, Ar, t);
             }),
             (t.prototype.owner_actions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Dr, 12);
+              return ot.Message.getRepeatedWrapperField(this, Pr, 12);
             }),
             (t.prototype.set_owner_actions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 12, e);
             }),
             (t.prototype.add_owner_actions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 12, e, Dr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 12, e, Pr, t);
             }),
             (t.prototype.fraudwarnings = function() {
               return ot.Message.getField(this, 13);
@@ -22616,13 +22704,13 @@ and limitations under the License.
               ot.Message.setWrapperField(this, 20, e);
             }),
             (t.prototype.market_actions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Dr, 21);
+              return ot.Message.getRepeatedWrapperField(this, Pr, 21);
             }),
             (t.prototype.set_market_actions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 21, e);
             }),
             (t.prototype.add_market_actions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 21, e, Dr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 21, e, Pr, t);
             }),
             (t.prototype.commodity = function() {
               return ot.Message.getField(this, 22);
@@ -22649,13 +22737,13 @@ and limitations under the License.
               ot.Message.setField(this, 25, e);
             }),
             (t.prototype.tags = function() {
-              return ot.Message.getRepeatedWrapperField(this, Ar, 26);
+              return ot.Message.getRepeatedWrapperField(this, zr, 26);
             }),
             (t.prototype.set_tags = function(e) {
               ot.Message.setRepeatedWrapperField(this, 26, e);
             }),
             (t.prototype.add_tags = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 26, e, Ar, t);
+              return ot.Message.addToRepeatedWrapperField(this, 26, e, zr, t);
             }),
             (t.prototype.item_expiration = function() {
               return ot.Message.getField(this, 27);
@@ -22699,26 +22787,26 @@ and limitations under the License.
                     e.set_icon_url_large(i.readString());
                     break;
                   case 8:
-                    var n = new Nr();
-                    i.readMessage(n, Nr.deserializeBinaryFromReader),
+                    var n = new Ar();
+                    i.readMessage(n, Ar.deserializeBinaryFromReader),
                       e.add_descriptions(n);
                     break;
                   case 9:
                     e.set_tradable(i.readBool());
                     break;
                   case 10:
-                    var n = new Dr();
-                    i.readMessage(n, Dr.deserializeBinaryFromReader),
+                    var n = new Pr();
+                    i.readMessage(n, Pr.deserializeBinaryFromReader),
                       e.add_actions(n);
                     break;
                   case 11:
-                    var n = new Nr();
-                    i.readMessage(n, Nr.deserializeBinaryFromReader),
+                    var n = new Ar();
+                    i.readMessage(n, Ar.deserializeBinaryFromReader),
                       e.add_owner_descriptions(n);
                     break;
                   case 12:
-                    var n = new Dr();
-                    i.readMessage(n, Dr.deserializeBinaryFromReader),
+                    var n = new Pr();
+                    i.readMessage(n, Pr.deserializeBinaryFromReader),
                       e.add_owner_actions(n);
                     break;
                   case 13:
@@ -22751,8 +22839,8 @@ and limitations under the License.
                       e.set_contained_item(n);
                     break;
                   case 21:
-                    var n = new Dr();
-                    i.readMessage(n, Dr.deserializeBinaryFromReader),
+                    var n = new Pr();
+                    i.readMessage(n, Pr.deserializeBinaryFromReader),
                       e.add_market_actions(n);
                     break;
                   case 22:
@@ -22768,8 +22856,8 @@ and limitations under the License.
                     e.set_marketable(i.readBool());
                     break;
                   case 26:
-                    var n = new Ar();
-                    i.readMessage(n, Ar.deserializeBinaryFromReader),
+                    var n = new zr();
+                    i.readMessage(n, zr.deserializeBinaryFromReader),
                       e.add_tags(n);
                     break;
                   case 27:
@@ -22802,18 +22890,18 @@ and limitations under the License.
                 void 0 !== n && i.writeString(7, n),
                 (n = e.descriptions()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(8, n, Nr.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(8, n, Ar.serializeBinaryToWriter),
                 (n = ot.Message.getField(e, 9)),
                 void 0 !== n && i.writeBool(9, n),
                 (n = e.actions()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(10, n, Dr.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(10, n, Pr.serializeBinaryToWriter),
                 (n = e.owner_descriptions()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(11, n, Nr.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(11, n, Ar.serializeBinaryToWriter),
                 (n = e.owner_actions()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(12, n, Dr.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(12, n, Pr.serializeBinaryToWriter),
                 (n = ot.Message.getField(e, 13)),
                 void 0 !== n && i.writeRepeatedString(13, n),
                 (n = ot.Message.getField(e, 14)),
@@ -22834,7 +22922,7 @@ and limitations under the License.
                 null != n && i.writeMessage(20, n, t.serializeBinaryToWriter),
                 (n = e.market_actions()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(21, n, Dr.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(21, n, Pr.serializeBinaryToWriter),
                 (n = ot.Message.getField(e, 22)),
                 void 0 !== n && i.writeBool(22, n),
                 (n = ot.Message.getField(e, 23)),
@@ -22845,7 +22933,7 @@ and limitations under the License.
                 void 0 !== n && i.writeBool(25, n),
                 (n = e.tags()),
                 n.length > 0 &&
-                  i.writeRepeatedMessage(26, n, Ar.serializeBinaryToWriter),
+                  i.writeRepeatedMessage(26, n, zr.serializeBinaryToWriter),
                 void 0 !== (n = ot.Message.getField(e, 27)) &&
                   i.writeString(27, n);
             }),
@@ -22855,7 +22943,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        zr = (function(e) {
+        Lr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22905,7 +22993,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lr = (function(e) {
+        jr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22955,7 +23043,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xr = (ot.Message,
+        Ur = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -23006,7 +23094,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        jr = (function(e) {
+        Wr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -23027,13 +23115,13 @@ and limitations under the License.
               ot.Message.setField(this, 2, e);
             }),
             (t.prototype.classes = function() {
-              return ot.Message.getRepeatedWrapperField(this, Ur, 3);
+              return ot.Message.getRepeatedWrapperField(this, Vr, 3);
             }),
             (t.prototype.set_classes = function(e) {
               ot.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (t.prototype.add_classes = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 3, e, Ur, t);
+              return ot.Message.addToRepeatedWrapperField(this, 3, e, Vr, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -23056,8 +23144,8 @@ and limitations under the License.
                     e.set_appid(t.readUint32());
                     break;
                   case 3:
-                    var i = new Ur();
-                    t.readMessage(i, Ur.deserializeBinaryFromReader),
+                    var i = new Vr();
+                    t.readMessage(i, Vr.deserializeBinaryFromReader),
                       e.add_classes(i);
                     break;
                   default:
@@ -23077,7 +23165,7 @@ and limitations under the License.
                 void 0 !== i && t.writeUint32(2, i),
                 (i = e.classes()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(3, i, Ur.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, Vr.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CEcon_GetAssetClassInfo_Request";
@@ -23085,7 +23173,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ur = (function(e) {
+        Vr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -23147,7 +23235,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Wr = (function(e) {
+        Hr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -23156,13 +23244,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.descriptions = function() {
-              return ot.Message.getRepeatedWrapperField(this, Pr, 1);
+              return ot.Message.getRepeatedWrapperField(this, xr, 1);
             }),
             (t.prototype.set_descriptions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_descriptions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Pr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, xr, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -23179,8 +23267,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Pr();
-                    t.readMessage(i, Pr.deserializeBinaryFromReader),
+                    var i = new xr();
+                    t.readMessage(i, xr.deserializeBinaryFromReader),
                       e.add_descriptions(i);
                     break;
                   default:
@@ -23196,7 +23284,7 @@ and limitations under the License.
               var i;
               (i = e.descriptions()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Pr.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, xr.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CEcon_GetAssetClassInfo_Response";
@@ -23206,20 +23294,20 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, Lr);
+          return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, jr);
         }
         function i(e, t) {
-          return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, xr);
+          return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, Ur);
         }
         function n(e, t) {
-          return e.SendMsg("Econ.GetAssetClassInfo#1", t, Wr);
+          return e.SendMsg("Econ.GetAssetClassInfo#1", t, Hr);
         }
         (e.GetTradeOfferAccessToken = t),
           (e.ClientGetItemShopOverlayAuthURL = i),
           (e.GetAssetClassInfo = n);
       })(pr || (pr = {}));
-      var Vr,
-        Hr = (function() {
+      var qr,
+        Kr = (function() {
           function e() {}
           return (
             (e.prototype.Init = function(e) {
@@ -23229,7 +23317,7 @@ and limitations under the License.
               var e = this;
               if (this.m_strTradeOfferToken)
                 return Promise.resolve(this.GetConstructedTradeOfferURL());
-              var t = dt.Init(zr);
+              var t = dt.Init(Lr);
               return pr
                 .GetTradeOfferAccessToken(
                   this.m_CMInterface.GetServiceTransport(),
@@ -23262,7 +23350,7 @@ and limitations under the License.
             e
           );
         })(),
-        qr = (function() {
+        Yr = (function() {
           function e(e) {
             (this.result = 50),
               (this.steamguard_required_days = 0),
@@ -23280,18 +23368,18 @@ and limitations under the License.
           (e[(e.k_ESlashCommandType_Me = 1)] = "k_ESlashCommandType_Me"),
           (e[(e.k_ESlashCommandType_Code = 2)] = "k_ESlashCommandType_Code"),
           (e[(e.k_ESlashCommandType_Pre = 3)] = "k_ESlashCommandType_Pre");
-      })(Vr || (Vr = {}));
-      var Kr,
-        Yr = {
-          "/me": Vr.k_ESlashCommandType_Me,
-          "/code": Vr.k_ESlashCommandType_Code,
-          "/pre": Vr.k_ESlashCommandType_Pre
+      })(qr || (qr = {}));
+      var Jr,
+        Xr = {
+          "/me": qr.k_ESlashCommandType_Me,
+          "/code": qr.k_ESlashCommandType_Code,
+          "/pre": qr.k_ESlashCommandType_Pre
         },
-        Jr = [" ", "\n", "\t", ""],
-        Xr = (function() {
+        Zr = [" ", "\n", "\t", ""],
+        Qr = (function() {
           function e(e, t, i, n, r, o, a) {
             (this.unOrdinal = 0),
-              (this.m_eSlashCommandType = Vr.k_ESlashCommandType_None),
+              (this.m_eSlashCommandType = qr.k_ESlashCommandType_None),
               (this.unAccountID = e),
               (this.rtTimestamp = t),
               (this.unOrdinal = i || 0),
@@ -23347,7 +23435,7 @@ and limitations under the License.
               return 5 == this.eServerMsgType;
             }),
             (e.prototype.BIsSlashCommand = function() {
-              return this.m_eSlashCommandType != Vr.k_ESlashCommandType_None;
+              return this.m_eSlashCommandType != qr.k_ESlashCommandType_None;
             }),
             (e.prototype.GetSlashCommandType = function() {
               return this.m_eSlashCommandType;
@@ -23369,7 +23457,7 @@ and limitations under the License.
             e
           );
         })(),
-        Zr = (function(e) {
+        $r = (function(e) {
           function t(i, n, r) {
             var o = e.call(this, i, n, -1, r) || this;
             return (
@@ -23418,14 +23506,14 @@ and limitations under the License.
             it.b([pt.action], t.prototype, "OnServerAcknowledged", null),
             t
           );
-        })(Xr),
-        Qr = (function(e) {
+        })(Qr),
+        eo = (function(e) {
           function t(i, n, r) {
             return e.call(this, i, n, ++t.m_nOrdinal, r) || this;
           }
           return it.c(t, e), (t.m_nOrdinal = 0), t;
-        })(Xr),
-        $r = (function(e) {
+        })(Qr),
+        to = (function(e) {
           function t(t, i, n, r) {
             var o = e.call(this, t, i, 0, "") || this;
             return (
@@ -23435,7 +23523,7 @@ and limitations under the License.
               (o.m_bDeclined = !1),
               (o.m_bAccepted = !1),
               (o.m_bPopupBlocked = !1),
-              (o.m_ErrorDetails = new qr(50)),
+              (o.m_ErrorDetails = new Yr(50)),
               o
             );
           }
@@ -23448,7 +23536,7 @@ and limitations under the License.
               return this.m_tradeRequestID;
             }),
             (t.prototype.MarkAsCancelled = function(e) {
-              (this.m_bCancelled = !0), (this.m_ErrorDetails = e || new qr(7));
+              (this.m_bCancelled = !0), (this.m_ErrorDetails = e || new Yr(7));
             }),
             (t.prototype.MarkAsDeclined = function() {
               this.m_bDeclined = !0;
@@ -23469,8 +23557,8 @@ and limitations under the License.
             it.b([pt.action], t.prototype, "ShowPopupBlockedWarning", null),
             t
           );
-        })(Xr),
-        eo = (function() {
+        })(Qr),
+        io = (function() {
           function e() {
             (this.timestamp = 0),
               (this.imageWidth = 0),
@@ -23485,7 +23573,7 @@ and limitations under the License.
             e
           );
         })(),
-        to = (function() {
+        no = (function() {
           function e(e, t, i) {
             (this.m_rgChatViews = []),
               (this.m_bChatLogsLoaded = !1),
@@ -23502,7 +23590,7 @@ and limitations under the License.
               (this.m_FriendStore = e),
               (this.m_ChatStore = t),
               (this.m_CMInterface = i),
-              (this.m_fileUploadProps = new eo());
+              (this.m_fileUploadProps = new io());
           }
           return (
             (e.prototype.UnloadChatState = function() {
@@ -23583,11 +23671,11 @@ and limitations under the License.
               configurable: !0
             }),
             (e.prototype.AppendChatMsg = function(e, t, i, n) {
-              var r = new Xr(e, t, i, n);
+              var r = new Qr(e, t, i, n);
               return this.m_rgChatMessages.push(r), r;
             }),
             (e.prototype.AppendLocalEchoChatMsg = function(e) {
-              var t = new Zr(this.self.accountid, Up.GetServerRTime32(), e);
+              var t = new $r(this.self.accountid, Hp.GetServerRTime32(), e);
               return this.m_rgChatMessages.push(t), t;
             }),
             (e.prototype.AddNewChatMsgAndNotify = function(e, t, i, n, r, o) {
@@ -23617,7 +23705,7 @@ and limitations under the License.
                     ? (o = !0)
                     : 3 == s &&
                       0 == this.m_cUnreadChatMessages &&
-                      Up.IdleTracker.AddOnNextActivityCallback(function() {
+                      Hp.IdleTracker.AddOnNextActivityCallback(function() {
                         4 == n.GetVisibilityState() && n.OnActivate();
                       }),
                 (this.m_rtLastMessageReceived = e.rtTimestamp),
@@ -23632,12 +23720,12 @@ and limitations under the License.
                 c || this.OnReceivedNewMessage(e, s, t, i);
             }),
             (e.prototype.AddVoiceChannelInviteMsg = function(e, t, i) {
-              var n = new Qr(e, t, i);
+              var n = new eo(e, t, i);
               this.m_rgChatMessages.push(n);
             }),
             (e.prototype.AddNewServerMsg = function(e, t, i, n, r, o) {
               if (F(n)) {
-                var a = new Xr(e, t, i, "", n, r, o);
+                var a = new Qr(e, t, i, "", n, r, o);
                 this.m_rgChatMessages.push(a);
               }
             }),
@@ -24008,7 +24096,7 @@ and limitations under the License.
             e
           );
         })(),
-        io = (ot.Message,
+        ro = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -24029,13 +24117,13 @@ and limitations under the License.
               ot.Message.setField(this, 1, e);
             }),
             (t.prototype.friends = function() {
-              return ot.Message.getRepeatedWrapperField(this, no, 2);
+              return ot.Message.getRepeatedWrapperField(this, oo, 2);
             }),
             (t.prototype.set_friends = function(e) {
               ot.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_friends = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 2, e, no, t);
+              return ot.Message.addToRepeatedWrapperField(this, 2, e, oo, t);
             }),
             (t.prototype.max_friend_count = function() {
               return ot.Message.getField(this, 3);
@@ -24073,8 +24161,8 @@ and limitations under the License.
                     e.set_bincremental(t.readBool());
                     break;
                   case 2:
-                    var i = new no();
-                    t.readMessage(i, no.deserializeBinaryFromReader),
+                    var i = new oo();
+                    t.readMessage(i, oo.deserializeBinaryFromReader),
                       e.add_friends(i);
                     break;
                   case 3:
@@ -24101,7 +24189,7 @@ and limitations under the License.
                 void 0 !== i && t.writeBool(1, i),
                 (i = e.friends()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, no.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, oo.serializeBinaryToWriter),
                 (i = ot.Message.getField(e, 3)),
                 void 0 !== i && t.writeUint32(3, i),
                 (i = ot.Message.getField(e, 4)),
@@ -24114,7 +24202,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        no = (function(e) {
+        oo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24176,7 +24264,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ro = (function(e) {
+        ao = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24197,22 +24285,22 @@ and limitations under the License.
               ot.Message.setField(this, 2, e);
             }),
             (t.prototype.friendGroups = function() {
-              return ot.Message.getRepeatedWrapperField(this, oo, 3);
+              return ot.Message.getRepeatedWrapperField(this, so, 3);
             }),
             (t.prototype.set_friendGroups = function(e) {
               ot.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (t.prototype.add_friendGroups = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 3, e, oo, t);
+              return ot.Message.addToRepeatedWrapperField(this, 3, e, so, t);
             }),
             (t.prototype.memberships = function() {
-              return ot.Message.getRepeatedWrapperField(this, ao, 4);
+              return ot.Message.getRepeatedWrapperField(this, co, 4);
             }),
             (t.prototype.set_memberships = function(e) {
               ot.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (t.prototype.add_memberships = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 4, e, ao, t);
+              return ot.Message.addToRepeatedWrapperField(this, 4, e, co, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -24235,13 +24323,13 @@ and limitations under the License.
                     e.set_bincremental(t.readBool());
                     break;
                   case 3:
-                    var i = new oo();
-                    t.readMessage(i, oo.deserializeBinaryFromReader),
+                    var i = new so();
+                    t.readMessage(i, so.deserializeBinaryFromReader),
                       e.add_friendGroups(i);
                     break;
                   case 4:
-                    var i = new ao();
-                    t.readMessage(i, ao.deserializeBinaryFromReader),
+                    var i = new co();
+                    t.readMessage(i, co.deserializeBinaryFromReader),
                       e.add_memberships(i);
                     break;
                   default:
@@ -24261,10 +24349,10 @@ and limitations under the License.
                 void 0 !== i && t.writeBool(2, i),
                 (i = e.friendGroups()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(3, i, oo.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, so.serializeBinaryToWriter),
                 (i = e.memberships()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(4, i, ao.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(4, i, co.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgClientFriendsGroupsList";
@@ -24272,7 +24360,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        oo = (function(e) {
+        so = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24334,7 +24422,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ao = (function(e) {
+        co = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24396,7 +24484,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        so = (ot.Message,
+        lo = (ot.Message,
         ot.Message,
         (function(e) {
           function t(t) {
@@ -24460,7 +24548,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        co = (function(e) {
+        uo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24510,7 +24598,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        lo = (function(e) {
+        po = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24575,7 +24663,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        uo = (function(e) {
+        ho = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24681,7 +24769,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        po = (ot.Message,
+        mo = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -24697,13 +24785,13 @@ and limitations under the License.
               ot.Message.setField(this, 1, e);
             }),
             (t.prototype.friends = function() {
-              return ot.Message.getRepeatedWrapperField(this, ho, 2);
+              return ot.Message.getRepeatedWrapperField(this, go, 2);
             }),
             (t.prototype.set_friends = function(e) {
               ot.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_friends = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 2, e, ho, t);
+              return ot.Message.addToRepeatedWrapperField(this, 2, e, go, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -24723,8 +24811,8 @@ and limitations under the License.
                     e.set_status_flags(t.readUint32());
                     break;
                   case 2:
-                    var i = new ho();
-                    t.readMessage(i, ho.deserializeBinaryFromReader),
+                    var i = new go();
+                    t.readMessage(i, go.deserializeBinaryFromReader),
                       e.add_friends(i);
                     break;
                   default:
@@ -24742,7 +24830,7 @@ and limitations under the License.
                 void 0 !== i && t.writeUint32(1, i),
                 (i = e.friends()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, ho.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, go.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgClientPersonaState";
@@ -24750,7 +24838,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        ho = (function(e) {
+        go = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -24873,7 +24961,7 @@ and limitations under the License.
               ot.Message.setField(this, 60, e);
             }),
             (t.prototype.clan_data = function() {
-              return ot.Message.getWrapperField(this, mo, 64, 1);
+              return ot.Message.getWrapperField(this, fo, 64, 1);
             }),
             (t.prototype.set_clan_data = function(e) {
               ot.Message.setWrapperField(this, 64, e);
@@ -24885,13 +24973,13 @@ and limitations under the License.
               ot.Message.setField(this, 65, e);
             }),
             (t.prototype.rich_presence = function() {
-              return ot.Message.getRepeatedWrapperField(this, go, 71);
+              return ot.Message.getRepeatedWrapperField(this, _o, 71);
             }),
             (t.prototype.set_rich_presence = function(e) {
               ot.Message.setRepeatedWrapperField(this, 71, e);
             }),
             (t.prototype.add_rich_presence = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 71, e, go, t);
+              return ot.Message.addToRepeatedWrapperField(this, 71, e, _o, t);
             }),
             (t.prototype.broadcast_id = function() {
               return ot.Message.getField(this, 72);
@@ -24977,16 +25065,16 @@ and limitations under the License.
                     e.set_game_data_blob(t.readBytes());
                     break;
                   case 64:
-                    var i = new mo();
-                    t.readMessage(i, mo.deserializeBinaryFromReader),
+                    var i = new fo();
+                    t.readMessage(i, fo.deserializeBinaryFromReader),
                       e.set_clan_data(i);
                     break;
                   case 65:
                     e.set_clan_tag(t.readString());
                     break;
                   case 71:
-                    var i = new go();
-                    t.readMessage(i, go.deserializeBinaryFromReader),
+                    var i = new _o();
+                    t.readMessage(i, _o.deserializeBinaryFromReader),
                       e.add_rich_presence(i);
                     break;
                   case 72:
@@ -25045,12 +25133,12 @@ and limitations under the License.
                 (i = ot.Message.getField(e, 60)),
                 void 0 !== i && t.writeBytes(60, i),
                 (i = e.clan_data()),
-                null != i && t.writeMessage(64, i, mo.serializeBinaryToWriter),
+                null != i && t.writeMessage(64, i, fo.serializeBinaryToWriter),
                 (i = ot.Message.getField(e, 65)),
                 void 0 !== i && t.writeString(65, i),
                 (i = e.rich_presence()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(71, i, go.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(71, i, _o.serializeBinaryToWriter),
                 (i = ot.Message.getField(e, 72)),
                 void 0 !== i && t.writeFixed64String(72, i),
                 void 0 !== (i = ot.Message.getField(e, 73)) &&
@@ -25062,7 +25150,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        mo = (function(e) {
+        fo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25124,7 +25212,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        go = (function(e) {
+        _o = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25186,7 +25274,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        fo = (ot.Message,
+        yo = (ot.Message,
         ot.Message,
         (function(e) {
           function t(t) {
@@ -25264,7 +25352,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        _o = (function(e) {
+        vo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25326,7 +25414,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        yo = (function(e) {
+        bo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25388,7 +25476,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        vo = (function(e) {
+        Co = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25438,7 +25526,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        bo = (function(e) {
+        So = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25528,118 +25616,6 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Co = (function(e) {
-          function t(t) {
-            void 0 === t && (t = null);
-            var i = e.call(this) || this;
-            return ot.Message.initialize(i, t, 0, -1, void 0, null), i;
-          }
-          return (
-            it.c(t, e),
-            (t.prototype.eresult = function() {
-              return ot.Message.getField(this, 1);
-            }),
-            (t.prototype.set_eresult = function(e) {
-              ot.Message.setField(this, 1, e);
-            }),
-            (t.prototype.toObject = function(e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function(e, t) {
-              return {};
-            }),
-            (t.deserializeBinary = function(e) {
-              var i = new ot.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, i);
-            }),
-            (t.deserializeBinaryFromReader = function(e, t) {
-              for (; t.nextField() && !t.isEndGroup(); )
-                switch (t.getFieldNumber()) {
-                  case 1:
-                    e.set_eresult(t.readUint32());
-                    break;
-                  default:
-                    t.skipField();
-                }
-              return e;
-            }),
-            (t.prototype.serializeBinary = function() {
-              var e = new ot.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function(e, t) {
-              var i;
-              void 0 !== (i = ot.Message.getField(e, 1)) && t.writeUint32(1, i);
-            }),
-            (t.prototype.getClassName = function() {
-              return "CMsgClientManageFriendsGroupResponse";
-            }),
-            t
-          );
-        })(ot.Message),
-        So = (function(e) {
-          function t(t) {
-            void 0 === t && (t = null);
-            var i = e.call(this) || this;
-            return ot.Message.initialize(i, t, 0, -1, void 0, null), i;
-          }
-          return (
-            it.c(t, e),
-            (t.prototype.groupid = function() {
-              return ot.Message.getField(this, 1);
-            }),
-            (t.prototype.set_groupid = function(e) {
-              ot.Message.setField(this, 1, e);
-            }),
-            (t.prototype.steamiduser = function() {
-              return ot.Message.getField(this, 2);
-            }),
-            (t.prototype.set_steamiduser = function(e) {
-              ot.Message.setField(this, 2, e);
-            }),
-            (t.prototype.toObject = function(e) {
-              return void 0 === e && (e = !1), t.toObject(e, this);
-            }),
-            (t.toObject = function(e, t) {
-              return {};
-            }),
-            (t.deserializeBinary = function(e) {
-              var i = new ot.BinaryReader(e),
-                n = new t();
-              return t.deserializeBinaryFromReader(n, i);
-            }),
-            (t.deserializeBinaryFromReader = function(e, t) {
-              for (; t.nextField() && !t.isEndGroup(); )
-                switch (t.getFieldNumber()) {
-                  case 1:
-                    e.set_groupid(t.readInt32());
-                    break;
-                  case 2:
-                    e.set_steamiduser(t.readFixed64String());
-                    break;
-                  default:
-                    t.skipField();
-                }
-              return e;
-            }),
-            (t.prototype.serializeBinary = function() {
-              var e = new ot.BinaryWriter();
-              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
-            }),
-            (t.serializeBinaryToWriter = function(e, t) {
-              var i;
-              (i = ot.Message.getField(e, 1)),
-                void 0 !== i && t.writeInt32(1, i),
-                void 0 !== (i = ot.Message.getField(e, 2)) &&
-                  t.writeFixed64String(2, i);
-            }),
-            (t.prototype.getClassName = function() {
-              return "CMsgClientAddFriendToGroup";
-            }),
-            t
-          );
-        })(ot.Message),
         Mo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -25685,7 +25661,7 @@ and limitations under the License.
               void 0 !== (i = ot.Message.getField(e, 1)) && t.writeUint32(1, i);
             }),
             (t.prototype.getClassName = function() {
-              return "CMsgClientAddFriendToGroupResponse";
+              return "CMsgClientManageFriendsGroupResponse";
             }),
             t
           );
@@ -25747,7 +25723,7 @@ and limitations under the License.
                   t.writeFixed64String(2, i);
             }),
             (t.prototype.getClassName = function() {
-              return "CMsgClientRemoveFriendFromGroup";
+              return "CMsgClientAddFriendToGroup";
             }),
             t
           );
@@ -25797,12 +25773,124 @@ and limitations under the License.
               void 0 !== (i = ot.Message.getField(e, 1)) && t.writeUint32(1, i);
             }),
             (t.prototype.getClassName = function() {
-              return "CMsgClientRemoveFriendFromGroupResponse";
+              return "CMsgClientAddFriendToGroupResponse";
             }),
             t
           );
         })(ot.Message),
         Oo = (function(e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var i = e.call(this) || this;
+            return ot.Message.initialize(i, t, 0, -1, void 0, null), i;
+          }
+          return (
+            it.c(t, e),
+            (t.prototype.groupid = function() {
+              return ot.Message.getField(this, 1);
+            }),
+            (t.prototype.set_groupid = function(e) {
+              ot.Message.setField(this, 1, e);
+            }),
+            (t.prototype.steamiduser = function() {
+              return ot.Message.getField(this, 2);
+            }),
+            (t.prototype.set_steamiduser = function(e) {
+              ot.Message.setField(this, 2, e);
+            }),
+            (t.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
+            }),
+            (t.toObject = function(e, t) {
+              return {};
+            }),
+            (t.deserializeBinary = function(e) {
+              var i = new ot.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, i);
+            }),
+            (t.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); )
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_groupid(t.readInt32());
+                    break;
+                  case 2:
+                    e.set_steamiduser(t.readFixed64String());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              return e;
+            }),
+            (t.prototype.serializeBinary = function() {
+              var e = new ot.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (t.serializeBinaryToWriter = function(e, t) {
+              var i;
+              (i = ot.Message.getField(e, 1)),
+                void 0 !== i && t.writeInt32(1, i),
+                void 0 !== (i = ot.Message.getField(e, 2)) &&
+                  t.writeFixed64String(2, i);
+            }),
+            (t.prototype.getClassName = function() {
+              return "CMsgClientRemoveFriendFromGroup";
+            }),
+            t
+          );
+        })(ot.Message),
+        Bo = (function(e) {
+          function t(t) {
+            void 0 === t && (t = null);
+            var i = e.call(this) || this;
+            return ot.Message.initialize(i, t, 0, -1, void 0, null), i;
+          }
+          return (
+            it.c(t, e),
+            (t.prototype.eresult = function() {
+              return ot.Message.getField(this, 1);
+            }),
+            (t.prototype.set_eresult = function(e) {
+              ot.Message.setField(this, 1, e);
+            }),
+            (t.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), t.toObject(e, this);
+            }),
+            (t.toObject = function(e, t) {
+              return {};
+            }),
+            (t.deserializeBinary = function(e) {
+              var i = new ot.BinaryReader(e),
+                n = new t();
+              return t.deserializeBinaryFromReader(n, i);
+            }),
+            (t.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); )
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_eresult(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              return e;
+            }),
+            (t.prototype.serializeBinary = function() {
+              var e = new ot.BinaryWriter();
+              return t.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (t.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = ot.Message.getField(e, 1)) && t.writeUint32(1, i);
+            }),
+            (t.prototype.getClassName = function() {
+              return "CMsgClientRemoveFriendFromGroupResponse";
+            }),
+            t
+          );
+        })(ot.Message),
+        Ro = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25837,7 +25925,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Bo = (function(e) {
+        Io = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25846,13 +25934,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.emoticons = function() {
-              return ot.Message.getRepeatedWrapperField(this, Ro, 1);
+              return ot.Message.getRepeatedWrapperField(this, Eo, 1);
             }),
             (t.prototype.set_emoticons = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_emoticons = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Ro, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Eo, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -25869,8 +25957,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Ro();
-                    t.readMessage(i, Ro.deserializeBinaryFromReader),
+                    var i = new Eo();
+                    t.readMessage(i, Eo.deserializeBinaryFromReader),
                       e.add_emoticons(i);
                     break;
                   default:
@@ -25886,7 +25974,7 @@ and limitations under the License.
               var i;
               (i = e.emoticons()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Ro.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Eo.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgClientEmoticonList";
@@ -25894,7 +25982,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ro = (function(e) {
+        Eo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25978,7 +26066,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Io = (ot.Message,
+        ko = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -25988,13 +26076,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.games = function() {
-              return ot.Message.getRepeatedWrapperField(this, Eo, 1);
+              return ot.Message.getRepeatedWrapperField(this, To, 1);
             }),
             (t.prototype.set_games = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_games = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Eo, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, To, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -26011,8 +26099,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Eo();
-                    t.readMessage(i, Eo.deserializeBinaryFromReader),
+                    var i = new To();
+                    t.readMessage(i, To.deserializeBinaryFromReader),
                       e.add_games(i);
                     break;
                   default:
@@ -26028,7 +26116,7 @@ and limitations under the License.
               var i;
               (i = e.games()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Eo.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, To.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetLastPlayedTimes_Response";
@@ -26036,7 +26124,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Eo = (function(e) {
+        To = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26120,7 +26208,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ko = (function(e) {
+        Go = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26155,7 +26243,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        To = (function(e) {
+        Do = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26220,7 +26308,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Go = (function(e) {
+        No = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26229,7 +26317,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.incoming_invite_mutual_friends_lists = function() {
-              return ot.Message.getRepeatedWrapperField(this, To, 1);
+              return ot.Message.getRepeatedWrapperField(this, Do, 1);
             }),
             (t.prototype.set_incoming_invite_mutual_friends_lists = function(
               e
@@ -26240,7 +26328,7 @@ and limitations under the License.
               e,
               t
             ) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, To, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Do, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -26257,8 +26345,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new To();
-                    t.readMessage(i, To.deserializeBinaryFromReader),
+                    var i = new Do();
+                    t.readMessage(i, Do.deserializeBinaryFromReader),
                       e.add_incoming_invite_mutual_friends_lists(i);
                     break;
                   default:
@@ -26274,7 +26362,7 @@ and limitations under the License.
               var i;
               (i = e.incoming_invite_mutual_friends_lists()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, To.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Do.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetMutualFriendsForIncomingInvites_Response";
@@ -26282,7 +26370,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        No = (ot.Message,
+        Ao = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -26298,13 +26386,13 @@ and limitations under the License.
               ot.Message.setField(this, 1, e);
             }),
             (t.prototype.badges = function() {
-              return ot.Message.getRepeatedWrapperField(this, Do, 2);
+              return ot.Message.getRepeatedWrapperField(this, Po, 2);
             }),
             (t.prototype.set_badges = function(e) {
               ot.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_badges = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 2, e, Do, t);
+              return ot.Message.addToRepeatedWrapperField(this, 2, e, Po, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -26324,8 +26412,8 @@ and limitations under the License.
                     e.set_player_level(t.readUint32());
                     break;
                   case 2:
-                    var i = new Do();
-                    t.readMessage(i, Do.deserializeBinaryFromReader),
+                    var i = new Po();
+                    t.readMessage(i, Po.deserializeBinaryFromReader),
                       e.add_badges(i);
                     break;
                   default:
@@ -26343,7 +26431,7 @@ and limitations under the License.
                 void 0 !== i && t.writeUint32(1, i),
                 (i = e.badges()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, Do.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, Po.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetGameBadgeLevels_Response";
@@ -26351,7 +26439,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Do = (function(e) {
+        Po = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26424,7 +26512,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ao = (ot.Message,
+        zo = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -26460,7 +26548,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Po = (function(e) {
+        xo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26495,7 +26583,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        zo = (function(e) {
+        Lo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26504,13 +26592,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.nicknames = function() {
-              return ot.Message.getRepeatedWrapperField(this, Lo, 1);
+              return ot.Message.getRepeatedWrapperField(this, jo, 1);
             }),
             (t.prototype.set_nicknames = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_nicknames = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Lo, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, jo, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -26527,8 +26615,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Lo();
-                    t.readMessage(i, Lo.deserializeBinaryFromReader),
+                    var i = new jo();
+                    t.readMessage(i, jo.deserializeBinaryFromReader),
                       e.add_nicknames(i);
                     break;
                   default:
@@ -26544,7 +26632,7 @@ and limitations under the License.
               var i;
               (i = e.nicknames()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Lo.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, jo.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetNicknameList_Response";
@@ -26552,7 +26640,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lo = (function(e) {
+        jo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26614,7 +26702,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xo = (function(e) {
+        Uo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26665,7 +26753,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        jo = (function(e) {
+        Wo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26727,7 +26815,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Uo = (function(e) {
+        Vo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26778,7 +26866,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Wo = (function(e) {
+        Ho = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26828,7 +26916,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Vo = (function(e) {
+        qo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26889,7 +26977,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ho = (function(e) {
+        Ko = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26939,7 +27027,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        qo = (function(e) {
+        Yo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27023,7 +27111,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ko = (function(e) {
+        Jo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27058,7 +27146,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Yo = (function(e) {
+        Xo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27067,7 +27155,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.preferences = function() {
-              return ot.Message.getWrapperField(this, qo, 1, 1);
+              return ot.Message.getWrapperField(this, Yo, 1, 1);
             }),
             (t.prototype.set_preferences = function(e) {
               ot.Message.setWrapperField(this, 1, e);
@@ -27087,8 +27175,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new qo();
-                    t.readMessage(i, qo.deserializeBinaryFromReader),
+                    var i = new Yo();
+                    t.readMessage(i, Yo.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -27103,7 +27191,7 @@ and limitations under the License.
             (t.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences()) &&
-                t.writeMessage(1, i, qo.serializeBinaryToWriter);
+                t.writeMessage(1, i, Yo.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetCommunityPreferences_Response";
@@ -27111,7 +27199,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Jo = (function(e) {
+        Zo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27120,7 +27208,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.preferences = function() {
-              return ot.Message.getWrapperField(this, qo, 1, 1);
+              return ot.Message.getWrapperField(this, Yo, 1, 1);
             }),
             (t.prototype.set_preferences = function(e) {
               ot.Message.setWrapperField(this, 1, e);
@@ -27140,8 +27228,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new qo();
-                    t.readMessage(i, qo.deserializeBinaryFromReader),
+                    var i = new Yo();
+                    t.readMessage(i, Yo.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -27156,7 +27244,7 @@ and limitations under the License.
             (t.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences()) &&
-                t.writeMessage(1, i, qo.serializeBinaryToWriter);
+                t.writeMessage(1, i, Yo.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_SetCommunityPreferences_Request";
@@ -27164,7 +27252,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Xo = (function(e) {
+        Qo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27199,7 +27287,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Zo = (ot.Message,
+        $o = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -27295,7 +27383,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Qo = (ot.Message,
+        ea = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -27331,7 +27419,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        $o = (function(e) {
+        ta = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27340,13 +27428,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.games = function() {
-              return ot.Message.getRepeatedWrapperField(this, Eo, 1);
+              return ot.Message.getRepeatedWrapperField(this, To, 1);
             }),
             (t.prototype.set_games = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_games = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Eo, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, To, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -27363,8 +27451,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Eo();
-                    t.readMessage(i, Eo.deserializeBinaryFromReader),
+                    var i = new To();
+                    t.readMessage(i, To.deserializeBinaryFromReader),
                       e.add_games(i);
                     break;
                   default:
@@ -27380,7 +27468,7 @@ and limitations under the License.
               var i;
               (i = e.games()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Eo.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, To.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_LastPlayedTimes_Notification";
@@ -27388,7 +27476,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ea = (function(e) {
+        ia = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27460,7 +27548,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ta = (function(e) {
+        na = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27555,7 +27643,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ia = (function(e) {
+        ra = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27564,7 +27652,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.preferences = function() {
-              return ot.Message.getWrapperField(this, qo, 1, 1);
+              return ot.Message.getWrapperField(this, Yo, 1, 1);
             }),
             (t.prototype.set_preferences = function(e) {
               ot.Message.setWrapperField(this, 1, e);
@@ -27584,8 +27672,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new qo();
-                    t.readMessage(i, qo.deserializeBinaryFromReader),
+                    var i = new Yo();
+                    t.readMessage(i, Yo.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -27600,7 +27688,7 @@ and limitations under the License.
             (t.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences()) &&
-                t.writeMessage(1, i, qo.serializeBinaryToWriter);
+                t.writeMessage(1, i, Yo.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_CommunityPreferencesChanged_Notification";
@@ -27613,41 +27701,41 @@ and limitations under the License.
           return e.SendMsg(
             "Player.GetMutualFriendsForIncomingInvites#1",
             t,
-            Go
+            No
           );
         }
         function i(e, t) {
-          return e.SendMsg("Player.GetGameBadgeLevels#1", t, No);
+          return e.SendMsg("Player.GetGameBadgeLevels#1", t, Ao);
         }
         function n(e, t) {
-          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", t, Io);
+          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", t, ko);
         }
         function r(e, t) {
-          return e.SendMsg("Player.AcceptSSA#1", t, Ao);
+          return e.SendMsg("Player.AcceptSSA#1", t, zo);
         }
         function o(e, t) {
-          return e.SendMsg("Player.GetNicknameList#1", t, zo);
+          return e.SendMsg("Player.GetNicknameList#1", t, Lo);
         }
         function a(e, t) {
-          return e.SendMsg("Player.AddFriend#1", t, jo);
+          return e.SendMsg("Player.AddFriend#1", t, Wo);
         }
         function s(e, t) {
-          return e.SendMsg("Player.RemoveFriend#1", t, Wo);
+          return e.SendMsg("Player.RemoveFriend#1", t, Ho);
         }
         function c(e, t) {
-          return e.SendMsg("Player.IgnoreFriend#1", t, Ho);
+          return e.SendMsg("Player.IgnoreFriend#1", t, Ko);
         }
         function l(e, t) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", t, Yo);
+          return e.SendMsg("Player.GetCommunityPreferences#1", t, Xo);
         }
         function u(e, t) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", t, Xo);
+          return e.SendMsg("Player.SetCommunityPreferences#1", t, Qo);
         }
         function d(e, t) {
-          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, Zo);
+          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, $o);
         }
         function p(e, t) {
-          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", t, Qo);
+          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", t, ea);
         }
         (e.GetMutualFriendsForIncomingInvites = t),
           (e.GetGameBadgeLevels = i),
@@ -27661,28 +27749,28 @@ and limitations under the License.
           (e.SetCommunityPreferences = u),
           (e.GetNewSteamAnnouncementState = d),
           (e.UpdateSteamAnnouncementLastRead = p);
-      })(Kr || (Kr = {}));
-      var na;
+      })(Jr || (Jr = {}));
+      var oa;
       !(function(e) {
         (e.NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
-          request: $o
+          request: ta
         }),
           (e.NotifyFriendNicknameChangedHandler = {
             name: "PlayerClient.NotifyFriendNicknameChanged#1",
-            request: ea
+            request: ia
           }),
           (e.NotifyNewSteamAnnouncementStateHandler = {
             name: "PlayerClient.NotifyNewSteamAnnouncementState#1",
-            request: ta
+            request: na
           }),
           (e.NotifyCommunityPreferencesChangedHandler = {
             name: "PlayerClient.NotifyCommunityPreferencesChanged#1",
-            request: ia
+            request: ra
           });
-      })(na || (na = {}));
-      var ra,
-        oa = (ot.Message,
+      })(oa || (oa = {}));
+      var aa,
+        sa = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -27816,7 +27904,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        aa = (function(e) {
+        ca = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27957,7 +28045,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        sa = (function(e) {
+        la = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28008,7 +28096,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ca = (function(e) {
+        ua = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28059,7 +28147,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        la = (ot.Message,
+        da = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -28139,7 +28227,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        ua = (ot.Message,
+        pa = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -28202,7 +28290,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        da = (ot.Message,
+        ha = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -28306,7 +28394,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        pa = (function(e) {
+        ma = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28356,7 +28444,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ha = (function(e) {
+        ga = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28365,13 +28453,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.published_file_ids = function() {
-              return ot.Message.getRepeatedWrapperField(this, ma, 1);
+              return ot.Message.getRepeatedWrapperField(this, fa, 1);
             }),
             (t.prototype.set_published_file_ids = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_published_file_ids = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, ma, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, fa, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -28388,8 +28476,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new ma();
-                    t.readMessage(i, ma.deserializeBinaryFromReader),
+                    var i = new fa();
+                    t.readMessage(i, fa.deserializeBinaryFromReader),
                       e.add_published_file_ids(i);
                     break;
                   default:
@@ -28405,7 +28493,7 @@ and limitations under the License.
               var i;
               (i = e.published_file_ids()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, ma.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, fa.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgCREGetUserPublishedItemVoteDetails";
@@ -28413,7 +28501,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ma = (function(e) {
+        fa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28464,7 +28552,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ga = (function(e) {
+        _a = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28479,13 +28567,13 @@ and limitations under the License.
               ot.Message.setField(this, 1, e);
             }),
             (t.prototype.user_item_vote_details = function() {
-              return ot.Message.getRepeatedWrapperField(this, fa, 2);
+              return ot.Message.getRepeatedWrapperField(this, ya, 2);
             }),
             (t.prototype.set_user_item_vote_details = function(e) {
               ot.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_user_item_vote_details = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 2, e, fa, t);
+              return ot.Message.addToRepeatedWrapperField(this, 2, e, ya, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -28505,8 +28593,8 @@ and limitations under the License.
                     e.set_eresult(t.readInt32());
                     break;
                   case 2:
-                    var i = new fa();
-                    t.readMessage(i, fa.deserializeBinaryFromReader),
+                    var i = new ya();
+                    t.readMessage(i, ya.deserializeBinaryFromReader),
                       e.add_user_item_vote_details(i);
                     break;
                   default:
@@ -28524,7 +28612,7 @@ and limitations under the License.
                 void 0 !== i && t.writeInt32(1, i),
                 (i = e.user_item_vote_details()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, fa.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, ya.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgCREGetUserPublishedItemVoteDetailsResponse";
@@ -28532,7 +28620,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        fa = (function(e) {
+        ya = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28594,7 +28682,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        _a = (ot.Message,
+        va = (ot.Message,
         ot.Message,
         ot.Message,
         ot.Message,
@@ -28695,7 +28783,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        ya = (function(e) {
+        ba = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -28732,12 +28820,12 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Clan.RespondToClanInvite#1", t, ya);
+          return e.SendMsg("Clan.RespondToClanInvite#1", t, ba);
         }
         e.RespondToClanInvite = t;
-      })(ra || (ra = {}));
-      var va,
-        ba = (function() {
+      })(aa || (aa = {}));
+      var Ca,
+        Sa = (function() {
           function e(e, t) {
             (this.m_bInitialized = !1),
               (this.m_bGotInitialState = !1),
@@ -28869,7 +28957,7 @@ and limitations under the License.
             (e.prototype.OpenChatDialog = function(e, t) {
               void 0 === t && (t = !0),
                 this.GetChatRoomGroupID().then(function(i) {
-                  Up.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
+                  Hp.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
                 });
             }),
             (e.prototype.ReadPersonaStateUpdate = function(e, t) {
@@ -28918,7 +29006,7 @@ and limitations under the License.
                 t.Body().set_steamid(this.steamid.ConvertTo64BitString()),
                 t.Body().set_autocreate(!0),
                 ur
-                  .GetClanChatRoomInfo(Up.CMInterface.GetServiceTransport(), t)
+                  .GetClanChatRoomInfo(Hp.CMInterface.GetServiceTransport(), t)
                   .then(function(t) {
                     return 1 == t.GetEResult() &&
                       t
@@ -28954,11 +29042,11 @@ and limitations under the License.
             e
           );
         })(),
-        Ca = (function() {
+        Ma = (function() {
           function e(e) {
             var t = this;
             (this.m_mapClans = pt.observable.map()),
-              (this.m_eClanStateHandler = s(822, xt, function(e) {
+              (this.m_eClanStateHandler = s(822, Lt, function(e) {
                 var i = new lt.a(e.Body().steamid_clan());
                 t.GetOrCreateClan(i).ReadStateUpdate(e.Body());
               })),
@@ -29021,7 +29109,7 @@ and limitations under the License.
               return (
                 n
                   ? void 0 !== t && n.SetRelationship(t)
-                  : ((n = new ba(i, t || 0)),
+                  : ((n = new Sa(i, t || 0)),
                     this.m_mapClans.set(i.GetAccountID(), n)),
                 n
               );
@@ -29030,11 +29118,11 @@ and limitations under the License.
               this.GetOrCreateClan(e, t);
             }),
             (e.prototype.RespondToClanInvite = function(e, t) {
-              var i = dt.Init(_a);
+              var i = dt.Init(va);
               return (
                 i.Body().set_steamid(e.ConvertTo64BitString()),
                 i.Body().set_accept(t),
-                ra
+                aa
                   .RespondToClanInvite(
                     this.m_CMInterface.GetServiceTransport(),
                     i
@@ -29045,7 +29133,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.EnsureInitialStateForClanInvites = function() {
-              var e = dt.Init(ua, 5554);
+              var e = dt.Init(pa, 5554);
               this.clan_invites.forEach(function(t) {
                 t.m_bGotInitialState ||
                   e.Body().add_steamid_clans(t.steamid.ConvertTo64BitString());
@@ -29064,7 +29152,7 @@ and limitations under the License.
               this.m_iIntervalLoadClanData &&
                 (window.clearInterval(this.m_iIntervalLoadClanData),
                 (this.m_iIntervalLoadClanData = void 0));
-              var e = dt.Init(lo, 815);
+              var e = dt.Init(po, 815);
               e.Body().set_persona_state_requested(1042),
                 this.m_mapClans.forEach(function(t) {
                   t.BNeedsPersonaData() &&
@@ -29081,7 +29169,7 @@ and limitations under the License.
             e
           );
         })(),
-        Sa = (function(e) {
+        Fa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29157,7 +29245,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ma = (ot.Message,
+        wa = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -29167,13 +29255,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.categories = function() {
-              return ot.Message.getRepeatedWrapperField(this, Sa, 1);
+              return ot.Message.getRepeatedWrapperField(this, Fa, 1);
             }),
             (t.prototype.set_categories = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_categories = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Sa, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Fa, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -29190,8 +29278,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Sa();
-                    t.readMessage(i, Sa.deserializeBinaryFromReader),
+                    var i = new Fa();
+                    t.readMessage(i, Fa.deserializeBinaryFromReader),
                       e.add_categories(i);
                     break;
                   default:
@@ -29207,7 +29295,7 @@ and limitations under the License.
               var i;
               (i = e.categories()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Sa.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Fa.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendsList_GetCategories_Response";
@@ -29215,7 +29303,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Fa = (function(e) {
+        Oa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29288,7 +29376,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        wa = (function(e) {
+        Ba = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29323,7 +29411,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Oa = (function(e) {
+        Ra = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29332,13 +29420,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.favorites = function() {
-              return ot.Message.getRepeatedWrapperField(this, Fa, 1);
+              return ot.Message.getRepeatedWrapperField(this, Oa, 1);
             }),
             (t.prototype.set_favorites = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_favorites = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Fa, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Oa, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -29355,8 +29443,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Fa();
-                    t.readMessage(i, Fa.deserializeBinaryFromReader),
+                    var i = new Oa();
+                    t.readMessage(i, Oa.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -29372,7 +29460,7 @@ and limitations under the License.
               var i;
               (i = e.favorites()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Fa.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Oa.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendsList_GetFavorites_Response";
@@ -29380,7 +29468,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ba = (function(e) {
+        Ia = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29389,13 +29477,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.favorites = function() {
-              return ot.Message.getRepeatedWrapperField(this, Fa, 1);
+              return ot.Message.getRepeatedWrapperField(this, Oa, 1);
             }),
             (t.prototype.set_favorites = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_favorites = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Fa, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Oa, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -29412,8 +29500,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Fa();
-                    t.readMessage(i, Fa.deserializeBinaryFromReader),
+                    var i = new Oa();
+                    t.readMessage(i, Oa.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -29429,7 +29517,7 @@ and limitations under the License.
               var i;
               (i = e.favorites()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Fa.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Oa.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendsList_SetFavorites_Request";
@@ -29437,7 +29525,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ra = (function(e) {
+        Ea = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29472,7 +29560,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ia = (function(e) {
+        ka = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29481,13 +29569,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.favorites = function() {
-              return ot.Message.getRepeatedWrapperField(this, Fa, 1);
+              return ot.Message.getRepeatedWrapperField(this, Oa, 1);
             }),
             (t.prototype.set_favorites = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_favorites = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Fa, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Oa, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -29504,8 +29592,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Fa();
-                    t.readMessage(i, Fa.deserializeBinaryFromReader),
+                    var i = new Oa();
+                    t.readMessage(i, Oa.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -29521,7 +29609,7 @@ and limitations under the License.
               var i;
               (i = e.favorites()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Fa.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Oa.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendsList_FavoritesChanged_Notification";
@@ -29531,30 +29619,30 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("FriendsList.GetCategories#1", t, Ma);
+          return e.SendMsg("FriendsList.GetCategories#1", t, wa);
         }
         function i(e, t) {
-          return e.SendMsg("FriendsList.GetFavorites#1", t, Oa);
+          return e.SendMsg("FriendsList.GetFavorites#1", t, Ra);
         }
         function n(e, t) {
-          return e.SendMsg("FriendsList.SetFavorites#1", t, Ra);
+          return e.SendMsg("FriendsList.SetFavorites#1", t, Ea);
         }
         (e.GetCategories = t), (e.GetFavorites = i), (e.SetFavorites = n);
-      })(va || (va = {}));
-      var Ea;
+      })(Ca || (Ca = {}));
+      var Ta;
       !(function(e) {
         e.FavoritesChangedHandler = {
           name: "FriendsListClient.FavoritesChanged#1",
-          request: Ia
+          request: ka
         };
-      })(Ea || (Ea = {}));
-      var ka,
-        Ta = (function() {
+      })(Ta || (Ta = {}));
+      var Ga,
+        Da = (function() {
           function e(e) {
             var t = this;
             (this.m_rgFavorites = pt.observable.array()),
               (this.m_IncomingFavoritesHandler = l(
-                Ea.FavoritesChangedHandler,
+                Ta.FavoritesChangedHandler,
                 function(e) {
                   return t.RecvFavoritesList(e.Body().favorites()), 1;
                 }
@@ -29566,15 +29654,16 @@ and limitations under the License.
             (e.prototype.Init = function(e) {
               var t = this;
               (this.m_CMInterface = e),
-                (this.m_ChatStore = Up.ChatStore),
+                (this.m_ChatStore = Hp.ChatStore),
                 this.m_CMInterface.AddOnLogonCallback(function() {
-                  var e = dt.Init(wa);
-                  va
-                    .GetFavorites(t.m_CMInterface.GetServiceTransport(), e)
-                    .then(function(e) {
-                      1 == e.GetEResult() &&
-                        t.RecvFavoritesList(e.Body().favorites());
-                    });
+                  var e = dt.Init(Ba);
+                  Ca.GetFavorites(
+                    t.m_CMInterface.GetServiceTransport(),
+                    e
+                  ).then(function(e) {
+                    1 == e.GetEResult() &&
+                      t.RecvFavoritesList(e.Body().favorites());
+                  });
                 }, 47);
             }),
             (e.prototype.BIsFavorited = function(e) {
@@ -29615,7 +29704,7 @@ and limitations under the License.
             }),
             (e.prototype.SaveFavorites = function() {
               for (
-                var e = dt.Init(Ba), t = 0, i = this.m_rgFavorites;
+                var e = dt.Init(Ia), t = 0, i = this.m_rgFavorites;
                 t < i.length;
                 t++
               ) {
@@ -29629,11 +29718,12 @@ and limitations under the License.
                       ? r.set_chat_group_id(n.chat.GetGroupID())
                       : AssertMsg(!1, "empty favorite struct");
               }
-              return va
-                .SetFavorites(this.m_CMInterface.GetServiceTransport(), e)
-                .then(function(e) {
-                  return 1 == e.GetEResult();
-                });
+              return Ca.SetFavorites(
+                this.m_CMInterface.GetServiceTransport(),
+                e
+              ).then(function(e) {
+                return 1 == e.GetEResult();
+              });
             }),
             (e.prototype.ReadFavorites = function(e) {
               this.m_rgFavorites.clear();
@@ -29667,7 +29757,7 @@ and limitations under the License.
             e
           );
         })(),
-        Ga = (function(e) {
+        Na = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29806,7 +29896,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Na = (function(e) {
+        Aa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29815,13 +29905,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.messages = function() {
-              return ot.Message.getRepeatedWrapperField(this, Da, 1);
+              return ot.Message.getRepeatedWrapperField(this, Pa, 1);
             }),
             (t.prototype.set_messages = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_messages = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, Da, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Pa, t);
             }),
             (t.prototype.more_available = function() {
               return ot.Message.getField(this, 4);
@@ -29844,8 +29934,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Da();
-                    t.readMessage(i, Da.deserializeBinaryFromReader),
+                    var i = new Pa();
+                    t.readMessage(i, Pa.deserializeBinaryFromReader),
                       e.add_messages(i);
                     break;
                   case 4:
@@ -29864,7 +29954,7 @@ and limitations under the License.
               var i;
               (i = e.messages()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Da.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(1, i, Pa.serializeBinaryToWriter),
                 void 0 !== (i = ot.Message.getField(e, 4)) && t.writeBool(4, i);
             }),
             (t.prototype.getClassName = function() {
@@ -29873,7 +29963,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Da = (function(e) {
+        Pa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29957,7 +30047,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Aa = (function(e) {
+        za = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30007,7 +30097,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Pa = (function(e) {
+        xa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30016,13 +30106,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.message_sessions = function() {
-              return ot.Message.getRepeatedWrapperField(this, za, 1);
+              return ot.Message.getRepeatedWrapperField(this, La, 1);
             }),
             (t.prototype.set_message_sessions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_message_sessions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, za, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, La, t);
             }),
             (t.prototype.timestamp = function() {
               return ot.Message.getField(this, 2);
@@ -30045,8 +30135,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new za();
-                    t.readMessage(i, za.deserializeBinaryFromReader),
+                    var i = new La();
+                    t.readMessage(i, La.deserializeBinaryFromReader),
                       e.add_message_sessions(i);
                     break;
                   case 2:
@@ -30065,7 +30155,7 @@ and limitations under the License.
               var i;
               (i = e.message_sessions()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, za.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(1, i, La.serializeBinaryToWriter),
                 void 0 !== (i = ot.Message.getField(e, 2)) &&
                   t.writeUint32(2, i);
             }),
@@ -30075,7 +30165,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        za = (function(e) {
+        La = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30159,7 +30249,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        La = (function(e) {
+        ja = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30264,7 +30354,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xa = (function(e) {
+        Ua = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30337,7 +30427,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ja = (function(e) {
+        Wa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30475,7 +30565,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ua = (function(e) {
+        Va = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30537,7 +30627,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Wa = (function(e) {
+        Ha = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30588,7 +30678,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Va = (function(e) {
+        qa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30651,39 +30741,39 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("FriendMessages.GetRecentMessages#1", t, Na);
+          return e.SendMsg("FriendMessages.GetRecentMessages#1", t, Aa);
         }
         function i(e, t) {
-          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, Pa);
+          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, xa);
         }
         function n(e, t) {
-          return e.SendMsg("FriendMessages.SendMessage#1", t, xa);
+          return e.SendMsg("FriendMessages.SendMessage#1", t, Ua);
         }
         function r(e, t) {
           return e.SendNotification("FriendMessages.AckMessage#1", t);
         }
         function o(e, t) {
-          return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", t, Va);
+          return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", t, qa);
         }
         (e.GetRecentMessages = t),
           (e.GetActiveMessageSessions = i),
           (e.SendMessage = n),
           (e.AckMessage = r),
           (e.IsInFriendsUIBeta = o);
-      })(ka || (ka = {}));
-      var Ha;
+      })(Ga || (Ga = {}));
+      var Ka;
       !(function(e) {
         (e.IncomingMessageHandler = {
           name: "FriendMessagesClient.IncomingMessage#1",
-          request: ja
+          request: Wa
         }),
           (e.NotifyAckMessageEchoHandler = {
             name: "FriendMessagesClient.NotifyAckMessageEcho#1",
-            request: Ua
+            request: Va
           });
-      })(Ha || (Ha = {}));
-      var qa,
-        Ka = (function() {
+      })(Ka || (Ka = {}));
+      var Ya,
+        Ja = (function() {
           function e(e) {
             (this.m_eFriendRelationship = 0),
               (this.m_bPersonaStateLoadRequested = !1),
@@ -30706,7 +30796,7 @@ and limitations under the License.
               this.m_persona.m_bInitialized ||
                 this.m_bPersonaStateLoadRequested ||
                 ((this.m_bPersonaStateLoadRequested = !0),
-                Up.FriendStore.QueueFriendPersonaStateLoad(this));
+                Hp.FriendStore.QueueFriendPersonaStateLoad(this));
             }),
             Object.defineProperty(e.prototype, "is_ready", {
               get: function() {
@@ -30822,7 +30912,7 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "primary_display_name", {
               get: function() {
-                return !Up.SettingsStore.CommunityPreferences
+                return !Hp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30843,7 +30933,7 @@ and limitations under the License.
               {
                 get: function() {
                   return (
-                    !!Up.SettingsStore.CommunityPreferences
+                    !!Hp.SettingsStore.CommunityPreferences
                       .bParenthesizeNicknames && this.has_secondary_display_name
                   );
                 },
@@ -30853,7 +30943,7 @@ and limitations under the License.
             ),
             Object.defineProperty(e.prototype, "secondary_display_name", {
               get: function() {
-                return Up.SettingsStore.CommunityPreferences
+                return Hp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30864,7 +30954,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "is_display_name_nickname", {
               get: function() {
                 return (
-                  !Up.SettingsStore.CommunityPreferences
+                  !Hp.SettingsStore.CommunityPreferences
                     .bParenthesizeNicknames && this.has_nickname
                 );
               },
@@ -30940,13 +31030,13 @@ and limitations under the License.
               get: function() {
                 var e = this;
                 if (void 0 === this.m_bPersonaNameHistoryLoaded) {
-                  var t = dt.Init(Dt, 5570);
+                  var t = dt.Init(Nt, 5570);
                   t
                     .Body()
                     .add_Ids()
                     .set_steamid(this.steamid64),
                     t.Body().set_id_count(1),
-                    Up.CMInterface.SendMsgAndAwaitResponse(t, Pt).then(function(
+                    Hp.CMInterface.SendMsgAndAwaitResponse(t, Pt).then(function(
                       t
                     ) {
                       if (
@@ -31002,10 +31092,10 @@ and limitations under the License.
                       )
                     : v(window, this.GetCommunityProfileURL()),
                   null)
-                : Up.ShowFriendChatDialog(e, this.m_unAccountID, !0);
+                : Hp.ShowFriendChatDialog(e, this.m_unAccountID, !0);
             }),
             (e.FriendSortStatusComparator = function(e, t) {
-              var i = Up.SettingsStore.BForceAlphabeticFriendSorting(),
+              var i = Hp.SettingsStore.BForceAlphabeticFriendSorting(),
                 n = e.persona,
                 r = t.persona;
               if (n.is_ingame) {
@@ -31032,8 +31122,8 @@ and limitations under the License.
               var i = e.persona,
                 n = t.persona;
               if (i.is_offline && n.is_offline) {
-                var r = Up.GetServerRTime32() - i.m_rtLastLogoff,
-                  o = Up.GetServerRTime32() - n.m_rtLastLogoff;
+                var r = Hp.GetServerRTime32() - i.m_rtLastLogoff,
+                  o = Hp.GetServerRTime32() - n.m_rtLastLogoff;
                 if (r > o) return 1;
                 if (o > r) return -1;
               }
@@ -31048,15 +31138,15 @@ and limitations under the License.
             (e.prototype.GetOfflineStatusUpdateRate = function() {
               if (0 == this.persona.m_rtLastLogoff) return 3e4;
               var e = 1e3,
-                t = Up.GetServerRTime32() - this.persona.m_rtLastLogoff;
+                t = Hp.GetServerRTime32() - this.persona.m_rtLastLogoff;
               return (e *= t > 86400 ? 3600 : t > 7200 ? 60 : 15);
             }),
             (e.prototype.GetOfflineStatusTime = function() {
               if (0 == this.persona.m_rtLastLogoff)
                 return Object(hr.b)("#PersonaStateOffline");
               var e = this.GetOfflineStatusUpdateRate(),
-                t = (Object(Gr.now)(e),
-                Up.GetServerRTime32() - this.persona.m_rtLastLogoff);
+                t = (Object(Nr.now)(e),
+                Hp.GetServerRTime32() - this.persona.m_rtLastLogoff);
               return t < 60
                 ? Object(hr.b)("#PersonaStateLastSeen_JustNow")
                 : Object(hr.b)("#PersonaStateLastSeen", Object(hr.e)(t));
@@ -31095,22 +31185,23 @@ and limitations under the License.
               ) {
                 this.m_bBetaStatusLoading = !0;
                 var t = this.persona.is_online,
-                  i = dt.Init(Wa);
+                  i = dt.Init(Ha);
                 i.Body().set_steamid(this.steamid64),
-                  ka
-                    .IsInFriendsUIBeta(Up.CMInterface.GetServiceTransport(), i)
-                    .then(function(i) {
-                      (e.m_bBetaStatusLoading = !1),
-                        (e.m_bBetaStatusStale = !1),
-                        (e.m_bIsOnlineInBeta =
-                          i.Body().online_in_friendsui() || !1),
-                        (e.m_bIsInBeta = i.Body().has_used_friendsui() || !1),
-                        Object(pt.when)(function() {
-                          return e.persona.is_online != t;
-                        }).then(function() {
-                          e.m_bBetaStatusStale = !0;
-                        });
-                    });
+                  Ga.IsInFriendsUIBeta(
+                    Hp.CMInterface.GetServiceTransport(),
+                    i
+                  ).then(function(i) {
+                    (e.m_bBetaStatusLoading = !1),
+                      (e.m_bBetaStatusStale = !1),
+                      (e.m_bIsOnlineInBeta =
+                        i.Body().online_in_friendsui() || !1),
+                      (e.m_bIsInBeta = i.Body().has_used_friendsui() || !1),
+                      Object(pt.when)(function() {
+                        return e.persona.is_online != t;
+                      }).then(function() {
+                        e.m_bBetaStatusStale = !0;
+                      });
+                  });
               }
             }),
             Object.defineProperty(e.prototype, "is_in_beta", {
@@ -31184,12 +31275,12 @@ and limitations under the License.
             e
           );
         })(),
-        Ya = (function() {
+        Xa = (function() {
           function e() {
             var e = this;
-            (this.m_FriendGroupStore = new ss(this)),
-              (this.m_ClanStore = new Ca(this)),
-              (this.m_FavoritesStore = new Ta(this)),
+            (this.m_FriendGroupStore = new ls(this)),
+              (this.m_ClanStore = new Ma(this)),
+              (this.m_FavoritesStore = new Da(this)),
               (this.m_mapPlayerCache = new Map()),
               (this.m_mapApprovedNonFriendMessages = pt.observable.map()),
               (this.m_setFriendsNeedingPersonaStateLoad = new Set()),
@@ -31212,7 +31303,7 @@ and limitations under the License.
               (this.m_bSnoozeCallbackFired = !0),
               (this.m_bAwayCallbackFired = !0),
               (this.m_bNextActivityCallbackRegistered = !1),
-              (this.fnRecvMsgClientFriendsList = s(767, io, function(t) {
+              (this.fnRecvMsgClientFriendsList = s(767, ro, function(t) {
                 var i = t.Body().friends();
                 if (!t.Body().bincremental()) {
                   for (var n = 0, r = e.all_friends; n < r.length; n++) {
@@ -31278,7 +31369,7 @@ and limitations under the License.
                       e.UpdateReadyToRenderState())
                     : e.SubscribeToMissingPersonaStates();
               })),
-              (this.fnRecvMsgClientPersonaState = s(766, po, function(t) {
+              (this.fnRecvMsgClientPersonaState = s(766, mo, function(t) {
                 for (
                   var i = t.Body().status_flags(),
                     n = 0,
@@ -31374,17 +31465,17 @@ and limitations under the License.
                       c.is_friend &&
                       c.accountid != e.m_self.accountid &&
                       (u != l.m_ePersonaState || C) &&
-                      (Up.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
+                      (Hp.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
                       C &&
                       c.persona.is_ingame
-                        ? Up.AudioPlaybackManager.PlayAudioURL(
+                        ? Hp.AudioPlaybackManager.PlayAudioURL(
                             tt.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_ingame.m4a?v=1"
                           )
-                        : Up.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
+                        : Hp.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
                           u != l.m_ePersonaState &&
                           1 == l.m_ePersonaState &&
-                          Up.AudioPlaybackManager.PlayAudioURL(
+                          Hp.AudioPlaybackManager.PlayAudioURL(
                             tt.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_online.m4a?v=1"
                           ),
@@ -31402,7 +31493,7 @@ and limitations under the License.
                   e.UpdateReadyToRenderState());
               })),
               (this.m_FriendNicknameChangedHandler = l(
-                na.NotifyFriendNicknameChangedHandler,
+                oa.NotifyFriendNicknameChangedHandler,
                 function(t) {
                   if (!t.Body().is_echo_to_self()) {
                     var i = e.GetFriend(t.Body().accountid());
@@ -31411,7 +31502,7 @@ and limitations under the License.
                   return 1;
                 }
               )),
-              (this.m_InitiateTradeResult = s(7704, aa, function(e) {
+              (this.m_InitiateTradeResult = s(7704, ca, function(e) {
                 var t = e.Body().response(),
                   i = (e.Body().trade_request_id(),
                   new lt.a(e.Body().other_steamid()));
@@ -31420,8 +31511,8 @@ and limitations under the License.
                   case 50:
                     break;
                   case 1:
-                    var n = Up.ShowFriendChatDialog(
-                      Up.GetDefaultBrowserContext(),
+                    var n = Hp.ShowFriendChatDialog(
+                      Hp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
@@ -31436,7 +31527,7 @@ and limitations under the License.
                   case 7:
                   case 26:
                   case 22:
-                    var r = new qr(e.Body().response());
+                    var r = new Yr(e.Body().response());
                     (r.steamguard_required_days = e
                       .Body()
                       .steamguard_required_days()),
@@ -31455,38 +31546,38 @@ and limitations under the License.
                       (r.email_change_probation_days = e
                         .Body()
                         .email_change_probation_days());
-                    var n = Up.ShowFriendChatDialog(
-                      Up.GetDefaultBrowserContext(),
+                    var n = Hp.ShowFriendChatDialog(
+                      Hp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
                     n && n.CancelTradeRequest(r);
                 }
               })),
-              (this.m_InitiateTradeProposed = s(7702, oa, function(t) {
+              (this.m_InitiateTradeProposed = s(7702, sa, function(t) {
                 var i = new lt.a(t.Body().other_steamid()),
                   n = e.GetFriend(i.GetAccountID());
                 if (n) {
                   var r = t.Body().trade_request_id(),
-                    o = Up.ShowFriendChatDialog(
-                      Up.GetDefaultBrowserContext(),
+                    o = Hp.ShowFriendChatDialog(
+                      Hp.GetDefaultBrowserContext(),
                       n.accountid,
                       !1
                     );
                   o &&
                     o.AddNewTradeRequestAndNotify(
                       i.GetAccountID(),
-                      Up.GetServerRTime32(),
+                      Hp.GetServerRTime32(),
                       t.Body().other_steamid(),
                       r
                     );
                 }
               })),
-              (this.m_StartTradingSession = s(7705, ca, function(t) {
+              (this.m_StartTradingSession = s(7705, ua, function(t) {
                 var i = new lt.a(t.Body().other_steamid()),
                   n = e.OpenTradeWindow(t.Body().other_steamid()),
-                  r = Up.ShowFriendChatDialog(
-                    Up.GetDefaultBrowserContext(),
+                  r = Hp.ShowFriendChatDialog(
+                    Hp.GetDefaultBrowserContext(),
                     i.GetAccountID(),
                     !1
                   );
@@ -31514,7 +31605,7 @@ and limitations under the License.
                         i.m_CMInterface.steamid.GetAccountID(),
                         1
                       )),
-                      Up.SettingsStore.GetObjectFromLocalStorage(
+                      Hp.SettingsStore.GetObjectFromLocalStorage(
                         "FriendStoreLocalPrefs",
                         i.m_FriendStorePrefs
                       ).then(function(e) {
@@ -31561,7 +31652,7 @@ and limitations under the License.
                   i.SetPersonasOffline(!0);
                 }, 102),
                 Object(pt.autorun)(function() {
-                  var e = Up.ParentalStore.BIsFriendsBlocked();
+                  var e = Hp.ParentalStore.BIsFriendsBlocked();
                   i.OnParentalLockChanged(e);
                 }),
                 this.InitializeIdleTracking(),
@@ -31597,7 +31688,7 @@ and limitations under the License.
               void 0 === t && (t = !1),
                 (this.m_bUserSetPersonaState = 1 != e),
                 (this.m_FriendStorePrefs.ePersonaState = e),
-                Up.SettingsStore.StoreObjectInLocalStorage(
+                Hp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 ),
@@ -31619,7 +31710,7 @@ and limitations under the License.
                   (n += t.toString() + "=" + e.toString()));
               }),
                 (this.m_FriendStorePrefs.strNonFriendsAllowedToMsg = n),
-                Up.SettingsStore.StoreObjectInLocalStorage(
+                Hp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 );
@@ -31646,7 +31737,7 @@ and limitations under the License.
                     this.m_eUserPersonaState ||
                     t))
               ) {
-                var n = dt.Init(uo, 716);
+                var n = dt.Init(ho, 716);
                 n.Body().set_persona_state(e),
                   n.Body().set_persona_set_by_user(i),
                   this.m_CMInterface.Send(n) && (this.m_eUserPersonaState = e);
@@ -31654,9 +31745,9 @@ and limitations under the License.
             }),
             (e.prototype.AdjustPersonaStateForIdleTime = function(e) {
               return (1 == e || 3 == e) &&
-                Up.IdleTracker.GetUserIdleTime() >= 7200
+                Hp.IdleTracker.GetUserIdleTime() >= 7200
                 ? 4
-                : 1 == e && Up.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
+                : 1 == e && Hp.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
             }),
             Object.defineProperty(e.prototype, "FriendGroupStore", {
               get: function() {
@@ -31721,7 +31812,7 @@ and limitations under the License.
             (e.prototype.AddPlayerToCache = function(e, t, i) {
               if ((void 0 === i && (i = !0), this.m_mapPlayerCache.has(e)))
                 return this.m_mapPlayerCache.get(e);
-              var n = new Ka(e);
+              var n = new Ja(e);
               return this.m_mapPlayerCache.set(e, n), n;
             }),
             (e.prototype.GetPlayerIfCached = function(e) {
@@ -31766,7 +31857,7 @@ and limitations under the License.
                 this.m_setFriendsNeedingPersonaStateLoad.clear(),
                 t.length)
               ) {
-                var i = dt.Init(lo, 815);
+                var i = dt.Init(po, 815);
                 i.Body().set_persona_state_requested(1106);
                 for (var n = 0, r = t; n < r.length; n++) {
                   var o = r[n];
@@ -31791,13 +31882,13 @@ and limitations under the License.
             (e.prototype.InitializeIdleTracking = function() {
               this.m_bAwayCallbackFired &&
                 ((this.m_bAwayCallbackFired = !1),
-                Up.IdleTracker.AddOnIdleCallback(
+                Hp.IdleTracker.AddOnIdleCallback(
                   this.OnIdle.bind(this, 3),
                   300
                 )),
                 this.m_bSnoozeCallbackFired &&
                   ((this.m_bSnoozeCallbackFired = !1),
-                  Up.IdleTracker.AddOnIdleCallback(
+                  Hp.IdleTracker.AddOnIdleCallback(
                     this.OnIdle.bind(this, 4),
                     7200
                   ));
@@ -31820,17 +31911,17 @@ and limitations under the License.
                     this.UpdateUserPersonaStateInternal(e))),
                 this.m_bNextActivityCallbackRegistered ||
                   ((this.m_bNextActivityCallbackRegistered = !0),
-                  Up.IdleTracker.AddOnNextActivityCallback(
+                  Hp.IdleTracker.AddOnNextActivityCallback(
                     this.ResetIdleState.bind(this)
                   ));
             }),
             (e.prototype.SendFriendInvite = function(e) {
-              var t = dt.Init(xo);
+              var t = dt.Init(Uo);
               return (
                 t
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
-                Kr.AddFriend(this.m_CMInterface.GetServiceTransport(), t).then(
+                Jr.AddFriend(this.m_CMInterface.GetServiceTransport(), t).then(
                   function(e) {
                     return e.Body().friend_relationship();
                   }
@@ -31838,12 +31929,12 @@ and limitations under the License.
               );
             }),
             (e.prototype.RemoveFriend = function(e) {
-              var t = dt.Init(Uo);
+              var t = dt.Init(Vo);
               return (
                 t
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
-                Kr.RemoveFriend(
+                Jr.RemoveFriend(
                   this.m_CMInterface.GetServiceTransport(),
                   t
                 ).then(function(e) {
@@ -31853,13 +31944,13 @@ and limitations under the License.
             }),
             (e.prototype.BlockPlayer = function(e, t) {
               void 0 === t && (t = !1);
-              var i = dt.Init(Vo);
+              var i = dt.Init(qo);
               return (
                 i
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
                 t && i.Body().set_unignore(!0),
-                Kr.IgnoreFriend(
+                Jr.IgnoreFriend(
                   this.m_CMInterface.GetServiceTransport(),
                   i
                 ).then(function(e) {
@@ -31869,18 +31960,18 @@ and limitations under the License.
             }),
             (e.prototype.OnFriendPersonaStateChanged = function(e, t, i, n) {
               if (
-                Up.NotificationManager.BNotificationsPermitted() &&
-                Up.SettingsStore.BReady()
+                Hp.NotificationManager.BNotificationsPermitted() &&
+                Hp.SettingsStore.BReady()
               ) {
                 if (
                   n &&
                   e.persona.is_ingame &&
-                  Up.SettingsStore.FriendsSettings.bNotifications_ShowIngame
+                  Hp.SettingsStore.FriendsSettings.bNotifications_ShowIngame
                 ) {
                   var r = e.persona.current_game_name;
                   return void (
                     r &&
-                    Up.NotificationManager.DisplayNotificationFromFriend(e, {
+                    Hp.NotificationManager.DisplayNotificationFromFriend(e, {
                       title: e.display_name,
                       body: Object(hr.b)("#Friend_StateChange_InGame", r),
                       tag: "state_" + e.accountid,
@@ -31890,8 +31981,8 @@ and limitations under the License.
                 }
                 return 0 == t &&
                   0 != i &&
-                  Up.SettingsStore.FriendsSettings.bNotifications_ShowOnline
-                  ? void Up.NotificationManager.DisplayNotificationFromFriend(
+                  Hp.SettingsStore.FriendsSettings.bNotifications_ShowOnline
+                  ? void Hp.NotificationManager.DisplayNotificationFromFriend(
                       e,
                       {
                         title: e.display_name,
@@ -31905,8 +31996,8 @@ and limitations under the License.
             }),
             (e.prototype.RequestNicknameList = function() {
               var e = this,
-                t = dt.Init(Po);
-              Kr.GetNicknameList(
+                t = dt.Init(xo);
+              Jr.GetNicknameList(
                 this.m_CMInterface.GetServiceTransport(),
                 t
               ).then(function(t) {
@@ -31928,14 +32019,14 @@ and limitations under the License.
             (e.prototype.SetFriendNickname = function(e, t) {
               var i = e.nickname;
               e.nickname = t;
-              var n = dt.Init(so, 5588);
+              var n = dt.Init(lo, 5588);
               return (
                 n
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
                 n.Body().set_nickname(t),
                 this.m_CMInterface
-                  .SendMsgAndAwaitResponse(n, co)
+                  .SendMsgAndAwaitResponse(n, uo)
                   .then(function(t) {
                     return 1 == t.Body().eresult() || ((e.nickname = i), !1);
                   })
@@ -31971,40 +32062,40 @@ and limitations under the License.
                 this.m_CMInterface.Send(n);
             }),
             (e.prototype.InviteToWatch = function(e) {
-              Up.ShowFriendChatDialog(
-                Up.GetDefaultBrowserContext(),
+              Hp.ShowFriendChatDialog(
+                Hp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               ),
-                Up.BroadcastStore.InviteToWatch(e.accountid).then(function(
+                Hp.BroadcastStore.InviteToWatch(e.accountid).then(function(
                   e
                 ) {});
             }),
             (e.prototype.InviteToTrade = function(e) {
-              var t = dt.Init(oa, 7701);
+              var t = dt.Init(sa, 7701);
               t
                 .Body()
                 .set_other_steamid(e.persona.m_steamid.ConvertTo64BitString());
-              var i = Up.ShowFriendChatDialog(
-                Up.GetDefaultBrowserContext(),
+              var i = Hp.ShowFriendChatDialog(
+                Hp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               );
               i &&
                 i.AddNewTradeRequestAndNotify(
-                  Up.FriendStore.self.accountid,
-                  Up.GetServerRTime32(),
+                  Hp.FriendStore.self.accountid,
+                  Hp.GetServerRTime32(),
                   e.persona.m_steamid.ConvertTo64BitString(),
                   0
                 ),
                 this.m_CMInterface.Send(t);
             }),
             (e.prototype.CancelTradeRequest = function(e) {
-              var t = dt.Init(sa, 7706);
+              var t = dt.Init(la, 7706);
               t.Body().set_other_steamid(e), this.m_CMInterface.Send(t);
             }),
             (e.prototype.RespondToTradeRequest = function(e, t) {
-              var i = dt.Init(aa, 7703);
+              var i = dt.Init(ca, 7703);
               i.Body().set_trade_request_id(e),
                 i.Body().set_response(t ? 0 : 1),
                 this.m_CMInterface.Send(i);
@@ -32044,11 +32135,11 @@ and limitations under the License.
           (e[(e.eOfflineOnly = 2)] = "eOfflineOnly"),
           (e[(e.eIncomingInvites = 3)] = "eIncomingInvites"),
           (e[(e.eAll = 4)] = "eAll");
-      })(qa || (qa = {}));
-      var Ja,
-        Xa = (function() {
+      })(Ya || (Ya = {}));
+      var Za,
+        Qa = (function() {
           function e(e) {
-            (this.m_eDisplayType = qa.eAll),
+            (this.m_eDisplayType = Ya.eAll),
               (this.m_strName = ""),
               (this.m_bCollapsed = !1),
               (this.m_bRenderVoiceIndicators = !1),
@@ -32109,7 +32200,7 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "member_count", {
               get: function() {
-                return this.m_eDisplayType == qa.eAll
+                return this.m_eDisplayType == Ya.eAll
                   ? this.unfiltered_count
                   : this.member_list.length;
               },
@@ -32163,7 +32254,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Up.FriendStore.GetPlayer(i));
+                    e.push(Hp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32174,7 +32265,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "member_list", {
               get: function() {
                 var e = this.member_list_unsorted;
-                return e.sort(Ka.DefaultFriendSortComparator), e;
+                return e.sort(Ja.DefaultFriendSortComparator), e;
               },
               enumerable: !0,
               configurable: !0
@@ -32187,11 +32278,11 @@ and limitations under the License.
                   t++
                 ) {
                   var n = i[t];
-                  (this.m_eDisplayType != qa.eOnlineOnly ||
+                  (this.m_eDisplayType != Ya.eOnlineOnly ||
                     n.persona.is_online) &&
-                    ((this.m_eDisplayType == qa.eOfflineOnly &&
+                    ((this.m_eDisplayType == Ya.eOfflineOnly &&
                       n.persona.is_online) ||
-                      ((this.m_eDisplayType != qa.eOnlineOnlyNotInGame ||
+                      ((this.m_eDisplayType != Ya.eOnlineOnlyNotInGame ||
                         (n.persona.is_online && !n.persona.is_ingame)) &&
                         e.push(n)));
                 }
@@ -32223,7 +32314,7 @@ and limitations under the License.
                   var n = i[t];
                   n.persona.is_online && n.persona.is_ingame && e.push(n);
                 }
-                return e.sort(Ka.DefaultFriendSortComparator), e;
+                return e.sort(Ja.DefaultFriendSortComparator), e;
               },
               enumerable: !0,
               configurable: !0
@@ -32258,7 +32349,7 @@ and limitations under the License.
             e
           );
         })(),
-        Za = (function(e) {
+        $a = (function(e) {
           function t(t, i, n, r) {
             void 0 === i && (i = -1),
               void 0 === n && (n = !1),
@@ -32308,7 +32399,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Up.FriendStore.GetPlayer(i));
+                    e.push(Hp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32325,16 +32416,16 @@ and limitations under the License.
                 var r = n[i];
                 r.BMatchesSearchString(e, !1) && t.push(r);
               }
-              return t.sort(Ka.DefaultFriendSortComparator), t;
+              return t.sort(Ja.DefaultFriendSortComparator), t;
             }),
             it.b([pt.computed], t.prototype, "InternalGetMemberList", null),
             t
           );
-        })(Xa),
-        Qa = (function(e) {
+        })(Qa),
+        es = (function(e) {
           function t(t, i) {
             var n = e.call(this, t, i, !1, !0) || this;
-            return (n.m_eDisplayType = qa.eOnlineOnlyNotInGame), n;
+            return (n.m_eDisplayType = Ya.eOnlineOnlyNotInGame), n;
           }
           return (
             it.c(t, e),
@@ -32347,8 +32438,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Za),
-        $a = (function(e) {
+        })($a),
+        ts = (function(e) {
           function t(t, i) {
             return e.call(this, t, i, !1, !0) || this;
           }
@@ -32363,8 +32454,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Za),
-        es = (function(e) {
+        })($a),
+        is = (function(e) {
           function t(t, i) {
             return e.call(this, t, i, !1, !0) || this;
           }
@@ -32379,8 +32470,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Za),
-        ts = (function(e) {
+        })($a),
+        ns = (function(e) {
           function t(t, i) {
             return e.call(this, t, i, !1, !0) || this;
           }
@@ -32395,14 +32486,14 @@ and limitations under the License.
             }),
             t
           );
-        })(Za),
-        is = (function(e) {
+        })($a),
+        rs = (function(e) {
           function t(t, i) {
             var n = e.call(this, t, i, !1, !0) || this;
             return (
               (n.m_mapSteamIDToMutualFriends = pt.observable.map()),
               (n.m_unMutualFriendsCacheHash = 0),
-              (n.m_eDisplayType = qa.eIncomingInvites),
+              (n.m_eDisplayType = Ya.eIncomingInvites),
               n
             );
           }
@@ -32443,8 +32534,8 @@ and limitations under the License.
             ),
             t
           );
-        })(Za),
-        ns = (function(e) {
+        })($a),
+        os = (function(e) {
           function t(t) {
             return e.call(this, "", t, !1, !1) || this;
           }
@@ -32454,7 +32545,7 @@ and limitations under the License.
               get: function() {
                 return (
                   0 != this.id &&
-                  Up.AppInfoStore.GetAppInfo(this.id).is_initialized
+                  Hp.AppInfoStore.GetAppInfo(this.id).is_initialized
                 );
               },
               enumerable: !0,
@@ -32471,7 +32562,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Up.AppInfoStore.GetAppInfo(this.id).name;
+                  : Hp.AppInfoStore.GetAppInfo(this.id).name;
               },
               set: function(e) {},
               enumerable: !0,
@@ -32481,7 +32572,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Up.AppInfoStore.GetAppInfo(this.id).icon_url;
+                  : Hp.AppInfoStore.GetAppInfo(this.id).icon_url;
               },
               enumerable: !0,
               configurable: !0
@@ -32497,7 +32588,7 @@ and limitations under the License.
                 if (o != a) return a - o;
                 if (n != r) return n.localeCompare(r);
               }
-              return Ka.DefaultFriendSortComparator(e, t);
+              return Ja.DefaultFriendSortComparator(e, t);
             }),
             Object.defineProperty(t.prototype, "member_list", {
               get: function() {
@@ -32518,7 +32609,7 @@ and limitations under the License.
                 }
                 return (
                   0 == this.id
-                    ? t.sort(Ka.DefaultFriendSortComparator)
+                    ? t.sort(Ja.DefaultFriendSortComparator)
                     : t.sort(function(t, n) {
                         return e.PlayerGroupSortComparator(t, n, i);
                       }),
@@ -32531,8 +32622,8 @@ and limitations under the License.
             it.b([pt.computed], t.prototype, "member_list", null),
             t
           );
-        })(Za),
-        rs = (function(e) {
+        })($a),
+        as = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -32561,18 +32652,18 @@ and limitations under the License.
             }),
             t
           );
-        })(ns),
-        os = { groups: { offline: !0 } },
-        as = (function() {
+        })(os),
+        ss = { groups: { offline: !0 } },
+        cs = (function() {
           function e() {
             this.m_mapCollapsePrefs = pt.observable.map();
           }
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Up.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Hp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "FriendGroupCollapse",
-                os
+                ss
               ).then(function(t) {
                 e.m_mapCollapsePrefs.clear();
                 for (var i in t.groups)
@@ -32593,7 +32684,7 @@ and limitations under the License.
               this.SetUserGroupCollapsed(e, !this.GetUserGroupCollapsed(e));
             }),
             (e.prototype.WritePrefs = function() {
-              Up.SettingsStore.StoreObjectInLocalStorage(
+              Hp.SettingsStore.StoreObjectInLocalStorage(
                 "FriendGroupCollapse",
                 { groups: this.m_mapCollapsePrefs.toJSON() }
               );
@@ -32603,35 +32694,35 @@ and limitations under the License.
             e
           );
         })(),
-        ss = (function() {
+        ls = (function() {
           function e(t) {
             var i = this;
-            (this.m_FriendGroupDisplayPrefs = new as()),
+            (this.m_FriendGroupDisplayPrefs = new cs()),
               (this.m_mapGroups = pt.observable.map()),
               (this.m_mapGameGroups = pt.observable.map()),
-              (this.m_singletonGameGroup = new ns(0)),
-              (this.m_groupAllFriends = new Qa(
+              (this.m_singletonGameGroup = new os(0)),
+              (this.m_groupAllFriends = new es(
                 Object(hr.b)("#FriendGroup_Online"),
                 -1
               )),
-              (this.m_groupUngroupedFriends = new $a(
+              (this.m_groupUngroupedFriends = new ts(
                 Object(hr.b)("#FriendGroup_Other"),
                 -2
               )),
-              (this.m_groupOfflineFriends = new es(
+              (this.m_groupOfflineFriends = new is(
                 Object(hr.b)("#FriendGroup_Offline"),
                 -3
               )),
-              (this.m_groupIngameFriends = new ts(
+              (this.m_groupIngameFriends = new ns(
                 Object(hr.b)("#FriendGroup_InGame"),
                 -4
               )),
-              (this.m_groupIncomingInvites = new is(
+              (this.m_groupIncomingInvites = new rs(
                 Object(hr.b)("#FriendGroup_IncomingInvites"),
                 -5
               )),
-              (this.m_nonSteamGameGroup = new rs(this.non_steam_game_id)),
-              (this.fnRecvMsgClientFriendsGroupList = s(5553, ro, function(e) {
+              (this.m_nonSteamGameGroup = new as(this.non_steam_game_id)),
+              (this.fnRecvMsgClientFriendsGroupList = s(5553, ao, function(e) {
                 i.m_mapGroups.clear();
                 for (
                   var t = 0, n = e.Body().friendGroups();
@@ -32640,8 +32731,8 @@ and limitations under the License.
                 ) {
                   var r = n[t],
                     o = r.nGroupID(),
-                    a = new Za(r.strGroupName() || "", r.nGroupID(), !0);
-                  (a.m_eDisplayType = qa.eAll), i.m_mapGroups.set(o, a);
+                    a = new $a(r.strGroupName() || "", r.nGroupID(), !0);
+                  (a.m_eDisplayType = Ya.eAll), i.m_mapGroups.set(o, a);
                 }
                 for (var s = 0, c = e.Body().memberships(); s < c.length; s++) {
                   var l = c[s],
@@ -32657,9 +32748,9 @@ and limitations under the License.
               })),
               (this.m_FriendStore = t),
               e.k_bTrackOfflineFriends &&
-                (this.m_groupOfflineFriends.m_eDisplayType = qa.eOfflineOnly),
+                (this.m_groupOfflineFriends.m_eDisplayType = Ya.eOfflineOnly),
               e.k_bTrackUngroupedFriends &&
-                (this.m_groupUngroupedFriends.m_eDisplayType = qa.eOnlineOnly);
+                (this.m_groupUngroupedFriends.m_eDisplayType = Ya.eOnlineOnly);
           }
           return (
             (e.prototype.Init = function(e) {
@@ -32855,7 +32946,7 @@ and limitations under the License.
                       this.m_singletonGameGroup.AddMember(e),
                     r.AddMember(e);
                 else if (0 != i) {
-                  var o = new ns(i);
+                  var o = new os(i);
                   o.AddMember(e),
                     this.m_singletonGameGroup.AddMember(e),
                     this.m_mapGameGroups.set(i, o);
@@ -32893,8 +32984,8 @@ and limitations under the License.
                 this.m_groupIncomingInvites.GetMutualFriendsCacheHash() != t
               ) {
                 this.m_groupIncomingInvites.SetMutualFriendsCacheHash(t);
-                var o = dt.Init(ko);
-                Kr.GetMutualFriendsForIncomingInvites(
+                var o = dt.Init(Go);
+                Jr.GetMutualFriendsForIncomingInvites(
                   this.m_CMInterface.GetServiceTransport(),
                   o
                 ).then(function(i) {
@@ -32929,18 +33020,18 @@ and limitations under the License.
             }),
             (e.prototype.CreateGroup = function(e, t) {
               var i = this,
-                n = dt.Init(fo, 5560);
+                n = dt.Init(yo, 5560);
               return (
                 n.Body().set_groupname(e),
                 t && n.Body().set_steamid_friends(t),
                 new Promise(function(r, o) {
                   i.m_CMInterface
-                    .SendMsgAndAwaitResponse(n, _o)
+                    .SendMsgAndAwaitResponse(n, vo)
                     .then(function(n) {
                       1 == n.Body().eresult() &&
                         Object(pt.runInAction)(function() {
                           var r = n.Body().groupid(),
-                            o = new Za(e, n.Body().groupid(), !0);
+                            o = new $a(e, n.Body().groupid(), !0);
                           if (t)
                             for (var a = 0, s = t; a < s.length; a++) {
                               var c = s[a];
@@ -32959,7 +33050,7 @@ and limitations under the License.
             (e.prototype.ManageGroup = function(e, t, i, n) {
               var r = this;
               if (t == e.name && !i && !n) return Promise.resolve(!0);
-              var o = dt.Init(bo, 5564);
+              var o = dt.Init(So, 5564);
               return (
                 o.Body().set_groupid(e.id),
                 t && t != e.name && o.Body().set_groupname(t),
@@ -32967,7 +33058,7 @@ and limitations under the License.
                 n && o.Body().set_steamid_friends_removed(n),
                 new Promise(function(a, s) {
                   r.m_CMInterface
-                    .SendMsgAndAwaitResponse(o, Co)
+                    .SendMsgAndAwaitResponse(o, Mo)
                     .then(function(r) {
                       if (1 == r.Body().eresult()) {
                         e.name = t;
@@ -32990,10 +33081,10 @@ and limitations under the License.
             }),
             (e.prototype.RemoveGroup = function(e) {
               var t = this,
-                i = dt.Init(yo, 5562);
+                i = dt.Init(bo, 5562);
               i.Body().set_groupid(e.id),
                 this.m_CMInterface
-                  .SendMsgAndAwaitResponse(i, vo)
+                  .SendMsgAndAwaitResponse(i, Co)
                   .then(function(i) {
                     1 == i.Body().eresult() && t.HandleGroupRemoval(e);
                   });
@@ -33033,7 +33124,7 @@ and limitations under the License.
                 a = i && i.modifiable,
                 s = [];
               if (o) {
-                var c = dt.Init(So, 5566);
+                var c = dt.Init(Fo, 5566);
                 c.Body().set_groupid(n.id),
                   c
                     .Body()
@@ -33042,7 +33133,7 @@ and limitations under the License.
                     ),
                   s.push(
                     this.m_CMInterface
-                      .SendMsgAndAwaitResponse(c, Mo)
+                      .SendMsgAndAwaitResponse(c, wo)
                       .then(function(i) {
                         return (
                           1 == i.Body().eresult() &&
@@ -33056,7 +33147,7 @@ and limitations under the License.
                   );
               }
               if (a) {
-                var c = dt.Init(Fo, 5568);
+                var c = dt.Init(Oo, 5568);
                 c.Body().set_groupid(i.id),
                   c
                     .Body()
@@ -33065,7 +33156,7 @@ and limitations under the License.
                     ),
                   s.push(
                     this.m_CMInterface
-                      .SendMsgAndAwaitResponse(c, wo)
+                      .SendMsgAndAwaitResponse(c, Bo)
                       .then(function(n) {
                         return (
                           1 == n.Body().eresult() &&
@@ -33105,13 +33196,13 @@ and limitations under the License.
             e
           );
         })(),
-        cs = (function(e) {
+        us = (function(e) {
           function t(t, i, n, r) {
             var o = e.call(this, t.FriendStore, t, t.CMInterface) || this;
             return (
               (o.m_bInitialized = !1),
               (o.m_lastChatLink = null),
-              (o.m_groupVoiceActiveMembers = new Xa(
+              (o.m_groupVoiceActiveMembers = new Qa(
                 Object(hr.b)("#Chat_MemberGroup_VoiceChatting")
               )),
               (o.m_eDesktopNotificationLevel = 0),
@@ -33229,7 +33320,7 @@ and limitations under the License.
               if (
                 (i.Body().set_chat_group_id(this.m_ulGroupID),
                 i.Body().set_chat_id(this.m_ulChatID),
-                i.Body().set_max_count(to.k_InitialMessageCount),
+                i.Body().set_max_count(no.k_InitialMessageCount),
                 e)
               ) {
                 var n = this.GetMostRecentChatMsg();
@@ -33263,7 +33354,7 @@ and limitations under the License.
               return (
                 t.Body().set_chat_group_id(this.m_ulGroupID),
                 t.Body().set_chat_id(this.m_ulChatID),
-                t.Body().set_max_count(to.k_LoadMoreMessageCount),
+                t.Body().set_max_count(no.k_LoadMoreMessageCount),
                 t.Body().set_last_time(this.m_oldestMessageTime),
                 t.Body().set_last_ordinal(this.m_oldestMessageOrdinal),
                 lr
@@ -33304,7 +33395,7 @@ and limitations under the License.
                 } else if (!r.message() || 0 == r.message().trim().length)
                   continue;
                 i.push(
-                  new Xr(
+                  new Qr(
                     r.sender(),
                     r.server_timestamp(),
                     r.ordinal(),
@@ -33334,7 +33425,7 @@ and limitations under the License.
               return this.m_ChatStore.ChatRoomBBCodeParser;
             }),
             (t.prototype.AckChatMsgOnServer = function(e) {
-              var t = dt.Init(Dn);
+              var t = dt.Init(Nn);
               t.Body().set_chat_group_id(this.m_ulGroupID),
                 t.Body().set_chat_id(this.m_ulChatID),
                 t.Body().set_timestamp(e),
@@ -33400,12 +33491,12 @@ and limitations under the License.
               }),
                 this.BVoiceActive() &&
                   (i
-                    ? Up.AudioPlaybackManager.PlayAudioURL(
+                    ? Hp.AudioPlaybackManager.PlayAudioURL(
                         tt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                       )
                     : n &&
-                      Up.AudioPlaybackManager.PlayAudioURL(
+                      Hp.AudioPlaybackManager.PlayAudioURL(
                         tt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       )),
@@ -33431,7 +33522,7 @@ and limitations under the License.
                     if (
                       this.m_groupVoiceActiveMembers.member_list[e].is_friend ||
                       this.m_groupVoiceActiveMembers.member_list[e] ==
-                        Up.FriendStore.self
+                        Hp.FriendStore.self
                     )
                       return !0;
                   return !1;
@@ -33449,7 +33540,7 @@ and limitations under the License.
                 )
                   if (
                     this.m_groupVoiceActiveMembers.member_list[e] ==
-                    Up.FriendStore.self
+                    Hp.FriendStore.self
                   )
                     return !0;
                 return !1;
@@ -33465,7 +33556,7 @@ and limitations under the License.
                   return (
                     1 == this.m_groupVoiceActiveMembers.member_list.length &&
                     this.m_groupVoiceActiveMembers.member_list[0] ==
-                      Up.FriendStore.self
+                      Hp.FriendStore.self
                   );
                 },
                 enumerable: !0,
@@ -33518,7 +33609,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.InsertBBCodeMarkup = function(e) {
-              (e = kr.EscapeBBCode(e)), e.replace(/＠/g, "@");
+              (e = Gr.EscapeBBCode(e)), e.replace(/＠/g, "@");
               for (var t = e.indexOf("@"); -1 !== t; ) {
                 for (
                   var i = e.indexOf("@", t + 1),
@@ -33541,7 +33632,7 @@ and limitations under the License.
                     d++
                   ) {
                     var h = p[d],
-                      m = kr.EscapeBBCode(h.player_name_normalized);
+                      m = Gr.EscapeBBCode(h.player_name_normalized);
                     if (m.startsWith(o)) {
                       var g = m.length === o.length;
                       if (
@@ -33579,7 +33670,7 @@ and limitations under the License.
                       "[mention=" +
                       _ +
                       "]@" +
-                      kr.EscapeBBCode(y) +
+                      Gr.EscapeBBCode(y) +
                       "[/mention]";
                   (e = b + S + C), (i = e.indexOf("@", b.length + S.length));
                 }
@@ -33659,7 +33750,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.BShouldSilentlyAddMessage = function(e) {
-              return Up.FriendStore.GetPlayer(e.unAccountID).is_blocked;
+              return Hp.FriendStore.GetPlayer(e.unAccountID).is_blocked;
             }),
             (t.prototype.OnReceivedNewMessage = function(e, t, i, n) {
               var r = this;
@@ -33692,42 +33783,42 @@ and limitations under the License.
                 }
                 if (o) {
                   if (
-                    (Up.SettingsStore.FriendsSettings
+                    (Hp.SettingsStore.FriendsSettings
                       .bSounds_PlayChatRoomNotification &&
                     (e.Mentions.mention_all ||
                       e.Mentions.mention_here ||
                       e.Mentions.mention_user)
-                      ? Up.AudioPlaybackManager.PlayAudioURL(
+                      ? Hp.AudioPlaybackManager.PlayAudioURL(
                           tt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_at_mention.m4a?v=1"
                         )
-                      : Up.SettingsStore.FriendsSettings
+                      : Hp.SettingsStore.FriendsSettings
                           .bSounds_PlayChatRoomNotification &&
                         t < 4 &&
-                        Up.AudioPlaybackManager.PlayAudioURL(
+                        Hp.AudioPlaybackManager.PlayAudioURL(
                           tt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_chatroom_notification.m4a?v=1"
                         ),
-                    Up.NotificationManager.BNotificationsPermitted() &&
+                    Hp.NotificationManager.BNotificationsPermitted() &&
                       t < 4 &&
-                      Up.SettingsStore.FriendsSettings
+                      Hp.SettingsStore.FriendsSettings
                         .bNotifications_ShowChatRoomNotification)
                   ) {
                     var a = function(e) {
-                        Up.UIStore.ShowAndOrActivateChat(e, r, !0);
+                        Hp.UIStore.ShowAndOrActivateChat(e, r, !0);
                       },
-                      s = Up.FriendStore.GetPlayer(e.unAccountID);
+                      s = Hp.FriendStore.GetPlayer(e.unAccountID);
                     s.LoadIfNecessary();
                     var c;
                     (c = this.m_bIsDefaultForGroup
                       ? this.GetGroup().name
                       : this.name),
-                      Object(Gr.whenWithTimeout)(
+                      Object(Nr.whenWithTimeout)(
                         function() {
                           return s.is_ready;
                         },
                         function() {
-                          Up.NotificationManager.DisplayNotification(
+                          Hp.NotificationManager.DisplayNotification(
                             {
                               icon: s.persona.avatar_url_medium,
                               title: c,
@@ -33742,9 +33833,9 @@ and limitations under the License.
                         1e3
                       );
                   }
-                  0 == Up.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Hp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Up.UIStore.FlashChatWindow(this);
+                    Hp.UIStore.FlashChatWindow(this);
                 }
               }
             }),
@@ -33864,7 +33955,7 @@ and limitations under the License.
                   r.set_unread_indicator_muted(i)),
                 lr
                   .SetUserChatGroupPreferences(
-                    Up.CMInterface.GetServiceTransport(),
+                    Hp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -33915,8 +34006,8 @@ and limitations under the License.
             ),
             t
           );
-        })(to),
-        ls = (function() {
+        })(no),
+        ds = (function() {
           function e(e, t, i) {
             void 0 === e && (e = 20),
               void 0 === i && (i = 0),
@@ -33939,7 +34030,7 @@ and limitations under the License.
             e
           );
         })(),
-        us = (function() {
+        ps = (function() {
           function e(e) {
             (this.m_roleActions = new Gi()), (this.m_roleActions = e);
           }
@@ -34021,7 +34112,7 @@ and limitations under the License.
             e
           );
         })(),
-        ds = (function() {
+        hs = (function() {
           function e(e, t) {
             (this.m_chatStore = null),
               (this.m_ulGroupID = ""),
@@ -34038,13 +34129,13 @@ and limitations under the License.
               (this.m_bUnreadIndicatorMuted = !1),
               (this.m_roles = []),
               (this.m_roleActions = []),
-              (this.m_groupMembers = new Xa(
+              (this.m_groupMembers = new Qa(
                 Object(hr.b)("#Chat_MemberGroup_Online")
               )),
               (this.m_cMemberSummaryCount = 0),
               (this.m_chatStore = e),
               (this.m_ulGroupID = t),
-              (this.m_groupMembers.m_eDisplayType = qa.eAll);
+              (this.m_groupMembers.m_eDisplayType = Ya.eAll);
           }
           return (
             (e.prototype.IsNamedGroupChat = function() {
@@ -34500,7 +34591,7 @@ and limitations under the License.
                   o = r.accountid();
                 this.m_groupMembers.AddMember(
                   o,
-                  new ls(r.rank(), r.role_ids(), r.permissions())
+                  new ds(r.rank(), r.role_ids(), r.permissions())
                 ),
                   t.length < 10 && t.push(o);
               }
@@ -34531,7 +34622,7 @@ and limitations under the License.
                   ),
                   this.m_groupMembers.AddMember(
                     i,
-                    new ls(e.rank(), e.role_ids(), e.permissions())
+                    new ds(e.rank(), e.role_ids(), e.permissions())
                   ),
                   this.m_rgGroupMembersSummary.length < 10 &&
                     -1 == this.m_rgGroupMembersSummary.indexOf(i) &&
@@ -34564,7 +34655,7 @@ and limitations under the License.
                 n.delete(s);
                 var c = this.m_mapRooms.get(s);
                 c ||
-                  ((c = new cs(this.m_chatStore, this, s, s == e)),
+                  ((c = new us(this.m_chatStore, this, s, s == e)),
                   this.m_mapRooms.set(s, c)),
                   c.UpdateChatState(a);
               }
@@ -34605,7 +34696,7 @@ and limitations under the License.
                 console.log("role " + n.role_id + " " + n.name);
               }
               this.m_roleActions = e.role_actions().map(function(e) {
-                return new us(e);
+                return new ps(e);
               });
               for (var o = 0, a = this.m_roleActions; o < a.length; o++) {
                 var s = a[o];
@@ -34656,7 +34747,7 @@ and limitations under the License.
                   r.Body().set_role_id(t),
                   lr
                     .AddRoleToUser(
-                      Up.ChatStore.CMInterface.GetServiceTransport(),
+                      Hp.ChatStore.CMInterface.GetServiceTransport(),
                       r
                     )
                     .then(function(e) {
@@ -34671,7 +34762,7 @@ and limitations under the License.
                 r.Body().set_role_id(t),
                 lr
                   .DeleteRoleFromUser(
-                    Up.ChatStore.CMInterface.GetServiceTransport(),
+                    Hp.ChatStore.CMInterface.GetServiceTransport(),
                     r
                   )
                   .then(function(e) {
@@ -34747,11 +34838,11 @@ and limitations under the License.
                 this.m_mapRooms.forEach(function(t) {
                   t.time_last_message && (e = Math.max(e, t.time_last_message));
                 }),
-                  (this.m_rtLastAck = e || Up.GetServerRTime32());
-                var t = dt.Init(Dn);
+                  (this.m_rtLastAck = e || Hp.GetServerRTime32());
+                var t = dt.Init(Nn);
                 t.Body().set_chat_group_id(this.m_ulGroupID),
                   t.Body().set_timestamp(this.m_rtLastAck),
-                  lr.AckChatMessage(Up.CMInterface.GetServiceTransport(), t);
+                  lr.AckChatMessage(Hp.CMInterface.GetServiceTransport(), t);
               }
             }),
             (e.prototype.InviteFriend = function(e, t) {
@@ -34852,7 +34943,7 @@ and limitations under the License.
             }),
             (e.prototype.BCanXOverride = function(e, t) {
               return (
-                0 == e && (e = Up.CMInterface.steamid.GetAccountID()),
+                0 == e && (e = Hp.CMInterface.steamid.GetAccountID()),
                 0 != (this.GetMemberPermissions(e) & t)
               );
             }),
@@ -34872,7 +34963,7 @@ and limitations under the License.
               return this.BCanIPerformAction(6);
             }),
             (e.prototype.BCanEditRoles = function() {
-              return Up.FriendStore.self.accountid == this.GetOwnerAccountID();
+              return Hp.FriendStore.self.accountid == this.GetOwnerAccountID();
             }),
             Object.defineProperty(e.prototype, "members_to_highlight_name", {
               get: function() {
@@ -34895,7 +34986,7 @@ and limitations under the License.
                   ? this.m_groupMembers.unfiltered_count
                   : this.m_cMemberSummaryCount,
                 o = r > e ? e - 1 : e,
-                a = Up.FriendStore,
+                a = Hp.FriendStore,
                 s = a.self,
                 c = [],
                 l = a.GetPlayer(this.GetOwnerAccountID());
@@ -35080,7 +35171,7 @@ and limitations under the License.
               var i = this.m_mapRooms.get(e);
               return (
                 i ||
-                  ((i = new cs(this.m_chatStore, this, e, !1)),
+                  ((i = new us(this.m_chatStore, this, e, !1)),
                   this.m_mapRooms.set(e, i)),
                 i.UpdateChatState(t),
                 i
@@ -35137,11 +35228,11 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 lr
                   .GetInviteLinksForGroup(
-                    Up.ChatStore.CMInterface.GetServiceTransport(),
+                    Hp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
-                    var t = new hs();
+                    var t = new gs();
                     return (
                       1 != e.GetEResult()
                         ? (t.loadingState = "failed")
@@ -35158,11 +35249,11 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 lr
                   .GetInviteList(
-                    Up.ChatStore.CMInterface.GetServiceTransport(),
+                    Hp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
-                    var t = new gs();
+                    var t = new _s();
                     return (
                       1 != e.GetEResult()
                         ? (t.loadingState = "failed")
@@ -35178,9 +35269,9 @@ and limitations under the License.
               return (
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 lr
-                  .GetBanList(Up.ChatStore.CMInterface.GetServiceTransport(), e)
+                  .GetBanList(Hp.ChatStore.CMInterface.GetServiceTransport(), e)
                   .then(function(e) {
-                    var t = new ms();
+                    var t = new fs();
                     return (
                       15 == e.GetEResult()
                         ? (t.loadingState = "denied")
@@ -35202,13 +35293,13 @@ and limitations under the License.
             (e.prototype.CreateRole = function(e) {
               var t = this;
               if (((e = e.trim()), 0 == e.length)) return Promise.resolve(!1);
-              var i = dt.Init(Ni);
+              var i = dt.Init(Di);
               return (
                 i.Body().set_chat_group_id(this.GetGroupID()),
                 i.Body().set_name(e),
                 this.m_roles.push({ role_id: "-1", name: e }),
                 lr
-                  .CreateRole(Up.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .CreateRole(Hp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (15 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(e) {
@@ -35222,12 +35313,12 @@ and limitations under the License.
             }),
             (e.prototype.DeleteRole = function(e) {
               var t = this,
-                i = dt.Init(Li);
+                i = dt.Init(xi);
               return (
                 i.Body().set_chat_group_id(this.GetGroupID()),
                 i.Body().set_role_id(e),
                 lr
-                  .DeleteRole(Up.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .DeleteRole(Hp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (1 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(t) {
@@ -35248,7 +35339,7 @@ and limitations under the License.
                 n.Body().set_role_id(e),
                 n.Body().set_name(t),
                 lr
-                  .RenameRole(Up.ChatStore.CMInterface.GetServiceTransport(), n)
+                  .RenameRole(Hp.ChatStore.CMInterface.GetServiceTransport(), n)
                   .then(function(n) {
                     if (1 == n.GetEResult()) {
                       var r = i.m_roles.findIndex(function(t) {
@@ -35273,7 +35364,7 @@ and limitations under the License.
                   o.Body().set_actions(n.roleActions),
                   lr
                     .ReplaceRoleActions(
-                      Up.ChatStore.CMInterface.GetServiceTransport(),
+                      Hp.ChatStore.CMInterface.GetServiceTransport(),
                       o
                     )
                     .then(function(e) {
@@ -35305,7 +35396,7 @@ and limitations under the License.
               }
               return lr
                 .DeleteInviteLink(
-                  Up.ChatStore.CMInterface.GetServiceTransport(),
+                  Hp.ChatStore.CMInterface.GetServiceTransport(),
                   i
                 )
                 .then(function(e) {
@@ -35337,7 +35428,7 @@ and limitations under the License.
                     .set_unread_indicator_muted(i)),
                 lr
                   .SetUserChatGroupPreferences(
-                    Up.CMInterface.GetServiceTransport(),
+                    Hp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -35408,7 +35499,7 @@ and limitations under the License.
             e
           );
         })(),
-        ps = (function(e) {
+        ms = (function(e) {
           function t(t, i) {
             var n = e.call(this) || this;
             return (
@@ -35492,7 +35583,7 @@ and limitations under the License.
               return (
                 i
                   ? console.log("reusing chat for", t)
-                  : (i = new Ms(this.m_tabset, e)),
+                  : (i = new ws(this.m_tabset, e)),
                 i
               );
             }),
@@ -35517,18 +35608,18 @@ and limitations under the License.
                 this.ClosePopoverChat(),
                 this.GetSelectedChatView().OnViewClosed(),
                 this.GetGroup().UnloadGroupState(),
-                Up.ChatStore.RemoveChatRoomGroupFromActiveSet(
+                Hp.ChatStore.RemoveChatRoomGroupFromActiveSet(
                   this.GetGroup().GetGroupID()
                 );
             }),
             (t.prototype.IsVoiceActive = function() {
               return (
-                Up.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
+                Hp.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
                 this.m_group.GetGroupID()
               );
             }),
             (t.prototype.IsTabForChat = function(e) {
-              if (!(e instanceof cs)) return !1;
+              if (!(e instanceof us)) return !1;
               var t = e;
               return !!this.m_group.GetChatRoom(t.GetRoomID());
             }),
@@ -35568,7 +35659,7 @@ and limitations under the License.
             t
           );
         })(mr),
-        hs = (function() {
+        gs = (function() {
           function e() {
             this.loadingState = "pending";
           }
@@ -35578,7 +35669,7 @@ and limitations under the License.
             e
           );
         })(),
-        ms = (function() {
+        fs = (function() {
           function e() {
             this.loadingState = "pending";
           }
@@ -35588,7 +35679,7 @@ and limitations under the License.
             e
           );
         })(),
-        gs = (function() {
+        _s = (function() {
           function e() {
             this.loadingState = "pending";
           }
@@ -35598,8 +35689,8 @@ and limitations under the License.
             e
           );
         })(),
-        fs = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 },
-        _s = (function() {
+        ys = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 },
+        vs = (function() {
           function e() {
             this.m_mapDisplayPrefs = pt.observable.map();
           }
@@ -35618,7 +35709,7 @@ and limitations under the License.
                   });
             }),
             (e.prototype.GetChatRoomDisplayPref = function(e, t) {
-              return (this.m_mapDisplayPrefs.get(e) || fs)[t];
+              return (this.m_mapDisplayPrefs.get(e) || ys)[t];
             }),
             (e.prototype.ToggleChatRoomDisplayPref = function(e, t) {
               var i = this.GetChatRoomDisplayPref(e, t);
@@ -35628,7 +35719,7 @@ and limitations under the License.
               var n = this.m_mapDisplayPrefs.get(e);
               (n && n[t] === i) ||
                 (n ||
-                  (this.m_mapDisplayPrefs.set(e, Object.assign({}, fs)),
+                  (this.m_mapDisplayPrefs.set(e, Object.assign({}, ys)),
                   (n = this.m_mapDisplayPrefs.get(e))),
                 (n[t] = i),
                 this.WritePrefs());
@@ -35643,14 +35734,14 @@ and limitations under the License.
             e
           );
         })(),
-        ys = (function() {
+        bs = (function() {
           function e() {
             var e = this;
             (this.m_bEmoticonListRequested = !1),
               (this.m_bInitialized = !1),
               (this.m_rgEmoticons = []),
               (this.m_rgRecentEmoticons = void 0),
-              (this.fnRecvEmoticonList = s(9331, Bo, function(t) {
+              (this.fnRecvEmoticonList = s(9331, Io, function(t) {
                 (e.m_rgEmoticons = []), (e.m_rgRecentEmoticons = void 0);
                 for (var i = 0, n = t.Body().emoticons(); i < n.length; i++) {
                   var r = n[i],
@@ -35785,7 +35876,7 @@ and limitations under the License.
                 this.m_CMInterface.logged_on
               ) {
                 this.m_bEmoticonListRequested = !0;
-                var e = dt.Init(Oo, 9330);
+                var e = dt.Init(Ro, 9330);
                 this.m_CMInterface.Send(e);
               }
             }),
@@ -35811,7 +35902,7 @@ and limitations under the License.
             e
           );
         })(),
-        vs = (function() {
+        Cs = (function() {
           function e(e) {
             var t = this;
             (this.m_rgFriendChats = []),
@@ -35819,13 +35910,13 @@ and limitations under the License.
               (this.m_mapLastChatTimeByFriend = pt.observable.map()),
               (this.m_mapRecentIgnoreTimeBeforeByFriend = pt.observable.map()),
               (this.m_IncomingFriendMessageHandler = l(
-                Ha.IncomingMessageHandler,
+                Ka.IncomingMessageHandler,
                 function(e) {
                   var i = new lt.a(e.Body().steamid_friend()),
-                    n = Up.FriendStore.GetPlayerIfCached(i.GetAccountID());
+                    n = Hp.FriendStore.GetPlayerIfCached(i.GetAccountID());
                   if (!n) {
                     if (e.Body().low_priority()) return 41;
-                    n = Up.FriendStore.GetPlayer(i.GetAccountID());
+                    n = Hp.FriendStore.GetPlayer(i.GetAccountID());
                   }
                   if (1 == e.Body().chat_entry_type()) {
                     var r = e.Body().local_echo(),
@@ -35837,9 +35928,9 @@ and limitations under the License.
                       c = s.GetVisibilityState();
                     !o &&
                       !r &&
-                      !Up.FriendStore.BIsInvisibleMode() &&
-                      Up.UIStore.ShowAndOrActivateChat(
-                        Up.GetDefaultBrowserContext(),
+                      !Hp.FriendStore.BIsInvisibleMode() &&
+                      Hp.UIStore.ShowAndOrActivateChat(
+                        Hp.GetDefaultBrowserContext(),
                         s,
                         !1
                       ),
@@ -35867,7 +35958,7 @@ and limitations under the License.
                 }
               )),
               (this.m_AckMessageEchoHandler = l(
-                Ha.NotifyAckMessageEchoHandler,
+                Ka.NotifyAckMessageEchoHandler,
                 function(e) {
                   var i = new lt.a(e.Body().steamid_partner()),
                     n = t.GetFriendChat(i.GetAccountID());
@@ -35886,7 +35977,7 @@ and limitations under the License.
                 if (r.accountid_partner == e) return r;
               }
               if (!t) return null;
-              var o = new bs(
+              var o = new Ss(
                 e,
                 this,
                 this.m_ChatStore,
@@ -35897,7 +35988,7 @@ and limitations under the License.
             (e.prototype.OnLogon = function() {
               var e = this;
               this.LoadFriendMessageSessions(),
-                Up.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                Hp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "FriendRecentChats"
                 ).then(function(t) {
                   e.m_mapRecentIgnoreTimeBeforeByFriend.clear();
@@ -35920,11 +36011,10 @@ and limitations under the License.
             }),
             (e.prototype.LoadFriendMessageSessions = function() {
               var e = this,
-                t = dt.Init(Aa);
+                t = dt.Init(za);
               t.Body().set_lastmessage_since(this.m_rtLastSessionUpdate),
-                ka
-                  .GetActiveMessageSessions(this.GetServiceTransport(), t)
-                  .then(function(t) {
+                Ga.GetActiveMessageSessions(this.GetServiceTransport(), t).then(
+                  function(t) {
                     e.m_rtLastSessionUpdate = t.Body().timestamp();
                     for (
                       var i = 0, n = t.Body().message_sessions();
@@ -35948,7 +36038,8 @@ and limitations under the License.
                           );
                       }
                     }
-                  });
+                  }
+                );
             }),
             (e.prototype.GetFriendsWithUnreadMessages = function(e) {
               for (
@@ -35995,17 +36086,17 @@ and limitations under the License.
             (e.prototype.ClearRecentChatsForFriend = function(e) {
               this.m_mapRecentIgnoreTimeBeforeByFriend.set(
                 e,
-                Up.GetServerRTime32()
+                Hp.GetServerRTime32()
               ),
                 this.WriteRecentChatsPrefs();
             }),
             (e.prototype.WriteRecentChatsPrefs = function() {
               var e = this,
-                t = Up.GetServerRTime32() - this.RecentChatCutoffDuration;
+                t = Hp.GetServerRTime32() - this.RecentChatCutoffDuration;
               this.m_mapRecentIgnoreTimeBeforeByFriend.forEach(function(i, n) {
                 i < t && e.m_mapRecentIgnoreTimeBeforeByFriend.delete(n);
               }),
-                Up.SettingsStore.StoreObjectInLocalStorage(
+                Hp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendRecentChats",
                   {
                     ignoretimes: this.m_mapRecentIgnoreTimeBeforeByFriend.toJS()
@@ -36016,18 +36107,18 @@ and limitations under the License.
               get: function() {
                 var e = this,
                   t = [],
-                  i = Up.GetServerRTime32() - this.RecentChatCutoffDuration;
+                  i = Hp.GetServerRTime32() - this.RecentChatCutoffDuration;
                 return (
                   this.m_mapLastChatTimeByFriend.forEach(function(n, r) {
                     if (n >= i) {
                       var o = e.m_mapRecentIgnoreTimeBeforeByFriend.get(r);
                       if (!o || o < n) {
-                        var a = Up.FriendStore.GetFriend(r);
+                        var a = Hp.FriendStore.GetFriend(r);
                         a && t.push(a);
                       }
                     }
                   }),
-                  t.sort(Ka.DefaultFriendSortComparator),
+                  t.sort(Ja.DefaultFriendSortComparator),
                   t
                 );
               },
@@ -36062,7 +36153,7 @@ and limitations under the License.
             e
           );
         })(),
-        bs = (function(e) {
+        Ss = (function(e) {
           function t(t, i, n, r) {
             var o = e.call(this, n.FriendStore, n, r) || this;
             return (
@@ -36102,7 +36193,7 @@ and limitations under the License.
             }),
             (t.prototype.GetShowNonFriendWarning = function() {
               var e = this.m_bNeedsNonFriendWarning,
-                t = !Up.FriendStore.BApprovedNonFriendMessages(
+                t = !Hp.FriendStore.BApprovedNonFriendMessages(
                   this.accountid_partner
                 );
               return e && t;
@@ -36110,7 +36201,7 @@ and limitations under the License.
             (t.prototype.InternalLoadChatLogs = function(e) {
               var t = this;
               void 0 === e && (e = !1);
-              var i = dt.Init(Ga);
+              var i = dt.Init(Na);
               if (
                 (i
                   .Body()
@@ -36137,14 +36228,13 @@ and limitations under the License.
                   i.Body().set_rtime32_start_time(n.rtTimestamp),
                   i.Body().set_start_ordinal(n.unOrdinal));
               }
-              i.Body().set_count(to.k_InitialMessageCount),
+              i.Body().set_count(no.k_InitialMessageCount),
                 i.Body().set_bbcode_format(!0),
                 (this.m_nLoadingHistoryInProgressCount += 1),
-                ka
-                  .GetRecentMessages(
-                    this.m_CMInterface.GetServiceTransport(),
-                    i
-                  )
+                Ga.GetRecentMessages(
+                  this.m_CMInterface.GetServiceTransport(),
+                  i
+                )
                   .then(function(e) {
                     return t.ProcessGetRecentMessagesResponse(e);
                   })
@@ -36156,7 +36246,7 @@ and limitations under the License.
               var e = this;
               if (0 != this.m_nLoadingHistoryInProgressCount)
                 return Promise.resolve(!0);
-              var t = dt.Init(Ga);
+              var t = dt.Init(Na);
               return (
                 t
                   .Body()
@@ -36174,22 +36264,20 @@ and limitations under the License.
                 t.Body().set_start_ordinal(0),
                 t.Body().set_time_last(this.m_oldestMessageTime),
                 t.Body().set_ordinal_last(this.m_oldestMessageOrdinal),
-                t.Body().set_count(to.k_LoadMoreMessageCount),
+                t.Body().set_count(no.k_LoadMoreMessageCount),
                 t.Body().set_bbcode_format(!0),
                 (this.m_nLoadingHistoryInProgressCount += 1),
-                ka
-                  .GetRecentMessages(
-                    this.m_CMInterface.GetServiceTransport(),
-                    t
-                  )
-                  .then(function(t) {
-                    var i = 1 == t.GetEResult();
-                    return (
-                      i && e.ProcessGetRecentMessagesResponse(t),
-                      (e.m_nLoadingHistoryInProgressCount -= 1),
-                      i
-                    );
-                  })
+                Ga.GetRecentMessages(
+                  this.m_CMInterface.GetServiceTransport(),
+                  t
+                ).then(function(t) {
+                  var i = 1 == t.GetEResult();
+                  return (
+                    i && e.ProcessGetRecentMessagesResponse(t),
+                    (e.m_nLoadingHistoryInProgressCount -= 1),
+                    i
+                  );
+                })
               );
             }),
             (t.prototype.ProcessGetRecentMessagesResponse = function(e) {
@@ -36201,7 +36289,7 @@ and limitations under the License.
                 var r = t[n],
                   o = r.accountid();
                 i.push(
-                  new Xr(o, r.timestamp(), r.ordinal(), r.message() || "")
+                  new Qr(o, r.timestamp(), r.ordinal(), r.message() || "")
                 );
               }
               this.MergeChatHistoryChunk(i),
@@ -36219,7 +36307,7 @@ and limitations under the License.
               return this.m_ChatStore.FriendChatBBCodeParser;
             }),
             (t.prototype.AckChatMsgOnServer = function(e) {
-              var t = dt.Init(Ua);
+              var t = dt.Init(Va);
               t
                 .Body()
                 .set_steamid_partner(
@@ -36228,7 +36316,7 @@ and limitations under the License.
                     .ConvertTo64BitString()
                 ),
                 t.Body().set_timestamp(e),
-                ka.AckMessage(this.m_CMInterface.GetServiceTransport(), t);
+                Ga.AckMessage(this.m_CMInterface.GetServiceTransport(), t);
             }),
             Object.defineProperty(t.prototype, "name", {
               get: function() {
@@ -36275,7 +36363,7 @@ and limitations under the License.
                 this.ChatStore.VoiceChat.IsVoiceActiveForFriend(
                   this.accountid_partner
                 )
-                  ? Up.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  ? Hp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
                       this.accountid_partner
                     )
                     ? this.ChatStore.VoiceChat.OnUserLeaveOneOnOneVoiceChat()
@@ -36302,12 +36390,12 @@ and limitations under the License.
               var t = this;
               if (!this.m_CMInterface.logged_on) return !1;
               this.chat_partner.is_friend ||
-                Up.FriendStore.SetApprovedNonFriendMessages(
+                Hp.FriendStore.SetApprovedNonFriendMessages(
                   this.chat_partner.accountid
                 );
-              var i = kr.EscapeBBCode(e),
+              var i = Gr.EscapeBBCode(e),
                 n = this.AppendLocalEchoChatMsg(i),
-                r = dt.Init(La);
+                r = dt.Init(ja);
               return (
                 r.Body().set_chat_entry_type(1),
                 r.Body().set_message(i),
@@ -36319,8 +36407,7 @@ and limitations under the License.
                       .ConvertTo64BitString()
                   ),
                 r.Body().set_contains_bbcode(!0),
-                ka
-                  .SendMessage(this.m_CMInterface.GetServiceTransport(), r)
+                Ga.SendMessage(this.m_CMInterface.GetServiceTransport(), r)
                   .then(function(e) {
                     if (1 == e.GetEResult()) {
                       (n.rtTimestamp = e.Body().server_timestamp()),
@@ -36351,7 +36438,7 @@ and limitations under the License.
                 performance.now() - this.m_tsLastSentTypingNotification > 1e4
               ) {
                 this.m_tsLastSentTypingNotification = performance.now();
-                var e = dt.Init(La);
+                var e = dt.Init(ja);
                 e.Body().set_chat_entry_type(2),
                   e
                     .Body()
@@ -36360,7 +36447,7 @@ and limitations under the License.
                         .InitFromAccountID(this.accountid_partner)
                         .ConvertTo64BitString()
                     ),
-                  ka.SendMessage(this.m_CMInterface.GetServiceTransport(), e);
+                  Ga.SendMessage(this.m_CMInterface.GetServiceTransport(), e);
               }
             }),
             Object.defineProperty(t.prototype, "is_friend_typing", {
@@ -36389,12 +36476,12 @@ and limitations under the License.
                   (this.ClearFriendIsTypingState(),
                   t < 2 &&
                     (this.is_blocked_friend ||
-                      Up.FriendStore.BIsInvisibleMode()))
+                      Hp.FriendStore.BIsInvisibleMode()))
                 )
                   return;
                 if (
-                  Up.NotificationManager.BNotificationsPermitted() &&
-                  Up.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
+                  Hp.NotificationManager.BNotificationsPermitted() &&
+                  Hp.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
                   t < 4
                 ) {
                   var r = Object(hr.b)(
@@ -36406,11 +36493,12 @@ and limitations under the License.
                       a = {
                         chat: this,
                         unAccountIDSender: e.unAccountID,
+                        key: e.UniqueKey(),
                         rtTimestamp: e.rtTimestamp
                       },
                       s = o.ParseBBCode(n, a);
                     s &&
-                      Up.NotificationManager.DisplayNotificationFromFriend(
+                      Hp.NotificationManager.DisplayNotificationFromFriend(
                         this.chat_partner,
                         {
                           title: s.title,
@@ -36420,7 +36508,7 @@ and limitations under the License.
                         }
                       );
                   } else
-                    Up.NotificationManager.DisplayNotificationFromFriend(
+                    Hp.NotificationManager.DisplayNotificationFromFriend(
                       this.chat_partner,
                       {
                         title: r,
@@ -36430,15 +36518,15 @@ and limitations under the License.
                       }
                     );
                 }
-                Up.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
+                Hp.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
                   t < 4 &&
-                  Up.AudioPlaybackManager.PlayAudioURL(
+                  Hp.AudioPlaybackManager.PlayAudioURL(
                     tt.a.COMMUNITY_CDN_URL +
                       "public/sounds/webui/steam_new_chat_message.m4a?v=2"
                   ),
-                  0 == Up.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Hp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Up.UIStore.FlashChatWindow(this);
+                    Hp.UIStore.FlashChatWindow(this);
               }
             }),
             (t.prototype.ClearFriendIsTypingState = function() {
@@ -36469,13 +36557,13 @@ and limitations under the License.
             }),
             Object.defineProperty(t.prototype, "chat_partner", {
               get: function() {
-                return Up.FriendStore.GetPlayer(this.m_unAccountIDFriend);
+                return Hp.FriendStore.GetPlayer(this.m_unAccountIDFriend);
               },
               enumerable: !0,
               configurable: !0
             }),
             (t.prototype.AddNewTradeRequestAndNotify = function(e, t, i, n) {
-              var r = new $r(e, t, i, n);
+              var r = new to(e, t, i, n);
               this.m_rgChatMessages.push(r), (this.m_ChatMsgTradeRequest = r);
               var o = Object(hr.b)(
                 "#ChatRoom_TradeRequest_Recipient_Pending",
@@ -36503,14 +36591,14 @@ and limitations under the License.
                   '[broadcastviewrequest requestid="' +
                   e +
                   '"][/broadcastviewrequest]',
-                i = new Xr(
+                i = new Qr(
                   this.chat_partner.accountid,
-                  Up.GetServerRTime32(),
+                  Hp.GetServerRTime32(),
                   0,
                   t
                 );
               this.m_rgChatMessages.push(i),
-                Up.NotificationManager.DisplayNotificationFromFriend(
+                Hp.NotificationManager.DisplayNotificationFromFriend(
                   this.chat_partner,
                   {
                     title: "",
@@ -36545,16 +36633,17 @@ and limitations under the License.
             it.b([pt.action], t.prototype, "ViewerNeedsApproval", null),
             t
           );
-        })(to),
-        Cs = i("z9An"),
-        Ss = (function() {
+        })(no),
+        Ms = i("z9An"),
+        Fs = (function() {
           function e(e) {
             var t = this;
-            (this.m_EmoticonStore = new ys()),
-              (this.m_FriendChatStore = new vs(this)),
+            (this.m_EmoticonStore = new bs()),
+              (this.m_FriendChatStore = new Cs(this)),
               (this.m_InviteStore = new vr(this)),
               (this.m_GameInviteStore = new Or()),
-              (this.m_ChatRoomGroupDisplayPrefs = new _s()),
+              (this.m_ChatRoomGroupDisplayPrefs = new vs()),
+              (this.m_EmbedStore = new Rr()),
               (this.m_mapChatGroups = pt.observable.map()),
               (this.m_setActiveChatGroups = new Set()),
               (this.m_mapClanChatsByClanID = new Map()),
@@ -36648,7 +36737,7 @@ and limitations under the License.
                         i.group_summary(),
                         i.user_chat_group_state()
                       );
-                      Up.UIStore.ShowAndOrActivateChatRoomGroup(xp, o, !1);
+                      Hp.UIStore.ShowAndOrActivateChatRoomGroup(Wp, o, !1);
                       break;
                     case 2:
                     case 3:
@@ -36706,16 +36795,17 @@ and limitations under the License.
               (this.m_CMInterface = e),
                 this.m_EmoticonStore.Init(e),
                 (this.m_VoiceChat = t),
-                (this.m_ChatRoomBBCodeParser = new kr(
-                  Up.GetChatRoomBBCodeDictionary()
+                (this.m_ChatRoomBBCodeParser = new Gr(
+                  Hp.GetChatRoomBBCodeDictionary()
                 )),
-                (this.m_FriendChatBBCodeParser = new kr(
-                  Up.GetFriendChatBBCodeDictionary()
+                (this.m_FriendChatBBCodeParser = new Gr(
+                  Hp.GetFriendChatBBCodeDictionary()
                 )),
-                (this.m_FriendNotificationBBCodeParser = new Er(
-                  Up.GetFriendNotificationBBCodeDictionary()
+                (this.m_FriendNotificationBBCodeParser = new Tr(
+                  Hp.GetFriendNotificationBBCodeDictionary()
                 )),
-                this.m_ChatRoomGroupDisplayPrefs.Init(Up.SettingsStore);
+                this.m_ChatRoomGroupDisplayPrefs.Init(Hp.SettingsStore),
+                this.m_EmbedStore.Init();
               var n = !1;
               return (
                 this.m_CMInterface.AddOnLogonCallback(function() {
@@ -36726,7 +36816,7 @@ and limitations under the License.
                     i.m_GameInviteStore.Init();
                 }, 102),
                 this.m_CMInterface.RunWhenLoggedOn(function() {
-                  Cs.d.SetCurrentLoggedInAccountID(
+                  Ms.d.SetCurrentLoggedInAccountID(
                     i.CMInterface.steamid.GetAccountID()
                   );
                 }),
@@ -36770,12 +36860,12 @@ and limitations under the License.
                         s = a.group_summary().chat_group_id();
                       if (s) {
                         var c = e.m_mapChatGroups.get(s);
-                        c || ((c = new ds(e, s)), e.m_mapChatGroups.set(s, c)),
+                        c || ((c = new hs(e, s)), e.m_mapChatGroups.set(s, c)),
                           c.SetInitialGroupState(a.group_summary()),
                           c.UpdateUserState(a.user_chat_group_state()),
                           e.OnGroupAdded(c),
                           c.BHasEverBeenAcked() ||
-                            Up.UIStore.ShowUnackedGroup(c);
+                            Hp.UIStore.ShowUnackedGroup(c);
                       } else t = !0;
                     }
                     e.BuildInitialRecentGroupList(),
@@ -36798,7 +36888,7 @@ and limitations under the License.
             }),
             (e.prototype.BuildInitialRecentGroupList = function() {
               var e = [],
-                t = Up.GetServerRTime32() - 1296e3;
+                t = Hp.GetServerRTime32() - 1296e3;
               this.m_mapChatGroups.forEach(function(i) {
                 for (var n = 0, r = i.chatRoomList; n < r.length; n++) {
                   var o = r[n],
@@ -36816,17 +36906,17 @@ and limitations under the License.
             (e.prototype.JoinAndShowChatRoomGroup = function(e, t, i) {
               var n = this.GetChatRoomGroup(t);
               n && n.BIsCurrentUserAMember()
-                ? Up.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
+                ? Hp.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
                 : this.m_InviteStore.JoinChatGroup(t, null, e);
             }),
             (e.prototype.AddCreatedChatRoomGroup = function(e, t, i, n) {
               if (!this.m_mapChatGroups.has(t)) {
-                var r = new ds(this, t);
+                var r = new hs(this, t);
                 this.m_mapChatGroups.set(t, r),
                   r.UpdateGroupState(i),
                   r.UpdateUserState(n),
                   this.OnGroupAdded(r),
-                  Up.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
+                  Hp.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
               }
             }),
             (e.prototype.AddKnownChatRoomGroup = function(e, t) {
@@ -36835,7 +36925,7 @@ and limitations under the License.
                 var n = this.m_mapChatGroups.get(i);
                 n.SetInitialGroupState(e);
               } else {
-                var n = new ds(this, i);
+                var n = new hs(this, i);
                 this.m_mapChatGroups.set(i, n),
                   n.SetInitialGroupState(e),
                   t && n.UpdateUserState(t),
@@ -36846,7 +36936,7 @@ and limitations under the License.
               var i = t.chat_group_id(),
                 n = this.m_mapChatGroups.get(i);
               return (
-                n || ((n = new ds(this, i)), this.m_mapChatGroups.set(i, n)),
+                n || ((n = new hs(this, i)), this.m_mapChatGroups.set(i, n)),
                 e instanceof en
                   ? n.UpdateGroupState(e)
                   : n.SetInitialGroupState(e),
@@ -36859,7 +36949,7 @@ and limitations under the License.
               var t = this.m_mapChatGroups.get(e);
               if (t) {
                 var i = this.m_mapChatGroups.get(e);
-                i && Up.UIStore.CloseTabByID(i.unique_id),
+                i && Hp.UIStore.CloseTabByID(i.unique_id),
                   this.RemoveChatRoomGroupFromActiveSet(e),
                   t.UnloadAndResetGroupState();
               }
@@ -36955,6 +37045,13 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "GameInviteStore", {
               get: function() {
                 return this.m_GameInviteStore;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "EmbedStore", {
+              get: function() {
+                return this.m_EmbedStore;
               },
               enumerable: !0,
               configurable: !0
@@ -37163,7 +37260,7 @@ and limitations under the License.
             e
           );
         })(),
-        Ms = (function(e) {
+        ws = (function(e) {
           function t(t, i) {
             var n = e.call(this) || this;
             return (
@@ -37202,7 +37299,7 @@ and limitations under the License.
               this.OnViewClosed();
             }),
             (t.prototype.IsChatRoom = function() {
-              return this.m_chat instanceof cs;
+              return this.m_chat instanceof us;
             }),
             (t.prototype.IsVoiceActive = function() {
               return this.m_chat.BVoiceActive();
@@ -37239,7 +37336,7 @@ and limitations under the License.
                 e == this && this.m_tabset.is_popup_visible
                   ? this.m_tabset.is_popup_focused
                     ? this.m_bScrolledToBottom &&
-                      !Up.IdleTracker.BIsUserIdle(60)
+                      !Hp.IdleTracker.BIsUserIdle(60)
                       ? 4
                       : 3
                     : 2
@@ -37409,8 +37506,8 @@ and limitations under the License.
             t
           );
         })(mr),
-        Fs = i("wLXD"),
-        ws = (function(e) {
+        Os = i("wLXD"),
+        Bs = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -37433,12 +37530,12 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.DeliverDeferredDragEnter = function() {
-              var e = Sm.DragDropManager.GetDragData();
+              var e = Om.DragDropManager.GetDragData();
               return this.props.fnDragEnter(e, this.m_deferredEnter.bFiles);
             }),
             (t.prototype.OnDragEnter = function(e) {
               if (!this.m_bAcceptDrag) {
-                var t = Sm.DragDropManager.GetDragData(),
+                var t = Om.DragDropManager.GetDragData(),
                   i =
                     this.props.bAcceptsFiles &&
                     -1 != e.dataTransfer.types.indexOf("Files");
@@ -37478,7 +37575,7 @@ and limitations under the License.
                 (this.m_bAcceptDrag = !1),
                   e.preventDefault(),
                   e.stopPropagation();
-                var t = Sm.DragDropManager.GetDragData();
+                var t = Om.DragDropManager.GetDragData();
                 t && -1 != this.props.rgAcceptedTypes.indexOf(t.type)
                   ? this.props.fnDrop && this.props.fnDrop(t, e)
                   : this.props.bAcceptsFiles &&
@@ -37525,13 +37622,13 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Os = i("Mn8c"),
-        Bs = i("5Pz3"),
-        Rs = i("Y6cV"),
-        Is = (br.Component,
+        Rs = i("Mn8c"),
+        Is = i("5Pz3"),
+        Es = i("Y6cV"),
+        ks = (br.Component,
         (function() {
           function e() {
-            (this.m_embeddedElement = new Rs.a("DragGhosts")),
+            (this.m_embeddedElement = new Es.a("DragGhosts")),
               (this.m_rgDropRegions = []),
               (this.m_rgActiveDropRegions = []);
           }
@@ -37632,7 +37729,7 @@ and limitations under the License.
             e
           );
         })()),
-        Es = (function(e) {
+        Ts = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -37761,10 +37858,10 @@ and limitations under the License.
               );
             }),
             (t.prototype.renderDropGhost = function() {
-              return br.createElement(ks, { elContent: this.GetClone() });
+              return br.createElement(Gs, { elContent: this.GetClone() });
             }),
             (t.prototype.renderDragGhost = function() {
-              return br.createElement(Ts, {
+              return br.createElement(Ds, {
                 elContent: this.GetClone(),
                 offsetX: this.m_DragInfo.startOffsetX,
                 offsetY: this.m_DragInfo.startOffsetY,
@@ -37774,7 +37871,7 @@ and limitations under the License.
             }),
             (t.prototype.GetClone = function() {
               var e,
-                t = Fs.findDOMNode(this);
+                t = Os.findDOMNode(this);
               if (t && t.childElementCount)
                 if (1 == t.childElementCount)
                   e = t.firstElementChild.cloneNode(!0);
@@ -37793,7 +37890,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ks = (function(e) {
+        Gs = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -37812,7 +37909,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Ts = (function(e) {
+        Ds = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -37847,7 +37944,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Gs = (function(e) {
+        Ns = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = {}), i;
@@ -37892,7 +37989,7 @@ and limitations under the License.
             (t.prototype.GetClientRect = function() {
               return (
                 this.m_elDropRegion ||
-                  (this.m_elDropRegion = Fs.findDOMNode(this)),
+                  (this.m_elDropRegion = Os.findDOMNode(this)),
                 this.m_elDropRegion &&
                   this.m_elDropRegion.getBoundingClientRect()
               );
@@ -37907,7 +38004,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Ns = (function(e) {
+        As = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -37932,10 +38029,10 @@ and limitations under the License.
             }),
             t
           );
-        })(Gs),
-        Ds = i("4JXe"),
-        As = i("tW2u"),
-        Ps = (function() {
+        })(Ns),
+        Ps = i("4JXe"),
+        zs = i("tW2u"),
+        xs = (function() {
           function e(e, t) {
             (this.m_bActive = !1),
               (this.m_fnBoundAnimationFunc = void 0),
@@ -38002,7 +38099,7 @@ and limitations under the License.
             e
           );
         })(),
-        zs = (function(e) {
+        Ls = (function(e) {
           function t(t, i, n) {
             var r = e.call(this, Mr.g(t), n) || this;
             return (r.m_props = {}), (r.m_object = t), (r.m_propTargets = i), r;
@@ -38027,10 +38124,10 @@ and limitations under the License.
             }),
             t
           );
-        })(Ps),
-        Ls = (function(e) {
+        })(xs),
+        js = (function(e) {
           function t(t, i, n) {
-            var r = e.call(this, Mr.g(Fs.findDOMNode(t)), n) || this;
+            var r = e.call(this, Mr.g(Os.findDOMNode(t)), n) || this;
             return (
               (r.m_props = {}),
               (r.m_component = t),
@@ -38066,19 +38163,19 @@ and limitations under the License.
             }),
             t
           );
-        })(Ps),
-        xs = A("DialogHeader"),
-        js = A("DialogFooter"),
-        Us = A("DialogLabel _DialogLayout"),
-        Ws = A("DialogBodyText"),
-        Vs = A("DialogBody"),
-        Hs = A("DialogInnerBody"),
-        qs = A("DialogBodyNotificationBar"),
-        Ks = A("DialogTwoColLayout _DialogColLayout"),
-        Ys = A("DialogThreeColLayout _DialogColLayout"),
-        Js = (A("DialogTwoThirdColLayout _DialogColLayout"),
+        })(xs),
+        Us = A("DialogHeader"),
+        Ws = A("DialogFooter"),
+        Vs = A("DialogLabel _DialogLayout"),
+        Hs = A("DialogBodyText"),
+        qs = A("DialogBody"),
+        Ks = A("DialogInnerBody"),
+        Ys = A("DialogBodyNotificationBar"),
+        Js = A("DialogTwoColLayout _DialogColLayout"),
+        Xs = A("DialogThreeColLayout _DialogColLayout"),
+        Zs = (A("DialogTwoThirdColLayout _DialogColLayout"),
         A("DialogColumn _DialogLayout")),
-        Xs = (function(e) {
+        Qs = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38097,7 +38194,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Zs = (function(e) {
+        $s = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -38140,7 +38237,7 @@ and limitations under the License.
                   this.state.m_bPlayingCopiedAnimation,
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
                   this.setState({ m_CopiedYPos: -4 }, function() {
-                    (t.m_CopiedAnimation = new Ls(
+                    (t.m_CopiedAnimation = new js(
                       t,
                       { m_CopiedYPos: -24 },
                       {
@@ -38239,7 +38336,7 @@ and limitations under the License.
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      br.createElement(Bs.N, null)
+                      br.createElement(Is.N, null)
                     )
                 ),
                 u
@@ -38274,7 +38371,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Qs = (function(e) {
+        ec = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38356,8 +38453,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnInputBlur", null),
             t
           );
-        })(Zs),
-        $s = (function(e) {
+        })($s),
+        tc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { checked: t.checked, disabled: t.disabled }), i;
@@ -38403,7 +38500,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ec = (function(e) {
+        ic = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38424,7 +38521,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: e },
-                        br.createElement(Bs.i, null)
+                        br.createElement(Is.i, null)
                       ),
                       br.createElement(
                         "div",
@@ -38446,14 +38543,14 @@ and limitations under the License.
                         onClick: this.Toggle,
                         tabIndex: this.props.tabIndex || 0
                       },
-                      br.createElement(Bs.i, null)
+                      br.createElement(Is.i, null)
                     )
               );
             }),
             t
           );
-        })($s),
-        tc = (function(e) {
+        })(tc),
+        nc = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38483,8 +38580,8 @@ and limitations under the License.
             }),
             t
           );
-        })($s),
-        ic = (function(e) {
+        })(tc),
+        rc = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -38555,8 +38652,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnOffKeyDown", null),
             t
           );
-        })($s),
-        nc = (function(e) {
+        })(tc),
+        oc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { value: i.ClampValue(t.value) }), i;
@@ -38733,7 +38830,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        rc = (function(e) {
+        ac = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -38832,7 +38929,7 @@ and limitations under the License.
               this.m_iMenuInstance
                 ? this.m_iMenuInstance.Show()
                 : ((this.m_iMenuInstance = Object(Sr.a)(
-                    br.createElement(oc, {
+                    br.createElement(sc, {
                       rgOptions: this.props.rgOptions,
                       fnOnItemSelected: this.OnItemSelected
                     }),
@@ -38881,7 +38978,7 @@ and limitations under the License.
                     br.createElement(
                       "div",
                       { className: "DialogDropDown_Arrow" },
-                      br.createElement(Bs.k, null)
+                      br.createElement(Is.k, null)
                     ),
                     t
                   )
@@ -38896,7 +38993,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        oc = (function(e) {
+        sc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { iFocus: 0 }), i;
@@ -38936,13 +39033,13 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ac = (function(e) {
+        cc = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return it.c(t, e), t;
         })(br.Component),
-        sc = (function(e) {
+        lc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { activePage: -1 }), i;
@@ -38950,7 +39047,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.OnActivePageRef = function(e) {
-              e instanceof ac
+              e instanceof cc
                 ? (this.m_ActivePage = e)
                 : (AssertMsg(
                     !e,
@@ -38995,7 +39092,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: l.join(" "), key: o.title, onClick: c },
-                        u && br.createElement(Bs.L, null),
+                        u && br.createElement(Is.L, null),
                         o.title
                       )
                     );
@@ -39028,11 +39125,11 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    As,
+                    zs,
                     { className: "DialogContentTransition" },
                     t &&
                       br.createElement(
-                        Ds,
+                        Ps,
                         {
                           key: t.title,
                           classNames: "opacityfade-anim",
@@ -39043,14 +39140,14 @@ and limitations under the License.
                           { className: "PagedSettingsDialog_PageContent" + a },
                           !o &&
                             br.createElement(
-                              xs,
+                              Us,
                               null,
                               t.title,
                               !s &&
                                 br.createElement(
-                                  qs,
+                                  Ys,
                                   null,
-                                  br.createElement(Bs.q, null),
+                                  br.createElement(Is.q, null),
                                   Object(hr.b)(
                                     "#Chat_Settings_Permission_Denied"
                                   )
@@ -39070,7 +39167,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        cc = (function(e) {
+        uc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -39087,7 +39184,7 @@ and limitations under the License.
             }),
             (t.prototype.HandleSubmit = function(e) {
               var t = this;
-              Up.FriendStore.SetFriendNickname(
+              Hp.FriendStore.SetFriendNickname(
                 this.props.friend,
                 this.state.strCurrentNameEntry
               ).then(function(e) {
@@ -39119,24 +39216,24 @@ and limitations under the License.
                       onSubmit: this.HandleSubmit
                     },
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       t
                         ? Object(hr.b)("#Friend_Menu_ChangeNickname")
                         : Object(hr.b)("#Friend_Menu_AddNickname")
                     ),
                     br.createElement(
-                      Vs,
+                      qs,
                       null,
                       br.createElement(
-                        Ws,
+                        Hs,
                         null,
                         t
                           ? Object(hr.b)("#Nickname_EditNickname")
                           : Object(hr.b)("#Nickname_AddANickname")
                       ),
                       br.createElement(
-                        Ws,
+                        Hs,
                         null,
                         br.createElement(
                           "div",
@@ -39161,7 +39258,7 @@ and limitations under the License.
                             br.createElement(
                               "div",
                               { className: "mediumName asNickName" },
-                              br.createElement(Zs, {
+                              br.createElement($s, {
                                 placeholder: t
                                   ? Object(hr.b)(
                                       "#Nickname_PlaceHolderNickName"
@@ -39181,9 +39278,9 @@ and limitations under the License.
                       )
                     ),
                     br.createElement(
-                      js,
+                      Ws,
                       null,
-                      br.createElement(D, { onCancel: this.props.closeModal })
+                      br.createElement(N, { onCancel: this.props.closeModal })
                     )
                   )
                 )
@@ -39191,10 +39288,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "HandleTextEntry", null),
             it.b([Xt.a], t.prototype, "HandleSubmit", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        lc = (function(e) {
+        dc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -39289,7 +39386,7 @@ and limitations under the License.
                   Vt.e(e.rgSelectedFriends, this.props.rgSelectedFriends)) ||
                   this.setState({
                     rgFriendsChosen: e.rgSelectedFriends.map(function(e) {
-                      return Up.FriendStore.GetFriend(e);
+                      return Hp.FriendStore.GetFriend(e);
                     })
                   }));
             }),
@@ -39299,7 +39396,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               if (this.props.rgSelectedFriends) {
                 var e = this.props.rgSelectedFriends.map(function(e) {
-                  return Up.FriendStore.GetFriend(e);
+                  return Hp.FriendStore.GetFriend(e);
                 });
                 (e = e.filter(function(e) {
                   return null != e;
@@ -39344,7 +39441,7 @@ and limitations under the License.
                   "div",
                   { className: t.join(" ") },
                   br.createElement(
-                    Qs,
+                    ec,
                     {
                       onChange: this.OnTextInput,
                       onKeyDown: this.OnInputKeyDown,
@@ -39363,7 +39460,7 @@ and limitations under the License.
                       { className: "DialogLabel" },
                       Object(hr.b)("#Chat_InviteFriends_DropInvite")
                     ),
-                  br.createElement(uc, {
+                  br.createElement(pc, {
                     ref: this.OnFriendsListRef,
                     eSort: this.props.eSort,
                     strInputValue: this.state.strInputValue,
@@ -39382,7 +39479,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        uc = (function(e) {
+        pc = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -39392,7 +39489,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.BuildFriendsList = function(e) {
-              (this.m_rgFriendsList = Up.FriendStore.all_friends),
+              (this.m_rgFriendsList = Hp.FriendStore.all_friends),
                 e.setExcludedFriends &&
                   e.setExcludedFriends.size &&
                   (this.m_rgFriendsList = this.m_rgFriendsList.filter(function(
@@ -39400,14 +39497,14 @@ and limitations under the License.
                   ) {
                     return !e.setExcludedFriends.has(t.accountid);
                   }));
-              var t = Up.ChatStore.FriendChatStore;
+              var t = Hp.ChatStore.FriendChatStore;
               switch (this.props.eSort) {
                 case 0:
                   this.m_rgFriendsList.sort(function(e, i) {
                     var n =
                       t.GetFriendLastChatTime(i.accountid) -
                       t.GetFriendLastChatTime(e.accountid);
-                    return 0 !== n ? n : Ka.DefaultFriendSortComparator(e, i);
+                    return 0 !== n ? n : Ja.DefaultFriendSortComparator(e, i);
                   });
                   break;
                 default:
@@ -39540,7 +39637,7 @@ and limitations under the License.
                         ref: r ? t.OnFocusFriendRef : null,
                         "data-index": i
                       },
-                      br.createElement(Lu, {
+                      br.createElement(Uu, {
                         noActions: !0,
                         friend: e,
                         context: null
@@ -39567,11 +39664,11 @@ and limitations under the License.
                 }
                 var s = { bSingleClickActivate: !0, disableContextMenu: !0 },
                   c = 0,
-                  l = Up.FriendStore.FavoritesStore.favorites.map(function(e) {
+                  l = Hp.FriendStore.FavoritesStore.favorites.map(function(e) {
                     return e.friend && !n.has(e.friend.accountid)
                       ? (c++,
                         br.createElement(
-                          Lu,
+                          Uu,
                           it.a(
                             {
                               friend: e.friend,
@@ -39586,9 +39683,9 @@ and limitations under the License.
                         ))
                       : null;
                   }),
-                  u = br.createElement(Nu, {
-                    group: Up.FriendStore.FriendGroupStore.ingame_group,
-                    key: Up.FriendStore.FriendGroupStore.ingame_group.id,
+                  u = br.createElement(Pu, {
+                    group: Hp.FriendStore.FriendGroupStore.ingame_group,
+                    key: Hp.FriendStore.FriendGroupStore.ingame_group.id,
                     collapsed: !1,
                     searchString: this.props.strInputValue,
                     fnOnSearchSelection: function() {},
@@ -39596,9 +39693,9 @@ and limitations under the License.
                     setExcludedFriends: n,
                     friendProps: s
                   }),
-                  d = Up.FriendStore.FriendGroupStore.default_groups.map(
+                  d = Hp.FriendStore.FriendGroupStore.default_groups.map(
                     function(e) {
-                      return br.createElement(Nu, {
+                      return br.createElement(Pu, {
                         group: e,
                         key: e.id,
                         collapsed: !1,
@@ -39648,7 +39745,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        dc = (function(e) {
+        hc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -39686,7 +39783,7 @@ and limitations under the License.
                 r.forEach(function(e) {
                   a.push(lt.a.InitFromAccountID(e).ConvertTo64BitString());
                 }),
-                  Up.FriendStore.FriendGroupStore.ManageGroup(
+                  Hp.FriendStore.FriendGroupStore.ManageGroup(
                     this.props.group,
                     n,
                     o,
@@ -39710,7 +39807,7 @@ and limitations under the License.
                 var u = i.map(function(e) {
                   return e.persona.m_steamid.ConvertTo64BitString();
                 });
-                Up.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
+                Hp.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
                   e
                 ) {
                   e
@@ -39737,22 +39834,22 @@ and limitations under the License.
                     onSubmit: this.HandleSubmit
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     this.props.group
                       ? Object(hr.b)("#FriendGroup_Menu_Manage")
                       : Object(hr.b)("#FriendGroup_Menu_CreateGroup")
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     this.state.strError &&
                       br.createElement(
-                        Ws,
+                        Hs,
                         { className: "nicknameError" },
                         this.state.strError
                       ),
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       type: "text",
                       label: Object(hr.b)("#FriendGroup_CategoryName"),
                       className: "nicknameInput",
@@ -39760,7 +39857,7 @@ and limitations under the License.
                       onChange: this.HandleTextEntry,
                       autoFocus: !0
                     }),
-                    br.createElement(lc, {
+                    br.createElement(dc, {
                       ref: this.OnFriendPickerRef,
                       label: Object(hr.b)("#FriendGroup_CategoryMembers"),
                       eSort: 1,
@@ -39768,9 +39865,9 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, { onCancel: this.props.closeModal })
+                    br.createElement(N, { onCancel: this.props.closeModal })
                   )
                 )
               );
@@ -39781,7 +39878,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        pc = (function(e) {
+        mc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -39798,13 +39895,13 @@ and limitations under the License.
             (t.prototype.HandleSubmit = function(e) {
               var t = this,
                 i = [];
-              Up.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
+              Hp.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
                 if (t.m_mapCategoryChecks.has(e.unique_id)) {
                   var n = void 0,
                     r = void 0;
                   t.m_mapCategoryChecks.get(e.unique_id) ? (r = e) : (n = e),
                     i.push(
-                      Up.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                      Hp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                         t.props.friend,
                         n,
                         r
@@ -39828,7 +39925,7 @@ and limitations under the License.
                 });
             }),
             (t.prototype.CreateNew = function(e) {
-              L(Ye(this, e), Ze(e), this.props.friend);
+              x(Ye(this, e), Ze(e), this.props.friend);
             }),
             (t.prototype.render = function() {
               return br.createElement(
@@ -39841,26 +39938,26 @@ and limitations under the License.
                     onSubmit: this.HandleSubmit
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     Object(hr.b)("#FriendGroup_Categorize_Title")
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     this.state.strError &&
                       br.createElement(
-                        Ws,
+                        Hs,
                         { className: "nicknameError" },
                         this.state.strError
                       ),
                     br.createElement(
-                      Ks,
+                      Js,
                       null,
                       br.createElement(
-                        Js,
+                        Zs,
                         null,
-                        br.createElement(Lu, {
+                        br.createElement(Uu, {
                           friend: this.props.friend,
                           className: "AssignCategoriesDialog_Friend",
                           noActions: !0,
@@ -39868,12 +39965,12 @@ and limitations under the License.
                         })
                       )
                     ),
-                    br.createElement(hc, {
+                    br.createElement(gc, {
                       friend: this.props.friend,
                       mapChecks: this.m_mapCategoryChecks
                     }),
                     br.createElement(
-                      Ks,
+                      Js,
                       { className: "AssignCategoriesDialog_AddNewButton" },
                       br.createElement(
                         T,
@@ -39883,9 +39980,9 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, { onCancel: this.props.closeModal })
+                    br.createElement(N, { onCancel: this.props.closeModal })
                   )
                 )
               );
@@ -39895,7 +39992,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        hc = (function(e) {
+        gc = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -39903,10 +40000,10 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = this,
-                t = Up.FriendStore.FriendGroupStore,
+                t = Hp.FriendStore.FriendGroupStore,
                 i = t.user_groups,
                 n = i.map(function(t) {
-                  return br.createElement(mc, {
+                  return br.createElement(fc, {
                     friend: e.props.friend,
                     group: t,
                     key: t.unique_id,
@@ -39917,7 +40014,7 @@ and limitations under the License.
                 br.Fragment,
                 null,
                 br.createElement(
-                  Us,
+                  Vs,
                   null,
                   Object(hr.b)("#FriendGroup_Categorize_Categories")
                 ),
@@ -39928,10 +40025,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        mc = (function(e) {
+        fc = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -39956,7 +40053,7 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { onContextMenu: this.OnContextMenu },
-                  br.createElement(ec, {
+                  br.createElement(ic, {
                     label: t.name,
                     checked: e,
                     onChange: this.OnToggle
@@ -39966,10 +40063,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "OnToggle", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        gc = (function() {
+        _c = (function() {
           function e(e, t) {
             if (!(e instanceof BaseAudioContext))
               throw "Not a valid audio context.";
@@ -40079,7 +40176,7 @@ and limitations under the License.
             e
           );
         })(),
-        fc = (function() {
+        yc = (function() {
           function e(e, t) {
             (this.m_Analyser = void 0),
               (this.m_rgInputNode = []),
@@ -40155,9 +40252,9 @@ and limitations under the License.
             e
           );
         })(),
-        _c = i("GCDA"),
-        yc = i.n(_c),
-        vc = (function(e) {
+        vc = i("GCDA"),
+        bc = i.n(vc),
+        Cc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40208,7 +40305,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        bc = (function(e) {
+        Sc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40259,7 +40356,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Cc = (function(e) {
+        Mc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40321,7 +40418,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Sc = (function(e) {
+        Fc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40393,7 +40490,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Mc = (function(e) {
+        wc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40428,7 +40525,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Fc = (function(e) {
+        Oc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40500,7 +40597,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        wc = (function(e) {
+        Bc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40551,7 +40648,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Oc = (function(e) {
+        Rc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40586,7 +40683,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Bc = (function(e) {
+        Ic = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40648,7 +40745,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Rc = (function(e) {
+        Ec = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40683,7 +40780,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ic = (function(e) {
+        kc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40800,7 +40897,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ec = (function(e) {
+        Tc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40894,7 +40991,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        kc = (function(e) {
+        Gc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -40909,13 +41006,13 @@ and limitations under the License.
               ot.Message.setField(this, 1, e);
             }),
             (t.prototype.users = function() {
-              return ot.Message.getRepeatedWrapperField(this, Ec, 2);
+              return ot.Message.getRepeatedWrapperField(this, Tc, 2);
             }),
             (t.prototype.set_users = function(e) {
               ot.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_users = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 2, e, Ec, t);
+              return ot.Message.addToRepeatedWrapperField(this, 2, e, Tc, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -40935,8 +41032,8 @@ and limitations under the License.
                     e.set_voice_chatid(t.readFixed64String());
                     break;
                   case 2:
-                    var i = new Ec();
-                    t.readMessage(i, Ec.deserializeBinaryFromReader),
+                    var i = new Tc();
+                    t.readMessage(i, Tc.deserializeBinaryFromReader),
                       e.add_users(i);
                     break;
                   default:
@@ -40954,7 +41051,7 @@ and limitations under the License.
                 void 0 !== i && t.writeFixed64String(1, i),
                 (i = e.users()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, Ec.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, Tc.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CVoiceChat_AllMembersStatus_Notification";
@@ -40962,7 +41059,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Tc = (function(e) {
+        Dc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41089,7 +41186,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Gc = (function(e) {
+        Nc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41139,7 +41236,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Nc = (function(e) {
+        Ac = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41201,7 +41298,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Dc = (function(e) {
+        Pc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41236,7 +41333,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ac = (ot.Message,
+        zc = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -41272,7 +41369,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Pc = (function(e) {
+        xc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41389,7 +41486,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        zc = (function(e) {
+        Lc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41486,28 +41583,28 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("VoiceChat.UpdateVoiceChatWebRTCData#1", t, Gc);
+          return e.SendMsg("VoiceChat.UpdateVoiceChatWebRTCData#1", t, Nc);
         }
         function i(e, t) {
           return e.SendNotification("VoiceChat.NotifyUserVoiceStatus#1", t);
         }
         function n(e, t) {
-          return e.SendMsg("VoiceChat.UploadClientVoiceChatLogs#1", t, Dc);
+          return e.SendMsg("VoiceChat.UploadClientVoiceChatLogs#1", t, Pc);
         }
         function r(e, t) {
-          return e.SendMsg("VoiceChat.LeaveVoiceChat#1", t, Ac);
+          return e.SendMsg("VoiceChat.LeaveVoiceChat#1", t, zc);
         }
         function o(e, t) {
-          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, bc);
+          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, Sc);
         }
         function a(e, t) {
-          return e.SendMsg("VoiceChat.AnswerOneOnOneChat#1", t, Mc);
+          return e.SendMsg("VoiceChat.AnswerOneOnOneChat#1", t, wc);
         }
         function s(e, t) {
-          return e.SendMsg("VoiceChat.EndOneOnOneChat#1", t, Oc);
+          return e.SendMsg("VoiceChat.EndOneOnOneChat#1", t, Rc);
         }
         function c(e, t) {
-          return e.SendMsg("VoiceChat.LeaveOneOnOneChat#1", t, Rc);
+          return e.SendMsg("VoiceChat.LeaveOneOnOneChat#1", t, Ec);
         }
         (e.UpdateVoiceChatWebRTCData = t),
           (e.NotifyUserVoiceStatus = i),
@@ -41517,40 +41614,40 @@ and limitations under the License.
           (e.AnswerOneOnOneChat = a),
           (e.EndOneOnOneChat = s),
           (e.LeaveOneOnOneChat = c);
-      })(Ja || (Ja = {}));
-      var Lc;
+      })(Za || (Za = {}));
+      var jc;
       !(function(e) {
         (e.NotifyUserJoinedVoiceChatHandler = {
           name: "VoiceChatClient.NotifyUserJoinedVoiceChat#1",
-          request: Ic
+          request: kc
         }),
           (e.NotifyUserLeftVoiceChatHandler = {
             name: "VoiceChatClient.NotifyUserLeftVoiceChat#1",
-            request: Pc
+            request: xc
           }),
           (e.NotifyVoiceChatEndedHandler = {
             name: "VoiceChatClient.NotifyVoiceChatEnded#1",
-            request: zc
+            request: Lc
           }),
           (e.NotifyUserVoiceStatusHandler = {
             name: "VoiceChatClient.NotifyUserVoiceStatus#1",
-            request: Ec
+            request: Tc
           }),
           (e.NotifyAllUsersVoiceStatusHandler = {
             name: "VoiceChatClient.NotifyAllUsersVoiceStatus#1",
-            request: kc
+            request: Gc
           }),
           (e.NotifyOneOnOneChatRequestedHandler = {
             name: "VoiceChatClient.NotifyOneOnOneChatRequested#1",
-            request: Cc
+            request: Mc
           }),
           (e.NotifyOneOnOneChatResponseHandler = {
             name: "VoiceChatClient.NotifyOneOnOneChatResponse#1",
-            request: Fc
+            request: Oc
           });
-      })(Lc || (Lc = {}));
-      var xc,
-        jc = (function(e) {
+      })(jc || (jc = {}));
+      var Uc,
+        Wc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41600,7 +41697,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Uc = (function(e) {
+        Vc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41650,7 +41747,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Wc = (function(e) {
+        Hc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41745,7 +41842,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Vc = (function(e) {
+        qc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41766,13 +41863,13 @@ and limitations under the License.
               ot.Message.setField(this, 2, e);
             }),
             (t.prototype.ssrcs_to_accountids = function() {
-              return ot.Message.getRepeatedWrapperField(this, Hc, 3);
+              return ot.Message.getRepeatedWrapperField(this, Kc, 3);
             }),
             (t.prototype.set_ssrcs_to_accountids = function(e) {
               ot.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (t.prototype.add_ssrcs_to_accountids = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 3, e, Hc, t);
+              return ot.Message.addToRepeatedWrapperField(this, 3, e, Kc, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -41795,8 +41892,8 @@ and limitations under the License.
                     e.set_remote_description_version(t.readUint64String());
                     break;
                   case 3:
-                    var i = new Hc();
-                    t.readMessage(i, Hc.deserializeBinaryFromReader),
+                    var i = new Kc();
+                    t.readMessage(i, Kc.deserializeBinaryFromReader),
                       e.add_ssrcs_to_accountids(i);
                     break;
                   default:
@@ -41816,7 +41913,7 @@ and limitations under the License.
                 void 0 !== i && t.writeUint64String(2, i),
                 (i = e.ssrcs_to_accountids()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(3, i, Hc.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, Kc.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CWebRTC_WebRTCUpdateRemoteDescription_Notification";
@@ -41824,7 +41921,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Hc = (function(e) {
+        Kc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41886,7 +41983,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        qc = (function(e) {
+        Yc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41981,7 +42078,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Kc = (function(e) {
+        Jc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -42018,39 +42115,39 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("WebRTCClient.InitiateWebRTCConnection#1", t, Uc);
+          return e.SendMsg("WebRTCClient.InitiateWebRTCConnection#1", t, Vc);
         }
         function i(e, t) {
           return e.SendMsg(
             "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
             t,
-            Kc
+            Jc
           );
         }
         (e.InitiateWebRTCConnection = t),
           (e.AcknowledgeUpdatedRemoteDescription = i);
-      })(xc || (xc = {}));
-      var Yc;
+      })(Uc || (Uc = {}));
+      var Xc;
       !(function(e) {
         (e.NotifyWebRTCSessionConnectedHandler = {
           name: "WebRTCClientNotifications.NotifyWebRTCSessionConnected#1",
-          request: Wc
+          request: Hc
         }),
           (e.NotifyWebRTCUpdateRemoteDescriptionHandler = {
             name:
               "WebRTCClientNotifications.NotifyWebRTCUpdateRemoteDescription#1",
-            request: Vc
+            request: qc
           });
-      })(Yc || (Yc = {}));
-      var Jc;
+      })(Xc || (Xc = {}));
+      var Zc;
       !(function(e) {
         (e[(e.k_EAudioStreamType_Microphone = 1)] =
           "k_EAudioStreamType_Microphone"),
           (e[(e.k_EAudioStreamType_IncomingStream = 2)] =
             "k_EAudioStreamType_IncomingStream");
-      })(Jc || (Jc = {}));
-      var Xc,
-        Zc = (function() {
+      })(Zc || (Zc = {}));
+      var Qc,
+        $c = (function() {
           function e() {
             (this.destination_node = void 0),
               (this.source_node = void 0),
@@ -42070,8 +42167,8 @@ and limitations under the License.
           (e[(e.k_ENoiseGateLevel_Low = 1)] = "k_ENoiseGateLevel_Low"),
           (e[(e.k_ENoiseGateLevel_Medium = 2)] = "k_ENoiseGateLevel_Medium"),
           (e[(e.k_ENoiseGateLevel_High = 3)] = "k_ENoiseGateLevel_High");
-      })(Xc || (Xc = {}));
-      var Qc;
+      })(Qc || (Qc = {}));
+      var el;
       !(function(e) {
         (e[(e.k_EVoiceCallState_None = 0)] = "k_EVoiceCallState_None"),
           (e[(e.k_EVoiceCallState_ScheduledInitiate = 1)] =
@@ -42088,11 +42185,11 @@ and limitations under the License.
             "k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession"),
           (e[(e.k_EVoiceCallState_Connected = 7)] =
             "k_EVoiceCallState_Connected");
-      })(Qc || (Qc = {}));
-      var $c,
-        el = (function() {
+      })(el || (el = {}));
+      var tl,
+        il = (function() {
           function e() {
-            (this.m_eState = Qc.k_EVoiceCallState_None),
+            (this.m_eState = el.k_EVoiceCallState_None),
               (this.m_targetAccountID = 0),
               (this.m_bInitiatedOneOnOneCall = !1),
               (this.m_bWaitingOnOneOnOneRejoin = !1),
@@ -42161,7 +42258,7 @@ and limitations under the License.
             e
           );
         })(),
-        tl = (function() {
+        nl = (function() {
           function e() {
             (this.m_SSRC = 0),
               (this.m_MostRecentDelayEstimateMs = 0),
@@ -42180,11 +42277,11 @@ and limitations under the License.
           }
           return e;
         })(),
-        il = (function() {
+        rl = (function() {
           function e(e) {
             (this.m_VoiceInputGain = 1),
               (this.m_VoiceOutputGain = 1),
-              (this.m_NoiseGateLevel = Xc.k_ENoiseGateLevel_Medium),
+              (this.m_NoiseGateLevel = Qc.k_ENoiseGateLevel_Medium),
               (this.m_VoiceUseEchoCancellation = !0),
               (this.m_VoiceUseNoiseCancellation = !0),
               (this.m_VoiceUseAutoGainControl = !0),
@@ -42257,7 +42354,7 @@ and limitations under the License.
             e
           );
         })(),
-        nl = (function() {
+        ol = (function() {
           function e() {
             (this.muted = !1), (this.gain = 1);
           }
@@ -42267,7 +42364,7 @@ and limitations under the License.
             e
           );
         })(),
-        rl = (function() {
+        al = (function() {
           function e() {
             (this.mic_muted_locally = !1),
               (this.output_muted_locally = !1),
@@ -42285,7 +42382,7 @@ and limitations under the License.
             e
           );
         })(),
-        ol = (function() {
+        sl = (function() {
           function e() {
             (this.partner_accountid = 0),
               (this.voice_chatid = ""),
@@ -42307,10 +42404,10 @@ and limitations under the License.
             e
           );
         })(),
-        al = (function() {
+        cl = (function() {
           function e(e) {
             var t = this;
-            (this.m_VoiceCallState = new el()),
+            (this.m_VoiceCallState = new il()),
               (this.m_mapOneOnOneCallsWaitingJoinOrAccept = pt.observable.map()),
               (this.m_hRegisterForPushToTalkStateChange = null),
               (this.m_bPushToTalkEnabled = !1),
@@ -42341,10 +42438,10 @@ and limitations under the License.
               (this.m_bForceConnectingStatus = !1),
               (this.m_bForceReconnectingStatus = !1),
               (this.m_OnWebRTCUpdateRemoteDescriptionHandler = c(
-                Yc.NotifyWebRTCUpdateRemoteDescriptionHandler,
+                Xc.NotifyWebRTCUpdateRemoteDescriptionHandler,
                 function(e) {
                   return t.m_VoiceCallState.m_eState <
-                    Qc.k_EVoiceCallState_InitatedWebRTCSession
+                    el.k_EVoiceCallState_InitatedWebRTCSession
                     ? (t.LogMsg(
                         "(WebRTC) Hit NotifyWebRTCUpdateRemoteDescriptionHandler in wrong state " +
                           t.m_VoiceCallState.m_eState
@@ -42360,10 +42457,10 @@ and limitations under the License.
                 }
               )),
               (this.m_OnWebRTCConnectionHandler = c(
-                Yc.NotifyWebRTCSessionConnectedHandler,
+                Xc.NotifyWebRTCSessionConnectedHandler,
                 function(e) {
                   return t.m_VoiceCallState.m_eState <
-                    Qc.k_EVoiceCallState_InitatedWebRTCSession
+                    el.k_EVoiceCallState_InitatedWebRTCSession
                     ? (t.LogMsg(
                         "(WebRTC) Hit NotifyWebRTCSessionConnectedHandler in wrong state " +
                           t.m_VoiceCallState.m_eState
@@ -42379,7 +42476,7 @@ and limitations under the License.
                 }
               )),
               (this.m_OnVoiceAllUsersStatusUpdate = c(
-                Lc.NotifyAllUsersVoiceStatusHandler,
+                jc.NotifyAllUsersVoiceStatusHandler,
                 function(e) {
                   if (
                     t.m_VoiceCallState.m_voiceChatID != e.Body().voice_chatid()
@@ -42393,17 +42490,17 @@ and limitations under the License.
                 }
               )),
               (this.m_OnVoiceStatusUpdate = c(
-                Lc.NotifyUserVoiceStatusHandler,
+                jc.NotifyUserVoiceStatusHandler,
                 function(e) {
                   return t.UpdateUserVoiceStatus(e.Body()), 1;
                 }
               )),
               (this.m_VoiceChatResponseHandler = c(
-                Lc.NotifyOneOnOneChatResponseHandler,
+                jc.NotifyOneOnOneChatResponseHandler,
                 function(e) {
                   if (
                     t.m_VoiceCallState.m_eState >=
-                    Qc.k_EVoiceCallState_RequestedPermission
+                    el.k_EVoiceCallState_RequestedPermission
                   ) {
                     var i = new lt.a(e.Body().steamid_partner());
                     if (
@@ -42426,21 +42523,21 @@ and limitations under the License.
                           " " +
                           e.Hdr().steamid()
                       ),
-                        Up.AudioPlaybackManager.PlayAudioURL(
+                        Hp.AudioPlaybackManager.PlayAudioURL(
                           tt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                         ),
                         t.OnVoiceChatAccepted(!0);
                     else {
                       t.LogMsg("(VoiceChat) Rejected by " + i.GetAccountID());
-                      var n = Up.ChatStore.GetFriendChat(i.GetAccountID(), !1),
-                        r = Up.FriendStore.GetFriend(i.GetAccountID());
+                      var n = Hp.ChatStore.GetFriendChat(i.GetAccountID(), !1),
+                        r = Hp.FriendStore.GetFriend(i.GetAccountID());
                       void 0 != n &&
                         void 0 != r &&
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         n.AddVoiceChannelInviteMsg(
                           i.GetAccountID(),
-                          Up.GetServerRTime32(),
+                          Hp.GetServerRTime32(),
                           Object(hr.b)(
                             "#FriendMsg_VoiceChannelEndedExplicit",
                             r.display_name
@@ -42449,7 +42546,7 @@ and limitations under the License.
                         t.DeleteOneOnOneCallWaitingJoinOrAccept(
                           i.GetAccountID()
                         ),
-                        Up.AudioPlaybackManager.PlayAudioURL(
+                        Hp.AudioPlaybackManager.PlayAudioURL(
                           tt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         ),
@@ -42460,15 +42557,15 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingVoiceChatRequestHandler = c(
-                Lc.NotifyOneOnOneChatRequestedHandler,
+                jc.NotifyOneOnOneChatRequestedHandler,
                 function(e) {
                   var i = new lt.a(e.Body().steamid_partner()),
                     n = e.Body().voice_chatid(),
-                    r = Up.FriendStore.GetFriend(i.GetAccountID());
+                    r = Hp.FriendStore.GetFriend(i.GetAccountID());
                   if (
                     null == r ||
                     r.is_blocked ||
-                    Up.FriendStore.BIsInvisibleMode()
+                    Hp.FriendStore.BIsInvisibleMode()
                   )
                     return (
                       t.LogMsg(
@@ -42477,7 +42574,7 @@ and limitations under the License.
                       t.OnRejectOneOnOneVoiceChat(i, e.Body().voice_chatid()),
                       1
                     );
-                  var o = new ol();
+                  var o = new sl();
                   (o.partner_accountid = t.m_CMInterface.steamid.GetAccountID()),
                     (o.voice_chatid = n),
                     (o.previously_joined = !1);
@@ -42505,7 +42602,7 @@ and limitations under the License.
                       t.OnAcceptOneOnOneVoiceChat(i, n),
                       1
                     );
-                  Up.NotificationManager.DisplayNotificationFromFriend(r, {
+                  Hp.NotificationManager.DisplayNotificationFromFriend(r, {
                     title: r.display_name,
                     body: Object(hr.b)(
                       "#Friend_RequestingOneOnOneChat",
@@ -42514,20 +42611,20 @@ and limitations under the License.
                     tag: "state_" + r.accountid,
                     steamid: r.persona.m_steamid.ConvertTo64BitString()
                   });
-                  var s = Up.ChatStore.GetFriendChat(i.GetAccountID(), !0);
+                  var s = Hp.ChatStore.GetFriendChat(i.GetAccountID(), !0);
                   return (
                     void 0 != s &&
                       (s.AddVoiceChannelInviteMsg(
                         i.GetAccountID(),
-                        Up.GetServerRTime32(),
+                        Hp.GetServerRTime32(),
                         Object(hr.b)(
                           "#FriendMsg_VoiceChannelInvite",
                           r.display_name,
                           s.self.display_name
                         )
                       ),
-                      Up.UIStore.ShowAndOrActivateChat(
-                        Up.GetDefaultBrowserContext(),
+                      Hp.UIStore.ShowAndOrActivateChat(
+                        Hp.GetDefaultBrowserContext(),
                         s,
                         !1
                       )),
@@ -42537,7 +42634,7 @@ and limitations under the License.
                 }
               )),
               (this.m_VoiceChatEndedHandler = c(
-                Lc.NotifyVoiceChatEndedHandler,
+                jc.NotifyVoiceChatEndedHandler,
                 function(e) {
                   for (
                     var i = e.Body().voice_chatid(),
@@ -42556,19 +42653,19 @@ and limitations under the License.
                           o +
                           " has ended and is no longer joinable."
                       ),
-                        Up.AudioPlaybackManager.PlayAudioURL(
+                        Hp.AudioPlaybackManager.PlayAudioURL(
                           tt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         );
                       var s = Number(o);
                       t.DeleteOneOnOneCallWaitingJoinOrAccept(s);
-                      var c = Up.ChatStore.GetFriendChat(s, !1),
-                        l = Up.FriendStore.GetFriend(s);
+                      var c = Hp.ChatStore.GetFriendChat(s, !1),
+                        l = Hp.FriendStore.GetFriend(s);
                       void 0 != c &&
                         (l
                           ? c.AddVoiceChannelInviteMsg(
                               l.accountid,
-                              Up.GetServerRTime32(),
+                              Hp.GetServerRTime32(),
                               Object(hr.b)(
                                 "#FriendMsg_VoiceChannelEndedExplicit",
                                 l.display_name
@@ -42576,7 +42673,7 @@ and limitations under the License.
                             )
                           : c.AddVoiceChannelInviteMsg(
                               t.m_CMInterface.steamid.GetAccountID(),
-                              Up.GetServerRTime32(),
+                              Hp.GetServerRTime32(),
                               Object(hr.b)("#FriendMsg_VoiceChannelEnded")
                             ),
                         t.m_VoiceCallState.m_targetAccountID == Number(o) &&
@@ -42585,7 +42682,7 @@ and limitations under the License.
                   }
                   if (i == t.m_VoiceCallState.m_voiceChatID) {
                     if (0 != t.m_VoiceCallState.m_targetAccountID) {
-                      var c = Up.ChatStore.GetFriendChat(
+                      var c = Hp.ChatStore.GetFriendChat(
                         t.m_VoiceCallState.m_targetAccountID,
                         !1
                       );
@@ -42594,14 +42691,14 @@ and limitations under the License.
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         c.AddVoiceChannelInviteMsg(
                           t.m_CMInterface.steamid.GetAccountID(),
-                          Up.GetServerRTime32(),
+                          Hp.GetServerRTime32(),
                           Object(hr.b)("#FriendMsg_VoiceChannelEnded")
                         ));
                     }
                     0 != t.m_VoiceCallState.m_targetAccountID &&
                       t.m_VoiceCallState.m_eState >
-                        Qc.k_EVoiceCallState_RequestedPermission &&
-                      Up.AudioPlaybackManager.PlayAudioURL(
+                        el.k_EVoiceCallState_RequestedPermission &&
+                      Hp.AudioPlaybackManager.PlayAudioURL(
                         tt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       ),
@@ -42614,7 +42711,7 @@ and limitations under the License.
                 }
               )),
               (this.m_VoiceChatEnteredNotification = c(
-                Lc.NotifyUserJoinedVoiceChatHandler,
+                jc.NotifyUserJoinedVoiceChatHandler,
                 function(e) {
                   if (
                     e.Body().voice_chatid() == t.m_VoiceCallState.m_voiceChatID
@@ -42634,7 +42731,7 @@ and limitations under the License.
                 }
               )),
               (this.m_VoiceChatLeftNotification = c(
-                Lc.NotifyUserLeftVoiceChatHandler,
+                jc.NotifyUserLeftVoiceChatHandler,
                 function(e) {
                   if (
                     e.Body().voice_chatid() == t.m_VoiceCallState.m_voiceChatID
@@ -42662,7 +42759,7 @@ and limitations under the License.
                   };
                   return (
                     t.m_VoiceCallState.m_eState >
-                      Qc.k_EVoiceCallState_ScheduledInitiate &&
+                      el.k_EVoiceCallState_ScheduledInitiate &&
                       t.m_VoiceCallState.BMatchingCall(0, i) &&
                       (t.LogMsg(
                         "(ChatRoom) Notified that we need to rejoin new voicechat session for chat room... doing so now..."
@@ -42673,7 +42770,7 @@ and limitations under the License.
                   );
                 }
               )),
-              (this.m_Settings = new il(e)),
+              (this.m_Settings = new rl(e)),
               this.m_Settings.LoadFromLocalStorage(this),
               "undefined" != typeof SteamClient &&
                 (void 0 != SteamClient &&
@@ -42729,8 +42826,8 @@ and limitations under the License.
               var i = lt.a.InitFromAccountID(e);
               this.OnRejectOneOnOneVoiceChat(i, t.voice_chatid),
                 this.m_mapOneOnOneCallsWaitingJoinOrAccept.delete(e);
-              var n = Up.ChatStore.GetFriendChat(e, !1),
-                r = Up.FriendStore.self;
+              var n = Hp.ChatStore.GetFriendChat(e, !1),
+                r = Hp.FriendStore.self;
               return (
                 void 0 != n &&
                   void 0 != r &&
@@ -42738,7 +42835,7 @@ and limitations under the License.
                     this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) ||
                     n.AddVoiceChannelInviteMsg(
                       r.accountid,
-                      Up.GetServerRTime32(),
+                      Hp.GetServerRTime32(),
                       Object(hr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         r.display_name
@@ -42752,7 +42849,7 @@ and limitations under the License.
             (e.prototype.OnUserLeaveOneOnOneVoiceChat = function() {
               if (
                 0 == this.m_VoiceCallState.m_targetAccountID &&
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None
               )
                 return void this.LogMsg(
                   "(VoiceChat) OnUserLeaveOneOnOneVoiceChat called when in a group not one-on-one chat!"
@@ -42766,21 +42863,21 @@ and limitations under the License.
             (e.prototype.OnUserEndVoiceChat = function() {
               var e = this;
               if (
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None &&
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None &&
                 0 != this.m_VoiceCallState.m_targetAccountID
               ) {
                 if (!this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) {
-                  var t = Up.ChatStore.GetFriendChat(
+                  var t = Hp.ChatStore.GetFriendChat(
                       this.m_VoiceCallState.m_targetAccountID,
                       !1
                     ),
-                    i = Up.FriendStore.self;
+                    i = Hp.FriendStore.self;
                   void 0 != t &&
                     void 0 != i &&
                     ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                     t.AddVoiceChannelInviteMsg(
-                      Up.CMInterface.steamid.GetAccountID(),
-                      Up.GetServerRTime32(),
+                      Hp.CMInterface.steamid.GetAccountID(),
+                      Hp.GetServerRTime32(),
                       Object(hr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         i.display_name
@@ -42789,14 +42886,14 @@ and limitations under the License.
                 }
                 var n = this.m_VoiceCallState.m_targetAccountID;
                 this.m_VoiceCallState.m_targetAccountID = 0;
-                var r = dt.Init(wc);
+                var r = dt.Init(Bc);
                 r
                   .Body()
                   .set_steamid_partner(
                     lt.a.InitFromAccountID(n).ConvertTo64BitString()
                   ),
                   this.DeleteOneOnOneCallWaitingJoinOrAccept(n),
-                  Ja.EndOneOnOneChat(
+                  Za.EndOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     r
                   ).then(function(t) {
@@ -42821,7 +42918,7 @@ and limitations under the License.
                 this.RestartVoiceChatIfConnected());
             }),
             (e.prototype.GetAudioWorkletSupport = function() {
-              return Up.AudioPlaybackManager.supports_audio_worklets;
+              return Hp.AudioPlaybackManager.supports_audio_worklets;
             }),
             (e.prototype.GetUserDeniedMicAccess = function() {
               return this.m_bUserHasDeniedMicPermissions;
@@ -42927,7 +43024,7 @@ and limitations under the License.
                 for (var i = 0; i < this.m_rgAudioStreams.length; ++i) {
                   var n = this.m_rgAudioStreams[i];
                   n.output_gain_node &&
-                    (n.type == Jc.k_EAudioStreamType_Microphone
+                    (n.type == Zc.k_EAudioStreamType_Microphone
                       ? n.output_gain_node.gain.setValueAtTime(
                           this.m_Settings.m_VoiceOutputGain,
                           this.m_AudioContext.currentTime
@@ -42947,7 +43044,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new al()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.mic_muted_locally
               );
             }),
@@ -42955,7 +43052,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new al()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.output_muted_locally
               );
             }),
@@ -42963,7 +43060,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new al()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.has_no_mic_for_session
               );
             }),
@@ -42980,14 +43077,14 @@ and limitations under the License.
               this.m_bForceConnectingStatus = !0;
             }),
             (e.prototype.GetActiveChatRoomGroupID = function() {
-              return this.m_VoiceCallState.m_eState == Qc.k_EVoiceCallState_None
+              return this.m_VoiceCallState.m_eState == el.k_EVoiceCallState_None
                 ? ""
                 : this.m_VoiceCallState.m_chatRoom
                   ? this.m_VoiceCallState.m_chatRoom.groupID
                   : "";
             }),
             (e.prototype.GetActiveVoiceChatID = function() {
-              return this.m_VoiceCallState.m_eState == Qc.k_EVoiceCallState_None
+              return this.m_VoiceCallState.m_eState == el.k_EVoiceCallState_None
                 ? ""
                 : this.m_VoiceCallState.m_chatRoom
                   ? this.m_VoiceCallState.m_chatRoom.chatID
@@ -42995,7 +43092,7 @@ and limitations under the License.
             }),
             (e.prototype.BInitiatedOneOnOneChat = function(e) {
               return (
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None &&
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None &&
                 this.m_VoiceCallState.m_targetAccountID == e &&
                 this.m_VoiceCallState.m_bInitiatedOneOnOneCall
               );
@@ -43003,7 +43100,7 @@ and limitations under the License.
             (e.prototype.ToggleMicMuting = function() {
               for (var e = 0; e < this.m_rgAudioStreams.length; ++e) {
                 var t = this.m_rgAudioStreams[e];
-                if (t.type == Jc.k_EAudioStreamType_Microphone) {
+                if (t.type == Zc.k_EAudioStreamType_Microphone) {
                   t.muted = !t.muted;
                   for (var i = t.stream.getTracks(), n = 0; n < i.length; n++)
                     i[n].enabled = !t.muted;
@@ -43014,13 +43111,13 @@ and limitations under the License.
             (e.prototype.BNoMicAvailableForSession = function() {
               if (
                 this.m_VoiceCallState.m_eState <=
-                Qc.k_EVoiceCallState_RequestedMicAccess
+                el.k_EVoiceCallState_RequestedMicAccess
               )
                 return !1;
               for (var e = 0; e < this.m_rgAudioStreams.length; ++e)
                 if (
                   this.m_rgAudioStreams[e].type ==
-                  Jc.k_EAudioStreamType_Microphone
+                  Zc.k_EAudioStreamType_Microphone
                 )
                   return !1;
               return !0;
@@ -43029,7 +43126,7 @@ and limitations under the License.
               for (var e = 0; e < this.m_rgAudioStreams.length; ++e)
                 if (
                   this.m_rgAudioStreams[e].type ==
-                  Jc.k_EAudioStreamType_Microphone
+                  Zc.k_EAudioStreamType_Microphone
                 )
                   return this.m_rgAudioStreams[e].muted;
               return !1;
@@ -43038,7 +43135,7 @@ and limitations under the License.
               this.m_bOutputMuted = !this.m_bOutputMuted;
               for (var e = 0; e < this.m_rgAudioStreams.length; ++e) {
                 var t = this.m_rgAudioStreams[e];
-                if (t.type == Jc.k_EAudioStreamType_IncomingStream) {
+                if (t.type == Zc.k_EAudioStreamType_IncomingStream) {
                   t.muted =
                     this.m_bOutputMuted || this.GetPerUserMuting(t.accountid);
                   for (var i = t.stream.getTracks(), n = 0; n < i.length; n++)
@@ -43051,7 +43148,7 @@ and limitations under the License.
               return this.m_bOutputMuted;
             }),
             (e.prototype.GetActiveOneOnOneVoiceChatAccountID = function() {
-              return this.m_VoiceCallState.m_eState == Qc.k_EVoiceCallState_None
+              return this.m_VoiceCallState.m_eState == el.k_EVoiceCallState_None
                 ? 0
                 : this.m_VoiceCallState.m_targetAccountID;
             }),
@@ -43071,7 +43168,7 @@ and limitations under the License.
             }),
             (e.prototype.get_volume = function(e) {
               if (
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_Connected
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_Connected
               )
                 return 0;
               if (
@@ -43097,7 +43194,7 @@ and limitations under the License.
             }),
             (e.prototype.SetPerUserMuting = function(e, t) {
               var i = this.m_mapPerUserOutputGain.get(e);
-              void 0 == i && (i = new nl()),
+              void 0 == i && (i = new ol()),
                 (i.muted = t || this.m_bOutputMuted),
                 this.m_mapPerUserOutputGain.set(e, i),
                 this.UpdateStreamsForPerUseGainChange(e);
@@ -43105,7 +43202,7 @@ and limitations under the License.
             (e.prototype.SetPerUserGainLevel = function(e, t) {
               var i = Math.max(0, Math.min(4, t)),
                 n = this.m_mapPerUserOutputGain.get(e);
-              void 0 == n && (n = new nl()),
+              void 0 == n && (n = new ol()),
                 (n.gain = i),
                 n.gain < 0.001 ? (n.muted = !0) : (n.muted = !1),
                 this.m_mapPerUserOutputGain.set(e, n),
@@ -43113,7 +43210,7 @@ and limitations under the License.
             }),
             (e.prototype.UpdateStreamsForPerUseGainChange = function(e) {
               var t = this.m_mapPerUserOutputGain.get(e);
-              void 0 == t && (t = new nl());
+              void 0 == t && (t = new ol());
               for (var i = 0; i < this.m_rgAudioStreams.length; ++i) {
                 var n = this.m_rgAudioStreams[i];
                 if (n.accountid == e && void 0 != n.output_gain_node) {
@@ -43130,7 +43227,7 @@ and limitations under the License.
             (e.prototype.OnUserLeftChatRoomVoiceChat = function(e, t, i, n) {
               var r = { groupID: e, chatID: t };
               this.m_VoiceCallState.m_eState >
-                Qc.k_EVoiceCallState_RequestedPermission &&
+                el.k_EVoiceCallState_RequestedPermission &&
                 this.m_VoiceCallState.BMatchingCall(0, r) &&
                 (i != this.m_CMInterface.steamid.GetAccountID() ||
                   n ||
@@ -43143,23 +43240,23 @@ and limitations under the License.
             }),
             (e.prototype.IsAnyVoiceActive = function() {
               return (
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None ||
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None ||
                 0 != this.m_ScheduledInitiate
               );
             }),
             (e.prototype.BSelfHasAcceptedOrInitiatedOneOnOneChat = function(e) {
               return (
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None &&
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None &&
                 this.m_VoiceCallState.m_targetAccountID == e &&
                 (!!this.m_VoiceCallState.m_bInitiatedOneOnOneCall ||
                   this.m_VoiceCallState.m_eState >=
-                    Qc.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession)
+                    el.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession)
               );
             }),
             (e.prototype.BSelfHadPreviouslyJoinedOneOnOneChat = function(e) {
               var t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
               if (void 0 == t) {
-                var i = new ol();
+                var i = new sl();
                 return this.m_mapOneOnOneCallsWaitingJoinOrAccept.set(e, i), !1;
               }
               if (
@@ -43174,19 +43271,19 @@ and limitations under the License.
             ) {
               return (
                 !(
-                  this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None ||
+                  this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None ||
                   this.m_VoiceCallState.m_bInitiatedOneOnOneCall ||
                   !this.BPartnerHasRequestedAndIsInOneOnOneChat(e)
                 ) ||
                 (this.m_VoiceCallState.m_eState >
-                  Qc.k_EVoiceCallState_RequestedPermission &&
+                  el.k_EVoiceCallState_RequestedPermission &&
                   !this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin)
               );
             }),
             (e.prototype.BPartnerHasRequestedAndIsInOneOnOneChat = function(e) {
               var t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
               if (void 0 == t) {
-                var i = new ol();
+                var i = new sl();
                 return this.m_mapOneOnOneCallsWaitingJoinOrAccept.set(e, i), !1;
               }
               return (
@@ -43199,10 +43296,10 @@ and limitations under the License.
               return (
                 (0 == this.m_VoiceCallState.m_targetAccountID ||
                   this.m_VoiceCallState.m_eState !=
-                    Qc.k_EVoiceCallState_RequestedPermission) &&
+                    el.k_EVoiceCallState_RequestedPermission) &&
                 this.IsAnyVoiceActive() &&
                 0 == this.m_VoiceCallState.m_nFailuresThisInitiate &&
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_Connected
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_Connected
               );
             }),
             (e.prototype.HasBeenAttemptingOverTwoSeconds = function() {
@@ -43217,7 +43314,7 @@ and limitations under the License.
                 i = this.m_VoiceCallState.m_eState;
               return (
                 !!this.m_bForceReconnectingStatus ||
-                (e && t > 0 && i != Qc.k_EVoiceCallState_Connected)
+                (e && t > 0 && i != el.k_EVoiceCallState_Connected)
               );
             }),
             (e.prototype.IsVoiceActiveForFriend = function(e) {
@@ -43229,7 +43326,7 @@ and limitations under the License.
             (e.prototype.IsVoiceActiveForGroup = function(e) {
               return (
                 !!this.m_VoiceCallState.BCallActiveForGroup(e) &&
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None
               );
             }),
             (e.prototype.LogMsg = function(e) {
@@ -43273,7 +43370,7 @@ and limitations under the License.
             (e.prototype.RestartVoiceChatIfConnected = function() {
               if (
                 this.m_VoiceCallState.m_eState >
-                Qc.k_EVoiceCallState_ScheduledInitiate
+                el.k_EVoiceCallState_ScheduledInitiate
               ) {
                 var e = this.m_VoiceCallState.m_targetAccountID,
                   t = this.m_VoiceCallState.m_chatRoom;
@@ -43292,9 +43389,9 @@ and limitations under the License.
                 bufferSize: 1024
               };
               switch (this.m_Settings.m_NoiseGateLevel) {
-                case Xc.k_ENoiseGateLevel_Off:
+                case Qc.k_ENoiseGateLevel_Off:
                   break;
-                case Xc.k_ENoiseGateLevel_Low:
+                case Qc.k_ENoiseGateLevel_Low:
                   e = {
                     attack: 0.8,
                     release: 0.06,
@@ -43302,7 +43399,7 @@ and limitations under the License.
                     bufferSize: 1024
                   };
                   break;
-                case Xc.k_ENoiseGateLevel_Medium:
+                case Qc.k_ENoiseGateLevel_Medium:
                   e = {
                     attack: 0.8,
                     release: 0.06,
@@ -43310,7 +43407,7 @@ and limitations under the License.
                     bufferSize: 1024
                   };
                   break;
-                case Xc.k_ENoiseGateLevel_High:
+                case Qc.k_ENoiseGateLevel_High:
                   e = {
                     attack: 0.8,
                     release: 0.09,
@@ -43334,7 +43431,7 @@ and limitations under the License.
                   ++t
                 ) {
                   var i = this.m_rgAudioStreams[t];
-                  if (i.type == Jc.k_EAudioStreamType_Microphone) {
+                  if (i.type == Zc.k_EAudioStreamType_Microphone) {
                     e = i;
                     break;
                   }
@@ -43360,7 +43457,7 @@ and limitations under the License.
                     (this.m_MicVolumeMeter = void 0),
                     void 0 != e.volume_meter &&
                       (e.volume_meter.stop(), (e.volume_meter = void 0)),
-                    this.m_Settings.m_NoiseGateLevel != Xc.k_ENoiseGateLevel_Off
+                    this.m_Settings.m_NoiseGateLevel != Qc.k_ENoiseGateLevel_Off
                       ? this.SetupNoiseGateOnMic(e.destination_node)
                       : this.m_MicInputGainNode.connect(e.destination_node);
                   var n = e.source_node;
@@ -43368,7 +43465,7 @@ and limitations under the License.
                     (n = this.m_MicNoiseGate.output
                       ? this.m_MicNoiseGate.output
                       : this.m_MicNoiseGate),
-                    (this.m_MicVolumeMeter = new fc(n, this.m_AudioContext)),
+                    (this.m_MicVolumeMeter = new yc(n, this.m_AudioContext)),
                     (e.volume_meter = this.m_MicVolumeMeter),
                     this.m_VoiceEchoLocalMic && void 0 == this.m_MicNoiseGate
                       ? this.m_MicInputGainNode.connect(e.output_gain_node)
@@ -43414,7 +43511,7 @@ and limitations under the License.
               ),
                 "failed" == e.iceConnectionState &&
                   this.m_VoiceCallState.m_eState >
-                    Qc.k_EVoiceCallState_CreatePeerConnection &&
+                    el.k_EVoiceCallState_CreatePeerConnection &&
                   this.BackOffAndRetryInitiateVoiceChat();
             }),
             (e.prototype.OnIceGatheringStateChange = function(e, t) {
@@ -43481,11 +43578,11 @@ and limitations under the License.
                     ));
             }),
             (e.prototype.AddStreamToOutput = function(e) {
-              var t = new Zc();
+              var t = new $c();
               this.SetupAudioStreamElementAndCreateSourceNode(t, e),
                 (t.unique_id = e.id),
                 (t.stream = e),
-                (t.type = Jc.k_EAudioStreamType_IncomingStream);
+                (t.type = Zc.k_EAudioStreamType_IncomingStream);
               var i = /Peer-(\d+)-(\d+)-/,
                 n = e.id.match(i);
               if (
@@ -43513,7 +43610,7 @@ and limitations under the License.
                 ),
                 t.output_gain_node.connect(this.m_AudioContext.destination),
                 t.source_node.connect(t.output_gain_node),
-                (t.volume_meter = new fc(t.source_node, this.m_AudioContext)),
+                (t.volume_meter = new yc(t.source_node, this.m_AudioContext)),
                 t.volume_meter.Connect(t.source_node);
             }),
             (e.prototype.OnAddTrack = function(e, t) {
@@ -43606,7 +43703,7 @@ and limitations under the License.
             (e.prototype.OnCreateOfferSuccess = function(e, t) {
               if (
                 this.m_VoiceCallState.m_eState !=
-                Qc.k_EVoiceCallState_CreatePeerConnection
+                el.k_EVoiceCallState_CreatePeerConnection
               )
                 return void this.LogMsg(
                   "(WebRTC) Hit OnCreateOfferSuccess in wrong state " +
@@ -43618,18 +43715,17 @@ and limitations under the License.
                 e
                   .setLocalDescription(t)
                   .then(function() {
-                    var e = dt.Init(jc);
+                    var e = dt.Init(Wc);
                     e.Body().set_sdp(JSON.stringify(t)),
                       i.LogMsg(
                         "(WebRTC) Offer (Local Description): " + e.Body().sdp()
                       ),
                       (i.m_VoiceCallState.m_eState =
-                        Qc.k_EVoiceCallState_InitatedWebRTCSession),
-                      xc
-                        .InitiateWebRTCConnection(
-                          i.m_CMInterface.GetServiceTransport(),
-                          e
-                        )
+                        el.k_EVoiceCallState_InitatedWebRTCSession),
+                      Uc.InitiateWebRTCConnection(
+                        i.m_CMInterface.GetServiceTransport(),
+                        e
+                      )
                         .then(function(e) {
                           if (void 0 == i.m_PeerConnection)
                             i.LogMsg(
@@ -43718,7 +43814,7 @@ and limitations under the License.
             (e.prototype.OnMicStreamInactive = function(e, t) {
               this.LogMsg("(WebRTC) Mic Stream went inactive: " + t.type),
                 this.m_VoiceCallState.m_eState >
-                  Qc.k_EVoiceCallState_RequestedMicAccess &&
+                  el.k_EVoiceCallState_RequestedMicAccess &&
                   (this.LogMsg(
                     "(WebRTC) Ending then auto-re-initiating voice chat without mic"
                   ),
@@ -43726,7 +43822,7 @@ and limitations under the License.
             }),
             (e.prototype.SetupNoiseGateOnMic = function(e) {
               var t = this.GetNoiseGateOptions();
-              if (Up.AudioPlaybackManager.supports_audio_worklets) {
+              if (Hp.AudioPlaybackManager.supports_audio_worklets) {
                 this.LogMsg(
                   "(VoiceChat) Audio Worklets supported - high performance mic noisegate in use!"
                 );
@@ -43760,14 +43856,14 @@ and limitations under the License.
                 this.LogMsg(
                   "(VoiceChat) Browser doesn't support audio worklets, mic perf will suffer and may stutter/echo during repaint/high CPU usage"
                 ),
-                  (this.m_MicNoiseGate = new gc(this.m_AudioContext, t)),
+                  (this.m_MicNoiseGate = new _c(this.m_AudioContext, t)),
                   this.m_MicInputGainNode.connect(this.m_MicNoiseGate.input),
                   this.m_MicNoiseGate.output.connect(e);
             }),
             (e.prototype.OnGetUserMediaSuccess = function(e) {
               if (
                 this.m_VoiceCallState.m_eState !=
-                Qc.k_EVoiceCallState_RequestedMicAccess
+                el.k_EVoiceCallState_RequestedMicAccess
               ) {
                 for (var t = 0, i = e.getTracks(); t < i.length; t++)
                   i[t].stop();
@@ -43778,7 +43874,7 @@ and limitations under the License.
               }
               if (
                 ((this.m_VoiceCallState.m_eState =
-                  Qc.k_EVoiceCallState_CreatePeerConnection),
+                  el.k_EVoiceCallState_CreatePeerConnection),
                 void 0 != e)
               ) {
                 var n = (e.id, this.m_AudioContext.createMediaStreamSource(e)),
@@ -43794,7 +43890,7 @@ and limitations under the License.
                   n.connect(this.m_MicInputGainNode);
                 var o = void 0;
                 if (
-                  this.m_Settings.m_NoiseGateLevel != Xc.k_ENoiseGateLevel_Off
+                  this.m_Settings.m_NoiseGateLevel != Qc.k_ENoiseGateLevel_Off
                 ) {
                   var a = this.m_AudioContext;
                   (o = a.createMediaStreamDestination()),
@@ -43806,12 +43902,12 @@ and limitations under the License.
                     this.m_MicInputGainNode.connect(o),
                     (e = o.stream);
                 }
-                var s = new Zc();
+                var s = new $c();
                 (s.unique_id = e.id),
                   (s.destination_node = o),
                   (s.stream = e),
                   (s.source_node = n),
-                  (s.type = Jc.k_EAudioStreamType_Microphone),
+                  (s.type = Zc.k_EAudioStreamType_Microphone),
                   (s.accountid = this.m_CMInterface.steamid.GetAccountID()),
                   (s.muted = !1),
                   (s.elem = void 0),
@@ -43829,7 +43925,7 @@ and limitations under the License.
                       ? this.m_MicNoiseGate.output
                       : this.m_MicNoiseGate),
                   (this.m_MicVolumeMeter = void 0),
-                  (this.m_MicVolumeMeter = new fc(c, this.m_AudioContext)),
+                  (this.m_MicVolumeMeter = new yc(c, this.m_AudioContext)),
                   (s.volume_meter = this.m_MicVolumeMeter),
                   this.m_VoiceEchoLocalMic && void 0 == this.m_MicNoiseGate
                     ? this.m_MicInputGainNode.connect(s.output_gain_node)
@@ -43858,7 +43954,7 @@ and limitations under the License.
               if (
                 !(
                   this.m_VoiceCallState.m_eState <=
-                  Qc.k_EVoiceCallState_ScheduledInitiate
+                  el.k_EVoiceCallState_ScheduledInitiate
                 )
               ) {
                 var t = this,
@@ -43880,13 +43976,13 @@ and limitations under the License.
             (e.prototype.InitiateChatRoomVoice = function() {
               if (
                 this.m_VoiceCallState.m_eState >
-                Qc.k_EVoiceCallState_ScheduledInitiate
+                el.k_EVoiceCallState_ScheduledInitiate
               )
                 return void this.LogMsg(
                   "(VoiceChat) Hit InitiateChatRoomVoice in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Up.AudioPlaybackManager.SetVoiceActive(
+              Hp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -43894,7 +43990,7 @@ and limitations under the License.
               var e = this;
               if (0 == this.m_VoiceCallState.m_targetAccountID) {
                 this.m_VoiceCallState.m_eState =
-                  Qc.k_EVoiceCallState_RequestedPermission;
+                  el.k_EVoiceCallState_RequestedPermission;
                 var t = dt.Init(Sn);
                 t
                   .Body()
@@ -43923,10 +44019,10 @@ and limitations under the License.
                     });
               } else if (
                 ((this.m_VoiceCallState.m_eState =
-                  Qc.k_EVoiceCallState_RequestedPermission),
+                  el.k_EVoiceCallState_RequestedPermission),
                 "" == this.m_VoiceCallState.m_voiceChatID)
               ) {
-                var t = dt.Init(vc);
+                var t = dt.Init(Cc);
                 t
                   .Body()
                   .set_steamid_partner(
@@ -43940,7 +44036,7 @@ and limitations under the License.
                     "(VoiceChat) InitiateOneOnOneVoiceChat request to " +
                       this.m_VoiceCallState.m_targetAccountID
                   ),
-                  Ja.RequestOneOnOneChat(
+                  Za.RequestOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     t
                   ).then(function(t) {
@@ -43952,8 +44048,8 @@ and limitations under the License.
                         (e.m_VoiceCallState.m_voiceChatID = t
                           .Body()
                           .voice_chatid());
-                      var i = Up.FriendStore.self,
-                        n = Up.ChatStore.GetFriendChat(
+                      var i = Hp.FriendStore.self,
+                        n = Hp.ChatStore.GetFriendChat(
                           e.m_VoiceCallState.m_targetAccountID,
                           !1
                         );
@@ -43961,7 +44057,7 @@ and limitations under the License.
                         void 0 != n &&
                         n.AddVoiceChannelInviteMsg(
                           e.m_CMInterface.steamid.GetAccountID(),
-                          Up.GetServerRTime32(),
+                          Hp.GetServerRTime32(),
                           Object(hr.b)(
                             "#FriendMsg_VoiceChannelInvite",
                             i.display_name,
@@ -43974,7 +44070,7 @@ and limitations under the License.
             }),
             (e.prototype.OnVoiceChatAccepted = function(e) {
               return this.m_VoiceCallState.m_eState <
-                Qc.k_EVoiceCallState_RequestedPermission
+                el.k_EVoiceCallState_RequestedPermission
                 ? void this.LogMsg(
                     "(VoiceChat) Hit OnVoiceChatAccepted in wrong state " +
                       this.m_VoiceCallState.m_eState
@@ -44011,13 +44107,13 @@ and limitations under the License.
             (e.prototype.InitiateOneOnOneVoiceChat = function(e) {
               if (
                 this.m_VoiceCallState.m_eState >
-                Qc.k_EVoiceCallState_ScheduledInitiate
+                el.k_EVoiceCallState_ScheduledInitiate
               )
                 return void this.LogMsg(
                   "(VoiceChat) Hit InitiateOneOnOneVoiceChat in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Up.AudioPlaybackManager.SetVoiceActive(
+              Hp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -44034,7 +44130,7 @@ and limitations under the License.
             }),
             (e.prototype.OnSetUpdatedLocalDescriptionSuccess = function() {
               this.LogMsg("(WebRTC) OnSetUpdatedLocalDescriptionSuccess");
-              var e = dt.Init(qc);
+              var e = dt.Init(Yc);
               e
                 .Body()
                 .set_ip_webrtc_server(this.m_VoiceCallState.m_webRTCServerIP),
@@ -44058,12 +44154,10 @@ and limitations under the License.
                   .set_remote_description_version(
                     this.m_VoiceCallState.m_nMostRecentRemoteDescriptionVersion
                   ),
-                xc
-                  .AcknowledgeUpdatedRemoteDescription(
-                    this.m_CMInterface.GetServiceTransport(),
-                    e
-                  )
-                  .then(function(e) {});
+                Uc.AcknowledgeUpdatedRemoteDescription(
+                  this.m_CMInterface.GetServiceTransport(),
+                  e
+                ).then(function(e) {});
             }),
             (e.prototype.OnSetUpdatedLocalDescriptionFailure = function(e) {
               this.LogMsg("(WebRTC) OnSetUpdatedLocalDescriptionFailure: " + e),
@@ -44137,7 +44231,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.SendVoiceStatusUpdate = function() {
-              var e = dt.Init(Ec);
+              var e = dt.Init(Tc);
               e
                 .Body()
                 .set_user_steamid(
@@ -44151,7 +44245,7 @@ and limitations under the License.
                   .set_user_has_no_mic_for_session(
                     this.BNoMicAvailableForSession()
                   ),
-                Ja.NotifyUserVoiceStatus(
+                Za.NotifyUserVoiceStatus(
                   this.m_CMInterface.GetServiceTransport(),
                   e
                 );
@@ -44160,11 +44254,11 @@ and limitations under the License.
               if (this.m_VoiceCallState.m_voiceChatID == e.voice_chatid()) {
                 var t = new lt.a(e.user_steamid()),
                   i = this.m_mapUserVoiceStatus.get(t.GetAccountID());
-                void 0 == i && (i = new rl()),
+                void 0 == i && (i = new al()),
                   (i.mic_muted_locally = e.user_muted_mic_locally()),
                   (i.output_muted_locally = e.user_muted_output_locally()),
                   (i.has_no_mic_for_session = e.user_has_no_mic_for_session());
-                var n = Up.FriendStore.GetPlayerIfCached(t.GetAccountID()),
+                var n = Hp.FriendStore.GetPlayerIfCached(t.GetAccountID()),
                   r = "[U:1:" + t.GetAccountID() + "]",
                   o = "";
                 void 0 != n && (o = n.display_name + " ");
@@ -44189,7 +44283,7 @@ and limitations under the License.
               var e = this,
                 t = this.m_VoiceCallState.m_webRTCConnectedNotification;
               (this.m_VoiceCallState.m_eState =
-                Qc.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession),
+                el.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession),
                 this.LogMsg(
                   "(WebRTC) WebRTC session connected " +
                     this.IPIntToString(t.client_ip()) +
@@ -44205,7 +44299,7 @@ and limitations under the License.
                     "(VoiceChat) Reached OnWebRTCConnectedAndVoiceChatConnected without voice chat id? Failing."
                   ),
                   this.EndVoiceChatInternal(!1));
-              var i = dt.Init(Tc);
+              var i = dt.Init(Dc);
               i.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID),
                 i.Body().set_ssrc_my_sending_stream(t.ssrc()),
                 i.Body().set_ip_webrtc_client(t.client_ip()),
@@ -44215,17 +44309,17 @@ and limitations under the License.
                 i
                   .Body()
                   .set_has_audio_worklets_support(
-                    Up.AudioPlaybackManager.supports_audio_worklets
+                    Hp.AudioPlaybackManager.supports_audio_worklets
                   ),
                 i.Body().set_user_agent(navigator.userAgent),
-                Ja.UpdateVoiceChatWebRTCData(
+                Za.UpdateVoiceChatWebRTCData(
                   this.m_CMInterface.GetServiceTransport(),
                   i
                 )
                   .then(function(t) {
                     1 == t.GetEResult()
                       ? ((e.m_VoiceCallState.m_eState =
-                          Qc.k_EVoiceCallState_Connected),
+                          el.k_EVoiceCallState_Connected),
                         (e.m_VoiceCallState.m_timeFinishedConnecting = performance.now()),
                         e.SendVoiceStatusUpdate(),
                         e.LogMsg(
@@ -44253,18 +44347,18 @@ and limitations under the License.
               var i = this;
               this.m_VoiceCallState.m_targetAccountID != e.GetAccountID() &&
                 this.EndVoiceChatInternal(!1),
-                (this.m_VoiceCallState.m_eState = Qc.k_EVoiceCallState_None),
+                (this.m_VoiceCallState.m_eState = el.k_EVoiceCallState_None),
                 (this.m_VoiceCallState.m_targetAccountID = e.GetAccountID()),
                 (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !1),
                 (this.m_VoiceCallState.m_bWaitingOnOneOnOneRejoin = !1),
                 (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !1),
                 (this.m_VoiceCallState.m_chatRoom = null),
                 (this.m_VoiceCallState.m_voiceChatID = t);
-              var n = dt.Init(Sc);
+              var n = dt.Init(Fc);
               n.Body().set_steamid_partner(e.ConvertTo64BitString()),
                 n.Body().set_accepted_request(!0),
                 n.Body().set_voice_chatid(t),
-                Ja.AnswerOneOnOneChat(
+                Za.AnswerOneOnOneChat(
                   this.m_CMInterface.GetServiceTransport(),
                   n
                 ).then(function(t) {
@@ -44279,11 +44373,11 @@ and limitations under the License.
             }),
             (e.prototype.OnRejectOneOnOneVoiceChat = function(e, t) {
               var i = this,
-                n = dt.Init(Sc);
+                n = dt.Init(Fc);
               n.Body().set_steamid_partner(e.ConvertTo64BitString()),
                 n.Body().set_accepted_request(!1),
                 n.Body().set_voice_chatid(t),
-                Ja.AnswerOneOnOneChat(
+                Za.AnswerOneOnOneChat(
                   this.m_CMInterface.GetServiceTransport(),
                   n
                 ).then(function(t) {
@@ -44297,7 +44391,7 @@ and limitations under the License.
             (e.prototype.PlayRingSound = function(e) {
               this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(
                 e
-              ).audio_buffer = Up.AudioPlaybackManager.PlayAudioURLWithRepeats(
+              ).audio_buffer = Hp.AudioPlaybackManager.PlayAudioURLWithRepeats(
                 tt.a.COMMUNITY_CDN_URL +
                   "public/sounds/webui/steam_phonecall.m4a?v=1",
                 1
@@ -44306,11 +44400,11 @@ and limitations under the License.
             (e.prototype.IsVoiceActive = function(e, t) {
               return (
                 !!this.m_VoiceCallState.BMatchingCall(e, t) &&
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None
               );
             }),
             (e.prototype.CheckVoiceSnoozeTiemout = function() {
-              if (Up.IdleTracker.GetUserIdleTime() > 3600) {
+              if (Hp.IdleTracker.GetUserIdleTime() > 3600) {
                 var e = this.m_MicVolumeMeter.GetLastTimeNonZero();
                 performance.now() - e > 36e5 &&
                   (this.OnUserEndVoiceChat(),
@@ -44335,7 +44429,7 @@ and limitations under the License.
                     this.ProcessStatsReport,
                     1e4
                   )),
-                  void 0 != Sm && si.b.BClientConnected().then(function() {}),
+                  void 0 != Om && si.b.BClientConnected().then(function() {}),
                   -1 ==
                     this.m_PeerConnection.localDescription.sdp.indexOf(
                       "mozilla..."
@@ -44346,7 +44440,7 @@ and limitations under the License.
                   this.m_PeerConnection.getStats(function(e) {
                     e.result().forEach(function(e) {
                       if ("ssrc" == e.type) {
-                        var i = new tl(),
+                        var i = new nl(),
                           n = e.names(),
                           r = n.indexOf("mediaType");
                         if (-1 != r && "audio" == e.stat(n[r])) {
@@ -44428,7 +44522,7 @@ and limitations under the License.
                         this.PadOutput("Decoding Errors", 20)
                     ),
                     this.m_mapAccountIDToStats.forEach(function(t, i) {
-                      var n = Up.FriendStore.GetPlayerIfCached(i),
+                      var n = Hp.FriendStore.GetPlayerIfCached(i),
                         r = "[unknown]";
                       void 0 != n && (r = n.display_name),
                         e.LogMsg(
@@ -44480,7 +44574,7 @@ and limitations under the License.
             }),
             (e.prototype.CheckConnection = function() {
               if (
-                this.m_VoiceCallState.m_eState == Qc.k_EVoiceCallState_Connected
+                this.m_VoiceCallState.m_eState == el.k_EVoiceCallState_Connected
               )
                 this.LogMsg(
                   "(VoiceChat) Succcess! Voice is fully connected took " +
@@ -44508,7 +44602,7 @@ and limitations under the License.
                 var i = 6e4;
                 0 != this.m_VoiceCallState.m_targetAccountID &&
                   this.m_VoiceCallState.m_eState ==
-                    Qc.k_EVoiceCallState_RequestedPermission &&
+                    el.k_EVoiceCallState_RequestedPermission &&
                   (i = 3e5),
                   t > i &&
                     (this.LogMsg(
@@ -44535,13 +44629,13 @@ and limitations under the License.
             }),
             (e.prototype.BackOffAndRetryInitiateVoiceChat = function() {
               var e = this;
-              if (this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None) {
+              if (this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None) {
                 var t = this.m_VoiceCallState.m_nFailuresThisInitiate,
                   i = this.m_VoiceCallState.m_targetAccountID,
                   n = this.m_VoiceCallState.m_chatRoom;
                 this.EndVoiceChatInternal(!0),
                   (this.m_VoiceCallState.m_eState =
-                    Qc.k_EVoiceCallState_ScheduledInitiate),
+                    el.k_EVoiceCallState_ScheduledInitiate),
                   (this.m_VoiceCallState.m_targetAccountID = i),
                   (this.m_VoiceCallState.m_chatRoom = n),
                   (this.m_VoiceCallState.m_nFailuresThisInitiate = t + 1);
@@ -44567,8 +44661,8 @@ and limitations under the License.
             }),
             (e.prototype.InitiateVoiceChat = function(e, t) {
               var i = this;
-              void 0 != Sm && si.b.BClientConnected().then(function() {});
-              var n = yc()(navigator.userAgent);
+              void 0 != Om && si.b.BClientConnected().then(function() {});
+              var n = bc()(navigator.userAgent);
               if ("Chrome" != n.browser.name)
                 return (
                   this.LogMsg(
@@ -44595,7 +44689,7 @@ and limitations under the License.
                 );
               var r = this.m_VoiceCallState.BMatchingCall(e, t);
               this.m_VoiceCallState.BMatchingCall(e, t) ||
-                this.m_VoiceCallState.m_eState == Qc.k_EVoiceCallState_None ||
+                this.m_VoiceCallState.m_eState == el.k_EVoiceCallState_None ||
                 (this.LogMsg(
                   "(VoiceChat) InitiateVoiceChat called for new target account/room while already connected, ending prior session first"
                 ),
@@ -44606,12 +44700,12 @@ and limitations under the License.
               var o = performance.now();
               if (
                 this.m_VoiceCallState.m_eState <=
-                  Qc.k_EVoiceCallState_ScheduledInitiate &&
+                  el.k_EVoiceCallState_ScheduledInitiate &&
                 0 != this.m_VoiceCallState.m_timeEndedVoiceChat &&
                 o - this.m_VoiceCallState.m_timeEndedVoiceChat < 100
               ) {
                 (this.m_VoiceCallState.m_eState =
-                  Qc.k_EVoiceCallState_ScheduledInitiate),
+                  el.k_EVoiceCallState_ScheduledInitiate),
                   (this.m_VoiceCallState.m_targetAccountID = e),
                   (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !0),
                   (this.m_VoiceCallState.m_chatRoom = t);
@@ -44632,7 +44726,7 @@ and limitations under the License.
               }
               (!r ||
                 this.m_VoiceCallState.m_eState <=
-                  Qc.k_EVoiceCallState_ScheduledInitiate) &&
+                  el.k_EVoiceCallState_ScheduledInitiate) &&
                 (e
                   ? this.LogMsg(
                       "Resetting voice chat state and initiating to individual " +
@@ -44643,7 +44737,7 @@ and limitations under the License.
                         t.chatID
                     ),
                 this.m_VoiceCallState.m_eState <=
-                  Qc.k_EVoiceCallState_ScheduledInitiate &&
+                  el.k_EVoiceCallState_ScheduledInitiate &&
                   ((this.m_VoiceCallState.m_targetAccountID = e),
                   (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !0),
                   (this.m_VoiceCallState.m_chatRoom = t),
@@ -44662,7 +44756,7 @@ and limitations under the License.
               var e = this;
               if (
                 this.m_VoiceCallState.m_eState >
-                Qc.k_EVoiceCallState_ScheduledInitiate
+                el.k_EVoiceCallState_ScheduledInitiate
               )
                 return (
                   this.LogMsg(
@@ -44672,7 +44766,7 @@ and limitations under the License.
                   void this.EndVoiceChatInternal(!1)
                 );
               void 0 == this.m_AudioContext &&
-                (this.m_AudioContext = Up.AudioPlaybackManager.context);
+                (this.m_AudioContext = Hp.AudioPlaybackManager.context);
               var t = {
                 optional: [
                   {
@@ -44729,7 +44823,7 @@ and limitations under the License.
                         " now initating getUserMedia/WebRTC"
                     ),
                 (this.m_VoiceCallState.m_eState =
-                  Qc.k_EVoiceCallState_RequestedMicAccess);
+                  el.k_EVoiceCallState_RequestedMicAccess);
               var i = navigator;
               (this.m_bUserHasDeniedMicPermissions = !1),
                 (i.getUserMedia =
@@ -44763,12 +44857,12 @@ and limitations under the License.
                 if (this.m_bClientSideLogsUploadInProgress)
                   return void this.ScheduleClientVoiceLogsUpload(2);
                 this.m_bClientSideLogsUploadInProgress = !0;
-                var t = dt.Init(Nc);
+                var t = dt.Init(Ac);
                 t.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
                 var i = this.m_rgLogLines.slice(this.m_nLastLogLineUploaded);
                 t.Body().set_client_voice_logs_new_lines(i.join("\r\n"));
                 var n = i.length;
-                Ja.UploadClientVoiceChatLogs(
+                Za.UploadClientVoiceChatLogs(
                   this.m_CMInterface.GetServiceTransport(),
                   t
                 )
@@ -44809,14 +44903,14 @@ and limitations under the License.
                 this.m_StatsTimeout &&
                   (clearTimeout(this.m_StatsTimeout),
                   (this.m_StatsTimeout = 0)),
-                this.m_VoiceCallState.m_eState != Qc.k_EVoiceCallState_None)
+                this.m_VoiceCallState.m_eState != el.k_EVoiceCallState_None)
               ) {
                 if (!e) {
                   if (this.m_VoiceCallState.m_targetAccountID) {
                     var i = this.m_VoiceCallState.m_targetAccountID;
                     this.m_VoiceCallState.m_targetAccountID = 0;
                     var n = this.m_VoiceCallState.m_voiceChatID,
-                      r = dt.Init(Bc);
+                      r = dt.Init(Ic);
                     r
                       .Body()
                       .set_steamid_partner(
@@ -44825,13 +44919,13 @@ and limitations under the License.
                       r
                         .Body()
                         .set_voice_chatid(this.m_VoiceCallState.m_voiceChatID),
-                      Ja.LeaveOneOnOneChat(
+                      Za.LeaveOneOnOneChat(
                         this.m_CMInterface.GetServiceTransport(),
                         r
                       ).then(function(e) {
                         if (1 == e.GetEResult()) {
                           t.LogMsg("(VoiceChat) Left voice chat with " + i);
-                          var r = new ol();
+                          var r = new sl();
                           (r.partner_accountid = t.m_CMInterface.steamid.GetAccountID()),
                             (r.voice_chatid = n),
                             (r.previously_joined = !0),
@@ -44874,8 +44968,8 @@ and limitations under the License.
                   this.m_mapAccountIDToStats.clear();
                 var a =
                   this.m_VoiceCallState.m_eState >
-                  Qc.k_EVoiceCallState_RequestedPermission;
-                (this.m_VoiceCallState.m_eState = Qc.k_EVoiceCallState_None),
+                  el.k_EVoiceCallState_RequestedPermission;
+                (this.m_VoiceCallState.m_eState = el.k_EVoiceCallState_None),
                   (this.m_VoiceCallState.m_targetAccountID = 0),
                   (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !1),
                   (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !1),
@@ -44926,7 +45020,7 @@ and limitations under the License.
                     (this.m_MicInputGainNode.disconnect(),
                     (this.m_MicInputGainNode = void 0)),
                   void 0 != this.m_AudioContext &&
-                    (Up.AudioPlaybackManager.SetVoiceNotActive(),
+                    (Hp.AudioPlaybackManager.SetVoiceNotActive(),
                     (this.m_AudioContext = void 0)),
                   this.m_PeerConnection &&
                     ((this.m_PeerConnection.oniceconnectionstatechange = void 0),
@@ -45100,7 +45194,7 @@ and limitations under the License.
             e
           );
         })(),
-        sl = Object(Os.observer)(function(e) {
+        ll = Object(Rs.observer)(function(e) {
           var t = e.friend,
             i = [],
             n = t.persona_name_history,
@@ -45143,7 +45237,7 @@ and limitations under the License.
             )
           );
         }),
-        cl = (function(e) {
+        ul = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -45183,7 +45277,7 @@ and limitations under the License.
                       return e == n.role_id;
                     });
                   return s || r
-                    ? br.createElement(dl, {
+                    ? br.createElement(hl, {
                         key: n.role_id,
                         friend: e.props.friend,
                         group: e.props.group,
@@ -45213,7 +45307,7 @@ and limitations under the License.
                           onSelected: function() {},
                           bInteractableItem: !0
                         },
-                        br.createElement(Bs.h, null),
+                        br.createElement(Is.h, null),
                         "Owner"
                       )
                     : a
@@ -45221,10 +45315,10 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "OnToggle", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        ll = (function(e) {
+        dl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -45240,7 +45334,7 @@ and limitations under the License.
             }),
             (t.prototype.InviteFriend = function() {
               var e = this;
-              Up.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Hp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 4 == t
@@ -45270,7 +45364,7 @@ and limitations under the License.
             }),
             (t.prototype.AcceptIncomingInvite = function() {
               var e = this;
-              Up.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Hp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 3 == t
@@ -45294,7 +45388,7 @@ and limitations under the License.
             }),
             (t.prototype.IgnoreIncomingInvite = function() {
               var e = this;
-              Up.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
+              Hp.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
                 1 == t
                   ? Ee(
                       e.props.ownerWindow,
@@ -45326,7 +45420,7 @@ and limitations under the License.
                 Object(hr.b)("#Friend_Menu_RemoveFromFriendsList")
               )
                 .then(function() {
-                  Up.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
+                  Hp.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
                     (3 != t && 6 != t) ||
                       Ee(
                         e.props.ownerWindow,
@@ -45349,7 +45443,7 @@ and limitations under the License.
                 Object(hr.b)("#Friend_Menu_BlockAllCommunication")
               )
                 .then(function() {
-                  Up.FriendStore.BlockPlayer(e.props.friend);
+                  Hp.FriendStore.BlockPlayer(e.props.friend);
                 })
                 .catch(function() {});
             }),
@@ -45365,18 +45459,18 @@ and limitations under the License.
                 Object(hr.b)("#Friend_Menu_UnblockAllCommunication")
               )
                 .then(function() {
-                  Up.FriendStore.BlockPlayer(e.props.friend, !0);
+                  Hp.FriendStore.BlockPlayer(e.props.friend, !0);
                 })
                 .catch(function() {});
             }),
             (t.prototype.InviteToGame = function(e) {
-              Up.FriendStore.InviteToGame(this.props.friend, e);
+              Hp.FriendStore.InviteToGame(this.props.friend, e);
             }),
             (t.prototype.InviteToLobby = function(e, t) {
-              Up.FriendStore.InviteToLobby(this.props.friend, e, t);
+              Hp.FriendStore.InviteToLobby(this.props.friend, e, t);
             }),
             (t.prototype.InviteToWatch = function() {
-              Up.FriendStore.InviteToWatch(this.props.friend);
+              Hp.FriendStore.InviteToWatch(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e,
@@ -45387,8 +45481,8 @@ and limitations under the License.
                 o = [],
                 a = [],
                 s = n.friend,
-                c = Up.FriendStore.FavoritesStore,
-                l = (Up.FriendStore.FriendGroupStore, Up.FriendStore.self == s),
+                c = Hp.FriendStore.FavoritesStore,
+                l = (Hp.FriendStore.FriendGroupStore, Hp.FriendStore.self == s),
                 u = "favorites" == r.chatContext,
                 d =
                   u ||
@@ -45397,13 +45491,13 @@ and limitations under the License.
                 p = !1,
                 h = s.is_friend,
                 m = 2 == s.efriendrelationship,
-                g = Up.FriendStore.self.persona.m_unGamePlayedAppID,
+                g = Hp.FriendStore.self.persona.m_unGamePlayedAppID,
                 f = s.persona.m_unGamePlayedAppID;
               if (
                 (r.chat &&
-                  (r.chat instanceof bs
+                  (r.chat instanceof Ss
                     ? ((e = r.chat), e.BVoiceActive() && (p = !0))
-                    : r.chat instanceof cs &&
+                    : r.chat instanceof us &&
                       ((t = r.chat), t.BVoiceActive() && (p = !0))),
                 h ||
                   m ||
@@ -45420,7 +45514,7 @@ and limitations under the License.
                   ),
                 p &&
                   !l &&
-                  o.push(br.createElement(ul, { friend: this.props.friend })),
+                  o.push(br.createElement(pl, { friend: this.props.friend })),
                 r.tab &&
                   o.push(
                     br.createElement(
@@ -45428,7 +45522,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Up.UIStore.CloseTab(n.browserContext, r.tab);
+                          Hp.UIStore.CloseTab(n.browserContext, r.tab);
                         }
                       },
                       Object(hr.b)("#Chat_CloseTabAction")
@@ -45461,7 +45555,7 @@ and limitations under the License.
                 ),
                 t &&
                   o.push(
-                    br.createElement(hl, {
+                    br.createElement(gl, {
                       key: "moderationoptions",
                       friend: s,
                       bIsSelf: l,
@@ -45529,9 +45623,9 @@ and limitations under the License.
                           Object(hr.b)("#Friend_Menu_RemoveFromFriendsList")
                         )
                       ),
-                    a.push(br.createElement(sl, { key: "aliases", friend: s })),
+                    a.push(br.createElement(ll, { key: "aliases", friend: s })),
                     0 != g &&
-                      Up.BroadcastStore.is_broadcast_capable &&
+                      Hp.BroadcastStore.is_broadcast_capable &&
                       o.push(
                         br.createElement(
                           Cr.d,
@@ -45545,9 +45639,9 @@ and limitations under the License.
                         )
                       ),
                     0 != g &&
-                      "0" != Up.FriendStore.self.persona.m_game_lobby_id)
+                      "0" != Hp.FriendStore.self.persona.m_game_lobby_id)
                   ) {
-                    var _ = Up.AppInfoStore.GetAppInfo(g);
+                    var _ = Hp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       br.createElement(
                         Cr.d,
@@ -45556,7 +45650,7 @@ and limitations under the License.
                           onSelected: function() {
                             i.InviteToLobby(
                               g,
-                              Up.FriendStore.self.persona.m_game_lobby_id
+                              Hp.FriendStore.self.persona.m_game_lobby_id
                             );
                           }
                         },
@@ -45581,7 +45675,7 @@ and limitations under the License.
                       )
                     );
                   } else if (0 != g && g != f) {
-                    var _ = Up.AppInfoStore.GetAppInfo(g);
+                    var _ = Hp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       br.createElement(
                         Cr.d,
@@ -45612,7 +45706,7 @@ and limitations under the License.
                       )
                     );
                   }
-                  o.push(br.createElement(pl, { key: "trading", friend: s }));
+                  o.push(br.createElement(ml, { key: "trading", friend: s }));
                 } else
                   m
                     ? (o.push(
@@ -45636,7 +45730,7 @@ and limitations under the License.
                         )
                       ),
                       o.push(
-                        br.createElement(sl, { key: "aliases", friend: s })
+                        br.createElement(ll, { key: "aliases", friend: s })
                       ))
                     : o.push(
                         br.createElement(
@@ -45677,7 +45771,7 @@ and limitations under the License.
                       ),
                     !!s.persona.m_unGamePlayedAppID &&
                       !l &&
-                      br.createElement(ml, {
+                      br.createElement(fl, {
                         unAppID: s.persona.m_unGamePlayedAppID,
                         strGameName: s.persona.current_game_name,
                         ulGameID: s.persona.m_gameid,
@@ -45699,7 +45793,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        ul = (function(e) {
+        pl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { volumeNumber: 50 }), i;
@@ -45707,20 +45801,20 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.OnFriendVolumeChanged = function(e) {
-              Up.VoiceStore.SetPerUserGainLevel(
+              Hp.VoiceStore.SetPerUserGainLevel(
                 this.props.friend.accountid,
-                Up.VoiceStore.ConvertSliderToGainValue(
+                Hp.VoiceStore.ConvertSliderToGainValue(
                   e,
-                  al.k_MaxPerUserGainMultiplier
+                  cl.k_MaxPerUserGainMultiplier
                 )
               ),
                 this.setState({ volumeNumber: e });
             }),
             (t.prototype.OnMutingClick = function(e) {
-              var t = Up.VoiceStore.GetPerUserMuting(
+              var t = Hp.VoiceStore.GetPerUserMuting(
                 this.props.friend.accountid
               );
-              Up.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
+              Hp.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
                 this.forceUpdate();
             }),
             (t.prototype.OnInlineVolumeClick = function(e) {
@@ -45729,7 +45823,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.state.volumeNumber,
                 t = "VolumeIcon",
-                i = Up.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
+                i = Hp.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
               return (
                 e > 65
                   ? (t += " HighestVolume")
@@ -45754,17 +45848,17 @@ and limitations under the License.
                     br.createElement(
                       "button",
                       { className: t, onClick: this.OnMutingClick },
-                      br.createElement(Bs.M, null)
+                      br.createElement(Is.M, null)
                     ),
-                    br.createElement(nc, {
+                    br.createElement(oc, {
                       min: 0,
                       max: 100,
                       label: "",
-                      value: Up.VoiceStore.ConvertGainValueToSliderValue(
-                        Up.VoiceStore.GetPerUserGainLevel(
+                      value: Hp.VoiceStore.ConvertGainValueToSliderValue(
+                        Hp.VoiceStore.GetPerUserGainLevel(
                           this.props.friend.accountid
                         ),
-                        al.k_MaxPerUserGainMultiplier
+                        cl.k_MaxPerUserGainMultiplier
                       ),
                       onChange: this.OnFriendVolumeChanged
                     }),
@@ -45781,10 +45875,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnFriendVolumeChanged", null),
             it.b([Xt.a], t.prototype, "OnMutingClick", null),
             it.b([Xt.a], t.prototype, "OnInlineVolumeClick", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        dl = (function(e) {
+        hl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -45808,7 +45902,7 @@ and limitations under the License.
                   onSelected: function() {},
                   bInteractableItem: !0
                 },
-                br.createElement(ec, {
+                br.createElement(ic, {
                   label: this.props.roleName,
                   checked: this.props.bHasRole,
                   onChange: this.OnChange,
@@ -45817,10 +45911,10 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "OnChange", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        pl = (function(e) {
+        ml = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -45830,7 +45924,7 @@ and limitations under the License.
               var t = "NewTradeOffer" + this.props.friend.accountid;
               Ze(e)
                 .open(
-                  Up.EconomyStore.GetDefaultTradeOfferURLForFriend(
+                  Hp.EconomyStore.GetDefaultTradeOfferURLForFriend(
                     this.props.friend.accountid
                   ),
                   t,
@@ -45839,7 +45933,7 @@ and limitations under the License.
                 .focus();
             }),
             (t.prototype.InviteToTrade = function() {
-              Up.FriendStore.InviteToTrade(this.props.friend);
+              Hp.FriendStore.InviteToTrade(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e = this.props.friend;
@@ -45865,7 +45959,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        hl = (function(e) {
+        gl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -45895,7 +45989,7 @@ and limitations under the License.
             (t.prototype.OnKickFriend = function() {
               var e = this,
                 t = this.props.context.chat,
-                i = fl,
+                i = yl,
                 n = this.props.ownerWindow;
               new Promise(function(t, r) {
                 var o = ke(
@@ -45903,7 +45997,7 @@ and limitations under the License.
                   Object(hr.b)("#Friend_Kick", e.props.friend.display_name)
                 );
                 Be(
-                  br.createElement(_l, {
+                  br.createElement(vl, {
                     OnOK: t,
                     OnCancel: r,
                     OnSet: function(e) {
@@ -45951,7 +46045,7 @@ and limitations under the License.
                   ),
                 i.group &&
                   e.push(
-                    br.createElement(cl, {
+                    br.createElement(ul, {
                       key: "editroles",
                       friend: t,
                       group: i.group,
@@ -45966,7 +46060,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ml = (function(e) {
+        fl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -46041,7 +46135,7 @@ and limitations under the License.
               var e = [],
                 t = void 0,
                 i = this.props.friend,
-                n = Up.AppInfoStore.GetAppInfo(this.props.unAppID);
+                n = Hp.AppInfoStore.GetAppInfo(this.props.unAppID);
               if (!n.is_valid) return null;
               if (n.is_initialized)
                 if (this.props.bShowLargeHeader)
@@ -46087,7 +46181,7 @@ and limitations under the License.
                           key: "showinsteam",
                           onSelected: this.ShowInSteam
                         },
-                        br.createElement(Bs.x, null),
+                        br.createElement(Is.x, null),
                         Object(hr.b)("#Friend_Menu_ShowInSteam")
                       )
                     )
@@ -46104,7 +46198,7 @@ and limitations under the License.
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          br.createElement(Bs.x, null),
+                          br.createElement(Is.x, null),
                           Object(hr.b)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -46117,7 +46211,7 @@ and limitations under the License.
                           key: "launchgame",
                           onSelected: this.LaunchGame
                         },
-                        br.createElement(Bs.x, null),
+                        br.createElement(Is.x, null),
                         Object(hr.b)("#Friend_Menu_LaunchFriendGame")
                       )
                     )),
@@ -46180,26 +46274,26 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "WatchGame", null),
             it.b([Xt.a], t.prototype, "JoinGame", null),
             it.b([Xt.a], t.prototype, "ShowInSteam", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        gl = (function(e) {
+        _l = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.SetUserOnline = function() {
-              Up.FriendStore.SetUserPersonaState(1, !0);
+              Hp.FriendStore.SetUserPersonaState(1, !0);
             }),
             (t.prototype.SetUserInvisible = function() {
-              Up.FriendStore.SetUserPersonaState(7, !0);
+              Hp.FriendStore.SetUserPersonaState(7, !0);
             }),
             (t.prototype.SetUserAway = function() {
-              Up.FriendStore.SetUserPersonaState(3, !0);
+              Hp.FriendStore.SetUserPersonaState(3, !0);
             }),
             (t.prototype.ShowUserProfile = function(e) {
-              var t = lt.a.InitFromAccountID(Up.FriendStore.self.accountid);
+              var t = lt.a.InitFromAccountID(Hp.FriendStore.self.accountid);
               v(
                 e,
                 tt.a.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString()
@@ -46207,7 +46301,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.EditUserName = function(e) {
-              var t = lt.a.InitFromAccountID(Up.FriendStore.self.accountid);
+              var t = lt.a.InitFromAccountID(Hp.FriendStore.self.accountid);
               v(
                 e,
                 tt.a.COMMUNITY_BASE_URL +
@@ -46219,7 +46313,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = [],
-                t = 1 == Up.FriendStore.self.persona.m_ePersonaState;
+                t = 1 == Hp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 br.createElement(
                   Cr.b,
@@ -46231,7 +46325,7 @@ and limitations under the License.
                   Object(hr.b)("#PersonaStateOnline")
                 )
               );
-              var i = 7 == Up.FriendStore.self.persona.m_ePersonaState;
+              var i = 7 == Hp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 br.createElement(
                   Cr.b,
@@ -46243,7 +46337,7 @@ and limitations under the License.
                   Object(hr.b)("#PersonaStateInvisible")
                 )
               );
-              var n = 3 == Up.FriendStore.self.persona.m_ePersonaState;
+              var n = 3 == Hp.FriendStore.self.persona.m_ePersonaState;
               return (
                 e.push(
                   br.createElement(
@@ -46287,8 +46381,8 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        fl = 3600,
-        _l = (function(e) {
+        yl = 3600,
+        vl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -46305,7 +46399,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = [
-                { label: Object(hr.b)("#Friend_Kick_Hour"), data: fl },
+                { label: Object(hr.b)("#Friend_Kick_Hour"), data: yl },
                 { label: Object(hr.b)("#Friend_Kick_Day"), data: 86400 },
                 { label: Object(hr.b)("#Friend_Kick_Week"), data: 604800 }
               ];
@@ -46320,21 +46414,21 @@ and limitations under the License.
                     bCenterVertically: !0
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     " ",
                     Object(hr.b)("#Friend_Kick"),
                     " "
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     br.createElement(
-                      Ws,
+                      Hs,
                       null,
                       Object(hr.b)("#Friend_Kick_How_Long")
                     ),
-                    br.createElement(rc, {
+                    br.createElement(ac, {
                       strDefaultLabel: Object(hr.b)("#Friend_Kick_Hour"),
                       rgOptions: e,
                       onChange: this.OnDropDownChange,
@@ -46342,9 +46436,9 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, {
+                    br.createElement(N, {
                       onCancel: this.OnCancel,
                       strOKText: Object(hr.b)("#Friend_Kick_Button"),
                       strCancelText: Object(hr.b)("#Button_Cancel")
@@ -46359,7 +46453,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        yl = (function(e) {
+        bl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -46367,7 +46461,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.OpenChatWindow = function(e) {
               this.props.group
-                ? Up.UIStore.ShowAndOrActivateChatRoomGroup(
+                ? Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                     this.props.browserContext,
                     this.props.group,
                     !0
@@ -46396,7 +46490,7 @@ and limitations under the License.
                 i = this.props.group,
                 n = this.props.clan,
                 r = this.props.context || {},
-                o = Up.FriendStore.FavoritesStore;
+                o = Hp.FriendStore.FavoritesStore;
               r.tab
                 ? t.push(
                     br.createElement(
@@ -46404,7 +46498,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Up.UIStore.CloseTab(e.props.browserContext, r.tab);
+                          Hp.UIStore.CloseTab(e.props.browserContext, r.tab);
                         }
                       },
                       Object(hr.b)("#Chat_CloseTabAction")
@@ -46443,7 +46537,7 @@ and limitations under the License.
                 );
               var a = n ? { clan: n } : { chat: i };
               return (
-                Up.FriendStore.FavoritesStore.BIsFavorited(a)
+                Hp.FriendStore.FavoritesStore.BIsFavorited(a)
                   ? r.is_favorites &&
                     t.push(
                       br.createElement(
@@ -46472,7 +46566,7 @@ and limitations under the License.
                 n &&
                   n.BIsOGG() &&
                   t.push(
-                    br.createElement(ml, {
+                    br.createElement(fl, {
                       unAppID: n.GetOGGAppID(),
                       strGameName: n.name
                     })
@@ -46490,7 +46584,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        vl = (function(e) {
+        Cl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -46498,7 +46592,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.ShowInviteDialog = function() {
               var e = this.props.group.GetChatRoom(this.props.roomID);
-              Up.UIStore.OpenInviteDialogForChatGroup(
+              Hp.UIStore.OpenInviteDialogForChatGroup(
                 this.props.browserContext,
                 this.props.ownerWindow,
                 this.props.group,
@@ -46562,7 +46656,7 @@ and limitations under the License.
                         className: o ? "" : "noPermission",
                         onSelected: this.SaveVoiceRoom
                       },
-                      !o && br.createElement(Bs.q, null),
+                      !o && br.createElement(Is.q, null),
                       Object(hr.b)("#Chat_Actions_SaveChannel")
                     )
                   ),
@@ -46605,7 +46699,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        bl = (function(e) {
+        Sl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { strName: "", strError: void 0 }), i;
@@ -46636,25 +46730,25 @@ and limitations under the License.
                     onSubmit: this.HandleSubmit
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     Object(hr.b)("#Chat_SaveVoiceRoom")
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     this.state.strError &&
                       br.createElement(
-                        Ws,
+                        Hs,
                         { className: "nicknameError" },
                         this.state.strError
                       ),
                     br.createElement(
-                      Ws,
+                      Hs,
                       null,
                       Object(hr.b)("#Chat_SaveVoiceRoom_Description")
                     ),
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       type: "text",
                       label: Object(hr.b)("#Chat_SaveVoiceRoom_Name"),
                       className: "nicknameInput",
@@ -46664,20 +46758,20 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, { onCancel: this.props.closeModal })
+                    br.createElement(N, { onCancel: this.props.closeModal })
                   )
                 )
               );
             }),
             it.b([Xt.a], t.prototype, "HandleTextEntry", null),
             it.b([Xt.a], t.prototype, "HandleSubmit", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Cl = i("UVf0"),
-        Sl = (function(e) {
+        Ml = i("UVf0"),
+        Fl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { ulSelectedGroupID: "" }), i;
@@ -46748,7 +46842,7 @@ and limitations under the License.
                     )
                   ),
                 t.map(function(t) {
-                  return br.createElement(Ml, {
+                  return br.createElement(wl, {
                     key: t.GetGroupID(),
                     group: t,
                     bExpanded: !1,
@@ -46759,10 +46853,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "BindDiv", null),
             it.b([Xt.a], t.prototype, "OnGroupSelected", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ml = (function(e) {
+        wl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -46795,19 +46889,19 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = this.props.group;
               if (t.BIsClanChatRoom()) {
-                var i = Up.FriendStore.ClanStore.GetClan(t.GetClanID());
-                Sm.DragDropManager.StartDrag({ type: "clan", clan: i });
+                var i = Hp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                Om.DragDropManager.StartDrag({ type: "clan", clan: i });
               } else
-                Sm.DragDropManager.StartDrag({
+                Om.DragDropManager.StartDrag({
                   type: "chatroomgroup",
                   group: t
                 });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Sm.DragDropManager.EndDrag();
+              Om.DragDropManager.EndDrag();
             }),
             (t.prototype.OnDragEnter = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t,
                   n = i.friend;
@@ -46827,20 +46921,20 @@ and limitations under the License.
                 this.state.friendDrag && this.setState({ friendDrag: void 0 }));
             }),
             (t.prototype.OnDrop = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 e.preventDefault(), e.stopPropagation();
                 var i = this.props.group.memberList,
                   n = i.member_list.slice(),
                   r = t;
                 if (void 0 != r.friend && -1 != n.indexOf(r.friend)) return;
-                Sm.DragDropManager.SetDropConsumed(),
+                Om.DragDropManager.SetDropConsumed(),
                   this.props.group.InviteFriend(r.friend.accountid),
                   this.setState({ friendDrag: void 0 });
               }
             }),
             (t.prototype.OnClick = function(e) {
-              Up.UIStore.ShowAndOrActivateChatRoomGroup(
+              Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Ye(this),
                 this.props.group,
                 !0
@@ -46851,7 +46945,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.OnOpenGroup = function(e) {
-              Up.UIStore.ShowAndOrActivateChatRoomGroup(
+              Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Ye(this),
                 this.props.group,
                 !0
@@ -46868,7 +46962,7 @@ and limitations under the License.
               this.setState({ bNonGroupHovered: !1 });
             }),
             (t.prototype.CreateVoiceRoom = function() {
-              var e = Up.FriendStore.self.persona.m_strPlayerName,
+              var e = Hp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(hr.b)("#Chat_CreateChatChannel_DefaultName", e);
               this.props.group.CreateChatRoom(t, !0).then(function(e) {
                 e.StartVoiceChat();
@@ -46893,7 +46987,7 @@ and limitations under the License.
                       onClick: this.OnClick,
                       onContextMenu: this.OnContextMenu
                     },
-                    br.createElement(su, { group: e, small: !0 }),
+                    br.createElement(uu, { group: e, small: !0 }),
                     br.createElement(
                       "div",
                       { className: "groupNameStatusContainer" },
@@ -46913,12 +47007,12 @@ and limitations under the License.
                             onMouseEnter: this.OnMouseEnterNonTitle,
                             onMouseLeave: this.OnMouseLeaveNonTitle
                           },
-                          br.createElement(Bs.k, null)
+                          br.createElement(Is.k, null)
                         )
                       ),
-                      !t && n && br.createElement(Ol, { group: e })
+                      !t && n && br.createElement(Rl, { group: e })
                     ),
-                    br.createElement(Fl, { group: e }),
+                    br.createElement(Ol, { group: e }),
                     n &&
                       br.createElement(
                         "div",
@@ -46939,7 +47033,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "ChatRoomListGroupItemChatRooms" },
-                        br.createElement(wl, { group: e, expanded: t })
+                        br.createElement(Bl, { group: e, expanded: t })
                       )
                     )
                 )
@@ -46958,10 +47052,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnMouseEnterNonTitle", null),
             it.b([Xt.a], t.prototype, "OnMouseLeaveNonTitle", null),
             it.b([Xt.a], t.prototype, "CreateVoiceRoom", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Fl = (function(e) {
+        Ol = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -46990,10 +47084,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        wl = Object(Os.observer)(function(e) {
+        Bl = Object(Rs.observer)(function(e) {
           for (
             var t = [], i = 0, n = e.group.voiceRoomList;
             i < n.length;
@@ -47007,13 +47101,13 @@ and limitations under the License.
             t &&
               (o = t.map(function(e) {
                 return br.createElement(
-                  Ds,
+                  Ps,
                   {
                     classNames: "heightcollapseandfade-anim",
                     timeout: 300,
                     key: e.unique_id
                   },
-                  br.createElement(Nl, {
+                  br.createElement(Al, {
                     key: e.unique_id,
                     chat: e,
                     bRenameActive: !1,
@@ -47022,10 +47116,10 @@ and limitations under the License.
                   })
                 );
               })),
-            br.createElement(Cl.TransitionGroup, null, o)
+            br.createElement(Ml.TransitionGroup, null, o)
           );
         }),
-        Ol = Object(Os.observer)(function(e) {
+        Rl = Object(Rs.observer)(function(e) {
           for (
             var t = [], i = 0, n = e.group.voiceRoomList;
             i < n.length;
@@ -47040,7 +47134,7 @@ and limitations under the License.
                 });
                 0 != a.length &&
                   ((a = o.member_list),
-                  a.sort(Ka.FriendSortByFriendOrNotComparator),
+                  a.sort(Ja.FriendSortByFriendOrNotComparator),
                   t.push({ ulRoomID: r.unique_id, rgFriends: a }));
               }
             }
@@ -47052,10 +47146,10 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: "voiceChannelIcon" },
-                  br.createElement(Bs.L, null)
+                  br.createElement(Is.L, null)
                 ),
                 t.map(function(e) {
-                  return br.createElement(Bl, {
+                  return br.createElement(Il, {
                     key: e.ulRoomID,
                     friendsInRoom: e
                   });
@@ -47063,7 +47157,7 @@ and limitations under the License.
               )
             : null;
         }),
-        Bl = (function(e) {
+        Il = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -47076,7 +47170,7 @@ and limitations under the License.
                 { className: "voiceChatGroup" },
                 e.rgFriends.map(function(e) {
                   return br.createElement(
-                    zu,
+                    ju,
                     {
                       key: e.accountid,
                       friend: e,
@@ -47094,10 +47188,10 @@ and limitations under the License.
                 })
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Rl = (function(e) {
+        El = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bCollapsed: !1 }), i;
@@ -47137,7 +47231,7 @@ and limitations under the License.
             }),
             (t.prototype.CreateTextChannel = function(e) {
               Be(
-                br.createElement(El, {
+                br.createElement(Tl, {
                   ownerWin: e,
                   groupView: this.props.groupView,
                   bVoiceChannel: !1,
@@ -47148,20 +47242,13 @@ and limitations under the License.
             }),
             (t.prototype.CreateVoiceChannel = function(e) {
               Be(
-                br.createElement(El, {
+                br.createElement(Tl, {
                   ownerWin: e,
                   groupView: this.props.groupView,
                   bVoiceChannel: !0,
                   bJoinChannel: !0
                 }),
                 e
-              );
-            }),
-            (t.prototype.ToggleCollapseExpand = function() {
-              var e = this.props.groupView.GetGroup();
-              Up.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
-                e.GetGroupID(),
-                "bChannelListCollapsed"
               );
             }),
             (t.prototype.render = function() {
@@ -47172,7 +47259,7 @@ and limitations under the License.
                 r = !1,
                 o = "chatRoomGroupNavColumn",
                 a = this.props.groupView.IsVoiceActive(),
-                s = Up.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                s = Hp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bChannelListCollapsed"
                 );
@@ -47194,32 +47281,22 @@ and limitations under the License.
                         "div",
                         { onContextMenu: this.OnRoomsContextMenu },
                         i &&
-                          br.createElement(kl, {
+                          br.createElement(Gl, {
                             groupView: this.props.groupView
                           }),
                         (!r || !n) &&
-                          br.createElement(Gl, {
+                          br.createElement(Nl, {
                             groupView: this.props.groupView
                           })
-                      ),
-                      br.createElement(
-                        "div",
-                        {
-                          className: "chatRoomGroupNavCollapseExpand",
-                          title: s ? "Expand List" : "Minimize List",
-                          onClick: this.ToggleCollapseExpand
-                        },
-                        br.createElement(Bs.j, null)
                       )
                     )
               );
             }),
             it.b([Xt.a], t.prototype, "OnRoomsContextMenu", null),
-            it.b([Xt.a], t.prototype, "ToggleCollapseExpand", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Il = (function(e) {
+        kl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { searchString: "", bMemberFilterActive: !1 }), i;
@@ -47238,11 +47315,11 @@ and limitations under the License.
                 var o = r[n];
                 o.BMatchesSearchString(e, !1) && i.push(o);
               }
-              return i.sort(Ka.DefaultFriendSortComparator), i;
+              return i.sort(Ja.DefaultFriendSortComparator), i;
             }),
             (t.prototype.OnMemberListToggleViewClick = function(e) {
               var t = this.props.groupView.GetGroup();
-              Up.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+              Hp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
                 t.GetGroupID(),
                 "bMemberListCollapsed"
               );
@@ -47292,7 +47369,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.groupView.GetGroup(),
                 t = this.props.groupView.GetSelectedChatView(),
-                i = !Up.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                i = !Hp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bMemberListCollapsed"
                 ),
@@ -47315,14 +47392,14 @@ and limitations under the License.
               if (!this.props.inactive) {
                 var l =
                   e.BIsClanChatRoom() &&
-                  Up.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
+                  Hp.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
                 c =
                   e.BIsClanChatRoom() && !l
                     ? br.createElement(
                         br.Fragment,
                         null,
                         br.createElement(
-                          Al,
+                          zl,
                           it.a({}, s, {
                             chatMemberList: e.memberList,
                             name: Object(hr.b)("#Chat_MemberGroup_Online"),
@@ -47330,7 +47407,7 @@ and limitations under the License.
                           })
                         ),
                         br.createElement(
-                          Al,
+                          zl,
                           it.a({}, s, {
                             chatMemberList: e.memberList,
                             name: Object(hr.b)("#Chat_MemberGroup_Guests"),
@@ -47340,7 +47417,7 @@ and limitations under the License.
                         )
                       )
                     : br.createElement(
-                        Al,
+                        zl,
                         it.a({}, s, {
                           chatMemberList: e.memberList,
                           name: Object(hr.b)("#Chat_MemberGroup_Online"),
@@ -47358,6 +47435,17 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: d },
+                    br.createElement(
+                      "div",
+                      {
+                        className:
+                          "MemberListOption ToggleMemberListView" +
+                          (n ? " SearchActive" : ""),
+                        onClick: this.OnMemberListToggleViewClick,
+                        title: a
+                      },
+                      br.createElement(Is.j, null)
+                    ),
                     br.createElement(
                       "form",
                       {
@@ -47387,20 +47475,9 @@ and limitations under the License.
                             className: "friendSearchClear",
                             onClick: this.OnClearSearch
                           },
-                          br.createElement(Bs.O, null)
+                          br.createElement(Is.O, null)
                         )
                       )
-                    ),
-                    br.createElement(
-                      "div",
-                      {
-                        className:
-                          "MemberListOption ToggleMemberListView" +
-                          (n ? " SearchActive" : ""),
-                        onClick: this.OnMemberListToggleViewClick,
-                        title: a
-                      },
-                      br.createElement(Bs.j, null)
                     )
                   ),
                   br.createElement(
@@ -47419,10 +47496,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnClearSearch", null),
             it.b([Xt.a], t.prototype, "OnSearchFocus", null),
             it.b([Xt.a], t.prototype, "OnSearchBlur", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        El = (function(e) {
+        Tl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -47464,7 +47541,7 @@ and limitations under the License.
                     onSubmit: this.OnSubmit
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     Object(hr.b)(
                       this.props.bVoiceChannel
@@ -47473,9 +47550,9 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       ref: function(t) {
                         e.m_refInput = t;
                       },
@@ -47484,9 +47561,9 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, { onCancel: this.props.closeModal })
+                    br.createElement(N, { onCancel: this.props.closeModal })
                   )
                 )
               );
@@ -47495,14 +47572,14 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        kl = (function(e) {
+        Gl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.CreateTextRoom = function() {
-              var e = Up.FriendStore.self.persona.m_strPlayerName,
+              var e = Hp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(hr.b)("#Chat_CreateTextChannel_DefaultName", e);
               this.props.groupView
                 .GetGroup()
@@ -47524,11 +47601,22 @@ and limitations under the License.
             (t.prototype.OnEndChannelRename = function() {
               this.props.groupView.EndRoomRename();
             }),
+            (t.prototype.ToggleCollapseExpand = function() {
+              var e = this.props.groupView.GetGroup();
+              Hp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+                e.GetGroupID(),
+                "bChannelListCollapsed"
+              );
+            }),
             (t.prototype.render = function() {
               var e = this,
                 t = this.props.groupView,
                 i = t.GetGroup().textRoomList,
-                n = t.GetGroup().BCanAdminChannel();
+                n = t.GetGroup().BCanAdminChannel(),
+                r = Hp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                  t.GetGroup().GetGroupID(),
+                  "bChannelListCollapsed"
+                );
               return br.createElement(
                 "div",
                 { className: "chatRoomTextChannelsGroup" },
@@ -47540,24 +47628,30 @@ and limitations under the License.
                   },
                   br.createElement(
                     "div",
-                    { className: "ChannelTypeLabel" },
-                    Object(hr.b)("#Chat_AddTextChat")
-                  ),
-                  br.createElement(
-                    "div",
                     {
                       className:
-                        "ChatRoomAddRoomBtn" + (n ? "" : " NoPermission"),
+                        "ChannelTypeLabel" + (n ? "" : " NoPermission"),
                       onClick: this.OnCreateNewTextChannel,
                       title: n
                         ? Object(hr.b)("#Tooltip_TextChannelCreate")
                         : Object(hr.b)("#Tooltip_NoPermissionChannelCreate")
                     },
-                    br.createElement(Bs.y, null)
+                    n
+                      ? Object(hr.b)("#Chat_AddTextChat")
+                      : Object(hr.b)("#Chat_CreateTextChannel_DefaultName")
+                  ),
+                  br.createElement(
+                    "div",
+                    {
+                      className: "chatRoomGroupNavCollapseExpand",
+                      title: r ? "Expand List" : "Minimize List",
+                      onClick: this.ToggleCollapseExpand
+                    },
+                    br.createElement(Is.j, null)
                   )
                 ),
                 i.map(function(i) {
-                  return br.createElement(Tl, {
+                  return br.createElement(Dl, {
                     key: i.unique_id,
                     chat: i,
                     bRenameActive: t.IsRoomRenameActive(i.GetRoomID()),
@@ -47575,10 +47669,11 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnStartChannelRename", null),
             it.b([Xt.a], t.prototype, "OnChannelRename", null),
             it.b([Xt.a], t.prototype, "OnEndChannelRename", null),
-            (t = it.b([Os.observer], t))
+            it.b([Xt.a], t.prototype, "ToggleCollapseExpand", null),
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Tl = (function(e) {
+        Dl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -47586,11 +47681,11 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.ToggleTextChat = function() {
               if (!this.props.bRenameActive) {
-                var e = Up.UIStore.IsChatRoomGroupActive(
+                var e = Hp.UIStore.IsChatRoomGroupActive(
                     Ye(this),
                     this.props.chat.GetGroup()
                   ),
-                  t = Up.UIStore.ShowAndOrActivateChatRoomGroup(
+                  t = Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Ye(this),
                     this.props.chat.GetGroup(),
                     !0
@@ -47631,16 +47726,16 @@ and limitations under the License.
                   onClick: this.ToggleTextChat,
                   onContextMenu: this.OnContextMenu
                 },
-                br.createElement(Fl, { chat: e }),
+                br.createElement(Ol, { chat: e }),
                 br.createElement(
                   "div",
                   { className: "chatRoomTextChannelIcon" },
-                  br.createElement(Bs.H, null)
+                  br.createElement(Is.H, null)
                 ),
                 !n && br.createElement("div", { className: i }, e.name),
                 !this.props.bDefaultRoom &&
                   n &&
-                  br.createElement(Dl, {
+                  br.createElement(Pl, {
                     chat: this.props.chat,
                     onRename: this.props.onRename,
                     onEndRename: this.props.onEndRename
@@ -47649,10 +47744,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "ToggleTextChat", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Gl = (function(e) {
+        Nl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -47663,7 +47758,7 @@ and limitations under the License.
             }),
             (t.prototype.OnVoiceRoomSelected = function(e) {
               this.props.groupView.GetRenameRoomID() != e.GetRoomID() &&
-                (Up.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                (Hp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   e.GetRoomID() ||
                   (this.props.groupView.ClosePopoverChat(),
                   e.StartVoiceChat()));
@@ -47688,7 +47783,8 @@ and limitations under the License.
                   "div",
                   {
                     className: "ChannelTypeTitle",
-                    title: Object(hr.b)("#Tooltip_VoiceChannel")
+                    title: Object(hr.b)("#Tooltip_VoiceChannelCreate"),
+                    onClick: this.CreateVoiceRoom
                   },
                   br.createElement(
                     "div",
@@ -47699,14 +47795,13 @@ and limitations under the License.
                     "div",
                     {
                       className: "ChatRoomAddRoomBtn",
-                      onClick: this.CreateVoiceRoom,
                       title: Object(hr.b)("#Tooltip_VoiceChannelCreate")
                     },
-                    br.createElement(Bs.y, null)
+                    br.createElement(Is.y, null)
                   )
                 ),
                 i.map(function(i) {
-                  return br.createElement(Nl, {
+                  return br.createElement(Al, {
                     key: i.unique_id,
                     context: "VoiceRoomsGroup",
                     chat: i,
@@ -47726,10 +47821,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnStartChannelRename", null),
             it.b([Xt.a], t.prototype, "OnChannelRename", null),
             it.b([Xt.a], t.prototype, "OnEndChannelRename", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Nl = (function(e) {
+        Al = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { dropToInviteFriend: void 0 }), i;
@@ -47749,7 +47844,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.InviteToChat = function(e) {
-              Up.UIStore.OpenInviteDialogForChatGroup(
+              Hp.UIStore.OpenInviteDialogForChatGroup(
                 Ye(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.chat.GetGroup(),
@@ -47786,10 +47881,10 @@ and limitations under the License.
                 e && "friend" == e.type)
               ) {
                 var i = e;
-                if (i.friend && i.friend != Up.FriendStore.self) {
+                if (i.friend && i.friend != Hp.FriendStore.self) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Sm.DragDropManager.SetDropConsumed();
+                    Om.DragDropManager.SetDropConsumed();
                   var n = t.currentTarget.ownerDocument.defaultView;
                   ye(
                     {
@@ -47829,22 +47924,22 @@ and limitations under the License.
                 t = this.props.chat.GetGroup(),
                 i = this.props.chat == t.GetDefaultChatRoom(),
                 n =
-                  Up.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                  Hp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   this.props.chat.GetRoomID(),
-                r = Up.CMInterface.steamid.GetAccountID(),
-                o = Up.FriendStore.GetPlayer(r),
+                r = Hp.CMInterface.steamid.GetAccountID(),
+                o = Hp.FriendStore.GetPlayer(r),
                 a = this.props.chat.voice_active_contains_only_self,
                 s = "emptyChannelNotice",
                 c = this.props.chat.voice_active_member_list.member_list.map(
                   function(t) {
                     return br.createElement(
-                      Ds,
+                      Ps,
                       {
                         key: t.accountid,
                         classNames: "friend-anim",
                         timeout: 320
                       },
-                      br.createElement(Lu, {
+                      br.createElement(Uu, {
                         friend: t,
                         key: t.accountid,
                         context: e.GetFriendContext(),
@@ -47861,9 +47956,9 @@ and limitations under the License.
                 (l = !0),
                 c.push(
                   br.createElement(
-                    Ds,
+                    Ps,
                     { key: r, classNames: "friend-anim", timeout: 320 },
-                    br.createElement(Lu, {
+                    br.createElement(Uu, {
                       friend: o,
                       key: r,
                       context: this.GetFriendContext(),
@@ -47884,7 +47979,7 @@ and limitations under the License.
                 this.props.chat.IsUnsavedVoiceChannel()),
                 p = this.props.chat.name;
               return br.createElement(
-                ws,
+                Bs,
                 it.a(
                   { className: u.join(" "), onClick: this.props.onSelect },
                   this.GetDragDropProps()
@@ -47901,7 +47996,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "chatRoomVoiceChannelIcon" },
-                    br.createElement(Bs.L, null)
+                    br.createElement(Is.L, null)
                   ),
                   !this.props.bRenameActive &&
                     br.createElement(
@@ -47914,7 +48009,7 @@ and limitations under the License.
                       p
                     ),
                   this.props.bRenameActive &&
-                    br.createElement(Dl, {
+                    br.createElement(Pl, {
                       chat: this.props.chat,
                       onRename: this.props.onRename,
                       onEndRename: this.props.onEndRename
@@ -47931,7 +48026,7 @@ and limitations under the License.
                           className: "VoiceControlPanelButton chatPinRoom",
                           title: "Channel Options"
                         },
-                        br.createElement(Bs.k, null)
+                        br.createElement(Is.k, null)
                       )
                     )
                 ),
@@ -47939,20 +48034,20 @@ and limitations under the License.
                   "div",
                   { className: "VoiceChannelParticipants CompactFriendsList" },
                   !l && c,
-                  l && br.createElement(As, { enter: !0, exit: !0 }, c)
+                  l && br.createElement(zs, { enter: !0, exit: !0 }, c)
                 ),
                 br.createElement(
                   "div",
                   { className: s },
                   Object(hr.b)("#Chat_VoiceEmptyChannel")
                 ),
-                br.createElement(Cu, {
+                br.createElement(Fu, {
                   name: p,
                   chat: this.props.chat,
                   nostatus: !0
                 }),
                 !i &&
-                  br.createElement(Tl, {
+                  br.createElement(Dl, {
                     chat: this.props.chat,
                     bRenameActive: !1,
                     bActiveChat: !1,
@@ -47968,10 +48063,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragLeave", null),
             it.b([Xt.a], t.prototype, "OnDragOver", null),
             it.b([Xt.a], t.prototype, "OnDrop", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Dl = (function(e) {
+        Pl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -48033,10 +48128,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnSubmit", null),
             it.b([Xt.a], t.prototype, "OnGlobalKeyDown", null),
             it.b([Xt.a], t.prototype, "OnBlur", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Al = (function(e) {
+        zl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -48092,7 +48187,7 @@ and limitations under the License.
                     return r.GetMemberRank(t.accountid) <= e.props.eMaxRank;
                   })),
                 o.sort(function(e, t) {
-                  var i = Ka.FriendSortStatusComparator(e, t);
+                  var i = Ja.FriendSortStatusComparator(e, t);
                   if (0 != i) return i;
                   var n = e.persona.current_game_name
                       ? e.persona.current_game_name
@@ -48128,13 +48223,13 @@ and limitations under the License.
                 ? null
                 : o.map(function(t) {
                     return br.createElement(
-                      Ds,
+                      Ps,
                       {
                         key: t.accountid,
                         classNames: "friend-anim",
                         timeout: 300
                       },
-                      br.createElement(Pl, {
+                      br.createElement(xl, {
                         friend: t,
                         group: r,
                         context: e.GetFriendRenderContext(),
@@ -48156,7 +48251,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "groupIcon" },
-                    br.createElement(Bs.n, null)
+                    br.createElement(Is.n, null)
                   ),
                   br.createElement(
                     "span",
@@ -48180,15 +48275,15 @@ and limitations under the License.
                     )
                   )
                 ),
-                br.createElement(As, null, d)
+                br.createElement(zs, null, d)
               );
             }),
             it.b([Xt.a], t.prototype, "OnHeaderClick", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Pl = (function(e) {
+        xl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48218,7 +48313,7 @@ and limitations under the License.
                       (e = br.createElement(
                         "div",
                         { className: "rankIcon rankOwner" },
-                        br.createElement(Bs.h, null)
+                        br.createElement(Is.h, null)
                       ));
               }
               this.props.group.BIsClanChatRoom() &&
@@ -48250,16 +48345,16 @@ and limitations under the License.
               };
               return this.props.bExpandMemberList
                 ? br.createElement(
-                    Lu,
+                    Uu,
                     it.a({}, n, { listStatusIndicatorLeft: e })
                   )
-                : br.createElement(ju, it.a({}, n), e);
+                : br.createElement(Vu, it.a({}, n), e);
             }),
             it.b([Xt.a], t.prototype, "OnFriendSelected", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        zl = (function(e) {
+        Ll = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48283,7 +48378,7 @@ and limitations under the License.
                 br.createElement(
                   br.Fragment,
                   null,
-                  br.createElement(Zs, {
+                  br.createElement($s, {
                     label: Object(hr.b)("#Chat_Invite_Linkheader"),
                     className: "InviteFriendToChatDialog_LinkInput",
                     type: "text",
@@ -48294,7 +48389,7 @@ and limitations under the License.
                     onClick: this.OnFocus
                   }),
                   !this.props.disabled &&
-                    br.createElement(Ll, {
+                    br.createElement(jl, {
                       onGenerate: this.GenerateLink,
                       chat: this.props.chat
                     })
@@ -48303,10 +48398,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "GenerateLink", null),
             it.b([Xt.a], t.prototype, "OnFocus", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ll = (function(e) {
+        jl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48318,7 +48413,7 @@ and limitations under the License.
             (t.prototype.CreateExpiresText = function(e) {
               return 0 == e
                 ? Object(hr.b)("#InviteLink_ExpiresNever_Long")
-                : e - Up.GetServerRTime32() > 3600
+                : e - Hp.GetServerRTime32() > 3600
                   ? Object(hr.b)("#InviteLink_ExpiresDay_Long")
                   : Object(hr.b)("#InviteLink_ExpiresHour_Long");
             }),
@@ -48338,7 +48433,7 @@ and limitations under the License.
                     data: 0
                   }
                 ];
-              return br.createElement(rc, {
+              return br.createElement(ac, {
                 strClassName: "inviteLinkDropDown",
                 rgOptions: t,
                 strDefaultLabel: e
@@ -48349,10 +48444,10 @@ and limitations under the License.
               });
             }),
             it.b([Xt.a], t.prototype, "OnDropDownChange", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        xl = (function(e) {
+        Ul = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -48473,7 +48568,7 @@ and limitations under the License.
                 i.friend &&
                   (this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                  Sm.DragDropManager.SetDropConsumed(),
+                  Om.DragDropManager.SetDropConsumed(),
                   this.m_friendPicker &&
                     this.m_friendPicker.SelectFriendSuggestion(i.friend));
               }
@@ -48498,7 +48593,7 @@ and limitations under the License.
               o
                 ? this.props.chatRoom || (r = this.m_setMembersOfGroup)
                 : this.props.chatRoom
-                  ? Up.FriendStore.all_friends.forEach(function(t) {
+                  ? Hp.FriendStore.all_friends.forEach(function(t) {
                       e.props.chatRoomGroup.BHasMember(t.accountid) ||
                         r.add(t.accountid);
                     })
@@ -48525,7 +48620,7 @@ and limitations under the License.
                       onSubmit: this.OnSubmit
                     },
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       n
                         ? br.createElement(
@@ -48549,7 +48644,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "displayRow" },
-                        br.createElement(su, {
+                        br.createElement(uu, {
                           group: this.props.chatRoomGroup,
                           small: !0
                         }),
@@ -48561,7 +48656,7 @@ and limitations under the License.
                       )
                     ),
                     br.createElement(
-                      Vs,
+                      qs,
                       null,
                       !this.props.bIsDropInvite &&
                         o &&
@@ -48571,7 +48666,7 @@ and limitations under the License.
                           br.createElement(
                             "div",
                             { className: "inviteLinkContainer" },
-                            br.createElement(zl, { chat: t, disabled: !1 })
+                            br.createElement(Ll, { chat: t, disabled: !1 })
                           ),
                           br.createElement(
                             "div",
@@ -48586,10 +48681,10 @@ and limitations under the License.
                           )
                         ),
                       br.createElement(
-                        ws,
+                        Bs,
                         it.a({ className: "" }, this.GetDragDropProps()),
                         br.createElement(
-                          Ws,
+                          Hs,
                           {
                             className:
                               "CreateChat_NonBetaFriendsWarning " +
@@ -48600,7 +48695,7 @@ and limitations under the License.
                           br.createElement(ne, null),
                           Object(hr.b)("#Chat_InviteFriend_SomeUnavailable")
                         ),
-                        br.createElement(lc, {
+                        br.createElement(dc, {
                           ref: this.OnFriendPickerRef,
                           label: a,
                           eSort: 1,
@@ -48609,12 +48704,12 @@ and limitations under the License.
                           setExcludedFriends: r,
                           rgSelectedFriends: this.props.vecInvitePlayers,
                           bDropInvite: this.props.bIsDropInvite,
-                          chosenFriendComponent: jl
+                          chosenFriendComponent: Wl
                         })
                       )
                     ),
                     br.createElement(
-                      js,
+                      Ws,
                       null,
                       br.createElement(
                         "div",
@@ -48645,13 +48740,13 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        jl = Object(Os.observer)(function(e) {
+        Wl = Object(Rs.observer)(function(e) {
           var t = e.friend.is_in_beta || void 0 === e.friend.is_in_beta;
           return br.createElement(
             br.Fragment,
             null,
             br.createElement(
-              zu,
+              ju,
               { friend: e.friend, context: null },
               br.createElement(
                 "div",
@@ -48665,12 +48760,12 @@ and limitations under the License.
                 },
                 !t && br.createElement(ne, null),
                 br.createElement("span", null, e.friend.display_name),
-                br.createElement(Bs.O, null)
+                br.createElement(Is.O, null)
               )
             )
           );
         }),
-        Ul = (function(e) {
+        Vl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48694,8 +48789,8 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: "Throbber" },
-                  br.createElement(Bs.I, { className: "base" }),
-                  br.createElement(Bs.I, { className: "blur" })
+                  br.createElement(Is.I, { className: "base" }),
+                  br.createElement(Is.I, { className: "blur" })
                 ),
                 br.createElement(
                   "div",
@@ -48716,13 +48811,13 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Wl = (function(e) {
+        Hl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
-              (i.m_inviteLinks = new hs()),
-              (i.m_bans = new ms()),
-              (i.m_invitedUsers = new gs()),
+              (i.m_inviteLinks = new gs()),
+              (i.m_bans = new fs()),
+              (i.m_invitedUsers = new _s()),
               (i.state = { strRoomName: i.props.groupView.GetGroup().name }),
               i
             );
@@ -48758,7 +48853,7 @@ and limitations under the License.
               var e = this.props.groupView.GetGroup(),
                 t = [],
                 i = (e.GetMyRank(), e.BCanAdminGroup()),
-                n = e.BIsAccountIDOwner(Up.CMInterface.steamid.GetAccountID()),
+                n = e.BIsAccountIDOwner(Hp.CMInterface.steamid.GetAccountID()),
                 r = e.BCanInvite(),
                 o = e.BCanAdminChannel(),
                 a = e.BCanBan();
@@ -48766,13 +48861,13 @@ and limitations under the License.
                 ? (t.push({
                     title: Object(hr.b)("#GroupSettings_General_Section"),
                     uniqueName: "GroupSettings_General",
-                    content: br.createElement(Hl, { group: e, enabled: i }),
+                    content: br.createElement(Kl, { group: e, enabled: i }),
                     enabled: i
                   }),
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Channels_Section"),
                     uniqueName: "GroupSettings_Channels",
-                    content: br.createElement(Kl, {
+                    content: br.createElement(Jl, {
                       groupView: this.props.groupView,
                       enabled: o
                     }),
@@ -48782,14 +48877,14 @@ and limitations under the License.
                     t.push({
                       title: Object(hr.b)("#GroupSettings_Permissions_Section"),
                       uniqueName: "GroupSettings_Permissions",
-                      content: br.createElement(Jl, { group: e, enabled: n }),
+                      content: br.createElement(Zl, { group: e, enabled: n }),
                       enabled: n,
                       hideTitle: !0
                     }),
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: br.createElement(Xl, {
+                    content: br.createElement(Ql, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -48799,7 +48894,7 @@ and limitations under the License.
                   t.push({
                     title: Object(hr.b)("#GroupSettings_InvitedUsers_Section"),
                     uniqueName: "GroupSettings_InvitedUsers",
-                    content: br.createElement(Zl, {
+                    content: br.createElement($l, {
                       group: e,
                       invitedUsers: this.m_invitedUsers,
                       enabled: r
@@ -48809,7 +48904,7 @@ and limitations under the License.
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Bans_Section"),
                     uniqueName: "GroupSettings_Bans",
-                    content: br.createElement(Ql, {
+                    content: br.createElement(eu, {
                       group: e,
                       bans: this.m_bans,
                       enabled: a
@@ -48818,7 +48913,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Leave_Section"),
-                    content: br.createElement(ql, { group: e }),
+                    content: br.createElement(Yl, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -48826,13 +48921,13 @@ and limitations under the License.
                 : (t.push({
                     title: Object(hr.b)("#GroupSettings_Save_Section"),
                     uniqueName: "GroupSettings_Save",
-                    content: br.createElement(Vl, { group: e }),
+                    content: br.createElement(ql, { group: e }),
                     enabled: !0
                   }),
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: br.createElement(Xl, {
+                    content: br.createElement(Ql, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -48841,7 +48936,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(hr.b)("#GroupSettings_Leave_Section"),
-                    content: br.createElement(ql, { group: e }),
+                    content: br.createElement(Yl, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -48852,7 +48947,7 @@ and limitations under the License.
               return br.createElement(
                 Oe,
                 { onEscKeypress: this.DismissDialog },
-                br.createElement(sc, {
+                br.createElement(lc, {
                   title: Object(hr.b)("#GroupSettings"),
                   className: "ChatRoomSettingsDialog",
                   pages: e
@@ -48862,10 +48957,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "DismissDialog", null),
             it.b([Xt.a], t.prototype, "CloseDialog", null),
             it.b([Xt.a], t.prototype, "OnLeave", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Vl = (function(e) {
+        ql = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.m_bSaving = !1), (i.m_strError = ""), i;
@@ -48902,10 +48997,10 @@ and limitations under the License.
               var e = this.m_bSaving,
                 t = this.m_strError;
               return br.createElement(
-                Xs,
+                Qs,
                 { className: "DialogBody", onSubmit: this.SaveGroup },
                 br.createElement(
-                  Ws,
+                  Hs,
                   null,
                   Object(hr.b)("#GroupSettings_Save_Desc"),
                   br.createElement(
@@ -48937,7 +49032,7 @@ and limitations under the License.
                     )
                   )
                 ),
-                br.createElement(Zs, {
+                br.createElement($s, {
                   ref: this.BindInputRef,
                   autoFocus: !0,
                   label: Object(hr.b)("#GroupSettings_Save_NameGroup"),
@@ -48959,7 +49054,7 @@ and limitations under the License.
                       Object(hr.b)("#GroupSettings_Save_Section")
                     )
                   ),
-                e && br.createElement(Ul, null)
+                e && br.createElement(Vl, null)
               );
             }),
             it.b([pt.observable], t.prototype, "m_bSaving", void 0),
@@ -48968,10 +49063,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "AnimateUpgrade_In", null),
             it.b([Xt.a], t.prototype, "AnimateUpgrade_Out", null),
             it.b([Xt.a], t.prototype, "SaveGroup", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Hl = (function(e) {
+        })(cc),
+        Kl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -49097,19 +49192,19 @@ and limitations under the License.
                   " "
                 );
               else {
-                var t = Up.FriendStore.GetPlayer(
+                var t = Hp.FriendStore.GetPlayer(
                   this.props.group.GetOwnerAccountID()
                 );
                 e = br.createElement(
                   "div",
                   null,
                   br.createElement(
-                    Us,
+                    Vs,
                     null,
                     " ",
                     Object(hr.b)("#Chat_Settings_General_Owner")
                   ),
-                  br.createElement(Lu, {
+                  br.createElement(Uu, {
                     className: "groupOwnerFriend",
                     friend: t,
                     context: null
@@ -49117,16 +49212,16 @@ and limitations under the License.
                 );
               }
               return br.createElement(
-                Xs,
+                Qs,
                 { onSubmit: this.OnSubmitSent, className: "DialogBody" },
                 br.createElement(
-                  Ks,
+                  Js,
                   null,
                   br.createElement(
                     "div",
                     { className: "AvatarAndUser" },
                     br.createElement(
-                      Us,
+                      Vs,
                       null,
                       Object(hr.b)("#Chat_Settings_General_Icon")
                     ),
@@ -49166,7 +49261,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "GeneralChatSettings" },
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       autoComplete: "off",
                       id: "b1",
                       className: "groupChatName",
@@ -49182,7 +49277,7 @@ and limitations under the License.
                       type: "submit",
                       style: { display: "none" }
                     }),
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       autoComplete: "off",
                       id: "b2",
                       className: "groupChatTag",
@@ -49208,10 +49303,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnNameBlur", null),
             it.b([Xt.a], t.prototype, "OnTagLineBlur", null),
             it.b([Xt.a], t.prototype, "OnSubmitSent", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        ql = (function(e) {
+        })(cc),
+        Yl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -49248,10 +49343,10 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "OnLeave", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Kl = (function(e) {
+        })(cc),
+        Jl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -49263,7 +49358,7 @@ and limitations under the License.
             (t.prototype.OnCreateNewTextChannel = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               Be(
-                br.createElement(El, {
+                br.createElement(Tl, {
                   ownerWin: t,
                   groupView: this.props.groupView,
                   bVoiceChannel: !1,
@@ -49275,7 +49370,7 @@ and limitations under the License.
             (t.prototype.OnCreateNewVoiceChannel = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               Be(
-                br.createElement(El, {
+                br.createElement(Tl, {
                   ownerWin: t,
                   groupView: this.props.groupView,
                   bVoiceChannel: !0,
@@ -49314,8 +49409,8 @@ and limitations under the License.
                       "div",
                       { className: "_DialogRowLabel" },
                       n
-                        ? br.createElement(Bs.L, null)
-                        : br.createElement(Bs.H, null),
+                        ? br.createElement(Is.L, null)
+                        : br.createElement(Is.H, null),
                       br.createElement(
                         "div",
                         {
@@ -49363,19 +49458,19 @@ and limitations under the License.
                     return i(e, name, !0);
                   });
               return br.createElement(
-                Xs,
+                Qs,
                 { className: "DialogBody" },
                 br.createElement(
-                  xs,
+                  Us,
                   null,
                   br.createElement(
-                    Ks,
+                    Js,
                     null,
                     br.createElement(
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: Bs.H,
+                        svgicon: Is.H,
                         onClick: this.OnCreateNewTextChannel,
                         disabled: !this.props.enabled
                       },
@@ -49387,7 +49482,7 @@ and limitations under the License.
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: Bs.L,
+                        svgicon: Is.L,
                         onClick: this.OnCreateNewVoiceChannel,
                         disabled: !this.props.enabled
                       },
@@ -49398,7 +49493,7 @@ and limitations under the License.
                   )
                 ),
                 br.createElement(
-                  Hs,
+                  Ks,
                   null,
                   0 != n.length &&
                     br.createElement(
@@ -49408,11 +49503,11 @@ and limitations under the License.
                         style: { marginBottom: "32px" }
                       },
                       br.createElement(
-                        Us,
+                        Vs,
                         null,
                         Object(hr.b)("#GroupSettings_Channels_TextChannels")
                       ),
-                      br.createElement(N, null),
+                      br.createElement(D, null),
                       n
                     ),
                   0 != r.length &&
@@ -49420,11 +49515,11 @@ and limitations under the License.
                       "div",
                       { className: "displayColumn flexShrinkNone" },
                       br.createElement(
-                        Us,
+                        Vs,
                         null,
                         Object(hr.b)("#GroupSettings_Channels_VoiceChannels")
                       ),
-                      br.createElement(N, null),
+                      br.createElement(D, null),
                       r
                     )
                 )
@@ -49433,13 +49528,13 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnCreateNewTextChannel", null),
             it.b([Xt.a], t.prototype, "OnCreateNewVoiceChannel", null),
             it.b([Xt.a], t.prototype, "OnDeleteChannel", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Yl = (function(e) {
+        })(cc),
+        Xl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return Up.FriendStore.self, (i.state = { strRoleName: "" }), i;
+            return Hp.FriendStore.self, (i.state = { strRoleName: "" }), i;
           }
           return (
             it.c(t, e),
@@ -49477,14 +49572,14 @@ and limitations under the License.
                     onSubmit: this.OnSubmit
                   },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     Object(hr.b)("#GroupSettings_CreateRole_Title")
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
-                    br.createElement(Zs, {
+                    br.createElement($s, {
                       ref: function(t) {
                         e.m_refInput = t;
                       },
@@ -49497,9 +49592,9 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
-                    br.createElement(D, {
+                    br.createElement(N, {
                       onCancel: this.props.closeModal,
                       bOKDisabled: !t
                     })
@@ -49512,7 +49607,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Jl = (function(e) {
+        Zl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -49532,7 +49627,7 @@ and limitations under the License.
             (t.prototype.OnCreateRole = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               Be(
-                br.createElement(Yl, { ownerWin: t, group: this.props.group }),
+                br.createElement(Xl, { ownerWin: t, group: this.props.group }),
                 t
               );
             }),
@@ -49604,7 +49699,7 @@ and limitations under the License.
                 n = this.props.group.GetRoleActions(this.state.editRoleID);
               return (
                 n && (i = n.BCanPerformAction(e.eAction)),
-                br.createElement(ic, {
+                br.createElement(rc, {
                   key: e.eAction,
                   onChange: function(i) {
                     t.OnSettingToggled(e.eAction, i);
@@ -49628,7 +49723,7 @@ and limitations under the License.
                     ? Object(hr.b)("#ChatRoomRole_Member")
                     : this.state.editRoleName);
                 return br.createElement(
-                  Xs,
+                  Qs,
                   { onSubmit: this.OnEditRoleNameBlur },
                   br.createElement(
                     "div",
@@ -49640,25 +49735,25 @@ and limitations under the License.
                         onClick: function() {
                           e.setState({ editRoleID: void 0 });
                         },
-                        svgicon: Bs.j
+                        svgicon: Is.j
                       },
                       "Back to Permissions"
                     )
                   ),
                   br.createElement(
-                    xs,
+                    Us,
                     { className: "permissionDetailsPage" },
                     !this.props.enabled &&
                       br.createElement(
-                        qs,
+                        Ys,
                         null,
-                        br.createElement(Bs.q, null),
+                        br.createElement(Is.q, null),
                         Object(hr.b)("#Chat_Settings_Permission_Denied")
                       ),
                     br.createElement(
                       "div",
                       { className: "roleEditHeader" },
-                      br.createElement(Zs, {
+                      br.createElement($s, {
                         autoComplete: "off",
                         id: "b1",
                         className: "editRoleName",
@@ -49674,13 +49769,13 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     br.createElement(
                       "div",
                       { className: "SettingsGroup PermissionsGroup" },
                       br.createElement(
-                        Us,
+                        Vs,
                         { className: "PermissionsSectionHeader" },
                         Object(hr.b)(
                           "#GroupSettings_Permissions_Heading_General"
@@ -49698,7 +49793,7 @@ and limitations under the License.
                       "div",
                       { className: "SettingsGroup PermissionsGroup" },
                       br.createElement(
-                        Us,
+                        Vs,
                         { className: "PermissionsSectionHeader" },
                         Object(hr.b)(
                           "#GroupSettings_Permissions_Heading_MembersAndRoles"
@@ -49730,7 +49825,7 @@ and limitations under the License.
                       "div",
                       { className: "SettingsGroup PermissionsGroup" },
                       br.createElement(
-                        Us,
+                        Vs,
                         { className: "PermissionsSectionHeader" },
                         Object(hr.b)(
                           "#GroupSettings_Permissions_Heading_RoomManagement"
@@ -49753,7 +49848,7 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
                     !i &&
                       this.props.enabled &&
@@ -49790,7 +49885,7 @@ and limitations under the License.
                     t.role_id == r
                       ? (Object(hr.b)("#ChatRoomRole_Member"), (i = !0))
                       : e.props.group.BMemberHasRole(
-                          Up.FriendStore.self.accountid,
+                          Hp.FriendStore.self.accountid,
                           t.role_id
                         ) && (i = !0),
                     br.createElement(
@@ -49802,7 +49897,7 @@ and limitations under the License.
                           e.EditRole(t.role_id);
                         }
                       },
-                      br.createElement(Bs.i, null),
+                      br.createElement(Is.i, null),
                       Object(hr.b)(t.name),
                       br.createElement(
                         "span",
@@ -49818,21 +49913,21 @@ and limitations under the License.
                 br.Fragment,
                 null,
                 br.createElement(
-                  xs,
+                  Us,
                   null,
                   Object(hr.b)("#GroupSettings_Permissions_Section"),
                   !this.props.enabled &&
                     br.createElement(
-                      qs,
+                      Ys,
                       null,
-                      br.createElement(Bs.q, null),
+                      br.createElement(Is.q, null),
                       Object(hr.b)(
                         "#Chat_Settings_Permission_Denied_Permissions"
                       )
                     )
                 ),
                 br.createElement(
-                  Ws,
+                  Hs,
                   null,
                   Object(hr.b)("#ChatRoomRole_Description")
                 ),
@@ -49840,27 +49935,27 @@ and limitations under the License.
                   "div",
                   { className: "roleEditHeader" },
                   br.createElement(
-                    Us,
+                    Vs,
                     null,
                     Object(hr.b)("#GroupSettings_Permissions_RolesTitle"),
                     " "
                   ),
                   br.createElement(
-                    Us,
+                    Vs,
                     { className: "meKey" },
-                    br.createElement(Bs.i, null),
+                    br.createElement(Is.i, null),
                     Object(hr.b)("#GroupSettings_meKey_Desc")
                   )
                 ),
                 br.createElement(
-                  Xs,
+                  Qs,
                   { className: "DialogBody" },
                   br.createElement(
                     T,
                     {
                       disabled: !0,
                       className: "roleButton owner",
-                      svgicon: Bs.h,
+                      svgicon: Is.h,
                       onClick: function() {}
                     },
                     Object(hr.b)("#ChatRoomRole_Owner"),
@@ -49876,7 +49971,7 @@ and limitations under the License.
                   k,
                   {
                     className: "createNewRoleButton",
-                    svgicon: Bs.y,
+                    svgicon: Is.y,
                     onClick: this.OnCreateRole,
                     disabled: !this.props.enabled
                   },
@@ -49892,10 +49987,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnEditRoleNameBlur", null),
             it.b([Xt.a], t.prototype, "OnSettingToggled", null),
             it.b([Xt.a], t.prototype, "PermissionToggleRow", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Xl = (function(e) {
+        })(cc),
+        Ql = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -49963,7 +50058,7 @@ and limitations under the License.
             (t.prototype.FormatExpires = function(e) {
               return e > 2145916800
                 ? Object(hr.b)("#GroupSettings_Invite_NeverExpires")
-                : Up.RTime32ToDate(e).toLocaleString([], {
+                : Hp.RTime32ToDate(e).toLocaleString([], {
                     year: "numeric",
                     month: "numeric",
                     day: "numeric",
@@ -49979,7 +50074,7 @@ and limitations under the License.
                 t = (this.props.group, this.props.inviteLinks),
                 i = void 0;
               if ("pending" == t.loadingState)
-                i = br.createElement("div", null, br.createElement(Ul, null));
+                i = br.createElement("div", null, br.createElement(Vl, null));
               else if ("denied" == t.loadingState)
                 i = br.createElement(
                   "div",
@@ -50002,7 +50097,7 @@ and limitations under the License.
                       "td",
                       null,
                       " ",
-                      br.createElement(Zs, {
+                      br.createElement($s, {
                         className: "inviteURLLink",
                         value: Object(_r.a)(t.invite_code()),
                         readOnly: !0,
@@ -50077,13 +50172,13 @@ and limitations under the License.
                         ));
               }
               return br.createElement(
-                Xs,
+                Qs,
                 { className: "DialogBody" },
                 this.props.enabled &&
                   br.createElement(
                     "div",
                     { className: "inviteLinkContainer" },
-                    br.createElement(zl, {
+                    br.createElement(Ll, {
                       chat: this.props.group.GetDefaultChatRoom(),
                       disabled: !this.props.enabled
                     })
@@ -50092,17 +50187,17 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "OrSeparator" },
-                    br.createElement(N, null)
+                    br.createElement(D, null)
                   ),
                 i
               );
             }),
             it.b([Xt.a], t.prototype, "OnDeleteLink", null),
             it.b([Xt.a], t.prototype, "HandleFocus", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Zl = (function(e) {
+        })(cc),
+        $l = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -50132,8 +50227,8 @@ and limitations under the License.
             }),
             (t.prototype.RevokeInvite = function(e) {
               var t = this,
-                i = Up.FriendStore.GetPlayer(e),
-                n = br.createElement(Lu, {
+                i = Hp.FriendStore.GetPlayer(e),
+                n = br.createElement(Uu, {
                   className: "friend",
                   friend: i,
                   context: null,
@@ -50160,7 +50255,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Up.RTime32ToDate(e).toLocaleString([], {
+              return Hp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50176,12 +50271,12 @@ and limitations under the License.
                   0 == this.props.invitedUsers.rgInvitedUsers.length
                 )
                   return br.createElement(
-                    Xs,
+                    Qs,
                     null,
                     Object(hr.b)("#GroupSettings_InvitedUsers_Noone")
                   );
                 var t = this.props.invitedUsers.rgInvitedUsers.map(function(t) {
-                  var i = Up.FriendStore.GetPlayer(t.accountid());
+                  var i = Hp.FriendStore.GetPlayer(t.accountid());
                   return br.createElement(
                     "tr",
                     { className: "hoverRow", key: t.accountid() },
@@ -50189,7 +50284,7 @@ and limitations under the License.
                       "td",
                       { className: "friendCell" },
                       " ",
-                      br.createElement(Lu, {
+                      br.createElement(Uu, {
                         friend: i,
                         context: null,
                         bHideGameName: !0,
@@ -50221,7 +50316,7 @@ and limitations under the License.
                   );
                 });
                 return br.createElement(
-                  Xs,
+                  Qs,
                   { className: "DialogBody" },
                   br.createElement(
                     "table",
@@ -50261,18 +50356,18 @@ and limitations under the License.
                 );
               }
               return br.createElement(
-                Xs,
+                Qs,
                 null,
                 "pending" == this.props.invitedUsers.loadingState
-                  ? br.createElement(Ul, { size: "medium" })
+                  ? br.createElement(Vl, { size: "medium" })
                   : Object(hr.b)("#GroupSettings_InvitedUsers_Failed")
               );
             }),
             it.b([Xt.a], t.prototype, "RevokeInvite", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        Ql = (function(e) {
+        })(cc),
+        eu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -50294,8 +50389,8 @@ and limitations under the License.
             (t.prototype.componentWillUnmount = function() {}),
             (t.prototype.OnClickUnban = function(e) {
               var t = this,
-                i = Up.FriendStore.GetPlayer(e),
-                n = br.createElement(Lu, {
+                i = Hp.FriendStore.GetPlayer(e),
+                n = br.createElement(Uu, {
                   className: "friend",
                   friend: i,
                   context: null,
@@ -50322,7 +50417,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Up.RTime32ToDate(e).toLocaleString([], {
+              return Hp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50336,12 +50431,12 @@ and limitations under the License.
               if ("loaded" == this.props.bans.loadingState)
                 return 0 == this.props.bans.rgBans.length
                   ? br.createElement(
-                      Xs,
+                      Qs,
                       null,
                       Object(hr.b)("#GroupSettings_Bans_NoOneBanned")
                     )
                   : ((e = this.props.bans.rgBans.map(function(e) {
-                      var i = Up.FriendStore.GetPlayer(e.accountid());
+                      var i = Hp.FriendStore.GetPlayer(e.accountid());
                       return br.createElement(
                         "tr",
                         { className: "hoverRow", key: e.accountid() },
@@ -50349,7 +50444,7 @@ and limitations under the License.
                           "td",
                           { className: "friendCell" },
                           " ",
-                          br.createElement(Lu, { friend: i, context: null }),
+                          br.createElement(Uu, { friend: i, context: null }),
                           " "
                         ),
                         br.createElement(
@@ -50376,7 +50471,7 @@ and limitations under the License.
                       );
                     })),
                     br.createElement(
-                      Xs,
+                      Qs,
                       { className: "DialogBody" },
                       br.createElement(
                         "table",
@@ -50414,18 +50509,18 @@ and limitations under the License.
               return (
                 (i =
                   "pending" == this.props.bans.loadingState
-                    ? br.createElement(Ul, { size: "medium" })
+                    ? br.createElement(Vl, { size: "medium" })
                     : "denied" == this.props.bans.loadingState
                       ? Object(hr.b)("#GroupSettings_Bans_AccessDenied")
                       : Object(hr.b)("#GroupSettings_Bans_Failed")),
-                br.createElement(Xs, { className: "DialogBody" }, i)
+                br.createElement(Qs, { className: "DialogBody" }, i)
               );
             }),
             it.b([Xt.a], t.prototype, "OnClickUnban", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        $l = (function(e) {
+        })(cc),
+        tu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -50529,7 +50624,7 @@ and limitations under the License.
             }),
             (t.prototype.FriendsSettingsToggleRow = function(e) {
               var t = this;
-              return br.createElement(ic, {
+              return br.createElement(rc, {
                 key: e.strName,
                 onChange: function(i) {
                   t.OnSettingToggled(e.strName, i);
@@ -50540,7 +50635,7 @@ and limitations under the License.
             }),
             (t.prototype.FriendsSettingsCheckbox = function(e) {
               var t = this;
-              return br.createElement(ec, {
+              return br.createElement(ic, {
                 key: e.strName,
                 onChange: function(i) {
                   t.OnSettingToggled(e.strName, i);
@@ -50552,7 +50647,7 @@ and limitations under the License.
               e
             ) {
               var t = this;
-              return br.createElement(ic, {
+              return br.createElement(rc, {
                 key: "CommunityPreference" + e.strName,
                 onChange: function(i) {
                   t.OnCommunityPreferenceToggled(e.strName, i);
@@ -50576,8 +50671,75 @@ and limitations under the License.
             ),
             t
           );
-        })(ac),
-        eu = (function(e) {
+        })(cc),
+        iu = (function(e) {
+          function t(t) {
+            return e.call(this, t) || this;
+          }
+          return (
+            it.c(t, e),
+            (t.prototype.render = function() {
+              var e = (this.state.friendSettings,
+                this.FriendsSettingsToggleRow),
+                t = this.FriendsSettingsCommunityPreferenceToggleRow;
+              return br.createElement(
+                Qs,
+                { className: "DialogBody", onSubmit: this.OnSubmit },
+                br.createElement(
+                  "div",
+                  { className: "SettingsGroup" },
+                  this.props.bShowPopupOpts &&
+                    br.createElement(e, {
+                      strName: "bAlwaysNewChatWindow",
+                      strLabel: Object(hr.b)(
+                        "#FriendSettings_AlwaysNewChatWindow"
+                      )
+                    }),
+                  br.createElement(e, {
+                    strName: "bForceAlphabeticFriendSorting",
+                    strLabel: Object(hr.b)(
+                      "#FriendSettings_SortFriendsByStatus"
+                    )
+                  }),
+                  br.createElement(e, {
+                    strName: "bRememberOpenChats",
+                    strLabel: Object(hr.b)("#FriendSettings_RememberOpenChats")
+                  }),
+                  br.createElement(e, {
+                    strName: "bCompactQuickAccess",
+                    strLabel: Object(hr.b)("#FriendSettings_CompactQuickAccess")
+                  }),
+                  !1,
+                  br.createElement(t, {
+                    strName: "bParenthesizeNicknames",
+                    strLabel: Object(hr.b)(
+                      "#FriendSettings_ParenthesizeNicknames"
+                    ),
+                    strDesc: Object(hr.b)(
+                      "#FriendSettings_ParenthesizeNicknames_Desc"
+                    )
+                  }),
+                  br.createElement(e, {
+                    strName: "bHideOfflineFriendsInTagGroups",
+                    strLabel: Object(hr.b)(
+                      "#FriendSettings_HideOfflineFriendsInCategories"
+                    )
+                  }),
+                  br.createElement(e, {
+                    strName: "bHideCategorizedFriends",
+                    strLabel: Object(hr.b)(
+                      "#FriendSettings_HideCategorizedFriends"
+                    )
+                  })
+                ),
+                !this.props.bSubmitImmediate &&
+                  br.createElement(N, { onCancel: this.props.onCancel })
+              );
+            }),
+            (t = it.b([Rs.observer], t))
+          );
+        })(tu),
+        nu = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -50607,53 +50769,10 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = this.state.friendSettings,
-                t = this.FriendsSettingsToggleRow,
-                i = this.FriendsSettingsNotificationRow,
-                n = this.FriendsSettingsCommunityPreferenceToggleRow;
+                t = this.FriendsSettingsNotificationRow;
               return br.createElement(
-                Xs,
+                Qs,
                 { className: "DialogBody", onSubmit: this.OnSubmit },
-                br.createElement(
-                  "div",
-                  { className: "SettingsGroup" },
-                  this.props.bShowPopupOpts &&
-                    br.createElement(t, {
-                      strName: "bAlwaysNewChatWindow",
-                      strLabel: Object(hr.b)(
-                        "#FriendSettings_AlwaysNewChatWindow"
-                      )
-                    }),
-                  br.createElement(t, {
-                    strName: "bForceAlphabeticFriendSorting",
-                    strLabel: Object(hr.b)(
-                      "#FriendSettings_SortFriendsByStatus"
-                    )
-                  }),
-                  br.createElement(t, {
-                    strName: "bRememberOpenChats",
-                    strLabel: Object(hr.b)("#FriendSettings_RememberOpenChats")
-                  }),
-                  br.createElement(t, {
-                    strName: "bCompactQuickAccess",
-                    strLabel: Object(hr.b)("#FriendSettings_CompactQuickAccess")
-                  }),
-                  !1,
-                  br.createElement(n, {
-                    strName: "bParenthesizeNicknames",
-                    strLabel: Object(hr.b)(
-                      "#FriendSettings_ParenthesizeNicknames"
-                    ),
-                    strDesc: Object(hr.b)(
-                      "#FriendSettings_ParenthesizeNicknames_Desc"
-                    )
-                  }),
-                  br.createElement(t, {
-                    strName: "bHideOfflineFriendsInTagGroups",
-                    strLabel: Object(hr.b)(
-                      "#FriendSettings_HideOfflineFriendsInCategories"
-                    )
-                  })
-                ),
                 br.createElement(
                   "div",
                   { className: "SettingsGroup" },
@@ -50679,28 +50798,28 @@ and limitations under the License.
                       Object(hr.b)("#FriendSettings_Notification_Table_Play")
                     )
                   ),
-                  br.createElement(i, {
+                  br.createElement(t, {
                     strLabel: Object(hr.b)(
                       "#FriendSettings_Notification_FriendJoins"
                     ),
                     strNameShow: "bNotifications_ShowIngame",
                     strNameSound: "bSounds_PlayIngame"
                   }),
-                  br.createElement(i, {
+                  br.createElement(t, {
                     strLabel: Object(hr.b)(
                       "#FriendSettings_Notification_FriendOnline"
                     ),
                     strNameShow: "bNotifications_ShowOnline",
                     strNameSound: "bSounds_PlayOnline"
                   }),
-                  br.createElement(i, {
+                  br.createElement(t, {
                     strLabel: Object(hr.b)(
                       "#FriendSettings_Notification_ChatMessage"
                     ),
                     strNameShow: "bNotifications_ShowMessage",
                     strNameSound: "bSounds_PlayMessage"
                   }),
-                  br.createElement(i, {
+                  br.createElement(t, {
                     strLabel: Object(hr.b)(
                       "#FriendSettings_Notification_ChatRoomNotification"
                     ),
@@ -50708,7 +50827,7 @@ and limitations under the License.
                     strNameSound: "bSounds_PlayChatRoomNotification"
                   }),
                   this.props.bShowGroupOpts &&
-                    br.createElement(i, {
+                    br.createElement(t, {
                       strLabel: Object(hr.b)(
                         "#FriendSettings_Notification_GroupEvent"
                       ),
@@ -50725,12 +50844,12 @@ and limitations under the License.
                       "div",
                       { className: "FriendsSettingsFlashSection" },
                       br.createElement(
-                        Us,
+                        Vs,
                         { className: "FriendsSettingsFlashSection_Header" },
                         Object(hr.b)("#FriendSettings_Flash_Header")
                       ),
                       br.createElement(
-                        Ys,
+                        Xs,
                         { className: "FriendsSettingsFlashSection_ButtonRow" },
                         br.createElement(
                           T,
@@ -50766,14 +50885,14 @@ and limitations under the License.
                     )
                   ),
                 !this.props.bSubmitImmediate &&
-                  br.createElement(D, { onCancel: this.props.onCancel })
+                  br.createElement(N, { onCancel: this.props.onCancel })
               );
             }),
             it.b([Xt.a], t.prototype, "FriendsSettingsNotificationRow", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })($l),
-        tu = (function(e) {
+        })(tu),
+        ru = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -50823,7 +50942,7 @@ and limitations under the License.
               this.props.voiceStore.SetVoiceInputGain(
                 this.props.voiceStore.ConvertSliderToGainValue(
                   e,
-                  al.k_MaxInputOutputGainValue
+                  cl.k_MaxInputOutputGainValue
                 )
               );
             }),
@@ -50831,7 +50950,7 @@ and limitations under the License.
               this.props.voiceStore.SetVoiceOutputGain(
                 this.props.voiceStore.ConvertSliderToGainValue(
                   e,
-                  al.k_MaxInputOutputGainValue
+                  cl.k_MaxInputOutputGainValue
                 )
               );
             }),
@@ -50846,17 +50965,17 @@ and limitations under the License.
             }),
             (t.prototype.SetNoiseGateOff = function() {
               this.props.voiceStore.SetUseNoiseGateLevel(
-                Xc.k_ENoiseGateLevel_Off
+                Qc.k_ENoiseGateLevel_Off
               );
             }),
             (t.prototype.SetNoiseGateMedium = function() {
               this.props.voiceStore.SetUseNoiseGateLevel(
-                Xc.k_ENoiseGateLevel_Medium
+                Qc.k_ENoiseGateLevel_Medium
               );
             }),
             (t.prototype.SetNoiseGateHigh = function() {
               this.props.voiceStore.SetUseNoiseGateLevel(
-                Xc.k_ENoiseGateLevel_High
+                Qc.k_ENoiseGateLevel_High
               );
             }),
             (t.prototype.SetHotKeyCaptureState = function(e) {
@@ -50879,7 +50998,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e),
-                  Up.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Hp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1));
             }),
             (t.prototype.OnTogglePushToTalk = function() {
@@ -50888,9 +51007,9 @@ and limitations under the License.
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.SetPushToTalkEnabled
               ) {
-                var e = Up.VoiceStore.GetPushToTalkEnabled();
+                var e = Hp.VoiceStore.GetPushToTalkEnabled();
                 SteamClient.WebChat.SetPushToTalkEnabled(!e),
-                  Up.VoiceStore.SetPushToTalkEnabled(!e);
+                  Hp.VoiceStore.SetPushToTalkEnabled(!e);
               }
             }),
             (t.prototype.AssignHotkey = function() {
@@ -50906,7 +51025,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e.button),
-                  Up.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Hp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
@@ -50919,16 +51038,16 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkHotKey &&
                   (SteamClient.WebChat.SetPushToTalkHotKey(e.keyCode),
-                  Up.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Hp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
             }),
             (t.prototype.render = function() {
-              var e = Up.VoiceStore.GetPushToTalkEnabled(),
+              var e = Hp.VoiceStore.GetPushToTalkEnabled(),
                 t = !1,
-                i = (Up.VoiceStore.GetPushToTalkHotKeyVK(),
-                Up.VoiceStore.GetPushToTalkHotKeyDisplayString()),
+                i = (Hp.VoiceStore.GetPushToTalkHotKeyVK(),
+                Hp.VoiceStore.GetPushToTalkHotKeyDisplayString()),
                 n = Object(hr.b)("#VoicePushToTalkAssigned");
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
@@ -50938,7 +51057,7 @@ and limitations under the License.
                   (n = Object(hr.b)("#VoicePushToTalkPressHotKey"));
               var r = this.props.voiceStore.GetUseNoiseGateLevel();
               return br.createElement(
-                Xs,
+                Qs,
                 {
                   className: "DialogBody VoiceSettings",
                   onContextMenu: this.onContextMenu,
@@ -50951,7 +51070,7 @@ and limitations under the License.
                   "div",
                   { className: "_FixedHeight" },
                   this.state.micOptionsReady &&
-                    br.createElement(rc, {
+                    br.createElement(ac, {
                       label: Object(hr.b)("#VoiceDevice"),
                       rgOptions: this.m_rgMicOptions,
                       strDefaultLabel: Object(hr.b)("#DefaultMic"),
@@ -50959,34 +51078,34 @@ and limitations under the License.
                       onChange: this.OnMicDropdownChanged
                     }),
                   !this.state.micOptionsReady &&
-                    br.createElement(rc, {
+                    br.createElement(ac, {
                       label: Object(hr.b)("#VoiceDevice"),
                       rgOptions: this.m_rgMicOptions,
                       strDefaultLabel: Object(hr.b)("#MicLoading...")
                     }),
-                  br.createElement(Us, null, Object(hr.b)("#VoiceVolume")),
+                  br.createElement(Vs, null, Object(hr.b)("#VoiceVolume")),
                   br.createElement(
-                    Ks,
+                    Js,
                     { className: "DialogLabelStrong" },
-                    br.createElement(nc, {
+                    br.createElement(oc, {
                       min: 0,
                       max: 100,
                       label: Object(hr.b)("#VoiceInputGain"),
                       explainer: Object(hr.b)("#VoiceInputGainExplainer"),
                       value: this.props.voiceStore.ConvertGainValueToSliderValue(
                         this.props.voiceStore.GetVoiceInputGain(),
-                        al.k_MaxInputOutputGainValue
+                        cl.k_MaxInputOutputGainValue
                       ),
                       onChange: this.OnInputGainChanged
                     }),
-                    br.createElement(nc, {
+                    br.createElement(oc, {
                       min: 0,
                       max: 100,
                       label: Object(hr.b)("#VoiceOutputGain"),
                       explainer: Object(hr.b)("#VoiceOutputGainExplainer"),
                       value: this.props.voiceStore.ConvertGainValueToSliderValue(
                         this.props.voiceStore.GetVoiceOutputGain(),
-                        al.k_MaxInputOutputGainValue
+                        cl.k_MaxInputOutputGainValue
                       ),
                       onChange: this.OnOutputGainChanged
                     })
@@ -50999,7 +51118,7 @@ and limitations under the License.
                         (t ? "" : " disabled")
                     },
                     br.createElement(
-                      Us,
+                      Vs,
                       null,
                       Object(hr.b)("#VoiceTransmisionType"),
                       !t &&
@@ -51011,7 +51130,7 @@ and limitations under the License.
                           ") "
                         )
                     ),
-                    br.createElement(ic, {
+                    br.createElement(rc, {
                       disabled: !t,
                       label: Object(hr.b)("#VoiceTransmissionTypeExplainer"),
                       checked: e,
@@ -51024,7 +51143,7 @@ and limitations under the License.
                           className: "pushtoTalkKeyAssignContainer displayRow"
                         },
                         br.createElement(
-                          Us,
+                          Vs,
                           { className: "DialogLabelExplainer" },
                           n
                         ),
@@ -51044,23 +51163,23 @@ and limitations under the License.
                     "div",
                     { className: "_DialogSection" },
                     br.createElement(
-                      Us,
+                      Vs,
                       null,
                       Object(hr.b)("#VoiceTransmisionThreshold")
                     ),
                     br.createElement(
-                      Us,
+                      Vs,
                       { className: "DialogLabelStrong" },
                       Object(hr.b)("#VoiceTransmissionThresholdExplainer")
                     ),
                     br.createElement(
-                      Ys,
+                      Xs,
                       { className: "FriendsSettingsFlashSection_ButtonRow" },
                       br.createElement(
                         T,
                         {
                           className:
-                            r <= Xc.k_ENoiseGateLevel_Low ? "Primary" : "Off",
+                            r <= Qc.k_ENoiseGateLevel_Low ? "Primary" : "Off",
                           onClick: this.SetNoiseGateOff
                         },
                         Object(hr.b)("#VoiceTransmissionThresholdOff")
@@ -51069,7 +51188,7 @@ and limitations under the License.
                         T,
                         {
                           className:
-                            r == Xc.k_ENoiseGateLevel_Medium
+                            r == Qc.k_ENoiseGateLevel_Medium
                               ? "Primary"
                               : "Off",
                           onClick: this.SetNoiseGateMedium
@@ -51080,14 +51199,14 @@ and limitations under the License.
                         T,
                         {
                           className:
-                            r == Xc.k_ENoiseGateLevel_High ? "Primary" : "Off",
+                            r == Qc.k_ENoiseGateLevel_High ? "Primary" : "Off",
                           onClick: this.SetNoiseGateHigh
                         },
                         Object(hr.b)("#VoiceTransmissionThresholdHigh")
                       )
                     ),
                     br.createElement(
-                      Us,
+                      Vs,
                       { className: "DialogLabelExplainer" },
                       Object(hr.b)("#VoiceTransmissionThresholdRecommended")
                     )
@@ -51107,26 +51226,26 @@ and limitations under the License.
                       "div",
                       { className: "advancedSettings" },
                       br.createElement(
-                        Us,
+                        Vs,
                         null,
                         Object(hr.b)("#VoiceAdvancedSettings")
                       ),
                       br.createElement(
-                        Us,
+                        Vs,
                         { className: "DialogLabelExplainer Left" },
                         Object(hr.b)("#VoiceAdvancedSettingsExplainer")
                       ),
-                      br.createElement(ic, {
+                      br.createElement(rc, {
                         label: Object(hr.b)("#VoiceEchoCancellation"),
                         checked: this.props.voiceStore.GetUseEchoCancellation(),
                         onChange: this.OnToggleEchoCancellation
                       }),
-                      br.createElement(ic, {
+                      br.createElement(rc, {
                         label: Object(hr.b)("#VoiceNoiseCancellation"),
                         checked: this.props.voiceStore.GetUseNoiseCancellation(),
                         onChange: this.OnToggleNoiseCancellation
                       }),
-                      br.createElement(ic, {
+                      br.createElement(rc, {
                         label: Object(hr.b)("#VoiceAutoGainControl"),
                         checked: this.props.voiceStore.GetUseAutoGainControl(),
                         onChange: this.OnToggleAutoGainControl
@@ -51155,66 +51274,72 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "onClick", null),
             it.b([Xt.a], t.prototype, "onContextMenu", null),
             it.b([Xt.a], t.prototype, "onKeyDown", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ac),
-        iu = (function(e) {
+        })(cc),
+        ou = (function(e) {
           function t(t) {
             return e.call(this, t, Object(hr.b)("#Settings")) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.SaveFriendSettings = function(e, t) {
-              Up.SettingsStore.BUpdateFriendsSettings(e),
-                Up.SettingsStore.SetCommunityPreferences(t);
+              Hp.SettingsStore.BUpdateFriendsSettings(e),
+                Hp.SettingsStore.SetCommunityPreferences(t);
             }),
             (t.prototype.render = function() {
               var e = {
-                title: Object(hr.b)("#FriendSettings_Title"),
-                className: "FriendSettingsContainer",
-                pages: [
-                  {
-                    title: Object(hr.b)("#FriendSettings_General"),
-                    uniqueName: "FriendSettings_General",
-                    content: br.createElement(eu, {
-                      friendsSettingsInitial: Up.SettingsStore.FriendsSettings,
-                      communityPreferencesInitial:
-                        Up.SettingsStore.CommunityPreferences,
-                      onCancel: this.props.closeModal,
-                      onSubmit: this.SaveFriendSettings,
-                      bShowClientOpts: tt.a.IN_CLIENT,
-                      bShowPopupOpts: tt.a.USE_POPUPS,
-                      bShowGroupOpts: !1,
-                      bSubmitImmediate: !0
-                    })
-                  },
-                  {
-                    title: Object(hr.b)("#FriendSettings_Voice"),
-                    uniqueName: "FriendSettings_Voice",
-                    content: br.createElement(tu, {
-                      onCancel: this.props.closeModal,
-                      voiceStore: Up.ChatStore.VoiceChat
-                    })
-                  }
-                ]
-              };
+                  friendsSettingsInitial: Hp.SettingsStore.FriendsSettings,
+                  communityPreferencesInitial:
+                    Hp.SettingsStore.CommunityPreferences,
+                  onCancel: this.props.closeModal,
+                  onSubmit: this.SaveFriendSettings,
+                  bShowClientOpts: tt.a.IN_CLIENT,
+                  bShowPopupOpts: tt.a.USE_POPUPS,
+                  bShowGroupOpts: !1,
+                  bSubmitImmediate: !0
+                },
+                t = {
+                  title: Object(hr.b)("#FriendSettings_Title"),
+                  className: "FriendSettingsContainer",
+                  pages: [
+                    {
+                      title: Object(hr.b)("#FriendSettings_General"),
+                      uniqueName: "FriendSettings_General",
+                      content: br.createElement(iu, it.a({}, e))
+                    },
+                    {
+                      title: Object(hr.b)("#FriendSettings_Notifications"),
+                      uniqueName: "FriendSettings_Notifications",
+                      content: br.createElement(nu, it.a({}, e))
+                    },
+                    {
+                      title: Object(hr.b)("#FriendSettings_Voice"),
+                      uniqueName: "FriendSettings_Voice",
+                      content: br.createElement(ru, {
+                        onCancel: this.props.closeModal,
+                        voiceStore: Hp.ChatStore.VoiceChat
+                      })
+                    }
+                  ]
+                };
               return br.createElement(
                 Oe,
                 { onEscKeypress: this.props.closeModal },
-                br.createElement(sc, it.a({}, e))
+                br.createElement(lc, it.a({}, t))
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        nu = (br.createElement(
+        au = (br.createElement(
           "div",
           {
             className:
               "notificationChimeAndToast FriendsSettingsNotificationRow"
           },
-          br.createElement(ec, null),
-          br.createElement(ec, null)
+          br.createElement(ic, null),
+          br.createElement(ic, null)
         ),
         (function(e) {
           function t(t) {
@@ -51228,14 +51353,14 @@ and limitations under the License.
                 {
                   label: Object(hr.b)(
                     "#NotificationSetting_AnyMention",
-                    Up.FriendStore.self.display_name
+                    Hp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(hr.b)(
                     "#NotificationSetting_DirectMention",
-                    Up.FriendStore.self.display_name
+                    Hp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51300,7 +51425,7 @@ and limitations under the License.
               var r;
               if (n) {
                 var o = i.map(function(i) {
-                  return br.createElement(ru, {
+                  return br.createElement(su, {
                     fnHandleSave: e.WrapSavePromise,
                     group: t,
                     chat: i,
@@ -51324,12 +51449,12 @@ and limitations under the License.
                   E,
                   { classNameContent: "ChatRoomNotificationSettingsDialog" },
                   br.createElement(
-                    xs,
+                    Us,
                     null,
                     Object(hr.b)("#NotificationSettings_Title")
                   ),
                   br.createElement(
-                    Us,
+                    Vs,
                     null,
                     Object(hr.d)(
                       "#NotificationSettings_SubTitle",
@@ -51341,10 +51466,10 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     br.createElement(
-                      Us,
+                      Vs,
                       {
                         className:
                           "NotificationSettingsSavingIndicator " +
@@ -51356,7 +51481,7 @@ and limitations under the License.
                       "div",
                       { className: "notificationGeneralHeader" },
                       br.createElement(
-                        Us,
+                        Vs,
                         null,
                         Object(hr.b)("#NotificationSetting_Label")
                       )
@@ -51367,7 +51492,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "notificationRow" },
-                        br.createElement(rc, {
+                        br.createElement(ac, {
                           rgOptions: this.m_rgSelectOptions,
                           selectedOption: t.GetDesktopNotificationLevel(),
                           onChange: this.OnGroupNotificationLevelChanged
@@ -51377,7 +51502,7 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "indicatorOptionContainer" },
-                          br.createElement(ic, {
+                          br.createElement(rc, {
                             classname: "indicatorOption",
                             label: Object(hr.b)(
                               "#NotificationSetting_Indicator"
@@ -51402,30 +51527,30 @@ and limitations under the License.
                       br.createElement(
                         br.Fragment,
                         null,
-                        br.createElement(N, null),
+                        br.createElement(D, null),
                         br.createElement(
-                          Ks,
+                          Js,
                           { className: "notificationsChannelHeader" },
                           br.createElement(
-                            Us,
+                            Vs,
                             { className: "NotificationChannelNameLabel" },
                             Object(hr.b)("#GroupSettings_Channels_TextChannels")
                           ),
                           br.createElement(
-                            Us,
+                            Vs,
                             { className: "OverrideChannelLabel" },
                             Object(hr.b)("#NotificationSetting_ShortLabel")
                           )
                         ),
                         br.createElement(
-                          Hs,
+                          Ks,
                           { className: "scrollMaskVertical" },
                           r
                         )
                       )
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
                     Object(hr.d)(
                       "#NotificationSetting_Footer_Desc",
@@ -51449,10 +51574,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
             it.b([Xt.a], t.prototype, "DismissDialog", null),
             it.b([Xt.a], t.prototype, "OnFriendsSettingsClicked", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component)),
-        ru = (function(e) {
+        su = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -51474,14 +51599,14 @@ and limitations under the License.
                 {
                   label: Object(hr.b)(
                     "#NotificationSetting_AnyMention",
-                    Up.FriendStore.self.display_name
+                    Hp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(hr.b)(
                     "#NotificationSetting_DirectMention",
-                    Up.FriendStore.self.display_name
+                    Hp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51502,14 +51627,14 @@ and limitations under the License.
               return (
                 e.GetDesktopNotificationLevelSetting(),
                 br.createElement(
-                  Ys,
+                  Xs,
                   { className: "notificationsChannel" },
                   br.createElement(
                     "div",
                     { className: "NotificationChannelName" },
                     e.name
                   ),
-                  br.createElement(rc, {
+                  br.createElement(ac, {
                     rgOptions: this.m_rgSelectOptions,
                     selectedOption: e.GetDesktopNotificationLevelSetting(),
                     onChange: this.OnChatNotificationLevelChanged
@@ -51518,17 +51643,17 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "OnChatNotificationLevelChanged", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        ou = (function(e) {
+        cu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.InviteFriend = function(e) {
-              Up.UIStore.OpenInviteDialogForChatGroup(
+              Hp.UIStore.OpenInviteDialogForChatGroup(
                 Ye(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.groupView.GetGroup()
@@ -51573,7 +51698,7 @@ and limitations under the License.
                       className: "chatRoomGroupHeader",
                       onContextMenu: this.OnContextMenu
                     },
-                    br.createElement(su, { group: e }),
+                    br.createElement(uu, { group: e }),
                     br.createElement(
                       "div",
                       { className: "chatRoomGroupHeaderNameandTag" },
@@ -51607,7 +51732,7 @@ and limitations under the License.
                                 "#Tooltip_NotificationSettings"
                               )
                             },
-                            br.createElement(Bs.c, null)
+                            br.createElement(Is.c, null)
                           ),
                           o &&
                             br.createElement(
@@ -51617,7 +51742,7 @@ and limitations under the License.
                                 onClick: this.InviteFriend,
                                 title: Object(hr.b)("#Tooltip_InviteToGroup")
                               },
-                              br.createElement(Bs.p, null)
+                              br.createElement(Is.p, null)
                             ),
                           !o &&
                             br.createElement(
@@ -51630,7 +51755,7 @@ and limitations under the License.
                                   "#Tooltip_InviteToGroup_Denied"
                                 )
                               },
-                              br.createElement(Bs.p, null)
+                              br.createElement(Is.p, null)
                             ),
                           br.createElement(
                             "div",
@@ -51639,7 +51764,7 @@ and limitations under the License.
                               onClick: this.OpenSettings,
                               title: Object(hr.b)("#Tooltip_GroupChatSettings")
                             },
-                            br.createElement(Bs.e, null)
+                            br.createElement(Is.e, null)
                           )
                         ),
                         br.createElement(
@@ -51694,12 +51819,12 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OpenNotificationPreferences", null),
             it.b([Xt.a], t.prototype, "LeaveGroup", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        au = Object(Os.observer)(function(e) {
+        lu = Object(Rs.observer)(function(e) {
           if (!e.small && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
-            var t = Up.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
+            var t = Hp.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
             return br.createElement(
               "div",
               {
@@ -51724,7 +51849,7 @@ and limitations under the License.
             )
           );
         }),
-        su = (function(e) {
+        uu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -51755,8 +51880,8 @@ and limitations under the License.
               var e = this,
                 t = this.props.group;
               if (t && t.BIsClanChatRoom()) {
-                var i = Up.FriendStore.ClanStore.GetClan(t.GetClanID());
-                return br.createElement(au, {
+                var i = Hp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                return br.createElement(lu, {
                   clan: i,
                   small: this.props.small,
                   large: this.props.large
@@ -51828,10 +51953,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        cu = (function(e) {
+        du = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -51842,7 +51967,7 @@ and limitations under the License.
               (i.m_rgFavoriteElementRefs = []),
               (i.m_bAcceptDrag = !1),
               (i.state = {
-                bHintDismissed: Sm.UIDisplayPrefs.bFavoritesHintDismissed
+                bHintDismissed: Om.UIDisplayPrefs.bFavoritesHintDismissed
               }),
               i
             );
@@ -51851,7 +51976,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.DismissFavoritesHint = function() {
               this.setState({ bHintDismissed: !0 }),
-                Sm.SetUIDisplayPref("bFavoritesHintDismissed", !0);
+                Om.SetUIDisplayPref("bFavoritesHintDismissed", !0);
             }),
             (t.prototype.render = function() {
               var e = this,
@@ -51863,7 +51988,7 @@ and limitations under the License.
                 t.length || i)
               ) {
                 var r = t,
-                  o = Up.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                  o = Hp.SettingsStore.FriendsSettings.bCompactQuickAccess;
                 i &&
                   (this.m_bGhostIsDupe &&
                     r.findIndex(function(e) {
@@ -51891,7 +52016,7 @@ and limitations under the License.
                       a = t.isActiveDrag;
                     return (
                       a && (r += "dragGhost"),
-                      br.createElement(lu, {
+                      br.createElement(pu, {
                         favorite: t,
                         index: n,
                         friendRenderContext: e.GetFriendRenderContext(),
@@ -51906,7 +52031,7 @@ and limitations under the License.
                 return (
                   o && (s += " compactQuickAccess"),
                   br.createElement(
-                    ws,
+                    Bs,
                     it.a({ className: s }, this.GetDragDropProps()),
                     a,
                     br.createElement("div", { className: "dropTargetBox" })
@@ -51914,7 +52039,7 @@ and limitations under the License.
                 );
               }
               return br.createElement(
-                ws,
+                Bs,
                 it.a({ className: n }, this.GetDragDropProps()),
                 br.createElement(
                   "div",
@@ -51958,7 +52083,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               !t ||
                 ("friend" != t.type &&
                   "chatroomgroup" != t.type &&
@@ -51967,18 +52092,18 @@ and limitations under the License.
                 (this.m_ActiveDragOut = this.FindItemFromDrag(t)));
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Sm.DragDropManager.GetDragData(),
+              var t = Om.DragDropManager.GetDragData(),
                 i = this.FindItemFromDrag(t);
               if (
                 i &&
                 "is_favorite" in t &&
                 t.is_favorite &&
-                !Sm.DragDropManager.BWasDropConsumed()
+                !Om.DragDropManager.BWasDropConsumed()
               ) {
                 var n = e.currentTarget.getBoundingClientRect();
                 Object(Mr.f)(n, e.clientX, e.clientY) > 100 &&
                   (this.props.FavoritesStore.RemoveFromFavorites(i),
-                  Sm.DragDropManager.EndDrag());
+                  Om.DragDropManager.EndDrag());
               }
               this.m_ActiveDragOut = void 0;
             }),
@@ -51987,10 +52112,10 @@ and limitations under the License.
               if ("friend" == e.type) i = e.friend;
               else if ("chattab" == e.type) {
                 var o = e.tab;
-                if (o instanceof ps) {
+                if (o instanceof ms) {
                   var a = o.GetGroup();
                   a.BIsClanChatRoom() &&
-                    (n = Up.FriendStore.ClanStore.GetClan(a.GetClanID())),
+                    (n = Hp.FriendStore.ClanStore.GetClan(a.GetClanID())),
                     (r = a);
                 } else {
                   var s = o.GetChatView();
@@ -52047,7 +52172,7 @@ and limitations under the License.
               var i = this.FindItemFromDrag(e);
               this.m_ActiveDrag,
                 i
-                  ? (Sm.DragDropManager.SetDropConsumed(),
+                  ? (Om.DragDropManager.SetDropConsumed(),
                     this.props.FavoritesStore.AddToFavorites(
                       i,
                       this.m_iActiveDragIndex
@@ -52065,17 +52190,17 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragOver", null),
             it.b([Xt.a], t.prototype, "OnDragLeave", null),
             it.b([Xt.a], t.prototype, "OnDrop", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        lu = (function(e) {
+        pu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.GetBoundingClientRect = function() {
-              var e = Fs.findDOMNode(this);
+              var e = Os.findDOMNode(this);
               return e ? e.getBoundingClientRect() : null;
             }),
             (t.prototype.render = function() {
@@ -52089,20 +52214,20 @@ and limitations under the License.
               var n;
               return (
                 (n = t.friend
-                  ? br.createElement(uu, {
+                  ? br.createElement(hu, {
                       key: t.friend.accountid,
                       friend: t.friend,
                       friendRenderContext: this.props.friendRenderContext,
                       className: e
                     })
                   : t.clan
-                    ? br.createElement(du, {
+                    ? br.createElement(mu, {
                         key: t.clan.clanid,
                         clan: t.clan,
                         className: e
                       })
                     : t.chat
-                      ? br.createElement(pu, {
+                      ? br.createElement(gu, {
                           key: t.chat.GetGroupID(),
                           chat: t.chat,
                           className: e
@@ -52118,14 +52243,14 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        uu = Object(Os.observer)(function(e) {
+        hu = Object(Rs.observer)(function(e) {
           var t = e.friend,
-            i = Up.SettingsStore.FriendsSettings.bCompactQuickAccess,
+            i = Hp.SettingsStore.FriendsSettings.bCompactQuickAccess,
             n = null;
-          t.persona.is_awayOrSnooze && (n = br.createElement(Tu, null));
+          t.persona.is_awayOrSnooze && (n = br.createElement(Nu, null));
           var r = void 0;
           if (t.persona.is_ingame) {
-            var o = Up.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
+            var o = Hp.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
             o.is_valid &&
               (r = br.createElement(
                 "div",
@@ -52138,7 +52263,7 @@ and limitations under the License.
               ));
           }
           return br.createElement(
-            Lu,
+            Uu,
             {
               friend: t,
               key: t.accountid,
@@ -52181,32 +52306,32 @@ and limitations under the License.
             )
           );
         }),
-        du = (function(e) {
+        mu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.OnDragStart = function(e) {
-              Sm.DragDropManager.StartDrag({
+              Om.DragDropManager.StartDrag({
                 type: "clan",
                 clan: this.props.clan
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Sm.DragDropManager.EndDrag();
+              Om.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
               Z(e, this.props.clan, { is_favorites: !0 });
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessFriend QuickAccessClan",
-                t = Up.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                t = Hp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               this.props.className && (e += " " + this.props.className);
               var i = null,
                 n = this.props.clan.GetChatGroupIDIfLoaded();
               if (n) {
-                var r = Up.ChatStore.GetChatRoomGroup(n);
+                var r = Hp.ChatStore.GetChatRoomGroup(n);
                 r &&
                   r.HasUnreadChatMessage &&
                   (i = br.createElement(
@@ -52229,7 +52354,7 @@ and limitations under the License.
                   onDragStart: this.OnDragStart,
                   onDragEnd: this.OnDragEnd
                 },
-                br.createElement(au, { clan: this.props.clan, small: !0 }),
+                br.createElement(lu, { clan: this.props.clan, small: !0 }),
                 !t &&
                   br.createElement(
                     "div",
@@ -52242,30 +52367,30 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragStart", null),
             it.b([Xt.a], t.prototype, "OnDragEnd", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        pu = (function(e) {
+        gu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.OnClick = function(e) {
-              Up.UIStore.ShowAndOrActivateChatRoomGroup(
+              Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Ye(this, e),
                 this.props.chat,
                 !0
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              Sm.DragDropManager.StartDrag({
+              Om.DragDropManager.StartDrag({
                 type: "chatroomgroup",
                 group: this.props.chat
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Sm.DragDropManager.EndDrag();
+              Om.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
               X(e, this.props.chat, { is_favorites: !0 });
@@ -52273,7 +52398,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = "QuickAccessChat",
                 t = null,
-                i = Up.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                i = Hp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               return (
                 this.props.chat.HasUnreadChatMessage &&
                   (t = br.createElement(
@@ -52298,7 +52423,7 @@ and limitations under the License.
                     onDragStart: this.OnDragStart,
                     onDragEnd: this.OnDragEnd
                   },
-                  br.createElement(su, { group: this.props.chat }),
+                  br.createElement(uu, { group: this.props.chat }),
                   !i &&
                     br.createElement(
                       "div",
@@ -52313,14 +52438,14 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragStart", null),
             it.b([Xt.a], t.prototype, "OnDragEnd", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        hu = (function(e) {
+        fu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
-              Up.FriendStore.self,
+              Hp.FriendStore.self,
               (i.state = {
                 strCurrentNameEntry: "",
                 strError: void 0,
@@ -52382,20 +52507,20 @@ and limitations under the License.
                 }));
               var n = this.props.chatViewToReplace;
               if (n) {
-                var r = new Ka(
+                var r = new Ja(
                   this.props.chatViewToReplace.chat.accountid_partner
                 );
                 i.push(r.persona.m_steamid.ConvertTo64BitString());
                 var o = Ze(e);
                 return (
-                  Up.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
+                  Hp.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
                   void this.props.closeModal()
                 );
               }
               var a = this.props.bHideChatNameEntry
                 ? ""
                 : this.state.strCurrentNameEntry;
-              Up.ChatStore.CreateChatRoomGroup(
+              Hp.ChatStore.CreateChatRoomGroup(
                 this.props.browserContext,
                 a,
                 i
@@ -52437,17 +52562,17 @@ and limitations under the License.
                       onSubmit: this.HandleSubmit
                     },
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       !e && Object(hr.b)("#Chat_CreateChatRoom"),
                       e && Object(hr.b)("#Chat_CreateChatRoom_InviteFriends")
                     ),
                     br.createElement(
-                      Vs,
+                      qs,
                       null,
                       e &&
                         br.createElement(
-                          Ws,
+                          Hs,
                           null,
                           br.createElement(
                             "span",
@@ -52468,12 +52593,12 @@ and limitations under the License.
                         ),
                       this.state.strError &&
                         br.createElement(
-                          Ws,
+                          Hs,
                           { className: "nicknameError" },
                           this.state.strError
                         ),
                       !this.props.bHideChatNameEntry &&
-                        br.createElement(Zs, {
+                        br.createElement($s, {
                           type: "text",
                           label: Object(hr.b)("#Chat_Settings_Room_Name"),
                           className: "nicknameInput",
@@ -52482,7 +52607,7 @@ and limitations under the License.
                           autoFocus: !0
                         }),
                       br.createElement(
-                        Ws,
+                        Hs,
                         {
                           className:
                             "CreateChat_NonBetaFriendsWarning " +
@@ -52493,7 +52618,7 @@ and limitations under the License.
                         br.createElement(de, null),
                         Object(hr.b)("#Chat_InviteFriend_SomeUnavailable")
                       ),
-                      br.createElement(lc, {
+                      br.createElement(dc, {
                         ref: this.OnFriendPickerRef,
                         label: "",
                         eSort: 1,
@@ -52502,13 +52627,13 @@ and limitations under the License.
                         onFriendSelected: this.OnFriendListSelectionChanged,
                         onFriendRemoved: this.OnFriendListSelectionChanged,
                         rgSelectedFriends: this.props.vecInvitePlayers,
-                        chosenFriendComponent: mu
+                        chosenFriendComponent: _u
                       })
                     ),
                     br.createElement(
-                      js,
+                      Ws,
                       null,
-                      br.createElement(D, {
+                      br.createElement(N, {
                         strOKText: Object(hr.b)("#Chat_Invite"),
                         onCancel: this.props.closeModal,
                         bOKDisabled: !i
@@ -52522,16 +52647,16 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnFriendPickerRef", null),
             it.b([Xt.a], t.prototype, "OnFriendListSelectionChanged", null),
             it.b([Xt.a], t.prototype, "HandleSubmit", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        mu = Object(Os.observer)(function(e) {
+        _u = Object(Rs.observer)(function(e) {
           var t = e.friend.is_in_beta || void 0 === e.friend.is_in_beta;
           return br.createElement(
             br.Fragment,
             null,
             br.createElement(
-              zu,
+              ju,
               { friend: e.friend, context: null },
               br.createElement(
                 "div",
@@ -52545,28 +52670,28 @@ and limitations under the License.
                 },
                 !t && br.createElement(de, null),
                 br.createElement("span", null, e.friend.display_name),
-                br.createElement(Bs.O, null)
+                br.createElement(Is.O, null)
               )
             )
           );
         }),
-        gu = (function() {
+        yu = (function() {
           function e() {
             this.m_mapHovers = new WeakMap();
           }
           return (
             (e.prototype.GetHover = function(e) {
               var t = this.m_mapHovers.get(e);
-              return t || ((t = new _u(e)), this.m_mapHovers.set(e, t)), t;
+              return t || ((t = new bu(e)), this.m_mapHovers.set(e, t)), t;
             }),
             e
           );
         })(),
-        fu = (function() {
+        vu = (function() {
           function e() {}
           return it.b([pt.observable], e.prototype, "visible", void 0), e;
         })(),
-        _u = (function() {
+        bu = (function() {
           function e(e) {
             (this.m_bLoadingData = !1), (this.m_friend = e);
           }
@@ -52592,7 +52717,7 @@ and limitations under the License.
                   if (r.m_OwningElement == e) return r;
                 }
               if (t) {
-                var r = new fu();
+                var r = new vu();
                 return (
                   (r.m_OwningElement = e),
                   (r.visible = !1),
@@ -52608,7 +52733,7 @@ and limitations under the License.
             (e.prototype.Show = function(t, i) {
               var n =
                 t.currentTarget.ownerDocument.defaultView.innerWidth < 500;
-              if ((!n || tt.a.IN_CLIENT) && !Sm.DragDropManager.BInDrag()) {
+              if ((!n || tt.a.IN_CLIENT) && !Om.DragDropManager.BInDrag()) {
                 this.EnsureCommunityDataLoaded();
                 var r = t.currentTarget,
                   o = Ye(null, t),
@@ -52617,7 +52742,7 @@ and limitations under the License.
                   (a.visible = !0),
                     window.setTimeout(function() {
                       a.visible &&
-                        (a.popupWindow || (a.popupWindow = new Yu(r, a, o)),
+                        (a.popupWindow || (a.popupWindow = new Zu(r, a, o)),
                         a.popupWindow.Show());
                     }, 250);
                 else {
@@ -52718,17 +52843,14 @@ and limitations under the License.
                   )
                   .then(function(t) {
                     var i = t.data;
-                    i.level &&
-                      i.level_class &&
-                      ((e.m_communityData = i),
-                      (e.m_dateLastUpdate = new Date())),
+                    i.level && i.level_class && (e.m_communityData = i),
                       (e.m_bLoadingData = !1);
                   })
                   .catch(function(t) {
                     e.m_bLoadingData = !1;
                   }));
             }),
-            (e.m_embeddedElements = new Rs.a("CFriendHoverContainer")),
+            (e.m_embeddedElements = new Es.a("CFriendHoverContainer")),
             it.b([pt.observable], e.prototype, "m_communityData", void 0),
             it.b([Xt.a], e.prototype, "Show", null),
             it.b([Xt.a], e.prototype, "Hide", null),
@@ -52736,7 +52858,7 @@ and limitations under the License.
             e
           );
         })(),
-        yu = (br.Component,
+        Cu = (br.Component,
         br.Component,
         (function(e) {
           function t(t) {
@@ -52807,14 +52929,14 @@ and limitations under the License.
                           className: "title-area-icon closeButton",
                           onClick: t
                         },
-                        br.createElement(Bs.O, null)
+                        br.createElement(Is.O, null)
                       ),
                       !this.props.hideMinMax &&
                         br.createElement(
                           "div",
                           { className: r, onClick: i },
-                          this.state.maximized && br.createElement(Bs.C, null),
-                          !this.state.maximized && br.createElement(Bs.s, null)
+                          this.state.maximized && br.createElement(Is.C, null),
+                          !this.state.maximized && br.createElement(Is.s, null)
                         ),
                       !this.props.hideMinMax &&
                         br.createElement(
@@ -52823,7 +52945,7 @@ and limitations under the License.
                             className: "title-area-icon minimizeButton",
                             onClick: n
                           },
-                          br.createElement(Bs.u, null)
+                          br.createElement(Is.u, null)
                         )
                     )
                 )
@@ -52833,7 +52955,7 @@ and limitations under the License.
             t
           );
         })(br.Component)),
-        vu = (function(e) {
+        Su = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -52859,10 +52981,10 @@ and limitations under the License.
                   )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        bu = (function(e) {
+        Mu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -52871,7 +52993,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.chats.GetActiveVoiceChat();
               return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-                ? br.createElement(Cu, {
+                ? br.createElement(Fu, {
                     chat: e,
                     name: this.props.chats.GetActiveVoiceChannelName(),
                     nostatus: !1
@@ -52900,12 +53022,12 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          br.createElement(Su, null),
-                          br.createElement(Mu, null),
+                          br.createElement(wu, null),
+                          br.createElement(Ou, null),
                           br.createElement("div", {
                             className: "activeVoiceButtonsSpacer"
                           }),
-                          br.createElement(Fu, null),
+                          br.createElement(Bu, null),
                           br.createElement("div", {
                             className: "activeVoiceButtonsSpacerAfter"
                           })
@@ -52914,37 +53036,37 @@ and limitations under the License.
                     )
                   );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Cu = (function(e) {
+        Fu = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.ActivateActiveVoiceChat = function(e) {
-              if (this.props.chat instanceof cs) {
-                var t = Up.ChatStore.GetChatRoomGroup(
+              if (this.props.chat instanceof us) {
+                var t = Hp.ChatStore.GetChatRoomGroup(
                   this.props.chat.GetParentGroupID()
                 );
                 if (t)
-                  return void Up.UIStore.ShowAndOrActivateChatRoomGroup(
+                  return void Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Ye(this, e),
                     t,
                     !0
                   );
               }
-              Up.UIStore.ShowAndOrActivateChat(
+              Hp.UIStore.ShowAndOrActivateChat(
                 Ye(this, e),
                 this.props.chat,
                 !0
               );
             }),
             (t.prototype.render = function() {
-              var e = Up.VoiceStore.GetPushToTalkEnabled(),
-                t = Up.VoiceStore.GetPushToTalkKeyDown(),
-                i = Up.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var e = Hp.VoiceStore.GetPushToTalkEnabled(),
+                t = Hp.VoiceStore.GetPushToTalkKeyDown(),
+                i = Hp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 n = "";
               return (
                 e && (n += " pushToTalkEnabled"),
@@ -52978,19 +53100,19 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "activeVoiceButtons" },
-                        br.createElement(Su, null),
-                        br.createElement(Mu, null),
+                        br.createElement(wu, null),
+                        br.createElement(Ou, null),
                         br.createElement("div", {
                           className: "activeVoiceButtonsSpacer"
                         }),
-                        br.createElement(Fu, null),
+                        br.createElement(Bu, null),
                         br.createElement("div", {
                           className: "activeVoiceButtonsSpacerAfter"
                         })
                       )
                     ),
                     !this.props.nostatus &&
-                      br.createElement(vu, { chat: this.props.chat })
+                      br.createElement(Su, { chat: this.props.chat })
                   ),
                   e &&
                     br.createElement(
@@ -53002,25 +53124,25 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "ActivateActiveVoiceChat", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Su = (function(e) {
+        wu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.ToggleMicrophone = function(e) {
-              Up.VoiceStore.IsMicMuted() &&
-                Up.VoiceStore.IsOutputMuted() &&
-                Up.VoiceStore.ToggleOutputMuting(),
-                Up.VoiceStore.ToggleMicMuting(),
+              Hp.VoiceStore.IsMicMuted() &&
+                Hp.VoiceStore.IsOutputMuted() &&
+                Hp.VoiceStore.ToggleOutputMuting(),
+                Hp.VoiceStore.ToggleMicMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Up.VoiceStore.BNoMicAvailableForSession(),
-                t = Up.VoiceStore.IsMicMuted(),
+              var e = Hp.VoiceStore.BNoMicAvailableForSession(),
+                t = Hp.VoiceStore.IsMicMuted(),
                 i = "VoiceControlPanelButton ToggleMicrophoneButton",
                 n = "";
               return (
@@ -53034,29 +53156,29 @@ and limitations under the License.
                 br.createElement(
                   "button",
                   { className: i, onClick: this.ToggleMicrophone, title: n },
-                  br.createElement(Bs.t, null),
-                  br.createElement(Bs.t, { className: "SVGIcon_Shadow" })
+                  br.createElement(Is.t, null),
+                  br.createElement(Is.t, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
             it.b([Xt.a], t.prototype, "ToggleMicrophone", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Mu = (function(e) {
+        Ou = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.ToggleVoiceOutput = function(e) {
-              Up.VoiceStore.IsOutputMuted() == Up.VoiceStore.IsMicMuted() &&
-                Up.VoiceStore.ToggleMicMuting(),
-                Up.VoiceStore.ToggleOutputMuting(),
+              Hp.VoiceStore.IsOutputMuted() == Hp.VoiceStore.IsMicMuted() &&
+                Hp.VoiceStore.ToggleMicMuting(),
+                Hp.VoiceStore.ToggleOutputMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Up.VoiceStore.IsOutputMuted(),
+              var e = Hp.VoiceStore.IsOutputMuted(),
                 t = "VoiceControlPanelButton ToggleVoiceOutputButton";
               e && (t += " disabled");
               var i = "";
@@ -53067,23 +53189,23 @@ and limitations under the License.
                 br.createElement(
                   "button",
                   { className: t, onClick: this.ToggleVoiceOutput, title: i },
-                  br.createElement(Bs.o, null),
-                  br.createElement(Bs.o, { className: "SVGIcon_Shadow" })
+                  br.createElement(Is.o, null),
+                  br.createElement(Is.o, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
             it.b([Xt.a], t.prototype, "ToggleVoiceOutput", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Fu = (function(e) {
+        Bu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.EndVoiceChat = function(e) {
-              Up.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
+              Hp.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
             }),
             (t.prototype.render = function() {
               return br.createElement(
@@ -53093,14 +53215,14 @@ and limitations under the License.
                   onClick: this.EndVoiceChat,
                   title: Object(hr.b)("#VoiceChat_Leave")
                 },
-                br.createElement(Bs.L, null)
+                br.createElement(Is.L, null)
               );
             }),
             it.b([Xt.a], t.prototype, "EndVoiceChat", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        wu = (function(e) {
+        Ru = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -53158,7 +53280,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDoFriendsListUpdate = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView,
-                i = Sm.GetSecondsOutOfDate(),
+                i = Om.GetSecondsOutOfDate(),
                 n = Object(hr.e)(i, !0);
               Ie(
                 t,
@@ -53167,7 +53289,7 @@ and limitations under the License.
                 Object(hr.b)("#Friends_ConfirmUpdate_Ok")
               )
                 .then(function() {
-                  Sm.PerformFriendsUIUpdate();
+                  Om.PerformFriendsUIUpdate();
                 })
                 .catch(function() {});
             }),
@@ -53184,7 +53306,7 @@ and limitations under the License.
                 var t = 1,
                   i = this.m_tabLabelWidth;
                 this.setState({ tabLabelWidth: t }, function() {
-                  (e.m_animationTabLabelCollapse = new Ls(
+                  (e.m_animationTabLabelCollapse = new js(
                     e,
                     { tabLabelWidth: i },
                     { msDuration: 300, timing: "sine" }
@@ -53194,7 +53316,7 @@ and limitations under the License.
               } else {
                 var t = this.m_tabLabelWidth;
                 this.setState({ tabLabelWidth: t }, function() {
-                  (e.m_animationTabLabelCollapse = new Ls(
+                  (e.m_animationTabLabelCollapse = new js(
                     e,
                     { tabLabelWidth: 1 },
                     { msDuration: 300, timing: "sine" }
@@ -53225,16 +53347,16 @@ and limitations under the License.
                 },
                 function() {
                   e.state.bViewingIncomingInvites &&
-                    (Up.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                    Up.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
+                    (Hp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                    Hp.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
                 }
               );
             }),
             (t.prototype.componentWillUpdate = function() {
               var e =
-                  Up.FriendStore.FriendGroupStore.incoming_invites_group
+                  Hp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                t = Up.FriendStore.ClanStore.clan_invites.length > 0;
+                t = Hp.FriendStore.ClanStore.clan_invites.length > 0;
               e ||
                 t ||
                 !this.state.bViewingIncomingInvites ||
@@ -53244,13 +53366,13 @@ and limitations under the License.
               var e = this.props.friends.self,
                 t = this.GetNormalizedSearchString(),
                 i =
-                  Up.FriendStore.FriendGroupStore.incoming_invites_group
+                  Hp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                n = Up.FriendStore.ClanStore.clan_invites.length > 0,
+                n = Hp.FriendStore.ClanStore.clan_invites.length > 0,
                 r =
-                  Up.FriendStore.FriendGroupStore.incoming_invites_group
+                  Hp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count +
-                  Up.FriendStore.ClanStore.clan_invites.length,
+                  Hp.FriendStore.ClanStore.clan_invites.length,
                 o = "friendRequestButton";
               this.state.bViewingIncomingInvites &&
                 (o += " friendRequestViewActive");
@@ -53261,15 +53383,15 @@ and limitations under the License.
               this.state.tabLabelWidth > 0 &&
                 (c.width = this.state.tabLabelWidth + "px");
               var l = !1;
-              this.props.popup && (l = Je(this.props.popup) != xp);
+              this.props.popup && (l = Je(this.props.popup) != Wp);
               var u = !1,
                 d = 0,
                 p = !1,
                 h =
                   "friendListButton friendSettingsButton friendsListNeedsUpdate no-drag";
-              void 0 != Sm &&
-                ((u = Sm.BNeedsUpdate()),
-                (d = Sm.GetSecondsOutOfDate()),
+              void 0 != Om &&
+                ((u = Om.BNeedsUpdate()),
+                (d = Om.GetSecondsOutOfDate()),
                 d < 432e3
                   ? (u = !1)
                   : d > 604800 &&
@@ -53281,7 +53403,7 @@ and limitations under the License.
                   (f = !0),
                 br.createElement(
                   "div",
-                  { className: "friendlist" },
+                  { className: "friendlist" + (u ? " needsUpdate" : "") },
                   br.createElement(
                     "div",
                     {
@@ -53289,11 +53411,11 @@ and limitations under the License.
                     },
                     this.props.popup &&
                       tt.a.IN_CLIENT &&
-                      br.createElement(yu, {
+                      br.createElement(Cu, {
                         hideMinMax: l,
                         popup: this.props.popup
                       }),
-                    br.createElement(Ru, {
+                    br.createElement(ku, {
                       popup: this.props.popup && this.props.popup,
                       currentUser: e
                     }),
@@ -53312,7 +53434,7 @@ and limitations under the License.
                                 )
                               : Object(hr.b)("#Tooltip_FriendsListUpdate")
                           },
-                          br.createElement(Bs.A, null)
+                          br.createElement(Is.A, null)
                         ),
                       br.createElement(
                         "div",
@@ -53322,24 +53444,24 @@ and limitations under the License.
                           onClick: this.OnSettingsClick,
                           title: Object(hr.b)("#Tooltip_Settings")
                         },
-                        br.createElement(Bs.D, null)
+                        br.createElement(Is.D, null)
                       )
                     ),
                     br.createElement(
-                      As,
+                      zs,
                       null,
                       f &&
                         br.createElement(
-                          Ds,
+                          Ps,
                           {
                             key: "activeVoiceControls1",
                             classNames: "activevoice-anim",
                             timeout: 500
                           },
-                          br.createElement(bu, { chats: this.props.chats })
+                          br.createElement(Mu, { chats: this.props.chats })
                         )
                     ),
-                    br.createElement(cu, {
+                    br.createElement(du, {
                       FavoritesStore: this.props.friends.FavoritesStore
                     }),
                     br.createElement(
@@ -53370,11 +53492,11 @@ and limitations under the License.
                                 onClick: a ? null : this.OnTabSearchClick
                               },
                               br.createElement(
-                                As,
+                                zs,
                                 { className: "tabSearchTransitionGroup" },
                                 a &&
                                   br.createElement(
-                                    Ds,
+                                    Ps,
                                     {
                                       className: "tabSearchTransition",
                                       key: "tabSearch",
@@ -53419,7 +53541,7 @@ and limitations under the License.
                                               className: "friendSearchClear",
                                               onClick: this.OnClearSearch
                                             },
-                                            br.createElement(Bs.O, null)
+                                            br.createElement(Is.O, null)
                                           )
                                         )
                                       )
@@ -53433,7 +53555,7 @@ and limitations under the License.
                                   onClick: this.OnTabSearchClick,
                                   title: Object(hr.b)("#Tooltip_SearchFriends")
                                 },
-                                br.createElement(Bs.r, null)
+                                br.createElement(Is.r, null)
                               )
                             ),
                             (i || n) &&
@@ -53447,7 +53569,7 @@ and limitations under the License.
                                     r
                                   )
                                 },
-                                br.createElement(Bs.m, null),
+                                br.createElement(Is.m, null),
                                 br.createElement(
                                   "div",
                                   { className: "requestsNumber" },
@@ -53464,7 +53586,7 @@ and limitations under the License.
                                     "friendListButton addFriendButton no-drag",
                                   title: Object(hr.b)("#Tooltip_AddFriend")
                                 },
-                                br.createElement(Bs.a, null)
+                                br.createElement(Is.a, null)
                               )
                             )
                           )
@@ -53472,7 +53594,7 @@ and limitations under the License.
                       )
                     )
                   ),
-                  br.createElement(Iu, {
+                  br.createElement(Tu, {
                     friends: this.props.friends,
                     chats: this.props.chats,
                     searchString: t,
@@ -53485,7 +53607,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "friendListFooter" },
-                    br.createElement(Bu, null)
+                    br.createElement(Eu, null)
                   )
                 )
               );
@@ -53503,10 +53625,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "CollapseTabLabel", null),
             it.b([Xt.a], t.prototype, "OnTabSearchClick", null),
             it.b([Xt.a], t.prototype, "ToggleViewingIncomingInvites", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ou = (function(e) {
+        Iu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -53534,7 +53656,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Bu = (function(e) {
+        Eu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bdebugAudio: !1 }), i;
@@ -53555,7 +53677,7 @@ and limitations under the License.
                   });
             }),
             (t.prototype.CopyVoiceLogsToClipboard = function() {
-              var e = Up.ChatStore.VoiceChat.GetVoiceLogs(),
+              var e = Hp.ChatStore.VoiceChat.GetVoiceLogs(),
                 t = document.createElement("textarea");
               (t.textContent = e),
                 (t.style.position = "fixed"),
@@ -53570,13 +53692,13 @@ and limitations under the License.
               }
             }),
             (t.prototype.ToggleVoiceLogToConsole = function() {
-              Up.ChatStore.VoiceChat.SetVoiceLogDetails(
-                !Up.ChatStore.VoiceChat.GetVoiceLogDetails()
+              Hp.ChatStore.VoiceChat.SetVoiceLogDetails(
+                !Hp.ChatStore.VoiceChat.GetVoiceLogDetails()
               );
             }),
             (t.prototype.ToggleLocalMicEcho = function() {
-              Up.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
-                !Up.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
+              Hp.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
+                !Hp.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
               );
             }),
             (t.prototype.debugAudioClicked = function() {
@@ -53590,7 +53712,7 @@ and limitations under the License.
                 br.Fragment,
                 null,
                 t &&
-                  Up.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Hp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   br.createElement(
                     "button",
                     {
@@ -53600,7 +53722,7 @@ and limitations under the License.
                     Object(hr.b)("#ToggleVoiceConsoleLog")
                   ),
                 t &&
-                  Up.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Hp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   br.createElement(
                     "button",
                     {
@@ -53610,7 +53732,7 @@ and limitations under the License.
                     Object(hr.b)("#ToggleLocalMicEcho")
                   ),
                 t &&
-                  Up.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Hp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   br.createElement(
                     "button",
                     {
@@ -53624,8 +53746,8 @@ and limitations under the License.
                   { className: "flexRowCentered" },
                   !1,
                   !1,
-                  br.createElement(Ou, null),
-                  Up.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  br.createElement(Iu, null),
+                  Hp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                     br.createElement(
                       "div",
                       {
@@ -53650,30 +53772,30 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "ToggleLocalMicEcho", null),
             it.b([Xt.a], t.prototype, "debugAudioClicked", null),
             it.b([Xt.a], t.prototype, "OnSettingsZooClick", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ru = (function(e) {
+        ku = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.OnShowContextMenu = function(e) {
-              J(Ye(this, e), e);
+              return J(Ye(this, e), e);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
               var e = Je(this.props.popup);
-              Up.UIStore.BIsDockedFriendsList(e)
+              Hp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
-                    Sm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                    Om.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
                   )
                 : (this.props.popup.SteamClient.Window.ResizeTo(
                     1280,
                     this.props.popup.innerHeight
                   ),
-                  Sm.SetUIDisplayPref(
+                  Om.SetUIDisplayPref(
                     "nFriendsListSingleWindowWidthPx",
                     this.props.popup.innerWidth
                   ));
@@ -53682,11 +53804,11 @@ and limitations under the License.
               var e = this.props.currentUser,
                 t = "currentUserContainer " + pe(e.persona),
                 i = null;
-              Up.FriendStore.BIsInvisibleMode() &&
+              Hp.FriendStore.BIsInvisibleMode() &&
                 (i = Object(hr.b)("#PersonaStateInvisible"));
               var n = !1;
               return (
-                this.props.popup && (n = Je(this.props.popup) != xp),
+                this.props.popup && (n = Je(this.props.popup) != Wp),
                 br.createElement(
                   "div",
                   { className: t },
@@ -53730,20 +53852,28 @@ and limitations under the License.
                     })
                   ),
                   br.createElement(
-                    "div",
+                    ju,
                     {
-                      className: "AvatarAndUser",
+                      friend: e,
+                      context: { chatContext: "friendslist" },
                       onContextMenu: this.OnShowContextMenu
                     },
-                    br.createElement("img", {
-                      className: "currentUserAvatar",
-                      src: e.persona.avatar_url_full
-                    }),
-                    br.createElement(Uu, {
-                      friend: e,
-                      strOverrideStatus: i,
-                      onShowContextMenu: this.OnShowContextMenu
-                    })
+                    br.createElement(
+                      "div",
+                      {
+                        className: "AvatarAndUser",
+                        onContextMenu: this.OnShowContextMenu
+                      },
+                      br.createElement("img", {
+                        className: "currentUserAvatar",
+                        src: e.persona.avatar_url_full
+                      }),
+                      br.createElement(Hu, {
+                        friend: e,
+                        strOverrideStatus: i,
+                        onShowContextMenu: this.OnShowContextMenu
+                      })
+                    )
                   ),
                   this.props.popup &&
                     tt.a.IN_CLIENT &&
@@ -53758,17 +53888,17 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      br.createElement(Bs.E, null)
+                      br.createElement(Is.E, null)
                     )
                 )
               );
             }),
             it.b([Xt.a], t.prototype, "OnShowContextMenu", null),
             it.b([Xt.a], t.prototype, "ToggleSingleWindowToggle", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Iu = (function(e) {
+        Tu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bScrolledFromTop: !1 }), i;
@@ -53813,7 +53943,7 @@ and limitations under the License.
             }),
             (t.prototype.OnAcceptClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Up.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
+              Hp.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
                 e
               ) {
                 e ||
@@ -53826,7 +53956,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDeclineClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Up.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
+              Hp.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
                 e
               ) {
                 e ||
@@ -53849,12 +53979,12 @@ and limitations under the License.
                 };
               if (this.props.friends.self.is_ready)
                 if (n) {
-                  var o = Up.FriendStore.ClanStore.clan_invites.length,
-                    a = lt.a.InitFromAccountID(Up.FriendStore.self.accountid),
+                  var o = Hp.FriendStore.ClanStore.clan_invites.length,
+                    a = lt.a.InitFromAccountID(Hp.FriendStore.self.accountid),
                     s = (tt.a.COMMUNITY_BASE_URL, a.ConvertTo64BitString(), []);
                   if (o)
                     for (
-                      var c = 0, l = Up.FriendStore.ClanStore.clan_invites;
+                      var c = 0, l = Hp.FriendStore.ClanStore.clan_invites;
                       c < l.length;
                       c++
                     ) {
@@ -54002,7 +54132,7 @@ and limitations under the License.
                         )
                       ),
                     br.createElement(
-                      Nu,
+                      Pu,
                       it.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -54016,7 +54146,7 @@ and limitations under the License.
                   );
                 } else if (i)
                   e = br.createElement(
-                    Nu,
+                    Pu,
                     it.a(
                       {
                         group: this.props.friends.FriendGroupStore.all_friends,
@@ -54029,7 +54159,7 @@ and limitations under the License.
                   var d = this.props.friends.FriendGroupStore.user_groups.map(
                       function(e) {
                         return br.createElement(
-                          Nu,
+                          Pu,
                           it.a(
                             {
                               group: e,
@@ -54046,7 +54176,7 @@ and limitations under the License.
                     p = this.props.friends.FriendGroupStore.default_groups.map(
                       function(e) {
                         return br.createElement(
-                          Nu,
+                          Pu,
                           it.a(
                             {
                               group: e,
@@ -54072,13 +54202,13 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "recentChatsGroup unreadChatsGroup" },
-                          br.createElement(Vu, {
+                          br.createElement(Ku, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext
                           }),
                           !1
                         ),
-                      br.createElement(Gu, null),
+                      br.createElement(Au, null),
                       d,
                       p
                     ));
@@ -54097,7 +54227,7 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                br.createElement(Wu, {
+                br.createElement(qu, {
                   browserContext: this.props.browserContext,
                   bScrolledFromTop: this.state.bScrolledFromTop && !i,
                   onClick: this.ScrollToTop
@@ -54121,7 +54251,7 @@ and limitations under the License.
                     className: "friendListInsetShadowBottom"
                   })
                 ),
-                br.createElement(Eu, {
+                br.createElement(Gu, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   parent: this
@@ -54134,19 +54264,19 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnFriendsListScrollRef", null),
             it.b([Xt.a], t.prototype, "ScrollToTop", null),
             it.b([Xt.a], t.prototype, "OnScrollFriendsList", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Eu = (function(e) {
+        Gu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
               (i.m_bMouseOver = !1),
               (i.state = {
                 nChatRoomListContainerHeight:
-                  Sm.UIDisplayPrefs.nChatRoomListHeightPx,
+                  Om.UIDisplayPrefs.nChatRoomListHeightPx,
                 nChatRoomListContainerMaxHeight:
-                  Sm.UIDisplayPrefs.nChatRoomListHeightPx
+                  Om.UIDisplayPrefs.nChatRoomListHeightPx
               }),
               i
             );
@@ -54186,7 +54316,7 @@ and limitations under the License.
                 this.setState(
                   { nChatRoomListContainerMaxHeight: n },
                   function() {
-                    (e.m_animationChatSectionShrink = new Ls(
+                    (e.m_animationChatSectionShrink = new js(
                       e,
                       {
                         nChatRoomListContainerHeight: le(
@@ -54239,7 +54369,10 @@ and limitations under the License.
             }),
             (t.prototype.OnGrabberMouseDown = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
-              t.addEventListener("mousemove", this.HandleMouseMove),
+              (this.m_iGrabberBarInitialGrabOffset =
+                e.clientY -
+                this.m_elChatRoomTitleContainer.getBoundingClientRect().top),
+                t.addEventListener("mousemove", this.HandleMouseMove),
                 t.addEventListener(
                   "mouseup",
                   this.UnregisterChatRoomListDragEvents
@@ -54247,7 +54380,10 @@ and limitations under the License.
             }),
             (t.prototype.OnGrabberTouchStart = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
-              t.addEventListener("touchmove", this.HandleTouchMove),
+              (this.m_iGrabberBarInitialGrabOffset =
+                e.touches[0].clientY -
+                this.m_elChatRoomTitleContainer.getBoundingClientRect().top),
+                t.addEventListener("touchmove", this.HandleTouchMove),
                 t.addEventListener(
                   "touchend",
                   this.UnregisterChatRoomListDragEvents
@@ -54274,20 +54410,22 @@ and limitations under the License.
               if (this.props.parent && this.props.parent.frame) {
                 var t = this.props.parent.frame.getBoundingClientRect(),
                   i = t.top,
-                  n =
+                  n = this.m_iGrabberBarInitialGrabOffset,
+                  r =
                     t.height -
-                    this.m_elChatRoomTitleContainer.getBoundingClientRect()
-                      .height,
-                  r = e - i;
-                r < 0 && (r = 0), r > n && (r = n);
-                var o = n - r;
-                (o = le(
-                  o,
+                    (this.m_elChatRoomTitleContainer.getBoundingClientRect()
+                      .height -
+                      n),
+                  o = e - i;
+                o < 0 && (o = 0), o > r && (o = r);
+                var a = r - o;
+                (a = le(
+                  a,
                   this.m_elChatSection.minimumHeight,
                   this.m_elChatSection.maximumHeight
                 )),
-                  this.setState({ nChatRoomListContainerHeight: o }),
-                  Sm.SetUIDisplayPref("nChatRoomListHeightPx", o);
+                  this.setState({ nChatRoomListContainerHeight: a }),
+                  Om.SetUIDisplayPref("nChatRoomListHeightPx", a);
               }
             }),
             (t.prototype.UnregisterChatRoomListDragEvents = function(e) {
@@ -54300,7 +54438,8 @@ and limitations under the License.
                 e.view.removeEventListener(
                   "touchend",
                   this.UnregisterChatRoomListDragEvents
-                );
+                ),
+                (this.m_iGrabberBarInitialGrabOffset = null);
             }),
             (t.prototype.OnCreateChatRoom = function(e) {
               ue(Ye(this, e), e.currentTarget.ownerDocument.defaultView);
@@ -54320,30 +54459,23 @@ and limitations under the License.
                 },
                 br.createElement(
                   "div",
-                  { className: "voiceRoomDragBar" },
+                  {
+                    className: "friendsListSectionTitle chatSectionTitle",
+                    ref: this.BindChatRoomTitleContainer
+                  },
                   br.createElement(
                     "div",
                     {
-                      className: "grabberHitbox",
+                      className: "voiceRoomDragBar",
                       onMouseDown: this.OnGrabberMouseDown,
                       onTouchStart: this.OnGrabberTouchStart
                     },
                     br.createElement(
                       "div",
-                      { className: "grabberBar" },
-                      br.createElement("div", { className: "Grip" }),
-                      br.createElement("div", { className: "Grip" }),
-                      br.createElement("div", { className: "Grip" })
+                      { className: "groupChatSectionTitle" },
+                      Object(hr.b)("#tab_chats")
                     )
-                  )
-                ),
-                br.createElement(
-                  "div",
-                  {
-                    className: "friendsListSectionTitle chatSectionTitle",
-                    ref: this.BindChatRoomTitleContainer
-                  },
-                  Object(hr.b)("#tab_chats"),
+                  ),
                   br.createElement(
                     "button",
                     {
@@ -54351,7 +54483,7 @@ and limitations under the License.
                       onClick: this.OnCreateChatRoom,
                       title: Object(hr.b)("#Tooltip_CreateGroupChat")
                     },
-                    br.createElement(Bs.v, null)
+                    br.createElement(Is.v, null)
                   )
                 ),
                 br.createElement(
@@ -54368,7 +54500,7 @@ and limitations under the License.
                     style: e,
                     ref: this.BindChatRoomListContainer
                   },
-                  br.createElement(Sl, {
+                  br.createElement(Fl, {
                     friends: this.props.friends,
                     chats: this.props.chats,
                     ref: this.BindChatSection
@@ -54396,10 +54528,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnMouseLeave", null),
             it.b([Xt.a], t.prototype, "UnregisterChatRoomListDragEvents", null),
             it.b([Xt.a], t.prototype, "OnCreateChatRoom", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        ku = (function(e) {
+        Du = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -54420,7 +54552,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t;
                 (i.group = this.GetGroup()),
@@ -54487,7 +54619,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Tu = (function(e) {
+        Nu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -54518,35 +54650,35 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Gu = Object(Os.observer)(function(e) {
-          var t = Up.FriendStore.FriendGroupStore.game_groups,
+        Au = Object(Rs.observer)(function(e) {
+          var t = Hp.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
-              return br.createElement(Au, {
+              return br.createElement(xu, {
                 key: e.id,
                 group: e,
                 bSingletonGroup: !1,
                 bOtherGroups: !0,
                 groupDisplayPrefs:
-                  Up.FriendStore.FriendGroupStore.groupDisplayPrefs
+                  Hp.FriendStore.FriendGroupStore.groupDisplayPrefs
               });
             }),
-            n = Up.FriendStore.FriendGroupStore.singleton_game_group;
+            n = Hp.FriendStore.FriendGroupStore.singleton_game_group;
           return (
             n &&
               i.push(
-                br.createElement(Au, {
+                br.createElement(xu, {
                   key: "singleton",
                   group: n,
                   bSingletonGroup: !0,
                   bOtherGroups: t.length > 0,
                   groupDisplayPrefs:
-                    Up.FriendStore.FriendGroupStore.groupDisplayPrefs
+                    Hp.FriendStore.FriendGroupStore.groupDisplayPrefs
                 })
               ),
             br.createElement(br.Fragment, null, i)
           );
         }),
-        Nu = (function(e) {
+        Pu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -54568,8 +54700,8 @@ and limitations under the License.
                 i = e.group,
                 n = this.props.group;
               return (
-                e.is_favorite || Sm.DragDropManager.SetDropConsumed(),
-                Up.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                e.is_favorite || Om.DragDropManager.SetDropConsumed(),
+                Hp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                   t,
                   i,
                   n
@@ -54593,7 +54725,7 @@ and limitations under the License.
                 : this.state.bLocalCollapsed;
             }),
             (t.prototype.IsInviteGroup = function() {
-              return this.props.group.m_eDisplayType == qa.eIncomingInvites;
+              return this.props.group.m_eDisplayType == Ya.eIncomingInvites;
             }),
             (t.prototype.OnContextMenu = function(e) {
               (this.props.group.modifiable ||
@@ -54649,7 +54781,7 @@ and limitations under the License.
                     });
             }),
             (t.prototype.AcceptInvite = function(e, t) {
-              Up.FriendStore.SendFriendInvite(t).then(function(i) {
+              Hp.FriendStore.SendFriendInvite(t).then(function(i) {
                 3 != i &&
                   Ee(
                     e,
@@ -54659,7 +54791,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.DeclineInvite = function(e, t) {
-              Up.FriendStore.RemoveFriend(t).then(function(i) {
+              Hp.FriendStore.RemoveFriend(t).then(function(i) {
                 1 != i &&
                   Ee(
                     e,
@@ -54672,7 +54804,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.BlockInvite = function(e, t) {
-              Up.FriendStore.BlockPlayer(t).then(function(i) {
+              Hp.FriendStore.BlockPlayer(t).then(function(i) {
                 5 != i &&
                   Ee(
                     e,
@@ -54757,13 +54889,14 @@ and limitations under the License.
                 n = this.IsCollapsed() && !t && !this.state.friendDrag,
                 r = [],
                 o = this.IsInviteGroup(),
-                a = this.props.group.m_eDisplayType == qa.eOfflineOnly,
-                s = !1;
+                a = this.props.group.m_eDisplayType == Ya.eOfflineOnly,
+                s = !1,
+                c = this.props.group.modifiable;
               if (!n) {
-                var c = !1,
-                  l = void 0;
+                var l = !1,
+                  u = void 0;
                 if (
-                  ((l =
+                  ((u =
                     this.props.searchString && this.props.searchString.length
                       ? this.props.group.GetMembersMatchingSearch(
                           this.props.searchString
@@ -54771,21 +54904,21 @@ and limitations under the License.
                       : this.props.group.member_list),
                   this.state.friendDrag &&
                     (this.props.group.HasMember(this.state.friendDrag.accountid)
-                      ? (c = !0)
-                      : ((l = l.concat(this.state.friendDrag)),
-                        l.sort(Ka.DefaultFriendSortComparator))),
+                      ? (l = !0)
+                      : ((u = u.concat(this.state.friendDrag)),
+                        u.sort(Ja.DefaultFriendSortComparator))),
                   a && this.state.bSortOfflineByRecent
-                    ? (l.sort(Ka.FriendSortByLastSeenComparator), (s = !0))
+                    ? (u.sort(Ja.FriendSortByLastSeenComparator), (s = !0))
                     : a &&
                       !this.state.bSortOfflineByRecent &&
-                      l.sort(Ka.DefaultFriendSortComparator),
+                      u.sort(Ja.DefaultFriendSortComparator),
                   o)
                 ) {
-                  var u =
-                    Up.FriendStore.FriendGroupStore.incoming_invites_group;
-                  l.sort(function(e, t) {
-                    var i = u.map_steamid_to_mutual_friends.get(e.steamid64),
-                      n = u.map_steamid_to_mutual_friends.get(t.steamid64),
+                  var d =
+                    Hp.FriendStore.FriendGroupStore.incoming_invites_group;
+                  u.sort(function(e, t) {
+                    var i = d.map_steamid_to_mutual_friends.get(e.steamid64),
+                      n = d.map_steamid_to_mutual_friends.get(t.steamid64),
                       r = i ? i.size : 0,
                       o = n ? n.size : 0,
                       a = r - o;
@@ -54794,42 +54927,54 @@ and limitations under the License.
                       : 1;
                   });
                 }
-                for (
-                  var d,
-                    p,
-                    h,
-                    m =
-                      this.props.group.modifiable &&
-                      Up.SettingsStore.FriendsSettings
-                        .bHideOfflineFriendsInTagGroups,
-                    g = this,
-                    f = 0,
-                    _ = l;
-                  f < _.length;
-                  f++
+                var p = !1;
+                c &&
+                  (p =
+                    Hp.SettingsStore.FriendsSettings
+                      .bHideOfflineFriendsInTagGroups);
+                var h = new Set();
+                if (
+                  this.props.group.m_eDisplayType == Ya.eOnlineOnlyNotInGame ||
+                  this.props.group.m_eDisplayType == Ya.eOfflineOnly
                 ) {
-                  var y = _[f];
+                  var m =
+                      Hp.SettingsStore.FriendsSettings.bHideCategorizedFriends,
+                    g =
+                      Hp.SettingsStore.FriendsSettings
+                        .bHideOfflineFriendsInTagGroups;
+                  m &&
+                    Hp.FriendStore.FriendGroupStore.user_groups.forEach(
+                      function(e) {
+                        e.member_list_unsorted.forEach(function(e) {
+                          (!e.persona.is_online && g) || h.add(e.accountid);
+                        });
+                      }
+                    );
+                }
+                for (var f, _, y, v = this, b = 0, C = u; b < C.length; b++) {
+                  var S = C[b];
                   !(function(t) {
                     if (
-                      g.props.setExcludedFriends &&
-                      g.props.setExcludedFriends.has(t.accountid)
+                      v.props.setExcludedFriends &&
+                      v.props.setExcludedFriends.has(t.accountid)
                     )
                       return "continue";
-                    if (m && t.persona.is_offline) return "continue";
-                    var i = g.state.friendDrag != t || c ? "" : "dropGhost";
+                    if (h.has(t.accountid)) return "continue";
+                    if (p && t.persona.is_offline) return "continue";
+                    var i = v.state.friendDrag != t || l ? "" : "dropGhost";
                     if (
-                      (g.state.friendDraggedOut == t &&
-                        g.state.friendDrag != t &&
+                      (v.state.friendDraggedOut == t &&
+                        v.state.friendDrag != t &&
                         (i += " dragOriginGhost"),
                       o)
                     ) {
-                      var n = g.m_actions.get(t.accountid);
-                      (d = n && "accept" == n.action ? "bright" : "dim"),
-                        (p =
+                      var n = v.m_actions.get(t.accountid);
+                      (f = n && "accept" == n.action ? "bright" : "dim"),
+                        (_ =
                           !n || ("decline" != n.action && "block" != n.action)
                             ? "dim"
                             : "bright"),
-                        (h =
+                        (y =
                           !n || ("decline" != n.action && "block" != n.action)
                             ? ""
                             : " declined"),
@@ -54841,10 +54986,10 @@ and limitations under the License.
                     }
                     r.push(
                       br.createElement(
-                        Ds,
+                        Ps,
                         {
                           className: o
-                            ? "friendInviteContainer" + h
+                            ? "friendInviteContainer" + y
                             : "friendCategoryContainer",
                           key: t.accountid,
                           classNames: "friend-anim",
@@ -54854,16 +54999,16 @@ and limitations under the License.
                           "div",
                           null,
                           br.createElement(
-                            Lu,
+                            Uu,
                             it.a(
                               {
                                 friend: t,
                                 key: t.accountid,
                                 className: i,
-                                context: g.GetFriendRenderContext(),
-                                action: g.OnFriendSelected
+                                context: v.GetFriendRenderContext(),
+                                action: v.OnFriendSelected
                               },
-                              g.props.friendProps,
+                              v.props.friendProps,
                               { bFriendsListEntry: !0 }
                             )
                           ),
@@ -54876,20 +55021,20 @@ and limitations under the License.
                                 {
                                   className:
                                     "friendInviteButton acceptFriendInvite " +
-                                    d,
+                                    f,
                                   onClick: function(i) {
                                     return e.OnAcceptInvite(i, t);
                                   },
                                   title: Object(hr.b)("#FriendGroup_Tip_Accept")
                                 },
-                                br.createElement(Bs.f, null)
+                                br.createElement(Is.f, null)
                               ),
                               br.createElement(
                                 "div",
                                 {
                                   className:
                                     "friendInviteButton declineFriendInvite " +
-                                    p,
+                                    _,
                                   onClick: function(i) {
                                     return e.OnDeclineInvite(i, t);
                                   },
@@ -54897,14 +55042,14 @@ and limitations under the License.
                                     "#FriendGroup_Tip_Decline"
                                   )
                                 },
-                                br.createElement(Bs.O, null)
+                                br.createElement(Is.O, null)
                               )
                             ),
                           o &&
                             br.createElement(
                               "div",
                               { className: "friendInviteBlockContainer" },
-                              br.createElement(ec, {
+                              br.createElement(ic, {
                                 onChange: function(i) {
                                   return e.OnBlockInvite(i, t);
                                 }
@@ -54934,34 +55079,34 @@ and limitations under the License.
                         )
                       )
                     );
-                  })(y);
+                  })(S);
                 }
               }
-              var v = "friendGroup",
-                b = !1,
-                C = !1;
+              var M = "friendGroup",
+                F = !1,
+                w = !1;
               if (
-                (i && (v += " noTransitions"),
+                (i && (M += " noTransitions"),
                 this.props.group.modifiable
-                  ? ((v += " taggedGroup "), (b = !0))
-                  : this.props.group.m_eDisplayType == qa.eOnlineOnlyNotInGame
-                    ? (v += " onlineFriends ")
-                    : this.props.group.m_eDisplayType == qa.eOfflineOnly
-                      ? ((v += " offlineFriends "), (C = !0))
-                      : this.IsInviteGroup() && (v += " friendRequests "),
+                  ? ((M += " taggedGroup "), (F = !0))
+                  : this.props.group.m_eDisplayType == Ya.eOnlineOnlyNotInGame
+                    ? (M += " onlineFriends ")
+                    : this.props.group.m_eDisplayType == Ya.eOfflineOnly
+                      ? ((M += " offlineFriends "), (w = !0))
+                      : this.IsInviteGroup() && (M += " friendRequests "),
                 t && (!r || !r.length))
               )
                 return null;
               if (0 == r.length && !this.IsCollapsed()) return null;
-              var S = 0 != this.m_actions.size,
-                M = "SortByRecent";
+              var O = 0 != this.m_actions.size,
+                B = "SortByRecent";
               return (
-                s && (M += " Recent"),
-                n && (M += " Collapsed"),
+                s && (B += " Recent"),
+                n && (B += " Collapsed"),
                 br.createElement(
-                  ws,
+                  Bs,
                   it.a(
-                    { className: v },
+                    { className: M },
                     this.GetDragDropProps(
                       this.props.group.modifiable ||
                         this.props.group.accepts_group_removals
@@ -54981,7 +55126,7 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "ExpandPlusMinus" },
-                          br.createElement(Bs.y, null)
+                          br.createElement(Is.y, null)
                         ),
                         this.props.group.icon_url &&
                           br.createElement("img", {
@@ -55001,28 +55146,28 @@ and limitations under the License.
                             this.props.group.member_count,
                             ")"
                           ),
-                        b && br.createElement("hr", null)
+                        F && br.createElement("hr", null)
                       ),
-                    C &&
+                    w &&
                       br.createElement(
                         "div",
                         {
-                          className: M,
+                          className: B,
                           onClick: this.ToggleOfflineSortMethod,
                           title: s
                             ? Object(hr.b)("#FriendGroup_Tip_SortByRecent")
                             : Object(hr.b)("#FriendGroup_Tip_SortByAlphabet")
                         },
-                        br.createElement(Bs.F, null)
+                        br.createElement(Is.F, null)
                       )
                   ),
                   br.createElement(
-                    As,
+                    zs,
                     { className: "groupList", enter: !i, exit: !i },
                     r,
                     o &&
                       br.createElement(
-                        Ds,
+                        Ps,
                         {
                           key: "inviteButtons",
                           classNames: "opacityfade-anim",
@@ -55034,7 +55179,7 @@ and limitations under the License.
                           br.createElement(
                             "div",
                             { className: "confirmInviteRequestActions" },
-                            S
+                            O
                               ? br.createElement(
                                   "div",
                                   {
@@ -55069,12 +55214,12 @@ and limitations under the License.
                               onClick: this.OnCloseInvites,
                               title: Object(hr.b)("#FriendGroup_Close")
                             },
-                            br.createElement(Bs.b, { angle: -90 })
+                            br.createElement(Is.b, { angle: -90 })
                           )
                         )
                       )
                   ),
-                  b && br.createElement("div", { className: "dropTargetBox" })
+                  F && br.createElement("div", { className: "dropTargetBox" })
                 )
               );
             }),
@@ -55088,10 +55233,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnIgnoreAllInvites", null),
             it.b([Xt.a], t.prototype, "OnCloseInvites", null),
             it.b([Xt.a], t.prototype, "ToggleOfflineSortMethod", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ku),
-        Du = (function(e) {
+        })(Du),
+        zu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55101,7 +55246,7 @@ and limitations under the License.
               return br.createElement(
                 Cr.c,
                 null,
-                br.createElement(ml, {
+                br.createElement(fl, {
                   unAppID: this.props.appid,
                   bShowLargeHeader: !0
                 })
@@ -55110,7 +55255,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Au = (function(e) {
+        xu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bLocalCollapsed: i.props.collapsed }), i;
@@ -55153,7 +55298,7 @@ and limitations under the License.
             (t.prototype.OnShowHeaderContextMenu = function(e) {
               var t = this.props.group.id;
               t &&
-                Up.AppInfoStore.GetAppInfo(t).is_valid &&
+                Hp.AppInfoStore.GetAppInfo(t).is_valid &&
                 he(Ye(this, e), t, e);
             }),
             (t.prototype.render = function() {
@@ -55197,7 +55342,7 @@ and limitations under the License.
                   var u =
                       !this.props.bSingletonGroup &&
                       this.props.group.id !=
-                        Up.FriendStore.FriendGroupStore.non_steam_game_id,
+                        Hp.FriendStore.FriendGroupStore.non_steam_game_id,
                     d = null,
                     p = 0,
                     h = t;
@@ -55229,7 +55374,7 @@ and limitations under the License.
                             : "#FriendGroup_PlayerGroupFooter_Label";
                         (f = 1 == _ ? "firstInGroup" : "inGroup"),
                           (d = br.createElement(
-                            Ds,
+                            Ps,
                             {
                               key: l.persona.player_group + "_footer",
                               classNames: "friend-anim",
@@ -55269,18 +55414,18 @@ and limitations under the License.
                   }
                   var S = void 0;
                   this.props.bSingletonGroup &&
-                    (S = br.createElement(Pu, {
+                    (S = br.createElement(Lu, {
                       appid: l.persona.m_unGamePlayedAppID
                     })),
                     e.push(
                       br.createElement(
-                        Ds,
+                        Ps,
                         {
                           key: l.accountid,
                           classNames: "friend-anim",
                           timeout: 320
                         },
-                        br.createElement(Lu, {
+                        br.createElement(Uu, {
                           friend: l,
                           key: l.accountid,
                           bHideGameName: u,
@@ -55305,7 +55450,7 @@ and limitations under the License.
                     ? Object(hr.b)("#FriendGroup_InGame_Others")
                     : Object(hr.b)("#FriendGroup_InGame"))),
                 br.createElement(
-                  ws,
+                  Bs,
                   it.a(
                     { className: M },
                     this.GetDragDropProps(
@@ -55327,7 +55472,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        br.createElement(Bs.y, null)
+                        br.createElement(Is.y, null)
                       ),
                       w,
                       this.props.group.icon_url &&
@@ -55350,16 +55495,16 @@ and limitations under the License.
                     ),
                     br.createElement("hr", null)
                   ),
-                  br.createElement(As, null, e)
+                  br.createElement(zs, null, e)
                 )
               );
             }),
             it.b([Xt.a], t.prototype, "ToggleCollapsed", null),
             it.b([Xt.a], t.prototype, "OnShowHeaderContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(ku),
-        Pu = (function(e) {
+        })(Du),
+        Lu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55369,7 +55514,7 @@ and limitations under the License.
               he(Ye(this, e), this.props.appid, e);
             }),
             (t.prototype.render = function() {
-              var e = Up.AppInfoStore.GetAppInfo(this.props.appid);
+              var e = Hp.AppInfoStore.GetAppInfo(this.props.appid);
               return e.is_valid
                 ? br.createElement(
                     "div",
@@ -55394,10 +55539,10 @@ and limitations under the License.
                   );
             }),
             it.b([Xt.a], t.prototype, "OnShowGameIconContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        zu = (function(e) {
+        ju = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55405,23 +55550,27 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.OnContextMenu = function(e) {
               if (!this.props.disableContextMenu) {
-                var t = Sm.FriendHoverStore.GetHover(this.props.friend),
-                  i = t.OnContextMenu(this.props.context, e);
-                i &&
-                  this.props.onContextMenuShown &&
-                  this.props.onContextMenuShown(i);
+                var t = void 0;
+                (t = this.props.onContextMenu
+                  ? this.props.onContextMenu(e)
+                  : Om.FriendHoverStore.GetHover(
+                      this.props.friend
+                    ).OnContextMenu(this.props.context, e)),
+                  t &&
+                    this.props.onContextMenuShown &&
+                    this.props.onContextMenuShown(t);
               }
             }),
             (t.prototype.componentWillUnmount = function() {
-              Sm.FriendHoverStore.GetHover(this.props.friend).HideByElement(
-                Fs.findDOMNode(this)
+              Om.FriendHoverStore.GetHover(this.props.friend).HideByElement(
+                Os.findDOMNode(this)
               );
             }),
             (t.prototype.render = function() {
               var e = br.Children.only(this.props.children);
               if (e) {
                 var t = this.props,
-                  i = Sm.FriendHoverStore.GetHover(t.friend);
+                  i = Om.FriendHoverStore.GetHover(t.friend);
                 return br.cloneElement(e, {
                   onMouseEnter: function(e) {
                     return i.Show(e, t.context);
@@ -55436,7 +55585,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Lu = (function(e) {
+        Uu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActive: !1 }), i;
@@ -55466,24 +55615,24 @@ and limitations under the License.
                   this.props.friend.persona.m_steamid.ConvertTo64BitString()
                 ),
                 this.props.friend.is_friend
-                  ? Sm.DragDropManager.StartDrag({
+                  ? Om.DragDropManager.StartDrag({
                       type: "friend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     })
-                  : Sm.DragDropManager.StartDrag({
+                  : Om.DragDropManager.StartDrag({
                       type: "nonfriend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     }),
-                Sm.FriendHoverStore.GetHover(
+                Om.FriendHoverStore.GetHover(
                   this.props.friend
                 ).HideAllInstances();
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Sm.DragDropManager.EndDrag();
+              Om.DragDropManager.EndDrag();
             }),
             (t.prototype.OnShowContextMenu = function(e) {
               var t = W(Ye(this, e), this.props.context, this.props.friend, e);
@@ -55500,11 +55649,11 @@ and limitations under the License.
               var e = this.props.friend;
               if ((e.LoadIfNecessary(), !e.is_ready))
                 return br.createElement("div", null);
-              var t = Up.CMInterface.steamid.GetAccountID() == e.accountid,
+              var t = Hp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "",
                 n = (this.props.avatarQualityFull, 0);
               this.props.showVoiceLevel &&
-                (n = Up.VoiceStore.get_volume(e.accountid));
+                (n = Hp.VoiceStore.get_volume(e.accountid));
               var r = { className: "friend " + pe(e.persona) };
               if (
                 (this.props.className &&
@@ -55513,9 +55662,9 @@ and limitations under the License.
                   (r.className += " friendStatusHover"),
                 t)
               ) {
-                var o = Up.VoiceStore.IsAttemptingInitialConnection(),
-                  a = Up.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
-                  s = Up.VoiceStore.IsAttemptingReconnect();
+                var o = Hp.VoiceStore.IsAttemptingInitialConnection(),
+                  a = Hp.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
+                  s = Hp.VoiceStore.IsAttemptingReconnect();
                 a
                   ? (i = Object(hr.b)("#VoiceChatConnecting"))
                   : s && (i = Object(hr.b)("#VoiceChatReconnecting"));
@@ -55548,7 +55697,7 @@ and limitations under the License.
                 }
                 this.state.bActive &&
                   (r.className += " Friend_ContextMenuActive");
-                var h = Up.VoiceStore.GetPerUserMuting(e.accountid);
+                var h = Hp.VoiceStore.GetPerUserMuting(e.accountid);
                 l = br.createElement(
                   "div",
                   it.a({}, r),
@@ -55557,7 +55706,7 @@ and limitations under the License.
                       className: "SteamPlayerGroupLines"
                     }),
                   this.props.bInVoiceList &&
-                    br.createElement(xu, { friend: e }),
+                    br.createElement(Wu, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   br.createElement(
                     "div",
@@ -55573,9 +55722,9 @@ and limitations under the License.
                         : e.persona.avatar_url_medium,
                       draggable: !1
                     }),
-                    this.props.bInVoiceList && h && br.createElement(Bs.M, null)
+                    this.props.bInVoiceList && h && br.createElement(Is.M, null)
                   ),
-                  br.createElement(Uu, {
+                  br.createElement(Hu, {
                     friend: e,
                     strOverrideStatus: i,
                     bHideGameName: this.props.bHideGameName,
@@ -55594,7 +55743,7 @@ and limitations under the License.
               return this.props.noActions
                 ? l
                 : br.createElement(
-                    zu,
+                    ju,
                     {
                       friend: e,
                       context: this.props.context,
@@ -55610,10 +55759,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragEnd", null),
             it.b([Xt.a], t.prototype, "OnShowContextMenu", null),
             it.b([Xt.a], t.prototype, "OnContextMenuShown", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        xu = (function(e) {
+        Wu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55621,24 +55770,24 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.friend,
-                t = Up.CMInterface.steamid.GetAccountID() == e.accountid,
+                t = Hp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "voiceStatusIconsContainer",
                 n = "",
                 r = "",
                 o = !1,
                 a = !1,
                 s = !1,
-                c = Up.VoiceStore.GetPerUserMuting(e.accountid),
-                l = Up.VoiceStore.GetUserMutedRemotely(e.accountid),
-                u = Up.VoiceStore.GetOutputMutedRemotely(e.accountid);
+                c = Hp.VoiceStore.GetPerUserMuting(e.accountid),
+                l = Hp.VoiceStore.GetUserMutedRemotely(e.accountid),
+                u = Hp.VoiceStore.GetOutputMutedRemotely(e.accountid);
               return (
                 t
-                  ? ((o = Up.VoiceStore.IsMicMuted()),
-                    (a = Up.VoiceStore.IsOutputMuted()),
-                    (s = Up.VoiceStore.BNoMicAvailableForSession()),
+                  ? ((o = Hp.VoiceStore.IsMicMuted()),
+                    (a = Hp.VoiceStore.IsOutputMuted()),
+                    (s = Hp.VoiceStore.BNoMicAvailableForSession()),
                     o && (i += " mic_muted_self"),
                     a && (i += " output_muted_self"))
-                  : (s = Up.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
+                  : (s = Hp.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
                 c && (i += " muted_locally"),
                 l && (i += " mic_muted_remotely"),
                 u && (i += " output_muted_remotely"),
@@ -55660,7 +55809,7 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusMic disabled",
                       title: n
                     },
-                    br.createElement(Bs.t, null)
+                    br.createElement(Is.t, null)
                   ),
                   br.createElement(
                     "div",
@@ -55668,15 +55817,15 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusOutput disabled",
                       title: r
                     },
-                    br.createElement(Bs.o, null)
+                    br.createElement(Is.o, null)
                   )
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        ju = (function(e) {
+        Vu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55708,15 +55857,15 @@ and limitations under the License.
                 )
               );
               return br.createElement(
-                zu,
+                ju,
                 { friend: e, context: this.props.context },
                 i
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Uu = (function(e) {
+        Hu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55736,10 +55885,10 @@ and limitations under the License.
                 ? (n = this.props.strOverrideStatus)
                 : r
                   ? ((o =
-                      Up.FriendStore.FriendGroupStore.incoming_invites_group),
+                      Hp.FriendStore.FriendGroupStore.incoming_invites_group),
                     (a = o.map_steamid_to_mutual_friends.get(e.steamid64)),
                     void 0 === a
-                      ? (Up.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                      ? (Hp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
                         (n = Object(hr.b)("#FriendGroup_NoMutualFriends")),
                         (c += " noMutualFriends"))
                       : ((n = Object(hr.c)(
@@ -55759,7 +55908,7 @@ and limitations under the License.
                       : (n = e.localized_online_status),
                 e.persona.is_awayOrSnooze &&
                   !this.props.bHidePersona &&
-                  (t = br.createElement(Tu, null)),
+                  (t = br.createElement(Nu, null)),
                 (!this.props.bHideGameName && i) || (c += " twoLine");
               var l = null;
               this.props.onShowContextMenu
@@ -55769,7 +55918,7 @@ and limitations under the License.
                       className: "ContextMenuButton",
                       onClick: this.props.onShowContextMenu
                     },
-                    br.createElement(Bs.k, null)
+                    br.createElement(Is.k, null)
                   ))
                 : (c += " NoContextMenu"),
                 this.props.bHidePersona && (c += " HidePersona");
@@ -55835,10 +55984,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Wu = (function(e) {
+        qu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55846,14 +55995,14 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e,
-                t = Up.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
+                t = Hp.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
                   this.props.browserContext
                 );
               return (
                 this.props.bScrolledFromTop &&
                   t > 0 &&
                   (e = br.createElement(
-                    Ds,
+                    Ps,
                     { classNames: "unread-messages-anim", timeout: 320 },
                     br.createElement(
                       "div",
@@ -55870,13 +56019,13 @@ and limitations under the License.
                         )
                     )
                   )),
-                br.createElement(As, null, e)
+                br.createElement(zs, null, e)
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Vu = (function(e) {
+        Ku = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -55903,7 +56052,7 @@ and limitations under the License.
                           t
                         );
                       return br.createElement(
-                        Ds,
+                        Ps,
                         {
                           key: i.accountid,
                           classNames: "friend-anim",
@@ -55912,7 +56061,7 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "unreadFriend" },
-                          br.createElement(Lu, {
+                          br.createElement(Uu, {
                             friend: i,
                             key: i.accountid,
                             context: { chat: e },
@@ -55934,7 +56083,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "ExpandPlusMinus" },
-                    br.createElement(Bs.y, null)
+                    br.createElement(Is.y, null)
                   ),
                   Object(hr.b)("#FriendGroup_UnreadMessages"),
                   br.createElement(
@@ -55946,14 +56095,14 @@ and limitations under the License.
                   ),
                   br.createElement("hr", null)
                 ),
-                br.createElement(As, null, i)
+                br.createElement(zs, null, i)
               );
             }),
             it.b([Xt.a], t.prototype, "OnHeaderClick", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Hu = (br.Component,
+        Yu = (br.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -56055,10 +56204,10 @@ and limitations under the License.
               }
             }),
             it.b([Xt.a], t.prototype, "bindHover", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component)),
-        qu = (function(e) {
+        Ju = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -56125,7 +56274,7 @@ and limitations under the License.
               if (t.is_ingame) {
                 var s = "";
                 if (t.m_unGamePlayedAppID) {
-                  var c = Up.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
+                  var c = Hp.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
                   c && (s = c.logo_url);
                 }
                 o = br.createElement(
@@ -56158,7 +56307,7 @@ and limitations under the License.
               var l = !0,
                 u = !1;
               e.friend.is_friend ||
-                e.friend == Up.FriendStore.self ||
+                e.friend == Hp.FriendStore.self ||
                 ((a += " notFriends"), (l = !1)),
                 e.friend.is_blocked &&
                   ((a += " communicationBlocked"), (u = !0));
@@ -56166,15 +56315,15 @@ and limitations under the License.
                 p = void 0,
                 h = null,
                 m = !1;
-              t.is_awayOrSnooze && ((h = br.createElement(Tu, null)), (m = !0));
+              t.is_awayOrSnooze && ((h = br.createElement(Nu, null)), (m = !0));
               var g = br.createElement("div", null),
                 f = this.props.hoverInstance.context;
               if (
                 f &&
                 f.friendGroup &&
-                f.friendGroup.m_eDisplayType == qa.eIncomingInvites
+                f.friendGroup.m_eDisplayType == Ya.eIncomingInvites
               ) {
-                var _ = Up.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
+                var _ = Hp.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                   e.friend.steamid64
                 );
                 if (void 0 != _) {
@@ -56190,7 +56339,7 @@ and limitations under the License.
                     b < v.length && b < 10;
                     b++
                   ) {
-                    var C = Up.FriendStore.GetFriend(v[b]);
+                    var C = Hp.FriendStore.GetFriend(v[b]);
                     y.push(
                       br.createElement(
                         "div",
@@ -56369,10 +56518,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ku = (function(e) {
+        Xu = (function(e) {
           function t(t, i) {
             var n =
               e.call(this, "hoverpopup", {
@@ -56381,7 +56530,7 @@ and limitations under the License.
                 body_class: "HoverPopupBody Hover" + t.className,
                 replace_existing_popup: !0,
                 target_browser: i,
-                eCreationFlags: Cs.c.Tooltip
+                eCreationFlags: Ms.c.Tooltip
               }) || this;
             return (n.m_hoverProps = t), n;
           }
@@ -56406,9 +56555,9 @@ and limitations under the License.
             }),
             (t.prototype.Render = function(e, t) {
               var i = this.InternalRender();
-              Fs.render(
+              Os.render(
                 br.createElement(
-                  Ju,
+                  Qu,
                   it.a({}, this.m_hoverProps, { popup: e }),
                   i
                 ),
@@ -56417,8 +56566,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Cs.a),
-        Yu = (function(e) {
+        })(Ms.a),
+        Zu = (function(e) {
           function t(t, i, n) {
             var r =
               e.call(
@@ -56438,12 +56587,12 @@ and limitations under the License.
             (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {}),
             (t.prototype.InternalRender = function() {
-              return br.createElement(qu, { hoverInstance: this.m_instance });
+              return br.createElement(Ju, { hoverInstance: this.m_instance });
             }),
             t
           );
-        })(Ku),
-        Ju = (function(e) {
+        })(Xu),
+        Qu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -56558,28 +56707,28 @@ and limitations under the License.
               }
             }),
             it.b([Xt.a], t.prototype, "bindHover", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Xu = (function(e) {
+        $u = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             it.c(t, e),
             (t.OnMouseEnter = function(e) {
-              Sm.EmoticonHoverStore.GetEmoticonHover(
+              Om.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Show(e);
             }),
             (t.OnMouseLeave = function(e) {
-              Sm.EmoticonHoverStore.GetEmoticonHover(
+              Om.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Hide(e);
             }),
             (t.prototype.render = function() {
               return br.createElement("img", {
-                src: ys.GetEmoticonURL(this.props.emoticon),
+                src: bs.GetEmoticonURL(this.props.emoticon),
                 alt: ":" + this.props.emoticon + ":",
                 className: "emoticon",
                 "data-emoticon": this.props.emoticon,
@@ -56590,7 +56739,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Zu = (function(e) {
+        ed = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56598,7 +56747,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               return br.createElement(
-                Hu,
+                Yu,
                 {
                   visibilityObserver: this.props.hover,
                   target: this.props.target,
@@ -56618,10 +56767,10 @@ and limitations under the License.
                 })
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Qu = (function(e) {
+        td = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -56635,7 +56784,7 @@ and limitations under the License.
             (t.prototype.OnClick = function(e) {
               var t = e.currentTarget.getAttribute("data-emoticon");
               this.props.OnSelected(t, e.shiftKey),
-                Sm.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
+                Om.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
             }),
             (t.prototype.OnSearchInput = function(e) {
               var t = e.currentTarget.value;
@@ -56650,7 +56799,7 @@ and limitations under the License.
               var i = t.name;
               return (
                 e && (i = e + t.name),
-                br.createElement($u, {
+                br.createElement(id, {
                   key: i,
                   emoticon: t,
                   onClick: this.OnClick,
@@ -56669,7 +56818,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Up.ChatStore.EmoticonStore,
+                t = Hp.ChatStore.EmoticonStore,
                 i = [],
                 n = [],
                 r = !1;
@@ -56763,7 +56912,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        $u = (function(e) {
+        id = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { visible: !1 }), i;
@@ -56775,12 +56924,12 @@ and limitations under the License.
             }),
             (t.prototype.componentDidMount = function() {
               this.props.coordinator.RegisterChild(
-                Fs.findDOMNode(this),
+                Os.findDOMNode(this),
                 this.SetVisible
               );
             }),
             (t.prototype.componentWillUnmount = function() {
-              this.props.coordinator.UnregisterChild(Fs.findDOMNode(this));
+              this.props.coordinator.UnregisterChild(Os.findDOMNode(this));
             }),
             (t.prototype.render = function() {
               var e = this.props.emoticon;
@@ -56791,14 +56940,14 @@ and limitations under the License.
                   "data-emoticon": e.name,
                   onClick: this.props.onClick
                 },
-                this.state.visible && br.createElement(Xu, { emoticon: e.name })
+                this.state.visible && br.createElement($u, { emoticon: e.name })
               );
             }),
             it.b([Xt.a], t.prototype, "SetVisible", null),
             t
           );
         })(br.Component),
-        ed = (function(e) {
+        nd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -56908,7 +57057,7 @@ and limitations under the License.
             }),
             (t.prototype.OnEmoticonClick = function(e) {
               Object(Sr.a)(
-                br.createElement(Qu, { OnSelected: this.OnEmoticonSelected }),
+                br.createElement(td, { OnSelected: this.OnEmoticonSelected }),
                 e.currentTarget,
                 {
                   bOverlapHorizontal: !0,
@@ -56961,7 +57110,7 @@ and limitations under the License.
             (t.prototype.UpdateMentionSearchState = function() {
               if (this.m_textInput) {
                 var e = this.props.chatView && this.props.chatView.chat,
-                  t = e instanceof cs;
+                  t = e instanceof us;
                 if (
                   this.m_textInput.selectionStart !=
                     this.m_textInput.selectionEnd ||
@@ -57024,7 +57173,7 @@ and limitations under the License.
             (t.prototype.OnMentionSuggestionSelected = function(e, t) {
               var i;
               if (
-                (t instanceof Ka
+                (t instanceof Ja
                   ? (i = t.persona.m_strPlayerName)
                   : t && (i = t),
                 !i)
@@ -57084,15 +57233,15 @@ and limitations under the License.
                 t = void 0,
                 i = this.props.chatView && this.props.chatView.chat;
               this.state.bInMentionSearch
-                ? (e = br.createElement(sd, {
+                ? (e = br.createElement(ud, {
                     chat: i,
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnMentionSuggestionSelected,
                     ref: this.bindMentionDialog
                   }))
                 : this.state.bInEmoticonSearch &&
-                  (e = br.createElement(cd, {
-                    emoticonStore: Up.ChatStore.EmoticonStore,
+                  (e = br.createElement(dd, {
+                    emoticonStore: Hp.ChatStore.EmoticonStore,
                     strSearch: this.state.mentionSearch,
                     nMinimumSearchLengthBeforeAutoSelection: 2,
                     onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -57101,15 +57250,15 @@ and limitations under the License.
               var n = this.props.chatView.chat.file_upload_props;
               return (
                 this.props.chatView.file_upload_data_url
-                  ? (t = br.createElement(id, {
+                  ? (t = br.createElement(od, {
                       chatView: this.props.chatView
                     }))
                   : 2 == n.eUploadState
-                    ? (t = br.createElement(rd, {
+                    ? (t = br.createElement(sd, {
                         chatView: this.props.chatView
                       }))
                     : 0 != n.eUploadState &&
-                      (t = br.createElement(nd, {
+                      (t = br.createElement(ad, {
                         chat: this.props.chatView.chat
                       })),
                 br.createElement(
@@ -57148,7 +57297,7 @@ and limitations under the License.
                         disabled: !this.state.submitEnabled,
                         title: Object(hr.b)("#ChatEntryButton_Submit")
                       },
-                      br.createElement(Bs.G, null)
+                      br.createElement(Is.G, null)
                     ),
                     br.createElement(
                       "button",
@@ -57161,7 +57310,7 @@ and limitations under the License.
                         title: Object(hr.b)("#ChatEntryButton_Emoticon"),
                         disabled: this.props.disabled
                       },
-                      br.createElement(Bs.l, null)
+                      br.createElement(Is.l, null)
                     ),
                     br.createElement(
                       "button",
@@ -57174,7 +57323,7 @@ and limitations under the License.
                         title: Object(hr.b)("#ChatEntryButton_SendEmbed"),
                         disabled: this.props.disabled
                       },
-                      br.createElement(Bs.w, null)
+                      br.createElement(Is.w, null)
                     ),
                     br.createElement("input", {
                       type: "file",
@@ -57184,7 +57333,7 @@ and limitations under the License.
                       onChange: this.OnFileInputChange
                     })
                   ),
-                  br.createElement(td, { chat: i })
+                  br.createElement(rd, { chat: i })
                 )
               );
             }),
@@ -57207,10 +57356,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnMentionSuggestionSelected", null),
             it.b([Xt.a], t.prototype, "OnEmoticonSuggestionSelected", null),
             it.b([Xt.a], t.prototype, "FocusTextInput", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        td = (function(e) {
+        rd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57218,17 +57367,17 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.HandleStartVoice = function(e) {
               var t = this.props.chat;
-              if (t instanceof bs) return void t.ToggleVoiceChat();
+              if (t instanceof Ss) return void t.ToggleVoiceChat();
               if (this.IsVoiceActiveForButton())
-                return void Up.VoiceStore.OnUserEndVoiceChat();
-              if (t instanceof cs) {
+                return void Hp.VoiceStore.OnUserEndVoiceChat();
+              if (t instanceof us) {
                 var i = t.GetGroup();
                 if (i) {
                   var n = i.voiceRoomList;
                   if (0 == n.length) return void i.CreateAndJoinTempVoiceRoom();
                   if (1 == n.length) {
                     var r = n[0];
-                    return void Up.VoiceStore.InitiateRoomChat(
+                    return void Hp.VoiceStore.InitiateRoomChat(
                       i.GetGroupID(),
                       r.GetRoomID()
                     );
@@ -57245,10 +57394,10 @@ and limitations under the License.
             (t.prototype.IsVoiceActiveForButton = function() {
               var e = this.props.chat,
                 t = !1;
-              if (e instanceof bs) t = e.BVoiceActive();
-              else if (e instanceof cs) {
+              if (e instanceof Ss) t = e.BVoiceActive();
+              else if (e instanceof us) {
                 var i = e.GetGroup();
-                t = Up.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
+                t = Hp.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
               }
               return t;
             }),
@@ -57259,17 +57408,17 @@ and limitations under the License.
                 n = this.props.chat;
               e
                 ? (t.push("Active"),
-                  Up.VoiceStore.BNoMicAvailableForSession() &&
+                  Hp.VoiceStore.BNoMicAvailableForSession() &&
                     t.push("NoMicrophone"),
-                  Up.VoiceStore.IsMicMuted() && t.push("MicMuted"))
+                  Hp.VoiceStore.IsMicMuted() && t.push("MicMuted"))
                 : t.push(" Inactive");
               var r = !n.BIsVoiceAllowed();
               if (r) t.push(" Disabled"), (i = n.GetVoiceNotAllowedReason());
-              else if (n instanceof bs)
+              else if (n instanceof Ss)
                 i = e
                   ? "#Tooltip_VoiceControlButton_1v1_active"
                   : "#Tooltip_VoiceControlButton_1v1_inactive";
-              else if (n instanceof cs)
+              else if (n instanceof us)
                 if (this.IsVoiceActiveForButton())
                   i = "#Tooltip_VoiceControlButton_group_leave";
                 else {
@@ -57281,9 +57430,9 @@ and limitations under the License.
                       : o &&
                         (i = "#Tooltip_VoiceControlButton_group_joinmultiple");
                 }
-              var a = Up.VoiceStore.GetPushToTalkEnabled(),
-                s = Up.VoiceStore.GetPushToTalkKeyDown(),
-                c = Up.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var a = Hp.VoiceStore.GetPushToTalkEnabled(),
+                s = Hp.VoiceStore.GetPushToTalkKeyDown(),
+                c = Hp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 l = "";
               return (
                 a && (l += " pushToTalkEnabled"),
@@ -57311,7 +57460,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "VoiceToggleIconCtn" },
-                        br.createElement(Bs.L, null)
+                        br.createElement(Is.L, null)
                       )
                     ),
                     br.createElement(
@@ -57323,8 +57472,8 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          br.createElement(Su, null),
-                          br.createElement(Mu, null)
+                          br.createElement(wu, null),
+                          br.createElement(Ou, null)
                         )
                       )
                     )
@@ -57343,10 +57492,10 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "HandleStartVoice", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        id = (function(e) {
+        od = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57368,7 +57517,7 @@ and limitations under the License.
                     }))
                   : -1 !=
                       this.props.chatView.file_upload.type.indexOf("video") &&
-                    (e = br.createElement(Bs.K, null)),
+                    (e = br.createElement(Is.K, null)),
                 br.createElement(
                   "div",
                   { className: "chatFileUploadPreviewContainer" },
@@ -57386,7 +57535,7 @@ and limitations under the License.
                       className: "chatFileUploadCancel",
                       onClick: this.handleCancel
                     },
-                    br.createElement(Bs.O, null)
+                    br.createElement(Is.O, null)
                   ),
                   br.createElement(
                     "button",
@@ -57405,7 +57554,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        nd = (function(e) {
+        ad = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57438,10 +57587,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        rd = (function(e) {
+        sd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57483,7 +57632,7 @@ and limitations under the License.
                     "div",
                     { className: "chatFileUploadActions" },
                     br.createElement(
-                      Ks,
+                      Js,
                       { className: "DialogLayout_NoMinWidth" },
                       br.createElement(
                         k,
@@ -57502,10 +57651,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "ClearErrorState", null),
             it.b([Xt.a], t.prototype, "handleUpload", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        od = (function(e) {
+        cd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -57556,7 +57705,7 @@ and limitations under the License.
               return !0;
             }),
             (t.prototype.GetPageSize = function() {
-              var e = Fs.findDOMNode(this),
+              var e = Os.findDOMNode(this),
                 t = e && e.firstElementChild,
                 i = this.m_rgCurrentMatches.length;
               if (
@@ -57606,8 +57755,8 @@ and limitations under the License.
               void 0 !== t && this.SetSelectedIndex(t);
             }),
             (t.prototype.BindSelectedElement = function(e) {
-              var t = Fs.findDOMNode(this),
-                i = Fs.findDOMNode(e),
+              var t = Os.findDOMNode(this),
+                i = Os.findDOMNode(e),
                 n = t && t.firstElementChild;
               i &&
                 n &&
@@ -57661,7 +57810,7 @@ and limitations under the License.
                     o = i === this.state.selectedIndex;
                   e.push(
                     br.createElement(
-                      ad,
+                      ld,
                       {
                         key: r,
                         matchKey: r,
@@ -57702,7 +57851,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ad = (function(e) {
+        ld = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57732,7 +57881,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        sd = (function(e) {
+        ud = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57854,8 +58003,8 @@ and limitations under the License.
             (t.nMaxMatches = 12),
             t
           );
-        })(od),
-        cd = (function(e) {
+        })(cd),
+        dd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57876,7 +58025,7 @@ and limitations under the License.
                 {
                   className: "EmoticonSuggestion" + (e.recent ? " Recent" : "")
                 },
-                br.createElement(Xu, { emoticon: e.name }),
+                br.createElement($u, { emoticon: e.name }),
                 ":",
                 e.name,
                 ":"
@@ -57896,8 +58045,8 @@ and limitations under the License.
             }),
             t
           );
-        })(od),
-        ld = (function(e) {
+        })(cd),
+        pd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { error: null }), i;
@@ -57978,7 +58127,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        ud = (function(e) {
+        hd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58035,7 +58184,7 @@ and limitations under the License.
             }),
             (t.prototype.AnimateScrollLeftTo = function(e) {
               this.m_animation && this.m_animation.Cancel(),
-                (this.m_animation = new zs(
+                (this.m_animation = new Ls(
                   this.m_elScroll,
                   { scrollLeft: e },
                   {
@@ -58103,7 +58252,7 @@ and limitations under the License.
                         "HorizontalMiniSliderArrow Left" +
                         (this.state.bLeftSliderVisible ? " Visible" : "")
                     },
-                    br.createElement(Bs.j, null)
+                    br.createElement(Is.j, null)
                   ),
                   br.createElement(
                     "div",
@@ -58113,7 +58262,7 @@ and limitations under the License.
                         "HorizontalMiniSliderArrow Right" +
                         (this.state.bRightSliderVisible ? " Visible" : "")
                     },
-                    br.createElement(Bs.j, null)
+                    br.createElement(Is.j, null)
                   ),
                   br.createElement(
                     "div",
@@ -58135,7 +58284,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        dd = (function(e) {
+        md = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58153,7 +58302,7 @@ and limitations under the License.
             }),
             (t.prototype.SetDragTab = function(e) {
               void 0 !== e
-                ? (this.m_fnUnregisterDropComplete = Sm.DragDropManager.RegisterForDropComplete(
+                ? (this.m_fnUnregisterDropComplete = Om.DragDropManager.RegisterForDropComplete(
                     this.HandleDropComplete
                   ))
                 : this.m_fnUnregisterDropComplete &&
@@ -58201,7 +58350,7 @@ and limitations under the License.
             (t.prototype.SetScrollLeft = function(e) {
               this.m_elScroll.scrollLeft != e &&
                 (this.m_animation && this.m_animation.Cancel(),
-                (this.m_animation = new zs(
+                (this.m_animation = new Ls(
                   this.m_elScroll,
                   { scrollLeft: e },
                   { msDuration: 300, timing: "sine", onComplete: function() {} }
@@ -58229,20 +58378,20 @@ and limitations under the License.
               this.props.tabSet.ActivateTab(e);
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               t && "chattab" == t.type && (t.tabSet = this.props.tabSet);
             }),
             (t.prototype.OnDragEnd = function() {
               this.setState({ tabDrag: void 0 });
             }),
             (t.prototype.OnBackClick = function(e) {
-              this.props.ResponsiveWindowState.SetActiveView($c.FriendsList);
+              this.props.ResponsiveWindowState.SetActiveView(tl.FriendsList);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
               var e = Je(this.props.popup);
-              Up.UIStore.BIsDockedFriendsList(e)
+              Hp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
-                    Sm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                    Om.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
                   )
                 : this.props.popup.SteamClient.Window.ResizeTo(
@@ -58287,25 +58436,25 @@ and limitations under the License.
                 ));
               var a = !1;
               return (
-                this.props.popup && (a = Je(this.props.popup) != xp),
+                this.props.popup && (a = Je(this.props.popup) != Wp),
                 br.createElement(
                   "div",
                   { className: r, onDragStart: this.OnDragStart },
                   this.props.popup &&
                     br.createElement(
-                      yu,
+                      Cu,
                       { hideMinMax: a, popup: this.props.popup },
                       " ",
-                      br.createElement(Ou, null),
+                      br.createElement(Iu, null),
                       " "
                     ),
                   o,
                   this.props.tabSet.tabCount > 0 &&
                     br.createElement(
-                      ud,
+                      hd,
                       { className: "chatTabList", ref: this.OnScrollRef },
                       br.createElement(
-                        As,
+                        zs,
                         { className: "chatTabTransitionGroup" },
                         i.map(function(t, i) {
                           var n = e.props.activeTab == t,
@@ -58313,14 +58462,14 @@ and limitations under the License.
                               return e.OnTabRef(t.GetUniqueID(), i);
                             };
                           return br.createElement(
-                            Ds,
+                            Ps,
                             {
                               className: "ChatTabTranstionContainer",
                               classNames: "ChatTabTransiton",
                               key: t.GetUniqueID(),
                               timeout: 350
                             },
-                            br.createElement(pd, {
+                            br.createElement(gd, {
                               tab: t,
                               active: n,
                               selectTab: e.SelectTab,
@@ -58344,7 +58493,7 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      br.createElement(Bs.E, null)
+                      br.createElement(Is.E, null)
                     ),
                   br.createElement("div", { className: "dropTargetBox" })
                 )
@@ -58358,10 +58507,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragEnd", null),
             it.b([Xt.a], t.prototype, "OnBackClick", null),
             it.b([Xt.a], t.prototype, "ToggleSingleWindowToggle", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        pd = (function(e) {
+        gd = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_bMiddleMouseDown = !1), t;
@@ -58382,7 +58531,7 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = e.clientX - e.currentTarget.getBoundingClientRect().left,
                 i = e.clientY - e.currentTarget.getBoundingClientRect().top;
-              Sm.DragDropManager.StartDrag({
+              Om.DragDropManager.StartDrag({
                 type: "chattab",
                 tab: this.props.tab,
                 offsetX: t,
@@ -58390,11 +58539,11 @@ and limitations under the License.
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Sm.DragDropManager.GetDragData();
+              var t = Om.DragDropManager.GetDragData();
               if (t && "chattab" == t.type) {
                 var i = t;
                 if (
-                  !Sm.DragDropManager.BWasDropConsumed() &&
+                  !Om.DragDropManager.BWasDropConsumed() &&
                   i.tabSet &&
                   i.tabSet.tabCount > 1 &&
                   tt.a.USE_POPUPS
@@ -58415,14 +58564,14 @@ and limitations under the License.
                       e.currentTarget.ownerDocument.defaultView.SteamClient.Window.GetMousePositionDetails(
                         function(e) {
                           e && ((s.left = -i.offsetX), (s.top = -i.offsetY)),
-                            Up.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
+                            Hp.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
                         }
                       );
-                    } else Up.UIStore.MoveTabToNewPopup(Ye(this, e), i.tab, s);
+                    } else Hp.UIStore.MoveTabToNewPopup(Ye(this, e), i.tab, s);
                   }
                 }
               }
-              Sm.DragDropManager.EndDrag();
+              Om.DragDropManager.EndDrag();
             }),
             (t.prototype.OnMouseDown = function(e) {
               0 == e.button
@@ -58433,7 +58582,7 @@ and limitations under the License.
             (t.prototype.OnMouseUp = function(e) {
               1 == e.button &&
                 this.m_bMiddleMouseDown &&
-                (Up.UIStore.CloseTab(Ye(this, e), this.props.tab),
+                (Hp.UIStore.CloseTab(Ye(this, e), this.props.tab),
                 e.preventDefault(),
                 (this.m_bMiddleMouseDown = !1));
             }),
@@ -58441,13 +58590,13 @@ and limitations under the License.
               this.m_bMiddleMouseDown = !1;
             }),
             (t.prototype.OnCloseClick = function(e) {
-              Up.UIStore.CloseTab(Ye(this, e), this.props.tab),
+              Hp.UIStore.CloseTab(Ye(this, e), this.props.tab),
                 e.stopPropagation();
             }),
             (t.prototype.OnContextMenu = function(e) {
               var t = this.props.tab;
               if (t.IsChatRoom()) {
-                if (t instanceof ps) {
+                if (t instanceof ms) {
                   var i = t;
                   X(e, i.GetGroup(), { tab: t });
                 }
@@ -58466,7 +58615,7 @@ and limitations under the License.
                 e.IsChatRoom() && (i += " chatRoom"),
                 e.IsVoiceActive() &&
                   ((i += " VoiceActive"),
-                  Up.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
+                  Hp.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
                 br.createElement(
                   "div",
                   {
@@ -58486,13 +58635,13 @@ and limitations under the License.
                       "div",
                       {
                         className: "MicStatus",
-                        title: Up.ChatStore.VoiceChat.IsMicMuted()
+                        title: Hp.ChatStore.VoiceChat.IsMicMuted()
                           ? Object(hr.b)("#Tooltip_MicStatus_Muted")
                           : Object(hr.b)("#Tooltip_MicStatus_Active")
                       },
-                      br.createElement(Bs.t, null)
+                      br.createElement(Is.t, null)
                     ),
-                  br.createElement(hd, { tab: this.props.tab }),
+                  br.createElement(fd, { tab: this.props.tab }),
                   br.createElement(
                     "div",
                     { className: "TabRightContainer" },
@@ -58503,7 +58652,7 @@ and limitations under the License.
                         className: "chatTabClose closeButton",
                         onClick: this.OnCloseClick
                       },
-                      br.createElement(Bs.O, null)
+                      br.createElement(Is.O, null)
                     ),
                     t > 0 &&
                       br.createElement(
@@ -58525,10 +58674,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnMouseLeave", null),
             it.b([Xt.a], t.prototype, "OnCloseClick", null),
             it.b([Xt.a], t.prototype, "OnContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        hd = (function(e) {
+        fd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58536,22 +58685,22 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.tab.GetChatView();
-              if (e.chat instanceof bs)
+              if (e.chat instanceof Ss)
                 return br.createElement(
                   "div",
                   { className: "ChatTabContent" },
-                  br.createElement(Lu, {
+                  br.createElement(Uu, {
                     friend: e.chat.chat_partner,
                     noActions: !0,
                     context: { chat: e.chat }
                   })
                 );
-              if (e.chat instanceof cs) {
+              if (e.chat instanceof us) {
                 var t = this.props.tab.GetGroup();
                 return br.createElement(
                   "div",
                   { className: "ChatTabContent ChatRoom" },
-                  br.createElement(su, { group: t, small: !0 }),
+                  br.createElement(uu, { group: t, small: !0 }),
                   br.createElement(
                     "div",
                     { className: "chatTabGroupName" },
@@ -58561,10 +58710,10 @@ and limitations under the License.
               }
               return null;
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        md = (function(e) {
+        _d = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58629,22 +58778,22 @@ and limitations under the License.
                 var i = e,
                   n = -1;
                 this.m_refChatTabs && (n = this.m_refChatTabs.state.iDragIndex),
-                  Sm.DragDropManager.SetDropConsumed(),
+                  Om.DragDropManager.SetDropConsumed(),
                   i.tabSet != this.props.tabs &&
                     (i.tabSet.RemoveTab(i.tab),
                     this.props.tabs.AddTab(i.tab),
-                    Sm.DragDropManager.EndDrag()),
+                    Om.DragDropManager.EndDrag()),
                   -1 != n && this.props.tabs.MoveTabToIndex(i.tab, n),
                   this.props.tabs.ActivateTab(i.tab),
                   this.setState({ tabDrag: void 0 });
               } else if ("friend" == e.type) {
-                Sm.DragDropManager.SetDropConsumed();
+                Om.DragDropManager.SetDropConsumed();
                 var r = e;
                 r.friend.OpenChatDialog(Ye(this, t));
               } else if ("chatroomgroup" == e.type) {
-                Sm.DragDropManager.SetDropConsumed();
+                Om.DragDropManager.SetDropConsumed();
                 var o = e;
-                Up.UIStore.ShowAndOrActivateChatRoomGroup(
+                Hp.UIStore.ShowAndOrActivateChatRoomGroup(
                   Ye(this),
                   o.group,
                   !0
@@ -58652,15 +58801,16 @@ and limitations under the License.
               }
             }),
             (t.prototype.OnHTMLKeyDown = function(e) {
-              if (tt.a.IN_CLIENT) {
-                if (e.ctrlKey && 9 == e.keyCode)
-                  return void (e.shiftKey
-                    ? this.props.tabs.ActivatePreviousTab()
-                    : this.props.tabs.ActivateNextTab());
-                if (e.ctrlKey && ("W" == e.key || "w" == e.key))
-                  return void this.props.tabs.RemoveTab(
-                    this.props.tabs.activeTab
-                  );
+              if (tt.a.IN_CLIENT && e.ctrlKey && !e.altKey) {
+                if ((!e.shiftKey && 9 == e.keyCode) || 34 == e.keyCode)
+                  this.props.tabs.ActivateNextTab();
+                else if (9 == e.keyCode || 33 == e.keyCode)
+                  this.props.tabs.ActivatePreviousTab();
+                else {
+                  if ("W" != e.key && "w" != e.key) return;
+                  this.props.tabs.RemoveTab(this.props.tabs.activeTab);
+                }
+                return e.preventDefault(), void e.stopPropagation();
               }
             }),
             (t.prototype.OnKeyDown = function(e) {
@@ -58693,26 +58843,26 @@ and limitations under the License.
                 });
               var n = i.map(function(i) {
                 var n = null,
-                  r = i instanceof ps && i;
+                  r = i instanceof ms && i;
                 return (
                   (n = r
-                    ? br.createElement(bd, {
+                    ? br.createElement(Md, {
                         groupView: r,
                         isActive: i == t,
                         popup: e.props.popup,
                         showWindowControls: !1
                       })
-                    : br.createElement(_d, {
+                    : br.createElement(bd, {
                         chatView: i.GetChatView(),
                         isActive: i == t,
                         popup: e.props.popup,
                         showWindowControls: !1
                       })),
-                  br.createElement(ld, { key: i.GetUniqueID() }, n)
+                  br.createElement(pd, { key: i.GetUniqueID() }, n)
                 );
               });
               return br.createElement(
-                ws,
+                Bs,
                 {
                   className: "multiChatDialog",
                   rgAcceptedTypes: ["chattab", "friend", "chatroomgroup"],
@@ -58723,7 +58873,7 @@ and limitations under the License.
                   onKeyDown: this.OnKeyDown,
                   tabIndex: 0
                 },
-                br.createElement(dd, {
+                br.createElement(md, {
                   tabSet: this.props.tabs,
                   popup: this.props.popup,
                   activeTab: t,
@@ -58750,10 +58900,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDrop", null),
             it.b([Xt.a], t.prototype, "OnHTMLKeyDown", null),
             it.b([Xt.a], t.prototype, "OnKeyDown", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        gd = (function(e) {
+        yd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -58761,52 +58911,52 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.InitiateVoiceChat = function() {
               this.props.chatView.chat.accountid_partner,
-                Up.VoiceStore.InitiateFriendChat(
+                Hp.VoiceStore.InitiateFriendChat(
                   this.props.chatView.chat.accountid_partner
                 );
             }),
             (t.prototype.VoidOnClick = function() {}),
             (t.prototype.EndVoiceChat = function() {
-              Up.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Hp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Up.VoiceStore.OnUserEndVoiceChat();
+                Hp.VoiceStore.OnUserEndVoiceChat();
             }),
             (t.prototype.LeaveVoiceChat = function() {
-              Up.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Hp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Up.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
+                Hp.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
             }),
             (t.prototype.OnCloseClick = function() {
-              Up.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Hp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
               this.props.chatView.chat.accountid_partner
-                ? Up.VoiceStore.OnUserEndVoiceChat()
-                : Up.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
+                ? Hp.VoiceStore.OnUserEndVoiceChat()
+                : Hp.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
                     this.props.chatView.chat.accountid_partner
                   );
             }),
             (t.prototype.render = function() {
-              var e = Up.VoiceStore.BInitiatedOneOnOneChat(
+              var e = Hp.VoiceStore.BInitiatedOneOnOneChat(
                   this.props.chatView.chat.accountid_partner
                 ),
-                t = Up.CMInterface.steamid.GetAccountID(),
+                t = Hp.CMInterface.steamid.GetAccountID(),
                 i = this.props.chatView.chat.accountid_partner,
-                n = Up.FriendStore.GetPlayer(t),
-                r = Up.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
-                o = Up.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
+                n = Hp.FriendStore.GetPlayer(t),
+                r = Hp.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
+                o = Hp.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
                 a = this.props.chatView.chat.chat_partner,
-                s = Up.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
+                s = Hp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
                 c =
                   !r &&
-                  Up.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                  Hp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                     a.accountid
                   ),
                 l = void 0;
               l =
                 e || r
                   ? br.createElement(
-                      Ds,
+                      Ps,
                       { key: t, classNames: "friend-anim", timeout: 320 },
-                      br.createElement(Lu, {
+                      br.createElement(Uu, {
                         friend: n,
                         key: t,
                         showVoiceLevel: !0,
@@ -58817,7 +58967,7 @@ and limitations under the License.
                       })
                     )
                   : br.createElement(
-                      Ds,
+                      Ps,
                       { key: t, classNames: "friend-anim", timeout: 320 },
                       br.createElement(
                         "div",
@@ -58842,9 +58992,9 @@ and limitations under the License.
                 s || c
                   ? u.push(
                       br.createElement(
-                        Ds,
+                        Ps,
                         { key: i, classNames: "friend-anim", timeout: 320 },
-                        br.createElement(Lu, {
+                        br.createElement(Uu, {
                           friend: a,
                           key: i,
                           showVoiceLevel: !0,
@@ -58857,7 +59007,7 @@ and limitations under the License.
                     )
                   : u.push(
                       br.createElement(
-                        Ds,
+                        Ps,
                         { key: i, classNames: "friend-anim", timeout: 320 },
                         br.createElement(
                           "div",
@@ -58944,7 +59094,7 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: "VoiceToggleIconCtn" },
-                  br.createElement(Bs.L, null),
+                  br.createElement(Is.L, null),
                   br.createElement(
                     "div",
                     { className: "Sonar" },
@@ -58968,7 +59118,7 @@ and limitations under the License.
                         ? Object(hr.b)("#Voice_EndVoice")
                         : Object(hr.b)("#Tooltip_DismissVoice")
                     },
-                    br.createElement(Bs.O, null)
+                    br.createElement(Is.O, null)
                   )
               );
             }),
@@ -58977,10 +59127,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "EndVoiceChat", null),
             it.b([Xt.a], t.prototype, "LeaveVoiceChat", null),
             it.b([Xt.a], t.prototype, "OnCloseClick", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        fd = (function(e) {
+        vd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.invitee = i.props.invitee), i;
@@ -58991,12 +59141,12 @@ and limitations under the License.
               var t = [],
                 i = e.currentTarget.ownerDocument.defaultView;
               t.push(this.invitee.accountid),
-                this.props.invitedto instanceof Ka
+                this.props.invitedto instanceof Ja
                   ? ue(Ye(this, e), i, this.props.chatview, !0, t)
-                  : this.props.invitedto instanceof ds
+                  : this.props.invitedto instanceof hs
                     ? ie(Ye(this, e), i, this.props.invitedto, void 0, !0, t)
-                    : this.props.invitedto instanceof cs &&
-                      Up.UIStore.OpenInviteDialogForChatGroup(
+                    : this.props.invitedto instanceof us &&
+                      Hp.UIStore.OpenInviteDialogForChatGroup(
                         Ye(this, e),
                         i,
                         this.props.invitedto.GetGroup(),
@@ -59009,7 +59159,7 @@ and limitations under the License.
               this.props.closeModal();
             }),
             (t.prototype.componentDidMount = function() {
-              var e = Fs.findDOMNode(this);
+              var e = Os.findDOMNode(this);
               if (e) {
                 var t = e.querySelector("button[type=submit]");
                 t && t.focus();
@@ -59017,22 +59167,22 @@ and limitations under the License.
             }),
             (t.prototype.OnInviteClicked = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
-              if (this.props.invitedto instanceof Ka) {
+              if (this.props.invitedto instanceof Ja) {
                 this.invitedToPlayer = this.props.invitedto;
                 var i = [];
                 i.push(
                   this.invitedToPlayer.persona.m_steamid.ConvertTo64BitString()
                 ),
                   i.push(this.invitee.persona.m_steamid.ConvertTo64BitString()),
-                  Up.UIStore.ReplaceFriendChatWithGroupChat(
+                  Hp.UIStore.ReplaceFriendChatWithGroupChat(
                     t,
                     this.props.chatview,
                     i
                   );
-              } else if (this.props.invitedto instanceof ds)
+              } else if (this.props.invitedto instanceof hs)
                 (this.invitedToGroup = this.props.invitedto),
                   this.invitedToGroup.InviteFriend(this.invitee.accountid);
-              else if (this.props.invitedto instanceof cs) {
+              else if (this.props.invitedto instanceof us) {
                 var i = [];
                 i.push(this.invitee.accountid),
                   (this.invitedToChatRoom = this.props.invitedto),
@@ -59050,13 +59200,13 @@ and limitations under the License.
                 t,
                 i,
                 n = this.props.invitee,
-                r = Up.FriendStore.self,
+                r = Hp.FriendStore.self,
                 o = !1;
-              this.props.invitedto instanceof Ka
+              this.props.invitedto instanceof Ja
                 ? (e = this.props.invitedto)
-                : this.props.invitedto instanceof ds
+                : this.props.invitedto instanceof hs
                   ? (t = this.props.invitedto)
-                  : this.props.invitedto instanceof cs &&
+                  : this.props.invitedto instanceof us &&
                     (i = this.props.invitedto);
               var a,
                 s,
@@ -59069,9 +59219,9 @@ and limitations under the License.
                     (u = "#Chat_Actions_DropGroupInvite_Member_Confirm"),
                   (o =
                     !!t.BIsClanChatRoom() &&
-                    Up.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
+                    Hp.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
                   (a = t.name),
-                  (s = br.createElement(su, { group: t, name: t.name })),
+                  (s = br.createElement(uu, { group: t, name: t.name })),
                   (d = t.BIsUserGroupMember(n)))
                 : e
                   ? ((u = "#Chat_Actions_DropGroupInvite_1v2_Confirm"),
@@ -59100,7 +59250,7 @@ and limitations under the License.
                     (s = br.createElement(
                       "div",
                       { className: "displayRow" },
-                      br.createElement(Bs.L, null)
+                      br.createElement(Is.L, null)
                     )));
               var p = null;
               return (
@@ -59149,14 +59299,14 @@ and limitations under the License.
                       bCenterVertically: !0
                     },
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       i
                         ? Object(hr.b)("#Chat_Actions_InviteFriend_VoiceChat")
                         : Object(hr.b)("#Chat_Actions_DropGroupInvite_Title")
                     ),
                     br.createElement(
-                      Vs,
+                      qs,
                       null,
                       br.createElement(
                         "div",
@@ -59209,12 +59359,12 @@ and limitations under the License.
                             ? br.createElement(
                                 "div",
                                 { className: "staticX" },
-                                br.createElement(Bs.O, null)
+                                br.createElement(Is.O, null)
                               )
                             : br.createElement(
                                 "div",
                                 { className: "movingArrow" },
-                                br.createElement(Bs.b, { angle: 90 })
+                                br.createElement(Is.b, { angle: 90 })
                               ),
                           s,
                           br.createElement(
@@ -59236,10 +59386,10 @@ and limitations under the License.
                       )
                     ),
                     br.createElement(
-                      js,
+                      Ws,
                       null,
                       br.createElement(
-                        Ks,
+                        Js,
                         null,
                         br.createElement(
                           k,
@@ -59263,10 +59413,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "AddMoreFriends", null),
             it.b([Xt.a], t.prototype, "Cancel", null),
             it.b([Xt.a], t.prototype, "OnInviteClicked", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        _d = (function(e) {
+        bd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -59305,7 +59455,7 @@ and limitations under the License.
               )
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Sm.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Om.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropToInviteFriend: i }),
@@ -59315,7 +59465,7 @@ and limitations under the License.
               if (n)
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Sm.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Om.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropGroupToInviteFriend: n }),
@@ -59325,7 +59475,7 @@ and limitations under the License.
               return (
                 !r ||
                 (this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = Sm.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = Om.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropClanToInvite: r }),
@@ -59372,7 +59522,7 @@ and limitations under the License.
                     (this.m_fnUnregisterDropComplete.Unregister(),
                     (this.m_fnUnregisterDropComplete = void 0),
                     this.setState({ dropToInviteFriend: void 0 })),
-                    Sm.DragDropManager.SetDropConsumed(),
+                    Om.DragDropManager.SetDropConsumed(),
                     ye(
                       { invitee: o, chatview: i, invitedto: r },
                       Ye(this, t),
@@ -59388,9 +59538,9 @@ and limitations under the License.
                         dropGroupToInviteFriend: void 0,
                         dropClanToInvite: void 0
                       })),
-                    Sm.DragDropManager.SetDropConsumed(),
+                    Om.DragDropManager.SetDropConsumed(),
                     s &&
-                      (a = Up.ChatStore.GetChatRoomGroup(
+                      (a = Hp.ChatStore.GetChatRoomGroup(
                         s.GetChatGroupIDIfLoaded()
                       )),
                     ye({ invitee: r, invitedto: a }, Ye(this, t), n));
@@ -59411,7 +59561,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               if (!this.props.chatView) return null;
               var e = this.props.chatView.chat,
-                t = Up.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                t = Hp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                   e.accountid_partner
                 ),
                 i = this.props.chatView.BVoiceActive(),
@@ -59421,13 +59571,13 @@ and limitations under the License.
               var o;
               this.state.dropToInviteFriend
                 ? (o = br.createElement(
-                    Ds,
+                    Ps,
                     {
                       key: "inviteDrop",
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    br.createElement(Bd, {
+                    br.createElement(Ed, {
                       chatView: this.props.chatView,
                       friend: this.state.dropToInviteFriend
                     })
@@ -59435,13 +59585,13 @@ and limitations under the License.
                 : (this.state.dropGroupToInviteFriend ||
                     this.state.dropClanToInvite) &&
                   (o = br.createElement(
-                    Ds,
+                    Ps,
                     {
                       key: "inviteDrop",
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    br.createElement(Rd, {
+                    br.createElement(kd, {
                       chatView: this.props.chatView,
                       group: this.state.dropGroupToInviteFriend,
                       clan: this.state.dropClanToInvite
@@ -59450,7 +59600,7 @@ and limitations under the License.
               var a = "chatWindow SingleUserChat";
               i &&
                 ((a += " VoiceActive"),
-                Up.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
+                Hp.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
                 t && (a += " VoiceRequested"),
                 n && (a += " NotAFriendOrApproved");
               var s = "chatBody";
@@ -59460,7 +59610,7 @@ and limitations under the License.
                   this.state.dropClanToInvite) &&
                   (s = "chatBody chatRoomActiveDrop"),
                 br.createElement(
-                  ws,
+                  Bs,
                   {
                     style: r,
                     className: a,
@@ -59470,16 +59620,16 @@ and limitations under the License.
                   },
                   br.createElement("div", { className: "chatHeader" }),
                   this.props.isActive &&
-                    br.createElement(yd, {
+                    br.createElement(Cd, {
                       chatView: this.props.chatView,
                       onNameWidthChanged: this.OnNameWidthChanged
                     }),
                   br.createElement(
-                    As,
+                    zs,
                     null,
                     (i || t) &&
                       br.createElement(
-                        Ds,
+                        Ps,
                         {
                           key: "OneOnOneVoiceHeader",
                           classNames: "OneOnOneVoice-anim",
@@ -59488,14 +59638,14 @@ and limitations under the License.
                         br.createElement(
                           "div",
                           null,
-                          br.createElement(gd, {
+                          br.createElement(yd, {
                             chatView: this.props.chatView
                           })
                         )
                       )
                   ),
                   br.createElement(
-                    ws,
+                    Bs,
                     {
                       style: r,
                       className: s,
@@ -59506,21 +59656,21 @@ and limitations under the License.
                       fnDragOver: this.OnDragOver,
                       fnDrop: this.OnDrop
                     },
-                    br.createElement(As, null, o),
+                    br.createElement(zs, null, o),
                     n &&
-                      br.createElement(Od, {
+                      br.createElement(Id, {
                         chatView: this.props.chatView,
                         friend: e.chat_partner
                       }),
-                    br.createElement(Cd, {
+                    br.createElement(Fd, {
                       chatView: this.props.chatView,
                       isActive: this.props.isActive,
                       speakerLabelWidth: this.state.speakerLabelWidth
                     }),
-                    br.createElement(vd, { chatView: this.props.chatView }),
+                    br.createElement(Sd, { chatView: this.props.chatView }),
                     br.createElement("div", { className: "dropTargetBox" })
                   ),
-                  br.createElement(ed, {
+                  br.createElement(nd, {
                     key: e.unique_id,
                     chatView: this.props.chatView,
                     isActive: this.props.isActive,
@@ -59535,10 +59685,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDrop", null),
             it.b([Xt.a], t.prototype, "OnDropComplete", null),
             it.b([Xt.a], t.prototype, "OnNameWidthChanged", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        yd = (function(e) {
+        Cd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -59570,10 +59720,10 @@ and limitations under the License.
                 : null;
             }),
             it.b([Xt.a], t.prototype, "SpeakerLabel", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        vd = (function(e) {
+        Sd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -59608,15 +59758,15 @@ and limitations under the License.
                     ? this.AddFriendClick
                     : this.AddFriendClickNotInBeta
                 },
-                br.createElement(Bs.p, null)
+                br.createElement(Is.p, null)
               );
             }),
             it.b([Xt.a], t.prototype, "AddFriendClick", null),
             it.b([Xt.a], t.prototype, "AddFriendClickNotInBeta", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        bd = (function(e) {
+        Md = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -59660,7 +59810,7 @@ and limitations under the License.
                 if (n.friend) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Sm.DragDropManager.SetDropConsumed();
+                    Om.DragDropManager.SetDropConsumed();
                   var r = t.currentTarget.ownerDocument.defaultView;
                   n.sourceContext.group != this.props.groupView.GetGroup() &&
                     ye(
@@ -59734,13 +59884,13 @@ and limitations under the License.
                 o = null;
               this.state.dropToInviteFriend &&
                 (o = br.createElement(
-                  Ds,
+                  Ps,
                   {
                     key: "inviteDrop",
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  br.createElement(Bd, {
+                  br.createElement(Ed, {
                     chatView: i,
                     friend: this.state.dropToInviteFriend
                   })
@@ -59765,7 +59915,7 @@ and limitations under the License.
                 this.state.dropToInviteFriend &&
                   (p = "chatBody chatRoomActiveDrop"),
                 br.createElement(
-                  ws,
+                  Bs,
                   it.a(
                     { style: c, className: u },
                     this.GetTitleBarDragDropProps()
@@ -59773,38 +59923,38 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "chatHeader titleBarContainer" },
-                    br.createElement(ou, { groupView: t })
+                    br.createElement(cu, { groupView: t })
                   ),
                   e.readyToRender &&
                     !s &&
                     br.createElement(
                       "div",
                       { className: d },
-                      br.createElement(Rl, { groupView: t, inactive: a }),
+                      br.createElement(El, { groupView: t, inactive: a }),
                       br.createElement(
                         "div",
                         { className: p },
                         br.createElement(
-                          ws,
+                          Bs,
                           it.a(
                             { style: c, className: "chatHistoryAndMembers" },
                             this.GetChatBodyDragDropProps()
                           ),
-                          br.createElement(As, null, o),
+                          br.createElement(zs, null, o),
                           br.createElement(
                             "div",
                             { className: "ChatRoomGroupDialog_history" },
-                            br.createElement(Cd, {
+                            br.createElement(Fd, {
                               chatView: i,
                               isActive: this.props.isActive
                             }),
                             br.createElement(
-                              As,
+                              zs,
                               null,
-                              br.createElement(Md, { groupView: t })
+                              br.createElement(Od, { groupView: t })
                             )
                           ),
-                          br.createElement(Il, {
+                          br.createElement(kl, {
                             groupView: this.props.groupView,
                             inactive: a
                           }),
@@ -59812,7 +59962,7 @@ and limitations under the License.
                             className: "dropTargetBox"
                           })
                         ),
-                        br.createElement(ed, {
+                        br.createElement(nd, {
                           key: r.unique_id,
                           chatView: t.GetActiveChatView(),
                           isActive: this.props.isActive,
@@ -59827,10 +59977,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnDragLeave", null),
             it.b([Xt.a], t.prototype, "OnDragOver", null),
             it.b([Xt.a], t.prototype, "OnDrop", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Cd = (function(e) {
+        Fd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -59879,7 +60029,7 @@ and limitations under the License.
                     ? ((this.m_bComponentTriggeredScroll = !0),
                       (this.m_elHistoryScroll.scrollTop = e))
                     : (this.m_animation && this.m_animation.Cancel(),
-                      (this.m_animation = new zs(
+                      (this.m_animation = new Ls(
                         this.m_elHistoryScroll,
                         { scrollTop: e },
                         {
@@ -60067,7 +60217,7 @@ and limitations under the License.
                       "Unexpected message type for block"
                     );
                     var t =
-                      e.GetSlashCommandType() == Vr.k_ESlashCommandType_Me;
+                      e.GetSlashCommandType() == qr.k_ESlashCommandType_Me;
                     if (this.rgMessageBlock.length) {
                       var i = this.rgMessageBlock[0].unAccountID,
                         n = this.rgMessageBlock[0].BIsInvite(),
@@ -60081,7 +60231,7 @@ and limitations under the License.
                             ? this.CloseBlock()
                             : this.bMessageBlockIsOnlyEmotes && !t
                               ? this.CloseBlock()
-                              : (e instanceof Qr || a instanceof Qr) &&
+                              : (e instanceof eo || a instanceof eo) &&
                                 this.CloseBlock()
                         : this.CloseBlock();
                     }
@@ -60093,14 +60243,14 @@ and limitations under the License.
                       var t = this.rgMessageBlock[0];
                       t.BIsInvite()
                         ? this.rgMessages.push(
-                            br.createElement(Gd, {
+                            br.createElement(Ad, {
                               key: t.UniqueKey(),
                               messages: this.rgMessageBlock,
                               chatView: this.chatView
                             })
                           )
                         : this.rgMessages.push(
-                            br.createElement(Fd, {
+                            br.createElement(Bd, {
                               key: t.UniqueKey(),
                               messages: this.rgMessageBlock,
                               chatView: this.chatView,
@@ -60126,7 +60276,7 @@ and limitations under the License.
                 a = !1;
               if (t.chat_messages.length > 0) {
                 var s = t.chat_messages[0];
-                Up.RTime32ToDate(s.rtTimestamp) <
+                Hp.RTime32ToDate(s.rtTimestamp) <
                   this.MidnightBeforeTime(new Date()) && (a = !0);
               }
               var c = !1,
@@ -60135,12 +60285,12 @@ and limitations under the License.
               for (var u = -1, d = 0, p = t.chat_messages; d < p.length; d++) {
                 var h = p[d];
                 if (0 != r || a) {
-                  var m = Up.RTime32ToDate(r),
-                    g = Up.RTime32ToDate(h.rtTimestamp);
+                  var m = Hp.RTime32ToDate(r),
+                    g = Hp.RTime32ToDate(h.rtTimestamp);
                   if (m < this.MidnightBeforeTime(g) || a) {
                     var f = "timediv_" + g.getTime();
                     n.AppendOutsideBlock(
-                      br.createElement(Id, {
+                      br.createElement(Td, {
                         key: f,
                         rtTimestamp: h.rtTimestamp
                       })
@@ -60157,7 +60307,7 @@ and limitations under the License.
                     t.first_unread_msg_time > r &&
                     t.first_unread_msg_time <= h.rtTimestamp &&
                     (n.AppendOutsideBlock(
-                      br.createElement(Id, {
+                      br.createElement(Td, {
                         key: "timediv_unread",
                         rtTimestamp: t.first_unread_msg_time,
                         bUnread: !0
@@ -60168,7 +60318,7 @@ and limitations under the License.
                     ? n.AppendToBlock(h)
                     : h.BIsServerMessage()
                       ? n.AppendOutsideBlock(
-                          br.createElement(Ed, {
+                          br.createElement(Gd, {
                             msg: h,
                             key: h.UniqueKey(),
                             chatView: this.props.chatView,
@@ -60180,19 +60330,19 @@ and limitations under the License.
               }
               u >= 0 &&
                 n.InsertAtIndex(
-                  br.createElement(Id, {
+                  br.createElement(Td, {
                     key: "time_passes",
                     rtTimestamp: t.first_unread_msg_time,
                     bTimePassesLine: !0
                   }),
                   u
                 );
-              var _ = Up.RTime32ToDate(Up.GetServerRTime32());
-              Up.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
+              var _ = Hp.RTime32ToDate(Hp.GetServerRTime32());
+              Hp.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
                 n.AppendOutsideBlock(
-                  br.createElement(Id, {
+                  br.createElement(Td, {
                     key: "final_dateline",
-                    rtTimestamp: Up.GetServerRTime32()
+                    rtTimestamp: Hp.GetServerRTime32()
                   })
                 ),
                 (e = br.createElement(
@@ -60210,7 +60360,7 @@ and limitations under the License.
                   )
                 ));
               var y = null;
-              if (t instanceof cs) {
+              if (t instanceof us) {
                 var v = "currentTextChannelName";
                 t.IsDefaultRoomForGroup() && (v += " DefaultChatRoom"),
                   (y = br.createElement("div", { className: v }, "#", t.name));
@@ -60226,13 +60376,13 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                br.createElement(Sd, {
+                br.createElement(wd, {
                   chatHistory: this,
                   chatView: this.props.chatView
                 }),
                 e,
-                br.createElement(xd, { chatView: this.props.chatView }),
-                br.createElement(wd, {
+                br.createElement(Wd, { chatView: this.props.chatView }),
+                br.createElement(Rd, {
                   chatView: this.props.chatView,
                   action: this.ScrollToBottom
                 }),
@@ -60258,10 +60408,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "ScrollToBottom", null),
             it.b([Xt.a], t.prototype, "LoadOlderMessages", null),
             it.b([Xt.a], t.prototype, "FixScrollLocation", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Sd = (function(e) {
+        wd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60279,10 +60429,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Md = (function(e) {
+        Od = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60298,7 +60448,7 @@ and limitations under the License.
               var e = this.props.groupView.GetPopoverChatView();
               return e
                 ? br.createElement(
-                    Ds,
+                    Ps,
                     {
                       key: "quickChat",
                       classNames: "chatWindow-anim",
@@ -60328,7 +60478,7 @@ and limitations under the License.
                               className: "MinimizeTextChat",
                               onClick: this.OnTextChannelCloseClick
                             },
-                            br.createElement(Bs.O, null)
+                            br.createElement(Is.O, null)
                           )
                         ),
                         br.createElement(
@@ -60336,7 +60486,7 @@ and limitations under the License.
                           { className: "VoiceChatTextChannelDesc" },
                           Object(hr.b)("#Chat_Scratch_Pad_Desc")
                         ),
-                        br.createElement(Cd, {
+                        br.createElement(Fd, {
                           chatView: e,
                           isActive: !0,
                           ref: this.OnChatHistoryRef
@@ -60348,10 +60498,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "OnTextChannelCloseClick", null),
             it.b([Xt.a], t.prototype, "OnChatHistoryRef", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Fd = (function(e) {
+        Bd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -60369,7 +60519,7 @@ and limitations under the License.
                 t = !0,
                 i = !1,
                 n = this.props.bLastMessageBlock,
-                r = Up.FriendStore.GetPlayer(
+                r = Hp.FriendStore.GetPlayer(
                   this.props.messages[0].unAccountID
                 ),
                 o = "ChatMessageBlock",
@@ -60388,7 +60538,7 @@ and limitations under the License.
               else {
                 this.props.messages.length &&
                   this.props.messages[0].GetSlashCommandType() ==
-                    Vr.k_ESlashCommandType_Me &&
+                    qr.k_ESlashCommandType_Me &&
                   (t = !1);
                 for (var s = 0, c = 0; c < this.props.messages.length; c++) {
                   var l = this.props.messages[c],
@@ -60411,21 +60561,21 @@ and limitations under the License.
                       onUpdate: this.props.onUpdate
                     },
                     h = l.GetSlashCommandType();
-                  if (h == Vr.k_ESlashCommandType_None)
-                    l instanceof $r
+                  if (h == qr.k_ESlashCommandType_None)
+                    l instanceof to
                       ? a.push(
                           br.createElement(
-                            Td,
+                            Nd,
                             it.a({}, p, {
                               speakerWidth: this.props.speakerWidth
                             })
                           )
                         )
-                      : l instanceof Qr
-                        ? ((t = !1), a.push(br.createElement(kd, it.a({}, p))))
+                      : l instanceof eo
+                        ? ((t = !1), a.push(br.createElement(Dd, it.a({}, p))))
                         : a.push(
                             br.createElement(
-                              Nd,
+                              Pd,
                               it.a({}, p, {
                                 speakerWidth: this.props.speakerWidth
                               })
@@ -60436,14 +60586,14 @@ and limitations under the License.
                       speakerWidth: this.props.speakerWidth
                     });
                     switch (h) {
-                      case Vr.k_ESlashCommandType_Me:
-                        a.push(br.createElement(Pd, it.a({}, m)));
-                        break;
-                      case Vr.k_ESlashCommandType_Code:
-                        a.push(br.createElement(zd, it.a({}, m)));
-                        break;
-                      case Vr.k_ESlashCommandType_Pre:
+                      case qr.k_ESlashCommandType_Me:
                         a.push(br.createElement(Ld, it.a({}, m)));
+                        break;
+                      case qr.k_ESlashCommandType_Code:
+                        a.push(br.createElement(jd, it.a({}, m)));
+                        break;
+                      case qr.k_ESlashCommandType_Pre:
+                        a.push(br.createElement(Ud, it.a({}, m)));
                     }
                   }
                 }
@@ -60464,7 +60614,7 @@ and limitations under the License.
                   "div",
                   { className: o },
                   t &&
-                    br.createElement(Ad, {
+                    br.createElement(xd, {
                       friend: r,
                       chatView: this.props.chatView,
                       msg: this.props.messages[0],
@@ -60479,7 +60629,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        wd = (function(e) {
+        Rd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60503,21 +60653,21 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Od = (function(e) {
+        Id = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
           return (
             it.c(t, e),
             (t.prototype.OnBlock = function() {
-              Up.FriendStore.BlockPlayer(this.props.friend, !1),
-                Up.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
+              Hp.FriendStore.BlockPlayer(this.props.friend, !1),
+                Hp.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
             }),
             (t.prototype.OnAllow = function() {
-              Up.FriendStore.SetApprovedNonFriendMessages(
+              Hp.FriendStore.SetApprovedNonFriendMessages(
                 this.props.friend.accountid
               );
             }),
@@ -60531,7 +60681,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "Exclamation" },
-                    br.createElement(Bs.d, null)
+                    br.createElement(Is.d, null)
                   ),
                   br.createElement(
                     "div",
@@ -60581,10 +60731,10 @@ and limitations under the License.
             }),
             it.b([Xt.a], t.prototype, "OnBlock", null),
             it.b([Xt.a], t.prototype, "OnAllow", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Bd = (function(e) {
+        Ed = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -60593,7 +60743,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = !1;
               return (
-                this.props.chatView.chat instanceof cs &&
+                this.props.chatView.chat instanceof us &&
                   (this.props.chatView, (e = !0)),
                 br.createElement(
                   "div",
@@ -60602,7 +60752,7 @@ and limitations under the License.
                     Oe,
                     null,
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       e
                         ? Object(hr.b)("#Chat_DropToInviteGroup")
@@ -60612,9 +60762,9 @@ and limitations under the License.
                       I,
                       null,
                       br.createElement(
-                        Ws,
+                        Hs,
                         null,
-                        br.createElement(Lu, {
+                        br.createElement(Uu, {
                           friend: this.props.friend,
                           context: null,
                           avatarQualityFull: !0
@@ -60625,10 +60775,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Rd = (function(e) {
+        kd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -60640,7 +60790,7 @@ and limitations under the License.
                 this.props.group
                   ? (e = this.props.group.name)
                   : this.props.clan && (e = this.props.clan.name),
-                this.props.chatView.chat instanceof cs && this.props.chatView,
+                this.props.chatView.chat instanceof us && this.props.chatView,
                 br.createElement(
                   "div",
                   {
@@ -60651,7 +60801,7 @@ and limitations under the License.
                     Oe,
                     null,
                     br.createElement(
-                      xs,
+                      Us,
                       null,
                       Object(hr.b)("#Chat_DropGroupToInviteFriend")
                     ),
@@ -60659,14 +60809,14 @@ and limitations under the License.
                       I,
                       null,
                       br.createElement(
-                        Ws,
+                        Hs,
                         { className: "avatarHolder" },
                         this.props.clan
-                          ? br.createElement(au, {
+                          ? br.createElement(lu, {
                               clan: this.props.clan,
                               large: !0
                             })
-                          : br.createElement(su, {
+                          : br.createElement(uu, {
                               group: this.props.group,
                               large: !0
                             }),
@@ -60681,10 +60831,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Id = (function(e) {
+        Td = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60699,7 +60849,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e,
-                t = Up.RTime32ToDate(this.props.rtTimestamp),
+                t = Hp.RTime32ToDate(this.props.rtTimestamp),
                 i = ["msg", "timeDivision"];
               if (this.props.bUnread) {
                 var n = {
@@ -60737,7 +60887,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Ed = (function(e) {
+        Gd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60750,7 +60900,7 @@ and limitations under the License.
                 n = "";
               switch (e.eServerMsgType) {
                 case 1:
-                  var r = Up.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Hp.FriendStore.GetPlayer(e.unAccountID);
                   n = be(
                     i,
                     "#ChatRoom_ServerMessage_RenameChatRoom",
@@ -60759,20 +60909,20 @@ and limitations under the License.
                   );
                   break;
                 case 2:
-                  var o = Up.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Hp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = be(i, "#ChatRoom_ServerMessage_Joined", o);
                   break;
                 case 3:
-                  var o = Up.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Hp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = be(i, "#ChatRoom_ServerMessage_Parted", o);
                   break;
                 case 4:
-                  var a = Up.FriendStore.GetPlayer(e.unAccountID),
-                    o = Up.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var a = Hp.FriendStore.GetPlayer(e.unAccountID),
+                    o = Hp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = be(i, "#ChatRoom_ServerMessage_Kicked", o, a);
                   break;
                 case 9:
-                  var r = Up.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Hp.FriendStore.GetPlayer(e.unAccountID);
                   n = e.strServerMsgParam.length
                     ? be(
                         i,
@@ -60787,7 +60937,7 @@ and limitations under the License.
                       );
                   break;
                 case 10:
-                  var r = Up.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Hp.FriendStore.GetPlayer(e.unAccountID);
                   n = be(i, "#ChatRoom_ServerMessage_ChatRoomAvatarChanged", r);
                   break;
                 default:
@@ -60799,10 +60949,10 @@ and limitations under the License.
                 br.createElement("div", { className: "msgText" }, n)
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        kd = (function(e) {
+        Dd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60825,10 +60975,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Td = (function(e) {
+        Nd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60842,26 +60992,26 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.AcceptTrade = function() {
-              Up.FriendStore.RespondToTradeRequest(
+              Hp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !0
               );
             }),
             (t.prototype.DeclineTrade = function() {
-              Up.FriendStore.RespondToTradeRequest(
+              Hp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !1
               ),
                 this.TradeRequestMsg.MarkAsDeclined();
             }),
             (t.prototype.CancelTradeRequest = function() {
-              Up.FriendStore.CancelTradeRequest(
+              Hp.FriendStore.CancelTradeRequest(
                 this.TradeRequestMsg.TargetSteamID()
               ),
                 this.TradeRequestMsg.MarkAsCancelled();
             }),
             (t.prototype.ViewAcceptedTrade = function() {
-              Up.FriendStore.OpenTradeWindow(
+              Hp.FriendStore.OpenTradeWindow(
                 this.TradeRequestMsg.TargetSteamID()
               );
             }),
@@ -60869,15 +61019,15 @@ and limitations under the License.
               var e = new lt.a(
                   this.TradeRequestMsg.TargetSteamID()
                 ).GetAccountID(),
-                t = e != Up.FriendStore.self.accountid,
+                t = e != Hp.FriendStore.self.accountid,
                 i = t
                   ? this.props.msg.unAccountID
-                  : Up.FriendStore.self.accountid;
+                  : Hp.FriendStore.self.accountid;
               return C(this.TradeRequestMsg.m_ErrorDetails, i, e);
             }),
             (t.prototype.render = function() {
               var e =
-                  this.props.msg.unAccountID == Up.FriendStore.self.accountid,
+                  this.props.msg.unAccountID == Hp.FriendStore.self.accountid,
                 t = {};
               if (
                 (this.props.speakerWidth &&
@@ -60932,7 +61082,7 @@ and limitations under the License.
                 var i = new lt.a(
                     this.TradeRequestMsg.TargetSteamID()
                   ).GetAccountID(),
-                  n = Up.FriendStore.GetPlayer(i),
+                  n = Hp.FriendStore.GetPlayer(i),
                   r = br.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
@@ -60950,7 +61100,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         null,
-                        br.createElement(Bs.J, null),
+                        br.createElement(Is.J, null),
                         e &&
                           Object(hr.d)(
                             "#ChatRoom_TradeRequest_Recipient_Declined",
@@ -60979,7 +61129,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         null,
-                        br.createElement(Bs.J, null),
+                        br.createElement(Is.J, null),
                         this.GetLocalizedErrorResponseString()
                       )
                     )
@@ -60992,7 +61142,7 @@ and limitations under the License.
                   o = br.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
-                    Up.FriendStore.GetPlayer(i).display_name
+                    Hp.FriendStore.GetPlayer(i).display_name
                   );
                 return br.createElement(
                   "div",
@@ -61009,7 +61159,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        br.createElement(Bs.J, null)
+                        br.createElement(Is.J, null)
                       ),
                       br.createElement(
                         "div",
@@ -61039,7 +61189,7 @@ and limitations under the License.
                   )
                 );
               }
-              var o = Up.FriendStore.GetPlayer(this.props.msg.unAccountID);
+              var o = Hp.FriendStore.GetPlayer(this.props.msg.unAccountID);
               return br.createElement(
                 "div",
                 { className: "msg", style: t },
@@ -61055,7 +61205,7 @@ and limitations under the License.
                     br.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      br.createElement(Bs.J, null)
+                      br.createElement(Is.J, null)
                     ),
                     br.createElement(
                       "div",
@@ -61100,7 +61250,7 @@ and limitations under the License.
                           className: "closeButton",
                           onClick: this.DeclineTrade
                         },
-                        br.createElement(Bs.O, null)
+                        br.createElement(Is.O, null)
                       )
                     )
                   )
@@ -61111,10 +61261,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "DeclineTrade", null),
             it.b([Xt.a], t.prototype, "CancelTradeRequest", null),
             it.b([Xt.a], t.prototype, "ViewAcceptedTrade", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Gd = (function(e) {
+        Ad = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61135,11 +61285,11 @@ and limitations under the License.
                 var s = a[o];
                 if (-1 == r.indexOf(s.unServerMsgParamAccountID)) {
                   n.length > 0 && n.push(", ");
-                  var c = Up.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
+                  var c = Hp.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
                   n.push(Ce(i, c)), r.push(s.unServerMsgParamAccountID);
                 }
               }
-              var l = Ce(i, Up.FriendStore.GetPlayer(e[0].unAccountID)),
+              var l = Ce(i, Hp.FriendStore.GetPlayer(e[0].unAccountID)),
                 u = "";
               if (n.length > 1) {
                 var d = br.createElement.apply(
@@ -61159,10 +61309,10 @@ and limitations under the License.
                 br.createElement("div", { className: "msgText" }, u)
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Nd = (function(e) {
+        Pd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61185,7 +61335,7 @@ and limitations under the License.
                   r.push("ChatMessageErrorSendingPermissionDenied"),
                 i ||
                   (r.push("HasTimeStamp"),
-                  (n = Up.FriendStore.GetPlayer(this.props.msg.unAccountID)));
+                  (n = Hp.FriendStore.GetPlayer(this.props.msg.unAccountID)));
               var o = {},
                 a = {};
               this.props.speakerWidth &&
@@ -61198,12 +61348,13 @@ and limitations under the License.
                   (s = br.createElement(
                     "div",
                     { className: "msgText" },
-                    br.createElement(Rr, {
+                    br.createElement(Er, {
                       bbcode: e.strMessage,
                       context: {
                         chat: t,
                         unAccountIDSender: e.unAccountID,
                         rtTimestamp: e.rtTimestamp,
+                        key: e.UniqueKey(),
                         chatGutterWidth: this.props.speakerWidth
                       },
                       parser: t.GetBBCodeParser()
@@ -61214,7 +61365,7 @@ and limitations under the License.
                   { className: r.join(" "), style: o },
                   !i &&
                     br.createElement(
-                      Dd,
+                      zd,
                       { className: "FriendChatTimeStamp", friend: n, style: a },
                       br.createElement(b, {
                         rtime: this.props.msg.rtTimestamp,
@@ -61231,17 +61382,17 @@ and limitations under the License.
                     br.createElement(
                       "div",
                       { className: "ChatMessageErrorPermissionDeniedAlert" },
-                      br.createElement(Bs.q, null),
+                      br.createElement(Is.q, null),
                       Object(hr.b)("#Chat_ErrorPermissionDenied")
                     ),
                   s
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Dd = Object(Os.observer)(function(e) {
+        zd = Object(Rs.observer)(function(e) {
           var t = "offline";
           e.friend.persona.is_ingame
             ? (t = "ingame")
@@ -61254,7 +61405,7 @@ and limitations under the License.
             e.children
           );
         }),
-        Ad = (function(e) {
+        xd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61291,7 +61442,7 @@ and limitations under the License.
                         (t = br.createElement(
                           "div",
                           { className: "rankIcon rankOwner" },
-                          br.createElement(Bs.h, null)
+                          br.createElement(Is.h, null)
                         ));
                 }
                 return (
@@ -61326,10 +61477,10 @@ and limitations under the License.
                           : "")
                     },
                     br.createElement(
-                      Dd,
+                      zd,
                       { friend: e, className: "speaker" },
                       br.createElement(
-                        zu,
+                        ju,
                         { friend: e, context: this.props.friendRenderContext },
                         br.createElement(
                           "div",
@@ -61391,10 +61542,10 @@ and limitations under the License.
                     style: o
                   },
                   br.createElement(
-                    zu,
+                    ju,
                     { friend: e, context: this.props.friendRenderContext },
                     br.createElement(
-                      Dd,
+                      zd,
                       { friend: e, className: "speaker" },
                       br.createElement(
                         "div",
@@ -61413,7 +61564,7 @@ and limitations under the License.
                     )
                   ),
                   br.createElement(
-                    Dd,
+                    zd,
                     { className: "FriendChatTimeStamp", friend: e },
                     br.createElement(b, {
                       rtime: this.props.msg.rtTimestamp,
@@ -61423,10 +61574,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Pd = (function(e) {
+        Ld = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61441,7 +61592,7 @@ and limitations under the License.
                 i = (this.props.hideTimeStamp, ["msg ChatMsgSlashEmote"]);
               t.self.accountid == e.unAccountID && i.push("isCurrentUser"),
                 e.bErrorSending && i.push("ChatMessageErrorSending");
-              var n = Up.FriendStore.GetPlayer(this.props.msg.unAccountID),
+              var n = Hp.FriendStore.GetPlayer(this.props.msg.unAccountID),
                 r = M(e.strMessage),
                 o = this.props.chatView.IsChatRoom(),
                 a = "offline";
@@ -61477,7 +61628,7 @@ and limitations under the License.
                       "div",
                       { className: s },
                       br.createElement(
-                        zu,
+                        ju,
                         {
                           friend: n,
                           context: {
@@ -61507,7 +61658,7 @@ and limitations under the License.
                       br.createElement(
                         "div",
                         { className: "msgText" },
-                        br.createElement(Rr, {
+                        br.createElement(Er, {
                           bbcode: r,
                           context: {
                             chat: t,
@@ -61530,10 +61681,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        zd = (function(e) {
+        jd = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_divMsgTxt = null), t;
@@ -61584,7 +61735,7 @@ and limitations under the License.
                 n = M(e.strMessage),
                 r = i ? "prettyprint" : "";
               return br.createElement(
-                Nd,
+                Pd,
                 it.a({}, this.props, { extraClassName: "ChatMsgSlashCode" }),
                 br.createElement(
                   "div",
@@ -61592,12 +61743,13 @@ and limitations under the License.
                   br.createElement(
                     "pre",
                     { className: r },
-                    br.createElement(Rr, {
+                    br.createElement(Er, {
                       bbcode: n,
                       context: {
                         chat: t,
                         unAccountIDSender: e.unAccountID,
                         rtTimestamp: e.rtTimestamp,
+                        key: e.UniqueKey(),
                         chatGutterWidth: this.props.speakerWidth
                       },
                       parser: t.GetBBCodeParser(),
@@ -61608,10 +61760,10 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "BindMsgTxt", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ld = (function(e) {
+        Ud = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61625,7 +61777,7 @@ and limitations under the License.
                 t = this.props.chatView.chat,
                 i = M(e.strMessage);
               return br.createElement(
-                Nd,
+                Pd,
                 it.a({}, this.props, { extraClassName: "ChatMsgSlashPre" }),
                 br.createElement(
                   "div",
@@ -61633,12 +61785,13 @@ and limitations under the License.
                   br.createElement(
                     "pre",
                     null,
-                    br.createElement(Rr, {
+                    br.createElement(Er, {
                       bbcode: i,
                       context: {
                         chat: t,
                         unAccountIDSender: e.unAccountID,
                         rtTimestamp: e.rtTimestamp,
+                        key: e.UniqueKey(),
                         chatGutterWidth: this.props.speakerWidth
                       },
                       parser: t.GetBBCodeParser(),
@@ -61648,10 +61801,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        xd = (function(e) {
+        Wd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61659,7 +61812,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = !1;
-              if (!(this.props.chatView.chat instanceof bs)) return null;
+              if (!(this.props.chatView.chat instanceof Ss)) return null;
               var t = this.props.chatView.chat;
               return (
                 t.is_friend_typing && (e = !0),
@@ -61677,10 +61830,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        jd = (function(e) {
+        Vd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -61720,7 +61873,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        Ud = (function(e) {
+        Hd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -61742,7 +61895,7 @@ and limitations under the License.
               var t = this;
               return (
                 e.preventDefault(),
-                Up.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
+                Hp.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
                   1 != e && t.setState({ error: e });
                 }),
                 !0
@@ -61799,7 +61952,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Wd = (i("FHUK"),
+        qd = (i("FHUK"),
         (function(e) {
           function t(t, i, n) {
             var r = this,
@@ -61811,7 +61964,7 @@ and limitations under the License.
                 html_class: "client_chat_frame fullheight SavedDimensionsPopup",
                 body_class: "fullheight",
                 target_browser: n.m_unPID > 0 ? n : void 0,
-                eCreationFlags: Cs.c.Resizable
+                eCreationFlags: Ms.c.Resizable
               };
             return (
               (r =
@@ -61832,15 +61985,15 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.Render = function(e, t) {
               t.setAttribute("class", "fullheight popup_chat_frame");
-              var i = new gm(e),
-                n = this.browser_info || xp,
-                r = Up.UIStore.GetDefaultTabSetForContext(n);
+              var i = new vm(e),
+                n = this.browser_info || Wp,
+                r = Hp.UIStore.GetDefaultTabSetForContext(n);
               (this.m_browserContext = n),
                 this.m_bHidden
-                  ? Fs.render(null, t)
-                  : (Sm.SetUIDisplayPref("bShowFriendsListAtStartup", !0),
-                    Fs.render(
-                      br.createElement(Vd, {
+                  ? Os.render(null, t)
+                  : (Om.SetUIDisplayPref("bShowFriendsListAtStartup", !0),
+                    Os.render(
+                      br.createElement(Kd, {
                         popup: this,
                         friends: this.m_friends,
                         chats: this.m_chats,
@@ -61855,19 +62008,19 @@ and limitations under the License.
             }),
             (t.prototype.OnClose = function() {
               e.prototype.OnClose.call(this),
-                Up.UIStore.SetFriendsListWindowForContext(
+                Hp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   void 0
                 ),
-                Cs.d.BShuttingDown() ||
-                  Sm.SetUIDisplayPref("bShowFriendsListAtStartup", !1),
+                Ms.d.BShuttingDown() ||
+                  Om.SetUIDisplayPref("bShowFriendsListAtStartup", !1),
                 (this.m_bHidden = !0),
                 this.Render(this.m_popup, this.m_element);
             }),
             t
           );
-        })(Cs.b)),
-        Vd = (function(e) {
+        })(Ms.b)),
+        Kd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             (i.m_bResponsiveMainWindow = !1),
@@ -61879,7 +62032,7 @@ and limitations under the License.
             i.m_browserContext =
               i.props.popup && i.props.popup.browser_info
                 ? i.props.popup.browser_info
-                : xp;
+                : Wp;
             var r =
               tt.a.USE_POPUPS && i.props.popup ? i.props.popup.window : window;
             return (
@@ -61887,7 +62040,7 @@ and limitations under the License.
                 ? (i.m_nInlineChatWidth = 640)
                 : ((i.m_bResponsiveMainWindow = !0),
                   (i.m_nInlineChatWidth = 530),
-                  (i.m_ResponsiveWindowState = Up.UIStore.GetResponsiveWindowState(
+                  (i.m_ResponsiveWindowState = Hp.UIStore.GetResponsiveWindowState(
                     i.m_browserContext
                   ))),
               (n = r.innerWidth >= i.m_nInlineChatWidth),
@@ -61936,7 +62089,7 @@ and limitations under the License.
             (t.prototype.UpdateUIStoreChatVisibleState = function(e) {
               if (this.m_ResponsiveWindowState) {
                 var t =
-                  e || this.m_ResponsiveWindowState.GetActiveView() == $c.Chat;
+                  e || this.m_ResponsiveWindowState.GetActiveView() == tl.Chat;
                 this.SetSharedWindowChatsVisible(t);
               } else this.SetSharedWindowChatsVisible(e);
             }),
@@ -61945,15 +62098,15 @@ and limitations under the License.
               (this.m_bChatsVisible = e),
                 tt.a.USE_POPUPS &&
                   (t && !e
-                    ? Up.UIStore.ConvertDefaultTabSetToPopup(
+                    ? Hp.UIStore.ConvertDefaultTabSetToPopup(
                         this.m_browserContext
                       )
                     : !t &&
                       e &&
-                      Up.UIStore.ConvertDefaultTabSetToEmbedded(
+                      Hp.UIStore.ConvertDefaultTabSetToEmbedded(
                         this.m_browserContext
                       ),
-                  Up.UIStore.SetDefaultChatDestination(
+                  Hp.UIStore.SetDefaultChatDestination(
                     this.m_browserContext,
                     e
                   ));
@@ -61962,7 +62115,7 @@ and limitations under the License.
               var e = this;
               (this.m_popupActionDisposer = Object(pt.autorun)(function() {
                 if (!tt.a.IN_CLIENT) {
-                  var t = Up.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
+                  var t = Hp.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
                   t.length && void 0 === e.m_unTimerWindowTitleUnreadCycle
                     ? (e.m_unTimerWindowTitleUnreadCycle = setInterval(
                         function() {
@@ -62013,7 +62166,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               var e = this.props.popup ? this.props.popup.window : window;
               e && e.addEventListener("resize", this.OnWindowResizeEvent),
-                Up.UIStore.SetFriendsListWindowForContext(
+                Hp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   this
                 ),
@@ -62060,7 +62213,7 @@ and limitations under the License.
                 var t = this.m_elFriendsListContainer.getBoundingClientRect(),
                   i = t.left,
                   n = le(e - i, 200, 600);
-                Sm.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
+                Om.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
               }
             }),
             (t.prototype.UnregisterFriendsListDragEvents = function(e) {
@@ -62082,7 +62235,7 @@ and limitations under the License.
               if (!this.state.bSideBySideView)
                 if (this.m_ResponsiveWindowState) {
                   var i = this.m_ResponsiveWindowState.GetActiveView();
-                  (e = i == $c.FriendsList), (t = i == $c.Chat);
+                  (e = i == tl.FriendsList), (t = i == tl.Chat);
                 } else t = !1;
               var n = "chat_main fullheight",
                 r = null;
@@ -62103,39 +62256,39 @@ and limitations under the License.
               var o = this.props.popup && this.props.popup.window,
                 a = {
                   width:
-                    Sm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
+                    Om.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
                 };
-              return Up.ParentalStore.BIsFriendsBlocked()
+              return Hp.ParentalStore.BIsFriendsBlocked()
                 ? tt.a.IN_CLIENT
                   ? br.createElement(
                       "div",
                       { className: n },
-                      br.createElement(Ud, null)
+                      br.createElement(Hd, null)
                     )
                   : (location.reload(), br.createElement("div", null))
                 : br.createElement(
                     "div",
                     { className: n, onContextMenu: Me },
                     br.createElement(
-                      ld,
+                      pd,
                       null,
-                      br.createElement(Yd, {
+                      br.createElement(Zd, {
                         popup: this.props.popup
                           ? this.props.popup.window
                           : void 0
                       })
                     ),
                     !1,
-                    Up.ready_to_render &&
+                    Hp.ready_to_render &&
                       br.createElement(
-                        ld,
+                        pd,
                         null,
-                        br.createElement(Kd, {
-                          ModalManager: Sm.GetModalManager(o || window)
+                        br.createElement(Xd, {
+                          ModalManager: Om.GetModalManager(o || window)
                         }),
                         e &&
                           br.createElement(
-                            ws,
+                            Bs,
                             {
                               className: "friendsListContainer fullheight",
                               style: t ? a : null,
@@ -62143,7 +62296,7 @@ and limitations under the License.
                               rgAcceptedTypes: [],
                               bAcceptsFiles: !0
                             },
-                            br.createElement(wu, {
+                            br.createElement(Ru, {
                               friends: this.props.friends,
                               chats: this.props.chats,
                               popup: o,
@@ -62151,7 +62304,7 @@ and limitations under the License.
                             })
                           ),
                         br.createElement(
-                          ws,
+                          Bs,
                           {
                             className: "singleWindowDividerDropTarget",
                             rgAcceptedTypes: [],
@@ -62160,7 +62313,7 @@ and limitations under the License.
                           r
                         ),
                         t &&
-                          br.createElement(md, {
+                          br.createElement(_d, {
                             tabs: this.props.tabset,
                             popup: o,
                             ResponsiveWindowState: e
@@ -62169,7 +62322,7 @@ and limitations under the License.
                           }),
                         this.props.popup &&
                           tt.a.IN_CLIENT &&
-                          br.createElement(jd, { popup: o }),
+                          br.createElement(Vd, { popup: o }),
                         br.createElement("div", {
                           className: "singleWindowFocusBar"
                         })
@@ -62191,10 +62344,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "HandleTouchMove", null),
             it.b([Xt.a], t.prototype, "HandleMouseMove", null),
             it.b([Xt.a], t.prototype, "UnregisterFriendsListDragEvents", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Hd = (function(e) {
+        Yd = (function(e) {
           function t(t, i, n, r, o, a) {
             var s = this,
               c = {
@@ -62206,10 +62359,10 @@ and limitations under the License.
                 strRestoreDetails: r,
                 dimensions: { width: 740, height: 650 },
                 target_browser: t.m_unPID > 0 ? t : void 0,
-                eCreationFlags: Cs.c.Resizable
+                eCreationFlags: Ms.c.Resizable
               };
             return (
-              a && (c.eCreationFlags |= Cs.c.Minimized),
+              a && (c.eCreationFlags |= Ms.c.Minimized),
               o &&
                 (Object.assign(c.dimensions, o),
                 (c.bIgnoreSavedDimensions = !0)),
@@ -62253,7 +62406,7 @@ and limitations under the License.
               this.m_tabSet = void 0;
             }),
             (t.prototype.OnResize = function() {
-              Up.UIStore.OnTabSetResized(this.m_tabSet),
+              Hp.UIStore.OnTabSetResized(this.m_tabSet),
                 e.prototype.OnResize.call(this);
             }),
             (t.prototype.OnClose = function() {
@@ -62269,8 +62422,8 @@ and limitations under the License.
             (t.prototype.Render = function(e, t) {
               t.setAttribute("class", "fullheight popup_chat_frame"),
                 this.BindWindowHandlers(),
-                Fs.render(
-                  br.createElement(qd, {
+                Os.render(
+                  br.createElement(Jd, {
                     popup: this,
                     chatTabs: this.m_tabSet
                   }),
@@ -62280,8 +62433,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "SetTitle", null),
             t
           );
-        })(Cs.b),
-        qd = (function(e) {
+        })(Ms.b),
+        Jd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62297,22 +62450,22 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: n, onContextMenu: Me },
-                  br.createElement(Yd, { popup: this.props.popup.window }),
+                  br.createElement(Zd, { popup: this.props.popup.window }),
                   !1,
-                  br.createElement(Kd, { ModalManager: Sm.GetModalManager(e) }),
-                  br.createElement(md, {
+                  br.createElement(Xd, { ModalManager: Om.GetModalManager(e) }),
+                  br.createElement(_d, {
                     tabs: t,
                     popup: e,
                     ResponsiveWindowState: null
                   }),
-                  tt.a.IN_CLIENT && br.createElement(jd, { popup: e })
+                  tt.a.IN_CLIENT && br.createElement(Vd, { popup: e })
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Kd = (function(e) {
+        Xd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62340,10 +62493,10 @@ and limitations under the License.
                 i
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Yd = (function(e) {
+        Zd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62354,9 +62507,9 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               if (tt.a.IN_CLIENT) {
-                if (Up.CMInterface.BDisconnected()) {
+                if (Hp.CMInterface.BDisconnected()) {
                   var e = Je(this.props.popup),
-                    t = e != xp;
+                    t = e != Wp;
                   return br.createElement(
                     "div",
                     {
@@ -62370,7 +62523,7 @@ and limitations under the License.
                     br.createElement(
                       "div",
                       { className: "ConnectionTroubleContent" },
-                      br.createElement(yu, {
+                      br.createElement(Cu, {
                         hideMinMax: t,
                         popup: this.props.popup
                       }),
@@ -62384,13 +62537,13 @@ and limitations under the License.
                 }
                 return null;
               }
-              return br.createElement(Jd, null);
+              return br.createElement(Qd, null);
             }),
             it.b([Xt.a], t.prototype, "OnKeyDown", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Jd = (function(e) {
+        Qd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62408,8 +62561,8 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.componentWillMount = function() {
               var e = this;
-              if (!Up.ready_to_render) {
-                var t = performance.now() - Up.GetStartupTime();
+              if (!Hp.ready_to_render) {
+                var t = performance.now() - Hp.GetStartupTime();
                 this.m_iIntervalDelayedStartup = window.setTimeout(function() {
                   e.setState({ bShowStartupDelayMessage: !0 }),
                     (e.m_iIntervalDelayedStartup = void 0);
@@ -62425,7 +62578,7 @@ and limitations under the License.
                   (this.m_iIntervalUpdateReconnectStatus = void 0));
             }),
             (t.prototype.IntervalUpdateReconnectWaitStatus = function() {
-              var e = Sm.WebLogonManager;
+              var e = Om.WebLogonManager;
               if (e.BIsWaitingToReconnect()) {
                 var t = Math.ceil(e.GetMSUntilNextReconnectAttempt() / 1e3);
                 t != this.state.cReconnectWaitSeconds &&
@@ -62449,14 +62602,14 @@ and limitations under the License.
                 ));
             }),
             (t.prototype.OnReconnectNowClick = function() {
-              Sm.WebLogonManager.ReconnectNow();
+              Om.WebLogonManager.ReconnectNow();
             }),
             (t.prototype.OnLoginClick = function() {
               window.location.href = window.location.href;
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Sm.WebLogonManager;
+                t = Om.WebLogonManager;
               if (
                 (AssertMsg(
                   t,
@@ -62468,7 +62621,7 @@ and limitations under the License.
               var i = null,
                 n = t.web_logon_state,
                 r =
-                  !Up.NotificationManager.BNotificationsPermitted() &&
+                  !Hp.NotificationManager.BNotificationsPermitted() &&
                   this.state.bShouldRequestNotificationPermission;
               if (9 != n || r) {
                 var o = void 0,
@@ -62477,7 +62630,7 @@ and limitations under the License.
                   c = !1;
                 if (9 != n)
                   if (
-                    Up.ready_to_render ||
+                    Hp.ready_to_render ||
                     this.state.bShowStartupDelayMessage ||
                     !t.BIsInInitialConnect()
                   )
@@ -62532,7 +62685,7 @@ and limitations under the License.
                 else
                   r &&
                     (this.m_bRequestingNotificationPermission ||
-                      (Up.NotificationManager.RequestNotificationPermission().then(
+                      (Hp.NotificationManager.RequestNotificationPermission().then(
                         function() {
                           (e.m_bRequestingNotificationPermission = !1),
                             e.setState({
@@ -62548,16 +62701,16 @@ and limitations under the License.
                 !this.state.bShowReconnectWaitMessage &&
                   u &&
                   this.StartReconnectUpdateInterval(),
-                  (!o && Up.ready_to_render) ||
+                  (!o && Hp.ready_to_render) ||
                     (i = br.createElement(
-                      Ds,
+                      Ps,
                       { classNames: "modalbg-anim", timeout: 300 },
                       br.createElement(
                         "div",
                         {
                           className:
                             "chat_full_modaloverlay ConnectionTrouble" +
-                            (Up.ready_to_render ? "" : " NotReadyToRender")
+                            (Hp.ready_to_render ? "" : " NotReadyToRender")
                         },
                         br.createElement("div", {
                           className:
@@ -62576,7 +62729,7 @@ and limitations under the License.
                                   "connectionThrobber" +
                                   (c ? " showThrobber" : "")
                               },
-                              br.createElement(Ul, null),
+                              br.createElement(Vl, null),
                               " "
                             ),
                             o,
@@ -62642,7 +62795,7 @@ and limitations under the License.
                       )
                     ));
               }
-              return br.createElement(As, null, i);
+              return br.createElement(zs, null, i);
             }),
             it.b(
               [Xt.a],
@@ -62652,10 +62805,10 @@ and limitations under the License.
             ),
             it.b([Xt.a], t.prototype, "OnReconnectNowClick", null),
             it.b([Xt.a], t.prototype, "OnLoginClick", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Xd = (Object(pt.observable)({ bEnabled: null }),
+        $d = (Object(pt.observable)({ bEnabled: null }),
         (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -62669,7 +62822,7 @@ and limitations under the License.
               this.props.onOK(), this.props.closeModal();
             }),
             (t.prototype.componentDidMount = function() {
-              var e = Fs.findDOMNode(this);
+              var e = Os.findDOMNode(this);
               if (e) {
                 var t = e.querySelector("button[type=submit]");
                 t && t.focus();
@@ -62689,22 +62842,22 @@ and limitations under the License.
                     onSubmit: this.OK,
                     bCenterVertically: !0
                   },
-                  br.createElement(xs, null, this.props.strTitle),
+                  br.createElement(Us, null, this.props.strTitle),
                   br.createElement(
-                    Vs,
+                    qs,
                     null,
                     br.createElement(
-                      Ws,
+                      Hs,
                       null,
                       this.props.strDescription,
                       this.props.children
                     )
                   ),
                   br.createElement(
-                    js,
+                    Ws,
                     null,
                     !this.props.bAlertDialog &&
-                      br.createElement(D, {
+                      br.createElement(N, {
                         onCancel: this.Cancel,
                         strOKText: this.props.strOKButtonText,
                         strCancelText: this.props.strCancelButtonText
@@ -62720,7 +62873,7 @@ and limitations under the License.
             t
           );
         })(br.Component)),
-        Zd = (function(e) {
+        ep = (function(e) {
           function t(t, i, n, r, o) {
             var a =
               e.call(this, n, {
@@ -62729,7 +62882,7 @@ and limitations under the License.
                 body_class: "fullheight",
                 owner_window: void 0,
                 replace_existing_popup: !0,
-                target_browser: i != xp ? i : void 0,
+                target_browser: i != Wp ? i : void 0,
                 availscreenwidth: t.screen.availWidth,
                 availscreenheight: t.screen.availHeight
               }) || this;
@@ -62773,7 +62926,7 @@ and limitations under the License.
             (t.prototype.Render = function(e, t) {
               t.setAttribute("class", "fullheight popup_chat_frame"),
                 this.m_modalElement &&
-                  Fs.render(
+                  Os.render(
                     br.createElement(
                       Re,
                       { popup: e, browserContext: this.m_browserContext },
@@ -62784,8 +62937,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Cs.a),
-        Qd = (function() {
+        })(Ms.a),
+        tp = (function() {
           function e(e) {
             (this.m_bRestoredPopupState = !1),
               (this.m_vecShowGroupsAfterRestorePopup = []),
@@ -62798,13 +62951,13 @@ and limitations under the License.
           }
           return (
             (e.prototype.GetRootChatPerContextData = function() {
-              return this.GetPerContextChatData(xp);
+              return this.GetPerContextChatData(Wp);
             }),
             (e.prototype.Init = function() {
               var e = this;
-              Up.AddPopupManagerShutdownCallback(this.SerializePopupState),
+              Hp.AddPopupManagerShutdownCallback(this.SerializePopupState),
                 Object(pt.autorun)(function() {
-                  var t = Up.ParentalStore.BIsFriendsBlocked();
+                  var t = Hp.ParentalStore.BIsFriendsBlocked();
                   e.OnFriendsParentalLockChanged(t);
                 });
             }),
@@ -62835,7 +62988,7 @@ and limitations under the License.
               ie(e, t, i, n, !1, r);
             }),
             (e.prototype.ShowAndOrActivateChat = function(e, t, i) {
-              if (t instanceof cs) {
+              if (t instanceof us) {
                 var n = this.m_chatStore.GetChatRoomGroup(t.GetParentGroupID());
                 if (!n)
                   return void AssertMsg(!1, "Can't find group for chat room ");
@@ -62866,7 +63019,7 @@ and limitations under the License.
             }),
             (e.prototype.ShowUnackedGroup = function(e) {
               this.m_bRestoredPopupState
-                ? this.ShowAndOrActivateChatRoomGroup(xp, e, !1)
+                ? this.ShowAndOrActivateChatRoomGroup(Wp, e, !1)
                 : this.m_vecShowGroupsAfterRestorePopup.push(e);
             }),
             (e.prototype.CloseTabByID = function(e, t) {
@@ -62882,7 +63035,7 @@ and limitations under the License.
                 r = Je(e),
                 o = this.m_chatStore.FindNamelessChatGroupWithFriends(i);
               if (o) return void this.ReplaceFriendChatWithGroup(r, t, o);
-              Up.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
+              Hp.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
                 if (!i)
                   return void Ee(
                     e,
@@ -62927,7 +63080,7 @@ and limitations under the License.
                 t.OnTabClosed(),
                 n.BIsDefaultTabSetInWindow() &&
                   0 == n.default_tabset.tabCount &&
-                  n.responsive_window_state.SetActiveView($c.FriendsList);
+                  n.responsive_window_state.SetActiveView(tl.FriendsList);
             }),
             (e.prototype.GetResponsiveWindowState = function(e) {
               return this.GetPerContextChatData(e).responsive_window_state;
@@ -62946,7 +63099,7 @@ and limitations under the License.
                 o = this.GetTabSetByUniqueID(r, t);
               if (o) i && o.tabSet.ActivateTab(o.tab), (n = o.tab);
               else {
-                var a = Up.SettingsStore.BAlwaysShowChatsInNewWindow();
+                var a = Hp.SettingsStore.BAlwaysShowChatsInNewWindow();
                 if (
                   !tt.a.USE_POPUPS ||
                   (!a && r.default_tabset.is_popup_active)
@@ -62963,7 +63116,7 @@ and limitations under the License.
                     s != r.default_tabset ||
                     (r.BIsDefaultTabSetInPopup() && !s.is_popup_active)
                   ) {
-                    var c = Up.CreateChatPopup(
+                    var c = Hp.CreateChatPopup(
                       e,
                       this.GetNextChatPopupID(),
                       s,
@@ -62976,7 +63129,7 @@ and limitations under the License.
                 }
               }
               return (
-                n && i && r.responsive_window_state.SetActiveView($c.Chat), n
+                n && i && r.responsive_window_state.SetActiveView(tl.Chat), n
               );
             }),
             (e.prototype.GetTabSetByUniqueID = function(e, t) {
@@ -62999,7 +63152,7 @@ and limitations under the License.
             (e.prototype.GetAppPopupForChat = function(e) {
               var t = this.GetRootChatPerContextData(),
                 i = null;
-              if (e instanceof cs) {
+              if (e instanceof us) {
                 var n = this.m_chatStore.GetChatRoomGroup(e.GetParentGroupID());
                 n && (i = this.GetTabSetByUniqueID(t, n.unique_id));
               } else i = this.GetTabSetByUniqueID(t, e.unique_id);
@@ -63020,9 +63173,9 @@ and limitations under the License.
               if (!i) {
                 var n = !0;
                 0 != e.m_unPID &&
-                  void 0 != Sm &&
-                  (n = Sm.OverlayStore().HasOverlayInstance(e.m_unPID)),
-                  (i = new ip(e)),
+                  void 0 != Om &&
+                  (n = Om.OverlayStore().HasOverlayInstance(e.m_unPID)),
+                  (i = new op(e)),
                   n
                     ? this.m_mapChatBrowserContexts.set(e.m_unPID, i)
                     : AssertMsg(
@@ -63056,7 +63209,7 @@ and limitations under the License.
                 ((this.m_bSuppressBrowserContextBroadcasting = !0),
                 this.m_mapChatBrowserContexts.forEach(function(n) {
                   if (!Te(n.browser_context, e)) {
-                    var r = n.browser_context != xp;
+                    var r = n.browser_context != Wp;
                     i.ShowAndOrActivateTabByID(n.browser_context, t, r);
                   }
                 }),
@@ -63067,7 +63220,7 @@ and limitations under the License.
               t
             ) {
               if (!this.m_bSuppressBrowserContextBroadcasting) {
-                if (Te(e, xp))
+                if (Te(e, Wp))
                   return void this.BroadcastCloseTabToAllBrowserContexts_Internal(
                     e,
                     t
@@ -63097,14 +63250,14 @@ and limitations under the License.
                 o = t.match(/^f(\d+)$/);
               if (o && o[1]) {
                 var a = parseInt(o[1]),
-                  s = Up.FriendStore.GetPlayer(a);
+                  s = Hp.FriendStore.GetPlayer(a);
                 if (s && !s.is_blocked) {
                   var c = this.m_chatStore.GetFriendChat(a);
                   c &&
-                    ((r = new Ms(e, c)),
+                    ((r = new ws(e, c)),
                     !n ||
                       s.is_friend ||
-                      Up.FriendStore.BApprovedNonFriendMessages(a) ||
+                      Hp.FriendStore.BApprovedNonFriendMessages(a) ||
                       c.SetShowNonFriendWarning(!0));
                 }
               }
@@ -63118,7 +63271,7 @@ and limitations under the License.
                         u.GetGroupID(),
                         this.m_bRestoredPopupState
                       ),
-                    (r = new ps(e, u)));
+                    (r = new ms(e, u)));
                 }
               }
               return r
@@ -63136,7 +63289,7 @@ and limitations under the License.
             }),
             (e.prototype.SetDefaultChatDestination = function(e, t) {
               this.GetPerContextChatData(e).SetDefaultTabSet(
-                t ? ep.Window : ep.Popup
+                t ? np.Window : np.Popup
               );
             }),
             (e.prototype.BIsDockedFriendsList = function(e) {
@@ -63151,7 +63304,7 @@ and limitations under the License.
                 var i = t.GetPopupForTabSet(t.default_tabset);
                 return (
                   i ||
-                  ((i = Up.CreateChatPopup(
+                  ((i = Hp.CreateChatPopup(
                     e,
                     this.GetNextChatPopupID(),
                     t.default_tabset,
@@ -63210,7 +63363,7 @@ and limitations under the License.
                   (t.friends_list_window
                     ? t.friends_list_window.BringToFront()
                     : t.BIsDefaultTabSetInWindow() &&
-                      Up.ShowPopupFriendsList(e.GetBrowserContext()));
+                      Hp.ShowPopupFriendsList(e.GetBrowserContext()));
             }),
             (e.prototype.MoveTabToNewPopup = function(e, t, i, n) {
               AssertMsg(e, "browserContext");
@@ -63220,7 +63373,7 @@ and limitations under the License.
               });
               var o = new fr(e);
               o.AddTab(t);
-              var a = Up.CreateChatPopup(
+              var a = Hp.CreateChatPopup(
                 e,
                 this.GetNextChatPopupID(),
                 o,
@@ -63247,10 +63400,10 @@ and limitations under the License.
             (e.prototype.SerializePopupState = function(e) {
               if (
                 (void 0 === e && (e = !1),
-                this.m_bRestoredPopupState && Up.SettingsStore.BReady())
+                this.m_bRestoredPopupState && Hp.SettingsStore.BReady())
               ) {
                 var t = this.SerializePopupStateToObject(e);
-                Up.SettingsStore.StoreObjectInLocalStorage(
+                Hp.SettingsStore.StoreObjectInLocalStorage(
                   "ChatStorePopupState",
                   t
                 );
@@ -63258,7 +63411,7 @@ and limitations under the License.
             }),
             (e.prototype.SerializePopupStateToObject = function(e) {
               for (
-                var t = this.GetPerContextChatData(xp),
+                var t = this.GetPerContextChatData(Wp),
                   i = {
                     window_restore_details:
                       t.cached_popup_window_restore_details,
@@ -63287,10 +63440,10 @@ and limitations under the License.
               );
             }),
             (e.prototype.BRestorePopups = function() {
-              return Up.SettingsStore.BAlwaysShowChatsInNewWindow();
+              return Hp.SettingsStore.BAlwaysShowChatsInNewWindow();
             }),
             (e.prototype.BRestoreOpenChats = function() {
-              return Up.SettingsStore.FriendsSettings.bRememberOpenChats;
+              return Hp.SettingsStore.FriendsSettings.bRememberOpenChats;
             }),
             (e.prototype.DeserializeIntoTabSet = function(e, t) {
               if (t.tabs && Array.isArray(t.tabs))
@@ -63308,9 +63461,9 @@ and limitations under the License.
                 !this.m_bRestoredPopupState,
                 "Second restore popup state"
               ),
-                Up.ParentalStore.BIsFriendsBlocked() ||
+                Hp.ParentalStore.BIsFriendsBlocked() ||
                   (void 0 == this.m_stateToRestoreFrom
-                    ? Up.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                    ? Hp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                         "ChatStorePopupState"
                       ).then(function(t) {
                         e.RestoreFromStateObject(t);
@@ -63319,7 +63472,7 @@ and limitations under the License.
                       (this.m_stateToRestoreFrom = void 0)));
             }),
             (e.prototype.RestoreFromStateObject = function(e) {
-              var t = this.GetPerContextChatData(xp);
+              var t = this.GetPerContextChatData(Wp);
               if (
                 (AssertMsg(t.BIsEmpty(), "Restoring to non-empty context"),
                 !t.BIsEmpty())
@@ -63338,13 +63491,13 @@ and limitations under the License.
                 if (this.BRestorePopups())
                   for (var n = 0, r = e.popups; n < r.length; n++) {
                     var o = r[n],
-                      i = new fr(xp);
+                      i = new fr(Wp);
                     if ((this.DeserializeIntoTabSet(i, o), i.tabCount > 0)) {
                       0 == t.default_tabset.tabCount &&
                         ((i = t.default_tabset),
                         this.DeserializeIntoTabSet(i, o));
-                      var a = Up.CreateChatPopup(
-                        Up.GetDefaultBrowserContext(),
+                      var a = Hp.CreateChatPopup(
+                        Hp.GetDefaultBrowserContext(),
                         this.GetNextChatPopupID(),
                         i,
                         void 0,
@@ -63362,14 +63515,14 @@ and limitations under the License.
                   }
               tt.a.USE_POPUPS &&
                 e.bFriendsListVisible &&
-                Up.ShowPopupFriendsList(xp);
+                Hp.ShowPopupFriendsList(Wp);
               for (
                 var l = 0, u = this.m_vecShowGroupsAfterRestorePopup;
                 l < u.length;
                 l++
               ) {
                 var d = u[l];
-                this.ShowAndOrActivateChatRoomGroup(xp, d, !1);
+                this.ShowAndOrActivateChatRoomGroup(Wp, d, !1);
               }
               (this.m_vecShowGroupsAfterRestorePopup = []),
                 (this.m_bRestoredPopupState = !0),
@@ -63385,7 +63538,7 @@ and limitations under the License.
             e
           );
         })(),
-        $d = (function() {
+        ip = (function() {
           function e(e, t) {
             (this.m_bShown = !1), (this.m_popup = e), (this.m_chatPopup = t);
           }
@@ -63411,7 +63564,7 @@ and limitations under the License.
               this.m_chatPopup.ClearTabSet();
             }),
             (e.prototype.IsSameBrowserContext = function(e) {
-              var t = this.m_popup.GetBrowserContext() || xp;
+              var t = this.m_popup.GetBrowserContext() || Wp;
               return e.m_nBrowserID == t.m_nBrowserID && e.m_unPID == t.m_unPID;
             }),
             e
@@ -63419,11 +63572,11 @@ and limitations under the License.
         })();
       !(function(e) {
         (e[(e.FriendsList = 0)] = "FriendsList"), (e[(e.Chat = 1)] = "Chat");
-      })($c || ($c = {}));
-      var ep,
-        tp = (function() {
+      })(tl || (tl = {}));
+      var np,
+        rp = (function() {
           function e() {
-            this.m_eActiveView = $c.FriendsList;
+            this.m_eActiveView = tl.FriendsList;
           }
           return (
             (e.prototype.GetActiveView = function() {
@@ -63438,16 +63591,16 @@ and limitations under the License.
         })();
       !(function(e) {
         (e[(e.Window = 0)] = "Window"), (e[(e.Popup = 1)] = "Popup");
-      })(ep || (ep = {}));
-      var ip = (function() {
+      })(np || (np = {}));
+      var op = (function() {
           function e(e) {
             (this.m_browserContext = e),
-              (this.m_eDestination = ep.Window),
+              (this.m_eDestination = np.Window),
               (this.m_DefaultTabSet = new fr(e)),
               (this.m_FriendsListWindow = void 0),
               (this.m_PopupWindowRestoreDetails = void 0),
               (this.m_mapTabSetToPopup = new Map()),
-              (this.m_ResponsiveWindowState = new tp());
+              (this.m_ResponsiveWindowState = new rp());
           }
           return (
             (e.prototype.BIsEmpty = function() {
@@ -63458,10 +63611,10 @@ and limitations under the License.
               );
             }),
             (e.prototype.BIsDefaultTabSetInWindow = function() {
-              return this.m_eDestination == ep.Window;
+              return this.m_eDestination == np.Window;
             }),
             (e.prototype.BIsDefaultTabSetInPopup = function() {
-              return this.m_eDestination == ep.Popup;
+              return this.m_eDestination == np.Popup;
             }),
             (e.prototype.SetDefaultTabSet = function(e) {
               this.m_eDestination = e;
@@ -63597,7 +63750,7 @@ and limitations under the License.
             e
           );
         })(),
-        np = (function() {
+        ap = (function() {
           function e() {
             (this.enabled = !1),
               (this.locked = !1),
@@ -63616,7 +63769,7 @@ and limitations under the License.
             e
           );
         })(),
-        rp = (function() {
+        sp = (function() {
           function e() {
             (this.broadcastid = "0"),
               (this.nViewers = 0),
@@ -63627,7 +63780,7 @@ and limitations under the License.
           }
           return e;
         })(),
-        op = (function() {
+        cp = (function() {
           function e() {
             (this.nKeyCode = 0),
               (this.bAltKey = !1),
@@ -63637,10 +63790,10 @@ and limitations under the License.
           }
           return e;
         })(),
-        ap = (function() {
+        lp = (function() {
           function e() {
-            (this.InGameOverlayScreenshotHotKey = new op()),
-              (this.InGameOverlayShortcutKey = new op());
+            (this.InGameOverlayScreenshotHotKey = new cp()),
+              (this.InGameOverlayShortcutKey = new cp());
           }
           return e;
         })();
@@ -63650,15 +63803,15 @@ and limitations under the License.
           return e;
         })();
         e.FriendsSettings = t;
-      })(ap || (ap = {}));
-      var sp;
+      })(lp || (lp = {}));
+      var up;
       !(function(e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
           (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
             "k_EClientUINotificationFriendChatMessage");
-      })(sp || (sp = {}));
-      var cp;
+      })(up || (up = {}));
+      var dp;
       !(function(e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -63666,9 +63819,9 @@ and limitations under the License.
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(cp || (cp = {}));
-      var lp,
-        up = (function() {
+      })(dp || (dp = {}));
+      var pp,
+        hp = (function() {
           function e() {}
           return e;
         })();
@@ -63676,9 +63829,9 @@ and limitations under the License.
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(lp || (lp = {}));
-      var dp,
-        pp = (function() {
+      })(pp || (pp = {}));
+      var mp,
+        gp = (function() {
           function e(e) {
             var t = this;
             (this.m_bReady = !1),
@@ -63686,7 +63839,7 @@ and limitations under the License.
               (this.m_rgOnReadyCallbacks = []),
               (this.m_bFriendSettingsReady = !1),
               (this.m_CommunityPreferencesChangedHandler = l(
-                na.NotifyCommunityPreferencesChangedHandler,
+                oa.NotifyCommunityPreferencesChangedHandler,
                 function(e) {
                   return (
                     t.UpdateCommunityPreferences(e.Body().preferences()), 1
@@ -63695,16 +63848,16 @@ and limitations under the License.
               )),
               (this.m_Storage = e),
               tt.a.IN_CLIENT
-                ? (this.m_iFriendSettingsStore = new mp(
+                ? (this.m_iFriendSettingsStore = new _p(
                     this,
                     this.OnFriendSettingsChanged.bind(this)
                   ))
-                : (this.m_iFriendSettingsStore = new gp(
+                : (this.m_iFriendSettingsStore = new yp(
                     this,
                     this.OnFriendSettingsChanged.bind(this)
                   )),
-              (this.m_CommunityPreferences = new up());
-            var i = new qo();
+              (this.m_CommunityPreferences = new hp());
+            var i = new Yo();
             (this.m_CommunityPreferences.bHideAdultContentViolence = i.hide_adult_content_violence()),
               (this.m_CommunityPreferences.bHideAdultContentSex = i.hide_adult_content_sex()),
               (this.m_CommunityPreferences.bParenthesizeNicknames = i.parenthesize_nicknames()),
@@ -63717,8 +63870,8 @@ and limitations under the License.
                 this.m_CM.AddOnLogonCallback(function() {
                   t.m_bReady ||
                     (t.m_iFriendSettingsStore.InternalInit(), t.SetReady());
-                  var e = dt.Init(Ko);
-                  return Kr.GetCommunityPreferences(
+                  var e = dt.Init(Jo);
+                  return Jr.GetCommunityPreferences(
                     t.m_CM.GetServiceTransport(),
                     e
                   ).then(function(e) {
@@ -63848,7 +64001,7 @@ and limitations under the License.
                 (this.m_CommunityPreferences = t);
             }),
             (e.prototype.CommunityPreferencesToMessage = function(e) {
-              var t = new qo();
+              var t = new Yo();
               return (
                 t.set_hide_adult_content_violence(e.bHideAdultContentViolence),
                 t.set_hide_adult_content_sex(e.bHideAdultContentSex),
@@ -63888,7 +64041,7 @@ and limitations under the License.
                   }
                 }
               if (e) {
-                var r = dt.Init(Jo);
+                var r = dt.Init(Zo);
                 r
                   .Body()
                   .set_preferences(
@@ -63896,7 +64049,7 @@ and limitations under the License.
                       this.CommunityPreferences
                     )
                   ),
-                  Kr.SetCommunityPreferences(
+                  Jr.SetCommunityPreferences(
                     this.m_CM.GetServiceTransport(),
                     r
                   ).then(function(e) {});
@@ -63916,13 +64069,13 @@ and limitations under the License.
             e
           );
         })(),
-        hp = (function() {
+        fp = (function() {
           function e(e, t) {
             (this.m_SettingsStore = e), (this.m_fnFriendSettingsChanged = t);
           }
           return e;
         })(),
-        mp = (function(e) {
+        _p = (function(e) {
           function t(t, i) {
             var n = e.call(this, t, i) || this;
             return (n.m_bClientInitComplete = !1), n.InternalInit(), n;
@@ -63955,8 +64108,8 @@ and limitations under the License.
             }),
             t
           );
-        })(hp),
-        gp = (function(e) {
+        })(fp),
+        yp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -63975,7 +64128,7 @@ and limitations under the License.
             }),
             (t.prototype.GetDefaultSettings = function() {
               return {
-                friendsSettings: Object.assign(new ap.FriendsSettings(), {
+                friendsSettings: Object.assign(new lp.FriendsSettings(), {
                   bNotifications_ShowMessage: !0,
                   bSounds_PlayMessage: !0,
                   bCompactQuickAccess: !1,
@@ -63997,8 +64150,8 @@ and limitations under the License.
             (t.k_strLocalStorageKeyPrefix = "LocalStorageFriendsSettings"),
             t
           );
-        })(hp),
-        fp = (function(e) {
+        })(fp),
+        vp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64059,7 +64212,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        _p = (function(e) {
+        bp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64086,22 +64239,22 @@ and limitations under the License.
               ot.Message.setField(this, 3, e);
             }),
             (t.prototype.applist_base = function() {
-              return ot.Message.getRepeatedWrapperField(this, fp, 4);
+              return ot.Message.getRepeatedWrapperField(this, vp, 4);
             }),
             (t.prototype.set_applist_base = function(e) {
               ot.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (t.prototype.add_applist_base = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 4, e, fp, t);
+              return ot.Message.addToRepeatedWrapperField(this, 4, e, vp, t);
             }),
             (t.prototype.applist_custom = function() {
-              return ot.Message.getRepeatedWrapperField(this, fp, 5);
+              return ot.Message.getRepeatedWrapperField(this, vp, 5);
             }),
             (t.prototype.set_applist_custom = function(e) {
               ot.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (t.prototype.add_applist_custom = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 5, e, fp, t);
+              return ot.Message.addToRepeatedWrapperField(this, 5, e, vp, t);
             }),
             (t.prototype.passwordhashtype = function() {
               return ot.Message.getField(this, 6);
@@ -64163,13 +64316,13 @@ and limitations under the License.
                     e.set_applist_base_description(t.readString());
                     break;
                   case 4:
-                    var i = new fp();
-                    t.readMessage(i, fp.deserializeBinaryFromReader),
+                    var i = new vp();
+                    t.readMessage(i, vp.deserializeBinaryFromReader),
                       e.add_applist_base(i);
                     break;
                   case 5:
-                    var i = new fp();
-                    t.readMessage(i, fp.deserializeBinaryFromReader),
+                    var i = new vp();
+                    t.readMessage(i, vp.deserializeBinaryFromReader),
                       e.add_applist_custom(i);
                     break;
                   case 6:
@@ -64209,10 +64362,10 @@ and limitations under the License.
                 void 0 !== i && t.writeString(3, i),
                 (i = e.applist_base()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(4, i, fp.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, vp.serializeBinaryToWriter),
                 (i = e.applist_custom()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(5, i, fp.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, vp.serializeBinaryToWriter),
                 (i = ot.Message.getField(e, 6)),
                 void 0 !== i && t.writeUint32(6, i),
                 (i = ot.Message.getField(e, 7)),
@@ -64232,7 +64385,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        yp = (ot.Message,
+        Cp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64268,7 +64421,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        vp = (ot.Message,
+        Sp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64304,7 +64457,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        bp = (function(e) {
+        Mp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64355,7 +64508,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Cp = (function(e) {
+        Fp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64364,7 +64517,7 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.settings = function() {
-              return ot.Message.getWrapperField(this, _p, 1, 1);
+              return ot.Message.getWrapperField(this, bp, 1, 1);
             }),
             (t.prototype.set_settings = function(e) {
               ot.Message.setWrapperField(this, 1, e);
@@ -64384,8 +64537,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new _p();
-                    t.readMessage(i, _p.deserializeBinaryFromReader),
+                    var i = new bp();
+                    t.readMessage(i, bp.deserializeBinaryFromReader),
                       e.set_settings(i);
                     break;
                   default:
@@ -64400,7 +64553,7 @@ and limitations under the License.
             (t.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.settings()) &&
-                t.writeMessage(1, i, _p.serializeBinaryToWriter);
+                t.writeMessage(1, i, bp.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CParental_GetParentalSettings_Response";
@@ -64408,7 +64561,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Sp = (ot.Message,
+        wp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64471,7 +64624,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Mp = (ot.Message,
+        Op = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64507,7 +64660,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Fp = (function(e) {
+        Bp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64557,7 +64710,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        wp = (function(e) {
+        Rp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64592,7 +64745,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Op = (function(e) {
+        Ip = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64664,7 +64817,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Bp = (function(e) {
+        Ep = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64714,7 +64867,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Rp = (ot.Message,
+        kp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64750,7 +64903,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Ip = (ot.Message,
+        Tp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64786,7 +64939,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Ep = (ot.Message,
+        Gp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64822,7 +64975,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        kp = (function(e) {
+        Dp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64906,7 +65059,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Tp = (function(e) {
+        Np = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64968,7 +65121,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Gp = (function(e) {
+        Ap = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65020,34 +65173,34 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Parental.EnableParentalSettings#1", t, yp);
+          return e.SendMsg("Parental.EnableParentalSettings#1", t, Cp);
         }
         function i(e, t) {
-          return e.SendMsg("Parental.DisableParentalSettings#1", t, vp);
+          return e.SendMsg("Parental.DisableParentalSettings#1", t, Sp);
         }
         function n(e, t) {
-          return e.SendMsg("Parental.GetParentalSettings#1", t, Cp);
+          return e.SendMsg("Parental.GetParentalSettings#1", t, Fp);
         }
         function r(e, t) {
-          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, Sp);
+          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, wp);
         }
         function o(e, t) {
-          return e.SendMsg("Parental.SetParentalSettings#1", t, Mp);
+          return e.SendMsg("Parental.SetParentalSettings#1", t, Op);
         }
         function a(e, t) {
-          return e.SendMsg("Parental.ValidateToken#1", t, wp);
+          return e.SendMsg("Parental.ValidateToken#1", t, Rp);
         }
         function s(e, t) {
-          return e.SendMsg("Parental.ValidatePassword#1", t, Bp);
+          return e.SendMsg("Parental.ValidatePassword#1", t, Ep);
         }
         function c(e, t) {
-          return e.SendMsg("Parental.LockClient#1", t, Rp);
+          return e.SendMsg("Parental.LockClient#1", t, kp);
         }
         function l(e, t) {
-          return e.SendMsg("Parental.RequestRecoveryCode#1", t, Ip);
+          return e.SendMsg("Parental.RequestRecoveryCode#1", t, Tp);
         }
         function u(e, t) {
-          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, Ep);
+          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, Gp);
         }
         (e.EnableParentalSettings = t),
           (e.DisableParentalSettings = i),
@@ -65059,27 +65212,27 @@ and limitations under the License.
           (e.LockClient = c),
           (e.RequestRecoveryCode = l),
           (e.DisableWithRecoveryCode = u);
-      })(dp || (dp = {}));
-      var Np;
+      })(mp || (mp = {}));
+      var Pp;
       !(function(e) {
         (e.NotifySettingsChangeHandler = {
           name: "ParentalClient.NotifySettingsChange#1",
-          request: kp
+          request: Dp
         }),
           (e.NotifyUnlockHandler = {
             name: "ParentalClient.NotifyUnlock#1",
-            request: Tp
+            request: Np
           }),
           (e.NotifyLockHandler = {
             name: "ParentalClient.NotifyLock#1",
-            request: Gp
+            request: Ap
           });
-      })(Np || (Np = {}));
-      var Dp = (function() {
+      })(Pp || (Pp = {}));
+      var zp = (function() {
           function e() {
             var e = this;
-            (this.m_ParentalState = new np()),
-              (this.m_ParentalLockHandler = l(Np.NotifyLockHandler, function(
+            (this.m_ParentalState = new ap()),
+              (this.m_ParentalLockHandler = l(Pp.NotifyLockHandler, function(
                 t
               ) {
                 return (
@@ -65088,7 +65241,7 @@ and limitations under the License.
                 );
               })),
               (this.m_ParentalUnlockHandler = l(
-                Np.NotifyUnlockHandler,
+                Pp.NotifyUnlockHandler,
                 function(t) {
                   return (
                     tt.a.SESSIONID == t.Body().sessionid() &&
@@ -65098,7 +65251,7 @@ and limitations under the License.
                 }
               )),
               (this.m_ParentalSettingsChangeHandler = l(
-                Np.NotifySettingsChangeHandler,
+                Pp.NotifySettingsChangeHandler,
                 function(e) {
                   return 1;
                 }
@@ -65115,7 +65268,7 @@ and limitations under the License.
               var t = this;
               (this.m_CMInterface = e),
                 this.m_CMInterface.RunWhenLoggedOn(function() {
-                  var e = dt.Init(bp);
+                  var e = dt.Init(Mp);
                   e
                     .Body()
                     .set_steamid(
@@ -65127,7 +65280,7 @@ and limitations under the License.
                             return t.UpdateParentalState(e);
                           }
                         )
-                      : dp
+                      : mp
                           .GetParentalSettings(
                             t.m_CMInterface.GetServiceTransport(),
                             e
@@ -65148,7 +65301,7 @@ and limitations under the License.
                 });
             }),
             (e.prototype.MsgParentalSettingsToParentalState = function(e) {
-              var t = new np();
+              var t = new ap();
               (t.enabled = e.is_enabled()),
                 (t.features = e.enabled_features()),
                 (t.baselist = {});
@@ -65210,11 +65363,11 @@ and limitations under the License.
               var n = i[2],
                 r = n.split("||");
               n = 2 == r.length ? r[1] : r[0];
-              var o = dt.Init(Fp);
+              var o = dt.Init(Bp);
               return (
                 o.Body().set_unlock_token(t + "||" + n),
                 new Promise(function(t, i) {
-                  dp
+                  mp
                     .ValidateToken(e.m_CMInterface.GetServiceTransport(), o)
                     .then(function(e) {
                       t(1 == e.GetEResult());
@@ -65248,13 +65401,13 @@ and limitations under the License.
                     t(e);
                   });
                 });
-              var i = dt.Init(Op);
+              var i = dt.Init(Ip);
               return (
                 i.Body().set_password(e),
                 i.Body().set_session(tt.a.SESSIONID),
                 i.Body().set_send_unlock_on_success(!0),
                 new Promise(function(e, n) {
-                  dp
+                  mp
                     .ValidatePassword(t.m_CMInterface.GetServiceTransport(), i)
                     .then(function(t) {
                       if (1 == t.GetEResult()) {
@@ -65275,9 +65428,9 @@ and limitations under the License.
             e
           );
         })(),
-        Ap = (function() {
+        xp = (function() {
           function e() {
-            (this.m_status = new rp()),
+            (this.m_status = new sp()),
               (this.m_mapPendingRequests = new pt.ObservableMap()),
               (this.m_nRequestID = 1);
           }
@@ -65336,16 +65489,16 @@ and limitations under the License.
               ((this.m_status.bIsBroadcasting && !e.bIsBroadcasting) ||
                 ("0" != this.m_status.broadcastid && "0" == e.broadcastid)) &&
                 this.m_mapPendingRequests.forEach(function(e, t, i) {
-                  e == lp.k_EPending && i.delete(t);
+                  e == pp.k_EPending && i.delete(t);
                 }),
                 (this.m_status = e);
             }),
             (e.prototype.OnViewerRequest = function(e, t, i) {
-              if (i == lp.k_EPending) {
+              if (i == pp.k_EPending) {
                 var n = this.m_nRequestID++;
                 this.m_mapPendingRequests.set(this.MakeKey(e, n), i);
-                var r = Up.GetDefaultBrowserContext(),
-                  o = Up.ShowFriendChatDialog(r, e);
+                var r = Hp.GetDefaultBrowserContext(),
+                  o = Hp.ShowFriendChatDialog(r, e);
                 o && o.ViewerNeedsApproval(n);
               } else this.m_mapPendingRequests.set(this.MakeKey(e, t), i);
             }),
@@ -65386,38 +65539,38 @@ and limitations under the License.
             e
           );
         })(),
-        Pp = (function() {
-          function e() {}
-          return e;
-        })();
-      Pp || (Pp = {});
-      var zp,
         Lp = (function() {
           function e() {}
           return e;
+        })();
+      Lp || (Lp = {});
+      var jp,
+        Up = (function() {
+          function e() {}
+          return e;
         })(),
-        xp = { m_unPID: 0, m_nBrowserID: -1 },
-        jp = (function() {
+        Wp = { m_unPID: 0, m_nBrowserID: -1 },
+        Vp = (function() {
           function e(e) {
-            (this.m_BrowserContextDefaultTarget = xp),
-              (this.m_FriendStore = new Ya()),
-              (this.m_ChatStore = new Ss(this.m_FriendStore)),
-              (this.m_UIStore = new Qd(this.m_ChatStore)),
+            (this.m_BrowserContextDefaultTarget = Wp),
+              (this.m_FriendStore = new Xa()),
+              (this.m_ChatStore = new Fs(this.m_FriendStore)),
+              (this.m_UIStore = new tp(this.m_ChatStore)),
               (this.m_AppInfoStore = new ui()),
-              (this.m_EconomyStore = new Hr()),
-              (this.m_ParentalStore = new Dp()),
-              (this.m_BroadcastStore = new Ap()),
+              (this.m_EconomyStore = new Kr()),
+              (this.m_ParentalStore = new zp()),
+              (this.m_BroadcastStore = new xp()),
               (this.m_bReadyToRender = !1),
               (this.m_bShuttingDown = !1),
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              AssertMsg(!Up, "FriendsUIApp already initialized"),
-              (Up = this),
+              AssertMsg(!Hp, "FriendsUIApp already initialized"),
+              (Hp = this),
               (window.g_FriendsUIApp = this),
               (this.m_Storage = e),
-              (this.m_SettingsStore = new pp(e)),
-              (this.m_VoiceChatStore = new al(this.m_SettingsStore));
+              (this.m_SettingsStore = new gp(e)),
+              (this.m_VoiceChatStore = new cl(this.m_SettingsStore));
           }
           return (
             (e.prototype.InitInternal = function(e, t, i) {
@@ -65623,8 +65776,8 @@ and limitations under the License.
             e
           );
         })(),
-        Up = void 0,
-        Wp = (function(e) {
+        Hp = void 0,
+        qp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65633,7 +65786,7 @@ and limitations under the License.
             (t.prototype.AcceptInvite = function(e) {
               var t = this,
                 i = Ze(e);
-              Up.ChatStore.InviteStore.AcceptInvite(
+              Hp.ChatStore.InviteStore.AcceptInvite(
                 this.props.invite,
                 Ye(this, e)
               ).then(function(e) {
@@ -65643,7 +65796,7 @@ and limitations under the License.
             (t.prototype.HandleJoinResult = function(e, t) {
               if (15 == t.result) {
                 0 == t.time && console.log("no longer valid");
-                var i = Up.RTime32ToDate(t.time),
+                var i = Hp.RTime32ToDate(t.time),
                   n = i.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -65674,7 +65827,7 @@ and limitations under the License.
                 return br.createElement(
                   "div",
                   { className: "ChatMessageInvite RequestingInfo displayRow" },
-                  br.createElement(Ul, { size: "small" }),
+                  br.createElement(Vl, { size: "small" }),
                   br.createElement(
                     "div",
                     { className: "postedExpiredInvite" },
@@ -65693,8 +65846,8 @@ and limitations under the License.
                 );
               var t =
                   this.props.inviter &&
-                  Up.FriendStore.self.accountid == this.props.inviter.accountid,
-                i = Up.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
+                  Hp.FriendStore.self.accountid == this.props.inviter.accountid,
+                i = Hp.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
                 n = i && i.BIsCurrentUserAMember(),
                 r = e.BIsExpired(),
                 o = i && i.name,
@@ -65722,7 +65875,7 @@ and limitations under the License.
                   Object(hr.b)("#bbcode_invite_never_expires")
                 );
               else {
-                var h = Up.RTime32ToDate(e.time_expires);
+                var h = Hp.RTime32ToDate(e.time_expires);
                 p = br.createElement(
                   "div",
                   { className: "Invite_ExpireTime" },
@@ -65754,10 +65907,10 @@ and limitations under the License.
                   ));
               else if (
                 e.GetTimeKickExpires() &&
-                e.GetTimeKickExpires() > Up.GetServerRTime32()
+                e.GetTimeKickExpires() > Hp.GetServerRTime32()
               ) {
                 f = !0;
-                var h = Up.RTime32ToDate(e.GetTimeKickExpires()),
+                var h = Hp.RTime32ToDate(e.GetTimeKickExpires()),
                   _ = h.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -65780,9 +65933,9 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: "leftInviteContainer" },
-                  br.createElement(su, { group: i, small: y, large: v }),
+                  br.createElement(uu, { group: i, small: y, large: v }),
                   u &&
-                    br.createElement("div", null, br.createElement(Bs.L, null))
+                    br.createElement("div", null, br.createElement(Is.L, null))
                 ),
                 br.createElement(
                   "div",
@@ -65794,7 +65947,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "rightInviteContainerContent" },
-                    br.createElement(Vp, {
+                    br.createElement(Kp, {
                       invite: this.props.invite,
                       inviter: this.props.inviter,
                       invitee: this.props.invitee
@@ -65809,7 +65962,7 @@ and limitations under the License.
                       )
                     ),
                     l &&
-                      br.createElement(qp, {
+                      br.createElement(Jp, {
                         url: e.GetURL(),
                         bDisabled: e.BIsExpired()
                       }),
@@ -65844,18 +65997,18 @@ and limitations under the License.
               );
             }),
             it.b([Xt.a], t.prototype, "AcceptInvite", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Vp = Object(Os.observer)(function(e) {
+        Kp = Object(Rs.observer)(function(e) {
           var t = e.invite,
             i = e.inviter,
             n = e.invitee,
             r = t.BIsVoiceChatInvite(),
             o = t.BIsInviteLink(),
             a =
-              e.inviter && Up.FriendStore.self.accountid == e.inviter.accountid,
-            s = Up.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
+              e.inviter && Hp.FriendStore.self.accountid == e.inviter.accountid,
+            s = Hp.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
             c = Object(hr.b)("#bbcode_invite_youre_invited");
           return (
             a
@@ -65951,7 +66104,7 @@ and limitations under the License.
             br.createElement("div", { className: "inviteLabel" }, c)
           );
         }),
-        Hp = (function(e) {
+        Yp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65972,7 +66125,7 @@ and limitations under the License.
                   Oe,
                   { onEscKeypress: i },
                   br.createElement(
-                    Wp,
+                    qp,
                     it.a({}, r, { strClassName: n, onAccept: o })
                   )
                 )
@@ -65981,7 +66134,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        qp = (function(e) {
+        Jp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66020,7 +66173,7 @@ and limitations under the License.
                         onClick: this.CopyToClipboard,
                         title: Object(hr.b)("#Chat_Copy_Clipboard")
                       },
-                      br.createElement(Bs.g, null)
+                      br.createElement(Is.g, null)
                     )
                 )
               );
@@ -66030,7 +66183,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Kp = (function(e) {
+        Xp = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -66046,9 +66199,9 @@ and limitations under the License.
               he(Ye(this, e), this.props.gameInvite.appID, e);
             }),
             (t.prototype.render = function() {
-              var e = Up.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
+              var e = Hp.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
               if (!e) return null;
-              if (Up.FriendStore.self == this.props.inviter) {
+              if (Hp.FriendStore.self == this.props.inviter) {
                 var t = br.createElement(
                   "span",
                   { className: "inviteeNameLabel" },
@@ -66073,7 +66226,7 @@ and limitations under the License.
                 );
               }
               if (
-                Up.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
+                Hp.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
                   21600 ||
                 this.props.gameInvite.bDismissed ||
                 this.props.inviter.persona.m_unGamePlayedAppID !=
@@ -66127,12 +66280,12 @@ and limitations under the License.
                 n.persona.player_group_size > 0
               ) {
                 var a = n.persona.player_group;
-                Up.FriendStore.all_friends,
-                  (r = Up.FriendStore.FriendGroupStore.ingame_group.member_list.map(
+                Hp.FriendStore.all_friends,
+                  (r = Hp.FriendStore.FriendGroupStore.ingame_group.member_list.map(
                     function(e) {
                       return e != n && e.persona.player_group == a
                         ? (o--,
-                          br.createElement(ju, {
+                          br.createElement(Vu, {
                             key: e.accountid,
                             friend: e,
                             context: null
@@ -66225,7 +66378,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "closeButton", onClick: this.DismissInvite },
-                    br.createElement(Bs.O, null)
+                    br.createElement(Is.O, null)
                   )
                 )
               );
@@ -66233,10 +66386,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "AcceptGameInvite", null),
             it.b([Xt.a], t.prototype, "DismissInvite", null),
             it.b([Xt.a], t.prototype, "OnShowGameContextMenu", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Yp = (ot.Message,
+        Zp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66321,7 +66474,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Jp = (ot.Message,
+        Qp = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66357,7 +66510,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Xp = (ot.Message,
+        $p = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66453,7 +66606,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        Zp = (function(e) {
+        eh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -66515,7 +66668,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Qp = (function(e) {
+        th = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -66631,7 +66784,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        $p = (function(e) {
+        ih = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -66693,7 +66846,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        eh = (function(e) {
+        nh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -66755,7 +66908,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        th = (ot.Message,
+        rh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66917,7 +67070,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        ih = (ot.Message,
+        oh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66968,7 +67121,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        nh = (ot.Message,
+        ah = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67004,7 +67157,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        rh = (function(e) {
+        sh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67065,7 +67218,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        oh = (function(e) {
+        ch = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67116,7 +67269,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ah = (function(e) {
+        lh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67199,7 +67352,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        sh = (function(e) {
+        uh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67250,7 +67403,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        ch = (function(e) {
+        dh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67312,7 +67465,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        lh = (function(e) {
+        ph = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67407,7 +67560,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        uh = (ot.Message,
+        hh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67459,7 +67612,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        dh = (ot.Message,
+        mh = (ot.Message,
         ot.Message,
         (function(e) {
           function t(t) {
@@ -67534,7 +67687,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        ph = (ot.Message,
+        gh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67608,7 +67761,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        hh = (ot.Message,
+        fh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67644,7 +67797,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        mh = (ot.Message,
+        _h = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67680,7 +67833,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        gh = (ot.Message,
+        yh = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67690,13 +67843,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.persona_names = function() {
-              return ot.Message.getRepeatedWrapperField(this, fh, 1);
+              return ot.Message.getRepeatedWrapperField(this, vh, 1);
             }),
             (t.prototype.set_persona_names = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_persona_names = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, fh, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, vh, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -67713,8 +67866,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new fh();
-                    t.readMessage(i, fh.deserializeBinaryFromReader),
+                    var i = new vh();
+                    t.readMessage(i, vh.deserializeBinaryFromReader),
                       e.add_persona_names(i);
                     break;
                   default:
@@ -67730,7 +67883,7 @@ and limitations under the License.
               var i;
               (i = e.persona_names()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, fh.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, vh.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastChatUserNames_Response";
@@ -67738,7 +67891,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        fh = (function(e) {
+        vh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67802,31 +67955,31 @@ and limitations under the License.
         })(ot.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, Yp);
+          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, Zp);
         }
         function i(e, t) {
-          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, Jp);
+          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, Qp);
         }
         function n(e, t) {
-          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, Xp);
+          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, $p);
         }
         function r(e, t) {
           return e.SendNotification("Broadcast.NotifyBroadcastUploadStop#1", t);
         }
         function o(e, t) {
-          return e.SendMsg("Broadcast.WatchBroadcast#1", t, th);
+          return e.SendMsg("Broadcast.WatchBroadcast#1", t, rh);
         }
         function a(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, Qp);
+          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, th);
         }
         function s(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, eh);
+          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, nh);
         }
         function c(e, t) {
-          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, ih);
+          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, oh);
         }
         function l(e, t) {
-          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, nh);
+          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, ah);
         }
         function u(e, t) {
           return e.SendNotification(
@@ -67835,19 +67988,19 @@ and limitations under the License.
           );
         }
         function d(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, dh);
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, mh);
         }
         function p(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, ph);
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, gh);
         }
         function h(e, t) {
-          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, hh);
+          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, fh);
         }
         function m(e, t) {
-          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, mh);
+          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, _h);
         }
         function g(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, gh);
+          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, yh);
         }
         (e.BeginBroadcastSession = t),
           (e.EndBroadcastSession = i),
@@ -67864,40 +68017,40 @@ and limitations under the License.
           (e.MuteBroadcastChatUser = h),
           (e.RemoveUserChatText = m),
           (e.GetBroadcastChatUserNames = g);
-      })(zp || (zp = {}));
-      var _h;
+      })(jp || (jp = {}));
+      var bh;
       !(function(e) {
         (e.NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
-          request: rh
+          request: sh
         }),
           (e.NotifyWaitingBroadcastViewerHandler = {
             name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
-            request: oh
+            request: ch
           }),
           (e.NotifyStopBroadcastUploadHandler = {
             name: "BroadcastClient.NotifyStopBroadcastUpload#1",
-            request: ah
+            request: lh
           }),
           (e.NotifySessionClosedHandler = {
             name: "BroadcastClient.NotifySessionClosed#1",
-            request: sh
+            request: uh
           }),
           (e.NotifyViewerBroadcastInviteHandler = {
             name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-            request: uh
+            request: hh
           }),
           (e.NotifyBroadcastStatusHandler = {
             name: "BroadcastClient.NotifyBroadcastStatus#1",
-            request: ch
+            request: dh
           }),
           (e.SendThumbnailToRelayHandler = {
             name: "BroadcastClient.SendThumbnailToRelay#1",
-            request: lh
+            request: ph
           });
-      })(_h || (_h = {}));
-      var yh,
-        vh = (function(e) {
+      })(bh || (bh = {}));
+      var Ch,
+        Sh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -67917,7 +68070,7 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.componentDidMount = function() {
               this.props.broadcaster.accountid !=
-                Up.FriendStore.self.accountid &&
+                Hp.FriendStore.self.accountid &&
                 (this.props.broadcastid
                   ? this.PollForStatus()
                   : this.setState({ bExpired: !0 }));
@@ -67954,25 +68107,25 @@ and limitations under the License.
               }
             }),
             (t.prototype.FetchBroadcastStatus = function() {
-              var e = Up.CMInterface;
+              var e = Hp.CMInterface;
               if (e) {
-                var t = dt.Init(Zp);
+                var t = dt.Init(eh);
                 return (
                   t.Body().set_steamid(this.props.broadcaster.steamid64),
                   t.Body().set_broadcast_id(this.props.broadcastid),
-                  zp.GetBroadcastStatus(e.GetServiceTransport(), t)
+                  jp.GetBroadcastStatus(e.GetServiceTransport(), t)
                 );
               }
               return Promise.reject("No CM interface");
             }),
             (t.prototype.FetchBroadcastThumbnail = function() {
               var e = this,
-                t = Up.CMInterface;
+                t = Hp.CMInterface;
               if (t) {
-                var i = dt.Init($p);
+                var i = dt.Init(ih);
                 i.Body().set_steamid(this.props.broadcaster.steamid64),
                   i.Body().set_broadcast_id(this.props.broadcastid),
-                  zp
+                  jp
                     .GetBroadcastThumbnail(t.GetServiceTransport(), i)
                     .then(function(t) {
                       if (1 == t.GetEResult()) {
@@ -68015,7 +68168,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Up.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Hp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = br.createElement(
                   "span",
                   null,
@@ -68027,7 +68180,7 @@ and limitations under the License.
                 );
               if (
                 this.props.broadcaster.accountid ==
-                Up.FriendStore.self.accountid
+                Hp.FriendStore.self.accountid
               ) {
                 var i = br.createElement(
                   "span",
@@ -68113,7 +68266,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "closeButton", onClick: this.OnClose },
-                    br.createElement(Bs.O, null)
+                    br.createElement(Is.O, null)
                   )
                 )
               );
@@ -68122,10 +68275,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnClose", null),
             it.b([Xt.a], t.prototype, "OnOpen", null),
             it.b([Xt.a], t.prototype, "ShowThumbnail", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        bh = (function(e) {
+        Mh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68144,13 +68297,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.OnAccept = function(e) {
-              Up.BroadcastStore.ApproveViewerRequest(
+              Hp.BroadcastStore.ApproveViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
             }),
             (t.prototype.OnClose = function() {
-              Up.BroadcastStore.RejectViewerRequest(
+              Hp.BroadcastStore.RejectViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
@@ -68159,7 +68312,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Up.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Hp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = br.createElement(
                   "span",
                   null,
@@ -68174,24 +68327,24 @@ and limitations under the License.
                   { className: "inviteeNameLabel" },
                   this.props.viewer.display_name
                 ),
-                n = Up.BroadcastStore.GetRequestState(
+                n = Hp.BroadcastStore.GetRequestState(
                   this.props.viewer.accountid,
                   this.props.requestid
                 ),
                 r =
                   void 0 !== this.m_broadcastid &&
-                  this.m_broadcastid != Up.BroadcastStore.broadcastid;
+                  this.m_broadcastid != Hp.BroadcastStore.broadcastid;
               if (
                 (void 0 === this.m_broadcastid &&
-                  "0" !== Up.BroadcastStore.broadcastid &&
-                  (this.m_broadcastid = Up.BroadcastStore.broadcastid),
-                r || n != lp.k_EPending)
+                  "0" !== Hp.BroadcastStore.broadcastid &&
+                  (this.m_broadcastid = Hp.BroadcastStore.broadcastid),
+                r || n != pp.k_EPending)
               ) {
                 var o = "#ChatRoom_BroadcastViewRequest_Expired";
                 return (
-                  n == lp.k_EAccepted
+                  n == pp.k_EAccepted
                     ? (o = "#ChatRoom_BroadcastViewRequest_Accepted")
-                    : n == lp.k_ERejected &&
+                    : n == pp.k_ERejected &&
                       (o = "#ChatRoom_BroadcastViewRequest_Dismissed"),
                   br.createElement(
                     "div",
@@ -68262,10 +68415,10 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnAccept", null),
             it.b([Xt.a], t.prototype, "OnClose", null),
             it.b([Xt.a], t.prototype, "ShowThumbnail", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ch = (function(e) {
+        Fh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68371,11 +68524,11 @@ and limitations under the License.
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
-      })(yh || (yh = {}));
-      var Sh,
-        Mh = yh.NotLoaded,
-        Fh = [],
-        wh = (function(e) {
+      })(Ch || (Ch = {}));
+      var wh,
+        Oh = Ch.NotLoaded,
+        Bh = [],
+        Rh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68393,7 +68546,7 @@ and limitations under the License.
               this.m_strPlayerID = "YoutubePlayer_" + t.s_nPlayerIndex++;
             }),
             (t.prototype.componentWillUnmount = function() {
-              this.DestroyPlayer(), De(this.OnYoutubeScriptsReady);
+              this.DestroyPlayer(), Ne(this.OnYoutubeScriptsReady);
             }),
             (t.prototype.shouldComponentUpdate = function(e, t) {
               if (!this.m_player) return !1;
@@ -68418,7 +68571,7 @@ and limitations under the License.
               this.m_playerContainer != e &&
                 ((this.m_playerContainer = e),
                 this.DestroyPlayer(),
-                this.m_playerContainer && Ne(this.OnYoutubeScriptsReady));
+                this.m_playerContainer && De(this.OnYoutubeScriptsReady));
             }),
             (t.prototype.OnYoutubeScriptsReady = function() {
               this.CreatePlayer(this.props);
@@ -68504,7 +68657,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        Oh = (function(e) {
+        Ih = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68521,27 +68674,224 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Bh = (function(e) {
+        })(Ir),
+        Eh = (function(e) {
           function t(t) {
-            var i = e.call(this, t) || this;
+            var i = e.call(this, t) || this,
+              n = Hp.ChatStore.EmbedStore.GetCollapsedState(
+                i.props.unAccountIDSender,
+                i.props.msgUniqueKey
+              ),
+              r = Hp.ChatStore.EmbedStore.GetWidths(
+                i.props.unAccountIDSender,
+                i.props.msgUniqueKey
+              );
             return (
               (i.state = {
-                strTitle: "",
-                strAuthor: "",
-                strVideoID: "",
-                nImageResizedWidth: 0,
-                bIsResized: !1,
+                nResizedWidth: n ? 16 : r ? r.nDesiredWidth : 0,
+                bResized: void 0 !== r,
                 bIsResizing: !1,
-                m_bMinimized: !1,
-                bIsRestoring: !1
+                bIsRestoring: !1,
+                bMinimized: n,
+                bIsMinimizing: !1
               }),
               (i.m_frameInitialXPos = -1),
               (i.m_frameInitialYPos = -1),
               (i.m_frameInitialWidth = -1),
-              (i.m_frameDefaultWidth = -1),
-              (i.m_frameDesiredWidth = -1),
+              (i.m_frameDefaultWidth = r ? r.nDefaultWidth : -1),
+              (i.m_frameDesiredWidth = r ? r.nDesiredWidth : -1),
               i
+            );
+          }
+          return (
+            it.c(t, e),
+            (t.prototype.BindContainer = function(e) {
+              this.m_elContainer = e;
+            }),
+            (t.prototype.handleCollapse = function(e) {
+              var t = this;
+              this.state.bMinimized ||
+                (this.m_frameDesiredWidth = this.m_elContainer.clientWidth),
+                this.m_animationCollapse && this.m_animationCollapse.Cancel();
+              var i = !this.state.bMinimized,
+                n = i ? this.m_frameDesiredWidth : 16,
+                r = i ? 16 : this.m_frameDesiredWidth;
+              this.setState(
+                { nResizedWidth: n, bMinimized: !1, bIsMinimizing: !0 },
+                function() {
+                  (t.m_animationCollapse = new js(
+                    t,
+                    { nResizedWidth: r },
+                    {
+                      msDuration: 300,
+                      timing: "sine",
+                      setStateOnComplete: { bMinimized: i, bIsMinimizing: !1 }
+                    }
+                  )),
+                    t.m_animationCollapse.Start();
+                }
+              ),
+                Hp.ChatStore.EmbedStore.SetCollapsedState(
+                  this.props.unAccountIDSender,
+                  this.props.msgUniqueKey,
+                  i
+                );
+            }),
+            (t.prototype.handleRestore = function(e) {
+              var t = this;
+              this.state.bResized &&
+                (this.m_animationCollapse && this.m_animationCollapse.Cancel(),
+                this.setState({ bIsRestoring: !0 }, function() {
+                  (t.m_animationCollapse = new js(
+                    t,
+                    { nResizedWidth: t.m_frameDefaultWidth },
+                    {
+                      msDuration: 300,
+                      timing: "sine",
+                      setStateOnComplete: {
+                        bMinimized: !1,
+                        bIsRestoring: !1,
+                        bResized: !1
+                      }
+                    }
+                  )),
+                    t.m_animationCollapse.Start();
+                }),
+                Hp.ChatStore.EmbedStore.SetWidths(
+                  this.props.unAccountIDSender,
+                  this.props.msgUniqueKey,
+                  this.m_frameDefaultWidth,
+                  this.m_frameDefaultWidth
+                ));
+            }),
+            (t.prototype.OnResize = function(e) {
+              var t = e.currentTarget.ownerDocument.defaultView;
+              t.addEventListener("mousemove", this.HandleMouseMove),
+                t.addEventListener("mouseup", this.HandleMouseUp);
+            }),
+            (t.prototype.HandleMouseMove = function(e) {
+              this.m_frameInitialXPos < 0 &&
+                (this.m_frameInitialXPos = e.clientX),
+                this.m_frameInitialWidth < 0 &&
+                  (this.m_frameInitialWidth = this.m_elContainer.clientWidth),
+                this.m_frameDefaultWidth < 0 &&
+                  !this.state.bResized &&
+                  (this.m_frameDefaultWidth = this.m_elContainer.clientWidth),
+                this.m_frameInitialYPos < 0 &&
+                  (this.m_frameInitialYPos = e.clientY);
+              var t = e.clientX - this.m_frameInitialXPos,
+                i = e.clientY - this.m_frameInitialYPos,
+                n = this.m_frameInitialWidth + t + i;
+              n < 320 && (n = 320),
+                n > 1280 && (n = 1280),
+                this.setState({
+                  nResizedWidth: n,
+                  bResized: !0,
+                  bIsResizing: !0
+                });
+            }),
+            (t.prototype.HandleMouseUp = function(e) {
+              e.view.removeEventListener("mousemove", this.HandleMouseMove),
+                e.view.removeEventListener("mouseup", this.HandleMouseUp),
+                (this.m_frameInitialXPos = -1),
+                (this.m_frameInitialYPos = -1),
+                (this.m_frameInitialWidth = -1),
+                this.state.bIsResizing && this.setState({ bIsResizing: !1 }),
+                !this.state.bMinimized &&
+                  this.m_elContainer &&
+                  (this.m_frameDesiredWidth = this.m_elContainer.clientWidth),
+                Hp.ChatStore.EmbedStore.SetWidths(
+                  this.props.unAccountIDSender,
+                  this.props.msgUniqueKey,
+                  this.m_frameDesiredWidth,
+                  this.m_frameDefaultWidth
+                );
+            }),
+            (t.prototype.render = function() {
+              var e = {};
+              this.state.nResizedWidth > 0 &&
+                (e.width = this.state.nResizedWidth + "px");
+              var t = "BBCodeResizableComponent";
+              return (
+                this.props.className && (t += " " + this.props.className),
+                this.state.bResized && (t += " Resized"),
+                this.state.bIsResizing && (t += " ActivelyResizing"),
+                this.state.bMinimized && (t += " Minimized"),
+                this.state.bIsMinimizing && (t += " Minimizing"),
+                br.createElement(
+                  "div",
+                  { className: t, style: e, ref: this.BindContainer },
+                  br.createElement(
+                    "div",
+                    {
+                      className: "BBCodeCollapsed",
+                      onClick: this.handleCollapse
+                    },
+                    Object(hr.b)(
+                      "#bbcode_" + this.props.strMediaType + "_minimized"
+                    )
+                  ),
+                  this.props.children,
+                  br.createElement(
+                    "div",
+                    {
+                      className: "BBCodeRestoreControl",
+                      onClick: this.handleRestore,
+                      title: Object(hr.b)(
+                        "#bbcode_" +
+                          this.props.strMediaType +
+                          "_tooltip_restore"
+                      )
+                    },
+                    br.createElement("div", { className: "restoreSize" })
+                  ),
+                  br.createElement(
+                    "div",
+                    {
+                      className: "BBCodeResizeControl",
+                      onMouseDown: this.OnResize,
+                      title: Object(hr.b)(
+                        "#bbcode_" + this.props.strMediaType + "_tooltip_resize"
+                      )
+                    },
+                    br.createElement(Is.B, null)
+                  ),
+                  br.createElement(
+                    "div",
+                    {
+                      className: "BBCodeCollapseControl",
+                      onClick: this.handleCollapse,
+                      title: this.state.bMinimized
+                        ? Object(hr.b)(
+                            "#bbcode_" +
+                              this.props.strMediaType +
+                              "_tooltip_uncollapse"
+                          )
+                        : Object(hr.b)(
+                            "#bbcode_" +
+                              this.props.strMediaType +
+                              "_tooltip_collapse"
+                          )
+                    },
+                    br.createElement(Is.N, null)
+                  )
+                )
+              );
+            }),
+            it.b([Xt.a], t.prototype, "BindContainer", null),
+            it.b([Xt.a], t.prototype, "handleCollapse", null),
+            it.b([Xt.a], t.prototype, "handleRestore", null),
+            it.b([Xt.a], t.prototype, "OnResize", null),
+            it.b([Xt.a], t.prototype, "HandleMouseMove", null),
+            it.b([Xt.a], t.prototype, "HandleMouseUp", null),
+            t
+          );
+        })(br.Component),
+        kh = (function(e) {
+          function t(t) {
+            var i = e.call(this, t) || this;
+            return (
+              (i.state = { strTitle: "", strAuthor: "", strVideoID: "" }), i
             );
           }
           return (
@@ -68554,46 +68904,6 @@ and limitations under the License.
             }),
             (t.prototype.OnPlayerReady = function() {
               this.props.context.chat.NotifyViewsChatContentsChanged();
-            }),
-            (t.prototype.BindImageContainer = function(e) {
-              this.m_elImageContainer = e;
-            }),
-            (t.prototype.OnImageResize = function(e) {
-              var t = e.currentTarget.ownerDocument.defaultView;
-              t.addEventListener("mousemove", this.HandleMouseMove),
-                t.addEventListener("mouseup", this.HandleMouseUp);
-            }),
-            (t.prototype.HandleMouseMove = function(e) {
-              this.m_frameInitialXPos < 0 &&
-                (this.m_frameInitialXPos = e.clientX),
-                this.m_frameInitialWidth < 0 &&
-                  (this.m_frameInitialWidth = this.m_elImageContainer.clientWidth),
-                this.m_frameDefaultWidth < 0 &&
-                  !this.state.bIsResized &&
-                  (this.m_frameDefaultWidth = this.m_elImageContainer.clientWidth),
-                this.m_frameInitialYPos < 0 &&
-                  (this.m_frameInitialYPos = e.clientY);
-              var t = e.clientX - this.m_frameInitialXPos,
-                i = e.clientY - this.m_frameInitialYPos,
-                n = this.m_frameInitialWidth + t + i;
-              n < 320 && (n = 320),
-                n > 1280 && (n = 1280),
-                this.setState({
-                  nImageResizedWidth: n,
-                  bIsResized: !0,
-                  bIsResizing: !0
-                });
-            }),
-            (t.prototype.HandleMouseUp = function(e) {
-              e.view.removeEventListener("mousemove", this.HandleMouseMove),
-                e.view.removeEventListener("mouseup", this.HandleMouseUp),
-                (this.m_frameInitialXPos = -1),
-                (this.m_frameInitialYPos = -1),
-                (this.m_frameInitialWidth = -1),
-                this.state.bIsResizing && this.setState({ bIsResizing: !1 }),
-                !this.state.m_bMinimized &&
-                  this.m_elImageContainer &&
-                  (this.m_frameDesiredWidth = this.m_elImageContainer.clientWidth);
             }),
             (t.prototype.componentDidMount = function() {
               var e = this;
@@ -68616,249 +68926,122 @@ and limitations under the License.
                     void 0 != o[3] && (n += parseInt(o[3])))
                   : (n = parseInt(r));
               }
-              var a = {};
-              this.state.nImageResizedWidth > 0 &&
-                (a.width = this.state.nImageResizedWidth + "px");
-              var s = "BBCodeYouTubeComponent";
-              return (
-                this.state.bIsResized && (s += " ImageResized"),
-                this.state.bIsResizing && (s += " ActivelyResizing"),
-                this.state.m_bMinimized && (s += " Minimized"),
-                this.state.bIsRestoring && (s += " Restoring"),
+              return br.createElement(
+                Eh,
+                {
+                  className: "BBCodeYouTubeComponent",
+                  unAccountIDSender: this.props.context.unAccountIDSender,
+                  msgUniqueKey: this.props.context.key,
+                  strMediaType: "video"
+                },
                 br.createElement(
                   "div",
-                  { className: s, style: a, ref: this.BindImageContainer },
+                  {
+                    className:
+                      "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
+                  },
+                  br.createElement(Rh, {
+                    video: this.GetArgument("v"),
+                    startSeconds: n,
+                    width: 640,
+                    height: 385,
+                    autoplay: !1,
+                    controls: !0,
+                    showFullscreenBtn: !0,
+                    onVideoInfoChanged: this.OnVideoInfoChanged,
+                    onPlayerReady: this.OnPlayerReady
+                  }),
+                  br.createElement("img", {
+                    src:
+                      tt.a.PUBLIC_SHARED_URL +
+                      "images/responsive/youtube_16x9_placeholder.gif",
+                    width: "100%"
+                  })
+                ),
+                t.length > 0 &&
                   br.createElement(
-                    "div",
-                    { className: "BBCodeYouTubeComponent_Sizer" },
-                    br.createElement(wh, {
-                      video: this.GetArgument("v"),
-                      startSeconds: n,
-                      width: 640,
-                      height: 385,
-                      autoplay: !1,
-                      controls: !0,
-                      showFullscreenBtn: !0,
-                      onVideoInfoChanged: this.OnVideoInfoChanged,
-                      onPlayerReady: this.OnPlayerReady
-                    }),
-                    br.createElement("img", {
-                      src:
-                        tt.a.PUBLIC_SHARED_URL +
-                        "images/responsive/youtube_16x9_placeholder.gif",
-                      width: "100%"
-                    })
+                    m,
+                    { className: "test HideWhenMinimized", href: i },
+                    br.createElement("div", { className: "BBCodeTitle" }, t)
                   ),
-                  t.length > 0 &&
-                    br.createElement(
-                      m,
-                      { className: "test", href: i },
-                      br.createElement("div", { className: "BBCodeTitle" }, t)
-                    ),
-                  e.length > 0 &&
-                    br.createElement(
-                      "div",
-                      { className: "BBCodeDetails" },
-                      Object(hr.b)("#bbcode_youtube_author", e)
-                    ),
+                e.length > 0 &&
                   br.createElement(
                     "div",
-                    {
-                      className: "chatImageResizeControl",
-                      onMouseDown: this.OnImageResize,
-                      title: Object(hr.b)("#bbcode_image_tooltip_resize_video")
-                    },
-                    br.createElement(Bs.B, null)
+                    { className: "BBCodeDetails HideWhenMinimized" },
+                    Object(hr.b)("#bbcode_youtube_author", e)
                   )
-                )
               );
             }),
             it.b([Xt.a], t.prototype, "OnVideoInfoChanged", null),
             it.b([Xt.a], t.prototype, "OnPlayerReady", null),
-            it.b([Xt.a], t.prototype, "BindImageContainer", null),
-            it.b([Xt.a], t.prototype, "OnImageResize", null),
-            it.b([Xt.a], t.prototype, "HandleMouseMove", null),
-            it.b([Xt.a], t.prototype, "HandleMouseUp", null),
             t
           );
-        })(Br);
+        })(Ir);
       !(function(e) {
         (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded"),
           (e[(e.Error = 3)] = "Error");
-      })(Sh || (Sh = {}));
-      var Rh = (function(e) {
+      })(wh || (wh = {}));
+      var Th = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return (
-              (i.state = {
-                nImageResizedWidth: 0,
-                bIsResized: !1,
-                bIsResizing: !1,
-                m_bMinimized: !1,
-                bIsRestoring: !1,
-                m_eLoadingState: Sh.Loading
-              }),
-              (i.m_frameInitialXPos = -1),
-              (i.m_frameInitialYPos = -1),
-              (i.m_frameInitialWidth = -1),
-              (i.m_frameDefaultWidth = -1),
-              (i.m_frameDesiredWidth = -1),
-              i
-            );
+            return (i.state = { eLoadingState: wh.Loading }), i;
           }
           return (
             it.c(t, e),
-            (t.prototype.handleCollapse = function(e) {
-              var t = this;
-              this.state.m_bMinimized ||
-                (this.m_frameDesiredWidth = this.m_elImageContainer.clientWidth),
-                this.m_animationCollapse && this.m_animationCollapse.Cancel();
-              var i = !this.state.m_bMinimized,
-                n = i ? this.m_frameDesiredWidth : 16,
-                r = i ? 16 : this.m_frameDesiredWidth;
-              this.setState(
-                { nImageResizedWidth: n, m_bMinimized: !1, bIsRestoring: !1 },
-                function() {
-                  (t.m_animationCollapse = new Ls(
-                    t,
-                    { nImageResizedWidth: r },
-                    {
-                      msDuration: 300,
-                      timing: "sine",
-                      setStateOnComplete: { m_bMinimized: i }
-                    }
-                  )),
-                    t.m_animationCollapse.Start();
-                }
-              );
-            }),
-            (t.prototype.handleRestore = function(e) {
-              var t = this;
-              this.state.bIsResized &&
-                (this.m_animationCollapse && this.m_animationCollapse.Cancel(),
-                this.setState({ bIsRestoring: !0 }, function() {
-                  (t.m_animationCollapse = new Ls(
-                    t,
-                    { nImageResizedWidth: t.m_frameDefaultWidth },
-                    {
-                      msDuration: 300,
-                      timing: "sine",
-                      setStateOnComplete: {
-                        m_bMinimized: !1,
-                        bIsRestoring: !1,
-                        bIsResized: !1
-                      }
-                    }
-                  )),
-                    t.m_animationCollapse.Start();
-                }));
-            }),
             (t.prototype.IsEmbeddedInOtherTag = function() {
               for (var e = 0, t = this.props.parentTags; e < t.length; e++)
                 if ("tweet" == t[e]) return !0;
               return !1;
             }),
-            (t.prototype.BindImageContainer = function(e) {
-              this.m_elImageContainer = e;
-            }),
-            (t.prototype.OnImageResize = function(e) {
-              var t = e.currentTarget.ownerDocument.defaultView;
-              t.addEventListener("mousemove", this.HandleMouseMove),
-                t.addEventListener("mouseup", this.HandleMouseUp);
-            }),
-            (t.prototype.HandleMouseMove = function(e) {
-              this.m_frameInitialXPos < 0 &&
-                (this.m_frameInitialXPos = e.clientX),
-                this.m_frameInitialWidth < 0 &&
-                  (this.m_frameInitialWidth = this.m_elImageContainer.clientWidth),
-                this.m_frameDefaultWidth < 0 &&
-                  !this.state.bIsResized &&
-                  (this.m_frameDefaultWidth = this.m_elImageContainer.clientWidth),
-                this.m_frameInitialYPos < 0 &&
-                  (this.m_frameInitialYPos = e.clientY);
-              var t = e.clientX - this.m_frameInitialXPos,
-                i = e.clientY - this.m_frameInitialYPos,
-                n = this.m_frameInitialWidth + t + i;
-              n < 64 && (n = 64),
-                n > 1280 && (n = 1280),
-                this.setState({
-                  nImageResizedWidth: n,
-                  bIsResized: !0,
-                  bIsResizing: !0
-                });
-            }),
-            (t.prototype.HandleMouseUp = function(e) {
-              e.view.removeEventListener("mousemove", this.HandleMouseMove),
-                e.view.removeEventListener("mouseup", this.HandleMouseUp),
-                (this.m_frameInitialXPos = -1),
-                (this.m_frameInitialYPos = -1),
-                (this.m_frameInitialWidth = -1),
-                this.state.bIsResizing && this.setState({ bIsResizing: !1 }),
-                !this.state.m_bMinimized &&
-                  this.m_elImageContainer &&
-                  (this.m_frameDesiredWidth = this.m_elImageContainer.clientWidth);
-            }),
             (t.prototype.OnImageLoad = function() {
-              this.setState({ m_eLoadingState: Sh.Loaded }),
+              this.setState({ eLoadingState: wh.Loaded }),
                 this.props.context.chat.NotifyViewsChatContentsChanged();
             }),
             (t.prototype.OnImageError = function() {
-              this.setState({ m_eLoadingState: Sh.Error });
+              this.setState({ eLoadingState: wh.Error });
             }),
             (t.prototype.render = function() {
               var e = this.GetArgument("thumbnail_src"),
                 t = this.GetArgument("srcset", !0),
                 i = this.GetArgument("src"),
-                n = this.state.m_eLoadingState;
+                n = this.state.eLoadingState;
               if (
                 ("true" == this.GetArgument("proxied") && (e += "?s=652x652"),
                 this.IsEmbeddedInOtherTag())
               )
-                return br.createElement(Eh, {
+                return br.createElement(Dh, {
                   className: "embeddedImg",
                   context: this.props.context,
                   src: e,
                   onContextMenu: _
                 });
-              var r = {};
-              this.state.nImageResizedWidth > 0 &&
-                (r.width = this.state.nImageResizedWidth + "px");
-              var o = "chatImageContainer",
-                a = void 0 !== this.GetArgument("giphy_search");
-              a && (o += " giphyImg"),
-                this.state.bIsResized && (o += " ImageResized"),
-                this.state.bIsResizing && (o += " ActivelyResizing"),
-                this.state.m_bMinimized && (o += " Minimized"),
-                this.state.bIsRestoring && (o += " Restoring"),
-                n == Sh.Error && (o += " FailedToLoad");
-              var s = { display: "none" };
-              n == Sh.Loaded && (s = { display: "block" });
-              var c = br.createElement(
+              var r = "chatImageContainer",
+                o = void 0 !== this.GetArgument("giphy_search");
+              o && (r += " giphyImg"), n == wh.Error && (r += " FailedToLoad");
+              var a = { display: "none" };
+              n == wh.Loaded && (a = { display: "block" });
+              var s = br.createElement(
                 "span",
                 { className: "giphySearch" },
                 this.GetArgument("giphy_search")
               );
               return br.createElement(
-                "div",
-                { className: o, style: r, ref: this.BindImageContainer },
-                br.createElement(
-                  "div",
-                  {
-                    className: "chatImageMinimized",
-                    onClick: this.handleCollapse,
-                    title: Object(hr.b)("#bbcode_image_minimized_URL") + i
-                  },
-                  Object(hr.b)("#bbcode_image_minimized")
-                ),
-                n == Sh.Loading &&
+                Eh,
+                {
+                  className: r,
+                  strMediaType: "image",
+                  unAccountIDSender: this.props.context.unAccountIDSender,
+                  msgUniqueKey: this.props.context.key
+                },
+                n == wh.Loading &&
                   br.createElement(
                     "div",
                     { className: "LoadingImage" },
                     "Loading image: ",
                     br.createElement(m, { href: i }, i)
                   ),
-                n == Sh.Error &&
+                n == wh.Error &&
                   br.createElement(
                     "div",
                     { className: "FailedToLoadImage" },
@@ -68867,8 +69050,8 @@ and limitations under the License.
                     br.createElement(m, { href: i }, i)
                   ),
                 br.createElement("img", {
-                  style: s,
-                  className: "chatImageFull",
+                  style: a,
+                  className: "chatImageFull BBCodeResizableElement",
                   src: e,
                   srcSet: t,
                   onLoad: this.OnImageLoad,
@@ -68877,76 +69060,38 @@ and limitations under the License.
                     y(e, i);
                   }
                 }),
-                n == Sh.Loaded &&
+                n == wh.Loaded &&
                   br.createElement(
                     br.Fragment,
                     null,
-                    br.createElement(
-                      "div",
-                      {
-                        className: "chatImageRestoreControl",
-                        onClick: this.handleRestore,
-                        title: Object(hr.b)("#bbcode_image_tooltip_restore")
-                      },
-                      br.createElement("div", { className: "restoreImageSize" })
-                    ),
                     br.createElement(
                       m,
                       {
                         className: "chatImageURL",
                         href: i,
-                        title: a
+                        title: o
                           ? Object(hr.b)(
                               "#bbcode_image_tooltip_link_giphy",
                               this.GetArgument("giphy_search")
                             )
                           : Object(hr.b)("#bbcode_image_tooltip_link")
                       },
-                      br.createElement(Bs.z, null),
+                      br.createElement(Is.z, null),
                       br.createElement(
                         "div",
                         { className: "giphyTag" },
-                        a && Object(hr.d)("#bbcode_image_link_giphy", c)
+                        o && Object(hr.d)("#bbcode_image_link_giphy", s)
                       )
-                    ),
-                    br.createElement(
-                      "div",
-                      {
-                        className: "chatImageResizeControl",
-                        onMouseDown: this.OnImageResize,
-                        title: Object(hr.b)("#bbcode_image_tooltip_resize"),
-                        onContextMenu: function(e) {
-                          y(e, i);
-                        }
-                      },
-                      br.createElement(Bs.B, null)
-                    ),
-                    br.createElement(
-                      "div",
-                      {
-                        className: "chatImageCollapseControl",
-                        onClick: this.handleCollapse,
-                        title: this.state.m_bMinimized
-                          ? Object(hr.b)("#bbcode_image_tooltip_uncollapse")
-                          : Object(hr.b)("#bbcode_image_tooltip_collapse")
-                      },
-                      br.createElement(Bs.N, null)
                     )
                   )
               );
             }),
-            it.b([Xt.a], t.prototype, "handleCollapse", null),
-            it.b([Xt.a], t.prototype, "handleRestore", null),
-            it.b([Xt.a], t.prototype, "BindImageContainer", null),
-            it.b([Xt.a], t.prototype, "OnImageResize", null),
-            it.b([Xt.a], t.prototype, "HandleMouseMove", null),
-            it.b([Xt.a], t.prototype, "HandleMouseUp", null),
             it.b([Xt.a], t.prototype, "OnImageLoad", null),
             it.b([Xt.a], t.prototype, "OnImageError", null),
             t
           );
-        })(Br),
-        Ih = (function(e) {
+        })(Ir),
+        Gh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bPlaying: !1 }), i;
@@ -68974,11 +69119,16 @@ and limitations under the License.
                 muted: !1
               });
               return br.createElement(
-                "div",
-                { className: "chatVideoContainer" },
+                Eh,
+                {
+                  className: "chatVideoContainer",
+                  strMediaType: "video",
+                  unAccountIDSender: this.props.context.unAccountIDSender,
+                  msgUniqueKey: this.props.context.key
+                },
                 br.createElement(
                   "video",
-                  it.a({}, e, {
+                  it.a({ className: "BBCodeResizableElement" }, e, {
                     ref: this.BindVideo,
                     onPause: this.OnVideoPause,
                     onPlay: this.OnVideoPlay
@@ -68992,13 +69142,13 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     {
-                      className: "chatVideoPlayControl",
+                      className: "chatVideoPlayControl HideWhenMinimized",
                       onClick: this.StartVideo
                     },
                     br.createElement(
                       "div",
                       { className: "playButtonContainer" },
-                      br.createElement(Bs.x, null)
+                      br.createElement(Is.x, null)
                     )
                   )
               );
@@ -69009,8 +69159,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnVideoPause", null),
             t
           );
-        })(Br),
-        Eh = (function(e) {
+        })(Ir),
+        Dh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69031,7 +69181,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        kh = (function(e) {
+        Nh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69140,7 +69290,7 @@ and limitations under the License.
                       onClick: this.CopyToClipboard,
                       title: Object(hr.b)("#Chat_Copy_Link_Clipboard")
                     },
-                    br.createElement(Bs.g, null)
+                    br.createElement(Is.g, null)
                   )
                 )
               );
@@ -69149,8 +69299,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "HandleFocus", null),
             t
           );
-        })(Br),
-        Th = (function(e) {
+        })(Ir),
+        Ah = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69244,8 +69394,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Gh = (function(e) {
+        })(Ir),
+        Ph = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActivated: !1 }), i;
@@ -69327,8 +69477,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "Activate", null),
             t
           );
-        })(Br),
-        Nh = (function(e) {
+        })(Ir),
+        zh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { invite: void 0 }), i;
@@ -69347,15 +69497,15 @@ and limitations under the License.
               var e = this.props.context.chat.GetMember(
                 this.props.context.unAccountIDSender
               );
-              return br.createElement(Wp, {
+              return br.createElement(qp, {
                 invite: this.state.invite,
                 inviter: e
               });
             }),
             t
           );
-        })(Br),
-        Dh = (function(e) {
+        })(Ir),
+        xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69392,7 +69542,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return br.createElement(Wp, {
+              return br.createElement(qp, {
                 invite: this.state.invite,
                 inviter: this.state.inviter,
                 invitee: this.state.invitee
@@ -69400,8 +69550,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Ah = (function(e) {
+        })(Ir),
+        Lh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69439,7 +69589,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return br.createElement(Kp, {
+              return br.createElement(Xp, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -69447,8 +69597,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Ph = (function(e) {
+        })(Ir),
+        jh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69486,7 +69636,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return br.createElement(Kp, {
+              return br.createElement(Xp, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -69494,8 +69644,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        zh = (function(e) {
+        })(Ir),
+        Uh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69524,7 +69674,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return br.createElement(vh, {
+              return br.createElement(Sh, {
                 broadcastid: this.state.broadcastid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -69533,8 +69683,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Lh = (function(e) {
+        })(Ir),
+        Wh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69554,7 +69704,7 @@ and limitations under the License.
                 n,
                 r = e.args.requestid,
                 o = e.context.chat,
-                a = Up.FriendStore.self.persona.m_gameid;
+                a = Hp.FriendStore.self.persona.m_gameid;
               return (
                 o.self.accountid != e.context.unAccountIDSender
                   ? ((i = o.self), (n = o.chat_partner))
@@ -69563,7 +69713,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return br.createElement(bh, {
+              return br.createElement(Mh, {
                 requestid: this.state.requestid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -69572,8 +69722,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        xh = (function(e) {
+        })(Ir),
+        Vh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             i.state = {
@@ -69582,15 +69732,15 @@ and limitations under the License.
               bLocalVoteUp: !1,
               nCommentCount: parseInt(i.GetArgument("num_comments_public"))
             };
-            var n = Up.CMInterface;
+            var n = Hp.CMInterface;
             if (n) {
               var r = i.GetArgument("fileid"),
-                o = dt.Init(ha, 8509);
+                o = dt.Init(ga, 8509);
               o
                 .Body()
                 .add_published_file_ids()
                 .set_published_file_id(r),
-                n.SendMsgAndAwaitResponse(o, ga).then(function(e) {
+                n.SendMsgAndAwaitResponse(o, _a).then(function(e) {
                   if (
                     1 == e.Body().eresult() &&
                     1 == e.Body().user_item_vote_details().length
@@ -69613,12 +69763,12 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.VoteItem = function(e, t) {
               var i = this,
-                n = Up.CMInterface;
+                n = Hp.CMInterface;
               if (n) {
-                var r = dt.Init(da, 8507);
+                var r = dt.Init(ha, 8507);
                 r.Body().set_published_file_id(t),
                   r.Body().set_vote_up(e),
-                  n.SendMsgAndAwaitResponse(r, pa).then(function(t) {
+                  n.SendMsgAndAwaitResponse(r, ma).then(function(t) {
                     1 == t.Body().eresult() &&
                       i.setState({ bLocalVoteUp: e, bLocalVoteDown: !e });
                   });
@@ -69671,7 +69821,7 @@ and limitations under the License.
                     br.createElement(
                       m,
                       { className: "ChatLargeImageContainer", href: i },
-                      br.createElement(Eh, {
+                      br.createElement(Dh, {
                         context: this.props.context,
                         className: "ChatLargeImageContainer_Image",
                         src: o,
@@ -69737,8 +69887,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        jh = (function(e) {
+        })(Ir),
+        Hh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69767,7 +69917,7 @@ and limitations under the License.
                     br.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      br.createElement(ju, {
+                      br.createElement(Vu, {
                         friend: i,
                         context: { chat: this.props.context.chat },
                         bLarge: !0
@@ -69787,7 +69937,7 @@ and limitations under the License.
                             i.display_name
                           )
                         ),
-                        br.createElement(qp, {
+                        br.createElement(Jp, {
                           url: e,
                           strLabel: Object(hr.b)("#TradeOfferLink_Label")
                         })
@@ -69813,8 +69963,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnCreateOfferClick", null),
             t
           );
-        })(Br),
-        Uh = (function(e) {
+        })(Ir),
+        qh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69844,7 +69994,7 @@ and limitations under the License.
               var e = this.GetArgument("id"),
                 t = parseInt(this.GetArgument("sender"));
               if (!e && this.GetArgument("url"))
-                return br.createElement(jh, it.a({}, this.props));
+                return br.createElement(Hh, it.a({}, this.props));
               var i = this.props.context.chat,
                 n = i.self.accountid == t,
                 r = br.createElement(
@@ -69858,12 +70008,12 @@ and limitations under the License.
                 br.createElement(
                   "div",
                   { className: "leftInviteContainer" },
-                  br.createElement(ju, {
+                  br.createElement(Vu, {
                     friend: n ? i.self : i.chat_partner,
                     context: { chat: i },
                     bLarge: !0
                   }),
-                  br.createElement(Bs.J, null)
+                  br.createElement(Is.J, null)
                 ),
                 br.createElement(
                   "div",
@@ -69918,8 +70068,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "ViewMyOffersClick", null),
             t
           );
-        })(Br),
-        Wh = (function(e) {
+        })(Ir),
+        Kh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { broadcaster: void 0 }), i;
@@ -69929,18 +70079,18 @@ and limitations under the License.
             (t.getDerivedStateFromProps = function(e, t) {
               var i = new lt.a(e.args.broadcaster);
               return {
-                broadcaster: Up.FriendStore.GetPlayer(i.GetAccountID())
+                broadcaster: Hp.FriendStore.GetPlayer(i.GetAccountID())
               };
             }),
             (t.prototype.render = function() {
-              return br.createElement(Ch, {
+              return br.createElement(Fh, {
                 broadcaster: this.state.broadcaster
               });
             }),
             t
           );
-        })(Br),
-        Vh = (function(e) {
+        })(Ir),
+        Yh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69966,12 +70116,12 @@ and limitations under the License.
             }),
             (t.prototype.componentWillMount = function() {
               var e = this,
-                t = Up.CMInterface;
+                t = Hp.CMInterface;
               if (t) {
                 var i = parseInt(this.GetArgument("appid")),
                   n = this.GetArgument("classid"),
                   r = this.GetArgument("instanceid"),
-                  o = dt.Init(jr);
+                  o = dt.Init(Wr);
                 o.Body().set_language(tt.a.LANGUAGE), o.Body().set_appid(i);
                 var a = o.Body().add_classes();
                 a.set_classid(n),
@@ -70007,7 +70157,7 @@ and limitations under the License.
                 r = this.GetArgument("assetid"),
                 o = this.GetArgument("market_hash_name"),
                 a = parseInt(this.GetArgument("owner")),
-                s = Up.AppInfoStore.GetAppInfo(i);
+                s = Hp.AppInfoStore.GetAppInfo(i);
               if (a && t) {
                 var c = this.props.context.chat.GetMember(a),
                   l = c ? c.display_name : this.GetArgument("persona"),
@@ -70060,7 +70210,7 @@ and limitations under the License.
                       br.createElement(
                         m,
                         { className: "OpenGraphImgContainer", href: t },
-                        br.createElement(Eh, {
+                        br.createElement(Dh, {
                           context: this.props.context,
                           className: "ChatMessageOpenGraph_Image",
                           src: d,
@@ -70073,7 +70223,7 @@ and limitations under the License.
                         "div",
                         { className: "ChatMessageOpenGraph_Body" },
                         this.state.bStillLoading &&
-                          br.createElement(Ul, {
+                          br.createElement(Vl, {
                             size: "medium",
                             position: "center"
                           }),
@@ -70117,8 +70267,8 @@ and limitations under the License.
                               "div",
                               { style: { marginTop: "1em" } },
                               this.state.description.tradable() &&
-                                Up.CMInterface &&
-                                a != Up.CMInterface.steamid.GetAccountID() &&
+                                Hp.CMInterface &&
+                                a != Hp.CMInterface.steamid.GetAccountID() &&
                                 br.createElement(
                                   m,
                                   { className: "general_btn inline", href: g },
@@ -70179,7 +70329,7 @@ and limitations under the License.
                           className: "OpenGraphURLButton CopyToClipboard",
                           onClick: this.CopyToClipboard
                         },
-                        br.createElement(Bs.g, null)
+                        br.createElement(Is.g, null)
                       )
                     )
                   )
@@ -70188,10 +70338,10 @@ and limitations under the License.
               return br.createElement(m, { href: t }, t);
             }),
             it.b([Xt.a], t.prototype, "CopyToClipboard", null),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(Br),
-        Hh = (function(e) {
+        })(Ir),
+        Jh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70209,8 +70359,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        qh = (function(e) {
+        })(Ir),
+        Xh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70235,7 +70385,7 @@ and limitations under the License.
                 if (i && i.is_ready) {
                   var n = i.accountid == this.props.context.chat.self.accountid;
                   return br.createElement(
-                    zu,
+                    ju,
                     { friend: i, context: { chat: this.props.context.chat } },
                     br.createElement(
                       "span",
@@ -70252,10 +70402,10 @@ and limitations under the License.
               }
               return br.createElement("span", null, "@" + e);
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
-        })(Br),
-        Kh = (function(e) {
+        })(Ir),
+        Zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70267,13 +70417,13 @@ and limitations under the License.
                 "string" == typeof this.props.children
                   ? (e = this.props.children)
                   : br.Children.forEach(this.props.children, function(e) {}),
-                e ? br.createElement(Xu, { emoticon: e }) : null
+                e ? br.createElement($u, { emoticon: e }) : null
               );
             }),
             t
           );
-        })(Br),
-        Yh = (function(e) {
+        })(Ir),
+        Qh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70300,8 +70450,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Br),
-        Jh = (function() {
+        })(Ir),
+        $h = (function() {
           function e() {}
           return (
             (e.prototype.GetObject = function(e) {
@@ -70315,7 +70465,7 @@ and limitations under the License.
             e
           );
         })(),
-        Xh = (function(e) {
+        em = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70332,8 +70482,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Jh),
-        Zh = (function() {
+        })($h),
+        tm = (function() {
           function e() {
             (this.m_vecObjects = []),
               (this.OnUnload = this.OnUnload.bind(this)),
@@ -70348,7 +70498,7 @@ and limitations under the License.
               this.m_vecObjects = [];
             }),
             (e.prototype.CreateObserver = function(e) {
-              var t = new Qh(e);
+              var t = new im(e);
               return this.m_vecObjects.push(t), t;
             }),
             (e.prototype.DeleteObserver = function(e) {
@@ -70361,7 +70511,7 @@ and limitations under the License.
             e
           );
         })(),
-        Qh = (function() {
+        im = (function() {
           function e(e) {
             this.m_resizeObserver = new ResizeObserver(e);
           }
@@ -70383,8 +70533,8 @@ and limitations under the License.
             e
           );
         })(),
-        $h = new Zh(),
-        em = (function(e) {
+        nm = new tm(),
+        rm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70396,18 +70546,18 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.componentWillUnmount = function() {
-              $h.DeleteObserver(this.m_eResizeObserver),
-                Sm.RemoveFriendDropTarget();
+              nm.DeleteObserver(this.m_eResizeObserver),
+                Om.RemoveFriendDropTarget();
             }),
             (t.prototype.BindDropFrame = function(e) {
               (this.m_elDivElement = e),
                 e &&
-                  (Sm.SetFriendDropTarget(this),
+                  (Om.SetFriendDropTarget(this),
                   requestAnimationFrame(function() {
-                    Sm.RecalculateDropTargetBounds();
+                    Om.RecalculateDropTargetBounds();
                   }),
-                  (this.m_eResizeObserver = $h.CreateObserver(function() {
-                    Sm.RecalculateDropTargetBounds();
+                  (this.m_eResizeObserver = nm.CreateObserver(function() {
+                    Om.RecalculateDropTargetBounds();
                   })),
                   this.m_eResizeObserver.observe(this.m_elDivElement));
             }),
@@ -70417,7 +70567,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.friends.FriendGroupStore.friend_groups.map(
                 function(e) {
-                  return br.createElement(tm, { group: e, key: e.id });
+                  return br.createElement(om, { group: e, key: e.id });
                 }
               );
               return br.createElement(
@@ -70429,7 +70579,7 @@ and limitations under the License.
             t
           );
         })(br.Component),
-        tm = (function(e) {
+        om = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70437,11 +70587,11 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.group.member_list.map(function(e) {
-                  return br.createElement(im, { friend: e, key: e.accountid });
+                  return br.createElement(am, { friend: e, key: e.accountid });
                 }),
                 t = "friendGroup";
               return (
-                Up.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
+                Hp.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
                   this.props.group
                 ) && (t += " Friends"),
                 br.createElement(
@@ -70464,10 +70614,10 @@ and limitations under the License.
                 )
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        im = (function(e) {
+        am = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70479,18 +70629,18 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.componentWillUnmount = function() {
-              Sm.RemoveChildDropTarget(this);
+              Om.RemoveChildDropTarget(this);
             }),
             (t.prototype.BindDropFrame = function(e) {
-              (this.m_elDivElement = e), e && Sm.AddChildDropTarget(this);
+              (this.m_elDivElement = e), e && Om.AddChildDropTarget(this);
             }),
             (t.prototype.componentDidUpdate = function() {
               requestAnimationFrame(function() {
-                Sm.RecalculateDropTargetBounds();
+                Om.RecalculateDropTargetBounds();
               });
             }),
             (t.prototype.OnElementDropped = function(e) {
-              var t = this.props.friend.OpenChatDialog(xp);
+              var t = this.props.friend.OpenChatDialog(Wp);
               "news" == e.type &&
                 (t.SendChatMessage(e.news.title),
                 t.SendChatMessage(e.news.url));
@@ -70517,13 +70667,13 @@ and limitations under the License.
                     src: e.persona.avatar_url_medium
                   })
                 ),
-                br.createElement(Uu, { friend: e })
+                br.createElement(Hu, { friend: e })
               );
             }),
-            (t = it.b([Os.observer], t))
+            (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        nm = (function() {
+        sm = (function() {
           function e() {
             this.m_mapEmoticonHovers = new Map();
           }
@@ -70531,13 +70681,13 @@ and limitations under the License.
             (e.prototype.GetEmoticonHover = function(e) {
               var t = this.m_mapEmoticonHovers.get(e);
               return (
-                t || ((t = new rm(e)), this.m_mapEmoticonHovers.set(e, t)), t
+                t || ((t = new cm(e)), this.m_mapEmoticonHovers.set(e, t)), t
               );
             }),
             e
           );
         })(),
-        rm = (function() {
+        cm = (function() {
           function e(e) {
             (this.m_bVisible = !1),
               (this.m_strEmoticonHoverHTML = void 0),
@@ -70563,7 +70713,7 @@ and limitations under the License.
               var i = this;
               this.EnsureEmoticonLoaded();
               var n = t.currentTarget,
-                r = br.createElement(Zu, { hover: this, target: n });
+                r = br.createElement(ed, { hover: this, target: n });
               e.sm_embeddedElements
                 .ShowElementDelayed(n.ownerDocument, 50, r, this)
                 .then(function() {
@@ -70614,7 +70764,7 @@ and limitations under the License.
                   window.document.head.appendChild(r);
               }
             }),
-            (e.sm_embeddedElements = new Rs.a("CEmoticonHoverContainer")),
+            (e.sm_embeddedElements = new Es.a("CEmoticonHoverContainer")),
             it.b([pt.observable], e.prototype, "m_bVisible", void 0),
             it.b(
               [pt.observable],
@@ -70625,7 +70775,7 @@ and limitations under the License.
             e
           );
         })(),
-        om = (function() {
+        lm = (function() {
           function e() {
             (this.m_mapBrowserInfo = new Map()),
               (this.m_hOverlayChatBrowserInfoChanged = null);
@@ -70674,27 +70824,27 @@ and limitations under the License.
                 });
             }),
             (e.prototype.OverlayBrowserCreated = function(e) {
-              Sm.ShowPopupFriendsList(e), Up.SetDefaultPopupContext(e);
+              Om.ShowPopupFriendsList(e), Hp.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
-              Up.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Up.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
-                  Up.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
-                  Up.SetDefaultPopupContext(xp),
+              Hp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Hp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
+                  Hp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
+                  Hp.SetDefaultPopupContext(Wp),
                 console.log(
                   "Removing overlay browser window:",
                   e.m_unPID,
                   e.m_nBrowserID
                 ),
-                Cs.d.ClosePopupsOwnedByBrowser(e),
-                Up.UIStore.SetSuppressBrowserContextBroadcasting(!1),
-                Up.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
+                Ms.d.ClosePopupsOwnedByBrowser(e),
+                Hp.UIStore.SetSuppressBrowserContextBroadcasting(!1),
+                Hp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
             }),
             it.b([Xt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
           );
         })(),
-        am = (function() {
+        um = (function() {
           function e(e) {
             this.m_FriendStore = e;
           }
@@ -70712,7 +70862,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.BNotificationsPermitted = function() {
-              return !Up.ParentalStore.BIsFriendsBlocked();
+              return !Hp.ParentalStore.BIsFriendsBlocked();
             }),
             (e.prototype.RequestNotificationPermission = function() {
               return Promise.resolve(!0);
@@ -70720,7 +70870,7 @@ and limitations under the License.
             e
           );
         })(),
-        sm = (function(e) {
+        dm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70752,7 +70902,7 @@ and limitations under the License.
                   r.close();
                 }, i.timeoutMS || 5e3),
                 r.addEventListener("click", function() {
-                  t(xp);
+                  t(Wp);
                 }),
                 new Promise(function(e, t) {
                   r.addEventListener("close", function() {
@@ -70777,8 +70927,8 @@ and limitations under the License.
             }),
             t
           );
-        })(am),
-        cm = (function(e) {
+        })(um),
+        pm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70789,13 +70939,13 @@ and limitations under the License.
                 var n = JSON.stringify(e);
                 e.tag.startsWith("groupmsg_")
                   ? SteamClient.ClientNotifications.DisplayClientNotification(
-                      sp.k_EClientUINotificationGroupChatMessage,
+                      up.k_EClientUINotificationGroupChatMessage,
                       n,
                       t
                     )
                   : e.tag.startsWith("message_") &&
                     SteamClient.ClientNotifications.DisplayClientNotification(
-                      sp.k_EClientUINotificationFriendChatMessage,
+                      up.k_EClientUINotificationFriendChatMessage,
                       n,
                       t
                     );
@@ -70804,8 +70954,8 @@ and limitations under the License.
             }),
             t
           );
-        })(am),
-        lm = (function() {
+        })(um),
+        hm = (function() {
           function e() {
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
@@ -70836,7 +70986,7 @@ and limitations under the License.
                   "(CAudioPlaybackManager) web audio playback requested: " + e
                 ),
                 this.CreateContextIfNeeded();
-              var i = new um(this, e, t);
+              var i = new mm(this, e, t);
               return this.m_mapPlaybackObjs.set(i, !0), i;
             }),
             (e.prototype.PlaybackFinished = function(e) {
@@ -70920,7 +71070,7 @@ and limitations under the License.
             e
           );
         })(),
-        um = (function() {
+        mm = (function() {
           function e(e, t, i) {
             var n = this;
             (this.m_Source = void 0),
@@ -71002,7 +71152,7 @@ and limitations under the License.
             e
           );
         })(),
-        dm = (function() {
+        gm = (function() {
           function e() {
             this.m_rgActivityCallbacks = [];
           }
@@ -71039,7 +71189,7 @@ and limitations under the License.
             e
           );
         })(),
-        pm = (function(e) {
+        fm = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
@@ -71105,13 +71255,13 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "OnUserAction", null),
             t
           );
-        })(dm),
-        hm = (function(e) {
+        })(gm),
+        _m = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
               (t.m_msUserLastAction = 0),
-              (t.m_eActiveState = cp.k_EComputerActiveStateActive),
+              (t.m_eActiveState = dp.k_EComputerActiveStateActive),
               (t.m_hRegisterForComputerActiveStateChange = null),
               (t.m_hFireUserStillActive = void 0),
               (t.m_hRegisterForComputerActiveStateChange = SteamClient.WebChat.RegisterForComputerActiveStateChange(
@@ -71134,7 +71284,7 @@ and limitations under the License.
                   performance.now() - 1e3 * i,
                   this.m_msUserLastAction
                 )),
-                this.m_eActiveState == cp.k_EComputerActiveStateActive &&
+                this.m_eActiveState == dp.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
             (t.prototype.OnUserAction = function() {
@@ -71150,7 +71300,7 @@ and limitations under the License.
             }),
             (t.prototype.UpdateStillActive = function() {
               (this.m_hFireUserStillActive = void 0),
-                this.m_eActiveState == cp.k_EComputerActiveStateActive &&
+                this.m_eActiveState == dp.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
             it.b([Xt.a], t.prototype, "OnComputerActiveStateChange", null),
@@ -71158,8 +71308,8 @@ and limitations under the License.
             it.b([Xt.a], t.prototype, "UpdateStillActive", null),
             t
           );
-        })(dm),
-        mm = (function() {
+        })(gm),
+        ym = (function() {
           function e() {
             (this.m_bDropConsumed = !1),
               (this.m_onDropCompleteCallbacks = new Ht()),
@@ -71182,7 +71332,7 @@ and limitations under the License.
                 void 0 !== e.source &&
                   this.m_vecClasses.push("drag_source_" + e.source);
               for (
-                var t = 0, i = Array.from(Cs.d.GetPopups());
+                var t = 0, i = Array.from(Ms.d.GetPopups());
                 t < i.length;
                 t++
               ) {
@@ -71206,7 +71356,7 @@ and limitations under the License.
                 (this.m_data = void 0),
                 (this.m_bDropConsumed = void 0);
               for (
-                var e = 0, t = Array.from(Cs.d.GetPopups());
+                var e = 0, t = Array.from(Ms.d.GetPopups());
                 e < t.length;
                 e++
               ) {
@@ -71244,7 +71394,7 @@ and limitations under the License.
             e
           );
         })(),
-        gm = (function(e) {
+        vm = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_window = t), i;
@@ -71302,8 +71452,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Pp),
-        fm = (function(e) {
+        })(Lp),
+        bm = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_popup = t), i;
@@ -71315,7 +71465,7 @@ and limitations under the License.
                 return (
                   !this.m_container &&
                     this.m_popup.window &&
-                    (this.m_container = new gm(this.m_popup.window)),
+                    (this.m_container = new vm(this.m_popup.window)),
                   this.m_container
                 );
               },
@@ -71323,7 +71473,7 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.Show = function(e) {
-              Up.ParentalStore.BIsFriendsBlocked()
+              Hp.ParentalStore.BIsFriendsBlocked()
                 ? console.log("Blocked popup due to parental controls")
                 : this.m_popup.Show(e);
             }),
@@ -71341,24 +71491,24 @@ and limitations under the License.
             }),
             t
           );
-        })(Lp),
-        _m = {
+        })(Up),
+        Cm = {
           bShowFriendsListAtStartup: !0,
           nChatRoomListHeightPx: 224,
           nFriendsListSingleWindowWidthPx: 300,
           bExpandChatMemberList: !0,
           bFavoritesHintDismissed: !1
         },
-        ym = (function() {
+        Sm = (function() {
           function e(e) {
             var t = this;
-            (this.m_FriendHoverStore = new gu()),
-              (this.m_EmoticonHoverStore = new nm()),
-              (this.m_DragDropManager = new mm()),
+            (this.m_FriendHoverStore = new yu()),
+              (this.m_EmoticonHoverStore = new sm()),
+              (this.m_DragDropManager = new ym()),
               (this.m_mapModalManagers = new WeakMap()),
-              (this.m_OverlayStore = new om()),
+              (this.m_OverlayStore = new lm()),
               (this.m_mapOverlayPopupFriendsList = new Map()),
-              (this.m_UIDisplayPrefs = _m),
+              (this.m_UIDisplayPrefs = Cm),
               (this.m_TrackingElements = new Map()),
               (this.m_bUpdatedBuildAvailable = !1),
               (this.m_nSecondsOutOfDate = 0),
@@ -71378,10 +71528,10 @@ and limitations under the License.
                     "Config.IN_CLIENT set but SteamClient globals not available"
                   ),
                   window.addEventListener("message", this.HandlePostMessage)),
-              (this.m_IdleTracker = tt.a.IN_CLIENT ? new hm() : new pm()),
-              this.InstrumentWindow(window, xp),
-              Cs.d.AddPopupCreatedCallback(function(e) {
-                t.InstrumentWindow(e.window, e.browser_info || xp);
+              (this.m_IdleTracker = tt.a.IN_CLIENT ? new _m() : new fm()),
+              this.InstrumentWindow(window, Wp),
+              Ms.d.AddPopupCreatedCallback(function(e) {
+                t.InstrumentWindow(e.window, e.browser_info || Wp);
               });
           }
           return (
@@ -71401,14 +71551,14 @@ and limitations under the License.
             (e.prototype.HandlePostMessage = function(e) {
               var t = e.data;
               if (t && t.command) {
-                var i = Up.GetDefaultBrowserContext();
+                var i = Hp.GetDefaultBrowserContext();
                 void 0 !== e.data.pid &&
                   (i = { m_unPID: e.data.pid, m_nBrowserID: e.data.browserid }),
                   this.ExecuteCommand(i, e.data);
               }
             }),
             (e.prototype.PerformFriendsUIUpdate = function() {
-              var e = Up.UIStore.SerializePopupStateToObject(!0);
+              var e = Hp.UIStore.SerializePopupStateToObject(!0);
               window.parent.postMessage(
                 { message: "ChatReloadRequest", state: e },
                 "https://steamloopback.host"
@@ -71427,7 +71577,7 @@ and limitations under the License.
                     (this.m_bUpdatedBuildAvailable = !0),
                     void 0 !== e.data.nSecondsOutOfDate &&
                       (this.m_nSecondsOutOfDate = e.data.nSecondsOutOfDate),
-                    (Up.IdleTracker.GetUserIdleTime() > 7200 ||
+                    (Hp.IdleTracker.GetUserIdleTime() > 7200 ||
                       (void 0 !== e.data.bForce && 1 == e.data.bForce)) &&
                       this.PerformFriendsUIUpdate())
                   : "ReloadSerializedChatState" == e.data.message &&
@@ -71435,7 +71585,7 @@ and limitations under the License.
                     (console.log(
                       "Asked by loader to reload serialized chat state"
                     ),
-                    Up.UIStore.SetStateToRestoreFrom(e.data.state)));
+                    Hp.UIStore.SetStateToRestoreFrom(e.data.state)));
             }),
             (e.prototype.ExecuteCommand = function(e, t) {
               switch (t.command) {
@@ -71468,14 +71618,14 @@ and limitations under the License.
                       i.GetAccountID(),
                       !1
                     );
-                    n && Up.UIStore.CloseTabByID(n.unique_id);
+                    n && Hp.UIStore.CloseTabByID(n.unique_id);
                   } else if (i.BIsClanAccount()) {
-                    var r = Up.FriendStore.ClanStore.GetClan(i);
+                    var r = Hp.FriendStore.ClanStore.GetClan(i);
                     if (r && r.GetChatGroupIDIfLoaded()) {
-                      var o = Up.ChatStore.GetChatRoomGroup(
+                      var o = Hp.ChatStore.GetChatRoomGroup(
                         r.GetChatGroupIDIfLoaded()
                       );
-                      o && Up.UIStore.CloseTabByID(o.unique_id);
+                      o && Hp.UIStore.CloseTabByID(o.unique_id);
                     }
                   }
                   break;
@@ -71490,7 +71640,7 @@ and limitations under the License.
                         e,
                         a.accountid
                       ),
-                      Up.FriendStore.InviteToTrade(a));
+                      Hp.FriendStore.InviteToTrade(a));
                   }
                   break;
                 case "ShowChatRoomGroupDialog":
@@ -71504,17 +71654,17 @@ and limitations under the License.
                       !0
                     );
                   else {
-                    var l = Up.ChatStore.InviteStore.GetDirectInviteInfo(
+                    var l = Hp.ChatStore.InviteStore.GetDirectInviteInfo(
                       s,
                       c,
-                      Up.FriendStore.self.accountid
+                      Hp.FriendStore.self.accountid
                     );
                     Ge({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "ShowChatRoomGroupInvite":
                   var u = t.invite_code,
-                    l = Up.ChatStore.InviteStore.GetInviteFromCode(u);
+                    l = Hp.ChatStore.InviteStore.GetInviteFromCode(u);
                   Ge({ invite: l, inviter: null }, e, window);
                   break;
                 case "DragAndDropStart":
@@ -71527,14 +71677,14 @@ and limitations under the License.
                   this.Dropped(t.x, t.y, t.data);
                   break;
                 case "SetPersonaState":
-                  Up.FriendStore.SetUserPersonaState(t.persona_state);
+                  Hp.FriendStore.SetUserPersonaState(t.persona_state);
               }
             }),
             (e.prototype.Init = function(e, t, i) {
               var n = this,
                 r = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "UIDisplayPrefs",
-                  _m
+                  Cm
                 ).then(function(e) {
                   Object(pt.runInAction)(function() {
                     n.m_UIDisplayPrefs = e;
@@ -71578,7 +71728,7 @@ and limitations under the License.
             (e.prototype.GetModalManager = function(e) {
               var t = this.m_mapModalManagers.get(e);
               return (
-                t || ((t = new bm()), this.m_mapModalManagers.set(e, t)), t
+                t || ((t = new Fm()), this.m_mapModalManagers.set(e, t)), t
               );
             }),
             Object.defineProperty(e.prototype, "IdleTrackerWeb", {
@@ -71613,7 +71763,7 @@ and limitations under the License.
                 )));
             }),
             (e.prototype.ShowPopupFriendsList = function(e) {
-              if (Up.ParentalStore.BIsFriendsBlocked())
+              if (Hp.ParentalStore.BIsFriendsBlocked())
                 return (
                   console.log(
                     "Blocked friends list popup due to parental controls"
@@ -71624,7 +71774,7 @@ and limitations under the License.
               return (
                 t
                   ? t.OnShow()
-                  : ((t = new Wd(
+                  : ((t = new qd(
                       this.m_FriendsUIApp.FriendStore,
                       this.m_FriendsUIApp.ChatStore,
                       e
@@ -71659,7 +71809,7 @@ and limitations under the License.
             }),
             (e.prototype.AddChildDropTarget = function(e) {
               var t = e.GetDivElement().getBoundingClientRect(),
-                i = new Cm(t.left, t.top, t.width, t.height);
+                i = new wm(t.left, t.top, t.width, t.height);
               this.m_TrackingElements.set(e, i);
             }),
             (e.prototype.RemoveChildDropTarget = function(e) {
@@ -71670,7 +71820,7 @@ and limitations under the License.
               if (void 0 != this.m_FriendDragDropTarget) {
                 this.m_TrackingElements.forEach(function(t, i, n) {
                   var r = i.GetDivElement().getBoundingClientRect(),
-                    o = new Cm(r.left, r.top, r.width, r.height);
+                    o = new wm(r.left, r.top, r.width, r.height);
                   t.Equal(o) || e.m_TrackingElements.set(i, o);
                 });
                 var t = this.m_FriendDragDropTarget.GetDivElement();
@@ -71706,13 +71856,13 @@ and limitations under the License.
             e
           );
         })(),
-        vm = (function(e) {
+        Mm = (function(e) {
           function t() {
-            var t = e.call(this, new Xh()) || this;
+            var t = e.call(this, new em()) || this;
             return (
-              (t.m_AudioPlaybackManager = new lm()),
-              (t.m_DesktopApp = new ym(t)),
-              (Sm = t.m_DesktopApp),
+              (t.m_AudioPlaybackManager = new hm()),
+              (t.m_DesktopApp = new Sm(t)),
+              (Om = t.m_DesktopApp),
               AssertMsg(
                 !tt.a.IN_MOBILE,
                 "DesktopApp initialized in mobile context"
@@ -71724,12 +71874,12 @@ and limitations under the License.
             it.c(t, e),
             (t.prototype.Init = function(t, i, n) {
               var r = i
-                  ? new cm(this.m_FriendStore)
-                  : new sm(this.m_FriendStore),
+                  ? new pm(this.m_FriendStore)
+                  : new dm(this.m_FriendStore),
                 o = this.m_DesktopApp.Init(t, i, n);
               e.prototype.InitInternal.call(this, t, r, o),
                 Se(
-                  xp,
+                  Wp,
                   this.m_FriendStore,
                   this.m_ChatStore,
                   document.getElementById("friendslist-container"),
@@ -71739,7 +71889,7 @@ and limitations under the License.
             (t.prototype.OnReadyToRender = function() {
               tt.a.USE_POPUPS &&
                 this.m_DesktopApp.UIDisplayPrefs.bShowFriendsListAtStartup &&
-                this.m_DesktopApp.ShowPopupFriendsList(xp),
+                this.m_DesktopApp.ShowPopupFriendsList(Wp),
                 tt.a.IN_CLIENT &&
                   Ke(
                     this.m_FriendStore,
@@ -71753,7 +71903,7 @@ and limitations under the License.
                   var t = JSON.parse(e);
                   t &&
                     t.command &&
-                    this.m_DesktopApp.ExecuteCommand(xp, t.command);
+                    this.m_DesktopApp.ExecuteCommand(Wp, t.command);
                 }
                 window.sessionStorage.removeItem("oFriendsUIStartupParam");
               } catch (e) {}
@@ -71791,29 +71941,29 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.AddPopupManagerShutdownCallback = function(e) {
-              Cs.d.AddShutdownCallback(e);
+              Ms.d.AddShutdownCallback(e);
             }),
             (t.prototype.GetChatRoomBBCodeDictionary = function() {
               return ze();
             }),
             (t.prototype.GetFriendChatBBCodeDictionary = function() {
-              return Le();
+              return xe();
             }),
             (t.prototype.GetFriendNotificationBBCodeDictionary = function() {
               return je();
             }),
             (t.prototype.CreateChatPopup = function(e, t, i, n, r, o) {
-              var a = new Hd(e, t, i, n, r, o),
-                s = new fm(a);
-              return new $d(s, a);
+              var a = new Yd(e, t, i, n, r, o),
+                s = new bm(a);
+              return new ip(s, a);
             }),
             (t.prototype.ShowPopupFriendsList = function(e) {
-              return new fm(this.m_DesktopApp.ShowPopupFriendsList(e));
+              return new bm(this.m_DesktopApp.ShowPopupFriendsList(e));
             }),
             t
           );
-        })(jp),
-        bm = (function() {
+        })(Vp),
+        Fm = (function() {
           function e() {
             (this.m_bUsePopups = !1),
               (this.m_rgModals = pt.observable.array(null, { deep: !1 }));
@@ -71851,7 +72001,7 @@ and limitations under the License.
             e
           );
         })(),
-        Cm = (function() {
+        wm = (function() {
           function e(e, t, i, n) {
             (this.x = 0),
               (this.y = 0),
@@ -71882,13 +72032,13 @@ and limitations under the License.
             e
           );
         })(),
-        Sm = void 0,
-        Mm = (i("kllU"), i("4Dav"));
-      (window.AssertMsg = Mm.a),
+        Om = void 0,
+        Bm = (i("kllU"), i("4Dav"));
+      (window.AssertMsg = Bm.a),
         document.addEventListener("DOMContentLoaded", function() {
           Object(tt.c)(), Qe();
         });
-      var Fm, wm, Om;
+      var Rm, Im, Em;
       window.LocalizationReady = $e;
     },
     kllU: function(e, t, i) {

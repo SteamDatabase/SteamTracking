@@ -164,6 +164,17 @@ function ConfirmLeaveGroup( steamid, strGroupName, elem )
 		} );
 }
 
+function ConfirmCancelInvite( steamid, elem )
+{
+	ShowConfirmDialog( 'Cancel Invite',
+	'Are you sure you want to cancel this friend invite?<br>You won\'t immediately be able to send this player another invite. If you know them in person, you can always send them a <a href="https://steamcommunity.com/my/friends/add" target="_blank" rel="noreferrer">friend invite link</a>.',
+	'Cancel Invite'
+	).done( function() {
+		ApplyFriendAction( 'remove', steamid, elem, UpdateSentList );
+	} );
+
+}
+
 function ExecFriendAction( action, navid )
 {
 	return MassApplyFriendAction( action, navid, '#search_results>.selectable.selected:visible' );
@@ -359,6 +370,11 @@ function UpdatePendingList()
 function UpdateGroupList()
 {
 	return ToggleForEmpty( '#search_results>.group_block:visible', '#search_results_empty' );
+}
+
+function UpdateSentList()
+{
+	return ToggleForEmpty( '#search_results_sentinvites>.invite_row:visible', '#search_results_sentinvites_empty' );
 }
 
 function UpdateCounts()
