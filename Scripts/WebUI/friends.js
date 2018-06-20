@@ -7556,6 +7556,8 @@ and limitations under the License.
             return Object(hr.b)("#friends_trade_would_exceed_max_asset_count");
           case 32:
             return Object(hr.b)("#friends_trade_disabled_in_your_country");
+          case 33:
+            return Object(hr.b)("#friends_trade_disabled_in_other_country");
           default:
             return Object(hr.b)("#friends_trade_generic_failure", r);
         }
