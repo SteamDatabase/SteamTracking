@@ -1857,7 +1857,7 @@ webpackJsonp(
           })
         );
       }
-      function x() {
+      function L() {
         return V.createElement(
           "svg",
           {
@@ -1883,7 +1883,7 @@ webpackJsonp(
           })
         );
       }
-      function L() {
+      function x() {
         return V.createElement(
           "svg",
           {
@@ -2068,8 +2068,8 @@ webpackJsonp(
         (t.b = A),
         (t.j = P),
         (t.s = z),
-        (t.u = x),
-        (t.C = L),
+        (t.u = L),
+        (t.C = x),
         (t.E = j),
         (t.A = U),
         (t.J = W);
@@ -7780,7 +7780,7 @@ and limitations under the License.
           )
         );
       }
-      function x(e, t, i) {
+      function L(e, t, i) {
         var n = i ? [i.accountid] : [];
         Be(
           br.createElement(hc, { browserContext: e, rgPreSelectedFriends: n }),
@@ -7793,7 +7793,7 @@ and limitations under the License.
           }
         );
       }
-      function L(e, t, i) {
+      function x(e, t, i) {
         Be(
           br.createElement(hc, {
             browserContext: e,
@@ -7811,7 +7811,7 @@ and limitations under the License.
       }
       function j(e, t, i) {
         0 == Hp.FriendStore.FriendGroupStore.user_groups.length
-          ? x(e, t, i)
+          ? L(e, t, i)
           : Be(
               br.createElement(mc, { browserContext: e, friend: i }),
               t,
@@ -7892,7 +7892,7 @@ and limitations under the License.
                 {
                   key: "managegroup",
                   onSelected: function() {
-                    L(e.browserContext, e.group, e.ownerWindow);
+                    x(e.browserContext, e.group, e.ownerWindow);
                   }
                 },
                 Object(hr.b)("#FriendGroup_Menu_Manage")
@@ -7919,7 +7919,7 @@ and limitations under the License.
               {
                 key: "creategroup",
                 onSelected: function() {
-                  x(e.browserContext, e.ownerWindow);
+                  L(e.browserContext, e.ownerWindow);
                 }
               },
               Object(hr.b)("#FriendGroup_Menu_CreateGroup")
@@ -8554,19 +8554,19 @@ and limitations under the License.
         return e.match(t)[5].toString();
       }
       function ze() {
-        return Object.assign(Le(), { mention: Xh });
+        return Object.assign(xe(), { mention: Xh });
       }
-      function xe() {
-        return Object.assign(Le(), {
-          invite: xh,
-          gameinvite: Lh,
+      function Le() {
+        return Object.assign(xe(), {
+          invite: Lh,
+          gameinvite: xh,
           lobbyinvite: jh,
           tradeoffer: qh,
           broadcastinvite: Uh,
           broadcastviewrequest: Wh
         });
       }
-      function Le() {
+      function xe() {
         return {
           url: Ih,
           youtube: kh,
@@ -11979,13 +11979,13 @@ and limitations under the License.
               ot.Message.setField(this, 2, e);
             }),
             (t.prototype.names = function() {
-              return ot.Message.getRepeatedWrapperField(this, xt, 3);
+              return ot.Message.getRepeatedWrapperField(this, Lt, 3);
             }),
             (t.prototype.set_names = function(e) {
               ot.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (t.prototype.add_names = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 3, e, xt, t);
+              return ot.Message.addToRepeatedWrapperField(this, 3, e, Lt, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -12008,8 +12008,8 @@ and limitations under the License.
                     e.set_steamid(t.readFixed64String());
                     break;
                   case 3:
-                    var i = new xt();
-                    t.readMessage(i, xt.deserializeBinaryFromReader),
+                    var i = new Lt();
+                    t.readMessage(i, Lt.deserializeBinaryFromReader),
                       e.add_names(i);
                     break;
                   default:
@@ -12029,7 +12029,7 @@ and limitations under the License.
                 void 0 !== i && t.writeFixed64String(2, i),
                 (i = e.names()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(3, i, xt.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, Lt.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CMsgClientAMGetPersonaNameHistoryResponse_NameTableInstance";
@@ -12037,7 +12037,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xt = (function(e) {
+        Lt = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -12099,7 +12099,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lt = (ot.Message,
+        xt = (ot.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -15867,7 +15867,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xi = (function(e) {
+        Li = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -15929,7 +15929,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Li = (function(e) {
+        xi = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19624,7 +19624,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xn = (function(e) {
+        Ln = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19745,7 +19745,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Ln = (function(e) {
+        xn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -21258,7 +21258,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.RenameRole#1", t, zi);
         }
         function h(e, t) {
-          return e.SendMsg("ChatRoom.DeleteRole#1", t, Li);
+          return e.SendMsg("ChatRoom.DeleteRole#1", t, xi);
         }
         function m(e, t) {
           return e.SendMsg("ChatRoom.GetRoleActions#1", t, ji);
@@ -21321,7 +21321,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.CreateInviteLink#1", t, Pn);
         }
         function D(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, xn);
+          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, Ln);
         }
         function N(e, t) {
           return e.SendMsg("ChatRoom.GetInviteInfo#1", t, jn);
@@ -21335,10 +21335,10 @@ and limitations under the License.
         function z(e, t) {
           return e.SendMsg("ChatRoom.GetInviteList#1", t, Qn);
         }
-        function x(e, t) {
+        function L(e, t) {
           return e.SendMsg("ChatRoom.DeleteInviteLink#1", t, qn);
         }
-        function L(e, t) {
+        function x(e, t) {
           return e.SendMsg("ChatRoom.SetSessionActiveChatRoomGroups#1", t, er);
         }
         function j(e, t) {
@@ -21382,8 +21382,8 @@ and limitations under the License.
           (e.GetInviteLinksForGroup = A),
           (e.GetBanList = P),
           (e.GetInviteList = z),
-          (e.DeleteInviteLink = x),
-          (e.SetSessionActiveChatRoomGroups = L),
+          (e.DeleteInviteLink = L),
+          (e.SetSessionActiveChatRoomGroups = x),
           (e.SetUserChatGroupPreferences = j);
       })(lr || (lr = {}));
       var ur;
@@ -21750,7 +21750,7 @@ and limitations under the License.
                 o = this.m_ChatStore.GetChatRoomGroup(e);
               if (o && o.GetChatRoom(t)) r.InitDirectInvite(e, t);
               else {
-                var a = dt.Init(Ln);
+                var a = dt.Init(xn);
                 a
                   .Body()
                   .set_steamid_invitee(
@@ -22546,7 +22546,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xr = (function(e) {
+        Lr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22945,7 +22945,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lr = (function(e) {
+        xr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -23246,13 +23246,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.descriptions = function() {
-              return ot.Message.getRepeatedWrapperField(this, xr, 1);
+              return ot.Message.getRepeatedWrapperField(this, Lr, 1);
             }),
             (t.prototype.set_descriptions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_descriptions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, xr, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, Lr, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -23269,8 +23269,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new xr();
-                    t.readMessage(i, xr.deserializeBinaryFromReader),
+                    var i = new Lr();
+                    t.readMessage(i, Lr.deserializeBinaryFromReader),
                       e.add_descriptions(i);
                     break;
                   default:
@@ -23286,7 +23286,7 @@ and limitations under the License.
               var i;
               (i = e.descriptions()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, xr.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Lr.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CEcon_GetAssetClassInfo_Response";
@@ -23319,7 +23319,7 @@ and limitations under the License.
               var e = this;
               if (this.m_strTradeOfferToken)
                 return Promise.resolve(this.GetConstructedTradeOfferURL());
-              var t = dt.Init(Lr);
+              var t = dt.Init(xr);
               return pr
                 .GetTradeOfferAccessToken(
                   this.m_CMInterface.GetServiceTransport(),
@@ -26550,7 +26550,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        xo = (function(e) {
+        Lo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26585,7 +26585,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lo = (function(e) {
+        xo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27716,7 +27716,7 @@ and limitations under the License.
           return e.SendMsg("Player.AcceptSSA#1", t, zo);
         }
         function o(e, t) {
-          return e.SendMsg("Player.GetNicknameList#1", t, Lo);
+          return e.SendMsg("Player.GetNicknameList#1", t, xo);
         }
         function a(e, t) {
           return e.SendMsg("Player.AddFriend#1", t, Wo);
@@ -29048,7 +29048,7 @@ and limitations under the License.
           function e(e) {
             var t = this;
             (this.m_mapClans = pt.observable.map()),
-              (this.m_eClanStateHandler = s(822, Lt, function(e) {
+              (this.m_eClanStateHandler = s(822, xt, function(e) {
                 var i = new lt.a(e.Body().steamid_clan());
                 t.GetOrCreateClan(i).ReadStateUpdate(e.Body());
               })),
@@ -30099,7 +30099,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        xa = (function(e) {
+        La = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30108,13 +30108,13 @@ and limitations under the License.
           return (
             it.c(t, e),
             (t.prototype.message_sessions = function() {
-              return ot.Message.getRepeatedWrapperField(this, La, 1);
+              return ot.Message.getRepeatedWrapperField(this, xa, 1);
             }),
             (t.prototype.set_message_sessions = function(e) {
               ot.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_message_sessions = function(e, t) {
-              return ot.Message.addToRepeatedWrapperField(this, 1, e, La, t);
+              return ot.Message.addToRepeatedWrapperField(this, 1, e, xa, t);
             }),
             (t.prototype.timestamp = function() {
               return ot.Message.getField(this, 2);
@@ -30137,8 +30137,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new La();
-                    t.readMessage(i, La.deserializeBinaryFromReader),
+                    var i = new xa();
+                    t.readMessage(i, xa.deserializeBinaryFromReader),
                       e.add_message_sessions(i);
                     break;
                   case 2:
@@ -30157,7 +30157,7 @@ and limitations under the License.
               var i;
               (i = e.message_sessions()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, La.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(1, i, xa.serializeBinaryToWriter),
                 void 0 !== (i = ot.Message.getField(e, 2)) &&
                   t.writeUint32(2, i);
             }),
@@ -30167,7 +30167,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        La = (function(e) {
+        xa = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30746,7 +30746,7 @@ and limitations under the License.
           return e.SendMsg("FriendMessages.GetRecentMessages#1", t, Aa);
         }
         function i(e, t) {
-          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, xa);
+          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, La);
         }
         function n(e, t) {
           return e.SendMsg("FriendMessages.SendMessage#1", t, Ua);
@@ -31998,7 +31998,7 @@ and limitations under the License.
             }),
             (e.prototype.RequestNicknameList = function() {
               var e = this,
-                t = dt.Init(xo);
+                t = dt.Init(Lo);
               Jr.GetNicknameList(
                 this.m_CMInterface.GetServiceTransport(),
                 t
@@ -35315,7 +35315,7 @@ and limitations under the License.
             }),
             (e.prototype.DeleteRole = function(e) {
               var t = this,
-                i = dt.Init(xi);
+                i = dt.Init(Li);
               return (
                 i.Body().set_chat_group_id(this.GetGroupID()),
                 i.Body().set_role_id(e),
@@ -38034,7 +38034,7 @@ and limitations under the License.
         })(Ns),
         Ps = i("4JXe"),
         zs = i("tW2u"),
-        xs = (function() {
+        Ls = (function() {
           function e(e, t) {
             (this.m_bActive = !1),
               (this.m_fnBoundAnimationFunc = void 0),
@@ -38101,7 +38101,7 @@ and limitations under the License.
             e
           );
         })(),
-        Ls = (function(e) {
+        xs = (function(e) {
           function t(t, i, n) {
             var r = e.call(this, Mr.g(t), n) || this;
             return (r.m_props = {}), (r.m_object = t), (r.m_propTargets = i), r;
@@ -38126,7 +38126,7 @@ and limitations under the License.
             }),
             t
           );
-        })(xs),
+        })(Ls),
         js = (function(e) {
           function t(t, i, n) {
             var r = e.call(this, Mr.g(Os.findDOMNode(t)), n) || this;
@@ -38165,7 +38165,7 @@ and limitations under the License.
             }),
             t
           );
-        })(xs),
+        })(Ls),
         Us = A("DialogHeader"),
         Ws = A("DialogFooter"),
         Vs = A("DialogLabel _DialogLayout"),
@@ -39927,7 +39927,7 @@ and limitations under the License.
                 });
             }),
             (t.prototype.CreateNew = function(e) {
-              x(Ye(this, e), Ze(e), this.props.friend);
+              L(Ye(this, e), Ze(e), this.props.friend);
             }),
             (t.prototype.render = function() {
               return br.createElement(
@@ -41371,7 +41371,7 @@ and limitations under the License.
             t
           );
         })(ot.Message)),
-        xc = (function(e) {
+        Lc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41488,7 +41488,7 @@ and limitations under the License.
             t
           );
         })(ot.Message),
-        Lc = (function(e) {
+        xc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -41625,11 +41625,11 @@ and limitations under the License.
         }),
           (e.NotifyUserLeftVoiceChatHandler = {
             name: "VoiceChatClient.NotifyUserLeftVoiceChat#1",
-            request: xc
+            request: Lc
           }),
           (e.NotifyVoiceChatEndedHandler = {
             name: "VoiceChatClient.NotifyVoiceChatEnded#1",
-            request: Lc
+            request: xc
           }),
           (e.NotifyUserVoiceStatusHandler = {
             name: "VoiceChatClient.NotifyUserVoiceStatus#1",
@@ -42268,6 +42268,9 @@ and limitations under the License.
               (this.m_CurrentJitterBufferMs = 0),
               (this.m_PacketsReceived = 0),
               (this.m_PacketsLost = 0),
+              (this.m_PacketsSent = 0),
+              (this.m_BytesSent = 0),
+              (this.m_googRTT = 0),
               (this.m_BytesReceived = 0),
               (this.m_DecodingThroughNetEQ = 0),
               (this.m_DecodingPacketLossCorrection = 0),
@@ -44423,7 +44426,6 @@ and limitations under the License.
               }
             }),
             (e.prototype.ProcessStatsReport = function() {
-              var e = this;
               if (
                 (this.CheckVoiceSnoozeTiemout(),
                 void 0 != this.m_PeerConnection &&
@@ -44436,94 +44438,199 @@ and limitations under the License.
                     this.m_PeerConnection.localDescription.sdp.indexOf(
                       "mozilla..."
                     )))
-              )
+              ) {
+                var e = new Date(),
+                  t = this,
+                  i = this.m_PeerConnection;
+                t.LogMsg(
+                  "-----------------------------------------------------------"
+                ),
+                  t.LogMsg(" Voice Report: " + e.toUTCString()),
+                  t.LogMsg(
+                    "-----------------------------------------------------------"
+                  );
+                var n = i.getSenders();
+                if (n.length > 0) {
+                  this.LogMsg(
+                    "(WebRTC) " +
+                      this.PadOutput("(Sender SSRC)", 40) +
+                      " " +
+                      this.PadOutput("Audio Packets Sent", 20) +
+                      " " +
+                      this.PadOutput("Connection State", 20) +
+                      " " +
+                      this.PadOutput("Writable", 20) +
+                      " " +
+                      this.PadOutput("Track State", 20) +
+                      " " +
+                      this.PadOutput("Round Trip MS", 20) +
+                      " " +
+                      this.PadOutput("Transport Bytes Sent", 24) +
+                      " " +
+                      this.PadOutput("Transport Bytes Received", 24) +
+                      " "
+                  );
+                  try {
+                    for (var r = 0; r < n.length; ++r)
+                      n[r].getStats().then(function(e) {
+                        e.forEach(function(i) {
+                          if (
+                            "outbound-rtp" == i.type &&
+                            "audio" == i.mediaType
+                          ) {
+                            var n = i.ssrc,
+                              r = i.packetsSent,
+                              o = "",
+                              a = "",
+                              s = 0,
+                              c = 0,
+                              l = 0,
+                              u = "",
+                              d = e.get(i.trackId);
+                            void 0 != d &&
+                              "track" == d.type &&
+                              "audio" == d.kind &&
+                              (u =
+                                d.ended && d.detached
+                                  ? "ended+detached"
+                                  : d.ended
+                                    ? "ended"
+                                    : d.detached ? "detached" : "active");
+                            var p = e.get(i.transportId);
+                            if (void 0 != p && "transport" == p.type) {
+                              var h = e.get(p.selectedCandidatePairId);
+                              void 0 != h &&
+                                "candidate-pair" == h.type &&
+                                ((o = h.state),
+                                (a = h.writable ? "writable" : "not-writable"),
+                                (s = 1e3 * h.currentRoundTripTime)),
+                                (c = p.bytesSent),
+                                (l = p.bytesReceived);
+                            }
+                            t.LogMsg(
+                              "(WebRTC) " +
+                                t.PadOutput(String(n), 40) +
+                                " " +
+                                t.PadOutput(String(r), 20) +
+                                " " +
+                                t.PadOutput(o, 20) +
+                                " " +
+                                t.PadOutput(a, 20) +
+                                " " +
+                                t.PadOutput(u, 20) +
+                                " " +
+                                t.PadOutput(String(s), 20) +
+                                " " +
+                                t.PadOutput(String(c), 24) +
+                                " " +
+                                t.PadOutput(String(l), 24)
+                            );
+                          }
+                        });
+                      });
+                  } catch (e) {
+                    t.LogMsg("(WebRTC) Can't log sender stats on this browser");
+                  }
+                }
+                setTimeout(this.ProcessReceiverStatsReport, 100);
+              }
+            }),
+            (e.prototype.ProcessReceiverStatsReport = function() {
+              if (
+                -1 ==
+                this.m_PeerConnection.localDescription.sdp.indexOf("mozilla...")
+              ) {
+                var e = this,
+                  t = this.m_PeerConnection;
                 try {
-                  var t = this;
-                  this.m_PeerConnection.getStats(function(e) {
-                    e.result().forEach(function(e) {
-                      if ("ssrc" == e.type) {
+                  t.getStats(function(t) {
+                    t.result().forEach(function(t) {
+                      if ("ssrc" == t.type) {
                         var i = new nl(),
-                          n = e.names(),
+                          n = t.names(),
                           r = n.indexOf("mediaType");
-                        if (-1 != r && "audio" == e.stat(n[r])) {
-                          e.names().forEach(function(t) {
-                            "ssrc" == t
-                              ? (i.m_SSRC = Number(e.stat(t)))
-                              : "googCurrentDelayMs" == t
+                        if (-1 != r && "audio" == t.stat(n[r])) {
+                          t.names().forEach(function(e) {
+                            "ssrc" == e
+                              ? (i.m_SSRC = Number(t.stat(e)))
+                              : "googCurrentDelayMs" == e
                                 ? (i.m_MostRecentDelayEstimateMs = Number(
-                                    e.stat(t)
+                                    t.stat(e)
                                   ))
-                                : "packetsLost" == t
-                                  ? (i.m_PacketsLost = Number(e.stat(t)))
-                                  : "packetsReceived" == t
-                                    ? (i.m_PacketsReceived = Number(e.stat(t)))
-                                    : "googJitterReceived" == t
+                                : "packetsLost" == e
+                                  ? (i.m_PacketsLost = Number(t.stat(e)))
+                                  : "packetsReceived" == e
+                                    ? (i.m_PacketsReceived = Number(t.stat(e)))
+                                    : "googJitterReceived" == e
                                       ? (i.m_MostRecentJitterReceivedMs = Number(
-                                          e.stat(t)
+                                          t.stat(e)
                                         ))
-                                      : "googJitterBufferMs" == t
+                                      : "googJitterBufferMs" == e
                                         ? (i.m_CurrentJitterBufferMs = Number(
-                                            e.stat(t)
+                                            t.stat(e)
                                           ))
-                                        : "bytesReceived" == t
+                                        : "bytesReceived" == e
                                           ? (i.m_BytesReceived = Number(
-                                              e.stat(t)
+                                              t.stat(e)
                                             ))
-                                          : "googDecodingCTN" == t
+                                          : "googDecodingCTN" == e
                                             ? (i.m_DecodingThroughNetEQ = Number(
-                                                e.stat(t)
+                                                t.stat(e)
                                               ))
-                                            : "googDecodingPLC" == t
+                                            : "googDecodingPLC" == e
                                               ? (i.m_DecodingPacketLossCorrection = Number(
-                                                  e.stat(t)
+                                                  t.stat(e)
                                                 ))
-                                              : "googDecodingCNG" == t
+                                              : "googDecodingCNG" == e
                                                 ? (i.m_DecodingComfortNoiseGeneration = Number(
-                                                    e.stat(t)
+                                                    t.stat(e)
                                                   ))
-                                                : "googDecodingPLCCNG" == t
+                                                : "googDecodingPLCCNG" == e
                                                   ? (i.m_DecodingPacketLossFadeNoiseGeneration = Number(
-                                                      e.stat(t)
+                                                      t.stat(e)
                                                     ))
-                                                  : "googDecodingNormal" == t
+                                                  : "googDecodingNormal" == e
                                                     ? (i.m_DecodingNormal = Number(
-                                                        e.stat(t)
+                                                        t.stat(e)
                                                       ))
-                                                    : "googDecodingCTSG" == t
+                                                    : "googDecodingCTSG" == e
                                                       ? (i.m_DecodingSilenceGenerator = Number(
-                                                          e.stat(t)
+                                                          t.stat(e)
                                                         ))
                                                       : "googDecodingMuted" ==
-                                                          t &&
+                                                          e &&
                                                         (i.m_DecodingMuted = Number(
-                                                          e.stat(t)
+                                                          t.stat(e)
                                                         ));
                           });
-                          var o = t.m_mapSSRCToAccountID.get(i.m_SSRC);
-                          void 0 != o && t.m_mapAccountIDToStats.set(o, i);
+                          var o = e.m_mapSSRCToAccountID.get(i.m_SSRC);
+                          void 0 != o && e.m_mapAccountIDToStats.set(o, i);
                         }
                       }
                     });
                   }),
-                    this.LogMsg(
-                      "(WebRTC) " +
-                        this.PadOutput("Participant", 40) +
-                        " " +
-                        this.PadOutput("Packets Received", 20) +
-                        " " +
-                        this.PadOutput("Est. Delay MS", 20) +
-                        " " +
-                        this.PadOutput("Packets Lost", 20) +
-                        " " +
-                        this.PadOutput("Last Jitter MS", 20) +
-                        " " +
-                        this.PadOutput("Jitter Buffer MS", 20) +
-                        " " +
-                        this.PadOutput("Decoding Successes", 20) +
-                        " " +
-                        this.PadOutput("Decoding Errors", 20)
+                    e.LogMsg(
+                      "-----------------------------------------------------------"
                     ),
-                    this.m_mapAccountIDToStats.forEach(function(t, i) {
+                    e.LogMsg(
+                      "(WebRTC) " +
+                        e.PadOutput("(Receiving)", 40) +
+                        " " +
+                        e.PadOutput("Packets Received", 20) +
+                        " " +
+                        e.PadOutput("Est. Delay MS", 20) +
+                        " " +
+                        e.PadOutput("Packets Lost", 20) +
+                        " " +
+                        e.PadOutput("Last Jitter MS", 20) +
+                        " " +
+                        e.PadOutput("Jitter Buffer MS", 20) +
+                        " " +
+                        e.PadOutput("Decoding Successes", 20) +
+                        " " +
+                        e.PadOutput("Decoding Errors", 20)
+                    ),
+                    e.m_mapAccountIDToStats.forEach(function(t, i) {
                       var n = Hp.FriendStore.GetPlayerIfCached(i),
                         r = "[unknown]";
                       void 0 != n && (r = n.display_name),
@@ -44564,8 +44671,12 @@ and limitations under the License.
                               20
                             )
                         );
-                    });
+                    }),
+                    e.LogMsg(
+                      "-----------------------------------------------------------"
+                    );
                 } catch (e) {}
+              }
             }),
             (e.prototype.PadOutput = function(e, t, i) {
               if ((void 0 === i && (i = void 0), Math.abs(t) <= e.length))
@@ -44966,7 +45077,7 @@ and limitations under the License.
                   }
                   this.m_mapUserVoiceStatus.clear();
                 }
-                this.m_mapAccountIDToStats.clear(),
+                this.m_mapSSRCToAccountID.clear(),
                   this.m_mapAccountIDToStats.clear();
                 var a =
                   this.m_VoiceCallState.m_eState >
@@ -45179,6 +45290,12 @@ and limitations under the License.
             ),
             it.b([pt.action.bound], e.prototype, "PlayRingSound", null),
             it.b([pt.action.bound], e.prototype, "ProcessStatsReport", null),
+            it.b(
+              [pt.action.bound],
+              e.prototype,
+              "ProcessReceiverStatsReport",
+              null
+            ),
             it.b([pt.action.bound], e.prototype, "CheckConnection", null),
             it.b([pt.action.bound], e.prototype, "ScheduledInitiate", null),
             it.b(
@@ -48231,7 +48348,7 @@ and limitations under the License.
                         classNames: "friend-anim",
                         timeout: 300
                       },
-                      br.createElement(xl, {
+                      br.createElement(Ll, {
                         friend: t,
                         group: r,
                         context: e.GetFriendRenderContext(),
@@ -48285,7 +48402,7 @@ and limitations under the License.
             (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        xl = (function(e) {
+        Ll = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48356,7 +48473,7 @@ and limitations under the License.
             (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ll = (function(e) {
+        xl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -48668,7 +48785,7 @@ and limitations under the License.
                           br.createElement(
                             "div",
                             { className: "inviteLinkContainer" },
-                            br.createElement(Ll, { chat: t, disabled: !1 })
+                            br.createElement(xl, { chat: t, disabled: !1 })
                           ),
                           br.createElement(
                             "div",
@@ -50180,7 +50297,7 @@ and limitations under the License.
                   br.createElement(
                     "div",
                     { className: "inviteLinkContainer" },
-                    br.createElement(Ll, {
+                    br.createElement(xl, {
                       chat: this.props.group.GetDefaultChatRoom(),
                       disabled: !this.props.enabled
                     })
@@ -54654,7 +54771,7 @@ and limitations under the License.
         Au = Object(Rs.observer)(function(e) {
           var t = Hp.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
-              return br.createElement(xu, {
+              return br.createElement(Lu, {
                 key: e.id,
                 group: e,
                 bSingletonGroup: !1,
@@ -54667,7 +54784,7 @@ and limitations under the License.
           return (
             n &&
               i.push(
-                br.createElement(xu, {
+                br.createElement(Lu, {
                   key: "singleton",
                   group: n,
                   bSingletonGroup: !0,
@@ -55256,7 +55373,7 @@ and limitations under the License.
             t
           );
         })(br.PureComponent),
-        xu = (function(e) {
+        Lu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bLocalCollapsed: i.props.collapsed }), i;
@@ -55415,7 +55532,7 @@ and limitations under the License.
                   }
                   var S = void 0;
                   this.props.bSingletonGroup &&
-                    (S = br.createElement(Lu, {
+                    (S = br.createElement(xu, {
                       appid: l.persona.m_unGamePlayedAppID
                     })),
                     e.push(
@@ -55513,7 +55630,7 @@ and limitations under the License.
             (t = it.b([Rs.observer], t))
           );
         })(Du),
-        Lu = (function(e) {
+        xu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58193,7 +58310,7 @@ and limitations under the License.
             }),
             (t.prototype.AnimateScrollLeftTo = function(e) {
               this.m_animation && this.m_animation.Cancel(),
-                (this.m_animation = new Ls(
+                (this.m_animation = new xs(
                   this.m_elScroll,
                   { scrollLeft: e },
                   {
@@ -58359,7 +58476,7 @@ and limitations under the License.
             (t.prototype.SetScrollLeft = function(e) {
               this.m_elScroll.scrollLeft != e &&
                 (this.m_animation && this.m_animation.Cancel(),
-                (this.m_animation = new Ls(
+                (this.m_animation = new xs(
                   this.m_elScroll,
                   { scrollLeft: e },
                   { msDuration: 300, timing: "sine", onComplete: function() {} }
@@ -60038,7 +60155,7 @@ and limitations under the License.
                     ? ((this.m_bComponentTriggeredScroll = !0),
                       (this.m_elHistoryScroll.scrollTop = e))
                     : (this.m_animation && this.m_animation.Cancel(),
-                      (this.m_animation = new Ls(
+                      (this.m_animation = new xs(
                         this.m_elHistoryScroll,
                         { scrollTop: e },
                         {
@@ -60596,7 +60713,7 @@ and limitations under the License.
                     });
                     switch (h) {
                       case qr.k_ESlashCommandType_Me:
-                        a.push(br.createElement(Ld, it.a({}, m)));
+                        a.push(br.createElement(xd, it.a({}, m)));
                         break;
                       case qr.k_ESlashCommandType_Code:
                         a.push(br.createElement(jd, it.a({}, m)));
@@ -60623,7 +60740,7 @@ and limitations under the License.
                   "div",
                   { className: o },
                   t &&
-                    br.createElement(xd, {
+                    br.createElement(Ld, {
                       friend: r,
                       chatView: this.props.chatView,
                       msg: this.props.messages[0],
@@ -61414,7 +61531,7 @@ and limitations under the License.
             e.children
           );
         }),
-        xd = (function(e) {
+        Ld = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61586,7 +61703,7 @@ and limitations under the License.
             (t = it.b([Rs.observer], t))
           );
         })(br.Component),
-        Ld = (function(e) {
+        xd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65437,7 +65554,7 @@ and limitations under the License.
             e
           );
         })(),
-        xp = (function() {
+        Lp = (function() {
           function e() {
             (this.m_status = new sp()),
               (this.m_mapPendingRequests = new pt.ObservableMap()),
@@ -65548,11 +65665,11 @@ and limitations under the License.
             e
           );
         })(),
-        Lp = (function() {
+        xp = (function() {
           function e() {}
           return e;
         })();
-      Lp || (Lp = {});
+      xp || (xp = {});
       var jp,
         Up = (function() {
           function e() {}
@@ -65568,7 +65685,7 @@ and limitations under the License.
               (this.m_AppInfoStore = new ui()),
               (this.m_EconomyStore = new Kr()),
               (this.m_ParentalStore = new zp()),
-              (this.m_BroadcastStore = new xp()),
+              (this.m_BroadcastStore = new Lp()),
               (this.m_bReadyToRender = !1),
               (this.m_bShuttingDown = !1),
               (this.m_nWallClockDriftMS = 0),
@@ -69523,7 +69640,7 @@ and limitations under the License.
             t
           );
         })(Ir),
-        xh = (function(e) {
+        Lh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69569,7 +69686,7 @@ and limitations under the License.
             t
           );
         })(Ir),
-        Lh = (function(e) {
+        xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -71470,7 +71587,7 @@ and limitations under the License.
             }),
             t
           );
-        })(Lp),
+        })(xp),
         bm = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
@@ -71965,7 +72082,7 @@ and limitations under the License.
               return ze();
             }),
             (t.prototype.GetFriendChatBBCodeDictionary = function() {
-              return xe();
+              return Le();
             }),
             (t.prototype.GetFriendNotificationBBCodeDictionary = function() {
               return je();
