@@ -1894,7 +1894,7 @@ body.in_global_drag .friendlist_titlebar
 .friendGroup.gameGroup
 {
 	border-top: 0.5px solid rgba( 143, 143, 143, 0.25 );
-	margin-top: 10px;
+	margin-top: 4px;
 }
 
 .CompactFriendsList .friendGroup.taggedGroup,
@@ -1954,7 +1954,7 @@ body.in_global_drag .friendlist_titlebar
 .friendGroup.gameGroup:not( .OtherGamesGroup ) .SteamPlayerGroupFooter,
 .friendGroup.gameGroup:not( .OtherGamesGroup ) .friend
 {
-	padding: 4px 0px 4px 44px;
+	padding: 2px 0px 2px 44px;
 }
 
 .CompactFriendsList .friend,
@@ -10794,32 +10794,38 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 /*-----CompactFriendsList Transitions----*/
 
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-appear,
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-enter
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-appear,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-enter,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-appear,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-enter
 {
 	opacity: 0.01;
 	margin-bottom: -32px;
 }
 
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-appear.friend-anim-appear-active,
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-enter.friend-anim-enter-active
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-appear.friend-anim-appear-active,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-enter.friend-anim-enter-active,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-appear.friend-anim-appear-active,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-enter.friend-anim-enter-active
 {
 	opacity: 1;
 	margin-bottom: 0px;
-	transition: opacity 0.2s ease-in-out, margin 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-exit
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-exit,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-exit
 {
 	opacity: 1;
 	margin-bottom: 0px;
 }
 
-.CompactFriendsList .friendGroup:not( .noTransitions ) .friend-anim-exit.friend-anim-exit-active
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friendCategoryContainer.friend-anim-exit.friend-anim-exit-active,
+.CompactFriendsList .friendGroup:not( .noTransitions ) .friend.friend-anim-exit.friend-anim-exit-active
 {
 	opacity: 0;
 	margin-bottom: -32px;
-	transition: opacity 0.2s ease-in-out, margin 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 
@@ -14667,6 +14673,15 @@ a.general_btn:hover
 	height: 30px;
 	margin-left: 4px;
 	margin-right: 4px;
+}
+
+.compactView .ChatRoomListGroupItem .ChatRoomMultiFriendAvatar.Small
+{
+	width: 23px;
+	height: 23px;
+	margin-left: 0px;
+	margin-right: 1px;
+	border-width: 1px;
 }
 
 .ChatTabContent.ChatRoom .ChatRoomMultiFriendAvatar.Small

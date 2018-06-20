@@ -53403,217 +53403,211 @@ and limitations under the License.
                     ((h += " friendsListVeryOutOfDate"), (p = !0)));
               var g = this.props.chats.GetActiveVoiceChat(),
                 f = !1;
-              return (
-                (this.props.chats.VoiceChat.IsAnyVoiceActive() || g) &&
-                  (f = !0),
+              (this.props.chats.VoiceChat.IsAnyVoiceActive() || g) && (f = !0);
+              var _ = Hp.SettingsStore.FriendsSettings.bCompactFriendsList;
+              return br.createElement(
+                "div",
+                {
+                  className:
+                    "friendlist" +
+                    (_ ? " compactView" : "") +
+                    (u ? " needsUpdate" : "")
+                },
                 br.createElement(
                   "div",
-                  { className: "friendlist" + (u ? " needsUpdate" : "") },
+                  { className: "friendListHeaderContainer titleBarContainer" },
+                  this.props.popup &&
+                    tt.a.IN_CLIENT &&
+                    br.createElement(Cu, {
+                      hideMinMax: l,
+                      popup: this.props.popup
+                    }),
+                  br.createElement(ku, {
+                    popup: this.props.popup && this.props.popup,
+                    currentUser: e
+                  }),
                   br.createElement(
                     "div",
-                    {
-                      className: "friendListHeaderContainer titleBarContainer"
-                    },
-                    this.props.popup &&
-                      tt.a.IN_CLIENT &&
-                      br.createElement(Cu, {
-                        hideMinMax: l,
-                        popup: this.props.popup
-                      }),
-                    br.createElement(ku, {
-                      popup: this.props.popup && this.props.popup,
-                      currentUser: e
-                    }),
-                    br.createElement(
-                      "div",
-                      { className: "friendListButtons" },
-                      u &&
-                        br.createElement(
-                          "div",
-                          {
-                            className: h,
-                            onClick: this.OnDoFriendsListUpdate,
-                            title: p
-                              ? Object(hr.b)(
-                                  "#Tooltip_FriendsListUpdate_VeryOld"
-                                )
-                              : Object(hr.b)("#Tooltip_FriendsListUpdate")
-                          },
-                          br.createElement(Is.A, null)
-                        ),
+                    { className: "friendListButtons" },
+                    u &&
                       br.createElement(
                         "div",
                         {
-                          className:
-                            "friendListButton friendSettingsButton no-drag",
-                          onClick: this.OnSettingsClick,
-                          title: Object(hr.b)("#Tooltip_Settings")
+                          className: h,
+                          onClick: this.OnDoFriendsListUpdate,
+                          title: p
+                            ? Object(hr.b)("#Tooltip_FriendsListUpdate_VeryOld")
+                            : Object(hr.b)("#Tooltip_FriendsListUpdate")
                         },
-                        br.createElement(Is.D, null)
-                      )
-                    ),
-                    br.createElement(
-                      zs,
-                      null,
-                      f &&
-                        br.createElement(
-                          Ps,
-                          {
-                            key: "activeVoiceControls1",
-                            classNames: "activevoice-anim",
-                            timeout: 500
-                          },
-                          br.createElement(Mu, { chats: this.props.chats })
-                        )
-                    ),
-                    br.createElement(du, {
-                      FavoritesStore: this.props.friends.FavoritesStore
-                    }),
+                        br.createElement(Is.A, null)
+                      ),
                     br.createElement(
                       "div",
-                      { className: "socialTabSearchContainer" },
+                      {
+                        className:
+                          "friendListButton friendSettingsButton no-drag",
+                        onClick: this.OnSettingsClick,
+                        title: Object(hr.b)("#Tooltip_Settings")
+                      },
+                      br.createElement(Is.D, null)
+                    )
+                  ),
+                  br.createElement(
+                    zs,
+                    null,
+                    f &&
+                      br.createElement(
+                        Ps,
+                        {
+                          key: "activeVoiceControls1",
+                          classNames: "activevoice-anim",
+                          timeout: 500
+                        },
+                        br.createElement(Mu, { chats: this.props.chats })
+                      )
+                  ),
+                  br.createElement(du, {
+                    FavoritesStore: this.props.friends.FavoritesStore
+                  }),
+                  br.createElement(
+                    "div",
+                    { className: "socialTabSearchContainer" },
+                    br.createElement(
+                      "div",
+                      { className: "socialTabContainer" },
                       br.createElement(
                         "div",
-                        { className: "socialTabContainer" },
+                        { className: s },
                         br.createElement(
                           "div",
-                          { className: s },
+                          {
+                            className: "tabLabel",
+                            style: c,
+                            ref: this.BindTabLabel
+                          },
+                          Object(hr.b)("#tab_friends")
+                        ),
+                        br.createElement(
+                          "div",
+                          { className: "friendsTabButtonsContainer" },
                           br.createElement(
                             "div",
                             {
-                              className: "tabLabel",
-                              style: c,
-                              ref: this.BindTabLabel
+                              className: "TabSearchButton",
+                              onClick: a ? null : this.OnTabSearchClick
                             },
-                            Object(hr.b)("#tab_friends")
-                          ),
-                          br.createElement(
-                            "div",
-                            { className: "friendsTabButtonsContainer" },
                             br.createElement(
-                              "div",
-                              {
-                                className: "TabSearchButton",
-                                onClick: a ? null : this.OnTabSearchClick
-                              },
-                              br.createElement(
-                                zs,
-                                { className: "tabSearchTransitionGroup" },
-                                a &&
+                              zs,
+                              { className: "tabSearchTransitionGroup" },
+                              a &&
+                                br.createElement(
+                                  Ps,
+                                  {
+                                    className: "tabSearchTransition",
+                                    key: "tabSearch",
+                                    classNames: "tab-search-anim",
+                                    timeout: 500
+                                  },
                                   br.createElement(
-                                    Ps,
-                                    {
-                                      className: "tabSearchTransition",
-                                      key: "tabSearch",
-                                      classNames: "tab-search-anim",
-                                      timeout: 500
-                                    },
+                                    "div",
+                                    { className: "socialSearchContainer" },
                                     br.createElement(
-                                      "div",
-                                      { className: "socialSearchContainer" },
+                                      "form",
+                                      {
+                                        className:
+                                          "socialInputContainer" +
+                                          (a ? " SearchActive" : ""),
+                                        name: "friendSearchForm",
+                                        onSubmit: this.OnSearchSubmit
+                                      },
                                       br.createElement(
-                                        "form",
-                                        {
-                                          className:
-                                            "socialInputContainer" +
-                                            (a ? " SearchActive" : ""),
-                                          name: "friendSearchForm",
-                                          onSubmit: this.OnSearchSubmit
-                                        },
+                                        "div",
+                                        { className: "inputContainer no-drag" },
+                                        br.createElement("input", {
+                                          id: "friendSearchInputID",
+                                          className: "friendSearchInput",
+                                          autoFocus: !0,
+                                          type: "text",
+                                          name: "friendSearch",
+                                          placeholder: Object(hr.b)(
+                                            "#SearchFriends"
+                                          ),
+                                          value: this.state.searchString,
+                                          onInput: this.OnSearchInput,
+                                          onKeyDown: this.OnSearchKeyDown,
+                                          autoComplete: "off",
+                                          ref: this.OnSearchInputRef
+                                        }),
                                         br.createElement(
                                           "div",
                                           {
-                                            className: "inputContainer no-drag"
+                                            className: "friendSearchClear",
+                                            onClick: this.OnClearSearch
                                           },
-                                          br.createElement("input", {
-                                            id: "friendSearchInputID",
-                                            className: "friendSearchInput",
-                                            autoFocus: !0,
-                                            type: "text",
-                                            name: "friendSearch",
-                                            placeholder: Object(hr.b)(
-                                              "#SearchFriends"
-                                            ),
-                                            value: this.state.searchString,
-                                            onInput: this.OnSearchInput,
-                                            onKeyDown: this.OnSearchKeyDown,
-                                            autoComplete: "off",
-                                            ref: this.OnSearchInputRef
-                                          }),
-                                          br.createElement(
-                                            "div",
-                                            {
-                                              className: "friendSearchClear",
-                                              onClick: this.OnClearSearch
-                                            },
-                                            br.createElement(Is.O, null)
-                                          )
+                                          br.createElement(Is.O, null)
                                         )
                                       )
                                     )
                                   )
-                              ),
+                                )
+                            ),
+                            br.createElement(
+                              "div",
+                              {
+                                className: "searchIconButton",
+                                onClick: this.OnTabSearchClick,
+                                title: Object(hr.b)("#Tooltip_SearchFriends")
+                              },
+                              br.createElement(Is.r, null)
+                            )
+                          ),
+                          (i || n) &&
+                            br.createElement(
+                              "div",
+                              {
+                                className: o,
+                                onClick: this.ToggleViewingIncomingInvites,
+                                title: Object(hr.c)("#Tooltip_FriendRequest", r)
+                              },
+                              br.createElement(Is.m, null),
                               br.createElement(
                                 "div",
-                                {
-                                  className: "searchIconButton",
-                                  onClick: this.OnTabSearchClick,
-                                  title: Object(hr.b)("#Tooltip_SearchFriends")
-                                },
-                                br.createElement(Is.r, null)
+                                { className: "requestsNumber" },
+                                r
                               )
                             ),
-                            (i || n) &&
-                              br.createElement(
-                                "div",
-                                {
-                                  className: o,
-                                  onClick: this.ToggleViewingIncomingInvites,
-                                  title: Object(hr.c)(
-                                    "#Tooltip_FriendRequest",
-                                    r
-                                  )
-                                },
-                                br.createElement(Is.m, null),
-                                br.createElement(
-                                  "div",
-                                  { className: "requestsNumber" },
-                                  r
-                                )
-                              ),
+                          br.createElement(
+                            m,
+                            { href: tt.a.COMMUNITY_BASE_URL + "friends/add" },
                             br.createElement(
-                              m,
-                              { href: tt.a.COMMUNITY_BASE_URL + "friends/add" },
-                              br.createElement(
-                                "div",
-                                {
-                                  className:
-                                    "friendListButton addFriendButton no-drag",
-                                  title: Object(hr.b)("#Tooltip_AddFriend")
-                                },
-                                br.createElement(Is.a, null)
-                              )
+                              "div",
+                              {
+                                className:
+                                  "friendListButton addFriendButton no-drag",
+                                title: Object(hr.b)("#Tooltip_AddFriend")
+                              },
+                              br.createElement(Is.a, null)
                             )
                           )
                         )
                       )
                     )
-                  ),
-                  br.createElement(Tu, {
-                    friends: this.props.friends,
-                    chats: this.props.chats,
-                    searchString: t,
-                    fnOnSearchSelection: this.OnSearchSelection,
-                    onStartSearch: this.StartSearchOnKeyPress,
-                    browserContext: this.props.browserContext,
-                    bViewingIncomingInvites: this.state.bViewingIncomingInvites,
-                    onClose: this.ToggleViewingIncomingInvites
-                  }),
-                  br.createElement(
-                    "div",
-                    { className: "friendListFooter" },
-                    br.createElement(Eu, null)
                   )
+                ),
+                br.createElement(Tu, {
+                  friends: this.props.friends,
+                  chats: this.props.chats,
+                  searchString: t,
+                  fnOnSearchSelection: this.OnSearchSelection,
+                  onStartSearch: this.StartSearchOnKeyPress,
+                  browserContext: this.props.browserContext,
+                  bViewingIncomingInvites: this.state.bViewingIncomingInvites,
+                  onClose: this.ToggleViewingIncomingInvites
+                }),
+                br.createElement(
+                  "div",
+                  { className: "friendListFooter" },
+                  br.createElement(Eu, null)
                 )
               );
             }),
