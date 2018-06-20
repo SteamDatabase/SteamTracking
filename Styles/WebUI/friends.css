@@ -1915,6 +1915,18 @@ body.in_global_drag .friendlist_titlebar
 	height: 16px;
 }
 
+.CompactFriendsList .friendsContainer
+{
+	padding-bottom: 8px;
+	transition: padding .2s ease-in-out;
+}
+
+.CompactFriendsList .friendsContainer.groupCollapsed
+{
+	padding-bottom: 0px;
+}
+
+
 .friend
 {
 	color: #898989;
@@ -1942,12 +1954,13 @@ body.in_global_drag .friendlist_titlebar
 .friendGroup.gameGroup:not( .OtherGamesGroup ) .SteamPlayerGroupFooter,
 .friendGroup.gameGroup:not( .OtherGamesGroup ) .friend
 {
-	padding: 2px 0px 2px 44px;
+	padding: 4px 0px 4px 44px;
 }
 
 .CompactFriendsList .friend,
 .CompactFriendsList .friendGroup .friend,
-.CompactFriendsList .friendGroup .SteamPlayerGroupFooter
+.CompactFriendsList .friendGroup .SteamPlayerGroupFooter,
+.CompactFriendsList .friendGroup.gameGroup:not( .OtherGamesGroup ) .friend
 {
 	height: 22px;
 	margin: 2px 0px 2px 0px;
@@ -1956,8 +1969,7 @@ body.in_global_drag .friendlist_titlebar
 }
 
 .CompactFriendsList .friend.ingame,
-.CompactFriendsList .friendGroup .friend.ingame,
-.CompactFriendsList .friendGroup.gameGroup:not( .OtherGamesGroup ) .SteamPlayerGroupFooter
+.CompactFriendsList .friendGroup .friend.ingame
 {
 	height: 22px;
 }
@@ -11949,6 +11961,7 @@ button.chatRoomHeaderButton:hover
 	overflow: hidden;
 	flex-shrink: 0;
 	cursor: pointer;
+	z-index: 5;
 }
 
 .friendListHeaderContainer .ContextMenuButton

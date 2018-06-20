@@ -50711,7 +50711,10 @@ and limitations under the License.
                     strName: "bCompactQuickAccess",
                     strLabel: Object(hr.b)("#FriendSettings_CompactQuickAccess")
                   }),
-                  !1,
+                  br.createElement(e, {
+                    strName: "bCompactFriendsList",
+                    strLabel: "Compact friends list"
+                  }),
                   br.createElement(t, {
                     strName: "bParenthesizeNicknames",
                     strLabel: Object(hr.b)(
@@ -54216,10 +54219,12 @@ and limitations under the License.
                     ));
                 }
               else e = void 0;
+              var f = Hp.SettingsStore.FriendsSettings.bCompactFriendsList;
               return br.createElement(
                 "div",
                 {
-                  className: "FriendsListContent",
+                  className:
+                    "FriendsListContent" + (f ? " CompactFriendsList" : ""),
                   ref: this.BindFriendsListContent
                 },
                 br.createElement(
@@ -55497,7 +55502,15 @@ and limitations under the License.
                     ),
                     br.createElement("hr", null)
                   ),
-                  br.createElement(zs, null, e)
+                  br.createElement(
+                    zs,
+                    {
+                      className: this.IsCollapsed()
+                        ? "friendsContainer groupCollapsed"
+                        : "friendsContainer"
+                    },
+                    e
+                  )
                 )
               );
             }),
@@ -68828,7 +68841,8 @@ and limitations under the License.
                     "div",
                     {
                       className: "BBCodeCollapsed",
-                      onClick: this.handleCollapse
+                      onClick: this.handleCollapse,
+                      title: this.props.title
                     },
                     Object(hr.b)(
                       "#bbcode_" + this.props.strMediaType + "_minimized"
@@ -68935,7 +68949,8 @@ and limitations under the License.
                   className: "BBCodeYouTubeComponent",
                   unAccountIDSender: this.props.context.unAccountIDSender,
                   msgUniqueKey: this.props.context.key,
-                  strMediaType: "video"
+                  strMediaType: "video",
+                  title: t
                 },
                 br.createElement(
                   "div",
@@ -69035,7 +69050,13 @@ and limitations under the License.
                   className: r,
                   strMediaType: "image",
                   unAccountIDSender: this.props.context.unAccountIDSender,
-                  msgUniqueKey: this.props.context.key
+                  msgUniqueKey: this.props.context.key,
+                  title: o
+                    ? Object(hr.b)(
+                        "#bbcode_image_link_giphy",
+                        this.GetArgument("giphy_search")
+                      )
+                    : i
                 },
                 n == wh.Loading &&
                   br.createElement(
