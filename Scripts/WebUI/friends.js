@@ -68781,8 +68781,9 @@ and limitations under the License.
                   (this.m_frameInitialYPos = e.clientY);
               var t = e.clientX - this.m_frameInitialXPos,
                 i = e.clientY - this.m_frameInitialYPos,
-                n = this.m_frameInitialWidth + t + i;
-              n < 320 && (n = 320),
+                n = this.m_frameInitialWidth + t + i,
+                r = "image" == this.props.strMediaType ? 64 : 320;
+              n < r && (n = r),
                 n > 1280 && (n = 1280),
                 this.setState({
                   nResizedWidth: n,
