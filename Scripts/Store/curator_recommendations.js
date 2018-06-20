@@ -185,8 +185,24 @@ function InitPagingControls( oPagingData )
 	InitSearchFilters();
 }
 
-function CuratorChangeTabs( elNode, strValue )
+function CuratorChangeTabs( elNode, strValue, bCreatorHome )
 {
+	if( bCreatorHome )
+	{
+		if( strValue == 'recent' )
+		{
+			$J('#filtercuration_container').show();
+			$J('#filtertype_container').hide();
+			$J('.curator_filter_tag_count').hide()
+		}
+		else
+		{
+			$J('#filtercuration_container').hide();
+			$J('#filtertype_container').show();
+			$J('.curator_filter_tag_count').show()
+		}
+	}
+
 	ResetFieldNode( $J('#filtercuation_all'));
 	ResetFieldNode( $J('#filter_app_type_all'));
 	ResetFieldNode( $J('#tagid_filteration_all'));

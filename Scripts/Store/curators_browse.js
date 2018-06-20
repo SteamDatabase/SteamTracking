@@ -88,7 +88,7 @@ function InitCuratorsPagingControls( oPagingData )
 		}
 	} );
 
-	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ], "new_browse" : oPagingData['new_browse' ] };
+	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ] };
 	g_oCurators.SetStaticParameters( staticParams );
 
 	HandleHashChangeCurators( true );
@@ -100,7 +100,7 @@ function InitCuratorsInfinitScrolling( oPagingData )
 {
 	g_oCurators = new CAjaxInfiniteScrollingControls( oPagingData, 'https://store.steampowered.com/curators/ajaxgetcurators/' );
 
-	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ], "new_browse" : oPagingData['new_browse' ] };
+	var staticParams = { 'keywords' : oPagingData['keywords'], 'filter' : oPagingData['filter'], "appid" : oPagingData['appid' ] };
 	g_oCurators.SetStaticParameters( staticParams );
 	g_oCurators.SetResponseHandler( function( response ) {
 		OnCuratorsRendered();
