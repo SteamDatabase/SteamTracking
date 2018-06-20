@@ -9555,38 +9555,67 @@ span.mention.me
 	border-radius: 4px;
 }
 
-.Dialog_EditNickName .friend .avatarMedium
+.Dialog_EditNickName .friend .avatarMedium,
+.Dialog_ChangePersonaName .friend .avatarMedium
 {
 	border: 1px solid black;
 	box-shadow: 0px 4px 24px #0008;
 }
 
-.Dialog_EditNickName .friend ._DialogTextInputBase
+.Dialog_EditNickName .friend ._DialogTextInputBase,
+.Dialog_ChangePersonaName .friend ._DialogTextInputBase
 {
 	font-size: 24px;
 	padding: 4px;
 	padding-left: 8px;
 }
 
-.Dialog_EditNickName .friend .DialogInput.DialogInputPlaceholder._DialogTextInputBase.nicknameInput::-webkit-input-placeholder
+.Dialog_EditNickName .friend .DialogInput.DialogInputPlaceholder._DialogTextInputBase.nicknameInput::-webkit-input-placeholder,
+.Dialog_ChangePersonaName .friend .DialogInput.DialogInputPlaceholder._DialogTextInputBase.nicknameInput::-webkit-input-placeholder
 {
 	font-size: 16px;
 }
 
-.Dialog_EditNickName .friend ._DialogTextInputBase
+.Dialog_EditNickName .friend ._DialogTextInputBase,
+.Dialog_ChangePersonaName .friend ._DialogTextInputBase
 {
 	padding: 2px;
 }
 
-.Dialog_EditNickName .friend.ingame ._DialogTextInputBase
+.Dialog_EditNickName .friend.ingame ._DialogTextInputBase,
+.Dialog_ChangePersonaName .friend.ingame ._DialogTextInputBase
 {
 	color: #e3ffc2;
 }
 
-.Dialog_EditNickName .friend.online ._DialogTextInputBase
+.Dialog_EditNickName .friend.online ._DialogTextInputBase,
+.Dialog_ChangePersonaName .friend.online ._DialogTextInputBase
 {
 	color: #6dcff6;
 }
+
+
+.Dialog_ChangePersonaName .friend
+{
+	height: 84px;
+}
+
+.Dialog_ChangePersonaName .friend .labelHolder
+{
+	align-self: initial;
+	height: 100%;
+}
+
+.Dialog_ChangePersonaName .friend .labelHolder > div
+{
+	height: 50%;
+}
+
+.Dialog_ChangePersonaName .error
+{
+	color: red;
+}
+
 
 ._DialogRowLabel .HomeChannel
 {
