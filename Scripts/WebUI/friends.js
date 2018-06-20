@@ -104,7 +104,7 @@ webpackJsonp(
     "5Pz3": function(e, t, i) {
       "use strict";
       function n() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -118,14 +118,14 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
           })
         );
       }
       function r() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -135,19 +135,19 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 600 600"
           },
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z"
             }),
-            V.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
+            H.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
           )
         );
       }
       function o() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -159,7 +159,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -169,7 +169,7 @@ webpackJsonp(
             points:
               "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "
           }),
-          V.createElement("polygon", {
+          H.createElement("polygon", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -177,7 +177,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 "
           }),
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -185,7 +185,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "83,60.75 83,133 155,133 "
           }),
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -196,7 +196,7 @@ webpackJsonp(
         );
       }
       function a() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -206,14 +206,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          V.createElement("polygon", {
+          H.createElement("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
           })
         );
       }
       function s() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -223,10 +223,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            V.createElement("path", {
+            H.createElement("path", {
               className: "ColorSelector",
               d:
                 "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
@@ -244,7 +244,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Microphone";
         return (
           e.className && (t += " " + e.className),
-          V.createElement(
+          H.createElement(
             "svg",
             {
               version: "1.1",
@@ -256,128 +256,128 @@ webpackJsonp(
               height: "256px",
               viewBox: "-127.5 664.5 256 256"
             },
-            V.createElement(
+            H.createElement(
               "g",
               { className: "MicBase" },
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement(
+                H.createElement(
                   "g",
                   null,
-                  V.createElement("path", {
+                  H.createElement("path", {
                     d:
                       "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z"
                   }),
-                  V.createElement("path", {
+                  H.createElement("path", {
                     d:
                       "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z"
                   })
                 ),
-                V.createElement(
+                H.createElement(
                   "g",
                   null,
-                  V.createElement("path", {
+                  H.createElement("path", {
                     d:
                       "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z"
                   }),
-                  V.createElement("path", {
+                  H.createElement("path", {
                     d:
                       "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z"
                   })
                 )
               ),
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z"
                 })
               ),
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z"
                 })
               )
             ),
-            V.createElement(
+            H.createElement(
               "g",
               { className: "MicFill" },
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z"
                 })
               ),
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z"
                 })
               )
             ),
-            V.createElement(
+            H.createElement(
               "g",
               { className: "MicStrike", fill: "none", strokeWidth: "1" },
-              V.createElement("line", {
+              H.createElement("line", {
                 x1: "-82.5",
                 y1: "866.5",
                 x2: "83.5",
@@ -388,7 +388,7 @@ webpackJsonp(
         );
       }
       function l() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -401,7 +401,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -410,7 +410,7 @@ webpackJsonp(
             d:
               "M127.5,13.712 c63.714,0,115.252,51.253,115.252,113.836c0,62.582-51.538,113.837-115.252,113.837S12.248,190.413,12.248,127.548 S63.786,13.712,127.5,13.712z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -419,7 +419,7 @@ webpackJsonp(
             d:
               "M103.81,102.063 c0-13.593-11.044-24.354-24.353-24.354c-13.31,0-24.353,11.045-24.353,24.354"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -428,7 +428,7 @@ webpackJsonp(
             d:
               "M199.896,102.063 c0-13.593-11.043-24.354-24.354-24.354c-13.309,0-24.354,10.761-24.354,24.354"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -440,7 +440,7 @@ webpackJsonp(
         );
       }
       function u() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -451,10 +451,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
               fill: "#FFFFFF",
@@ -469,7 +469,7 @@ webpackJsonp(
         );
       }
       function d() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -479,20 +479,20 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "#020202",
               d:
                 "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "#020202",
               d:
                 "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "#020202",
               d:
                 "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z"
@@ -501,7 +501,7 @@ webpackJsonp(
         );
       }
       function p() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -511,14 +511,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z"
           })
         );
       }
       function h() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -529,10 +529,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "-165 95 100 100"
           },
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("polygon", {
+            H.createElement("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
             })
@@ -540,7 +540,7 @@ webpackJsonp(
         );
       }
       function m() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -553,7 +553,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("line", {
+          H.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -563,7 +563,7 @@ webpackJsonp(
             x2: "44",
             y2: "44"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -576,7 +576,7 @@ webpackJsonp(
         );
       }
       function g() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -589,10 +589,10 @@ webpackJsonp(
             viewBox: "0 0 64 64",
             enableBackground: "new 0 0 64 64"
           },
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("path", {
+            H.createElement("path", {
               className: "Bubble",
               fill: "none",
               strokeMiterlimit: "1",
@@ -601,10 +601,10 @@ webpackJsonp(
                 "M60.1,32.3c0,15.1-12.3,27.3-27.4,27.3 c-5,0-9.7-1.4-13.8-3.7c-1.8-1.1-15,5.4-13.8,3.4c1.7-2.9,5.9-10.3,4.7-12C7,43,5.3,37.8,5.3,32.3C5.3,17.2,17.6,5,32.7,5 C47.8,5,60.1,17.2,60.1,32.3z"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("path", {
+            H.createElement("path", {
               className: "AudioLines",
               opacity: "0",
               strokeWidth: "1px",
@@ -612,10 +612,10 @@ webpackJsonp(
                 "M37.2,51.1c-0.5,0-1-0.1-1.3-0.4c-0.7-0.5-0.7-1.3,0-1.8c6.3-4.4,9.8-10.2,9.8-16.4c0-6.2-3.5-12-9.8-16.4 c-0.7-0.5-0.7-1.3,0-1.8s1.9-0.5,2.6,0c7.1,4.9,10.9,11.4,10.9,18.3c0,6.9-3.9,13.4-10.9,18.3C38.2,51,37.7,51.1,37.2,51.1 M21.4,40.2c0.5,0,0.9-0.1,1.3-0.4c2.8-2,4.3-4.6,4.3-7.3s-1.5-5.4-4.3-7.3c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c2.1,1.5,3.3,3.4,3.3,5.5c0,2.1-1.2,4-3.3,5.5c-0.7,0.5-0.7,1.3,0,1.8C20.4,40.1,20.9,40.2,21.4,40.2 M29.3,45.7 c0.5,0,1-0.1,1.3-0.4c4.9-3.4,7.7-7.9,7.7-12.7c0-4.8-2.7-9.3-7.7-12.7c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c4.2,2.9,6.6,6.8,6.6,10.9c0,4.1-2.3,8-6.6,10.9c-0.7,0.5-0.7,1.3,0,1.8C28.4,45.5,28.8,45.7,29.3,45.7"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "Arrow", opacity: "0" },
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -623,7 +623,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -632,10 +632,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               className: "ExitDoor",
               opacity: "0",
               strokeLinecap: "round",
@@ -646,17 +646,17 @@ webpackJsonp(
                 "32.5,22.1 32.5,17.7 47.7,17.7 47.7,43.8 32.5,43.8 32.5,39.5"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "Microphone" },
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "M40.971,28.593v6.278c0,4.007-4.023,7.284-8.971,7.284c-2.693,0-5.126-0.974-6.765-2.516 c-1.379-1.28-2.207-2.952-2.207-4.769v-6.278l0,0H21.05v6.278c0,0.536,0.064,1.055,0.162,1.573 c0.357,1.752,1.281,3.325,2.627,4.592c1.801,1.702,4.332,2.839,7.17,3.049v4.072H25.3c-0.341,0-0.616,0.438-0.616,0.989 c0,0.552,0.275,0.99,0.616,0.99h5.759h1.882H38.7c0.341,0,0.616-0.438,0.616-0.99c0-0.551-0.275-0.989-0.616-0.989h-5.71v-4.072 c5.58-0.422,9.96-4.396,9.96-9.214v-6.278H40.971z"
             }),
-            V.createElement(
+            H.createElement(
               "g",
               null,
-              V.createElement("path", {
+              H.createElement("path", {
                 d:
                   "M32,39.841c-3.493,0-6.343-2.344-6.343-5.213v-17.85c0-2.871,2.85-5.213,6.343-5.213s6.343,2.342,6.343,5.213v17.85,C38.343,37.497,35.493,39.841,32,39.841z"
               })
@@ -665,7 +665,7 @@ webpackJsonp(
         );
       }
       function f() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -680,17 +680,17 @@ webpackJsonp(
             stroke: "#000",
             strokeWidth: "10px"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { className: "ScratchPad" },
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
               d:
                 "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -700,7 +700,7 @@ webpackJsonp(
               x2: "74.495",
               y2: "54.063"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -710,7 +710,7 @@ webpackJsonp(
               x2: "124.495",
               y2: "54.063"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -721,28 +721,28 @@ webpackJsonp(
               y2: "54.063"
             })
           ),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "115.4",
             x2: "179.4",
             y2: "115.4"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "145.8",
             x2: "143.3",
             y2: "145.8"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "175.9",
             x2: "179.4",
             y2: "175.9"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "TextLines",
             x1: "73.7",
             y1: "82.7",
@@ -755,7 +755,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Headphones";
         return (
           e.className && (t += " " + e.className),
-          V.createElement(
+          H.createElement(
             "svg",
             {
               version: "1.1",
@@ -767,31 +767,31 @@ webpackJsonp(
               height: "256px",
               viewBox: "-305.5 396.5 256 256"
             },
-            V.createElement(
+            H.createElement(
               "g",
               { className: "HeadPhonesBase" },
-              V.createElement(
+              H.createElement(
                 "g",
                 null,
-                V.createElement("path", {
+                H.createElement("path", {
                   fill: "none",
                   d:
                     "M-176.5,418.7c-37,0-69.5,30.2-69.5,64.5v25.3c11.3,2.3,19.9,12.3,19.9,24.3v8.6l100.9-100.9 C-138.2,427.3-156.7,418.7-176.5,418.7z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-226.2,532.9c0-12-8.5-22-19.9-24.3v-25.3c0-34.4,32.5-64.5,69.5-64.5c19.8,0,38.3,8.6,51.2,21.9l6.9-6.9 c-14.8-15.1-35.7-24.9-58.2-24.9c-42.3,0-79.4,34.8-79.4,74.5v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8c0,7.8,3.6,14.7,9.2,19.3 l40.5-40.5V532.9z"
                 }),
-                V.createElement("path", {
+                H.createElement("path", {
                   d:
                     "M-97.1,508.6v-25.3c0-7.5-1.3-14.8-3.8-21.8l-7.9,7.9c1.2,4.5,1.8,9.1,1.8,13.9v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8 c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8v-29.8C-77.2,520.9-85.8,510.9-97.1,508.6z"
                 })
               )
             ),
-            V.createElement(
+            H.createElement(
               "g",
               { className: "HeadphonesStrike" },
-              V.createElement("line", {
+              H.createElement("line", {
                 fill: "none",
                 x1: "-260.5",
                 y1: "598.5",
@@ -799,14 +799,14 @@ webpackJsonp(
                 y2: "432.4"
               })
             ),
-            V.createElement(
+            H.createElement(
               "g",
               { className: "HeadPhonesFill" },
-              V.createElement("path", {
+              H.createElement("path", {
                 d:
                   "M-226.2,562.7v-21.2l-40.5,40.5c4.3,3.5,9.7,5.6,15.6,5.6C-237.3,587.5-226.2,576.4-226.2,562.7z"
               }),
-              V.createElement("path", {
+              H.createElement("path", {
                 d:
                   "M-118.3,433.7l-6.9,6.9c7.9,8.1,13.7,18,16.5,28.8l7.9-7.9C-104.5,451.1-110.5,441.6-118.3,433.7z"
               })
@@ -815,7 +815,7 @@ webpackJsonp(
         );
       }
       function y() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -828,10 +828,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z"
             })
@@ -839,7 +839,7 @@ webpackJsonp(
         );
       }
       function v() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -851,7 +851,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("circle", {
+          H.createElement("circle", {
             fill: "none",
             strokeWidth: "10",
             strokeMiterlimit: "10",
@@ -859,7 +859,7 @@ webpackJsonp(
             cy: "128",
             r: "95.333"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "horizontalLine",
             fill: "none",
             strokeWidth: "10",
@@ -870,7 +870,7 @@ webpackJsonp(
             x2: "183.333",
             y2: "128"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             className: "verticalLine",
             fill: "none",
             strokeWidth: "10",
@@ -884,7 +884,7 @@ webpackJsonp(
         );
       }
       function b() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -897,24 +897,24 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            V.createElement("circle", {
+            H.createElement("circle", {
               cx: "86.296",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "plusCircle",
             d:
               "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z"
@@ -922,7 +922,7 @@ webpackJsonp(
         );
       }
       function C() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -935,29 +935,29 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            V.createElement("circle", {
+            H.createElement("circle", {
               cx: "85.923",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "friendArm",
             d:
               "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "redCircle",
             d:
               "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z"
@@ -965,7 +965,7 @@ webpackJsonp(
         );
       }
       function S() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -978,18 +978,18 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z"
           }),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "invitePlus" },
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -999,7 +999,7 @@ webpackJsonp(
               x2: "101.5",
               y2: "128"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1013,7 +1013,7 @@ webpackJsonp(
         );
       }
       function M() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1026,7 +1026,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
@@ -1037,7 +1037,7 @@ webpackJsonp(
         );
       }
       function F() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1049,42 +1049,42 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { className: "Speaker" },
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "SoundWaves" },
-            V.createElement("path", {
+            H.createElement("path", {
               className: "SoundWavesHighest",
               d:
                 "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "SoundWavesHigh",
               d:
                 "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "SoundWavesMed",
               d:
                 "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "SoundWavesLow",
               d:
                 "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "SoundX" },
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1093,7 +1093,7 @@ webpackJsonp(
               x2: "223.167",
               y2: "84.5"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1106,7 +1106,7 @@ webpackJsonp(
         );
       }
       function w() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1116,14 +1116,14 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             className: "Bubble",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             d:
               "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1132,7 +1132,7 @@ webpackJsonp(
             x2: "176.184",
             y2: "128.886"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1144,7 +1144,7 @@ webpackJsonp(
         );
       }
       function O() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1157,10 +1157,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             null,
-            V.createElement("path", {
+            H.createElement("path", {
               d:
                 "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
             })
@@ -1168,7 +1168,7 @@ webpackJsonp(
         );
       }
       function B() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1181,7 +1181,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             className: "playTriangle",
             d:
               "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
@@ -1189,7 +1189,7 @@ webpackJsonp(
         );
       }
       function R() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1202,10 +1202,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { className: "time" },
-            V.createElement("circle", {
+            H.createElement("circle", {
               fill: "none",
               strokeWidth: "10",
               strokeMiterlimit: "10",
@@ -1213,7 +1213,7 @@ webpackJsonp(
               cy: "128.014",
               r: "64"
             }),
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1221,10 +1221,10 @@ webpackJsonp(
               points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "arrow" },
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1232,7 +1232,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "199.735,63.66 199.735,192.366 171.207,163.675"
             }),
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1241,10 +1241,10 @@ webpackJsonp(
               points: "199.735,63.66 199.735,192.366 228.266,163.675"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "alphabet" },
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1252,7 +1252,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "70.268,109.934 94.483,63.635 119.77,109.934"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1263,7 +1263,7 @@ webpackJsonp(
               x2: "112.135",
               y2: "97.861"
             }),
-            V.createElement("polyline", {
+            H.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1276,7 +1276,7 @@ webpackJsonp(
         );
       }
       function I() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1289,7 +1289,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -1301,7 +1301,7 @@ webpackJsonp(
         );
       }
       function E() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1314,45 +1314,45 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "defs",
             null,
-            V.createElement(
+            H.createElement(
               "linearGradient",
               { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              V.createElement("stop", {
+              H.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
                 stopColor: "#00ccff"
               }),
-              V.createElement("stop", {
+              H.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
                 stopColor: "#2d73ff"
               })
             ),
-            V.createElement(
+            H.createElement(
               "filter",
               { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
-              V.createElement("feOffset", {
+              H.createElement("feOffset", {
                 result: "offOut",
                 in: "SourceAlpha",
                 dx: "20",
                 dy: "20"
               }),
-              V.createElement("feGaussianBlur", {
+              H.createElement("feGaussianBlur", {
                 result: "blurOut",
                 in: "offOut",
                 stdDeviation: "10"
               }),
-              V.createElement("feBlend", {
+              H.createElement("feBlend", {
                 in: "SourceGraphic",
                 in2: "blurOut",
                 mode: "normal"
               })
             )
           ),
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "url(#linear)",
             strokeWidth: "24",
@@ -1363,7 +1363,7 @@ webpackJsonp(
             strokeDasharray: "365.19 365.19",
             strokeDashoffset: "0.00"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             opacity: ".2",
             filter: "url(#f1)",
@@ -1379,7 +1379,7 @@ webpackJsonp(
         );
       }
       function k() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1392,17 +1392,17 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { className: "triangle" },
-            V.createElement("path", {
+            H.createElement("path", {
               stroke: "#020202",
               strokeWidth: "16",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               d: "M127.9,76.632"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "11",
@@ -1412,12 +1412,12 @@ webpackJsonp(
               d:
                 "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
             }),
-            V.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+            H.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "exclamation" },
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "16",
@@ -1428,7 +1428,7 @@ webpackJsonp(
               x2: "127.9",
               y2: "160.07"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "#020202",
               d:
                 "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
@@ -1437,7 +1437,7 @@ webpackJsonp(
         );
       }
       function T() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1450,12 +1450,12 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             className: "topLock",
             d:
               "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             className: "baseLock",
             fill: "none",
             stroke: "#ffffff",
@@ -1467,7 +1467,7 @@ webpackJsonp(
         );
       }
       function G(e) {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1481,10 +1481,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { id: "partCircle" },
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1493,7 +1493,7 @@ webpackJsonp(
               d:
                 "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1501,7 +1501,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               d: "M201.432,101.166"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1510,10 +1510,10 @@ webpackJsonp(
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { id: "mainOutline" },
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundFill",
               fill: "none",
               stroke: "#ffffff",
@@ -1522,7 +1522,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundOuterOutline",
               strokeLinecap: "butt",
               fill: "none",
@@ -1532,7 +1532,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber01",
               strokeLinecap: "butt",
               fill: "none",
@@ -1542,7 +1542,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber02",
               strokeLinecap: "butt",
               fill: "none",
@@ -1552,7 +1552,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber03",
               strokeLinecap: "butt",
               fill: "none",
@@ -1562,7 +1562,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber04",
               strokeLinecap: "butt",
               fill: "none",
@@ -1572,7 +1572,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber05",
               strokeLinecap: "butt",
               fill: "none",
@@ -1582,7 +1582,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber06",
               strokeLinecap: "butt",
               fill: "none",
@@ -1592,7 +1592,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber07",
               strokeLinecap: "butt",
               fill: "none",
@@ -1602,7 +1602,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber08",
               strokeLinecap: "butt",
               fill: "none",
@@ -1612,7 +1612,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber09",
               strokeLinecap: "butt",
               fill: "none",
@@ -1622,7 +1622,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber10",
               strokeLinecap: "butt",
               fill: "none",
@@ -1632,7 +1632,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber11",
               strokeLinecap: "butt",
               fill: "none",
@@ -1642,7 +1642,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber12",
               strokeLinecap: "butt",
               fill: "none",
@@ -1652,7 +1652,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber13",
               strokeLinecap: "butt",
               fill: "none",
@@ -1662,7 +1662,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber14",
               strokeLinecap: "butt",
               fill: "none",
@@ -1672,7 +1672,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            V.createElement("path", {
+            H.createElement("path", {
               className: "roundThrobber15",
               strokeLinecap: "butt",
               fill: "none",
@@ -1683,19 +1683,19 @@ webpackJsonp(
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { id: "bottomCircle" },
-            V.createElement("path", {
+            H.createElement("path", {
               fill: "#ffffff",
               d:
                 "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { id: "topCircle" },
-            V.createElement("circle", {
+            H.createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -1708,7 +1708,7 @@ webpackJsonp(
         );
       }
       function N() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1721,19 +1721,19 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             className: "videoPlayButton",
             d:
               "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z"
           })
         );
       }
       function D() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1746,14 +1746,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
           })
         );
       }
       function A(e) {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1767,7 +1767,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1776,7 +1776,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "128,247.688 128,8.313 181.061,61.674 "
           }),
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1788,7 +1788,7 @@ webpackJsonp(
         );
       }
       function P() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1801,7 +1801,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             className: "Arrow1",
             fill: "none",
             stroke: "#ffffff",
@@ -1810,7 +1810,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "135.65,21.667 30.081,127.235 137.18,234.333 "
           }),
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             className: "Arrow2",
             fill: "none",
             stroke: "#ffffff",
@@ -1822,7 +1822,7 @@ webpackJsonp(
         );
       }
       function z() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1835,7 +1835,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("rect", {
+          H.createElement("rect", {
             x: "24",
             y: "42.167",
             fill: "none",
@@ -1845,7 +1845,7 @@ webpackJsonp(
             width: "208",
             height: "171.667"
           }),
-          V.createElement("line", {
+          H.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "42",
@@ -1858,7 +1858,7 @@ webpackJsonp(
         );
       }
       function L() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1871,7 +1871,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("line", {
+          H.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "18",
@@ -1884,7 +1884,7 @@ webpackJsonp(
         );
       }
       function x() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1897,14 +1897,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("polyline", {
+          H.createElement("polyline", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 "
           }),
-          V.createElement("rect", {
+          H.createElement("rect", {
             x: "24",
             y: "90.861",
             fill: "none",
@@ -1917,7 +1917,7 @@ webpackJsonp(
         );
       }
       function j() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1930,10 +1930,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement(
+          H.createElement(
             "g",
             { className: "mainBox" },
-            V.createElement("rect", {
+            H.createElement("rect", {
               x: "90",
               y: "42.167",
               fill: "none",
@@ -1943,7 +1943,7 @@ webpackJsonp(
               width: "142",
               height: "171.667"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -1954,10 +1954,10 @@ webpackJsonp(
               y2: "54.01"
             })
           ),
-          V.createElement(
+          H.createElement(
             "g",
             { className: "leftBox" },
-            V.createElement("rect", {
+            H.createElement("rect", {
               x: "28",
               y: "42.167",
               fill: "none",
@@ -1967,7 +1967,7 @@ webpackJsonp(
               width: "62",
               height: "171.667"
             }),
-            V.createElement("line", {
+            H.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -1981,7 +1981,7 @@ webpackJsonp(
         );
       }
       function U() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -1994,7 +1994,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "30",
@@ -2003,13 +2003,13 @@ webpackJsonp(
             d:
               "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895"
           }),
-          V.createElement("polygon", {
+          H.createElement("polygon", {
             points: "147.639,108.361 245.755,10.166 245.834,108.361 "
           })
         );
       }
       function W() {
-        return V.createElement(
+        return H.createElement(
           "svg",
           {
             version: "1.1",
@@ -2022,30 +2022,54 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z"
           }),
-          V.createElement("path", {
+          H.createElement("path", {
             d:
               "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z"
           })
         );
       }
-      (t.D = n),
+      function V() {
+        return H.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Scroll",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          H.createElement(
+            "g",
+            { transform: "translate(0,-952.36215)" },
+            H.createElement("path", {
+              d:
+                "M49.624,963.362c-20.72,0-37.667,14.78-37.667,32.806c0,3.589,3.353,6.499,7.486,6.499l52.407-0.305v162.5 c0,18.134,17.404,32.5,38.018,32.5h96.508c20.612,0,37.667-14.475,37.667-32.5c0-3.59-3.354-6.499-7.486-6.5H217.84V996.168 c0-18.024-16.947-32.806-37.667-32.806H49.624z M49.624,976.362h2.223c0.569,0.162,1.158,0.265,1.754,0.306 c8.159,1.274,14.426,6.085,16.962,12.694l-42.112,0.306C31.513,981.897,39.656,976.362,49.624,976.362z M79.337,976.362h100.836 c12.587,0,22.694,8.77,22.694,19.806v162.194H139.23c-4.135,0.001-7.486,2.91-7.488,6.5c0,4.609-1.43,7.796-4.21,10.765 c-2.78,2.972-7.203,5.757-13.686,7.923c-0.624,0.201-1.214,0.476-1.755,0.813h-2.223c-12.695,0-23.044-8.573-23.044-19.5v-169 C86.824,988.529,84.023,981.812,79.337,976.362z M108.582,1005.611c-4.135,0.169-7.33,3.216-7.135,6.807 c0.193,3.59,3.702,6.363,7.837,6.194h71.123c4.135,0.051,7.535-2.817,7.592-6.407c0.059-3.591-3.246-6.542-7.381-6.594 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1005.603,108.816,1005.603,108.582,1005.611z M108.582,1044.612 c-4.135,0.169-7.33,3.215-7.135,6.807c0.193,3.588,3.702,6.362,7.837,6.192h71.123c4.135,0.051,7.535-2.816,7.592-6.407 c0.059-3.59-3.246-6.542-7.381-6.592c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1044.603,108.816,1044.603,108.582,1044.612z M108.582,1083.612c-4.135,0.169-7.33,3.216-7.135,6.806c0.193,3.589,3.702,6.363,7.837,6.193h71.123 c4.135,0.052,7.535-2.816,7.592-6.407c0.059-3.59-3.246-6.541-7.381-6.592c-0.069-0.001-0.141-0.001-0.211,0h-71.123 C109.05,1083.602,108.816,1083.602,108.582,1083.612z M108.582,1122.611c-4.135,0.17-7.33,3.216-7.135,6.806 c0.193,3.591,3.702,6.364,7.837,6.195h71.123c4.135,0.05,7.535-2.818,7.592-6.408c0.059-3.591-3.246-6.541-7.381-6.593 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1122.602,108.816,1122.602,108.582,1122.611z M145.547,1171.363h82.002 c-3.09,7.604-11.189,12.999-21.173,12.999h-67.849c0.196-0.197,0.512-0.306,0.703-0.509 C142.576,1180.277,144.436,1175.973,145.547,1171.363z"
+            })
+          )
+        );
+      }
+      (t.E = n),
         (t.e = r),
         (t.g = o),
         (t.k = a),
         (t.r = s),
         (t.t = c),
         (t.l = l),
-        (t.G = u),
+        (t.H = u),
         (t.B = d),
         (t.z = p),
-        (t.N = h),
-        (t.O = m),
-        (t.L = g),
-        (t.H = f),
+        (t.O = h),
+        (t.P = m),
+        (t.M = g),
+        (t.I = f),
         (t.o = _),
         (t.n = y),
         (t.y = v),
@@ -2053,28 +2077,29 @@ webpackJsonp(
         (t.m = C),
         (t.p = S),
         (t.w = M),
-        (t.M = F),
+        (t.N = F),
         (t.v = w),
         (t.h = O),
         (t.x = B),
-        (t.F = R),
+        (t.G = R),
         (t.f = I),
         (t.i = E),
         (t.d = k),
         (t.q = T),
-        (t.I = G),
-        (t.K = N),
+        (t.J = G),
+        (t.L = N),
         (t.c = D),
         (t.b = A),
         (t.j = P),
         (t.s = z),
         (t.u = L),
         (t.C = x),
-        (t.E = j),
+        (t.F = j),
         (t.A = U),
-        (t.J = W);
-      var V = i("Jmof");
-      i.n(V);
+        (t.K = W),
+        (t.D = V);
+      var H = i("Jmof");
+      i.n(H);
     },
     DRjr: function(e, t, i) {
       "use strict";
@@ -7416,7 +7441,7 @@ and limitations under the License.
             );
       }
       function b(e) {
-        var t = Kp.RTime32ToDate(e.rtime),
+        var t = Yp.RTime32ToDate(e.rtime),
           i = new Date();
         i.setHours(0, 0, 0, 0);
         var n;
@@ -7452,11 +7477,11 @@ and limitations under the License.
         );
       }
       function C(e, t, i) {
-        var n = Kp.FriendStore.GetPlayer(i),
+        var n = Yp.FriendStore.GetPlayer(i),
           r = n.display_name,
-          o = Kp.FriendStore.GetPlayer(t),
+          o = Yp.FriendStore.GetPlayer(t),
           a = o.display_name,
-          s = t == Kp.FriendStore.self.accountid;
+          s = t == Yp.FriendStore.self.accountid;
         switch (e.result) {
           case 1:
             return Object(mr.b)("#friends_trade_declined", r);
@@ -7765,7 +7790,7 @@ and limitations under the License.
       }
       function z(e) {
         return Cr.createElement(
-          Wu,
+          Vu,
           { friend: e.friend, context: null },
           Cr.createElement(
             "div",
@@ -7776,7 +7801,7 @@ and limitations under the License.
               }
             },
             Cr.createElement("span", null, e.friend.display_name),
-            Cr.createElement(Es.O, null)
+            Cr.createElement(Es.P, null)
           )
         );
       }
@@ -7810,7 +7835,7 @@ and limitations under the License.
         );
       }
       function j(e, t, i) {
-        0 == Kp.FriendStore.FriendGroupStore.user_groups.length
+        0 == Yp.FriendStore.FriendGroupStore.user_groups.length
           ? L(e, t, i)
           : Re(
               Cr.createElement(gc, { browserContext: e, friend: i }),
@@ -7873,10 +7898,10 @@ and limitations under the License.
         );
       }
       function q(e) {
-        Kp.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
+        Yp.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
       }
       function K(e) {
-        Kp.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
+        Yp.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
       }
       function Y(e, t, i) {
         return Object(Mr.a)(
@@ -7911,7 +7936,7 @@ and limitations under the License.
                 {
                   key: "removegroup",
                   onSelected: function() {
-                    Kp.FriendStore.FriendGroupStore.RemoveGroup(e.group);
+                    Yp.FriendStore.FriendGroupStore.RemoveGroup(e.group);
                   }
                 },
                 Object(mr.b)("#FriendGroup_Menu_Remove")
@@ -7948,7 +7973,7 @@ and limitations under the License.
           r = Je(null, e);
         return (
           t.BIsClanChatRoom() &&
-            (n = Kp.FriendStore.ClanStore.GetClan(t.GetClanID())),
+            (n = Yp.FriendStore.ClanStore.GetClan(t.GetClanID())),
           Object(Mr.a)(
             Cr.createElement(Sl, {
               browserContext: r,
@@ -7965,7 +7990,7 @@ and limitations under the License.
           r = Je(null, e);
         return (
           t.GetChatGroupIDIfLoaded() &&
-            (n = Kp.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
+            (n = Yp.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
           Object(Mr.a)(
             Cr.createElement(Sl, {
               browserContext: r,
@@ -8175,7 +8200,7 @@ and limitations under the License.
       }
       function me(e, t, i) {
         return Object(Mr.a)(
-          Cr.createElement(xu, {
+          Cr.createElement(ju, {
             browserContext: e,
             appid: t,
             ownerWindow: i.currentTarget.ownerDocument.defaultView
@@ -8185,13 +8210,13 @@ and limitations under the License.
       }
       function ge(e) {
         return Cr.createElement(
-          Xu,
+          Zu,
           {
             target: e.target,
             className: "friendHover miniProfileHover",
             visibilityObserver: e.hoverInstance
           },
-          Cr.createElement(Zu, { hoverInstance: e.hoverInstance })
+          Cr.createElement(Qu, { hoverInstance: e.hoverInstance })
         );
       }
       function fe(e) {
@@ -8210,7 +8235,7 @@ and limitations under the License.
             )
           );
         var i = function() {
-          Kp.EconomyStore.GetTradeOfferURL().then(function(t) {
+          Yp.EconomyStore.GetTradeOfferURL().then(function(t) {
             e.fnInsertText(t);
           });
         };
@@ -8229,7 +8254,7 @@ and limitations under the License.
         var t = e.group.GetGroupID(),
           i = e.group.voiceRoomList.map(function(e) {
             var i = function() {
-              Kp.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
+              Yp.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
             };
             return Cr.createElement(
               Sr.d,
@@ -8277,7 +8302,7 @@ and limitations under the License.
           a.BCanInvite() || a.BHasMember(e.invitee.accountid) || (o = !1);
         }
         o
-          ? Re(Cr.createElement(Cd, nt.a({}, e)), i, "InviteDialog", {
+          ? Re(Cr.createElement(Sd, nt.a({}, e)), i, "InviteDialog", {
               strTitle: r
                 ? Object(mr.b)("#Chat_Actions_InviteFriend_VoiceChat")
                 : Object(mr.b)("#Chat_Actions_DropGroupInvite_Title"),
@@ -8312,7 +8337,7 @@ and limitations under the License.
       }
       function Se(e, t) {
         return Cr.createElement(
-          Wu,
+          Vu,
           { friend: t, context: e },
           Cr.createElement("span", null, t.display_name)
         );
@@ -8320,10 +8345,10 @@ and limitations under the License.
       function Me(e, t, i, n, r) {
         if (r);
         else {
-          var o = new Cm(n.ownerDocument.defaultView),
-            a = Kp.UIStore.GetDefaultTabSetForContext(e);
+          var o = new Sm(n.ownerDocument.defaultView),
+            a = Yp.UIStore.GetDefaultTabSetForContext(e);
           Bs.render(
-            Cr.createElement(Jd, {
+            Cr.createElement(Xd, {
               friends: t,
               chats: i,
               tabset: a,
@@ -8395,7 +8420,7 @@ and limitations under the License.
       function we(e, t, i, n, r, o, a) {
         return new Promise(function(s, c) {
           e(
-            Cr.createElement(tp, {
+            Cr.createElement(ip, {
               strTitle: t,
               strDescription: i,
               strOKButtonText: n,
@@ -8411,7 +8436,7 @@ and limitations under the License.
       function Oe(e, t, i, n) {
         return new Promise(function(r, o) {
           e(
-            Cr.createElement(tp, {
+            Cr.createElement(ip, {
               bAlertDialog: !0,
               strTitle: t,
               strDescription: i,
@@ -8454,10 +8479,10 @@ and limitations under the License.
                   Cr.createElement(
                     "div",
                     { className: "closeButton", onClick: e.onEscKeypress },
-                    Cr.createElement(Es.O, null)
+                    Cr.createElement(Es.P, null)
                   )
                 ),
-              Cr.createElement(md, null, e.children)
+              Cr.createElement(gd, null, e.children)
             )
           )
         );
@@ -8471,9 +8496,9 @@ and limitations under the License.
             }
           });
         if (it.a.USE_POPUPS && n && i) {
-          var s = new ip(t, Xe(t), i, n, a);
+          var s = new np(t, Xe(t), i, n, a);
           s.Show(), (r = s);
-        } else r = Rm.GetModalManager(t).ShowModal(a);
+        } else r = Im.GetModalManager(t).ShowModal(a);
         return r;
       }
       function Ie(e) {
@@ -8481,7 +8506,7 @@ and limitations under the License.
           "div",
           { className: "PopupFullWindow", onContextMenu: Fe },
           Cr.createElement(Mu, { hideMinMax: !0, popup: e.popup }),
-          Cr.createElement(Qd, { ModalManager: Rm.GetModalManager(e.popup) }),
+          Cr.createElement($d, { ModalManager: Im.GetModalManager(e.popup) }),
           e.children
         );
       }
@@ -8526,32 +8551,32 @@ and limitations under the License.
       }
       function Ne(e, t, i) {
         Re(
-          Cr.createElement(Xp, nt.a({}, e, { bIsInviteDialog: !0 })),
+          Cr.createElement(Zp, nt.a({}, e, { bIsInviteDialog: !0 })),
           i,
           "InviteDialog",
           { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }
         );
       }
       function De(e) {
-        if (Rh == Mh.Loaded) return void e();
-        if (Rh == Mh.NotLoaded) {
+        if (Ih == Fh.Loaded) return void e();
+        if (Ih == Fh.NotLoaded) {
           var t = document.createElement("script");
           t.src = "https://www.youtube.com/iframe_api";
           var i = document.getElementsByTagName("script")[0];
           i.parentNode.insertBefore(t, i),
             (window.onYouTubeIframeAPIReady = Pe);
         }
-        Ih.findIndex(function(t) {
+        Eh.findIndex(function(t) {
           return e == t;
-        }) < 0 && Ih.push(e);
+        }) < 0 && Eh.push(e);
       }
       function Ae(e) {
-        Ht.b(Ih, e);
+        Ht.b(Eh, e);
       }
       function Pe() {
-        Rh = Mh.Loaded;
-        for (var e = 0, t = Ih; e < t.length; e++) (0, t[e])();
-        Ih = [];
+        Ih = Fh.Loaded;
+        for (var e = 0, t = Eh; e < t.length; e++) (0, t[e])();
+        Eh = [];
       }
       function ze(e) {
         var t = new RegExp(
@@ -8561,35 +8586,35 @@ and limitations under the License.
         return e.match(t)[5].toString();
       }
       function Le() {
-        return Object.assign(je(), { mention: Qh });
+        return Object.assign(je(), { mention: $h });
       }
       function xe() {
         return Object.assign(je(), {
-          invite: jh,
-          gameinvite: Uh,
-          lobbyinvite: Wh,
-          tradeoffer: Yh,
-          broadcastinvite: Vh,
-          broadcastviewrequest: Hh
+          invite: Uh,
+          gameinvite: Wh,
+          lobbyinvite: Vh,
+          tradeoffer: Jh,
+          broadcastinvite: Hh,
+          broadcastviewrequest: qh
         });
       }
       function je() {
         return {
-          url: kh,
-          youtube: Gh,
-          filteredurl: Zh,
-          emoticon: $h,
-          img: Nh,
-          video: Dh,
-          og: Ph,
-          tweet: zh,
-          inviteurl: xh,
-          publishedfile: qh,
-          tradeofferlink: Kh,
-          econitem: Xh,
-          steamstore: em,
-          broadcast: Jh,
-          oembed: Lh
+          url: Th,
+          youtube: Nh,
+          filteredurl: Qh,
+          emoticon: em,
+          img: Dh,
+          video: Ah,
+          og: zh,
+          tweet: Lh,
+          inviteurl: jh,
+          publishedfile: Kh,
+          tradeofferlink: Yh,
+          econitem: Zh,
+          steamstore: tm,
+          broadcast: Xh,
+          oembed: xh
         };
       }
       function Ue() {
@@ -8604,13 +8629,13 @@ and limitations under the License.
           a = r + "?s=" + i + "x" + n,
           s = a + "dpx2x";
         return Cr.createElement(
-          Ah,
+          Ph,
           nt.a({ context: t }, o, { src: a, srcSet: a + " 1x, " + s + " 2x" })
         );
       }
       function Ve(e) {
         var t = e.args.appid,
-          i = Kp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Yp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(mr.b)(
@@ -8622,7 +8647,7 @@ and limitations under the License.
       }
       function He(e) {
         var t = e.args.appid,
-          i = Kp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Yp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(mr.b)(
@@ -8661,7 +8686,7 @@ and limitations under the License.
         };
       }
       function Ye(e, t, i) {
-        Bs.render(Cr.createElement(am, { friends: e }), t);
+        Bs.render(Cr.createElement(sm, { friends: e }), t);
       }
       function Je(e, t) {
         var i = Qe(t);
@@ -8678,7 +8703,7 @@ and limitations under the License.
         );
       }
       function Xe(e) {
-        var t = Hp;
+        var t = qp;
         return (
           e &&
             (AssertMsg(
@@ -8691,7 +8716,7 @@ and limitations under the License.
       }
       function Ze(e) {
         var t = Xe(e);
-        return t && t.m_unPID != Hp.m_unPID && t.m_nBrowserID != Hp.m_nBrowserID
+        return t && t.m_unPID != qp.m_unPID && t.m_nBrowserID != qp.m_nBrowserID
           ? t
           : null;
       }
@@ -8706,7 +8731,7 @@ and limitations under the License.
       }
       function $e() {
         var e,
-          t = new wm(),
+          t = new Om(),
           i = null,
           n = !1;
         if (it.a.IN_CLIENT) {
@@ -8730,19 +8755,19 @@ and limitations under the License.
       }
       function et(e, t, i) {
         if ("english" !== t)
-          "friendsui" == e ? (Em = i) : "shared" == e && (km = i);
-        else if ("shared" == e) Tm = i;
+          "friendsui" == e ? (km = i) : "shared" == e && (Tm = i);
+        else if ("shared" == e) Gm = i;
         else {
           var n = void 0,
             r = null,
             o = void 0,
             a = null;
-          void 0 !== Em ? ((n = Em), (r = i)) : (n = i),
-            void 0 !== km ? ((o = km), (a = Tm)) : (o = Tm),
+          void 0 !== km ? ((n = km), (r = i)) : (n = i),
+            void 0 !== Tm ? ((o = Tm), (a = Gm)) : (o = Gm),
             mr.a.InitFromObjects(n, r, o, a),
-            (Em = void 0),
             (km = void 0),
-            (Tm = void 0);
+            (Tm = void 0),
+            (Gm = void 0);
         }
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
@@ -13872,7 +13897,7 @@ and limitations under the License.
                 return this.m_strGameExtraInfo
                   ? this.m_strGameExtraInfo
                   : this.m_unGamePlayedAppID
-                    ? Kp.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
+                    ? Yp.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
                         .m_strName
                     : "";
               },
@@ -13940,7 +13965,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "current_game_rich_presence", {
               get: function() {
                 if (this.m_mapRichPresence.has("steam_display")) {
-                  var e = Kp.AppInfoStore.GetRichPresenceLoc(
+                  var e = Yp.AppInfoStore.GetRichPresenceLoc(
                     this.m_unGamePlayedAppID
                   );
                   if (e) return this.GetLocalizedRichPresenceDisplayString(e);
@@ -21567,7 +21592,7 @@ and limitations under the License.
                     }
                     this.m_activeTab = n || this.m_vecTabs[Math.max(t - 1, 0)];
                   } else this.m_activeTab = void 0;
-                0 == this.m_vecTabs.length && Kp.UIStore.CloseTabSet(this);
+                0 == this.m_vecTabs.length && Yp.UIStore.CloseTabSet(this);
               }
             }),
             (e.prototype.MoveTabAfter = function(e, t) {
@@ -21580,7 +21605,7 @@ and limitations under the License.
                 Ht.d(this.m_vecTabs, i, Math.min(t, this.m_vecTabs.length - 1));
             }),
             (e.prototype.Focus = function() {
-              Kp.UIStore.FocusTabSet(this);
+              Yp.UIStore.FocusTabSet(this);
             }),
             (e.prototype.OnPopupClosed = function(e) {
               var t = !1;
@@ -21589,33 +21614,33 @@ and limitations under the License.
                 e.SteamClient.Window &&
                 e.SteamClient.Window.ProcessShuttingDown &&
                 (t = e.SteamClient.Window.ProcessShuttingDown()),
-                t && Kp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Kp.UIStore.OnTabSetClosed(this),
+                t && Yp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Yp.UIStore.OnTabSetClosed(this),
                 (this.m_activeTab = void 0);
               for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
                 var r = n[i];
-                Kp.UIStore.CloseTab(this.m_browserContext, r, !0);
+                Yp.UIStore.CloseTab(this.m_browserContext, r, !0);
               }
               this.m_vecTabs.clear(),
-                t && Kp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
+                t && Yp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
             }),
             Object.defineProperty(e.prototype, "is_popup_active", {
               get: function() {
-                return Kp.UIStore.BIsTabSetActive(this);
+                return Yp.UIStore.BIsTabSetActive(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_visible", {
               get: function() {
-                return Kp.UIStore.BIsTabSetVisible(this);
+                return Yp.UIStore.BIsTabSetVisible(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_focused", {
               get: function() {
-                return Kp.UIStore.BIsTabSetFocused(this);
+                return Yp.UIStore.BIsTabSetFocused(this);
               },
               enumerable: !0,
               configurable: !0
@@ -21649,7 +21674,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.BIsExpired = function() {
-              return Kp.GetServerRTime32() >= this.m_rtTimeExpires;
+              return Yp.GetServerRTime32() >= this.m_rtTimeExpires;
             }),
             (t.prototype.InitFromInviteLinkInfo = function(e) {
               (this.m_ulChatRoomGroupID = e.group_summary().chat_group_id()),
@@ -21694,7 +21719,7 @@ and limitations under the License.
             }),
             (e.prototype.AcceptInvite = function(e, t) {
               var i = this;
-              null == t && (t = Kp.GetDefaultBrowserContext());
+              null == t && (t = Yp.GetDefaultBrowserContext());
               var n = pt.Init(_n);
               return (
                 n.Body().set_chat_group_id(e.GetChatRoomGroupID()),
@@ -21713,7 +21738,7 @@ and limitations under the License.
                         e.Body().state(),
                         e.Body().user_chat_state()
                       );
-                      Kp.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
+                      Yp.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
                       var o = e.Body().join_chat_id();
                       if (r) {
                         var a = r.GetChatRoom(o);
@@ -21828,11 +21853,11 @@ and limitations under the License.
                     (e += "/" + encodeURIComponent(this.connectString))),
                 v(window, e),
                 (this.bAccepted = !0),
-                Kp.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Yp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             (e.prototype.DismissInvite = function() {
               (this.bDismissed = !0),
-                Kp.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Yp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             nt.b([ht.observable], e.prototype, "bDismissed", void 0),
             nt.b([ht.observable], e.prototype, "bAccepted", void 0),
@@ -21851,7 +21876,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Kp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Yp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "GameInvites",
                 Or
               ).then(function(t) {
@@ -21890,7 +21915,7 @@ and limitations under the License.
                 this.WriteToLocalStorage());
             }),
             (e.prototype.WriteToLocalStorage = function() {
-              Kp.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
+              Yp.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
                 dismisstimes: this.m_mapDismissedInvites
               });
             }),
@@ -21919,7 +21944,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Kp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Yp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "ChatEmbeds",
                 {}
               ).then(function(t) {
@@ -21952,7 +21977,7 @@ and limitations under the License.
                 this.WriteToLocalStorage();
             }),
             (e.prototype.WriteToLocalStorage = function() {
-              Kp.SettingsStore.StoreObjectInLocalStorage(
+              Yp.SettingsStore.StoreObjectInLocalStorage(
                 "ChatEmbeds",
                 this.m_mapEmbed
               );
@@ -23684,7 +23709,7 @@ and limitations under the License.
               return this.m_rgChatMessages.push(r), r;
             }),
             (e.prototype.AppendLocalEchoChatMsg = function(e) {
-              var t = new eo(this.self.accountid, Kp.GetServerRTime32(), e);
+              var t = new eo(this.self.accountid, Yp.GetServerRTime32(), e);
               return this.m_rgChatMessages.push(t), t;
             }),
             (e.prototype.AddNewChatMsgAndNotify = function(e, t, i, n, r, o) {
@@ -23714,7 +23739,7 @@ and limitations under the License.
                     ? (o = !0)
                     : 3 == s &&
                       0 == this.m_cUnreadChatMessages &&
-                      Kp.IdleTracker.AddOnNextActivityCallback(function() {
+                      Yp.IdleTracker.AddOnNextActivityCallback(function() {
                         4 == n.GetVisibilityState() && n.OnActivate();
                       }),
                 (this.m_rtLastMessageReceived = e.rtTimestamp),
@@ -28966,7 +28991,7 @@ and limitations under the License.
             (e.prototype.OpenChatDialog = function(e, t) {
               void 0 === t && (t = !0),
                 this.GetChatRoomGroupID().then(function(i) {
-                  Kp.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
+                  Yp.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
                 });
             }),
             (e.prototype.ReadPersonaStateUpdate = function(e, t) {
@@ -29015,7 +29040,7 @@ and limitations under the License.
                 t.Body().set_steamid(this.steamid.ConvertTo64BitString()),
                 t.Body().set_autocreate(!0),
                 dr
-                  .GetClanChatRoomInfo(Kp.CMInterface.GetServiceTransport(), t)
+                  .GetClanChatRoomInfo(Yp.CMInterface.GetServiceTransport(), t)
                   .then(function(t) {
                     return 1 == t.GetEResult() &&
                       t
@@ -29663,7 +29688,7 @@ and limitations under the License.
             (e.prototype.Init = function(e) {
               var t = this;
               (this.m_CMInterface = e),
-                (this.m_ChatStore = Kp.ChatStore),
+                (this.m_ChatStore = Yp.ChatStore),
                 this.m_CMInterface.AddOnLogonCallback(function() {
                   var e = pt.Init(Ra);
                   Sa.GetFavorites(
@@ -30805,7 +30830,7 @@ and limitations under the License.
               this.m_persona.m_bInitialized ||
                 this.m_bPersonaStateLoadRequested ||
                 ((this.m_bPersonaStateLoadRequested = !0),
-                Kp.FriendStore.QueueFriendPersonaStateLoad(this));
+                Yp.FriendStore.QueueFriendPersonaStateLoad(this));
             }),
             Object.defineProperty(e.prototype, "is_ready", {
               get: function() {
@@ -30921,7 +30946,7 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "primary_display_name", {
               get: function() {
-                return !Kp.SettingsStore.CommunityPreferences
+                return !Yp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30942,7 +30967,7 @@ and limitations under the License.
               {
                 get: function() {
                   return (
-                    !!Kp.SettingsStore.CommunityPreferences
+                    !!Yp.SettingsStore.CommunityPreferences
                       .bParenthesizeNicknames && this.has_secondary_display_name
                   );
                 },
@@ -30952,7 +30977,7 @@ and limitations under the License.
             ),
             Object.defineProperty(e.prototype, "secondary_display_name", {
               get: function() {
-                return Kp.SettingsStore.CommunityPreferences
+                return Yp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30963,7 +30988,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "is_display_name_nickname", {
               get: function() {
                 return (
-                  !Kp.SettingsStore.CommunityPreferences
+                  !Yp.SettingsStore.CommunityPreferences
                     .bParenthesizeNicknames && this.has_nickname
                 );
               },
@@ -31045,7 +31070,7 @@ and limitations under the License.
                     .add_Ids()
                     .set_steamid(this.steamid64),
                     t.Body().set_id_count(1),
-                    Kp.CMInterface.SendMsgAndAwaitResponse(t, zt).then(function(
+                    Yp.CMInterface.SendMsgAndAwaitResponse(t, zt).then(function(
                       t
                     ) {
                       if (
@@ -31101,10 +31126,10 @@ and limitations under the License.
                       )
                     : v(window, this.GetCommunityProfileURL()),
                   null)
-                : Kp.ShowFriendChatDialog(e, this.m_unAccountID, !0);
+                : Yp.ShowFriendChatDialog(e, this.m_unAccountID, !0);
             }),
             (e.FriendSortStatusComparator = function(e, t) {
-              var i = Kp.SettingsStore.BForceAlphabeticFriendSorting(),
+              var i = Yp.SettingsStore.BForceAlphabeticFriendSorting(),
                 n = e.persona,
                 r = t.persona;
               if (n.is_ingame) {
@@ -31131,8 +31156,8 @@ and limitations under the License.
               var i = e.persona,
                 n = t.persona;
               if (i.is_offline && n.is_offline) {
-                var r = Kp.GetServerRTime32() - i.m_rtLastLogoff,
-                  o = Kp.GetServerRTime32() - n.m_rtLastLogoff;
+                var r = Yp.GetServerRTime32() - i.m_rtLastLogoff,
+                  o = Yp.GetServerRTime32() - n.m_rtLastLogoff;
                 if (r > o) return 1;
                 if (o > r) return -1;
               }
@@ -31147,7 +31172,7 @@ and limitations under the License.
             (e.prototype.GetOfflineStatusUpdateRate = function() {
               if (0 == this.persona.m_rtLastLogoff) return 3e4;
               var e = 1e3,
-                t = Kp.GetServerRTime32() - this.persona.m_rtLastLogoff;
+                t = Yp.GetServerRTime32() - this.persona.m_rtLastLogoff;
               return (e *= t > 86400 ? 3600 : t > 7200 ? 60 : 15);
             }),
             (e.prototype.GetOfflineStatusTime = function() {
@@ -31155,7 +31180,7 @@ and limitations under the License.
                 return Object(mr.b)("#PersonaStateOffline");
               var e = this.GetOfflineStatusUpdateRate(),
                 t = (Object(Ar.now)(e),
-                Kp.GetServerRTime32() - this.persona.m_rtLastLogoff);
+                Yp.GetServerRTime32() - this.persona.m_rtLastLogoff);
               return t < 60
                 ? Object(mr.b)("#PersonaStateLastSeen_JustNow")
                 : Object(mr.b)("#PersonaStateLastSeen", Object(mr.e)(t));
@@ -31197,7 +31222,7 @@ and limitations under the License.
                   i = pt.Init(qa);
                 i.Body().set_steamid(this.steamid64),
                   Na.IsInFriendsUIBeta(
-                    Kp.CMInterface.GetServiceTransport(),
+                    Yp.CMInterface.GetServiceTransport(),
                     i
                   ).then(function(i) {
                     (e.m_bBetaStatusLoading = !1),
@@ -31474,17 +31499,17 @@ and limitations under the License.
                       c.is_friend &&
                       c.accountid != e.m_self.accountid &&
                       (u != l.m_ePersonaState || C) &&
-                      (Kp.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
+                      (Yp.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
                       C &&
                       c.persona.is_ingame
-                        ? Kp.AudioPlaybackManager.PlayAudioURL(
+                        ? Yp.AudioPlaybackManager.PlayAudioURL(
                             it.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_ingame.m4a?v=1"
                           )
-                        : Kp.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
+                        : Yp.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
                           u != l.m_ePersonaState &&
                           1 == l.m_ePersonaState &&
-                          Kp.AudioPlaybackManager.PlayAudioURL(
+                          Yp.AudioPlaybackManager.PlayAudioURL(
                             it.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_online.m4a?v=1"
                           ),
@@ -31520,8 +31545,8 @@ and limitations under the License.
                   case 50:
                     break;
                   case 1:
-                    var n = Kp.ShowFriendChatDialog(
-                      Kp.GetDefaultBrowserContext(),
+                    var n = Yp.ShowFriendChatDialog(
+                      Yp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
@@ -31555,8 +31580,8 @@ and limitations under the License.
                       (r.email_change_probation_days = e
                         .Body()
                         .email_change_probation_days());
-                    var n = Kp.ShowFriendChatDialog(
-                      Kp.GetDefaultBrowserContext(),
+                    var n = Yp.ShowFriendChatDialog(
+                      Yp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
@@ -31568,15 +31593,15 @@ and limitations under the License.
                   n = e.GetFriend(i.GetAccountID());
                 if (n) {
                   var r = t.Body().trade_request_id(),
-                    o = Kp.ShowFriendChatDialog(
-                      Kp.GetDefaultBrowserContext(),
+                    o = Yp.ShowFriendChatDialog(
+                      Yp.GetDefaultBrowserContext(),
                       n.accountid,
                       !1
                     );
                   o &&
                     o.AddNewTradeRequestAndNotify(
                       i.GetAccountID(),
-                      Kp.GetServerRTime32(),
+                      Yp.GetServerRTime32(),
                       t.Body().other_steamid(),
                       r
                     );
@@ -31585,8 +31610,8 @@ and limitations under the License.
               (this.m_StartTradingSession = s(7705, da, function(t) {
                 var i = new ut.a(t.Body().other_steamid()),
                   n = e.OpenTradeWindow(t.Body().other_steamid()),
-                  r = Kp.ShowFriendChatDialog(
-                    Kp.GetDefaultBrowserContext(),
+                  r = Yp.ShowFriendChatDialog(
+                    Yp.GetDefaultBrowserContext(),
                     i.GetAccountID(),
                     !1
                   );
@@ -31614,7 +31639,7 @@ and limitations under the License.
                         i.m_CMInterface.steamid.GetAccountID(),
                         1
                       )),
-                      Kp.SettingsStore.GetObjectFromLocalStorage(
+                      Yp.SettingsStore.GetObjectFromLocalStorage(
                         "FriendStoreLocalPrefs",
                         i.m_FriendStorePrefs
                       ).then(function(e) {
@@ -31661,7 +31686,7 @@ and limitations under the License.
                   i.SetPersonasOffline(!0);
                 }, 102),
                 Object(ht.autorun)(function() {
-                  var e = Kp.ParentalStore.BIsFriendsBlocked();
+                  var e = Yp.ParentalStore.BIsFriendsBlocked();
                   i.OnParentalLockChanged(e);
                 }),
                 this.InitializeIdleTracking(),
@@ -31697,7 +31722,7 @@ and limitations under the License.
               void 0 === t && (t = !1),
                 (this.m_bUserSetPersonaState = 1 != e),
                 (this.m_FriendStorePrefs.ePersonaState = e),
-                Kp.SettingsStore.StoreObjectInLocalStorage(
+                Yp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 ),
@@ -31719,7 +31744,7 @@ and limitations under the License.
                   (n += t.toString() + "=" + e.toString()));
               }),
                 (this.m_FriendStorePrefs.strNonFriendsAllowedToMsg = n),
-                Kp.SettingsStore.StoreObjectInLocalStorage(
+                Yp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 );
@@ -31754,9 +31779,9 @@ and limitations under the License.
             }),
             (e.prototype.AdjustPersonaStateForIdleTime = function(e) {
               return (1 == e || 3 == e) &&
-                Kp.IdleTracker.GetUserIdleTime() >= 7200
+                Yp.IdleTracker.GetUserIdleTime() >= 7200
                 ? 4
-                : 1 == e && Kp.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
+                : 1 == e && Yp.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
             }),
             Object.defineProperty(e.prototype, "FriendGroupStore", {
               get: function() {
@@ -31891,13 +31916,13 @@ and limitations under the License.
             (e.prototype.InitializeIdleTracking = function() {
               this.m_bAwayCallbackFired &&
                 ((this.m_bAwayCallbackFired = !1),
-                Kp.IdleTracker.AddOnIdleCallback(
+                Yp.IdleTracker.AddOnIdleCallback(
                   this.OnIdle.bind(this, 3),
                   300
                 )),
                 this.m_bSnoozeCallbackFired &&
                   ((this.m_bSnoozeCallbackFired = !1),
-                  Kp.IdleTracker.AddOnIdleCallback(
+                  Yp.IdleTracker.AddOnIdleCallback(
                     this.OnIdle.bind(this, 4),
                     7200
                   ));
@@ -31920,7 +31945,7 @@ and limitations under the License.
                     this.UpdateUserPersonaStateInternal(e))),
                 this.m_bNextActivityCallbackRegistered ||
                   ((this.m_bNextActivityCallbackRegistered = !0),
-                  Kp.IdleTracker.AddOnNextActivityCallback(
+                  Yp.IdleTracker.AddOnNextActivityCallback(
                     this.ResetIdleState.bind(this)
                   ));
             }),
@@ -31969,18 +31994,18 @@ and limitations under the License.
             }),
             (e.prototype.OnFriendPersonaStateChanged = function(e, t, i, n) {
               if (
-                Kp.NotificationManager.BNotificationsPermitted() &&
-                Kp.SettingsStore.BReady()
+                Yp.NotificationManager.BNotificationsPermitted() &&
+                Yp.SettingsStore.BReady()
               ) {
                 if (
                   n &&
                   e.persona.is_ingame &&
-                  Kp.SettingsStore.FriendsSettings.bNotifications_ShowIngame
+                  Yp.SettingsStore.FriendsSettings.bNotifications_ShowIngame
                 ) {
                   var r = e.persona.current_game_name;
                   return void (
                     r &&
-                    Kp.NotificationManager.DisplayNotificationFromFriend(e, {
+                    Yp.NotificationManager.DisplayNotificationFromFriend(e, {
                       title: e.display_name,
                       body: Object(mr.b)("#Friend_StateChange_InGame", r),
                       tag: "state_" + e.accountid,
@@ -31990,8 +32015,8 @@ and limitations under the License.
                 }
                 return 0 == t &&
                   0 != i &&
-                  Kp.SettingsStore.FriendsSettings.bNotifications_ShowOnline
-                  ? void Kp.NotificationManager.DisplayNotificationFromFriend(
+                  Yp.SettingsStore.FriendsSettings.bNotifications_ShowOnline
+                  ? void Yp.NotificationManager.DisplayNotificationFromFriend(
                       e,
                       {
                         title: e.display_name,
@@ -32071,12 +32096,12 @@ and limitations under the License.
                 this.m_CMInterface.Send(n);
             }),
             (e.prototype.InviteToWatch = function(e) {
-              Kp.ShowFriendChatDialog(
-                Kp.GetDefaultBrowserContext(),
+              Yp.ShowFriendChatDialog(
+                Yp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               ),
-                Kp.BroadcastStore.InviteToWatch(e.accountid).then(function(
+                Yp.BroadcastStore.InviteToWatch(e.accountid).then(function(
                   e
                 ) {});
             }),
@@ -32085,15 +32110,15 @@ and limitations under the License.
               t
                 .Body()
                 .set_other_steamid(e.persona.m_steamid.ConvertTo64BitString());
-              var i = Kp.ShowFriendChatDialog(
-                Kp.GetDefaultBrowserContext(),
+              var i = Yp.ShowFriendChatDialog(
+                Yp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               );
               i &&
                 i.AddNewTradeRequestAndNotify(
-                  Kp.FriendStore.self.accountid,
-                  Kp.GetServerRTime32(),
+                  Yp.FriendStore.self.accountid,
+                  Yp.GetServerRTime32(),
                   e.persona.m_steamid.ConvertTo64BitString(),
                   0
                 ),
@@ -32263,7 +32288,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Kp.FriendStore.GetPlayer(i));
+                    e.push(Yp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32408,7 +32433,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Kp.FriendStore.GetPlayer(i));
+                    e.push(Yp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32554,7 +32579,7 @@ and limitations under the License.
               get: function() {
                 return (
                   0 != this.id &&
-                  Kp.AppInfoStore.GetAppInfo(this.id).is_initialized
+                  Yp.AppInfoStore.GetAppInfo(this.id).is_initialized
                 );
               },
               enumerable: !0,
@@ -32571,7 +32596,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Kp.AppInfoStore.GetAppInfo(this.id).name;
+                  : Yp.AppInfoStore.GetAppInfo(this.id).name;
               },
               set: function(e) {},
               enumerable: !0,
@@ -32581,7 +32606,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Kp.AppInfoStore.GetAppInfo(this.id).icon_url;
+                  : Yp.AppInfoStore.GetAppInfo(this.id).icon_url;
               },
               enumerable: !0,
               configurable: !0
@@ -32670,7 +32695,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Kp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Yp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "FriendGroupCollapse",
                 cs
               ).then(function(t) {
@@ -32693,7 +32718,7 @@ and limitations under the License.
               this.SetUserGroupCollapsed(e, !this.GetUserGroupCollapsed(e));
             }),
             (e.prototype.WritePrefs = function() {
-              Kp.SettingsStore.StoreObjectInLocalStorage(
+              Yp.SettingsStore.StoreObjectInLocalStorage(
                 "FriendGroupCollapse",
                 { groups: this.m_mapCollapsePrefs.toJSON() }
               );
@@ -33500,12 +33525,12 @@ and limitations under the License.
               }),
                 this.BVoiceActive() &&
                   (i
-                    ? Kp.AudioPlaybackManager.PlayAudioURL(
+                    ? Yp.AudioPlaybackManager.PlayAudioURL(
                         it.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                       )
                     : n &&
-                      Kp.AudioPlaybackManager.PlayAudioURL(
+                      Yp.AudioPlaybackManager.PlayAudioURL(
                         it.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       )),
@@ -33531,7 +33556,7 @@ and limitations under the License.
                     if (
                       this.m_groupVoiceActiveMembers.member_list[e].is_friend ||
                       this.m_groupVoiceActiveMembers.member_list[e] ==
-                        Kp.FriendStore.self
+                        Yp.FriendStore.self
                     )
                       return !0;
                   return !1;
@@ -33549,7 +33574,7 @@ and limitations under the License.
                 )
                   if (
                     this.m_groupVoiceActiveMembers.member_list[e] ==
-                    Kp.FriendStore.self
+                    Yp.FriendStore.self
                   )
                     return !0;
                 return !1;
@@ -33565,7 +33590,7 @@ and limitations under the License.
                   return (
                     1 == this.m_groupVoiceActiveMembers.member_list.length &&
                     this.m_groupVoiceActiveMembers.member_list[0] ==
-                      Kp.FriendStore.self
+                      Yp.FriendStore.self
                   );
                 },
                 enumerable: !0,
@@ -33759,7 +33784,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.BShouldSilentlyAddMessage = function(e) {
-              return Kp.FriendStore.GetPlayer(e.unAccountID).is_blocked;
+              return Yp.FriendStore.GetPlayer(e.unAccountID).is_blocked;
             }),
             (t.prototype.OnReceivedNewMessage = function(e, t, i, n) {
               var r = this;
@@ -33792,31 +33817,31 @@ and limitations under the License.
                 }
                 if (o) {
                   if (
-                    (Kp.SettingsStore.FriendsSettings
+                    (Yp.SettingsStore.FriendsSettings
                       .bSounds_PlayChatRoomNotification &&
                     (e.Mentions.mention_all ||
                       e.Mentions.mention_here ||
                       e.Mentions.mention_user)
-                      ? Kp.AudioPlaybackManager.PlayAudioURL(
+                      ? Yp.AudioPlaybackManager.PlayAudioURL(
                           it.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_at_mention.m4a?v=1"
                         )
-                      : Kp.SettingsStore.FriendsSettings
+                      : Yp.SettingsStore.FriendsSettings
                           .bSounds_PlayChatRoomNotification &&
                         t < 4 &&
-                        Kp.AudioPlaybackManager.PlayAudioURL(
+                        Yp.AudioPlaybackManager.PlayAudioURL(
                           it.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_chatroom_notification.m4a?v=1"
                         ),
-                    Kp.NotificationManager.BNotificationsPermitted() &&
+                    Yp.NotificationManager.BNotificationsPermitted() &&
                       t < 4 &&
-                      Kp.SettingsStore.FriendsSettings
+                      Yp.SettingsStore.FriendsSettings
                         .bNotifications_ShowChatRoomNotification)
                   ) {
                     var a = function(e) {
-                        Kp.UIStore.ShowAndOrActivateChat(e, r, !0);
+                        Yp.UIStore.ShowAndOrActivateChat(e, r, !0);
                       },
-                      s = Kp.FriendStore.GetPlayer(e.unAccountID);
+                      s = Yp.FriendStore.GetPlayer(e.unAccountID);
                     s.LoadIfNecessary();
                     var c;
                     (c = this.m_bIsDefaultForGroup
@@ -33827,7 +33852,7 @@ and limitations under the License.
                           return s.is_ready;
                         },
                         function() {
-                          Kp.NotificationManager.DisplayNotification(
+                          Yp.NotificationManager.DisplayNotification(
                             {
                               icon: s.persona.avatar_url_medium,
                               title: c,
@@ -33842,9 +33867,9 @@ and limitations under the License.
                         1e3
                       );
                   }
-                  0 == Kp.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Yp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Kp.UIStore.FlashChatWindow(this);
+                    Yp.UIStore.FlashChatWindow(this);
                 }
               }
             }),
@@ -33964,7 +33989,7 @@ and limitations under the License.
                   r.set_unread_indicator_muted(i)),
                 ur
                   .SetUserChatGroupPreferences(
-                    Kp.CMInterface.GetServiceTransport(),
+                    Yp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -34756,7 +34781,7 @@ and limitations under the License.
                   r.Body().set_role_id(t),
                   ur
                     .AddRoleToUser(
-                      Kp.ChatStore.CMInterface.GetServiceTransport(),
+                      Yp.ChatStore.CMInterface.GetServiceTransport(),
                       r
                     )
                     .then(function(e) {
@@ -34771,7 +34796,7 @@ and limitations under the License.
                 r.Body().set_role_id(t),
                 ur
                   .DeleteRoleFromUser(
-                    Kp.ChatStore.CMInterface.GetServiceTransport(),
+                    Yp.ChatStore.CMInterface.GetServiceTransport(),
                     r
                   )
                   .then(function(e) {
@@ -34847,11 +34872,11 @@ and limitations under the License.
                 this.m_mapRooms.forEach(function(t) {
                   t.time_last_message && (e = Math.max(e, t.time_last_message));
                 }),
-                  (this.m_rtLastAck = e || Kp.GetServerRTime32());
+                  (this.m_rtLastAck = e || Yp.GetServerRTime32());
                 var t = pt.Init(An);
                 t.Body().set_chat_group_id(this.m_ulGroupID),
                   t.Body().set_timestamp(this.m_rtLastAck),
-                  ur.AckChatMessage(Kp.CMInterface.GetServiceTransport(), t);
+                  ur.AckChatMessage(Yp.CMInterface.GetServiceTransport(), t);
               }
             }),
             (e.prototype.InviteFriend = function(e, t) {
@@ -34952,7 +34977,7 @@ and limitations under the License.
             }),
             (e.prototype.BCanXOverride = function(e, t) {
               return (
-                0 == e && (e = Kp.CMInterface.steamid.GetAccountID()),
+                0 == e && (e = Yp.CMInterface.steamid.GetAccountID()),
                 0 != (this.GetMemberPermissions(e) & t)
               );
             }),
@@ -34972,7 +34997,7 @@ and limitations under the License.
               return this.BCanIPerformAction(6);
             }),
             (e.prototype.BCanEditRoles = function() {
-              return Kp.FriendStore.self.accountid == this.GetOwnerAccountID();
+              return Yp.FriendStore.self.accountid == this.GetOwnerAccountID();
             }),
             Object.defineProperty(e.prototype, "members_to_highlight_name", {
               get: function() {
@@ -34995,7 +35020,7 @@ and limitations under the License.
                   ? this.m_groupMembers.unfiltered_count
                   : this.m_cMemberSummaryCount,
                 o = r > e ? e - 1 : e,
-                a = Kp.FriendStore,
+                a = Yp.FriendStore,
                 s = a.self,
                 c = [],
                 l = a.GetPlayer(this.GetOwnerAccountID());
@@ -35237,7 +35262,7 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 ur
                   .GetInviteLinksForGroup(
-                    Kp.ChatStore.CMInterface.GetServiceTransport(),
+                    Yp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
@@ -35258,7 +35283,7 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 ur
                   .GetInviteList(
-                    Kp.ChatStore.CMInterface.GetServiceTransport(),
+                    Yp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
@@ -35278,7 +35303,7 @@ and limitations under the License.
               return (
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 ur
-                  .GetBanList(Kp.ChatStore.CMInterface.GetServiceTransport(), e)
+                  .GetBanList(Yp.ChatStore.CMInterface.GetServiceTransport(), e)
                   .then(function(e) {
                     var t = new _s();
                     return (
@@ -35308,7 +35333,7 @@ and limitations under the License.
                 i.Body().set_name(e),
                 this.m_roles.push({ role_id: "-1", name: e }),
                 ur
-                  .CreateRole(Kp.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .CreateRole(Yp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (15 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(e) {
@@ -35327,7 +35352,7 @@ and limitations under the License.
                 i.Body().set_chat_group_id(this.GetGroupID()),
                 i.Body().set_role_id(e),
                 ur
-                  .DeleteRole(Kp.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .DeleteRole(Yp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (1 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(t) {
@@ -35348,7 +35373,7 @@ and limitations under the License.
                 n.Body().set_role_id(e),
                 n.Body().set_name(t),
                 ur
-                  .RenameRole(Kp.ChatStore.CMInterface.GetServiceTransport(), n)
+                  .RenameRole(Yp.ChatStore.CMInterface.GetServiceTransport(), n)
                   .then(function(n) {
                     if (1 == n.GetEResult()) {
                       var r = i.m_roles.findIndex(function(t) {
@@ -35373,7 +35398,7 @@ and limitations under the License.
                   o.Body().set_actions(n.roleActions),
                   ur
                     .ReplaceRoleActions(
-                      Kp.ChatStore.CMInterface.GetServiceTransport(),
+                      Yp.ChatStore.CMInterface.GetServiceTransport(),
                       o
                     )
                     .then(function(e) {
@@ -35405,7 +35430,7 @@ and limitations under the License.
               }
               return ur
                 .DeleteInviteLink(
-                  Kp.ChatStore.CMInterface.GetServiceTransport(),
+                  Yp.ChatStore.CMInterface.GetServiceTransport(),
                   i
                 )
                 .then(function(e) {
@@ -35437,7 +35462,7 @@ and limitations under the License.
                     .set_unread_indicator_muted(i)),
                 ur
                   .SetUserChatGroupPreferences(
-                    Kp.CMInterface.GetServiceTransport(),
+                    Yp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -35617,13 +35642,13 @@ and limitations under the License.
                 this.ClosePopoverChat(),
                 this.GetSelectedChatView().OnViewClosed(),
                 this.GetGroup().UnloadGroupState(),
-                Kp.ChatStore.RemoveChatRoomGroupFromActiveSet(
+                Yp.ChatStore.RemoveChatRoomGroupFromActiveSet(
                   this.GetGroup().GetGroupID()
                 );
             }),
             (t.prototype.IsVoiceActive = function() {
               return (
-                Kp.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
+                Yp.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
                 this.m_group.GetGroupID()
               );
             }),
@@ -35922,10 +35947,10 @@ and limitations under the License.
                 Ya.IncomingMessageHandler,
                 function(e) {
                   var i = new ut.a(e.Body().steamid_friend()),
-                    n = Kp.FriendStore.GetPlayerIfCached(i.GetAccountID());
+                    n = Yp.FriendStore.GetPlayerIfCached(i.GetAccountID());
                   if (!n) {
                     if (e.Body().low_priority()) return 41;
-                    n = Kp.FriendStore.GetPlayer(i.GetAccountID());
+                    n = Yp.FriendStore.GetPlayer(i.GetAccountID());
                   }
                   if (1 == e.Body().chat_entry_type()) {
                     var r = e.Body().local_echo(),
@@ -35937,9 +35962,9 @@ and limitations under the License.
                       c = s.GetVisibilityState();
                     !o &&
                       !r &&
-                      !Kp.FriendStore.BIsInvisibleMode() &&
-                      Kp.UIStore.ShowAndOrActivateChat(
-                        Kp.GetDefaultBrowserContext(),
+                      !Yp.FriendStore.BIsInvisibleMode() &&
+                      Yp.UIStore.ShowAndOrActivateChat(
+                        Yp.GetDefaultBrowserContext(),
                         s,
                         !1
                       ),
@@ -35997,7 +36022,7 @@ and limitations under the License.
             (e.prototype.OnLogon = function() {
               var e = this;
               this.LoadFriendMessageSessions(),
-                Kp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                Yp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "FriendRecentChats"
                 ).then(function(t) {
                   e.m_mapRecentIgnoreTimeBeforeByFriend.clear();
@@ -36095,17 +36120,17 @@ and limitations under the License.
             (e.prototype.ClearRecentChatsForFriend = function(e) {
               this.m_mapRecentIgnoreTimeBeforeByFriend.set(
                 e,
-                Kp.GetServerRTime32()
+                Yp.GetServerRTime32()
               ),
                 this.WriteRecentChatsPrefs();
             }),
             (e.prototype.WriteRecentChatsPrefs = function() {
               var e = this,
-                t = Kp.GetServerRTime32() - this.RecentChatCutoffDuration;
+                t = Yp.GetServerRTime32() - this.RecentChatCutoffDuration;
               this.m_mapRecentIgnoreTimeBeforeByFriend.forEach(function(i, n) {
                 i < t && e.m_mapRecentIgnoreTimeBeforeByFriend.delete(n);
               }),
-                Kp.SettingsStore.StoreObjectInLocalStorage(
+                Yp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendRecentChats",
                   {
                     ignoretimes: this.m_mapRecentIgnoreTimeBeforeByFriend.toJS()
@@ -36116,13 +36141,13 @@ and limitations under the License.
               get: function() {
                 var e = this,
                   t = [],
-                  i = Kp.GetServerRTime32() - this.RecentChatCutoffDuration;
+                  i = Yp.GetServerRTime32() - this.RecentChatCutoffDuration;
                 return (
                   this.m_mapLastChatTimeByFriend.forEach(function(n, r) {
                     if (n >= i) {
                       var o = e.m_mapRecentIgnoreTimeBeforeByFriend.get(r);
                       if (!o || o < n) {
-                        var a = Kp.FriendStore.GetFriend(r);
+                        var a = Yp.FriendStore.GetFriend(r);
                         a && t.push(a);
                       }
                     }
@@ -36202,7 +36227,7 @@ and limitations under the License.
             }),
             (t.prototype.GetShowNonFriendWarning = function() {
               var e = this.m_bNeedsNonFriendWarning,
-                t = !Kp.FriendStore.BApprovedNonFriendMessages(
+                t = !Yp.FriendStore.BApprovedNonFriendMessages(
                   this.accountid_partner
                 );
               return e && t;
@@ -36372,7 +36397,7 @@ and limitations under the License.
                 this.ChatStore.VoiceChat.IsVoiceActiveForFriend(
                   this.accountid_partner
                 )
-                  ? Kp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  ? Yp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
                       this.accountid_partner
                     )
                     ? this.ChatStore.VoiceChat.OnUserLeaveOneOnOneVoiceChat()
@@ -36399,7 +36424,7 @@ and limitations under the License.
               var t = this;
               if (!this.m_CMInterface.logged_on) return !1;
               this.chat_partner.is_friend ||
-                Kp.FriendStore.SetApprovedNonFriendMessages(
+                Yp.FriendStore.SetApprovedNonFriendMessages(
                   this.chat_partner.accountid
                 );
               var i = Nr.EscapeBBCode(e),
@@ -36485,12 +36510,12 @@ and limitations under the License.
                   (this.ClearFriendIsTypingState(),
                   t < 2 &&
                     (this.is_blocked_friend ||
-                      Kp.FriendStore.BIsInvisibleMode()))
+                      Yp.FriendStore.BIsInvisibleMode()))
                 )
                   return;
                 if (
-                  Kp.NotificationManager.BNotificationsPermitted() &&
-                  Kp.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
+                  Yp.NotificationManager.BNotificationsPermitted() &&
+                  Yp.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
                   t < 4
                 ) {
                   var r = Object(mr.b)(
@@ -36507,7 +36532,7 @@ and limitations under the License.
                       },
                       s = o.ParseBBCode(n, a);
                     s &&
-                      Kp.NotificationManager.DisplayNotificationFromFriend(
+                      Yp.NotificationManager.DisplayNotificationFromFriend(
                         this.chat_partner,
                         {
                           title: s.title,
@@ -36517,7 +36542,7 @@ and limitations under the License.
                         }
                       );
                   } else
-                    Kp.NotificationManager.DisplayNotificationFromFriend(
+                    Yp.NotificationManager.DisplayNotificationFromFriend(
                       this.chat_partner,
                       {
                         title: r,
@@ -36527,15 +36552,15 @@ and limitations under the License.
                       }
                     );
                 }
-                Kp.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
+                Yp.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
                   t < 4 &&
-                  Kp.AudioPlaybackManager.PlayAudioURL(
+                  Yp.AudioPlaybackManager.PlayAudioURL(
                     it.a.COMMUNITY_CDN_URL +
                       "public/sounds/webui/steam_new_chat_message.m4a?v=2"
                   ),
-                  0 == Kp.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Yp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Kp.UIStore.FlashChatWindow(this);
+                    Yp.UIStore.FlashChatWindow(this);
               }
             }),
             (t.prototype.ClearFriendIsTypingState = function() {
@@ -36566,7 +36591,7 @@ and limitations under the License.
             }),
             Object.defineProperty(t.prototype, "chat_partner", {
               get: function() {
-                return Kp.FriendStore.GetPlayer(this.m_unAccountIDFriend);
+                return Yp.FriendStore.GetPlayer(this.m_unAccountIDFriend);
               },
               enumerable: !0,
               configurable: !0
@@ -36602,12 +36627,12 @@ and limitations under the License.
                   '"][/broadcastviewrequest]',
                 i = new $r(
                   this.chat_partner.accountid,
-                  Kp.GetServerRTime32(),
+                  Yp.GetServerRTime32(),
                   0,
                   t
                 );
               this.m_rgChatMessages.push(i),
-                Kp.NotificationManager.DisplayNotificationFromFriend(
+                Yp.NotificationManager.DisplayNotificationFromFriend(
                   this.chat_partner,
                   {
                     title: "",
@@ -36746,7 +36771,7 @@ and limitations under the License.
                         i.group_summary(),
                         i.user_chat_group_state()
                       );
-                      Kp.UIStore.ShowAndOrActivateChatRoomGroup(Hp, o, !1);
+                      Yp.UIStore.ShowAndOrActivateChatRoomGroup(qp, o, !1);
                       break;
                     case 2:
                     case 3:
@@ -36805,15 +36830,15 @@ and limitations under the License.
                 this.m_EmoticonStore.Init(e),
                 (this.m_VoiceChat = t),
                 (this.m_ChatRoomBBCodeParser = new Nr(
-                  Kp.GetChatRoomBBCodeDictionary()
+                  Yp.GetChatRoomBBCodeDictionary()
                 )),
                 (this.m_FriendChatBBCodeParser = new Nr(
-                  Kp.GetFriendChatBBCodeDictionary()
+                  Yp.GetFriendChatBBCodeDictionary()
                 )),
                 (this.m_FriendNotificationBBCodeParser = new Gr(
-                  Kp.GetFriendNotificationBBCodeDictionary()
+                  Yp.GetFriendNotificationBBCodeDictionary()
                 )),
-                this.m_ChatRoomGroupDisplayPrefs.Init(Kp.SettingsStore),
+                this.m_ChatRoomGroupDisplayPrefs.Init(Yp.SettingsStore),
                 this.m_EmbedStore.Init();
               var n = !1;
               return (
@@ -36874,7 +36899,7 @@ and limitations under the License.
                           c.UpdateUserState(a.user_chat_group_state()),
                           e.OnGroupAdded(c),
                           c.BHasEverBeenAcked() ||
-                            Kp.UIStore.ShowUnackedGroup(c);
+                            Yp.UIStore.ShowUnackedGroup(c);
                       } else t = !0;
                     }
                     e.BuildInitialRecentGroupList(),
@@ -36897,7 +36922,7 @@ and limitations under the License.
             }),
             (e.prototype.BuildInitialRecentGroupList = function() {
               var e = [],
-                t = Kp.GetServerRTime32() - 1296e3;
+                t = Yp.GetServerRTime32() - 1296e3;
               this.m_mapChatGroups.forEach(function(i) {
                 for (var n = 0, r = i.chatRoomList; n < r.length; n++) {
                   var o = r[n],
@@ -36915,7 +36940,7 @@ and limitations under the License.
             (e.prototype.JoinAndShowChatRoomGroup = function(e, t, i) {
               var n = this.GetChatRoomGroup(t);
               n && n.BIsCurrentUserAMember()
-                ? Kp.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
+                ? Yp.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
                 : this.m_InviteStore.JoinChatGroup(t, null, e);
             }),
             (e.prototype.AddCreatedChatRoomGroup = function(e, t, i, n) {
@@ -36925,7 +36950,7 @@ and limitations under the License.
                   r.UpdateGroupState(i),
                   r.UpdateUserState(n),
                   this.OnGroupAdded(r),
-                  Kp.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
+                  Yp.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
               }
             }),
             (e.prototype.AddKnownChatRoomGroup = function(e, t) {
@@ -36958,7 +36983,7 @@ and limitations under the License.
               var t = this.m_mapChatGroups.get(e);
               if (t) {
                 var i = this.m_mapChatGroups.get(e);
-                i && Kp.UIStore.CloseTabByID(i.unique_id),
+                i && Yp.UIStore.CloseTabByID(i.unique_id),
                   this.RemoveChatRoomGroupFromActiveSet(e),
                   t.UnloadAndResetGroupState();
               }
@@ -37345,7 +37370,7 @@ and limitations under the License.
                 e == this && this.m_tabset.is_popup_visible
                   ? this.m_tabset.is_popup_focused
                     ? this.m_bScrolledToBottom &&
-                      !Kp.IdleTracker.BIsUserIdle(60)
+                      !Yp.IdleTracker.BIsUserIdle(60)
                       ? 4
                       : 3
                     : 2
@@ -37539,12 +37564,12 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.DeliverDeferredDragEnter = function() {
-              var e = Rm.DragDropManager.GetDragData();
+              var e = Im.DragDropManager.GetDragData();
               return this.props.fnDragEnter(e, this.m_deferredEnter.bFiles);
             }),
             (t.prototype.OnDragEnter = function(e) {
               if (!this.m_bAcceptDrag) {
-                var t = Rm.DragDropManager.GetDragData(),
+                var t = Im.DragDropManager.GetDragData(),
                   i =
                     this.props.bAcceptsFiles &&
                     -1 != e.dataTransfer.types.indexOf("Files");
@@ -37584,7 +37609,7 @@ and limitations under the License.
                 (this.m_bAcceptDrag = !1),
                   e.preventDefault(),
                   e.stopPropagation();
-                var t = Rm.DragDropManager.GetDragData();
+                var t = Im.DragDropManager.GetDragData();
                 t && -1 != this.props.rgAcceptedTypes.indexOf(t.type)
                   ? this.props.fnDrop && this.props.fnDrop(t, e)
                   : this.props.bAcceptsFiles &&
@@ -38345,7 +38370,7 @@ and limitations under the License.
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      Cr.createElement(Es.N, null)
+                      Cr.createElement(Es.O, null)
                     )
                 ),
                 u
@@ -39101,7 +39126,7 @@ and limitations under the License.
                       Cr.createElement(
                         "div",
                         { className: l.join(" "), key: o.title, onClick: c },
-                        u && Cr.createElement(Es.L, null),
+                        u && Cr.createElement(Es.M, null),
                         o.title
                       )
                     );
@@ -39193,7 +39218,7 @@ and limitations under the License.
             }),
             (t.prototype.HandleSubmit = function(e) {
               var t = this;
-              Kp.FriendStore.SetFriendNickname(
+              Yp.FriendStore.SetFriendNickname(
                 this.props.friend,
                 this.state.strCurrentNameEntry
               ).then(function(e) {
@@ -39395,7 +39420,7 @@ and limitations under the License.
                   Ht.e(e.rgSelectedFriends, this.props.rgSelectedFriends)) ||
                   this.setState({
                     rgFriendsChosen: e.rgSelectedFriends.map(function(e) {
-                      return Kp.FriendStore.GetFriend(e);
+                      return Yp.FriendStore.GetFriend(e);
                     })
                   }));
             }),
@@ -39405,7 +39430,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               if (this.props.rgSelectedFriends) {
                 var e = this.props.rgSelectedFriends.map(function(e) {
-                  return Kp.FriendStore.GetFriend(e);
+                  return Yp.FriendStore.GetFriend(e);
                 });
                 (e = e.filter(function(e) {
                   return null != e;
@@ -39498,7 +39523,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.BuildFriendsList = function(e) {
-              (this.m_rgFriendsList = Kp.FriendStore.all_friends),
+              (this.m_rgFriendsList = Yp.FriendStore.all_friends),
                 e.setExcludedFriends &&
                   e.setExcludedFriends.size &&
                   (this.m_rgFriendsList = this.m_rgFriendsList.filter(function(
@@ -39506,7 +39531,7 @@ and limitations under the License.
                   ) {
                     return !e.setExcludedFriends.has(t.accountid);
                   }));
-              var t = Kp.ChatStore.FriendChatStore;
+              var t = Yp.ChatStore.FriendChatStore;
               switch (this.props.eSort) {
                 case 0:
                   this.m_rgFriendsList.sort(function(e, i) {
@@ -39646,7 +39671,7 @@ and limitations under the License.
                         ref: r ? t.OnFocusFriendRef : null,
                         "data-index": i
                       },
-                      Cr.createElement(Vu, {
+                      Cr.createElement(Hu, {
                         noActions: !0,
                         friend: e,
                         context: null
@@ -39673,11 +39698,11 @@ and limitations under the License.
                 }
                 var s = { bSingleClickActivate: !0, disableContextMenu: !0 },
                   c = 0,
-                  l = Kp.FriendStore.FavoritesStore.favorites.map(function(e) {
+                  l = Yp.FriendStore.FavoritesStore.favorites.map(function(e) {
                     return e.friend && !n.has(e.friend.accountid)
                       ? (c++,
                         Cr.createElement(
-                          Vu,
+                          Hu,
                           nt.a(
                             {
                               friend: e.friend,
@@ -39692,9 +39717,9 @@ and limitations under the License.
                         ))
                       : null;
                   }),
-                  u = Cr.createElement(Lu, {
-                    group: Kp.FriendStore.FriendGroupStore.ingame_group,
-                    key: Kp.FriendStore.FriendGroupStore.ingame_group.id,
+                  u = Cr.createElement(xu, {
+                    group: Yp.FriendStore.FriendGroupStore.ingame_group,
+                    key: Yp.FriendStore.FriendGroupStore.ingame_group.id,
                     collapsed: !1,
                     searchString: this.props.strInputValue,
                     fnOnSearchSelection: function() {},
@@ -39702,9 +39727,9 @@ and limitations under the License.
                     setExcludedFriends: n,
                     friendProps: s
                   }),
-                  d = Kp.FriendStore.FriendGroupStore.default_groups.map(
+                  d = Yp.FriendStore.FriendGroupStore.default_groups.map(
                     function(e) {
-                      return Cr.createElement(Lu, {
+                      return Cr.createElement(xu, {
                         group: e,
                         key: e.id,
                         collapsed: !1,
@@ -39792,7 +39817,7 @@ and limitations under the License.
                 r.forEach(function(e) {
                   a.push(ut.a.InitFromAccountID(e).ConvertTo64BitString());
                 }),
-                  Kp.FriendStore.FriendGroupStore.ManageGroup(
+                  Yp.FriendStore.FriendGroupStore.ManageGroup(
                     this.props.group,
                     n,
                     o,
@@ -39816,7 +39841,7 @@ and limitations under the License.
                 var u = i.map(function(e) {
                   return e.persona.m_steamid.ConvertTo64BitString();
                 });
-                Kp.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
+                Yp.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
                   e
                 ) {
                   e
@@ -39904,13 +39929,13 @@ and limitations under the License.
             (t.prototype.HandleSubmit = function(e) {
               var t = this,
                 i = [];
-              Kp.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
+              Yp.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
                 if (t.m_mapCategoryChecks.has(e.unique_id)) {
                   var n = void 0,
                     r = void 0;
                   t.m_mapCategoryChecks.get(e.unique_id) ? (r = e) : (n = e),
                     i.push(
-                      Kp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                      Yp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                         t.props.friend,
                         n,
                         r
@@ -39966,7 +39991,7 @@ and limitations under the License.
                       Cr.createElement(
                         Qs,
                         null,
-                        Cr.createElement(Vu, {
+                        Cr.createElement(Hu, {
                           friend: this.props.friend,
                           className: "AssignCategoriesDialog_Friend",
                           noActions: !0,
@@ -40009,7 +40034,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.render = function() {
               var e = this,
-                t = Kp.FriendStore.FriendGroupStore,
+                t = Yp.FriendStore.FriendGroupStore,
                 i = t.user_groups,
                 n = i.map(function(t) {
                   return Cr.createElement(_c, {
@@ -42535,21 +42560,21 @@ and limitations under the License.
                           " " +
                           e.Hdr().steamid()
                       ),
-                        Kp.AudioPlaybackManager.PlayAudioURL(
+                        Yp.AudioPlaybackManager.PlayAudioURL(
                           it.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                         ),
                         t.OnVoiceChatAccepted(!0);
                     else {
                       t.LogMsg("(VoiceChat) Rejected by " + i.GetAccountID());
-                      var n = Kp.ChatStore.GetFriendChat(i.GetAccountID(), !1),
-                        r = Kp.FriendStore.GetFriend(i.GetAccountID());
+                      var n = Yp.ChatStore.GetFriendChat(i.GetAccountID(), !1),
+                        r = Yp.FriendStore.GetFriend(i.GetAccountID());
                       void 0 != n &&
                         void 0 != r &&
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         n.AddVoiceChannelInviteMsg(
                           i.GetAccountID(),
-                          Kp.GetServerRTime32(),
+                          Yp.GetServerRTime32(),
                           Object(mr.b)(
                             "#FriendMsg_VoiceChannelEndedExplicit",
                             r.display_name
@@ -42558,7 +42583,7 @@ and limitations under the License.
                         t.DeleteOneOnOneCallWaitingJoinOrAccept(
                           i.GetAccountID()
                         ),
-                        Kp.AudioPlaybackManager.PlayAudioURL(
+                        Yp.AudioPlaybackManager.PlayAudioURL(
                           it.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         ),
@@ -42573,11 +42598,11 @@ and limitations under the License.
                 function(e) {
                   var i = new ut.a(e.Body().steamid_partner()),
                     n = e.Body().voice_chatid(),
-                    r = Kp.FriendStore.GetFriend(i.GetAccountID());
+                    r = Yp.FriendStore.GetFriend(i.GetAccountID());
                   if (
                     null == r ||
                     r.is_blocked ||
-                    Kp.FriendStore.BIsInvisibleMode()
+                    Yp.FriendStore.BIsInvisibleMode()
                   )
                     return (
                       t.LogMsg(
@@ -42614,7 +42639,7 @@ and limitations under the License.
                       t.OnAcceptOneOnOneVoiceChat(i, n),
                       1
                     );
-                  Kp.NotificationManager.DisplayNotificationFromFriend(r, {
+                  Yp.NotificationManager.DisplayNotificationFromFriend(r, {
                     title: r.display_name,
                     body: Object(mr.b)(
                       "#Friend_RequestingOneOnOneChat",
@@ -42623,20 +42648,20 @@ and limitations under the License.
                     tag: "state_" + r.accountid,
                     steamid: r.persona.m_steamid.ConvertTo64BitString()
                   });
-                  var s = Kp.ChatStore.GetFriendChat(i.GetAccountID(), !0);
+                  var s = Yp.ChatStore.GetFriendChat(i.GetAccountID(), !0);
                   return (
                     void 0 != s &&
                       (s.AddVoiceChannelInviteMsg(
                         i.GetAccountID(),
-                        Kp.GetServerRTime32(),
+                        Yp.GetServerRTime32(),
                         Object(mr.b)(
                           "#FriendMsg_VoiceChannelInvite",
                           r.display_name,
                           s.self.display_name
                         )
                       ),
-                      Kp.UIStore.ShowAndOrActivateChat(
-                        Kp.GetDefaultBrowserContext(),
+                      Yp.UIStore.ShowAndOrActivateChat(
+                        Yp.GetDefaultBrowserContext(),
                         s,
                         !1
                       )),
@@ -42665,19 +42690,19 @@ and limitations under the License.
                           o +
                           " has ended and is no longer joinable."
                       ),
-                        Kp.AudioPlaybackManager.PlayAudioURL(
+                        Yp.AudioPlaybackManager.PlayAudioURL(
                           it.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         );
                       var s = Number(o);
                       t.DeleteOneOnOneCallWaitingJoinOrAccept(s);
-                      var c = Kp.ChatStore.GetFriendChat(s, !1),
-                        l = Kp.FriendStore.GetFriend(s);
+                      var c = Yp.ChatStore.GetFriendChat(s, !1),
+                        l = Yp.FriendStore.GetFriend(s);
                       void 0 != c &&
                         (l
                           ? c.AddVoiceChannelInviteMsg(
                               l.accountid,
-                              Kp.GetServerRTime32(),
+                              Yp.GetServerRTime32(),
                               Object(mr.b)(
                                 "#FriendMsg_VoiceChannelEndedExplicit",
                                 l.display_name
@@ -42685,7 +42710,7 @@ and limitations under the License.
                             )
                           : c.AddVoiceChannelInviteMsg(
                               t.m_CMInterface.steamid.GetAccountID(),
-                              Kp.GetServerRTime32(),
+                              Yp.GetServerRTime32(),
                               Object(mr.b)("#FriendMsg_VoiceChannelEnded")
                             ),
                         t.m_VoiceCallState.m_targetAccountID == Number(o) &&
@@ -42694,7 +42719,7 @@ and limitations under the License.
                   }
                   if (i == t.m_VoiceCallState.m_voiceChatID) {
                     if (0 != t.m_VoiceCallState.m_targetAccountID) {
-                      var c = Kp.ChatStore.GetFriendChat(
+                      var c = Yp.ChatStore.GetFriendChat(
                         t.m_VoiceCallState.m_targetAccountID,
                         !1
                       );
@@ -42703,14 +42728,14 @@ and limitations under the License.
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         c.AddVoiceChannelInviteMsg(
                           t.m_CMInterface.steamid.GetAccountID(),
-                          Kp.GetServerRTime32(),
+                          Yp.GetServerRTime32(),
                           Object(mr.b)("#FriendMsg_VoiceChannelEnded")
                         ));
                     }
                     0 != t.m_VoiceCallState.m_targetAccountID &&
                       t.m_VoiceCallState.m_eState >
                         tl.k_EVoiceCallState_RequestedPermission &&
-                      Kp.AudioPlaybackManager.PlayAudioURL(
+                      Yp.AudioPlaybackManager.PlayAudioURL(
                         it.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       ),
@@ -42838,8 +42863,8 @@ and limitations under the License.
               var i = ut.a.InitFromAccountID(e);
               this.OnRejectOneOnOneVoiceChat(i, t.voice_chatid),
                 this.m_mapOneOnOneCallsWaitingJoinOrAccept.delete(e);
-              var n = Kp.ChatStore.GetFriendChat(e, !1),
-                r = Kp.FriendStore.self;
+              var n = Yp.ChatStore.GetFriendChat(e, !1),
+                r = Yp.FriendStore.self;
               return (
                 void 0 != n &&
                   void 0 != r &&
@@ -42847,7 +42872,7 @@ and limitations under the License.
                     this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) ||
                     n.AddVoiceChannelInviteMsg(
                       r.accountid,
-                      Kp.GetServerRTime32(),
+                      Yp.GetServerRTime32(),
                       Object(mr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         r.display_name
@@ -42879,17 +42904,17 @@ and limitations under the License.
                 0 != this.m_VoiceCallState.m_targetAccountID
               ) {
                 if (!this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) {
-                  var t = Kp.ChatStore.GetFriendChat(
+                  var t = Yp.ChatStore.GetFriendChat(
                       this.m_VoiceCallState.m_targetAccountID,
                       !1
                     ),
-                    i = Kp.FriendStore.self;
+                    i = Yp.FriendStore.self;
                   void 0 != t &&
                     void 0 != i &&
                     ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                     t.AddVoiceChannelInviteMsg(
-                      Kp.CMInterface.steamid.GetAccountID(),
-                      Kp.GetServerRTime32(),
+                      Yp.CMInterface.steamid.GetAccountID(),
+                      Yp.GetServerRTime32(),
                       Object(mr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         i.display_name
@@ -42930,7 +42955,7 @@ and limitations under the License.
                 this.RestartVoiceChatIfConnected());
             }),
             (e.prototype.GetAudioWorkletSupport = function() {
-              return Kp.AudioPlaybackManager.supports_audio_worklets;
+              return Yp.AudioPlaybackManager.supports_audio_worklets;
             }),
             (e.prototype.GetUserDeniedMicAccess = function() {
               return this.m_bUserHasDeniedMicPermissions;
@@ -43837,7 +43862,7 @@ and limitations under the License.
             }),
             (e.prototype.SetupNoiseGateOnMic = function(e) {
               var t = this.GetNoiseGateOptions();
-              if (Kp.AudioPlaybackManager.supports_audio_worklets) {
+              if (Yp.AudioPlaybackManager.supports_audio_worklets) {
                 this.LogMsg(
                   "(VoiceChat) Audio Worklets supported - high performance mic noisegate in use!"
                 );
@@ -43998,7 +44023,7 @@ and limitations under the License.
                   "(VoiceChat) Hit InitiateChatRoomVoice in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Kp.AudioPlaybackManager.SetVoiceActive(
+              Yp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -44064,8 +44089,8 @@ and limitations under the License.
                         (e.m_VoiceCallState.m_voiceChatID = t
                           .Body()
                           .voice_chatid());
-                      var i = Kp.FriendStore.self,
-                        n = Kp.ChatStore.GetFriendChat(
+                      var i = Yp.FriendStore.self,
+                        n = Yp.ChatStore.GetFriendChat(
                           e.m_VoiceCallState.m_targetAccountID,
                           !1
                         );
@@ -44073,7 +44098,7 @@ and limitations under the License.
                         void 0 != n &&
                         n.AddVoiceChannelInviteMsg(
                           e.m_CMInterface.steamid.GetAccountID(),
-                          Kp.GetServerRTime32(),
+                          Yp.GetServerRTime32(),
                           Object(mr.b)(
                             "#FriendMsg_VoiceChannelInvite",
                             i.display_name,
@@ -44129,7 +44154,7 @@ and limitations under the License.
                   "(VoiceChat) Hit InitiateOneOnOneVoiceChat in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Kp.AudioPlaybackManager.SetVoiceActive(
+              Yp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -44274,7 +44299,7 @@ and limitations under the License.
                   (i.mic_muted_locally = e.user_muted_mic_locally()),
                   (i.output_muted_locally = e.user_muted_output_locally()),
                   (i.has_no_mic_for_session = e.user_has_no_mic_for_session());
-                var n = Kp.FriendStore.GetPlayerIfCached(t.GetAccountID()),
+                var n = Yp.FriendStore.GetPlayerIfCached(t.GetAccountID()),
                   r = "[U:1:" + t.GetAccountID() + "]",
                   o = "";
                 void 0 != n && (o = n.display_name + " ");
@@ -44325,7 +44350,7 @@ and limitations under the License.
                 i
                   .Body()
                   .set_has_audio_worklets_support(
-                    Kp.AudioPlaybackManager.supports_audio_worklets
+                    Yp.AudioPlaybackManager.supports_audio_worklets
                   ),
                 i.Body().set_user_agent(navigator.userAgent),
                 Qa.UpdateVoiceChatWebRTCData(
@@ -44407,7 +44432,7 @@ and limitations under the License.
             (e.prototype.PlayRingSound = function(e) {
               this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(
                 e
-              ).audio_buffer = Kp.AudioPlaybackManager.PlayAudioURLWithRepeats(
+              ).audio_buffer = Yp.AudioPlaybackManager.PlayAudioURLWithRepeats(
                 it.a.COMMUNITY_CDN_URL +
                   "public/sounds/webui/steam_phonecall.m4a?v=1",
                 1
@@ -44420,7 +44445,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.CheckVoiceSnoozeTiemout = function() {
-              if (Kp.IdleTracker.GetUserIdleTime() > 3600) {
+              if (Yp.IdleTracker.GetUserIdleTime() > 3600) {
                 var e = this.m_MicVolumeMeter.GetLastTimeNonZero();
                 performance.now() - e > 36e5 &&
                   (this.OnUserEndVoiceChat(),
@@ -44444,7 +44469,7 @@ and limitations under the License.
                     this.ProcessStatsReport,
                     1e4
                   )),
-                  void 0 != Rm && ci.b.BClientConnected().then(function() {}),
+                  void 0 != Im && ci.b.BClientConnected().then(function() {}),
                   -1 ==
                     this.m_PeerConnection.localDescription.sdp.indexOf(
                       "mozilla..."
@@ -44642,7 +44667,7 @@ and limitations under the License.
                         e.PadOutput("Decoding Errors", 20)
                     ),
                     e.m_mapAccountIDToStats.forEach(function(t, i) {
-                      var n = Kp.FriendStore.GetPlayerIfCached(i),
+                      var n = Yp.FriendStore.GetPlayerIfCached(i),
                         r = "[unknown]";
                       void 0 != n && (r = n.display_name),
                         e.LogMsg(
@@ -44785,7 +44810,7 @@ and limitations under the License.
             }),
             (e.prototype.InitiateVoiceChat = function(e, t) {
               var i = this;
-              void 0 != Rm && ci.b.BClientConnected().then(function() {});
+              void 0 != Im && ci.b.BClientConnected().then(function() {});
               var n = Cc()(navigator.userAgent);
               if ("Chrome" != n.browser.name)
                 return (
@@ -44890,7 +44915,7 @@ and limitations under the License.
                   void this.EndVoiceChatInternal(!1)
                 );
               void 0 == this.m_AudioContext &&
-                (this.m_AudioContext = Kp.AudioPlaybackManager.context);
+                (this.m_AudioContext = Yp.AudioPlaybackManager.context);
               var t = {
                 optional: [
                   {
@@ -45144,7 +45169,7 @@ and limitations under the License.
                     (this.m_MicInputGainNode.disconnect(),
                     (this.m_MicInputGainNode = void 0)),
                   void 0 != this.m_AudioContext &&
-                    (Kp.AudioPlaybackManager.SetVoiceNotActive(),
+                    (Yp.AudioPlaybackManager.SetVoiceNotActive(),
                     (this.m_AudioContext = void 0)),
                   this.m_PeerConnection &&
                     ((this.m_PeerConnection.oniceconnectionstatechange = void 0),
@@ -45328,7 +45353,7 @@ and limitations under the License.
         ul = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
-              n = Kp.FriendStore.self;
+              n = Yp.FriendStore.self;
             return (
               (i.state = {
                 strCurrentNameEntry: n.primary_display_name,
@@ -45367,7 +45392,7 @@ and limitations under the License.
               else {
                 var i = new FormData();
                 i.append("sessionid", it.a.SESSIONID), i.append("persona", e);
-                var n = Kp.FriendStore.self,
+                var n = Yp.FriendStore.self,
                   r =
                     it.a.COMMUNITY_BASE_URL +
                     "profiles/" +
@@ -45391,7 +45416,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.render = function() {
-              var e = Kp.FriendStore.self,
+              var e = Yp.FriendStore.self,
                 t = "friend changePersonaName";
               return (
                 e.persona.is_ingame
@@ -45620,7 +45645,7 @@ and limitations under the License.
             }),
             (t.prototype.InviteFriend = function() {
               var e = this;
-              Kp.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Yp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 4 == t
@@ -45650,7 +45675,7 @@ and limitations under the License.
             }),
             (t.prototype.AcceptIncomingInvite = function() {
               var e = this;
-              Kp.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Yp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 3 == t
@@ -45674,7 +45699,7 @@ and limitations under the License.
             }),
             (t.prototype.IgnoreIncomingInvite = function() {
               var e = this;
-              Kp.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
+              Yp.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
                 1 == t
                   ? ke(
                       e.props.ownerWindow,
@@ -45706,7 +45731,7 @@ and limitations under the License.
                 Object(mr.b)("#Friend_Menu_RemoveFromFriendsList")
               )
                 .then(function() {
-                  Kp.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
+                  Yp.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
                     (3 != t && 6 != t) ||
                       ke(
                         e.props.ownerWindow,
@@ -45729,7 +45754,7 @@ and limitations under the License.
                 Object(mr.b)("#Friend_Menu_BlockAllCommunication")
               )
                 .then(function() {
-                  Kp.FriendStore.BlockPlayer(e.props.friend);
+                  Yp.FriendStore.BlockPlayer(e.props.friend);
                 })
                 .catch(function() {});
             }),
@@ -45745,18 +45770,18 @@ and limitations under the License.
                 Object(mr.b)("#Friend_Menu_UnblockAllCommunication")
               )
                 .then(function() {
-                  Kp.FriendStore.BlockPlayer(e.props.friend, !0);
+                  Yp.FriendStore.BlockPlayer(e.props.friend, !0);
                 })
                 .catch(function() {});
             }),
             (t.prototype.InviteToGame = function(e) {
-              Kp.FriendStore.InviteToGame(this.props.friend, e);
+              Yp.FriendStore.InviteToGame(this.props.friend, e);
             }),
             (t.prototype.InviteToLobby = function(e, t) {
-              Kp.FriendStore.InviteToLobby(this.props.friend, e, t);
+              Yp.FriendStore.InviteToLobby(this.props.friend, e, t);
             }),
             (t.prototype.InviteToWatch = function() {
-              Kp.FriendStore.InviteToWatch(this.props.friend);
+              Yp.FriendStore.InviteToWatch(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e,
@@ -45767,8 +45792,8 @@ and limitations under the License.
                 o = [],
                 a = [],
                 s = n.friend,
-                c = Kp.FriendStore.FavoritesStore,
-                l = (Kp.FriendStore.FriendGroupStore, Kp.FriendStore.self == s),
+                c = Yp.FriendStore.FavoritesStore,
+                l = (Yp.FriendStore.FriendGroupStore, Yp.FriendStore.self == s),
                 u = "favorites" == r.chatContext,
                 d =
                   u ||
@@ -45777,7 +45802,7 @@ and limitations under the License.
                 p = !1,
                 h = s.is_friend,
                 m = 2 == s.efriendrelationship,
-                g = Kp.FriendStore.self.persona.m_unGamePlayedAppID,
+                g = Yp.FriendStore.self.persona.m_unGamePlayedAppID,
                 f = s.persona.m_unGamePlayedAppID;
               if (
                 (r.chat &&
@@ -45808,7 +45833,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Kp.UIStore.CloseTab(n.browserContext, r.tab);
+                          Yp.UIStore.CloseTab(n.browserContext, r.tab);
                         }
                       },
                       Object(mr.b)("#Chat_CloseTabAction")
@@ -45911,7 +45936,7 @@ and limitations under the License.
                       ),
                     a.push(Cr.createElement(dl, { key: "aliases", friend: s })),
                     0 != g &&
-                      Kp.BroadcastStore.is_broadcast_capable &&
+                      Yp.BroadcastStore.is_broadcast_capable &&
                       o.push(
                         Cr.createElement(
                           Sr.d,
@@ -45925,9 +45950,9 @@ and limitations under the License.
                         )
                       ),
                     0 != g &&
-                      "0" != Kp.FriendStore.self.persona.m_game_lobby_id)
+                      "0" != Yp.FriendStore.self.persona.m_game_lobby_id)
                   ) {
-                    var _ = Kp.AppInfoStore.GetAppInfo(g);
+                    var _ = Yp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       Cr.createElement(
                         Sr.d,
@@ -45936,7 +45961,7 @@ and limitations under the License.
                           onSelected: function() {
                             i.InviteToLobby(
                               g,
-                              Kp.FriendStore.self.persona.m_game_lobby_id
+                              Yp.FriendStore.self.persona.m_game_lobby_id
                             );
                           }
                         },
@@ -45961,7 +45986,7 @@ and limitations under the License.
                       )
                     );
                   } else if (0 != g && g != f) {
-                    var _ = Kp.AppInfoStore.GetAppInfo(g);
+                    var _ = Yp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       Cr.createElement(
                         Sr.d,
@@ -46087,9 +46112,9 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.OnFriendVolumeChanged = function(e) {
-              Kp.VoiceStore.SetPerUserGainLevel(
+              Yp.VoiceStore.SetPerUserGainLevel(
                 this.props.friend.accountid,
-                Kp.VoiceStore.ConvertSliderToGainValue(
+                Yp.VoiceStore.ConvertSliderToGainValue(
                   e,
                   ll.k_MaxPerUserGainMultiplier
                 )
@@ -46097,10 +46122,10 @@ and limitations under the License.
                 this.setState({ volumeNumber: e });
             }),
             (t.prototype.OnMutingClick = function(e) {
-              var t = Kp.VoiceStore.GetPerUserMuting(
+              var t = Yp.VoiceStore.GetPerUserMuting(
                 this.props.friend.accountid
               );
-              Kp.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
+              Yp.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
                 this.forceUpdate();
             }),
             (t.prototype.OnInlineVolumeClick = function(e) {
@@ -46109,7 +46134,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.state.volumeNumber,
                 t = "VolumeIcon",
-                i = Kp.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
+                i = Yp.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
               return (
                 e > 65
                   ? (t += " HighestVolume")
@@ -46134,14 +46159,14 @@ and limitations under the License.
                     Cr.createElement(
                       "button",
                       { className: t, onClick: this.OnMutingClick },
-                      Cr.createElement(Es.M, null)
+                      Cr.createElement(Es.N, null)
                     ),
                     Cr.createElement(ac, {
                       min: 0,
                       max: 100,
                       label: "",
-                      value: Kp.VoiceStore.ConvertGainValueToSliderValue(
-                        Kp.VoiceStore.GetPerUserGainLevel(
+                      value: Yp.VoiceStore.ConvertGainValueToSliderValue(
+                        Yp.VoiceStore.GetPerUserGainLevel(
                           this.props.friend.accountid
                         ),
                         ll.k_MaxPerUserGainMultiplier
@@ -46210,7 +46235,7 @@ and limitations under the License.
               var t = "NewTradeOffer" + this.props.friend.accountid;
               Qe(e)
                 .open(
-                  Kp.EconomyStore.GetDefaultTradeOfferURLForFriend(
+                  Yp.EconomyStore.GetDefaultTradeOfferURLForFriend(
                     this.props.friend.accountid
                   ),
                   t,
@@ -46219,7 +46244,7 @@ and limitations under the License.
                 .focus();
             }),
             (t.prototype.InviteToTrade = function() {
-              Kp.FriendStore.InviteToTrade(this.props.friend);
+              Yp.FriendStore.InviteToTrade(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e = this.props.friend;
@@ -46421,7 +46446,7 @@ and limitations under the License.
               var e = [],
                 t = void 0,
                 i = this.props.friend,
-                n = Kp.AppInfoStore.GetAppInfo(this.props.unAppID);
+                n = Yp.AppInfoStore.GetAppInfo(this.props.unAppID);
               if (!n.is_valid) return null;
               if (n.is_initialized)
                 if (this.props.bShowLargeHeader)
@@ -46570,16 +46595,16 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.SetUserOnline = function() {
-              Kp.FriendStore.SetUserPersonaState(1, !0);
+              Yp.FriendStore.SetUserPersonaState(1, !0);
             }),
             (t.prototype.SetUserInvisible = function() {
-              Kp.FriendStore.SetUserPersonaState(7, !0);
+              Yp.FriendStore.SetUserPersonaState(7, !0);
             }),
             (t.prototype.SetUserAway = function() {
-              Kp.FriendStore.SetUserPersonaState(3, !0);
+              Yp.FriendStore.SetUserPersonaState(3, !0);
             }),
             (t.prototype.ShowUserProfile = function(e) {
-              var t = ut.a.InitFromAccountID(Kp.FriendStore.self.accountid);
+              var t = ut.a.InitFromAccountID(Yp.FriendStore.self.accountid);
               v(
                 e,
                 it.a.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString()
@@ -46587,7 +46612,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.EditProfile = function(e) {
-              var t = ut.a.InitFromAccountID(Kp.FriendStore.self.accountid);
+              var t = ut.a.InitFromAccountID(Yp.FriendStore.self.accountid);
               v(
                 e,
                 it.a.COMMUNITY_BASE_URL +
@@ -46602,7 +46627,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = [],
-                t = 1 == Kp.FriendStore.self.persona.m_ePersonaState;
+                t = 1 == Yp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 Cr.createElement(
                   Sr.b,
@@ -46614,7 +46639,7 @@ and limitations under the License.
                   Object(mr.b)("#PersonaStateOnline")
                 )
               );
-              var i = 7 == Kp.FriendStore.self.persona.m_ePersonaState;
+              var i = 7 == Yp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 Cr.createElement(
                   Sr.b,
@@ -46626,7 +46651,7 @@ and limitations under the License.
                   Object(mr.b)("#PersonaStateInvisible")
                 )
               );
-              var n = 3 == Kp.FriendStore.self.persona.m_ePersonaState;
+              var n = 3 == Yp.FriendStore.self.persona.m_ePersonaState;
               return (
                 e.push(
                   Cr.createElement(
@@ -46758,7 +46783,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.OpenChatWindow = function(e) {
               this.props.group
-                ? Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+                ? Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                     this.props.browserContext,
                     this.props.group,
                     !0
@@ -46787,7 +46812,7 @@ and limitations under the License.
                 i = this.props.group,
                 n = this.props.clan,
                 r = this.props.context || {},
-                o = Kp.FriendStore.FavoritesStore;
+                o = Yp.FriendStore.FavoritesStore;
               r.tab
                 ? t.push(
                     Cr.createElement(
@@ -46795,7 +46820,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Kp.UIStore.CloseTab(e.props.browserContext, r.tab);
+                          Yp.UIStore.CloseTab(e.props.browserContext, r.tab);
                         }
                       },
                       Object(mr.b)("#Chat_CloseTabAction")
@@ -46834,7 +46859,7 @@ and limitations under the License.
                 );
               var a = n ? { clan: n } : { chat: i };
               return (
-                Kp.FriendStore.FavoritesStore.BIsFavorited(a)
+                Yp.FriendStore.FavoritesStore.BIsFavorited(a)
                   ? r.is_favorites &&
                     t.push(
                       Cr.createElement(
@@ -46889,7 +46914,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.ShowInviteDialog = function() {
               var e = this.props.group.GetChatRoom(this.props.roomID);
-              Kp.UIStore.OpenInviteDialogForChatGroup(
+              Yp.UIStore.OpenInviteDialogForChatGroup(
                 this.props.browserContext,
                 this.props.ownerWindow,
                 this.props.group,
@@ -47186,19 +47211,19 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = this.props.group;
               if (t.BIsClanChatRoom()) {
-                var i = Kp.FriendStore.ClanStore.GetClan(t.GetClanID());
-                Rm.DragDropManager.StartDrag({ type: "clan", clan: i });
+                var i = Yp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                Im.DragDropManager.StartDrag({ type: "clan", clan: i });
               } else
-                Rm.DragDropManager.StartDrag({
+                Im.DragDropManager.StartDrag({
                   type: "chatroomgroup",
                   group: t
                 });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Rm.DragDropManager.EndDrag();
+              Im.DragDropManager.EndDrag();
             }),
             (t.prototype.OnDragEnter = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t,
                   n = i.friend;
@@ -47218,20 +47243,20 @@ and limitations under the License.
                 this.state.friendDrag && this.setState({ friendDrag: void 0 }));
             }),
             (t.prototype.OnDrop = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 e.preventDefault(), e.stopPropagation();
                 var i = this.props.group.memberList,
                   n = i.member_list.slice(),
                   r = t;
                 if (void 0 != r.friend && -1 != n.indexOf(r.friend)) return;
-                Rm.DragDropManager.SetDropConsumed(),
+                Im.DragDropManager.SetDropConsumed(),
                   this.props.group.InviteFriend(r.friend.accountid),
                   this.setState({ friendDrag: void 0 });
               }
             }),
             (t.prototype.OnClick = function(e) {
-              Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Je(this),
                 this.props.group,
                 !0
@@ -47242,7 +47267,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.OnOpenGroup = function(e) {
-              Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Je(this),
                 this.props.group,
                 !0
@@ -47259,7 +47284,7 @@ and limitations under the License.
               this.setState({ bNonGroupHovered: !1 });
             }),
             (t.prototype.CreateVoiceRoom = function() {
-              var e = Kp.FriendStore.self.persona.m_strPlayerName,
+              var e = Yp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(mr.b)("#Chat_CreateChatChannel_DefaultName", e);
               this.props.group.CreateChatRoom(t, !0).then(function(e) {
                 e.StartVoiceChat();
@@ -47443,7 +47468,7 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "voiceChannelIcon" },
-                  Cr.createElement(Es.L, null)
+                  Cr.createElement(Es.M, null)
                 ),
                 t.map(function(e) {
                   return Cr.createElement(kl, {
@@ -47467,7 +47492,7 @@ and limitations under the License.
                 { className: "voiceChatGroup" },
                 e.rgFriends.map(function(e) {
                   return Cr.createElement(
-                    Wu,
+                    Vu,
                     {
                       key: e.accountid,
                       friend: e,
@@ -47556,7 +47581,7 @@ and limitations under the License.
                 r = !1,
                 o = "chatRoomGroupNavColumn",
                 a = this.props.groupView.IsVoiceActive(),
-                s = Kp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                s = Yp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bChannelListCollapsed"
                 );
@@ -47616,7 +47641,7 @@ and limitations under the License.
             }),
             (t.prototype.OnMemberListToggleViewClick = function(e) {
               var t = this.props.groupView.GetGroup();
-              Kp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+              Yp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
                 t.GetGroupID(),
                 "bMemberListCollapsed"
               );
@@ -47666,7 +47691,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.groupView.GetGroup(),
                 t = this.props.groupView.GetSelectedChatView(),
-                i = !Kp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                i = !Yp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bMemberListCollapsed"
                 ),
@@ -47689,7 +47714,7 @@ and limitations under the License.
               if (!this.props.inactive) {
                 var l =
                   e.BIsClanChatRoom() &&
-                  Kp.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
+                  Yp.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
                 c =
                   e.BIsClanChatRoom() && !l
                     ? Cr.createElement(
@@ -47772,7 +47797,7 @@ and limitations under the License.
                             className: "friendSearchClear",
                             onClick: this.OnClearSearch
                           },
-                          Cr.createElement(Es.O, null)
+                          Cr.createElement(Es.P, null)
                         )
                       )
                     )
@@ -47876,7 +47901,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.CreateTextRoom = function() {
-              var e = Kp.FriendStore.self.persona.m_strPlayerName,
+              var e = Yp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(mr.b)("#Chat_CreateTextChannel_DefaultName", e);
               this.props.groupView
                 .GetGroup()
@@ -47900,7 +47925,7 @@ and limitations under the License.
             }),
             (t.prototype.ToggleCollapseExpand = function() {
               var e = this.props.groupView.GetGroup();
-              Kp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+              Yp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
                 e.GetGroupID(),
                 "bChannelListCollapsed"
               );
@@ -47910,7 +47935,7 @@ and limitations under the License.
                 t = this.props.groupView,
                 i = t.GetGroup().textRoomList,
                 n = t.GetGroup().BCanAdminChannel(),
-                r = Kp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                r = Yp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   t.GetGroup().GetGroupID(),
                   "bChannelListCollapsed"
                 );
@@ -47978,11 +48003,11 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.ToggleTextChat = function() {
               if (!this.props.bRenameActive) {
-                var e = Kp.UIStore.IsChatRoomGroupActive(
+                var e = Yp.UIStore.IsChatRoomGroupActive(
                     Je(this),
                     this.props.chat.GetGroup()
                   ),
-                  t = Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+                  t = Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Je(this),
                     this.props.chat.GetGroup(),
                     !0
@@ -48027,7 +48052,7 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "chatRoomTextChannelIcon" },
-                  Cr.createElement(Es.H, null)
+                  Cr.createElement(Es.I, null)
                 ),
                 !n && Cr.createElement("div", { className: i }, e.name),
                 !this.props.bDefaultRoom &&
@@ -48055,7 +48080,7 @@ and limitations under the License.
             }),
             (t.prototype.OnVoiceRoomSelected = function(e) {
               this.props.groupView.GetRenameRoomID() != e.GetRoomID() &&
-                (Kp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                (Yp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   e.GetRoomID() ||
                   (this.props.groupView.ClosePopoverChat(),
                   e.StartVoiceChat()));
@@ -48141,7 +48166,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.InviteToChat = function(e) {
-              Kp.UIStore.OpenInviteDialogForChatGroup(
+              Yp.UIStore.OpenInviteDialogForChatGroup(
                 Je(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.chat.GetGroup(),
@@ -48178,10 +48203,10 @@ and limitations under the License.
                 e && "friend" == e.type)
               ) {
                 var i = e;
-                if (i.friend && i.friend != Kp.FriendStore.self) {
+                if (i.friend && i.friend != Yp.FriendStore.self) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Rm.DragDropManager.SetDropConsumed();
+                    Im.DragDropManager.SetDropConsumed();
                   var n = t.currentTarget.ownerDocument.defaultView;
                   ve(
                     {
@@ -48221,10 +48246,10 @@ and limitations under the License.
                 t = this.props.chat.GetGroup(),
                 i = this.props.chat == t.GetDefaultChatRoom(),
                 n =
-                  Kp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                  Yp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   this.props.chat.GetRoomID(),
-                r = Kp.CMInterface.steamid.GetAccountID(),
-                o = Kp.FriendStore.GetPlayer(r),
+                r = Yp.CMInterface.steamid.GetAccountID(),
+                o = Yp.FriendStore.GetPlayer(r),
                 a = this.props.chat.voice_active_contains_only_self,
                 s = "emptyChannelNotice",
                 c = this.props.chat.voice_active_member_list.member_list.map(
@@ -48236,7 +48261,7 @@ and limitations under the License.
                         classNames: "friend-anim",
                         timeout: 320
                       },
-                      Cr.createElement(Vu, {
+                      Cr.createElement(Hu, {
                         friend: t,
                         key: t.accountid,
                         context: e.GetFriendContext(),
@@ -48255,7 +48280,7 @@ and limitations under the License.
                   Cr.createElement(
                     zs,
                     { key: r, classNames: "friend-anim", timeout: 320 },
-                    Cr.createElement(Vu, {
+                    Cr.createElement(Hu, {
                       friend: o,
                       key: r,
                       context: this.GetFriendContext(),
@@ -48293,7 +48318,7 @@ and limitations under the License.
                   Cr.createElement(
                     "div",
                     { className: "chatRoomVoiceChannelIcon" },
-                    Cr.createElement(Es.L, null)
+                    Cr.createElement(Es.M, null)
                   ),
                   !this.props.bRenameActive &&
                     Cr.createElement(
@@ -48642,10 +48667,10 @@ and limitations under the License.
               };
               return this.props.bExpandMemberList
                 ? Cr.createElement(
-                    Vu,
+                    Hu,
                     nt.a({}, n, { listStatusIndicatorLeft: e })
                   )
-                : Cr.createElement(qu, nt.a({}, n), e);
+                : Cr.createElement(Ku, nt.a({}, n), e);
             }),
             nt.b([Zt.a], t.prototype, "OnFriendSelected", null),
             (t = nt.b([Is.observer], t))
@@ -48710,7 +48735,7 @@ and limitations under the License.
             (t.prototype.CreateExpiresText = function(e) {
               return 0 == e
                 ? Object(mr.b)("#InviteLink_ExpiresNever_Long")
-                : e - Kp.GetServerRTime32() > 3600
+                : e - Yp.GetServerRTime32() > 3600
                   ? Object(mr.b)("#InviteLink_ExpiresDay_Long")
                   : Object(mr.b)("#InviteLink_ExpiresHour_Long");
             }),
@@ -48865,7 +48890,7 @@ and limitations under the License.
                 i.friend &&
                   (this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                  Rm.DragDropManager.SetDropConsumed(),
+                  Im.DragDropManager.SetDropConsumed(),
                   this.m_friendPicker &&
                     this.m_friendPicker.SelectFriendSuggestion(i.friend));
               }
@@ -48890,7 +48915,7 @@ and limitations under the License.
               o
                 ? this.props.chatRoom || (r = this.m_setMembersOfGroup)
                 : this.props.chatRoom
-                  ? Kp.FriendStore.all_friends.forEach(function(t) {
+                  ? Yp.FriendStore.all_friends.forEach(function(t) {
                       e.props.chatRoomGroup.BHasMember(t.accountid) ||
                         r.add(t.accountid);
                     })
@@ -49043,7 +49068,7 @@ and limitations under the License.
             Cr.Fragment,
             null,
             Cr.createElement(
-              Wu,
+              Vu,
               { friend: e.friend, context: null },
               Cr.createElement(
                 "div",
@@ -49057,7 +49082,7 @@ and limitations under the License.
                 },
                 !t && Cr.createElement(re, null),
                 Cr.createElement("span", null, e.friend.display_name),
-                Cr.createElement(Es.O, null)
+                Cr.createElement(Es.P, null)
               )
             )
           );
@@ -49086,8 +49111,8 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "Throbber" },
-                  Cr.createElement(Es.I, { className: "base" }),
-                  Cr.createElement(Es.I, { className: "blur" })
+                  Cr.createElement(Es.J, { className: "base" }),
+                  Cr.createElement(Es.J, { className: "blur" })
                 ),
                 Cr.createElement(
                   "div",
@@ -49150,7 +49175,7 @@ and limitations under the License.
               var e = this.props.groupView.GetGroup(),
                 t = [],
                 i = (e.GetMyRank(), e.BCanAdminGroup()),
-                n = e.BIsAccountIDOwner(Kp.CMInterface.steamid.GetAccountID()),
+                n = e.BIsAccountIDOwner(Yp.CMInterface.steamid.GetAccountID()),
                 r = e.BCanInvite(),
                 o = e.BCanAdminChannel(),
                 a = e.BCanBan();
@@ -49489,7 +49514,7 @@ and limitations under the License.
                   " "
                 );
               else {
-                var t = Kp.FriendStore.GetPlayer(
+                var t = Yp.FriendStore.GetPlayer(
                   this.props.group.GetOwnerAccountID()
                 );
                 e = Cr.createElement(
@@ -49501,7 +49526,7 @@ and limitations under the License.
                     " ",
                     Object(mr.b)("#Chat_Settings_General_Owner")
                   ),
-                  Cr.createElement(Vu, {
+                  Cr.createElement(Hu, {
                     className: "groupOwnerFriend",
                     friend: t,
                     context: null
@@ -49706,8 +49731,8 @@ and limitations under the License.
                       "div",
                       { className: "_DialogRowLabel" },
                       n
-                        ? Cr.createElement(Es.L, null)
-                        : Cr.createElement(Es.H, null),
+                        ? Cr.createElement(Es.M, null)
+                        : Cr.createElement(Es.I, null),
                       Cr.createElement(
                         "div",
                         {
@@ -49767,7 +49792,7 @@ and limitations under the License.
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: Es.H,
+                        svgicon: Es.I,
                         onClick: this.OnCreateNewTextChannel,
                         disabled: !this.props.enabled
                       },
@@ -49779,7 +49804,7 @@ and limitations under the License.
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: Es.L,
+                        svgicon: Es.M,
                         onClick: this.OnCreateNewVoiceChannel,
                         disabled: !this.props.enabled
                       },
@@ -49831,7 +49856,7 @@ and limitations under the License.
         Ql = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return Kp.FriendStore.self, (i.state = { strRoleName: "" }), i;
+            return Yp.FriendStore.self, (i.state = { strRoleName: "" }), i;
           }
           return (
             nt.c(t, e),
@@ -50182,7 +50207,7 @@ and limitations under the License.
                     t.role_id == r
                       ? (Object(mr.b)("#ChatRoomRole_Member"), (i = !0))
                       : e.props.group.BMemberHasRole(
-                          Kp.FriendStore.self.accountid,
+                          Yp.FriendStore.self.accountid,
                           t.role_id
                         ) && (i = !0),
                     Cr.createElement(
@@ -50355,7 +50380,7 @@ and limitations under the License.
             (t.prototype.FormatExpires = function(e) {
               return e > 2145916800
                 ? Object(mr.b)("#GroupSettings_Invite_NeverExpires")
-                : Kp.RTime32ToDate(e).toLocaleString([], {
+                : Yp.RTime32ToDate(e).toLocaleString([], {
                     year: "numeric",
                     month: "numeric",
                     day: "numeric",
@@ -50524,8 +50549,8 @@ and limitations under the License.
             }),
             (t.prototype.RevokeInvite = function(e) {
               var t = this,
-                i = Kp.FriendStore.GetPlayer(e),
-                n = Cr.createElement(Vu, {
+                i = Yp.FriendStore.GetPlayer(e),
+                n = Cr.createElement(Hu, {
                   className: "friend",
                   friend: i,
                   context: null,
@@ -50552,7 +50577,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Kp.RTime32ToDate(e).toLocaleString([], {
+              return Yp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50573,7 +50598,7 @@ and limitations under the License.
                     Object(mr.b)("#GroupSettings_InvitedUsers_Noone")
                   );
                 var t = this.props.invitedUsers.rgInvitedUsers.map(function(t) {
-                  var i = Kp.FriendStore.GetPlayer(t.accountid());
+                  var i = Yp.FriendStore.GetPlayer(t.accountid());
                   return Cr.createElement(
                     "tr",
                     { className: "hoverRow", key: t.accountid() },
@@ -50581,7 +50606,7 @@ and limitations under the License.
                       "td",
                       { className: "friendCell" },
                       " ",
-                      Cr.createElement(Vu, {
+                      Cr.createElement(Hu, {
                         friend: i,
                         context: null,
                         bHideGameName: !0,
@@ -50686,8 +50711,8 @@ and limitations under the License.
             (t.prototype.componentWillUnmount = function() {}),
             (t.prototype.OnClickUnban = function(e) {
               var t = this,
-                i = Kp.FriendStore.GetPlayer(e),
-                n = Cr.createElement(Vu, {
+                i = Yp.FriendStore.GetPlayer(e),
+                n = Cr.createElement(Hu, {
                   className: "friend",
                   friend: i,
                   context: null,
@@ -50714,7 +50739,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Kp.RTime32ToDate(e).toLocaleString([], {
+              return Yp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50733,7 +50758,7 @@ and limitations under the License.
                       Object(mr.b)("#GroupSettings_Bans_NoOneBanned")
                     )
                   : ((e = this.props.bans.rgBans.map(function(e) {
-                      var i = Kp.FriendStore.GetPlayer(e.accountid());
+                      var i = Yp.FriendStore.GetPlayer(e.accountid());
                       return Cr.createElement(
                         "tr",
                         { className: "hoverRow", key: e.accountid() },
@@ -50741,7 +50766,7 @@ and limitations under the License.
                           "td",
                           { className: "friendCell" },
                           " ",
-                          Cr.createElement(Vu, { friend: i, context: null }),
+                          Cr.createElement(Hu, { friend: i, context: null }),
                           " "
                         ),
                         Cr.createElement(
@@ -51298,7 +51323,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e),
-                  Kp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Yp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1));
             }),
             (t.prototype.OnTogglePushToTalk = function() {
@@ -51307,9 +51332,9 @@ and limitations under the License.
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.SetPushToTalkEnabled
               ) {
-                var e = Kp.VoiceStore.GetPushToTalkEnabled();
+                var e = Yp.VoiceStore.GetPushToTalkEnabled();
                 SteamClient.WebChat.SetPushToTalkEnabled(!e),
-                  Kp.VoiceStore.SetPushToTalkEnabled(!e);
+                  Yp.VoiceStore.SetPushToTalkEnabled(!e);
               }
             }),
             (t.prototype.AssignHotkey = function() {
@@ -51325,7 +51350,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e.button),
-                  Kp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Yp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
@@ -51338,16 +51363,16 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkHotKey &&
                   (SteamClient.WebChat.SetPushToTalkHotKey(e.keyCode),
-                  Kp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Yp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
             }),
             (t.prototype.render = function() {
-              var e = Kp.VoiceStore.GetPushToTalkEnabled(),
+              var e = Yp.VoiceStore.GetPushToTalkEnabled(),
                 t = !1,
-                i = (Kp.VoiceStore.GetPushToTalkHotKeyVK(),
-                Kp.VoiceStore.GetPushToTalkHotKeyDisplayString()),
+                i = (Yp.VoiceStore.GetPushToTalkHotKeyVK(),
+                Yp.VoiceStore.GetPushToTalkHotKeyDisplayString()),
                 n = Object(mr.b)("#VoicePushToTalkAssigned");
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
@@ -51584,14 +51609,14 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.SaveFriendSettings = function(e, t) {
-              Kp.SettingsStore.BUpdateFriendsSettings(e),
-                Kp.SettingsStore.SetCommunityPreferences(t);
+              Yp.SettingsStore.BUpdateFriendsSettings(e),
+                Yp.SettingsStore.SetCommunityPreferences(t);
             }),
             (t.prototype.render = function() {
               var e = {
-                  friendsSettingsInitial: Kp.SettingsStore.FriendsSettings,
+                  friendsSettingsInitial: Yp.SettingsStore.FriendsSettings,
                   communityPreferencesInitial:
-                    Kp.SettingsStore.CommunityPreferences,
+                    Yp.SettingsStore.CommunityPreferences,
                   onCancel: this.props.closeModal,
                   onSubmit: this.SaveFriendSettings,
                   bShowClientOpts: it.a.IN_CLIENT,
@@ -51618,7 +51643,7 @@ and limitations under the License.
                       uniqueName: "FriendSettings_Voice",
                       content: Cr.createElement(au, {
                         onCancel: this.props.closeModal,
-                        voiceStore: Kp.ChatStore.VoiceChat
+                        voiceStore: Yp.ChatStore.VoiceChat
                       })
                     }
                   ]
@@ -51653,14 +51678,14 @@ and limitations under the License.
                 {
                   label: Object(mr.b)(
                     "#NotificationSetting_AnyMention",
-                    Kp.FriendStore.self.display_name
+                    Yp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(mr.b)(
                     "#NotificationSetting_DirectMention",
-                    Kp.FriendStore.self.display_name
+                    Yp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51899,14 +51924,14 @@ and limitations under the License.
                 {
                   label: Object(mr.b)(
                     "#NotificationSetting_AnyMention",
-                    Kp.FriendStore.self.display_name
+                    Yp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(mr.b)(
                     "#NotificationSetting_DirectMention",
-                    Kp.FriendStore.self.display_name
+                    Yp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51953,7 +51978,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.InviteFriend = function(e) {
-              Kp.UIStore.OpenInviteDialogForChatGroup(
+              Yp.UIStore.OpenInviteDialogForChatGroup(
                 Je(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.groupView.GetGroup()
@@ -52124,7 +52149,7 @@ and limitations under the License.
         })(Cr.Component),
         du = Object(Is.observer)(function(e) {
           if (!e.small && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
-            var t = Kp.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
+            var t = Yp.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
             return Cr.createElement(
               "div",
               {
@@ -52180,7 +52205,7 @@ and limitations under the License.
               var e = this,
                 t = this.props.group;
               if (t && t.BIsClanChatRoom()) {
-                var i = Kp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                var i = Yp.FriendStore.ClanStore.GetClan(t.GetClanID());
                 return Cr.createElement(du, {
                   clan: i,
                   small: this.props.small,
@@ -52267,7 +52292,7 @@ and limitations under the License.
               (i.m_rgFavoriteElementRefs = []),
               (i.m_bAcceptDrag = !1),
               (i.state = {
-                bHintDismissed: Rm.UIDisplayPrefs.bFavoritesHintDismissed
+                bHintDismissed: Im.UIDisplayPrefs.bFavoritesHintDismissed
               }),
               i
             );
@@ -52276,7 +52301,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.DismissFavoritesHint = function() {
               this.setState({ bHintDismissed: !0 }),
-                Rm.SetUIDisplayPref("bFavoritesHintDismissed", !0);
+                Im.SetUIDisplayPref("bFavoritesHintDismissed", !0);
             }),
             (t.prototype.render = function() {
               var e = this,
@@ -52288,7 +52313,7 @@ and limitations under the License.
                 t.length || i)
               ) {
                 var r = t,
-                  o = Kp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                  o = Yp.SettingsStore.FriendsSettings.bCompactQuickAccess;
                 i &&
                   (this.m_bGhostIsDupe &&
                     r.findIndex(function(e) {
@@ -52383,7 +52408,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               !t ||
                 ("friend" != t.type &&
                   "chatroomgroup" != t.type &&
@@ -52392,18 +52417,18 @@ and limitations under the License.
                 (this.m_ActiveDragOut = this.FindItemFromDrag(t)));
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Rm.DragDropManager.GetDragData(),
+              var t = Im.DragDropManager.GetDragData(),
                 i = this.FindItemFromDrag(t);
               if (
                 i &&
                 "is_favorite" in t &&
                 t.is_favorite &&
-                !Rm.DragDropManager.BWasDropConsumed()
+                !Im.DragDropManager.BWasDropConsumed()
               ) {
                 var n = e.currentTarget.getBoundingClientRect();
                 Object(Fr.f)(n, e.clientX, e.clientY) > 100 &&
                   (this.props.FavoritesStore.RemoveFromFavorites(i),
-                  Rm.DragDropManager.EndDrag());
+                  Im.DragDropManager.EndDrag());
               }
               this.m_ActiveDragOut = void 0;
             }),
@@ -52415,7 +52440,7 @@ and limitations under the License.
                 if (o instanceof gs) {
                   var a = o.GetGroup();
                   a.BIsClanChatRoom() &&
-                    (n = Kp.FriendStore.ClanStore.GetClan(a.GetClanID())),
+                    (n = Yp.FriendStore.ClanStore.GetClan(a.GetClanID())),
                     (r = a);
                 } else {
                   var s = o.GetChatView();
@@ -52472,7 +52497,7 @@ and limitations under the License.
               var i = this.FindItemFromDrag(e);
               this.m_ActiveDrag,
                 i
-                  ? (Rm.DragDropManager.SetDropConsumed(),
+                  ? (Im.DragDropManager.SetDropConsumed(),
                     this.props.FavoritesStore.AddToFavorites(
                       i,
                       this.m_iActiveDragIndex
@@ -52545,12 +52570,12 @@ and limitations under the License.
         })(Cr.Component),
         gu = Object(Is.observer)(function(e) {
           var t = e.friend,
-            i = Kp.SettingsStore.FriendsSettings.bCompactQuickAccess,
+            i = Yp.SettingsStore.FriendsSettings.bCompactQuickAccess,
             n = null;
-          t.persona.is_awayOrSnooze && (n = Cr.createElement(Pu, null));
+          t.persona.is_awayOrSnooze && (n = Cr.createElement(zu, null));
           var r = void 0;
           if (t.persona.is_ingame) {
-            var o = Kp.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
+            var o = Yp.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
             o.is_valid &&
               (r = Cr.createElement(
                 "div",
@@ -52563,7 +52588,7 @@ and limitations under the License.
               ));
           }
           return Cr.createElement(
-            Vu,
+            Hu,
             {
               friend: t,
               key: t.accountid,
@@ -52613,25 +52638,25 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.OnDragStart = function(e) {
-              Rm.DragDropManager.StartDrag({
+              Im.DragDropManager.StartDrag({
                 type: "clan",
                 clan: this.props.clan
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Rm.DragDropManager.EndDrag();
+              Im.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
               Q(e, this.props.clan, { is_favorites: !0 });
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessFriend QuickAccessClan",
-                t = Kp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                t = Yp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               this.props.className && (e += " " + this.props.className);
               var i = null,
                 n = this.props.clan.GetChatGroupIDIfLoaded();
               if (n) {
-                var r = Kp.ChatStore.GetChatRoomGroup(n);
+                var r = Yp.ChatStore.GetChatRoomGroup(n);
                 r &&
                   r.HasUnreadChatMessage &&
                   (i = Cr.createElement(
@@ -52677,20 +52702,20 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.OnClick = function(e) {
-              Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Je(this, e),
                 this.props.chat,
                 !0
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              Rm.DragDropManager.StartDrag({
+              Im.DragDropManager.StartDrag({
                 type: "chatroomgroup",
                 group: this.props.chat
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Rm.DragDropManager.EndDrag();
+              Im.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
               Z(e, this.props.chat, { is_favorites: !0 });
@@ -52698,7 +52723,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = "QuickAccessChat",
                 t = null,
-                i = Kp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                i = Yp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               return (
                 this.props.chat.HasUnreadChatMessage &&
                   (t = Cr.createElement(
@@ -52745,7 +52770,7 @@ and limitations under the License.
           function t(t) {
             var i = e.call(this, t) || this;
             return (
-              Kp.FriendStore.self,
+              Yp.FriendStore.self,
               (i.state = {
                 strCurrentNameEntry: "",
                 strError: void 0,
@@ -52813,14 +52838,14 @@ and limitations under the License.
                 i.push(r.persona.m_steamid.ConvertTo64BitString());
                 var o = Qe(e);
                 return (
-                  Kp.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
+                  Yp.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
                   void this.props.closeModal()
                 );
               }
               var a = this.props.bHideChatNameEntry
                 ? ""
                 : this.state.strCurrentNameEntry;
-              Kp.ChatStore.CreateChatRoomGroup(
+              Yp.ChatStore.CreateChatRoomGroup(
                 this.props.browserContext,
                 a,
                 i
@@ -52956,7 +52981,7 @@ and limitations under the License.
             Cr.Fragment,
             null,
             Cr.createElement(
-              Wu,
+              Vu,
               { friend: e.friend, context: null },
               Cr.createElement(
                 "div",
@@ -52970,7 +52995,7 @@ and limitations under the License.
                 },
                 !t && Cr.createElement(pe, null),
                 Cr.createElement("span", null, e.friend.display_name),
-                Cr.createElement(Es.O, null)
+                Cr.createElement(Es.P, null)
               )
             )
           );
@@ -53033,7 +53058,7 @@ and limitations under the License.
             (e.prototype.Show = function(t, i) {
               var n =
                 t.currentTarget.ownerDocument.defaultView.innerWidth < 500;
-              if ((!n || it.a.IN_CLIENT) && !Rm.DragDropManager.BInDrag()) {
+              if ((!n || it.a.IN_CLIENT) && !Im.DragDropManager.BInDrag()) {
                 this.EnsureCommunityDataLoaded();
                 var r = t.currentTarget,
                   o = Je(null, t),
@@ -53042,7 +53067,7 @@ and limitations under the License.
                   (a.visible = !0),
                     window.setTimeout(function() {
                       a.visible &&
-                        (a.popupWindow || (a.popupWindow = new $u(r, a, o)),
+                        (a.popupWindow || (a.popupWindow = new ed(r, a, o)),
                         a.popupWindow.Show());
                     }, 250);
                 else {
@@ -53229,7 +53254,7 @@ and limitations under the License.
                           className: "title-area-icon closeButton",
                           onClick: t
                         },
-                        Cr.createElement(Es.O, null)
+                        Cr.createElement(Es.P, null)
                       ),
                       !this.props.hideMinMax &&
                         Cr.createElement(
@@ -53255,7 +53280,9 @@ and limitations under the License.
             t
           );
         })(Cr.Component)),
-        Fu = (function(e) {
+        Fu = (Cr.Component,
+        Cr.Component,
+        (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -53283,7 +53310,7 @@ and limitations under the License.
             }),
             (t = nt.b([Is.observer], t))
           );
-        })(Cr.Component),
+        })(Cr.Component)),
         wu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -53347,26 +53374,26 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.ActivateActiveVoiceChat = function(e) {
               if (this.props.chat instanceof ds) {
-                var t = Kp.ChatStore.GetChatRoomGroup(
+                var t = Yp.ChatStore.GetChatRoomGroup(
                   this.props.chat.GetParentGroupID()
                 );
                 if (t)
-                  return void Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+                  return void Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Je(this, e),
                     t,
                     !0
                   );
               }
-              Kp.UIStore.ShowAndOrActivateChat(
+              Yp.UIStore.ShowAndOrActivateChat(
                 Je(this, e),
                 this.props.chat,
                 !0
               );
             }),
             (t.prototype.render = function() {
-              var e = Kp.VoiceStore.GetPushToTalkEnabled(),
-                t = Kp.VoiceStore.GetPushToTalkKeyDown(),
-                i = Kp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var e = Yp.VoiceStore.GetPushToTalkEnabled(),
+                t = Yp.VoiceStore.GetPushToTalkKeyDown(),
+                i = Yp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 n = "";
               return (
                 e && (n += " pushToTalkEnabled"),
@@ -53434,15 +53461,15 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.ToggleMicrophone = function(e) {
-              Kp.VoiceStore.IsMicMuted() &&
-                Kp.VoiceStore.IsOutputMuted() &&
-                Kp.VoiceStore.ToggleOutputMuting(),
-                Kp.VoiceStore.ToggleMicMuting(),
+              Yp.VoiceStore.IsMicMuted() &&
+                Yp.VoiceStore.IsOutputMuted() &&
+                Yp.VoiceStore.ToggleOutputMuting(),
+                Yp.VoiceStore.ToggleMicMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Kp.VoiceStore.BNoMicAvailableForSession(),
-                t = Kp.VoiceStore.IsMicMuted(),
+              var e = Yp.VoiceStore.BNoMicAvailableForSession(),
+                t = Yp.VoiceStore.IsMicMuted(),
                 i = "VoiceControlPanelButton ToggleMicrophoneButton",
                 n = "";
               return (
@@ -53472,13 +53499,13 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.ToggleVoiceOutput = function(e) {
-              Kp.VoiceStore.IsOutputMuted() == Kp.VoiceStore.IsMicMuted() &&
-                Kp.VoiceStore.ToggleMicMuting(),
-                Kp.VoiceStore.ToggleOutputMuting(),
+              Yp.VoiceStore.IsOutputMuted() == Yp.VoiceStore.IsMicMuted() &&
+                Yp.VoiceStore.ToggleMicMuting(),
+                Yp.VoiceStore.ToggleOutputMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Kp.VoiceStore.IsOutputMuted(),
+              var e = Yp.VoiceStore.IsOutputMuted(),
                 t = "VoiceControlPanelButton ToggleVoiceOutputButton";
               e && (t += " disabled");
               var i = "";
@@ -53505,7 +53532,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.EndVoiceChat = function(e) {
-              Kp.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
+              Yp.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
             }),
             (t.prototype.render = function() {
               return Cr.createElement(
@@ -53515,7 +53542,7 @@ and limitations under the License.
                   onClick: this.EndVoiceChat,
                   title: Object(mr.b)("#VoiceChat_Leave")
                 },
-                Cr.createElement(Es.L, null)
+                Cr.createElement(Es.M, null)
               );
             }),
             nt.b([Zt.a], t.prototype, "EndVoiceChat", null),
@@ -53580,7 +53607,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDoFriendsListUpdate = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView,
-                i = Rm.GetSecondsOutOfDate(),
+                i = Im.GetSecondsOutOfDate(),
                 n = Object(mr.e)(i, !0);
               Ee(
                 t,
@@ -53589,7 +53616,7 @@ and limitations under the License.
                 Object(mr.b)("#Friends_ConfirmUpdate_Ok")
               )
                 .then(function() {
-                  Rm.PerformFriendsUIUpdate();
+                  Im.PerformFriendsUIUpdate();
                 })
                 .catch(function() {});
             }),
@@ -53647,16 +53674,16 @@ and limitations under the License.
                 },
                 function() {
                   e.state.bViewingIncomingInvites &&
-                    (Kp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                    Kp.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
+                    (Yp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                    Yp.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
                 }
               );
             }),
             (t.prototype.componentWillUpdate = function() {
               var e =
-                  Kp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Yp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                t = Kp.FriendStore.ClanStore.clan_invites.length > 0;
+                t = Yp.FriendStore.ClanStore.clan_invites.length > 0;
               e ||
                 t ||
                 !this.state.bViewingIncomingInvites ||
@@ -53666,13 +53693,13 @@ and limitations under the License.
               var e = this.props.friends.self,
                 t = this.GetNormalizedSearchString(),
                 i =
-                  Kp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Yp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                n = Kp.FriendStore.ClanStore.clan_invites.length > 0,
+                n = Yp.FriendStore.ClanStore.clan_invites.length > 0,
                 r =
-                  Kp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Yp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count +
-                  Kp.FriendStore.ClanStore.clan_invites.length,
+                  Yp.FriendStore.ClanStore.clan_invites.length,
                 o = "friendRequestButton";
               this.state.bViewingIncomingInvites &&
                 (o += " friendRequestViewActive");
@@ -53683,15 +53710,15 @@ and limitations under the License.
               this.state.tabLabelWidth > 0 &&
                 (c.width = this.state.tabLabelWidth + "px");
               var l = !1;
-              this.props.popup && (l = Xe(this.props.popup) != Hp);
+              this.props.popup && (l = Xe(this.props.popup) != qp);
               var u = !1,
                 d = 0,
                 p = !1,
                 h =
                   "friendListButton friendSettingsButton friendsListNeedsUpdate no-drag";
-              void 0 != Rm &&
-                ((u = Rm.BNeedsUpdate()),
-                (d = Rm.GetSecondsOutOfDate()),
+              void 0 != Im &&
+                ((u = Im.BNeedsUpdate()),
+                (d = Im.GetSecondsOutOfDate()),
                 d < 432e3
                   ? (u = !1)
                   : d > 604800 &&
@@ -53699,7 +53726,7 @@ and limitations under the License.
               var g = this.props.chats.GetActiveVoiceChat(),
                 f = !1;
               (this.props.chats.VoiceChat.IsAnyVoiceActive() || g) && (f = !0);
-              var _ = Kp.SettingsStore.FriendsSettings.bCompactFriendsList;
+              var _ = Yp.SettingsStore.FriendsSettings.bCompactFriendsList;
               return Cr.createElement(
                 "div",
                 {
@@ -53717,7 +53744,7 @@ and limitations under the License.
                       hideMinMax: l,
                       popup: this.props.popup
                     }),
-                  Cr.createElement(Gu, {
+                  Cr.createElement(Nu, {
                     popup: this.props.popup && this.props.popup,
                     currentUser: e
                   }),
@@ -53744,7 +53771,7 @@ and limitations under the License.
                         onClick: this.OnSettingsClick,
                         title: Object(mr.b)("#Tooltip_Settings")
                       },
-                      Cr.createElement(Es.D, null)
+                      Cr.createElement(Es.E, null)
                     )
                   ),
                   Cr.createElement(
@@ -53839,7 +53866,7 @@ and limitations under the License.
                                             className: "friendSearchClear",
                                             onClick: this.OnClearSearch
                                           },
-                                          Cr.createElement(Es.O, null)
+                                          Cr.createElement(Es.P, null)
                                         )
                                       )
                                     )
@@ -53889,7 +53916,7 @@ and limitations under the License.
                     )
                   )
                 ),
-                Cr.createElement(Nu, {
+                Cr.createElement(Du, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   searchString: t,
@@ -53902,7 +53929,7 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "friendListFooter" },
-                  Cr.createElement(Tu, null)
+                  Cr.createElement(Gu, null)
                 )
               );
             }),
@@ -53953,6 +53980,52 @@ and limitations under the License.
         Tu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
+            return (
+              (i.m_bChangeLogVersion = 2),
+              (i.state = {
+                bShowChangeLogViolator:
+                  Im.UIDisplayPrefs.nChangeLogDismissed < i.m_bChangeLogVersion
+              }),
+              i
+            );
+          }
+          return (
+            nt.c(t, e),
+            (t.prototype.OpenChangeLog = function(e) {}),
+            (t.prototype.render = function() {
+              var e = this.state.bShowChangeLogViolator,
+                t = 0;
+              return (
+                e &&
+                  (t =
+                    this.m_bChangeLogVersion -
+                    Im.UIDisplayPrefs.nChangeLogDismissed),
+                Cr.createElement(
+                  "div",
+                  {
+                    className: "changeLog" + (e ? " showViolator" : ""),
+                    onClick: this.OpenChangeLog,
+                    title: e
+                      ? Object(mr.b)("#changeLog_Value_Button", t)
+                      : Object(mr.b)("#changeLog_Button")
+                  },
+                  Cr.createElement(Es.D, null),
+                  e &&
+                    Cr.createElement(
+                      "div",
+                      { className: "changeLogViolator" },
+                      t
+                    )
+                )
+              );
+            }),
+            nt.b([Zt.a], t.prototype, "OpenChangeLog", null),
+            t
+          );
+        })(Cr.Component),
+        Gu = (function(e) {
+          function t(t) {
+            var i = e.call(this, t) || this;
             return (i.state = { bdebugAudio: !1 }), i;
           }
           return (
@@ -53971,7 +54044,7 @@ and limitations under the License.
                   });
             }),
             (t.prototype.CopyVoiceLogsToClipboard = function() {
-              var e = Kp.ChatStore.VoiceChat.GetVoiceLogs(),
+              var e = Yp.ChatStore.VoiceChat.GetVoiceLogs(),
                 t = document.createElement("textarea");
               (t.textContent = e),
                 (t.style.position = "fixed"),
@@ -53986,13 +54059,13 @@ and limitations under the License.
               }
             }),
             (t.prototype.ToggleVoiceLogToConsole = function() {
-              Kp.ChatStore.VoiceChat.SetVoiceLogDetails(
-                !Kp.ChatStore.VoiceChat.GetVoiceLogDetails()
+              Yp.ChatStore.VoiceChat.SetVoiceLogDetails(
+                !Yp.ChatStore.VoiceChat.GetVoiceLogDetails()
               );
             }),
             (t.prototype.ToggleLocalMicEcho = function() {
-              Kp.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
-                !Kp.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
+              Yp.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
+                !Yp.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
               );
             }),
             (t.prototype.debugAudioClicked = function() {
@@ -54006,7 +54079,7 @@ and limitations under the License.
                 Cr.Fragment,
                 null,
                 t &&
-                  Kp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Yp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Cr.createElement(
                     "button",
                     {
@@ -54016,7 +54089,7 @@ and limitations under the License.
                     Object(mr.b)("#ToggleVoiceConsoleLog")
                   ),
                 t &&
-                  Kp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Yp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Cr.createElement(
                     "button",
                     {
@@ -54026,7 +54099,7 @@ and limitations under the License.
                     Object(mr.b)("#ToggleLocalMicEcho")
                   ),
                 t &&
-                  Kp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Yp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Cr.createElement(
                     "button",
                     {
@@ -54041,7 +54114,8 @@ and limitations under the License.
                   !1,
                   !1,
                   Cr.createElement(ku, null),
-                  Kp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Cr.createElement(Tu, null),
+                  Yp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                     Cr.createElement(
                       "div",
                       {
@@ -54069,7 +54143,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Gu = (function(e) {
+        Nu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -54080,16 +54154,16 @@ and limitations under the License.
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
               var e = Xe(this.props.popup);
-              Kp.UIStore.BIsDockedFriendsList(e)
+              Yp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
-                    Rm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                    Im.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
                   )
                 : (this.props.popup.SteamClient.Window.ResizeTo(
                     1280,
                     this.props.popup.innerHeight
                   ),
-                  Rm.SetUIDisplayPref(
+                  Im.SetUIDisplayPref(
                     "nFriendsListSingleWindowWidthPx",
                     this.props.popup.innerWidth
                   ));
@@ -54098,11 +54172,11 @@ and limitations under the License.
               var e = this.props.currentUser,
                 t = "currentUserContainer " + he(e.persona),
                 i = null;
-              Kp.FriendStore.BIsInvisibleMode() &&
+              Yp.FriendStore.BIsInvisibleMode() &&
                 (i = Object(mr.b)("#PersonaStateInvisible"));
               var n = !1;
               return (
-                this.props.popup && (n = Xe(this.props.popup) != Hp),
+                this.props.popup && (n = Xe(this.props.popup) != qp),
                 Cr.createElement(
                   "div",
                   { className: t },
@@ -54146,7 +54220,7 @@ and limitations under the License.
                     })
                   ),
                   Cr.createElement(
-                    Wu,
+                    Vu,
                     {
                       friend: e,
                       context: { chatContext: "friendslist" },
@@ -54162,7 +54236,7 @@ and limitations under the License.
                         className: "currentUserAvatar",
                         src: e.persona.avatar_url_full
                       }),
-                      Cr.createElement(Ku, {
+                      Cr.createElement(Yu, {
                         friend: e,
                         strOverrideStatus: i,
                         onShowContextMenu: this.OnShowContextMenu
@@ -54182,7 +54256,7 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Cr.createElement(Es.E, null)
+                      Cr.createElement(Es.F, null)
                     )
                 )
               );
@@ -54192,7 +54266,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Nu = (function(e) {
+        Du = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bScrolledFromTop: !1 }), i;
@@ -54237,7 +54311,7 @@ and limitations under the License.
             }),
             (t.prototype.OnAcceptClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Kp.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
+              Yp.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
                 e
               ) {
                 e ||
@@ -54250,7 +54324,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDeclineClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Kp.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
+              Yp.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
                 e
               ) {
                 e ||
@@ -54273,12 +54347,12 @@ and limitations under the License.
                 };
               if (this.props.friends.self.is_ready)
                 if (n) {
-                  var o = Kp.FriendStore.ClanStore.clan_invites.length,
-                    a = ut.a.InitFromAccountID(Kp.FriendStore.self.accountid),
+                  var o = Yp.FriendStore.ClanStore.clan_invites.length,
+                    a = ut.a.InitFromAccountID(Yp.FriendStore.self.accountid),
                     s = (it.a.COMMUNITY_BASE_URL, a.ConvertTo64BitString(), []);
                   if (o)
                     for (
-                      var c = 0, l = Kp.FriendStore.ClanStore.clan_invites;
+                      var c = 0, l = Yp.FriendStore.ClanStore.clan_invites;
                       c < l.length;
                       c++
                     ) {
@@ -54426,7 +54500,7 @@ and limitations under the License.
                         )
                       ),
                     Cr.createElement(
-                      Lu,
+                      xu,
                       nt.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -54440,7 +54514,7 @@ and limitations under the License.
                   );
                 } else if (i)
                   e = Cr.createElement(
-                    Lu,
+                    xu,
                     nt.a(
                       {
                         group: this.props.friends.FriendGroupStore.all_friends,
@@ -54453,7 +54527,7 @@ and limitations under the License.
                   var d = this.props.friends.FriendGroupStore.user_groups.map(
                       function(e) {
                         return Cr.createElement(
-                          Lu,
+                          xu,
                           nt.a(
                             {
                               group: e,
@@ -54470,7 +54544,7 @@ and limitations under the License.
                     p = this.props.friends.FriendGroupStore.default_groups.map(
                       function(e) {
                         return Cr.createElement(
-                          Lu,
+                          xu,
                           nt.a(
                             {
                               group: e,
@@ -54496,19 +54570,19 @@ and limitations under the License.
                         Cr.createElement(
                           "div",
                           { className: "recentChatsGroup unreadChatsGroup" },
-                          Cr.createElement(Ju, {
+                          Cr.createElement(Xu, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext
                           }),
                           !1
                         ),
-                      Cr.createElement(zu, null),
+                      Cr.createElement(Lu, null),
                       d,
                       p
                     ));
                 }
               else e = void 0;
-              var f = Kp.SettingsStore.FriendsSettings.bCompactFriendsList;
+              var f = Yp.SettingsStore.FriendsSettings.bCompactFriendsList;
               return Cr.createElement(
                 "div",
                 {
@@ -54523,7 +54597,7 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                Cr.createElement(Yu, {
+                Cr.createElement(Ju, {
                   browserContext: this.props.browserContext,
                   bScrolledFromTop: this.state.bScrolledFromTop && !i,
                   onClick: this.ScrollToTop
@@ -54547,7 +54621,7 @@ and limitations under the License.
                     className: "friendListInsetShadowBottom"
                   })
                 ),
-                Cr.createElement(Du, {
+                Cr.createElement(Au, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   parent: this
@@ -54563,16 +54637,16 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Du = (function(e) {
+        Au = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
               (i.m_bMouseOver = !1),
               (i.state = {
                 nChatRoomListContainerHeight:
-                  Rm.UIDisplayPrefs.nChatRoomListHeightPx,
+                  Im.UIDisplayPrefs.nChatRoomListHeightPx,
                 nChatRoomListContainerMaxHeight:
-                  Rm.UIDisplayPrefs.nChatRoomListHeightPx
+                  Im.UIDisplayPrefs.nChatRoomListHeightPx
               }),
               i
             );
@@ -54721,7 +54795,7 @@ and limitations under the License.
                   this.m_elChatSection.maximumHeight
                 )),
                   this.setState({ nChatRoomListContainerHeight: a }),
-                  Rm.SetUIDisplayPref("nChatRoomListHeightPx", a);
+                  Im.SetUIDisplayPref("nChatRoomListHeightPx", a);
               }
             }),
             (t.prototype.UnregisterChatRoomListDragEvents = function(e) {
@@ -54827,7 +54901,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Au = (function(e) {
+        Pu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -54848,7 +54922,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t;
                 (i.group = this.GetGroup()),
@@ -54915,7 +54989,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Pu = (function(e) {
+        zu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -54946,35 +55020,35 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        zu = Object(Is.observer)(function(e) {
-          var t = Kp.FriendStore.FriendGroupStore.game_groups,
+        Lu = Object(Is.observer)(function(e) {
+          var t = Yp.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
-              return Cr.createElement(ju, {
+              return Cr.createElement(Uu, {
                 key: e.id,
                 group: e,
                 bSingletonGroup: !1,
                 bOtherGroups: !0,
                 groupDisplayPrefs:
-                  Kp.FriendStore.FriendGroupStore.groupDisplayPrefs
+                  Yp.FriendStore.FriendGroupStore.groupDisplayPrefs
               });
             }),
-            n = Kp.FriendStore.FriendGroupStore.singleton_game_group;
+            n = Yp.FriendStore.FriendGroupStore.singleton_game_group;
           return (
             n &&
               i.push(
-                Cr.createElement(ju, {
+                Cr.createElement(Uu, {
                   key: "singleton",
                   group: n,
                   bSingletonGroup: !0,
                   bOtherGroups: t.length > 0,
                   groupDisplayPrefs:
-                    Kp.FriendStore.FriendGroupStore.groupDisplayPrefs
+                    Yp.FriendStore.FriendGroupStore.groupDisplayPrefs
                 })
               ),
             Cr.createElement(Cr.Fragment, null, i)
           );
         }),
-        Lu = (function(e) {
+        xu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -54996,8 +55070,8 @@ and limitations under the License.
                 i = e.group,
                 n = this.props.group;
               return (
-                e.is_favorite || Rm.DragDropManager.SetDropConsumed(),
-                Kp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                e.is_favorite || Im.DragDropManager.SetDropConsumed(),
+                Yp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                   t,
                   i,
                   n
@@ -55077,7 +55151,7 @@ and limitations under the License.
                     });
             }),
             (t.prototype.AcceptInvite = function(e, t) {
-              Kp.FriendStore.SendFriendInvite(t).then(function(i) {
+              Yp.FriendStore.SendFriendInvite(t).then(function(i) {
                 3 != i &&
                   ke(
                     e,
@@ -55087,7 +55161,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.DeclineInvite = function(e, t) {
-              Kp.FriendStore.RemoveFriend(t).then(function(i) {
+              Yp.FriendStore.RemoveFriend(t).then(function(i) {
                 1 != i &&
                   ke(
                     e,
@@ -55100,7 +55174,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.BlockInvite = function(e, t) {
-              Kp.FriendStore.BlockPlayer(t).then(function(i) {
+              Yp.FriendStore.BlockPlayer(t).then(function(i) {
                 5 != i &&
                   ke(
                     e,
@@ -55211,7 +55285,7 @@ and limitations under the License.
                   o)
                 ) {
                   var d =
-                    Kp.FriendStore.FriendGroupStore.incoming_invites_group;
+                    Yp.FriendStore.FriendGroupStore.incoming_invites_group;
                   u.sort(function(e, t) {
                     var i = d.map_steamid_to_mutual_friends.get(e.steamid64),
                       n = d.map_steamid_to_mutual_friends.get(t.steamid64),
@@ -55226,7 +55300,7 @@ and limitations under the License.
                 var p = !1;
                 c &&
                   (p =
-                    Kp.SettingsStore.FriendsSettings
+                    Yp.SettingsStore.FriendsSettings
                       .bHideOfflineFriendsInTagGroups);
                 var h = new Set();
                 if (
@@ -55234,12 +55308,12 @@ and limitations under the License.
                   this.props.group.m_eDisplayType == Ja.eOfflineOnly
                 ) {
                   var m =
-                      Kp.SettingsStore.FriendsSettings.bHideCategorizedFriends,
+                      Yp.SettingsStore.FriendsSettings.bHideCategorizedFriends,
                     g =
-                      Kp.SettingsStore.FriendsSettings
+                      Yp.SettingsStore.FriendsSettings
                         .bHideOfflineFriendsInTagGroups;
                   m &&
-                    Kp.FriendStore.FriendGroupStore.user_groups.forEach(
+                    Yp.FriendStore.FriendGroupStore.user_groups.forEach(
                       function(e) {
                         e.member_list_unsorted.forEach(function(e) {
                           (!e.persona.is_online && g) || h.add(e.accountid);
@@ -55295,7 +55369,7 @@ and limitations under the License.
                           "div",
                           null,
                           Cr.createElement(
-                            Vu,
+                            Hu,
                             nt.a(
                               {
                                 friend: t,
@@ -55338,7 +55412,7 @@ and limitations under the License.
                                     "#FriendGroup_Tip_Decline"
                                   )
                                 },
-                                Cr.createElement(Es.O, null)
+                                Cr.createElement(Es.P, null)
                               )
                             ),
                           o &&
@@ -55454,7 +55528,7 @@ and limitations under the License.
                             ? Object(mr.b)("#FriendGroup_Tip_SortByRecent")
                             : Object(mr.b)("#FriendGroup_Tip_SortByAlphabet")
                         },
-                        Cr.createElement(Es.F, null)
+                        Cr.createElement(Es.G, null)
                       )
                   ),
                   Cr.createElement(
@@ -55531,8 +55605,8 @@ and limitations under the License.
             nt.b([Zt.a], t.prototype, "ToggleOfflineSortMethod", null),
             (t = nt.b([Is.observer], t))
           );
-        })(Au),
-        xu = (function(e) {
+        })(Pu),
+        ju = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55551,7 +55625,7 @@ and limitations under the License.
             t
           );
         })(Cr.PureComponent),
-        ju = (function(e) {
+        Uu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bLocalCollapsed: i.props.collapsed }), i;
@@ -55594,7 +55668,7 @@ and limitations under the License.
             (t.prototype.OnShowHeaderContextMenu = function(e) {
               var t = this.props.group.id;
               t &&
-                Kp.AppInfoStore.GetAppInfo(t).is_valid &&
+                Yp.AppInfoStore.GetAppInfo(t).is_valid &&
                 me(Je(this, e), t, e);
             }),
             (t.prototype.render = function() {
@@ -55638,7 +55712,7 @@ and limitations under the License.
                   var u =
                       !this.props.bSingletonGroup &&
                       this.props.group.id !=
-                        Kp.FriendStore.FriendGroupStore.non_steam_game_id,
+                        Yp.FriendStore.FriendGroupStore.non_steam_game_id,
                     d = null,
                     p = 0,
                     h = t;
@@ -55710,7 +55784,7 @@ and limitations under the License.
                   }
                   var S = void 0;
                   this.props.bSingletonGroup &&
-                    (S = Cr.createElement(Uu, {
+                    (S = Cr.createElement(Wu, {
                       appid: l.persona.m_unGamePlayedAppID
                     })),
                     e.push(
@@ -55721,7 +55795,7 @@ and limitations under the License.
                           classNames: "friend-anim",
                           timeout: 320
                         },
-                        Cr.createElement(Vu, {
+                        Cr.createElement(Hu, {
                           friend: l,
                           key: l.accountid,
                           bHideGameName: u,
@@ -55807,8 +55881,8 @@ and limitations under the License.
             nt.b([Zt.a], t.prototype, "OnShowHeaderContextMenu", null),
             (t = nt.b([Is.observer], t))
           );
-        })(Au),
-        Uu = (function(e) {
+        })(Pu),
+        Wu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55818,7 +55892,7 @@ and limitations under the License.
               me(Je(this, e), this.props.appid, e);
             }),
             (t.prototype.render = function() {
-              var e = Kp.AppInfoStore.GetAppInfo(this.props.appid);
+              var e = Yp.AppInfoStore.GetAppInfo(this.props.appid);
               return e.is_valid
                 ? Cr.createElement(
                     "div",
@@ -55846,7 +55920,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Wu = (function(e) {
+        Vu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -55857,7 +55931,7 @@ and limitations under the License.
                 var t = void 0;
                 (t = this.props.onContextMenu
                   ? this.props.onContextMenu(e)
-                  : Rm.FriendHoverStore.GetHover(
+                  : Im.FriendHoverStore.GetHover(
                       this.props.friend
                     ).OnContextMenu(this.props.context, e)),
                   t &&
@@ -55866,7 +55940,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.componentWillUnmount = function() {
-              Rm.FriendHoverStore.GetHover(this.props.friend).HideByElement(
+              Im.FriendHoverStore.GetHover(this.props.friend).HideByElement(
                 Bs.findDOMNode(this)
               );
             }),
@@ -55874,7 +55948,7 @@ and limitations under the License.
               var e = Cr.Children.only(this.props.children);
               if (e) {
                 var t = this.props,
-                  i = Rm.FriendHoverStore.GetHover(t.friend);
+                  i = Im.FriendHoverStore.GetHover(t.friend);
                 return Cr.cloneElement(e, {
                   onMouseEnter: function(e) {
                     return i.Show(e, t.context);
@@ -55889,7 +55963,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Vu = (function(e) {
+        Hu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActive: !1 }), i;
@@ -55919,24 +55993,24 @@ and limitations under the License.
                   this.props.friend.persona.m_steamid.ConvertTo64BitString()
                 ),
                 this.props.friend.is_friend
-                  ? Rm.DragDropManager.StartDrag({
+                  ? Im.DragDropManager.StartDrag({
                       type: "friend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     })
-                  : Rm.DragDropManager.StartDrag({
+                  : Im.DragDropManager.StartDrag({
                       type: "nonfriend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     }),
-                Rm.FriendHoverStore.GetHover(
+                Im.FriendHoverStore.GetHover(
                   this.props.friend
                 ).HideAllInstances();
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Rm.DragDropManager.EndDrag();
+              Im.DragDropManager.EndDrag();
             }),
             (t.prototype.OnShowContextMenu = function(e) {
               var t = V(Je(this, e), this.props.context, this.props.friend, e);
@@ -55953,11 +56027,11 @@ and limitations under the License.
               var e = this.props.friend;
               if ((e.LoadIfNecessary(), !e.is_ready))
                 return Cr.createElement("div", null);
-              var t = Kp.CMInterface.steamid.GetAccountID() == e.accountid,
+              var t = Yp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "",
                 n = (this.props.avatarQualityFull, 0);
               this.props.showVoiceLevel &&
-                (n = Kp.VoiceStore.get_volume(e.accountid));
+                (n = Yp.VoiceStore.get_volume(e.accountid));
               var r = { className: "friend " + he(e.persona) };
               if (
                 (this.props.className &&
@@ -55966,9 +56040,9 @@ and limitations under the License.
                   (r.className += " friendStatusHover"),
                 t)
               ) {
-                var o = Kp.VoiceStore.IsAttemptingInitialConnection(),
-                  a = Kp.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
-                  s = Kp.VoiceStore.IsAttemptingReconnect();
+                var o = Yp.VoiceStore.IsAttemptingInitialConnection(),
+                  a = Yp.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
+                  s = Yp.VoiceStore.IsAttemptingReconnect();
                 a
                   ? (i = Object(mr.b)("#VoiceChatConnecting"))
                   : s && (i = Object(mr.b)("#VoiceChatReconnecting"));
@@ -56001,7 +56075,7 @@ and limitations under the License.
                 }
                 this.state.bActive &&
                   (r.className += " Friend_ContextMenuActive");
-                var h = Kp.VoiceStore.GetPerUserMuting(e.accountid);
+                var h = Yp.VoiceStore.GetPerUserMuting(e.accountid);
                 l = Cr.createElement(
                   "div",
                   nt.a({}, r),
@@ -56010,7 +56084,7 @@ and limitations under the License.
                       className: "SteamPlayerGroupLines"
                     }),
                   this.props.bInVoiceList &&
-                    Cr.createElement(Hu, { friend: e }),
+                    Cr.createElement(qu, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   Cr.createElement(
                     "div",
@@ -56026,9 +56100,9 @@ and limitations under the License.
                         : e.persona.avatar_url_medium,
                       draggable: !1
                     }),
-                    this.props.bInVoiceList && h && Cr.createElement(Es.M, null)
+                    this.props.bInVoiceList && h && Cr.createElement(Es.N, null)
                   ),
-                  Cr.createElement(Ku, {
+                  Cr.createElement(Yu, {
                     friend: e,
                     strOverrideStatus: i,
                     bHideGameName: this.props.bHideGameName,
@@ -56047,7 +56121,7 @@ and limitations under the License.
               return this.props.noActions
                 ? l
                 : Cr.createElement(
-                    Wu,
+                    Vu,
                     {
                       friend: e,
                       context: this.props.context,
@@ -56066,7 +56140,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Hu = (function(e) {
+        qu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56074,24 +56148,24 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.friend,
-                t = Kp.CMInterface.steamid.GetAccountID() == e.accountid,
+                t = Yp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "voiceStatusIconsContainer",
                 n = "",
                 r = "",
                 o = !1,
                 a = !1,
                 s = !1,
-                c = Kp.VoiceStore.GetPerUserMuting(e.accountid),
-                l = Kp.VoiceStore.GetUserMutedRemotely(e.accountid),
-                u = Kp.VoiceStore.GetOutputMutedRemotely(e.accountid);
+                c = Yp.VoiceStore.GetPerUserMuting(e.accountid),
+                l = Yp.VoiceStore.GetUserMutedRemotely(e.accountid),
+                u = Yp.VoiceStore.GetOutputMutedRemotely(e.accountid);
               return (
                 t
-                  ? ((o = Kp.VoiceStore.IsMicMuted()),
-                    (a = Kp.VoiceStore.IsOutputMuted()),
-                    (s = Kp.VoiceStore.BNoMicAvailableForSession()),
+                  ? ((o = Yp.VoiceStore.IsMicMuted()),
+                    (a = Yp.VoiceStore.IsOutputMuted()),
+                    (s = Yp.VoiceStore.BNoMicAvailableForSession()),
                     o && (i += " mic_muted_self"),
                     a && (i += " output_muted_self"))
-                  : (s = Kp.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
+                  : (s = Yp.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
                 c && (i += " muted_locally"),
                 l && (i += " mic_muted_remotely"),
                 u && (i += " output_muted_remotely"),
@@ -56129,7 +56203,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        qu = (function(e) {
+        Ku = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56161,7 +56235,7 @@ and limitations under the License.
                 )
               );
               return Cr.createElement(
-                Wu,
+                Vu,
                 { friend: e, context: this.props.context },
                 i
               );
@@ -56169,7 +56243,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Ku = (function(e) {
+        Yu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56189,10 +56263,10 @@ and limitations under the License.
                 ? (n = this.props.strOverrideStatus)
                 : r
                   ? ((o =
-                      Kp.FriendStore.FriendGroupStore.incoming_invites_group),
+                      Yp.FriendStore.FriendGroupStore.incoming_invites_group),
                     (a = o.map_steamid_to_mutual_friends.get(e.steamid64)),
                     void 0 === a
-                      ? (Kp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                      ? (Yp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
                         (n = Object(mr.b)("#FriendGroup_NoMutualFriends")),
                         (c += " noMutualFriends"))
                       : ((n = Object(mr.c)(
@@ -56212,7 +56286,7 @@ and limitations under the License.
                       : (n = e.localized_online_status),
                 e.persona.is_awayOrSnooze &&
                   !this.props.bHidePersona &&
-                  (t = Cr.createElement(Pu, null)),
+                  (t = Cr.createElement(zu, null)),
                 (!this.props.bHideGameName && i) || (c += " twoLine");
               var l = null;
               this.props.onShowContextMenu
@@ -56291,7 +56365,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Yu = (function(e) {
+        Ju = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56299,7 +56373,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.render = function() {
               var e,
-                t = Kp.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
+                t = Yp.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
                   this.props.browserContext
                 );
               return (
@@ -56329,7 +56403,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Ju = (function(e) {
+        Xu = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -56365,7 +56439,7 @@ and limitations under the License.
                         Cr.createElement(
                           "div",
                           { className: "unreadFriend" },
-                          Cr.createElement(Vu, {
+                          Cr.createElement(Hu, {
                             friend: i,
                             key: i.accountid,
                             context: { chat: e },
@@ -56406,7 +56480,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Xu = (Cr.Component,
+        Zu = (Cr.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -56511,7 +56585,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component)),
-        Zu = (function(e) {
+        Qu = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -56578,7 +56652,7 @@ and limitations under the License.
               if (t.is_ingame) {
                 var s = "";
                 if (t.m_unGamePlayedAppID) {
-                  var c = Kp.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
+                  var c = Yp.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
                   c && (s = c.logo_url);
                 }
                 o = Cr.createElement(
@@ -56611,7 +56685,7 @@ and limitations under the License.
               var l = !0,
                 u = !1;
               e.friend.is_friend ||
-                e.friend == Kp.FriendStore.self ||
+                e.friend == Yp.FriendStore.self ||
                 ((a += " notFriends"), (l = !1)),
                 e.friend.is_blocked &&
                   ((a += " communicationBlocked"), (u = !0));
@@ -56619,7 +56693,7 @@ and limitations under the License.
                 p = void 0,
                 h = null,
                 m = !1;
-              t.is_awayOrSnooze && ((h = Cr.createElement(Pu, null)), (m = !0));
+              t.is_awayOrSnooze && ((h = Cr.createElement(zu, null)), (m = !0));
               var g = Cr.createElement("div", null),
                 f = this.props.hoverInstance.context;
               if (
@@ -56627,7 +56701,7 @@ and limitations under the License.
                 f.friendGroup &&
                 f.friendGroup.m_eDisplayType == Ja.eIncomingInvites
               ) {
-                var _ = Kp.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
+                var _ = Yp.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                   e.friend.steamid64
                 );
                 if (void 0 != _) {
@@ -56643,7 +56717,7 @@ and limitations under the License.
                     b < v.length && b < 10;
                     b++
                   ) {
-                    var C = Kp.FriendStore.GetFriend(v[b]);
+                    var C = Yp.FriendStore.GetFriend(v[b]);
                     y.push(
                       Cr.createElement(
                         "div",
@@ -56825,7 +56899,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Qu = (function(e) {
+        $u = (function(e) {
           function t(t, i) {
             var n =
               e.call(this, "hoverpopup", {
@@ -56861,7 +56935,7 @@ and limitations under the License.
               var i = this.InternalRender();
               Bs.render(
                 Cr.createElement(
-                  ed,
+                  td,
                   nt.a({}, this.m_hoverProps, { popup: e }),
                   i
                 ),
@@ -56871,7 +56945,7 @@ and limitations under the License.
             t
           );
         })(Fs.a),
-        $u = (function(e) {
+        ed = (function(e) {
           function t(t, i, n) {
             var r =
               e.call(
@@ -56891,12 +56965,12 @@ and limitations under the License.
             (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {}),
             (t.prototype.InternalRender = function() {
-              return Cr.createElement(Zu, { hoverInstance: this.m_instance });
+              return Cr.createElement(Qu, { hoverInstance: this.m_instance });
             }),
             t
           );
-        })(Qu),
-        ed = (function(e) {
+        })($u),
+        td = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -57014,19 +57088,19 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        td = (function(e) {
+        id = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             nt.c(t, e),
             (t.OnMouseEnter = function(e) {
-              Rm.EmoticonHoverStore.GetEmoticonHover(
+              Im.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Show(e);
             }),
             (t.OnMouseLeave = function(e) {
-              Rm.EmoticonHoverStore.GetEmoticonHover(
+              Im.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Hide(e);
             }),
@@ -57043,7 +57117,7 @@ and limitations under the License.
             t
           );
         })(Cr.PureComponent),
-        id = (function(e) {
+        nd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57051,7 +57125,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.render = function() {
               return Cr.createElement(
-                Xu,
+                Zu,
                 {
                   visibilityObserver: this.props.hover,
                   target: this.props.target,
@@ -57074,7 +57148,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        nd = (function(e) {
+        rd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -57088,7 +57162,7 @@ and limitations under the License.
             (t.prototype.OnClick = function(e) {
               var t = e.currentTarget.getAttribute("data-emoticon");
               this.props.OnSelected(t, e.shiftKey),
-                Rm.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
+                Im.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
             }),
             (t.prototype.OnSearchInput = function(e) {
               var t = e.currentTarget.value;
@@ -57103,7 +57177,7 @@ and limitations under the License.
               var i = t.name;
               return (
                 e && (i = e + t.name),
-                Cr.createElement(rd, {
+                Cr.createElement(od, {
                   key: i,
                   emoticon: t,
                   onClick: this.OnClick,
@@ -57122,7 +57196,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Kp.ChatStore.EmoticonStore,
+                t = Yp.ChatStore.EmoticonStore,
                 i = [],
                 n = [],
                 r = !1;
@@ -57216,7 +57290,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        rd = (function(e) {
+        od = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { visible: !1 }), i;
@@ -57244,14 +57318,14 @@ and limitations under the License.
                   "data-emoticon": e.name,
                   onClick: this.props.onClick
                 },
-                this.state.visible && Cr.createElement(td, { emoticon: e.name })
+                this.state.visible && Cr.createElement(id, { emoticon: e.name })
               );
             }),
             nt.b([Zt.a], t.prototype, "SetVisible", null),
             t
           );
         })(Cr.Component),
-        od = (function(e) {
+        ad = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -57361,7 +57435,7 @@ and limitations under the License.
             }),
             (t.prototype.OnEmoticonClick = function(e) {
               Object(Mr.a)(
-                Cr.createElement(nd, { OnSelected: this.OnEmoticonSelected }),
+                Cr.createElement(rd, { OnSelected: this.OnEmoticonSelected }),
                 e.currentTarget,
                 {
                   bOverlapHorizontal: !0,
@@ -57537,15 +57611,15 @@ and limitations under the License.
                 t = void 0,
                 i = this.props.chatView && this.props.chatView.chat;
               this.state.bInMentionSearch
-                ? (e = Cr.createElement(pd, {
+                ? (e = Cr.createElement(hd, {
                     chat: i,
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnMentionSuggestionSelected,
                     ref: this.bindMentionDialog
                   }))
                 : this.state.bInEmoticonSearch &&
-                  (e = Cr.createElement(hd, {
-                    emoticonStore: Kp.ChatStore.EmoticonStore,
+                  (e = Cr.createElement(md, {
+                    emoticonStore: Yp.ChatStore.EmoticonStore,
                     strSearch: this.state.mentionSearch,
                     nMinimumSearchLengthBeforeAutoSelection: 2,
                     onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -57554,15 +57628,15 @@ and limitations under the License.
               var n = this.props.chatView.chat.file_upload_props;
               return (
                 this.props.chatView.file_upload_data_url
-                  ? (t = Cr.createElement(sd, {
+                  ? (t = Cr.createElement(cd, {
                       chatView: this.props.chatView
                     }))
                   : 2 == n.eUploadState
-                    ? (t = Cr.createElement(ld, {
+                    ? (t = Cr.createElement(ud, {
                         chatView: this.props.chatView
                       }))
                     : 0 != n.eUploadState &&
-                      (t = Cr.createElement(cd, {
+                      (t = Cr.createElement(ld, {
                         chat: this.props.chatView.chat
                       })),
                 Cr.createElement(
@@ -57601,7 +57675,7 @@ and limitations under the License.
                         disabled: !this.state.submitEnabled,
                         title: Object(mr.b)("#ChatEntryButton_Submit")
                       },
-                      Cr.createElement(Es.G, null)
+                      Cr.createElement(Es.H, null)
                     ),
                     Cr.createElement(
                       "button",
@@ -57637,7 +57711,7 @@ and limitations under the License.
                       onChange: this.OnFileInputChange
                     })
                   ),
-                  Cr.createElement(ad, { chat: i })
+                  Cr.createElement(sd, { chat: i })
                 )
               );
             }),
@@ -57663,7 +57737,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        ad = (function(e) {
+        sd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57673,7 +57747,7 @@ and limitations under the License.
               var t = this.props.chat;
               if (t instanceof Ms) return void t.ToggleVoiceChat();
               if (this.IsVoiceActiveForButton())
-                return void Kp.VoiceStore.OnUserEndVoiceChat();
+                return void Yp.VoiceStore.OnUserEndVoiceChat();
               if (t instanceof ds) {
                 var i = t.GetGroup();
                 if (i) {
@@ -57681,7 +57755,7 @@ and limitations under the License.
                   if (0 == n.length) return void i.CreateAndJoinTempVoiceRoom();
                   if (1 == n.length) {
                     var r = n[0];
-                    return void Kp.VoiceStore.InitiateRoomChat(
+                    return void Yp.VoiceStore.InitiateRoomChat(
                       i.GetGroupID(),
                       r.GetRoomID()
                     );
@@ -57701,7 +57775,7 @@ and limitations under the License.
               if (e instanceof Ms) t = e.BVoiceActive();
               else if (e instanceof ds) {
                 var i = e.GetGroup();
-                t = Kp.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
+                t = Yp.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
               }
               return t;
             }),
@@ -57712,9 +57786,9 @@ and limitations under the License.
                 n = this.props.chat;
               e
                 ? (t.push("Active"),
-                  Kp.VoiceStore.BNoMicAvailableForSession() &&
+                  Yp.VoiceStore.BNoMicAvailableForSession() &&
                     t.push("NoMicrophone"),
-                  Kp.VoiceStore.IsMicMuted() && t.push("MicMuted"))
+                  Yp.VoiceStore.IsMicMuted() && t.push("MicMuted"))
                 : t.push(" Inactive");
               var r = !n.BIsVoiceAllowed();
               if (r) t.push(" Disabled"), (i = n.GetVoiceNotAllowedReason());
@@ -57734,9 +57808,9 @@ and limitations under the License.
                       : o &&
                         (i = "#Tooltip_VoiceControlButton_group_joinmultiple");
                 }
-              var a = Kp.VoiceStore.GetPushToTalkEnabled(),
-                s = Kp.VoiceStore.GetPushToTalkKeyDown(),
-                c = Kp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var a = Yp.VoiceStore.GetPushToTalkEnabled(),
+                s = Yp.VoiceStore.GetPushToTalkKeyDown(),
+                c = Yp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 l = "";
               return (
                 a && (l += " pushToTalkEnabled"),
@@ -57764,7 +57838,7 @@ and limitations under the License.
                       Cr.createElement(
                         "div",
                         { className: "VoiceToggleIconCtn" },
-                        Cr.createElement(Es.L, null)
+                        Cr.createElement(Es.M, null)
                       )
                     ),
                     Cr.createElement(
@@ -57799,7 +57873,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        sd = (function(e) {
+        cd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57821,7 +57895,7 @@ and limitations under the License.
                     }))
                   : -1 !=
                       this.props.chatView.file_upload.type.indexOf("video") &&
-                    (e = Cr.createElement(Es.K, null)),
+                    (e = Cr.createElement(Es.L, null)),
                 Cr.createElement(
                   "div",
                   { className: "chatFileUploadPreviewContainer" },
@@ -57839,7 +57913,7 @@ and limitations under the License.
                       className: "chatFileUploadCancel",
                       onClick: this.handleCancel
                     },
-                    Cr.createElement(Es.O, null)
+                    Cr.createElement(Es.P, null)
                   ),
                   Cr.createElement(
                     "button",
@@ -57858,7 +57932,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        cd = (function(e) {
+        ld = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57894,7 +57968,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        ld = (function(e) {
+        ud = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -57958,7 +58032,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        ud = (function(e) {
+        dd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58114,7 +58188,7 @@ and limitations under the License.
                     o = i === this.state.selectedIndex;
                   e.push(
                     Cr.createElement(
-                      dd,
+                      pd,
                       {
                         key: r,
                         matchKey: r,
@@ -58155,7 +58229,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        dd = (function(e) {
+        pd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58185,7 +58259,7 @@ and limitations under the License.
             t
           );
         })(Cr.PureComponent),
-        pd = (function(e) {
+        hd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58307,8 +58381,8 @@ and limitations under the License.
             (t.nMaxMatches = 12),
             t
           );
-        })(ud),
-        hd = (function(e) {
+        })(dd),
+        md = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58329,7 +58403,7 @@ and limitations under the License.
                 {
                   className: "EmoticonSuggestion" + (e.recent ? " Recent" : "")
                 },
-                Cr.createElement(td, { emoticon: e.name }),
+                Cr.createElement(id, { emoticon: e.name }),
                 ":",
                 e.name,
                 ":"
@@ -58349,8 +58423,8 @@ and limitations under the License.
             }),
             t
           );
-        })(ud),
-        md = (function(e) {
+        })(dd),
+        gd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { error: null }), i;
@@ -58431,7 +58505,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        gd = (function(e) {
+        fd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58588,7 +58662,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        fd = (function(e) {
+        _d = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -58606,7 +58680,7 @@ and limitations under the License.
             }),
             (t.prototype.SetDragTab = function(e) {
               void 0 !== e
-                ? (this.m_fnUnregisterDropComplete = Rm.DragDropManager.RegisterForDropComplete(
+                ? (this.m_fnUnregisterDropComplete = Im.DragDropManager.RegisterForDropComplete(
                     this.HandleDropComplete
                   ))
                 : this.m_fnUnregisterDropComplete &&
@@ -58682,7 +58756,7 @@ and limitations under the License.
               this.props.tabSet.ActivateTab(e);
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               t && "chattab" == t.type && (t.tabSet = this.props.tabSet);
             }),
             (t.prototype.OnDragEnd = function() {
@@ -58693,9 +58767,9 @@ and limitations under the License.
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
               var e = Xe(this.props.popup);
-              Kp.UIStore.BIsDockedFriendsList(e)
+              Yp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
-                    Rm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                    Im.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
                   )
                 : this.props.popup.SteamClient.Window.ResizeTo(
@@ -58740,7 +58814,7 @@ and limitations under the License.
                 ));
               var a = !1;
               return (
-                this.props.popup && (a = Xe(this.props.popup) != Hp),
+                this.props.popup && (a = Xe(this.props.popup) != qp),
                 Cr.createElement(
                   "div",
                   { className: r, onDragStart: this.OnDragStart },
@@ -58755,7 +58829,7 @@ and limitations under the License.
                   o,
                   this.props.tabSet.tabCount > 0 &&
                     Cr.createElement(
-                      gd,
+                      fd,
                       { className: "chatTabList", ref: this.OnScrollRef },
                       Cr.createElement(
                         Ls,
@@ -58773,7 +58847,7 @@ and limitations under the License.
                               key: t.GetUniqueID(),
                               timeout: 350
                             },
-                            Cr.createElement(_d, {
+                            Cr.createElement(yd, {
                               tab: t,
                               active: n,
                               selectTab: e.SelectTab,
@@ -58797,7 +58871,7 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Cr.createElement(Es.E, null)
+                      Cr.createElement(Es.F, null)
                     ),
                   Cr.createElement("div", { className: "dropTargetBox" })
                 )
@@ -58814,7 +58888,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        _d = (function(e) {
+        yd = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_bMiddleMouseDown = !1), t;
@@ -58835,7 +58909,7 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = e.clientX - e.currentTarget.getBoundingClientRect().left,
                 i = e.clientY - e.currentTarget.getBoundingClientRect().top;
-              Rm.DragDropManager.StartDrag({
+              Im.DragDropManager.StartDrag({
                 type: "chattab",
                 tab: this.props.tab,
                 offsetX: t,
@@ -58843,11 +58917,11 @@ and limitations under the License.
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Rm.DragDropManager.GetDragData();
+              var t = Im.DragDropManager.GetDragData();
               if (t && "chattab" == t.type) {
                 var i = t;
                 if (
-                  !Rm.DragDropManager.BWasDropConsumed() &&
+                  !Im.DragDropManager.BWasDropConsumed() &&
                   i.tabSet &&
                   i.tabSet.tabCount > 1 &&
                   it.a.USE_POPUPS
@@ -58868,14 +58942,14 @@ and limitations under the License.
                       e.currentTarget.ownerDocument.defaultView.SteamClient.Window.GetMousePositionDetails(
                         function(e) {
                           e && ((s.left = -i.offsetX), (s.top = -i.offsetY)),
-                            Kp.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
+                            Yp.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
                         }
                       );
-                    } else Kp.UIStore.MoveTabToNewPopup(Je(this, e), i.tab, s);
+                    } else Yp.UIStore.MoveTabToNewPopup(Je(this, e), i.tab, s);
                   }
                 }
               }
-              Rm.DragDropManager.EndDrag();
+              Im.DragDropManager.EndDrag();
             }),
             (t.prototype.OnMouseDown = function(e) {
               0 == e.button
@@ -58886,7 +58960,7 @@ and limitations under the License.
             (t.prototype.OnMouseUp = function(e) {
               1 == e.button &&
                 this.m_bMiddleMouseDown &&
-                (Kp.UIStore.CloseTab(Je(this, e), this.props.tab),
+                (Yp.UIStore.CloseTab(Je(this, e), this.props.tab),
                 e.preventDefault(),
                 (this.m_bMiddleMouseDown = !1));
             }),
@@ -58894,7 +58968,7 @@ and limitations under the License.
               this.m_bMiddleMouseDown = !1;
             }),
             (t.prototype.OnCloseClick = function(e) {
-              Kp.UIStore.CloseTab(Je(this, e), this.props.tab),
+              Yp.UIStore.CloseTab(Je(this, e), this.props.tab),
                 e.stopPropagation();
             }),
             (t.prototype.OnContextMenu = function(e) {
@@ -58919,7 +58993,7 @@ and limitations under the License.
                 e.IsChatRoom() && (i += " chatRoom"),
                 e.IsVoiceActive() &&
                   ((i += " VoiceActive"),
-                  Kp.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
+                  Yp.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
                 Cr.createElement(
                   "div",
                   {
@@ -58939,13 +59013,13 @@ and limitations under the License.
                       "div",
                       {
                         className: "MicStatus",
-                        title: Kp.ChatStore.VoiceChat.IsMicMuted()
+                        title: Yp.ChatStore.VoiceChat.IsMicMuted()
                           ? Object(mr.b)("#Tooltip_MicStatus_Muted")
                           : Object(mr.b)("#Tooltip_MicStatus_Active")
                       },
                       Cr.createElement(Es.t, null)
                     ),
-                  Cr.createElement(yd, { tab: this.props.tab }),
+                  Cr.createElement(vd, { tab: this.props.tab }),
                   Cr.createElement(
                     "div",
                     { className: "TabRightContainer" },
@@ -58956,7 +59030,7 @@ and limitations under the License.
                         className: "chatTabClose closeButton",
                         onClick: this.OnCloseClick
                       },
-                      Cr.createElement(Es.O, null)
+                      Cr.createElement(Es.P, null)
                     ),
                     t > 0 &&
                       Cr.createElement(
@@ -58981,7 +59055,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        yd = (function(e) {
+        vd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -58993,7 +59067,7 @@ and limitations under the License.
                 return Cr.createElement(
                   "div",
                   { className: "ChatTabContent" },
-                  Cr.createElement(Vu, {
+                  Cr.createElement(Hu, {
                     friend: e.chat.chat_partner,
                     noActions: !0,
                     context: { chat: e.chat }
@@ -59017,7 +59091,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        vd = (function(e) {
+        bd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -59082,22 +59156,22 @@ and limitations under the License.
                 var i = e,
                   n = -1;
                 this.m_refChatTabs && (n = this.m_refChatTabs.state.iDragIndex),
-                  Rm.DragDropManager.SetDropConsumed(),
+                  Im.DragDropManager.SetDropConsumed(),
                   i.tabSet != this.props.tabs &&
                     (i.tabSet.RemoveTab(i.tab),
                     this.props.tabs.AddTab(i.tab),
-                    Rm.DragDropManager.EndDrag()),
+                    Im.DragDropManager.EndDrag()),
                   -1 != n && this.props.tabs.MoveTabToIndex(i.tab, n),
                   this.props.tabs.ActivateTab(i.tab),
                   this.setState({ tabDrag: void 0 });
               } else if ("friend" == e.type) {
-                Rm.DragDropManager.SetDropConsumed();
+                Im.DragDropManager.SetDropConsumed();
                 var r = e;
                 r.friend.OpenChatDialog(Je(this, t));
               } else if ("chatroomgroup" == e.type) {
-                Rm.DragDropManager.SetDropConsumed();
+                Im.DragDropManager.SetDropConsumed();
                 var o = e;
-                Kp.UIStore.ShowAndOrActivateChatRoomGroup(
+                Yp.UIStore.ShowAndOrActivateChatRoomGroup(
                   Je(this),
                   o.group,
                   !0
@@ -59150,19 +59224,19 @@ and limitations under the License.
                   r = i instanceof gs && i;
                 return (
                   (n = r
-                    ? Cr.createElement(wd, {
+                    ? Cr.createElement(Od, {
                         groupView: r,
                         isActive: i == t,
                         popup: e.props.popup,
                         showWindowControls: !1
                       })
-                    : Cr.createElement(Sd, {
+                    : Cr.createElement(Md, {
                         chatView: i.GetChatView(),
                         isActive: i == t,
                         popup: e.props.popup,
                         showWindowControls: !1
                       })),
-                  Cr.createElement(md, { key: i.GetUniqueID() }, n)
+                  Cr.createElement(gd, { key: i.GetUniqueID() }, n)
                 );
               });
               return Cr.createElement(
@@ -59177,7 +59251,7 @@ and limitations under the License.
                   onKeyDown: this.OnKeyDown,
                   tabIndex: 0
                 },
-                Cr.createElement(fd, {
+                Cr.createElement(_d, {
                   tabSet: this.props.tabs,
                   popup: this.props.popup,
                   activeTab: t,
@@ -59207,7 +59281,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        bd = (function(e) {
+        Cd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -59215,43 +59289,43 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.InitiateVoiceChat = function() {
               this.props.chatView.chat.accountid_partner,
-                Kp.VoiceStore.InitiateFriendChat(
+                Yp.VoiceStore.InitiateFriendChat(
                   this.props.chatView.chat.accountid_partner
                 );
             }),
             (t.prototype.VoidOnClick = function() {}),
             (t.prototype.EndVoiceChat = function() {
-              Kp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Yp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Kp.VoiceStore.OnUserEndVoiceChat();
+                Yp.VoiceStore.OnUserEndVoiceChat();
             }),
             (t.prototype.LeaveVoiceChat = function() {
-              Kp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Yp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Kp.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
+                Yp.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
             }),
             (t.prototype.OnCloseClick = function() {
-              Kp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Yp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
               this.props.chatView.chat.accountid_partner
-                ? Kp.VoiceStore.OnUserEndVoiceChat()
-                : Kp.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
+                ? Yp.VoiceStore.OnUserEndVoiceChat()
+                : Yp.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
                     this.props.chatView.chat.accountid_partner
                   );
             }),
             (t.prototype.render = function() {
-              var e = Kp.VoiceStore.BInitiatedOneOnOneChat(
+              var e = Yp.VoiceStore.BInitiatedOneOnOneChat(
                   this.props.chatView.chat.accountid_partner
                 ),
-                t = Kp.CMInterface.steamid.GetAccountID(),
+                t = Yp.CMInterface.steamid.GetAccountID(),
                 i = this.props.chatView.chat.accountid_partner,
-                n = Kp.FriendStore.GetPlayer(t),
-                r = Kp.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
-                o = Kp.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
+                n = Yp.FriendStore.GetPlayer(t),
+                r = Yp.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
+                o = Yp.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
                 a = this.props.chatView.chat.chat_partner,
-                s = Kp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
+                s = Yp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
                 c =
                   !r &&
-                  Kp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                  Yp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                     a.accountid
                   ),
                 l = void 0;
@@ -59260,7 +59334,7 @@ and limitations under the License.
                   ? Cr.createElement(
                       zs,
                       { key: t, classNames: "friend-anim", timeout: 320 },
-                      Cr.createElement(Vu, {
+                      Cr.createElement(Hu, {
                         friend: n,
                         key: t,
                         showVoiceLevel: !0,
@@ -59298,7 +59372,7 @@ and limitations under the License.
                       Cr.createElement(
                         zs,
                         { key: i, classNames: "friend-anim", timeout: 320 },
-                        Cr.createElement(Vu, {
+                        Cr.createElement(Hu, {
                           friend: a,
                           key: i,
                           showVoiceLevel: !0,
@@ -59398,7 +59472,7 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "VoiceToggleIconCtn" },
-                  Cr.createElement(Es.L, null),
+                  Cr.createElement(Es.M, null),
                   Cr.createElement(
                     "div",
                     { className: "Sonar" },
@@ -59422,7 +59496,7 @@ and limitations under the License.
                         ? Object(mr.b)("#Voice_EndVoice")
                         : Object(mr.b)("#Tooltip_DismissVoice")
                     },
-                    Cr.createElement(Es.O, null)
+                    Cr.createElement(Es.P, null)
                   )
               );
             }),
@@ -59434,7 +59508,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Cd = (function(e) {
+        Sd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.invitee = i.props.invitee), i;
@@ -59450,7 +59524,7 @@ and limitations under the License.
                   : this.props.invitedto instanceof ms
                     ? ne(Je(this, e), i, this.props.invitedto, void 0, !0, t)
                     : this.props.invitedto instanceof ds &&
-                      Kp.UIStore.OpenInviteDialogForChatGroup(
+                      Yp.UIStore.OpenInviteDialogForChatGroup(
                         Je(this, e),
                         i,
                         this.props.invitedto.GetGroup(),
@@ -59478,7 +59552,7 @@ and limitations under the License.
                   this.invitedToPlayer.persona.m_steamid.ConvertTo64BitString()
                 ),
                   i.push(this.invitee.persona.m_steamid.ConvertTo64BitString()),
-                  Kp.UIStore.ReplaceFriendChatWithGroupChat(
+                  Yp.UIStore.ReplaceFriendChatWithGroupChat(
                     t,
                     this.props.chatview,
                     i
@@ -59504,7 +59578,7 @@ and limitations under the License.
                 t,
                 i,
                 n = this.props.invitee,
-                r = Kp.FriendStore.self,
+                r = Yp.FriendStore.self,
                 o = !1;
               this.props.invitedto instanceof Xa
                 ? (e = this.props.invitedto)
@@ -59523,7 +59597,7 @@ and limitations under the License.
                     (u = "#Chat_Actions_DropGroupInvite_Member_Confirm"),
                   (o =
                     !!t.BIsClanChatRoom() &&
-                    Kp.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
+                    Yp.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
                   (a = t.name),
                   (s = Cr.createElement(pu, { group: t, name: t.name })),
                   (d = t.BIsUserGroupMember(n)))
@@ -59554,7 +59628,7 @@ and limitations under the License.
                     (s = Cr.createElement(
                       "div",
                       { className: "displayRow" },
-                      Cr.createElement(Es.L, null)
+                      Cr.createElement(Es.M, null)
                     )));
               var p = null;
               return (
@@ -59663,7 +59737,7 @@ and limitations under the License.
                             ? Cr.createElement(
                                 "div",
                                 { className: "staticX" },
-                                Cr.createElement(Es.O, null)
+                                Cr.createElement(Es.P, null)
                               )
                             : Cr.createElement(
                                 "div",
@@ -59720,7 +59794,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Sd = (function(e) {
+        Md = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -59759,7 +59833,7 @@ and limitations under the License.
               )
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Rm.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Im.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropToInviteFriend: i }),
@@ -59769,7 +59843,7 @@ and limitations under the License.
               if (n)
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Rm.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Im.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropGroupToInviteFriend: n }),
@@ -59779,7 +59853,7 @@ and limitations under the License.
               return (
                 !r ||
                 (this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = Rm.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = Im.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropClanToInvite: r }),
@@ -59826,7 +59900,7 @@ and limitations under the License.
                     (this.m_fnUnregisterDropComplete.Unregister(),
                     (this.m_fnUnregisterDropComplete = void 0),
                     this.setState({ dropToInviteFriend: void 0 })),
-                    Rm.DragDropManager.SetDropConsumed(),
+                    Im.DragDropManager.SetDropConsumed(),
                     ve(
                       { invitee: o, chatview: i, invitedto: r },
                       Je(this, t),
@@ -59842,9 +59916,9 @@ and limitations under the License.
                         dropGroupToInviteFriend: void 0,
                         dropClanToInvite: void 0
                       })),
-                    Rm.DragDropManager.SetDropConsumed(),
+                    Im.DragDropManager.SetDropConsumed(),
                     s &&
-                      (a = Kp.ChatStore.GetChatRoomGroup(
+                      (a = Yp.ChatStore.GetChatRoomGroup(
                         s.GetChatGroupIDIfLoaded()
                       )),
                     ve({ invitee: r, invitedto: a }, Je(this, t), n));
@@ -59865,7 +59939,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               if (!this.props.chatView) return null;
               var e = this.props.chatView.chat,
-                t = Kp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                t = Yp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                   e.accountid_partner
                 ),
                 i = this.props.chatView.BVoiceActive(),
@@ -59881,7 +59955,7 @@ and limitations under the License.
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    Cr.createElement(Td, {
+                    Cr.createElement(Gd, {
                       chatView: this.props.chatView,
                       friend: this.state.dropToInviteFriend
                     })
@@ -59895,7 +59969,7 @@ and limitations under the License.
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    Cr.createElement(Gd, {
+                    Cr.createElement(Nd, {
                       chatView: this.props.chatView,
                       group: this.state.dropGroupToInviteFriend,
                       clan: this.state.dropClanToInvite
@@ -59904,7 +59978,7 @@ and limitations under the License.
               var a = "chatWindow SingleUserChat";
               i &&
                 ((a += " VoiceActive"),
-                Kp.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
+                Yp.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
                 t && (a += " VoiceRequested"),
                 n && (a += " NotAFriendOrApproved");
               var s = "chatBody";
@@ -59924,7 +59998,7 @@ and limitations under the License.
                   },
                   Cr.createElement("div", { className: "chatHeader" }),
                   this.props.isActive &&
-                    Cr.createElement(Md, {
+                    Cr.createElement(Fd, {
                       chatView: this.props.chatView,
                       onNameWidthChanged: this.OnNameWidthChanged
                     }),
@@ -59942,7 +60016,7 @@ and limitations under the License.
                         Cr.createElement(
                           "div",
                           null,
-                          Cr.createElement(bd, {
+                          Cr.createElement(Cd, {
                             chatView: this.props.chatView
                           })
                         )
@@ -59962,19 +60036,19 @@ and limitations under the License.
                     },
                     Cr.createElement(Ls, null, o),
                     n &&
-                      Cr.createElement(kd, {
+                      Cr.createElement(Td, {
                         chatView: this.props.chatView,
                         friend: e.chat_partner
                       }),
-                    Cr.createElement(Od, {
+                    Cr.createElement(Bd, {
                       chatView: this.props.chatView,
                       isActive: this.props.isActive,
                       speakerLabelWidth: this.state.speakerLabelWidth
                     }),
-                    Cr.createElement(Fd, { chatView: this.props.chatView }),
+                    Cr.createElement(wd, { chatView: this.props.chatView }),
                     Cr.createElement("div", { className: "dropTargetBox" })
                   ),
-                  Cr.createElement(od, {
+                  Cr.createElement(ad, {
                     key: e.unique_id,
                     chatView: this.props.chatView,
                     isActive: this.props.isActive,
@@ -59992,7 +60066,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Md = (function(e) {
+        Fd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60027,7 +60101,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Fd = (function(e) {
+        wd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60070,7 +60144,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        wd = (function(e) {
+        Od = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -60114,7 +60188,7 @@ and limitations under the License.
                 if (n.friend) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Rm.DragDropManager.SetDropConsumed();
+                    Im.DragDropManager.SetDropConsumed();
                   var r = t.currentTarget.ownerDocument.defaultView;
                   n.sourceContext.group != this.props.groupView.GetGroup() &&
                     ve(
@@ -60194,7 +60268,7 @@ and limitations under the License.
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  Cr.createElement(Td, {
+                  Cr.createElement(Gd, {
                     chatView: i,
                     friend: this.state.dropToInviteFriend
                   })
@@ -60248,14 +60322,14 @@ and limitations under the License.
                           Cr.createElement(
                             "div",
                             { className: "ChatRoomGroupDialog_history" },
-                            Cr.createElement(Od, {
+                            Cr.createElement(Bd, {
                               chatView: i,
                               isActive: this.props.isActive
                             }),
                             Cr.createElement(
                               Ls,
                               null,
-                              Cr.createElement(Rd, { groupView: t })
+                              Cr.createElement(Id, { groupView: t })
                             )
                           ),
                           Cr.createElement(Gl, {
@@ -60266,7 +60340,7 @@ and limitations under the License.
                             className: "dropTargetBox"
                           })
                         ),
-                        Cr.createElement(od, {
+                        Cr.createElement(ad, {
                           key: r.unique_id,
                           chatView: t.GetActiveChatView(),
                           isActive: this.props.isActive,
@@ -60284,7 +60358,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Od = (function(e) {
+        Bd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -60547,14 +60621,14 @@ and limitations under the License.
                       var t = this.rgMessageBlock[0];
                       t.BIsInvite()
                         ? this.rgMessages.push(
-                            Cr.createElement(zd, {
+                            Cr.createElement(Ld, {
                               key: t.UniqueKey(),
                               messages: this.rgMessageBlock,
                               chatView: this.chatView
                             })
                           )
                         : this.rgMessages.push(
-                            Cr.createElement(Id, {
+                            Cr.createElement(Ed, {
                               key: t.UniqueKey(),
                               messages: this.rgMessageBlock,
                               chatView: this.chatView,
@@ -60580,7 +60654,7 @@ and limitations under the License.
                 a = !1;
               if (t.chat_messages.length > 0) {
                 var s = t.chat_messages[0];
-                Kp.RTime32ToDate(s.rtTimestamp) <
+                Yp.RTime32ToDate(s.rtTimestamp) <
                   this.MidnightBeforeTime(new Date()) && (a = !0);
               }
               var c = !1,
@@ -60589,12 +60663,12 @@ and limitations under the License.
               for (var u = -1, d = 0, p = t.chat_messages; d < p.length; d++) {
                 var h = p[d];
                 if (0 != r || a) {
-                  var m = Kp.RTime32ToDate(r),
-                    g = Kp.RTime32ToDate(h.rtTimestamp);
+                  var m = Yp.RTime32ToDate(r),
+                    g = Yp.RTime32ToDate(h.rtTimestamp);
                   if (m < this.MidnightBeforeTime(g) || a) {
                     var f = "timediv_" + g.getTime();
                     n.AppendOutsideBlock(
-                      Cr.createElement(Nd, {
+                      Cr.createElement(Dd, {
                         key: f,
                         rtTimestamp: h.rtTimestamp
                       })
@@ -60611,7 +60685,7 @@ and limitations under the License.
                     t.first_unread_msg_time > r &&
                     t.first_unread_msg_time <= h.rtTimestamp &&
                     (n.AppendOutsideBlock(
-                      Cr.createElement(Nd, {
+                      Cr.createElement(Dd, {
                         key: "timediv_unread",
                         rtTimestamp: t.first_unread_msg_time,
                         bUnread: !0
@@ -60622,7 +60696,7 @@ and limitations under the License.
                     ? n.AppendToBlock(h)
                     : h.BIsServerMessage()
                       ? n.AppendOutsideBlock(
-                          Cr.createElement(Dd, {
+                          Cr.createElement(Ad, {
                             msg: h,
                             key: h.UniqueKey(),
                             chatView: this.props.chatView,
@@ -60634,19 +60708,19 @@ and limitations under the License.
               }
               u >= 0 &&
                 n.InsertAtIndex(
-                  Cr.createElement(Nd, {
+                  Cr.createElement(Dd, {
                     key: "time_passes",
                     rtTimestamp: t.first_unread_msg_time,
                     bTimePassesLine: !0
                   }),
                   u
                 );
-              var _ = Kp.RTime32ToDate(Kp.GetServerRTime32());
-              Kp.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
+              var _ = Yp.RTime32ToDate(Yp.GetServerRTime32());
+              Yp.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
                 n.AppendOutsideBlock(
-                  Cr.createElement(Nd, {
+                  Cr.createElement(Dd, {
                     key: "final_dateline",
-                    rtTimestamp: Kp.GetServerRTime32()
+                    rtTimestamp: Yp.GetServerRTime32()
                   })
                 ),
                 (e = Cr.createElement(
@@ -60680,13 +60754,13 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                Cr.createElement(Bd, {
+                Cr.createElement(Rd, {
                   chatHistory: this,
                   chatView: this.props.chatView
                 }),
                 e,
-                Cr.createElement(Hd, { chatView: this.props.chatView }),
-                Cr.createElement(Ed, {
+                Cr.createElement(qd, { chatView: this.props.chatView }),
+                Cr.createElement(kd, {
                   chatView: this.props.chatView,
                   action: this.ScrollToBottom
                 }),
@@ -60715,7 +60789,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Bd = (function(e) {
+        Rd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60736,7 +60810,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Rd = (function(e) {
+        Id = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60782,7 +60856,7 @@ and limitations under the License.
                               className: "MinimizeTextChat",
                               onClick: this.OnTextChannelCloseClick
                             },
-                            Cr.createElement(Es.O, null)
+                            Cr.createElement(Es.P, null)
                           )
                         ),
                         Cr.createElement(
@@ -60790,7 +60864,7 @@ and limitations under the License.
                           { className: "VoiceChatTextChannelDesc" },
                           Object(mr.b)("#Chat_Scratch_Pad_Desc")
                         ),
-                        Cr.createElement(Od, {
+                        Cr.createElement(Bd, {
                           chatView: e,
                           isActive: !0,
                           ref: this.OnChatHistoryRef
@@ -60805,7 +60879,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Id = (function(e) {
+        Ed = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -60823,7 +60897,7 @@ and limitations under the License.
                 t = !0,
                 i = !1,
                 n = this.props.bLastMessageBlock,
-                r = Kp.FriendStore.GetPlayer(
+                r = Yp.FriendStore.GetPlayer(
                   this.props.messages[0].unAccountID
                 ),
                 o = "ChatMessageBlock",
@@ -60869,17 +60943,17 @@ and limitations under the License.
                     l instanceof io
                       ? a.push(
                           Cr.createElement(
-                            Pd,
+                            zd,
                             nt.a({}, p, {
                               speakerWidth: this.props.speakerWidth
                             })
                           )
                         )
                       : l instanceof to
-                        ? ((t = !1), a.push(Cr.createElement(Ad, nt.a({}, p))))
+                        ? ((t = !1), a.push(Cr.createElement(Pd, nt.a({}, p))))
                         : a.push(
                             Cr.createElement(
-                              Ld,
+                              xd,
                               nt.a({}, p, {
                                 speakerWidth: this.props.speakerWidth
                               })
@@ -60891,13 +60965,13 @@ and limitations under the License.
                     });
                     switch (h) {
                       case Kr.k_ESlashCommandType_Me:
-                        a.push(Cr.createElement(Ud, nt.a({}, m)));
-                        break;
-                      case Kr.k_ESlashCommandType_Code:
                         a.push(Cr.createElement(Wd, nt.a({}, m)));
                         break;
-                      case Kr.k_ESlashCommandType_Pre:
+                      case Kr.k_ESlashCommandType_Code:
                         a.push(Cr.createElement(Vd, nt.a({}, m)));
+                        break;
+                      case Kr.k_ESlashCommandType_Pre:
+                        a.push(Cr.createElement(Hd, nt.a({}, m)));
                     }
                   }
                 }
@@ -60918,7 +60992,7 @@ and limitations under the License.
                   "div",
                   { className: o },
                   t &&
-                    Cr.createElement(jd, {
+                    Cr.createElement(Ud, {
                       friend: r,
                       chatView: this.props.chatView,
                       msg: this.props.messages[0],
@@ -60933,7 +61007,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Ed = (function(e) {
+        kd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -60960,18 +61034,18 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        kd = (function(e) {
+        Td = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
           return (
             nt.c(t, e),
             (t.prototype.OnBlock = function() {
-              Kp.FriendStore.BlockPlayer(this.props.friend, !1),
-                Kp.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
+              Yp.FriendStore.BlockPlayer(this.props.friend, !1),
+                Yp.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
             }),
             (t.prototype.OnAllow = function() {
-              Kp.FriendStore.SetApprovedNonFriendMessages(
+              Yp.FriendStore.SetApprovedNonFriendMessages(
                 this.props.friend.accountid
               );
             }),
@@ -61038,7 +61112,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Td = (function(e) {
+        Gd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -61068,7 +61142,7 @@ and limitations under the License.
                       Cr.createElement(
                         qs,
                         null,
-                        Cr.createElement(Vu, {
+                        Cr.createElement(Hu, {
                           friend: this.props.friend,
                           context: null,
                           avatarQualityFull: !0
@@ -61082,7 +61156,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Gd = (function(e) {
+        Nd = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -61138,7 +61212,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Nd = (function(e) {
+        Dd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61153,7 +61227,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e,
-                t = Kp.RTime32ToDate(this.props.rtTimestamp),
+                t = Yp.RTime32ToDate(this.props.rtTimestamp),
                 i = ["msg", "timeDivision"];
               if (this.props.bUnread) {
                 var n = {
@@ -61191,7 +61265,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Dd = (function(e) {
+        Ad = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61204,7 +61278,7 @@ and limitations under the License.
                 n = "";
               switch (e.eServerMsgType) {
                 case 1:
-                  var r = Kp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Yp.FriendStore.GetPlayer(e.unAccountID);
                   n = Ce(
                     i,
                     "#ChatRoom_ServerMessage_RenameChatRoom",
@@ -61213,20 +61287,20 @@ and limitations under the License.
                   );
                   break;
                 case 2:
-                  var o = Kp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Yp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Ce(i, "#ChatRoom_ServerMessage_Joined", o);
                   break;
                 case 3:
-                  var o = Kp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Yp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Ce(i, "#ChatRoom_ServerMessage_Parted", o);
                   break;
                 case 4:
-                  var a = Kp.FriendStore.GetPlayer(e.unAccountID),
-                    o = Kp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var a = Yp.FriendStore.GetPlayer(e.unAccountID),
+                    o = Yp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Ce(i, "#ChatRoom_ServerMessage_Kicked", o, a);
                   break;
                 case 9:
-                  var r = Kp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Yp.FriendStore.GetPlayer(e.unAccountID);
                   n = e.strServerMsgParam.length
                     ? Ce(
                         i,
@@ -61241,7 +61315,7 @@ and limitations under the License.
                       );
                   break;
                 case 10:
-                  var r = Kp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Yp.FriendStore.GetPlayer(e.unAccountID);
                   n = Ce(i, "#ChatRoom_ServerMessage_ChatRoomAvatarChanged", r);
                   break;
                 default:
@@ -61256,7 +61330,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Ad = (function(e) {
+        Pd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61282,7 +61356,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Pd = (function(e) {
+        zd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61296,26 +61370,26 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.AcceptTrade = function() {
-              Kp.FriendStore.RespondToTradeRequest(
+              Yp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !0
               );
             }),
             (t.prototype.DeclineTrade = function() {
-              Kp.FriendStore.RespondToTradeRequest(
+              Yp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !1
               ),
                 this.TradeRequestMsg.MarkAsDeclined();
             }),
             (t.prototype.CancelTradeRequest = function() {
-              Kp.FriendStore.CancelTradeRequest(
+              Yp.FriendStore.CancelTradeRequest(
                 this.TradeRequestMsg.TargetSteamID()
               ),
                 this.TradeRequestMsg.MarkAsCancelled();
             }),
             (t.prototype.ViewAcceptedTrade = function() {
-              Kp.FriendStore.OpenTradeWindow(
+              Yp.FriendStore.OpenTradeWindow(
                 this.TradeRequestMsg.TargetSteamID()
               );
             }),
@@ -61323,15 +61397,15 @@ and limitations under the License.
               var e = new ut.a(
                   this.TradeRequestMsg.TargetSteamID()
                 ).GetAccountID(),
-                t = e != Kp.FriendStore.self.accountid,
+                t = e != Yp.FriendStore.self.accountid,
                 i = t
                   ? this.props.msg.unAccountID
-                  : Kp.FriendStore.self.accountid;
+                  : Yp.FriendStore.self.accountid;
               return C(this.TradeRequestMsg.m_ErrorDetails, i, e);
             }),
             (t.prototype.render = function() {
               var e =
-                  this.props.msg.unAccountID == Kp.FriendStore.self.accountid,
+                  this.props.msg.unAccountID == Yp.FriendStore.self.accountid,
                 t = {};
               if (
                 (this.props.speakerWidth &&
@@ -61386,7 +61460,7 @@ and limitations under the License.
                 var i = new ut.a(
                     this.TradeRequestMsg.TargetSteamID()
                   ).GetAccountID(),
-                  n = Kp.FriendStore.GetPlayer(i),
+                  n = Yp.FriendStore.GetPlayer(i),
                   r = Cr.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
@@ -61404,7 +61478,7 @@ and limitations under the License.
                       Cr.createElement(
                         "div",
                         null,
-                        Cr.createElement(Es.J, null),
+                        Cr.createElement(Es.K, null),
                         e &&
                           Object(mr.d)(
                             "#ChatRoom_TradeRequest_Recipient_Declined",
@@ -61433,7 +61507,7 @@ and limitations under the License.
                       Cr.createElement(
                         "div",
                         null,
-                        Cr.createElement(Es.J, null),
+                        Cr.createElement(Es.K, null),
                         this.GetLocalizedErrorResponseString()
                       )
                     )
@@ -61446,7 +61520,7 @@ and limitations under the License.
                   o = Cr.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
-                    Kp.FriendStore.GetPlayer(i).display_name
+                    Yp.FriendStore.GetPlayer(i).display_name
                   );
                 return Cr.createElement(
                   "div",
@@ -61463,7 +61537,7 @@ and limitations under the License.
                       Cr.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        Cr.createElement(Es.J, null)
+                        Cr.createElement(Es.K, null)
                       ),
                       Cr.createElement(
                         "div",
@@ -61493,7 +61567,7 @@ and limitations under the License.
                   )
                 );
               }
-              var o = Kp.FriendStore.GetPlayer(this.props.msg.unAccountID);
+              var o = Yp.FriendStore.GetPlayer(this.props.msg.unAccountID);
               return Cr.createElement(
                 "div",
                 { className: "msg", style: t },
@@ -61509,7 +61583,7 @@ and limitations under the License.
                     Cr.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      Cr.createElement(Es.J, null)
+                      Cr.createElement(Es.K, null)
                     ),
                     Cr.createElement(
                       "div",
@@ -61554,7 +61628,7 @@ and limitations under the License.
                           className: "closeButton",
                           onClick: this.DeclineTrade
                         },
-                        Cr.createElement(Es.O, null)
+                        Cr.createElement(Es.P, null)
                       )
                     )
                   )
@@ -61568,7 +61642,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        zd = (function(e) {
+        Ld = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61589,11 +61663,11 @@ and limitations under the License.
                 var s = a[o];
                 if (-1 == r.indexOf(s.unServerMsgParamAccountID)) {
                   n.length > 0 && n.push(", ");
-                  var c = Kp.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
+                  var c = Yp.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
                   n.push(Se(i, c)), r.push(s.unServerMsgParamAccountID);
                 }
               }
-              var l = Se(i, Kp.FriendStore.GetPlayer(e[0].unAccountID)),
+              var l = Se(i, Yp.FriendStore.GetPlayer(e[0].unAccountID)),
                 u = "";
               if (n.length > 1) {
                 var d = Cr.createElement.apply(
@@ -61616,7 +61690,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Ld = (function(e) {
+        xd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61639,7 +61713,7 @@ and limitations under the License.
                   r.push("ChatMessageErrorSendingPermissionDenied"),
                 i ||
                   (r.push("HasTimeStamp"),
-                  (n = Kp.FriendStore.GetPlayer(this.props.msg.unAccountID)));
+                  (n = Yp.FriendStore.GetPlayer(this.props.msg.unAccountID)));
               var o = {},
                 a = {};
               this.props.speakerWidth &&
@@ -61669,7 +61743,7 @@ and limitations under the License.
                   { className: r.join(" "), style: o },
                   !i &&
                     Cr.createElement(
-                      xd,
+                      jd,
                       { className: "FriendChatTimeStamp", friend: n, style: a },
                       Cr.createElement(b, {
                         rtime: this.props.msg.rtTimestamp,
@@ -61696,7 +61770,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        xd = Object(Is.observer)(function(e) {
+        jd = Object(Is.observer)(function(e) {
           var t = "offline";
           e.friend.persona.is_ingame
             ? (t = "ingame")
@@ -61709,7 +61783,7 @@ and limitations under the License.
             e.children
           );
         }),
-        jd = (function(e) {
+        Ud = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61781,10 +61855,10 @@ and limitations under the License.
                           : "")
                     },
                     Cr.createElement(
-                      xd,
+                      jd,
                       { friend: e, className: "speaker" },
                       Cr.createElement(
-                        Wu,
+                        Vu,
                         { friend: e, context: this.props.friendRenderContext },
                         Cr.createElement(
                           "div",
@@ -61846,10 +61920,10 @@ and limitations under the License.
                     style: o
                   },
                   Cr.createElement(
-                    Wu,
+                    Vu,
                     { friend: e, context: this.props.friendRenderContext },
                     Cr.createElement(
-                      xd,
+                      jd,
                       { friend: e, className: "speaker" },
                       Cr.createElement(
                         "div",
@@ -61868,7 +61942,7 @@ and limitations under the License.
                     )
                   ),
                   Cr.createElement(
-                    xd,
+                    jd,
                     { className: "FriendChatTimeStamp", friend: e },
                     Cr.createElement(b, {
                       rtime: this.props.msg.rtTimestamp,
@@ -61881,7 +61955,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Ud = (function(e) {
+        Wd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61896,7 +61970,7 @@ and limitations under the License.
                 i = (this.props.hideTimeStamp, ["msg ChatMsgSlashEmote"]);
               t.self.accountid == e.unAccountID && i.push("isCurrentUser"),
                 e.bErrorSending && i.push("ChatMessageErrorSending");
-              var n = Kp.FriendStore.GetPlayer(this.props.msg.unAccountID),
+              var n = Yp.FriendStore.GetPlayer(this.props.msg.unAccountID),
                 r = M(e.strMessage),
                 o = this.props.chatView.IsChatRoom(),
                 a = "offline";
@@ -61932,7 +62006,7 @@ and limitations under the License.
                       "div",
                       { className: s },
                       Cr.createElement(
-                        Wu,
+                        Vu,
                         {
                           friend: n,
                           context: {
@@ -61988,7 +62062,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Wd = (function(e) {
+        Vd = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_divMsgTxt = null), t;
@@ -62039,7 +62113,7 @@ and limitations under the License.
                 n = M(e.strMessage),
                 r = i ? "prettyprint" : "";
               return Cr.createElement(
-                Ld,
+                xd,
                 nt.a({}, this.props, { extraClassName: "ChatMsgSlashCode" }),
                 Cr.createElement(
                   "div",
@@ -62067,7 +62141,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Vd = (function(e) {
+        Hd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62081,7 +62155,7 @@ and limitations under the License.
                 t = this.props.chatView.chat,
                 i = M(e.strMessage);
               return Cr.createElement(
-                Ld,
+                xd,
                 nt.a({}, this.props, { extraClassName: "ChatMsgSlashPre" }),
                 Cr.createElement(
                   "div",
@@ -62108,7 +62182,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Hd = (function(e) {
+        qd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62137,7 +62211,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        qd = (function(e) {
+        Kd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62177,7 +62251,7 @@ and limitations under the License.
             t
           );
         })(Cr.PureComponent),
-        Kd = (function(e) {
+        Yd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62199,7 +62273,7 @@ and limitations under the License.
               var t = this;
               return (
                 e.preventDefault(),
-                Kp.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
+                Yp.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
                   1 != e && t.setState({ error: e });
                 }),
                 !0
@@ -62256,7 +62330,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Yd = (i("FHUK"),
+        Jd = (i("FHUK"),
         (function(e) {
           function t(t, i, n) {
             var r = this,
@@ -62289,15 +62363,15 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.Render = function(e, t) {
               t.setAttribute("class", "fullheight popup_chat_frame");
-              var i = new Cm(e),
-                n = this.browser_info || Hp,
-                r = Kp.UIStore.GetDefaultTabSetForContext(n);
+              var i = new Sm(e),
+                n = this.browser_info || qp,
+                r = Yp.UIStore.GetDefaultTabSetForContext(n);
               (this.m_browserContext = n),
                 this.m_bHidden
                   ? Bs.render(null, t)
-                  : (Rm.SetUIDisplayPref("bShowFriendsListAtStartup", !0),
+                  : (Im.SetUIDisplayPref("bShowFriendsListAtStartup", !0),
                     Bs.render(
-                      Cr.createElement(Jd, {
+                      Cr.createElement(Xd, {
                         popup: this,
                         friends: this.m_friends,
                         chats: this.m_chats,
@@ -62312,19 +62386,19 @@ and limitations under the License.
             }),
             (t.prototype.OnClose = function() {
               e.prototype.OnClose.call(this),
-                Kp.UIStore.SetFriendsListWindowForContext(
+                Yp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   void 0
                 ),
                 Fs.d.BShuttingDown() ||
-                  Rm.SetUIDisplayPref("bShowFriendsListAtStartup", !1),
+                  Im.SetUIDisplayPref("bShowFriendsListAtStartup", !1),
                 (this.m_bHidden = !0),
                 this.Render(this.m_popup, this.m_element);
             }),
             t
           );
         })(Fs.b)),
-        Jd = (function(e) {
+        Xd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             (i.m_bResponsiveMainWindow = !1),
@@ -62336,7 +62410,7 @@ and limitations under the License.
             i.m_browserContext =
               i.props.popup && i.props.popup.browser_info
                 ? i.props.popup.browser_info
-                : Hp;
+                : qp;
             var r =
               it.a.USE_POPUPS && i.props.popup ? i.props.popup.window : window;
             return (
@@ -62344,7 +62418,7 @@ and limitations under the License.
                 ? (i.m_nInlineChatWidth = 640)
                 : ((i.m_bResponsiveMainWindow = !0),
                   (i.m_nInlineChatWidth = 530),
-                  (i.m_ResponsiveWindowState = Kp.UIStore.GetResponsiveWindowState(
+                  (i.m_ResponsiveWindowState = Yp.UIStore.GetResponsiveWindowState(
                     i.m_browserContext
                   ))),
               (n = r.innerWidth >= i.m_nInlineChatWidth),
@@ -62402,15 +62476,15 @@ and limitations under the License.
               (this.m_bChatsVisible = e),
                 it.a.USE_POPUPS &&
                   (t && !e
-                    ? Kp.UIStore.ConvertDefaultTabSetToPopup(
+                    ? Yp.UIStore.ConvertDefaultTabSetToPopup(
                         this.m_browserContext
                       )
                     : !t &&
                       e &&
-                      Kp.UIStore.ConvertDefaultTabSetToEmbedded(
+                      Yp.UIStore.ConvertDefaultTabSetToEmbedded(
                         this.m_browserContext
                       ),
-                  Kp.UIStore.SetDefaultChatDestination(
+                  Yp.UIStore.SetDefaultChatDestination(
                     this.m_browserContext,
                     e
                   ));
@@ -62419,7 +62493,7 @@ and limitations under the License.
               var e = this;
               (this.m_popupActionDisposer = Object(ht.autorun)(function() {
                 if (!it.a.IN_CLIENT) {
-                  var t = Kp.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
+                  var t = Yp.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
                   t.length && void 0 === e.m_unTimerWindowTitleUnreadCycle
                     ? (e.m_unTimerWindowTitleUnreadCycle = setInterval(
                         function() {
@@ -62470,7 +62544,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               var e = this.props.popup ? this.props.popup.window : window;
               e && e.addEventListener("resize", this.OnWindowResizeEvent),
-                Kp.UIStore.SetFriendsListWindowForContext(
+                Yp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   this
                 ),
@@ -62517,7 +62591,7 @@ and limitations under the License.
                 var t = this.m_elFriendsListContainer.getBoundingClientRect(),
                   i = t.left,
                   n = ue(e - i, 200, 600);
-                Rm.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
+                Im.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
               }
             }),
             (t.prototype.UnregisterFriendsListDragEvents = function(e) {
@@ -62560,35 +62634,35 @@ and limitations under the License.
               var o = this.props.popup && this.props.popup.window,
                 a = {
                   width:
-                    Rm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
+                    Im.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
                 };
-              return Kp.ParentalStore.BIsFriendsBlocked()
+              return Yp.ParentalStore.BIsFriendsBlocked()
                 ? it.a.IN_CLIENT
                   ? Cr.createElement(
                       "div",
                       { className: n },
-                      Cr.createElement(Kd, null)
+                      Cr.createElement(Yd, null)
                     )
                   : (location.reload(), Cr.createElement("div", null))
                 : Cr.createElement(
                     "div",
                     { className: n, onContextMenu: Fe },
                     Cr.createElement(
-                      md,
+                      gd,
                       null,
-                      Cr.createElement($d, {
+                      Cr.createElement(ep, {
                         popup: this.props.popup
                           ? this.props.popup.window
                           : void 0
                       })
                     ),
                     !1,
-                    Kp.ready_to_render &&
+                    Yp.ready_to_render &&
                       Cr.createElement(
-                        md,
+                        gd,
                         null,
-                        Cr.createElement(Qd, {
-                          ModalManager: Rm.GetModalManager(o || window)
+                        Cr.createElement($d, {
+                          ModalManager: Im.GetModalManager(o || window)
                         }),
                         e &&
                           Cr.createElement(
@@ -62617,7 +62691,7 @@ and limitations under the License.
                           r
                         ),
                         t &&
-                          Cr.createElement(vd, {
+                          Cr.createElement(bd, {
                             tabs: this.props.tabset,
                             popup: o,
                             ResponsiveWindowState: e
@@ -62626,7 +62700,7 @@ and limitations under the License.
                           }),
                         this.props.popup &&
                           it.a.IN_CLIENT &&
-                          Cr.createElement(qd, { popup: o }),
+                          Cr.createElement(Kd, { popup: o }),
                         Cr.createElement("div", {
                           className: "singleWindowFocusBar"
                         })
@@ -62651,7 +62725,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Xd = (function(e) {
+        Zd = (function(e) {
           function t(t, i, n, r, o, a) {
             var s = this,
               c = {
@@ -62710,7 +62784,7 @@ and limitations under the License.
               this.m_tabSet = void 0;
             }),
             (t.prototype.OnResize = function() {
-              Kp.UIStore.OnTabSetResized(this.m_tabSet),
+              Yp.UIStore.OnTabSetResized(this.m_tabSet),
                 e.prototype.OnResize.call(this);
             }),
             (t.prototype.OnClose = function() {
@@ -62727,7 +62801,7 @@ and limitations under the License.
               t.setAttribute("class", "fullheight popup_chat_frame"),
                 this.BindWindowHandlers(),
                 Bs.render(
-                  Cr.createElement(Zd, {
+                  Cr.createElement(Qd, {
                     popup: this,
                     chatTabs: this.m_tabSet
                   }),
@@ -62738,7 +62812,7 @@ and limitations under the License.
             t
           );
         })(Fs.b),
-        Zd = (function(e) {
+        Qd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62754,22 +62828,22 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: n, onContextMenu: Fe },
-                  Cr.createElement($d, { popup: this.props.popup.window }),
+                  Cr.createElement(ep, { popup: this.props.popup.window }),
                   !1,
-                  Cr.createElement(Qd, { ModalManager: Rm.GetModalManager(e) }),
-                  Cr.createElement(vd, {
+                  Cr.createElement($d, { ModalManager: Im.GetModalManager(e) }),
+                  Cr.createElement(bd, {
                     tabs: t,
                     popup: e,
                     ResponsiveWindowState: null
                   }),
-                  it.a.IN_CLIENT && Cr.createElement(qd, { popup: e })
+                  it.a.IN_CLIENT && Cr.createElement(Kd, { popup: e })
                 )
               );
             }),
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Qd = (function(e) {
+        $d = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62800,7 +62874,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        $d = (function(e) {
+        ep = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -62811,9 +62885,9 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               if (it.a.IN_CLIENT) {
-                if (Kp.CMInterface.BDisconnected()) {
+                if (Yp.CMInterface.BDisconnected()) {
                   var e = Xe(this.props.popup),
-                    t = e != Hp;
+                    t = e != qp;
                   return Cr.createElement(
                     "div",
                     {
@@ -62841,13 +62915,13 @@ and limitations under the License.
                 }
                 return null;
               }
-              return Cr.createElement(ep, null);
+              return Cr.createElement(tp, null);
             }),
             nt.b([Zt.a], t.prototype, "OnKeyDown", null),
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        ep = (function(e) {
+        tp = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62865,8 +62939,8 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.componentWillMount = function() {
               var e = this;
-              if (!Kp.ready_to_render) {
-                var t = performance.now() - Kp.GetStartupTime();
+              if (!Yp.ready_to_render) {
+                var t = performance.now() - Yp.GetStartupTime();
                 this.m_iIntervalDelayedStartup = window.setTimeout(function() {
                   e.setState({ bShowStartupDelayMessage: !0 }),
                     (e.m_iIntervalDelayedStartup = void 0);
@@ -62882,7 +62956,7 @@ and limitations under the License.
                   (this.m_iIntervalUpdateReconnectStatus = void 0));
             }),
             (t.prototype.IntervalUpdateReconnectWaitStatus = function() {
-              var e = Rm.WebLogonManager;
+              var e = Im.WebLogonManager;
               if (e.BIsWaitingToReconnect()) {
                 var t = Math.ceil(e.GetMSUntilNextReconnectAttempt() / 1e3);
                 t != this.state.cReconnectWaitSeconds &&
@@ -62906,14 +62980,14 @@ and limitations under the License.
                 ));
             }),
             (t.prototype.OnReconnectNowClick = function() {
-              Rm.WebLogonManager.ReconnectNow();
+              Im.WebLogonManager.ReconnectNow();
             }),
             (t.prototype.OnLoginClick = function() {
               window.location.href = window.location.href;
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Rm.WebLogonManager;
+                t = Im.WebLogonManager;
               if (
                 (AssertMsg(
                   t,
@@ -62925,7 +62999,7 @@ and limitations under the License.
               var i = null,
                 n = t.web_logon_state,
                 r =
-                  !Kp.NotificationManager.BNotificationsPermitted() &&
+                  !Yp.NotificationManager.BNotificationsPermitted() &&
                   this.state.bShouldRequestNotificationPermission;
               if (9 != n || r) {
                 var o = void 0,
@@ -62934,7 +63008,7 @@ and limitations under the License.
                   c = !1;
                 if (9 != n)
                   if (
-                    Kp.ready_to_render ||
+                    Yp.ready_to_render ||
                     this.state.bShowStartupDelayMessage ||
                     !t.BIsInInitialConnect()
                   )
@@ -62989,7 +63063,7 @@ and limitations under the License.
                 else
                   r &&
                     (this.m_bRequestingNotificationPermission ||
-                      (Kp.NotificationManager.RequestNotificationPermission().then(
+                      (Yp.NotificationManager.RequestNotificationPermission().then(
                         function() {
                           (e.m_bRequestingNotificationPermission = !1),
                             e.setState({
@@ -63005,7 +63079,7 @@ and limitations under the License.
                 !this.state.bShowReconnectWaitMessage &&
                   u &&
                   this.StartReconnectUpdateInterval(),
-                  (!o && Kp.ready_to_render) ||
+                  (!o && Yp.ready_to_render) ||
                     (i = Cr.createElement(
                       zs,
                       { classNames: "modalbg-anim", timeout: 300 },
@@ -63014,7 +63088,7 @@ and limitations under the License.
                         {
                           className:
                             "chat_full_modaloverlay ConnectionTrouble" +
-                            (Kp.ready_to_render ? "" : " NotReadyToRender")
+                            (Yp.ready_to_render ? "" : " NotReadyToRender")
                         },
                         Cr.createElement("div", {
                           className:
@@ -63112,7 +63186,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        tp = (Object(ht.observable)({ bEnabled: null }),
+        ip = (Object(ht.observable)({ bEnabled: null }),
         (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -63177,7 +63251,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component)),
-        ip = (function(e) {
+        np = (function(e) {
           function t(t, i, n, r, o) {
             var a =
               e.call(this, n, {
@@ -63186,7 +63260,7 @@ and limitations under the License.
                 body_class: "fullheight",
                 owner_window: void 0,
                 replace_existing_popup: !0,
-                target_browser: i != Hp ? i : void 0,
+                target_browser: i != qp ? i : void 0,
                 availscreenwidth: t.screen.availWidth,
                 availscreenheight: t.screen.availHeight
               }) || this;
@@ -63242,7 +63316,7 @@ and limitations under the License.
             t
           );
         })(Fs.a),
-        np = (function() {
+        rp = (function() {
           function e(e) {
             (this.m_bRestoredPopupState = !1),
               (this.m_vecShowGroupsAfterRestorePopup = []),
@@ -63255,13 +63329,13 @@ and limitations under the License.
           }
           return (
             (e.prototype.GetRootChatPerContextData = function() {
-              return this.GetPerContextChatData(Hp);
+              return this.GetPerContextChatData(qp);
             }),
             (e.prototype.Init = function() {
               var e = this;
-              Kp.AddPopupManagerShutdownCallback(this.SerializePopupState),
+              Yp.AddPopupManagerShutdownCallback(this.SerializePopupState),
                 Object(ht.autorun)(function() {
-                  var t = Kp.ParentalStore.BIsFriendsBlocked();
+                  var t = Yp.ParentalStore.BIsFriendsBlocked();
                   e.OnFriendsParentalLockChanged(t);
                 });
             }),
@@ -63323,7 +63397,7 @@ and limitations under the License.
             }),
             (e.prototype.ShowUnackedGroup = function(e) {
               this.m_bRestoredPopupState
-                ? this.ShowAndOrActivateChatRoomGroup(Hp, e, !1)
+                ? this.ShowAndOrActivateChatRoomGroup(qp, e, !1)
                 : this.m_vecShowGroupsAfterRestorePopup.push(e);
             }),
             (e.prototype.CloseTabByID = function(e, t) {
@@ -63339,7 +63413,7 @@ and limitations under the License.
                 r = Xe(e),
                 o = this.m_chatStore.FindNamelessChatGroupWithFriends(i);
               if (o) return void this.ReplaceFriendChatWithGroup(r, t, o);
-              Kp.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
+              Yp.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
                 if (!i)
                   return void ke(
                     e,
@@ -63403,7 +63477,7 @@ and limitations under the License.
                 o = this.GetTabSetByUniqueID(r, t);
               if (o) i && o.tabSet.ActivateTab(o.tab), (n = o.tab);
               else {
-                var a = Kp.SettingsStore.BAlwaysShowChatsInNewWindow();
+                var a = Yp.SettingsStore.BAlwaysShowChatsInNewWindow();
                 if (
                   !it.a.USE_POPUPS ||
                   (!a && r.default_tabset.is_popup_active)
@@ -63420,7 +63494,7 @@ and limitations under the License.
                     s != r.default_tabset ||
                     (r.BIsDefaultTabSetInPopup() && !s.is_popup_active)
                   ) {
-                    var c = Kp.CreateChatPopup(
+                    var c = Yp.CreateChatPopup(
                       e,
                       this.GetNextChatPopupID(),
                       s,
@@ -63477,9 +63551,9 @@ and limitations under the License.
               if (!i) {
                 var n = !0;
                 0 != e.m_unPID &&
-                  void 0 != Rm &&
-                  (n = Rm.OverlayStore().HasOverlayInstance(e.m_unPID)),
-                  (i = new sp(e)),
+                  void 0 != Im &&
+                  (n = Im.OverlayStore().HasOverlayInstance(e.m_unPID)),
+                  (i = new cp(e)),
                   n
                     ? this.m_mapChatBrowserContexts.set(e.m_unPID, i)
                     : AssertMsg(
@@ -63513,7 +63587,7 @@ and limitations under the License.
                 ((this.m_bSuppressBrowserContextBroadcasting = !0),
                 this.m_mapChatBrowserContexts.forEach(function(n) {
                   if (!Ge(n.browser_context, e)) {
-                    var r = n.browser_context != Hp;
+                    var r = n.browser_context != qp;
                     i.ShowAndOrActivateTabByID(n.browser_context, t, r);
                   }
                 }),
@@ -63524,7 +63598,7 @@ and limitations under the License.
               t
             ) {
               if (!this.m_bSuppressBrowserContextBroadcasting) {
-                if (Ge(e, Hp))
+                if (Ge(e, qp))
                   return void this.BroadcastCloseTabToAllBrowserContexts_Internal(
                     e,
                     t
@@ -63554,14 +63628,14 @@ and limitations under the License.
                 o = t.match(/^f(\d+)$/);
               if (o && o[1]) {
                 var a = parseInt(o[1]),
-                  s = Kp.FriendStore.GetPlayer(a);
+                  s = Yp.FriendStore.GetPlayer(a);
                 if (s && !s.is_blocked) {
                   var c = this.m_chatStore.GetFriendChat(a);
                   c &&
                     ((r = new Os(e, c)),
                     !n ||
                       s.is_friend ||
-                      Kp.FriendStore.BApprovedNonFriendMessages(a) ||
+                      Yp.FriendStore.BApprovedNonFriendMessages(a) ||
                       c.SetShowNonFriendWarning(!0));
                 }
               }
@@ -63593,7 +63667,7 @@ and limitations under the License.
             }),
             (e.prototype.SetDefaultChatDestination = function(e, t) {
               this.GetPerContextChatData(e).SetDefaultTabSet(
-                t ? op.Window : op.Popup
+                t ? ap.Window : ap.Popup
               );
             }),
             (e.prototype.BIsDockedFriendsList = function(e) {
@@ -63608,7 +63682,7 @@ and limitations under the License.
                 var i = t.GetPopupForTabSet(t.default_tabset);
                 return (
                   i ||
-                  ((i = Kp.CreateChatPopup(
+                  ((i = Yp.CreateChatPopup(
                     e,
                     this.GetNextChatPopupID(),
                     t.default_tabset,
@@ -63667,7 +63741,7 @@ and limitations under the License.
                   (t.friends_list_window
                     ? t.friends_list_window.BringToFront()
                     : t.BIsDefaultTabSetInWindow() &&
-                      Kp.ShowPopupFriendsList(e.GetBrowserContext()));
+                      Yp.ShowPopupFriendsList(e.GetBrowserContext()));
             }),
             (e.prototype.MoveTabToNewPopup = function(e, t, i, n) {
               AssertMsg(e, "browserContext");
@@ -63677,7 +63751,7 @@ and limitations under the License.
               });
               var o = new _r(e);
               o.AddTab(t);
-              var a = Kp.CreateChatPopup(
+              var a = Yp.CreateChatPopup(
                 e,
                 this.GetNextChatPopupID(),
                 o,
@@ -63704,10 +63778,10 @@ and limitations under the License.
             (e.prototype.SerializePopupState = function(e) {
               if (
                 (void 0 === e && (e = !1),
-                this.m_bRestoredPopupState && Kp.SettingsStore.BReady())
+                this.m_bRestoredPopupState && Yp.SettingsStore.BReady())
               ) {
                 var t = this.SerializePopupStateToObject(e);
-                Kp.SettingsStore.StoreObjectInLocalStorage(
+                Yp.SettingsStore.StoreObjectInLocalStorage(
                   "ChatStorePopupState",
                   t
                 );
@@ -63715,7 +63789,7 @@ and limitations under the License.
             }),
             (e.prototype.SerializePopupStateToObject = function(e) {
               for (
-                var t = this.GetPerContextChatData(Hp),
+                var t = this.GetPerContextChatData(qp),
                   i = {
                     window_restore_details:
                       t.cached_popup_window_restore_details,
@@ -63744,10 +63818,10 @@ and limitations under the License.
               );
             }),
             (e.prototype.BRestorePopups = function() {
-              return Kp.SettingsStore.BAlwaysShowChatsInNewWindow();
+              return Yp.SettingsStore.BAlwaysShowChatsInNewWindow();
             }),
             (e.prototype.BRestoreOpenChats = function() {
-              return Kp.SettingsStore.FriendsSettings.bRememberOpenChats;
+              return Yp.SettingsStore.FriendsSettings.bRememberOpenChats;
             }),
             (e.prototype.DeserializeIntoTabSet = function(e, t) {
               if (t.tabs && Array.isArray(t.tabs))
@@ -63765,9 +63839,9 @@ and limitations under the License.
                 !this.m_bRestoredPopupState,
                 "Second restore popup state"
               ),
-                Kp.ParentalStore.BIsFriendsBlocked() ||
+                Yp.ParentalStore.BIsFriendsBlocked() ||
                   (void 0 == this.m_stateToRestoreFrom
-                    ? Kp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                    ? Yp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                         "ChatStorePopupState"
                       ).then(function(t) {
                         e.RestoreFromStateObject(t);
@@ -63776,7 +63850,7 @@ and limitations under the License.
                       (this.m_stateToRestoreFrom = void 0)));
             }),
             (e.prototype.RestoreFromStateObject = function(e) {
-              var t = this.GetPerContextChatData(Hp);
+              var t = this.GetPerContextChatData(qp);
               if (
                 (AssertMsg(t.BIsEmpty(), "Restoring to non-empty context"),
                 !t.BIsEmpty())
@@ -63795,13 +63869,13 @@ and limitations under the License.
                 if (this.BRestorePopups())
                   for (var n = 0, r = e.popups; n < r.length; n++) {
                     var o = r[n],
-                      i = new _r(Hp);
+                      i = new _r(qp);
                     if ((this.DeserializeIntoTabSet(i, o), i.tabCount > 0)) {
                       0 == t.default_tabset.tabCount &&
                         ((i = t.default_tabset),
                         this.DeserializeIntoTabSet(i, o));
-                      var a = Kp.CreateChatPopup(
-                        Kp.GetDefaultBrowserContext(),
+                      var a = Yp.CreateChatPopup(
+                        Yp.GetDefaultBrowserContext(),
                         this.GetNextChatPopupID(),
                         i,
                         void 0,
@@ -63819,14 +63893,14 @@ and limitations under the License.
                   }
               it.a.USE_POPUPS &&
                 e.bFriendsListVisible &&
-                Kp.ShowPopupFriendsList(Hp);
+                Yp.ShowPopupFriendsList(qp);
               for (
                 var l = 0, u = this.m_vecShowGroupsAfterRestorePopup;
                 l < u.length;
                 l++
               ) {
                 var d = u[l];
-                this.ShowAndOrActivateChatRoomGroup(Hp, d, !1);
+                this.ShowAndOrActivateChatRoomGroup(qp, d, !1);
               }
               (this.m_vecShowGroupsAfterRestorePopup = []),
                 (this.m_bRestoredPopupState = !0),
@@ -63842,7 +63916,7 @@ and limitations under the License.
             e
           );
         })(),
-        rp = (function() {
+        op = (function() {
           function e(e, t) {
             (this.m_bShown = !1), (this.m_popup = e), (this.m_chatPopup = t);
           }
@@ -63868,7 +63942,7 @@ and limitations under the License.
               this.m_chatPopup.ClearTabSet();
             }),
             (e.prototype.IsSameBrowserContext = function(e) {
-              var t = this.m_popup.GetBrowserContext() || Hp;
+              var t = this.m_popup.GetBrowserContext() || qp;
               return e.m_nBrowserID == t.m_nBrowserID && e.m_unPID == t.m_unPID;
             }),
             e
@@ -63877,8 +63951,8 @@ and limitations under the License.
       !(function(e) {
         (e[(e.FriendsList = 0)] = "FriendsList"), (e[(e.Chat = 1)] = "Chat");
       })(il || (il = {}));
-      var op,
-        ap = (function() {
+      var ap,
+        sp = (function() {
           function e() {
             this.m_eActiveView = il.FriendsList;
           }
@@ -63895,16 +63969,16 @@ and limitations under the License.
         })();
       !(function(e) {
         (e[(e.Window = 0)] = "Window"), (e[(e.Popup = 1)] = "Popup");
-      })(op || (op = {}));
-      var sp = (function() {
+      })(ap || (ap = {}));
+      var cp = (function() {
           function e(e) {
             (this.m_browserContext = e),
-              (this.m_eDestination = op.Window),
+              (this.m_eDestination = ap.Window),
               (this.m_DefaultTabSet = new _r(e)),
               (this.m_FriendsListWindow = void 0),
               (this.m_PopupWindowRestoreDetails = void 0),
               (this.m_mapTabSetToPopup = new Map()),
-              (this.m_ResponsiveWindowState = new ap());
+              (this.m_ResponsiveWindowState = new sp());
           }
           return (
             (e.prototype.BIsEmpty = function() {
@@ -63915,10 +63989,10 @@ and limitations under the License.
               );
             }),
             (e.prototype.BIsDefaultTabSetInWindow = function() {
-              return this.m_eDestination == op.Window;
+              return this.m_eDestination == ap.Window;
             }),
             (e.prototype.BIsDefaultTabSetInPopup = function() {
-              return this.m_eDestination == op.Popup;
+              return this.m_eDestination == ap.Popup;
             }),
             (e.prototype.SetDefaultTabSet = function(e) {
               this.m_eDestination = e;
@@ -64054,7 +64128,7 @@ and limitations under the License.
             e
           );
         })(),
-        cp = (function() {
+        lp = (function() {
           function e() {
             (this.enabled = !1),
               (this.locked = !1),
@@ -64073,7 +64147,7 @@ and limitations under the License.
             e
           );
         })(),
-        lp = (function() {
+        up = (function() {
           function e() {
             (this.broadcastid = "0"),
               (this.nViewers = 0),
@@ -64084,7 +64158,7 @@ and limitations under the License.
           }
           return e;
         })(),
-        up = (function() {
+        dp = (function() {
           function e() {
             (this.nKeyCode = 0),
               (this.bAltKey = !1),
@@ -64094,10 +64168,10 @@ and limitations under the License.
           }
           return e;
         })(),
-        dp = (function() {
+        pp = (function() {
           function e() {
-            (this.InGameOverlayScreenshotHotKey = new up()),
-              (this.InGameOverlayShortcutKey = new up());
+            (this.InGameOverlayScreenshotHotKey = new dp()),
+              (this.InGameOverlayShortcutKey = new dp());
           }
           return e;
         })();
@@ -64107,15 +64181,15 @@ and limitations under the License.
           return e;
         })();
         e.FriendsSettings = t;
-      })(dp || (dp = {}));
-      var pp;
+      })(pp || (pp = {}));
+      var hp;
       !(function(e) {
         (e[(e.k_EClientUINotificationGroupChatMessage = 1)] =
           "k_EClientUINotificationGroupChatMessage"),
           (e[(e.k_EClientUINotificationFriendChatMessage = 2)] =
             "k_EClientUINotificationFriendChatMessage");
-      })(pp || (pp = {}));
-      var hp;
+      })(hp || (hp = {}));
+      var mp;
       !(function(e) {
         (e[(e.k_EComputerActiveStateInvalid = 0)] =
           "k_EComputerActiveStateInvalid"),
@@ -64123,9 +64197,9 @@ and limitations under the License.
             "k_EComputerActiveStateActive"),
           (e[(e.k_EComputerActiveStateIdle = 2)] =
             "k_EComputerActiveStateIdle");
-      })(hp || (hp = {}));
-      var mp,
-        gp = (function() {
+      })(mp || (mp = {}));
+      var gp,
+        fp = (function() {
           function e() {}
           return e;
         })();
@@ -64133,9 +64207,9 @@ and limitations under the License.
         (e[(e.k_EPending = 0)] = "k_EPending"),
           (e[(e.k_EAccepted = 1)] = "k_EAccepted"),
           (e[(e.k_ERejected = 2)] = "k_ERejected");
-      })(mp || (mp = {}));
-      var fp,
-        _p = (function() {
+      })(gp || (gp = {}));
+      var _p,
+        yp = (function() {
           function e(e) {
             var t = this;
             (this.m_bReady = !1),
@@ -64152,15 +64226,15 @@ and limitations under the License.
               )),
               (this.m_Storage = e),
               it.a.IN_CLIENT
-                ? (this.m_iFriendSettingsStore = new vp(
+                ? (this.m_iFriendSettingsStore = new bp(
                     this,
                     this.OnFriendSettingsChanged.bind(this)
                   ))
-                : (this.m_iFriendSettingsStore = new bp(
+                : (this.m_iFriendSettingsStore = new Cp(
                     this,
                     this.OnFriendSettingsChanged.bind(this)
                   )),
-              (this.m_CommunityPreferences = new gp());
+              (this.m_CommunityPreferences = new fp());
             var i = new Jo();
             (this.m_CommunityPreferences.bHideAdultContentViolence = i.hide_adult_content_violence()),
               (this.m_CommunityPreferences.bHideAdultContentSex = i.hide_adult_content_sex()),
@@ -64373,13 +64447,13 @@ and limitations under the License.
             e
           );
         })(),
-        yp = (function() {
+        vp = (function() {
           function e(e, t) {
             (this.m_SettingsStore = e), (this.m_fnFriendSettingsChanged = t);
           }
           return e;
         })(),
-        vp = (function(e) {
+        bp = (function(e) {
           function t(t, i) {
             var n = e.call(this, t, i) || this;
             return (n.m_bClientInitComplete = !1), n.InternalInit(), n;
@@ -64412,8 +64486,8 @@ and limitations under the License.
             }),
             t
           );
-        })(yp),
-        bp = (function(e) {
+        })(vp),
+        Cp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -64432,7 +64506,7 @@ and limitations under the License.
             }),
             (t.prototype.GetDefaultSettings = function() {
               return {
-                friendsSettings: Object.assign(new dp.FriendsSettings(), {
+                friendsSettings: Object.assign(new pp.FriendsSettings(), {
                   bNotifications_ShowMessage: !0,
                   bSounds_PlayMessage: !0,
                   bCompactQuickAccess: !1,
@@ -64454,8 +64528,8 @@ and limitations under the License.
             (t.k_strLocalStorageKeyPrefix = "LocalStorageFriendsSettings"),
             t
           );
-        })(yp),
-        Cp = (function(e) {
+        })(vp),
+        Sp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64516,7 +64590,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Sp = (function(e) {
+        Mp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64543,22 +64617,22 @@ and limitations under the License.
               at.Message.setField(this, 3, e);
             }),
             (t.prototype.applist_base = function() {
-              return at.Message.getRepeatedWrapperField(this, Cp, 4);
+              return at.Message.getRepeatedWrapperField(this, Sp, 4);
             }),
             (t.prototype.set_applist_base = function(e) {
               at.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (t.prototype.add_applist_base = function(e, t) {
-              return at.Message.addToRepeatedWrapperField(this, 4, e, Cp, t);
+              return at.Message.addToRepeatedWrapperField(this, 4, e, Sp, t);
             }),
             (t.prototype.applist_custom = function() {
-              return at.Message.getRepeatedWrapperField(this, Cp, 5);
+              return at.Message.getRepeatedWrapperField(this, Sp, 5);
             }),
             (t.prototype.set_applist_custom = function(e) {
               at.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (t.prototype.add_applist_custom = function(e, t) {
-              return at.Message.addToRepeatedWrapperField(this, 5, e, Cp, t);
+              return at.Message.addToRepeatedWrapperField(this, 5, e, Sp, t);
             }),
             (t.prototype.passwordhashtype = function() {
               return at.Message.getField(this, 6);
@@ -64620,13 +64694,13 @@ and limitations under the License.
                     e.set_applist_base_description(t.readString());
                     break;
                   case 4:
-                    var i = new Cp();
-                    t.readMessage(i, Cp.deserializeBinaryFromReader),
+                    var i = new Sp();
+                    t.readMessage(i, Sp.deserializeBinaryFromReader),
                       e.add_applist_base(i);
                     break;
                   case 5:
-                    var i = new Cp();
-                    t.readMessage(i, Cp.deserializeBinaryFromReader),
+                    var i = new Sp();
+                    t.readMessage(i, Sp.deserializeBinaryFromReader),
                       e.add_applist_custom(i);
                     break;
                   case 6:
@@ -64666,10 +64740,10 @@ and limitations under the License.
                 void 0 !== i && t.writeString(3, i),
                 (i = e.applist_base()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(4, i, Cp.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, Sp.serializeBinaryToWriter),
                 (i = e.applist_custom()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(5, i, Cp.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, Sp.serializeBinaryToWriter),
                 (i = at.Message.getField(e, 6)),
                 void 0 !== i && t.writeUint32(6, i),
                 (i = at.Message.getField(e, 7)),
@@ -64689,7 +64763,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Mp = (at.Message,
+        Fp = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64725,7 +64799,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Fp = (at.Message,
+        wp = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64761,7 +64835,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        wp = (function(e) {
+        Op = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64812,7 +64886,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Op = (function(e) {
+        Bp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -64821,7 +64895,7 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.settings = function() {
-              return at.Message.getWrapperField(this, Sp, 1, 1);
+              return at.Message.getWrapperField(this, Mp, 1, 1);
             }),
             (t.prototype.set_settings = function(e) {
               at.Message.setWrapperField(this, 1, e);
@@ -64841,8 +64915,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Sp();
-                    t.readMessage(i, Sp.deserializeBinaryFromReader),
+                    var i = new Mp();
+                    t.readMessage(i, Mp.deserializeBinaryFromReader),
                       e.set_settings(i);
                     break;
                   default:
@@ -64857,7 +64931,7 @@ and limitations under the License.
             (t.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.settings()) &&
-                t.writeMessage(1, i, Sp.serializeBinaryToWriter);
+                t.writeMessage(1, i, Mp.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CParental_GetParentalSettings_Response";
@@ -64865,7 +64939,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Bp = (at.Message,
+        Rp = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64928,7 +65002,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Rp = (at.Message,
+        Ip = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -64964,7 +65038,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Ip = (function(e) {
+        Ep = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65014,7 +65088,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Ep = (function(e) {
+        kp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65049,7 +65123,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        kp = (function(e) {
+        Tp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65121,7 +65195,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Tp = (function(e) {
+        Gp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65171,7 +65245,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Gp = (at.Message,
+        Np = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -65207,7 +65281,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Np = (at.Message,
+        Dp = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -65243,7 +65317,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Dp = (at.Message,
+        Ap = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -65279,7 +65353,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Ap = (function(e) {
+        Pp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65363,7 +65437,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        Pp = (function(e) {
+        zp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65425,7 +65499,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        zp = (function(e) {
+        Lp = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -65477,34 +65551,34 @@ and limitations under the License.
         })(at.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Parental.EnableParentalSettings#1", t, Mp);
+          return e.SendMsg("Parental.EnableParentalSettings#1", t, Fp);
         }
         function i(e, t) {
-          return e.SendMsg("Parental.DisableParentalSettings#1", t, Fp);
+          return e.SendMsg("Parental.DisableParentalSettings#1", t, wp);
         }
         function n(e, t) {
-          return e.SendMsg("Parental.GetParentalSettings#1", t, Op);
+          return e.SendMsg("Parental.GetParentalSettings#1", t, Bp);
         }
         function r(e, t) {
-          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, Bp);
+          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, Rp);
         }
         function o(e, t) {
-          return e.SendMsg("Parental.SetParentalSettings#1", t, Rp);
+          return e.SendMsg("Parental.SetParentalSettings#1", t, Ip);
         }
         function a(e, t) {
-          return e.SendMsg("Parental.ValidateToken#1", t, Ep);
+          return e.SendMsg("Parental.ValidateToken#1", t, kp);
         }
         function s(e, t) {
-          return e.SendMsg("Parental.ValidatePassword#1", t, Tp);
+          return e.SendMsg("Parental.ValidatePassword#1", t, Gp);
         }
         function c(e, t) {
-          return e.SendMsg("Parental.LockClient#1", t, Gp);
+          return e.SendMsg("Parental.LockClient#1", t, Np);
         }
         function l(e, t) {
-          return e.SendMsg("Parental.RequestRecoveryCode#1", t, Np);
+          return e.SendMsg("Parental.RequestRecoveryCode#1", t, Dp);
         }
         function u(e, t) {
-          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, Dp);
+          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, Ap);
         }
         (e.EnableParentalSettings = t),
           (e.DisableParentalSettings = i),
@@ -65516,27 +65590,27 @@ and limitations under the License.
           (e.LockClient = c),
           (e.RequestRecoveryCode = l),
           (e.DisableWithRecoveryCode = u);
-      })(fp || (fp = {}));
-      var Lp;
+      })(_p || (_p = {}));
+      var xp;
       !(function(e) {
         (e.NotifySettingsChangeHandler = {
           name: "ParentalClient.NotifySettingsChange#1",
-          request: Ap
+          request: Pp
         }),
           (e.NotifyUnlockHandler = {
             name: "ParentalClient.NotifyUnlock#1",
-            request: Pp
+            request: zp
           }),
           (e.NotifyLockHandler = {
             name: "ParentalClient.NotifyLock#1",
-            request: zp
+            request: Lp
           });
-      })(Lp || (Lp = {}));
-      var xp = (function() {
+      })(xp || (xp = {}));
+      var jp = (function() {
           function e() {
             var e = this;
-            (this.m_ParentalState = new cp()),
-              (this.m_ParentalLockHandler = l(Lp.NotifyLockHandler, function(
+            (this.m_ParentalState = new lp()),
+              (this.m_ParentalLockHandler = l(xp.NotifyLockHandler, function(
                 t
               ) {
                 return (
@@ -65545,7 +65619,7 @@ and limitations under the License.
                 );
               })),
               (this.m_ParentalUnlockHandler = l(
-                Lp.NotifyUnlockHandler,
+                xp.NotifyUnlockHandler,
                 function(t) {
                   return (
                     it.a.SESSIONID == t.Body().sessionid() &&
@@ -65555,7 +65629,7 @@ and limitations under the License.
                 }
               )),
               (this.m_ParentalSettingsChangeHandler = l(
-                Lp.NotifySettingsChangeHandler,
+                xp.NotifySettingsChangeHandler,
                 function(e) {
                   return 1;
                 }
@@ -65572,7 +65646,7 @@ and limitations under the License.
               var t = this;
               (this.m_CMInterface = e),
                 this.m_CMInterface.RunWhenLoggedOn(function() {
-                  var e = pt.Init(wp);
+                  var e = pt.Init(Op);
                   e
                     .Body()
                     .set_steamid(
@@ -65584,7 +65658,7 @@ and limitations under the License.
                             return t.UpdateParentalState(e);
                           }
                         )
-                      : fp
+                      : _p
                           .GetParentalSettings(
                             t.m_CMInterface.GetServiceTransport(),
                             e
@@ -65605,7 +65679,7 @@ and limitations under the License.
                 });
             }),
             (e.prototype.MsgParentalSettingsToParentalState = function(e) {
-              var t = new cp();
+              var t = new lp();
               (t.enabled = e.is_enabled()),
                 (t.features = e.enabled_features()),
                 (t.baselist = {});
@@ -65667,11 +65741,11 @@ and limitations under the License.
               var n = i[2],
                 r = n.split("||");
               n = 2 == r.length ? r[1] : r[0];
-              var o = pt.Init(Ip);
+              var o = pt.Init(Ep);
               return (
                 o.Body().set_unlock_token(t + "||" + n),
                 new Promise(function(t, i) {
-                  fp
+                  _p
                     .ValidateToken(e.m_CMInterface.GetServiceTransport(), o)
                     .then(function(e) {
                       t(1 == e.GetEResult());
@@ -65705,13 +65779,13 @@ and limitations under the License.
                     t(e);
                   });
                 });
-              var i = pt.Init(kp);
+              var i = pt.Init(Tp);
               return (
                 i.Body().set_password(e),
                 i.Body().set_session(it.a.SESSIONID),
                 i.Body().set_send_unlock_on_success(!0),
                 new Promise(function(e, n) {
-                  fp
+                  _p
                     .ValidatePassword(t.m_CMInterface.GetServiceTransport(), i)
                     .then(function(t) {
                       if (1 == t.GetEResult()) {
@@ -65732,9 +65806,9 @@ and limitations under the License.
             e
           );
         })(),
-        jp = (function() {
+        Up = (function() {
           function e() {
-            (this.m_status = new lp()),
+            (this.m_status = new up()),
               (this.m_mapPendingRequests = new ht.ObservableMap()),
               (this.m_nRequestID = 1);
           }
@@ -65793,16 +65867,16 @@ and limitations under the License.
               ((this.m_status.bIsBroadcasting && !e.bIsBroadcasting) ||
                 ("0" != this.m_status.broadcastid && "0" == e.broadcastid)) &&
                 this.m_mapPendingRequests.forEach(function(e, t, i) {
-                  e == mp.k_EPending && i.delete(t);
+                  e == gp.k_EPending && i.delete(t);
                 }),
                 (this.m_status = e);
             }),
             (e.prototype.OnViewerRequest = function(e, t, i) {
-              if (i == mp.k_EPending) {
+              if (i == gp.k_EPending) {
                 var n = this.m_nRequestID++;
                 this.m_mapPendingRequests.set(this.MakeKey(e, n), i);
-                var r = Kp.GetDefaultBrowserContext(),
-                  o = Kp.ShowFriendChatDialog(r, e);
+                var r = Yp.GetDefaultBrowserContext(),
+                  o = Yp.ShowFriendChatDialog(r, e);
                 o && o.ViewerNeedsApproval(n);
               } else this.m_mapPendingRequests.set(this.MakeKey(e, t), i);
             }),
@@ -65843,37 +65917,37 @@ and limitations under the License.
             e
           );
         })(),
-        Up = (function() {
+        Wp = (function() {
           function e() {}
           return e;
         })();
-      Up || (Up = {});
-      var Wp,
-        Vp = (function() {
+      Wp || (Wp = {});
+      var Vp,
+        Hp = (function() {
           function e() {}
           return e;
         })(),
-        Hp = { m_unPID: 0, m_nBrowserID: -1 },
-        qp = (function() {
+        qp = { m_unPID: 0, m_nBrowserID: -1 },
+        Kp = (function() {
           function e(e) {
-            (this.m_BrowserContextDefaultTarget = Hp),
+            (this.m_BrowserContextDefaultTarget = qp),
               (this.m_FriendStore = new Za()),
               (this.m_ChatStore = new ws(this.m_FriendStore)),
-              (this.m_UIStore = new np(this.m_ChatStore)),
+              (this.m_UIStore = new rp(this.m_ChatStore)),
               (this.m_AppInfoStore = new di()),
               (this.m_EconomyStore = new Yr()),
-              (this.m_ParentalStore = new xp()),
-              (this.m_BroadcastStore = new jp()),
+              (this.m_ParentalStore = new jp()),
+              (this.m_BroadcastStore = new Up()),
               (this.m_bReadyToRender = !1),
               (this.m_bShuttingDown = !1),
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              AssertMsg(!Kp, "FriendsUIApp already initialized"),
-              (Kp = this),
+              AssertMsg(!Yp, "FriendsUIApp already initialized"),
+              (Yp = this),
               (window.g_FriendsUIApp = this),
               (this.m_Storage = e),
-              (this.m_SettingsStore = new _p(e)),
+              (this.m_SettingsStore = new yp(e)),
               (this.m_VoiceChatStore = new ll(this.m_SettingsStore));
           }
           return (
@@ -66080,8 +66154,8 @@ and limitations under the License.
             e
           );
         })(),
-        Kp = void 0,
-        Yp = (function(e) {
+        Yp = void 0,
+        Jp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66090,7 +66164,7 @@ and limitations under the License.
             (t.prototype.AcceptInvite = function(e) {
               var t = this,
                 i = Qe(e);
-              Kp.ChatStore.InviteStore.AcceptInvite(
+              Yp.ChatStore.InviteStore.AcceptInvite(
                 this.props.invite,
                 Je(this, e)
               ).then(function(e) {
@@ -66100,7 +66174,7 @@ and limitations under the License.
             (t.prototype.HandleJoinResult = function(e, t) {
               if (15 == t.result) {
                 0 == t.time && console.log("no longer valid");
-                var i = Kp.RTime32ToDate(t.time),
+                var i = Yp.RTime32ToDate(t.time),
                   n = i.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -66150,8 +66224,8 @@ and limitations under the License.
                 );
               var t =
                   this.props.inviter &&
-                  Kp.FriendStore.self.accountid == this.props.inviter.accountid,
-                i = Kp.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
+                  Yp.FriendStore.self.accountid == this.props.inviter.accountid,
+                i = Yp.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
                 n = i && i.BIsCurrentUserAMember(),
                 r = e.BIsExpired(),
                 o = i && i.name,
@@ -66179,7 +66253,7 @@ and limitations under the License.
                   Object(mr.b)("#bbcode_invite_never_expires")
                 );
               else {
-                var h = Kp.RTime32ToDate(e.time_expires);
+                var h = Yp.RTime32ToDate(e.time_expires);
                 p = Cr.createElement(
                   "div",
                   { className: "Invite_ExpireTime" },
@@ -66211,10 +66285,10 @@ and limitations under the License.
                   ));
               else if (
                 e.GetTimeKickExpires() &&
-                e.GetTimeKickExpires() > Kp.GetServerRTime32()
+                e.GetTimeKickExpires() > Yp.GetServerRTime32()
               ) {
                 f = !0;
-                var h = Kp.RTime32ToDate(e.GetTimeKickExpires()),
+                var h = Yp.RTime32ToDate(e.GetTimeKickExpires()),
                   _ = h.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -66239,7 +66313,7 @@ and limitations under the License.
                   { className: "leftInviteContainer" },
                   Cr.createElement(pu, { group: i, small: y, large: v }),
                   u &&
-                    Cr.createElement("div", null, Cr.createElement(Es.L, null))
+                    Cr.createElement("div", null, Cr.createElement(Es.M, null))
                 ),
                 Cr.createElement(
                   "div",
@@ -66251,7 +66325,7 @@ and limitations under the License.
                   Cr.createElement(
                     "div",
                     { className: "rightInviteContainerContent" },
-                    Cr.createElement(Jp, {
+                    Cr.createElement(Xp, {
                       invite: this.props.invite,
                       inviter: this.props.inviter,
                       invitee: this.props.invitee
@@ -66266,7 +66340,7 @@ and limitations under the License.
                       )
                     ),
                     l &&
-                      Cr.createElement(Zp, {
+                      Cr.createElement(Qp, {
                         url: e.GetURL(),
                         bDisabled: e.BIsExpired()
                       }),
@@ -66304,15 +66378,15 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Jp = Object(Is.observer)(function(e) {
+        Xp = Object(Is.observer)(function(e) {
           var t = e.invite,
             i = e.inviter,
             n = e.invitee,
             r = t.BIsVoiceChatInvite(),
             o = t.BIsInviteLink(),
             a =
-              e.inviter && Kp.FriendStore.self.accountid == e.inviter.accountid,
-            s = Kp.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
+              e.inviter && Yp.FriendStore.self.accountid == e.inviter.accountid,
+            s = Yp.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
             c = Object(mr.b)("#bbcode_invite_youre_invited");
           return (
             a
@@ -66408,7 +66482,7 @@ and limitations under the License.
             Cr.createElement("div", { className: "inviteLabel" }, c)
           );
         }),
-        Xp = (function(e) {
+        Zp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66429,7 +66503,7 @@ and limitations under the License.
                   Be,
                   { onEscKeypress: i },
                   Cr.createElement(
-                    Yp,
+                    Jp,
                     nt.a({}, r, { strClassName: n, onAccept: o })
                   )
                 )
@@ -66438,7 +66512,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Zp = (function(e) {
+        Qp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66487,7 +66561,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Qp = (function(e) {
+        $p = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -66503,9 +66577,9 @@ and limitations under the License.
               me(Je(this, e), this.props.gameInvite.appID, e);
             }),
             (t.prototype.render = function() {
-              var e = Kp.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
+              var e = Yp.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
               if (!e) return null;
-              if (Kp.FriendStore.self == this.props.inviter) {
+              if (Yp.FriendStore.self == this.props.inviter) {
                 var t = Cr.createElement(
                   "span",
                   { className: "inviteeNameLabel" },
@@ -66530,7 +66604,7 @@ and limitations under the License.
                 );
               }
               if (
-                Kp.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
+                Yp.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
                   21600 ||
                 this.props.gameInvite.bDismissed ||
                 this.props.inviter.persona.m_unGamePlayedAppID !=
@@ -66584,12 +66658,12 @@ and limitations under the License.
                 n.persona.player_group_size > 0
               ) {
                 var a = n.persona.player_group;
-                Kp.FriendStore.all_friends,
-                  (r = Kp.FriendStore.FriendGroupStore.ingame_group.member_list.map(
+                Yp.FriendStore.all_friends,
+                  (r = Yp.FriendStore.FriendGroupStore.ingame_group.member_list.map(
                     function(e) {
                       return e != n && e.persona.player_group == a
                         ? (o--,
-                          Cr.createElement(qu, {
+                          Cr.createElement(Ku, {
                             key: e.accountid,
                             friend: e,
                             context: null
@@ -66682,7 +66756,7 @@ and limitations under the License.
                   Cr.createElement(
                     "div",
                     { className: "closeButton", onClick: this.DismissInvite },
-                    Cr.createElement(Es.O, null)
+                    Cr.createElement(Es.P, null)
                   )
                 )
               );
@@ -66693,7 +66767,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        $p = (at.Message,
+        eh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66778,7 +66852,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        eh = (at.Message,
+        th = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66814,7 +66888,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        th = (at.Message,
+        ih = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -66910,7 +66984,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        ih = (function(e) {
+        nh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -66972,7 +67046,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        nh = (function(e) {
+        rh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67088,7 +67162,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        rh = (function(e) {
+        oh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67150,7 +67224,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        oh = (function(e) {
+        ah = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67212,7 +67286,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        ah = (at.Message,
+        sh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67374,7 +67448,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        sh = (at.Message,
+        ch = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67425,7 +67499,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        ch = (at.Message,
+        lh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67461,7 +67535,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        lh = (function(e) {
+        uh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67522,7 +67596,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        uh = (function(e) {
+        dh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67573,7 +67647,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        dh = (function(e) {
+        ph = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67656,7 +67730,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        ph = (function(e) {
+        hh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67707,7 +67781,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        hh = (function(e) {
+        mh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67769,7 +67843,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        mh = (function(e) {
+        gh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -67864,7 +67938,7 @@ and limitations under the License.
             t
           );
         })(at.Message),
-        gh = (at.Message,
+        fh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -67916,7 +67990,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        fh = (at.Message,
+        _h = (at.Message,
         at.Message,
         (function(e) {
           function t(t) {
@@ -67991,7 +68065,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        _h = (at.Message,
+        yh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -68065,7 +68139,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        yh = (at.Message,
+        vh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -68101,7 +68175,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        vh = (at.Message,
+        bh = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -68137,7 +68211,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        bh = (at.Message,
+        Ch = (at.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -68147,13 +68221,13 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.persona_names = function() {
-              return at.Message.getRepeatedWrapperField(this, Ch, 1);
+              return at.Message.getRepeatedWrapperField(this, Sh, 1);
             }),
             (t.prototype.set_persona_names = function(e) {
               at.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_persona_names = function(e, t) {
-              return at.Message.addToRepeatedWrapperField(this, 1, e, Ch, t);
+              return at.Message.addToRepeatedWrapperField(this, 1, e, Sh, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -68170,8 +68244,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Ch();
-                    t.readMessage(i, Ch.deserializeBinaryFromReader),
+                    var i = new Sh();
+                    t.readMessage(i, Sh.deserializeBinaryFromReader),
                       e.add_persona_names(i);
                     break;
                   default:
@@ -68187,7 +68261,7 @@ and limitations under the License.
               var i;
               (i = e.persona_names()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Ch.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Sh.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastChatUserNames_Response";
@@ -68195,7 +68269,7 @@ and limitations under the License.
             t
           );
         })(at.Message)),
-        Ch = (function(e) {
+        Sh = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -68259,31 +68333,31 @@ and limitations under the License.
         })(at.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, $p);
+          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, eh);
         }
         function i(e, t) {
-          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, eh);
+          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, th);
         }
         function n(e, t) {
-          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, th);
+          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, ih);
         }
         function r(e, t) {
           return e.SendNotification("Broadcast.NotifyBroadcastUploadStop#1", t);
         }
         function o(e, t) {
-          return e.SendMsg("Broadcast.WatchBroadcast#1", t, ah);
+          return e.SendMsg("Broadcast.WatchBroadcast#1", t, sh);
         }
         function a(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, nh);
+          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, rh);
         }
         function s(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, oh);
+          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, ah);
         }
         function c(e, t) {
-          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, sh);
+          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, ch);
         }
         function l(e, t) {
-          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, ch);
+          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, lh);
         }
         function u(e, t) {
           return e.SendNotification(
@@ -68292,19 +68366,19 @@ and limitations under the License.
           );
         }
         function d(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, fh);
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, _h);
         }
         function p(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, _h);
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, yh);
         }
         function h(e, t) {
-          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, yh);
+          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, vh);
         }
         function m(e, t) {
-          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, vh);
+          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, bh);
         }
         function g(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, bh);
+          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, Ch);
         }
         (e.BeginBroadcastSession = t),
           (e.EndBroadcastSession = i),
@@ -68321,40 +68395,40 @@ and limitations under the License.
           (e.MuteBroadcastChatUser = h),
           (e.RemoveUserChatText = m),
           (e.GetBroadcastChatUserNames = g);
-      })(Wp || (Wp = {}));
-      var Sh;
+      })(Vp || (Vp = {}));
+      var Mh;
       !(function(e) {
         (e.NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
-          request: lh
+          request: uh
         }),
           (e.NotifyWaitingBroadcastViewerHandler = {
             name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
-            request: uh
+            request: dh
           }),
           (e.NotifyStopBroadcastUploadHandler = {
             name: "BroadcastClient.NotifyStopBroadcastUpload#1",
-            request: dh
+            request: ph
           }),
           (e.NotifySessionClosedHandler = {
             name: "BroadcastClient.NotifySessionClosed#1",
-            request: ph
+            request: hh
           }),
           (e.NotifyViewerBroadcastInviteHandler = {
             name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-            request: gh
+            request: fh
           }),
           (e.NotifyBroadcastStatusHandler = {
             name: "BroadcastClient.NotifyBroadcastStatus#1",
-            request: hh
+            request: mh
           }),
           (e.SendThumbnailToRelayHandler = {
             name: "BroadcastClient.SendThumbnailToRelay#1",
-            request: mh
+            request: gh
           });
-      })(Sh || (Sh = {}));
-      var Mh,
-        Fh = (function(e) {
+      })(Mh || (Mh = {}));
+      var Fh,
+        wh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68374,7 +68448,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.componentDidMount = function() {
               this.props.broadcaster.accountid !=
-                Kp.FriendStore.self.accountid &&
+                Yp.FriendStore.self.accountid &&
                 (this.props.broadcastid
                   ? this.PollForStatus()
                   : this.setState({ bExpired: !0 }));
@@ -68411,25 +68485,25 @@ and limitations under the License.
               }
             }),
             (t.prototype.FetchBroadcastStatus = function() {
-              var e = Kp.CMInterface;
+              var e = Yp.CMInterface;
               if (e) {
-                var t = pt.Init(ih);
+                var t = pt.Init(nh);
                 return (
                   t.Body().set_steamid(this.props.broadcaster.steamid64),
                   t.Body().set_broadcast_id(this.props.broadcastid),
-                  Wp.GetBroadcastStatus(e.GetServiceTransport(), t)
+                  Vp.GetBroadcastStatus(e.GetServiceTransport(), t)
                 );
               }
               return Promise.reject("No CM interface");
             }),
             (t.prototype.FetchBroadcastThumbnail = function() {
               var e = this,
-                t = Kp.CMInterface;
+                t = Yp.CMInterface;
               if (t) {
-                var i = pt.Init(rh);
+                var i = pt.Init(oh);
                 i.Body().set_steamid(this.props.broadcaster.steamid64),
                   i.Body().set_broadcast_id(this.props.broadcastid),
-                  Wp.GetBroadcastThumbnail(t.GetServiceTransport(), i).then(
+                  Vp.GetBroadcastThumbnail(t.GetServiceTransport(), i).then(
                     function(t) {
                       if (1 == t.GetEResult()) {
                         var i = t.Body().thumbnail_url(),
@@ -68472,7 +68546,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Kp.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Yp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = Cr.createElement(
                   "span",
                   null,
@@ -68484,7 +68558,7 @@ and limitations under the License.
                 );
               if (
                 this.props.broadcaster.accountid ==
-                Kp.FriendStore.self.accountid
+                Yp.FriendStore.self.accountid
               ) {
                 var i = Cr.createElement(
                   "span",
@@ -68570,7 +68644,7 @@ and limitations under the License.
                   Cr.createElement(
                     "div",
                     { className: "closeButton", onClick: this.OnClose },
-                    Cr.createElement(Es.O, null)
+                    Cr.createElement(Es.P, null)
                   )
                 )
               );
@@ -68582,7 +68656,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        wh = (function(e) {
+        Oh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68601,13 +68675,13 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.OnAccept = function(e) {
-              Kp.BroadcastStore.ApproveViewerRequest(
+              Yp.BroadcastStore.ApproveViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
             }),
             (t.prototype.OnClose = function() {
-              Kp.BroadcastStore.RejectViewerRequest(
+              Yp.BroadcastStore.RejectViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
@@ -68616,7 +68690,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Kp.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Yp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = Cr.createElement(
                   "span",
                   null,
@@ -68631,24 +68705,24 @@ and limitations under the License.
                   { className: "inviteeNameLabel" },
                   this.props.viewer.display_name
                 ),
-                n = Kp.BroadcastStore.GetRequestState(
+                n = Yp.BroadcastStore.GetRequestState(
                   this.props.viewer.accountid,
                   this.props.requestid
                 ),
                 r =
                   void 0 !== this.m_broadcastid &&
-                  this.m_broadcastid != Kp.BroadcastStore.broadcastid;
+                  this.m_broadcastid != Yp.BroadcastStore.broadcastid;
               if (
                 (void 0 === this.m_broadcastid &&
-                  "0" !== Kp.BroadcastStore.broadcastid &&
-                  (this.m_broadcastid = Kp.BroadcastStore.broadcastid),
-                r || n != mp.k_EPending)
+                  "0" !== Yp.BroadcastStore.broadcastid &&
+                  (this.m_broadcastid = Yp.BroadcastStore.broadcastid),
+                r || n != gp.k_EPending)
               ) {
                 var o = "#ChatRoom_BroadcastViewRequest_Expired";
                 return (
-                  n == mp.k_EAccepted
+                  n == gp.k_EAccepted
                     ? (o = "#ChatRoom_BroadcastViewRequest_Accepted")
-                    : n == mp.k_ERejected &&
+                    : n == gp.k_ERejected &&
                       (o = "#ChatRoom_BroadcastViewRequest_Dismissed"),
                   Cr.createElement(
                     "div",
@@ -68722,7 +68796,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        Oh = (function(e) {
+        Bh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68828,11 +68902,11 @@ and limitations under the License.
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
-      })(Mh || (Mh = {}));
-      var Bh,
-        Rh = Mh.NotLoaded,
-        Ih = [],
-        Eh = (function(e) {
+      })(Fh || (Fh = {}));
+      var Rh,
+        Ih = Fh.NotLoaded,
+        Eh = [],
+        kh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68961,7 +69035,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        kh = (function(e) {
+        Th = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68979,14 +69053,14 @@ and limitations under the License.
             t
           );
         })(Er),
-        Th = (function(e) {
+        Gh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
-              n = Kp.ChatStore.EmbedStore.GetCollapsedState(
+              n = Yp.ChatStore.EmbedStore.GetCollapsedState(
                 i.props.unAccountIDSender,
                 i.props.msgUniqueKey
               ),
-              r = Kp.ChatStore.EmbedStore.GetWidths(
+              r = Yp.ChatStore.EmbedStore.GetWidths(
                 i.props.unAccountIDSender,
                 i.props.msgUniqueKey
               );
@@ -69035,7 +69109,7 @@ and limitations under the License.
                     t.m_animationCollapse.Start();
                 }
               ),
-                Kp.ChatStore.EmbedStore.SetCollapsedState(
+                Yp.ChatStore.EmbedStore.SetCollapsedState(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   i
@@ -69061,7 +69135,7 @@ and limitations under the License.
                   )),
                     t.m_animationCollapse.Start();
                 }),
-                Kp.ChatStore.EmbedStore.SetWidths(
+                Yp.ChatStore.EmbedStore.SetWidths(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   this.m_frameDefaultWidth,
@@ -69105,7 +69179,7 @@ and limitations under the License.
                 !this.state.bMinimized &&
                   this.m_elContainer &&
                   (this.m_frameDesiredWidth = this.m_elContainer.clientWidth),
-                Kp.ChatStore.EmbedStore.SetWidths(
+                Yp.ChatStore.EmbedStore.SetWidths(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   this.m_frameDesiredWidth,
@@ -69179,7 +69253,7 @@ and limitations under the License.
                               "_tooltip_collapse"
                           )
                     },
-                    Cr.createElement(Es.N, null)
+                    Cr.createElement(Es.O, null)
                   )
                 )
               );
@@ -69193,7 +69267,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Gh = (function(e) {
+        Nh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69233,7 +69307,7 @@ and limitations under the License.
                   : (n = parseInt(r));
               }
               return Cr.createElement(
-                Th,
+                Gh,
                 {
                   className: "BBCodeYouTubeComponent",
                   unAccountIDSender: this.props.context.unAccountIDSender,
@@ -69247,7 +69321,7 @@ and limitations under the License.
                     className:
                       "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
                   },
-                  Cr.createElement(Eh, {
+                  Cr.createElement(kh, {
                     video: this.GetArgument("v"),
                     startSeconds: n,
                     width: 640,
@@ -69288,11 +69362,11 @@ and limitations under the License.
         (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded"),
           (e[(e.Error = 3)] = "Error");
-      })(Bh || (Bh = {}));
-      var Nh = (function(e) {
+      })(Rh || (Rh = {}));
+      var Dh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return (i.state = { eLoadingState: Bh.Loading }), i;
+            return (i.state = { eLoadingState: Rh.Loading }), i;
           }
           return (
             nt.c(t, e),
@@ -69302,11 +69376,11 @@ and limitations under the License.
               return !1;
             }),
             (t.prototype.OnImageLoad = function() {
-              this.setState({ eLoadingState: Bh.Loaded }),
+              this.setState({ eLoadingState: Rh.Loaded }),
                 this.props.context.chat.NotifyViewsChatContentsChanged();
             }),
             (t.prototype.OnImageError = function() {
-              this.setState({ eLoadingState: Bh.Error });
+              this.setState({ eLoadingState: Rh.Error });
             }),
             (t.prototype.render = function() {
               var e = this.GetArgument("thumbnail_src"),
@@ -69317,7 +69391,7 @@ and limitations under the License.
                 ("true" == this.GetArgument("proxied") && (e += "?s=652x652"),
                 this.IsEmbeddedInOtherTag())
               )
-                return Cr.createElement(Ah, {
+                return Cr.createElement(Ph, {
                   className: "embeddedImg",
                   context: this.props.context,
                   src: e,
@@ -69325,16 +69399,16 @@ and limitations under the License.
                 });
               var r = "chatImageContainer",
                 o = void 0 !== this.GetArgument("giphy_search");
-              o && (r += " giphyImg"), n == Bh.Error && (r += " FailedToLoad");
+              o && (r += " giphyImg"), n == Rh.Error && (r += " FailedToLoad");
               var a = { display: "none" };
-              n == Bh.Loaded && (a = { display: "block" });
+              n == Rh.Loaded && (a = { display: "block" });
               var s = Cr.createElement(
                 "span",
                 { className: "giphySearch" },
                 this.GetArgument("giphy_search")
               );
               return Cr.createElement(
-                Th,
+                Gh,
                 {
                   className: r,
                   strMediaType: "image",
@@ -69347,14 +69421,14 @@ and limitations under the License.
                       )
                     : i
                 },
-                n == Bh.Loading &&
+                n == Rh.Loading &&
                   Cr.createElement(
                     "div",
                     { className: "LoadingImage" },
                     "Loading image: ",
                     Cr.createElement(m, { href: i }, i)
                   ),
-                n == Bh.Error &&
+                n == Rh.Error &&
                   Cr.createElement(
                     "div",
                     { className: "FailedToLoadImage" },
@@ -69373,7 +69447,7 @@ and limitations under the License.
                     y(e, i);
                   }
                 }),
-                n == Bh.Loaded &&
+                n == Rh.Loaded &&
                   Cr.createElement(
                     Cr.Fragment,
                     null,
@@ -69404,7 +69478,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Dh = (function(e) {
+        Ah = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bPlaying: !1 }), i;
@@ -69432,7 +69506,7 @@ and limitations under the License.
                 muted: !1
               });
               return Cr.createElement(
-                Th,
+                Gh,
                 {
                   className: "chatVideoContainer",
                   strMediaType: "video",
@@ -69473,7 +69547,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Ah = (function(e) {
+        Ph = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69494,7 +69568,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        Ph = (function(e) {
+        zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69613,7 +69687,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        zh = (function(e) {
+        Lh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69708,7 +69782,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Lh = (function(e) {
+        xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActivated: !1 }), i;
@@ -69791,7 +69865,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        xh = (function(e) {
+        jh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { invite: void 0 }), i;
@@ -69810,7 +69884,7 @@ and limitations under the License.
               var e = this.props.context.chat.GetMember(
                 this.props.context.unAccountIDSender
               );
-              return Cr.createElement(Yp, {
+              return Cr.createElement(Jp, {
                 invite: this.state.invite,
                 inviter: e
               });
@@ -69818,7 +69892,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        jh = (function(e) {
+        Uh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69855,7 +69929,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(Yp, {
+              return Cr.createElement(Jp, {
                 invite: this.state.invite,
                 inviter: this.state.inviter,
                 invitee: this.state.invitee
@@ -69864,7 +69938,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Uh = (function(e) {
+        Wh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69902,7 +69976,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(Qp, {
+              return Cr.createElement($p, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -69911,7 +69985,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Wh = (function(e) {
+        Vh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69949,7 +70023,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(Qp, {
+              return Cr.createElement($p, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -69958,7 +70032,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Vh = (function(e) {
+        Hh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69987,7 +70061,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(Fh, {
+              return Cr.createElement(wh, {
                 broadcastid: this.state.broadcastid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -69997,7 +70071,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Hh = (function(e) {
+        qh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70017,7 +70091,7 @@ and limitations under the License.
                 n,
                 r = e.args.requestid,
                 o = e.context.chat,
-                a = Kp.FriendStore.self.persona.m_gameid;
+                a = Yp.FriendStore.self.persona.m_gameid;
               return (
                 o.self.accountid != e.context.unAccountIDSender
                   ? ((i = o.self), (n = o.chat_partner))
@@ -70026,7 +70100,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(wh, {
+              return Cr.createElement(Oh, {
                 requestid: this.state.requestid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -70036,7 +70110,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        qh = (function(e) {
+        Kh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             i.state = {
@@ -70045,7 +70119,7 @@ and limitations under the License.
               bLocalVoteUp: !1,
               nCommentCount: parseInt(i.GetArgument("num_comments_public"))
             };
-            var n = Kp.CMInterface;
+            var n = Yp.CMInterface;
             if (n) {
               var r = i.GetArgument("fileid"),
                 o = pt.Init(fa, 8509);
@@ -70076,7 +70150,7 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.VoteItem = function(e, t) {
               var i = this,
-                n = Kp.CMInterface;
+                n = Yp.CMInterface;
               if (n) {
                 var r = pt.Init(ma, 8507);
                 r.Body().set_published_file_id(t),
@@ -70134,7 +70208,7 @@ and limitations under the License.
                     Cr.createElement(
                       m,
                       { className: "ChatLargeImageContainer", href: i },
-                      Cr.createElement(Ah, {
+                      Cr.createElement(Ph, {
                         context: this.props.context,
                         className: "ChatLargeImageContainer_Image",
                         src: o,
@@ -70201,7 +70275,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Kh = (function(e) {
+        Yh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70230,7 +70304,7 @@ and limitations under the License.
                     Cr.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      Cr.createElement(qu, {
+                      Cr.createElement(Ku, {
                         friend: i,
                         context: { chat: this.props.context.chat },
                         bLarge: !0
@@ -70250,7 +70324,7 @@ and limitations under the License.
                             i.display_name
                           )
                         ),
-                        Cr.createElement(Zp, {
+                        Cr.createElement(Qp, {
                           url: e,
                           strLabel: Object(mr.b)("#TradeOfferLink_Label")
                         })
@@ -70277,7 +70351,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Yh = (function(e) {
+        Jh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70307,7 +70381,7 @@ and limitations under the License.
               var e = this.GetArgument("id"),
                 t = parseInt(this.GetArgument("sender"));
               if (!e && this.GetArgument("url"))
-                return Cr.createElement(Kh, nt.a({}, this.props));
+                return Cr.createElement(Yh, nt.a({}, this.props));
               var i = this.props.context.chat,
                 n = i.self.accountid == t,
                 r = Cr.createElement(
@@ -70321,12 +70395,12 @@ and limitations under the License.
                 Cr.createElement(
                   "div",
                   { className: "leftInviteContainer" },
-                  Cr.createElement(qu, {
+                  Cr.createElement(Ku, {
                     friend: n ? i.self : i.chat_partner,
                     context: { chat: i },
                     bLarge: !0
                   }),
-                  Cr.createElement(Es.J, null)
+                  Cr.createElement(Es.K, null)
                 ),
                 Cr.createElement(
                   "div",
@@ -70382,7 +70456,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Jh = (function(e) {
+        Xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { broadcaster: void 0 }), i;
@@ -70392,18 +70466,18 @@ and limitations under the License.
             (t.getDerivedStateFromProps = function(e, t) {
               var i = new ut.a(e.args.broadcaster);
               return {
-                broadcaster: Kp.FriendStore.GetPlayer(i.GetAccountID())
+                broadcaster: Yp.FriendStore.GetPlayer(i.GetAccountID())
               };
             }),
             (t.prototype.render = function() {
-              return Cr.createElement(Oh, {
+              return Cr.createElement(Bh, {
                 broadcaster: this.state.broadcaster
               });
             }),
             t
           );
         })(Er),
-        Xh = (function(e) {
+        Zh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70429,7 +70503,7 @@ and limitations under the License.
             }),
             (t.prototype.componentWillMount = function() {
               var e = this,
-                t = Kp.CMInterface;
+                t = Yp.CMInterface;
               if (t) {
                 var i = parseInt(this.GetArgument("appid")),
                   n = this.GetArgument("classid"),
@@ -70470,7 +70544,7 @@ and limitations under the License.
                 r = this.GetArgument("assetid"),
                 o = this.GetArgument("market_hash_name"),
                 a = parseInt(this.GetArgument("owner")),
-                s = Kp.AppInfoStore.GetAppInfo(i);
+                s = Yp.AppInfoStore.GetAppInfo(i);
               if (a && t) {
                 var c = this.props.context.chat.GetMember(a),
                   l = c ? c.display_name : this.GetArgument("persona"),
@@ -70523,7 +70597,7 @@ and limitations under the License.
                       Cr.createElement(
                         m,
                         { className: "OpenGraphImgContainer", href: t },
-                        Cr.createElement(Ah, {
+                        Cr.createElement(Ph, {
                           context: this.props.context,
                           className: "ChatMessageOpenGraph_Image",
                           src: d,
@@ -70580,8 +70654,8 @@ and limitations under the License.
                               "div",
                               { style: { marginTop: "1em" } },
                               this.state.description.tradable() &&
-                                Kp.CMInterface &&
-                                a != Kp.CMInterface.steamid.GetAccountID() &&
+                                Yp.CMInterface &&
+                                a != Yp.CMInterface.steamid.GetAccountID() &&
                                 Cr.createElement(
                                   m,
                                   { className: "general_btn inline", href: g },
@@ -70654,7 +70728,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Er),
-        Zh = (function(e) {
+        Qh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70673,7 +70747,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        Qh = (function(e) {
+        $h = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70698,7 +70772,7 @@ and limitations under the License.
                 if (i && i.is_ready) {
                   var n = i.accountid == this.props.context.chat.self.accountid;
                   return Cr.createElement(
-                    Wu,
+                    Vu,
                     { friend: i, context: { chat: this.props.context.chat } },
                     Cr.createElement(
                       "span",
@@ -70718,7 +70792,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Er),
-        $h = (function(e) {
+        em = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70730,13 +70804,13 @@ and limitations under the License.
                 "string" == typeof this.props.children
                   ? (e = this.props.children)
                   : Cr.Children.forEach(this.props.children, function(e) {}),
-                e ? Cr.createElement(td, { emoticon: e }) : null
+                e ? Cr.createElement(id, { emoticon: e }) : null
               );
             }),
             t
           );
         })(Er),
-        em = (function(e) {
+        tm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70764,7 +70838,7 @@ and limitations under the License.
             t
           );
         })(Er),
-        tm = (function() {
+        im = (function() {
           function e() {}
           return (
             (e.prototype.GetObject = function(e) {
@@ -70778,7 +70852,7 @@ and limitations under the License.
             e
           );
         })(),
-        im = (function(e) {
+        nm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70795,8 +70869,8 @@ and limitations under the License.
             }),
             t
           );
-        })(tm),
-        nm = (function() {
+        })(im),
+        rm = (function() {
           function e() {
             (this.m_vecObjects = []),
               (this.OnUnload = this.OnUnload.bind(this)),
@@ -70811,7 +70885,7 @@ and limitations under the License.
               this.m_vecObjects = [];
             }),
             (e.prototype.CreateObserver = function(e) {
-              var t = new rm(e);
+              var t = new om(e);
               return this.m_vecObjects.push(t), t;
             }),
             (e.prototype.DeleteObserver = function(e) {
@@ -70824,7 +70898,7 @@ and limitations under the License.
             e
           );
         })(),
-        rm = (function() {
+        om = (function() {
           function e(e) {
             this.m_resizeObserver = new ResizeObserver(e);
           }
@@ -70846,8 +70920,8 @@ and limitations under the License.
             e
           );
         })(),
-        om = new nm(),
-        am = (function(e) {
+        am = new rm(),
+        sm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70859,18 +70933,18 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.componentWillUnmount = function() {
-              om.DeleteObserver(this.m_eResizeObserver),
-                Rm.RemoveFriendDropTarget();
+              am.DeleteObserver(this.m_eResizeObserver),
+                Im.RemoveFriendDropTarget();
             }),
             (t.prototype.BindDropFrame = function(e) {
               (this.m_elDivElement = e),
                 e &&
-                  (Rm.SetFriendDropTarget(this),
+                  (Im.SetFriendDropTarget(this),
                   requestAnimationFrame(function() {
-                    Rm.RecalculateDropTargetBounds();
+                    Im.RecalculateDropTargetBounds();
                   }),
-                  (this.m_eResizeObserver = om.CreateObserver(function() {
-                    Rm.RecalculateDropTargetBounds();
+                  (this.m_eResizeObserver = am.CreateObserver(function() {
+                    Im.RecalculateDropTargetBounds();
                   })),
                   this.m_eResizeObserver.observe(this.m_elDivElement));
             }),
@@ -70880,7 +70954,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.friends.FriendGroupStore.friend_groups.map(
                 function(e) {
-                  return Cr.createElement(sm, { group: e, key: e.id });
+                  return Cr.createElement(cm, { group: e, key: e.id });
                 }
               );
               return Cr.createElement(
@@ -70892,7 +70966,7 @@ and limitations under the License.
             t
           );
         })(Cr.Component),
-        sm = (function(e) {
+        cm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70900,11 +70974,11 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.group.member_list.map(function(e) {
-                  return Cr.createElement(cm, { friend: e, key: e.accountid });
+                  return Cr.createElement(lm, { friend: e, key: e.accountid });
                 }),
                 t = "friendGroup";
               return (
-                Kp.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
+                Yp.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
                   this.props.group
                 ) && (t += " Friends"),
                 Cr.createElement(
@@ -70930,7 +71004,7 @@ and limitations under the License.
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        cm = (function(e) {
+        lm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70942,18 +71016,18 @@ and limitations under the License.
           return (
             nt.c(t, e),
             (t.prototype.componentWillUnmount = function() {
-              Rm.RemoveChildDropTarget(this);
+              Im.RemoveChildDropTarget(this);
             }),
             (t.prototype.BindDropFrame = function(e) {
-              (this.m_elDivElement = e), e && Rm.AddChildDropTarget(this);
+              (this.m_elDivElement = e), e && Im.AddChildDropTarget(this);
             }),
             (t.prototype.componentDidUpdate = function() {
               requestAnimationFrame(function() {
-                Rm.RecalculateDropTargetBounds();
+                Im.RecalculateDropTargetBounds();
               });
             }),
             (t.prototype.OnElementDropped = function(e) {
-              var t = this.props.friend.OpenChatDialog(Hp);
+              var t = this.props.friend.OpenChatDialog(qp);
               "news" == e.type &&
                 (t.SendChatMessage(e.news.title),
                 t.SendChatMessage(e.news.url));
@@ -70980,13 +71054,13 @@ and limitations under the License.
                     src: e.persona.avatar_url_medium
                   })
                 ),
-                Cr.createElement(Ku, { friend: e })
+                Cr.createElement(Yu, { friend: e })
               );
             }),
             (t = nt.b([Is.observer], t))
           );
         })(Cr.Component),
-        lm = (function() {
+        um = (function() {
           function e() {
             this.m_mapEmoticonHovers = new Map();
           }
@@ -70994,13 +71068,13 @@ and limitations under the License.
             (e.prototype.GetEmoticonHover = function(e) {
               var t = this.m_mapEmoticonHovers.get(e);
               return (
-                t || ((t = new um(e)), this.m_mapEmoticonHovers.set(e, t)), t
+                t || ((t = new dm(e)), this.m_mapEmoticonHovers.set(e, t)), t
               );
             }),
             e
           );
         })(),
-        um = (function() {
+        dm = (function() {
           function e(e) {
             (this.m_bVisible = !1),
               (this.m_strEmoticonHoverHTML = void 0),
@@ -71026,7 +71100,7 @@ and limitations under the License.
               var i = this;
               this.EnsureEmoticonLoaded();
               var n = t.currentTarget,
-                r = Cr.createElement(id, { hover: this, target: n });
+                r = Cr.createElement(nd, { hover: this, target: n });
               e.sm_embeddedElements
                 .ShowElementDelayed(n.ownerDocument, 50, r, this)
                 .then(function() {
@@ -71088,7 +71162,7 @@ and limitations under the License.
             e
           );
         })(),
-        dm = (function() {
+        pm = (function() {
           function e() {
             (this.m_mapBrowserInfo = new Map()),
               (this.m_hOverlayChatBrowserInfoChanged = null);
@@ -71137,27 +71211,27 @@ and limitations under the License.
                 });
             }),
             (e.prototype.OverlayBrowserCreated = function(e) {
-              Rm.ShowPopupFriendsList(e), Kp.SetDefaultPopupContext(e);
+              Im.ShowPopupFriendsList(e), Yp.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
-              Kp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Kp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
-                  Kp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
-                  Kp.SetDefaultPopupContext(Hp),
+              Yp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Yp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
+                  Yp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
+                  Yp.SetDefaultPopupContext(qp),
                 console.log(
                   "Removing overlay browser window:",
                   e.m_unPID,
                   e.m_nBrowserID
                 ),
                 Fs.d.ClosePopupsOwnedByBrowser(e),
-                Kp.UIStore.SetSuppressBrowserContextBroadcasting(!1),
-                Kp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
+                Yp.UIStore.SetSuppressBrowserContextBroadcasting(!1),
+                Yp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
             }),
             nt.b([Zt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
           );
         })(),
-        pm = (function() {
+        hm = (function() {
           function e(e) {
             this.m_FriendStore = e;
           }
@@ -71175,7 +71249,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.BNotificationsPermitted = function() {
-              return !Kp.ParentalStore.BIsFriendsBlocked();
+              return !Yp.ParentalStore.BIsFriendsBlocked();
             }),
             (e.prototype.RequestNotificationPermission = function() {
               return Promise.resolve(!0);
@@ -71183,7 +71257,7 @@ and limitations under the License.
             e
           );
         })(),
-        hm = (function(e) {
+        mm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71215,7 +71289,7 @@ and limitations under the License.
                   r.close();
                 }, i.timeoutMS || 5e3),
                 r.addEventListener("click", function() {
-                  t(Hp);
+                  t(qp);
                 }),
                 new Promise(function(e, t) {
                   r.addEventListener("close", function() {
@@ -71240,8 +71314,8 @@ and limitations under the License.
             }),
             t
           );
-        })(pm),
-        mm = (function(e) {
+        })(hm),
+        gm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71252,13 +71326,13 @@ and limitations under the License.
                 var n = JSON.stringify(e);
                 e.tag.startsWith("groupmsg_")
                   ? SteamClient.ClientNotifications.DisplayClientNotification(
-                      pp.k_EClientUINotificationGroupChatMessage,
+                      hp.k_EClientUINotificationGroupChatMessage,
                       n,
                       t
                     )
                   : e.tag.startsWith("message_") &&
                     SteamClient.ClientNotifications.DisplayClientNotification(
-                      pp.k_EClientUINotificationFriendChatMessage,
+                      hp.k_EClientUINotificationFriendChatMessage,
                       n,
                       t
                     );
@@ -71267,8 +71341,8 @@ and limitations under the License.
             }),
             t
           );
-        })(pm),
-        gm = (function() {
+        })(hm),
+        fm = (function() {
           function e() {
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
@@ -71299,7 +71373,7 @@ and limitations under the License.
                   "(CAudioPlaybackManager) web audio playback requested: " + e
                 ),
                 this.CreateContextIfNeeded();
-              var i = new fm(this, e, t);
+              var i = new _m(this, e, t);
               return this.m_mapPlaybackObjs.set(i, !0), i;
             }),
             (e.prototype.PlaybackFinished = function(e) {
@@ -71383,7 +71457,7 @@ and limitations under the License.
             e
           );
         })(),
-        fm = (function() {
+        _m = (function() {
           function e(e, t, i) {
             var n = this;
             (this.m_Source = void 0),
@@ -71465,7 +71539,7 @@ and limitations under the License.
             e
           );
         })(),
-        _m = (function() {
+        ym = (function() {
           function e() {
             this.m_rgActivityCallbacks = [];
           }
@@ -71502,7 +71576,7 @@ and limitations under the License.
             e
           );
         })(),
-        ym = (function(e) {
+        vm = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
@@ -71568,13 +71642,13 @@ and limitations under the License.
             nt.b([Zt.a], t.prototype, "OnUserAction", null),
             t
           );
-        })(_m),
-        vm = (function(e) {
+        })(ym),
+        bm = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
               (t.m_msUserLastAction = 0),
-              (t.m_eActiveState = hp.k_EComputerActiveStateActive),
+              (t.m_eActiveState = mp.k_EComputerActiveStateActive),
               (t.m_hRegisterForComputerActiveStateChange = null),
               (t.m_hFireUserStillActive = void 0),
               (t.m_hRegisterForComputerActiveStateChange = SteamClient.WebChat.RegisterForComputerActiveStateChange(
@@ -71597,7 +71671,7 @@ and limitations under the License.
                   performance.now() - 1e3 * i,
                   this.m_msUserLastAction
                 )),
-                this.m_eActiveState == hp.k_EComputerActiveStateActive &&
+                this.m_eActiveState == mp.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
             (t.prototype.OnUserAction = function() {
@@ -71613,7 +71687,7 @@ and limitations under the License.
             }),
             (t.prototype.UpdateStillActive = function() {
               (this.m_hFireUserStillActive = void 0),
-                this.m_eActiveState == hp.k_EComputerActiveStateActive &&
+                this.m_eActiveState == mp.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
             nt.b([Zt.a], t.prototype, "OnComputerActiveStateChange", null),
@@ -71621,8 +71695,8 @@ and limitations under the License.
             nt.b([Zt.a], t.prototype, "UpdateStillActive", null),
             t
           );
-        })(_m),
-        bm = (function() {
+        })(ym),
+        Cm = (function() {
           function e() {
             (this.m_bDropConsumed = !1),
               (this.m_onDropCompleteCallbacks = new qt()),
@@ -71707,7 +71781,7 @@ and limitations under the License.
             e
           );
         })(),
-        Cm = (function(e) {
+        Sm = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_window = t), i;
@@ -71765,8 +71839,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Up),
-        Sm = (function(e) {
+        })(Wp),
+        Mm = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_popup = t), i;
@@ -71778,7 +71852,7 @@ and limitations under the License.
                 return (
                   !this.m_container &&
                     this.m_popup.window &&
-                    (this.m_container = new Cm(this.m_popup.window)),
+                    (this.m_container = new Sm(this.m_popup.window)),
                   this.m_container
                 );
               },
@@ -71786,7 +71860,7 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.Show = function(e) {
-              Kp.ParentalStore.BIsFriendsBlocked()
+              Yp.ParentalStore.BIsFriendsBlocked()
                 ? console.log("Blocked popup due to parental controls")
                 : this.m_popup.Show(e);
             }),
@@ -71804,24 +71878,25 @@ and limitations under the License.
             }),
             t
           );
-        })(Vp),
-        Mm = {
+        })(Hp),
+        Fm = {
           bShowFriendsListAtStartup: !0,
           nChatRoomListHeightPx: 224,
           nFriendsListSingleWindowWidthPx: 300,
           bExpandChatMemberList: !0,
-          bFavoritesHintDismissed: !1
+          bFavoritesHintDismissed: !1,
+          nChangeLogDismissed: 0
         },
-        Fm = (function() {
+        wm = (function() {
           function e(e) {
             var t = this;
             (this.m_FriendHoverStore = new bu()),
-              (this.m_EmoticonHoverStore = new lm()),
-              (this.m_DragDropManager = new bm()),
+              (this.m_EmoticonHoverStore = new um()),
+              (this.m_DragDropManager = new Cm()),
               (this.m_mapModalManagers = new WeakMap()),
-              (this.m_OverlayStore = new dm()),
+              (this.m_OverlayStore = new pm()),
               (this.m_mapOverlayPopupFriendsList = new Map()),
-              (this.m_UIDisplayPrefs = Mm),
+              (this.m_UIDisplayPrefs = Fm),
               (this.m_TrackingElements = new Map()),
               (this.m_bUpdatedBuildAvailable = !1),
               (this.m_nSecondsOutOfDate = 0),
@@ -71841,10 +71916,10 @@ and limitations under the License.
                     "Config.IN_CLIENT set but SteamClient globals not available"
                   ),
                   window.addEventListener("message", this.HandlePostMessage)),
-              (this.m_IdleTracker = it.a.IN_CLIENT ? new vm() : new ym()),
-              this.InstrumentWindow(window, Hp),
+              (this.m_IdleTracker = it.a.IN_CLIENT ? new bm() : new vm()),
+              this.InstrumentWindow(window, qp),
               Fs.d.AddPopupCreatedCallback(function(e) {
-                t.InstrumentWindow(e.window, e.browser_info || Hp);
+                t.InstrumentWindow(e.window, e.browser_info || qp);
               });
           }
           return (
@@ -71864,14 +71939,14 @@ and limitations under the License.
             (e.prototype.HandlePostMessage = function(e) {
               var t = e.data;
               if (t && t.command) {
-                var i = Kp.GetDefaultBrowserContext();
+                var i = Yp.GetDefaultBrowserContext();
                 void 0 !== e.data.pid &&
                   (i = { m_unPID: e.data.pid, m_nBrowserID: e.data.browserid }),
                   this.ExecuteCommand(i, e.data);
               }
             }),
             (e.prototype.PerformFriendsUIUpdate = function() {
-              var e = Kp.UIStore.SerializePopupStateToObject(!0);
+              var e = Yp.UIStore.SerializePopupStateToObject(!0);
               window.parent.postMessage(
                 { message: "ChatReloadRequest", state: e },
                 "https://steamloopback.host"
@@ -71890,7 +71965,7 @@ and limitations under the License.
                     (this.m_bUpdatedBuildAvailable = !0),
                     void 0 !== e.data.nSecondsOutOfDate &&
                       (this.m_nSecondsOutOfDate = e.data.nSecondsOutOfDate),
-                    (Kp.IdleTracker.GetUserIdleTime() > 7200 ||
+                    (Yp.IdleTracker.GetUserIdleTime() > 7200 ||
                       (void 0 !== e.data.bForce && 1 == e.data.bForce)) &&
                       this.PerformFriendsUIUpdate())
                   : "ReloadSerializedChatState" == e.data.message &&
@@ -71898,7 +71973,7 @@ and limitations under the License.
                     (console.log(
                       "Asked by loader to reload serialized chat state"
                     ),
-                    Kp.UIStore.SetStateToRestoreFrom(e.data.state)));
+                    Yp.UIStore.SetStateToRestoreFrom(e.data.state)));
             }),
             (e.prototype.ExecuteCommand = function(e, t) {
               switch (t.command) {
@@ -71931,14 +72006,14 @@ and limitations under the License.
                       i.GetAccountID(),
                       !1
                     );
-                    n && Kp.UIStore.CloseTabByID(n.unique_id);
+                    n && Yp.UIStore.CloseTabByID(n.unique_id);
                   } else if (i.BIsClanAccount()) {
-                    var r = Kp.FriendStore.ClanStore.GetClan(i);
+                    var r = Yp.FriendStore.ClanStore.GetClan(i);
                     if (r && r.GetChatGroupIDIfLoaded()) {
-                      var o = Kp.ChatStore.GetChatRoomGroup(
+                      var o = Yp.ChatStore.GetChatRoomGroup(
                         r.GetChatGroupIDIfLoaded()
                       );
-                      o && Kp.UIStore.CloseTabByID(o.unique_id);
+                      o && Yp.UIStore.CloseTabByID(o.unique_id);
                     }
                   }
                   break;
@@ -71953,7 +72028,7 @@ and limitations under the License.
                         e,
                         a.accountid
                       ),
-                      Kp.FriendStore.InviteToTrade(a));
+                      Yp.FriendStore.InviteToTrade(a));
                   }
                   break;
                 case "ShowChatRoomGroupDialog":
@@ -71967,17 +72042,17 @@ and limitations under the License.
                       !0
                     );
                   else {
-                    var l = Kp.ChatStore.InviteStore.GetDirectInviteInfo(
+                    var l = Yp.ChatStore.InviteStore.GetDirectInviteInfo(
                       s,
                       c,
-                      Kp.FriendStore.self.accountid
+                      Yp.FriendStore.self.accountid
                     );
                     Ne({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "ShowChatRoomGroupInvite":
                   var u = t.invite_code,
-                    l = Kp.ChatStore.InviteStore.GetInviteFromCode(u);
+                    l = Yp.ChatStore.InviteStore.GetInviteFromCode(u);
                   Ne({ invite: l, inviter: null }, e, window);
                   break;
                 case "DragAndDropStart":
@@ -71990,14 +72065,14 @@ and limitations under the License.
                   this.Dropped(t.x, t.y, t.data);
                   break;
                 case "SetPersonaState":
-                  Kp.FriendStore.SetUserPersonaState(t.persona_state);
+                  Yp.FriendStore.SetUserPersonaState(t.persona_state);
               }
             }),
             (e.prototype.Init = function(e, t, i) {
               var n = this,
                 r = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "UIDisplayPrefs",
-                  Mm
+                  Fm
                 ).then(function(e) {
                   Object(ht.runInAction)(function() {
                     n.m_UIDisplayPrefs = e;
@@ -72041,7 +72116,7 @@ and limitations under the License.
             (e.prototype.GetModalManager = function(e) {
               var t = this.m_mapModalManagers.get(e);
               return (
-                t || ((t = new Om()), this.m_mapModalManagers.set(e, t)), t
+                t || ((t = new Bm()), this.m_mapModalManagers.set(e, t)), t
               );
             }),
             Object.defineProperty(e.prototype, "IdleTrackerWeb", {
@@ -72076,7 +72151,7 @@ and limitations under the License.
                 )));
             }),
             (e.prototype.ShowPopupFriendsList = function(e) {
-              if (Kp.ParentalStore.BIsFriendsBlocked())
+              if (Yp.ParentalStore.BIsFriendsBlocked())
                 return (
                   console.log(
                     "Blocked friends list popup due to parental controls"
@@ -72087,7 +72162,7 @@ and limitations under the License.
               return (
                 t
                   ? t.OnShow()
-                  : ((t = new Yd(
+                  : ((t = new Jd(
                       this.m_FriendsUIApp.FriendStore,
                       this.m_FriendsUIApp.ChatStore,
                       e
@@ -72122,7 +72197,7 @@ and limitations under the License.
             }),
             (e.prototype.AddChildDropTarget = function(e) {
               var t = e.GetDivElement().getBoundingClientRect(),
-                i = new Bm(t.left, t.top, t.width, t.height);
+                i = new Rm(t.left, t.top, t.width, t.height);
               this.m_TrackingElements.set(e, i);
             }),
             (e.prototype.RemoveChildDropTarget = function(e) {
@@ -72133,7 +72208,7 @@ and limitations under the License.
               if (void 0 != this.m_FriendDragDropTarget) {
                 this.m_TrackingElements.forEach(function(t, i, n) {
                   var r = i.GetDivElement().getBoundingClientRect(),
-                    o = new Bm(r.left, r.top, r.width, r.height);
+                    o = new Rm(r.left, r.top, r.width, r.height);
                   t.Equal(o) || e.m_TrackingElements.set(i, o);
                 });
                 var t = this.m_FriendDragDropTarget.GetDivElement();
@@ -72169,13 +72244,13 @@ and limitations under the License.
             e
           );
         })(),
-        wm = (function(e) {
+        Om = (function(e) {
           function t() {
-            var t = e.call(this, new im()) || this;
+            var t = e.call(this, new nm()) || this;
             return (
-              (t.m_AudioPlaybackManager = new gm()),
-              (t.m_DesktopApp = new Fm(t)),
-              (Rm = t.m_DesktopApp),
+              (t.m_AudioPlaybackManager = new fm()),
+              (t.m_DesktopApp = new wm(t)),
+              (Im = t.m_DesktopApp),
               AssertMsg(
                 !it.a.IN_MOBILE,
                 "DesktopApp initialized in mobile context"
@@ -72187,12 +72262,12 @@ and limitations under the License.
             nt.c(t, e),
             (t.prototype.Init = function(t, i, n) {
               var r = i
-                  ? new mm(this.m_FriendStore)
-                  : new hm(this.m_FriendStore),
+                  ? new gm(this.m_FriendStore)
+                  : new mm(this.m_FriendStore),
                 o = this.m_DesktopApp.Init(t, i, n);
               e.prototype.InitInternal.call(this, t, r, o),
                 Me(
-                  Hp,
+                  qp,
                   this.m_FriendStore,
                   this.m_ChatStore,
                   document.getElementById("friendslist-container"),
@@ -72202,7 +72277,7 @@ and limitations under the License.
             (t.prototype.OnReadyToRender = function() {
               it.a.USE_POPUPS &&
                 this.m_DesktopApp.UIDisplayPrefs.bShowFriendsListAtStartup &&
-                this.m_DesktopApp.ShowPopupFriendsList(Hp),
+                this.m_DesktopApp.ShowPopupFriendsList(qp),
                 it.a.IN_CLIENT &&
                   Ye(
                     this.m_FriendStore,
@@ -72216,7 +72291,7 @@ and limitations under the License.
                   var t = JSON.parse(e);
                   t &&
                     t.command &&
-                    this.m_DesktopApp.ExecuteCommand(Hp, t.command);
+                    this.m_DesktopApp.ExecuteCommand(qp, t.command);
                 }
                 window.sessionStorage.removeItem("oFriendsUIStartupParam");
               } catch (e) {}
@@ -72266,17 +72341,17 @@ and limitations under the License.
               return Ue();
             }),
             (t.prototype.CreateChatPopup = function(e, t, i, n, r, o) {
-              var a = new Xd(e, t, i, n, r, o),
-                s = new Sm(a);
-              return new rp(s, a);
+              var a = new Zd(e, t, i, n, r, o),
+                s = new Mm(a);
+              return new op(s, a);
             }),
             (t.prototype.ShowPopupFriendsList = function(e) {
-              return new Sm(this.m_DesktopApp.ShowPopupFriendsList(e));
+              return new Mm(this.m_DesktopApp.ShowPopupFriendsList(e));
             }),
             t
           );
-        })(qp),
-        Om = (function() {
+        })(Kp),
+        Bm = (function() {
           function e() {
             (this.m_bUsePopups = !1),
               (this.m_rgModals = ht.observable.array(null, { deep: !1 }));
@@ -72314,7 +72389,7 @@ and limitations under the License.
             e
           );
         })(),
-        Bm = (function() {
+        Rm = (function() {
           function e(e, t, i, n) {
             (this.x = 0),
               (this.y = 0),
@@ -72345,13 +72420,13 @@ and limitations under the License.
             e
           );
         })(),
-        Rm = void 0,
-        Im = (i("kllU"), i("4Dav"));
-      (window.AssertMsg = Im.a),
+        Im = void 0,
+        Em = (i("kllU"), i("4Dav"));
+      (window.AssertMsg = Em.a),
         document.addEventListener("DOMContentLoaded", function() {
           Object(it.c)(), $e();
         });
-      var Em, km, Tm;
+      var km, Tm, Gm;
       window.LocalizationReady = et;
     },
     kllU: function(e, t, i) {

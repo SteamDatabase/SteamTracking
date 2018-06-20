@@ -8486,6 +8486,7 @@ img.emoticon
 
 .friendListFooter
 {
+	position: relative;
 	min-height: 26px;
 	background-color: rgba( 34, 37, 43, 1 );
 	flex-shrink: 0;
@@ -15786,6 +15787,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	display: none;
 }
 
+
 .msg .broadcastInviteSelf,
 .msg .broadcastInviteDismissed,
 .msg .broadcastViewRequestDismissed
@@ -15807,6 +15809,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	display: inline-block;
 }
 
+.changeLog,
 .betaFeedbackLabel
 {
 	margin-top: 4px;
@@ -15815,8 +15818,144 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	font-size: 10px;
 	user-select: none;
 	cursor: default;
-
+	text-transform: uppercase;
 	white-space: nowrap;
+}
+
+.changeLog:hover
+{
+	color: white;
+	cursor: pointer;
+}
+
+.changeLog
+{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	right: 32px;
+	top: -1px;
+}
+
+.singlewindow .changeLog
+{
+	right: 8px;
+}
+
+.changeLog .SVGIcon_Scroll
+{
+	width: 20px;
+	height: 20px;
+
+}
+
+.changeLog .SVGIcon_Scroll path
+{
+	fill: #888;
+}
+
+.changeLog:hover .SVGIcon_Scroll path
+{
+	fill: #bbb;
+}
+
+.changeLog.showViolator .SVGIcon_Scroll path
+{
+	fill: #ddd;
+}
+
+.changeLog.showViolator:hover .SVGIcon_Scroll path
+{
+	fill: #fff;
+}
+
+
+.changeLog .changeLogViolator
+{
+	background-color: rgb( 230, 74, 53 );
+	color: white;
+	border-radius: 50%;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	right: 8px;
+	top: 6px;
+	text-align: center;
+	font-size: 10px;
+}
+
+.changeLog:hover .changeLogViolator
+{
+	background-color: rgb(245, 131, 116);
+}
+
+.DialogContent.changeLogPage
+{
+	max-height: 680px
+}
+
+.changeLogDetails
+{
+	width: calc( 100% - 60px);
+	height: 100%;
+	background-color: #0005;
+	box-shadow: inset 2px 2px 18px #00000075;
+	overflow: scroll scroll;
+	padding: 16px;
+	padding-left: 32px;
+	padding-top: 32px;
+}
+
+.changeLogPage .changeLogDate
+{
+	font-size: 12px;
+	margin-bottom: 8px;
+	color: #777;
+}
+
+.changeLogPage .changeLogTitle
+{
+	color: white;
+	font-size: 16px;
+}
+
+.changeLogPage .changeLogDescription
+{
+	font-size: 14px;
+	padding: 0 16px;
+	margin-bottom: 24px;
+	position: relative;
+}
+
+.changeLogPage .changeLogItemSubHeader
+{
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-left: -8px;
+}
+
+.changeLogPage .changeLogExtra
+{
+	font-size: 14px;
+	margin-bottom: 14px;
+}
+
+.changeLogPage .changeLogItem
+{
+	clear: left;
+	line-height: 16px;
+	margin-bottom: 12px;
+	padding-left: 10px;
+}
+
+.changeLogPage .changeLogItem:before
+{
+	position: absolute;
+	left: 18px;
+	content: "•";
+	margin-right: 4px;
+	color: rgb(102, 154, 189);
+
 }
 
 .audioVoiceLogs
