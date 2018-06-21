@@ -1,0 +1,438 @@
+/* <style> */
+
+body.flat_page {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+#salien_body {
+    position:absolute;
+    z-index: 0;
+}
+
+#salien_arms {
+    position:absolute;
+    z-index: 3;
+}
+
+#salien_eyes {
+    position:absolute;
+    z-index: 2;
+}
+
+#salien_legs {
+    position:absolute;
+    z-index: 1;
+}
+
+#salien_mouth {
+    position:absolute;
+    z-index: 4;
+}
+
+#salien_shirt {
+    position:absolute;
+    top:250px;
+    z-index: 5;
+}
+
+#salien_hat {
+    position:absolute;
+    z-index: 5;
+    top: -15px;
+}
+
+.salien_part_example {
+    height: 60px;
+    width:auto;
+}
+
+.salien_body_example {
+    height: 100px;
+    width:auto;
+}
+
+.salien_example {
+    background: #DDDDDD65;
+    display:inline-block;
+}
+
+.salien_arms_example {
+    height:30px;
+    width:30px;
+    background-size: 80px 60px;
+    background-position: 0 -13px;
+    background-repeat: no-repeat;
+}
+
+.salien_mouth_example {
+    height:30px;
+    width:30px;
+    background-size: 80px 60px;
+    background-position: -33px -5px;
+    background-repeat: no-repeat;
+}
+
+.salien_legs_example {
+    height:30px;
+    width:30px;
+    background-size: 40px 30px;
+    background-position: -5px -5px;
+    background-repeat: no-repeat;
+}
+
+.salien_eyes_example {
+    height:30px;
+    width:30px;
+    background-size: 80px 60px;
+    background-position: -31px 0px;
+    background-repeat: no-repeat;
+}
+
+.salien_outfit_example {
+    height:30px;
+    width: auto;
+}
+
+.salien_radio_selector {
+    visibility:hidden;
+}
+
+.salien_radio_selector:checked + .salien_example {
+    border: 2px solid cyan;
+}
+
+.salien_radio_selector + .salien_example {
+    border: 2px solid #DDDDDD65;
+}
+
+.type_name {
+    color:white;
+}
+
+#salien_game_placeholder {
+    margin: 0 auto;
+    background:black;
+    width:1280px;
+    height:720px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#salien_loading_throbber {
+    display:none;
+    top: 40%;
+    position: relative;
+}
+
+/* How to play */
+
+.salien_howtoplay_header {
+    text-align:center;
+    background-color: #fdfdfd;
+    color: black;
+    height: 40px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+
+.salien_howtoplay_step_section {
+    margin: 10px;
+    border: 2px solid #fdfdfd;
+	position: relative;
+	flex: 1 1 50%;
+}
+
+.salien_howtoplay_step_section .step_titleblock > span {
+	padding: 5px 3px 3px 3px;
+	display: inline-block;
+	font-size: 18px;
+}
+
+.salien_howtoplay_step_section .step_titleblock .step {
+	background-color: #fdfdfd;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.salien_howtoplay_step_section .step_titleblock .title {
+	margin-left: 4px;
+}
+
+.salien_howtoplay_step_section p {
+	margin: 0 12px 12px 12px;
+	line-height: 18px;
+}
+
+.salien_howtoplay_step_section img {
+	width: calc( 100% - 20px );
+	margin: 10px;
+}
+
+.salien_howtoplay_step_section strong {
+	display: block;
+	margin-bottom: 3px;
+}
+
+
+
+/* How to play arrows */
+.salien_howtoplay_step_section:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	width: 56px;
+	height: 39px;
+	background-image: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/faq_arrow.png)
+}
+
+.arrow_right {
+	margin-right: 56px;
+}
+
+.arrow_right:after {
+	right: -58px;
+	top: calc(50% - 20px);
+}
+
+.arrow_down {
+	margin-bottom: 60px;
+}
+
+.arrow_down:after {
+	transform: rotate(90deg);
+	bottom: -58px;
+	left: calc(50% - 28px);
+}
+
+.arrow_left {
+	margin-left: 56px;
+}
+
+.arrow_left:after {
+	transform: rotate(180deg);
+	left: -58px;
+	top: calc(50% - 20px);
+}
+
+.arrow_up {
+	margin-top: 60px;
+}
+
+.arrow_up:after {
+	transform: rotate(270deg);
+	top: -58px;
+	left: calc(50% - 28px);
+}
+
+/* Backstory */
+.salien_backstory {
+	max-width: 940px;
+	width: 100%;
+
+	margin: 25px auto;
+}
+
+.salien_backstory blockquote {
+	border-left: 10px solid rgba(14,222,195, 0.2);
+	margin: 0;
+	padding: 5px 0 5px 10px;
+	color: #fdfafa;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.salien_backstory p {
+	margin: 15px 0 0 0;
+	font-style: italic;
+}
+
+.salien_backstory p:first-child {
+	margin-top: 0;
+}
+
+.salien_backstory .quote_attrib {
+	text-align: right;
+	color: #0fe4d5;
+}
+
+/* faq */
+.salien_faq {
+
+}
+
+/* Common CSS */
+.salien_section {
+	max-width: 940px;
+	width: 100%;
+	background: -webkit-linear-gradient( top, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);background: linear-gradient( to bottom, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);	color: #dddddd;
+	margin: 0 auto 30px auto;
+}
+.salien_section.wide {
+	max-width: 1280px;
+}
+
+.salien_section > .title {
+	color: #000;
+	background-color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 4px; 0;
+	text-align: center;
+	font-size: 24px;
+	line-height: 36px;
+	vertical-align: top;
+}
+
+.salien_section > .title.inline {
+	display: inline-block;
+	padding: 4px 20px;
+}
+
+.salien_section .subtitle {
+	display: inline-block;
+	line-height: 22px;
+	font-size: 16px;
+	margin-left: 10px;
+	vertical-align: top;
+	font-weight: 600;
+}
+
+.salien_section .content {
+	padding: 10px;
+}
+
+.col_2_responsive {
+	display: flex;
+	flex-direction: row;
+}
+
+.col_2_responsive > div {
+	flex: 1 1 50%;
+}
+
+.salien_faq_column {
+	padding: 10px;
+	line-height: 20px;
+}
+
+
+.salien_faq_question {
+	font-weight: 600;
+	font-size: 16px;
+	color: #fff;
+}
+
+.salien_faq_answer {
+	margin-bottom: 15px;
+	font-size: 12px;
+	color: #dddddd
+}
+
+.salien_section a {
+	color: #499ef5;
+}
+
+/* Ability list */
+
+.ability_list {
+	display: flex;
+}
+
+.ability_list strong {
+	display: block;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.ability_list > div {
+	flex: 1 1 20%;
+	display: flex;
+	padding: 10px;
+}
+
+.ability_list .desc {
+	flex: 1 1 75%;
+	font-size: 12px;
+}
+.ability_list .img {
+	flex: 1 1 25%;
+	margin-right: 10px;
+}
+
+.ability_list .img  img {
+	width: 100%;
+
+
+}
+
+.giveaway_button {
+	text-align:center;
+	font-weight:bold;
+}
+
+/* Body styles */
+.flat_page .responsive_page_template_content {
+
+	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/bg.jpg) top center no-repeat;
+	background-size: cover;
+}
+
+.spacer {
+	height: 25px;
+}
+
+body.flat_page #footer, body.headerless_page #footer {
+	padding-top: 65px;
+}
+
+@media screen and ( max-width: 1280px )
+{
+	canvas, #salien_game_placeholder {
+		width: 100% !important;
+		height: auto !important;
+		position: relative !important;
+	}
+}
+
+@media screen and ( max-width: 910px )
+{
+	.salien_backstory blockquote {
+		margin: 10px;
+	}
+}
+
+@media screen and ( max-width: 660px )
+{
+	.ability_list {
+		flex-wrap: wrap;
+	}
+	.ability_list > div {
+		flex: 1 1 40%
+	}
+
+	.col_2_responsive {
+		flex-direction: column;
+	}
+
+	.arrow_left, .arrow_right, .arrow_up, .arrow_down {
+		margin: 10px;
+	}
+
+	.salien_howtoplay_step_section:after {
+		display: none;
+	}
+
+	.arrow_left{
+		order: 1;
+	}
+
+	.arrow_up {
+		order: 2;
+	}
+
+}

@@ -178,6 +178,7 @@
 "Styles/Community/auction.css"                   : "https://steamcommunity.com/public/css/skin_1/auction.css?__TIME__",
 "Styles/Community/holidayprofile.css"            : "https://steamcommunity.com/public/css/skin_1/holidayprofile.css?__TIME__",
 "Styles/MiniGame/towerattack.css"                : "https://steamcommunity.com/public/css/minigame/towerattack.css?__TIME__",
+"Styles/MiniGame/salien.css"                     : "https://steamcommunity.com/public/css/salien/salien.css?__TIME__",
 
 //
 // Holiday JS
@@ -291,6 +292,14 @@
 "Scripts/MiniGame/TowerAttack/easing.js"         : "https://steamcommunity.com/public/javascript/minigame/towerattack/easing.js?__TIME__&l=english",
 "Scripts/MiniGame/TowerAttack/enemies.js"        : "https://steamcommunity.com/public/javascript/minigame/towerattack/enemies.js?__TIME__&l=english",
 
+"Scripts/MiniGame/Salien/network.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/network.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/uihelpers.js"           : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/uihelpers.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/enemy.js"               : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/enemy.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/gamehelpers.js"         : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/gamehelpers.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/attacks.js"             : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/attacks.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/battleselect.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/battleselect.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/salien.js"              : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/salien.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/game.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/game.js?__TIME__&l=english",
 
 //
 // Big Picture CSS
