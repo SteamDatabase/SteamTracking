@@ -429,7 +429,7 @@ function CSalienInfoBox()
 	this.m_NameText.y = this.m_Height / 2;
 	this.addChild(this.m_NameText);
 	
-	this.m_XPLabelText = new PIXI.Text('EXP:');
+	this.m_XPLabelText = new PIXI.Text('Exp:'.toUpperCase());
 	var smallLabelStyle = jQuery.extend({}, k_TextStyleBold);
 	smallLabelStyle.align = "left";
 	smallLabelStyle.fontSize = 12;

@@ -308,7 +308,7 @@ CBootState.prototype.OnLoadComplete = function(loader, resources)
 	gApp.stage.addChild( this.background );    
 
 	// add button
-	this.button = new CUIButton( 120, 40, 'PLAY' );
+	this.button = new CUIButton( 120, 40, 'Play'.toUpperCase() );
 	this.button.x = gApp.screen.width / 2 - (this.button.width / 2);
 	this.button.y = 450;
 	this.button.click = function(btn) {
@@ -549,7 +549,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	this.m_InfoBoxPlanetStatus = new PIXI.Text( 'Status:' );
 	this.m_InfoBoxPlanetStatus.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: 'white',
 		align: 'center',
@@ -560,7 +560,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	this.m_InfoBoxPlanetStatusCurrent = new PIXI.Text( '' );
 	this.m_InfoBoxPlanetStatusCurrent.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: 'white',
 		align: 'left',
@@ -573,7 +573,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_InfoBoxPlanetStatus.x = (this.m_InfoBox.GetWidth() / 2) - (statusWidth / 2);
 	this.m_InfoBoxPlanetStatusCurrent.x = this.m_InfoBoxPlanetStatus.x + this.m_InfoBoxPlanetStatus.width + 8;
 
-	this.m_InfoBoxBattlingLabel = new PIXI.Text('BATTLING FOR A CHANCE TO WIN');
+	this.m_InfoBoxBattlingLabel = new PIXI.Text('Battling for a chance to win'.toUpperCase());
 	this.m_InfoBoxBattlingLabel.style = k_TextStyleSmallBoldLeft;
 	this.m_InfoBoxBattlingLabel.anchor.set(0,0);
 	this.m_InfoBoxBattlingLabel.x = (this.m_InfoBox.GetWidth() / 2) - 99;
@@ -646,7 +646,7 @@ CPlanetSelectionState.prototype.OnMouseOverPlanet = function(planet, planetId)
 		this.m_InfoBoxPlanetStatusCurrent.text = 'Embattled';
 		this.m_InfoBoxPlanetStatusCurrent.style = {
 			fill: '#FDEE0B',
-			fontFamily: 'Motiva Sans',
+			fontFamily: k_FontType,
 			fontSize: 14,
 			align: 'center',
 		};
@@ -943,9 +943,9 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_RewardsContainer.x = 256;
 	this.m_RewardsContainer.y = this.m_GridBox.y + gridBgHeight - 55;
 
-	this.m_PossibleRewardsLabel = new PIXI.Text('POSSIBLE REWARDS:');
+	this.m_PossibleRewardsLabel = new PIXI.Text('Possible rewards:'.toUpperCase());
 	this.m_PossibleRewardsLabel.style = {
-		fontFamily: "Motiva Sans",
+		fontFamily: k_FontType,
 		fontSize: 12,
 		fill: "white",
 		fontWeight: 'bold',
@@ -980,7 +980,7 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	this.m_RewardCountdown = new PIXI.Text( '' );
 	this.m_RewardCountdown.style = {
-		fontFamily: "Motiva Sans",
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: "white",
 		fontWeight: 'bolder',
@@ -997,13 +997,13 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 			instance.m_rtPlanetCountUp = Date.now();
 			var nSecondsOnPlanet = gPlayerInfo.time_on_planet;
 			var strTime = PadZerosLeft( Math.floor( nSecondsOnPlanet / 3600 ), 2 ) + ':' + PadZerosLeft( Math.floor( ( nSecondsOnPlanet % 3600 ) / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsOnPlanet % 60, 2 );
-			instance.m_RewardCountdown.text = 'TIME SPENT ON PLANET: ' + strTime;
+			instance.m_RewardCountdown.text = 'Time Spent On Planet: '.toUpperCase() + strTime;
 		},
 		function() {}
 	);
 
 	// add button
-	this.m_LeaveButton = new CUIButton( 134, 34, 'LEAVE PLANET' );
+	this.m_LeaveButton = new CUIButton( 134, 34, 'Leave Planet'.toUpperCase() );
 	this.m_LeaveButton.x = 0;
 	this.m_LeaveButton.y = this.m_GridBox.y + gridBgHeight - 55;
 	this.m_LeaveButton.click = function(btn) {
@@ -1038,9 +1038,9 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_ZonesRemainingBox.y = 524;
 	this.m_GridContainer.addChild(this.m_ZonesRemainingBox);
 
-	this.m_EnemiesRemainingText = new PIXI.Text( 'ENEMY TILES REMAINING:' );
+	this.m_EnemiesRemainingText = new PIXI.Text( 'Enemy Tiles Remaining:'.toUpperCase() );
 	this.m_EnemiesRemainingText.style = {
-		fontFamily: "Motiva Sans",
+		fontFamily: k_FontType,
 		fontSize: 10,
 		fill: "white",
 		fontWeight: 'bold',
@@ -1217,7 +1217,7 @@ CBattleSelectionState.prototype.Update = function(delta)
 		var additionalTime = Math.floor( ( Date.now() - this.m_rtPlanetCountUp ) / 1000 );
 		var nSecondsOnPlanet = gPlayerInfo.time_on_planet + additionalTime;
 		var strTime = PadZerosLeft( Math.floor( nSecondsOnPlanet / 3600 ), 2 ) + ':' + PadZerosLeft( Math.floor( ( nSecondsOnPlanet % 3600 ) / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsOnPlanet % 60, 2 );
-		this.m_RewardCountdown.text = 'TIME SPENT ON PLANET: ' + strTime;
+		this.m_RewardCountdown.text = 'Time Spent On Planet: '.toUpperCase() + strTime;
 	}
 
 	// move the ship a little
@@ -1432,7 +1432,7 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_ScoreCounter.x = 90;
 	this.m_ScoreCounter.y = this.m_MenuBar.height / 2;
 	this.m_ScoreCounter.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 12,
 		fill: 'white',
 		align: 'center',
@@ -1444,7 +1444,7 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_MenuTitle.x = this.m_MenuBar.width / 2;
 	this.m_MenuTitle.y = this.m_MenuBar.height / 2;
 	this.m_MenuTitle.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 24,
 		fill: "white",
 		align: 'center',
@@ -1467,7 +1467,7 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 		fontSize: 24,
 		fill:"white",
 		fontWeight:'bold',
-		fontFamily:'Motiva Sans'
+		fontFamily:k_FontType
 	};
 	gApp.stage.addChild( this.m_TotalScoreText );
 
@@ -1488,16 +1488,16 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 		fontSize: 36,
 		fill:"white",
 		fontWeight:'bold',
-		fontFamily:'Motiva Sans'
+		fontFamily:k_FontType
 	};
 	gApp.stage.addChild( this.m_Timer );
 
-	this.m_TimeRemainingText = new PIXI.Text( 'TIME REMAINING' );
+	this.m_TimeRemainingText = new PIXI.Text( 'Time Remaining'.toUpperCase() );
 	this.m_TimeRemainingText.anchor.set( 0.5, 0.5 );
 	this.m_TimeRemainingText.x = gApp.screen.width - ( this.m_TimerMenu.width / 2 );
 	this.m_TimeRemainingText.y = this.m_MenuBar.height / 2;
 	this.m_TimeRemainingText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 12,
 		fill: 'white',
 		align: 'center',
@@ -1512,7 +1512,7 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 		fontSize: 36,
 		fill:"white",
 		fontWeight:'bold',
-		fontFamily:'Motiva Sans'
+		fontFamily:k_FontType
 	};
 	this.m_RespawnTimer.visible = false;
 	gApp.stage.addChild( this.m_RespawnTimer );
@@ -1577,7 +1577,7 @@ CBattleState.prototype.Update = function(delta)
 			sprite.x = 80;
 			sprite.y = ( k_ScreenHeight / 2 ) - 40;
 			sprite.style = {
-				fontFamily: 'Motiva Sans',
+				fontFamily: k_FontType,
 				fontSize: 24,
 				fill: 'white',
 				align: 'center',
@@ -1603,7 +1603,7 @@ CBattleState.prototype.Update = function(delta)
 
 		this.m_EnemyManager.Update( delta );
 
-		this.m_ScoreCounter.text = 'ENEMIES DEFEATED: ' + this.m_EnemyManager.m_nDefeatedEnemies;
+		this.m_ScoreCounter.text = 'Enemies Defeated: '.toUpperCase() + this.m_EnemyManager.m_nDefeatedEnemies;
 
 		var nSecondsRemaining = Math.floor( ( this.m_rtBattleEnd - Date.now() ) / 1000 );
 
@@ -1613,7 +1613,7 @@ CBattleState.prototype.Update = function(delta)
 				fontSize: 36,
 				fill:"red",
 				fontWeight:'bold',
-				fontFamily:'Motiva Sans'
+				fontFamily:k_FontType
 			};
 		}
 
@@ -1940,9 +1940,9 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 		}
 	};
 
-	var continueText = new PIXI.Text( 'CONTINUE' );
+	var continueText = new PIXI.Text( 'Continue'.toUpperCase() );
 	continueText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 18,
 		fontWeight: 'bold',
 		fill: 'black',
@@ -1953,9 +1953,9 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 	continueText.x = 115;
 	continueText.y = 20;
 
-	var reportingScoreText = new PIXI.Text( 'REPORTING SCORE TO SALIEN HIGH COMMAND...' );
+	var reportingScoreText = new PIXI.Text( 'Reporting Score to Salien High Command...'.toUpperCase() );
 	reportingScoreText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 18,
 		fontWeight: 'bold',
 		fill: 'white',
@@ -1968,9 +1968,9 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 
 	continueButton.visible = false;
 
-	var victoryText = new PIXI.Text( 'BATTLE COMPLETE!' );
+	var victoryText = new PIXI.Text( 'Battle Complete!'.toUpperCase() );
 	victoryText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 48,
 		fontWeight: 'bold',
 		fill: 'white',
@@ -1981,9 +1981,9 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 	victoryText.y = 100;
 	this.m_VictoryScreen.addChild( victoryText );
 
-	var planetVictoryText = new PIXI.Text( 'ON ' + this.m_PlanetData.state.name );
+	var planetVictoryText = new PIXI.Text( 'On '.toUpperCase() + this.m_PlanetData.state.name );
 	planetVictoryText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 16,
 		fontWeight: 'bold',
 		fill: 'white',
@@ -1996,7 +1996,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 
 	var enemiesVanquishedText = new PIXI.Text( 'You vanquished ' + this.m_EnemyManager.m_nDefeatedEnemies + ' enemy aliens' );
 	enemiesVanquishedText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 24,
 		fill: 'white',
 		align: 'center',
@@ -2008,7 +2008,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 
 	var victoryScoreText = new PIXI.Text( 'Final Score: ' + this.m_Score );
 	victoryScoreText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 24,
 		fill: 'white',
 		align: 'center',
@@ -2029,7 +2029,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 
 	var enteredText = new PIXI.Text( 'You have been entered to win one of these four games:' );
 	enteredText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: 'white',
 		align: 'center',
@@ -2060,7 +2060,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 		sprite.y = enteredText.y + 20;
 	}
 
-	this.button = new CUIButton( 300, 40, 'BROWSE SIMILAR GAMES ON SALE' );
+	this.button = new CUIButton( 300, 40, 'Browse Similar Games on Sale'.toUpperCase() );
 	this.button.x = 122;
 	this.button.y = enteredText.y + enteredText.height / 2 + 60;
 	this.button.click = function(btn) {
@@ -2118,9 +2118,9 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 		gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
 	};
 
-	var continueText = new PIXI.Text( 'BACK TO MAP' );
+	var continueText = new PIXI.Text( 'Back to Map'.toUpperCase() );
 	continueText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 18,
 		fontWeight: 'bold',
 		fill: 'black',
@@ -2131,9 +2131,9 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 	continueText.x = 115;
 	continueText.y = 20;
 
-	var victoryText = new PIXI.Text( 'LEVEL UP!' );
+	var victoryText = new PIXI.Text( 'Level Up!'.toUpperCase() );
 	victoryText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 48,
 		fontWeight: 'bold',
 		fill: 'white',
@@ -2144,9 +2144,9 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 	victoryText.y = 100;
 	this.m_LevelUpScreen.addChild( victoryText );
 
-	var LevelText = new PIXI.Text( 'LEVEL ' + result.new_level );
+	var LevelText = new PIXI.Text( 'Level '.toUpperCase() + result.new_level );
 	LevelText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 18,
 		fill: 'white',
 		align: 'center',
@@ -2158,7 +2158,7 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 
 	var checkInventoryText = new PIXI.Text( 'Check your Steam Inventory for your reward!' );
 	checkInventoryText.style = {
-		fontFamily: 'Motiva Sans',
+		fontFamily: k_FontType,
 		fontSize: 18,
 		fill: '#67c1f5',
 		align: 'center',

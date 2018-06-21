@@ -89,19 +89,19 @@ function CBattleSelect(resources, container)
 	this.m_InfoBoxProgress.x = 131;
 	this.m_InfoBoxProgress.y = 51;
 
-	this.m_InfoBoxProgressLabel = new PIXI.Text('PROGRESS');
+	this.m_InfoBoxProgressLabel = new PIXI.Text('Progress'.toUpperCase());
 	this.m_InfoBoxProgressLabel.style = k_TextStyleSmallBold;
 	this.m_InfoBoxProgressLabel.anchor.set(0.5,0);
 	this.m_InfoBoxProgressLabel.x = this.m_InfoBoxProgress.x + this.m_InfoBoxProgress.m_Width / 2;
 	this.m_InfoBoxProgressLabel.y = this.m_InfoBoxProgress.y - 17;
 
-	this.m_InfoBoxThreatLevelLabel = new PIXI.Text('THREAT LEVEL');
+	this.m_InfoBoxThreatLevelLabel = new PIXI.Text('Threat level'.toUpperCase());
 	this.m_InfoBoxThreatLevelLabel.style = k_TextStyleSmallBold;
 	this.m_InfoBoxThreatLevelLabel.anchor.set(0.5,0);
 	this.m_InfoBoxThreatLevelLabel.x = 64;
 	this.m_InfoBoxThreatLevelLabel.y = 22;
 
-	this.m_InfoBoxThreatLevel = new PIXI.Text('LOW');
+	this.m_InfoBoxThreatLevel = new PIXI.Text('Low'.toUpperCase());
 	this.m_InfoBoxThreatLevel.style = k_TextStyleHugeBold;
 	this.m_InfoBoxThreatLevel.anchor.set(0.5, 0);
 	this.m_InfoBoxThreatLevel.x = 64;
@@ -116,7 +116,7 @@ function CBattleSelect(resources, container)
 	this.m_InfoBoxUnclaimedContainer.addChild(this.m_InfoBoxProgress);
 	this.m_InfoBoxUnclaimedContainer.addChild(this.m_InfoBoxThreatLevelLabel);
 
-	this.m_InfoBoxWithHelpLabel = new PIXI.Text('WITH HELP FROM' + ":");
+	this.m_InfoBoxWithHelpLabel = new PIXI.Text('With help from'.toUpperCase() + ":");
 	this.m_InfoBoxWithHelpLabel.style = k_TextStyleSmallBoldLeft;
 	this.m_InfoBoxWithHelpLabel.anchor.set(0,0);
 	this.m_InfoBoxWithHelpLabel.x = 64;
@@ -219,7 +219,7 @@ CBattleSelect.prototype.Update = function(delta)
 
 					this.m_InfoBox.SetSize(186, 80);
 					this.m_InfoBoxProgress.SetValue(1.0);
-					this.m_InfoBox.SetTitleText('CLAIMED');
+					this.m_InfoBox.SetTitleText('Claimed'.toUpperCase());
 
 					this._RefreshInfoTeamImages( tileData );
 				}
@@ -233,25 +233,25 @@ CBattleSelect.prototype.Update = function(delta)
 					var progress = tileData.progress;
 					this.m_InfoBoxProgress.SetValue(progress);
 
-					this.m_InfoBox.SetTitleText('UNCLAIMED');
+					this.m_InfoBox.SetTitleText('Unclaimed'.toUpperCase());
 
 					switch(tileData.difficulty)
 					{
 						case 3:
 						{
-							this.m_InfoBoxThreatLevel.text = 'HIGH';
+							this.m_InfoBoxThreatLevel.text = 'High'.toUpperCase();
 							this.m_InfoBoxThreatLevel.tint = 0xf07b13;
 							break;
 						}
 						case 2:
 						{
-							this.m_InfoBoxThreatLevel.text = 'MEDIUM';
+							this.m_InfoBoxThreatLevel.text = 'Medium'.toUpperCase();
 							this.m_InfoBoxThreatLevel.tint = 0xe9d35a;
 							break;
 						}
 						default:
 						{
-							this.m_InfoBoxThreatLevel.text = 'LOW';
+							this.m_InfoBoxThreatLevel.text = 'Low'.toUpperCase();
 							this.m_InfoBoxThreatLevel.tint = 0x75e95a;
 							break;
 						}
