@@ -372,8 +372,9 @@ body.flat_page {
 }
 
 .giveaway_button {
-	text-align:center;
-	font-weight:bold;
+	text-align: center;
+	font-weight: bold;
+	padding-bottom: 20px;
 }
 
 /* Body styles */
