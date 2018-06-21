@@ -363,7 +363,7 @@ CTradeOfferStateManager = {
 		if ( this.m_Recaptcha == null )
 		{
 			this.m_Recaptcha = grecaptcha.render( 'trade_recaptcha', {
-				'sitekey': '6LdlRgATAAAAAMipBNy6Zu2SsnhwioBCrwf47dNX',
+				'sitekey': '6Le6zV8UAAAAAOeG-paA00HM3xX8OGFx2lctB-A1',
 				'theme': 'dark'
 			} );
 		}

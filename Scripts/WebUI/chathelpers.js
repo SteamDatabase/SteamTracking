@@ -652,6 +652,15 @@ webpackJsonp(
                 return t.m_connection.ClientInfo.bFriendsUIEnabled;
               });
             }),
+            (t.prototype.BClientSupportsMessage = function(t) {
+              var e = this;
+              return this.BClientConnected().then(function() {
+                return (
+                  -1 !==
+                  e.m_connection.ClientInfo.rgSupportedMessages.indexOf(t)
+                );
+              });
+            }),
             (t.prototype.OpenFriendChatDialog = function(t) {
               var e = { message: "ShowFriendChatDialog", steamid: t };
               return this.GenericEResultCall(e);
@@ -670,6 +679,10 @@ webpackJsonp(
             }),
             (t.prototype.IsSubscribedApp = function(t) {
               var e = { message: "IsSubscribedApp", appid: t };
+              return this.GenericEResultCall(e);
+            }),
+            (t.prototype.ViewGameInfoForSteamID = function(t) {
+              var e = { message: "ViewGameInfoForSteamID", steamid: t };
               return this.GenericEResultCall(e);
             }),
             (t.prototype.BClientAccountMatches = function() {
@@ -710,7 +723,8 @@ webpackJsonp(
               (this.m_ClientInfo = {
                 ulVersion: "",
                 bFriendsUIEnabled: !1,
-                unAccountID: 0
+                unAccountID: 0,
+                rgSupportedMessages: []
               });
           }
           return (
@@ -760,7 +774,10 @@ webpackJsonp(
             (t.prototype.BSendMsg = function(t, e) {
               if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
                 return !1;
-              var n = Object.assign({}, t, { universe: o.a.EUNIVERSE });
+              var n = Object.assign({}, t, {
+                universe: o.a.EUNIVERSE,
+                accountid: o.d.accountid
+              });
               void 0 !== e && (n.sequenceid = e);
               try {
                 return this.m_socket.send(JSON.stringify(n)), !0;
@@ -809,6 +826,9 @@ webpackJsonp(
                           ? ((t.m_ClientInfo.ulVersion = o.clientversion),
                             (t.m_ClientInfo.bFriendsUIEnabled = !!o.friendsui),
                             (t.m_ClientInfo.unAccountID = o.accountid),
+                            o.supported_messages &&
+                              (t.m_ClientInfo.rgSupportedMessages =
+                                o.supported_messages),
                             e())
                           : n();
                       })

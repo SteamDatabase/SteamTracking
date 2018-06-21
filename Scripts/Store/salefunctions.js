@@ -117,6 +117,8 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 			if ( rgSeenAppIds.indexOf( rgRecommendedGames[i].appid ) !== -1 )
 				continue;
 			
+			rgRecommendedGames[i].feature = 'summer2018_mergedview_recommend_neural';
+			
 			// 7 from recommendation into tier1, then overflow into tier2
 			if ( rgTier1.length < k_nTier1RecommendationMax )		
 			{
@@ -134,6 +136,8 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		{
 			if ( rgSeenAppIds.indexOf( rgTier1Candidates[i].appid ) !== -1 )
 				continue;
+				
+			rgTier1Candidates[i].feature = 'summer2018_mergedview_curated';
 
 			if ( rgTier1.length < k_nTier1Max )
 			{
@@ -152,6 +156,8 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		{
 			if ( rgSeenAppIds.indexOf( rgTier2Candidates[i].appid ) !== -1 )
 				continue;
+
+			rgTier2Candidates[i].feature = 'summer2018_mergedview_curated';
 				
 			rgTier2.push( rgTier2Candidates[i] );
 			rgSeenAppIds.push( rgTier2Candidates[i].appid );
@@ -169,6 +175,16 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		rgTier2 = GHomepage.FilterItemsForDisplay(
 			rgDisplayLists.sale_tier2, 'home', 9, k_nTier2Max, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 		);
+		
+		for ( var i = 0; i < rgTier1.length; i++ )
+		{
+			rgTier1[i].feature = 'summer2018_standardview_curated';
+		}
+
+		for ( var i = 0; i < rgTier2.length; i++ )
+		{
+			rgTier2[i].feature = 'summer2018_standardview_curated';
+		}
 	}
 
 	var rgItemsPromotedToTier1 = [];
@@ -211,6 +227,7 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
 	
 	GSteamBroadcasts.Init();
+	GSteamSalienPlanets.Init();
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )
@@ -314,6 +331,11 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
 function SaleCap( item, strFeatureContext, strDiscountClass )
 {
 	var params = { 'class': 'sale_capsule' };
+	
+	if( item && item.feature && item.feature.length > 0 )
+	{
+		strFeatureContext = item.feature;		
+	}
 	var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, item.appid, item.packageid, item.bundleid, params );
 
 	var $CapCtn = $J('<a/>', params );
@@ -602,6 +624,8 @@ GSteamBroadcasts = {
 						var oItem = rgFiltered[i];
 						
 						var params = { 'class': 'store_capsule', 'href': oItem.app_link };
+						
+						var rgItemData = GStoreItemData.GetCapParams( 'summer2018_live_stream', oItem.appid, 0, null, params );
 						var $CapCtn = $J('<a/>', params );
 
 						var $ImgCtn = $J('<div class="capsule headerv5"/>');
@@ -613,15 +637,18 @@ GSteamBroadcasts = {
 						$ImgCtn.append( $J('<img/>', rgImageProperties ) );
 						$CapCtn.append( $ImgCtn );
 						
+						var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
+						$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
+						
 						$Contents = $J('<div/>', {'class': 'title ellipsis' } );
-						$Contents.append( $J('<span/>').html( oItem.app_name + ' (' ) );
+						$Contents.append( $J('<span/>').html( oItem.app_name ) );
 						$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( oItem.viewer_count ) );
-						$Contents.append( $J('<span/>').html( ')' ) );
 						
 						$CapCtn.append( $Contents );
 						$CapCtn.append( 
 								$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
 						);
+						
 
 						$elPageContainer.append( $CapCtn );
 					}
@@ -632,6 +659,71 @@ GSteamBroadcasts = {
 				}
 			}
 
+		});
+		
+		return;
+	}
+};
+
+GSteamSalienPlanets = {
+	Init: function()
+	{
+		GSteamSalienPlanets.rgRecentlyConqueredPlanets = v_shuffle( GHomepage.rgRecentlyConqueredPlanets );
+		GSteamSalienPlanets.Render();
+		
+	},
+
+	Render: function()
+	{
+		if ( GSteamSalienPlanets.rgRecentlyConqueredPlanets.length == 0 )
+		{
+			return;
+		}
+		
+		if ($J('.summer_salien_universe').length == 0 )
+			return;
+
+		var $Container = $J('.summer_salien_universe');
+		$Container.show();
+		
+		// pick a random planet to show
+		var $planet = GSteamSalienPlanets.rgRecentlyConqueredPlanets[Math.floor(Math.random() * Math.floor(GSteamSalienPlanets.rgRecentlyConqueredPlanets.length))];
+		
+		// render this to the container
+		var $ConqueredPlanet = $J('.conquered_planet', $Container);
+		$ConqueredPlanet.css( { "background" : "url('" + $planet.image + "')", "background-repeat" : "no-repeat", "background-position-x" : "-170px", "background-position-y" : "-170px" });
+		
+		var $Title = $J('#conquered_planet_name', $ConqueredPlanet );
+		$Title.html(  $planet.name );
+		
+		var $AppLinkContainer = $J('#conquered_planet_apps', $ConqueredPlanet );
+		$J.each( $planet.giveaway_apps, function(idx, oItem) {
+			var params = { 'class': 'home_smallcap app_impression_tracked', 'href': GStoreItemData.GetAppURL( oItem, 'summer2018_salien_giveaway' ), 'data-ds-appid' : oItem };
+						
+			var rgItemData = GStoreItemData.GetCapParams( 'summer2018_salien_giveaway', oItem, 0, null, params );
+			var $CapCtn = $J('<a/>', params );
+			GStoreItemData.BindHoverEvents( $CapCtn, oItem );
+			var rgImageProperties = { src: rgItemData.small_capsulev5 };
+			$CapCtn.append( $J('<img/>', rgImageProperties ) );
+			$CapCtn.append( $J('<div class="home_smallcap_title ellipsis"/>' ).html( rgItemData.name ) );
+			
+			$AppLinkContainer.append( $CapCtn )
+		});
+		
+		var $BrowseMoreCtn = $J( '<div class="browse_more_games_ctn"/>' );
+		$AppLinkContainer.append( $BrowseMoreCtn );
+		var rgLinkParams = { 'href': $planet.tag_link } ;
+		$BrowseMoreCtn.append( $J('<a/>', rgLinkParams ).html( 'Browse for more games like these' ) );
+
+		var $TopGroups = $J('.top_groups_ctn', $ConqueredPlanet );
+		
+		$J.each( $planet.top_clans, function(idx, oItem) {
+			if ( oItem.clan_info.accountid == null || oItem.clan_info.accountid == 0 )
+				return;
+				
+			var clan = GStoreItemData.GetAccountData( null, oItem.clan_info.accountid, 7 );
+			var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, clan.url).replace(/\%2\$s/g, GetAvatarURL( clan.avatar ) ).replace(/\%3\$s/g, clan.accountid) );
+			$TopGroups.append( $AvatarCap );
 		});
 		
 		return;

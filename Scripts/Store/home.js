@@ -120,6 +120,7 @@ GHomepage = {
 			}
 			
 			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
+			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
 
 			if ( g_AccountID == 0 )
 			{
@@ -181,6 +182,7 @@ GHomepage = {
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
+			GHomepage.rgRecentlyConqueredPlanets = rgParams.rgRecentlyConqueredPlanets;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -487,7 +489,7 @@ GHomepage = {
 
 				$CapTarget.append( $MainCap );
 
-				var $SmallCap = GHomepage.BuildHomePageGenericCap( 'main_cluster_list', oItem.appid, oItem.packageid, {capsule_size: 'header', no_hover: true} );
+				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'summer2018_standardview_recommend_basic', oItem.appid, oItem.packageid, {capsule_size: 'header', no_hover: true} );
 				$SmallCap.on('mouseenter', (function(index) { return function() {
 					GHomepage.MainCapCarousel.Advance( index );
 				}; })(i));
@@ -721,8 +723,18 @@ GHomepage = {
 				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
-
+			
+			if ( GHomepage.bAutumnSaleMainCap )
+			{
+				if ( GHomepage.bNewRecommendations )
+					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'summer2018_standardview_recommend_neural' ));
+				else
+					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'summer2018_standardview_recommend_basic' ));
+			}
+			else
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
+			}
 		}
 		else
 		{
@@ -985,15 +997,16 @@ GHomepage = {
 			}
 			
 		}
-
-		if ( rgCapsulesToRender.length > 0 )
+		if ( rgCapsulesToRender.length >= 4 )
 			$RecommendedCreators.show();
+		else
+			return;
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsulesToRender, $RecommendedCreators,
 			function( oItem, strFeature, rgOptions )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, 0, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'summer2018_creator_recommend', nAppId, 0, rgOptions );
 				var $CreatorsCtn = $J('<div class="recommended_creators_container" />');
 				$CapCtn.append($CreatorsCtn);
 

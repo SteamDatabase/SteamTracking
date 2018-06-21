@@ -104,7 +104,7 @@ webpackJsonp(
     "5Pz3": function(e, t, i) {
       "use strict";
       function n() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -118,14 +118,14 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
           })
         );
       }
       function r() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -135,19 +135,19 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 600 600"
           },
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z"
             }),
-            H.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
+            q.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
           )
         );
       }
       function o() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -159,7 +159,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -169,7 +169,7 @@ webpackJsonp(
             points:
               "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "
           }),
-          H.createElement("polygon", {
+          q.createElement("polygon", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -177,7 +177,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 "
           }),
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -185,7 +185,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "83,60.75 83,133 155,133 "
           }),
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -196,7 +196,7 @@ webpackJsonp(
         );
       }
       function a() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -206,14 +206,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          H.createElement("polygon", {
+          q.createElement("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
           })
         );
       }
       function s() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -223,10 +223,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            H.createElement("path", {
+            q.createElement("path", {
               className: "ColorSelector",
               d:
                 "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
@@ -244,7 +244,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Microphone";
         return (
           e.className && (t += " " + e.className),
-          H.createElement(
+          q.createElement(
             "svg",
             {
               version: "1.1",
@@ -256,128 +256,128 @@ webpackJsonp(
               height: "256px",
               viewBox: "-127.5 664.5 256 256"
             },
-            H.createElement(
+            q.createElement(
               "g",
               { className: "MicBase" },
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement(
+                q.createElement(
                   "g",
                   null,
-                  H.createElement("path", {
+                  q.createElement("path", {
                     d:
                       "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z"
                   }),
-                  H.createElement("path", {
+                  q.createElement("path", {
                     d:
                       "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z"
                   })
                 ),
-                H.createElement(
+                q.createElement(
                   "g",
                   null,
-                  H.createElement("path", {
+                  q.createElement("path", {
                     d:
                       "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z"
                   }),
-                  H.createElement("path", {
+                  q.createElement("path", {
                     d:
                       "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z"
                   })
                 )
               ),
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z"
                 })
               ),
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z"
                 })
               )
             ),
-            H.createElement(
+            q.createElement(
               "g",
               { className: "MicFill" },
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z"
                 })
               ),
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z"
                 })
               )
             ),
-            H.createElement(
+            q.createElement(
               "g",
               { className: "MicStrike", fill: "none", strokeWidth: "1" },
-              H.createElement("line", {
+              q.createElement("line", {
                 x1: "-82.5",
                 y1: "866.5",
                 x2: "83.5",
@@ -388,7 +388,7 @@ webpackJsonp(
         );
       }
       function l() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -401,7 +401,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -410,7 +410,7 @@ webpackJsonp(
             d:
               "M127.5,13.712 c63.714,0,115.252,51.253,115.252,113.836c0,62.582-51.538,113.837-115.252,113.837S12.248,190.413,12.248,127.548 S63.786,13.712,127.5,13.712z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -419,7 +419,7 @@ webpackJsonp(
             d:
               "M103.81,102.063 c0-13.593-11.044-24.354-24.353-24.354c-13.31,0-24.353,11.045-24.353,24.354"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -428,7 +428,7 @@ webpackJsonp(
             d:
               "M199.896,102.063 c0-13.593-11.043-24.354-24.354-24.354c-13.309,0-24.354,10.761-24.354,24.354"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -440,7 +440,7 @@ webpackJsonp(
         );
       }
       function u() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -451,10 +451,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
               fill: "#FFFFFF",
@@ -469,7 +469,7 @@ webpackJsonp(
         );
       }
       function d() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -479,20 +479,20 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "#020202",
               d:
                 "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "#020202",
               d:
                 "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "#020202",
               d:
                 "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z"
@@ -501,7 +501,7 @@ webpackJsonp(
         );
       }
       function p() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -511,14 +511,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z"
           })
         );
       }
       function h() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -529,10 +529,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "-165 95 100 100"
           },
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("polygon", {
+            q.createElement("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
             })
@@ -540,7 +540,7 @@ webpackJsonp(
         );
       }
       function m() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -553,7 +553,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("line", {
+          q.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -563,7 +563,7 @@ webpackJsonp(
             x2: "44",
             y2: "44"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -576,7 +576,7 @@ webpackJsonp(
         );
       }
       function g() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -589,10 +589,10 @@ webpackJsonp(
             viewBox: "0 0 64 64",
             enableBackground: "new 0 0 64 64"
           },
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("path", {
+            q.createElement("path", {
               className: "Bubble",
               fill: "none",
               strokeMiterlimit: "1",
@@ -601,10 +601,10 @@ webpackJsonp(
                 "M60.1,32.3c0,15.1-12.3,27.3-27.4,27.3 c-5,0-9.7-1.4-13.8-3.7c-1.8-1.1-15,5.4-13.8,3.4c1.7-2.9,5.9-10.3,4.7-12C7,43,5.3,37.8,5.3,32.3C5.3,17.2,17.6,5,32.7,5 C47.8,5,60.1,17.2,60.1,32.3z"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("path", {
+            q.createElement("path", {
               className: "AudioLines",
               opacity: "0",
               strokeWidth: "1px",
@@ -612,10 +612,10 @@ webpackJsonp(
                 "M37.2,51.1c-0.5,0-1-0.1-1.3-0.4c-0.7-0.5-0.7-1.3,0-1.8c6.3-4.4,9.8-10.2,9.8-16.4c0-6.2-3.5-12-9.8-16.4 c-0.7-0.5-0.7-1.3,0-1.8s1.9-0.5,2.6,0c7.1,4.9,10.9,11.4,10.9,18.3c0,6.9-3.9,13.4-10.9,18.3C38.2,51,37.7,51.1,37.2,51.1 M21.4,40.2c0.5,0,0.9-0.1,1.3-0.4c2.8-2,4.3-4.6,4.3-7.3s-1.5-5.4-4.3-7.3c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c2.1,1.5,3.3,3.4,3.3,5.5c0,2.1-1.2,4-3.3,5.5c-0.7,0.5-0.7,1.3,0,1.8C20.4,40.1,20.9,40.2,21.4,40.2 M29.3,45.7 c0.5,0,1-0.1,1.3-0.4c4.9-3.4,7.7-7.9,7.7-12.7c0-4.8-2.7-9.3-7.7-12.7c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c4.2,2.9,6.6,6.8,6.6,10.9c0,4.1-2.3,8-6.6,10.9c-0.7,0.5-0.7,1.3,0,1.8C28.4,45.5,28.8,45.7,29.3,45.7"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "Arrow", opacity: "0" },
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -623,7 +623,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -632,10 +632,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               className: "ExitDoor",
               opacity: "0",
               strokeLinecap: "round",
@@ -646,17 +646,17 @@ webpackJsonp(
                 "32.5,22.1 32.5,17.7 47.7,17.7 47.7,43.8 32.5,43.8 32.5,39.5"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "Microphone" },
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M40.971,28.593v6.278c0,4.007-4.023,7.284-8.971,7.284c-2.693,0-5.126-0.974-6.765-2.516 c-1.379-1.28-2.207-2.952-2.207-4.769v-6.278l0,0H21.05v6.278c0,0.536,0.064,1.055,0.162,1.573 c0.357,1.752,1.281,3.325,2.627,4.592c1.801,1.702,4.332,2.839,7.17,3.049v4.072H25.3c-0.341,0-0.616,0.438-0.616,0.989 c0,0.552,0.275,0.99,0.616,0.99h5.759h1.882H38.7c0.341,0,0.616-0.438,0.616-0.99c0-0.551-0.275-0.989-0.616-0.989h-5.71v-4.072 c5.58-0.422,9.96-4.396,9.96-9.214v-6.278H40.971z"
             }),
-            H.createElement(
+            q.createElement(
               "g",
               null,
-              H.createElement("path", {
+              q.createElement("path", {
                 d:
                   "M32,39.841c-3.493,0-6.343-2.344-6.343-5.213v-17.85c0-2.871,2.85-5.213,6.343-5.213s6.343,2.342,6.343,5.213v17.85,C38.343,37.497,35.493,39.841,32,39.841z"
               })
@@ -665,7 +665,7 @@ webpackJsonp(
         );
       }
       function f() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -680,17 +680,17 @@ webpackJsonp(
             stroke: "#000",
             strokeWidth: "10px"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { className: "ScratchPad" },
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
               d:
                 "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -700,7 +700,7 @@ webpackJsonp(
               x2: "74.495",
               y2: "54.063"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -710,7 +710,7 @@ webpackJsonp(
               x2: "124.495",
               y2: "54.063"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -721,28 +721,28 @@ webpackJsonp(
               y2: "54.063"
             })
           ),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "115.4",
             x2: "179.4",
             y2: "115.4"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "145.8",
             x2: "143.3",
             y2: "145.8"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "175.9",
             x2: "179.4",
             y2: "175.9"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "TextLines",
             x1: "73.7",
             y1: "82.7",
@@ -755,7 +755,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Headphones";
         return (
           e.className && (t += " " + e.className),
-          H.createElement(
+          q.createElement(
             "svg",
             {
               version: "1.1",
@@ -767,31 +767,31 @@ webpackJsonp(
               height: "256px",
               viewBox: "-305.5 396.5 256 256"
             },
-            H.createElement(
+            q.createElement(
               "g",
               { className: "HeadPhonesBase" },
-              H.createElement(
+              q.createElement(
                 "g",
                 null,
-                H.createElement("path", {
+                q.createElement("path", {
                   fill: "none",
                   d:
                     "M-176.5,418.7c-37,0-69.5,30.2-69.5,64.5v25.3c11.3,2.3,19.9,12.3,19.9,24.3v8.6l100.9-100.9 C-138.2,427.3-156.7,418.7-176.5,418.7z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-226.2,532.9c0-12-8.5-22-19.9-24.3v-25.3c0-34.4,32.5-64.5,69.5-64.5c19.8,0,38.3,8.6,51.2,21.9l6.9-6.9 c-14.8-15.1-35.7-24.9-58.2-24.9c-42.3,0-79.4,34.8-79.4,74.5v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8c0,7.8,3.6,14.7,9.2,19.3 l40.5-40.5V532.9z"
                 }),
-                H.createElement("path", {
+                q.createElement("path", {
                   d:
                     "M-97.1,508.6v-25.3c0-7.5-1.3-14.8-3.8-21.8l-7.9,7.9c1.2,4.5,1.8,9.1,1.8,13.9v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8 c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8v-29.8C-77.2,520.9-85.8,510.9-97.1,508.6z"
                 })
               )
             ),
-            H.createElement(
+            q.createElement(
               "g",
               { className: "HeadphonesStrike" },
-              H.createElement("line", {
+              q.createElement("line", {
                 fill: "none",
                 x1: "-260.5",
                 y1: "598.5",
@@ -799,14 +799,14 @@ webpackJsonp(
                 y2: "432.4"
               })
             ),
-            H.createElement(
+            q.createElement(
               "g",
               { className: "HeadPhonesFill" },
-              H.createElement("path", {
+              q.createElement("path", {
                 d:
                   "M-226.2,562.7v-21.2l-40.5,40.5c4.3,3.5,9.7,5.6,15.6,5.6C-237.3,587.5-226.2,576.4-226.2,562.7z"
               }),
-              H.createElement("path", {
+              q.createElement("path", {
                 d:
                   "M-118.3,433.7l-6.9,6.9c7.9,8.1,13.7,18,16.5,28.8l7.9-7.9C-104.5,451.1-110.5,441.6-118.3,433.7z"
               })
@@ -815,7 +815,7 @@ webpackJsonp(
         );
       }
       function y() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -828,10 +828,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z"
             })
@@ -839,7 +839,7 @@ webpackJsonp(
         );
       }
       function v() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -851,7 +851,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("circle", {
+          q.createElement("circle", {
             fill: "none",
             strokeWidth: "10",
             strokeMiterlimit: "10",
@@ -859,7 +859,7 @@ webpackJsonp(
             cy: "128",
             r: "95.333"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "horizontalLine",
             fill: "none",
             strokeWidth: "10",
@@ -870,7 +870,7 @@ webpackJsonp(
             x2: "183.333",
             y2: "128"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             className: "verticalLine",
             fill: "none",
             strokeWidth: "10",
@@ -884,7 +884,7 @@ webpackJsonp(
         );
       }
       function b() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -897,24 +897,24 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            H.createElement("circle", {
+            q.createElement("circle", {
               cx: "86.296",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "plusCircle",
             d:
               "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z"
@@ -922,7 +922,7 @@ webpackJsonp(
         );
       }
       function C() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -935,29 +935,29 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            H.createElement("circle", {
+            q.createElement("circle", {
               cx: "85.923",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "friendArm",
             d:
               "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "redCircle",
             d:
               "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z"
@@ -965,7 +965,7 @@ webpackJsonp(
         );
       }
       function S() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -978,18 +978,18 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z"
           }),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "invitePlus" },
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -999,7 +999,7 @@ webpackJsonp(
               x2: "101.5",
               y2: "128"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1013,7 +1013,7 @@ webpackJsonp(
         );
       }
       function M() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1026,7 +1026,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
@@ -1037,7 +1037,7 @@ webpackJsonp(
         );
       }
       function F() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1049,42 +1049,42 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { className: "Speaker" },
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "SoundWaves" },
-            H.createElement("path", {
+            q.createElement("path", {
               className: "SoundWavesHighest",
               d:
                 "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "SoundWavesHigh",
               d:
                 "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "SoundWavesMed",
               d:
                 "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "SoundWavesLow",
               d:
                 "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "SoundX" },
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1093,7 +1093,7 @@ webpackJsonp(
               x2: "223.167",
               y2: "84.5"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1106,7 +1106,7 @@ webpackJsonp(
         );
       }
       function w() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1116,14 +1116,14 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             className: "Bubble",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             d:
               "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1132,7 +1132,7 @@ webpackJsonp(
             x2: "176.184",
             y2: "128.886"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1144,7 +1144,7 @@ webpackJsonp(
         );
       }
       function O() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1157,10 +1157,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             null,
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
             })
@@ -1168,7 +1168,7 @@ webpackJsonp(
         );
       }
       function B() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1181,7 +1181,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             className: "playTriangle",
             d:
               "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
@@ -1189,7 +1189,7 @@ webpackJsonp(
         );
       }
       function R() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1202,10 +1202,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { className: "time" },
-            H.createElement("circle", {
+            q.createElement("circle", {
               fill: "none",
               strokeWidth: "10",
               strokeMiterlimit: "10",
@@ -1213,7 +1213,7 @@ webpackJsonp(
               cy: "128.014",
               r: "64"
             }),
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1221,10 +1221,10 @@ webpackJsonp(
               points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "arrow" },
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1232,7 +1232,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "199.735,63.66 199.735,192.366 171.207,163.675"
             }),
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1241,10 +1241,10 @@ webpackJsonp(
               points: "199.735,63.66 199.735,192.366 228.266,163.675"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "alphabet" },
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1252,7 +1252,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "70.268,109.934 94.483,63.635 119.77,109.934"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1263,7 +1263,7 @@ webpackJsonp(
               x2: "112.135",
               y2: "97.861"
             }),
-            H.createElement("polyline", {
+            q.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1276,7 +1276,7 @@ webpackJsonp(
         );
       }
       function I() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1289,7 +1289,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -1301,7 +1301,7 @@ webpackJsonp(
         );
       }
       function E() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1314,45 +1314,45 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "defs",
             null,
-            H.createElement(
+            q.createElement(
               "linearGradient",
               { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              H.createElement("stop", {
+              q.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
                 stopColor: "#00ccff"
               }),
-              H.createElement("stop", {
+              q.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
                 stopColor: "#2d73ff"
               })
             ),
-            H.createElement(
+            q.createElement(
               "filter",
               { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
-              H.createElement("feOffset", {
+              q.createElement("feOffset", {
                 result: "offOut",
                 in: "SourceAlpha",
                 dx: "20",
                 dy: "20"
               }),
-              H.createElement("feGaussianBlur", {
+              q.createElement("feGaussianBlur", {
                 result: "blurOut",
                 in: "offOut",
                 stdDeviation: "10"
               }),
-              H.createElement("feBlend", {
+              q.createElement("feBlend", {
                 in: "SourceGraphic",
                 in2: "blurOut",
                 mode: "normal"
               })
             )
           ),
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "url(#linear)",
             strokeWidth: "24",
@@ -1363,7 +1363,7 @@ webpackJsonp(
             strokeDasharray: "365.19 365.19",
             strokeDashoffset: "0.00"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             opacity: ".2",
             filter: "url(#f1)",
@@ -1379,7 +1379,7 @@ webpackJsonp(
         );
       }
       function k() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1392,17 +1392,17 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { className: "triangle" },
-            H.createElement("path", {
+            q.createElement("path", {
               stroke: "#020202",
               strokeWidth: "16",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               d: "M127.9,76.632"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "11",
@@ -1412,12 +1412,12 @@ webpackJsonp(
               d:
                 "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
             }),
-            H.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+            q.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "exclamation" },
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "16",
@@ -1428,7 +1428,7 @@ webpackJsonp(
               x2: "127.9",
               y2: "160.07"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "#020202",
               d:
                 "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
@@ -1437,7 +1437,7 @@ webpackJsonp(
         );
       }
       function T() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1450,12 +1450,12 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             className: "topLock",
             d:
               "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             className: "baseLock",
             fill: "none",
             stroke: "#ffffff",
@@ -1467,7 +1467,7 @@ webpackJsonp(
         );
       }
       function G(e) {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1481,10 +1481,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { id: "partCircle" },
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1493,7 +1493,7 @@ webpackJsonp(
               d:
                 "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1501,7 +1501,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               d: "M201.432,101.166"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1510,10 +1510,10 @@ webpackJsonp(
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { id: "mainOutline" },
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundFill",
               fill: "none",
               stroke: "#ffffff",
@@ -1522,7 +1522,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundOuterOutline",
               strokeLinecap: "butt",
               fill: "none",
@@ -1532,7 +1532,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber01",
               strokeLinecap: "butt",
               fill: "none",
@@ -1542,7 +1542,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber02",
               strokeLinecap: "butt",
               fill: "none",
@@ -1552,7 +1552,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber03",
               strokeLinecap: "butt",
               fill: "none",
@@ -1562,7 +1562,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber04",
               strokeLinecap: "butt",
               fill: "none",
@@ -1572,7 +1572,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber05",
               strokeLinecap: "butt",
               fill: "none",
@@ -1582,7 +1582,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber06",
               strokeLinecap: "butt",
               fill: "none",
@@ -1592,7 +1592,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber07",
               strokeLinecap: "butt",
               fill: "none",
@@ -1602,7 +1602,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber08",
               strokeLinecap: "butt",
               fill: "none",
@@ -1612,7 +1612,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber09",
               strokeLinecap: "butt",
               fill: "none",
@@ -1622,7 +1622,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber10",
               strokeLinecap: "butt",
               fill: "none",
@@ -1632,7 +1632,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber11",
               strokeLinecap: "butt",
               fill: "none",
@@ -1642,7 +1642,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber12",
               strokeLinecap: "butt",
               fill: "none",
@@ -1652,7 +1652,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber13",
               strokeLinecap: "butt",
               fill: "none",
@@ -1662,7 +1662,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber14",
               strokeLinecap: "butt",
               fill: "none",
@@ -1672,7 +1672,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            H.createElement("path", {
+            q.createElement("path", {
               className: "roundThrobber15",
               strokeLinecap: "butt",
               fill: "none",
@@ -1683,19 +1683,19 @@ webpackJsonp(
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { id: "bottomCircle" },
-            H.createElement("path", {
+            q.createElement("path", {
               fill: "#ffffff",
               d:
                 "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { id: "topCircle" },
-            H.createElement("circle", {
+            q.createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -1708,7 +1708,7 @@ webpackJsonp(
         );
       }
       function N() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1721,19 +1721,19 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             className: "videoPlayButton",
             d:
               "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z"
           })
         );
       }
       function D() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1746,14 +1746,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
           })
         );
       }
       function A(e) {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1767,7 +1767,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1776,7 +1776,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "128,247.688 128,8.313 181.061,61.674 "
           }),
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1788,7 +1788,7 @@ webpackJsonp(
         );
       }
       function P() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1801,7 +1801,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             className: "Arrow1",
             fill: "none",
             stroke: "#ffffff",
@@ -1810,7 +1810,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "135.65,21.667 30.081,127.235 137.18,234.333 "
           }),
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             className: "Arrow2",
             fill: "none",
             stroke: "#ffffff",
@@ -1822,7 +1822,7 @@ webpackJsonp(
         );
       }
       function z() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1835,7 +1835,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("rect", {
+          q.createElement("rect", {
             x: "24",
             y: "42.167",
             fill: "none",
@@ -1845,7 +1845,7 @@ webpackJsonp(
             width: "208",
             height: "171.667"
           }),
-          H.createElement("line", {
+          q.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "42",
@@ -1858,7 +1858,7 @@ webpackJsonp(
         );
       }
       function L() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1871,7 +1871,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("line", {
+          q.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "18",
@@ -1884,7 +1884,7 @@ webpackJsonp(
         );
       }
       function x() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1897,14 +1897,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("polyline", {
+          q.createElement("polyline", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 "
           }),
-          H.createElement("rect", {
+          q.createElement("rect", {
             x: "24",
             y: "90.861",
             fill: "none",
@@ -1917,7 +1917,7 @@ webpackJsonp(
         );
       }
       function j() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1930,10 +1930,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { className: "mainBox" },
-            H.createElement("rect", {
+            q.createElement("rect", {
               x: "90",
               y: "42.167",
               fill: "none",
@@ -1943,7 +1943,7 @@ webpackJsonp(
               width: "142",
               height: "171.667"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -1954,10 +1954,10 @@ webpackJsonp(
               y2: "54.01"
             })
           ),
-          H.createElement(
+          q.createElement(
             "g",
             { className: "leftBox" },
-            H.createElement("rect", {
+            q.createElement("rect", {
               x: "28",
               y: "42.167",
               fill: "none",
@@ -1967,7 +1967,7 @@ webpackJsonp(
               width: "62",
               height: "171.667"
             }),
-            H.createElement("line", {
+            q.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -1981,7 +1981,7 @@ webpackJsonp(
         );
       }
       function U() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -1994,7 +1994,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "30",
@@ -2003,13 +2003,13 @@ webpackJsonp(
             d:
               "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895"
           }),
-          H.createElement("polygon", {
+          q.createElement("polygon", {
             points: "147.639,108.361 245.755,10.166 245.834,108.361 "
           })
         );
       }
       function W() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -2022,18 +2022,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z"
           }),
-          H.createElement("path", {
+          q.createElement("path", {
             d:
               "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z"
           })
         );
       }
       function V() {
-        return H.createElement(
+        return q.createElement(
           "svg",
           {
             version: "1.1",
@@ -2046,60 +2046,82 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          H.createElement(
+          q.createElement(
             "g",
             { transform: "translate(0,-952.36215)" },
-            H.createElement("path", {
+            q.createElement("path", {
               d:
                 "M49.624,963.362c-20.72,0-37.667,14.78-37.667,32.806c0,3.589,3.353,6.499,7.486,6.499l52.407-0.305v162.5 c0,18.134,17.404,32.5,38.018,32.5h96.508c20.612,0,37.667-14.475,37.667-32.5c0-3.59-3.354-6.499-7.486-6.5H217.84V996.168 c0-18.024-16.947-32.806-37.667-32.806H49.624z M49.624,976.362h2.223c0.569,0.162,1.158,0.265,1.754,0.306 c8.159,1.274,14.426,6.085,16.962,12.694l-42.112,0.306C31.513,981.897,39.656,976.362,49.624,976.362z M79.337,976.362h100.836 c12.587,0,22.694,8.77,22.694,19.806v162.194H139.23c-4.135,0.001-7.486,2.91-7.488,6.5c0,4.609-1.43,7.796-4.21,10.765 c-2.78,2.972-7.203,5.757-13.686,7.923c-0.624,0.201-1.214,0.476-1.755,0.813h-2.223c-12.695,0-23.044-8.573-23.044-19.5v-169 C86.824,988.529,84.023,981.812,79.337,976.362z M108.582,1005.611c-4.135,0.169-7.33,3.216-7.135,6.807 c0.193,3.59,3.702,6.363,7.837,6.194h71.123c4.135,0.051,7.535-2.817,7.592-6.407c0.059-3.591-3.246-6.542-7.381-6.594 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1005.603,108.816,1005.603,108.582,1005.611z M108.582,1044.612 c-4.135,0.169-7.33,3.215-7.135,6.807c0.193,3.588,3.702,6.362,7.837,6.192h71.123c4.135,0.051,7.535-2.816,7.592-6.407 c0.059-3.59-3.246-6.542-7.381-6.592c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1044.603,108.816,1044.603,108.582,1044.612z M108.582,1083.612c-4.135,0.169-7.33,3.216-7.135,6.806c0.193,3.589,3.702,6.363,7.837,6.193h71.123 c4.135,0.052,7.535-2.816,7.592-6.407c0.059-3.59-3.246-6.541-7.381-6.592c-0.069-0.001-0.141-0.001-0.211,0h-71.123 C109.05,1083.602,108.816,1083.602,108.582,1083.612z M108.582,1122.611c-4.135,0.17-7.33,3.216-7.135,6.806 c0.193,3.591,3.702,6.364,7.837,6.195h71.123c4.135,0.05,7.535-2.818,7.592-6.408c0.059-3.591-3.246-6.541-7.381-6.593 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1122.602,108.816,1122.602,108.582,1122.611z M145.547,1171.363h82.002 c-3.09,7.604-11.189,12.999-21.173,12.999h-67.849c0.196-0.197,0.512-0.306,0.703-0.509 C142.576,1180.277,144.436,1175.973,145.547,1171.363z"
             })
           )
         );
       }
-      (t.E = n),
+      function H(e) {
+        return q.createElement(
+          "svg",
+          {
+            transform: "rotate(" + e.angle + ")",
+            version: "1.1",
+            id: "base",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_FlatArrow",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          q.createElement("polygon", {
+            points: "13.913,141 128,59 242.087,141 ",
+            fill: "#ffffff"
+          })
+        );
+      }
+      (t.F = n),
         (t.e = r),
         (t.g = o),
         (t.k = a),
-        (t.r = s),
-        (t.t = c),
+        (t.s = s),
+        (t.u = c),
         (t.l = l),
-        (t.H = u),
-        (t.B = d),
-        (t.z = p),
-        (t.O = h),
-        (t.P = m),
-        (t.M = g),
-        (t.I = f),
-        (t.o = _),
-        (t.n = y),
-        (t.y = v),
+        (t.I = u),
+        (t.C = d),
+        (t.A = p),
+        (t.P = h),
+        (t.Q = m),
+        (t.N = g),
+        (t.J = f),
+        (t.p = _),
+        (t.o = y),
+        (t.z = v),
         (t.a = b),
-        (t.m = C),
-        (t.p = S),
-        (t.w = M),
-        (t.N = F),
-        (t.v = w),
+        (t.n = C),
+        (t.q = S),
+        (t.x = M),
+        (t.O = F),
+        (t.w = w),
         (t.h = O),
-        (t.x = B),
-        (t.G = R),
+        (t.y = B),
+        (t.H = R),
         (t.f = I),
         (t.i = E),
         (t.d = k),
-        (t.q = T),
-        (t.J = G),
-        (t.L = N),
+        (t.r = T),
+        (t.K = G),
+        (t.M = N),
         (t.c = D),
         (t.b = A),
         (t.j = P),
-        (t.s = z),
-        (t.u = L),
-        (t.C = x),
-        (t.F = j),
-        (t.A = U),
-        (t.K = W),
-        (t.D = V);
-      var H = i("Jmof");
-      i.n(H);
+        (t.t = z),
+        (t.v = L),
+        (t.D = x),
+        (t.G = j),
+        (t.B = U),
+        (t.L = W),
+        (t.E = V),
+        (t.m = H);
+      var q = i("Jmof");
+      i.n(q);
     },
     DRjr: function(e, t, i) {
       "use strict";
@@ -6353,6 +6375,15 @@ webpackJsonp(
                 return e.m_connection.ClientInfo.bFriendsUIEnabled;
               });
             }),
+            (e.prototype.BClientSupportsMessage = function(e) {
+              var t = this;
+              return this.BClientConnected().then(function() {
+                return (
+                  -1 !==
+                  t.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+                );
+              });
+            }),
             (e.prototype.OpenFriendChatDialog = function(e) {
               var t = { message: "ShowFriendChatDialog", steamid: e };
               return this.GenericEResultCall(t);
@@ -6371,6 +6402,10 @@ webpackJsonp(
             }),
             (e.prototype.IsSubscribedApp = function(e) {
               var t = { message: "IsSubscribedApp", appid: e };
+              return this.GenericEResultCall(t);
+            }),
+            (e.prototype.ViewGameInfoForSteamID = function(e) {
+              var t = { message: "ViewGameInfoForSteamID", steamid: e };
               return this.GenericEResultCall(t);
             }),
             (e.prototype.BClientAccountMatches = function() {
@@ -6411,7 +6446,8 @@ webpackJsonp(
               (this.m_ClientInfo = {
                 ulVersion: "",
                 bFriendsUIEnabled: !1,
-                unAccountID: 0
+                unAccountID: 0,
+                rgSupportedMessages: []
               });
           }
           return (
@@ -6461,7 +6497,10 @@ webpackJsonp(
             (e.prototype.BSendMsg = function(e, t) {
               if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
                 return !1;
-              var i = Object.assign({}, e, { universe: n.a.EUNIVERSE });
+              var i = Object.assign({}, e, {
+                universe: n.a.EUNIVERSE,
+                accountid: n.d.accountid
+              });
               void 0 !== t && (i.sequenceid = t);
               try {
                 return this.m_socket.send(JSON.stringify(i)), !0;
@@ -6510,6 +6549,9 @@ webpackJsonp(
                           ? ((e.m_ClientInfo.ulVersion = n.clientversion),
                             (e.m_ClientInfo.bFriendsUIEnabled = !!n.friendsui),
                             (e.m_ClientInfo.unAccountID = n.accountid),
+                            n.supported_messages &&
+                              (e.m_ClientInfo.rgSupportedMessages =
+                                n.supported_messages),
                             t())
                           : i();
                       })
@@ -7429,7 +7471,7 @@ and limitations under the License.
           "undefined" != typeof SteamClient &&
             void 0 !== SteamClient.SharedConnection)
         ) {
-          var n = Ze(i);
+          var n = Qe(i);
           return void SteamClient.WebChat.OpenURLInClient(t, n.m_unPID);
         }
         0 == t.indexOf("steam://")
@@ -7441,7 +7483,7 @@ and limitations under the License.
             );
       }
       function b(e) {
-        var t = Zp.RTime32ToDate(e.rtime),
+        var t = Qp.RTime32ToDate(e.rtime),
           i = new Date();
         i.setHours(0, 0, 0, 0);
         var n;
@@ -7477,11 +7519,11 @@ and limitations under the License.
         );
       }
       function C(e, t, i) {
-        var n = Zp.FriendStore.GetPlayer(i),
+        var n = Qp.FriendStore.GetPlayer(i),
           r = n.display_name,
-          o = Zp.FriendStore.GetPlayer(t),
+          o = Qp.FriendStore.GetPlayer(t),
           a = o.display_name,
-          s = t == Zp.FriendStore.self.accountid;
+          s = t == Qp.FriendStore.self.accountid;
         switch (e.result) {
           case 1:
             return Object(gr.b)("#friends_trade_declined", r);
@@ -7589,10 +7631,10 @@ and limitations under the License.
       }
       function S(e) {
         if (!e) return Yr.k_ESlashCommandType_None;
-        for (var t in Qr)
+        for (var t in Zr)
           if (e.startsWith(t)) {
             var i = e.slice(t.length, t.length + 1);
-            return $r.indexOf(i) < 0 ? Yr.k_ESlashCommandType_None : Qr[t];
+            return $r.indexOf(i) < 0 ? Yr.k_ESlashCommandType_None : Zr[t];
           }
         return Yr.k_ESlashCommandType_None;
       }
@@ -7600,8 +7642,8 @@ and limitations under the License.
         var t = S(e);
         if (t == Yr.k_ESlashCommandType_None) return e;
         var i = void 0;
-        for (var n in Qr)
-          if (Qr[n] === t) {
+        for (var n in Zr)
+          if (Zr[n] === t) {
             i = n;
             break;
           }
@@ -7760,7 +7802,7 @@ and limitations under the License.
       }
       function D(e) {
         return Sr.createElement(
-          Zs,
+          Qs,
           null,
           Sr.createElement(
             k,
@@ -7801,7 +7843,7 @@ and limitations under the License.
               }
             },
             Sr.createElement("span", null, e.friend.display_name),
-            Sr.createElement(ks.P, null)
+            Sr.createElement(ks.Q, null)
           )
         );
       }
@@ -7835,7 +7877,7 @@ and limitations under the License.
         );
       }
       function j(e, t, i) {
-        0 == Zp.FriendStore.FriendGroupStore.user_groups.length
+        0 == Qp.FriendStore.FriendGroupStore.user_groups.length
           ? L(e, t, i)
           : Ie(
               Sr.createElement(fc, { browserContext: e, friend: i }),
@@ -7898,10 +7940,10 @@ and limitations under the License.
         );
       }
       function q(e) {
-        Zp.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
+        Qp.FriendStore.FavoritesStore.AddToFavorites({ friend: e });
       }
       function K(e) {
-        Zp.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
+        Qp.FriendStore.FavoritesStore.RemoveFromFavorites({ friend: e });
       }
       function Y(e, t, i) {
         return Object(Fr.a)(
@@ -7936,7 +7978,7 @@ and limitations under the License.
                 {
                   key: "removegroup",
                   onSelected: function() {
-                    Zp.FriendStore.FriendGroupStore.RemoveGroup(e.group);
+                    Qp.FriendStore.FriendGroupStore.RemoveGroup(e.group);
                   }
                 },
                 Object(gr.b)("#FriendGroup_Menu_Remove")
@@ -7968,12 +8010,12 @@ and limitations under the License.
           t
         );
       }
-      function Z(e, t, i) {
+      function Q(e, t, i) {
         var n,
           r = Xe(null, e);
         return (
           t.BIsClanChatRoom() &&
-            (n = Zp.FriendStore.ClanStore.GetClan(t.GetClanID())),
+            (n = Qp.FriendStore.ClanStore.GetClan(t.GetClanID())),
           Object(Fr.a)(
             Sr.createElement(Ml, {
               browserContext: r,
@@ -7985,12 +8027,12 @@ and limitations under the License.
           )
         );
       }
-      function Q(e, t, i) {
+      function Z(e, t, i) {
         var n,
           r = Xe(null, e);
         return (
           t.GetChatGroupIDIfLoaded() &&
-            (n = Zp.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
+            (n = Qp.ChatStore.GetChatRoomGroup(t.GetChatGroupIDIfLoaded())),
           Object(Fr.a)(
             Sr.createElement(Ml, {
               browserContext: r,
@@ -8145,7 +8187,7 @@ and limitations under the License.
         return !n && t;
       }
       function le(e, t) {
-        var i = Ze(e);
+        var i = Qe(e);
         t.BIsClanChatRoom()
           ? t.LeaveChatRoomGroup(i)
           : ke(
@@ -8242,7 +8284,7 @@ and limitations under the License.
             )
           );
         var i = function() {
-          Zp.EconomyStore.GetTradeOfferURL().then(function(t) {
+          Qp.EconomyStore.GetTradeOfferURL().then(function(t) {
             e.fnInsertText(t);
           });
         };
@@ -8261,7 +8303,7 @@ and limitations under the License.
         var t = e.group.GetGroupID(),
           i = e.group.voiceRoomList.map(function(e) {
             var i = function() {
-              Zp.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
+              Qp.VoiceStore.InitiateRoomChat(t, e.GetRoomID());
             };
             return Sr.createElement(
               Mr.d,
@@ -8298,7 +8340,7 @@ and limitations under the License.
         var n,
           r = !1,
           o = !0;
-        if (e.invitedto instanceof Za) n = 300;
+        if (e.invitedto instanceof Qa) n = 300;
         else if (e.invitedto instanceof gs) {
           n = 340;
           var a = e.invitedto;
@@ -8338,7 +8380,7 @@ and limitations under the License.
           i[n - 2] = arguments[n];
         for (var r = [], o = 0, a = i; o < a.length; o++) {
           var s = a[o];
-          s instanceof Za ? r.push(Me(e, s)) : r.push(s);
+          s instanceof Qa ? r.push(Me(e, s)) : r.push(s);
         }
         return gr.d.apply(void 0, [t].concat(r));
       }
@@ -8353,7 +8395,7 @@ and limitations under the License.
         if (r);
         else {
           var o = new wm(n.ownerDocument.defaultView),
-            a = Zp.UIStore.GetDefaultTabSetForContext(e);
+            a = Qp.UIStore.GetDefaultTabSetForContext(e);
           Rs.render(
             Sr.createElement($d, {
               friends: t,
@@ -8486,7 +8528,7 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "closeButton", onClick: e.onEscKeypress },
-                    Sr.createElement(ks.P, null)
+                    Sr.createElement(ks.Q, null)
                   )
                 ),
               Sr.createElement(yd, null, e.children)
@@ -8503,7 +8545,7 @@ and limitations under the License.
             }
           });
         if (nt.a.USE_POPUPS && n && i) {
-          var s = new ap(t, Ze(t), i, n, a);
+          var s = new ap(t, Qe(t), i, n, a);
           s.Show(), (r = s);
         } else r = Tm.GetModalManager(t).ShowModal(a);
         return r;
@@ -8600,7 +8642,7 @@ and limitations under the License.
           invite: Hh,
           gameinvite: qh,
           lobbyinvite: Kh,
-          tradeoffer: Qh,
+          tradeoffer: Zh,
           broadcastinvite: Yh,
           broadcastviewrequest: Jh
         });
@@ -8617,7 +8659,7 @@ and limitations under the License.
           tweet: Uh,
           inviteurl: Vh,
           publishedfile: Xh,
-          tradeofferlink: Zh,
+          tradeofferlink: Qh,
           econitem: em,
           steamstore: rm,
           broadcast: $h,
@@ -8642,7 +8684,7 @@ and limitations under the License.
       }
       function He(e) {
         var t = e.args.appid,
-          i = Zp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Qp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(gr.b)(
@@ -8654,7 +8696,7 @@ and limitations under the License.
       }
       function qe(e) {
         var t = e.args.appid,
-          i = Zp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
+          i = Qp.AppInfoStore.GetAppInfo(parseInt(t)).m_strName;
         return {
           title: "",
           body: Object(gr.b)(
@@ -8706,10 +8748,10 @@ and limitations under the License.
             i,
             "Couldn't find owning window to determine browser context"
           ),
-          Ze(i)
+          Qe(i)
         );
       }
-      function Ze(e) {
+      function Qe(e) {
         var t = Jp;
         return (
           e &&
@@ -8721,8 +8763,8 @@ and limitations under the License.
           t
         );
       }
-      function Qe(e) {
-        var t = Ze(e);
+      function Ze(e) {
+        var t = Qe(e);
         return t && t.m_unPID != Jp.m_unPID && t.m_nBrowserID != Jp.m_nBrowserID
           ? t
           : null;
@@ -12654,7 +12696,7 @@ and limitations under the License.
           }
           return (
             (e.ConstructClientCMInterface = function() {
-              return new Zt();
+              return new Qt();
             }),
             (e.ConstructWebCMInterface = function(e) {
               return new Xt(e);
@@ -13044,7 +13086,7 @@ and limitations under the License.
             t
           );
         })(Jt),
-        Zt = (function(e) {
+        Qt = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
@@ -13206,7 +13248,7 @@ and limitations under the License.
             t
           );
         })(Jt),
-        Qt = i("KLxG"),
+        Zt = i("KLxG"),
         $t = (function() {
           function e(e) {
             var t = this;
@@ -13409,8 +13451,8 @@ and limitations under the License.
               } else this.m_bWaitingToReconnect = !0;
             }),
             rt.b([mt.observable], e.prototype, "m_eWebLogonState", void 0),
-            rt.b([Qt.a], e.prototype, "OnCMDisconnected", null),
-            rt.b([Qt.a], e.prototype, "OnCMLoggedOn", null),
+            rt.b([Zt.a], e.prototype, "OnCMDisconnected", null),
+            rt.b([Zt.a], e.prototype, "OnCMLoggedOn", null),
             e
           );
         })(),
@@ -13904,7 +13946,7 @@ and limitations under the License.
                 return this.m_strGameExtraInfo
                   ? this.m_strGameExtraInfo
                   : this.m_unGamePlayedAppID
-                    ? Zp.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
+                    ? Qp.AppInfoStore.GetAppInfo(this.m_unGamePlayedAppID)
                         .m_strName
                     : "";
               },
@@ -13972,7 +14014,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "current_game_rich_presence", {
               get: function() {
                 if (this.m_mapRichPresence.has("steam_display")) {
-                  var e = Zp.AppInfoStore.GetRichPresenceLoc(
+                  var e = Qp.AppInfoStore.GetRichPresenceLoc(
                     this.m_unGamePlayedAppID
                   );
                   if (e) return this.GetLocalizedRichPresenceDisplayString(e);
@@ -16442,7 +16484,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Zi = (function(e) {
+        Qi = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -16495,7 +16537,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Qi = (function(e) {
+        Zi = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -17039,13 +17081,13 @@ and limitations under the License.
               st.Message.setWrapperField(this, 1, e);
             }),
             (t.prototype.members = function() {
-              return st.Message.getRepeatedWrapperField(this, Qi, 2);
+              return st.Message.getRepeatedWrapperField(this, Zi, 2);
             }),
             (t.prototype.set_members = function(e) {
               st.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (t.prototype.add_members = function(e, t) {
-              return st.Message.addToRepeatedWrapperField(this, 2, e, Qi, t);
+              return st.Message.addToRepeatedWrapperField(this, 2, e, Zi, t);
             }),
             (t.prototype.default_chat_id = function() {
               return st.Message.getField(this, 4);
@@ -17063,13 +17105,13 @@ and limitations under the License.
               return st.Message.addToRepeatedWrapperField(this, 5, e, en, t);
             }),
             (t.prototype.kicked = function() {
-              return st.Message.getRepeatedWrapperField(this, Qi, 7);
+              return st.Message.getRepeatedWrapperField(this, Zi, 7);
             }),
             (t.prototype.set_kicked = function(e) {
               st.Message.setRepeatedWrapperField(this, 7, e);
             }),
             (t.prototype.add_kicked = function(e, t) {
-              return st.Message.addToRepeatedWrapperField(this, 7, e, Qi, t);
+              return st.Message.addToRepeatedWrapperField(this, 7, e, Zi, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -17091,8 +17133,8 @@ and limitations under the License.
                       e.set_header_state(i);
                     break;
                   case 2:
-                    var i = new Qi();
-                    t.readMessage(i, Qi.deserializeBinaryFromReader),
+                    var i = new Zi();
+                    t.readMessage(i, Zi.deserializeBinaryFromReader),
                       e.add_members(i);
                     break;
                   case 4:
@@ -17104,8 +17146,8 @@ and limitations under the License.
                       e.add_chat_rooms(i);
                     break;
                   case 7:
-                    var i = new Qi();
-                    t.readMessage(i, Qi.deserializeBinaryFromReader),
+                    var i = new Zi();
+                    t.readMessage(i, Zi.deserializeBinaryFromReader),
                       e.add_kicked(i);
                     break;
                   default:
@@ -17123,7 +17165,7 @@ and limitations under the License.
                 null != i && t.writeMessage(1, i, tn.serializeBinaryToWriter),
                 (i = e.members()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(2, i, Qi.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, Zi.serializeBinaryToWriter),
                 (i = st.Message.getField(e, 4)),
                 void 0 !== i && t.writeUint64String(4, i),
                 (i = e.chat_rooms()),
@@ -17131,7 +17173,7 @@ and limitations under the License.
                   t.writeRepeatedMessage(5, i, en.serializeBinaryToWriter),
                 (i = e.kicked()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(7, i, Qi.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(7, i, Zi.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CChatRoomGroupState";
@@ -19267,7 +19309,7 @@ and limitations under the License.
               st.Message.setField(this, 1, e);
             }),
             (t.prototype.member = function() {
-              return st.Message.getWrapperField(this, Qi, 2, 1);
+              return st.Message.getWrapperField(this, Zi, 2, 1);
             }),
             (t.prototype.set_member = function(e) {
               st.Message.setWrapperField(this, 2, e);
@@ -19296,8 +19338,8 @@ and limitations under the License.
                     e.set_chat_group_id(t.readUint64String());
                     break;
                   case 2:
-                    var i = new Qi();
-                    t.readMessage(i, Qi.deserializeBinaryFromReader),
+                    var i = new Zi();
+                    t.readMessage(i, Zi.deserializeBinaryFromReader),
                       e.set_member(i);
                     break;
                   case 3:
@@ -19317,7 +19359,7 @@ and limitations under the License.
               (i = st.Message.getField(e, 1)),
                 void 0 !== i && t.writeUint64String(1, i),
                 (i = e.member()),
-                null != i && t.writeMessage(2, i, Qi.serializeBinaryToWriter),
+                null != i && t.writeMessage(2, i, Zi.serializeBinaryToWriter),
                 void 0 !== (i = st.Message.getField(e, 3)) && t.writeEnum(3, i);
             }),
             (t.prototype.getClassName = function() {
@@ -20291,13 +20333,13 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.bans = function() {
-              return st.Message.getRepeatedWrapperField(this, Zn, 1);
+              return st.Message.getRepeatedWrapperField(this, Qn, 1);
             }),
             (t.prototype.set_bans = function(e) {
               st.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_bans = function(e, t) {
-              return st.Message.addToRepeatedWrapperField(this, 1, e, Zn, t);
+              return st.Message.addToRepeatedWrapperField(this, 1, e, Qn, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -20314,8 +20356,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Zn();
-                    t.readMessage(i, Zn.deserializeBinaryFromReader),
+                    var i = new Qn();
+                    t.readMessage(i, Qn.deserializeBinaryFromReader),
                       e.add_bans(i);
                     break;
                   default:
@@ -20331,7 +20373,7 @@ and limitations under the License.
               var i;
               (i = e.bans()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Zn.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Qn.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CChatRoom_GetBanList_Response";
@@ -20339,7 +20381,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Zn = (function(e) {
+        Qn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -20423,7 +20465,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Qn = (function(e) {
+        Zn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -20556,13 +20598,13 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.invites = function() {
-              return st.Message.getRepeatedWrapperField(this, Qn, 1);
+              return st.Message.getRepeatedWrapperField(this, Zn, 1);
             }),
             (t.prototype.set_invites = function(e) {
               st.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_invites = function(e, t) {
-              return st.Message.addToRepeatedWrapperField(this, 1, e, Qn, t);
+              return st.Message.addToRepeatedWrapperField(this, 1, e, Zn, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -20579,8 +20621,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Qn();
-                    t.readMessage(i, Qn.deserializeBinaryFromReader),
+                    var i = new Zn();
+                    t.readMessage(i, Zn.deserializeBinaryFromReader),
                       e.add_invites(i);
                     break;
                   default:
@@ -20596,7 +20638,7 @@ and limitations under the License.
               var i;
               (i = e.invites()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, Qn.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, Zn.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CChatRoom_GetInviteList_Response";
@@ -21447,7 +21489,7 @@ and limitations under the License.
           }),
           (e.NotifyChatRoomHeaderStateChangeHandler = {
             name: "ChatRoomClient.NotifyChatRoomHeaderStateChange#1",
-            request: Zi
+            request: Qi
           }),
           (e.NotifyChatRoomGroupRoomsChangeHandler = {
             name: "ChatRoomClient.NotifyChatRoomGroupRoomsChange#1",
@@ -21599,7 +21641,7 @@ and limitations under the License.
                     }
                     this.m_activeTab = n || this.m_vecTabs[Math.max(t - 1, 0)];
                   } else this.m_activeTab = void 0;
-                0 == this.m_vecTabs.length && Zp.UIStore.CloseTabSet(this);
+                0 == this.m_vecTabs.length && Qp.UIStore.CloseTabSet(this);
               }
             }),
             (e.prototype.MoveTabAfter = function(e, t) {
@@ -21612,7 +21654,7 @@ and limitations under the License.
                 qt.d(this.m_vecTabs, i, Math.min(t, this.m_vecTabs.length - 1));
             }),
             (e.prototype.Focus = function() {
-              Zp.UIStore.FocusTabSet(this);
+              Qp.UIStore.FocusTabSet(this);
             }),
             (e.prototype.OnPopupClosed = function(e) {
               var t = !1;
@@ -21621,33 +21663,33 @@ and limitations under the License.
                 e.SteamClient.Window &&
                 e.SteamClient.Window.ProcessShuttingDown &&
                 (t = e.SteamClient.Window.ProcessShuttingDown()),
-                t && Zp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Zp.UIStore.OnTabSetClosed(this),
+                t && Qp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Qp.UIStore.OnTabSetClosed(this),
                 (this.m_activeTab = void 0);
               for (var i = 0, n = this.m_vecTabs; i < n.length; i++) {
                 var r = n[i];
-                Zp.UIStore.CloseTab(this.m_browserContext, r, !0);
+                Qp.UIStore.CloseTab(this.m_browserContext, r, !0);
               }
               this.m_vecTabs.clear(),
-                t && Zp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
+                t && Qp.UIStore.SetSuppressBrowserContextBroadcasting(!1);
             }),
             Object.defineProperty(e.prototype, "is_popup_active", {
               get: function() {
-                return Zp.UIStore.BIsTabSetActive(this);
+                return Qp.UIStore.BIsTabSetActive(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_visible", {
               get: function() {
-                return Zp.UIStore.BIsTabSetVisible(this);
+                return Qp.UIStore.BIsTabSetVisible(this);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "is_popup_focused", {
               get: function() {
-                return Zp.UIStore.BIsTabSetFocused(this);
+                return Qp.UIStore.BIsTabSetFocused(this);
               },
               enumerable: !0,
               configurable: !0
@@ -21681,7 +21723,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.BIsExpired = function() {
-              return Zp.GetServerRTime32() >= this.m_rtTimeExpires;
+              return Qp.GetServerRTime32() >= this.m_rtTimeExpires;
             }),
             (t.prototype.InitFromInviteLinkInfo = function(e) {
               (this.m_ulChatRoomGroupID = e.group_summary().chat_group_id()),
@@ -21726,7 +21768,7 @@ and limitations under the License.
             }),
             (e.prototype.AcceptInvite = function(e, t) {
               var i = this;
-              null == t && (t = Zp.GetDefaultBrowserContext());
+              null == t && (t = Qp.GetDefaultBrowserContext());
               var n = ht.Init(yn);
               return (
                 n.Body().set_chat_group_id(e.GetChatRoomGroupID()),
@@ -21745,7 +21787,7 @@ and limitations under the License.
                         e.Body().state(),
                         e.Body().user_chat_state()
                       );
-                      Zp.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
+                      Qp.UIStore.ShowAndOrActivateChatRoomGroup(t, r, !0);
                       var o = e.Body().join_chat_id();
                       if (r) {
                         var a = r.GetChatRoom(o);
@@ -21860,11 +21902,11 @@ and limitations under the License.
                     (e += "/" + encodeURIComponent(this.connectString))),
                 v(window, e),
                 (this.bAccepted = !0),
-                Zp.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Qp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             (e.prototype.DismissInvite = function() {
               (this.bDismissed = !0),
-                Zp.ChatStore.GameInviteStore.RecordDismissTime(this);
+                Qp.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
             rt.b([mt.observable], e.prototype, "bDismissed", void 0),
             rt.b([mt.observable], e.prototype, "bAccepted", void 0),
@@ -21883,7 +21925,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Zp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Qp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "GameInvites",
                 Br
               ).then(function(t) {
@@ -21922,7 +21964,7 @@ and limitations under the License.
                 this.WriteToLocalStorage());
             }),
             (e.prototype.WriteToLocalStorage = function() {
-              Zp.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
+              Qp.SettingsStore.StoreObjectInLocalStorage("GameInvites", {
                 dismisstimes: this.m_mapDismissedInvites
               });
             }),
@@ -21951,7 +21993,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Zp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Qp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "ChatEmbeds",
                 {}
               ).then(function(t) {
@@ -21984,7 +22026,7 @@ and limitations under the License.
                 this.WriteToLocalStorage();
             }),
             (e.prototype.WriteToLocalStorage = function() {
-              Zp.SettingsStore.StoreObjectInLocalStorage(
+              Qp.SettingsStore.StoreObjectInLocalStorage(
                 "ChatEmbeds",
                 this.m_mapEmbed
               );
@@ -23410,8 +23452,8 @@ and limitations under the License.
           (e[(e.k_ESlashCommandType_Code = 2)] = "k_ESlashCommandType_Code"),
           (e[(e.k_ESlashCommandType_Pre = 3)] = "k_ESlashCommandType_Pre");
       })(Yr || (Yr = {}));
-      var Zr,
-        Qr = {
+      var Qr,
+        Zr = {
           "/me": Yr.k_ESlashCommandType_Me,
           "/code": Yr.k_ESlashCommandType_Code,
           "/pre": Yr.k_ESlashCommandType_Pre
@@ -23716,7 +23758,7 @@ and limitations under the License.
               return this.m_rgChatMessages.push(r), r;
             }),
             (e.prototype.AppendLocalEchoChatMsg = function(e) {
-              var t = new to(this.self.accountid, Zp.GetServerRTime32(), e);
+              var t = new to(this.self.accountid, Qp.GetServerRTime32(), e);
               return this.m_rgChatMessages.push(t), t;
             }),
             (e.prototype.AddNewChatMsgAndNotify = function(e, t, i, n, r, o) {
@@ -23746,7 +23788,7 @@ and limitations under the License.
                     ? (o = !0)
                     : 3 == s &&
                       0 == this.m_cUnreadChatMessages &&
-                      Zp.IdleTracker.AddOnNextActivityCallback(function() {
+                      Qp.IdleTracker.AddOnNextActivityCallback(function() {
                         4 == n.GetVisibilityState() && n.OnActivate();
                       }),
                 (this.m_rtLastMessageReceived = e.rtTimestamp),
@@ -27152,7 +27194,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Zo = (function(e) {
+        Qo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27187,7 +27229,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Qo = (function(e) {
+        Zo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -27767,7 +27809,7 @@ and limitations under the License.
           return e.SendMsg("Player.IgnoreFriend#1", t, Jo);
         }
         function l(e, t) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", t, Qo);
+          return e.SendMsg("Player.GetCommunityPreferences#1", t, Zo);
         }
         function u(e, t) {
           return e.SendMsg("Player.SetCommunityPreferences#1", t, ea);
@@ -27790,7 +27832,7 @@ and limitations under the License.
           (e.SetCommunityPreferences = u),
           (e.GetNewSteamAnnouncementState = d),
           (e.UpdateSteamAnnouncementLastRead = p);
-      })(Zr || (Zr = {}));
+      })(Qr || (Qr = {}));
       var sa;
       !(function(e) {
         (e.NotifyLastPlayedTimesHandler = {
@@ -28998,7 +29040,7 @@ and limitations under the License.
             (e.prototype.OpenChatDialog = function(e, t) {
               void 0 === t && (t = !0),
                 this.GetChatRoomGroupID().then(function(i) {
-                  Zp.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
+                  Qp.ChatStore.JoinAndShowChatRoomGroup(e, i, t);
                 });
             }),
             (e.prototype.ReadPersonaStateUpdate = function(e, t) {
@@ -29047,7 +29089,7 @@ and limitations under the License.
                 t.Body().set_steamid(this.steamid.ConvertTo64BitString()),
                 t.Body().set_autocreate(!0),
                 pr
-                  .GetClanChatRoomInfo(Zp.CMInterface.GetServiceTransport(), t)
+                  .GetClanChatRoomInfo(Qp.CMInterface.GetServiceTransport(), t)
                   .then(function(t) {
                     return 1 == t.GetEResult() &&
                       t
@@ -29079,7 +29121,7 @@ and limitations under the License.
             rt.b([mt.computed], e.prototype, "avatar_url", null),
             rt.b([mt.computed], e.prototype, "avatar_url_medium", null),
             rt.b([mt.computed], e.prototype, "avatar_url_full", null),
-            rt.b([Qt.a], e.prototype, "OpenChatOnClick", null),
+            rt.b([Zt.a], e.prototype, "OpenChatOnClick", null),
             e
           );
         })(),
@@ -29695,7 +29737,7 @@ and limitations under the License.
             (e.prototype.Init = function(e) {
               var t = this;
               (this.m_CMInterface = e),
-                (this.m_ChatStore = Zp.ChatStore),
+                (this.m_ChatStore = Qp.ChatStore),
                 this.m_CMInterface.AddOnLogonCallback(function() {
                   var e = ht.Init(Ia);
                   Ma.GetFavorites(
@@ -30814,7 +30856,7 @@ and limitations under the License.
           });
       })(Ja || (Ja = {}));
       var Xa,
-        Za = (function() {
+        Qa = (function() {
           function e(e) {
             (this.m_eFriendRelationship = 0),
               (this.m_bPersonaStateLoadRequested = !1),
@@ -30837,7 +30879,7 @@ and limitations under the License.
               this.m_persona.m_bInitialized ||
                 this.m_bPersonaStateLoadRequested ||
                 ((this.m_bPersonaStateLoadRequested = !0),
-                Zp.FriendStore.QueueFriendPersonaStateLoad(this));
+                Qp.FriendStore.QueueFriendPersonaStateLoad(this));
             }),
             Object.defineProperty(e.prototype, "is_ready", {
               get: function() {
@@ -30953,7 +30995,7 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "primary_display_name", {
               get: function() {
-                return !Zp.SettingsStore.CommunityPreferences
+                return !Qp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30974,7 +31016,7 @@ and limitations under the License.
               {
                 get: function() {
                   return (
-                    !!Zp.SettingsStore.CommunityPreferences
+                    !!Qp.SettingsStore.CommunityPreferences
                       .bParenthesizeNicknames && this.has_secondary_display_name
                   );
                 },
@@ -30984,7 +31026,7 @@ and limitations under the License.
             ),
             Object.defineProperty(e.prototype, "secondary_display_name", {
               get: function() {
-                return Zp.SettingsStore.CommunityPreferences
+                return Qp.SettingsStore.CommunityPreferences
                   .bParenthesizeNicknames && this.has_nickname
                   ? this.nickname
                   : this.persona.m_strPlayerName;
@@ -30995,7 +31037,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "is_display_name_nickname", {
               get: function() {
                 return (
-                  !Zp.SettingsStore.CommunityPreferences
+                  !Qp.SettingsStore.CommunityPreferences
                     .bParenthesizeNicknames && this.has_nickname
                 );
               },
@@ -31077,7 +31119,7 @@ and limitations under the License.
                     .add_Ids()
                     .set_steamid(this.steamid64),
                     t.Body().set_id_count(1),
-                    Zp.CMInterface.SendMsgAndAwaitResponse(t, Lt).then(function(
+                    Qp.CMInterface.SendMsgAndAwaitResponse(t, Lt).then(function(
                       t
                     ) {
                       if (
@@ -31133,10 +31175,10 @@ and limitations under the License.
                       )
                     : v(window, this.GetCommunityProfileURL()),
                   null)
-                : Zp.ShowFriendChatDialog(e, this.m_unAccountID, !0);
+                : Qp.ShowFriendChatDialog(e, this.m_unAccountID, !0);
             }),
             (e.FriendSortStatusComparator = function(e, t) {
-              var i = Zp.SettingsStore.BForceAlphabeticFriendSorting(),
+              var i = Qp.SettingsStore.BForceAlphabeticFriendSorting(),
                 n = e.persona,
                 r = t.persona;
               if (n.is_ingame) {
@@ -31163,8 +31205,8 @@ and limitations under the License.
               var i = e.persona,
                 n = t.persona;
               if (i.is_offline && n.is_offline) {
-                var r = Zp.GetServerRTime32() - i.m_rtLastLogoff,
-                  o = Zp.GetServerRTime32() - n.m_rtLastLogoff;
+                var r = Qp.GetServerRTime32() - i.m_rtLastLogoff,
+                  o = Qp.GetServerRTime32() - n.m_rtLastLogoff;
                 if (r > o) return 1;
                 if (o > r) return -1;
               }
@@ -31179,7 +31221,7 @@ and limitations under the License.
             (e.prototype.GetOfflineStatusUpdateRate = function() {
               if (0 == this.persona.m_rtLastLogoff) return 3e4;
               var e = 1e3,
-                t = Zp.GetServerRTime32() - this.persona.m_rtLastLogoff;
+                t = Qp.GetServerRTime32() - this.persona.m_rtLastLogoff;
               return (e *= t > 86400 ? 3600 : t > 7200 ? 60 : 15);
             }),
             (e.prototype.GetOfflineStatusTime = function() {
@@ -31187,7 +31229,7 @@ and limitations under the License.
                 return Object(gr.b)("#PersonaStateOffline");
               var e = this.GetOfflineStatusUpdateRate(),
                 t = (Object(Pr.now)(e),
-                Zp.GetServerRTime32() - this.persona.m_rtLastLogoff);
+                Qp.GetServerRTime32() - this.persona.m_rtLastLogoff);
               return t < 60
                 ? Object(gr.b)("#PersonaStateLastSeen_JustNow")
                 : Object(gr.b)("#PersonaStateLastSeen", Object(gr.e)(t));
@@ -31229,7 +31271,7 @@ and limitations under the License.
                   i = ht.Init(Ka);
                 i.Body().set_steamid(this.steamid64),
                   Da.IsInFriendsUIBeta(
-                    Zp.CMInterface.GetServiceTransport(),
+                    Qp.CMInterface.GetServiceTransport(),
                     i
                   ).then(function(i) {
                     (e.m_bBetaStatusLoading = !1),
@@ -31316,7 +31358,7 @@ and limitations under the License.
             e
           );
         })(),
-        Qa = (function() {
+        Za = (function() {
           function e() {
             var e = this;
             (this.m_FriendGroupStore = new ds(this)),
@@ -31506,17 +31548,17 @@ and limitations under the License.
                       c.is_friend &&
                       c.accountid != e.m_self.accountid &&
                       (u != l.m_ePersonaState || C) &&
-                      (Zp.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
+                      (Qp.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
                       C &&
                       c.persona.is_ingame
-                        ? Zp.AudioPlaybackManager.PlayAudioURL(
+                        ? Qp.AudioPlaybackManager.PlayAudioURL(
                             nt.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_ingame.m4a?v=1"
                           )
-                        : Zp.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
+                        : Qp.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
                           u != l.m_ePersonaState &&
                           1 == l.m_ePersonaState &&
-                          Zp.AudioPlaybackManager.PlayAudioURL(
+                          Qp.AudioPlaybackManager.PlayAudioURL(
                             nt.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_friend_online.m4a?v=1"
                           ),
@@ -31552,8 +31594,8 @@ and limitations under the License.
                   case 50:
                     break;
                   case 1:
-                    var n = Zp.ShowFriendChatDialog(
-                      Zp.GetDefaultBrowserContext(),
+                    var n = Qp.ShowFriendChatDialog(
+                      Qp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
@@ -31587,8 +31629,8 @@ and limitations under the License.
                       (r.email_change_probation_days = e
                         .Body()
                         .email_change_probation_days());
-                    var n = Zp.ShowFriendChatDialog(
-                      Zp.GetDefaultBrowserContext(),
+                    var n = Qp.ShowFriendChatDialog(
+                      Qp.GetDefaultBrowserContext(),
                       i.GetAccountID(),
                       !1
                     );
@@ -31600,15 +31642,15 @@ and limitations under the License.
                   n = e.GetFriend(i.GetAccountID());
                 if (n) {
                   var r = t.Body().trade_request_id(),
-                    o = Zp.ShowFriendChatDialog(
-                      Zp.GetDefaultBrowserContext(),
+                    o = Qp.ShowFriendChatDialog(
+                      Qp.GetDefaultBrowserContext(),
                       n.accountid,
                       !1
                     );
                   o &&
                     o.AddNewTradeRequestAndNotify(
                       i.GetAccountID(),
-                      Zp.GetServerRTime32(),
+                      Qp.GetServerRTime32(),
                       t.Body().other_steamid(),
                       r
                     );
@@ -31617,8 +31659,8 @@ and limitations under the License.
               (this.m_StartTradingSession = s(7705, pa, function(t) {
                 var i = new dt.a(t.Body().other_steamid()),
                   n = e.OpenTradeWindow(t.Body().other_steamid()),
-                  r = Zp.ShowFriendChatDialog(
-                    Zp.GetDefaultBrowserContext(),
+                  r = Qp.ShowFriendChatDialog(
+                    Qp.GetDefaultBrowserContext(),
                     i.GetAccountID(),
                     !1
                   );
@@ -31646,7 +31688,7 @@ and limitations under the License.
                         i.m_CMInterface.steamid.GetAccountID(),
                         1
                       )),
-                      Zp.SettingsStore.GetObjectFromLocalStorage(
+                      Qp.SettingsStore.GetObjectFromLocalStorage(
                         "FriendStoreLocalPrefs",
                         i.m_FriendStorePrefs
                       ).then(function(e) {
@@ -31693,7 +31735,7 @@ and limitations under the License.
                   i.SetPersonasOffline(!0);
                 }, 102),
                 Object(mt.autorun)(function() {
-                  var e = Zp.ParentalStore.BIsFriendsBlocked();
+                  var e = Qp.ParentalStore.BIsFriendsBlocked();
                   i.OnParentalLockChanged(e);
                 }),
                 this.InitializeIdleTracking(),
@@ -31729,7 +31771,7 @@ and limitations under the License.
               void 0 === t && (t = !1),
                 (this.m_bUserSetPersonaState = 1 != e),
                 (this.m_FriendStorePrefs.ePersonaState = e),
-                Zp.SettingsStore.StoreObjectInLocalStorage(
+                Qp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 ),
@@ -31751,7 +31793,7 @@ and limitations under the License.
                   (n += t.toString() + "=" + e.toString()));
               }),
                 (this.m_FriendStorePrefs.strNonFriendsAllowedToMsg = n),
-                Zp.SettingsStore.StoreObjectInLocalStorage(
+                Qp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendStoreLocalPrefs",
                   this.m_FriendStorePrefs
                 );
@@ -31786,9 +31828,9 @@ and limitations under the License.
             }),
             (e.prototype.AdjustPersonaStateForIdleTime = function(e) {
               return (1 == e || 3 == e) &&
-                Zp.IdleTracker.GetUserIdleTime() >= 7200
+                Qp.IdleTracker.GetUserIdleTime() >= 7200
                 ? 4
-                : 1 == e && Zp.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
+                : 1 == e && Qp.IdleTracker.GetUserIdleTime() >= 300 ? 3 : e;
             }),
             Object.defineProperty(e.prototype, "FriendGroupStore", {
               get: function() {
@@ -31853,7 +31895,7 @@ and limitations under the License.
             (e.prototype.AddPlayerToCache = function(e, t, i) {
               if ((void 0 === i && (i = !0), this.m_mapPlayerCache.has(e)))
                 return this.m_mapPlayerCache.get(e);
-              var n = new Za(e);
+              var n = new Qa(e);
               return this.m_mapPlayerCache.set(e, n), n;
             }),
             (e.prototype.GetPlayerIfCached = function(e) {
@@ -31923,13 +31965,13 @@ and limitations under the License.
             (e.prototype.InitializeIdleTracking = function() {
               this.m_bAwayCallbackFired &&
                 ((this.m_bAwayCallbackFired = !1),
-                Zp.IdleTracker.AddOnIdleCallback(
+                Qp.IdleTracker.AddOnIdleCallback(
                   this.OnIdle.bind(this, 3),
                   300
                 )),
                 this.m_bSnoozeCallbackFired &&
                   ((this.m_bSnoozeCallbackFired = !1),
-                  Zp.IdleTracker.AddOnIdleCallback(
+                  Qp.IdleTracker.AddOnIdleCallback(
                     this.OnIdle.bind(this, 4),
                     7200
                   ));
@@ -31952,7 +31994,7 @@ and limitations under the License.
                     this.UpdateUserPersonaStateInternal(e))),
                 this.m_bNextActivityCallbackRegistered ||
                   ((this.m_bNextActivityCallbackRegistered = !0),
-                  Zp.IdleTracker.AddOnNextActivityCallback(
+                  Qp.IdleTracker.AddOnNextActivityCallback(
                     this.ResetIdleState.bind(this)
                   ));
             }),
@@ -31962,7 +32004,7 @@ and limitations under the License.
                 t
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
-                Zr.AddFriend(this.m_CMInterface.GetServiceTransport(), t).then(
+                Qr.AddFriend(this.m_CMInterface.GetServiceTransport(), t).then(
                   function(e) {
                     return e.Body().friend_relationship();
                   }
@@ -31975,7 +32017,7 @@ and limitations under the License.
                 t
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
-                Zr.RemoveFriend(
+                Qr.RemoveFriend(
                   this.m_CMInterface.GetServiceTransport(),
                   t
                 ).then(function(e) {
@@ -31991,7 +32033,7 @@ and limitations under the License.
                   .Body()
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
                 t && i.Body().set_unignore(!0),
-                Zr.IgnoreFriend(
+                Qr.IgnoreFriend(
                   this.m_CMInterface.GetServiceTransport(),
                   i
                 ).then(function(e) {
@@ -32001,18 +32043,18 @@ and limitations under the License.
             }),
             (e.prototype.OnFriendPersonaStateChanged = function(e, t, i, n) {
               if (
-                Zp.NotificationManager.BNotificationsPermitted() &&
-                Zp.SettingsStore.BReady()
+                Qp.NotificationManager.BNotificationsPermitted() &&
+                Qp.SettingsStore.BReady()
               ) {
                 if (
                   n &&
                   e.persona.is_ingame &&
-                  Zp.SettingsStore.FriendsSettings.bNotifications_ShowIngame
+                  Qp.SettingsStore.FriendsSettings.bNotifications_ShowIngame
                 ) {
                   var r = e.persona.current_game_name;
                   return void (
                     r &&
-                    Zp.NotificationManager.DisplayNotificationFromFriend(e, {
+                    Qp.NotificationManager.DisplayNotificationFromFriend(e, {
                       title: e.display_name,
                       body: Object(gr.b)("#Friend_StateChange_InGame", r),
                       tag: "state_" + e.accountid,
@@ -32022,8 +32064,8 @@ and limitations under the License.
                 }
                 return 0 == t &&
                   0 != i &&
-                  Zp.SettingsStore.FriendsSettings.bNotifications_ShowOnline
-                  ? void Zp.NotificationManager.DisplayNotificationFromFriend(
+                  Qp.SettingsStore.FriendsSettings.bNotifications_ShowOnline
+                  ? void Qp.NotificationManager.DisplayNotificationFromFriend(
                       e,
                       {
                         title: e.display_name,
@@ -32038,7 +32080,7 @@ and limitations under the License.
             (e.prototype.RequestNicknameList = function() {
               var e = this,
                 t = ht.Init(jo);
-              Zr.GetNicknameList(
+              Qr.GetNicknameList(
                 this.m_CMInterface.GetServiceTransport(),
                 t
               ).then(function(t) {
@@ -32103,12 +32145,12 @@ and limitations under the License.
                 this.m_CMInterface.Send(n);
             }),
             (e.prototype.InviteToWatch = function(e) {
-              Zp.ShowFriendChatDialog(
-                Zp.GetDefaultBrowserContext(),
+              Qp.ShowFriendChatDialog(
+                Qp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               ),
-                Zp.BroadcastStore.InviteToWatch(e.accountid).then(function(
+                Qp.BroadcastStore.InviteToWatch(e.accountid).then(function(
                   e
                 ) {});
             }),
@@ -32117,15 +32159,15 @@ and limitations under the License.
               t
                 .Body()
                 .set_other_steamid(e.persona.m_steamid.ConvertTo64BitString());
-              var i = Zp.ShowFriendChatDialog(
-                Zp.GetDefaultBrowserContext(),
+              var i = Qp.ShowFriendChatDialog(
+                Qp.GetDefaultBrowserContext(),
                 e.accountid,
                 !0
               );
               i &&
                 i.AddNewTradeRequestAndNotify(
-                  Zp.FriendStore.self.accountid,
-                  Zp.GetServerRTime32(),
+                  Qp.FriendStore.self.accountid,
+                  Qp.GetServerRTime32(),
                   e.persona.m_steamid.ConvertTo64BitString(),
                   0
                 ),
@@ -32295,7 +32337,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Zp.FriendStore.GetPlayer(i));
+                    e.push(Qp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32306,7 +32348,7 @@ and limitations under the License.
             Object.defineProperty(e.prototype, "member_list", {
               get: function() {
                 var e = this.member_list_unsorted;
-                return e.sort(Za.DefaultFriendSortComparator), e;
+                return e.sort(Qa.DefaultFriendSortComparator), e;
               },
               enumerable: !0,
               configurable: !0
@@ -32355,7 +32397,7 @@ and limitations under the License.
                   var n = i[t];
                   n.persona.is_online && n.persona.is_ingame && e.push(n);
                 }
-                return e.sort(Za.DefaultFriendSortComparator), e;
+                return e.sort(Qa.DefaultFriendSortComparator), e;
               },
               enumerable: !0,
               configurable: !0
@@ -32440,7 +32482,7 @@ and limitations under the License.
                 var e = [];
                 return (
                   this.m_mapAccountToExtra.forEach(function(t, i) {
-                    e.push(Zp.FriendStore.GetPlayer(i));
+                    e.push(Qp.FriendStore.GetPlayer(i));
                   }),
                   e
                 );
@@ -32457,7 +32499,7 @@ and limitations under the License.
                 var r = n[i];
                 r.BMatchesSearchString(e, !1) && t.push(r);
               }
-              return t.sort(Za.DefaultFriendSortComparator), t;
+              return t.sort(Qa.DefaultFriendSortComparator), t;
             }),
             rt.b([mt.computed], t.prototype, "InternalGetMemberList", null),
             t
@@ -32586,7 +32628,7 @@ and limitations under the License.
               get: function() {
                 return (
                   0 != this.id &&
-                  Zp.AppInfoStore.GetAppInfo(this.id).is_initialized
+                  Qp.AppInfoStore.GetAppInfo(this.id).is_initialized
                 );
               },
               enumerable: !0,
@@ -32603,7 +32645,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Zp.AppInfoStore.GetAppInfo(this.id).name;
+                  : Qp.AppInfoStore.GetAppInfo(this.id).name;
               },
               set: function(e) {},
               enumerable: !0,
@@ -32613,7 +32655,7 @@ and limitations under the License.
               get: function() {
                 return !this.is_initialized || this.id < 0
                   ? ""
-                  : Zp.AppInfoStore.GetAppInfo(this.id).icon_url;
+                  : Qp.AppInfoStore.GetAppInfo(this.id).icon_url;
               },
               enumerable: !0,
               configurable: !0
@@ -32629,7 +32671,7 @@ and limitations under the License.
                 if (o != a) return a - o;
                 if (n != r) return n.localeCompare(r);
               }
-              return Za.DefaultFriendSortComparator(e, t);
+              return Qa.DefaultFriendSortComparator(e, t);
             }),
             Object.defineProperty(t.prototype, "member_list", {
               get: function() {
@@ -32650,7 +32692,7 @@ and limitations under the License.
                 }
                 return (
                   0 == this.id
-                    ? t.sort(Za.DefaultFriendSortComparator)
+                    ? t.sort(Qa.DefaultFriendSortComparator)
                     : t.sort(function(t, n) {
                         return e.PlayerGroupSortComparator(t, n, i);
                       }),
@@ -32702,7 +32744,7 @@ and limitations under the License.
           return (
             (e.prototype.Init = function() {
               var e = this;
-              Zp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+              Qp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "FriendGroupCollapse",
                 ls
               ).then(function(t) {
@@ -32725,7 +32767,7 @@ and limitations under the License.
               this.SetUserGroupCollapsed(e, !this.GetUserGroupCollapsed(e));
             }),
             (e.prototype.WritePrefs = function() {
-              Zp.SettingsStore.StoreObjectInLocalStorage(
+              Qp.SettingsStore.StoreObjectInLocalStorage(
                 "FriendGroupCollapse",
                 { groups: this.m_mapCollapsePrefs.toJSON() }
               );
@@ -33026,7 +33068,7 @@ and limitations under the License.
               ) {
                 this.m_groupIncomingInvites.SetMutualFriendsCacheHash(t);
                 var o = ht.Init(Do);
-                Zr.GetMutualFriendsForIncomingInvites(
+                Qr.GetMutualFriendsForIncomingInvites(
                   this.m_CMInterface.GetServiceTransport(),
                   o
                 ).then(function(i) {
@@ -33532,12 +33574,12 @@ and limitations under the License.
               }),
                 this.BVoiceActive() &&
                   (i
-                    ? Zp.AudioPlaybackManager.PlayAudioURL(
+                    ? Qp.AudioPlaybackManager.PlayAudioURL(
                         nt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                       )
                     : n &&
-                      Zp.AudioPlaybackManager.PlayAudioURL(
+                      Qp.AudioPlaybackManager.PlayAudioURL(
                         nt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       )),
@@ -33563,7 +33605,7 @@ and limitations under the License.
                     if (
                       this.m_groupVoiceActiveMembers.member_list[e].is_friend ||
                       this.m_groupVoiceActiveMembers.member_list[e] ==
-                        Zp.FriendStore.self
+                        Qp.FriendStore.self
                     )
                       return !0;
                   return !1;
@@ -33581,7 +33623,7 @@ and limitations under the License.
                 )
                   if (
                     this.m_groupVoiceActiveMembers.member_list[e] ==
-                    Zp.FriendStore.self
+                    Qp.FriendStore.self
                   )
                     return !0;
                 return !1;
@@ -33597,7 +33639,7 @@ and limitations under the License.
                   return (
                     1 == this.m_groupVoiceActiveMembers.member_list.length &&
                     this.m_groupVoiceActiveMembers.member_list[0] ==
-                      Zp.FriendStore.self
+                      Qp.FriendStore.self
                   );
                 },
                 enumerable: !0,
@@ -33791,7 +33833,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.BShouldSilentlyAddMessage = function(e) {
-              return Zp.FriendStore.GetPlayer(e.unAccountID).is_blocked;
+              return Qp.FriendStore.GetPlayer(e.unAccountID).is_blocked;
             }),
             (t.prototype.OnReceivedNewMessage = function(e, t, i, n) {
               var r = this;
@@ -33824,31 +33866,31 @@ and limitations under the License.
                 }
                 if (o) {
                   if (
-                    (Zp.SettingsStore.FriendsSettings
+                    (Qp.SettingsStore.FriendsSettings
                       .bSounds_PlayChatRoomNotification &&
                     (e.Mentions.mention_all ||
                       e.Mentions.mention_here ||
                       e.Mentions.mention_user)
-                      ? Zp.AudioPlaybackManager.PlayAudioURL(
+                      ? Qp.AudioPlaybackManager.PlayAudioURL(
                           nt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_at_mention.m4a?v=1"
                         )
-                      : Zp.SettingsStore.FriendsSettings
+                      : Qp.SettingsStore.FriendsSettings
                           .bSounds_PlayChatRoomNotification &&
                         t < 4 &&
-                        Zp.AudioPlaybackManager.PlayAudioURL(
+                        Qp.AudioPlaybackManager.PlayAudioURL(
                           nt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_chatroom_notification.m4a?v=1"
                         ),
-                    Zp.NotificationManager.BNotificationsPermitted() &&
+                    Qp.NotificationManager.BNotificationsPermitted() &&
                       t < 4 &&
-                      Zp.SettingsStore.FriendsSettings
+                      Qp.SettingsStore.FriendsSettings
                         .bNotifications_ShowChatRoomNotification)
                   ) {
                     var a = function(e) {
-                        Zp.UIStore.ShowAndOrActivateChat(e, r, !0);
+                        Qp.UIStore.ShowAndOrActivateChat(e, r, !0);
                       },
-                      s = Zp.FriendStore.GetPlayer(e.unAccountID);
+                      s = Qp.FriendStore.GetPlayer(e.unAccountID);
                     s.LoadIfNecessary();
                     var c;
                     (c = this.m_bIsDefaultForGroup
@@ -33859,7 +33901,7 @@ and limitations under the License.
                           return s.is_ready;
                         },
                         function() {
-                          Zp.NotificationManager.DisplayNotification(
+                          Qp.NotificationManager.DisplayNotification(
                             {
                               icon: s.persona.avatar_url_medium,
                               title: c,
@@ -33874,9 +33916,9 @@ and limitations under the License.
                         1e3
                       );
                   }
-                  0 == Zp.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Qp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Zp.UIStore.FlashChatWindow(this);
+                    Qp.UIStore.FlashChatWindow(this);
                 }
               }
             }),
@@ -33996,7 +34038,7 @@ and limitations under the License.
                   r.set_unread_indicator_muted(i)),
                 dr
                   .SetUserChatGroupPreferences(
-                    Zp.CMInterface.GetServiceTransport(),
+                    Qp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -34035,7 +34077,7 @@ and limitations under the License.
             rt.b([mt.action], t.prototype, "UpdateUserState", null),
             rt.b([mt.action], t.prototype, "UpdateChatState", null),
             rt.b([mt.computed], t.prototype, "name", null),
-            rt.b([Qt.a], t.prototype, "StartVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "StartVoiceChat", null),
             rt.b([mt.action], t.prototype, "SendChatMessage", null),
             rt.b([mt.action], t.prototype, "CreateInviteLink", null),
             rt.b([mt.action], t.prototype, "OnActivate", null),
@@ -34788,7 +34830,7 @@ and limitations under the License.
                   r.Body().set_role_id(t),
                   dr
                     .AddRoleToUser(
-                      Zp.ChatStore.CMInterface.GetServiceTransport(),
+                      Qp.ChatStore.CMInterface.GetServiceTransport(),
                       r
                     )
                     .then(function(e) {
@@ -34803,7 +34845,7 @@ and limitations under the License.
                 r.Body().set_role_id(t),
                 dr
                   .DeleteRoleFromUser(
-                    Zp.ChatStore.CMInterface.GetServiceTransport(),
+                    Qp.ChatStore.CMInterface.GetServiceTransport(),
                     r
                   )
                   .then(function(e) {
@@ -34879,11 +34921,11 @@ and limitations under the License.
                 this.m_mapRooms.forEach(function(t) {
                   t.time_last_message && (e = Math.max(e, t.time_last_message));
                 }),
-                  (this.m_rtLastAck = e || Zp.GetServerRTime32());
+                  (this.m_rtLastAck = e || Qp.GetServerRTime32());
                 var t = ht.Init(Pn);
                 t.Body().set_chat_group_id(this.m_ulGroupID),
                   t.Body().set_timestamp(this.m_rtLastAck),
-                  dr.AckChatMessage(Zp.CMInterface.GetServiceTransport(), t);
+                  dr.AckChatMessage(Qp.CMInterface.GetServiceTransport(), t);
               }
             }),
             (e.prototype.InviteFriend = function(e, t) {
@@ -34984,7 +35026,7 @@ and limitations under the License.
             }),
             (e.prototype.BCanXOverride = function(e, t) {
               return (
-                0 == e && (e = Zp.CMInterface.steamid.GetAccountID()),
+                0 == e && (e = Qp.CMInterface.steamid.GetAccountID()),
                 0 != (this.GetMemberPermissions(e) & t)
               );
             }),
@@ -35004,7 +35046,7 @@ and limitations under the License.
               return this.BCanIPerformAction(6);
             }),
             (e.prototype.BCanEditRoles = function() {
-              return Zp.FriendStore.self.accountid == this.GetOwnerAccountID();
+              return Qp.FriendStore.self.accountid == this.GetOwnerAccountID();
             }),
             Object.defineProperty(e.prototype, "members_to_highlight_name", {
               get: function() {
@@ -35027,7 +35069,7 @@ and limitations under the License.
                   ? this.m_groupMembers.unfiltered_count
                   : this.m_cMemberSummaryCount,
                 o = r > e ? e - 1 : e,
-                a = Zp.FriendStore,
+                a = Qp.FriendStore,
                 s = a.self,
                 c = [],
                 l = a.GetPlayer(this.GetOwnerAccountID());
@@ -35269,7 +35311,7 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 dr
                   .GetInviteLinksForGroup(
-                    Zp.ChatStore.CMInterface.GetServiceTransport(),
+                    Qp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
@@ -35290,7 +35332,7 @@ and limitations under the License.
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 dr
                   .GetInviteList(
-                    Zp.ChatStore.CMInterface.GetServiceTransport(),
+                    Qp.ChatStore.CMInterface.GetServiceTransport(),
                     e
                   )
                   .then(function(e) {
@@ -35310,7 +35352,7 @@ and limitations under the License.
               return (
                 e.Body().set_chat_group_id(this.GetGroupID()),
                 dr
-                  .GetBanList(Zp.ChatStore.CMInterface.GetServiceTransport(), e)
+                  .GetBanList(Qp.ChatStore.CMInterface.GetServiceTransport(), e)
                   .then(function(e) {
                     var t = new ys();
                     return (
@@ -35340,7 +35382,7 @@ and limitations under the License.
                 i.Body().set_name(e),
                 this.m_roles.push({ role_id: "-1", name: e }),
                 dr
-                  .CreateRole(Zp.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .CreateRole(Qp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (15 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(e) {
@@ -35359,7 +35401,7 @@ and limitations under the License.
                 i.Body().set_chat_group_id(this.GetGroupID()),
                 i.Body().set_role_id(e),
                 dr
-                  .DeleteRole(Zp.ChatStore.CMInterface.GetServiceTransport(), i)
+                  .DeleteRole(Qp.ChatStore.CMInterface.GetServiceTransport(), i)
                   .then(function(i) {
                     if (1 == i.GetEResult()) {
                       var n = t.m_roles.findIndex(function(t) {
@@ -35380,7 +35422,7 @@ and limitations under the License.
                 n.Body().set_role_id(e),
                 n.Body().set_name(t),
                 dr
-                  .RenameRole(Zp.ChatStore.CMInterface.GetServiceTransport(), n)
+                  .RenameRole(Qp.ChatStore.CMInterface.GetServiceTransport(), n)
                   .then(function(n) {
                     if (1 == n.GetEResult()) {
                       var r = i.m_roles.findIndex(function(t) {
@@ -35405,7 +35447,7 @@ and limitations under the License.
                   o.Body().set_actions(n.roleActions),
                   dr
                     .ReplaceRoleActions(
-                      Zp.ChatStore.CMInterface.GetServiceTransport(),
+                      Qp.ChatStore.CMInterface.GetServiceTransport(),
                       o
                     )
                     .then(function(e) {
@@ -35437,7 +35479,7 @@ and limitations under the License.
               }
               return dr
                 .DeleteInviteLink(
-                  Zp.ChatStore.CMInterface.GetServiceTransport(),
+                  Qp.ChatStore.CMInterface.GetServiceTransport(),
                   i
                 )
                 .then(function(e) {
@@ -35469,7 +35511,7 @@ and limitations under the License.
                     .set_unread_indicator_muted(i)),
                 dr
                   .SetUserChatGroupPreferences(
-                    Zp.CMInterface.GetServiceTransport(),
+                    Qp.CMInterface.GetServiceTransport(),
                     n
                   )
                   .then(function(e) {
@@ -35649,13 +35691,13 @@ and limitations under the License.
                 this.ClosePopoverChat(),
                 this.GetSelectedChatView().OnViewClosed(),
                 this.GetGroup().UnloadGroupState(),
-                Zp.ChatStore.RemoveChatRoomGroupFromActiveSet(
+                Qp.ChatStore.RemoveChatRoomGroupFromActiveSet(
                   this.GetGroup().GetGroupID()
                 );
             }),
             (t.prototype.IsVoiceActive = function() {
               return (
-                Zp.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
+                Qp.ChatStore.VoiceChat.GetActiveChatRoomGroupID() ==
                 this.m_group.GetGroupID()
               );
             }),
@@ -35954,10 +35996,10 @@ and limitations under the License.
                 Ja.IncomingMessageHandler,
                 function(e) {
                   var i = new dt.a(e.Body().steamid_friend()),
-                    n = Zp.FriendStore.GetPlayerIfCached(i.GetAccountID());
+                    n = Qp.FriendStore.GetPlayerIfCached(i.GetAccountID());
                   if (!n) {
                     if (e.Body().low_priority()) return 41;
-                    n = Zp.FriendStore.GetPlayer(i.GetAccountID());
+                    n = Qp.FriendStore.GetPlayer(i.GetAccountID());
                   }
                   if (1 == e.Body().chat_entry_type()) {
                     var r = e.Body().local_echo(),
@@ -35969,9 +36011,9 @@ and limitations under the License.
                       c = s.GetVisibilityState();
                     !o &&
                       !r &&
-                      !Zp.FriendStore.BIsInvisibleMode() &&
-                      Zp.UIStore.ShowAndOrActivateChat(
-                        Zp.GetDefaultBrowserContext(),
+                      !Qp.FriendStore.BIsInvisibleMode() &&
+                      Qp.UIStore.ShowAndOrActivateChat(
+                        Qp.GetDefaultBrowserContext(),
                         s,
                         !1
                       ),
@@ -36029,7 +36071,7 @@ and limitations under the License.
             (e.prototype.OnLogon = function() {
               var e = this;
               this.LoadFriendMessageSessions(),
-                Zp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                Qp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "FriendRecentChats"
                 ).then(function(t) {
                   e.m_mapRecentIgnoreTimeBeforeByFriend.clear();
@@ -36127,17 +36169,17 @@ and limitations under the License.
             (e.prototype.ClearRecentChatsForFriend = function(e) {
               this.m_mapRecentIgnoreTimeBeforeByFriend.set(
                 e,
-                Zp.GetServerRTime32()
+                Qp.GetServerRTime32()
               ),
                 this.WriteRecentChatsPrefs();
             }),
             (e.prototype.WriteRecentChatsPrefs = function() {
               var e = this,
-                t = Zp.GetServerRTime32() - this.RecentChatCutoffDuration;
+                t = Qp.GetServerRTime32() - this.RecentChatCutoffDuration;
               this.m_mapRecentIgnoreTimeBeforeByFriend.forEach(function(i, n) {
                 i < t && e.m_mapRecentIgnoreTimeBeforeByFriend.delete(n);
               }),
-                Zp.SettingsStore.StoreObjectInLocalStorage(
+                Qp.SettingsStore.StoreObjectInLocalStorage(
                   "FriendRecentChats",
                   {
                     ignoretimes: this.m_mapRecentIgnoreTimeBeforeByFriend.toJS()
@@ -36148,18 +36190,18 @@ and limitations under the License.
               get: function() {
                 var e = this,
                   t = [],
-                  i = Zp.GetServerRTime32() - this.RecentChatCutoffDuration;
+                  i = Qp.GetServerRTime32() - this.RecentChatCutoffDuration;
                 return (
                   this.m_mapLastChatTimeByFriend.forEach(function(n, r) {
                     if (n >= i) {
                       var o = e.m_mapRecentIgnoreTimeBeforeByFriend.get(r);
                       if (!o || o < n) {
-                        var a = Zp.FriendStore.GetFriend(r);
+                        var a = Qp.FriendStore.GetFriend(r);
                         a && t.push(a);
                       }
                     }
                   }),
-                  t.sort(Za.DefaultFriendSortComparator),
+                  t.sort(Qa.DefaultFriendSortComparator),
                   t
                 );
               },
@@ -36234,7 +36276,7 @@ and limitations under the License.
             }),
             (t.prototype.GetShowNonFriendWarning = function() {
               var e = this.m_bNeedsNonFriendWarning,
-                t = !Zp.FriendStore.BApprovedNonFriendMessages(
+                t = !Qp.FriendStore.BApprovedNonFriendMessages(
                   this.accountid_partner
                 );
               return e && t;
@@ -36404,7 +36446,7 @@ and limitations under the License.
                 this.ChatStore.VoiceChat.IsVoiceActiveForFriend(
                   this.accountid_partner
                 )
-                  ? Zp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  ? Qp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
                       this.accountid_partner
                     )
                     ? this.ChatStore.VoiceChat.OnUserLeaveOneOnOneVoiceChat()
@@ -36431,7 +36473,7 @@ and limitations under the License.
               var t = this;
               if (!this.m_CMInterface.logged_on) return !1;
               this.chat_partner.is_friend ||
-                Zp.FriendStore.SetApprovedNonFriendMessages(
+                Qp.FriendStore.SetApprovedNonFriendMessages(
                   this.chat_partner.accountid
                 );
               var i = Dr.EscapeBBCode(e),
@@ -36517,12 +36559,12 @@ and limitations under the License.
                   (this.ClearFriendIsTypingState(),
                   t < 2 &&
                     (this.is_blocked_friend ||
-                      Zp.FriendStore.BIsInvisibleMode()))
+                      Qp.FriendStore.BIsInvisibleMode()))
                 )
                   return;
                 if (
-                  Zp.NotificationManager.BNotificationsPermitted() &&
-                  Zp.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
+                  Qp.NotificationManager.BNotificationsPermitted() &&
+                  Qp.SettingsStore.FriendsSettings.bNotifications_ShowMessage &&
                   t < 4
                 ) {
                   var r = Object(gr.b)(
@@ -36539,7 +36581,7 @@ and limitations under the License.
                       },
                       s = o.ParseBBCode(n, a);
                     s &&
-                      Zp.NotificationManager.DisplayNotificationFromFriend(
+                      Qp.NotificationManager.DisplayNotificationFromFriend(
                         this.chat_partner,
                         {
                           title: s.title,
@@ -36549,7 +36591,7 @@ and limitations under the License.
                         }
                       );
                   } else
-                    Zp.NotificationManager.DisplayNotificationFromFriend(
+                    Qp.NotificationManager.DisplayNotificationFromFriend(
                       this.chat_partner,
                       {
                         title: r,
@@ -36559,15 +36601,15 @@ and limitations under the License.
                       }
                     );
                 }
-                Zp.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
+                Qp.SettingsStore.FriendsSettings.bSounds_PlayMessage &&
                   t < 4 &&
-                  Zp.AudioPlaybackManager.PlayAudioURL(
+                  Qp.AudioPlaybackManager.PlayAudioURL(
                     nt.a.COMMUNITY_CDN_URL +
                       "public/sounds/webui/steam_new_chat_message.m4a?v=2"
                   ),
-                  0 == Zp.SettingsStore.FriendsSettings.nChatFlashMode &&
+                  0 == Qp.SettingsStore.FriendsSettings.nChatFlashMode &&
                     t < 4 &&
-                    Zp.UIStore.FlashChatWindow(this);
+                    Qp.UIStore.FlashChatWindow(this);
               }
             }),
             (t.prototype.ClearFriendIsTypingState = function() {
@@ -36598,7 +36640,7 @@ and limitations under the License.
             }),
             Object.defineProperty(t.prototype, "chat_partner", {
               get: function() {
-                return Zp.FriendStore.GetPlayer(this.m_unAccountIDFriend);
+                return Qp.FriendStore.GetPlayer(this.m_unAccountIDFriend);
               },
               enumerable: !0,
               configurable: !0
@@ -36634,12 +36676,12 @@ and limitations under the License.
                   '"][/broadcastviewrequest]',
                 i = new eo(
                   this.chat_partner.accountid,
-                  Zp.GetServerRTime32(),
+                  Qp.GetServerRTime32(),
                   0,
                   t
                 );
               this.m_rgChatMessages.push(i),
-                Zp.NotificationManager.DisplayNotificationFromFriend(
+                Qp.NotificationManager.DisplayNotificationFromFriend(
                   this.chat_partner,
                   {
                     title: "",
@@ -36778,7 +36820,7 @@ and limitations under the License.
                         i.group_summary(),
                         i.user_chat_group_state()
                       );
-                      Zp.UIStore.ShowAndOrActivateChatRoomGroup(Jp, o, !1);
+                      Qp.UIStore.ShowAndOrActivateChatRoomGroup(Jp, o, !1);
                       break;
                     case 2:
                     case 3:
@@ -36837,15 +36879,15 @@ and limitations under the License.
                 this.m_EmoticonStore.Init(e),
                 (this.m_VoiceChat = t),
                 (this.m_ChatRoomBBCodeParser = new Dr(
-                  Zp.GetChatRoomBBCodeDictionary()
+                  Qp.GetChatRoomBBCodeDictionary()
                 )),
                 (this.m_FriendChatBBCodeParser = new Dr(
-                  Zp.GetFriendChatBBCodeDictionary()
+                  Qp.GetFriendChatBBCodeDictionary()
                 )),
                 (this.m_FriendNotificationBBCodeParser = new Nr(
-                  Zp.GetFriendNotificationBBCodeDictionary()
+                  Qp.GetFriendNotificationBBCodeDictionary()
                 )),
-                this.m_ChatRoomGroupDisplayPrefs.Init(Zp.SettingsStore),
+                this.m_ChatRoomGroupDisplayPrefs.Init(Qp.SettingsStore),
                 this.m_EmbedStore.Init();
               var n = !1;
               return (
@@ -36906,7 +36948,7 @@ and limitations under the License.
                           c.UpdateUserState(a.user_chat_group_state()),
                           e.OnGroupAdded(c),
                           c.BHasEverBeenAcked() ||
-                            Zp.UIStore.ShowUnackedGroup(c);
+                            Qp.UIStore.ShowUnackedGroup(c);
                       } else t = !0;
                     }
                     e.BuildInitialRecentGroupList(),
@@ -36929,7 +36971,7 @@ and limitations under the License.
             }),
             (e.prototype.BuildInitialRecentGroupList = function() {
               var e = [],
-                t = Zp.GetServerRTime32() - 1296e3;
+                t = Qp.GetServerRTime32() - 1296e3;
               this.m_mapChatGroups.forEach(function(i) {
                 for (var n = 0, r = i.chatRoomList; n < r.length; n++) {
                   var o = r[n],
@@ -36947,7 +36989,7 @@ and limitations under the License.
             (e.prototype.JoinAndShowChatRoomGroup = function(e, t, i) {
               var n = this.GetChatRoomGroup(t);
               n && n.BIsCurrentUserAMember()
-                ? Zp.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
+                ? Qp.UIStore.ShowAndOrActivateChatRoomGroup(e, n, i)
                 : this.m_InviteStore.JoinChatGroup(t, null, e);
             }),
             (e.prototype.AddCreatedChatRoomGroup = function(e, t, i, n) {
@@ -36957,7 +36999,7 @@ and limitations under the License.
                   r.UpdateGroupState(i),
                   r.UpdateUserState(n),
                   this.OnGroupAdded(r),
-                  Zp.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
+                  Qp.UIStore.ShowAndOrActivateChatRoomGroup(e, r, !0);
               }
             }),
             (e.prototype.AddKnownChatRoomGroup = function(e, t) {
@@ -36990,7 +37032,7 @@ and limitations under the License.
               var t = this.m_mapChatGroups.get(e);
               if (t) {
                 var i = this.m_mapChatGroups.get(e);
-                i && Zp.UIStore.CloseTabByID(i.unique_id),
+                i && Qp.UIStore.CloseTabByID(i.unique_id),
                   this.RemoveChatRoomGroupFromActiveSet(e),
                   t.UnloadAndResetGroupState();
               }
@@ -37377,7 +37419,7 @@ and limitations under the License.
                 e == this && this.m_tabset.is_popup_visible
                   ? this.m_tabset.is_popup_focused
                     ? this.m_bScrolledToBottom &&
-                      !Zp.IdleTracker.BIsUserIdle(60)
+                      !Qp.IdleTracker.BIsUserIdle(60)
                       ? 4
                       : 3
                     : 2
@@ -37654,12 +37696,12 @@ and limitations under the License.
                 this.props.children
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindDiv", null),
-            rt.b([Qt.a], t.prototype, "DeliverDeferredDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "BindDiv", null),
+            rt.b([Zt.a], t.prototype, "DeliverDeferredDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             t
           );
         })(Sr.PureComponent),
@@ -37766,7 +37808,7 @@ and limitations under the License.
                   });
               }
             }),
-            rt.b([Qt.a], e.prototype, "OnDragGhostRef", null),
+            rt.b([Zt.a], e.prototype, "OnDragGhostRef", null),
             e
           );
         })()),
@@ -37923,11 +37965,11 @@ and limitations under the License.
                 }
               return e;
             }),
-            rt.b([Qt.a], t.prototype, "ProcessDragMove", null),
-            rt.b([Qt.a], t.prototype, "OnMouseDown", null),
-            rt.b([Qt.a], t.prototype, "OnMouseUp", null),
-            rt.b([Qt.a], t.prototype, "OnTouchStart", null),
-            rt.b([Qt.a], t.prototype, "OnTouchEnd", null),
+            rt.b([Zt.a], t.prototype, "ProcessDragMove", null),
+            rt.b([Zt.a], t.prototype, "OnMouseDown", null),
+            rt.b([Zt.a], t.prototype, "OnMouseUp", null),
+            rt.b([Zt.a], t.prototype, "OnTouchStart", null),
+            rt.b([Zt.a], t.prototype, "OnTouchEnd", null),
             t
           );
         })(Sr.Component),
@@ -37946,7 +37988,7 @@ and limitations under the License.
                 ref: this.OnRef
               });
             }),
-            rt.b([Qt.a], t.prototype, "OnRef", null),
+            rt.b([Zt.a], t.prototype, "OnRef", null),
             t
           );
         })(Sr.Component),
@@ -37981,7 +38023,7 @@ and limitations under the License.
                 ref: this.OnRef
               });
             }),
-            rt.b([Qt.a], t.prototype, "OnRef", null),
+            rt.b([Zt.a], t.prototype, "OnRef", null),
             t
           );
         })(Sr.Component),
@@ -38212,8 +38254,8 @@ and limitations under the License.
         Ys = A("DialogBody"),
         Js = A("DialogInnerBody"),
         Xs = A("DialogBodyNotificationBar"),
-        Zs = A("DialogTwoColLayout _DialogColLayout"),
-        Qs = A("DialogThreeColLayout _DialogColLayout"),
+        Qs = A("DialogTwoColLayout _DialogColLayout"),
+        Zs = A("DialogThreeColLayout _DialogColLayout"),
         $s = (A("DialogTwoThirdColLayout _DialogColLayout"),
         A("DialogColumn _DialogLayout")),
         ec = (function(e) {
@@ -38231,7 +38273,7 @@ and limitations under the License.
                 rt.a({}, this.props, { onSubmit: this.OnSubmit })
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
             t
           );
         })(Sr.Component),
@@ -38377,7 +38419,7 @@ and limitations under the License.
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      Sr.createElement(ks.O, null)
+                      Sr.createElement(ks.P, null)
                     )
                 ),
                 u
@@ -38406,9 +38448,9 @@ and limitations under the License.
                   )
                 : d;
             }),
-            rt.b([Qt.a], t.prototype, "OnInputRef", null),
-            rt.b([Qt.a], t.prototype, "OnCopyClick", null),
-            rt.b([Qt.a], t.prototype, "OnClearClick", null),
+            rt.b([Zt.a], t.prototype, "OnInputRef", null),
+            rt.b([Zt.a], t.prototype, "OnCopyClick", null),
+            rt.b([Zt.a], t.prototype, "OnClearClick", null),
             t
           );
         })(Sr.PureComponent),
@@ -38489,9 +38531,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnBackgroundClick", null),
-            rt.b([Qt.a], t.prototype, "OnInputFocus", null),
-            rt.b([Qt.a], t.prototype, "OnInputBlur", null),
+            rt.b([Zt.a], t.prototype, "OnBackgroundClick", null),
+            rt.b([Zt.a], t.prototype, "OnInputFocus", null),
+            rt.b([Zt.a], t.prototype, "OnInputBlur", null),
             t
           );
         })(tc),
@@ -38536,8 +38578,8 @@ and limitations under the License.
               32 == e.keyCode &&
                 (this.Toggle(), e.preventDefault(), e.stopPropagation());
             }),
-            rt.b([Qt.a], t.prototype, "Toggle", null),
-            rt.b([Qt.a], t.prototype, "KeyDown", null),
+            rt.b([Zt.a], t.prototype, "Toggle", null),
+            rt.b([Zt.a], t.prototype, "KeyDown", null),
             t
           );
         })(Sr.Component),
@@ -38690,7 +38732,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnOffKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnOffKeyDown", null),
             t
           );
         })(nc),
@@ -38861,13 +38903,13 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnMouseDown", null),
-            rt.b([Qt.a], t.prototype, "OnMouseMove", null),
-            rt.b([Qt.a], t.prototype, "OnMouseUp", null),
-            rt.b([Qt.a], t.prototype, "OnTouchStart", null),
-            rt.b([Qt.a], t.prototype, "OnTouchMove", null),
-            rt.b([Qt.a], t.prototype, "OnTouchEnd", null),
-            rt.b([Qt.a], t.prototype, "OnKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnMouseDown", null),
+            rt.b([Zt.a], t.prototype, "OnMouseMove", null),
+            rt.b([Zt.a], t.prototype, "OnMouseUp", null),
+            rt.b([Zt.a], t.prototype, "OnTouchStart", null),
+            rt.b([Zt.a], t.prototype, "OnTouchMove", null),
+            rt.b([Zt.a], t.prototype, "OnTouchEnd", null),
+            rt.b([Zt.a], t.prototype, "OnKeyDown", null),
             t
           );
         })(Sr.Component),
@@ -39026,11 +39068,11 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnInputRef", null),
-            rt.b([Qt.a], t.prototype, "ToggleMenu", null),
-            rt.b([Qt.a], t.prototype, "OnItemSelected", null),
-            rt.b([Qt.a], t.prototype, "ShowMenu", null),
-            rt.b([Qt.a], t.prototype, "HideMenu", null),
+            rt.b([Zt.a], t.prototype, "OnInputRef", null),
+            rt.b([Zt.a], t.prototype, "ToggleMenu", null),
+            rt.b([Zt.a], t.prototype, "OnItemSelected", null),
+            rt.b([Zt.a], t.prototype, "ShowMenu", null),
+            rt.b([Zt.a], t.prototype, "HideMenu", null),
             t
           );
         })(Sr.Component),
@@ -39070,7 +39112,7 @@ and limitations under the License.
                 t
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnItemClicked", null),
+            rt.b([Zt.a], t.prototype, "OnItemClicked", null),
             t
           );
         })(Sr.Component),
@@ -39133,7 +39175,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         { className: l.join(" "), key: o.title, onClick: c },
-                        u && Sr.createElement(ks.M, null),
+                        u && Sr.createElement(ks.N, null),
                         o.title
                       )
                     );
@@ -39188,7 +39230,7 @@ and limitations under the License.
                                 Sr.createElement(
                                   Xs,
                                   null,
-                                  Sr.createElement(ks.q, null),
+                                  Sr.createElement(ks.r, null),
                                   Object(gr.b)(
                                     "#Chat_Settings_Permission_Denied"
                                   )
@@ -39204,7 +39246,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnActivePageRef", null),
+            rt.b([Zt.a], t.prototype, "OnActivePageRef", null),
             t
           );
         })(Sr.Component),
@@ -39225,7 +39267,7 @@ and limitations under the License.
             }),
             (t.prototype.HandleSubmit = function(e) {
               var t = this;
-              Zp.FriendStore.SetFriendNickname(
+              Qp.FriendStore.SetFriendNickname(
                 this.props.friend,
                 this.state.strCurrentNameEntry
               ).then(function(e) {
@@ -39327,8 +39369,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -39427,7 +39469,7 @@ and limitations under the License.
                   qt.e(e.rgSelectedFriends, this.props.rgSelectedFriends)) ||
                   this.setState({
                     rgFriendsChosen: e.rgSelectedFriends.map(function(e) {
-                      return Zp.FriendStore.GetFriend(e);
+                      return Qp.FriendStore.GetFriend(e);
                     })
                   }));
             }),
@@ -39437,7 +39479,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               if (this.props.rgSelectedFriends) {
                 var e = this.props.rgSelectedFriends.map(function(e) {
-                  return Zp.FriendStore.GetFriend(e);
+                  return Qp.FriendStore.GetFriend(e);
                 });
                 (e = e.filter(function(e) {
                   return null != e;
@@ -39512,11 +39554,11 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnTextInput", null),
-            rt.b([Qt.a], t.prototype, "OnInputKeyDown", null),
-            rt.b([Qt.a], t.prototype, "SelectFriendSuggestion", null),
-            rt.b([Qt.a], t.prototype, "RemoveFriendFromList", null),
-            rt.b([Qt.a], t.prototype, "OnFriendsListRef", null),
+            rt.b([Zt.a], t.prototype, "OnTextInput", null),
+            rt.b([Zt.a], t.prototype, "OnInputKeyDown", null),
+            rt.b([Zt.a], t.prototype, "SelectFriendSuggestion", null),
+            rt.b([Zt.a], t.prototype, "RemoveFriendFromList", null),
+            rt.b([Zt.a], t.prototype, "OnFriendsListRef", null),
             t
           );
         })(Sr.Component),
@@ -39530,7 +39572,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.BuildFriendsList = function(e) {
-              (this.m_rgFriendsList = Zp.FriendStore.all_friends),
+              (this.m_rgFriendsList = Qp.FriendStore.all_friends),
                 e.setExcludedFriends &&
                   e.setExcludedFriends.size &&
                   (this.m_rgFriendsList = this.m_rgFriendsList.filter(function(
@@ -39538,14 +39580,14 @@ and limitations under the License.
                   ) {
                     return !e.setExcludedFriends.has(t.accountid);
                   }));
-              var t = Zp.ChatStore.FriendChatStore;
+              var t = Qp.ChatStore.FriendChatStore;
               switch (this.props.eSort) {
                 case 0:
                   this.m_rgFriendsList.sort(function(e, i) {
                     var n =
                       t.GetFriendLastChatTime(i.accountid) -
                       t.GetFriendLastChatTime(e.accountid);
-                    return 0 !== n ? n : Za.DefaultFriendSortComparator(e, i);
+                    return 0 !== n ? n : Qa.DefaultFriendSortComparator(e, i);
                   });
                   break;
                 default:
@@ -39705,7 +39747,7 @@ and limitations under the License.
                 }
                 var s = { bSingleClickActivate: !0, disableContextMenu: !0 },
                   c = 0,
-                  l = Zp.FriendStore.FavoritesStore.favorites.map(function(e) {
+                  l = Qp.FriendStore.FavoritesStore.favorites.map(function(e) {
                     return e.friend && !n.has(e.friend.accountid)
                       ? (c++,
                         Sr.createElement(
@@ -39725,8 +39767,8 @@ and limitations under the License.
                       : null;
                   }),
                   u = Sr.createElement(Wu, {
-                    group: Zp.FriendStore.FriendGroupStore.ingame_group,
-                    key: Zp.FriendStore.FriendGroupStore.ingame_group.id,
+                    group: Qp.FriendStore.FriendGroupStore.ingame_group,
+                    key: Qp.FriendStore.FriendGroupStore.ingame_group.id,
                     collapsed: !1,
                     searchString: this.props.strInputValue,
                     fnOnSearchSelection: function() {},
@@ -39734,7 +39776,7 @@ and limitations under the License.
                     setExcludedFriends: n,
                     friendProps: s
                   }),
-                  d = Zp.FriendStore.FriendGroupStore.default_groups.map(
+                  d = Qp.FriendStore.FriendGroupStore.default_groups.map(
                     function(e) {
                       return Sr.createElement(Wu, {
                         group: e,
@@ -39779,10 +39821,10 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnFriendSuggestionClicked", null),
-            rt.b([Qt.a], t.prototype, "OnFriendSuggestionMouseEnter", null),
-            rt.b([Qt.a], t.prototype, "OnFriendSelected", null),
-            rt.b([Qt.a], t.prototype, "OnFocusFriendRef", null),
+            rt.b([Zt.a], t.prototype, "OnFriendSuggestionClicked", null),
+            rt.b([Zt.a], t.prototype, "OnFriendSuggestionMouseEnter", null),
+            rt.b([Zt.a], t.prototype, "OnFriendSelected", null),
+            rt.b([Zt.a], t.prototype, "OnFocusFriendRef", null),
             t
           );
         })(Sr.Component),
@@ -39824,7 +39866,7 @@ and limitations under the License.
                 r.forEach(function(e) {
                   a.push(dt.a.InitFromAccountID(e).ConvertTo64BitString());
                 }),
-                  Zp.FriendStore.FriendGroupStore.ManageGroup(
+                  Qp.FriendStore.FriendGroupStore.ManageGroup(
                     this.props.group,
                     n,
                     o,
@@ -39848,7 +39890,7 @@ and limitations under the License.
                 var u = i.map(function(e) {
                   return e.persona.m_steamid.ConvertTo64BitString();
                 });
-                Zp.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
+                Qp.FriendStore.FriendGroupStore.CreateGroup(n, u).then(function(
                   e
                 ) {
                   e
@@ -39913,9 +39955,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnFriendPickerRef", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnFriendPickerRef", null),
             t
           );
         })(Sr.Component),
@@ -39936,13 +39978,13 @@ and limitations under the License.
             (t.prototype.HandleSubmit = function(e) {
               var t = this,
                 i = [];
-              Zp.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
+              Qp.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
                 if (t.m_mapCategoryChecks.has(e.unique_id)) {
                   var n = void 0,
                     r = void 0;
                   t.m_mapCategoryChecks.get(e.unique_id) ? (r = e) : (n = e),
                     i.push(
-                      Zp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                      Qp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                         t.props.friend,
                         n,
                         r
@@ -39993,7 +40035,7 @@ and limitations under the License.
                         this.state.strError
                       ),
                     Sr.createElement(
-                      Zs,
+                      Qs,
                       null,
                       Sr.createElement(
                         $s,
@@ -40011,7 +40053,7 @@ and limitations under the License.
                       mapChecks: this.m_mapCategoryChecks
                     }),
                     Sr.createElement(
-                      Zs,
+                      Qs,
                       { className: "AssignCategoriesDialog_AddNewButton" },
                       Sr.createElement(
                         T,
@@ -40028,8 +40070,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
-            rt.b([Qt.a], t.prototype, "CreateNew", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "CreateNew", null),
             t
           );
         })(Sr.Component),
@@ -40041,7 +40083,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.render = function() {
               var e = this,
-                t = Zp.FriendStore.FriendGroupStore,
+                t = Qp.FriendStore.FriendGroupStore,
                 i = t.user_groups,
                 n = i.map(function(t) {
                   return Sr.createElement(yc, {
@@ -40102,8 +40144,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnToggle", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnToggle", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -42119,7 +42161,7 @@ and limitations under the License.
             t
           );
         })(st.Message),
-        Zc = (function(e) {
+        Qc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -42162,13 +42204,13 @@ and limitations under the License.
           return e.SendMsg(
             "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
             t,
-            Zc
+            Qc
           );
         }
         (e.InitiateWebRTCConnection = t),
           (e.AcknowledgeUpdatedRemoteDescription = i);
       })(Vc || (Vc = {}));
-      var Qc;
+      var Zc;
       !(function(e) {
         (e.NotifyWebRTCSessionConnectedHandler = {
           name: "WebRTCClientNotifications.NotifyWebRTCSessionConnected#1",
@@ -42179,7 +42221,7 @@ and limitations under the License.
               "WebRTCClientNotifications.NotifyWebRTCUpdateRemoteDescription#1",
             request: Yc
           });
-      })(Qc || (Qc = {}));
+      })(Zc || (Zc = {}));
       var $c;
       !(function(e) {
         (e[(e.k_EAudioStreamType_Microphone = 1)] =
@@ -42482,7 +42524,7 @@ and limitations under the License.
               (this.m_bForceConnectingStatus = !1),
               (this.m_bForceReconnectingStatus = !1),
               (this.m_OnWebRTCUpdateRemoteDescriptionHandler = c(
-                Qc.NotifyWebRTCUpdateRemoteDescriptionHandler,
+                Zc.NotifyWebRTCUpdateRemoteDescriptionHandler,
                 function(e) {
                   return t.m_VoiceCallState.m_eState <
                     il.k_EVoiceCallState_InitatedWebRTCSession
@@ -42501,7 +42543,7 @@ and limitations under the License.
                 }
               )),
               (this.m_OnWebRTCConnectionHandler = c(
-                Qc.NotifyWebRTCSessionConnectedHandler,
+                Zc.NotifyWebRTCSessionConnectedHandler,
                 function(e) {
                   return t.m_VoiceCallState.m_eState <
                     il.k_EVoiceCallState_InitatedWebRTCSession
@@ -42567,21 +42609,21 @@ and limitations under the License.
                           " " +
                           e.Hdr().steamid()
                       ),
-                        Zp.AudioPlaybackManager.PlayAudioURL(
+                        Qp.AudioPlaybackManager.PlayAudioURL(
                           nt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                         ),
                         t.OnVoiceChatAccepted(!0);
                     else {
                       t.LogMsg("(VoiceChat) Rejected by " + i.GetAccountID());
-                      var n = Zp.ChatStore.GetFriendChat(i.GetAccountID(), !1),
-                        r = Zp.FriendStore.GetFriend(i.GetAccountID());
+                      var n = Qp.ChatStore.GetFriendChat(i.GetAccountID(), !1),
+                        r = Qp.FriendStore.GetFriend(i.GetAccountID());
                       void 0 != n &&
                         void 0 != r &&
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         n.AddVoiceChannelInviteMsg(
                           i.GetAccountID(),
-                          Zp.GetServerRTime32(),
+                          Qp.GetServerRTime32(),
                           Object(gr.b)(
                             "#FriendMsg_VoiceChannelEndedExplicit",
                             r.display_name
@@ -42590,7 +42632,7 @@ and limitations under the License.
                         t.DeleteOneOnOneCallWaitingJoinOrAccept(
                           i.GetAccountID()
                         ),
-                        Zp.AudioPlaybackManager.PlayAudioURL(
+                        Qp.AudioPlaybackManager.PlayAudioURL(
                           nt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         ),
@@ -42605,11 +42647,11 @@ and limitations under the License.
                 function(e) {
                   var i = new dt.a(e.Body().steamid_partner()),
                     n = e.Body().voice_chatid(),
-                    r = Zp.FriendStore.GetFriend(i.GetAccountID());
+                    r = Qp.FriendStore.GetFriend(i.GetAccountID());
                   if (
                     null == r ||
                     r.is_blocked ||
-                    Zp.FriendStore.BIsInvisibleMode()
+                    Qp.FriendStore.BIsInvisibleMode()
                   )
                     return (
                       t.LogMsg(
@@ -42646,7 +42688,7 @@ and limitations under the License.
                       t.OnAcceptOneOnOneVoiceChat(i, n),
                       1
                     );
-                  Zp.NotificationManager.DisplayNotificationFromFriend(r, {
+                  Qp.NotificationManager.DisplayNotificationFromFriend(r, {
                     title: r.display_name,
                     body: Object(gr.b)(
                       "#Friend_RequestingOneOnOneChat",
@@ -42655,20 +42697,20 @@ and limitations under the License.
                     tag: "state_" + r.accountid,
                     steamid: r.persona.m_steamid.ConvertTo64BitString()
                   });
-                  var s = Zp.ChatStore.GetFriendChat(i.GetAccountID(), !0);
+                  var s = Qp.ChatStore.GetFriendChat(i.GetAccountID(), !0);
                   return (
                     void 0 != s &&
                       (s.AddVoiceChannelInviteMsg(
                         i.GetAccountID(),
-                        Zp.GetServerRTime32(),
+                        Qp.GetServerRTime32(),
                         Object(gr.b)(
                           "#FriendMsg_VoiceChannelInvite",
                           r.display_name,
                           s.self.display_name
                         )
                       ),
-                      Zp.UIStore.ShowAndOrActivateChat(
-                        Zp.GetDefaultBrowserContext(),
+                      Qp.UIStore.ShowAndOrActivateChat(
+                        Qp.GetDefaultBrowserContext(),
                         s,
                         !1
                       )),
@@ -42697,19 +42739,19 @@ and limitations under the License.
                           o +
                           " has ended and is no longer joinable."
                       ),
-                        Zp.AudioPlaybackManager.PlayAudioURL(
+                        Qp.AudioPlaybackManager.PlayAudioURL(
                           nt.a.COMMUNITY_CDN_URL +
                             "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                         );
                       var s = Number(o);
                       t.DeleteOneOnOneCallWaitingJoinOrAccept(s);
-                      var c = Zp.ChatStore.GetFriendChat(s, !1),
-                        l = Zp.FriendStore.GetFriend(s);
+                      var c = Qp.ChatStore.GetFriendChat(s, !1),
+                        l = Qp.FriendStore.GetFriend(s);
                       void 0 != c &&
                         (l
                           ? c.AddVoiceChannelInviteMsg(
                               l.accountid,
-                              Zp.GetServerRTime32(),
+                              Qp.GetServerRTime32(),
                               Object(gr.b)(
                                 "#FriendMsg_VoiceChannelEndedExplicit",
                                 l.display_name
@@ -42717,7 +42759,7 @@ and limitations under the License.
                             )
                           : c.AddVoiceChannelInviteMsg(
                               t.m_CMInterface.steamid.GetAccountID(),
-                              Zp.GetServerRTime32(),
+                              Qp.GetServerRTime32(),
                               Object(gr.b)("#FriendMsg_VoiceChannelEnded")
                             ),
                         t.m_VoiceCallState.m_targetAccountID == Number(o) &&
@@ -42726,7 +42768,7 @@ and limitations under the License.
                   }
                   if (i == t.m_VoiceCallState.m_voiceChatID) {
                     if (0 != t.m_VoiceCallState.m_targetAccountID) {
-                      var c = Zp.ChatStore.GetFriendChat(
+                      var c = Qp.ChatStore.GetFriendChat(
                         t.m_VoiceCallState.m_targetAccountID,
                         !1
                       );
@@ -42735,14 +42777,14 @@ and limitations under the License.
                         ((t.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                         c.AddVoiceChannelInviteMsg(
                           t.m_CMInterface.steamid.GetAccountID(),
-                          Zp.GetServerRTime32(),
+                          Qp.GetServerRTime32(),
                           Object(gr.b)("#FriendMsg_VoiceChannelEnded")
                         ));
                     }
                     0 != t.m_VoiceCallState.m_targetAccountID &&
                       t.m_VoiceCallState.m_eState >
                         il.k_EVoiceCallState_RequestedPermission &&
-                      Zp.AudioPlaybackManager.PlayAudioURL(
+                      Qp.AudioPlaybackManager.PlayAudioURL(
                         nt.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       ),
@@ -42870,8 +42912,8 @@ and limitations under the License.
               var i = dt.a.InitFromAccountID(e);
               this.OnRejectOneOnOneVoiceChat(i, t.voice_chatid),
                 this.m_mapOneOnOneCallsWaitingJoinOrAccept.delete(e);
-              var n = Zp.ChatStore.GetFriendChat(e, !1),
-                r = Zp.FriendStore.self;
+              var n = Qp.ChatStore.GetFriendChat(e, !1),
+                r = Qp.FriendStore.self;
               return (
                 void 0 != n &&
                   void 0 != r &&
@@ -42879,7 +42921,7 @@ and limitations under the License.
                     this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) ||
                     n.AddVoiceChannelInviteMsg(
                       r.accountid,
-                      Zp.GetServerRTime32(),
+                      Qp.GetServerRTime32(),
                       Object(gr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         r.display_name
@@ -42911,17 +42953,17 @@ and limitations under the License.
                 0 != this.m_VoiceCallState.m_targetAccountID
               ) {
                 if (!this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) {
-                  var t = Zp.ChatStore.GetFriendChat(
+                  var t = Qp.ChatStore.GetFriendChat(
                       this.m_VoiceCallState.m_targetAccountID,
                       !1
                     ),
-                    i = Zp.FriendStore.self;
+                    i = Qp.FriendStore.self;
                   void 0 != t &&
                     void 0 != i &&
                     ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                     t.AddVoiceChannelInviteMsg(
-                      Zp.CMInterface.steamid.GetAccountID(),
-                      Zp.GetServerRTime32(),
+                      Qp.CMInterface.steamid.GetAccountID(),
+                      Qp.GetServerRTime32(),
                       Object(gr.b)(
                         "#FriendMsg_VoiceChannelEndedExplicit",
                         i.display_name
@@ -42964,7 +43006,7 @@ and limitations under the License.
                 this.RestartVoiceChatIfConnected());
             }),
             (e.prototype.GetAudioWorkletSupport = function() {
-              return Zp.AudioPlaybackManager.supports_audio_worklets;
+              return Qp.AudioPlaybackManager.supports_audio_worklets;
             }),
             (e.prototype.GetUserDeniedMicAccess = function() {
               return this.m_bUserHasDeniedMicPermissions;
@@ -43871,7 +43913,7 @@ and limitations under the License.
             }),
             (e.prototype.SetupNoiseGateOnMic = function(e) {
               var t = this.GetNoiseGateOptions();
-              if (Zp.AudioPlaybackManager.supports_audio_worklets) {
+              if (Qp.AudioPlaybackManager.supports_audio_worklets) {
                 this.LogMsg(
                   "(VoiceChat) Audio Worklets supported - high performance mic noisegate in use!"
                 );
@@ -44032,7 +44074,7 @@ and limitations under the License.
                   "(VoiceChat) Hit InitiateChatRoomVoice in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Zp.AudioPlaybackManager.SetVoiceActive(
+              Qp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -44100,8 +44142,8 @@ and limitations under the License.
                           (e.m_VoiceCallState.m_voiceChatID = t
                             .Body()
                             .voice_chatid());
-                        var i = Zp.FriendStore.self,
-                          n = Zp.ChatStore.GetFriendChat(
+                        var i = Qp.FriendStore.self,
+                          n = Qp.ChatStore.GetFriendChat(
                             e.m_VoiceCallState.m_targetAccountID,
                             !1
                           );
@@ -44109,7 +44151,7 @@ and limitations under the License.
                           void 0 != n &&
                           n.AddVoiceChannelInviteMsg(
                             e.m_CMInterface.steamid.GetAccountID(),
-                            Zp.GetServerRTime32(),
+                            Qp.GetServerRTime32(),
                             Object(gr.b)(
                               "#FriendMsg_VoiceChannelInvite",
                               i.display_name,
@@ -44165,7 +44207,7 @@ and limitations under the License.
                   "(VoiceChat) Hit InitiateOneOnOneVoiceChat in wrong state " +
                     this.m_VoiceCallState.m_eState
                 );
-              Zp.AudioPlaybackManager.SetVoiceActive(
+              Qp.AudioPlaybackManager.SetVoiceActive(
                 this.OnRequestMicrophoneAccess
               );
             }),
@@ -44310,7 +44352,7 @@ and limitations under the License.
                   (i.mic_muted_locally = e.user_muted_mic_locally()),
                   (i.output_muted_locally = e.user_muted_output_locally()),
                   (i.has_no_mic_for_session = e.user_has_no_mic_for_session());
-                var n = Zp.FriendStore.GetPlayerIfCached(t.GetAccountID()),
+                var n = Qp.FriendStore.GetPlayerIfCached(t.GetAccountID()),
                   r = "[U:1:" + t.GetAccountID() + "]",
                   o = "";
                 void 0 != n && (o = n.display_name + " ");
@@ -44361,7 +44403,7 @@ and limitations under the License.
                 i
                   .Body()
                   .set_has_audio_worklets_support(
-                    Zp.AudioPlaybackManager.supports_audio_worklets
+                    Qp.AudioPlaybackManager.supports_audio_worklets
                   ),
                 i.Body().set_user_agent(navigator.userAgent),
                 $a
@@ -44448,7 +44490,7 @@ and limitations under the License.
             (e.prototype.PlayRingSound = function(e) {
               this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(
                 e
-              ).audio_buffer = Zp.AudioPlaybackManager.PlayAudioURLWithRepeats(
+              ).audio_buffer = Qp.AudioPlaybackManager.PlayAudioURLWithRepeats(
                 nt.a.COMMUNITY_CDN_URL +
                   "public/sounds/webui/steam_phonecall.m4a?v=1",
                 1
@@ -44461,7 +44503,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.CheckVoiceSnoozeTiemout = function() {
-              if (Zp.IdleTracker.GetUserIdleTime() > 3600) {
+              if (Qp.IdleTracker.GetUserIdleTime() > 3600) {
                 var e = this.m_MicVolumeMeter.GetLastTimeNonZero();
                 performance.now() - e > 36e5 &&
                   (this.OnUserEndVoiceChat(),
@@ -44683,7 +44725,7 @@ and limitations under the License.
                         e.PadOutput("Decoding Errors", 20)
                     ),
                     e.m_mapAccountIDToStats.forEach(function(t, i) {
-                      var n = Zp.FriendStore.GetPlayerIfCached(i),
+                      var n = Qp.FriendStore.GetPlayerIfCached(i),
                         r = "[unknown]";
                       void 0 != n && (r = n.display_name),
                         e.LogMsg(
@@ -44931,7 +44973,7 @@ and limitations under the License.
                   void this.EndVoiceChatInternal(!1)
                 );
               void 0 == this.m_AudioContext &&
-                (this.m_AudioContext = Zp.AudioPlaybackManager.context);
+                (this.m_AudioContext = Qp.AudioPlaybackManager.context);
               var t = {
                 optional: [
                   {
@@ -45188,7 +45230,7 @@ and limitations under the License.
                     (this.m_MicInputGainNode.disconnect(),
                     (this.m_MicInputGainNode = void 0)),
                   void 0 != this.m_AudioContext &&
-                    (Zp.AudioPlaybackManager.SetVoiceNotActive(),
+                    (Qp.AudioPlaybackManager.SetVoiceNotActive(),
                     (this.m_AudioContext = void 0)),
                   this.m_PeerConnection &&
                     ((this.m_PeerConnection.oniceconnectionstatechange = void 0),
@@ -45372,7 +45414,7 @@ and limitations under the License.
         dl = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
-              n = Zp.FriendStore.self;
+              n = Qp.FriendStore.self;
             return (
               (i.state = {
                 strCurrentNameEntry: n.primary_display_name,
@@ -45411,7 +45453,7 @@ and limitations under the License.
               else {
                 var i = new FormData();
                 i.append("sessionid", nt.a.SESSIONID), i.append("persona", e);
-                var n = Zp.FriendStore.self,
+                var n = Qp.FriendStore.self,
                   r =
                     nt.a.COMMUNITY_BASE_URL +
                     "profiles/" +
@@ -45435,7 +45477,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.render = function() {
-              var e = Zp.FriendStore.self,
+              var e = Qp.FriendStore.self,
                 t = "friend changePersonaName";
               return (
                 e.persona.is_ingame
@@ -45519,8 +45561,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -45644,7 +45686,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnToggle", null),
+            rt.b([Zt.a], t.prototype, "OnToggle", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -45664,7 +45706,7 @@ and limitations under the License.
             }),
             (t.prototype.InviteFriend = function() {
               var e = this;
-              Zp.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Qp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 4 == t
@@ -45694,7 +45736,7 @@ and limitations under the License.
             }),
             (t.prototype.AcceptIncomingInvite = function() {
               var e = this;
-              Zp.FriendStore.SendFriendInvite(this.props.friend).then(function(
+              Qp.FriendStore.SendFriendInvite(this.props.friend).then(function(
                 t
               ) {
                 3 == t
@@ -45718,7 +45760,7 @@ and limitations under the License.
             }),
             (t.prototype.IgnoreIncomingInvite = function() {
               var e = this;
-              Zp.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
+              Qp.FriendStore.RemoveFriend(this.props.friend).then(function(t) {
                 1 == t
                   ? Te(
                       e.props.ownerWindow,
@@ -45750,7 +45792,7 @@ and limitations under the License.
                 Object(gr.b)("#Friend_Menu_RemoveFromFriendsList")
               )
                 .then(function() {
-                  Zp.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
+                  Qp.FriendStore.RemoveFriend(e.props.friend).then(function(t) {
                     (3 != t && 6 != t) ||
                       Te(
                         e.props.ownerWindow,
@@ -45773,7 +45815,7 @@ and limitations under the License.
                 Object(gr.b)("#Friend_Menu_BlockAllCommunication")
               )
                 .then(function() {
-                  Zp.FriendStore.BlockPlayer(e.props.friend);
+                  Qp.FriendStore.BlockPlayer(e.props.friend);
                 })
                 .catch(function() {});
             }),
@@ -45789,18 +45831,18 @@ and limitations under the License.
                 Object(gr.b)("#Friend_Menu_UnblockAllCommunication")
               )
                 .then(function() {
-                  Zp.FriendStore.BlockPlayer(e.props.friend, !0);
+                  Qp.FriendStore.BlockPlayer(e.props.friend, !0);
                 })
                 .catch(function() {});
             }),
             (t.prototype.InviteToGame = function(e) {
-              Zp.FriendStore.InviteToGame(this.props.friend, e);
+              Qp.FriendStore.InviteToGame(this.props.friend, e);
             }),
             (t.prototype.InviteToLobby = function(e, t) {
-              Zp.FriendStore.InviteToLobby(this.props.friend, e, t);
+              Qp.FriendStore.InviteToLobby(this.props.friend, e, t);
             }),
             (t.prototype.InviteToWatch = function() {
-              Zp.FriendStore.InviteToWatch(this.props.friend);
+              Qp.FriendStore.InviteToWatch(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e,
@@ -45811,8 +45853,8 @@ and limitations under the License.
                 o = [],
                 a = [],
                 s = n.friend,
-                c = Zp.FriendStore.FavoritesStore,
-                l = (Zp.FriendStore.FriendGroupStore, Zp.FriendStore.self == s),
+                c = Qp.FriendStore.FavoritesStore,
+                l = (Qp.FriendStore.FriendGroupStore, Qp.FriendStore.self == s),
                 u = "favorites" == r.chatContext,
                 d =
                   u ||
@@ -45821,7 +45863,7 @@ and limitations under the License.
                 p = !1,
                 h = s.is_friend,
                 m = 2 == s.efriendrelationship,
-                g = Zp.FriendStore.self.persona.m_unGamePlayedAppID,
+                g = Qp.FriendStore.self.persona.m_unGamePlayedAppID,
                 f = s.persona.m_unGamePlayedAppID;
               if (
                 (r.chat &&
@@ -45852,7 +45894,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Zp.UIStore.CloseTab(n.browserContext, r.tab);
+                          Qp.UIStore.CloseTab(n.browserContext, r.tab);
                         }
                       },
                       Object(gr.b)("#Chat_CloseTabAction")
@@ -45955,7 +45997,7 @@ and limitations under the License.
                       ),
                     a.push(Sr.createElement(pl, { key: "aliases", friend: s })),
                     0 != g &&
-                      Zp.BroadcastStore.is_broadcast_capable &&
+                      Qp.BroadcastStore.is_broadcast_capable &&
                       o.push(
                         Sr.createElement(
                           Mr.d,
@@ -45969,9 +46011,9 @@ and limitations under the License.
                         )
                       ),
                     0 != g &&
-                      "0" != Zp.FriendStore.self.persona.m_game_lobby_id)
+                      "0" != Qp.FriendStore.self.persona.m_game_lobby_id)
                   ) {
-                    var _ = Zp.AppInfoStore.GetAppInfo(g);
+                    var _ = Qp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       Sr.createElement(
                         Mr.d,
@@ -45980,7 +46022,7 @@ and limitations under the License.
                           onSelected: function() {
                             i.InviteToLobby(
                               g,
-                              Zp.FriendStore.self.persona.m_game_lobby_id
+                              Qp.FriendStore.self.persona.m_game_lobby_id
                             );
                           }
                         },
@@ -46005,7 +46047,7 @@ and limitations under the License.
                       )
                     );
                   } else if (0 != g && g != f) {
-                    var _ = Zp.AppInfoStore.GetAppInfo(g);
+                    var _ = Qp.AppInfoStore.GetAppInfo(g);
                     o.push(
                       Sr.createElement(
                         Mr.d,
@@ -46110,16 +46152,16 @@ and limitations under the License.
                   )
                 : null;
             }),
-            rt.b([Qt.a], t.prototype, "ShowFriendProfile", null),
-            rt.b([Qt.a], t.prototype, "InviteFriend", null),
-            rt.b([Qt.a], t.prototype, "AcceptIncomingInvite", null),
-            rt.b([Qt.a], t.prototype, "IgnoreIncomingInvite", null),
-            rt.b([Qt.a], t.prototype, "RemoveFriend", null),
-            rt.b([Qt.a], t.prototype, "BlockFriend", null),
-            rt.b([Qt.a], t.prototype, "UnblockFriend", null),
-            rt.b([Qt.a], t.prototype, "InviteToGame", null),
-            rt.b([Qt.a], t.prototype, "InviteToLobby", null),
-            rt.b([Qt.a], t.prototype, "InviteToWatch", null),
+            rt.b([Zt.a], t.prototype, "ShowFriendProfile", null),
+            rt.b([Zt.a], t.prototype, "InviteFriend", null),
+            rt.b([Zt.a], t.prototype, "AcceptIncomingInvite", null),
+            rt.b([Zt.a], t.prototype, "IgnoreIncomingInvite", null),
+            rt.b([Zt.a], t.prototype, "RemoveFriend", null),
+            rt.b([Zt.a], t.prototype, "BlockFriend", null),
+            rt.b([Zt.a], t.prototype, "UnblockFriend", null),
+            rt.b([Zt.a], t.prototype, "InviteToGame", null),
+            rt.b([Zt.a], t.prototype, "InviteToLobby", null),
+            rt.b([Zt.a], t.prototype, "InviteToWatch", null),
             t
           );
         })(Sr.PureComponent),
@@ -46131,9 +46173,9 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.OnFriendVolumeChanged = function(e) {
-              Zp.VoiceStore.SetPerUserGainLevel(
+              Qp.VoiceStore.SetPerUserGainLevel(
                 this.props.friend.accountid,
-                Zp.VoiceStore.ConvertSliderToGainValue(
+                Qp.VoiceStore.ConvertSliderToGainValue(
                   e,
                   ul.k_MaxPerUserGainMultiplier
                 )
@@ -46141,10 +46183,10 @@ and limitations under the License.
                 this.setState({ volumeNumber: e });
             }),
             (t.prototype.OnMutingClick = function(e) {
-              var t = Zp.VoiceStore.GetPerUserMuting(
+              var t = Qp.VoiceStore.GetPerUserMuting(
                 this.props.friend.accountid
               );
-              Zp.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
+              Qp.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
                 this.forceUpdate();
             }),
             (t.prototype.OnInlineVolumeClick = function(e) {
@@ -46153,7 +46195,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.state.volumeNumber,
                 t = "VolumeIcon",
-                i = Zp.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
+                i = Qp.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
               return (
                 e > 65
                   ? (t += " HighestVolume")
@@ -46178,14 +46220,14 @@ and limitations under the License.
                     Sr.createElement(
                       "button",
                       { className: t, onClick: this.OnMutingClick },
-                      Sr.createElement(ks.N, null)
+                      Sr.createElement(ks.O, null)
                     ),
                     Sr.createElement(sc, {
                       min: 0,
                       max: 100,
                       label: "",
-                      value: Zp.VoiceStore.ConvertGainValueToSliderValue(
-                        Zp.VoiceStore.GetPerUserGainLevel(
+                      value: Qp.VoiceStore.ConvertGainValueToSliderValue(
+                        Qp.VoiceStore.GetPerUserGainLevel(
                           this.props.friend.accountid
                         ),
                         ul.k_MaxPerUserGainMultiplier
@@ -46202,9 +46244,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnFriendVolumeChanged", null),
-            rt.b([Qt.a], t.prototype, "OnMutingClick", null),
-            rt.b([Qt.a], t.prototype, "OnInlineVolumeClick", null),
+            rt.b([Zt.a], t.prototype, "OnFriendVolumeChanged", null),
+            rt.b([Zt.a], t.prototype, "OnMutingClick", null),
+            rt.b([Zt.a], t.prototype, "OnInlineVolumeClick", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -46240,7 +46282,7 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnChange", null),
+            rt.b([Zt.a], t.prototype, "OnChange", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -46254,7 +46296,7 @@ and limitations under the License.
               var t = "NewTradeOffer" + this.props.friend.accountid;
               $e(e)
                 .open(
-                  Zp.EconomyStore.GetDefaultTradeOfferURLForFriend(
+                  Qp.EconomyStore.GetDefaultTradeOfferURLForFriend(
                     this.props.friend.accountid
                   ),
                   t,
@@ -46263,7 +46305,7 @@ and limitations under the License.
                 .focus();
             }),
             (t.prototype.InviteToTrade = function() {
-              Zp.FriendStore.InviteToTrade(this.props.friend);
+              Qp.FriendStore.InviteToTrade(this.props.friend);
             }),
             (t.prototype.render = function() {
               var e = this.props.friend;
@@ -46284,8 +46326,8 @@ and limitations under the License.
                   )
               );
             }),
-            rt.b([Qt.a], t.prototype, "SendTradeOffer", null),
-            rt.b([Qt.a], t.prototype, "InviteToTrade", null),
+            rt.b([Zt.a], t.prototype, "SendTradeOffer", null),
+            rt.b([Zt.a], t.prototype, "InviteToTrade", null),
             t
           );
         })(Sr.Component),
@@ -46385,14 +46427,15 @@ and limitations under the License.
                 e
               );
             }),
-            rt.b([Qt.a], t.prototype, "BanFriend", null),
-            rt.b([Qt.a], t.prototype, "OnKickFriend", null),
+            rt.b([Zt.a], t.prototype, "BanFriend", null),
+            rt.b([Zt.a], t.prototype, "OnKickFriend", null),
             t
           );
         })(Sr.Component),
         vl = (function(e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
+          function t(t) {
+            var i = e.call(this, t) || this;
+            return (i.state = { bShowViewGameInfo: !1 }), i;
           }
           return (
             rt.c(t, e),
@@ -46444,6 +46487,10 @@ and limitations under the License.
                     })
                 : this.JoinLobby(i, e);
             }),
+            (t.prototype.ViewGameInfo = function(e) {
+              var t = this.props.friend;
+              li.b.ViewGameInfoForSteamID(t.steamid64);
+            }),
             (t.prototype.JoinLobby = function(e, t) {
               e.persona.is_in_valid_lobby
                 ? v(
@@ -46465,7 +46512,7 @@ and limitations under the License.
               var e = [],
                 t = void 0,
                 i = this.props.friend,
-                n = Zp.AppInfoStore.GetAppInfo(this.props.unAppID);
+                n = Qp.AppInfoStore.GetAppInfo(this.props.unAppID);
               if (!n.is_valid) return null;
               if (n.is_initialized)
                 if (this.props.bShowLargeHeader)
@@ -46511,7 +46558,7 @@ and limitations under the License.
                           key: "showinsteam",
                           onSelected: this.ShowInSteam
                         },
-                        Sr.createElement(ks.x, null),
+                        Sr.createElement(ks.y, null),
                         Object(gr.b)("#Friend_Menu_ShowInSteam")
                       )
                     )
@@ -46528,7 +46575,7 @@ and limitations under the License.
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          Sr.createElement(ks.x, null),
+                          Sr.createElement(ks.y, null),
                           Object(gr.b)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -46541,7 +46588,7 @@ and limitations under the License.
                           key: "launchgame",
                           onSelected: this.LaunchGame
                         },
-                        Sr.createElement(ks.x, null),
+                        Sr.createElement(ks.y, null),
                         Object(gr.b)("#Friend_Menu_LaunchFriendGame")
                       )
                     )),
@@ -46555,6 +46602,19 @@ and limitations under the License.
                         onSelected: this.WatchGame
                       },
                       Object(gr.b)("#Friend_Menu_WatchFriendGame")
+                    )
+                  ),
+                i &&
+                  this.state.bShowViewGameInfo &&
+                  e.push(
+                    Sr.createElement(
+                      Mr.d,
+                      {
+                        className: "contextMenuGameOptions",
+                        key: "viewgameinfo",
+                        onSelected: this.ViewGameInfo
+                      },
+                      Object(gr.b)("#Friend_Menu_ViewGameInfo")
                     )
                   ),
                 e.push(
@@ -46598,12 +46658,13 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ShowStorePage", null),
-            rt.b([Qt.a], t.prototype, "ShowCommunityHub", null),
-            rt.b([Qt.a], t.prototype, "LaunchGame", null),
-            rt.b([Qt.a], t.prototype, "WatchGame", null),
-            rt.b([Qt.a], t.prototype, "JoinGame", null),
-            rt.b([Qt.a], t.prototype, "ShowInSteam", null),
+            rt.b([Zt.a], t.prototype, "ShowStorePage", null),
+            rt.b([Zt.a], t.prototype, "ShowCommunityHub", null),
+            rt.b([Zt.a], t.prototype, "LaunchGame", null),
+            rt.b([Zt.a], t.prototype, "WatchGame", null),
+            rt.b([Zt.a], t.prototype, "JoinGame", null),
+            rt.b([Zt.a], t.prototype, "ViewGameInfo", null),
+            rt.b([Zt.a], t.prototype, "ShowInSteam", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -46614,16 +46675,16 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.SetUserOnline = function() {
-              Zp.FriendStore.SetUserPersonaState(1, !0);
+              Qp.FriendStore.SetUserPersonaState(1, !0);
             }),
             (t.prototype.SetUserInvisible = function() {
-              Zp.FriendStore.SetUserPersonaState(7, !0);
+              Qp.FriendStore.SetUserPersonaState(7, !0);
             }),
             (t.prototype.SetUserAway = function() {
-              Zp.FriendStore.SetUserPersonaState(3, !0);
+              Qp.FriendStore.SetUserPersonaState(3, !0);
             }),
             (t.prototype.ShowUserProfile = function(e) {
-              var t = dt.a.InitFromAccountID(Zp.FriendStore.self.accountid);
+              var t = dt.a.InitFromAccountID(Qp.FriendStore.self.accountid);
               v(
                 e,
                 nt.a.COMMUNITY_BASE_URL + "profiles/" + t.ConvertTo64BitString()
@@ -46631,7 +46692,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.EditProfile = function(e) {
-              var t = dt.a.InitFromAccountID(Zp.FriendStore.self.accountid);
+              var t = dt.a.InitFromAccountID(Qp.FriendStore.self.accountid);
               v(
                 e,
                 nt.a.COMMUNITY_BASE_URL +
@@ -46646,7 +46707,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = [],
-                t = 1 == Zp.FriendStore.self.persona.m_ePersonaState;
+                t = 1 == Qp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 Sr.createElement(
                   Mr.b,
@@ -46658,7 +46719,7 @@ and limitations under the License.
                   Object(gr.b)("#PersonaStateOnline")
                 )
               );
-              var i = 7 == Zp.FriendStore.self.persona.m_ePersonaState;
+              var i = 7 == Qp.FriendStore.self.persona.m_ePersonaState;
               e.push(
                 Sr.createElement(
                   Mr.b,
@@ -46670,7 +46731,7 @@ and limitations under the License.
                   Object(gr.b)("#PersonaStateInvisible")
                 )
               );
-              var n = 3 == Zp.FriendStore.self.persona.m_ePersonaState;
+              var n = 3 == Qp.FriendStore.self.persona.m_ePersonaState;
               return (
                 e.push(
                   Sr.createElement(
@@ -46713,12 +46774,12 @@ and limitations under the License.
                   : null
               );
             }),
-            rt.b([Qt.a], t.prototype, "SetUserOnline", null),
-            rt.b([Qt.a], t.prototype, "SetUserInvisible", null),
-            rt.b([Qt.a], t.prototype, "SetUserAway", null),
-            rt.b([Qt.a], t.prototype, "ShowUserProfile", null),
-            rt.b([Qt.a], t.prototype, "EditProfile", null),
-            rt.b([Qt.a], t.prototype, "EditName", null),
+            rt.b([Zt.a], t.prototype, "SetUserOnline", null),
+            rt.b([Zt.a], t.prototype, "SetUserInvisible", null),
+            rt.b([Zt.a], t.prototype, "SetUserAway", null),
+            rt.b([Zt.a], t.prototype, "ShowUserProfile", null),
+            rt.b([Zt.a], t.prototype, "EditProfile", null),
+            rt.b([Zt.a], t.prototype, "EditName", null),
             t
           );
         })(Sr.PureComponent),
@@ -46788,9 +46849,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnCancel", null),
-            rt.b([Qt.a], t.prototype, "OnOK", null),
-            rt.b([Qt.a], t.prototype, "OnDropDownChange", null),
+            rt.b([Zt.a], t.prototype, "OnCancel", null),
+            rt.b([Zt.a], t.prototype, "OnOK", null),
+            rt.b([Zt.a], t.prototype, "OnDropDownChange", null),
             t
           );
         })(Sr.Component),
@@ -46802,7 +46863,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.OpenChatWindow = function(e) {
               this.props.group
-                ? Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+                ? Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                     this.props.browserContext,
                     this.props.group,
                     !0
@@ -46831,7 +46892,7 @@ and limitations under the License.
                 i = this.props.group,
                 n = this.props.clan,
                 r = this.props.context || {},
-                o = Zp.FriendStore.FavoritesStore;
+                o = Qp.FriendStore.FavoritesStore;
               r.tab
                 ? t.push(
                     Sr.createElement(
@@ -46839,7 +46900,7 @@ and limitations under the License.
                       {
                         key: "closetab",
                         onSelected: function() {
-                          Zp.UIStore.CloseTab(e.props.browserContext, r.tab);
+                          Qp.UIStore.CloseTab(e.props.browserContext, r.tab);
                         }
                       },
                       Object(gr.b)("#Chat_CloseTabAction")
@@ -46878,7 +46939,7 @@ and limitations under the License.
                 );
               var a = n ? { clan: n } : { chat: i };
               return (
-                Zp.FriendStore.FavoritesStore.BIsFavorited(a)
+                Qp.FriendStore.FavoritesStore.BIsFavorited(a)
                   ? r.is_favorites &&
                     t.push(
                       Sr.createElement(
@@ -46919,9 +46980,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OpenChatWindow", null),
-            rt.b([Qt.a], t.prototype, "ShowClanProfile", null),
-            rt.b([Qt.a], t.prototype, "LeaveChatRoomGroup", null),
+            rt.b([Zt.a], t.prototype, "OpenChatWindow", null),
+            rt.b([Zt.a], t.prototype, "ShowClanProfile", null),
+            rt.b([Zt.a], t.prototype, "LeaveChatRoomGroup", null),
             t
           );
         })(Sr.Component),
@@ -46933,7 +46994,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.ShowInviteDialog = function() {
               var e = this.props.group.GetChatRoom(this.props.roomID);
-              Zp.UIStore.OpenInviteDialogForChatGroup(
+              Qp.UIStore.OpenInviteDialogForChatGroup(
                 this.props.browserContext,
                 this.props.ownerWindow,
                 this.props.group,
@@ -46997,7 +47058,7 @@ and limitations under the License.
                         className: o ? "" : "noPermission",
                         onSelected: this.SaveVoiceRoom
                       },
-                      !o && Sr.createElement(ks.q, null),
+                      !o && Sr.createElement(ks.r, null),
                       Object(gr.b)("#Chat_Actions_SaveChannel")
                     )
                   ),
@@ -47033,10 +47094,10 @@ and limitations under the License.
                     )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ShowInviteDialog", null),
-            rt.b([Qt.a], t.prototype, "SaveVoiceRoom", null),
-            rt.b([Qt.a], t.prototype, "RemoveRoom", null),
-            rt.b([Qt.a], t.prototype, "ChangeRoomName", null),
+            rt.b([Zt.a], t.prototype, "ShowInviteDialog", null),
+            rt.b([Zt.a], t.prototype, "SaveVoiceRoom", null),
+            rt.b([Zt.a], t.prototype, "RemoveRoom", null),
+            rt.b([Zt.a], t.prototype, "ChangeRoomName", null),
             t
           );
         })(Sr.PureComponent),
@@ -47106,8 +47167,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -47192,8 +47253,8 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindDiv", null),
-            rt.b([Qt.a], t.prototype, "OnGroupSelected", null),
+            rt.b([Zt.a], t.prototype, "BindDiv", null),
+            rt.b([Zt.a], t.prototype, "OnGroupSelected", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -47230,7 +47291,7 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = this.props.group;
               if (t.BIsClanChatRoom()) {
-                var i = Zp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                var i = Qp.FriendStore.ClanStore.GetClan(t.GetClanID());
                 Tm.DragDropManager.StartDrag({ type: "clan", clan: i });
               } else
                 Tm.DragDropManager.StartDrag({
@@ -47275,7 +47336,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.OnClick = function(e) {
-              Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Xe(this),
                 this.props.group,
                 !0
@@ -47286,7 +47347,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.OnOpenGroup = function(e) {
-              Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Xe(this),
                 this.props.group,
                 !0
@@ -47294,7 +47355,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.OnContextMenu = function(e) {
-              Z(e, this.props.group);
+              Q(e, this.props.group);
             }),
             (t.prototype.OnMouseEnterNonTitle = function() {
               this.setState({ bNonGroupHovered: !0 });
@@ -47303,7 +47364,7 @@ and limitations under the License.
               this.setState({ bNonGroupHovered: !1 });
             }),
             (t.prototype.CreateVoiceRoom = function() {
-              var e = Zp.FriendStore.self.persona.m_strPlayerName,
+              var e = Qp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(gr.b)("#Chat_CreateChatChannel_DefaultName", e);
               this.props.group.CreateChatRoom(t, !0).then(function(e) {
                 e.StartVoiceChat();
@@ -47380,19 +47441,19 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
-            rt.b([Qt.a], t.prototype, "OnClick", null),
-            rt.b([Qt.a], t.prototype, "OnToggleSelected", null),
-            rt.b([Qt.a], t.prototype, "OnOpenGroup", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
-            rt.b([Qt.a], t.prototype, "OnMouseEnterNonTitle", null),
-            rt.b([Qt.a], t.prototype, "OnMouseLeaveNonTitle", null),
-            rt.b([Qt.a], t.prototype, "CreateVoiceRoom", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnClick", null),
+            rt.b([Zt.a], t.prototype, "OnToggleSelected", null),
+            rt.b([Zt.a], t.prototype, "OnOpenGroup", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnMouseEnterNonTitle", null),
+            rt.b([Zt.a], t.prototype, "OnMouseLeaveNonTitle", null),
+            rt.b([Zt.a], t.prototype, "CreateVoiceRoom", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -47475,7 +47536,7 @@ and limitations under the License.
                 });
                 0 != a.length &&
                   ((a = o.member_list),
-                  a.sort(Za.FriendSortByFriendOrNotComparator),
+                  a.sort(Qa.FriendSortByFriendOrNotComparator),
                   t.push({ ulRoomID: r.unique_id, rgFriends: a }));
               }
             }
@@ -47487,7 +47548,7 @@ and limitations under the License.
                 Sr.createElement(
                   "div",
                   { className: "voiceChannelIcon" },
-                  Sr.createElement(ks.M, null)
+                  Sr.createElement(ks.N, null)
                 ),
                 t.map(function(e) {
                   return Sr.createElement(Tl, {
@@ -47600,7 +47661,7 @@ and limitations under the License.
                 r = !1,
                 o = "chatRoomGroupNavColumn",
                 a = this.props.groupView.IsVoiceActive(),
-                s = Zp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                s = Qp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bChannelListCollapsed"
                 );
@@ -47633,7 +47694,7 @@ and limitations under the License.
                     )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnRoomsContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnRoomsContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -47656,11 +47717,11 @@ and limitations under the License.
                 var o = r[n];
                 o.BMatchesSearchString(e, !1) && i.push(o);
               }
-              return i.sort(Za.DefaultFriendSortComparator), i;
+              return i.sort(Qa.DefaultFriendSortComparator), i;
             }),
             (t.prototype.OnMemberListToggleViewClick = function(e) {
               var t = this.props.groupView.GetGroup();
-              Zp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+              Qp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
                 t.GetGroupID(),
                 "bMemberListCollapsed"
               );
@@ -47710,7 +47771,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.groupView.GetGroup(),
                 t = this.props.groupView.GetSelectedChatView(),
-                i = !Zp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                i = !Qp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   e.GetGroupID(),
                   "bMemberListCollapsed"
                 ),
@@ -47733,7 +47794,7 @@ and limitations under the License.
               if (!this.props.inactive) {
                 var l =
                   e.BIsClanChatRoom() &&
-                  Zp.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
+                  Qp.FriendStore.ClanStore.GetClan(e.GetClanID()).BIsOGG();
                 c =
                   e.BIsClanChatRoom() && !l
                     ? Sr.createElement(
@@ -47816,7 +47877,7 @@ and limitations under the License.
                             className: "friendSearchClear",
                             onClick: this.OnClearSearch
                           },
-                          Sr.createElement(ks.P, null)
+                          Sr.createElement(ks.Q, null)
                         )
                       )
                     )
@@ -47829,14 +47890,14 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnMemberListToggleViewClick", null),
-            rt.b([Qt.a], t.prototype, "OnSearchInput", null),
-            rt.b([Qt.a], t.prototype, "OnSearchSelection", null),
-            rt.b([Qt.a], t.prototype, "OnSearchSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnSearchKeyDown", null),
-            rt.b([Qt.a], t.prototype, "OnClearSearch", null),
-            rt.b([Qt.a], t.prototype, "OnSearchFocus", null),
-            rt.b([Qt.a], t.prototype, "OnSearchBlur", null),
+            rt.b([Zt.a], t.prototype, "OnMemberListToggleViewClick", null),
+            rt.b([Zt.a], t.prototype, "OnSearchInput", null),
+            rt.b([Zt.a], t.prototype, "OnSearchSelection", null),
+            rt.b([Zt.a], t.prototype, "OnSearchSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnSearchKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnClearSearch", null),
+            rt.b([Zt.a], t.prototype, "OnSearchFocus", null),
+            rt.b([Zt.a], t.prototype, "OnSearchBlur", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -47909,7 +47970,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
             t
           );
         })(Sr.Component),
@@ -47920,7 +47981,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.CreateTextRoom = function() {
-              var e = Zp.FriendStore.self.persona.m_strPlayerName,
+              var e = Qp.FriendStore.self.persona.m_strPlayerName,
                 t = Object(gr.b)("#Chat_CreateTextChannel_DefaultName", e);
               this.props.groupView
                 .GetGroup()
@@ -47944,7 +48005,7 @@ and limitations under the License.
             }),
             (t.prototype.ToggleCollapseExpand = function() {
               var e = this.props.groupView.GetGroup();
-              Zp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
+              Qp.ChatStore.ChatRoomGroupDisplayPrefs.ToggleChatRoomDisplayPref(
                 e.GetGroupID(),
                 "bChannelListCollapsed"
               );
@@ -47954,7 +48015,7 @@ and limitations under the License.
                 t = this.props.groupView,
                 i = t.GetGroup().textRoomList,
                 n = t.GetGroup().BCanAdminChannel(),
-                r = Zp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
+                r = Qp.ChatStore.ChatRoomGroupDisplayPrefs.GetChatRoomDisplayPref(
                   t.GetGroup().GetGroupID(),
                   "bChannelListCollapsed"
                 );
@@ -48005,12 +48066,12 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "CreateTextRoom", null),
-            rt.b([Qt.a], t.prototype, "OnCreateNewTextChannel", null),
-            rt.b([Qt.a], t.prototype, "OnStartChannelRename", null),
-            rt.b([Qt.a], t.prototype, "OnChannelRename", null),
-            rt.b([Qt.a], t.prototype, "OnEndChannelRename", null),
-            rt.b([Qt.a], t.prototype, "ToggleCollapseExpand", null),
+            rt.b([Zt.a], t.prototype, "CreateTextRoom", null),
+            rt.b([Zt.a], t.prototype, "OnCreateNewTextChannel", null),
+            rt.b([Zt.a], t.prototype, "OnStartChannelRename", null),
+            rt.b([Zt.a], t.prototype, "OnChannelRename", null),
+            rt.b([Zt.a], t.prototype, "OnEndChannelRename", null),
+            rt.b([Zt.a], t.prototype, "ToggleCollapseExpand", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48022,11 +48083,11 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.ToggleTextChat = function() {
               if (!this.props.bRenameActive) {
-                var e = Zp.UIStore.IsChatRoomGroupActive(
+                var e = Qp.UIStore.IsChatRoomGroupActive(
                     Xe(this),
                     this.props.chat.GetGroup()
                   ),
-                  t = Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+                  t = Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Xe(this),
                     this.props.chat.GetGroup(),
                     !0
@@ -48071,7 +48132,7 @@ and limitations under the License.
                 Sr.createElement(
                   "div",
                   { className: "chatRoomTextChannelIcon" },
-                  Sr.createElement(ks.I, null)
+                  Sr.createElement(ks.J, null)
                 ),
                 !n && Sr.createElement("div", { className: i }, e.name),
                 !this.props.bDefaultRoom &&
@@ -48083,8 +48144,8 @@ and limitations under the License.
                   })
               );
             }),
-            rt.b([Qt.a], t.prototype, "ToggleTextChat", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "ToggleTextChat", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48099,7 +48160,7 @@ and limitations under the License.
             }),
             (t.prototype.OnVoiceRoomSelected = function(e) {
               this.props.groupView.GetRenameRoomID() != e.GetRoomID() &&
-                (Zp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                (Qp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   e.GetRoomID() ||
                   (this.props.groupView.ClosePopoverChat(),
                   e.StartVoiceChat()));
@@ -48138,7 +48199,7 @@ and limitations under the License.
                       className: "ChatRoomAddRoomBtn",
                       title: Object(gr.b)("#Tooltip_VoiceChannelCreate")
                     },
-                    Sr.createElement(ks.y, null)
+                    Sr.createElement(ks.z, null)
                   )
                 ),
                 i.map(function(i) {
@@ -48157,11 +48218,11 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "CreateVoiceRoom", null),
-            rt.b([Qt.a], t.prototype, "OnVoiceRoomSelected", null),
-            rt.b([Qt.a], t.prototype, "OnStartChannelRename", null),
-            rt.b([Qt.a], t.prototype, "OnChannelRename", null),
-            rt.b([Qt.a], t.prototype, "OnEndChannelRename", null),
+            rt.b([Zt.a], t.prototype, "CreateVoiceRoom", null),
+            rt.b([Zt.a], t.prototype, "OnVoiceRoomSelected", null),
+            rt.b([Zt.a], t.prototype, "OnStartChannelRename", null),
+            rt.b([Zt.a], t.prototype, "OnChannelRename", null),
+            rt.b([Zt.a], t.prototype, "OnEndChannelRename", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48185,7 +48246,7 @@ and limitations under the License.
                 e.stopPropagation();
             }),
             (t.prototype.InviteToChat = function(e) {
-              Zp.UIStore.OpenInviteDialogForChatGroup(
+              Qp.UIStore.OpenInviteDialogForChatGroup(
                 Xe(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.chat.GetGroup(),
@@ -48222,7 +48283,7 @@ and limitations under the License.
                 e && "friend" == e.type)
               ) {
                 var i = e;
-                if (i.friend && i.friend != Zp.FriendStore.self) {
+                if (i.friend && i.friend != Qp.FriendStore.self) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
                     Tm.DragDropManager.SetDropConsumed();
@@ -48265,10 +48326,10 @@ and limitations under the License.
                 t = this.props.chat.GetGroup(),
                 i = this.props.chat == t.GetDefaultChatRoom(),
                 n =
-                  Zp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
+                  Qp.ChatStore.VoiceChat.GetActiveVoiceChatID() ==
                   this.props.chat.GetRoomID(),
-                r = Zp.CMInterface.steamid.GetAccountID(),
-                o = Zp.FriendStore.GetPlayer(r),
+                r = Qp.CMInterface.steamid.GetAccountID(),
+                o = Qp.FriendStore.GetPlayer(r),
                 a = this.props.chat.voice_active_contains_only_self,
                 s = "emptyChannelNotice",
                 c = this.props.chat.voice_active_member_list.member_list.map(
@@ -48337,7 +48398,7 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "chatRoomVoiceChannelIcon" },
-                    Sr.createElement(ks.M, null)
+                    Sr.createElement(ks.N, null)
                   ),
                   !this.props.bRenameActive &&
                     Sr.createElement(
@@ -48398,12 +48459,12 @@ and limitations under the License.
                 Sr.createElement("div", { className: "dropTargetBox" })
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
-            rt.b([Qt.a], t.prototype, "InviteToChat", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "InviteToChat", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48464,11 +48525,11 @@ and limitations under the License.
               );
             }),
             rt.b([mt.observable], t.prototype, "m_strValue", void 0),
-            rt.b([Qt.a], t.prototype, "BindInputRef", null),
-            rt.b([Qt.a], t.prototype, "OnChange", null),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnGlobalKeyDown", null),
-            rt.b([Qt.a], t.prototype, "OnBlur", null),
+            rt.b([Zt.a], t.prototype, "BindInputRef", null),
+            rt.b([Zt.a], t.prototype, "OnChange", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnGlobalKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnBlur", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48528,7 +48589,7 @@ and limitations under the License.
                     return r.GetMemberRank(t.accountid) <= e.props.eMaxRank;
                   })),
                 o.sort(function(e, t) {
-                  var i = Za.FriendSortStatusComparator(e, t);
+                  var i = Qa.FriendSortStatusComparator(e, t);
                   if (0 != i) return i;
                   var n = e.persona.current_game_name
                       ? e.persona.current_game_name
@@ -48592,7 +48653,7 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "groupIcon" },
-                    Sr.createElement(ks.n, null)
+                    Sr.createElement(ks.o, null)
                   ),
                   Sr.createElement(
                     "span",
@@ -48619,8 +48680,8 @@ and limitations under the License.
                 Sr.createElement(xs, null, d)
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnHeaderClick", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnHeaderClick", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48691,7 +48752,7 @@ and limitations under the License.
                   )
                 : Sr.createElement(Xu, rt.a({}, n), e);
             }),
-            rt.b([Qt.a], t.prototype, "OnFriendSelected", null),
+            rt.b([Zt.a], t.prototype, "OnFriendSelected", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48737,8 +48798,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "GenerateLink", null),
-            rt.b([Qt.a], t.prototype, "OnFocus", null),
+            rt.b([Zt.a], t.prototype, "GenerateLink", null),
+            rt.b([Zt.a], t.prototype, "OnFocus", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48754,7 +48815,7 @@ and limitations under the License.
             (t.prototype.CreateExpiresText = function(e) {
               return 0 == e
                 ? Object(gr.b)("#InviteLink_ExpiresNever_Long")
-                : e - Zp.GetServerRTime32() > 3600
+                : e - Qp.GetServerRTime32() > 3600
                   ? Object(gr.b)("#InviteLink_ExpiresDay_Long")
                   : Object(gr.b)("#InviteLink_ExpiresHour_Long");
             }),
@@ -48784,7 +48845,7 @@ and limitations under the License.
                 selectedOption: void 0
               });
             }),
-            rt.b([Qt.a], t.prototype, "OnDropDownChange", null),
+            rt.b([Zt.a], t.prototype, "OnDropDownChange", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -48934,7 +48995,7 @@ and limitations under the License.
               o
                 ? this.props.chatRoom || (r = this.m_setMembersOfGroup)
                 : this.props.chatRoom
-                  ? Zp.FriendStore.all_friends.forEach(function(t) {
+                  ? Qp.FriendStore.all_friends.forEach(function(t) {
                       e.props.chatRoomGroup.BHasMember(t.accountid) ||
                         r.add(t.accountid);
                     })
@@ -49071,13 +49132,13 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "DismissDialog", null),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnFriendPickerRef", null),
-            rt.b([Qt.a], t.prototype, "OnFriendPickerChange", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "DismissDialog", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnFriendPickerRef", null),
+            rt.b([Zt.a], t.prototype, "OnFriendPickerChange", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             t
           );
         })(Sr.PureComponent),
@@ -49101,7 +49162,7 @@ and limitations under the License.
                 },
                 !t && Sr.createElement(re, null),
                 Sr.createElement("span", null, e.friend.display_name),
-                Sr.createElement(ks.P, null)
+                Sr.createElement(ks.Q, null)
               )
             )
           );
@@ -49130,8 +49191,8 @@ and limitations under the License.
                 Sr.createElement(
                   "div",
                   { className: "Throbber" },
-                  Sr.createElement(ks.J, { className: "base" }),
-                  Sr.createElement(ks.J, { className: "blur" })
+                  Sr.createElement(ks.K, { className: "base" }),
+                  Sr.createElement(ks.K, { className: "blur" })
                 ),
                 Sr.createElement(
                   "div",
@@ -49194,7 +49255,7 @@ and limitations under the License.
               var e = this.props.groupView.GetGroup(),
                 t = [],
                 i = (e.GetMyRank(), e.BCanAdminGroup()),
-                n = e.BIsAccountIDOwner(Zp.CMInterface.steamid.GetAccountID()),
+                n = e.BIsAccountIDOwner(Qp.CMInterface.steamid.GetAccountID()),
                 r = e.BCanInvite(),
                 o = e.BCanAdminChannel(),
                 a = e.BCanBan();
@@ -49208,7 +49269,7 @@ and limitations under the License.
                   t.push({
                     title: Object(gr.b)("#GroupSettings_Channels_Section"),
                     uniqueName: "GroupSettings_Channels",
-                    content: Sr.createElement(Ql, {
+                    content: Sr.createElement(Zl, {
                       groupView: this.props.groupView,
                       enabled: o
                     }),
@@ -49254,7 +49315,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(gr.b)("#GroupSettings_Leave_Section"),
-                    content: Sr.createElement(Zl, { group: e }),
+                    content: Sr.createElement(Ql, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -49277,7 +49338,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(gr.b)("#GroupSettings_Leave_Section"),
-                    content: Sr.createElement(Zl, { group: e }),
+                    content: Sr.createElement(Ql, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -49295,9 +49356,9 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "DismissDialog", null),
-            rt.b([Qt.a], t.prototype, "CloseDialog", null),
-            rt.b([Qt.a], t.prototype, "OnLeave", null),
+            rt.b([Zt.a], t.prototype, "DismissDialog", null),
+            rt.b([Zt.a], t.prototype, "CloseDialog", null),
+            rt.b([Zt.a], t.prototype, "OnLeave", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -49400,10 +49461,10 @@ and limitations under the License.
             }),
             rt.b([mt.observable], t.prototype, "m_bSaving", void 0),
             rt.b([mt.observable], t.prototype, "m_strError", void 0),
-            rt.b([Qt.a], t.prototype, "BindInputRef", null),
-            rt.b([Qt.a], t.prototype, "AnimateUpgrade_In", null),
-            rt.b([Qt.a], t.prototype, "AnimateUpgrade_Out", null),
-            rt.b([Qt.a], t.prototype, "SaveGroup", null),
+            rt.b([Zt.a], t.prototype, "BindInputRef", null),
+            rt.b([Zt.a], t.prototype, "AnimateUpgrade_In", null),
+            rt.b([Zt.a], t.prototype, "AnimateUpgrade_Out", null),
+            rt.b([Zt.a], t.prototype, "SaveGroup", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -49533,7 +49594,7 @@ and limitations under the License.
                   " "
                 );
               else {
-                var t = Zp.FriendStore.GetPlayer(
+                var t = Qp.FriendStore.GetPlayer(
                   this.props.group.GetOwnerAccountID()
                 );
                 e = Sr.createElement(
@@ -49556,7 +49617,7 @@ and limitations under the License.
                 ec,
                 { onSubmit: this.OnSubmitSent, className: "DialogBody" },
                 Sr.createElement(
-                  Zs,
+                  Qs,
                   null,
                   Sr.createElement(
                     "div",
@@ -49636,18 +49697,18 @@ and limitations under the License.
             }),
             rt.b([mt.observable], t.prototype, "m_strRoomName", void 0),
             rt.b([mt.observable], t.prototype, "m_strTagLine", void 0),
-            rt.b([Qt.a], t.prototype, "OnFileChange", null),
-            rt.b([Qt.a], t.prototype, "bindFileUploadControl", null),
-            rt.b([Qt.a], t.prototype, "OnNameChange", null),
-            rt.b([Qt.a], t.prototype, "OnAvatarChange", null),
-            rt.b([Qt.a], t.prototype, "OnTagLineChange", null),
-            rt.b([Qt.a], t.prototype, "OnNameBlur", null),
-            rt.b([Qt.a], t.prototype, "OnTagLineBlur", null),
-            rt.b([Qt.a], t.prototype, "OnSubmitSent", null),
+            rt.b([Zt.a], t.prototype, "OnFileChange", null),
+            rt.b([Zt.a], t.prototype, "bindFileUploadControl", null),
+            rt.b([Zt.a], t.prototype, "OnNameChange", null),
+            rt.b([Zt.a], t.prototype, "OnAvatarChange", null),
+            rt.b([Zt.a], t.prototype, "OnTagLineChange", null),
+            rt.b([Zt.a], t.prototype, "OnNameBlur", null),
+            rt.b([Zt.a], t.prototype, "OnTagLineBlur", null),
+            rt.b([Zt.a], t.prototype, "OnSubmitSent", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
-        Zl = (function(e) {
+        Ql = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -49683,11 +49744,11 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnLeave", null),
+            rt.b([Zt.a], t.prototype, "OnLeave", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
-        Ql = (function(e) {
+        Zl = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -49750,8 +49811,8 @@ and limitations under the License.
                       "div",
                       { className: "_DialogRowLabel" },
                       n
-                        ? Sr.createElement(ks.M, null)
-                        : Sr.createElement(ks.I, null),
+                        ? Sr.createElement(ks.N, null)
+                        : Sr.createElement(ks.J, null),
                       Sr.createElement(
                         "div",
                         {
@@ -49805,13 +49866,13 @@ and limitations under the License.
                   Vs,
                   null,
                   Sr.createElement(
-                    Zs,
+                    Qs,
                     null,
                     Sr.createElement(
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: ks.I,
+                        svgicon: ks.J,
                         onClick: this.OnCreateNewTextChannel,
                         disabled: !this.props.enabled
                       },
@@ -49823,7 +49884,7 @@ and limitations under the License.
                       T,
                       {
                         className: "DialogButtonTall",
-                        svgicon: ks.M,
+                        svgicon: ks.N,
                         onClick: this.OnCreateNewVoiceChannel,
                         disabled: !this.props.enabled
                       },
@@ -49866,16 +49927,16 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnCreateNewTextChannel", null),
-            rt.b([Qt.a], t.prototype, "OnCreateNewVoiceChannel", null),
-            rt.b([Qt.a], t.prototype, "OnDeleteChannel", null),
+            rt.b([Zt.a], t.prototype, "OnCreateNewTextChannel", null),
+            rt.b([Zt.a], t.prototype, "OnCreateNewVoiceChannel", null),
+            rt.b([Zt.a], t.prototype, "OnDeleteChannel", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
         $l = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return Zp.FriendStore.self, (i.state = { strRoleName: "" }), i;
+            return Qp.FriendStore.self, (i.state = { strRoleName: "" }), i;
           }
           return (
             rt.c(t, e),
@@ -49943,8 +50004,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
             t
           );
         })(Sr.Component),
@@ -50088,7 +50149,7 @@ and limitations under the License.
                       Sr.createElement(
                         Xs,
                         null,
-                        Sr.createElement(ks.q, null),
+                        Sr.createElement(ks.r, null),
                         Object(gr.b)("#Chat_Settings_Permission_Denied")
                       ),
                     Sr.createElement(
@@ -50226,27 +50287,33 @@ and limitations under the License.
                     t.role_id == r
                       ? (Object(gr.b)("#ChatRoomRole_Member"), (i = !0))
                       : e.props.group.BMemberHasRole(
-                          Zp.FriendStore.self.accountid,
+                          Qp.FriendStore.self.accountid,
                           t.role_id
                         ) && (i = !0),
                     Sr.createElement(
-                      T,
-                      {
-                        key: t.role_id,
-                        className: "roleButton" + (i ? " currentUserRole" : ""),
-                        onClick: function(i) {
-                          e.EditRole(t.role_id);
-                        }
-                      },
-                      Sr.createElement(ks.i, null),
-                      Object(gr.b)(t.name),
+                      "div",
+                      { className: "roleRow" },
                       Sr.createElement(
-                        "span",
-                        { className: "roleSubtitle" },
-                        e.props.enabled
-                          ? Object(gr.b)("#Generic_Edit")
-                          : Object(gr.b)("#Generic_View")
-                      )
+                        T,
+                        {
+                          key: t.role_id,
+                          className:
+                            "roleButton" + (i ? " currentUserRole" : ""),
+                          onClick: function(i) {
+                            e.EditRole(t.role_id);
+                          }
+                        },
+                        Sr.createElement(ks.i, null),
+                        Object(gr.b)(t.name),
+                        Sr.createElement(
+                          "span",
+                          { className: "roleSubtitle" },
+                          e.props.enabled
+                            ? Object(gr.b)("#Generic_Edit")
+                            : Object(gr.b)("#Generic_View")
+                        )
+                      ),
+                      !1
                     )
                   );
                 });
@@ -50261,7 +50328,7 @@ and limitations under the License.
                     Sr.createElement(
                       Xs,
                       null,
-                      Sr.createElement(ks.q, null),
+                      Sr.createElement(ks.r, null),
                       Object(gr.b)(
                         "#Chat_Settings_Permission_Denied_Permissions"
                       )
@@ -50312,7 +50379,7 @@ and limitations under the License.
                   k,
                   {
                     className: "createNewRoleButton",
-                    svgicon: ks.y,
+                    svgicon: ks.z,
                     onClick: this.OnCreateRole,
                     disabled: !this.props.enabled
                   },
@@ -50320,14 +50387,14 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnCreateRole", null),
-            rt.b([Qt.a], t.prototype, "EditRole", null),
-            rt.b([Qt.a], t.prototype, "RenameRole", null),
-            rt.b([Qt.a], t.prototype, "DeleteRole", null),
-            rt.b([Qt.a], t.prototype, "OnEditRoleNameChange", null),
-            rt.b([Qt.a], t.prototype, "OnEditRoleNameBlur", null),
-            rt.b([Qt.a], t.prototype, "OnSettingToggled", null),
-            rt.b([Qt.a], t.prototype, "PermissionToggleRow", null),
+            rt.b([Zt.a], t.prototype, "OnCreateRole", null),
+            rt.b([Zt.a], t.prototype, "EditRole", null),
+            rt.b([Zt.a], t.prototype, "RenameRole", null),
+            rt.b([Zt.a], t.prototype, "DeleteRole", null),
+            rt.b([Zt.a], t.prototype, "OnEditRoleNameChange", null),
+            rt.b([Zt.a], t.prototype, "OnEditRoleNameBlur", null),
+            rt.b([Zt.a], t.prototype, "OnSettingToggled", null),
+            rt.b([Zt.a], t.prototype, "PermissionToggleRow", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -50399,7 +50466,7 @@ and limitations under the License.
             (t.prototype.FormatExpires = function(e) {
               return e > 2145916800
                 ? Object(gr.b)("#GroupSettings_Invite_NeverExpires")
-                : Zp.RTime32ToDate(e).toLocaleString([], {
+                : Qp.RTime32ToDate(e).toLocaleString([], {
                     year: "numeric",
                     month: "numeric",
                     day: "numeric",
@@ -50533,8 +50600,8 @@ and limitations under the License.
                 i
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnDeleteLink", null),
-            rt.b([Qt.a], t.prototype, "HandleFocus", null),
+            rt.b([Zt.a], t.prototype, "OnDeleteLink", null),
+            rt.b([Zt.a], t.prototype, "HandleFocus", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -50568,7 +50635,7 @@ and limitations under the License.
             }),
             (t.prototype.RevokeInvite = function(e) {
               var t = this,
-                i = Zp.FriendStore.GetPlayer(e),
+                i = Qp.FriendStore.GetPlayer(e),
                 n = Sr.createElement(Yu, {
                   className: "friend",
                   friend: i,
@@ -50596,7 +50663,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Zp.RTime32ToDate(e).toLocaleString([], {
+              return Qp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50617,7 +50684,7 @@ and limitations under the License.
                     Object(gr.b)("#GroupSettings_InvitedUsers_Noone")
                   );
                 var t = this.props.invitedUsers.rgInvitedUsers.map(function(t) {
-                  var i = Zp.FriendStore.GetPlayer(t.accountid());
+                  var i = Qp.FriendStore.GetPlayer(t.accountid());
                   return Sr.createElement(
                     "tr",
                     { className: "hoverRow", key: t.accountid() },
@@ -50704,7 +50771,7 @@ and limitations under the License.
                   : Object(gr.b)("#GroupSettings_InvitedUsers_Failed")
               );
             }),
-            rt.b([Qt.a], t.prototype, "RevokeInvite", null),
+            rt.b([Zt.a], t.prototype, "RevokeInvite", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -50730,7 +50797,7 @@ and limitations under the License.
             (t.prototype.componentWillUnmount = function() {}),
             (t.prototype.OnClickUnban = function(e) {
               var t = this,
-                i = Zp.FriendStore.GetPlayer(e),
+                i = Qp.FriendStore.GetPlayer(e),
                 n = Sr.createElement(Yu, {
                   className: "friend",
                   friend: i,
@@ -50758,7 +50825,7 @@ and limitations under the License.
                 .catch(function() {});
             }),
             (t.prototype.FormatDate = function(e) {
-              return Zp.RTime32ToDate(e).toLocaleString([], {
+              return Qp.RTime32ToDate(e).toLocaleString([], {
                 year: "numeric",
                 month: "short",
                 day: "numeric",
@@ -50777,7 +50844,7 @@ and limitations under the License.
                       Object(gr.b)("#GroupSettings_Bans_NoOneBanned")
                     )
                   : ((e = this.props.bans.rgBans.map(function(e) {
-                      var i = Zp.FriendStore.GetPlayer(e.accountid());
+                      var i = Qp.FriendStore.GetPlayer(e.accountid());
                       return Sr.createElement(
                         "tr",
                         { className: "hoverRow", key: e.accountid() },
@@ -50857,7 +50924,7 @@ and limitations under the License.
                 Sr.createElement(ec, { className: "DialogBody" }, i)
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnClickUnban", null),
+            rt.b([Zt.a], t.prototype, "OnClickUnban", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -50998,14 +51065,14 @@ and limitations under the License.
                 description: e.strDesc ? e.strDesc : ""
               });
             }),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
-            rt.b([Qt.a], t.prototype, "HandleRadioChange", null),
-            rt.b([Qt.a], t.prototype, "OnSettingToggled", null),
-            rt.b([Qt.a], t.prototype, "OnCommunityPreferenceToggled", null),
-            rt.b([Qt.a], t.prototype, "FriendsSettingsToggleRow", null),
-            rt.b([Qt.a], t.prototype, "FriendsSettingsCheckbox", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleRadioChange", null),
+            rt.b([Zt.a], t.prototype, "OnSettingToggled", null),
+            rt.b([Zt.a], t.prototype, "OnCommunityPreferenceToggled", null),
+            rt.b([Zt.a], t.prototype, "FriendsSettingsToggleRow", null),
+            rt.b([Zt.a], t.prototype, "FriendsSettingsCheckbox", null),
             rt.b(
-              [Qt.a],
+              [Zt.a],
               t.prototype,
               "FriendsSettingsCommunityPreferenceToggleRow",
               null
@@ -51193,7 +51260,7 @@ and limitations under the License.
                         Object(gr.b)("#FriendSettings_Flash_Header")
                       ),
                       Sr.createElement(
-                        Qs,
+                        Zs,
                         { className: "FriendsSettingsFlashSection_ButtonRow" },
                         Sr.createElement(
                           T,
@@ -51232,7 +51299,7 @@ and limitations under the License.
                   Sr.createElement(D, { onCancel: this.props.onCancel })
               );
             }),
-            rt.b([Qt.a], t.prototype, "FriendsSettingsNotificationRow", null),
+            rt.b([Zt.a], t.prototype, "FriendsSettingsNotificationRow", null),
             (t = rt.b([Es.observer], t))
           );
         })(ru),
@@ -51342,7 +51409,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e),
-                  Zp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Qp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1));
             }),
             (t.prototype.OnTogglePushToTalk = function() {
@@ -51351,9 +51418,9 @@ and limitations under the License.
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.SetPushToTalkEnabled
               ) {
-                var e = Zp.VoiceStore.GetPushToTalkEnabled();
+                var e = Qp.VoiceStore.GetPushToTalkEnabled();
                 SteamClient.WebChat.SetPushToTalkEnabled(!e),
-                  Zp.VoiceStore.SetPushToTalkEnabled(!e);
+                  Qp.VoiceStore.SetPushToTalkEnabled(!e);
               }
             }),
             (t.prototype.AssignHotkey = function() {
@@ -51369,7 +51436,7 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkMouseButton &&
                   (SteamClient.WebChat.SetPushToTalkMouseButton(e.button),
-                  Zp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Qp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
@@ -51382,16 +51449,16 @@ and limitations under the License.
                 (void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToTalkHotKey &&
                   (SteamClient.WebChat.SetPushToTalkHotKey(e.keyCode),
-                  Zp.VoiceStore.RefreshPushToTalkKeySettings()),
+                  Qp.VoiceStore.RefreshPushToTalkKeySettings()),
                 this.SetHotKeyCaptureState(!1),
                 e.preventDefault(),
                 e.stopPropagation());
             }),
             (t.prototype.render = function() {
-              var e = Zp.VoiceStore.GetPushToTalkEnabled(),
+              var e = Qp.VoiceStore.GetPushToTalkEnabled(),
                 t = !1,
-                i = (Zp.VoiceStore.GetPushToTalkHotKeyVK(),
-                Zp.VoiceStore.GetPushToTalkHotKeyDisplayString()),
+                i = (Qp.VoiceStore.GetPushToTalkHotKeyVK(),
+                Qp.VoiceStore.GetPushToTalkHotKeyDisplayString()),
                 n = Object(gr.b)("#VoicePushToTalkAssigned");
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
@@ -51429,7 +51496,7 @@ and limitations under the License.
                     }),
                   Sr.createElement(qs, null, Object(gr.b)("#VoiceVolume")),
                   Sr.createElement(
-                    Zs,
+                    Qs,
                     { className: "DialogLabelStrong" },
                     Sr.createElement(sc, {
                       min: 0,
@@ -51517,7 +51584,7 @@ and limitations under the License.
                       Object(gr.b)("#VoiceTransmissionThresholdExplainer")
                     ),
                     Sr.createElement(
-                      Qs,
+                      Zs,
                       { className: "FriendsSettingsFlashSection_ButtonRow" },
                       Sr.createElement(
                         T,
@@ -51598,26 +51665,26 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "gotMediaDevices", null),
-            rt.b([Qt.a], t.prototype, "gotMediaDevicesError", null),
-            rt.b([Qt.a], t.prototype, "onSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnShowAdvancedSettings", null),
-            rt.b([Qt.a], t.prototype, "OnMicDropdownChanged", null),
-            rt.b([Qt.a], t.prototype, "OnInputGainChanged", null),
-            rt.b([Qt.a], t.prototype, "OnOutputGainChanged", null),
-            rt.b([Qt.a], t.prototype, "OnToggleEchoCancellation", null),
-            rt.b([Qt.a], t.prototype, "OnToggleNoiseCancellation", null),
-            rt.b([Qt.a], t.prototype, "OnToggleAutoGainControl", null),
-            rt.b([Qt.a], t.prototype, "SetNoiseGateOff", null),
-            rt.b([Qt.a], t.prototype, "SetNoiseGateMedium", null),
-            rt.b([Qt.a], t.prototype, "SetNoiseGateHigh", null),
-            rt.b([Qt.a], t.prototype, "OnXButtonDown", null),
-            rt.b([Qt.a], t.prototype, "OnTogglePushToTalk", null),
-            rt.b([Qt.a], t.prototype, "AssignHotkey", null),
-            rt.b([Qt.a], t.prototype, "onMouseDown", null),
-            rt.b([Qt.a], t.prototype, "onClick", null),
-            rt.b([Qt.a], t.prototype, "onContextMenu", null),
-            rt.b([Qt.a], t.prototype, "onKeyDown", null),
+            rt.b([Zt.a], t.prototype, "gotMediaDevices", null),
+            rt.b([Zt.a], t.prototype, "gotMediaDevicesError", null),
+            rt.b([Zt.a], t.prototype, "onSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnShowAdvancedSettings", null),
+            rt.b([Zt.a], t.prototype, "OnMicDropdownChanged", null),
+            rt.b([Zt.a], t.prototype, "OnInputGainChanged", null),
+            rt.b([Zt.a], t.prototype, "OnOutputGainChanged", null),
+            rt.b([Zt.a], t.prototype, "OnToggleEchoCancellation", null),
+            rt.b([Zt.a], t.prototype, "OnToggleNoiseCancellation", null),
+            rt.b([Zt.a], t.prototype, "OnToggleAutoGainControl", null),
+            rt.b([Zt.a], t.prototype, "SetNoiseGateOff", null),
+            rt.b([Zt.a], t.prototype, "SetNoiseGateMedium", null),
+            rt.b([Zt.a], t.prototype, "SetNoiseGateHigh", null),
+            rt.b([Zt.a], t.prototype, "OnXButtonDown", null),
+            rt.b([Zt.a], t.prototype, "OnTogglePushToTalk", null),
+            rt.b([Zt.a], t.prototype, "AssignHotkey", null),
+            rt.b([Zt.a], t.prototype, "onMouseDown", null),
+            rt.b([Zt.a], t.prototype, "onClick", null),
+            rt.b([Zt.a], t.prototype, "onContextMenu", null),
+            rt.b([Zt.a], t.prototype, "onKeyDown", null),
             (t = rt.b([Es.observer], t))
           );
         })(uc),
@@ -51628,14 +51695,14 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.SaveFriendSettings = function(e, t) {
-              Zp.SettingsStore.BUpdateFriendsSettings(e),
-                Zp.SettingsStore.SetCommunityPreferences(t);
+              Qp.SettingsStore.BUpdateFriendsSettings(e),
+                Qp.SettingsStore.SetCommunityPreferences(t);
             }),
             (t.prototype.render = function() {
               var e = {
-                  friendsSettingsInitial: Zp.SettingsStore.FriendsSettings,
+                  friendsSettingsInitial: Qp.SettingsStore.FriendsSettings,
                   communityPreferencesInitial:
-                    Zp.SettingsStore.CommunityPreferences,
+                    Qp.SettingsStore.CommunityPreferences,
                   onCancel: this.props.closeModal,
                   onSubmit: this.SaveFriendSettings,
                   bShowClientOpts: nt.a.IN_CLIENT,
@@ -51662,7 +51729,7 @@ and limitations under the License.
                       uniqueName: "FriendSettings_Voice",
                       content: Sr.createElement(su, {
                         onCancel: this.props.closeModal,
-                        voiceStore: Zp.ChatStore.VoiceChat
+                        voiceStore: Qp.ChatStore.VoiceChat
                       })
                     }
                   ]
@@ -51697,14 +51764,14 @@ and limitations under the License.
                 {
                   label: Object(gr.b)(
                     "#NotificationSetting_AnyMention",
-                    Zp.FriendStore.self.display_name
+                    Qp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(gr.b)(
                     "#NotificationSetting_DirectMention",
-                    Zp.FriendStore.self.display_name
+                    Qp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51873,7 +51940,7 @@ and limitations under the License.
                         null,
                         Sr.createElement(N, null),
                         Sr.createElement(
-                          Zs,
+                          Qs,
                           { className: "notificationsChannelHeader" },
                           Sr.createElement(
                             qs,
@@ -51911,13 +51978,13 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "IncrementSavesInFlight", null),
-            rt.b([Qt.a], t.prototype, "DecrementSavesInFlight", null),
-            rt.b([Qt.a], t.prototype, "WrapSavePromise", null),
-            rt.b([Qt.a], t.prototype, "OnGroupNotificationLevelChanged", null),
-            rt.b([Qt.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
-            rt.b([Qt.a], t.prototype, "DismissDialog", null),
-            rt.b([Qt.a], t.prototype, "OnFriendsSettingsClicked", null),
+            rt.b([Zt.a], t.prototype, "IncrementSavesInFlight", null),
+            rt.b([Zt.a], t.prototype, "DecrementSavesInFlight", null),
+            rt.b([Zt.a], t.prototype, "WrapSavePromise", null),
+            rt.b([Zt.a], t.prototype, "OnGroupNotificationLevelChanged", null),
+            rt.b([Zt.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
+            rt.b([Zt.a], t.prototype, "DismissDialog", null),
+            rt.b([Zt.a], t.prototype, "OnFriendsSettingsClicked", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component)),
@@ -51943,14 +52010,14 @@ and limitations under the License.
                 {
                   label: Object(gr.b)(
                     "#NotificationSetting_AnyMention",
-                    Zp.FriendStore.self.display_name
+                    Qp.FriendStore.self.display_name
                   ),
                   data: 3
                 },
                 {
                   label: Object(gr.b)(
                     "#NotificationSetting_DirectMention",
-                    Zp.FriendStore.self.display_name
+                    Qp.FriendStore.self.display_name
                   ),
                   data: 2
                 },
@@ -51971,7 +52038,7 @@ and limitations under the License.
               return (
                 e.GetDesktopNotificationLevelSetting(),
                 Sr.createElement(
-                  Qs,
+                  Zs,
                   { className: "notificationsChannel" },
                   Sr.createElement(
                     "div",
@@ -51986,7 +52053,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnChatNotificationLevelChanged", null),
+            rt.b([Zt.a], t.prototype, "OnChatNotificationLevelChanged", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -51997,7 +52064,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.InviteFriend = function(e) {
-              Zp.UIStore.OpenInviteDialogForChatGroup(
+              Qp.UIStore.OpenInviteDialogForChatGroup(
                 Xe(this, e),
                 e.currentTarget.ownerDocument.defaultView,
                 this.props.groupView.GetGroup()
@@ -52017,7 +52084,7 @@ and limitations under the License.
                 le(t, this.props.groupView.GetGroup());
             }),
             (t.prototype.OnContextMenu = function(e) {
-              Z(e, this.props.groupView.GetGroup(), { is_chat_window: !0 });
+              Q(e, this.props.groupView.GetGroup(), { is_chat_window: !0 });
             }),
             (t.prototype.render = function() {
               var e = this.props.groupView.GetGroup(),
@@ -52086,7 +52153,7 @@ and limitations under the License.
                                 onClick: this.InviteFriend,
                                 title: Object(gr.b)("#Tooltip_InviteToGroup")
                               },
-                              Sr.createElement(ks.p, null)
+                              Sr.createElement(ks.q, null)
                             ),
                           !o &&
                             Sr.createElement(
@@ -52099,7 +52166,7 @@ and limitations under the License.
                                   "#Tooltip_InviteToGroup_Denied"
                                 )
                               },
-                              Sr.createElement(ks.p, null)
+                              Sr.createElement(ks.q, null)
                             ),
                           Sr.createElement(
                             "div",
@@ -52158,17 +52225,17 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "InviteFriend", null),
-            rt.b([Qt.a], t.prototype, "OpenSettings", null),
-            rt.b([Qt.a], t.prototype, "OpenNotificationPreferences", null),
-            rt.b([Qt.a], t.prototype, "LeaveGroup", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "InviteFriend", null),
+            rt.b([Zt.a], t.prototype, "OpenSettings", null),
+            rt.b([Zt.a], t.prototype, "OpenNotificationPreferences", null),
+            rt.b([Zt.a], t.prototype, "LeaveGroup", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
         pu = Object(Es.observer)(function(e) {
           if (!e.small && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
-            var t = Zp.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
+            var t = Qp.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
             return Sr.createElement(
               "div",
               {
@@ -52224,7 +52291,7 @@ and limitations under the License.
               var e = this,
                 t = this.props.group;
               if (t && t.BIsClanChatRoom()) {
-                var i = Zp.FriendStore.ClanStore.GetClan(t.GetClanID());
+                var i = Qp.FriendStore.ClanStore.GetClan(t.GetClanID());
                 return Sr.createElement(pu, {
                   clan: i,
                   small: this.props.small,
@@ -52332,7 +52399,7 @@ and limitations under the License.
                 t.length || i)
               ) {
                 var r = t,
-                  o = Zp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                  o = Qp.SettingsStore.FriendsSettings.bCompactQuickAccess;
                 i &&
                   (this.m_bGhostIsDupe &&
                     r.findIndex(function(e) {
@@ -52459,7 +52526,7 @@ and limitations under the License.
                 if (o instanceof fs) {
                   var a = o.GetGroup();
                   a.BIsClanChatRoom() &&
-                    (n = Zp.FriendStore.ClanStore.GetClan(a.GetClanID())),
+                    (n = Qp.FriendStore.ClanStore.GetClan(a.GetClanID())),
                     (r = a);
                 } else {
                   var s = o.GetChatView();
@@ -52527,13 +52594,13 @@ and limitations under the License.
             rt.b([mt.observable], t.prototype, "m_iActiveDragIndex", void 0),
             rt.b([mt.observable], t.prototype, "m_ActiveDrag", void 0),
             rt.b([mt.observable], t.prototype, "m_ActiveDragOut", void 0),
-            rt.b([Qt.a], t.prototype, "DismissFavoritesHint", null),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "DismissFavoritesHint", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -52589,12 +52656,12 @@ and limitations under the License.
         })(Sr.Component),
         fu = Object(Es.observer)(function(e) {
           var t = e.friend,
-            i = Zp.SettingsStore.FriendsSettings.bCompactQuickAccess,
+            i = Qp.SettingsStore.FriendsSettings.bCompactQuickAccess,
             n = null;
           t.persona.is_awayOrSnooze && (n = Sr.createElement(ju, null));
           var r = void 0;
           if (t.persona.is_ingame) {
-            var o = Zp.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
+            var o = Qp.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
             o.is_valid &&
               (r = Sr.createElement(
                 "div",
@@ -52666,16 +52733,16 @@ and limitations under the License.
               Tm.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
-              Q(e, this.props.clan, { is_favorites: !0 });
+              Z(e, this.props.clan, { is_favorites: !0 });
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessFriend QuickAccessClan",
-                t = Zp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                t = Qp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               this.props.className && (e += " " + this.props.className);
               var i = null,
                 n = this.props.clan.GetChatGroupIDIfLoaded();
               if (n) {
-                var r = Zp.ChatStore.GetChatRoomGroup(n);
+                var r = Qp.ChatStore.GetChatRoomGroup(n);
                 r &&
                   r.HasUnreadChatMessage &&
                   (i = Sr.createElement(
@@ -52708,9 +52775,9 @@ and limitations under the License.
                 i
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -52721,7 +52788,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.OnClick = function(e) {
-              Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+              Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                 Xe(this, e),
                 this.props.chat,
                 !0
@@ -52737,12 +52804,12 @@ and limitations under the License.
               Tm.DragDropManager.EndDrag();
             }),
             (t.prototype.OnContextMenu = function(e) {
-              Z(e, this.props.chat, { is_favorites: !0 });
+              Q(e, this.props.chat, { is_favorites: !0 });
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessChat",
                 t = null,
-                i = Zp.SettingsStore.FriendsSettings.bCompactQuickAccess;
+                i = Qp.SettingsStore.FriendsSettings.bCompactQuickAccess;
               return (
                 this.props.chat.HasUnreadChatMessage &&
                   (t = Sr.createElement(
@@ -52778,10 +52845,10 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnClick", null),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnClick", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -52789,7 +52856,7 @@ and limitations under the License.
           function t(t) {
             var i = e.call(this, t) || this;
             return (
-              Zp.FriendStore.self,
+              Qp.FriendStore.self,
               (i.state = {
                 strCurrentNameEntry: "",
                 strError: void 0,
@@ -52851,20 +52918,20 @@ and limitations under the License.
                 }));
               var n = this.props.chatViewToReplace;
               if (n) {
-                var r = new Za(
+                var r = new Qa(
                   this.props.chatViewToReplace.chat.accountid_partner
                 );
                 i.push(r.persona.m_steamid.ConvertTo64BitString());
                 var o = $e(e);
                 return (
-                  Zp.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
+                  Qp.UIStore.ReplaceFriendChatWithGroupChat(o, n, i),
                   void this.props.closeModal()
                 );
               }
               var a = this.props.bHideChatNameEntry
                 ? ""
                 : this.state.strCurrentNameEntry;
-              Zp.ChatStore.CreateChatRoomGroup(
+              Qp.ChatStore.CreateChatRoomGroup(
                 this.props.browserContext,
                 a,
                 i
@@ -52987,10 +53054,10 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "OnFriendPickerRef", null),
-            rt.b([Qt.a], t.prototype, "OnFriendListSelectionChanged", null),
-            rt.b([Qt.a], t.prototype, "HandleSubmit", null),
+            rt.b([Zt.a], t.prototype, "HandleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "OnFriendPickerRef", null),
+            rt.b([Zt.a], t.prototype, "OnFriendListSelectionChanged", null),
+            rt.b([Zt.a], t.prototype, "HandleSubmit", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -53014,7 +53081,7 @@ and limitations under the License.
                 },
                 !t && Sr.createElement(pe, null),
                 Sr.createElement("span", null, e.friend.display_name),
-                Sr.createElement(ks.P, null)
+                Sr.createElement(ks.Q, null)
               )
             )
           );
@@ -53196,9 +53263,9 @@ and limitations under the License.
             }),
             (e.m_embeddedElements = new Ts.a("CFriendHoverContainer")),
             rt.b([mt.observable], e.prototype, "m_communityData", void 0),
-            rt.b([Qt.a], e.prototype, "Show", null),
-            rt.b([Qt.a], e.prototype, "Hide", null),
-            rt.b([Qt.a], e.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], e.prototype, "Show", null),
+            rt.b([Zt.a], e.prototype, "Hide", null),
+            rt.b([Zt.a], e.prototype, "OnContextMenu", null),
             e
           );
         })(),
@@ -53273,14 +53340,14 @@ and limitations under the License.
                           className: "title-area-icon closeButton",
                           onClick: t
                         },
-                        Sr.createElement(ks.P, null)
+                        Sr.createElement(ks.Q, null)
                       ),
                       !this.props.hideMinMax &&
                         Sr.createElement(
                           "div",
                           { className: r, onClick: i },
-                          this.state.maximized && Sr.createElement(ks.C, null),
-                          !this.state.maximized && Sr.createElement(ks.s, null)
+                          this.state.maximized && Sr.createElement(ks.D, null),
+                          !this.state.maximized && Sr.createElement(ks.t, null)
                         ),
                       !this.props.hideMinMax &&
                         Sr.createElement(
@@ -53289,13 +53356,13 @@ and limitations under the License.
                             className: "title-area-icon minimizeButton",
                             onClick: n
                           },
-                          Sr.createElement(ks.u, null)
+                          Sr.createElement(ks.v, null)
                         )
                     )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "UpdateMaximizeState", null),
+            rt.b([Zt.a], t.prototype, "UpdateMaximizeState", null),
             t
           );
         })(Sr.Component)),
@@ -53306,7 +53373,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.PostDate = function(e) {
-              var t = Zp.RTime32ToDate(e),
+              var t = Qp.RTime32ToDate(e),
                 i = {
                   weekday: "long",
                   year: "numeric",
@@ -53529,7 +53596,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "PostDate", null),
+            rt.b([Zt.a], t.prototype, "PostDate", null),
             t
           );
         })(Sr.Component),
@@ -53668,26 +53735,26 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.ActivateActiveVoiceChat = function(e) {
               if (this.props.chat instanceof ps) {
-                var t = Zp.ChatStore.GetChatRoomGroup(
+                var t = Qp.ChatStore.GetChatRoomGroup(
                   this.props.chat.GetParentGroupID()
                 );
                 if (t)
-                  return void Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+                  return void Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                     Xe(this, e),
                     t,
                     !0
                   );
               }
-              Zp.UIStore.ShowAndOrActivateChat(
+              Qp.UIStore.ShowAndOrActivateChat(
                 Xe(this, e),
                 this.props.chat,
                 !0
               );
             }),
             (t.prototype.render = function() {
-              var e = Zp.VoiceStore.GetPushToTalkEnabled(),
-                t = Zp.VoiceStore.GetPushToTalkKeyDown(),
-                i = Zp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var e = Qp.VoiceStore.GetPushToTalkEnabled(),
+                t = Qp.VoiceStore.GetPushToTalkKeyDown(),
+                i = Qp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 n = "";
               return (
                 e && (n += " pushToTalkEnabled"),
@@ -53744,7 +53811,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ActivateActiveVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "ActivateActiveVoiceChat", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -53755,15 +53822,15 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.ToggleMicrophone = function(e) {
-              Zp.VoiceStore.IsMicMuted() &&
-                Zp.VoiceStore.IsOutputMuted() &&
-                Zp.VoiceStore.ToggleOutputMuting(),
-                Zp.VoiceStore.ToggleMicMuting(),
+              Qp.VoiceStore.IsMicMuted() &&
+                Qp.VoiceStore.IsOutputMuted() &&
+                Qp.VoiceStore.ToggleOutputMuting(),
+                Qp.VoiceStore.ToggleMicMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Zp.VoiceStore.BNoMicAvailableForSession(),
-                t = Zp.VoiceStore.IsMicMuted(),
+              var e = Qp.VoiceStore.BNoMicAvailableForSession(),
+                t = Qp.VoiceStore.IsMicMuted(),
                 i = "VoiceControlPanelButton ToggleMicrophoneButton",
                 n = "";
               return (
@@ -53777,12 +53844,12 @@ and limitations under the License.
                 Sr.createElement(
                   "button",
                   { className: i, onClick: this.ToggleMicrophone, title: n },
-                  Sr.createElement(ks.t, null),
-                  Sr.createElement(ks.t, { className: "SVGIcon_Shadow" })
+                  Sr.createElement(ks.u, null),
+                  Sr.createElement(ks.u, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ToggleMicrophone", null),
+            rt.b([Zt.a], t.prototype, "ToggleMicrophone", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -53793,13 +53860,13 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.ToggleVoiceOutput = function(e) {
-              Zp.VoiceStore.IsOutputMuted() == Zp.VoiceStore.IsMicMuted() &&
-                Zp.VoiceStore.ToggleMicMuting(),
-                Zp.VoiceStore.ToggleOutputMuting(),
+              Qp.VoiceStore.IsOutputMuted() == Qp.VoiceStore.IsMicMuted() &&
+                Qp.VoiceStore.ToggleMicMuting(),
+                Qp.VoiceStore.ToggleOutputMuting(),
                 e.stopPropagation();
             }),
             (t.prototype.render = function() {
-              var e = Zp.VoiceStore.IsOutputMuted(),
+              var e = Qp.VoiceStore.IsOutputMuted(),
                 t = "VoiceControlPanelButton ToggleVoiceOutputButton";
               e && (t += " disabled");
               var i = "";
@@ -53810,12 +53877,12 @@ and limitations under the License.
                 Sr.createElement(
                   "button",
                   { className: t, onClick: this.ToggleVoiceOutput, title: i },
-                  Sr.createElement(ks.o, null),
-                  Sr.createElement(ks.o, { className: "SVGIcon_Shadow" })
+                  Sr.createElement(ks.p, null),
+                  Sr.createElement(ks.p, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ToggleVoiceOutput", null),
+            rt.b([Zt.a], t.prototype, "ToggleVoiceOutput", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -53826,7 +53893,7 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.EndVoiceChat = function(e) {
-              Zp.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
+              Qp.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
             }),
             (t.prototype.render = function() {
               return Sr.createElement(
@@ -53836,10 +53903,10 @@ and limitations under the License.
                   onClick: this.EndVoiceChat,
                   title: Object(gr.b)("#VoiceChat_Leave")
                 },
-                Sr.createElement(ks.M, null)
+                Sr.createElement(ks.N, null)
               );
             }),
-            rt.b([Qt.a], t.prototype, "EndVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "EndVoiceChat", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -53968,16 +54035,16 @@ and limitations under the License.
                 },
                 function() {
                   e.state.bViewingIncomingInvites &&
-                    (Zp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                    Zp.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
+                    (Qp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                    Qp.FriendStore.ClanStore.EnsureInitialStateForClanInvites());
                 }
               );
             }),
             (t.prototype.componentWillUpdate = function() {
               var e =
-                  Zp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Qp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                t = Zp.FriendStore.ClanStore.clan_invites.length > 0;
+                t = Qp.FriendStore.ClanStore.clan_invites.length > 0;
               e ||
                 t ||
                 !this.state.bViewingIncomingInvites ||
@@ -53987,13 +54054,13 @@ and limitations under the License.
               var e = this.props.friends.self,
                 t = this.GetNormalizedSearchString(),
                 i =
-                  Zp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Qp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count > 0,
-                n = Zp.FriendStore.ClanStore.clan_invites.length > 0,
+                n = Qp.FriendStore.ClanStore.clan_invites.length > 0,
                 r =
-                  Zp.FriendStore.FriendGroupStore.incoming_invites_group
+                  Qp.FriendStore.FriendGroupStore.incoming_invites_group
                     .member_count +
-                  Zp.FriendStore.ClanStore.clan_invites.length,
+                  Qp.FriendStore.ClanStore.clan_invites.length,
                 o = "friendRequestButton";
               this.state.bViewingIncomingInvites &&
                 (o += " friendRequestViewActive");
@@ -54004,7 +54071,7 @@ and limitations under the License.
               this.state.tabLabelWidth > 0 &&
                 (c.width = this.state.tabLabelWidth + "px");
               var l = !1;
-              this.props.popup && (l = Ze(this.props.popup) != Jp);
+              this.props.popup && (l = Qe(this.props.popup) != Jp);
               var u = !1,
                 d = 0,
                 p = !1,
@@ -54020,7 +54087,7 @@ and limitations under the License.
               var g = this.props.chats.GetActiveVoiceChat(),
                 f = !1;
               (this.props.chats.VoiceChat.IsAnyVoiceActive() || g) && (f = !0);
-              var _ = Zp.SettingsStore.FriendsSettings.bCompactFriendsList;
+              var _ = Qp.SettingsStore.FriendsSettings.bCompactFriendsList;
               return Sr.createElement(
                 "div",
                 {
@@ -54055,7 +54122,7 @@ and limitations under the License.
                             ? Object(gr.b)("#Tooltip_FriendsListUpdate_VeryOld")
                             : Object(gr.b)("#Tooltip_FriendsListUpdate")
                         },
-                        Sr.createElement(ks.A, null)
+                        Sr.createElement(ks.B, null)
                       ),
                     Sr.createElement(
                       "div",
@@ -54065,7 +54132,7 @@ and limitations under the License.
                         onClick: this.OnSettingsClick,
                         title: Object(gr.b)("#Tooltip_Settings")
                       },
-                      Sr.createElement(ks.E, null)
+                      Sr.createElement(ks.F, null)
                     )
                   ),
                   Sr.createElement(
@@ -54160,7 +54227,7 @@ and limitations under the License.
                                             className: "friendSearchClear",
                                             onClick: this.OnClearSearch
                                           },
-                                          Sr.createElement(ks.P, null)
+                                          Sr.createElement(ks.Q, null)
                                         )
                                       )
                                     )
@@ -54174,7 +54241,7 @@ and limitations under the License.
                                 onClick: this.OnTabSearchClick,
                                 title: Object(gr.b)("#Tooltip_SearchFriends")
                               },
-                              Sr.createElement(ks.r, null)
+                              Sr.createElement(ks.s, null)
                             )
                           ),
                           (i || n) &&
@@ -54185,7 +54252,7 @@ and limitations under the License.
                                 onClick: this.ToggleViewingIncomingInvites,
                                 title: Object(gr.c)("#Tooltip_FriendRequest", r)
                               },
-                              Sr.createElement(ks.m, null),
+                              Sr.createElement(ks.n, null),
                               Sr.createElement(
                                 "div",
                                 { className: "requestsNumber" },
@@ -54227,19 +54294,19 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnSearchInputRef", null),
-            rt.b([Qt.a], t.prototype, "StartSearchOnKeyPress", null),
-            rt.b([Qt.a], t.prototype, "OnSearchInput", null),
-            rt.b([Qt.a], t.prototype, "OnSearchSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnSearchSelection", null),
-            rt.b([Qt.a], t.prototype, "OnSearchKeyDown", null),
-            rt.b([Qt.a], t.prototype, "OnClearSearch", null),
-            rt.b([Qt.a], t.prototype, "OnSettingsClick", null),
-            rt.b([Qt.a], t.prototype, "OnDoFriendsListUpdate", null),
-            rt.b([Qt.a], t.prototype, "BindTabLabel", null),
-            rt.b([Qt.a], t.prototype, "CollapseTabLabel", null),
-            rt.b([Qt.a], t.prototype, "OnTabSearchClick", null),
-            rt.b([Qt.a], t.prototype, "ToggleViewingIncomingInvites", null),
+            rt.b([Zt.a], t.prototype, "OnSearchInputRef", null),
+            rt.b([Zt.a], t.prototype, "StartSearchOnKeyPress", null),
+            rt.b([Zt.a], t.prototype, "OnSearchInput", null),
+            rt.b([Zt.a], t.prototype, "OnSearchSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnSearchSelection", null),
+            rt.b([Zt.a], t.prototype, "OnSearchKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnClearSearch", null),
+            rt.b([Zt.a], t.prototype, "OnSettingsClick", null),
+            rt.b([Zt.a], t.prototype, "OnDoFriendsListUpdate", null),
+            rt.b([Zt.a], t.prototype, "BindTabLabel", null),
+            rt.b([Zt.a], t.prototype, "CollapseTabLabel", null),
+            rt.b([Zt.a], t.prototype, "OnTabSearchClick", null),
+            rt.b([Zt.a], t.prototype, "ToggleViewingIncomingInvites", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -54310,7 +54377,7 @@ and limitations under the License.
                       ? Object(gr.b)("#changeLog_Value_Button", t)
                       : Object(gr.b)("#changeLog_Button")
                   },
-                  Sr.createElement(ks.D, null),
+                  Sr.createElement(ks.E, null),
                   e &&
                     Sr.createElement(
                       "div",
@@ -54320,7 +54387,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OpenChangeLog", null),
+            rt.b([Zt.a], t.prototype, "OpenChangeLog", null),
             t
           );
         })(Sr.Component),
@@ -54345,7 +54412,7 @@ and limitations under the License.
                   });
             }),
             (t.prototype.CopyVoiceLogsToClipboard = function() {
-              var e = Zp.ChatStore.VoiceChat.GetVoiceLogs(),
+              var e = Qp.ChatStore.VoiceChat.GetVoiceLogs(),
                 t = document.createElement("textarea");
               (t.textContent = e),
                 (t.style.position = "fixed"),
@@ -54360,13 +54427,13 @@ and limitations under the License.
               }
             }),
             (t.prototype.ToggleVoiceLogToConsole = function() {
-              Zp.ChatStore.VoiceChat.SetVoiceLogDetails(
-                !Zp.ChatStore.VoiceChat.GetVoiceLogDetails()
+              Qp.ChatStore.VoiceChat.SetVoiceLogDetails(
+                !Qp.ChatStore.VoiceChat.GetVoiceLogDetails()
               );
             }),
             (t.prototype.ToggleLocalMicEcho = function() {
-              Zp.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
-                !Zp.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
+              Qp.ChatStore.VoiceChat.SetVoiceEchoLocalMic(
+                !Qp.ChatStore.VoiceChat.GetVoiceEchoLocalMic()
               );
             }),
             (t.prototype.debugAudioClicked = function() {
@@ -54380,7 +54447,7 @@ and limitations under the License.
                 Sr.Fragment,
                 null,
                 t &&
-                  Zp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Qp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Sr.createElement(
                     "button",
                     {
@@ -54390,7 +54457,7 @@ and limitations under the License.
                     Object(gr.b)("#ToggleVoiceConsoleLog")
                   ),
                 t &&
-                  Zp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Qp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Sr.createElement(
                     "button",
                     {
@@ -54400,7 +54467,7 @@ and limitations under the License.
                     Object(gr.b)("#ToggleLocalMicEcho")
                   ),
                 t &&
-                  Zp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Qp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                   Sr.createElement(
                     "button",
                     {
@@ -54416,7 +54483,7 @@ and limitations under the License.
                   !1,
                   Sr.createElement(Nu, null),
                   Sr.createElement(Du, null),
-                  Zp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
+                  Qp.ChatStore.VoiceChat.IsAnyVoiceActive() &&
                     Sr.createElement(
                       "div",
                       {
@@ -54431,16 +54498,16 @@ and limitations under the License.
               );
             }),
             rt.b(
-              [Qt.a],
+              [Zt.a],
               t.prototype,
               "CopyVoiceLogsToClipboardAndConfirm",
               null
             ),
-            rt.b([Qt.a], t.prototype, "CopyVoiceLogsToClipboard", null),
-            rt.b([Qt.a], t.prototype, "ToggleVoiceLogToConsole", null),
-            rt.b([Qt.a], t.prototype, "ToggleLocalMicEcho", null),
-            rt.b([Qt.a], t.prototype, "debugAudioClicked", null),
-            rt.b([Qt.a], t.prototype, "OnSettingsZooClick", null),
+            rt.b([Zt.a], t.prototype, "CopyVoiceLogsToClipboard", null),
+            rt.b([Zt.a], t.prototype, "ToggleVoiceLogToConsole", null),
+            rt.b([Zt.a], t.prototype, "ToggleLocalMicEcho", null),
+            rt.b([Zt.a], t.prototype, "debugAudioClicked", null),
+            rt.b([Zt.a], t.prototype, "OnSettingsZooClick", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -54454,8 +54521,8 @@ and limitations under the License.
               return X(Xe(this, e), e);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
-              var e = Ze(this.props.popup);
-              Zp.UIStore.BIsDockedFriendsList(e)
+              var e = Qe(this.props.popup);
+              Qp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
                     Tm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
@@ -54473,11 +54540,11 @@ and limitations under the License.
               var e = this.props.currentUser,
                 t = "currentUserContainer " + he(e.persona),
                 i = null;
-              Zp.FriendStore.BIsInvisibleMode() &&
+              Qp.FriendStore.BIsInvisibleMode() &&
                 (i = Object(gr.b)("#PersonaStateInvisible"));
               var n = !1;
               return (
-                this.props.popup && (n = Ze(this.props.popup) != Jp),
+                this.props.popup && (n = Qe(this.props.popup) != Jp),
                 Sr.createElement(
                   "div",
                   { className: t },
@@ -54537,7 +54604,7 @@ and limitations under the License.
                         className: "currentUserAvatar",
                         src: e.persona.avatar_url_full
                       }),
-                      Sr.createElement(Zu, {
+                      Sr.createElement(Qu, {
                         friend: e,
                         strOverrideStatus: i,
                         onShowContextMenu: this.OnShowContextMenu
@@ -54557,13 +54624,13 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Sr.createElement(ks.F, null)
+                      Sr.createElement(ks.G, null)
                     )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnShowContextMenu", null),
-            rt.b([Qt.a], t.prototype, "ToggleSingleWindowToggle", null),
+            rt.b([Zt.a], t.prototype, "OnShowContextMenu", null),
+            rt.b([Zt.a], t.prototype, "ToggleSingleWindowToggle", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -54612,7 +54679,7 @@ and limitations under the License.
             }),
             (t.prototype.OnAcceptClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Zp.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
+              Qp.FriendStore.ClanStore.RespondToClanInvite(t, !0).then(function(
                 e
               ) {
                 e ||
@@ -54625,7 +54692,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDeclineClanInvite = function(e, t) {
               var i = e.currentTarget.ownerDocument.defaultView;
-              Zp.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
+              Qp.FriendStore.ClanStore.RespondToClanInvite(t, !1).then(function(
                 e
               ) {
                 e ||
@@ -54648,12 +54715,12 @@ and limitations under the License.
                 };
               if (this.props.friends.self.is_ready)
                 if (n) {
-                  var o = Zp.FriendStore.ClanStore.clan_invites.length,
-                    a = dt.a.InitFromAccountID(Zp.FriendStore.self.accountid),
+                  var o = Qp.FriendStore.ClanStore.clan_invites.length,
+                    a = dt.a.InitFromAccountID(Qp.FriendStore.self.accountid),
                     s = (nt.a.COMMUNITY_BASE_URL, a.ConvertTo64BitString(), []);
                   if (o)
                     for (
-                      var c = 0, l = Zp.FriendStore.ClanStore.clan_invites;
+                      var c = 0, l = Qp.FriendStore.ClanStore.clan_invites;
                       c < l.length;
                       c++
                     ) {
@@ -54883,7 +54950,7 @@ and limitations under the License.
                     ));
                 }
               else e = void 0;
-              var f = Zp.SettingsStore.FriendsSettings.bCompactFriendsList;
+              var f = Qp.SettingsStore.FriendsSettings.bCompactFriendsList;
               return Sr.createElement(
                 "div",
                 {
@@ -54898,7 +54965,7 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                Sr.createElement(Qu, {
+                Sr.createElement(Zu, {
                   browserContext: this.props.browserContext,
                   bScrolledFromTop: this.state.bScrolledFromTop && !i,
                   onClick: this.ScrollToTop
@@ -54929,12 +54996,12 @@ and limitations under the License.
                 })
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
-            rt.b([Qt.a], t.prototype, "BindFriendsListContent", null),
-            rt.b([Qt.a], t.prototype, "OnFriendsListKeyDown", null),
-            rt.b([Qt.a], t.prototype, "OnFriendsListScrollRef", null),
-            rt.b([Qt.a], t.prototype, "ScrollToTop", null),
-            rt.b([Qt.a], t.prototype, "OnScrollFriendsList", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "BindFriendsListContent", null),
+            rt.b([Zt.a], t.prototype, "OnFriendsListKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnFriendsListScrollRef", null),
+            rt.b([Zt.a], t.prototype, "ScrollToTop", null),
+            rt.b([Zt.a], t.prototype, "OnScrollFriendsList", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -55154,7 +55221,7 @@ and limitations under the License.
                       onClick: this.OnCreateChatRoom,
                       title: Object(gr.b)("#Tooltip_CreateGroupChat")
                     },
-                    Sr.createElement(ks.v, null)
+                    Sr.createElement(ks.w, null)
                   )
                 ),
                 Sr.createElement(
@@ -55186,19 +55253,19 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "UpdateChatSectionSize", null),
-            rt.b([Qt.a], t.prototype, "OnChatSectionMutation", null),
-            rt.b([Qt.a], t.prototype, "BindChatRoomTitleContainer", null),
-            rt.b([Qt.a], t.prototype, "BindChatRoomListContainer", null),
-            rt.b([Qt.a], t.prototype, "BindChatSection", null),
-            rt.b([Qt.a], t.prototype, "OnGrabberMouseDown", null),
-            rt.b([Qt.a], t.prototype, "OnGrabberTouchStart", null),
-            rt.b([Qt.a], t.prototype, "HandleTouchMove", null),
-            rt.b([Qt.a], t.prototype, "HandleMouseMove", null),
-            rt.b([Qt.a], t.prototype, "OnMouseEnter", null),
-            rt.b([Qt.a], t.prototype, "OnMouseLeave", null),
-            rt.b([Qt.a], t.prototype, "UnregisterChatRoomListDragEvents", null),
-            rt.b([Qt.a], t.prototype, "OnCreateChatRoom", null),
+            rt.b([Zt.a], t.prototype, "UpdateChatSectionSize", null),
+            rt.b([Zt.a], t.prototype, "OnChatSectionMutation", null),
+            rt.b([Zt.a], t.prototype, "BindChatRoomTitleContainer", null),
+            rt.b([Zt.a], t.prototype, "BindChatRoomListContainer", null),
+            rt.b([Zt.a], t.prototype, "BindChatSection", null),
+            rt.b([Zt.a], t.prototype, "OnGrabberMouseDown", null),
+            rt.b([Zt.a], t.prototype, "OnGrabberTouchStart", null),
+            rt.b([Zt.a], t.prototype, "HandleTouchMove", null),
+            rt.b([Zt.a], t.prototype, "HandleMouseMove", null),
+            rt.b([Zt.a], t.prototype, "OnMouseEnter", null),
+            rt.b([Zt.a], t.prototype, "OnMouseLeave", null),
+            rt.b([Zt.a], t.prototype, "UnregisterChatRoomListDragEvents", null),
+            rt.b([Zt.a], t.prototype, "OnCreateChatRoom", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -55282,11 +55349,11 @@ and limitations under the License.
                   .catch(o);
               }
             }),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             t
           );
         })(Sr.Component),
@@ -55322,7 +55389,7 @@ and limitations under the License.
           );
         })(Sr.Component),
         Uu = Object(Es.observer)(function(e) {
-          var t = Zp.FriendStore.FriendGroupStore.game_groups,
+          var t = Qp.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
               return Sr.createElement(Hu, {
                 key: e.id,
@@ -55330,10 +55397,10 @@ and limitations under the License.
                 bSingletonGroup: !1,
                 bOtherGroups: !0,
                 groupDisplayPrefs:
-                  Zp.FriendStore.FriendGroupStore.groupDisplayPrefs
+                  Qp.FriendStore.FriendGroupStore.groupDisplayPrefs
               });
             }),
-            n = Zp.FriendStore.FriendGroupStore.singleton_game_group;
+            n = Qp.FriendStore.FriendGroupStore.singleton_game_group;
           return (
             n &&
               i.push(
@@ -55343,7 +55410,7 @@ and limitations under the License.
                   bSingletonGroup: !0,
                   bOtherGroups: t.length > 0,
                   groupDisplayPrefs:
-                    Zp.FriendStore.FriendGroupStore.groupDisplayPrefs
+                    Qp.FriendStore.FriendGroupStore.groupDisplayPrefs
                 })
               ),
             Sr.createElement(Sr.Fragment, null, i)
@@ -55372,7 +55439,7 @@ and limitations under the License.
                 n = this.props.group;
               return (
                 e.is_favorite || Tm.DragDropManager.SetDropConsumed(),
-                Zp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                Qp.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                   t,
                   i,
                   n
@@ -55452,7 +55519,7 @@ and limitations under the License.
                     });
             }),
             (t.prototype.AcceptInvite = function(e, t) {
-              Zp.FriendStore.SendFriendInvite(t).then(function(i) {
+              Qp.FriendStore.SendFriendInvite(t).then(function(i) {
                 3 != i &&
                   Te(
                     e,
@@ -55462,7 +55529,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.DeclineInvite = function(e, t) {
-              Zp.FriendStore.RemoveFriend(t).then(function(i) {
+              Qp.FriendStore.RemoveFriend(t).then(function(i) {
                 1 != i &&
                   Te(
                     e,
@@ -55475,7 +55542,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.BlockInvite = function(e, t) {
-              Zp.FriendStore.BlockPlayer(t).then(function(i) {
+              Qp.FriendStore.BlockPlayer(t).then(function(i) {
                 5 != i &&
                   Te(
                     e,
@@ -55577,16 +55644,16 @@ and limitations under the License.
                     (this.props.group.HasMember(this.state.friendDrag.accountid)
                       ? (l = !0)
                       : ((u = u.concat(this.state.friendDrag)),
-                        u.sort(Za.DefaultFriendSortComparator))),
+                        u.sort(Qa.DefaultFriendSortComparator))),
                   a && this.state.bSortOfflineByRecent
-                    ? (u.sort(Za.FriendSortByLastSeenComparator), (s = !0))
+                    ? (u.sort(Qa.FriendSortByLastSeenComparator), (s = !0))
                     : a &&
                       !this.state.bSortOfflineByRecent &&
-                      u.sort(Za.DefaultFriendSortComparator),
+                      u.sort(Qa.DefaultFriendSortComparator),
                   o)
                 ) {
                   var d =
-                    Zp.FriendStore.FriendGroupStore.incoming_invites_group;
+                    Qp.FriendStore.FriendGroupStore.incoming_invites_group;
                   u.sort(function(e, t) {
                     var i = d.map_steamid_to_mutual_friends.get(e.steamid64),
                       n = d.map_steamid_to_mutual_friends.get(t.steamid64),
@@ -55601,7 +55668,7 @@ and limitations under the License.
                 var p = !1;
                 c &&
                   (p =
-                    Zp.SettingsStore.FriendsSettings
+                    Qp.SettingsStore.FriendsSettings
                       .bHideOfflineFriendsInTagGroups);
                 var h = new Set();
                 if (
@@ -55609,12 +55676,12 @@ and limitations under the License.
                   this.props.group.m_eDisplayType == Xa.eOfflineOnly
                 ) {
                   var m =
-                      Zp.SettingsStore.FriendsSettings.bHideCategorizedFriends,
+                      Qp.SettingsStore.FriendsSettings.bHideCategorizedFriends,
                     g =
-                      Zp.SettingsStore.FriendsSettings
+                      Qp.SettingsStore.FriendsSettings
                         .bHideOfflineFriendsInTagGroups;
                   m &&
-                    Zp.FriendStore.FriendGroupStore.user_groups.forEach(
+                    Qp.FriendStore.FriendGroupStore.user_groups.forEach(
                       function(e) {
                         e.member_list_unsorted.forEach(function(e) {
                           (!e.persona.is_online && g) || h.add(e.accountid);
@@ -55713,7 +55780,7 @@ and limitations under the License.
                                     "#FriendGroup_Tip_Decline"
                                   )
                                 },
-                                Sr.createElement(ks.P, null)
+                                Sr.createElement(ks.Q, null)
                               )
                             ),
                           o &&
@@ -55797,7 +55864,7 @@ and limitations under the License.
                         Sr.createElement(
                           "div",
                           { className: "ExpandPlusMinus" },
-                          Sr.createElement(ks.y, null)
+                          Sr.createElement(ks.z, null)
                         ),
                         this.props.group.icon_url &&
                           Sr.createElement("img", {
@@ -55829,7 +55896,7 @@ and limitations under the License.
                             ? Object(gr.b)("#FriendGroup_Tip_SortByRecent")
                             : Object(gr.b)("#FriendGroup_Tip_SortByAlphabet")
                         },
-                        Sr.createElement(ks.G, null)
+                        Sr.createElement(ks.H, null)
                       )
                   ),
                   Sr.createElement(
@@ -55894,16 +55961,16 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ToggleCollapsed", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
-            rt.b([Qt.a], t.prototype, "OnFriendSelected", null),
-            rt.b([Qt.a], t.prototype, "OnAcceptInvite", null),
-            rt.b([Qt.a], t.prototype, "OnDeclineInvite", null),
-            rt.b([Qt.a], t.prototype, "OnBlockInvite", null),
-            rt.b([Qt.a], t.prototype, "OnConfirmChanges", null),
-            rt.b([Qt.a], t.prototype, "OnIgnoreAllInvites", null),
-            rt.b([Qt.a], t.prototype, "OnCloseInvites", null),
-            rt.b([Qt.a], t.prototype, "ToggleOfflineSortMethod", null),
+            rt.b([Zt.a], t.prototype, "ToggleCollapsed", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnFriendSelected", null),
+            rt.b([Zt.a], t.prototype, "OnAcceptInvite", null),
+            rt.b([Zt.a], t.prototype, "OnDeclineInvite", null),
+            rt.b([Zt.a], t.prototype, "OnBlockInvite", null),
+            rt.b([Zt.a], t.prototype, "OnConfirmChanges", null),
+            rt.b([Zt.a], t.prototype, "OnIgnoreAllInvites", null),
+            rt.b([Zt.a], t.prototype, "OnCloseInvites", null),
+            rt.b([Zt.a], t.prototype, "ToggleOfflineSortMethod", null),
             (t = rt.b([Es.observer], t))
           );
         })(xu),
@@ -55969,7 +56036,7 @@ and limitations under the License.
             (t.prototype.OnShowHeaderContextMenu = function(e) {
               var t = this.props.group.id;
               t &&
-                Zp.AppInfoStore.GetAppInfo(t).is_valid &&
+                Qp.AppInfoStore.GetAppInfo(t).is_valid &&
                 ge(Xe(this, e), t, e);
             }),
             (t.prototype.render = function() {
@@ -56013,7 +56080,7 @@ and limitations under the License.
                   var u =
                       !this.props.bSingletonGroup &&
                       this.props.group.id !=
-                        Zp.FriendStore.FriendGroupStore.non_steam_game_id,
+                        Qp.FriendStore.FriendGroupStore.non_steam_game_id,
                     d = null,
                     p = 0,
                     h = t;
@@ -56143,7 +56210,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        Sr.createElement(ks.y, null)
+                        Sr.createElement(ks.z, null)
                       ),
                       w,
                       this.props.group.icon_url &&
@@ -56178,8 +56245,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ToggleCollapsed", null),
-            rt.b([Qt.a], t.prototype, "OnShowHeaderContextMenu", null),
+            rt.b([Zt.a], t.prototype, "ToggleCollapsed", null),
+            rt.b([Zt.a], t.prototype, "OnShowHeaderContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(xu),
@@ -56193,7 +56260,7 @@ and limitations under the License.
               ge(Xe(this, e), this.props.appid, e);
             }),
             (t.prototype.render = function() {
-              var e = Zp.AppInfoStore.GetAppInfo(this.props.appid);
+              var e = Qp.AppInfoStore.GetAppInfo(this.props.appid);
               return e.is_valid
                 ? Sr.createElement(
                     "div",
@@ -56217,7 +56284,7 @@ and limitations under the License.
                     )
                   );
             }),
-            rt.b([Qt.a], t.prototype, "OnShowGameIconContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnShowGameIconContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -56260,7 +56327,7 @@ and limitations under the License.
               }
               return this.props.children;
             }),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             t
           );
         })(Sr.Component),
@@ -56328,11 +56395,11 @@ and limitations under the License.
               var e = this.props.friend;
               if ((e.LoadIfNecessary(), !e.is_ready))
                 return Sr.createElement("div", null);
-              var t = Zp.CMInterface.steamid.GetAccountID() == e.accountid,
+              var t = Qp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "",
                 n = (this.props.avatarQualityFull, 0);
               this.props.showVoiceLevel &&
-                (n = Zp.VoiceStore.get_volume(e.accountid));
+                (n = Qp.VoiceStore.get_volume(e.accountid));
               var r = { className: "friend " + he(e.persona) };
               if (
                 (this.props.className &&
@@ -56341,9 +56408,9 @@ and limitations under the License.
                   (r.className += " friendStatusHover"),
                 t)
               ) {
-                var o = Zp.VoiceStore.IsAttemptingInitialConnection(),
-                  a = Zp.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
-                  s = Zp.VoiceStore.IsAttemptingReconnect();
+                var o = Qp.VoiceStore.IsAttemptingInitialConnection(),
+                  a = Qp.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
+                  s = Qp.VoiceStore.IsAttemptingReconnect();
                 a
                   ? (i = Object(gr.b)("#VoiceChatConnecting"))
                   : s && (i = Object(gr.b)("#VoiceChatReconnecting"));
@@ -56376,7 +56443,7 @@ and limitations under the License.
                 }
                 this.state.bActive &&
                   (r.className += " Friend_ContextMenuActive");
-                var h = Zp.VoiceStore.GetPerUserMuting(e.accountid);
+                var h = Qp.VoiceStore.GetPerUserMuting(e.accountid);
                 l = Sr.createElement(
                   "div",
                   rt.a({}, r),
@@ -56401,9 +56468,9 @@ and limitations under the License.
                         : e.persona.avatar_url_medium,
                       draggable: !1
                     }),
-                    this.props.bInVoiceList && h && Sr.createElement(ks.N, null)
+                    this.props.bInVoiceList && h && Sr.createElement(ks.O, null)
                   ),
-                  Sr.createElement(Zu, {
+                  Sr.createElement(Qu, {
                     friend: e,
                     strOverrideStatus: i,
                     bHideGameName: this.props.bHideGameName,
@@ -56432,12 +56499,12 @@ and limitations under the License.
                     l
                   );
             }),
-            rt.b([Qt.a], t.prototype, "OnDoubleClick", null),
-            rt.b([Qt.a], t.prototype, "OnClick", null),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnShowContextMenu", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenuShown", null),
+            rt.b([Zt.a], t.prototype, "OnDoubleClick", null),
+            rt.b([Zt.a], t.prototype, "OnClick", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnShowContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenuShown", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -56449,24 +56516,24 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.render = function() {
               var e = this.props.friend,
-                t = Zp.CMInterface.steamid.GetAccountID() == e.accountid,
+                t = Qp.CMInterface.steamid.GetAccountID() == e.accountid,
                 i = "voiceStatusIconsContainer",
                 n = "",
                 r = "",
                 o = !1,
                 a = !1,
                 s = !1,
-                c = Zp.VoiceStore.GetPerUserMuting(e.accountid),
-                l = Zp.VoiceStore.GetUserMutedRemotely(e.accountid),
-                u = Zp.VoiceStore.GetOutputMutedRemotely(e.accountid);
+                c = Qp.VoiceStore.GetPerUserMuting(e.accountid),
+                l = Qp.VoiceStore.GetUserMutedRemotely(e.accountid),
+                u = Qp.VoiceStore.GetOutputMutedRemotely(e.accountid);
               return (
                 t
-                  ? ((o = Zp.VoiceStore.IsMicMuted()),
-                    (a = Zp.VoiceStore.IsOutputMuted()),
-                    (s = Zp.VoiceStore.BNoMicAvailableForSession()),
+                  ? ((o = Qp.VoiceStore.IsMicMuted()),
+                    (a = Qp.VoiceStore.IsOutputMuted()),
+                    (s = Qp.VoiceStore.BNoMicAvailableForSession()),
                     o && (i += " mic_muted_self"),
                     a && (i += " output_muted_self"))
-                  : (s = Zp.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
+                  : (s = Qp.VoiceStore.GetUserHasNoMicForSession(e.accountid)),
                 c && (i += " muted_locally"),
                 l && (i += " mic_muted_remotely"),
                 u && (i += " output_muted_remotely"),
@@ -56488,7 +56555,7 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusMic disabled",
                       title: n
                     },
-                    Sr.createElement(ks.t, null)
+                    Sr.createElement(ks.u, null)
                   ),
                   Sr.createElement(
                     "div",
@@ -56496,7 +56563,7 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusOutput disabled",
                       title: r
                     },
-                    Sr.createElement(ks.o, null)
+                    Sr.createElement(ks.p, null)
                   )
                 )
               );
@@ -56544,7 +56611,7 @@ and limitations under the License.
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
-        Zu = (function(e) {
+        Qu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56564,10 +56631,10 @@ and limitations under the License.
                 ? (n = this.props.strOverrideStatus)
                 : r
                   ? ((o =
-                      Zp.FriendStore.FriendGroupStore.incoming_invites_group),
+                      Qp.FriendStore.FriendGroupStore.incoming_invites_group),
                     (a = o.map_steamid_to_mutual_friends.get(e.steamid64)),
                     void 0 === a
-                      ? (Zp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
+                      ? (Qp.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
                         (n = Object(gr.b)("#FriendGroup_NoMutualFriends")),
                         (c += " noMutualFriends"))
                       : ((n = Object(gr.c)(
@@ -56666,7 +56733,7 @@ and limitations under the License.
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
-        Qu = (function(e) {
+        Zu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -56674,7 +56741,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.render = function() {
               var e,
-                t = Zp.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
+                t = Qp.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
                   this.props.browserContext
                 );
               return (
@@ -56762,7 +56829,7 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "ExpandPlusMinus" },
-                    Sr.createElement(ks.y, null)
+                    Sr.createElement(ks.z, null)
                   ),
                   Object(gr.b)("#FriendGroup_UnreadMessages"),
                   Sr.createElement(
@@ -56777,7 +56844,7 @@ and limitations under the License.
                 Sr.createElement(xs, null, i)
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnHeaderClick", null),
+            rt.b([Zt.a], t.prototype, "OnHeaderClick", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -56882,7 +56949,7 @@ and limitations under the License.
                 }
               }
             }),
-            rt.b([Qt.a], t.prototype, "bindHover", null),
+            rt.b([Zt.a], t.prototype, "bindHover", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component)),
@@ -56953,7 +57020,7 @@ and limitations under the License.
               if (t.is_ingame) {
                 var s = "";
                 if (t.m_unGamePlayedAppID) {
-                  var c = Zp.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
+                  var c = Qp.AppInfoStore.GetAppInfo(t.m_unGamePlayedAppID);
                   c && (s = c.logo_url);
                 }
                 o = Sr.createElement(
@@ -56986,7 +57053,7 @@ and limitations under the License.
               var l = !0,
                 u = !1;
               e.friend.is_friend ||
-                e.friend == Zp.FriendStore.self ||
+                e.friend == Qp.FriendStore.self ||
                 ((a += " notFriends"), (l = !1)),
                 e.friend.is_blocked &&
                   ((a += " communicationBlocked"), (u = !0));
@@ -57002,7 +57069,7 @@ and limitations under the License.
                 f.friendGroup &&
                 f.friendGroup.m_eDisplayType == Xa.eIncomingInvites
               ) {
-                var _ = Zp.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
+                var _ = Qp.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                   e.friend.steamid64
                 );
                 if (void 0 != _) {
@@ -57018,7 +57085,7 @@ and limitations under the License.
                     b < v.length && b < 10;
                     b++
                   ) {
-                    var C = Zp.FriendStore.GetFriend(v[b]);
+                    var C = Qp.FriendStore.GetFriend(v[b]);
                     y.push(
                       Sr.createElement(
                         "div",
@@ -57385,7 +57452,7 @@ and limitations under the License.
                 }
               }
             }),
-            rt.b([Qt.a], t.prototype, "bindHover", null),
+            rt.b([Zt.a], t.prototype, "bindHover", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -57497,7 +57564,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Zp.ChatStore.EmoticonStore,
+                t = Qp.ChatStore.EmoticonStore,
                 i = [],
                 n = [],
                 r = !1;
@@ -57583,11 +57650,11 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnClick", null),
-            rt.b([Qt.a], t.prototype, "OnSearchInput", null),
-            rt.b([Qt.a], t.prototype, "OnSubmit", null),
-            rt.b([Qt.a], t.prototype, "OnScrollRef", null),
-            rt.b([Qt.a], t.prototype, "OnScroll", null),
+            rt.b([Zt.a], t.prototype, "OnClick", null),
+            rt.b([Zt.a], t.prototype, "OnSearchInput", null),
+            rt.b([Zt.a], t.prototype, "OnSubmit", null),
+            rt.b([Zt.a], t.prototype, "OnScrollRef", null),
+            rt.b([Zt.a], t.prototype, "OnScroll", null),
             t
           );
         })(Sr.Component),
@@ -57622,7 +57689,7 @@ and limitations under the License.
                 this.state.visible && Sr.createElement(od, { emoticon: e.name })
               );
             }),
-            rt.b([Qt.a], t.prototype, "SetVisible", null),
+            rt.b([Zt.a], t.prototype, "SetVisible", null),
             t
           );
         })(Sr.Component),
@@ -57852,7 +57919,7 @@ and limitations under the License.
             (t.prototype.OnMentionSuggestionSelected = function(e, t) {
               var i;
               if (
-                (t instanceof Za
+                (t instanceof Qa
                   ? (i = t.persona.m_strPlayerName)
                   : t && (i = t),
                 !i)
@@ -57920,7 +57987,7 @@ and limitations under the License.
                   }))
                 : this.state.bInEmoticonSearch &&
                   (e = Sr.createElement(_d, {
-                    emoticonStore: Zp.ChatStore.EmoticonStore,
+                    emoticonStore: Qp.ChatStore.EmoticonStore,
                     strSearch: this.state.mentionSearch,
                     nMinimumSearchLengthBeforeAutoSelection: 2,
                     onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -57976,7 +58043,7 @@ and limitations under the License.
                         disabled: !this.state.submitEnabled,
                         title: Object(gr.b)("#ChatEntryButton_Submit")
                       },
-                      Sr.createElement(ks.H, null)
+                      Sr.createElement(ks.I, null)
                     ),
                     Sr.createElement(
                       "button",
@@ -58002,7 +58069,7 @@ and limitations under the License.
                         title: Object(gr.b)("#ChatEntryButton_SendEmbed"),
                         disabled: this.props.disabled
                       },
-                      Sr.createElement(ks.w, null)
+                      Sr.createElement(ks.x, null)
                     ),
                     Sr.createElement("input", {
                       type: "file",
@@ -58016,25 +58083,25 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "bindTextInput", null),
-            rt.b([Qt.a], t.prototype, "bindMentionDialog", null),
-            rt.b([Qt.a], t.prototype, "bindFileUploadControl", null),
-            rt.b([Qt.a], t.prototype, "handleChatSubmit", null),
-            rt.b([Qt.a], t.prototype, "handleTextEntry", null),
-            rt.b([Qt.a], t.prototype, "handleFocus", null),
-            rt.b([Qt.a], t.prototype, "handleBlur", null),
-            rt.b([Qt.a], t.prototype, "handleKeyDown", null),
-            rt.b([Qt.a], t.prototype, "handlePaste", null),
-            rt.b([Qt.a], t.prototype, "OnFileInputChange", null),
-            rt.b([Qt.a], t.prototype, "OnEmbedClick", null),
-            rt.b([Qt.a], t.prototype, "OnEmoticonClick", null),
-            rt.b([Qt.a], t.prototype, "OnEmoticonSelected", null),
-            rt.b([Qt.a], t.prototype, "handleKeyPress", null),
-            rt.b([Qt.a], t.prototype, "handleClick", null),
-            rt.b([Qt.a], t.prototype, "handleContextMenu", null),
-            rt.b([Qt.a], t.prototype, "OnMentionSuggestionSelected", null),
-            rt.b([Qt.a], t.prototype, "OnEmoticonSuggestionSelected", null),
-            rt.b([Qt.a], t.prototype, "FocusTextInput", null),
+            rt.b([Zt.a], t.prototype, "bindTextInput", null),
+            rt.b([Zt.a], t.prototype, "bindMentionDialog", null),
+            rt.b([Zt.a], t.prototype, "bindFileUploadControl", null),
+            rt.b([Zt.a], t.prototype, "handleChatSubmit", null),
+            rt.b([Zt.a], t.prototype, "handleTextEntry", null),
+            rt.b([Zt.a], t.prototype, "handleFocus", null),
+            rt.b([Zt.a], t.prototype, "handleBlur", null),
+            rt.b([Zt.a], t.prototype, "handleKeyDown", null),
+            rt.b([Zt.a], t.prototype, "handlePaste", null),
+            rt.b([Zt.a], t.prototype, "OnFileInputChange", null),
+            rt.b([Zt.a], t.prototype, "OnEmbedClick", null),
+            rt.b([Zt.a], t.prototype, "OnEmoticonClick", null),
+            rt.b([Zt.a], t.prototype, "OnEmoticonSelected", null),
+            rt.b([Zt.a], t.prototype, "handleKeyPress", null),
+            rt.b([Zt.a], t.prototype, "handleClick", null),
+            rt.b([Zt.a], t.prototype, "handleContextMenu", null),
+            rt.b([Zt.a], t.prototype, "OnMentionSuggestionSelected", null),
+            rt.b([Zt.a], t.prototype, "OnEmoticonSuggestionSelected", null),
+            rt.b([Zt.a], t.prototype, "FocusTextInput", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -58048,7 +58115,7 @@ and limitations under the License.
               var t = this.props.chat;
               if (t instanceof Fs) return void t.ToggleVoiceChat();
               if (this.IsVoiceActiveForButton())
-                return void Zp.VoiceStore.OnUserEndVoiceChat();
+                return void Qp.VoiceStore.OnUserEndVoiceChat();
               if (t instanceof ps) {
                 var i = t.GetGroup();
                 if (i) {
@@ -58056,7 +58123,7 @@ and limitations under the License.
                   if (0 == n.length) return void i.CreateAndJoinTempVoiceRoom();
                   if (1 == n.length) {
                     var r = n[0];
-                    return void Zp.VoiceStore.InitiateRoomChat(
+                    return void Qp.VoiceStore.InitiateRoomChat(
                       i.GetGroupID(),
                       r.GetRoomID()
                     );
@@ -58076,7 +58143,7 @@ and limitations under the License.
               if (e instanceof Fs) t = e.BVoiceActive();
               else if (e instanceof ps) {
                 var i = e.GetGroup();
-                t = Zp.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
+                t = Qp.VoiceStore.IsVoiceActiveForGroup(i.GetGroupID());
               }
               return t;
             }),
@@ -58087,9 +58154,9 @@ and limitations under the License.
                 n = this.props.chat;
               e
                 ? (t.push("Active"),
-                  Zp.VoiceStore.BNoMicAvailableForSession() &&
+                  Qp.VoiceStore.BNoMicAvailableForSession() &&
                     t.push("NoMicrophone"),
-                  Zp.VoiceStore.IsMicMuted() && t.push("MicMuted"))
+                  Qp.VoiceStore.IsMicMuted() && t.push("MicMuted"))
                 : t.push(" Inactive");
               var r = !n.BIsVoiceAllowed();
               if (r) t.push(" Disabled"), (i = n.GetVoiceNotAllowedReason());
@@ -58109,9 +58176,9 @@ and limitations under the License.
                       : o &&
                         (i = "#Tooltip_VoiceControlButton_group_joinmultiple");
                 }
-              var a = Zp.VoiceStore.GetPushToTalkEnabled(),
-                s = Zp.VoiceStore.GetPushToTalkKeyDown(),
-                c = Zp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+              var a = Qp.VoiceStore.GetPushToTalkEnabled(),
+                s = Qp.VoiceStore.GetPushToTalkKeyDown(),
+                c = Qp.VoiceStore.GetPushToTalkHotKeyDisplayString(),
                 l = "";
               return (
                 a && (l += " pushToTalkEnabled"),
@@ -58139,7 +58206,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         { className: "VoiceToggleIconCtn" },
-                        Sr.createElement(ks.M, null)
+                        Sr.createElement(ks.N, null)
                       )
                     ),
                     Sr.createElement(
@@ -58170,7 +58237,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleStartVoice", null),
+            rt.b([Zt.a], t.prototype, "HandleStartVoice", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -58196,7 +58263,7 @@ and limitations under the License.
                     }))
                   : -1 !=
                       this.props.chatView.file_upload.type.indexOf("video") &&
-                    (e = Sr.createElement(ks.L, null)),
+                    (e = Sr.createElement(ks.M, null)),
                 Sr.createElement(
                   "div",
                   { className: "chatFileUploadPreviewContainer" },
@@ -58214,7 +58281,7 @@ and limitations under the License.
                       className: "chatFileUploadCancel",
                       onClick: this.handleCancel
                     },
-                    Sr.createElement(ks.P, null)
+                    Sr.createElement(ks.Q, null)
                   ),
                   Sr.createElement(
                     "button",
@@ -58228,8 +58295,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "handleCancel", null),
-            rt.b([Qt.a], t.prototype, "handleUpload", null),
+            rt.b([Zt.a], t.prototype, "handleCancel", null),
+            rt.b([Zt.a], t.prototype, "handleUpload", null),
             t
           );
         })(Sr.Component),
@@ -58311,7 +58378,7 @@ and limitations under the License.
                     "div",
                     { className: "chatFileUploadActions" },
                     Sr.createElement(
-                      Zs,
+                      Qs,
                       { className: "DialogLayout_NoMinWidth" },
                       Sr.createElement(
                         k,
@@ -58328,8 +58395,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "ClearErrorState", null),
-            rt.b([Qt.a], t.prototype, "handleUpload", null),
+            rt.b([Zt.a], t.prototype, "ClearErrorState", null),
+            rt.b([Zt.a], t.prototype, "handleUpload", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -58524,9 +58591,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnClickSuggestion", null),
-            rt.b([Qt.a], t.prototype, "OnMouseOverSuggestion", null),
-            rt.b([Qt.a], t.prototype, "BindSelectedElement", null),
+            rt.b([Zt.a], t.prototype, "OnClickSuggestion", null),
+            rt.b([Zt.a], t.prototype, "OnMouseOverSuggestion", null),
+            rt.b([Zt.a], t.prototype, "BindSelectedElement", null),
             t
           );
         })(Sr.Component),
@@ -58555,8 +58622,8 @@ and limitations under the License.
                 this.props.children
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnMouseOver", null),
-            rt.b([Qt.a], t.prototype, "OnClick", null),
+            rt.b([Zt.a], t.prototype, "OnMouseOver", null),
+            rt.b([Zt.a], t.prototype, "OnClick", null),
             t
           );
         })(Sr.PureComponent),
@@ -58802,7 +58869,7 @@ and limitations under the License.
               }
               return this.props.children;
             }),
-            rt.b([Qt.a], t.prototype, "clearError", null),
+            rt.b([Zt.a], t.prototype, "clearError", null),
             t
           );
         })(Sr.Component),
@@ -58956,10 +59023,10 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnRef", null),
-            rt.b([Qt.a], t.prototype, "CheckScrollPosition", null),
-            rt.b([Qt.a], t.prototype, "OnSlideLeftClick", null),
-            rt.b([Qt.a], t.prototype, "OnSlideRightClick", null),
+            rt.b([Zt.a], t.prototype, "OnRef", null),
+            rt.b([Zt.a], t.prototype, "CheckScrollPosition", null),
+            rt.b([Zt.a], t.prototype, "OnSlideLeftClick", null),
+            rt.b([Zt.a], t.prototype, "OnSlideRightClick", null),
             t
           );
         })(Sr.Component),
@@ -59067,8 +59134,8 @@ and limitations under the License.
               this.props.ResponsiveWindowState.SetActiveView(nl.FriendsList);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
-              var e = Ze(this.props.popup);
-              Zp.UIStore.BIsDockedFriendsList(e)
+              var e = Qe(this.props.popup);
+              Qp.UIStore.BIsDockedFriendsList(e)
                 ? this.props.popup.SteamClient.Window.ResizeTo(
                     Tm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     this.props.popup.innerHeight
@@ -59115,7 +59182,7 @@ and limitations under the License.
                 ));
               var a = !1;
               return (
-                this.props.popup && (a = Ze(this.props.popup) != Jp),
+                this.props.popup && (a = Qe(this.props.popup) != Jp),
                 Sr.createElement(
                   "div",
                   { className: r, onDragStart: this.OnDragStart },
@@ -59172,20 +59239,20 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Sr.createElement(ks.F, null)
+                      Sr.createElement(ks.G, null)
                     ),
                   Sr.createElement("div", { className: "dropTargetBox" })
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "HandleDropComplete", null),
-            rt.b([Qt.a], t.prototype, "OnTabRef", null),
-            rt.b([Qt.a], t.prototype, "OnScrollRef", null),
-            rt.b([Qt.a], t.prototype, "SelectTab", null),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnBackClick", null),
-            rt.b([Qt.a], t.prototype, "ToggleSingleWindowToggle", null),
+            rt.b([Zt.a], t.prototype, "HandleDropComplete", null),
+            rt.b([Zt.a], t.prototype, "OnTabRef", null),
+            rt.b([Zt.a], t.prototype, "OnScrollRef", null),
+            rt.b([Zt.a], t.prototype, "SelectTab", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnBackClick", null),
+            rt.b([Zt.a], t.prototype, "ToggleSingleWindowToggle", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -59243,10 +59310,10 @@ and limitations under the License.
                       e.currentTarget.ownerDocument.defaultView.SteamClient.Window.GetMousePositionDetails(
                         function(e) {
                           e && ((s.left = -i.offsetX), (s.top = -i.offsetY)),
-                            Zp.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
+                            Qp.UIStore.MoveTabToNewPopup(c, i.tab, s, e);
                         }
                       );
-                    } else Zp.UIStore.MoveTabToNewPopup(Xe(this, e), i.tab, s);
+                    } else Qp.UIStore.MoveTabToNewPopup(Xe(this, e), i.tab, s);
                   }
                 }
               }
@@ -59261,7 +59328,7 @@ and limitations under the License.
             (t.prototype.OnMouseUp = function(e) {
               1 == e.button &&
                 this.m_bMiddleMouseDown &&
-                (Zp.UIStore.CloseTab(Xe(this, e), this.props.tab),
+                (Qp.UIStore.CloseTab(Xe(this, e), this.props.tab),
                 e.preventDefault(),
                 (this.m_bMiddleMouseDown = !1));
             }),
@@ -59269,7 +59336,7 @@ and limitations under the License.
               this.m_bMiddleMouseDown = !1;
             }),
             (t.prototype.OnCloseClick = function(e) {
-              Zp.UIStore.CloseTab(Xe(this, e), this.props.tab),
+              Qp.UIStore.CloseTab(Xe(this, e), this.props.tab),
                 e.stopPropagation();
             }),
             (t.prototype.OnContextMenu = function(e) {
@@ -59277,7 +59344,7 @@ and limitations under the License.
               if (t.IsChatRoom()) {
                 if (t instanceof fs) {
                   var i = t;
-                  Z(e, i.GetGroup(), { tab: t });
+                  Q(e, i.GetGroup(), { tab: t });
                 }
               } else {
                 var i = this.props.tab.GetChatView();
@@ -59294,7 +59361,7 @@ and limitations under the License.
                 e.IsChatRoom() && (i += " chatRoom"),
                 e.IsVoiceActive() &&
                   ((i += " VoiceActive"),
-                  Zp.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
+                  Qp.ChatStore.VoiceChat.IsMicMuted() && (i += " MicMuted")),
                 Sr.createElement(
                   "div",
                   {
@@ -59314,11 +59381,11 @@ and limitations under the License.
                       "div",
                       {
                         className: "MicStatus",
-                        title: Zp.ChatStore.VoiceChat.IsMicMuted()
+                        title: Qp.ChatStore.VoiceChat.IsMicMuted()
                           ? Object(gr.b)("#Tooltip_MicStatus_Muted")
                           : Object(gr.b)("#Tooltip_MicStatus_Active")
                       },
-                      Sr.createElement(ks.t, null)
+                      Sr.createElement(ks.u, null)
                     ),
                   Sr.createElement(Sd, { tab: this.props.tab }),
                   Sr.createElement(
@@ -59331,7 +59398,7 @@ and limitations under the License.
                         className: "chatTabClose closeButton",
                         onClick: this.OnCloseClick
                       },
-                      Sr.createElement(ks.P, null)
+                      Sr.createElement(ks.Q, null)
                     ),
                     t > 0 &&
                       Sr.createElement(
@@ -59345,14 +59412,14 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindChatTab", null),
-            rt.b([Qt.a], t.prototype, "OnDragStart", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnd", null),
-            rt.b([Qt.a], t.prototype, "OnMouseDown", null),
-            rt.b([Qt.a], t.prototype, "OnMouseUp", null),
-            rt.b([Qt.a], t.prototype, "OnMouseLeave", null),
-            rt.b([Qt.a], t.prototype, "OnCloseClick", null),
-            rt.b([Qt.a], t.prototype, "OnContextMenu", null),
+            rt.b([Zt.a], t.prototype, "BindChatTab", null),
+            rt.b([Zt.a], t.prototype, "OnDragStart", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnd", null),
+            rt.b([Zt.a], t.prototype, "OnMouseDown", null),
+            rt.b([Zt.a], t.prototype, "OnMouseUp", null),
+            rt.b([Zt.a], t.prototype, "OnMouseLeave", null),
+            rt.b([Zt.a], t.prototype, "OnCloseClick", null),
+            rt.b([Zt.a], t.prototype, "OnContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -59472,7 +59539,7 @@ and limitations under the License.
               } else if ("chatroomgroup" == e.type) {
                 Tm.DragDropManager.SetDropConsumed();
                 var o = e;
-                Zp.UIStore.ShowAndOrActivateChatRoomGroup(
+                Qp.UIStore.ShowAndOrActivateChatRoomGroup(
                   Xe(this),
                   o.group,
                   !0
@@ -59572,13 +59639,13 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnChatTabRef", null),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
-            rt.b([Qt.a], t.prototype, "OnHTMLKeyDown", null),
-            rt.b([Qt.a], t.prototype, "OnKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnChatTabRef", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnHTMLKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnKeyDown", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -59590,43 +59657,43 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.InitiateVoiceChat = function() {
               this.props.chatView.chat.accountid_partner,
-                Zp.VoiceStore.InitiateFriendChat(
+                Qp.VoiceStore.InitiateFriendChat(
                   this.props.chatView.chat.accountid_partner
                 );
             }),
             (t.prototype.VoidOnClick = function() {}),
             (t.prototype.EndVoiceChat = function() {
-              Zp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Qp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Zp.VoiceStore.OnUserEndVoiceChat();
+                Qp.VoiceStore.OnUserEndVoiceChat();
             }),
             (t.prototype.LeaveVoiceChat = function() {
-              Zp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Qp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
                 this.props.chatView.chat.accountid_partner &&
-                Zp.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
+                Qp.VoiceStore.OnUserLeaveOneOnOneVoiceChat();
             }),
             (t.prototype.OnCloseClick = function() {
-              Zp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
+              Qp.VoiceStore.GetActiveOneOnOneVoiceChatAccountID() ==
               this.props.chatView.chat.accountid_partner
-                ? Zp.VoiceStore.OnUserEndVoiceChat()
-                : Zp.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
+                ? Qp.VoiceStore.OnUserEndVoiceChat()
+                : Qp.VoiceStore.OnRejectOneOnOneVoiceChatForPartner(
                     this.props.chatView.chat.accountid_partner
                   );
             }),
             (t.prototype.render = function() {
-              var e = Zp.VoiceStore.BInitiatedOneOnOneChat(
+              var e = Qp.VoiceStore.BInitiatedOneOnOneChat(
                   this.props.chatView.chat.accountid_partner
                 ),
-                t = Zp.CMInterface.steamid.GetAccountID(),
+                t = Qp.CMInterface.steamid.GetAccountID(),
                 i = this.props.chatView.chat.accountid_partner,
-                n = Zp.FriendStore.GetPlayer(t),
-                r = Zp.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
-                o = Zp.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
+                n = Qp.FriendStore.GetPlayer(t),
+                r = Qp.VoiceStore.BSelfHasAcceptedOrInitiatedOneOnOneChat(i),
+                o = Qp.VoiceStore.BSelfHadPreviouslyJoinedOneOnOneChat(i),
                 a = this.props.chatView.chat.chat_partner,
-                s = Zp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
+                s = Qp.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(i),
                 c =
                   !r &&
-                  Zp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                  Qp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                     a.accountid
                   ),
                 l = void 0;
@@ -59773,7 +59840,7 @@ and limitations under the License.
                 Sr.createElement(
                   "div",
                   { className: "VoiceToggleIconCtn" },
-                  Sr.createElement(ks.M, null),
+                  Sr.createElement(ks.N, null),
                   Sr.createElement(
                     "div",
                     { className: "Sonar" },
@@ -59797,15 +59864,15 @@ and limitations under the License.
                         ? Object(gr.b)("#Voice_EndVoice")
                         : Object(gr.b)("#Tooltip_DismissVoice")
                     },
-                    Sr.createElement(ks.P, null)
+                    Sr.createElement(ks.Q, null)
                   )
               );
             }),
-            rt.b([Qt.a], t.prototype, "InitiateVoiceChat", null),
-            rt.b([Qt.a], t.prototype, "VoidOnClick", null),
-            rt.b([Qt.a], t.prototype, "EndVoiceChat", null),
-            rt.b([Qt.a], t.prototype, "LeaveVoiceChat", null),
-            rt.b([Qt.a], t.prototype, "OnCloseClick", null),
+            rt.b([Zt.a], t.prototype, "InitiateVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "VoidOnClick", null),
+            rt.b([Zt.a], t.prototype, "EndVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "LeaveVoiceChat", null),
+            rt.b([Zt.a], t.prototype, "OnCloseClick", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -59820,12 +59887,12 @@ and limitations under the License.
               var t = [],
                 i = e.currentTarget.ownerDocument.defaultView;
               t.push(this.invitee.accountid),
-                this.props.invitedto instanceof Za
+                this.props.invitedto instanceof Qa
                   ? de(Xe(this, e), i, this.props.chatview, !0, t)
                   : this.props.invitedto instanceof gs
                     ? ne(Xe(this, e), i, this.props.invitedto, void 0, !0, t)
                     : this.props.invitedto instanceof ps &&
-                      Zp.UIStore.OpenInviteDialogForChatGroup(
+                      Qp.UIStore.OpenInviteDialogForChatGroup(
                         Xe(this, e),
                         i,
                         this.props.invitedto.GetGroup(),
@@ -59846,14 +59913,14 @@ and limitations under the License.
             }),
             (t.prototype.OnInviteClicked = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
-              if (this.props.invitedto instanceof Za) {
+              if (this.props.invitedto instanceof Qa) {
                 this.invitedToPlayer = this.props.invitedto;
                 var i = [];
                 i.push(
                   this.invitedToPlayer.persona.m_steamid.ConvertTo64BitString()
                 ),
                   i.push(this.invitee.persona.m_steamid.ConvertTo64BitString()),
-                  Zp.UIStore.ReplaceFriendChatWithGroupChat(
+                  Qp.UIStore.ReplaceFriendChatWithGroupChat(
                     t,
                     this.props.chatview,
                     i
@@ -59879,9 +59946,9 @@ and limitations under the License.
                 t,
                 i,
                 n = this.props.invitee,
-                r = Zp.FriendStore.self,
+                r = Qp.FriendStore.self,
                 o = !1;
-              this.props.invitedto instanceof Za
+              this.props.invitedto instanceof Qa
                 ? (e = this.props.invitedto)
                 : this.props.invitedto instanceof gs
                   ? (t = this.props.invitedto)
@@ -59898,7 +59965,7 @@ and limitations under the License.
                     (u = "#Chat_Actions_DropGroupInvite_Member_Confirm"),
                   (o =
                     !!t.BIsClanChatRoom() &&
-                    Zp.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
+                    Qp.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
                   (a = t.name),
                   (s = Sr.createElement(hu, { group: t, name: t.name })),
                   (d = t.BIsUserGroupMember(n)))
@@ -59929,7 +59996,7 @@ and limitations under the License.
                     (s = Sr.createElement(
                       "div",
                       { className: "displayRow" },
-                      Sr.createElement(ks.M, null)
+                      Sr.createElement(ks.N, null)
                     )));
               var p = null;
               return (
@@ -60038,7 +60105,7 @@ and limitations under the License.
                             ? Sr.createElement(
                                 "div",
                                 { className: "staticX" },
-                                Sr.createElement(ks.P, null)
+                                Sr.createElement(ks.Q, null)
                               )
                             : Sr.createElement(
                                 "div",
@@ -60068,7 +60135,7 @@ and limitations under the License.
                       Hs,
                       null,
                       Sr.createElement(
-                        Zs,
+                        Qs,
                         null,
                         Sr.createElement(
                           k,
@@ -60089,9 +60156,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "AddMoreFriends", null),
-            rt.b([Qt.a], t.prototype, "Cancel", null),
-            rt.b([Qt.a], t.prototype, "OnInviteClicked", null),
+            rt.b([Zt.a], t.prototype, "AddMoreFriends", null),
+            rt.b([Zt.a], t.prototype, "Cancel", null),
+            rt.b([Zt.a], t.prototype, "OnInviteClicked", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -60219,7 +60286,7 @@ and limitations under the License.
                       })),
                     Tm.DragDropManager.SetDropConsumed(),
                     s &&
-                      (a = Zp.ChatStore.GetChatRoomGroup(
+                      (a = Qp.ChatStore.GetChatRoomGroup(
                         s.GetChatGroupIDIfLoaded()
                       )),
                     be({ invitee: r, invitedto: a }, Xe(this, t), n));
@@ -60240,7 +60307,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               if (!this.props.chatView) return null;
               var e = this.props.chatView.chat,
-                t = Zp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
+                t = Qp.VoiceStore.BPartnerHasRequestedAndIsInOneOnOneChat(
                   e.accountid_partner
                 ),
                 i = this.props.chatView.BVoiceActive(),
@@ -60279,7 +60346,7 @@ and limitations under the License.
               var a = "chatWindow SingleUserChat";
               i &&
                 ((a += " VoiceActive"),
-                Zp.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
+                Qp.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
                 t && (a += " VoiceRequested"),
                 n && (a += " NotAFriendOrApproved");
               var s = "chatBody";
@@ -60358,12 +60425,12 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
-            rt.b([Qt.a], t.prototype, "OnDropComplete", null),
-            rt.b([Qt.a], t.prototype, "OnNameWidthChanged", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnDropComplete", null),
+            rt.b([Zt.a], t.prototype, "OnNameWidthChanged", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -60398,7 +60465,7 @@ and limitations under the License.
                   )
                 : null;
             }),
-            rt.b([Qt.a], t.prototype, "SpeakerLabel", null),
+            rt.b([Zt.a], t.prototype, "SpeakerLabel", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -60437,11 +60504,11 @@ and limitations under the License.
                     ? this.AddFriendClick
                     : this.AddFriendClickNotInBeta
                 },
-                Sr.createElement(ks.p, null)
+                Sr.createElement(ks.q, null)
               );
             }),
-            rt.b([Qt.a], t.prototype, "AddFriendClick", null),
-            rt.b([Qt.a], t.prototype, "AddFriendClickNotInBeta", null),
+            rt.b([Zt.a], t.prototype, "AddFriendClick", null),
+            rt.b([Zt.a], t.prototype, "AddFriendClickNotInBeta", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -60652,10 +60719,10 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnDragEnter", null),
-            rt.b([Qt.a], t.prototype, "OnDragLeave", null),
-            rt.b([Qt.a], t.prototype, "OnDragOver", null),
-            rt.b([Qt.a], t.prototype, "OnDrop", null),
+            rt.b([Zt.a], t.prototype, "OnDragEnter", null),
+            rt.b([Zt.a], t.prototype, "OnDragLeave", null),
+            rt.b([Zt.a], t.prototype, "OnDragOver", null),
+            rt.b([Zt.a], t.prototype, "OnDrop", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -60955,7 +61022,7 @@ and limitations under the License.
                 a = !1;
               if (t.chat_messages.length > 0) {
                 var s = t.chat_messages[0];
-                Zp.RTime32ToDate(s.rtTimestamp) <
+                Qp.RTime32ToDate(s.rtTimestamp) <
                   this.MidnightBeforeTime(new Date()) && (a = !0);
               }
               var c = !1,
@@ -60964,8 +61031,8 @@ and limitations under the License.
               for (var u = -1, d = 0, p = t.chat_messages; d < p.length; d++) {
                 var h = p[d];
                 if (0 != r || a) {
-                  var m = Zp.RTime32ToDate(r),
-                    g = Zp.RTime32ToDate(h.rtTimestamp);
+                  var m = Qp.RTime32ToDate(r),
+                    g = Qp.RTime32ToDate(h.rtTimestamp);
                   if (m < this.MidnightBeforeTime(g) || a) {
                     var f = "timediv_" + g.getTime();
                     n.AppendOutsideBlock(
@@ -61016,12 +61083,12 @@ and limitations under the License.
                   }),
                   u
                 );
-              var _ = Zp.RTime32ToDate(Zp.GetServerRTime32());
-              Zp.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
+              var _ = Qp.RTime32ToDate(Qp.GetServerRTime32());
+              Qp.RTime32ToDate(r) < this.MidnightBeforeTime(_) &&
                 n.AppendOutsideBlock(
                   Sr.createElement(zd, {
                     key: "final_dateline",
-                    rtTimestamp: Zp.GetServerRTime32()
+                    rtTimestamp: Qp.GetServerRTime32()
                   })
                 ),
                 (e = Sr.createElement(
@@ -61080,13 +61147,13 @@ and limitations under the License.
               "m_bLoadHistoryInProgress",
               void 0
             ),
-            rt.b([Qt.a], t.prototype, "OnHistoryScrollRef", null),
-            rt.b([Qt.a], t.prototype, "OnScroll", null),
-            rt.b([Qt.a], t.prototype, "OnWindowResize", null),
-            rt.b([Qt.a], t.prototype, "OnContentsChanged", null),
-            rt.b([Qt.a], t.prototype, "ScrollToBottom", null),
-            rt.b([Qt.a], t.prototype, "LoadOlderMessages", null),
-            rt.b([Qt.a], t.prototype, "FixScrollLocation", null),
+            rt.b([Zt.a], t.prototype, "OnHistoryScrollRef", null),
+            rt.b([Zt.a], t.prototype, "OnScroll", null),
+            rt.b([Zt.a], t.prototype, "OnWindowResize", null),
+            rt.b([Zt.a], t.prototype, "OnContentsChanged", null),
+            rt.b([Zt.a], t.prototype, "ScrollToBottom", null),
+            rt.b([Zt.a], t.prototype, "LoadOlderMessages", null),
+            rt.b([Zt.a], t.prototype, "FixScrollLocation", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -61157,7 +61224,7 @@ and limitations under the License.
                               className: "MinimizeTextChat",
                               onClick: this.OnTextChannelCloseClick
                             },
-                            Sr.createElement(ks.P, null)
+                            Sr.createElement(ks.Q, null)
                           )
                         ),
                         Sr.createElement(
@@ -61175,8 +61242,8 @@ and limitations under the License.
                   )
                 : null;
             }),
-            rt.b([Qt.a], t.prototype, "OnTextChannelCloseClick", null),
-            rt.b([Qt.a], t.prototype, "OnChatHistoryRef", null),
+            rt.b([Zt.a], t.prototype, "OnTextChannelCloseClick", null),
+            rt.b([Zt.a], t.prototype, "OnChatHistoryRef", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -61198,7 +61265,7 @@ and limitations under the License.
                 t = !0,
                 i = !1,
                 n = this.props.bLastMessageBlock,
-                r = Zp.FriendStore.GetPlayer(
+                r = Qp.FriendStore.GetPlayer(
                   this.props.messages[0].unAccountID
                 ),
                 o = "ChatMessageBlock",
@@ -61342,11 +61409,11 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.OnBlock = function() {
-              Zp.FriendStore.BlockPlayer(this.props.friend, !1),
-                Zp.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
+              Qp.FriendStore.BlockPlayer(this.props.friend, !1),
+                Qp.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
             }),
             (t.prototype.OnAllow = function() {
-              Zp.FriendStore.SetApprovedNonFriendMessages(
+              Qp.FriendStore.SetApprovedNonFriendMessages(
                 this.props.friend.accountid
               );
             }),
@@ -61408,8 +61475,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnBlock", null),
-            rt.b([Qt.a], t.prototype, "OnAllow", null),
+            rt.b([Zt.a], t.prototype, "OnBlock", null),
+            rt.b([Zt.a], t.prototype, "OnAllow", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -61528,7 +61595,7 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e,
-                t = Zp.RTime32ToDate(this.props.rtTimestamp),
+                t = Qp.RTime32ToDate(this.props.rtTimestamp),
                 i = ["msg", "timeDivision"];
               if (this.props.bUnread) {
                 var n = {
@@ -61579,7 +61646,7 @@ and limitations under the License.
                 n = "";
               switch (e.eServerMsgType) {
                 case 1:
-                  var r = Zp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Qp.FriendStore.GetPlayer(e.unAccountID);
                   n = Se(
                     i,
                     "#ChatRoom_ServerMessage_RenameChatRoom",
@@ -61588,20 +61655,20 @@ and limitations under the License.
                   );
                   break;
                 case 2:
-                  var o = Zp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Qp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Se(i, "#ChatRoom_ServerMessage_Joined", o);
                   break;
                 case 3:
-                  var o = Zp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var o = Qp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Se(i, "#ChatRoom_ServerMessage_Parted", o);
                   break;
                 case 4:
-                  var a = Zp.FriendStore.GetPlayer(e.unAccountID),
-                    o = Zp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
+                  var a = Qp.FriendStore.GetPlayer(e.unAccountID),
+                    o = Qp.FriendStore.GetPlayer(e.unServerMsgParamAccountID);
                   n = Se(i, "#ChatRoom_ServerMessage_Kicked", o, a);
                   break;
                 case 9:
-                  var r = Zp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Qp.FriendStore.GetPlayer(e.unAccountID);
                   n = e.strServerMsgParam.length
                     ? Se(
                         i,
@@ -61616,7 +61683,7 @@ and limitations under the License.
                       );
                   break;
                 case 10:
-                  var r = Zp.FriendStore.GetPlayer(e.unAccountID);
+                  var r = Qp.FriendStore.GetPlayer(e.unAccountID);
                   n = Se(i, "#ChatRoom_ServerMessage_ChatRoomAvatarChanged", r);
                   break;
                 default:
@@ -61671,26 +61738,26 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.AcceptTrade = function() {
-              Zp.FriendStore.RespondToTradeRequest(
+              Qp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !0
               );
             }),
             (t.prototype.DeclineTrade = function() {
-              Zp.FriendStore.RespondToTradeRequest(
+              Qp.FriendStore.RespondToTradeRequest(
                 this.TradeRequestMsg.TradeRequestID(),
                 !1
               ),
                 this.TradeRequestMsg.MarkAsDeclined();
             }),
             (t.prototype.CancelTradeRequest = function() {
-              Zp.FriendStore.CancelTradeRequest(
+              Qp.FriendStore.CancelTradeRequest(
                 this.TradeRequestMsg.TargetSteamID()
               ),
                 this.TradeRequestMsg.MarkAsCancelled();
             }),
             (t.prototype.ViewAcceptedTrade = function() {
-              Zp.FriendStore.OpenTradeWindow(
+              Qp.FriendStore.OpenTradeWindow(
                 this.TradeRequestMsg.TargetSteamID()
               );
             }),
@@ -61698,15 +61765,15 @@ and limitations under the License.
               var e = new dt.a(
                   this.TradeRequestMsg.TargetSteamID()
                 ).GetAccountID(),
-                t = e != Zp.FriendStore.self.accountid,
+                t = e != Qp.FriendStore.self.accountid,
                 i = t
                   ? this.props.msg.unAccountID
-                  : Zp.FriendStore.self.accountid;
+                  : Qp.FriendStore.self.accountid;
               return C(this.TradeRequestMsg.m_ErrorDetails, i, e);
             }),
             (t.prototype.render = function() {
               var e =
-                  this.props.msg.unAccountID == Zp.FriendStore.self.accountid,
+                  this.props.msg.unAccountID == Qp.FriendStore.self.accountid,
                 t = {};
               if (
                 (this.props.speakerWidth &&
@@ -61761,7 +61828,7 @@ and limitations under the License.
                 var i = new dt.a(
                     this.TradeRequestMsg.TargetSteamID()
                   ).GetAccountID(),
-                  n = Zp.FriendStore.GetPlayer(i),
+                  n = Qp.FriendStore.GetPlayer(i),
                   r = Sr.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
@@ -61779,7 +61846,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         null,
-                        Sr.createElement(ks.K, null),
+                        Sr.createElement(ks.L, null),
                         e &&
                           Object(gr.d)(
                             "#ChatRoom_TradeRequest_Recipient_Declined",
@@ -61808,7 +61875,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         null,
-                        Sr.createElement(ks.K, null),
+                        Sr.createElement(ks.L, null),
                         this.GetLocalizedErrorResponseString()
                       )
                     )
@@ -61821,7 +61888,7 @@ and limitations under the License.
                   o = Sr.createElement(
                     "span",
                     { className: "inviteeNameLabel" },
-                    Zp.FriendStore.GetPlayer(i).display_name
+                    Qp.FriendStore.GetPlayer(i).display_name
                   );
                 return Sr.createElement(
                   "div",
@@ -61838,7 +61905,7 @@ and limitations under the License.
                       Sr.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        Sr.createElement(ks.K, null)
+                        Sr.createElement(ks.L, null)
                       ),
                       Sr.createElement(
                         "div",
@@ -61868,7 +61935,7 @@ and limitations under the License.
                   )
                 );
               }
-              var o = Zp.FriendStore.GetPlayer(this.props.msg.unAccountID);
+              var o = Qp.FriendStore.GetPlayer(this.props.msg.unAccountID);
               return Sr.createElement(
                 "div",
                 { className: "msg", style: t },
@@ -61884,7 +61951,7 @@ and limitations under the License.
                     Sr.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      Sr.createElement(ks.K, null)
+                      Sr.createElement(ks.L, null)
                     ),
                     Sr.createElement(
                       "div",
@@ -61929,17 +61996,17 @@ and limitations under the License.
                           className: "closeButton",
                           onClick: this.DeclineTrade
                         },
-                        Sr.createElement(ks.P, null)
+                        Sr.createElement(ks.Q, null)
                       )
                     )
                   )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "AcceptTrade", null),
-            rt.b([Qt.a], t.prototype, "DeclineTrade", null),
-            rt.b([Qt.a], t.prototype, "CancelTradeRequest", null),
-            rt.b([Qt.a], t.prototype, "ViewAcceptedTrade", null),
+            rt.b([Zt.a], t.prototype, "AcceptTrade", null),
+            rt.b([Zt.a], t.prototype, "DeclineTrade", null),
+            rt.b([Zt.a], t.prototype, "CancelTradeRequest", null),
+            rt.b([Zt.a], t.prototype, "ViewAcceptedTrade", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -61964,11 +62031,11 @@ and limitations under the License.
                 var s = a[o];
                 if (-1 == r.indexOf(s.unServerMsgParamAccountID)) {
                   n.length > 0 && n.push(", ");
-                  var c = Zp.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
+                  var c = Qp.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
                   n.push(Me(i, c)), r.push(s.unServerMsgParamAccountID);
                 }
               }
-              var l = Me(i, Zp.FriendStore.GetPlayer(e[0].unAccountID)),
+              var l = Me(i, Qp.FriendStore.GetPlayer(e[0].unAccountID)),
                 u = "";
               if (n.length > 1) {
                 var d = Sr.createElement.apply(
@@ -62014,7 +62081,7 @@ and limitations under the License.
                   r.push("ChatMessageErrorSendingPermissionDenied"),
                 i ||
                   (r.push("HasTimeStamp"),
-                  (n = Zp.FriendStore.GetPlayer(this.props.msg.unAccountID)));
+                  (n = Qp.FriendStore.GetPlayer(this.props.msg.unAccountID)));
               var o = {},
                 a = {};
               this.props.speakerWidth &&
@@ -62061,7 +62128,7 @@ and limitations under the License.
                     Sr.createElement(
                       "div",
                       { className: "ChatMessageErrorPermissionDeniedAlert" },
-                      Sr.createElement(ks.q, null),
+                      Sr.createElement(ks.r, null),
                       Object(gr.b)("#Chat_ErrorPermissionDenied")
                     ),
                   s
@@ -62271,7 +62338,7 @@ and limitations under the License.
                 i = (this.props.hideTimeStamp, ["msg ChatMsgSlashEmote"]);
               t.self.accountid == e.unAccountID && i.push("isCurrentUser"),
                 e.bErrorSending && i.push("ChatMessageErrorSending");
-              var n = Zp.FriendStore.GetPlayer(this.props.msg.unAccountID),
+              var n = Qp.FriendStore.GetPlayer(this.props.msg.unAccountID),
                 r = M(e.strMessage),
                 o = this.props.chatView.IsChatRoom(),
                 a = "offline";
@@ -62438,7 +62505,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindMsgTxt", null),
+            rt.b([Zt.a], t.prototype, "BindMsgTxt", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -62552,7 +62619,7 @@ and limitations under the License.
             t
           );
         })(Sr.PureComponent),
-        Zd = (function(e) {
+        Qd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62574,7 +62641,7 @@ and limitations under the License.
               var t = this;
               return (
                 e.preventDefault(),
-                Zp.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
+                Qp.ParentalStore.Unlock(this.state.strPIN).then(function(e) {
                   1 != e && t.setState({ error: e });
                 }),
                 !0
@@ -62625,13 +62692,13 @@ and limitations under the License.
                 e && Sr.createElement("p", { className: "error_text" }, e)
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindTextInput", null),
-            rt.b([Qt.a], t.prototype, "OnPINInput", null),
-            rt.b([Qt.a], t.prototype, "onOK", null),
+            rt.b([Zt.a], t.prototype, "BindTextInput", null),
+            rt.b([Zt.a], t.prototype, "OnPINInput", null),
+            rt.b([Zt.a], t.prototype, "onOK", null),
             t
           );
         })(Sr.Component),
-        Qd = (i("FHUK"),
+        Zd = (i("FHUK"),
         (function(e) {
           function t(t, i, n) {
             var r = this,
@@ -62666,7 +62733,7 @@ and limitations under the License.
               t.setAttribute("class", "fullheight popup_chat_frame");
               var i = new wm(e),
                 n = this.browser_info || Jp,
-                r = Zp.UIStore.GetDefaultTabSetForContext(n);
+                r = Qp.UIStore.GetDefaultTabSetForContext(n);
               (this.m_browserContext = n),
                 this.m_bHidden
                   ? Rs.render(null, t)
@@ -62687,7 +62754,7 @@ and limitations under the License.
             }),
             (t.prototype.OnClose = function() {
               e.prototype.OnClose.call(this),
-                Zp.UIStore.SetFriendsListWindowForContext(
+                Qp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   void 0
                 ),
@@ -62719,7 +62786,7 @@ and limitations under the License.
                 ? (i.m_nInlineChatWidth = 640)
                 : ((i.m_bResponsiveMainWindow = !0),
                   (i.m_nInlineChatWidth = 530),
-                  (i.m_ResponsiveWindowState = Zp.UIStore.GetResponsiveWindowState(
+                  (i.m_ResponsiveWindowState = Qp.UIStore.GetResponsiveWindowState(
                     i.m_browserContext
                   ))),
               (n = r.innerWidth >= i.m_nInlineChatWidth),
@@ -62777,15 +62844,15 @@ and limitations under the License.
               (this.m_bChatsVisible = e),
                 nt.a.USE_POPUPS &&
                   (t && !e
-                    ? Zp.UIStore.ConvertDefaultTabSetToPopup(
+                    ? Qp.UIStore.ConvertDefaultTabSetToPopup(
                         this.m_browserContext
                       )
                     : !t &&
                       e &&
-                      Zp.UIStore.ConvertDefaultTabSetToEmbedded(
+                      Qp.UIStore.ConvertDefaultTabSetToEmbedded(
                         this.m_browserContext
                       ),
-                  Zp.UIStore.SetDefaultChatDestination(
+                  Qp.UIStore.SetDefaultChatDestination(
                     this.m_browserContext,
                     e
                   ));
@@ -62794,7 +62861,7 @@ and limitations under the License.
               var e = this;
               (this.m_popupActionDisposer = Object(mt.autorun)(function() {
                 if (!nt.a.IN_CLIENT) {
-                  var t = Zp.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
+                  var t = Qp.ChatStore.FriendChatStore.GetUnfilteredFriendsWithUnreadMessages();
                   t.length && void 0 === e.m_unTimerWindowTitleUnreadCycle
                     ? (e.m_unTimerWindowTitleUnreadCycle = setInterval(
                         function() {
@@ -62845,7 +62912,7 @@ and limitations under the License.
             (t.prototype.componentWillMount = function() {
               var e = this.props.popup ? this.props.popup.window : window;
               e && e.addEventListener("resize", this.OnWindowResizeEvent),
-                Zp.UIStore.SetFriendsListWindowForContext(
+                Qp.UIStore.SetFriendsListWindowForContext(
                   this.m_browserContext,
                   this
                 ),
@@ -62937,12 +63004,12 @@ and limitations under the License.
                   width:
                     Tm.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
                 };
-              return Zp.ParentalStore.BIsFriendsBlocked()
+              return Qp.ParentalStore.BIsFriendsBlocked()
                 ? nt.a.IN_CLIENT
                   ? Sr.createElement(
                       "div",
                       { className: n },
-                      Sr.createElement(Zd, null)
+                      Sr.createElement(Qd, null)
                     )
                   : (location.reload(), Sr.createElement("div", null))
                 : Sr.createElement(
@@ -62958,7 +63025,7 @@ and limitations under the License.
                       })
                     ),
                     !1,
-                    Zp.ready_to_render &&
+                    Qp.ready_to_render &&
                       Sr.createElement(
                         yd,
                         null,
@@ -63015,14 +63082,14 @@ and limitations under the License.
               "m_nWindowTitleUnreadCycleCount",
               void 0
             ),
-            rt.b([Qt.a], t.prototype, "OnWindowResized", null),
-            rt.b([Qt.a], t.prototype, "OnWindowResizeEvent", null),
-            rt.b([Qt.a], t.prototype, "BindFriendsListContainer", null),
-            rt.b([Qt.a], t.prototype, "OnGrabberMouseDown", null),
-            rt.b([Qt.a], t.prototype, "OnGrabberTouchStart", null),
-            rt.b([Qt.a], t.prototype, "HandleTouchMove", null),
-            rt.b([Qt.a], t.prototype, "HandleMouseMove", null),
-            rt.b([Qt.a], t.prototype, "UnregisterFriendsListDragEvents", null),
+            rt.b([Zt.a], t.prototype, "OnWindowResized", null),
+            rt.b([Zt.a], t.prototype, "OnWindowResizeEvent", null),
+            rt.b([Zt.a], t.prototype, "BindFriendsListContainer", null),
+            rt.b([Zt.a], t.prototype, "OnGrabberMouseDown", null),
+            rt.b([Zt.a], t.prototype, "OnGrabberTouchStart", null),
+            rt.b([Zt.a], t.prototype, "HandleTouchMove", null),
+            rt.b([Zt.a], t.prototype, "HandleMouseMove", null),
+            rt.b([Zt.a], t.prototype, "UnregisterFriendsListDragEvents", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -63085,7 +63152,7 @@ and limitations under the License.
               this.m_tabSet = void 0;
             }),
             (t.prototype.OnResize = function() {
-              Zp.UIStore.OnTabSetResized(this.m_tabSet),
+              Qp.UIStore.OnTabSetResized(this.m_tabSet),
                 e.prototype.OnResize.call(this);
             }),
             (t.prototype.OnClose = function() {
@@ -63109,7 +63176,7 @@ and limitations under the License.
                   t
                 );
             }),
-            rt.b([Qt.a], t.prototype, "SetTitle", null),
+            rt.b([Zt.a], t.prototype, "SetTitle", null),
             t
           );
         })(ws.b),
@@ -63186,8 +63253,8 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               if (nt.a.IN_CLIENT) {
-                if (Zp.CMInterface.BDisconnected()) {
-                  var e = Ze(this.props.popup),
+                if (Qp.CMInterface.BDisconnected()) {
+                  var e = Qe(this.props.popup),
                     t = e != Jp;
                   return Sr.createElement(
                     "div",
@@ -63218,7 +63285,7 @@ and limitations under the License.
               }
               return Sr.createElement(rp, null);
             }),
-            rt.b([Qt.a], t.prototype, "OnKeyDown", null),
+            rt.b([Zt.a], t.prototype, "OnKeyDown", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -63240,8 +63307,8 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.componentWillMount = function() {
               var e = this;
-              if (!Zp.ready_to_render) {
-                var t = performance.now() - Zp.GetStartupTime();
+              if (!Qp.ready_to_render) {
+                var t = performance.now() - Qp.GetStartupTime();
                 this.m_iIntervalDelayedStartup = window.setTimeout(function() {
                   e.setState({ bShowStartupDelayMessage: !0 }),
                     (e.m_iIntervalDelayedStartup = void 0);
@@ -63300,7 +63367,7 @@ and limitations under the License.
               var i = null,
                 n = t.web_logon_state,
                 r =
-                  !Zp.NotificationManager.BNotificationsPermitted() &&
+                  !Qp.NotificationManager.BNotificationsPermitted() &&
                   this.state.bShouldRequestNotificationPermission;
               if (9 != n || r) {
                 var o = void 0,
@@ -63309,7 +63376,7 @@ and limitations under the License.
                   c = !1;
                 if (9 != n)
                   if (
-                    Zp.ready_to_render ||
+                    Qp.ready_to_render ||
                     this.state.bShowStartupDelayMessage ||
                     !t.BIsInInitialConnect()
                   )
@@ -63364,7 +63431,7 @@ and limitations under the License.
                 else
                   r &&
                     (this.m_bRequestingNotificationPermission ||
-                      (Zp.NotificationManager.RequestNotificationPermission().then(
+                      (Qp.NotificationManager.RequestNotificationPermission().then(
                         function() {
                           (e.m_bRequestingNotificationPermission = !1),
                             e.setState({
@@ -63380,7 +63447,7 @@ and limitations under the License.
                 !this.state.bShowReconnectWaitMessage &&
                   u &&
                   this.StartReconnectUpdateInterval(),
-                  (!o && Zp.ready_to_render) ||
+                  (!o && Qp.ready_to_render) ||
                     (i = Sr.createElement(
                       Ls,
                       { classNames: "modalbg-anim", timeout: 300 },
@@ -63389,7 +63456,7 @@ and limitations under the License.
                         {
                           className:
                             "chat_full_modaloverlay ConnectionTrouble" +
-                            (Zp.ready_to_render ? "" : " NotReadyToRender")
+                            (Qp.ready_to_render ? "" : " NotReadyToRender")
                         },
                         Sr.createElement("div", {
                           className:
@@ -63477,13 +63544,13 @@ and limitations under the License.
               return Sr.createElement(xs, null, i);
             }),
             rt.b(
-              [Qt.a],
+              [Zt.a],
               t.prototype,
               "IntervalUpdateReconnectWaitStatus",
               null
             ),
-            rt.b([Qt.a], t.prototype, "OnReconnectNowClick", null),
-            rt.b([Qt.a], t.prototype, "OnLoginClick", null),
+            rt.b([Zt.a], t.prototype, "OnReconnectNowClick", null),
+            rt.b([Zt.a], t.prototype, "OnLoginClick", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -63547,8 +63614,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "Cancel", null),
-            rt.b([Qt.a], t.prototype, "OK", null),
+            rt.b([Zt.a], t.prototype, "Cancel", null),
+            rt.b([Zt.a], t.prototype, "OK", null),
             t
           );
         })(Sr.Component)),
@@ -63634,9 +63701,9 @@ and limitations under the License.
             }),
             (e.prototype.Init = function() {
               var e = this;
-              Zp.AddPopupManagerShutdownCallback(this.SerializePopupState),
+              Qp.AddPopupManagerShutdownCallback(this.SerializePopupState),
                 Object(mt.autorun)(function() {
-                  var t = Zp.ParentalStore.BIsFriendsBlocked();
+                  var t = Qp.ParentalStore.BIsFriendsBlocked();
                   e.OnFriendsParentalLockChanged(t);
                 });
             }),
@@ -63711,10 +63778,10 @@ and limitations under the License.
             }),
             (e.prototype.ReplaceFriendChatWithGroupChat = function(e, t, i) {
               var n = this,
-                r = Ze(e),
+                r = Qe(e),
                 o = this.m_chatStore.FindNamelessChatGroupWithFriends(i);
               if (o) return void this.ReplaceFriendChatWithGroup(r, t, o);
-              Zp.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
+              Qp.ChatStore.CreateChatRoomGroup(r, "", i).then(function(i) {
                 if (!i)
                   return void Te(
                     e,
@@ -63778,7 +63845,7 @@ and limitations under the License.
                 o = this.GetTabSetByUniqueID(r, t);
               if (o) i && o.tabSet.ActivateTab(o.tab), (n = o.tab);
               else {
-                var a = Zp.SettingsStore.BAlwaysShowChatsInNewWindow();
+                var a = Qp.SettingsStore.BAlwaysShowChatsInNewWindow();
                 if (
                   !nt.a.USE_POPUPS ||
                   (!a && r.default_tabset.is_popup_active)
@@ -63795,7 +63862,7 @@ and limitations under the License.
                     s != r.default_tabset ||
                     (r.BIsDefaultTabSetInPopup() && !s.is_popup_active)
                   ) {
-                    var c = Zp.CreateChatPopup(
+                    var c = Qp.CreateChatPopup(
                       e,
                       this.GetNextChatPopupID(),
                       s,
@@ -63929,14 +63996,14 @@ and limitations under the License.
                 o = t.match(/^f(\d+)$/);
               if (o && o[1]) {
                 var a = parseInt(o[1]),
-                  s = Zp.FriendStore.GetPlayer(a);
+                  s = Qp.FriendStore.GetPlayer(a);
                 if (s && !s.is_blocked) {
                   var c = this.m_chatStore.GetFriendChat(a);
                   c &&
                     ((r = new Bs(e, c)),
                     !n ||
                       s.is_friend ||
-                      Zp.FriendStore.BApprovedNonFriendMessages(a) ||
+                      Qp.FriendStore.BApprovedNonFriendMessages(a) ||
                       c.SetShowNonFriendWarning(!0));
                 }
               }
@@ -63983,7 +64050,7 @@ and limitations under the License.
                 var i = t.GetPopupForTabSet(t.default_tabset);
                 return (
                   i ||
-                  ((i = Zp.CreateChatPopup(
+                  ((i = Qp.CreateChatPopup(
                     e,
                     this.GetNextChatPopupID(),
                     t.default_tabset,
@@ -64042,7 +64109,7 @@ and limitations under the License.
                   (t.friends_list_window
                     ? t.friends_list_window.BringToFront()
                     : t.BIsDefaultTabSetInWindow() &&
-                      Zp.ShowPopupFriendsList(e.GetBrowserContext()));
+                      Qp.ShowPopupFriendsList(e.GetBrowserContext()));
             }),
             (e.prototype.MoveTabToNewPopup = function(e, t, i, n) {
               AssertMsg(e, "browserContext");
@@ -64052,7 +64119,7 @@ and limitations under the License.
               });
               var o = new yr(e);
               o.AddTab(t);
-              var a = Zp.CreateChatPopup(
+              var a = Qp.CreateChatPopup(
                 e,
                 this.GetNextChatPopupID(),
                 o,
@@ -64079,10 +64146,10 @@ and limitations under the License.
             (e.prototype.SerializePopupState = function(e) {
               if (
                 (void 0 === e && (e = !1),
-                this.m_bRestoredPopupState && Zp.SettingsStore.BReady())
+                this.m_bRestoredPopupState && Qp.SettingsStore.BReady())
               ) {
                 var t = this.SerializePopupStateToObject(e);
-                Zp.SettingsStore.StoreObjectInLocalStorage(
+                Qp.SettingsStore.StoreObjectInLocalStorage(
                   "ChatStorePopupState",
                   t
                 );
@@ -64119,10 +64186,10 @@ and limitations under the License.
               );
             }),
             (e.prototype.BRestorePopups = function() {
-              return Zp.SettingsStore.BAlwaysShowChatsInNewWindow();
+              return Qp.SettingsStore.BAlwaysShowChatsInNewWindow();
             }),
             (e.prototype.BRestoreOpenChats = function() {
-              return Zp.SettingsStore.FriendsSettings.bRememberOpenChats;
+              return Qp.SettingsStore.FriendsSettings.bRememberOpenChats;
             }),
             (e.prototype.DeserializeIntoTabSet = function(e, t) {
               if (t.tabs && Array.isArray(t.tabs))
@@ -64140,9 +64207,9 @@ and limitations under the License.
                 !this.m_bRestoredPopupState,
                 "Second restore popup state"
               ),
-                Zp.ParentalStore.BIsFriendsBlocked() ||
+                Qp.ParentalStore.BIsFriendsBlocked() ||
                   (void 0 == this.m_stateToRestoreFrom
-                    ? Zp.SettingsStore.GetObjectFromLocalStorageWhenReady(
+                    ? Qp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                         "ChatStorePopupState"
                       ).then(function(t) {
                         e.RestoreFromStateObject(t);
@@ -64175,8 +64242,8 @@ and limitations under the License.
                       0 == t.default_tabset.tabCount &&
                         ((i = t.default_tabset),
                         this.DeserializeIntoTabSet(i, o));
-                      var a = Zp.CreateChatPopup(
-                        Zp.GetDefaultBrowserContext(),
+                      var a = Qp.CreateChatPopup(
+                        Qp.GetDefaultBrowserContext(),
                         this.GetNextChatPopupID(),
                         i,
                         void 0,
@@ -64194,7 +64261,7 @@ and limitations under the License.
                   }
               nt.a.USE_POPUPS &&
                 e.bFriendsListVisible &&
-                Zp.ShowPopupFriendsList(Jp);
+                Qp.ShowPopupFriendsList(Jp);
               for (
                 var l = 0, u = this.m_vecShowGroupsAfterRestorePopup;
                 l < u.length;
@@ -64213,7 +64280,7 @@ and limitations under the License.
               "OnFriendsParentalLockChanged",
               null
             ),
-            rt.b([Qt.a], e.prototype, "SerializePopupState", null),
+            rt.b([Zt.a], e.prototype, "SerializePopupState", null),
             e
           );
         })(),
@@ -64549,8 +64616,8 @@ and limitations under the License.
                 this.m_CM.AddOnLogonCallback(function() {
                   t.m_bReady ||
                     (t.m_iFriendSettingsStore.InternalInit(), t.SetReady());
-                  var e = ht.Init(Zo);
-                  return Zr.GetCommunityPreferences(
+                  var e = ht.Init(Qo);
+                  return Qr.GetCommunityPreferences(
                     t.m_CM.GetServiceTransport(),
                     e
                   ).then(function(e) {
@@ -64728,7 +64795,7 @@ and limitations under the License.
                       this.CommunityPreferences
                     )
                   ),
-                  Zr.SetCommunityPreferences(
+                  Qr.SetCommunityPreferences(
                     this.m_CM.GetServiceTransport(),
                     r
                   ).then(function(e) {});
@@ -66176,8 +66243,8 @@ and limitations under the License.
               if (i == yp.k_EPending) {
                 var n = this.m_nRequestID++;
                 this.m_mapPendingRequests.set(this.MakeKey(e, n), i);
-                var r = Zp.GetDefaultBrowserContext(),
-                  o = Zp.ShowFriendChatDialog(r, e);
+                var r = Qp.GetDefaultBrowserContext(),
+                  o = Qp.ShowFriendChatDialog(r, e);
                 o && o.ViewerNeedsApproval(n);
               } else this.m_mapPendingRequests.set(this.MakeKey(e, t), i);
             }),
@@ -66210,8 +66277,8 @@ and limitations under the License.
             rt.b([mt.computed], e.prototype, "is_broadcasting", null),
             rt.b([mt.computed], e.prototype, "broadcastid", null),
             rt.b([mt.computed], e.prototype, "is_broadcast_capable", null),
-            rt.b([Qt.a, mt.action], e.prototype, "OnBroadcastStatus", null),
-            rt.b([Qt.a, mt.action], e.prototype, "OnViewerRequest", null),
+            rt.b([Zt.a, mt.action], e.prototype, "OnBroadcastStatus", null),
+            rt.b([Zt.a, mt.action], e.prototype, "OnViewerRequest", null),
             rt.b([mt.action], e.prototype, "ApproveViewerRequest", null),
             rt.b([mt.action], e.prototype, "RejectViewerRequest", null),
             rt.b([mt.action], e.prototype, "InviteToWatch", null),
@@ -66232,7 +66299,7 @@ and limitations under the License.
         Xp = (function() {
           function e(e) {
             (this.m_BrowserContextDefaultTarget = Jp),
-              (this.m_FriendStore = new Qa()),
+              (this.m_FriendStore = new Za()),
               (this.m_ChatStore = new Os(this.m_FriendStore)),
               (this.m_UIStore = new sp(this.m_ChatStore)),
               (this.m_AppInfoStore = new pi()),
@@ -66244,8 +66311,8 @@ and limitations under the License.
               (this.m_nWallClockDriftMS = 0),
               (this.m_nPerfClockServerMSOffset =
                 new Date().getTime() - performance.now()),
-              AssertMsg(!Zp, "FriendsUIApp already initialized"),
-              (Zp = this),
+              AssertMsg(!Qp, "FriendsUIApp already initialized"),
+              (Qp = this),
               (window.g_FriendsUIApp = this),
               (this.m_Storage = e),
               (this.m_SettingsStore = new Cp(e)),
@@ -66455,8 +66522,8 @@ and limitations under the License.
             e
           );
         })(),
-        Zp = void 0,
-        Qp = (function(e) {
+        Qp = void 0,
+        Zp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66465,7 +66532,7 @@ and limitations under the License.
             (t.prototype.AcceptInvite = function(e) {
               var t = this,
                 i = $e(e);
-              Zp.ChatStore.InviteStore.AcceptInvite(
+              Qp.ChatStore.InviteStore.AcceptInvite(
                 this.props.invite,
                 Xe(this, e)
               ).then(function(e) {
@@ -66475,7 +66542,7 @@ and limitations under the License.
             (t.prototype.HandleJoinResult = function(e, t) {
               if (15 == t.result) {
                 0 == t.time && console.log("no longer valid");
-                var i = Zp.RTime32ToDate(t.time),
+                var i = Qp.RTime32ToDate(t.time),
                   n = i.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -66525,8 +66592,8 @@ and limitations under the License.
                 );
               var t =
                   this.props.inviter &&
-                  Zp.FriendStore.self.accountid == this.props.inviter.accountid,
-                i = Zp.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
+                  Qp.FriendStore.self.accountid == this.props.inviter.accountid,
+                i = Qp.ChatStore.GetChatRoomGroup(e.GetChatRoomGroupID()),
                 n = i && i.BIsCurrentUserAMember(),
                 r = e.BIsExpired(),
                 o = i && i.name,
@@ -66554,7 +66621,7 @@ and limitations under the License.
                   Object(gr.b)("#bbcode_invite_never_expires")
                 );
               else {
-                var h = Zp.RTime32ToDate(e.time_expires);
+                var h = Qp.RTime32ToDate(e.time_expires);
                 p = Sr.createElement(
                   "div",
                   { className: "Invite_ExpireTime" },
@@ -66586,10 +66653,10 @@ and limitations under the License.
                   ));
               else if (
                 e.GetTimeKickExpires() &&
-                e.GetTimeKickExpires() > Zp.GetServerRTime32()
+                e.GetTimeKickExpires() > Qp.GetServerRTime32()
               ) {
                 f = !0;
-                var h = Zp.RTime32ToDate(e.GetTimeKickExpires()),
+                var h = Qp.RTime32ToDate(e.GetTimeKickExpires()),
                   _ = h.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
@@ -66614,7 +66681,7 @@ and limitations under the License.
                   { className: "leftInviteContainer" },
                   Sr.createElement(hu, { group: i, small: y, large: v }),
                   u &&
-                    Sr.createElement("div", null, Sr.createElement(ks.M, null))
+                    Sr.createElement("div", null, Sr.createElement(ks.N, null))
                 ),
                 Sr.createElement(
                   "div",
@@ -66675,7 +66742,7 @@ and limitations under the License.
                 Sr.createElement("div", { style: { clear: "left" } })
               );
             }),
-            rt.b([Qt.a], t.prototype, "AcceptInvite", null),
+            rt.b([Zt.a], t.prototype, "AcceptInvite", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -66686,8 +66753,8 @@ and limitations under the License.
             r = t.BIsVoiceChatInvite(),
             o = t.BIsInviteLink(),
             a =
-              e.inviter && Zp.FriendStore.self.accountid == e.inviter.accountid,
-            s = Zp.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
+              e.inviter && Qp.FriendStore.self.accountid == e.inviter.accountid,
+            s = Qp.ChatStore.GetChatRoomGroup(t.GetChatRoomGroupID()).name,
             c = Object(gr.b)("#bbcode_invite_youre_invited");
           return (
             a
@@ -66804,7 +66871,7 @@ and limitations under the License.
                   Re,
                   { onEscKeypress: i },
                   Sr.createElement(
-                    Qp,
+                    Zp,
                     rt.a({}, r, { strClassName: n, onAccept: o })
                   )
                 )
@@ -66857,8 +66924,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "CopyToClipboard", null),
-            rt.b([Qt.a], t.prototype, "HandleFocus", null),
+            rt.b([Zt.a], t.prototype, "CopyToClipboard", null),
+            rt.b([Zt.a], t.prototype, "HandleFocus", null),
             t
           );
         })(Sr.Component),
@@ -66878,9 +66945,9 @@ and limitations under the License.
               ge(Xe(this, e), this.props.gameInvite.appID, e);
             }),
             (t.prototype.render = function() {
-              var e = Zp.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
+              var e = Qp.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
               if (!e) return null;
-              if (Zp.FriendStore.self == this.props.inviter) {
+              if (Qp.FriendStore.self == this.props.inviter) {
                 var t = Sr.createElement(
                   "span",
                   { className: "inviteeNameLabel" },
@@ -66905,7 +66972,7 @@ and limitations under the License.
                 );
               }
               if (
-                Zp.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
+                Qp.GetServerRTime32() - this.props.gameInvite.rtTimestamp >
                   21600 ||
                 this.props.gameInvite.bDismissed ||
                 this.props.inviter.persona.m_unGamePlayedAppID !=
@@ -66959,8 +67026,8 @@ and limitations under the License.
                 n.persona.player_group_size > 0
               ) {
                 var a = n.persona.player_group;
-                Zp.FriendStore.all_friends,
-                  (r = Zp.FriendStore.FriendGroupStore.ingame_group.member_list.map(
+                Qp.FriendStore.all_friends,
+                  (r = Qp.FriendStore.FriendGroupStore.ingame_group.member_list.map(
                     function(e) {
                       return e != n && e.persona.player_group == a
                         ? (o--,
@@ -67057,14 +67124,14 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "closeButton", onClick: this.DismissInvite },
-                    Sr.createElement(ks.P, null)
+                    Sr.createElement(ks.Q, null)
                   )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "AcceptGameInvite", null),
-            rt.b([Qt.a], t.prototype, "DismissInvite", null),
-            rt.b([Qt.a], t.prototype, "OnShowGameContextMenu", null),
+            rt.b([Zt.a], t.prototype, "AcceptGameInvite", null),
+            rt.b([Zt.a], t.prototype, "DismissInvite", null),
+            rt.b([Zt.a], t.prototype, "OnShowGameContextMenu", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -68749,7 +68816,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.componentDidMount = function() {
               this.props.broadcaster.accountid !=
-                Zp.FriendStore.self.accountid &&
+                Qp.FriendStore.self.accountid &&
                 (this.props.broadcastid
                   ? this.PollForStatus()
                   : this.setState({ bExpired: !0 }));
@@ -68786,7 +68853,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.FetchBroadcastStatus = function() {
-              var e = Zp.CMInterface;
+              var e = Qp.CMInterface;
               if (e) {
                 var t = ht.Init(ah);
                 return (
@@ -68799,7 +68866,7 @@ and limitations under the License.
             }),
             (t.prototype.FetchBroadcastThumbnail = function() {
               var e = this,
-                t = Zp.CMInterface;
+                t = Qp.CMInterface;
               if (t) {
                 var i = ht.Init(ch);
                 i.Body().set_steamid(this.props.broadcaster.steamid64),
@@ -68847,7 +68914,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Zp.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Qp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = Sr.createElement(
                   "span",
                   null,
@@ -68859,7 +68926,7 @@ and limitations under the License.
                 );
               if (
                 this.props.broadcaster.accountid ==
-                Zp.FriendStore.self.accountid
+                Qp.FriendStore.self.accountid
               ) {
                 var i = Sr.createElement(
                   "span",
@@ -68945,15 +69012,15 @@ and limitations under the License.
                   Sr.createElement(
                     "div",
                     { className: "closeButton", onClick: this.OnClose },
-                    Sr.createElement(ks.P, null)
+                    Sr.createElement(ks.Q, null)
                   )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnWatch", null),
-            rt.b([Qt.a], t.prototype, "OnClose", null),
-            rt.b([Qt.a], t.prototype, "OnOpen", null),
-            rt.b([Qt.a], t.prototype, "ShowThumbnail", null),
+            rt.b([Zt.a], t.prototype, "OnWatch", null),
+            rt.b([Zt.a], t.prototype, "OnClose", null),
+            rt.b([Zt.a], t.prototype, "OnOpen", null),
+            rt.b([Zt.a], t.prototype, "ShowThumbnail", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -68976,13 +69043,13 @@ and limitations under the License.
           return (
             rt.c(t, e),
             (t.prototype.OnAccept = function(e) {
-              Zp.BroadcastStore.ApproveViewerRequest(
+              Qp.BroadcastStore.ApproveViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
             }),
             (t.prototype.OnClose = function() {
-              Zp.BroadcastStore.RejectViewerRequest(
+              Qp.BroadcastStore.RejectViewerRequest(
                 this.props.viewer.accountid,
                 this.props.requestid
               );
@@ -68991,7 +69058,7 @@ and limitations under the License.
               this.setState({ bThumbnailLoaded: !0 });
             }),
             (t.prototype.render = function() {
-              var e = Zp.AppInfoStore.GetAppInfo(this.props.appid),
+              var e = Qp.AppInfoStore.GetAppInfo(this.props.appid),
                 t = Sr.createElement(
                   "span",
                   null,
@@ -69006,17 +69073,17 @@ and limitations under the License.
                   { className: "inviteeNameLabel" },
                   this.props.viewer.display_name
                 ),
-                n = Zp.BroadcastStore.GetRequestState(
+                n = Qp.BroadcastStore.GetRequestState(
                   this.props.viewer.accountid,
                   this.props.requestid
                 ),
                 r =
                   void 0 !== this.m_broadcastid &&
-                  this.m_broadcastid != Zp.BroadcastStore.broadcastid;
+                  this.m_broadcastid != Qp.BroadcastStore.broadcastid;
               if (
                 (void 0 === this.m_broadcastid &&
-                  "0" !== Zp.BroadcastStore.broadcastid &&
-                  (this.m_broadcastid = Zp.BroadcastStore.broadcastid),
+                  "0" !== Qp.BroadcastStore.broadcastid &&
+                  (this.m_broadcastid = Qp.BroadcastStore.broadcastid),
                 r || n != yp.k_EPending)
               ) {
                 var o = "#ChatRoom_BroadcastViewRequest_Expired";
@@ -69091,9 +69158,9 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnAccept", null),
-            rt.b([Qt.a], t.prototype, "OnClose", null),
-            rt.b([Qt.a], t.prototype, "ShowThumbnail", null),
+            rt.b([Zt.a], t.prototype, "OnAccept", null),
+            rt.b([Zt.a], t.prototype, "OnClose", null),
+            rt.b([Zt.a], t.prototype, "ShowThumbnail", null),
             (t = rt.b([Es.observer], t))
           );
         })(Sr.Component),
@@ -69194,8 +69261,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnWatch", null),
-            rt.b([Qt.a], t.prototype, "ShowThumbnail", null),
+            rt.b([Zt.a], t.prototype, "OnWatch", null),
+            rt.b([Zt.a], t.prototype, "ShowThumbnail", null),
             t
           );
         })(Sr.Component);
@@ -69327,12 +69394,12 @@ and limitations under the License.
               );
             }),
             (t.s_nPlayerIndex = 0),
-            rt.b([Qt.a], t.prototype, "BindPlayerContainer", null),
-            rt.b([Qt.a], t.prototype, "OnYoutubeScriptsReady", null),
-            rt.b([Qt.a], t.prototype, "CreatePlayer", null),
-            rt.b([Qt.a], t.prototype, "OnPlayerReady", null),
-            rt.b([Qt.a], t.prototype, "OnPlayerStateChange", null),
-            rt.b([Qt.a], t.prototype, "OnError", null),
+            rt.b([Zt.a], t.prototype, "BindPlayerContainer", null),
+            rt.b([Zt.a], t.prototype, "OnYoutubeScriptsReady", null),
+            rt.b([Zt.a], t.prototype, "CreatePlayer", null),
+            rt.b([Zt.a], t.prototype, "OnPlayerReady", null),
+            rt.b([Zt.a], t.prototype, "OnPlayerStateChange", null),
+            rt.b([Zt.a], t.prototype, "OnError", null),
             t
           );
         })(Sr.Component),
@@ -69357,11 +69424,11 @@ and limitations under the License.
         Ah = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
-              n = Zp.ChatStore.EmbedStore.GetCollapsedState(
+              n = Qp.ChatStore.EmbedStore.GetCollapsedState(
                 i.props.unAccountIDSender,
                 i.props.msgUniqueKey
               ),
-              r = Zp.ChatStore.EmbedStore.GetWidths(
+              r = Qp.ChatStore.EmbedStore.GetWidths(
                 i.props.unAccountIDSender,
                 i.props.msgUniqueKey
               );
@@ -69410,7 +69477,7 @@ and limitations under the License.
                     t.m_animationCollapse.Start();
                 }
               ),
-                Zp.ChatStore.EmbedStore.SetCollapsedState(
+                Qp.ChatStore.EmbedStore.SetCollapsedState(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   i
@@ -69436,7 +69503,7 @@ and limitations under the License.
                   )),
                     t.m_animationCollapse.Start();
                 }),
-                Zp.ChatStore.EmbedStore.SetWidths(
+                Qp.ChatStore.EmbedStore.SetWidths(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   this.m_frameDefaultWidth,
@@ -69480,7 +69547,7 @@ and limitations under the License.
                 !this.state.bMinimized &&
                   this.m_elContainer &&
                   (this.m_frameDesiredWidth = this.m_elContainer.clientWidth),
-                Zp.ChatStore.EmbedStore.SetWidths(
+                Qp.ChatStore.EmbedStore.SetWidths(
                   this.props.unAccountIDSender,
                   this.props.msgUniqueKey,
                   this.m_frameDesiredWidth,
@@ -69535,7 +69602,7 @@ and limitations under the License.
                         "#bbcode_" + this.props.strMediaType + "_tooltip_resize"
                       )
                     },
-                    Sr.createElement(ks.B, null)
+                    Sr.createElement(ks.C, null)
                   ),
                   Sr.createElement(
                     "div",
@@ -69554,17 +69621,17 @@ and limitations under the License.
                               "_tooltip_collapse"
                           )
                     },
-                    Sr.createElement(ks.O, null)
+                    Sr.createElement(ks.P, null)
                   )
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "BindContainer", null),
-            rt.b([Qt.a], t.prototype, "handleCollapse", null),
-            rt.b([Qt.a], t.prototype, "handleRestore", null),
-            rt.b([Qt.a], t.prototype, "OnResize", null),
-            rt.b([Qt.a], t.prototype, "HandleMouseMove", null),
-            rt.b([Qt.a], t.prototype, "HandleMouseUp", null),
+            rt.b([Zt.a], t.prototype, "BindContainer", null),
+            rt.b([Zt.a], t.prototype, "handleCollapse", null),
+            rt.b([Zt.a], t.prototype, "handleRestore", null),
+            rt.b([Zt.a], t.prototype, "OnResize", null),
+            rt.b([Zt.a], t.prototype, "HandleMouseMove", null),
+            rt.b([Zt.a], t.prototype, "HandleMouseUp", null),
             t
           );
         })(Sr.Component),
@@ -69654,8 +69721,8 @@ and limitations under the License.
                   )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnVideoInfoChanged", null),
-            rt.b([Qt.a], t.prototype, "OnPlayerReady", null),
+            rt.b([Zt.a], t.prototype, "OnVideoInfoChanged", null),
+            rt.b([Zt.a], t.prototype, "OnPlayerReady", null),
             t
           );
         })(kr);
@@ -69764,7 +69831,7 @@ and limitations under the License.
                             )
                           : Object(gr.b)("#bbcode_image_tooltip_link")
                       },
-                      Sr.createElement(ks.z, null),
+                      Sr.createElement(ks.A, null),
                       Sr.createElement(
                         "div",
                         { className: "giphyTag" },
@@ -69774,8 +69841,8 @@ and limitations under the License.
                   )
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnImageLoad", null),
-            rt.b([Qt.a], t.prototype, "OnImageError", null),
+            rt.b([Zt.a], t.prototype, "OnImageLoad", null),
+            rt.b([Zt.a], t.prototype, "OnImageError", null),
             t
           );
         })(kr),
@@ -69836,15 +69903,15 @@ and limitations under the License.
                     Sr.createElement(
                       "div",
                       { className: "playButtonContainer" },
-                      Sr.createElement(ks.x, null)
+                      Sr.createElement(ks.y, null)
                     )
                   )
               );
             }),
-            rt.b([Qt.a], t.prototype, "StartVideo", null),
-            rt.b([Qt.a], t.prototype, "BindVideo", null),
-            rt.b([Qt.a], t.prototype, "OnVideoPlay", null),
-            rt.b([Qt.a], t.prototype, "OnVideoPause", null),
+            rt.b([Zt.a], t.prototype, "StartVideo", null),
+            rt.b([Zt.a], t.prototype, "BindVideo", null),
+            rt.b([Zt.a], t.prototype, "OnVideoPlay", null),
+            rt.b([Zt.a], t.prototype, "OnVideoPause", null),
             t
           );
         })(kr),
@@ -69865,7 +69932,7 @@ and limitations under the License.
                 rt.a({}, t, { onLoad: this.OnLoad })
               );
             }),
-            rt.b([Qt.a], t.prototype, "OnLoad", null),
+            rt.b([Zt.a], t.prototype, "OnLoad", null),
             t
           );
         })(Sr.Component),
@@ -69983,8 +70050,8 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "CopyToClipboard", null),
-            rt.b([Qt.a], t.prototype, "HandleFocus", null),
+            rt.b([Zt.a], t.prototype, "CopyToClipboard", null),
+            rt.b([Zt.a], t.prototype, "HandleFocus", null),
             t
           );
         })(kr),
@@ -70162,7 +70229,7 @@ and limitations under the License.
                 )
               );
             }),
-            rt.b([Qt.a], t.prototype, "Activate", null),
+            rt.b([Zt.a], t.prototype, "Activate", null),
             t
           );
         })(kr),
@@ -70185,7 +70252,7 @@ and limitations under the License.
               var e = this.props.context.chat.GetMember(
                 this.props.context.unAccountIDSender
               );
-              return Sr.createElement(Qp, {
+              return Sr.createElement(Zp, {
                 invite: this.state.invite,
                 inviter: e
               });
@@ -70230,7 +70297,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Sr.createElement(Qp, {
+              return Sr.createElement(Zp, {
                 invite: this.state.invite,
                 inviter: this.state.inviter,
                 invitee: this.state.invitee
@@ -70392,7 +70459,7 @@ and limitations under the License.
                 n,
                 r = e.args.requestid,
                 o = e.context.chat,
-                a = Zp.FriendStore.self.persona.m_gameid;
+                a = Qp.FriendStore.self.persona.m_gameid;
               return (
                 o.self.accountid != e.context.unAccountIDSender
                   ? ((i = o.self), (n = o.chat_partner))
@@ -70420,7 +70487,7 @@ and limitations under the License.
               bLocalVoteUp: !1,
               nCommentCount: parseInt(i.GetArgument("num_comments_public"))
             };
-            var n = Zp.CMInterface;
+            var n = Qp.CMInterface;
             if (n) {
               var r = i.GetArgument("fileid"),
                 o = ht.Init(_a, 8509);
@@ -70451,7 +70518,7 @@ and limitations under the License.
             rt.c(t, e),
             (t.prototype.VoteItem = function(e, t) {
               var i = this,
-                n = Zp.CMInterface;
+                n = Qp.CMInterface;
               if (n) {
                 var r = ht.Init(ga, 8507);
                 r.Body().set_published_file_id(t),
@@ -70576,7 +70643,7 @@ and limitations under the License.
             t
           );
         })(kr),
-        Zh = (function(e) {
+        Qh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70648,11 +70715,11 @@ and limitations under the License.
               }
               return Sr.createElement(m, { href: e }, e);
             }),
-            rt.b([Qt.a], t.prototype, "OnCreateOfferClick", null),
+            rt.b([Zt.a], t.prototype, "OnCreateOfferClick", null),
             t
           );
         })(kr),
-        Qh = (function(e) {
+        Zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70682,7 +70749,7 @@ and limitations under the License.
               var e = this.GetArgument("id"),
                 t = parseInt(this.GetArgument("sender"));
               if (!e && this.GetArgument("url"))
-                return Sr.createElement(Zh, rt.a({}, this.props));
+                return Sr.createElement(Qh, rt.a({}, this.props));
               var i = this.props.context.chat,
                 n = i.self.accountid == t,
                 r = Sr.createElement(
@@ -70701,7 +70768,7 @@ and limitations under the License.
                     context: { chat: i },
                     bLarge: !0
                   }),
-                  Sr.createElement(ks.K, null)
+                  Sr.createElement(ks.L, null)
                 ),
                 Sr.createElement(
                   "div",
@@ -70752,8 +70819,8 @@ and limitations under the License.
                 Sr.createElement("div", { style: { clear: "left" } })
               );
             }),
-            rt.b([Qt.a], t.prototype, "ViewOfferClick", null),
-            rt.b([Qt.a], t.prototype, "ViewMyOffersClick", null),
+            rt.b([Zt.a], t.prototype, "ViewOfferClick", null),
+            rt.b([Zt.a], t.prototype, "ViewMyOffersClick", null),
             t
           );
         })(kr),
@@ -70767,7 +70834,7 @@ and limitations under the License.
             (t.getDerivedStateFromProps = function(e, t) {
               var i = new dt.a(e.args.broadcaster);
               return {
-                broadcaster: Zp.FriendStore.GetPlayer(i.GetAccountID())
+                broadcaster: Qp.FriendStore.GetPlayer(i.GetAccountID())
               };
             }),
             (t.prototype.render = function() {
@@ -70804,7 +70871,7 @@ and limitations under the License.
             }),
             (t.prototype.componentWillMount = function() {
               var e = this,
-                t = Zp.CMInterface;
+                t = Qp.CMInterface;
               if (t) {
                 var i = parseInt(this.GetArgument("appid")),
                   n = this.GetArgument("classid"),
@@ -70845,7 +70912,7 @@ and limitations under the License.
                 r = this.GetArgument("assetid"),
                 o = this.GetArgument("market_hash_name"),
                 a = parseInt(this.GetArgument("owner")),
-                s = Zp.AppInfoStore.GetAppInfo(i);
+                s = Qp.AppInfoStore.GetAppInfo(i);
               if (a && t) {
                 var c = this.props.context.chat.GetMember(a),
                   l = c ? c.display_name : this.GetArgument("persona"),
@@ -70955,8 +71022,8 @@ and limitations under the License.
                               "div",
                               { style: { marginTop: "1em" } },
                               this.state.description.tradable() &&
-                                Zp.CMInterface &&
-                                a != Zp.CMInterface.steamid.GetAccountID() &&
+                                Qp.CMInterface &&
+                                a != Qp.CMInterface.steamid.GetAccountID() &&
                                 Sr.createElement(
                                   m,
                                   { className: "general_btn inline", href: g },
@@ -71025,7 +71092,7 @@ and limitations under the License.
               }
               return Sr.createElement(m, { href: t }, t);
             }),
-            rt.b([Qt.a], t.prototype, "CopyToClipboard", null),
+            rt.b([Zt.a], t.prototype, "CopyToClipboard", null),
             (t = rt.b([Es.observer], t))
           );
         })(kr),
@@ -71279,7 +71346,7 @@ and limitations under the License.
                 }),
                 t = "friendGroup";
               return (
-                Zp.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
+                Qp.FriendStore.FriendGroupStore.BIsDefaultFriendsGroup(
                   this.props.group
                 ) && (t += " Friends"),
                 Sr.createElement(
@@ -71355,7 +71422,7 @@ and limitations under the License.
                     src: e.persona.avatar_url_medium
                   })
                 ),
-                Sr.createElement(Zu, { friend: e })
+                Sr.createElement(Qu, { friend: e })
               );
             }),
             (t = rt.b([Es.observer], t))
@@ -71512,23 +71579,23 @@ and limitations under the License.
                 });
             }),
             (e.prototype.OverlayBrowserCreated = function(e) {
-              Tm.ShowPopupFriendsList(e), Zp.SetDefaultPopupContext(e);
+              Tm.ShowPopupFriendsList(e), Qp.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
-              Zp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
-                Zp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
-                  Zp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
-                  Zp.SetDefaultPopupContext(Jp),
+              Qp.UIStore.SetSuppressBrowserContextBroadcasting(!0),
+                Qp.GetDefaultBrowserContext().m_nBrowserID == e.m_nBrowserID &&
+                  Qp.GetDefaultBrowserContext().m_unPID == e.m_unPID &&
+                  Qp.SetDefaultPopupContext(Jp),
                 console.log(
                   "Removing overlay browser window:",
                   e.m_unPID,
                   e.m_nBrowserID
                 ),
                 ws.d.ClosePopupsOwnedByBrowser(e),
-                Zp.UIStore.SetSuppressBrowserContextBroadcasting(!1),
-                Zp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
+                Qp.UIStore.SetSuppressBrowserContextBroadcasting(!1),
+                Qp.UIStore.OnOverlayBrowserClosed(e.m_unPID, e.m_nBrowserID);
             }),
-            rt.b([Qt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
+            rt.b([Zt.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
           );
         })(),
@@ -71550,7 +71617,7 @@ and limitations under the License.
               );
             }),
             (e.prototype.BNotificationsPermitted = function() {
-              return !Zp.ParentalStore.BIsFriendsBlocked();
+              return !Qp.ParentalStore.BIsFriendsBlocked();
             }),
             (e.prototype.RequestNotificationPermission = function() {
               return Promise.resolve(!0);
@@ -71748,7 +71815,7 @@ and limitations under the License.
               "m_bSupportsAudioWorkletProcessors",
               void 0
             ),
-            rt.b([Qt.a], e.prototype, "DelayedCleanupContextIfInactive", null),
+            rt.b([Zt.a], e.prototype, "DelayedCleanupContextIfInactive", null),
             rt.b(
               [mt.action.bound],
               e.prototype,
@@ -71940,7 +72007,7 @@ and limitations under the License.
               "keypress",
               "focus"
             ]),
-            rt.b([Qt.a], t.prototype, "OnUserAction", null),
+            rt.b([Zt.a], t.prototype, "OnUserAction", null),
             t
           );
         })(Cm),
@@ -71991,9 +72058,9 @@ and limitations under the License.
                 this.m_eActiveState == _p.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
-            rt.b([Qt.a], t.prototype, "OnComputerActiveStateChange", null),
-            rt.b([Qt.a], t.prototype, "OnUserAction", null),
-            rt.b([Qt.a], t.prototype, "UpdateStillActive", null),
+            rt.b([Zt.a], t.prototype, "OnComputerActiveStateChange", null),
+            rt.b([Zt.a], t.prototype, "OnUserAction", null),
+            rt.b([Zt.a], t.prototype, "UpdateStillActive", null),
             t
           );
         })(Cm),
@@ -72161,7 +72228,7 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.Show = function(e) {
-              Zp.ParentalStore.BIsFriendsBlocked()
+              Qp.ParentalStore.BIsFriendsBlocked()
                 ? console.log("Blocked popup due to parental controls")
                 : this.m_popup.Show(e);
             }),
@@ -72240,14 +72307,14 @@ and limitations under the License.
             (e.prototype.HandlePostMessage = function(e) {
               var t = e.data;
               if (t && t.command) {
-                var i = Zp.GetDefaultBrowserContext();
+                var i = Qp.GetDefaultBrowserContext();
                 void 0 !== e.data.pid &&
                   (i = { m_unPID: e.data.pid, m_nBrowserID: e.data.browserid }),
                   this.ExecuteCommand(i, e.data);
               }
             }),
             (e.prototype.PerformFriendsUIUpdate = function() {
-              var e = Zp.UIStore.SerializePopupStateToObject(!0);
+              var e = Qp.UIStore.SerializePopupStateToObject(!0);
               window.parent.postMessage(
                 { message: "ChatReloadRequest", state: e },
                 "https://steamloopback.host"
@@ -72266,7 +72333,7 @@ and limitations under the License.
                     (this.m_bUpdatedBuildAvailable = !0),
                     void 0 !== e.data.nSecondsOutOfDate &&
                       (this.m_nSecondsOutOfDate = e.data.nSecondsOutOfDate),
-                    (Zp.IdleTracker.GetUserIdleTime() > 7200 ||
+                    (Qp.IdleTracker.GetUserIdleTime() > 7200 ||
                       (void 0 !== e.data.bForce && 1 == e.data.bForce)) &&
                       this.PerformFriendsUIUpdate())
                   : "ReloadSerializedChatState" == e.data.message &&
@@ -72274,7 +72341,7 @@ and limitations under the License.
                     (console.log(
                       "Asked by loader to reload serialized chat state"
                     ),
-                    Zp.UIStore.SetStateToRestoreFrom(e.data.state)));
+                    Qp.UIStore.SetStateToRestoreFrom(e.data.state)));
             }),
             (e.prototype.ExecuteCommand = function(e, t) {
               switch (t.command) {
@@ -72307,14 +72374,14 @@ and limitations under the License.
                       i.GetAccountID(),
                       !1
                     );
-                    n && Zp.UIStore.CloseTabByID(n.unique_id);
+                    n && Qp.UIStore.CloseTabByID(n.unique_id);
                   } else if (i.BIsClanAccount()) {
-                    var r = Zp.FriendStore.ClanStore.GetClan(i);
+                    var r = Qp.FriendStore.ClanStore.GetClan(i);
                     if (r && r.GetChatGroupIDIfLoaded()) {
-                      var o = Zp.ChatStore.GetChatRoomGroup(
+                      var o = Qp.ChatStore.GetChatRoomGroup(
                         r.GetChatGroupIDIfLoaded()
                       );
-                      o && Zp.UIStore.CloseTabByID(o.unique_id);
+                      o && Qp.UIStore.CloseTabByID(o.unique_id);
                     }
                   }
                   break;
@@ -72329,7 +72396,7 @@ and limitations under the License.
                         e,
                         a.accountid
                       ),
-                      Zp.FriendStore.InviteToTrade(a));
+                      Qp.FriendStore.InviteToTrade(a));
                   }
                   break;
                 case "ShowChatRoomGroupDialog":
@@ -72343,17 +72410,17 @@ and limitations under the License.
                       !0
                     );
                   else {
-                    var l = Zp.ChatStore.InviteStore.GetDirectInviteInfo(
+                    var l = Qp.ChatStore.InviteStore.GetDirectInviteInfo(
                       s,
                       c,
-                      Zp.FriendStore.self.accountid
+                      Qp.FriendStore.self.accountid
                     );
                     De({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "ShowChatRoomGroupInvite":
                   var u = t.invite_code,
-                    l = Zp.ChatStore.InviteStore.GetInviteFromCode(u);
+                    l = Qp.ChatStore.InviteStore.GetInviteFromCode(u);
                   De({ invite: l, inviter: null }, e, window);
                   break;
                 case "DragAndDropStart":
@@ -72366,7 +72433,7 @@ and limitations under the License.
                   this.Dropped(t.x, t.y, t.data);
                   break;
                 case "SetPersonaState":
-                  Zp.FriendStore.SetUserPersonaState(t.persona_state);
+                  Qp.FriendStore.SetUserPersonaState(t.persona_state);
               }
             }),
             (e.prototype.Init = function(e, t, i) {
@@ -72381,7 +72448,7 @@ and limitations under the License.
                 });
               return (
                 (this.m_WebLogonManager = i),
-                (Fr.b.GetBrowserInfoForPopup = Qe),
+                (Fr.b.GetBrowserInfoForPopup = Ze),
                 t && this.m_OverlayStore.Init(),
                 [r]
               );
@@ -72452,7 +72519,7 @@ and limitations under the License.
                 )));
             }),
             (e.prototype.ShowPopupFriendsList = function(e) {
-              if (Zp.ParentalStore.BIsFriendsBlocked())
+              if (Qp.ParentalStore.BIsFriendsBlocked())
                 return (
                   console.log(
                     "Blocked friends list popup due to parental controls"
@@ -72463,7 +72530,7 @@ and limitations under the License.
               return (
                 t
                   ? t.OnShow()
-                  : ((t = new Qd(
+                  : ((t = new Zd(
                       this.m_FriendsUIApp.FriendStore,
                       this.m_FriendsUIApp.ChatStore,
                       e
@@ -72533,15 +72600,15 @@ and limitations under the License.
               void 0
             ),
             rt.b([mt.observable], e.prototype, "m_nSecondsOutOfDate", void 0),
-            rt.b([Qt.a], e.prototype, "HandlePostMessage", null),
-            rt.b([Qt.a], e.prototype, "HandleWebLoaderPostMessage", null),
+            rt.b([Zt.a], e.prototype, "HandlePostMessage", null),
+            rt.b([Zt.a], e.prototype, "HandleWebLoaderPostMessage", null),
             rt.b([mt.computed], e.prototype, "UIDisplayPrefs", null),
             rt.b([mt.action], e.prototype, "SetUIDisplayPref", null),
-            rt.b([Qt.a], e.prototype, "DragAndDropStart", null),
-            rt.b([Qt.a], e.prototype, "DragAndDropEnd", null),
-            rt.b([Qt.a], e.prototype, "Dropped", null),
-            rt.b([Qt.a], e.prototype, "SetFriendDropTarget", null),
-            rt.b([Qt.a], e.prototype, "AddChildDropTarget", null),
+            rt.b([Zt.a], e.prototype, "DragAndDropStart", null),
+            rt.b([Zt.a], e.prototype, "DragAndDropEnd", null),
+            rt.b([Zt.a], e.prototype, "Dropped", null),
+            rt.b([Zt.a], e.prototype, "SetFriendDropTarget", null),
+            rt.b([Zt.a], e.prototype, "AddChildDropTarget", null),
             e
           );
         })(),

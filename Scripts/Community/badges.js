@@ -455,6 +455,39 @@ function ShowBoosterEligibility()
 		});
 }
 
+function ActivateCommunityItemConsumable( unAppID, rgParams, unItemType, ulAssetID )
+{
+	var rgAJAXParams = {
+		sessionid: g_sessionID,
+		appid: unAppID,
+		item_type: unItemType,
+		assetid: ulAssetID,
+		actionparams: V_ToJSON( rgParams )
+	};
+	var strActionURL = g_strProfileURL + "/ajaxactivateconsumable/";
+
+	$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+		var $Content = $J(data.strHTML);
+		var strDialogTitle = data.strTitle;
+		ShowConfirmDialog( strDialogTitle, $Content ).done( function() {
+
+			$Content.find('select').each( function() {
+				rgAJAXParams[ $J(this).attr('name') ] = $J(this).val();
+			});
+			rgAJAXParams['activate'] = 1;
+
+			$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+				ShowAlertDialog( strDialogTitle, data.strHTML );
+				ReloadCommunityInventory();
+			}).fail( function() {
+				ShowAlertDialog( strDialogTitle, 'There was an error using your item.  The item may have already been used.  Please try again later.' );
+			});
+		});
+	}).fail( function() {
+		ShowAlertDialog( 'Activate Item', 'There was an error communicating with the network. Please try again later.' );
+	});
+}
+
 function GrindIntoGoo( appid, contextid, itemid )
 {
 	var rgAJAXParams = {

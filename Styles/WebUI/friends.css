@@ -15625,6 +15625,8 @@ button.DialogButton.deleteButton
 	overflow-y: scroll;
 	padding-right: 0px;
 	flex: 0;
+
+	padding-bottom: 4px;
 }
 
 .Page_GroupSettings_Permissions .DialogContent_InnerWidth
@@ -15708,6 +15710,72 @@ button.DialogButton.roleButton .roleSubtitle
 button.DialogButton.roleButton:hover .roleSubtitle
 {
 	color: #ccc;
+}
+
+.roleRow
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.rolePriorityContainer
+{
+	width: 24px;
+	height: 34px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 2px;
+}
+
+.rolePriorityButton
+{
+	width: 24px;
+	height: 15px;
+	background-color: #3d4450;
+	border-radius: 2px;
+
+	overflow: visible;
+	margin-top: 2px;
+	margin-left: 2px;
+	cursor: pointer;
+}
+.rolePriorityButton:hover
+{
+	background-color: #464d58;
+}
+
+.rolePriorityButton:hover svg polygon
+{
+	fill: #fff;
+}
+
+
+.rolePriorityButton:active
+{
+	background-color: #22252b;
+}
+
+.rolePriorityButton svg
+{
+	width: 100%;
+	height: 14px;
+}
+
+.rolePriorityButton svg polygon
+{
+	fill: #888;
+}
+
+
+.rolePriorityButton.roleUp svg
+{
+	padding-bottom: 1px;
+}
+
+.rolePriorityButton.roleDown svg
+{
+	padding-top: 4px;
 }
 
 button.DialogButton.createNewRoleButton

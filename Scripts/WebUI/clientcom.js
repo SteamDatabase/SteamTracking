@@ -17,16 +17,16 @@ webpackJsonp(
     PVtO: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return c;
+        return r;
       }),
         n.d(t, "b", function() {
           return s;
         });
       var o = n("m5yx"),
         i = { success: !0, result: 1 },
-        c = (function() {
+        r = (function() {
           function e() {
-            (this.m_connection = new r()), (this.m_bAllowAccountMismatch = !1);
+            (this.m_connection = new c()), (this.m_bAllowAccountMismatch = !1);
           }
           return (
             (e.prototype.FailureResult = function(e) {
@@ -63,6 +63,15 @@ webpackJsonp(
                 return e.m_connection.ClientInfo.bFriendsUIEnabled;
               });
             }),
+            (e.prototype.BClientSupportsMessage = function(e) {
+              var t = this;
+              return this.BClientConnected().then(function() {
+                return (
+                  -1 !==
+                  t.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+                );
+              });
+            }),
             (e.prototype.OpenFriendChatDialog = function(e) {
               var t = { message: "ShowFriendChatDialog", steamid: e };
               return this.GenericEResultCall(t);
@@ -81,6 +90,10 @@ webpackJsonp(
             }),
             (e.prototype.IsSubscribedApp = function(e) {
               var t = { message: "IsSubscribedApp", appid: e };
+              return this.GenericEResultCall(t);
+            }),
+            (e.prototype.ViewGameInfoForSteamID = function(e) {
+              var t = { message: "ViewGameInfoForSteamID", steamid: e };
               return this.GenericEResultCall(t);
             }),
             (e.prototype.BClientAccountMatches = function() {
@@ -111,7 +124,7 @@ webpackJsonp(
             e
           );
         })(),
-        r = (function() {
+        c = (function() {
           function e() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -121,7 +134,8 @@ webpackJsonp(
               (this.m_ClientInfo = {
                 ulVersion: "",
                 bFriendsUIEnabled: !1,
-                unAccountID: 0
+                unAccountID: 0,
+                rgSupportedMessages: []
               });
           }
           return (
@@ -171,7 +185,10 @@ webpackJsonp(
             (e.prototype.BSendMsg = function(e, t) {
               if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
                 return !1;
-              var n = Object.assign({}, e, { universe: o.a.EUNIVERSE });
+              var n = Object.assign({}, e, {
+                universe: o.a.EUNIVERSE,
+                accountid: o.d.accountid
+              });
               void 0 !== t && (n.sequenceid = t);
               try {
                 return this.m_socket.send(JSON.stringify(n)), !0;
@@ -220,6 +237,9 @@ webpackJsonp(
                           ? ((e.m_ClientInfo.ulVersion = o.clientversion),
                             (e.m_ClientInfo.bFriendsUIEnabled = !!o.friendsui),
                             (e.m_ClientInfo.unAccountID = o.accountid),
+                            o.supported_messages &&
+                              (e.m_ClientInfo.rgSupportedMessages =
+                                o.supported_messages),
                             t())
                           : n();
                       })
@@ -242,16 +262,16 @@ webpackJsonp(
             e
           );
         })(),
-        s = new c();
+        s = new r();
       window.ClientConnectionAPI = s;
     },
     m5yx: function(e, t, n) {
       "use strict";
       function o() {
         var e = i("config");
-        e && Object.assign(c, e);
+        e && Object.assign(r, e);
         var t = i("userinfo");
-        t && Object.assign(r, t), (n.p = c.CDN_URL);
+        t && Object.assign(c, t), (n.p = r.CDN_URL);
       }
       function i(e, t) {
         void 0 === t && (t = s);
@@ -265,14 +285,14 @@ webpackJsonp(
         else console.error("Missing config element #" + t);
       }
       n.d(t, "a", function() {
-        return c;
+        return r;
       }),
         n.d(t, "d", function() {
-          return r;
+          return c;
         }),
         (t.c = o),
         (t.b = i);
-      var c = {
+      var r = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -293,7 +313,7 @@ webpackJsonp(
           SESSIONID: "",
           BUILD_TIMESTAMP: 0
         },
-        r = {
+        c = {
           logged_in: !1,
           steamid: "",
           accountid: 0,

@@ -914,6 +914,31 @@ body.migrated_profile_page .inventory_rightnav {
 	text-align: center;
 }
 
+.activate_consumable_dialog {
+	position: relative;
+	padding-left: 324px;
+	padding-right: 25px;
+	min-height: 280px;
+}
+
+.activate_consumable_item_image {
+	position: absolute;
+	left: 33px;
+	top: 33px;
+}
+
+.activate_consumable_item_content {
+	font-size: 18px;
+	color: #bfbfbf;
+	text-align: center;
+
+	max-width: 370px;
+
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
 
 .item_scrap_actions {
 	padding: 11px;
