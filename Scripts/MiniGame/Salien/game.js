@@ -70,7 +70,7 @@ CGame.prototype.Start = function()
 					gServer.LeaveGameInstance( gPlayerInfo.active_zone_game, function(){}, function(){} );
 				}
 			},
-			GameLoadError
+			function(){}
 		)
 	});
 
@@ -313,6 +313,12 @@ CBootState.prototype.OnLoadComplete = function(loader, resources)
 	this.button.y = 450;
 	this.button.click = function(btn) {
 		gAudioManager.PlaySound( 'ui_select' );
+
+		if ( gPlayerInfo === null )
+		{
+			GameLoadError();
+		}
+
 		if ( null != gPlayerInfo && gPlayerInfo.active_planet !== undefined )
 		{
 			gGame.ChangeState( new CBattleSelectionState( gPlayerInfo.active_planet ) );
