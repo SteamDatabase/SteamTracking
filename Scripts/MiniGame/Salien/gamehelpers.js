@@ -17,7 +17,7 @@ function WeakRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var gCacheKey = '1400bld';
+var gCacheKey = '1550bld';
 // cacheKey and loader are optional, will get replaced if not passed
 function LoadAsset( strName, strURI, cacheKey, loader ) {
 	var _cacheKey = cacheKey;

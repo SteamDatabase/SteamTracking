@@ -156,6 +156,7 @@ body.flat_page {
 	background-color: #fdfdfd;
 	text-transform: uppercase;
 	color: #000;
+	font-weight: bold;
 }
 
 .salien_howtoplay_step_section .step_titleblock .title {
