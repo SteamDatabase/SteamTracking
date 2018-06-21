@@ -1295,10 +1295,8 @@ GStoreItemData = {
 	BindHoverEvents: function( $Element, unAppID, unPackageID )
 	{
 		$Element.mouseenter( function( event ) {
-			GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID, unPackageID ) );
-		}).mouseleave( function( event ) {
-			HideGameHover( this, event, $J('#global_hover') );
-		});
+				}).mouseleave( function( event ) {
+				});
 	},
 
 	GetCapParams: function( strFeatureContext, unAppID, unPackageID, unBundleID, params, nDepth )
