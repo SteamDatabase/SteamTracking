@@ -6,7 +6,7 @@ const BODY_TYPES = ["slime", "beast", "psychic"];
 const ARM_TYPES = ["slime-skinny", "slime-drippy", "slime-tentacle",
 				   "beast-wings", "beast-chimp", "beast-cat",					   
 				   "psychic-strong", "psychic-wispy", "psychic-skinny"];
-const LEG_TYPES = ["slime-manytentacles", "slime-two-tentacles", "slime-frog", 
+const LEG_TYPES = ["slime-manytentacles", "slime-twotentacles", "slime-frog",
 				   "beast-elephant", "beast-hoof", "beast-beast",
 				   "psychic-wispy", "psychic-taper", "psychic-strong"];   
 const EYE_TYPES = ["slime-many", "slime-snail", "slime-squishy", "slime-biggreen",
@@ -126,7 +126,7 @@ CSalien.prototype.UpdateCustomizations = function()
 	
 	var legType = LEG_TYPES[gSalienData.legs];
 	this.CustomizePart("leg-left", legType);
-	this.CustomizePart("leg-right", legType);	
+	this.CustomizePart("leg-right", legType);
 	this.CustomizePart("leg-middle", legType);		
 	
 	var eyeType = EYE_TYPES[gSalienData.eyes];
