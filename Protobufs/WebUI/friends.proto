@@ -1102,6 +1102,7 @@ message CVoiceChat_UserVoiceStatus_Notification {
 	optional bool user_muted_mic_locally = 3;
 	optional bool user_muted_output_locally = 4;
 	optional bool user_has_no_mic_for_session = 5;
+	optional int32 user_webaudio_sample_rate = 6;
 }
 
 message CVoiceChat_AllMembersStatus_Notification {

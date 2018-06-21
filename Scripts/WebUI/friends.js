@@ -41018,6 +41018,12 @@ and limitations under the License.
             (t.prototype.set_user_has_no_mic_for_session = function(e) {
               st.Message.setField(this, 5, e);
             }),
+            (t.prototype.user_webaudio_sample_rate = function() {
+              return st.Message.getField(this, 6);
+            }),
+            (t.prototype.set_user_webaudio_sample_rate = function(e) {
+              st.Message.setField(this, 6, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -41047,6 +41053,9 @@ and limitations under the License.
                   case 5:
                     e.set_user_has_no_mic_for_session(t.readBool());
                     break;
+                  case 6:
+                    e.set_user_webaudio_sample_rate(t.readInt32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -41066,7 +41075,10 @@ and limitations under the License.
                 void 0 !== i && t.writeBool(3, i),
                 (i = st.Message.getField(e, 4)),
                 void 0 !== i && t.writeBool(4, i),
-                void 0 !== (i = st.Message.getField(e, 5)) && t.writeBool(5, i);
+                (i = st.Message.getField(e, 5)),
+                void 0 !== i && t.writeBool(5, i),
+                void 0 !== (i = st.Message.getField(e, 6)) &&
+                  t.writeInt32(6, i);
             }),
             (t.prototype.getClassName = function() {
               return "CVoiceChat_UserVoiceStatus_Notification";
@@ -44338,6 +44350,11 @@ and limitations under the License.
                   .Body()
                   .set_user_has_no_mic_for_session(
                     this.BNoMicAvailableForSession()
+                  ),
+                e
+                  .Body()
+                  .set_user_webaudio_sample_rate(
+                    Qp.AudioPlaybackManager.GetLastObservedSampleRate()
                   ),
                 $a.NotifyUserVoiceStatus(
                   this.m_CMInterface.GetServiceTransport(),
@@ -71715,6 +71732,7 @@ and limitations under the License.
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
               (this.m_hCloseContextTimeout = void 0),
+              (this.m_nLastObservedSampleRate = 0),
               (this.m_bSupportsAudioWorkletProcessors = !1);
           }
           return (
@@ -71753,13 +71771,21 @@ and limitations under the License.
             (e.prototype.SetVoiceNotActive = function() {
               (this.m_bVoiceActive = !1), this.CleanupContextIfUneeded();
             }),
+            (e.prototype.GetLastObservedSampleRate = function() {
+              return this.m_nLastObservedSampleRate;
+            }),
             (e.prototype.CreateContextIfNeeded = function(e) {
               if ((void 0 === e && (e = void 0), void 0 == this.m_Context)) {
                 console.log("(CAudioPlaybackManager) new context");
                 var t = window,
                   i = t.AudioContext || t.webkitAudioContext || !1;
                 (this.m_Context = new i()),
-                  (this.m_Context.onstatechange = this.OnAudioContextStateChange);
+                  (this.m_Context.onstatechange = this.OnAudioContextStateChange),
+                  console.log(
+                    "(CAudioPlaybackManager) sample rate " +
+                      this.m_Context.sampleRate
+                  ),
+                  (this.m_nLastObservedSampleRate = this.m_Context.sampleRate);
                 var n = this.m_Context;
                 void 0 != n.audioWorklet
                   ? ((this.m_bSupportsAudioWorkletProcessors = !0),
