@@ -89,8 +89,8 @@ function CBattleSelect(resources, container)
 	this.m_InfoBoxProgress.x = 131;
 	this.m_InfoBoxProgress.y = 51;
 
-	this.m_InfoBoxProgressLabel = new PIXI.Text('Progress'.toUpperCase());
-	this.m_InfoBoxProgressLabel.style = k_TextStyleSmallBold;
+	this.m_InfoBoxProgressLabel = new PIXI.Text('Community Progress'.toUpperCase());
+	this.m_InfoBoxProgressLabel.style = k_TextStyleSmallerBold;
 	this.m_InfoBoxProgressLabel.anchor.set(0.5,0);
 	this.m_InfoBoxProgressLabel.x = this.m_InfoBoxProgress.x + this.m_InfoBoxProgress.m_Width / 2;
 	this.m_InfoBoxProgressLabel.y = this.m_InfoBoxProgress.y - 17;

@@ -38,6 +38,13 @@ const k_TextStyleSmallBold = {
 	fontWeight: 'bold',
 	align: 'center',
 };
+const k_TextStyleSmallerBold = {
+	fontFamily: "Motiva Sans",
+	fontSize: 10,
+	fill: "white",
+	fontWeight: 'bold',
+	align: 'center',
+};
 const k_TextStyleHugeBold = {
 	fontFamily: "Motiva Sans",
 	fontSize: 24,
