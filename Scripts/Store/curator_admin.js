@@ -184,11 +184,11 @@ function UpdateCuratorFromForm( elForm, fnOnComplete, bAsync  )
 		rgPreferredTags.push( ele.textContent );
 	})
 
-	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url', 'show_broadcast' ],
+	CallFunctionFromForm( elForm, [ 'description', 'google_id', 'platform_windows', 'platform_mac', 'platform_linux', 'vr_content', 'website_title', 'website_url', 'discussions_url', 'show_broadcast', 'hide_page' ],
 		UpdateCurator.bind(null, bAsync), fnOnComplete, rgPreferredTags );
 }
 
-function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, ...rgPreferredTags )
+function UpdateCurator( bAsync, description, google_id, platform_windows, platform_mac, platform_linux, vr_content, website_title, website_url, discussions_url, show_broadcast, hide_page, ...rgPreferredTags )
 {
 		var rgTagLineLocs = {};
 	$J( 'input[type=hidden][name^="language"]').each( function() {
@@ -213,6 +213,7 @@ function UpdateCurator( bAsync, description, google_id, platform_windows, platfo
 			show_broadcast: show_broadcast,
 			tags_preferred: rgPreferredTags,
 			tagline_locs: JSON.stringify( rgTagLineLocs ),
+			hide_page: hide_page,
 			sessionid: g_sessionID,
 			async: bAsync,
 		},
