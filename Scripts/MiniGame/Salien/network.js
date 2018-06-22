@@ -136,7 +136,7 @@ CServerInterface.prototype.JoinZone = function( zoneid, callback, error )
 		}
 		else
 		{
-			error();
+			error( null, request.getResponseHeader( 'x-eresult' ) );
 		}
 	}).fail( error );
 };

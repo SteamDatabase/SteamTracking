@@ -37,9 +37,9 @@ CEnemyManager.prototype.SortEnemies = function()
 	});
 };
 
-CEnemyManager.prototype.BuildEnemy = function( type )
+CEnemyManager.prototype.BuildEnemy = function( type, levelData )
 {
-	var enemy = new CEnemy( this, this.m_EnemyData[type] );
+	var enemy = new CEnemy( this, this.m_EnemyData[type], levelData );
 	this.m_rgEnemies.set( enemy.m_ID, enemy );
 	this.m_EnemyContainer.addChild( enemy.m_Sprite );
 	this.SortEnemies();
@@ -81,11 +81,12 @@ CEnemyManager.prototype.Start = function()
 };
 
 ////// Enemy Object /////
-function CEnemy( enemyManager, typeData )
+function CEnemy( enemyManager, typeData, levelData )
 {
 	this.m_EnemyManager = enemyManager;
 	this.m_ID = enemyManager.GetID();
 	this.m_typeData = typeData;
+	this.m_levelData = levelData;
 	this.BuildSprite();
 }
 
@@ -118,7 +119,7 @@ CEnemy.prototype.BuildSprite = function()
 //	var animationSpeedAdjustment = ( -vx - ( this.m_typeData.speed.max - this.m_typeData.speed.min ) ) / ( this.m_typeData.speed.max - this.m_typeData.speed.min ) ;
 
 	this.m_Sprite.scale.set( this.m_typeData.scale.x - ( scaleAdjustment * 0.2 ), this.m_typeData.scale.y - ( scaleAdjustment * 0.2 ) );
-	this.m_Sprite.vx = vx;
+	this.m_Sprite.vx = vx * this.m_levelData.speed_multiplier;
 //	this.m_Sprite.animationSpeed = animationSpeedAdjustment;
 
 	var instance = this;
@@ -283,7 +284,7 @@ function CSpawnSection( spawnRate, rtSpawnStart, rtMatchEnd, sectionLength, mapE
 	});
 }
 
-CSpawnSection.prototype.Update = function( enemyManager )
+CSpawnSection.prototype.Update = function( enemyManager, levelData )
 {
 	var rtNow = Date.now();
 	if ( rtNow > this.m_rtSpawnStart && this.m_mapEnemySpawns.size > 0 )
@@ -295,7 +296,7 @@ CSpawnSection.prototype.Update = function( enemyManager )
 			{
 				var instance = this;
 				this.m_mapSpawnsPerInterval.get( this.m_curInterval ).forEach( function( strType ) {
-					enemyManager.BuildEnemy( strType );
+					enemyManager.BuildEnemy( strType, levelData );
 					var remaining = instance.m_mapEnemySpawns.get( strType ) - 1;
 					instance.m_mapEnemySpawns.set( strType, remaining );
 					if ( remaining == 0 )
@@ -309,7 +310,7 @@ CSpawnSection.prototype.Update = function( enemyManager )
 				this.m_mapEnemySpawns.forEach( function( count, strType ) {
 					for( var i = 0; i < count; ++i )
 					{
-						enemyManager.BuildEnemy( strType );
+						enemyManager.BuildEnemy( strType, levelData );
 					}
 					instance.m_mapEnemySpawns.delete( strType );
 				});
@@ -364,6 +365,6 @@ CLevelManager.prototype.Update = function( delta )
 {
 	var instance = this;
 	this.m_SpawnSections.forEach( function( spawnSection ) {
-		spawnSection.Update( instance.m_BattleState.m_EnemyManager );
+		spawnSection.Update( instance.m_BattleState.m_EnemyManager, instance.m_LevelData.enemies.modifiers );
 	});
 };

@@ -344,6 +344,7 @@ CBattleSelect.prototype._RefreshInfoTeamImages = function( tileData )
 		this.m_InfoBoxClanContainer.x = 0;
 		this.m_InfoBoxClanContainer.y = 0;
 		this.m_InfoBoxClaimedContainer.addChild( this.m_InfoBoxClanContainer );
+		this.m_InfoBox.SetSize( this.m_InfoBoxPrimaryClan.width + this.m_InfoBoxClanContainer.width + k_GameBoxPadding, 80);
 	}
 	else
 	{

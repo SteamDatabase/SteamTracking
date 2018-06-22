@@ -85,7 +85,12 @@ function ShowCustomSalienDialog()
 function GameLoadError()
 {
 	ShowAlertDialog( 'Game Error', 'There was an error loading required game content.  Your game will be restarted.' )
-		.done( function() { window.location.reload(); } );
+		.done( function() {  window.location.reload(); } );
+}
+
+function ZoneCaptured()
+{
+	ShowAlertDialog( 'Zone Captured', 'This zone has been recaptured from the Duldrumz by the Steam Community.<br>Help capture another tile and represent your favorite group to help them claim territory by clicking the flag on your Salien\'s ship!' );
 }
 
 var gCachedGroupListHTML = null;

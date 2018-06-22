@@ -61,18 +61,7 @@ CGame.prototype.Start = function()
 {
 	var instance = this;
 	gServer = new CServerInterface();
-	gServer.Connect( function() {
-		gServer.GetPlayerInfo(
-			function( results ) {
-				gPlayerInfo = results.response;
-				if ( gPlayerInfo.active_zone_game )
-				{
-					gServer.LeaveGameInstance( gPlayerInfo.active_zone_game, function(){}, function(){} );
-				}
-			},
-			function(){}
-		)
-	});
+	gServer.Connect( function() {} );
 
 	// boot the game
 	this.ChangeState(new CBootState());
@@ -148,7 +137,7 @@ function CAudioManager()
 	this.m_rgFadeOut = [];
 	this.m_AudioIndicator = null;
 
-	this.m_Muted = WebStorage.GetLocal('minigame_mutemusic')
+	this.m_Muted = WebStorage.GetLocal('minigame_mutemusic');
 }
 
 CAudioManager.prototype.PlaySound = function( strSoundName, bPlayOnce, volume )
@@ -311,22 +300,27 @@ CBootState.prototype.OnLoadComplete = function(loader, resources)
 	this.button = new CUIButton( 120, 40, 'Play'.toUpperCase() );
 	this.button.x = gApp.screen.width / 2 - (this.button.width / 2);
 	this.button.y = 450;
-	this.button.click = function(btn) {
+	this.button.click = function() {
 		gAudioManager.PlaySound( 'ui_select' );
+		gServer.GetPlayerInfo(
+			function( results ) {
+				gPlayerInfo = results.response;
+				if ( gPlayerInfo.active_zone_game )
+				{
+					gServer.LeaveGameInstance( gPlayerInfo.active_zone_game, function(){}, function(){} );
+				}
 
-		if ( gPlayerInfo === null )
-		{
-			GameLoadError();
-		}
-
-		if ( null != gPlayerInfo && gPlayerInfo.active_planet !== undefined )
-		{
-			gGame.ChangeState( new CBattleSelectionState( gPlayerInfo.active_planet ) );
-		}
-		else
-		{
-			gGame.ChangeState( new CPlanetSelectionState() );
-		}
+				if ( null != gPlayerInfo && gPlayerInfo.active_planet !== undefined )
+				{
+					gGame.ChangeState( new CBattleSelectionState( gPlayerInfo.active_planet ) );
+				}
+				else
+				{
+					gGame.ChangeState( new CPlanetSelectionState() );
+				}
+			},
+			GameLoadError
+		)
 	};
 	
 	gApp.stage.addChild( this.button );
@@ -506,6 +500,29 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		this.m_ShipFlagClan.x = this.m_ShipFlag.x + 32;
 		this.m_ShipFlagClan.y = this.m_ShipFlag.y + 12;
 		this.m_Ship.addChild(this.m_ShipFlagClan);
+	}
+	else if ( WebStorage.GetLocal('minigame_joingroupprompt') <= 3 )
+	{
+		if ( WebStorage.GetLocal('minigame_joingroupprompt') !== null )
+		{
+			WebStorage.SetLocal( 'minigame_joingroupprompt', WebStorage.GetLocal('minigame_joingroupprompt') + 1 );
+		}
+		else
+		{
+			WebStorage.SetLocal( 'minigame_joingroupprompt', 1 );
+		}
+
+		this.m_JoinGroupText = new PIXI.Text( '< Choose a group!' );
+		this.m_JoinGroupText.anchor.set( 0, 0.5 );
+		this.m_JoinGroupText.x = this.m_ShipFlag.x + this.m_ShipFlag.width;
+		this.m_JoinGroupText.y = this.m_ShipFlag.y + ( this.m_ShipFlag.height / 2 ) - 10;
+		this.m_JoinGroupText.style = {
+			fontFamily: k_FontType,
+			fontSize: 14,
+			fill: 'white',
+			align: 'center',
+		};
+		this.m_Ship.addChild(this.m_JoinGroupText);
 	}
 
 
@@ -917,25 +934,56 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	this.m_MapImage = new PIXI.Sprite.fromImage( 'map_bg_' + instance.m_PlanetData.id );
 	this.m_GridContainer.addChild(this.m_MapImage);	
-	
+
+	this.m_bJoiningPlanet = false;
+
 	// initialize a grid the user can click on
 	this.m_Grid = new CBattleSelect(resources, this.m_GridContainer);
 	this.m_Grid.click = function(tileX, tileY)
 	{
+		if ( instance.m_bJoiningPlanet )
+		{
+			return;
+		}
+
 		var unPlanetID = instance.m_unPlanetID;
 		var zoneIdx = _GetTileIdx( tileX, tileY );
 
 		if ( instance.m_PlanetData.zones[zoneIdx].captured )
 		{
+			ZoneCaptured();
 			return;
 		}
+
+		instance.m_bJoiningPlanet = true;
 
 		gServer.JoinZone(
 			zoneIdx,
 			function ( results ) {
 				gGame.ChangeState( new CBattleState( instance.m_PlanetData, zoneIdx ) );
+				instance.m_bJoiningPlanet = false;
 			},
-			GameLoadError
+			function ( error, eResult ) {
+				if ( eResult !== undefined )
+				{
+					if ( eResult == 27 )
+					{
+						instance.m_bJoiningPlanet = false;
+						ZoneCaptured();
+						gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
+					}
+					else
+					{
+						instance.m_bJoiningPlanet = false;
+						GameLoadError();
+					}
+				}
+				else
+				{
+					instance.m_bJoiningPlanet = false;
+					GameLoadError();
+				}
+			}
 		);
 	};
 
@@ -1173,7 +1221,30 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		this.m_ShipFlagClan.y = this.m_ShipFlag.y + 12;
 		this.m_Ship.addChild(this.m_ShipFlagClan);
 	}
-	
+	else if ( WebStorage.GetLocal('minigame_joingroupprompt') <= 3 )
+	{
+		if ( WebStorage.GetLocal('minigame_joingroupprompt') !== null )
+		{
+			WebStorage.SetLocal( 'minigame_joingroupprompt', WebStorage.GetLocal('minigame_joingroupprompt') + 1 );
+		}
+		else
+		{
+			WebStorage.SetLocal( 'minigame_joingroupprompt', 1 );
+		}
+
+		this.m_JoinGroupText = new PIXI.Text( '< Choose a group!' );
+		this.m_JoinGroupText.anchor.set( 0, 0.5 );
+		this.m_JoinGroupText.x = this.m_ShipFlag.x + this.m_ShipFlag.width;
+		this.m_JoinGroupText.y = this.m_ShipFlag.y + ( this.m_ShipFlag.height / 2 ) - 10;
+		this.m_JoinGroupText.style = {
+			fontFamily: k_FontType,
+			fontSize: 14,
+			fill: 'white',
+			align: 'center',
+		};
+		this.m_Ship.addChild(this.m_JoinGroupText);
+	}
+
 	// add the salien to the top
 	gSalien.position.set(98, 386);
 	gSalien.scale.set(0.13, 0.13);
@@ -1263,7 +1334,7 @@ CBattleState.prototype.Load = function()
 	var instance = this;
 	LoadAsset( 'attack_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/attacks.json', '7' );
 	LoadAsset( 'enemy_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/enemies.json', '7' );
-	LoadAsset( 'level_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/levels.json', '8' );
+	LoadAsset( 'level_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/levels.json', '9' );
 	LoadAsset( 'enemy-spritesheet-0', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-0.json' );
 	LoadAsset( 'enemy-spritesheet-1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-1.json' );
 	LoadAsset( 'enemy-spritesheet-2', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-2.json' );
