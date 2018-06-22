@@ -80,6 +80,8 @@
  B s_convarLogFileFolderName
  B s_convarNoPromptForPasswordOnLogin
  B s_convarShutdownOnFailedCommand
+ CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -122,8 +124,8 @@
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4>
- D typeinfo for CCallbackImpl<6>
  D typeinfo for CCallbackImpl<72>
+ D typeinfo for CCallbackImpl<7>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CConsoleInputThread
  D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -180,8 +182,8 @@
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4>
- D vtable for CCallbackImpl<6>
  D vtable for CCallbackImpl<72>
+ D vtable for CCallbackImpl<7>
  D vtable for CCallbackImpl<8>
  D vtable for CConsoleInputThread
  D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -252,8 +254,8 @@
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4>
- R typeinfo name for CCallbackImpl<6>
  R typeinfo name for CCallbackImpl<72>
+ R typeinfo name for CCallbackImpl<7>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CConsoleInputThread
  R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
@@ -413,12 +415,12 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
- T CCallbackImpl<6>::GetCallbackSizeBytes()
- T CCallbackImpl<6>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<6>::~CCallbackImpl()
  T CCallbackImpl<72>::GetCallbackSizeBytes()
  T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<72>::~CCallbackImpl()
+ T CCallbackImpl<7>::GetCallbackSizeBytes()
+ T CCallbackImpl<7>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<7>::~CCallbackImpl()
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
@@ -476,6 +478,7 @@
  T CFmtStrN<1024, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
+ T CFmtStrN<4096, true, false>::Append(char const*)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
@@ -494,21 +497,21 @@
  T CLogInstance::ShutDownInternal()
  T CLogInstance::Shutdown()
  T CLogInstance::WriteStringToLog(char const*)
- T CLogInstance::WriteToLog(char const*, char*)
+ T CLogInstance::WriteToLog(char const*, __va_list_tag*)
  T CLogInstance::WriteToTextLog(char const*, int)
- T CLogInstance::_LogEvent(char const*, char*)
+ T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
  T CLogger::EmitEventForOtherInstances(CLogEvent*, bool)
- T CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)
+ T CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)
  T CLogger::FlushEventQueue(bool)
  T CLogger::GeneratePrefixFromLogWatchParam(char*, int, char const*, CLogEvent*, bool, bool*)
  T CLogger::PublishLogEvent(CLogEvent*, char const*)
  T CLogger::ReleaseSafe(CLogInstance*)
  T CLogger::SpewAndLogActivate(ESpewGroup, int, int)
- T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool)
+ T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool)
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStoragePublishFileResult_t*, bool))
@@ -617,6 +620,7 @@
  T CUtlBuffer::EatWhiteSpace()
  T CUtlBuffer::EnsureCapacity(int)
  T CUtlBuffer::Get(void*, int)
+ T CUtlBuffer::GetChar()
  T CUtlBuffer::GetDelimitedCharInternal(CUtlCharConversion*)
  T CUtlBuffer::GetDelimitedString(CUtlCharConversion*, char*, int)
  T CUtlBuffer::GetFloat()
@@ -644,7 +648,7 @@
  T CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
- T CUtlBuffer::VaScanf(char const*, char*)
+ T CUtlBuffer::VaScanf(char const*, __va_list_tag*)
  T CUtlBuffer::Validate(CValidator&, char const*)
  T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(char const*, int*)
@@ -657,6 +661,7 @@
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CopyFullHashMap(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >&) const
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
@@ -667,7 +672,9 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::AllocNode()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CUtlHashMap()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CopyFullHashMap(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >&) const
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::EnsureCapacity(int)
@@ -678,7 +685,9 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::AllocNode()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CUtlHashMap()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CopyFullHashMap(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >&) const
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::EnsureCapacity(int)
@@ -689,6 +698,7 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::~CUtlHashMap()
  T CUtlIntrusiveList<CFileExtensionData>::Purge()
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
@@ -769,15 +779,16 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
- T CUtlString::FormatV(char const*, char*)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Truncate(unsigned long)
+ T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
  T CUtlStringList::SortFunc(char* const*, char* const*)
  T CUtlSymbolTable::RemoveAll()
  T CUtlSymbolTable::~CUtlSymbolTable()
@@ -792,79 +803,61 @@
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsLeft(int, int)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::ShiftElementsRight(int, int)
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Remove(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::ShiftElementsRight(int, int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::GrowVector(int)
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::InsertMultipleBefore(int, int, ChunkHashFraction_t const*)
- T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::~CUtlVector()
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::GrowVector(int)
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::InsertBefore(int)
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::RemoveAll()
- T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
- T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::ShiftElementsRight(int, int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsLeft(int, int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::ShiftElementsRight(int, int)
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
  T CUtlVector<char*, CUtlMemory<char*> >::InsertBefore(int, char* const&)
  T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
- T CUtlVector<char*, CUtlMemory<char*> >::ShiftElementsRight(int, int)
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::AddToTail(unsigned char&&)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::GrowVector(int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertBefore(int, unsigned char const&)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::RemoveMultiple(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::SetCount(int)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsLeft(int, int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::GrowVector(int)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::InsertBefore(int, unsigned long long const&)
- T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::ShiftElementsRight(int, int)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::~CUtlVector()
  T CUtlVectorAutoPurge<char*>::~CUtlVectorAutoPurge()
  T CValidateAutoPushPop::~CValidateAutoPushPop()
@@ -977,7 +970,7 @@
  T ECommitAppBuild(unsigned int, unsigned int, unsigned int const*, unsigned long long const*, char const*, char const*, unsigned int&)
  T EWaitForDepotBuild(unsigned long long, unsigned long long&)
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, char*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T ExecCommandLine(int, char**)
  T ExecConsoleCommand(char const*)
@@ -1046,7 +1039,6 @@
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesTextParser::KeyValuesTextParser(bool, int)
- T KeyValuesTextParser::Pop()
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
@@ -1071,7 +1063,7 @@
  T RunFindCommand(char const*)
  T RunMessagePump()
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
- T SerializeVaArgs(char const*, char*, CUtlBuffer&)
+ T SerializeVaArgs(char const*, __va_list_tag*, CUtlBuffer&)
  T SetAppLogID(unsigned int, char const*)
  T SignalConCommandError(int)
  T SplitFileComponents(char const*, char*, char*, char*)
@@ -1083,18 +1075,17 @@
  T SteamClientConVarAccessor::RegisterConCommandBase(ConCommandBase*)
  T SteamDllMain
  T SteamDllMainEx
- T SteamThreadTools::CThreadLocal<int>::~CThreadLocal()
- T SteamThreadTools::CThreadLocalInt<int>::~CThreadLocalInt()
+ T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
+ T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalStackCounter<int>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<int>&)
- T SteamThreadTools::CThreadLocalStackCounter<int>::~CThreadLocalStackCounter()
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
+ T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -1117,14 +1108,14 @@
  T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
- T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int>)
+ T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long>)
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*)
- T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int>)
- T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
- T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_multi<std::__1::pair<unsigned long long const, CCallbackBase*>&>(std::__1::pair<unsigned long long const, CCallbackBase*>&)
- T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, int> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
+ T std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long>)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
+ T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_multi<std::__1::pair<unsigned long long const, CCallbackBase*>&>(std::__1::pair<unsigned long long const, CCallbackBase*>&)
+ T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
  T unsigned int std::__1::__sort3<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort4<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
@@ -1162,7 +1153,6 @@
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
  ThreadSleep
- V_CbMakeAbsolutePath
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FileBase
@@ -1170,6 +1160,7 @@
  V_FixSlashes
  V_IsAbsolutePath
  V_MakeAbsolutePath
+ V_RemoveDotSlashes
  V_ReplaceBadFilenameCharactersInPlace
  V_StripFilename
  V_UTF16ToUTF32
@@ -1185,6 +1176,7 @@
  V_stristr(char const*, char const*)
  V_strlower_fast
  V_strncat
+ V_strncat_length
  V_strncmp
  V_strncpy
  V_strnicmp
@@ -1209,10 +1201,8 @@
  __cxa_guard_release
  __cxa_pure_virtual
  __error
- __fixunsdfdi
  __gxx_personality_v0
  __maskrune
- __moddi3
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -1228,8 +1218,8 @@
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
- b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::fAsserted
- b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, char*, bool, bool)::sbAbsoluteMaxHit
+ b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
+ b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
  b CLogger::FlushEventQueue(bool)::cFailedToRemove
  b CLogger::FlushEventQueue(bool)::fAsserted
  b CPackedStore::GetFileHandle(int)::invalid
@@ -1347,8 +1337,8 @@
  b workshop_download_item_command
  bootstrap_look_up
  bootstrap_port
- chmod$UNIX2003
- close$UNIX2003
+ chmod
+ close
  d g_bCatchExceptionsInCallbacks
  d s_EAppUpdateError
  d s_ELogonState
@@ -1362,22 +1352,20 @@
  dlsym
  dyld_stub_binder
  fclose
- fcntl$UNIX2003
+ fcntl
  feof
- ferror
  fflush
  fgets
  fileno
- fopen$UNIX2003
+ fopen
  fprintf
- fputs$UNIX2003
+ fputs
  fread
  free
  fseek
- fseeko
  fstat$INODE64
- fsync$UNIX2003
- fwrite$UNIX2003
+ fsync
+ fwrite
  g_ClockSpeedSecondsMultiplier
  g_VProfManager
  g_VProfProfilesRunningCount
@@ -1385,7 +1373,7 @@
  g_pMemAllocSteam
  getcwd
  getpid
- kill$UNIX2003
+ kill
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -1403,8 +1391,8 @@
  memmove
  memset
  mkdir
- mktime$UNIX2003
- open$UNIX2003
+ mktime
+ open
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -1415,12 +1403,12 @@
  putchar
  puts
  r s_rgCRCTable_Standard
- read$UNIX2003
+ read
  remove
  rename
  rindex
  scandir$INODE64
- setenv$UNIX2003
+ setenv
  snprintf
  sprintf
  sscanf
@@ -1434,7 +1422,7 @@
  strncpy
  strrchr
  strstr
- strtod$UNIX2003
+ strtod
  strtol
  strtoul
  t (anonymous namespace)::CLEANUP::~CLEANUP()
@@ -1513,7 +1501,7 @@
  time
  typeinfo for SteamThreadTools::CThread
  unlink
- usleep$UNIX2003
+ usleep
  vasprintf
  vsnprintf
  vstdlib_wcsicmp
@@ -1523,4 +1511,4 @@
  wcscmp
  wcslen
  wcstol
- write$UNIX2003
+ write
