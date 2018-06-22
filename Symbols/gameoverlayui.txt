@@ -14321,6 +14321,7 @@
  b g_ScriptSymbols
  b g_ScrollBar_Horizontal_Helper
  b g_ScrollBar_Vertical_Helper
+ b g_SteamPIDParam
  b g_TextEntry_Helper
  b g_ToggleButton_Helper
  b g_TreeView_Helper
