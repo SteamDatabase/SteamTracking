@@ -110,7 +110,6 @@
  CGContextDrawLayerInRect
  CGContextDrawLinearGradient
  CGContextFillRect
- CGContextGetUserSpaceToDeviceSpaceTransform
  CGContextMoveToPoint
  CGContextRelease
  CGContextRestoreGState
@@ -1184,6 +1183,7 @@
  T CSystem::GetUserConfigFileData(char const*, int)
  T CSystem::KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T CSystem::KeyCode_VirtualKeyToVGUI(int)
+ T CSystem::KeyCode_WindowsVirtualKeyToVirtualKey(int)
  T CSystem::ModifyShortcutTarget(char const*, char const*, char const*, char const*)
  T CSystem::MouseCode_VGUIToVirtualKey(vgui::MouseCode)
  T CSystem::MouseCode_VirtualKeyToVGUI(int)
@@ -1842,6 +1842,7 @@
  T KV_ResolveSymbol(char const*)
  T KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T KeyCode_VirtualKeyToVGUI(int)
+ T KeyCode_WindowsVirtualKeyToVirtualKey(int)
  T KeyValues::Clear()
  T KeyValues::ConvertAndWriteWideString(KeyValues*, CUtlBuffer*, int) const
  T KeyValues::CopySubkeys(KeyValues*) const
@@ -2590,10 +2591,11 @@
  b s_pVGUIKeyWindow
  b s_pVGUIToVirtualKey
  b s_pVirtualKeyToVGUI
+ b s_pWindowsToVirtualKey
  b vec2_invalid
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
- b vgui::InitKeyTranslation()::threadonce_487_17
+ b vgui::InitKeyTranslation()::threadonce_464_17
  ceilf
  close
  closedir
@@ -2601,13 +2603,13 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp713
- d __block_descriptor_tmp730
+ d __block_descriptor_tmp716
  d __block_descriptor_tmp733
- d __block_descriptor_tmp735
+ d __block_descriptor_tmp736
+ d __block_descriptor_tmp738
  d __block_literal_global
- d __block_literal_global734
- d __block_literal_global736
+ d __block_literal_global737
+ d __block_literal_global739
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2753,6 +2755,7 @@
  t -[VGUI_NSView mouseDown:]
  t -[VGUI_NSView mouseDragged:]
  t -[VGUI_NSView mouseEntered:]
+ t -[VGUI_NSView mouseExited:]
  t -[VGUI_NSView mouseMoved:]
  t -[VGUI_NSView mouseUp:]
  t -[VGUI_NSView otherMouseDown:]
@@ -2852,9 +2855,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_711
+ t __copy_helper_block_714
  t __destroy_helper_block_
- t __destroy_helper_block_712
+ t __destroy_helper_block_715
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal

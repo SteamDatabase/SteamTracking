@@ -11,6 +11,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(chunkfinder.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientkeymgr.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientmodules.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(commonkeycode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(completionportmanager.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(completionportmanager_posix.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(content_manifest.pb.o)
@@ -760,6 +761,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientkeymgr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientkeymgr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientsubscriptions.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp

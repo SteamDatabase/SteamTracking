@@ -848,6 +848,7 @@ steam.styles
 		render_bg {}
 		image="graphics/win32_win_min"
 		image="graphics/osx_win_dis" [$OSX]
+		image="graphics/osx_win_dis_new_dark" [$OSX1010]
     }
 
     FrameMinimizeButton:hover
@@ -856,6 +857,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_min_hover"
 		image="graphics/osx_min_hov" [$OSX]
+		image="graphics/osx_min_hov_new" [$OSX1010]
     }
 
 	FrameMinimizeButton:framefocus [$OSX]
@@ -863,6 +865,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_min_def"
+		image="graphics/osx_min_def_new" [$OSX1010]
     }
 
 	FrameMinimizeButton:framefocus:hover [$OSX]
@@ -870,6 +873,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_min_hov"
+		image="graphics/osx_min_hov_new" [$OSX1010]
     }
 
 	FrameMinimizeButton:active [$OSX]
@@ -877,6 +881,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_min_down"
+		image="graphics/osx_min_down_new" [$OSX1010]
     }
 
 	// need the maximize button to have different styles for OSX & win32
@@ -885,6 +890,7 @@ steam.styles
 		render_bg {}
 		image="graphics/win32_win_max"
 		image="graphics/osx_win_dis" [$OSX]
+		image="graphics/osx_win_dis_new_dark" [$OSX1010]
     }
 
 	FrameMaximizeButton:hover
@@ -893,6 +899,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_max_hover"
 		image="graphics/osx_max_hov" [$OSX]
+		image="graphics/osx_max_hov_new" [$OSX1010]
     }
 
 	FrameMaximizeButton:framefocus
@@ -901,6 +908,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_max"
 		image="graphics/osx_max_def" [$OSX]
+		image="graphics/osx_max_def_new" [$OSX1010]
     }
 
 	FrameMaximizeButton:framefocus:hover
@@ -909,6 +917,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_max_hover"
 		image="graphics/osx_max_hov" [$OSX]
+		image="graphics/osx_max_hov_new" [$OSX1010]
     }
 
 	FrameMaximizeButton:active
@@ -917,6 +926,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_max_hover"
 		image="graphics/osx_max_down" [$OSX]
+		image="graphics/osx_max_down_new" [$OSX1010]
     }
 
 	// these are for when the maximize button becomes the restore button
@@ -925,6 +935,7 @@ steam.styles
 		render_bg {}
 		image="graphics/win32_win_restore"
 		image="graphics/osx_win_dis" [$OSX]
+		image="graphics/osx_win_dis_new" [$OSX1010]
     }
 
 	FrameRestoreButton:hover
@@ -933,6 +944,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_restore_hover"
 		image="graphics/osx_max_hov" [$OSX]
+		image="graphics/osx_max_hov_new" [$OSX1010]
     }
 
 	FrameRestoreButton:framefocus
@@ -941,6 +953,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_restore"
     		image="graphics/osx_max_def" [$OSX]
+    		image="graphics/osx_max_def_new" [$OSX1010]
     }
 
 	FrameRestoreButton:framefocus:hover
@@ -949,6 +962,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_restore_hover"
 		image="graphics/osx_max_hov" [$OSX]
+		image="graphics/osx_max_hov_new" [$OSX1010]
     }
 
 	FrameRestoreButton:active
@@ -957,6 +971,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_restore_hover"
 		image="graphics/osx_max_down" [$OSX]
+		image="graphics/osx_max_down_new" [$OSX1010]
     }
 
 	FrameCloseButton
@@ -964,6 +979,7 @@ steam.styles
 		render_bg {}
 		image="graphics/win32_win_close"
 		image="graphics/osx_win_dis" [$OSX]
+		image="graphics/osx_win_dis_new_dark" [$OSX1010]
     }
 
 	FrameCloseButton:hover
@@ -971,6 +987,7 @@ steam.styles
 		render_bg {}
 		image="graphics/win32_win_close_hover"
 		image="graphics/osx_close_hov" [$OSX]
+		image="graphics/osx_close_hov_new" [$OSX1010]
     }
 
 	FrameCloseButton:framefocus [$OSX]
@@ -978,6 +995,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_close_def"
+		image="graphics/osx_close_def_new" [$OSX1010]
     }
 
 	FrameCloseButton:framefocus:hover [$OSX]
@@ -985,6 +1003,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_close_hov"
+		image="graphics/osx_close_hov_new" [$OSX1010]
     }
 
 	FrameCloseButton:active [$OSX]
@@ -992,6 +1011,7 @@ steam.styles
 		render_bg {}
 		bgcolor="none"
 		image="graphics/osx_close_down"
+		image="graphics/osx_close_down_new" [$OSX1010]
     }
 
 	FrameCloseButton:disabled
@@ -1000,6 +1020,7 @@ steam.styles
 		bgcolor="none"
 		image="graphics/win32_win_close_disabled"
 		image="graphics/osx_win_dis" [$OSX]
+		image="graphics/osx_win_dis_new_dark" [$OSX1010]
     }
 
     FrameTitle
@@ -3535,11 +3556,11 @@ steam.styles
 		font-weight=400
 		font-style=regular,uppercase
 		padding-top=-1
-		padding-left=6
+		padding-right=28
 
 		render_bg
 		{
-			1="image( x0, y0, x1, y1, graphics/glow_friendslist )"
+			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
 			2="image( x1-30, y0+20, x0, y0, graphics/icon_friendslist )"
 		}
 	}

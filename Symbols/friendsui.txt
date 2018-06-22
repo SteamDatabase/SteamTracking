@@ -1703,6 +1703,7 @@
  D typeinfo for CBroadcastRecorderNotification
  D typeinfo for CBroadcastViewerWatching
  D typeinfo for CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>
+ D typeinfo for CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>
  D typeinfo for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
  D typeinfo for CCallResult<CItemImageManager, HTTPRequestCompleted_t>
  D typeinfo for CCallResult<CTradeInviteBar, TradeInviteResponse_t>
@@ -1778,6 +1779,7 @@
  D typeinfo for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ D typeinfo for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
  D typeinfo for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
@@ -1932,6 +1934,7 @@
  D typeinfo for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ D typeinfo for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
  D typeinfo for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -2026,6 +2029,7 @@
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, bool>
+ D typeinfo for CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int>
@@ -2257,6 +2261,7 @@
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
@@ -3025,6 +3030,7 @@
  D vtable for CBroadcastRecorderNotification
  D vtable for CBroadcastViewerWatching
  D vtable for CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>
+ D vtable for CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>
  D vtable for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
  D vtable for CCallResult<CItemImageManager, HTTPRequestCompleted_t>
  D vtable for CCallResult<CTradeInviteBar, TradeInviteResponse_t>
@@ -3100,6 +3106,7 @@
  D vtable for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ D vtable for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
  D vtable for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
@@ -3253,6 +3260,7 @@
  D vtable for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D vtable for CFriendsUIModule::CCallback_OnOpenChatDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ D vtable for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
  D vtable for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -3346,6 +3354,7 @@
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, bool>
+ D vtable for CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int>
@@ -3564,6 +3573,7 @@
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
+ D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
@@ -3731,6 +3741,7 @@
  R typeinfo name for CBroadcastRecorderNotification
  R typeinfo name for CBroadcastViewerWatching
  R typeinfo name for CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>
+ R typeinfo name for CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>
  R typeinfo name for CCallResult<CHTTPImage, HTTPRequestCompleted_t>
  R typeinfo name for CCallResult<CItemImageManager, HTTPRequestCompleted_t>
  R typeinfo name for CCallResult<CTradeInviteBar, TradeInviteResponse_t>
@@ -3806,6 +3817,7 @@
  R typeinfo name for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ R typeinfo name for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
  R typeinfo name for CCallback<CParentalCache, ParentalLockChangeBegin_t, false>
@@ -3960,6 +3972,7 @@
  R typeinfo name for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ R typeinfo name for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
  R typeinfo name for CFriendsUIModule::CFriendPanelContainerGeneric
@@ -4054,6 +4067,7 @@
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, bool>
+ R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int>
@@ -4396,6 +4410,7 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
@@ -4928,6 +4943,11 @@
  T CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>::Run(void*, bool, unsigned long long)
  T CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>::Set(unsigned long long, CFriendAliasesDialog*, void (CFriendAliasesDialog::*)(NameHistoryResponse_t*, bool))
  T CCallResult<CFriendAliasesDialog, NameHistoryResponse_t>::~CCallResult()
+ T CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>::GetCallbackSizeBytes()
+ T CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>::Run(void*)
+ T CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>::Run(void*, bool, unsigned long long)
+ T CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>::Set(unsigned long long, CFriendsWebChat*, void (CFriendsWebChat::*)(SetPersonaNameResponse_t*, bool))
+ T CCallResult<CFriendsWebChat, SetPersonaNameResponse_t>::~CCallResult()
  T CCallResult<CHTTPImage, HTTPRequestCompleted_t>::GetCallbackSizeBytes()
  T CCallResult<CHTTPImage, HTTPRequestCompleted_t>::Run(void*)
  T CCallResult<CHTTPImage, HTTPRequestCompleted_t>::Run(void*, bool, unsigned long long)
@@ -5159,6 +5179,9 @@
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenChatRoomGroupDialog_t*))
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenChatRoomGroupDialog_t*))
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::Run(void*)
+ T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenGameInfoDialog_t*))
+ T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenGameInfoDialog_t*))
+ T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::Run(void*)
  T CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenInviteToTradeDialog_t*))
  T CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenInviteToTradeDialog_t*))
  T CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>::Run(void*)
@@ -6402,6 +6425,7 @@
  T CFriendsUIModule::CCallbackInternal_OnUIModeChanged::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenChatDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog::Run(void*)
+ T CFriendsUIModule::CCallback_OnOpenGameInfoDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenJoinGameDialog::Run(void*)
  T CFriendsUIModule::CFriendPanelContainerGeneric::AppendContextMenuItems(CSteamID, vgui::Menu*, bool)
@@ -6459,6 +6483,7 @@
  T CFriendsUIModule::IsValid()
  T CFriendsUIModule::OnOpenChatDialog(OpenChatDialog_t*)
  T CFriendsUIModule::OnOpenChatRoomGroupDialog(OpenChatRoomGroupDialog_t*)
+ T CFriendsUIModule::OnOpenGameInfoDialog(OpenGameInfoDialog_t*)
  T CFriendsUIModule::OnOpenInviteToTradeDialog(OpenInviteToTradeDialog_t*)
  T CFriendsUIModule::OnOpenJoinGameDialog(OpenJoinGameDialog_t*)
  T CFriendsUIModule::OnUIModeChanged(UIModeChanged_t*)
@@ -6514,6 +6539,7 @@
  T CFriendsWebChat::OnComputerActiveStateChange(ComputerActiveStateChange_t*)
  T CFriendsWebChat::OnOpenURLInClient(OpenURLInClient_t*)
  T CFriendsWebChat::OnOverlayChatBrowserInfoChanged(OverlayChatBrowserInfoChanged_t*)
+ T CFriendsWebChat::OnSetPersonaNameResponse(SetPersonaNameResponse_t*, bool)
  T CFriendsWebChat::OnSetPersonaStateInternal(SetPersonaStateInternal_t*)
  T CFriendsWebChat::OnShowChatRoomGroupInvite(ShowChatRoomGroupInvite_t*)
  T CFriendsWebChat::OnVoiceEnabledStateChanged(VoiceEnabledStateChanged_t*)
@@ -6528,6 +6554,7 @@
  T CFriendsWebChat::RegisterOverlayChatBrowserInfoChanged(CSmartPtr<CJSCallbackFunc>)
  T CFriendsWebChat::RunFrame()
  T CFriendsWebChat::SetActiveClanChats(CUtlVector<unsigned int, CUtlMemory<unsigned int> >*)
+ T CFriendsWebChat::SetPersonaName(char const*, CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::SetPushToTalkEnabled(bool)
  T CFriendsWebChat::SetPushToTalkHotKey(int)
  T CFriendsWebChat::SetPushToTalkMouseButton(int)
@@ -6950,6 +6977,7 @@
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, bool>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, char const*, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int>::~CJSMethodCallHandler()
@@ -11725,6 +11753,7 @@
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, bool>::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, int>::~CJSMethodCallHandler()
@@ -14982,6 +15011,7 @@
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >, int, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1, 2>(CFriendsWebChat*, void (CFriendsWebChat::*)(int, char const*, CSmartPtr<CJSCallbackFunc>), index_tuple<0, 1, 2>, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CHTMLWindow, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CHTMLWindow*, void (CHTMLWindow::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
@@ -15007,6 +15037,7 @@
  T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >, int, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1, 2>(CFriendsWebChat*, void (CFriendsWebChat::*)(int, char const*, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
@@ -15428,7 +15459,7 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
- b CommonKeyCode::InitKeyTranslation()::threadonce_581_40
+ b CommonKeyCode::InitKeyTranslation()::threadonce_537_40
  b CommonKeyCode::s_pKeyCodeToVirtualKey
  b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
  b CommonKeyCode::s_pVirtualKeyToKeyCode

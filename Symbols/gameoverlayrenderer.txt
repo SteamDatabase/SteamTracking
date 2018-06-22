@@ -9,10 +9,8 @@
  .objc_class_name_NSMapTable
  .objc_class_name_NSNumber
  .objc_class_name_NSObject
- .objc_class_name_NSRunningApplication
  .objc_class_name_NSString
  .objc_class_name_NSThread
- .objc_class_name_NSWorkspace
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -139,9 +137,7 @@
  CGSGetWindowBounds
  CGWarpMouseCursorPosition
  D .objc_class_name_CMetalDeviceCache
- D .objc_class_name_EventHandlers
  D OBJC_CLASS_$_CMetalDeviceCache
- D OBJC_CLASS_$_EventHandlers
  D OBJC_IVAR_$_CMetalDeviceCache._deviceOverride
  D OBJC_IVAR_$_CMetalDeviceCache._metalLibrary
  D OBJC_IVAR_$_CMetalDeviceCache._screenshotPipeline
@@ -150,7 +146,6 @@
  D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineBGRA8
  D OBJC_IVAR_$_CMetalDeviceCache._updatePipelineRGBA16Float
  D OBJC_METACLASS_$_CMetalDeviceCache
- D OBJC_METACLASS_$_EventHandlers
  D __cxxabiv1::__terminate_handler
  D __cxxabiv1::__unexpected_handler
  D g_iNotificationPosition
@@ -209,8 +204,6 @@
  NSApp
  NSSelectorFromString
  NSStringFromSelector
- NSWorkspaceApplicationKey
- NSWorkspaceDidActivateApplicationNotification
  OBJC_CLASS_$_MTLRenderPassDescriptor
  OBJC_CLASS_$_MTLRenderPipelineDescriptor
  OBJC_CLASS_$_MTLTextureDescriptor
@@ -221,10 +214,8 @@
  OBJC_CLASS_$_NSMapTable
  OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
- OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
- OBJC_CLASS_$_NSWorkspace
  OBJC_METACLASS_$_NSObject
  R typeinfo name for CBaseOverlayRenderer
  R typeinfo name for CGameStreamBaseMemStream
@@ -506,7 +497,6 @@
  T InputOSX_ApplicationIsActive()
  T InputOSX_CocoaRestoreCursor()
  T InputOSX_CocoaSetCursor(unsigned long)
- T InputOSX_InitFocusObserver()
  T InputOSX_SetCocoaCursorHideShowImpl(void (*)(bool))
  T InputOSX_SetCocoaInputEventHook(EInputOSXHookResult (*)(__CGEvent*))
  T InputOSX_SetCocoaMouseButtonBlockMask(unsigned int)
@@ -723,6 +713,9 @@
  b _ZL22s_ptForceMousePosition.0
  b _ZL22s_ptForceMousePosition.1
  b __gnu_cxx::__verbose_terminate_handler()::terminating
+ b chFragmentShaderInfoLog
+ b chProgramInfoLog
+ b chVertexShaderInfoLog
  b eh_globals
  b emergency_buffer
  b emergency_used
@@ -739,6 +732,9 @@
  b g_nMaximumMovieResolutionY
  b g_pMovieRenderer
  b init
+ b nFragmentShaderCompiled
+ b nProgramLinked
+ b nVertexShaderCompiled
  b s_MainThreadId
  b s_Pid
  b s_bAppIsInFocus
@@ -943,7 +939,6 @@
  strrchr
  strstr
  strtoull
- t +[EventHandlers activeAppDidChange:]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_hide]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_pop]
  t +[NSCursor(SteamOverrideNSCursor) steamhooked_unhide]

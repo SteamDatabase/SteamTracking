@@ -625,6 +625,11 @@
         "posted_in": "CUserFriends::JoinChatRoomGroup(unsigned long long, unsigned long long)"
     },
     {
+        "id": 851,
+        "size": 8,
+        "posted_in": "WebBrowser_ShowJoinGameDialog(CUser*, KeyValues const*, unsigned int, KeyValues*)"
+    },
+    {
         "id": 852,
         "size": 32,
         "posted_in": "CUserFriends::ShowChatRoomGroupInvite(char const*)"
@@ -633,6 +638,11 @@
         "id": 853,
         "size": 8,
         "posted_in": "CUserFriends::OpenInviteToTradeDialog(CSteamID)"
+    },
+    {
+        "id": 854,
+        "size": 8,
+        "posted_in": "WebBrowser_ViewGameInfoForSteamID(CUser*, KeyValues const*, unsigned int, KeyValues*)"
     },
     {
         "id": 901,

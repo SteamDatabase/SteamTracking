@@ -76,7 +76,7 @@
 						<Label id="PersonalizeButtonLabel" class="LongDesc" text="#SettingsController_SteamControllerPersonalize" />
 					</Button>
 				</Panel>
-				<Label class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerAccounts" />				
+				<Label id="RegisteredTitleText" class="SettingsCallout SettingsControllerNameTitle" text="#SettingsController_SteamControllerAccounts" />				
 				<Panel id="RegisteredAccountsContainer" selectionpos="auto"/>
 				
 				<Panel id="ControllerInfo" selectionpos="auto">

@@ -117,6 +117,7 @@ Scheme
 				ypos	7
 				ypos	3 [$OSX]
 				wide	20
+				wide	24 [$OSX]
 				tall	20
 				PinCorner	1
 				PinCorner	0 [$OSX]
@@ -128,7 +129,8 @@ Scheme
 				xpos	43 [$OSX]
 				ypos	7
 				ypos	3 [$OSX]
-				wide	20 
+				wide	20
+				wide	24 [$OSX]
 				tall	20
 				visible 0 [!$OSX]
 				PinCorner	1
@@ -141,6 +143,7 @@ Scheme
 				ypos	7
 				ypos	3 [$OSX]
 				wide	20
+				wide	24 [$OSX]
 				tall	20
 				PinCorner	1
 				PinCorner	0 [$OSX]

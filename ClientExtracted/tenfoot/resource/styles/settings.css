@@ -1617,6 +1617,24 @@ KeyboardShortcut .Graphic
 	margin: 4px 0px 12px 0px;
 }
 
+.GeneratedSerial #RegisteredTitleText
+{
+    horizontal-align: left;
+    padding-left: 0px;
+    width: 800px;
+    margin: 4px 0px 12px 0px;
+    visibility: collapse;
+}
+
+.GeneratedSerial #ControllerName
+{
+    horizontal-align: left;
+    padding-left: 0px;
+    width: 800px;
+    margin: 4px 0px 12px 0px;
+    visibility: visible;
+}
+
 .SettingsControllerNameHeader
 {
 	horizontal-align: left;
@@ -1750,6 +1768,11 @@ KeyboardShortcut .Graphic
 	flow-children: down;
 	max-height: 300px;
 	overflow: noclip scroll;
+}
+
+.GeneratedSerial .RegisteredAccountButton
+{
+    visibility: collapse;
 }
 
 #SteamControllerVersion #SelectAccountNoneLabel
@@ -3914,21 +3937,32 @@ SettingsPanel_ControllerConfigs .SettingsContent
 }
 
 .SettingsBluetooth_ColLeft
+
 {
+
 	width: 150px;
+
 }
 
 .SettingsBluetooth_ColMiddle
+
 {
+
 	width: fill-parent-flow(1.0);
+
 	horizontal-align: right;
+
 }
 
 
 .SettingsBluetooth_ColRight
+
 {
+
 	horizontal-align: right;
+
 	text-align: right;
+
 }
 
 #BluetoothNotFound Label
