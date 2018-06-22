@@ -253,7 +253,8 @@
 				
 				if( $OriginalFile === 'Scripts/WebUI/friends.js' )
 				{
-					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > Protobufs/WebUI/friends.proto' );
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto' );
+					system( '../ValveProtobufs/update.sh' );
 				}
 				
 				system( 'prettier --write ' . escapeshellarg( $File ) );
