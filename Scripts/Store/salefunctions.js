@@ -722,7 +722,7 @@ GSteamSalienPlanets = {
 				return;
 				
 			var clan = GStoreItemData.GetAccountData( null, oItem.clan_info.accountid, 7 );
-			var $AvatarCap = $J('<a href="%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, clan.url).replace(/\%2\$s/g, GetAvatarURL( clan.avatar ) ).replace(/\%3\$s/g, clan.accountid) );
+			var $AvatarCap = $J('<a href="https://steamcommunity.com/groups/%1$s" data-miniprofile="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, clan.url).replace(/\%2\$s/g, GetAvatarURL( clan.avatar ) ).replace(/\%3\$s/g, clan.accountid) );
 			$TopGroups.append( $AvatarCap );
 		});
 		
