@@ -31483,12 +31483,20 @@ and limitations under the License.
                       (l.m_bInitialized = !0),
                       0 != (1 & i) &&
                         ((l.m_ePersonaState = a.persona_state() || 0),
-                        (l.m_unGamePlayedAppID = a.game_played_app_id() || 0),
-                        (l.m_gameid = a.gameid() || "0"),
-                        (l.m_strGameExtraInfo = a.game_name() || ""),
-                        (l.m_unGameServerIP = a.game_server_ip() || 0),
-                        (l.m_unGameServerPort = a.game_server_port() || 0),
-                        (l.m_game_lobby_id = a.game_lobby_id() || "")),
+                        0 != l.m_ePersonaState
+                          ? ((l.m_unGamePlayedAppID =
+                              a.game_played_app_id() || 0),
+                            (l.m_gameid = a.gameid() || "0"),
+                            (l.m_strGameExtraInfo = a.game_name() || ""),
+                            (l.m_unGameServerIP = a.game_server_ip() || 0),
+                            (l.m_unGameServerPort = a.game_server_port() || 0),
+                            (l.m_game_lobby_id = a.game_lobby_id() || ""))
+                          : ((l.m_unGamePlayedAppID = 0),
+                            (l.m_gameid = "0"),
+                            (l.m_strGameExtraInfo = ""),
+                            (l.m_unGameServerIP = 0),
+                            (l.m_unGameServerPort = 0),
+                            (l.m_game_lobby_id = ""))),
                       0 != (2 & i) &&
                         (l.m_strPlayerName = a.player_name() || ""),
                       0 != (64 & i) &&
@@ -43208,12 +43216,19 @@ and limitations under the License.
               }
               this.SendVoiceStatusUpdate();
             }),
+            (e.prototype.BHasSampleRateTooHighInBrowser = function() {
+              return (
+                !nt.a.IN_CLIENT &&
+                Qp.AudioPlaybackManager.GetLastObservedSampleRate() > 48e3
+              );
+            }),
             (e.prototype.BNoMicAvailableForSession = function() {
               if (
                 this.m_VoiceCallState.m_eState <=
                 il.k_EVoiceCallState_RequestedMicAccess
               )
                 return !1;
+              if (this.BHasSampleRateTooHighInBrowser()) return !0;
               for (var e = 0; e < this.m_rgAudioStreams.length; ++e)
                 if (
                   this.m_rgAudioStreams[e].type ==
@@ -44544,7 +44559,7 @@ and limitations under the License.
                     this.ProcessStatsReport,
                     1e4
                   )),
-                  void 0 != Tm && li.b.BClientConnected().then(function() {}),
+                  nt.a.IN_CLIENT && li.b.BClientConnected().then(function() {}),
                   -1 ==
                     this.m_PeerConnection.localDescription.sdp.indexOf(
                       "mozilla..."
@@ -53847,20 +53862,25 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = Qp.VoiceStore.BNoMicAvailableForSession(),
-                t = Qp.VoiceStore.IsMicMuted(),
-                i = "VoiceControlPanelButton ToggleMicrophoneButton",
-                n = "";
+                t = Qp.VoiceStore.BHasSampleRateTooHighInBrowser(),
+                i = Qp.VoiceStore.IsMicMuted(),
+                n = "VoiceControlPanelButton ToggleMicrophoneButton",
+                r = "";
               return (
-                (n = t
+                (r = i
                   ? Object(gr.b)("#VoiceChat_UnmuteMic")
                   : Object(gr.b)("#VoiceChat_MuteMic")),
                 e &&
-                  ((i += " NoMicrophone"),
-                  (n = Object(gr.b)("#VoiceChat_DeniedMicrophoneAccess"))),
-                t && (i += " disabled"),
+                  ((n += " NoMicrophone"),
+                  (r = t
+                    ? Object(gr.b)(
+                        "#VoiceChat_ChromeSampleRateTooHighMicExplainer"
+                      )
+                    : Object(gr.b)("#VoiceChat_DeniedMicrophoneAccess"))),
+                i && (n += " disabled"),
                 Sr.createElement(
                   "button",
-                  { className: i, onClick: this.ToggleMicrophone, title: n },
+                  { className: n, onClick: this.ToggleMicrophone, title: r },
                   Sr.createElement(ks.u, null),
                   Sr.createElement(ks.u, { className: "SVGIcon_Shadow" })
                 )
@@ -71835,6 +71855,12 @@ and limitations under the License.
                     this.m_Context.state
                 );
             }),
+            rt.b(
+              [mt.observable],
+              e.prototype,
+              "m_nLastObservedSampleRate",
+              void 0
+            ),
             rt.b(
               [mt.observable],
               e.prototype,
