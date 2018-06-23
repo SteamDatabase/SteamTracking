@@ -134,7 +134,7 @@ function CBattleSelect(resources, container)
 	this.m_SelectedTileX = -1;
 	this.m_SelectedTileY = -1;
 
-	g.click = function()
+	g.pointertap = function()
 	{
 		if(null != instance.click)
 		{
@@ -301,7 +301,7 @@ CBattleSelect.prototype._RefreshInfoTeamImages = function( tileData )
 	this.m_InfoBoxPrimaryClan.y = 50;
 	this.m_InfoBoxPrimaryClan.interactive = true;
 	this.m_InfoBoxPrimaryClan.buttonMode = true;
-	this.m_InfoBoxPrimaryClan.click = function() {
+	this.m_InfoBoxPrimaryClan.pointertap = function() {
 		window.open( 'https://steamcommunity.com/groups/'+tileData.clanurl, '_blank' );
 	};
 	this.m_InfoBoxClanContainer.addChild( this.m_InfoBoxPrimaryClan );
@@ -322,7 +322,7 @@ CBattleSelect.prototype._RefreshInfoTeamImages = function( tileData )
 			var sprite = new PIXI.Sprite.fromImage( 'clanavatar_' + clan.accountid );
 			sprite.interactive = true;
 			sprite.buttonMode = true;
-			sprite.click = function() {
+			sprite.pointertap = function() {
 				window.open( 'https://steamcommunity.com/groups/'+clan.url, '_blank' );
 			};
 			sprite.x = curx + k_GameBoxPadding;

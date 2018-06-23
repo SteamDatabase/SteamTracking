@@ -348,7 +348,12 @@ function CUIButton(width, height, text)
 	this.m_Graphics.click = function()
 	{
 		instance.click(instance);
-	}
+	};
+
+	this.m_Graphics.tap = function()
+	{
+		instance.click(instance);
+	};
 
 	this.m_Graphics.mouseover = function()
 	{

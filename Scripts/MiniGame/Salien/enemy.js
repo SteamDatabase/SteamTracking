@@ -123,7 +123,7 @@ CEnemy.prototype.BuildSprite = function()
 //	this.m_Sprite.animationSpeed = animationSpeedAdjustment;
 
 	var instance = this;
-	this.m_Sprite.click = function() {
+	this.m_Sprite.pointertap = function() {
 		if ( instance.m_EnemyManager.m_bIsInteractive )
 		{
 			instance.Damage(1);

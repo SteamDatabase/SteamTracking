@@ -116,8 +116,6 @@ body.flat_page {
     background:black;
     width:1280px;
     height:720px;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 #salien_loading_throbber {

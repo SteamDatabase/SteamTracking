@@ -8,12 +8,8 @@ const k_GameBoxW = 93;
 const k_GameBoxH = 36;
 const k_GameBoxPadding = 4;
 
-var gApp = new PIXI.Application({
-antialias: true,    // default: false
-transparent: true, // default: false
-resolution: 1       // default: 1
-});
-
+var gApp = null;
+var gGame = null;
 var gServer = null;
 
 const gLoader = PIXI.loader;
@@ -331,7 +327,7 @@ CBootState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_AudioIndicator.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	this.m_AudioIndicator.interactive = true;
 	this.m_AudioIndicator.buttonMode = true;
-	this.m_AudioIndicator.click = function() {
+	this.m_AudioIndicator.pointertap = function() {
 		gAudioManager.ToggleMute();
 		this.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	};
@@ -446,7 +442,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		{
 			instance.OnMouseOutPlanet(this);
 		};
-		planetSprite.click = function() {
+		planetSprite.pointertap = function() {
 			gAudioManager.PlaySound( 'ui_select_forward' );
 			gServer.JoinPlanet(
 				planet.id,
@@ -484,7 +480,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	this.m_ShipFlag.interactive = true;
 	this.m_ShipFlag.buttonMode = true;
-	this.m_ShipFlag.click = function() {
+	this.m_ShipFlag.pointertap = function() {
 		ShowRepresentGroupDialog( function( groupid, strAvatarHash ) {
 			gPlayerInfo.clan_info = {};
 			gPlayerInfo.clan_info.accountid = groupid;
@@ -622,7 +618,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_AudioIndicator.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	this.m_AudioIndicator.interactive = true;
 	this.m_AudioIndicator.buttonMode = true;
-	this.m_AudioIndicator.click = function() {
+	this.m_AudioIndicator.pointertap = function() {
 		gAudioManager.ToggleMute();
 		this.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	};
@@ -746,8 +742,8 @@ CPlanetSelectionState.prototype._RefreshInfoBoxGames = function()
 		sprite.height = k_GameBoxH;
 		sprite.interactive = true;
 		sprite.buttonMode = true;
-		sprite.click = function() {
-			window.open( 'https://store.steampowered.com/app/'+appId, '_blank' );
+		sprite.pointertap = function() {
+			window.open( 'https://store.steampowered.com/app/'+appId + '/?snr=1_saliens_4__salienapps', '_blank' );
 		};
 		box.addChild(sprite);
 		this.m_InfoBoxGameSprites.push(sprite);
@@ -1016,8 +1012,8 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		sprite.interactive = true;
 		sprite.buttonMode = true;
 		sprite.appid = appId;
-		sprite.click = function() {
-			window.open( 'https://store.steampowered.com/app/'+this.appid, '_blank' );
+		sprite.pointertap = function() {
+			window.open( 'https://store.steampowered.com/app/'+this.appid + '/?snr=1_saliens_4__salienapps', '_blank' );
 		};
 		this.m_RewardsContainer.addChild(sprite);
 	}
@@ -1204,7 +1200,7 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_ShipFlag.y = 2;
 	this.m_ShipFlag.interactive = true;
 	this.m_ShipFlag.buttonMode = true;
-	this.m_ShipFlag.click = function() {
+	this.m_ShipFlag.pointertap = function() {
 		ShowRepresentGroupDialog( function( groupid, strAvatarHash ) {
 			gPlayerInfo.clan_info = {};
 			gPlayerInfo.clan_info.accountid = groupid;
@@ -1271,7 +1267,7 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_AudioIndicator.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	this.m_AudioIndicator.interactive = true;
 	this.m_AudioIndicator.buttonMode = true;
-	this.m_AudioIndicator.click = function() {
+	this.m_AudioIndicator.pointertap = function() {
 		gAudioManager.ToggleMute();
 		this.alpha = gAudioManager.m_Muted ? 0.3 : 1.0;
 	};
@@ -1599,7 +1595,7 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 		this.m_rgLaserHitFrames.push( PIXI.Texture.fromFrame( 'laserhit' + i + '.png' ) );
 	}
 
-	gApp.stage.click = this.FireLaser.bind(this);
+	gApp.stage.pointertap = this.FireLaser.bind(this);
 };
 CBattleState.prototype.Update = function(delta)
 {
@@ -1731,7 +1727,7 @@ CBattleState.prototype.Shutdown = function()
 		this.m_AttackManager.Destroy();
 	}
 
-	gApp.stage.click = null;
+	gApp.stage.pointertap = null;
 	this.m_MenuBar.destroy( true );
 	this.m_TimerMenu.destroy( true );
 	this.m_Timer.destroy();
@@ -1749,14 +1745,14 @@ CBattleState.prototype.Shutdown = function()
 	gApp.renderer.plugins.interaction.cursorStyles.pointer = 'pointer';
 };
 
-CBattleState.prototype.FireLaser = function()
+CBattleState.prototype.FireLaser = function( event )
 {
 	if ( !this.m_bRunning || this.m_rtDefensesRepaired != 0 )
 		return;
 
 	var instance = this;
-	var x = gApp.renderer.plugins.interaction.mouse.global.x;
-	var y = gApp.renderer.plugins.interaction.mouse.global.y;
+	var x = event.data.global.x;
+	var y = event.data.global.y;
 
 	var laser = new PIXI.extras.AnimatedSprite( instance.m_rgLaserBeamFrames );
 	laser.scale.set( 0.2, 0.2 );
@@ -1999,7 +1995,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 	continueButton.y = 300;
 	continueButton.interactive = true;
 	continueButton.buttonMode = true;
-	continueButton.click = function () {
+	continueButton.pointertap = function () {
 		instance.m_VictoryScreen.visible = false;
 		if ( continueButton.result.new_level > continueButton.result.old_level )
 		{
@@ -2122,8 +2118,8 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 		sprite.interactive = true;
 		sprite.buttonMode = true;
 		sprite.appid = appid;
-		sprite.click = function() {
-			window.open( 'https://store.steampowered.com/app/'+this.appid, '_blank' );
+		sprite.pointertap = function() {
+			window.open( 'https://store.steampowered.com/app/'+this.appid + '/?snr=1_saliens_4__salienapps', '_blank' );
 		};
 		gameFadeOut.addChild(sprite);
 
@@ -2138,7 +2134,7 @@ CBattleState.prototype.RenderVictoryScreen = function( result )
 		gAudioManager.PlaySound( 'ui_select' );
 		if ( instance.m_PlanetData.state.tag_ids !== undefined )
 		{
-			window.open( 'https://store.steampowered.com/search/?tags=' + instance.m_PlanetData.state.tag_ids, '_blank' );
+			window.open( 'https://store.steampowered.com/search/?snr=1_saliens_4__salientags&tags=' + instance.m_PlanetData.state.tag_ids, '_blank' );
 		}
 		else
 		{
@@ -2185,7 +2181,7 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 	continueButton.y = 300;
 	continueButton.interactive = true;
 	continueButton.buttonMode = true;
-	continueButton.click = function () {
+	continueButton.pointertap = function () {
 		gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
 	};
 
@@ -2239,7 +2235,7 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 	checkInventoryText.y = continueButton.y - 40;
 	checkInventoryText.interactive = true;
 	checkInventoryText.buttonMode = true;
-	checkInventoryText.click = function () {
+	checkInventoryText.pointertap = function () {
 		window.open( 'https://steamcommunity.com/my/inventory/', '_blank' );
 	};
 	this.m_LevelUpScreen.addChild( checkInventoryText );
@@ -2247,13 +2243,15 @@ CBattleState.prototype.RenderLevelUpScreen = function( result )
 	gApp.stage.addChild( this.m_LevelUpScreen );
 };
 
-// our entry: make a stage, start ticking the loop (which runs through the states above)
-var gGame = new CGame();
-gGame.Start();
-
 var gStageFilter = new PIXI.filters.CRTFilter();
 
 $J( document ).ready( function() {
+	gApp = new PIXI.Application({
+		antialias: true,    // default: false
+		transparent: true, // default: false
+		resolution: 1       // default: 1
+	});
+
 	gApp.renderer.view.style.position = 'absolute';
 	gApp.renderer.view.style.display = 'block';
 	gApp.renderer.autoResize = true;
@@ -2275,5 +2273,9 @@ $J( document ).ready( function() {
 
 	$J( '#salien_game_placeholder' ).append(gApp.view);
 //	document.body.appendChild(gApp.view);
+
+	// our entry: make a stage, start ticking the loop (which runs through the states above)
+	gGame = new CGame();
+	gGame.Start();
 });
 
