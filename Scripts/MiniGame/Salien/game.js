@@ -355,7 +355,7 @@ CPlanetSelectionState.prototype = Object.create(CGameState.prototype);
 CPlanetSelectionState.prototype.Load = function()
 {
 	var instance = this;
-	gServer.GetPlanets( function( results ) {
+	gServer.GetPlanets( 0, function( results ) {
 			LoadAsset( 'planet_select_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
 			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
 			LoadAsset( 'ship', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/ship.png');
@@ -369,11 +369,33 @@ CPlanetSelectionState.prototype.Load = function()
 				LoadAsset( 'clanavatar_' + gPlayerInfo.clan_info.accountid, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + '/' + gPlayerInfo.clan_info.avatar.substr( 0, 2 ) + '/' + gPlayerInfo.clan_info.avatar + '.jpg' );
 			}
 
-			instance.m_rgPlanets = results.response.planets;
+			instance.m_rgPlanets = [];
+			instance.m_rgConqueredPlanets = [];
+
+			results.response.planets.forEach( function ( planet ) {
+				if ( !planet.state.captured && planet.state.active )
+				{
+					instance.m_rgPlanets.push( planet )
+				}
+				else if ( planet.state.captured )
+				{
+					instance.m_rgConqueredPlanets.push( planet );
+				}
+			});
+
+			instance.m_rgConqueredPlanets.sort( function( a, b ) {
+				return b.state.capture_time - a.state.capture_time;
+			});
+			instance.m_rgConqueredPlanets.splice( Math.min( 5, instance.m_rgConqueredPlanets.length ), instance.m_rgConqueredPlanets.length );
+
 			instance.m_mapPlanets = new Map();
 			for ( var i = 0; i < instance.m_rgPlanets.length; ++i )
 			{
 				instance.m_mapPlanets.set( instance.m_rgPlanets[i].id, instance.m_rgPlanets[i] );
+			}
+			for ( var i = 0; i < instance.m_rgConqueredPlanets.length; ++i )
+			{
+				instance.m_mapPlanets.set( instance.m_rgConqueredPlanets[i].id, instance.m_rgConqueredPlanets[i] );
 			}
 			instance.m_rgPlanets.forEach( function( planet ) {
 				var strPlanetName = 'Planet_' + planet.id;
@@ -385,6 +407,12 @@ CPlanetSelectionState.prototype.Load = function()
 						LoadAsset( 'app_' + appid, 'https://steamcdn-a.akamaihd.net/steam/apps/' + appid + '/capsule_sm_120.jpg' );
 					});
 				}
+			});
+
+
+			instance.m_rgConqueredPlanets.forEach( function( planet ) {
+				var strPlanetName = 'Planet_' + planet.id;
+				LoadAsset( strPlanetName, 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/planets/' + planet.state.image_filename );
 			});
 
 			gLoader.load();
@@ -409,11 +437,11 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	gAudioManager.PlayMusic( 'galaxy_music', true );
 
 	this.m_rgPlanetLocations =
-		[{ x: 1036, y: 228, scale: 0.8 },
-		{ x: 453, y: 261, scale: 0.7 },
-		{ x: 750, y: 370, scale: 0.3 },
-		{ x: 600, y: 542, scale: 0.4 },
-		{ x: 900, y: 579, scale: 0.5 }];
+		[{ x: 1036, y: 218, scale: 0.8 },
+		{ x: 453, y: 251, scale: 0.7 },
+		{ x: 750, y: 360, scale: 0.3 },
+		{ x: 600, y: 532, scale: 0.4 },
+		{ x: 900, y: 569, scale: 0.5 }];
 
 	this.m_rgPlanetSprites = [];
 
@@ -457,7 +485,40 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		instance.m_rgPlanetSprites.push( planetSprite );
 		gApp.stage.addChild( planetSprite );
 	});
-	
+
+	instance.m_rgConqueredPlanets.forEach( function( planet, idx ) {
+		var planetSprite = new PIXI.Sprite.fromImage( 'Planet_' + planet.id );
+		planetSprite.anchor.set( 0.5, 0.5 );
+		planetSprite.width = 48;
+		planetSprite.height = 48;
+		planetSprite.x = 450 + ( ( ( planetSprite.width ) + k_GameBoxPadding ) * idx ) ;
+		planetSprite.y = k_ScreenHeight - ( planetSprite.height / 2 ) - 5;
+		planetSprite.interactive = true;
+		planetSprite.buttonMode = true;
+		planetSprite.pointertap = function() {
+			gAudioManager.PlaySound( 'ui_select_forward' );
+			gGame.ChangeState( new CBattleSelectionState( planet.id ) );
+		};
+		planetSprite.mouseover = function()
+		{
+			instance.OnMouseOverPlanet(this, planet.id);
+		};
+		planetSprite.mouseout = function()
+		{
+			instance.OnMouseOutPlanet(this);
+		};
+		gApp.stage.addChild( planetSprite );
+	});
+
+	this.m_ViewMoreButton = new CUIButton( 180, 40, 'View All'.toUpperCase() );
+	this.m_ViewMoreButton.x = gApp.screen.width - 50 - (this.m_ViewMoreButton.width);
+	this.m_ViewMoreButton.y = 550;
+	this.m_ViewMoreButton.click = function() {
+		gAudioManager.PlaySound( 'ui_select' );
+		window.open( 'https://store.steampowered.com/saliens', '_blank' )
+	};
+	gApp.stage.addChild( this.m_ViewMoreButton );
+
 	this.m_SelectedPlanet = null;
 	this.m_ShowingInfo = false;
 	
@@ -489,6 +550,20 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		} );
 	};
 	this.m_Ship.addChild(this.m_ShipFlag);
+
+
+	this.m_RecentlyConqueredText = new PIXI.Text( 'Recently Conquered by the Steam Community'.toUpperCase() );
+	this.m_RecentlyConqueredText.style = {
+		fontFamily: k_FontType,
+		fontSize: 12,
+		fill: "white",
+		fontWeight: 'bold',
+		align: 'center',
+	};
+	this.m_RecentlyConqueredText.anchor.set( 0.5, 0.5 );
+	this.m_RecentlyConqueredText.x = 553;
+	this.m_RecentlyConqueredText.y = k_ScreenHeight - 60;
+	gApp.stage.addChild( this.m_RecentlyConqueredText );
 
 	if ( gPlayerInfo.clan_info !== undefined )
 	{
@@ -652,10 +727,27 @@ CPlanetSelectionState.prototype.OnMouseOverPlanet = function(planet, planetId)
 
 	if ( planetData.state.captured )
 	{
+		this.m_InfoBox.SetSize( 244, 80 );
+		this.m_InfoBox.RemoveRollOverBox();
+		this.m_InfoBoxBattlingLabel.visible = false;
 		this.m_InfoBoxPlanetStatusCurrent.text = 'Conquered';
 	}
 	else
 	{
+		var instance = this;
+		this.m_InfoBox.AddRolloverBox(function() {
+				instance.m_MouseOverInfo = true;
+			},
+			function() {
+				instance.m_MouseOverInfo = false;
+
+				if(null == instance.m_MouseOverPlanet && null != instance.m_SelectedPlanet)
+				{
+					instance.OnMouseOutPlanet(instance.m_SelectedPlanet);
+				}
+			});
+		this.m_InfoBox.SetSize( 244, 180 );
+		this.m_InfoBoxBattlingLabel.visible = true;
 		this.m_InfoBoxPlanetStatusCurrent.text = 'Embattled';
 		this.m_InfoBoxPlanetStatusCurrent.style = {
 			fill: '#FDEE0B',
@@ -697,16 +789,20 @@ CPlanetSelectionState.prototype.OnMouseOverPlanet = function(planet, planetId)
 	this.m_TeamIconIds = [];
 	this.m_GameBannerIds = [];
 
-	// LOAD all the dynamic images this info box uses!
-	if ( planetData.giveaway_apps !== undefined )
+	if ( !planetData.captured )
 	{
-		for(var idx = 0; idx < planetData.giveaway_apps.length; idx++)
+		// LOAD all the dynamic images this info box uses!
+		if ( planetData.giveaway_apps !== undefined )
 		{
-			var appId = planetData.giveaway_apps[idx];
-			this.m_GameBannerIds.push(appId);
+			for(var idx = 0; idx < planetData.giveaway_apps.length; idx++)
+			{
+				var appId = planetData.giveaway_apps[idx];
+				this.m_GameBannerIds.push(appId);
+			}
+			this._RefreshInfoBoxGames();
 		}
-		this._RefreshInfoBoxGames();
 	}
+
 
 	this.m_InfoBoxProgress.SetValue(planetData.state.capture_progress);
 
@@ -1035,16 +1131,24 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 	this.m_RewardCountdown.y = this.m_PossibleRewardsLabel.y  - 18;
 	this.m_RewardsContainer.addChild( this.m_RewardCountdown );
 
-	this.m_rtPlanetCountUp = 0;
-	gServer.GetPlayerInfo( function(results){
-			gPlayerInfo = results.response;
-			instance.m_rtPlanetCountUp = Date.now();
-			var nSecondsOnPlanet = gPlayerInfo.time_on_planet;
-			var strTime = PadZerosLeft( Math.floor( nSecondsOnPlanet / 3600 ), 2 ) + ':' + PadZerosLeft( Math.floor( ( nSecondsOnPlanet % 3600 ) / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsOnPlanet % 60, 2 );
-			instance.m_RewardCountdown.text = 'Time Spent On Planet: '.toUpperCase() + strTime;
-		},
-		function() {}
-	);
+	if ( !this.m_PlanetData.state.captured )
+	{
+		this.m_rtPlanetCountUp = 0;
+		gServer.GetPlayerInfo( function(results){
+				gPlayerInfo = results.response;
+				instance.m_rtPlanetCountUp = Date.now();
+				var nSecondsOnPlanet = gPlayerInfo.time_on_planet;
+				var strTime = PadZerosLeft( Math.floor( nSecondsOnPlanet / 3600 ), 2 ) + ':' + PadZerosLeft( Math.floor( ( nSecondsOnPlanet % 3600 ) / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsOnPlanet % 60, 2 );
+				instance.m_RewardCountdown.text = 'Time Spent On Planet: '.toUpperCase() + strTime;
+			},
+			function() {}
+		);
+	}
+	else
+	{
+		this.m_RewardCountdown.text = 'Recently Conquered by the Steam Community'.toUpperCase();
+	}
+
 
 	// add button
 	this.m_LeaveButton = new CUIButton( 134, 34, 'Leave Planet'.toUpperCase() );
@@ -1279,7 +1383,7 @@ CBattleSelectionState.prototype.Update = function(delta)
 	
 	this.m_Elapsed += delta;
 
-	if ( this.m_rtPlanetCountUp != 0 )
+	if ( this.m_rtPlanetCountUp != 0 && !this.m_PlanetData.state.captured )
 	{
 		var additionalTime = Math.floor( ( Date.now() - this.m_rtPlanetCountUp ) / 1000 );
 		var nSecondsOnPlanet = gPlayerInfo.time_on_planet + additionalTime;

@@ -306,7 +306,16 @@ CUIBox.prototype.AddRolloverBox = function(onMouseOver, onMouseOut)
 	this.m_OnMouseOut = onMouseOut;
 
 	this._Layout();
-}
+};
+
+CUIBox.prototype.RemoveRollOverBox = function()
+{
+	this.m_HasRolloverBox = false;
+	this.m_OnMouseOver = null;
+	this.m_OnMouseOut = null;
+
+	this._Layout();
+};
 
 //////////////////////////////////////////////////////////
 // UI Button - simple button with some text that you can click
