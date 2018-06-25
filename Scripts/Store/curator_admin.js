@@ -113,6 +113,7 @@ function UpdateCreatorHomeVanityURL( elForm, bAsync )
 		$J( '#vanity_pub').attr( 'href', 'https://store.steampowered.com/pub/' + vanity_url ).text('https://store.steampowered.com/pub/' + vanity_url);
 		$J( '#vanity_developer').attr( 'href', 'https://store.steampowered.com/developer/' + vanity_url ).text('https://store.steampowered.com/developer/' + vanity_url);
 		$J( '#vanity_dev').attr( 'href', 'https://store.steampowered.com/dev/' + vanity_url ).text('https://store.steampowered.com/dev/' + vanity_url);
+		$J( '#vanity_franchise').attr( 'href', 'https://store.steampowered.com/franchise/' + vanity_url ).text('https://store.steampowered.com/franchise/' + vanity_url);
 		$J( '#vanity_load_success').show();
 	} ).fail( function( data ){
 		$J( '#SaveVanityURLPopup').hide();

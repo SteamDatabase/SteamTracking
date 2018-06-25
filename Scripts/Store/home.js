@@ -561,7 +561,7 @@ GHomepage = {
 		var unAppID = rgItem.appid;
 		var unPackageID = rgItem.packageid;
 
-		var params = { 'class': rgOptions.class, 'data-manual-tracking': 1 };
+		var params = { 'class': rgOptions.class + ' broadcast_capsule', 'data-manual-tracking': 1 };
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
@@ -1434,7 +1434,7 @@ GHomepage = {
 			'lazy': false
 		}, rgOptions ? rgOptions : {} );
 
-		var params = { 'class': rgOptions.class };
+		var params = { 'class': rgOptions.class + ' broadcast_capsule' };
 		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
 		if ( !rgItemData )
 			return null;
@@ -1656,7 +1656,7 @@ GHomepage = {
 	{
 		var $SpotlightCtn = $J('<div/>', {'class': 'recommended_spotlight_ctn' } );
 
-		var params = { 'class': 'recommended_spotlight' };
+		var params = { 'class': 'recommended_spotlight broadcast_capsule' };
 		var rgItemData = GStoreItemData.GetCapParams( 'recommended_spotlight', unAppID, null, null, params );
 
 		if ( !rgItemData )

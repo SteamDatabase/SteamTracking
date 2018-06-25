@@ -1,5 +1,10 @@
 
 var g_bVoteInFlight = false;
+var k_nTier1Max = 15;
+var k_nTier1RecommendationMax = 7;
+var k_nTier2Max = 18;
+var k_nTier1RecommendationMax = 12;
+
 function OnVoteClick( voteid, appid )
 {
 	if ( !g_AccountID )
@@ -91,10 +96,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	
 	var rgSeenAppIds = [];
 	
-	var k_nTier1Max = 15;
-	var k_nTier1RecommendationMax = 7;
-	var k_nTier2Max = 18;
-	
 	if ( GHomepage.bMergeRecommendationsToHighlights )
 	{
 		var rgRecommendedGames = GHomepage.FilterItemsForDisplay(
@@ -111,7 +112,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 			rgDisplayLists.sale_tier2, 'home', 9, 48, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }		
 		);
 
-		
 		for ( var i = 0; i < rgRecommendedGames.length; i++ )
 		{
 			if ( rgSeenAppIds.indexOf( rgRecommendedGames[i].appid ) !== -1 )
@@ -123,12 +123,13 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 			if ( rgTier1.length < k_nTier1RecommendationMax )		
 			{
 				rgTier1.push( rgRecommendedGames[i] );
+				rgSeenAppIds.push( rgRecommendedGames[i].appid );
 			}
-			else
+			else if ( rgTier2.length < k_nTier2RecommendationMax )
 			{
 				rgTier2.push( rgRecommendedGames[i] );
+				rgSeenAppIds.push( rgRecommendedGames[i].appid );
 			}
-			rgSeenAppIds.push( rgRecommendedGames[i].appid );
 		}
 		
 		// fill up tier1 to 15, then overflow into tier2
@@ -142,13 +143,13 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 			if ( rgTier1.length < k_nTier1Max )
 			{
 				rgTier1.push( rgTier1Candidates[i] );
+				rgSeenAppIds.push( rgTier1Candidates[i].appid );
 			}
-			else
+			else if ( rgTier2.length < k_nTier2Max )
 			{
 				rgTier2.push( rgTier1Candidates[i] );
+				rgSeenAppIds.push( rgTier1Candidates[i].appid );
 			}
-			
-			rgSeenAppIds.push( rgTier1Candidates[i].appid );
 		}
 		
 		// fill up rest with tier 2
@@ -330,7 +331,7 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
 
 function SaleCap( item, strFeatureContext, strDiscountClass )
 {
-	var params = { 'class': 'sale_capsule' };
+	var params = { 'class': 'sale_capsule broadcast_capsule' };
 	
 	if( item && item.feature && item.feature.length > 0 )
 	{
@@ -599,7 +600,7 @@ GSteamBroadcasts = {
 		$J.ajax( {
 			url: "https:\/\/store.steampowered.com\/broadcast\/ajaxgetpopularpartnerbroadcasts\/",
 			data: {
-
+				'minviews' : 1,
 			},
 			dataType: 'json',
 			type: 'GET'
@@ -607,24 +608,45 @@ GSteamBroadcasts = {
 
 			if ( data.success == 1 && data.filtered.length > 0 )
 			{
-				
+				for( var i = 0; i < data.filtered.length; i++ )
+				{
+					var rgAppInfo = GStoreItemData.rgAppData[ data.filtered[i].appid ];
+					if ( rgAppInfo )
+					{
+						rgAppInfo.live_broadcast = true;
+						
+						// update all broadcast capsules to have live tag
+						var $Capsules = $J('.broadcast_capsule[data-ds-appid=' + data.filtered[i].appid + ']' ).each( function()
+						{
+							$Icon = $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live');
+							$J(this).append( $Icon );
+						});
+					}
+				}
 				var rgFiltered = GHomepage.FilterItemsForDisplay(
 					data.filtered, 'home', 1, 3, { displayed_elsewhere: true }
-				);				
-				
-				if ( rgFiltered.length > 0 )
+				);
+
+				var rgFiltered2 = [];
+				for ( var i = 0; i < rgFiltered.length; i++ )
+				{
+					if ( rgFiltered[i].popular )
+						rgFiltered2.push( rgFiltered[i] );
+				}
+
+				if ( rgFiltered2.length > 0 )
 				{
 					$elTarget = $J('#live_streams_carousel');
 					var $elCapsuleTarget = $J('.carousel_items', $elTarget);
-					
+				
 					var $elPageContainer = $J('<div>', { 'class': 'focus' } );
 
-					for ( var i = 0; i < rgFiltered.length && i < 3; i++ )
+					for ( var i = 0; i < rgFiltered2.length && i < 3; i++ )
 					{
-						var oItem = rgFiltered[i];
-						
-						var params = { 'class': 'store_capsule', 'href': oItem.app_link };
-						
+						var oItem = rgFiltered2[i];
+			
+						var params = { 'class': 'store_capsule broadcast_capsule', 'href': oItem.app_link };
+					
 						var rgItemData = GStoreItemData.GetCapParams( 'summer2018_live_stream', oItem.appid, 0, null, params );
 						var $CapCtn = $J('<a/>', params );
 
@@ -636,23 +658,23 @@ GSteamBroadcasts = {
 						$ImgCtn.append( $J('<img/>', rgDefaultImageProperties ) );
 						$ImgCtn.append( $J('<img/>', rgImageProperties ) );
 						$CapCtn.append( $ImgCtn );
-						
+					
 						var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
 						$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
-						
+					
 						$Contents = $J('<div/>', {'class': 'title ellipsis' } );
 						$Contents.append( $J('<span/>').html( oItem.app_name ) );
 						$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( oItem.viewer_count ) );
-						
+					
 						$CapCtn.append( $Contents );
 						$CapCtn.append( 
 								$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
 						);
-						
+					
 
 						$elPageContainer.append( $CapCtn );
 					}
-					
+				
 					$elCapsuleTarget.append($elPageContainer);
 
 					$J('.live_streams_ctn').show();
@@ -664,6 +686,7 @@ GSteamBroadcasts = {
 		return;
 	}
 };
+
 
 GSteamSalienPlanets = {
 	Init: function()
@@ -691,7 +714,7 @@ GSteamSalienPlanets = {
 		
 		// render this to the container
 		var $ConqueredPlanet = $J('.conquered_planet', $Container);
-		$ConqueredPlanet.css( { "background" : "url('" + $planet.image + "')", "background-repeat" : "no-repeat", "background-position-x" : "-170px", "background-position-y" : "-170px" });
+		$ConqueredPlanet.css( { "background" : "url('" + $planet.image + "')", "background-repeat" : "no-repeat", "background-position-x" : "-227px", "background-position-y" : "-170px" });
 		
 		var $Title = $J('#conquered_planet_name', $ConqueredPlanet );
 		$Title.html(  $planet.name );
