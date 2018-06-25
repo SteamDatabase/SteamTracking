@@ -624,7 +624,7 @@ GSteamBroadcasts = {
 					}
 				}
 				var rgFiltered = GHomepage.FilterItemsForDisplay(
-					data.filtered, 'home', 1, 3, { displayed_elsewhere: true }
+					data.filtered, 'home', 1, 6, { displayed_elsewhere: true }
 				);
 
 				var rgFiltered2 = [];
@@ -641,7 +641,7 @@ GSteamBroadcasts = {
 				
 					var $elPageContainer = $J('<div>', { 'class': 'focus' } );
 
-					for ( var i = 0; i < rgFiltered2.length && i < 3; i++ )
+					for ( var i = 0; i < rgFiltered2.length && i < 6; i++ )
 					{
 						var oItem = rgFiltered2[i];
 			

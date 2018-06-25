@@ -2827,6 +2827,12 @@ a.cluster_capsule:hover {
 	line-height: 23px;
 }
 
+.live_streams_ctn .store_capsule:not(:last-child) {
+	margin-right: 5px; /* Again, a default. Adjust to fit your container. */
+	margin-bottom: 8px;
+}
+
+
 .live_steam_viewers
 {
 	font-size: 13px;
