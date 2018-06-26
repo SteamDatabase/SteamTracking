@@ -10,21 +10,21 @@ const k_BoxTitleBaseHeight = 18;
 const k_ProgressBarHeight = 11;
 
 const k_TextStyleBold = {
-		fontFamily: "Motiva Sans",
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: "white",
 		fontWeight: 'bold',
-		align: 'center',
+		align: 'center'
 	};
 const k_TextStyleDefault = {
-		fontFamily: "Motiva Sans",
+		fontFamily: k_FontType,
 		fontSize: 14,
 		fill: "white",
 		fontWeight: 'normal',
-		align: 'center',
+		align: 'center'
 	};
 const k_TextStyleItalics = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 14,
 	fill: "white",
 	fontWeight: 'normal',
@@ -32,35 +32,35 @@ const k_TextStyleItalics = {
 	fontStyle: 'italic',
 };
 const k_TextStyleSmallBold = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 12,
 	fill: "white",
 	fontWeight: 'bold',
 	align: 'center',
 };
 const k_TextStyleSmallerBold = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 10,
 	fill: "white",
 	fontWeight: 'bold',
 	align: 'center',
 };
 const k_TextStyleHugeBold = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 24,
 	fill: "white",
 	fontWeight: 'bold',
 	align: 'center',
 };
 const k_TextStyleSmallBoldLeft = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 12,
 	fill: "white",
 	fontWeight: 'bold',
 	align: 'left',
 };
 const k_TextStyleZoneRemaining = {
-	fontFamily: "Motiva Sans",
+	fontFamily: k_FontType,
 	fontSize: 10,
 	fill: "white",
 	align: 'center',

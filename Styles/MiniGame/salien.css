@@ -373,6 +373,7 @@ body.flat_page {
 	text-align: center;
 	font-weight: bold;
 	padding-bottom: 20px;
+	text-transform: uppercase;
 }
 
 /* Body styles */

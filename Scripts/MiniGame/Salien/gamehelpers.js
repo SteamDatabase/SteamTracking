@@ -18,6 +18,7 @@ function WeakRandomInt(min, max) {
 }
 
 var gCacheKey = '1550bld';
+var gGameVersion = 1;
 // cacheKey and loader are optional, will get replaced if not passed
 function LoadAsset( strName, strURI, cacheKey, loader ) {
 	var _cacheKey = cacheKey;
@@ -86,6 +87,15 @@ function GameLoadError()
 {
 	ShowAlertDialog( 'Game Error', 'There was an error loading required game content.  Your game will be restarted.' )
 		.done( function() {  window.location.reload(); } );
+}
+
+function CheckGameVersion( nVersion )
+{
+	if ( gGameVersion < nVersion )
+	{
+		ShowAlertDialog( 'Game Error', 'Your game version is out of date and needs to be updated.  Your game will be restarted to get the newest version.' )
+			.done( function() {  window.location.reload(); } );
+	}
 }
 
 function ZoneCaptured()

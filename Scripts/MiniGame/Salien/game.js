@@ -356,6 +356,9 @@ CPlanetSelectionState.prototype.Load = function()
 {
 	var instance = this;
 	gServer.GetPlanets( 0, function( results ) {
+
+			CheckGameVersion( results.response.game_version );
+
 			LoadAsset( 'planet_select_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
 			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
 			LoadAsset( 'ship', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/ship.png');
@@ -951,6 +954,9 @@ CBattleSelectionState.prototype.Load = function()
 	var instance = this;
 
 	gServer.GetPlanet( this.m_unPlanetID, function (results ) {
+
+			CheckGameVersion( results.response.game_version );
+
 			instance.m_PlanetData = results.response.planets[0];
 			LoadAsset( 'planet_select_bg', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/planet_select_bg.jpg' );
 			LoadAsset( 'galaxy_music', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/SS2018_Saliens_Planet.{ogg,mp3}' );
