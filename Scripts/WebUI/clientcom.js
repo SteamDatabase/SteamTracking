@@ -17,16 +17,18 @@ webpackJsonp(
     PVtO: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return r;
+        return c;
       }),
         n.d(t, "b", function() {
           return s;
         });
       var o = n("m5yx"),
         i = { success: !0, result: 1 },
-        r = (function() {
+        c = (function() {
           function e() {
-            (this.m_connection = new c()), (this.m_bAllowAccountMismatch = !1);
+            (this.m_connection = new r()),
+              (this.m_bAllowAccountMismatch = !1),
+              (this.m_mapCacheSubscribedApp = new Map());
           }
           return (
             (e.prototype.FailureResult = function(e) {
@@ -57,20 +59,15 @@ webpackJsonp(
                 }
               );
             }),
-            (e.prototype.BClientSupportsFriendsUI = function() {
-              var e = this;
-              return this.BClientConnected().then(function() {
-                return e.m_connection.ClientInfo.bFriendsUIEnabled;
-              });
-            }),
             (e.prototype.BClientSupportsMessage = function(e) {
-              var t = this;
-              return this.BClientConnected().then(function() {
-                return (
-                  -1 !==
-                  t.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
-                );
-              });
+              return (
+                !(
+                  !this.m_connection.connected_to_client ||
+                  !this.m_connection.ready
+                ) &&
+                -1 !==
+                  this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+              );
             }),
             (e.prototype.OpenFriendChatDialog = function(e) {
               var t = { message: "ShowFriendChatDialog", steamid: e };
@@ -88,9 +85,17 @@ webpackJsonp(
               var t = { message: "ShowJoinGameDialog", friend_id: e };
               return this.GenericEResultCall(t);
             }),
-            (e.prototype.IsSubscribedApp = function(e) {
-              var t = { message: "IsSubscribedApp", appid: e };
-              return this.GenericEResultCall(t);
+            (e.prototype.BIsSubscribedApp = function(e) {
+              var t = this;
+              if (this.m_mapCacheSubscribedApp.has(e))
+                return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
+              var n = { message: "IsSubscribedApp", appid: e };
+              return this.GenericEResultCall(n).then(function(n) {
+                if (!n.connect_failed) {
+                  var o = 1 == n.result;
+                  return t.m_mapCacheSubscribedApp.set(e, o), o;
+                }
+              });
             }),
             (e.prototype.ViewGameInfoForSteamID = function(e) {
               var t = { message: "ViewGameInfoForSteamID", steamid: e };
@@ -124,7 +129,7 @@ webpackJsonp(
             e
           );
         })(),
-        c = (function() {
+        r = (function() {
           function e() {
             (this.m_mapWaitingCallbacks = new Map()),
               (this.m_iCallSeq = 1),
@@ -262,16 +267,16 @@ webpackJsonp(
             e
           );
         })(),
-        s = new r();
+        s = new c();
       window.ClientConnectionAPI = s;
     },
     m5yx: function(e, t, n) {
       "use strict";
       function o() {
         var e = i("config");
-        e && Object.assign(r, e);
+        e && Object.assign(c, e);
         var t = i("userinfo");
-        t && Object.assign(c, t), (n.p = r.CDN_URL);
+        t && Object.assign(r, t), (n.p = c.CDN_URL);
       }
       function i(e, t) {
         void 0 === t && (t = s);
@@ -285,14 +290,14 @@ webpackJsonp(
         else console.error("Missing config element #" + t);
       }
       n.d(t, "a", function() {
-        return r;
+        return c;
       }),
         n.d(t, "d", function() {
-          return c;
+          return r;
         }),
         (t.c = o),
         (t.b = i);
-      var r = {
+      var c = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
@@ -313,7 +318,7 @@ webpackJsonp(
           SESSIONID: "",
           BUILD_TIMESTAMP: 0
         },
-        c = {
+        r = {
           logged_in: !1,
           steamid: "",
           accountid: 0,
