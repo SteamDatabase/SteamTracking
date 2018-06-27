@@ -3703,6 +3703,7 @@
  D vtable for vgui::WrapPanel
  Error
  FSGetVolumeInfo
+ GetCPUInformation()
  GetCrashHandlerFactory
  GetLocalHostname
  GetOSType
@@ -11514,6 +11515,7 @@
  T vgui::HTML::GoBack()
  T vgui::HTML::GoForward()
  T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*)
+ T vgui::HTML::HandleTabSwitching()
  T vgui::HTML::HideFindDialog()
  T vgui::HTML::HideIMEDialog()
  T vgui::HTML::HidePopup()
@@ -14423,6 +14425,7 @@
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_BlankImage
  b s_BuildGroupFileCache
+ b s_CmdLineParamDisableBrowser
  b s_CurrentRoutingIDPtr
  b s_ListLogFilesMutex
  b s_ListLogMutexInitialized

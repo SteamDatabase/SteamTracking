@@ -1676,6 +1676,7 @@
  D hmac_pkey_meth
  D jpeg_std_message_table
  D k_pchAlbumCoversRelative
+ D k_pchFriendsUIJSON
  D k_pszSteamClientModuleName
  D k_rgchCodeSignaturePublicKeys
  D pModuleExtension
@@ -2024,6 +2025,7 @@
  D typeinfo for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -2256,6 +2258,7 @@
  D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -3349,6 +3352,7 @@
  D vtable for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -3568,6 +3572,7 @@
  D vtable for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -3697,6 +3702,7 @@
  FSEventStreamScheduleWithRunLoop
  FSEventStreamStart
  FSEventStreamStop
+ GetCPUInformation()
  GetLocalHostname
  GetOSType
  KeyValuesSystemSteam
@@ -4062,6 +4068,7 @@
  R typeinfo name for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -4405,6 +4412,7 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
@@ -5974,11 +5982,12 @@
  T CFriendPanelLabel::~CFriendPanelLabel()
  T CFriendSettingsController::CFriendSettingsController()
  T CFriendSettingsController::DispatchSettingsChanged()
+ T CFriendSettingsController::FillFriendSettings(CJSMethodArgs*)
  T CFriendSettingsController::Initialize()
  T CFriendSettingsController::RegisterForSettingsChanges(CSmartPtr<CJSCallbackFunc>)
  T CFriendSettingsController::RunFrame()
  T CFriendSettingsController::SetChatFlashMode(int)
- T CFriendSettingsController::SetFriendSettings(CJSObject*)
+ T CFriendSettingsController::SetFriendSettings(char const*)
  T CFriendSettingsController::SetSettingsJavascriptValueBool(char const*, bool)
  T CFriendSettingsController::Validate(CValidator&, char const*)
  T CFriendSettingsController::~CFriendSettingsController()
@@ -6972,6 +6981,7 @@
  T CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
@@ -10425,6 +10435,7 @@
  T HTMLFramelessWrapper::GetPanelClassName()
  T HTMLFramelessWrapper::GetPanelTopClassName() const
  T HTMLFramelessWrapper::HTMLFramelessWrapper(vgui::HTMLFramelessPopup*, char const*)
+ T HTMLFramelessWrapper::HandleTabSwitching()
  T HTMLFramelessWrapper::KB_ChainToMap()
  T HTMLFramelessWrapper::OnSetHTMLTitle(char const*)
  T HTMLFramelessWrapper::~HTMLFramelessWrapper()
@@ -11748,6 +11759,7 @@
  T vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
@@ -12579,6 +12591,7 @@
  T vgui::HTML::GoBack()
  T vgui::HTML::GoForward()
  T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*)
+ T vgui::HTML::HandleTabSwitching()
  T vgui::HTML::HideFindDialog()
  T vgui::HTML::HideIMEDialog()
  T vgui::HTML::HidePopup()
@@ -15646,6 +15659,7 @@
  b realloc_debug_func
  b s_BlankImage
  b s_BuildGroupFileCache
+ b s_CmdLineParamDisableBrowser
  b s_OpenOverlayDevToolsParam
  b s_StartDirContexts
  b s_bCallbackManagerInitialized
