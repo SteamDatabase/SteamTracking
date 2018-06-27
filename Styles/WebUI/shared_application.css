@@ -182,9 +182,16 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	color: #9ca4a7;
 }
 
+.contextMenu .contextMenuItem.disabled {
+	background: none;
+	color: #6b7072;
+	cursor: default;
+	pointer-events: none;
+}
+
 .contextMenu .contextMenuItem.disabled:hover {
 	background: none;
-	color: #9ca4a7;
+	color: #6b7072;
 	cursor: default;
 }
 

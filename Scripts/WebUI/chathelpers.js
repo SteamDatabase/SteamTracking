@@ -940,11 +940,16 @@ webpackJsonp(
               if (
                 ((i = 1),
                 r &&
-                  (s = r[2 & n[0] ? "return" : n[0] ? "throw" : "next"]) &&
+                  (s =
+                    2 & n[0]
+                      ? r.return
+                      : n[0]
+                        ? r.throw || ((s = r.return) && s.call(r), 0)
+                        : r.next) &&
                   !(s = s.call(r, n[1])).done)
               )
                 return s;
-              switch (((r = 0), s && (n = [0, s.value]), n[0])) {
+              switch (((r = 0), s && (n = [2 & n[0], s.value]), n[0])) {
                 case 0:
                 case 1:
                   s = n;
@@ -1033,25 +1038,32 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-      var c =
-          Object.setPrototypeOf ||
-          ({ __proto__: [] } instanceof Array &&
+      var c = function(e, t) {
+          return (c =
+            Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array &&
+              function(e, t) {
+                e.__proto__ = t;
+              }) ||
             function(e, t) {
-              e.__proto__ = t;
-            }) ||
-          function(e, t) {
-            for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
-          },
-        u =
-          Object.assign ||
-          function(e) {
-            for (var t, n = 1, o = arguments.length; n < o; n++) {
-              t = arguments[n];
-              for (var i in t)
-                Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
-            }
-            return e;
-          };
+              for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+            })(e, t);
+        },
+        u = function() {
+          return (
+            (u =
+              Object.assign ||
+              function(e) {
+                for (var t, n = 1, o = arguments.length; n < o; n++) {
+                  t = arguments[n];
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
+                }
+                return e;
+              }),
+            u.apply(this, arguments)
+          );
+        };
     },
     kllU: function(e, t, n) {
       "use strict";
@@ -1522,54 +1534,54 @@ and limitations under the License.
             }),
             (e.prototype.Show = function(e) {
               var t = this;
-              void 0 === e && (e = !0),
-                window.SteamClient &&
-                  (this.m_rgParams.eCreationFlags |= o.Hidden),
+              void 0 === e && (e = !0);
+              var n;
+              window.SteamClient &&
+                (this.m_rgParams.eCreationFlags |= o.Hidden),
                 this.m_rgParams.eCreationFlags & o.Tooltip && (e = !1),
                 this.BIsValid() &&
                   (this.BIsClosed()
                     ? ((this.m_popup = void 0), (this.m_element = void 0))
                     : e && this.Focus());
-              var n = m.GetExistingPopup(this.m_strName);
-              if (!n || this.m_rgParams.replace_existing_popup) {
+              var i = m.GetExistingPopup(this.m_strName);
+              if (!i || this.m_rgParams.replace_existing_popup) {
                 this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
-                var i, r, s;
-                n
-                  ? ((r = n.m_element),
-                    (i = n.m_popup),
-                    n.ReleasePopup(),
-                    (s = n.m_renderWhenReady),
-                    m.RemoveTrackedPopup(n),
-                    i.removeEventListener("beforeunload", n.OnUnload),
-                    i.removeEventListener("resize", n.OnResizeEvent),
-                    i.removeEventListener("focus", this.OnFocusInternal),
-                    i.removeEventListener("blur", this.OnBlurInternal),
-                    i.removeEventListener("drop", n.OnDrop),
-                    i.removeEventListener("dragover", n.OnDragOver),
-                    i.removeEventListener("message", this.OnMessage))
-                  : ((a = l.CreatePopup(this.m_strName, this.m_rgParams)),
-                    (i = a.popup),
-                    (r = a.element),
-                    (s = new c(i, r))),
-                  i &&
-                    r &&
-                    ((i.document.title = this.m_strTitle),
-                    i.addEventListener("beforeunload", this.OnUnload),
-                    i.addEventListener("resize", this.OnResizeEvent),
-                    i.addEventListener("focus", this.OnFocusInternal),
-                    i.addEventListener("blur", this.OnBlurInternal),
-                    i.addEventListener("drop", this.OnDrop),
-                    i.addEventListener("dragover", this.OnDragOver),
-                    i.addEventListener("message", this.OnMessage),
-                    (this.m_popup = i),
-                    (this.m_element = r),
-                    (this.m_renderWhenReady = s),
+                var r, s, a;
+                i
+                  ? ((s = i.m_element),
+                    (r = i.m_popup),
+                    i.ReleasePopup(),
+                    (a = i.m_renderWhenReady),
+                    m.RemoveTrackedPopup(i),
+                    r.removeEventListener("beforeunload", i.OnUnload),
+                    r.removeEventListener("resize", i.OnResizeEvent),
+                    r.removeEventListener("focus", this.OnFocusInternal),
+                    r.removeEventListener("blur", this.OnBlurInternal),
+                    r.removeEventListener("drop", i.OnDrop),
+                    r.removeEventListener("dragover", i.OnDragOver),
+                    r.removeEventListener("message", this.OnMessage))
+                  : ((n = l.CreatePopup(this.m_strName, this.m_rgParams)),
+                    (r = n.popup),
+                    (s = n.element),
+                    (a = new c(r, s))),
+                  r &&
+                    s &&
+                    ((r.document.title = this.m_strTitle),
+                    r.addEventListener("beforeunload", this.OnUnload),
+                    r.addEventListener("resize", this.OnResizeEvent),
+                    r.addEventListener("focus", this.OnFocusInternal),
+                    r.addEventListener("blur", this.OnBlurInternal),
+                    r.addEventListener("drop", this.OnDrop),
+                    r.addEventListener("dragover", this.OnDragOver),
+                    r.addEventListener("message", this.OnMessage),
+                    (this.m_popup = r),
+                    (this.m_element = s),
+                    (this.m_renderWhenReady = a),
                     this.m_renderWhenReady.SetTarget(function() {
                       return t.RenderInternal(t.m_popup, t.m_element, e);
                     })),
                   m.AddTrackedPopup(this),
-                  n && e && this.Focus();
-                var a;
+                  i && e && this.Focus();
               }
             }),
             (e.prototype.RemoveEventListeners = function() {

@@ -881,7 +881,7 @@ button.TextButton:focus
 	/*width: 842px;*/
 	display: flex;
 	flex-direction: row;
-	height: 680px;
+	height: 720px;
 }
 
 .PagedSettingsDialog_PageListColumn
