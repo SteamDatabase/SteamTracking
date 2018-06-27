@@ -1,0 +1,68 @@
+{
+  "slime":{
+    "walk_animation": {
+      "name": "Enemy_A_",
+      "num_frames": 24
+    },
+    "death_animation": {
+      "name": "blob",
+      "num_frames": 9,
+      "scale":1.3
+    },
+    "speed": {
+      "min":2,
+      "max":3
+    },
+    "scale": {
+      "x":0.5,
+      "y":0.5
+    },
+    "base_health": 4,
+    "base_damage": 5,
+    "deathsound":"lvlonedeath"
+  },
+  "neomorph":{
+    "walk_animation": {
+      "name": "Enemy_B_",
+      "num_frames": 47
+    },
+    "death_animation": {
+      "name": "blob",
+      "num_frames": 9,
+      "scale":1.3
+    },
+    "speed": {
+      "min":2,
+      "max":2
+    },
+    "scale": {
+      "x":0.5,
+      "y":0.5
+    },
+    "base_health": 8,
+    "base_damage": 10,
+    "deathsound":"lvltwodeath"
+  },
+  "volvoian":{
+    "walk_animation": {
+      "name": "Enemy_C_",
+      "num_frames": 36
+    },
+    "death_animation": {
+      "name": "blob",
+      "num_frames": 9,
+      "scale":1.3
+    },
+    "speed": {
+      "min":1,
+      "max":2
+    },
+    "scale": {
+      "x":0.5,
+      "y":0.5
+    },
+    "base_health": 30,
+    "base_damage": 20,
+    "deathsound":"lvlthreedeath"
+  }
+}

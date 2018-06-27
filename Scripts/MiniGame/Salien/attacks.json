@@ -1,0 +1,94 @@
+{
+  "slimeattack":{
+    "keycode":49,
+    "cooldown":0.5,
+    "ability_position": {
+      "x": 65,
+      "y": 85
+    },
+    "image":"slime_ability",
+    "damage":4,
+    "speed":20,
+    "sound":"slime_sound",
+    "levelreq":0
+  },
+  "beastattack":{
+    "keycode":49,
+    "cooldown":0.5,
+    "ability_position": {
+      "x": 65,
+      "y": 85
+    },
+    "image":"beast_ability",
+    "damage":4,
+    "speed":20,
+    "sound":"beast_sound",
+    "levelreq":0
+  },
+  "psychicattack":{
+    "keycode":49,
+    "cooldown":0.5,
+    "ability_position": {
+      "x": 65,
+      "y": 85
+    },
+    "image":"psychic_ability",
+    "damage":4,
+    "speed":20,
+    "sound":"psychic_sound",
+    "levelreq":0
+  },
+  "flashfreeze":{
+    "keycode":50,
+    "cooldown":24,
+    "ability_position": {
+      "x": 140,
+      "y": 85
+    },
+    "image":"flash_freeze",
+    "duration":6,
+    "sound":"freeze_sound",
+    "levelreq":3
+  },
+  "explosion":{
+    "keycode":51,
+    "cooldown":6,
+    "ability_position": {
+      "x": 215,
+      "y": 85
+    },
+    "image":"bomb",
+    "damage":15,
+    "sound":"bomb_explode",
+    "levelreq":5
+  },
+  "blackhole":{
+    "keycode":52,
+    "cooldown":10,
+    "ability_position": {
+      "x": 290,
+      "y": 85
+    },
+    "image":"blackhole",
+    "damage":2,
+    "duration":5,
+    "growthspeed":0.03,
+    "strength":6,
+    "sound":"blackhole_sound",
+    "levelreq":7
+  },
+  "boulder":{
+    "keycode":53,
+    "cooldown":14,
+    "ability_position": {
+      "x": 365,
+      "y": 85
+    },
+    "image":"boulder",
+    "damage":20,
+    "fallspeed":10,
+    "landsound":"boulder_land",
+    "rollingsound":"boulder_roll",
+    "levelreq":9
+  }
+}
