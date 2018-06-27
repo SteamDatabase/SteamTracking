@@ -35657,9 +35657,9 @@ and limitations under the License.
             (e.prototype.GetDesktopNotificationLevel = function(e) {
               return (
                 void 0 === e && (e = !1),
-                e || 0 != this.m_eUserDesktopNotificationLevel
-                  ? this.m_eUserDesktopNotificationLevel
-                  : yh.ChatStore.GetNotificationLevel()
+                0 == this.m_eUserDesktopNotificationLevel
+                  ? this.BIsClanChatRoom() ? 3 : 4
+                  : this.m_eUserDesktopNotificationLevel
               );
             }),
             (e.prototype.BIsUnreadIndicatorMuted = function() {
@@ -53400,22 +53400,7 @@ and limitations under the License.
                       strNameShow: "bNotifications_EventsAndAnnouncements",
                       strNameSound: "bSounds_EventsAndAnnouncements"
                     }),
-                  Ar.createElement(Bu, {
-                    drop_down_options: this.m_rgOptions,
-                    get_notification_level: function(e) {
-                      return yh.ChatStore.GetNotificationLevel();
-                    },
-                    set_notification_level: function(e) {
-                      return yh.ChatStore.SetNotificationLevel(e);
-                    },
-                    get_muted: function() {
-                      return yh.ChatStore.GetMutedNotifications();
-                    },
-                    set_muted: function(e) {
-                      return yh.ChatStore.SetMutedNotifications(e);
-                    },
-                    bIsDefault: !0
-                  })
+                  !1
                 ),
                 this.props.bShowPopupOpts &&
                   this.props.bShowClientOpts &&
