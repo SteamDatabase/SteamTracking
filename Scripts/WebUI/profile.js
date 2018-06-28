@@ -357,7 +357,7 @@ webpackJsonp(
           })
         );
       }
-      function m() {
+      function u() {
         return Y.createElement(
           "svg",
           {
@@ -386,7 +386,7 @@ webpackJsonp(
           )
         );
       }
-      function u() {
+      function m() {
         return Y.createElement(
           "svg",
           {
@@ -2120,8 +2120,8 @@ webpackJsonp(
         (t.s = c),
         (t.u = a),
         (t.l = l),
-        (t.I = m),
-        (t.C = u),
+        (t.I = u),
+        (t.C = m),
         (t.A = p),
         (t.R = h),
         (t.S = d),
@@ -2249,7 +2249,7 @@ webpackJsonp(
         var t = void 0;
         return e && (t = e.ownerDocument.defaultView), t;
       }
-      function m(e) {
+      function u(e) {
         var t = document.createElement("textarea");
         (t.textContent = e),
           (t.style.position = "fixed"),
@@ -2263,10 +2263,10 @@ webpackJsonp(
           document.body.removeChild(t);
         }
       }
-      function u(e) {
+      function m(e) {
         e.startsWith("steam://openurl/") &&
           (e = e.slice("steam://openurl/".length)),
-          m(e);
+          u(e);
       }
       (t.b = r),
         (t.c = i),
@@ -2275,7 +2275,7 @@ webpackJsonp(
         (t.g = c),
         (t.e = a),
         (t.h = l),
-        (t.f = u),
+        (t.f = m),
         n.d(t, "d", function() {
           return h;
         });
@@ -2393,7 +2393,7 @@ webpackJsonp(
         var t;
         return (
           (t = e.strReadOnlySetting
-            ? v.createElement(u, { strLabel: e.strReadOnlySetting })
+            ? v.createElement(m, { strLabel: e.strReadOnlySetting })
             : v.createElement(N, {
                 PrivacyStore: e.PrivacyStore,
                 PrivacyKey: e.PrivacyKey,
@@ -2421,7 +2421,7 @@ webpackJsonp(
           e.children
         );
       }
-      function m(e) {
+      function u(e) {
         switch (e.eSaveState) {
           case 1:
             return v.createElement(
@@ -2446,7 +2446,7 @@ webpackJsonp(
             return null;
         }
       }
-      function u(e) {
+      function m(e) {
         return v.createElement(
           "div",
           { className: "ProfilePrivacyDropDown readonly" },
@@ -2811,7 +2811,7 @@ webpackJsonp(
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
-                v.createElement(m, {
+                v.createElement(u, {
                   eSaveState: this.props.PrivacyStore.GetSaveState(
                     this.props.PrivacyKey
                   )
@@ -2911,7 +2911,7 @@ webpackJsonp(
                       "public/images/skin_1/actionArrowDnWhite.gif"
                   })
                 ),
-                v.createElement(m, {
+                v.createElement(u, {
                   eSaveState: this.props.PrivacyStore.GetCommentSaveState()
                 })
               );
@@ -3048,7 +3048,7 @@ webpackJsonp(
         return c.Show(), c;
       }
       n.d(t, "b", function() {
-        return m;
+        return u;
       }),
         (t.a = r);
       var i = n("TToO"),
@@ -3057,7 +3057,7 @@ webpackJsonp(
         c = n("aMRU"),
         a = n("Y6cV"),
         l = n("y986"),
-        m = (function() {
+        u = (function() {
           function e() {}
           return (
             (e.GetBrowserInfoForPopup = function(e) {
@@ -3069,7 +3069,7 @@ webpackJsonp(
             e
           );
         })(),
-        u = (function(e) {
+        m = (function(e) {
           function t(t) {
             var n = e.call(this) || this;
             return (
@@ -3089,7 +3089,7 @@ webpackJsonp(
                 ? (this.m_popupContextMenu = new c.a(
                     e,
                     t,
-                    m.GetBrowserInfoForPopup(this.m_ownerWindow)
+                    u.GetBrowserInfoForPopup(this.m_ownerWindow)
                   ))
                 : ((this.m_embeddedElementInstance = Object(a.b)(
                     this.m_ownerWindow.document
@@ -3224,7 +3224,7 @@ webpackJsonp(
             i.c([l.observable], t.prototype, "m_bVisible", void 0),
             t
           );
-        })(m),
+        })(u),
         p = (function(e) {
           function t(n, r, i, o, s) {
             var c = e.call(this, r.ownerDocument.defaultView) || this;
@@ -3266,7 +3266,7 @@ webpackJsonp(
             )),
             t
           );
-        })(u),
+        })(m),
         h = (function(e) {
           function t(t, n, r) {
             var i = e.call(this, r.ownerDocument.defaultView) || this;
@@ -3300,7 +3300,7 @@ webpackJsonp(
             }),
             t
           );
-        })(u);
+        })(m);
     },
     KLxG: function(e, t, n) {
       "use strict";
@@ -3671,8 +3671,8 @@ and limitations under the License.
       var c = n("TToO"),
         a = n("Mn8c"),
         l = n("Jmof"),
-        m = n("wLXD"),
-        u = n("z9An"),
+        u = n("wLXD"),
+        m = n("z9An"),
         p = n("EqgU"),
         h = n("KLxG"),
         d = n("5Pz3");
@@ -3984,8 +3984,8 @@ and limitations under the License.
                   },
                   a = this.props.clientX,
                   l = this.props.clientY,
-                  m = n.innerWidth,
-                  u = n.innerHeight;
+                  u = n.innerWidth,
+                  m = n.innerHeight;
                 if (o) {
                   (a += n.screenLeft), (l += n.screenTop), (r = p.e(n, r));
                   var h = n.screen,
@@ -3993,8 +3993,8 @@ and limitations under the License.
                     f = 0;
                   h.availLeft && (d = h.availLeft),
                     h.availTop && (f = h.availTop),
-                    (m = d + h.availWidth),
-                    (u = f + h.availHeight);
+                    (u = d + h.availWidth),
+                    (m = f + h.availHeight);
                 }
                 (s.bOverlapHorizontal || s.bOverlapVertical) &&
                   (a = l = void 0);
@@ -4004,7 +4004,7 @@ and limitations under the License.
                 s.bMatchWidth && ((g = y - v), (c.menuWidth = g));
                 var _ = (s.bOverlapHorizontal ? y : v) - g,
                   w = _ > 0,
-                  b = m - (s.bOverlapHorizontal ? v : y) - g,
+                  b = u - (s.bOverlapHorizontal ? v : y) - g,
                   E = b > 0,
                   x = (s.bPreferPopLeft || !E) && w;
                 w ||
@@ -4014,14 +4014,14 @@ and limitations under the License.
                     ((g += (x ? _ : b) - 8), (c.menuWidth = g))),
                   (!s.bPreferPopLeft && E) || !w
                     ? (c.menuLeft = s.bOverlapHorizontal ? v : y)
-                    : (c.menuRight = m - (s.bOverlapHorizontal ? y : v));
+                    : (c.menuRight = u - (s.bOverlapHorizontal ? y : v));
                 var S = l || r.top,
                   k = l || r.bottom,
                   M = i.height;
                 s.bMatchHeight && ((M = k - S), (c.menuHeight = M));
                 var P = (s.bOverlapVertical ? k : S) - M,
                   C = P > 0,
-                  I = u - (s.bOverlapVertical ? S : k) - M,
+                  I = m - (s.bOverlapVertical ? S : k) - M,
                   L = I > 0,
                   O = (s.bPreferPopTop || !L) && C;
                 C ||
@@ -4030,18 +4030,18 @@ and limitations under the License.
                   s.bFitToWindow &&
                     ((M += (O ? P : I) - 8), (c.menuHeight = M))),
                   O
-                    ? (c.menuBottom = u - (s.bOverlapVertical ? k : S))
+                    ? (c.menuBottom = m - (s.bOverlapVertical ? k : S))
                     : (c.menuTop = s.bOverlapVertical ? S : k),
                   o
                     ? (c.menuHeight || (c.menuHeight = i.height),
                       c.menuWidth || (c.menuWidth = i.width),
                       c.menuBottom &&
                         !c.menuTop &&
-                        ((c.menuTop = u - c.menuBottom - c.menuHeight),
+                        ((c.menuTop = m - c.menuBottom - c.menuHeight),
                         (c.menuBottom = void 0)),
                       c.menuRight &&
                         !c.menuLeft &&
-                        ((c.menuLeft = m - c.menuRight - c.menuWidth),
+                        ((c.menuLeft = u - c.menuRight - c.menuWidth),
                         (c.menuRight = void 0)))
                     : (c.menuLeft && (c.menuLeft += n.scrollX),
                       c.menuTop && (c.menuTop += n.scrollY),
@@ -4151,7 +4151,7 @@ and limitations under the License.
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: i,
-                eCreationFlags: u.c.ContextMenu
+                eCreationFlags: m.c.ContextMenu
               }) || this;
             return (o.m_menuProps = n), (o.m_children = r), o;
           }
@@ -4175,7 +4175,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.Render = function(e, t) {
-              m.render(
+              u.render(
                 l.createElement(
                   _,
                   c.a({}, this.m_menuProps, { popup: this }),
@@ -4192,7 +4192,7 @@ and limitations under the License.
             (t.sm_iContextMenuInstance = 0),
             t
           );
-        })(u.a),
+        })(m.a),
         b = "DEBUG_StickyContextMenus";
     },
     kllU: function(e, t, n) {
@@ -4304,15 +4304,15 @@ and limitations under the License.
       function c(e, t, n) {
         void 0 === t && (t = !1), void 0 === n && (n = !0);
         var i = t ? "#TimeSince_" : "#TimeInterval_";
-        return e >= 2 * m
-          ? r(i + "XYears", Math.floor(e / m))
-          : e >= m
-            ? ((e -= m),
-              e >= 2 * u
-                ? r(i + "1YearXMonths", Math.floor(e / u))
+        return e >= 2 * u
+          ? r(i + "XYears", Math.floor(e / u))
+          : e >= u
+            ? ((e -= u),
+              e >= 2 * m
+                ? r(i + "1YearXMonths", Math.floor(e / m))
                 : r(i + "1Year"))
-            : e >= 2 * u
-              ? r(i + "XMonths", Math.floor(e / u))
+            : e >= 2 * m
+              ? r(i + "XMonths", Math.floor(e / m))
               : e >= 2 * p
                 ? r(i + "XWeeks", Math.floor(e / p))
                 : e >= 2 * h
@@ -4392,8 +4392,8 @@ and limitations under the License.
             e
           );
         })()),
-        m = 31536e3,
-        u = 2628e3,
+        u = 31536e3,
+        m = 2628e3,
         p = 604800,
         h = 86400,
         d = 3600,
@@ -4427,7 +4427,25 @@ and limitations under the License.
         for (var n = 0; n < e.length; n++) if (e[n] != t[n]) return !1;
         return !0;
       }
-      (t.d = r), (t.b = i), (t.c = o), (t.a = s), (t.e = c);
+      function a(e, t, n) {
+        for (var r = 0, i = e.length - 1; r <= i; ) {
+          var o = Math.floor((r + i) / 2),
+            s = n(e[o], t);
+          if (s < 0) r = o + 1;
+          else if (s > 0) i = o - 1;
+          else {
+            if (i == o) return o;
+            if (o == r) return i > o && n(t, e[o + 1]) < 0 ? o : o + 1;
+            r = o;
+          }
+        }
+        return i;
+      }
+      function l(e, t, n) {
+        var r = a(e, t, n);
+        e.splice(r + 1, 0, t);
+      }
+      (t.d = r), (t.b = i), (t.c = o), (t.a = s), (t.e = c), (t.f = l);
     },
     z9An: function(e, t, n) {
       "use strict";
@@ -4438,7 +4456,7 @@ and limitations under the License.
           return l;
         }),
         n.d(t, "b", function() {
-          return m;
+          return u;
         }),
         n.d(t, "d", function() {
           return p;
@@ -4538,7 +4556,7 @@ and limitations under the License.
                     o.removeEventListener("drop", i.OnDrop),
                     o.removeEventListener("dragover", i.OnDragOver),
                     o.removeEventListener("message", this.OnMessage))
-                  : ((n = u.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((n = m.CreatePopup(this.m_strName, this.m_rgParams)),
                     (o = n.popup),
                     (s = n.element),
                     (c = new a(o, s))),
@@ -4691,7 +4709,7 @@ and limitations under the License.
             e
           );
         })(),
-        m = (function(e) {
+        u = (function(e) {
           function t(t, n, r, i) {
             var o = e.call(this, t, r) || this;
             return o.SetSavedDimensionsKey(n), (o.m_bExpires = i), o;
@@ -4753,7 +4771,7 @@ and limitations under the License.
             t
           );
         })(l),
-        u = (function() {
+        m = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -4846,27 +4864,27 @@ and limitations under the License.
                   a.push("restoredetails=" + t.strRestoreDetails),
                 a && (c += "?" + a.join("&"));
               var l = t.owner_window || window,
-                m = l.open(c, e, s, !0);
-              if (!m)
+                u = l.open(c, e, s, !0);
+              if (!u)
                 return (
                   console.log(
                     "Failed to create popup.. browser popup blocker enabled?"
                   ),
                   {}
                 );
-              var u = "";
-              t.html_class && (u = 'class="' + t.html_class + '"');
+              var m = "";
+              t.html_class && (m = 'class="' + t.html_class + '"');
               var p = "";
               t.body_class && (p = 'class="' + t.body_class + '"');
               var h =
                 "<!DOCTYPE html><html " +
-                u +
+                m +
                 "><head><title></title></head><body " +
                 p +
                 '><div id="popup_target"></div></body></html>';
-              m.document.write(h), (m.document.title = o);
+              u.document.write(h), (u.document.title = o);
               for (
-                var d = m.document.getElementsByTagName("head")[0],
+                var d = u.document.getElementsByTagName("head")[0],
                   f = document.getElementsByTagName("link"),
                   v = 0;
                 v < f.length;
@@ -4875,7 +4893,7 @@ and limitations under the License.
                 var y = f[v];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var g = m.document.createElement("link"), _ = 0;
+                    var g = u.document.createElement("link"), _ = 0;
                     _ < y.attributes.length;
                     _++
                   ) {
@@ -4886,8 +4904,8 @@ and limitations under the License.
                 }
               }
               return {
-                popup: m,
-                element: m.document.getElementById("popup_target")
+                popup: u,
+                element: u.document.getElementById("popup_target")
               };
             }),
             (e.prototype.BShuttingDown = function() {
@@ -4968,7 +4986,7 @@ and limitations under the License.
             e
           );
         })(),
-        p = new u();
+        p = new m();
     }
   },
   ["HxNj"]

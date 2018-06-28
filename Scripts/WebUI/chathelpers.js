@@ -1297,7 +1297,25 @@ and limitations under the License.
         for (var n = 0; n < e.length; n++) if (e[n] != t[n]) return !1;
         return !0;
       }
-      (t.d = o), (t.b = i), (t.c = r), (t.a = s), (t.e = a);
+      function c(e, t, n) {
+        for (var o = 0, i = e.length - 1; o <= i; ) {
+          var r = Math.floor((o + i) / 2),
+            s = n(e[r], t);
+          if (s < 0) o = r + 1;
+          else if (s > 0) i = r - 1;
+          else {
+            if (i == r) return r;
+            if (r == o) return i > r && n(t, e[r + 1]) < 0 ? r : r + 1;
+            o = r;
+          }
+        }
+        return i;
+      }
+      function u(e, t, n) {
+        var o = c(e, t, n);
+        e.splice(o + 1, 0, t);
+      }
+      (t.d = o), (t.b = i), (t.c = r), (t.a = s), (t.e = a), (t.f = u);
     },
     wzNa: function(e, t, n) {
       "use strict";

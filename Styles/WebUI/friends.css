@@ -1873,11 +1873,6 @@ body.in_global_drag .friendlist_titlebar
 	color: rgb( 197, 214, 212 );
 }
 
-.friendGroup .groupName:hover
-{
-	color: white;
-}
-
 .friendGroup .groupName .groupCount
 {
 	color: rgb( 115, 194, 87 );
@@ -7029,11 +7024,6 @@ input.InviteFriendToChatDialog_LinkInput
 	fill: #888;
 	stroke: #8880;
 	stroke-width: 0px;
-}
-
-.MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupIcon:hover .SVGIcon_Group
-{
-	fill: #fff;
 }
 
 .MemberListOptionsContainer
