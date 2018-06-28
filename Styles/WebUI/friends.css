@@ -1016,12 +1016,23 @@ body.in_global_drag .friendlist_titlebar
 	pointer-events: initial;
 }
 
+.compactView .friendInviteContainer.declined .friendInviteBlockContainer
+{
+	left: 12px;
+}
+
 .friendInviteBlockContainer .DialogCheckbox
 {
 	margin-right: 13px;
 	margin-top: 11px;
 	background-color: rgba( 78, 31, 31, 1 );
 	border: 1px solid rgb( 122, 45, 45 );
+}
+
+.compactView .friendInviteBlockContainer .DialogCheckbox
+{
+	margin-right: 10px;
+	margin-top: 6px;
 }
 
 .friendInviteBlockContainer .DialogCheckbox .SVGIcon_DialogCheck path
@@ -1043,11 +1054,22 @@ body.in_global_drag .friendlist_titlebar
 	color: rgb( 201, 201, 201 );
 }
 
+.compactView .friendInviteBlockContainer .blockCommunicationLabel
+{
+	margin-top: 2px;
+}
+
 .friendInviteBlockContainer .blockCommunicationLabel.subtitle
 {
 	font-size: 12px;
 	color: rgb( 116, 116, 116 );
 	margin-top: 1px;
+}
+
+.compactView .friendInviteBlockContainer .blockCommunicationLabel.subtitle
+{
+	margin-top: -4px;
+
 }
 
 .friendInviteButton
@@ -9219,6 +9241,68 @@ img.emoticon
 	box-shadow: 1px 1px 8px rgba( 0, 0, 0, .3 );
 }
 
+.ModalPosition_Content .DialogContent._DialogLayout.CloseActiveVoiceWindowConfirmation
+{
+	min-height: 252px;
+}
+
+.CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .ExitDoor,
+.CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .Arrow polyline
+{
+	stroke: white;
+}
+
+.CloseActiveVoiceWindowConfirmation .exitIconExample
+{
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	margin: auto;
+	margin-right: 16px;
+}
+
+.CloseActiveVoiceWindowConfirmation .exitIconExample .SVGIcon_VoiceRoom
+{
+	width: 52px;
+	height: 52px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+
+.CloseActiveVoiceWindowConfirmation .activeVoiceDetails
+{
+	margin-top: 6px;
+}
+
+.CloseActiveVoiceWindowConfirmation .furtherDetails
+{
+
+	margin: 8px 14px 8px 0;
+	background-color: #0003;
+	border-radius: 6px;
+	padding: 8px;
+	display: flex;
+	flex-direction: row;
+	font-size: 14px;
+	color: rgb(76, 120, 177);
+}
+
+.CloseActiveVoiceWindowConfirmation .displayRow .DialogCheckbox
+{
+	margin-right: 8px;
+}
+
+.CloseActiveVoiceWindowConfirmation .displayRow
+{
+	margin: auto;
+	cursor: pointer;
+}
+
+.CloseActiveVoiceWindowConfirmation .displayRow:hover
+{
+	color: #ccc;
+}
+
 .DialogHeader .ChatRoomGroupAvatar.Small
 {
 	margin-right: 8px;
@@ -15031,8 +15115,8 @@ a.general_btn:hover
 
 .ChatMessageInvite.GroupAlreadyJoined .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
 {
-	padding-top: 8px;
-	font-size: 28px;
+	padding-top: 3px;
+	font-size: 22px;
 }
 
 .ChatMessageInvite.Inviter .ChatRoomGroupAvatar.Small .ChatRoomGroupAvatar_initials
