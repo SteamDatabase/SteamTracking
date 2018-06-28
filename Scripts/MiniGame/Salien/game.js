@@ -841,8 +841,9 @@ CPlanetSelectionState.prototype._RefreshInfoBoxGames = function()
 		sprite.height = k_GameBoxH;
 		sprite.interactive = true;
 		sprite.buttonMode = true;
+		sprite.appid = appId;
 		sprite.pointertap = function() {
-			window.open( 'https://store.steampowered.com/app/'+appId + '/?snr=1_saliens_4__salienapps', '_blank' );
+			window.open( 'https://store.steampowered.com/app/'+this.appid + '/?snr=1_saliens_4__salienapps', '_blank' );
 		};
 		box.addChild(sprite);
 		this.m_InfoBoxGameSprites.push(sprite);
