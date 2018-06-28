@@ -623,6 +623,9 @@ GSteamBroadcasts = {
 						});
 					}
 				}
+				
+				GStoreItemData.AddStoreItemData( data.rgAppData );
+				
 				var rgFiltered = GHomepage.FilterItemsForDisplay(
 					data.filtered, 'home', 1, 6, { displayed_elsewhere: true }
 				);
