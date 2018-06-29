@@ -1014,13 +1014,23 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 		if ( e.width() > 100 && !e.hasClass( 'ugc_show_warning_image' ) && !e.hasClass( 'dynamiclink_box' ) )
 		{
 			var $elWarning = $J( '<div></div>', {
-				'class': 'ugc_warning',
-				'text': 'Content may not be appropriate for all audiences'
+				'class': 'ugc_warning'
 			} );
 			if ( e.width() > 200 )
 			{
 				$elWarning.addClass( "large" );
 			}
+
+			if ( e.height() > 125 )
+			{
+				e.addClass( "ugc_show_warning_image" );
+			}
+			else
+			{
+				$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
+			}
+
+			$elWarning.append( $J( '<span>', { 'text': 'Content may not be appropriate for all audiences'} ) );
 
 			var $elOptions = $J( '<div></div>' );
 			var $elViewOption = $J( '<div></div>', {
@@ -1056,15 +1066,6 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 			$elOptions.append( $elPreferencesOption );
 
 			$elWarning.append( $elOptions );
-
-			if ( e.height() > 125 )
-			{
-				e.addClass( "ugc_show_warning_image" );
-			}
-			else
-			{
-				$elWarning.append( $J( '<div>', { 'class': 'ugc_warning_image' } ) );
-			}
 
 			e.append( $elWarning );
 		}
