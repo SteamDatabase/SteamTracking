@@ -90,5 +90,19 @@
     "landsound":"boulder_land",
     "rollingsound":"boulder_roll",
     "levelreq":9
+  },
+  "healing":{
+    "keycode":54,
+    "cooldown":120,
+    "ability_position": {
+      "x": 435,
+      "y": 85
+    },
+    "image":"plusfr1b.png",
+    "damage":2500,
+    "fallspeed":10,
+    "landsound":"boulder_land",
+    "rollingsound":"boulder_roll",
+    "levelreq":0
   }
 }

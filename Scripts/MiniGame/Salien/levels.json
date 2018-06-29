@@ -78,5 +78,33 @@
       }
     },
     "score_multiplier":4
+  },
+  "boss":{
+    "enemies":{
+      "total_count":300,
+      "spawn_sections":4,
+      "spawn_frequency":{
+        "min":2,
+        "max":3
+      },
+      "types":[
+        {
+          "type":"slime",
+          "ratio":0.4
+        },
+        {
+          "type":"neomorph",
+          "ratio":0.3
+        },
+        {
+          "type":"volvoian",
+          "ratio":0.3
+        }
+      ],
+      "modifiers":{
+        "speed_multiplier":2
+      }
+    },
+    "score_multiplier":1
   }
 }

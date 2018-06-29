@@ -17,6 +17,7 @@
       "x":0.5,
       "y":0.5
     },
+    "type": "normal",
     "base_health": 4,
     "base_damage": 5,
     "deathsound":"lvlonedeath"
@@ -39,6 +40,7 @@
       "x":0.5,
       "y":0.5
     },
+    "type": "normal",
     "base_health": 8,
     "base_damage": 10,
     "deathsound":"lvltwodeath"
@@ -61,8 +63,47 @@
       "x":0.5,
       "y":0.5
     },
+    "type": "normal",
     "base_health": 30,
     "base_damage": 20,
     "deathsound":"lvlthreedeath"
+  },
+  "boss":{
+    "walk_animation": {
+      "name": "Boss_",
+      "num_frames": 72
+    },
+    "death_animation": {
+      "name": "Boss_Death_",
+      "num_frames": 101,
+      "scale":1.3
+    },
+    "attack_animation": {
+      "name": "Boss_Attack_",
+      "num_frames": 72,
+      "scale":1.3
+    },
+    "laser_animation": {
+      "name": "Boss_Laser_",
+      "num_frames": 9,
+      "scale":1.3
+    },
+    "roar_animation": {
+      "name": "Boss_Roar_",
+      "num_frames": 72,
+      "scale":1.3
+    },
+    "speed": {
+      "min":0,
+      "max":0
+    },
+    "scale": {
+      "x":1.6,
+      "y":1.6
+    },
+    "type": "boss",
+    "base_health": 1000000,
+    "base_damage": 20,
+    "deathsound":"boss_death"
   }
 }
