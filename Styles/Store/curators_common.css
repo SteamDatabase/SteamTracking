@@ -304,3 +304,9 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 .curator_update_contents .banner_ctn img {
 	margin-right: 12px;
 }
+.curator_hidden_page_message {
+	color: red;
+	background: black;
+	display: block;
+	padding: 5px;
+}

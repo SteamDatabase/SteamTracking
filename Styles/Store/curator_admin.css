@@ -167,7 +167,7 @@
 }
 
 .lists_table > * > *:nth-child(1) {
-	width: 73%;
+	width: 67%;
 }
 .lists_table > * > *:nth-child(2) {
 	width: 10%;
@@ -176,7 +176,7 @@
 	width: 10%;
 }
 .lists_table > * > *:nth-child(4) {
-	width: 8%;
+	width: 13%;
 }
 
 .admin_content h4 {
@@ -591,6 +591,15 @@ body.v6 .reviews_container h3 {
 .delete_list_icon:hover {
 	opacity: 1.0;
 }
+
+.view_list_icon {
+	margin-right: 12px;
+	opacity: 0.6;
+}
+.view_list_icon:hover {
+	opacity: 1.0;
+}
+
 
 .edit_list_icon {
 	opacity: 0.6;

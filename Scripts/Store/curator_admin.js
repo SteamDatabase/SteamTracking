@@ -1147,7 +1147,7 @@ function ListManage_UpdateSort( elContainer )
 
 function ListManage_AddRows( rgLists )
 {
-	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, %2$s ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
+	var template = "<div class=\"edit_list list_row\" data-list-id=\"%1$s\">\r\n\t\t\t\t\t<div>%2$s<\/div>\r\n\t\t\t\t\t<div>%3$s<\/div>\r\n\t\t\t\t\t<div class=\"visibility_state\">%4$s<\/div>\r\n\t\t\t\t\t<div class=\"action_ctn\">\r\n\t\t\t\t\t\t<a class=\"view_list_icon ttip\" href=\"..\/list\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_view_section.png\" data-tooltip-text=\"View this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"edit_list_icon ttip\" data-navid=\"lists_edit\/%1$s\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_edit_section.png\" data-tooltip-text=\"Edit this list\"><\/a>\r\n\t\t\t\t\t\t<a class=\"delete_list_icon ttip\" href=\"#\" onclick=\"ListManage_DeleteList( this.parentNode.parentNode, %1$s, %2$s ); return false;\" data-tooltip-text=\"Delete this list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>";
 
 	var $table = $J('#lists_table');
 	$J("#lists_table > *:not(.heading)").remove();
@@ -1157,7 +1157,7 @@ function ListManage_AddRows( rgLists )
 		var $el = $J(template.replace(/%1\$s/g, list.listid)
 			.replace(/%2\$s/g, list.title ? V_EscapeHTML( JSON.stringify( list.title ) ) : "Untitled List" )
 			.replace(/%3\$s/g, list.apps.length )
-			.replace(/%4\$s/g, list.list_state == 0 ? "Hidden" : '' )
+			.replace(/%4\$s/g, list.list_state == 0 ? "Unlisted" : '' )
 		);
 
 		$table.append($el);

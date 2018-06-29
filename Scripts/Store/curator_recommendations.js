@@ -1,6 +1,23 @@
 
 var g_bInHashChange = false;
+var g_rgMyOtherCreatorHomes = null;
+var g_rgListDetails = null;
+var g_strCuratorSteamID = null;
 
+function SetMyOtherCreatorHomes( rgCreatorHome )
+{
+	g_rgMyOtherCreatorHomes = rgCreatorHome;
+};
+
+function CuratorSetListDetails( rgListDetails )
+{
+	g_rgListDetails = rgListDetails;
+};
+
+function SetCuratorSteamID( strSteamID )
+{
+	g_strCuratorSteamID = strSteamID;
+}
 
 function OnRecommendationsRendered()
 {
@@ -390,7 +407,7 @@ function ShowEditHandles( bIsCreatorHome )
 		}
 		else
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
 
 		}
 		elTypeSelect.val( rgNodeData.type );
@@ -409,7 +426,51 @@ function ShowEditHandles( bIsCreatorHome )
 
 		var elPresentationSelect = $J("\r\n\t\t\t<select name=\"presentation\">\r\n\t\t\t\t<option value=\"featuredcarousel\">Carousel with custom video or screenshot grid<\/option>\r\n\t\t\t\t<option value=\"circularlist\">List of four small capsules<\/option>\r\n\t\t\t\t<option value=\"bigthengrid\">Large capsule followed by four small capsule grid<\/option>\r\n\t\t\t<\/select>");
 
+		var elLinkTitleSelect = $J( "\r\n\t\t\t<select name=\"linktitle\">\r\n\t\t\t\t<option value=\"franchise\">Our Franchises<\/option>\r\n\t\t\t\t<option value=\"developer\">Our Developers<\/option>\r\n\t\t\t\t<option value=\"publisher\">Our Publishers<\/option>\r\n\t\t\t\t<option value=\"homepage\">Our Homepages<\/option>\r\n\t\t\t<\/select>" );
+
+		var elSelectHomepages = null;
+		if( g_rgMyOtherCreatorHomes && Object.keys( g_rgMyOtherCreatorHomes ).length > 0 )
+		{
+			var rgSelectedHomes = [];
+			if(rgNodeData.linkedhomepages  )
+			{
+				rgSelectedHomes = JSON.parse( rgNodeData.linkedhomepages );
+			}
+			elSelectHomepages = $J( '<div class="creator_checkbox_container">' );
+			for (var clanid in g_rgMyOtherCreatorHomes)
+			{
+				if( g_rgMyOtherCreatorHomes.hasOwnProperty( clanid ) )
+				{
+					var groupInfo = g_rgMyOtherCreatorHomes[clanid];
+					elSelectHomepages.append( '<label class="creator_linked_label"><input type="checkbox" name="homepages" value="' + clanid +
+						'"' + ( rgSelectedHomes.indexOf( clanid ) != -1 ? ' checked ' : '' ) + '>' + groupInfo['group_name'] + '</label><br>');
+				}
+			}
+		}
+		else
+		{
+			elSelectHomepages = $J( "<div>You do not own or are an officer of any other creator homepages (developer\/publisher\/franchises). Nothing available to link. <\/div>" );
+		}
+
+		elLinkTitleSelect.val( rgNodeData.title );
+
 		elPresentationSelect.val( GetPresentationStyle( rgNodeData, rgNodeData.type ) );
+
+				var elListSelect = $J( '<select name="list_sel_option"><option></option></select>');
+		for( var listindex = 0; listindex < g_rgListDetails.length; ++listindex )
+		{
+			var title = g_rgListDetails[listindex]['title'];
+			var listid = g_rgListDetails[listindex]['listid'];
+			var list_state = g_rgListDetails[listindex]['list_state'];
+
+			if( list_state == 0 )
+			{
+				title += ' (' + "Unlisted" + ')';
+			}
+
+			elListSelect.append( $J('<option value="' + listid + '">' + title + '</option>' ) );
+		}
+		elListSelect.val( rgNodeData.listid );
 
 		var elListName = $J('<span class="fieldvalue"></span>').text( rgNodeData.listid_label ? rgNodeData.listid_label : "Select..." );
 		var elListEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
@@ -420,14 +481,34 @@ function ShowEditHandles( bIsCreatorHome )
 		var elListId = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
 		var elTagId = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
 
+		elListSelect.on( 'change', function( ){
+			var unListId = elListSelect.val();
+			if( unListId )
+			{
+				elListId.val( unListId );
+			}
+			else
+			{
+				elListId.val( '' );
+			}
+		});
+
+
 		var elSave = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase"><span>'+"Update"+'</span></a>');
 		var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
+
+		var elListBlockDesc = $J('<span class="fieldvaluedescription">' + "This will show all of the visible lists which are not already featured elsewhere on the page. The list order can be edited <a href='%1$s' target='_blank'>here<\/a>. ".replace ( /%1\$s/, 'admin/lists_manage' ) +
+			( bIsCreatorHome ? "They will show the background image assigned to the list or a random screenshot suitable for all ages at the block artwork." :'') + '</p>');
 
 		elTypeSelect.on('change',function(){
 						elSortSelect.parent().addClass('hidden');
 			elPresentationSelect.parent().addClass('hidden');
+			elLinkTitleSelect.parent().addClass( 'hidden' );
 			elListContainer.addClass('hidden');
 			elTagContainer.addClass('hidden');
+			elSelectHomepages.parent().addClass('hidden' );
+			elListBlockDesc.parent().addClass( 'hidden' );
+			elListSelect.parent().addClass( 'hidden' );
 
 			switch( elTypeSelect.val() )
 			{
@@ -438,7 +519,14 @@ function ShowEditHandles( bIsCreatorHome )
 					break;
 				case 'featured_list':
 					elPresentationSelect.parent().removeClass('hidden');
-					elListContainer.removeClass('hidden');
+					if( g_rgListDetails && g_rgListDetails.length < 50 )
+					{
+						elListSelect.parent().removeClass( 'hidden' );
+					}
+					else
+					{
+						elListContainer.removeClass('hidden');
+					}
 					break;
 				case 'featured_tag':
 				case 'featured_tag_creation':
@@ -448,6 +536,14 @@ function ShowEditHandles( bIsCreatorHome )
 				case 'discounted_curations':
 				case 'discounted_creations':
 					elPresentationSelect.parent().removeClass('hidden');
+					break;
+				case 'link_homepages':
+					elLinkTitleSelect.parent().removeClass( 'hidden' );
+					elSelectHomepages.parent().removeClass( 'hidden' );
+					break;
+				case 'lists_block':
+					elListBlockDesc.parent().removeClass( 'hidden' );
+					break;
 				default:
 					break;
 			}
@@ -458,6 +554,11 @@ function ShowEditHandles( bIsCreatorHome )
 		elSave.click( function(){
 			var elForm = elOptions[0];
 
+						var linkedhomepages = [];
+			elSelectHomepages.find( 'input:checkbox:checked').each( function() {
+				linkedhomepages.push( $J(this).val() );
+			});
+
 			$J.ajax ( {
 				url: g_strCuratorAdminURL + 'ajaxupdatepagesection/',
 				data: {
@@ -466,6 +567,8 @@ function ShowEditHandles( bIsCreatorHome )
 					listid: elListId.val(),
 					tagid: elTagId.val(),
 					sort: elSortSelect.val(),
+					linktitle: elLinkTitleSelect.val(),
+					linkedhomepages: JSON.stringify( linkedhomepages ),
 					tagid_label: elTagName.text(),
 					listid_label: elListName.text(),
 					presentation: elPresentationSelect.val(),
@@ -577,8 +680,12 @@ function ShowEditHandles( bIsCreatorHome )
 		var elTagContainer = WrapFormFieldWithLabel( "Featured tag", $J('<div></div>').append(elTagName, elTagEditButton) );
 
 		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Title", elLinkTitleSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Homepages", elSelectHomepages ));
 		elOptions.append( WrapFormFieldWithLabel( "Presentation Style", elPresentationSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Description", elListBlockDesc ));
+		elOptions.append( WrapFormFieldWithLabel( "Featured list", elListSelect ));
 		elOptions.append( elListContainer );
 		elOptions.append( elTagContainer );
 		elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );
@@ -601,7 +708,10 @@ function ShowEditHandles( bIsCreatorHome )
 	CTagAutoComplete.prototype.LoadPopularTags(false);
 
 	if( g_bCanUploadHeader )
+	{
 		ShowHeaderImageHandle();
+	}
+	ShowAvatarHandle();
 }
 
 
@@ -682,13 +792,49 @@ function DeleteFeaturedTag( unTagId, strTagName )
 			modal.Dismiss();
 		});
 	});
+}
 
+function ShowAvatarHandle()
+{
+	var $container = $J('#curator_avatar_image');
+	$container.addClass( 'editing' );
+
+	var elOverlay = $J('<div class="edit_overlay"></div>');
+
+	var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
+
+	elButton.click( function(){
+		elOptions.show();
+	});
+
+	elOverlay.append( elButton );
+	$container.append( elOverlay );
+
+	var elOptions = $J('<form class="edit_options"><p>'+"Edit the Steam community group Avatar. Your role must have '..edit group description and avatar?' permissions to change the image."+'</p></form>');
+
+	var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
+	elCancel.on('click', function(){
+		elOptions.hide();
+	});
+
+	var elUploadFrame = $J( '<iframe src="https://steamcommunity.com/actions/FileUploader?type=group_avatar_image&gId=' + g_strCuratorSteamID+ '&bgColor=262627" width="400" height="30" border="0" frameborder="no"></iframe>' );
+
+
+	elOptions.hide();
+
+	elOptions.append( WrapFormFieldWithLabel( "Avatar",  elUploadFrame ) );
+	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append(elCancel) ) );
+	$container.append(elOptions);
+
+	// Force style recalc
+	var foo = elOverlay[0].offsetWidth;
+	elOverlay.addClass('visible');
 }
 
 function ShowHeaderImageHandle()
 {
 
-	var $container = $J('#header_container');
+	var $container = $J('#header_curator_details');
 	$container.addClass('editing');
 
 	var elOverlay = $J('<div class="edit_overlay"></div>');
@@ -725,51 +871,12 @@ function ShowHeaderImageHandle()
 
 	elUpload.change( function(){
 		var elForm = elOptions[0];
-		var formData = new FormData(elForm);
-		formData.append('sessionid', g_sessionID);
-		formData.append('imagegroup', 2);
-		formData.append('imagename', 'header');
-
-		$J.ajax ( {
-			url: g_strCuratorCommunityBaseURL + '/uploadimage/',
-			data: formData,
-			type: 'POST',
-			cache: false,
-			contentType: false,
-			processData: false,
-			crossDomain: true,
-			xhrFields: { withCredentials: true }
-		} ).done( function ( data )
-		{
-			if( data.success == 1 )
-			{
-				fnAddImage(0, data);
-				elSelectImage.val( data.image_hash + '.' + EClanImageFileTypeToString( data.file_type ) );
-				elSelectImage.trigger('change');
-			}
-			else
-			{
-				ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
-			}
-			
-		}).fail( function( data ) {
-			if( data && data.responseText )
-			{
-				var result = JSON.parse( data.responseText );
-				if( result.message )
-				{
-					ShowAlertDialog( 'Error', V_EscapeHTML( result.message ) );
-				}
-				else
-				{
-					ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
-				}
-			}
-
-		});
-
+		CuratorUploadClanImage( elForm, function( data ) {
+			fnAddImage(0, data);
+			elSelectImage.val( data.image_hash + '.' + EClanImageFileTypeToString( data.file_type ) );
+			elSelectImage.trigger('change');
+		} );
 		return false;
-
 	});
 
 	elSelectImage.on('change', function(){
@@ -819,8 +926,6 @@ function ShowHeaderImageHandle()
 
 	});
 
-
-
 	elOptions.append( WrapFormFieldWithLabel( "Background image", elSelectImage ));
 	elOptions.append( WrapFormFieldWithLabel( "Upload", elUpload ));
 	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );
@@ -832,10 +937,6 @@ function ShowHeaderImageHandle()
 	// Force style recalc
 	var foo = elOverlay[0].offsetWidth;
 	elOverlay.addClass('visible');
-
-
-
-
 }
 
 
@@ -878,20 +979,6 @@ $J(function() {
 		UpdateRecommendationFilterData ();
 	}
 });
-
-
-function EClanImageFileTypeToString( $eType )
-{
-	switch( $eType )
-	{
-		case 2: return 'gif';
-		case 3: return 'png';
-		case 1:
-		default:
-			return 'jpg';
-	}
-
-}
 
 
 

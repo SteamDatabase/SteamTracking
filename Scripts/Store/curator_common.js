@@ -126,8 +126,79 @@ function ReportAbuse( strAbuseID )
 			ShowAlertDialog ( 'Error', 'There was a problem saving your report.  Please try again later.' );
 		} );
 	});
-	
+}
+
+function GetCuratorAvatarURLFromHash( hash, size )
+{
+	var strURL = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/' + hash.substring( 0, 2 ) + '/' + hash;
+
+	if ( size == 'full' )
+		strURL += '_full.jpg';
+	else if ( size == 'medium' )
+		strURL += '_medium.jpg';
+	else
+		strURL += '.jpg';
+
+	return strURL;
+}
 
 
+function CuratorUploadClanImage( elForm, fnSuccessCallback )
+{
+	var formData = new FormData(elForm);
+	formData.append('sessionid', g_sessionID);
+	formData.append('imagegroup', 2);
+	formData.append('imagename', 'header');
+
+	$J.ajax ( {
+		url: g_strCuratorCommunityBaseURL + '/uploadimage/',
+		data: formData,
+		type: 'POST',
+		cache: false,
+		contentType: false,
+		processData: false,
+		crossDomain: true,
+		xhrFields: { withCredentials: true }
+	} ).done( function ( data )
+	{
+		if( data.success == 1 )
+		{
+			fnSuccessCallback( data );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+		}
+
+	}).fail( function( data ) {
+		if( data && data.responseText )
+		{
+			var result = JSON.parse( data.responseText );
+			if( result.message )
+			{
+				ShowAlertDialog( 'Error', V_EscapeHTML( result.message ) );
+			}
+			else
+			{
+				ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+			}
+		}
+
+	});
+}
+
+function EClanImageFileTypeToString( $eType )
+{
+	switch( $eType )
+	{
+		case 2: return 'gif';
+		case 3: return 'png';
+		case 1:
+		default:
+			return 'jpg';
+	}
 
 }
+
+
+

@@ -982,11 +982,15 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	opacity: 1;
 }
 
-.page_section#header_container .edit_overlay {
+.page_section #curator_avatar_image .edit_overlay {
+	width: 180px;
+	right: auto;
+}
+
+.page_section #header_curator_details .edit_overlay {
 	width: 600px;
 	left: auto;
 }
-
 
 .page_section .edit_button {
 	width: 16px;
@@ -1048,6 +1052,18 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+	max-width: 279px;
+	display: inline-block;
+}
+
+.page_section .edit_options .fieldvaluedescription {
+
+	border: none;
+	padding: 5px 10px;
+	border-radius: 3px;
+	color: #fff;
+	vertical-align: top;
+
 	max-width: 279px;
 	display: inline-block;
 }
@@ -1420,6 +1436,9 @@ body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment 
 }
 .vanity_load_list {
 	margin-left: 25px;
+}
+
+.creator_checkbox_container {
 }
 
 .creator_beta_ctn {
