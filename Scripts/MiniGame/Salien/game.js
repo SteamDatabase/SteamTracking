@@ -306,6 +306,11 @@ CBootState.prototype.OnLoadComplete = function(loader, resources)
 					gServer.LeaveGameInstance( gPlayerInfo.active_zone_game, function(){}, function(){} );
 				}
 
+				if ( gPlayerInfo.active_boss_game )
+				{
+					gServer.LeaveGameInstance( gPlayerInfo.active_boss_game, function(){}, function(){} );
+				}
+
 				if ( null != gPlayerInfo && gPlayerInfo.active_planet !== undefined )
 				{
 					gGame.ChangeState( new CBattleSelectionState( gPlayerInfo.active_planet ) );
@@ -429,7 +434,7 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	if(null == gSalien)
 	{
-		gSalien = new CSalien(resources);
+		gSalien = new CSalien(resources, gSalienData);
 	}
 
 	this.background = new PIXI.Sprite.fromImage( 'planet_select_bg' );
@@ -1008,7 +1013,7 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 	if(null == gSalien)
 	{
-		gSalien = new CSalien(resources);
+		gSalien = new CSalien(resources, gSalienData);
 	}
 
 	var instance = this;
@@ -1056,20 +1061,29 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 
 		instance.m_bJoiningPlanet = true;
 
-		gServer.JoinZone(
-			zoneIdx,
-			function ( results ) {
-				gGame.ChangeState( new CBattleState( instance.m_PlanetData, zoneIdx ) );
-				instance.m_bJoiningPlanet = false;
-			},
-			function ( error, eResult ) {
-				if ( eResult !== undefined )
-				{
-					if ( eResult == 27 )
+		if ( instance.m_PlanetData.zones[zoneIdx].boss_active )
+		{
+			// TODO: Probably want to actually do different stuff
+			gServer.JoinBossZone(
+				zoneIdx,
+				function ( results ) {
+					gGame.ChangeState( new CBossState( instance.m_PlanetData, zoneIdx, results.response.gameid ) );
+					instance.m_bJoiningPlanet = false;
+				},
+				function ( error, eResult ) {
+					if ( eResult !== undefined )
 					{
-						instance.m_bJoiningPlanet = false;
-						ZoneCaptured();
-						gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
+						if ( eResult == 27 )
+						{
+							instance.m_bJoiningPlanet = false;
+							ZoneCaptured();
+							gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
+						}
+						else
+						{
+							instance.m_bJoiningPlanet = false;
+							GameLoadError();
+						}
 					}
 					else
 					{
@@ -1077,13 +1091,39 @@ CBattleSelectionState.prototype.OnLoadComplete = function(loader, resources)
 						GameLoadError();
 					}
 				}
-				else
-				{
+			);
+		}
+		else
+		{
+			gServer.JoinZone(
+				zoneIdx,
+				function ( results ) {
+					gGame.ChangeState( new CBattleState( instance.m_PlanetData, zoneIdx ) );
 					instance.m_bJoiningPlanet = false;
-					GameLoadError();
+				},
+				function ( error, eResult ) {
+					if ( eResult !== undefined )
+					{
+						if ( eResult == 27 )
+						{
+							instance.m_bJoiningPlanet = false;
+							ZoneCaptured();
+							gGame.ChangeState( new CBattleSelectionState( instance.m_PlanetData.id ) );
+						}
+						else
+						{
+							instance.m_bJoiningPlanet = false;
+							GameLoadError();
+						}
+					}
+					else
+					{
+						instance.m_bJoiningPlanet = false;
+						GameLoadError();
+					}
 				}
-			}
-		);
+			);
+		}
 	};
 
 	this.m_RewardsContainer = new PIXI.Container();
@@ -1434,14 +1474,15 @@ function CBattleState( planetData, zoneidx )
 	this.m_unZoneIndex = zoneidx;
 	this.m_ShipDestination = { x: 200, y:100 };
 	this.m_SalienDestination = { x: 0, y: 520 };
+	this.m_bPlayIntro = true;
 }
 CBattleState.prototype = Object.create(CGameState.prototype);
 CBattleState.prototype.Load = function()
 {
 	var instance = this;
-	LoadAsset( 'attack_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/attacks.json', '7' );
-	LoadAsset( 'enemy_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/enemies.json', '7' );
-	LoadAsset( 'level_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/levels.json', '9' );
+	LoadAsset( 'attack_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/attacks.json', '8' );
+	LoadAsset( 'enemy_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/enemies.json', '11' );
+	LoadAsset( 'level_config', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets//saliengame/levels.json', '10' );
 	LoadAsset( 'enemy-spritesheet-0', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-0.json' );
 	LoadAsset( 'enemy-spritesheet-1', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-1.json' );
 	LoadAsset( 'enemy-spritesheet-2', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemy-spritesheet-2.json' );
@@ -1455,8 +1496,10 @@ CBattleState.prototype.Load = function()
 	LoadAsset( 'boulder', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/boulder.png' );
 	LoadAsset( 'blackhole', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/blackhole.png' );
 	LoadAsset( 'bomb', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/space-bomb2.png' );
+	LoadAsset( 'healing', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/healing.json' );
 	LoadAsset( 'flash_freeze', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/iced_enemy.png' );
 	LoadAsset( 'stinger_win', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/stinger_win.{ogg,mp3}' );
+	LoadAsset( 'stinger_lose', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/stinger_lose.{ogg,mp3}' );
 	LoadAsset( 'boulder_land', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boulder_land.{ogg,mp3}' );
 	LoadAsset( 'boulder_roll', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/boulder_roll.{ogg,mp3}' );
 	LoadAsset( 'bomb_explode', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/sfx/bomb_explode.{ogg,mp3}' );
@@ -1473,6 +1516,7 @@ CBattleState.prototype.Load = function()
 	LoadAsset( 'keyboard3', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard3.png' );
 	LoadAsset( 'keyboard4', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard4.png' );
 	LoadAsset( 'keyboard5', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard5.png' );
+	LoadAsset( 'keyboard6', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/keyboard6.png' );
 	LoadAsset( 'slime_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/slime_ability.png' );
 	LoadAsset( 'beast_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/beast_ability.png' );
 	LoadAsset( 'psychic_ability', 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/psychic_ability.png' );
@@ -1505,8 +1549,23 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 	gAudioManager.FadeMusic();
 
 	this.m_Score = 0;
-	this.m_ScoreAccrual = 0;
+	this.m_bAccrueScore = true;
 	this.m_ScoreIncrements = 5;
+
+	this.m_strMusicName = 'battle_music';
+	this.m_bLoopMusic = false;
+
+	this.m_strDifficulty = 'easy';
+	if ( this.m_PlanetData.zones[this.m_unZoneIndex].difficulty == 3 )
+	{
+		this.m_strDifficulty = 'hard';
+	}
+	else if ( this.m_PlanetData.zones[this.m_unZoneIndex].difficulty == 2 )
+	{
+		this.m_strDifficulty = 'medium';
+	}
+
+	this.m_bUpdateTimer = true;
 
 	this.m_PlayerHealth = gPlayerInfo.level * 10;
 	this.m_PlayerMaxHealth = this.m_PlayerHealth;
@@ -1583,7 +1642,11 @@ CBattleState.prototype.OnLoadComplete = function(loader, resources)
 
 	// add ship after salien so its on top
 	gApp.stage.addChild( this.m_Ship );
-	gAudioManager.PlaySound( 'ship_sound', true );
+	if ( this.m_bPlayIntro )
+	{
+		gAudioManager.PlaySound( 'ship_sound', true );
+	}
+
 
 	// build UI
 
@@ -1745,7 +1808,7 @@ CBattleState.prototype.Update = function(delta)
 			this.m_RespawnTimer.text = 'Station Repaired In ' + Math.floor( ( this.m_rtDefensesRepaired - Date.now() ) / 1000 );
 		}
 
-		if ( this.m_rtDefensesRepaired == 0 && ( ( now - this.m_rtScoreAccrual ) / 1000 ) > 1 )
+		if ( this.m_bAccrueScore && this.m_rtDefensesRepaired == 0 && ( ( now - this.m_rtScoreAccrual ) / 1000 ) > 1 )
 		{
 			this.m_Score += this.m_ScoreIncrements * Math.floor( ( now - this.m_rtScoreAccrual ) / 1000 );
 			this.m_TotalScoreText.text =  'Score: ' + this.m_Score;
@@ -1783,21 +1846,45 @@ CBattleState.prototype.Update = function(delta)
 
 		this.m_ScoreCounter.text = 'Enemies Defeated: '.toUpperCase() + this.m_EnemyManager.m_nDefeatedEnemies;
 
-		var nSecondsRemaining = Math.floor( ( this.m_rtBattleEnd - Date.now() ) / 1000 );
 
-		if ( nSecondsRemaining <= 10 )
+		if ( this.m_bUpdateTimer )
 		{
-			this.m_Timer.style = {
-				fontSize: 36,
-				fill:"red",
-				fontWeight:'bold',
-				fontFamily:k_FontType
-			};
-		}
+			var nSecondsRemaining = Math.floor( ( this.m_rtBattleEnd - Date.now() ) / 1000 );
+			if ( nSecondsRemaining <= 10 )
+			{
+				this.m_Timer.style = {
+					fontSize: 36,
+					fill:"red",
+					fontWeight:'bold',
+					fontFamily:k_FontType
+				};
+			}
 
-		this.m_Timer.text = PadZerosLeft( Math.floor( nSecondsRemaining / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsRemaining % 60, 2 );
+			this.m_Timer.text = PadZerosLeft( Math.floor( nSecondsRemaining / 60 ), 2 ) + ':' + PadZerosLeft( nSecondsRemaining % 60, 2 );
+
+			if ( nSecondsRemaining <= 0 )
+			{
+				this.m_Timer.text = '00:00';
+				this.m_bRunning = false;
+
+				this.m_EnemyManager.Stop();
+				this.m_AttackManager.Destroy();
+				this.m_AttackManager = null;
+
+				var instance = this;
+
+				gAudioManager.PlaySound( 'stinger_win' );
+
+				instance.RenderVictoryScreen();
+			}
+		}
 	}
 
+	this.UpdatePoints();
+};
+
+CBattleState.prototype.UpdatePoints = function()
+{
 	for ( var i = this.m_rgPointsHolder.length - 1; i >= 0; --i )
 	{
 		var scoresprite = this.m_rgPointsHolder[i];
@@ -1812,28 +1899,16 @@ CBattleState.prototype.Update = function(delta)
 			scoresprite.alpha -= 0.01;
 		}
 	}
-
-	if ( nSecondsRemaining <= 0 && this.m_bRunning )
-	{
-		this.m_Timer.text = '00:00';
-		this.m_bRunning = false;
-
-		this.m_EnemyManager.Stop();
-		this.m_AttackManager.Destroy();
-		this.m_AttackManager = null;
-
-		var instance = this;
-
-		gAudioManager.PlaySound( 'stinger_win' );
-
-		instance.RenderVictoryScreen();
-	}
 };
 
 CBattleState.prototype.Shutdown = function()
 {
-	this.m_EnemyManager.Destroy();
-	if ( this.m_AttackManager !== null )
+	if ( this.m_EnemyManager !== undefined )
+	{
+		this.m_EnemyManager.Destroy();
+	}
+
+	if ( this.m_AttackManager !== null && this.m_AttackManager !== undefined )
 	{
 		this.m_AttackManager.Destroy();
 	}
@@ -1960,38 +2035,32 @@ CBattleState.prototype.HandleStart = function( delta )
 	{
 		this.m_Ship.visible = false;
 		this.m_Ship.vy = 0;
-
-		// start the match
-		this.m_rtBattleStart = Date.now();
-		this.m_rtScoreAccrual = this.m_rtBattleStart;
-		this.m_rtBattleEnd = Date.now() + k_MatchLengthSec * 1000;
-
-		this.m_bStarting = false;
-		this.m_bRunning = true;
-
-		var strDifficulty = 'easy';
-		if ( this.m_PlanetData.zones[this.m_unZoneIndex].difficulty == 3 )
-		{
-			strDifficulty = 'hard';
-		}
-		else if ( this.m_PlanetData.zones[this.m_unZoneIndex].difficulty == 2 )
-		{
-			strDifficulty = 'medium';
-		}
-
-		this.m_EnemyManager = new CEnemyManager( this );
-		this.m_LevelManager = new CLevelManager( this, strDifficulty );
-		this.m_ScoreIncrements = this.m_ScoreIncrements * this.m_LevelManager.m_LevelData.score_multiplier;
-
-		gAudioManager.PlayMusic( 'battle_music', false );
-
-		// set default attack
-		this.m_AttackManager = new CAttackManager( this );
-		this.m_AttackManager.BuildAttacks();
+		this.StartGame();
 	}
 };
 
-CBattleState.prototype.DamageEnemiesAtLocation = function( nAmount, rect )
+CBattleState.prototype.StartGame = function()
+{
+	// start the match
+	this.m_rtBattleStart = Date.now();
+	this.m_rtScoreAccrual = this.m_rtBattleStart;
+	this.m_rtBattleEnd = Date.now() + k_MatchLengthSec * 1000;
+
+	this.m_bStarting = false;
+	this.m_bRunning = true;
+
+	this.m_EnemyManager = new CEnemyManager( this );
+	this.m_LevelManager = new CLevelManager( this, this.m_strDifficulty );
+	this.m_ScoreIncrements = this.m_ScoreIncrements * this.m_LevelManager.m_LevelData.score_multiplier;
+
+	gAudioManager.PlayMusic( this.m_strMusicName, this.m_bLoopMusic );
+
+	// set default attack
+	this.m_AttackManager = new CAttackManager( this );
+	this.m_AttackManager.BuildAttacks();
+};
+
+CBattleState.prototype.DamageEnemiesAtLocation = function( nAmount, rect, bDamageBoss )
 {
 //	var collisionDebug = new PIXI.Graphics();
 //	collisionDebug.beginFill(0xFF0000);
@@ -2002,7 +2071,18 @@ CBattleState.prototype.DamageEnemiesAtLocation = function( nAmount, rect )
 //	collisionDebug.cacheAsBitmap = true;
 //	gApp.stage.addChild( collisionDebug );
 
-	this.m_EnemyManager.m_rgEnemies.forEach( function( enemy ) {
+	var _bDamageBoss = true;
+	if ( bDamageBoss !== undefined )
+	{
+		_bDamageBoss = bDamageBoss;
+	}
+
+	this.m_EnemyManager.m_mapEnemies.forEach( function(enemy ) {
+		if ( !_bDamageBoss && enemy instanceof CBoss )
+		{
+			return;
+		}
+
 		if ( DistBetweenRects( rect, new PIXI.Rectangle( enemy.m_Sprite.x, enemy.m_Sprite.y, enemy.m_Sprite.width,  enemy.m_Sprite.height  ) ) <= 0 )
 		{
 			enemy.Damage( nAmount );
@@ -2013,7 +2093,7 @@ CBattleState.prototype.DamageEnemiesAtLocation = function( nAmount, rect )
 CBattleState.prototype.GetEnemiesAtLocation = function( rect )
 {
 	var rgEnemiesAtLocation = [];
-	this.m_EnemyManager.m_rgEnemies.forEach( function( enemy ) {
+	this.m_EnemyManager.m_mapEnemies.forEach( function(enemy ) {
 		if ( DistBetweenRects( rect, new PIXI.Rectangle( enemy.m_Sprite.x, enemy.m_Sprite.y, enemy.m_Sprite.width,  enemy.m_Sprite.height  ) ) <= 0 )
 		{
 			rgEnemiesAtLocation.push( enemy );

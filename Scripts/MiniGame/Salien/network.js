@@ -141,6 +141,30 @@ CServerInterface.prototype.JoinZone = function( zoneid, callback, error )
 	}).fail( error );
 };
 
+CServerInterface.prototype.JoinBossZone = function( zoneid, callback, error )
+{
+	var instance = this;
+	var rgParams = {
+		zone_position: zoneid,
+		access_token: instance.m_WebAPI.m_strOAuth2Token
+	};
+
+	$J.ajax({
+		url: this.m_WebAPI.BuildURL( 'ITerritoryControlMinigameService', 'JoinBossZone', true ),
+		method: 'POST',
+		data: rgParams,
+	}).success( function( results, textStatus, request ) {
+		if ( request.getResponseHeader( 'x-eresult' ) == 1 )
+		{
+			callback( results )
+		}
+		else
+		{
+			error( null, request.getResponseHeader( 'x-eresult' ) );
+		}
+	}).fail( error );
+};
+
 CServerInterface.prototype.RepresentClan = function( ulClanid, callback, error )
 {
 	var instance = this;
@@ -176,6 +200,32 @@ CServerInterface.prototype.ReportScore = function( nScore, callback, error )
 
 	$J.ajax({
 		url: this.m_WebAPI.BuildURL( 'ITerritoryControlMinigameService', 'ReportScore', true ),
+		method: 'POST',
+		data: rgParams,
+	}).success( function( results, textStatus, request ) {
+		if ( request.getResponseHeader( 'x-eresult' ) == 1 )
+		{
+			callback( results )
+		}
+		else
+		{
+			error();
+		}
+	}).fail( error );
+};
+
+CServerInterface.prototype.ReportBossDamage = function( damagedone, damagetaken, usedhealing, callback, error )
+{
+	var instance = this;
+	var rgParams = {
+		access_token: instance.m_WebAPI.m_strOAuth2Token,
+		use_heal_ability: usedhealing,
+		damage_to_boss: damagedone,
+		damage_taken: damagetaken
+	};
+
+	$J.ajax({
+		url: this.m_WebAPI.BuildURL( 'ITerritoryControlMinigameService', 'ReportBossDamage', true ),
 		method: 'POST',
 		data: rgParams,
 	}).success( function( results, textStatus, request ) {

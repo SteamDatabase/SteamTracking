@@ -18,7 +18,7 @@ function WeakRandomInt(min, max) {
 }
 
 var gCacheKey = '1550bld';
-var gGameVersion = 1;
+var gGameVersion = 2;
 // cacheKey and loader are optional, will get replaced if not passed
 function LoadAsset( strName, strURI, cacheKey, loader ) {
 	var _cacheKey = cacheKey;
@@ -37,6 +37,23 @@ function LoadAsset( strName, strURI, cacheKey, loader ) {
 	{
 				_loader.add( strName, strURI + '?v=' + _cacheKey );
 	}
+}
+
+function GetRandomKeyFromMap( map )
+{
+	var idx = WeakRandomInt( 0, map.size );
+	var randomKey = undefined;
+	var curIdx = 0;
+	map.forEach( function( value, key ) {
+		if ( randomKey !== undefined )
+			return;
+
+		if ( curIdx == idx )
+			randomKey = key;
+
+		++curIdx;
+	});
+	return randomKey;
 }
 
 function PadZerosLeft( val, size )
@@ -73,7 +90,7 @@ function ShowCustomSalienDialog()
 					gSalienData.hat_image = $Form.find( '#salien_hat' ).prop( 'src' );
 					gSalienData.shirt_itemid = parseInt( $Form.find( "input:radio[name='salien_shirt']:checked" ).val() );
 					gSalienData.shirt_image = $Form.find( '#salien_shirt' ).prop( 'src' );
-					gSalien.UpdateCustomizations();
+					gSalien.UpdateCustomizations( gSalienData );
 				}).fail( function( data ) {
 					ShowAlertDialog( 'Customize Your Salien', 'There was an error loading your Salien, please try again in a few minutes.' );
 				});

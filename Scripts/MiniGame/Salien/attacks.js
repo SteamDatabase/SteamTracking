@@ -10,7 +10,6 @@ function CCooldownHandler( attackManager, strType )
 	this.m_AttackManager = attackManager;
 	this.m_typeData = this.m_AttackManager.m_AttackData[this.m_strType];
 	this.m_rtAttackLastUsed = 0;
-	this.BuildSprites();
 }
 
 CCooldownHandler.prototype.BuildSprites = function()
@@ -141,7 +140,7 @@ CCooldownHandler.prototype.Destroy = function()
 };
 
 
-function CAttackManager( battleState )
+function CAttackManager( battleState, salien, bBossLevel )
 {
 	// will store data for attacks like animation frames, active attack, cooldowns, etc
 
@@ -155,6 +154,27 @@ function CAttackManager( battleState )
 	this.m_curID = 0;
 	this.m_BattleState = battleState;
 	this.m_bDisabled = false;
+
+	this.m_bAllySalien = false;
+	if ( salien !== undefined )
+	{
+		this.m_bAllySalien = true;
+		this.m_Salien = salien;
+	}
+	else
+	{
+		this.m_bAllySalien = false;
+		this.m_Salien = gSalien;
+	}
+
+	if ( bBossLevel !== undefined )
+	{
+		this.m_bBossLevel = bBossLevel;
+	}
+	else
+	{
+		this.m_bBossLevel = false;
+	}
 }
 
 CAttackManager.prototype.SetDisabled = function( bDisabled )
@@ -202,8 +222,16 @@ CAttackManager.prototype.BuildAttacks = function()
 		this.m_rgPsychicAttackFrames.push( PIXI.Texture.fromFrame('PsychicAttack_Cube_' + PadZerosLeft( i, 4 ) + '.png') );
 	}
 
-	this.m_BoundAttack = this.Attack.bind(this);
-	window.addEventListener( "keydown", this.m_BoundAttack );
+	this.m_rgHealingFrames = [];
+	for ( var i = 1; i < 7; ++i ) {
+		this.m_rgHealingFrames.push( PIXI.Texture.fromFrame('plusfr' + i + 'b.png') );
+	}
+
+	if ( !this.m_bAllySalien )
+	{
+		this.m_BoundAttack = this.Attack.bind(this);
+		window.addEventListener( "keydown", this.m_BoundAttack );
+	}
 
 	// map bound keys to attacks
 	this.m_mapKeyCodeToAttacks = new Map();
@@ -219,12 +247,13 @@ CAttackManager.prototype.BuildAttacks = function()
 	this.BuildAttackCooldown( 'blackhole' );
 	this.BuildAttackCooldown( 'flashfreeze' );
 
-	if ( gSalien.m_BodyType == 'slime' )
+
+	if ( this.m_Salien.m_BodyType == 'slime' )
 	{
 		this.BuildAttackCooldown( 'slimeattack' );
 		this.m_mapKeyCodeToAttacks.set( this.m_AttackData.slimeattack.keycode, this.SlimeAttack.bind( this ) );
 	}
-	else if ( gSalien.m_BodyType == 'beast' )
+	else if ( this.m_Salien.m_BodyType == 'beast' )
 	{
 		this.BuildAttackCooldown( 'beastattack' );
 		this.m_mapKeyCodeToAttacks.set( this.m_AttackData.beastattack.keycode, this.BeastAttack.bind( this ) );
@@ -234,11 +263,22 @@ CAttackManager.prototype.BuildAttacks = function()
 		this.BuildAttackCooldown( 'psychicattack' );
 		this.m_mapKeyCodeToAttacks.set( this.m_AttackData.psychicattack.keycode, this.PsychicAttack.bind( this ) );
 	}
+
+	if ( this.m_bBossLevel )
+	{
+		this.m_mapKeyCodeToAttacks.set( this.m_AttackData.healing.keycode, this.HealingAttack.bind( this ) );
+		this.BuildAttackCooldown( 'healing' );
+	}
 };
 
 CAttackManager.prototype.BuildAttackCooldown = function( strType )
 {
-	this.m_mapCooldowns.set( strType, new CCooldownHandler( this, strType ) );
+	var cdhandler = new CCooldownHandler( this, strType );
+	if ( !this.m_bAllySalien )
+	{
+		cdhandler.BuildSprites();
+	}
+	this.m_mapCooldowns.set( strType, cdhandler );
 };
 
 CAttackManager.prototype.Destroy = function()
@@ -249,10 +289,27 @@ CAttackManager.prototype.Destroy = function()
 	this.m_mapBombs.forEach( function ( bomb, id ) {
 		bomb.destroy();
 	});
-	window.removeEventListener( "keydown", this.m_BoundAttack );
-	this.m_mapCooldowns.forEach( function( cooldown ) {
-		cooldown.Destroy();
+	this.m_mapSlimes.forEach( function ( item, id ) {
+		item.destroy();
 	});
+	this.m_mapBlackholes.forEach( function ( item, id ) {
+		item.destroy();
+	});
+	this.m_mapBeasts.forEach( function ( item, id ) {
+		item.destroy();
+	});
+	this.m_mapPsychicCubes.forEach( function ( item, id ) {
+		item.destroy();
+	});
+
+	if ( !this.m_bAllySalien )
+	{
+		window.removeEventListener( "keydown", this.m_BoundAttack );
+		this.m_mapCooldowns.forEach( function( cooldown ) {
+			cooldown.Destroy();
+		});
+	}
+
 };
 
 CAttackManager.prototype.Update = function( delta )
@@ -266,9 +323,13 @@ CAttackManager.prototype.Update = function( delta )
 	this.UpdateBeasts( delta );
 	this.UpdateCubes( delta );
 
-	this.m_mapCooldowns.forEach( function( cooldown ) {
-		cooldown.Update();
-	});
+	if ( !this.m_bAllySalien )
+	{
+		this.m_mapCooldowns.forEach( function( cooldown ) {
+			cooldown.Update();
+		});
+	}
+
 };
 
 CAttackManager.prototype.UpdateBoulders = function( delta )
@@ -301,7 +362,7 @@ CAttackManager.prototype.UpdateBoulders = function( delta )
 				gAudioManager.PlaySound( instance.m_AttackData.boulder.rollingsound, true );
 				boulder.x += boulder.vx * delta;
 				boulder.rotation += 0.1;
-				instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.boulder.damage, new PIXI.Rectangle( boulder.x, boulder.y - ( boulder.height / 2 ), boulder.width * 0.5, boulder.height ) );
+				instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.boulder.damage, new PIXI.Rectangle( boulder.x, boulder.y - ( boulder.height / 2 ), boulder.width * 0.5, boulder.height ), false );
 			}
 		}
 	});
@@ -420,9 +481,9 @@ CAttackManager.prototype.UpdateSlimes = function( delta )
 
 			instance.m_mapSlimes.delete( id );
 			slime.destroy();
-			gAudioManager.PlaySound( instance.m_AttackData.slimeattack.sound, false, 0.35 );
+			gAudioManager.PlaySound( instance.m_AttackData.slimeattack.sound, false, 0.25 );
 
-			instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.slimeattack.damage, new PIXI.Rectangle( splat.x - ( splat.width / 2 ), splat.y - ( splat.height / 2 ), splat.width, splat.height ) );
+			instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.slimeattack.damage, new PIXI.Rectangle( splat.x - ( splat.width / 2 ), splat.y - ( splat.height / 2 ), splat.width, splat.height ), !instance.m_bAllySalien );
 
 			splat.onComplete = function() {
 				splat.destroy();
@@ -475,6 +536,11 @@ CAttackManager.prototype.UpdateBlackholes = function( delta )
 
 			var rgEnemies = instance.m_BattleState.GetEnemiesAtLocation( new PIXI.Rectangle( blackhole.x - (blackhole.width / 2), blackhole.y - ( blackhole.height / 2 ), blackhole.width, blackhole.height ) );
 			rgEnemies.forEach( function( enemy ){
+				if ( enemy instanceof CBoss )
+				{
+					return;
+				}
+
 				if ( ( enemy.m_Sprite.x + enemy.m_Sprite.width / 2 ) < targetx )
 				{
 					enemy.m_Sprite.x += instance.m_AttackData.blackhole.strength;
@@ -557,9 +623,9 @@ CAttackManager.prototype.UpdateBeasts = function ( delta )
 			beast.play();
 
 			instance.m_mapBeasts.delete( id );
-			gAudioManager.PlaySound( instance.m_AttackData.beastattack.sound, false, 0.35 );
+			gAudioManager.PlaySound( instance.m_AttackData.beastattack.sound, false, 0.25 );
 			beast.onComplete = function() {
-				instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.beastattack.damage, new PIXI.Rectangle( beast.x - ( beast.width / 2 ), beast.y - ( beast.height / 2 ), beast.width, beast.height ) );
+				instance.m_BattleState.DamageEnemiesAtLocation( instance.m_AttackData.beastattack.damage, new PIXI.Rectangle( beast.x - ( beast.width / 2 ), beast.y - ( beast.height / 2 ), beast.width, beast.height ), !instance.m_bAllySalien );
 				beast.destroy();
 			};
 		}
@@ -622,12 +688,16 @@ CAttackManager.prototype.UpdateCubes = function ( delta )
 			});
 
 			instance.m_mapPsychicCubes.delete( id );
-			gAudioManager.PlaySound( instance.m_AttackData.psychicattack.sound, false, 0.35 );
+			gAudioManager.PlaySound( instance.m_AttackData.psychicattack.sound, false, 0.25 );
 			psychicCube.onComplete = function() {
 				psychicCube.affectedEnemies.forEach( function ( enemy ) {
 					if ( !enemy.m_bDead )
 					{
 						enemy.m_Sprite.filters = null;
+						if ( instance.m_bAllySalien && enemy instanceof CBoss )
+						{
+							return;
+						}
 						enemy.Damage( instance.m_AttackData.psychicattack.damage );
 					}
 				});
@@ -637,7 +707,7 @@ CAttackManager.prototype.UpdateCubes = function ( delta )
 	});
 };
 
-CAttackManager.prototype.Attack = function( event )
+CAttackManager.prototype.Attack = function( event, x, y )
 {
 	if ( this.m_bDisabled )
 	{
@@ -646,7 +716,7 @@ CAttackManager.prototype.Attack = function( event )
 
 		if ( this.m_mapKeyCodeToAttacks.has( event.keyCode ) )
 	{
-		this.m_mapKeyCodeToAttacks.get(event.keyCode).call();
+		this.m_mapKeyCodeToAttacks.get(event.keyCode).call( undefined, x, y );
 	}
 };
 
@@ -657,20 +727,20 @@ CAttackManager.prototype.ExplosionAttack = function()
 		return;
 	}
 
-	gSalien.PlayAnim("attack", false, 1);
+	this.m_Salien.PlayAnim("attack", false, 1);
 
 	var bomb = new PIXI.Sprite( PIXI.loader.resources['bomb'].texture );
 	bomb.scale.set( 0.5, 0.5 );
 	bomb.anchor.set( 0.5, 0.5 );
-	bomb.x = gSalien.x;
+	bomb.x = this.m_Salien.x;
 	bomb.vx = 30;
-	bomb.startx = gSalien.x;
-	bomb.y = gSalien.y - ( gSalien.height / 2 );
+	bomb.startx = this.m_Salien.x;
+	bomb.y = this.m_Salien.y - ( this.m_Salien.height / 2 );
 	bomb.targety = gApp.renderer.plugins.interaction.mouse.global.y;
 	bomb.targetx = gApp.renderer.plugins.interaction.mouse.global.x;
 	bomb.landed = false;
 
-	var xmid = gSalien.x + ( ( bomb.targetx - gSalien.x ) / 2 );
+	var xmid = this.m_Salien.x + ( ( bomb.targetx - this.m_Salien.x ) / 2 );
 	var ymid = Math.min( bomb.y, bomb.targety ) - 100;
 
 	var curve = new Bezier(bomb.x,bomb.y , xmid,ymid , bomb.targetx,bomb.targety);
@@ -679,14 +749,39 @@ CAttackManager.prototype.ExplosionAttack = function()
 	this.m_mapBombs.set( this.GetID(), bomb );
 };
 
-CAttackManager.prototype.SlimeAttack = function()
+function ResolveTarget( target, x, y )
+{
+	if ( x === undefined )
+	{
+		target.x = gApp.renderer.plugins.interaction.mouse.global.x;
+	}
+	else
+	{
+		target.x = x;
+	}
+
+
+	if ( y === undefined )
+	{
+		target.y = gApp.renderer.plugins.interaction.mouse.global.y;
+	}
+	else
+	{
+		target.y = y;
+	}
+}
+
+CAttackManager.prototype.SlimeAttack = function( x, y )
 {
 	if ( !this.m_mapCooldowns.get( 'slimeattack' ).BAttack() )
 	{
 		return;
 	}
 
-	gSalien.PlayAnim("attack", false, 1);
+	var target = { x: 0, y: 0 };
+	ResolveTarget( target, x, y );
+
+	this.m_Salien.PlayAnim("attack", false, 1);
 
 	var slime = new PIXI.extras.AnimatedSprite( this.m_rgSlimeAttackFrames );
 	slime.animationSpeed = 0.2;
@@ -694,15 +789,15 @@ CAttackManager.prototype.SlimeAttack = function()
 	slime.play();
 	slime.scale.set( 0.3, 0.3 );
 	slime.anchor.set( 0.5, 0.5 );
-	slime.x = gSalien.x;
-	slime.startx = gSalien.x;
-	slime.y = gSalien.y - ( gSalien.height / 2 );
-	slime.targety = gApp.renderer.plugins.interaction.mouse.global.y;
-	slime.targetx = gApp.renderer.plugins.interaction.mouse.global.x;
+	slime.x = this.m_Salien.x;
+	slime.startx = this.m_Salien.x;
+	slime.y = this.m_Salien.y - ( this.m_Salien.height / 2 );
+	slime.targety = target.y;
+	slime.targetx = target.x;
 	slime.landed = false;
 	slime.vx = this.m_AttackData.slimeattack.speed;
 
-	var xmid = gSalien.x + ( ( slime.targetx - gSalien.x ) / 2 );
+	var xmid = this.m_Salien.x + ( ( slime.targetx - this.m_Salien.x ) / 2 );
 	var ymid = Math.min( slime.y, slime.targety ) - 100;
 
 	var curve = new Bezier(slime.x,slime.y , xmid,ymid , slime.targetx,slime.targety);
@@ -718,7 +813,7 @@ CAttackManager.prototype.BoulderAttack = function()
 		return;
 	}
 
-	gSalien.PlayAnim("attack", false, 1);
+	this.m_Salien.PlayAnim("attack", false, 1);
 
 	var boulder = new PIXI.Sprite( PIXI.loader.resources['boulder'].texture );
 	boulder.scale.set( 0.2, 0.2 );
@@ -740,7 +835,7 @@ CAttackManager.prototype.BlackholeAttack = function()
 		return;
 	}
 
-	gSalien.PlayAnim("attack", false, 1);
+	this.m_Salien.PlayAnim("attack", false, 1);
 
 	var blackhole = new PIXI.Sprite( PIXI.loader.resources['blackhole'].texture );
 	blackhole.scale.set( 0.01, 0.01 );
@@ -764,7 +859,7 @@ CAttackManager.prototype.FlashFreezeAttack = function()
 		return;
 	}
 
-	gSalien.PlayAnim("attack", false, 1);
+	this.m_Salien.PlayAnim("attack", false, 1);
 	gAudioManager.PlaySound( this.m_AttackData.flashfreeze.sound );
 
 	var freezeGlow = new PIXI.filters.GlowFilter();
@@ -774,7 +869,11 @@ CAttackManager.prototype.FlashFreezeAttack = function()
 	freezeGlow.outerStrength = 3;
 
 	var instance = this;
-	this.m_BattleState.m_EnemyManager.m_rgEnemies.forEach( function ( enemy ) {
+	this.m_BattleState.m_EnemyManager.m_mapEnemies.forEach( function (enemy ) {
+		if ( enemy instanceof CBoss )
+		{
+			return;
+		}
 
 		if ( instance.m_mapFrozenEnemies.has( enemy.m_ID ) )
 		{
@@ -791,12 +890,15 @@ CAttackManager.prototype.FlashFreezeAttack = function()
 	});
 };
 
-CAttackManager.prototype.BeastAttack = function()
+CAttackManager.prototype.BeastAttack = function( x, y )
 {
 	if ( !this.m_mapCooldowns.get( 'beastattack' ).BAttack() )
 	{
 		return;
 	}
+
+	var target = { x: 0, y: 0 };
+	ResolveTarget( target, x, y );
 
 	var beastSprite = new PIXI.extras.AnimatedSprite( this.m_rgBeastSpawnFrames );
 	beastSprite.play();
@@ -804,19 +906,23 @@ CAttackManager.prototype.BeastAttack = function()
 	beastSprite.animationSpeed = 0.5;
 	beastSprite.scale.set( 0.3, 0.3 );
 	beastSprite.anchor.set( 0.5, 0.5 );
-	beastSprite.x = gSalien.x;
-	beastSprite.startx = gSalien.x;
-	beastSprite.y = gSalien.y - ( gSalien.height / 2 );
+	beastSprite.x = this.m_Salien.x;
+	beastSprite.startx = this.m_Salien.x;
+	beastSprite.y = this.m_Salien.y - ( this.m_Salien.height / 2 );
 	beastSprite.landed = false;
 
 	beastSprite.vx = this.m_AttackData.beastattack.speed;
 	beastSprite.vy = this.m_AttackData.beastattack.speed;
 	gApp.stage.addChild( beastSprite );
 
-	beastSprite.targetx = gApp.renderer.plugins.interaction.mouse.global.x - 20;
-	beastSprite.targety = gApp.renderer.plugins.interaction.mouse.global.y;
+	if ( this.m_bAllySalien )
+	{
+		target.x -= 100;
+	}
+	beastSprite.targetx = target.x - 20;
+	beastSprite.targety = target.y;
 
-	var xmid = gSalien.x + ( ( beastSprite.targetx - gSalien.x ) / 2 );
+	var xmid = this.m_Salien.x + ( ( beastSprite.targetx - this.m_Salien.x ) / 2 );
 	var ymid = Math.min( beastSprite.y, beastSprite.targety ) - 100;
 
 	var curve = new Bezier(beastSprite.x,beastSprite.y , xmid,ymid , beastSprite.targetx,beastSprite.targety);
@@ -824,7 +930,7 @@ CAttackManager.prototype.BeastAttack = function()
 
 	var instance = this;
 	beastSprite.onComplete = function() {
-		gSalien.PlayAnim("attack", false, 1);
+		instance.m_Salien.PlayAnim("attack", false, 1);
 		beastSprite.textures = instance.m_rgBeastAttackFrames;
 		beastSprite.stop();
 		beastSprite.animationSpeed = 1.0;
@@ -833,12 +939,15 @@ CAttackManager.prototype.BeastAttack = function()
 	};
 };
 
-CAttackManager.prototype.PsychicAttack = function()
+CAttackManager.prototype.PsychicAttack = function( x, y )
 {
 	if ( !this.m_mapCooldowns.get( 'psychicattack' ).BAttack() )
 	{
 		return;
 	}
+
+	var target = { x: 0, y: 0 };
+	ResolveTarget( target, x, y );
 
 	var psychicSprite = new PIXI.extras.AnimatedSprite( this.m_rgPsychicAttackFrames );
 	psychicSprite.stop();
@@ -846,24 +955,96 @@ CAttackManager.prototype.PsychicAttack = function()
 	psychicSprite.animationSpeed = 0.5;
 	psychicSprite.scale.set( 0.3, 0.3 );
 	psychicSprite.anchor.set( 0.5, 0.5 );
-	psychicSprite.x = gSalien.x;
-	psychicSprite.startx = gSalien.x;
-	psychicSprite.y = gSalien.y - ( gSalien.height / 2 );
+	psychicSprite.x = this.m_Salien.x;
+	psychicSprite.startx = this.m_Salien.x;
+	psychicSprite.y = this.m_Salien.y - ( this.m_Salien.height / 2 );
 	psychicSprite.landed = false;
 
 	psychicSprite.vx = this.m_AttackData.psychicattack.speed;
 	psychicSprite.vy = this.m_AttackData.psychicattack.speed;
 	gApp.stage.addChild( psychicSprite );
 
-	psychicSprite.targetx = gApp.renderer.plugins.interaction.mouse.global.x;
-	psychicSprite.targety = gApp.renderer.plugins.interaction.mouse.global.y;
+	psychicSprite.targetx = target.x - 10;
+	psychicSprite.targety = target.y;
 
-	var xmid = gSalien.x + ( ( psychicSprite.targetx - gSalien.x ) / 2 );
+	var xmid = this.m_Salien.x + ( ( psychicSprite.targetx - this.m_Salien.x ) / 2 );
 	var ymid = Math.min( psychicSprite.y, psychicSprite.targety ) - 100;
 
 	var curve = new Bezier(psychicSprite.x,psychicSprite.y , xmid,ymid , psychicSprite.targetx,psychicSprite.targety);
 	psychicSprite.lut = curve.getLUT();
 
-	gSalien.PlayAnim("attack", false, 1);
+	this.m_Salien.PlayAnim("attack", false, 1);
 	this.m_mapPsychicCubes.set( this.GetID(), psychicSprite );
+};
+
+CAttackManager.prototype.HealingAttack = function( bSkipCooldown )
+{
+	var _bSkipCooldown = false;
+	if ( bSkipCooldown !== undefined )
+	{
+		_bSkipCooldown = bSkipCooldown;
+	}
+
+	if ( !_bSkipCooldown && !this.m_mapCooldowns.get( 'healing' ).BAttack() )
+	{
+		return;
+	}
+
+	if ( !this.m_bAllySalien && this.m_BattleState.HealPlayer !== undefined )
+	{
+		if ( !bSkipCooldown )
+		{
+			this.m_BattleState.HealPlayer( this.m_AttackData.healing.damage );
+		}
+	}
+
+	var healingSprite = new PIXI.extras.AnimatedSprite( this.m_rgHealingFrames );
+	healingSprite.loop = false;
+	healingSprite.play();
+	healingSprite.animationSpeed = 0.2;
+	healingSprite.scale.set( 0.2, 0.2 );
+	healingSprite.x = this.m_Salien.x - this.m_Salien.width / 3;
+	healingSprite.y = this.m_Salien.y - this.m_Salien.height / 2;
+	healingSprite.loopcount = 0;
+	gApp.stage.addChild( healingSprite );
+
+	var instance = this;
+	healingSprite.onComplete = function() {
+		if ( this.loopcount < 2 )
+		{
+		    this.textures = instance.m_rgHealingFrames;
+			this.loopcount += 1;
+			this.play();
+		}
+		else
+		{
+			this.destroy();
+		}
+	};
+
+	if ( this.m_BattleState.m_mapAllySaliens !== undefined )
+	{
+		this.m_BattleState.m_mapAllySaliens.forEach( function ( salien ) {
+			var healingSprite = new PIXI.extras.AnimatedSprite( instance.m_rgHealingFrames );
+			healingSprite.loop = false;
+			healingSprite.play();
+			healingSprite.animationSpeed = 0.2;
+			healingSprite.scale.set( 0.2, 0.2 );
+			healingSprite.x = salien.x - salien.width / 3;
+			healingSprite.y = salien.y - salien.height / 2;
+			healingSprite.loopcount = 0;
+			gApp.stage.addChild( healingSprite );
+
+			healingSprite.onComplete = function() {
+				if (this.loopcount < 2) {
+					this.textures = instance.m_rgHealingFrames;
+					this.loopcount += 1;
+					this.play();
+				}
+				else {
+					this.destroy();
+				}
+			};
+		});
+	}
 };

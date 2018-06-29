@@ -28,7 +28,7 @@ const SHIRT_OFFSET_Y = -80;
 //////////////////////////////////////////////////////////
 // Salien - a blob of a guy with customizable parts who 
 //  uses a Spine animation.
-function CSalien(resources)
+function CSalien(resources, salienData)
 {
 	// these assets must be loaded first!
 	const rawSkeletonData = resources['saliens_rig_anim'].data;
@@ -77,7 +77,9 @@ function CSalien(resources)
 	this.m_HatSprite = null;
 	this.m_ShirtSprite = null;
 
-	this.UpdateCustomizations();
+	this.m_SalienData = salienData;
+
+	this.UpdateCustomizations( salienData );
 
 	this.PlayAnim('idle');
 }
@@ -116,25 +118,26 @@ CSalien.prototype.ClearAnimCallback = function()
 };
 
 // call this when the body is customized!
-CSalien.prototype.UpdateCustomizations = function()
+CSalien.prototype.UpdateCustomizations = function( salienData )
 {
-	this.SetBodyType(BODY_TYPES[gSalienData.body_type]);
+	this.m_SalienData = salienData;
+	this.SetBodyType(BODY_TYPES[this.m_SalienData.body_type]);
 	
-	var armType = ARM_TYPES[gSalienData.arms];
+	var armType = ARM_TYPES[this.m_SalienData.arms];
 	this.CustomizePart("arm-left", armType);
 	this.CustomizePart("arm-right", armType);
 	
-	var legType = LEG_TYPES[gSalienData.legs];
+	var legType = LEG_TYPES[this.m_SalienData.legs];
 	this.CustomizePart("leg-left", legType);
 	this.CustomizePart("leg-right", legType);
 	this.CustomizePart("leg-middle", legType);		
 	
-	var eyeType = EYE_TYPES[gSalienData.eyes];
+	var eyeType = EYE_TYPES[this.m_SalienData.eyes];
 	this.CustomizePart("eye-left", eyeType);
 	this.CustomizePart("eye-right", eyeType);
 	this.CustomizePart("eye-middle", eyeType);	
 	
-	var mouthType = MOUTH_TYPES[gSalienData.mouth];
+	var mouthType = MOUTH_TYPES[this.m_SalienData.mouth];
 	this.CustomizePart("mouth", mouthType);
 
 	// queue a load for our attachments
@@ -169,12 +172,12 @@ CSalien.prototype.CustomizePart = function(partId, imageId)
 
 CSalien.prototype.LoadAttachments = function()
 {
-	this.m_HatId = gSalienData.hat_itemid;
-	this.m_ShirtId = gSalienData.shirt_itemid;
+	this.m_HatId = this.m_SalienData.hat_itemid;
+	this.m_ShirtId = this.m_SalienData.shirt_itemid;
 
-	var hatImage = gSalienData.hat_image;
+	var hatImage = this.m_SalienData.hat_image;
 	var hatImageKey = 'salien_hat_' + this.m_HatId;
-	var shirtImage = gSalienData.shirt_image;
+	var shirtImage = this.m_SalienData.shirt_image;
 	var shirtImageKey = 'salien_shirt_' + this.m_ShirtId;
 
 	var bLoadAssets = false;
@@ -393,6 +396,75 @@ CSalien.prototype._BuildSlotDictionary = function()
 
 	// since these use lazy caching, no more work needed here
 }
+
+CSalien.prototype.AddHealthBar = function( nHealth, nMaxHealth )
+{
+	this.m_PlayerHealth = nHealth;
+	this.m_PlayerMaxHealth = nMaxHealth;
+	this.m_HealthBar = new PIXI.Container();
+	var totalBar = new PIXI.Graphics();
+	totalBar.beginFill(0x000000);
+	totalBar.drawRect(0, 0, this.width*10, 16*10 );
+	totalBar.endFill();
+	this.m_HealthBar.addChild(totalBar);
+	this.m_HealthBar.total = totalBar;
+
+	var redBar = new PIXI.Graphics();
+	redBar.beginFill(0xFF3300);
+	redBar.drawRect(0, 0, totalBar.width * ( this.m_PlayerHealth / this.m_PlayerMaxHealth ), 16*10 );
+	redBar.endFill();
+	this.m_HealthBar.x = this.width / 2 - (totalBar.width / 2);
+	this.m_HealthBar.y = this.height / 2;
+	this.m_HealthBar.addChild(redBar);
+	this.m_HealthBar.health = redBar;
+	this.addChild( this.m_HealthBar );
+};
+
+CSalien.prototype.UpdateHealth = function( nHealth, nMaxHealth )
+{
+	if ( this.m_HealthBar === undefined )
+	{
+		this.AddHealthBar( nHealth, nMaxHealth );
+	}
+	else
+	{
+		this.m_PlayerHealth = nHealth;
+		this.m_PlayerMaxHealth = nMaxHealth;
+		this.m_HealthBar.health.width = this.m_HealthBar.total.width * ( this.m_PlayerHealth / this.m_PlayerMaxHealth );
+	}
+};
+
+CSalien.prototype.AddPlayerName = function( strPlayerName )
+{
+	var maxwidth = this.width * 2;
+	this.m_PlayerName = new PIXI.Text( strPlayerName );
+	this.m_PlayerName.style = {
+		fontFamily: k_FontType,
+		fontSize: 256,
+		fontWeight: 'bold',
+		fill: 'white',
+		align: 'center',
+	};
+	this.m_PlayerName.anchor.set( 0.5, 0.5 );
+	this.m_PlayerName.x = this.width / 2;
+	this.m_PlayerName.y = 0;
+	this.addChild( this.m_PlayerName );
+};
+
+CSalien.prototype.RemoveGameObjects = function()
+{
+	if ( this.m_HealthBar !== undefined )
+	{
+		this.m_HealthBar.destroy();
+		this.m_HealthBar = undefined;
+	}
+
+	if ( this.m_PlayerName !== undefined )
+	{
+		this.m_PlayerName.destroy();
+		this.m_PlayerName = undefined;
+	}
+};
 
 //////////////////////////////////////////////////////////
 // Salien Info Box - a box showing your level and name

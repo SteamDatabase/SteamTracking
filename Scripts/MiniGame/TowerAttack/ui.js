@@ -465,9 +465,9 @@ CUI.prototype.UpdateHealthBars = function()
 {
 
 	var rgExpectedIDs = [];
-	for( var i=0; i<this.m_Game.m_rgEnemies.length; i++)
+	for(var i=0; i<this.m_Game.m_mapEnemies.length; i++)
 	{
-		var enemy = this.m_Game.m_rgEnemies[i];
+		var enemy = this.m_Game.m_mapEnemies[i];
 		rgExpectedIDs.push( enemy.m_data.id );
 		// Find the health bar
 		var bar = enemy.m_HealthBar;

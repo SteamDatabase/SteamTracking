@@ -48,7 +48,7 @@ window.CSceneGame = function()
 
 	this.m_bIsDead = false;
 
-	this.m_rgEnemies = [];
+	this.m_mapEnemies = [];
 	this.m_rgClickNumbers = [];
 
 	this.m_rgActionLog = [
@@ -392,9 +392,9 @@ CSceneGame.prototype.Tick = function()
 		}
 	}*/
 
-	for( var i=0; i<this.m_rgEnemies.length; i++)
+	for(var i=0; i<this.m_mapEnemies.length; i++)
 	{
-		this.m_rgEnemies[i].Tick();
+		this.m_mapEnemies[i].Tick();
 	}
 
 	// Tick click numbers
@@ -817,10 +817,10 @@ CSceneGame.prototype.OnGameDataUpdate = function()
 			cache: true
 		}).done(
 			function(rgResult){
-				while( instance.m_rgEnemies.length > 0 )
+				while( instance.m_mapEnemies.length > 0 )
 				{
-					instance.m_rgEnemies[0].Destroy();
-					instance.m_rgEnemies.shift();
+					instance.m_mapEnemies[0].Destroy();
+					instance.m_mapEnemies.shift();
 				}
 			}
 		);
@@ -944,10 +944,10 @@ function IndexOfObject( needle, rgHaystack )
 
 CSceneGame.prototype.FindEnemyByID = function( nID )
 {
-	for( var i=0; i < this.m_rgEnemies.length; i++ )
+	for(var i=0; i < this.m_mapEnemies.length; i++ )
 	{
-		if( this.m_rgEnemies[i].m_data.id == nID )
-			return this.m_rgEnemies[i];
+		if( this.m_mapEnemies[i].m_data.id == nID )
+			return this.m_mapEnemies[i];
 	}
 	return false;
 }
@@ -982,7 +982,7 @@ CSceneGame.prototype.UpdateEnemies = function()
 				if( this.m_rgGameData.lanes[i].enemies[j].type == 0)
 				{
 					enemy = new CEnemySpawner(this, i, j, this.m_rgGameData.lanes[i].enemies[j], this.m_strLevelName  );
-					this.m_rgEnemies.push(enemy);
+					this.m_mapEnemies.push(enemy);
 				}
 				else if( this.m_rgGameData.lanes[i].enemies[j].type == 1 )
 				{
@@ -991,30 +991,30 @@ CSceneGame.prototype.UpdateEnemies = function()
 					{
 						//console.log("Spawner is dead, manually creating this unit :(");
 						enemy = new CEnemyCreep(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
-						this.m_rgEnemies.push(enemy);
+						this.m_mapEnemies.push(enemy);
 					}
 				}
 				else if( this.m_rgGameData.lanes[i].enemies[j].type == 2 )
 				{
 					enemy = new CEnemyBoss(this, i, j, this.m_rgGameData.lanes[i].enemies[j], this.m_strLevelName );
-					this.m_rgEnemies.push(enemy);
+					this.m_mapEnemies.push(enemy);
 				}
 				else if( this.m_rgGameData.lanes[i].enemies[j].type == 3 )
 				{
 					enemy = new CEnemyMiniBoss(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
 					//enemy = new CEnemyTreasure(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
-					this.m_rgEnemies.push(enemy);
+					this.m_mapEnemies.push(enemy);
 				}
 				else if( this.m_rgGameData.lanes[i].enemies[j].type == 4 )
 				{
 					enemy = new CEnemyTreasure(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
-					this.m_rgEnemies.push(enemy);
+					this.m_mapEnemies.push(enemy);
 				}
 				else if( this.m_rgGameData.lanes[i].enemies[j].type != 1 )
 				{
 					console.log("Unknown enemy type %s!!!!", this.m_rgGameData.lanes[i].enemies[j].type);
 					enemy = new CEnemyCreep(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
-					this.m_rgEnemies.push(enemy);
+					this.m_mapEnemies.push(enemy);
 				}
 			} else if( enemy )
 			{
@@ -1065,12 +1065,12 @@ CSceneGame.prototype.UpdateEnemies = function()
 	}
 
 	// Remove any enemies we still have with invalid IDs
-	for( var i = this.m_rgEnemies.length - 1; i >= 0; i--)
+	for(var i = this.m_mapEnemies.length - 1; i >= 0; i--)
 	{
-		if( rgExpectedIDs.indexOf( this.m_rgEnemies[i].m_data.id ) == -1 || this.m_rgEnemies[i].m_bIsDestroyed )
+		if( rgExpectedIDs.indexOf( this.m_mapEnemies[i].m_data.id ) == -1 || this.m_mapEnemies[i].m_bIsDestroyed )
 		{
-			this.m_rgEnemies[i].Destroy();
-			this.m_rgEnemies.splice(i,1);
+			this.m_mapEnemies[i].Destroy();
+			this.m_mapEnemies.splice(i,1);
 		}
 	}
 
@@ -1164,10 +1164,10 @@ CSceneGame.prototype.UpdateEnemies = function()
 
 CSceneGame.prototype.GetEnemy = function(nLane, nIndex)
 {
-	for( var i=0; i<this.m_rgEnemies.length; i++)
+	for(var i=0; i<this.m_mapEnemies.length; i++)
 	{
-		if( this.m_rgEnemies[i].m_nLane == nLane && this.m_rgEnemies[i].m_nID == nIndex )
-			return this.m_rgEnemies[i];
+		if( this.m_mapEnemies[i].m_nLane == nLane && this.m_mapEnemies[i].m_nID == nIndex )
+			return this.m_mapEnemies[i];
 	}
 
 	return false;

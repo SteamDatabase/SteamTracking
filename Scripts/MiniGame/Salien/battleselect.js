@@ -235,25 +235,33 @@ CBattleSelect.prototype.Update = function(delta)
 
 					this.m_InfoBox.SetTitleText('Unclaimed'.toUpperCase());
 
-					switch(tileData.difficulty)
+					if ( tileData.boss )
 					{
-						case 3:
+						this.m_InfoBoxThreatLevel.text = 'Boss'.toUpperCase();
+						this.m_InfoBoxThreatLevel.tint = 0xff0100;
+					}
+					else
+					{
+						switch(tileData.difficulty)
 						{
-							this.m_InfoBoxThreatLevel.text = 'High'.toUpperCase();
-							this.m_InfoBoxThreatLevel.tint = 0xf07b13;
-							break;
-						}
-						case 2:
-						{
-							this.m_InfoBoxThreatLevel.text = 'Medium'.toUpperCase();
-							this.m_InfoBoxThreatLevel.tint = 0xe9d35a;
-							break;
-						}
-						default:
-						{
-							this.m_InfoBoxThreatLevel.text = 'Low'.toUpperCase();
-							this.m_InfoBoxThreatLevel.tint = 0x75e95a;
-							break;
+							case 3:
+							{
+								this.m_InfoBoxThreatLevel.text = 'High'.toUpperCase();
+								this.m_InfoBoxThreatLevel.tint = 0xf07b13;
+								break;
+							}
+							case 2:
+							{
+								this.m_InfoBoxThreatLevel.text = 'Medium'.toUpperCase();
+								this.m_InfoBoxThreatLevel.tint = 0xe9d35a;
+								break;
+							}
+							default:
+							{
+								this.m_InfoBoxThreatLevel.text = 'Low'.toUpperCase();
+								this.m_InfoBoxThreatLevel.tint = 0x75e95a;
+								break;
+							}
 						}
 					}
 
