@@ -930,6 +930,12 @@ CAttackManager.prototype.BeastAttack = function( x, y )
 
 	var instance = this;
 	beastSprite.onComplete = function() {
+		if ( !instance.m_Salien.visible )
+		{
+			this.destroy();
+			return;
+		}
+
 		instance.m_Salien.PlayAnim("attack", false, 1);
 		beastSprite.textures = instance.m_rgBeastAttackFrames;
 		beastSprite.stop();

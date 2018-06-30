@@ -498,6 +498,10 @@ CBoss.prototype.Damage = function( nAmount )
 {
 	this.m_DamageTick += nAmount;
 	CEnemy.prototype.Damage.call( this, nAmount );
+	if ( this.m_nHealth < 0 )
+	{
+		this.m_nHealth = 0;
+	}
 	this.m_HealthBar.healthText.text = ''+this.m_nHealth;
 };
 

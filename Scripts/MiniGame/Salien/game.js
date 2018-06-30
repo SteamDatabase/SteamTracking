@@ -492,6 +492,15 @@ CPlanetSelectionState.prototype.OnLoadComplete = function(loader, resources)
 		};
 		instance.m_rgPlanetSprites.push( planetSprite );
 		gApp.stage.addChild( planetSprite );
+
+		if ( planet.state.boss_zone_position !== undefined )
+		{
+			var bossSprite = new PIXI.Sprite.fromImage( 'grid_tile_boss' );
+			bossSprite.scale.set( instance.m_rgPlanetLocations[position].scale*2, instance.m_rgPlanetLocations[position].scale*2 );
+			bossSprite.x = ( planetSprite.width / 2 ) - bossSprite.width;
+			bossSprite.y = ( planetSprite.height / 2 ) - bossSprite.height;
+			planetSprite.addChild( bossSprite );
+		}
 	});
 
 	instance.m_rgConqueredPlanets.forEach( function( planet, idx ) {
