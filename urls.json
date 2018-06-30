@@ -300,6 +300,7 @@
 "Scripts/MiniGame/Salien/battleselect.js"        : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/battleselect.js?__TIME__&l=english",
 "Scripts/MiniGame/Salien/salien.js"              : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/salien.js?__TIME__&l=english",
 "Scripts/MiniGame/Salien/game.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/game.js?__TIME__&l=english",
+"Scripts/MiniGame/Salien/boss.js"                : "https://steamcommunity-a.akamaihd.net/public/javascript/saliengame/boss.js?__TIME__&l=english",
 
 "Scripts/MiniGame/Salien/levels.json"            : "https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/levels.json?__TIME__&l=english",
 "Scripts/MiniGame/Salien/enemiess.json"          : "https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/enemies.json?__TIME__&l=english",
