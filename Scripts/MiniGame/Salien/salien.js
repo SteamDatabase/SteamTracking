@@ -527,7 +527,15 @@ function CSalienInfoBox()
 	
 	this.SetName( gPlayerName );
 	this.SetLevel( '' + gPlayerInfo.level );
-	this.m_XPValueText.text = gPlayerInfo.score + " / " + gPlayerInfo.next_level_score;
+
+	if ( typeof gPlayerInfo.next_level_score != 'undefined' )
+	{
+		this.m_XPValueText.text = gPlayerInfo.score + " / " + gPlayerInfo.next_level_score;
+	}
+	else
+	{
+		this.m_XPValueText.text = gPlayerInfo.score + " / " + '???';
+	}
 }
 CSalienInfoBox.prototype = Object.create(PIXI.Container.prototype);
 CSalienInfoBox.prototype.constructor = CSalienInfoBox;
