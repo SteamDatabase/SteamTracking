@@ -689,6 +689,8 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	position:absolute;
 	z-index: 0;
 	max-width:100%;
+	top:0;
+	left:0;
 }
 
 #showcase_salien_cryotube_front {
