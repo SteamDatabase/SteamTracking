@@ -1,5 +1,5 @@
 {
-  "revision": 159,
+  "revision": 160,
   "pops": {
     "ams": {
       "desc": "Amsterdam",
@@ -113,7 +113,7 @@
       ]
     },
     "gru": {
-      "desc": "São Paulo",
+      "desc": "Sao Paulo",
       "geo": [ -46.64, -23.53 ],
       "relay_addresses": [
         "205.185.194.34:27015-27052",
