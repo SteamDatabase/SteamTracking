@@ -107,7 +107,7 @@ body.flat_page {
     border: 2px solid #DDDDDD65;
 }
 
-.type_name {
+.salien_type_name {
     color:white;
 }
 
@@ -383,6 +383,174 @@ body.flat_page {
 	background-size: cover;
 }
 
+.flat_page.game_over .responsive_page_template_content {
+	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/bg2.jpg) top center no-repeat;
+	background-size: cover;
+}
+
+.stats_section {
+	max-width: 940px;
+	width: 100%;
+	color: #dddddd;
+	margin: 0 auto 30px auto;
+}
+
+.maimed_duldrumz {
+	float: right;
+	width: 455px;
+	height: 497px;
+	top: 0;
+	margin-right: -50px;
+	margin-bottom: -90px;	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/saliengame/faq/DuldrumzOw.png) center center no-repeat;
+}
+
+.stats_section h1 {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: #dbc017;
+	font-size: 32px;
+	text-transform: uppercase;
+	text-shadow: 0px 3px 2px #00000040;
+	max-width: 650px;
+	padding: 2.5em 0 0.5em;
+	margin-right: -140px;
+	overflow: auto;
+}
+
+.stats_section_blurb {
+	color: #85c5ed;
+	margin-bottom: 3em;
+}
+
+.stats_section_thanks_container {
+	text-align: center;
+}
+
+.stats_section_thanks {
+	display: inline-block;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.stats_section_thanks div {
+	float: left;
+}
+
+.stats_section_thanks .left, .stats_section_thanks .right {
+	height: 50px;
+	width: 10px;
+	border: 1px solid #67a3c7;
+}
+
+.stats_section_thanks .left {
+	border-right: none;
+}
+
+.stats_section_thanks .content {
+	padding: 11px 5px;
+}
+
+.stats_section_thanks .right {
+	border-left: none;
+}
+
+.stats_quick_global_stats {
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	margin-top: 0.5em;
+}
+
+.stats_quick_global_stats strong {
+	font-weight: bold;
+}
+
+.stats_your_stats {
+	margin-top: 3em;
+	width: 940px;
+}
+
+.salien_container {
+	display: inline-block;
+}
+
+.stats_your_stats .showcase_salien {
+	position: relative;
+}
+
+#showcase_salien_cryotube_back {
+	left: 0;
+}
+
+.salien_stats_right {
+	display: inline-block;
+	width: 807px;
+	vertical-align: bottom;
+	margin-left: -22px;
+}
+
+.salien_stats_heading {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			display: inline-block;
+	font-size: 18px;
+	text-transform: uppercase;
+	max-width: 400px;
+	background: white;
+	color: black;
+	padding: 10px;
+	padding-left: 20px;
+	height: 27px;
+}
+
+.salien_stats {
+	background: black;
+	color: white;
+	padding: 10px 30px;
+	text-align: center;
+}
+
+.stat {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 160px;
+	margin: 0 15px;
+}
+
+.stat_value {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+.stat_name {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #d8d8d8;
+	text-align: center;
+	max-width: 90px;
+}
+
+.cryopod_showcase_link {
+	font-size: 10px;
+	font-style: italic;
+	font-weight: normal;
+	margin: 0 25px;
+}
+
+.cryopod_showcase_link a {
+	color: #67c1f5;
+}
+
 .spacer {
 	height: 25px;
 }
@@ -404,6 +572,16 @@ body.flat_page #footer, body.headerless_page #footer {
 {
 	.salien_backstory blockquote {
 		margin: 10px;
+	}
+}
+
+@media screen and ( max-width: 893px )
+{
+	.maimed_duldrumz {
+		background-size: cover;
+		width: 227px;
+		height: 248px;
+		right: 25px;
 	}
 }
 
@@ -436,4 +614,11 @@ body.flat_page #footer, body.headerless_page #footer {
 		order: 2;
 	}
 
+}
+
+@media screen and ( max-width: 420px )
+{
+	.maimed_duldrumz {
+		display: none;
+	}
 }

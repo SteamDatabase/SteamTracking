@@ -641,6 +641,114 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	line-height: 52px;
 }
 
+#showcase_salien_body {
+	position:absolute;
+	z-index: 0;
+	max-width:100%;
+}
+
+#showcase_salien_arms {
+	position:absolute;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_eyes {
+	position:absolute;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_legs {
+	position:absolute;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_mouth {
+	position:absolute;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_shirt {
+	position:absolute;
+	top:16.25%;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_hat {
+	position:absolute;
+	top:-1.85%;
+	z-index: 1;
+	max-width:100%;
+}
+
+#showcase_salien_cryotube_back {
+	position:absolute;
+	z-index: 0;
+	max-width:100%;
+}
+
+#showcase_salien_cryotube_front {
+	position:absolute;
+	z-index: 1;
+	max-width:100%;
+	display:block;
+}
+
+.showcase_salien_cont {
+	float: left;
+	width: 76.6%;
+	height: 100%;
+	display: block;
+	position: relative;
+	top: 15%;
+	left: 11%;
+}
+
+.showcase_salienbadge_cont {
+	float:right;
+	height: 150px;
+	white-space: nowrap;
+	margin: 1em 0;
+}
+
+.showcase_salienbadge {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.showcase_salienbadge_image {
+	vertical-align: middle;
+}
+
+.showcase_salien {
+	float:left;
+	width:150px;
+	height:275px;
+}
+
+.showcase_stats_salien_header {
+	font-size: 18px;
+	margin-bottom: 24px;
+}
+
+.showcase_salien .showcase_openslot_placeholder {
+	line-height: 275px;
+}
+
+.showcase_stats_salien {
+	float:left;
+	text-align:center;
+}
+
+.showcase_stats_row .showcase_stats_salien .showcase_stat {
+	margin-left: 20px;
+	margin-right: 20px;
+}
 
 @media screen and (max-width: 910px)
 {

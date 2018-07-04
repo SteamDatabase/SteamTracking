@@ -1,4 +1,4 @@
-
+// <script>
 
 function BindAvatarUploadControls()
 {
@@ -244,6 +244,57 @@ function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 
 	var fnOnSelect = function( Selector, game ) { fnOnChange( elSlot, eShowcase, iSlot, game ); Modal.Dismiss(); };
 	var GameSelector = new CGameSelectorProfileShowcaseGames( $Input[0], null, null, fnOnSelect );
+}
+
+function ShowcaseSalienCustomization()
+{
+	$J.ajax( {
+		url: 'https://steamcommunity.com/saliengame/ajaxcustomizesalien',
+		type: 'GET'
+	}).done( function ( data ) {
+		var $CustomizationDialog = $J( data.html );
+		ShowConfirmDialog( 'Customize Your Salien', $CustomizationDialog.show(), 'Save', 'Cancel' )
+			.done( function () {
+				var $Form = $CustomizationDialog.find( 'form' );
+				$J.ajax({
+					type: $Form.attr( 'method' ),
+					url: $Form.attr( 'action' ),
+					data: $Form.serialize()
+				}).done( function( data ) {
+					$J( '#showcase_salien_body' ).prop( 'src', $Form.find( '#salien_body' ).prop( 'src' ) );
+					$J( '#showcase_salien_eyes' ).prop( 'src', $Form.find( '#salien_eyes' ).prop( 'src' ) );
+					$J( '#showcase_salien_mouth' ).prop( 'src', $Form.find( '#salien_mouth' ).prop( 'src' ) );
+					$J( '#showcase_salien_arms' ).prop( 'src', $Form.find( '#salien_arms' ).prop( 'src' ) );
+					$J( '#showcase_salien_legs' ).prop( 'src', $Form.find( '#salien_legs' ).prop( 'src' ) );
+					if ( parseInt( $Form.find( "input:radio[name='salien_hat']:checked" ).val() ) != 0 )
+					{
+						if ( $J( '#showcase_salien_hat' ).length )
+						{
+							$J( '#showcase_salien_hat' ).prop( 'src', $Form.find( '#salien_hat' ).prop( 'src' ) );
+						}
+						else
+						{
+							$J( '#showcase_salien_mouth' ).after( '<img id="showcase_salien_hat" src="' + $Form.find( '#salien_hat' ).prop( 'src' ) + '">' );
+						}
+					}
+					if ( parseInt( $Form.find( "input:radio[name='salien_hat']:checked" ).val() ) != 0 )
+					{
+						if ( $J( '#showcase_salien_shirt' ).length )
+						{
+							$J( '#showcase_salien_shirt' ).prop( 'src', $Form.find( '#salien_shirt' ).prop( 'src' ) );
+						}
+						else
+						{
+							$J( '#showcase_salien_mouth' ).after( '<img id="showcase_salien_shirt" src="' + $Form.find( '#salien_shirt' ).prop( 'src' ) + '">' );
+						}
+					}
+				}).fail( function( data ) {
+					ShowAlertDialog( 'Customize Your Salien', 'There was an error loading your Salien, please try again in a few minutes.' );
+				});
+			});
+	}).fail( function () {
+		ShowAlertDialog( 'Customize Your Salien', 'There was an error loading your Salien, please try again in a few minutes.' );
+	});
 }
 
 function SetShowcaseGame( elSlot, eShowcase, iSlot, game )
