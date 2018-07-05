@@ -97,7 +97,7 @@ var CWishlistController = function()
 	$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_1"> '+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[0] ) )+'</label>');
 	$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_2"> '+"Less than %1$s".replace(/%1\$s/g,GStoreItemData.fnFormatCurrency( g_rgPriceBrackets[1] ) )+'</label>');
 	if( g_nWalletCents > 0 )
-		$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_wallet"> Less than Steam Wallet balance</label>');
+		$elPriceCtn.append('<label><input class="filter_check" type="checkbox" name="price_wallet"> '+"Less than Steam Wallet balance"+'</label>');
 
 	// Hook up filter checkboxes
 	$J('.filter_check').change(function(){
@@ -289,7 +289,7 @@ CWishlistController.prototype.BuildElements = function()
 				strTags += '<div class="tag" data-tag-index="'+i+'">'+rgAppInfo.tags[i]+'</div>';
 			}
 
-			var strEarlyAccess = rgAppInfo.early_access ? '<span class="earlyaccess">Early Access</span>' : '';
+			var strEarlyAccess = rgAppInfo.early_access ? '<span class="earlyaccess">'+"Early Access"+'</span>' : '';
 			var strPurchaseArea = '<div class="purchase_area">' + ( rgAppInfo['subs'][0] ? rgAppInfo['subs'][0]['discount_block'] : '' );
 			var strInCartLabel = ( GDynamicStore.s_rgAppsInCart[ wishlist.appid ] ) ? "In Cart" : "Add to Cart";
 
@@ -301,7 +301,7 @@ CWishlistController.prototype.BuildElements = function()
 				.replace(/%4\$s/g,strInCartLabel);
 			}
 			else if( rgAppInfo['prerelease'] )
-				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>Coming soon</span></a>';
+				strPurchaseArea = '<a class="coming_soon_link" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"Coming soon"+'</span></a>';
 			else if( rgAppInfo['free'] )
 			{
 				var strURL = 'steam://run/%1$s';
@@ -315,7 +315,7 @@ CWishlistController.prototype.BuildElements = function()
 					.replace ( /%3\$s/g, rgAppInfo['type'] == 'Game' ? "Play now" : "Watch Now" )
 			}
 			else
-				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>View Details</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
+				strPurchaseArea += '<a class="btnv6_blue_blue_innerfade btn_medium noicon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span>'+"View Details"+'</span></a><a class="btnv6_blue_blue_innerfade btn_medium icon" href="'+GStoreItemData.GetAppURL(  wishlist.appid , 'wishlist_details')+'"><span><img class="ico_cart" src="https://steamstore-a.akamaihd.net/public/images/v6/ico/wishlist/ico_info.png"></span></a></div>';
 
 
 
