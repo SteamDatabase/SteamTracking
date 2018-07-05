@@ -810,7 +810,7 @@ function ShowAvatarHandle()
 	elOverlay.append( elButton );
 	$container.append( elOverlay );
 
-	var elOptions = $J('<form class="edit_options"><p>'+"Edit the Steam community group Avatar. Your role must have '..edit group description and avatar?' permissions to change the image."+'</p></form>');
+	var elOptions = $J('<form class="edit_options"><p>'+"Edit your logo here, which also replaces the Steam community group Avatar. Your role must have '..edit group description and avatar?' permissions within your group to change the image.<br><br>Image should be a 184px x 184px .jpg or .png"+'</p></form>');
 
 	var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
 	elCancel.on('click', function(){
