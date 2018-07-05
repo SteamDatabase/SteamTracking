@@ -151,6 +151,14 @@
 	opacity: 0.3;
 }
 
+.search_result_row.ds_flagged.ds_has_excluded_tags .col.search_capsule,
+.search_result_row.ds_flagged.ds_has_excluded_tags .platform_img {
+	opacity: 0.05;
+}
+.search_result_row.ds_flagged.ds_has_excluded_tags .responsive_search_name_combined {
+	opacity: 0.0;
+}
+
 .search_result_row .col.search_released {
 	width: 85px;
 	color: #4c6c8c;

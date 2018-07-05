@@ -42,6 +42,9 @@ GDynamicStore = {
 	s_rgCurations: {},
 	s_rgCreatorsFollowed: {},
 
+	s_preferences: {},
+	s_rgExcludedTags: {},
+
 	s_rgPersonalizedBundleData: {},
 	s_rgPlaytestData: {},
 
@@ -179,6 +182,16 @@ GDynamicStore = {
 
 					GDynamicStore.s_rgPlaytestData.available_tests = GDynamicStore.s_rgPlaytestData.available_tests;
 					GDynamicStore.s_rgPlaytestData.previous_active_tests = fnConvertToMap( GDynamicStore.s_rgPlaytestData.previous_active_tests );
+				}
+
+				GDynamicStore.s_preferences = data.preferences || {};
+				if ( data.rgExcludedTags && data.rgExcludedTags.length > 0 )
+				{
+					for ( var i = i = 0; i < data.rgExcludedTags.length; ++i )
+					{
+						var tag = data.rgExcludedTags[i];
+						GDynamicStore.s_rgExcludedTags[tag.tagid] = tag.name;
+					}
 				}
 
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
@@ -419,6 +432,7 @@ GDynamicStore = {
 			var bOwned = false;
 			var bWanted = false;
 			var bInCart = false;
+			var bIgnored = false;
 
 			var unBundleID = $El.data('dsBundleid');
 			var unPackageID = $El.data('dsPackageid');
@@ -457,6 +471,8 @@ GDynamicStore = {
 					bInCart = true;
 				else if ( GDynamicStore.s_rgOwnedPackages[unPackageID] )
 					bOwned = true;
+				else if ( GDynamicStore.s_rgIgnoredPackages[unPackageID] )
+					bIgnored = true;
 			}
 
 			if ( strAppIDs && typeof strAppIDs == 'string' && strAppIDs.indexOf( ',' ) >= 0 )
@@ -501,9 +517,13 @@ GDynamicStore = {
 					bOwned = true;
 				else if ( GDynamicStore.s_rgWishlist[unAppID] )
 					bWanted = true;
+				else if ( GDynamicStore.s_rgIgnoredApps[unAppID] )
+					bIgnored = true;
 
 				GDynamicStore.s_ImpressionTracker.RegisterElement( this );
 			}
+
+			var rgExcludedTagNames = GDynamicStore.GetExcludedTagsOverlap( $El );
 
 			if ( !$El.hasClass('ds_no_flags') )
 			{
@@ -518,11 +538,21 @@ GDynamicStore = {
 					$El.addClass( 'ds_flagged ds_wishlist' );
 					$El.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 				}
+				else if ( bIgnored )
+				{
+					$El.addClass( 'ds_flagged ds_ignored' );
+				}
 
 				if ( bInCart )
 				{
 					$El.addClass( 'ds_flagged ds_incart' );
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
+				}
+
+				if ( rgExcludedTagNames.length != 0 )
+				{
+					$El.addClass( 'ds_flagged ds_has_excluded_tags' );
+					$El.append( '<div class="ds_flag ds_has_excluded_tags_flag">HAS EXCLUDED TAGS:&nbsp;' + rgExcludedTagNames.join(", " ) + '</div>' );
 				}
 
 				if( g_AccountID && unAppID && $El.data('ds-options') !== 0 ) // Only add if we have an appid
@@ -571,6 +601,7 @@ GDynamicStore = {
 
 			var bIgnored = false;
 			var bOnWishlist = false;
+			var bFilteredByContentPreferences = false;
 
 			for( var i = 0; i < rgAppIds.length; i++ )
 			{
@@ -962,6 +993,36 @@ GDynamicStore = {
 		return Object.keys(GDynamicStore.s_rgIgnoredApps).length;
 	},
 
+	BIsFilteredByPreferences: function( $e )
+	{
+		if ( $e.data( 'dsHasAdultContentSex' ) && GDynamicStore.s_preferences['hide_adult_content_sex'] )
+		{
+			return true;
+		}
+		if ( $e.data( 'dsHasAdultContentViolence' ) && GDynamicStore.s_preferences['hide_adult_content_violence'] )
+		{
+			return true;
+		}
+		return false;
+	},
+
+	GetExcludedTagsOverlap: function( $e )
+	{
+		var rgOverlappingTagNames = [];
+		var rgTagIDs = $e.data( 'dsTagids' );
+		if ( rgTagIDs && rgTagIDs.length > 0 )
+		{
+			for ( var i = 0; i < rgTagIDs.length; ++i )
+			{
+				var tagid = rgTagIDs[i];
+				if ( GDynamicStore.s_rgExcludedTags[tagid] )
+				{
+					rgOverlappingTagNames.push( GDynamicStore.s_rgExcludedTags[tagid] );
+				}
+			}
+		}
+		return rgOverlappingTagNames;
+	},
 
 	BIsAppOnWishlist: function( appid )
 	{
