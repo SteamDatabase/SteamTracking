@@ -1351,6 +1351,23 @@ a#store_search_link img {
 	white-space: nowrap;
 }
 
+.tab_item .release_date {
+	width: 85px;
+	color: #4c6c8c;
+	text-align: right;
+	font-size: 11px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	position: absolute;
+	top: 7px;
+	right: 16px;
+}
+.tab_item.focus .release_date {
+	right: 30px;
+}
+
+
 .dailydeal_ctn {
 	padding: 16px;
 	background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);background: linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);	position: relative;
@@ -3189,7 +3206,8 @@ body.v6 .recommendation_mainsection h2 {
 body.v6 .home_page_content h2 span.right,
 body.v6 .recommendation_section h2 span.right,
 body.v6 .recommendation_mainsection h2 span.right,
-body.v6 .user_reviews_header span.right {
+body.v6 .user_reviews_header span.right,
+body.v6 .bucket h2 span.right{
 	float: right;
 	text-transform: none;
 	letter-spacing: normal;
