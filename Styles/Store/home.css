@@ -2342,7 +2342,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);background: l
 /* Recommended creators widget */
 
 .recommended_creators_ctn {
-	margin: 30px auto 45px auto;
+	margin: 20px auto 25px auto;
 }
 
 .recommended_creators_ctn .store_capsule {

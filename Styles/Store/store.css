@@ -2809,6 +2809,15 @@ a.cluster_capsule:hover {
 	bottom: 3px;
 }
 
+.home_right_btn {
+	float: right;
+	margin-top: 27px;
+}
+
+.live_streams_ctn {
+	margin-top: 50px;
+}
+
 #live_streams_carousel {
 	margin-top: 10px;
 	padding-bottom: 5px;
