@@ -4772,6 +4772,7 @@
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::AllocNode()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::CUtlHashMap()
@@ -6506,6 +6507,7 @@
  T vgui::HTML::CHTMLIMEBar::~CHTMLIMEBar()
  T vgui::HTML::ChainToAnimationMap()
  T vgui::HTML::ChainToMap()
+ T vgui::HTML::ClearRegisteredJSMethods()
  T vgui::HTML::CompositionString(wchar_t const*)
  T vgui::HTML::DismissJSDialog(int)
  T vgui::HTML::ExitFullScreen()
