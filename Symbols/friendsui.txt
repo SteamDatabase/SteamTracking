@@ -12319,6 +12319,7 @@
  T vgui::Frame::PanelMessageFunc_OnWindowMaximized::InitVar()
  T vgui::Frame::PanelMessageFunc_OnWindowRestored::InitVar()
  T vgui::Frame::PerformLayout()
+ T vgui::Frame::SetAlpha(int, bool)
  T vgui::Frame::SetCaptionBounds(int, int, int, int)
  T vgui::Frame::SetClientInset(int, int)
  T vgui::Frame::SetClipToParent(bool)

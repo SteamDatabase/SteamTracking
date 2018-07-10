@@ -6263,6 +6263,7 @@
  T vgui::Frame::PanelMessageFunc_OnWindowMaximized::InitVar()
  T vgui::Frame::PanelMessageFunc_OnWindowRestored::InitVar()
  T vgui::Frame::PerformLayout()
+ T vgui::Frame::SetAlpha(int, bool)
  T vgui::Frame::SetClipToParent(bool)
  T vgui::Frame::SetCloseButtonEnabled(bool)
  T vgui::Frame::SetCloseButtonVisible(bool)
