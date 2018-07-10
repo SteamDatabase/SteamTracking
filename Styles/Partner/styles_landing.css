@@ -290,11 +290,13 @@ body{
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	background-color: #333333;
+	background-color: rgba(255,255,255,0.1);
+	box-shadow: 1px 1px 0px rgba(255,255,255,0.1);
+	border: 1px #000 solid;
 }
 
 	.filterText.blur {
-		color: #777;
+		color: rgba(255, 255, 255, 0.3);
 		font-style: italic;
 	}
 
@@ -454,6 +456,12 @@ body{
 	margin-left: 0;
 }
 
+.subhead {
+	color: #b0b5bf;
+	font-size: 14px;
+	margin-left: 0;
+}
+
 p.notice {
 	color: #e66e34;
 	font-size: 14px;
@@ -556,7 +564,7 @@ p {
 	}
 
 		.landingTable a.tr:hover .td, .landingTable .tr.highlightHover:hover .td {
-			background-color: #3d3e3e;
+			background-color: rgba(255,255,255,0.15);
 		}
 
 		.landingTable .tr.selected {
@@ -586,12 +594,11 @@ p {
 		}
 
 	.landingTable th, .landingTable .th {
-		font-size: 9px;
+		font-size: 10px;
 		text-transform: uppercase;
-		background-color: #1f1f1f;
+		background-color: rgba(255,255,255,0.2);
 		padding: 6px;
-		font-weight: normal;
-		color: #808285;
+		color: #93979a;
 		display: table-cell;
 	}
 
@@ -995,6 +1002,10 @@ h2.incomplete {
 	bottom: 0;
 	left: 0;
 	right: 0;
+}
+
+.modal_content_ctn {
+	margin-bottom: 8px;
 }
 
 .inlineLabel, .inputLabelContent

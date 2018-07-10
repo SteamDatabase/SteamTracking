@@ -58,7 +58,7 @@ ul.bullets li {
 }
 
 .grayRule {
-	border-top: 1px solid gray;
+	border-top: 1px solid rgba(255,255,255,0.2);
 }
 
 .btn_green_white_innerfade.btn_border_2px.btn_medium.wide {

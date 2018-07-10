@@ -1387,6 +1387,28 @@ function RemoveGiveawayAdmin( giveawayname, giveawayid )
 	} );
 }
 
+// Set the giveaway to a delete state, we are are permitted
+function SetGiveawayToDeletedState( giveawayname, giveawayid )
+{
+	var dialog = ShowConfirmDialog( "Are you sure?", "Delete the giveaway '%1$s'. Allowed before prizes have been awarded. Once deleted it is no longer visible in the partner site (its gone forever)".replace('%1$s', giveawayname ) );
+	dialog.done( function() {
+		var dialogWait = ShowBlockingWaitDialog( "Please Wait", "Removing giveaway..." );
+
+		$J.ajax({
+			type: "POST",
+			url: "https://partner.steamgames.com/giveaways/clone/" + giveawayid,
+			data: { 'sessionid' : g_sessionID },
+			dataType: 'json',
+			error: function( response )
+			{
+				dialogWait.Dismiss();
+				ShowAlertDialog( "Error", "Failed to clone Giveaway" );
+			},
+			success: function( response ) { ReloadGiveawayOverviewPage(); },
+		});
+	} );
+}
+
 // Duplicate the giveaway admin. If you own the giveaway then you get to keep the prizes. If it is cloning someone else, then you get an empty version.
 function CloneGiveawayAdmin( giveawayname, giveawayid )
 {
