@@ -3058,6 +3058,14 @@ background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);background: l
 	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
 }
 
+.tab_item.focus .tab_item_details span.platform_img.streaming360video {
+	background-image: url( '/public/images/v6/icon_streamingvideo_v6_dark.png' );
+}
+
+.tab_item.focus .tab_item_details span.platform_img.streamingvideoseries {
+	background-image: url( '/public/images/v6/icon_streamingvideoseries_v6_dark.png' );
+}
+
 .tab_item.focus .tab_item_details span.platform_img.htcvive {
 	background-image: url( '/public/images/v6/icon_platform_htcvive_dark.png' );
 }

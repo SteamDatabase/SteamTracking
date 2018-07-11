@@ -58,6 +58,11 @@
 	background-image: url( "file://{images}/store/icon_platform_streamingvideo.png" );
 }
 
+.StreamingVideoSeriesLogo
+{
+	background-image: url( "file://{images}/store/icon_platform_streamingvideoseries.png" );
+}
+
 .Streaming360VideoLogo
 {
 	background-image: url( "file://{images}/store/icon_platform_streaming360video.png" );
