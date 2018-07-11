@@ -4165,7 +4165,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .chatImageContainer .LoadingImage
 {
 	padding: 12px;
-	max-width: 600px;
+	max-width: 1280px;
 	border: 1px dashed rgba( 58, 176, 255, 0.15 );
 	box-shadow: 2px 3px 14px 1px #00000066 inset;
 	background-color: #0001;
@@ -4596,7 +4596,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	color: black;
 	cursor: default;
 	padding: 8px;
-	margin-bottom: 16px;
+	margin: 8px 0px 8px 0px;
 	background: linear-gradient( to right, rgba( 87, 92, 104, 0.3 ) 40%, rgba( 87, 92, 104, .05 ) 100% );
 	color: rgb( 192, 192, 192 );
 	font-family: "Motiva Sans", Helvetica, Arial, sans-serif;
@@ -5563,6 +5563,7 @@ input.InviteFriendToChatDialog_LinkInput
 	box-shadow: 0px 0px 8px rgba( 0, 0, 0, 0.1 );
 	border-radius: 8px;
 	cursor: pointer;
+	overflow: hidden;
 }
 
 .ChatMessageTweet_Header
@@ -7939,6 +7940,7 @@ html.web_chat_frame .perf_timing_area
 .chatWindow.MultiUserChat .msg.ChatMsgSlashEmote .speaker
 {
 	line-height: 22px;
+	overflow: hidden;
 }
 
 .SpeakerLineBreak
@@ -8454,6 +8456,12 @@ html.web_chat_frame .perf_timing_area
 	cursor: pointer;
 }
 
+.ChatMessageBlockDelete
+{
+
+}
+
+
 .ChatMessageBlockDelete svg path
 {
 	stroke: #888;
@@ -8745,7 +8753,6 @@ html.web_chat_frame .perf_timing_area
 .msgText
 {
 	color: rgb( 193, 198, 207 );
-	max-width: 950px;
 	overflow: hidden;
 }
 
@@ -9959,6 +9966,11 @@ img.emoticon
 	text-overflow: ellipsis;
 }
 
+.mentionDialog:focus
+{
+	outline: none;
+}
+
 .mentionSearchText
 {
 	color: #818181;
@@ -10001,6 +10013,7 @@ span.mentionSearchMatch
 {
 	color: rgb( 180, 180, 180 );
 	margin-right: 2px;
+
 }
 
 .me .MentionAtSymbol
@@ -10038,29 +10051,23 @@ span.mention
 	border-bottom-left-radius: 10px;
 	display: inline-block;
 	background: linear-gradient( to bottom right, rgba( 219, 145, 75, 0.5 ) 0%, rgba( 219, 145, 75, 0.3 ) 2px, rgba( 219, 145, 75, 0.3 ) 2px, rgba( 219, 145, 75, .1 ) 100% );
-	padding: 0px 4px 2px 3px;
-	margin-bottom: -5.5px;
+	padding: 0px 4px 0px 3px;
 	cursor: default;
-	line-height: 16px;
-	box-shadow: 1px 1px 3px 0 rgba( 0, 0, 0, .2 );
+	line-height: 18px;
 	color: rgb( 192, 166, 101 );
 	font-weight: 100;
-	/*E*/
 	background: rgb( 49, 50, 54 );
 	color: rgb( 141, 141, 141 );
 	border: 0.5px solid rgb( 87, 87, 87 );
 	max-width: 200px;
-	max-height: 16px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+	vertical-align: bottom;
 }
 
 span.mention.me
 {
-	background: linear-gradient( to bottom, rgba( 253, 187, 4, 0.9 ) 0%, rgba( 253, 187, 4, 0.856 ) 1px, rgba( 244, 188, 0, .3 ) 100% );
-	text-shadow: 1px 1px 2px #00000033;
-	/*E*/
 	background: rgb( 107, 112, 128 );
 	color: white;
 	border: 0.5px solid rgb( 123, 147, 167 );
@@ -10368,7 +10375,7 @@ span.mention.me
 
 .WebConnectionTrouble .ConnectionTroubleContent
 {
-
+	justify-content: space-between;
 }
 
 .errorMessageContainer
@@ -10442,6 +10449,7 @@ span.mention.me
 .ConnectionTroubleContent .ReconnectWaitMessage
 {
 	/*margin-bottom: 24px;*/
+	flex: 1;
 }
 
 .ConnectionTroubleContent .ReconnectNow
@@ -11852,8 +11860,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	border-radius: 10px;
 	padding: 8px;
 	box-shadow: 0px 0px 8px rgba( 0, 0, 0, 0.1 );
-	margin-bottom: 12px;
-	display: inline-block;
+	margin: 8px 0px 8px 0px;
 	position: relative;
 	max-width: 640px;
 }
@@ -12446,7 +12453,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 {
 	display: flex;
 	margin-top: 4px;
-	height: 22px;
+	min-height: 22px;
+	flex-wrap: wrap;
 }
 
 .ChatRoomListGroupItem .membersInVoice .SVGIcon_VoiceRoom
@@ -12506,9 +12514,9 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .ChatRoomListGroupItem .membersInVoice .voiceChatGroup
 {
-	margin-right: 8px;
+	margin-right: 4px;
 	box-shadow: 0px 1px 6px rgba( 0, 0, 0, 0.61 );
-	height: 20px;
+	min-height: 20px;
 	border: 1px solid rgb( 100, 112, 91 );
 	overflow: hidden;
 	border-radius: 3px;
@@ -12516,6 +12524,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	display: flex;
 	align-items: center;
 	cursor: default;
+	margin-bottom: 4px;
+	flex-wrap: wrap;
 }
 
 .groupNameStatusContainer
@@ -15299,6 +15309,11 @@ a.general_btn:hover
 .EmoticonSuggestion .emoticon
 {
 	margin-right: 12px;
+}
+
+.SlashCommandSuggestion
+{
+	margin-left: -14px;
 }
 
 .SlashCommandSuggestion_SlashCommand
