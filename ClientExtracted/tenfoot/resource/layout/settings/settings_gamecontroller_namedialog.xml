@@ -19,9 +19,10 @@
 				   textinputdoneactionstring="#UI_Yes"
 				   textinputclass="HalfWidth DockRight AppearFromBottomCenter"
 				   />					
-				 <Label class="MsgBoxContents" text="#SettingsController_ShareExample" />
-			
-				<Panel class="ControllerNameButtons">	
+				  <Label class="MsgBoxContents" text="#SettingsController_ShareExample" />
+          <Label class="MsgBoxContents" text="#SettingsController_ControllerType" />
+          <DropDown id="SettingsSteamController_ControllerType" class="MsgBoxContents" />
+          <Panel class="ControllerNameButtons">	
 					<Button id="ButtonOK" class="ButtonOK MsgBoxButton Button" onactivate="ButtonOK();">
 						<Label id="OKButtonText" text="#SettingsController_CommitUpload" />
 					</Button>

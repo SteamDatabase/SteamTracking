@@ -10,7 +10,7 @@ public:
     virtual unknown_ret ProcessStreamClientConnected(char const*) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(char const*) = 0;
     virtual unknown_ret ConnectToRemote(unsigned long long) = 0;
-    virtual unknown_ret ConnectToRemoteByIP(unsigned int, unsigned int) = 0;
+    virtual unknown_ret ConnectToRemoteAddress(char const*) = 0;
     virtual unknown_ret RefreshRemoteClients(bool) = 0;
     virtual unknown_ret GetClientPlatformTypes() = 0;
     virtual unknown_ret GetRemoteClientCount() = 0;

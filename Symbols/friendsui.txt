@@ -10613,6 +10613,7 @@
  T PKCS8_pkey_set0
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
+ T ParseIPv6Addr
  T PchPersonaState(EPersonaState)
  T PreparePanelMessageMap(vgui::PanelMessageMap*)
  T RAND_SSLeay
@@ -11071,6 +11072,8 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::IsLoopback() const
+ T netadr_t::IsValid() const
  T netadr_t::SetFromString(char const*)
  T new_JSON_parser
  T non-virtual thunk to CChatRoomDlg::AppendContextMenuItems(CSteamID, vgui::Menu*, bool)
@@ -15477,7 +15480,7 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
- b CommonKeyCode::InitKeyTranslation()::threadonce_537_40
+ b CommonKeyCode::InitKeyTranslation()::threadonce_537_41
  b CommonKeyCode::s_pKeyCodeToVirtualKey
  b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
  b CommonKeyCode::s_pVirtualKeyToKeyCode
@@ -16476,6 +16479,7 @@
  strerror
  strlen
  strncasecmp
+ strncmp
  strncpy
  strrchr
  strstr

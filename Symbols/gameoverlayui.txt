@@ -5527,7 +5527,6 @@
  T CKeyBindingsMgr::~CKeyBindingsMgr()
  T CKeyErrorContext::~CKeyErrorContext()
  T CKeySymbol::CKeySymbol(char const*)
- T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -5544,6 +5543,7 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
+ T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -9702,6 +9702,8 @@
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T IPC::WaitMultiple(unsigned int, unsigned int, IPC::ISyncObject*, ...)
+ T IPv6AddrToString
+ T IPv6IPToString
  T InitializeSpewConfig()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
@@ -9872,6 +9874,7 @@
  T OSXHelpers::GetDefaultFolderForPlatform(NSSearchPathDirectory)
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
+ T ParseIPv6Addr
  T PchLanguageToELanguage(char const*, ELanguage)
  T PchNameFromECurrencyCode(int)
  T PchNameFromEResult(int)
@@ -13954,6 +13957,7 @@
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
+ __snprintf_chk
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -14647,6 +14651,7 @@
  r .memset_pattern1
  r GetServerBrowserPingRate(int)::nServerBrowserPingRates
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
+ r IPv6IPToString.hexdigits
  r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
  r ascii_class
  r autoposstab

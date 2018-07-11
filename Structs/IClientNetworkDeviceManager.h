@@ -9,6 +9,7 @@ public:
     virtual unknown_ret IsCurrentlyConnected(unsigned int) = 0;
     virtual unknown_ret GetDeviceIP4(unsigned int, unsigned int, unsigned int*) = 0;
     virtual unknown_ret GetDeviceBroadcastIP4(unsigned int, unsigned int, unsigned int*) = 0;
+    virtual unknown_ret GetDeviceIPV6InterfaceIndex(unsigned int) = 0;
     virtual unknown_ret GetDeviceVendor(unsigned int) = 0;
     virtual unknown_ret GetDeviceProduct(unsigned int) = 0;
     virtual unknown_ret GetMacAddress(unsigned int) = 0;

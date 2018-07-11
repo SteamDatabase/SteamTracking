@@ -1047,6 +1047,7 @@
 	"SettingsController_ShareTitle"							"Share this controller definition?"
 	"SettingsController_Share"									"Please help support this controller for other users by giving it a name"
 	"SettingsController_ShareExample"						"For example, \"Logitech A710\""
+	"SettingsController_ControllerType"						"\nSelect the type of controller:"
 	"SettingsController_CommitUpload"						"Yes. Upload!"
 	"SettingsController_CommitCancel"						"No thanks."
 	"SettingsController_NoneDetected"						"No controller detected."
@@ -6595,6 +6596,14 @@
 	"controller_android"								"Android Controller"
 	"controller_switch_pro"								"Nintendo Switch Pro Controller"
 	"controller_switch_joycon_pair"						"Nintendo Switch JoyCon Pair"
+	
+	"controller_ps2"									"PlayStation 2 Controller"
+	"controller_switch_joycon"							"Nintendo Switch JoyCon"
+	"controller_switch_pro_generic"						"3rd Party Nintendo Switch Pro Controller"
+	"controller_gamecube"								"Nintendo Gamecube Controller"
+	"controller_n64"									"Nintendo 64 Controller"
+	"controller_snes"									"Super Nintendo Controller"
+	"controller_nes"									"Nintendo Classic Controller"
 
 	"KeyboardHeader_StoreSearch"	"Store search"
 	"KeyboardDetail_SearchResultCount"	"{i:searchresultcount} found"

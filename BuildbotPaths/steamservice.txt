@@ -29,6 +29,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
@@ -50,6 +51,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp

@@ -1645,6 +1645,12 @@ KeyboardShortcut .Graphic
 	color: white;
 }
 
+#SettingsControllerNameType_Dropdown
+{
+    width: 230px;
+    max-height: 320px;
+}
+
 .SettingsControllerBatteryLabel
 {
 	horizontal-align: left;
@@ -2049,21 +2055,23 @@ SettingsPanel_GameController_Binding
 	border-radius: 2px;
 }
 
-SettingsPanelGameController_NameAndCommitBinding, .SettingsPanelGameController_NameAndCommitBinding
+#SettingsSteamController_ControllerTypeDropDownMenu
 {
-	width: 100%;
-	height: 100%;
+    z-index: msgbox_zindex;
+    max-height: 320px;
+}
 
-	z-index: msgbox_zindex;
-
-	transition-property: opacity;
-	transition-duration: 0.3s !immediate;
-	transition-timing-function: linear;
-
-	animation-name: msg-box-appear;
-	animation-duration: 0.4s;
-	animation-timing-function: bigpicture-ease-in-out;
-	animation-iteration-count: 1;
+SettingsPanelGameController_NameAndCommitBinding, .SettingsPanelGameController_NameAndCommitBinding {
+    width: 100%;
+    height: 100%;
+    z-index: msgbox_zindex;
+    transition-property: opacity;
+    transition-duration: 0.3s !immediate;
+    transition-timing-function: linear;
+    animation-name: msg-box-appear;
+    animation-duration: 0.4s;
+    animation-timing-function: bigpicture-ease-in-out;
+    animation-iteration-count: 1;
 }
 
 SettingsPanelGameController_NameAndCommitBinding.Destructing, .SettingsPanelGameController_NameAndCommitBinding.Destructing
@@ -2979,10 +2987,9 @@ SettingsPanel_Display.Underscan
 	max-height: 320px;
 }
 
-#Settings_AuthorizeLocalDevice .Button
 
-{
-	margin-right: 20px;
+#Settings_AuthorizeLocalDevice .Button {
+    margin-right: 20px;
 }
 
 

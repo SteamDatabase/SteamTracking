@@ -688,7 +688,7 @@
  __tolower
  __toupper
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
- b CStringNormalization::Initialize()::threadonce_1176_24
+ b CStringNormalization::Initialize()::threadonce_1176_25
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted

@@ -878,7 +878,6 @@
  T CLocalizationToken::SharedCtor()
  T CLocalizationToken::SharedDtor()
  T CLocalizationToken::~CLocalizationToken()
- T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -895,6 +894,7 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
+ T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -2269,6 +2269,8 @@
  T IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&)
  T IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&)
  T IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&)
+ T IPv6AddrToString
+ T IPv6IPToString
  T IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&)
  T InitStackWalk()
  T InitializeSpewConfig()
@@ -2370,6 +2372,7 @@
  T PKCS7_SIGNER_INFO_get0_algs
  T PKCS8_pkey_get0
  T PKCS8_pkey_set0
+ T ParseIPv6Addr
  T PchGetRegPath(ERegKeyRoot, char const*, char const*)
  T PchNameFromEUniverse(int)
  T PchSpewGroupName(ESpewGroup)
@@ -2931,9 +2934,11 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::IsValid() const
+ T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromSocket(int)
  T netadr_t::SetFromString(char const*)
- T netadr_t::ToSockadr(sockaddr*) const
+ T netadr_t::ToSockadr(void*, unsigned long) const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::BGetCachedProcessData(unsigned int, VacProcessMonitor::ActiveProcessData_t const**) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::NGetNewEvents(unsigned int, EventHeader_t const* const**, unsigned int, void*, unsigned long) const
@@ -3150,6 +3155,7 @@
  __memcpy_chk
  __memmove_chk
  __memset_chk
+ __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -3741,6 +3747,7 @@
  r BN_value_one.data_one
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r Hex
+ r IPv6IPToString.hexdigits
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
  r _EC_IPSEC_155_ID3
@@ -3919,6 +3926,7 @@
  strlen
  strncasecmp
  strncat
+ strncmp
  strncpy
  strrchr
  strtod

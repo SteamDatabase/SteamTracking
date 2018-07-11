@@ -100,6 +100,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(fileio.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(generichash.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(interface.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(ipv6text.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(mempool.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(netadr.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libtier1_static.a(shared_memory.o)
@@ -1653,6 +1654,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/tsmempool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp

@@ -5313,6 +5313,8 @@
  T HTMLWatchSDLEvents(void*, SDL_Event*)
  T IHTMLResponses::~IHTMLResponses()
  T IPAddressCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ T IPv6AddrToString
+ T IPv6IPToString
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
  T JoiningSecureServerCall
@@ -5427,6 +5429,7 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T ParseFile(char const*, char*, bool*, characterset_s*)
  T ParseFile(char*, char*, bool*)
+ T ParseIPv6Addr
  T PasswordCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T PingCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T PlayersCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
@@ -5463,8 +5466,10 @@
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T netadr_t::BlockingResolveAndSetFromString(char const*)
+ T netadr_t::IsValid() const
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
+ T netadr_t::operator<(netadr_t const&) const
  T non-virtual thunk to CBaseGamesPage::GetInvalidServerListID()
  T non-virtual thunk to CBaseGamesPage::GetNewServerList()
  T non-virtual thunk to CBaseGamesPage::GetServer(unsigned int)
@@ -8620,6 +8625,7 @@
  __error
  __gxx_personality_v0
  __maskrune
+ __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -9193,6 +9199,7 @@
  pthread_mutex_lock
  pthread_mutex_unlock
  r .memset_pattern
+ r IPv6IPToString.hexdigits
  r protobuf_AssignDesc_htmlmessages_2eproto()::CCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLHeader_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CHTMLPageSecurityInfo_offsets_
@@ -9381,6 +9388,7 @@
  strerror
  strftime
  strlen
+ strncmp
  strncpy
  strrchr
  strstr

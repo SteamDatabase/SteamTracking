@@ -3953,7 +3953,6 @@
  T CLocalizationToken::SharedCtor()
  T CLocalizationToken::SharedDtor()
  T CLocalizationToken::~CLocalizationToken()
- T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -3970,6 +3969,7 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
+ T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -9275,6 +9275,8 @@
  T IPC::PosixSharedMemory::IsValid() const
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
+ T IPv6AddrToString
+ T IPv6IPToString
  T ImageUnreferenced::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T ImageUnreferenced::FormatEventArgs(char const*)
  T ImageUnreferenced::MakeEvent(panorama::IUIPanelClient const*, panorama::CImageProxySource*)
@@ -15464,6 +15466,7 @@
  __gxx_personality_v0
  __maskrune
  __memcpy_chk
+ __snprintf_chk
  __sprintf_chk
  __stack_chk_fail
  __stack_chk_guard
@@ -16834,6 +16837,7 @@
  r BValveDomain(char const*)::k_pchValveSoftware
  r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
+ r IPv6IPToString.hexdigits
  r arrControllers
  r ascii_class
  r base_dither_matrix

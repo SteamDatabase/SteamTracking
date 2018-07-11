@@ -1632,6 +1632,7 @@
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogInstance::_LogEvent(char const*, char*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
+ T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -4124,6 +4125,7 @@
  T HMAC_Init_ex
  T HMAC_Update
  T HasWrittenMinidumpForFileLine(char const*, unsigned int)
+ T HashItem(netadr_t const&)
  T HashStringCaseless(char const*, unsigned long)
  T I420Scale
  T I420ToARGB
@@ -4138,6 +4140,8 @@
  T IHTTPRedirectHandler::Validate(CValidator&, char const*)
  T IHTTPStreamingResponseHandler::OnRequestTransmitted(CHTTPRequestHandle*)
  T IMsgNetPacketFromCNetPacket(CNetPacket*, bool)
+ T IPv6AddrToString
+ T IPv6IPToString
  T ISSUING_DIST_POINT_free
  T IVideoYUVFrame::~IVideoYUVFrame()
  T InitCpuFlags
@@ -4279,6 +4283,7 @@
  T PROXY_CERT_INFO_EXTENSION_free
  T PROXY_CERT_INFO_EXTENSION_new
  T ParseBaseURL(CUtlString*, char const*)
+ T ParseIPv6Addr
  T PchNameFromEHTTPMethod(int)
  T PchNameFromEHTTPStatusCode(int)
  T PchNameFromEResult(int)
@@ -5223,10 +5228,13 @@
  T n_ssl3_mac
  T name_cmp
  T netadr_t::BlockingResolveAndSetFromString(char const*)
- T netadr_t::SetFromSockadr(sockaddr const*)
+ T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::IsValid() const
+ T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)
- T netadr_t::ToSockadr(sockaddr*) const
+ T netadr_t::ToSockadr(void*, unsigned long) const
  T netadr_t::ToString(char*, unsigned int, bool) const
+ T netadr_t::operator<(netadr_t const&) const
  T non-virtual thunk to CHTTPClientConnection::BVerifyCertificate(COpenSSLConnection*, COpenSSLCertificate const&)
  T non-virtual thunk to CHTTPClientConnection::HandleSSLFailure(EResult)
  T non-virtual thunk to CHTTPClientConnection::RecvPlaintext(unsigned char*, unsigned int)
@@ -5739,6 +5747,7 @@
  __memmove_chk
  __memset_chk
  __moddi3
+ __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -6584,6 +6593,7 @@
  r BN_value_one.data_one
  r COpenSSLConnection::ThreadedGetSRTPExtensionData()::kDtlsSrtpExporterLabel
  r Hex
+ r IPv6IPToString.hexdigits
  r SQR_tb
  r V_binarytohex::k_rgchHexToASCII
  r X509_CINF_aux
