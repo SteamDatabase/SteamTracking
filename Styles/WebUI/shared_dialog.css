@@ -342,6 +342,17 @@ button.DialogButton::-moz-focus-inner
 	user-select: none;
 }
 
+.DialogBodyText a
+{
+	color: #969696;
+	text-decoration: underline;
+}
+
+.DialogBodyText a:hover
+{
+	color: #ffffff;
+}
+
 .DialogLabel
 {
 	cursor: default;

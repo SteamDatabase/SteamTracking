@@ -1511,12 +1511,14 @@ and limitations under the License.
           return (
             (e.prototype.SetTarget = function(e) {
               (this.m_fnRender = e),
-                0 == this.m_rgLoadingLinks.length && this.m_fnRender();
+                0 == this.m_rgLoadingLinks.length &&
+                  (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
             (e.prototype.OnLinkLoad = function(e) {
               e.currentTarget.removeEventListener("load", this.OnLinkLoad),
                 r.b(this.m_rgLoadingLinks, e.currentTarget),
-                0 == this.m_rgLoadingLinks.length && this.m_fnRender();
+                0 == this.m_rgLoadingLinks.length &&
+                  (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
             i.c([s.a], e.prototype, "OnLinkLoad", null),
             e
@@ -1715,6 +1717,20 @@ and limitations under the License.
                     );
                   })
                 : Promise.resolve("");
+            }),
+            (e.prototype.IsMinimized = function() {
+              var e = this;
+              return this.m_popup &&
+                !this.m_popup.closed &&
+                this.m_popup.SteamClient &&
+                this.m_popup.SteamClient.Window &&
+                this.m_popup.SteamClient.Window.IsWindowMinimized
+                ? new Promise(function(t, n) {
+                    e.m_popup.SteamClient.Window.IsWindowMinimized(function(e) {
+                      t(e);
+                    });
+                  })
+                : Promise.resolve(!1);
             }),
             (e.prototype.ReleasePopup = function() {
               this.OnClose(), (this.m_popup = null);

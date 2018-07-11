@@ -358,7 +358,7 @@ function ShowcaseRecommendationPicker( elSlot, eShowcase, iSlot )
 
 function ShowcaseItemPicker( elSlot, eShowcase, iSlot, bTradableOnly )
 {
-	var url = g_rgProfileData['url'] + 'inventory/?modal=1&picker=1';
+	var url = g_rgProfileData['url'] + 'inventory/?modal=1&picker=1&showcase=1';
 
 	if ( bTradableOnly )
 		url += '&tradable_only=1';

@@ -290,7 +290,8 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 		data: {
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
-			viewertoken: _watch.m_ulViewerToken
+			viewertoken: _watch.m_ulViewerToken,
+			sessionid: g_sessionID
 		},
 		type: 'GET'
 	})
@@ -445,7 +446,8 @@ CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 		data:
 		{
 			steamid: _watch.m_ulBroadcastSteamID,
-			broadcastid: _watch.m_ulBroadcastID
+			broadcastid: _watch.m_ulBroadcastID,
+			sessionid: g_sessionID
 		},
 		type: 'GET'
 	}).done( function( data )
@@ -530,7 +532,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	}
 
 	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged",
-		{ viewer_count: data.viewer_count, title: data.title, app_title: data.app_title, appid: data.appid } );
+		{ viewer_count: data.viewer_count, title: data.title, app_title: data.app_title, appid: data.appid, permission: data.permission } );
 };
 
 function OpenBroadcastLink()
@@ -615,6 +617,7 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 		data: {
 			chatid: _watch.m_chat.GetChatID(),
 			muted: _watch.m_chat.GetMutedUsers(),
+			sessionid: g_sessionID
 		},
 		type: 'GET'
 	})
@@ -722,6 +725,7 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
 			description: data,
+			sessionid: g_sessionID
 		}
 		).done( function( json )
 		{
@@ -747,7 +751,8 @@ CBroadcastWatch.prototype.UpdateBroadcast = function()
 	{
 		steamid: _watch.m_ulBroadcastSteamID,
 		title: $J( '#BroadcastAdminTitleInput' ).val(),
-		matchid : $J( '#BroadcastAdminMatchIDInput' ).val()
+		matchid : $J( '#BroadcastAdminMatchIDInput' ).val(),
+		sessionid: g_sessionID
 	}
 
 	).done( function( json )
@@ -780,6 +785,7 @@ CBroadcastWatch.prototype.StopBroadcast = function()
 	{
 		steamid: _watch.m_ulBroadcastSteamID,
 		broadcastid : this.m_ulBroadcastID,
+		sessionid: g_sessionID
 	}
 
 	).done( function( json )
