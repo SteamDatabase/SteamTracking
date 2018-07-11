@@ -104,5 +104,14 @@ background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);background: l
 
 #widget .game_purchase_action_bg.coming_soon  h1 {
 	font-size: 20px;
-	line-height: normal;
+	line-height: 34px;
+}
+
+#widget .coming_soon_date {
+	height: 34px;
+	float: left;
+}
+
+#widget .coming_soon .btn_addtocart {
+	margin-left: 10px;
 }

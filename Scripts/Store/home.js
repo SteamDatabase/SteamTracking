@@ -339,9 +339,11 @@ GHomepage = {
 
 
 		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
-		try {
-			GSteamBroadcasts.Init();
-		} catch( e ) { OnHomepageException(e); }
+		if( window.hasOwnProperty('GSteamBroadcasts')) {
+			try {
+				GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
+			} catch (e) { OnHomepageException(e); }
+		}
 
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
 		{
@@ -1247,6 +1249,9 @@ GHomepage = {
 
 			this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
 		}
+
+		var $elTabSection = $J( '#tab_upcoming_content' );
+		this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false, only_current_platform: true, prepurchase: true } )
 
 	},
 
@@ -2969,113 +2974,4 @@ CUsabilityTracker.prototype.PostStats = function()
 jQuery( document ).ready(function( $ ) {
 	TabSelectLast();
 });
-
-
-GSteamBroadcasts = {
-	Init: function()
-	{
-		GSteamBroadcasts.Render();
-	},
-
-	Render: function()
-	{
-		if ($J('.live_streams_ctn').length == 0 )
-			return;
-
-		$J('.live_streams_ctn').hide();
-
-		// do an ajax call to get the broadcasters
-		$J.ajax( {
-			url: "https:\/\/store.steampowered.com\/broadcast\/ajaxgetpopularpartnerbroadcasts\/",
-		data: {
-			'minviews' : 1,
-		},
-		dataType: 'json',
-			type: 'GET'
-	}).done(function( data ) {
-
-		if ( data.success == 1 && data.filtered.length > 0 )
-		{
-			for( var i = 0; i < data.filtered.length; i++ )
-			{
-				var rgAppInfo = GStoreItemData.rgAppData[ data.filtered[i].appid ];
-				if ( rgAppInfo )
-				{
-					rgAppInfo.live_broadcast = true;
-
-					// update all broadcast capsules to have live tag
-					var $Capsules = $J('.broadcast_capsule[data-ds-appid=' + data.filtered[i].appid + ']' ).each( function()
-					{
-						$Icon = $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live');
-						$J(this).append( $Icon );
-					});
-				}
-			}
-
-			GStoreItemData.AddStoreItemData( data.rgAppData );
-
-			var rgFiltered = GHomepage.FilterItemsForDisplay(
-				data.filtered, 'home', 1, 6, { displayed_elsewhere: true }
-			);
-
-			var rgFiltered2 = [];
-			for ( var i = 0; i < rgFiltered.length; i++ )
-			{
-				if ( rgFiltered[i].popular )
-					rgFiltered2.push( rgFiltered[i] );
-			}
-
-			if ( rgFiltered2.length > 0 )
-			{
-				$elTarget = $J('#live_streams_carousel');
-				var $elCapsuleTarget = $J('.carousel_items', $elTarget);
-
-				var $elPageContainer = $J('<div>', { 'class': 'focus' } );
-
-				for ( var i = 0; i < rgFiltered2.length && i < 6; i++ )
-				{
-					var oItem = rgFiltered2[i];
-
-					var params = { 'class': 'store_capsule broadcast_capsule', 'href': oItem.app_link };
-
-					var rgItemData = GStoreItemData.GetCapParams( 'summer2018_live_stream', oItem.appid, 0, null, params );
-					var $CapCtn = $J('<a/>', params );
-
-					var $ImgCtn = $J('<div class="capsule headerv5"/>');
-
-					var rgImageProperties = { src: oItem.thumbnail_http_address };
-					var rgDefaultImageProperties = { src: oItem.app_capsule_image };
-
-					$ImgCtn.append( $J('<img/>', rgDefaultImageProperties ) );
-					$ImgCtn.append( $J('<img/>', rgImageProperties ) );
-					$CapCtn.append( $ImgCtn );
-
-					var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
-					$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
-
-					$Contents = $J('<div/>', {'class': 'title ellipsis' } );
-					$Contents.append( $J('<span/>').html( oItem.app_name ) );
-					$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( oItem.viewer_count ) );
-
-					$CapCtn.append( $Contents );
-					$CapCtn.append(
-						$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
-				);
-
-
-					$elPageContainer.append( $CapCtn );
-				}
-
-				$elCapsuleTarget.append($elPageContainer);
-
-				$J('.live_streams_ctn').show();
-			}
-		}
-
-	});
-
-		return;
-	}
-};
-
 

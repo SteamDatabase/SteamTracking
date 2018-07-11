@@ -1515,6 +1515,10 @@ span.platform_img.streamingvideo {
 	background-image: url('/public/images/v6/icon_streamingvideo_v6.png');
 }
 
+span.platform_img.streamingvideoseries {
+	background-image: url('/public/images/v6/icon_streamingvideoseries_v6.png');
+}
+
 span.platform_img.streaming360video {
 	background-image: url('/public/images/v6/icon_streaming360video_v6.png');
 }
@@ -2892,8 +2896,8 @@ a.cluster_capsule:hover {
 	width: 15px;
 	height: 15px;
 
-	background-color: rgba(54,97,125,1);
-	background-image: url('/public/images/v6/icon_expand.png');
+	background-color: #e5e5e5;
+	background-image: url('/public/images/v6/icon_expand_dark.png');
 	background-position: 4px 4px;
 	border-radius: 3px;
 	background-repeat: no-repeat;

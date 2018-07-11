@@ -143,12 +143,22 @@ function GetCuratorAvatarURLFromHash( hash, size )
 }
 
 
-function CuratorUploadClanImage( elForm, fnSuccessCallback )
+function CuratorUploadClanImage( elForm, fnSuccessCallback, tempname = '' )
 {
+		if( tempname.length > 0 )
+	{
+		$J('input[type=file][name=' + tempname + ']' ).attr( 'name', 'clanimage' );
+	}
+
 	var formData = new FormData(elForm);
 	formData.append('sessionid', g_sessionID);
 	formData.append('imagegroup', 2);
 	formData.append('imagename', 'header');
+
+		if( tempname.length > 0 )
+	{
+		$J('input[type=file][name=clanimage]' ).attr( 'name', tempname );
+	}
 
 	$J.ajax ( {
 		url: g_strCuratorCommunityBaseURL + '/uploadimage/',
@@ -169,7 +179,6 @@ function CuratorUploadClanImage( elForm, fnSuccessCallback )
 		{
 			ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
 		}
-
 	}).fail( function( data ) {
 		if( data && data.responseText )
 		{
@@ -183,7 +192,6 @@ function CuratorUploadClanImage( elForm, fnSuccessCallback )
 				ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
 			}
 		}
-
 	});
 }
 

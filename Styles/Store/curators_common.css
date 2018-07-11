@@ -305,8 +305,12 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 	margin-right: 12px;
 }
 .curator_hidden_page_message {
-	color: red;
-	background: black;
+	color: #fff;
+	background: #852929;
 	display: block;
 	padding: 5px;
+	text-align: center;
+}
+.curator_hidden_page_message a {
+	text-decoration: underline;
 }

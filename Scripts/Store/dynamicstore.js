@@ -1430,6 +1430,10 @@ GStoreItemData = {
 		{
 			strHTML += '<span class="platform_img streaming360video"></span>';
 		}
+		else if ( rgItemData.videoseries )
+		{
+			strHTML += '<span class="platform_img streamingvideoseries"></span>';
+		}
 		else
 		{
 			if ( rgItemData.os_windows )
@@ -1741,6 +1745,140 @@ var GDynamicStoreHelpers = {
 
 		if ( bPaginated )
 			CreateFadingCarousel( $elTarget, 0 );
+	},
+};
+
+function OnDynamicStorePageException(e)
+{
+	}
+
+GDynamicStorePage = {
+	oSettings: {},
+	oApplicableSettings: {"main_cluster":{"top_sellers":true,"early_access":true,"games_already_in_library":true,"recommended_for_you":true,"prepurchase":true,"games":"always","software":true,"dlc_for_you":true,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":"always","games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":true,"hidden":null},"new_on_steam":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"recently_updated":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":true,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"tabs":null,"specials":null,"more_recommendations":null,"friend_recommendations":null,"curators":{"top_sellers":null,"early_access":true,"games_already_in_library":true,"recommended_for_you":null,"prepurchase":null,"games":"always","software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":true,"video":true,"localized":true,"virtual_reality":true,"recommended_by_curators":null,"hidden":null},"home":{"top_sellers":null,"early_access":true,"games_already_in_library":null,"recommended_for_you":null,"prepurchase":true,"games":null,"software":true,"dlc_for_you":null,"dlc":null,"recently_viewed":null,"new_on_steam":null,"popular_new_releases":null,"games_not_in_library":null,"only_current_platform":null,"video":true,"localized":null,"virtual_reality":true,"recommended_by_curators":null,"hidden":null}},
+
+	InitUserData: function( rgParams )
+	{
+		try {
+			GDynamicStorePage.oSettings = rgParams.oSettings;
+		} catch( e ) { OnDynamicStorePageException(e); }
+	},
+
+	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
+	{
+		var nCapsules = $elElements.length;
+
+		// Get a list of appids to filter
+		var rgApps = [];
+		var rgAllAppIds = [];
+		var rgAppIds = [];
+
+		// Remove duplicates or DLC from the list
+		for( var i = 0; i < $elElements.length; i++ )
+		{
+			var $capsule = $J( $elElements[i] );
+			var unAppId = $capsule.data('ds-appid');
+
+			if( !unAppId )
+				continue;
+
+			if( unAppId.toString().indexOf(',') !== -1 )
+				unAppId = unAppId.toString().split(',')[0];
+
+			if( rgAppIds.indexOf( unAppId ) !== -1 )
+			{
+				$capsule.remove();
+				continue;
+			}
+
+			var rgAppData = GStoreItemData.rgAppData[unAppId];
+
+			// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
+			// If the user owns the base game already, only show the DLC
+			if( rgAppData && rgAppData.dlc_for_app )
+			{
+				if( !GDynamicStore.BIsAppOwned(rgAppData.dlc_for_app) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+				{
+					$capsule.remove();
+					continue;
+				}
+
+				rgAppIds.push( rgAppData.dlc_for_app );
+			}
+
+
+			rgAppIds.push( unAppId );
+			rgApps.push( { appid: unAppId } );
+		}
+
+		// Filter
+		var rgFilteredApps = this.FilterItemsForDisplay(
+			rgApps, 'home', nMin, nMax, rgFilterParams
+		);
+
+		// Now follow filters as long we we can keep 4 items in the capsule
+		for( var i = 0; i < $elElements.length; i++ )
+		{
+			var $capsule = $J( $elElements[i] );
+			var nAppId = $capsule.data('ds-appid');
+			if( !nAppId )
+				continue;
+
+			if( nAppId.toString().indexOf(',') !== -1 )
+				nAppId = nAppId.toString().split(',')[0];
+
+			// Test our filtered list
+			var bVisible = false;
+			for( var j=0; j<rgFilteredApps.length; j++)
+			{
+				if( rgFilteredApps[j].appid == nAppId )
+				{
+					bVisible = true;
+					break;
+				}
+			}
+
+			if( bVisible )
+				$capsule.removeClass('hidden');
+			else
+				$capsule.remove();
+		}
+
+
+		$elElements.parent().trigger('v_contentschanged');
+
+		//if( nCapsules < nMin && $elContainer )
+		//	$elContainer.hide();
+	},
+
+	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
+	{
+
+		var Settings = this.oSettings[strSettingsName] || {};
+		var ApplicableSettings = this.oApplicableSettings[strSettingsName] || {};
+
+		// Allow sections to have additional, section-specific settings. We'll use jQuery to shallow copy the settings
+		// object so we don't pollute future calls.
+		if( rgAdditionalSettings )
+		{
+			Settings = jQuery.extend({}, Settings, rgAdditionalSettings);
+
+			// Ensure our feature is turned on as an applicable setting
+			for( var strKey in rgAdditionalSettings )
+				rgAdditionalSettings[strKey] = true;
+
+			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
+		}
+
+		if ( this.bHideAdultContentViolence )
+			Settings = jQuery.extend({}, Settings, {hide_adult_content_violence: true});
+
+		if ( this.bHideAdultContentSex )
+			Settings = jQuery.extend({}, Settings, {hide_adult_content_sex: true});
+
+		if ( !cMaxItemsToDisplay )
+			cMaxItemsToDisplay = cMinItemsToDisplay;
+
+		return GStoreItemData.FilterItemsForDisplay( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )
 	},
 };
 
