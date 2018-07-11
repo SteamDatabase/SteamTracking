@@ -8746,6 +8746,7 @@ html.web_chat_frame .perf_timing_area
 {
 	color: rgb( 193, 198, 207 );
 	max-width: 950px;
+	overflow: hidden;
 }
 
 .msg.EmojiOnly
@@ -15298,6 +15299,16 @@ a.general_btn:hover
 .EmoticonSuggestion .emoticon
 {
 	margin-right: 12px;
+}
+
+.SlashCommandSuggestion_SlashCommand
+{
+	font-weight: bold;
+}
+
+.SlashCommandSuggestion_SlashCommandDescription
+{
+	color: #9ca4a7;
 }
 
 @media screen and ( max-width: 800px )
