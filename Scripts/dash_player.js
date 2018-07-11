@@ -20,6 +20,9 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_schUpdateMPD = null;
 	this.m_xhrUpdateMPD = null;
 
+	// see comment on set function for framerate limit
+	this.m_nLimitFPS = 0;
+
 	// info used in playback
 	this.m_nVideoRepresentationIndex = -1;
 	this.m_nAudioRepresentationIndex = 0;
@@ -313,6 +316,16 @@ CDASHPlayer.prototype.SetEMECapableHost = function ( bCapable )
 CDASHPlayer.prototype.SetUseHLSManifest = function ( bUseHLSManifest ) {
 	this.m_bUseHLSManifest = bUseHLSManifest;
 };
+
+
+/*
+ * Framerate limit is only during automatic representation selection. User can still manually select a higher FPS representation
+ */
+CDASHPlayer.prototype.SetLimitFPS = function( nLimit )
+{
+	this.m_nLimitFPS = nLimit;
+}
+
 
 CDASHPlayer.prototype.InitializeEME = function()
 {
@@ -1531,6 +1544,10 @@ CDASHPlayer.prototype.UpdateVideoRepresentation = function( nRepresentationIndex
 				continue;
 		}
 
+		// also check if there is a framerate limit on the player
+		if ( this.m_nLimitFPS > 0 && nRepFrameRate > this.m_nLimitFPS )
+			continue;
+
 		// player height needs to be more than the video height of the smaller representation (e.g. 800 height should use 1080, not 720)
 		var nNewRepHeight = loader.m_adaptation.representations[ iNewRepresentation ].height ? loader.m_adaptation.representations[ iNewRepresentation ].height : 0;
 		var nRepHeight = loader.m_adaptation.representations[ i ].height ? loader.m_adaptation.representations[ i ].height : 0;
@@ -2255,16 +2272,22 @@ CSegmentLoader.prototype.BeginPlayback = function( unStartTime )
 		if ( this.m_player.m_nVideoRepresentationIndex == -1 )
 		{
 			// start at the highest resolution greater than video player height
-			var nRepIndex = nRepCounts - 1;
-			for ( nRepIndex; nRepIndex > 0; nRepIndex-- )
+			var nSelected = nRepCounts - 1;
+			for ( var nRepIndex = nRepCounts - 1; nRepIndex >= 0; nRepIndex-- )
 			{
-				if ( this.m_player.StatsGetVideoPlayerHeight() <= this.m_adaptation.representations[nRepIndex].height )
-				{
+				var representation = this.m_adaptation.representations[nRepIndex];
+
+				// first check framerate
+				var nRepFrameRate = representation.frameRate ? representation.frameRate : 0;
+				if ( this.m_player.m_nLimitFPS > 0 && nRepFrameRate > this.m_player.m_nLimitFPS )
+					continue;
+
+				nSelected = nRepIndex;
+				if ( this.m_player.StatsGetVideoPlayerHeight() <= representation.height )
 					break;
-				}
 			}
 
-			this.ChangeRepresentationByIndex( nRepIndex );
+			this.ChangeRepresentationByIndex( nSelected );
 		}
 		else
 		{

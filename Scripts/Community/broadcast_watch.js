@@ -25,7 +25,7 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper )
+var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS )
 {
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
@@ -41,6 +41,7 @@ var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDView
 	this.m_bVideoEnabled = null;
 	this.m_bDisableChatTooltips = false;
 	this.m_IFrameHelper = IFrameHelper;
+	this.m_nVideoLimitFPS = nVideoLimitFPS ? nVideoLimitFPS : 0;
 	
 	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
@@ -204,6 +205,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 
 		this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
 		this.m_player.SetUseHLSManifest( bUseHLSManifest );
+		this.m_player.SetLimitFPS( this.m_nVideoLimitFPS );
 		this.m_playerUI = new CDASHPlayerUI( this.m_player, bIsMobile ? CDASHPlayerUI.eUIModeMobile : CDASHPlayerUI.eUIModeDesktop );
 		this.m_playerUI.Init( );
 
