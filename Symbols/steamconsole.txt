@@ -80,6 +80,7 @@
  B s_convarLogFileFolderName
  B s_convarNoPromptForPasswordOnLogin
  B s_convarShutdownOnFailedCommand
+ B s_convarStartupScript
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CValidator::ClaimArrayMemory(void*)
@@ -484,7 +485,6 @@
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
  T CKeyErrorContext::~CKeyErrorContext()
- T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -501,6 +501,7 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
+ T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -975,6 +976,7 @@
  T ExecCommandLine(int, char**)
  T ExecConsoleCommand(char const*)
  T ExecScripFile(char const*)
+ T ExecScript(CUtlBuffer&)
  T FileHandleTracker_t::~FileHandleTracker_t()
  T FillDataStruct(_finddata_t*)
  T FioClose(int)
@@ -991,6 +993,8 @@
  T GetCchTempTextBuffer_Harmful()
  T GetNoEscCharConversion()
  T GetPchTempTextBuffer_Harmful()
+ T IPv6AddrToString
+ T IPv6IPToString
  T InitializeSpewConfig()
  T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
  T InternalClient()
@@ -1203,6 +1207,7 @@
  __error
  __gxx_personality_v0
  __maskrune
+ __snprintf_chk
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -1323,6 +1328,7 @@
  b s_CurrentRoutingIDPtr
  b s_bCallbackManagerInitialized
  b s_bHWAccelCRC32
+ b s_convarSiteLicenseServer
  b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b set_spew_command
@@ -1402,6 +1408,7 @@
  pthread_mutex_unlock
  putchar
  puts
+ r IPv6IPToString.hexdigits
  r s_rgCRCTable_Standard
  read
  remove
@@ -1409,7 +1416,6 @@
  rindex
  scandir$INODE64
  setenv
- snprintf
  sprintf
  sscanf
  stat$INODE64
