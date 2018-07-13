@@ -4042,10 +4042,10 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	position: absolute;
 	margin-left: 22px;
 	background-color: rgb( 46, 60, 68 );
-	padding-top: 4px;
-	padding-bottom: 3px;
-	padding-left: 8px;
-	padding-right: 6px;
+	padding-top: 2px;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
 	border-radius: 6px;
 	opacity: 0;
 	cursor: pointer;
@@ -4079,6 +4079,27 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .chatVideoContainer
 {
 	width: 600px;
+	padding-bottom: 24px;
+	box-shadow: none;
+	background: none;
+}
+
+.chatVideoContainer video
+{
+	border: 2px solid rgba( 44, 48, 54, 1 );
+	border-radius: 6px;
+}
+
+.chatVideoContainer .BBCodeResizeControl
+{
+	width: 24px;
+	height: 14px;
+}
+
+.chatVideoContainer .BBCodeResizeControl .SVGIcon_Button
+{
+	bottom: 2px;
+	right: 2px;
 }
 
 .chatVideoContainer video
@@ -4214,6 +4235,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	color: rgb( 172, 114, 106 );
 }
 
+.msg .chatVideoContainer a,
+.msg .chatVideoContainer a:-webkit-any-link,
 .msg .chatImageContainer a,
 .msg .chatImageContainer a:-webkit-any-link
 {
@@ -4344,6 +4367,14 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .Minimized .BBCodeCollapseControl
 {
 	opacity: 1;
+	width: 16px;
+	height: 16px;
+}
+
+.Minimized .BBCodeCollapseControl .SVGIcon_Button
+{
+	width: 16px;
+	height: 16px;
 }
 
 .BBCodeCollapseControl .SVGIcon_Button
@@ -4412,8 +4443,15 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	stroke-width: 4px;
 }
 
+.chatVideoContainer .chatImageURL .SVGIcon_Button
+{
+	bottom: -3px;
+	left: -2px;
+}
+
 .BBCodeResizableComponent:hover .BBCodeResizeControl,
 .BBCodeResizableComponent:hover .BBCodeRestoreControl,
+.chatVideoContainer:hover .chatImageURL,
 .chatImageContainer:hover .chatImageURL
 {
 	opacity: 0.5;
@@ -4429,6 +4467,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .BBCodeResizableComponent.ActivelyResizing .BBCodeResizeControl,
 .BBCodeResizableComponent:hover .BBCodeResizeControl:hover,
+.chatVideoContainer:hover .chatImageURL:hover,
 .chatImageContainer:hover .chatImageURL:hover,
 .chatImageURL:hover,
 .BBCodeResizeControl:hover
@@ -4442,11 +4481,13 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .BBCodeResizableComponent.Minimized .BBCodeRestoreControl,
 .BBCodeResizableComponent.Minimized .BBCodeResizeControl,
 .BBCodeResizableComponent.ActivelyResizing .BBCodeCollapseControl,
+.chatVideoContainer.ActivelyResizing .chatImageURL,
 .chatImageContainer.ActivelyResizing .chatImageURL
 {
 	opacity: 0;
 }
 
+.msg .chatVideoContainer a.chatImageURL,
 .msg .chatImageContainer a.chatImageURL
 {
 	width: 24px;
@@ -5293,24 +5334,36 @@ input.InviteFriendToChatDialog_LinkInput
 	display: flex;
 }
 
-.inviteLinkContainer .DialogInputLabelGroup.inviteLinkDropDown .DialogDropDown:hover
+
+.expireLinkInContainer
 {
-	box-shadow: none;
+	display: flex;
+	flex-direction: row;
+	margin-top: 6px;
+	margin-left: auto;
+
+	justify-content: flex-end;
+	align-items: center;
 }
 
 
+.expireLinkInContainer .DialogLabel
+{
+	margin: 0;
+}
 
 .inviteLinkContainer .DialogDropDown._DialogInputContainer
 {
 	display: inline-block;
-	background-color: transparent;
+	min-width: 204px;
 	user-select: none;
-	padding: 0;
-	padding-right: 36px;
-	color: #777;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 8px;
+	padding: 4px;
+	padding-left: 6px;
+
+	margin-left: 8px;
+	margin-right: 8px;
+	text-align: center;
+	background-color: rgb(47, 51, 59);
 }
 
 .DialogListBuilderInput ._DialogInputContainer
@@ -5334,18 +5387,15 @@ input.InviteFriendToChatDialog_LinkInput
 
 .inviteLinkContainer .DialogDropDown._DialogInputContainer:hover
 {
-	color: #aaa;
+	color: #fff;
+	background-color: rgb(61, 68, 80);
 }
 
 .inviteLinkContainer .DialogDropDown._DialogInputContainer .DialogDropDown_Arrow
 {
-	top: 3px;
-	width: 12px;
-}
-
-.inviteLinkContainer .DialogDropDown._DialogInputContainer .DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu
-{
-	margin-left: -8px;
+	top: 6px;
+	right: 4px;
+	width: 18px;
 }
 
 .inviteLinkContainer .DialogInput_Wrapper._DialogLayout
@@ -10027,6 +10077,11 @@ span.mentionSearchMatch
 	flex-direction: row;
 }
 
+.notSelectable
+{
+	color: rgb( 182, 70, 70 );
+}
+
 .mentionAvatar
 {
 	position: absolute;
@@ -11875,6 +11930,8 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 {
 	background: transparent;
 	padding: 2px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .BBCodeYouTubeComponent_Sizer
@@ -15758,6 +15815,19 @@ a.general_btn:hover
 	min-height: 450px;
 }*/
 
+
+.FriendsSettingsVoiceTransmissionType_ButtonRow
+{
+	padding: 8px 8px;
+	background-color: rgba( 67, 73, 83, .3 );
+}
+
+._DialogSection.pushToTalkSection
+{
+
+}
+
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer,
 ._DialogSection.pushToTalkSection .pushtoTalkKeyAssignContainer,
 .DialogContent_InnerWidth .advancedSettings
 {
@@ -15769,12 +15839,21 @@ a.general_btn:hover
 	margin-bottom: 16px;
 }
 
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer
+{
+	margin-bottom: 0px;
+	margin-top: 6px;
+	border-radius: 4px;
+}
+
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer,
 ._DialogSection.pushToTalkSection .pushtoTalkKeyAssignContainer
 {
 	padding: 6px;
 	justify-content: space-between;
 }
 
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer .DialogButton,
 ._DialogSection.pushToTalkSection .pushtoTalkKeyAssignContainer .DialogButton
 {
 	outline: 2px solid rgba( 20, 162, 255, 0 );
@@ -15786,6 +15865,7 @@ a.general_btn:hover
 	align-self: flex-end;
 }
 
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer .DialogButton.capturingKey,
 ._DialogSection.pushToTalkSection .pushtoTalkKeyAssignContainer .DialogButton.capturingKey
 {
 	outline: 2px solid rgb( 20, 162, 255 );
