@@ -32806,6 +32806,9 @@ and limitations under the License.
               (this.m_bSnoozeCallbackFired = !0),
               (this.m_bAwayCallbackFired = !0),
               (this.m_bNextActivityCallbackRegistered = !1),
+              (this.fnRecvMsgClientFriendsList = s(767, wo, function(t) {
+                t.Body().bincremental() && e.SetFriendsList(t.Body());
+              })),
               (this.fnRecvMsgClientPersonaState = s(766, ko, function(t) {
                 for (
                   var i = t.Body().status_flags(),
@@ -33450,19 +33453,21 @@ and limitations under the License.
                       a.efriendrelationship()
                     );
               }
-              this.m_FriendGroupStore.OnFullFriendsListUpdateComplete(),
-                this.m_ClanStore.LoadMissingClanPersonas(),
-                (this.m_bReceivedFriendsList = !0);
-              var l = vt.Init(vi);
-              hi.RequestFriendPersonaStates(
-                this.m_CMInterface.GetServiceTransport(),
-                l
-              ),
-                this.RequestNicknameList(),
-                0 == this.m_setFriendAccountIDs.size
-                  ? ((this.m_bInitialPersonaStatesLoaded = !0),
-                    this.UpdateReadyToRenderState())
-                  : this.SubscribeToMissingPersonaStates();
+              if (!e.bincremental()) {
+                this.m_FriendGroupStore.OnFullFriendsListUpdateComplete(),
+                  this.m_ClanStore.LoadMissingClanPersonas(),
+                  (this.m_bReceivedFriendsList = !0);
+                var l = vt.Init(vi);
+                hi.RequestFriendPersonaStates(
+                  this.m_CMInterface.GetServiceTransport(),
+                  l
+                ),
+                  this.RequestNicknameList(),
+                  0 == this.m_setFriendAccountIDs.size
+                    ? ((this.m_bInitialPersonaStatesLoaded = !0),
+                      this.UpdateReadyToRenderState())
+                    : this.SubscribeToMissingPersonaStates();
+              }
             }),
             (e.prototype.OnFriendPersonaStateChanged = function(e, t, i, n) {
               if (
