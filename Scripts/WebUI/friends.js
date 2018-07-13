@@ -1219,7 +1219,7 @@ webpackJsonp(
           )
         );
       }
-      function I() {
+      function R() {
         return J.createElement(
           "svg",
           {
@@ -1240,7 +1240,7 @@ webpackJsonp(
           })
         );
       }
-      function R() {
+      function I() {
         return J.createElement(
           "svg",
           {
@@ -2272,8 +2272,8 @@ webpackJsonp(
         (t.R = w),
         (t.x = O),
         (t.h = B),
-        (t.z = I),
-        (t.I = R),
+        (t.z = R),
+        (t.I = I),
         (t.f = E),
         (t.i = k),
         (t.d = T),
@@ -3246,7 +3246,7 @@ webpackJsonp(
                   var w = "function" == typeof Symbol && Symbol.iterator,
                     O = "@@iterator",
                     B = "<<anonymous>>",
-                    I = {
+                    R = {
                       array: p("array"),
                       bool: p("boolean"),
                       func: p("function"),
@@ -3301,9 +3301,9 @@ webpackJsonp(
                     };
                   return (
                     (u.prototype = Error.prototype),
-                    (I.checkPropTypes = s),
-                    (I.PropTypes = I),
-                    I
+                    (R.checkPropTypes = s),
+                    (R.PropTypes = R),
+                    R
                   );
                 };
               }.call(t, i(4)));
@@ -7498,15 +7498,15 @@ and limitations under the License.
                   O = r.height;
                 a.bMatchHeight && ((O = w - F), (s.menuHeight = O));
                 var B = (a.bOverlapVertical ? w : F) - O,
-                  I = B > 0,
-                  R = d - (a.bOverlapVertical ? F : w) - O,
-                  E = R > 0,
-                  k = (a.bPreferPopTop || !E) && I;
-                I ||
+                  R = B > 0,
+                  I = d - (a.bOverlapVertical ? F : w) - O,
+                  E = I > 0,
+                  k = (a.bPreferPopTop || !E) && R;
+                R ||
                   E ||
-                  ((k = B > R),
+                  ((k = B > I),
                   a.bFitToWindow &&
-                    ((O += (k ? B : R) - 8), (s.menuHeight = O))),
+                    ((O += (k ? B : I) - 8), (s.menuHeight = O))),
                   k
                     ? (s.menuBottom = d - (a.bOverlapVertical ? w : F))
                     : (s.menuTop = a.bOverlapVertical ? F : w),
@@ -8062,7 +8062,7 @@ and limitations under the License.
           t(r.value) && i.push(r.value), (r = n.next());
         return i;
       }
-      function I(e, t) {
+      function R(e, t) {
         return (
           (t = t <= 32 ? 32 : t <= 64 ? 64 : 256),
           lt.a.MEDIA_CDN_COMMUNITY_URL +
@@ -8079,7 +8079,7 @@ and limitations under the License.
             ".jpg"
         );
       }
-      function R(e) {
+      function I(e) {
         if ("touches" in e) {
           var t = e;
           return [t.touches[0].clientX, t.touches[0].clientY];
@@ -8693,7 +8693,7 @@ and limitations under the License.
       }
       function ve(e) {
         return Pr.createElement(
-          Rd,
+          Id,
           {
             target: e.target,
             className: "friendHover miniProfileHover",
@@ -8844,7 +8844,7 @@ and limitations under the License.
         }
         return kr.d.apply(void 0, [t].concat(r));
       }
-      function Ie(e) {
+      function Re(e) {
         var t = e.friendRenderContext,
           i = [],
           n = [],
@@ -8894,7 +8894,7 @@ and limitations under the License.
           Pr.createElement(Pr.Fragment, null, i)
         );
       }
-      function Re(e, t, i, n, r) {
+      function Ie(e, t, i, n, r) {
         if (r);
         else {
           var o = new rg(n.ownerDocument.defaultView),
@@ -9174,13 +9174,13 @@ and limitations under the License.
           video: Fm,
           og: Om,
           tweet: Bm,
-          inviteurl: Rm,
+          inviteurl: Im,
           publishedfile: Dm,
           tradeofferlink: Am,
           econitem: zm,
           steamstore: Wm,
           broadcast: Pm,
-          oembed: Im
+          oembed: Rm
         };
       }
       function Je() {
@@ -10982,7 +10982,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        It = (function(e) {
+        Rt = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -11275,7 +11275,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Rt = (ht.Message,
+        It = (ht.Message,
         ht.Message,
         ht.Message,
         (function(e) {
@@ -13435,7 +13435,7 @@ and limitations under the License.
               (i.m_iCallSeq = 1),
               (i.m_mapWaitingCallbacks = new Map()),
               (i.m_CMList = new Dt()),
-              (i.LogOnResponseHandler = s(751, It, function(e) {
+              (i.LogOnResponseHandler = s(751, Rt, function(e) {
                 (i.m_Session.m_bWaitingForLogonResponse = !1),
                   (i.m_Session.m_eResultLogonSuccess = e.Body().eresult()),
                   1 == e.Body().eresult()
@@ -13810,7 +13810,7 @@ and limitations under the License.
               (this.m_bWaitingToReconnect = !1),
               (this.m_rgdtRecentFailures = []),
               (this.m_eWebLogonState = 0),
-              (this.m_ClientLogoffHandler = a(757, Rt, function(e) {
+              (this.m_ClientLogoffHandler = a(757, It, function(e) {
                 34 == e.Body().eresult() &&
                   ((t.m_eWebLogonState = 15), (t.m_bWaitingToReconnect = !0));
               })),
@@ -15420,7 +15420,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Ii = (function(e) {
+        Ri = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -15482,7 +15482,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Ri = (function(e) {
+        Ii = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -18989,7 +18989,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        In = (function(e) {
+        Rn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19072,7 +19072,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Rn = (function(e) {
+        In = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -22569,7 +22569,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.RenameChatRoomGroup#1", t, wi);
         }
         function r(e, t) {
-          return e.SendMsg("ChatRoom.SetChatRoomGroupTagline#1", t, Ri);
+          return e.SendMsg("ChatRoom.SetChatRoomGroupTagline#1", t, Ii);
         }
         function o(e, t) {
           return e.SendMsg("ChatRoom.SetChatRoomGroupAvatar#1", t, ki);
@@ -22620,7 +22620,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.JoinChatRoomGroup#1", t, Bn);
         }
         function C(e, t) {
-          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, Rn);
+          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, In);
         }
         function S(e, t) {
           return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, kn);
@@ -22640,10 +22640,10 @@ and limitations under the License.
         function B(e, t) {
           return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, Gn);
         }
-        function I(e, t) {
+        function R(e, t) {
           return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Dn);
         }
-        function R(e, t) {
+        function I(e, t) {
           return e.SendMsg("ChatRoom.GetMessageHistory#1", t, Wn);
         }
         function E(e, t) {
@@ -22718,8 +22718,8 @@ and limitations under the License.
           (e.RenameChatRoom = w),
           (e.SendChatMessage = O),
           (e.JoinVoiceChat = B),
-          (e.LeaveVoiceChat = I),
-          (e.GetMessageHistory = R),
+          (e.LeaveVoiceChat = R),
+          (e.GetMessageHistory = I),
           (e.GetMyChatRoomGroups = E),
           (e.GetChatRoomGroupState = k),
           (e.GetChatRoomGroupSummary = T),
@@ -22736,7 +22736,7 @@ and limitations under the License.
           (e.SetUserChatGroupPreferences = W),
           (e.DeleteChatMessages = V);
       })(Br || (Br = {}));
-      var Ir;
+      var Rr;
       !(function(e) {
         function t(e, t) {
           return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, Mr);
@@ -22745,8 +22745,8 @@ and limitations under the License.
           return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, Fr);
         }
         (e.GetClanChatRoomInfo = t), (e.SetClanChatRoomPrivate = i);
-      })(Ir || (Ir = {}));
-      var Rr;
+      })(Rr || (Rr = {}));
+      var Ir;
       !(function(e) {
         (e.NotifyIncomingChatMessageHandler = {
           name: "ChatRoomClient.NotifyIncomingChatMessage#1",
@@ -22784,7 +22784,7 @@ and limitations under the License.
             name: "ChatRoomClient.NotifyAckChatMessageEcho#1",
             request: Kn
           });
-      })(Rr || (Rr = {}));
+      })(Ir || (Ir = {}));
       var Er,
         kr = i("sVhq"),
         Tr = (function() {
@@ -25911,7 +25911,7 @@ and limitations under the License.
             t
           );
         })(ht.Message)),
-        Io = (function(e) {
+        Ro = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25961,7 +25961,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Ro = (function(e) {
+        Io = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29385,7 +29385,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Ia = (function(e) {
+        Ra = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29420,7 +29420,7 @@ and limitations under the License.
             t
           );
         })(ht.Message),
-        Ra = (function(e) {
+        Ia = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -29722,7 +29722,7 @@ and limitations under the License.
           return e.SendMsg("FriendsList.GetFriendsList#1", t, Na);
         }
         function n(e, t) {
-          return e.SendMsg("FriendsList.GetFavorites#1", t, Ra);
+          return e.SendMsg("FriendsList.GetFavorites#1", t, Ia);
         }
         function r(e, t) {
           return e.SendMsg("FriendsList.SetFavorites#1", t, ka);
@@ -30976,7 +30976,7 @@ and limitations under the License.
               return (
                 t.Body().set_steamid(this.steamid.ConvertTo64BitString()),
                 t.Body().set_autocreate(!0),
-                Ir.GetClanChatRoomInfo(
+                Rr.GetClanChatRoomInfo(
                   Ah.CMInterface.GetServiceTransport(),
                   t
                 ).then(function(t) {
@@ -31122,7 +31122,7 @@ and limitations under the License.
               this.m_iIntervalLoadClanData &&
                 (ClearBackgroundTimeout(this.m_iIntervalLoadClanData),
                 (this.m_iIntervalLoadClanData = void 0));
-              var e = vt.Init(Ro, 815);
+              var e = vt.Init(Io, 815);
               e.Body().set_persona_state_requested(1042),
                 this.m_mapClans.forEach(function(t) {
                   t.BNeedsPersonaData() &&
@@ -31158,7 +31158,7 @@ and limitations under the License.
               (this.m_CMInterface = e),
                 (this.m_ChatStore = Ah.ChatStore),
                 this.m_CMInterface.AddOnLogonCallback(function() {
-                  var e = vt.Init(Ia);
+                  var e = vt.Init(Ra);
                   Ma.GetFavorites(
                     t.m_CMInterface.GetServiceTransport(),
                     e
@@ -32780,7 +32780,7 @@ and limitations under the License.
         _s = (function() {
           function e() {
             var e = this;
-            (this.m_FriendGroupStore = new Rs(this)),
+            (this.m_FriendGroupStore = new Is(this)),
               (this.m_ClanStore = new es(this)),
               (this.m_FavoritesStore = new ts(this)),
               (this.m_mapPlayerCache = new Map()),
@@ -32887,6 +32887,7 @@ and limitations under the License.
                 }
                 e.m_cPersonaStateUpdatesReceived >=
                   e.m_setFriendAccountIDs.size &&
+                  e.m_bReceivedFriendsList &&
                   ((e.m_bInitialPersonaStatesLoaded = !0),
                   e.UpdateReadyToRenderState());
               })),
@@ -33035,20 +33036,8 @@ and limitations under the License.
                         SetBackgroundTimeout(
                           t.ForceReadyToRender.bind(t),
                           1e3
-                        ));
-                  var e = vt.Init(Ga);
-                  Ma.GetFriendsList(
-                    t.m_CMInterface.GetServiceTransport(),
-                    e
-                  ).then(function(e) {
-                    t.SetFriendsList(e.Body().friendslist());
-                  });
-                  var n = vt.Init(vi);
-                  hi.RequestFriendPersonaStates(
-                    t.m_CMInterface.GetServiceTransport(),
-                    n
-                  ),
-                    t.RequestNicknameList();
+                        )),
+                    t.GetFriendsList();
                 }),
                 this.m_CMInterface.AddOnDisconnectCallback(function() {
                   (t.m_eUserPersonaState = 0),
@@ -33070,9 +33059,42 @@ and limitations under the License.
                     })
               );
             }),
+            (e.prototype.GetFriendsList = function() {
+              return ut.b(this, void 0, void 0, function() {
+                var e, t;
+                return ut.e(this, function(i) {
+                  switch (i.label) {
+                    case 0:
+                      return (
+                        (e = vt.Init(Ga)),
+                        [
+                          4,
+                          Ma.GetFriendsList(
+                            this.m_CMInterface.GetServiceTransport(),
+                            e
+                          )
+                        ]
+                      );
+                    case 1:
+                      return (
+                        (t = i.sent()),
+                        1 == t.GetEResult()
+                          ? this.SetFriendsList(t.Body().friendslist())
+                          : AssertMsg(
+                              !1,
+                              "GetFriendsList returned",
+                              t.GetEResult()
+                            ),
+                        [2]
+                      );
+                  }
+                });
+              });
+            }),
             (e.prototype.UpdateReadyToRenderState = function() {
               this.m_bReadyToRender ||
-                (this.m_bInitialPersonaStatesLoaded &&
+                (this.m_bReceivedFriendsList &&
+                  this.m_bInitialPersonaStatesLoaded &&
                   this.m_bNicknamesLoaded &&
                   ((this.m_bReadyToRender = !0),
                   this.m_fnOnReadyToRender &&
@@ -33269,7 +33291,7 @@ and limitations under the License.
                 this.m_setFriendsNeedingPersonaStateLoad.clear(),
                 t.length)
               ) {
-                var i = vt.Init(Ro, 815);
+                var i = vt.Init(Io, 815);
                 i.Body().set_persona_state_requested(1106);
                 for (var n = 0, r = t; n < r.length; n++) {
                   var o = r[n];
@@ -33368,67 +33390,75 @@ and limitations under the License.
                   })
               );
             }),
+            (e.prototype.AddFriend = function(e, t) {
+              var i = new _t.a(e),
+                n = i.GetAccountID(),
+                r = this.m_setIncomingInviteAccountIDs.has(n);
+              if (2 == t) {
+                if (!r) {
+                  var o = this.AddPlayerToCache(n, 3, !1);
+                  (o.efriendrelationship = t),
+                    o.LoadIfNecessary(),
+                    this.m_setIncomingInviteAccountIDs.add(n),
+                    this.m_FriendGroupStore.OnIncomingInviteAdded(n);
+                }
+              } else if (r) {
+                var o = this.AddPlayerToCache(n, 3, !1);
+                (o.efriendrelationship = t),
+                  this.m_setIncomingInviteAccountIDs.delete(n),
+                  this.m_FriendGroupStore.OnIncomingInviteRemoved(n);
+              }
+              var a = this.m_setFriendAccountIDs.has(n);
+              if (3 == t || 6 == t) {
+                var s = void 0;
+                a
+                  ? (s = this.GetFriend(n))
+                  : (this.m_setFriendAccountIDs.add(n),
+                    (s = this.AddPlayerToCache(n, 2, !1)),
+                    s.LoadIfNecessary(),
+                    this.m_FriendGroupStore.OnFriendAdded(n)),
+                  (s.efriendrelationship = t);
+              } else {
+                a &&
+                  (this.m_FriendGroupStore.OnFriendRemoved(n),
+                  this.m_FavoritesStore.OnFriendRemoved(n),
+                  this.m_setFriendAccountIDs.delete(n));
+                var o = this.AddPlayerToCache(n, 3, !1);
+                o.efriendrelationship = t;
+              }
+            }),
             (e.prototype.SetFriendsList = function(e) {
               var t = e.friends();
               if (!e.bincremental()) {
-                for (var i = 0, n = this.all_friends; i < n.length; i++) {
-                  var r = n[i];
-                  r.efriendrelationship = 0;
-                }
+                for (var i = 0, n = this.all_friends; i < n.length; i++)
+                  n[i].efriendrelationship = 0;
                 this.m_setFriendAccountIDs.clear(),
                   this.m_setIncomingInviteAccountIDs.clear(),
                   this.m_FriendGroupStore.OnFullFriendsListUpdateStart(),
                   this.m_ClanStore.ClearClanMembershipData();
               }
-              for (var o = 0, a = t; o < a.length; o++) {
-                var s = a[o],
-                  c = new _t.a(s.ulfriendid());
-                if (c.BIsIndividualAccount()) {
-                  var l = c.GetAccountID(),
-                    u = s.efriendrelationship(),
-                    d = this.m_setIncomingInviteAccountIDs.has(l);
-                  if (2 == u) {
-                    if (!d) {
-                      var p = this.AddPlayerToCache(l, 3, !1);
-                      (p.efriendrelationship = u),
-                        p.LoadIfNecessary(),
-                        this.m_setIncomingInviteAccountIDs.add(l),
-                        this.m_FriendGroupStore.OnIncomingInviteAdded(l);
-                    }
-                  } else if (d) {
-                    var p = this.AddPlayerToCache(l, 3, !1);
-                    (p.efriendrelationship = u),
-                      this.m_setIncomingInviteAccountIDs.delete(l),
-                      this.m_FriendGroupStore.OnIncomingInviteRemoved(l);
-                  }
-                  var h = this.m_setFriendAccountIDs.has(l);
-                  if (3 == u || 6 == u) {
-                    var r = void 0;
-                    h
-                      ? (r = this.GetFriend(l))
-                      : (this.m_setFriendAccountIDs.add(l),
-                        (r = this.AddPlayerToCache(l, 2, !1)),
-                        r.LoadIfNecessary(),
-                        this.m_FriendGroupStore.OnFriendAdded(l)),
-                      (r.efriendrelationship = u);
-                  } else {
-                    h &&
-                      (this.m_FriendGroupStore.OnFriendRemoved(l),
-                      this.m_FavoritesStore.OnFriendRemoved(l),
-                      this.m_setFriendAccountIDs.delete(l));
-                    var p = this.AddPlayerToCache(l, 3, !1);
-                    p.efriendrelationship = u;
-                  }
+              for (var r = 0, o = t; r < o.length; r++) {
+                var a = o[r],
+                  s = new _t.a(a.ulfriendid());
+                if (s.BIsIndividualAccount()) {
+                  var c = a.efriendrelationship();
+                  this.AddFriend(s.ConvertTo64BitString(), c);
                 } else
-                  c.BIsClanAccount() &&
+                  s.BIsClanAccount() &&
                     this.m_ClanStore.OnClanRelationshipChanged(
-                      c,
-                      s.efriendrelationship()
+                      s,
+                      a.efriendrelationship()
                     );
               }
               this.m_FriendGroupStore.OnFullFriendsListUpdateComplete(),
                 this.m_ClanStore.LoadMissingClanPersonas(),
-                (this.m_bReceivedFriendsList = !0),
+                (this.m_bReceivedFriendsList = !0);
+              var l = vt.Init(vi);
+              hi.RequestFriendPersonaStates(
+                this.m_CMInterface.GetServiceTransport(),
+                l
+              ),
+                this.RequestNicknameList(),
                 0 == this.m_setFriendAccountIDs.size
                   ? ((this.m_bInitialPersonaStatesLoaded = !0),
                     this.UpdateReadyToRenderState())
@@ -33505,7 +33535,7 @@ and limitations under the License.
                   .set_steamid(e.persona.m_steamid.ConvertTo64BitString()),
                 n.Body().set_nickname(t),
                 this.m_CMInterface
-                  .SendMsgAndAwaitResponse(n, Io)
+                  .SendMsgAndAwaitResponse(n, Ro)
                   .then(function(t) {
                     return 1 == t.Body().eresult() || ((e.nickname = i), !1);
                   })
@@ -34072,7 +34102,7 @@ and limitations under the License.
           );
         })(ws),
         Bs = { groups: { offline: !0 } },
-        Is = (function() {
+        Rs = (function() {
           function e() {
             this.m_mapCollapsePrefs = bt.observable.map();
           }
@@ -34112,9 +34142,9 @@ and limitations under the License.
             e
           );
         })(),
-        Rs = (function() {
+        Is = (function() {
           function e(t) {
-            (this.m_FriendGroupDisplayPrefs = new Is()),
+            (this.m_FriendGroupDisplayPrefs = new Rs()),
               (this.m_mapGroups = bt.observable.map()),
               (this.m_mapGameGroups = bt.observable.map()),
               (this.m_singletonGameGroup = new ws(0)),
@@ -35728,21 +35758,21 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "avatar_url_small", {
               get: function() {
-                return I(this.m_strAvatarSHA, 32);
+                return R(this.m_strAvatarSHA, 32);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "avatar_url_medium", {
               get: function() {
-                return I(this.m_strAvatarSHA, 64);
+                return R(this.m_strAvatarSHA, 64);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "avatar_url_full", {
               get: function() {
-                return I(this.m_strAvatarSHA, 256);
+                return R(this.m_strAvatarSHA, 256);
               },
               enumerable: !0,
               configurable: !0
@@ -36435,7 +36465,7 @@ and limitations under the License.
             }),
             (e.prototype.InviteFriend = function(e, t) {
               var i = _t.a.InitFromAccountID(e),
-                n = vt.Init(In);
+                n = vt.Init(Rn);
               n.Body().set_chat_group_id(this.m_ulGroupID),
                 n.Body().set_steamid(i.ConvertTo64BitString()),
                 t && n.Body().set_chat_id(t.GetRoomID()),
@@ -36486,7 +36516,7 @@ and limitations under the License.
               )
                 return Promise.resolve(1);
               this.m_strTagLine = e;
-              var n = vt.Init(Ii);
+              var n = vt.Init(Ri);
               return (
                 n.Body().set_chat_group_id(this.m_ulGroupID),
                 n.Body().set_tagline(e),
@@ -38330,7 +38360,7 @@ and limitations under the License.
               (this.m_bSendingActiveGroups = !1),
               (this.m_bSendActiveGroupsQueued = !1),
               (this.m_IncomingChatRoomMessageHandler = l(
-                Rr.NotifyIncomingChatMessageHandler,
+                Ir.NotifyIncomingChatMessageHandler,
                 function(e) {
                   var i = e.Body(),
                     n = t.FindChatRoom(i.chat_group_id(), i.chat_id());
@@ -38371,7 +38401,7 @@ and limitations under the License.
                 }
               )),
               (this.m_ChatMessageModifiedHandler = l(
-                Rr.NotifyChatMessageModifiedHandler,
+                Ir.NotifyChatMessageModifiedHandler,
                 function(e) {
                   var i = e.Body(),
                     n = t.FindChatRoom(i.chat_group_id(), i.chat_id());
@@ -38392,7 +38422,7 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingChatRoomHeaderStateChangeHandler = c(
-                Rr.NotifyChatRoomHeaderStateChangeHandler,
+                Ir.NotifyChatRoomHeaderStateChangeHandler,
                 function(e) {
                   var i = e
                       .Body()
@@ -38405,7 +38435,7 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingStateChangeHandler = c(
-                Rr.NotifyMemberStateChangeHandler,
+                Ir.NotifyMemberStateChangeHandler,
                 function(e) {
                   var i = e.Body().chat_group_id(),
                     n = t.m_mapChatGroups.get(i);
@@ -38417,7 +38447,7 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingChatRoomGroupRoomsChangeHandler = c(
-                Rr.NotifyChatRoomGroupRoomsChangeHandler,
+                Ir.NotifyChatRoomGroupRoomsChangeHandler,
                 function(e) {
                   var i = e.Body(),
                     n = t.m_mapChatGroups.get(i.chat_group_id());
@@ -38425,7 +38455,7 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingChatUserPreferencesChangedHandler = c(
-                Rr.NotifyChatUserPreferencesChangedHandler,
+                Ir.NotifyChatUserPreferencesChangedHandler,
                 function(e) {
                   var i = e.Body();
                   return (
@@ -38442,7 +38472,7 @@ and limitations under the License.
                 }
               )),
               (this.m_IncomingChatGroupUserStateChangedHandler = c(
-                Rr.NotifyChatGroupUserStateChangedHandler,
+                Ir.NotifyChatGroupUserStateChangedHandler,
                 function(e) {
                   var i = e.Body(),
                     n = i.chat_group_id(),
@@ -38482,7 +38512,7 @@ and limitations under the License.
                 }
               )),
               (this.m_AckChatMessageEchoHandler = l(
-                Rr.NotifyAckChatMessageEchoHandler,
+                Ir.NotifyAckChatMessageEchoHandler,
                 function(e) {
                   var i = e.Body().chat_group_id(),
                     n = e.Body().chat_id(),
@@ -39341,7 +39371,7 @@ and limitations under the License.
               }
             }),
             (e.prototype.OnDrag = function(e, t) {
-              var i = R(t),
+              var i = I(t),
                 n = i[0],
                 r = i[1];
               if (
@@ -39432,7 +39462,7 @@ and limitations under the License.
               if (this.m_DragInfo.bStarted)
                 this.props.coordinator.OnDrag(this, e);
               else {
-                var t = R(e),
+                var t = I(e),
                   i = t[0],
                   n = t[1];
                 Math.pow(i - this.m_DragInfo.startClientX, 2) +
@@ -40831,7 +40861,7 @@ and limitations under the License.
             t
           );
         })(Pr.Component),
-        Ic = (function(e) {
+        Rc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -40988,7 +41018,7 @@ and limitations under the License.
           (e[(e.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
           (e[(e.k_EChatFontSizeLarge = 3)] = "k_EChatFontSizeLarge");
       })(ks || (ks = {}));
-      var Rc,
+      var Ic,
         Ec = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
@@ -41115,7 +41145,7 @@ and limitations under the License.
             ut.c([ri.a], t.prototype, "SetChatFontSize", null),
             (t = ut.c([qs.observer], t))
           );
-        })(Ic),
+        })(Rc),
         kc = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -43694,7 +43724,7 @@ and limitations under the License.
           (e.AnswerOneOnOneChat = a),
           (e.EndOneOnOneChat = s),
           (e.LeaveOneOnOneChat = c);
-      })(Rc || (Rc = {}));
+      })(Ic || (Ic = {}));
       var ul;
       !(function(e) {
         (e.NotifyUserJoinedVoiceChatHandler = {
@@ -44442,7 +44472,7 @@ and limitations under the License.
             e
           );
         })(),
-        Il = (function() {
+        Rl = (function() {
           function e() {
             (this.muted = !1), (this.gain = 1);
           }
@@ -44452,7 +44482,7 @@ and limitations under the License.
             e
           );
         })(),
-        Rl = (function() {
+        Il = (function() {
           function e() {
             (this.mic_muted_locally = !1),
               (this.output_muted_locally = !1),
@@ -44840,7 +44870,7 @@ and limitations under the License.
                 }
               )),
               (this.m_ShouldRejoinChatRoomVoiceChatHandler = c(
-                Rr.NotifyShouldRejoinChatRoomVoiceChatHandler,
+                Ir.NotifyShouldRejoinChatRoomVoiceChatHandler,
                 function(e) {
                   var i = {
                     groupID: e.Body().chat_group_id(),
@@ -44986,7 +45016,7 @@ and limitations under the License.
                     _t.a.InitFromAccountID(n).ConvertTo64BitString()
                   ),
                   this.DeleteOneOnOneCallWaitingJoinOrAccept(n),
-                  Rc.EndOneOnOneChat(
+                  Ic.EndOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     r
                   ).then(function(t) {
@@ -45147,7 +45177,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new Rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new Il()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.mic_muted_locally
               );
             }),
@@ -45155,7 +45185,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new Rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new Il()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.output_muted_locally
               );
             }),
@@ -45163,7 +45193,7 @@ and limitations under the License.
               var t = this.m_mapUserVoiceStatus.get(e);
               return (
                 void 0 == t &&
-                  ((t = new Rl()), this.m_mapUserVoiceStatus.set(e, t)),
+                  ((t = new Il()), this.m_mapUserVoiceStatus.set(e, t)),
                 t.has_no_mic_for_session
               );
             }),
@@ -45304,7 +45334,7 @@ and limitations under the License.
             }),
             (e.prototype.SetPerUserMuting = function(e, t) {
               var i = this.m_mapPerUserOutputGain.get(e);
-              void 0 == i && (i = new Il()),
+              void 0 == i && (i = new Rl()),
                 (i.muted = t || this.m_bOutputMuted),
                 this.m_mapPerUserOutputGain.set(e, i),
                 this.UpdateStreamsForPerUseGainChange(e);
@@ -45312,7 +45342,7 @@ and limitations under the License.
             (e.prototype.SetPerUserGainLevel = function(e, t) {
               var i = Math.max(0, Math.min(4, t)),
                 n = this.m_mapPerUserOutputGain.get(e);
-              void 0 == n && (n = new Il()),
+              void 0 == n && (n = new Rl()),
                 (n.gain = i),
                 n.gain < 0.001 ? (n.muted = !0) : (n.muted = !1),
                 this.m_mapPerUserOutputGain.set(e, n),
@@ -45320,7 +45350,7 @@ and limitations under the License.
             }),
             (e.prototype.UpdateStreamsForPerUseGainChange = function(e) {
               var t = this.m_mapPerUserOutputGain.get(e);
-              void 0 == t && (t = new Il());
+              void 0 == t && (t = new Rl());
               for (var i = 0; i < this.m_rgAudioStreams.length; ++i) {
                 var n = this.m_rgAudioStreams[i];
                 if (n.accountid == e && void 0 != n.output_gain_node) {
@@ -46164,7 +46194,7 @@ and limitations under the License.
                     "(VoiceChat) InitiateOneOnOneVoiceChat request to " +
                       this.m_VoiceCallState.m_targetAccountID
                   ),
-                  Rc.RequestOneOnOneChat(
+                  Ic.RequestOneOnOneChat(
                     this.m_CMInterface.GetServiceTransport(),
                     t
                   ).then(function(t) {
@@ -46380,7 +46410,7 @@ and limitations under the License.
                   .set_user_webaudio_sample_rate(
                     Ah.AudioPlaybackManager.GetLastObservedSampleRate()
                   ),
-                Rc.NotifyUserVoiceStatus(
+                Ic.NotifyUserVoiceStatus(
                   this.m_CMInterface.GetServiceTransport(),
                   e
                 );
@@ -46389,7 +46419,7 @@ and limitations under the License.
               if (this.m_VoiceCallState.m_voiceChatID == e.voice_chatid()) {
                 var t = new _t.a(e.user_steamid()),
                   i = this.m_mapUserVoiceStatus.get(t.GetAccountID());
-                void 0 == i && (i = new Rl()),
+                void 0 == i && (i = new Il()),
                   (i.mic_muted_locally = e.user_muted_mic_locally()),
                   (i.output_muted_locally = e.user_muted_output_locally()),
                   (i.has_no_mic_for_session = e.user_has_no_mic_for_session());
@@ -46447,7 +46477,7 @@ and limitations under the License.
                     Ah.AudioPlaybackManager.supports_audio_worklets
                   ),
                 i.Body().set_user_agent(navigator.userAgent),
-                Rc.UpdateVoiceChatWebRTCData(
+                Ic.UpdateVoiceChatWebRTCData(
                   this.m_CMInterface.GetServiceTransport(),
                   i
                 )
@@ -46493,7 +46523,7 @@ and limitations under the License.
               n.Body().set_steamid_partner(e.ConvertTo64BitString()),
                 n.Body().set_accepted_request(!0),
                 n.Body().set_voice_chatid(t),
-                Rc.AnswerOneOnOneChat(
+                Ic.AnswerOneOnOneChat(
                   this.m_CMInterface.GetServiceTransport(),
                   n
                 ).then(function(t) {
@@ -46512,7 +46542,7 @@ and limitations under the License.
               n.Body().set_steamid_partner(e.ConvertTo64BitString()),
                 n.Body().set_accepted_request(!1),
                 n.Body().set_voice_chatid(t),
-                Rc.AnswerOneOnOneChat(
+                Ic.AnswerOneOnOneChat(
                   this.m_CMInterface.GetServiceTransport(),
                   n
                 ).then(function(t) {
@@ -47105,7 +47135,7 @@ and limitations under the License.
                 var i = this.m_rgLogLines.slice(this.m_nLastLogLineUploaded);
                 t.Body().set_client_voice_logs_new_lines(i.join("\r\n"));
                 var n = i.length;
-                Rc.UploadClientVoiceChatLogs(
+                Ic.UploadClientVoiceChatLogs(
                   this.m_CMInterface.GetServiceTransport(),
                   t
                 )
@@ -47163,7 +47193,7 @@ and limitations under the License.
                         .Body()
                         .set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
                     var o = this.m_VoiceCallState.m_eState;
-                    Rc.LeaveOneOnOneChat(
+                    Ic.LeaveOneOnOneChat(
                       this.m_CMInterface.GetServiceTransport(),
                       r
                     ).then(function(e) {
@@ -51559,7 +51589,7 @@ and limitations under the License.
                   t.push({
                     title: Object(kr.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Pr.createElement(Iu, {
+                    content: Pr.createElement(Ru, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -51569,7 +51599,7 @@ and limitations under the License.
                   t.push({
                     title: Object(kr.b)("#GroupSettings_InvitedUsers_Section"),
                     uniqueName: "GroupSettings_InvitedUsers",
-                    content: Pr.createElement(Ru, {
+                    content: Pr.createElement(Iu, {
                       group: e,
                       invitedUsers: this.m_invitedUsers,
                       enabled: r
@@ -51602,7 +51632,7 @@ and limitations under the License.
                   t.push({
                     title: Object(kr.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Pr.createElement(Iu, {
+                    content: Pr.createElement(Ru, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -52798,7 +52828,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Oc),
-        Iu = (function(e) {
+        Ru = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -53005,7 +53035,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Oc),
-        Ru = (function(e) {
+        Iu = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -53958,7 +53988,7 @@ and limitations under the License.
             ut.c([ri.a], t.prototype, "FriendsSettingsNotificationRow", null),
             (t = ut.c([qs.observer], t))
           );
-        })(Ic),
+        })(Rc),
         Nu = (Pr.createElement(
           "div",
           {
@@ -57516,7 +57546,7 @@ and limitations under the License.
                         Pr.createElement(
                           "div",
                           { className: "recentChatsGroup unreadChatsGroup" },
-                          Pr.createElement(Id, {
+                          Pr.createElement(Rd, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext
                           }),
@@ -59440,7 +59470,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Pr.Component),
-        Id = (function(e) {
+        Rd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -59517,7 +59547,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Pr.Component),
-        Rd = (Pr.Component,
+        Id = (Pr.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -60165,7 +60195,7 @@ and limitations under the License.
             ut.d(t, e),
             (t.prototype.render = function() {
               return Pr.createElement(
-                Rd,
+                Id,
                 {
                   visibilityObserver: this.props.hover,
                   target: this.props.target,
@@ -64124,7 +64154,7 @@ and limitations under the License.
                     friendRenderContext: a
                   }))
                 : i.BIsServerMsg()
-                  ? (e = Pr.createElement(Ie, {
+                  ? (e = Pr.createElement(Re, {
                       block: i,
                       friendRenderContext: a
                     }))
@@ -64254,10 +64284,10 @@ and limitations under the License.
                       });
                       switch (_) {
                         case lo.k_ESlashCommandType_Me:
-                          l.push(Pr.createElement(Ip, ut.a({}, y)));
+                          l.push(Pr.createElement(Rp, ut.a({}, y)));
                           break;
                         case lo.k_ESlashCommandType_Code:
-                          l.push(Pr.createElement(Rp, ut.a({}, y)));
+                          l.push(Pr.createElement(Ip, ut.a({}, y)));
                           break;
                         case lo.k_ESlashCommandType_Pre:
                           l.push(Pr.createElement(Ep, ut.a({}, y)));
@@ -65329,7 +65359,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Pr.Component),
-        Ip = (function(e) {
+        Rp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65436,7 +65466,7 @@ and limitations under the License.
             (t = ut.c([qs.observer], t))
           );
         })(Pr.Component),
-        Rp = (function(e) {
+        Ip = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_divMsgTxt = null), t;
@@ -69228,7 +69258,7 @@ and limitations under the License.
             e
           );
         })(),
-        Ih = (function() {
+        Rh = (function() {
           function e() {
             (this.m_status = new Xp()),
               (this.m_mapPendingRequests = new bt.ObservableMap()),
@@ -69339,7 +69369,7 @@ and limitations under the License.
             e
           );
         })(),
-        Rh = (function() {
+        Ih = (function() {
           function e() {
             (this.rgRegistered = []), (this.nLastUpdate = 0);
           }
@@ -69359,7 +69389,7 @@ and limitations under the License.
               var i = this;
               return (
                 this.m_mapGroupBuckets.has(t) ||
-                  (this.m_mapGroupBuckets.set(t, new Rh()),
+                  (this.m_mapGroupBuckets.set(t, new Ih()),
                   this.PerformInitialPopulate(t)),
                 this.m_mapGroupBuckets.get(t).rgRegistered.push(e),
                 {
@@ -69507,7 +69537,7 @@ and limitations under the License.
               (this.m_AppInfoStore = new yi()),
               (this.m_EconomyStore = new uo()),
               (this.m_ParentalStore = new Bh()),
-              (this.m_BroadcastStore = new Ih()),
+              (this.m_BroadcastStore = new Rh()),
               (this.m_GroupMemberStore = new Eh()),
               (this.m_bReadyToRender = !1),
               (this.m_bShuttingDown = !1),
@@ -73361,7 +73391,7 @@ and limitations under the License.
             t
           );
         })(Kr),
-        Im = (function(e) {
+        Rm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActivated: !1 }), i;
@@ -73444,7 +73474,7 @@ and limitations under the License.
             t
           );
         })(Kr),
-        Rm = (function(e) {
+        Im = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { invite: void 0 }), i;
@@ -75677,7 +75707,7 @@ and limitations under the License.
                   : new Xm(this.m_FriendStore),
                 o = this.m_DesktopApp.Init(t, i, n);
               e.prototype.InitInternal.call(this, t, r, o),
-                Re(
+                Ie(
                   Nh,
                   this.m_FriendStore,
                   this.m_ChatStore,
