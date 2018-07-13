@@ -2352,7 +2352,7 @@
     {
         "id": 4700,
         "size": 8,
-        "posted_in": "CClientInventory::OnMicroTransactionAuthResponse(unsigned int, unsigned long long, unsigned long long, bool)::PurchaseFinalizeJob::PostCallbacks(int, ClientInventoryResultSet_t const*)"
+        "posted_in": "CInventoryClientJob_NotifyNewItems::YieldingRunMethod(CUser*, CInventoryClient_NewItems_Notification const&)"
     },
     {
         "id": 4701,

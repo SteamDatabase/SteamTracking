@@ -27,6 +27,7 @@
  B CMsgCloseFullScreenFlashIfOpen::default_instance_
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
+ B CMsgDisableBackgroundThrottling::default_instance_
  B CMsgDraggableRegionsChanged::default_instance_
  B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgEnableSteamClientAPI::default_instance_
@@ -52,6 +53,10 @@
  B CMsgHideWindow::default_instance_
  B CMsgHorizontalScrollBarSize::default_instance_
  B CMsgHorizontalScrollBarSizeResponse::default_instance_
+ B CMsgImeCancelComposition::default_instance_
+ B CMsgImeCommitText::default_instance_
+ B CMsgImeCompositionRangeChanged::default_instance_
+ B CMsgImeSetComposition::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -189,6 +194,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgHideToolTip>
  D typeinfo for CHTMLProtoBufMsg<CMsgHideWindow>
  D typeinfo for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgImeCompositionRangeChanged>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSAlert>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSConfirm>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSMethodCall>
@@ -255,6 +261,7 @@
  D typeinfo for CMsgCloseFullScreenFlashIfOpen
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
+ D typeinfo for CMsgDisableBackgroundThrottling
  D typeinfo for CMsgDraggableRegionsChanged
  D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgEnableSteamClientAPI
@@ -280,6 +287,10 @@
  D typeinfo for CMsgHideWindow
  D typeinfo for CMsgHorizontalScrollBarSize
  D typeinfo for CMsgHorizontalScrollBarSizeResponse
+ D typeinfo for CMsgImeCancelComposition
+ D typeinfo for CMsgImeCommitText
+ D typeinfo for CMsgImeCompositionRangeChanged
+ D typeinfo for CMsgImeSetComposition
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -418,6 +429,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgHideToolTip>
  D vtable for CHTMLProtoBufMsg<CMsgHideWindow>
  D vtable for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgImeCompositionRangeChanged>
  D vtable for CHTMLProtoBufMsg<CMsgJSAlert>
  D vtable for CHTMLProtoBufMsg<CMsgJSConfirm>
  D vtable for CHTMLProtoBufMsg<CMsgJSMethodCall>
@@ -484,6 +496,7 @@
  D vtable for CMsgCloseFullScreenFlashIfOpen
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
+ D vtable for CMsgDisableBackgroundThrottling
  D vtable for CMsgDraggableRegionsChanged
  D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgEnableSteamClientAPI
@@ -509,6 +522,10 @@
  D vtable for CMsgHideWindow
  D vtable for CMsgHorizontalScrollBarSize
  D vtable for CMsgHorizontalScrollBarSizeResponse
+ D vtable for CMsgImeCancelComposition
+ D vtable for CMsgImeCommitText
+ D vtable for CMsgImeCompositionRangeChanged
+ D vtable for CMsgImeSetComposition
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -658,6 +675,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgHideToolTip>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHideWindow>
  R typeinfo name for CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgImeCompositionRangeChanged>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSAlert>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSConfirm>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSMethodCall>
@@ -724,6 +742,7 @@
  R typeinfo name for CMsgCloseFullScreenFlashIfOpen
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
+ R typeinfo name for CMsgDisableBackgroundThrottling
  R typeinfo name for CMsgDraggableRegionsChanged
  R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgEnableSteamClientAPI
@@ -749,6 +768,10 @@
  R typeinfo name for CMsgHideWindow
  R typeinfo name for CMsgHorizontalScrollBarSize
  R typeinfo name for CMsgHorizontalScrollBarSizeResponse
+ R typeinfo name for CMsgImeCancelComposition
+ R typeinfo name for CMsgImeCommitText
+ R typeinfo name for CMsgImeCompositionRangeChanged
+ R typeinfo name for CMsgImeSetComposition
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -1074,6 +1097,8 @@
  T CHTMLProtoBufMsg<CMsgHideWindow>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgHorizontalScrollBarSizeResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgImeCompositionRangeChanged>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgImeCompositionRangeChanged>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSAlert>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSAlert>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSConfirm>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -1448,6 +1473,17 @@
  T CMsgCopy::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCopy::SetCachedSize(int) const
  T CMsgCopy::~CMsgCopy()
+ T CMsgDisableBackgroundThrottling::ByteSize() const
+ T CMsgDisableBackgroundThrottling::CMsgDisableBackgroundThrottling()
+ T CMsgDisableBackgroundThrottling::Clear()
+ T CMsgDisableBackgroundThrottling::GetCachedSize() const
+ T CMsgDisableBackgroundThrottling::GetMetadata() const
+ T CMsgDisableBackgroundThrottling::IsInitialized() const
+ T CMsgDisableBackgroundThrottling::MergeFrom(CMsgDisableBackgroundThrottling const&)
+ T CMsgDisableBackgroundThrottling::New() const
+ T CMsgDisableBackgroundThrottling::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDisableBackgroundThrottling::SetCachedSize(int) const
+ T CMsgDisableBackgroundThrottling::~CMsgDisableBackgroundThrottling()
  T CMsgDraggableRegionsChanged::ByteSize() const
  T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
  T CMsgDraggableRegionsChanged::Clear()
@@ -1738,6 +1774,54 @@
  T CMsgHorizontalScrollBarSizeResponse::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgHorizontalScrollBarSizeResponse::SetCachedSize(int) const
  T CMsgHorizontalScrollBarSizeResponse::~CMsgHorizontalScrollBarSizeResponse()
+ T CMsgImeCancelComposition::ByteSize() const
+ T CMsgImeCancelComposition::CMsgImeCancelComposition()
+ T CMsgImeCancelComposition::Clear()
+ T CMsgImeCancelComposition::GetCachedSize() const
+ T CMsgImeCancelComposition::GetMetadata() const
+ T CMsgImeCancelComposition::IsInitialized() const
+ T CMsgImeCancelComposition::MergeFrom(CMsgImeCancelComposition const&)
+ T CMsgImeCancelComposition::New() const
+ T CMsgImeCancelComposition::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgImeCancelComposition::SetCachedSize(int) const
+ T CMsgImeCancelComposition::~CMsgImeCancelComposition()
+ T CMsgImeCommitText::ByteSize() const
+ T CMsgImeCommitText::CMsgImeCommitText()
+ T CMsgImeCommitText::Clear()
+ T CMsgImeCommitText::GetCachedSize() const
+ T CMsgImeCommitText::GetMetadata() const
+ T CMsgImeCommitText::IsInitialized() const
+ T CMsgImeCommitText::MergeFrom(CMsgImeCommitText const&)
+ T CMsgImeCommitText::New() const
+ T CMsgImeCommitText::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgImeCommitText::SetCachedSize(int) const
+ T CMsgImeCommitText::SharedCtor()
+ T CMsgImeCommitText::SharedDtor()
+ T CMsgImeCommitText::~CMsgImeCommitText()
+ T CMsgImeCompositionRangeChanged::ByteSize() const
+ T CMsgImeCompositionRangeChanged::CMsgImeCompositionRangeChanged()
+ T CMsgImeCompositionRangeChanged::Clear()
+ T CMsgImeCompositionRangeChanged::GetCachedSize() const
+ T CMsgImeCompositionRangeChanged::GetMetadata() const
+ T CMsgImeCompositionRangeChanged::IsInitialized() const
+ T CMsgImeCompositionRangeChanged::MergeFrom(CMsgImeCompositionRangeChanged const&)
+ T CMsgImeCompositionRangeChanged::New() const
+ T CMsgImeCompositionRangeChanged::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgImeCompositionRangeChanged::SetCachedSize(int) const
+ T CMsgImeCompositionRangeChanged::~CMsgImeCompositionRangeChanged()
+ T CMsgImeSetComposition::ByteSize() const
+ T CMsgImeSetComposition::CMsgImeSetComposition()
+ T CMsgImeSetComposition::Clear()
+ T CMsgImeSetComposition::GetCachedSize() const
+ T CMsgImeSetComposition::GetMetadata() const
+ T CMsgImeSetComposition::IsInitialized() const
+ T CMsgImeSetComposition::MergeFrom(CMsgImeSetComposition const&)
+ T CMsgImeSetComposition::New() const
+ T CMsgImeSetComposition::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgImeSetComposition::SetCachedSize(int) const
+ T CMsgImeSetComposition::SharedCtor()
+ T CMsgImeSetComposition::SharedDtor()
+ T CMsgImeSetComposition::~CMsgImeSetComposition()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -3123,6 +3207,8 @@
  b (anonymous namespace)::CMsgComboNeedsPaint_reflection_
  b (anonymous namespace)::CMsgCopy_descriptor_
  b (anonymous namespace)::CMsgCopy_reflection_
+ b (anonymous namespace)::CMsgDisableBackgroundThrottling_descriptor_
+ b (anonymous namespace)::CMsgDisableBackgroundThrottling_reflection_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
@@ -3173,6 +3259,14 @@
  b (anonymous namespace)::CMsgHorizontalScrollBarSizeResponse_reflection_
  b (anonymous namespace)::CMsgHorizontalScrollBarSize_descriptor_
  b (anonymous namespace)::CMsgHorizontalScrollBarSize_reflection_
+ b (anonymous namespace)::CMsgImeCancelComposition_descriptor_
+ b (anonymous namespace)::CMsgImeCancelComposition_reflection_
+ b (anonymous namespace)::CMsgImeCommitText_descriptor_
+ b (anonymous namespace)::CMsgImeCommitText_reflection_
+ b (anonymous namespace)::CMsgImeCompositionRangeChanged_descriptor_
+ b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
+ b (anonymous namespace)::CMsgImeSetComposition_descriptor_
+ b (anonymous namespace)::CMsgImeSetComposition_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -3447,6 +3541,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClose_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDisableBackgroundThrottling_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
@@ -3472,6 +3567,10 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHideWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHorizontalScrollBarSizeResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgHorizontalScrollBarSize_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCancelComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_

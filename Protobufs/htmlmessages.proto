@@ -591,6 +591,10 @@ message CMsgSetPIDShuttingDown {
 	optional uint32 browser_handle = 1;
 }
 
+message CMsgDisableBackgroundThrottling {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgAckPIDShuttingDown {
 	optional uint32 browser_handle = 1;
 }
@@ -837,5 +841,25 @@ message CMsgMinimizeWindow {
 
 message CMsgShowBrowserContextMenu {
 	optional uint32 browser_handle = 1;
+}
+
+message CMsgImeSetComposition {
+	optional uint32 browser_handle = 1;
+	optional string text = 2;
+}
+
+message CMsgImeCommitText {
+	optional uint32 browser_handle = 1;
+	optional string text = 2;
+}
+
+message CMsgImeCancelComposition {
+	optional uint32 browser_handle = 1;
+}
+
+message CMsgImeCompositionRangeChanged {
+	optional uint32 browser_handle = 1;
+	optional uint32 x = 2;
+	optional uint32 y = 3;
 }
 

@@ -102,7 +102,6 @@
  CGBitmapContextGetData
  CGColorCreate
  CGColorCreateGenericRGB
- CGColorSpaceRetain
  CGContextAddLineToPoint
  CGContextClipToRect
  CGContextDrawImage
@@ -269,7 +268,6 @@
  Msg
  NSApp
  NSDefaultRunLoopMode
- NSSelectorFromString
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
@@ -2603,13 +2601,13 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp716
- d __block_descriptor_tmp733
- d __block_descriptor_tmp736
- d __block_descriptor_tmp738
+ d __block_descriptor_tmp705
+ d __block_descriptor_tmp722
+ d __block_descriptor_tmp725
+ d __block_descriptor_tmp727
  d __block_literal_global
- d __block_literal_global737
- d __block_literal_global739
+ d __block_literal_global726
+ d __block_literal_global728
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2855,9 +2853,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_714
+ t __copy_helper_block_703
  t __destroy_helper_block_
- t __destroy_helper_block_715
+ t __destroy_helper_block_704
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal
