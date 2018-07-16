@@ -8,7 +8,7 @@ getKnownProtobufMessages("Protobufs", function(knownMessages) {
 });
 
 function getKnownProtobufMessages(dirName, callback) {
-	const msgRegex = /message ([a-zA-Z]+) \{/g;
+	const msgRegex = /message (\w+) \{/g;
 	const knownMessages = new Map();
 	let match;
 
@@ -32,22 +32,23 @@ function handleFile(file) {
 	let protoShortNamesToLongNames = {};
 
 	file.split(/\([a-z]{2}\.Message\)/).forEach((part) => {
-		let match = part.match(/(?![{,])[a-zA-Z\$]{1,3}=(\([a-zA-Z\$]{1,3}\.Message,)?function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [a-zA-Z\$]{2,3}\.Message\.initialize.*}\)?$/);
+		let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{2,3}\.Message\.initialize.*}\)?$/);
 		if (!match) {
 			return;
 		}
 
 		if (match[1]) {
-			match[0] = match[0].replace(match[1], '');
+			match[0] = match[0].replace(new RegExp('\\((' + match[1] + ')+'), '');
 		}
 
 		// Extract the minified variable name
-		let minVarName = match[0].match(/^[a-zA-Z\$]{1,3}/);
-		match[0] = match[0].replace(/^[a-zA-Z\$]{1,3}=/, '');
+		let minVarName = match[0].match(/^[_a-zA-Z\$]{1,3}/);
+		match[0] = match[0].replace(/^[_a-zA-Z\$]{1,3}=/, '');
 
-		let func = match[0].replace(/(\)$|[a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),)/g, '');
+		let func = match[0].replace(/[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
 		eval('func=(' + func + ')');
-		let proto = decodeProtobuf(func());
+		let proto = func();
+		proto = decodeProtobuf(proto, minVarName);
 		protos.push(proto);
 		protoShortNamesToLongNames[minVarName] = proto.name;
 	});
@@ -63,14 +64,14 @@ function handleFile(file) {
 	return protos;
 }
 
-function decodeProtobuf(proto) {
+function decodeProtobuf(proto, minVarName) {
 	let name = proto.prototype.getClassName();
 	let fields = [];
 
 	(proto.deserializeBinaryFromReader.toString().match(/case (\d+):[^:]*[a-zA-Z\$]\.(set_|add_)([^\(]+)\(([a-zA-Z\$]\.read([^\(]+)\(\)|[a-zA-Z\$])\);break;/g) || []).forEach((field) => {
 		let match = field.match(/case (\d+):[^:]*[a-zA-Z\$]\.(set_|add_)([^\(]+)\(([a-zA-Z\$]\.read([^\(]+)\(\)|[a-zA-Z\$])\);break;/);
 		let fieldDesc = {};
-		fieldDesc.id = parseInt(field.match(/case (\d+):/)[1], 10);
+		fieldDesc.id = parseInt(match[1], 10);
 		fieldDesc.flag = match[2] == 'set_' ? 'optional' : 'repeated';
 		fieldDesc.name = match[3];
 		fieldDesc.type = match[4].toLowerCase();
@@ -79,9 +80,13 @@ function decodeProtobuf(proto) {
 			fieldDesc.type = fieldDesc.type.replace(/(^[a-z]\.read|\(\))/g, '').replace('64string', '64');
 		} else {
 			// It's a nested message of some sort
-			let nestMatch = field.match(/case \d+:var[^;]+new ([a-zA-Z\$]{1,3})(\(\))?;/);
+			let nestMatch = field.match(/case \d+:var[^;]+new ([_a-zA-Z\$]{1,3})(\(\))?;/);
 			if (nestMatch) {
-				fieldDesc.type = nestMatch[1];
+				if (nestMatch[1] === proto.name) { // constructor name, special case for recursive messages
+					fieldDesc.type = minVarName;
+				} else {
+					fieldDesc.type = nestMatch[1];
+				}
 			} else {
 				fieldDesc.type = 'UNKNOWN';
 			}
