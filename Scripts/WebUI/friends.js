@@ -53673,6 +53673,7 @@ and limitations under the License.
                       onChange: this.OnOutputGainChanged
                     })
                   ),
+                  "undefined" != typeof SteamClient &&
                   void 0 != SteamClient.WebChat &&
                   void 0 != SteamClient.WebChat.SetPushToMuteEnabled
                     ? Lr.createElement(
