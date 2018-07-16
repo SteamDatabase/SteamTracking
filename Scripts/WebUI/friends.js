@@ -44528,7 +44528,8 @@ and limitations under the License.
               (this.m_mapOneOnOneCallsWaitingJoinOrAccept = vt.observable.map()),
               (this.m_hRegisterForPushToTalkStateChange = null),
               (this.m_bPushToTalkEnabled = !1),
-              (this.m_bPushToTalkKeyDown = !1),
+              (this.m_bPushToMuteEnabled = !1),
+              (this.m_bVoicePTTStateEnabled = !1),
               (this.m_VKPushToTalkHotKey = 0),
               (this.m_strPushToTalkDisplayString = ""),
               (this.m_hPushToTalkReleaseTimeout = 0),
@@ -44918,6 +44919,9 @@ and limitations under the License.
                 SteamClient.WebChat.GetPushToTalkEnabled().then(function(t) {
                   (e.m_bPushToTalkEnabled = t.bEnabled),
                     (e.m_VKPushToTalkHotKey = t.vkHotKey),
+                    t.bPushToMute &&
+                      ((e.m_bPushToMuteEnabled = t.bEnabled),
+                      (e.m_bPushToTalkEnabled = !1)),
                     (e.m_strPushToTalkDisplayString = t.strKeyName);
                 });
             }),
@@ -45091,13 +45095,19 @@ and limitations under the License.
               return this.m_VoiceEchoLocalMic;
             }),
             (e.prototype.SetPushToTalkEnabled = function(e) {
-              this.m_bPushToTalkEnabled = e;
+              (this.m_bPushToTalkEnabled = e), (this.m_bPushToMuteEnabled = !1);
             }),
             (e.prototype.GetPushToTalkEnabled = function() {
               return this.m_bPushToTalkEnabled;
             }),
-            (e.prototype.GetPushToTalkKeyDown = function() {
-              return this.m_bPushToTalkKeyDown;
+            (e.prototype.SetPushToMuteEnabled = function(e) {
+              (this.m_bPushToMuteEnabled = e), (this.m_bPushToTalkEnabled = !1);
+            }),
+            (e.prototype.GetPushToMuteEnabled = function() {
+              return this.m_bPushToMuteEnabled;
+            }),
+            (e.prototype.GetPushToTalkVoiceStateEnabled = function() {
+              return this.m_bVoicePTTStateEnabled;
             }),
             (e.prototype.GetPushToTalkHotKeyVK = function() {
               return this.m_VKPushToTalkHotKey;
@@ -45476,44 +45486,67 @@ and limitations under the License.
             }),
             (e.prototype.OnPushToTalkReleased = function() {
               this.m_bPushToTalkEnabled &&
-                void 0 != this.m_MicInputGainNode &&
-                !this.m_bPushToTalkKeyDown &&
-                this.m_MicInputGainNode.gain.setValueAtTime(
-                  this.GetCurrentVoiceInputGainTarget(),
-                  this.m_AudioContext.currentTime + 0.2
-                );
+              void 0 != this.m_MicInputGainNode &&
+              !this.m_bVoicePTTStateEnabled
+                ? this.m_MicInputGainNode.gain.setValueAtTime(
+                    this.GetCurrentVoiceInputGainTarget(),
+                    this.m_AudioContext.currentTime + 0.2
+                  )
+                : this.m_bPushToMuteEnabled &&
+                  void 0 != this.m_MicInputGainNode &&
+                  this.m_bVoicePTTStateEnabled &&
+                  this.m_MicInputGainNode.gain.setValueAtTime(
+                    this.GetCurrentVoiceInputGainTarget(),
+                    this.m_AudioContext.currentTime + 0.2
+                  );
             }),
             (e.prototype.OnPushToTalkStateChange = function(e) {
-              e != this.m_bPushToTalkKeyDown &&
-                ((this.m_bPushToTalkKeyDown = e),
-                this.m_bPushToTalkEnabled &&
+              e != this.m_bVoicePTTStateEnabled &&
+                ((this.m_bVoicePTTStateEnabled = e),
+                (this.m_bPushToTalkEnabled || this.m_bPushToMuteEnabled) &&
                   void 0 != this.m_MicInputGainNode &&
-                  (this.m_bPushToTalkKeyDown
+                  (this.m_bVoicePTTStateEnabled
                     ? (Dh.AudioPlaybackManager.PlayAudioURL(
                         ct.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/ui_steam_ptt_01.m4a"
                       ),
-                      this.m_MicInputGainNode.gain.setValueAtTime(
-                        this.GetCurrentVoiceInputGainTarget(),
-                        this.m_AudioContext.currentTime
-                      ),
-                      0 != this.m_hPushToTalkReleaseTimeout &&
-                        ClearBackgroundTimeout(
-                          this.m_hPushToTalkReleaseTimeout
-                        ))
+                      this.m_bPushToMuteEnabled
+                        ? (this.m_hPushToTalkReleaseTimeout = SetBackgroundTimeout(
+                            this.OnPushToTalkReleased,
+                            100
+                          ))
+                        : (this.m_MicInputGainNode.gain.setValueAtTime(
+                            this.GetCurrentVoiceInputGainTarget(),
+                            this.m_AudioContext.currentTime
+                          ),
+                          0 != this.m_hPushToTalkReleaseTimeout &&
+                            ClearBackgroundTimeout(
+                              this.m_hPushToTalkReleaseTimeout
+                            )))
                     : (Dh.AudioPlaybackManager.PlayAudioURL(
                         ct.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/ui_steam_ptt_02.m4a"
                       ),
-                      (this.m_hPushToTalkReleaseTimeout = SetBackgroundTimeout(
-                        this.OnPushToTalkReleased,
-                        100
-                      )))));
+                      this.m_bPushToMuteEnabled
+                        ? (this.m_MicInputGainNode.gain.setValueAtTime(
+                            this.GetCurrentVoiceInputGainTarget(),
+                            this.m_AudioContext.currentTime
+                          ),
+                          0 != this.m_hPushToTalkReleaseTimeout &&
+                            ClearBackgroundTimeout(
+                              this.m_hPushToTalkReleaseTimeout
+                            ))
+                        : (this.m_hPushToTalkReleaseTimeout = SetBackgroundTimeout(
+                            this.OnPushToTalkReleased,
+                            100
+                          )))));
             }),
             (e.prototype.GetCurrentVoiceInputGainTarget = function() {
-              return this.m_bPushToTalkEnabled && !this.m_bPushToTalkKeyDown
+              return this.m_bPushToTalkEnabled && !this.m_bVoicePTTStateEnabled
                 ? 0
-                : this.m_Settings.m_VoiceInputGain;
+                : this.m_bPushToMuteEnabled && !this.m_bVoicePTTStateEnabled
+                  ? 0
+                  : this.m_Settings.m_VoiceInputGain;
             }),
             (e.prototype.RestartVoiceChatIfConnected = function() {
               if (
@@ -47322,7 +47355,13 @@ and limitations under the License.
             (e.k_MaxInputOutputGainValue = 4),
             lt.c([vt.observable], e.prototype, "m_VoiceCallState", void 0),
             lt.c([vt.observable], e.prototype, "m_bPushToTalkEnabled", void 0),
-            lt.c([vt.observable], e.prototype, "m_bPushToTalkKeyDown", void 0),
+            lt.c([vt.observable], e.prototype, "m_bPushToMuteEnabled", void 0),
+            lt.c(
+              [vt.observable],
+              e.prototype,
+              "m_bVoicePTTStateEnabled",
+              void 0
+            ),
             lt.c([vt.observable], e.prototype, "m_VKPushToTalkHotKey", void 0),
             lt.c(
               [vt.observable],
@@ -53515,7 +53554,9 @@ and limitations under the License.
             (t.prototype.OnSetPushToMute = function() {
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
-                SteamClient.WebChat.SetPushToTalkEnabled;
+                void 0 != SteamClient.WebChat.SetPushToMuteEnabled &&
+                (SteamClient.WebChat.SetPushToMuteEnabled(!0),
+                Dh.VoiceStore.SetPushToMuteEnabled(!0));
             }),
             (t.prototype.AssignHotkey = function() {
               0 == this.state.hotkeyCapturing && this.SetHotKeyCaptureState(!0);
@@ -53550,17 +53591,19 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = Dh.VoiceStore.GetPushToTalkEnabled(),
-                t = !1,
-                i = (Dh.VoiceStore.GetPushToTalkHotKeyVK(),
+                t = Dh.VoiceStore.GetPushToMuteEnabled(),
+                i = !1,
+                n = (Dh.VoiceStore.GetPushToTalkHotKeyVK(),
                 Dh.VoiceStore.GetPushToTalkHotKeyDisplayString()),
-                n = Object(Er.b)("#VoicePushToTalkAssigned");
+                r = Object(Er.b)("#VoicePushToTalkAssigned"),
+                o = Object(Er.b)("#VoicePushToMuteAssigned");
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
-                (t = !0),
+                (i = !0),
                 this.state.hotkeyCapturing &&
-                  (n = Object(Er.b)("#VoicePushToTalkPressHotKey"));
-              var r = this.props.voiceStore.GetUseNoiseGateLevel();
+                  (r = Object(Er.b)("#VoicePushToTalkPressHotKey"));
+              var a = this.props.voiceStore.GetUseNoiseGateLevel();
               return Lr.createElement(
                 gc,
                 {
@@ -53630,55 +53673,137 @@ and limitations under the License.
                       onChange: this.OnOutputGainChanged
                     })
                   ),
-                  Lr.createElement(
-                    "div",
-                    {
-                      className:
-                        "_DialogSection pushToTalkSection" +
-                        (t ? "" : " disabled")
-                    },
-                    Lr.createElement(
-                      sc,
-                      null,
-                      Object(Er.b)("#VoiceTransmissionType"),
-                      !t &&
-                        Lr.createElement(
-                          "span",
-                          { className: "disabledNotice" },
-                          " (",
-                          Object(Er.b)("#g_DisabledOnWeb"),
-                          ") "
-                        )
-                    ),
-                    Lr.createElement(Cc, {
-                      disabled: !t,
-                      label: Object(Er.b)("#VoiceTransmissionTypeExplainer"),
-                      checked: e,
-                      onChange: this.OnTogglePushToTalk
-                    }),
-                    e &&
-                      Lr.createElement(
+                  void 0 != SteamClient.WebChat &&
+                  void 0 != SteamClient.WebChat.SetPushToMuteEnabled
+                    ? Lr.createElement(
                         "div",
                         {
-                          className: "pushtoTalkKeyAssignContainer displayRow"
+                          className:
+                            "_DialogSection pushToTalkSection" +
+                            (i ? "" : " disabled")
                         },
                         Lr.createElement(
                           sc,
-                          { className: "DialogLabelExplainer" },
-                          n
+                          null,
+                          Object(Er.b)("#VoiceTransmissionType_Label"),
+                          !i &&
+                            Lr.createElement(
+                              "span",
+                              { className: "disabledNotice" },
+                              " (",
+                              Object(Er.b)("#VoiceTransmissionType_Disabled"),
+                              ") "
+                            )
                         ),
                         Lr.createElement(
-                          G,
+                          hc,
                           {
-                            disabled: !t,
                             className:
-                              this.state.hotkeyCapturing && "capturingKey",
-                            onClick: this.AssignHotkey
+                              "FriendsSettingsVoiceTransmissionType_ButtonRow"
                           },
-                          i
+                          Lr.createElement(
+                            G,
+                            {
+                              className: e || t ? "Off" : "Primary",
+                              onClick: this.OnSetOpenMic
+                            },
+                            Object(Er.b)("#VoiceTransmissionType_OpenMic")
+                          ),
+                          Lr.createElement(
+                            G,
+                            {
+                              className: e ? "Primary" : "Off",
+                              disabled: !i,
+                              onClick: this.OnSetPushToTalk
+                            },
+                            Object(Er.b)("#VoiceTransmissionType_PushToTalk")
+                          ),
+                          Lr.createElement(
+                            G,
+                            {
+                              className: t ? "Primary" : "Off",
+                              disabled: !i,
+                              onClick: this.OnSetPushToMute
+                            },
+                            Object(Er.b)("#VoiceTransmissionType_PushToMute")
+                          ),
+                          (e || t) &&
+                            Lr.createElement(
+                              "div",
+                              {
+                                className: "pushToKeyAssignContainer displayRow"
+                              },
+                              Lr.createElement(
+                                sc,
+                                { className: "DialogLabelExplainer" },
+                                e ? r : o
+                              ),
+                              Lr.createElement(
+                                G,
+                                {
+                                  disabled: !i,
+                                  className:
+                                    this.state.hotkeyCapturing &&
+                                    "capturingKey",
+                                  onClick: this.AssignHotkey
+                                },
+                                n
+                              )
+                            )
                         )
                       )
-                  ),
+                    : Lr.createElement(
+                        "div",
+                        {
+                          className:
+                            "_DialogSection pushToTalkSection" +
+                            (i ? "" : " disabled")
+                        },
+                        Lr.createElement(
+                          sc,
+                          null,
+                          Object(Er.b)("#VoiceTransmissionType"),
+                          !i &&
+                            Lr.createElement(
+                              "span",
+                              { className: "disabledNotice" },
+                              " (",
+                              Object(Er.b)("#g_DisabledOnWeb"),
+                              ") "
+                            )
+                        ),
+                        Lr.createElement(Cc, {
+                          disabled: !i,
+                          label: Object(Er.b)(
+                            "#VoiceTransmissionTypeExplainer"
+                          ),
+                          checked: e,
+                          onChange: this.OnTogglePushToTalk
+                        }),
+                        e &&
+                          Lr.createElement(
+                            "div",
+                            {
+                              className:
+                                "pushtoTalkKeyAssignContainer displayRow"
+                            },
+                            Lr.createElement(
+                              sc,
+                              { className: "DialogLabelExplainer" },
+                              r
+                            ),
+                            Lr.createElement(
+                              G,
+                              {
+                                disabled: !i,
+                                className:
+                                  this.state.hotkeyCapturing && "capturingKey",
+                                onClick: this.AssignHotkey
+                              },
+                              n
+                            )
+                          )
+                      ),
                   Lr.createElement(
                     "div",
                     { className: "_DialogSection" },
@@ -53699,7 +53824,7 @@ and limitations under the License.
                         G,
                         {
                           className:
-                            r <= bl.k_ENoiseGateLevel_Low ? "Primary" : "Off",
+                            a <= bl.k_ENoiseGateLevel_Low ? "Primary" : "Off",
                           onClick: this.SetNoiseGateOff
                         },
                         Object(Er.b)("#VoiceTransmissionThresholdOff")
@@ -53708,7 +53833,7 @@ and limitations under the License.
                         G,
                         {
                           className:
-                            r == bl.k_ENoiseGateLevel_Medium
+                            a == bl.k_ENoiseGateLevel_Medium
                               ? "Primary"
                               : "Off",
                           onClick: this.SetNoiseGateMedium
@@ -53719,7 +53844,7 @@ and limitations under the License.
                         G,
                         {
                           className:
-                            r == bl.k_ENoiseGateLevel_High ? "Primary" : "Off",
+                            a == bl.k_ENoiseGateLevel_High ? "Primary" : "Off",
                           onClick: this.SetNoiseGateHigh
                         },
                         Object(Er.b)("#VoiceTransmissionThresholdHigh")
@@ -56400,15 +56525,16 @@ and limitations under the License.
             }),
             (t.prototype.render = function() {
               var e = Dh.VoiceStore.GetPushToTalkEnabled(),
-                t = Dh.VoiceStore.GetPushToTalkKeyDown(),
-                i = Dh.VoiceStore.GetPushToTalkHotKeyDisplayString(),
-                n = "";
+                t = Dh.VoiceStore.GetPushToMuteEnabled(),
+                i = Dh.VoiceStore.GetPushToTalkVoiceStateEnabled(),
+                n = Dh.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+                r = "";
               return (
-                e && (n += " pushToTalkEnabled"),
-                t && (n += " pushToTalkKeyDown"),
+                (e || t) && (r += " pushToTalkEnabled"),
+                i && (r += " pushToTalkKeyDown"),
                 Lr.createElement(
                   "div",
-                  { className: "activeVoiceControls" + n },
+                  { className: "activeVoiceControls" + r },
                   Lr.createElement(
                     "div",
                     { className: "buttonsContainer" },
@@ -56449,11 +56575,14 @@ and limitations under the License.
                     !this.props.nostatus &&
                       Lr.createElement(td, { chat: this.props.chat })
                   ),
-                  e &&
+                  (e || t) &&
                     Lr.createElement(
                       "div",
-                      { className: "activeVoicePushToTalk" + n },
-                      Object(Er.b)("#ActiveVoicePushToTalk", i)
+                      { className: "activeVoicePushToTalk" + r },
+                      Object(Er.b)(
+                        t ? "#ActiveVoicePushToMute" : "#ActiveVoicePushToTalk",
+                        n
+                      )
                     )
                 )
               );
@@ -60948,18 +61077,19 @@ and limitations under the License.
                         (i = "#Tooltip_VoiceControlButton_group_joinmultiple");
                 }
               var a = Dh.VoiceStore.GetPushToTalkEnabled(),
-                s = Dh.VoiceStore.GetPushToTalkKeyDown(),
-                c = Dh.VoiceStore.GetPushToTalkHotKeyDisplayString(),
-                l = "";
+                s = Dh.VoiceStore.GetPushToMuteEnabled(),
+                c = Dh.VoiceStore.GetPushToTalkVoiceStateEnabled(),
+                l = Dh.VoiceStore.GetPushToTalkHotKeyDisplayString(),
+                u = "";
               return (
-                a && (l += " pushToTalkEnabled"),
-                s && (l += " pushToTalkKeyDown"),
+                (a || s) && (u += " pushToTalkEnabled"),
+                c && (u += " pushToTalkKeyDown"),
                 Lr.createElement(
                   "div",
                   {
                     className:
                       "ChatMessageEntryVoice" +
-                      l +
+                      u +
                       (e ? " Active" : " Inactive") +
                       (r ? " Disabled" : "")
                   },
@@ -60995,15 +61125,20 @@ and limitations under the License.
                       )
                     )
                   ),
-                  a &&
+                  (a || s) &&
                     this.IsVoiceActiveForButton() &&
                     Lr.createElement(
                       "div",
                       {
-                        className: "activeVoicePushToTalk" + l,
-                        title: Object(Er.b)("#ActiveVoicePushToTalk", c)
+                        className: "activeVoicePushToTalk" + u,
+                        title: Object(Er.b)(
+                          s
+                            ? "#ActiveVoicePushToMute"
+                            : "#ActiveVoicePushToTalk",
+                          l
+                        )
                       },
-                      c
+                      l
                     )
                 )
               );
