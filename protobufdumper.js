@@ -8,17 +8,31 @@ getKnownProtobufMessages("Protobufs", function(knownMessages) {
 });
 
 function getKnownProtobufMessages(dirName, callback) {
-	const msgRegex = /message (\w+) \{/g;
+	const msgRegex = /([ \t]*)message (\w+) \{/g;
 	const knownMessages = new Map();
-	let match;
+	let MsgAndLevel = [];
 
 	fs.readdir(dirName, function(err, files) {
 		files.filter((file) => file.endsWith(".proto")).forEach((file) => {
 			file = fs.readFileSync(path.join(dirName, file)).toString();
 
-			var matches, output = [];
+			let matches;
 			while (matches = msgRegex.exec(file)) {
-				knownMessages.set(matches[1], true);
+				let currLevel = matches[1].length;
+				let msgName = matches[2];
+
+				if (MsgAndLevel[0] && MsgAndLevel[0].level >= currLevel) {
+					let prevMsg;
+					do {
+						prevMsg = MsgAndLevel.shift();
+					} while (prevMsg && prevMsg.level > currLevel)
+				}
+				if (MsgAndLevel[0]) {
+					msgName = MsgAndLevel[0].name + '_' + msgName;
+				}
+
+				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
+				knownMessages.set(msgName, true);
 			}
 		});
 
