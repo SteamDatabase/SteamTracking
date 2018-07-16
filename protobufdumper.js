@@ -2,9 +2,11 @@ const path = require('path');
 const fs = require('fs');
 
 getKnownProtobufMessages("Protobufs", function(knownMessages) {
-	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
+	const protos = handleFile(fs.readFileSync(process.argv[2]).toString())
+		.filter((proto) => !knownMessages.has(proto.name));
 
-	outputProtos(protos.filter((proto) => !knownMessages.has(proto.name)));
+	outputProtos(protos);
+	outputServices(generateServices(protos));
 });
 
 function getKnownProtobufMessages(dirName, callback) {
@@ -118,8 +120,41 @@ function decodeProtobuf(proto, minVarName) {
 	return {name, fields};
 }
 
+function generateServices(protos) {
+	const requests = protos
+		.map((proto) => proto.name.match(/^C([A-Z][a-zA-Z0-9]+)_([a-zA-Z0-9_]+)_(Request|Notification)$/))
+		.filter((match) => match);
+
+	const services = new Map();
+
+	for (const match of requests) {
+		if (!services.has(match[1])) {
+			services.set(match[1], []);
+		}
+		
+		services.get(match[1]).push({
+			name: match[2],
+			request: match[0],
+			returns: match[3] === "Request" ? match[0].replace("_Request", "_Response") : "NoResponse"
+		});
+	}
+	
+	return services;
+}
+
+function outputServices(services) {
+	for (const service of services) {
+		console.log(`service ${service[0]} {`);
+
+		for (const method of service[1]) {
+			console.log(`\trpc ${method.name} (.${method.request}) returns (.${method.returns});`);
+		}
+
+		console.log("}\n");
+	}
+}
+
 function outputProtos(protos) {
-	// Output to stdout. We can redirect if we want it in a file.
 	protos.forEach((proto) => {
 		console.log(`message ${proto.name} {`);
 		proto.fields.forEach((field) => {
@@ -132,3 +167,4 @@ function outputProtos(protos) {
 		console.log("}\n");
 	});
 }
+
