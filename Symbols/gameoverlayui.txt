@@ -293,10 +293,13 @@
  B pcre_callout
  B pcre_stack_guard
  B pcrecpp::RE::no_arg
+ B s_CmdLineParamDisableBrowser
  B s_ConVarLogFilesAlwaysFlush
  B s_NoEscConversion
  B s_SpewConfig
  B s_StringCharConversion
+ B s_cmdFriendsUI
+ B s_cmdNoFriendsUI
  B vgui::BuildGroup::m_HandleTable
  B vgui::CBuildFactoryHelper::m_sHelpers
  B vgui::Panel::s_DragDropCapture
@@ -3756,6 +3759,7 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
+ Plat_IsSteamConsoleMode
  Plat_MSTime
  Plat_OutputDebugStringRaw
  Plat_RelativeTickFrequency
@@ -14550,7 +14554,6 @@
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
  b s_BlankImage
  b s_BuildGroupFileCache
- b s_CmdLineParamDisableBrowser
  b s_CurrentRoutingIDPtr
  b s_ListLogFilesMutex
  b s_ListLogMutexInitialized
@@ -14561,8 +14564,6 @@
  b s_bFirstLogEntry
  b s_bHWAccelCRC32
  b s_bSuppressRebindChecks
- b s_cmdFriendsUI
- b s_cmdNoFriendsUI
  b s_hKeyvalue
  b s_netadrResolveCache
  b s_netadrResolveCacheCounter
@@ -15215,6 +15216,7 @@
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_enum_names.cpp
  t _GLOBAL__sub_I_extension_set.cc
+ t _GLOBAL__sub_I_friendsuihelpers.cpp
  t _GLOBAL__sub_I_globals.cpp
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp

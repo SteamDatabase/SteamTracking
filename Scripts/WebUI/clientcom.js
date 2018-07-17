@@ -308,6 +308,7 @@ webpackJsonp(
           COMMUNITY_CDN_ASSET_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
           IN_CLIENT: !1,

@@ -1828,6 +1828,10 @@ html.responsive .localmenu_content .profile_badges_badge img {
 	height: 32px;
 }
 
+.profile_group_avatar img {
+	border-radius: 2px;
+}
+
 .profile_primary_group .profile_group_avatar {
 	width: 64px;
 	height: 64px;

@@ -235,9 +235,12 @@
  B g_pSteamUI
  B g_pSteamVGuiModule
  B obj_cleanup_defer
+ B s_CmdLineParamDisableBrowser
  B s_NoEscConversion
  B s_OpenDevToolsParam
  B s_StringCharConversion
+ B s_cmdFriendsUI
+ B s_cmdNoFriendsUI
  B sig_app
  B sigx_app
  B vgui::BuildGroup::m_HandleTable
@@ -3741,8 +3744,8 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_IsInDebugSession
+ Plat_IsSteamConsoleMode
  Plat_MSTime64
- Plat_OutputDebugString
  Plat_localtime
  R DES_SPtrans
  R jpeg_aritab
@@ -6531,7 +6534,6 @@
  T CFriendsUIModule::OnOpenGameInfoDialog(OpenGameInfoDialog_t*)
  T CFriendsUIModule::OnOpenInviteToTradeDialog(OpenInviteToTradeDialog_t*)
  T CFriendsUIModule::OnOpenJoinGameDialog(OpenJoinGameDialog_t*)
- T CFriendsUIModule::OnUIModeChanged(UIModeChanged_t*)
  T CFriendsUIModule::OpenChatDialog(CSteamID)
  T CFriendsUIModule::PostInitialize(void* (**)(char const*, int*), int)
  T CFriendsUIModule::RunFrame()
@@ -6568,6 +6570,7 @@
  T CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged::Run(void*)
  T CFriendsWebChat::CFriendsWebChat()
  T CFriendsWebChat::CheckForFriendsUIUpdates()
+ T CFriendsWebChat::DispatchClientUICommand(KeyValues*)
  T CFriendsWebChat::DisplayClientNotification(int, char const*, CSmartPtr<CJSCallbackFunc>)
  T CFriendsWebChat::GetLocalAvatarBase64(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetLocalPersonaName(CSmartPtr<CJSCallbackPromise>)
@@ -15795,7 +15798,6 @@
  b realloc_debug_func
  b s_BlankImage
  b s_BuildGroupFileCache
- b s_CmdLineParamDisableBrowser
  b s_OpenOverlayDevToolsParam
  b s_StartDirContexts
  b s_bCallbackManagerInitialized
@@ -15804,8 +15806,6 @@
  b s_bSuppressRebindChecks
  b s_cmdDev
  b s_cmdForceVGUI
- b s_cmdFriendsUI
- b s_cmdNoFriendsUI
  b s_cmdUnhideFriendsUI
  b s_hKeyvalue
  b s_netadrResolveCacheMutexEnforceConstruction
@@ -16788,6 +16788,7 @@
  t _GLOBAL__sub_I_friendsdialog.cpp
  t _GLOBAL__sub_I_friendsettingscontroller.cpp
  t _GLOBAL__sub_I_friendsgroups.cpp
+ t _GLOBAL__sub_I_friendsuihelpers.cpp
  t _GLOBAL__sub_I_friendsutils.cpp
  t _GLOBAL__sub_I_friendswebchat.cpp
  t _GLOBAL__sub_I_htmlframelesspopup.cpp

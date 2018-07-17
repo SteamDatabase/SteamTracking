@@ -2208,18 +2208,24 @@ body.in_global_drag .friendlist_titlebar
 	color: #91c257;
 }
 
-.quickAccessFriends .friend:hover
+.quickAccessFriends .favoriteElement:hover .friend
 {
 	background-color: rgba( 36, 52, 64, 0 );
 	box-shadow: 0px 0px 8px 0px rgba( 0, 0, 0, 0 );
 }
 
-.quickAccessFriends.compactQuickAccess .friend:hover .avatarHolder
+.quickAccessFriends.compactQuickAccess .favoriteElement:hover .friend .avatarHolder
 {
 	transform: scale(1.1);
 }
 
-.quickAccessFriends .friend:hover .playerName
+
+.quickAccessFriends .favoriteElement:hover .friend .avatarHolder
+{
+	transform: scale(1);
+}
+
+.quickAccessFriends .favoriteElement:hover .friend .playerName
 {
 	color: white;
 }
@@ -2239,6 +2245,7 @@ body.in_global_drag .friendlist_titlebar
 	filter: brightness( 60% ) saturate( 10% );
 }
 
+.quickAccessFriends .favoriteElement:hover .friend .avatarHolder img.avatar,
 .friend.offline:hover .avatarHolder img.avatar,
 .friend.offline.Friend_ContextMenuActive .avatarHolder img.avatar
 {
@@ -2373,7 +2380,7 @@ body.in_global_drag .friendlist_titlebar
 	transform: scale( 0.96, 0.96 ) translateX( 0px );
 }
 
-.quickAccessFriends .ChatRoomGroupAvatar:hover
+.quickAccessFriends .favoriteElement:hover .ChatRoomGroupAvatar
 {
 	transform: scale( 1.06, 1.06 ) translateX( 0px );
 }
@@ -3915,6 +3922,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .chatFileUploadFileName
 {
+	flex: 1;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	font-size: 12px;
@@ -3946,6 +3954,28 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .chatFileUploadCancel:hover
 {
 	background-color: rgba( 92, 100, 114, 0.9 );
+}
+
+
+.uploadOptions
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.spoilerCheckBox
+{
+	width: 50%;
+	font-size: 12px;
+	margin: 0;
+	margin-bottom: -2px;
+	flex: 1;
+}
+
+.spoilerCheckBox .DialogToggle_Label span
+{
+	vertical-align: middle;
 }
 
 .chatFileUploadBtn
@@ -6342,6 +6372,12 @@ input.InviteFriendToChatDialog_LinkInput
 	border-top: 1px solid #78db86;
 	border-bottom: 1px solid #78db86;
 	border-image: url( "data:image/svg+xml;utf8,	<svg xmlns='http://www.w3.org/2000/svg' width='50' height='5'><defs><linearGradient id='ModalGradient'><stop offset='0' stop-color='%2315531a'/><stop offset='0.2' stop-color='%230ffc16'/><stop offset='1' stop-color='%23145319'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23ModalGradient)' width='100%' height='100%'/></g></svg>" ) 10% stretch;
+}
+
+.CloseActiveVoiceWindowConfirmation .activeVoiceControls
+{
+	margin-right: 16px;
+	margin-top: 8px;
 }
 
 .friendListHeaderContainer > .activeVoiceControls
@@ -8982,6 +9018,13 @@ img.emoticon
 	height: 18px;
 }
 
+/* Actual source is 54px, 36px is 2/3 scale */
+img.emoticon.large
+{
+	width: 36px;
+	height: 36px;
+}
+
 
 /*
  * /code styling
@@ -9014,6 +9057,99 @@ img.emoticon
 	tab-size: 4;
 }
 
+.msgText.spoilerMsgText
+{
+	display: inline-block;
+	border: 1px solid #000;
+	background-color: #0003;
+	overflow: hidden;
+	border-radius: 3px;
+	padding: 6px;
+}
+
+.spoilerMsg.spoilerMedia .BBCodeResizableComponent .BBCodeResizableElement,
+.msgText.spoilerMsgText .spoilerMsg
+{
+	margin-left: 0px;
+	opacity: 0.5;
+	filter: blur(6px);
+	transition: all .1s ease-in-out;
+}
+
+.spoilerMsg.spoilerMedia .BBCodeResizableComponent .BBCodeResizableElement
+{
+	opacity: 0;
+	filter: blur(0px);
+	margin: 0;
+	box-shadow: none;
+}
+
+.spoilerMsg.spoilerMedia .BBCodeResizableComponent.ActivelyResizing .BBCodeResizableElement,
+.spoilerMsg.spoilerMedia .BBCodeResizableComponent:hover .BBCodeResizableElement,
+.msgText.spoilerMsgText:hover .spoilerMsg
+{
+	filter: blur(0px);
+	opacity: 1;
+}
+
+.spoilerLabelContainer
+{
+	width: fit-content;
+	height: fit-content;
+	position: relative;
+}
+
+.spoilerLabelContainer .chatVideoPlayControl
+{
+	opacity: 0.1;
+	transition: opacity .1s ease-in-out;
+}
+
+
+.spoilerLabelContainer .BBCodeResizableComponent:hover .chatVideoPlayControl
+{
+	opacity: 1;
+}
+
+.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer
+{
+	background-color: #0004;
+}
+
+.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer.Minimized
+{
+	background-color: #0000;
+}
+
+.spoilerLabelBlock
+{
+	position: absolute;
+	opacity: 1;
+
+	transition: all .12s ease-in-out;
+
+	top: 0;
+	bottom: 18px;
+	left: 50%;
+	user-select: none;
+}
+
+.spoilerLabelContainer:hover .spoilerLabelBlock
+{
+	opacity: 0;
+	pointer-events: none;
+}
+
+.spoilerMsg.spoilerMedia .spoilerLabel
+{
+	position: relative;
+	left: -50%;
+	top: calc( 50% - 42px );
+	vertical-align: middle;
+
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
 
 /*
  * /pre styling
@@ -9549,6 +9685,54 @@ img.emoticon
 	min-height: 252px;
 }
 
+.CloseActiveVoiceWindowConfirmation .voiceControlsExample
+{
+	position: relative;
+}
+
+.CloseActiveVoiceWindowConfirmation .VoiceControlPanelButton:hover, .CloseActiveVoiceWindowConfirmation .VoiceControlPanelButton:active
+{
+	border-radius: 8px;
+}
+
+.CloseActiveVoiceWindowConfirmation .DialogBody
+{
+	flex: none;
+	padding-bottom: 20px;
+}
+
+.CloseActiveVoiceWindowConfirmation .DialogButton.Primary
+{
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.CloseActiveVoiceWindowConfirmation .DialogFooter
+{
+	margin-top: 0;
+}
+
+
+.circleHighlight
+{
+	position: absolute;
+	right: 8px;
+	top: 2px;
+	width: 58px;
+	height: 58px;
+	border: 1px dashed rgb(102, 255, 0);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.CloseActiveVoiceWindowConfirmation .activeVoiceLabels,
+.CloseActiveVoiceWindowConfirmation .ToggleMicrophoneButton,
+.CloseActiveVoiceWindowConfirmation .ToggleVoiceOutputButton
+{
+	pointer-events: none;
+}
+
 .CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .ExitDoor,
 .CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .Arrow polyline
 {
@@ -9575,6 +9759,7 @@ img.emoticon
 .CloseActiveVoiceWindowConfirmation .activeVoiceDetails
 {
 	margin-top: 6px;
+	font-size: 14px;
 }
 
 .CloseActiveVoiceWindowConfirmation .furtherDetails
@@ -9590,18 +9775,26 @@ img.emoticon
 	color: rgb(76, 120, 177);
 }
 
-.CloseActiveVoiceWindowConfirmation .displayRow .DialogCheckbox
+.CloseActiveVoiceWindowConfirmation .dontShowConfirmation .DialogCheckbox
 {
 	margin-right: 8px;
+	background-color: #0007;
 }
 
-.CloseActiveVoiceWindowConfirmation .displayRow
+
+.CloseActiveVoiceWindowConfirmation .dontShowConfirmation
 {
-	margin: auto;
+	display: flex;
+	flex-direction: row;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 16px;
+	font-size: 14px;
 	cursor: pointer;
 }
 
-.CloseActiveVoiceWindowConfirmation .displayRow:hover
+.CloseActiveVoiceWindowConfirmation .dontShowConfirmation:hover
 {
 	color: #ccc;
 }
@@ -10173,13 +10366,8 @@ span.mention.me
 {
 	display: flex;
 	flex-direction: column;
-}
-
-.friend.editNickname .labelHolder
-{
-	display: flex;
-	flex-direction: column;
 	margin-left: 16px;
+	align-self: auto;
 }
 
 .friend.editNickname .labelHolder .nickNamedAs
@@ -10787,6 +10975,7 @@ body.in_global_drag.drag_source_chatmemberlist .chatBody .dropTargetBox
 {
 	position: relative;
 	height: 72px;
+	cursor: pointer;
 }
 
 .compactQuickAccess .favoriteElement
@@ -14081,10 +14270,14 @@ img.ChatRoomGroupAvatar_Avatar
 	stroke: #fff;
 }
 
+.CloseActiveVoiceWindowConfirmation .ExitDoor,
+.CloseActiveVoiceWindowConfirmation .Arrow,
 .friendListHeaderContainer .activeVoiceControls .SVGIcon_VoiceRoom .ExitDoor,
 .friendListHeaderContainer .activeVoiceControls .SVGIcon_VoiceRoom .Arrow
 {
+	opacity: 1;
 	stroke: rgb( 200, 241, 194 );
+
 }
 
 .ChatRoomLeave .ExitDoor,
@@ -14108,6 +14301,7 @@ img.ChatRoomGroupAvatar_Avatar
 	margin-left: -17px;
 }
 
+.CloseActiveVoiceWindowConfirmation .activeVoiceControls .SVGIcon_VoiceRoom,
 .friendListHeaderContainer .activeVoiceControls .SVGIcon_VoiceRoom
 {
 	width: 36px;
@@ -14292,6 +14486,7 @@ img.ChatRoomGroupAvatar_Avatar
 	fill: transparent;
 }
 
+.CloseActiveVoiceWindowConfirmation .SVGIcon_VoiceRoom .Bubble,
 .ActiveVoiceChannel .activeVoiceControls .SVGIcon_VoiceRoom .Bubble,
 .ActiveVoiceChannel .activeVoiceControls .SVGIcon_VoiceRoom .AudioLines
 {
@@ -15822,14 +16017,40 @@ a.general_btn:hover
 	background-color: rgba( 67, 73, 83, .3 );
 }
 
-._DialogSection.pushToTalkSection
+._DialogSection.pushToTalkSection .PPTSoundOption:hover
 {
+	color: #dfe3e6;
+	cursor: pointer;
+}
 
+._DialogSection.pushToTalkSection .PPTSoundOption
+{
+	display: flex;
+	flex-direction: row;
+	background-color: #0003;
+	padding: 3px;
+	border-radius: 4px;
+	width: calc(100% - 6px);
+}
+
+._DialogSection.pushToTalkSection .PPTSoundOption .DialogCheckbox_Container
+{
+	width: calc( 100% - 6px);
+}
+
+._DialogSection.pushToTalkSection .PPTSoundOption.DialogLabelExplainer
+{
+	text-align: left;
+}
+
+._DialogSection.pushToTalkSection .PPTSoundOption .DialogCheckbox
+{
+	margin-right: 6px;
 }
 
 ._DialogSection.pushToTalkSection .pushToKeyAssignContainer,
 ._DialogSection.pushToTalkSection .pushtoTalkKeyAssignContainer,
-.DialogContent_InnerWidth .advancedSettings
+.VoiceSettings .advancedSettings
 {
 	background-color: #0004;
 	border-bottom-right-radius: 4px;
@@ -15839,11 +16060,38 @@ a.general_btn:hover
 	margin-bottom: 16px;
 }
 
-._DialogSection.pushToTalkSection .pushToKeyAssignContainer
+.VoiceSettings .advancedSettings
 {
-	margin-bottom: 0px;
-	margin-top: 6px;
-	border-radius: 4px;
+	opacity: 1;
+	height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+	transition: all .2s ease-in-out;
+}
+
+.VoiceSettings .advancedSettings.showAdvanced
+{
+	opacity: 1;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	height: 244px;
+}
+
+.scrollToRef
+{
+	width: 1px;
+	height: 1px;
+}
+
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer.showPTTOptions
+{
+	padding-top: 6px;
+	padding-bottom: 6px;
+
+	height: 68px;
+	opacity: 1;
+	pointer-events: initial;
 }
 
 ._DialogSection.pushToTalkSection .pushToKeyAssignContainer,
@@ -15851,6 +16099,19 @@ a.general_btn:hover
 {
 	padding: 6px;
 	justify-content: space-between;
+}
+
+
+._DialogSection.pushToTalkSection .pushToKeyAssignContainer
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 0px;
+	border-radius: 4px;
+	height: 0px;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .1s ease-in-out;
 }
 
 ._DialogSection.pushToTalkSection .pushToKeyAssignContainer .DialogButton,

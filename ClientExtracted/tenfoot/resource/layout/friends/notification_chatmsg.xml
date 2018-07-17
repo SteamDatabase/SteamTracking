@@ -8,6 +8,7 @@
 		<Panel class="NotificationFrame" />
 		<AvatarImage id="AvatarImage" class="AvatarImage" />
 		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
+		<Label id="GroupName" class="NotificationTitle" />
 		<Label id="FriendName" class="NotificationTitle" />
 		<Label id="MessageText" class="NotificationMessage" />
 	</Panel>

@@ -502,3 +502,25 @@
 	border-radisu: 0px;
 	margin-right: 10px;
 }
+
+.NotificationRoot #GroupName
+{
+	visibility: collapse;
+}
+
+.NotificationRoot.GroupChat #GroupName
+{
+	visibility: visible;
+	margin-top: 35px;
+	color: white;
+}
+
+.NotificationRoot.GroupChat #FriendName
+{
+	margin-top: 65px;
+}
+
+.NotificationRoot.GroupChat .NotificationMessage
+{
+	margin-top: 95px;
+}

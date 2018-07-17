@@ -1855,7 +1855,7 @@ CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
 		return;
 	}
 	var scrollTopPrevious = parseInt( $J( "#" + this.m_strElementPrefix + '_scroll_top').val() );
-	if ( scrollTopPrevious != 0 )
+	if ( scrollTopPrevious )
 	{
 		var viewport = document.viewport.getDimensions(); // Gets the viewport as an object literal
 		var windowHeight = viewport.height; // Usable window height
@@ -2006,7 +2006,10 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 	if ( transport.responseJSON && transport.responseJSON.success )
 	{
 		var elLoading = $(this.m_strElementPrefix + '_loading');
-		elLoading.hide();
+		if ( elLoading )
+		{
+			elLoading.hide();
+		}
 
 		if ( typeof RecordAJAXPageView !== "undefined" )
 		{

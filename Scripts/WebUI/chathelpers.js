@@ -194,17 +194,17 @@ webpackJsonp(
       }
       function a(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (E = n) : "shared" == e && (D = n);
+          "friendsui" == e ? (O = n) : "shared" == e && (D = n);
         else if ("shared" == e) L = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
-          void 0 !== E ? ((o = E), (i = n)) : (o = n),
+          void 0 !== O ? ((o = O), (i = n)) : (o = n),
             void 0 !== D ? ((r = D), (s = L)) : (r = L),
             m.a.InitFromObjects(o, i, r, s),
-            (E = void 0),
+            (O = void 0),
             (D = void 0),
             (L = void 0);
         }
@@ -222,8 +222,7 @@ webpackJsonp(
         v = n("3e1Q"),
         b = n("wzNa"),
         g = n("KLxG"),
-        y = (p.a.COMMUNITY_BASE_URL,
-        (function(e) {
+        y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -248,7 +247,7 @@ webpackJsonp(
             d.c([f.action], t.prototype, "InitFromPHPInviteLinkInfo", null),
             t
           );
-        })(v.b)),
+        })(v.b),
         I = (function() {
           function e(e) {
             (this.m_bConnectingToClient = !1),
@@ -360,7 +359,7 @@ webpackJsonp(
                 );
               var e = this.props.controller.GetConnectResults(),
                 t = this.props.controller.GetInvite(),
-                n = p.a.COMMUNITY_BASE_URL + "TODO",
+                n = p.a.COMMUNITY_BASE_URL + "updates/chatupdate",
                 o = "inviteButton inviteButtonJoinChat";
               return (
                 t.BIsVoiceChatInvite() && (o += " inviteButtonJoinVoice"),
@@ -532,12 +531,12 @@ webpackJsonp(
           );
         })(c.Component);
       window.AssertMsg = h.a;
-      var O = new l.a();
-      (window.ClientConnectionAPI = O),
+      var E = new l.a();
+      (window.ClientConnectionAPI = E),
         document.addEventListener("DOMContentLoaded", function() {
           Object(p.c)(), r();
         });
-      var E, D, L;
+      var O, D, L;
       window.LocalizationReady = a;
     },
     DRjr: function(e, t, n) {
@@ -1108,6 +1107,7 @@ and limitations under the License.
           COMMUNITY_CDN_ASSET_URL: "",
           PUBLIC_SHARED_URL: "",
           COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
           STORE_BASE_URL: "",
           STORE_ICON_BASE_URL: "",
           IN_CLIENT: !1,

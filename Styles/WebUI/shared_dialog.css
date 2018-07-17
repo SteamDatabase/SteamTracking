@@ -696,6 +696,16 @@ button.DialogButton.DialogButtonTall
 	margin-top: 16px;
 }
 
+.VoiceSettings .advancedSettings
+{
+	margin-bottom: 16px;
+}
+
+.DialogBody.VoiceSettings ._FixedHeight
+{
+	padding-bottom: 16px;
+}
+
 button.DialogButton.Primary
 {
 	background: transparent;
@@ -1294,7 +1304,7 @@ button.TextButton:focus
 {
 	width: 22px;
 	height: 22px;
-	background-color: #24262b;
+	background-color: #0004;
 	padding: 0;
 	box-shadow: inset 1px 0.5px 3px rgba( 1, 1, 1, 0.4 );
 	cursor: pointer;
