@@ -1526,7 +1526,7 @@
     },
     {
         "id": 2703,
-        "size": 8,
+        "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<LoadControllerConfigResult_t>(LoadControllerConfigResult_t*)"
     },
     {
@@ -1611,7 +1611,7 @@
     },
     {
         "id": 2728,
-        "size": 12,
+        "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetChanged_t>(ControllerActionSetChanged_t*)"
     },
     {

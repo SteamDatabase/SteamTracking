@@ -19,6 +19,7 @@ typedef enum EControllerType
     k_EControllerTypeController_switch_joycon_right, // controller_switch_joycon_right
     k_EControllerTypeController_switch_joycon_pair, // controller_switch_joycon_pair
     k_EControllerTypeController_switch_pro_generic, // controller_switch_pro_generic
+    k_EControllerTypeController_mobile_touch, // controller_mobile_touch
     k_EControllerTypeController_keyboard_generic = 400, // controller_keyboard_generic
     k_EControllerTypeController_mouse_generic = 800, // controller_mouse_generic
 } EControllerType;

@@ -201,7 +201,7 @@
 		"ControlName"		"HotKeyEntry"
 		"fieldName"		"PushToTalkKeyEntry"
 		"xpos"		"48"
-		"ypos"		"387"
+		"ypos"		"410"
 		"wide"		"207"
 		"tall"		"24"
 		"AutoResize"		"0"
@@ -255,6 +255,28 @@
 		"SubTabPosition"		"2"
 		"group" "pushtotalk"
 	}
+	"TransmitMethodRadioButton3"
+	{
+		"ControlName"		"RadioButton"
+		"fieldName"		"TransmitMethodRadioButton3"
+		"xpos"		"20"
+		"ypos"		"384"
+		"wide"		"380"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"5"
+		"paintbackground"		"1"
+		"labelText"		"#Friends_Voice_PushToMute"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+		"SubTabPosition"		"2"
+		"group" "pushtotalk"
+	}
+
 	"DeviceName"
 	{
 		"ControlName"		"TextEntry"

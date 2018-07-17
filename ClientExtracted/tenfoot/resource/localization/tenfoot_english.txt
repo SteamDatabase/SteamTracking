@@ -2457,7 +2457,7 @@
 	"Library_Controller_Property_Value_AxisBoth"		"Both Horizontal & Vertical"
 	"Library_Controller_Property_Value_Trigger_Simple"	"Simple Threshold"
 	"Library_Controller_Property_Value_Trigger_HairTrigger"			"Hair Trigger"
-	"Library_Controller_Property_Value_Trigger_LongPressShort"		"Hip Fire Agressive"
+	"Library_Controller_Property_Value_Trigger_LongPressShort"		"Hip Fire Aggressive"
 	"Library_Controller_Property_Value_Trigger_LongPressMedium"		"Hip Fire Normal"
 	"Library_Controller_Property_Value_Trigger_LongPressLong"		"Hip Fire Relaxed"
 	"Library_Controller_Property_Value_Trigger_LongPressExclusive"	"Hip Fire Exclusive"

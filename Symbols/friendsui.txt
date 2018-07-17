@@ -6600,6 +6600,7 @@
  T CFriendsWebChat::RunFrame()
  T CFriendsWebChat::SetActiveClanChats(CUtlVector<unsigned int, CUtlMemory<unsigned int> >*)
  T CFriendsWebChat::SetPersonaName(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CFriendsWebChat::SetPushToMuteEnabled(bool)
  T CFriendsWebChat::SetPushToTalkEnabled(bool)
  T CFriendsWebChat::SetPushToTalkHotKey(int)
  T CFriendsWebChat::SetPushToTalkMouseButton(int)

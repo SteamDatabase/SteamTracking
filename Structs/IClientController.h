@@ -137,6 +137,8 @@ public:
     virtual unknown_ret GetPersonalizationFileID(unsigned int) = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
+    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
+    virtual unknown_ret BSaveTouchConfigLayout(unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret GetTouchKeysForPopupMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int) = 0;
     virtual unknown_ret PopupMenuTouchKeyClicked(unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret CheckMappingForEvents() = 0;

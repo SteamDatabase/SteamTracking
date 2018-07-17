@@ -144,8 +144,9 @@ public:
     virtual unknown_ret BVoiceIsRemoteOnHold(int) = 0;
     virtual unknown_ret SetDoNotDisturb(bool) = 0;
     virtual unknown_ret EnableVoiceNotificationSounds(bool) = 0;
-    virtual unknown_ret SetPushToTalkEnabled(bool) = 0;
+    virtual unknown_ret SetPushToTalkEnabled(bool, bool) = 0;
     virtual unknown_ret IsPushToTalkEnabled() = 0;
+    virtual unknown_ret IsPushToMuteEnabled() = 0;
     virtual unknown_ret SetPushToTalkKey(int) = 0;
     virtual unknown_ret GetPushToTalkKey() = 0;
     virtual unknown_ret IsPushToTalkKeyDown() = 0;

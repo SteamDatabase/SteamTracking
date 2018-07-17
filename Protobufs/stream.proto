@@ -77,6 +77,11 @@ enum EStreamControlMessage {
 	k_EStreamControlStartMicrophoneData = 107;
 	k_EStreamControlStopMicrophoneData = 108;
 	k_EStreamControlInputText = 109;
+	k_EStreamControlTouchConfigActive = 110;
+	k_EStreamControlGetTouchConfigData = 111;
+	k_EStreamControlTouchConfigData = 112;
+	k_EStreamControlSaveTouchConfigLayout = 113;
+	k_EStreamControlTouchActionSetActive = 114;
 }
 
 enum EStreamVersion {
@@ -556,6 +561,32 @@ message CSetSpectatorModeMsg {
 
 message CRemoteHIDMsg {
 	optional bytes data = 1;
+}
+
+message CTouchConfigActiveMsg {
+	optional uint32 appid = 1;
+	optional uint32 revision = 2;
+}
+
+message CGetTouchConfigDataMsg {
+	optional uint32 appid = 1;
+}
+
+message CTouchConfigDataMsg {
+	optional uint32 appid = 1;
+	optional uint32 revision = 2;
+	optional bytes data = 3;
+	optional bytes layout = 4;
+}
+
+message CSaveTouchConfigLayoutMsg {
+	optional uint32 appid = 1;
+	optional bytes layout = 4;
+}
+
+message CTouchActionSetActiveMsg {
+	optional uint32 appid = 1;
+	optional uint32 actionset_id = 2;
 }
 
 message CStreamDataLostMsg {

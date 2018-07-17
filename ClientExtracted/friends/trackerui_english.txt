@@ -516,6 +516,7 @@
 "Friends_Voice_WhenActive"	"When voice chat is active:"
 "Friends_Voice_AutoTransmit"	"Automatically transmit my voice whenever I speak"
 "Friends_Voice_PushToTalk"	"Use a push-to-talk key to transmit voice"
+"Friends_Voice_PushToMute"	"Use a push-to-mute key to mute voice"
 
 
 "Friends_DownloadNotification_Steam" "Steam"
