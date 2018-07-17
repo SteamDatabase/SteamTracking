@@ -65425,7 +65425,7 @@ and limitations under the License.
             (t.prototype.BIsEmoticonsOnly = function(e) {
               if (e.startsWith("[emoticon")) {
                 var t = e.match(/^(?:\[emoticon\][^\[]+\[\/emoticon\]\s*)+$/);
-                return t.length > 0 && t.length <= 6;
+                return t && t.length > 0 && t.length <= 6;
               }
               return !1;
             }),
