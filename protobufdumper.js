@@ -1,17 +1,18 @@
 const path = require('path');
 const fs = require('fs');
 
-getKnownProtobufMessages("Protobufs", function(knownMessages) {
-	const protos = handleFile(fs.readFileSync(process.argv[2]).toString())
-		.filter((proto) => !knownMessages.has(proto.name));
+getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
+	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
 
-	outputProtos(protos);
-	outputServices(generateServices(protos));
+	outputProtos(protos.messages.filter((proto) => !knownMessages.has(proto.name)));
+	outputServices(Array.from(protos.services).filter((service) => !knownServices.has(service[0])));
 });
 
 function getKnownProtobufMessages(dirName, callback) {
 	const msgRegex = /([ \t]*)message (\w+) \{/g;
+	const svcRegex = /service (\w+) \{/g;
 	const knownMessages = new Map();
+	const knownServices = new Map();
 	let MsgAndLevel = [];
 
 	fs.readdir(dirName, function(err, files) {
@@ -36,9 +37,13 @@ function getKnownProtobufMessages(dirName, callback) {
 				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
 				knownMessages.set(msgName, true);
 			}
+
+			while (matches = svcRegex.exec(file)) {
+				knownServices.set(matches[1], true);
+			}
 		});
 
-		callback(knownMessages);
+		callback(knownMessages, knownServices);
 	});
 }
 
@@ -77,7 +82,54 @@ function handleFile(file) {
 		});
 	});
 
-	return protos;
+	let svcRex = /"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z\$]{1,3})|\w,([_a-zA-Z\$]{1,3}))|SendNotification\("(\w+)\.(\w+)#1"/g;
+	let matches, bHasUnknownRequest = false;
+	const services = new Map();
+
+	while (matches = svcRex.exec(file)) {
+		let svcName = matches[1],
+			methodName = matches[2],
+			msgRequestName, msgResponseName;
+		if (matches[3]) { // notification
+			msgRequestName = protoShortNamesToLongNames[matches[3]];
+			msgResponseName = "NoResponse";
+		} else if (matches[4]) { // response
+			msgResponseName = protoShortNamesToLongNames[matches[4]];
+			msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
+			if (!Object.values(protoShortNamesToLongNames).includes(msgRequestName)) {
+				msgRequestName = "NotImplemented";
+				if (!bHasUnknownRequest) {
+					protos.push({ "name": "NotImplemented", "fields": [] });
+					bHasUnknownRequest = true;
+				}
+			}
+		} else if (matches[5]) { // notification
+			svcName = matches[5];
+			methodName = matches[6];
+			msgRequestName = "NotImplemented";
+			msgResponseName = "NoResponse";
+			if (!bHasUnknownRequest) {
+				protos.push({ "name": "NotImplemented", "fields": [] });
+				bHasUnknownRequest = true;
+			}
+		} else {
+			console.error('Wut da heck?');
+			continue;
+		}
+
+		if (!services.has(svcName)) {
+			services.set(svcName, []);
+		}
+
+		services.get(svcName).push({
+			"name": methodName,
+			"request": msgRequestName,
+			"response": msgResponseName
+		});
+	}
+
+
+	return {"messages": protos, "services": services};
 }
 
 function decodeProtobuf(proto, minVarName) {
@@ -120,34 +172,12 @@ function decodeProtobuf(proto, minVarName) {
 	return {name, fields};
 }
 
-function generateServices(protos) {
-	const requests = protos
-		.map((proto) => proto.name.match(/^C([A-Z][a-zA-Z0-9]+)_([a-zA-Z0-9_]+)_(Request|Notification)$/))
-		.filter((match) => match);
-
-	const services = new Map();
-
-	for (const match of requests) {
-		if (!services.has(match[1])) {
-			services.set(match[1], []);
-		}
-		
-		services.get(match[1]).push({
-			name: match[2],
-			request: match[0],
-			returns: match[3] === "Request" ? match[0].replace("_Request", "_Response") : "NoResponse"
-		});
-	}
-	
-	return services;
-}
-
 function outputServices(services) {
 	for (const service of services) {
 		console.log(`service ${service[0]} {`);
 
 		for (const method of service[1]) {
-			console.log(`\trpc ${method.name} (.${method.request}) returns (.${method.returns});`);
+			console.log(`\trpc ${method.name} (.${method.request}) returns (.${method.response});`);
 		}
 
 		console.log("}\n");
@@ -167,4 +197,3 @@ function outputProtos(protos) {
 		console.log("}\n");
 	});
 }
-
