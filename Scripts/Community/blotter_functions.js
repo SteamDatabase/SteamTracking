@@ -28,6 +28,9 @@ function StartLoadingBlotter( url )
 				newDiv.update( html );
 				newDiv.setOpacity(0);
 				$('blotter_content').appendChild( newDiv );
+
+				ApplyAdultContentPreferences();
+
 				new Effect.Appear( newDiv, { duration: .75 }  );
 
 				g_BlotterNextLoadURL = response.next_request;
