@@ -3,8 +3,25 @@ const fs = require('fs');
 
 getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
 	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
+	const imports = new Set();
+	imports.add(knownMessages.get("NoResponse"));
 
-	outputProtos(protos.messages.filter((proto) => !knownMessages.has(proto.name)));
+	const filteredProtos = protos.messages.filter((proto) => !knownMessages.has(proto.name));
+
+	filteredProtos.forEach((proto) => {
+		proto.fields.forEach((field) => {
+			if (field.type[0] === ".") {
+				const file = knownMessages.get(field.type.substr(1));
+
+				if (file) {
+					imports.add(file);
+				}
+			}
+		});
+	});
+
+	outputImports(imports);
+	outputProtos(filteredProtos);
 	outputServices(Array.from(protos.services).filter((service) => !knownServices.has(service[0])));
 });
 
@@ -16,8 +33,8 @@ function getKnownProtobufMessages(dirName, callback) {
 	let MsgAndLevel = [];
 
 	fs.readdir(dirName, function(err, files) {
-		files.filter((file) => file.endsWith(".proto")).forEach((file) => {
-			file = fs.readFileSync(path.join(dirName, file)).toString();
+		files.filter((file) => file.endsWith(".proto")).forEach((fileName) => {
+			file = fs.readFileSync(path.join(dirName, fileName)).toString();
 
 			let matches;
 			while (matches = msgRegex.exec(file)) {
@@ -35,11 +52,11 @@ function getKnownProtobufMessages(dirName, callback) {
 				}
 
 				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
-				knownMessages.set(msgName, true);
+				knownMessages.set(msgName, fileName);
 			}
 
 			while (matches = svcRegex.exec(file)) {
-				knownServices.set(matches[1], true);
+				knownServices.set(matches[1], fileName);
 			}
 		});
 
@@ -172,6 +189,14 @@ function decodeProtobuf(proto, minVarName) {
 	return {name, fields};
 }
 
+function outputImports(imports) {
+	for (const importName of imports) {
+		console.log(`import "${importName}";`);
+	}
+
+	console.log();
+}
+
 function outputServices(services) {
 	for (const service of services) {
 		console.log(`service ${service[0]} {`);
@@ -197,3 +222,4 @@ function outputProtos(protos) {
 		console.log("}\n");
 	});
 }
+
