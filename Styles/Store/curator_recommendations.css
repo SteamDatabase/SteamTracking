@@ -139,7 +139,8 @@ body.v6 .page_section h2 {
 	margin-bottom: 0px;
 	padding-bottom: 0px;
 }
-body.v6 .page_section.type_list_squares h2 {
+body.v6 .page_section.type_list_squares h2,
+body.v6 .page_section.type_list_homepages h2 {
 	margin-bottom: 8px;
 }
 body.v6 a:hover h2 {
@@ -466,7 +467,7 @@ body.v6 .page_desc p {
 	box-shadow: 0 0 15px 1px rgba(0,0,0,0.7);
 	padding: 15px;
 	display: flex;
-	height: 340px;
+	height: 348px;
 }
 
 .creatorhome .curator_featured > div {
@@ -485,7 +486,7 @@ body.v6 .page_desc p {
 	flex-shrink: 3.1;
 	flex-basis: 100%;
 	max-height: 100%;
-	margin-left: 16px;
+	margin-left: 15px;
 
 	background: rgba(0, 0, 0, 0.1);
 }
@@ -508,6 +509,9 @@ body.v6 .page_desc p {
 
 .curator_featured .capsule .capimg {
 	width: 100%;
+}
+.curator_featured .discount_block_inline {
+	min-height: 18px;
 }
 
 .curator_featured .capsule p {
@@ -733,7 +737,7 @@ body.v6 .page_desc p {
 
 	flex-shrink: 1;
 
-	box-shadow: 0 0 15px 1px rgba(0,0,0,0.7);
+	box-shadow: 0 0 3px rgba(0,0,0,0.7);
 }
 
 .lists_more_container .item:hover {

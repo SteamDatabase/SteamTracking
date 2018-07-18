@@ -831,6 +831,19 @@ function ShowAvatarHandle()
 	elOverlay.addClass('visible');
 }
 
+function SetHeaderBackgroundToSavedValue( elSelectImage )
+{
+	var $headerContainer = $J('#header_container');
+	var rgNodeData = $headerContainer.data('sectionConfig');
+	if( !rgNodeData )
+	{
+		return;
+	}
+
+	elSelectImage.val( rgNodeData.background);
+	elSelectImage.trigger( 'change' );
+}
+
 function ShowHeaderImageHandle()
 {
 
@@ -840,10 +853,6 @@ function ShowHeaderImageHandle()
 	var elOverlay = $J('<div class="edit_overlay"></div>');
 
 	var elButton = $J('<div class="edit_button"><img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png"></div>');
-
-	var rgNodeData = $container.data('sectionConfig');
-
-
 
 	elButton.click( function(){
 		elOptions.show();
@@ -879,13 +888,15 @@ function ShowHeaderImageHandle()
 		return false;
 	});
 
-	elSelectImage.on('change', function(){
+	elSelectImage.change( function(){
 		var val = elSelectImage.val();
-		$J('#page_background_container').css({backgroundImage: 'url(' + g_strCommunityCDNUrl + val + ')' });
+		$J('.background_header_ctn').css( "background-image", 'url(' + g_strCommunityCDNUrl + val + ')' );
 	});
 
-	elCancel.on('click', function(){
+		elCancel.on('click', function(){
 		elOptions.hide();
+
+		SetHeaderBackgroundToSavedValue( elSelectImage );
 	});
 
 
@@ -918,12 +929,7 @@ function ShowHeaderImageHandle()
 			$J.each(data.images, fnAddImage );
 		}
 
-		var rgNodeData = $container.data('sectionConfig');
-		if( !rgNodeData )
-			return;
-
-		elSelectImage.val( rgNodeData.background);
-
+		SetHeaderBackgroundToSavedValue( elSelectImage );
 	});
 
 	elOptions.append( WrapFormFieldWithLabel( "Background image", elSelectImage ));

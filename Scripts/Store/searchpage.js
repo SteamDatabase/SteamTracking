@@ -38,6 +38,8 @@ function FillFormFromNavigation( querystring, link_click, initial_load )
 	else
 		rgLocationParams['displayterm'] = 'enter search term or tag'
 
+	$J( "#hide_filtered_results_warning" ).val( link_click ? 1 : "" );
+
 	var form = $J('#advsearchform');
 	// in responsive mode, these elements are reparented to the localmenu_content area
 	var addtlOptions = $J('.localmenu_content #additional_search_options');
@@ -50,7 +52,7 @@ function FillFormFromNavigation( querystring, link_click, initial_load )
 
 		var name = element.name;
 
-		if ( name == 'snr' )
+				if ( name == 'snr' || name == 'ignore_preferences' || name == 'hide_filtered_results_warning' )
 			return true;
 
 		var newvalue = rgLocationParams[name];
@@ -119,6 +121,7 @@ var g_rgDesiredParameters = null;
 var g_rgCurrentParameters = null;
 var g_bPopulatingSearchControls = false;
 var g_bUseHistoryAPI = !!(window.history && window.history.pushState);
+var g_strUnfilteredURL = '';
 function AjaxSearchResults()
 {
 	// we're in the middle of filling in all the controls from the hash parameter
@@ -128,6 +131,9 @@ function AjaxSearchResults()
 	// all page # changes come through as location changes, so reset to 1 here
 	//	when changing search parameters
 	$('search_current_page').value = 1;
+
+	// reset
+	$J( "#hide_filtered_results_warning" ).val( "" );
 
 	AjaxSearchResultsInternal( false, false );
 }
@@ -148,6 +154,10 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 		delete rgParameters['sort_by'];
 	if ( rgParameters['page'] === 1 || rgParameters['page'] === '1' )
 		delete rgParameters['page'];
+
+	// don't want this on the url either
+	var hide_filtered_results_warning = rgParameters['hide_filtered_results_warning'];
+	delete rgParameters['hide_filtered_results_warning'];
 
 	if ( !bOnLocationChange )
 	{
@@ -170,6 +180,9 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 	if ( snr )
 		rgParameters['snr'] = snr;
 
+	if ( hide_filtered_results_warning )
+		rgParameters['hide_filtered_results_warning'] = hide_filtered_results_warning;
+
 	UpdateTags();
 
 	ExecuteSearch( rgParameters );
@@ -177,7 +190,6 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 
 function ExecuteSearch( rgParameters )
 {
-
 	if ( g_ajaxInFlight )
 	{
 		g_rgDesiredParameters = rgParameters;
@@ -193,21 +205,36 @@ function ExecuteSearch( rgParameters )
 	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', onComplete: SearchCompleted.bind( null, rgParameters ) } );
 }
 
+function HandleFilteredResultsWarning()
+{
+	var elemFilteredWarning = $J( "#search_results_filtered_warning" );
+	if ( elemFilteredWarning.length != 0 )
+	{
+		$J( "#search_results_filtered_warning_persistent" ).html( elemFilteredWarning.html() );
+		elemFilteredWarning.remove();
+		$J( "#search_results_filtered_warning_persistent" ).removeClass( "collapsed" );
+	}
+
+	$J('div.dropdown[data-dropdown-html]').v_tooltip({ 'dataName': 'dropdownHtml', 'defaultType':'html', 'createOnLoad': true, 'destroyWhenDone': false, 'childActiveCSSClass': 'hover', 'useMouseEnterEvent': false, 'useClickEvent': true, 'preventDefault':false, 'location':'bottom', 'tooltipClass': 'dropdown_container', 'parentActiveCSSClass': 'hover', 'offsetY':0, 'fadeSpeed': 0, 'inheritParentMinWidth': true});
+}
+
 function SearchCompleted( parameters, transport )
 {
+	if ( !parameters['hide_filtered_results_warning'] )
+	{
+		HandleFilteredResultsWarning();
+	}
+
 	g_ajaxInFlight = null;
 
 	if ( typeof GDynamicStore != 'undefined' )
 		GDynamicStore.DecorateDynamicItems( $J('#search_results' ) );
-
-
 
 	if ( g_rgDesiredParameters )
 	{
 		ExecuteSearch( g_rgDesiredParameters );
 		g_rgDesiredParameters = null;
 	}
-
 
 	if (typeof(GDynamicStore) !== 'undefined')
 		GDynamicStore.DecorateDynamicItems();
@@ -267,6 +294,8 @@ function InitSearchPage()
 			OnLocationChange( null, window.location.hash );
 		}
 	}
+
+	HandleFilteredResultsWarning();
 }
 
 function AddSearchTag( strParam, strValue, strLabel, fnOnClick )
@@ -339,6 +368,24 @@ function UpdateTags()
 			Tag.trigger( 'tablefilter_update' );
 		}
 		$J('#termsnone').hide();
+	}
+}
+
+function OnSelectFilteredContentSettingsMenu( elSource )
+{
+	var d = $J(elSource).data('dropdownValue');
+
+	switch( d )
+	{
+		case 'explain':
+			ShowAlertDialog( "Content Filtering", "The preferences you set affect what titles are displayed to you throughout the Steam Store, including on the home page, search results, etc." );
+			break;
+		case 'preferences':
+			top.location.href = "https://store.steampowered.com/account/preferences/";
+			break;
+		case 'unfiltered':
+			top.location.href = g_strUnfilteredURL;
+			break;
 	}
 }
 

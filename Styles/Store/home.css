@@ -2011,19 +2011,6 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	white-space: normal;	/* override the nowrap we set above */
 }
 
-
-.recommended_creators_ctn .home_smallcaps a.home_smallcap .recommended_creators_container img {
-	width: 32px;
-	height: 32px;
-}
-
-.recommended_creators_ctn .home_smallcaps a.home_smallcap {
-	float: none;
-	display: inline-block;
-	white-space: normal;	/* override the nowrap we set above */
-}
-
-
 .carousel_thumbs {
 	padding-bottom: 4px;
 }
@@ -2339,38 +2326,6 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);background: l
 }
 
 
-/* Recommended creators widget */
-
-.recommended_creators_ctn {
-	margin: 20px auto 25px auto;
-}
-
-.recommended_creators_ctn .store_capsule {
-	width: 228px;
-	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
-}
-
-.recommended_creators_ctn .store_capsule .capsule_header {
-	height: 107px;
-}
-
-.recommended_creators_ctn .store_capsule:not(:last-child) {
-	margin-right: 9px; /* 9 * 2 + 3 * 200 = 618 */
-}
-
-.recommended_creators_ctn .store_capsule .discount_block {
-	min-height: 18px;
-}
-
-.recommended_creators_ctn .recommended_creators_container {
-	border-top: 1px solid #213749;
-	padding: 8px 7px 5px;
-	position: relative;
-background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);background: linear-gradient( to right, #223b4f 5%,#25435b 95%);}
-
-.recommended_creators_ctn .recommended_creators_container .avatars > a {
-	margin-right: 3px;
-}
 
 /* Recently updated games */
 

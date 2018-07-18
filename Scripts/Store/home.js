@@ -1015,46 +1015,8 @@ GHomepage = {
 			{
 				var nAppId = oItem.appid;
 				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'summer2018_creator_recommend', nAppId, 0, rgOptions );
-				var $CreatorsCtn = $J('<div class="recommended_creators_container" />');
-				$CapCtn.append($CreatorsCtn);
+				$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
 
-				var $AvatarsCtn = $J('<div class="avatars" />');
-				$CreatorsCtn.append($AvatarsCtn);
-
-				var $AvatarCap = $J('<a href="%1$s" title="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, oItem.link).replace(/\%2\$s/g, GetAvatarURL( oItem.avatar_sha ) ).replace(/\%3\$s/g, oItem.name) );
-				$AvatarsCtn.append( $AvatarCap );
-				
-				var $Actions = $J('<div class="actions" />');
-				var $FollowLink = $J('<a href="#" class="btn_green_white_innerfade btn_medium" />' );
-				$FollowLink.data('ds-following', oItem.following );
-				$FollowLink.bind('updateFollowState', function () {
-					if ( $FollowLink.data('ds-following') )
-					{
-						$FollowLink.html( 'Following' );
-						$FollowLink.addClass( "following_button" );
-						$FollowLink.removeClass( "follow_button" );
-					}
-					else
-					{
-						$FollowLink.html( 'Follow' );
-						$FollowLink.removeClass( "following_button" );
-						$FollowLink.addClass( "follow_button" );
-					}
-				});
-
-				$FollowLink.trigger('updateFollowState');				
-				
-				$FollowLink.on( 'click', function() {
-					FollowCuratorWithCallback( oItem.creatorid, !$FollowLink.data('ds-following'), function(){
-						$FollowLink.data('ds-following', !$FollowLink.data('ds-following') );
-						$FollowLink.trigger('updateFollowState');				
-					});
-					event.preventDefault();
-				});
-				
-				$Actions.append( $FollowLink );
-				
-				$AvatarsCtn.append( $Actions );
 				return $CapCtn;
 			},	'creator_recommendations', 4
 		);

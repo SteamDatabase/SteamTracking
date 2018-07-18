@@ -95,6 +95,70 @@
 	width: 120px;
 }
 
+/* settings menu */
+
+.settings_tab {
+	cursor: pointer;
+	transition: background-color 300ms;
+	order: 10;
+	margin-left: 2px;
+	position: relative;
+	background-image: url( '/public/images/bigpicture/icon_settings.png' );
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+	background-origin: content-box;
+}
+
+.settings_tab::after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 20px;
+	background: url('/store/public/images/v6/ico/ico_arrow_dn_for_select.png') no-repeat left center;
+	content: '';
+}
+
+.settings_tab:hover {
+	background-color: rgba(255,255,255,0.1);
+	color: #000;
+}
+.settings_tab.hover {
+	background-color: #c7d5e0;
+	color: #000;
+}
+
+.settings_tab.hover > span {
+	color: #000;
+}
+
+.dropdown_container {
+
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 0px 0px 0px 0px;
+
+	transition: opacity 300ms;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.dropdown_container.hover {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.dropdown_container .item {
+	color: #000;
+	padding: 10px 10px 10px 10px;
+	cursor: pointer;
+	display: block;
+}
+
+.dropdown_container .item:hover {
+	color: #fff;
+	background-color: #212d3d;
+}
+
 /* Search results */
 .search_result_row, .search_result_row:hover {
 	position: relative;
@@ -127,6 +191,35 @@
 #search_result_container {
 	max-width: 686px;
 }
+
+.search_results_filtered_warning {
+	display: flex;
+}
+.search_results_filtered_warning > div {
+	padding: 10px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	color: lightgoldenrodyellow;
+}
+.search_results_filtered_warning > div:first-child {
+	flex-grow: 1;
+}
+.search_results_filtered_warning .settings_tab {
+	flex: 0 0 40px;
+}
+.search_results_filtered_warning a {
+	text-decoration: underline;
+}
+.search_results_filtered_warning.collapsed {
+	display: none;
+}
+.search_results_filtered_warning span.valve_only {
+	color: red;
+	font-weight: bold;
+}
+
+
+
+
 
 .search_result_row .ds_flag {
 	top: 12px;

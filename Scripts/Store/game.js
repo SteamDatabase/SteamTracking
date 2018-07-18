@@ -279,13 +279,24 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 
 function RenderSuccessorAppsBlock( rgSuccessorAppIDs )
 {
-	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 10 || !$J('#successor_apps_block_block_content').length )
+	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 4 || !$J('#successor_apps_block_block_content').length )
 	{
 		$J('#successor_apps_block').hide();
 		return;
 	}
 
 	RenderRecommendBlock( rgSuccessorAppIDs, 'recommend_successor', $J('#successor_apps_block_block_content') );
+}
+
+function RenderFranchiseAppBlock( rgFranchiseAppIDs )
+{
+	if( !rgFranchiseAppIDs || !rgFranchiseAppIDs.length > 0 || !$J('#franchise_app_block_content').length )
+	{
+		$J('#franchise_block').hide();
+		return;
+	}
+
+	RenderRecommendBlock( rgFranchiseAppIDs, 'recommend_franchise', $J('#franchise_app_block_content') );
 }
 
 function ShowEULA( elLink )
