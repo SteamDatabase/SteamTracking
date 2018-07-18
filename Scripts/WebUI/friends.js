@@ -73471,12 +73471,13 @@ and limitations under the License.
               return Ar.createElement(
                 Ar.Fragment,
                 null,
-                Ar.createElement(
-                  "div",
-                  null,
-                  "/giphy ",
-                  this.GetArgument("giphy_search")
-                ),
+                s &&
+                  Ar.createElement(
+                    "div",
+                    null,
+                    "/giphy ",
+                    this.GetArgument("giphy_search")
+                  ),
                 Ar.createElement(
                   Sm,
                   {
