@@ -73357,71 +73357,81 @@ and limitations under the License.
                 this.GetArgument("giphy_search")
               );
               return Lr.createElement(
-                Fm,
-                {
-                  className: a,
-                  width: r,
-                  height: o,
-                  strMediaType: "image",
-                  unAccountIDSender: this.props.context.unAccountIDSender,
-                  msgUniqueKey: this.props.context.key,
-                  titleInfo: s
-                    ? Object(Er.b)(
-                        "#bbcode_image_link_giphy",
-                        this.GetArgument("giphy_search")
-                      )
-                    : i
-                },
-                n == vm.Loading &&
-                  Lr.createElement(
-                    "div",
-                    { className: "LoadingImage" },
-                    "Loading image: ",
-                    Lr.createElement(m, { href: i }, i)
-                  ),
-                n == vm.Error &&
-                  Lr.createElement(
-                    "div",
-                    { className: "FailedToLoadImage" },
-                    Lr.createElement("span", null, "Failed to load image:"),
-                    " ",
-                    Lr.createElement(m, { href: i }, i)
-                  ),
-                Lr.createElement("img", {
-                  style: c,
-                  className: "chatImageFull BBCodeResizableElement",
-                  src: e,
-                  srcSet: t,
-                  onLoad: this.OnImageLoad,
-                  onError: this.OnImageError,
-                  onContextMenu: function(e) {
-                    y(e, i);
-                  }
-                }),
-                n == vm.Loaded &&
-                  Lr.createElement(
-                    Lr.Fragment,
-                    null,
+                Lr.Fragment,
+                null,
+                Lr.createElement(
+                  "div",
+                  null,
+                  "/giphy ",
+                  this.GetArgument("giphy_search")
+                ),
+                Lr.createElement(
+                  Fm,
+                  {
+                    className: a,
+                    width: r,
+                    height: o,
+                    strMediaType: "image",
+                    unAccountIDSender: this.props.context.unAccountIDSender,
+                    msgUniqueKey: this.props.context.key,
+                    titleInfo: s
+                      ? Object(Er.b)(
+                          "#bbcode_image_link_giphy",
+                          this.GetArgument("giphy_search")
+                        )
+                      : i
+                  },
+                  n == vm.Loading &&
                     Lr.createElement(
-                      m,
-                      {
-                        className: "chatImageURL",
-                        href: i,
-                        title: s
-                          ? Object(Er.b)(
-                              "#bbcode_image_tooltip_link_giphy",
-                              this.GetArgument("giphy_search")
-                            )
-                          : Object(Er.b)("#bbcode_image_tooltip_link")
-                      },
-                      Lr.createElement(Xs.B, null),
+                      "div",
+                      { className: "LoadingImage" },
+                      "Loading image: ",
+                      Lr.createElement(m, { href: i }, i)
+                    ),
+                  n == vm.Error &&
+                    Lr.createElement(
+                      "div",
+                      { className: "FailedToLoadImage" },
+                      Lr.createElement("span", null, "Failed to load image:"),
+                      " ",
+                      Lr.createElement(m, { href: i }, i)
+                    ),
+                  Lr.createElement("img", {
+                    style: c,
+                    className: "chatImageFull BBCodeResizableElement",
+                    src: e,
+                    srcSet: t,
+                    onLoad: this.OnImageLoad,
+                    onError: this.OnImageError,
+                    onContextMenu: function(e) {
+                      y(e, i);
+                    }
+                  }),
+                  n == vm.Loaded &&
+                    Lr.createElement(
+                      Lr.Fragment,
+                      null,
                       Lr.createElement(
-                        "div",
-                        { className: "giphyTag" },
-                        s && Object(Er.d)("#bbcode_image_link_giphy", l)
+                        m,
+                        {
+                          className: "chatImageURL",
+                          href: i,
+                          title: s
+                            ? Object(Er.b)(
+                                "#bbcode_image_tooltip_link_giphy",
+                                this.GetArgument("giphy_search")
+                              )
+                            : Object(Er.b)("#bbcode_image_tooltip_link")
+                        },
+                        Lr.createElement(Xs.B, null),
+                        Lr.createElement(
+                          "div",
+                          { className: "giphyTag" },
+                          s && Object(Er.d)("#bbcode_image_link_giphy", l)
+                        )
                       )
                     )
-                  )
+                )
               );
             }),
             lt.c([ni.a], t.prototype, "OnImageLoad", null),
