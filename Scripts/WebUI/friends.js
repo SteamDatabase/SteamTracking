@@ -14525,6 +14525,7 @@ and limitations under the License.
             (e.prototype.LocalizeToken = function(e, t, i) {
               if (!e.startsWith("#"))
                 return console.log("Token doesn't start with #:", e), "";
+              e = e.toLowerCase();
               var n = "";
               if (
                 (t && t.has(e) && (n = t.get(e)),
@@ -14833,7 +14834,7 @@ and limitations under the License.
                     (s = e.m_mapLanguages.get(a)));
                 for (var c = 0, l = o.tokens(); c < l.length; c++) {
                   var u = l[c];
-                  s.set(u.name(), u.value());
+                  s.set(u.name().toLowerCase(), u.value());
                 }
               }
             }),
