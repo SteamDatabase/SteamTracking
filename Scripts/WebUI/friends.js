@@ -53492,8 +53492,10 @@ and limitations under the License.
               return !1;
             }),
             (t.prototype.VoiceSettingsRefMarker = function(e) {
-              (this.m_elVoiceSettingsMarkerScroll = e),
-                (this.m_window = e.ownerDocument.defaultView);
+              e &&
+                e.ownerDocument &&
+                ((this.m_elVoiceSettingsMarkerScroll = e),
+                (this.m_window = e.ownerDocument.defaultView));
             }),
             (t.prototype.OnShowAdvancedSettings = function() {
               var e = this;
