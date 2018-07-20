@@ -274,6 +274,49 @@ img.payment_method_logo {
 .client_button_row.button_row {
 	margin-top: 20px;
 }
+.redeem_wallet_code_form .button_row .btn_medium {
+	right: 14px;
+	position: absolute;
+	margin-top: 4px;
+}
+
+.webmoney_prompt_ctn {
+	width: 100%;
+	background: rgba(255,255,255,0.1);
+	border-radius: 2px;
+	border: 1px solid rgba(255,255,255,0.2);
+	box-shadow: 0 0 1px #000;
+	display: flex;
+	position: relative;
+	margin-top: 10px;
+}
+.webmoney_prompt_ctn:after {
+	bottom: 100%;
+	left: 28px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 10px;
+	margin-left: 1px;
+}
+.webmoney_prompt_ctn .img_ctn {
+	width: 64px;
+	display: inline-block;
+	margin-right: 6px;
+	background: #fff;
+	padding: 8px;
+	border-bottom-left-radius: 2px;
+	border-top-left-radius: 2px;
+}
+.webmoney_prompt_ctn .desc {
+	display: inline-block;
+	padding: 8px;
+}
 
 /* fixes a layout bug in IE7 when .btn_client is mixed with position:relative btn_checkout_green */
 .client_button_row .btn_client {
