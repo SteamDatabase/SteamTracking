@@ -267,6 +267,7 @@
  Long2Fix
  Msg
  NSApp
+ NSBeep
  NSDefaultRunLoopMode
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
@@ -2601,13 +2602,13 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp705
- d __block_descriptor_tmp722
- d __block_descriptor_tmp725
- d __block_descriptor_tmp727
+ d __block_descriptor_tmp706
+ d __block_descriptor_tmp723
+ d __block_descriptor_tmp726
+ d __block_descriptor_tmp728
  d __block_literal_global
- d __block_literal_global726
- d __block_literal_global728
+ d __block_literal_global727
+ d __block_literal_global729
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2853,9 +2854,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_703
+ t __copy_helper_block_704
  t __destroy_helper_block_
- t __destroy_helper_block_704
+ t __destroy_helper_block_705
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal

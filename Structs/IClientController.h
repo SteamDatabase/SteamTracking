@@ -40,6 +40,8 @@ public:
     virtual unknown_ret GetGlyphForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
+    virtual unknown_ret GetMotionData(unsigned long long) = 0;
+    virtual unknown_ret GetMotionDataDisabled(unsigned int, unsigned long long) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;
@@ -126,6 +128,7 @@ public:
     virtual unknown_ret InitiateISPFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*) = 0;
     virtual unknown_ret TurnOffController(unsigned int) = 0;
+    virtual unknown_ret SetGyroOn(unsigned int, unsigned long long) = 0;
     virtual unknown_ret SetControllerSetting(unsigned int, Voltroller::ControllerSetting*) = 0;
     virtual unknown_ret EnumerateControllers() = 0;
     virtual unknown_ret StartConfigSets(unsigned int, unsigned int, bool) = 0;

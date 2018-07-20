@@ -586,7 +586,7 @@ message CSaveTouchConfigLayoutMsg {
 
 message CTouchActionSetActiveMsg {
 	optional uint32 appid = 1;
-	optional uint32 actionset_id = 2;
+	optional int32 actionset_id = 2;
 }
 
 message CStreamDataLostMsg {

@@ -770,6 +770,11 @@ CommunityMarketItemPicker
 	method		"internal"
 	filter		"profile"
 }
+Chat
+{
+	url			"%chat%/chat/clientui/?l=%language%&build=%buildid%"
+	method		"internal"
+}
 FacebookProfilePage
 {
 	url			"http://www.facebook.com/profile.php?id=%p1%"

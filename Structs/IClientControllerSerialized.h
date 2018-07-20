@@ -150,4 +150,5 @@ public:
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
     virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(unsigned int, CUtlBuffer const*) = 0;
+    virtual unknown_ret SetGyroOn(unsigned int, unsigned long long) = 0;
 };

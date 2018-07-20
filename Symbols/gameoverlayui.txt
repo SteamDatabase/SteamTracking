@@ -9730,6 +9730,7 @@
  T GetAvailableDrives(char*, int)
  T GetCStringCharConversion()
  T GetCchTempTextBuffer_Harmful()
+ T GetChatBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetFileTimestampString(long long)

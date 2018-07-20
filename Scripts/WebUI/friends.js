@@ -56054,6 +56054,32 @@ and limitations under the License.
                 Ar.createElement(
                   "div",
                   { className: "changeLogDate" },
+                  this.PostDate(1532044800)
+                ),
+                Ar.createElement(
+                  "div",
+                  { className: "changeLogDescription" },
+                  Ar.createElement(
+                    "div",
+                    { className: "changeLogItem" },
+                    Object(Ir.d)(
+                      "#changeLog_UpdateItem71",
+                      Ar.createElement(
+                        "b",
+                        null,
+                        Object(Ir.b)("#changeLog_Note")
+                      )
+                    )
+                  )
+                ),
+                Ar.createElement(
+                  "div",
+                  { className: "changeLogTitle" },
+                  Object(Ir.b)("#changeLog_GenericUpdateTitle")
+                ),
+                Ar.createElement(
+                  "div",
+                  { className: "changeLogDate" },
                   this.PostDate(1531443600)
                 ),
                 Ar.createElement(
@@ -57343,7 +57369,7 @@ and limitations under the License.
           function t(t) {
             var i = e.call(this, t) || this;
             return (
-              (i.m_bChangeLogVersion = 7),
+              (i.m_bChangeLogVersion = 8),
               (i.state = {
                 bShowChangeLogViolator:
                   pg.UIDisplayPrefs.nChangeLogDismissed < i.m_bChangeLogVersion
@@ -57368,7 +57394,7 @@ and limitations under the License.
                 e &&
                   (t =
                     this.m_bChangeLogVersion -
-                    pg.UIDisplayPrefs.nChangeLogDismissed),
+                    (pg.UIDisplayPrefs.nChangeLogDismissed || 7)),
                 Ar.createElement(
                   "div",
                   {
