@@ -75423,7 +75423,7 @@ and limitations under the License.
                   ? ((this.m_bSupportsAudioWorkletProcessors = !0),
                     n.audioWorklet
                       .addModule(
-                        st.a.COMMUNITY_BASE_URL +
+                        st.a.CHAT_BASE_URL +
                           "public/javascript/webui/noisegate-audio-worklet.js?v=3"
                       )
                       .then(function() {
