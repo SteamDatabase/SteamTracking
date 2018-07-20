@@ -85,8 +85,7 @@ function handleFile(file) {
 
 		let func = match[0].replace(/[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
 		eval('func=(' + func + ')');
-		let proto = func();
-		proto = decodeProtobuf(proto, minVarName);
+		let proto = decodeProtobuf(func(), minVarName);
 		protos.push(proto);
 		protoShortNamesToLongNames[minVarName] = proto.name;
 	});
@@ -99,39 +98,48 @@ function handleFile(file) {
 		});
 	});
 
-	let svcRex = /"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z\$]{1,3})|\w,([_a-zA-Z\$]{1,3}))|SendNotification\("(\w+)\.(\w+)#1"/g;
+	let svcRex = /(?:SendNotification\()?"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z\$]{1,3})|\w[\),]([_a-zA-Z\$]{1,3})?)/g;
 	let matches, bHasUnknownRequest = false;
 	const services = new Map();
 
 	while (matches = svcRex.exec(file)) {
 		let svcName = matches[1],
 			methodName = matches[2],
-			msgRequestName, msgResponseName;
-		if (matches[3]) { // notification
+			msgRequestName = null, msgResponseName = null;
+		if (matches[3]) { // S->C notification
 			msgRequestName = protoShortNamesToLongNames[matches[3]];
-			msgResponseName = "NoResponse";
 		} else if (matches[4]) { // response
 			msgResponseName = protoShortNamesToLongNames[matches[4]];
 			msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
+
 			if (!Object.values(protoShortNamesToLongNames).includes(msgRequestName)) {
+				msgRequestName = null;
+			}
+		} else { // C->S notification
+			// try to fix it below
+		}
+
+		if (!msgRequestName) {
+			let bFixFound = protos.some((proto) => {
+				if ((proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
+					|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")) {
+					msgRequestName = proto.name;
+					return true;
+				}
+				return false;
+			});
+
+			if (!bFixFound) {
 				msgRequestName = "NotImplemented";
 				if (!bHasUnknownRequest) {
 					protos.push({ "name": "NotImplemented", "fields": [] });
 					bHasUnknownRequest = true;
 				}
 			}
-		} else if (matches[5]) { // notification
-			svcName = matches[5];
-			methodName = matches[6];
-			msgRequestName = "NotImplemented";
+		}
+
+		if (!msgResponseName) {
 			msgResponseName = "NoResponse";
-			if (!bHasUnknownRequest) {
-				protos.push({ "name": "NotImplemented", "fields": [] });
-				bHasUnknownRequest = true;
-			}
-		} else {
-			console.error('Wut da heck?');
-			continue;
 		}
 
 		if (!services.has(svcName)) {
@@ -144,7 +152,6 @@ function handleFile(file) {
 			"response": msgResponseName
 		});
 	}
-
 
 	return {"messages": protos, "services": services};
 }
@@ -163,6 +170,10 @@ function decodeProtobuf(proto, minVarName) {
 
 		if (fieldDesc.type.includes('()')) {
 			fieldDesc.type = fieldDesc.type.replace(/(^[a-z]\.read|\(\))/g, '').replace('64string', '64');
+			if (fieldDesc.type === 'enum') {
+				// ToDo: RE enums
+				fieldDesc.type = 'int32';
+			}
 		} else {
 			// It's a nested message of some sort
 			let nestMatch = field.match(/case \d+:var[^;]+new ([_a-zA-Z\$]{1,3})(\(\))?;/);
@@ -222,4 +233,3 @@ function outputProtos(protos) {
 		console.log("}\n");
 	});
 }
-
