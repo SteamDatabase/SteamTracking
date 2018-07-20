@@ -2373,7 +2373,7 @@
 	"Library_Controller_Property_Value_Configurator_Enable_GlobalPref"	"Global Setting"
 	"Library_Controller_Property_Value_Configurator_Enable_Off"	"Forced Off"
 	"Library_Controller_Property_Value_Configurator_Enable_On"	"Forced On"
-	"Steam_Controller_Support_PS4"	"PS4"
+	"Steam_Controller_Support_PS4"	"PS"
 	"Steam_Controller_Support_XBox" "XBox"
 	"Steam_Controller_Support_Switch" "Switch"
 	"Steam_Controller_Support_Generic"	"Generic"

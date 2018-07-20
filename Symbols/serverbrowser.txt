@@ -366,6 +366,7 @@
  D VTT for vgui::Button
  D VTT for vgui::CBitmapImagePanel
  D VTT for vgui::CFileOpenListPanel
+ D VTT for vgui::CIMEPanel
  D VTT for vgui::CTreeViewListControl
  D VTT for vgui::CaptionGripPanel
  D VTT for vgui::CheckButton
@@ -389,7 +390,6 @@
  D VTT for vgui::GripPanel
  D VTT for vgui::HTML
  D VTT for vgui::HTML::CHTMLFindBar
- D VTT for vgui::HTML::CHTMLIMEBar
  D VTT for vgui::HTMLPopup
  D VTT for vgui::HTMLPopup::PopupHTML
  D VTT for vgui::ImagePanel
@@ -459,6 +459,12 @@
  D construction vtable for vgui::Button-in-vgui::RadioButton
  D construction vtable for vgui::Button-in-vgui::TabCloseButton
  D construction vtable for vgui::Button-in-vgui::ToggleButton
+ D construction vtable for vgui::CIMEPanel-in-vgui::ComboBox
+ D construction vtable for vgui::CIMEPanel-in-vgui::FileCompletionEdit
+ D construction vtable for vgui::CIMEPanel-in-vgui::HTML
+ D construction vtable for vgui::CIMEPanel-in-vgui::HTMLPopup::PopupHTML
+ D construction vtable for vgui::CIMEPanel-in-vgui::TextEntry
+ D construction vtable for vgui::CIMEPanel-in-vgui::TreeNodeText
  D construction vtable for vgui::CheckButton-in-vgui::ListPanelCheckBox
  D construction vtable for vgui::EditablePanel-in-CBaseGamesPage
  D construction vtable for vgui::EditablePanel-in-CDialogAddServer
@@ -476,7 +482,6 @@
  D construction vtable for vgui::EditablePanel-in-vgui::FileOpenDialog
  D construction vtable for vgui::EditablePanel-in-vgui::Frame
  D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLFindBar
- D construction vtable for vgui::EditablePanel-in-vgui::HTML::CHTMLIMEBar
  D construction vtable for vgui::EditablePanel-in-vgui::HTMLPopup
  D construction vtable for vgui::EditablePanel-in-vgui::InputDialog
  D construction vtable for vgui::EditablePanel-in-vgui::MessageBox
@@ -559,6 +564,7 @@
  D construction vtable for vgui::Panel-in-vgui::Button
  D construction vtable for vgui::Panel-in-vgui::CBitmapImagePanel
  D construction vtable for vgui::Panel-in-vgui::CFileOpenListPanel
+ D construction vtable for vgui::Panel-in-vgui::CIMEPanel
  D construction vtable for vgui::Panel-in-vgui::CTreeViewListControl
  D construction vtable for vgui::Panel-in-vgui::CaptionGripPanel
  D construction vtable for vgui::Panel-in-vgui::CheckButton
@@ -582,7 +588,6 @@
  D construction vtable for vgui::Panel-in-vgui::GripPanel
  D construction vtable for vgui::Panel-in-vgui::HTML
  D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLFindBar
- D construction vtable for vgui::Panel-in-vgui::HTML::CHTMLIMEBar
  D construction vtable for vgui::Panel-in-vgui::HTMLPopup
  D construction vtable for vgui::Panel-in-vgui::HTMLPopup::PopupHTML
  D construction vtable for vgui::Panel-in-vgui::ImagePanel
@@ -682,6 +687,8 @@
  D guard variable for vgui::Button::GetMessageMap()::s_pMap
  D guard variable for vgui::CFileOpenListPanel::GetKBMap()::s_pMap
  D guard variable for vgui::CFileOpenListPanel::GetMessageMap()::s_pMap
+ D guard variable for vgui::CIMEPanel::GetKBMap()::s_pMap
+ D guard variable for vgui::CIMEPanel::GetMessageMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetKBMap()::s_pMap
  D guard variable for vgui::CTreeViewListControl::GetMessageMap()::s_pMap
  D guard variable for vgui::CaptionGripPanel::GetKBMap()::s_pMap
@@ -729,8 +736,6 @@
  D guard variable for vgui::GripPanel::RequestInfo(KeyValues*)::hksIsResizeBorder
  D guard variable for vgui::HTML::CHTMLFindBar::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::CHTMLFindBar::GetMessageMap()::s_pMap
- D guard variable for vgui::HTML::CHTMLIMEBar::GetKBMap()::s_pMap
- D guard variable for vgui::HTML::CHTMLIMEBar::GetMessageMap()::s_pMap
  D guard variable for vgui::HTML::GetKBMap()::s_pMap
  D guard variable for vgui::HTML::GetMessageMap()::s_pMap
  D guard variable for vgui::HTMLPopup::GetKBMap()::s_pMap
@@ -1079,6 +1084,7 @@
  D typeinfo for vgui::Button
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
+ D typeinfo for vgui::CIMEPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
  D typeinfo for vgui::CTypingJumpHandler
@@ -1106,7 +1112,6 @@
  D typeinfo for vgui::GripPanel
  D typeinfo for vgui::HTML
  D typeinfo for vgui::HTML::CHTMLFindBar
- D typeinfo for vgui::HTML::CHTMLIMEBar
  D typeinfo for vgui::HTMLPopup
  D typeinfo for vgui::HTMLPopup::PopupHTML
  D typeinfo for vgui::IClientPanel
@@ -1187,6 +1192,19 @@
  D vgui::CFileOpenListPanel::GetKBMap()::s_pMap
  D vgui::CFileOpenListPanel::GetMessageMap()::s_pMap
  D vgui::CFileOpenListPanel::KB_ChainToMap()::chained
+ D vgui::CIMEPanel::ChainToAnimationMap()::chained
+ D vgui::CIMEPanel::ChainToMap()::chained
+ D vgui::CIMEPanel::GetKBMap()::s_pMap
+ D vgui::CIMEPanel::GetMessageMap()::s_pMap
+ D vgui::CIMEPanel::KB_ChainToMap()::chained
+ D vgui::CIMEPanel::PanelMessageFunc_HideIMECandidates::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_OnIMECandidateList::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_OnIMECandidateSelected::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_OnImeCancelComposition::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_OnImeCommitString::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_OnImeCompositionString::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_ShowIMECandidates::InitVar()::bAdded
+ D vgui::CIMEPanel::PanelMessageFunc_UpdateIMECandidates::InitVar()::bAdded
  D vgui::CTreeViewListControl::ChainToAnimationMap()::chained
  D vgui::CTreeViewListControl::ChainToMap()::chained
  D vgui::CTreeViewListControl::GetKBMap()::s_pMap
@@ -1334,22 +1352,12 @@
  D vgui::HTML::CHTMLFindBar::KB_ChainToMap()::chained
  D vgui::HTML::CHTMLFindBar::PanelMessageFunc_OnEditNewLine::InitVar()::bAdded
  D vgui::HTML::CHTMLFindBar::PanelMessageFunc_OnTextChanged::InitVar()::bAdded
- D vgui::HTML::CHTMLIMEBar::ChainToAnimationMap()::chained
- D vgui::HTML::CHTMLIMEBar::ChainToMap()::chained
- D vgui::HTML::CHTMLIMEBar::GetKBMap()::s_pMap
- D vgui::HTML::CHTMLIMEBar::GetMessageMap()::s_pMap
- D vgui::HTML::CHTMLIMEBar::KB_ChainToMap()::chained
- D vgui::HTML::CHTMLIMEBar::PanelMessageFunc_OnEditNewLine::InitVar()::bAdded
- D vgui::HTML::CHTMLIMEBar::PanelMessageFunc_OnKillFocus::InitVar()::bAdded
  D vgui::HTML::ChainToAnimationMap()::chained
  D vgui::HTML::ChainToMap()::chained
  D vgui::HTML::GetKBMap()::s_pMap
  D vgui::HTML::GetMessageMap()::s_pMap
  D vgui::HTML::KB_ChainToMap()::chained
  D vgui::HTML::PanelMessageFunc_DismissJSDialog::InitVar()::bAdded
- D vgui::HTML::PanelMessageFunc_ImeCancelComposition::InitVar()::bAdded
- D vgui::HTML::PanelMessageFunc_ImeCommitString::InitVar()::bAdded
- D vgui::HTML::PanelMessageFunc_ImeCompositionString::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnBrowserExitFullScreen::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()::bAdded
  D vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()::bAdded
@@ -1631,14 +1639,8 @@
  D vgui::TextEntry::PanelMessageFunc_CutSelected::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_DeleteThenPaste::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_DragDrop::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_HideIMECandidates::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_ImeCancelComposition::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_ImeCommitString::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_ImeCompositionString::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_LanguageChanged::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_OnDialogVariablesChanged::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_OnIMECandidate::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_OnIMECandidates::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_OnIMEConversionModes::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_OnIMELanguageList::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_OnIMESentenceModes::InitVar()::bAdded
@@ -1647,8 +1649,6 @@
  D vgui::TextEntry::PanelMessageFunc_OnSliderMoved::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_Paste::InitVar()::bAdded
  D vgui::TextEntry::PanelMessageFunc_SentenceModeChanged::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_ShowIMECandidates::InitVar()::bAdded
- D vgui::TextEntry::PanelMessageFunc_UpdateIMECandidates::InitVar()::bAdded
  D vgui::TextEntryClearButton::ChainToAnimationMap()::chained
  D vgui::TextEntryClearButton::ChainToMap()::chained
  D vgui::TextEntryClearButton::GetKBMap()::s_pMap
@@ -1942,6 +1942,7 @@
  D vtable for vgui::Button
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
+ D vtable for vgui::CIMEPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
  D vtable for vgui::CTypingJumpHandler
@@ -1969,7 +1970,6 @@
  D vtable for vgui::GripPanel
  D vtable for vgui::HTML
  D vtable for vgui::HTML::CHTMLFindBar
- D vtable for vgui::HTML::CHTMLIMEBar
  D vtable for vgui::HTMLPopup
  D vtable for vgui::HTMLPopup::PopupHTML
  D vtable for vgui::IClientPanel
@@ -2373,6 +2373,7 @@
  R typeinfo name for vgui::CBitmapImagePanel
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
+ R typeinfo name for vgui::CIMEPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
  R typeinfo name for vgui::CTypingJumpHandler
@@ -2400,7 +2401,6 @@
  R typeinfo name for vgui::GripPanel
  R typeinfo name for vgui::HTML
  R typeinfo name for vgui::HTML::CHTMLFindBar
- R typeinfo name for vgui::HTML::CHTMLIMEBar
  R typeinfo name for vgui::HTMLPopup
  R typeinfo name for vgui::HTMLPopup::PopupHTML
  R typeinfo name for vgui::IClientPanel
@@ -5916,6 +5916,36 @@
  T vgui::CFileOpenListPanel::~CFileOpenListPanel()
  T vgui::CFontWidthCache::GetCharWidth(unsigned long, wchar_t, wchar_t, wchar_t)
  T vgui::CFontWidthCache::Validate(CValidator&, char const*)
+ T vgui::CIMEPanel::CIMEPanel(vgui::Panel*, char const*)
+ T vgui::CIMEPanel::ChainToAnimationMap()
+ T vgui::CIMEPanel::ChainToMap()
+ T vgui::CIMEPanel::GetAnimMap()
+ T vgui::CIMEPanel::GetClassSize() const
+ T vgui::CIMEPanel::GetKBMap()
+ T vgui::CIMEPanel::GetMessageMap()
+ T vgui::CIMEPanel::GetPanelClassName()
+ T vgui::CIMEPanel::GetPanelTopClassName() const
+ T vgui::CIMEPanel::HideIMECandidates()
+ T vgui::CIMEPanel::IMEUpdateCandidateList(KeyValues*)
+ T vgui::CIMEPanel::IMEUpdateContext()
+ T vgui::CIMEPanel::IMEUpdateWindowPosition(int, int)
+ T vgui::CIMEPanel::KB_ChainToMap()
+ T vgui::CIMEPanel::OnIMECandidateList(KeyValues*)
+ T vgui::CIMEPanel::OnIMECandidateSelected(KeyValues*)
+ T vgui::CIMEPanel::OnImeCancelComposition(wchar_t const*)
+ T vgui::CIMEPanel::OnImeCommitString(wchar_t const*)
+ T vgui::CIMEPanel::OnImeCompositionString(wchar_t const*)
+ T vgui::CIMEPanel::PanelMessageFunc_HideIMECandidates::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_OnIMECandidateList::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_OnIMECandidateSelected::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_OnImeCancelComposition::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_OnImeCommitString::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_OnImeCompositionString::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_ShowIMECandidates::InitVar()
+ T vgui::CIMEPanel::PanelMessageFunc_UpdateIMECandidates::InitVar()
+ T vgui::CIMEPanel::ShowIMECandidates()
+ T vgui::CIMEPanel::UpdateIMECandidates()
+ T vgui::CIMEPanel::~CIMEPanel()
  T vgui::CStyleImage::CStyleImage(vgui::Panel*, char const*)
  T vgui::CStyleImage::GetContentSize(int&, int&)
  T vgui::CStyleImage::GetSize(int&, int&)
@@ -6593,24 +6623,6 @@
  T vgui::HTML::CHTMLFindBar::PanelMessageFunc_OnEditNewLine::InitVar()
  T vgui::HTML::CHTMLFindBar::PanelMessageFunc_OnTextChanged::InitVar()
  T vgui::HTML::CHTMLFindBar::~CHTMLFindBar()
- T vgui::HTML::CHTMLIMEBar::CHTMLIMEBar(vgui::HTML*)
- T vgui::HTML::CHTMLIMEBar::ChainToAnimationMap()
- T vgui::HTML::CHTMLIMEBar::ChainToMap()
- T vgui::HTML::CHTMLIMEBar::GetAnimMap()
- T vgui::HTML::CHTMLIMEBar::GetClassSize() const
- T vgui::HTML::CHTMLIMEBar::GetCurrentKeyFocus()
- T vgui::HTML::CHTMLIMEBar::GetKBMap()
- T vgui::HTML::CHTMLIMEBar::GetMessageMap()
- T vgui::HTML::CHTMLIMEBar::GetPanelClassName()
- T vgui::HTML::CHTMLIMEBar::GetPanelTopClassName() const
- T vgui::HTML::CHTMLIMEBar::KB_ChainToMap()
- T vgui::HTML::CHTMLIMEBar::OnCommand(char const*)
- T vgui::HTML::CHTMLIMEBar::OnEditNewLine(vgui::Panel*)
- T vgui::HTML::CHTMLIMEBar::OnKeyCodeTyped(vgui::KeyCode)
- T vgui::HTML::CHTMLIMEBar::OnKillFocus(vgui::Panel*)
- T vgui::HTML::CHTMLIMEBar::PanelMessageFunc_OnEditNewLine::InitVar()
- T vgui::HTML::CHTMLIMEBar::PanelMessageFunc_OnKillFocus::InitVar()
- T vgui::HTML::CHTMLIMEBar::~CHTMLIMEBar()
  T vgui::HTML::ChainToAnimationMap()
  T vgui::HTML::ChainToMap()
  T vgui::HTML::ClearRegisteredJSMethods()
@@ -6632,9 +6644,8 @@
  T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*)
  T vgui::HTML::HandleTabSwitching()
  T vgui::HTML::HideFindDialog()
- T vgui::HTML::HideIMEDialog()
  T vgui::HTML::HidePopup()
- T vgui::HTML::ImeCancelComposition(wchar_t const*)
+ T vgui::HTML::ImeCancelComposition()
  T vgui::HTML::ImeCommitString(wchar_t const*)
  T vgui::HTML::ImeCompositionString(wchar_t const*)
  T vgui::HTML::IsOpaque()
@@ -6679,9 +6690,6 @@
  T vgui::HTML::Paint()
  T vgui::HTML::PaintComboBox()
  T vgui::HTML::PanelMessageFunc_DismissJSDialog::InitVar()
- T vgui::HTML::PanelMessageFunc_ImeCancelComposition::InitVar()
- T vgui::HTML::PanelMessageFunc_ImeCommitString::InitVar()
- T vgui::HTML::PanelMessageFunc_ImeCompositionString::InitVar()
  T vgui::HTML::PanelMessageFunc_OnBrowserExitFullScreen::InitVar()
  T vgui::HTML::PanelMessageFunc_OnFileSelected::InitVar()
  T vgui::HTML::PanelMessageFunc_OnFileSelectionCancelled::InitVar()
@@ -8226,8 +8234,7 @@
  T vgui::TextEntry::GotoUp()
  T vgui::TextEntry::GotoWordLeft()
  T vgui::TextEntry::GotoWordRight()
- T vgui::TextEntry::HideIMECandidates()
- T vgui::TextEntry::ImeCancelComposition(wchar_t const*)
+ T vgui::TextEntry::ImeCancelComposition()
  T vgui::TextEntry::ImeCommitString(wchar_t const*)
  T vgui::TextEntry::ImeCompositionString(wchar_t const*)
  T vgui::TextEntry::InsertChar(wchar_t)
@@ -8250,8 +8257,6 @@
  T vgui::TextEntry::OnCursorExited()
  T vgui::TextEntry::OnCursorMoved(int, int)
  T vgui::TextEntry::OnDialogVariablesChanged(KeyValues*)
- T vgui::TextEntry::OnIMECandidate(KeyValues*)
- T vgui::TextEntry::OnIMECandidates(KeyValues*)
  T vgui::TextEntry::OnIMEConversionModes(KeyValues*)
  T vgui::TextEntry::OnIMELanguageList(KeyValues*)
  T vgui::TextEntry::OnIMESentenceModes(KeyValues*)
@@ -8280,14 +8285,8 @@
  T vgui::TextEntry::PanelMessageFunc_CutSelected::InitVar()
  T vgui::TextEntry::PanelMessageFunc_DeleteThenPaste::InitVar()
  T vgui::TextEntry::PanelMessageFunc_DragDrop::InitVar()
- T vgui::TextEntry::PanelMessageFunc_HideIMECandidates::InitVar()
- T vgui::TextEntry::PanelMessageFunc_ImeCancelComposition::InitVar()
- T vgui::TextEntry::PanelMessageFunc_ImeCommitString::InitVar()
- T vgui::TextEntry::PanelMessageFunc_ImeCompositionString::InitVar()
  T vgui::TextEntry::PanelMessageFunc_LanguageChanged::InitVar()
  T vgui::TextEntry::PanelMessageFunc_OnDialogVariablesChanged::InitVar()
- T vgui::TextEntry::PanelMessageFunc_OnIMECandidate::InitVar()
- T vgui::TextEntry::PanelMessageFunc_OnIMECandidates::InitVar()
  T vgui::TextEntry::PanelMessageFunc_OnIMEConversionModes::InitVar()
  T vgui::TextEntry::PanelMessageFunc_OnIMELanguageList::InitVar()
  T vgui::TextEntry::PanelMessageFunc_OnIMESentenceModes::InitVar()
@@ -8296,8 +8295,6 @@
  T vgui::TextEntry::PanelMessageFunc_OnSliderMoved::InitVar()
  T vgui::TextEntry::PanelMessageFunc_Paste::InitVar()
  T vgui::TextEntry::PanelMessageFunc_SentenceModeChanged::InitVar()
- T vgui::TextEntry::PanelMessageFunc_ShowIMECandidates::InitVar()
- T vgui::TextEntry::PanelMessageFunc_UpdateIMECandidates::InitVar()
  T vgui::TextEntry::Paste()
  T vgui::TextEntry::PerformLayout()
  T vgui::TextEntry::PixelToCursorSpace(int, int)
@@ -8335,10 +8332,8 @@
  T vgui::TextEntry::SetToFullWidth()
  T vgui::TextEntry::SetVerticalScrollbar(bool)
  T vgui::TextEntry::SetWrap(bool)
- T vgui::TextEntry::ShowIMECandidates()
  T vgui::TextEntry::TextEntry(vgui::Panel*, char const*)
  T vgui::TextEntry::Undo()
- T vgui::TextEntry::UpdateIMECandidates()
  T vgui::TextEntry::Validate(CValidator&, char const*)
  T vgui::TextEntry::~TextEntry()
  T vgui::TextEntryClearButton::ChainToAnimationMap()
@@ -9605,6 +9600,7 @@
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
  t _GLOBAL__sub_I_HistoryGames.cpp
+ t _GLOBAL__sub_I_IMEPanel.cpp
  t _GLOBAL__sub_I_Image.cpp
  t _GLOBAL__sub_I_ImageList.cpp
  t _GLOBAL__sub_I_ImagePanel.cpp
