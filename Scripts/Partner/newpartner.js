@@ -101,6 +101,35 @@ function IsValidOptionalField( fieldName, regex )
 	return true;
 }
 
+function IsValidOptionalVatIdField( fieldNameVatId, fieldNameCountry, regex )
+{
+	if ( !IsValidOptionalField( fieldNameVatId, regex ) )
+	{
+		$J( fieldNameVatId ).addClass( "errorRequiredField" );
+		return false;
+	}
+
+	var field = $J( fieldNameVatId );
+	var value = field.val();
+	value = v_trim( value );
+	if ( value.length == 0 )
+	{
+		field.removeClass( "errorRequiredField" );
+		return true;
+	}
+
+	value = value.toUpperCase();
+	if ( !VatIDSoftCheck_BIsProperlyFormatted( $J( fieldNameCountry ).val(), value ) )
+	{
+		$J( fieldNameVatId ).addClass( "errorRequiredField" );
+		return false;
+	}
+
+	field.removeClass( "errorRequiredField" );
+	field.val( value );
+	return true;
+}
+
 var gAllSections = [ "Introduction", "ProjectInfo", "CompanyInfo", "SignNDA", "SignAgreements", "PaymentDetails", "PayAppSubmissionFee", "WelcomeToSteamworks" ];
 
 function HighlightSection( sectionID )
@@ -171,7 +200,7 @@ function ValidateCompanyInfo( bTransition, nextSection )
 	bHasRequiredFields &= IsValidRequiredField( "[name='partner_info[postal_code]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= IsValidOptionalField( "[name='partner_info[fax]']", gValidFieldAlphaNumericRegex );
 	bHasRequiredFields &= HasRequiredField( "[name='partner_info[finance_email]']" );
-
+	bHasRequiredFields &= IsValidOptionalVatIdField( "[name='partner_info[vat_id]']", "[name='partner_info[country_code]']", gValidFieldAlphaNumericRegex );
 
 	if ( !bHasRequiredFields )
 	{
