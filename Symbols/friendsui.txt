@@ -6028,6 +6028,7 @@
  T CFriendSettingsController::RunFrame()
  T CFriendSettingsController::SetChatFlashMode(int)
  T CFriendSettingsController::SetFriendSettings(char const*)
+ T CFriendSettingsController::SetLegacySetting(char const*, int)
  T CFriendSettingsController::SetSettingsJavascriptValueBool(char const*, bool)
  T CFriendSettingsController::Validate(CValidator&, char const*)
  T CFriendSettingsController::~CFriendSettingsController()
@@ -10474,6 +10475,7 @@
  T EVP_sha256
  T EVP_sha384
  T EVP_sha512
+ T EmitJSONString(CUtlBuffer&, char const*, char const*, bool)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
  T FindOrAddPanelAnimationMap(char const*)
@@ -10629,6 +10631,7 @@
  T KeyValues::ReadToken(CUtlBuffer&, bool&, char, KeyValuesTextParser*, bool&)
  T KeyValues::RecursiveMergeFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*, bool)
  T KeyValues::RecursiveSaveToBuffer(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
+ T KeyValues::RecursiveSaveToBufferAsJSON(CUtlBuffer*, int, EKeyValuesSerializationFlags) const
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
  T KeyValues::SaveToBuffer(CUtlBuffer&, bool, EKeyValuesSerializationFlags) const
