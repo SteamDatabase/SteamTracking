@@ -1,4 +1,23 @@
 
+.inappropriateBanner
+{
+	text-align: left;
+	margin: 10px 0px 5px 0px;
+	padding: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 27px;
+	line-height: 27px;
+	color: #ffffff;
+	background-color: #ca5029;
+	border-color: #534436;
+}
+
+.inappropriateBanner span
+{
+	font-weight: bold;
+}
+
 .visibilityNotification
 {
 	text-align: left;

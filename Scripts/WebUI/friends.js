@@ -8661,7 +8661,8 @@ and limitations under the License.
           {
             target: e.target,
             className: "friendHover miniProfileHover",
-            visibilityObserver: e.hoverInstance
+            visibilityObserver: e.hoverInstance,
+            onNoSpace: e.onNoSpace
           },
           Ar.createElement(kd, { hoverInstance: e.hoverInstance })
         );
@@ -14507,31 +14508,32 @@ and limitations under the License.
             (e.prototype.LocalizeToken = function(e, t, i) {
               if (!e.startsWith("#"))
                 return console.log("Token doesn't start with #:", e), "";
+              var n = e;
               e = e.toLowerCase();
-              var n = "";
+              var r = "";
               if (
-                (t && t.has(e) && (n = t.get(e)),
-                !n && i && i.has(e) && (n = i.get(e)),
-                n)
+                (t && t.has(e) && (r = t.get(e)),
+                !r && i && i.has(e) && (r = i.get(e)),
+                r)
               ) {
-                var r = /{[A-za-z0-9_%#:]+}/g,
-                  o = n.match(r);
-                if (o)
-                  for (var a = 0, s = o; a < s.length; a++) {
-                    var c = s[a],
-                      l = c.slice(1, -1),
-                      u = this.DoSubstitutions(l),
-                      d = this.LocalizeToken(u, t, i);
-                    if (!d) return "";
-                    n = n.replace(c, d);
+                var o = /{[A-za-z0-9_%#:]+}/g,
+                  a = r.match(o);
+                if (a)
+                  for (var s = 0, c = a; s < c.length; s++) {
+                    var l = c[s],
+                      u = l.slice(1, -1),
+                      d = this.DoSubstitutions(u),
+                      p = this.LocalizeToken(d, t, i);
+                    if (!p) return "";
+                    r = r.replace(l, p);
                   }
-                n = this.DoSubstitutions(n);
+                r = this.DoSubstitutions(r);
               } else if (
                 ((t || i) &&
                   console.log(
                     "No loc found for appid",
                     this.m_unGamePlayedAppID,
-                    e,
+                    n,
                     "Tokens:",
                     t,
                     "Fallback:",
@@ -14540,7 +14542,7 @@ and limitations under the License.
                 t && 1 != st.a.EUNIVERSE)
               )
                 return e;
-              return n;
+              return r;
             }),
             (e.prototype.GetLocalizedRichPresenceDisplayString = function(e) {
               var t = this.m_mapRichPresence.get("steam_display"),
@@ -23202,7 +23204,12 @@ and limitations under the License.
                     ? r.TimeOfDayWithSecs
                     : r.TimeOfDay
                   : t >= n - 432e3 ? r.TimeInWeek : r.FullTimestamp;
-              var o = e.format(i);
+              var o;
+              try {
+                o = e.format(i);
+              } catch (e) {
+                o = Object(Ir.b)("#ChatRoom_Timestamp_InvalidDate");
+              }
               return (
                 !this.props.bTimeOnly &&
                   t >= n - 86400 &&
@@ -32890,6 +32897,8 @@ and limitations under the License.
               (this.m_bParentalLocked = void 0),
               (this.m_eUserPersonaStateParental = 1),
               (this.m_rgPersonaStateChangeCallbacks = new Qt()),
+              (this.m_nMissingPersonaStateRetryCount = 0),
+              (this.m_nMissingPersonaStateMaxRetries = 5),
               (this.m_bSnoozeCallbackFired = !0),
               (this.m_bAwayCallbackFired = !0),
               (this.m_bNextActivityCallbackRegistered = !1),
@@ -33393,14 +33402,36 @@ and limitations under the License.
                 }
                 this.m_CMInterface.Send(i),
                   SetBackgroundTimeout(function() {
-                    for (var i = 0, n = t; i < n.length; i++) {
-                      var r = n[i],
-                        o = e.GetPlayer(r);
-                      o &&
-                        !o.persona.m_bInitialized &&
-                        ((o.m_bPersonaStateReady = !0),
-                        (o.m_bPersonaStateLoadRequested = !1));
+                    for (var i = 0, n = 0, r = t; n < r.length; n++) {
+                      var o = r[n],
+                        a = e.GetPlayer(o);
+                      a &&
+                        !a.persona.m_bInitialized &&
+                        ((a.m_bPersonaStateReady = !0),
+                        a.persona.m_bNameInitialized ||
+                          (AssertMsg(
+                            a.m_bPersonaStateLoadRequested,
+                            "PersonaStateLoadRequested not set"
+                          ),
+                          e.m_setFriendsNeedingPersonaStateLoad.add(o)),
+                        i++);
                     }
+                    i > 0
+                      ? e.m_nMissingPersonaStateRetryCount <
+                        e.m_nMissingPersonaStateMaxRetries
+                        ? (e.m_nMissingPersonaStateRetryCount++,
+                          e.m_iIntervalSubscribeToPersonaStateUpdates ||
+                            (e.m_iIntervalSubscribeToPersonaStateUpdates = SetBackgroundTimeout(
+                              e.SubscribeToMissingPersonaStates.bind(e),
+                              1e3
+                            )))
+                        : console.log(
+                            "Giving up persona state retries with",
+                            i,
+                            "still not filled",
+                            e.m_setFriendsNeedingPersonaStateLoad
+                          )
+                      : (e.m_nMissingPersonaStateRetryCount = 0);
                   }, 500);
               }
             }),
@@ -55796,30 +55827,44 @@ and limitations under the License.
               }
               return null;
             }),
+            (e.prototype.ShowPopup = function(e, t, i) {
+              (t.visible = !0),
+                t.m_OwningElement.ownerDocument.defaultView.setTimeout(
+                  function() {
+                    t.visible &&
+                      (t.popupWindow || (t.popupWindow = new Gd(e, t, i)),
+                      t.popupWindow.Show());
+                  },
+                  250
+                );
+            }),
             (e.prototype.Show = function(t, i) {
-              var n =
-                t.currentTarget.ownerDocument.defaultView.innerWidth < 500;
-              if ((!n || st.a.IN_CLIENT) && !pg.DragDropManager.BInDrag()) {
+              var n = this,
+                r = t.currentTarget.ownerDocument.defaultView.innerWidth < 500;
+              if ((!r || st.a.IN_CLIENT) && !pg.DragDropManager.BInDrag()) {
                 this.EnsureCommunityDataLoaded();
-                var r = t.currentTarget,
-                  o = et(null, t),
-                  a = this.GetInstance(r, !0);
-                if (((a.context = i), n))
-                  (a.visible = !0),
-                    a.m_OwningElement.ownerDocument.defaultView.setTimeout(
-                      function() {
-                        a.visible &&
-                          (a.popupWindow || (a.popupWindow = new Gd(r, a, o)),
-                          a.popupWindow.Show());
-                      },
-                      250
-                    );
+                var o = t.currentTarget,
+                  a = et(null, t),
+                  s = this.GetInstance(o, !0);
+                s.context = i;
+                var c = !1;
+                if (st.a.IN_CLIENT) {
+                  var l = Lh.UIStore.GetPerContextChatData(a);
+                  c = l.BUsePopups();
+                }
+                if (r && c) this.ShowPopup(o, s, a);
                 else {
-                  var s = Ar.createElement(ye, { hoverInstance: a, target: r });
+                  var u = Ar.createElement(ye, {
+                    hoverInstance: s,
+                    target: o,
+                    onNoSpace: function() {
+                      c && n.ShowPopup(o, s, a);
+                    }
+                  });
                   e.m_embeddedElements
-                    .ShowElementDelayed(r.ownerDocument, 250, s, a)
+                    .ShowElementDelayed(o.ownerDocument, 250, u, s)
                     .then(function() {
-                      a.visible = !0;
+                      s.visible = !0;
                     });
                 }
               }
@@ -60039,7 +60084,8 @@ and limitations under the License.
                     )
                       return (
                         e.setAttribute("style", "display: none;"),
-                        void (this.m_bNoSpace = !0)
+                        (this.m_bNoSpace = !0),
+                        void (this.props.onNoSpace && this.props.onNoSpace())
                       );
                     (o = n),
                       n && n.setAttribute("style", ""),
@@ -68414,7 +68460,12 @@ and limitations under the License.
                     SteamClient.FriendSettings.SetFriendSettings)
                 )
                   return void this.BUpdateSettings(t);
-              } else t = JSON.parse(e);
+              } else
+                t = JSON.parse(e, function(e, t) {
+                  return "b" == e.substring(0, 1) && "number" == typeof t
+                    ? 0 != t
+                    : t;
+                });
               Object.assign(i, t), this.m_fnFriendSettingsChanged(i);
             }),
             (t.prototype.BUpdateSettings = function(e) {
@@ -70049,7 +70100,7 @@ and limitations under the License.
                 (this.m_NotificationManager = t);
               var r = this.m_FriendStore.Init(e),
                 o = this.m_ChatStore.Init(e, this.m_VoiceChatStore),
-                a = this.AdjustClockDriftFromServer();
+                a = this.InitAdjustClockDriftFromServer();
               this.m_VoiceChatStore.Init(e),
                 this.m_SettingsStore.Init(e),
                 this.m_AppInfoStore.Init(e),
@@ -70202,38 +70253,57 @@ and limitations under the License.
               console.log("Set default popup context: " + e.m_unPID),
                 (this.m_BrowserContextDefaultTarget = e);
             }),
-            (e.prototype.AdjustClockDriftFromServer = function() {
+            (e.prototype.InitAdjustClockDriftFromServer = function() {
               var e = this;
               return new Promise(function(t, i) {
-                var n = !1;
-                e.m_CMInterface.RunWhenLoggedOn(function() {
-                  var i = _t.Init(Mt, 9802);
+                e.m_CMInterface.AddOnLogonCallback(function() {
+                  e.InternalAdjustClock(), t && (t(), (t = void 0));
+                }),
+                  SetBackgroundTimeout(function() {
+                    t && (t(), (t = void 0));
+                  }, 1e3);
+              });
+            }),
+            (e.prototype.InternalAdjustClock = function() {
+              return ct.b(this, void 0, void 0, function() {
+                var e,
+                  t = this;
+                return ct.e(this, function(i) {
                   return (
-                    i
+                    (e = _t.Init(Mt, 9802)),
+                    e
                       .Body()
                       .set_client_request_timestamp(
                         Math.floor(performance.now()).toString()
                       ),
-                    e.m_CMInterface
-                      .SendMsgAndAwaitResponse(i, Ft)
-                      .then(function(i) {
-                        n = !0;
-                        var r = performance.now(),
-                          o = new Date(),
-                          a = parseInt(i.Body().client_request_timestamp()),
-                          s =
-                            parseInt(i.Body().server_timestamp_ms()) -
-                            ((r - a) >> 1);
-                        (e.m_nPerfClockServerMSOffset = s - r),
-                          (e.m_nWallClockDriftMS = o.getTime() - s),
-                          t();
-                      })
-                      .catch(t)
+                    [
+                      2,
+                      this.m_CMInterface
+                        .SendMsgAndAwaitResponse(e, Ft)
+                        .then(function(e) {
+                          var i = performance.now(),
+                            n = new Date(),
+                            r = parseInt(e.Body().client_request_timestamp()),
+                            o =
+                              parseInt(e.Body().server_timestamp_ms()) -
+                              ((i - r) >> 1);
+                          return (
+                            o && !isNaN(o) && i && !isNaN(i)
+                              ? ((t.m_nPerfClockServerMSOffset = o - i),
+                                (t.m_nWallClockDriftMS = n.getTime() - o))
+                              : AssertMsg(
+                                  !1,
+                                  "Error computing server time, server echo: " +
+                                    r +
+                                    " server time " +
+                                    o
+                                ),
+                            !0
+                          );
+                        })
+                    ]
                   );
-                }),
-                  SetBackgroundTimeout(function() {
-                    n || t();
-                  }, 500);
+                });
               });
             }),
             (e.prototype.GetServerTimeMS = function() {
@@ -70249,9 +70319,14 @@ and limitations under the License.
             }),
             (e.prototype.GetLocalMidnightInRTime32 = function(t) {
               void 0 === e.sm_tzOffset &&
-                (e.sm_tzOffset = 60 * new Date().getTimezoneOffset());
-              var i = (t || Lh.GetServerRTime32()) - e.sm_tzOffset;
-              return 86400 * Math.floor(i / 86400) + e.sm_tzOffset;
+                ((e.sm_tzOffset = 60 * new Date().getTimezoneOffset()),
+                AssertMsg(
+                  e.sm_tzOffset || 0 === e.sm_tzOffset,
+                  "Computed invalid timezone offset " + e.sm_tzOffset
+                ));
+              var i = e.sm_tzOffset || 0,
+                n = (t || Lh.GetServerRTime32()) - i;
+              return 86400 * Math.floor(n / 86400) + i;
             }),
             (e.sm_msStartup = performance.now()),
             ct.c([yt.observable], e.prototype, "m_bReadyToRender", void 0),
