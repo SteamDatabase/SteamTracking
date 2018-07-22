@@ -5988,6 +5988,17 @@ ParentalButton #ParentalLockImageLocked
 	background-image: url( "file://{images}/controller_icon_ps4.png" );
 }
 
+.ControllerOrderContainer.controller_switch_pro,
+.ControllerOrderContainer.controller_switch_pro_generic,
+{
+    background-image: url( "file://{images}/controller_icon_switch_pro.png" );
+}
+
+.ControllerOrderContainer.controller_ps3 
+{
+    background-image: url( "file://{images}/controller_icon_ps3.png" );
+}
+
 .ControllerOrderContainer.controller_xbox360
 {
 	background-image: url( "file://{images}/controller_icon_xbox_360.png" );
@@ -6085,6 +6096,16 @@ ControllerConfigSelectController #ButtonCancel
 #SelectControllerButton.Button.controller_ps4
 {
 	background-image: url( "file://{images}/controller_icon_ps4.png" );
+}
+
+#SelectControllerButton.Button.controller_ps3 {
+    background-image: url( "file://{images}/controller_icon_ps3.png" );
+}
+
+#SelectControllerButton.Button.controller_switch_pro,
+#SelectControllerButton.Button.controller_switch_pro_generic,
+{
+    background-image: url( "file://{images}/controller_icon_switch_pro.png" );
 }
 
 #SelectControllerButton.Button.controller_xbox360
