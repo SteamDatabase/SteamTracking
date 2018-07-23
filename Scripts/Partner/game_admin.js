@@ -1370,38 +1370,4 @@ function DeleteAssetOverride( nAltAssetIndex, nItemID )
 	} );
 }
 
-function ChooseFriendAsBroadcaster( steamid, nItemID )
-{
-	$J( '#choose_friend_throbber' ).show();
-
-	var params = {};
-	params['steamid'] = steamid;
-	params[ 'sessionid' ] = g_sessionID;
-
-	new Ajax.Request( 'https://partner.steamgames.com/admin/game/ajaxlistfriends/' + nItemID, {
-		method: 'post',
-		requestHeaders: { 'Accept': 'application/json' },
-		parameters: params,
-		onSuccess: function( transport )
-		{
-			$J('#choose_friend_throbber').hide();
-			var dialog = ShowConfirmDialog( 'Choose a broadcaster from my Friends List', $J( transport.responseText ) );
-
-			dialog.SetRemoveContentOnDismissal( false );
-			dialog.done( function()
-			{
-					var chosenSteamID = $J("input[name=friend]:checked").val();
-					if( chosenSteamID)
-					{
-						$J('#BroadcasterSteamID').val( chosenSteamID );
-					}
-			} );
-		},
-		onFailure: function( transport )
-		{
-			$J('#choose_friend_throbber').hide();
-		}
-	});
-	return false;
-}
 

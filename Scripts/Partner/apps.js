@@ -139,6 +139,16 @@ function CommonSetHandler( results )
 	StandardCallback( results, 'infoOutput' );
 }
 
+function SetAppCouponState( appid, enabled, discountPct )
+{
+	AppsAjaxRequest( 'https://partner.steamgames.com/apps/ajaxsetcouponstate',
+		{ appid : appid, enable : Boolean( enabled ) ? 1 : 0, discount : discountPct },
+		function (results)
+		{
+			CommonSetHandler( results );
+		}
+	)
+}
 
 //
 // Set the app's 'released' state, which affects visibility to non-owners

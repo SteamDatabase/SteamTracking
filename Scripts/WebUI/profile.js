@@ -4298,6 +4298,7 @@ and limitations under the License.
           IN_CLIENT: !1,
           USE_POPUPS: !1,
           IN_MOBILE: !1,
+          FRIENDSUI_BETA: !1,
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           SESSIONID: "",

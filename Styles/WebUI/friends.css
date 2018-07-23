@@ -3443,7 +3443,6 @@ body.in_global_drag .friendlist_titlebar
 .FriendMessageCount,
 .ChatUnreadMessageIndicator
 {
-	background: rgba( 161, 98, 3, 0.3 );
 	border-top-left-radius: 4px;
 	color: #ffff00;
 	line-height: 22px;
@@ -3457,6 +3456,8 @@ body.in_global_drag .friendlist_titlebar
 	position: relative;
 	pointer-events: none;
 	animation-name: UnreadLabelPulse;
+	animation-name: none;
+	background: rgba( 218, 149, 0, 0.65 );
 	animation-duration: 2.3s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
@@ -3612,6 +3613,9 @@ body.in_global_drag .friendlist_titlebar
 {
 	font-size: 12px;
 	animation-name: UnreadLabelPulseAndGlow;
+	animation-name: none;
+	background: rgba( 218, 149, 0, 0.35 );
+	box-shadow: 0 0 14px 1px rgba( 218, 149, 0, 0.5 );
 	border-radius: 4px;
 	padding: 0px 8px;
 	text-align: center;
@@ -3749,6 +3753,7 @@ body.in_global_drag .friendlist_titlebar
 {
 	opacity: 1;
 	animation-name: UnreadPulse;
+	animation-name: none;
 }
 
 @keyframes UnreadPulse
@@ -6228,14 +6233,14 @@ input.InviteFriendToChatDialog_LinkInput
 	opacity: 1;
 }
 
-.DebugVoiceButton
+button.DialogButton.copyVoiceLogsButton
 {
-	margin: 4px;
-	padding: 4px;
-	text-align: center;
-	border: 1px solid #ff0000;
-	color: #ffffff;
-	background: none;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	width: fit-content;
+	padding: 0 24px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .VoiceToggle
@@ -13946,7 +13951,10 @@ img.ChatRoomGroupAvatar_Avatar
 	stroke-width: 18px;
 }
 
-
+.chatRoomChannelGroups
+{
+	min-height: 0;
+}
 
 .chatRoomVoiceChannelsGroup,
 .chatRoomTextChannelsGroup
@@ -16075,7 +16083,7 @@ a.general_btn:hover
 	opacity: 1;
 	padding-top: 16px;
 	padding-bottom: 16px;
-	height: 244px;
+	height: 274px;
 }
 
 .scrollToRef

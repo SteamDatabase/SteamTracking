@@ -2107,7 +2107,7 @@ body.v6 #footer_nav .popup_menu .hr{
 	background: #bfbfbf;
 }
 
-.ds_flag.ds_has_excluded_tags_flag {
+.ds_flag.ds_excluded_by_preferences_flag {
 	left: 0;
 	right: 0;
 	background: #bfbfbf;
@@ -2128,7 +2128,7 @@ body.v6 #footer_nav .popup_menu .hr{
 	max-width: 120px;
 }
 
-.ds_collapse_flag.ds_flagged:hover .ds_flag.ds_has_excluded_tags_flag {
+.ds_collapse_flag.ds_flagged:hover .ds_flag.ds_excluded_by_preferences_flag {
 	max-width: none;
 	padding-right: 4px;
 }
@@ -2137,7 +2137,7 @@ body.v6 #footer_nav .popup_menu .hr{
 	padding-left: 18px;
 }
 
-.ds_flagged.ds_has_excluded_tags {
+.ds_flagged.ds_excluded_by_preferences {
 }
 
 /* Scrollbar CSS. Move this to somewhere common before checking in thankx */
