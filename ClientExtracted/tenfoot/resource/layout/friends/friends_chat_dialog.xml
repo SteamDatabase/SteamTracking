@@ -53,9 +53,6 @@
 					</Button>
 				</Panel>
 			</Panel>
-			<Panel id="FriendsMainBodyFriendsUIMessage">
-				<Label text="#Friends_Chat_InFriendsUI"></Label>
-			</Panel>
 			<Panel id="FriendsMainBodyChatContainer">
 				<Panel id="FriendsVoiceChatControls">
 					<Panel class="LeftRightFlow">
@@ -88,6 +85,9 @@
 					<Label id="FriendsChatBody" text="" html="true" />
 				</Panel>		
 			</Panel>
+      		<Panel id="FriendsMainBodyFriendsUIMessage">
+		        <Label text="#Friends_Chat_InFriendsUI"></Label>
+		    </Panel>
 			<Panel id="FriendsMainBodyInputGroup">
 				<TextEntry id="FriendsMainBodyInputTextArea"
 					textinputid="FriendsInputTextEntry"

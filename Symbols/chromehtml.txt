@@ -923,7 +923,7 @@
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
  T CChromeIPCClient::BRestartMasterCEFProcess()
- T CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
+ T CChromeIPCClient::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool)
  T CChromeIPCClient::BWaitForPendingData(bool)
  T CChromeIPCClient::BWaitForResponse(EHTMLCommands, unsigned int)
  T CChromeIPCClient::CChromeIPCClient()
@@ -972,7 +972,7 @@
  T CHTMLController::BExitMasterCEFProcess()
  T CHTMLController::BInitialized()
  T CHTMLController::BIsBrowserEnabled()
- T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode)
+ T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(CHTMLController::BrowserDetails_t const&)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, unsigned int, unsigned int, char const*, char const*)
  T CHTMLController::BrowserDetails_t::CopyToProtobuf(CMsgBrowserCreate&) const
