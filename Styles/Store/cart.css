@@ -280,6 +280,18 @@ img.payment_method_logo {
 	margin-top: 4px;
 }
 
+a.webmoney_prompt_link {
+	text-decoration: none;
+}
+
+a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: #67c1f5 !important;
+  background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+  background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
+
 .webmoney_prompt_ctn {
 	width: 100%;
 	background: rgba(255,255,255,0.1);
@@ -289,27 +301,13 @@ img.payment_method_logo {
 	display: flex;
 	position: relative;
 	margin-top: 10px;
+	margin-bottom: 50px;
 }
-.webmoney_prompt_ctn:after {
-	bottom: 100%;
-	left: 28px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(136, 183, 213, 0);
-	border-bottom-color: #fff;
-	border-width: 10px;
-	margin-left: 1px;
-}
+
 .webmoney_prompt_ctn .img_ctn {
-	width: 64px;
 	display: inline-block;
 	margin-right: 6px;
 	background: #fff;
-	padding: 8px;
 	border-bottom-left-radius: 2px;
 	border-top-left-radius: 2px;
 }

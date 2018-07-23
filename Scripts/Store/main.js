@@ -1026,7 +1026,7 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 
 var g_oSuggestParams;
 
-function EnableSearchSuggestions( elemTerm, navcontext, cc, l, hide_adult_content_violence, hide_adult_content_sex, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
+function EnableSearchSuggestions( elemTerm, navcontext, cc, l, rgUserPreferences, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
 	var $Term = $JFromIDOrElement(elemTerm);
 	var $SuggestionsCtn = elemSuggestionCtn ? $JFromIDOrElement(elemSuggestionCtn) : $J('#searchterm_options');
@@ -1083,8 +1083,10 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, hide_adult_conten
 	g_oSuggestParams = {
 		cc: cc,
 		l:l,
-		no_violence:hide_adult_content_violence,
-		no_sex:hide_adult_content_sex,
+		no_violence: rgUserPreferences['hide_adult_content_violence'],
+		no_sex: rgUserPreferences['hide_adult_content_sex'],
+		excluded_tags: rgUserPreferences['excluded_tags'],
+		excluded_content_descriptors: rgUserPreferences['excluded_content_descriptors'],
 		v: strPackageXMLVersion
 	}
 }

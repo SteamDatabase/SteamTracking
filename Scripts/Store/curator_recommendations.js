@@ -559,28 +559,39 @@ function ShowEditHandles( bIsCreatorHome )
 				linkedhomepages.push( $J(this).val() );
 			});
 
+			var requestData = {
+				sessionid: g_sessionID,
+				type: elTypeSelect.val(),
+				listid: elListId.val(),
+				tagid: elTagId.val(),
+				sort: elSortSelect.val(),
+				linktitle: elLinkTitleSelect.val(),
+				linkedhomepages: JSON.stringify( linkedhomepages ),
+				tagid_label: elTagName.text(),
+				listid_label: elListName.text(),
+				presentation: elPresentationSelect.val(),
+				index: elForm.parentNode.dataset.index
+			};
+
+			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
+			elOverlay.replaceWith( elUpdating );
+			elOptions.hide();
+
 			$J.ajax ( {
 				url: g_strCuratorAdminURL + 'ajaxupdatepagesection/',
-				data: {
-					sessionid: g_sessionID,
-					type: elTypeSelect.val(),
-					listid: elListId.val(),
-					tagid: elTagId.val(),
-					sort: elSortSelect.val(),
-					linktitle: elLinkTitleSelect.val(),
-					linkedhomepages: JSON.stringify( linkedhomepages ),
-					tagid_label: elTagName.text(),
-					listid_label: elListName.text(),
-					presentation: elPresentationSelect.val(),
-					index: elForm.parentNode.dataset.index
-				},
+				data: requestData,
 				type: 'POST',
 				cache: true
 			} ).done( function ( data )
 			{
 				$container.replaceWith( data );
 				ShowEditHandles( g_bIsCreatorHome );
-			});
+			} ).fail(function(xhr, status, thrown)
+			{
+				data = $J.parseJSON( xhr.responseText );
+				ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
+				ShowEditHandles( g_bIsCreatorHome );
+			} );
 
 			return false;
 
@@ -758,7 +769,13 @@ function ShowAddFeaturedTagModal()
 				cache: true
 			} ).done ( function ( data )
 			{
-				document.getElementById ( 'filtertags_container' ).parentNode.innerHTML = data;
+				$J( '#filtertags_container' ).replaceWith( data );
+				$J ( '.tag_edit_control' ).show ();
+				modal.Dismiss ();
+			} ).fail(function(xhr, status, thrown)
+			{
+				data = $J.parseJSON( xhr.responseText );
+				ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
 				$J ( '.tag_edit_control' ).show ();
 				modal.Dismiss ();
 			} );
@@ -787,10 +804,16 @@ function DeleteFeaturedTag( unTagId, strTagName )
 			cache: true
 		} ).done( function ( data )
 		{
-			document.getElementById('filtertags_container').parentNode.innerHTML = data;
+			$J('#filtertags_container').replaceWith( data );
 			$J('.tag_edit_control').show();
 			modal.Dismiss();
-		});
+		}).fail(function(xhr, status, thrown)
+		{
+			data = $J.parseJSON( xhr.responseText );
+			ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
+			$J('.tag_edit_control').show();
+			modal.Dismiss();
+		} );
 	});
 }
 
@@ -798,6 +821,9 @@ function ShowAvatarHandle()
 {
 	var $container = $J('#curator_avatar_image');
 	$container.addClass( 'editing' );
+
+	$container.children( '.edit_overlay').remove();
+	$container.children( '.edit_button').remove();
 
 	var elOverlay = $J('<div class="edit_overlay"></div>');
 
@@ -812,8 +838,8 @@ function ShowAvatarHandle()
 
 	var elOptions = $J('<form class="edit_options"><p>'+"Edit your logo here, which also replaces the Steam community group Avatar. Your role must have '..edit group description and avatar?' permissions within your group to change the image.<br><br>Image should be a 184px x 184px .jpg or .png<br><br>Note: It will take a few minutes for image processing to complete before the uploaded logo appears on your page.<br><br>"+'</p></form>');
 
-	var elCancel = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Cancel"+'</span></a>');
-	elCancel.on('click', function(){
+	var elClose = $J('<a class="btnv6_blue_hoverfade btn_small btn_uppercase cancelbtn"><span>'+"Close"+'</span></a>');
+	elClose.on('click', function(){
 		elOptions.hide();
 	});
 
@@ -823,7 +849,7 @@ function ShowAvatarHandle()
 	elOptions.hide();
 
 	elOptions.append( WrapFormFieldWithLabel( "Avatar",  elUploadFrame ) );
-	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append(elCancel) ) );
+	elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append(elClose) ) );
 	$container.append(elOptions);
 
 	// Force style recalc
@@ -846,9 +872,11 @@ function SetHeaderBackgroundToSavedValue( elSelectImage )
 
 function ShowHeaderImageHandle()
 {
-
 	var $container = $J('#header_curator_details');
 	$container.addClass('editing');
+
+		$container.children( '.edit_overlay').remove();
+	$container.children( '.edit_button').remove();
 
 	var elOverlay = $J('<div class="edit_overlay"></div>');
 
@@ -913,7 +941,11 @@ function ShowHeaderImageHandle()
 		} ).done( function ( data )
 		{
 			elOptions.hide();
-		});
+		}).fail(function(xhr, status, thrown)
+		{
+			data = $J.parseJSON( xhr.responseText );
+			ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
+		} );
 
 		return false;
 
@@ -928,9 +960,17 @@ function ShowHeaderImageHandle()
 		{
 			$J.each(data.images, fnAddImage );
 		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'Failed to get the images associated with this page. Details:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
+		}
 
 		SetHeaderBackgroundToSavedValue( elSelectImage );
-	});
+	}).fail(function(xhr, status, thrown)
+	{
+		data = $J.parseJSON( xhr.responseText );
+		ShowAlertDialog( 'Error', 'Failed to get the images associated with this page. Details:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
+	} );
 
 	elOptions.append( WrapFormFieldWithLabel( "Background image", elSelectImage ));
 	elOptions.append( WrapFormFieldWithLabel( "Upload", elUpload ));

@@ -44,6 +44,7 @@ GDynamicStore = {
 
 	s_preferences: {},
 	s_rgExcludedTags: {},
+	s_rgExcludedDescIDs: {},
 
 	s_rgPersonalizedBundleData: {},
 	s_rgPlaytestData: {},
@@ -191,6 +192,14 @@ GDynamicStore = {
 					{
 						var tag = data.rgExcludedTags[i];
 						GDynamicStore.s_rgExcludedTags[tag.tagid] = tag.name;
+					}
+				}
+				if ( data.rgExcludedContentDescriptorIDs && data.rgExcludedContentDescriptorIDs.length > 0 )
+				{
+					for ( var i = i = 0; i < data.rgExcludedContentDescriptorIDs.length; ++i )
+					{
+						var id = data.rgExcludedContentDescriptorIDs[i];
+						GDynamicStore.s_rgExcludedDescIDs[id] = id;
 					}
 				}
 
@@ -524,6 +533,7 @@ GDynamicStore = {
 			}
 
 			var rgExcludedTagNames = GDynamicStore.GetExcludedTagsOverlap( $El );
+			var rgExcludedContentDescriptorIDs = GDynamicStore.GetExcludedContentDescriptorOverlap( $El );
 
 			if ( !$El.hasClass('ds_no_flags') )
 			{
@@ -550,10 +560,15 @@ GDynamicStore = {
 					$El.append( '<div class="ds_flag ds_incart_flag">IN CART&nbsp;&nbsp;</div>');
 				}
 
-				if ( rgExcludedTagNames.length != 0 )
+				if ( rgExcludedContentDescriptorIDs.length != 0 )
 				{
-					$El.addClass( 'ds_flagged ds_has_excluded_tags' );
-					$El.append( '<div class="ds_flag ds_has_excluded_tags_flag">HAS EXCLUDED TAGS:&nbsp;' + rgExcludedTagNames.join(", " ) + '</div>' );
+					$El.addClass( 'ds_flagged ds_excluded_by_preferences' );
+					$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">EXCLUDED BY PREFERENCES&nbsp;&nbsp;</div>' );
+				}
+				else if ( rgExcludedTagNames.length != 0 )
+				{
+					$El.addClass( 'ds_flagged ds_excluded_by_preferences' );
+					$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">HAS EXCLUDED TAGS:&nbsp;' + rgExcludedTagNames.join(", " ) + '</div>' );
 				}
 
 				if( g_AccountID && unAppID && $El.data('ds-options') !== 0 ) // Only add if we have an appid
@@ -1025,6 +1040,24 @@ GDynamicStore = {
 			}
 		}
 		return rgOverlappingTagNames;
+	},
+
+	GetExcludedContentDescriptorOverlap: function( $e )
+	{
+		var rgOverlappingDescIDs = [];
+		var rgIDs = $e.data( 'dsDescids' );
+		if ( rgIDs && rgIDs.length > 0 )
+		{
+			for ( var i = 0; i < rgIDs.length; ++i )
+			{
+				var id = rgIDs[i];
+				if ( GDynamicStore.s_rgExcludedDescIDs[id] )
+				{
+					rgOverlappingDescIDs.push( id );
+				}
+			}
+		}
+		return rgOverlappingDescIDs;
 	},
 
 	BIsAppOnWishlist: function( appid )
