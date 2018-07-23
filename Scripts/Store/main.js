@@ -1265,7 +1265,15 @@ function AddFreeLicense( subid, strDisplayName )
 
 	window.g_bAddFreeLicenseInFlight = true;
 
-	$J.post( 'https://store.steampowered.com/checkout/addfreelicense/' + subid, { ajax: true, sessionid: g_sessionID }).done( function() {
+	var posts = [];
+	var subids = ( typeof subid == "number" || typeof subid == "string" ? [ subid ] : subid );
+
+	for ( var i = 0; i < subids.length; i++ )
+	{
+		posts.push( $J.post( 'https://store.steampowered.com/checkout/addfreelicense/' + subids[i], { ajax: true, sessionid: g_sessionID }) );
+	}
+
+	$J.when.apply( $J, posts ).done( function() {
 		ShowAlertDialog(
 			strDisplayName,
 			'%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName )
