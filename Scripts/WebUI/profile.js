@@ -1245,7 +1245,7 @@ webpackJsonp(
           )
         );
       }
-      function L() {
+      function O() {
         return q.createElement(
           "svg",
           {
@@ -1270,7 +1270,7 @@ webpackJsonp(
           })
         );
       }
-      function O() {
+      function L() {
         return q.createElement(
           "svg",
           {
@@ -2192,8 +2192,8 @@ webpackJsonp(
         (t.h = P),
         (t.z = C),
         (t.I = I),
-        (t.f = L),
-        (t.i = O),
+        (t.f = O),
+        (t.i = L),
         (t.d = N),
         (t.s = B),
         (t.M = D),
@@ -2533,7 +2533,7 @@ webpackJsonp(
           t = JSON.parse(e.getAttribute("data-privacysettings"));
         } catch (e) {}
         var n = new M(t.PrivacySettings, t.eCommentPermission);
-        y.render(v.createElement(O, { PrivacyStore: n }), e);
+        y.render(v.createElement(L, { PrivacyStore: n }), e);
       }
       function f(e, t, n) {
         Object(w.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
@@ -2678,8 +2678,8 @@ webpackJsonp(
         P = n("KLxG"),
         C = n("JyW5"),
         I = n("aMRU"),
-        L = n("Mn8c"),
-        O = (function(e) {
+        O = n("Mn8c"),
+        L = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2807,7 +2807,7 @@ webpackJsonp(
                 )
               );
             }),
-            (t = b.c([L.observer], t))
+            (t = b.c([O.observer], t))
           );
         })(v.Component),
         N = (function(e) {
@@ -2873,7 +2873,7 @@ webpackJsonp(
             }),
             b.c([P.a], t.prototype, "OnClick", null),
             b.c([P.a], t.prototype, "OnSettingChanged", null),
-            (t = b.c([L.observer], t))
+            (t = b.c([O.observer], t))
           );
         })(v.Component),
         B = (function(e) {
@@ -2916,7 +2916,7 @@ webpackJsonp(
               );
             }),
             b.c([P.a], t.prototype, "OnCheckboxChecked", null),
-            (t = b.c([L.observer], t))
+            (t = b.c([O.observer], t))
           );
         })(N),
         D = (function(e) {
@@ -2971,7 +2971,7 @@ webpackJsonp(
             }),
             b.c([P.a], t.prototype, "OnClick", null),
             b.c([P.a], t.prototype, "OnSettingChanged", null),
-            (t = b.c([L.observer], t))
+            (t = b.c([O.observer], t))
           );
         })(v.Component),
         V = (function(e) {
@@ -3687,49 +3687,18 @@ and limitations under the License.
     aMRU: function(e, t, n) {
       "use strict";
       function r(e) {
-        return function(t, n, r) {
-          var i = r.value;
-          r.value = function() {
-            for (var t = this, r = [], o = 0; o < arguments.length; o++)
-              r[o] = arguments[o];
-            var s = this[n + "_DebounceProperties"];
-            void 0 === s &&
-              (s = this[n + "_DebounceProperties"] = {
-                hTimer: void 0,
-                nPending: 0
-              }),
-              void 0 === s.hTimer
-                ? (i.apply(this, r),
-                  (s.hTimer = window.setInterval(function() {
-                    s.nPending > 0
-                      ? (i.apply(t, r), (s.nPending = 0))
-                      : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
-                  }, e)))
-                : (s.nPending += 1);
-          };
-        };
+        return a.createElement("div", { className: "ContextMenuMouseOverlay" });
       }
-      function i(e) {
-        return l.createElement("div", { className: "ContextMenuMouseOverlay" });
-      }
-      function o() {
+      function i() {
         return (
           window.sessionStorage && "true" == window.sessionStorage.getItem(b)
         );
       }
-      function s(e) {
+      function o(e) {
         e
           ? window.sessionStorage.setItem(b, "true")
           : window.sessionStorage.removeItem(b);
       }
-      var c = n("TToO"),
-        a = n("Mn8c"),
-        l = n("Jmof"),
-        m = n("wLXD"),
-        u = n("z9An"),
-        p = n("EqgU"),
-        h = n("KLxG"),
-        d = n("5Pz3");
       n.d(t, "c", function() {
         return f;
       }),
@@ -3748,27 +3717,36 @@ and limitations under the License.
         n.d(t, "a", function() {
           return w;
         }),
-        (t.f = i),
-        (t.h = o),
-        (t.i = s);
-      var f = (function(e) {
+        (t.f = r),
+        (t.h = i),
+        (t.i = o);
+      var s = n("TToO"),
+        c = n("Mn8c"),
+        a = n("Jmof"),
+        l = (n.n(a), n("wLXD")),
+        m = (n.n(l), n("z9An")),
+        u = n("EqgU"),
+        p = n("KLxG"),
+        h = n("5Pz3"),
+        d = n("huD9"),
+        f = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.children,
                 n = e.className,
-                r = c.f(e, ["children", "className"]),
+                r = s.f(e, ["children", "className"]),
                 i =
                   this.context.contextMenuInstance &&
                   this.context.contextMenuInstance.options.bUseWebStyles,
                 o = i ? "popup_menu popup_body" : "contextMenuContents";
               return (
                 n && (o += " " + n),
-                l.createElement("div", c.a({}, r, { className: o }), t)
+                a.createElement("div", s.a({}, r, { className: o }), t)
               );
             }),
             (t.contextTypes = {
@@ -3778,13 +3756,13 @@ and limitations under the License.
             }),
             t
           );
-        })(l.PureComponent),
+        })(a.PureComponent),
         v = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.OnClick = function(e) {
               this.props.disabled ||
                 (this.props.onClick && this.props.onClick(e),
@@ -3801,7 +3779,7 @@ and limitations under the License.
               var e = this.props,
                 t = (e.onSelected,
                 e.bInteractableItem,
-                c.f(e, ["onSelected", "bInteractableItem"])),
+                s.f(e, ["onSelected", "bInteractableItem"])),
                 n =
                   this.context.contextMenuInstance &&
                   this.context.contextMenuInstance.options.bUseWebStyles,
@@ -3809,9 +3787,9 @@ and limitations under the License.
               return (
                 this.props.className && r.push(this.props.className),
                 this.props.disabled && r.push("disabled"),
-                l.createElement(
+                a.createElement(
                   "div",
-                  c.a({ onMouseEnter: this.OnMouseEnter }, t, {
+                  s.a({ onMouseEnter: this.OnMouseEnter }, t, {
                     onClick: this.OnClick,
                     unselectable: this.props.unselectable,
                     className: r.join(" ")
@@ -3825,26 +3803,26 @@ and limitations under the License.
                 return null;
               }
             }),
-            c.c([h.a], t.prototype, "OnClick", null),
-            c.c([h.a], t.prototype, "OnMouseEnter", null),
+            s.c([p.a], t.prototype, "OnClick", null),
+            s.c([p.a], t.prototype, "OnMouseEnter", null),
             t
           );
-        })(l.PureComponent),
+        })(a.PureComponent),
         y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.render = function() {
               var e = this.props,
                 t = e.bChecked,
                 n = e.children,
-                r = c.f(e, ["bChecked", "children"]);
-              return l.createElement(
+                r = s.f(e, ["bChecked", "children"]);
+              return a.createElement(
                 v,
-                c.a({}, r),
-                l.createElement("div", {
+                s.a({}, r),
+                a.createElement("div", {
                   className: "contextMenuCheckMark" + (t && " menuChecked")
                 }),
                 n
@@ -3852,19 +3830,19 @@ and limitations under the License.
             }),
             t
           );
-        })(l.PureComponent),
+        })(a.PureComponent),
         g = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { bActive: !1 }), n;
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.OnSubMenuMouseEnter = function() {
               this.context.contextMenuInstance.CancelHideSubMenuTimer();
             }),
             (t.prototype.RenderSubMenu = function() {
-              return l.createElement(
+              return a.createElement(
                 f,
                 { onMouseEnter: this.OnSubMenuMouseEnter },
                 this.props.children
@@ -3891,12 +3869,12 @@ and limitations under the License.
               var e = this.props,
                 t = e.label,
                 n = (e.children, e.className),
-                r = c.f(e, ["label", "children", "className"]);
+                r = s.f(e, ["label", "children", "className"]);
               return (
                 this.state.bActive && (n = (n || "") + " active"),
-                l.createElement(
+                a.createElement(
                   v,
-                  c.a({}, r, {
+                  s.a({}, r, {
                     onClick: this.OnClick,
                     className: n,
                     onMouseEnter: this.OnMouseEnter,
@@ -3905,7 +3883,7 @@ and limitations under the License.
                   }),
                   t,
                   " ",
-                  l.createElement(d.k, null)
+                  a.createElement(h.k, null)
                 )
               );
             }),
@@ -3914,13 +3892,13 @@ and limitations under the License.
                 return null;
               }
             }),
-            c.c([h.a], t.prototype, "OnSubMenuMouseEnter", null),
-            c.c([h.a], t.prototype, "RenderSubMenu", null),
-            c.c([h.a], t.prototype, "OnMouseEnter", null),
-            c.c([h.a], t.prototype, "OnClick", null),
+            s.c([p.a], t.prototype, "OnSubMenuMouseEnter", null),
+            s.c([p.a], t.prototype, "RenderSubMenu", null),
+            s.c([p.a], t.prototype, "OnMouseEnter", null),
+            s.c([p.a], t.prototype, "OnClick", null),
             t
           );
-        })(l.PureComponent),
+        })(a.PureComponent),
         _ = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
@@ -3941,7 +3919,7 @@ and limitations under the License.
             );
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.BindMenuElement = function(e) {
               var t = this;
               this.m_elMenu &&
@@ -3976,7 +3954,7 @@ and limitations under the License.
               this.PositionMenu();
             }),
             (t.prototype.OnBlur = function(e) {
-              (e.relatedTarget && p.c(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && u.c(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -4007,7 +3985,7 @@ and limitations under the License.
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !p.c(
+                  !u.c(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -4039,16 +4017,16 @@ and limitations under the License.
                   a = this.props.clientX,
                   l = this.props.clientY,
                   m = n.innerWidth,
-                  u = n.innerHeight;
+                  p = n.innerHeight;
                 if (o) {
-                  (a += n.screenLeft), (l += n.screenTop), (r = p.e(n, r));
+                  (a += n.screenLeft), (l += n.screenTop), (r = u.e(n, r));
                   var h = n.screen,
                     d = 0,
                     f = 0;
                   h.availLeft && (d = h.availLeft),
                     h.availTop && (f = h.availTop),
                     (m = d + h.availWidth),
-                    (u = f + h.availHeight);
+                    (p = f + h.availHeight);
                 }
                 (s.bOverlapHorizontal || s.bOverlapVertical) &&
                   (a = l = void 0);
@@ -4075,23 +4053,23 @@ and limitations under the License.
                 s.bMatchHeight && ((M = k - S), (c.menuHeight = M));
                 var P = (s.bOverlapVertical ? k : S) - M,
                   C = P > 0,
-                  I = u - (s.bOverlapVertical ? S : k) - M,
-                  L = I > 0,
-                  O = (s.bPreferPopTop || !L) && C;
+                  I = p - (s.bOverlapVertical ? S : k) - M,
+                  O = I > 0,
+                  L = (s.bPreferPopTop || !O) && C;
                 C ||
-                  L ||
-                  ((O = P > I),
+                  O ||
+                  ((L = P > I),
                   s.bFitToWindow &&
-                    ((M += (O ? P : I) - 8), (c.menuHeight = M))),
-                  O
-                    ? (c.menuBottom = u - (s.bOverlapVertical ? k : S))
+                    ((M += (L ? P : I) - 8), (c.menuHeight = M))),
+                  L
+                    ? (c.menuBottom = p - (s.bOverlapVertical ? k : S))
                     : (c.menuTop = s.bOverlapVertical ? S : k),
                   o
                     ? (c.menuHeight || (c.menuHeight = i.height),
                       c.menuWidth || (c.menuWidth = i.width),
                       c.menuBottom &&
                         !c.menuTop &&
-                        ((c.menuTop = u - c.menuBottom - c.menuHeight),
+                        ((c.menuTop = p - c.menuBottom - c.menuHeight),
                         (c.menuBottom = void 0)),
                       c.menuRight &&
                         !c.menuLeft &&
@@ -4166,7 +4144,7 @@ and limitations under the License.
                   this.state.ready &&
                   (r += " visible"),
                 (r += " ContextMenuFocusContainer"),
-                l.createElement(
+                a.createElement(
                   "div",
                   {
                     className: r,
@@ -4188,14 +4166,14 @@ and limitations under the License.
                 return null;
               }
             }),
-            c.c([h.a], t.prototype, "BindMenuElement", null),
-            c.c([h.a, r(100)], t.prototype, "OnMenuMutation", null),
-            c.c([h.a], t.prototype, "OnWindowResize", null),
-            c.c([h.a], t.prototype, "OnBlur", null),
-            c.c([h.a], t.prototype, "OnKeyDown", null),
-            (t = c.c([a.observer], t))
+            s.c([p.a], t.prototype, "BindMenuElement", null),
+            s.c([p.a, Object(d.a)(100)], t.prototype, "OnMenuMutation", null),
+            s.c([p.a], t.prototype, "OnWindowResize", null),
+            s.c([p.a], t.prototype, "OnBlur", null),
+            s.c([p.a], t.prototype, "OnKeyDown", null),
+            (t = s.c([c.observer], t))
           );
-        })(l.Component),
+        })(a.Component),
         w = (function(e) {
           function t(n, r, i) {
             var o =
@@ -4205,14 +4183,14 @@ and limitations under the License.
                 body_class: "ContextMenuPopupBody",
                 replace_existing_popup: !1,
                 target_browser: i,
-                eCreationFlags: u.c.ContextMenu
+                eCreationFlags: m.c.ContextMenu
               }) || this;
             return (o.m_menuProps = n), (o.m_children = r), o;
           }
           return (
-            c.d(t, e),
+            s.d(t, e),
             (t.prototype.UpdateParamsBeforeShow = function(e) {
-              var t = p.e(
+              var t = u.e(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -4229,10 +4207,10 @@ and limitations under the License.
               );
             }),
             (t.prototype.Render = function(e, t) {
-              m.render(
-                l.createElement(
+              l.render(
+                a.createElement(
                   _,
-                  c.a({}, this.m_menuProps, { popup: this }),
+                  s.a({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
                 t
@@ -4246,8 +4224,35 @@ and limitations under the License.
             (t.sm_iContextMenuInstance = 0),
             t
           );
-        })(u.a),
+        })(m.a),
         b = "DEBUG_StickyContextMenus";
+    },
+    huD9: function(e, t, n) {
+      "use strict";
+      function r(e) {
+        return function(t, n, r) {
+          var i = r.value;
+          r.value = function() {
+            for (var t = this, r = [], o = 0; o < arguments.length; o++)
+              r[o] = arguments[o];
+            var s = this[n + "_DebounceProperties"];
+            void 0 === s &&
+              (s = this[n + "_DebounceProperties"] = {
+                hTimer: void 0,
+                nPending: 0
+              }),
+              void 0 === s.hTimer
+                ? (i.apply(this, r),
+                  (s.hTimer = window.setInterval(function() {
+                    s.nPending > 0
+                      ? (i.apply(t, r), (s.nPending = 0))
+                      : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
+                  }, e)))
+                : (s.nPending += 1);
+          };
+        };
+      }
+      t.a = r;
     },
     kllU: function(e, t, n) {
       "use strict";
@@ -4509,19 +4514,20 @@ and limitations under the License.
         return r;
       }),
         n.d(t, "a", function() {
-          return l;
-        }),
-        n.d(t, "b", function() {
           return m;
         }),
+        n.d(t, "b", function() {
+          return u;
+        }),
         n.d(t, "d", function() {
-          return p;
+          return h;
         });
       var r,
         i = n("TToO"),
         o = n("vwkX"),
         s = n("KLxG"),
-        c = n("y986");
+        c = n("y986"),
+        a = n("huD9");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -4529,7 +4535,7 @@ and limitations under the License.
           (e[(e.ContextMenu = 8)] = "ContextMenu"),
           (e[(e.Resizable = 16)] = "Resizable");
       })(r || (r = {}));
-      var a = (function() {
+      var l = (function() {
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
@@ -4558,7 +4564,7 @@ and limitations under the License.
             e
           );
         })(),
-        l = (function() {
+        m = (function() {
           function e(e, t) {
             (this.m_bFocused = !1),
               (this.m_strName = e),
@@ -4597,7 +4603,7 @@ and limitations under the License.
                   (this.BIsClosed()
                     ? ((this.m_popup = void 0), (this.m_element = void 0))
                     : e && this.Focus());
-              var i = p.GetExistingPopup(this.m_strName);
+              var i = h.GetExistingPopup(this.m_strName);
               if (!i || this.m_rgParams.replace_existing_popup) {
                 this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
                 var o, s, c;
@@ -4606,7 +4612,7 @@ and limitations under the License.
                     (o = i.m_popup),
                     i.ReleasePopup(),
                     (c = i.m_renderWhenReady),
-                    p.RemoveTrackedPopup(i),
+                    h.RemoveTrackedPopup(i),
                     o.removeEventListener("beforeunload", i.OnUnload),
                     o.removeEventListener("resize", i.OnResizeEvent),
                     o.removeEventListener("focus", this.OnFocusInternal),
@@ -4614,10 +4620,10 @@ and limitations under the License.
                     o.removeEventListener("drop", i.OnDrop),
                     o.removeEventListener("dragover", i.OnDragOver),
                     o.removeEventListener("message", this.OnMessage))
-                  : ((n = u.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((n = p.CreatePopup(this.m_strName, this.m_rgParams)),
                     (o = n.popup),
                     (s = n.element),
-                    (c = new a(o, s))),
+                    (c = new l(o, s))),
                   o &&
                     s &&
                     ((o.document.title = this.m_strTitle),
@@ -4634,7 +4640,7 @@ and limitations under the License.
                     this.m_renderWhenReady.SetTarget(function() {
                       return t.RenderInternal(t.m_popup, t.m_element, e);
                     })),
-                  p.AddTrackedPopup(this),
+                  h.AddTrackedPopup(this),
                   i && e && this.Focus();
               }
             }),
@@ -4660,7 +4666,7 @@ and limitations under the License.
             }),
             (e.prototype.OnUnload = function() {
               this.RemoveEventListeners(),
-                p.RemoveTrackedPopup(this),
+                h.RemoveTrackedPopup(this),
                 this.OnClose();
             }),
             Object.defineProperty(e.prototype, "browser_info", {
@@ -4781,7 +4787,7 @@ and limitations under the License.
             e
           );
         })(),
-        m = (function(e) {
+        u = (function(e) {
           function t(t, n, r, i) {
             var o = e.call(this, t, r) || this;
             return o.SetSavedDimensionsKey(n), (o.m_bExpires = i), o;
@@ -4800,12 +4806,12 @@ and limitations under the License.
                 e.bIgnoreSavedDimensions ||
                 e.strRestoreDetails
                   ? e.strRestoreDetails &&
-                    p.SetRestoreDetails(
+                    h.SetRestoreDetails(
                       this.m_strSavedDimensionsKey,
                       e.strRestoreDetails,
                       this.m_bExpires
                     )
-                  : (e.strRestoreDetails = p.GetRestoreDetails(
+                  : (e.strRestoreDetails = h.GetRestoreDetails(
                       this.m_strSavedDimensionsKey
                     )),
                 e
@@ -4828,7 +4834,7 @@ and limitations under the License.
                   e.m_popup &&
                     e.m_strSavedDimensionsKey &&
                     !n &&
-                    (p.SetRestoreDetails(
+                    (h.SetRestoreDetails(
                       e.m_strSavedDimensionsKey,
                       t,
                       e.m_bExpires
@@ -4842,8 +4848,8 @@ and limitations under the License.
             i.c([s.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
-        })(l),
-        u = (function() {
+        })(m),
+        p = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -5012,6 +5018,9 @@ and limitations under the License.
                   (this.m_bSaveRequired = !1);
               }
             }),
+            (e.prototype.DebouncedSaveSavedDimensionStore = function() {
+              this.SaveSavedDimensionStore();
+            }),
             (e.prototype.ClearSavedDimensionStore = function() {
               this.m_mapRestoreDetails.clear(), (this.m_bSaveRequired = !1);
             }),
@@ -5052,13 +5061,21 @@ and limitations under the License.
                   this.m_mapRestoreDetails.set(e, l);
                 } else this.m_mapRestoreDetails.delete(e);
                 (this.m_bSaveRequired = !0),
-                  this.m_bShuttingDown && this.SaveSavedDimensionStore();
+                  this.m_bShuttingDown
+                    ? this.SaveSavedDimensionStore()
+                    : this.DebouncedSaveSavedDimensionStore();
               }
             }),
+            i.c(
+              [s.a, Object(a.a)(100)],
+              e.prototype,
+              "DebouncedSaveSavedDimensionStore",
+              null
+            ),
             e
           );
         })(),
-        p = new u();
+        h = new p();
     }
   },
   ["HxNj"]

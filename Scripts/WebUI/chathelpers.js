@@ -190,22 +190,22 @@ webpackJsonp(
         } catch (e) {}
         I.sm_rtTimeCur = t.rtTimeCur;
         var n = new I(t);
-        u.render(c.createElement(C, { controller: n }), e);
+        u.render(c.createElement(S, { controller: n }), e);
       }
       function a(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (O = n) : "shared" == e && (D = n);
+          "friendsui" == e ? (E = n) : "shared" == e && (O = n);
         else if ("shared" == e) L = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
-          void 0 !== O ? ((o = O), (i = n)) : (o = n),
-            void 0 !== D ? ((r = D), (s = L)) : (r = L),
+          void 0 !== E ? ((o = E), (i = n)) : (o = n),
+            void 0 !== O ? ((r = O), (s = L)) : (r = L),
             m.a.InitFromObjects(o, i, r, s),
+            (E = void 0),
             (O = void 0),
-            (D = void 0),
             (L = void 0);
         }
       }
@@ -308,7 +308,7 @@ webpackJsonp(
             e
           );
         })(),
-        C = (function(e) {
+        S = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -319,14 +319,14 @@ webpackJsonp(
                 "div",
                 { className: "InviteLandingRoot" },
                 this.props.controller.BIsInviteValid()
-                  ? c.createElement(S, { controller: this.props.controller })
+                  ? c.createElement(C, { controller: this.props.controller })
                   : c.createElement(w, { controller: this.props.controller })
               );
             }),
             (t = d.c([_.observer], t))
           );
         })(c.Component),
-        S = (function(e) {
+        C = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_bTriedToLaunchSteam = !1), t;
@@ -531,12 +531,12 @@ webpackJsonp(
           );
         })(c.Component);
       window.AssertMsg = h.a;
-      var E = new l.a();
-      (window.ClientConnectionAPI = E),
+      var D = new l.a();
+      (window.ClientConnectionAPI = D),
         document.addEventListener("DOMContentLoaded", function() {
           Object(p.c)(), r();
         });
-      var O, D, L;
+      var E, O, L;
       window.LocalizationReady = a;
     },
     DRjr: function(e, t, n) {
@@ -1064,6 +1064,33 @@ and limitations under the License.
           );
         };
     },
+    huD9: function(e, t, n) {
+      "use strict";
+      function o(e) {
+        return function(t, n, o) {
+          var i = o.value;
+          o.value = function() {
+            for (var t = this, o = [], r = 0; r < arguments.length; r++)
+              o[r] = arguments[r];
+            var s = this[n + "_DebounceProperties"];
+            void 0 === s &&
+              (s = this[n + "_DebounceProperties"] = {
+                hTimer: void 0,
+                nPending: 0
+              }),
+              void 0 === s.hTimer
+                ? (i.apply(this, o),
+                  (s.hTimer = window.setInterval(function() {
+                    s.nPending > 0
+                      ? (i.apply(t, o), (s.nPending = 0))
+                      : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
+                  }, e)))
+                : (s.nPending += 1);
+          };
+        };
+      }
+      t.a = o;
+    },
     kllU: function(e, t, n) {
       "use strict";
       var o = n("mtWM");
@@ -1476,19 +1503,20 @@ and limitations under the License.
         return o;
       }),
         n.d(t, "a", function() {
-          return u;
-        }),
-        n.d(t, "b", function() {
           return p;
         }),
+        n.d(t, "b", function() {
+          return l;
+        }),
         n.d(t, "d", function() {
-          return m;
+          return h;
         });
       var o,
         i = n("TToO"),
         r = n("vwkX"),
         s = n("KLxG"),
-        a = n("y986");
+        a = n("y986"),
+        c = n("huD9");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -1496,7 +1524,7 @@ and limitations under the License.
           (e[(e.ContextMenu = 8)] = "ContextMenu"),
           (e[(e.Resizable = 16)] = "Resizable");
       })(o || (o = {}));
-      var c = (function() {
+      var u = (function() {
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
@@ -1525,7 +1553,7 @@ and limitations under the License.
             e
           );
         })(),
-        u = (function() {
+        p = (function() {
           function e(e, t) {
             (this.m_bFocused = !1),
               (this.m_strName = e),
@@ -1564,7 +1592,7 @@ and limitations under the License.
                   (this.BIsClosed()
                     ? ((this.m_popup = void 0), (this.m_element = void 0))
                     : e && this.Focus());
-              var i = m.GetExistingPopup(this.m_strName);
+              var i = h.GetExistingPopup(this.m_strName);
               if (!i || this.m_rgParams.replace_existing_popup) {
                 this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
                 var r, s, a;
@@ -1573,7 +1601,7 @@ and limitations under the License.
                     (r = i.m_popup),
                     i.ReleasePopup(),
                     (a = i.m_renderWhenReady),
-                    m.RemoveTrackedPopup(i),
+                    h.RemoveTrackedPopup(i),
                     r.removeEventListener("beforeunload", i.OnUnload),
                     r.removeEventListener("resize", i.OnResizeEvent),
                     r.removeEventListener("focus", this.OnFocusInternal),
@@ -1581,10 +1609,10 @@ and limitations under the License.
                     r.removeEventListener("drop", i.OnDrop),
                     r.removeEventListener("dragover", i.OnDragOver),
                     r.removeEventListener("message", this.OnMessage))
-                  : ((n = l.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((n = m.CreatePopup(this.m_strName, this.m_rgParams)),
                     (r = n.popup),
                     (s = n.element),
-                    (a = new c(r, s))),
+                    (a = new u(r, s))),
                   r &&
                     s &&
                     ((r.document.title = this.m_strTitle),
@@ -1601,7 +1629,7 @@ and limitations under the License.
                     this.m_renderWhenReady.SetTarget(function() {
                       return t.RenderInternal(t.m_popup, t.m_element, e);
                     })),
-                  m.AddTrackedPopup(this),
+                  h.AddTrackedPopup(this),
                   i && e && this.Focus();
               }
             }),
@@ -1627,7 +1655,7 @@ and limitations under the License.
             }),
             (e.prototype.OnUnload = function() {
               this.RemoveEventListeners(),
-                m.RemoveTrackedPopup(this),
+                h.RemoveTrackedPopup(this),
                 this.OnClose();
             }),
             Object.defineProperty(e.prototype, "browser_info", {
@@ -1748,7 +1776,7 @@ and limitations under the License.
             e
           );
         })(),
-        p = (function(e) {
+        l = (function(e) {
           function t(t, n, o, i) {
             var r = e.call(this, t, o) || this;
             return r.SetSavedDimensionsKey(n), (r.m_bExpires = i), r;
@@ -1767,12 +1795,12 @@ and limitations under the License.
                 e.bIgnoreSavedDimensions ||
                 e.strRestoreDetails
                   ? e.strRestoreDetails &&
-                    m.SetRestoreDetails(
+                    h.SetRestoreDetails(
                       this.m_strSavedDimensionsKey,
                       e.strRestoreDetails,
                       this.m_bExpires
                     )
-                  : (e.strRestoreDetails = m.GetRestoreDetails(
+                  : (e.strRestoreDetails = h.GetRestoreDetails(
                       this.m_strSavedDimensionsKey
                     )),
                 e
@@ -1795,7 +1823,7 @@ and limitations under the License.
                   e.m_popup &&
                     e.m_strSavedDimensionsKey &&
                     !n &&
-                    (m.SetRestoreDetails(
+                    (h.SetRestoreDetails(
                       e.m_strSavedDimensionsKey,
                       t,
                       e.m_bExpires
@@ -1809,8 +1837,8 @@ and limitations under the License.
             i.c([s.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
-        })(u),
-        l = (function() {
+        })(p),
+        m = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -1979,6 +2007,9 @@ and limitations under the License.
                   (this.m_bSaveRequired = !1);
               }
             }),
+            (e.prototype.DebouncedSaveSavedDimensionStore = function() {
+              this.SaveSavedDimensionStore();
+            }),
             (e.prototype.ClearSavedDimensionStore = function() {
               this.m_mapRestoreDetails.clear(), (this.m_bSaveRequired = !1);
             }),
@@ -2019,13 +2050,21 @@ and limitations under the License.
                   this.m_mapRestoreDetails.set(e, u);
                 } else this.m_mapRestoreDetails.delete(e);
                 (this.m_bSaveRequired = !0),
-                  this.m_bShuttingDown && this.SaveSavedDimensionStore();
+                  this.m_bShuttingDown
+                    ? this.SaveSavedDimensionStore()
+                    : this.DebouncedSaveSavedDimensionStore();
               }
             }),
+            i.c(
+              [s.a, Object(c.a)(100)],
+              e.prototype,
+              "DebouncedSaveSavedDimensionStore",
+              null
+            ),
             e
           );
         })(),
-        m = new l();
+        h = new m();
     }
   },
   ["6+TJ"]
