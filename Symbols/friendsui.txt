@@ -6065,7 +6065,7 @@
  T CFriendsDialog::BCanAcceptChatMessagesFromUser(CSteamID const&)
  T CFriendsDialog::BCheckIgnoredFriend(unsigned long long, unsigned long long, char const*)
  T CFriendsDialog::BCompactView()
- T CFriendsDialog::BHandleLimitedUser(char const*, vgui::Frame*)
+ T CFriendsDialog::BHandleLimitedUser(char const*)
  T CFriendsDialog::BParseSteamID(char const*, CSteamID*)
  T CFriendsDialog::BSendMessageMenuItemOK()
  T CFriendsDialog::BShowFriendsRequestLinks(CSteamID const&)
