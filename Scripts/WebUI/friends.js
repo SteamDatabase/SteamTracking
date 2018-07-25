@@ -38549,7 +38549,9 @@ and limitations under the License.
                     case 2:
                     case 3:
                     case 10:
-                      t.RemoveChatRoomGroup(n);
+                      Ph.VoiceStore.GetActiveChatRoomGroupID() == n &&
+                        Ph.VoiceStore.OnUserEndVoiceChat(),
+                        t.RemoveChatRoomGroup(n);
                       break;
                     case 7:
                     case 0:
