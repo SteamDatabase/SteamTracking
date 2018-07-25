@@ -25,7 +25,7 @@
                     "description": "An optional filter for maximum timestamp"
                 },
                 {
-                    "name": "matchid",
+                    "name": "MatchID",
                     "type": "uint64",
                     "optional": true,
                     "description": "An optional filter for a specific match"

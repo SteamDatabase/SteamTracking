@@ -34,19 +34,6 @@
             ]
         },
         {
-            "name": "GetSchema",
-            "version": 1,
-            "httpmethod": "GET",
-            "parameters": [
-                {
-                    "name": "language",
-                    "type": "string",
-                    "optional": true,
-                    "description": "The language to return the names in. Defaults to returning string keys."
-                }
-            ]
-        },
-        {
             "name": "GetSchemaURL",
             "version": 1,
             "httpmethod": "GET",
