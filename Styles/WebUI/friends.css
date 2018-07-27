@@ -3244,7 +3244,7 @@ body.in_global_drag .friendlist_titlebar
 	border-top-left-radius: 2px;
 	border-top-right-radius: 2px;
 	flex-direction: row;
-	width: 180px;
+	width: 180px;  /* update k_chatTabWidth in chattabs.tsx if this width changes */
 	height: 43px;
 	flex: 1;
 	position: relative;
@@ -5800,6 +5800,123 @@ input.InviteFriendToChatDialog_LinkInput
 	cursor: pointer;
 }
 
+.chatEntry.compactView .chatSubmitButton
+{
+	margin-bottom: 2px;
+	min-width: 32px;
+}
+
+.chatEntry.compactView .chatSubmitButton .SVGIcon_Submit,
+.chatEntry.compactView .chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon
+{
+	width: 16px;
+	height: 16px;
+	margin-top: 4px;
+}
+
+.chatEntry.compactView .chatSubmitButton .SVGIcon_Paperclip
+{
+	width: 20px;
+	height: 20px;
+	margin-top: 3px;
+	margin-bottom: 4px;
+}
+
+.chatEntry.compactView .chatSubmitButton .SVGIcon_Submit path
+{
+	stroke-width: 2px;
+	stroke: rgb( 133, 146, 165 );
+}
+
+.chatEntry.compactView .VoiceToggle
+{
+	height: 28px;
+}
+
+.chatEntry.compactView .VoiceToggleIconCtn
+{
+	height: 24px;
+	top: 3px;
+}
+
+.chatEntry.compactView .activeVoiceFlexBox
+{
+	height: 28px;
+}
+
+.chatEntry.compactView .activeVoiceButtons button
+{
+	max-width: 28px;
+    min-width: 28px;
+    min-height: 28px;
+	max-height: 28px;
+	margin-top: 2px;
+}
+
+.chatEntry.compactView .SVGIcon_Button.SVGIcon_Shadow
+{
+	top: 6px;
+	left: 10px;
+}
+
+.chatEntry.compactView .VoiceControlPanelButton:active .SVGIcon_Microphone.SVGIcon_Shadow,
+.chatEntry.compactView .VoiceControlPanelButton:active .SVGIcon_Headphones.SVGIcon_Shadow
+{
+	top: 3px;
+	left: 7px;
+}
+
+.chatEntry.compactView .VoiceControlPanelButton.ToggleVoiceOutputButton .SVGIcon_Headphones,
+.chatEntry.compactView .VoiceControlPanelButton.ToggleMicrophoneButton .SVGIcon_Microphone
+{
+	padding-top: 2px;
+	width: 20px;
+	height: 20px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceButtons
+{
+	width: 64px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoiceControls
+{
+	width: 64px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice.Active
+{
+	min-width: 114px;
+	max-width: 114px;
+	width: 114px;
+}
+
+
+.chatEntry.compactView .ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons
+{
+	margin-top: -2px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice.pushToTalkEnabled .VoiceControlPanelButton
+{
+	min-height: 14px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice.pushToTalkEnabled .activeVoiceButtons .SVGIcon_Button.SVGIcon_Shadow
+{
+	top: 2px;
+}
+
+.chatEntry.compactView .ChatMessageEntryVoice .activeVoicePushToTalk
+{
+	top: 18px;
+	right: 0px;
+	width: 66px;
+	text-align: center;
+	color: rgb( 116, 192, 105 );
+	background-color: #0000;
+}
+
 .chatSubmitButton.disabled,
 .chatSubmitButton.EmbedButton,
 .chatSubmitButton.EmoticonPickerButton
@@ -5834,7 +5951,7 @@ input.InviteFriendToChatDialog_LinkInput
 	padding: 2px;
 	display: flex;
 	flex-direction: column;
-	margin-left: 24px;
+	margin-left: 8px;
 	margin-right: 24px;
 	box-shadow: rgb( 0, 0, 0 ) 0px 0px 4px inset;
 	transition-property: width, max-width, min-width, border-radius, background-position;
@@ -7860,6 +7977,11 @@ button.DialogButton.copyVoiceLogsButton
 	transition: all .21s ease-in-out;
 }
 
+.chatWindow .chatEntry.compactView
+{
+	height: 32px;
+}
+
 .singlewindow .chatWindow .chatEntry
 {
 	padding-left: 10px;
@@ -8812,7 +8934,7 @@ html.web_chat_frame .perf_timing_area
 {
 	padding: 0 0 3px 92px;
 	margin-right: 6px;
-	margin-right: 48px;
+	/*margin-right: 48px;  removed padding for space complaints, this will make text go under the add friend button */
 }
 
 .SingleUserChat .ChatMsgSlashEmote.msg
@@ -8873,6 +8995,8 @@ html.web_chat_frame .perf_timing_area
 
 /*--------------------- SMALL --------------------------------*/
 
+
+.smallChatFont .chatTextarea,
 .smallChatFont .msg.serverMsg .msgText,
 .FriendsSettingsChatFontSizeSection_ButtonRow .smallFontSetting,
 .smallChatFont .ChatMessageOpenGraph_Title,
@@ -8881,6 +9005,11 @@ html.web_chat_frame .perf_timing_area
 .smallChatFont
 {
 	font-size: 11px;
+}
+
+.smallChatFont.compactView .chatTextarea
+{
+	height: 24px;
 }
 
 
@@ -8916,6 +9045,7 @@ html.web_chat_frame .perf_timing_area
 
 /*---------------- LARGE ----------------*/
 
+.largeChatFont .chatTextarea,
 .largeChatFont .msg.serverMsg .msgText,
 .FriendsSettingsChatFontSizeSection_ButtonRow .largeFontSetting,
 .largeChatFont .ChatMessageOpenGraph_Title,
@@ -11403,9 +11533,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .CompactFriendsList .gameGroup:not( .OtherGamesGroup ):not( .NonSteamGamesGroup ) .gameGroupContainer
 {
-	margin-right: 0;
-	width: 16px;
-
+	margin-right: 4px;
 }
 
 
@@ -11451,7 +11579,7 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 
 .CompactFriendsList .groupName .gameGroupContainer .groupIcon
 {
-	display: none;
+	/*display: none;*/
 }
 
 .FriendInGameIcon img
@@ -11540,6 +11668,11 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	text-align: center;
 	margin-right: 3px;
 	margin-left: 2px;
+}
+
+.compactView .ExpandPlusMinus
+{
+	opacity: 1;
 }
 
 .friendGroup.offlineFriends .ExpandPlusMinus,
