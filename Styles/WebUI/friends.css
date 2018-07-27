@@ -9194,7 +9194,7 @@ img.emoticon.large
 
 .msgText.spoilerMsgText
 {
-	display: inline-block;
+	max-width: fit-content;
 	border: 1px solid #000;
 	background-color: #0003;
 	overflow: hidden;
@@ -9209,6 +9209,12 @@ img.emoticon.large
 	opacity: 0.5;
 	filter: blur(6px);
 	transition: all .1s ease-in-out;
+}
+
+.msgText.spoilerMsgText .spoilerMsg
+{
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 .spoilerMsg.spoilerMedia .BBCodeResizableComponent .BBCodeResizableElement

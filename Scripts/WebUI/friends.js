@@ -23163,7 +23163,7 @@ and limitations under the License.
                     t.ConvertTo64BitString()),
                   void 0 !== this.connectString &&
                     (e += "/" + encodeURIComponent(this.connectString))),
-                Ol.OpenURLInBrowser(e),
+                Ol.OpenURLInBrowser(e, Fl),
                 (this.bAccepted = !0),
                 Ol.ChatStore.GameInviteStore.RecordDismissTime(this);
             }),
