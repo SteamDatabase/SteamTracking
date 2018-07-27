@@ -6662,7 +6662,9 @@
  T CFriendsWebChatVguiFrame::KB_ChainToMap()
  T CFriendsWebChatVguiFrame::OnBrowserIndexSet(vgui::HTML*)
  T CFriendsWebChatVguiFrame::OnBrowserPopupHTMLWindow(char const*, int, int, int, int, bool)
+ T CFriendsWebChatVguiFrame::OnScreenSizeChanged(int, int)
  T CFriendsWebChatVguiFrame::PanelMessageFunc_Activate::InitVar()
+ T CFriendsWebChatVguiFrame::UpdateOverlayInfo()
  T CFriendsWebChatVguiFrame::~CFriendsWebChatVguiFrame()
  T CGameID::IsValid() const
  T CGameInviteBar::ActiveInvite(CSteamID, char const*, unsigned int)
