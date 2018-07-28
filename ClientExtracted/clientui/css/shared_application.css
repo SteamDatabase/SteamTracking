@@ -11,6 +11,13 @@
 }
 
 
+::selection
+{
+	background: rgb(84, 165, 212);
+	text-shadow: 1px 1px 2px #000000aa;
+	color: #fff;
+}
+
 /*::-webkit-scrollbar-track
 {
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -107,6 +114,22 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	min-width: 120px;
 }
 
+.contextMenuItem.noPermission
+{
+	opacity: .4;
+	cursor: default;
+	pointer-events: none;
+	user-select: none;
+}
+
+.contextMenuItem.noPermission .SVGIcon_Lock
+{
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	margin-bottom: -1px;
+}
+
 .ContextMenuFocusContainer:focus
 {
 	outline: none;
@@ -159,19 +182,22 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	color: #9ca4a7;
 }
 
+.contextMenu .contextMenuItem.disabled {
+	background: none;
+	color: #6b7072;
+	cursor: default;
+	pointer-events: none;
+}
+
 .contextMenu .contextMenuItem.disabled:hover {
 	background: none;
+	color: #6b7072;
+	cursor: default;
 }
 
-.FriendMenuRoleCheckbox
+.contextMenuItem.menuChecked
 {
-	display: flex;
-	flex-direction: row;
-}
-
-.FriendMenuRoleCheckbox .DialogCheckbox
-{
-	margin-right: 8px;
+	color: rgb(109, 207, 246);
 }
 
 .contextMenuCheckMark
@@ -182,8 +208,14 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	min-height: 1px;
 	display: inline-block;
 	position: absolute;
-	left: 0px;
+	left: -4px;
 	margin-top: 0px;
+	display: none;
+}
+
+.contextMenuItem.menuChecked .contextMenuCheckMark
+{
+	display: block;
 }
 
 .contextMenuSectionHeader
@@ -216,6 +248,9 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 
 .contextMenuContents .contextMenuLabel.contextMenuNotAFriend
 {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: rgba( 184, 156, 80, .75 );
 }
 
 .contextMenuContents .recentName

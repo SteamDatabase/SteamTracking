@@ -107,15 +107,15 @@ button.DialogButton::-moz-focus-inner
 .ModalPosition_Dismiss
 {
 	position: absolute;
-	right: 6px;
-	top: 8px;
+	right: 4px;
+	top: 4px;
 	z-index: 1;
 }
 
 .ModalPosition_Dismiss .closeButton
 {
-	width: 22px;
-	height: 22px;
+	width: 14px;
+	height: 14px;
 	padding: 4px;
 	background-size: cover;
 	cursor: pointer;
@@ -126,7 +126,7 @@ button.DialogButton::-moz-focus-inner
 
 .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line
 {
-	stroke: rgb( 129, 129, 129 );
+	stroke: rgb(120, 138, 146);
 	stroke-width: 24px;
 }
 
@@ -198,7 +198,7 @@ button.DialogButton::-moz-focus-inner
 
 :not(.PopupFullWindow) .DialogContentTransition .opacityfade-anim-exit
 {
-	display: none;
+	position: absolute;
 }
 
 .DialogContent
@@ -216,6 +216,11 @@ button.DialogButton::-moz-focus-inner
 .DialogToggle_Label
 {
 	user-select: none;
+}
+
+.contextMenuItem .DialogToggle_Label
+{
+	white-space: nowrap;
 }
 
 ._DialogNote
@@ -291,6 +296,7 @@ button.DialogButton::-moz-focus-inner
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader
 {
 	margin-bottom: 16px;
+	margin-right: 0;
 }
 
 .DialogHeader
@@ -339,6 +345,17 @@ button.DialogButton::-moz-focus-inner
 	font-weight: 300;
 	margin-bottom: 32px;
 	user-select: none;
+}
+
+.DialogBodyText a
+{
+	color: #969696;
+	text-decoration: underline;
+}
+
+.DialogBodyText a:hover
+{
+	color: #ffffff;
 }
 
 .DialogLabel
@@ -633,11 +650,45 @@ button.DialogButton
 	transition: 0.1s all;
 	width: 100%;
 	background: transparent;
-	transition: all 0.3s ease-out;
+	transition: all 0.2s ease-out;
 	background: #3d4450;
 	background-position: 99% 1%;
 	background-size: 300% 300%;
+	position: relative;
 }
+
+button.DialogButton::before
+{
+	pointer-events: none;
+	user-select: none;
+	content: ' ';
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+	bottom: 0;
+  	left: 0;
+  	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .3);
+  	opacity: 0;
+  	transition: opacity 200ms ease-in-out;
+}
+
+button.DialogButton:disabled:hover::before,
+button.DialogButton:disabled::before
+{
+	opacity: 0;
+}
+
+
+button.DialogButton:hover::before
+{
+	opacity: 1;
+}
+
+button.DialogButton:active::before
+{
+	opacity: 0;
+}
+
 
 button.DialogButton.DialogButtonTall
 {
@@ -650,36 +701,82 @@ button.DialogButton.DialogButtonTall
 	margin-top: 16px;
 }
 
+.VoiceSettings .advancedSettings
+{
+	margin-bottom: 16px;
+}
+
+.DialogBody.VoiceSettings ._FixedHeight
+{
+	padding-bottom: 16px;
+}
+
 button.DialogButton.Primary
 {
 	background: transparent;
-	transition: all 0.3s ease-out;
-	background: linear-gradient( to right, #11aaff 1%, #3366ff 20% );
-	background-position: 1% 100%;
-	background-size: 300% 300%;
+	background: linear-gradient( to right, #47bfff 0%, #1a44c2 60% );
+	background-position: 25%;
+	background-size: 330% 100%;
 }
+
+button.DialogButton.GreenPlay
+{
+	background: linear-gradient( to right, rgb(138, 195, 41) 0%, rgb(74, 122, 22) 60% );
+	background-position: 25%;
+	background-size: 330% 100%;
+}
+
+button.DialogButton.GreenPlay:hover
+{
+	background: linear-gradient( to right, rgb(138, 195, 41) 0%, rgb(74, 122, 22) 60% );
+	background-position: 0%;
+	background-size: 330% 100%;
+	color: white;
+}
+
+button.DialogButton.GreenPlay:active,
+button.DialogButton.GreenPlay:active:hover
+{
+	background: linear-gradient( to right, rgb(138, 195, 41) 0%, rgb(74, 122, 22) 60% );
+	background-position: 40%;
+	transition-duration: .04s;
+}
+
 
 button.DialogButton.Secondary.Off
 {
 	box-shadow: inset 1px 1px 4px #0003;
 }
 
-button.DialogButton:active
+button.DialogButton:active,
+button.DialogButton:active:hover
 {
-	box-shadow: 0 8px 16px 0 rgba( 0, 0, 0, 0.26 );
+	background: #393f49;
+	box-shadow: 0 1px 4px 0 rgba( 0, 0, 0, .6 );
+	transition-duration: .04s;
 }
 
 button.DialogButton.Primary:hover
 {
-	/*box-shadow: 0 8px 16px 0 rgba( 0, 0, 0, 0.26 );*/
-	background: linear-gradient( to right, #11aaff 1%, #3366ff 60% );
-	background-position: 100% 50%;
+	background: linear-gradient( to right, #47bfff 0%, #1a44c2 60% );
+	background-position: 0%;
+	background-size: 330% 100%;
+	color: white;
+}
+
+button.DialogButton.Primary:active,
+button.DialogButton.Primary:hover:active
+{
+	background: linear-gradient( to right, #47bfff 0%, #1a44c2 60% );
+	background-position: 40%;
+	transition-duration: .04s;
+
 }
 
 button.DialogButton:hover
 {
-	box-shadow: 0 8px 16px 0 rgba( 0, 0, 0, 0.26 );
 	background: #464d58;
+	color: white;
 }
 
 button.DialogButton:disabled,
@@ -725,6 +822,11 @@ button.TextButton:focus
 	height: 24px;
 	vertical-align: middle;
 	margin-right: 2px;
+}
+
+.DialogButton:disabled .SVGIcon_Button
+{
+	opacity: .1;
 }
 
 .DialogOnOffToggle_Control
@@ -805,7 +907,7 @@ button.TextButton:focus
 	/*width: 842px;*/
 	display: flex;
 	flex-direction: row;
-	height: 680px;
+	height: 720px;
 }
 
 .PagedSettingsDialog_PageListColumn
@@ -973,6 +1075,12 @@ button.TextButton:focus
 {
 	max-width: calc( 66.66% - 18px );
 	min-width: 266px;
+}
+
+.DialogLayout_NoMinWidth > ._DialogLayout,
+.DialogTwoThirdColLayout.DialogLayout_NoMinWidth > ._DialogLayout
+{
+	min-width: 0;
 }
 
 .DialogDraggable
@@ -1201,7 +1309,7 @@ button.TextButton:focus
 {
 	width: 22px;
 	height: 22px;
-	background-color: #24262b;
+	background-color: #0004;
 	padding: 0;
 	box-shadow: inset 1px 0.5px 3px rgba( 1, 1, 1, 0.4 );
 	cursor: pointer;
@@ -1232,12 +1340,6 @@ button.TextButton:focus
 	stroke-dashoffset: 90.00;
 	transition-timing-function: cubic-bezier( 1, 0, 1, .65 );
 	transition-delay: 0s;
-}
-
-.DialogCheckbox .SVGIcon_DialogCheck
-{
-	opacity: 0;
-	transition: all .12s ease-in-out;
 }
 
 .DialogCheckbox.Active .SVGIcon_DialogCheck
@@ -1455,6 +1557,7 @@ body.in_global_drag .title-area
 .focused .singleWindowFocusBar
 {
 	opacity: 1;
+	z-index: 15;
 }
 
 .title-area-highlight
@@ -1501,11 +1604,6 @@ body.in_global_drag .title-area
 
 }
 
-.title-area-icon
-{
-
-}
-
 .title-area-icon .SVGIcon_Minimize
 {
 	width: 14px;
@@ -1534,7 +1632,7 @@ body.in_global_drag .title-area
 .title-area-icon .SVGIcon_X_Line line
 {
 	stroke: rgb(120, 138, 146);
-	stroke-width: 20px;
+	stroke-width: 24px;
 }
 
 .title-area-icon:hover .SVGIcon_Button rect,
@@ -1597,26 +1695,38 @@ body.in_global_drag .title-area
 {
 	font-size: 12px;
 	letter-spacing: 0px;
-	background-color: rgb( 36, 164, 214 );
-	color: black;
-	padding: 2px;
-	margin-bottom: 12px;
+	color: rgb(82, 184, 224);
 	line-height: 18px;
 	height: 18px;
 	display: flex;
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0px;
-	padding-right: 12px;
+	margin-top: -2px;
+
+}
+
+.permissionDetailsPage .DialogBodyNotificationBar
+{
+	margin-top: -18px;
 }
 
 .DialogBodyNotificationBar svg
 {
-	height: 16px;
-	width: 16px;
-	margin-left: 8px;
-	margin-right: 8px;
+	height: 13px;
+	width: 13px;
+	margin-left: 0px;
+	margin-right: 2px;
+	margin-top: 2px;
+}
+
+.DialogBodyNotificationBar .SVGIcon_Lock .topLock
+{
+	fill: rgb(82, 184, 224);
+}
+
+.DialogBodyNotificationBar .SVGIcon_Lock .baseLock
+{
+
+	stroke: rgb(82, 184, 224);
 }
 
 .GenericConfirmDialog .friend

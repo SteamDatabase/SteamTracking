@@ -1764,7 +1764,6 @@
  D typeinfo for CCallback<CFriendsDialog, FriendChatMsg_t, false>
  D typeinfo for CCallback<CFriendsDialog, FriendIgnored_t, false>
  D typeinfo for CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>
- D typeinfo for CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>
  D typeinfo for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  D typeinfo for CCallback<CFriendsDialog, LobbyInvite_t, false>
  D typeinfo for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
@@ -1830,7 +1829,6 @@
  D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<32>
  D typeinfo for CCallbackImpl<4>
- D typeinfo for CCallbackImpl<524>
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<76>
  D typeinfo for CCallbackImpl<7>
@@ -1911,7 +1909,6 @@
  D typeinfo for CFriendsDialog::CCallback_OnFriendChatMsg
  D typeinfo for CFriendsDialog::CCallback_OnFriendIgnored
  D typeinfo for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
- D typeinfo for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
  D typeinfo for CFriendsDialog::CCallback_OnIncomingVoiceCall
  D typeinfo for CFriendsDialog::CCallback_OnLobbyInvite
  D typeinfo for CFriendsDialog::CCallback_OnLoggedOff
@@ -3101,7 +3098,6 @@
  D vtable for CCallback<CFriendsDialog, FriendChatMsg_t, false>
  D vtable for CCallback<CFriendsDialog, FriendIgnored_t, false>
  D vtable for CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>
- D vtable for CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>
  D vtable for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  D vtable for CCallback<CFriendsDialog, LobbyInvite_t, false>
  D vtable for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
@@ -3166,7 +3162,6 @@
  D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<32>
  D vtable for CCallbackImpl<4>
- D vtable for CCallbackImpl<524>
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<76>
  D vtable for CCallbackImpl<7>
@@ -3247,7 +3242,6 @@
  D vtable for CFriendsDialog::CCallback_OnFriendChatMsg
  D vtable for CFriendsDialog::CCallback_OnFriendIgnored
  D vtable for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
- D vtable for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
  D vtable for CFriendsDialog::CCallback_OnIncomingVoiceCall
  D vtable for CFriendsDialog::CCallback_OnLobbyInvite
  D vtable for CFriendsDialog::CCallback_OnLoggedOff
@@ -3824,7 +3818,6 @@
  R typeinfo name for CCallback<CFriendsDialog, FriendChatMsg_t, false>
  R typeinfo name for CCallback<CFriendsDialog, FriendIgnored_t, false>
  R typeinfo name for CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>
- R typeinfo name for CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>
  R typeinfo name for CCallback<CFriendsDialog, FriendsMenuChange_t, false>
  R typeinfo name for CCallback<CFriendsDialog, LobbyInvite_t, false>
  R typeinfo name for CCallback<CFriendsDialog, NotifyIncomingCall_t, false>
@@ -3890,7 +3883,6 @@
  R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<32>
  R typeinfo name for CCallbackImpl<4>
- R typeinfo name for CCallbackImpl<524>
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<76>
  R typeinfo name for CCallbackImpl<7>
@@ -3971,7 +3963,6 @@
  R typeinfo name for CFriendsDialog::CCallback_OnFriendChatMsg
  R typeinfo name for CFriendsDialog::CCallback_OnFriendIgnored
  R typeinfo name for CFriendsDialog::CCallback_OnFriendMessageHistoryReceived
- R typeinfo name for CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate
  R typeinfo name for CFriendsDialog::CCallback_OnIncomingVoiceCall
  R typeinfo name for CFriendsDialog::CCallback_OnLobbyInvite
  R typeinfo name for CFriendsDialog::CCallback_OnLoggedOff
@@ -5137,9 +5128,6 @@
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendMessageHistoryChatLog_t*))
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendMessageHistoryChatLog_t*))
  T CCallback<CFriendsDialog, FriendMessageHistoryChatLog_t, false>::Run(void*)
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendPublishedStatusUpdate_t*))
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendPublishedStatusUpdate_t*))
- T CCallback<CFriendsDialog, FriendPublishedStatusUpdate_t, false>::Run(void*)
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::CCallback(CFriendsDialog*, void (CFriendsDialog::*)(FriendsMenuChange_t*))
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::Register(CFriendsDialog*, void (CFriendsDialog::*)(FriendsMenuChange_t*))
  T CCallback<CFriendsDialog, FriendsMenuChange_t, false>::Run(void*)
@@ -5332,9 +5320,6 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
- T CCallbackImpl<524>::GetCallbackSizeBytes()
- T CCallbackImpl<524>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<524>::~CCallbackImpl()
  T CCallbackImpl<72>::GetCallbackSizeBytes()
  T CCallbackImpl<72>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<72>::~CCallbackImpl()
@@ -6023,7 +6008,9 @@
  T CFriendSettingsController::CFriendSettingsController()
  T CFriendSettingsController::DispatchSettingsChanged()
  T CFriendSettingsController::FillFriendSettings(CJSMethodArgs*)
+ T CFriendSettingsController::GetFriendSettingBool(char const*, bool)
  T CFriendSettingsController::Initialize()
+ T CFriendSettingsController::LoadFriendSettings()
  T CFriendSettingsController::RegisterForSettingsChanges(CSmartPtr<CJSCallbackFunc>)
  T CFriendSettingsController::RunFrame()
  T CFriendSettingsController::SetChatFlashMode(int)
@@ -6065,6 +6052,7 @@
  T CFriendsDialog::BCanAcceptChatMessagesFromUser(CSteamID const&)
  T CFriendsDialog::BCheckIgnoredFriend(unsigned long long, unsigned long long, char const*)
  T CFriendsDialog::BCompactView()
+ T CFriendsDialog::BDoNotDisturb()
  T CFriendsDialog::BHandleLimitedUser(char const*)
  T CFriendsDialog::BParseSteamID(char const*, CSteamID*)
  T CFriendsDialog::BSendMessageMenuItemOK()
@@ -6086,7 +6074,6 @@
  T CFriendsDialog::CCallback_OnFriendChatMsg::Run(void*)
  T CFriendsDialog::CCallback_OnFriendIgnored::Run(void*)
  T CFriendsDialog::CCallback_OnFriendMessageHistoryReceived::Run(void*)
- T CFriendsDialog::CCallback_OnFriendPublishedStatusUpdate::Run(void*)
  T CFriendsDialog::CCallback_OnIncomingVoiceCall::Run(void*)
  T CFriendsDialog::CCallback_OnLobbyInvite::Run(void*)
  T CFriendsDialog::CCallback_OnLoggedOff::Run(void*)
@@ -6157,7 +6144,6 @@
  T CFriendsDialog::OnFriendChatMsg(FriendChatMsg_t*)
  T CFriendsDialog::OnFriendIgnored(FriendIgnored_t*)
  T CFriendsDialog::OnFriendMessageHistoryReceived(FriendMessageHistoryChatLog_t*)
- T CFriendsDialog::OnFriendPublishedStatusUpdate(FriendPublishedStatusUpdate_t*)
  T CFriendsDialog::OnFriendsCommand(char const*, char const*)
  T CFriendsDialog::OnHideFriend(unsigned long long)
  T CFriendsDialog::OnHideFriendConfirmed(unsigned long long)
@@ -6579,6 +6565,7 @@
  T CFriendsWebChat::GetLocalPersonaName(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetOverlayChatBrowserInfo(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetPushToTalkEnabled(CSmartPtr<CJSCallbackPromise>)
+ T CFriendsWebChat::GetSignIntoFriendsOnStart(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetWebChatLanguage(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetWebChatURL(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::InitWebChatURL(char const*)
@@ -16132,6 +16119,7 @@
  d impl_default
  d int_err_library_number
  d intconverter
+ d k_rgFeaturesEnabled
  d k_rgSettingsJSToClientUserMap
  d long_pf
  d malloc_ex_func

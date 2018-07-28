@@ -63,6 +63,7 @@ body
 	text-align: center;
 	margin-top: 16px;
 	color: rgb(255, 174, 0);
+	cursor: default;
 }
 
 .FriendsFailureContainer .detailText
@@ -70,6 +71,7 @@ body
 	font-size: 12px;
 	margin: 8px 16px;
 	line-height: 20px;
+	cursor: default;
 }
 
 body.in_global_drag .friendlist_titlebar
