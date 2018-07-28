@@ -97,7 +97,7 @@ webpackJsonp(
           ? 0 == n.length
             ? console.assert(!!e, t)
             : console.assert.apply(console, [!!e, t].concat(n))
-          : e && console.warn.apply(console, [t].concat(n));
+          : e || console.warn.apply(console, [t].concat(n));
       }
       t.a = i;
     },

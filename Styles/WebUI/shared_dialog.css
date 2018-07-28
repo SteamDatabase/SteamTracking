@@ -218,6 +218,11 @@ button.DialogButton::-moz-focus-inner
 	user-select: none;
 }
 
+.contextMenuItem .DialogToggle_Label
+{
+	white-space: nowrap;
+}
+
 ._DialogNote
 {
 	font-size: 12px;

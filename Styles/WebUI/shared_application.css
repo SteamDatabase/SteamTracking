@@ -195,6 +195,11 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	cursor: default;
 }
 
+.contextMenuItem.menuChecked
+{
+	color: rgb(109, 207, 246);
+}
+
 .contextMenuCheckMark
 {
 	width: 4px;
@@ -205,6 +210,12 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	position: absolute;
 	left: -4px;
 	margin-top: 0px;
+	display: none;
+}
+
+.contextMenuItem.menuChecked .contextMenuCheckMark
+{
+	display: block;
 }
 
 .contextMenuSectionHeader
