@@ -225,7 +225,7 @@ function outputProtos(protos) {
 		console.log(`message ${proto.name} {`);
 		proto.fields.forEach((field) => {
 			process.stdout.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
-			if (field.default) {
+			if (field.hasOwnProperty("default")) {
 				process.stdout.write(` [default = ${field.default}]`);
 			}
 			console.log(';');
