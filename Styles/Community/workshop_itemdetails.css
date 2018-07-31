@@ -28,7 +28,10 @@
 	height: 27px;
 	line-height: 27px;
 	color: #FFC369;
-	background-color: #CA7900;
+	background-color: rgba(153, 112, 51, 0.4);
+	border: 1px solid rgba(153, 112, 51, 0.2);
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+	border-radius: 4px;
 
 }
 
@@ -36,6 +39,7 @@
 {
 	float: left;
 	font-size: 14px;
+	margin-right: 8px;
 }
 
 .visibilityNotification .visibilityDesc
@@ -1499,6 +1503,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	position: relative;
 	background-color: rgba( 0, 0, 0, 0.3 );
+	margin-bottom: 16px;
 }
 
 	.mediaTop.modal {
@@ -1519,7 +1524,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		top: 0;
 		bottom: 0;
 		width: 33%;
-		background-color: #262627;
+		background-color: #1f2126;
 		height: 100%;
 		padding: 0 5px 0 5px;
 	}
@@ -1778,15 +1783,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-top: 12px;
 }
 
-
-.screenshotAuthorSays
-{
-	text-transform: uppercase;
-}
-
 .screenshotDescription
 {
-	font-size: 18px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
 	color: #7cc5fb;
 	font-style: italic;
 	padding-bottom: 20px;
@@ -3725,9 +3727,20 @@ span.change_log_edit
 
 .noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
 
-
+.mediaSidebar .media_game_logo img {
+	height: 45px;
+	float: right;
+	margin-left: 4px;
+}
 .mediaSidebar .mediaTitle {
-	font-size: 16px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
+	color: #7cc5fb;
+	font-style: italic;
+	margin-top: 0px;
+	margin-bottom: 4px;
 }
 
 .mediaSidebar .commentthread_header, .mediaSidebar .commentthread_entry_quotebox_quote, .mediaSidebar .commentthread_paging {
@@ -3741,6 +3754,7 @@ span.change_log_edit
 
 .mediaSidebar .commentthread_area {
 	margin: 10px 0 0 0;
+	border-top: 1px solid #354357;
 }
 
 .mediaSidebar .creatorsBlock2 > div {
@@ -3754,9 +3768,23 @@ span.change_log_edit
 	padding-left: 59px;
 }
 
+.mediaSidebar .commentthread_entry .playerAvatar {
+	position: absolute;
+	left: 5px;
+}
+
 .mediaSidebar .commentthread_comment   {
 	margin-left: -4px;
 	padding-left: 59px;
+	padding-right: 12px;
+}
+
+.mediaSidebar .commentthread_comment:hover {
+	background: #292d32;
+}
+
+.mediaSidebar .commentthread_comment_container {
+	margin-top: 0px;
 }
 
 .modalFullItemLink, .modalFullItemLink:hover, .modalFullItemLink:visited  {

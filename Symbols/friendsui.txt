@@ -6537,6 +6537,7 @@
  T CFriendsUIModule::~CFriendsUIModule()
  T CFriendsWebChat::Activate()
  T CFriendsWebChat::BNeedsRunFrame()
+ T CFriendsWebChat::BSuppressPopupsInRestore(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::CCallbackInternal_OnChatRoomDlgClose::CCallbackInternal_OnChatRoomDlgClose()
  T CFriendsWebChat::CCallbackInternal_OnChatRoomDlgClose::Run(void*)
  T CFriendsWebChat::CCallbackInternal_OnClientUICommand::CCallbackInternal_OnClientUICommand()
@@ -13820,7 +13821,6 @@
  T vgui::Panel::KeyCodeModifiersToDisplayString(vgui::KeyCode, int)
  T vgui::Panel::KeyCodeToDisplayString(vgui::KeyCode)
  T vgui::Panel::LocalToScreen(int&, int&)
- T vgui::Panel::LocalToWindow(int&, int&)
  T vgui::Panel::LookupBinding(char const*)
  T vgui::Panel::LookupBindingByKeyCode(vgui::KeyCode, int)
  T vgui::Panel::LookupMapForBinding(char const*)
@@ -14756,6 +14756,7 @@
  T vgui::TextEntry::SetWrap(bool)
  T vgui::TextEntry::TextEntry(vgui::Panel*, char const*)
  T vgui::TextEntry::Undo()
+ T vgui::TextEntry::UpdateWindowPositionIME()
  T vgui::TextEntry::Validate(CValidator&, char const*)
  T vgui::TextEntry::~TextEntry()
  T vgui::TextEntryClearButton::ChainToAnimationMap()
@@ -15797,6 +15798,7 @@
  b s_bSuppressRebindChecks
  b s_cmdDev
  b s_cmdForceVGUI
+ b s_cmdSilentMode
  b s_cmdUnhideFriendsUI
  b s_hKeyvalue
  b s_netadrResolveCacheMutexEnforceConstruction

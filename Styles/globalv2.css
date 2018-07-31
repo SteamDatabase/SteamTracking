@@ -606,12 +606,20 @@ a.commentthread_allcommentslink:hover {
 
 .commentthread_comment {
 	position: relative;
-	padding-bottom: 19px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+	margin-bottom: 8px;
 	min-height: 40px;
 	padding-left: 58px;
 
 	/* The descendant comment text element has overflow set, but a chrome bug allows some unicode characters to spill out of that.  overflow at this level seems to stop it */
 	overflow: hidden;
+}
+
+.detailBox .commentthread_comment:not(.hidden_post):hover,
+.group_comments .commentthread_comment:not(.hidden_post):hover,
+.profile_comment_area .commentthread_comment:not(.hidden_post):hover {
+	background: rgba(255,255,255,0.05);
 }
 
 .valve_links {
@@ -626,7 +634,7 @@ a.commentthread_allcommentslink:hover {
 .commentthread_comment_avatar {
 	position: absolute;
 	left: 5px;
-	top: 0px;
+	top: 8px;
 }
 
 .commentthread_valve_icon
@@ -655,9 +663,21 @@ a.commentthread_allcommentslink:hover {
 .commentthread_comment_author a.actionlink:hover {
 	text-decoration: underline;
 }
+.commentthread_comment_author .commentthread_comment_actions {
+	float: right;
+	margin-right: 8px;
+}
+
+.commentthread_comment_author .commentthread_comment_actions a.actionlink {
+	margin-left: 10px;
+}
 
 .commentthread_comment:hover .commentthread_comment_author a.actionlink {
 	visibility: visible;
+}
+
+.commentthread_comment:hover .commentthread_comment_author a.actionlink img {
+	height: 16px;
 }
 
 .commentthread_comment_timestamp {
@@ -727,6 +747,33 @@ a.commentthread_allcommentslink:hover {
 	margin-bottom: 8px;
 	color: #67c1f5;
 }
+
+
+.comment_hidden_border {
+	border: 1px dotted #4c5f76;
+}
+
+.comment_hidden_content {
+	display: flex;
+	flex: 1 100%;
+	justify-content: space-between;
+	padding: 10px;
+	color: #4c5f76;
+}
+
+.comment_hidden_action {
+	text-decoration: underline;
+}
+
+.comment_hidden_action:hover {
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.commentthread_comment_reports img {
+	vertical-align: text-top;
+}
+
 
 /** Styles for modal popup */
 

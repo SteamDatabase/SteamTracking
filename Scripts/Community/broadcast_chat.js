@@ -743,7 +743,7 @@ CBroadcastChat.prototype.OnRemoveUserMessages = function()
 function UpdateBroadcastChatModerator( broadcastSteamID, moderatorSteamID, bAdd, strPersonaName, chat )
 {
 	var $strMessage = ( bAdd ? 'Are you sure you want to add the following user as a moderator? They will be able mute other users on the broadcast chat.' : 'Are you sure you want to remove the following from channel moderator?' );
-	$strMessage += " " + strPersonaName;
+	$strMessage += " " + V_EscapeHTML( strPersonaName );
 	var dialog = ShowConfirmDialog( 'Change Moderator Status for User?', $strMessage );
 	dialog.done( function() {
 		$J.ajax(
@@ -753,7 +753,8 @@ function UpdateBroadcastChatModerator( broadcastSteamID, moderatorSteamID, bAdd,
 				data: {
 					broadcaststeamid: broadcastSteamID,
 					moderatorsteamid: moderatorSteamID,
-					bAdd: bAdd ? 1 : 0
+					bAdd: bAdd ? 1 : 0,
+					sessionid: g_sessionID
 				},
 				dataType: 'json'
 			})
@@ -798,7 +799,8 @@ function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, ban
 				chattersteamid: chatterSteamID,
 				bantype: banType,
 				duration: duration,
-				perm: bPerm ? 1 : 0
+				perm: bPerm ? 1 : 0,
+				sessionid: g_sessionID
 			},
 			dataType: 'json'
 		})

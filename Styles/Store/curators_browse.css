@@ -1,4 +1,9 @@
 
+body.v6 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
 .header_area
 {
 	padding-top: 12px;
@@ -39,7 +44,9 @@
 	padding: 0 9px;
 	line-height: 24px;
 	margin: 0 4px 4px 0;
-	background: -webkit-linear-gradient( top, #8aaf05 5%, #6a8704 95%);background: linear-gradient( to bottom, #8aaf05 5%, #6a8704 95%);	color: #ffffff;
+	background: rgba(255,255,255,0.2);
+	border: 1px solid rgba(255,255,255,0.1);
+	color: #ffffff;
 }
 .tab_filter_remove {
 	display: inline-block;
@@ -62,6 +69,7 @@
 	position: relative;
 	margin-left: auto;
 	height: 14px;
+	padding-left: 8px;
 }
 
 .curators_search_keywords
@@ -196,8 +204,8 @@ body.v6 .page_content.curators.header {
 	text-transform: uppercase;
 	font-size: 13px;
 	color: #fff;
-	margin: 7px 0 7px 30px;
-	letter-spacing: 2px;
+	margin: 7px 0 7px 15px;
+	letter-spacing: 1px;
 	white-space: nowrap;
 }
 
@@ -281,4 +289,20 @@ body.v6 .page_content.curators.header {
 .curators_for_app_filter_menu_flyout_content {
 	position: relative;
 	white-space: nowrap;
+}
+.store_capsule_frame.curator_spotlight {
+	min-height: 700px;
+}
+
+.Curators_loading {
+	text-align: center;
+	padding-top: 100px;
+	font-size: 17px;
+	width: 940px;
+	height: 292px;
+	background: rgba(255,255,255,0.1);
+}
+.Curators_no_results {
+	text-align: center;
+	margin-top: 30px;
 }

@@ -75,7 +75,7 @@ function HighlightPlayer( args )
 	this.m_bVideoOnlyMode = args.bVideoOnlyMode;
 
 	// sniff support
-	this.m_bSupportsWebM = BCanPlayWebm() || BDoesUserPreferHTML5();
+	this.m_bSupportsWebM = BCanPlayWebm();
 	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
 
 	//make all the strip items clickable
@@ -1044,12 +1044,6 @@ function SecondsToTime( seconds )
 		return out + minutes + ":" + seconds;
 }
 
-function BDoesUserPreferHTML5()
-{
-	var rgMatches = document.cookie.match( /(^|; )bShouldUseHTML5=([^;]*)/ );
-	return ( rgMatches && rgMatches[2] == 1 );
-}
-
 function BCanPlayWebm()
 {
 	var ele = document.createElement('video');
@@ -1064,12 +1058,5 @@ function BCanPlayMPEG4()
 
 	return ele.canPlayType('video/mp4; codecs="avc1.4D401E, mp4a.40.2"') == "probably"; 
 
-}
-
-function SetUserPrefersHTML5( bEnabled )
-{
-	var dateExpires = new Date();
-	dateExpires.setTime( dateExpires.getTime() + 1000 * 60 * 60 * 24 * 365 * 10 );
-	document.cookie = 'bShouldUseHTML5=' + bEnabled + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 

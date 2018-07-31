@@ -1608,6 +1608,35 @@ var CCommentThread = Class.create( {
 		} );
 	},
 
+	HideAndReport: function( gidComment, bHide, fnOnSuccess )
+	{
+		if ( this.m_bLoading )
+			return;
+
+		var params = this.ParametersWithDefaults( {
+			gidcomment: gidComment,
+			hide: bHide,
+			start: this.m_cPageSize * this.m_iCurrentPage
+		} );
+
+		this.m_bLoading = true;
+		new Ajax.Request( this.GetActionURL( 'hideandreport' ), {
+			method: 'post',
+			parameters: params,
+			onSuccess: fnOnSuccess ? fnOnSuccess : this.OnResponseHideAndReportComment.bind( this, ++this.m_nRenderAjaxSequenceNumber ),
+			onFailure: this.OnFailureDisplayError.bind( this ),
+			onComplete: this.OnAJAXComplete.bind( this )
+		} );
+	},
+
+	OnResponseHideAndReportComment: function( nAjaxSequenceNumber, transport )
+	{
+		if ( transport.responseJSON && transport.responseJSON.success )
+			this.OnResponseRenderComments( CCommentThread.RENDER_GOTOCOMMENT, nAjaxSequenceNumber, transport );
+		else
+			this.OnFailureDisplayError( transport );
+	},
+
 	DisplayEditComment: function( gidComment )
 	{
 		var elForm = $('editcommentform_' + gidComment);
@@ -2317,6 +2346,19 @@ CCommentThread.ShowDeletedComment = function( id, gidcomment )
 	elComment.show();
 	elDeletedComment.hide();
 };
+CCommentThread.HideAndReport = function( id, gidcomment, bHide )
+{
+	if ( g_rgCommentThreads[id] )
+		g_rgCommentThreads[id].HideAndReport( gidcomment, bHide );
+};
+CCommentThread.ShowHiddenComment = function( id, gidcomment )
+{
+	var elComment = $('comment_' + gidcomment);
+	var elHiddenComment = $('hidden_comment_' + gidcomment );
+	elComment.show();
+	elHiddenComment.hide();
+};
+
 
 
 

@@ -3644,6 +3644,8 @@ body.v6 .quadscreenshot_carousel h2 {
 		display: -webkit-flex; /* Old webkit */
 		display: flex;
 		flex-wrap: nowrap;
+
+		padding-bottom: 21px;
 	}
 
 	html.responsive .carousel_container .carousel_thumbs {
@@ -3849,6 +3851,18 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	font-size: 15px;
 }
 
+.curator_recommendation_capsule .curator_page .followers {
+	line-height: 16px;
+}
+.curator_recommendation_capsule .carousel_container.paging_capsules .curator_page .profile {
+	background: -webkit-linear-gradient( 0deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%););background: linear-gradient( 0deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%););	margin-left: -13px;
+	padding-left: 13px;
+	margin-right: -13px;
+	padding-right: 13px;
+	padding-bottom: 12px;
+	margin-bottom: 14px;
+}
+
 .curator_page .socialmedia {
 	display: flex;
 	align-items: flex-end;
@@ -3860,26 +3874,31 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 .curator_page .socialmedia > div {
 	margin-left: 16px;
+	display: inline-block;
 }
 
-.curator_page .curations {
+.carousel_container.paging_capsules .carousel_items .curator_page .curations {
 	display: flex;
+	margin-right: 0px;
 }
-.curator_page .curations > div {
+.carousel_container.paging_capsules .carousel_items .curator_page .curations > div {
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 220px;
 	max-width: 225px;
 }
+.carousel_container.paging_capsules .carousel_items .curator_page .curations .store_capsule {
+	box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
 
-.curator_page .curations > div > a {
+.carousel_container.paging_capsules .carousel_items .curator_page .curations > div > a {
 	width: 100%;
 	margin-bottom: 0px;
+	margin-right: 0px;
 }
 
 .curator_page .curations > div:not(:first-child) {
 	margin-left: 5px;
-
 }
 
 .curator_page .review_direction {
@@ -3963,6 +3982,10 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	position: relative;
 	opacity: 1;
 	margin-bottom: 40px;
+	padding: 12px 12px 16px 12px;
+}
+.curator_cluster_expanded.carousel_container .curator_page .socialmedia img {
+	margin-top: 3px;
 }
 
 .curator_cluster_expanded .arrow {

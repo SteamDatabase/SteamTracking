@@ -15,4 +15,6 @@ typedef enum EFileIOError
     k_EFileIOErrorDeviceNotFound, // Device Not Found
     k_EFileIOErrorDeviceCorrupt, // Device Corrupt
     k_EFileIOErrorDeviceError, // Device Error
+    k_EFileIOErrorFileLocked, // File Locked
+    k_EFileIOErrorOutOfResources, // Out of Resources
 } EFileIOError;

@@ -68,10 +68,10 @@
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
-	"ShowBusyStatus"
+	"ShowInvisibleStatus"
 	{
 		"ControlName"		"CheckButton"
-		"fieldName"		"ShowBusyStatus"
+		"fieldName"		"ShowInvisibleStatus"
 		"xpos"		"30"
 		"ypos"		"105"
 		"wide"		"475"
@@ -82,7 +82,7 @@
 		"enabled"		"1"
 		"tabPosition"		"3"
 		"paintbackground"		"1"
-		"labelText"		"#Friends_busy"
+		"labelText"		"#Friends_invisible"
 		"textAlignment"		"west"
 		"wrap"		"0"
 	}
