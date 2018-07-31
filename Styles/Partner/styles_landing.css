@@ -1048,6 +1048,10 @@ input {
 	border-radius: 2px;
 }
 
+input[type="text"]:disabled {
+	font-style: italic;
+	background-color: rgba(0,0,0,0.5);
+}
 
 .gray_bevel.for_text_input input {
 	padding-top: 1px;
