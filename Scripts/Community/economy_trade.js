@@ -10,6 +10,8 @@ var GTradeStateManager = null;
 var Tutorial = null;
 var g_bWarnOnReady = false;
 var g_dateEscrowEnd = null;
+var g_bWarnedAboutPlaytime = false;
+var g_bWarnedAboutUnvettedApp = false;
 
 function BeginTrading( bShowTutorial )
 {
@@ -1061,6 +1063,23 @@ function PutItemInSlot( elItem, elSlot )
 		elSlot.down('.slot_applogo_img').src = rgAppData.icon;
 		elSlot.down('.slot_applogo').show();
 
+		if ( typeof(g_rgPlayedApps) != 'undefined' && g_rgPlayedApps !== false && !g_rgPlayedApps[item.appid] )
+		{
+			var strWarning = 'You\'ve never played the game this item is from.';
+			if ( !item.fraudwarnings )
+			{
+				item.fraudwarnings = [ strWarning ];
+			}
+			else
+			{
+				// Don't push the NoPlaytime warning over and over.
+				if ( item.fraudwarnings.indexOf( strWarning ) == -1 )
+				{
+					item.fraudwarnings.push( strWarning );
+				}
+			}
+		}
+
 		if ( item.id && item.fraudwarnings )
 		{
 			elSlot.down('.slot_app_fraudwarning').show();
@@ -1877,6 +1896,80 @@ function ToggleReady( bReady )
 		UpdateReadyButtons();
 		$('notready_tradechanged_message').hide();
 	};
+
+		if ( bReady && g_cTheirItemsInTrade > 0 && !g_bWarnedAboutPlaytime && typeof(g_rgPlayedApps) != 'undefined' && g_rgPlayedApps !== false )
+	{
+		var strTitle = 'This trade appears suspicious';
+		var strWarning = 'One or more of the items you\'re receiving in this trade come from games that you have never played:';
+		var strButton = 'Yes, I want items for games I\'ve never played'.replace( /%s/, g_strTradePartnerPersonaName );
+
+		strWarning += '<ul class="trade_warning_item_list">';
+		var bShouldWarn = false;
+		var rgAssets = g_bTradeOffer ? g_rgCurrentTradeStatus.them.assets : g_rgLastFullTradeStatus.them.assets;
+		for ( var i = 0; i < rgAssets.length; i++ )
+		{
+			var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
+			if ( typeof( g_rgPlayedApps[rgAssets[i].appid] ) == 'undefined' || g_rgPlayedApps[rgAssets[i].appid] == false )
+			{
+				bShouldWarn = true;
+				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
+				if ( rgItem )
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+				else
+					strWarning += 'Unknown Item';
+				strWarning += '</li>';
+			}
+		}
+		strWarning += '</ul>';
+
+		if ( bShouldWarn )
+		{
+			var elWarning = $J( '<div/>', { 'class': 'trade_warn_dialog_content' } ).html( strWarning.replace( /%s/g, g_strTradePartnerPersonaName ) );
+			ShowConfirmDialog( strTitle, elWarning, strButton ).done( function () {
+				g_bWarnedAboutPlaytime = true;
+				ToggleReady( true );
+			} );
+
+			return;
+		}
+	}
+
+	if ( bReady && g_cTheirItemsInTrade > 0 && !g_bWarnedAboutUnvettedApp )
+	{
+		var strTitle = 'This trade appears suspicious';
+		var strWarning = 'One or more of the items you\'re receiving in this trade come from new games on Steam. Use caution with these items:';
+		var strButton = 'Yes, I trust %s'.replace( /%s/, g_strTradePartnerPersonaName );
+
+		strWarning += '<ul class="trade_warning_item_list">';
+		var bShouldWarn = false;
+		var rgAssets = g_bTradeOffer ? g_rgCurrentTradeStatus.them.assets : g_rgLastFullTradeStatus.them.assets;
+		for ( var i = 0; i < rgAssets.length; i++ )
+		{
+			var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
+			if ( !g_rgAppContextData[rgAssets[i].appid].store_vetted )
+			{
+				bShouldWarn = true;
+				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
+				if ( rgItem )
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+				else
+					strWarning += 'Unknown Item';
+				strWarning += '</li>';
+			}
+		}
+		strWarning += '</ul>';
+
+		if ( bShouldWarn )
+		{
+			var elWarning = $J( '<div/>', { 'class': 'trade_warn_dialog_content' } ).html( strWarning.replace( /%s/g, g_strTradePartnerPersonaName ) );
+			ShowConfirmDialog( strTitle, elWarning, strButton ).done( function () {
+				g_bWarnedAboutUnvettedApp = true;
+				ToggleReady( true );
+			} );
+
+			return;
+		}
+	}
 
 		if ( bReady && ( g_bWarnOnReady || g_cTheirItemsInTrade == 0 ) )
 	{
