@@ -73999,19 +73999,26 @@ and limitations under the License.
                 250
               );
             }),
+            (t.prototype.GetVideoID = function() {
+              return this.GetArgument("v").replace(
+                /^([a-zA-Z0-9\-_]+).*$/g,
+                "$1"
+              );
+            }),
             (t.prototype.render = function() {
               var e = this.state.strAuthor,
                 t = this.state.strTitle,
                 i = "https://www.youtube.com/watch?v=" + this.state.strVideoID,
                 n = this.GetArgument("t");
               if (
-                (n && (i += "&t=" + n),
+                (n && (i += "&t=" + encodeURIComponent(n)),
                 El.SettingsStore.FriendsSettings.bDisableEmbedInlining)
               ) {
                 var r =
-                  "https://www.youtube.com/watch?v=" + this.GetArgument("v");
+                  "https://www.youtube.com/watch?v=" +
+                  encodeURIComponent(this.GetVideoID());
                 return (
-                  n && (r += "&t=" + n),
+                  n && (r += "&t=" + encodeURIComponent(n)),
                   go.createElement(
                     $e,
                     { href: r },
@@ -74045,7 +74052,7 @@ and limitations under the License.
                       "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
                   },
                   go.createElement(Bm, {
-                    video: this.GetArgument("v"),
+                    video: this.GetVideoID(),
                     startSeconds: o,
                     width: 640,
                     height: 385,
