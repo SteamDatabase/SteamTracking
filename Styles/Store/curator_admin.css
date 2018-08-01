@@ -108,6 +108,10 @@
 	vertical-align: baseline;
 }
 
+.curator_list_page_bg_offset {
+	padding-top: 15px;
+}
+
 .post_review_ctn,
 .save_review_ctn {
 	margin-top: 30px;

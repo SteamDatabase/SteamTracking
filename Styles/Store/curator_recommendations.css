@@ -1542,7 +1542,6 @@ background: -webkit-linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149,
 		/* width: calc(100vw - 7%); */
 		width: 100%;
 	}
-	}
 	html.responsive .lists_more_container .item > div div {
 		font-size: 2vw;
 	}
