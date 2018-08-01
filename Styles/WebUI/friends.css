@@ -8989,6 +8989,57 @@ html.web_chat_frame .perf_timing_area
 	line-height: 18px;
 }
 
+.msgText.plusOneContainer
+{
+	overflow: visible;
+	margin-bottom: 2px;
+}
+
+.msg .plusOne
+{
+	font-style: normal;
+	font-size: 24px;
+	font-weight: 1000;
+	color: rgb(213, 219, 230);
+	animation-name: none;
+	animation-duration: 1.5s;
+	animation-delay: .2s;
+	animation-iteration-count: 1;
+	animation-timing-function: cubic-bezier(.44,.11,.66,2.13);
+	animation-timing-function: cubic-bezier(.53,1.15,.66,2.13);
+	width: fit-content;
+	animation-fill-mode: both;
+
+}
+
+.plusOnePlayAnimation .plusOne
+{
+	animation-name: plusOne;
+}
+
+@keyframes plusOne
+{
+	0%
+	{
+		opacity: 0;
+		transform: scale(.2);
+		text-shadow: 0px 0px 32px #ffff;
+	}
+	26%
+	{
+		opacity: 1;
+		transform: scale(1);
+		color: white;
+		text-shadow: 0px 0px 20px #ffff;
+	}
+	100%
+	{
+		color: rgb(213, 219, 230);
+		text-shadow: 0px 0px 0px #fff0;
+	}
+
+}
+
 
 .msg.EmojiOnly span.bb_removedlink
 {
@@ -9274,12 +9325,6 @@ html.web_chat_frame .perf_timing_area
 }
 
 /* ----------------- FONT SIZE SETTINGS ------------------------*/
-
-
-.chatFontSetting
-{
-	margin-top: 16px;
-}
 
 .FriendsSettingsChatFontSizeSection_ButtonRow
 {
@@ -9969,6 +10014,22 @@ img.emoticon.large
 	stroke: rgba( 220, 238, 246, 1 );
 	animation-duration: 1s;
 }
+
+.friendSettingsSubheader
+{
+	margin-top: 24px;
+}
+
+.friendSettingsFakeFriend
+{
+	margin-top: 10px;
+}
+
+.friendSettingsFakeFriend img
+{
+	height: 40px;
+}
+
 
 @keyframes SlowSpin
 {

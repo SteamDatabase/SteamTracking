@@ -1277,6 +1277,15 @@ and limitations under the License.
                   t.m_mapTokens.set(n, e[n]);
                 });
             }),
+            (e.prototype.GetPreferredLocales = function() {
+              var e = ["en-US"];
+              return (
+                "undefined" != typeof navigator &&
+                  void 0 !== navigator.languages &&
+                  (e = navigator.languages),
+                e
+              );
+            }),
             (e.prototype.LocalizeString = function(e) {
               if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
               var t = this.m_mapTokens.get(e.substring(1));
