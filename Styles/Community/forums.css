@@ -548,6 +548,9 @@ textarea.forumtopic_reply_textarea {
 	font-style: italic;
 	font-size: 12px;
 }
+.commentthread_show_deleted_link {
+	font-size: 12px;
+}
 
 .forumtopic_comments .commentthread_comment_timestamp {
 	color: #999999;
