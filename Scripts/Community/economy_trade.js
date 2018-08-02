@@ -1946,7 +1946,8 @@ function ToggleReady( bReady )
 		for ( var i = 0; i < rgAssets.length; i++ )
 		{
 			var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
-			if ( !g_rgAppContextData[rgAssets[i].appid].store_vetted )
+
+			if ( UserThem.rgAppInfo[rgAssets[i].appid].store_vetted == false )
 			{
 				bShouldWarn = true;
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
