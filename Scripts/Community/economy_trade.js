@@ -1947,7 +1947,8 @@ function ToggleReady( bReady )
 		{
 			var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
 
-			if ( UserThem.rgAppInfo[rgAssets[i].appid].store_vetted == false )
+			if ( ( typeof( g_rgAppContextData[rgAssets[i].appid] ) != 'undefined' && g_rgAppContextData[rgAssets[i].appid].store_vetted == false ) ||
+				( typeof( UserThem.rgAppInfo[rgAssets[i].appid] ) != 'undefined' && UserThem.rgAppInfo[rgAssets[i].appid].store_vetted == false ) )
 			{
 				bShouldWarn = true;
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
