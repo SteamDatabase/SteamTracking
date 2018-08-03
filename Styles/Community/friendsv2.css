@@ -412,6 +412,7 @@ body.v6 {
 }
 
 .friend_block_v2.in-game .friend_block_content,
+#friends_broadcast_moderator .friend_broadcast_moderator_v2 .friend_broadcast_moderator_content,
 #friends_blocked .friend_block_v2 .friend_block_content {
     margin-top: 10px;
 }

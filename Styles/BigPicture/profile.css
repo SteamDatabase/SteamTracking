@@ -4763,6 +4763,7 @@ Panel.AvatarOptionGame {
 
 #friends_list,
 #friends_blocked,
+#friends_broadcast_moderator,
 #friends_following,
 #groups_list
 {
@@ -4772,6 +4773,7 @@ Panel.AvatarOptionGame {
 }
 
 .FriendsGrid,
+#friends_broadcast_moderator .ContentGrid,
 #friends_blocked .ContentGrid,
 #friends_following .ContentGrid,
 .GroupsGrid

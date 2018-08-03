@@ -43520,7 +43520,8 @@ and limitations under the License.
                       (t.m_VoiceCallState.m_webRTCServerPort = t.m_VoiceCallState.m_webRTCConnectedNotification.server_port()),
                       (t.m_VoiceCallState.m_webRTCClientIP = t.m_VoiceCallState.m_webRTCConnectedNotification.client_ip()),
                       (t.m_VoiceCallState.m_webRTCClientPort = t.m_VoiceCallState.m_webRTCConnectedNotification.client_port()),
-                      "completed" == t.m_PeerConnection.iceConnectionState
+                      "completed" == t.m_PeerConnection.iceConnectionState ||
+                      "connected" == t.m_PeerConnection.iceConnectionState
                         ? (t.LogMsg(
                             "(VoiceChat) ICE state is already connected after successful SetRemoteDescription, joining voice chat immediately"
                           ),
@@ -44647,11 +44648,12 @@ and limitations under the License.
                 this.m_VoiceCallState.m_eState >
                   Kc.k_EVoiceCallState_CreatePeerConnection
                   ? this.BackOffAndRetryInitiateVoiceChat()
-                  : "completed" == e.iceConnectionState &&
-                    this.m_VoiceCallState.m_eState ==
-                      Kc.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected &&
+                  : ("completed" != e.iceConnectionState &&
+                      "connected" != e.iceConnectionState) ||
+                    this.m_VoiceCallState.m_eState !=
+                      Kc.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected ||
                     (this.LogMsg(
-                      "(VoiceChat) ICE connection state now 'completed', proceeding to join voice chat"
+                      "(VoiceChat) ICE connection state now 'completed' or 'connected', proceeding to join voice chat"
                     ),
                     this.JoinVoiceChatOrAskForOneOnOneChatNow());
             }),
@@ -60772,13 +60774,32 @@ and limitations under the License.
                   go.createElement(
                     "div",
                     { className: "connectionStatus" },
-                    Object(io.b)("#VoiceChatConnecting")
+                    go.createElement(
+                      "a",
+                      {
+                        title: Object(io.b)("#VoiceChatConnectingHelp"),
+                        className: "connectionStatus",
+                        target: "_blank",
+                        href:
+                          "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114"
+                      },
+                      Object(io.b)("#VoiceChatConnecting")
+                    )
                   ),
                 t &&
                   go.createElement(
                     "div",
                     { className: "connectionStatus" },
-                    Object(io.b)("#VoiceChatReconnecting")
+                    go.createElement(
+                      "a",
+                      {
+                        className: "connectionStatus",
+                        target: "_blank",
+                        href:
+                          "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114"
+                      },
+                      Object(io.b)("#VoiceChatReconnecting")
+                    )
                   )
               );
             }),
@@ -63509,24 +63530,33 @@ and limitations under the License.
               this.props.showVoiceLevel &&
                 (n = El.VoiceStore.get_volume(e.accountid));
               var r = { className: "friend " + Be(e.persona) };
-              if (
-                (this.props.className &&
-                  (r.className += " " + this.props.className),
+              this.props.className &&
+                (r.className += " " + this.props.className),
                 this.props.bFriendsListEntry &&
-                  (r.className += " friendStatusHover"),
-                t)
-              ) {
-                var o = El.VoiceStore.IsAttemptingInitialConnection(),
-                  a = El.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
-                  s = El.VoiceStore.IsAttemptingReconnect();
-                a
-                  ? (i = Object(io.b)("#VoiceChatConnecting"))
-                  : s && (i = Object(io.b)("#VoiceChatReconnecting"));
-                var c = "";
-                o && (c += " connecting"),
-                  a && (c += " slowconnecting"),
-                  s && (c += " reconnecting"),
-                  (r.className += c);
+                  (r.className += " friendStatusHover");
+              var o = "",
+                a = "";
+              if (t) {
+                var s = El.VoiceStore.IsAttemptingInitialConnection(),
+                  c = El.VoiceStore.HasBeenAttemptingOverTwoSeconds(),
+                  l = El.VoiceStore.IsAttemptingReconnect();
+                c
+                  ? ((i = Object(io.b)("#VoiceChatConnecting")),
+                    t &&
+                      ((o =
+                        "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114"),
+                      (a = Object(io.b)("#VoiceChatConnectingHelp"))))
+                  : l &&
+                    ((i = Object(io.b)("#VoiceChatReconnecting")),
+                    t &&
+                      ((o =
+                        "https://support.steampowered.com/kb_article.php?ref=2598-RTZB-6114"),
+                      (a = Object(io.b)("#VoiceChatConnectingHelp"))));
+                var u = "";
+                s && (u += " connecting"),
+                  c && (u += " slowconnecting"),
+                  l && (u += " reconnecting"),
+                  (r.className += u);
               }
               (this.props.noActions && !this.props.action) ||
                 ((r.onDoubleClick = this.OnDoubleClick),
@@ -63536,23 +63566,23 @@ and limitations under the License.
                   ((r.onDragStart = this.OnDragStart),
                   (r.onDragEnd = this.OnDragEnd),
                   (r.draggable = !0));
-              var l;
+              var d;
               if (this.props.children)
-                l = go.createElement("div", ht.a({}, r), this.props.children);
+                d = go.createElement("div", ht.a({}, r), this.props.children);
               else {
-                var u = {};
+                var p = {};
                 if (this.props.showVoiceLevel && 1 != n) {
-                  var d = Math.min(3.2 * n, 1),
-                    p = Math.max(0, 100 * d);
-                  (p = Math.round(10 * p) / 10),
-                    (u.height = p + "%"),
-                    (u.top = "auto"),
-                    p > 1 && (r.className += " speaking");
+                  var h = Math.min(3.2 * n, 1),
+                    m = Math.max(0, 100 * h);
+                  (m = Math.round(10 * m) / 10),
+                    (p.height = m + "%"),
+                    (p.top = "auto"),
+                    m > 1 && (r.className += " speaking");
                 }
                 this.state.bActive &&
                   (r.className += " Friend_ContextMenuActive");
-                var h = El.VoiceStore.GetPerUserMuting(e.accountid);
-                l = go.createElement(
+                var g = El.VoiceStore.GetPerUserMuting(e.accountid);
+                d = go.createElement(
                   "div",
                   ht.a({}, r),
                   this.props.bInGroup &&
@@ -63567,7 +63597,7 @@ and limitations under the License.
                     { className: "avatarHolder no-drag" },
                     go.createElement("div", {
                       className: "avatarStatus",
-                      style: u
+                      style: p
                     }),
                     go.createElement("img", {
                       className: "avatar",
@@ -63576,11 +63606,13 @@ and limitations under the License.
                         : e.persona.avatar_url_medium,
                       draggable: !1
                     }),
-                    this.props.bInVoiceList && h && go.createElement(Dl.V, null)
+                    this.props.bInVoiceList && g && go.createElement(Dl.V, null)
                   ),
                   go.createElement(kp, {
                     friend: e,
                     strOverrideStatus: i,
+                    strStatusURL: o,
+                    strStatusURLTitle: a,
                     bHideGameName: this.props.bHideGameName,
                     bForcePersonaNameDisplay: this.props
                       .bForcePersonaNameDisplay,
@@ -63598,7 +63630,7 @@ and limitations under the License.
                 );
               }
               return this.props.noActions
-                ? l
+                ? d
                 : go.createElement(
                     Bp,
                     {
@@ -63607,7 +63639,7 @@ and limitations under the License.
                       disableContextMenu: this.props.disableContextMenu,
                       onContextMenuShown: this.OnContextMenuShown
                     },
-                    l
+                    d
                   );
             }),
             ht.c([Ei.a], t.prototype, "OnDoubleClick", null),
@@ -63793,11 +63825,28 @@ and limitations under the License.
                       ),
                       n
                     )
-                  : go.createElement(
-                      "div",
-                      { className: "gameName richPresenceLabel no-drag" },
-                      n
-                    )),
+                  : void 0 != this.props.strStatusURL &&
+                    "" != this.props.strStatusURL
+                    ? go.createElement(
+                        "div",
+                        { className: "gameName richPresenceLabel no-drag" },
+                        go.createElement(
+                          "a",
+                          {
+                            target: "_blank",
+                            title: this.props.strStatusURLTitle
+                              ? this.props.strStatusURLTitle
+                              : "",
+                            href: this.props.strStatusURL
+                          },
+                          n
+                        )
+                      )
+                    : go.createElement(
+                        "div",
+                        { className: "gameName richPresenceLabel no-drag" },
+                        n
+                      )),
                 go.createElement(
                   "div",
                   { className: c },

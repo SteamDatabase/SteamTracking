@@ -3221,7 +3221,11 @@ body.in_global_drag .friendlist_titlebar
 }
 
 .currentUserContainer.ingame .gameName.richPresenceLabel,
-.friend.ingame .gameName.richPresenceLabel
+.friend.ingame .gameName.richPresenceLabel,
+.friend.ingame .gameName.richPresenceLabel a,
+.friend.ingame .gameName.richPresenceLabel a:hover,
+.friend.ingame .gameName.richPresenceLabel a:active,
+.friend.ingame .gameName.richPresenceLabel a:visited
 {
 	color: rgba( 145, 194, 87, 1 );
 }
@@ -3229,20 +3233,32 @@ body.in_global_drag .friendlist_titlebar
 
 .friend.ingame.awayOrSnooze .richPresenceLabel,
 .currentUserContainer.ingame .richPresenceLabel,
-.friend.ingame .richPresenceLabel
+.friend.ingame .richPresenceLabel,
+.friend.ingame .richPresenceLabel a,
+.friend.ingame .richPresenceLabel a:hover,
+.friend.ingame .richPresenceLabel a:active,
+.friend.ingame .richPresenceLabel a:visited,
 {
 	color: rgb( 98, 129, 59 );
 }
 
 .miniProfileContent .miniProfilePlayer.online .playerContent .awayStatusLabel,
 .currentUserContainer.online .richPresenceLabel,
-.friend.online .richPresenceLabel
+.friend.online .richPresenceLabel,
+.friend.online .gameName.richPresenceLabel a,
+.friend.online .gameName.richPresenceLabel a:hover,
+.friend.online .gameName.richPresenceLabel a:active,
+.friend.online .gameName.richPresenceLabel a:visited
 {
 	color: rgba( 76, 145, 172, 1 );
 }
 
 .currentUserContainer.offline .richPresenceLabel,
-.friend.offline .richPresenceLabel
+.friend.offline .richPresenceLabel,
+.friend.offline .gameName.richPresenceLabel a,
+.friend.offline .gameName.richPresenceLabel a:hover,
+.friend.offline .gameName.richPresenceLabel a:active,
+.friend.offline .gameName.richPresenceLabel a:visited
 {
 	color: #555;
 }
@@ -6768,6 +6784,14 @@ button.DialogButton.copyVoiceLogsButton
 	color: rgb( 14, 231, 32 );
 	text-align: right;
 	font-weight: 100;
+}
+
+a.connectionStatus,
+a.connectionStatus:hover,
+a.connectionStatus:active,
+a.connectionStatus:visited
+{
+	color: rgb( 14, 231, 32 ) !important;
 }
 
 .activeVoiceControls .connectionStatusLabels
