@@ -22,6 +22,8 @@
 		shared_to_facebook_no_multi_label { controlname="Label" labeltext="#Overlay_WontBeSharedToFacebook" visible="1" wrap="1" }
 		shared_to_facebook_no_private_label { controlname="Label" labeltext="#Overlay_PrivateScreenshot" visible="1" wrap="1" }
 
+		limited_user_upload_label { controlname="Label" labeltext="#steam_screenshots_limited_user" visible="1" wrap="1" }
+
 		share_to_facebook_check_button { controlname="CheckButton" labeltext="#Overlay_Share" visible="1" command="changesharetofacebook" }
 	}
 	
@@ -59,7 +61,7 @@
 	{
 		place { control="upload_question" x=25 y=45 }
 		place { control="upload_info" x=25 y=40 width=max  }
-		place { control="error_info" x=25 y=40 width=max }
+		place { control="error_info" x=25 y=40 width=max margin-right=25 }
 		place { control="upload_progress" y=85 width=max margin-left=25 margin-right=25 height=2 }
 		
 		place { control="upload_size" x=25 y=65 }
@@ -70,7 +72,7 @@
 		place { control="visibility_options" start="visiblity_label" y=-5 x=5 dir=right }
 		place { control="share_to_facebook_check_button" x=25 y=140 }
 		place { control="facebook_logo" start="share_to_facebook_check_button" x=-4 y=8 }
-		place { control="shared_to_facebook_ok_label,shared_to_facebook_no_multi_label,shared_to_facebook_no_private_label" x=25 y=170 margin-left=4 width=275 }
+		place { control="shared_to_facebook_ok_label,shared_to_facebook_no_multi_label,shared_to_facebook_no_private_label,limited_user_upload_label" x=25 y=170 margin-left=4 width=275 }
 		place { control="cancel_button,upload_button" y=210 align=right margin-right=15 spacing=5 dir=right }
 	}
 

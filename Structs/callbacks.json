@@ -1466,7 +1466,7 @@
     },
     {
         "id": 2204,
-        "size": 8,
+        "size": 12,
         "posted_in": "void CBaseAPIJob::PostAPIResult<ScreenshotBatchComplete_t>(ScreenshotBatchComplete_t*)"
     },
     {

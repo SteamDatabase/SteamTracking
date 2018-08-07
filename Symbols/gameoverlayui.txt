@@ -8428,7 +8428,7 @@
  T CScreenshotUploadDialog::PanelMessageFunc_ChangeShareToFacebook::InitVar()
  T CScreenshotUploadDialog::PanelMessageFunc_OnCancel::InitVar()
  T CScreenshotUploadDialog::PanelMessageFunc_OnUpload::InitVar()
- T CScreenshotUploadDialog::SetError()
+ T CScreenshotUploadDialog::SetError(EResult)
  T CScreenshotUploadDialog::UploadProgress(ScreenshotUploadProgress_t*)
  T CScreenshotUploadDialog::UploadScreenshotsComplete(ScreenshotBatchComplete_t*, bool)
  T CScreenshotUploadDialog::~CScreenshotUploadDialog()
