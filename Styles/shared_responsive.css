@@ -537,8 +537,8 @@ html.responsive body {
 
 .responsive_tab_control select {
 	color: #ffffff;
-	/*background: rgba(0,0,0,0.3);*/
-	background: #3a6d8b;
+	background: rgba(0,0,0,0.3);
+	/*background: #3a6d8b;*/
 	border: none;
 	font-size: 16px;
 	height: 24px;

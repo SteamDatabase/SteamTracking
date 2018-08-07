@@ -109,7 +109,8 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 		type: 'GET',
 		data: {
 			steamid: this.m_broadcastSteamID,
-			broadcastid: this.m_ulBroadcastID
+			broadcastid: this.m_ulBroadcastID,
+			sessionid: g_sessionID
 		},
 		dataType: 'json'
 	})

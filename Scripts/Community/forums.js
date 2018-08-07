@@ -659,10 +659,12 @@ function Forum_EraseNestedQuotes( strText )
 {
 	var strOutput = '';
 
+		var strTextLower = strText.toLowerCase();
+
 	var iCur = 0;
 	var nQuoteLevel = 0;
-	var iNextQuote = strText.indexOf( '[quote' );
-	var iNextEndQuote = strText.indexOf( '[/quote]' );
+	var iNextQuote = strTextLower.indexOf( '[quote' );
+	var iNextEndQuote = strTextLower.indexOf( '[/quote]' );
 	while( iNextQuote != -1 || iNextEndQuote != -1 )
 	{
 		if ( iNextQuote != -1 && iNextQuote < iNextEndQuote )
@@ -670,18 +672,23 @@ function Forum_EraseNestedQuotes( strText )
 			if ( nQuoteLevel < 2 )
 				strOutput += strText.substr( iCur, iNextQuote - iCur );
 			iCur = iNextQuote;
-			iNextQuote = strText.indexOf( '[quote', iCur + 1 );
+			iNextQuote = strTextLower.indexOf( '[quote', iCur + 1 );
 			nQuoteLevel++;
 		}
-		else
+		else if ( iNextEndQuote != -1 )
 		{
 			if ( nQuoteLevel < 2 )
 			{
 				strOutput += strText.substr( iCur, iNextEndQuote + 8 - iCur );
 			}
 			iCur = iNextEndQuote + 8;	// strlen( '[/quote]' )
-			iNextEndQuote = strText.indexOf( '[/quote', iCur + 1 );
+			iNextEndQuote = strTextLower.indexOf( '[/quote', iCur + 1 );
 			nQuoteLevel--;
+		}
+		else
+		{
+			// unbalanced/invalid state
+			break;
 		}
 	}
 	strOutput += strText.substr( iCur );

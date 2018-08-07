@@ -1320,6 +1320,26 @@ img.emoticon {
 	html.responsive .gray_bevel textarea {
 		font-size: 16px;
 	}
+
+	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control
+	{
+		display: block;
+		text-align: center;
+		background: #0d121a;
+		border: 1px solid #66C0F4;
+		border-image: linear-gradient(#66C0F4, #417B9c);
+		border-image-slice: 1;
+	}
+
+	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control select {
+		width: 98%;
+		-webkit-appearance: none;
+		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/mobile/dropdown_30.png' );
+		background-repeat: no-repeat;
+		background-position: right 5px;
+		background-size: 15px;
+		background-color: #0d121a;
+	}
 }
 
 
@@ -1373,9 +1393,19 @@ img.emoticon {
 	{
 		display: block;
 		text-align: center;
+        background: #0d121a;
+        border: 1px solid #66C0F4;
+        border-image: linear-gradient(#66C0F4, #417B9c);
+        border-image-slice: 1;
 	}
 	html.responsive .responsive_tab_ctn.sharedfiles_responsive_tab .responsive_tab_control select {
 		width: 98%;
+		-webkit-appearance: none;
+		background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/mobile/dropdown_30.png' );
+		background-repeat: no-repeat;
+		background-position: right 5px;
+		background-size: 15px;
+		background-color: #0d121a;
 	}
 	html.responsive div.responsive_tab_baseline,
 	html.responsive div.responsive_tab_baseline.nonresponsive_hidden {

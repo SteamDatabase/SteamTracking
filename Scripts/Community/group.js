@@ -678,12 +678,12 @@ function UpdateImageList( rgClanImages, strClanURL )
 	for( var i=0; i < rgClanImages.length; i++ )
 	{
 		var ele = $J('<div class="clan_image" data-image-filename="%6$s" data-image-id="%5$s" data-image-url="%3$s" data-thumbnail-url="%4$s" ><img src="%1$s" ><span class="delete"/><span class="thumbnail"/><span class="full"/><div class="clan_image_filename">%2$s</div></div>'
-				.replace('%1$s', rgClanImages[i].thumb_url)
-				.replace('%2$s', rgClanImages[i].file_name )
-				.replace('%3$s', rgClanImages[i].url)
-				.replace('%4$s', rgClanImages[i].thumb_url )
-				.replace('%5$s', rgClanImages[i].imageid )
-				.replace('%6$s', rgClanImages[i].file_name )
+				.replace('%1$s', V_EscapeHTML( rgClanImages[i].thumb_url) )
+				.replace('%2$s', V_EscapeHTML( rgClanImages[i].file_name ) )
+				.replace('%3$s', V_EscapeHTML( rgClanImages[i].url) )
+				.replace('%4$s', V_EscapeHTML( rgClanImages[i].thumb_url ) )
+				.replace('%5$s', V_EscapeHTML( rgClanImages[i].imageid ) )
+				.replace('%6$s', V_EscapeHTML( rgClanImages[i].file_name ) )
 		);
 
 		var fnImageDelete = DeleteImage.bind(ele, strClanURL, rgClanImages[i].file_name );
@@ -722,7 +722,7 @@ function DeleteImage(strClanURL, strFileName)
 	if( !imageid )
 		return false; // ?????
 
-	ShowConfirmDialog( "Delete Image", "Are you sure you want to delete %1$s?<br><br>Old announcements which reference this image will no longer work.".replace("%1$s", strFileName) )
+	ShowConfirmDialog( "Delete Image", "Are you sure you want to delete %1$s?<br><br>Old announcements which reference this image will no longer work.".replace("%1$s", V_EscapeHTML( strFileName ) ) )
 .done( function() {
 		$J.ajax({
 			url: strClanURL + '/deleteimage',

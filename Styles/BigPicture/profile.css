@@ -727,6 +727,44 @@ ProfilePanel #UpperRow
 	color: #9b9b9bff;
 }
 
+.friendPlayerLevel.lvl_100, .friendPlayerLevel.lvl_200,
+	.friendPlayerLevel.lvl_300, .friendPlayerLevel.lvl_400,
+	.friendPlayerLevel.lvl_500, .friendPlayerLevel.lvl_600,
+	.friendPlayerLevel.lvl_700, .friendPlayerLevel.lvl_800,
+	.friendPlayerLevel.lvl_900, .friendPlayerLevel.lvl_1000,
+	.friendPlayerLevel.lvl_1100, .friendPlayerLevel.lvl_1200,
+	.friendPlayerLevel.lvl_1300, .friendPlayerLevel.lvl_1400,
+	.friendPlayerLevel.lvl_1500, .friendPlayerLevel.lvl_1600,
+	.friendPlayerLevel.lvl_1700, .friendPlayerLevel.lvl_1800,
+	.friendPlayerLevel.lvl_1900, .friendPlayerLevel.lvl_2000,
+	.friendPlayerLevel.lvl_2100, .friendPlayerLevel.lvl_2200,
+	.friendPlayerLevel.lvl_2300, .friendPlayerLevel.lvl_2400,
+	.friendPlayerLevel.lvl_2500, .friendPlayerLevel.lvl_2600,
+	.friendPlayerLevel.lvl_2700, .friendPlayerLevel.lvl_2800,
+	.friendPlayerLevel.lvl_2900, .friendPlayerLevel.lvl_3000,
+	.friendPlayerLevel.lvl_3100, .friendPlayerLevel.lvl_3200,
+	.friendPlayerLevel.lvl_3300, .friendPlayerLevel.lvl_3400,
+	.friendPlayerLevel.lvl_3500, .friendPlayerLevel.lvl_3600,
+	.friendPlayerLevel.lvl_3700, .friendPlayerLevel.lvl_3800,
+	.friendPlayerLevel.lvl_3900, .friendPlayerLevel.lvl_4000,
+	.friendPlayerLevel.lvl_4100, .friendPlayerLevel.lvl_4200,
+	.friendPlayerLevel.lvl_4300, .friendPlayerLevel.lvl_4400,
+	.friendPlayerLevel.lvl_4500, .friendPlayerLevel.lvl_4600,
+	.friendPlayerLevel.lvl_4700, .friendPlayerLevel.lvl_4800,
+	.friendPlayerLevel.lvl_4900, .friendPlayerLevel.lvl_5000
+{
+	border-style: none;
+	border-radius: 0px;
+
+	width: 68px;
+	height: 58px;
+	padding-left: 10px;
+	padding-right: 0px;
+
+	background-repeat: no-repeat;
+	background-position: 10px 0px;
+}
+
 .friendPlayerLevel.lvl_0 {
 	border-color: #9b9b9bff;
 }
@@ -767,574 +805,55 @@ ProfilePanel #UpperRow
 	border-color: #997c52ff;
 }
 
-.friendPlayerLevel.lvl_100 {
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_hexagons.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_200 {
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shields.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_300
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_books.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_400
-{
-    border-style: none;
-    border-radius: 0px;
-
-    width: 68px;
-    height: 58px;
-    padding-left: 10px;
-    padding-right: 0px;
-    padding-top: 18px;
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_chevrons.png' );
-    background-repeat: no-repeat;
-    background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_500
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_circle2.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_600
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_angle.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-
-.friendPlayerLevel.lvl_700
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_flag_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-
-
-.friendPlayerLevel.lvl_800
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_wings_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_900
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 68px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_arrows_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1000
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_crystals_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1100
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_space_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1200
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_waterelement_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1300
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_fireelement_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1400
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_earthelement_bp.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1500
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_1-2.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1600
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_3-4.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1700
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_5-6.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1800
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_7-8.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_1900
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_9-10.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-.friendPlayerLevel.lvl_2000
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_1-2.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2100
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_3-4.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2200
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_5-6.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2300
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_7-8.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2400
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_9-10.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2500
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_1-2.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2600
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_3-4.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2700
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_5-6.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2800
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_7-8.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_2900
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_9-10.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-
-
-.friendPlayerLevel.lvl_3000
- {
-	 border-style: none;
-	 border-radius: 0px;
-
-	 width: 100px;
-	 height: 58px;
-	 padding-left: 10px;
-	 padding-right: 0px;
-	 padding-top: 18px;
-	 background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_1-2.png' );
-	 background-repeat: no-repeat;
-	 background-position: 10px 0px;
- }
-.friendPlayerLevel.lvl_3100
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_3-4.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3200
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_5-6.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3300
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_7-8.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3400
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_9-10.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3500
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_1-2.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3600
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_3-4.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3700
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_5-6.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3800
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_7-8.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
-.friendPlayerLevel.lvl_3900
-{
-	border-style: none;
-	border-radius: 0px;
-
-	width: 100px;
-	height: 58px;
-	padding-left: 10px;
-	padding-right: 0px;
-	padding-top: 18px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_9-10.png' );
-	background-repeat: no-repeat;
-	background-position: 10px 0px;
-}
+.friendPlayerLevel.lvl_100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_hexagons.png' ); }
+.friendPlayerLevel.lvl_200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shields.png' ); }
+.friendPlayerLevel.lvl_300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_books.png' ); }
+.friendPlayerLevel.lvl_400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_chevrons.png' ); }
+.friendPlayerLevel.lvl_500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_circle2.png' ); }
+.friendPlayerLevel.lvl_600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_angle.png' ); }
+.friendPlayerLevel.lvl_700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_flag_bp.png' ); }
+.friendPlayerLevel.lvl_800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_wings_bp.png' ); }
+.friendPlayerLevel.lvl_900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_arrows_bp.png' ); }
+.friendPlayerLevel.lvl_1000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_crystals_bp.png' ); }
+.friendPlayerLevel.lvl_1100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_space_bp.png' ); }
+.friendPlayerLevel.lvl_1200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_waterelement_bp.png' ); }
+.friendPlayerLevel.lvl_1300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_fireelement_bp.png' ); }
+.friendPlayerLevel.lvl_1400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_earthelement_bp.png' ); }
+.friendPlayerLevel.lvl_1500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_1-2.png' ); }
+.friendPlayerLevel.lvl_1600 { background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_3-4.png'); }
+.friendPlayerLevel.lvl_1700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_1800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_1900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_airelement_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_2000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_1-2.png' ); }
+.friendPlayerLevel.lvl_2100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_2200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_2300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_2400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_geo_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_2500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_1-2.png' ); }
+.friendPlayerLevel.lvl_2600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_2700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_2800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_2900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_mandala_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_3000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_1-2.png' );  }
+.friendPlayerLevel.lvl_3100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_3200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_3300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_3400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_spiro_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_3500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_1-2.png' ); }
+.friendPlayerLevel.lvl_3600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_3700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_3800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_3900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_patterns_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_4000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shapes_bp_1-2.png' );  }
+.friendPlayerLevel.lvl_4100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shapes_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_4200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shapes_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_4300 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shapes_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_4400 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_shapes_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_4500 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_1-2.png' ); }
+.friendPlayerLevel.lvl_4600 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_3-4.png' ); }
+.friendPlayerLevel.lvl_4700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_5-6.png' ); }
+.friendPlayerLevel.lvl_4800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_7-8.png' ); }
+.friendPlayerLevel.lvl_4900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_9-10.png' ); }
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 10px -58px;
