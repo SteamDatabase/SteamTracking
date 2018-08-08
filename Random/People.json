@@ -1,0 +1,869 @@
+[
+    {
+        "name": "Aaron Barber",
+        "bio": "Aaron got his first taste of creating 3D environments while he was studying engineering at UCLA. He was building VRML websites for the university, and also started designing levels for several internet mods. His level design skills landed him a job at Xatrix Entertainment where he worked on Redneck Rampage, Quake 2, and Kingpin before joining Valve in 1999 to work on Half-Life 2.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Aaron Barber"
+        ]
+    },
+    {
+        "name": "Adam Klaff",
+        "bio": "Adam joined Valve in 2015. Prior to that, he ran business development for a video startup in Brooklyn. Before that he worked in development on dozens of movies, plays and television projects. At Valve he works with partners across games, video and VR hardware."
+    },
+    {
+        "name": "Adam Stevens",
+        "bio": "Adam is a Designer on Dota 2. He co-designed the kickstarted boardgame, BLUESHIFT. He also enjoys camping, painting miniatures, and riding his motorcycle.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/adamstevensco\/"
+        ]
+    },
+    {
+        "name": "Al Farnsworth",
+        "bio": "Originally from the east coast, Al moved to Seattle in 2006 and joined Valve a couple years later in 2008.  Since joining, Al has worked on everything Steam - from Steam Chat and Trading, to holiday sales and Tagging on the Steam Store, to Steam Trading Cards and Discussions on the Steam Community.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Al Farnsworth",
+            "http:\/\/steamcommunity.com\/id\/afarnsworth\/"
+        ]
+    },
+    {
+        "name": "Alden Kroll",
+        "bio": "Alden has a habit of ending up in the middle of everything. If he isn't getting in the way of Steam game releases, he's probably working on UI design for Valve games or the Steam store. Alden came to Valve after working on design and production for the Xbox 360 Dashboard. Before that, he studied design at the University of Washington and worked on various freelance design projects. When he's not working, Alden can be found chasing his competitive ambitions in cycling and swimming. He commutes to work by swimming back and forth across Lake Washington every day. Most weekends, he relaxes by riding his bike to Portland. Twice.",
+        "links": [
+            "http:\/\/steamcommunity.com\/id\/alden"
+        ]
+    },
+    {
+        "name": "Alex Vlachos",
+        "bio": "Alex has focused on graphics programming and shader development at Valve since 2006 contributing to Half-Life 2: Episode 2, Team Fortress 2, Portal 1 & 2, Left4Dead 1 & 2, Counter-Strike: Global Offensive, Dota 2, The Lab, and currently virtual reality rendering. Previously he was Lead Visual Effects Programmer at Naughty Dog during development of Uncharted: Drake's Fortune, Lead Programmer on ATI's Demo Team for over 5 years, and he was a software developer for the SpaceOrb 360. Alex is a graduate of Boston University."
+    },
+    {
+        "name": "Alexander Mark",
+        "bio": "Prior to joining Valve, Alex animated in Film and FX for a decade."
+    },
+    {
+        "name": "Alireza Razmpoosh",
+        "bio": "Alireza moved to Canada (via Iran and Turkey) when he was nine. His first impressions of the west were the films TRON, Die Hard, and Lawnmower Man. Inspired by this trinity of action, art, and science he chose a career in 3D animation and visual effects. After earning a Bachelor's and a post-graduate degree in animation from Sheridan Institute of Technology, Ali went to London to start work on his first film. He was 24. He now works at Valve where he drives the effort to transform visual effects into a dynamic interactive experience - and blows stuff up."
+    },
+    {
+        "name": "Amy Baisch",
+        "bio": "Unlike most people at Valve, Amy was actually born and raised right here in Washington, on Whidbey Island. And like all native Washingtonians talking to transplants, she will remind you of this fact roughly twice a minute in any given conversation. After many years working at Zillow, Amy took a break from work to enjoy time with her family and learn how to cook some bucket list foods, like Beef Wellington and Lasagna Bolognese from scratch. Years later, sitting in her kitchen surrounded by pans of Beef Wellington, Amy realized it was either time to pick some new foods or get back to work. Since joining Valve Amy has found a second family. She gets the opportunity to work with exceptionally talented and incredibly kind people every day, and to spend every day helping to make their experience at Valve better.  When she\u2019s not working, Amy\u2019s favorite passion is to travel. Be sure to ask her about Utila next time you see her!",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Amy Baisch"
+        ]
+    },
+    {
+        "name": "Andrew Kim",
+        "bio": "Started with fx in movies now we're here"
+    },
+    {
+        "name": "Anish Chandak",
+        "bio": "Anish joined Valve in 2016 where he is one of the main developers behind Steam Audio. He did his undergraduate in Computer Science from IIT Bombay in 2006 and received his Ph.D. from UNC-Chapel Hill in 2011. Before joining Valve, Anish was the co-founder and CEO of a VR audio tech startup Impulsonic.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Anish Chandak"
+        ]
+    },
+    {
+        "name": "Ariel Diaz",
+        "bio": "Originally from San Juan, Puerto Rico, Ariel came to Valve after finishing his studies at the Savannah College of Art and Design. As part of Valve's character design team, he is responsible for creating character models, facial expressions, and skeleton deformations. Outside Valve, he pursues traditional art skills such as drawing, painting, and sculpting."
+    },
+    {
+        "name": "Augusta Butlin",
+        "bio": "Augusta has been with Valve since 2007.  She works on business development for Steam, VR and events like Steam Dev Days."
+    },
+    {
+        "name": "Ben Burbank",
+        "bio": "Ben is a programmer formerly of Campo Santo, Double Fine, and EA. He cares deeply about helping people tell stories and focuses predominantly on tools, UI, and systems.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ben Burbank"
+        ]
+    },
+    {
+        "name": "Ben Jackson",
+        "bio": "Ben started his career as a UNIX systems programmer and then accidentally transitioned to embedded systems focused on video delivery. Valve rescued him from the video industry and gave him the opportunity to work on Steam, Steam Controller, and Virtual Reality.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ben Jackson"
+        ]
+    },
+    {
+        "name": "Ben Sugden",
+        "bio": "I've been working at Valve since 2016, and am currently focusing on virtual-reality and rendering technology for our in house engine, Source2. Before coming to Valve I worked at Microsoft as a Studio Manager for the Windows Incubation Team and helped develop the first Hololens prototype experiences. The first 17 years or so of my career was spent in the UK as a graphics programmer and engine architect in the video games industry, generally trying to make cubes look good and seeing how many of them I could render in a frame. I cut my teeth writing demos in 68000 assembler on the Atari ST, but in those days it was just one cube and it didn't look very good."
+    },
+    {
+        "name": "Brad Kinley",
+        "bio": "Full-time bellowing sasquatch and animator. Brad came to Valve after working for ILM, Bioware and Capcom. He thought animating Optimus Prime on top of a t-rex would be the peak of his own particular sizzle mountain, but the mountain has continued to sizzle here at Valve. Sizzling mountain animation action.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Brad Kinley"
+        ]
+    },
+    {
+        "name": "Bram Eulaers",
+        "bio": "Growing up in Belgium, Bram got hooked on game development making levels for Duke Nukem 3D and Half-life at a young age. After getting a start in the games industry working at various companies in Holland and Sweden, he moved to the United States to help create Overwatch at Blizzard Entertainment. With his roots in the modding community, he now feels at home at Valve, where he spends most of his time obsessing over efficient UV layouts.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Bram Eulaers"
+        ]
+    },
+    {
+        "name": "Brandon Idol",
+        "bio": "While growing up in the mountains of North Carolina, Brandon often retreated to the family basement to play video games or guitar - and daydream about getting paid to do either. He wound up earning a degree in computer animation, and using his considerable animation skills to help establish the visual style for many games, including Final Fantasy IX, Warcraft III, and World of Warcraft. Brandon now spends his time at Valve creating backgrounds, pointing spotlights at extreme angles, and being slightly irresponsible with color. He still plays guitar."
+    },
+    {
+        "name": "Brandon Reinhart",
+        "bio": "Brandon Reinhart broke into the industry in 1998 when he landed a job as a gameplay programmer on Unreal Tournament for Epic Games. He spent several years at 3D Realms, Sony Online Entertainment, and Spacetime Studios working on Duke Nukem Forever, Star Wars Galaxies, and Blackstar. Brandon joined Valve in 2008 and intends to spend the rest of his life working here."
+    },
+    {
+        "name": "Brett Sanborn",
+        "bio": "Brett has been working at Valve since 2011 and has worked on multiple teams contributing to different projects. He's a passionate game developer who enjoys gaming, outdoors, and snowmobiling in his spare time."
+    },
+    {
+        "name": "Brian Hensley",
+        "bio": "Brian makes things, like the Steam Controller and spreadsheets."
+    },
+    {
+        "name": "Brian Jacobson",
+        "bio": "As a child, Brian learned how to program by cracking all the computer games he couldn't afford to buy. As an adult, he decided to join the games industry as a way to make up for his reprehensible childhood. At LookingGlass, he worked on Flight Unlimited. He went on to co-found GameFX, and was a Lead Engineer on Sinistar Unleashed. He joined Valve in 2000 and has contributed to just about everything the company has shipped since then. Brian focuses mostly on engine and graphics technology, with the occasional foray into game design.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Brian Jacobson"
+        ]
+    },
+    {
+        "name": "Bronwen Grimes",
+        "bio": "Bronwen Grimes is half-artist, half-programmer and has been making video games since 2002. She enjoys being part of the tight-knit technical art community, a small (but growing) collection of other artist-programmers who work in games. Growing up in Ottawa, the capital of Canada, she had an idyllic science nerd childhood. Her first experience with programming happened during a summer camp at Carleton University, where kids also got to synthesize nylon, extract cow DNA, and do the time warp again. Although Bronwen has a diploma in Digital Media Arts from Seneca College, she would say her education was mostly self-designed. She has taken classes in art, programming, and math from a half-dozen different schools to suit her unusual discipline. If she had to describe her specialty, it would be \"look developer,\" but her daily tasks fall along a wide spectrum including UI programming, character modeling, and tools programming.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Bronwen Grimes"
+        ]
+    },
+    {
+        "name": "Carl Conlee",
+        "bio": "Carl has worked on human spacecraft, commercial aircraft, and a variety of electronic products. At Valve, he works on making technology comfortable, mainly."
+    },
+    {
+        "name": "Cassie Murphy",
+        "bio": "Cassie worked on government IT projects and infographics before coming to Valve, but her real claim to fame is illustrating TV and movie casts as cute felines. Cassie is working on Steam sale art, among other art and design work."
+    },
+    {
+        "name": "Charlie Brown",
+        "bio": "Another Fort Walton Beach, Florida native, Charlie graduated from the University of Florida in the summer of 1994 and headed for California and 3Dfx Interactive. His responsibilities there included developer support, porting products to hardware, sample code, simple demos, and ultimately working with the 3Dfx developer relations team to manage the engineering game porting effort. Charlie left 3Dfx after two years and, with his college friend Gary McTaggart, created the Uber(tm) Engine at Ritual Entertainment in Dallas, Texas. Not long after joining Ritual, Charlie and Gary left to start their own company. Not long after that, Valve made Charlie (and Gary) an offer \"they couldn't refuse.\"",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Charlie Brown"
+        ]
+    },
+    {
+        "name": "Chris Carollo",
+        "bio": "Chris started his career at Looking Glass, working on sound and physics for the Thief Series, and later the sequel to Deus Ex at Ion Storm.  Since joining Valve he's worked on chainsaws and jockeys and spell-stealing wizards and machines that make suggestions on Left 4 Dead and Dota.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Chris Carollo"
+        ]
+    },
+    {
+        "name": "Chris Kadar",
+        "bio": "If not at his desk, Chris can probably be found somewhere on the side of the road waiting for a tow truck. If needed, he can be summoned by jingling a bag of Apex seals."
+    },
+    {
+        "name": "Chris Remo",
+        "bio": "Game designer, composer, writer, and arguably some other things. I've worked on games like Firewatch, Gone Home, The Cave, Thirty Flights of Loving, and more.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Chris Remo",
+            "https:\/\/steamcommunity.com\/id\/chrisremo"
+        ]
+    },
+    {
+        "name": "Chris Shambaugh",
+        "bio": "Chris attended a nationally accredited university and has an actual degree in something or other. He remembers liking his fine art and filmmaking classes the most. At Valve Chris has designed UI and marketing for Valve games and Steam."
+    },
+    {
+        "name": "Chris Welch",
+        "bio": "Chris received his Bachelor's of Fine Arts with an emphasis in Animation and Medical Illustration. After working in the Biomedical field for several years as a 3d artist, he went on to work in the film industry as a Look\/Dev and Texture Artist, working on films such as Avatar. He has now been at Valve as an artist since 2010 working on all things art related, from character design and environment concepting, to video game trailer production.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Chris Welch"
+        ]
+    },
+    {
+        "name": "Christen Coomer",
+        "bio": "Product designer by day, aspiring metalsmith by night.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Christen Coomer",
+            "http:\/\/steamcommunity.com\/id\/christen"
+        ]
+    },
+    {
+        "name": "Christine Phelan",
+        "bio": "After shedding her Long Island accent and fleeing to the West Coast in 2007, Christine began working as an animator in the games industry for companies such as LucasArts and Double Fine Productions. She joined Valve in 2011, and currently enjoys being the defacto short person for VR playtests and exploring creature biomechanics and locomotion. When not animating, Christine can be found in the North Cascades looking for critter tracks in the mud (or snow). She loves Boston Terriers more than any well-adjusted, reasonable adult should.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Christine Phelan"
+        ]
+    },
+    {
+        "name": "Clinton Freeman",
+        "bio": "Clinton grew up making levels and mods for Quake 3: Arena in the mountains of North Carolina. He got a BS in Computer Science from Appalachian State University, then made his way down to UNC Chapel Hill to study computational geometry. Before joining Valve, he worked at Impulsonic, where he helped make audio great again with advanced sound propagation technology. These days, he can be found mucking about in Source 2 and perfecting his SteamVR Home destinations in Hammer.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Clinton Freeman"
+        ]
+    },
+    {
+        "name": "Connor Malone",
+        "bio": "Connor joined Valve in 2009 as part of the Support Team.  After a few years he joined the Steam Business team to help third-party developers and coordinate promotions.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Connor Malone"
+        ]
+    },
+    {
+        "name": "DJ Powers",
+        "bio": "The bulk of my childhood and young adult life revolved around working to become a better golfer.  After a mostly unsuccessful playing career, I spent a few years coaching collegiate golf teams and then transitioned indoors to work on the Tiger Woods PGA Tour games at Electronic Arts.  During my time at EA, I worked in the EA Partners Group where we helped Valve ship The Orange Box, Left 4 Dead, Left 4 Dead 2 and Portal 2 on console and into retail.  I started at Valve in 2010, working as a member of the Business Development Team and focusing on Steam, Partner relationships, Hardware and VR among many other things.  Mostly unsuccessful is still a good description of my golf game."
+    },
+    {
+        "name": "Dan Rosas Paulsen",
+        "bio": "Dan comes from busy Mexico City. Back there he was lead artist for Kerbal Space Program. Before joining Valve he completed a Master's in 3D Animation at the National Centre for Computer Animation in the UK. On his spare time he enjoys composing music and working on his own experimental projects, while getting used to rainy Seattle."
+    },
+    {
+        "name": "Daniel Jennings",
+        "bio": "",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Daniel Jennings"
+        ]
+    },
+    {
+        "name": "Dario Casali",
+        "bio": "Dario started designing levels for Doom while he was studying economics at the University of Oxford in England. After building \"Final Doom: The Plutonia Experiment\" with his brother, he joined Valve where he discovered that it was actually possible to have a career in games. Upon graduating from Oxford in 1996, he decided that the finance world would just have to wait. After all these years in the U.S., Dario still stubbornly refuses to give up his accent, and happily endures being the subject of British jokes on a daily basis.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Dario Casali"
+        ]
+    },
+    {
+        "name": "Dave Kircher",
+        "bio": "Dave joined Valve in 2005 to work on the rendering and physics aspects of portals for the game Portal. Now he spends most of his time doing low level systems work in Source 2.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Dave Kircher",
+            "http:\/\/steamcommunity.com\/id\/them\/"
+        ]
+    },
+    {
+        "name": "Dave Riller",
+        "bio": "Dave started working on games in his spare time back in the days of Doom and Quake. His work caught our eye and we lured him here from the East Coast to work on Half-Life."
+    },
+    {
+        "name": "David Byrne",
+        "bio": "Soon after the invention of Babbage's Analytical Engine, I received a Computer Science degree from Yale University.  With the widespread adoption of electricity, I was able to get a job at Microsoft where I wrote operating systems and programming languages for over 12 years.  After leaving Microsoft, I attended drama school, which led to writing the first and arguably worst screenplay for the still-unproduced Half-Life movie.  After a brief hiatus of 13 years in supply chain software, I returned to Valve to prepare data for our imminent robotic overlords.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=David Byrne"
+        ]
+    },
+    {
+        "name": "David Speyrer",
+        "bio": "David developed telecommunications software in Boulder, Colorado before he came to Valve. During his time here he's been a programmer\/designer and cabal lead on Half-Life 2 and Half-Life 2: Episode Two. He has also worked quite a lot on our Hammer level editor over the years. A fan of recreational physical suffering, David goes rock climbing in his spare time. He has dragged many a pale and shaking Valve employee along on adventures in vertiginous terror.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=David Speyrer"
+        ]
+    },
+    {
+        "name": "David Underwood",
+        "bio": "David spent seven years in higher education before joining Valve in 2014 to work with Steam Support. His focus is on quality, partner management, and project management. He enjoys cooking, dogs, and hiking (you can probably guess that he\u2019s from Seattle).",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=David Underwood"
+        ]
+    },
+    {
+        "name": "Dhabih Eng",
+        "bio": "Dhabih is as happy to be here today as he was on the first day he started back in 1999. His name is pronounced ZA-bee.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Dhabih Eng"
+        ]
+    },
+    {
+        "name": "Don Holden",
+        "bio": "While studying computer science at Cornell University's College of Engineering, Don would disappear for months at a time - into his dorm room or \"The SUG\" (Cornell alums UNITE!). He was busy making computer games and graphics demos. His obsession helped him land a couple of summer gigs at Valve, where he worked, under the tutelage of Ken Birdwell and Chris Green, on making vrad.exe faster. After getting his Master's degree, Don joined Valve full-time. He's still working on graphics stuff."
+    },
+    {
+        "name": "Doug Lombardi",
+        "bio": "After years in the music industry, Doug decided to get a real job. Then he came to his senses and got into the gaming industry instead. As Valve's Vice President of Marketing, Doug helps manage and coordinate third-party relations, marketing, and press activities.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Doug Lombardi"
+        ]
+    },
+    {
+        "name": "Drew Gottlieb",
+        "bio": "Drew joined Valve in 2018 to work on all things VR. Originally from \"near Philadelphia\", he graduated from Rochester Institute of Technology having worked at Microsoft (Windows) and Google (Tilt Brush, Google Flights).If he manages to peel a VR headset off his face, it's probably because he has a concert to attend.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Drew Gottlieb"
+        ]
+    },
+    {
+        "name": "Eddie Parker",
+        "bio": "Rogue generalist engineer.  Happy to be here: I think you might be too!",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Eddie Parker"
+        ]
+    },
+    {
+        "name": "Elizabeth Ratto",
+        "bio": "How did a Portuguese-speaking, farm girl from Oakdale, Ca. wind up doing HR benefits and payroll administration for a video game company in Bellevue, WA?  It probably had to do with her switch from accounting to HR management at Chico State; and those stints at a legal\/econ consulting firm and at Gracenote, Sony's music tech company; and the transition from San Francisco to Seattle; and that former colleague who knew somebody who knew somebody who worked for Valve. But you know what? We don't really care how Lizzie wound up at Valve. We just thank the gods she's here. Twice a month.. When we get those paychecks. Like clockwork."
+    },
+    {
+        "name": "Emily Kent",
+        "bio": "Emily works on the UI for Steam; community, support, sales, and security. Prior to Valve, Emily spent time working at Xbox, a mobile start up, frog, Jackson Fish Market, and Microsoft's Pioneer Studios. Emily wants you to protect your account with the Steam Guard Mobile Authenticator."
+    },
+    {
+        "name": "Eric Hope",
+        "bio": "A wassailer of optimally balanced products."
+    },
+    {
+        "name": "Eric Kirchmer",
+        "bio": "At the age of 6, after a chance encounter with the artist Phil Tippett, Eric had the opportunity to view many of the original models following the release of Return of the Jedi, which set him on course to coloring, building, drawing, and creating with any and all materials in his path. If only his younger self would have ever known what would someday follow as a career. In the years as an artist with Valve, Eric has contributed to the visual design of games including Half-Life 2, Team Fortress 2, Dota 2 and other Valve titles.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Eric Kirchmer"
+        ]
+    },
+    {
+        "name": "Eric Smith",
+        "bio": "Eric joined Valve in 2000 after graduating from the DigiPen Institute of Technology in Redmond, WA. Before DigiPen, he worked for Nintendo of America. But when DigiPen opened its doors in the U.S. in January 1998, Eric saw an opportunity to change careers and make games instead of just playing them.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Eric Smith"
+        ]
+    },
+    {
+        "name": "Eric VanWyk",
+        "bio": "Eric started his career in medical devices by attaching sensors to humans to make them healthy.  After a bit in the middle with robots, he now attaches sensors to humans to make them happy."
+    },
+    {
+        "name": "Erik Johnson",
+        "bio": "Erik began his career as a shoe salesman and moved up to selling used cars. When he decided that the car business wasn't for him either, he took a job in Sierra Online's QA department. As one of Sierra's Half-Life testers, Erik spent a lot of time at Valve and we eventually offered him a job as shipping manager. Erik is now one of Valve's business development authorities.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Erik Johnson"
+        ]
+    },
+    {
+        "name": "Erik Robson",
+        "bio": "After earning a Master's in Sculpture in 1996, Erik made the most of that degree by working cash registers and designing web pages. As creatively satisfying as those occupations were, he couldn't shake the feeling that he should be doing more with his life. He spent six months creating Quake levels and, in 1998, landed a job designing levels for Cyclone Studios' Requiem. For the next 12 years he served as Lead Designer at 3DO and Double Fine Productions. Finally, in 2010, he dragged his wife up to the Pacific Northwest and took a job at Valve."
+    },
+    {
+        "name": "Fletcher Dunn",
+        "bio": "I'm a generalist programmer who has been making games since 1996.  For some reason I wrote 3D Math Primer for Graphics and Games Development.  Lately I've been focusing on networking.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Fletcher Dunn"
+        ]
+    },
+    {
+        "name": "Gabe Newell",
+        "bio": "Gabe held a number of positions in the Systems, Applications, and Advanced Technology divisions during his 13 years at Microsoft. His responsibilities included running program management for the first two releases of Windows, starting the company's multimedia division, and leading efforts on the Information Highway PC. Then he started Valve. His most significant contribution to Half-Life, the company\u2019s debut title, was his statement: \"C'mon, people, you can't show the player a really big bomb and not let them blow it up.\"",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Gabe Newell"
+        ]
+    },
+    {
+        "name": "Gordon Stoll",
+        "bio": "Gordon is a software\/math type who is working on VR hardware.  And by \"working on VR hardware\" I mean calibrating things.  Allllll the things.  So many things."
+    },
+    {
+        "name": "Greg Cherlin",
+        "bio": "Hail and well met, adventurer.  Would you like to purchase the [a piece of paper]?"
+    },
+    {
+        "name": "Greg Coomer",
+        "bio": "Greg still works here.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Greg Coomer",
+            "http:\/\/steamcommunity.com\/id\/greg"
+        ]
+    },
+    {
+        "name": "Ian Campbell",
+        "bio": "Design engineer. Number cruncher. Third baseman.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ian Campbell"
+        ]
+    },
+    {
+        "name": "Ido Magal",
+        "bio": "Ido joined Valve in 2001. He's much older now."
+    },
+    {
+        "name": "Iikka Keranen",
+        "bio": "Having escaped (or been let loose?) from a secret bio-research lab in Siberia, Iikka started to design and program games at an early age. However, it wasn't until he began to create levels and mods for Doom and Quake that he became known to the world. In 1988, he left the pack of wolves that raised him for a job at ION Storm in Dallas, Texas. A few years and adventures later, he found himself at Valve. That was 2001. He hasn't had the urge to bite anybody since."
+    },
+    {
+        "name": "Jake Rodkin",
+        "bio": "Jake is a level and UI designer and still doesn't quite believe it. He helped make Firewatch, The Walking Dead, Sam & Max, and many old websites lost to time.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jake Rodkin"
+        ]
+    },
+    {
+        "name": "Jane Ng",
+        "bio": "Jane clutched two suitcases and traveled from Vancouver Canada to Swarthmore College in Pennsylvania to become an engineer and graduated an artist.  She then moved across the country to California to work on VFX and accidentally became an environment artist instead.  For the next 16 years she stayed in the Bay Area and had a great time creating game worlds at Electronic Arts (Return of the King, Godfather), Maxis (Spore), Double Fine Productions (Brutal Legend, Stacking, The Cave) and then Campo Santo (Firewatch).  In 2018, she moved to the PNW with her friends to join Valve.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jane Ng"
+        ]
+    },
+    {
+        "name": "Jared Christen",
+        "bio": "Jared has worked with Steam Support since 2010 and is currently focused on the quality of our interactions with customers. If you have feedback around a Steam Support request that you've had, send it his way!",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jared Christen"
+        ]
+    },
+    {
+        "name": "Jason Brashill",
+        "bio": "Jason worked on British comics 2000ad and Judge Dredd Megazine as well as concept art for many games. His free time was spent mostly \u201cenhancing\u201d (other people\u2019s) property with spray paint. Jason eventually skipped town and now resides near Seattle where he does all manner of arting at Valve and no longer pursues his extra-curricular activities in any way shape or form. Honest.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jason Brashill"
+        ]
+    },
+    {
+        "name": "Jason Mitchell",
+        "bio": "After eight years leading ATI's 3D Application Research Group, Jason was finally seduced by the entertainment industry and joined Valve in 2005.  He has worked on a variety of projects, from game rendering to Source Filmmaker to the Steam iOS client and, most recently, VR game design.  He even got to apply his latent CAD skills during a stint as a 3D modeler on Left 4 Dead 2, modeling and texturing over a hundred new models for the game."
+    },
+    {
+        "name": "Jay Pinkerton",
+        "bio": "Jay Pinkerton is a comedy writer who fell into game writing completely accidentally fifteen years ago and has been waiting for somebody to notice ever since. Prior to joining Valve, Jay ping-ponged around the industry working with very nice people on games that were worked very hard on and then shelved forever. Prior to that he was an editor at the then-resurrected Cracked.com, and helped get that online. Prior to that he was Managing Editor of the National Lampoon. Prior to that he was mostly freelance writing, which is a professional way of saying he starved for a living. Prior to that he was a child, then a baby, and then hadn\u2019t existed yet. That pretty much catches you up."
+    },
+    {
+        "name": "Jay Stelly",
+        "bio": "Jay joined Valve from Tetragon where he was lead engineer and 3D engine developer of Virgin's Nanotek Warrior. Before that, he developed titles for Sony Playstation & 3DO. Way before that, he wrote his first computer game (at age 9) and had a game published in a magazine (at age 15). A native of Cajun Country, Jay finds Northwest buildings too hot (what, no air conditioning?) and the food not hot enough.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jay Stelly"
+        ]
+    },
+    {
+        "name": "Jeep Barnett",
+        "bio": "Jeep quit his janitorial job at Fred Meyer to turn his programming hobby into a career. Jeep's love of video games (and fear of returning to a life of toilet scrubbing) drove him to earn a B.S. Degree from the DigiPen Institute of Technology in Redmond, WA. His senior game project, Narbacular Drop, morphed into Portal after Valve hired Jeep and his DigiPen teammates."
+    },
+    {
+        "name": "Jeff Ballinger",
+        "bio": "Jeff's projects include Half-Life 2, Lost-Coast, Day of Defeat. Team Fortress 2, Left 4 Dead 2, and DotA 2. He is responsible for concepts, world textures, prototyping levels, architectural studies, and model making. In addition to working on world environments you can find him sketching, modeling, and learning new art techniques.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jeff Ballinger"
+        ]
+    },
+    {
+        "name": "Jeff Lane",
+        "bio": "Jeff joined Valve in 2000. Previously at Sierra On-line working on multiple titles, lastly Swat 3 CQB. Jeff has been a designer and technical artist on many Valve products including Team Fortress, Half-Life 2, Day of Defeat, Left 4 Dead, Portal 2, Team Fortress 2, and VR title The Lab.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jeff Lane"
+        ]
+    },
+    {
+        "name": "Jeff Leinbaugh",
+        "bio": "Jeff writes software and firmware for all sorts of VR devices."
+    },
+    {
+        "name": "Jeff Mucha",
+        "bio": "Hardware engineer working on SteamVR based controllers and technology",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jeff Mucha"
+        ]
+    },
+    {
+        "name": "Jeff Reitman",
+        "bio": "Jeff grew up in the Philly area and graduated with a degree in Electrical Engineering from Penn State. Before joining Valve, he worked on a variety of console and mobile games."
+    },
+    {
+        "name": "Jenni Salmi",
+        "bio": "Jenni's curiosity toward foreign languages began at an early age within the chanterelle-laden forests of Finland, where she wanted to figure out the profound messages in NKOTB songs. A couple decades, an assortment of language-nerd jobs, and an English degree later Jenni moved to Seattle. She joined Steam Support in 2011 with a focus on improving Steam user experiences across different languages.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jenni Salmi"
+        ]
+    },
+    {
+        "name": "Jennifer Paine",
+        "bio": "Computer whisperer, Jane of All Trades, gamer, geek. Proud support main. You're welcome. Off-tank for hire, will peel for pocket."
+    },
+    {
+        "name": "Jeremy Selan",
+        "bio": "Jeremy is a software developer working on hardware. He loves pixels. Except for the crappy ones.He\u2019s excited about the future of VR, worried about AI, and otherwise an optimist. He formerly had unrealistic expectations for pixels in the visual effects industry, and regularly overcomes zeroth-world problems.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jeremy Selan"
+        ]
+    },
+    {
+        "name": "Joe Ludwig",
+        "bio": "Joe joined Valve as a programmer in 2009 and has spent his time working on item back ends, trading systems, virtual reality, and hats. These days he is helping out with the software side of Valve's hardware effort. Though he started his game industry career at Sierra in 1998, most of the intervening time was spend on trains and pirate ships during his nine years at Flying Lab software. Before that, he was never in Anthrax, no matter what you may have heard on the internet.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Joe Ludwig"
+        ]
+    },
+    {
+        "name": "Joe Van Den Heuvel",
+        "bio": "Joe started his career at Motorola in Chicago, working on mobile games before it was cool.  He then went on a meandering journey shipping games and software for EA, LucasArts, Disney, WB, Microsoft HoloLens and his own middleware company before finally joining Valve in 2016.  Right now he's focused on animation technology and tools."
+    },
+    {
+        "name": "Joel Hatfield",
+        "bio": "Joel came to Valve in May 2011 to assist with front office and administrative responsibilities.  Having a real estate background, he quickly investigated different organizational methods and operations to streamline all types of housekeeping chores to make sure the people behind the great games and services here at Valve are able to focus on what they do best."
+    },
+    {
+        "name": "John McCaskey",
+        "bio": "John spent his post college graduate years at a struggling Web 2.0 startup, lured in by the illusion of stock option riches. Since arriving at Valve, he's landed on the Steam team where he works on a little bit of everything, from Shopping Carts to the in-game Overlay. His favorite thing about Valve is having a huge, energetic user base, which benefits from the work he does on Steam."
+    },
+    {
+        "name": "John McDonald",
+        "bio": "John writes high performance code and oversees gradient descents. Prior to joining Valve, he worked at NVIDIA where he developed new techniques to drive GPUs and helped numerous developers optimize their game engines. John got his start in the game industry working on Command & Conquer: Generals.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=John McDonald"
+        ]
+    },
+    {
+        "name": "John Morello",
+        "bio": "John is an animator most of the time. He\u2019s been a gamer since his parents bought their Commodore 64. As a high-schooler he made small Quake mods and became addicted to Team Fortress. After graduating, his brother introduced him to the guys on the Day of Defeat team. They wanted to ship their mod, but they needed animation help. John jumped in. Valve eventually invited John and the rest of the team to continue DoD development at Valve\u2019s offices. At this point, John has worked on nearly every product we've shipped. His TF obsession is over - replaced by an addiction to DotA, and lapping his Ducati at local road courses."
+    },
+    {
+        "name": "Jon Blakeley",
+        "bio": "Jon joined the ranks of Valve in 2011. We got a lot more strict about hiring after that."
+    },
+    {
+        "name": "Jon Pile",
+        "bio": "Jon really really likes writing software, plus doing all the other things you have to do in order to make software useful to humans once you've written it."
+    },
+    {
+        "name": "Karen Prell",
+        "bio": "Karen performed for 16 years as a puppeteer with Jim Henson and the Muppets before becoming a computer animator. She worked at Pixar and several other animation companies before joining Valve, where she continues to apply her puppet acting experience towards animating an exciting mix of heroes, creatures and robots."
+    },
+    {
+        "name": "Kelly Thornton",
+        "bio": "Kelly came to Valve via the Half-Life mod community. While earning a Master's degree in Business at the University of Missouri-St. Louis, he helped develop and do sound work for Day of Defeat. He saw a career in video game development and sound engineering as the obvious next step after the MBA - and an undergraduate degree in Biology - so he packed his things and headed west to Valve. Today, you can find Kelly in his office, surrounded by WWII books and memorabilia, wearing a fat pair of headphones, and wondering how in the world he actually landed a job he loves doing."
+    },
+    {
+        "name": "Ken Banks",
+        "bio": "Before joining Valve in 2010 as a Level Designer and Artist, Ken Banks previously worked on titles including Doom 3, Quake 4, and Borderlands.  His career was inspired by his first real gaming experience on the PC, Valve's Half-Life, in 1998.  He became established in Half-Life's flourishing mod community as a contributor to the successful Natural-Selection, which helped launch his career into game development at the age of 18."
+    },
+    {
+        "name": "Kristian Miller",
+        "bio": "Kristian studied Economics and Finance at Montana State University before arriving at Valve in 2012. He started on Team Fortress 2, where he worked to better understand player interactions with crates, name tags, and Hats of Undeniable Wealth and Respect.  Kristian currently works with the Steam team, where he focuses on platform growth, virtual reality, and development of partners' in-game economies.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Kristian Miller"
+        ]
+    },
+    {
+        "name": "Kyle Sommer",
+        "bio": "Kyle likes making and playing games."
+    },
+    {
+        "name": "Laure Lacascade",
+        "bio": "Laure joined Valve in 2010 where she shares her passion for languages and cultures. Her goal is to offer Steam and Valve products all across the world, in the native language of all our users."
+    },
+    {
+        "name": "Lauren Alexander",
+        "bio": "Lauren graduated from the University of Washington 2014 with a degree in nothing related to what she's doing today. Shortly thereafter... like a week after graduation, Lauren joined the Steam Support team. In 2015 she joined the Steam team and the Steam Hardware team to help map the paths that bring products to markets."
+    },
+    {
+        "name": "Lawrence Yang",
+        "bio": "Designer working on SteamVR hardware and software.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Lawrence Yang"
+        ]
+    },
+    {
+        "name": "Levi Miller",
+        "bio": "Levi earned his PhD in mechanical engineering with a focus in control and robotics.  He is interested in the human machine interface\/interaction, and has worked on surgical robots, wearable robots and is currently working on developing technology for next generation VR devices.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Levi Miller"
+        ]
+    },
+    {
+        "name": "Liam Lavery",
+        "bio": "Liam showed early promise in his summer job at General Motors making car transmissions. Twice, GM and the UAW awarded him a Certificate of Perfect Attendance. But Liam left the assembly line for the classroom, teaching college and junior high math until a professor named Yau (that would be the Fields Medal-winning Shing-Tung Yau) convinced him to look for other work. Liam's interest in understanding the rules that govern society led him to law school, and then to Seattle's K&L Gates firm where he specialized in technology and business law and worked with a number of game companies, including Valve. Right before joining Valve, Liam served as general counsel of Zillow.com."
+    },
+    {
+        "name": "Marco Micheletti",
+        "bio": "Marco works on all aspects of Steam Hardware including strategic partner relationships and hardware operations.",
+        "links": [
+            "https:\/\/youtu.be\/uCgnWqoP4MM"
+        ]
+    },
+    {
+        "name": "Markus Emmerling",
+        "bio": "After obtaining a business diploma in Melbourne, Australia, Markus moved to Seattle to attend Embry Riddle Aeronautical University, where he graduated with a B\/S in Technical Management. At Valve, he's working on improving customer support, localization processes and everything that involves the Steam Site License program.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Markus Emmerling"
+        ]
+    },
+    {
+        "name": "Martin Otten",
+        "bio": "Martin started at Valve in 2000 as a contractor working from Germany and moved to Seattle after graduating from Dortmund University with a Master's Degree in Computer Science. After working on HLTV, Counter-Strike and Half-Life 2, he moved to the Steam team and has been involved tons of Steam projects & features ever since. When he's not programming, he's reading about planes, or talking about planes or flying a plane.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/martino\/"
+        ]
+    },
+    {
+        "name": "Matt Charlesworth",
+        "bio": "Matt is and Artist and Designer from the UK city of Nottingham. He fell into his first job in videogames in 1996 when he started working at a British studio called Core Design on a new game called Tomb Raider. Remember that one? When Matt joined Valve in 2008 he got straight to work crafting characters for Left 4 Dead 2, Portal 2 and Dota 2 and has most recently shipped the SteamVR launch title The Lab."
+    },
+    {
+        "name": "Matt Logue",
+        "bio": "As a paint fixer and rotoscope artist at the legendary Tippett Studio, Matthew painted a pimple out of Darryl Hannah's armpit for My Favorite Martian and rotoscoped Kevin Bacon in a black bodysuit for Hollowman. He moved on to legendary Weta Digital to work as an animator and animation lead for The Lord of the Rings trilogy. He came to legendary Valve from Los Angeles where he was the animation supervisor on The Chronicles of Narnia; The Lion The Witch and the Wardrobe, the longest title of any film he's ever worked on. He's now animating on Dota 2. Matthew had been eyeing Valve for awhile and is happy to report that he and his family like Seattle much better than LA, although the weather reminds him of that Ray Bradbury short story (All Summer in a Day) where the sun only comes out for two hours every seven years."
+    },
+    {
+        "name": "Matt Rhoten",
+        "bio": "Software nerd who's a little interested in everything else too.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/mrhoten"
+        ]
+    },
+    {
+        "name": "Matt Wood",
+        "bio": "At age 19, Matt left his home state of Pennsylvania for the sweltering heat of Dallas, Texas. There he became 3D Realms\u2019 first level designer on its first real 3D game, Prey. Since then, he\u2019s worked on Duke Nukem Forever as a designer, animator, and modeler. He also contributed to Max Payne. In 2003, Matt moved to Valve to work on Team Fortress 2 and Half-Life 2. He is (as far as we know) the only person in the world to have worked on four of Wired magazine's top-rated vaporware games. When Half-Life 2 shipped in 2004, the curse that prevented games that Matt worked on from getting shipped was finally broken. Now, he helps Valve ship games often, working primarily as a level and game designer, and gameplay programmer. Matt is happy to say that (in addition to the games mentioned above) he\u2019s contributed to - and shipped Counter-Strike: Source, Half-Life: Episode One, Half-Life: Episode Two, Left 4 Dead, Left 4 Dead 2, Alien Swarm, and Portal 2 on multiple platforms."
+    },
+    {
+        "name": "Matthew An",
+        "bio": "Matthew loved to play video games as a child. His parents warned him that playing games wasn't going to get him a job in the future. After graduating from the University of Washington in 2010, he proved them wrong by landing a job at Valve. As part of Valve\u2019s Steam Support Team, Matthew helps support our Korean community and localizing efforts, making thousands of Korean Steam users believe we actually have offices in Korea. Matthew also uses his Photoshop skills to help make sure advertisements for sales and promotions get properly translated and presented to Steam users in Chinese, Japanese, Russian, Spanish, French, and German - just to name a few. In his spare time he enjoys playing soccer and any first-person shooter game he can get his hands on.",
+        "links": [
+            "http:\/\/steamcommunity.com\/id\/anster"
+        ]
+    },
+    {
+        "name": "Michael Baseflug",
+        "bio": "All the Federales say they could have had him any day",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Michael Baseflug",
+            "https:\/\/steamcommunity.com\/id\/theflug"
+        ]
+    },
+    {
+        "name": "Mike Ambinder",
+        "bio": "Mike has a B.A. in Computer Science and Psychology from Yale and a PhD in Psychology from the University of Illinois. His job description is vague, but he thinks it probably has something to do with applying both psychological knowledge and methodologies to game design. Essentially this means he gets to play with data, perform research, and act as an in-house consultant of sorts. He is really happy that you took the time to read his paragraph.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Mike Ambinder"
+        ]
+    },
+    {
+        "name": "Mike Belzer",
+        "bio": "Before Valve, Mike animated for TV, Commercials and Film. Now he's animating at the coolest company on the planet making awesome content for fun games and VR."
+    },
+    {
+        "name": "Mike Morasky",
+        "bio": "Morasky's life and career sounds a lot like one of the post-modern audio collages he is so fond of creating. Teenage guitar player in a bar band in Montana; award-winning experimental composer in Tokyo; audio hardware programmer in Silicon Valley; underground art rocker touring the world; 3D animator and director for television; electronic audio collage artist in France and Japan; visual fx artist on The Lord of the Rings and Matrix trilogies; AI animation instructor at an art college. These days, Mike is doing some combination of all these things at Valve.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Mike Morasky"
+        ]
+    },
+    {
+        "name": "Miles Estes",
+        "bio": "Miles began his career at Foundation Imaging in Southern California as a character animator on the Starship Troopers TV series. Shortly thereafter, he got his start in games - lead animator for Interplay's PS2 game Run Like Hell. Upon joining Valve in 2001, Miles was inhumanely forced to participate in company playtests. As a result, he developed an addiction to Counter-Strike, despite the fact that he was really bad at it. He has since overcome his addiction and contributes character modeling and\/or animation to a lot of Valve games. His hobbies include lamenting over the fact that he's not drawing enough.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Miles Estes"
+        ]
+    },
+    {
+        "name": "Molly Carroll",
+        "bio": "Molly spent six years working at London-based independent game studio Chucklefish before landing at Valve in 2018. Now she's working on the Steam business team, hoping to help developers find success on the platform!"
+    },
+    {
+        "name": "Patricia Zavalza",
+        "bio": "After working in manufacturing for almost a decade focusing on Program and Account Management, Patricia joined the Customer Support team at Valve where she is working on improving the quality of our interactions with our users and partners. If you have feedback regarding your experience with Steam Support, she would love to hear it!"
+    },
+    {
+        "name": "Phil Co",
+        "bio": "Phil Co has been a level designer since 1996.  He joined Valve in 2005 and has worked on The Orange Box, the Left 4 Dead series, Portal 2, Dota 2 and SteamVR.  Phil tried filmmaking for the documentary Free to Play and is also the author of the book Level Design for Games.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Phil Co",
+            "https:\/\/steamcommunity.com\/id\/philco\/"
+        ]
+    },
+    {
+        "name": "Phil King",
+        "bio": "Phil's first games were written on a Commodore PET in the 1970s.  He first got paid for working on games at Stormfront Studios in the mid 90s, before eventually chucking that to return to hardware engineering.  He subsequently worked on free-space optical networking of laptops for kids, metropolitan area router boxes, educational toys, acoustic gunshot location, and light field cameras, before finally returning to the games industry to work on VR at Valve."
+    },
+    {
+        "name": "Pierre-Loup Griffais",
+        "bio": "Born in Paris, Pierre-Loup is a multiclassed systems and graphics programmer with too many opinions on product design. After moving to the US in 2007 to work on graphics drivers, he joined Valve in 2013 to help port Steam and the Source Engine to Linux platforms. Since then, P.L. has helped ship the Steam Controller and the Vulkan graphics API.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Pierre-Loup Griffais",
+            "https:\/\/steamcommunity.com\/id\/plagman"
+        ]
+    },
+    {
+        "name": "Quintin Doroquez",
+        "bio": "\"Q!\" brings over 10 years of multi-disciplinary graphic design experience to Valve. He has had a creative role in launching print, online, and new media endeavors as a senior art director for Incite PC Gaming magazine, art director for PC Accelerator, and associate art director for PC Gamer. At Valve, you can find Q!'s schedule filled with marketing, packaging, web design, game trailers, .dem file creation, and other visual communications tasks. In his spare time, Q! likes to reminisce about how he was training to be a competitive bodybuilder 14 years ago. Get over it, already!",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Quintin Doroquez"
+        ]
+    },
+    {
+        "name": "Randy Lundeen",
+        "bio": "Randy came to Valve from Microsoft, where he worked as an interface designer for the Internet Gaming Zone. Randy designs some of the most unusual and original game levels at Valve. He's also the designer most likely to push the polygon and memory limits of our engine. In his distant past, he was a key staff member at a potato processing plant where his responsibilities included peeling and quality oversight. He was really good at that too.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Randy Lundeen"
+        ]
+    },
+    {
+        "name": "Ricky Uy",
+        "bio": "Ricky finds every subject wildly interesting. Prior to Valve, he spent years as an engineer and designer before joining Netflix to create the UI used on game consoles and TVs. Now he works on Steam platform growth, contracts, licensing, and helping developers craft awesome things for gamers. Ricky has an MBA from Wharton and a B.S. in Computer Science from the University of Virginia. When not at work, he's probably in the ocean or getting tackled by his Border Collies.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ricky Uy"
+        ]
+    },
+    {
+        "name": "Rob Rydberg",
+        "bio": "An FPGA and firmware developer currently playing with VR hardware."
+    },
+    {
+        "name": "Robin Walker",
+        "bio": "",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Robin Walker"
+        ]
+    },
+    {
+        "name": "Romy Hatfield",
+        "bio": "Romy has been with Valve since 2009. She works on business development for Steam, Wallet Cards and events like The International Dota 2 Championships.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Romy Hatfield"
+        ]
+    },
+    {
+        "name": "Ronald Hu",
+        "bio": "Does a little bit of this and a little bit of that here and there."
+    },
+    {
+        "name": "Scott Dalton",
+        "bio": "Scott began playing and designing games at an early age on an Atari 800 and never looked back. He came to Valve after creating games at Legend Entertainment for many years. Aside from level design and game mechanics, he delights in creating particle effects and programming the system that drives them. When not making worlds come to life, he's usually making them explode, bleed, and burn.  He helped to spin up the hardware teams at Valve and currently is working on the Steam Controller."
+    },
+    {
+        "name": "Scott Lynch",
+        "bio": "Before joining Valve, Scott was Senior Vice President at Havas Interactive where he created and managed the Sierra Studios business unit that published Half-Life. During his five years with Sierra, Scott held a number of different positions in business development, acquisitions, finance, investor relations, and product development. Before Sierra, Scott worked in the public accounting industry for Coopers & Lybrand. In both the audit and tax departments, he managed a range of clients, from small start-ups to Fortune 500 companies. Scott is a graduate of the University of Washington Business School (with a concentration in accounting), and is an inactive Certified Public Accountant in the State of Washington.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Scott Lynch"
+        ]
+    },
+    {
+        "name": "Scott Nietfeld",
+        "bio": "After studying Cognitive Science in college, Scott worked on rockets in the desert for five years because the regular guy left and they couldn't afford to hire someone qualified to replace him. Now he works at Valve in the hardware department, tinkering with VR controllers and bolting tactical-grade IMUs to anything that isn't nailed down."
+    },
+    {
+        "name": "Sean Jenkin",
+        "bio": "Sean spent his youth on the beaches of Wollongong, Australia before the lure of Microsoft brought him to Seattle. After 12 years working at Microsoft Game Studios, Xbox Live Indie Games and MSDN\/Technet, Sean joined Disney to take advantage of the free entry to Disneyland (used twice, doh!). After a few years commuting back and forth to California, Sean came to Valve where he now works with Game Developers around the world supporting their integration with Steam. Sean also spends parts of his day working on Steam, Video and VR."
+    },
+    {
+        "name": "Sean Vanaman",
+        "bio": "Writer and lackluster game developer. Worked on projects such as Firewatch, The Walking Dead and  was the inventor of the rotary engine.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Sean Vanaman",
+            "https:\/\/steamcommunity.com\/profiles\/76561198009246617"
+        ]
+    },
+    {
+        "name": "Sergiy Migdalskiy",
+        "bio": "A bit of an odd-ball, Sergiy joined Valve to do weird low-level stuff and squeeze more blood, um, juice out of the silicon in your gaming machines. Sergiy specializes in systems programming, physics, and applied math. According to him, some games pretend to be simulating physicsy-looking motion. Sergiy made the physics engine behind Uncharted: Drake's Fortune while at Naughty Dog, and the animation system in Far Cry during his lazy years at Crytek. There were a few other odd jobs here and there, but the list is long and boring, and mostly lost in the eons that have passed."
+    },
+    {
+        "name": "Sharon Wang",
+        "bio": "They told Sharon that she could be anything, so she decided she would be the resident unicorn princess."
+    },
+    {
+        "name": "Shawn Zabecki",
+        "bio": "Reigning Valve fantasy football champion. University of Washington VCD graduate. Although he sucks at actually playing video games, he loves working on them.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Shawn Zabecki"
+        ]
+    },
+    {
+        "name": "Shreya Liu",
+        "bio": "Shreya graduated with a degree in Electrical Engineering from the University of Illinois at Urbana Champaign but got working on strategic business partnerships for Surface while at Microsoft. She used to dream about lightsabers but now she's working on making them a [virtual] reality."
+    },
+    {
+        "name": "Staci Elaan",
+        "bio": "Engineer, cook with chemistry training, power electronics geek, amateur lifter of heavy things, designer of circuits of distinction since 1985, and inventor for hire.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Staci Elaan",
+            "LightningGunGirl"
+        ]
+    },
+    {
+        "name": "Steve Jaros",
+        "bio": "Writer of things. Lover of pro wrestling.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Steve Jaros"
+        ]
+    },
+    {
+        "name": "Steven Noonan",
+        "bio": "Steven is a professional Linux supremacist with a recurring NetHack addiction. He joined Valve in 2015, after four years of writing kernel, hypervisor, and emulation code for Amazon Web Services. Before that he worked for Introversion Software on their Linux ports of Darwinia and Defcon.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Steven Noonan",
+            "https:\/\/steamcommunity.com\/id\/AbacusAvenger"
+        ]
+    },
+    {
+        "name": "Taylor Sherman",
+        "bio": "Taylor joined Valve in 2001 to help develop Steam, and has been part of that team ever since. His previous experience ranges from DVD emulation to air combat simulators for the military. He has a Bachelor's degree in electrical engineering from The Cooper Union in New York City. In his spare time, Taylor enjoys photography, playing bass and guitar, and staring at maps."
+    },
+    {
+        "name": "Teryn Bence",
+        "bio": "After graduating from UCLA, Teryn joined Valve in 2015 to ship things \u2013 literally. She started resolving customers' shipping issues with the Support Team during the launch of the Steam Controller and Steam Link. Using that experience, Teryn now manages logistics for Steam Hardware, including overseeing our shipments, sales, promotions, and warehouses."
+    },
+    {
+        "name": "Tim Larkin",
+        "bio": "As a freelance composer and musician, Tim has done it all. He played trumpet for the likes of Ella Fitzgerald, Sheila E., Lou Rawls, Huey Lewis, James Brown, and Natalie Cole; recorded numerous records, movies, documentaries, and TV shows (including Survivor and Fear Factor 2.0) as a studio musician; created the sound design for The Chubbchubbs!, a 2003 Academy Award winner for Best Animated Short Film; and as Audio Director at Cyan studio for eight years, created the music and sound for the Myst series. Now, he's here at Valve, where he's worked on just about every title the company has shipped. When he's not working, Tim is playing tennis, fly fishing, or commuting back and forth to his home and family in Spokane, WA."
+    },
+    {
+        "name": "Tobin Buttram",
+        "bio": "As a music major, Tobin looked forward to a career in food service. Instead, he spent most of his twenties touring and recording with Robert Fripp and The League of Crafty Guitarists, which led, somehow inevitably, to Microsoft in 1996, where he worked on Interactive Music Architecture (DirectMusic) and as an Audio Director at Microsoft Game Studios, primarily with FASA. Tobin joined Valve in 2008 and is blown away every day that, in addition to doing audio production on some of the coolest projects in the whole wide world, he's allowed to tinker with the audio calls in the game code, and encouraged to learn more about that side of the process every day."
+    },
+    {
+        "name": "Tom Bui",
+        "bio": "Tom graduated from the University of California-Berkeley with a Bachelor's degree in Computer Science. Like most software engineers at the time, he decided to join an Internet startup and become a millionaire before turning 30. When that didn\u2019t happen, and after the Internet bubble burst, he decided to forget all that web-based, e-commerce stuff and pursue his real dream: making video games. He joined Midway Games West (formerly, the original Atari). That studio shut down a few months later, so Tom moved on to Maxis where he worked on titles such as Darkspore, Spore, and The Sims 2 (and many of its expansion packs). Since joining Valve in 2010, Tom has worked on Team Fortress 2, Portal 2, SteamVR, and parts of Steam including the Steam Workshop and the Store. He's also the beneficiary of one of the best fan tributes we've ever received.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/tomqbui"
+        ]
+    },
+    {
+        "name": "Tom Giardino",
+        "bio": "Tom is a graduate of the University of Washington Foster School of Business and an alumnus of Teach For America. After teaching and coaching at a high school in rural Mississippi, Tom started working for Valve. Now he spends his days on the Steam Business team, helping the people who make PC games connect with the people who play PC games.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tom Giardino"
+        ]
+    },
+    {
+        "name": "Tony Cox",
+        "bio": "Tony got his start at Bullfrog Productions, including work on the PC classic Dungeon Keeper. An extended stint at Microsoft followed, in a variety of roles from DirectX engineer to game studio manager. He joined Valve in 2015, and currently works on applying machine learning technology to busting people who cheat at CS:GO. His hobbies include photography and turning dead dinosaurs into airplane noises.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tony Cox"
+        ]
+    },
+    {
+        "name": "Tony Paloma",
+        "bio": "Tony got into game programming via the mod community in 2001. He created several server plugins and was responsible for the first online Team Fortress 2 backpack viewer. He continued this work as a hobby while studying Computer Science at Cal Poly in San Luis Obispo, CA. Before coming to Valve in 2011, to work on his passion, Tony spent two years at Microsoft helping to develop the next version of Visual Studio.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tony Paloma"
+        ]
+    },
+    {
+        "name": "Tor Krog",
+        "bio": "I work with our design teams and manufacturing \/ supplier partners to help herd the chaos of launching new products.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tor Krog"
+        ]
+    },
+    {
+        "name": "Tristan Reidford",
+        "bio": "Tristan earned a degree in transportation design. After a dipping a toe into industrial design, he found his way into making models for games, eventually landing at Valve to help with Half Life 2, Episode 2.  Since then He's been delighted to get away with building all sorts of models and art for Portal 2, Left 4 Dead, Team fortress 2, among others.  Outside of Valve, Tristan enjoys the decision paralysis that comes from making art and models in the real world where there is no Ctrl Z.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tristan Reidford"
+        ]
+    },
+    {
+        "name": "Vince Xarya",
+        "bio": "[They promised me cake][It's been well over 3 years now][Neurotoxins, Yes]",
+        "links": [
+            "https:\/\/steamcommunity.com\/profiles\/76561198289613080\/"
+        ]
+    },
+    {
+        "name": "Vitaliy Genkin",
+        "bio": "Vitaliy grew up in the Soviet Union. He earned two Master's degrees (with honors) and a lieutenant rank. He solved thousands of differential equations systems, then architected and implemented software that has probably processed petabytes of binary data by now. And then, he moved to Santa Monica to help Sony lay the foundation for PlayStation-3. Vitaliy joined Valve in 2006 and helped us ship The Orange Box, our first Xbox 360 game. He went on to establish our matchmaking system, implement the PlayStation-3 version of our engine, and design and improve our numerous back-end systems.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Vitaliy Genkin"
+        ]
+    },
+    {
+        "name": "Wade Schin",
+        "bio": "Wade has worked in the game industry as an artist since 1998, and for Valve since 2005. In his spare time, he participates in group art shows and experiments with 3d printing and casting.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Wade Schin"
+        ]
+    },
+    {
+        "name": "Yahn Bernier",
+        "bio": "Yahn was an Atlanta patent lawyer with a degree in chemistry from Harvard. So obviously he ended up in Seattle developing computer games. He taught himself to program at the age of 12 and has worked on the systems code and tools for most of Valve's titles.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Yahn Bernier"
+        ]
+    }
+]

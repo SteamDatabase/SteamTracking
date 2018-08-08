@@ -229,6 +229,59 @@
 				{
 					$Data = preg_replace( '/<section>\s+<div class="steam_section">.+?<\/section>\r\n/s', '', $Data );
 				}
+				else if( $File === 'Random/People.html' )
+				{
+					libxml_use_internal_errors( true );
+
+					$DOM = new DOMDocument;
+					$DOM->loadHTML( '<?xml encoding="UTF-8">' . $Data );
+					$XPath = new DOMXPath( $DOM );
+
+					$PeopleDivs = $XPath->evaluate( '//div[@class="row person"]' );
+					$AlreadySeen = [];
+					$People = [];
+
+					foreach( $PeopleDivs as $Person )
+					{
+						$Name = $XPath->evaluate( 'string(.//div[@class="name"])', $Person );
+						
+						if( isset( $AlreadySeen[ $Name ] ) )
+						{
+							continue;
+						}
+						
+						$AlreadySeen[ $Name ] = true;
+						
+						$Bio = $XPath->evaluate( 'string(.//p[@class="bio"])', $Person );
+						$LinkElements = $XPath->evaluate( './/a', $Person );
+						$Links = [];
+						
+						foreach( $LinkElements as $Link )
+						{
+							$Links[] = $Link->getAttribute( 'href' );
+						}
+						
+						$Person =
+						[
+							'name' => trim( $Name ),
+							'bio' => trim( $Bio ),
+						];
+						
+						if( !empty( $Links ) )
+						{
+							$Person[ 'links' ] = $Links;
+						}
+						
+						$People[] = $Person;
+					}
+
+					array_multisort( array_column( $People, 'name' ), SORT_ASC, $People );
+
+					if( !empty( $People ) )
+					{
+						file_put_contents( __DIR__ . '/Random/People.json', json_encode( $People, JSON_PRETTY_PRINT ) );
+					}
+				}
 			}
 			else if( SubStr( $File, -4 ) === '.css' ||  SubStr( $File, -3 ) === '.js' )
 			{
