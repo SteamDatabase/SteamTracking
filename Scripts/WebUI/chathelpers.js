@@ -541,38 +541,41 @@ webpackJsonp(
     },
     DRjr: function(e, t, n) {
       "use strict";
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return i;
       }),
-        n.d(t, "k", function() {
+        n.d(t, "l", function() {
           return o;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
           return r;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return s;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "j", function() {
           return a;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
           return c;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "g", function() {
           return u;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return p;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return l;
         }),
         n.d(t, "a", function() {
           return m;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return h;
+        }),
+        n.d(t, "b", function() {
+          return d;
         });
       var i = 1,
         o = 4,
@@ -584,7 +587,8 @@ webpackJsonp(
         p = 358510,
         l = 366490,
         m = "18446744073709551615",
-        h = 2147483647;
+        h = 0,
+        d = 2147483647;
     },
     KLxG: function(e, t, n) {
       "use strict";
@@ -600,7 +604,10 @@ webpackJsonp(
           }
         };
       }
-      t.a = i;
+      function o(e, t, n) {
+        return [e, t, n];
+      }
+      (t.a = i), (t.b = o);
     },
     PVtO: function(e, t, n) {
       "use strict";
@@ -1378,7 +1385,7 @@ and limitations under the License.
           }
           return (
             (e.InitFromAccountID = function(t) {
-              return new e(t, s.a.EUNIVERSE, 1, r.j);
+              return new e(t, s.a.EUNIVERSE, 1, r.k);
             }),
             (e.InitFromClanID = function(t) {
               return new e(t, s.a.EUNIVERSE, 7, 0);
@@ -1452,7 +1459,7 @@ and limitations under the License.
               var t = this.GetUniverse();
               if (t <= 0 || t >= 5) return !1;
               if (1 == e) {
-                if (0 == this.GetAccountID() || this.GetInstance() > r.k)
+                if (0 == this.GetAccountID() || this.GetInstance() > r.l)
                   return !1;
               } else if (7 == e) {
                 if (0 == this.GetAccountID() || 0 != this.GetInstance())

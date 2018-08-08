@@ -549,7 +549,7 @@ body.in_global_drag .friendlist_titlebar
 	color: rgb( 128, 151, 161 );
 	font-weight: 100;
 	text-shadow: none;
-	z-index: 4;
+	z-index: 12;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -2148,6 +2148,12 @@ body.in_global_drag .friendlist_titlebar
 	transition: all .21s ease-in-out;
 }
 
+.CompactFriendsList .friendlistListContainer .friendGroup.gameGroup .friend
+{
+	padding: 4px 0px 4px 44px;
+}
+
+
 .CompactFriendsList .friend.ingame,
 .CompactFriendsList .friendGroup .friend.ingame
 {
@@ -2156,7 +2162,7 @@ body.in_global_drag .friendlist_titlebar
 
 .CompactFriendsList .friendGroup.gameGroup:not( .OtherGamesGroup ) .SteamPlayerGroupFooter
 {
-	padding-left: 12px;
+	/*padding-left: 12px;*/
 	height: 18px;
 	margin-top: -4px;
 	margin-bottom: 6px;
@@ -2608,7 +2614,7 @@ body.in_global_drag .friendlist_titlebar
 
 .friend.inGroup .SteamPlayerGroupLines
 {
-	height: 56px;
+	height: 52px;
 	border-left: 1px solid rgb( 116, 133, 155 );
 	margin-top: -6px;
 }
@@ -3237,7 +3243,7 @@ body.in_global_drag .friendlist_titlebar
 .friend.ingame .richPresenceLabel a,
 .friend.ingame .richPresenceLabel a:hover,
 .friend.ingame .richPresenceLabel a:active,
-.friend.ingame .richPresenceLabel a:visited,
+.friend.ingame .richPresenceLabel a:visited
 {
 	color: rgb( 98, 129, 59 );
 }
@@ -3592,6 +3598,20 @@ body.in_global_drag .friendlist_titlebar
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
+
+.ChatTabs.compactView .chatTab .chatTabUnreadBadge
+{
+	line-height: 12px;
+	height: 12px;
+	font-size: 10px;
+	padding-right: 7px;
+}
+
+.ChatTabs.compactView .chatTab .chatTabClose
+{
+	margin-bottom: -3px;
+}
+
 
 .chatTab.chatRoom .chatTabUnreadBadge
 {
@@ -3973,6 +3993,20 @@ body.in_global_drag .friendlist_titlebar
 	min-height: 0;
 }
 
+.ChatRoomGroupDialog_contents .LoadingWrapper
+{
+	margin: auto auto;
+
+	opacity: 0;
+	animation: throbberfade 1s linear 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes throbberfade
+{
+	from {opacity: 0 } to { opacity: 1 }
+}
+
 .chatHistory
 {
 	padding-bottom: 16px;
@@ -4235,11 +4269,12 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	pointer-events: initial;
 }
 
-.chatImageContainer.minimized,
-.chatVideoContainer.minimized
+.chatImageContainer.Minimized,
+.chatVideoContainer.Minimized
 {
 	min-height: 20px;
 	max-width: 400px;
+	padding-bottom: 2px;
 }
 
 .chatVideoContainer
@@ -9473,6 +9508,20 @@ html.web_chat_frame .perf_timing_area
 	user-select: none;
 }
 
+.ChatMessageErrorSendingAlert.VideoFailed
+{
+	width: fit-content;
+	padding: 0 8px;
+}
+
+.failedVideoURL,
+.failedVideoSpan
+{
+	display: inline-block;
+	text-transform: initial;
+	letter-spacing: 0px;
+}
+
 .ChatMessageErrorPermissionDeniedAlert .SVGIcon_Lock
 {
 	width: 12px;
@@ -9916,8 +9965,23 @@ img.emoticon.large
 {
 	fill: rgb( 230, 74, 53 );
 	transition: fill .21s ease-in-out, transform .21s ease-in-out;
+
+}
+
+.friendRequestButton.friendRequestOutgoingOnly .SVGIcon_FriendRequest .redCircle,
+.friendRequestButton .SVGIcon_FriendRequest .friendBodyFull
+{
 	display: none;
 }
+
+
+
+.friendRequestButton.friendRequestOutgoingOnly .SVGIcon_FriendRequest .friendBodyFull
+{
+	display: block;
+}
+
+
 
 .addFriendButton .SVGIcon_AddFriend .plusCircle
 {
@@ -9925,6 +9989,7 @@ img.emoticon.large
 	transition: fill .21s ease-in-out, transform .21s ease-in-out;
 }
 
+.friendRequestButton .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton .SVGIcon_FriendRequest .friendBody,
@@ -9948,6 +10013,7 @@ img.emoticon.large
 	fill: rgb( 255, 118, 100 );
 }
 
+.friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton.friendRequestViewActive .SVGIcon_FriendRequest .friendBody
@@ -9955,6 +10021,7 @@ img.emoticon.large
 	fill: rgb( 255, 198, 40 );
 }
 
+.friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendBodyFull,
 .friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton.friendRequestViewActive:hover .SVGIcon_FriendRequest .friendBody
@@ -9965,6 +10032,7 @@ img.emoticon.large
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendHead,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendArm,
 .friendRequestButton:hover .SVGIcon_FriendRequest .friendBody,
+.friendRequestButton:hover .SVGIcon_FriendRequest .friendBodyFull,
 .addFriendButton:hover .SVGIcon_AddFriend .friendHead,
 .addFriendButton:hover .SVGIcon_AddFriend .friendBody
 {
@@ -9974,6 +10042,11 @@ img.emoticon.large
 .friendRequestButton:hover:not( .friendRequestViewActive ) .SVGIcon_FriendRequest .friendArm
 {
 	animation-name: FriendRequestWave;
+}
+
+.friendRequestButton.friendRequestOutgoingOnly:hover .SVGIcon_FriendRequest .friendArm
+{
+	animation-name: none;
 }
 
 .friendRequestButton .SVGIcon_FriendRequest .friendArm
