@@ -143,7 +143,7 @@ function GetCuratorAvatarURLFromHash( hash, size )
 }
 
 
-function CuratorUploadClanImage( elForm, fnSuccessCallback, tempname = '' )
+function CuratorUploadClanImage( wgAuthToken, elForm, fnSuccessCallback, tempname = '' )
 {
 		if( tempname.length > 0 )
 	{
@@ -154,6 +154,7 @@ function CuratorUploadClanImage( elForm, fnSuccessCallback, tempname = '' )
 	formData.append('sessionid', g_sessionID);
 	formData.append('imagegroup', 2);
 	formData.append('imagename', 'header');
+	formData.append('authwgtoken', wgAuthToken );
 
 		if( tempname.length > 0 )
 	{
@@ -177,7 +178,7 @@ function CuratorUploadClanImage( elForm, fnSuccessCallback, tempname = '' )
 		}
 		else
 		{
-			ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+			ShowAlertDialog( 'Error', "We were unable to save your changes ( %1$s )".replace(/%1\$s/, data.success ) );
 		}
 	}).fail( function( data ) {
 		if( data && data.responseText )
@@ -189,7 +190,7 @@ function CuratorUploadClanImage( elForm, fnSuccessCallback, tempname = '' )
 			}
 			else
 			{
-				ShowAlertDialog( 'Error', "An error has occurred. Please try again later." );
+				ShowAlertDialog( 'Error', "We were unable to save your changes ( %1$s )".replace(/%1\$s/, data.success ) );
 			}
 		}
 	});

@@ -870,7 +870,7 @@ function SetHeaderBackgroundToSavedValue( elSelectImage )
 	elSelectImage.trigger( 'change' );
 }
 
-function ShowHeaderImageHandle()
+function ShowHeaderImageHandle( wgAuthToken )
 {
 	var $container = $J('#header_curator_details');
 	$container.addClass('editing');
@@ -901,14 +901,14 @@ function ShowHeaderImageHandle()
 	var fnAddImage = function( idx, rgImageData )
 	{
 		var elOption = document.createElement('option');
-		elOption.value =  rgImageData.image_hash + '.' + EClanImageFileTypeToString( rgImageData.file_type );
+		elOption.value =  rgImageData.image_hash + '.' + EClanImageFileTypeToString( g_clanGroupsWGAuthToken, rgImageData.file_type );
 		elOption.textContent = rgImageData.file_name;
 		elSelectImage.append(elOption);
 	}
 
 	elUpload.change( function(){
 		var elForm = elOptions[0];
-		CuratorUploadClanImage( elForm, function( data ) {
+		CuratorUploadClanImage( g_clanGroupsWGAuthToken, elForm, function( data ) {
 			fnAddImage(0, data);
 			elSelectImage.val( data.image_hash + '.' + EClanImageFileTypeToString( data.file_type ) );
 			elSelectImage.trigger('change');
