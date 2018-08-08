@@ -269,6 +269,7 @@ GHomepage = {
 		GHomepage.oDisplayLists.popular_new = GHomepage.oDisplayListsRaw.popular_new_releases || [];
 		GHomepage.oDisplayLists.specials = GHomepage.oDisplayListsRaw.specials || [];
 		GHomepage.oDisplayLists.under10 = GHomepage.oDisplayListsRaw.under10 || [];
+		GHomepage.oDisplayLists.top_vr = v_shuffle( GHomepage.oDisplayListsRaw.top_vr || [] );
 
 		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
@@ -293,6 +294,10 @@ GHomepage = {
 		try {
 			GHomepage.RenderUnder10();
 		} catch( e ) { OnHomepageException(e); }
+
+		try {
+			GHomepage.RenderTopVRApps();
+		} catch( e ) { OnHomepageException(e); }			
 
 		// Tabs
 		try {
@@ -1021,6 +1026,30 @@ GHomepage = {
 			},	'creator_recommendations', 4
 		);
 	},	
+	
+	
+	RenderTopVRApps: function()
+	{
+		var $TopVRTitles =  $J('.best_selling_vr_ctn' );
+		$TopVRTitles.hide();
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
+		);
+		
+		console.log( rgCapsules );
+		if ( rgCapsules.length >= 4 )
+			$TopVRTitles.show();
+		else
+			return;
+
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopVRTitles,
+			function( oItem, strFeature, rgOptions )
+			{
+				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+			},	'best_selling_vr', 4
+		);
+	},		
 
 
 

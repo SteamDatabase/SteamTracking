@@ -400,6 +400,11 @@ body.v6 .account_settings_container h2 {
 	color: #476474;
 }
 
+iframe.example_titles.top_titles {
+	width: 600px;
+	height: 500px;
+}
+
 .tag_downvoted {
 	margin: 2px 0;
 }

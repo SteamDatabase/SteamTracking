@@ -458,8 +458,11 @@ body{
 	}
 
 .aldengold {
-	color: #AC966A;
-	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #AC966A;
+	font-size: 16px;
 	margin-left: 0;
 }
 
@@ -801,6 +804,19 @@ p {
 .noInfo_ctn {
 	border: 1px solid #e1c48a;
 	padding: 12px;
+}
+.state_invalid {
+	background-color: #aa8c60;
+	padding: 8px;
+	color: #fff;
+}
+.state_invalid .noInfo {
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+}
+.AdminPageContent #PaymentDetails .state_invalid p {
+	color: #fff;
 }
 
 .infoValid_ctn {
