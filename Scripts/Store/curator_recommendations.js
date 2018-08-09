@@ -870,7 +870,7 @@ function SetHeaderBackgroundToSavedValue( elSelectImage )
 	elSelectImage.trigger( 'change' );
 }
 
-function ShowHeaderImageHandle( wgAuthToken )
+function ShowHeaderImageHandle( )
 {
 	var $container = $J('#header_curator_details');
 	$container.addClass('editing');
@@ -901,7 +901,7 @@ function ShowHeaderImageHandle( wgAuthToken )
 	var fnAddImage = function( idx, rgImageData )
 	{
 		var elOption = document.createElement('option');
-		elOption.value =  rgImageData.image_hash + '.' + EClanImageFileTypeToString( g_clanGroupsWGAuthToken, rgImageData.file_type );
+		elOption.value =  rgImageData.image_hash + '.' + EClanImageFileTypeToString( rgImageData.file_type );
 		elOption.textContent = rgImageData.file_name;
 		elSelectImage.append(elOption);
 	}
