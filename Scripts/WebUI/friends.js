@@ -52153,7 +52153,7 @@ and limitations under the License.
                         )
                       ),
                     r.push(vo.createElement(zu, { key: "aliases", friend: o })),
-                    0 != C &&
+                    Al.FriendStore.self.persona.is_ingame &&
                       Al.BroadcastStore.is_broadcast_capable &&
                       n.push(
                         vo.createElement(
@@ -76696,7 +76696,7 @@ and limitations under the License.
               var i,
                 n,
                 r = e.args.broadcastid,
-                o = e.args.appid,
+                o = Number(e.args.appid),
                 a = e.context.chat;
               return (
                 a.self.accountid == e.context.unAccountIDSender
@@ -76734,9 +76734,9 @@ and limitations under the License.
             (t.getDerivedStateFromProps = function(e, t) {
               var i,
                 n,
-                r = e.args.requestid,
+                r = Number(e.args.requestid),
                 o = e.context.chat,
-                a = Al.FriendStore.self.persona.m_gameid;
+                a = Al.FriendStore.self.persona.m_unGamePlayedAppID;
               return (
                 o.self.accountid != e.context.unAccountIDSender
                   ? ((i = o.self), (n = o.chat_partner))
