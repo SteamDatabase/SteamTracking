@@ -1144,15 +1144,6 @@ function LocUpdateLangThatHaveText( id )
 	}
 }
 
-function InferHtmlTagsInTextArea( id )
-{
-	// find text area
-	var area = $( id + '_textarea' );
-	window.originalHtmlAreaValue = area.value;
-	area.value = InferHtmlTags( area.value );
-	jQuery("#app_content_about_default_preview").html( area.value );
-	OnLocTextChanged( id );
-}
 
 function InferBBCodeInTextArea( id )
 {
@@ -1160,7 +1151,8 @@ function InferBBCodeInTextArea( id )
 	var area = $( id + '_textarea' );
 	window.originalHtmlAreaValue = area.value;
 	area.value = InferBBCode( area.value );
-	jQuery("#app_content_about_default_preview").html( area.value );
+	// Why?
+	//jQuery("#app_content_about_default_preview").text( area.value );
 	OnLocTextChanged( id );
 }
 

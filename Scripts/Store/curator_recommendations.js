@@ -71,8 +71,21 @@ function IgnoreCurator( clanID, bIgnore )
 {
 	IgnoreCuratorWithCallback( clanID, bIgnore, function( bIgnored ){
 		$J( "#IgnoreControls" ).toggleClass( "ignored", bIgnored );
+		if( bIgnored )
+		{
+			$J( "#curator_header_ignore").hide();
+			$J( "#curator_header_unignore").show();
+		}
+		else
+		{
+			$J( "#curator_header_ignore").show();
+			$J( "#curator_header_unignore").hide();
+		}
 	});
+
+	HideMenu( )
 }
+
 
 function InitSearchFilters()
 {

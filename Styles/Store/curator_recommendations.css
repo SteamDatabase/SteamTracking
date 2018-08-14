@@ -289,19 +289,40 @@ body.v6 .dark_container h4 {
 .navigation_bar > a:first-child {
 	margin-left: 0;
 }
-.navigation_bar > div.report {
+
+.navigation_bar > div.nav_right_side {
 	flex-grow: 1;
-	text-align: right;
-	padding: 6px 0px 0px 0px;
+	display: flex;
+	flex-direction: row;
+	margin-top: -5px;
+	justify-content: flex-end;
+	padding: 12px 0px 0px 0px;
 }
 
-.navigation_bar > div.report a img {
+.navigation_bar > div.nav_right_side > div.curator_report {
+	text-align: right;
+	padding: 6px 0px 0px 12px;
+}
+
+.navigation_bar > div.nav_right_side >  div.curator_report a img {
 	width: 16px;
 	height: 16px;
 	opacity: 0.5;
 }
-.navigation_bar > div.report a:hover img {
+.navigation_bar > div.nav_right_side > div.curator_report a:hover img {
 	opacity: 1;
+}
+.curator_pop_up_body
+{
+	width: 150px;
+}
+#curator_header_unignore:hover,
+#curator_header_ignore:hover { /* Override some wonky store level settings */
+	color: white;
+}
+#curator_header_unignore,
+#curator_header_ignore{ /* Override some wonky store level settings */
+	color: #b8b6b4;
 }
 
 .gray_bevel input, .gray_bevel textarea {
