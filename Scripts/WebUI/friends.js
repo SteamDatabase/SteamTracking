@@ -40087,7 +40087,7 @@ and limitations under the License.
                     return null;
                   var c = s == r.default_tabset;
                   if (c && r.IsFriendsListSingleWindow())
-                    Al.ShowPopupFriendsList(e, !i);
+                    Al.ShowPopupFriendsList(e, !i, i);
                   else if (
                     !c ||
                     (!r.IsFriendsListSingleWindow() && !s.is_popup_active)
@@ -40373,7 +40373,7 @@ and limitations under the License.
                 : t.IsTabSetInFriendListWindow(e) &&
                   t.IsFriendsListSingleWindow() &&
                   (t.BUsePopups()
-                    ? Al.ShowPopupFriendsList(t.browser_context, !1)
+                    ? Al.ShowPopupFriendsList(t.browser_context, !1, !0)
                     : t.friends_list_window &&
                       t.friends_list_window.BringToFront());
             }),
@@ -40549,7 +40549,7 @@ and limitations under the License.
                         void 0,
                         !1
                       );
-                      i.AddPopup(n, r), r.Show(!0);
+                      i.AddPopup(n, r), r.Show(!1);
                     }
                   }
                   if (e.popupTabs)
@@ -40565,7 +40565,7 @@ and limitations under the License.
                           void 0,
                           !1
                         );
-                        i.AddPopup(n, r), r.Show(!0);
+                        i.AddPopup(n, r), r.Show(!1);
                       }
                     }
                 }
@@ -40574,7 +40574,7 @@ and limitations under the License.
                     !e ||
                     void 0 === e.bFriendsListVisible ||
                     e.bFriendsListVisible;
-                  i.BUsePopups() && c && Al.ShowPopupFriendsList(Nl);
+                  i.BUsePopups() && c && Al.ShowPopupFriendsList(Nl, !1, !1);
                   for (
                     var l = 0, u = this.m_vecShowGroupsAfterRestorePopup;
                     l < u.length;
@@ -77722,7 +77722,7 @@ and limitations under the License.
             }),
             (e.prototype.OverlayBrowserCreated = function(e, t, i) {
               Al.UIStore.OnOverlayBrowserCreated(e, t, i),
-                qg.ShowPopupFriendsList(e),
+                qg.ShowPopupFriendsList(e, !1, !1),
                 Al.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
@@ -78746,24 +78746,24 @@ and limitations under the License.
                   1e3
                 )));
             }),
-            (e.prototype.ShowPopupFriendsList = function(e, t) {
+            (e.prototype.ShowPopupFriendsList = function(e, t, i) {
               if (Al.ParentalStore.BIsFriendsBlocked())
                 return void console.log(
                   "Blocked friends list popup due to parental controls"
                 );
-              var i = this.m_mapFriendsListPopups.get(e.m_unPID);
-              if (i) return void (t || i.Focus());
-              (i = new uh(
+              var n = this.m_mapFriendsListPopups.get(e.m_unPID);
+              if (n) return void (t || n.Focus());
+              (n = new uh(
                 this.m_FriendsUIApp.FriendStore,
                 this.m_FriendsUIApp.ChatStore,
                 e,
                 t
               )),
-                this.m_mapFriendsListPopups.set(e.m_unPID, i),
-                i.Show(!t);
-              var n = new jg(i);
+                this.m_mapFriendsListPopups.set(e.m_unPID, n),
+                n.Show(!t && i);
+              var r = new jg(n);
               Al.UIStore.GetPerContextChatData(e).SetFriendsListWindow(
-                n.container
+                r.container
               ),
                 Al.UIStore.SerializePopupState();
             }),
@@ -78907,8 +78907,8 @@ and limitations under the License.
                 s = new jg(a);
               return new $s(s, a);
             }),
-            (t.prototype.ShowPopupFriendsList = function(e, t) {
-              this.m_DesktopApp.ShowPopupFriendsList(e, t);
+            (t.prototype.ShowPopupFriendsList = function(e, t, i) {
+              this.m_DesktopApp.ShowPopupFriendsList(e, t, i);
             }),
             (t.prototype.OnFriendsListClosed = function(e) {
               this.m_DesktopApp.OnFriendsListClosed(e);
@@ -79450,10 +79450,10 @@ and limitations under the License.
         });
       var n,
         r = i("TToO"),
-        o = i("vwkX"),
-        a = i("KLxG"),
-        s = i("y986"),
-        c = i("huD9");
+        o = i("y986"),
+        a = i("vwkX"),
+        s = i("huD9"),
+        c = i("KLxG");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -79482,11 +79482,11 @@ and limitations under the License.
             }),
             (e.prototype.OnLinkLoad = function(e) {
               e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-                o.b(this.m_rgLoadingLinks, e.currentTarget),
+                a.b(this.m_rgLoadingLinks, e.currentTarget),
                 0 == this.m_rgLoadingLinks.length &&
                   (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
-            r.c([a.a], e.prototype, "OnLinkLoad", null),
+            r.c([c.a], e.prototype, "OnLinkLoad", null),
             e
           );
         })(),
@@ -79703,13 +79703,13 @@ and limitations under the License.
             }),
             (e.prototype.OnFocus = function() {}),
             (e.prototype.OnBlur = function() {}),
-            r.c([s.observable], e.prototype, "m_bFocused", void 0),
-            r.c([a.a], e.prototype, "OnMessage", null),
-            r.c([a.a], e.prototype, "OnResizeEvent", null),
-            r.c([a.a], e.prototype, "OnUnload", null),
-            r.c([a.a], e.prototype, "OnFocusInternal", null),
-            r.c([a.a], e.prototype, "OnBlurInternal", null),
-            r.c([s.computed], e.prototype, "focused", null),
+            r.c([o.observable], e.prototype, "m_bFocused", void 0),
+            r.c([c.a], e.prototype, "OnMessage", null),
+            r.c([c.a], e.prototype, "OnResizeEvent", null),
+            r.c([c.a], e.prototype, "OnUnload", null),
+            r.c([c.a], e.prototype, "OnFocusInternal", null),
+            r.c([c.a], e.prototype, "OnBlurInternal", null),
+            r.c([o.computed], e.prototype, "focused", null),
             e
           );
         })(),
@@ -79777,7 +79777,7 @@ and limitations under the License.
             (t.prototype.OnClose = function() {
               this.QueryAndStoreWindowPosition();
             }),
-            r.c([a.a], t.prototype, "QueryAndStoreWindowPosition", null),
+            r.c([c.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
         })(u),
@@ -79999,7 +79999,7 @@ and limitations under the License.
               }
             }),
             r.c(
-              [a.a, Object(c.a)(100)],
+              [c.a, Object(s.a)(100)],
               e.prototype,
               "DebouncedSaveSavedDimensionStore",
               null

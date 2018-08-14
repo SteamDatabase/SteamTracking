@@ -1529,10 +1529,10 @@ and limitations under the License.
         });
       var i,
         o = n("TToO"),
-        r = n("vwkX"),
-        s = n("KLxG"),
-        a = n("y986"),
-        c = n("huD9");
+        r = n("y986"),
+        s = n("vwkX"),
+        a = n("huD9"),
+        c = n("KLxG");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -1561,11 +1561,11 @@ and limitations under the License.
             }),
             (e.prototype.OnLinkLoad = function(e) {
               e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-                r.b(this.m_rgLoadingLinks, e.currentTarget),
+                s.b(this.m_rgLoadingLinks, e.currentTarget),
                 0 == this.m_rgLoadingLinks.length &&
                   (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
-            o.c([s.a], e.prototype, "OnLinkLoad", null),
+            o.c([c.a], e.prototype, "OnLinkLoad", null),
             e
           );
         })(),
@@ -1782,13 +1782,13 @@ and limitations under the License.
             }),
             (e.prototype.OnFocus = function() {}),
             (e.prototype.OnBlur = function() {}),
-            o.c([a.observable], e.prototype, "m_bFocused", void 0),
-            o.c([s.a], e.prototype, "OnMessage", null),
-            o.c([s.a], e.prototype, "OnResizeEvent", null),
-            o.c([s.a], e.prototype, "OnUnload", null),
-            o.c([s.a], e.prototype, "OnFocusInternal", null),
-            o.c([s.a], e.prototype, "OnBlurInternal", null),
-            o.c([a.computed], e.prototype, "focused", null),
+            o.c([r.observable], e.prototype, "m_bFocused", void 0),
+            o.c([c.a], e.prototype, "OnMessage", null),
+            o.c([c.a], e.prototype, "OnResizeEvent", null),
+            o.c([c.a], e.prototype, "OnUnload", null),
+            o.c([c.a], e.prototype, "OnFocusInternal", null),
+            o.c([c.a], e.prototype, "OnBlurInternal", null),
+            o.c([r.computed], e.prototype, "focused", null),
             e
           );
         })(),
@@ -1856,7 +1856,7 @@ and limitations under the License.
             (t.prototype.OnClose = function() {
               this.QueryAndStoreWindowPosition();
             }),
-            o.c([s.a], t.prototype, "QueryAndStoreWindowPosition", null),
+            o.c([c.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
         })(p),
@@ -2078,7 +2078,7 @@ and limitations under the License.
               }
             }),
             o.c(
-              [s.a, Object(c.a)(100)],
+              [c.a, Object(a.a)(100)],
               e.prototype,
               "DebouncedSaveSavedDimensionStore",
               null
