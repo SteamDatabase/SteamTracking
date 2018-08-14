@@ -466,8 +466,7 @@ body.iframe #ChatWindow
 	width: auto;
 	margin-right: 0;
 	left: 0;
-	background: #2f353d;
-}
+background: -webkit-linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);background: linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);}
 
 #ChatViewerModalBackdrop
 {
@@ -800,6 +799,7 @@ body.iframe #ChatDragHandle
 	bottom: 0;
 	left: 0;
 	right: 0;
+	padding: 6px 6px 4px 4px;
 
 	display:-webkit-flex;
 	display:-ms-flexbox;
@@ -807,6 +807,7 @@ body.iframe #ChatDragHandle
 	-webkit-flex-flow:row nowrap;
 	-ms-flex-flow:row nowrap;
 	flex-flow:row nowrap;
+	background: #22252b;
 }
 
 .ChatTextField
@@ -817,8 +818,9 @@ body.iframe #ChatDragHandle
 	margin: 0 0 0 2px;
 	height: 40px;
 	color: white;
-	border: 1px solid #4c4c4c;
-	background-color: #292929;
+	border: 1px solid #000000;
+	box-shadow: 0 0 3px #000000 inset;
+	background-color: #1b1c20;
 	box-sizing: border-box;
 	resize: none;
 	padding: 5px;
@@ -841,7 +843,10 @@ body.iframe #ChatDragHandle
 	color: white;
 	text-align: center;
 	line-height: 40px;
-	background: -webkit-linear-gradient( top, #696969 5%, #3b3b3b 95%);background: linear-gradient( to bottom, #696969 5%, #3b3b3b 95%);}
+}
+.ChatSend:hover {
+	background: #3d424b;
+}
 
 .ChatButton
 {
@@ -1398,7 +1403,16 @@ body:not(.iframe) .BroadcastRowShadow
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-		}
+			position: relative;
+}
+body.v6 .store_broadcast_title .broadcast_live_stream_icon {
+	position: relative;
+	display: inline-block;
+	top: auto;
+	left: auto;
+	line-height: 14px;
+	vertical-align: bottom;
+}
 
 .store_broadcast_side_panel {
 	max-width: 155px;

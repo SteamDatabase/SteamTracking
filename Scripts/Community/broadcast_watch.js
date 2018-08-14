@@ -25,8 +25,9 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS )
+var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS )
 {
+	this.m_broadcastAccountID = broadcastAccountID;
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
 	this.m_strBroadcastName = name;
@@ -204,6 +205,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 		var bIsMobile = bUseHLSManifest; // Adding feature for iOS first, and then going to investigate on android later
 
 		this.m_player = new CDASHPlayer( this.m_elVideoPlayer );
+		this.m_player.SetBroadcastAccountID( this.m_broadcastAccountID );
 		this.m_player.SetUseHLSManifest( bUseHLSManifest );
 		this.m_player.SetLimitFPS( this.m_nVideoLimitFPS );
 		this.m_playerUI = new CDASHPlayerUI( this.m_player, bIsMobile ? CDASHPlayerUI.eUIModeMobile : CDASHPlayerUI.eUIModeDesktop );
@@ -213,10 +215,10 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 
 		// For HLS playback we depend on the HTML Video Element for playback and events. Map those here to the broadcast events.
 		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'bufferingcomplete.BroadcastWatchEvents' : 'canplay', function() { _watch.OnPlayerBufferingComplete(); } );
-		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'downloadfailed.BroadcastWatchEvents' : 'stalled', function() { _watch.OnPlayerDownloadFailed(); } );
 		$J( this.m_elVideoPlayer ).on( bUseDASH ? 'playbackerror.BroadcastWatchEvents' : 'error' , function() { _watch.OnPlayerPlaybackError(); } );
 
 		$J( this.m_elVideoPlayer ).on( 'gamedataupdate', function( e, pts, Data ) { _watch.OnGameFrameReceived( pts, Data ); } );
+		$J( this.m_elVideoPlayer ).on( 'downloadfailed.BroadcastWatchEvents', function() { _watch.OnPlayerDownloadFailed(); } );
 
 		// Add air-play support for iOS
 		if( bUseHLSManifest )
