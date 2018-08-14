@@ -347,6 +347,7 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
+ T int checked_static_cast<int, unsigned long>(unsigned long const&)
  T non-virtual thunk to CBaseFileSystem::Init()
  T non-virtual thunk to CBaseFileSystem::QueryInterface(char const*)
  T non-virtual thunk to CBaseFileSystem::Shutdown()

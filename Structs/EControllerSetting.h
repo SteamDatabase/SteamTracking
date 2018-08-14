@@ -113,4 +113,6 @@ typedef enum EControllerSetting
     k_EControllerSettingSoft_press_sytle, // soft_press_sytle
     k_EControllerSettingActivator_output_axis, // activator_output_axis
     k_EControllerSettingChord_button, // chord_button
+    k_EControllerSettingTouchmenu_inner_deadzone, // touchmenu_inner_deadzone
+    k_EControllerSettingTouchmenu_outer_deadzone, // touchmenu_outer_deadzone
 } EControllerSetting;

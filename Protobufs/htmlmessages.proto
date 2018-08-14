@@ -79,6 +79,7 @@ message CMsgBrowserCreate {
 	optional uint32 browser_type = 14 [default = 0];
 	optional int32 initial_top = 15 [default = -2147483648];
 	optional int32 initial_left = 16 [default = -2147483648];
+	optional bool only_allow_trusted_popups = 17 [default = false];
 }
 
 message CMsgBrowserCreateResponse {
@@ -755,10 +756,6 @@ message CMsgLoadLocalization {
 	optional uint32 browser_handle = 1;
 	optional string localization_path = 2;
 	optional string language = 3;
-}
-
-message CMsgEnableSteamClientAPI {
-	optional uint32 browser_handle = 1;
 }
 
 message CMsgJumpListLink {

@@ -39,6 +39,7 @@ message CPlayer_GetLastPlayedTimes_Response {
 		optional uint32 last_playtime = 2;
 		optional int32 playtime_2weeks = 3;
 		optional int32 playtime_forever = 4;
+		optional uint32 first_playtime = 5;
 	}
 
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;

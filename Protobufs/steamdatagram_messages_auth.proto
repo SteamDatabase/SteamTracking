@@ -12,10 +12,11 @@ message CMsgSteamDatagramRelayAuthTicket {
 	optional fixed64 authorized_steam_id = 2;
 	optional fixed32 authorized_public_ip = 3;
 	optional fixed64 gameserver_steam_id = 4;
-	optional fixed64 gameserver_net_id = 5;
+	optional fixed64 legacy_gameserver_net_id = 5;
+	optional string gameserver_address = 11;
 	optional bytes legacy_signature = 6;
 	optional uint32 app_id = 7;
-	optional fixed32 gameserver_pop_id = 9;
+	optional fixed32 legacy_gameserver_pop_id = 9;
 	optional uint32 virtual_port = 10;
 	repeated .CMsgSteamDatagramRelayAuthTicket.ExtraField extra_fields = 8;
 }

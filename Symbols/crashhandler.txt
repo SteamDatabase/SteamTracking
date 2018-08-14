@@ -409,6 +409,7 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ __stdoutp
  __tolower
  __toupper
  __udivdi3
@@ -491,8 +492,10 @@
  dlopen
  dlsym
  dyld_stub_binder
+ fflush
  fork
  fprintf
+ fputc
  free
  fwrite
  fwrite$UNIX2003

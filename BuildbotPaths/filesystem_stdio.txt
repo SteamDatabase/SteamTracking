@@ -1,5 +1,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h

@@ -4372,6 +4372,19 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_ShaderCache_Enable"		"Enable Shader Pre-Caching (%shaderdiskusagemb% MB pre-cached)"
 
 
+
+"Steam_Settings_Compat"				"Steam Play"
+"Steam_Settings_Compat_Title"			"Steam Play Settings"
+"Steam_Settings_Compat_Info"			"Steam Play will automatically install compatibility tools that allow you to play games from your library that were built for other operating systems."
+"Steam_Settings_Compat_Enable"			"Enable Steam Play for supported titles"
+"Steam_Settings_Compat_Advanced_Title"		"Advanced"
+"Steam_Settings_Compat_Forced_Info"		"You can use Steam Play to test games in your library that have not been verified with a supported compatibility tool."
+"Steam_Settings_Compat_Forced_Enable"		"Enable Steam Play for all titles"
+"Steam_Settings_Compat_Advanced_Info"		"You may select a compatibility tool to use with games that have not been tested or verified to work on this platform.\n\nThis may not work as expected, and can cause issues with your games, including crashes and breaking save games."
+"Steam_Settings_Compat_Default_Tool"		"Compatibility tool:"
+"Steam_Settings_Compat_Info_Link"		"SteamPlay FAQ"
+"Steam_Settings_Compat_No_Default"		"None selected"
+
 "Steam_Settings_StreamingTitle" "In-Home Streaming"
 
 "Steam_Settings_Streaming_Description" "Stream gameplay from your Windows PC to other computers detected on your local network. To connect, simply log into this same Steam account on another local device."

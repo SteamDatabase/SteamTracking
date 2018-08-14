@@ -30,7 +30,6 @@
  B CMsgDisableBackgroundThrottling::default_instance_
  B CMsgDraggableRegionsChanged::default_instance_
  B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
- B CMsgEnableSteamClientAPI::default_instance_
  B CMsgExecuteJavaScript::default_instance_
  B CMsgExitFullScreen::default_instance_
  B CMsgFileLoadDialog::default_instance_
@@ -264,7 +263,6 @@
  D typeinfo for CMsgDisableBackgroundThrottling
  D typeinfo for CMsgDraggableRegionsChanged
  D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
- D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgExecuteJavaScript
  D typeinfo for CMsgExitFullScreen
  D typeinfo for CMsgFileLoadDialog
@@ -499,7 +497,6 @@
  D vtable for CMsgDisableBackgroundThrottling
  D vtable for CMsgDraggableRegionsChanged
  D vtable for CMsgDraggableRegionsChanged_DraggableRects
- D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgExecuteJavaScript
  D vtable for CMsgExitFullScreen
  D vtable for CMsgFileLoadDialog
@@ -745,7 +742,6 @@
  R typeinfo name for CMsgDisableBackgroundThrottling
  R typeinfo name for CMsgDraggableRegionsChanged
  R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
- R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgExecuteJavaScript
  R typeinfo name for CMsgExitFullScreen
  R typeinfo name for CMsgFileLoadDialog
@@ -958,6 +954,14 @@
  T CCookie::SetCachedSize(int) const
  T CCookie::SharedCtor()
  T CCookie::SharedDtor()
+ T CCookie::mutable_domain()
+ T CCookie::mutable_name()
+ T CCookie::mutable_path()
+ T CCookie::mutable_value()
+ T CCookie::set_domain(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::~CCookie()
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(char const*, char const*)
@@ -974,7 +978,7 @@
  T CHTMLController::BIsBrowserEnabled()
  T CHTMLController::BStartMasterCEFProcess(char const*, EUniverse, ELanguage, EUIMode, bool)
  T CHTMLController::BrowserDetails_t::BrowserDetails_t(CHTMLController::BrowserDetails_t const&)
- T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, unsigned int, unsigned int, char const*, char const*)
+ T CHTMLController::BrowserDetails_t::BrowserDetails_t(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, unsigned int, unsigned int, char const*, char const*, bool)
  T CHTMLController::BrowserDetails_t::CopyToProtobuf(CMsgBrowserCreate&) const
  T CHTMLController::BrowserDetails_t::operator=(CHTMLController::BrowserDetails_t const&)
  T CHTMLController::CHTMLController()
@@ -985,8 +989,8 @@
  T CHTMLController::ChromeResumeFromValidate()
  T CHTMLController::ClearAllCookies()
  T CHTMLController::CreateBrowserInternal(CHTMLController::BrowserDetails_t const&, int, int)
- T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int, char const*, EBrowserType)
- T CHTMLController::CreateOffScreenBrowser(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType)
+ T CHTMLController::CreateDirectHWNDBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int, char const*, EBrowserType, bool)
+ T CHTMLController::CreateOffScreenBrowser(IHTMLResponses*, char const*, char const*, bool, float, EBrowserType, bool)
  T CHTMLController::CreateOpenVROverlayBrowser(IHTMLResponses*, char const*, char const*, int, int, char const*, bool)
  T CHTMLController::CreateTransparentBrowser(IHTMLResponses*, char const*, char const*, int, int, int, int)
  T CHTMLController::GetFreeCommandBuffer(EHTMLCommands, int)
@@ -1027,6 +1031,10 @@
  T CHTMLHeader::SetCachedSize(int) const
  T CHTMLHeader::SharedCtor()
  T CHTMLHeader::SharedDtor()
+ T CHTMLHeader::mutable_key()
+ T CHTMLHeader::mutable_value()
+ T CHTMLHeader::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CHTMLHeader::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CHTMLHeader::~CHTMLHeader()
  T CHTMLPageSecurityInfo::ByteSize() const
  T CHTMLPageSecurityInfo::CHTMLPageSecurityInfo()
@@ -1040,6 +1048,10 @@
  T CHTMLPageSecurityInfo::SetCachedSize(int) const
  T CHTMLPageSecurityInfo::SharedCtor()
  T CHTMLPageSecurityInfo::SharedDtor()
+ T CHTMLPageSecurityInfo::mutable_certname()
+ T CHTMLPageSecurityInfo::mutable_issuername()
+ T CHTMLPageSecurityInfo::set_certname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CHTMLPageSecurityInfo::set_issuername(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
  T CHTMLProtoBufMsg<CMsgAckPIDShuttingDown>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgAckPIDShuttingDown>::~CHTMLProtoBufMsg()
@@ -1197,6 +1209,8 @@
  T CJSMethodArgument::SetCachedSize(int) const
  T CJSMethodArgument::SharedCtor()
  T CJSMethodArgument::SharedDtor()
+ T CJSMethodArgument::mutable_json_data()
+ T CJSMethodArgument::set_json_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CJSMethodArgument::~CJSMethodArgument()
  T CMSgJumpListMRUApp::ByteSize() const
  T CMSgJumpListMRUApp::CMSgJumpListMRUApp()
@@ -1210,6 +1224,12 @@
  T CMSgJumpListMRUApp::SetCachedSize(int) const
  T CMSgJumpListMRUApp::SharedCtor()
  T CMSgJumpListMRUApp::SharedDtor()
+ T CMSgJumpListMRUApp::mutable_display_name()
+ T CMSgJumpListMRUApp::mutable_icon_path()
+ T CMSgJumpListMRUApp::mutable_url_link()
+ T CMSgJumpListMRUApp::set_display_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMSgJumpListMRUApp::set_icon_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMSgJumpListMRUApp::set_url_link(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMSgJumpListMRUApp::~CMSgJumpListMRUApp()
  T CMsgAckPIDShuttingDown::ByteSize() const
  T CMsgAckPIDShuttingDown::CMsgAckPIDShuttingDown()
@@ -1245,6 +1265,10 @@
  T CMsgAddHeader::SetCachedSize(int) const
  T CMsgAddHeader::SharedCtor()
  T CMsgAddHeader::SharedDtor()
+ T CMsgAddHeader::mutable_key()
+ T CMsgAddHeader::mutable_value()
+ T CMsgAddHeader::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgAddHeader::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAddHeader::~CMsgAddHeader()
  T CMsgAuthedSteamDomains::ByteSize() const
  T CMsgAuthedSteamDomains::CMsgAuthedSteamDomains()
@@ -1281,6 +1305,18 @@
  T CMsgBrowserCreate::SetCachedSize(int) const
  T CMsgBrowserCreate::SharedCtor()
  T CMsgBrowserCreate::SharedDtor()
+ T CMsgBrowserCreate::mutable_user_css()
+ T CMsgBrowserCreate::mutable_useragent()
+ T CMsgBrowserCreate::mutable_vroverlay_key()
+ T CMsgBrowserCreate::mutable_window_icon()
+ T CMsgBrowserCreate::set_user_css(char const*)
+ T CMsgBrowserCreate::set_user_css(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_useragent(char const*)
+ T CMsgBrowserCreate::set_useragent(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_vroverlay_key(char const*)
+ T CMsgBrowserCreate::set_vroverlay_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_window_icon(char const*)
+ T CMsgBrowserCreate::set_window_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserCreate::~CMsgBrowserCreate()
  T CMsgBrowserCreateResponse::ByteSize() const
  T CMsgBrowserCreateResponse::CMsgBrowserCreateResponse()
@@ -1305,6 +1341,20 @@
  T CMsgBrowserErrorStrings::SetCachedSize(int) const
  T CMsgBrowserErrorStrings::SharedCtor()
  T CMsgBrowserErrorStrings::SharedDtor()
+ T CMsgBrowserErrorStrings::mutable_bad_url()
+ T CMsgBrowserErrorStrings::mutable_cache_miss()
+ T CMsgBrowserErrorStrings::mutable_connection_problem()
+ T CMsgBrowserErrorStrings::mutable_header()
+ T CMsgBrowserErrorStrings::mutable_proxy_problem()
+ T CMsgBrowserErrorStrings::mutable_title()
+ T CMsgBrowserErrorStrings::mutable_unknown()
+ T CMsgBrowserErrorStrings::set_bad_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_cache_miss(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_connection_problem(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_header(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_proxy_problem(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_unknown(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserErrorStrings::~CMsgBrowserErrorStrings()
  T CMsgBrowserPosition::ByteSize() const
  T CMsgBrowserPosition::CMsgBrowserPosition()
@@ -1329,6 +1379,8 @@
  T CMsgBrowserReady::SetCachedSize(int) const
  T CMsgBrowserReady::SharedCtor()
  T CMsgBrowserReady::SharedDtor()
+ T CMsgBrowserReady::mutable_vr_overlay_key()
+ T CMsgBrowserReady::set_vr_overlay_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserReady::~CMsgBrowserReady()
  T CMsgBrowserRemove::ByteSize() const
  T CMsgBrowserRemove::CMsgBrowserRemove()
@@ -1506,17 +1558,6 @@
  T CMsgDraggableRegionsChanged_DraggableRects::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgDraggableRegionsChanged_DraggableRects::SetCachedSize(int) const
  T CMsgDraggableRegionsChanged_DraggableRects::~CMsgDraggableRegionsChanged_DraggableRects()
- T CMsgEnableSteamClientAPI::ByteSize() const
- T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
- T CMsgEnableSteamClientAPI::Clear()
- T CMsgEnableSteamClientAPI::GetCachedSize() const
- T CMsgEnableSteamClientAPI::GetMetadata() const
- T CMsgEnableSteamClientAPI::IsInitialized() const
- T CMsgEnableSteamClientAPI::MergeFrom(CMsgEnableSteamClientAPI const&)
- T CMsgEnableSteamClientAPI::New() const
- T CMsgEnableSteamClientAPI::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgEnableSteamClientAPI::SetCachedSize(int) const
- T CMsgEnableSteamClientAPI::~CMsgEnableSteamClientAPI()
  T CMsgExecuteJavaScript::ByteSize() const
  T CMsgExecuteJavaScript::CMsgExecuteJavaScript()
  T CMsgExecuteJavaScript::Clear()
@@ -1529,6 +1570,8 @@
  T CMsgExecuteJavaScript::SetCachedSize(int) const
  T CMsgExecuteJavaScript::SharedCtor()
  T CMsgExecuteJavaScript::SharedDtor()
+ T CMsgExecuteJavaScript::mutable_script()
+ T CMsgExecuteJavaScript::set_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgExecuteJavaScript::~CMsgExecuteJavaScript()
  T CMsgExitFullScreen::ByteSize() const
  T CMsgExitFullScreen::CMsgExitFullScreen()
@@ -1553,6 +1596,10 @@
  T CMsgFileLoadDialog::SetCachedSize(int) const
  T CMsgFileLoadDialog::SharedCtor()
  T CMsgFileLoadDialog::SharedDtor()
+ T CMsgFileLoadDialog::mutable_initialfile()
+ T CMsgFileLoadDialog::mutable_title()
+ T CMsgFileLoadDialog::set_initialfile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgFileLoadDialog::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFileLoadDialog::~CMsgFileLoadDialog()
  T CMsgFileLoadDialogResponse::ByteSize() const
  T CMsgFileLoadDialogResponse::CMsgFileLoadDialogResponse()
@@ -1578,6 +1625,8 @@
  T CMsgFind::SetCachedSize(int) const
  T CMsgFind::SharedCtor()
  T CMsgFind::SharedDtor()
+ T CMsgFind::mutable_find()
+ T CMsgFind::set_find(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFind::~CMsgFind()
  T CMsgFinishedRequest::ByteSize() const
  T CMsgFinishedRequest::CMsgFinishedRequest()
@@ -1591,6 +1640,10 @@
  T CMsgFinishedRequest::SetCachedSize(int) const
  T CMsgFinishedRequest::SharedCtor()
  T CMsgFinishedRequest::SharedDtor()
+ T CMsgFinishedRequest::mutable_pagetitle()
+ T CMsgFinishedRequest::mutable_url()
+ T CMsgFinishedRequest::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgFinishedRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFinishedRequest::~CMsgFinishedRequest()
  T CMsgFocusedNodeText::ByteSize() const
  T CMsgFocusedNodeText::CMsgFocusedNodeText()
@@ -1615,6 +1668,8 @@
  T CMsgFocusedNodeTextResponse::SetCachedSize(int) const
  T CMsgFocusedNodeTextResponse::SharedCtor()
  T CMsgFocusedNodeTextResponse::SharedDtor()
+ T CMsgFocusedNodeTextResponse::mutable_value()
+ T CMsgFocusedNodeTextResponse::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFocusedNodeTextResponse::~CMsgFocusedNodeTextResponse()
  T CMsgFullRepaint::ByteSize() const
  T CMsgFullRepaint::CMsgFullRepaint()
@@ -1661,6 +1716,9 @@
  T CMsgGetCookiesForURL::SetCachedSize(int) const
  T CMsgGetCookiesForURL::SharedCtor()
  T CMsgGetCookiesForURL::SharedDtor()
+ T CMsgGetCookiesForURL::mutable_url()
+ T CMsgGetCookiesForURL::set_url(char const*)
+ T CMsgGetCookiesForURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgGetCookiesForURL::~CMsgGetCookiesForURL()
  T CMsgGetCookiesForURLResponse::ByteSize() const
  T CMsgGetCookiesForURLResponse::CMsgGetCookiesForURLResponse()
@@ -1674,6 +1732,8 @@
  T CMsgGetCookiesForURLResponse::SetCachedSize(int) const
  T CMsgGetCookiesForURLResponse::SharedCtor()
  T CMsgGetCookiesForURLResponse::SharedDtor()
+ T CMsgGetCookiesForURLResponse::mutable_url()
+ T CMsgGetCookiesForURLResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgGetCookiesForURLResponse::~CMsgGetCookiesForURLResponse()
  T CMsgGetZoom::ByteSize() const
  T CMsgGetZoom::CMsgGetZoom()
@@ -1797,6 +1857,8 @@
  T CMsgImeCommitText::SetCachedSize(int) const
  T CMsgImeCommitText::SharedCtor()
  T CMsgImeCommitText::SharedDtor()
+ T CMsgImeCommitText::mutable_text()
+ T CMsgImeCommitText::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeCommitText::~CMsgImeCommitText()
  T CMsgImeCompositionRangeChanged::ByteSize() const
  T CMsgImeCompositionRangeChanged::CMsgImeCompositionRangeChanged()
@@ -1821,6 +1883,8 @@
  T CMsgImeSetComposition::SetCachedSize(int) const
  T CMsgImeSetComposition::SharedCtor()
  T CMsgImeSetComposition::SharedDtor()
+ T CMsgImeSetComposition::mutable_text()
+ T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
@@ -1834,6 +1898,8 @@
  T CMsgJSAlert::SetCachedSize(int) const
  T CMsgJSAlert::SharedCtor()
  T CMsgJSAlert::SharedDtor()
+ T CMsgJSAlert::mutable_message()
+ T CMsgJSAlert::set_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSAlert::~CMsgJSAlert()
  T CMsgJSConfirm::ByteSize() const
  T CMsgJSConfirm::CMsgJSConfirm()
@@ -1847,6 +1913,8 @@
  T CMsgJSConfirm::SetCachedSize(int) const
  T CMsgJSConfirm::SharedCtor()
  T CMsgJSConfirm::SharedDtor()
+ T CMsgJSConfirm::mutable_message()
+ T CMsgJSConfirm::set_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSConfirm::~CMsgJSConfirm()
  T CMsgJSDialogResponse::ByteSize() const
  T CMsgJSDialogResponse::CMsgJSDialogResponse()
@@ -1882,6 +1950,8 @@
  T CMsgJSMethodCall::SetCachedSize(int) const
  T CMsgJSMethodCall::SharedCtor()
  T CMsgJSMethodCall::SharedDtor()
+ T CMsgJSMethodCall::mutable_name()
+ T CMsgJSMethodCall::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSMethodCall::~CMsgJSMethodCall()
  T CMsgJSRaiseException::ByteSize() const
  T CMsgJSRaiseException::CMsgJSRaiseException()
@@ -1895,6 +1965,8 @@
  T CMsgJSRaiseException::SetCachedSize(int) const
  T CMsgJSRaiseException::SharedCtor()
  T CMsgJSRaiseException::SharedDtor()
+ T CMsgJSRaiseException::mutable_exception()
+ T CMsgJSRaiseException::set_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSRaiseException::~CMsgJSRaiseException()
  T CMsgJSRegisterMethod::ByteSize() const
  T CMsgJSRegisterMethod::CMsgJSRegisterMethod()
@@ -1908,6 +1980,8 @@
  T CMsgJSRegisterMethod::SetCachedSize(int) const
  T CMsgJSRegisterMethod::SharedCtor()
  T CMsgJSRegisterMethod::SharedDtor()
+ T CMsgJSRegisterMethod::mutable_name()
+ T CMsgJSRegisterMethod::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSRegisterMethod::~CMsgJSRegisterMethod()
  T CMsgJSReleaseCallback::ByteSize() const
  T CMsgJSReleaseCallback::CMsgJSReleaseCallback()
@@ -1932,6 +2006,8 @@
  T CMsgJSValue::SetCachedSize(int) const
  T CMsgJSValue::SharedCtor()
  T CMsgJSValue::SharedDtor()
+ T CMsgJSValue::mutable_string_value()
+ T CMsgJSValue::set_string_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue::~CMsgJSValue()
  T CMsgJSValue_JSObjectProperty::ByteSize() const
  T CMsgJSValue_JSObjectProperty::CMsgJSValue_JSObjectProperty()
@@ -1945,6 +2021,9 @@
  T CMsgJSValue_JSObjectProperty::SetCachedSize(int) const
  T CMsgJSValue_JSObjectProperty::SharedCtor()
  T CMsgJSValue_JSObjectProperty::SharedDtor()
+ T CMsgJSValue_JSObjectProperty::mutable_name()
+ T CMsgJSValue_JSObjectProperty::mutable_value()
+ T CMsgJSValue_JSObjectProperty::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
  T CMsgJumpListLink::ByteSize() const
  T CMsgJumpListLink::CMsgJumpListLink()
@@ -1958,6 +2037,12 @@
  T CMsgJumpListLink::SetCachedSize(int) const
  T CMsgJumpListLink::SharedCtor()
  T CMsgJumpListLink::SharedDtor()
+ T CMsgJumpListLink::mutable_display_name()
+ T CMsgJumpListLink::mutable_icon_path()
+ T CMsgJumpListLink::mutable_url_link()
+ T CMsgJumpListLink::set_display_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgJumpListLink::set_icon_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgJumpListLink::set_url_link(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJumpListLink::~CMsgJumpListLink()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
@@ -2015,6 +2100,8 @@
  T CMsgLinkAtPositionResponse::SetCachedSize(int) const
  T CMsgLinkAtPositionResponse::SharedCtor()
  T CMsgLinkAtPositionResponse::SharedDtor()
+ T CMsgLinkAtPositionResponse::mutable_url()
+ T CMsgLinkAtPositionResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLinkAtPositionResponse::~CMsgLinkAtPositionResponse()
  T CMsgLoadLocalization::ByteSize() const
  T CMsgLoadLocalization::CMsgLoadLocalization()
@@ -2028,6 +2115,10 @@
  T CMsgLoadLocalization::SetCachedSize(int) const
  T CMsgLoadLocalization::SharedCtor()
  T CMsgLoadLocalization::SharedDtor()
+ T CMsgLoadLocalization::mutable_language()
+ T CMsgLoadLocalization::mutable_localization_path()
+ T CMsgLoadLocalization::set_language(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgLoadLocalization::set_localization_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadLocalization::~CMsgLoadLocalization()
  T CMsgLoadedRequest::ByteSize() const
  T CMsgLoadedRequest::CMsgLoadedRequest()
@@ -2041,6 +2132,10 @@
  T CMsgLoadedRequest::SetCachedSize(int) const
  T CMsgLoadedRequest::SharedCtor()
  T CMsgLoadedRequest::SharedDtor()
+ T CMsgLoadedRequest::mutable_pagetitle()
+ T CMsgLoadedRequest::mutable_url()
+ T CMsgLoadedRequest::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgLoadedRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadedRequest::~CMsgLoadedRequest()
  T CMsgLoadingResource::ByteSize() const
  T CMsgLoadingResource::CMsgLoadingResource()
@@ -2054,6 +2149,8 @@
  T CMsgLoadingResource::SetCachedSize(int) const
  T CMsgLoadingResource::SharedCtor()
  T CMsgLoadingResource::SharedDtor()
+ T CMsgLoadingResource::mutable_url()
+ T CMsgLoadingResource::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadingResource::~CMsgLoadingResource()
  T CMsgMaximizeRestoreWindow::ByteSize() const
  T CMsgMaximizeRestoreWindow::CMsgMaximizeRestoreWindow()
@@ -2177,6 +2274,14 @@
  T CMsgNodeHasFocus::SetCachedSize(int) const
  T CMsgNodeHasFocus::SharedCtor()
  T CMsgNodeHasFocus::SharedDtor()
+ T CMsgNodeHasFocus::mutable_elementtagname()
+ T CMsgNodeHasFocus::mutable_input_type()
+ T CMsgNodeHasFocus::mutable_name()
+ T CMsgNodeHasFocus::mutable_searchbuttontext()
+ T CMsgNodeHasFocus::set_elementtagname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_input_type(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_searchbuttontext(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgNodeHasFocus::~CMsgNodeHasFocus()
  T CMsgOpenDevTools::ByteSize() const
  T CMsgOpenDevTools::CMsgOpenDevTools()
@@ -2201,6 +2306,8 @@
  T CMsgOpenNewTab::SetCachedSize(int) const
  T CMsgOpenNewTab::SharedCtor()
  T CMsgOpenNewTab::SharedDtor()
+ T CMsgOpenNewTab::mutable_url()
+ T CMsgOpenNewTab::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgOpenNewTab::~CMsgOpenNewTab()
  T CMsgOpenSteamURL::ByteSize() const
  T CMsgOpenSteamURL::CMsgOpenSteamURL()
@@ -2214,6 +2321,10 @@
  T CMsgOpenSteamURL::SetCachedSize(int) const
  T CMsgOpenSteamURL::SharedCtor()
  T CMsgOpenSteamURL::SharedDtor()
+ T CMsgOpenSteamURL::mutable_referrer()
+ T CMsgOpenSteamURL::mutable_url()
+ T CMsgOpenSteamURL::set_referrer(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgOpenSteamURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgOpenSteamURL::~CMsgOpenSteamURL()
  T CMsgPageSecurity::ByteSize() const
  T CMsgPageSecurity::CMsgPageSecurity()
@@ -2227,6 +2338,9 @@
  T CMsgPageSecurity::SetCachedSize(int) const
  T CMsgPageSecurity::SharedCtor()
  T CMsgPageSecurity::SharedDtor()
+ T CMsgPageSecurity::mutable_security_info()
+ T CMsgPageSecurity::mutable_url()
+ T CMsgPageSecurity::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPageSecurity::~CMsgPageSecurity()
  T CMsgPaste::ByteSize() const
  T CMsgPaste::CMsgPaste()
@@ -2273,6 +2387,8 @@
  T CMsgPopupHTMLWindow::SetCachedSize(int) const
  T CMsgPopupHTMLWindow::SharedCtor()
  T CMsgPopupHTMLWindow::SharedDtor()
+ T CMsgPopupHTMLWindow::mutable_url()
+ T CMsgPopupHTMLWindow::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPopupHTMLWindow::~CMsgPopupHTMLWindow()
  T CMsgPopupHTMLWindowResponse::ByteSize() const
  T CMsgPopupHTMLWindowResponse::CMsgPopupHTMLWindowResponse()
@@ -2297,6 +2413,10 @@
  T CMsgPostURL::SetCachedSize(int) const
  T CMsgPostURL::SharedCtor()
  T CMsgPostURL::SharedDtor()
+ T CMsgPostURL::mutable_post()
+ T CMsgPostURL::mutable_url()
+ T CMsgPostURL::set_post(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgPostURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPostURL::~CMsgPostURL()
  T CMsgReload::ByteSize() const
  T CMsgReload::CMsgReload()
@@ -2354,6 +2474,10 @@
  T CMsgSavePageToJPEG::SetCachedSize(int) const
  T CMsgSavePageToJPEG::SharedCtor()
  T CMsgSavePageToJPEG::SharedDtor()
+ T CMsgSavePageToJPEG::mutable_filename()
+ T CMsgSavePageToJPEG::mutable_url()
+ T CMsgSavePageToJPEG::set_filename(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSavePageToJPEG::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSavePageToJPEG::~CMsgSavePageToJPEG()
  T CMsgSavePageToJPEGResponse::ByteSize() const
  T CMsgSavePageToJPEGResponse::CMsgSavePageToJPEGResponse()
@@ -2367,6 +2491,10 @@
  T CMsgSavePageToJPEGResponse::SetCachedSize(int) const
  T CMsgSavePageToJPEGResponse::SharedCtor()
  T CMsgSavePageToJPEGResponse::SharedDtor()
+ T CMsgSavePageToJPEGResponse::mutable_filename()
+ T CMsgSavePageToJPEGResponse::mutable_url()
+ T CMsgSavePageToJPEGResponse::set_filename(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSavePageToJPEGResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSavePageToJPEGResponse::~CMsgSavePageToJPEGResponse()
  T CMsgScalePageToValue::ByteSize() const
  T CMsgScalePageToValue::CMsgScalePageToValue()
@@ -2435,6 +2563,18 @@
  T CMsgSetCookie::SetCachedSize(int) const
  T CMsgSetCookie::SharedCtor()
  T CMsgSetCookie::SharedDtor()
+ T CMsgSetCookie::mutable_host()
+ T CMsgSetCookie::mutable_key()
+ T CMsgSetCookie::mutable_path()
+ T CMsgSetCookie::mutable_value()
+ T CMsgSetCookie::set_host(char const*)
+ T CMsgSetCookie::set_host(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_key(char const*)
+ T CMsgSetCookie::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_path(char const*)
+ T CMsgSetCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_value(char const*)
+ T CMsgSetCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetCookie::~CMsgSetCookie()
  T CMsgSetCursor::ByteSize() const
  T CMsgSetCursor::CMsgSetCursor()
@@ -2448,6 +2588,8 @@
  T CMsgSetCursor::SetCachedSize(int) const
  T CMsgSetCursor::SharedCtor()
  T CMsgSetCursor::SharedDtor()
+ T CMsgSetCursor::mutable_custom_data()
+ T CMsgSetCursor::set_custom_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetCursor::~CMsgSetCursor()
  T CMsgSetFocus::ByteSize() const
  T CMsgSetFocus::CMsgSetFocus()
@@ -2483,6 +2625,8 @@
  T CMsgSetHTMLTitle::SetCachedSize(int) const
  T CMsgSetHTMLTitle::SharedCtor()
  T CMsgSetHTMLTitle::SharedDtor()
+ T CMsgSetHTMLTitle::mutable_title()
+ T CMsgSetHTMLTitle::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetHTMLTitle::~CMsgSetHTMLTitle()
  T CMsgSetHorizontalScroll::ByteSize() const
  T CMsgSetHorizontalScroll::CMsgSetHorizontalScroll()
@@ -2507,6 +2651,10 @@
  T CMsgSetJumpList::SetCachedSize(int) const
  T CMsgSetJumpList::SharedCtor()
  T CMsgSetJumpList::SharedDtor()
+ T CMsgSetJumpList::mutable_mru_title()
+ T CMsgSetJumpList::mutable_steam_path()
+ T CMsgSetJumpList::set_mru_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetJumpList::set_steam_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetJumpList::~CMsgSetJumpList()
  T CMsgSetLocalFileRequestMapping::ByteSize() const
  T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
@@ -2520,6 +2668,10 @@
  T CMsgSetLocalFileRequestMapping::SetCachedSize(int) const
  T CMsgSetLocalFileRequestMapping::SharedCtor()
  T CMsgSetLocalFileRequestMapping::SharedDtor()
+ T CMsgSetLocalFileRequestMapping::mutable_default_local_path()
+ T CMsgSetLocalFileRequestMapping::mutable_request_url()
+ T CMsgSetLocalFileRequestMapping::set_default_local_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping::set_request_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetLocalFileRequestMapping::~CMsgSetLocalFileRequestMapping()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::ByteSize() const
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::CMsgSetLocalFileRequestMapping_AdditionalRoute()
@@ -2533,6 +2685,12 @@
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SetCachedSize(int) const
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedCtor()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedDtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_allowed_extensions()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_local_path()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_relative_url()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_allowed_extensions(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_local_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_relative_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::~CMsgSetLocalFileRequestMapping_AdditionalRoute()
  T CMsgSetPIDShuttingDown::ByteSize() const
  T CMsgSetPIDShuttingDown::CMsgSetPIDShuttingDown()
@@ -2634,6 +2792,8 @@
  T CMsgShowToolTip::SetCachedSize(int) const
  T CMsgShowToolTip::SharedCtor()
  T CMsgShowToolTip::SharedDtor()
+ T CMsgShowToolTip::mutable_text()
+ T CMsgShowToolTip::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgShowToolTip::~CMsgShowToolTip()
  T CMsgShowWindow::ByteSize() const
  T CMsgShowWindow::CMsgShowWindow()
@@ -2669,6 +2829,12 @@
  T CMsgStartRequest::SetCachedSize(int) const
  T CMsgStartRequest::SharedCtor()
  T CMsgStartRequest::SharedDtor()
+ T CMsgStartRequest::mutable_postdata()
+ T CMsgStartRequest::mutable_target()
+ T CMsgStartRequest::mutable_url()
+ T CMsgStartRequest::set_postdata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartRequest::set_target(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgStartRequest::~CMsgStartRequest()
  T CMsgStartRequestResponse::ByteSize() const
  T CMsgStartRequestResponse::CMsgStartRequestResponse()
@@ -2693,6 +2859,8 @@
  T CMsgStatusText::SetCachedSize(int) const
  T CMsgStatusText::SharedCtor()
  T CMsgStatusText::SharedDtor()
+ T CMsgStatusText::mutable_text()
+ T CMsgStatusText::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgStatusText::~CMsgStatusText()
  T CMsgSteamAuthCookiesSet::ByteSize() const
  T CMsgSteamAuthCookiesSet::CMsgSteamAuthCookiesSet()
@@ -2750,6 +2918,12 @@
  T CMsgURLChanged::SetCachedSize(int) const
  T CMsgURLChanged::SharedCtor()
  T CMsgURLChanged::SharedDtor()
+ T CMsgURLChanged::mutable_pagetitle()
+ T CMsgURLChanged::mutable_postdata()
+ T CMsgURLChanged::mutable_url()
+ T CMsgURLChanged::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgURLChanged::set_postdata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgURLChanged::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgURLChanged::~CMsgURLChanged()
  T CMsgUnlockH264::ByteSize() const
  T CMsgUnlockH264::CMsgUnlockH264()
@@ -2763,6 +2937,9 @@
  T CMsgUnlockH264::SetCachedSize(int) const
  T CMsgUnlockH264::SharedCtor()
  T CMsgUnlockH264::SharedDtor()
+ T CMsgUnlockH264::mutable_unlock_code()
+ T CMsgUnlockH264::set_unlock_code(char const*)
+ T CMsgUnlockH264::set_unlock_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgUnlockH264::~CMsgUnlockH264()
  T CMsgUpdateToolTip::ByteSize() const
  T CMsgUpdateToolTip::CMsgUpdateToolTip()
@@ -2776,6 +2953,8 @@
  T CMsgUpdateToolTip::SetCachedSize(int) const
  T CMsgUpdateToolTip::SharedCtor()
  T CMsgUpdateToolTip::SharedDtor()
+ T CMsgUpdateToolTip::mutable_text()
+ T CMsgUpdateToolTip::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgUpdateToolTip::~CMsgUpdateToolTip()
  T CMsgVerticalScrollBarSize::ByteSize() const
  T CMsgVerticalScrollBarSize::CMsgVerticalScrollBarSize()
@@ -3213,8 +3392,6 @@
  b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_reflection_
- b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
- b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgExecuteJavaScript_descriptor_
  b (anonymous namespace)::CMsgExecuteJavaScript_reflection_
  b (anonymous namespace)::CMsgExitFullScreen_descriptor_
@@ -3544,7 +3721,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDisableBackgroundThrottling_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFileLoadDialogResponse_offsets_
