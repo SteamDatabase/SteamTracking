@@ -4036,6 +4036,7 @@ body.in_global_drag .friendlist_titlebar
 	/*font-family: "Motiva Sans";*/
 	/* fixes long lines of text with no whitespace from breaking flex sizing */
 	word-wrap: break-word;
+	word-break: break-word;
 	/*background: radial-gradient(ellipse farthest-corner at 20% 30%, #0A0B0D 0%, #262A31 0%, rgb(33, 36, 43) 100%);*/
 	background: radial-gradient( ellipse farthest-corner at 50% 30%, rgb( 33, 35, 41 ) 0%, rgb( 30, 32, 37 ) 50%, rgb( 28, 29, 34 ) 100% );
 	font-size: 14px;
@@ -4093,7 +4094,7 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	flex-direction: row;
 	/* our layout */
 	flex: 1;
-	max-width: 720px;
+
 	background-color: rgb( 27, 28, 32 );
 	box-shadow: inset 0px 0px 4px #000000;
 	outline-width: 0px;
@@ -7553,6 +7554,8 @@ a.connectionStatus:visited
 .ChatRoomGroup_MainAndChatEntry
 {
 	flex: 1;
+	min-width: 0;
+	min-height: 0;
 }
 
 .ChatRoomGroup_Main_Content.Horizontal
