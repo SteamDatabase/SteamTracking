@@ -172,7 +172,7 @@ CBroadcastWatch.prototype.BCanPlayMedia = function() {
 	return this.BCanPlayDashMpeg() || this.BCanPlayPlayHLS();
 };
 
-CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
+CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat, strBaseURL )
 {
 	var _watch = this;
 
@@ -193,7 +193,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 
 	if ( bEnableChat )
 	{
-		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID );
+		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID, strBaseURL );
 	}
 
 	if ( bEnableVideo )

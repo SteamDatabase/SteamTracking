@@ -421,10 +421,11 @@ function StandardCommunityBan( steamid, elemLink )
 
 }
 
-function CEmoticonPopup( $EmoticonButton, $Textarea )
+function CEmoticonPopup( $EmoticonButton, $Textarea, strBaseURL )
 {
 	this.m_$EmoticonButton = $EmoticonButton;
 	this.m_$TextArea = $Textarea;
+	this.m_strBaseURL = strBaseURL || 'https://steamcommunity.com';
 
 	if ( CEmoticonPopup.sm_deferEmoticonsLoaded == null )
 		CEmoticonPopup.sm_deferEmoticonsLoaded = new jQuery.Deferred();
@@ -449,7 +450,7 @@ CEmoticonPopup.prototype.LoadEmoticons = function()
 
 	CEmoticonPopup.sm_bEmoticonsLoaded = true;
 	CEmoticonPopup.sm_rgEmoticons = [];
-	$J.get( 'https://steamcommunity.com/actions/EmoticonList' )
+	$J.get( this.m_strBaseURL + '/actions/EmoticonList' )
 		.done( function(data) {
 			if ( data )
 				CEmoticonPopup.sm_rgEmoticons = data;

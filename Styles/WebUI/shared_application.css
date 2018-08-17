@@ -159,15 +159,15 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	padding: 4px 6px;
 	line-height: 20px;
 	color: #9ca4a7;
-	border-top: 0.5px solid rgba( 0, 0, 0, .5);
-	border-bottom: 0.5px solid rgba( 0, 0, 0, 0);
+	border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+	border-bottom: 0.5px solid rgba( 80, 87, 94, 0);
 	cursor: default;
 	position: relative;
 }
 
 .contextMenuContents .contextMenuItem:first-child
 {
-	border-top: 0.5px solid rgba( 0, 0, 0, 0);
+	border-top: 0.5px solid rgba( 80, 87, 94, 0);
 }
 
 .contextMenu .contextMenuItem:hover,
@@ -236,7 +236,7 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 .contextMenuSectionContent .contextMenuItem
 {
 	border-top: none;
-	display: flex;
+	display: block;
 }
 
 .contextMenuContents .contextMenuLabel
@@ -299,4 +299,14 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 {
 	-webkit-mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
 	mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
+}
+
+.SVGIcon_Button
+{
+	fill: #ffffff;
+	overflow: visible;
+	width: 100%;
+	height: 100%;
+	max-width: 320px;
+	max-height: 320px;
 }

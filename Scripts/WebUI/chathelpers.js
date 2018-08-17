@@ -7,7 +7,7 @@ webpackJsonp(
   {
     "3e1Q": function(e, t, n) {
       "use strict";
-      function i(e) {
+      function o(e) {
         return "public" == a.a.WEB_UNIVERSE
           ? "https://s.team/chat/" + e
           : a.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
@@ -15,8 +15,8 @@ webpackJsonp(
       n.d(t, "b", function() {
         return c;
       }),
-        (t.a = i);
-      var o = n("TToO"),
+        (t.a = o);
+      var i = n("TToO"),
         r = n("y986"),
         s = n("DRjr"),
         a = n("m5yx"),
@@ -52,7 +52,7 @@ webpackJsonp(
               return this.m_ulChatID;
             }),
             (e.prototype.GetURL = function() {
-              return this.m_strInviteCode ? i(this.m_strInviteCode) : null;
+              return this.m_strInviteCode ? o(this.m_strInviteCode) : null;
             }),
             (e.prototype.BIsUserBanned = function() {
               return this.m_bIsBanned;
@@ -70,40 +70,40 @@ webpackJsonp(
             (e.prototype.InitInvalid = function() {
               (this.m_bValid = !1), (this.m_bReady = !0);
             }),
-            (e.prototype.InitDirectInvite = function(e, t, n, i) {
+            (e.prototype.InitDirectInvite = function(e, t, n, o) {
               void 0 === n && (n = !1),
-                void 0 === i && (i = void 0),
+                void 0 === o && (o = void 0),
                 (this.m_ulChatRoomGroupID = e),
                 (this.m_ulChatID = t),
                 (this.m_bIsBanned = n),
-                (this.m_rtKickExpires = i),
+                (this.m_rtKickExpires = o),
                 (this.m_rtTimeExpires = s.b),
                 (this.m_bValid = !0),
                 (this.m_bReady = !0);
             }),
-            o.c([r.observable], e.prototype, "m_bReady", void 0),
-            o.c([r.action], e.prototype, "InitInvalid", null),
-            o.c([r.action], e.prototype, "InitDirectInvite", null),
+            i.c([r.observable], e.prototype, "m_bReady", void 0),
+            i.c([r.action], e.prototype, "InitInvalid", null),
+            i.c([r.action], e.prototype, "InitDirectInvite", null),
             e
           );
         })();
     },
     "4Dav": function(e, t, n) {
       "use strict";
-      function i(e, t) {
-        for (var n = [], i = 2; i < arguments.length; i++)
-          n[i - 2] = arguments[i];
+      function o(e, t) {
+        for (var n = [], o = 2; o < arguments.length; o++)
+          n[o - 2] = arguments[o];
         console.assert
           ? 0 == n.length
             ? console.assert(!!e, t)
             : console.assert.apply(console, [!!e, t].concat(n))
           : e || console.warn.apply(console, [t].concat(n));
       }
-      t.a = i;
+      t.a = o;
     },
     "6+TJ": function(e, t, n) {
       "use strict";
-      function i(e) {
+      function o(e) {
         var t = window.open(
           "",
           "SteamWebChat",
@@ -116,25 +116,25 @@ webpackJsonp(
           } catch (e) {}
           if (n) {
             if (e) {
-              var i = function(n) {
-                var o = p.a.COMMUNITY_BASE_URL.replace(
+              var o = function(n) {
+                var i = p.a.COMMUNITY_BASE_URL.replace(
                   /(https?:\/\/[^\/]*).*$/,
                   "$1"
                 );
                 n.source == t &&
                   "FriendsUIReady" == n.data &&
-                  n.origin == o &&
+                  n.origin == i &&
                   (t.postMessage(e, p.a.COMMUNITY_BASE_URL),
-                  window.removeEventListener("message", i));
+                  window.removeEventListener("message", o));
               };
-              window.addEventListener("message", i);
+              window.addEventListener("message", o);
             }
             t.location.href = p.a.COMMUNITY_BASE_URL + "chat/";
           } else e && t.postMessage(e, p.a.COMMUNITY_BASE_URL);
           t.focus();
         }
       }
-      function o(e) {
+      function i(e) {
         return c.createElement(
           "div",
           { className: "ChatMessageInvite" },
@@ -173,13 +173,13 @@ webpackJsonp(
           t++
         ) {
           var n = e[t],
-            i = n.getAttribute("data-component");
-          switch (i) {
+            o = n.getAttribute("data-component");
+          switch (o) {
             case "ChatInvite":
               s(n);
               break;
             default:
-              Object(h.a)(!1, 'unknown component: "' + i + '"');
+              Object(h.a)(!1, 'unknown component: "' + o + '"');
           }
         }
       }
@@ -197,13 +197,13 @@ webpackJsonp(
           "friendsui" == e ? (E = n) : "shared" == e && (O = n);
         else if ("shared" == e) L = n;
         else {
-          var i = void 0,
-            o = null,
+          var o = void 0,
+            i = null,
             r = void 0,
             s = null;
-          void 0 !== E ? ((i = E), (o = n)) : (i = n),
+          void 0 !== E ? ((o = E), (i = n)) : (o = n),
             void 0 !== O ? ((r = O), (s = L)) : (r = L),
-            m.a.InitFromObjects(i, o, r, s),
+            m.a.InitFromObjects(o, i, r, s),
             (E = void 0),
             (O = void 0),
             (L = void 0);
@@ -275,7 +275,7 @@ webpackJsonp(
               return this.m_htmlPreRendered;
             }),
             (e.prototype.LaunchWebChat = function() {
-              i({
+              o({
                 command: "ShowChatRoomGroupInvite",
                 invite_code: this.m_invite.GetInviteCode()
               });
@@ -360,9 +360,9 @@ webpackJsonp(
               var e = this.props.controller.GetConnectResults(),
                 t = this.props.controller.GetInvite(),
                 n = p.a.COMMUNITY_BASE_URL + "updates/chatupdate",
-                i = "inviteButton inviteButtonJoinChat";
+                o = "inviteButton inviteButtonJoinChat";
               return (
-                t.BIsVoiceChatInvite() && (i += " inviteButtonJoinVoice"),
+                t.BIsVoiceChatInvite() && (o += " inviteButtonJoinVoice"),
                 e.success
                   ? c.createElement(
                       "div",
@@ -392,7 +392,7 @@ webpackJsonp(
                     )
                   : e.account_mismatch
                     ? c.createElement(
-                        o,
+                        i,
                         { render: this.props.controller.GetPreRenderedHTML() },
                         c.createElement(
                           "div",
@@ -405,7 +405,7 @@ webpackJsonp(
                           c.createElement(
                             "button",
                             {
-                              className: i,
+                              className: o,
                               type: "button",
                               onClick: this.OpenInSteamIgnoreAccount
                             },
@@ -414,7 +414,7 @@ webpackJsonp(
                           c.createElement(
                             "button",
                             {
-                              className: i,
+                              className: o,
                               type: "button",
                               onClick: this.LaunchWebChat
                             },
@@ -450,7 +450,7 @@ webpackJsonp(
                           )
                         )
                       : c.createElement(
-                          o,
+                          i,
                           {
                             render: this.props.controller.GetPreRenderedHTML()
                           },
@@ -477,7 +477,7 @@ webpackJsonp(
                             c.createElement(
                               "button",
                               {
-                                className: i,
+                                className: o,
                                 type: "button",
                                 onClick: this.LaunchSteamClient
                               },
@@ -486,7 +486,7 @@ webpackJsonp(
                             c.createElement(
                               "button",
                               {
-                                className: i,
+                                className: o,
                                 type: "button",
                                 onClick: this.LaunchWebChat
                               },
@@ -542,10 +542,10 @@ webpackJsonp(
     DRjr: function(e, t, n) {
       "use strict";
       n.d(t, "k", function() {
-        return i;
+        return o;
       }),
         n.d(t, "l", function() {
-          return o;
+          return i;
         }),
         n.d(t, "d", function() {
           return r;
@@ -577,8 +577,8 @@ webpackJsonp(
         n.d(t, "b", function() {
           return d;
         });
-      var i = 1,
-        o = 4,
+      var o = 1,
+        i = 4,
         r = 750,
         s = 799,
         a = 7,
@@ -592,7 +592,7 @@ webpackJsonp(
     },
     KLxG: function(e, t, n) {
       "use strict";
-      function i(e, t, n) {
+      function o(e, t, n) {
         return {
           get: function() {
             var e = n.value.bind(this);
@@ -604,10 +604,10 @@ webpackJsonp(
           }
         };
       }
-      function o(e, t, n) {
+      function i(e, t, n) {
         return [e, t, n];
       }
-      (t.a = i), (t.b = o);
+      (t.a = o), (t.b = i);
     },
     PVtO: function(e, t, n) {
       "use strict";
@@ -617,8 +617,8 @@ webpackJsonp(
         n.d(t, "b", function() {
           return a;
         });
-      var i = n("m5yx"),
-        o = { success: !0, result: 1 },
+      var o = n("m5yx"),
+        i = { success: !0, result: 1 },
         r = (function() {
           function e() {
             (this.m_connection = new s()),
@@ -647,7 +647,7 @@ webpackJsonp(
               var e = this;
               return this.m_connection.Connect().then(
                 function() {
-                  return o;
+                  return i;
                 },
                 function() {
                   return e.FailureResult();
@@ -687,8 +687,8 @@ webpackJsonp(
               var n = { message: "IsSubscribedApp", appid: e };
               return this.GenericEResultCall(n).then(function(n) {
                 if (!n.connect_failed) {
-                  var i = 1 == n.result;
-                  return t.m_mapCacheSubscribedApp.set(e, i), i;
+                  var o = 1 == n.result;
+                  return t.m_mapCacheSubscribedApp.set(e, o), o;
                 }
               });
             }),
@@ -698,8 +698,8 @@ webpackJsonp(
             }),
             (e.prototype.BClientAccountMatches = function() {
               return (
-                !i.d.logged_in ||
-                i.d.accountid == this.m_connection.ClientInfo.unAccountID
+                !o.d.logged_in ||
+                o.d.accountid == this.m_connection.ClientInfo.unAccountID
               );
             }),
             (e.prototype.GenericEResultCall = function(e) {
@@ -712,7 +712,7 @@ webpackJsonp(
                         .SendMsgAndAwaitResponse(e)
                         .then(function(e) {
                           return 1 === e.success
-                            ? o
+                            ? i
                             : t.FailureResult(e.success);
                         })
                     : { success: !1, result: 19, account_mismatch: !0 };
@@ -771,23 +771,23 @@ webpackJsonp(
             }),
             (e.prototype.SendMsgAndAwaitResponse = function(e) {
               var t = this;
-              return new Promise(function(n, i) {
-                var o = t.m_iCallSeq++;
-                t.BSendMsg(e, o)
-                  ? t.m_mapWaitingCallbacks.set(o, {
-                      iSeq: o,
+              return new Promise(function(n, o) {
+                var i = t.m_iCallSeq++;
+                t.BSendMsg(e, i)
+                  ? t.m_mapWaitingCallbacks.set(i, {
+                      iSeq: i,
                       fnCallback: n,
-                      fnError: i
+                      fnError: o
                     })
-                  : i();
+                  : o();
               });
             }),
             (e.prototype.BSendMsg = function(e, t) {
               if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
                 return !1;
               var n = Object.assign({}, e, {
-                universe: i.a.EUNIVERSE,
-                accountid: i.d.accountid
+                universe: o.a.EUNIVERSE,
+                accountid: o.d.accountid
               });
               void 0 !== t && (n.sequenceid = t);
               try {
@@ -828,18 +828,18 @@ webpackJsonp(
                   n();
                 }),
                   (e.m_socket.onmessage = e.OnSocketMessage.bind(e)),
-                  (e.m_socket.onopen = function(i) {
-                    var o = { message: "GetClientInfo" };
+                  (e.m_socket.onopen = function(o) {
+                    var i = { message: "GetClientInfo" };
                     e
-                      .SendMsgAndAwaitResponse(o)
-                      .then(function(i) {
-                        1 == i.success
-                          ? ((e.m_ClientInfo.ulVersion = i.clientversion),
-                            (e.m_ClientInfo.bFriendsUIEnabled = !!i.friendsui),
-                            (e.m_ClientInfo.unAccountID = i.accountid),
-                            i.supported_messages &&
+                      .SendMsgAndAwaitResponse(i)
+                      .then(function(o) {
+                        1 == o.success
+                          ? ((e.m_ClientInfo.ulVersion = o.clientversion),
+                            (e.m_ClientInfo.bFriendsUIEnabled = !!o.friendsui),
+                            (e.m_ClientInfo.unAccountID = o.accountid),
+                            o.supported_messages &&
                               (e.m_ClientInfo.rgSupportedMessages =
-                                i.supported_messages),
+                                o.supported_messages),
                             t())
                           : n();
                       })
@@ -867,7 +867,7 @@ webpackJsonp(
     },
     TToO: function(e, t, n) {
       "use strict";
-      function i(e, t) {
+      function o(e, t) {
         function n() {
           this.constructor = e;
         }
@@ -877,74 +877,74 @@ webpackJsonp(
               ? Object.create(t)
               : ((n.prototype = t.prototype), new n()));
       }
-      function o(e, t) {
+      function i(e, t) {
         var n = {};
-        for (var i in e)
-          Object.prototype.hasOwnProperty.call(e, i) &&
-            t.indexOf(i) < 0 &&
-            (n[i] = e[i]);
+        for (var o in e)
+          Object.prototype.hasOwnProperty.call(e, o) &&
+            t.indexOf(o) < 0 &&
+            (n[o] = e[o]);
         if (null != e && "function" == typeof Object.getOwnPropertySymbols)
           for (
-            var o = 0, i = Object.getOwnPropertySymbols(e);
-            o < i.length;
-            o++
+            var i = 0, o = Object.getOwnPropertySymbols(e);
+            i < o.length;
+            i++
           )
-            t.indexOf(i[o]) < 0 && (n[i[o]] = e[i[o]]);
+            t.indexOf(o[i]) < 0 && (n[o[i]] = e[o[i]]);
         return n;
       }
-      function r(e, t, n, i) {
-        var o,
+      function r(e, t, n, o) {
+        var i,
           r = arguments.length,
           s =
             r < 3
               ? t
-              : null === i ? (i = Object.getOwnPropertyDescriptor(t, n)) : i;
+              : null === o ? (o = Object.getOwnPropertyDescriptor(t, n)) : o;
         if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-          s = Reflect.decorate(e, t, n, i);
+          s = Reflect.decorate(e, t, n, o);
         else
           for (var a = e.length - 1; a >= 0; a--)
-            (o = e[a]) &&
-              (s = (r < 3 ? o(s) : r > 3 ? o(t, n, s) : o(t, n)) || s);
+            (i = e[a]) &&
+              (s = (r < 3 ? i(s) : r > 3 ? i(t, n, s) : i(t, n)) || s);
         return r > 3 && s && Object.defineProperty(t, n, s), s;
       }
-      function s(e, t, n, i) {
-        return new (n || (n = Promise))(function(o, r) {
+      function s(e, t, n, o) {
+        return new (n || (n = Promise))(function(i, r) {
           function s(e) {
             try {
-              c(i.next(e));
+              c(o.next(e));
             } catch (e) {
               r(e);
             }
           }
           function a(e) {
             try {
-              c(i.throw(e));
+              c(o.throw(e));
             } catch (e) {
               r(e);
             }
           }
           function c(e) {
             e.done
-              ? o(e.value)
+              ? i(e.value)
               : new n(function(t) {
                   t(e.value);
                 }).then(s, a);
           }
-          c((i = i.apply(e, t || [])).next());
+          c((o = o.apply(e, t || [])).next());
         });
       }
       function a(e, t) {
         function n(e) {
           return function(t) {
-            return i([e, t]);
+            return o([e, t]);
           };
         }
-        function i(n) {
-          if (o) throw new TypeError("Generator is already executing.");
+        function o(n) {
+          if (i) throw new TypeError("Generator is already executing.");
           for (; c; )
             try {
               if (
-                ((o = 1),
+                ((i = 1),
                 r &&
                   (s =
                     2 & n[0]
@@ -996,12 +996,12 @@ webpackJsonp(
             } catch (e) {
               (n = [6, e]), (r = 0);
             } finally {
-              o = s = 0;
+              i = s = 0;
             }
           if (5 & n[0]) throw n[1];
           return { value: n[0] ? n[1] : void 0, done: !0 };
         }
-        var o,
+        var i,
           r,
           s,
           a,
@@ -1023,11 +1023,11 @@ webpackJsonp(
           a
         );
       }
-      (t.d = i),
+      (t.d = o),
         n.d(t, "a", function() {
           return u;
         }),
-        (t.f = o),
+        (t.f = i),
         (t.c = r),
         (t.b = s),
         (t.e = a); /*! *****************************************************************************
@@ -1060,10 +1060,10 @@ and limitations under the License.
             (u =
               Object.assign ||
               function(e) {
-                for (var t, n = 1, i = arguments.length; n < i; n++) {
+                for (var t, n = 1, o = arguments.length; n < o; n++) {
                   t = arguments[n];
-                  for (var o in t)
-                    Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+                  for (var i in t)
+                    Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                 }
                 return e;
               }),
@@ -1073,12 +1073,12 @@ and limitations under the License.
     },
     huD9: function(e, t, n) {
       "use strict";
-      function i(e) {
-        return function(t, n, i) {
-          var o = i.value;
-          i.value = function() {
-            for (var t = this, i = [], r = 0; r < arguments.length; r++)
-              i[r] = arguments[r];
+      function o(e) {
+        return function(t, n, o) {
+          var i = o.value;
+          o.value = function() {
+            for (var t = this, o = [], r = 0; r < arguments.length; r++)
+              o[r] = arguments[r];
             var s = this[n + "_DebounceProperties"];
             void 0 === s &&
               (s = this[n + "_DebounceProperties"] = {
@@ -1086,32 +1086,32 @@ and limitations under the License.
                 nPending: 0
               }),
               void 0 === s.hTimer
-                ? (o.apply(this, i),
+                ? (i.apply(this, o),
                   (s.hTimer = window.setInterval(function() {
                     s.nPending > 0
-                      ? (o.apply(t, i), (s.nPending = 0))
+                      ? (i.apply(t, o), (s.nPending = 0))
                       : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
                   }, e)))
                 : (s.nPending += 1);
           };
         };
       }
-      t.a = i;
+      t.a = o;
     },
     kllU: function(e, t, n) {
       "use strict";
-      var i = n("mtWM");
-      n.n(i), n("m5yx"), n("z9An");
+      var o = n("mtWM");
+      n.n(o), n("m5yx"), n("z9An");
     },
     m5yx: function(e, t, n) {
       "use strict";
-      function i() {
-        var e = o("config");
+      function o() {
+        var e = i("config");
         e && Object.assign(r, e);
-        var t = o("userinfo");
+        var t = i("userinfo");
         t && Object.assign(s, t), (n.p = r.CDN_URL);
       }
-      function o(e, t) {
+      function i(e, t) {
         void 0 === t && (t = a);
         var n = document.getElementById(t);
         if (n)
@@ -1128,8 +1128,8 @@ and limitations under the License.
         n.d(t, "d", function() {
           return s;
         }),
-        (t.c = i),
-        (t.b = o);
+        (t.c = o),
+        (t.b = i);
       var r = {
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
@@ -1147,11 +1147,12 @@ and limitations under the License.
           IN_CLIENT: !1,
           USE_POPUPS: !1,
           IN_MOBILE: !1,
-          FRIENDSUI_BETA: !1,
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           SESSIONID: "",
-          BUILD_TIMESTAMP: 0
+          BUILD_TIMESTAMP: 0,
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1
         },
         s = {
           logged_in: !1,
@@ -1165,83 +1166,83 @@ and limitations under the License.
     },
     sVhq: function(e, t, n) {
       "use strict";
-      function i(e) {
-        for (var t = [], n = 1; n < arguments.length; n++)
-          t[n - 1] = arguments[n];
-        var i = v.LocalizeString(e);
-        return i
-          ? (t.length > 0 &&
-              (i = i.replace(/%(\d+)\$s/g, function(e, n) {
-                if (n <= t.length && n >= 1) {
-                  var i = t[n - 1];
-                  return String(void 0 === i || null === i ? "" : i);
-                }
-                return e;
-              })),
-            i)
-          : e;
-      }
       function o(e) {
         for (var t = [], n = 1; n < arguments.length; n++)
           t[n - 1] = arguments[n];
-        var i = v.LocalizeString(e);
-        if (!i) return e;
-        for (var o, r = [], s = /(.*?)%(\d+)\$s/g, a = 0; (o = s.exec(i)); ) {
-          (a += o[0].length), r.push(o[1]);
-          var u = parseInt(o[2]);
+        var o = v.LocalizeString(e);
+        return o
+          ? (t.length > 0 &&
+              (o = o.replace(/%(\d+)\$s/g, function(e, n) {
+                if (n <= t.length && n >= 1) {
+                  var o = t[n - 1];
+                  return String(void 0 === o || null === o ? "" : o);
+                }
+                return e;
+              })),
+            o)
+          : e;
+      }
+      function i(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        var o = v.LocalizeString(e);
+        if (!o) return e;
+        for (var i, r = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(o)); ) {
+          (a += i[0].length), r.push(i[1]);
+          var u = parseInt(i[2]);
           u >= 1 && u <= t.length && r.push(t[u - 1]);
         }
         return (
-          r.push(i.substr(a)),
+          r.push(o.substr(a)),
           c.createElement.apply(c, [c.Fragment, null].concat(r))
         );
       }
       function r(e, t) {
-        for (var n = [], o = 2; o < arguments.length; o++)
-          n[o - 2] = arguments[o];
+        for (var n = [], i = 2; i < arguments.length; i++)
+          n[i - 2] = arguments[i];
         return 1 === t || "1" === t
-          ? i.apply(void 0, [e, t].concat(n))
-          : i.apply(void 0, [e + "_Plural", t].concat(n));
+          ? o.apply(void 0, [e, t].concat(n))
+          : o.apply(void 0, [e + "_Plural", t].concat(n));
       }
       function s(e, t) {
         return void 0 === t && (t = !1), a(e, !t);
       }
       function a(e, t, n) {
         void 0 === t && (t = !1), void 0 === n && (n = !0);
-        var o = t ? "#TimeSince_" : "#TimeInterval_";
+        var i = t ? "#TimeSince_" : "#TimeInterval_";
         return e >= 2 * p
-          ? i(o + "XYears", Math.floor(e / p))
+          ? o(i + "XYears", Math.floor(e / p))
           : e >= p
             ? ((e -= p),
               e >= 2 * l
-                ? i(o + "1YearXMonths", Math.floor(e / l))
-                : i(o + "1Year"))
+                ? o(i + "1YearXMonths", Math.floor(e / l))
+                : o(i + "1Year"))
             : e >= 2 * l
-              ? i(o + "XMonths", Math.floor(e / l))
+              ? o(i + "XMonths", Math.floor(e / l))
               : e >= 2 * m
-                ? i(o + "XWeeks", Math.floor(e / m))
+                ? o(i + "XWeeks", Math.floor(e / m))
                 : e >= 2 * h
-                  ? i(o + "XDays", Math.floor(e / h))
+                  ? o(i + "XDays", Math.floor(e / h))
                   : e >= h
                     ? ((e -= h),
                       e >= 2 * d
-                        ? i(o + "1DayXHours", Math.floor(e / d))
-                        : i(o + "1Day"))
+                        ? o(i + "1DayXHours", Math.floor(e / d))
+                        : o(i + "1Day"))
                     : e >= 2 * d
-                      ? i(o + "XHours", Math.floor(e / d))
+                      ? o(i + "XHours", Math.floor(e / d))
                       : e >= d
                         ? ((e -= d),
                           e >= 2 * f && n
-                            ? i(o + "1HourXMinutes", Math.floor(e / f))
-                            : i(o + "1Hour"))
+                            ? o(i + "1HourXMinutes", Math.floor(e / f))
+                            : o(i + "1Hour"))
                         : n
                           ? e >= 2 * f
-                            ? i(o + "XMinutes", Math.floor(e / f))
-                            : i(e >= f ? o + "1Minute" : o + "LessThanAMinute")
-                          : i(o + "LessThanAnHour");
+                            ? o(i + "XMinutes", Math.floor(e / f))
+                            : o(e >= f ? i + "1Minute" : i + "LessThanAMinute")
+                          : o(i + "LessThanAnHour");
       }
-      (t.b = i),
-        (t.d = o),
+      (t.b = o),
+        (t.d = i),
         (t.c = r),
         (t.e = s),
         n.d(t, "a", function() {
@@ -1255,32 +1256,32 @@ and limitations under the License.
               (this.m_mapFallbackTokens = new Map());
           }
           return (
-            (e.prototype.InitFromObjects = function(e, t, n, i) {
-              var o = this;
+            (e.prototype.InitFromObjects = function(e, t, n, o) {
+              var i = this;
               this.m_mapTokens.clear(),
                 Object.keys(n).forEach(function(e, t) {
-                  o.m_mapTokens.set(e, n[e]);
+                  i.m_mapTokens.set(e, n[e]);
                 }),
                 Object.keys(e).forEach(function(t, n) {
-                  o.m_mapTokens.set(t, e[t]);
+                  i.m_mapTokens.set(t, e[t]);
                 }),
                 t &&
                   Object.keys(t).forEach(function(e, n) {
-                    o.m_mapTokens.has(e) || o.m_mapTokens.set(e, t[e]),
-                      o.m_mapFallbackTokens.set(e, t[e]);
+                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, t[e]),
+                      i.m_mapFallbackTokens.set(e, t[e]);
                   }),
-                i &&
-                  Object.keys(i).forEach(function(e, t) {
-                    o.m_mapTokens.has(e) || o.m_mapTokens.set(e, i[e]),
-                      o.m_mapFallbackTokens.has(e) ||
-                        o.m_mapFallbackTokens.set(e, i[e]);
+                o &&
+                  Object.keys(o).forEach(function(e, t) {
+                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
+                      i.m_mapFallbackTokens.has(e) ||
+                        i.m_mapFallbackTokens.set(e, o[e]);
                   });
             }),
             (e.prototype.InitDirect = function(e) {
               var t = this;
               this.m_mapTokens.clear(),
                 this.m_mapFallbackTokens.clear(),
-                Object.keys(e).forEach(function(n, i) {
+                Object.keys(e).forEach(function(n, o) {
                   t.m_mapTokens.set(n, e[n]);
                 });
             }),
@@ -1317,12 +1318,12 @@ and limitations under the License.
     },
     vwkX: function(e, t, n) {
       "use strict";
-      function i(e, t, n) {
+      function o(e, t, n) {
         t < 0 ||
           n < 0 ||
           (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
       }
-      function o(e, t) {
+      function i(e, t) {
         return r(e, function(e) {
           return t == e;
         });
@@ -1342,46 +1343,52 @@ and limitations under the License.
         return !0;
       }
       function c(e, t, n) {
-        for (var i = 0, o = e.length - 1; i <= o; ) {
-          var r = Math.floor((i + o) / 2),
+        for (var o = 0, i = e.length - 1; o <= i; ) {
+          var r = Math.floor((o + i) / 2),
             s = n(e[r], t);
-          if (s < 0) i = r + 1;
-          else if (s > 0) o = r - 1;
+          if (s < 0) o = r + 1;
+          else if (s > 0) i = r - 1;
           else {
-            if (o == r) return r;
-            if (r == i) return o > r && n(t, e[r + 1]) < 0 ? r : r + 1;
-            i = r;
+            if (i == r) return r;
+            if (r == o) return i > r && n(t, e[r + 1]) < 0 ? r : r + 1;
+            o = r;
           }
         }
-        return o;
+        return i;
       }
       function u(e, t, n) {
-        var i = c(e, t, n);
-        e.splice(i + 1, 0, t);
+        var o = c(e, t, n);
+        e.splice(o + 1, 0, t);
       }
-      (t.d = i), (t.b = o), (t.c = r), (t.a = s), (t.e = a), (t.f = u);
+      (t.d = o),
+        (t.b = i),
+        (t.c = r),
+        (t.a = s),
+        (t.e = a),
+        (t.f = c),
+        (t.g = u);
     },
     wzNa: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
         return a;
       });
-      var i = n("BJf/"),
-        o = n.n(i),
+      var o = n("BJf/"),
+        i = n.n(o),
         r = n("DRjr"),
         s = n("m5yx"),
         a = (function() {
-          function e(t, n, i, r) {
+          function e(t, n, o, r) {
             void 0 === t && (t = 0),
               t instanceof e
                 ? (this.m_ulSteamID = t.m_ulSteamID)
                 : "string" == typeof t
-                  ? (this.m_ulSteamID = o.a.fromString(t, !0))
-                  : n && i && void 0 !== r
-                    ? this.SetFromComponents(t, r, i, n)
+                  ? (this.m_ulSteamID = i.a.fromString(t, !0))
+                  : n && o && void 0 !== r
+                    ? this.SetFromComponents(t, r, o, n)
                     : (this.m_ulSteamID = t
-                        ? o.a.fromNumber(t, !0)
-                        : o.a.UZERO);
+                        ? i.a.fromNumber(t, !0)
+                        : i.a.UZERO);
           }
           return (
             (e.InitFromAccountID = function(t) {
@@ -1474,7 +1481,7 @@ and limitations under the License.
               return 7 == this.GetAccountType();
             }),
             (e.prototype.SetAccountID = function(e) {
-              this.m_ulSteamID = new o.a(
+              this.m_ulSteamID = new i.a(
                 e,
                 this.m_ulSteamID.getHighBitsUnsigned(),
                 !0
@@ -1504,10 +1511,10 @@ and limitations under the License.
                 e
               );
             }),
-            (e.prototype.SetFromComponents = function(e, t, n, i) {
-              var r = ((255 & i) << 24) + ((15 & n) << 20) + (1048575 & t),
+            (e.prototype.SetFromComponents = function(e, t, n, o) {
+              var r = ((255 & o) << 24) + ((15 & n) << 20) + (1048575 & t),
                 s = 4294967295 & e;
-              this.m_ulSteamID = new o.a(s, r, !0);
+              this.m_ulSteamID = new i.a(s, r, !0);
             }),
             e
           );
@@ -1516,41 +1523,42 @@ and limitations under the License.
     z9An: function(e, t, n) {
       "use strict";
       n.d(t, "c", function() {
-        return i;
+        return o;
       }),
         n.d(t, "a", function() {
-          return p;
-        }),
-        n.d(t, "b", function() {
           return l;
         }),
+        n.d(t, "b", function() {
+          return m;
+        }),
         n.d(t, "d", function() {
-          return h;
+          return d;
         });
-      var i,
-        o = n("TToO"),
+      var o,
+        i = n("TToO"),
         r = n("y986"),
-        s = n("vwkX"),
-        a = n("huD9"),
-        c = n("KLxG");
+        s = n("wLXD"),
+        a = (n.n(s), n("vwkX")),
+        c = n("huD9"),
+        u = n("KLxG");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
           (e[(e.Tooltip = 4)] = "Tooltip"),
           (e[(e.ContextMenu = 8)] = "ContextMenu"),
           (e[(e.Resizable = 16)] = "Resizable");
-      })(i || (i = {}));
-      var u = (function() {
+      })(o || (o = {}));
+      var p = (function() {
           function e(e, t) {
             (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
             for (
-              var n = e.document.getElementsByTagName("link"), i = 0;
-              i < n.length;
-              i++
+              var n = e.document.getElementsByTagName("link"), o = 0;
+              o < n.length;
+              o++
             ) {
-              var o = n[i];
-              o.addEventListener("load", this.OnLinkLoad),
-                this.m_rgLoadingLinks.push(o);
+              var i = n[o];
+              i.addEventListener("load", this.OnLinkLoad),
+                this.m_rgLoadingLinks.push(i);
             }
           }
           return (
@@ -1561,15 +1569,15 @@ and limitations under the License.
             }),
             (e.prototype.OnLinkLoad = function(e) {
               e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-                s.b(this.m_rgLoadingLinks, e.currentTarget),
+                a.b(this.m_rgLoadingLinks, e.currentTarget),
                 0 == this.m_rgLoadingLinks.length &&
                   (this.m_fnRender(), (this.m_fnRender = void 0));
             }),
-            o.c([c.a], e.prototype, "OnLinkLoad", null),
+            i.c([u.a], e.prototype, "OnLinkLoad", null),
             e
           );
         })(),
-        p = (function() {
+        l = (function() {
           function e(e, t) {
             (this.m_bFocused = !1),
               (this.m_strName = e),
@@ -1602,37 +1610,45 @@ and limitations under the License.
               void 0 === e && (e = !0);
               var n;
               window.SteamClient &&
-                (this.m_rgParams.eCreationFlags |= i.Hidden),
-                this.m_rgParams.eCreationFlags & i.Tooltip && (e = !1),
+                (this.m_rgParams.eCreationFlags |= o.Hidden),
+                this.m_rgParams.eCreationFlags & o.Tooltip && (e = !1),
                 this.BIsValid() &&
                   (this.BIsClosed()
                     ? ((this.m_popup = void 0), (this.m_element = void 0))
                     : e && this.Focus());
-              var o = h.GetExistingPopup(this.m_strName);
-              if (!o || this.m_rgParams.replace_existing_popup) {
+              var i = d.GetExistingPopup(this.m_strName);
+              if (!i || this.m_rgParams.replace_existing_popup) {
                 this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
                 var r, s, a;
-                o
-                  ? ((s = o.m_element),
-                    (r = o.m_popup),
-                    o.ReleasePopup(),
-                    (a = o.m_renderWhenReady),
-                    h.RemoveTrackedPopup(o),
-                    r.removeEventListener("beforeunload", o.OnUnload),
-                    r.removeEventListener("resize", o.OnResizeEvent),
+                i
+                  ? ((s = i.m_element),
+                    (r = i.m_popup),
+                    i.ReleasePopup(),
+                    (a = i.m_renderWhenReady),
+                    d.RemoveTrackedPopup(i),
+                    r.removeEventListener(
+                      "beforeunload",
+                      i.OnBeforeUnloadEvent
+                    ),
+                    r.removeEventListener("unload", i.OnUnload),
+                    r.removeEventListener("resize", i.OnResizeEvent),
                     r.removeEventListener("focus", this.OnFocusInternal),
                     r.removeEventListener("blur", this.OnBlurInternal),
-                    r.removeEventListener("drop", o.OnDrop),
-                    r.removeEventListener("dragover", o.OnDragOver),
+                    r.removeEventListener("drop", i.OnDrop),
+                    r.removeEventListener("dragover", i.OnDragOver),
                     r.removeEventListener("message", this.OnMessage))
-                  : ((n = m.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((n = h.CreatePopup(this.m_strName, this.m_rgParams)),
                     (r = n.popup),
                     (s = n.element),
-                    (a = new u(r, s))),
+                    (a = new p(r, s))),
                   r &&
                     s &&
                     ((r.document.title = this.m_strTitle),
-                    r.addEventListener("beforeunload", this.OnUnload),
+                    r.addEventListener(
+                      "beforeunload",
+                      this.OnBeforeUnloadEvent
+                    ),
+                    r.addEventListener("unload", this.OnUnload),
                     r.addEventListener("resize", this.OnResizeEvent),
                     r.addEventListener("focus", this.OnFocusInternal),
                     r.addEventListener("blur", this.OnBlurInternal),
@@ -1645,12 +1661,16 @@ and limitations under the License.
                     this.m_renderWhenReady.SetTarget(function() {
                       return t.RenderInternal(t.m_popup, t.m_element, e);
                     })),
-                  h.AddTrackedPopup(this),
-                  o && e && this.Focus();
+                  d.AddTrackedPopup(this),
+                  i && e && this.Focus();
               }
             }),
             (e.prototype.RemoveEventListeners = function() {
-              this.window.removeEventListener("beforeunload", this.OnUnload),
+              this.window.removeEventListener(
+                "beforeunload",
+                this.OnBeforeUnloadEvent
+              ),
+                this.window.removeEventListener("unload", this.OnUnload),
                 this.window.removeEventListener("resize", this.OnResizeEvent),
                 this.window.removeEventListener("focus", this.OnFocusInternal),
                 this.window.removeEventListener("blur", this.OnBlurInternal),
@@ -1669,10 +1689,14 @@ and limitations under the License.
             (e.prototype.OnResizeEvent = function() {
               this.OnResize();
             }),
+            (e.prototype.OnBeforeUnloadEvent = function() {
+              this.OnBeforeUnload();
+            }),
             (e.prototype.OnUnload = function() {
               this.RemoveEventListeners(),
-                h.RemoveTrackedPopup(this),
-                this.OnClose();
+                d.RemoveTrackedPopup(this),
+                this.OnClose(),
+                s.unmountComponentAtNode(this.m_element);
             }),
             Object.defineProperty(e.prototype, "browser_info", {
               get: function() {
@@ -1780,25 +1804,27 @@ and limitations under the License.
             (e.prototype.ReleasePopup = function() {
               this.OnClose(), (this.m_popup = null);
             }),
+            (e.prototype.OnBeforeUnload = function() {}),
             (e.prototype.OnFocus = function() {}),
             (e.prototype.OnBlur = function() {}),
-            o.c([r.observable], e.prototype, "m_bFocused", void 0),
-            o.c([c.a], e.prototype, "OnMessage", null),
-            o.c([c.a], e.prototype, "OnResizeEvent", null),
-            o.c([c.a], e.prototype, "OnUnload", null),
-            o.c([c.a], e.prototype, "OnFocusInternal", null),
-            o.c([c.a], e.prototype, "OnBlurInternal", null),
-            o.c([r.computed], e.prototype, "focused", null),
+            i.c([r.observable], e.prototype, "m_bFocused", void 0),
+            i.c([u.a], e.prototype, "OnMessage", null),
+            i.c([u.a], e.prototype, "OnResizeEvent", null),
+            i.c([u.a], e.prototype, "OnBeforeUnloadEvent", null),
+            i.c([u.a], e.prototype, "OnUnload", null),
+            i.c([u.a], e.prototype, "OnFocusInternal", null),
+            i.c([u.a], e.prototype, "OnBlurInternal", null),
+            i.c([r.computed], e.prototype, "focused", null),
             e
           );
         })(),
-        l = (function(e) {
-          function t(t, n, i, o) {
-            var r = e.call(this, t, i) || this;
-            return r.SetSavedDimensionsKey(n), (r.m_bExpires = o), r;
+        m = (function(e) {
+          function t(t, n, o, i) {
+            var r = e.call(this, t, o) || this;
+            return r.SetSavedDimensionsKey(n), (r.m_bExpires = i), r;
           }
           return (
-            o.d(t, e),
+            i.d(t, e),
             (t.prototype.BIsInOverlay = function() {
               return (
                 this.browser_info &&
@@ -1815,13 +1841,13 @@ and limitations under the License.
                 e.strRestoreDetails
                   ? e.strRestoreDetails &&
                     ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                    h.SetRestoreDetails(
+                    d.SetRestoreDetails(
                       this.m_strInitialSavedDimensionsKey,
                       e.strRestoreDetails,
                       this.m_bExpires
                     ))
                   : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                    (e.strRestoreDetails = h.GetRestoreDetails(
+                    (e.strRestoreDetails = d.GetRestoreDetails(
                       this.m_strInitialSavedDimensionsKey
                     ))),
                 e
@@ -1830,37 +1856,46 @@ and limitations under the License.
             (t.prototype.OnLoad = function() {
               var e = this;
               this.GetWindowRestoreDetails().then(function(t) {
-                e.m_strInitialRestoreDetails = t;
+                (e.m_strInitialRestoreDetails = t), e.OnResizeComplete(t);
               });
             }),
             (t.prototype.OnResize = function() {
               this.QueryAndStoreWindowPosition();
             }),
+            (t.prototype.OnResizeComplete = function(e) {}),
             (t.prototype.QueryAndStoreWindowPosition = function() {
               var e = this;
               if (this.m_strInitialRestoreDetails) {
                 var t = this.GetSavedDimensionsKey();
                 this.GetWindowRestoreDetails().then(function(n) {
-                  var i =
+                  var o =
                     e.m_strInitialRestoreDetails == n &&
                     t == e.m_strInitialSavedDimensionsKey;
                   e.m_popup &&
                     e.m_strSavedDimensionsKey &&
-                    !i &&
-                    (h.SetRestoreDetails(t, n, e.m_bExpires),
+                    n &&
+                    !o &&
+                    (d.SetRestoreDetails(t, n, e.m_bExpires),
                     (e.m_rgParams.strRestoreDetails = n),
-                    (e.m_strInitialSavedDimensionsKey = t));
+                    (e.m_strInitialSavedDimensionsKey = t),
+                    e.OnResizeComplete(n));
                 });
               }
             }),
-            (t.prototype.OnClose = function() {
-              this.QueryAndStoreWindowPosition();
+            (t.prototype.OnBeforeUnload = function() {
+              this.QueryAndStoreWindowPosition(),
+                e.prototype.OnBeforeUnload.call(this);
             }),
-            o.c([c.a], t.prototype, "QueryAndStoreWindowPosition", null),
+            (t.prototype.OnClose = function() {}),
+            (t.prototype.SaveWindowPosition = function(e) {
+              d.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+                (this.m_rgParams.strRestoreDetails = e);
+            }),
+            i.c([u.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
-        })(p),
-        m = (function() {
+        })(l),
+        h = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -1870,21 +1905,24 @@ and limitations under the License.
               (this.m_unCurrentAccountID = 0),
               (this.m_mapRestoreDetails = new Map()),
               (this.m_bSaveRequired = !1),
-              Object({ NODE_ENV: "production", STEAM_BUILD: "buildbot" })
-                .MOBILE_BUILD ||
+              Object({
+                NODE_ENV: "production",
+                STEAM_BUILD: "buildbot",
+                VALVE_BUILD: "false"
+              }).MOBILE_BUILD ||
                 window.addEventListener("beforeunload", function(t) {
                   e.m_bShuttingDown = !0;
                   for (
-                    var n = 0, i = e.m_rgShutdownCallbacks;
-                    n < i.length;
+                    var n = 0, o = e.m_rgShutdownCallbacks;
+                    n < o.length;
                     n++
                   )
-                    (0, i[n])();
-                  var o = [];
+                    (0, o[n])();
+                  var i = [];
                   e.m_mapPopups.forEach(function(e) {
-                    e.BIsValid() && !e.BIsClosed() && o.push(e);
+                    e.BIsValid() && !e.BIsClosed() && i.push(e);
                   });
-                  for (var r = 0, s = o; r < s.length; r++) s[r].Close();
+                  for (var r = 0, s = i; r < s.length; r++) s[r].Close();
                   e.m_bSaveRequired && e.SaveSavedDimensionStore(),
                     e.m_mapPopups.clear();
                 });
@@ -1930,10 +1968,10 @@ and limitations under the License.
             }),
             (e.CreatePopup = function(e, t) {
               var n = t.dimensions || {},
-                i = n.width || 300,
-                o = n.height || 300,
+                o = n.width || 300,
+                i = n.height || 300,
                 r = t.title,
-                s = "width=" + i + ",height=" + o;
+                s = "width=" + o + ",height=" + i;
               void 0 !== n.left && (s += ",left=" + n.left),
                 void 0 !== n.top && (s += ",top=" + n.top),
                 (s += ",resizeable,status=0,toolbar=0,menubar=0,location=0");
@@ -2006,27 +2044,22 @@ and limitations under the License.
             (e.prototype.LoadSavedDimensionStore = function() {
               if (this.m_unCurrentAccountID) {
                 var e = this.GetLocalStorageKey();
-                this.m_mapRestoreDetails = new Map();
+                this.m_mapRestoreDetails = void 0;
                 var t = window.localStorage.getItem(e);
                 if (t)
                   try {
                     var n = JSON.parse(t);
-                    if (n)
-                      for (var i = 0, o = n; i < o.length; i++) {
-                        var r = o[i];
-                        this.m_mapRestoreDetails.set(r[0], r[1]);
-                      }
+                    this.m_mapRestoreDetails = new Map(n);
                   } catch (e) {}
+                this.m_mapRestoreDetails ||
+                  (this.m_mapRestoreDetails = new Map());
               }
             }),
             (e.prototype.SaveSavedDimensionStore = function() {
               if (this.m_unCurrentAccountID && this.m_bSaveRequired) {
-                var e = this.GetLocalStorageKey();
-                window.localStorage.setItem(
-                  e,
-                  JSON.stringify(this.m_mapRestoreDetails)
-                ),
-                  (this.m_bSaveRequired = !1);
+                var e = this.GetLocalStorageKey(),
+                  t = JSON.stringify(Array.from(this.m_mapRestoreDetails));
+                window.localStorage.setItem(e, t), (this.m_bSaveRequired = !1);
               }
             }),
             (e.prototype.DebouncedSaveSavedDimensionStore = function() {
@@ -2049,8 +2082,8 @@ and limitations under the License.
                 if (t) {
                   if (this.m_mapRestoreDetails.size > 50) {
                     for (
-                      var i = null,
-                        o = Date.now(),
+                      var o = null,
+                        i = Date.now(),
                         r = 0,
                         s = Array.from(this.m_mapRestoreDetails.keys());
                       r < s.length;
@@ -2058,11 +2091,11 @@ and limitations under the License.
                     ) {
                       var a = s[r],
                         c = this.m_mapRestoreDetails.get(a);
-                      c.last_used < o &&
+                      c.last_used < i &&
                         c.bExpires &&
-                        ((o = c.last_used), (i = a));
+                        ((i = c.last_used), (o = a));
                     }
-                    i && this.m_mapRestoreDetails.delete(i);
+                    o && this.m_mapRestoreDetails.delete(o);
                   }
                   var u = {
                     strRestoreDetails: t,
@@ -2077,8 +2110,8 @@ and limitations under the License.
                     : this.DebouncedSaveSavedDimensionStore();
               }
             }),
-            o.c(
-              [c.a, Object(a.a)(100)],
+            i.c(
+              [u.a, Object(c.a)(100)],
               e.prototype,
               "DebouncedSaveSavedDimensionStore",
               null
@@ -2086,7 +2119,7 @@ and limitations under the License.
             e
           );
         })(),
-        h = new m();
+        d = new h();
     }
   },
   ["6+TJ"]

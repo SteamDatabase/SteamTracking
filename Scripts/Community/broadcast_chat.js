@@ -1,8 +1,9 @@
 "use strict";
 
-var CBroadcastChat = function( broadcastSteamID )
+var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 {
 	this.m_broadcastSteamID = broadcastSteamID;
+	this.m_strBaseURL = strBaseURL;
 	this.m_ulBroadcastID = 0;
 
 	this.m_strPersonaName = '';
@@ -66,6 +67,11 @@ CBroadcastChat.prototype.GetChatID = function()
 	return this.m_ulChatID;
 };
 
+CBroadcastChat.prototype.GetBaseURL = function()
+{
+	return this.m_strBaseURL;
+};
+
 CBroadcastChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
 {
 	var rgEmoticonsStripped = [];
@@ -105,7 +111,7 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 	this.log( this.m_ulBroadcastID );
 	$J.ajax(
 	{
-		url: 'https://steamcommunity.com/broadcast/getchatinfo/',
+		url: this.GetBaseURL() + '/broadcast/getchatinfo/',
 		type: 'GET',
 		data: {
 			steamid: this.m_broadcastSteamID,
@@ -749,7 +755,7 @@ function UpdateBroadcastChatModerator( broadcastSteamID, moderatorSteamID, bAdd,
 	dialog.done( function() {
 		$J.ajax(
 			{
-				url: 'https://steamcommunity.com/broadcast/ajaxupdatechannelmod/',
+				url: chat.GetBaseURL() + '/broadcast/ajaxupdatechannelmod/',
 				type: 'POST',
 				data: {
 					broadcaststeamid: broadcastSteamID,
@@ -792,7 +798,7 @@ function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, ban
 {
 	$J.ajax(
 		{
-			url: 'https://steamcommunity.com/broadcast/ajaxupdateusermute/',
+			url: chat.GetBaseURL() + '/broadcast/ajaxupdateusermute/',
 			type: 'POST',
 			data: {
 				broadcaststeamid: broadcastSteamID,
