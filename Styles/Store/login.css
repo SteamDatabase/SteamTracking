@@ -5,25 +5,31 @@
 .loginbox {
     min-height: 352px;
     padding: 16px;
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 14px;
 }
 .block_content.block_content_inner.login {
     min-height: 364px;
 }
 
 .loginbox_left {
-	float: left;
+	flex: 1;
 	position: relative;
-	width: 274px;
-	padding: 0px 16px 14px 0px;
+	min-width: 274px;
 }
 .loginbox_right {
-    float: left;
+    flex: 1;
     position: relative;
-    width: 274px;
-    padding: 0px 0px 14px 16px;
+    min-width: 274px;
 }
 
-.loginbox_left.btn_ctn {
+.loginbox_content {
+	min-height: 264px;
+	padding-bottom: 16px;
+}
+
+.loginbox_left .btn_ctn {
 	height: 33px;
 }
 
@@ -33,20 +39,12 @@
 	float: right;
 }
 
-.loginbox_left input.text_input {
-	width: 261px;
-	height: 18px;
-	padding: 2px 4px;
-}
-
 .loginbox_sep {
-
-	left: 306px;
+	flex: 0;
 	border-left: 1px solid #264959;
     width: 2px;
     height: 210px;
-    margin: 0px;
-    float: left;
+    margin: 0 16px;
 }
 
 .loginbox .captcha_image_row {
@@ -151,4 +149,42 @@ ul#why_list {
 
 .linkspan:hover {
 	color: #67c1f5;
+}
+
+.login_menu_spacer {
+	height: 48px;
+}
+
+@media screen and ( max-width: 640px )
+{
+	html.responsive .loginbox {
+		flex-direction: column;
+	}
+
+	html.responsive .loginbox_sep {
+		border-top: 1px solid #264959;
+		border-left: none;
+		width: auto;
+		height: 1px;
+		margin: 16px 0;
+	}
+
+	html.responsive .loginbox_content {
+		min-height: 0;
+	}
+}
+
+body.v6.steamtv
+{
+	background: transparent;
+}
+
+body.v6.steamtv .page_content,
+html.responsive body.v6.steamtv .page_content
+{
+}
+
+html.responsive body.v6.steamtv .responsive_page_template_content
+{
+	padding-bottom: 0;
 }
