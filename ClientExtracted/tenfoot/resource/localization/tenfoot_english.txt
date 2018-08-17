@@ -2149,6 +2149,7 @@
 	"Library_Details_ControllerAction_Toggle_Lizard"		"TOGGLE LIZARD MODE"
 	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY"
 	"Library_Details_ControllerAction_Quit_Application"		"EXIT APPLICATION"
+	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY BINDING"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -5856,6 +5857,8 @@
 	"ControllerBinding_DeadzoneYJoystickMouse_Description"	"This value determines the minimum amount the output joystick will send when swiping.  The ideal setting is adjsuting it so the game's built in deadzone is exactly compensated for.  Adjust this value upwards until slow movements don't stop or stutter, but provide clean movement.  Move down if small movements are too big.  Also see the Enhance Small Movements setting."
 	"ControllerBinding_ModeDropDown_MouseJoystick" "Style of Input - Mouse Joystick"
 	"ControllerBinding_ModeDropDown_MouseJoystick_Description" "This input feels like a mouse, but outputs a joystick.  This is intended for games which do not allow simultaneous mouse and gamepad inputs.  It's the next best option to the real thing for providing an emulated 1:1 response.  NOTE: Since this mode is seen by the game as a joystick, the sensitivity response is limited by the game's gamepad sensitivity settings.  For best results, set the in-game gamepad camera sensitivity to the highest value possible."
+	"ControllerBinding_ModeDropDown_Mouse" "Style of Input - Mouse"
+	"ControllerBinding_ModeDropDown_Mouse_Description" "This input translates a joystick into mouse or cursor output. NOTE: This input may be affected by both the configuration's sensitivity and the in-game mouse sensitivity"
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick" "Gyro Camera Scale"
 	"ControllerBinding_GyroSensitivityScaleMouseJoystick_Description" "When using in combination with a pad also using Mouse Joystick mode, use this setting to scale the relative input of the gyro to be less or greater."
 	"ControllerBinding_LeanSensitivityMouseJoystick" "Gyro Lean Point"
