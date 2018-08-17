@@ -33827,48 +33827,57 @@ and limitations under the License.
                       d = c.m_unGamePlayedAppID,
                       p = c.m_strGameExtraInfo,
                       m = c.is_in_nonsteam_game,
-                      h = c.m_bInitialized;
+                      h = c.m_broadcastAppId,
+                      g = c.m_bInitialized;
                     c.m_bInitialized || e.m_cPersonaStateUpdatesReceived++,
                       c.UpdateFromMessage(i, o);
-                    var g = 0 != (1 & i);
-                    if (a.GetAccountID() == e.self.accountid && g) {
-                      var f = !!o.persona_set_by_user(),
-                        _ = c.m_ePersonaState;
-                      e.UpdateUserPersonaStateInternal(_, f, !0),
-                        1 == _ &&
-                          1 != (_ = e.AdjustPersonaStateForIdleTime(_)) &&
-                          e.UpdateUserPersonaStateInternal(_, !1);
+                    var f = 0 != (1 & i);
+                    if (a.GetAccountID() == e.self.accountid && f) {
+                      var _ = !!o.persona_set_by_user(),
+                        y = c.m_ePersonaState;
+                      e.UpdateUserPersonaStateInternal(y, _, !0),
+                        1 == y &&
+                          1 != (y = e.AdjustPersonaStateForIdleTime(y)) &&
+                          e.UpdateUserPersonaStateInternal(y, !1);
                     }
-                    var y = !1;
+                    var v = !1,
+                      b = c.m_unGamePlayedAppID,
+                      C = c.m_broadcastAppId;
                     if (
-                      c.m_unGamePlayedAppID ||
-                      d ||
-                      m ||
-                      c.is_in_nonsteam_game
+                      (!h ||
+                        (IsFeatureBroadcastEnabled() && 570 == h) ||
+                        (h = void 0),
+                      !C ||
+                        (IsFeatureBroadcastEnabled() && 570 == C) ||
+                        (C = void 0),
+                      b || d || m || c.is_in_nonsteam_game || C || h)
                     ) {
                       if (
-                        ((y = d != c.m_unGamePlayedAppID),
+                        ((v = d != b),
                         c.GetAccountID() != e.m_self.accountid && s.is_friend)
                       ) {
-                        var v = c.m_unGamePlayedAppID;
-                        0 == c.m_ePersonaState && (v = 0),
-                          m && (d = e.m_FriendGroupStore.non_steam_game_id),
+                        var S = d,
+                          M = b;
+                        0 == c.m_ePersonaState && (M = 0),
+                          m && (S = e.m_FriendGroupStore.non_steam_game_id),
                           c.is_in_nonsteam_game &&
-                            (v = e.m_FriendGroupStore.non_steam_game_id),
+                            (M = e.m_FriendGroupStore.non_steam_game_id),
+                          !S && h && (S = h),
+                          !M && C && (M = C),
                           e.m_FriendGroupStore.OnFriendGameChanged(
                             a.GetAccountID(),
-                            d,
-                            v
+                            S,
+                            M
                           );
                       }
                     } else
-                      c.m_strGameExtraInfo && (y = p != c.m_strGameExtraInfo);
-                    h &&
+                      c.m_strGameExtraInfo && (v = p != c.m_strGameExtraInfo);
+                    g &&
                       s.is_friend &&
                       s.accountid != e.m_self.accountid &&
-                      (l != c.m_ePersonaState || y) &&
+                      (l != c.m_ePersonaState || v) &&
                       (Wu.SettingsStore.FriendsSettings.bSounds_PlayIngame &&
-                      y &&
+                      v &&
                       s.persona.is_ingame
                         ? e.PlayJoinGameSound()
                         : Wu.SettingsStore.FriendsSettings.bSounds_PlayOnline &&
@@ -33879,7 +33888,7 @@ and limitations under the License.
                         s,
                         l,
                         c.m_ePersonaState,
-                        y
+                        v
                       )),
                       (c.m_ePersonaState == l &&
                         c.m_unGamePlayedAppID == d &&
@@ -43224,7 +43233,7 @@ and limitations under the License.
                 n = e.start_timestamp,
                 r = e.events.map(function(e) {
                   return {
-                    nTimeDelta: e[0] + 6,
+                    nTimeDelta: e[0] + 16,
                     eEvent: e[1],
                     unData: e.length >= 3 ? e[2] : 0,
                     strData: e.length >= 4 ? e[3] : ""
@@ -43289,45 +43298,97 @@ and limitations under the License.
                   (c = e);
               });
               var l = void 0;
-              return (
-                r.forEach(function(e) {
-                  var t = q(e, n, i);
-                  if (void 0 !== l) {
-                    var r = !1;
-                    switch (e.eEvent) {
-                      case Qc.Terminator:
-                        t += 3600;
-                        break;
-                      case Qc.GameStateChanged:
-                        if (e.nTimeDelta == l.nTimeDelta) return;
-                        if (e.unData == tl.STRATEGY_TIME) return;
-                        e.unData == tl.HERO_SELECTION && (r = !0);
-                        break;
-                      default:
-                        return;
-                    }
-                    var o = q(l, n, i);
-                    if (
-                      (a.push({
-                        nTimeStart: o,
-                        nTimeEnd: t,
-                        strLabel: "Draft",
-                        color: Object(on.b)(0, 255, 255)
-                      }),
-                      (l = void 0),
-                      !r)
-                    )
+              r.forEach(function(e) {
+                var t = q(e, n, i);
+                if (void 0 !== l) {
+                  var r = !1;
+                  switch (e.eEvent) {
+                    case Qc.Terminator:
+                      t += 3600;
+                      break;
+                    case Qc.GameStateChanged:
+                      if (e.nTimeDelta == l.nTimeDelta) return;
+                      if (e.unData == tl.STRATEGY_TIME) return;
+                      e.unData == tl.HERO_SELECTION && (r = !0);
+                      break;
+                    default:
                       return;
                   }
-                  e.eEvent != Qc.GameStateChanged ||
-                    (e.unData != tl.HERO_SELECTION &&
-                      e.unData != tl.STRATEGY_TIME) ||
-                    (l = e);
-                }),
+                  var o = q(l, n, i);
+                  if (
+                    (a.push({
+                      nTimeStart: o,
+                      nTimeEnd: t,
+                      strLabel: "Draft",
+                      color: Object(on.b)(0, 255, 255)
+                    }),
+                    (l = void 0),
+                    !r)
+                  )
+                    return;
+                }
+                e.eEvent != Qc.GameStateChanged ||
+                  (e.unData != tl.HERO_SELECTION &&
+                    e.unData != tl.STRATEGY_TIME) ||
+                  (l = e);
+              }),
                 r.forEach(function(e) {
-                  e.eEvent != Qc.Terminator &&
-                    o.push({ nTime: q(e, n, i), strLabel: Qc[e.eEvent] });
-                }),
+                  e.eEvent === Qc.FirstBlood &&
+                    o.push({
+                      nTime: q(e, n, i),
+                      strLabel: "First Blood",
+                      color: Object(on.b)(0, 255, 255)
+                    });
+                });
+              var u = function(e, t) {
+                  for (
+                    var i = e.nTimeDelta, n = i + e.unData, r = 0, o = 0, a = t;
+                    o < a.length;
+                    o++
+                  ) {
+                    var s = a[o];
+                    if (!(s.nTimeDelta < i)) {
+                      if (s.nTimeDelta > n) break;
+                      switch (s.eEvent) {
+                        case Qc.RoshanDeath:
+                        case Qc.TowerDeath:
+                        case Qc.BarracksDeath:
+                          r += 0.5;
+                          break;
+                        case Qc.HeroDeath:
+                          r += 1;
+                      }
+                    }
+                  }
+                  return r >= 2;
+                },
+                d = function(e, t) {
+                  var i = e.nTimeDelta,
+                    n = t.nTimeDelta,
+                    r = i + e.unData,
+                    o = n + t.unData;
+                  return Math.max(r, o) - Math.min(i, n) < r - i + (o - n);
+                },
+                p = [];
+              r.forEach(function(e) {
+                if (e.eEvent === Qc.TeamFight) {
+                  for (var t = 0, i = p; t < i.length; t++) {
+                    var n = i[t];
+                    if (d(n, e))
+                      return void (n.unData = Math.max(n.unData, e.unData));
+                  }
+                  u(e, r) && p.push(Object.assign({}, e));
+                }
+              });
+              for (var m = 0, h = p; m < h.length; m++) {
+                var g = h[m];
+                o.push({
+                  nTime: q(g, n, i),
+                  strLabel: "Team Fight",
+                  color: Object(on.b)(255, 0, 0)
+                });
+              }
+              return (
                 o.sort(function(e, t) {
                   return e.nTime - t.nTime;
                 }),
@@ -43962,7 +44023,9 @@ and limitations under the License.
               (i = i.slice(0, -"/community/".length));
             var n = Ht.a.CHAT_BASE_URL + "broadcast/watch/" + e;
             (n +=
-              "?iframe=1&origin=" + i + "&muted=1&enablechat=1&enablevideo=0"),
+              "?iframe=1&origin=" +
+              i +
+              "&muted=1&steamtv=1&enablechat=1&enablevideo=0"),
               (t.src = n),
               (t.onload = this.OnIframeLoaded);
           }
@@ -52492,9 +52555,10 @@ and limitations under the License.
                     case 0:
                       return this.m_bReadyToRender
                         ? [3, 2]
-                        : [4, this.OnReadyToRender()];
+                        : ((this.m_bReadyToRender = !0),
+                          [4, this.OnReadyToRender()]);
                     case 1:
-                      e.sent(), (this.m_bReadyToRender = !0), (e.label = 2);
+                      e.sent(), (e.label = 2);
                     case 2:
                       return [2];
                   }
@@ -73060,7 +73124,20 @@ and limitations under the License.
                     $o.a.createElement(
                       "div",
                       { className: "StandalonePlayerHeader" },
-                      "STEAM TV Logo here"
+                      $o.a.createElement("div", { className: "Logo" }),
+                      $o.a.createElement(
+                        "div",
+                        null,
+                        $o.a.createElement(
+                          "div",
+                          { className: "BroadcastButton WatchWithFriends" },
+                          $o.a.createElement("span", {
+                            className: "WatchWithFriendsIcon"
+                          }),
+                          $o.a.createElement(Ku.r, null),
+                          Object(zo.b)("#Broadcast_WatchWithFriends")
+                        )
+                      )
                     ),
                     $o.a.createElement(
                       Wh,

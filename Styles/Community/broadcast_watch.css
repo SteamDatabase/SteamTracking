@@ -1578,6 +1578,23 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	height: 100%;
 }
 
+.WebUI .ChatButton {
+	background: linear-gradient(to right, #3366ff, #7d6ebc );
+	display: inline-block;
+
+	padding: 0;
+	border-radius: 2px;
+	font-size: 16px;
+	color: #fff;
+	width: auto;
+
+	left: 4px;
+	right: 4px;
+	bottom: 4px;
+
+}
+
+
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
     min-height: calc( 100vh );
