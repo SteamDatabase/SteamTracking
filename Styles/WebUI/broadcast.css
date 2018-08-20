@@ -338,9 +338,19 @@
 	border: 1px solid #333e;
 	background: #000c;
 	position: absolute;
-	margin-top: -154px;
+	margin-top: -156px;
 	margin-left: -64px;
 	z-index: 7;
+}
+
+.STV_BroadcastContextMenuPanel
+{
+	padding: 8px;
+	text-align: right;
+	border: 1px solid #333e;
+	background: #000c;
+	position: absolute;
+	z-index: 22;
 }
 
 .STV_BroadcastSettingsMenuItems
@@ -662,7 +672,9 @@
 	top: -25px;
 	bottom: -3px;
 	height: 54px;
+	width: 24px;
 	z-index: 6;
+	margin-left: -14px;
 }
 
 .videoTimelineMain .STV_timelineGrabber
@@ -699,6 +711,7 @@
 	background-repeat: no-repeat;
 	flex: 1;
 	margin-top: -6px;
+	margin-left: 24px;
 }
 
 .STV_timelineMinimapContainer .STV_timelineMapCurTime
@@ -729,6 +742,7 @@
 	border-radius: 2px;
 	opacity: 0;
 	transition: all .2s ease-in-out;
+	margin-left: 24px;
 }
 
 .STV_timelineContainer.grabberDown .STV_timelineGrabberValue,
@@ -755,7 +769,7 @@
 	background-image: url( "../../images/webui/timelinemarker.png" );
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin-left: -12px;
+	margin-left: -8px;
 	pointer-events: none;
 }
 

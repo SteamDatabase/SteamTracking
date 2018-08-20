@@ -3668,6 +3668,7 @@ body.in_global_drag .friendlist_titlebar
 }
 
 
+.ChatTabs.compactView .chatTab.chatRoom .chatTabUnreadBadge,
 .chatTab.chatRoom .chatTabUnreadBadge
 {
 	border-radius: 50%;
@@ -9073,6 +9074,12 @@ html.web_chat_frame .perf_timing_area
 	border-color: rgba( 59, 118, 141, .25 );
 }
 
+.FriendChatTimeStamp.online.watchingbroadcast
+{
+	color: rgb( 130, 119, 177 );
+	border-color: rgba( 130, 119, 177, .25 );
+}
+
 .FriendChatTimeStamp.ingame
 {
 	color: rgb( 80, 112, 43 );
@@ -9342,6 +9349,12 @@ html.web_chat_frame .perf_timing_area
 	background-color: rgb( 2, 149, 202 );
 }
 
+
+.speaker.watchingbroadcast .speakerStatus
+{
+	background: linear-gradient( to right, rgba( 156, 143, 212, 1 ) 0%, rgba( 156, 143, 212, 1 ) 2px, rgba( 156, 143, 212, 0 ) 2px, rgba( 156, 143, 212, 0 ) 100% );
+}
+
 .msg a
 {
 	color: rgb( 109, 207, 246 );
@@ -9398,9 +9411,20 @@ html.web_chat_frame .perf_timing_area
 	color: rgb( 109, 207, 246 );
 }
 
+.FriendChatSpeaker .speaker.watchingbroadcast
+{
+	color: rgb( 156, 143, 212 );
+}
+
 .FriendChatSpeaker.isCurrentUser .speaker.online
 {
 	color: rgb( 79, 150, 179 );
+}
+
+.FriendChatSpeaker.isCurrentUser .speaker.watchingbroadcast.online,
+.FriendChatSpeaker.isCurrentUser .speaker.watchingbroadcast
+{
+	color: rgb( 130, 119, 177 );
 }
 
 .FriendChatSpeaker.isCurrentUser .speaker.ingame
@@ -10014,6 +10038,13 @@ img.emoticon.large
 
 	-webkit-app-region: no-drag;
 	z-index: 12;
+	user-select: none;
+}
+
+.compactView .chatTabOpenFriendsList
+{
+	height: 32px;
+	line-height: 32px;
 }
 
 .chatTabOpenFriendsList:hover
