@@ -591,7 +591,7 @@ body.iframe .ChatBoxViewers
 {
 	position: absolute;
 	left: 0;
-	bottom: 44px;
+	bottom: 48px;
 	margin-top: 4px;
 	padding: 0px 0px 4px 2px;
 	overflow: hidden;
@@ -870,7 +870,7 @@ body.iframe #ChatDragHandle
 	flex: 0 0 32px;
 	height: 38px;
 	margin-left: 4px;
-	background-color: #292929;
+	background-color: #1b1c20;
 	border: 1px solid #4c4c4c;
 	vertical-align: top;
 
