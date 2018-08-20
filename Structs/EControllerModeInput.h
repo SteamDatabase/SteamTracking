@@ -69,4 +69,12 @@ typedef enum EControllerModeInput
     k_EControllerModeInputButton_steam, // button_steam
     k_EControllerModeInputAlways_on_action, // always_on_action
     k_EControllerModeInputButton_capture, // button_capture
+    k_EControllerModeInputButton_macro0, // button_macro0
+    k_EControllerModeInputButton_macro1, // button_macro1
+    k_EControllerModeInputButton_macro2, // button_macro2
+    k_EControllerModeInputButton_macro3, // button_macro3
+    k_EControllerModeInputButton_macro4, // button_macro4
+    k_EControllerModeInputButton_macro5, // button_macro5
+    k_EControllerModeInputButton_macro6, // button_macro6
+    k_EControllerModeInputButton_macro7, // button_macro7
 } EControllerModeInput;

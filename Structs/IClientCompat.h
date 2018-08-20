@@ -7,4 +7,5 @@ public:
     virtual unknown_ret SpecifyCompatTool(unsigned int, char const*, char const*, int) = 0;
     virtual unknown_ret BIsCompatibilityToolEnabled(unsigned int) = 0;
     virtual unknown_ret BGetCompatToolName(unsigned int, CUtlString*) = 0;
+    virtual unknown_ret BGetCompatToolDisplayName(char const*, CUtlString*) = 0;
 };
