@@ -72453,7 +72453,6 @@ and limitations under the License.
                   onMouseMove: this.OnMouseMove,
                   onClick: this.OnMouseMove,
                   onMouseLeave: this.OnMouseLeave,
-                  onContextMenu: this.ShowStatsView,
                   onMouseDown: this.OnMouseDown
                 },
                 oa.createElement("img", {
