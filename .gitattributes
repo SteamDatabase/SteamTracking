@@ -1,4 +1,3 @@
-.DS_STORE
 * text eol=lf
 
 *.dat binary
@@ -10,4 +9,6 @@
 *.tga binary
 *.ttf binary
 *.wav binary
-
+*.[oa]
+*~
+.DS_STORE
