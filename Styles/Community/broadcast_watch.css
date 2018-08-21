@@ -650,7 +650,7 @@ body.iframe #ChatDragHandle
 
 .ChatName, .ChatName a
 {
-	color: #57cbde;
+	color: #6dcff6;
 }
 
 .ChatName.InGame,
@@ -840,12 +840,15 @@ body.iframe #ChatDragHandle
 	flex: 0 0 58px;
 	margin-left: 4px;
 	height: 40px;
-	color: white;
+	color: #8492a4;
 	text-align: center;
 	line-height: 40px;
+	background-color: #2c3036;
 }
+
 .ChatSend:hover {
 	background: #3d424b;
+	color: white;
 }
 
 .ChatButton
@@ -870,14 +873,32 @@ body.iframe #ChatDragHandle
 	flex: 0 0 32px;
 	height: 38px;
 	margin-left: 4px;
-	background-color: #1b1c20;
-	border: 1px solid #4c4c4c;
+	background-color: #2c3036;
+	border: 1px solid #2c3036;
 	vertical-align: top;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	cursor: pointer;
+}
+
+.EmoticonContainer:hover
+{
+	background-color: #3d424b;
+	border: 1px solid #3d424b;
+
+}
+
+.EmoticonContainer .emoticon_button.small {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_emoticon.png' );
+}
+
+
+.EmoticonContainer:hover .emoticon_button.small {
+	cursor: pointer;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_emoticon_hover.png' );
 }
 
 .emoticon_popup_ctn
@@ -1584,7 +1605,7 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 
 	padding: 0;
 	border-radius: 2px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff;
 	width: auto;
 
@@ -1593,7 +1614,6 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	bottom: 4px;
 
 }
-
 
 html.responsive body.broadcast_watch_page .responsive_page_template_content {
 	padding-bottom: 0;
@@ -1679,10 +1699,10 @@ html.responsive body.broadcast_watch_page .responsive_page_template_content {
 @media screen and (max-width: 910px)
 {
 	html.responsive .ChatTextField {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 }
 	html.responsive.touch .ChatTextField {
-		font-size: 16px;
+		font-size: 14px;
 	}

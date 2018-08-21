@@ -14345,8 +14345,8 @@ button.chatRoomHeaderButton:hover
 {
 	border: 1px solid #8277b1;
 	border-radius: 3px;
-	width: 85px;
-	height: 48px;
+	width: 90px;
+	height: 51px;
 	background-color: #777;
 	transition: all .21s ease-in-out;
 }
@@ -14368,7 +14368,9 @@ button.chatRoomHeaderButton:hover
 .chatRoomGroupHeader .broadcastInfoContainer:hover .thumbnail,
 .chatRoomGroupHeader .broadcastInfoContainer:hover
 {
-	border: 1px solid rgb( 193, 198, 207 );
+	border: 1px solid rgba(122, 112, 166, .7);
+	background-color: rgba(130, 119, 177, 0.4);
+
 }
 
 .chatRoomGroupHeader .broadcastInfoContainer .actions

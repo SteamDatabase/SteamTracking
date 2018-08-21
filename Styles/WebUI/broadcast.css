@@ -1089,6 +1089,31 @@
 	left: 0;
 }
 
+.ToggleBroadcastChat
+{
+	padding: 8px;
+	border-radius: 2px;
+	margin: 8px;
+	align-self: center;
+	background-color: rgb(122, 110, 190);
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+	cursor: pointer;
+
+}
+
+.ToggleBroadcastChat .SVGIcon_DoubleArrow
+{
+	transform: rotateZ(180deg);
+	transition: all .16s ease-in-out;
+}
+
+.ChatCollapsed .ToggleBroadcastChat .SVGIcon_DoubleArrow
+{
+	transform: rotateZ(0deg);
+}
+
 .BroadcastTab_OverBackground
 {
 	position: absolute;
@@ -1102,6 +1127,9 @@
 {
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+
 }
 
 .BroadcastContainer
@@ -1172,7 +1200,6 @@
 	display: flex;
 	flex-direction: column;
 	background-color: rgba( 0, 0, 0, 0.15 );
-	padding-bottom: 4px;
 	position: relative;
 	flex: 1;
 	overflow: hidden;
@@ -1182,7 +1209,7 @@
 {
 	height: 50px;
 	font-size: 16px;
-	padding: 8px 16px;
+	padding: 8px 8px;
 	box-sizing: border-box;
 	z-index: 1;
 
@@ -1193,7 +1220,7 @@
 
 .BroadcastDetailsHeader_ViewerCount
 {
-	margin-left: 16px;
+	margin-top: 6px;
 	padding-left: 26px;
 	height: 20px;
 	line-height: 20px;
@@ -1489,11 +1516,11 @@ iframe.steamTVLogin
 	background: linear-gradient(to right, #3366ff, #7d6ebc );
 	display: inline-block;
 
-	padding: 8px 80px;
+	padding: 8px 32px;
 	border-radius: 2px;
 	font-size: 16px;
 	color: #fff;
-	margin: 18px 25px 0 0;
+
 }
 
 .StandalonePlayerHeader
@@ -1530,6 +1557,7 @@ iframe.steamTVLogin
 .BroadcastContainer
 {
 	padding: 18px 16px;
+	padding-top: 8px;
 }
 
 .BroadcastStreamDetails {
@@ -1539,11 +1567,7 @@ iframe.steamTVLogin
 .WatchWithFriends
 {
 	cursor: pointer;
-}
-
-.WatchWithFriends
-{
-	margin-right: 16px;
+	margin-right: 0px;
 }
 
 .WatchWithFriends svg {
