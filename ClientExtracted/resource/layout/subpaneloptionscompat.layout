@@ -3,12 +3,13 @@
 	controls
 	{
 		TitleLabel {			controlName=Label 		labelText="#Steam_Settings_Compat_Title" style=highlight }
-		CompatEnabledCheckbox { controlName=Button		labeltext="#Steam_Settings_Compat_Enable" }
-		CompatForcedCheckbox {	controlName=Button		labeltext="#Steam_Settings_Compat_Forced_Enable" }
+		CompatEnabledCheckbox {		controlName=Button		labeltext="#Steam_Settings_Compat_Enable" }
+		CompatForcedCheckbox {		controlName=Button		labeltext="#Steam_Settings_Compat_Forced_Enable" }
+		CompatOverrideCheckbox {	controlName=Button		labeltext="#Steam_Settings_Compat_Forced_Override" }
 		DescriptionInfo {		controlName=Label		labelText="#Steam_Settings_Compat_Info" wrap=1 }
-		DescriptionLink  {		controlName=URLLabel	labelText="#Steam_Settings_Compat_Info_Link" URLText="https://steamcommunity.com" wrap=1 }
+		DescriptionLink  {		controlName=URLLabel		labelText="#Steam_Settings_Compat_Info_Link" URLText="https://store.steampowered.com/steamplay" wrap=1 }
 
-		Divider1 {				controlName=Divider }
+		Divider1 {			controlName=Divider }
 		AdvancedTitle {			controlName=Label		labelText="#Steam_Settings_Compat_Advanced_Title" style=highlight wrap=1 }			
 		CompatForcedInfo { 		controlName=Label		labelText="#Steam_Settings_Compat_Forced_Info" wrap=1 }
 
@@ -47,10 +48,11 @@
 		place { control=AdvancedTitle			start=Divider1 height=20 region=box dir=down margin-top=15 width=max }
 
 		place { control=CompatForcedInfo		start=AdvancedTitle height=30 region=box dir=down margin-top=15 width=max }
-		place { control=CompatForcedCheckbox	start=CompatForcedInfo height=20 region=box dir=down margin-top=15 width=320 }
+		place { control=CompatForcedCheckbox	start=CompatForcedInfo height=16 region=box dir=down margin-top=15 width=480 }
+		place { control=CompatOverrideCheckbox	start=CompatForcedCheckbox height=16 region=box dir=down margin-top=15 width=480 }
 
-		place { control=AdvancedToolLabel		start=CompatForcedCheckbox height=20 region=box dir=down margin-top=15 width=200 }
-		place { control=AdvancedToolComboBox	start=CompatForcedCheckbox height=20 region=box dir=down margin-top=15 margin-left=200 width=max }
+		place { control=AdvancedToolLabel		start=CompatOverrideCheckbox height=20 region=box dir=down margin-top=15 width=200 }
+		place { control=AdvancedToolComboBox	start=CompatOverrideCheckbox height=28 region=box dir=down margin-top=15 margin-left=200 width=max }
 
 		place { control=DescriptionLink			start=AdvancedToolLabel height=20 region=box dir=down margin-top=15 width=max }
 	}
