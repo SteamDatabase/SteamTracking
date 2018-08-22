@@ -24,7 +24,6 @@ public:
     virtual unknown_ret GetControllerTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(unsigned long long) = 0;
     virtual unknown_ret GetHandleForGamepadIndex(int) = 0;
-    virtual unknown_ret GetActionSetHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetDigitalActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetAnalogActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetDigitalActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
@@ -42,6 +41,7 @@ public:
     virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetMotionData(unsigned long long) = 0;
     virtual unknown_ret GetMotionDataDisabled(unsigned int, unsigned long long) = 0;
+    virtual unknown_ret GetCurrentFocusedAppID(unsigned long long) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;
@@ -65,7 +65,6 @@ public:
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
     virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret BInputGenerated() = 0;
-    virtual unknown_ret GetCurrentFocusedAppID(unsigned long long) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
@@ -147,6 +146,7 @@ public:
     virtual unknown_ret CheckMappingForEvents() = 0;
     virtual unknown_ret AccessControllerInputGeneratorMouseButton(unsigned int, Voltroller::MouseButtons, bool) = 0;
     virtual unknown_ret GetEmulatedOutputState() = 0;
+    virtual unknown_ret GetActionSetHandle(unsigned int, char const*) = 0;
     virtual unknown_ret StopAnalogActionMomentum(unsigned long long, unsigned long long) = 0;
     virtual unknown_ret StartTrackingCallback(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetControllerUsageData(unsigned int) = 0;

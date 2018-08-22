@@ -199,6 +199,7 @@ public:
     virtual unknown_ret NotifyLobbyJoinRequested(unsigned int, CSteamID, CSteamID) = 0;
     virtual unknown_ret NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*) = 0;
     virtual unknown_ret GetClanRelationship(CSteamID) = 0;
+    virtual unknown_ret GetClanInviteCount() = 0;
     virtual unknown_ret GetFriendClanRank(CSteamID, CSteamID) = 0;
     virtual unknown_ret VoiceIsAvailable() = 0;
     virtual unknown_ret TestVoiceDisconnect(int) = 0;

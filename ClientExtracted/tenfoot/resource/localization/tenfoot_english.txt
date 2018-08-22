@@ -2149,7 +2149,6 @@
 	"Library_Details_ControllerAction_Toggle_Lizard"		"TOGGLE LIZARD MODE"
 	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY"
 	"Library_Details_ControllerAction_Quit_Application"		"EXIT APPLICATION"
-	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY BINDING"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
