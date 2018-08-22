@@ -9,4 +9,6 @@
 *.tga binary
 *.ttf binary
 *.wav binary
-
+*.[oa]
+*~
+.DS_STORE
