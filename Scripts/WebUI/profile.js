@@ -893,7 +893,7 @@ webpackJsonp(
           })
         );
       }
-      function x() {
+      function E() {
         return ne.createElement(
           "svg",
           {
@@ -931,7 +931,7 @@ webpackJsonp(
           })
         );
       }
-      function E() {
+      function x() {
         return ne.createElement(
           "svg",
           {
@@ -1521,6 +1521,22 @@ webpackJsonp(
             viewBox: "0 0 256 256"
           },
           ne.createElement(
+            "defs",
+            null,
+            ne.createElement(
+              "linearGradient",
+              { id: "gradient", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
+              ne.createElement("stop", {
+                offset: "0%",
+                stopColor: "rgb(55, 102, 251)"
+              }),
+              ne.createElement("stop", {
+                offset: "100%",
+                stopColor: "rgb(73, 104, 235)"
+              })
+            )
+          ),
+          ne.createElement(
             "g",
             { id: "partCircle" },
             ne.createElement("path", {
@@ -1552,6 +1568,16 @@ webpackJsonp(
           ne.createElement(
             "g",
             { id: "mainOutline" },
+            ne.createElement("path", {
+              className: "steamTV",
+              display: "none",
+              fill: "url(#gradient)",
+              stroke: "#ffffff",
+              strokeWidth: "6",
+              strokeMiterlimit: "10",
+              d:
+                "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
+            }),
             ne.createElement("path", {
               className: "roundFill",
               fill: "none",
@@ -2447,8 +2473,8 @@ webpackJsonp(
         (t.s = _),
         (t.r = w),
         (t.G = b),
-        (t.a = x),
-        (t.q = E),
+        (t.a = E),
+        (t.q = x),
         (t.v = S),
         (t.D = k),
         (t.X = M),
@@ -2848,9 +2874,9 @@ webpackJsonp(
         _ = n("sVhq"),
         w = n("4Dav"),
         b = (n("kllU"), n("TToO")),
-        x = n("y986"),
-        E = n("mtWM"),
-        S = n.n(E),
+        E = n("y986"),
+        x = n("mtWM"),
+        S = n.n(x),
         k = { ProfileURL: "" },
         M = (function() {
           function e(e, t) {
@@ -2952,7 +2978,7 @@ webpackJsonp(
                       r &&
                         r.PrivacySettings &&
                         r.eCommentPermission &&
-                        Object(x.runInAction)(function() {
+                        Object(E.runInAction)(function() {
                           (e.m_PrivacySettings = r.PrivacySettings),
                             (e.m_eCommentPermission = r.eCommentPermission);
                         }),
@@ -2970,10 +2996,10 @@ webpackJsonp(
                   })
               );
             }),
-            b.c([x.observable], e.prototype, "m_PrivacySettings", void 0),
-            b.c([x.observable], e.prototype, "m_eCommentPermission", void 0),
-            b.c([x.observable], e.prototype, "m_eSaveStateByKey", void 0),
-            b.c([x.observable], e.prototype, "m_eCommentSaveState", void 0),
+            b.c([E.observable], e.prototype, "m_PrivacySettings", void 0),
+            b.c([E.observable], e.prototype, "m_eCommentPermission", void 0),
+            b.c([E.observable], e.prototype, "m_eSaveStateByKey", void 0),
+            b.c([E.observable], e.prototype, "m_eCommentSaveState", void 0),
             e
           );
         })(),
@@ -4340,14 +4366,14 @@ and limitations under the License.
                 var _ = (s.bOverlapHorizontal ? y : v) - g,
                   w = _ > 0,
                   b = m - (s.bOverlapHorizontal ? v : y) - g,
-                  x = b > 0,
-                  E = (s.bPreferPopLeft || !x) && w;
+                  E = b > 0,
+                  x = (s.bPreferPopLeft || !E) && w;
                 w ||
-                  x ||
-                  ((E = w > x),
+                  E ||
+                  ((x = w > E),
                   s.bFitToWindow &&
-                    ((g += (E ? _ : b) - 8), (c.menuWidth = g))),
-                  (!s.bPreferPopLeft && x) || !w
+                    ((g += (x ? _ : b) - 8), (c.menuWidth = g))),
+                  (!s.bPreferPopLeft && E) || !w
                     ? (c.menuLeft = s.bOverlapHorizontal ? v : y)
                     : (c.menuRight = m - (s.bOverlapHorizontal ? y : v));
                 var S = l || r.top,

@@ -94,9 +94,6 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 {
 	var _chat = this;
 
-	if ( ulBroadcastID == this.m_ulBroadcastID )
-		return;
-
 	this.m_ulBroadcastID = ulBroadcastID;
 	this.m_cConsecutiveErrors = 0;
 	this.m_bReconnecting = false;

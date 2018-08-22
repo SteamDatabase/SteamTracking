@@ -1091,9 +1091,9 @@
 
 .ToggleBroadcastChat
 {
-	padding: 8px;
+	padding: 7px;
 	border-radius: 2px;
-	margin: 8px;
+	margin: 8px 8px 8px 0px;
 	align-self: center;
 	background-color: rgb(122, 110, 190);
 	width: 24px;
@@ -1114,6 +1114,12 @@
 	transform: rotateZ(0deg);
 }
 
+.BroadcastTabHeaderContainer
+{
+	display: flex;
+	justify-content: flex-end;
+}
+
 .BroadcastTab_OverBackground
 {
 	position: absolute;
@@ -1121,6 +1127,8 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
+	display: flex;
+    flex-direction: column;
 }
 
 .BroadcastTab_HeaderRow
@@ -1129,7 +1137,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	align-content: center;
-
+	width: 356px;
 }
 
 .BroadcastContainer
@@ -1334,6 +1342,12 @@
 .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .ContextMenuButton .SVGIcon_DownArrowContextMenu
 {
 	fill: #8277b1;
+	width: 16px;
+	height: 16px;
+	stroke-width: 8px;
+
+	stroke: #8277b1;
+	margin-left: 4px;
 }
 
 .BroadcastChatDivider
@@ -1518,8 +1532,9 @@ iframe.steamTVLogin
 
 	padding: 8px 32px;
 	border-radius: 2px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #fff;
+	user-select: none;
 
 }
 
@@ -1546,6 +1561,7 @@ iframe.steamTVLogin
 
 .BroadcastContainerSectionVideoContainer
 {
+	max-height: calc(100vh - 150px);
 	position: relative;
 }
 
@@ -1557,7 +1573,7 @@ iframe.steamTVLogin
 .BroadcastContainer
 {
 	padding: 18px 16px;
-	padding-top: 8px;
+	padding-top: 0px;
 }
 
 .BroadcastStreamDetails {
@@ -1566,8 +1582,11 @@ iframe.steamTVLogin
 
 .WatchWithFriends
 {
+	margin: 0px 16px 0px 4px;
 	cursor: pointer;
-	margin-right: 0px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
 }
 
 .WatchWithFriends svg {
@@ -1612,3 +1631,72 @@ iframe.steamTVLogin
 	background-color: rgba(0,0,0,0.4);
 	padding: 12px 5px;
 }
+
+.STV_Logo
+{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin-left: 16px;
+}
+
+.STV_Logo .SVGIcon_Throbber
+{
+	width: 44px;
+	height: 44px;
+	margin-right: 3px;
+}
+
+.STV_Logo_STEAM,
+.STV_Logo_TV
+{
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 0;
+	color: rgb( 125, 110, 188 );
+	user-select: none;
+}
+
+.STV_Logo_TV
+{
+	font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+	margin-top: 1px;
+}
+
+.STV_Logo_STEAM
+{
+	font-weight: bold;
+	margin-right: 1px;
+	background: linear-gradient( to right, rgb(91, 106, 219) 0%, rgb( 125, 110, 188 ) 80% );
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.STV_Logo .SVGIcon_Throbber #mainOutline path
+{
+	stroke-width: 0px;
+}
+
+.STV_Logo .SVGIcon_Throbber #mainOutline path,
+.STV_Logo .SVGIcon_Throbber #partCircle path
+{
+	display: none;
+}
+
+.STV_Logo .SVGIcon_Throbber #mainOutline .steamTV
+{
+	display: block;
+}
+
+.STV_Logo .SVGIcon_Throbber #topCircle circle
+{
+	stroke: rgb(80, 105, 229);
+}
+
+.STV_Logo .SVGIcon_Throbber #bottomCircle path
+{
+	fill: rgb(67, 103, 240);
+	stroke-width: 0px;
+}
+
