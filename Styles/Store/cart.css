@@ -530,8 +530,6 @@ body.v6 .cart_rightcol h2 {
 	float: right;
 	padding-top: 20px;
 	text-align: right;
-	display: inline-block;
-	overflow: auto;
 }
 
 .checkout_review_item_price .price {
