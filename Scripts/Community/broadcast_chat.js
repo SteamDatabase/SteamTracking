@@ -1,8 +1,9 @@
 "use strict";
 
-var CBroadcastChat = function( broadcastSteamID )
+var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 {
 	this.m_broadcastSteamID = broadcastSteamID;
+	this.m_strBaseURL = strBaseURL;
 	this.m_ulBroadcastID = 0;
 
 	this.m_strPersonaName = '';
@@ -15,6 +16,8 @@ var CBroadcastChat = function( broadcastSteamID )
 	this.m_nFromFirstRequestMS = 0;
 	this.m_nNextChatTS = 0;
 	this.m_cConsecutiveErrors = 0;
+	this.m_nNudgeFactorMS = 0; // Every time we get a 404, slow the next request down. It likely means our path to the BR isn't the most efficient.
+	this.m_nLastSleepMS = 0;
 	this.m_bReconnecting = false;
 	this.m_regexUserEmoticons = null;
 
@@ -50,6 +53,7 @@ var CBroadcastChat = function( broadcastSteamID )
 
 CBroadcastChat.s_MessageRetryMax = 4;
 CBroadcastChat.s_MessageRetryDelay = 500;
+CBroadcastChat.s_MessageNudgeDelayMS = 10;
 CBroadcastChat.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
 CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
@@ -64,6 +68,11 @@ CBroadcastChat.prototype.SetChannelModerators = function ( mapChannelModerators 
 CBroadcastChat.prototype.GetChatID = function()
 {
 	return this.m_ulChatID;
+};
+
+CBroadcastChat.prototype.GetBaseURL = function()
+{
+	return this.m_strBaseURL;
 };
 
 CBroadcastChat.prototype.SetOwnedEmoticons = function( rgEmoticons )
@@ -85,9 +94,6 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 {
 	var _chat = this;
 
-	if ( ulBroadcastID == this.m_ulBroadcastID )
-		return;
-
 	this.m_ulBroadcastID = ulBroadcastID;
 	this.m_cConsecutiveErrors = 0;
 	this.m_bReconnecting = false;
@@ -105,7 +111,7 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 	this.log( this.m_ulBroadcastID );
 	$J.ajax(
 	{
-		url: 'https://steamcommunity.com/broadcast/getchatinfo/',
+		url: this.GetBaseURL() + '/broadcast/getchatinfo/',
 		type: 'GET',
 		data: {
 			steamid: this.m_broadcastSteamID,
@@ -268,7 +274,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 			_chat.m_nFromFirstRequestMS += rgResponse.next_request - _chat.m_nNextChatTS;
 			_chat.m_nNextChatTS = rgResponse.next_request;
 
-			nSleepMS = (_chat.m_tsFirstRequest + _chat.m_nFromFirstRequestMS) - performance.now();
+			nSleepMS = (_chat.m_tsFirstRequest + _chat.m_nFromFirstRequestMS) - performance.now() + _chat.m_nNudgeFactorMS;
 		}
 
 		if ( _chat.m_bReconnecting )
@@ -277,6 +283,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 			_chat.m_bReconnecting = false;
 		}
 
+		_chat.m_nLastSleepMS = nSleepMS;
 		if( nSleepMS <= 0 )
 			_chat.RequestLoop();
 		else
@@ -284,9 +291,11 @@ CBroadcastChat.prototype.RequestLoop = function()
 	})
 	.fail( function(result)
 	{
-		_chat.log( 'Failed to get chat messages' );
+		_chat.log( 'Failed to get chat messages. Previous sleep set to: ' + _chat.m_nLastSleepMS  + ' firstReq: ' + _chat.m_tsFirstRequest +
+			' firstFromRequest: ' + _chat.m_nFromFirstRequestMS + " nudge: " + _chat.m_nNudgeFactorMS );
 
 		_chat.m_cConsecutiveErrors++;
+		_chat.m_nNudgeFactorMS += CBroadcastChat.s_MessageNudgeDelayMS;
 		if ( _chat.m_cConsecutiveErrors >= CBroadcastChat.s_MessageRetryMax )
 		{
 			if ( _chat.m_tsFirstRequest == null )
@@ -365,9 +374,6 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	elChatName.text( strPersonaName );
 	elChatName.attr( 'href', 'https://steamcommunity.com/profiles/' + steamID );
 	elChatName.attr( 'data-miniprofile', 's' + steamID );
-
-	if ( bInGame )
-		elChatName.parent().addClass( 'InGame' );
 
 	if ( steamID == this.m_broadcastSteamID )
 		elMessage.addClass( 'Broadcaster' );
@@ -749,7 +755,7 @@ function UpdateBroadcastChatModerator( broadcastSteamID, moderatorSteamID, bAdd,
 	dialog.done( function() {
 		$J.ajax(
 			{
-				url: 'https://steamcommunity.com/broadcast/ajaxupdatechannelmod/',
+				url: chat.GetBaseURL() + '/broadcast/ajaxupdatechannelmod/',
 				type: 'POST',
 				data: {
 					broadcaststeamid: broadcastSteamID,
@@ -792,7 +798,7 @@ function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, ban
 {
 	$J.ajax(
 		{
-			url: 'https://steamcommunity.com/broadcast/ajaxupdateusermute/',
+			url: chat.GetBaseURL() + '/broadcast/ajaxupdateusermute/',
 			type: 'POST',
 			data: {
 				broadcaststeamid: broadcastSteamID,

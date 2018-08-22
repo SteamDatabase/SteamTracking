@@ -67,7 +67,7 @@ public:
     virtual unknown_ret BInputGenerated() = 0;
     virtual unknown_ret GetCurrentFocusedAppID(unsigned long long) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
-    virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData*) = 0;
+    virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
     virtual unknown_ret ConvertBindingToNewControllerType(unsigned int, unsigned int) = 0;
     virtual unknown_ret IsModified(unsigned int) = 0;

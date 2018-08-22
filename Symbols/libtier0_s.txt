@@ -373,6 +373,7 @@
  T SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  T SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
  T SteamThreadTools::InitMainThread()
+ T SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
  T SteamVProf::CVProfManager::~CVProfManager()
@@ -476,6 +477,7 @@
  T ThreadSetDebugName
  T ThreadSetPriority
  T ThreadShellExecute
+ T ThreadShellExecuteNoWindow
  T ThreadSleep
  T ThreadSpinWaitForValue
  T ThreadTerminate
@@ -586,6 +588,7 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ __stdoutp
  __tolower
  __udivdi3
  __umoddi3
@@ -609,7 +612,7 @@
  b Plat_IsSteamConsoleMode::bIsSteamConsole
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b SetWritingMiniDump(bool)::fAsserted
- b SteamThreadTools::ThreadShellExecute::bInstalledSignalHandler
+ b SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)::bInstalledSignalHandler
  b SteamThreadTools::g_ThreadMainThreadID
  b SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)::dummy
  b V_pretifymem(float, int, bool)::current
@@ -663,8 +666,10 @@
  dlopen
  dlsym
  dyld_stub_binder
+ fflush
  fork
  fprintf
+ fputc
  fputs
  fputs$UNIX2003
  free

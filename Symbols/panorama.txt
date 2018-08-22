@@ -119,7 +119,6 @@
  B CMsgDrawFilledRect::default_instance_
  B CMsgDrawTextRegion::default_instance_
  B CMsgDrawTexturedRect::default_instance_
- B CMsgEnableSteamClientAPI::default_instance_
  B CMsgEndFrame::default_instance_
  B CMsgEndPaintBackground::default_instance_
  B CMsgEndPaintLast::default_instance_
@@ -820,6 +819,12 @@
  B s_convarTransitionTimeFactor
  B s_nDebugDumpTexture_FrameNumber
  B s_nDebugDumpTexture_Number
+ B sc_kalman_a_vel
+ B sc_kalman_fastq
+ B sc_kalman_h_vel
+ B sc_kalman_q_vel
+ B sc_kalman_r_vel
+ B sc_kalman_slowq
  B stat_client_TCPConnection_RecvBytes
  B stat_client_TCPConnection_SentBytes
  B stat_client_UDPSocket_RecvBytes
@@ -1256,7 +1261,6 @@
  D typeinfo for CMsgDrawFilledRect
  D typeinfo for CMsgDrawTextRegion
  D typeinfo for CMsgDrawTexturedRect
- D typeinfo for CMsgEnableSteamClientAPI
  D typeinfo for CMsgEndFrame
  D typeinfo for CMsgEndPaintBackground
  D typeinfo for CMsgEndPaintLast
@@ -1930,7 +1934,6 @@
  D vtable for CMsgDrawFilledRect
  D vtable for CMsgDrawTextRegion
  D vtable for CMsgDrawTexturedRect
- D vtable for CMsgEnableSteamClientAPI
  D vtable for CMsgEndFrame
  D vtable for CMsgEndPaintBackground
  D vtable for CMsgEndPaintLast
@@ -2484,6 +2487,7 @@
  Msg
  NSApp
  NSSelectorFromString
+ OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBundle
  OBJC_CLASS_$_NSColorSpace
@@ -2493,6 +2497,7 @@
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
  OBJC_CLASS_$_NSString
+ OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
@@ -2604,7 +2609,6 @@
  R typeinfo name for CMsgDrawFilledRect
  R typeinfo name for CMsgDrawTextRegion
  R typeinfo name for CMsgDrawTexturedRect
- R typeinfo name for CMsgEnableSteamClientAPI
  R typeinfo name for CMsgEndFrame
  R typeinfo name for CMsgEndPaintBackground
  R typeinfo name for CMsgEndPaintLast
@@ -3639,6 +3643,10 @@
  T CBorderData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CBorderData::SetCachedSize(int) const
  T CBorderData::SharedDtor()
+ T CBorderData::mutable_bottom()
+ T CBorderData::mutable_left()
+ T CBorderData::mutable_right()
+ T CBorderData::mutable_top()
  T CBorderData::~CBorderData()
  T CBorderData_CBorderSide::ByteSize() const
  T CBorderData_CBorderSide::CBorderData_CBorderSide()
@@ -3674,6 +3682,18 @@
  T CCDDBAppDetailCommon::SetCachedSize(int) const
  T CCDDBAppDetailCommon::SharedCtor()
  T CCDDBAppDetailCommon::SharedDtor()
+ T CCDDBAppDetailCommon::mutable_friendly_name()
+ T CCDDBAppDetailCommon::mutable_icon()
+ T CCDDBAppDetailCommon::mutable_logo()
+ T CCDDBAppDetailCommon::mutable_logo_small()
+ T CCDDBAppDetailCommon::mutable_name()
+ T CCDDBAppDetailCommon::mutable_propagation()
+ T CCDDBAppDetailCommon::set_friendly_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_logo(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_logo_small(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_propagation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::~CCDDBAppDetailCommon()
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
@@ -3812,6 +3832,14 @@
  T CCookie::SetCachedSize(int) const
  T CCookie::SharedCtor()
  T CCookie::SharedDtor()
+ T CCookie::mutable_domain()
+ T CCookie::mutable_name()
+ T CCookie::mutable_path()
+ T CCookie::mutable_value()
+ T CCookie::set_domain(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::~CCookie()
  T CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> >::CCopyableUtlVector(CCopyableUtlVector<CUtlString, CUtlMemory<CUtlString> > const&)
  T CCopyableUtlVector<panorama::CGradientColorStop, CUtlMemory<panorama::CGradientColorStop> >::CCopyableUtlVector(CCopyableUtlVector<panorama::CGradientColorStop, CUtlMemory<panorama::CGradientColorStop> > const&)
@@ -3835,6 +3863,12 @@
  T CCuratorPreferences::SetCachedSize(int) const
  T CCuratorPreferences::SharedCtor()
  T CCuratorPreferences::SharedDtor()
+ T CCuratorPreferences::mutable_discussion_url()
+ T CCuratorPreferences::mutable_website_title()
+ T CCuratorPreferences::mutable_website_url()
+ T CCuratorPreferences::set_discussion_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCuratorPreferences::set_website_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCuratorPreferences::set_website_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCuratorPreferences::~CCuratorPreferences()
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDebugStatsValue::CDebugStatsValue(char const*)
@@ -3920,6 +3954,10 @@
  T CHTMLHeader::SetCachedSize(int) const
  T CHTMLHeader::SharedCtor()
  T CHTMLHeader::SharedDtor()
+ T CHTMLHeader::mutable_key()
+ T CHTMLHeader::mutable_value()
+ T CHTMLHeader::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CHTMLHeader::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CHTMLHeader::~CHTMLHeader()
  T CHTMLPageSecurityInfo::ByteSize() const
  T CHTMLPageSecurityInfo::CHTMLPageSecurityInfo()
@@ -3933,6 +3971,10 @@
  T CHTMLPageSecurityInfo::SetCachedSize(int) const
  T CHTMLPageSecurityInfo::SharedCtor()
  T CHTMLPageSecurityInfo::SharedDtor()
+ T CHTMLPageSecurityInfo::mutable_certname()
+ T CHTMLPageSecurityInfo::mutable_issuername()
+ T CHTMLPageSecurityInfo::set_certname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CHTMLPageSecurityInfo::set_issuername(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CHTMLPageSecurityInfo::~CHTMLPageSecurityInfo()
  T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
  T CIPCToolMachClient::DoKillCommand(char const*)
@@ -3951,6 +3993,8 @@
  T CJSMethodArgument::SetCachedSize(int) const
  T CJSMethodArgument::SharedCtor()
  T CJSMethodArgument::SharedDtor()
+ T CJSMethodArgument::mutable_json_data()
+ T CJSMethodArgument::set_json_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CJSMethodArgument::~CJSMethodArgument()
  T CJpegSourceMgr::error_exit(jpeg_common_struct*)
  T CJpegSourceMgr::imp_fill_input_buffer(jpeg_decompress_struct*)
@@ -3972,6 +4016,8 @@
  T CLocalizationToken::SetCachedSize(int) const
  T CLocalizationToken::SharedCtor()
  T CLocalizationToken::SharedDtor()
+ T CLocalizationToken::mutable_localized_string()
+ T CLocalizationToken::set_localized_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CLocalizationToken::~CLocalizationToken()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
@@ -4012,6 +4058,12 @@
  T CMSgJumpListMRUApp::SetCachedSize(int) const
  T CMSgJumpListMRUApp::SharedCtor()
  T CMSgJumpListMRUApp::SharedDtor()
+ T CMSgJumpListMRUApp::mutable_display_name()
+ T CMSgJumpListMRUApp::mutable_icon_path()
+ T CMSgJumpListMRUApp::mutable_url_link()
+ T CMSgJumpListMRUApp::set_display_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMSgJumpListMRUApp::set_icon_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMSgJumpListMRUApp::set_url_link(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMSgJumpListMRUApp::~CMSgJumpListMRUApp()
  T CMemoryPool::AddNewBlob()
  T CMemoryPool::Alloc()
@@ -4033,6 +4085,9 @@
  T CMsg3DTransformMatrix::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformMatrix::SetCachedSize(int) const
  T CMsg3DTransformMatrix::SharedDtor()
+ T CMsg3DTransformMatrix::mutable_base()
+ T CMsg3DTransformMatrix::mutable_transition()
+ T CMsg3DTransformMatrix::mutable_transition_data()
  T CMsg3DTransformMatrix::~CMsg3DTransformMatrix()
  T CMsg3DTransformMatrix_AnimationFrameData::ByteSize() const
  T CMsg3DTransformMatrix_AnimationFrameData::CMsg3DTransformMatrix_AnimationFrameData()
@@ -4045,6 +4100,7 @@
  T CMsg3DTransformMatrix_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformMatrix_AnimationFrameData::SetCachedSize(int) const
  T CMsg3DTransformMatrix_AnimationFrameData::default_instance()
+ T CMsg3DTransformMatrix_AnimationFrameData::mutable_data()
  T CMsg3DTransformMatrix_AnimationFrameData::~CMsg3DTransformMatrix_AnimationFrameData()
  T CMsg3DTransformOrigin::ByteSize() const
  T CMsg3DTransformOrigin::CMsg3DTransformOrigin()
@@ -4058,6 +4114,9 @@
  T CMsg3DTransformOrigin::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformOrigin::SetCachedSize(int) const
  T CMsg3DTransformOrigin::SharedDtor()
+ T CMsg3DTransformOrigin::mutable_base()
+ T CMsg3DTransformOrigin::mutable_transition()
+ T CMsg3DTransformOrigin::mutable_transition_data()
  T CMsg3DTransformOrigin::~CMsg3DTransformOrigin()
  T CMsg3DTransformOrigin_AnimationFrameData::ByteSize() const
  T CMsg3DTransformOrigin_AnimationFrameData::CMsg3DTransformOrigin_AnimationFrameData()
@@ -4070,6 +4129,7 @@
  T CMsg3DTransformOrigin_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformOrigin_AnimationFrameData::SetCachedSize(int) const
  T CMsg3DTransformOrigin_AnimationFrameData::default_instance()
+ T CMsg3DTransformOrigin_AnimationFrameData::mutable_data()
  T CMsg3DTransformOrigin_AnimationFrameData::~CMsg3DTransformOrigin_AnimationFrameData()
  T CMsg3DTransformPerspective::ByteSize() const
  T CMsg3DTransformPerspective::CMsg3DTransformPerspective()
@@ -4081,6 +4141,7 @@
  T CMsg3DTransformPerspective::New() const
  T CMsg3DTransformPerspective::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformPerspective::SetCachedSize(int) const
+ T CMsg3DTransformPerspective::mutable_transition_data()
  T CMsg3DTransformPerspective::~CMsg3DTransformPerspective()
  T CMsg3DTransformPerspectiveOrigin::ByteSize() const
  T CMsg3DTransformPerspectiveOrigin::CMsg3DTransformPerspectiveOrigin()
@@ -4094,6 +4155,9 @@
  T CMsg3DTransformPerspectiveOrigin::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformPerspectiveOrigin::SetCachedSize(int) const
  T CMsg3DTransformPerspectiveOrigin::SharedDtor()
+ T CMsg3DTransformPerspectiveOrigin::mutable_base()
+ T CMsg3DTransformPerspectiveOrigin::mutable_transition()
+ T CMsg3DTransformPerspectiveOrigin::mutable_transition_data()
  T CMsg3DTransformPerspectiveOrigin::~CMsg3DTransformPerspectiveOrigin()
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::ByteSize() const
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::CMsg3DTransformPerspectiveOrigin_AnimationFrameData()
@@ -4106,6 +4170,7 @@
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::SetCachedSize(int) const
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::default_instance()
+ T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::mutable_data()
  T CMsg3DTransformPerspectiveOrigin_AnimationFrameData::~CMsg3DTransformPerspectiveOrigin_AnimationFrameData()
  T CMsg3DTransformPerspective_AnimationFrameData::ByteSize() const
  T CMsg3DTransformPerspective_AnimationFrameData::CMsg3DTransformPerspective_AnimationFrameData()
@@ -4153,6 +4218,10 @@
  T CMsgAddHeader::SetCachedSize(int) const
  T CMsgAddHeader::SharedCtor()
  T CMsgAddHeader::SharedDtor()
+ T CMsgAddHeader::mutable_key()
+ T CMsgAddHeader::mutable_value()
+ T CMsgAddHeader::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgAddHeader::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAddHeader::~CMsgAddHeader()
  T CMsgAnimationData::ByteSize() const
  T CMsgAnimationData::CMsgAnimationData()
@@ -4199,6 +4268,8 @@
  T CMsgAuthTicket::SetCachedSize(int) const
  T CMsgAuthTicket::SharedCtor()
  T CMsgAuthTicket::SharedDtor()
+ T CMsgAuthTicket::mutable_ticket()
+ T CMsgAuthTicket::set_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAuthTicket::~CMsgAuthTicket()
  T CMsgAuthedSteamDomains::ByteSize() const
  T CMsgAuthedSteamDomains::CMsgAuthedSteamDomains()
@@ -4260,6 +4331,9 @@
  T CMsgBorder::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBorder::SetCachedSize(int) const
  T CMsgBorder::SharedDtor()
+ T CMsgBorder::mutable_base()
+ T CMsgBorder::mutable_transition()
+ T CMsgBorder::mutable_transition_data()
  T CMsgBorder::~CMsgBorder()
  T CMsgBorderRadius::ByteSize() const
  T CMsgBorderRadius::CMsgBorderRadius()
@@ -4273,6 +4347,9 @@
  T CMsgBorderRadius::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBorderRadius::SetCachedSize(int) const
  T CMsgBorderRadius::SharedDtor()
+ T CMsgBorderRadius::mutable_base()
+ T CMsgBorderRadius::mutable_transition()
+ T CMsgBorderRadius::mutable_transition_data()
  T CMsgBorderRadius::~CMsgBorderRadius()
  T CMsgBorderRadius_AnimationFrameData::ByteSize() const
  T CMsgBorderRadius_AnimationFrameData::CMsgBorderRadius_AnimationFrameData()
@@ -4285,6 +4362,7 @@
  T CMsgBorderRadius_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBorderRadius_AnimationFrameData::SetCachedSize(int) const
  T CMsgBorderRadius_AnimationFrameData::default_instance()
+ T CMsgBorderRadius_AnimationFrameData::mutable_data()
  T CMsgBorderRadius_AnimationFrameData::~CMsgBorderRadius_AnimationFrameData()
  T CMsgBorder_AnimationFrameData::ByteSize() const
  T CMsgBorder_AnimationFrameData::CMsgBorder_AnimationFrameData()
@@ -4297,6 +4375,7 @@
  T CMsgBorder_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBorder_AnimationFrameData::SetCachedSize(int) const
  T CMsgBorder_AnimationFrameData::default_instance()
+ T CMsgBorder_AnimationFrameData::mutable_data()
  T CMsgBorder_AnimationFrameData::~CMsgBorder_AnimationFrameData()
  T CMsgBoxShadow::ByteSize() const
  T CMsgBoxShadow::CMsgBoxShadow()
@@ -4310,6 +4389,9 @@
  T CMsgBoxShadow::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBoxShadow::SetCachedSize(int) const
  T CMsgBoxShadow::SharedDtor()
+ T CMsgBoxShadow::mutable_base()
+ T CMsgBoxShadow::mutable_transition()
+ T CMsgBoxShadow::mutable_transition_data()
  T CMsgBoxShadow::~CMsgBoxShadow()
  T CMsgBoxShadow_AnimationFrameData::ByteSize() const
  T CMsgBoxShadow_AnimationFrameData::CMsgBoxShadow_AnimationFrameData()
@@ -4322,6 +4404,7 @@
  T CMsgBoxShadow_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBoxShadow_AnimationFrameData::SetCachedSize(int) const
  T CMsgBoxShadow_AnimationFrameData::default_instance()
+ T CMsgBoxShadow_AnimationFrameData::mutable_data()
  T CMsgBoxShadow_AnimationFrameData::~CMsgBoxShadow_AnimationFrameData()
  T CMsgBrightness::ByteSize() const
  T CMsgBrightness::CMsgBrightness()
@@ -4333,6 +4416,7 @@
  T CMsgBrightness::New() const
  T CMsgBrightness::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgBrightness::SetCachedSize(int) const
+ T CMsgBrightness::mutable_transition_data()
  T CMsgBrightness::~CMsgBrightness()
  T CMsgBrightness_AnimationFrameData::ByteSize() const
  T CMsgBrightness_AnimationFrameData::CMsgBrightness_AnimationFrameData()
@@ -4369,6 +4453,14 @@
  T CMsgBrowserCreate::SetCachedSize(int) const
  T CMsgBrowserCreate::SharedCtor()
  T CMsgBrowserCreate::SharedDtor()
+ T CMsgBrowserCreate::mutable_user_css()
+ T CMsgBrowserCreate::mutable_useragent()
+ T CMsgBrowserCreate::mutable_vroverlay_key()
+ T CMsgBrowserCreate::mutable_window_icon()
+ T CMsgBrowserCreate::set_user_css(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_useragent(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_vroverlay_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserCreate::set_window_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserCreate::~CMsgBrowserCreate()
  T CMsgBrowserCreateResponse::ByteSize() const
  T CMsgBrowserCreateResponse::CMsgBrowserCreateResponse()
@@ -4393,6 +4485,20 @@
  T CMsgBrowserErrorStrings::SetCachedSize(int) const
  T CMsgBrowserErrorStrings::SharedCtor()
  T CMsgBrowserErrorStrings::SharedDtor()
+ T CMsgBrowserErrorStrings::mutable_bad_url()
+ T CMsgBrowserErrorStrings::mutable_cache_miss()
+ T CMsgBrowserErrorStrings::mutable_connection_problem()
+ T CMsgBrowserErrorStrings::mutable_header()
+ T CMsgBrowserErrorStrings::mutable_proxy_problem()
+ T CMsgBrowserErrorStrings::mutable_title()
+ T CMsgBrowserErrorStrings::mutable_unknown()
+ T CMsgBrowserErrorStrings::set_bad_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_cache_miss(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_connection_problem(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_header(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_proxy_problem(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgBrowserErrorStrings::set_unknown(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserErrorStrings::~CMsgBrowserErrorStrings()
  T CMsgBrowserPosition::ByteSize() const
  T CMsgBrowserPosition::CMsgBrowserPosition()
@@ -4417,6 +4523,8 @@
  T CMsgBrowserReady::SetCachedSize(int) const
  T CMsgBrowserReady::SharedCtor()
  T CMsgBrowserReady::SharedDtor()
+ T CMsgBrowserReady::mutable_vr_overlay_key()
+ T CMsgBrowserReady::set_vr_overlay_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserReady::~CMsgBrowserReady()
  T CMsgBrowserRemove::ByteSize() const
  T CMsgBrowserRemove::CMsgBrowserRemove()
@@ -4530,6 +4638,9 @@
  T CMsgClip::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgClip::SetCachedSize(int) const
  T CMsgClip::SharedDtor()
+ T CMsgClip::mutable_base()
+ T CMsgClip::mutable_transition()
+ T CMsgClip::mutable_transition_data()
  T CMsgClip::~CMsgClip()
  T CMsgClipData::ByteSize() const
  T CMsgClipData::CMsgClipData()
@@ -4541,6 +4652,7 @@
  T CMsgClipData::New() const
  T CMsgClipData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgClipData::SetCachedSize(int) const
+ T CMsgClipData::mutable_radial_clip()
  T CMsgClipData::~CMsgClipData()
  T CMsgClip_AnimationFrameData::ByteSize() const
  T CMsgClip_AnimationFrameData::CMsgClip_AnimationFrameData()
@@ -4553,6 +4665,7 @@
  T CMsgClip_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgClip_AnimationFrameData::SetCachedSize(int) const
  T CMsgClip_AnimationFrameData::default_instance()
+ T CMsgClip_AnimationFrameData::mutable_data()
  T CMsgClip_AnimationFrameData::~CMsgClip_AnimationFrameData()
  T CMsgClose::ByteSize() const
  T CMsgClose::CMsgClose()
@@ -4597,6 +4710,7 @@
  T CMsgColor::New() const
  T CMsgColor::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgColor::SetCachedSize(int) const
+ T CMsgColor::mutable_transition_data()
  T CMsgColor::~CMsgColor()
  T CMsgColorStop::ByteSize() const
  T CMsgColorStop::CMsgColorStop()
@@ -4643,6 +4757,7 @@
  T CMsgContrast::New() const
  T CMsgContrast::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgContrast::SetCachedSize(int) const
+ T CMsgContrast::mutable_transition_data()
  T CMsgContrast::~CMsgContrast()
  T CMsgContrast_AnimationFrameData::ByteSize() const
  T CMsgContrast_AnimationFrameData::CMsgContrast_AnimationFrameData()
@@ -4749,6 +4864,9 @@
  T CMsgDrawFilledRect::SetCachedSize(int) const
  T CMsgDrawFilledRect::SharedDtor()
  T CMsgDrawFilledRect::default_instance()
+ T CMsgDrawFilledRect::mutable_bottom_right()
+ T CMsgDrawFilledRect::mutable_fill_brush_collection()
+ T CMsgDrawFilledRect::mutable_top_left()
  T CMsgDrawFilledRect::~CMsgDrawFilledRect()
  T CMsgDrawTextRegion::ByteSize() const
  T CMsgDrawTextRegion::CMsgDrawTextRegion()
@@ -4764,6 +4882,12 @@
  T CMsgDrawTextRegion::SharedCtor()
  T CMsgDrawTextRegion::SharedDtor()
  T CMsgDrawTextRegion::default_instance()
+ T CMsgDrawTextRegion::mutable_bottom_right()
+ T CMsgDrawTextRegion::mutable_default_format()
+ T CMsgDrawTextRegion::mutable_raw_text()
+ T CMsgDrawTextRegion::mutable_top_left()
+ T CMsgDrawTextRegion::set_raw_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgDrawTextRegion::set_raw_text(void const*, unsigned long)
  T CMsgDrawTextRegion::~CMsgDrawTextRegion()
  T CMsgDrawTexturedRect::ByteSize() const
  T CMsgDrawTexturedRect::CMsgDrawTexturedRect()
@@ -4778,18 +4902,12 @@
  T CMsgDrawTexturedRect::SetCachedSize(int) const
  T CMsgDrawTexturedRect::SharedDtor()
  T CMsgDrawTexturedRect::default_instance()
+ T CMsgDrawTexturedRect::mutable_bottom_right()
+ T CMsgDrawTexturedRect::mutable_texture_bottom_right()
+ T CMsgDrawTexturedRect::mutable_texture_opacity()
+ T CMsgDrawTexturedRect::mutable_texture_top_left()
+ T CMsgDrawTexturedRect::mutable_top_left()
  T CMsgDrawTexturedRect::~CMsgDrawTexturedRect()
- T CMsgEnableSteamClientAPI::ByteSize() const
- T CMsgEnableSteamClientAPI::CMsgEnableSteamClientAPI()
- T CMsgEnableSteamClientAPI::Clear()
- T CMsgEnableSteamClientAPI::GetCachedSize() const
- T CMsgEnableSteamClientAPI::GetMetadata() const
- T CMsgEnableSteamClientAPI::IsInitialized() const
- T CMsgEnableSteamClientAPI::MergeFrom(CMsgEnableSteamClientAPI const&)
- T CMsgEnableSteamClientAPI::New() const
- T CMsgEnableSteamClientAPI::SerializeWithCachedSizesToArray(unsigned char*) const
- T CMsgEnableSteamClientAPI::SetCachedSize(int) const
- T CMsgEnableSteamClientAPI::~CMsgEnableSteamClientAPI()
  T CMsgEndFrame::ByteSize() const
  T CMsgEndFrame::CMsgEndFrame()
  T CMsgEndFrame::Clear()
@@ -4838,6 +4956,8 @@
  T CMsgExecuteJavaScript::SetCachedSize(int) const
  T CMsgExecuteJavaScript::SharedCtor()
  T CMsgExecuteJavaScript::SharedDtor()
+ T CMsgExecuteJavaScript::mutable_script()
+ T CMsgExecuteJavaScript::set_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgExecuteJavaScript::~CMsgExecuteJavaScript()
  T CMsgExitFullScreen::ByteSize() const
  T CMsgExitFullScreen::CMsgExitFullScreen()
@@ -4862,6 +4982,10 @@
  T CMsgFileLoadDialog::SetCachedSize(int) const
  T CMsgFileLoadDialog::SharedCtor()
  T CMsgFileLoadDialog::SharedDtor()
+ T CMsgFileLoadDialog::mutable_initialfile()
+ T CMsgFileLoadDialog::mutable_title()
+ T CMsgFileLoadDialog::set_initialfile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgFileLoadDialog::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFileLoadDialog::~CMsgFileLoadDialog()
  T CMsgFileLoadDialogResponse::ByteSize() const
  T CMsgFileLoadDialogResponse::CMsgFileLoadDialogResponse()
@@ -4889,6 +5013,9 @@
  T CMsgFillBrush::SetCachedSize(int) const
  T CMsgFillBrush::SharedDtor()
  T CMsgFillBrush::default_instance()
+ T CMsgFillBrush::mutable_linear_gradient()
+ T CMsgFillBrush::mutable_particle_system()
+ T CMsgFillBrush::mutable_radial_gradient()
  T CMsgFillBrush::~CMsgFillBrush()
  T CMsgFillBrushCollection::ByteSize() const
  T CMsgFillBrushCollection::CMsgFillBrushCollection()
@@ -4902,6 +5029,7 @@
  T CMsgFillBrushCollection::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgFillBrushCollection::SetCachedSize(int) const
  T CMsgFillBrushCollection::default_instance()
+ T CMsgFillBrushCollection::mutable_transition_data()
  T CMsgFillBrushCollection::~CMsgFillBrushCollection()
  T CMsgFillBrushCollection_AnimationFrameData::ByteSize() const
  T CMsgFillBrushCollection_AnimationFrameData::CMsgFillBrushCollection_AnimationFrameData()
@@ -4927,6 +5055,8 @@
  T CMsgFind::SetCachedSize(int) const
  T CMsgFind::SharedCtor()
  T CMsgFind::SharedDtor()
+ T CMsgFind::mutable_find()
+ T CMsgFind::set_find(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFind::~CMsgFind()
  T CMsgFinishedRequest::ByteSize() const
  T CMsgFinishedRequest::CMsgFinishedRequest()
@@ -4940,6 +5070,10 @@
  T CMsgFinishedRequest::SetCachedSize(int) const
  T CMsgFinishedRequest::SharedCtor()
  T CMsgFinishedRequest::SharedDtor()
+ T CMsgFinishedRequest::mutable_pagetitle()
+ T CMsgFinishedRequest::mutable_url()
+ T CMsgFinishedRequest::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgFinishedRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFinishedRequest::~CMsgFinishedRequest()
  T CMsgFocusedNodeText::ByteSize() const
  T CMsgFocusedNodeText::CMsgFocusedNodeText()
@@ -4964,6 +5098,8 @@
  T CMsgFocusedNodeTextResponse::SetCachedSize(int) const
  T CMsgFocusedNodeTextResponse::SharedCtor()
  T CMsgFocusedNodeTextResponse::SharedDtor()
+ T CMsgFocusedNodeTextResponse::mutable_value()
+ T CMsgFocusedNodeTextResponse::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFocusedNodeTextResponse::~CMsgFocusedNodeTextResponse()
  T CMsgFreeCompositingLayer::ByteSize() const
  T CMsgFreeCompositingLayer::CMsgFreeCompositingLayer()
@@ -5022,6 +5158,9 @@
  T CMsgGaussianBlur::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgGaussianBlur::SetCachedSize(int) const
  T CMsgGaussianBlur::SharedDtor()
+ T CMsgGaussianBlur::mutable_base()
+ T CMsgGaussianBlur::mutable_transition()
+ T CMsgGaussianBlur::mutable_transition_data()
  T CMsgGaussianBlur::~CMsgGaussianBlur()
  T CMsgGaussianBlur_AnimationFrameData::ByteSize() const
  T CMsgGaussianBlur_AnimationFrameData::CMsgGaussianBlur_AnimationFrameData()
@@ -5034,6 +5173,7 @@
  T CMsgGaussianBlur_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgGaussianBlur_AnimationFrameData::SetCachedSize(int) const
  T CMsgGaussianBlur_AnimationFrameData::default_instance()
+ T CMsgGaussianBlur_AnimationFrameData::mutable_data()
  T CMsgGaussianBlur_AnimationFrameData::~CMsgGaussianBlur_AnimationFrameData()
  T CMsgGaussianValues::ByteSize() const
  T CMsgGaussianValues::CMsgGaussianValues()
@@ -5058,6 +5198,8 @@
  T CMsgGetCookiesForURL::SetCachedSize(int) const
  T CMsgGetCookiesForURL::SharedCtor()
  T CMsgGetCookiesForURL::SharedDtor()
+ T CMsgGetCookiesForURL::mutable_url()
+ T CMsgGetCookiesForURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgGetCookiesForURL::~CMsgGetCookiesForURL()
  T CMsgGetCookiesForURLResponse::ByteSize() const
  T CMsgGetCookiesForURLResponse::CMsgGetCookiesForURLResponse()
@@ -5071,6 +5213,8 @@
  T CMsgGetCookiesForURLResponse::SetCachedSize(int) const
  T CMsgGetCookiesForURLResponse::SharedCtor()
  T CMsgGetCookiesForURLResponse::SharedDtor()
+ T CMsgGetCookiesForURLResponse::mutable_url()
+ T CMsgGetCookiesForURLResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgGetCookiesForURLResponse::~CMsgGetCookiesForURLResponse()
  T CMsgGetZoom::ByteSize() const
  T CMsgGetZoom::CMsgGetZoom()
@@ -5181,6 +5325,7 @@
  T CMsgHueShift::New() const
  T CMsgHueShift::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgHueShift::SetCachedSize(int) const
+ T CMsgHueShift::mutable_transition_data()
  T CMsgHueShift::~CMsgHueShift()
  T CMsgHueShift_AnimationFrameData::ByteSize() const
  T CMsgHueShift_AnimationFrameData::CMsgHueShift_AnimationFrameData()
@@ -5217,6 +5362,8 @@
  T CMsgImeCommitText::SetCachedSize(int) const
  T CMsgImeCommitText::SharedCtor()
  T CMsgImeCommitText::SharedDtor()
+ T CMsgImeCommitText::mutable_text()
+ T CMsgImeCommitText::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeCommitText::~CMsgImeCommitText()
  T CMsgImeCompositionRangeChanged::ByteSize() const
  T CMsgImeCompositionRangeChanged::CMsgImeCompositionRangeChanged()
@@ -5241,6 +5388,8 @@
  T CMsgImeSetComposition::SetCachedSize(int) const
  T CMsgImeSetComposition::SharedCtor()
  T CMsgImeSetComposition::SharedDtor()
+ T CMsgImeSetComposition::mutable_text()
+ T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
@@ -5254,6 +5403,8 @@
  T CMsgJSAlert::SetCachedSize(int) const
  T CMsgJSAlert::SharedCtor()
  T CMsgJSAlert::SharedDtor()
+ T CMsgJSAlert::mutable_message()
+ T CMsgJSAlert::set_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSAlert::~CMsgJSAlert()
  T CMsgJSConfirm::ByteSize() const
  T CMsgJSConfirm::CMsgJSConfirm()
@@ -5267,6 +5418,8 @@
  T CMsgJSConfirm::SetCachedSize(int) const
  T CMsgJSConfirm::SharedCtor()
  T CMsgJSConfirm::SharedDtor()
+ T CMsgJSConfirm::mutable_message()
+ T CMsgJSConfirm::set_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSConfirm::~CMsgJSConfirm()
  T CMsgJSDialogResponse::ByteSize() const
  T CMsgJSDialogResponse::CMsgJSDialogResponse()
@@ -5302,6 +5455,8 @@
  T CMsgJSMethodCall::SetCachedSize(int) const
  T CMsgJSMethodCall::SharedCtor()
  T CMsgJSMethodCall::SharedDtor()
+ T CMsgJSMethodCall::mutable_name()
+ T CMsgJSMethodCall::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSMethodCall::~CMsgJSMethodCall()
  T CMsgJSRaiseException::ByteSize() const
  T CMsgJSRaiseException::CMsgJSRaiseException()
@@ -5315,6 +5470,8 @@
  T CMsgJSRaiseException::SetCachedSize(int) const
  T CMsgJSRaiseException::SharedCtor()
  T CMsgJSRaiseException::SharedDtor()
+ T CMsgJSRaiseException::mutable_exception()
+ T CMsgJSRaiseException::set_exception(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSRaiseException::~CMsgJSRaiseException()
  T CMsgJSRegisterMethod::ByteSize() const
  T CMsgJSRegisterMethod::CMsgJSRegisterMethod()
@@ -5328,6 +5485,8 @@
  T CMsgJSRegisterMethod::SetCachedSize(int) const
  T CMsgJSRegisterMethod::SharedCtor()
  T CMsgJSRegisterMethod::SharedDtor()
+ T CMsgJSRegisterMethod::mutable_name()
+ T CMsgJSRegisterMethod::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSRegisterMethod::~CMsgJSRegisterMethod()
  T CMsgJSReleaseCallback::ByteSize() const
  T CMsgJSReleaseCallback::CMsgJSReleaseCallback()
@@ -5352,6 +5511,8 @@
  T CMsgJSValue::SetCachedSize(int) const
  T CMsgJSValue::SharedCtor()
  T CMsgJSValue::SharedDtor()
+ T CMsgJSValue::mutable_string_value()
+ T CMsgJSValue::set_string_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue::~CMsgJSValue()
  T CMsgJSValue_JSObjectProperty::ByteSize() const
  T CMsgJSValue_JSObjectProperty::CMsgJSValue_JSObjectProperty()
@@ -5365,6 +5526,9 @@
  T CMsgJSValue_JSObjectProperty::SetCachedSize(int) const
  T CMsgJSValue_JSObjectProperty::SharedCtor()
  T CMsgJSValue_JSObjectProperty::SharedDtor()
+ T CMsgJSValue_JSObjectProperty::mutable_name()
+ T CMsgJSValue_JSObjectProperty::mutable_value()
+ T CMsgJSValue_JSObjectProperty::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue_JSObjectProperty::~CMsgJSValue_JSObjectProperty()
  T CMsgJumpListLink::ByteSize() const
  T CMsgJumpListLink::CMsgJumpListLink()
@@ -5378,6 +5542,12 @@
  T CMsgJumpListLink::SetCachedSize(int) const
  T CMsgJumpListLink::SharedCtor()
  T CMsgJumpListLink::SharedDtor()
+ T CMsgJumpListLink::mutable_display_name()
+ T CMsgJumpListLink::mutable_icon_path()
+ T CMsgJumpListLink::mutable_url_link()
+ T CMsgJumpListLink::set_display_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgJumpListLink::set_icon_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgJumpListLink::set_url_link(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJumpListLink::~CMsgJumpListLink()
  T CMsgKeyChar::ByteSize() const
  T CMsgKeyChar::CMsgKeyChar()
@@ -5424,6 +5594,8 @@
  T CMsgLinearGradient::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgLinearGradient::SetCachedSize(int) const
  T CMsgLinearGradient::SharedDtor()
+ T CMsgLinearGradient::mutable_end_position()
+ T CMsgLinearGradient::mutable_start_position()
  T CMsgLinearGradient::~CMsgLinearGradient()
  T CMsgLinkAtPosition::ByteSize() const
  T CMsgLinkAtPosition::CMsgLinkAtPosition()
@@ -5448,6 +5620,8 @@
  T CMsgLinkAtPositionResponse::SetCachedSize(int) const
  T CMsgLinkAtPositionResponse::SharedCtor()
  T CMsgLinkAtPositionResponse::SharedDtor()
+ T CMsgLinkAtPositionResponse::mutable_url()
+ T CMsgLinkAtPositionResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLinkAtPositionResponse::~CMsgLinkAtPositionResponse()
  T CMsgLoadLocalization::ByteSize() const
  T CMsgLoadLocalization::CMsgLoadLocalization()
@@ -5461,6 +5635,10 @@
  T CMsgLoadLocalization::SetCachedSize(int) const
  T CMsgLoadLocalization::SharedCtor()
  T CMsgLoadLocalization::SharedDtor()
+ T CMsgLoadLocalization::mutable_language()
+ T CMsgLoadLocalization::mutable_localization_path()
+ T CMsgLoadLocalization::set_language(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgLoadLocalization::set_localization_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadLocalization::~CMsgLoadLocalization()
  T CMsgLoadedRequest::ByteSize() const
  T CMsgLoadedRequest::CMsgLoadedRequest()
@@ -5474,6 +5652,10 @@
  T CMsgLoadedRequest::SetCachedSize(int) const
  T CMsgLoadedRequest::SharedCtor()
  T CMsgLoadedRequest::SharedDtor()
+ T CMsgLoadedRequest::mutable_pagetitle()
+ T CMsgLoadedRequest::mutable_url()
+ T CMsgLoadedRequest::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgLoadedRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadedRequest::~CMsgLoadedRequest()
  T CMsgLoadingResource::ByteSize() const
  T CMsgLoadingResource::CMsgLoadingResource()
@@ -5487,6 +5669,8 @@
  T CMsgLoadingResource::SetCachedSize(int) const
  T CMsgLoadingResource::SharedCtor()
  T CMsgLoadingResource::SharedDtor()
+ T CMsgLoadingResource::mutable_url()
+ T CMsgLoadingResource::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgLoadingResource::~CMsgLoadingResource()
  T CMsgLockTexture::ByteSize() const
  T CMsgLockTexture::CMsgLockTexture()
@@ -5545,6 +5729,9 @@
  T CMsgMotionBlur::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgMotionBlur::SetCachedSize(int) const
  T CMsgMotionBlur::SharedDtor()
+ T CMsgMotionBlur::mutable_base()
+ T CMsgMotionBlur::mutable_transition()
+ T CMsgMotionBlur::mutable_transition_data()
  T CMsgMotionBlur::~CMsgMotionBlur()
  T CMsgMotionBlurValues::ByteSize() const
  T CMsgMotionBlurValues::CMsgMotionBlurValues()
@@ -5568,6 +5755,7 @@
  T CMsgMotionBlur_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgMotionBlur_AnimationFrameData::SetCachedSize(int) const
  T CMsgMotionBlur_AnimationFrameData::default_instance()
+ T CMsgMotionBlur_AnimationFrameData::mutable_data()
  T CMsgMotionBlur_AnimationFrameData::~CMsgMotionBlur_AnimationFrameData()
  T CMsgMouseDblClick::ByteSize() const
  T CMsgMouseDblClick::CMsgMouseDblClick()
@@ -5647,6 +5835,8 @@
  T CMsgMulti::SetCachedSize(int) const
  T CMsgMulti::SharedCtor()
  T CMsgMulti::SharedDtor()
+ T CMsgMulti::mutable_message_body()
+ T CMsgMulti::set_message_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgMulti::~CMsgMulti()
  T CMsgNeedsPaint::ByteSize() const
  T CMsgNeedsPaint::CMsgNeedsPaint()
@@ -5682,6 +5872,14 @@
  T CMsgNodeHasFocus::SetCachedSize(int) const
  T CMsgNodeHasFocus::SharedCtor()
  T CMsgNodeHasFocus::SharedDtor()
+ T CMsgNodeHasFocus::mutable_elementtagname()
+ T CMsgNodeHasFocus::mutable_input_type()
+ T CMsgNodeHasFocus::mutable_name()
+ T CMsgNodeHasFocus::mutable_searchbuttontext()
+ T CMsgNodeHasFocus::set_elementtagname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_input_type(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgNodeHasFocus::set_searchbuttontext(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgNodeHasFocus::~CMsgNodeHasFocus()
  T CMsgOpacity::ByteSize() const
  T CMsgOpacity::CMsgOpacity()
@@ -5694,6 +5892,7 @@
  T CMsgOpacity::New() const
  T CMsgOpacity::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgOpacity::SetCachedSize(int) const
+ T CMsgOpacity::mutable_transition_data()
  T CMsgOpacity::~CMsgOpacity()
  T CMsgOpacityMask::ByteSize() const
  T CMsgOpacityMask::CMsgOpacityMask()
@@ -5707,6 +5906,9 @@
  T CMsgOpacityMask::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgOpacityMask::SetCachedSize(int) const
  T CMsgOpacityMask::SharedDtor()
+ T CMsgOpacityMask::mutable_base()
+ T CMsgOpacityMask::mutable_transition()
+ T CMsgOpacityMask::mutable_transition_data()
  T CMsgOpacityMask::~CMsgOpacityMask()
  T CMsgOpacityMaskData::ByteSize() const
  T CMsgOpacityMaskData::CMsgOpacityMaskData()
@@ -5730,6 +5932,7 @@
  T CMsgOpacityMask_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgOpacityMask_AnimationFrameData::SetCachedSize(int) const
  T CMsgOpacityMask_AnimationFrameData::default_instance()
+ T CMsgOpacityMask_AnimationFrameData::mutable_data()
  T CMsgOpacityMask_AnimationFrameData::~CMsgOpacityMask_AnimationFrameData()
  T CMsgOpacity_AnimationFrameData::ByteSize() const
  T CMsgOpacity_AnimationFrameData::CMsgOpacity_AnimationFrameData()
@@ -5766,6 +5969,8 @@
  T CMsgOpenNewTab::SetCachedSize(int) const
  T CMsgOpenNewTab::SharedCtor()
  T CMsgOpenNewTab::SharedDtor()
+ T CMsgOpenNewTab::mutable_url()
+ T CMsgOpenNewTab::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgOpenNewTab::~CMsgOpenNewTab()
  T CMsgOpenSteamURL::ByteSize() const
  T CMsgOpenSteamURL::CMsgOpenSteamURL()
@@ -5779,6 +5984,10 @@
  T CMsgOpenSteamURL::SetCachedSize(int) const
  T CMsgOpenSteamURL::SharedCtor()
  T CMsgOpenSteamURL::SharedDtor()
+ T CMsgOpenSteamURL::mutable_referrer()
+ T CMsgOpenSteamURL::mutable_url()
+ T CMsgOpenSteamURL::set_referrer(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgOpenSteamURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgOpenSteamURL::~CMsgOpenSteamURL()
  T CMsgPageSecurity::ByteSize() const
  T CMsgPageSecurity::CMsgPageSecurity()
@@ -5792,6 +6001,9 @@
  T CMsgPageSecurity::SetCachedSize(int) const
  T CMsgPageSecurity::SharedCtor()
  T CMsgPageSecurity::SharedDtor()
+ T CMsgPageSecurity::mutable_security_info()
+ T CMsgPageSecurity::mutable_url()
+ T CMsgPageSecurity::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPageSecurity::~CMsgPageSecurity()
  T CMsgPanelPosition::ByteSize() const
  T CMsgPanelPosition::CMsgPanelPosition()
@@ -5805,6 +6017,13 @@
  T CMsgPanelPosition::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgPanelPosition::SetCachedSize(int) const
  T CMsgPanelPosition::SharedDtor()
+ T CMsgPanelPosition::mutable_base()
+ T CMsgPanelPosition::mutable_scroll_offset()
+ T CMsgPanelPosition::mutable_scroll_offset_target()
+ T CMsgPanelPosition::mutable_scroll_transition_x()
+ T CMsgPanelPosition::mutable_scroll_transition_y()
+ T CMsgPanelPosition::mutable_transition()
+ T CMsgPanelPosition::mutable_transition_data()
  T CMsgPanelPosition::~CMsgPanelPosition()
  T CMsgPanelPosition_AnimationFrameData::ByteSize() const
  T CMsgPanelPosition_AnimationFrameData::CMsgPanelPosition_AnimationFrameData()
@@ -5817,6 +6036,7 @@
  T CMsgPanelPosition_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgPanelPosition_AnimationFrameData::SetCachedSize(int) const
  T CMsgPanelPosition_AnimationFrameData::default_instance()
+ T CMsgPanelPosition_AnimationFrameData::mutable_data()
  T CMsgPanelPosition_AnimationFrameData::~CMsgPanelPosition_AnimationFrameData()
  T CMsgParticle::ByteSize() const
  T CMsgParticle::CMsgParticle()
@@ -5828,6 +6048,7 @@
  T CMsgParticle::New() const
  T CMsgParticle::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgParticle::SetCachedSize(int) const
+ T CMsgParticle::mutable_particle_position()
  T CMsgParticle::~CMsgParticle()
  T CMsgParticleSystem::ByteSize() const
  T CMsgParticleSystem::CMsgParticleSystem()
@@ -5841,6 +6062,14 @@
  T CMsgParticleSystem::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgParticleSystem::SetCachedSize(int) const
  T CMsgParticleSystem::SharedDtor()
+ T CMsgParticleSystem::mutable_base_position()
+ T CMsgParticleSystem::mutable_base_position_variance()
+ T CMsgParticleSystem::mutable_gravity_acceleration()
+ T CMsgParticleSystem::mutable_gravity_acceleration_particle_variance()
+ T CMsgParticleSystem::mutable_particle_initial_velocity()
+ T CMsgParticleSystem::mutable_particle_initial_velocity_variance()
+ T CMsgParticleSystem::mutable_particle_velocity_max()
+ T CMsgParticleSystem::mutable_particle_velocity_min()
  T CMsgParticleSystem::~CMsgParticleSystem()
  T CMsgPaste::ByteSize() const
  T CMsgPaste::CMsgPaste()
@@ -5898,6 +6127,9 @@
  T CMsgPointWithTransition::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgPointWithTransition::SetCachedSize(int) const
  T CMsgPointWithTransition::SharedDtor()
+ T CMsgPointWithTransition::mutable_base()
+ T CMsgPointWithTransition::mutable_transition()
+ T CMsgPointWithTransition::mutable_transition_data()
  T CMsgPointWithTransition::~CMsgPointWithTransition()
  T CMsgPointWithTransition_AnimationFrameData::ByteSize() const
  T CMsgPointWithTransition_AnimationFrameData::CMsgPointWithTransition_AnimationFrameData()
@@ -5910,6 +6142,7 @@
  T CMsgPointWithTransition_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgPointWithTransition_AnimationFrameData::SetCachedSize(int) const
  T CMsgPointWithTransition_AnimationFrameData::default_instance()
+ T CMsgPointWithTransition_AnimationFrameData::mutable_data()
  T CMsgPointWithTransition_AnimationFrameData::~CMsgPointWithTransition_AnimationFrameData()
  T CMsgPopAAndTContext::ByteSize() const
  T CMsgPopAAndTContext::CMsgPopAAndTContext()
@@ -5971,6 +6204,8 @@
  T CMsgPopupHTMLWindow::SetCachedSize(int) const
  T CMsgPopupHTMLWindow::SharedCtor()
  T CMsgPopupHTMLWindow::SharedDtor()
+ T CMsgPopupHTMLWindow::mutable_url()
+ T CMsgPopupHTMLWindow::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPopupHTMLWindow::~CMsgPopupHTMLWindow()
  T CMsgPopupHTMLWindowResponse::ByteSize() const
  T CMsgPopupHTMLWindowResponse::CMsgPopupHTMLWindowResponse()
@@ -5995,6 +6230,10 @@
  T CMsgPostURL::SetCachedSize(int) const
  T CMsgPostURL::SharedCtor()
  T CMsgPostURL::SharedDtor()
+ T CMsgPostURL::mutable_post()
+ T CMsgPostURL::mutable_url()
+ T CMsgPostURL::set_post(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgPostURL::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPostURL::~CMsgPostURL()
  T CMsgProtoBufHeader::ByteSize() const
  T CMsgProtoBufHeader::CMsgProtoBufHeader()
@@ -6008,6 +6247,10 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::mutable_error_message()
+ T CMsgProtoBufHeader::mutable_target_job_name()
+ T CMsgProtoBufHeader::set_error_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_target_job_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::~CMsgProtoBufHeader()
  T CMsgProtobufWrapped::ByteSize() const
  T CMsgProtobufWrapped::CMsgProtobufWrapped()
@@ -6021,6 +6264,8 @@
  T CMsgProtobufWrapped::SetCachedSize(int) const
  T CMsgProtobufWrapped::SharedCtor()
  T CMsgProtobufWrapped::SharedDtor()
+ T CMsgProtobufWrapped::mutable_message_body()
+ T CMsgProtobufWrapped::set_message_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtobufWrapped::~CMsgProtobufWrapped()
  T CMsgPushAAndTContext::ByteSize() const
  T CMsgPushAAndTContext::CMsgPushAAndTContext()
@@ -6036,6 +6281,30 @@
  T CMsgPushAAndTContext::SharedCtor()
  T CMsgPushAAndTContext::SharedDtor()
  T CMsgPushAAndTContext::default_instance()
+ T CMsgPushAAndTContext::mutable_border()
+ T CMsgPushAAndTContext::mutable_border_radius()
+ T CMsgPushAAndTContext::mutable_box_shadow()
+ T CMsgPushAAndTContext::mutable_brightness()
+ T CMsgPushAAndTContext::mutable_clip()
+ T CMsgPushAAndTContext::mutable_composition_layer_texture_name()
+ T CMsgPushAAndTContext::mutable_contrast()
+ T CMsgPushAAndTContext::mutable_gaussian_blur()
+ T CMsgPushAAndTContext::mutable_hue_shift()
+ T CMsgPushAAndTContext::mutable_motion_blur()
+ T CMsgPushAAndTContext::mutable_opacity()
+ T CMsgPushAAndTContext::mutable_opacity_mask()
+ T CMsgPushAAndTContext::mutable_panel_position()
+ T CMsgPushAAndTContext::mutable_rotate_2d_centered()
+ T CMsgPushAAndTContext::mutable_saturation()
+ T CMsgPushAAndTContext::mutable_scale_2d_centered()
+ T CMsgPushAAndTContext::mutable_text_shadow()
+ T CMsgPushAAndTContext::mutable_transform_matrix()
+ T CMsgPushAAndTContext::mutable_transform_origin()
+ T CMsgPushAAndTContext::mutable_transform_perspective()
+ T CMsgPushAAndTContext::mutable_transform_perspective_origin()
+ T CMsgPushAAndTContext::mutable_wash_color()
+ T CMsgPushAAndTContext::set_composition_layer_texture_name(char const*)
+ T CMsgPushAAndTContext::set_composition_layer_texture_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPushAAndTContext::~CMsgPushAAndTContext()
  T CMsgPushClipLayer::ByteSize() const
  T CMsgPushClipLayer::CMsgPushClipLayer()
@@ -6050,6 +6319,9 @@
  T CMsgPushClipLayer::SetCachedSize(int) const
  T CMsgPushClipLayer::SharedDtor()
  T CMsgPushClipLayer::default_instance()
+ T CMsgPushClipLayer::mutable_border_radius()
+ T CMsgPushClipLayer::mutable_bottom_right()
+ T CMsgPushClipLayer::mutable_top_left()
  T CMsgPushClipLayer::~CMsgPushClipLayer()
  T CMsgPushCompositingLayer::ByteSize() const
  T CMsgPushCompositingLayer::CMsgPushCompositingLayer()
@@ -6065,6 +6337,14 @@
  T CMsgPushCompositingLayer::SharedCtor()
  T CMsgPushCompositingLayer::SharedDtor()
  T CMsgPushCompositingLayer::default_instance()
+ T CMsgPushCompositingLayer::mutable_border()
+ T CMsgPushCompositingLayer::mutable_border_radius()
+ T CMsgPushCompositingLayer::mutable_box_shadow()
+ T CMsgPushCompositingLayer::mutable_composition_layer_texture_name()
+ T CMsgPushCompositingLayer::mutable_radial_clip()
+ T CMsgPushCompositingLayer::mutable_text_shadow()
+ T CMsgPushCompositingLayer::set_composition_layer_texture_name(char const*)
+ T CMsgPushCompositingLayer::set_composition_layer_texture_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgPushCompositingLayer::~CMsgPushCompositingLayer()
  T CMsgPushPanelContextInLayer::ByteSize() const
  T CMsgPushPanelContextInLayer::CMsgPushPanelContextInLayer()
@@ -6079,6 +6359,8 @@
  T CMsgPushPanelContextInLayer::SetCachedSize(int) const
  T CMsgPushPanelContextInLayer::SharedDtor()
  T CMsgPushPanelContextInLayer::default_instance()
+ T CMsgPushPanelContextInLayer::mutable_border()
+ T CMsgPushPanelContextInLayer::mutable_box_shadow()
  T CMsgPushPanelContextInLayer::~CMsgPushPanelContextInLayer()
  T CMsgRadialGradient::ByteSize() const
  T CMsgRadialGradient::CMsgRadialGradient()
@@ -6092,6 +6374,9 @@
  T CMsgRadialGradient::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgRadialGradient::SetCachedSize(int) const
  T CMsgRadialGradient::SharedDtor()
+ T CMsgRadialGradient::mutable_center_position()
+ T CMsgRadialGradient::mutable_offset_distance()
+ T CMsgRadialGradient::mutable_radii()
  T CMsgRadialGradient::~CMsgRadialGradient()
  T CMsgReload::ByteSize() const
  T CMsgReload::CMsgReload()
@@ -6128,6 +6413,9 @@
  T CMsgRenderFilledRect::SetCachedSize(int) const
  T CMsgRenderFilledRect::SharedDtor()
  T CMsgRenderFilledRect::default_instance()
+ T CMsgRenderFilledRect::mutable_bottom_right()
+ T CMsgRenderFilledRect::mutable_fill_brush_collection()
+ T CMsgRenderFilledRect::mutable_top_left()
  T CMsgRenderFilledRect::~CMsgRenderFilledRect()
  T CMsgRenderTextFormat::ByteSize() const
  T CMsgRenderTextFormat::CMsgRenderTextFormat()
@@ -6143,6 +6431,10 @@
  T CMsgRenderTextFormat::SetCachedSize(int) const
  T CMsgRenderTextFormat::SharedCtor()
  T CMsgRenderTextFormat::SharedDtor()
+ T CMsgRenderTextFormat::mutable_fill_brush_collection()
+ T CMsgRenderTextFormat::mutable_font_name()
+ T CMsgRenderTextFormat::mutable_inline_object()
+ T CMsgRenderTextFormat::set_font_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgRenderTextFormat::~CMsgRenderTextFormat()
  T CMsgRenderTextRangeFormat::ByteSize() const
  T CMsgRenderTextRangeFormat::CMsgRenderTextRangeFormat()
@@ -6154,6 +6446,7 @@
  T CMsgRenderTextRangeFormat::New() const
  T CMsgRenderTextRangeFormat::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgRenderTextRangeFormat::SetCachedSize(int) const
+ T CMsgRenderTextRangeFormat::mutable_format()
  T CMsgRenderTextRangeFormat::~CMsgRenderTextRangeFormat()
  T CMsgRenderTextRegion::ByteSize() const
  T CMsgRenderTextRegion::CMsgRenderTextRegion()
@@ -6169,6 +6462,13 @@
  T CMsgRenderTextRegion::SharedCtor()
  T CMsgRenderTextRegion::SharedDtor()
  T CMsgRenderTextRegion::default_instance()
+ T CMsgRenderTextRegion::mutable_bottom_right()
+ T CMsgRenderTextRegion::mutable_default_format()
+ T CMsgRenderTextRegion::mutable_raw_text()
+ T CMsgRenderTextRegion::mutable_text_shadow()
+ T CMsgRenderTextRegion::mutable_top_left()
+ T CMsgRenderTextRegion::set_raw_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgRenderTextRegion::set_raw_text(void const*, unsigned long)
  T CMsgRenderTextRegion::~CMsgRenderTextRegion()
  T CMsgRenderTexturedRect::ByteSize() const
  T CMsgRenderTexturedRect::CMsgRenderTexturedRect()
@@ -6183,6 +6483,10 @@
  T CMsgRenderTexturedRect::SetCachedSize(int) const
  T CMsgRenderTexturedRect::SharedDtor()
  T CMsgRenderTexturedRect::default_instance()
+ T CMsgRenderTexturedRect::mutable_bottom_right()
+ T CMsgRenderTexturedRect::mutable_texture_bottom_right()
+ T CMsgRenderTexturedRect::mutable_texture_top_left()
+ T CMsgRenderTexturedRect::mutable_top_left()
  T CMsgRenderTexturedRect::~CMsgRenderTexturedRect()
  T CMsgRequestFullScreen::ByteSize() const
  T CMsgRequestFullScreen::CMsgRequestFullScreen()
@@ -6220,6 +6524,13 @@
  T CMsgRequestRenderCallback::SharedCtor()
  T CMsgRequestRenderCallback::SharedDtor()
  T CMsgRequestRenderCallback::default_instance()
+ T CMsgRequestRenderCallback::mutable_bottom_right()
+ T CMsgRequestRenderCallback::mutable_bottom_right_padding()
+ T CMsgRequestRenderCallback::mutable_callback_obj()
+ T CMsgRequestRenderCallback::mutable_top_left()
+ T CMsgRequestRenderCallback::mutable_top_left_padding()
+ T CMsgRequestRenderCallback::set_callback_obj(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgRequestRenderCallback::set_callback_obj(void const*, unsigned long)
  T CMsgRequestRenderCallback::~CMsgRequestRenderCallback()
  T CMsgResizeGripChanged::ByteSize() const
  T CMsgResizeGripChanged::CMsgResizeGripChanged()
@@ -6242,6 +6553,7 @@
  T CMsgRotate2D::New() const
  T CMsgRotate2D::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgRotate2D::SetCachedSize(int) const
+ T CMsgRotate2D::mutable_transition_data()
  T CMsgRotate2D::~CMsgRotate2D()
  T CMsgRotate2D_AnimationFrameData::ByteSize() const
  T CMsgRotate2D_AnimationFrameData::CMsgRotate2D_AnimationFrameData()
@@ -6265,6 +6577,7 @@
  T CMsgSaturation::New() const
  T CMsgSaturation::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSaturation::SetCachedSize(int) const
+ T CMsgSaturation::mutable_transition_data()
  T CMsgSaturation::~CMsgSaturation()
  T CMsgSaturation_AnimationFrameData::ByteSize() const
  T CMsgSaturation_AnimationFrameData::CMsgSaturation_AnimationFrameData()
@@ -6290,6 +6603,10 @@
  T CMsgSavePageToJPEG::SetCachedSize(int) const
  T CMsgSavePageToJPEG::SharedCtor()
  T CMsgSavePageToJPEG::SharedDtor()
+ T CMsgSavePageToJPEG::mutable_filename()
+ T CMsgSavePageToJPEG::mutable_url()
+ T CMsgSavePageToJPEG::set_filename(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSavePageToJPEG::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSavePageToJPEG::~CMsgSavePageToJPEG()
  T CMsgSavePageToJPEGResponse::ByteSize() const
  T CMsgSavePageToJPEGResponse::CMsgSavePageToJPEGResponse()
@@ -6303,6 +6620,10 @@
  T CMsgSavePageToJPEGResponse::SetCachedSize(int) const
  T CMsgSavePageToJPEGResponse::SharedCtor()
  T CMsgSavePageToJPEGResponse::SharedDtor()
+ T CMsgSavePageToJPEGResponse::mutable_filename()
+ T CMsgSavePageToJPEGResponse::mutable_url()
+ T CMsgSavePageToJPEGResponse::set_filename(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSavePageToJPEGResponse::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSavePageToJPEGResponse::~CMsgSavePageToJPEGResponse()
  T CMsgScalePageToValue::ByteSize() const
  T CMsgScalePageToValue::CMsgScalePageToValue()
@@ -6371,6 +6692,14 @@
  T CMsgSetCookie::SetCachedSize(int) const
  T CMsgSetCookie::SharedCtor()
  T CMsgSetCookie::SharedDtor()
+ T CMsgSetCookie::mutable_host()
+ T CMsgSetCookie::mutable_key()
+ T CMsgSetCookie::mutable_path()
+ T CMsgSetCookie::mutable_value()
+ T CMsgSetCookie::set_host(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetCookie::~CMsgSetCookie()
  T CMsgSetCursor::ByteSize() const
  T CMsgSetCursor::CMsgSetCursor()
@@ -6384,6 +6713,8 @@
  T CMsgSetCursor::SetCachedSize(int) const
  T CMsgSetCursor::SharedCtor()
  T CMsgSetCursor::SharedDtor()
+ T CMsgSetCursor::mutable_custom_data()
+ T CMsgSetCursor::set_custom_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetCursor::~CMsgSetCursor()
  T CMsgSetFocus::ByteSize() const
  T CMsgSetFocus::CMsgSetFocus()
@@ -6419,6 +6750,8 @@
  T CMsgSetHTMLTitle::SetCachedSize(int) const
  T CMsgSetHTMLTitle::SharedCtor()
  T CMsgSetHTMLTitle::SharedDtor()
+ T CMsgSetHTMLTitle::mutable_title()
+ T CMsgSetHTMLTitle::set_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetHTMLTitle::~CMsgSetHTMLTitle()
  T CMsgSetHorizontalScroll::ByteSize() const
  T CMsgSetHorizontalScroll::CMsgSetHorizontalScroll()
@@ -6443,6 +6776,10 @@
  T CMsgSetJumpList::SetCachedSize(int) const
  T CMsgSetJumpList::SharedCtor()
  T CMsgSetJumpList::SharedDtor()
+ T CMsgSetJumpList::mutable_mru_title()
+ T CMsgSetJumpList::mutable_steam_path()
+ T CMsgSetJumpList::set_mru_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetJumpList::set_steam_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetJumpList::~CMsgSetJumpList()
  T CMsgSetLocalFileRequestMapping::ByteSize() const
  T CMsgSetLocalFileRequestMapping::CMsgSetLocalFileRequestMapping()
@@ -6456,6 +6793,10 @@
  T CMsgSetLocalFileRequestMapping::SetCachedSize(int) const
  T CMsgSetLocalFileRequestMapping::SharedCtor()
  T CMsgSetLocalFileRequestMapping::SharedDtor()
+ T CMsgSetLocalFileRequestMapping::mutable_default_local_path()
+ T CMsgSetLocalFileRequestMapping::mutable_request_url()
+ T CMsgSetLocalFileRequestMapping::set_default_local_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping::set_request_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetLocalFileRequestMapping::~CMsgSetLocalFileRequestMapping()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::ByteSize() const
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::CMsgSetLocalFileRequestMapping_AdditionalRoute()
@@ -6469,6 +6810,12 @@
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SetCachedSize(int) const
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedCtor()
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::SharedDtor()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_allowed_extensions()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_local_path()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::mutable_relative_url()
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_allowed_extensions(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_local_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgSetLocalFileRequestMapping_AdditionalRoute::set_relative_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgSetLocalFileRequestMapping_AdditionalRoute::~CMsgSetLocalFileRequestMapping_AdditionalRoute()
  T CMsgSetPIDShuttingDown::ByteSize() const
  T CMsgSetPIDShuttingDown::CMsgSetPIDShuttingDown()
@@ -6570,6 +6917,8 @@
  T CMsgShowToolTip::SetCachedSize(int) const
  T CMsgShowToolTip::SharedCtor()
  T CMsgShowToolTip::SharedDtor()
+ T CMsgShowToolTip::mutable_text()
+ T CMsgShowToolTip::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgShowToolTip::~CMsgShowToolTip()
  T CMsgShowWindow::ByteSize() const
  T CMsgShowWindow::CMsgShowWindow()
@@ -6607,6 +6956,12 @@
  T CMsgStartRequest::SetCachedSize(int) const
  T CMsgStartRequest::SharedCtor()
  T CMsgStartRequest::SharedDtor()
+ T CMsgStartRequest::mutable_postdata()
+ T CMsgStartRequest::mutable_target()
+ T CMsgStartRequest::mutable_url()
+ T CMsgStartRequest::set_postdata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartRequest::set_target(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartRequest::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgStartRequest::~CMsgStartRequest()
  T CMsgStartRequestResponse::ByteSize() const
  T CMsgStartRequestResponse::CMsgStartRequestResponse()
@@ -6631,6 +6986,8 @@
  T CMsgStatusText::SetCachedSize(int) const
  T CMsgStatusText::SharedCtor()
  T CMsgStatusText::SharedDtor()
+ T CMsgStatusText::mutable_text()
+ T CMsgStatusText::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgStatusText::~CMsgStatusText()
  T CMsgSteamAuthCookiesSet::ByteSize() const
  T CMsgSteamAuthCookiesSet::CMsgSteamAuthCookiesSet()
@@ -6689,6 +7046,11 @@
  T CMsgTextFormat::SetCachedSize(int) const
  T CMsgTextFormat::SharedCtor()
  T CMsgTextFormat::SharedDtor()
+ T CMsgTextFormat::mutable_fill_brush_collection()
+ T CMsgTextFormat::mutable_font_name()
+ T CMsgTextFormat::mutable_inline_object()
+ T CMsgTextFormat::set_font_name(char const*)
+ T CMsgTextFormat::set_font_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgTextFormat::~CMsgTextFormat()
  T CMsgTextInlineObject::ByteSize() const
  T CMsgTextInlineObject::CMsgTextInlineObject()
@@ -6712,6 +7074,7 @@
  T CMsgTextRangeFormat::New() const
  T CMsgTextRangeFormat::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgTextRangeFormat::SetCachedSize(int) const
+ T CMsgTextRangeFormat::mutable_format()
  T CMsgTextRangeFormat::~CMsgTextRangeFormat()
  T CMsgTextShadow::ByteSize() const
  T CMsgTextShadow::CMsgTextShadow()
@@ -6725,6 +7088,9 @@
  T CMsgTextShadow::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgTextShadow::SetCachedSize(int) const
  T CMsgTextShadow::SharedDtor()
+ T CMsgTextShadow::mutable_base()
+ T CMsgTextShadow::mutable_transition()
+ T CMsgTextShadow::mutable_transition_data()
  T CMsgTextShadow::~CMsgTextShadow()
  T CMsgTextShadow_AnimationFrameData::ByteSize() const
  T CMsgTextShadow_AnimationFrameData::CMsgTextShadow_AnimationFrameData()
@@ -6737,6 +7103,7 @@
  T CMsgTextShadow_AnimationFrameData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgTextShadow_AnimationFrameData::SetCachedSize(int) const
  T CMsgTextShadow_AnimationFrameData::default_instance()
+ T CMsgTextShadow_AnimationFrameData::mutable_data()
  T CMsgTextShadow_AnimationFrameData::~CMsgTextShadow_AnimationFrameData()
  T CMsgTransformOriginData::ByteSize() const
  T CMsgTransformOriginData::CMsgTransformOriginData()
@@ -6772,6 +7139,12 @@
  T CMsgURLChanged::SetCachedSize(int) const
  T CMsgURLChanged::SharedCtor()
  T CMsgURLChanged::SharedDtor()
+ T CMsgURLChanged::mutable_pagetitle()
+ T CMsgURLChanged::mutable_postdata()
+ T CMsgURLChanged::mutable_url()
+ T CMsgURLChanged::set_pagetitle(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgURLChanged::set_postdata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgURLChanged::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgURLChanged::~CMsgURLChanged()
  T CMsgUnlockH264::ByteSize() const
  T CMsgUnlockH264::CMsgUnlockH264()
@@ -6785,6 +7158,8 @@
  T CMsgUnlockH264::SetCachedSize(int) const
  T CMsgUnlockH264::SharedCtor()
  T CMsgUnlockH264::SharedDtor()
+ T CMsgUnlockH264::mutable_unlock_code()
+ T CMsgUnlockH264::set_unlock_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgUnlockH264::~CMsgUnlockH264()
  T CMsgUpdateToolTip::ByteSize() const
  T CMsgUpdateToolTip::CMsgUpdateToolTip()
@@ -6798,6 +7173,8 @@
  T CMsgUpdateToolTip::SetCachedSize(int) const
  T CMsgUpdateToolTip::SharedCtor()
  T CMsgUpdateToolTip::SharedDtor()
+ T CMsgUpdateToolTip::mutable_text()
+ T CMsgUpdateToolTip::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgUpdateToolTip::~CMsgUpdateToolTip()
  T CMsgVerticalScrollBarSize::ByteSize() const
  T CMsgVerticalScrollBarSize::CMsgVerticalScrollBarSize()
@@ -6948,6 +7325,10 @@
  T CRadiusData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CRadiusData::SetCachedSize(int) const
  T CRadiusData::SharedDtor()
+ T CRadiusData::mutable_bottom_left()
+ T CRadiusData::mutable_bottom_right()
+ T CRadiusData::mutable_top_left()
+ T CRadiusData::mutable_top_right()
  T CRadiusData::~CRadiusData()
  T CRadiusData_CCornerRadius::ByteSize() const
  T CRadiusData_CCornerRadius::CRadiusData_CCornerRadius()
@@ -7320,6 +7701,10 @@
  T CUIFontFilePB::SetCachedSize(int) const
  T CUIFontFilePB::SharedCtor()
  T CUIFontFilePB::SharedDtor()
+ T CUIFontFilePB::mutable_font_file_name()
+ T CUIFontFilePB::mutable_opentype_font_data()
+ T CUIFontFilePB::set_font_file_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CUIFontFilePB::set_opentype_font_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CUIFontFilePB::~CUIFontFilePB()
  T CUIFontFilePackagePB::ByteSize() const
  T CUIFontFilePackagePB::CUIFontFilePackagePB()
@@ -7344,6 +7729,8 @@
  T CUIFontFilePackagePB_CUIEncryptedFontFilePB::SetCachedSize(int) const
  T CUIFontFilePackagePB_CUIEncryptedFontFilePB::SharedCtor()
  T CUIFontFilePackagePB_CUIEncryptedFontFilePB::SharedDtor()
+ T CUIFontFilePackagePB_CUIEncryptedFontFilePB::mutable_encrypted_contents()
+ T CUIFontFilePackagePB_CUIEncryptedFontFilePB::set_encrypted_contents(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CUIFontFilePackagePB_CUIEncryptedFontFilePB::~CUIFontFilePackagePB_CUIEncryptedFontFilePB()
  T CUIFontPackage::BGetFontNameAndData(int, CUtlString&, CUtlBuffer*)
  T CUIFontPackage::CUIFontPackage(char const*)
@@ -15710,8 +16097,6 @@
  b (anonymous namespace)::CMsgDrawTextRegion_reflection_
  b (anonymous namespace)::CMsgDrawTexturedRect_descriptor_
  b (anonymous namespace)::CMsgDrawTexturedRect_reflection_
- b (anonymous namespace)::CMsgEnableSteamClientAPI_descriptor_
- b (anonymous namespace)::CMsgEnableSteamClientAPI_reflection_
  b (anonymous namespace)::CMsgEndFrame_descriptor_
  b (anonymous namespace)::CMsgEndFrame_reflection_
  b (anonymous namespace)::CMsgEndPaintBackground_descriptor_
@@ -16134,6 +16519,7 @@
  b g_pClientApps
  b g_pClientAudio
  b g_pClientBilling
+ b g_pClientCompat
  b g_pClientConfigStore
  b g_pClientController
  b g_pClientControllerSerialized
@@ -16587,12 +16973,6 @@
  b s_objNullSendOp
  b s_unKeyCodeToKey
  b s_unVirtualKeyToKeyCode
- b sc_kalman_a_vel
- b sc_kalman_fastq
- b sc_kalman_h_vel
- b sc_kalman_q_vel
- b sc_kalman_r_vel
- b sc_kalman_slowq
  b selectBuf
  b texturetolinear
  b v8::base::(anonymous namespace)::g_hard_abort
@@ -17021,7 +17401,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDisableBackgroundThrottling_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
- r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgEnableSteamClientAPI_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExitFullScreen_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFileLoadDialogResponse_offsets_

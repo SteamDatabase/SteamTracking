@@ -221,20 +221,6 @@ body.v6 .page_content.curators.header {
 .navigation_bar > a:first-child {
 	margin-left: 0;
 }
-.navigation_bar > div.report {
-	flex-grow: 1;
-	text-align: right;
-	padding: 6px 0px 0px 0px;
-}
-
-.navigation_bar > div.report a img {
-	width: 16px;
-	height: 16px;
-	opacity: 0.5;
-}
-.navigation_bar > div.report a:hover img {
-	opacity: 1;
-}
 
 .navigation_bar > .curators_for_app_filter:first-child {
 	margin-left: 0;

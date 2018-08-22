@@ -61,7 +61,7 @@ function FollowCurator( clanID, bFollow )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.' );
+			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.<br>Note: You cannot follow a curator you already ignore.' );
 		}
 	);
 	return false;
@@ -71,8 +71,21 @@ function IgnoreCurator( clanID, bIgnore )
 {
 	IgnoreCuratorWithCallback( clanID, bIgnore, function( bIgnored ){
 		$J( "#IgnoreControls" ).toggleClass( "ignored", bIgnored );
+		if( bIgnored )
+		{
+			$J( "#curator_header_ignore").hide();
+			$J( "#curator_header_unignore").show();
+		}
+		else
+		{
+			$J( "#curator_header_ignore").show();
+			$J( "#curator_header_unignore").hide();
+		}
 	});
+
+	HideMenu( )
 }
+
 
 function InitSearchFilters()
 {

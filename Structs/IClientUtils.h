@@ -71,4 +71,5 @@ public:
     virtual unknown_ret DispatchClientUICommand(char const*, unsigned int) = 0;
     virtual unknown_ret DispatchComputerActiveStateChange() = 0;
     virtual unknown_ret DispatchOpenURLInClient(char const*, unsigned int, bool) = 0;
+    virtual unknown_ret UpdateWideVineCDM(char const*) = 0;
 };

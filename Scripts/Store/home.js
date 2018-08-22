@@ -1019,7 +1019,7 @@ GHomepage = {
 			function( oItem, strFeature, rgOptions )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'summer2018_creator_recommend', nAppId, 0, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, 0, rgOptions );
 				$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
 
 				return $CapCtn;
@@ -1037,7 +1037,6 @@ GHomepage = {
 			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 		
-		console.log( rgCapsules );
 		if ( rgCapsules.length >= 4 )
 			$TopVRTitles.show();
 		else

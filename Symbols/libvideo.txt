@@ -1257,6 +1257,18 @@
  T CCDDBAppDetailCommon::SetCachedSize(int) const
  T CCDDBAppDetailCommon::SharedCtor()
  T CCDDBAppDetailCommon::SharedDtor()
+ T CCDDBAppDetailCommon::mutable_friendly_name()
+ T CCDDBAppDetailCommon::mutable_icon()
+ T CCDDBAppDetailCommon::mutable_logo()
+ T CCDDBAppDetailCommon::mutable_logo_small()
+ T CCDDBAppDetailCommon::mutable_name()
+ T CCDDBAppDetailCommon::mutable_propagation()
+ T CCDDBAppDetailCommon::set_friendly_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_logo(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_logo_small(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCDDBAppDetailCommon::set_propagation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::~CCDDBAppDetailCommon()
  T CCircularBuffer::CommitWrite(void*, int)
  T CCircularBuffer::Flush()
@@ -1348,6 +1360,12 @@
  T CCuratorPreferences::SetCachedSize(int) const
  T CCuratorPreferences::SharedCtor()
  T CCuratorPreferences::SharedDtor()
+ T CCuratorPreferences::mutable_discussion_url()
+ T CCuratorPreferences::mutable_website_title()
+ T CCuratorPreferences::mutable_website_url()
+ T CCuratorPreferences::set_discussion_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCuratorPreferences::set_website_title(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCuratorPreferences::set_website_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCuratorPreferences::~CCuratorPreferences()
  T CCustomAVIOReadContext::Read(void*, unsigned char*, int)
  T CCustomAVIOReadContext::Seek(void*, long long, int)
@@ -1612,6 +1630,8 @@
  T CLocalizationToken::SetCachedSize(int) const
  T CLocalizationToken::SharedCtor()
  T CLocalizationToken::SharedDtor()
+ T CLocalizationToken::mutable_localized_string()
+ T CLocalizationToken::set_localized_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CLocalizationToken::~CLocalizationToken()
  T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
@@ -1698,6 +1718,8 @@
  T CMsgAuthTicket::SetCachedSize(int) const
  T CMsgAuthTicket::SharedCtor()
  T CMsgAuthTicket::SharedDtor()
+ T CMsgAuthTicket::mutable_ticket()
+ T CMsgAuthTicket::set_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAuthTicket::~CMsgAuthTicket()
  T CMsgBase_t<MsgHdr_t>::AddVariableLenData(void const*, unsigned int)
  T CMsgBase_t<MsgHdr_t>::CMsgBase_t(unsigned int, unsigned int)
@@ -1717,6 +1739,8 @@
  T CMsgMulti::SetCachedSize(int) const
  T CMsgMulti::SharedCtor()
  T CMsgMulti::SharedDtor()
+ T CMsgMulti::mutable_message_body()
+ T CMsgMulti::set_message_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgMulti::~CMsgMulti()
  T CMsgProtoBufHeader::ByteSize() const
  T CMsgProtoBufHeader::CMsgProtoBufHeader()
@@ -1730,6 +1754,10 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::mutable_error_message()
+ T CMsgProtoBufHeader::mutable_target_job_name()
+ T CMsgProtoBufHeader::set_error_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_target_job_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::~CMsgProtoBufHeader()
  T CMsgProtobufWrapped::ByteSize() const
  T CMsgProtobufWrapped::CMsgProtobufWrapped()
@@ -1743,6 +1771,8 @@
  T CMsgProtobufWrapped::SetCachedSize(int) const
  T CMsgProtobufWrapped::SharedCtor()
  T CMsgProtobufWrapped::SharedDtor()
+ T CMsgProtobufWrapped::mutable_message_body()
+ T CMsgProtobufWrapped::set_message_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtobufWrapped::~CMsgProtobufWrapped()
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
@@ -5752,6 +5782,7 @@
  __stack_chk_guard
  __stderrp
  __stdinp
+ __stdoutp
  __strcat_chk
  __tolower
  __toupper

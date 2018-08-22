@@ -429,7 +429,10 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		if ( ( results.transfer_url || results.transfer_urls ) && results.transfer_parameters )
 		{
 			bRunningTransfer = true;
-			this.TransferLogin( results.transfer_urls || [ results.transfer_url ], results.transfer_parameters );
+			var _this = this;
+			if ( !this.m_bLoginTransferInProgress )
+				CLoginPromptManager.TransferLogin( results.transfer_urls || [ results.transfer_url ], results.transfer_parameters, function() { _this.OnTransferComplete(); } );
+			this.m_bLoginTransferInProgress = true;
 		}
 
 		if ( this.m_bInEmailAuthProcess )
@@ -572,24 +575,20 @@ CLoginPromptManager.prototype.CancelEmailAuthProcess = function()
 	}
 };
 
-CLoginPromptManager.prototype.TransferLogin = function( rgURLs, parameters )
+CLoginPromptManager.TransferLogin = function( rgURLs, parameters, fnOnComplete )
 {
-	if ( this.m_bLoginTransferInProgress )
-		return;
-	this.m_bLoginTransferInProgress = true;
-
 	var bOnCompleteFired = false;
-	var _this = this;
-	var fnOnComplete = function() {
+	var fnFireOnComplete = function( bSuccess )
+	{
 		if ( !bOnCompleteFired )
-			_this.OnTransferComplete();
+			fnOnComplete( bSuccess );
 		bOnCompleteFired = true;
-	};
+	}
 
 	var cResponsesExpected = rgURLs.length;
 	$J(window).on( 'message', function() {
 		if ( --cResponsesExpected == 0 )
-			fnOnComplete();
+			fnFireOnComplete( true );
 	});
 
 	for ( var i = 0 ; i < rgURLs.length; i++ )
@@ -610,7 +609,7 @@ CLoginPromptManager.prototype.TransferLogin = function( rgURLs, parameters )
 	}
 
 	// after 10 seconds, give up on waiting for transfer
-	window.setTimeout( fnOnComplete, 10000 );
+	window.setTimeout( function() { fnFireOnComplete( false ); }, 10000 );
 };
 
 CLoginPromptManager.prototype.OnTransferComplete = function()

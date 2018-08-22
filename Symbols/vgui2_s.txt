@@ -300,6 +300,7 @@
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSTrackingArea
+ OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSView
  OBJC_CLASS_$_NSWindow
@@ -485,7 +486,7 @@
  T CBaseSurface::ClearWebCache()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
  T CBaseSurface::CountPopupsViewable()
- T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*)
+ T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*, bool)
  T CBaseSurface::CreateCursorFromFile(char const*, char const*)
  T CBaseSurface::CreateCursorFromMemory(void const*, int, int, int, int)
  T CBaseSurface::CreateFont()
@@ -1844,6 +1845,8 @@
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T IsForegroundApp()
  T KV_ResolveSymbol(char const*)
+ T KeyCode_CharToVGUI(char)
+ T KeyCode_VGUICanBeRemapped(vgui::KeyCode)
  T KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T KeyCode_VirtualKeyToVGUI(int)
  T KeyCode_WindowsVirtualKeyToVirtualKey(int)
@@ -2589,9 +2592,11 @@
  b s_flLastWindowDragStopped
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_pApplicationDockMenu
+ b s_pCharToVGUI
  b s_pFirstFreeNSWindow
  b s_pFontManager
  b s_pInvisibleFocusEatingNSWindow
+ b s_pVGUIHasCharForLayoutResolution
  b s_pVGUIKeyWindow
  b s_pVGUIToVirtualKey
  b s_pVirtualKeyToVGUI
@@ -2599,7 +2604,7 @@
  b vec2_invalid
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
- b vgui::InitKeyTranslation()::threadonce_464_17
+ b vgui::InitKeyTranslation()::threadonce_538_17
  ceilf
  close
  closedir

@@ -76,6 +76,9 @@ function CheckVoteResultsJSON( json )
 		case 20:
 			ShowAlertDialog( 'Error', 'Voting on this item has ended. ' );
 			return false;
+		case 44:
+			ShowAlertDialog( 'Error', 'Due to a recent password or email change on your account, you will not be able to vote on content. Usually this restriction will expire in 5 days, but can last up to 30 days if the account has been inactive recently.' );
+			return false;
 		case 1:
 			return true;
 		default:

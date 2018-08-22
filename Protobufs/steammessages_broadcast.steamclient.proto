@@ -106,6 +106,7 @@ message CBroadcast_GetBroadcastThumbnail_Request {
 message CBroadcast_GetBroadcastThumbnail_Response {
 	optional string thumbnail_url = 1;
 	optional int32 update_interval = 2;
+	optional int32 num_viewers = 3;
 }
 
 message CBroadcast_InviteToBroadcast_Request {

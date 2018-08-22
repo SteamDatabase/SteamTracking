@@ -1288,6 +1288,15 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuScale" />
 						<Slider id="TouchMenuScale" direction="horizontal" />
 					</Panel>
+          			<Panel class="FieldWrapper OneDimenD" modes="touchmenu" sources="bumper" advanced="off">
+			            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuInnerDeadzone" />
+			            <Slider id="TouchMenuDeadzoneInner" direction="horizontal" />
+		            </Panel>
+		          	<Panel class="FieldWrapper 1D" modes="touchmenu" sources="bumper" advanced="off">
+			            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuOuterDeadzone" />
+			            <Slider id="TouchMenuDeadzoneOuter" direction="horizontal" />
+		          	</Panel>
+
 					<!-- Touch Menu Mode Advanced -->
 					<Panel class="FieldWrapper" modes="touchmenu" advanced="on">
 						<Label class="FieldLabelSmall" text="#Library_Details_FieldLabel_TouchMenuButton14" />

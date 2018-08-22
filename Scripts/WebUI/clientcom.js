@@ -314,11 +314,12 @@ webpackJsonp(
           IN_CLIENT: !1,
           USE_POPUPS: !1,
           IN_MOBILE: !1,
-          FRIENDSUI_BETA: !1,
           WEBAPI_BASE_URL: "",
           TOKEN_URL: "",
           SESSIONID: "",
-          BUILD_TIMESTAMP: 0
+          BUILD_TIMESTAMP: 0,
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1
         },
         r = {
           logged_in: !1,

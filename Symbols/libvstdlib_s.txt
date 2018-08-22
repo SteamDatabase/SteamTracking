@@ -524,6 +524,7 @@
  T V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  T V_SplitString2
  T V_SplitString2(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
+ T V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T V_StrLeft
  T V_StrReplaceChar
  T V_StrRight
@@ -692,7 +693,7 @@
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted
- b CURLUtils::IsTLD(char const*)::threadonce_118_21
+ b CURLUtils::IsTLD(char const*)::threadonce_119_21
  b DebugStatsSystem::g_DebugStatsSystem
  b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem

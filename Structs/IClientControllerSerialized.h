@@ -34,7 +34,7 @@ public:
     virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
-    virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData*) = 0;
+    virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
     virtual unknown_ret IsModified(unsigned int) = 0;
     virtual unknown_ret ClearModified(unsigned int) = 0;

@@ -36,6 +36,12 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "Match id"
+                },
+                {
+                    "name": "include_persona_names",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Include persona names as part of the response"
                 }
             ]
         },

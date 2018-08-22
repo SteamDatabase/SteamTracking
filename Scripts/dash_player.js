@@ -63,6 +63,9 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nDownloadVideoWidth = 0;
 	this.m_nDownloadVideoHeight = 0;
 	this.m_bVideoLogVerbose = false;
+	this.m_nInitializationTime = Date.now();
+	this.m_timeToFirstFrame = -1; // Uninitialized
+	this.m_broadcastAccountID = 0;
 
 	// For Server Event Logging
 	this.m_nBandwidthTotal = 0;
@@ -98,6 +101,7 @@ CDASHPlayer.DOWNLOAD_RETRY_MS = 500;
 CDASHPlayer.MANIFEST_RETRY_MS = 2000;
 CDASHPlayer.MANIFEST_MAX_RETRY_MS = 30 * 1000;
 CDASHPlayer.GAMEDATA_TRIGGER_MS = 200;
+CDASHPlayer.TTFF_UNINITIALIZED = -1;
 
 CDASHPlayer.HAVE_NOTHING = 0;
 CDASHPlayer.HAVE_METADATA = 1;
@@ -211,6 +215,12 @@ CDASHPlayer.prototype.CloseWithError = function( errorToTrigger, extraParameters
 CDASHPlayer.prototype.SetUniqueId = function( strUniqueId )
 {
 	this.m_strUniqueId = strUniqueId.toString();
+}
+
+// Function should take the nEventType and bVideoStalled.
+CDASHPlayer.prototype.SetBroadcastAccountID = function( accountid )
+{
+	this.m_broadcastAccountID = accountid;
 }
 
 CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments, tsFirstAttempt )
@@ -828,8 +838,14 @@ CDASHPlayer.prototype.InitVideoControl = function()
 	$J( mediaSource ).on( 'sourceended.DASHPlayerEvents', function( e ) { _player.OnMediaSourceEnded( e ); });
 	$J( mediaSource ).on( 'sourceclose.DASHPlayerEvents', function( e ) { _player.OnMediaSourceClose( e ); });
 
+		$J( this.m_elVideoPlayer ).on( 'canplay', function( e ) {
+		if(  _player.m_timeToFirstFrame == CDASHPlayer.TTFF_UNINITIALIZED ) {
+			_player.m_timeToFirstFrame = Date.now() - _player.m_nInitializationTime;
+		}
+		 $J( _player.m_elVideoPlayer ).off( 'canplay', this );
+	});
 	$J( this.m_elVideoPlayer ).on( 'stalled.DASHPlayerEvents', function() { _player.OnVideoStalled(); });
-	$J( this.m_elVideoPlayer).on( 'error.DASHPlayerEvents', function( e ) { _player.OnVideoError( e ); });
+	$J( this.m_elVideoPlayer ).on( 'error.DASHPlayerEvents', function( e ) { _player.OnVideoError( e ); });
 	$J( window ).on( 'resize.DASHPlayerEvents', function() { _player.OnWindowResize(); });
 
 	$J( this.m_elVideoPlayer ).on( 'changeuiplayingstate.DASHPlayerEvents', function( e, playing ) { _player.SavePlaybackStateFromUI( playing ); } );
@@ -7458,6 +7474,7 @@ CDASHPlayerStats = function( elVideoPlayer, videoPlayer, viewerSteamID )
 		'frames_decoded': 0,
 		'frames_dropped': 0,
 		'failed_segments': 0,
+		'initial_vid_res': this.m_videoPlayer.StatsPlaybackHeight(),
 	};
 
 	// on screen reporting from stats report
@@ -7513,6 +7530,7 @@ CDASHPlayerStats.prototype.Reset = function()
 		'frames_decoded': 0,
 		'frames_dropped': 0,
 		'failed_segments': 0,
+		'initial_vid_res': this.m_videoPlayer.StatsPlaybackHeight(),
 	};
 }
 
@@ -7597,9 +7615,12 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( nLogType, bVideoStal
 		if ( statsCollected['last_segment_number'] == this.m_nStalledSegmentNumber || statsCollected['last_segment_response'] == 0 || statsCollected['last_segment_response'] == 404 )
 			return {};
 
+		var bw_rates = this.m_videoPlayer.StatsBandwidthRates( true );
+
 		this.m_nStalledSegmentNumber = statsCollected['segment_stalled'] = statsCollected['last_segment_number'];
 		delete statsCollected['last_segment_number'];
 		statsCollected['audio_stalled'] = !bVideoStalled;
+		statsCollected['bw_avg'] = bw_rates['bw_avg'];
 		this.m_nCountStalls++;
 	}
 	else if ( nLogType == CDASHPlayerStats.LOGTYPE_STATS )
@@ -7633,6 +7654,9 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( nLogType, bVideoStal
 			'seg_time_avg': Number( seg_times['seg_avg'].toFixed(3) ),
 			'seg_time_min': seg_times['seg_min'],
 			'seg_time_max': seg_times['seg_max'],
+			'initial_vid_res': this.m_statsLastSnapshot['initial_vid_res'],
+			'ttff' : this.m_videoPlayer.m_timeToFirstFrame,
+			'seg_duration': CMPDParser.GetSegmentDuration( this.m_videoPlayer.GetCurrentVideoAdaptation() ),
 		}
 
 		// stats being displayed on screen
@@ -7651,6 +7675,8 @@ CDASHPlayerStats.prototype.CollectStatsForEvent = function( nLogType, bVideoStal
 	statsCollected['video_res'] = this.m_videoPlayer.StatsPlaybackHeight();
 	statsCollected['audio_rate'] = Math.round ( this.m_videoPlayer.StatsAudioBitRate() );
 	statsCollected['audio_ch'] = this.m_videoPlayer.StatsAudioChannels();
+	statsCollected['bw_required'] = this.m_videoPlayer.StatsCurrentRepresentationBandwidth();
+	statsCollected['broadcast_accountid'] = this.m_videoPlayer.m_broadcastAccountID;
 
 	return statsCollected;
 }

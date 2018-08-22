@@ -643,15 +643,15 @@ SelectMousePosition
 	background-position: 434px 60px;
     background-size: 850px 494px;
 	background-image: url("file://{images}/library/controller/controller_config_controller_switch_pro.png");
-    wash-color: #102f4b72;
+    wash-color: #102f4bf2;
 }
 
 .controller_mobile_touch #BackgroundController
 {
-    background-position: 500px 95px;
-    background-size: 725px 421px;
-    background-image: url("file://{images}/library/controller/controller_config_controller_ps4.png");
-    wash-color: #102f4b72;
+    background-position: 518px 10px;
+    background-size: 714px 433px;
+    background-image: url("file://{images}/library/controller/controller_config_controller_touch.png");
+    wash-color: #102f4b32;
 }
 
 
@@ -670,11 +670,16 @@ SelectMousePosition
 .controller_generic #BackgroundBaseLinesLeft,
 .controller_switch_pro #BackgroundBaseLinesLeft,
 .controller_android #BackgroundBaseLinesLeft,
-.controller_apple #BackgroundBaseLinesLeft,
-.controller_mobile_touch #BackgroundBaseLinesLeft
+.controller_apple #BackgroundBaseLinesLeft
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
     background-position: 190px -74px;
+}
+
+.controller_mobile_touch #BackgroundBaseLinesLeft
+{
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-position: 140px -84px;
 }
 
 .controller_ps4 #BackgroundBaseLinesRight,
@@ -689,6 +694,13 @@ SelectMousePosition
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
     background-position: 190px -70px;
+    transform: scalex( -1 );
+}
+
+.controller_mobile_touch #BackgroundBaseLinesRight 
+{
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-position: 140px -84px;
     transform: scalex( -1 );
 }
 
@@ -718,10 +730,14 @@ SelectMousePosition
 .controller_generic #BackgroundLines.LeftTriggerSelected,
 .controller_switch_pro #BackgroundLines.LeftTriggerSelected,
 .controller_android #BackgroundLines.LeftTriggerSelected,
-.controller_apple #BackgroundLines.LeftTriggerSelected,
-.controller_mobile_touch #BackgroundLines.LeftTriggerSelected
+.controller_apple #BackgroundLines.LeftTriggerSelected
 {
     background-position: -125px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.LeftTriggerSelected
+{
+    background-position: -165px -75px;
 }
 
 #BackgroundLines.LeftBumperSelected
@@ -736,10 +752,14 @@ SelectMousePosition
 .controller_generic #BackgroundLines.LeftBumperSelected,
 .controller_switch_pro #BackgroundLines.LeftBumperSelected,
 .controller_android #BackgroundLines.LeftBumperSelected,
-.controller_apple #BackgroundLines.LeftBumperSelected,
-.controller_mobile_touch #BackgroundLines.LeftBumperSelected 
+.controller_apple #BackgroundLines.LeftBumperSelected
 {
     background-position: -125px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.LeftBumperSelected 
+{
+    background-position: -230px -72px;
 }
 
 .controller_ps4 #BackgroundLines.LeftGripSelected, 
@@ -808,10 +828,14 @@ SelectMousePosition
 .controller_generic #BackgroundLines.RightTriggerSelected,
 .controller_switch_pro #BackgroundLines.RightTriggerSelected,
 .controller_android #BackgroundLines.RightTriggerSelected,
-.controller_apple #BackgroundLines.RightTriggerSelected,
-.controller_mobile_touch #BackgroundLines.RightTriggerSelected
+.controller_apple #BackgroundLines.RightTriggerSelected
 {
     background-position: -62px -70px;
+}
+
+.controller_mobile_touch #BackgroundLines.RightTriggerSelected
+{
+    background-position: -24px -75px;
 }
 
 #BackgroundLines.RightBumperSelected
@@ -827,10 +851,14 @@ SelectMousePosition
 .controller_generic #BackgroundLines.RightBumperSelected,
 .controller_switch_pro #BackgroundLines.RightBumperSelected,
 .controller_android #BackgroundLines.RightBumperSelected,
-.controller_apple #BackgroundLines.RightBumperSelected,
-.controller_mobile_touch #BackgroundLines.RightBumperSelected 
+.controller_apple #BackgroundLines.RightBumperSelected
 {
     background-position: -62px -70px;
+}
+
+.controller_mobile_touch #BackgroundLines.RightBumperSelected 
+{
+    background-position: 38px -72px;
 }
 
 #BackgroundLines.RightGripSelected
@@ -859,6 +887,12 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_14.png");
 }
 
+.controller_mobile_touch #BackgroundLines.GyroSelected
+{
+    background-size: 75%;
+    background-position: 210px 110px;
+}
+
 #BackgroundLines.SlotOneSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
@@ -871,11 +905,16 @@ SelectMousePosition
 .controller_generic #BackgroundLines.LeftJoystickSelected,
 .controller_switch_pro #BackgroundLines.LeftJoystickSelected,
 .controller_android #BackgroundLines.DpadSelected,
-.controller_apple #BackgroundLines.DPadSelected,
-.controller_mobile_touch #BackgroundLines.DPadSelected 
+.controller_apple #BackgroundLines.DPadSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
     background-position: -120px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.DPadSelected
+{
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_8.png");
+    background-position: -148px -104px;
 }
 
 #BackgroundLines.SlotTwoSelected
@@ -895,11 +934,16 @@ SelectMousePosition
 .controller_generic #BackgroundLines.DPadSelected,
 .controller_switch_pro #BackgroundLines.DPadSelected,
 .controller_android #BackgroundLines.LeftJoystickSelected,
-.controller_apple #BackgroundLines.LeftJoystickSelected,
-.controller_mobile_touch #BackgroundLines.LeftJoystickSelected 
+.controller_apple #BackgroundLines.LeftJoystickSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
     background-position: -120px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.LeftJoystickSelected 
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_9.png");
+    background-position: -157px -43px;
 }
 
 #BackgroundLines.SlotThreeSelected
@@ -914,10 +958,14 @@ SelectMousePosition
 .controller_generic #BackgroundLines.SlotThreeSelected,
 .controller_switch_pro #BackgroundLines.SlotThreeSelected,
 .controller_android #BackgroundLines.SlotThreeSelected,
-.controller_apple #BackgroundLines.SlotThreeSelected,
-.controller_mobile_touch #BackgroundLines.SlotThreeSelected 
+.controller_apple #BackgroundLines.SlotThreeSelected
 {
     background-position: -62px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.SlotThreeSelected 
+{
+    background-position: -17px -43px;
 }
 
 #BackgroundLines.SlotABXYSelected
@@ -932,11 +980,16 @@ SelectMousePosition
 .controller_generic #BackgroundLines.SlotABXYSelected,
 .controller_switch_pro #BackgroundLines.SlotABXYSelected,
 .controller_android #BackgroundLines.SlotABXYSelected,
-.controller_apple #BackgroundLines.SlotABXYSelected,
-.controller_mobile_touch #BackgroundLines.SlotABXYSelected 
+.controller_apple #BackgroundLines.SlotABXYSelected
 {
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
     background-position: -62px -73px;
+}
+
+.controller_mobile_touch #BackgroundLines.SlotABXYSelected 
+{
+	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_11.png");
+    background-position: -42px -102px;
 }
 
 #BackgroundLines.SlotFourSelected
@@ -963,10 +1016,14 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_12.png");
 }
 
-.controller_ps4 #BackgroundLines.BackButtonSelected,
-.controller_mobile_touch #BackgroundLines.BackButtonSelected 
+.controller_ps4 #BackgroundLines.BackButtonSelected
 {
     background-position: -175px -130px;
+}
+
+.controller_mobile_touch #BackgroundLines.BackButtonSelected 
+{
+    background-position: -118px -180px;
 }
 
 .controller_xboxone #BackgroundLines.BackButtonSelected
@@ -1008,10 +1065,14 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_13.png");
 }
 
-.controller_ps4 #BackgroundLines.StartButtonSelected,
-.controller_mobile_touch #BackgroundLines.StartButtonSelected 
+.controller_ps4 #BackgroundLines.StartButtonSelected
 {
     background-position: -7px -130px;
+}
+
+.controller_mobile_touch #BackgroundLines.StartButtonSelected 
+{
+    background-position: -68px -180px;
 }
 
 .controller_xboxone #BackgroundLines.StartButtonSelected
@@ -1074,9 +1135,13 @@ SelectMousePosition
     visibility: collapse;
 }
 
-.controller_ps4 #PS4TrackpadContainer,
-.controller_mobile_touch #PS4TrackpadContainer 
+.controller_mobile_touch #PS4TrackpadContainer
 {
+    margin-top: 144px;
+}
+
+.controller_ps4 #PS4TrackpadContainer,
+.controller_mobile_touch #PS4TrackpadContainer {
     visibility: visible;
 }
 
@@ -1088,6 +1153,10 @@ SelectMousePosition
 	width: 256px;
 	height: 128px;
 	flow-children: down;
+}
+
+.controller_mobile_touch #GyroModeContainer {
+    height: 94px;
 }
 
 
@@ -1704,6 +1773,49 @@ ControllerBindingButton.BindingButton.Right
     visibility: visible;
 }
 
+#MacroContainer
+{
+    visibility: collapse;
+}
+
+.controller_mobile_touch #MacroContainer
+{
+    visibility: visible;
+}
+
+#MacroContainer
+{
+    flow-children: right;
+}
+
+#MacroContainerLeft
+{
+    flow-children: down;
+}
+
+#MacroContainerRight
+{
+    flow-children: down;
+}
+
+ControllerBindingButton.BindingButton.MacroButton
+{
+    width: 200px;
+    height: 40px;
+    margin: 3px;
+}
+
+ControllerBindingButton.BindingButton Label.MacroID
+{
+    background-image: url("file://{images}/library/controller/controller_macro.png");
+    background-repeat: no-repeat;
+    text-align: center;
+    width: 38px;
+    height: 30px;
+    margin-left: 2px;
+    margin-left: 2px;
+}
+
 #BackButton.BindingButton
 {
 	background-image: url("file://{images}/library/controller/input_controller_glyph_left_back.png");
@@ -1791,6 +1903,10 @@ ControllerBindingButton.BindingButton.Right
 {
 	transform: translatey( -115px );
 	pre-transform-scale2d: 0.75;
+}
+
+.BottomPanelVisible.controller_mobile_touch #TopHalfContainer #BackgroundController {
+    pre-transform-scale2d: 0;
 }
 
 ControllerPropertiesMode, ControllerPropertiesActivator

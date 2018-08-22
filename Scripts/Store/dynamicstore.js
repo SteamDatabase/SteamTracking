@@ -41,6 +41,7 @@ GDynamicStore = {
 	s_rgCurators: {},
 	s_rgCurations: {},
 	s_rgCreatorsFollowed: {},
+	s_rgCreatorsIgnored: {},
 
 	s_preferences: {},
 	s_rgExcludedTags: {},
@@ -154,7 +155,7 @@ GDynamicStore = {
 				};
 				var fnConvertToMap = function ( rgData ) {
 					var out = {};
-					if ( rgData.length )
+					if ( rgData && rgData.length )
 					{
 						for ( var i = 0; i < rgData.length; i++ )
 							out[ rgData[i] ] = true;
@@ -171,12 +172,8 @@ GDynamicStore = {
 				GDynamicStore.s_rgIgnoredPackages = fnConvertToMap( data.rgIgnoredPackages );
 				GDynamicStore.s_rgCurators = data.rgCurators || {};
 				GDynamicStore.s_rgCurations = data.rgCurations || {};
-				if( data.rgCreatorsFollowed )
-				{
-					data.rgCreatorsFollowed.forEach( function( element ) {
-						GDynamicStore.s_rgCreatorsFollowed[element] = element;
-					});
-				}
+				GDynamicStore.s_rgCreatorsFollowed = fnConvertToMap( data.rgCreatorsFollowed );
+				GDynamicStore.s_rgCreatorsIgnored = fnConvertToMap( data.rgCreatorsIgnored );
 				if( data.rgPlaytestData )
 				{
 					GDynamicStore.s_rgPlaytestData = data.rgPlaytestData;
@@ -534,6 +531,7 @@ GDynamicStore = {
 
 			var rgExcludedTagNames = GDynamicStore.GetExcludedTagsOverlap( $El );
 			var rgExcludedContentDescriptorIDs = GDynamicStore.GetExcludedContentDescriptorOverlap( $El );
+			var rgExcludedCreatorIDs = GDynamicStore.GetExcludedCreatorOverlap( $El );
 
 			if ( !$El.hasClass('ds_no_flags') )
 			{
@@ -569,6 +567,11 @@ GDynamicStore = {
 				{
 					$El.addClass( 'ds_flagged ds_excluded_by_preferences' );
 					$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">HAS EXCLUDED TAGS:&nbsp;' + rgExcludedTagNames.join(", " ) + '</div>' );
+				}
+				else if ( rgExcludedCreatorIDs.length != 0 )
+				{
+					$El.addClass( 'ds_flagged ds_excluded_by_preferences' );
+					$El.append( '<div class="ds_flag ds_excluded_by_preferences_flag">EXCLUDED BY IGNORED DEVELOPER / PUBLISHER / FRANCHISE&nbsp;&nbsp;</div>' );
 				}
 
 				if( g_AccountID && unAppID && $El.data('ds-options') !== 0 ) // Only add if we have an appid
@@ -1052,6 +1055,24 @@ GDynamicStore = {
 			{
 				var id = rgIDs[i];
 				if ( GDynamicStore.s_rgExcludedDescIDs[id] )
+				{
+					rgOverlappingDescIDs.push( id );
+				}
+			}
+		}
+		return rgOverlappingDescIDs;
+	},
+
+	GetExcludedCreatorOverlap: function( $e )
+	{
+		var rgOverlappingDescIDs = [];
+		var rgIDs = $e.data( 'dsCrtrids' );
+		if ( rgIDs && rgIDs.length > 0 )
+		{
+			for ( var i = 0; i < rgIDs.length; ++i )
+			{
+				var id = rgIDs[i];
+				if ( GDynamicStore.s_rgCreatorsIgnored[id] )
 				{
 					rgOverlappingDescIDs.push( id );
 				}

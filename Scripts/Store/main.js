@@ -2388,7 +2388,7 @@ function FollowCuratorWithCallback( clanID, bFollow, onComplete )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.' );
+			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.<br>Note: You cannot follow a curator you already ignore.' );
 		}
 	);
 	return false;
@@ -2413,7 +2413,7 @@ function IgnoreCuratorWithCallback( clanID, bIgnore, onComplete )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to ignore the Steam Curator.' );
+			ShowAlertDialog( 'Error', 'There was a problem trying to ignore the Steam Curator.<br>Note: You cannot ignore a curator you already follow. ' );
 		}
 	);
 	return false;

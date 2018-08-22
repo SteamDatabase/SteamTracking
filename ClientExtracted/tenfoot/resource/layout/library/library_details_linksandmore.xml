@@ -47,8 +47,13 @@
 					</ParentalButton>
 
 					<Button id="CDKeyButton" class="NxLeftNavButtonAction">
-          	<Image src="file://{images}/library/icon_activate.png" />
+						<Image src="file://{images}/library/icon_activate.png" />
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
+					</Button>
+
+					<Button id="StopStreamingButton" class="NxLeftNavButtonAction" onactivate="DisableOverlay(); AsyncEvent( 0.5, StopStreaming() )">
+                        <Image src="file://{images}/exit.png" />
+						<Label id="StopStreamingLabel" text="#Quit_StopStreaming" />
 					</Button>
 
 					<Button id="AppKillButton" class="AppKillButton NxLeftNavButtonAction">
