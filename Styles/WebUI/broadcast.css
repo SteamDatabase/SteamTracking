@@ -316,6 +316,11 @@
 	transition: all .12s ease-in-out;
 }
 
+.videoControlButton:hover
+{
+	filter: brightness(2);
+}
+
 .STV_BroadcastSettings .videoControlButton
 {
 	width: 18px;
@@ -346,7 +351,7 @@
 .STV_BroadcastContextMenuPanel
 {
 	padding: 8px;
-	text-align: right;
+	text-align: center;
 	border: 1px solid #333e;
 	background: #000c;
 	position: absolute;
@@ -1120,6 +1125,11 @@
 	justify-content: flex-end;
 }
 
+.TheaterMode .BroadcastTabHeaderContainer
+{
+	display: none;
+}
+
 .BroadcastTab_OverBackground
 {
 	position: absolute;
@@ -1145,6 +1155,15 @@
 	display: flex;
 	flex-direction: row;
 	margin-left: 4px;
+	padding: 18px 16px;
+	padding-top: 0px;
+}
+
+
+.TheaterMode .BroadcastContainer
+{
+	padding: 0;
+	height: 100%;
 }
 
 .BroadcastChat
@@ -1203,6 +1222,19 @@
 	min-height: 50px;
 }
 
+
+.TheaterMode .BroadcastSection
+{
+	max-height: 100%;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.TheaterMode .BroadcastDetailsSection
+{
+	display: none;
+}
+
 .BroadcastDetailsSection .BroadcastDetails
 {
 	display: flex;
@@ -1229,7 +1261,6 @@
 .BroadcastDetailsHeader_ViewerCount
 {
 	margin-top: 6px;
-	padding-left: 26px;
 	height: 20px;
 	line-height: 20px;
 
@@ -1237,9 +1268,24 @@
 	pointer-events: none;
 	text-decoration: none;
 
-	background-image: url('../../images/webui/broadcast/icon_viewers.png');
-	background-repeat: no-repeat;
-	background-position: left center;
+}
+
+.BroadcastDetailsHeader_ViewerCount .SVGIcon_Viewers
+{
+	width: 16px;
+	height: 16px;
+	margin-right: 6px;
+	margin-bottom: -3px;
+}
+
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .backGuy
+{
+	fill: white;
+}
+
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .frontGuy
+{
+	fill: rgb(182, 195, 248);
 }
 
 .videoContainer .BroadcastDetailsHeader_ViewerCount
@@ -1295,6 +1341,7 @@
 	color: #778494;
 	cursor: pointer;
 	font-size: 14px;
+	width: fit-content;
 }
 
 .BroadcastDetails .BroadcastDetailsHeader .BroadcastLink:hover
@@ -1358,11 +1405,18 @@
 	z-index: 1;
 }
 
+.TheaterMode .BroadcastChatDivider
+{
+	background-color: rgb(18, 19, 20);
+}
+
+.TheaterMode .BroadcastChatDivider:hover,
 .BroadcastChatDivider:hover
 {
 	background-color: rgb(64, 70, 79);
 }
 
+.BroadcastTheaterToggle,
 .BroadcastChatPositionToggle,
 .BroadcastFullscreenToggle
 {
@@ -1374,16 +1428,27 @@
 .BroadcastChatPositionToggle.bottom
 {
 	background-image: url('../../images/webui/icon_view_chatbottom.png');
+	margin-right: 4px;
+
 }
+
 
 .BroadcastChatPositionToggle.right
 {
 	background-image: url('../../images/webui/icon_view_chatright.png');
+	margin-right: 4px;
+
 }
 
 .BroadcastFullscreenToggle
 {
 	background-image: url('../../images/webui/icon_view_fullscreen.png');
+	margin-left: 4px;
+}
+
+.BroadcastTheaterToggle
+{
+	background-image: url('../../images/webui/icon_view_theater.png');
 }
 
 .BroadcastChatDivider.horizontal
@@ -1448,6 +1513,7 @@
 
 }
 
+.TheaterMode .videoContainer .BroadcastDetails,
 .videoContainer.fullscreenVideo .BroadcastDetails
 {
 	display: block;
@@ -1549,6 +1615,11 @@ iframe.steamTVLogin
 	justify-content: space-between;
 }
 
+.StandalonePlayer.TheaterMode .StandalonePlayerHeader
+{
+	display: none;
+}
+
 .StandalonePlayerHeader .Logo
 {
 	margin: 12px 0 0 20px;
@@ -1570,10 +1641,12 @@ iframe.steamTVLogin
 	max-height: calc(100vh - 150px);
 }
 
-.BroadcastContainer
+
+.TheaterMode .BroadcastContainerSectionVideoContainer
 {
-	padding: 18px 16px;
-	padding-top: 0px;
+	margin-top: auto;
+	margin-bottom: auto;
+	max-height: 100%;
 }
 
 .BroadcastStreamDetails {
@@ -1626,6 +1699,14 @@ iframe.steamTVLogin
 	background: transparent;
 }
 
+
+.StandalonePlayer.TheaterMode,
+.TheaterMode .BroadcastContainerSection,
+.TheaterMode .BroadcastContainer
+{
+	height: 100%;
+}
+
 .StandalonePlayer .BroadcastStreamDetails
 {
 	background-color: rgba(0,0,0,0.4);
@@ -1640,10 +1721,10 @@ iframe.steamTVLogin
 	margin-left: 16px;
 }
 
-.STV_Logo .SVGIcon_Throbber
+.STV_Logo .SVGIcon_SteamTV
 {
-	width: 44px;
-	height: 44px;
+	width: 152px;
+	height: 38px;
 	margin-right: 3px;
 }
 

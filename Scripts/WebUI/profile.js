@@ -22,7 +22,7 @@ webpackJsonp(
     "5Pz3": function(e, t, n) {
       "use strict";
       function r() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -32,20 +32,20 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { "data-name": "Group" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               "data-name": "Path",
               d:
                 "M50.86,20.23l-9,9,4.24,4.24,9-9c6.35-6.35,16.09-6.93,21.73-1.3s5,15.38-1.3,21.73l-9,9,4.24,4.24,9-9c8.69-8.69,9.27-22.24,1.3-30.21S59.55,11.55,50.86,20.23Z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               "data-name": "Path",
               d:
                 "M44.89,75.53a17.22,17.22,0,0,1-11.28,5.13A13.23,13.23,0,0,1,19.34,66.39a17.22,17.22,0,0,1,5.13-11.28l9-9-4.24-4.24-9,9a23.21,23.21,0,0,0-6.88,15.22c0,.37,0,.74,0,1.11A19.19,19.19,0,0,0,33.91,86.66a23.21,23.21,0,0,0,15.22-6.88l9-9-4.24-4.24Z"
             }),
-            ne.createElement("rect", {
+            ie.createElement("rect", {
               "data-name": "Path",
               className: "Link1",
               x: "28.75",
@@ -58,7 +58,7 @@ webpackJsonp(
         );
       }
       function i() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -72,14 +72,14 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
           })
         );
       }
       function o() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -89,19 +89,19 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 600 600"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z"
             }),
-            ne.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
+            ie.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
           )
         );
       }
       function s() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -113,7 +113,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -123,7 +123,7 @@ webpackJsonp(
             points:
               "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "
           }),
-          ne.createElement("polygon", {
+          ie.createElement("polygon", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -131,7 +131,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 "
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -139,7 +139,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "83,60.75 83,133 155,133 "
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -150,7 +150,7 @@ webpackJsonp(
         );
       }
       function c() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -160,14 +160,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ne.createElement("polygon", {
+          ie.createElement("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
           })
         );
       }
       function a() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -177,10 +177,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "ColorSelector",
               d:
                 "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
@@ -198,7 +198,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Microphone";
         return (
           e.className && (t += " " + e.className),
-          ne.createElement(
+          ie.createElement(
             "svg",
             {
               version: "1.1",
@@ -210,128 +210,128 @@ webpackJsonp(
               height: "256px",
               viewBox: "-127.5 664.5 256 256"
             },
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "MicBase" },
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement(
+                ie.createElement(
                   "g",
                   null,
-                  ne.createElement("path", {
+                  ie.createElement("path", {
                     d:
                       "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z"
                   }),
-                  ne.createElement("path", {
+                  ie.createElement("path", {
                     d:
                       "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z"
                   })
                 ),
-                ne.createElement(
+                ie.createElement(
                   "g",
                   null,
-                  ne.createElement("path", {
+                  ie.createElement("path", {
                     d:
                       "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z"
                   }),
-                  ne.createElement("path", {
+                  ie.createElement("path", {
                     d:
                       "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z"
                   })
                 )
               ),
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z"
                 })
               ),
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z"
                 })
               )
             ),
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "MicFill" },
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z"
                 })
               ),
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z"
                 })
               )
             ),
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "MicStrike", fill: "none", strokeWidth: "1" },
-              ne.createElement("line", {
+              ie.createElement("line", {
                 x1: "-82.5",
                 y1: "866.5",
                 x2: "83.5",
@@ -342,7 +342,7 @@ webpackJsonp(
         );
       }
       function m() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -355,7 +355,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("circle", {
+          ie.createElement("circle", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -364,7 +364,7 @@ webpackJsonp(
             cy: "128",
             r: "107.5"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -373,7 +373,7 @@ webpackJsonp(
             d:
               "M74.484,145.945 c0,0,12.996,37.533,53.514,37.533c38.084,0,53.499-37.533,53.499-37.533"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -384,7 +384,7 @@ webpackJsonp(
             x2: "94.5",
             y2: "109.5"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -398,7 +398,7 @@ webpackJsonp(
         );
       }
       function u() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -409,10 +409,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
               fill: "#FFFFFF",
@@ -427,7 +427,7 @@ webpackJsonp(
         );
       }
       function p() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -437,20 +437,20 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#020202",
               d:
                 "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#020202",
               d:
                 "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#020202",
               d:
                 "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z"
@@ -459,7 +459,7 @@ webpackJsonp(
         );
       }
       function h() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -469,14 +469,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z"
           })
         );
       }
       function d() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -487,10 +487,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "-165 95 100 100"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("polygon", {
+            ie.createElement("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
             })
@@ -498,7 +498,7 @@ webpackJsonp(
         );
       }
       function f() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -511,7 +511,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -521,7 +521,7 @@ webpackJsonp(
             x2: "44",
             y2: "44"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -534,7 +534,7 @@ webpackJsonp(
         );
       }
       function v(e) {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -548,10 +548,10 @@ webpackJsonp(
             enableBackground: "new 0 0 64 64"
           },
           !e.exitOnly &&
-            ne.createElement(
+            ie.createElement(
               "g",
               null,
-              ne.createElement("path", {
+              ie.createElement("path", {
                 className: "Bubble",
                 fill: "none",
                 strokeMiterlimit: "1",
@@ -561,10 +561,10 @@ webpackJsonp(
               })
             ),
           !e.exitOnly &&
-            ne.createElement(
+            ie.createElement(
               "g",
               null,
-              ne.createElement("path", {
+              ie.createElement("path", {
                 className: "AudioLines",
                 opacity: "0",
                 strokeWidth: "1px",
@@ -572,10 +572,10 @@ webpackJsonp(
                   "M37.2,51.1c-0.5,0-1-0.1-1.3-0.4c-0.7-0.5-0.7-1.3,0-1.8c6.3-4.4,9.8-10.2,9.8-16.4c0-6.2-3.5-12-9.8-16.4 c-0.7-0.5-0.7-1.3,0-1.8s1.9-0.5,2.6,0c7.1,4.9,10.9,11.4,10.9,18.3c0,6.9-3.9,13.4-10.9,18.3C38.2,51,37.7,51.1,37.2,51.1 M21.4,40.2c0.5,0,0.9-0.1,1.3-0.4c2.8-2,4.3-4.6,4.3-7.3s-1.5-5.4-4.3-7.3c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c2.1,1.5,3.3,3.4,3.3,5.5c0,2.1-1.2,4-3.3,5.5c-0.7,0.5-0.7,1.3,0,1.8C20.4,40.1,20.9,40.2,21.4,40.2 M29.3,45.7 c0.5,0,1-0.1,1.3-0.4c4.9-3.4,7.7-7.9,7.7-12.7c0-4.8-2.7-9.3-7.7-12.7c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c4.2,2.9,6.6,6.8,6.6,10.9c0,4.1-2.3,8-6.6,10.9c-0.7,0.5-0.7,1.3,0,1.8C28.4,45.5,28.8,45.7,29.3,45.7"
               })
             ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "Arrow", opacity: e.exitOnly ? 1 : 0 },
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -583,7 +583,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -592,10 +592,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               className: "ExitDoor",
               opacity: e.exitOnly ? 1 : 0,
               strokeLinecap: "round",
@@ -607,17 +607,17 @@ webpackJsonp(
             })
           ),
           !e.exitOnly &&
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "Microphone" },
-              ne.createElement("path", {
+              ie.createElement("path", {
                 d:
                   "M40.971,28.593v6.278c0,4.007-4.023,7.284-8.971,7.284c-2.693,0-5.126-0.974-6.765-2.516 c-1.379-1.28-2.207-2.952-2.207-4.769v-6.278l0,0H21.05v6.278c0,0.536,0.064,1.055,0.162,1.573 c0.357,1.752,1.281,3.325,2.627,4.592c1.801,1.702,4.332,2.839,7.17,3.049v4.072H25.3c-0.341,0-0.616,0.438-0.616,0.989 c0,0.552,0.275,0.99,0.616,0.99h5.759h1.882H38.7c0.341,0,0.616-0.438,0.616-0.99c0-0.551-0.275-0.989-0.616-0.989h-5.71v-4.072 c5.58-0.422,9.96-4.396,9.96-9.214v-6.278H40.971z"
               }),
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M32,39.841c-3.493,0-6.343-2.344-6.343-5.213v-17.85c0-2.871,2.85-5.213,6.343-5.213s6.343,2.342,6.343,5.213v17.85,C38.343,37.497,35.493,39.841,32,39.841z"
                 })
@@ -626,7 +626,7 @@ webpackJsonp(
         );
       }
       function y() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -639,10 +639,10 @@ webpackJsonp(
             viewBox: "0 0 64 64",
             enableBackground: "new 0 0 64 64"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "Arrow" },
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -650,7 +650,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -659,10 +659,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               className: "ExitDoor",
               strokeLinecap: "round",
               strokeMiterlimit: "1",
@@ -675,7 +675,7 @@ webpackJsonp(
         );
       }
       function g() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -690,17 +690,17 @@ webpackJsonp(
             stroke: "#000",
             strokeWidth: "10px"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "ScratchPad" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
               d:
                 "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -710,7 +710,7 @@ webpackJsonp(
               x2: "74.495",
               y2: "54.063"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -720,7 +720,7 @@ webpackJsonp(
               x2: "124.495",
               y2: "54.063"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -731,28 +731,28 @@ webpackJsonp(
               y2: "54.063"
             })
           ),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "115.4",
             x2: "179.4",
             y2: "115.4"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "145.8",
             x2: "143.3",
             y2: "145.8"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "175.9",
             x2: "179.4",
             y2: "175.9"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "TextLines",
             x1: "73.7",
             y1: "82.7",
@@ -761,11 +761,11 @@ webpackJsonp(
           })
         );
       }
-      function _(e) {
+      function w(e) {
         var t = "SVGIcon_Button SVGIcon_Headphones";
         return (
           e.className && (t += " " + e.className),
-          ne.createElement(
+          ie.createElement(
             "svg",
             {
               version: "1.1",
@@ -777,31 +777,31 @@ webpackJsonp(
               height: "256px",
               viewBox: "-305.5 396.5 256 256"
             },
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "HeadPhonesBase" },
-              ne.createElement(
+              ie.createElement(
                 "g",
                 null,
-                ne.createElement("path", {
+                ie.createElement("path", {
                   fill: "none",
                   d:
                     "M-176.5,418.7c-37,0-69.5,30.2-69.5,64.5v25.3c11.3,2.3,19.9,12.3,19.9,24.3v8.6l100.9-100.9 C-138.2,427.3-156.7,418.7-176.5,418.7z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-226.2,532.9c0-12-8.5-22-19.9-24.3v-25.3c0-34.4,32.5-64.5,69.5-64.5c19.8,0,38.3,8.6,51.2,21.9l6.9-6.9 c-14.8-15.1-35.7-24.9-58.2-24.9c-42.3,0-79.4,34.8-79.4,74.5v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8c0,7.8,3.6,14.7,9.2,19.3 l40.5-40.5V532.9z"
                 }),
-                ne.createElement("path", {
+                ie.createElement("path", {
                   d:
                     "M-97.1,508.6v-25.3c0-7.5-1.3-14.8-3.8-21.8l-7.9,7.9c1.2,4.5,1.8,9.1,1.8,13.9v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8 c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8v-29.8C-77.2,520.9-85.8,510.9-97.1,508.6z"
                 })
               )
             ),
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "HeadphonesStrike" },
-              ne.createElement("line", {
+              ie.createElement("line", {
                 fill: "none",
                 x1: "-260.5",
                 y1: "598.5",
@@ -809,14 +809,14 @@ webpackJsonp(
                 y2: "432.4"
               })
             ),
-            ne.createElement(
+            ie.createElement(
               "g",
               { className: "HeadPhonesFill" },
-              ne.createElement("path", {
+              ie.createElement("path", {
                 d:
                   "M-226.2,562.7v-21.2l-40.5,40.5c4.3,3.5,9.7,5.6,15.6,5.6C-237.3,587.5-226.2,576.4-226.2,562.7z"
               }),
-              ne.createElement("path", {
+              ie.createElement("path", {
                 d:
                   "M-118.3,433.7l-6.9,6.9c7.9,8.1,13.7,18,16.5,28.8l7.9-7.9C-104.5,451.1-110.5,441.6-118.3,433.7z"
               })
@@ -824,8 +824,8 @@ webpackJsonp(
           )
         );
       }
-      function w() {
-        return ne.createElement(
+      function _() {
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -838,10 +838,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z"
             })
@@ -849,7 +849,7 @@ webpackJsonp(
         );
       }
       function b() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -861,7 +861,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("circle", {
+          ie.createElement("circle", {
             fill: "none",
             strokeWidth: "10",
             strokeMiterlimit: "10",
@@ -869,7 +869,7 @@ webpackJsonp(
             cy: "128",
             r: "95.333"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "horizontalLine",
             fill: "none",
             strokeWidth: "10",
@@ -880,7 +880,7 @@ webpackJsonp(
             x2: "183.333",
             y2: "128"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             className: "verticalLine",
             fill: "none",
             strokeWidth: "10",
@@ -894,7 +894,7 @@ webpackJsonp(
         );
       }
       function E() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -907,24 +907,24 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            ne.createElement("circle", {
+            ie.createElement("circle", {
               cx: "86.296",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "plusCircle",
             d:
               "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z"
@@ -932,7 +932,7 @@ webpackJsonp(
         );
       }
       function x() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -945,34 +945,34 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            ne.createElement("circle", {
+            ie.createElement("circle", {
               cx: "85.923",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "friendBodyFull",
             d:
               "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "friendArm",
             d:
               "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "redCircle",
             d:
               "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z"
@@ -980,7 +980,7 @@ webpackJsonp(
         );
       }
       function S() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -993,18 +993,18 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z"
           }),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "invitePlus" },
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1014,7 +1014,7 @@ webpackJsonp(
               x2: "101.5",
               y2: "128"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1028,7 +1028,7 @@ webpackJsonp(
         );
       }
       function k() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1041,7 +1041,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
@@ -1052,7 +1052,7 @@ webpackJsonp(
         );
       }
       function M() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1064,42 +1064,42 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "Speaker" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "SoundWaves" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "SoundWavesHighest",
               d:
                 "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "SoundWavesHigh",
               d:
                 "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "SoundWavesMed",
               d:
                 "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "SoundWavesLow",
               d:
                 "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "SoundX" },
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1108,7 +1108,7 @@ webpackJsonp(
               x2: "223.167",
               y2: "84.5"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1121,7 +1121,7 @@ webpackJsonp(
         );
       }
       function P() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1131,14 +1131,14 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "Bubble",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             d:
               "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1147,7 +1147,7 @@ webpackJsonp(
             x2: "176.184",
             y2: "128.886"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1159,7 +1159,7 @@ webpackJsonp(
         );
       }
       function C() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1172,10 +1172,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             null,
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
             })
@@ -1183,7 +1183,7 @@ webpackJsonp(
         );
       }
       function I() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1196,7 +1196,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "playTriangle",
             d:
               "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
@@ -1204,7 +1204,7 @@ webpackJsonp(
         );
       }
       function L() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1217,18 +1217,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z"
           })
         );
       }
       function O() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1241,10 +1241,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "time" },
-            ne.createElement("circle", {
+            ie.createElement("circle", {
               fill: "none",
               strokeWidth: "10",
               strokeMiterlimit: "10",
@@ -1252,7 +1252,7 @@ webpackJsonp(
               cy: "128.014",
               r: "64"
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1260,10 +1260,10 @@ webpackJsonp(
               points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "arrow" },
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1271,7 +1271,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "199.735,63.66 199.735,192.366 171.207,163.675"
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1280,10 +1280,10 @@ webpackJsonp(
               points: "199.735,63.66 199.735,192.366 228.266,163.675"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "alphabet" },
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1291,7 +1291,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "70.268,109.934 94.483,63.635 119.77,109.934"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1302,7 +1302,7 @@ webpackJsonp(
               x2: "112.135",
               y2: "97.861"
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1315,7 +1315,7 @@ webpackJsonp(
         );
       }
       function B() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1328,7 +1328,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -1340,7 +1340,7 @@ webpackJsonp(
         );
       }
       function N() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1353,45 +1353,45 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "defs",
             null,
-            ne.createElement(
+            ie.createElement(
               "linearGradient",
               { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              ne.createElement("stop", {
+              ie.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
                 stopColor: "#00ccff"
               }),
-              ne.createElement("stop", {
+              ie.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
                 stopColor: "#2d73ff"
               })
             ),
-            ne.createElement(
+            ie.createElement(
               "filter",
               { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
-              ne.createElement("feOffset", {
+              ie.createElement("feOffset", {
                 result: "offOut",
                 in: "SourceAlpha",
                 dx: "20",
                 dy: "20"
               }),
-              ne.createElement("feGaussianBlur", {
+              ie.createElement("feGaussianBlur", {
                 result: "blurOut",
                 in: "offOut",
                 stdDeviation: "10"
               }),
-              ne.createElement("feBlend", {
+              ie.createElement("feBlend", {
                 in: "SourceGraphic",
                 in2: "blurOut",
                 mode: "normal"
               })
             )
           ),
-          ne.createElement("path", {
+          ie.createElement("path", {
             fill: "none",
             stroke: "url(#linear)",
             strokeWidth: "24",
@@ -1402,7 +1402,7 @@ webpackJsonp(
             strokeDasharray: "365.19 365.19",
             strokeDashoffset: "0.00"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             fill: "none",
             opacity: ".2",
             filter: "url(#f1)",
@@ -1417,8 +1417,8 @@ webpackJsonp(
           })
         );
       }
-      function D() {
-        return ne.createElement(
+      function V() {
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1431,17 +1431,17 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "triangle" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               stroke: "#020202",
               strokeWidth: "16",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               d: "M127.9,76.632"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "11",
@@ -1451,12 +1451,12 @@ webpackJsonp(
               d:
                 "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
             }),
-            ne.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+            ie.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "exclamation" },
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "16",
@@ -1467,7 +1467,7 @@ webpackJsonp(
               x2: "127.9",
               y2: "160.07"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#020202",
               d:
                 "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
@@ -1475,8 +1475,8 @@ webpackJsonp(
           )
         );
       }
-      function V() {
-        return ne.createElement(
+      function D() {
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1489,12 +1489,12 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "topLock",
             d:
               "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "baseLock",
             fill: "none",
             stroke: "#ffffff",
@@ -1505,8 +1505,8 @@ webpackJsonp(
           })
         );
       }
-      function W(e) {
-        return ne.createElement(
+      function G(e) {
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1520,26 +1520,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
-            "defs",
-            null,
-            ne.createElement(
-              "linearGradient",
-              { id: "gradient", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
-              ne.createElement("stop", {
-                offset: "0%",
-                stopColor: "rgb(55, 102, 251)"
-              }),
-              ne.createElement("stop", {
-                offset: "100%",
-                stopColor: "rgb(73, 104, 235)"
-              })
-            )
-          ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { id: "partCircle" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1548,7 +1532,7 @@ webpackJsonp(
               d:
                 "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1556,7 +1540,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               d: "M201.432,101.166"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1565,20 +1549,10 @@ webpackJsonp(
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { id: "mainOutline" },
-            ne.createElement("path", {
-              className: "steamTV",
-              display: "none",
-              fill: "url(#gradient)",
-              stroke: "#ffffff",
-              strokeWidth: "6",
-              strokeMiterlimit: "10",
-              d:
-                "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
-            }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundFill",
               fill: "none",
               stroke: "#ffffff",
@@ -1587,7 +1561,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundOuterOutline",
               strokeLinecap: "butt",
               fill: "none",
@@ -1597,7 +1571,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber01",
               strokeLinecap: "butt",
               fill: "none",
@@ -1607,7 +1581,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber02",
               strokeLinecap: "butt",
               fill: "none",
@@ -1617,7 +1591,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber03",
               strokeLinecap: "butt",
               fill: "none",
@@ -1627,7 +1601,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber04",
               strokeLinecap: "butt",
               fill: "none",
@@ -1637,7 +1611,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber05",
               strokeLinecap: "butt",
               fill: "none",
@@ -1647,7 +1621,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber06",
               strokeLinecap: "butt",
               fill: "none",
@@ -1657,7 +1631,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber07",
               strokeLinecap: "butt",
               fill: "none",
@@ -1667,7 +1641,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber08",
               strokeLinecap: "butt",
               fill: "none",
@@ -1677,7 +1651,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber09",
               strokeLinecap: "butt",
               fill: "none",
@@ -1687,7 +1661,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber10",
               strokeLinecap: "butt",
               fill: "none",
@@ -1697,7 +1671,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber11",
               strokeLinecap: "butt",
               fill: "none",
@@ -1707,7 +1681,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber12",
               strokeLinecap: "butt",
               fill: "none",
@@ -1717,7 +1691,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber13",
               strokeLinecap: "butt",
               fill: "none",
@@ -1727,7 +1701,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber14",
               strokeLinecap: "butt",
               fill: "none",
@@ -1737,7 +1711,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "roundThrobber15",
               strokeLinecap: "butt",
               fill: "none",
@@ -1748,19 +1722,19 @@ webpackJsonp(
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { id: "bottomCircle" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#ffffff",
               d:
                 "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { id: "topCircle" },
-            ne.createElement("circle", {
+            ie.createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -1772,8 +1746,8 @@ webpackJsonp(
           )
         );
       }
-      function G() {
-        return ne.createElement(
+      function z() {
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1786,19 +1760,19 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "videoPlayButton",
             d:
               "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z"
           })
         );
       }
-      function z() {
-        return ne.createElement(
+      function W() {
+        return ie.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -1809,13 +1783,13 @@ webpackJsonp(
             viewBox: "0 0 100 100",
             enableBackground: "new 0 0 100 100"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             stroke: "#ffffff",
             fill: "#ffffff",
             d:
               "M83.086,12.091H16.913C10.344,12.091,5,17.435,5,24.004v51.992l0.005,0.102c0.056,6.514,5.396,11.813,11.908,11.813h66.173  c6.531,0,11.874-5.314,11.906-11.764L95,24.004C95,17.435,89.654,12.091,83.086,12.091z M83.086,82.989H16.913  c-3.516,0-6.488-2.653-6.93-6.106l18.899-20.615c1.226-1.34,2.85-2.076,4.574-2.076c1.723,0,3.347,0.736,4.574,2.078l19.611,21.393  c0.885,0.961,2.508,1.029,3.473,0.148c1-0.916,1.068-2.476,0.152-3.478l-4.113-4.485l8.406-8.918  c1.258-1.332,2.926-2.064,4.696-2.064c1.772,0,3.44,0.732,4.696,2.064l15.061,15.973C89.564,80.346,86.594,82.989,83.086,82.989z   M90.08,69.801L78.532,57.555c-2.194-2.328-5.132-3.609-8.275-3.609c-3.142,0-6.08,1.281-8.272,3.609l-8.164,8.656l-12.162-13.27  c-2.171-2.366-5.084-3.67-8.201-3.67c-3.119,0-6.031,1.304-8.202,3.67L9.92,69.673V24.004c0-3.856,3.137-6.994,6.993-6.994h66.173  c3.857,0,6.994,3.137,6.994,6.994V69.801z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             stroke: "#ffffff",
             fill: "#ffffff",
             d:
@@ -1824,7 +1798,7 @@ webpackJsonp(
         );
       }
       function T() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1837,14 +1811,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
           })
         );
       }
       function H(e) {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1858,7 +1832,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1867,7 +1841,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "128,247.688 128,8.313 181.061,61.674 "
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1882,7 +1856,7 @@ webpackJsonp(
         var t = "";
         return (
           e.angle && (t = "rotate(" + e.angle + ")"),
-          ne.createElement(
+          ie.createElement(
             "svg",
             {
               transform: t,
@@ -1896,7 +1870,7 @@ webpackJsonp(
               height: "256px",
               viewBox: "0 0 256 256"
             },
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               className: "Arrow1",
               fill: "none",
               stroke: "#ffffff",
@@ -1905,7 +1879,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "135.65,21.667 30.081,127.235 137.18,234.333 "
             }),
-            ne.createElement("polyline", {
+            ie.createElement("polyline", {
               className: "Arrow2",
               fill: "none",
               stroke: "#ffffff",
@@ -1918,7 +1892,7 @@ webpackJsonp(
         );
       }
       function F() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1931,7 +1905,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             className: "Arrow1",
             fill: "none",
             stroke: "#ffffff",
@@ -1940,7 +1914,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "135.65,21.667 30.081,127.235 137.18,234.333 "
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             className: "Arrow2",
             fill: "none",
             stroke: "#ffffff",
@@ -1952,7 +1926,7 @@ webpackJsonp(
         );
       }
       function j() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -1965,7 +1939,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("rect", {
+          ie.createElement("rect", {
             x: "24",
             y: "42.167",
             fill: "none",
@@ -1975,7 +1949,7 @@ webpackJsonp(
             width: "208",
             height: "171.667"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "42",
@@ -1988,7 +1962,7 @@ webpackJsonp(
         );
       }
       function A() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2001,7 +1975,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "18",
@@ -2014,7 +1988,7 @@ webpackJsonp(
         );
       }
       function U() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2027,14 +2001,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 "
           }),
-          ne.createElement("rect", {
+          ie.createElement("rect", {
             x: "24",
             y: "90.861",
             fill: "none",
@@ -2047,7 +2021,7 @@ webpackJsonp(
         );
       }
       function K() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2060,10 +2034,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "mainBox" },
-            ne.createElement("rect", {
+            ie.createElement("rect", {
               x: "90",
               y: "42.167",
               fill: "none",
@@ -2073,7 +2047,7 @@ webpackJsonp(
               width: "142",
               height: "171.667"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -2084,10 +2058,10 @@ webpackJsonp(
               y2: "54.01"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "leftBox" },
-            ne.createElement("rect", {
+            ie.createElement("rect", {
               x: "28",
               y: "42.167",
               fill: "none",
@@ -2097,7 +2071,7 @@ webpackJsonp(
               width: "62",
               height: "171.667"
             }),
-            ne.createElement("line", {
+            ie.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -2111,7 +2085,7 @@ webpackJsonp(
         );
       }
       function X() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2124,7 +2098,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "30",
@@ -2133,13 +2107,13 @@ webpackJsonp(
             d:
               "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895"
           }),
-          ne.createElement("polygon", {
+          ie.createElement("polygon", {
             points: "147.639,108.361 245.755,10.166 245.834,108.361 "
           })
         );
       }
       function Y() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2152,18 +2126,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z"
           }),
-          ne.createElement("path", {
+          ie.createElement("path", {
             d:
               "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z"
           })
         );
       }
       function q() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2176,10 +2150,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "base" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2189,10 +2163,10 @@ webpackJsonp(
                 "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "lines" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "line1",
               fill: "none",
               stroke: "#ffffff",
@@ -2201,7 +2175,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M128,68.12v137.197"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "line2",
               fill: "none",
               stroke: "#ffffff",
@@ -2210,7 +2184,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M83.613,68.12 l4.035,137.197"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "line3",
               fill: "none",
               stroke: "#ffffff",
@@ -2220,10 +2194,10 @@ webpackJsonp(
               d: "M172.387,68.12 l-4.035,137.197"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "lid" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2231,7 +2205,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M27.121,38.577H228.88"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2242,7 +2216,7 @@ webpackJsonp(
         );
       }
       function J() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2255,10 +2229,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { transform: "translate(0,-952.36215)" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M49.624,963.362c-20.72,0-37.667,14.78-37.667,32.806c0,3.589,3.353,6.499,7.486,6.499l52.407-0.305v162.5 c0,18.134,17.404,32.5,38.018,32.5h96.508c20.612,0,37.667-14.475,37.667-32.5c0-3.59-3.354-6.499-7.486-6.5H217.84V996.168 c0-18.024-16.947-32.806-37.667-32.806H49.624z M49.624,976.362h2.223c0.569,0.162,1.158,0.265,1.754,0.306 c8.159,1.274,14.426,6.085,16.962,12.694l-42.112,0.306C31.513,981.897,39.656,976.362,49.624,976.362z M79.337,976.362h100.836 c12.587,0,22.694,8.77,22.694,19.806v162.194H139.23c-4.135,0.001-7.486,2.91-7.488,6.5c0,4.609-1.43,7.796-4.21,10.765 c-2.78,2.972-7.203,5.757-13.686,7.923c-0.624,0.201-1.214,0.476-1.755,0.813h-2.223c-12.695,0-23.044-8.573-23.044-19.5v-169 C86.824,988.529,84.023,981.812,79.337,976.362z M108.582,1005.611c-4.135,0.169-7.33,3.216-7.135,6.807 c0.193,3.59,3.702,6.363,7.837,6.194h71.123c4.135,0.051,7.535-2.817,7.592-6.407c0.059-3.591-3.246-6.542-7.381-6.594 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1005.603,108.816,1005.603,108.582,1005.611z M108.582,1044.612 c-4.135,0.169-7.33,3.215-7.135,6.807c0.193,3.588,3.702,6.362,7.837,6.192h71.123c4.135,0.051,7.535-2.816,7.592-6.407 c0.059-3.59-3.246-6.542-7.381-6.592c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1044.603,108.816,1044.603,108.582,1044.612z M108.582,1083.612c-4.135,0.169-7.33,3.216-7.135,6.806c0.193,3.589,3.702,6.363,7.837,6.193h71.123 c4.135,0.052,7.535-2.816,7.592-6.407c0.059-3.59-3.246-6.541-7.381-6.592c-0.069-0.001-0.141-0.001-0.211,0h-71.123 C109.05,1083.602,108.816,1083.602,108.582,1083.612z M108.582,1122.611c-4.135,0.17-7.33,3.216-7.135,6.806 c0.193,3.591,3.702,6.364,7.837,6.195h71.123c4.135,0.05,7.535-2.818,7.592-6.408c0.059-3.591-3.246-6.541-7.381-6.593 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1122.602,108.816,1122.602,108.582,1122.611z M145.547,1171.363h82.002 c-3.09,7.604-11.189,12.999-21.173,12.999h-67.849c0.196-0.197,0.512-0.306,0.703-0.509 C142.576,1180.277,144.436,1175.973,145.547,1171.363z"
             })
@@ -2266,7 +2240,7 @@ webpackJsonp(
         );
       }
       function Q(e) {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             transform: "rotate(" + e.angle + ")",
@@ -2280,14 +2254,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("polygon", {
+          ie.createElement("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: "#ffffff"
           })
         );
       }
       function Z(e) {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2301,47 +2275,47 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "outline" },
-            ne.createElement(
+            ie.createElement(
               "g",
               { transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)" },
-              ne.createElement("path", {
+              ie.createElement("path", {
                 d:
                   "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z"
               })
             ),
-            ne.createElement("path", {
+            ie.createElement("path", {
               d:
                 "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "WavingArm",
               opacity: e.bPending ? "1" : "0",
               d:
                 "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z"
             })
           ),
-          ne.createElement(
+          ie.createElement(
             "g",
             { className: "foreground" },
-            ne.createElement(
+            ie.createElement(
               "g",
               { transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)" },
-              ne.createElement("circle", {
+              ie.createElement("circle", {
                 fill: "#FFFFFF",
                 cx: "102.239",
                 cy: "49.488",
                 r: "33.446"
               })
             ),
-            ne.createElement("path", {
+            ie.createElement("path", {
               fill: "#FFFFFF",
               d:
                 "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z"
             }),
-            ne.createElement("path", {
+            ie.createElement("path", {
               className: "WavingArm",
               opacity: e.bPending ? "1" : "0",
               d:
@@ -2351,7 +2325,7 @@ webpackJsonp(
         );
       }
       function $() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2364,16 +2338,16 @@ webpackJsonp(
             height: "50px",
             viewBox: "0 0 71.412 50"
           },
-          ne.createElement(
+          ie.createElement(
             "g",
             { id: "g5", transform: "scale(0.58823529,0.58823529)" },
-            ne.createElement("path", {
+            ie.createElement("path", {
               id: "path7",
               fill: "#ff0000",
               d:
                 "M118.9,13.3c-1.4-5.2-5.5-9.3-10.7-10.701C98.7,0,60.7,0,60.7,0 s-38,0-47.5,2.5C8.1,3.9,3.9,8.1,2.5,13.3C0,22.8,0,42.5,0,42.5s0,19.799,2.5,29.199C3.9,76.9,8,80.999,13.2,82.4 C22.8,85,60.7,85,60.7,85s37.999,0,47.5-2.5c5.2-1.399,9.3-5.5,10.7-10.7c2.499-9.501,2.499-29.201,2.499-29.201 S121.5,22.8,118.9,13.3z"
             }),
-            ne.createElement("polygon", {
+            ie.createElement("polygon", {
               id: "polygon9",
               fill: "#ffffff",
               points: "80.201,42.5 48.6,24.3 48.6,60.7"
@@ -2382,7 +2356,7 @@ webpackJsonp(
         );
       }
       function ee() {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2395,7 +2369,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("circle", {
+          ie.createElement("circle", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "24",
@@ -2404,7 +2378,7 @@ webpackJsonp(
             cy: "128",
             r: "101.5"
           }),
-          ne.createElement("line", {
+          ie.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "24",
@@ -2417,7 +2391,7 @@ webpackJsonp(
         );
       }
       function te(e) {
-        return ne.createElement(
+        return ie.createElement(
           "svg",
           {
             version: "1.1",
@@ -2431,26 +2405,160 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ne.createElement("path", {
+          ie.createElement("path", {
             className: "Arrow",
             d:
               "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003"
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             className: "preArrowBox",
             opacity: e.bHidePreArrow ? "0" : "1",
             points: "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t"
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             className: "jumpAheadBox",
             opacity: e.bShowJumpAheadBox ? "1" : "0",
             points: "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t"
           }),
-          ne.createElement("polyline", {
+          ie.createElement("polyline", {
             className: "postArrowBox",
             opacity: e.bHidePostArrow ? "0" : "1",
             points:
               "209.29,54.763 249.167,54.763 249.167,201.236 209.29,201.236 \t"
+          })
+        );
+      }
+      function ne() {
+        return ie.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_SteamTV",
+            x: "0px",
+            y: "0px",
+            width: "1024px",
+            height: "256px",
+            viewBox: "0 0 1024 256"
+          },
+          ie.createElement(
+            "defs",
+            null,
+            ie.createElement(
+              "linearGradient",
+              { id: "gradient", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
+              ie.createElement("stop", {
+                offset: "0%",
+                stopColor: "rgb(55, 102, 251)"
+              }),
+              ie.createElement("stop", {
+                offset: "100%",
+                stopColor: "rgb(91, 106, 219)"
+              })
+            ),
+            ie.createElement(
+              "linearGradient",
+              { id: "gradientText", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
+              ie.createElement("stop", {
+                offset: "0%",
+                stopColor: "rgb(91, 106, 219)"
+              }),
+              ie.createElement("stop", {
+                offset: "100%",
+                stopColor: "rgb(125, 110, 188)"
+              })
+            )
+          ),
+          ie.createElement(
+            "g",
+            { id: "logo" },
+            ie.createElement("path", {
+              fill: "url(#gradient)",
+              d:
+                "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355"
+            }),
+            ie.createElement("path", {
+              fill: "rgb(67, 104, 241)",
+              d:
+                "M111.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.028c2.674-6.416,2.694-13.5,0.04-19.929c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.648-13.196-2.552-19.198-0.291l15.561,6.436c9.776,4.074,14.396,15.299,10.324,25.072 C132.031,190.841,120.801,195.464,111.026,191.387"
+            }),
+            ie.createElement("path", {
+              fill: "rgb(79, 105, 230)",
+              d:
+                "M227.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.812,13.821-30.812,30.809 c0,16.988,13.824,30.806,30.812,30.806C213.818,127.165,227.639,113.347,227.639,96.359 M173.736,96.306 c0-12.783,10.364-23.142,23.145-23.142c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.361,23.142-23.145,23.142 C184.1,119.447,173.736,109.089,173.736,96.306"
+            })
+          ),
+          ie.createElement(
+            "g",
+            { id: "steam" },
+            ie.createElement("path", {
+              fill: "rgb(92, 106, 218)",
+              d:
+                "M404.52,91.9l-7.968,14.006c-6.138-4.287-14.455-6.862-21.717-6.862c-8.299,0-13.437,3.43-13.437,9.586 c0,7.473,9.124,9.212,22.682,14.082c14.574,5.149,22.948,11.21,22.948,24.558c0,18.264-14.359,28.519-34.998,28.519 c-10.063,0-22.195-2.595-31.53-8.265l5.815-15.539c7.579,4.008,16.644,6.381,24.722,6.381c10.897,0,16.071-4.021,16.071-9.96 c0-6.802-7.893-8.843-20.641-13.06c-14.521-4.856-24.586-11.213-24.586-25.992c0-16.658,13.34-26.225,32.538-26.225 C387.797,83.128,398.551,87.367,404.52,91.9"
+            }),
+            ie.createElement("polygon", {
+              fill: "rgb(99, 107, 211)",
+              points:
+                "468.163,100.753 468.163,174.252 449.402,174.252 449.402,100.753 422.166,100.753 422.166,84.663 495.315,84.663 495.315,100.753 \t"
+            }),
+            ie.createElement("polygon", {
+              fill: "rgb(108, 108, 203)",
+              points:
+                "533.512,100.706 533.512,120.896 569.417,120.896 569.417,136.982 533.512,136.982 533.512,158.014 575.173,158.014 575.173,174.253 514.757,174.253 514.757,84.665 575.173,84.665 575.173,100.706"
+            }),
+            ie.createElement("path", {
+              fill: "rgb(117, 109, 195)",
+              d:
+                "M617.054,156.857l-5.932,17.396h-19.67l33.593-89.594h18.888l34.539,89.594h-20.336l-6.061-17.396H617.054z M634.378,106.035l-12.23,35.87h24.723L634.378,106.035z"
+            }),
+            ie.createElement("polygon", {
+              fill: "rgb(125, 110, 188)",
+              points:
+                "773.403,119.291 748.888,171.645 738.302,171.645 714.182,119.758 714.182,174.253 696.212,174.253 696.212,84.665 714.138,84.665 744.251,149.33 773.285,84.665 791.374,84.665 791.374,174.253 773.406,174.253"
+            })
+          ),
+          ie.createElement(
+            "g",
+            { id: "tv" },
+            ie.createElement("polygon", {
+              fill: "rgb(125, 110, 188)",
+              points:
+                "853.961,92.664 823.506,92.664 823.506,84.147 893.835,84.147 893.835,92.664 863.51,92.664 863.51,174.479 853.961,174.479"
+            }),
+            ie.createElement("polygon", {
+              fill: "rgb(125, 110, 188)",
+              points:
+                "909.835,84.147 920.286,84.147 950.612,165.831 980.033,84.147 990.487,84.147 956.421,174.479 944.159,174.479"
+            })
+          )
+        );
+      }
+      function re() {
+        return ie.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Viewers",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          ie.createElement("path", {
+            className: "frontGuy",
+            fill: "#666666",
+            d:
+              "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z"
+          }),
+          ie.createElement("path", {
+            className: "backGuy",
+            fill: "rgb(144, 153, 161)",
+            d:
+              "M84.204,34.396c-20.068,0-36.385,15.38-36.385,38.074v29.258c0,20.818,27.945,24.382,28.32,24.944 c-12.378,3.189-36.01,9.565-47.638,18.006c-9.753,7.127-13.504,21.006-15.379,26.632c-0.75,2.251-1.876,6.002-1.876,8.253  c0,0,0,11.44,0,23.257c0,11.815,15.004,19.13,20.819,19.13h104.279c5.814,0,20.818-6.564,20.818-19.13c0-12.566,0-23.257,0-23.257 c0-2.438-1.125-6.564-2.063-8.815c-5.063-12.566-5.438-18.942-15.566-26.069c-11.628-8.065-34.885-14.067-47.076-17.443 c0.375-0.563,28.133-4.876,28.133-25.695V72.469C120.59,49.775,104.272,34.396,84.204,34.396L84.204,34.396z"
           })
         );
       }
@@ -2462,22 +2570,22 @@ webpackJsonp(
         (t.x = a),
         (t.A = l),
         (t.m = m),
-        (t.P = u),
+        (t.Q = u),
         (t.J = p),
         (t.H = h),
-        (t.Y = d),
-        (t.Z = f),
-        (t.W = v),
+        (t._0 = d),
+        (t._1 = f),
+        (t.Y = v),
         (t.n = y),
-        (t.R = g),
-        (t.s = _),
-        (t.r = w),
+        (t.S = g),
+        (t.s = w),
+        (t.r = _),
         (t.G = b),
         (t.a = E),
         (t.q = x),
         (t.v = S),
         (t.D = k),
-        (t.X = M),
+        (t.Z = M),
         (t.C = P),
         (t.h = C),
         (t.F = I),
@@ -2485,30 +2593,32 @@ webpackJsonp(
         (t.O = O),
         (t.f = B),
         (t.i = N),
-        (t.d = D),
-        (t.w = V),
-        (t.S = W),
-        (t.V = G),
-        (t.u = z),
+        (t.d = V),
+        (t.w = D),
+        (t.T = G),
+        (t.W = z),
+        (t.u = W),
         (t.c = T),
         (t.b = H),
         (t.k = R),
-        (t.Q = F),
+        (t.R = F),
         (t.y = j),
         (t.B = A),
         (t.K = U),
         (t.N = K),
         (t.I = X),
-        (t.T = Y),
-        (t.U = q),
+        (t.U = Y),
+        (t.V = q),
         (t.L = J),
         (t.o = Q),
         (t.p = Z),
-        (t._0 = $),
+        (t._2 = $),
         (t.j = ee),
-        (t.z = te);
-      var ne = n("Jmof");
-      n.n(ne);
+        (t.z = te),
+        (t.P = ne),
+        (t.X = re);
+      var ie = n("Jmof");
+      n.n(ie);
     },
     EqgU: function(e, t, n) {
       "use strict";
@@ -2743,11 +2853,11 @@ webpackJsonp(
       function r(e) {
         switch (e) {
           case 1:
-            return Object(_.b)("#Privacy_Private");
+            return Object(w.b)("#Privacy_Private");
           case 2:
-            return Object(_.b)("#Privacy_FriendsOnly");
+            return Object(w.b)("#Privacy_FriendsOnly");
           case 3:
-            return Object(_.b)("#Privacy_Public");
+            return Object(w.b)("#Privacy_Public");
           default:
             return "";
         }
@@ -2755,11 +2865,11 @@ webpackJsonp(
       function i(e) {
         switch (e) {
           case 0:
-            return Object(_.b)("#Privacy_FriendsOnly");
+            return Object(w.b)("#Privacy_FriendsOnly");
           case 1:
-            return Object(_.b)("#Privacy_Public");
+            return Object(w.b)("#Privacy_Public");
           case 2:
-            return Object(_.b)("#Privacy_Private");
+            return Object(w.b)("#Privacy_Private");
           default:
             return "";
         }
@@ -2808,19 +2918,19 @@ webpackJsonp(
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saving" },
-              Object(_.b)("#Shared_Saving")
+              Object(w.b)("#Shared_Saving")
             );
           case 3:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Error" },
-              Object(_.b)("#Error_Error")
+              Object(w.b)("#Error_Error")
             );
           case 2:
             return v.createElement(
               "div",
               { className: "PrivacySaveNotice Saved" },
-              Object(_.b)("#Shared_Saved")
+              Object(w.b)("#Shared_Saved")
             );
           case 0:
           default:
@@ -2851,7 +2961,7 @@ webpackJsonp(
               d(n);
               break;
             default:
-              Object(w.a)(!1, 'unknown component: "' + r + '"');
+              Object(_.a)(!1, 'unknown component: "' + r + '"');
           }
         }
       }
@@ -2864,15 +2974,15 @@ webpackJsonp(
         y.render(v.createElement(O, { PrivacyStore: n }), e);
       }
       function f(e, t, n) {
-        Object(w.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          _.a.InitDirect(n);
+        Object(_.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
+          w.a.InitDirect(n);
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
       var v = n("Jmof"),
         y = n("wLXD"),
         g = n("m5yx"),
-        _ = n("sVhq"),
-        w = n("4Dav"),
+        w = n("sVhq"),
+        _ = n("4Dav"),
         b = (n("kllU"), n("TToO")),
         E = n("y986"),
         x = n("mtWM"),
@@ -2968,8 +3078,8 @@ webpackJsonp(
                     if (1 != n.success)
                       return (
                         ShowAlertDialog(
-                          Object(_.b)("#Error_Error"),
-                          Object(_.b)("#Error_CommentEditFailed")
+                          Object(w.b)("#Error_Error"),
+                          Object(w.b)("#Error_CommentEditFailed")
                         ),
                         !1
                       );
@@ -2988,8 +3098,8 @@ webpackJsonp(
                   .catch(function(e) {
                     return (
                       ShowAlertDialog(
-                        Object(_.b)("#Error_Error"),
-                        Object(_.b)("#Error_CommentEditFailed")
+                        Object(w.b)("#Error_Error"),
+                        Object(w.b)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
@@ -3022,28 +3132,28 @@ webpackJsonp(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(_.b)("#ProfilePrivacy_BasicDetails"),
+                    strLabel: Object(w.b)("#ProfilePrivacy_BasicDetails"),
                     strReadOnlySetting: r(3)
                   },
-                  Object(_.b)("#ProfilePrivacy_BasicDetails_Desc")
+                  Object(w.b)("#ProfilePrivacy_BasicDetails_Desc")
                 ),
                 v.createElement("div", { className: "ProfilePrivacyHR" }),
                 v.createElement(
                   c,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(_.b)("#ProfilePrivacy_Profile"),
+                    strLabel: Object(w.b)("#ProfilePrivacy_Profile"),
                     PrivacyKey: "PrivacyProfile"
                   },
                   v.createElement(
                     "p",
                     null,
-                    Object(_.b)("#ProfilePrivacy_Profile_Desc")
+                    Object(w.b)("#ProfilePrivacy_Profile_Desc")
                   ),
                   v.createElement(
                     "p",
                     null,
-                    Object(_.b)("#ProfilePrivacy_Profile_Desc2")
+                    Object(w.b)("#ProfilePrivacy_Profile_Desc2")
                   )
                 ),
                 v.createElement(
@@ -3053,11 +3163,11 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_GameLibrary"),
+                      strLabel: Object(w.b)("#ProfilePrivacy_GameLibrary"),
                       PrivacyKey: "PrivacyOwnedGames",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(_.b)("#ProfilePrivacy_GameLibrary_Desc"),
+                    Object(w.b)("#ProfilePrivacy_GameLibrary_Desc"),
                     1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                       v.createElement(
                         N,
@@ -3066,7 +3176,7 @@ webpackJsonp(
                           PrivacyKey: "PrivacyPlaytime",
                           LimitPrivacyKey: "PrivacyOwnedGames"
                         },
-                        Object(_.b)("#ProfilePrivacy_Playtime")
+                        Object(w.b)("#ProfilePrivacy_Playtime")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -3074,21 +3184,21 @@ webpackJsonp(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_Inventory"),
+                      strLabel: Object(w.b)("#ProfilePrivacy_Inventory"),
                       PrivacyKey: "PrivacyInventory",
                       LimitPrivacyKey: "PrivacyProfile"
                     },
-                    Object(_.d)(
+                    Object(w.d)(
                       "#ProfilePrivacy_Inventory_Desc",
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "inventory/" },
-                        Object(_.b)("#ProfilePrivacy_Inventory_Inventory")
+                        Object(w.b)("#ProfilePrivacy_Inventory_Inventory")
                       ),
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "inventory/#753_6" },
-                        Object(_.b)("#ProfilePrivacy_Inventory_TradingCards")
+                        Object(w.b)("#ProfilePrivacy_Inventory_TradingCards")
                       )
                     ),
                     1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -3099,36 +3209,36 @@ webpackJsonp(
                           PrivacyKey: "PrivacyInventoryGifts",
                           LimitPrivacyKey: "PrivacyInventory"
                         },
-                        Object(_.b)("#ProfilePrivacy_Gifts")
+                        Object(w.b)("#ProfilePrivacy_Gifts")
                       )
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
                   v.createElement(
                     a,
                     null,
-                    Object(_.b)("#ProfilePrivacy_Comments"),
+                    Object(w.b)("#ProfilePrivacy_Comments"),
                     ":",
-                    v.createElement(D, { PrivacyStore: e })
+                    v.createElement(V, { PrivacyStore: e })
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
                   v.createElement(
                     c,
                     {
                       PrivacyStore: e,
-                      strLabel: Object(_.b)("#ProfilePrivacy_UGC"),
-                      strReadOnlySetting: Object(_.b)("#Privacy_PerItem")
+                      strLabel: Object(w.b)("#ProfilePrivacy_UGC"),
+                      strReadOnlySetting: Object(w.b)("#Privacy_PerItem")
                     },
-                    Object(_.d)(
+                    Object(w.d)(
                       "#ProfilePrivacy_UGC_Desc",
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "screenshots/" },
-                        Object(_.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                        Object(w.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                       ),
                       v.createElement(
                         "a",
                         { href: k.ProfileURL + "myworkshopfiles/" },
-                        Object(_.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                        Object(w.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                       )
                     )
                   )
@@ -3149,7 +3259,7 @@ webpackJsonp(
                 this.props.PrivacyKey
               );
               Object(C.a)(
-                v.createElement(V, {
+                v.createElement(D, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPrivacy: t,
                   eMinPrivacy: this.GetMinPrivacy()
@@ -3247,7 +3357,7 @@ webpackJsonp(
             (t = b.c([L.observer], t))
           );
         })(B),
-        D = (function(e) {
+        V = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (n.state = { eSaveState: 0 }), n;
@@ -3257,7 +3367,7 @@ webpackJsonp(
             (t.prototype.OnClick = function(e) {
               var t = this.props.PrivacyStore.CommentPermission;
               Object(C.a)(
-                v.createElement(W, {
+                v.createElement(G, {
                   OnChange: this.OnSettingChanged,
                   eCurrentPermission: t,
                   eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
@@ -3302,7 +3412,7 @@ webpackJsonp(
             (t = b.c([L.observer], t))
           );
         })(v.Component),
-        V = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3322,7 +3432,7 @@ webpackJsonp(
                         return e.props.OnChange(3);
                       }
                     },
-                    Object(_.b)("#Privacy_Public")
+                    Object(w.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -3332,7 +3442,7 @@ webpackJsonp(
                         return e.props.OnChange(2);
                       }
                     },
-                    Object(_.b)("#Privacy_FriendsOnly")
+                    Object(w.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -3341,14 +3451,14 @@ webpackJsonp(
                       return e.props.OnChange(1);
                     }
                   },
-                  Object(_.b)("#Privacy_Private")
+                  Object(w.b)("#Privacy_Private")
                 )
               );
             }),
             t
           );
         })(v.Component),
-        W = (function(e) {
+        G = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3367,11 +3477,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(1);
                       },
-                      title: Object(_.b)(
+                      title: Object(w.b)(
                         "#Profile_CommentPermission_Public_Desc"
                       )
                     },
-                    Object(_.b)("#Privacy_Public")
+                    Object(w.b)("#Privacy_Public")
                   ),
                 (!t || t >= 2) &&
                   v.createElement(
@@ -3380,11 +3490,11 @@ webpackJsonp(
                       onSelected: function() {
                         return e.props.OnChange(0);
                       },
-                      title: Object(_.b)(
+                      title: Object(w.b)(
                         "#Profile_CommentPermission_FriendsOnly_Desc"
                       )
                     },
-                    Object(_.b)("#Privacy_FriendsOnly")
+                    Object(w.b)("#Privacy_FriendsOnly")
                   ),
                 v.createElement(
                   I.d,
@@ -3392,11 +3502,11 @@ webpackJsonp(
                     onSelected: function() {
                       return e.props.OnChange(2);
                     },
-                    title: Object(_.b)(
+                    title: Object(w.b)(
                       "#Profile_CommentPermission_Private_Desc"
                     )
                   },
-                  Object(_.b)("#Privacy_Private")
+                  Object(w.b)("#Privacy_Private")
                 )
               );
             }),
@@ -3404,7 +3514,7 @@ webpackJsonp(
           );
         })(v.Component);
       n("3gXU"),
-        (window.AssertMsg = w.a),
+        (window.AssertMsg = _.a),
         document.addEventListener("DOMContentLoaded", function() {
           Object(g.c)(), p(), h();
         }),
@@ -4043,10 +4153,10 @@ and limitations under the License.
           return g;
         }),
         n.d(t, "g", function() {
-          return _;
+          return w;
         }),
         n.d(t, "a", function() {
-          return w;
+          return _;
         }),
         (t.f = r),
         (t.h = i),
@@ -4228,7 +4338,7 @@ and limitations under the License.
             t
           );
         })(a.PureComponent),
-        _ = (function(e) {
+        w = (function(e) {
           function t(t) {
             var n = e.call(this, t) || this;
             return (
@@ -4363,17 +4473,17 @@ and limitations under the License.
                   y = a || r.right,
                   g = i.width;
                 s.bMatchWidth && ((g = y - v), (c.menuWidth = g));
-                var _ = (s.bOverlapHorizontal ? y : v) - g,
-                  w = _ > 0,
+                var w = (s.bOverlapHorizontal ? y : v) - g,
+                  _ = w > 0,
                   b = m - (s.bOverlapHorizontal ? v : y) - g,
                   E = b > 0,
-                  x = (s.bPreferPopLeft || !E) && w;
-                w ||
+                  x = (s.bPreferPopLeft || !E) && _;
+                _ ||
                   E ||
-                  ((x = w > E),
+                  ((x = _ > E),
                   s.bFitToWindow &&
-                    ((g += (x ? _ : b) - 8), (c.menuWidth = g))),
-                  (!s.bPreferPopLeft && E) || !w
+                    ((g += (x ? w : b) - 8), (c.menuWidth = g))),
+                  (!s.bPreferPopLeft && E) || !_
                     ? (c.menuLeft = s.bOverlapHorizontal ? v : y)
                     : (c.menuRight = m - (s.bOverlapHorizontal ? y : v));
                 var S = l || r.top,
@@ -4503,7 +4613,7 @@ and limitations under the License.
             (t = s.c([c.observer], t))
           );
         })(a.Component),
-        w = (function(e) {
+        _ = (function(e) {
           function t(n, r, i) {
             var o =
               e.call(this, "contextmenu_" + t.sm_iContextMenuInstance++, {
@@ -4538,7 +4648,7 @@ and limitations under the License.
             (t.prototype.Render = function(e, t) {
               l.render(
                 a.createElement(
-                  _,
+                  w,
                   s.a({}, this.m_menuProps, { popup: this }),
                   this.m_children
                 ),
@@ -5353,12 +5463,12 @@ and limitations under the License.
                 var y = f[v];
                 if ("stylesheet" == y.rel) {
                   for (
-                    var g = m.document.createElement("link"), _ = 0;
-                    _ < y.attributes.length;
-                    _++
+                    var g = m.document.createElement("link"), w = 0;
+                    w < y.attributes.length;
+                    w++
                   ) {
-                    var w = y.attributes.item(_);
-                    g.setAttribute(w.name, w.value);
+                    var _ = y.attributes.item(w);
+                    g.setAttribute(_.name, _.value);
                   }
                   d.appendChild(g);
                 }
