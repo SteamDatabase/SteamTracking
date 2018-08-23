@@ -77633,7 +77633,6 @@ and limitations under the License.
                 actions: a,
                 onTheaterMode: s
               }),
-              "/>",
               aa.createElement("div", { className: "videoContainerSizer" })
             ),
             aa.createElement(
