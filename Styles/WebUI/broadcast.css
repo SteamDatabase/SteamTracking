@@ -1427,7 +1427,7 @@
 
 .BroadcastChatPositionToggle.bottom
 {
-	background-image: url('../../images/webui/icon_view_chatbottom.png');
+	background-image: url('../../images/webui/icon_view_chatbottom.png?v=2');
 	margin-right: 4px;
 
 }
@@ -1435,20 +1435,20 @@
 
 .BroadcastChatPositionToggle.right
 {
-	background-image: url('../../images/webui/icon_view_chatright.png');
+	background-image: url('../../images/webui/icon_view_chatright.png?v=2');
 	margin-right: 4px;
 
 }
 
 .BroadcastFullscreenToggle
 {
-	background-image: url('../../images/webui/icon_view_fullscreen.png');
+	background-image: url('../../images/webui/icon_view_fullscreen.png?v=2');
 	margin-left: 4px;
 }
 
 .BroadcastTheaterToggle
 {
-	background-image: url('../../images/webui/icon_view_theater.png');
+	background-image: url('../../images/webui/icon_view_theater.png?v=2');
 }
 
 .BroadcastChatDivider.horizontal
