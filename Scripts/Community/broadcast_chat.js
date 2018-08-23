@@ -35,19 +35,9 @@ var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 			_chat.HideChatMessageMenu();
 	});
 
-	$J(window).resize(function(event){
-		_chat.UpdateScroll();
+	$J(window).resize(function (event) {
+		_chat.ScrollToBottom();
 		$J('.scrollbar').perfectScrollbar('update');
-	});
-
-	$J('#ChatBox').scroll(function(){
-		// If our viewport wasn't just resized, lets take a look at the new scrollheight and see
-		// if maybe the user doesn't want to be at the bottom
-		if( _chat.m_nLastHeight == this.offsetHeight )
-		{
-			var nDelta = this.scrollTop - (this.scrollHeight - this.offsetHeight);
-			_chat.m_bAutoScroll = Math.abs( nDelta ) < 6;
-		}
 	});
 };
 
@@ -388,6 +378,7 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 
 	elMessage.show();
 
+	var bAutoScroll = this.BAutoScroll();
 	$J('#ChatMessages').append(elMessage);
 
 	// if text is too long, add expand button
@@ -396,11 +387,21 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 	{
 		var elExpand = $J( '<div class="ChatExpand">+</div>' );
 		elMessage.append( elExpand );
-		elExpand.on( 'click', function() { elMessage.addClass( 'Expand' ); _chat.UpdateScroll(); } );
+		elExpand.on('click', function () { _chat.ExpandMessage(elMessage) } );
 	}
 
-	this.UpdateScroll();
+	if ( bAutoScroll )
+		this.ScrollToBottom();
 };
+
+CBroadcastChat.prototype.ExpandMessage = function ( elMessage )
+{
+	var bPrevAtBottom = this.BScrolledToBottom();
+	elMessage.addClass('Expand');
+
+	if ( bPrevAtBottom )
+		this.ScrollToBottom();
+}
 
 CBroadcastChat.prototype.TrimChat = function()
 {
@@ -408,32 +409,49 @@ CBroadcastChat.prototype.TrimChat = function()
 	if ( $messages.children().length < 125 )
 		return;
 
-	var $box = $J('#ChatBox');
-	var nPrevHeight = $box[0].scrollHeight;
+	var elBox = $J('#ChatBox')[0];
+	var nPrevScrollTop = elBox.scrollTop;
+	var nPrevHeight = elBox.scrollHeight;
+	var bAutoScroll = this.BAutoScroll();
+
 	while ( $messages.children().length > 100 )
 	{
 		var $child = $messages.children().first();
 		$child.remove();
 	}
 
-	$box.scrollTop( $box.scrollTop() - (nPrevHeight - $box[0].scrollHeight ) );
+	if ( bAutoScroll )
+	{
+		this.ScrollToBottom();
+	}
+	else
+	{
+		elBox.scrollTop = Math.floor( nPrevScrollTop - (nPrevHeight - elBox.scrollHeight) );
+	}
+
 	$J('.scrollbar').perfectScrollbar('update');
 };
 
-CBroadcastChat.prototype.UpdateScroll = function()
+CBroadcastChat.prototype.BMenuUp = function ()
 {
-	if ( $J( '#ChatMessageMenuBackground' ).is( ':visible' ) )
-		return;
+	return $J('#ChatMessageMenuBackground').is(':visible');
+}
 
-	if( this.m_bAutoScroll )
-		this.ScrollToBottom();
+CBroadcastChat.prototype.BScrolledToBottom = function ()
+{
+	var elBox = $J('#ChatBox')[0];
+	return (elBox.scrollTop + elBox.clientHeight >= elBox.scrollHeight - 6);
+}
 
-	this.m_nLastHeight = $J('#ChatBox')[0].offsetHeight;
-};
+CBroadcastChat.prototype.BAutoScroll = function()
+{
+	return this.BScrolledToBottom() && !this.BMenuUp();
+}
 
 CBroadcastChat.prototype.ScrollToBottom = function()
 {
-	$J('#ChatBox').scrollTop( $J('#ChatBox').prop("scrollHeight") );
+	var elBox = $J('#ChatBox')[0];
+	elBox.scrollTop = elBox.scrollHeight;
 };
 
 CBroadcastChat.prototype.DisplayChatError = function( strError )
@@ -555,7 +573,6 @@ CBroadcastChat.prototype.HideChatMessageMenu = function()
 	elMessage.removeClass( 'ShowingMenu' );
 
 	$J( '#ChatMessageMenuBackground' ).hide();
-	this.UpdateScroll();
 };
 
 CBroadcastChat.prototype.MuteChatMessageUserForSession = function( )
@@ -565,7 +582,6 @@ CBroadcastChat.prototype.MuteChatMessageUserForSession = function( )
 
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
-	this.UpdateScroll();
 };
 
 CBroadcastChat.prototype.UnmuteChatMessageUserForSession = function()
@@ -575,7 +591,6 @@ CBroadcastChat.prototype.UnmuteChatMessageUserForSession = function()
 
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
-	this.UpdateScroll();
 };
 
 
@@ -708,8 +723,22 @@ CBroadcastChat.prototype.GetMutedUsers = function()
 
 CBroadcastChat.prototype.RemoveUserMessages = function( steamID )
 {
+	var elBox = $J('#ChatBox')[0];
+	var nPrevScrollTop = elBox.scrollTop;
+	var nPrevHeight = elBox.scrollHeight;
+	var bAutoScroll = this.BAutoScroll();
+
 	var str = ".ChatMessage[data-steamid='" + steamID + "']";
-	$J( '#ChatMessages' ).find( str ).remove();
+	$J('#ChatMessages').find(str).remove();
+
+	if ( bAutoScroll )
+	{
+		this.ScrollToBottom();
+	}
+	else
+	{
+		elBox.scrollTop = Math.floor(nPrevScrollTop - (nPrevHeight - elBox.scrollHeight));
+	}
 
 	$J('.scrollbar').perfectScrollbar('update');
 };
@@ -743,7 +772,6 @@ CBroadcastChat.prototype.OnRemoveUserMessages = function()
 	// close menu
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
-	this.UpdateScroll();
 };
 
 // Changes the moderators status of the user on the broadcast channel
@@ -812,7 +840,6 @@ function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, ban
 			dataType: 'json'
 		})
 		.done(function (rgResult) {
-			console.log("hello " + banType );
 			if( chat ) {
 				if( banType == 0 ) {
 					delete chat.m_mapMutedUsers[ chatterSteamID ];
@@ -825,7 +852,6 @@ function UpdateUserChatBan( broadcastSteamID, issuerSteamID, chatterSteamID, ban
 			}
 		})
 		.fail(function (rgResult) {
-			console.log("hello2");
 			if( chat ) {
 				chat.log("Failed to update mute for " + strPersonaName );
 			}
