@@ -44950,8 +44950,7 @@ and limitations under the License.
                 i.IsFriendsListSingleWindow() &&
                   0 == i.default_tabset.tabCount &&
                   (i.responsive_window_state.SetActiveView(fl.FriendsList),
-                  C_.SetUIDisplayPref("bFriendsListCollapsed", !1),
-                  Yu.UIStore.SetTheaterMode(!1));
+                  C_.SetUIDisplayPref("bFriendsListCollapsed", !1));
             }),
             (e.prototype.GetResponsiveWindowState = function(e) {
               return this.GetPerContextChatData(e).responsive_window_state;
