@@ -20,8 +20,8 @@ var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 	this.m_nLastSleepMS = 0;
 	this.m_bReconnecting = false;
 	this.m_regexUserEmoticons = null;
-	this.m_bAutoScroll = true;
 
+	this.m_bAutoScroll = true;
 	this.m_nLastHeight = 0;
 	this.m_mapMutedUsers = {};
 
@@ -38,10 +38,6 @@ var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 	$J(window).resize(function (event) {
 		_chat.ScrollToBottom();
 		$J('.scrollbar').perfectScrollbar('update');
-	});
-
-	$J('#ChatBox').scroll(function () {
-		_chat.m_bAutoScroll = _chat.BScrolledToBottom();
 	});
 };
 
@@ -202,8 +198,6 @@ CBroadcastChat.prototype.RequestLoop = function()
 
 				_chat.DisplayChatMessage( rgResponse.messages[i].persona_name, rgResponse.messages[i].in_game, rgResponse.messages[i].steamid, rgResponse.messages[i].msg, false );
 			}
-
-			$J('.scrollbar').perfectScrollbar('update');
 		}
 
 		if ( rgResponse.joined )
@@ -402,7 +396,7 @@ CBroadcastChat.prototype.DisplayChatMessage = function( strPersonaName, bInGame,
 
 CBroadcastChat.prototype.ExpandMessage = function ( elMessage )
 {
-	var bPrevAtBottom = this.m_bAutoScroll;
+	var bPrevAtBottom = this.BScrolledToBottom();
 	elMessage.addClass('Expand');
 
 	if ( bPrevAtBottom )
@@ -451,7 +445,7 @@ CBroadcastChat.prototype.BScrolledToBottom = function ()
 
 CBroadcastChat.prototype.BAutoScroll = function()
 {
-	return this.m_bAutoScroll && !this.BMenuUp();
+	return this.BScrolledToBottom() && !this.BMenuUp();
 }
 
 CBroadcastChat.prototype.ScrollToBottom = function()
@@ -513,8 +507,7 @@ CBroadcastChat.prototype.ChatSubmit = function()
 			return;
 		}
 
-		_chat.DisplayChatMessage(response.persona_name, response.in_game, _chat.m_steamID, strMessage, true);
-		$J('.scrollbar').perfectScrollbar('update');
+		_chat.DisplayChatMessage( response.persona_name, response.in_game, _chat.m_steamID, strMessage, true );
 	})
 	.fail( function( response )
 	{
@@ -582,10 +575,10 @@ CBroadcastChat.prototype.HideChatMessageMenu = function()
 	$J( '#ChatMessageMenuBackground' ).hide();
 };
 
-CBroadcastChat.prototype.MuteChatMessageUserForSession = function()
+CBroadcastChat.prototype.MuteChatMessageUserForSession = function( )
 {
 	var elMessage = $J( '#ChatMessageMenuBackground' ).data( 'elMessage' );
-	this.MuteUserByMessage( elMessage );
+	this.MuteUserByMessage( elMessage, timeInHours, bPermanent );
 
 	this.HideChatMessageMenu();
 	this.ScrollToBottom();
@@ -609,10 +602,10 @@ CBroadcastChat.prototype.UpdateModeratorByMessage = function( elMessage, bAdd )
 	this.MuteUserForSession( steamID, elChatName.text() );
 };
 
-CBroadcastChat.prototype.MuteUserByMessage = function( elMessage )
+CBroadcastChat.prototype.MuteUserByMessage = function( elMessage, timeInHours, bPermanent )
 {
 	var steamID = elMessage.data( 'steamid' );
-	var elChatName = $J( '.tmplChatName', elMessage );
+	var elChatName = $J( '.tmplChatName', elMessage, timeInHours, bPermanent );
 
 	this.MuteUserForSession( steamID, elChatName.text() );
 };
