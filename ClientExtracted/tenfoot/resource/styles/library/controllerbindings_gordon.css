@@ -648,8 +648,8 @@ SelectMousePosition
 
 .controller_mobile_touch #BackgroundController
 {
-    background-position: 518px 10px;
-    background-size: 714px 433px;
+    background-position: 517px 10px;
+    background-size: 707px 428px;
     background-image: url("file://{images}/library/controller/controller_config_controller_touch.png");
     wash-color: #102f4b32;
 }
@@ -737,7 +737,7 @@ SelectMousePosition
 
 .controller_mobile_touch #BackgroundLines.LeftTriggerSelected
 {
-    background-position: -165px -75px;
+    background-position: -166px -75px;
 }
 
 #BackgroundLines.LeftBumperSelected
@@ -1072,7 +1072,7 @@ SelectMousePosition
 
 .controller_mobile_touch #BackgroundLines.StartButtonSelected 
 {
-    background-position: -68px -180px;
+    background-position: -66px -180px;
 }
 
 .controller_xboxone #BackgroundLines.StartButtonSelected

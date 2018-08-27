@@ -6600,6 +6600,7 @@
 	"controller_android"								"Android Controller"
 	"controller_switch_pro"								"Nintendo Switch Pro Controller"
 	"controller_switch_joycon_pair"						"Nintendo Switch JoyCon Pair"
+	"controller_mobile_touch"							"Steam Link Touch Controller"
 	
 	"controller_ps2"									"PlayStation 2 Controller"
 	"controller_switch_joycon"							"Nintendo Switch JoyCon"
