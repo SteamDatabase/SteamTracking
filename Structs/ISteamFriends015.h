@@ -73,4 +73,5 @@ public:
     virtual unknown_ret EnumerateFollowingList(unsigned int) = 0;
     virtual unknown_ret IsClanPublic(CSteamID) = 0;
     virtual unknown_ret IsClanOfficialGameGroup(CSteamID) = 0;
+    virtual unknown_ret GetLaunchRichPresenceJoinRequest() = 0;
 };

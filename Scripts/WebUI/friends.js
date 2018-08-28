@@ -42172,7 +42172,6 @@ and limitations under the License.
               (this.m_nAudioBandwidth = 0),
               (this.m_nVideoBandwidth = 0),
               (this.m_nBandwidthRequired = 0),
-              (this.m_nCurBandwidthVideo = 0),
               (this.m_nAudioBufferedMS = 0),
               (this.m_nVideoBufferedMS = 0),
               (this.m_nActiveDownloads = 0),
@@ -42306,9 +42305,6 @@ and limitations under the License.
             (e.prototype.GetBandwidthRequiredToDisplay = function() {
               return (this.m_nBandwidthRequired / 1e6).toFixed(3);
             }),
-            (e.prototype.GetBandwithVideoToDisplay = function() {
-              return (this.m_nCurBandwidthVideo / 1e6).toFixed(3);
-            }),
             (e.prototype.GetContentServerToDisplay = function() {
               return this.m_host;
             }),
@@ -42378,9 +42374,6 @@ and limitations under the License.
                     (this.m_nVideoBandwidth = e.nBandwidth)),
                 (this.m_nBandwidthRequired =
                   this.m_nAudioBandwidth + this.m_nVideoBandwidth));
-            }),
-            (e.prototype.SetCurrentVideoBandwidth = function(e) {
-              this.m_nCurBandwidthVideo = e;
             }),
             (e.prototype.SetSegmentDurationMS = function(e) {
               this.m_nSegmentDurationMS = e;
@@ -42655,7 +42648,6 @@ and limitations under the License.
             ),
             Jt.c([an.observable], e.prototype, "m_strHtmlVideoDisplay", void 0),
             Jt.c([an.observable], e.prototype, "m_nBandwidthRequired", void 0),
-            Jt.c([an.observable], e.prototype, "m_nCurBandwidthVideo", void 0),
             Jt.c([an.observable], e.prototype, "m_nAudioBufferedMS", void 0),
             Jt.c([an.observable], e.prototype, "m_nVideoBufferedMS", void 0),
             Jt.c([an.observable], e.prototype, "m_nActiveDownloads", void 0),
@@ -42670,7 +42662,6 @@ and limitations under the License.
             Jt.c([an.observable], e.prototype, "m_nPlaybackRate", void 0),
             Jt.c([an.action], e.prototype, "SetVideoPlaybackResolution", null),
             Jt.c([an.action], e.prototype, "SetRepresentation", null),
-            Jt.c([an.action], e.prototype, "SetCurrentVideoBandwidth", null),
             Jt.c(
               [an.action],
               e.prototype,
@@ -43414,9 +43405,7 @@ and limitations under the License.
             (e.prototype.OnSegmentDownloaded = function(e) {
               w(e.GetDebugName() + " OnSegmentDownloaded"),
                 this.UpdateVideoRepresentation(this.m_videoRepSelected),
-                this.OnVideoBufferProgress(),
-                e == this.GetVideoLoader() &&
-                  this.m_stats.SetCurrentVideoBandwidth(e.GetAvgDownloadRate());
+                this.OnVideoBufferProgress();
             }),
             (e.prototype.PlayOnElement = function() {
               var e = this,
@@ -43622,7 +43611,7 @@ and limitations under the License.
                 a--
               ) {
                 var s = e.GetAdaptation().rgRepresentations[a],
-                  c = (s.nBandwidth + n) * this.m_elVideo.playbackRate * 1.15;
+                  c = (s.nBandwidth + n) * this.m_elVideo.playbackRate * 1.2;
                 if (i < c)
                   w(
                     "Video select: Skipping " +
@@ -43657,9 +43646,13 @@ and limitations under the License.
                     );
                   else {
                     var d = o.nHeight || 0,
-                      p = s.nHeight || 0,
-                      m = this.GetVideoPlayerHeight();
-                    if (m > 0 && p > 0 && p > d && d > m && o.nBandwidth > H(m))
+                      p = s.nHeight || 0;
+                    if (
+                      0 != p &&
+                      p > d &&
+                      d > this.GetVideoPlayerHeight() &&
+                      o.nBandwidth > H(this.GetVideoPlayerHeight())
+                    )
                       break;
                     o = s;
                   }
@@ -43706,15 +43699,10 @@ and limitations under the License.
               return this.m_elVideo.clientHeight;
             }),
             (e.prototype.GetAvgLoaderDownloadRate = function() {
-              for (
-                var e = 0, t = 0, n = [this.GetVideoLoader()], i = 0, r = n;
-                i < r.length;
-                i++
-              ) {
-                var o = r[i];
-                o && ((e += o.GetAvgDownloadRate()), t++);
-              }
-              return 0 == t ? 0 : e / t;
+              if (0 == this.m_rgLoaders.length) return 0;
+              for (var e = 0, t = 0, n = this.m_rgLoaders; t < n.length; t++)
+                e += n[t].GetAvgDownloadRate();
+              return e / this.m_rgLoaders.length;
             }),
             (e.prototype.GameDataEventTrigger = function() {
               var e = this.GetGameLoader();
@@ -72369,17 +72357,6 @@ and limitations under the License.
                     "span",
                     { className: "videoStatsValue" },
                     e.GetBandwidthRequiredToDisplay()
-                  )
-                ),
-                aa.createElement(
-                  "div",
-                  null,
-                  Object(Yo.b)("#DASHPlayerStats_BandwidthVideo"),
-                  " ",
-                  aa.createElement(
-                    "span",
-                    { className: "videoStatsValue" },
-                    e.GetBandwithVideoToDisplay()
                   )
                 ),
                 aa.createElement(

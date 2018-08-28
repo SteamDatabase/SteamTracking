@@ -147,7 +147,7 @@
     {
         "id": 337,
         "size": 264,
-        "posted_in": "CUserFriends::NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*)"
+        "posted_in": "CUserFriends::NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*, bool*)"
     },
     {
         "id": 338,

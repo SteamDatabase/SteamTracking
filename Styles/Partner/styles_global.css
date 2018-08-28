@@ -107,6 +107,9 @@ p a:hover {
 a {
 	color: #b6c5ca
 }
+a:hover {
+	color: #cdd7db
+}
 a.tooltip { 
 	text-decoration:none;
 	background:#2c2c2c;
