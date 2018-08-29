@@ -3757,27 +3757,7 @@ body.in_global_drag .friendlist_titlebar
 	margin-bottom: -3px;
 }
 
-
-.ChatTabs.compactView .chatTab.chatRoom .chatTabUnreadBadge,
-.chatTab.chatRoom .chatTabUnreadBadge
-{
-	border-radius: 50%;
-	background-color: yellow;
-	animation-name: none;
-	width: 4px;
-	height: 4px;
-	padding: 0;
-	margin-bottom: 6px;
-	margin-left: 10px;
-}
-
-.ChatRoomNotificationSettingsDialog .ChatUnreadMessageIndicator,
-.chatRoomTextChannel .ChatUnreadMessageIndicator,
-.chatRoomTextChannel.HasUnreadMention .ChatUnreadMessageIndicator,
-.quickAccessFriends .ChatUnreadMessageIndicator,
-.chatSectionTitle .ChatUnreadMessageIndicator,
-.ChatRoomListGroupItem_header .ChatUnreadMessageIndicator,
-.theaterModeHoverSpace .ChatUnreadMessageIndicator
+.ChatUnreadMessageIndicator
 {
 	position: absolute;
 	height: 48px;
@@ -3828,46 +3808,49 @@ body.in_global_drag .friendlist_titlebar
 
 .chatRoomTextChannel .ChatUnreadMessageIndicator
 {
-	background: radial-gradient( ellipse farthest-corner at 0% 50%, rgba( 255, 153, 0, 0.3 ) 0%, rgba( 233, 154, 35, 0.1 ) 30%, rgba( 233, 154, 35, 0 ) 70% );
+	top: -8px;
 }
 
-.chatRoomTextChannel.HasUnreadMention .ChatUnreadMessageIndicator,
-.chatRoomTextChannel .ChatUnreadMessageIndicator
+.chatRoomTextChannel .chatUnreadCircle
 {
-	top: -8px;
+	position: absolute;
+	left: 8px;
+	top: 20px;
 }
 
 .quickAccessFriends .ChatUnreadMessageIndicator
 {
-	height: 56px;
-	width: 44px;
+	height: auto;
+	width: auto;
 	background: none;
 	z-index: 2;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	padding: 0;
+	line-height: 4px;
+}
+
+.quickAccessFriends:not(.compactQuickAccess) .ChatUnreadMessageIndicator
+{
+	/* space for the name label */
+	bottom: 17px;
 }
 
 .quickAccessFriends .ChatUnreadMessageIndicator .chatUnreadCircle
 {
+	position: absolute;
+	right: 11%;
+	bottom: 11%;
+	margin: 0;
 	box-shadow: 0px 0px 14px 1px rgb( 255, 174, 0 ), 0px 0px 32px 1px rgba( 218, 149, 0, 1 );
-	margin-top: 46px;
-	margin-left: 38px;
 }
 
-.quickAccessFriends.compactQuickAccess .ChatUnreadMessageIndicator .chatUnreadCircle
+.quickAccessFriends .friend.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle
 {
-	margin-top: 26px;
-	margin-left: 24px;
-}
-
-.quickAccessFriends.compactQuickAccess .friend .ChatUnreadMessageIndicator .chatUnreadCircle
-{
-	margin-top: 24px;
-	margin-left: 18px;
-}
-
-.quickAccessFriends .friend .ChatUnreadMessageIndicator .chatUnreadCircle
-{
-	margin-top: 44px;
-	margin-left: 37px;
+	right: 3px;
+	bottom: 0;
 }
 
 .ChatUnreadMessageIndicator .chatUnreadCircle
@@ -3875,22 +3858,42 @@ body.in_global_drag .friendlist_titlebar
 	width: 4px;
 	height: 4px;
 	background-color: yellow;
-	margin-top: 21px;
 	border-radius: 50%;
 	overflow: hidden;
 }
 
-.chatRoomTextChannel.HasUnreadMention .ChatUnreadMessageIndicator .chatUnreadCircle
+.UnreadMention.ChatUnreadMessageIndicator .chatUnreadCircle
 {
 	overflow: visible;
 	background-color: transparent;
 	font-size: 12px;
-	margin-top: 10px;
+	line-height: 4px;
+}
+
+.ChatRoomListGroupItem .ChatUnreadMessageIndicator  .chatUnreadCircle
+{
+	margin-top: 21px;
+}
+
+.ChatRoomListGroupItem .ChatUnreadMessageIndicator.UnreadMention .chatUnreadCircle
+{
+	margin-left: -3px;
 }
 
 .ChatUnreadMessageIndicator.Hidden
 {
 	display: none;
+}
+
+.ChatUnreadMessageIndicator.ChatTabUnread
+{
+	background: transparent;
+	right: 2px;
+	bottom: 6px;
+	top: auto;
+	left: auto;
+	height: auto;
+	width: auto;
 }
 
 .unreadFriend
@@ -4046,27 +4049,9 @@ body.in_global_drag .friendlist_titlebar
 	opacity: .2;
 }
 
-.chatTab.HasUnreadMessage .UnreadGlow
+.chatTab .UnreadGlow
 {
 	opacity: 1;
-	animation-name: UnreadPulse;
-	animation-name: none;
-}
-
-@keyframes UnreadPulse
-{
-	0%
-	{
-		opacity: 0.5;
-	}
-	50%
-	{
-		opacity: 1;
-	}
-	100%
-	{
-		opacity: 0.5;
-	}
 }
 
 .chatTab .chatTabName
@@ -5532,6 +5517,18 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 	filter: blur( 3px ) saturate( .5 ) brightness( .5 );
 }
 
+.interactionBlocker
+{
+	cursor: default;
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	z-index: 1;
+}
 
 /*
 * embed version of invite code
@@ -14520,7 +14517,7 @@ button.chatRoomHeaderButton:hover
 }
 
 
-.chatRoomGroupHeader .broadcastInfoContainer .thumbnail img
+.chatRoomGroupHeader .broadcastInfoContainer .thumbnail .thumbnailImg
 {
 	width: 100%;
 	height: 100%;

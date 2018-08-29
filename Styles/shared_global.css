@@ -2217,6 +2217,23 @@ body.v6 #footer_nav .popup_menu .hr{
 	-webkit-animation-delay: 0.32s;
 }
 
+.content_descriptors_examples_desc {
+	font-size: 18px;
+	padding-bottom: 20px;
+}
+
+.content_descriptors_example_app {
+	padding-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.content_descriptors_example_app .app_logo {
+}
+
+.content_descriptors_example_app .app_name {
+	margin-left: 20px;
+}
 
 @media screen and (max-width: 910px)
 {
