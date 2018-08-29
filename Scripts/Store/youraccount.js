@@ -277,9 +277,3 @@ function UnIgnoreApp( element, unAppId, snr )
 	});
 }
 
-function ViewTitlesWithDescriptors( descid )
-{
-	var content = '<iframe class="example_titles top_titles" src="https://store.steampowered.com/search/embeddedsearch/?filter=globaltopsellers&insideModal=1&ignore_preferences=1&descids[]=' + descid + '"></iframe>';
-	var dialog = ShowAlertDialog( '#accountpreferences_content_descriptor_examples', content );
-}
-

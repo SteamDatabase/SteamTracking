@@ -4288,4 +4288,36 @@ function SetupTooltips( rgOptions )
 	}
 }
 
+function ViewTitlesWithDescriptors( descid )
+{
+	$J.get( 'https://store.steampowered.com/search/results/',
+		{
+			'filter' : 'globaltopsellers',
+			'ignore_preferences' : 1,
+			'descids[]' : descid,
+			'json' : 1,
+		}
+	).done( function( response ) {
+		var content = $J( "<div>" );
+		content.append( $J( "<div>", { class: 'content_descriptors_examples_desc', text: response.desc } ) );
+
+		if ( response.items.length != 0 )
+		{
+			for ( var i = 0; i < response.items.length && i < 10; ++i )
+			{
+				var item = response.items[i];
+				var elem = $J( "<div>", { class: 'content_descriptors_example_app' } );
+				elem.append( $J( "<img>", {  class: 'app_logo', src: item.logo } ) );
+				elem.append( $J( "<div>", { class: 'app_name', text: item.name } ) );
+				content.append( elem );
+			}
+		}
+		else
+		{
+			content.append( $J( "<div>", { class: "no_items", text: 'No Products Found' } ) );
+		}
+
+		var dialog = ShowAlertDialog( 'Example Products', content );
+	} );
+}
 

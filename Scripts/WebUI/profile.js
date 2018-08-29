@@ -2663,7 +2663,11 @@ webpackJsonp(
         }
         return !1;
       }
-      function o(e) {
+      function o(e, t) {
+        for (; t; ) if ((t = t.parentElement) == e) return !0;
+        return !1;
+      }
+      function s(e) {
         if (!window.getSelection) return !1;
         for (
           var t = window.getSelection(), n = 0, r = 0;
@@ -2677,7 +2681,7 @@ webpackJsonp(
         }
         return t.rangeCount > 0 && t.rangeCount == n;
       }
-      function s(e, t) {
+      function c(e, t) {
         var n = e.offsetTop;
         e.offsetParent != t && (n -= t.offsetTop),
           n < t.scrollTop
@@ -2685,7 +2689,7 @@ webpackJsonp(
             : n + e.offsetHeight > t.scrollTop + t.offsetHeight &&
               e.scrollIntoView(!1);
       }
-      function c(e, t, n) {
+      function a(e, t, n) {
         var r = 0,
           i = 0;
         return (
@@ -2694,7 +2698,7 @@ webpackJsonp(
           Math.sqrt(r * r + i * i)
         );
       }
-      function a(e, t) {
+      function l(e, t) {
         return {
           width: t.width,
           height: t.height,
@@ -2704,11 +2708,11 @@ webpackJsonp(
           right: e.screenLeft + t.right
         };
       }
-      function l(e) {
+      function m(e) {
         var t = void 0;
         return e && (t = e.ownerDocument.defaultView), t;
       }
-      function m(e) {
+      function u(e) {
         var t = document.createElement("textarea");
         (t.textContent = e),
           (t.style.position = "fixed"),
@@ -2722,12 +2726,12 @@ webpackJsonp(
           document.body.removeChild(t);
         }
       }
-      function u(e) {
+      function p(e) {
         e.startsWith("steam://openurl/") &&
           (e = e.slice("steam://openurl/".length)),
-          m(e);
+          u(e);
       }
-      function p(e) {
+      function h(e) {
         var t = e.ownerDocument;
         return (
           t.fullscreen ||
@@ -2736,7 +2740,7 @@ webpackJsonp(
           t.msFullscreenElement
         );
       }
-      function h(e) {
+      function d(e) {
         var t = e;
         t.requestFullscreen
           ? t.requestFullscreen()
@@ -2746,7 +2750,7 @@ webpackJsonp(
               ? t.mozRequestFullScreen()
               : t.msRequestFullscreen && t.msRequestFullscreen();
       }
-      function d(e) {
+      function f(e) {
         var t = e.ownerDocument;
         t.cancelFullscreen
           ? t.cancelFullscreen()
@@ -2757,21 +2761,22 @@ webpackJsonp(
               : t.msExitFullscreen && t.msExitFullscreen();
       }
       (t.c = r),
-        (t.d = i),
-        (t.a = o),
-        (t.l = s),
-        (t.i = c),
-        (t.g = a),
-        (t.j = l),
-        (t.h = u),
-        (t.b = p),
-        (t.k = h),
-        (t.f = d),
-        n.d(t, "e", function() {
-          return v;
+        (t.e = i),
+        (t.d = o),
+        (t.a = s),
+        (t.m = c),
+        (t.j = a),
+        (t.h = l),
+        (t.k = m),
+        (t.i = p),
+        (t.b = h),
+        (t.l = d),
+        (t.g = f),
+        n.d(t, "f", function() {
+          return y;
         });
-      var f = n("vwkX"),
-        v = (function() {
+      var v = n("vwkX"),
+        y = (function() {
           function e(e) {
             var t = this;
             (this.m_bNeedSort = !1),
@@ -2840,7 +2845,7 @@ webpackJsonp(
                   t(!0);
             }),
             (e.prototype.UnregisterChild = function(e) {
-              f.c(this.m_rgChildren, function(t) {
+              v.c(this.m_rgChildren, function(t) {
                 return t.element == e;
               });
             }),
@@ -3687,7 +3692,7 @@ webpackJsonp(
             (t.prototype.BIsChildElement = function(e) {
               return this.m_embeddedElementInstance
                 ? this.m_embeddedElementInstance.BIsChildElement(e)
-                : s.d(this.m_popupContextMenu.root_element, e);
+                : s.e(this.m_popupContextMenu.root_element, e);
             }),
             (t.prototype.BHasFocus = function() {
               return this.m_embeddedElementInstance
@@ -4090,7 +4095,7 @@ and limitations under the License.
                 (this.iIntervalShow = void 0));
             }),
             (e.prototype.BIsChildElement = function(e) {
-              return this.m_container && o.d(this.m_container, e);
+              return this.m_container && o.e(this.m_container, e);
             }),
             e
           );
@@ -4393,7 +4398,7 @@ and limitations under the License.
               this.PositionMenu();
             }),
             (t.prototype.OnBlur = function(e) {
-              (e.relatedTarget && u.d(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && u.e(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -4424,7 +4429,7 @@ and limitations under the License.
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !u.d(
+                  !u.e(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -4458,7 +4463,7 @@ and limitations under the License.
                   m = n.innerWidth,
                   p = n.innerHeight;
                 if (o) {
-                  (a += n.screenLeft), (l += n.screenTop), (r = u.g(n, r));
+                  (a += n.screenLeft), (l += n.screenTop), (r = u.h(n, r));
                   var h = n.screen,
                     d = 0,
                     f = 0;
@@ -4629,7 +4634,7 @@ and limitations under the License.
           return (
             s.d(t, e),
             (t.prototype.UpdateParamsBeforeShow = function(e) {
-              var t = u.g(
+              var t = u.h(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );

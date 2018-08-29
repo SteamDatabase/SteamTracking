@@ -2225,6 +2225,14 @@ img.package_header {
 	margin-top: -21px;
 
 }
+.agegate_text_container .note {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 11px;
+	margin-bottom: 20px;
+	color: #9db2be;
+}
 
 .btn_next_in_queue .next_in_queue_content {
 	padding: 24px 15% 0 15%;
@@ -2507,6 +2515,23 @@ img.agegate_img_package {
 	}
 	html.responsive body.agecheck .responsive_page_template_content {
 		padding-bottom: 0;
+	}
+}
+@media screen and (max-width: 500px)
+{
+	html.responsive body.agecheck .agegate_tags {
+		margin-bottom: 20px;
+	}
+	html.responsive .agegate_wizard:after {
+		left: 37px;
+	}
+	html.responsive .agegate_wizard_preference_option .top_block {
+		display: block;
+	}
+	html.responsive .agegate_wizard_preference_option_controls {
+		text-align: left;
+		margin-bottom: 10px;
+		margin-top: 5px;
 	}
 }
 
@@ -4288,6 +4313,8 @@ a.bundle_contents_preview_item .ds_flag {
 
 .agegate_content_descriptors > span.content_descriptor {
 	border-bottom: 1px dotted #67c1f5;
+	line-height: 17px;
+	display: inline-block;
 }
 
 .agegate_content_descriptors_notes {
@@ -4297,7 +4324,26 @@ a.bundle_contents_preview_item .ds_flag {
 .agegate_tags {
 	text-align: center;
 	width: 350px;
-	margin: 0 auto;
+	margin: 0 auto 7vh auto;
+}
+.agegate_tags .glance_tags_ctn {
+	margin: 7px 0px 0px 0px;
+}
+.agegate_tags .app_tag {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
+	color: #ffffff;
+
+	background-color: transparent;
+	border-bottom: 1px dotted #67c1f5;
+	padding: 0;
+	margin-right: 10px;
+	line-height: 17px;
+	display: inline-block;
+	border-radius: 0;
+	overflow: visible;
 }
 
 .agegate_text_container {
@@ -4308,29 +4354,36 @@ a.bundle_contents_preview_item .ds_flag {
 }
 
 .agegate_text_container .img_ctn {
-	margin: 0 0 15px 0;
+	margin: -45px 0 15px 0;
 	padding: 0px;
+}
+
+.main_content_ctn {
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 5px;
 }
 
 .agegate_text_container img {
 	margin: 0px;
 	padding: 0px;
-	width: 100%;
-	height: 100%;
+	width: 50%;
+	height: 50%;
 	background-color: rgba( 255, 255, 255, 0.1 );
 	box-shadow: 0 0 5px 0 #000000;
 }
 
 .agegate_text_container > p {
 	margin: 35px 0 0 0;
-	color: #b8b6b4;
+	color: #9db2be;
+	line-height: 25px;
 }
 
 div.agegate_text_container > h2 {
 	color: #fff;
+	font-weight: 200;
 }
 .agegate_text_container.btns {
-	margin-top: 7%;
+	margin-top: 6vh;
 	height: 67px;
 }
 
@@ -4339,19 +4392,158 @@ div.agegate_text_container > h2 {
 }
 
 #app_agegate {
-	margin-top: 3%;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			margin-top: 6%;
 	margin-bottom: 150px;
 }
 
-.agegate_text_container.preferences {
+#app_agegate .preferences {
 	margin-top: 20px;
-	font-size: 16px;
-	color: #fff;
+	font-size: 14px;
+
+	padding-top: 20px;
+	color: #9db2be;
 }
 
-.agegate_text_container.preferences a {
+#app_agegate .preferences a {
 	text-decoration: underline;
 }
+
+
+#app_agegate select {
+	padding: 2px 3px;
+	height: 22px;
+	color: #67c1f5;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border-radius: 2px;
+	border: none;
+	vertical-align: top;
+}
+
+#app_agegate select option {
+	background-color: #417a9b;
+	color: #e5e4dc;
+}
+
+.agegate_birthday_selector {
+	background: rgba(255,255,255,0.1);
+	border-radius: 5px;
+	text-align: center;
+	max-width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding: 12px;
+}
+.agegate_birthday_desc {
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+.agegate_wizard {
+
+	margin-top: 15px;
+	background: #435363;
+	padding: 10px 16px 16px 16px;
+	margin-bottom: 10px;
+	text-align: left;
+	position: relative;
+	border-radius: 4px;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.agegate_wizard:after {
+	bottom: 100%;
+	left: 4%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #435363;
+	border-width: 20px;
+	margin-left: -20px;
+}
+body.v6 .agegate_wizard h2 {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+}
+body.v6 .agegate_wizard .subtitle {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
+	color: #c6d4df;
+}
+body.v6 .agegate_wizard .subtitle a {
+	text-decoration: underline;
+}
+.sign_in_ctn {
+	display: flex;
+	margin-top: 6px;
+}
+.sign_in_ctn > div {
+	min-width: 100px;
+}
+.sign_in_ctn .btn {
+	top: 5px;
+	position: relative;
+}
+
+.agegate_wizard_preference_option {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+	font-size: 15px;
+
+	padding: 10px 15px;
+	margin-top: 10px;
+	background-color: rgba( 255,255,255, 0.2 );
+	border: 1px solid rgba(255,255,255,0.2);
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.agegate_wizard_preference_option .question span {
+	color: #d5ff3d;
+}
+.agegate_wizard_preference_option .top_block {
+	display: flex;
+	justify-content: space-between;
+}
+.agegate_wizard_preference_option_controls {
+	text-align: right;
+	min-width: 150px;
+}
+#agegate_wizard_done {
+	display: none;
+	padding: 10px 15px;
+	margin-top: 10px;
+	background-color: rgba( 163, 207, 6, 0.8 );
+}
+#agegate_wizard_done h2 {
+	font-size: 16px;
+}
+
+.agegate_wizard_preference_option .question span.descriptor {
+	font-weight: bold;
+	display: inline;
+	color: #ffffff;
+}
+.agegate_wizard_preference_option .examples {
+	font-size: 12px;
+}
+.agegate_wizard_preference_option .examples a {
+	text-decoration: underline;
+}
+
 
 /* Series, Seasons, Episodes */
 .series_seasons .season_selector {

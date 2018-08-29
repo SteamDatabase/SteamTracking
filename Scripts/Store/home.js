@@ -1715,8 +1715,7 @@ GHomepage = {
 			if( message.must_have_launched_appid && !GDynamicStore.BIsAppOwned( message.must_have_launched_appid ) )
 				continue;
 
-			// Skip apps the user has ignored even if they otherwise match filtering criteria
-			if( message.appid && GDynamicStore.BIsAppIgnored( message.appid ) )
+			if ( message.appid && !GStoreItemData.BAppPassesFilters(  message.appid, GHomepage.oSettings.main_cluster, GHomepage.oApplicableSettings.main_cluster ) )
 				continue;
 
 			rgFilteredMessages.push(message);
@@ -1729,6 +1728,32 @@ GHomepage = {
 		if( rgFilteredMessages.length < 5 )
 			rgLayout = [ 'big', 'big','2small'];
 
+		var createMessageElementFunc = function( message, cssClass )
+		{
+			var params = {};
+
+			var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
+
+			var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
+
+			params['class'] = cssClass;
+
+			var $MessageCtn = $J ( '<a/>', params ).attr ( 'href', strUrl );
+
+			var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
+
+			$MessageCtn.append ( $MessageImg );
+			if ( rgItemData )
+				$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
+			else
+				$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
+
+			GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
+
+			GDynamicStore.DecorateDynamicItems( $MessageCtn );
+			
+			return $MessageCtn;
+		};
 
 		var j=0;
 		for( var i=0; i<rgFilteredMessages.length; i++)
@@ -1741,49 +1766,23 @@ GHomepage = {
 			if( rgLayout[j] == 'big' )
 			{
 				var message = rgFilteredMessages[i];
-
-				var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
-
-				var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
-
-				var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message' } ).attr ( 'href', strUrl );
-
-				var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
-
-
-				$MessageCtn.append ( $MessageImg );
-				if ( rgItemData )
-					$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
-				else
-					$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
-
-				GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
-
-				$MessagesContainer.append($MessageCtn);
-
-			} else if( rgLayout[j] == '2small')
+				var $MessageCtn = createMessageElementFunc( message, 'home_marketing_message' );
+				if ( $MessageCtn )
+				{
+					$MessagesContainer.append ( $MessageCtn );
+				}
+			}
+			else if( rgLayout[j] == '2small')
 			{
 				var k = i+2;
 				for( ; i < k && i < rgFilteredMessages.length; i++)
 				{
 					var message = rgFilteredMessages[i];
-
-					var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
-
-					var $MessageCtn = $J ( '<a/>', { 'class': 'home_marketing_message small' } ).attr ( 'href', message.url );
-
-					var $MessageImg = $J ( '<span/>' ).css ( { 'background-image': 'url(' + message.image + ')' } );
-
-
-					$MessageCtn.append ( $MessageImg );
-					if ( rgItemData )
-						$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
-					else
-						$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
-
-					GStoreItemData.BindHoverEvents( $MessageCtn, message.appid, message.packageid );
-
-					$MessagesContainer.append ( $MessageCtn );
+					var $MessageCtn = createMessageElementFunc( message, 'home_marketing_message small' );
+					if ( $MessageCtn )
+					{
+						$MessagesContainer.append ( $MessageCtn );
+					}
 				}
 				// Loop will increment one more time than we want it to, so decrement to fix the outer loop.
 				i--;

@@ -2480,6 +2480,7 @@ body.v6 .marketingmessage_area h2 {
 
 .home_marketing_message, .home_marketing_message:hover {
 	display: block;
+	position: relative;
 	float: left;
 	color: #acdbf5;
 	font-size: 11px;
@@ -2523,6 +2524,11 @@ background: -webkit-linear-gradient( 135deg, rgba(37,49,63,1) 5%,rgba(54,97,125,
 	width: 100%;
 	vertical-align: top;
 }
+
+.home_marketing_message.ds_flagged:not(.ds_wishlist) > span {
+	opacity: 0.1;
+}
+
 
 /* Marketing message Responsive */
 @media screen and (max-width: 910px)

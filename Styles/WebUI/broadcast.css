@@ -1294,7 +1294,7 @@
 }
 
 .videoContainer .videoBackground,
-.BroadcastDetailsSection .BroadcastDetails img
+.BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur
 {
 	width: 100%;
 	opacity: 0.6;

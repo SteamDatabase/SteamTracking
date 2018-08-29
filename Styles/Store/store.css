@@ -2836,6 +2836,13 @@ a.cluster_capsule:hover {
 	margin-top: 33px;
 	padding-bottom: 6px;
 	margin-left: 5px;
+	display: flex;
+	justify-content: space-between;
+}
+#live_streams_carousel .title > span.live_stream_app {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .live_stream_play_icon
 {
@@ -2845,9 +2852,6 @@ a.cluster_capsule:hover {
 	width: 80px !important;
 	height: 55px !important;
 	z-index: 2;
-}
-#live_streams_carousel .title .live_steam_viewers {
-	float: right;
 }
 
 .live_streams_ctn .home_right_btn {

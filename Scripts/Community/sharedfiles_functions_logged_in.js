@@ -68,7 +68,7 @@ function CheckVoteResultsJSON( json )
 			ShowAlertDialog( 'Error', 'Your account does not have sufficient privileges to perform this action. Please make sure that you own this game and that your account is in good standing.' );
 			return false;
 		case 17:
-			ShowAlertDialog( 'Error', 'Your account has an active Game or VAC Banned and you\'re unable to perform this action as a result.' );
+			ShowAlertDialog( 'Error', 'You cannot vote on this item because of an active game ban or VAC ban on your account.' );
 			return false;
 		case 24:
 			ShowAlertDialog( 'Error', 'You must <a href="https://store.steampowered.com/twofactor/manage" target="_blank" rel="noreferrer">enable Steam Guard</a> before you can vote.' );

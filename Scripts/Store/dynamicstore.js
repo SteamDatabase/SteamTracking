@@ -168,8 +168,8 @@ GDynamicStore = {
 				GDynamicStore.s_rgPackagesInCart = fnConvertToMap( data.rgPackagesInCart );
 				GDynamicStore.s_rgAppsInCart = fnConvertToMap( data.rgAppsInCart );
 				GDynamicStore.s_rgRecommendedTags = data.rgRecommendedTags || [];
-				GDynamicStore.s_rgIgnoredApps = fnConvertToMap( data.rgIgnoredApps );
-				GDynamicStore.s_rgIgnoredPackages = fnConvertToMap( data.rgIgnoredPackages );
+				GDynamicStore.s_rgIgnoredApps = data.rgIgnoredApps || {}
+				GDynamicStore.s_rgIgnoredPackages = data.rgIgnoredPackages || {};
 				GDynamicStore.s_rgCurators = data.rgCurators || {};
 				GDynamicStore.s_rgCurations = data.rgCurations || {};
 				GDynamicStore.s_rgCreatorsFollowed = fnConvertToMap( data.rgCreatorsFollowed );
@@ -477,7 +477,7 @@ GDynamicStore = {
 					bInCart = true;
 				else if ( GDynamicStore.s_rgOwnedPackages[unPackageID] )
 					bOwned = true;
-				else if ( GDynamicStore.s_rgIgnoredPackages[unPackageID] )
+				else if ( unPackageID in GDynamicStore.s_rgIgnoredPackages )
 					bIgnored = true;
 			}
 
@@ -523,7 +523,7 @@ GDynamicStore = {
 					bOwned = true;
 				else if ( GDynamicStore.s_rgWishlist[unAppID] )
 					bWanted = true;
-				else if ( GDynamicStore.s_rgIgnoredApps[unAppID] )
+				else if ( unAppID in GDynamicStore.s_rgIgnoredApps )
 					bIgnored = true;
 
 				GDynamicStore.s_ImpressionTracker.RegisterElement( this );
@@ -741,7 +741,15 @@ GDynamicStore = {
 
 	ModifyIgnoredApp: function( $elSource, appid, bRemove, fnOnSuccess, fnOnFail )
 	{
-		GDynamicStore.s_rgIgnoredApps[appid] = !bRemove;
+		if ( bRemove )
+		{
+			delete GDynamicStore.s_rgIgnoredApps[appid];
+		}
+		else
+		{
+			GDynamicStore.s_rgIgnoredApps[appid] = 0;
+		}
+
 
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
@@ -755,25 +763,33 @@ GDynamicStore = {
 		}).fail( function( jqXHR ) {
 			if( fnOnFail )
 				fnOnFail( appid );
-			GDynamicStore.s_rgIgnoredApps[appid] = false;
+			delete GDynamicStore.s_rgIgnoredApps[appid];
 		});
 	},
 
 	ModifyIgnoredPackage: function( packageid, bRemove, fnOnSuccess, fnOnFail )
 	{
-		GDynamicStore.s_rgIgnoredPackages[appid] = !bRemove;
+				if ( bRemove )
+		{
+			delete GDynamicStore.s_rgIgnoredPackages[packageid];
+		}
+		else
+		{
+			GDynamicStore.s_rgIgnoredPackages[packageid] = 0;
+		}
+
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			subid: packageid,
 			remove: bRemove
 		}).done( function() {
 			if( fnOnSuccess )
-				fnOnSuccess( appid );
+				fnOnSuccess( packageid );
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
 			if( fnOnFail )
-				fnOnFail( appid );
-			GDynamicStore.s_rgIgnoredPackages[appid] = false;
+				fnOnFail( packageid );
+			delete GDynamicStore.s_rgIgnoredPackages[packageid];
 		});
 	},
 
@@ -1006,25 +1022,12 @@ GDynamicStore = {
 
 	BIsAppIgnored: function( appid )
 	{
-		return GDynamicStore.s_rgIgnoredApps[appid] ? true: false;
+		return ( appid in GDynamicStore.s_rgIgnoredApps );
 	},
 
 	GetIgnoredAppCount: function( )
 	{
 		return Object.keys(GDynamicStore.s_rgIgnoredApps).length;
-	},
-
-	BIsFilteredByPreferences: function( $e )
-	{
-		if ( $e.data( 'dsHasAdultContentSex' ) && GDynamicStore.s_preferences['hide_adult_content_sex'] )
-		{
-			return true;
-		}
-		if ( $e.data( 'dsHasAdultContentViolence' ) && GDynamicStore.s_preferences['hide_adult_content_violence'] )
-		{
-			return true;
-		}
-		return false;
 	},
 
 	GetExcludedTagsOverlap: function( $e )
@@ -1088,7 +1091,7 @@ GDynamicStore = {
 
 	BIsPackageIgnored: function( packageid )
 	{
-		return GDynamicStore.s_rgIgnoredPackages[packageid] ? true: false;
+		return ( packageid in GDynamicStore.s_rgIgnoredPackages );
 	},
 	
 	GetCuratorForApp: function( unAppID, bOnlyPositive )
@@ -1443,7 +1446,7 @@ GStoreItemData = {
 			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
 
 		}
-		else if( unPackageID )
+		else if ( unPackageID )
 		{
 			params['data-ds-packageid'] = unPackageID;
 			params['href'] = GStoreItemData.GetPackageURL( unPackageID, strFeatureContext, nDepth );
@@ -1451,7 +1454,8 @@ GStoreItemData = {
 			{
 				params['data-ds-appid'] = rgItemData['appids'].join( ',' );
 			}
-		} else if( unBundleID )
+		}
+		else if ( unBundleID )
 		{
 			params['data-ds-bundleid'] = unBundleID;
 			params['href'] = GStoreItemData.GetBundleURL( unBundleID, strFeatureContext, nDepth );
@@ -1459,6 +1463,15 @@ GStoreItemData = {
 			{
 				params['data-ds-appid'] = rgItemData['appids'].join( ',' );
 			}
+		}
+
+		if ( rgItemData.tagids && rgItemData.tagids.length != 0 )
+		{
+			params['data-ds-tagids'] = '[' + rgItemData['tagids'].join( ',' ) + ']';
+		}
+		if ( rgItemData.descids && rgItemData.descids.length != 0 )
+		{
+			params['data-ds-descids'] = '[' + rgItemData['descids'].join( ',' ) + ']';
 		}
 
 		// override with item-specific URL
@@ -1662,6 +1675,30 @@ GStoreItemData = {
 
 		if ( rgAppData.virtual_reality && ApplicableSettings.virtual_reality && !Settings.virtual_reality )
 			return false;
+
+		if ( rgAppData.tagids && rgAppData.tagids.length != 0 )
+		{
+			for ( var i = 0; i < rgAppData.tagids.length; ++i )
+			{
+				var tagid = rgAppData.tagids[i];
+				if ( GDynamicStore.s_rgExcludedTags[tagid] )
+				{
+					return false;
+				}
+			}
+		}
+
+		if ( rgAppData.descids && rgAppData.descids.length != 0 )
+		{
+			for ( var i = 0; i < rgAppData.descids.length; ++i )
+			{
+				var id = rgAppData.descids[i];
+				if ( GDynamicStore.s_rgExcludedDescIDs[id] )
+				{
+					return false;
+				}
+			}
+		}
 
 		return true;
 	},
