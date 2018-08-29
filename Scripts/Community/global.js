@@ -421,6 +421,21 @@ function StandardCommunityBan( steamid, elemLink )
 
 }
 
+function ReportProfile( steamID )
+{
+	var $Content = $J('<div class="group_invite_throbber"><img src="https://steamcommunity-a.akamaihd.net/public/images/login/throbber.gif"></div>');
+	var $Modal = ShowDialog( 'Report Profile', $Content );
+	var sURL = 'https://steamcommunity.com/actions/ReportProfile/' + steamID;
+	$J.ajax( {
+		url: sURL,
+		type: 'GET'
+	}).done( function ( data ) {
+		var $DialogHTML = $J( data );
+		$Content.replaceWith( $DialogHTML );
+		$Modal.SetMaxHeight( '800' );
+	} );
+}
+
 function CEmoticonPopup( $EmoticonButton, $Textarea, strBaseURL )
 {
 	this.m_$EmoticonButton = $EmoticonButton;

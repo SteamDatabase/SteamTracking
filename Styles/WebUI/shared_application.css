@@ -310,3 +310,33 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	max-width: 320px;
 	max-height: 320px;
 }
+
+.crossfade
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.crossfade-anim-exit
+{
+	opacity: 1;
+	transition-timing-function: linear;
+	transition-property: opacity;
+}
+
+.crossfade-anim-exit-active
+{
+	opacity: 0.01;
+}
+
+.crossfade-img
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	background-size: cover;
+}
+
