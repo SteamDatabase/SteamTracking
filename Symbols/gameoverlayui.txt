@@ -366,6 +366,7 @@
  D CBasePanel::PanelMessageFunc_Close::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_DelayedClose::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_OnAddActionSignalTarget::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnCancelMicroTxn::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()::bAdded
@@ -4710,6 +4711,7 @@
  T CBasePanel::LoadScreenshotNotificationThumb(unsigned int)
  T CBasePanel::LoadScreenshotNotificationThumb(unsigned int, CUtlBuffer&, int, int)
  T CBasePanel::OnActivateModule(int)
+ T CBasePanel::OnAddActionSignalTarget(unsigned long long)
  T CBasePanel::OnAsyncNotificationsRequested(NotifyAsyncNotificationsRequested_t*)
  T CBasePanel::OnBroadcastRecorderError(BroadcastRecorderError_t*)
  T CBasePanel::OnBroadcastSettingsLoaded(BroadcastSettingsLoaded_t*)
@@ -4748,6 +4750,7 @@
  T CBasePanel::PanelMessageFunc_Close::InitVar()
  T CBasePanel::PanelMessageFunc_DelayedClose::InitVar()
  T CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()
+ T CBasePanel::PanelMessageFunc_OnAddActionSignalTarget::InitVar()
  T CBasePanel::PanelMessageFunc_OnCancelMicroTxn::InitVar()
  T CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()
  T CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()

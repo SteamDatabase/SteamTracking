@@ -2636,6 +2636,8 @@
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnKillFocus::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnOverlayHidden::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnOverlayShown::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnSetFocus::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnStartRequest::InitVar()::bAdded
  D vgui::HTMLPopup::ChainToAnimationMap()::chained
@@ -13030,6 +13032,8 @@
  T vgui::HTMLFramelessPopup::OnCustomURL(KeyValues*)
  T vgui::HTMLFramelessPopup::OnFinishRequest()
  T vgui::HTMLFramelessPopup::OnKillFocus()
+ T vgui::HTMLFramelessPopup::OnOverlayHidden()
+ T vgui::HTMLFramelessPopup::OnOverlayShown()
  T vgui::HTMLFramelessPopup::OnPositionChanged(int, int)
  T vgui::HTMLFramelessPopup::OnSetFocus()
  T vgui::HTMLFramelessPopup::OnSizeChanged(int, int)
@@ -13046,6 +13050,8 @@
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnCustomURL::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnFinishRequest::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnKillFocus::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnOverlayHidden::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnOverlayShown::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnSetFocus::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnStartRequest::InitVar()
  T vgui::HTMLFramelessPopup::PerformLayout()
