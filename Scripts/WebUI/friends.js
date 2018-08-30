@@ -36331,7 +36331,7 @@ and limitations under the License.
               }
               e.metrics().set_friends_count(t),
                 e.metrics().set_friends_online_count(i),
-                e.metrics().set_friends_in_game_count(i),
+                e.metrics().set_friends_in_game_count(n),
                 this.m_FriendGroupStore.FillInChatUsabilityMetrics(e),
                 this.m_FavoritesStore.FillInChatUsabilityMetrics(e);
             }),
@@ -46856,7 +46856,9 @@ and limitations under the License.
                 .set_friends_list_docked(t.IsFriendsListSingleWindow()),
                 e
                   .ui_state()
-                  .set_friends_list_visible(!t.friends_list_window.BIsClosed()),
+                  .set_friends_list_visible(
+                    t.friends_list_window && !t.friends_list_window.BIsClosed()
+                  ),
                 e
                   .ui_state()
                   .set_chat_popups_opened(Array.from(t.popup_list).length);
@@ -86645,7 +86647,7 @@ and limitations under the License.
             e
           );
         })(),
-        E_ = 1,
+        E_ = 2,
         T_ = (function() {
           function e(e) {
             var t = this;
