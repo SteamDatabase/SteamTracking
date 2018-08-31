@@ -273,7 +273,7 @@ function UnIgnoreApp( element, unAppId, snr )
 		$J(element.parentNode).hide();
 		GDynamicStore.InvalidateCache();
 	}).fail( function() {
-		ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+		ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
 

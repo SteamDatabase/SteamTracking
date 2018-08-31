@@ -549,7 +549,7 @@ GDynamicStore = {
 				else if ( bIgnored )
 				{
 					$El.addClass( 'ds_flagged ds_ignored' );
-					$El.append( '<div class="ds_flag ds_ignored_flag">NOT INTERESTED&nbsp;&nbsp;</div>');
+					$El.append( '<div class="ds_flag ds_ignored_flag">IGNORED&nbsp;&nbsp;</div>');
 				}
 
 				if ( bInCart )
@@ -682,13 +682,13 @@ GDynamicStore = {
 				var fnClick = function ()
 				{
 					$elSource.addClass('ds_ignored ds_flagged');
-					$elSource.append( '<div class="ds_flag ds_ignored_flag">NOT INTERESTED&nbsp;&nbsp;</div>');
+					$elSource.append( '<div class="ds_flag ds_ignored_flag">IGNORED&nbsp;&nbsp;</div>');
 					for( var i=0; i<rgAppIds.length; i++ )
 						GDynamicStore.ModifyIgnoredApp ( $elSource, rgAppIds[ i ], false );
 
 					return false;
 				};
-				var strText = "Not Interested";
+				var strText = "Ignore";
 
 			}
 			else
@@ -703,7 +703,7 @@ GDynamicStore = {
 
 					return false;
 				};
-				var strText = "Not Interested";
+				var strText = "Ignored";
 			}
 
 

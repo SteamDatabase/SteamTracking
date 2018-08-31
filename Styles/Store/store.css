@@ -1337,6 +1337,7 @@ a#store_search_link img {
 	opacity: 0.3;
 }
 
+
 .tab_item.ds_flagged:not(.ds_wishlist):not(:hover) .tab_item_content .tab_item_name {
 	color: #62696e;
 }
@@ -1365,6 +1366,17 @@ a#store_search_link img {
 }
 .tab_item.focus .release_date {
 	right: 30px;
+}
+
+
+/* Blurring for various filtered items */
+
+.tab_item.ds_flagged:not(.ds_wishlist):not(:hover):not(.ds_library) .tab_item_cap img {
+	filter: blur(4px);
+}
+.bundle_contents_preview_item.ds_excluded_by_preferences img {
+	filter: blur(4px);
+	opacity: 0.3;
 }
 
 

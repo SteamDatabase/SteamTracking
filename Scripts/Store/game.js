@@ -93,7 +93,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 			GDynamicStore.InvalidateCache();
 			if ( data && data.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark something Not Interested' ); } // SummerSale2017
 		}).fail( function( jqXHR ) {
-			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 
@@ -108,7 +108,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 			$UnIgnoreBtn.hide();
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
-			ShowAlertDialog( 'Not Interested', 'There was a problem saving your changes.  Please try again later.' );
+			ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
 		});
 	});
 

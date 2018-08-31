@@ -2260,7 +2260,7 @@ GSteamCurators = {
 						GDynamicStore.ModifyWishlist( appid, false, function(){ $elButtonWishlist.hide(); return false; } );
 					});
 
-					var $elButtonNotInterested = $J('<span />').text("Not Interested");
+					var $elButtonNotInterested = $J('<span />').text("Ignore");
 
 					$elButtonNotInterested.click(function(){
 						$J('.giant_curator_capsule').css({'opacity': 0.3});
