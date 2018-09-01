@@ -75242,66 +75242,74 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.state.info,
                 t = "";
-              return (
-                e &&
-                  e.m_nViewerCount &&
-                  (t = e.m_nViewerCount.toLocaleString()),
+              e && e.m_nViewerCount && (t = e.m_nViewerCount.toLocaleString());
+              var i = "583950" == e.m_strAppId;
+              return ya.createElement(
+                "div",
+                { className: "BroadcastDetails" },
+                !this.props.bHideThumbnail &&
+                  ya.createElement(Cm, {
+                    className: "broadcastDetailsThumbBlur",
+                    src: e.m_strThumbnailUrl,
+                    draggable: !1,
+                    duration: 2500
+                  }),
                 ya.createElement(
                   "div",
-                  { className: "BroadcastDetails" },
-                  !this.props.bHideThumbnail &&
-                    ya.createElement(Cm, {
-                      className: "broadcastDetailsThumbBlur",
-                      src: e.m_strThumbnailUrl,
-                      draggable: !1,
-                      duration: 2500
-                    }),
+                  { className: "BroadcastDetailsHeader" },
                   ya.createElement(
                     "div",
-                    { className: "BroadcastDetailsHeader" },
+                    { className: "displayColumn" },
                     ya.createElement(
                       "div",
-                      { className: "displayColumn" },
+                      { className: "Info" },
                       ya.createElement(
-                        "div",
-                        { className: "Info" },
+                        "span",
+                        { className: "AppTitle" },
+                        e.m_strAppTitle
+                      ),
+                      e.m_strTitle &&
                         ya.createElement(
                           "span",
-                          { className: "AppTitle" },
-                          e.m_strAppTitle
+                          { className: "BroadcastTitle" },
+                          " - ",
+                          e.m_strTitle
                         ),
-                        e.m_strTitle &&
-                          ya.createElement(
-                            "span",
-                            { className: "BroadcastTitle" },
-                            " - ",
-                            e.m_strTitle
-                          ),
-                        this.props.onLocalStreamChange &&
-                          this.RenderStreamSwitcher()
-                      ),
-                      t &&
-                        ya.createElement(
-                          "div",
-                          { className: "BroadcastDetailsHeader_ViewerCount" },
-                          ya.createElement(ld.X, null),
-                          Object(aa.b)("#Broadcast_ViewerCount", t)
-                        )
+                      this.props.onLocalStreamChange &&
+                        this.RenderStreamSwitcher()
                     ),
+                    t &&
+                      ya.createElement(
+                        "div",
+                        { className: "BroadcastDetailsHeader_ViewerCount" },
+                        ya.createElement(ld.X, null),
+                        Object(aa.b)("#Broadcast_ViewerCount", t)
+                      )
+                  ),
+                  ya.createElement(
+                    "div",
+                    { className: "Actions" },
                     ya.createElement(
                       "div",
-                      { className: "Actions" },
+                      {
+                        onClick: function(e) {
+                          return lt(e, "https://steam.tv/artifact");
+                        },
+                        className: "BroadcastLink"
+                      },
+                      "steam.tv/artifact"
+                    ),
+                    i &&
                       ya.createElement(
                         "div",
                         {
                           onClick: function(e) {
-                            return lt(e, "steam.tv/artifact");
+                            return lt(e, "http://playartifact.com/");
                           },
                           className: "BroadcastLink"
                         },
-                        "steam.tv/artifact"
+                        "Learn more at playartifact.com"
                       )
-                    )
                   )
                 )
               );
