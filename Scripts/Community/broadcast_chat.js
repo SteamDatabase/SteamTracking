@@ -21,6 +21,7 @@ var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 	this.m_bReconnecting = false;
 	this.m_regexUserEmoticons = null;
 	this.m_bAutoScroll = true;
+	this.m_schRequestLoop = undefined;
 
 	this.m_nLastHeight = 0;
 	this.m_mapMutedUsers = {};
@@ -160,11 +161,23 @@ CBroadcastChat.prototype.log = function( strMsg )
 
 CBroadcastChat.prototype.BeginRequestLoop = function()
 {
-	var context = this;
 	this.log("Beginning request loop");
-
-	setTimeout( function() { context.RequestLoop() }, 0 );
+	this.ScheduleRequestLoop( 0 );
 };
+
+CBroadcastChat.prototype.ScheduleRequestLoop = function( nTimeout )
+{
+	if ( this.m_schRequestLoop !== undefined )
+		clearTimeout( this.m_schRequestLoop );
+
+	var _chat = this;
+	this.m_schRequestLoop = setTimeout( function()
+	{ 
+		_chat.m_schRequestLoop = undefined;
+		_chat.RequestLoop();
+	}, nTimeout );
+}
+
 
 CBroadcastChat.prototype.RequestLoop = function()
 {
@@ -280,10 +293,10 @@ CBroadcastChat.prototype.RequestLoop = function()
 		}
 
 		_chat.m_nLastSleepMS = nSleepMS;
-		if( nSleepMS <= 0 )
-			_chat.RequestLoop();
-		else
-			setTimeout( function() { _chat.RequestLoop(); }, nSleepMS );
+		if ( nSleepMS < 0 )
+			nSleepMS = 0;
+
+		_chat.ScheduleRequestLoop( nSleepMS );
 	})
 	.fail( function(result)
 	{
@@ -305,7 +318,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 			_chat.SyncChat();
 		}
 
-		setTimeout( function() { _chat.RequestLoop(); }, CBroadcastChat.s_MessageRetryDelay );
+		_chat.ScheduleRequestLoop( CBroadcastChat.s_MessageRetryDelay );
 	});
 };
 
