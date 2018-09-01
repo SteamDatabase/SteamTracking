@@ -1171,7 +1171,7 @@
 	max-width: 340px;
 	min-width: 340px;
 	flex: 1;
-	background-color: lightgrey;
+	background-color: #22252b;
 
 	font-size: 0;
 	position: relative;
@@ -1781,3 +1781,69 @@ iframe.steamTVLogin
 	stroke-width: 0px;
 }
 
+.BroadcastCSGOLondonOffline
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background-image: url( "../../images/webui/broadcast/steam_broadcast_london_2018.jpg" );
+	background-size: cover;
+}
+
+.BroadcastCSGOLondonOffline_Schedule
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.BroadcastCSGOLondonOffline_Prelims,
+.BroadcastCSGOLondonOffline_Group
+{
+	color: #d3d3d3;
+	line-height: 36px;
+}
+
+.BroadcastCSGOLondonOffline_Playoffs
+{
+	color: #ff6600;
+	line-height: 36px;
+}
+
+.BroadcastArtifactOffline
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background-image: url( "../../images/webui/broadcast/ArtifactAtPAX_bg.jpg" );
+	background-size: cover;
+}
+
+.BroadcastArtifactOffline_Schedule
+{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 40px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.BroadcastArtifactOffline_Text,
+{
+	color: #d3d3d3;
+	line-height: 18px;
+}
