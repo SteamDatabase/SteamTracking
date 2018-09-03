@@ -9646,20 +9646,9 @@ and limitations under the License.
         return va.a.createElement(
           "div",
           { className: "BroadcastArtifactOffline" },
-          va.a.createElement(
-            "div",
-            { className: "BroadcastArtifactOffline_Schedule" },
-            va.a.createElement(
-              "div",
-              { className: "BroadcastArtifactOffline_Text" },
-              "LIVE GAMEPLAY STREAM FROM PAX WEST"
-            ),
-            va.a.createElement(
-              "div",
-              { className: "BroadcastArtifactOffline_Text" },
-              "STARTS AT 10AM PDT"
-            )
-          )
+          va.a.createElement("div", {
+            className: "BroadcastArtifactOffline_Schedule"
+          })
         );
       }
       function ft(e) {
