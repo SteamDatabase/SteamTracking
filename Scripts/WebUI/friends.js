@@ -9657,17 +9657,17 @@ and limitations under the License.
             va.a.createElement(
               "div",
               { className: "BroadcastCSGOLondonOffline_Prelims" },
-              "PRELIMS - SEPTEMBER 5-9"
+              "CHALLENGERS STAGE – SEPTEMBER 5-9"
             ),
             va.a.createElement(
               "div",
               { className: "BroadcastCSGOLondonOffline_Group" },
-              "GROUP STAGE - SEPTEMBER 12-16"
+              "LEGENDS STAGE – SEPTEMBER 12-16"
             ),
             va.a.createElement(
               "div",
               { className: "BroadcastCSGOLondonOffline_Playoffs" },
-              "PLAYOFFS - SEPTEMBER 20-23"
+              "CHAMPIONS STAGE – SEPTEMBER 20-23"
             )
           )
         );
