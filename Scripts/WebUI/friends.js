@@ -1973,7 +1973,7 @@ webpackJsonp(
           )
         );
       }
-      function V() {
+      function j() {
         return re.createElement(
           "svg",
           {
@@ -2007,7 +2007,7 @@ webpackJsonp(
           })
         );
       }
-      function j() {
+      function V() {
         return re.createElement(
           "svg",
           {
@@ -2683,8 +2683,8 @@ webpackJsonp(
         (t.c = x),
         (t.b = z),
         (t.k = U),
-        (t.R = V),
-        (t.y = j),
+        (t.R = j),
+        (t.y = V),
         (t.B = W),
         (t.K = H),
         (t.N = q),
@@ -8290,22 +8290,22 @@ and limitations under the License.
       }
       function f(e) {
         if (!e) return La.k_ESlashCommandType_None;
-        for (var t in Va)
+        for (var t in ja)
           if (e.startsWith(t)) {
             var i = e.slice(t.length, t.length + 1);
-            return ja.indexOf(i) < 0 ? La.k_ESlashCommandType_None : Va[t];
+            return Va.indexOf(i) < 0 ? La.k_ESlashCommandType_None : ja[t];
           }
         return La.k_ESlashCommandType_None;
       }
       function _() {
-        return Object.keys(Va);
+        return Object.keys(ja);
       }
       function y(e) {
         var t = f(e);
         if (t == La.k_ESlashCommandType_None) return e;
         var i = void 0;
-        for (var n in Va)
-          if (Va[n] === t) {
+        for (var n in ja)
+          if (ja[n] === t) {
             i = n;
             break;
           }
@@ -8478,7 +8478,7 @@ and limitations under the License.
       function U(e, t, i, n) {
         return A(e + t.segmentTemplate.strMedia, i.strID, n);
       }
-      function V(e, t, i) {
+      function j(e, t, i) {
         if ("dynamic" != e.GetType()) return 0;
         var n = L(t);
         return (
@@ -8486,7 +8486,7 @@ and limitations under the License.
           (performance.now() - e.GetLiveContentStart())
         );
       }
-      function j(e) {
+      function V(e) {
         if (Math.abs(e) < 1e3) return e + " B";
         var t = ["kB", "MB", "GB", "TB"],
           i = -1;
@@ -8752,8 +8752,8 @@ and limitations under the License.
               r && r.Close(), o && o();
             }
           });
-        if (ad.UIStore.GetPerContextChatData(Vt(t)).BUsePopups() && n && i) {
-          var s = new Xd(t, Vt(t), i, n, a);
+        if (ad.UIStore.GetPerContextChatData(jt(t)).BUsePopups() && n && i) {
+          var s = new Xd(t, jt(t), i, n, a);
           s.Show(), (r = s);
         } else r = L_.GetModalManager(t).ShowModal(a);
         return r;
@@ -8811,7 +8811,7 @@ and limitations under the License.
         );
       }
       function ge(e, t) {
-        return ad.UIStore.GetPerContextChatData(Vt(e)).BUsePopups() &&
+        return ad.UIStore.GetPerContextChatData(jt(e)).BUsePopups() &&
           e.innerWidth < 600
           ? { strTitle: t, popupWidth: 638, popupHeight: 300 }
           : null;
@@ -9011,7 +9011,7 @@ and limitations under the License.
           "undefined" != typeof SteamClient &&
             void 0 !== SteamClient.SharedConnection)
         ) {
-          var n = Vt(i);
+          var n = jt(i);
           return void SteamClient.WebChat.OpenURLInClient(t, n.m_unPID);
         }
         0 == t.indexOf("steam://")
@@ -9209,7 +9209,7 @@ and limitations under the License.
                 n
               );
       }
-      function Ve(e, t, i) {
+      function je(e, t, i) {
         ue(
           ya.createElement(Op, { group: t, roomID: i }),
           e,
@@ -9221,7 +9221,7 @@ and limitations under the License.
           }
         );
       }
-      function je(e) {
+      function Ve(e) {
         var t = e.expanded
           ? Object(aa.b)("#Chat_ChatRoomListO_OpenGroupCollapse")
           : Object(aa.b)("#Chat_ChatRoomListO_OpenGroupExpand");
@@ -9238,7 +9238,7 @@ and limitations under the License.
       }
       function He(e, t, i) {
         ue(
-          ya.createElement(jp, {
+          ya.createElement(Vp, {
             ownerWin: e,
             groupView: t,
             bVoiceChannel: i,
@@ -9367,7 +9367,7 @@ and limitations under the License.
             switch (o.label) {
               case 0:
                 return (
-                  (i = Vt(e)),
+                  (i = jt(e)),
                   (n = t.BIsClanChatRoom()
                     ? "#Chat_Actions_LeaveChatRoomGroup_ClanConfirm"
                     : t.BIsAccountIDOwner(ad.CMInterface.steamid.GetAccountID())
@@ -9408,7 +9408,7 @@ and limitations under the License.
           );
       }
       function et(e, t, i, n) {
-        var r = Vt(e),
+        var r = jt(e),
           o = ad.ChatStore.FindNamelessChatGroupWithFriends(i);
         if (o) return void ad.UIStore.ReplaceFriendChatWithGroup(r, t, o);
         ad.ChatStore.CreateChatRoomGroup(r, "", i, n)
@@ -9544,7 +9544,7 @@ and limitations under the License.
           "undefined" != typeof SteamClient &&
             void 0 !== SteamClient.SharedConnection)
         ) {
-          var n = Vt(i);
+          var n = jt(i);
           return void SteamClient.WebChat.OpenURLInClient(t, n.m_unPID);
         }
         0 == t.indexOf("steam://")
@@ -9645,10 +9645,31 @@ and limitations under the License.
       function gt(e) {
         return va.a.createElement(
           "div",
-          { className: "BroadcastArtifactOffline" },
-          va.a.createElement("div", {
-            className: "BroadcastArtifactOffline_Schedule"
-          })
+          { className: "BroadcastCSGOLondonOffline" },
+          va.a.createElement(
+            "div",
+            { className: "BroadcastCSGOLondonOffline_Schedule" },
+            va.a.createElement(
+              "div",
+              { className: "BroadcastCSGOLondonOffline_Prelims" },
+              "COMING SOON:"
+            ),
+            va.a.createElement(
+              "div",
+              { className: "BroadcastCSGOLondonOffline_Prelims" },
+              "PRELIMS - SEPTEMBER 5-9"
+            ),
+            va.a.createElement(
+              "div",
+              { className: "BroadcastCSGOLondonOffline_Group" },
+              "GROUP STAGE - SEPTEMBER 12-16"
+            ),
+            va.a.createElement(
+              "div",
+              { className: "BroadcastCSGOLondonOffline_Playoffs" },
+              "PLAYOFFS - SEPTEMBER 20-23"
+            )
+          )
         );
       }
       function ft(e) {
@@ -9874,25 +9895,25 @@ and limitations under the License.
         );
       }
       function wt(e) {
-        if (Vf == Pf.Loaded) return void e();
-        if (Vf == Pf.NotLoaded) {
+        if (jf == Pf.Loaded) return void e();
+        if (jf == Pf.NotLoaded) {
           var t = document.createElement("script");
           t.src = "https://www.youtube.com/iframe_api";
           var i = document.getElementsByTagName("script")[0];
           i.parentNode.insertBefore(t, i),
             (window.onYouTubeIframeAPIReady = Ot);
         }
-        jf.findIndex(function(t) {
+        Vf.findIndex(function(t) {
           return e == t;
-        }) < 0 && jf.push(e);
+        }) < 0 && Vf.push(e);
       }
       function Bt(e) {
-        un.c(jf, e);
+        un.c(Vf, e);
       }
       function Ot() {
-        Vf = Pf.Loaded;
-        for (var e = 0, t = jf; e < t.length; e++) (0, t[e])();
-        jf = [];
+        jf = Pf.Loaded;
+        for (var e = 0, t = Vf; e < t.length; e++) (0, t[e])();
+        Vf = [];
       }
       function It(e) {
         var t = new RegExp(
@@ -10036,10 +10057,10 @@ and limitations under the License.
             i,
             "Couldn't find owning window to determine browser context"
           ),
-          Vt(i)
+          jt(i)
         );
       }
-      function Vt(e) {
+      function jt(e) {
         var t = rd;
         return (
           e &&
@@ -10051,8 +10072,8 @@ and limitations under the License.
           t
         );
       }
-      function jt(e) {
-        var t = Vt(e);
+      function Vt(e) {
+        var t = jt(e);
         return t && t.m_unPID != rd.m_unPID && t.m_nBrowserID != rd.m_nBrowserID
           ? t
           : null;
@@ -10108,18 +10129,18 @@ and limitations under the License.
       }
       function Jt(e, t, i) {
         if ("english" !== t)
-          "friendsui" == e ? (V_ = i) : "shared" == e && (j_ = i);
+          "friendsui" == e ? (j_ = i) : "shared" == e && (V_ = i);
         else if ("shared" == e) W_ = i;
         else {
           var n = void 0,
             r = null,
             o = void 0,
             a = null;
-          void 0 !== V_ ? ((n = V_), (r = i)) : (n = i),
-            void 0 !== j_ ? ((o = j_), (a = W_)) : (o = W_),
+          void 0 !== j_ ? ((n = j_), (r = i)) : (n = i),
+            void 0 !== V_ ? ((o = V_), (a = W_)) : (o = W_),
             aa.a.InitFromObjects(n, r, o, a),
-            (V_ = void 0),
             (j_ = void 0),
+            (V_ = void 0),
             (W_ = void 0);
         }
       }
@@ -14075,8 +14096,8 @@ and limitations under the License.
             t
           );
         })(ti.Message)),
-        Vi = i("xe4/"),
-        ji = i("DRjr"),
+        ji = i("xe4/"),
+        Vi = i("DRjr"),
         Wi = i("mtWM"),
         Hi = i.n(Wi),
         qi = (function() {
@@ -16215,7 +16236,7 @@ and limitations under the License.
               if (
                 e.BIsValid() &&
                 e.Hdr().jobid_target() &&
-                e.Hdr().jobid_target() !== ji.a
+                e.Hdr().jobid_target() !== Vi.a
               ) {
                 var t = parseInt(e.Hdr().jobid_target());
                 if (this.m_mapWaitingCallbacks.has(t)) {
@@ -16242,7 +16263,7 @@ and limitations under the License.
             (t.prototype.DecodeAndDispatchMultiMsg = function(e) {
               var t = e.Body().message_body();
               if (t) {
-                e.Body().size_unzipped() && (t = Vi.inflate(t));
+                e.Body().size_unzipped() && (t = ji.inflate(t));
                 for (var i = new $t(t); i.GetCountBytesRemaining() > 0; ) {
                   var n = i.GetUint32(),
                     r = ai.InitHeaderFromPacket(
@@ -17020,7 +17041,7 @@ and limitations under the License.
           function e() {}
           return e;
         })(),
-        Rn = { "76561198857153475": "#Broadcast_EnglishMain" };
+        Rn = { "76561198846304683": "#Broadcast_EnglishMain" };
       !(function(e) {
         (e[(e.Terminator = 0)] = "Terminator"),
           (e[(e.MatchStarted = 1)] = "MatchStarted"),
@@ -17329,9 +17350,8 @@ and limitations under the License.
                     (this.m_broadcastViewerCount = t.watching_broadcast_viewers()),
                     (this.m_strBroadcastTitle = t.watching_broadcast_title()),
                     l.BIsValid() &&
-                      (this.m_broadcastAppId ||
-                        (this.m_broadcastAppId = 583950),
-                      (this.m_strBroadcastTitle = "Artifact @ PAX")))
+                      (this.m_broadcastAppId || (this.m_broadcastAppId = 730),
+                      (this.m_strBroadcastTitle = "CS:GO Major 2018")))
                   : ((this.m_broadcastAccountId = 0),
                     (this.m_broadcastAppId = 0),
                     (this.m_broadcastViewerCount = 0),
@@ -18093,7 +18113,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        Vn = (function(e) {
+        jn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -18170,7 +18190,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        jn = (function(e) {
+        Vn = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -21720,7 +21740,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        Vr = (ti.Message,
+        jr = (ti.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -21774,7 +21794,7 @@ and limitations under the License.
             t
           );
         })(ti.Message)),
-        jr = (function(e) {
+        Vr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25297,7 +25317,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        Vo = (function(e) {
+        jo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -25358,7 +25378,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        jo = (function(e) {
+        Vo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26750,7 +26770,7 @@ and limitations under the License.
       var ea;
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("ChatRoom.CreateChatRoomGroup#1", t, Vn);
+          return e.SendMsg("ChatRoom.CreateChatRoomGroup#1", t, jn);
         }
         function i(e, t) {
           return e.SendMsg("ChatRoom.SaveChatRoomGroup#1", t, qn);
@@ -26847,7 +26867,7 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.GetMyChatRoomGroups#1", t, Wr);
         }
         function k(e, t) {
-          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, Vr);
+          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, jr);
         }
         function D(e, t) {
           return e.SendMsg("ChatRoom.GetChatRoomGroupSummary#1", t, Ir);
@@ -26876,10 +26896,10 @@ and limitations under the License.
         function U(e, t) {
           return e.SendMsg("ChatRoom.DeleteInviteLink#1", t, Fo);
         }
-        function V(e, t) {
+        function j(e, t) {
           return e.SendMsg("ChatRoom.SetSessionActiveChatRoomGroups#1", t, ko);
         }
-        function j(e, t) {
+        function V(e, t) {
           return e.SendMsg("ChatRoom.SetUserChatPreferences#1", t, Go);
         }
         function W(e, t) {
@@ -26929,15 +26949,15 @@ and limitations under the License.
           (e.GetBanList = x),
           (e.GetInviteList = z),
           (e.DeleteInviteLink = U),
-          (e.SetSessionActiveChatRoomGroups = V),
-          (e.SetUserChatPreferences = j),
+          (e.SetSessionActiveChatRoomGroups = j),
+          (e.SetUserChatPreferences = V),
           (e.SetUserChatGroupPreferences = W),
           (e.DeleteChatMessages = H);
       })(ea || (ea = {}));
       var ta;
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, jo);
+          return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, Vo);
         }
         function i(e, t) {
           return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, Wo);
@@ -27245,7 +27265,7 @@ and limitations under the License.
                 (this.m_ulChatID = t),
                 (this.m_bIsBanned = i),
                 (this.m_rtKickExpires = n),
-                (this.m_rtTimeExpires = ji.b),
+                (this.m_rtTimeExpires = Vi.b),
                 (this.m_bValid = !0),
                 (this.m_bReady = !0);
             }),
@@ -28990,7 +29010,7 @@ and limitations under the License.
           (e[(e.k_ESlashCommandType_Quote = 6)] = "k_ESlashCommandType_Quote");
       })(La || (La = {}));
       var Ua,
-        Va = {
+        ja = {
           "/me": La.k_ESlashCommandType_Me,
           "/code": La.k_ESlashCommandType_Code,
           "/pre": La.k_ESlashCommandType_Pre,
@@ -28998,7 +29018,7 @@ and limitations under the License.
           "/spoiler": La.k_ESlashCommandType_Spoiler,
           "/quote": La.k_ESlashCommandType_Quote
         },
-        ja = [" ", "\n", "\t", ""];
+        Va = [" ", "\n", "\t", ""];
       !(function(e) {
         (e[(e.None = 0)] = "None"),
           (e[(e.Deleting = 1)] = "Deleting"),
@@ -29303,7 +29323,7 @@ and limitations under the License.
             (e.prototype.GetRTimeLastMessage = function() {
               return this.m_rgMessages.length
                 ? this.m_rgMessages[this.m_rgMessages.length - 1].rtTimestamp
-                : ji.b;
+                : Vi.b;
             }),
             (e.prototype.GetRTimeFirstMessage = function() {
               return this.m_rgMessages.length
@@ -29313,7 +29333,7 @@ and limitations under the License.
             (e.prototype.GetRTimeFirstMessageNextBlock = function() {
               return this.m_nextBlock
                 ? this.m_nextBlock.GetRTimeFirstMessage()
-                : ji.b;
+                : Vi.b;
             }),
             (e.prototype.AppendMessage = function(e) {
               e.GetSlashCommandType() == La.k_ESlashCommandType_Me ||
@@ -29467,9 +29487,9 @@ and limitations under the License.
                 var s = this.GetMostRecentChatMsg();
                 s
                   ? ((n = s.rtTimestamp), (r = s.unOrdinal))
-                  : ((n = ji.c), (r = 0));
-              } else (n = ji.c), (r = 0);
-              (o = ji.b),
+                  : ((n = Vi.c), (r = 0));
+              } else (n = Vi.c), (r = 0);
+              (o = Vi.b),
                 (a = 0),
                 (this.m_nLoadingHistoryInProgressCount += 1),
                 this.GetMessagesFromTimeRange(
@@ -29498,7 +29518,7 @@ and limitations under the License.
                 ? Promise.resolve(!0)
                 : ((this.m_nLoadingHistoryInProgressCount += 1),
                   this.GetMessagesFromTimeRange(
-                    ji.c,
+                    Vi.c,
                     0,
                     this.m_oldestMessageTime,
                     this.m_oldestMessageOrdinal,
@@ -29675,7 +29695,7 @@ and limitations under the License.
                   i++
                 );
                 i >= this.m_rgChatMessages.length
-                  ? ((this.m_oldestMessageTime = ji.b),
+                  ? ((this.m_oldestMessageTime = Vi.b),
                     (this.m_oldestMessageOrdinal = 0))
                   : ((this.m_oldestMessageTime = this.m_rgChatMessages[
                       i
@@ -32821,7 +32841,7 @@ and limitations under the License.
             t
           );
         })(ti.Message)),
-        Vs = (function(e) {
+        js = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -32830,13 +32850,13 @@ and limitations under the License.
           return (
             Qt.d(t, e),
             (t.prototype.messages = function() {
-              return ti.Message.getRepeatedWrapperField(this, js, 1);
+              return ti.Message.getRepeatedWrapperField(this, Vs, 1);
             }),
             (t.prototype.set_messages = function(e) {
               ti.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_messages = function(e, t) {
-              return ti.Message.addToRepeatedWrapperField(this, 1, e, js, t);
+              return ti.Message.addToRepeatedWrapperField(this, 1, e, Vs, t);
             }),
             (t.prototype.more_available = function() {
               return ti.Message.getField(this, 4);
@@ -32859,8 +32879,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new js();
-                    t.readMessage(i, js.deserializeBinaryFromReader),
+                    var i = new Vs();
+                    t.readMessage(i, Vs.deserializeBinaryFromReader),
                       e.add_messages(i);
                     break;
                   case 4:
@@ -32879,7 +32899,7 @@ and limitations under the License.
               var i;
               (i = e.messages()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, js.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(1, i, Vs.serializeBinaryToWriter),
                 void 0 !== (i = ti.Message.getField(e, 4)) && t.writeBool(4, i);
             }),
             (t.prototype.getClassName = function() {
@@ -32888,7 +32908,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        js = (function(e) {
+        Vs = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -33666,7 +33686,7 @@ and limitations under the License.
         })(ti.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("FriendMessages.GetRecentMessages#1", t, Vs);
+          return e.SendMsg("FriendMessages.GetRecentMessages#1", t, js);
         }
         function i(e, t) {
           return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, Hs);
@@ -34570,7 +34590,7 @@ and limitations under the License.
               var e = this;
               if (this.m_ulChatRoomGroupID)
                 return Promise.resolve(this.m_ulChatRoomGroupID);
-              var t = si.Init(Vo);
+              var t = si.Init(jo);
               return (
                 t.Body().set_steamid(this.steamid.ConvertTo64BitString()),
                 t.Body().set_autocreate(!0),
@@ -39247,7 +39267,7 @@ and limitations under the License.
               var t = this,
                 i = this.m_strName;
               this.m_strName = e;
-              var n = si.Init(jn);
+              var n = si.Init(Vn);
               return (
                 n.Body().set_chat_group_id(this.m_ulGroupID),
                 n.Body().set_name(e),
@@ -40244,8 +40264,8 @@ and limitations under the License.
             e
           );
         })(),
-        Vc = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 },
-        jc = (function() {
+        jc = { bMemberListCollapsed: void 0, bChannelListCollapsed: void 0 },
+        Vc = (function() {
           function e() {
             this.m_mapDisplayPrefs = ci.observable.map();
           }
@@ -40264,7 +40284,7 @@ and limitations under the License.
                   });
             }),
             (e.prototype.GetChatRoomDisplayPref = function(e, t) {
-              return (this.m_mapDisplayPrefs.get(e) || Vc)[t];
+              return (this.m_mapDisplayPrefs.get(e) || jc)[t];
             }),
             (e.prototype.ToggleChatRoomDisplayPref = function(e, t) {
               var i = this.GetChatRoomDisplayPref(e, t);
@@ -40274,7 +40294,7 @@ and limitations under the License.
               var n = this.m_mapDisplayPrefs.get(e);
               (n && n[t] === i) ||
                 (n ||
-                  (this.m_mapDisplayPrefs.set(e, Object.assign({}, Vc)),
+                  (this.m_mapDisplayPrefs.set(e, Object.assign({}, jc)),
                   (n = this.m_mapDisplayPrefs.get(e))),
                 (n[t] = i),
                 this.WritePrefs());
@@ -41261,7 +41281,7 @@ and limitations under the License.
               (this.m_FriendChatStore = new qc(this)),
               (this.m_InviteStore = new pa(this)),
               (this.m_GameInviteStore = new ga()),
-              (this.m_ChatRoomGroupDisplayPrefs = new jc()),
+              (this.m_ChatRoomGroupDisplayPrefs = new Vc()),
               (this.m_EmbedStore = new _a()),
               (this.m_mapChatGroups = ci.observable.map()),
               (this.m_mapActiveChatGroupsToRefCount = ci.observable.map()),
@@ -41514,7 +41534,7 @@ and limitations under the License.
             (e.prototype.LoadMyChatRooms = function() {
               var e = this,
                 t = !1,
-                i = si.Init(jr);
+                i = si.Init(Vr);
               ea
                 .GetMyChatRoomGroups(
                   this.m_CMInterface.GetServiceTransport(),
@@ -42750,25 +42770,25 @@ and limitations under the License.
                   var U = p.getElementsByTagName("SegmentTemplate");
                   if (0 == U.length)
                     return w("MPD - Segment Template Missing"), !1;
-                  var V = U[0];
+                  var j = U[0];
                   g.segmentTemplate = {
-                    nTimeScale: G(V, "timescale"),
-                    nDuration: G(V, "duration"),
-                    nStartNumber: G(V, "startNumber"),
-                    strMedia: N(V, "media"),
+                    nTimeScale: G(j, "timescale"),
+                    nDuration: G(j, "duration"),
+                    nStartNumber: G(j, "startNumber"),
+                    strMedia: N(j, "media"),
                     strInitialization: ""
                   };
-                  var j = g.segmentTemplate;
+                  var V = g.segmentTemplate;
                   if (
                     (g.bContainsGame
-                      ? (j.strInitialization = j.strMedia)
-                      : (j.strInitialization = N(V, "initialization")),
+                      ? (V.strInitialization = V.strMedia)
+                      : (V.strInitialization = N(j, "initialization")),
                     !(
-                      j.nTimeScale &&
-                      j.nDuration &&
-                      j.nStartNumber &&
-                      j.strMedia &&
-                      j.strInitialization
+                      V.nTimeScale &&
+                      V.nDuration &&
+                      V.nStartNumber &&
+                      V.strMedia &&
+                      V.strInitialization
                     ))
                   )
                     return w("MPD - Segment Template Data Missing"), !1;
@@ -43077,7 +43097,7 @@ and limitations under the License.
                 );
               var e = this.m_callbacks.GetCurrentPlayTime(),
                 t = this.m_callbacks.GetPlaybackRate(),
-                i = V(this.m_mpd, this.m_adaptation, this.m_nNextSegment);
+                i = j(this.m_mpd, this.m_adaptation, this.m_nNextSegment);
               if (i > 0)
                 return (
                   w(
@@ -43518,7 +43538,7 @@ and limitations under the License.
           }
           return (
             (e.prototype.GetBytesReceivedToDisplay = function() {
-              return j(this.m_allTimeSnapshot.m_nBytesReceived);
+              return V(this.m_allTimeSnapshot.m_nBytesReceived);
             }),
             (e.prototype.GetBufferingResolutionToDisplay = function() {
               return this.m_strBufferingVideoResolution;
@@ -46106,7 +46126,7 @@ and limitations under the License.
             }),
             (t.prototype.GetTabName = function() {
               return (
-                (this.m_info && this.m_info.m_strTitle) || "Artifact @ PAX"
+                (this.m_info && this.m_info.m_strTitle) || "CS:GO Major 2018"
               );
             }),
             (t.prototype.GetUniqueID = function() {
@@ -47578,7 +47598,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        Vl = (function(e) {
+        jl = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -47629,7 +47649,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        jl = (function(e) {
+        Vl = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -48880,7 +48900,7 @@ and limitations under the License.
           return e.SendMsg("VoiceChat.LeaveVoiceChat#1", t, ru);
         }
         function o(e, t) {
-          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, Vl);
+          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, jl);
         }
         function a(e, t) {
           return e.SendMsg("VoiceChat.AnswerOneOnOneChat#1", t, Hl);
@@ -48924,7 +48944,7 @@ and limitations under the License.
           }),
           (e.NotifyOneOnOneChatRequestedHandler = {
             name: "VoiceChatClient.NotifyOneOnOneChatRequested#1",
-            request: jl
+            request: Vl
           }),
           (e.NotifyOneOnOneChatResponseHandler = {
             name: "VoiceChatClient.NotifyOneOnOneChatResponse#1",
@@ -53531,7 +53551,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        Vu = (function(e) {
+        ju = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -53566,7 +53586,7 @@ and limitations under the License.
             t
           );
         })(ti.Message),
-        ju = (function(e) {
+        Vu = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -54009,7 +54029,7 @@ and limitations under the License.
           return e.SendMsg("Parental.SetParentalSettings#1", t, zu);
         }
         function a(e, t) {
-          return e.SendMsg("Parental.ValidateToken#1", t, Vu);
+          return e.SendMsg("Parental.ValidateToken#1", t, ju);
         }
         function s(e, t) {
           return e.SendMsg("Parental.ValidatePassword#1", t, Wu);
@@ -54152,8 +54172,8 @@ and limitations under the License.
                 !this.isLocked ||
                 this.m_ParentalState.allowallapps ||
                 0 == e ||
-                (e >= ji.d && e <= ji.e) ||
-                -1 !== [ji.j, ji.f, ji.g, ji.i, ji.h].indexOf(e) ||
+                (e >= Vi.d && e <= Vi.e) ||
+                -1 !== [Vi.j, Vi.f, Vi.g, Vi.i, Vi.h].indexOf(e) ||
                 (void 0 != this.m_ParentalState.customlist &&
                 void 0 != this.m_ParentalState.customlist["App_" + e]
                   ? this.m_ParentalState.customlist["App_" + e]
@@ -54222,7 +54242,7 @@ and limitations under the License.
                     t(e);
                   });
                 });
-              var i = si.Init(ju);
+              var i = si.Init(Vu);
               return (
                 i.Body().set_password(e),
                 i.Body().set_session(Zt.a.SESSIONID),
@@ -56125,13 +56145,13 @@ and limitations under the License.
             t
           );
         })(ya.Component),
-        Vd = (function(e) {
+        jd = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return Qt.d(t, e), t;
         })(ya.Component),
-        jd = (function(e) {
+        Vd = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { activePage: -1 }), i;
@@ -56139,7 +56159,7 @@ and limitations under the License.
           return (
             Qt.d(t, e),
             (t.prototype.OnActivePageRef = function(e) {
-              e instanceof Vd
+              e instanceof jd
                 ? (this.m_ActivePage = e)
                 : (AssertMsg(
                     !e,
@@ -59923,7 +59943,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.SaveVoiceRoom = function(e) {
-              Ve(Wt(e), this.props.group, this.props.roomID);
+              je(Wt(e), this.props.group, this.props.roomID);
             }),
             (t.prototype.RemoveRoom = function() {
               var e = this;
@@ -60337,7 +60357,7 @@ and limitations under the License.
                           onMouseEnter: this.OnMouseEnterNonTitle,
                           onMouseLeave: this.OnMouseLeaveNonTitle
                         },
-                        ya.createElement(je, {
+                        ya.createElement(Ve, {
                           expanded: t,
                           onClick: this.OnToggleSelected
                         })
@@ -60671,7 +60691,7 @@ and limitations under the License.
             }),
             (t.prototype.CreateTextChannel = function(e) {
               ue(
-                ya.createElement(jp, {
+                ya.createElement(Vp, {
                   ownerWin: e,
                   groupView: this.props.groupView,
                   bVoiceChannel: !1,
@@ -60682,7 +60702,7 @@ and limitations under the License.
             }),
             (t.prototype.CreateVoiceChannel = function(e) {
               ue(
-                ya.createElement(jp, {
+                ya.createElement(Vp, {
                   ownerWin: e,
                   groupView: this.props.groupView,
                   bVoiceChannel: !0,
@@ -60850,7 +60870,7 @@ and limitations under the License.
                       )
                     )
                   ),
-                  ya.createElement(Vp, {
+                  ya.createElement(jp, {
                     groupView: this.props.groupView,
                     inactive: this.props.inactive
                   }),
@@ -60868,7 +60888,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        Vp = (function(e) {
+        jp = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -61007,7 +61027,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        jp = (function(e) {
+        Vp = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61545,7 +61565,7 @@ and limitations under the License.
                   { className: s },
                   Object(aa.b)("#Chat_VoiceEmptyChannel")
                 ),
-                ya.createElement(jm, {
+                ya.createElement(Vm, {
                   name: p,
                   chat: this.props.chat,
                   nostatus: !0
@@ -61992,7 +62012,7 @@ and limitations under the License.
               return ya.createElement(
                 le,
                 { onEscKeypress: this.DismissDialog },
-                ya.createElement(jd, {
+                ya.createElement(Vd, {
                   title: Object(aa.b)("#GroupSettings"),
                   className: "ChatRoomSettingsDialog",
                   pages: e
@@ -62111,7 +62131,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "SaveGroup", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         em = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -62351,7 +62371,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "OnSubmitSent", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         tm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
@@ -62398,7 +62418,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "OnLeave", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         im = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
@@ -62411,7 +62431,7 @@ and limitations under the License.
             (t.prototype.OnCreateNewTextChannel = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               ue(
-                ya.createElement(jp, {
+                ya.createElement(Vp, {
                   ownerWin: t,
                   groupView: this.props.groupView,
                   bVoiceChannel: !1,
@@ -62423,7 +62443,7 @@ and limitations under the License.
             (t.prototype.OnCreateNewVoiceChannel = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               ue(
-                ya.createElement(jp, {
+                ya.createElement(Vp, {
                   ownerWin: t,
                   groupView: this.props.groupView,
                   bVoiceChannel: !0,
@@ -62583,7 +62603,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "OnDeleteChannel", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         nm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -63180,7 +63200,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "MoveRoleDown", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         om = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -63389,7 +63409,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "HandleFocus", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         am = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -63571,7 +63591,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "RevokeInvite", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         sm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -63734,7 +63754,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "OnClickUnban", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         cm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -63891,7 +63911,7 @@ and limitations under the License.
             ),
             t
           );
-        })(Vd);
+        })(jd);
       !(function(e) {
         (e[(e.k_EChatFontSizeSmall = 1)] = "k_EChatFontSizeSmall"),
           (e[(e.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
@@ -64758,7 +64778,7 @@ and limitations under the License.
             Qt.c([dn.a], t.prototype, "CopyVoiceLogsToClipboard", null),
             (t = Qt.c([Hd.observer], t))
           );
-        })(Vd),
+        })(jd),
         gm = (function(e) {
           function t(t) {
             return e.call(this, t, Object(aa.b)("#Settings")) || this;
@@ -64824,7 +64844,7 @@ and limitations under the License.
               return ya.createElement(
                 le,
                 { onEscKeypress: this.props.closeModal },
-                ya.createElement(jd, Qt.a({}, i))
+                ya.createElement(Vd, Qt.a({}, i))
               );
             }),
             (t = Qt.c([Hd.observer], t))
@@ -67397,7 +67417,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        Vm = (function(e) {
+        jm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -67406,7 +67426,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.chats.GetActiveVoiceChat();
               return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-                ? ya.createElement(jm, {
+                ? ya.createElement(Vm, {
                     chat: e,
                     name: this.props.chats.GetActiveVoiceChannelName(),
                     nostatus: !1
@@ -67452,7 +67472,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        jm = (function(e) {
+        Vm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -67817,7 +67837,7 @@ and limitations under the License.
               this.state.tabLabelWidth > 0 &&
                 (l.width = this.state.tabLabelWidth + "px");
               var u = !1;
-              this.props.popup && (u = Vt(this.props.popup) != rd);
+              this.props.popup && (u = jt(this.props.popup) != rd);
               var d = !1,
                 p = 0,
                 m = !1,
@@ -67912,7 +67932,7 @@ and limitations under the License.
                             classNames: "activevoice-anim",
                             timeout: 500
                           },
-                          ya.createElement(Vm, { chats: this.props.chats })
+                          ya.createElement(jm, { chats: this.props.chats })
                         )
                     ),
                     ya.createElement(Rm, {
@@ -68219,7 +68239,7 @@ and limitations under the License.
                 (i = Object(aa.b)("#PersonaStateInvisible"));
               var n = !1;
               return (
-                this.props.popup && (n = Vt(this.props.popup) != rd),
+                this.props.popup && (n = jt(this.props.popup) != rd),
                 ya.createElement(
                   "div",
                   { className: t },
@@ -73214,7 +73234,7 @@ and limitations under the License.
                 g = !0;
               return (
                 this.props.popup &&
-                  ((m = Vt(this.props.popup)),
+                  ((m = jt(this.props.popup)),
                   (g = ad.UIStore.BIsFriendsListSingleWindow(m)),
                   (h = m != rd)),
                 i && this.m_elchatTabDiv && this.StartTopbarEventListener(),
@@ -73576,7 +73596,7 @@ and limitations under the License.
                 var i = this.props.tab.GetTabName(),
                   n =
                     Zt.a.CHAT_BASE_URL +
-                    "public/images/webui/broadcast/Artifact_tab.jpg";
+                    "public/images/webui/broadcast/csgo2_tab.jpg";
                 return ya.createElement(
                   "div",
                   { className: "ChatTabContent ChatRoom" },
@@ -73663,7 +73683,7 @@ and limitations under the License.
                     ya.createElement(
                       "div",
                       { className: "voiceControlsExample" },
-                      ya.createElement(jm, {
+                      ya.createElement(Vm, {
                         name: this.state.strChatName,
                         chat: ad.ChatStore.GetActiveVoiceChat(),
                         nostatus: !0
@@ -74021,7 +74041,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        Vh = (function(e) {
+        jh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -74311,7 +74331,7 @@ and limitations under the License.
                     stats: e.GetDASHPlayerStats(),
                     closeStats: this.CloseStats
                   }),
-                ya.createElement(jh, { video: e }),
+                ya.createElement(Vh, { video: e }),
                 r && ya.createElement(Wh, { video: e }),
                 c &&
                   ya.createElement(
@@ -74352,7 +74372,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        jh = (function(e) {
+        Vh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75282,11 +75302,11 @@ and limitations under the License.
                       "div",
                       {
                         onClick: function(e) {
-                          return lt(e, "https://steam.tv/artifact");
+                          return lt(e, "https://steam.tv/csgo");
                         },
                         className: "BroadcastLink"
                       },
-                      "steam.tv/artifact"
+                      "steam.tv/csgo"
                     ),
                     i &&
                       ya.createElement(
@@ -75769,7 +75789,7 @@ and limitations under the License.
                     "div",
                     { className: "BroadcastContainerSectionVideoContainer" },
                     o &&
-                      va.a.createElement(Vh, {
+                      va.a.createElement(jh, {
                         key: r,
                         steamID: r,
                         onTheaterMode: this.props.onTheaterMode
@@ -77927,7 +77947,7 @@ and limitations under the License.
                         showWindowControls: !1
                       })
                     : o && IsFeatureBroadcastEnabled()
-                      ? ya.createElement(Vg, {
+                      ? ya.createElement(jg, {
                           broadcastView: i,
                           isActive: i == t,
                           popup: e.props.popup,
@@ -79272,7 +79292,7 @@ and limitations under the License.
                                 ya.createElement(
                                   cd,
                                   null,
-                                  ya.createElement(jg, { groupView: t })
+                                  ya.createElement(Vg, { groupView: t })
                                 )
                               ),
                               ya.createElement("div", {
@@ -79337,7 +79357,7 @@ and limitations under the License.
             ya.createElement(
               "div",
               { className: "BroadcastSection" },
-              ya.createElement(Vh, {
+              ya.createElement(jh, {
                 key: l,
                 steamID: l,
                 onRequestClose: o,
@@ -79353,7 +79373,7 @@ and limitations under the License.
             )
           );
         }),
-        Vg = (function(e) {
+        jg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79375,7 +79395,7 @@ and limitations under the License.
             (t = Qt.c([Hd.observer], t))
           );
         })(ya.Component),
-        jg = (function(e) {
+        Vg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80339,7 +80359,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               return Zt.a.IN_CLIENT
                 ? ad.CMInterface.BDisconnected()
-                  ? (Vt(this.props.popup),
+                  ? (jt(this.props.popup),
                     ya.createElement(
                       "div",
                       {
@@ -83439,8 +83459,8 @@ and limitations under the License.
           (e[(e.Loaded = 2)] = "Loaded");
       })(Pf || (Pf = {}));
       var Uf,
-        Vf = Pf.NotLoaded,
-        jf = [],
+        jf = Pf.NotLoaded,
+        Vf = [],
         Wf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -87023,7 +87043,7 @@ and limitations under the License.
                   qd.d.SetCurrentLoggedInAccountID(e.steamid.GetAccountID());
                 }),
                 (this.m_WebLogonManager = i),
-                (ud.b.GetBrowserInfoForPopup = jt),
+                (ud.b.GetBrowserInfoForPopup = Vt),
                 t && this.m_OverlayStore.Init(e),
                 window.addEventListener(
                   "dragover",
@@ -87163,7 +87183,7 @@ and limitations under the License.
                 ad.UIStore.SerializePopupState();
             }),
             (e.prototype.ToggleSingleWindowToggle = function(e) {
-              var t = Vt(e);
+              var t = jt(e);
               if (ad.UIStore.BIsFriendsListSingleWindow(t)) {
                 var i = Math.min(
                   L_.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
@@ -87528,7 +87548,7 @@ and limitations under the License.
           }
           e && Kt();
         });
-      var V_, j_, W_;
+      var j_, V_, W_;
       window.LocalizationReady = Jt;
     },
     huD9: function(e, t, i) {
