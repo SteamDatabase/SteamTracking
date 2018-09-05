@@ -304,10 +304,20 @@ body.v6 .dark_container h4 {
 	padding: 6px 0px 0px 12px;
 }
 
+.navigation_bar > div.nav_right_side > div.curator_report a {
+	padding: 8px 20px;
+}
+
+.navigation_bar > div.nav_right_side > div.curator_report a:hover {
+	background-color: rgba(255,255,255,0.1);
+}
+
 .navigation_bar > div.nav_right_side >  div.curator_report a img {
 	width: 16px;
 	height: 16px;
 	opacity: 0.5;
+	position: relative;
+	top: 3px;
 }
 .navigation_bar > div.nav_right_side > div.curator_report a:hover img {
 	opacity: 1;
@@ -319,10 +329,6 @@ body.v6 .dark_container h4 {
 #curator_header_unignore:hover,
 #curator_header_ignore:hover { /* Override some wonky store level settings */
 	color: white;
-}
-#curator_header_unignore,
-#curator_header_ignore{ /* Override some wonky store level settings */
-	color: #b8b6b4;
 }
 
 .gray_bevel input, .gray_bevel textarea {

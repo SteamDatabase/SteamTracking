@@ -3298,32 +3298,6 @@ h2.bb_tag + br {
 	color: #556772;
 }
 
-.glance_content_descriptors {
-	min-height: 22px;
-}
-
-.app_content_descriptor {
-	display: inline-block;
-	line-height: 19px;
-	padding: 0 7px;
-	color: #67c1f5;
-	background-color: rgba( 103, 193, 245, 0.2 );
-	box-shadow: none;
-
-	margin-right: 2px;
-	border-radius: 2px;
-
-	cursor: pointer;
-
-	margin-bottom: 3px;
-
-	max-width: 200px;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-
 .app_report_dialog
 {
 	font-size: 14px;

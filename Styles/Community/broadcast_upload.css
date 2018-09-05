@@ -89,3 +89,16 @@ body
 	background-color: #0b5a7a;
 	padding: 10px;
 }
+
+.valveOnly {
+	color: #ca5029;
+	font-size: 10px;
+}
+.valveArea,
+.landingRightCol .panel.valveArea{
+	background-color: #351e18;
+	border: 1px solid #542f26;
+}
+.valveArea.padded {
+	padding: 8px;
+}

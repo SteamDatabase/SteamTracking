@@ -4290,14 +4290,18 @@ function SetupTooltips( rgOptions )
 
 function ViewTitlesWithDescriptors( descid )
 {
+	var waitDialog = ShowBlockingWaitDialog( 'Example Products', 'Please wait while we find some example products...' );
+
 	$J.get( 'https://store.steampowered.com/search/results/',
 		{
 			'filter' : 'globaltopsellers',
 			'ignore_preferences' : 1,
-			'descids[]' : descid,
+			'category1' : '992,994,998', 			'descids[]' : descid,
 			'json' : 1,
 		}
 	).done( function( response ) {
+		waitDialog.Dismiss();
+
 		var content = $J( "<div>" );
 		content.append( $J( "<div>", { class: 'content_descriptors_examples_desc', text: response.desc } ) );
 

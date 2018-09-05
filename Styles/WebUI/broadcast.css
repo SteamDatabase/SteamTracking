@@ -108,6 +108,12 @@
 	z-index: 21;
 }
 
+.ChatRoomGroup_Main_Content.chatHidden .STV_BroadcastClose
+{
+	margin-right: 40px;
+}
+
+
 .STV_BroadcastClose:hover
 {
 	background-color: #000a;
@@ -318,7 +324,7 @@
 
 .videoControlButton:hover
 {
-	filter: brightness(2);
+	filter: brightness(1.3);
 }
 
 .STV_BroadcastSettings .videoControlButton
@@ -680,6 +686,7 @@
 	width: 24px;
 	z-index: 6;
 	margin-left: -14px;
+
 }
 
 .videoTimelineMain .STV_timelineGrabber
@@ -693,6 +700,7 @@
 
 	-webkit-app-region: no-drag;
 	transition: transform .0s ease-in-out;
+	pointer-events: none;
 }
 
 .STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft
@@ -709,14 +717,31 @@
 
 .STV_timelineGrabberArrow
 {
-	width: 32px;
-	height: 54px;
-	background-image: url( "../../images/webui/timelinegrabber.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
-	flex: 1;
+	width: 24px;
+	height: 44px;
+
 	margin-top: -6px;
-	margin-left: 24px;
+	margin-left: 26px;
+	pointer-events: all;
+}
+
+.STV_timelineGrabberArrow .SVGIcon_STVTimelineGrabber
+{
+}
+
+.STV_timelineGrabberArrow .SVGIcon_STVTimelineGrabber .grabber
+{
+	transform: scale(2, 1.25);
+	transform-origin: 50% 50%;
+	fill: rgb(93, 194, 254);
+	stroke: black;
+	stroke-width: 6px;
+	vector-effect: non-scaling-stroke;
+}
+
+.STV_timelineGrabberArrow:hover .SVGIcon_STVTimelineGrabber .grabber
+{
+	fill: white;
 }
 
 .STV_timelineMinimapContainer .STV_timelineMapCurTime
@@ -748,6 +773,8 @@
 	opacity: 0;
 	transition: all .2s ease-in-out;
 	margin-left: 24px;
+	margin-top: -4px;
+	margin-bottom: 2px;
 }
 
 .STV_timelineContainer.grabberDown .STV_timelineGrabberValue,
@@ -762,7 +789,7 @@
 	height: 32px;
 	z-index: 1;
 	position: absolute;
-	top: -10px;
+	top: -8px;
 	left: 10%;
 }
 
@@ -770,13 +797,26 @@
 {
 	width: 24px;
 	height: 32px;
-
-	background-image: url( "../../images/webui/timelinemarker.png" );
-	background-size: contain;
-	background-repeat: no-repeat;
 	margin-left: -8px;
 	pointer-events: none;
 }
+
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker
+{
+	fill: rgb(178, 154, 124);
+	stroke: black;
+	stroke-width: 6px;
+
+}
+
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .line
+{
+	transform: scale(2, 1);
+	transform-origin: 50% 50%;
+	vector-effect: non-scaling-stroke;
+	stroke-width: 0.5px;
+}
+
 
 .timelineMarker:hover
 {
@@ -1274,7 +1314,7 @@
 {
 	width: 16px;
 	height: 16px;
-	margin-right: 6px;
+	margin-right: 10px;
 	margin-bottom: -3px;
 }
 

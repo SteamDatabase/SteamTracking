@@ -59,6 +59,10 @@
 	box-shadow: none;
 }
 
+body.v6 .popup_block_new .popup_body.popup_menu {
+	background: #fdfdfc;
+}
+
 
 /* tabs V7 */
 .tabarea_v7 {

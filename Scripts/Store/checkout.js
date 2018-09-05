@@ -984,6 +984,9 @@ function OnInitializeTransactionFailure( detail, result )
 				case 79:
 					error_text = 'Your credit card number appears to be invalid.  Please verify your card and try again.';
 					break;
+				case 81:
+					error_text = 'Your billing name is invalid because it is empty or contains too many numeric characters.';
+					break;
 				default:
 					break;
 			}

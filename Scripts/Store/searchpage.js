@@ -214,6 +214,10 @@ function HandleFilteredResultsWarning()
 		elemFilteredWarning.remove();
 		$J( "#search_results_filtered_warning_persistent" ).removeClass( "collapsed" );
 	}
+	else
+	{
+		$J( "#search_results_filtered_warning_persistent" ).addClass( "collapsed" );
+	}
 
 	$J('div.dropdown[data-dropdown-html]').v_tooltip({ 'dataName': 'dropdownHtml', 'defaultType':'html', 'createOnLoad': true, 'destroyWhenDone': false, 'childActiveCSSClass': 'hover', 'useMouseEnterEvent': false, 'useClickEvent': true, 'preventDefault':false, 'location':'bottom', 'tooltipClass': 'dropdown_container', 'parentActiveCSSClass': 'hover', 'offsetY':0, 'fadeSpeed': 0, 'inheritParentMinWidth': true});
 }

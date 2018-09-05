@@ -522,7 +522,7 @@ function ReallyCreateAccount()
 			{
 				ShowAlertDialog( 'New Account Created Successfully', 'Please close this window or click continue to sign in with your new account.', 'Continue' )
 					.always( function() {
-						window.close();
+												window.location = "steam://close";
 					});
 			}
 			else {

@@ -432,7 +432,7 @@ function ReportProfile( steamID )
 	}).done( function ( data ) {
 		var $DialogHTML = $J( data );
 		$Content.replaceWith( $DialogHTML );
-		$Modal.SetMaxHeight( '800' );
+		$Modal.SetMaxHeight( '850' );
 	} );
 }
 
