@@ -75,6 +75,8 @@ message CVirtualControllerConfig {
 		optional int32 output_gamepad = 6;
 		optional int32 output_keyboard = 7;
 		optional int32 output_mouse = 8;
+		optional string icon_foreground = 9;
+		optional string icon_background = 10;
 	}
 
 	message ActionSet {

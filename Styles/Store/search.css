@@ -187,6 +187,9 @@
 	right: auto;
 	left: 100px;
 }
+.search_result_row.ds_excluded_by_preferences .ds_options {
+	display: none;
+}
 
 #search_result_container {
 	max-width: 686px;

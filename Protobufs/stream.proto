@@ -79,9 +79,11 @@ enum EStreamControlMessage {
 	k_EStreamControlInputText = 109;
 	k_EStreamControlTouchConfigActive = 110;
 	k_EStreamControlGetTouchConfigData = 111;
-	k_EStreamControlTouchConfigData = 112;
+	k_EStreamControlSetTouchConfigData = 112;
 	k_EStreamControlSaveTouchConfigLayout = 113;
 	k_EStreamControlTouchActionSetActive = 114;
+	k_EStreamControlGetTouchIconData = 115;
+	k_EStreamControlSetTouchIconData = 116;
 }
 
 enum EStreamVersion {
@@ -572,7 +574,7 @@ message CGetTouchConfigDataMsg {
 	optional uint32 appid = 1;
 }
 
-message CTouchConfigDataMsg {
+message CSetTouchConfigDataMsg {
 	optional uint32 appid = 1;
 	optional uint32 revision = 2;
 	optional bytes data = 3;
@@ -587,6 +589,17 @@ message CSaveTouchConfigLayoutMsg {
 message CTouchActionSetActiveMsg {
 	optional uint32 appid = 1;
 	optional int32 actionset_id = 2;
+}
+
+message CGetTouchIconDataMsg {
+	optional uint32 appid = 1;
+	optional string icon = 2;
+}
+
+message CSetTouchIconDataMsg {
+	optional uint32 appid = 1;
+	optional string icon = 2;
+	optional bytes data = 3;
 }
 
 message CStreamDataLostMsg {

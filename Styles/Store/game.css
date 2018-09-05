@@ -4293,6 +4293,12 @@ a.bundle_contents_preview_item .ds_flag {
 
 .agegate_content_descriptors_notes {
 	margin-top: 20px;
+	color: #9db2be;
+}
+
+.agegate_content_descriptors_notes p {
+	font-size: 14px;
+	color: #dee6ed;
 }
 
 .agegate_tags {
