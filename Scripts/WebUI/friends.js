@@ -45285,9 +45285,9 @@ and limitations under the License.
               if ("string" != typeof e || !e.match(/^#[0-9a-fA-F]{6}$/))
                 throw new Sl("expected color string");
               return [
-                parseInt(e.substring(1, 2), 16),
-                parseInt(e.substring(3, 2), 16),
-                parseInt(e.substring(5, 2), 16)
+                parseInt(e.substring(1, 3), 16),
+                parseInt(e.substring(3, 5), 16),
+                parseInt(e.substring(5, 7), 16)
               ];
             }),
             (t.prototype.parseString = function(e) {
