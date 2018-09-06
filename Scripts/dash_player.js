@@ -58,6 +58,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nAudioBuffer = 0;
 	this.m_nPlaybackWidth = 0;
 	this.m_nPlaybackHeight = 0;
+	this.m_nPlaybackFrameRate = 0;
 	this.m_nAudioBitRate = 0;
 	this.m_nVideoBitRate = 0;
 	this.m_nDownloadVideoWidth = 0;
@@ -1741,6 +1742,7 @@ CDASHPlayer.prototype.UpdateStats = function()
 			// logging
 			this.m_nVideoBuffer = this.m_loaders[i].GetAmountBufferedInPlayer();
 			this.m_nPlaybackWidth = this.m_elVideoPlayer.videoWidth;
+			this.m_nPlaybackFrameRate = this.m_loaders[i].m_representation.frameRate;
 
 			// if changing representations, reset the target height if showing the requested height
 			if ( this.m_nRepChangeTargetHeight == this.m_elVideoPlayer.videoHeight )
@@ -1814,6 +1816,11 @@ CDASHPlayer.prototype.StatsPlaybackWidth = function()
 CDASHPlayer.prototype.StatsPlaybackHeight = function()
 {
 	return this.m_nPlaybackHeight;
+}
+
+CDASHPlayer.prototype.StatsPlaybackFrameRate = function()
+{
+	return this.m_nPlaybackFrameRate ? this.m_nPlaybackFrameRate : 0;
 }
 
 CDASHPlayer.prototype.StatsAudioBitRate = function()
@@ -7726,7 +7733,8 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
 	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
 
-	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' [' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ']';
+	var strFramerate = this.m_videoPlayer.StatsPlaybackFrameRate() + 'fps';
+	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' ' + strFramerate + ' [' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ']';
 	this.strVideoBuffered = this.m_videoPlayer.StatsVideoBuffer() + 's';
 	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';
 	this.strBandwidth = this.m_videoPlayer.StatsCurrentDownloadBitRate() * 1000;

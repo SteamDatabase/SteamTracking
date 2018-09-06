@@ -8757,7 +8757,7 @@ and limitations under the License.
         return (t > 0 ? t + ":" : "") + r + ":" + o;
       }
       function q(e) {
-        return e < 360 ? 1e6 : e < 480 ? 2e6 : e < 720 ? 4e6 : 12e6;
+        return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
       function K(e) {
         return new Promise(function(t) {
@@ -45047,8 +45047,7 @@ and limitations under the License.
                     var d = o.nHeight || 0,
                       p = s.nHeight || 0,
                       m = this.GetVideoPlayerHeight();
-                    if (m > 0 && p > 0 && p > d && d > m && o.nBandwidth > q(m))
-                      break;
+                    if (m > 0 && d > 0 && p > q(m)) break;
                     o = s;
                   }
                 }
