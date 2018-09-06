@@ -9926,11 +9926,6 @@ and limitations under the License.
             Ca.a.createElement(
               "div",
               { className: "BroadcastCSGOLondonOffline_Prelims" },
-              "COMING SOON:"
-            ),
-            Ca.a.createElement(
-              "div",
-              { className: "BroadcastCSGOLondonOffline_Prelims" },
               "CHALLENGERS STAGE – SEPTEMBER 5-9"
             ),
             Ca.a.createElement(
@@ -75602,7 +75597,10 @@ and limitations under the License.
             (t.prototype.render = function() {
               return ba.createElement(
                 "div",
-                { className: "BroadcastChat" },
+                {
+                  className: "BroadcastChat",
+                  style: this.props.hidden ? { display: "none" } : void 0
+                },
                 ba.createElement("iframe", { ref: this.BindChatRef })
               );
             }),
@@ -76070,7 +76068,10 @@ and limitations under the License.
                     })
                   )
                 ),
-                !this.props.bHideChat && Ca.a.createElement(cg, { steamID: t })
+                Ca.a.createElement(cg, {
+                  steamID: t,
+                  hidden: this.props.bHideChat
+                })
               );
             }),
             ti.c([di.observable], t.prototype, "m_strLocalSteamID", void 0),
@@ -79327,7 +79328,6 @@ and limitations under the License.
               (i.m_msWentInactive = 0),
               (i.m_keyEventListener = "keydown"),
               (i.m_refBroadcastContainer = ba.createRef()),
-              (i.m_refMainContent = ba.createRef()),
               (i.state = { dropToInviteFriend: void 0 }),
               i.props.popup &&
                 i.props.popup.addEventListener(
@@ -79449,7 +79449,7 @@ and limitations under the License.
             (t.prototype.componentDidMount = function() {
               (this.props.popup ? this.props.popup : window).addEventListener(
                 "resize",
-                this.OnWindowResize
+                this.OnLayoutChange
               );
             }),
             (t.prototype.componentWillUnmount = function() {
@@ -79462,7 +79462,7 @@ and limitations under the License.
                 (this.props.popup
                   ? this.props.popup
                   : window
-                ).removeEventListener("resize", this.OnWindowResize);
+                ).removeEventListener("resize", this.OnLayoutChange);
             }),
             (t.prototype.CalculateBroadcastSectionStyles = function(e) {
               if (this.props.groupView.m_bChatHidden)
@@ -79473,11 +79473,8 @@ and limitations under the License.
                 r = {};
               if (e) {
                 var o = i || 66;
-                if (
-                  ((r.height = o + "%"),
-                  this.m_refMainContent && this.m_refMainContent.current)
-                ) {
-                  var a = this.m_refMainContent.current,
+                if (((r.height = o + "%"), this.m_elMainContent)) {
+                  var a = this.m_elMainContent,
                     s = a.clientWidth,
                     c = a.clientHeight,
                     l = 9 / 16 * s + 50,
@@ -79491,12 +79488,12 @@ and limitations under the License.
               return void 0 !==
                 this.props.groupView.m_bShowVerticalBroadcastChat
                 ? this.props.groupView.m_bShowVerticalBroadcastChat
-                : !(!this.m_refMainContent || !this.m_refMainContent.current) &&
-                    this.m_refMainContent.current.clientHeight /
-                      this.m_refMainContent.current.clientWidth >
+                : !!this.m_elMainContent &&
+                    this.m_elMainContent.clientHeight /
+                      this.m_elMainContent.clientWidth >
                       5 / 7;
             }),
-            (t.prototype.OnWindowResize = function() {
+            (t.prototype.OnLayoutChange = function() {
               this.forceUpdate();
             }),
             (t.prototype.OnGrabberMouseDown = function(e) {
@@ -79542,6 +79539,9 @@ and limitations under the License.
                 !this.ShouldShowVerticalBroadcastChat()
               ),
                 this.props.groupView.SetChatHidden(!1);
+            }),
+            (t.prototype.SetMainContentRef = function(e) {
+              (this.m_elMainContent = e), this.OnLayoutChange();
             }),
             (t.prototype.RenderInnerChatTabs = function() {
               var e = this.props.groupView,
@@ -79625,15 +79625,14 @@ and limitations under the License.
                 ));
               var a = !1,
                 s = null,
-                c = !1,
-                l = this.ShouldShowVerticalBroadcastChat(),
-                u = t.m_bChatHidden;
+                c = this.ShouldShowVerticalBroadcastChat(),
+                l = t.m_bChatHidden;
               if (IsFeatureBroadcastEnabled())
                 if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-                  var d = W_.UIDisplayPrefs,
-                    p = (d.nWatchPartyBroadcastHeightPercentage,
-                    d.nWatchPartyBroadcastWidthPercentage,
-                    this.CalculateBroadcastSectionStyles(l));
+                  var u = W_.UIDisplayPrefs,
+                    d = (u.nWatchPartyBroadcastHeightPercentage,
+                    u.nWatchPartyBroadcastWidthPercentage,
+                    this.CalculateBroadcastSectionStyles(c));
                   (s = ba.createElement(
                     ba.Fragment,
                     null,
@@ -79649,60 +79648,59 @@ and limitations under the License.
                           onClick: this.ToggleVerticalBroadcastChat,
                           title:
                             "" +
-                            (l
+                            (c
                               ? Object(ca.b)("#Broadcast_View_Stack_H")
                               : Object(ca.b)("#Broadcast_View_Stack_V")),
                           className:
                             "BroadcastChatPositionToggle " +
-                            (l ? "right" : "bottom")
+                            (c ? "right" : "bottom")
                         })
                       ],
-                      style: p,
+                      style: d,
                       onTheaterMode: t.ToggleTheaterModeBroadcastChat
                     }),
-                    !u &&
+                    !l &&
                       ba.createElement("div", {
                         className:
                           "BroadcastChatDivider " +
-                          (l ? "vertical" : "horizontal"),
+                          (c ? "vertical" : "horizontal"),
                         onMouseDown: this.OnGrabberMouseDown
                       }),
-                    u &&
+                    l &&
                       ba.createElement(qg, {
                         onClick: this.ShowChat,
-                        edge: l ? "bottom" : "right"
+                        edge: c ? "bottom" : "right"
                       })
                   )),
-                    (a = !0),
-                    (c = !l);
+                    (a = !0);
                 } else a = !1;
-              var m = !1,
-                h = !1,
-                g = {};
+              var p = !1,
+                m = !1,
+                h = {};
               if (this.props.isActive) r.LoadChatLogs();
               else {
-                g.display = "none";
-                var f = this.m_msWentInactive
+                h.display = "none";
+                var g = this.m_msWentInactive
                   ? performance.now() - this.m_msWentInactive
                   : 6e4;
-                f >= 1e4 && (m = !0), f >= 6e4 && !s && (h = !0);
+                g >= 1e4 && (p = !0), g >= 6e4 && !s && (m = !0);
               }
-              var _ = "chatWindow MultiUserChat",
-                y = "ChatRoomGroupDialog_contents";
-              n && (y += " InsetWindowOpen"),
-                e.IsNamedGroupChat() && (_ += " namedGroup");
-              var v = "chatBody";
+              var f = "chatWindow MultiUserChat",
+                _ = "ChatRoomGroupDialog_contents";
+              n && (_ += " InsetWindowOpen"),
+                e.IsNamedGroupChat() && (f += " namedGroup");
+              var y = "chatBody";
               this.state.dropToInviteFriend &&
-                (v = "chatBody chatRoomActiveDrop"),
+                (y = "chatBody chatRoomActiveDrop"),
                 ud.SettingsStore.FriendsSettings.bCompactFriendsList &&
-                  (_ += " compactView"),
-                a && (_ += " broadcastVisible");
-              var b = ba.createElement(Hp, {
+                  (f += " compactView"),
+                a && (f += " broadcastVisible");
+              var v = ba.createElement(Hp, {
                   groupView: this.props.groupView,
-                  inactive: m
+                  inactive: p
                 }),
-                C =
-                  t.isBroadcastShown && (t.m_bShowGlobalChat || u)
+                b =
+                  t.isBroadcastShown && (t.m_bShowGlobalChat || l)
                     ? null
                     : ba.createElement(Ih, {
                         key: r.unique_id,
@@ -79710,41 +79708,48 @@ and limitations under the License.
                         isActive: this.props.isActive,
                         disabled: !1
                       }),
-                S =
-                  t.isBroadcastShown && t.m_bShowGlobalChat
-                    ? ba.createElement(cg, {
-                        steamID: e.watching_broadcast_steamid.ConvertTo64BitString()
-                      })
-                    : ba.createElement(
-                        Jd,
-                        ti.a(
-                          { style: g, className: "chatHistoryAndMembers" },
-                          this.GetChatBodyDragDropProps()
-                        ),
-                        ba.createElement(pd, null, o),
-                        ba.createElement(
-                          "div",
-                          { className: "ChatRoomGroupDialog_history" },
-                          ba.createElement(Ag, {
-                            chatView: i,
-                            isActive: this.props.isActive
-                          }),
-                          ba.createElement(
-                            pd,
-                            null,
-                            ba.createElement(Yg, { groupView: t })
-                          )
-                        ),
-                        ba.createElement("div", { className: "dropTargetBox" }),
-                        b
-                      );
+                C = ba.createElement(
+                  Jd,
+                  ti.a(
+                    { style: h, className: "chatHistoryAndMembers" },
+                    this.GetChatBodyDragDropProps()
+                  ),
+                  ba.createElement(pd, null, o),
+                  ba.createElement(
+                    "div",
+                    { className: "ChatRoomGroupDialog_history" },
+                    ba.createElement(Ag, {
+                      chatView: i,
+                      isActive: this.props.isActive
+                    }),
+                    ba.createElement(
+                      pd,
+                      null,
+                      ba.createElement(Yg, { groupView: t })
+                    )
+                  ),
+                  ba.createElement("div", { className: "dropTargetBox" }),
+                  v
+                );
+              if (t.isBroadcastShown) {
+                var S = ba.createElement(cg, {
+                  steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
+                  hidden: !t.m_bShowGlobalChat
+                });
+                C = ba.createElement(
+                  ba.Fragment,
+                  null,
+                  S,
+                  !t.m_bShowGlobalChat && C
+                );
+              }
               return ba.createElement(
                 Jd,
                 ti.a(
-                  { style: g, className: _ },
+                  { style: h, className: f },
                   this.GetTitleBarDragDropProps()
                 ),
-                !h &&
+                !m &&
                   ba.createElement(
                     "div",
                     { className: "chatHeader titleBarContainer" },
@@ -79758,17 +79763,17 @@ and limitations under the License.
                     ba.createElement("div", { className: "disconnectBlocker" })
                   ),
                 e.readyToRender &&
-                  !h &&
+                  !m &&
                   ba.createElement(
                     "div",
-                    { className: y },
-                    ba.createElement(Wp, { groupView: t, inactive: m }),
+                    { className: _ },
+                    ba.createElement(Wp, { groupView: t, inactive: p }),
                     ba.createElement(
                       "div",
                       {
                         className:
                           "ChatRoomGroup_MainAndChatEntry displayColumn",
-                        ref: this.m_refMainContent
+                        ref: this.SetMainContentRef
                       },
                       ba.createElement(
                         "div",
@@ -79781,29 +79786,28 @@ and limitations under the License.
                           {
                             className:
                               "ChatRoomGroup_Main_Content " +
-                              (l ? "Vertical" : "Horizontal") +
+                              (c ? "Vertical" : "Horizontal") +
                               " " +
-                              (u ? "chatHidden" : "")
+                              (l ? "chatHidden" : "")
                           },
                           s,
                           (!t.m_bChatHidden || !t.isBroadcastShown) &&
                             ba.createElement(
                               "div",
-                              { className: v },
+                              { className: y },
                               t.isBroadcastShown && this.RenderInnerChatTabs(),
-                              S,
-                              c && C
+                              C,
+                              b
                             )
                         )
-                      ),
-                      !c && C
+                      )
                     )
                   ),
                 !e.readyToRender &&
-                  !h &&
+                  !m &&
                   ba.createElement(
                     "div",
-                    { className: y },
+                    { className: _ },
                     ba.createElement(tm, {
                       string: Object(ca.b)("#Chat_ChatRoomGroup_Requesting")
                     })
@@ -79816,7 +79820,7 @@ and limitations under the License.
             ti.c([hn.a], t.prototype, "OnDrop", null),
             ti.c([hn.a], t.prototype, "OnHTMLKeyEvent", null),
             ti.c([hn.a], t.prototype, "ShouldShowVerticalBroadcastChat", null),
-            ti.c([hn.a], t.prototype, "OnWindowResize", null),
+            ti.c([hn.a], t.prototype, "OnLayoutChange", null),
             ti.c([hn.a], t.prototype, "OnGrabberMouseDown", null),
             ti.c([hn.a], t.prototype, "HandleMouseMove", null),
             ti.c([hn.a], t.prototype, "UnregisterDragEvents", null),
@@ -79825,6 +79829,7 @@ and limitations under the License.
             ti.c([hn.a], t.prototype, "HideChat", null),
             ti.c([hn.a], t.prototype, "ShowChat", null),
             ti.c([hn.a], t.prototype, "ToggleVerticalBroadcastChat", null),
+            ti.c([hn.a], t.prototype, "SetMainContentRef", null),
             (t = ti.c([Yd.observer], t))
           );
         })(ba.Component),

@@ -386,6 +386,22 @@ html.responsive .formRowFields .gray_bevel {
 	padding-bottom: 7px;
 }
 
+.groupadmin_announcement_controls {
+	position: sticky;
+	top: 0px;
+	background-color: rgba( 0, 0, 0, 1 );
+	padding-top: 10px;
+	padding-bottom: 10px;
+	z-index: 1;
+}
+
+#preview_back_to_top_btn {
+	display: none;
+}
+#preview_back_to_top_btn.visible {
+	display: inline-block;
+}
+
 .forum_manage_actions {
 	float: right;
 }
