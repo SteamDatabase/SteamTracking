@@ -1054,27 +1054,63 @@ GHomepage = {
 
 	RenderSpotlightSection: function()
 	{
+		var Settings = GHomepage.oSettings['home'] || {};
+		var ApplicableSettings = GHomepage.oApplicableSettings['home'] || {};
+		
 		var rgFeaturedApps = {};
 		$J('.home_area_spotlight').each( function( i, j){
-			var unAppId = $J(j).data('ds-appid');
-			if( unAppId )
-				rgFeaturedApps[unAppId] = { appid: unAppId };
 
+			var $elem = $J(j);
+			var unAppId = $elem.data('ds-appid');
+
+			if ( !unAppId )
+				return;
+
+			if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
+			{
+				$elem.replaceWith( '<div><div class="specials_target"></div><div class="specials_target"></div></div>');
+				return;
+			}
+
+			rgFeaturedApps[unAppId] = { appid: unAppId };
 		});
 
-		$J('.store_capsule.daily_deal').each( function( i, j){
-			var unAppId = $J(j).data('ds-appid');
-			if( unAppId )
-				rgFeaturedApps[unAppId] = { appid: unAppId };
 
+		$J('.store_capsule.daily_deal').each( function( i, j){
+			var $elem = $J(j);
+			var unAppId = $elem.data('ds-appid');
+
+			if ( !unAppId )
+				return;
+
+			if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
+			{
+				$elem.replaceWith( '<div class="specials_target"></div>');
+				return;
+			}
+
+			rgFeaturedApps[unAppId] = { appid: unAppId };
 		});
 
 		GDynamicStore.MarkAppDisplayed(rgFeaturedApps);
 
 		var nSpecials = $J('.specials_target').length;
 
+				var specials = [];
+		var rgSeen = {};
+		for ( var i = 0; i < GHomepage.oDisplayLists.specials.length; ++i )
+		{
+			var oItem = GHomepage.oDisplayLists.specials[i];
+			var id = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_key';
+			if ( !rgSeen[id] )
+			{
+				rgSeen[id] = true;
+				specials.push( oItem );
+			}
+		}
+
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
-			GHomepage.oDisplayLists.specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			specials, 'home', nSpecials, nSpecials, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
 		);
 
 		if( !rgCapsules || rgCapsules.length < 1 )
@@ -1085,7 +1121,11 @@ GHomepage = {
 
 		$J('.specials_target').each(function(i,j){
 
-			oItem = rgCapsules[ i % nSpecials ];
+			var idx = i % nSpecials;
+			if ( i >= rgCapsules.length )
+				return;
+
+			oItem = rgCapsules[ idx ];
 			var strHTMLID = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_special_timer';
 
 			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, {

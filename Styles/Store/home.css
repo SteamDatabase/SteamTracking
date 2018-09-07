@@ -3353,6 +3353,14 @@ body.v6 h2 .header_inline {
 	margin-top: 14px;
 }
 
+.home_area_spotlight.ds_excluded_by_preferences {
+	background-image: none;
+}
+.home_area_spotlight.ds_excluded_by_preferences > .spotlight_img,
+.home_area_spotlight.ds_excluded_by_preferences > .spotlight_content {
+	opacity: 0.3;
+}
+
 .home_cluster_ctn {
 	background: none;
 	padding-top: 20px;
