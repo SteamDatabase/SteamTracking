@@ -4,17 +4,8 @@
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 		<include src="file://{resources}/styles/settings.css" />
 	</styles>
-	<scripts>
-		<include src="file://{resources}/javascript/base.js" />
-	</scripts>
-	<script>
-		function ConfigBrowserOnLoad()
-		{
-			SetupMenuAndContentHoverEvents( 'ConfigsMenu', 'MenuHover', 'ConfigsRightContainer', 'ContentHover', 'ConfigBrowserContainer' );
-		}
-	</script>
 
-	<ControllerConfigBrowser defaultfocus="RecommendedCategory" tabindex="auto" selectionpos="auto" onload="ConfigBrowserOnLoad();" ondescendantfocus="ConfigBrowserOnLoad();" >
+	<ControllerConfigBrowser defaultfocus="RecommendedCategory" tabindex="auto" selectionpos="auto"  >
 		<Panel class="SettingsHeader">
 			<Label id="ConfigBrowserHeader" class="SettingsHeaderLegend" text="#ControllerBinding_Header" />
 		</Panel>
