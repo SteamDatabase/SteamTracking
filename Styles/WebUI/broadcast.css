@@ -703,17 +703,36 @@
 	pointer-events: none;
 }
 
-.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft
+.STV_timelineContainer .STV_timelineGrabber .rightarrow,
+.STV_timelineContainer .STV_timelineGrabber .leftarrow
 {
-	transform: rotateZ( 90deg);
-	transition-duration: .06s;
+	transform: scaleX(0);
+	transform-origin: 50% 50%;
 }
 
-.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenRight
+
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenRight .rightarrow,
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft .leftarrow
 {
-	transform: rotateZ( -90deg);
-	transition-duration: .06s;
+	opacity: 1;
+	transform: scaleX(1);
+	fill: rgb(93, 194, 254);
+	stroke: black;
+	stroke-width: 10px;
+	transition: all .16s ease-in-out;
 }
+
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenRight .grabber,
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft .grabber
+{
+	opacity: 1;
+	transform: scale(1);
+	fill: rgb(93, 194, 254);
+	stroke: black;
+	stroke-width: 10px;
+	transition: all .16s ease-in-out;
+}
+
 
 .STV_timelineGrabberArrow
 {
@@ -809,6 +828,19 @@
 
 }
 
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer
+{
+	fill: rgb(136, 107, 72);
+	transform: scale(.6) translateY(26px);
+	transform-origin: 50% 50%;
+	transition: all .16s ease-in-out;
+}
+
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer
+{
+	transform: scale(1) translateY(0px);
+}
+
 .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line
 {
 	transform: scale(2, 1);
@@ -818,11 +850,15 @@
 }
 
 
-.timelineMarker:hover
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker
 {
-	filter: brightness(2);
-	cursor: pointer;
 
+	cursor: pointer;
+}
+
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line
+{
+	fill: rgb(255, 233, 205);
 }
 
 .STV_timelineThumbnailContainer

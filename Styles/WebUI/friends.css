@@ -3811,6 +3811,8 @@ body.in_global_drag .friendlist_titlebar
 	top: -8px;
 }
 
+
+.indicatorOptionContainer .chatUnreadCircle,
 .chatRoomTextChannel .chatUnreadCircle
 {
 	position: absolute;
@@ -4154,6 +4156,12 @@ body.in_global_drag .friendlist_titlebar
 	flex: 1;
 	min-height: 0;
 }
+
+.broadcastVisible .chatStack:not(.GroupChatVisible) .chatHistoryAndMembers
+{
+	display: none;
+}
+
 
 body.in_global_drag .chatWindow .DropTarget.chatBody,
 body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
@@ -6199,6 +6207,12 @@ input.InviteFriendToChatDialog_LinkInput
 	min-width: 164px;
 }
 
+.ChatRoomGroupDialog_contents.BothChatsDisplayed .chatTextarea:focus
+{
+	outline-offset: -2px;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
 .compactView .chatTextarea
 {
 	height: initial;
@@ -7687,6 +7701,7 @@ a.connectionStatus:visited
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	flex-shrink: 0;
 	border-bottom: 2px solid rgb(57, 62, 69);
 }
 
@@ -7710,6 +7725,7 @@ a.connectionStatus:visited
 }
 
 
+.chatBody .ChatBodyControls .showBothTabs,
 .chatBody .ChatBodyControls .Close
 {
 	padding: 4px;
@@ -7725,6 +7741,38 @@ a.connectionStatus:visited
 	flex-shrink: 0;
 }
 
+.chatBody .ChatBodyControls .showBothTabs
+{
+	opacity: .3;
+	flex: 1 0;
+	flex-shrink: 0;
+	max-width: 34px;
+	min-width: 34px;
+}
+
+.chatBody .ChatBodyControls .showBothTabs:hover
+{
+	opacity: .8;
+}
+
+.BothChatsDisplayed .chatBody .ChatBodyControls .showBothTabs
+{
+	opacity: 0.8;
+}
+
+.BothChatsDisplayed .chatBody .ChatBodyControls .showBothTabs:hover
+{
+	opacity: 1;
+}
+
+.BothChatsDisplayed .chatBody .ChatBodyControls .showBothTabs .SVGIcon_ShowBothChats circle,
+.BothChatsDisplayed .chatBody .ChatBodyControls .showBothTabs .SVGIcon_ShowBothChats polyline
+{
+	opacity: 1;
+	fill: rgb(116, 126, 141);
+}
+
+
 .chatBody .ChatBodyControls .Close:hover
 {
 	fill: #969696;
@@ -7733,10 +7781,11 @@ a.connectionStatus:visited
 .chatBody .ChatBodyControls .InnerChatTabs
 {
 	flex: 1;
-
 	display: flex;
+	min-width: 0;
 }
 
+.chatBody .InnerChatTab,
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab
 {
 	position: relative;
@@ -7751,17 +7800,26 @@ a.connectionStatus:visited
 	font-size: 14px;
 	color: #969696;
 
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 
 	cursor: pointer;
 
 	padding: 6px 8px;
 
-	margin-left: 2px;
+	margin-left: 4px;
+	margin-right: 4px;
 	margin-top: 2px;
 
 	overflow: hidden;
+	user-select: none;
+}
+
+.chatBody .InnerChatTab
+{
+	flex: 0 0;
+	min-height: 20px;
+	min-width: 0;
 }
 
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .ChatUnreadMessageIndicator
@@ -7775,7 +7833,7 @@ a.connectionStatus:visited
 	margin-left: -3px;
 }
 
-.chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .SVGIcon_Button
+.chatBody .InnerChatTab .SVGIcon_Globe
 {
 	width: 16px;
 	height: 16px;
@@ -7784,7 +7842,7 @@ a.connectionStatus:visited
 	border-width: 1px;
 }
 
-.chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .SVGIcon_Button,
+.chatBody .InnerChatTab .SVGIcon_Button,
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .ChatRoomGroupAvatar,
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .ChatRoomMultiFriendAvatar.Micro
 {
@@ -7794,9 +7852,17 @@ a.connectionStatus:visited
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab.Active
 {
 	background-color: rgb(57, 62, 69);
-
 	cursor: default;
 }
+
+.ChatRoomGroupDialog_contents.BothChatsDisplayed .chatBody .InnerChatTab,
+.ChatRoomGroupDialog_contents.BothChatsDisplayed .chatBody .InnerChatTab.Active
+{
+	pointer-events: none;
+	cursor: default;
+	background-color: rgb(44, 48, 55);
+}
+
 
 .chatBody .ChatBodyControls .InnerChatTabs .InnerChatTab .InnerChatTabLabel
 {
@@ -7810,6 +7876,12 @@ a.connectionStatus:visited
 	max-width: none;
 	min-width: 0;
 	width: 100%;
+	display: none;
+}
+
+.GlobalChatVisible .BroadcastChat
+{
+	display: block;
 }
 
 .BroadcastChatExpander
@@ -18795,4 +18867,43 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .betaFeedbackAnchor:hover
 {
 	color: rgba( 0, 217, 255 );
+}
+
+
+.InnerChatTab .SteamLogo
+{
+	float: right;
+}
+
+.chatStack
+{
+	flex: 1;
+}
+
+.BothChatsSeperator
+{
+	align-self: stretch;
+	background-color: rgb(25, 26, 27);
+	min-width: 6px;
+	min-height: 6px;
+
+	border-left: 0px solid black;
+	border-right: 0px solid black;
+
+	border-top: 1px solid black;
+	border-bottom: 0px solid black;
+}
+
+.Vertical .BothChatsSeperator
+{
+	border-top: 0px solid black;
+	border-bottom: 0px solid black;
+
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.avoidEvents
+{
+	pointer-events: none;
 }

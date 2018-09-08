@@ -104,7 +104,7 @@ webpackJsonp(
     "5Pz3": function(e, t, i) {
       "use strict";
       function n() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -114,20 +114,20 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { "data-name": "Group" },
-            ce.createElement("path", {
+            le.createElement("path", {
               "data-name": "Path",
               d:
                 "M50.86,20.23l-9,9,4.24,4.24,9-9c6.35-6.35,16.09-6.93,21.73-1.3s5,15.38-1.3,21.73l-9,9,4.24,4.24,9-9c8.69-8.69,9.27-22.24,1.3-30.21S59.55,11.55,50.86,20.23Z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               "data-name": "Path",
               d:
                 "M44.89,75.53a17.22,17.22,0,0,1-11.28,5.13A13.23,13.23,0,0,1,19.34,66.39a17.22,17.22,0,0,1,5.13-11.28l9-9-4.24-4.24-9,9a23.21,23.21,0,0,0-6.88,15.22c0,.37,0,.74,0,1.11A19.19,19.19,0,0,0,33.91,86.66a23.21,23.21,0,0,0,15.22-6.88l9-9-4.24-4.24Z"
             }),
-            ce.createElement("rect", {
+            le.createElement("rect", {
               "data-name": "Path",
               className: "Link1",
               x: "28.75",
@@ -140,7 +140,7 @@ webpackJsonp(
         );
       }
       function r() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -154,14 +154,14 @@ webpackJsonp(
             viewBox: "-305.5 396.5 256 256",
             enableBackground: "new -305.5 396.5 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M-232.755,589.942l3.103,2.408c5.78,4.492,11.973,8.18,18.409,10.959l3.581,1.547l2.276,33.783 c0.089,1.33,1.385,2.54,2.715,2.54h48.62c1.355,0,2.745-1.273,2.852-2.621l2.74-33.284l3.602-1.496 c6.406-2.656,12.646-6.262,18.554-10.707l3.137-2.366l30.578,15.009c1.155,0.571,2.924,0.017,3.563-1.087l24.303-42.1 c0.674-1.173,0.265-3.014-0.852-3.785l-27.872-19.309l0.469-3.832c0.495-4.032,0.725-7.395,0.725-10.57 c0-3.129-0.227-6.5-0.687-10.307l-0.469-3.896l28.699-19.253c1.112-0.741,1.509-2.473,0.84-3.627l-24.3-42.104 c-0.657-1.139-2.502-1.727-3.7-1.155l-31.208,14.748l-3.091-2.341c-5.571-4.224-11.466-7.688-17.522-10.306l-3.58-1.548 l-2.34-34.887c-0.089-1.33-1.381-2.536-2.715-2.536h-48.617c-1.355,0-2.74,1.274-2.851,2.626l-2.834,34.371l-3.593,1.501 c-6.082,2.535-12.028,5.924-17.667,10.071l-3.124,2.302l-31.392-15.413c-1.168-0.575-2.924-0.025-3.559,1.074l-24.309,42.107 c-0.678,1.172-0.264,3.014,0.848,3.781l28.068,19.444l-0.524,3.883c-0.592,4.378-0.865,8.018-0.865,11.462 c0,2.988,0.179,6.065,0.55,9.403l0.431,3.853l-28.528,19.125c-1.108,0.742-1.509,2.468-0.84,3.632l24.308,42.1 c0.656,1.142,2.489,1.726,3.7,1.154L-232.755,589.942z M-177.498,560.051c-19.311,0-35.02-15.709-35.02-35.02 s15.709-35.02,35.02-35.02s35.02,15.709,35.02,35.02S-158.188,560.051-177.498,560.051z"
           })
         );
       }
       function o() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -171,19 +171,19 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 600 600"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M256,0C126.6,0,21.3,104.7,21.3,233.7c0,65.9,26.5,125.4,74.7,168.3v99.3c0,3.8,2,7.4,5.3,9.2c1.7,1,3.5,1.5,5.3,1.5   c1.8,0,3.7-0.5,5.4-1.5l85.8-50.3c18.9,4.8,38.4,7.3,58.1,7.3c129.4,0,234.7-104.9,234.7-233.7C490.7,104.7,385.4,0,256,0z    M405.3,254.1L370,260c-3,13.5-8.3,26-15.5,37.3l20.8,29.2L347.8,354l-29.2-20.8c-11.3,7.2-23.8,12.5-37.3,15.5l-5.9,35.3h-39   l-5.9-35.3c-13.5-3-26-8.3-37.3-15.5L164.2,354l-27.5-27.5l20.8-29.2C150.3,286,145,273.5,142,260l-35.3-5.9v-39l35.3-5.9   c3-13.5,8.3-26,15.5-37.3l-20.8-29.2l27.5-27.5l29.2,20.8c11.3-7.2,23.8-12.5,37.3-15.5l5.9-35.3h39l5.9,35.3   c13.5,3,26,8.3,37.3,15.5l29.2-20.8l27.5,27.5L354.5,172c7.2,11.3,12.5,23.8,15.5,37.3l35.3,5.9V254.1z"
             }),
-            ce.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
+            le.createElement("circle", { cx: "256", cy: "234.6", r: "45.9" })
           )
         );
       }
       function a() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -195,7 +195,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -205,7 +205,7 @@ webpackJsonp(
             points:
               "178.25,197.25 247,197.25 247,82.5 175,10.25 111.5,10.25 111.5,56 "
           }),
-          ce.createElement("polygon", {
+          le.createElement("polygon", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -213,7 +213,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "155,133 83,60.75 11,60.75 11,247.75 155,247.75 "
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -221,7 +221,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "83,60.75 83,133 155,133 "
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             className: "line",
             strokeWidth: "12",
@@ -232,7 +232,7 @@ webpackJsonp(
         );
       }
       function s() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -242,14 +242,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ce.createElement("polygon", {
+          le.createElement("polygon", {
             points:
               "50 59.49 13.21 22.89 4.74 31.39 50 76.41 95.26 31.39 86.79 22.89 50 59.49"
           })
         );
       }
       function c() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -259,10 +259,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "ColorSelector",
               d:
                 "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
@@ -280,7 +280,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Microphone";
         return (
           e.className && (t += " " + e.className),
-          ce.createElement(
+          le.createElement(
             "svg",
             {
               version: "1.1",
@@ -292,128 +292,128 @@ webpackJsonp(
               height: "256px",
               viewBox: "-127.5 664.5 256 256"
             },
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "MicBase" },
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement(
+                le.createElement(
                   "g",
                   null,
-                  ce.createElement("path", {
+                  le.createElement("path", {
                     d:
                       "M-64.7,826.3c-0.5-2.9-0.8-5.8-0.8-8.7v-38.2h11.2v36.5L-64.7,826.3z"
                   }),
-                  ce.createElement("path", {
+                  le.createElement("path", {
                     d:
                       "M-54.8,779.9v35.8l-9.6,9.6c-0.4-2.6-0.6-5.1-0.6-7.6v-37.7H-54.8 M-53.8,778.9H-66v38.7c0,3.3,0.4,6.5,1,9.7l11.2-11.2 V778.9L-53.8,778.9z"
                   })
                 ),
-                ce.createElement(
+                le.createElement(
                   "g",
                   null,
-                  ce.createElement("path", {
+                  le.createElement("path", {
                     d:
                       "M56.8,817.6c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1h-35.2 c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6v-38.7H56.8V817.6z"
                   }),
-                  ce.createElement("path", {
+                  le.createElement("path", {
                     d:
                       "M69,778.9H56.8v38.7c0,24.7-24.8,44.9-55.3,44.9c-16.6,0-31.6-6-41.7-15.5l-8.6,8.6c11.1,10.5,26.7,17.5,44.2,18.8v25.1 h-35.2c-2.1,0-3.8,2.7-3.8,6.1c0,3.4,1.7,6.1,3.8,6.1h35.5H7.3h35.5c2.1,0,3.8-2.7,3.8-6.1c0-3.4-1.7-6.1-3.8-6.1H7.6v-25.1 C42,871.8,69,847.3,69,817.6V778.9L69,778.9z"
                   })
                 )
               ),
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M40.6,712.5c0-21.6-17.5-39.1-39.1-39.1c-21.6,0-39.1,17.5-39.1,39.1v87.4l10-10v-72.4h0v-5c0-16.1,13.1-29.1,29.1-29.1 c16.1,0,29.1,13.1,29.1,29.1v5v14.1l10-10V712.5z"
                 })
               ),
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-4.7,835.4c-2.2-0.5-4.4-1.2-6.4-2.2C-9.1,834.2-6.9,834.9-4.7,835.4z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d: "M-0.1,836c-0.2,0-0.4,0-0.6,0C-0.6,836-0.4,836-0.1,836z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d: "M30.6,806.9C30.6,806.9,30.6,806.9,30.6,806.9v-16.6"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-11.9,832.8c0.2,0.1,0.5,0.2,0.7,0.3C-11.4,833-11.7,832.9-11.9,832.8L-11.9,832.8z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-1.7,835.9c-0.3,0-0.5-0.1-0.8-0.1C-2.3,835.8-2,835.8-1.7,835.9z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-3.3,835.7c-0.3-0.1-0.6-0.1-1-0.2C-3.9,835.6-3.6,835.6-3.3,835.7z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M30.6,776.1v14.1v16.6c0,0,0,0,0,0s0,0,0,0c0,16.1-13,29.1-29.1,29.1c-0.5,0-1.1,0-1.6,0c-0.2,0-0.4,0-0.6,0 c-0.3,0-0.6,0-1-0.1c-0.3,0-0.5-0.1-0.8-0.1c-0.2,0-0.5-0.1-0.7-0.1c-0.3-0.1-0.6-0.1-1-0.2c-0.2,0-0.3-0.1-0.5-0.1 c-2.2-0.5-4.4-1.2-6.4-2.2c0,0-0.1,0-0.1,0c-0.2-0.1-0.5-0.2-0.7-0.3l0,0c-3-1.6-5.7-3.6-8-6.1l-7.1,7.1 c7.1,7.6,17.3,12.3,28.5,12.3c21.6,0,39.1-17.5,39.1-39.1v-40.8L30.6,776.1z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-0.8,836c-0.3,0-0.6-0.1-1-0.1C-1.4,835.9-1.1,835.9-0.8,836z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M1.5,836.1c-0.5,0-1.1,0-1.6,0C0.4,836,0.9,836.1,1.5,836.1z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-2.6,835.8c-0.2,0-0.5-0.1-0.7-0.1C-3,835.7-2.8,835.7-2.6,835.8z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M1.5,836.1c16.1,0,29.1-13,29.1-29.1c0,0,0,0,0,0C30.6,823,17.6,836.1,1.5,836.1z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-4.2,835.5c-0.2,0-0.3-0.1-0.5-0.1C-4.5,835.4-4.4,835.5-4.2,835.5z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-11.1,833.2C-11.1,833.2-11.2,833.2-11.1,833.2C-11.2,833.2-11.1,833.2-11.1,833.2z"
                 })
               )
             ),
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "MicFill" },
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-53.8,816.1L-65,827.3c2.2,10.8,7.9,20.5,16.2,28.3l8.6-8.6c-8.5-7.9-13.6-18.2-13.6-29.4V816.1L-53.8,816.1z"
                 })
               ),
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M1.5,834.6c-15.2,0-27.6-12.4-27.6-27.6v-94.5c0-15.2,12.4-27.6,27.6-27.6c15.2,0,27.6,12.4,27.6,27.6v94.5 C29.1,822.2,16.7,834.6,1.5,834.6z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M1.5,696.3c8.9,0,16.1,7.2,16.1,16.1v94.5c0,8.9-7.2,16.1-16.1,16.1c-8.9,0-16.1-7.2-16.1-16.1v-94.5 C-14.6,703.6-7.4,696.3,1.5,696.3 M1.5,673.3c-21.6,0-39.1,17.5-39.1,39.1v94.5c0,21.6,17.5,39.1,39.1,39.1s39.1-17.5,39.1-39.1 v-94.5C40.6,690.8,23.1,673.3,1.5,673.3L1.5,673.3z"
                 })
               )
             ),
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "MicStrike", fill: "none", strokeWidth: "1" },
-              ce.createElement("line", {
+              le.createElement("line", {
                 x1: "-82.5",
                 y1: "866.5",
                 x2: "83.5",
@@ -424,7 +424,7 @@ webpackJsonp(
         );
       }
       function u() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -437,7 +437,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("circle", {
+          le.createElement("circle", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -446,7 +446,7 @@ webpackJsonp(
             cy: "128",
             r: "107.5"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -455,7 +455,7 @@ webpackJsonp(
             d:
               "M74.484,145.945 c0,0,12.996,37.533,53.514,37.533c38.084,0,53.499-37.533,53.499-37.533"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -466,7 +466,7 @@ webpackJsonp(
             x2: "94.5",
             y2: "109.5"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "12",
@@ -480,7 +480,7 @@ webpackJsonp(
         );
       }
       function d() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -491,10 +491,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 100 100"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "m 92.115057,974.14842 a 2.0001999,2.0001999 0 0 0 -1.96764,2.02965 l 0.0376,31.19553 -77.475501,0 16.161909,-15.73013 a 2.0002746,2.0002746 0 1 0 -2.790355,-2.8667 L 6.3913393,1007.9405 a 2.0001999,2.0001999 0 0 0 -0.0011,2.8646 l 19.6896957,19.2036 a 2.0002671,2.0002671 0 1 0 2.792551,-2.8646 l -16.170767,-15.771 79.153048,0 a 2.0001999,2.0001999 0 0 0 1.72959,-0.5437 2.0001999,2.0001999 0 0 0 0.0598,-0.058 2.0001999,2.0001999 0 0 0 0.54259,-1.7218 l -0.0388,-32.87638 a 2.0001999,2.0001999 0 0 0 -2.03297,-2.02522 z",
               fill: "#FFFFFF",
@@ -509,7 +509,7 @@ webpackJsonp(
         );
       }
       function p() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -519,20 +519,20 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#020202",
               d:
                 "M115.512,137.263l21.6-21.6c0,0,25.5,25.5,45.8,45.8l35-35v91.6h-91.6l35-35 C141.012,162.763,115.512,137.263,115.512,137.263z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#020202",
               d:
                 "M108.312,129.763c-20.3-20.3-35.8-35.8-35.8-35.8l21.6-21.601c0,0,15.5,15.5,35.8,35.801L108.312,129.763z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#020202",
               d:
                 "M54.312,75.763c-20.3-20.3-15.8-15.8-15.8-15.8l21.6-21.601c0,0-4.5-4.5,15.8,15.801L54.312,75.763z"
@@ -540,8 +540,8 @@ webpackJsonp(
           )
         );
       }
-      function m() {
-        return ce.createElement(
+      function h() {
+        return le.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -551,14 +551,14 @@ webpackJsonp(
             x: "0px",
             y: "0px"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M0 0v8h8v-2h-1v1h-6v-6h1v-1h-2zm4 0l1.5 1.5-2.5 2.5 1 1 2.5-2.5 1.5 1.5v-4h-4z"
           })
         );
       }
-      function h() {
-        return ce.createElement(
+      function m() {
+        return le.createElement(
           "svg",
           {
             fill: "#FFFFFF",
@@ -569,10 +569,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "-165 95 100 100"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               points:
                 "-74.9,117.2 -102.2,145 -74.9,172.8 -89.1,186.8 -116.2,159.3 -143.2,186.8 -157.5,172.8 -130.2,145 -157.5,117.2 -143.2,103.2 -116.2,130.7 -89.1,103.2"
             })
@@ -580,7 +580,7 @@ webpackJsonp(
         );
       }
       function g() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -593,7 +593,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -603,7 +603,7 @@ webpackJsonp(
             x2: "44",
             y2: "44"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "45",
@@ -616,7 +616,7 @@ webpackJsonp(
         );
       }
       function f(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -630,10 +630,10 @@ webpackJsonp(
             enableBackground: "new 0 0 64 64"
           },
           !e.exitOnly &&
-            ce.createElement(
+            le.createElement(
               "g",
               null,
-              ce.createElement("path", {
+              le.createElement("path", {
                 className: "Bubble",
                 fill: "none",
                 strokeMiterlimit: "1",
@@ -643,10 +643,10 @@ webpackJsonp(
               })
             ),
           !e.exitOnly &&
-            ce.createElement(
+            le.createElement(
               "g",
               null,
-              ce.createElement("path", {
+              le.createElement("path", {
                 className: "AudioLines",
                 opacity: "0",
                 strokeWidth: "1px",
@@ -654,10 +654,10 @@ webpackJsonp(
                   "M37.2,51.1c-0.5,0-1-0.1-1.3-0.4c-0.7-0.5-0.7-1.3,0-1.8c6.3-4.4,9.8-10.2,9.8-16.4c0-6.2-3.5-12-9.8-16.4 c-0.7-0.5-0.7-1.3,0-1.8s1.9-0.5,2.6,0c7.1,4.9,10.9,11.4,10.9,18.3c0,6.9-3.9,13.4-10.9,18.3C38.2,51,37.7,51.1,37.2,51.1 M21.4,40.2c0.5,0,0.9-0.1,1.3-0.4c2.8-2,4.3-4.6,4.3-7.3s-1.5-5.4-4.3-7.3c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c2.1,1.5,3.3,3.4,3.3,5.5c0,2.1-1.2,4-3.3,5.5c-0.7,0.5-0.7,1.3,0,1.8C20.4,40.1,20.9,40.2,21.4,40.2 M29.3,45.7 c0.5,0,1-0.1,1.3-0.4c4.9-3.4,7.7-7.9,7.7-12.7c0-4.8-2.7-9.3-7.7-12.7c-0.7-0.5-1.9-0.5-2.6,0c-0.7,0.5-0.7,1.3,0,1.8 c4.2,2.9,6.6,6.8,6.6,10.9c0,4.1-2.3,8-6.6,10.9c-0.7,0.5-0.7,1.3,0,1.8C28.4,45.5,28.8,45.7,29.3,45.7"
               })
             ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "Arrow", opacity: e.exitOnly ? 1 : 0 },
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -665,7 +665,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -674,10 +674,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               className: "ExitDoor",
               opacity: e.exitOnly ? 1 : 0,
               strokeLinecap: "round",
@@ -689,17 +689,17 @@ webpackJsonp(
             })
           ),
           !e.exitOnly &&
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "Microphone" },
-              ce.createElement("path", {
+              le.createElement("path", {
                 d:
                   "M40.971,28.593v6.278c0,4.007-4.023,7.284-8.971,7.284c-2.693,0-5.126-0.974-6.765-2.516 c-1.379-1.28-2.207-2.952-2.207-4.769v-6.278l0,0H21.05v6.278c0,0.536,0.064,1.055,0.162,1.573 c0.357,1.752,1.281,3.325,2.627,4.592c1.801,1.702,4.332,2.839,7.17,3.049v4.072H25.3c-0.341,0-0.616,0.438-0.616,0.989 c0,0.552,0.275,0.99,0.616,0.99h5.759h1.882H38.7c0.341,0,0.616-0.438,0.616-0.99c0-0.551-0.275-0.989-0.616-0.989h-5.71v-4.072 c5.58-0.422,9.96-4.396,9.96-9.214v-6.278H40.971z"
               }),
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M32,39.841c-3.493,0-6.343-2.344-6.343-5.213v-17.85c0-2.871,2.85-5.213,6.343-5.213s6.343,2.342,6.343,5.213v17.85,C38.343,37.497,35.493,39.841,32,39.841z"
                 })
@@ -708,7 +708,7 @@ webpackJsonp(
         );
       }
       function _() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -721,10 +721,10 @@ webpackJsonp(
             viewBox: "0 0 64 64",
             enableBackground: "new 0 0 64 64"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "Arrow" },
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -732,7 +732,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "41,30.7 14.5,30.7 23.5,19.4 "
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "2",
               strokeLinecap: "round",
@@ -741,10 +741,10 @@ webpackJsonp(
               points: "41,30.7 14.5,30.7 23.5,42 "
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               className: "ExitDoor",
               strokeLinecap: "round",
               strokeMiterlimit: "1",
@@ -757,7 +757,7 @@ webpackJsonp(
         );
       }
       function y() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -772,17 +772,17 @@ webpackJsonp(
             stroke: "#000",
             strokeWidth: "10px"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "ScratchPad" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
               d:
                 "M179.751,40.994h14.869 c8.388,0,15.25,6.862,15.25,15.25v141.193c0,8.388-6.862,15.25-15.25,15.25H57.37c-8.388,0-15.25-6.862-15.25-15.25V56.244 c0-8.388,6.862-15.25,15.25-15.25h14.869H179.751z"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -792,7 +792,7 @@ webpackJsonp(
               x2: "74.495",
               y2: "54.063"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -802,7 +802,7 @@ webpackJsonp(
               x2: "124.495",
               y2: "54.063"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeLinecap: "round",
@@ -813,28 +813,28 @@ webpackJsonp(
               y2: "54.063"
             })
           ),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "115.4",
             x2: "179.4",
             y2: "115.4"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "145.8",
             x2: "143.3",
             y2: "145.8"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "TextLines",
             x1: "71.6",
             y1: "175.9",
             x2: "179.4",
             y2: "175.9"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "TextLines",
             x1: "73.7",
             y1: "82.7",
@@ -847,7 +847,7 @@ webpackJsonp(
         var t = "SVGIcon_Button SVGIcon_Headphones";
         return (
           e.className && (t += " " + e.className),
-          ce.createElement(
+          le.createElement(
             "svg",
             {
               version: "1.1",
@@ -859,31 +859,31 @@ webpackJsonp(
               height: "256px",
               viewBox: "-305.5 396.5 256 256"
             },
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "HeadPhonesBase" },
-              ce.createElement(
+              le.createElement(
                 "g",
                 null,
-                ce.createElement("path", {
+                le.createElement("path", {
                   fill: "none",
                   d:
                     "M-176.5,418.7c-37,0-69.5,30.2-69.5,64.5v25.3c11.3,2.3,19.9,12.3,19.9,24.3v8.6l100.9-100.9 C-138.2,427.3-156.7,418.7-176.5,418.7z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-226.2,532.9c0-12-8.5-22-19.9-24.3v-25.3c0-34.4,32.5-64.5,69.5-64.5c19.8,0,38.3,8.6,51.2,21.9l6.9-6.9 c-14.8-15.1-35.7-24.9-58.2-24.9c-42.3,0-79.4,34.8-79.4,74.5v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8c0,7.8,3.6,14.7,9.2,19.3 l40.5-40.5V532.9z"
                 }),
-                ce.createElement("path", {
+                le.createElement("path", {
                   d:
                     "M-97.1,508.6v-25.3c0-7.5-1.3-14.8-3.8-21.8l-7.9,7.9c1.2,4.5,1.8,9.1,1.8,13.9v25.3c-11.3,2.3-19.9,12.3-19.9,24.3v29.8 c0,13.7,11.1,24.8,24.8,24.8c13.7,0,24.8-11.1,24.8-24.8v-29.8C-77.2,520.9-85.8,510.9-97.1,508.6z"
                 })
               )
             ),
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "HeadphonesStrike" },
-              ce.createElement("line", {
+              le.createElement("line", {
                 fill: "none",
                 x1: "-260.5",
                 y1: "598.5",
@@ -891,14 +891,14 @@ webpackJsonp(
                 y2: "432.4"
               })
             ),
-            ce.createElement(
+            le.createElement(
               "g",
               { className: "HeadPhonesFill" },
-              ce.createElement("path", {
+              le.createElement("path", {
                 d:
                   "M-226.2,562.7v-21.2l-40.5,40.5c4.3,3.5,9.7,5.6,15.6,5.6C-237.3,587.5-226.2,576.4-226.2,562.7z"
               }),
-              ce.createElement("path", {
+              le.createElement("path", {
                 d:
                   "M-118.3,433.7l-6.9,6.9c7.9,8.1,13.7,18,16.5,28.8l7.9-7.9C-104.5,451.1-110.5,441.6-118.3,433.7z"
               })
@@ -907,7 +907,7 @@ webpackJsonp(
         );
       }
       function b() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -920,10 +920,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { transform: "translate(0,-952.36218)" },
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M58.6,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1\tC86.7,983,74,970.4,58.6,970.4z M202.1,970.4c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C230.2,983,217.6,970.4,202.1,970.4z M130.4,986c-15.4,0-28.1,12.7-28.1,28.1c0,15.4,12.7,28.1,28.1,28.1s28.1-12.7,28.1-28.1 C158.5,998.6,145.8,986,130.4,986z M242.8,1110.6c0-0.1,0-17.9,0-18l-0.1-16.1c0-22.4-18.2-40.6-40.6-40.6 c-17.8,0-30,7.7-36.3,18.8c-2,3.5-3.4,7.3-4.5,11.1c-7.5-8.7-18.6-14.3-31-14.3s-23.5,5.6-31,14.3c-1.1-3.9-2.5-7.6-4.5-11.1 c-6.3-11.1-18.4-18.8-36.3-18.8c-22.4,0-40.6,18.2-40.6,40.6v46.8c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2 c3.4,0,6.2-2.8,6.2-6.2v-31.2h9.4v9.4c0,3.4,2.8,6.2,6.2,6.2h12.5v31.2c0,3.4,2.8,6.2,6.2,6.2H146c3.4,0,6.2-2.8,6.2-6.2v-31.2 h12.5c3.4,0,6.2-2.8,6.2-6.2v-9.4h9.4v31.2c0,3.4,2.8,6.2,6.2,6.2h31.2c3.4,0,6.2-2.8,6.2-6.2v-31.2h12.5c3.4,0,6.3-2.7,6.3-6.2\tV1110.6z"
             })
@@ -931,7 +931,7 @@ webpackJsonp(
         );
       }
       function C() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -943,7 +943,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("circle", {
+          le.createElement("circle", {
             fill: "none",
             strokeWidth: "10",
             strokeMiterlimit: "10",
@@ -951,7 +951,7 @@ webpackJsonp(
             cy: "128",
             r: "95.333"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "horizontalLine",
             fill: "none",
             strokeWidth: "10",
@@ -962,7 +962,7 @@ webpackJsonp(
             x2: "183.333",
             y2: "128"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             className: "verticalLine",
             fill: "none",
             strokeWidth: "10",
@@ -976,7 +976,7 @@ webpackJsonp(
         );
       }
       function S() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -989,24 +989,24 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            ce.createElement("circle", {
+            le.createElement("circle", {
               cx: "86.296",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "plusCircle",
             d:
               "M179.01,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.989,66.99,66.989c36.997,0,66.99-29.991,66.99-66.989 S216.008,103.892,179.01,103.892z M217.893,175.882h-33.647v33.882c0,2.762-2.239,5-5,5s-5-2.238-5-5v-33.882h-33.647 c-2.762,0-5-2.238-5-5c0-2.763,2.238-5,5-5h33.647V132.47c0-2.762,2.239-5,5-5s5,2.238,5,5v33.412h33.647c2.762,0,5,2.237,5,5 C222.893,173.643,220.654,175.882,217.893,175.882z"
@@ -1014,7 +1014,7 @@ webpackJsonp(
         );
       }
       function M() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1027,34 +1027,34 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             {
               className: "friendHead",
               transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)"
             },
-            ce.createElement("circle", {
+            le.createElement("circle", {
               cx: "85.923",
               cy: "47.419",
               r: "33.526"
             })
           ),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "friendBody",
             d:
               "M100.353,170.882c0-23.589,10.397-44.736,26.842-59.152c-3.352-0.423-6.773-0.649-10.257-0.649H94.231\tc-39.775,0-56.481,28.271-56.481,63.099v41.88c0,0-0.3,16.369,35.917,21.813c36.217,5.444,73.651,5,73.651,5 C119.666,230.681,100.353,203.044,100.353,170.882z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "friendBodyFull",
             d:
               "M176.504,217.922v-42.624c0-35.443-17.002-64.217-57.483-64.217H106.96h-1.017H94.898 c-40.48,0.001-57.484,28.774-57.484,64.217v42.624c0,0,0,22.197,69.544,22.197C177.521,240.121,176.504,217.922,176.504,217.922z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "friendArm",
             d:
               "M18.167,63.833c6.53-0.734,39.348,39.127,50.007,47.647s21.327,16.686,15.16,25.353s-20.646,16.74-36.167,2.5 S-1.349,90.532,0,85.333S8.599,64.909,18.167,63.833z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "redCircle",
             d:
               "M178.51,103.892c-36.998,0-66.99,29.992-66.99,66.99s29.994,66.99,66.99,66.99c36.997,0,66.99-29.992,66.99-66.99 S215.508,103.892,178.51,103.892z"
@@ -1062,7 +1062,7 @@ webpackJsonp(
         );
       }
       function F() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1075,18 +1075,18 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M165.678,20.535c-17.251,0-31.386,14.135-31.386,31.386c0,17.252,14.135,31.386,31.386,31.386 c17.251,0,31.386-14.134,31.386-31.386C197.063,34.67,182.929,20.535,165.678,20.535z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M165.678,93.121c24.995,0,45.335,20.34,45.335,45.335v52.31c0,3.853-3.123,6.975-6.975,6.975h-13.95v34.874 c0,3.852-3.123,6.974-6.974,6.975h-34.874c-3.852-0.001-6.974-3.123-6.975-6.975v-34.874h-13.95c-3.852,0-6.974-3.123-6.974-6.975 v-52.31C120.343,113.461,140.683,93.121,165.678,93.121z"
           }),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "invitePlus" },
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1096,7 +1096,7 @@ webpackJsonp(
               x2: "101.5",
               y2: "128"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "22",
@@ -1110,7 +1110,7 @@ webpackJsonp(
         );
       }
       function w() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1123,7 +1123,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             fill: "none",
             strokeWidth: "10",
             strokeLinecap: "round",
@@ -1134,7 +1134,7 @@ webpackJsonp(
         );
       }
       function B() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1146,42 +1146,42 @@ webpackJsonp(
             height: "255.999px",
             viewBox: "0 0 256 255.999"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "Speaker" },
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M93.785,52.265c-0.946,0-2.357,0.63-3.304,1.577L40.284,98.022c-0.947,0.789-2.831,1.578-4.093,1.578H9.367 C8.104,99.6,7,100.706,7,101.967v52.069c0,1.264,1.104,2.367,2.367,2.367H36.19c1.262,0,3.146,0.632,4.093,1.578l50.197,44.181 c0.947,0.789,2.516,1.578,3.304,1.578s1.578-1.104,1.578-2.367V54.631C95.363,53.369,94.731,52.265,93.785,52.265z"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "SoundWaves" },
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "SoundWavesHighest",
               d:
                 "M193.826,30.402c24.959,24.958,40.349,59.403,40.349,97.604c0,38.199-15.388,72.645-40.349,97.603l9.916,9.916 c28.067-28.067,44.263-64.673,44.263-107.521c0-42.847-16.196-79.455-44.263-107.521"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "SoundWavesHigh",
               d:
                 "M175.737,47.628l-8.924,8.924c18.271,18.27,29.536,43.484,29.536,71.448s-11.264,53.178-29.536,71.448l8.924,8.924 c20.546-20.546,33.234-49.008,33.234-80.374c0-31.366-12.688-59.829-33.234-80.374V47.628z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "SoundWavesMed",
               d:
                 "M148.913,74.454l-8.925,8.925c11.488,11.488,18.491,27.236,18.491,44.624c0,17.388-7.054,33.281-18.491,44.575l8.875,8.975 c13.811-13.635,22.239-32.753,22.239-53.55c0-20.797-8.432-39.793-22.189-53.55V74.454z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "SoundWavesLow",
               d:
                 "M121.989,101.229l-8.778,9.073c4.641,4.516,7.397,10.706,7.397,17.702c0,6.995-2.755,13.186-7.397,17.702l8.778,9.073 c7.035-6.844,11.243-16.413,11.243-26.775C133.232,117.643,129.024,108.075,121.989,101.229z"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "SoundX" },
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1190,7 +1190,7 @@ webpackJsonp(
               x2: "223.167",
               y2: "84.5"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "0",
               strokeMiterlimit: "10",
@@ -1203,7 +1203,7 @@ webpackJsonp(
         );
       }
       function O() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1213,14 +1213,14 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "Bubble",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             d:
               "M127.393,10.833 c64.854,0,117.46,52.609,117.46,117.013c0,24.035-7.254,45.804-19.5,63.943c-4.99,7.711,13.15,39.457,20.408,51.705 c4.989,8.612-51.701-19.05-59.412-14.514c-17.233,9.979-37.188,15.872-58.957,15.872c-64.859,0-117.465-52.607-117.465-117.008 C9.928,63.442,62.534,10.833,127.393,10.833z"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1229,7 +1229,7 @@ webpackJsonp(
             x2: "176.184",
             y2: "128.886"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             strokeWidth: "22",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -1241,7 +1241,7 @@ webpackJsonp(
         );
       }
       function I() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1254,10 +1254,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
             })
@@ -1265,7 +1265,7 @@ webpackJsonp(
         );
       }
       function R() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1278,7 +1278,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "playTriangle",
             d:
               "M65.321,33.521c-11.274-6.615-20.342-1.471-20.342,11.52V210.96c0,12.989,9.068,18.135,20.342,11.521l137.244-82.348 c11.274-6.618,11.274-17.646,0-24.509L65.321,33.521z"
@@ -1286,7 +1286,7 @@ webpackJsonp(
         );
       }
       function E() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1299,18 +1299,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M44.979,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6H50.979c-3.3,0-6,2.7-6,6V219.364z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M149.267,219.364c0,3.3,2.7,6,6,6h49.753c3.3,0,6-2.7,6-6V36.5c0-3.3-2.7-6-6-6h-49.753c-3.3,0-6,2.7-6,6V219.364z"
           })
         );
       }
       function T() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1323,10 +1323,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "time" },
-            ce.createElement("circle", {
+            le.createElement("circle", {
               fill: "none",
               strokeWidth: "10",
               strokeMiterlimit: "10",
@@ -1334,7 +1334,7 @@ webpackJsonp(
               cy: "128.014",
               r: "64"
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1342,10 +1342,10 @@ webpackJsonp(
               points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "arrow" },
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1353,7 +1353,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "199.735,63.66 199.735,192.366 171.207,163.675"
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1362,10 +1362,10 @@ webpackJsonp(
               points: "199.735,63.66 199.735,192.366 228.266,163.675"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "alphabet" },
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1373,7 +1373,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "70.268,109.934 94.483,63.635 119.77,109.934"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1384,7 +1384,7 @@ webpackJsonp(
               x2: "112.135",
               y2: "97.861"
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               strokeWidth: "10",
               strokeLinecap: "round",
@@ -1397,7 +1397,7 @@ webpackJsonp(
         );
       }
       function k() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1410,7 +1410,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             stroke: "#fff",
             strokeWidth: "24",
@@ -1422,7 +1422,7 @@ webpackJsonp(
         );
       }
       function D() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1435,45 +1435,45 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "defs",
             null,
-            ce.createElement(
+            le.createElement(
               "linearGradient",
               { id: "linear", x1: "0%", y1: "0%", x2: "100%", y2: "100%" },
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 id: "stop0",
                 offset: "0%",
                 stopColor: "#00ccff"
               }),
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 id: "stop1",
                 offset: "100%",
                 stopColor: "#2d73ff"
               })
             ),
-            ce.createElement(
+            le.createElement(
               "filter",
               { id: "f1", x: "0", y: "0", width: "200%", height: "200%" },
-              ce.createElement("feOffset", {
+              le.createElement("feOffset", {
                 result: "offOut",
                 in: "SourceAlpha",
                 dx: "20",
                 dy: "20"
               }),
-              ce.createElement("feGaussianBlur", {
+              le.createElement("feGaussianBlur", {
                 result: "blurOut",
                 in: "offOut",
                 stdDeviation: "10"
               }),
-              ce.createElement("feBlend", {
+              le.createElement("feBlend", {
                 in: "SourceGraphic",
                 in2: "blurOut",
                 mode: "normal"
               })
             )
           ),
-          ce.createElement("path", {
+          le.createElement("path", {
             fill: "none",
             stroke: "url(#linear)",
             strokeWidth: "24",
@@ -1484,7 +1484,7 @@ webpackJsonp(
             strokeDasharray: "365.19 365.19",
             strokeDashoffset: "0.00"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             fill: "none",
             opacity: ".2",
             filter: "url(#f1)",
@@ -1500,7 +1500,7 @@ webpackJsonp(
         );
       }
       function G() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1513,17 +1513,17 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "triangle" },
-            ce.createElement("path", {
+            le.createElement("path", {
               stroke: "#020202",
               strokeWidth: "16",
               strokeLinecap: "round",
               strokeMiterlimit: "10",
               d: "M127.9,76.632"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "11",
@@ -1533,12 +1533,12 @@ webpackJsonp(
               d:
                 "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
             }),
-            ce.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+            le.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "exclamation" },
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#020202",
               strokeWidth: "16",
@@ -1549,7 +1549,7 @@ webpackJsonp(
               x2: "127.9",
               y2: "160.07"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#020202",
               d:
                 "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
@@ -1558,7 +1558,7 @@ webpackJsonp(
         );
       }
       function N() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1571,12 +1571,12 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "topLock",
             d:
               "M203.553,197.794c0,21.929-17.778,39.706-39.706,39.706H92.154c-21.929,0-39.706-17.777-39.706-39.706v-71.693 c0-21.928,17.778-39.706,39.706-39.706h71.692c21.928,0,39.706,17.778,39.706,39.706V197.794z M128.001,129.664 c-8.941,0-16.19,7.248-16.19,16.189c0,5.589,2.833,10.518,7.137,13.427c2.066,1.395,0.318,23.508,0.318,32.842 c0,2.292-0.078,3.65,8.734,3.65c8.676,0,8.75-1.221,8.75-3.654c0-9.348-1.708-31.469,0.368-32.886 c4.269-2.916,7.071-7.821,7.071-13.38C144.191,136.912,136.941,129.664,128.001,129.664z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "baseLock",
             fill: "none",
             stroke: "#ffffff",
@@ -1588,7 +1588,7 @@ webpackJsonp(
         );
       }
       function A(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1602,10 +1602,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "partCircle" },
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1614,7 +1614,7 @@ webpackJsonp(
               d:
                 "M27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1622,7 +1622,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               d: "M201.432,101.166"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundOuter",
               fill: "none",
               stroke: "#ffffff",
@@ -1631,10 +1631,10 @@ webpackJsonp(
               d: "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "mainOutline" },
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundFill",
               fill: "none",
               stroke: "#ffffff",
@@ -1643,7 +1643,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundOuterOutline",
               strokeLinecap: "butt",
               fill: "none",
@@ -1653,7 +1653,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber01",
               strokeLinecap: "butt",
               fill: "none",
@@ -1663,7 +1663,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber02",
               strokeLinecap: "butt",
               fill: "none",
@@ -1673,7 +1673,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber03",
               strokeLinecap: "butt",
               fill: "none",
@@ -1683,7 +1683,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber04",
               strokeLinecap: "butt",
               fill: "none",
@@ -1693,7 +1693,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber05",
               strokeLinecap: "butt",
               fill: "none",
@@ -1703,7 +1703,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber06",
               strokeLinecap: "butt",
               fill: "none",
@@ -1713,7 +1713,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber07",
               strokeLinecap: "butt",
               fill: "none",
@@ -1723,7 +1723,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber08",
               strokeLinecap: "butt",
               fill: "none",
@@ -1733,7 +1733,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber09",
               strokeLinecap: "butt",
               fill: "none",
@@ -1743,7 +1743,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber10",
               strokeLinecap: "butt",
               fill: "none",
@@ -1753,7 +1753,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber11",
               strokeLinecap: "butt",
               fill: "none",
@@ -1763,7 +1763,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber12",
               strokeLinecap: "butt",
               fill: "none",
@@ -1773,7 +1773,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber13",
               strokeLinecap: "butt",
               fill: "none",
@@ -1783,7 +1783,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber14",
               strokeLinecap: "butt",
               fill: "none",
@@ -1793,7 +1793,7 @@ webpackJsonp(
               d:
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "roundThrobber15",
               strokeLinecap: "butt",
               fill: "none",
@@ -1804,19 +1804,19 @@ webpackJsonp(
                 "M127.82,23.895 c-54.686,0-99.487,42.167-103.745,95.754l55.797,23.069c4.729-3.231,10.44-5.122,16.584-5.122c0.551,0,1.098,0.014,1.642,0.047 l24.815-35.968c0-0.17-0.004-0.338-0.004-0.509c0-21.647,17.61-39.261,39.26-39.261s39.263,17.613,39.263,39.261 c0,21.65-17.611,39.264-39.263,39.264c-0.299,0-0.593-0.007-0.887-0.014l-35.392,25.251c0.018,0.462,0.035,0.931,0.035,1.396 c0,16.252-13.22,29.472-29.469,29.472c-14.265,0-26.19-10.185-28.892-23.666L27.66,156.37 c12.355,43.698,52.503,75.733,100.16,75.733c57.495,0,104.104-46.61,104.104-104.105S185.314,23.895,127.82,23.895z"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "bottomCircle" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#ffffff",
               d:
                 "M89.226,181.579L76.5,176.321c2.256,4.696,6.159,8.628,11.339,10.786 c11.197,4.668,24.11-0.647,28.779-11.854c2.259-5.425,2.274-11.405,0.033-16.841c-2.237-5.436-6.46-9.675-11.886-11.938 c-5.384-2.24-11.151-2.156-16.22-0.244l13.146,5.436c8.261,3.443,12.166,12.93,8.725,21.189 C106.976,181.115,97.486,185.022,89.226,181.579"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "topCircle" },
-            ce.createElement("circle", {
+            le.createElement("circle", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "6",
@@ -1829,7 +1829,7 @@ webpackJsonp(
         );
       }
       function L() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1842,19 +1842,19 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "videoPlayButton",
             d:
               "M165.399,124.063L109.118,92.06c-1.399-0.797-3.118-0.787-4.508,0.026c-1.39,0.805-2.25,2.295-2.25,3.905v64.008 c0,1.609,0.86,3.1,2.25,3.913c0.705,0.412,1.491,0.613,2.277,0.613c0.768,0,1.546-0.191,2.241-0.596l56.283-32.003 c1.416-0.806,2.285-2.306,2.285-3.934C167.694,126.368,166.816,124.869,165.399,124.063z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M238.069,40.646H214.25h-28.82h-28.82h-28.458h-0.36H99.333H70.536H41.727h-23.82c-3.184,0-5.773,2.59-5.773,5.772v23.856 v120.441v18.867c0,3.184,2.589,5.771,5.773,5.771h2.415h21.394h28.82h28.82h28.459h0.361h28.457h28.82h28.82h23.82 c3.184,0,5.773-2.589,5.773-5.771v-18.867V70.274V46.418C243.844,43.223,241.254,40.646,238.069,40.646z M191.215,47.181h17.273  V64.5h-17.273V47.181L191.215,47.181z M162.396,47.181h17.272V64.5h-17.272V47.181z M133.938,47.181h16.912V64.5h-16.912V47.181z\tM105.128,47.181h16.912V64.5h-16.912V47.181z M76.309,47.181h17.273V64.5H76.309V47.181z M47.488,47.181h17.273V64.5H47.488V47.181 z M18.681,47.181h17.273V64.5H18.681V47.181z M35.954,208.811H18.681v-17.319h17.273V208.811z M64.763,208.811H47.489v-17.319 h17.273V208.811L64.763,208.811z M93.583,208.811H76.31v-17.319h17.273V208.811z M122.041,208.811h-16.912v-17.319h16.912V208.811z M150.849,208.811h-16.912v-17.319h16.912V208.811z M179.668,208.811h-17.272v-17.319h17.272V208.811z M208.488,208.811h-17.273 v-17.319h17.273V208.811z M237.297,208.811h-17.273v-17.319h17.273V208.811L237.297,208.811z M237.297,184.943H214.25h-28.819 h-28.82h-28.458h-0.361H99.333H70.537H41.728H18.682V71.047h23.046h28.82h28.82h28.458h0.36h28.458h28.82h28.82h23.045v113.896 H237.297z M237.297,64.5h-17.273V47.181h17.273V64.5L237.297,64.5z"
           })
         );
       }
       function P() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             xmlns: "http://www.w3.org/2000/svg",
@@ -1865,13 +1865,13 @@ webpackJsonp(
             viewBox: "0 0 100 100",
             enableBackground: "new 0 0 100 100"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             stroke: "#ffffff",
             fill: "#ffffff",
             d:
               "M83.086,12.091H16.913C10.344,12.091,5,17.435,5,24.004v51.992l0.005,0.102c0.056,6.514,5.396,11.813,11.908,11.813h66.173  c6.531,0,11.874-5.314,11.906-11.764L95,24.004C95,17.435,89.654,12.091,83.086,12.091z M83.086,82.989H16.913  c-3.516,0-6.488-2.653-6.93-6.106l18.899-20.615c1.226-1.34,2.85-2.076,4.574-2.076c1.723,0,3.347,0.736,4.574,2.078l19.611,21.393  c0.885,0.961,2.508,1.029,3.473,0.148c1-0.916,1.068-2.476,0.152-3.478l-4.113-4.485l8.406-8.918  c1.258-1.332,2.926-2.064,4.696-2.064c1.772,0,3.44,0.732,4.696,2.064l15.061,15.973C89.564,80.346,86.594,82.989,83.086,82.989z   M90.08,69.801L78.532,57.555c-2.194-2.328-5.132-3.609-8.275-3.609c-3.142,0-6.08,1.281-8.272,3.609l-8.164,8.656l-12.162-13.27  c-2.171-2.366-5.084-3.67-8.201-3.67c-3.119,0-6.031,1.304-8.202,3.67L9.92,69.673V24.004c0-3.856,3.137-6.994,6.993-6.994h66.173  c3.857,0,6.994,3.137,6.994,6.994V69.801z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             stroke: "#ffffff",
             fill: "#ffffff",
             d:
@@ -1880,7 +1880,7 @@ webpackJsonp(
         );
       }
       function x() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1893,14 +1893,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M107.785,33.965c-34.875,8.972-60.644,40.618-60.644,78.308v53.903c0,4.965-4.035,8.99-8.975,8.99 c-9.929,0-17.978,8.066-17.978,17.971c0,9.924,8.059,17.969,18.013,17.969h179.598c9.948,0,18.014-8.066,18.014-17.969 c0-9.926-8.087-17.971-17.979-17.971c-4.956,0-8.975-3.993-8.975-8.99v-53.903c0-37.676-25.763-69.333-60.644-78.308v-9.281 c0-11.193-9.052-20.219-20.215-20.219c-11.143,0-20.215,9.052-20.215,20.219V33.965L107.785,33.965z M96.554,220.09h62.891 c0,17.366-14.079,31.445-31.445,31.445C110.633,251.535,96.554,237.458,96.554,220.09z"
           })
         );
       }
       function z(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1914,7 +1914,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1923,7 +1923,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "128,247.688 128,8.313 181.061,61.674 "
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "10",
@@ -1938,7 +1938,7 @@ webpackJsonp(
         var t = "";
         return (
           e.angle && (t = "rotate(" + e.angle + ")"),
-          ce.createElement(
+          le.createElement(
             "svg",
             {
               transform: t,
@@ -1952,7 +1952,7 @@ webpackJsonp(
               height: "256px",
               viewBox: "0 0 256 256"
             },
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               className: "Arrow1",
               fill: "none",
               stroke: "#ffffff",
@@ -1961,7 +1961,7 @@ webpackJsonp(
               strokeMiterlimit: "10",
               points: "135.65,21.667 30.081,127.235 137.18,234.333 "
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               className: "Arrow2",
               fill: "none",
               stroke: "#ffffff",
@@ -1974,7 +1974,7 @@ webpackJsonp(
         );
       }
       function V() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -1987,7 +1987,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             className: "Arrow1",
             fill: "none",
             stroke: "#ffffff",
@@ -1996,7 +1996,7 @@ webpackJsonp(
             strokeMiterlimit: "10",
             points: "135.65,21.667 30.081,127.235 137.18,234.333 "
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             className: "Arrow2",
             fill: "none",
             stroke: "#ffffff",
@@ -2008,7 +2008,7 @@ webpackJsonp(
         );
       }
       function j() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2021,7 +2021,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("rect", {
+          le.createElement("rect", {
             x: "24",
             y: "42.167",
             fill: "none",
@@ -2031,7 +2031,7 @@ webpackJsonp(
             width: "208",
             height: "171.667"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "42",
@@ -2044,7 +2044,7 @@ webpackJsonp(
         );
       }
       function W() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2057,7 +2057,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "18",
@@ -2070,7 +2070,7 @@ webpackJsonp(
         );
       }
       function H() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2083,14 +2083,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             fill: "none",
             stroke: "rgb(120, 138, 146)",
             strokeWidth: "12",
             strokeMiterlimit: "10",
             points: "83,90.861 83,42.167 232,42.167 232,165.14 173,165.14 "
           }),
-          ce.createElement("rect", {
+          le.createElement("rect", {
             x: "24",
             y: "90.861",
             fill: "none",
@@ -2103,7 +2103,7 @@ webpackJsonp(
         );
       }
       function q() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2116,10 +2116,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "mainBox" },
-            ce.createElement("rect", {
+            le.createElement("rect", {
               x: "90",
               y: "42.167",
               fill: "none",
@@ -2129,7 +2129,7 @@ webpackJsonp(
               width: "142",
               height: "171.667"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -2140,10 +2140,10 @@ webpackJsonp(
               y2: "54.01"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "leftBox" },
-            ce.createElement("rect", {
+            le.createElement("rect", {
               x: "28",
               y: "42.167",
               fill: "none",
@@ -2153,7 +2153,7 @@ webpackJsonp(
               width: "62",
               height: "171.667"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "rgb(120, 138, 146)",
               strokeWidth: "42",
@@ -2167,7 +2167,7 @@ webpackJsonp(
         );
       }
       function K() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2180,7 +2180,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "30",
@@ -2189,13 +2189,13 @@ webpackJsonp(
             d:
               "M229.809,147.639 c-9.178,47.863-51.27,84.027-101.809,84.027c-57.253,0-103.667-46.412-103.667-103.666S70.747,24.334,128,24.334 c34.107,0,64.368,16.472,83.261,41.895"
           }),
-          ce.createElement("polygon", {
+          le.createElement("polygon", {
             points: "147.639,108.361 245.755,10.166 245.834,108.361 "
           })
         );
       }
       function Y() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2208,18 +2208,18 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M132.025,162.943h40.246c0,0,3.219,56.879-31.303,79.599c-12.298,8.094,71.103-6.708,75.574-79.599h35.775l-60.146-74.681 L132.025,162.943z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             d:
               "M123.975,93.056H83.729c0,0-3.219-56.879,31.303-79.599c12.298-8.094-71.103,6.708-75.574,79.599H3.682l60.146,74.681 L123.975,93.056z"
           })
         );
       }
       function J() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2232,10 +2232,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "base" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2245,10 +2245,10 @@ webpackJsonp(
                 "M216.773,43.909 l-7.399,177.589c-0.37,8.893-7.919,16.1-16.812,16.1H63.437c-8.914,0-16.442-7.24-16.812-16.1L39.226,43.909"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "lines" },
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "line1",
               fill: "none",
               stroke: "#ffffff",
@@ -2257,7 +2257,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M128,68.12v137.197"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "line2",
               fill: "none",
               stroke: "#ffffff",
@@ -2266,7 +2266,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M83.613,68.12 l4.035,137.197"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "line3",
               fill: "none",
               stroke: "#ffffff",
@@ -2276,10 +2276,10 @@ webpackJsonp(
               d: "M172.387,68.12 l-4.035,137.197"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "lid" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2287,7 +2287,7 @@ webpackJsonp(
               strokeLinejoin: "round",
               d: "M27.121,38.577H228.88"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2298,7 +2298,7 @@ webpackJsonp(
         );
       }
       function X() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2311,10 +2311,10 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { transform: "translate(0,-952.36215)" },
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M49.624,963.362c-20.72,0-37.667,14.78-37.667,32.806c0,3.589,3.353,6.499,7.486,6.499l52.407-0.305v162.5 c0,18.134,17.404,32.5,38.018,32.5h96.508c20.612,0,37.667-14.475,37.667-32.5c0-3.59-3.354-6.499-7.486-6.5H217.84V996.168 c0-18.024-16.947-32.806-37.667-32.806H49.624z M49.624,976.362h2.223c0.569,0.162,1.158,0.265,1.754,0.306 c8.159,1.274,14.426,6.085,16.962,12.694l-42.112,0.306C31.513,981.897,39.656,976.362,49.624,976.362z M79.337,976.362h100.836 c12.587,0,22.694,8.77,22.694,19.806v162.194H139.23c-4.135,0.001-7.486,2.91-7.488,6.5c0,4.609-1.43,7.796-4.21,10.765 c-2.78,2.972-7.203,5.757-13.686,7.923c-0.624,0.201-1.214,0.476-1.755,0.813h-2.223c-12.695,0-23.044-8.573-23.044-19.5v-169 C86.824,988.529,84.023,981.812,79.337,976.362z M108.582,1005.611c-4.135,0.169-7.33,3.216-7.135,6.807 c0.193,3.59,3.702,6.363,7.837,6.194h71.123c4.135,0.051,7.535-2.817,7.592-6.407c0.059-3.591-3.246-6.542-7.381-6.594 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1005.603,108.816,1005.603,108.582,1005.611z M108.582,1044.612 c-4.135,0.169-7.33,3.215-7.135,6.807c0.193,3.588,3.702,6.362,7.837,6.192h71.123c4.135,0.051,7.535-2.816,7.592-6.407 c0.059-3.59-3.246-6.542-7.381-6.592c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1044.603,108.816,1044.603,108.582,1044.612z M108.582,1083.612c-4.135,0.169-7.33,3.216-7.135,6.806c0.193,3.589,3.702,6.363,7.837,6.193h71.123 c4.135,0.052,7.535-2.816,7.592-6.407c0.059-3.59-3.246-6.541-7.381-6.592c-0.069-0.001-0.141-0.001-0.211,0h-71.123 C109.05,1083.602,108.816,1083.602,108.582,1083.612z M108.582,1122.611c-4.135,0.17-7.33,3.216-7.135,6.806 c0.193,3.591,3.702,6.364,7.837,6.195h71.123c4.135,0.05,7.535-2.818,7.592-6.408c0.059-3.591-3.246-6.541-7.381-6.593 c-0.069,0-0.141,0-0.211,0h-71.123C109.05,1122.602,108.816,1122.602,108.582,1122.611z M145.547,1171.363h82.002 c-3.09,7.604-11.189,12.999-21.173,12.999h-67.849c0.196-0.197,0.512-0.306,0.703-0.509 C142.576,1180.277,144.436,1175.973,145.547,1171.363z"
             })
@@ -2322,7 +2322,7 @@ webpackJsonp(
         );
       }
       function Z(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             transform: "rotate(" + e.angle + ")",
@@ -2336,14 +2336,14 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polygon", {
+          le.createElement("polygon", {
             points: "13.913,141 128,59 242.087,141 ",
             fill: "#ffffff"
           })
         );
       }
       function Q(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2357,47 +2357,47 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "outline" },
-            ce.createElement(
+            le.createElement(
               "g",
               { transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)" },
-              ce.createElement("path", {
+              le.createElement("path", {
                 d:
                   "M102.239,90.394c-22.556,0-40.906-18.351-40.906-40.906c0-22.556,18.35-40.906,40.906-40.906s40.906,18.35,40.906,40.906 C143.145,72.043,124.795,90.394,102.239,90.394z"
               })
             ),
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M127.453,250.212c-30.208,0-52.086-4.188-65.028-12.45c-12.507-7.983-13.141-17.484-13.141-19.308v-41.781 c0-20.554,5.356-38.104,15.489-50.754c11.63-14.519,29.216-22.193,50.858-22.194h23.646c21.643,0,39.229,7.674,50.858,22.193 c10.133,12.65,15.488,30.201,15.488,50.754v41.751c0.011,2.202-0.586,8.058-6.43,14.175 c-11.164,11.687-35.301,17.613-71.732,17.613C127.458,250.212,127.458,250.212,127.453,250.212z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "WavingArm",
               opacity: e.bPending ? "1" : "0",
               d:
                 "M87.625,170.102c-5.877,0-14.85-1.804-24.219-10.4c-8.677-7.961-20.959-20.438-30.563-31.048 c-18.766-20.732-21.125-26.658-19.522-32.832c1.463-5.64,10.288-27.077,26.729-28.926c0.429-0.048,0.867-0.072,1.303-0.072 c7.609,0,14.543,6.335,38.063,31.516c7.141,7.645,14.524,15.549,18.002,18.33l0.803,0.641c5.551,4.432,11.291,9.015,15.104,14.136 c8.477,11.383,3.634,20.705,1.158,24.185C108.034,164.692,97.995,170.102,87.625,170.102z"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "foreground" },
-            ce.createElement(
+            le.createElement(
               "g",
               { transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)" },
-              ce.createElement("circle", {
+              le.createElement("circle", {
                 fill: "#FFFFFF",
                 cx: "102.239",
                 cy: "49.488",
                 r: "33.446"
               })
             ),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "#FFFFFF",
               d:
                 "M195.624,218.454v-41.781c0-34.743-16.666-62.948-56.347-62.948h-11.822h-0.997h-10.826 c-39.68,0.001-56.348,28.205-56.348,62.948v41.781c0,0,0,21.758,68.169,21.758C196.62,240.214,195.624,218.454,195.624,218.454z"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               className: "WavingArm",
               opacity: e.bPending ? "1" : "0",
               d:
@@ -2407,7 +2407,7 @@ webpackJsonp(
         );
       }
       function $() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2420,16 +2420,16 @@ webpackJsonp(
             height: "50px",
             viewBox: "0 0 71.412 50"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "g5", transform: "scale(0.58823529,0.58823529)" },
-            ce.createElement("path", {
+            le.createElement("path", {
               id: "path7",
               fill: "#ff0000",
               d:
                 "M118.9,13.3c-1.4-5.2-5.5-9.3-10.7-10.701C98.7,0,60.7,0,60.7,0 s-38,0-47.5,2.5C8.1,3.9,3.9,8.1,2.5,13.3C0,22.8,0,42.5,0,42.5s0,19.799,2.5,29.199C3.9,76.9,8,80.999,13.2,82.4 C22.8,85,60.7,85,60.7,85s37.999,0,47.5-2.5c5.2-1.399,9.3-5.5,10.7-10.7c2.499-9.501,2.499-29.201,2.499-29.201 S121.5,22.8,118.9,13.3z"
             }),
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               id: "polygon9",
               fill: "#ffffff",
               points: "80.201,42.5 48.6,24.3 48.6,60.7"
@@ -2438,7 +2438,7 @@ webpackJsonp(
         );
       }
       function ee() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2451,7 +2451,7 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("circle", {
+          le.createElement("circle", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "24",
@@ -2460,7 +2460,7 @@ webpackJsonp(
             cy: "128",
             r: "101.5"
           }),
-          ce.createElement("line", {
+          le.createElement("line", {
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "24",
@@ -2473,7 +2473,7 @@ webpackJsonp(
         );
       }
       function te(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2487,22 +2487,22 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "Arrow",
             d:
               "M77.003,54.763h32.784c3.794,0,9.113,2.181,11.814,4.848l63.604,62.773c2.703,2.667,2.727,7.054,0.05,9.748 l-63.705,64.206c-2.674,2.693-7.968,4.898-11.763,4.898H77.003"
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             className: "preArrowBox",
             opacity: e.bHidePreArrow ? "0" : "1",
             points: "6.833,54.763 46.71,54.763 46.71,201.236 6.833,201.236 \t"
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             className: "jumpAheadBox",
             opacity: e.bShowJumpAheadBox ? "1" : "0",
             points: "6.833,54.764 86.386,54.764 86.386,201.236 6.833,201.236 \t"
           }),
-          ce.createElement("polyline", {
+          le.createElement("polyline", {
             className: "postArrowBox",
             opacity: e.bHidePostArrow ? "0" : "1",
             points:
@@ -2511,7 +2511,7 @@ webpackJsonp(
         );
       }
       function ie() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2524,91 +2524,91 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 1024 256"
           },
-          ce.createElement(
+          le.createElement(
             "defs",
             null,
-            ce.createElement(
+            le.createElement(
               "linearGradient",
               { id: "gradient", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 offset: "0%",
                 stopColor: "rgb(55, 102, 251)"
               }),
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 offset: "100%",
                 stopColor: "rgb(91, 106, 219)"
               })
             ),
-            ce.createElement(
+            le.createElement(
               "linearGradient",
               { id: "gradientText", x1: "0%", y1: "0%", x2: "100%", y2: "0%" },
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 offset: "0%",
                 stopColor: "rgb(91, 106, 219)"
               }),
-              ce.createElement("stop", {
+              le.createElement("stop", {
                 offset: "100%",
                 stopColor: "rgb(125, 110, 188)"
               })
             )
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "logo" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "url(#gradient)",
               d:
                 "M156.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.016,1.934,0.051l29.226-42.355c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.239,20.745,46.239,46.241c0,25.494-20.741,46.241-46.239,46.241 c-0.352,0-0.698-0.01-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.14-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.991-34.026-27.87l-46.993-19.429c14.55,51.464,61.831,89.19,117.957,89.19 c67.713,0,122.605-54.893,122.605-122.604C278.978,60.244,224.086,5.355,156.374,5.355"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "rgb(67, 104, 241)",
               d:
                 "M111.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.028c2.674-6.416,2.694-13.5,0.04-19.929c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.648-13.196-2.552-19.198-0.291l15.561,6.436c9.776,4.074,14.396,15.299,10.324,25.072 C132.031,190.841,120.801,195.464,111.026,191.387"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "rgb(79, 105, 230)",
               d:
                 "M227.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.812,13.821-30.812,30.809 c0,16.988,13.824,30.806,30.812,30.806C213.818,127.165,227.639,113.347,227.639,96.359 M173.736,96.306 c0-12.783,10.364-23.142,23.145-23.142c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.361,23.142-23.145,23.142 C184.1,119.447,173.736,109.089,173.736,96.306"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "steam" },
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "rgb(92, 106, 218)",
               d:
                 "M404.52,91.9l-7.968,14.006c-6.138-4.287-14.455-6.862-21.717-6.862c-8.299,0-13.437,3.43-13.437,9.586 c0,7.473,9.124,9.212,22.682,14.082c14.574,5.149,22.948,11.21,22.948,24.558c0,18.264-14.359,28.519-34.998,28.519 c-10.063,0-22.195-2.595-31.53-8.265l5.815-15.539c7.579,4.008,16.644,6.381,24.722,6.381c10.897,0,16.071-4.021,16.071-9.96 c0-6.802-7.893-8.843-20.641-13.06c-14.521-4.856-24.586-11.213-24.586-25.992c0-16.658,13.34-26.225,32.538-26.225 C387.797,83.128,398.551,87.367,404.52,91.9"
             }),
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "rgb(99, 107, 211)",
               points:
                 "468.163,100.753 468.163,174.252 449.402,174.252 449.402,100.753 422.166,100.753 422.166,84.663 495.315,84.663 495.315,100.753 \t"
             }),
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "rgb(108, 108, 203)",
               points:
                 "533.512,100.706 533.512,120.896 569.417,120.896 569.417,136.982 533.512,136.982 533.512,158.014 575.173,158.014 575.173,174.253 514.757,174.253 514.757,84.665 575.173,84.665 575.173,100.706"
             }),
-            ce.createElement("path", {
+            le.createElement("path", {
               fill: "rgb(117, 109, 195)",
               d:
                 "M617.054,156.857l-5.932,17.396h-19.67l33.593-89.594h18.888l34.539,89.594h-20.336l-6.061-17.396H617.054z M634.378,106.035l-12.23,35.87h24.723L634.378,106.035z"
             }),
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "rgb(125, 110, 188)",
               points:
                 "773.403,119.291 748.888,171.645 738.302,171.645 714.182,119.758 714.182,174.253 696.212,174.253 696.212,84.665 714.138,84.665 744.251,149.33 773.285,84.665 791.374,84.665 791.374,174.253 773.406,174.253"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "tv" },
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "rgb(125, 110, 188)",
               points:
                 "853.961,92.664 823.506,92.664 823.506,84.147 893.835,84.147 893.835,92.664 863.51,92.664 863.51,174.479 853.961,174.479"
             }),
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "rgb(125, 110, 188)",
               points:
                 "909.835,84.147 920.286,84.147 950.612,165.831 980.033,84.147 990.487,84.147 956.421,174.479 944.159,174.479"
@@ -2617,7 +2617,7 @@ webpackJsonp(
         );
       }
       function ne() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2630,13 +2630,13 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "frontGuy",
             fill: "#666666",
             d:
               "M181.732,53.151c-17.255,0-31.321,13.316-31.321,32.634v25.132 c0,18.005,24.006,21.006,24.382,21.381c-10.691,2.813-30.947,8.252-40.888,15.566c-8.252,6.003-11.44,18.005-13.128,22.882 c-0.75,2.063-1.688,5.064-1.688,7.127c0,0,0,9.94,0,19.881s12.941,16.505,18.005,16.505h89.65c4.877,0,18.006-5.627,18.006-16.505 s0-19.881,0-19.881c0-2.251-0.938-5.627-1.688-7.689c-4.313-10.878-4.688-16.316-13.315-22.319 c-9.941-6.939-30.009-12.19-40.512-15.004c0.374-0.563,24.193-4.127,24.193-22.131V85.785 C213.053,66.467,198.986,53.151,181.732,53.151L181.732,53.151z"
           }),
-          ce.createElement("path", {
+          le.createElement("path", {
             className: "backGuy",
             fill: "rgb(144, 153, 161)",
             d:
@@ -2645,7 +2645,7 @@ webpackJsonp(
         );
       }
       function re() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2656,10 +2656,10 @@ webpackJsonp(
             y: "0px",
             viewBox: "0 0 64 64"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             null,
-            ce.createElement("path", {
+            le.createElement("path", {
               d:
                 "M32.5,5C17.9,5,6,16.9,6,31.5C6,46.1,17.9,58,32.5,58S59,46.1,59,31.5C59,16.9,47.1,5,32.5,5 M32.5,54.7c-1.2,0-2.5-0.1-3.7-0.3c-1.1-1.1-2.1-2.8-3-4.8c-0.8-1.8-1.4-3.8-2-6c2.7-0.3,5.6-0.5,8.6-0.5c3,0,5.9,0.2,8.6,0.5c-0.5,2.2-1.2,4.2-2,6c-0.9,2-1.9,3.7-3,4.8C35,54.6,33.7,54.7,32.5,54.7 M32.5,41.4c-3.2,0-6.2,0.2-9,0.5c-0.6-3-0.9-6.2-1-9.6h19.9c0,3.4-0.4,6.6-1,9.6C38.7,41.6,35.7,41.4,32.5,41.4 M32.5,8.3c1.2,0,2.5,0.1,3.7,0.3c1.1,1.1,2.1,2.8,3,4.8c0.8,1.8,1.4,3.8,2,6c-2.7,0.3-5.6,0.5-8.6,0.5c-3,0-5.9-0.2-8.6-0.5c0.5-2.2,1.2-4.2,2-6c0.9-2,1.9-3.7,3-4.8C30,8.4,31.3,8.3,32.5,8.3 M32.5,21.6c3.2,0,6.2-0.2,9-0.5c0.6,3,0.9,6.2,1,9.6H22.6c0-3.4,0.4-6.6,1-9.6C26.3,21.4,29.3,21.6,32.5,21.6 M44.1,30.7c0-3.5-0.4-6.8-1-9.8c3.4-0.5,6.4-1.1,8.8-2c2.3,3.5,3.6,7.5,3.7,11.8H44.1z M20.9,30.7H9.3c0.1-4.2,1.4-8.3,3.7-11.8c2.5,0.8,5.5,1.5,8.8,2C21.3,23.9,21,27.2,20.9,30.7 M20.9,32.3c0,3.5,0.4,6.8,1,9.8c-3.4,0.5-6.4,1.1-8.8,2c-2.3-3.5-3.6-7.5-3.7-11.8H20.9z M44.1,32.3h11.6c-0.1,4.2-1.4,8.3-3.7,11.8c-2.5-0.8-5.5-1.5-8.8-2C43.7,39.1,44,35.8,44.1,32.3 M51,17.5c-0.1,0-0.2,0.1-0.3,0.1c-2.3,0.7-5,1.3-7.9,1.7c-0.9-4.1-2.3-7.6-4-10.1c3.8,1.1,7.3,3.1,10.2,5.9C49.6,15.9,50.3,16.6,51,17.5 M26.3,9.2c-1.7,2.5-3.1,6-4,10.1c-2.9-0.4-5.6-1-7.9-1.7c-0.1,0-0.2-0.1-0.3-0.1c0.6-0.8,1.3-1.6,2.1-2.4C19,12.2,22.5,10.2,26.3,9.2 M14,45.5c0.1,0,0.2-0.1,0.3-0.1c2.3-0.7,5-1.3,7.9-1.7c0.9,4.1,2.3,7.6,4,10.1c-3.8-1.1-7.3-3.1-10.2-5.9C15.4,47.1,14.7,46.4,14,45.5 M38.7,53.8c1.7-2.5,3.1-6,4-10.1c2.9,0.4,5.6,1,7.9,1.7c0.1,0,0.2,0.1,0.3,0.1c-0.6,0.8-1.3,1.6-2.1,2.4C46,50.8,42.5,52.8,38.7,53.8"
             })
@@ -2667,7 +2667,7 @@ webpackJsonp(
         );
       }
       function oe() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2679,24 +2679,24 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "leftarrow", opacity: "0" },
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               points: "127.817,4.403 4,128 127.817,251.598"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "rightarrow", opacity: "0" },
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               points: "127.816,4.403 251.633,128 127.816,251.598"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { className: "grabber" },
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               points:
                 "145.692,22.132 145.692,234.361 127.817,251.598 110.307,234.361 110.307,22.132 127.817,4.403"
             })
@@ -2704,7 +2704,7 @@ webpackJsonp(
         );
       }
       function ae() {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2717,12 +2717,12 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement("polygon", {
+          le.createElement("polygon", {
             className: "pointer",
             points:
               "128,154.979 46.374,230.548 46.374,253.333 209.626,253.333 209.626,230.548 \t"
           }),
-          ce.createElement("rect", {
+          le.createElement("rect", {
             className: "line",
             x: "116.271",
             y: "3.168",
@@ -2732,7 +2732,7 @@ webpackJsonp(
         );
       }
       function se(e) {
-        return ce.createElement(
+        return le.createElement(
           "svg",
           {
             version: "1.1",
@@ -2744,11 +2744,11 @@ webpackJsonp(
             height: "256px",
             viewBox: "0 0 256 256"
           },
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "hidechat", opacity: e.showChat ? "0" : "1" },
             ">",
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2757,7 +2757,7 @@ webpackJsonp(
               points:
                 "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011"
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2766,7 +2766,7 @@ webpackJsonp(
               points:
                 "109.427,59.011 225.299,59.011 225.299,189.834 207,189.834"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2778,10 +2778,10 @@ webpackJsonp(
               y2: "233.723"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "showchat", opacity: e.showChat ? "1" : "0" },
-            ce.createElement("polygon", {
+            le.createElement("polygon", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2791,10 +2791,10 @@ webpackJsonp(
                 "116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 225.299,59.011 225.299,189.834"
             })
           ),
-          ce.createElement(
+          le.createElement(
             "g",
             { id: "textlines", opacity: e.showChat ? "1" : "0" },
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2804,7 +2804,7 @@ webpackJsonp(
               x2: "194.167",
               y2: "124.75"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2814,7 +2814,7 @@ webpackJsonp(
               x2: "194.167",
               y2: "155.75"
             }),
-            ce.createElement("line", {
+            le.createElement("line", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2824,7 +2824,7 @@ webpackJsonp(
               x2: "179.926",
               y2: "93.75"
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2833,7 +2833,7 @@ webpackJsonp(
               points:
                 "156.001,189.834 116.375,189.834 67.31,222.538 67.31,189.834 39.834,189.834 39.834,59.011 59.25,59.011 "
             }),
-            ce.createElement("polyline", {
+            le.createElement("polyline", {
               fill: "none",
               stroke: "#ffffff",
               strokeWidth: "10",
@@ -2845,6 +2845,73 @@ webpackJsonp(
           )
         );
       }
+      function ce() {
+        return le.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_ShowBothChats",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          le.createElement("circle", {
+            opacity: "0",
+            fill: "#FFFFFF",
+            strokeWidth: "0",
+            cx: "166.241",
+            cy: "161.906",
+            r: "75.259"
+          }),
+          le.createElement("polyline", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "8",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            points:
+              "92.367,155.634 51.311,183 51.311,150.296 23.834,150.296 23.834,19.473 140.5,19.473 140.5,91.5"
+          }),
+          le.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "8",
+            strokeMiterlimit: "10",
+            x1: "48.529",
+            y1: "82.167",
+            x2: "113.379",
+            y2: "82.167"
+          }),
+          le.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "8",
+            strokeMiterlimit: "10",
+            x1: "48.529",
+            y1: "113.167",
+            x2: "113.379",
+            y2: "113.167"
+          }),
+          le.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "8",
+            strokeMiterlimit: "10",
+            x1: "48.529",
+            y1: "51.167",
+            x2: "99.138",
+            y2: "51.167"
+          }),
+          le.createElement("path", {
+            d:
+              "M166.241,82.167c-43.933,0-79.74,35.807-79.74,79.74c0,43.932,35.808,79.739,79.74,79.739 c43.932,0,79.739-35.808,79.739-79.739C245.98,117.975,210.173,82.167,166.241,82.167 M166.241,231.717 c-3.611,0-7.522-0.301-11.134-0.902c-3.31-3.311-6.318-8.426-9.027-14.444c-2.407-5.416-4.212-11.434-6.018-18.054  8.124-0.902,16.851-1.505,25.878-1.505c9.026,0,17.753,0.603,25.877,1.505c-1.504,6.62-3.61,12.638-6.018,18.054 c-2.708,6.019-5.718,11.134-9.027,14.444C173.764,231.416,169.852,231.717,166.241,231.717 M166.241,191.696 c-9.629,0-18.656,0.602-27.082,1.505c-1.805-9.027-2.708-18.656-3.009-28.887h59.88c0,10.23-1.203,19.859-3.009,28.887 C184.896,192.298,175.87,191.696,166.241,191.696 M166.241,92.097c3.61,0,7.522,0.301,11.133,0.903 c3.311,3.31,6.319,8.425,9.027,14.443c2.407,5.416,4.213,11.435,6.019,18.055c-8.125,0.902-16.851,1.504-25.878,1.504  s-17.753-0.602-25.878-1.504c1.505-6.62,3.611-12.639,6.019-18.055c2.708-6.018,5.717-11.133,9.026-14.443 \tC158.719,92.398,162.63,92.097,166.241,92.097 M166.241,132.117c9.629,0,18.655-0.602,27.081-1.504 \tc1.806,9.026,2.708,18.655,3.009,28.887h-59.88c0-10.231,1.204-19.86,3.01-28.887 \tC147.585,131.516,156.612,132.117,166.241,132.117 M201.146,159.5c0-10.532-1.203-20.462-3.009-29.488 c10.23-1.505,19.258-3.311,26.479-6.019c6.921,10.531,10.833,22.567,11.134,35.507H201.146z M131.336,159.5H96.432 c0.301-12.639,4.212-24.976,11.133-35.507c7.522,2.407,16.55,4.514,26.479,6.019C132.54,139.038,131.637,148.968,131.336,159.5 M131.336,164.314c0,10.531,1.204,20.461,3.01,29.488c-10.231,1.505-19.259,3.31-26.48,6.018 c-6.921-10.531-10.832-22.567-11.133-35.506H131.336z M201.146,164.314h34.905c-0.301,12.638-4.213,24.975-11.134,35.506 c-7.522-2.406-16.55-4.513-26.479-6.018C199.942,184.775,200.845,174.846,201.146,164.314 M221.908,119.78 c-0.301,0-0.602,0.301-0.903,0.301c-6.92,2.106-15.045,3.912-23.771,5.115c-2.708-12.337-6.921-22.868-12.036-30.391 c11.434,3.31,21.966,9.328,30.691,17.753C217.695,114.966,219.802,117.072,221.908,119.78 M147.585,94.806 c-5.115,7.522-9.328,18.054-12.036,30.391c-8.727-1.203-16.851-3.009-23.771-5.115c-0.301,0-0.602-0.301-0.902-0.301 c1.805-2.407,3.911-4.814,6.318-7.222C125.619,103.833,136.15,97.814,147.585,94.806 M110.574,204.033 c0.301,0,0.602-0.301,0.902-0.301c6.921-2.106,15.045-3.912,23.771-5.115c2.708,12.337,6.921,22.869,12.036,30.392 c-11.435-3.311-21.966-9.328-30.692-17.754C114.786,208.848,112.68,206.742,110.574,204.033 M184.896,229.009 c5.116-7.522,9.329-18.055,12.036-30.392c8.727,1.203,16.852,3.009,23.771,5.115c0.301,0,0.603,0.301,0.903,0.301 c-1.806,2.407-3.912,4.814-6.319,7.222C206.863,219.981,196.331,226,184.896,229.009"
+          })
+        );
+      }
       (t.v = n),
         (t.Q = r),
         (t.e = o),
@@ -2853,14 +2920,14 @@ webpackJsonp(
         (t.z = c),
         (t.C = l),
         (t.m = u),
-        (t.U = d),
+        (t.V = d),
         (t.L = p),
-        (t.J = m),
-        (t._4 = h),
-        (t._5 = g),
-        (t._2 = f),
+        (t.J = h),
+        (t._5 = m),
+        (t._6 = g),
+        (t._3 = f),
         (t.n = _),
-        (t.W = y),
+        (t.X = y),
         (t.t = v),
         (t.s = b),
         (t.I = C),
@@ -2868,44 +2935,45 @@ webpackJsonp(
         (t.q = M),
         (t.x = F),
         (t.F = w),
-        (t._3 = B),
+        (t._4 = B),
         (t.E = O),
         (t.h = I),
         (t.H = R),
         (t.G = E),
-        (t.S = T),
+        (t.T = T),
         (t.f = k),
         (t.i = D),
         (t.d = G),
         (t.y = N),
-        (t.X = A),
-        (t._0 = L),
+        (t.Y = A),
+        (t._1 = L),
         (t.w = P),
         (t.c = x),
         (t.b = z),
         (t.k = U),
-        (t.V = V),
+        (t.W = V),
         (t.A = j),
         (t.D = W),
         (t.M = H),
-        (t.R = q),
+        (t.S = q),
         (t.K = K),
-        (t.Y = Y),
-        (t.Z = J),
+        (t.Z = Y),
+        (t._0 = J),
         (t.P = X),
         (t.o = Z),
         (t.p = Q),
-        (t._6 = $),
+        (t._7 = $),
         (t.j = ee),
         (t.B = te),
-        (t.T = ie),
-        (t._1 = ne),
+        (t.U = ie),
+        (t._2 = ne),
         (t.r = re),
         (t.N = oe),
         (t.O = ae),
-        (t.u = se);
-      var ce = i("Jmof");
-      i.n(ce);
+        (t.u = se),
+        (t.R = ce);
+      var le = i("Jmof");
+      i.n(le);
     },
     DRjr: function(e, t, i) {
       "use strict";
@@ -2940,10 +3008,10 @@ webpackJsonp(
           return p;
         }),
         i.d(t, "c", function() {
-          return m;
+          return h;
         }),
         i.d(t, "b", function() {
-          return h;
+          return m;
         });
       var n = 1,
         r = 4,
@@ -2955,8 +3023,8 @@ webpackJsonp(
         u = 358510,
         d = 366490,
         p = "18446744073709551615",
-        m = 0,
-        h = 2147483647;
+        h = 0,
+        m = 2147483647;
     },
     EqgU: function(e, t, i) {
       "use strict";
@@ -3069,7 +3137,7 @@ webpackJsonp(
           (e = e.slice("steam://openurl/".length)),
           d(e);
       }
-      function m(e) {
+      function h(e) {
         var t = e.ownerDocument;
         return (
           t.fullscreen ||
@@ -3078,7 +3146,7 @@ webpackJsonp(
           t.msFullscreenElement
         );
       }
-      function h(e) {
+      function m(e) {
         var t = e;
         t.requestFullscreen
           ? t.requestFullscreen()
@@ -3107,8 +3175,8 @@ webpackJsonp(
         (t.h = l),
         (t.k = u),
         (t.i = p),
-        (t.b = m),
-        (t.l = h),
+        (t.b = h),
+        (t.l = m),
         (t.g = g),
         i.d(t, "f", function() {
           return _;
@@ -3325,8 +3393,8 @@ webpackJsonp(
                 u = i(3),
                 d = n(u),
                 p = i(12),
-                m = i(18),
-                h = n(m),
+                h = i(18),
+                m = n(h),
                 g = i(31),
                 f = n(g),
                 _ = i(33),
@@ -3400,7 +3468,7 @@ webpackJsonp(
                             "div",
                             null,
                             !0 !== t &&
-                              l.default.createElement(h.default, {
+                              l.default.createElement(m.default, {
                                 position: this.props.position,
                                 highlightTimeout: i
                               }),
@@ -3480,20 +3548,20 @@ webpackJsonp(
               }
               function a() {
                 g &&
-                  m &&
+                  h &&
                   ((g = !1),
-                  m.length ? (h = m.concat(h)) : (f = -1),
-                  h.length && s());
+                  h.length ? (m = h.concat(m)) : (f = -1),
+                  m.length && s());
               }
               function s() {
                 if (!g) {
                   var e = r(a);
                   g = !0;
-                  for (var t = h.length; t; ) {
-                    for (m = h, h = []; ++f < t; ) m && m[f].run();
-                    (f = -1), (t = h.length);
+                  for (var t = m.length; t; ) {
+                    for (h = m, m = []; ++f < t; ) h && h[f].run();
+                    (f = -1), (t = m.length);
                   }
-                  (m = null), (g = !1), o(e);
+                  (h = null), (g = !1), o(e);
                 }
               }
               function c(e, t) {
@@ -3515,8 +3583,8 @@ webpackJsonp(
                   d = n;
                 }
               })();
-              var m,
-                h = [],
+              var h,
+                m = [],
                 g = !1,
                 f = -1;
               (p.nextTick = function(e) {
@@ -3524,7 +3592,7 @@ webpackJsonp(
                 if (arguments.length > 1)
                   for (var i = 1; i < arguments.length; i++)
                     t[i - 1] = arguments[i];
-                h.push(new c(e, t)), 1 !== h.length || g || r(s);
+                m.push(new c(e, t)), 1 !== m.length || g || r(s);
               }),
                 (c.prototype.run = function() {
                   this.fun.apply(null, this.array);
@@ -3582,8 +3650,8 @@ webpackJsonp(
                     (this.message = e), (this.stack = "");
                   }
                   function d(e) {
-                    function n(n, l, d, p, m, h, g) {
-                      if (((p = p || O), (h = h || d), g !== a))
+                    function n(n, l, d, p, h, m, g) {
+                      if (((p = p || O), (m = m || d), g !== a))
                         if (i)
                           r(
                             !1,
@@ -3599,7 +3667,7 @@ webpackJsonp(
                             (o(
                               !1,
                               "You are manually calling a React.PropTypes validation function for the `%s` prop on `%s`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.",
-                              h,
+                              m,
                               p
                             ),
                             (s[f] = !0),
@@ -3610,22 +3678,22 @@ webpackJsonp(
                           ? new u(
                               null === l[d]
                                 ? "The " +
-                                  m +
-                                  " `" +
                                   h +
+                                  " `" +
+                                  m +
                                   "` is marked as required in `" +
                                   p +
                                   "`, but its value is `null`."
                                 : "The " +
-                                  m +
-                                  " `" +
                                   h +
+                                  " `" +
+                                  m +
                                   "` is marked as required in `" +
                                   p +
                                   "`, but its value is `undefined`."
                             )
                           : null
-                        : e(l, d, p, m, h);
+                        : e(l, d, p, h, m);
                     }
                     if ("production" !== t.env.NODE_ENV)
                       var s = {},
@@ -3654,7 +3722,7 @@ webpackJsonp(
                     }
                     return d(t);
                   }
-                  function m(e) {
+                  function h(e) {
                     function t(t, i, n, r, o) {
                       if ("function" != typeof e)
                         return new u(
@@ -3685,7 +3753,7 @@ webpackJsonp(
                     }
                     return d(t);
                   }
-                  function h(e) {
+                  function m(e) {
                     function t(t, i, n, r, o) {
                       if (!(t[i] instanceof e)) {
                         var a = e.name || O;
@@ -3909,7 +3977,7 @@ webpackJsonp(
                       any: (function() {
                         return d(n.thatReturnsNull);
                       })(),
-                      arrayOf: m,
+                      arrayOf: h,
                       element: (function() {
                         function t(t, i, n, r, o) {
                           var a = t[i];
@@ -3929,7 +3997,7 @@ webpackJsonp(
                         }
                         return d(t);
                       })(),
-                      instanceOf: h,
+                      instanceOf: m,
                       node: (function() {
                         function e(e, t, i, n, r) {
                           return v(e[t])
@@ -4170,8 +4238,8 @@ webpackJsonp(
                 u = i(17),
                 d = n(u),
                 p = "mobx-react-devtool__updatesEnabled",
-                m = "mobx-react-devtool__logEnabled",
-                h = {
+                h = "mobx-react-devtool__logEnabled",
+                m = {
                   updatesEnabled: !1,
                   graphEnabled: !1,
                   logEnabled: !1,
@@ -4185,11 +4253,11 @@ webpackJsonp(
               g.setMaxListeners(1 / 0);
               var f = void 0,
                 _ = (t.setGlobalState = function(e) {
-                  h.logEnabled !== e.logEnabled &&
+                  m.logEnabled !== e.logEnabled &&
                     (!0 === e.logEnabled
                       ? (f && f(),
                         (f = (0, r.spy)(function(e) {
-                          return (0, d.default)(e, h.logFilter);
+                          return (0, d.default)(e, m.logFilter);
                         })))
                       : !1 === e.logEnabled && f && f()),
                     "undefined" != typeof window &&
@@ -4199,15 +4267,15 @@ webpackJsonp(
                         : !1 === e.updatesEnabled &&
                           window.localStorage.removeItem(p),
                       !0 === e.logEnabled
-                        ? window.localStorage.setItem(m, "YES")
+                        ? window.localStorage.setItem(h, "YES")
                         : !1 === e.logEnabled &&
-                          window.localStorage.removeItem(m)),
+                          window.localStorage.removeItem(h)),
                     !1 === e.graphEnabled && (e.hoverBoxes = []),
-                    (h = Object.assign({}, h, e)),
+                    (m = Object.assign({}, m, e)),
                     g.emit("update");
                 }),
                 y = ((t.getGlobalState = function() {
-                  return h;
+                  return m;
                 }),
                 (t.restoreUpdatesFromLocalstorage = function() {
                   if ("undefined" != typeof window && window.localStorage) {
@@ -4217,7 +4285,7 @@ webpackJsonp(
                 }),
                 (t.restoreLogFromLocalstorage = function() {
                   if ("undefined" != typeof window && window.localStorage) {
-                    var e = "YES" === window.localStorage.getItem(m);
+                    var e = "YES" === window.localStorage.getItem(h);
                     _({ logEnabled: e });
                   }
                 }),
@@ -4230,7 +4298,7 @@ webpackJsonp(
                   return { component: void 0, node: void 0 };
                 });
               (t._handleMouseMove = function(e) {
-                if (h.graphEnabled) {
+                if (m.graphEnabled) {
                   var t = e.target,
                     i = y(t).node;
                   if (i) {
@@ -4252,7 +4320,7 @@ webpackJsonp(
                 }
               }),
                 (t._handleClick = function(e) {
-                  if (h.graphEnabled) {
+                  if (m.graphEnabled) {
                     var t = e.target,
                       i = y(t).component;
                     if (i) {
@@ -4491,15 +4559,15 @@ webpackJsonp(
                   (_ = !0));
                 var i = !0 === e.spyReportStart,
                   n = !0 === e.spyReportEnd,
-                  h = void 0;
+                  m = void 0;
                 if (
                   (0 === y
-                    ? ((h = t(e)), i && !h && (v = !0))
-                    : n && v && 1 === y ? ((h = !1), (v = !1)) : (h = !0 !== v),
-                  h && n)
+                    ? ((m = t(e)), i && !m && (v = !0))
+                    : n && v && 1 === y ? ((m = !1), (v = !1)) : (m = !0 !== v),
+                  m && n)
                 )
                   o(e.time);
-                else if (h) {
+                else if (m) {
                   var g = i ? r : a;
                   switch (e.type) {
                     case "action":
@@ -4507,7 +4575,7 @@ webpackJsonp(
                         "%caction '%s' %s",
                         "color:dodgerblue",
                         e.name,
-                        u("(", m(e.target))
+                        u("(", h(e.target))
                       ),
                         a(e.arguments),
                         c();
@@ -4517,7 +4585,7 @@ webpackJsonp(
                         "%ctransaction '%s' %s",
                         "color:gray",
                         e.name,
-                        u("(", m(e.target))
+                        u("(", h(e.target))
                       );
                       break;
                     case "scheduled-reaction":
@@ -4535,7 +4603,7 @@ webpackJsonp(
                         "%ccomputed '%s' %s",
                         "color:#10a210",
                         d(e.object),
-                        u("(", m(e.target))
+                        u("(", h(e.target))
                       ),
                         o();
                       break;
@@ -4634,13 +4702,13 @@ webpackJsonp(
                 return e ? (0, f.getDebugName)(e) : String(e);
               }
               function p(e) {
-                return h(e)
+                return m(e)
                   ? "string" == typeof e && e.length > 100
                     ? e.substr(0, 97) + "..."
                     : e
-                  : u("(", m(e));
+                  : u("(", h(e));
               }
-              function m(e) {
+              function h(e) {
                 if (null === e || void 0 === e) return "";
                 if (e && "object" === (void 0 === e ? "undefined" : g(e))) {
                   if (e && e.$mobx) return e.$mobx.name;
@@ -4648,7 +4716,7 @@ webpackJsonp(
                 }
                 return "" + (void 0 === e ? "undefined" : g(e));
               }
-              function h(e) {
+              function m(e) {
                 return (
                   null === e ||
                   void 0 === e ||
@@ -4745,8 +4813,8 @@ webpackJsonp(
                 u = i(3),
                 d = n(u),
                 p = i(12),
-                m = i(19),
-                h = n(m),
+                h = i(19),
+                m = n(h),
                 g = i(20),
                 f = n(g),
                 _ = i(21),
@@ -4835,7 +4903,7 @@ webpackJsonp(
                                   })
                                 ),
                                 l.default.createElement(
-                                  h.default,
+                                  m.default,
                                   null,
                                   l.default.createElement(b.default, {
                                     id: "buttonGraph"
@@ -5194,8 +5262,8 @@ webpackJsonp(
                 u = i(3),
                 d = n(u),
                 p = i(22),
-                m = n(p),
-                h = i(12),
+                h = n(p),
+                m = i(12),
                 g = (function(e) {
                   function t() {
                     var e, i, n, a;
@@ -5219,9 +5287,9 @@ webpackJsonp(
                         return n.setState({});
                       }),
                       (n.handleToggleUpdates = function() {
-                        var e = (0, h.getGlobalState)(),
+                        var e = (0, m.getGlobalState)(),
                           t = e.updatesEnabled;
-                        (0, h.setGlobalState)({ updatesEnabled: !t });
+                        (0, m.setGlobalState)({ updatesEnabled: !t });
                       }),
                       (a = i),
                       o(n, a)
@@ -5233,18 +5301,18 @@ webpackJsonp(
                       {
                         key: "componentDidMount",
                         value: function() {
-                          h.eventEmitter.on("update", this.handleUpdate);
+                          m.eventEmitter.on("update", this.handleUpdate);
                           var e = this.props.highlightTimeout;
-                          (this.renderingMonitor = new m.default({
+                          (this.renderingMonitor = new h.default({
                             highlightTimeout: e
                           })),
-                            (0, h.restoreUpdatesFromLocalstorage)();
+                            (0, m.restoreUpdatesFromLocalstorage)();
                         }
                       },
                       {
                         key: "componentWillUnmount",
                         value: function() {
-                          h.eventEmitter.removeListener(
+                          m.eventEmitter.removeListener(
                             "update",
                             this.handleUpdate
                           ),
@@ -5254,7 +5322,7 @@ webpackJsonp(
                       {
                         key: "render",
                         value: function() {
-                          var e = (0, h.getGlobalState)(),
+                          var e = (0, m.getGlobalState)(),
                             t = e.updatesEnabled,
                             i = this.props.children;
                           return l.default.cloneElement(i, {
@@ -5451,7 +5519,7 @@ webpackJsonp(
                 u = i(3),
                 d = n(u),
                 p = i(24),
-                m = (function(e) {
+                h = (function(e) {
                   if (e && e.__esModule) return e;
                   var t = {};
                   if (null != e)
@@ -5460,7 +5528,7 @@ webpackJsonp(
                         (t[i] = e[i]);
                   return (t.default = e), t;
                 })(p),
-                h = (function(e) {
+                m = (function(e) {
                   function t() {
                     var e, i, n, a;
                     r(this, t);
@@ -5505,14 +5573,14 @@ webpackJsonp(
                               switch (i) {
                                 case "buttonUpdates":
                                   return t
-                                    ? m.buttonUpdatesActive
-                                    : m.buttonUpdates;
+                                    ? h.buttonUpdatesActive
+                                    : h.buttonUpdates;
                                 case "buttonGraph":
                                   return t
-                                    ? m.buttonGraphActive
-                                    : m.buttonGraph;
+                                    ? h.buttonGraphActive
+                                    : h.buttonGraph;
                                 case "buttonLog":
-                                  return t ? m.buttonLogActive : m.buttonLog;
+                                  return t ? h.buttonLogActive : h.buttonLog;
                               }
                             })(),
                             a = (function() {
@@ -5527,10 +5595,10 @@ webpackJsonp(
                             })(),
                             s = Object.assign(
                               {},
-                              m.button,
+                              h.button,
                               o,
-                              t && m.button.active,
-                              r && m.button.hover
+                              t && h.button.active,
+                              r && h.button.hover
                             );
                           return l.default.createElement("button", {
                             type: "button",
@@ -5546,7 +5614,7 @@ webpackJsonp(
                     t
                   );
                 })(c.Component);
-              (h.props = {
+              (m.props = {
                 onToggle: d.default.bool.isRequired,
                 active: d.default.bool.isRequired,
                 name: d.default.oneOf([
@@ -5555,7 +5623,7 @@ webpackJsonp(
                   "buttonLog"
                 ]).isRequired
               }),
-                (t.default = h);
+                (t.default = m);
             },
             function(e, t, i) {
               "use strict";
@@ -5676,7 +5744,7 @@ webpackJsonp(
                 u = i(3),
                 d = n(u),
                 p = i(32),
-                m = (function(e) {
+                h = (function(e) {
                   if (e && e.__esModule) return e;
                   var t = {};
                   if (null != e)
@@ -5685,7 +5753,7 @@ webpackJsonp(
                         (t[i] = e[i]);
                   return (t.default = e), t;
                 })(p),
-                h = (function(e) {
+                m = (function(e) {
                   function t() {
                     return (
                       r(this, t),
@@ -5706,7 +5774,7 @@ webpackJsonp(
                         value: function(e) {
                           switch (e.type) {
                             case "rendering":
-                              var t = m.rendering[e.renderInfo.cost] || {};
+                              var t = h.rendering[e.renderInfo.cost] || {};
                               return l.default.createElement(
                                 "div",
                                 {
@@ -5718,8 +5786,8 @@ webpackJsonp(
                                   },
                                   style: Object.assign(
                                     {},
-                                    m.box,
-                                    m.rendering,
+                                    h.box,
+                                    h.rendering,
                                     t,
                                     {
                                       left: e.x,
@@ -5731,7 +5799,7 @@ webpackJsonp(
                                 },
                                 l.default.createElement(
                                   "span",
-                                  { style: Object.assign({}, m.text, t.text) },
+                                  { style: Object.assign({}, h.text, t.text) },
                                   e.renderInfo.count,
                                   "x | ",
                                   e.renderInfo.renderTime,
@@ -5744,7 +5812,7 @@ webpackJsonp(
                             case "hover":
                               return l.default.createElement("div", {
                                 key: e.id,
-                                style: Object.assign({}, m.box, m.hover, {
+                                style: Object.assign({}, h.box, h.hover, {
                                   left: e.x,
                                   top: e.y,
                                   width: e.width,
@@ -5774,7 +5842,7 @@ webpackJsonp(
                     t
                   );
                 })(c.Component);
-              (h.propTypes = {
+              (m.propTypes = {
                 boxes: d.default.arrayOf(
                   d.default.shape({
                     type: d.default.oneOf(["rendering", "hover"]).isRequired,
@@ -5796,7 +5864,7 @@ webpackJsonp(
                   })
                 ).isRequired
               }),
-                (t.default = h);
+                (t.default = m);
             },
             function(e, t) {
               "use strict";
@@ -5898,8 +5966,8 @@ webpackJsonp(
                 u = i(34),
                 d = n(u),
                 p = i(12),
-                m = i(36),
-                h = (function(e) {
+                h = i(36),
+                m = (function(e) {
                   if (e && e.__esModule) return e;
                   var t = {};
                   if (null != e)
@@ -5907,7 +5975,7 @@ webpackJsonp(
                       Object.prototype.hasOwnProperty.call(e, i) &&
                         (t[i] = e[i]);
                   return (t.default = e), t;
-                })(m),
+                })(h),
                 g = (function(e) {
                   function t() {
                     var e, i, n, a;
@@ -5965,32 +6033,32 @@ webpackJsonp(
                             o = this;
                           return l.default.createElement(
                             "div",
-                            { style: h.item, key: n },
+                            { style: m.item, key: n },
                             l.default.createElement(
                               "span",
                               {
-                                style: Object.assign({}, h.box, i && h.box.root)
+                                style: Object.assign({}, m.box, i && m.box.root)
                               },
                               n
                             ),
                             r &&
                               l.default.createElement(
                                 "div",
-                                { style: h.tree },
+                                { style: m.tree },
                                 r.map(function(e, t) {
                                   return o.renderTreeItem(e, t == r.length - 1);
                                 })
                               ),
                             !i &&
                               l.default.createElement("span", {
-                                style: h.itemHorisontalDash
+                                style: m.itemHorisontalDash
                               }),
                             !i &&
                               l.default.createElement("span", {
                                 style: Object.assign(
                                   {},
-                                  h.itemVericalStick,
-                                  t && h.itemVericalStick.short
+                                  m.itemVericalStick,
+                                  t && m.itemVericalStick.short
                                 )
                               })
                           );
@@ -6007,15 +6075,15 @@ webpackJsonp(
                             t &&
                               l.default.createElement(
                                 "div",
-                                { style: h.graph },
+                                { style: m.graph },
                                 l.default.createElement(
                                   "span",
-                                  { style: h.close, onClick: this.handleClose },
+                                  { style: m.close, onClick: this.handleClose },
                                   "×"
                                 ),
                                 l.default.createElement(
                                   "div",
-                                  { style: h.tree },
+                                  { style: m.tree },
                                   this.renderTreeItem(t, !0, !0)
                                 )
                               )
@@ -6085,7 +6153,7 @@ webpackJsonp(
                 u = i(2),
                 d = n(u),
                 p = i(35),
-                m = (function(e) {
+                h = (function(e) {
                   if (e && e.__esModule) return e;
                   var t = {};
                   if (null != e)
@@ -6094,7 +6162,7 @@ webpackJsonp(
                         (t[i] = e[i]);
                   return (t.default = e), t;
                 })(p),
-                h = (function(e) {
+                m = (function(e) {
                   function t() {
                     var e, i, n, a;
                     r(this, t);
@@ -6148,12 +6216,12 @@ webpackJsonp(
                           return t
                             ? d.default.createElement(
                                 "div",
-                                { style: m.overlay, onClick: i },
+                                { style: h.overlay, onClick: i },
                                 d.default.createElement(
                                   "div",
                                   {
                                     key: "content",
-                                    style: m.modal,
+                                    style: h.modal,
                                     onClick: this.stopPropagation
                                   },
                                   t
@@ -6166,11 +6234,11 @@ webpackJsonp(
                     t
                   );
                 })(u.Component);
-              (h.propTypes = {
+              (m.propTypes = {
                 children: l.default.node,
                 onOverlayClick: l.default.func.isRequired
               }),
-                (t.default = h);
+                (t.default = m);
             },
             function(e, t) {
               "use strict";
@@ -6299,7 +6367,7 @@ webpackJsonp(
           u = "version",
           d = "mobile",
           p = "tablet",
-          m = {
+          h = {
             extend: function(e, t) {
               var i = {};
               for (var n in e)
@@ -6334,7 +6402,7 @@ webpackJsonp(
               return e.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");
             }
           },
-          h = {
+          m = {
             rgx: function(e, t) {
               for (var i, n, r, o, a, s, c = 0; c < t.length && !a; ) {
                 var l = t[c],
@@ -6370,8 +6438,8 @@ webpackJsonp(
               for (var i in t)
                 if ("object" == typeof t[i] && t[i].length > 0) {
                   for (var n = 0; n < t[i].length; n++)
-                    if (m.has(t[i][n], e)) return "?" === i ? void 0 : i;
-                } else if (m.has(t[i], e)) return "?" === i ? void 0 : i;
+                    if (h.has(t[i][n], e)) return "?" === i ? void 0 : i;
+                } else if (h.has(t[i], e)) return "?" === i ? void 0 : i;
               return e;
             }
           },
@@ -6496,7 +6564,7 @@ webpackJsonp(
               ],
               [[s, "GSA"], u],
               [/webkit.+?(mobile\s?safari|safari)(\/[\w\.]+)/i],
-              [s, [u, h.str, g.browser.oldsafari.version]],
+              [s, [u, m.str, g.browser.oldsafari.version]],
               [/(konqueror)\/([\w\.]+)/i, /(webkit|khtml)\/([\w\.]+)/i],
               [s, u],
               [/(navigator|netscape)\/([\w\.-]+)/i],
@@ -6518,19 +6586,19 @@ webpackJsonp(
               [/(?:(amd|x(?:(?:86|64)[_-])?|wow|win)64)[;\)]/i],
               [["architecture", "amd64"]],
               [/(ia32(?=;))/i],
-              [["architecture", m.lowerize]],
+              [["architecture", h.lowerize]],
               [/((?:i[346]|x)86)[;\)]/i],
               [["architecture", "ia32"]],
               [/windows\s(ce|mobile);\sppc;/i],
               [["architecture", "arm"]],
               [/((?:ppc|powerpc)(?:64)?)(?:\smac|;|\))/i],
-              [["architecture", /ower/, "", m.lowerize]],
+              [["architecture", /ower/, "", h.lowerize]],
               [/(sun4\w)[;\)]/i],
               [["architecture", "sparc"]],
               [
                 /((?:avr32|ia64(?=;))|68k(?=\))|arm(?:64|(?=v\d+;))|(?=atmel\s)avr|(?:irix|mips|sparc)(?:64)?(?=;)|pa-risc)/i
               ],
-              [["architecture", m.lowerize]]
+              [["architecture", h.lowerize]]
             ],
             device: [
               [/\((ipad|playbook);[\w\s\);-]+(rim|apple)/i],
@@ -6551,7 +6619,7 @@ webpackJsonp(
               [/(kf[A-z]+)\sbuild\/.+silk\//i],
               [a, [l, "Amazon"], [c, p]],
               [/(sd|kf)[0349hijorstuw]+\sbuild\/.+silk\//i],
-              [[a, h.str, g.device.amazon.model], [l, "Amazon"], [c, d]],
+              [[a, m.str, g.device.amazon.model], [l, "Amazon"], [c, d]],
               [/\((ip[honed|\s\w*]+);.+(apple)/i],
               [a, l, [c, d]],
               [/\((ip[honed|\s\w*]+);/i],
@@ -6584,8 +6652,8 @@ webpackJsonp(
               [a, [l, "Sony"], [c, "console"]],
               [/(sprint\s(\w+))/i],
               [
-                [l, h.str, g.device.sprint.vendor],
-                [a, h.str, g.device.sprint.model],
+                [l, m.str, g.device.sprint.vendor],
+                [a, m.str, g.device.sprint.model],
                 [c, d]
               ],
               [/(lenovo)\s?(S(?:5000|6000)+(?:[-][\w+]))/i],
@@ -6616,7 +6684,7 @@ webpackJsonp(
               [/android.+\s(mz60\d|xoom[\s2]{0,2})\sbuild\//i],
               [a, [l, "Motorola"], [c, p]],
               [/hbbtv\/\d+\.\d+\.\d+\s+\([\w\s]*;\s*(\w[^;]*);([^;]*)/i],
-              [[l, m.trim], [a, m.trim], [c, "smarttv"]],
+              [[l, h.trim], [a, h.trim], [c, "smarttv"]],
               [/hbbtv.+maple;(\d+)/i],
               [[a, /^/, "SmartTV"], [l, "Samsung"], [c, "smarttv"]],
               [/\(dtv[\);].+(aquos)/i],
@@ -6732,7 +6800,7 @@ webpackJsonp(
               [/android.+(Gigaset)[\s\-]+(Q\w{1,9})\s+build/i],
               [l, a, [c, p]],
               [/\s(tablet|tab)[;\/]/i, /\s(mobile)(?:[;\/]|\ssafari)/i],
-              [[c, m.lowerize], l, a],
+              [[c, h.lowerize], l, a],
               [/(android[\w\.\s\-]{0,9});.+build/i],
               [a, [l, "Generic"]]
             ],
@@ -6757,9 +6825,9 @@ webpackJsonp(
                 /(windows\sphone(?:\sos)*)[\s\/]?([\d\.\s\w]*)/i,
                 /(windows\smobile|windows)[\s\/]?([ntce\d\.\s]+\w)/i
               ],
-              [s, [u, h.str, g.os.windows.version]],
+              [s, [u, m.str, g.os.windows.version]],
               [/(win(?=3|9|n)|win\s9x\s)([nt\d\.]+)/i],
-              [[s, "Windows"], [u, h.str, g.os.windows.version]],
+              [[s, "Windows"], [u, m.str, g.os.windows.version]],
               [/\((bb)(10);/i],
               [[s, "BlackBerry"], u],
               [
@@ -6819,29 +6887,29 @@ webpackJsonp(
                 (r && r.navigator && r.navigator.userAgent
                   ? r.navigator.userAgent
                   : ""),
-              n = t ? m.extend(f, t) : f;
+              n = t ? h.extend(f, t) : f;
             return (
               (this.getBrowser = function() {
                 var e = { name: void 0, version: void 0 };
                 return (
-                  h.rgx.call(e, i, n.browser), (e.major = m.major(e.version)), e
+                  m.rgx.call(e, i, n.browser), (e.major = h.major(e.version)), e
                 );
               }),
               (this.getCPU = function() {
                 var e = { architecture: void 0 };
-                return h.rgx.call(e, i, n.cpu), e;
+                return m.rgx.call(e, i, n.cpu), e;
               }),
               (this.getDevice = function() {
                 var e = { vendor: void 0, model: void 0, type: void 0 };
-                return h.rgx.call(e, i, n.device), e;
+                return m.rgx.call(e, i, n.device), e;
               }),
               (this.getEngine = function() {
                 var e = { name: void 0, version: void 0 };
-                return h.rgx.call(e, i, n.engine), e;
+                return m.rgx.call(e, i, n.engine), e;
               }),
               (this.getOS = function() {
                 var e = { name: void 0, version: void 0 };
-                return h.rgx.call(e, i, n.os), e;
+                return m.rgx.call(e, i, n.os), e;
               }),
               (this.getResult = function() {
                 return {
@@ -7023,7 +7091,7 @@ webpackJsonp(
                   null)
                 : (this.InternalHideSubMenu(),
                   (this.m_elSubmenuItem = e),
-                  (this.m_submenu = new m(this, t(), e)),
+                  (this.m_submenu = new h(this, t(), e)),
                   this.m_submenu.Show(),
                   this.m_submenu);
             }),
@@ -7140,7 +7208,7 @@ webpackJsonp(
             t
           );
         })(d),
-        m = (function(e) {
+        h = (function(e) {
           function t(t, i, n) {
             var r = e.call(this, n.ownerDocument.defaultView) || this;
             (r.m_parentInstance = t),
@@ -7806,8 +7874,8 @@ and limitations under the License.
         u = (i.n(l), i("z9An")),
         d = i("EqgU"),
         p = i("KLxG"),
-        m = i("5Pz3"),
-        h = i("huD9"),
+        h = i("5Pz3"),
+        m = i("huD9"),
         g = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -7960,7 +8028,7 @@ and limitations under the License.
                   }),
                   t,
                   " ",
-                  c.createElement(m.l, null)
+                  c.createElement(h.l, null)
                 )
               );
             }),
@@ -8097,13 +8165,13 @@ and limitations under the License.
                   p = i.innerHeight;
                 if (o) {
                   (c += i.screenLeft), (l += i.screenTop), (n = d.h(i, n));
-                  var m = i.screen,
-                    h = 0,
+                  var h = i.screen,
+                    m = 0,
                     g = 0;
-                  m.availLeft && (h = m.availLeft),
-                    m.availTop && (g = m.availTop),
-                    (u = h + m.availWidth),
-                    (p = g + m.availHeight);
+                  h.availLeft && (m = h.availLeft),
+                    h.availTop && (g = h.availTop),
+                    (u = m + h.availWidth),
+                    (p = g + h.availHeight);
                 }
                 (a.bOverlapHorizontal || a.bOverlapVertical) &&
                   (c = l = void 0);
@@ -8244,7 +8312,7 @@ and limitations under the License.
               }
             }),
             a.c([p.a], t.prototype, "BindMenuElement", null),
-            a.c([p.a, Object(h.a)(100)], t.prototype, "OnMenuMutation", null),
+            a.c([p.a, Object(m.a)(100)], t.prototype, "OnMenuMutation", null),
             a.c([p.a], t.prototype, "OnWindowResize", null),
             a.c([p.a], t.prototype, "OnBlur", null),
             a.c([p.a], t.prototype, "OnKeyDown", null),
@@ -8326,22 +8394,22 @@ and limitations under the License.
         return t;
       }
       function a(e, t, i) {
-        return mi.AddCallback(e, t, function(e) {
+        return hi.AddCallback(e, t, function(e) {
           i(ui.InitFromMsg(t, e));
         });
       }
       function s(e, t, i) {
-        return mi.AddCallback(e, t, function(e) {
+        return hi.AddCallback(e, t, function(e) {
           Object(di.runInAction)(function() {
             i(ui.InitFromMsg(t, e));
           });
         });
       }
       function c(e, t) {
-        return mi.AddServiceNotificationHandler(e, t);
+        return hi.AddServiceNotificationHandler(e, t);
       }
       function l(e, t) {
-        return mi.AddServiceNotificationHandler(e, function(e) {
+        return hi.AddServiceNotificationHandler(e, function(e) {
           var i;
           return (
             Object(di.runInAction)(function() {
@@ -8385,13 +8453,13 @@ and limitations under the License.
           if (c)
             for (var l = 0, u = c; l < u.length; l++) {
               var d = u[l],
-                h = d.slice(1, -1),
-                g = m(h, r),
+                m = d.slice(1, -1),
+                g = h(m, r),
                 f = p(g, t, i, n, r);
               if (!f) return "";
               a = a.replace(d, f);
             }
-          a = m(a, r);
+          a = h(a, r);
         } else if (
           ((t || i) &&
             console.log(
@@ -8408,7 +8476,7 @@ and limitations under the License.
           return e;
         return a;
       }
-      function m(e, t) {
+      function h(e, t) {
         var i = /%[A-Za-z0-9_:]+%/g,
           n = e.match(i);
         if (n)
@@ -8421,7 +8489,7 @@ and limitations under the License.
           }
         return e;
       }
-      function h(e, t) {
+      function m(e, t) {
         var i = ".jpg";
         44 == e.length && ((i = e.substr(-4)), (e = e.substr(0, 40)));
         var n = ei.a.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
@@ -8989,7 +9057,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "closeButton", onClick: e.onEscKeypress },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   )
                 ),
               Ca.createElement($d, null, e.children)
@@ -9020,7 +9088,7 @@ and limitations under the License.
           e.children
         );
       }
-      function me(e, t, i, n, r, o, a) {
+      function he(e, t, i, n, r, o, a) {
         return (
           void 0 === r && (r = Object(la.b)("#Button_Cancel")),
           ce(
@@ -9037,10 +9105,10 @@ and limitations under the License.
           )
         );
       }
-      function he(e, t, i, n, r, o, a) {
+      function me(e, t, i, n, r, o, a) {
         return (
           void 0 === r && (r = Object(la.b)("#Button_Cancel")),
-          me(e, t, i, n, r, o, a)
+          he(e, t, i, n, r, o, a)
             .then(function() {
               return Promise.resolve(!0);
             })
@@ -9078,7 +9146,7 @@ and limitations under the License.
       }
       function ye(e) {
         return Ca.createElement(
-          ph,
+          pm,
           { friend: e.friend, context: null },
           Ca.createElement(
             "div",
@@ -9089,7 +9157,7 @@ and limitations under the License.
               }
             },
             Ca.createElement("span", null, e.friend.display_name),
-            Ca.createElement(hd._5, null)
+            Ca.createElement(md._6, null)
           )
         );
       }
@@ -9276,7 +9344,7 @@ and limitations under the License.
             );
       }
       function Re(e, t) {
-        de(Ca.createElement(mp, null), t, "ChangePersonaDialog", {
+        de(Ca.createElement(hp, null), t, "ChangePersonaDialog", {
           strTitle: Object(la.b)("#Friend_Menu_AddNickname"),
           popupWidth: 640,
           popupHeight: 400
@@ -9481,7 +9549,7 @@ and limitations under the License.
         return Ca.createElement(
           "div",
           { className: "openGroupButton", title: t, onClick: e.onClick },
-          Ca.createElement(hd.k, null)
+          Ca.createElement(md.k, null)
         );
       }
       function He(e, t) {
@@ -9507,7 +9575,7 @@ and limitations under the License.
         );
       }
       function Ke(e, t) {
-        de(Ca.createElement(nm, { groupView: t }), e, "ChatRoomGroupSettings", {
+        de(Ca.createElement(nh, { groupView: t }), e, "ChatRoomGroupSettings", {
           strTitle: Object(la.b)("#GroupSettings"),
           popupWidth: 842,
           popupHeight: 600
@@ -9515,7 +9583,7 @@ and limitations under the License.
       }
       function Ye(e, t) {
         de(
-          Ca.createElement(bm, { browserContext: e }),
+          Ca.createElement(bh, { browserContext: e }),
           t,
           Object(la.b)("#Settings"),
           {
@@ -9531,7 +9599,7 @@ and limitations under the License.
         var n = 60 * i;
         i < 2 && (n -= 32),
           de(
-            Ca.createElement(Sm, { group: t.GetGroup() }),
+            Ca.createElement(Sh, { group: t.GetGroup() }),
             e,
             "ChatRoomGroupNotificationSettings",
             {
@@ -9645,7 +9713,7 @@ and limitations under the License.
                       : "#Chat_Actions_LeaveChatRoomGroup_Confirm"),
                   [
                     4,
-                    he(
+                    me(
                       e,
                       Object(la.b)("#Chat_Actions_LeaveChatRoomGroup"),
                       Object(la.b)(n, t.name),
@@ -9662,7 +9730,7 @@ and limitations under the License.
       function it(e, t, i, n, r) {
         void 0 === n && (n = !1),
           de(
-            Ca.createElement(xm, {
+            Ca.createElement(xh, {
               browserContext: e,
               chatViewToReplace: i,
               bHideChatNameEntry: n,
@@ -9722,7 +9790,7 @@ and limitations under the License.
         );
       }
       function at(e) {
-        de(Ca.createElement(Hm, null), e, "ChangeLog", {
+        de(Ca.createElement(Hh, null), e, "ChangeLog", {
           strTitle: Object(la.b)("#changeLog_Title"),
           popupWidth: 640,
           popupHeight: 680
@@ -9730,7 +9798,7 @@ and limitations under the License.
       }
       function st(e, t, i) {
         return Object(gd.a)(
-          Ca.createElement(lh, {
+          Ca.createElement(lm, {
             browserContext: e,
             appid: t,
             ownerWindow: i.currentTarget.ownerDocument.defaultView
@@ -9740,14 +9808,14 @@ and limitations under the License.
       }
       function ct(e) {
         return Ca.createElement(
-          vh,
+          vm,
           {
             target: e.target,
             className: "friendHover miniProfileHover",
             visibilityObserver: e.hoverInstance,
             onNoSpace: e.onNoSpace
           },
-          Ca.createElement(bh, { hoverInstance: e.hoverInstance })
+          Ca.createElement(bm, { hoverInstance: e.hoverInstance })
         );
       }
       function lt(e) {
@@ -9798,7 +9866,7 @@ and limitations under the License.
       function dt(e) {
         H_.UIDisplayPrefs.bDontShowVoiceAlert ||
           (e &&
-            de(Ca.createElement(Wh, null), e, "ActiveVoiceAlert", {
+            de(Ca.createElement(Wm, null), e, "ActiveVoiceAlert", {
               strTitle: Object(la.b)("#Chat_StillInVoiceDialog_Title"),
               popupWidth: 650,
               popupHeight: 340
@@ -9825,7 +9893,7 @@ and limitations under the License.
               "menubar,location,resizable,scrollbars,status,noopener"
             );
       }
-      function mt(e) {
+      function ht(e) {
         var t = function() {
           return e.onMouseEnter(e.pos);
         };
@@ -9841,11 +9909,11 @@ and limitations under the License.
           Ca.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            Ca.createElement(hd.O, null)
+            Ca.createElement(md.O, null)
           )
         );
       }
-      function ht(e) {
+      function mt(e) {
         var t = e.startPos,
           i = e.endPos,
           n = "",
@@ -9880,7 +9948,7 @@ and limitations under the License.
       }
       function gt(e, t, i, n) {
         de(
-          Sa.a.createElement(xm, {
+          Sa.a.createElement(xh, {
             browserContext: e,
             bHideChatNameEntry: !1,
             vecInvitePlayers: n,
@@ -9901,7 +9969,7 @@ and limitations under the License.
         return Sa.a.createElement(
           "div",
           { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
-          Sa.a.createElement(hd._1, null),
+          Sa.a.createElement(md._2, null),
           Object(la.b)("#Broadcast_WatchWithFriends")
         );
       }
@@ -9913,7 +9981,7 @@ and limitations under the License.
             title: Object(la.b)("#Broadcast_ToggleChat"),
             onClick: e.onClick
           },
-          Sa.a.createElement(hd.u, { showChat: e.hideIcon })
+          Sa.a.createElement(md.u, { showChat: e.hideIcon })
         );
       }
       function yt(e) {
@@ -9984,7 +10052,7 @@ and limitations under the License.
                       r
                     )),
                     (s = Object(la.b)("#Chat_Actions_Delete")),
-                    [4, he(e, o, a, s)]);
+                    [4, me(e, o, a, s)]);
               case 1:
                 return u.sent() ? [4, t.DeleteChatMessges(i)] : [2];
               case 2:
@@ -10177,7 +10245,7 @@ and limitations under the License.
         }) < 0 && Xf.push(e);
       }
       function Rt(e) {
-        mn.c(Xf, e);
+        hn.c(Xf, e);
       }
       function Et() {
         Jf = Wf.Loaded;
@@ -10209,7 +10277,7 @@ and limitations under the License.
           lobbyinvite: d_,
           tradeoffer: f_,
           broadcastinvite: p_,
-          broadcastviewrequest: m_
+          broadcastviewrequest: h_
         });
       }
       function At() {
@@ -10223,7 +10291,7 @@ and limitations under the License.
           og: r_,
           tweet: o_,
           inviteurl: c_,
-          publishedfile: h_,
+          publishedfile: m_,
           tradeofferlink: g_,
           econitem: y_,
           steamstore: S_,
@@ -10240,7 +10308,7 @@ and limitations under the License.
         return (
           null == t && (t = e.href),
           Ca.createElement(
-            Fh,
+            Fm,
             { text: t },
             Ca.createElement(
               "div",
@@ -11296,8 +11364,8 @@ and limitations under the License.
             e
           );
         })(),
-        mi = new pi(),
-        hi = i("EKta"),
+        hi = new pi(),
+        mi = i("EKta"),
         gi = (ri.Message,
         ri.Message,
         ri.Message,
@@ -14551,13 +14619,13 @@ and limitations under the License.
                     }, 12e3)));
                 var d,
                   p = 0,
-                  m = 0,
-                  h = function(t) {
+                  h = 0,
+                  m = function(t) {
                     var i = (t.msPing || 0) + (t.nCMLoad || 0);
                     i < r &&
                       ((n = t), (r = i), !l && e.BCMOkToUse(n, c) && u(n)),
                       (!l && d()) ||
-                        (0 == --m &&
+                        (0 == --h &&
                           (l ||
                             u(
                               e.BCMOkToUse(n, "seriouslytimeout") ? n : void 0
@@ -14568,14 +14636,14 @@ and limitations under the License.
                     var t = i[p++];
                     return (
                       e.PingCM(t).then(function() {
-                        h(t);
+                        m(t);
                       }),
                       !0
                     );
                   }
                   return !1;
                 };
-                for (var g = 0; g < 4; g++) d() && m++;
+                for (var g = 0; g < 4; g++) d() && h++;
               });
             }),
             (e.prototype.GetCMWithFewestDisconnects = function() {
@@ -15977,8 +16045,8 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        mn = i("vwkX"),
-        hn = i("KLxG"),
+        hn = i("vwkX"),
+        mn = i("KLxG"),
         gn = (function() {
           function e() {
             this.m_vecCallbacks = [];
@@ -15990,7 +16058,7 @@ and limitations under the License.
                 this.m_vecCallbacks.push(e),
                 {
                   Unregister: function() {
-                    mn.c(t.m_vecCallbacks, e);
+                    hn.c(t.m_vecCallbacks, e);
                   }
                 }
               );
@@ -16030,7 +16098,7 @@ and limitations under the License.
               var e = this.m_fnCallback;
               (this.m_fnCallback = void 0), e();
             }),
-            ti.c([hn.a], e.prototype, "ScheduledInternal", null),
+            ti.c([mn.a], e.prototype, "ScheduledInternal", null),
             e
           );
         })(),
@@ -16256,7 +16324,7 @@ and limitations under the License.
                   var i = function(i) {
                     i.Hdr().set_jobid_target(e.Hdr().jobid_source()), t.Send(i);
                   };
-                  mi.DispatchMsgToHandlers(e, i) ||
+                  hi.DispatchMsgToHandlers(e, i) ||
                     this.DEBUG_LogCMInterfaceActivity(e, "receive", !1);
                 } else
                   console.error(
@@ -16562,13 +16630,13 @@ and limitations under the License.
               return new Promise(function(n, r) {
                 if (i.m_hSharedConnection) {
                   i.DEBUG_LogCMInterfaceActivity(e, "send");
-                  var o = hi.fromByteArray(e.Serialize());
+                  var o = mi.fromByteArray(e.Serialize());
                   SteamClient.SharedConnection.SendMsgAndAwaitResponse(
                     i.m_hSharedConnection,
                     o
                   )
                     .then(function(e) {
-                      var r = new ii(hi.toByteArray(e)),
+                      var r = new ii(mi.toByteArray(e)),
                         o = ui.InitFromPacket(t, r);
                       i.DEBUG_LogCMInterfaceActivity(o, "receive", !0),
                         o.BIsValid()
@@ -16587,7 +16655,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.SendInternal = function(e) {
-              var t = hi.fromByteArray(e.Serialize());
+              var t = mi.fromByteArray(e.Serialize());
               return (
                 SteamClient.SharedConnection.SendMsg(
                   this.m_hSharedConnection,
@@ -16597,7 +16665,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnMsgRecvd = function(e) {
-              var t = new ii(hi.toByteArray(e)),
+              var t = new ii(mi.toByteArray(e)),
                 i = li.InitHeaderFromPacket(t);
               this.DispatchMessage(i);
             }),
@@ -16649,7 +16717,7 @@ and limitations under the License.
                 (this.m_hEMsgRegistrationObserver = Object(di.autorun)(
                   function() {
                     if (t.m_hSharedConnection) {
-                      for (var e = 0, i = mi.emsg_list; e < i.length; e++) {
+                      for (var e = 0, i = hi.emsg_list; e < i.length; e++) {
                         var n = i[e];
                         t.m_setEMsgHandlers.has(n) ||
                           (t.m_setEMsgHandlers.add(n),
@@ -16659,7 +16727,7 @@ and limitations under the License.
                           ));
                       }
                       for (
-                        var r = 0, o = mi.servicemethod_list;
+                        var r = 0, o = hi.servicemethod_list;
                         r < o.length;
                         r++
                       ) {
@@ -16919,8 +16987,8 @@ and limitations under the License.
               } else this.m_bWaitingToReconnect = !0;
             }),
             ti.c([di.observable], e.prototype, "m_eWebLogonState", void 0),
-            ti.c([hn.a], e.prototype, "OnCMDisconnected", null),
-            ti.c([hn.a], e.prototype, "OnCMLoggedOn", null),
+            ti.c([mn.a], e.prototype, "OnCMDisconnected", null),
+            ti.c([mn.a], e.prototype, "OnCMLoggedOn", null),
             e
           );
         })(),
@@ -17615,21 +17683,21 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "avatar_url", {
               get: function() {
-                return h(this.m_strAvatarHash);
+                return m(this.m_strAvatarHash);
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "avatar_url_medium", {
               get: function() {
-                return h(this.m_strAvatarHash, "_medium");
+                return m(this.m_strAvatarHash, "_medium");
               },
               enumerable: !0,
               configurable: !0
             }),
             Object.defineProperty(e.prototype, "avatar_url_full", {
               get: function() {
-                return h(this.m_strAvatarHash, "_full");
+                return m(this.m_strAvatarHash, "_full");
               },
               enumerable: !0,
               configurable: !0
@@ -17745,7 +17813,7 @@ and limitations under the License.
                     "/" +
                     e +
                     ".jpg"
-                : h(t);
+                : m(t);
             }),
             ti.c([di.observable], e.prototype, "m_bInitialized", void 0),
             ti.c([di.observable], e.prototype, "m_strName", void 0),
@@ -19438,7 +19506,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        mr = (function(e) {
+        hr = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -19491,7 +19559,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        hr = (ri.Message,
+        mr = (ri.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -23153,13 +23221,13 @@ and limitations under the License.
           return (
             ti.d(t, e),
             (t.prototype.messages = function() {
-              return ri.Message.getRepeatedWrapperField(this, mo, 1);
+              return ri.Message.getRepeatedWrapperField(this, ho, 1);
             }),
             (t.prototype.set_messages = function(e) {
               ri.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_messages = function(e, t) {
-              return ri.Message.addToRepeatedWrapperField(this, 1, e, mo, t);
+              return ri.Message.addToRepeatedWrapperField(this, 1, e, ho, t);
             }),
             (t.prototype.more_available = function() {
               return ri.Message.getField(this, 4);
@@ -23182,8 +23250,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new mo();
-                    t.readMessage(i, mo.deserializeBinaryFromReader),
+                    var i = new ho();
+                    t.readMessage(i, ho.deserializeBinaryFromReader),
                       e.add_messages(i);
                     break;
                   case 4:
@@ -23202,7 +23270,7 @@ and limitations under the License.
               var i;
               (i = e.messages()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, mo.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(1, i, ho.serializeBinaryToWriter),
                 void 0 !== (i = ri.Message.getField(e, 4)) && t.writeBool(4, i);
             }),
             (t.prototype.getClassName = function() {
@@ -23211,7 +23279,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        mo = (function(e) {
+        ho = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -23318,7 +23386,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        ho = (function(e) {
+        mo = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -26836,15 +26904,15 @@ and limitations under the License.
           return e.SendMsg("ChatRoom.RevokeInviteToGroup#1", t, lr);
         }
         function d(e, t) {
-          return e.SendMsg("ChatRoom.CreateRole#1", t, mr);
+          return e.SendMsg("ChatRoom.CreateRole#1", t, hr);
         }
         function p(e, t) {
-          return e.SendMsg("ChatRoom.GetRoles#1", t, hr);
-        }
-        function m(e, t) {
-          return e.SendMsg("ChatRoom.RenameRole#1", t, fr);
+          return e.SendMsg("ChatRoom.GetRoles#1", t, mr);
         }
         function h(e, t) {
+          return e.SendMsg("ChatRoom.RenameRole#1", t, fr);
+        }
+        function m(e, t) {
           return e.SendMsg("ChatRoom.ReorderRole#1", t, yr);
         }
         function g(e, t) {
@@ -26952,8 +27020,8 @@ and limitations under the License.
           (e.RevokeInviteToGroup = u),
           (e.CreateRole = d),
           (e.GetRoles = p),
-          (e.RenameRole = m),
-          (e.ReorderRole = h),
+          (e.RenameRole = h),
+          (e.ReorderRole = m),
           (e.DeleteRole = g),
           (e.GetRoleActions = f),
           (e.ReplaceRoleActions = _),
@@ -27008,7 +27076,7 @@ and limitations under the License.
           }),
           (e.NotifyMemberStateChangeHandler = {
             name: "ChatRoomClient.NotifyMemberStateChange#1",
-            request: ho
+            request: mo
           }),
           (e.NotifyChatRoomHeaderStateChangeHandler = {
             name: "ChatRoomClient.NotifyChatRoomHeaderStateChange#1",
@@ -27203,7 +27271,7 @@ and limitations under the License.
             (e.prototype.MoveTabToIndex = function(e, t) {
               var i = this.m_vecTabs.indexOf(e);
               -1 != i &&
-                mn.e(this.m_vecTabs, i, Math.min(t, this.m_vecTabs.length - 1));
+                hn.e(this.m_vecTabs, i, Math.min(t, this.m_vecTabs.length - 1));
             }),
             (e.prototype.Focus = function() {
               dd.UIStore.FocusTabSet(this);
@@ -27265,8 +27333,8 @@ and limitations under the License.
             e
           );
         })(),
-        ma = i("3e1Q"),
-        ha = (function(e) {
+        ha = i("3e1Q"),
+        ma = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -27306,14 +27374,14 @@ and limitations under the License.
             ti.c([di.action], t.prototype, "InitDirectInvite", null),
             t
           );
-        })(ma.b),
+        })(ha.b),
         ga = (function() {
           function e(e) {
             (this.m_mapInviteByCode = new Map()), (this.m_ChatStore = e);
           }
           return (
             (e.prototype.JoinChatGroup = function(e, t, i) {
-              var n = new ha();
+              var n = new ma();
               return n.InitDirectInvite(e, t), this.AcceptInvite(n, i);
             }),
             (e.prototype.AcceptInvite = function(e, t) {
@@ -27352,7 +27420,7 @@ and limitations under the License.
               var t = this,
                 i = this.m_mapInviteByCode.get(e);
               if (
-                (i || ((i = new ha(e)), this.m_mapInviteByCode.set(e, i)),
+                (i || ((i = new ma(e)), this.m_mapInviteByCode.set(e, i)),
                 !i.BIsReady() ||
                   !this.m_ChatStore.GetChatRoomGroup(i.GetChatRoomGroupID()))
               ) {
@@ -27377,7 +27445,7 @@ and limitations under the License.
             }),
             (e.prototype.GetDirectInviteInfo = function(e, t, i) {
               var n = this,
-                r = new ha(),
+                r = new ma(),
                 o = this.m_ChatStore.GetChatRoomGroup(e);
               if (o && o.GetChatRoom(t)) r.InitDirectInvite(e, t);
               else {
@@ -27904,18 +27972,18 @@ and limitations under the License.
                 } else if (3 == s.type) {
                   var p = n && n.pop();
                   if (p && p.tagname == s.text && r[p.tagname]) {
-                    var m = r[p.tagname],
-                      h = n.map(function(e) {
+                    var h = r[p.tagname],
+                      m = n.map(function(e) {
                         return e.tagname;
                       }),
                       g = Ca.createElement.apply(
                         Ca,
                         [
-                          m,
+                          h,
                           {
                             context: t,
                             tagname: p.tagname,
-                            parentTags: h,
+                            parentTags: m,
                             args: this.ParseTagArguments(p.argumentstring)
                           }
                         ].concat(i.elements)
@@ -30718,7 +30786,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        ms = (function(e) {
+        hs = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -30769,7 +30837,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        hs = (function(e) {
+        ms = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -31733,7 +31801,7 @@ and limitations under the License.
           return e.SendMsg("Player.GetNicknameList#1", t, ds);
         }
         function a(e, t) {
-          return e.SendMsg("Player.AddFriend#1", t, hs);
+          return e.SendMsg("Player.AddFriend#1", t, ms);
         }
         function s(e, t) {
           return e.SendMsg("Player.RemoveFriend#1", t, fs);
@@ -34236,7 +34304,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        mc = (function(e) {
+        hc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -34271,7 +34339,7 @@ and limitations under the License.
             t
           );
         })(ri.Message),
-        hc = (function(e) {
+        mc = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -34329,7 +34397,7 @@ and limitations under the License.
           return e.SendMsg("FriendsList.GetCategories#1", t, ac);
         }
         function i(e, t) {
-          return e.SendMsg("FriendsList.GetFriendsList#1", t, hc);
+          return e.SendMsg("FriendsList.GetFriendsList#1", t, mc);
         }
         function n(e, t) {
           return e.SendMsg("FriendsList.GetFavorites#1", t, lc);
@@ -34556,7 +34624,7 @@ and limitations under the License.
             }),
             Object.defineProperty(e.prototype, "avatar_url", {
               get: function() {
-                return h(this.m_strAvatarHash);
+                return m(this.m_strAvatarHash);
               },
               enumerable: !0,
               configurable: !0
@@ -34565,7 +34633,7 @@ and limitations under the License.
               get: function() {
                 return this.BIsOGG()
                   ? this.avatar_url
-                  : h(this.m_strAvatarHash, "_medium");
+                  : m(this.m_strAvatarHash, "_medium");
               },
               enumerable: !0,
               configurable: !0
@@ -34574,7 +34642,7 @@ and limitations under the License.
               get: function() {
                 return this.BIsOGG()
                   ? this.avatar_url
-                  : h(this.m_strAvatarHash, "_full");
+                  : m(this.m_strAvatarHash, "_full");
               },
               enumerable: !0,
               configurable: !0
@@ -34839,7 +34907,7 @@ and limitations under the License.
               });
               return -1 === i || (void 0 !== t && i !== t)
                 ? (-1 !== i
-                    ? mn.e(this.m_rgFavorites, i, t > i ? t - 1 : t)
+                    ? hn.e(this.m_rgFavorites, i, t > i ? t - 1 : t)
                     : void 0 !== t
                       ? this.m_rgFavorites.splice(t, 0, e)
                       : this.m_rgFavorites.push(e),
@@ -34847,7 +34915,7 @@ and limitations under the License.
                 : Promise.resolve(!0);
             }),
             (e.prototype.RemoveFromFavorites = function(e) {
-              return mn.d(this.m_rgFavorites, function(t) {
+              return hn.d(this.m_rgFavorites, function(t) {
                 return C(t, e);
               })
                 ? this.SaveFavorites()
@@ -34906,12 +34974,12 @@ and limitations under the License.
             }),
             (e.prototype.FillInChatUsabilityMetrics = function(e) {
               e.metrics().set_friends_favorite_count(
-                mn.b(this.m_rgFavorites, function(e) {
+                hn.b(this.m_rgFavorites, function(e) {
                   return !!e.friend;
                 })
               ),
                 e.metrics().set_group_chat_favorite_count(
-                  mn.b(this.m_rgFavorites, function(e) {
+                  hn.b(this.m_rgFavorites, function(e) {
                     return !!e.chat || !!e.clan;
                   })
                 );
@@ -35509,8 +35577,8 @@ and limitations under the License.
                       u = c.m_strPlayerName,
                       d = c.m_unGamePlayedAppID,
                       p = c.m_strGameExtraInfo,
-                      m = c.is_in_nonsteam_game,
-                      h = c.m_broadcastAppId,
+                      h = c.is_in_nonsteam_game,
+                      m = c.m_broadcastAppId,
                       g = c.m_bInitialized;
                     c.m_bInitialized || e.m_cPersonaStateUpdatesReceived++,
                       c.UpdateFromMessage(i, o);
@@ -35527,13 +35595,13 @@ and limitations under the License.
                       b = c.m_unGamePlayedAppID,
                       C = c.m_broadcastAppId;
                     if (
-                      (!h ||
-                        (IsFeatureBroadcastEnabled() && h == Dn) ||
-                        (h = void 0),
+                      (!m ||
+                        (IsFeatureBroadcastEnabled() && m == Dn) ||
+                        (m = void 0),
                       !C ||
                         (IsFeatureBroadcastEnabled() && C == Dn) ||
                         (C = void 0),
-                      b || d || m || c.is_in_nonsteam_game || C || h)
+                      b || d || h || c.is_in_nonsteam_game || C || m)
                     ) {
                       if (
                         ((v = d != b),
@@ -35542,10 +35610,10 @@ and limitations under the License.
                         var S = d,
                           M = b;
                         0 == c.m_ePersonaState && (M = 0),
-                          m && (S = e.m_FriendGroupStore.non_steam_game_id),
+                          h && (S = e.m_FriendGroupStore.non_steam_game_id),
                           c.is_in_nonsteam_game &&
                             (M = e.m_FriendGroupStore.non_steam_game_id),
-                          !S && h && (S = h),
+                          !S && m && (S = m),
                           !M && C && (M = C),
                           e.m_FriendGroupStore.OnFriendGameChanged(
                             a.GetAccountID(),
@@ -35757,7 +35825,7 @@ and limitations under the License.
                   switch (n.label) {
                     case 0:
                       return (
-                        (e = ui.Init(mc)),
+                        (e = ui.Init(hc)),
                         [
                           4,
                           nc.GetFriendsList(
@@ -36086,7 +36154,7 @@ and limitations under the License.
                   ));
             }),
             (e.prototype.SendFriendInvite = function(e) {
-              var t = ui.Init(ms);
+              var t = ui.Init(hs);
               return (
                 t
                   .Body()
@@ -36404,13 +36472,13 @@ and limitations under the License.
             ti.c([di.action], e.prototype, "OnParentalLockChanged", null),
             ti.c([di.action], e.prototype, "SetPersonasOffline", null),
             ti.c(
-              [hn.a, Object(Fc.a)(100)],
+              [mn.a, Object(Fc.a)(100)],
               e.prototype,
               "PlayJoinGameSound",
               null
             ),
             ti.c(
-              [hn.a, Object(Fc.a)(100)],
+              [mn.a, Object(Fc.a)(100)],
               e.prototype,
               "PlayFriendOnlineSound",
               null
@@ -36532,7 +36600,7 @@ and limitations under the License.
             (e.prototype.RemoveMember = function(e) {
               this.HasMember(e) &&
                 (this.m_setMembers.delete(e),
-                mn.c(this.m_rgAccountIDMembers, e));
+                hn.c(this.m_rgAccountIDMembers, e));
             }),
             (e.prototype.HasMember = function(e) {
               return this.m_setMembers.has(e);
@@ -37474,10 +37542,10 @@ and limitations under the License.
                 n.set_online_collapsed(i(this.m_groupAllFriends)),
                 n.set_offline_collapsed(i(this.m_groupOfflineFriends)),
                 n.set_categories_collapsed(
-                  mn.b(Array.from(this.m_mapGroups.values()), i)
+                  hn.b(Array.from(this.m_mapGroups.values()), i)
                 ),
                 n.set_game_groups_collapsed(
-                  mn.b(Array.from(this.m_mapGameGroups.values()), i)
+                  hn.b(Array.from(this.m_mapGameGroups.values()), i)
                 );
             }),
             ti.c([di.computed], e.prototype, "friend_groups", null),
@@ -37883,19 +37951,19 @@ and limitations under the License.
                     d = Ra.EscapeBBCode(u.player_name_normalized),
                     p = d + "#" + u.accountid.toString(36);
                   if (p.startsWith(o)) {
-                    var m = void 0,
-                      h = p.length === o.length,
-                      g = h || d.length === o.length;
-                    (g || h) && (m = o.length),
-                      !h &&
+                    var h = void 0,
+                      m = p.length === o.length,
+                      g = m || d.length === o.length;
+                    (g || m) && (h = o.length),
+                      !m &&
                         e.length - t - 1 >= p.length &&
                         e.substr(t + 1, d.length).toLocaleLowerCase() === p &&
-                        ((g = h = !0), (m = p.length)),
+                        ((g = m = !0), (h = p.length)),
                       !g &&
                         e.length - t - 1 >= d.length &&
                         e.substr(t + 1, d.length).toLocaleLowerCase() === d &&
-                        (m = d.length),
-                      m && (void 0 === s || m >= s) && ((a = u), (s = m));
+                        (h = d.length),
+                      h && (void 0 === s || h >= s) && ((a = u), (s = h));
                   }
                 }
                 var f = !1;
@@ -38200,19 +38268,19 @@ and limitations under the License.
                     var d = u.MatchSearchString(r),
                       p = 0 === d.iOffset;
                     if (0 == d.match || (i && !p)) continue;
-                    var m = {
+                    var h = {
                       friend: u,
                       iMatchOffset: d.iOffset,
                       bNicknameMatch: 2 == d.match
                     };
-                    p ? (d.bFullMatch ? a.unshift(m) : a.push(m)) : s.push(m);
+                    p ? (d.bFullMatch ? a.unshift(h) : a.push(h)) : s.push(h);
                   } else
                     n.push({ friend: u, iMatchOffset: 0, bNicknameMatch: !1 });
                   if (n.length + a.length >= t) break;
                 }
               }
-              for (var h = 0; h < a.length && n.length < t; h++) n.push(a[h]);
-              for (var h = 0; h < s.length && n.length < t; h++) n.push(s[h]);
+              for (var m = 0; m < a.length && n.length < t; m++) n.push(a[m]);
+              for (var m = 0; m < s.length && n.length < t; m++) n.push(s[m]);
               return n;
             }),
             (t.prototype.BNameMatchesSearch = function(e) {
@@ -38231,7 +38299,7 @@ and limitations under the License.
                   )
                   .then(function(e) {
                     var i = e.Body().invite_code(),
-                      n = Object(ma.a)(i),
+                      n = Object(ha.a)(i),
                       r = e.Body().seconds_valid();
                     0 != r && (r += Math.floor(Date.now() / 1e3)),
                       (t.m_lastChatLink = { strInviteURL: n, rtExpires: r });
@@ -38304,16 +38372,16 @@ and limitations under the License.
             ti.c([di.action], t.prototype, "UpdateUserState", null),
             ti.c([di.action], t.prototype, "UpdateChatState", null),
             ti.c([di.computed], t.prototype, "name", null),
-            ti.c([hn.a], t.prototype, "StartVoiceChat", null),
+            ti.c([mn.a], t.prototype, "StartVoiceChat", null),
             ti.c([di.action], t.prototype, "SendChatMessage", null),
             ti.c(
-              [hn.a, Object(Fc.a)(100)],
+              [mn.a, Object(Fc.a)(100)],
               t.prototype,
               "PlayChatRoomNotificationSound",
               null
             ),
             ti.c(
-              [hn.a, Object(Fc.a)(100)],
+              [mn.a, Object(Fc.a)(100)],
               t.prototype,
               "PlayAtMentionSound",
               null
@@ -38969,7 +39037,7 @@ and limitations under the License.
                   ? (this.m_groupMembers.RemoveMember(i),
                     dd.GroupMemberStore.OnMemberRemoved(this.m_ulGroupID, i),
                     -1 !== this.m_rgGroupMembersSummary.indexOf(i) &&
-                      (this.m_rgGroupMembersSummary = mn.a(
+                      (this.m_rgGroupMembersSummary = hn.a(
                         this.m_rgGroupMembersSummary,
                         i
                       )))
@@ -39443,22 +39511,22 @@ and limitations under the License.
                 ) {
                   var p = d[u];
                   if (p != s.accountid && !this.BIsAccountIDOwner(p)) {
-                    var m = a.GetFriendIfCached(p);
+                    var h = a.GetFriendIfCached(p);
                     if (
-                      m &&
-                      (t || m.persona.BHasAvatarSet()) &&
-                      (m.persona.avatar_url, c.push(m), c.length >= o)
+                      h &&
+                      (t || h.persona.BHasAvatarSet()) &&
+                      (h.persona.avatar_url, c.push(h), c.length >= o)
                     )
                       break;
                   }
                 }
                 if (i && c.length < o)
                   for (
-                    var h = 0, g = this.m_rgGroupMembersSummary;
-                    h < g.length;
-                    h++
+                    var m = 0, g = this.m_rgGroupMembersSummary;
+                    m < g.length;
+                    m++
                   ) {
-                    var p = g[h];
+                    var p = g[m];
                     if (p != s.accountid && !this.BIsAccountIDOwner(p)) {
                       var f = a.GetPlayer(p);
                       if (
@@ -40354,12 +40422,12 @@ and limitations under the License.
             (e.prototype.FillInChatUsabilityMetrics = function(e) {
               var t = Array.from(this.m_mapDisplayPrefs.values());
               e.ui_state().set_group_chat_left_col_collapsed(
-                mn.b(t, function(e) {
+                hn.b(t, function(e) {
                   return e.bChannelListCollapsed;
                 })
               ),
                 e.ui_state().set_group_chat_right_col_collapsed(
-                  mn.b(t, function(e) {
+                  hn.b(t, function(e) {
                     return e.bMemberListCollapsed;
                   })
                 );
@@ -41304,7 +41372,7 @@ and limitations under the License.
             ti.c([di.action], t.prototype, "ToggleVoiceChat", null),
             ti.c([di.action], t.prototype, "SendChatMessage", null),
             ti.c(
-              [hn.a, Object(Fc.a)(100)],
+              [mn.a, Object(Fc.a)(100)],
               t.prototype,
               "PlayFriendMessageSound",
               null
@@ -42078,7 +42146,7 @@ and limitations under the License.
             }),
             (e.prototype.FillInChatUsabilityMetrics = function(e) {
               e.metrics().set_group_chat_count(
-                mn.b(Array.from(this.m_mapChatGroups.values()), function(e) {
+                hn.b(Array.from(this.m_mapChatGroups.values()), function(e) {
                   return e.BIsCurrentUserAMember();
                 })
               ),
@@ -42292,7 +42360,7 @@ and limitations under the License.
               this.m_rgOnChatFrameChangedCallbacks.push(e);
             }),
             (t.prototype.RemoveOnChatFrameChangedCallback = function(e) {
-              mn.c(this.m_rgOnChatFrameChangedCallbacks, e);
+              hn.c(this.m_rgOnChatFrameChangedCallbacks, e);
             }),
             (t.prototype.OnChatFrameChanged = function() {
               for (
@@ -42726,8 +42794,8 @@ and limitations under the License.
                 d++
               ) {
                 var p = u[d],
-                  m = A(p, "description"),
-                  h = A(p, "lang"),
+                  h = A(p, "description"),
+                  m = A(p, "lang"),
                   g = {
                     bSegmentAlignment: G(p, "segmentAlignment"),
                     bIsClosedCaption: "text/vtt" == A(p, "mimeType"),
@@ -42735,7 +42803,7 @@ and limitations under the License.
                     bContainsVideo: !1,
                     bContainsAudio: !1,
                     bContainsGame: !1,
-                    strDescription: m || h,
+                    strDescription: h || m,
                     strForceSub: A(p, "forceSub"),
                     strID: A(p, "id"),
                     rgRoles: [],
@@ -42874,8 +42942,8 @@ and limitations under the License.
                     if (d.length > 1)
                       for (var p = 0; p < d.length; p++) {
                         for (
-                          var m = d[p],
-                            h = this.ParseRepresentation(m, u),
+                          var h = d[p],
+                            m = this.ParseRepresentation(h, u),
                             g = !0,
                             f = 0,
                             _ = u.rgRepresentations;
@@ -42883,12 +42951,12 @@ and limitations under the License.
                           f++
                         ) {
                           var y = _[f];
-                          if (h.strID == y.strID) {
+                          if (m.strID == y.strID) {
                             g = !1;
                             break;
                           }
                         }
-                        g && u.rgRepresentations.push(h);
+                        g && u.rgRepresentations.push(m);
                       }
                     break;
                   }
@@ -43211,8 +43279,8 @@ and limitations under the License.
                     u,
                     d,
                     p,
-                    m,
                     h,
+                    m,
                     g,
                     f,
                     _,
@@ -43310,7 +43378,7 @@ and limitations under the License.
                           this.ContainsGame())
                         ) {
                           for (
-                            h = r.data,
+                            m = r.data,
                               this.m_rgGameDataFrames ||
                                 (this.m_rgGameDataFrames = []),
                               g = Number.MIN_VALUE,
@@ -43319,7 +43387,7 @@ and limitations under the License.
                                   this.m_rgGameDataFrames.length - 1
                                 ].pts),
                               f = 0,
-                              _ = h.frames;
+                              _ = m.frames;
                             f < _.length;
                             f++
                           )
@@ -43332,11 +43400,11 @@ and limitations under the License.
                                 : B("Invalide game data");
                           this.TrimGameDataIfNecessary(),
                             (this.m_statsGameData = {
-                              nAppID: h.appid,
-                              ulBroadcastRelayID: h.broadcastrelayid,
-                              nSegmentID: h.segmentid
+                              nAppID: m.appid,
+                              ulBroadcastRelayID: m.broadcastrelayid,
+                              nSegmentID: m.segmentid
                             });
-                        } else (p = new Uint8Array(r.data)), this.m_rgBufferedSegments.push({ nDurationMS: i, data: p, representationStrID: e }), this.LogDownload(o, p.length), this.UpdateBuffer(), (m = p.length / 1e3), B("HTTP " + d + " (" + u + "ms, " + Math.floor(m) + "k): " + t);
+                        } else (p = new Uint8Array(r.data)), this.m_rgBufferedSegments.push({ nDurationMS: i, data: p, representationStrID: e }), this.LogDownload(o, p.length), this.UpdateBuffer(), (h = p.length / 1e3), B("HTTP " + d + " (" + u + "ms, " + Math.floor(h) + "k): " + t);
                         return this.ScheduleNextDownload(), [2];
                     }
                   });
@@ -43355,7 +43423,7 @@ and limitations under the License.
                 i = function(e, t) {
                   return e.pts - t.pts;
                 },
-                n = mn.g(this.m_rgGameDataFrames, t, i);
+                n = hn.g(this.m_rgGameDataFrames, t, i);
               n >= 0 &&
                 (this.m_rgGameDataFrames = this.m_rgGameDataFrames.slice(
                   n + 1
@@ -43516,35 +43584,35 @@ and limitations under the License.
                 ? this.m_statsGameData.nAppID
                 : 0;
             }),
-            ti.c([hn.a], e.prototype, "OnSourceBufferUpdateEnd", null),
-            ti.c([hn.a], e.prototype, "OnSourceBufferError", null),
-            ti.c([hn.a], e.prototype, "OnSourceBufferAbort", null),
-            ti.c([hn.a], e.prototype, "ScheduleNextDownload", null),
-            ti.c([hn.a], e.prototype, "DownloadNextSegment", null),
-            ti.c([hn.a], e.prototype, "DownloadFailed", null),
-            ti.c([hn.a], e.prototype, "DownloadGone", null),
+            ti.c([mn.a], e.prototype, "OnSourceBufferUpdateEnd", null),
+            ti.c([mn.a], e.prototype, "OnSourceBufferError", null),
+            ti.c([mn.a], e.prototype, "OnSourceBufferAbort", null),
+            ti.c([mn.a], e.prototype, "ScheduleNextDownload", null),
+            ti.c([mn.a], e.prototype, "DownloadNextSegment", null),
+            ti.c([mn.a], e.prototype, "DownloadFailed", null),
+            ti.c([mn.a], e.prototype, "DownloadGone", null),
             e
           );
         })(),
         pl = -1,
-        ml = (function() {
+        hl = (function() {
           function e() {
             this.playback_speed = 1;
           }
           return e;
         })(),
-        hl = (function(e) {
+        ml = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return ti.d(t, e), t;
-        })(ml),
+        })(hl),
         gl = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return ti.d(t, e), t;
-        })(ml),
+        })(hl),
         fl = (function() {
           function e() {
             (this.m_steamIDBroadcast = ""),
@@ -43960,7 +44028,7 @@ and limitations under the License.
                 )
                   return void this.CreateNewEmptySnapshot(t.videoHeight);
                 this.LogFrameInfo(i), this.LogBufferDuration(e, t);
-                var n = new hl(),
+                var n = new ml(),
                   r = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
                 (n.frames_decoded = r.m_nFramesDecoded),
                   (n.frames_dropped = r.m_nFramesDropped),
@@ -45055,8 +45123,8 @@ and limitations under the License.
                   else {
                     var d = o.nHeight || 0,
                       p = s.nHeight || 0,
-                      m = this.GetVideoPlayerHeight();
-                    if (m > 0 && d > 0 && p > q(m)) break;
+                      h = this.GetVideoPlayerHeight();
+                    if (h > 0 && d > 0 && p > q(h)) break;
                     o = s;
                   }
                 }
@@ -45227,36 +45295,36 @@ and limitations under the License.
               }
               t && (this.m_videoRepSelected = null);
             }),
-            ti.c([hn.a], e.prototype, "UpdateMPD", null),
-            ti.c([hn.a], e.prototype, "OnMediaSourceOpen", null),
-            ti.c([hn.a], e.prototype, "OnMediaSourceEnded", null),
-            ti.c([hn.a], e.prototype, "OnMediaSourceClose", null),
-            ti.c([hn.a], e.prototype, "OnVideoWaiting", null),
-            ti.c([hn.a], e.prototype, "OnVideoPause", null),
-            ti.c([hn.a], e.prototype, "OnVideoResize", null),
+            ti.c([mn.a], e.prototype, "UpdateMPD", null),
+            ti.c([mn.a], e.prototype, "OnMediaSourceOpen", null),
+            ti.c([mn.a], e.prototype, "OnMediaSourceEnded", null),
+            ti.c([mn.a], e.prototype, "OnMediaSourceClose", null),
+            ti.c([mn.a], e.prototype, "OnVideoWaiting", null),
+            ti.c([mn.a], e.prototype, "OnVideoPause", null),
+            ti.c([mn.a], e.prototype, "OnVideoResize", null),
             ti.c(
-              [hn.a],
+              [mn.a],
               e.prototype,
               "OnDebugPrintEventInfoAndAvailableBuffer",
               null
             ),
-            ti.c([hn.a], e.prototype, "OnVideoError", null),
-            ti.c([hn.a], e.prototype, "OnVideoCanPlay", null),
-            ti.c([hn.a], e.prototype, "GetCurrentPlayTime", null),
-            ti.c([hn.a], e.prototype, "OnVideoTimeUpdate", null),
-            ti.c([hn.a], e.prototype, "GetPlaybackRate", null),
-            ti.c([hn.a], e.prototype, "OnSegmentDownloaded", null),
-            ti.c([hn.a], e.prototype, "PlayOnElement", null),
-            ti.c([hn.a], e.prototype, "OnSegmentDownloadFailed", null),
-            ti.c([hn.a], e.prototype, "OnSegmentDownloadGone", null),
+            ti.c([mn.a], e.prototype, "OnVideoError", null),
+            ti.c([mn.a], e.prototype, "OnVideoCanPlay", null),
+            ti.c([mn.a], e.prototype, "GetCurrentPlayTime", null),
+            ti.c([mn.a], e.prototype, "OnVideoTimeUpdate", null),
+            ti.c([mn.a], e.prototype, "GetPlaybackRate", null),
+            ti.c([mn.a], e.prototype, "OnSegmentDownloaded", null),
+            ti.c([mn.a], e.prototype, "PlayOnElement", null),
+            ti.c([mn.a], e.prototype, "OnSegmentDownloadFailed", null),
+            ti.c([mn.a], e.prototype, "OnSegmentDownloadGone", null),
             ti.c(
-              [hn.a],
+              [mn.a],
               e.prototype,
               "VerifyFirstSegementDownloadProgress",
               null
             ),
-            ti.c([hn.a], e.prototype, "GameDataEventTrigger", null),
-            ti.c([hn.a], e.prototype, "ReportPlayerStats", null),
+            ti.c([mn.a], e.prototype, "GameDataEventTrigger", null),
+            ti.c([mn.a], e.prototype, "ReportPlayerStats", null),
             ti.c(
               [di.action.bound],
               e.prototype,
@@ -45429,7 +45497,7 @@ and limitations under the License.
                 o.push({
                   nTime: this.convertTime(c.time, s),
                   strLabel: this.LocalizeTokenIfPossible(c.name, c.params),
-                  color: Object(hn.b)(c.color[0], c.color[1], c.color[2])
+                  color: Object(mn.b)(c.color[0], c.color[1], c.color[2])
                 });
               }
               for (var n = 0; n < i.brackets.length; ++n) {
@@ -45438,7 +45506,7 @@ and limitations under the License.
                   nTimeStart: this.convertTime(r.start, s),
                   nTimeEnd: this.convertTime(r.end, s),
                   strLabel: this.LocalizeTokenIfPossible(r.name, r.params),
-                  color: Object(hn.b)(r.color[0], r.color[1], r.color[2])
+                  color: Object(mn.b)(r.color[0], r.color[1], r.color[2])
                 });
               }
               return { rgMarkers: o, rgSegments: a };
@@ -45565,7 +45633,7 @@ and limitations under the License.
                 n.append("steamid", t),
                   n.append("token", this.m_broadcastSettings.ulViewerToken),
                   Yi.a.post(ei.a.CHAT_BASE_URL + "broadcast/stopwatching", n),
-                  mn.c(i.m_rgVideos, e),
+                  hn.c(i.m_rgVideos, e),
                   this.RemoveBroadcastIfUnused(i);
               }
             }),
@@ -45579,7 +45647,7 @@ and limitations under the License.
             (e.prototype.StopChat = function(e) {
               var t = e.GetBroadcastSteamID(),
                 i = this.m_mapBroadcasts.get(t);
-              i && (mn.c(i.m_rgChats, e), this.RemoveBroadcastIfUnused(i));
+              i && (hn.c(i.m_rgChats, e), this.RemoveBroadcastIfUnused(i));
             }),
             (e.prototype.StartInfo = function(e) {
               var t = this.GetOrCreateBroadcastInfo(e);
@@ -46166,12 +46234,12 @@ and limitations under the License.
             ti.c([di.observable], e.prototype, "m_nVideoStartPos", void 0),
             ti.c([di.observable], e.prototype, "m_nVideoEndPos", void 0),
             ti.c([di.action.bound], e.prototype, "Start", null),
-            ti.c([hn.a], e.prototype, "OnVideoPlaying", null),
-            ti.c([hn.a], e.prototype, "OnVideoPause", null),
+            ti.c([mn.a], e.prototype, "OnVideoPlaying", null),
+            ti.c([mn.a], e.prototype, "OnVideoPause", null),
             ti.c([di.action.bound], e.prototype, "OnVideoTimeUpdate", null),
             ti.c([di.action.bound], e.prototype, "OnGameDataUpdate", null),
-            ti.c([hn.a], e.prototype, "OnDownloadFailed", null),
-            ti.c([hn.a], e.prototype, "OnUserInputNeeded", null),
+            ti.c([mn.a], e.prototype, "OnDownloadFailed", null),
+            ti.c([mn.a], e.prototype, "OnUserInputNeeded", null),
             ti.c([di.computed], e.prototype, "has_markers", null),
             ti.c([di.computed], e.prototype, "has_segments", null),
             e
@@ -46215,8 +46283,8 @@ and limitations under the License.
               };
               this.m_iframe.contentWindow.postMessage(e, ei.a.CHAT_BASE_URL);
             }),
-            ti.c([hn.a], e.prototype, "OnIframeLoaded", null),
-            ti.c([hn.a], e.prototype, "PostMessageToIframe", null),
+            ti.c([mn.a], e.prototype, "OnIframeLoaded", null),
+            ti.c([mn.a], e.prototype, "PostMessageToIframe", null),
             e
           );
         })(),
@@ -46326,8 +46394,8 @@ and limitations under the License.
             ti.c([di.computed], e.prototype, "is_broadcasting", null),
             ti.c([di.computed], e.prototype, "broadcastid", null),
             ti.c([di.computed], e.prototype, "is_broadcast_capable", null),
-            ti.c([hn.a, di.action], e.prototype, "OnBroadcastStatus", null),
-            ti.c([hn.a, di.action], e.prototype, "OnViewerRequest", null),
+            ti.c([mn.a, di.action], e.prototype, "OnBroadcastStatus", null),
+            ti.c([mn.a, di.action], e.prototype, "OnViewerRequest", null),
             ti.c([di.action], e.prototype, "ApproveViewerRequest", null),
             ti.c([di.action], e.prototype, "RejectViewerRequest", null),
             ti.c([di.action], e.prototype, "InviteToWatch", null),
@@ -47121,19 +47189,19 @@ and limitations under the License.
                   .set_chat_popups_opened(Array.from(t.popup_list).length);
               var i = 0,
                 n = 0;
-              (i += mn.b(t.default_tabset.tabs, function(e) {
+              (i += hn.b(t.default_tabset.tabs, function(e) {
                 return e.IsChatRoom();
               })),
-                (n += mn.b(t.default_tabset.tabs, function(e) {
+                (n += hn.b(t.default_tabset.tabs, function(e) {
                   return e.IsFriendChat();
                 }));
               for (var r = 0, o = Array.from(t.popup_list); r < o.length; r++) {
                 var a = o[r];
                 a.tab_set != t.default_tabset &&
-                  ((i += mn.b(a.tab_set.tabs, function(e) {
+                  ((i += hn.b(a.tab_set.tabs, function(e) {
                     return e.IsChatRoom();
                   })),
-                  (n += mn.b(a.tab_set.tabs, function(e) {
+                  (n += hn.b(a.tab_set.tabs, function(e) {
                     return e.IsFriendChat();
                   })));
               }
@@ -47154,7 +47222,7 @@ and limitations under the License.
               "ShowAndOrActivateChatRoomGroupWhenReady",
               null
             ),
-            ti.c([hn.a], e.prototype, "SerializePopupState", null),
+            ti.c([mn.a], e.prototype, "SerializePopupState", null),
             e
           );
         })(),
@@ -49193,8 +49261,8 @@ and limitations under the License.
             request: Zl
           });
       })(pu || (pu = {}));
-      var mu,
-        hu = (function(e) {
+      var hu,
+        mu = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -49673,7 +49741,7 @@ and limitations under the License.
         }
         (e.InitiateWebRTCConnection = t),
           (e.AcknowledgeUpdatedRemoteDescription = i);
-      })(mu || (mu = {}));
+      })(hu || (hu = {}));
       var Cu;
       !(function(e) {
         (e.NotifyWebRTCSessionConnectedHandler = {
@@ -51564,14 +51632,14 @@ and limitations under the License.
                 e
                   .setLocalDescription(t)
                   .then(function() {
-                    var e = ui.Init(hu);
+                    var e = ui.Init(mu);
                     e.Body().set_sdp(JSON.stringify(t)),
                       i.LogMsg(
                         "(WebRTC) Offer (Local Description): " + e.Body().sdp()
                       ),
                       (i.m_VoiceCallState.m_eState =
                         Ru.k_EVoiceCallState_InitatedWebRTCSession),
-                      mu
+                      hu
                         .InitiateWebRTCConnection(
                           i.m_CMInterface.GetServiceTransport(),
                           e
@@ -52010,7 +52078,7 @@ and limitations under the License.
                   .set_remote_description_version(
                     this.m_VoiceCallState.m_nMostRecentRemoteDescriptionVersion
                   ),
-                mu
+                hu
                   .AcknowledgeUpdatedRemoteDescription(
                     this.m_CMInterface.GetServiceTransport(),
                     e
@@ -52356,12 +52424,12 @@ and limitations under the License.
                                     : d.detached ? "detached" : "active");
                             var p = e.get(i.transportId);
                             if (void 0 != p && "transport" == p.type) {
-                              var m = e.get(p.selectedCandidatePairId);
-                              void 0 != m &&
-                                "candidate-pair" == m.type &&
-                                ((o = m.state),
-                                (a = m.writable ? "writable" : "not-writable"),
-                                (s = 1e3 * m.currentRoundTripTime)),
+                              var h = e.get(p.selectedCandidatePairId);
+                              void 0 != h &&
+                                "candidate-pair" == h.type &&
+                                ((o = h.state),
+                                (a = h.writable ? "writable" : "not-writable"),
+                                (s = 1e3 * h.currentRoundTripTime)),
                                 (c = p.bytesSent),
                                 (l = p.bytesReceived);
                             }
@@ -54546,7 +54614,7 @@ and limitations under the License.
             (e.prototype.UnregisterForGroupMemberList = function(e, t) {
               var i = this.m_mapGroupBuckets.get(t);
               i &&
-                (mn.c(i.rgRegistered, e),
+                (hn.c(i.rgRegistered, e),
                 0 == i.rgRegistered.length && this.m_mapGroupBuckets.delete(t));
             }),
             (e.prototype.GetGroupMemberList = function(e) {
@@ -54663,7 +54731,7 @@ and limitations under the License.
                 : e[0];
             }),
             (e.prototype.SortedInsertIntoBucket = function(e, t) {
-              mn.h(e.rgMembers, t, this.FriendSortFunc);
+              hn.h(e.rgMembers, t, this.FriendSortFunc);
             }),
             (e.prototype.RemoveMemberFromBucket = function(e, t) {
               for (var i = 0; i < e.rgMembers.length; i++)
@@ -54692,7 +54760,7 @@ and limitations under the License.
                     return void this.FireMemberListChanged(i);
                 }
             }),
-            ti.c([hn.a], e.prototype, "OnPersonaStateChanged", null),
+            ti.c([mn.a], e.prototype, "OnPersonaStateChanged", null),
             e
           );
         })(),
@@ -54973,8 +55041,8 @@ and limitations under the License.
         })(),
         dd = void 0,
         pd = i("4JXe"),
-        md = i("tW2u"),
-        hd = i("5Pz3"),
+        hd = i("tW2u"),
+        md = i("5Pz3"),
         gd = i("JyW5"),
         fd = i("Y6cV"),
         _d = (Ca.Component,
@@ -54989,7 +55057,7 @@ and limitations under the License.
               this.m_rgDropRegions.push(e);
             }),
             (e.prototype.UnregisterDropRegion = function(e) {
-              mn.c(this.m_rgDropRegions, e);
+              hn.c(this.m_rgDropRegions, e);
             }),
             (e.prototype.OnDragGhostRef = function(e) {
               this.m_dragGhost = e;
@@ -55077,7 +55145,7 @@ and limitations under the License.
                   });
               }
             }),
-            ti.c([hn.a], e.prototype, "OnDragGhostRef", null),
+            ti.c([mn.a], e.prototype, "OnDragGhostRef", null),
             e
           );
         })()),
@@ -55234,11 +55302,11 @@ and limitations under the License.
                 }
               return e;
             }),
-            ti.c([hn.a], t.prototype, "ProcessDragMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "OnTouchStart", null),
-            ti.c([hn.a], t.prototype, "OnTouchEnd", null),
+            ti.c([mn.a], t.prototype, "ProcessDragMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnTouchStart", null),
+            ti.c([mn.a], t.prototype, "OnTouchEnd", null),
             t
           );
         })(Ca.Component),
@@ -55257,7 +55325,7 @@ and limitations under the License.
                 ref: this.OnRef
               });
             }),
-            ti.c([hn.a], t.prototype, "OnRef", null),
+            ti.c([mn.a], t.prototype, "OnRef", null),
             t
           );
         })(Ca.Component),
@@ -55292,7 +55360,7 @@ and limitations under the License.
                 ref: this.OnRef
               });
             }),
-            ti.c([hn.a], t.prototype, "OnRef", null),
+            ti.c([mn.a], t.prototype, "OnRef", null),
             t
           );
         })(Ca.Component),
@@ -55541,7 +55609,7 @@ and limitations under the License.
                 ti.a({}, this.props, { onSubmit: this.OnSubmit })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
             t
           );
         })(Ca.Component),
@@ -55687,7 +55755,7 @@ and limitations under the License.
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      Ca.createElement(hd._4, null)
+                      Ca.createElement(md._5, null)
                     )
                 ),
                 u
@@ -55716,9 +55784,9 @@ and limitations under the License.
                   )
                 : d;
             }),
-            ti.c([hn.a], t.prototype, "OnInputRef", null),
-            ti.c([hn.a], t.prototype, "OnCopyClick", null),
-            ti.c([hn.a], t.prototype, "OnClearClick", null),
+            ti.c([mn.a], t.prototype, "OnInputRef", null),
+            ti.c([mn.a], t.prototype, "OnCopyClick", null),
+            ti.c([mn.a], t.prototype, "OnClearClick", null),
             t
           );
         })(Ca.PureComponent),
@@ -55799,9 +55867,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnBackgroundClick", null),
-            ti.c([hn.a], t.prototype, "OnInputFocus", null),
-            ti.c([hn.a], t.prototype, "OnInputBlur", null),
+            ti.c([mn.a], t.prototype, "OnBackgroundClick", null),
+            ti.c([mn.a], t.prototype, "OnInputFocus", null),
+            ti.c([mn.a], t.prototype, "OnInputBlur", null),
             t
           );
         })(Pd),
@@ -55846,8 +55914,8 @@ and limitations under the License.
               32 == e.keyCode &&
                 (this.Toggle(), e.preventDefault(), e.stopPropagation());
             }),
-            ti.c([hn.a], t.prototype, "Toggle", null),
-            ti.c([hn.a], t.prototype, "KeyDown", null),
+            ti.c([mn.a], t.prototype, "Toggle", null),
+            ti.c([mn.a], t.prototype, "KeyDown", null),
             t
           );
         })(Ca.Component),
@@ -55874,7 +55942,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: e },
-                        Ca.createElement(hd.i, null)
+                        Ca.createElement(md.i, null)
                       ),
                       Ca.createElement(
                         "div",
@@ -55896,7 +55964,7 @@ and limitations under the License.
                         onClick: this.Toggle,
                         tabIndex: this.props.tabIndex || 0
                       },
-                      Ca.createElement(hd.i, null)
+                      Ca.createElement(md.i, null)
                     )
               );
             }),
@@ -56003,7 +56071,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnOffKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnOffKeyDown", null),
             t
           );
         })(zd),
@@ -56174,13 +56242,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "OnTouchStart", null),
-            ti.c([hn.a], t.prototype, "OnTouchMove", null),
-            ti.c([hn.a], t.prototype, "OnTouchEnd", null),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnTouchStart", null),
+            ti.c([mn.a], t.prototype, "OnTouchMove", null),
+            ti.c([mn.a], t.prototype, "OnTouchEnd", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
             t
           );
         })(Ca.Component),
@@ -56332,18 +56400,18 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { className: "DialogDropDown_Arrow" },
-                      Ca.createElement(hd.l, null)
+                      Ca.createElement(md.l, null)
                     ),
                     t
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnInputRef", null),
-            ti.c([hn.a], t.prototype, "ToggleMenu", null),
-            ti.c([hn.a], t.prototype, "OnItemSelected", null),
-            ti.c([hn.a], t.prototype, "ShowMenu", null),
-            ti.c([hn.a], t.prototype, "HideMenu", null),
+            ti.c([mn.a], t.prototype, "OnInputRef", null),
+            ti.c([mn.a], t.prototype, "ToggleMenu", null),
+            ti.c([mn.a], t.prototype, "OnItemSelected", null),
+            ti.c([mn.a], t.prototype, "ShowMenu", null),
+            ti.c([mn.a], t.prototype, "HideMenu", null),
             t
           );
         })(Ca.Component),
@@ -56383,7 +56451,7 @@ and limitations under the License.
                 t
               );
             }),
-            ti.c([hn.a], t.prototype, "OnItemClicked", null),
+            ti.c([mn.a], t.prototype, "OnItemClicked", null),
             t
           );
         })(Ca.Component),
@@ -56446,7 +56514,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: l.join(" "), key: o.title, onClick: c },
-                        u && Ca.createElement(hd._2, null),
+                        u && Ca.createElement(md._3, null),
                         o.title
                       )
                     );
@@ -56479,7 +56547,7 @@ and limitations under the License.
                     )
                   ),
                   Ca.createElement(
-                    md,
+                    hd,
                     { className: "DialogContentTransition" },
                     t &&
                       Ca.createElement(
@@ -56501,7 +56569,7 @@ and limitations under the License.
                                 Ca.createElement(
                                   Dd,
                                   null,
-                                  Ca.createElement(hd.y, null),
+                                  Ca.createElement(md.y, null),
                                   Object(la.b)(
                                     "#Chat_Settings_Permission_Denied"
                                   )
@@ -56517,7 +56585,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnActivePageRef", null),
+            ti.c([mn.a], t.prototype, "OnActivePageRef", null),
             t
           );
         })(Ca.Component),
@@ -56627,12 +56695,12 @@ and limitations under the License.
                 this.props.children
               );
             }),
-            ti.c([hn.a], t.prototype, "BindDiv", null),
-            ti.c([hn.a], t.prototype, "DeliverDeferredDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "BindDiv", null),
+            ti.c([mn.a], t.prototype, "DeliverDeferredDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
             t
           );
         })(Ca.PureComponent),
@@ -56707,14 +56775,14 @@ and limitations under the License.
                           className: "title-area-icon closeButton",
                           onClick: t
                         },
-                        Ca.createElement(hd._5, null)
+                        Ca.createElement(md._6, null)
                       ),
                       !this.props.hideMinMax &&
                         Ca.createElement(
                           "div",
                           { className: r, onClick: i },
-                          this.state.maximized && Ca.createElement(hd.M, null),
-                          !this.state.maximized && Ca.createElement(hd.A, null)
+                          this.state.maximized && Ca.createElement(md.M, null),
+                          !this.state.maximized && Ca.createElement(md.A, null)
                         ),
                       !this.props.hideMinMax &&
                         Ca.createElement(
@@ -56723,13 +56791,13 @@ and limitations under the License.
                             className: "title-area-icon minimizeButton",
                             onClick: n
                           },
-                          Ca.createElement(hd.D, null)
+                          Ca.createElement(md.D, null)
                         )
                     )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "UpdateMaximizeState", null),
+            ti.c([mn.a], t.prototype, "UpdateMaximizeState", null),
             t
           );
         })(Ca.Component),
@@ -56810,7 +56878,7 @@ and limitations under the License.
               }
               return this.props.children;
             }),
-            ti.c([hn.a], t.prototype, "clearError", null),
+            ti.c([mn.a], t.prototype, "clearError", null),
             t
           );
         })(Ca.Component),
@@ -56873,8 +56941,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "Cancel", null),
-            ti.c([hn.a], t.prototype, "OK", null),
+            ti.c([mn.a], t.prototype, "Cancel", null),
+            ti.c([mn.a], t.prototype, "OK", null),
             t
           );
         })(Ca.Component),
@@ -57062,8 +57130,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -57145,7 +57213,7 @@ and limitations under the License.
               var t = this;
               this.setState(
                 function(t) {
-                  return { rgFriendsChosen: mn.a(t.rgFriendsChosen, e) };
+                  return { rgFriendsChosen: hn.a(t.rgFriendsChosen, e) };
                 },
                 function() {
                   t.props.onFriendRemoved && t.props.onFriendRemoved(e);
@@ -57159,7 +57227,7 @@ and limitations under the License.
               e.rgSelectedFriends !== this.props.rgSelectedFriends &&
                 void 0 !== e.rgSelectedFriends &&
                 ((void 0 !== this.props.rgSelectedFriends &&
-                  mn.f(e.rgSelectedFriends, this.props.rgSelectedFriends)) ||
+                  hn.f(e.rgSelectedFriends, this.props.rgSelectedFriends)) ||
                   this.setState({
                     rgFriendsChosen: e.rgSelectedFriends.map(function(e) {
                       return dd.FriendStore.GetFriend(e);
@@ -57247,11 +57315,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnTextInput", null),
-            ti.c([hn.a], t.prototype, "OnInputKeyDown", null),
-            ti.c([hn.a], t.prototype, "SelectFriendSuggestion", null),
-            ti.c([hn.a], t.prototype, "RemoveFriendFromList", null),
-            ti.c([hn.a], t.prototype, "OnFriendsListRef", null),
+            ti.c([mn.a], t.prototype, "OnTextInput", null),
+            ti.c([mn.a], t.prototype, "OnInputKeyDown", null),
+            ti.c([mn.a], t.prototype, "SelectFriendSuggestion", null),
+            ti.c([mn.a], t.prototype, "RemoveFriendFromList", null),
+            ti.c([mn.a], t.prototype, "OnFriendsListRef", null),
             t
           );
         })(Ca.Component),
@@ -57413,7 +57481,7 @@ and limitations under the License.
                         ref: r ? t.OnFocusFriendRef : null,
                         "data-index": i
                       },
-                      Ca.createElement(mh, {
+                      Ca.createElement(hm, {
                         noActions: !0,
                         friend: e,
                         context: null
@@ -57444,7 +57512,7 @@ and limitations under the License.
                     return e.friend && !n.has(e.friend.accountid)
                       ? (c++,
                         Ca.createElement(
-                          mh,
+                          hm,
                           ti.a(
                             {
                               friend: e.friend,
@@ -57459,7 +57527,7 @@ and limitations under the License.
                         ))
                       : null;
                   }),
-                  u = Ca.createElement(ch, {
+                  u = Ca.createElement(cm, {
                     group: dd.FriendStore.FriendGroupStore.ingame_group,
                     key: dd.FriendStore.FriendGroupStore.ingame_group.id,
                     collapsed: !1,
@@ -57471,7 +57539,7 @@ and limitations under the License.
                   }),
                   d = dd.FriendStore.FriendGroupStore.default_groups.map(
                     function(e) {
-                      return Ca.createElement(ch, {
+                      return Ca.createElement(cm, {
                         group: e,
                         key: e.id,
                         collapsed: !1,
@@ -57514,10 +57582,10 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnFriendSuggestionClicked", null),
-            ti.c([hn.a], t.prototype, "OnFriendSuggestionMouseEnter", null),
-            ti.c([hn.a], t.prototype, "OnFriendSelected", null),
-            ti.c([hn.a], t.prototype, "OnFocusFriendRef", null),
+            ti.c([mn.a], t.prototype, "OnFriendSuggestionClicked", null),
+            ti.c([mn.a], t.prototype, "OnFriendSuggestionMouseEnter", null),
+            ti.c([mn.a], t.prototype, "OnFriendSelected", null),
+            ti.c([mn.a], t.prototype, "OnFocusFriendRef", null),
             t
           );
         })(Ca.Component),
@@ -57648,9 +57716,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
-            ti.c([hn.a], t.prototype, "OnFriendPickerRef", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "OnFriendPickerRef", null),
             t
           );
         })(Ca.Component),
@@ -57733,7 +57801,7 @@ and limitations under the License.
                       Ca.createElement(
                         Ad,
                         null,
-                        Ca.createElement(mh, {
+                        Ca.createElement(hm, {
                           friend: this.props.friend,
                           className: "AssignCategoriesDialog_Friend",
                           noActions: !0,
@@ -57763,8 +57831,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
-            ti.c([hn.a], t.prototype, "CreateNew", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "CreateNew", null),
             t
           );
         })(Ca.Component),
@@ -57837,8 +57905,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnToggle", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnToggle", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -57937,7 +58005,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        mp = (function(e) {
+        hp = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
               n = dd.FriendStore.self;
@@ -58090,12 +58158,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        hp = Object(Xd.observer)(function(e) {
+        mp = Object(Xd.observer)(function(e) {
           var t = e.friend,
             i = [],
             n = t.persona_name_history,
@@ -58213,14 +58281,14 @@ and limitations under the License.
                           onSelected: function() {},
                           bInteractableItem: !0
                         },
-                        Ca.createElement(hd.h, null),
+                        Ca.createElement(md.h, null),
                         "Owner"
                       )
                     : a
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnToggle", null),
+            ti.c([mn.a], t.prototype, "OnToggle", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -58332,7 +58400,7 @@ and limitations under the License.
                     ? "#Friend_CancelInvitation_Error"
                     : "#Friend_RemoveFromFriendsList_Error"
                 );
-              me(
+              he(
                 this.props.ownerWindow,
                 i,
                 n,
@@ -58349,7 +58417,7 @@ and limitations under the License.
             }),
             (t.prototype.BlockFriend = function() {
               var e = this;
-              me(
+              he(
                 this.props.ownerWindow,
                 Object(la.b)("#Friend_Menu_BlockAllCommunication"),
                 Object(la.b)(
@@ -58365,7 +58433,7 @@ and limitations under the License.
             }),
             (t.prototype.UnblockFriend = function() {
               var e = this;
-              me(
+              he(
                 this.props.ownerWindow,
                 Object(la.b)("#Friend_Menu_UnblockAllCommunication"),
                 Object(la.b)(
@@ -58413,11 +58481,11 @@ and limitations under the License.
               !u && i.chat instanceof xc && (u = i.chat.GetGroup());
               var d,
                 p,
-                m = !1,
-                h = dd.ChatStore.GetActiveVoiceChat(),
+                h = !1,
+                m = dd.ChatStore.GetActiveVoiceChat(),
                 g = void 0,
                 f = !1;
-              void 0 == h || h instanceof Xc || ((f = !0), (g = h));
+              void 0 == m || m instanceof Xc || ((f = !0), (g = m));
               var _ = o.is_friend,
                 y = 2 == o.efriendrelationship,
                 v = 4 == o.efriendrelationship,
@@ -58427,9 +58495,9 @@ and limitations under the License.
               if (
                 (i.chat &&
                   (i.chat instanceof Xc
-                    ? ((d = i.chat), d.BVoiceActive() && (m = !0))
+                    ? ((d = i.chat), d.BVoiceActive() && (h = !0))
                     : i.chat instanceof xc &&
-                      ((p = i.chat), p.BVoiceActive() && (m = !0))),
+                      ((p = i.chat), p.BVoiceActive() && (h = !0))),
                 _ ||
                   y ||
                   s ||
@@ -58443,7 +58511,7 @@ and limitations under the License.
                       Object(la.b)("#Friend_Menu_NotAFriendLabel")
                     )
                   ),
-                m &&
+                h &&
                   !s &&
                   n.push(Ca.createElement(_p, { friend: this.props.friend })),
                 i.tab &&
@@ -58495,7 +58563,7 @@ and limitations under the License.
                           e.InviteToVoice(g, i);
                         }
                       },
-                      Ca.createElement(hd._2, null),
+                      Ca.createElement(md._3, null),
                       Object(la.b)("#Chat_Actions_InviteFriend_VoiceChat")
                     )
                   ),
@@ -58581,7 +58649,7 @@ and limitations under the License.
                           Object(la.b)("#Friend_Menu_RemoveFromFriendsList")
                         )
                       ),
-                    r.push(Ca.createElement(hp, { key: "aliases", friend: o })),
+                    r.push(Ca.createElement(mp, { key: "aliases", friend: o })),
                     dd.FriendStore.self.persona.is_ingame &&
                       dd.BroadcastStore.is_broadcast_capable &&
                       n.push(
@@ -58688,7 +58756,7 @@ and limitations under the License.
                         )
                       ),
                       n.push(
-                        Ca.createElement(hp, { key: "aliases", friend: o })
+                        Ca.createElement(mp, { key: "aliases", friend: o })
                       ))
                     : v
                       ? n.push(
@@ -58771,17 +58839,17 @@ and limitations under the License.
                   )
                 : null;
             }),
-            ti.c([hn.a], t.prototype, "ShowFriendProfile", null),
-            ti.c([hn.a], t.prototype, "InviteFriend", null),
-            ti.c([hn.a], t.prototype, "AcceptIncomingInvite", null),
-            ti.c([hn.a], t.prototype, "IgnoreIncomingInvite", null),
-            ti.c([hn.a], t.prototype, "RemoveFriend", null),
-            ti.c([hn.a], t.prototype, "BlockFriend", null),
-            ti.c([hn.a], t.prototype, "UnblockFriend", null),
-            ti.c([hn.a], t.prototype, "InviteToGame", null),
-            ti.c([hn.a], t.prototype, "InviteToLobby", null),
-            ti.c([hn.a], t.prototype, "InviteToWatch", null),
-            ti.c([hn.a], t.prototype, "InviteToVoice", null),
+            ti.c([mn.a], t.prototype, "ShowFriendProfile", null),
+            ti.c([mn.a], t.prototype, "InviteFriend", null),
+            ti.c([mn.a], t.prototype, "AcceptIncomingInvite", null),
+            ti.c([mn.a], t.prototype, "IgnoreIncomingInvite", null),
+            ti.c([mn.a], t.prototype, "RemoveFriend", null),
+            ti.c([mn.a], t.prototype, "BlockFriend", null),
+            ti.c([mn.a], t.prototype, "UnblockFriend", null),
+            ti.c([mn.a], t.prototype, "InviteToGame", null),
+            ti.c([mn.a], t.prototype, "InviteToLobby", null),
+            ti.c([mn.a], t.prototype, "InviteToWatch", null),
+            ti.c([mn.a], t.prototype, "InviteToVoice", null),
             t
           );
         })(Ca.PureComponent),
@@ -58844,7 +58912,7 @@ and limitations under the License.
                     Ca.createElement(
                       "button",
                       { className: t, onClick: this.OnMutingClick },
-                      Ca.createElement(hd._3, null)
+                      Ca.createElement(md._4, null)
                     ),
                     Ca.createElement(Wd, {
                       min: 0,
@@ -58863,9 +58931,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnFriendVolumeChanged", null),
-            ti.c([hn.a], t.prototype, "OnMutingClick", null),
-            ti.c([hn.a], t.prototype, "OnInlineVolumeClick", null),
+            ti.c([mn.a], t.prototype, "OnFriendVolumeChanged", null),
+            ti.c([mn.a], t.prototype, "OnMutingClick", null),
+            ti.c([mn.a], t.prototype, "OnInlineVolumeClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -58901,7 +58969,7 @@ and limitations under the License.
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnChange", null),
+            ti.c([mn.a], t.prototype, "OnChange", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -58945,8 +59013,8 @@ and limitations under the License.
                   )
               );
             }),
-            ti.c([hn.a], t.prototype, "SendTradeOffer", null),
-            ti.c([hn.a], t.prototype, "InviteToTrade", null),
+            ti.c([mn.a], t.prototype, "SendTradeOffer", null),
+            ti.c([mn.a], t.prototype, "InviteToTrade", null),
             t
           );
         })(Ca.Component),
@@ -58963,7 +59031,7 @@ and limitations under the License.
                     case 0:
                       return [
                         4,
-                        he(
+                        me(
                           this.props.ownerWindow,
                           Object(la.b)("#Friend_Ban"),
                           Object(la.b)(
@@ -59070,8 +59138,8 @@ and limitations under the License.
                 e
               );
             }),
-            ti.c([hn.a], t.prototype, "BanFriend", null),
-            ti.c([hn.a], t.prototype, "OnKickFriend", null),
+            ti.c([mn.a], t.prototype, "BanFriend", null),
+            ti.c([mn.a], t.prototype, "OnKickFriend", null),
             t
           );
         })(Ca.Component),
@@ -59215,7 +59283,7 @@ and limitations under the License.
                           key: "showinsteam",
                           onSelected: this.ShowInSteam
                         },
-                        Ca.createElement(hd.H, null),
+                        Ca.createElement(md.H, null),
                         Object(la.b)("#Friend_Menu_ShowInSteam")
                       )
                     )
@@ -59232,7 +59300,7 @@ and limitations under the License.
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          Ca.createElement(hd.H, null),
+                          Ca.createElement(md.H, null),
                           Object(la.b)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -59245,7 +59313,7 @@ and limitations under the License.
                           key: "launchgame",
                           onSelected: this.LaunchGame
                         },
-                        Ca.createElement(hd.H, null),
+                        Ca.createElement(md.H, null),
                         Object(la.b)("#Friend_Menu_LaunchFriendGame")
                       )
                     )),
@@ -59315,13 +59383,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ShowStorePage", null),
-            ti.c([hn.a], t.prototype, "ShowCommunityHub", null),
-            ti.c([hn.a], t.prototype, "LaunchGame", null),
-            ti.c([hn.a], t.prototype, "WatchGame", null),
-            ti.c([hn.a], t.prototype, "JoinGame", null),
-            ti.c([hn.a], t.prototype, "ViewGameInfo", null),
-            ti.c([hn.a], t.prototype, "ShowInSteam", null),
+            ti.c([mn.a], t.prototype, "ShowStorePage", null),
+            ti.c([mn.a], t.prototype, "ShowCommunityHub", null),
+            ti.c([mn.a], t.prototype, "LaunchGame", null),
+            ti.c([mn.a], t.prototype, "WatchGame", null),
+            ti.c([mn.a], t.prototype, "JoinGame", null),
+            ti.c([mn.a], t.prototype, "ViewGameInfo", null),
+            ti.c([mn.a], t.prototype, "ShowInSteam", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -59377,7 +59445,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "WatchStream", null),
+            ti.c([mn.a], t.prototype, "WatchStream", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -59529,14 +59597,14 @@ and limitations under the License.
                   : null
               );
             }),
-            ti.c([hn.a], t.prototype, "SetUserOnline", null),
-            ti.c([hn.a], t.prototype, "SetUserInvisible", null),
-            ti.c([hn.a], t.prototype, "SetUserAway", null),
-            ti.c([hn.a], t.prototype, "SetUserOffline", null),
-            ti.c([hn.a], t.prototype, "ToggleUserDND", null),
-            ti.c([hn.a], t.prototype, "ShowUserProfile", null),
-            ti.c([hn.a], t.prototype, "EditProfile", null),
-            ti.c([hn.a], t.prototype, "EditName", null),
+            ti.c([mn.a], t.prototype, "SetUserOnline", null),
+            ti.c([mn.a], t.prototype, "SetUserInvisible", null),
+            ti.c([mn.a], t.prototype, "SetUserAway", null),
+            ti.c([mn.a], t.prototype, "SetUserOffline", null),
+            ti.c([mn.a], t.prototype, "ToggleUserDND", null),
+            ti.c([mn.a], t.prototype, "ShowUserProfile", null),
+            ti.c([mn.a], t.prototype, "EditProfile", null),
+            ti.c([mn.a], t.prototype, "EditName", null),
             t
           );
         })(Ca.PureComponent),
@@ -59606,9 +59674,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCancel", null),
-            ti.c([hn.a], t.prototype, "OnOK", null),
-            ti.c([hn.a], t.prototype, "OnDropDownChange", null),
+            ti.c([mn.a], t.prototype, "OnCancel", null),
+            ti.c([mn.a], t.prototype, "OnOK", null),
+            ti.c([mn.a], t.prototype, "OnDropDownChange", null),
             t
           );
         })(Ca.Component),
@@ -59654,8 +59722,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "GenerateLink", null),
-            ti.c([hn.a], t.prototype, "OnFocus", null),
+            ti.c([mn.a], t.prototype, "GenerateLink", null),
+            ti.c([mn.a], t.prototype, "OnFocus", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -59710,7 +59778,7 @@ and limitations under the License.
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDropDownChange", null),
+            ti.c([mn.a], t.prototype, "OnDropDownChange", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -59911,7 +59979,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "displayRow" },
-                        Ca.createElement(Dm, {
+                        Ca.createElement(Dh, {
                           group: this.props.chatRoomGroup,
                           small: !0
                         }),
@@ -60002,13 +60070,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "DismissDialog", null),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "OnFriendPickerRef", null),
-            ti.c([hn.a], t.prototype, "OnFriendPickerChange", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "DismissDialog", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnFriendPickerRef", null),
+            ti.c([mn.a], t.prototype, "OnFriendPickerChange", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
             t
           );
         })(Ca.PureComponent),
@@ -60018,7 +60086,7 @@ and limitations under the License.
             Ca.Fragment,
             null,
             Ca.createElement(
-              ph,
+              pm,
               { friend: e.friend, context: null },
               Ca.createElement(
                 "div",
@@ -60032,7 +60100,7 @@ and limitations under the License.
                 },
                 !t && Ca.createElement(xe, null),
                 Ca.createElement("span", null, e.friend.display_name),
-                Ca.createElement(hd._5, null)
+                Ca.createElement(md._6, null)
               )
             )
           );
@@ -60162,9 +60230,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OpenChatWindow", null),
-            ti.c([hn.a], t.prototype, "ShowClanProfile", null),
-            ti.c([hn.a], t.prototype, "LeaveChatRoomGroup", null),
+            ti.c([mn.a], t.prototype, "OpenChatWindow", null),
+            ti.c([mn.a], t.prototype, "ShowClanProfile", null),
+            ti.c([mn.a], t.prototype, "LeaveChatRoomGroup", null),
             t
           );
         })(Ca.Component),
@@ -60188,7 +60256,7 @@ and limitations under the License.
             }),
             (t.prototype.RemoveRoom = function() {
               var e = this;
-              me(
+              he(
                 this.props.ownerWindow,
                 Object(la.b)("#Chat_Actions_RemoveRoom"),
                 Object(la.b)("#Chat_Actions_RemoveRoom_Confirm"),
@@ -60240,7 +60308,7 @@ and limitations under the License.
                         className: o ? "" : "noPermission",
                         onSelected: this.SaveVoiceRoom
                       },
-                      !o && Ca.createElement(hd.y, null),
+                      !o && Ca.createElement(md.y, null),
                       Object(la.b)("#Chat_Actions_SaveChannel")
                     )
                   ),
@@ -60276,10 +60344,10 @@ and limitations under the License.
                     )
               );
             }),
-            ti.c([hn.a], t.prototype, "ShowInviteDialog", null),
-            ti.c([hn.a], t.prototype, "SaveVoiceRoom", null),
-            ti.c([hn.a], t.prototype, "RemoveRoom", null),
-            ti.c([hn.a], t.prototype, "ChangeRoomName", null),
+            ti.c([mn.a], t.prototype, "ShowInviteDialog", null),
+            ti.c([mn.a], t.prototype, "SaveVoiceRoom", null),
+            ti.c([mn.a], t.prototype, "RemoveRoom", null),
+            ti.c([mn.a], t.prototype, "ChangeRoomName", null),
             t
           );
         })(Ca.PureComponent),
@@ -60349,8 +60417,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -60436,8 +60504,8 @@ and limitations under the License.
                 Ca.createElement("div", { className: "disconnectBlocker" })
               );
             }),
-            ti.c([hn.a], t.prototype, "BindDiv", null),
-            ti.c([hn.a], t.prototype, "OnGroupSelected", null),
+            ti.c([mn.a], t.prototype, "BindDiv", null),
+            ti.c([mn.a], t.prototype, "OnGroupSelected", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -60565,7 +60633,7 @@ and limitations under the License.
                       onClick: this.OnClick,
                       onContextMenu: this.OnContextMenu
                     },
-                    Ca.createElement(Dm, { group: e, small: !0 }),
+                    Ca.createElement(Dh, { group: e, small: !0 }),
                     Ca.createElement(
                       "div",
                       { className: "groupNameStatusContainer" },
@@ -60585,7 +60653,7 @@ and limitations under the License.
                             onMouseEnter: this.OnMouseEnterNonTitle,
                             onMouseLeave: this.OnMouseLeaveNonTitle
                           },
-                          Ca.createElement(hd.l, null)
+                          Ca.createElement(md.l, null)
                         )
                       ),
                       !t && n && Ca.createElement(Pp, { group: e })
@@ -60617,18 +60685,18 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
-            ti.c([hn.a], t.prototype, "OnClick", null),
-            ti.c([hn.a], t.prototype, "OnToggleSelected", null),
-            ti.c([hn.a], t.prototype, "OnOpenGroup", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "OnMouseEnterNonTitle", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeaveNonTitle", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnToggleSelected", null),
+            ti.c([mn.a], t.prototype, "OnOpenGroup", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnMouseEnterNonTitle", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeaveNonTitle", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -60724,7 +60792,7 @@ and limitations under the License.
                 Ca.createElement(
                   "div",
                   { className: "voiceChannelIcon" },
-                  Ca.createElement(hd._2, null)
+                  Ca.createElement(md._3, null)
                 ),
                 t.map(function(e) {
                   return Ca.createElement(xp, {
@@ -60748,7 +60816,7 @@ and limitations under the License.
                 { className: "voiceChatGroup" },
                 e.rgFriends.map(function(e) {
                   return Ca.createElement(
-                    ph,
+                    pm,
                     {
                       key: e.accountid,
                       friend: e,
@@ -60887,8 +60955,8 @@ and limitations under the License.
                 i
               );
             }),
-            ti.c([hn.a], t.prototype, "BindContainerRef", null),
-            ti.c([hn.a], t.prototype, "OnResize", null),
+            ti.c([mn.a], t.prototype, "BindContainerRef", null),
+            ti.c([mn.a], t.prototype, "OnResize", null),
             t
           );
         })(Ca.Component),
@@ -60996,7 +61064,7 @@ and limitations under the License.
                     )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnRoomsContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnRoomsContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61075,7 +61143,7 @@ and limitations under the License.
                         onClick: this.OnMemberListToggleViewClick,
                         title: r
                       },
-                      Ca.createElement(hd.k, null)
+                      Ca.createElement(md.k, null)
                     ),
                     Ca.createElement(
                       "form",
@@ -61106,7 +61174,7 @@ and limitations under the License.
                             className: "friendSearchClear",
                             onClick: this.OnClearSearch
                           },
-                          Ca.createElement(hd._5, null)
+                          Ca.createElement(md._6, null)
                         )
                       )
                     )
@@ -61119,13 +61187,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMemberListToggleViewClick", null),
-            ti.c([hn.a], t.prototype, "OnSearchInput", null),
-            ti.c([hn.a], t.prototype, "OnSearchSubmit", null),
-            ti.c([hn.a], t.prototype, "OnSearchKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnClearSearch", null),
-            ti.c([hn.a], t.prototype, "OnSearchFocus", null),
-            ti.c([hn.a], t.prototype, "OnSearchBlur", null),
+            ti.c([mn.a], t.prototype, "OnMemberListToggleViewClick", null),
+            ti.c([mn.a], t.prototype, "OnSearchInput", null),
+            ti.c([mn.a], t.prototype, "OnSearchSubmit", null),
+            ti.c([mn.a], t.prototype, "OnSearchKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnClearSearch", null),
+            ti.c([mn.a], t.prototype, "OnSearchFocus", null),
+            ti.c([mn.a], t.prototype, "OnSearchBlur", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61197,7 +61265,7 @@ and limitations under the License.
                 return Ca.createElement(
                   "div",
                   { key: "group_" + r.bucket.strName, style: i },
-                  Ca.createElement(em, {
+                  Ca.createElement(eh, {
                     collapsed: !1,
                     memberCount: o.rgMembers.length,
                     name: o.strName
@@ -61208,7 +61276,7 @@ and limitations under the License.
               return Ca.createElement(
                 "div",
                 { key: a.accountid, style: i },
-                Ca.createElement(tm, {
+                Ca.createElement(th, {
                   friend: a,
                   groupView: this.props.groupView,
                   context: this.GetFriendRenderContext()
@@ -61262,9 +61330,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMemberListChanged", null),
-            ti.c([hn.a], t.prototype, "GetRowHeight", null),
-            ti.c([hn.a], t.prototype, "RenderRow", null),
+            ti.c([mn.a], t.prototype, "OnMemberListChanged", null),
+            ti.c([mn.a], t.prototype, "GetRowHeight", null),
+            ti.c([mn.a], t.prototype, "RenderRow", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61337,7 +61405,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
             t
           );
         })(Ca.Component),
@@ -61401,7 +61469,7 @@ and limitations under the License.
                       title: r ? "Expand List" : "Minimize List",
                       onClick: this.ToggleCollapseExpand
                     },
-                    Ca.createElement(hd.k, null)
+                    Ca.createElement(md.k, null)
                   )
                 ),
                 i.map(function(i) {
@@ -61418,11 +61486,11 @@ and limitations under the License.
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCreateNewTextChannel", null),
-            ti.c([hn.a], t.prototype, "OnStartChannelRename", null),
-            ti.c([hn.a], t.prototype, "OnChannelRename", null),
-            ti.c([hn.a], t.prototype, "OnEndChannelRename", null),
-            ti.c([hn.a], t.prototype, "ToggleCollapseExpand", null),
+            ti.c([mn.a], t.prototype, "OnCreateNewTextChannel", null),
+            ti.c([mn.a], t.prototype, "OnStartChannelRename", null),
+            ti.c([mn.a], t.prototype, "OnChannelRename", null),
+            ti.c([mn.a], t.prototype, "OnEndChannelRename", null),
+            ti.c([mn.a], t.prototype, "ToggleCollapseExpand", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61478,7 +61546,7 @@ and limitations under the License.
                 Ca.createElement(
                   "div",
                   { className: "chatRoomTextChannelIcon" },
-                  Ca.createElement(hd.W, null)
+                  Ca.createElement(md.X, null)
                 ),
                 !n && Ca.createElement("div", { className: i }, e.name),
                 !this.props.bDefaultRoom &&
@@ -61490,8 +61558,8 @@ and limitations under the License.
                   })
               );
             }),
-            ti.c([hn.a], t.prototype, "ToggleTextChat", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "ToggleTextChat", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61545,7 +61613,7 @@ and limitations under the License.
                       className: "ChatRoomAddRoomBtn",
                       title: Object(la.b)("#Tooltip_VoiceChannelCreate")
                     },
-                    Ca.createElement(hd.I, null)
+                    Ca.createElement(md.I, null)
                   )
                 ),
                 i.map(function(i) {
@@ -61564,11 +61632,11 @@ and limitations under the License.
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "CreateVoiceRoom", null),
-            ti.c([hn.a], t.prototype, "OnVoiceRoomSelected", null),
-            ti.c([hn.a], t.prototype, "OnStartChannelRename", null),
-            ti.c([hn.a], t.prototype, "OnChannelRename", null),
-            ti.c([hn.a], t.prototype, "OnEndChannelRename", null),
+            ti.c([mn.a], t.prototype, "CreateVoiceRoom", null),
+            ti.c([mn.a], t.prototype, "OnVoiceRoomSelected", null),
+            ti.c([mn.a], t.prototype, "OnStartChannelRename", null),
+            ti.c([mn.a], t.prototype, "OnChannelRename", null),
+            ti.c([mn.a], t.prototype, "OnEndChannelRename", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61707,7 +61775,7 @@ and limitations under the License.
                         classNames: "friend-anim",
                         timeout: 320
                       },
-                      Ca.createElement(mh, {
+                      Ca.createElement(hm, {
                         friend: t,
                         key: t.accountid,
                         context: e.GetFriendContext(),
@@ -61726,7 +61794,7 @@ and limitations under the License.
                   Ca.createElement(
                     pd,
                     { key: r, classNames: "friend-anim", timeout: 320 },
-                    Ca.createElement(mh, {
+                    Ca.createElement(hm, {
                       friend: o,
                       key: r,
                       context: this.GetFriendContext(),
@@ -61761,7 +61829,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "chatRoomVoiceChannelIcon" },
-                    Ca.createElement(hd._2, null)
+                    Ca.createElement(md._3, null)
                   ),
                   !this.props.bRenameActive &&
                     Ca.createElement(
@@ -61791,7 +61859,7 @@ and limitations under the License.
                           className: "VoiceControlPanelButton chatPinRoom",
                           title: "Channel Options"
                         },
-                        Ca.createElement(hd.l, null)
+                        Ca.createElement(md.l, null)
                       )
                     )
                 ),
@@ -61799,14 +61867,14 @@ and limitations under the License.
                   "div",
                   { className: "VoiceChannelParticipants CompactFriendsList" },
                   !l && c,
-                  l && Ca.createElement(md, { enter: !0, exit: !0 }, c)
+                  l && Ca.createElement(hd, { enter: !0, exit: !0 }, c)
                 ),
                 Ca.createElement(
                   "div",
                   { className: s },
                   Object(la.b)("#Chat_VoiceEmptyChannel")
                 ),
-                Ca.createElement(Ym, {
+                Ca.createElement(Yh, {
                   name: p,
                   chat: this.props.chat,
                   nostatus: !0
@@ -61839,12 +61907,12 @@ and limitations under the License.
                 Ca.createElement("div", { className: "dropTargetBox" })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "InviteToChat", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "InviteToChat", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -61900,15 +61968,15 @@ and limitations under the License.
               );
             }),
             ti.c([di.observable], t.prototype, "m_strValue", void 0),
-            ti.c([hn.a], t.prototype, "BindInputRef", null),
-            ti.c([hn.a], t.prototype, "OnChange", null),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "OnGlobalKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnBlur", null),
+            ti.c([mn.a], t.prototype, "BindInputRef", null),
+            ti.c([mn.a], t.prototype, "OnChange", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnGlobalKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnBlur", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        em = (function(e) {
+        eh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -61927,7 +61995,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "groupIcon" },
-                    Ca.createElement(hd.s, null)
+                    Ca.createElement(md.s, null)
                   ),
                   Ca.createElement(
                     "span",
@@ -61956,7 +62024,7 @@ and limitations under the License.
             t
           );
         })(Ca.PureComponent),
-        tm = (function(e) {
+        th = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -61995,7 +62063,7 @@ and limitations under the License.
                               "rankIcon rankOwner" +
                               (this.props.friend.is_friend ? " isFriend" : "")
                           },
-                          Ca.createElement(hd.h, null)
+                          Ca.createElement(md.h, null)
                         )
                       );
               }
@@ -62031,7 +62099,7 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { key: "friendIcon", className: "chatMemberFriendIcon" },
-                      Ca.createElement(hd.p, null)
+                      Ca.createElement(md.p, null)
                     )
                   );
                   break;
@@ -62040,7 +62108,7 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { key: "friendIcon", className: "chatMemberFriendIcon" },
-                      Ca.createElement(hd.p, { bPending: !0 })
+                      Ca.createElement(md.p, { bPending: !0 })
                     )
                   );
               }
@@ -62052,16 +62120,16 @@ and limitations under the License.
               };
               return r
                 ? Ca.createElement(
-                    mh,
+                    hm,
                     ti.a({}, s, { listStatusIndicatorLeft: e })
                   )
-                : Ca.createElement(gh, ti.a({}, s), e);
+                : Ca.createElement(gm, ti.a({}, s), e);
             }),
-            ti.c([hn.a], t.prototype, "OnFriendSelected", null),
+            ti.c([mn.a], t.prototype, "OnFriendSelected", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        im = (function(e) {
+        ih = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -62085,8 +62153,8 @@ and limitations under the License.
                 Ca.createElement(
                   "div",
                   { className: "Throbber" },
-                  Ca.createElement(hd.X, { className: "base" }),
-                  Ca.createElement(hd.X, { className: "blur" })
+                  Ca.createElement(md.Y, { className: "base" }),
+                  Ca.createElement(md.Y, { className: "blur" })
                 ),
                 Ca.createElement(
                   "div",
@@ -62107,7 +62175,7 @@ and limitations under the License.
             t
           );
         })(Ca.PureComponent),
-        nm = (function(e) {
+        nh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62142,7 +62210,7 @@ and limitations under the License.
                   : r.BIsAccountIDOwner(dd.CMInterface.steamid.GetAccountID())
                     ? "#Chat_Actions_OwnerLeaveChatRoomGroup_Confirm"
                     : "#Chat_Actions_LeaveChatRoomGroup_Confirm";
-              me(
+              he(
                 i,
                 Object(la.b)("#GroupSettings_Leave_Section"),
                 Object(la.b)(o, r.name),
@@ -62168,13 +62236,13 @@ and limitations under the License.
                 ? (t.push({
                     title: Object(la.b)("#GroupSettings_General_Section"),
                     uniqueName: "GroupSettings_General",
-                    content: Ca.createElement(om, { group: e, enabled: i }),
+                    content: Ca.createElement(oh, { group: e, enabled: i }),
                     enabled: i
                   }),
                   t.push({
                     title: Object(la.b)("#GroupSettings_Channels_Section"),
                     uniqueName: "GroupSettings_Channels",
-                    content: Ca.createElement(sm, {
+                    content: Ca.createElement(sh, {
                       groupView: this.props.groupView,
                       enabled: o
                     }),
@@ -62183,14 +62251,14 @@ and limitations under the License.
                   t.push({
                     title: Object(la.b)("#GroupSettings_Permissions_Section"),
                     uniqueName: "GroupSettings_Permissions",
-                    content: Ca.createElement(lm, { group: e, enabled: n }),
+                    content: Ca.createElement(lh, { group: e, enabled: n }),
                     enabled: n,
                     hideTitle: !0
                   }),
                   t.push({
                     title: Object(la.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Ca.createElement(um, {
+                    content: Ca.createElement(uh, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -62200,7 +62268,7 @@ and limitations under the License.
                   t.push({
                     title: Object(la.b)("#GroupSettings_InvitedUsers_Section"),
                     uniqueName: "GroupSettings_InvitedUsers",
-                    content: Ca.createElement(dm, {
+                    content: Ca.createElement(dh, {
                       group: e,
                       invitedUsers: this.m_invitedUsers,
                       enabled: r
@@ -62210,7 +62278,7 @@ and limitations under the License.
                   t.push({
                     title: Object(la.b)("#GroupSettings_Bans_Section"),
                     uniqueName: "GroupSettings_Bans",
-                    content: Ca.createElement(pm, {
+                    content: Ca.createElement(ph, {
                       group: e,
                       bans: this.m_bans,
                       enabled: a
@@ -62219,7 +62287,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(la.b)("#GroupSettings_Leave_Section"),
-                    content: Ca.createElement(am, { group: e }),
+                    content: Ca.createElement(ah, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -62227,13 +62295,13 @@ and limitations under the License.
                 : (t.push({
                     title: Object(la.b)("#GroupSettings_Save_Section"),
                     uniqueName: "GroupSettings_Save",
-                    content: Ca.createElement(rm, { group: e }),
+                    content: Ca.createElement(rh, { group: e }),
                     enabled: !0
                   }),
                   t.push({
                     title: Object(la.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Ca.createElement(um, {
+                    content: Ca.createElement(uh, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -62242,7 +62310,7 @@ and limitations under the License.
                   }),
                   t.push({
                     title: Object(la.b)("#GroupSettings_Leave_Section"),
-                    content: Ca.createElement(am, { group: e }),
+                    content: Ca.createElement(ah, { group: e }),
                     className: "ChatRoomLeave",
                     click: this.OnLeave
                   }),
@@ -62262,13 +62330,13 @@ and limitations under the License.
             }),
             ti.c([di.observable], t.prototype, "m_inviteLinks", void 0),
             ti.c([di.observable], t.prototype, "m_invitedUsers", void 0),
-            ti.c([hn.a], t.prototype, "DismissDialog", null),
-            ti.c([hn.a], t.prototype, "CloseDialog", null),
-            ti.c([hn.a], t.prototype, "OnLeave", null),
+            ti.c([mn.a], t.prototype, "DismissDialog", null),
+            ti.c([mn.a], t.prototype, "CloseDialog", null),
+            ti.c([mn.a], t.prototype, "OnLeave", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        rm = (function(e) {
+        rh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.m_bSaving = !1), (i.m_strError = ""), i;
@@ -62361,19 +62429,19 @@ and limitations under the License.
                       Object(la.b)("#GroupSettings_Save_Section")
                     )
                   ),
-                e && Ca.createElement(im, null)
+                e && Ca.createElement(ih, null)
               );
             }),
             ti.c([di.observable], t.prototype, "m_bSaving", void 0),
             ti.c([di.observable], t.prototype, "m_strError", void 0),
-            ti.c([hn.a], t.prototype, "BindInputRef", null),
-            ti.c([hn.a], t.prototype, "AnimateUpgrade_In", null),
-            ti.c([hn.a], t.prototype, "AnimateUpgrade_Out", null),
-            ti.c([hn.a], t.prototype, "SaveGroup", null),
+            ti.c([mn.a], t.prototype, "BindInputRef", null),
+            ti.c([mn.a], t.prototype, "AnimateUpgrade_In", null),
+            ti.c([mn.a], t.prototype, "AnimateUpgrade_Out", null),
+            ti.c([mn.a], t.prototype, "SaveGroup", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        om = (function(e) {
+        oh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62511,7 +62579,7 @@ and limitations under the License.
                     " ",
                     Object(la.b)("#Chat_Settings_General_Owner")
                   ),
-                  Ca.createElement(mh, {
+                  Ca.createElement(hm, {
                     className: "groupOwnerFriend",
                     friend: t,
                     context: null
@@ -62602,18 +62670,18 @@ and limitations under the License.
             }),
             ti.c([di.observable], t.prototype, "m_strRoomName", void 0),
             ti.c([di.observable], t.prototype, "m_strTagLine", void 0),
-            ti.c([hn.a], t.prototype, "OnFileChange", null),
-            ti.c([hn.a], t.prototype, "bindFileUploadControl", null),
-            ti.c([hn.a], t.prototype, "OnNameChange", null),
-            ti.c([hn.a], t.prototype, "OnAvatarChange", null),
-            ti.c([hn.a], t.prototype, "OnTagLineChange", null),
-            ti.c([hn.a], t.prototype, "OnNameBlur", null),
-            ti.c([hn.a], t.prototype, "OnTagLineBlur", null),
-            ti.c([hn.a], t.prototype, "OnSubmitSent", null),
+            ti.c([mn.a], t.prototype, "OnFileChange", null),
+            ti.c([mn.a], t.prototype, "bindFileUploadControl", null),
+            ti.c([mn.a], t.prototype, "OnNameChange", null),
+            ti.c([mn.a], t.prototype, "OnAvatarChange", null),
+            ti.c([mn.a], t.prototype, "OnTagLineChange", null),
+            ti.c([mn.a], t.prototype, "OnNameBlur", null),
+            ti.c([mn.a], t.prototype, "OnTagLineBlur", null),
+            ti.c([mn.a], t.prototype, "OnSubmitSent", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        am = (function(e) {
+        ah = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -62633,7 +62701,7 @@ and limitations under the License.
                     )
                     ? "#Chat_Actions_OwnerLeaveChatRoomGroup_Confirm"
                     : "#Chat_Actions_LeaveChatRoomGroup_Confirm";
-              me(
+              he(
                 i,
                 Object(la.b)("#GroupSettings_Leave_Section"),
                 Object(la.b)(r, this.props.group.name),
@@ -62656,11 +62724,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnLeave", null),
+            ti.c([mn.a], t.prototype, "OnLeave", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        sm = (function(e) {
+        sh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -62694,7 +62762,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDeleteChannel = function(e, t) {
-              me(
+              he(
                 e.currentTarget.ownerDocument.defaultView,
                 Object(la.b)("#GroupSettings_Channels_DeleteChannel"),
                 Object(la.b)("#GroupSettings_Channels_DeleteConfirm"),
@@ -62723,8 +62791,8 @@ and limitations under the License.
                       "div",
                       { className: "_DialogRowLabel" },
                       n
-                        ? Ca.createElement(hd._2, null)
-                        : Ca.createElement(hd.W, null),
+                        ? Ca.createElement(md._3, null)
+                        : Ca.createElement(md.X, null),
                       Ca.createElement(
                         "div",
                         {
@@ -62784,7 +62852,7 @@ and limitations under the License.
                       ne,
                       {
                         className: "DialogButtonTall",
-                        svgicon: hd.W,
+                        svgicon: md.X,
                         onClick: this.OnCreateNewTextChannel,
                         disabled: !this.props.enabled
                       },
@@ -62796,7 +62864,7 @@ and limitations under the License.
                       ne,
                       {
                         className: "DialogButtonTall",
-                        svgicon: hd.n,
+                        svgicon: md.n,
                         onClick: this.OnCreateNewVoiceChannel,
                         disabled: !this.props.enabled
                       },
@@ -62839,13 +62907,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCreateNewTextChannel", null),
-            ti.c([hn.a], t.prototype, "OnCreateNewVoiceChannel", null),
-            ti.c([hn.a], t.prototype, "OnDeleteChannel", null),
+            ti.c([mn.a], t.prototype, "OnCreateNewTextChannel", null),
+            ti.c([mn.a], t.prototype, "OnCreateNewVoiceChannel", null),
+            ti.c([mn.a], t.prototype, "OnDeleteChannel", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        cm = (function(e) {
+        ch = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return dd.FriendStore.self, (i.state = { strRoleName: "" }), i;
@@ -62913,12 +62981,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
             t
           );
         })(Ca.Component),
-        lm = (function(e) {
+        lh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -62938,7 +63006,7 @@ and limitations under the License.
             (t.prototype.OnCreateRole = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               de(
-                Ca.createElement(cm, { ownerWin: t, group: this.props.group }),
+                Ca.createElement(ch, { ownerWin: t, group: this.props.group }),
                 t
               );
             }),
@@ -62977,7 +63045,7 @@ and limitations under the License.
                     { style: { marginTop: "8px", color: "white" } },
                     r
                   );
-                me(
+                he(
                   window,
                   Object(la.b)("#GroupSettings_Permissions_ConfirmDeleteTitle"),
                   Object(la.b)("#GroupSettings_Permissions_ConfirmDelete"),
@@ -63082,7 +63150,7 @@ and limitations under the License.
                         onClick: function() {
                           e.setState({ editRoleID: void 0 });
                         },
-                        svgicon: hd.V
+                        svgicon: md.W
                       },
                       "Back to Permissions"
                     )
@@ -63094,7 +63162,7 @@ and limitations under the License.
                       Ca.createElement(
                         Dd,
                         null,
-                        Ca.createElement(hd.y, null),
+                        Ca.createElement(md.y, null),
                         Object(la.b)("#Chat_Settings_Permission_Denied")
                       ),
                     Ca.createElement(
@@ -63260,7 +63328,7 @@ and limitations under the License.
                 ),
                 d = !1,
                 p = this.BCanLocalUserAssignRole(),
-                m = s.map(function(i, n) {
+                h = s.map(function(i, n) {
                   var r = !1,
                     o = e.BCanLocalUserEditRole(i.role_id),
                     c = o && (u || i.ordinal > l + 1) && i.ordinal > 0,
@@ -63285,7 +63353,7 @@ and limitations under the License.
                             e.EditRole(i.role_id);
                           }
                         },
-                        Ca.createElement(hd.i, null),
+                        Ca.createElement(md.i, null),
                         Object(la.b)(i.name),
                         Ca.createElement(
                           "span",
@@ -63312,7 +63380,7 @@ and limitations under the License.
                                 e.MoveRoleUp(i.role_id), t.stopPropagation();
                               }
                             },
-                            Ca.createElement(hd.o, { angle: 0 })
+                            Ca.createElement(md.o, { angle: 0 })
                           ),
                           Ca.createElement(
                             "div",
@@ -63324,13 +63392,13 @@ and limitations under the License.
                                 e.MoveRoleDown(i.role_id), t.stopPropagation();
                               }
                             },
-                            Ca.createElement(hd.o, { angle: 180 })
+                            Ca.createElement(md.o, { angle: 180 })
                           )
                         )
                     )
                   );
                 }),
-                h = Object(la.b)("#ChatRoomRole_Description_NoEdit");
+                m = Object(la.b)("#ChatRoomRole_Description_NoEdit");
               if (t) {
                 var g = ci.a.InitFromClanID(this.props.group.GetClanID()),
                   f =
@@ -63338,7 +63406,7 @@ and limitations under the License.
                     "gid/" +
                     g.ConvertTo64BitString() +
                     "/membersManage";
-                h = Object(la.d)(
+                m = Object(la.d)(
                   "#ChatRoomRole_Description_Clan",
                   Ca.createElement(
                     Me,
@@ -63348,9 +63416,9 @@ and limitations under the License.
                 );
               } else
                 d && !u
-                  ? (h = Object(la.b)("#ChatRoomRole_Description"))
+                  ? (m = Object(la.b)("#ChatRoomRole_Description"))
                   : (p || u) &&
-                    (h = Object(la.b)(
+                    (m = Object(la.b)(
                       "#ChatRoomRole_Description_NoEditCanAssign"
                     ));
               return Ca.createElement(
@@ -63365,13 +63433,13 @@ and limitations under the License.
                     Ca.createElement(
                       Dd,
                       null,
-                      Ca.createElement(hd.y, null),
+                      Ca.createElement(md.y, null),
                       Object(la.b)(
                         "#Chat_Settings_Permission_Denied_Permissions"
                       )
                     )
                 ),
-                Ca.createElement(Ed, null, h),
+                Ca.createElement(Ed, null, m),
                 Ca.createElement(
                   "div",
                   { className: "roleEditHeader" },
@@ -63385,14 +63453,14 @@ and limitations under the License.
                     Ca.createElement(
                       Rd,
                       { className: "meKey" },
-                      Ca.createElement(hd.i, null),
+                      Ca.createElement(md.i, null),
                       Object(la.b)("#GroupSettings_meKey_Desc")
                     ),
                   u &&
                     Ca.createElement(
                       Rd,
                       { className: "meKey" },
-                      Ca.createElement(hd.h, null),
+                      Ca.createElement(md.h, null),
                       Object(la.b)("#GroupSettings_meKey_Desc_Owner")
                     )
                 ),
@@ -63404,7 +63472,7 @@ and limitations under the License.
                     {
                       disabled: !0,
                       className: "roleButton owner",
-                      svgicon: hd.h,
+                      svgicon: md.h,
                       onClick: function() {}
                     },
                     Object(la.b)("#ChatRoomRole_Owner"),
@@ -63414,14 +63482,14 @@ and limitations under the License.
                       Object(la.b)("#ChatRoomRole_OwnerSubtitle")
                     )
                   ),
-                  m
+                  h
                 ),
                 !t &&
                   Ca.createElement(
                     ie,
                     {
                       className: "createNewRoleButton",
-                      svgicon: hd.I,
+                      svgicon: md.I,
                       onClick: this.OnCreateRole,
                       disabled: !this.props.group.BCanICreateRoles()
                     },
@@ -63429,20 +63497,20 @@ and limitations under the License.
                   )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCreateRole", null),
-            ti.c([hn.a], t.prototype, "EditRole", null),
-            ti.c([hn.a], t.prototype, "RenameRole", null),
-            ti.c([hn.a], t.prototype, "DeleteRole", null),
-            ti.c([hn.a], t.prototype, "OnEditRoleNameChange", null),
-            ti.c([hn.a], t.prototype, "OnEditRoleNameBlur", null),
-            ti.c([hn.a], t.prototype, "OnSettingToggled", null),
-            ti.c([hn.a], t.prototype, "PermissionToggleRow", null),
-            ti.c([hn.a], t.prototype, "MoveRoleUp", null),
-            ti.c([hn.a], t.prototype, "MoveRoleDown", null),
+            ti.c([mn.a], t.prototype, "OnCreateRole", null),
+            ti.c([mn.a], t.prototype, "EditRole", null),
+            ti.c([mn.a], t.prototype, "RenameRole", null),
+            ti.c([mn.a], t.prototype, "DeleteRole", null),
+            ti.c([mn.a], t.prototype, "OnEditRoleNameChange", null),
+            ti.c([mn.a], t.prototype, "OnEditRoleNameBlur", null),
+            ti.c([mn.a], t.prototype, "OnSettingToggled", null),
+            ti.c([mn.a], t.prototype, "PermissionToggleRow", null),
+            ti.c([mn.a], t.prototype, "MoveRoleUp", null),
+            ti.c([mn.a], t.prototype, "MoveRoleDown", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        um = (function(e) {
+        uh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -63477,9 +63545,9 @@ and limitations under the License.
                 n = Ca.createElement(
                   "div",
                   { style: { marginTop: "5px", color: "#dee2e5" } },
-                  Object(ma.a)(e.invite_code())
+                  Object(ha.a)(e.invite_code())
                 );
-              me(
+              he(
                 window,
                 Object(la.b)("#GroupSettings_Invite_ConfirmDeleteTitle"),
                 Object(la.b)("#GroupSettings_Invite_ConfirmDelete"),
@@ -63528,7 +63596,7 @@ and limitations under the License.
                 t = this.props.inviteLinks,
                 i = void 0;
               if ("pending" == t.loadingState)
-                i = Ca.createElement("div", null, Ca.createElement(im, null));
+                i = Ca.createElement("div", null, Ca.createElement(ih, null));
               else if ("denied" == t.loadingState)
                 i = Ca.createElement(
                   "div",
@@ -63553,7 +63621,7 @@ and limitations under the License.
                       " ",
                       Ca.createElement(Pd, {
                         className: "inviteURLLink",
-                        value: Object(ma.a)(t.invite_code()),
+                        value: Object(ha.a)(t.invite_code()),
                         readOnly: !0,
                         onClick: e.HandleFocus,
                         onFocus: e.HandleFocus
@@ -63646,12 +63714,12 @@ and limitations under the License.
                 i
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDeleteLink", null),
-            ti.c([hn.a], t.prototype, "HandleFocus", null),
+            ti.c([mn.a], t.prototype, "OnDeleteLink", null),
+            ti.c([mn.a], t.prototype, "HandleFocus", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        dm = (function(e) {
+        dh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -63683,13 +63751,13 @@ and limitations under the License.
               var i = this,
                 n = dd.FriendStore.GetPlayer(t),
                 r = e.currentTarget.ownerDocument.defaultView,
-                o = Ca.createElement(mh, {
+                o = Ca.createElement(hm, {
                   className: "friend",
                   friend: n,
                   context: null,
                   disableContextMenu: !0
                 });
-              me(
+              he(
                 window,
                 Object(la.b)("#GroupSettings_InvitedUsers_RevokeTitle"),
                 Object(la.b)("#GroupSettings_InvitedUsers_RevokeBody"),
@@ -63702,7 +63770,7 @@ and limitations under the License.
                   i.props.group
                     .RevokeInvite(t)
                     .then(function() {
-                      mn.d(i.props.invitedUsers.rgInvitedUsers, function(e) {
+                      hn.d(i.props.invitedUsers.rgInvitedUsers, function(e) {
                         return e.accountid() === t;
                       });
                     })
@@ -63750,7 +63818,7 @@ and limitations under the License.
                       "td",
                       { className: "friendCell" },
                       " ",
-                      Ca.createElement(mh, {
+                      Ca.createElement(hm, {
                         friend: i,
                         context: null,
                         bHideGameName: !0,
@@ -63825,15 +63893,15 @@ and limitations under the License.
                 Ld,
                 null,
                 "pending" == this.props.invitedUsers.loadingState
-                  ? Ca.createElement(im, { size: "medium" })
+                  ? Ca.createElement(ih, { size: "medium" })
                   : Object(la.b)("#GroupSettings_InvitedUsers_Failed")
               );
             }),
-            ti.c([hn.a], t.prototype, "RevokeInvite", null),
+            ti.c([mn.a], t.prototype, "RevokeInvite", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        pm = (function(e) {
+        ph = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -63857,13 +63925,13 @@ and limitations under the License.
               var i = this,
                 n = dd.FriendStore.GetPlayer(t),
                 r = e.currentTarget.ownerDocument.defaultView,
-                o = Ca.createElement(mh, {
+                o = Ca.createElement(hm, {
                   className: "friend",
                   friend: n,
                   context: null,
                   disableContextMenu: !0
                 });
-              me(
+              he(
                 window,
                 Object(la.b)("#GroupSettings_Bans_UnbanTitle"),
                 Object(la.b)("#GroupSettings_Bans_UnbanBody", n.display_name),
@@ -63876,7 +63944,7 @@ and limitations under the License.
                   i.props.group
                     .SetUserBanState(t, !1)
                     .then(function() {
-                      mn.d(i.props.bans.rgBans, function(e) {
+                      hn.d(i.props.bans.rgBans, function(e) {
                         return e.accountid() === t;
                       });
                     })
@@ -63920,7 +63988,7 @@ and limitations under the License.
                           "td",
                           { className: "friendCell" },
                           " ",
-                          Ca.createElement(mh, { friend: i, context: null }),
+                          Ca.createElement(hm, { friend: i, context: null }),
                           " "
                         ),
                         Ca.createElement(
@@ -63985,18 +64053,18 @@ and limitations under the License.
               return (
                 (i =
                   "pending" == this.props.bans.loadingState
-                    ? Ca.createElement(im, { size: "medium" })
+                    ? Ca.createElement(ih, { size: "medium" })
                     : "denied" == this.props.bans.loadingState
                       ? Object(la.b)("#GroupSettings_Bans_AccessDenied")
                       : Object(la.b)("#GroupSettings_Bans_Failed")),
                 Ca.createElement(Ld, { className: "DialogBody" }, i)
               );
             }),
-            ti.c([hn.a], t.prototype, "OnClickUnban", null),
+            ti.c([mn.a], t.prototype, "OnClickUnban", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        mm = (function(e) {
+        hh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -64138,14 +64206,14 @@ and limitations under the License.
                 e.children
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "HandleRadioChange", null),
-            ti.c([hn.a], t.prototype, "OnSettingToggled", null),
-            ti.c([hn.a], t.prototype, "OnCommunityPreferenceToggled", null),
-            ti.c([hn.a], t.prototype, "FriendsSettingsToggleRow", null),
-            ti.c([hn.a], t.prototype, "FriendsSettingsCheckbox", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleRadioChange", null),
+            ti.c([mn.a], t.prototype, "OnSettingToggled", null),
+            ti.c([mn.a], t.prototype, "OnCommunityPreferenceToggled", null),
+            ti.c([mn.a], t.prototype, "FriendsSettingsToggleRow", null),
+            ti.c([mn.a], t.prototype, "FriendsSettingsCheckbox", null),
             ti.c(
-              [hn.a],
+              [mn.a],
               t.prototype,
               "FriendsSettingsCommunityPreferenceToggleRow",
               null
@@ -64158,8 +64226,8 @@ and limitations under the License.
           (e[(e.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
           (e[(e.k_EChatFontSizeLarge = 3)] = "k_EChatFontSizeLarge");
       })(sd || (sd = {}));
-      var hm,
-        gm = (function(e) {
+      var mh,
+        gh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -64169,7 +64237,7 @@ and limitations under the License.
               var e = this.props.bParenthesizeNicknames,
                 t = Object(la.b)("#FriendSettings_ExampleFriend"),
                 i = Object(la.b)("#FriendSettings_ExampleNickname"),
-                n = h(Ln, "_full");
+                n = m(Ln, "_full");
               return Ca.createElement(
                 "div",
                 { className: "friend online friendSettingsFakeFriend" },
@@ -64227,7 +64295,7 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        fm = (function(e) {
+        fh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -64313,11 +64381,11 @@ and limitations under the License.
                   Ca.createElement(ae, { onCancel: this.props.onCancel })
               );
             }),
-            ti.c([hn.a], t.prototype, "SetChatFontSize", null),
+            ti.c([mn.a], t.prototype, "SetChatFontSize", null),
             (t = ti.c([Xd.observer], t))
           );
-        })(mm),
-        _m = (function(e) {
+        })(hh),
+        _h = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -64363,8 +64431,8 @@ and limitations under the License.
             }),
             (t = ti.c([Xd.observer], t))
           );
-        })(mm),
-        ym = (function(e) {
+        })(hh),
+        yh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -64387,7 +64455,7 @@ and limitations under the License.
                         "#FriendSettings_ParenthesizeNicknames"
                       )
                     },
-                    Ca.createElement(gm, {
+                    Ca.createElement(gh, {
                       bParenthesizeNicknames: this.state.communityPreferences
                         .bParenthesizeNicknames
                     })
@@ -64420,8 +64488,8 @@ and limitations under the License.
             }),
             (t = ti.c([Xd.observer], t))
           );
-        })(mm),
-        vm = (function(e) {
+        })(hh),
+        vh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -64990,37 +65058,37 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "gotMediaDevices", null),
-            ti.c([hn.a], t.prototype, "gotMediaDevicesError", null),
-            ti.c([hn.a], t.prototype, "onSubmit", null),
-            ti.c([hn.a], t.prototype, "VoiceSettingsRefMarker", null),
-            ti.c([hn.a], t.prototype, "OnShowAdvancedSettings", null),
-            ti.c([hn.a], t.prototype, "OnMicDropdownChanged", null),
-            ti.c([hn.a], t.prototype, "OnOutputDeviceDropdownChanged", null),
-            ti.c([hn.a], t.prototype, "OnInputGainChanged", null),
-            ti.c([hn.a], t.prototype, "OnOutputGainChanged", null),
-            ti.c([hn.a], t.prototype, "OnToggleEchoCancellation", null),
-            ti.c([hn.a], t.prototype, "OnToggleNoiseCancellation", null),
-            ti.c([hn.a], t.prototype, "OnToggleAutoGainControl", null),
-            ti.c([hn.a], t.prototype, "SetNoiseGateOff", null),
-            ti.c([hn.a], t.prototype, "SetNoiseGateMedium", null),
-            ti.c([hn.a], t.prototype, "SetNoiseGateHigh", null),
-            ti.c([hn.a], t.prototype, "OnXButtonDown", null),
-            ti.c([hn.a], t.prototype, "OnTogglePushToTalk", null),
-            ti.c([hn.a], t.prototype, "OnSetOpenMic", null),
-            ti.c([hn.a], t.prototype, "OnSetPushToTalk", null),
-            ti.c([hn.a], t.prototype, "OnSetPushToMute", null),
-            ti.c([hn.a], t.prototype, "AssignHotkey", null),
-            ti.c([hn.a], t.prototype, "onMouseDown", null),
-            ti.c([hn.a], t.prototype, "onClick", null),
-            ti.c([hn.a], t.prototype, "onContextMenu", null),
-            ti.c([hn.a], t.prototype, "onKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnPPTSoundChecked", null),
-            ti.c([hn.a], t.prototype, "CopyVoiceLogsToClipboard", null),
+            ti.c([mn.a], t.prototype, "gotMediaDevices", null),
+            ti.c([mn.a], t.prototype, "gotMediaDevicesError", null),
+            ti.c([mn.a], t.prototype, "onSubmit", null),
+            ti.c([mn.a], t.prototype, "VoiceSettingsRefMarker", null),
+            ti.c([mn.a], t.prototype, "OnShowAdvancedSettings", null),
+            ti.c([mn.a], t.prototype, "OnMicDropdownChanged", null),
+            ti.c([mn.a], t.prototype, "OnOutputDeviceDropdownChanged", null),
+            ti.c([mn.a], t.prototype, "OnInputGainChanged", null),
+            ti.c([mn.a], t.prototype, "OnOutputGainChanged", null),
+            ti.c([mn.a], t.prototype, "OnToggleEchoCancellation", null),
+            ti.c([mn.a], t.prototype, "OnToggleNoiseCancellation", null),
+            ti.c([mn.a], t.prototype, "OnToggleAutoGainControl", null),
+            ti.c([mn.a], t.prototype, "SetNoiseGateOff", null),
+            ti.c([mn.a], t.prototype, "SetNoiseGateMedium", null),
+            ti.c([mn.a], t.prototype, "SetNoiseGateHigh", null),
+            ti.c([mn.a], t.prototype, "OnXButtonDown", null),
+            ti.c([mn.a], t.prototype, "OnTogglePushToTalk", null),
+            ti.c([mn.a], t.prototype, "OnSetOpenMic", null),
+            ti.c([mn.a], t.prototype, "OnSetPushToTalk", null),
+            ti.c([mn.a], t.prototype, "OnSetPushToMute", null),
+            ti.c([mn.a], t.prototype, "AssignHotkey", null),
+            ti.c([mn.a], t.prototype, "onMouseDown", null),
+            ti.c([mn.a], t.prototype, "onClick", null),
+            ti.c([mn.a], t.prototype, "onContextMenu", null),
+            ti.c([mn.a], t.prototype, "onKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnPPTSoundChecked", null),
+            ti.c([mn.a], t.prototype, "CopyVoiceLogsToClipboard", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Kd),
-        bm = (function(e) {
+        bh = (function(e) {
           function t(t) {
             return e.call(this, t, Object(la.b)("#Settings")) || this;
           }
@@ -65055,27 +65123,27 @@ and limitations under the License.
                     {
                       title: Object(la.b)("#FriendSettings_Friends"),
                       uniqueName: "FriendSettings_Friends",
-                      content: Ca.createElement(ym, ti.a({}, t))
+                      content: Ca.createElement(yh, ti.a({}, t))
                     },
                     {
                       title: Object(la.b)("#FriendSettings_Chat"),
                       uniqueName: "FriendSettings_Chat",
-                      content: Ca.createElement(_m, ti.a({}, t))
+                      content: Ca.createElement(_h, ti.a({}, t))
                     },
                     {
                       title: Object(la.b)("#FriendSettings_SizeAndScaling"),
                       uniqueName: "FriendSettings_SizeAndScaling",
-                      content: Ca.createElement(fm, ti.a({}, t))
+                      content: Ca.createElement(fh, ti.a({}, t))
                     },
                     {
                       title: Object(la.b)("#FriendSettings_Notifications"),
                       uniqueName: "FriendSettings_Notifications",
-                      content: Ca.createElement(Cm, ti.a({}, t))
+                      content: Ca.createElement(Ch, ti.a({}, t))
                     },
                     {
                       title: Object(la.b)("#FriendSettings_Voice"),
                       uniqueName: "FriendSettings_Voice",
-                      content: Ca.createElement(vm, {
+                      content: Ca.createElement(vh, {
                         onCancel: this.props.closeModal,
                         voiceStore: dd.ChatStore.VoiceChat
                       })
@@ -65091,7 +65159,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Cm = (function(e) {
+        Ch = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.m_rgOptions = Xe(!1)), i;
@@ -65246,11 +65314,11 @@ and limitations under the License.
                   Ca.createElement(ae, { onCancel: this.props.onCancel })
               );
             }),
-            ti.c([hn.a], t.prototype, "FriendsSettingsNotificationRow", null),
+            ti.c([mn.a], t.prototype, "FriendsSettingsNotificationRow", null),
             (t = ti.c([Xd.observer], t))
           );
-        })(mm),
-        Sm = (Ca.createElement(
+        })(hh),
+        Sh = (Ca.createElement(
           "div",
           {
             className:
@@ -65323,7 +65391,7 @@ and limitations under the License.
               var r;
               if (n) {
                 var o = i.map(function(i) {
-                  return Ca.createElement(Mm, {
+                  return Ca.createElement(Mh, {
                     fnHandleSave: e.WrapSavePromise,
                     group: t,
                     chat: i,
@@ -65375,7 +65443,7 @@ and limitations under the License.
                       },
                       "Saving ..."
                     ),
-                    Ca.createElement(Fm, {
+                    Ca.createElement(Fh, {
                       drop_down_options: this.m_rgSelectOptions,
                       get_notification_level: function(t) {
                         return e.props.group.GetDesktopNotificationLevel(t);
@@ -65431,17 +65499,17 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "IncrementSavesInFlight", null),
-            ti.c([hn.a], t.prototype, "DecrementSavesInFlight", null),
-            ti.c([hn.a], t.prototype, "WrapSavePromise", null),
-            ti.c([hn.a], t.prototype, "OnGroupNotificationLevelChanged", null),
-            ti.c([hn.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
-            ti.c([hn.a], t.prototype, "DismissDialog", null),
-            ti.c([hn.a], t.prototype, "OnFriendsSettingsClicked", null),
+            ti.c([mn.a], t.prototype, "IncrementSavesInFlight", null),
+            ti.c([mn.a], t.prototype, "DecrementSavesInFlight", null),
+            ti.c([mn.a], t.prototype, "WrapSavePromise", null),
+            ti.c([mn.a], t.prototype, "OnGroupNotificationLevelChanged", null),
+            ti.c([mn.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
+            ti.c([mn.a], t.prototype, "DismissDialog", null),
+            ti.c([mn.a], t.prototype, "OnFriendsSettingsClicked", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component)),
-        Mm = (function(e) {
+        Mh = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_rgSelectOptions = Xe()), t;
@@ -65473,11 +65541,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnChatNotificationLevelChanged", null),
+            ti.c([mn.a], t.prototype, "OnChatNotificationLevelChanged", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Fm = (function(e) {
+        Fh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65551,12 +65619,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnNotificationLevelChanged", null),
-            ti.c([hn.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
+            ti.c([mn.a], t.prototype, "OnNotificationLevelChanged", null),
+            ti.c([mn.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        wm = function() {
+        wh = function() {
           for (var e = [], t = 0; t < arguments.length; t++)
             e[t] = arguments[t];
           return e.reduce(function(e, t) {
@@ -65567,7 +65635,7 @@ and limitations under the License.
               : e;
           }, "");
         },
-        Bm = (function(e) {
+        Bh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65585,7 +65653,7 @@ and limitations under the License.
                 };
               return Ca.createElement(
                 Dp.TransitionGroup,
-                ti.a({}, r, { className: wm("crossfade", n) }),
+                ti.a({}, r, { className: wh("crossfade", n) }),
                 Ca.createElement(
                   Dp.CSSTransition,
                   {
@@ -65601,7 +65669,7 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        Om = (function(e) {
+        Oh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65644,7 +65712,7 @@ and limitations under the License.
                       "chatRoomGroupHeader" + (o ? " notifyBroadcast" : ""),
                     onContextMenu: this.OnContextMenu
                   },
-                  Ca.createElement(Dm, { group: t }),
+                  Ca.createElement(Dh, { group: t }),
                   Ca.createElement(
                     "div",
                     { className: "chatRoomGroupHeaderNameandTag" },
@@ -65680,7 +65748,7 @@ and limitations under the License.
                                 "#Tooltip_NotificationSettings"
                               )
                             },
-                            Ca.createElement(hd.c, null)
+                            Ca.createElement(md.c, null)
                           ),
                           r &&
                             Ca.createElement(
@@ -65690,7 +65758,7 @@ and limitations under the License.
                                 onClick: this.InviteFriend,
                                 title: Object(la.b)("#Tooltip_InviteToGroup")
                               },
-                              Ca.createElement(hd.x, null)
+                              Ca.createElement(md.x, null)
                             ),
                           !r &&
                             Ca.createElement(
@@ -65703,7 +65771,7 @@ and limitations under the License.
                                   "#Tooltip_InviteToGroup_Denied"
                                 )
                               },
-                              Ca.createElement(hd.x, null)
+                              Ca.createElement(md.x, null)
                             ),
                           Ca.createElement(
                             "div",
@@ -65712,15 +65780,15 @@ and limitations under the License.
                               onClick: this.OpenSettings,
                               title: Object(la.b)("#Tooltip_GroupChatSettings")
                             },
-                            Ca.createElement(hd.e, null)
+                            Ca.createElement(md.e, null)
                           )
                         ),
                         Ca.createElement(
                           "div",
                           { className: "chatRoomGroupStats" },
-                          Ca.createElement(Rm, { group: t }),
-                          Ca.createElement(Tm, { group: t }),
-                          Ca.createElement(Em, { group: t })
+                          Ca.createElement(Rh, { group: t }),
+                          Ca.createElement(Th, { group: t }),
+                          Ca.createElement(Eh, { group: t })
                         )
                       )
                     )
@@ -65735,7 +65803,7 @@ and limitations under the License.
                 r = n.watching_broadcast_steamid.ConvertTo64BitString(),
                 o = n.BCanIAssociateBroadcast()
                   ? function() {
-                      return me(
+                      return he(
                         window,
                         Object(la.b)("#Broadcast_EndWatchParty"),
                         Object(la.b)("#Broadcast_EndWatchPartyPrompt"),
@@ -65745,21 +65813,21 @@ and limitations under the License.
                       });
                     }
                   : void 0;
-              return Ca.createElement(Im, {
+              return Ca.createElement(Ih, {
                 broadcastId: r,
                 key: r,
                 onClick: i,
                 onRequestClose: o
               });
             }),
-            ti.c([hn.a], t.prototype, "InviteFriend", null),
-            ti.c([hn.a], t.prototype, "OpenSettings", null),
-            ti.c([hn.a], t.prototype, "OpenNotificationPreferences", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "InviteFriend", null),
+            ti.c([mn.a], t.prototype, "OpenSettings", null),
+            ti.c([mn.a], t.prototype, "OpenNotificationPreferences", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Im = (function(e) {
+        Ih = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { info: kl.StartInfo(t.broadcastId) }), i;
@@ -65799,7 +65867,7 @@ and limitations under the License.
                   "div",
                   { className: "thumbnail" },
                   o &&
-                    Ca.createElement(Bm, {
+                    Ca.createElement(Bh, {
                       className: "thumbnailImg",
                       src: o,
                       duration: 2500
@@ -65809,15 +65877,15 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "actions", onClick: this.OnCloseClick },
-                    Ca.createElement(hd._4, null)
+                    Ca.createElement(md._5, null)
                   )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCloseClick", null),
+            ti.c([mn.a], t.prototype, "OnCloseClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Rm = Object(Xd.observer)(function(e) {
+        Rh = Object(Xd.observer)(function(e) {
           var t = e.group;
           return Ca.createElement(
             "div",
@@ -65826,7 +65894,7 @@ and limitations under the License.
             Object(la.c)("#Chat_Members", t.memberCountTotal)
           );
         }),
-        Em = Object(Xd.observer)(function(e) {
+        Eh = Object(Xd.observer)(function(e) {
           var t = e.group;
           return 0 == t.memberCountInGame
             ? null
@@ -65843,7 +65911,7 @@ and limitations under the License.
                 t.memberCountInGame
               );
         }),
-        Tm = Object(Xd.observer)(function(e) {
+        Th = Object(Xd.observer)(function(e) {
           var t = e.group;
           return 0 == t.memberCountOnline
             ? null
@@ -65860,7 +65928,7 @@ and limitations under the License.
                 t.memberCountOnline
               );
         }),
-        km = Object(Xd.observer)(function(e) {
+        kh = Object(Xd.observer)(function(e) {
           if (!e.small && !e.micro && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
             var t = dd.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
             return Ca.createElement(
@@ -65889,7 +65957,7 @@ and limitations under the License.
             )
           );
         }),
-        Dm = (function(e) {
+        Dh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -65900,7 +65968,7 @@ and limitations under the License.
                 t = this.props.group;
               if (t && t.BIsClanChatRoom()) {
                 var i = dd.FriendStore.ClanStore.GetClan(t.GetClanID());
-                return Ca.createElement(km, {
+                return Ca.createElement(kh, {
                   clan: i,
                   micro: this.props.micro,
                   small: this.props.small,
@@ -65978,7 +66046,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Gm = (function(e) {
+        Gh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -66038,7 +66106,7 @@ and limitations under the License.
                       a = t.isActiveDrag;
                     return (
                       a && (r += "dragGhost"),
-                      Ca.createElement(Nm, {
+                      Ca.createElement(Nh, {
                         favorite: t,
                         index: n,
                         friendRenderContext: e.GetFriendRenderContext(),
@@ -66205,17 +66273,17 @@ and limitations under the License.
             ti.c([di.observable], t.prototype, "m_iActiveDragIndex", void 0),
             ti.c([di.observable], t.prototype, "m_ActiveDrag", void 0),
             ti.c([di.observable], t.prototype, "m_ActiveDragOut", void 0),
-            ti.c([hn.a], t.prototype, "DismissFavoritesHint", null),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "DismissFavoritesHint", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Nm = (function(e) {
+        Nh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66261,20 +66329,20 @@ and limitations under the License.
               this.props.bIsDragOutGhost && (i = { display: "none" });
               var n;
               n = t.friend
-                ? Ca.createElement(Am, {
+                ? Ca.createElement(Ah, {
                     key: t.friend.accountid,
                     friend: t.friend,
                     friendRenderContext: this.props.friendRenderContext,
                     className: e
                   })
                 : t.clan
-                  ? Ca.createElement(Lm, {
+                  ? Ca.createElement(Lh, {
                       key: t.clan.clanid,
                       clan: t.clan,
                       className: e
                     })
                   : t.chat
-                    ? Ca.createElement(Pm, {
+                    ? Ca.createElement(Ph, {
                         key: t.chat.GetGroupID(),
                         chat: t.chat,
                         className: e
@@ -66292,7 +66360,7 @@ and limitations under the License.
               );
               return t.friend
                 ? Ca.createElement(
-                    ph,
+                    pm,
                     {
                       friend: t.friend,
                       context: this.props.friendRenderContext
@@ -66301,16 +66369,16 @@ and limitations under the License.
                   )
                 : r;
             }),
-            ti.c([hn.a], t.prototype, "onFavoriteElementClick", null),
-            ti.c([hn.a], t.prototype, "OnFavoriteElementContextMenu", null),
+            ti.c([mn.a], t.prototype, "onFavoriteElementClick", null),
+            ti.c([mn.a], t.prototype, "OnFavoriteElementContextMenu", null),
             t
           );
         })(Ca.Component),
-        Am = Object(Xd.observer)(function(e) {
+        Ah = Object(Xd.observer)(function(e) {
           var t = e.friend,
             i = dd.SettingsStore.FriendsSettings.bCompactQuickAccess,
             n = null;
-          t.persona.is_awayOrSnooze && (n = Ca.createElement(ah, null));
+          t.persona.is_awayOrSnooze && (n = Ca.createElement(am, null));
           var r = void 0;
           if (t.persona.is_ingame) {
             var o = dd.AppInfoStore.GetAppInfo(t.persona.m_unGamePlayedAppID);
@@ -66346,7 +66414,7 @@ and limitations under the License.
                 Ca.createElement("div", { className: "chatUnreadCircle" })
               )),
             Ca.createElement(
-              mh,
+              hm,
               {
                 friend: t,
                 key: t.accountid,
@@ -66394,7 +66462,7 @@ and limitations under the License.
             )
           );
         }),
-        Lm = (function(e) {
+        Lh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66427,7 +66495,7 @@ and limitations under the License.
                   onDragStart: this.OnDragStart,
                   onDragEnd: this.OnDragEnd
                 },
-                Ca.createElement(km, { clan: this.props.clan, small: !0 }),
+                Ca.createElement(kh, { clan: this.props.clan, small: !0 }),
                 !t &&
                   Ca.createElement(
                     "div",
@@ -66437,12 +66505,12 @@ and limitations under the License.
                 i
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Pm = (function(e) {
+        Ph = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66473,7 +66541,7 @@ and limitations under the License.
                     onDragStart: this.OnDragStart,
                     onDragEnd: this.OnDragEnd
                   },
-                  Ca.createElement(Dm, { group: this.props.chat }),
+                  Ca.createElement(Dh, { group: this.props.chat }),
                   !i &&
                     Ca.createElement(
                       "div",
@@ -66484,12 +66552,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        xm = (function(e) {
+        xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -66709,7 +66777,7 @@ and limitations under the License.
                       onFriendSelected: this.OnFriendListSelectionChanged,
                       onFriendRemoved: this.OnFriendListSelectionChanged,
                       rgSelectedFriends: this.props.vecInvitePlayers,
-                      chosenFriendComponent: zm
+                      chosenFriendComponent: zh
                     })
                   ),
                   Ca.createElement(
@@ -66724,20 +66792,20 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleTextEntry", null),
-            ti.c([hn.a], t.prototype, "OnFriendPickerRef", null),
-            ti.c([hn.a], t.prototype, "OnFriendListSelectionChanged", null),
-            ti.c([hn.a], t.prototype, "HandleSubmit", null),
+            ti.c([mn.a], t.prototype, "HandleTextEntry", null),
+            ti.c([mn.a], t.prototype, "OnFriendPickerRef", null),
+            ti.c([mn.a], t.prototype, "OnFriendListSelectionChanged", null),
+            ti.c([mn.a], t.prototype, "HandleSubmit", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        zm = Object(Xd.observer)(function(e) {
+        zh = Object(Xd.observer)(function(e) {
           var t = e.friend.is_in_beta || void 0 === e.friend.is_in_beta;
           return Ca.createElement(
             Ca.Fragment,
             null,
             Ca.createElement(
-              ph,
+              pm,
               { friend: e.friend, context: null },
               Ca.createElement(
                 "div",
@@ -66751,28 +66819,28 @@ and limitations under the License.
                 },
                 !t && Ca.createElement(rt, null),
                 Ca.createElement("span", null, e.friend.display_name),
-                Ca.createElement(hd._5, null)
+                Ca.createElement(md._6, null)
               )
             )
           );
         }),
-        Um = (function() {
+        Uh = (function() {
           function e() {
             this.m_mapHovers = new WeakMap();
           }
           return (
             (e.prototype.GetHover = function(e) {
               var t = this.m_mapHovers.get(e);
-              return t || ((t = new jm(e)), this.m_mapHovers.set(e, t)), t;
+              return t || ((t = new jh(e)), this.m_mapHovers.set(e, t)), t;
             }),
             e
           );
         })(),
-        Vm = (function() {
+        Vh = (function() {
           function e() {}
           return ti.c([di.observable], e.prototype, "visible", void 0), e;
         })(),
-        jm = (function() {
+        jh = (function() {
           function e(e) {
             (this.m_bLoadingData = !1), (this.m_friend = e);
           }
@@ -66798,7 +66866,7 @@ and limitations under the License.
                   if (r.m_OwningElement == e) return r;
                 }
               if (t) {
-                var r = new Vm();
+                var r = new Vh();
                 return (
                   (r.m_OwningElement = e),
                   (r.visible = !1),
@@ -66817,7 +66885,7 @@ and limitations under the License.
                 t.m_OwningElement.ownerDocument.defaultView.setTimeout(
                   function() {
                     t.visible &&
-                      (t.popupWindow || (t.popupWindow = new Sh(e, t, i)),
+                      (t.popupWindow || (t.popupWindow = new Sm(e, t, i)),
                       t.popupWindow.Show());
                   },
                   250
@@ -66901,7 +66969,7 @@ and limitations under the License.
                     i,
                     500
                   );
-                mn.c(this.m_rgInstances, i);
+                hn.c(this.m_rgInstances, i);
               }
             }),
             (e.prototype.OnContextMenu = function(e, t) {
@@ -66978,13 +67046,13 @@ and limitations under the License.
             }),
             (e.m_embeddedElements = new fd.a("CFriendHoverContainer")),
             ti.c([di.observable], e.prototype, "m_communityData", void 0),
-            ti.c([hn.a], e.prototype, "Show", null),
-            ti.c([hn.a], e.prototype, "Hide", null),
-            ti.c([hn.a], e.prototype, "OnContextMenu", null),
+            ti.c([mn.a], e.prototype, "Show", null),
+            ti.c([mn.a], e.prototype, "Hide", null),
+            ti.c([mn.a], e.prototype, "OnContextMenu", null),
             e
           );
         })(),
-        Wm = (Ca.Component,
+        Wh = (Ca.Component,
         Ca.Component,
         (function(e) {
           function t(t) {
@@ -67575,11 +67643,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "PostDate", null),
+            ti.c([mn.a], t.prototype, "PostDate", null),
             t
           );
         })(Ca.Component)),
-        Hm = (function(e) {
+        Hh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -67604,7 +67672,7 @@ and limitations under the License.
                     Ca.createElement(
                       kd,
                       { className: "changeLogDetails" },
-                      Ca.createElement(Wm, null)
+                      Ca.createElement(Wh, null)
                     )
                   ),
                   Ca.createElement(
@@ -67622,7 +67690,7 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        qm = (function(e) {
+        qh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -67670,7 +67738,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Km = (function(e) {
+        Kh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -67679,7 +67747,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.chats.GetActiveVoiceChat();
               return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-                ? Ca.createElement(Ym, {
+                ? Ca.createElement(Yh, {
                     chat: e,
                     name: this.props.chats.GetActiveVoiceChannelName(),
                     nostatus: !1
@@ -67708,12 +67776,12 @@ and limitations under the License.
                         Ca.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          Ca.createElement(Jm, null),
-                          Ca.createElement(Xm, null),
+                          Ca.createElement(Jh, null),
+                          Ca.createElement(Xh, null),
                           Ca.createElement("div", {
                             className: "activeVoiceButtonsSpacer"
                           }),
-                          Ca.createElement(Zm, null),
+                          Ca.createElement(Zh, null),
                           Ca.createElement("div", {
                             className: "activeVoiceButtonsSpacerAfter"
                           })
@@ -67725,7 +67793,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Ym = (function(e) {
+        Yh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -67787,19 +67855,19 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "activeVoiceButtons" },
-                        Ca.createElement(Jm, null),
-                        Ca.createElement(Xm, null),
+                        Ca.createElement(Jh, null),
+                        Ca.createElement(Xh, null),
                         Ca.createElement("div", {
                           className: "activeVoiceButtonsSpacer"
                         }),
-                        Ca.createElement(Zm, null),
+                        Ca.createElement(Zh, null),
                         Ca.createElement("div", {
                           className: "activeVoiceButtonsSpacerAfter"
                         })
                       )
                     ),
                     !this.props.nostatus &&
-                      Ca.createElement(qm, { chat: this.props.chat })
+                      Ca.createElement(qh, { chat: this.props.chat })
                   ),
                   (e || t) &&
                     Ca.createElement(
@@ -67813,11 +67881,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ActivateActiveVoiceChat", null),
+            ti.c([mn.a], t.prototype, "ActivateActiveVoiceChat", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Jm = (function(e) {
+        Jh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -67851,16 +67919,16 @@ and limitations under the License.
                 Ca.createElement(
                   "button",
                   { className: n, onClick: this.ToggleMicrophone, title: r },
-                  Ca.createElement(hd.C, null),
-                  Ca.createElement(hd.C, { className: "SVGIcon_Shadow" })
+                  Ca.createElement(md.C, null),
+                  Ca.createElement(md.C, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ToggleMicrophone", null),
+            ti.c([mn.a], t.prototype, "ToggleMicrophone", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Xm = (function(e) {
+        Xh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -67884,16 +67952,16 @@ and limitations under the License.
                 Ca.createElement(
                   "button",
                   { className: t, onClick: this.ToggleVoiceOutput, title: i },
-                  Ca.createElement(hd.t, null),
-                  Ca.createElement(hd.t, { className: "SVGIcon_Shadow" })
+                  Ca.createElement(md.t, null),
+                  Ca.createElement(md.t, { className: "SVGIcon_Shadow" })
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ToggleVoiceOutput", null),
+            ti.c([mn.a], t.prototype, "ToggleVoiceOutput", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Zm = (function(e) {
+        Zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -67910,14 +67978,14 @@ and limitations under the License.
                   onClick: this.EndVoiceChat,
                   title: Object(la.b)("#VoiceChat_Leave")
                 },
-                Ca.createElement(hd._2, null)
+                Ca.createElement(md._3, null)
               );
             }),
-            ti.c([hn.a], t.prototype, "EndVoiceChat", null),
+            ti.c([mn.a], t.prototype, "EndVoiceChat", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Qm = (function(e) {
+        Qh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -67983,7 +68051,7 @@ and limitations under the License.
               var t = e.currentTarget.ownerDocument.defaultView,
                 i = H_.GetSecondsOutOfDate(),
                 n = Object(la.e)(i, !0);
-              me(
+              he(
                 t,
                 Object(la.b)("#Friends_ConfirmUpdate_Title"),
                 Object(la.b)("#Friends_ConfirmUpdate_Body", n),
@@ -68095,8 +68163,8 @@ and limitations under the License.
               this.props.popup && (u = Ht(this.props.popup) != ld);
               var d = !1,
                 p = 0,
-                m = !1,
-                h =
+                h = !1,
+                m =
                   "friendListButton friendSettingsButton friendsListNeedsUpdate no-drag";
               void 0 != H_ &&
                 ((d = H_.BNeedsUpdate()),
@@ -68104,7 +68172,7 @@ and limitations under the License.
                 p < 432e3
                   ? (d = !1)
                   : p > 604800 &&
-                    ((h += " friendsListVeryOutOfDate"), (m = !0)));
+                    ((m += " friendsListVeryOutOfDate"), (h = !0)));
               var g = this.props.chats.GetActiveVoiceChat(),
                 f = !1;
               (this.props.chats.VoiceChat.IsAnyVoiceActive() || g) && (f = !0);
@@ -68141,10 +68209,10 @@ and limitations under the License.
                               (y ? "Collapsed" : ""),
                             onClick: this.ToggleCollapseExpand
                           },
-                          Ca.createElement(hd.k, null)
+                          Ca.createElement(md.k, null)
                         )
                       ),
-                    Ca.createElement(ih, {
+                    Ca.createElement(im, {
                       popup: this.props.popup && this.props.popup,
                       currentUser: e
                     }),
@@ -68155,15 +68223,15 @@ and limitations under the License.
                         Ca.createElement(
                           "div",
                           {
-                            className: h,
+                            className: m,
                             onClick: this.OnDoFriendsListUpdate,
-                            title: m
+                            title: h
                               ? Object(la.b)(
                                   "#Tooltip_FriendsListUpdate_VeryOld"
                                 )
                               : Object(la.b)("#Tooltip_FriendsListUpdate")
                           },
-                          Ca.createElement(hd.K, null)
+                          Ca.createElement(md.K, null)
                         ),
                       Ca.createElement(
                         "div",
@@ -68173,11 +68241,11 @@ and limitations under the License.
                           onClick: this.OnSettingsClick,
                           title: Object(la.b)("#Tooltip_Settings")
                         },
-                        Ca.createElement(hd.Q, null)
+                        Ca.createElement(md.Q, null)
                       )
                     ),
                     Ca.createElement(
-                      md,
+                      hd,
                       null,
                       f &&
                         Ca.createElement(
@@ -68187,10 +68255,10 @@ and limitations under the License.
                             classNames: "activevoice-anim",
                             timeout: 500
                           },
-                          Ca.createElement(Km, { chats: this.props.chats })
+                          Ca.createElement(Kh, { chats: this.props.chats })
                         )
                     ),
-                    Ca.createElement(Gm, {
+                    Ca.createElement(Gh, {
                       FavoritesStore: this.props.friends.FavoritesStore
                     }),
                     Ca.createElement(
@@ -68221,7 +68289,7 @@ and limitations under the License.
                                 onClick: s ? null : this.OnTabSearchClick
                               },
                               Ca.createElement(
-                                md,
+                                hd,
                                 { className: "tabSearchTransitionGroup" },
                                 s &&
                                   Ca.createElement(
@@ -68270,7 +68338,7 @@ and limitations under the License.
                                               className: "friendSearchClear",
                                               onClick: this.OnClearSearch
                                             },
-                                            Ca.createElement(hd._5, null)
+                                            Ca.createElement(md._6, null)
                                           )
                                         )
                                       )
@@ -68284,7 +68352,7 @@ and limitations under the License.
                                   onClick: this.OnTabSearchClick,
                                   title: Object(la.b)("#Tooltip_SearchFriends")
                                 },
-                                Ca.createElement(hd.z, null)
+                                Ca.createElement(md.z, null)
                               )
                             ),
                             (i || n || r) &&
@@ -68298,7 +68366,7 @@ and limitations under the License.
                                     o
                                   )
                                 },
-                                Ca.createElement(hd.q, null),
+                                Ca.createElement(md.q, null),
                                 o > 0 &&
                                   Ca.createElement(
                                     "div",
@@ -68316,7 +68384,7 @@ and limitations under the License.
                                     "friendListButton addFriendButton no-drag",
                                   title: Object(la.b)("#Tooltip_AddFriend")
                                 },
-                                Ca.createElement(hd.a, null)
+                                Ca.createElement(md.a, null)
                               )
                             )
                           )
@@ -68325,7 +68393,7 @@ and limitations under the License.
                     ),
                     Ca.createElement("div", { className: "disconnectBlocker" })
                   ),
-                  Ca.createElement(nh, {
+                  Ca.createElement(nm, {
                     friends: this.props.friends,
                     chats: this.props.chats,
                     searchString: t,
@@ -68338,29 +68406,29 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "friendListFooter" },
-                    Ca.createElement(th, null)
+                    Ca.createElement(tm, null)
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSearchInputRef", null),
-            ti.c([hn.a], t.prototype, "StartSearchOnKeyPress", null),
-            ti.c([hn.a], t.prototype, "OnSearchInput", null),
-            ti.c([hn.a], t.prototype, "OnSearchSubmit", null),
-            ti.c([hn.a], t.prototype, "OnSearchSelection", null),
-            ti.c([hn.a], t.prototype, "OnSearchKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnClearSearch", null),
-            ti.c([hn.a], t.prototype, "OnSettingsClick", null),
-            ti.c([hn.a], t.prototype, "ToggleCollapseExpand", null),
-            ti.c([hn.a], t.prototype, "OnDoFriendsListUpdate", null),
-            ti.c([hn.a], t.prototype, "BindTabLabel", null),
-            ti.c([hn.a], t.prototype, "CollapseTabLabel", null),
-            ti.c([hn.a], t.prototype, "OnTabSearchClick", null),
-            ti.c([hn.a], t.prototype, "ToggleViewingIncomingInvites", null),
+            ti.c([mn.a], t.prototype, "OnSearchInputRef", null),
+            ti.c([mn.a], t.prototype, "StartSearchOnKeyPress", null),
+            ti.c([mn.a], t.prototype, "OnSearchInput", null),
+            ti.c([mn.a], t.prototype, "OnSearchSubmit", null),
+            ti.c([mn.a], t.prototype, "OnSearchSelection", null),
+            ti.c([mn.a], t.prototype, "OnSearchKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnClearSearch", null),
+            ti.c([mn.a], t.prototype, "OnSettingsClick", null),
+            ti.c([mn.a], t.prototype, "ToggleCollapseExpand", null),
+            ti.c([mn.a], t.prototype, "OnDoFriendsListUpdate", null),
+            ti.c([mn.a], t.prototype, "BindTabLabel", null),
+            ti.c([mn.a], t.prototype, "CollapseTabLabel", null),
+            ti.c([mn.a], t.prototype, "OnTabSearchClick", null),
+            ti.c([mn.a], t.prototype, "ToggleViewingIncomingInvites", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        $m = (function(e) {
+        $h = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68390,7 +68458,7 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        eh = (function(e) {
+        em = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68430,7 +68498,7 @@ and limitations under the License.
                       ? Object(la.b)("#changeLog_Value_Button", t)
                       : Object(la.b)("#changeLog_Button")
                   },
-                  Ca.createElement(hd.P, null),
+                  Ca.createElement(md.P, null),
                   e &&
                     Ca.createElement(
                       "div",
@@ -68440,11 +68508,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OpenChangeLog", null),
+            ti.c([mn.a], t.prototype, "OpenChangeLog", null),
             t
           );
         })(Ca.Component),
-        th = (function(e) {
+        tm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -68459,16 +68527,16 @@ and limitations under the License.
                   "div",
                   { className: "flexRowCentered" },
                   !1,
-                  Ca.createElement($m, null),
-                  Ca.createElement(eh, null)
+                  Ca.createElement($h, null),
+                  Ca.createElement(em, null)
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnSettingsZooClick", null),
+            ti.c([mn.a], t.prototype, "OnSettingsZooClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        ih = (function(e) {
+        im = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68538,7 +68606,7 @@ and limitations under the License.
                     })
                   ),
                   Ca.createElement(
-                    ph,
+                    pm,
                     {
                       friend: e,
                       context: { chatContext: "friendslist" },
@@ -68555,7 +68623,7 @@ and limitations under the License.
                         src: e.persona.avatar_url_medium,
                         onClick: this.ShowCurrentUserProfile
                       }),
-                      Ca.createElement(fh, {
+                      Ca.createElement(fm, {
                         friend: e,
                         strOverrideStatus: i,
                         onShowContextMenu: this.OnShowContextMenu,
@@ -68576,18 +68644,18 @@ and limitations under the License.
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Ca.createElement(hd.R, null)
+                      Ca.createElement(md.S, null)
                     )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnShowContextMenu", null),
-            ti.c([hn.a], t.prototype, "ToggleSingleWindowToggle", null),
-            ti.c([hn.a], t.prototype, "ShowCurrentUserProfile", null),
+            ti.c([mn.a], t.prototype, "OnShowContextMenu", null),
+            ti.c([mn.a], t.prototype, "ToggleSingleWindowToggle", null),
+            ti.c([mn.a], t.prototype, "ShowCurrentUserProfile", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        nh = (function(e) {
+        nm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bScrolledFromTop: !1 }), i;
@@ -68821,7 +68889,7 @@ and limitations under the License.
                         )
                       ),
                     Ca.createElement(
-                      ch,
+                      cm,
                       ti.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -68833,7 +68901,7 @@ and limitations under the License.
                       )
                     ),
                     Ca.createElement(
-                      ch,
+                      cm,
                       ti.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -68847,7 +68915,7 @@ and limitations under the License.
                   );
                 } else if (i)
                   e = Ca.createElement(
-                    ch,
+                    cm,
                     ti.a(
                       {
                         group: this.props.friends.FriendGroupStore.all_friends,
@@ -68860,7 +68928,7 @@ and limitations under the License.
                   var u = this.props.friends.FriendGroupStore.user_groups.map(
                       function(e) {
                         return Ca.createElement(
-                          ch,
+                          cm,
                           ti.a(
                             {
                               group: e,
@@ -68877,7 +68945,7 @@ and limitations under the License.
                     d = this.props.friends.FriendGroupStore.default_groups.map(
                       function(e) {
                         return Ca.createElement(
-                          ch,
+                          cm,
                           ti.a(
                             {
                               group: e,
@@ -68894,33 +68962,33 @@ and limitations under the License.
                     p = this.props.chats.FriendChatStore.GetFriendsWithUnreadMessages(
                       this.props.browserContext
                     ),
-                    m = !1;
-                  p.length && (m = !0),
+                    h = !1;
+                  p.length && (h = !0),
                     (e = Ca.createElement(
                       Ca.Fragment,
                       null,
-                      m &&
+                      h &&
                         Ca.createElement(
                           "div",
                           { className: "recentChatsGroup unreadChatsGroup" },
-                          Ca.createElement(yh, {
+                          Ca.createElement(ym, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext
                           }),
                           !1
                         ),
-                      Ca.createElement(sh, null),
+                      Ca.createElement(sm, null),
                       u,
                       d
                     ));
                 }
               else e = void 0;
-              var h = dd.SettingsStore.FriendsSettings.bCompactFriendsList;
+              var m = dd.SettingsStore.FriendsSettings.bCompactFriendsList;
               return Ca.createElement(
                 "div",
                 {
                   className:
-                    "FriendsListContent" + (h ? " CompactFriendsList" : ""),
+                    "FriendsListContent" + (m ? " CompactFriendsList" : ""),
                   ref: this.BindFriendsListContent
                 },
                 Ca.createElement(
@@ -68930,7 +68998,7 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                Ca.createElement(_h, {
+                Ca.createElement(_m, {
                   browserContext: this.props.browserContext,
                   bScrolledFromTop: this.state.bScrolledFromTop && !i,
                   onClick: this.ScrollToTop
@@ -68959,23 +69027,23 @@ and limitations under the License.
                     className: "friendListInsetShadowBottom"
                   })
                 ),
-                Ca.createElement(rh, {
+                Ca.createElement(rm, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   parent: this
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "BindFriendsListContent", null),
-            ti.c([hn.a], t.prototype, "OnFriendsListKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnFriendsListScrollRef", null),
-            ti.c([hn.a], t.prototype, "ScrollToTop", null),
-            ti.c([hn.a], t.prototype, "OnScrollFriendsList", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "BindFriendsListContent", null),
+            ti.c([mn.a], t.prototype, "OnFriendsListKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnFriendsListScrollRef", null),
+            ti.c([mn.a], t.prototype, "ScrollToTop", null),
+            ti.c([mn.a], t.prototype, "OnScrollFriendsList", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        rh = (function(e) {
+        rm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69249,7 +69317,7 @@ and limitations under the License.
                           ? Object(la.b)("#Tooltip_ChatsExpand")
                           : Object(la.b)("#Tooltip_ChatsCollapse")
                       },
-                      Ca.createElement(hd.k, { angle: -90 })
+                      Ca.createElement(md.k, { angle: -90 })
                     ),
                     Ca.createElement(
                       "div",
@@ -69271,7 +69339,7 @@ and limitations under the License.
                         onClick: this.OnCreateChatRoom,
                         title: Object(la.b)("#Tooltip_CreateGroupChat")
                       },
-                      Ca.createElement(hd.E, null)
+                      Ca.createElement(md.E, null)
                     ),
                     Ca.createElement("div", { className: "disconnectBlocker" })
                   ),
@@ -69305,24 +69373,24 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "UpdateChatSectionSize", null),
-            ti.c([hn.a], t.prototype, "OnChatSectionMutation", null),
-            ti.c([hn.a], t.prototype, "BindChatRoomTitleContainer", null),
-            ti.c([hn.a], t.prototype, "BindChatRoomListContainer", null),
-            ti.c([hn.a], t.prototype, "BindChatSection", null),
-            ti.c([hn.a], t.prototype, "OnGrabberMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnGrabberTouchStart", null),
-            ti.c([hn.a], t.prototype, "HandleTouchMove", null),
-            ti.c([hn.a], t.prototype, "HandleMouseMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseEnter", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeave", null),
-            ti.c([hn.a], t.prototype, "ToggleChatsList", null),
-            ti.c([hn.a], t.prototype, "UnregisterChatRoomListDragEvents", null),
-            ti.c([hn.a], t.prototype, "OnCreateChatRoom", null),
+            ti.c([mn.a], t.prototype, "UpdateChatSectionSize", null),
+            ti.c([mn.a], t.prototype, "OnChatSectionMutation", null),
+            ti.c([mn.a], t.prototype, "BindChatRoomTitleContainer", null),
+            ti.c([mn.a], t.prototype, "BindChatRoomListContainer", null),
+            ti.c([mn.a], t.prototype, "BindChatSection", null),
+            ti.c([mn.a], t.prototype, "OnGrabberMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnGrabberTouchStart", null),
+            ti.c([mn.a], t.prototype, "HandleTouchMove", null),
+            ti.c([mn.a], t.prototype, "HandleMouseMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseEnter", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeave", null),
+            ti.c([mn.a], t.prototype, "ToggleChatsList", null),
+            ti.c([mn.a], t.prototype, "UnregisterChatRoomListDragEvents", null),
+            ti.c([mn.a], t.prototype, "OnCreateChatRoom", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        oh = (function(e) {
+        om = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69402,15 +69470,15 @@ and limitations under the License.
                   .catch(o);
               }
             }),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
             t
           );
         })(Ca.Component),
-        ah = (function(e) {
+        am = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -69441,12 +69509,12 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        sh = Object(Xd.observer)(function(e) {
+        sm = Object(Xd.observer)(function(e) {
           if (!dd.SettingsStore.FriendsSettings.bCategorizeInGameFriendsByGame)
             return null;
           var t = dd.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
-              return Ca.createElement(uh, {
+              return Ca.createElement(um, {
                 key: e.id,
                 group: e,
                 bSingletonGroup: !1,
@@ -69459,7 +69527,7 @@ and limitations under the License.
           return (
             n &&
               i.push(
-                Ca.createElement(uh, {
+                Ca.createElement(um, {
                   key: "singleton",
                   group: n,
                   bSingletonGroup: !0,
@@ -69471,7 +69539,7 @@ and limitations under the License.
             Ca.createElement(Ca.Fragment, null, i)
           );
         }),
-        ch = (function(e) {
+        cm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69633,7 +69701,7 @@ and limitations under the License.
                 "ignore all invites on non-invite group"
               );
               var i = e.currentTarget.ownerDocument.defaultView;
-              me(
+              he(
                 i,
                 Object(la.b)("#FriendGroup_ConfirmAllIgnore_Title"),
                 Object(la.b)("#FriendGroup_ConfirmAllIgnore_Body"),
@@ -69725,7 +69793,7 @@ and limitations under the License.
                 !t &&
                   this.props.group.should_filter_categorized_friends &&
                   (d = dd.FriendStore.FriendGroupStore.categorized_friend_set);
-                for (var p, m, h, g = this, f = 0, _ = l; f < _.length; f++) {
+                for (var p, h, m, g = this, f = 0, _ = l; f < _.length; f++) {
                   var y = _[f];
                   !(function(t) {
                     if (
@@ -69744,11 +69812,11 @@ and limitations under the License.
                     ) {
                       var a = g.m_actions.get(t.accountid);
                       (p = a && "accept" == a.action ? "bright" : "dim"),
-                        (m =
+                        (h =
                           !a || ("decline" != a.action && "block" != a.action)
                             ? "dim"
                             : "bright"),
-                        (h =
+                        (m =
                           !a || ("decline" != a.action && "block" != a.action)
                             ? ""
                             : " declined"),
@@ -69763,7 +69831,7 @@ and limitations under the License.
                         pd,
                         {
                           className: o
-                            ? "friendInviteContainer" + h
+                            ? "friendInviteContainer" + m
                             : "friendCategoryContainer",
                           key: t.accountid,
                           classNames: "friend-anim",
@@ -69773,7 +69841,7 @@ and limitations under the License.
                           "div",
                           null,
                           Ca.createElement(
-                            mh,
+                            hm,
                             ti.a(
                               {
                                 friend: t,
@@ -69801,14 +69869,14 @@ and limitations under the License.
                                   },
                                   title: Object(la.b)("#FriendGroup_Tip_Accept")
                                 },
-                                Ca.createElement(hd.f, null)
+                                Ca.createElement(md.f, null)
                               ),
                               Ca.createElement(
                                 "div",
                                 {
                                   className:
                                     "friendInviteButton declineFriendInvite " +
-                                    m,
+                                    h,
                                   onClick: function(i) {
                                     return e.OnDeclineInvite(i, t);
                                   },
@@ -69816,7 +69884,7 @@ and limitations under the License.
                                     "#FriendGroup_Tip_Decline"
                                   )
                                 },
-                                Ca.createElement(hd._5, null)
+                                Ca.createElement(md._6, null)
                               )
                             ),
                           o &&
@@ -69900,7 +69968,7 @@ and limitations under the License.
                         Ca.createElement(
                           "div",
                           { className: "ExpandPlusMinus" },
-                          Ca.createElement(hd.I, null)
+                          Ca.createElement(md.I, null)
                         ),
                         this.props.group.icon_url &&
                           Ca.createElement("img", {
@@ -69932,11 +70000,11 @@ and limitations under the License.
                             ? Object(la.b)("#FriendGroup_Tip_SortByRecent")
                             : Object(la.b)("#FriendGroup_Tip_SortByAlphabet")
                         },
-                        Ca.createElement(hd.S, null)
+                        Ca.createElement(md.T, null)
                       )
                   ),
                   Ca.createElement(
-                    md,
+                    hd,
                     { className: "groupList", enter: !i, exit: !i },
                     r,
                     o &&
@@ -69988,7 +70056,7 @@ and limitations under the License.
                               onClick: this.OnCloseInvites,
                               title: Object(la.b)("#FriendGroup_Close")
                             },
-                            Ca.createElement(hd.b, { angle: -90 })
+                            Ca.createElement(md.b, { angle: -90 })
                           )
                         )
                       )
@@ -69997,20 +70065,20 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ToggleCollapsed", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "OnFriendSelected", null),
-            ti.c([hn.a], t.prototype, "OnAcceptInvite", null),
-            ti.c([hn.a], t.prototype, "OnDeclineInvite", null),
-            ti.c([hn.a], t.prototype, "OnBlockInvite", null),
-            ti.c([hn.a], t.prototype, "OnConfirmChanges", null),
-            ti.c([hn.a], t.prototype, "OnIgnoreAllInvites", null),
-            ti.c([hn.a], t.prototype, "OnCloseInvites", null),
-            ti.c([hn.a], t.prototype, "ToggleOfflineSortMethod", null),
+            ti.c([mn.a], t.prototype, "ToggleCollapsed", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnFriendSelected", null),
+            ti.c([mn.a], t.prototype, "OnAcceptInvite", null),
+            ti.c([mn.a], t.prototype, "OnDeclineInvite", null),
+            ti.c([mn.a], t.prototype, "OnBlockInvite", null),
+            ti.c([mn.a], t.prototype, "OnConfirmChanges", null),
+            ti.c([mn.a], t.prototype, "OnIgnoreAllInvites", null),
+            ti.c([mn.a], t.prototype, "OnCloseInvites", null),
+            ti.c([mn.a], t.prototype, "ToggleOfflineSortMethod", null),
             (t = ti.c([Xd.observer], t))
           );
-        })(oh),
-        lh = (function(e) {
+        })(om),
+        lm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70029,7 +70097,7 @@ and limitations under the License.
             t
           );
         })(Ca.PureComponent),
-        uh = (function(e) {
+        um = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bLocalCollapsed: i.props.collapsed }), i;
@@ -70119,15 +70187,15 @@ and limitations under the License.
                         dd.FriendStore.FriendGroupStore.non_steam_game_id,
                     d = null,
                     p = 0,
-                    m = t;
-                  p < m.length;
+                    h = t;
+                  p < h.length;
                   p++
                 ) {
-                  var l = m[p],
-                    h = "";
+                  var l = h[p],
+                    m = "";
                   this.state.friendDraggedOut == l &&
                     this.state.friendDrag != l &&
-                    (h += " dragOriginGhost");
+                    (m += " dragOriginGhost");
                   var g = !1;
                   if (i.has(l.accountid)) {
                     g = !0;
@@ -70196,11 +70264,11 @@ and limitations under the License.
                           ));
                       }
                     }
-                    h += " " + f;
+                    m += " " + f;
                   }
                   var w = void 0;
                   this.props.bSingletonGroup &&
-                    (w = Ca.createElement(dh, {
+                    (w = Ca.createElement(dm, {
                       appid: l.persona.m_unGamePlayedAppID
                     })),
                     e.push(
@@ -70211,11 +70279,11 @@ and limitations under the License.
                           classNames: "friend-anim",
                           timeout: 320
                         },
-                        Ca.createElement(mh, {
+                        Ca.createElement(hm, {
                           friend: l,
                           key: l.accountid,
                           bHideGameName: u,
-                          className: h,
+                          className: m,
                           context: this.GetFriendRenderContext(),
                           bInGroup: g,
                           bFriendsListEntry: !0,
@@ -70258,7 +70326,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        Ca.createElement(hd.I, null)
+                        Ca.createElement(md.I, null)
                       ),
                       I,
                       this.props.group.icon_url &&
@@ -70282,7 +70350,7 @@ and limitations under the License.
                     Ca.createElement("hr", null)
                   ),
                   Ca.createElement(
-                    md,
+                    hd,
                     {
                       className: this.IsCollapsed()
                         ? "friendsContainer groupCollapsed"
@@ -70293,12 +70361,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ToggleCollapsed", null),
-            ti.c([hn.a], t.prototype, "OnShowHeaderContextMenu", null),
+            ti.c([mn.a], t.prototype, "ToggleCollapsed", null),
+            ti.c([mn.a], t.prototype, "OnShowHeaderContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
-        })(oh),
-        dh = (function(e) {
+        })(om),
+        dm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70332,11 +70400,11 @@ and limitations under the License.
                     )
                   );
             }),
-            ti.c([hn.a], t.prototype, "OnShowGameIconContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnShowGameIconContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        ph = (function(e) {
+        pm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70375,11 +70443,11 @@ and limitations under the License.
               }
               return this.props.children;
             }),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
             t
           );
         })(Ca.Component),
-        mh = (function(e) {
+        hm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActive: !1 }), i;
@@ -70491,12 +70559,12 @@ and limitations under the License.
               else {
                 var p = {};
                 if (this.props.showVoiceLevel && 1 != n) {
-                  var m = Math.min(3.2 * n, 1),
-                    h = Math.max(0, 100 * m);
-                  (h = Math.round(10 * h) / 10),
-                    (p.height = h + "%"),
+                  var h = Math.min(3.2 * n, 1),
+                    m = Math.max(0, 100 * h);
+                  (m = Math.round(10 * m) / 10),
+                    (p.height = m + "%"),
                     (p.top = "auto"),
-                    h > 1 && (r.className += " speaking");
+                    m > 1 && (r.className += " speaking");
                 }
                 this.state.bActive &&
                   (r.className += " Friend_ContextMenuActive");
@@ -70509,7 +70577,7 @@ and limitations under the License.
                       className: "SteamPlayerGroupLines"
                     }),
                   this.props.bInVoiceList &&
-                    Ca.createElement(hh, { friend: e }),
+                    Ca.createElement(mm, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   Ca.createElement(
                     "div",
@@ -70527,9 +70595,9 @@ and limitations under the License.
                     }),
                     this.props.bInVoiceList &&
                       g &&
-                      Ca.createElement(hd._3, null)
+                      Ca.createElement(md._4, null)
                   ),
-                  Ca.createElement(fh, {
+                  Ca.createElement(fm, {
                     friend: e,
                     strOverrideStatus: i,
                     strStatusURL: o,
@@ -70553,7 +70621,7 @@ and limitations under the License.
               return this.props.noActions
                 ? d
                 : Ca.createElement(
-                    ph,
+                    pm,
                     {
                       friend: e,
                       context: this.props.context,
@@ -70563,16 +70631,16 @@ and limitations under the License.
                     d
                   );
             }),
-            ti.c([hn.a], t.prototype, "OnDoubleClick", null),
-            ti.c([hn.a], t.prototype, "OnClick", null),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnShowContextMenu", null),
-            ti.c([hn.a], t.prototype, "OnContextMenuShown", null),
+            ti.c([mn.a], t.prototype, "OnDoubleClick", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnShowContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnContextMenuShown", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        hh = (function(e) {
+        mm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70619,7 +70687,7 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusMic disabled",
                       title: n
                     },
-                    Ca.createElement(hd.C, null)
+                    Ca.createElement(md.C, null)
                   ),
                   Ca.createElement(
                     "div",
@@ -70627,7 +70695,7 @@ and limitations under the License.
                       className: "voicestatusIcon voiceStatusOutput disabled",
                       title: r
                     },
-                    Ca.createElement(hd.t, null)
+                    Ca.createElement(md.t, null)
                   )
                 )
               );
@@ -70635,7 +70703,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        gh = (function(e) {
+        gm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70667,7 +70735,7 @@ and limitations under the License.
                 )
               );
               return Ca.createElement(
-                ph,
+                pm,
                 { friend: e, context: this.props.context },
                 i
               );
@@ -70675,7 +70743,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        fh = (function(e) {
+        fm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70728,7 +70796,7 @@ and limitations under the License.
               n || (n = e.localized_online_status),
                 e.persona.is_awayOrSnooze &&
                   !this.props.bHidePersona &&
-                  (t = Ca.createElement(ah, null)),
+                  (t = Ca.createElement(am, null)),
                 (!this.props.bHideGameName && i) || (c += " twoLine");
               var d = null;
               this.props.onShowContextMenu
@@ -70738,7 +70806,7 @@ and limitations under the License.
                       className: "ContextMenuButton",
                       onClick: this.props.onShowContextMenu
                     },
-                    Ca.createElement(hd.l, null)
+                    Ca.createElement(md.l, null)
                   ))
                 : (c += " NoContextMenu"),
                 this.props.bHidePersona && (c += " HidePersona");
@@ -70804,7 +70872,7 @@ and limitations under the License.
                           className: "DNDContainer",
                           title: Object(la.b)("#User_ToggleDoNotDisturb")
                         },
-                        Ca.createElement(hd.j, null)
+                        Ca.createElement(md.j, null)
                       ),
                     e.is_display_name_nickname &&
                       Ca.createElement(
@@ -70836,7 +70904,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        _h = (function(e) {
+        _m = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70868,13 +70936,13 @@ and limitations under the License.
                         )
                     )
                   )),
-                Ca.createElement(md, null, e)
+                Ca.createElement(hd, null, e)
               );
             }),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        yh = (function(e) {
+        ym = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -70910,7 +70978,7 @@ and limitations under the License.
                         Ca.createElement(
                           "div",
                           { className: "unreadFriend" },
-                          Ca.createElement(mh, {
+                          Ca.createElement(hm, {
                             friend: i,
                             key: i.accountid,
                             context: { chat: e },
@@ -70932,7 +71000,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "ExpandPlusMinus" },
-                    Ca.createElement(hd.I, null)
+                    Ca.createElement(md.I, null)
                   ),
                   Object(la.b)("#FriendGroup_UnreadMessages"),
                   Ca.createElement(
@@ -70944,14 +71012,14 @@ and limitations under the License.
                   ),
                   Ca.createElement("hr", null)
                 ),
-                Ca.createElement(md, null, i)
+                Ca.createElement(hd, null, i)
               );
             }),
-            ti.c([hn.a], t.prototype, "OnHeaderClick", null),
+            ti.c([mn.a], t.prototype, "OnHeaderClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        vh = (Ca.Component,
+        vm = (Ca.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -71032,17 +71100,17 @@ and limitations under the License.
                       n && n.setAttribute("style", ""),
                       r && r.setAttribute("style", "display: none;");
                   }
-                  var m = 0;
+                  var h = 0;
                   if (
-                    (a.height < 48 && (m = Math.floor(a.height / 2) - 24),
-                    (l = a.top - 15 + m),
+                    (a.height < 48 && (h = Math.floor(a.height / 2) - 24),
+                    (l = a.top - 15 + h),
                     a.top + s.height + 35 > i.innerHeight)
                   ) {
-                    var h = s.height + 35 - (i.innerHeight - a.top),
+                    var m = s.height + 35 - (i.innerHeight - a.top),
                       g = null != e.querySelector(".miniprofile_ingame"),
                       f = g ? 78 : 24;
-                    h = Math.min(s.height - f, h);
-                    var _ = a.top - h;
+                    m = Math.min(s.height - f, m);
+                    var _ = a.top - m;
                     o && o.setAttribute("style", "top: " + (30 + l - _) + "px"),
                       (l = _);
                   }
@@ -71053,11 +71121,11 @@ and limitations under the License.
                 }
               }
             }),
-            ti.c([hn.a], t.prototype, "bindHover", null),
+            ti.c([mn.a], t.prototype, "bindHover", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component)),
-        bh = (function(e) {
+        bm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -71163,10 +71231,10 @@ and limitations under the License.
                 e.friend.is_blocked &&
                   ((a += " communicationBlocked"), (d = !0));
               var p = e.friend.has_nickname,
-                m = void 0,
-                h = null,
+                h = void 0,
+                m = null,
                 g = !1;
-              t.is_awayOrSnooze && ((h = Ca.createElement(ah, null)), (g = !0));
+              t.is_awayOrSnooze && ((m = Ca.createElement(am, null)), (g = !0));
               var f = Ca.createElement("div", null),
                 _ = this.props.hoverInstance.context;
               if (
@@ -71233,7 +71301,7 @@ and limitations under the License.
                     ));
                 }
               }
-              m = p
+              h = p
                 ? Ca.createElement(
                     "div",
                     { className: "personaName hasNickname" },
@@ -71289,7 +71357,7 @@ and limitations under the License.
                               className: "avatarStatus miniProfileAvatarStatus"
                             })
                           ),
-                          h,
+                          m,
                           Ca.createElement(
                             "div",
                             { className: "playerContent" },
@@ -71317,7 +71385,7 @@ and limitations under the License.
                                       "*"
                                     )
                                   ),
-                                m,
+                                h,
                                 g &&
                                   Ca.createElement(
                                     "div",
@@ -71382,7 +71450,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Ch = (function(e) {
+        Cm = (function(e) {
           function t(t, i) {
             var n =
               e.call(this, "hoverpopup", {
@@ -71418,7 +71486,7 @@ and limitations under the License.
               var i = this.InternalRender();
               Mn.render(
                 Ca.createElement(
-                  Mh,
+                  Mm,
                   ti.a({}, this.m_hoverProps, { popup: e }),
                   i
                 ),
@@ -71428,7 +71496,7 @@ and limitations under the License.
             t
           );
         })(Zd.a),
-        Sh = (function(e) {
+        Sm = (function(e) {
           function t(t, i, n) {
             var r =
               e.call(
@@ -71448,12 +71516,12 @@ and limitations under the License.
             (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {}),
             (t.prototype.InternalRender = function() {
-              return Ca.createElement(bh, { hoverInstance: this.m_instance });
+              return Ca.createElement(bm, { hoverInstance: this.m_instance });
             }),
             t
           );
-        })(Ch),
-        Mh = (function(e) {
+        })(Cm),
+        Mm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -71544,16 +71612,16 @@ and limitations under the License.
                     d < 2 && p > d
                       ? r.left - o.width - 3 + 3
                       : r.left + r.width - -3;
-                  var m = 0;
+                  var h = 0;
                   if (
-                    (r.height < 48 && (m = Math.floor(r.height / 2) - 24),
-                    (s = r.top - 15 + m),
+                    (r.height < 48 && (h = Math.floor(r.height / 2) - 24),
+                    (s = r.top - 15 + h),
                     r.top + o.height + 0 > i.screen.availHeight)
                   ) {
-                    var h = o.height + 0 - (i.screen.availHeight - r.top),
+                    var m = o.height + 0 - (i.screen.availHeight - r.top),
                       g = null != e.querySelector(".miniprofile_ingame"),
                       f = g ? 78 : 24;
-                    (h = Math.min(o.height - f, h)), (s = r.top - h);
+                    (m = Math.min(o.height - f, m)), (s = r.top - m);
                   }
                   (a = Math.floor(a)), (s = Math.floor(s));
                   var _ = Math.ceil(o.width),
@@ -71567,11 +71635,11 @@ and limitations under the License.
                 }
               }
             }),
-            ti.c([hn.a], t.prototype, "bindHover", null),
+            ti.c([mn.a], t.prototype, "bindHover", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Fh = (function(e) {
+        Fm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -71615,7 +71683,7 @@ and limitations under the License.
             t
           );
         })(Ca.Component),
-        wh = (function(e) {
+        wm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71636,7 +71704,7 @@ and limitations under the License.
               this.props.large && (e += " large");
               var i = ":" + this.props.emoticon + ":";
               return Ca.createElement(
-                Fh,
+                Fm,
                 { text: i },
                 Ca.createElement("img", {
                   src: Yc.GetEmoticonURL(this.props.emoticon, this.props.large),
@@ -71651,7 +71719,7 @@ and limitations under the License.
             t
           );
         })(Ca.PureComponent),
-        Bh = (function(e) {
+        Bm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71659,7 +71727,7 @@ and limitations under the License.
             ti.d(t, e),
             (t.prototype.render = function() {
               return Ca.createElement(
-                vh,
+                vm,
                 {
                   visibilityObserver: this.props.hover,
                   target: this.props.target,
@@ -71682,7 +71750,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Oh = (function(e) {
+        Om = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             (i.m_ScrollCoordinator = new Md.f(40)),
@@ -71725,7 +71793,7 @@ and limitations under the License.
               var i = t.name;
               return (
                 e && (i = e + t.name),
-                Ca.createElement(Ih, {
+                Ca.createElement(Im, {
                   key: i,
                   emoticon: t,
                   onClick: this.OnClick,
@@ -71820,15 +71888,15 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnClick", null),
-            ti.c([hn.a], t.prototype, "OnSearchInput", null),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "OnScrollRef", null),
-            ti.c([hn.a], t.prototype, "OnScroll", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnSearchInput", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnScrollRef", null),
+            ti.c([mn.a], t.prototype, "OnScroll", null),
             t
           );
         })(Ca.Component),
-        Ih = (function(e) {
+        Im = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { visible: !1 }), i;
@@ -71856,14 +71924,14 @@ and limitations under the License.
                   "data-emoticon": e.name,
                   onClick: this.props.onClick
                 },
-                this.state.visible && Ca.createElement(wh, { emoticon: e.name })
+                this.state.visible && Ca.createElement(wm, { emoticon: e.name })
               );
             }),
-            ti.c([hn.a], t.prototype, "SetVisible", null),
+            ti.c([mn.a], t.prototype, "SetVisible", null),
             t
           );
         })(Ca.Component),
-        Rh = (function(e) {
+        Rm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -71975,7 +72043,7 @@ and limitations under the License.
             }),
             (t.prototype.OnEmoticonClick = function(e) {
               Object(gd.a)(
-                Ca.createElement(Oh, { OnSelected: this.OnEmoticonSelected }),
+                Ca.createElement(Om, { OnSelected: this.OnEmoticonSelected }),
                 e.currentTarget,
                 {
                   bOverlapHorizontal: !0,
@@ -72166,7 +72234,7 @@ and limitations under the License.
                 o = void 0;
               switch (this.state.activeSuggestSearchType) {
                 case "Mention":
-                  o = Ca.createElement(Ah, {
+                  o = Ca.createElement(Am, {
                     chat: r,
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnMentionSuggestionSelected,
@@ -72174,7 +72242,7 @@ and limitations under the License.
                   });
                   break;
                 case "Emoticon":
-                  o = Ca.createElement(Lh, {
+                  o = Ca.createElement(Lm, {
                     emoticonStore: dd.ChatStore.EmoticonStore,
                     strSearch: this.state.mentionSearch,
                     nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -72183,7 +72251,7 @@ and limitations under the License.
                   });
                   break;
                 case "SlashCommand":
-                  o = Ca.createElement(Ph, {
+                  o = Ca.createElement(Pm, {
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnSlashCommandSuggestionSelected,
                     ref: this.BindMentionDialog
@@ -72191,13 +72259,13 @@ and limitations under the License.
               }
               var a = t.chat.file_upload_props;
               t.file_upload_data_url
-                ? (n = Ca.createElement(Th, { chatView: t }))
+                ? (n = Ca.createElement(Tm, { chatView: t }))
                 : 2 == a.eUploadState ||
                   4 == a.eUploadState ||
                   3 == a.eUploadState
-                  ? (n = Ca.createElement(Dh, { chatView: t }))
+                  ? (n = Ca.createElement(Dm, { chatView: t }))
                   : 0 != a.eUploadState &&
-                    (n = Ca.createElement(kh, { chat: t.chat }));
+                    (n = Ca.createElement(km, { chat: t.chat }));
               var s = dd.SettingsStore.FriendsSettings.bCompactFriendsList,
                 c = dd.SettingsStore.FriendsSettings.nChatFontSize,
                 l = "";
@@ -72241,7 +72309,7 @@ and limitations under the License.
                         disabled: !this.state.submitEnabled,
                         title: Object(la.b)("#ChatEntryButton_Submit")
                       },
-                      Ca.createElement(hd.U, null)
+                      Ca.createElement(md.V, null)
                     ),
                     Ca.createElement("input", {
                       type: "file",
@@ -72268,7 +72336,7 @@ and limitations under the License.
                           title: Object(la.b)("#ChatEntryButton_Emoticon"),
                           disabled: i
                         },
-                        Ca.createElement(hd.m, null)
+                        Ca.createElement(md.m, null)
                       ),
                       Ca.createElement(
                         "button",
@@ -72281,37 +72349,37 @@ and limitations under the License.
                           title: Object(la.b)("#ChatEntryButton_SendEmbed"),
                           disabled: i
                         },
-                        Ca.createElement(hd.F, null)
+                        Ca.createElement(md.F, null)
                       )
                     ),
-                    Ca.createElement(Eh, { chat: r })
+                    Ca.createElement(Em, { chat: r })
                   ),
                   Ca.createElement("div", { className: "disconnectBlocker" })
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "BindMentionDialog", null),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "OnTextAreaChange", null),
-            ti.c([hn.a], t.prototype, "OnFocus", null),
-            ti.c([hn.a], t.prototype, "OnBlur", null),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnPaste", null),
-            ti.c([hn.a], t.prototype, "OnFileInputChange", null),
-            ti.c([hn.a], t.prototype, "OnEmbedClick", null),
-            ti.c([hn.a], t.prototype, "OnEmoticonClick", null),
-            ti.c([hn.a], t.prototype, "OnEmoticonSelected", null),
-            ti.c([hn.a], t.prototype, "OnKeyPress", null),
-            ti.c([hn.a], t.prototype, "OnClick", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "OnMentionSuggestionSelected", null),
-            ti.c([hn.a], t.prototype, "OnEmoticonSuggestionSelected", null),
-            ti.c([hn.a], t.prototype, "OnSlashCommandSuggestionSelected", null),
-            ti.c([hn.a], t.prototype, "FocusTextInput", null),
+            ti.c([mn.a], t.prototype, "BindMentionDialog", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnTextAreaChange", null),
+            ti.c([mn.a], t.prototype, "OnFocus", null),
+            ti.c([mn.a], t.prototype, "OnBlur", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnPaste", null),
+            ti.c([mn.a], t.prototype, "OnFileInputChange", null),
+            ti.c([mn.a], t.prototype, "OnEmbedClick", null),
+            ti.c([mn.a], t.prototype, "OnEmoticonClick", null),
+            ti.c([mn.a], t.prototype, "OnEmoticonSelected", null),
+            ti.c([mn.a], t.prototype, "OnKeyPress", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "OnMentionSuggestionSelected", null),
+            ti.c([mn.a], t.prototype, "OnEmoticonSuggestionSelected", null),
+            ti.c([mn.a], t.prototype, "OnSlashCommandSuggestionSelected", null),
+            ti.c([mn.a], t.prototype, "FocusTextInput", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Eh = (function(e) {
+        Em = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72413,7 +72481,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "VoiceToggleIconCtn" },
-                        Ca.createElement(hd._2, null)
+                        Ca.createElement(md._3, null)
                       )
                     ),
                     Ca.createElement(
@@ -72425,8 +72493,8 @@ and limitations under the License.
                         Ca.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          Ca.createElement(Jm, null),
-                          Ca.createElement(Xm, null)
+                          Ca.createElement(Jh, null),
+                          Ca.createElement(Xh, null)
                         )
                       )
                     )
@@ -72449,11 +72517,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "HandleStartVoice", null),
+            ti.c([mn.a], t.prototype, "HandleStartVoice", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Th = (function(e) {
+        Tm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bSpoilerChecked: !1 }), i;
@@ -72479,7 +72547,7 @@ and limitations under the License.
                     }))
                   : -1 !=
                       this.props.chatView.file_upload.type.indexOf("video") &&
-                    (e = Ca.createElement(hd._0, null)),
+                    (e = Ca.createElement(md._1, null)),
                 Ca.createElement(
                   "div",
                   { className: "chatFileUploadPreviewContainer" },
@@ -72497,7 +72565,7 @@ and limitations under the License.
                       className: "chatFileUploadCancel",
                       onClick: this.OnCancelClick
                     },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   ),
                   Ca.createElement(
                     "button",
@@ -72517,13 +72585,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCancelClick", null),
-            ti.c([hn.a], t.prototype, "OnUploadClick", null),
-            ti.c([hn.a], t.prototype, "OnDialogChecked", null),
+            ti.c([mn.a], t.prototype, "OnCancelClick", null),
+            ti.c([mn.a], t.prototype, "OnUploadClick", null),
+            ti.c([mn.a], t.prototype, "OnDialogChecked", null),
             t
           );
         })(Ca.Component),
-        kh = (function(e) {
+        km = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72559,7 +72627,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Dh = (function(e) {
+        Dm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72623,12 +72691,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "ClearErrorState", null),
-            ti.c([hn.a], t.prototype, "OnRetryClick", null),
+            ti.c([mn.a], t.prototype, "ClearErrorState", null),
+            ti.c([mn.a], t.prototype, "OnRetryClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Gh = (function(e) {
+        Gm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -72788,7 +72856,7 @@ and limitations under the License.
                     o = i === this.state.selectedIndex;
                   e.push(
                     Ca.createElement(
-                      Nh,
+                      Nm,
                       {
                         key: r,
                         matchKey: r,
@@ -72827,14 +72895,14 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnClickSuggestion", null),
-            ti.c([hn.a], t.prototype, "OnMouseOverSuggestion", null),
-            ti.c([hn.a], t.prototype, "BindSelectedElement", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnClickSuggestion", null),
+            ti.c([mn.a], t.prototype, "OnMouseOverSuggestion", null),
+            ti.c([mn.a], t.prototype, "BindSelectedElement", null),
             t
           );
         })(Ca.Component),
-        Nh = (function(e) {
+        Nm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72859,12 +72927,12 @@ and limitations under the License.
                 this.props.children
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMouseOver", null),
-            ti.c([hn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnMouseOver", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
             t
           );
         })(Ca.PureComponent),
-        Ah = (function(e) {
+        Am = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72998,8 +73066,8 @@ and limitations under the License.
             (t.nMaxMatches = 12),
             t
           );
-        })(Gh),
-        Lh = (function(e) {
+        })(Gm),
+        Lm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73020,7 +73088,7 @@ and limitations under the License.
                 {
                   className: "EmoticonSuggestion" + (e.recent ? " Recent" : "")
                 },
-                Ca.createElement(wh, { emoticon: e.name }),
+                Ca.createElement(wm, { emoticon: e.name }),
                 ":",
                 e.name,
                 ":"
@@ -73040,8 +73108,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Gh),
-        Ph = (function(e) {
+        })(Gm),
+        Pm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73112,8 +73180,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Gh),
-        xh = (function(e) {
+        })(Gm),
+        xm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -73238,7 +73306,7 @@ and limitations under the License.
                         "HorizontalMiniSliderArrow Left" +
                         (this.state.bLeftSliderVisible ? " Visible" : "")
                     },
-                    Ca.createElement(hd.k, null)
+                    Ca.createElement(md.k, null)
                   ),
                   Ca.createElement(
                     "div",
@@ -73248,7 +73316,7 @@ and limitations under the License.
                         "HorizontalMiniSliderArrow Right" +
                         (this.state.bRightSliderVisible ? " Visible" : "")
                     },
-                    Ca.createElement(hd.k, null)
+                    Ca.createElement(md.k, null)
                   ),
                   Ca.createElement(
                     "div",
@@ -73263,14 +73331,14 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnRef", null),
-            ti.c([hn.a], t.prototype, "CheckScrollPosition", null),
-            ti.c([hn.a], t.prototype, "OnSlideLeftClick", null),
-            ti.c([hn.a], t.prototype, "OnSlideRightClick", null),
+            ti.c([mn.a], t.prototype, "OnRef", null),
+            ti.c([mn.a], t.prototype, "CheckScrollPosition", null),
+            ti.c([mn.a], t.prototype, "OnSlideLeftClick", null),
+            ti.c([mn.a], t.prototype, "OnSlideRightClick", null),
             t
           );
         })(Ca.Component),
-        zh = (function(e) {
+        zm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -73453,7 +73521,7 @@ and limitations under the License.
                 -1 != l
                   ? l != this.state.iDragIndex &&
                     ((c = i.slice()),
-                    Object(mn.e)(
+                    Object(hn.e)(
                       c,
                       l,
                       Math.min(this.state.iDragIndex, i.length - 1)
@@ -73486,13 +73554,13 @@ and limitations under the License.
                 )),
                 r && (u += " activeTabHasBroadcast");
               var p,
-                m = !1,
-                h = !0;
+                h = !1,
+                m = !0;
               return (
                 this.props.popup &&
                   ((p = Ht(this.props.popup)),
-                  (h = dd.UIStore.BIsFriendsListSingleWindow(p)),
-                  (m = p != ld)),
+                  (m = dd.UIStore.BIsFriendsListSingleWindow(p)),
+                  (h = p != ld)),
                 t && this.m_elchatTabDiv && this.StartTopbarEventListener(),
                 Ca.createElement(
                   "div",
@@ -73504,26 +73572,26 @@ and limitations under the License.
                   this.props.popup &&
                     Ca.createElement(
                       Qd,
-                      { hideMinMax: m, popup: this.props.popup },
+                      { hideMinMax: h, popup: this.props.popup },
                       " "
                     ),
                   d,
-                  ((t && h) || this.props.showOpenFriendsList) &&
+                  ((t && m) || this.props.showOpenFriendsList) &&
                     Ca.createElement(
                       "div",
                       {
                         className: "chatTabOpenFriendsList",
                         onClick: this.ShowFriendsList
                       },
-                      Ca.createElement(hd.s, null),
+                      Ca.createElement(md.s, null),
                       Object(la.b)("#FriendsList_ExpandButton")
                     ),
                   this.props.tabSet.tabCount > 0 &&
                     Ca.createElement(
-                      xh,
+                      xm,
                       { className: "chatTabList", ref: this.OnScrollRef },
                       Ca.createElement(
-                        md,
+                        hd,
                         { className: "chatTabTransitionGroup" },
                         i.map(function(t, i) {
                           var n = e.props.activeTab == t,
@@ -73538,7 +73606,7 @@ and limitations under the License.
                               key: t.GetUniqueID(),
                               timeout: 350
                             },
-                            Ca.createElement(Uh, {
+                            Ca.createElement(Um, {
                               tab: t,
                               active: n,
                               selectTab: e.SelectTab,
@@ -73556,13 +73624,13 @@ and limitations under the License.
                       {
                         className:
                           "title-area-icon singleWindowToggle" +
-                          (m ? " inOverlay" : ""),
+                          (h ? " inOverlay" : ""),
                         title: Object(la.b)(
                           "#FriendsList_TitleArea_SingleWindowButton"
                         ),
                         onClick: this.ToggleSingleWindowToggle
                       },
-                      Ca.createElement(hd.R, null)
+                      Ca.createElement(md.S, null)
                     ),
                   Ca.createElement("div", { className: "dropTargetBox" }),
                   t &&
@@ -73591,23 +73659,23 @@ and limitations under the License.
               "m_nTheaterTopHoverHeight",
               void 0
             ),
-            ti.c([hn.a], t.prototype, "OnWindowResizeEvent", null),
-            ti.c([hn.a], t.prototype, "HandleDropComplete", null),
-            ti.c([hn.a], t.prototype, "OnTabRef", null),
-            ti.c([hn.a], t.prototype, "OnScrollRef", null),
-            ti.c([hn.a], t.prototype, "SelectTab", null),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnChatTabContianerRef", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnBackClick", null),
-            ti.c([hn.a], t.prototype, "ToggleSingleWindowToggle", null),
-            ti.c([hn.a], t.prototype, "ShowFriendsList", null),
-            ti.c([hn.a], t.prototype, "StartTopbarEventListener", null),
-            ti.c([hn.a], t.prototype, "OnTopbarHovered", null),
+            ti.c([mn.a], t.prototype, "OnWindowResizeEvent", null),
+            ti.c([mn.a], t.prototype, "HandleDropComplete", null),
+            ti.c([mn.a], t.prototype, "OnTabRef", null),
+            ti.c([mn.a], t.prototype, "OnScrollRef", null),
+            ti.c([mn.a], t.prototype, "SelectTab", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnChatTabContianerRef", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnBackClick", null),
+            ti.c([mn.a], t.prototype, "ToggleSingleWindowToggle", null),
+            ti.c([mn.a], t.prototype, "ShowFriendsList", null),
+            ti.c([mn.a], t.prototype, "StartTopbarEventListener", null),
+            ti.c([mn.a], t.prototype, "OnTopbarHovered", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Uh = (function(e) {
+        Um = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_bMiddleMouseDown = !1), t;
@@ -73744,12 +73812,12 @@ and limitations under the License.
                           ? Object(la.b)("#Tooltip_MicStatus_Muted")
                           : Object(la.b)("#Tooltip_MicStatus_Active")
                       },
-                      Ca.createElement(hd.C, null)
+                      Ca.createElement(md.C, null)
                     ),
                   Ca.createElement(
                     $d,
                     null,
-                    Ca.createElement(jh, { tab: this.props.tab })
+                    Ca.createElement(jm, { tab: this.props.tab })
                   ),
                   Ca.createElement(
                     "div",
@@ -73761,25 +73829,25 @@ and limitations under the License.
                         className: "chatTabClose closeButton",
                         onClick: this.OnCloseClick
                       },
-                      Ca.createElement(hd._5, null)
+                      Ca.createElement(md._6, null)
                     ),
-                    Ca.createElement(Vh, { tab: this.props.tab })
+                    Ca.createElement(Vm, { tab: this.props.tab })
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "BindChatTab", null),
-            ti.c([hn.a], t.prototype, "OnDragStart", null),
-            ti.c([hn.a], t.prototype, "OnDragEnd", null),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeave", null),
-            ti.c([hn.a], t.prototype, "OnCloseClick", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "BindChatTab", null),
+            ti.c([mn.a], t.prototype, "OnDragStart", null),
+            ti.c([mn.a], t.prototype, "OnDragEnd", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeave", null),
+            ti.c([mn.a], t.prototype, "OnCloseClick", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Vh = (function(e) {
+        Vm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73817,7 +73885,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        jh = (function(e) {
+        jm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73829,7 +73897,7 @@ and limitations under the License.
                 return Ca.createElement(
                   "div",
                   { className: "ChatTabContent" },
-                  Ca.createElement(mh, {
+                  Ca.createElement(hm, {
                     friend: e.chat.chat_partner,
                     noActions: !0,
                     context: { chat: e.chat }
@@ -73840,7 +73908,7 @@ and limitations under the License.
                 return Ca.createElement(
                   "div",
                   { className: "ChatTabContent ChatRoom" },
-                  Ca.createElement(Dm, { group: t, small: !0 }),
+                  Ca.createElement(Dh, { group: t, small: !0 }),
                   Ca.createElement(
                     "div",
                     { className: "chatTabGroupName" },
@@ -73872,7 +73940,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Wh = (function(e) {
+        Wm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -73939,7 +74007,7 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { className: "voiceControlsExample" },
-                      Ca.createElement(Ym, {
+                      Ca.createElement(Yh, {
                         name: this.state.strChatName,
                         chat: dd.ChatStore.GetActiveVoiceChat(),
                         nostatus: !0
@@ -73978,14 +74046,14 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "DismissDialog", null),
-            ti.c([hn.a], t.prototype, "OnSubmit", null),
-            ti.c([hn.a], t.prototype, "OnDialogChecked", null),
-            ti.c([hn.a], t.prototype, "OnManualVoiceChatExit", null),
+            ti.c([mn.a], t.prototype, "DismissDialog", null),
+            ti.c([mn.a], t.prototype, "OnSubmit", null),
+            ti.c([mn.a], t.prototype, "OnDialogChecked", null),
+            ti.c([mn.a], t.prototype, "OnManualVoiceChatExit", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Hh = (function(e) {
+        Hm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -74005,7 +74073,7 @@ and limitations under the License.
                     className: "dash_stat_close_button",
                     onClick: this.HideStats
                   },
-                  Ca.createElement(hd._5, null)
+                  Ca.createElement(md._6, null)
                 ),
                 Ca.createElement(
                   "div",
@@ -74095,14 +74163,14 @@ and limitations under the License.
                     e.GetPlaybackRateForDisplay()
                   )
                 ),
-                Ca.createElement(qh, { stats: e })
+                Ca.createElement(qm, { stats: e })
               );
             }),
-            ti.c([hn.a], t.prototype, "HideStats", null),
+            ti.c([mn.a], t.prototype, "HideStats", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        qh = (function(e) {
+        qm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -74297,7 +74365,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Kh = (function(e) {
+        Km = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -74565,7 +74633,7 @@ and limitations under the License.
                   onMouseDown: this.OnMouseDown
                 },
                 o &&
-                  Ca.createElement(Bm, {
+                  Ca.createElement(Bh, {
                     className: "videoBackground",
                     src: o.m_strThumbnailUrl,
                     draggable: !1,
@@ -74579,16 +74647,16 @@ and limitations under the License.
                   playsInline: !0,
                   controls: !1
                 }),
-                l && Ca.createElement(Xh, { video: e, actions: s }),
+                l && Ca.createElement(Xm, { video: e, actions: s }),
                 u &&
-                  Ca.createElement(Zh, { onClick: this.props.onRequestClose }),
+                  Ca.createElement(Zm, { onClick: this.props.onRequestClose }),
                 t &&
-                  Ca.createElement(Hh, {
+                  Ca.createElement(Hm, {
                     stats: e.GetDASHPlayerStats(),
                     closeStats: this.CloseStats
                   }),
-                Ca.createElement(Yh, { video: e }),
-                r && Ca.createElement(Jh, { video: e }),
+                Ca.createElement(Ym, { video: e }),
+                r && Ca.createElement(Jm, { video: e }),
                 c &&
                   Ca.createElement(
                     "div",
@@ -74610,25 +74678,25 @@ and limitations under the License.
                   )
               );
             }),
-            ti.c([hn.a], t.prototype, "BindBroadcastPlayerRef", null),
-            ti.c([hn.a], t.prototype, "BindVideoRef", null),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "OnMouseMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeave", null),
-            ti.c([hn.a], t.prototype, "HideControls", null),
-            ti.c([hn.a], t.prototype, "UmountControls", null),
-            ti.c([hn.a], t.prototype, "ShowStatsView", null),
-            ti.c([hn.a], t.prototype, "OnContextMenu", null),
-            ti.c([hn.a], t.prototype, "ToggleStatsView", null),
-            ti.c([hn.a], t.prototype, "ShowStorePage", null),
-            ti.c([hn.a], t.prototype, "CloseStats", null),
-            ti.c([hn.a], t.prototype, "OnToggleFullscreen", null),
-            ti.c([hn.a], t.prototype, "OnFullscreenChange", null),
+            ti.c([mn.a], t.prototype, "BindBroadcastPlayerRef", null),
+            ti.c([mn.a], t.prototype, "BindVideoRef", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnMouseMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeave", null),
+            ti.c([mn.a], t.prototype, "HideControls", null),
+            ti.c([mn.a], t.prototype, "UmountControls", null),
+            ti.c([mn.a], t.prototype, "ShowStatsView", null),
+            ti.c([mn.a], t.prototype, "OnContextMenu", null),
+            ti.c([mn.a], t.prototype, "ToggleStatsView", null),
+            ti.c([mn.a], t.prototype, "ShowStorePage", null),
+            ti.c([mn.a], t.prototype, "CloseStats", null),
+            ti.c([mn.a], t.prototype, "OnToggleFullscreen", null),
+            ti.c([mn.a], t.prototype, "OnFullscreenChange", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Yh = (function(e) {
+        Ym = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74652,7 +74720,7 @@ and limitations under the License.
               return Ca.createElement(
                 "div",
                 { className: "BroadcastVideoWatchState" },
-                r && Ca.createElement(im, null),
+                r && Ca.createElement(ih, null),
                 !r &&
                   Ca.createElement(
                     "div",
@@ -74664,7 +74732,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Jh = (function(e) {
+        Jm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74680,7 +74748,7 @@ and limitations under the License.
                   className: "BroadcastVideoUserInputNeeded",
                   onClick: this.OnClick
                 },
-                Ca.createElement(hd.H, null),
+                Ca.createElement(md.H, null),
                 Ca.createElement(
                   "span",
                   null,
@@ -74688,11 +74756,11 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnClick", null),
+            ti.c([mn.a], t.prototype, "OnClick", null),
             t
           );
         })(Ca.Component),
-        Xh = (function(e) {
+        Xm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74721,8 +74789,8 @@ and limitations under the License.
                     Ca.createElement("div", {
                       className: "videoControlsButtons LeftSpacer"
                     }),
-                    Ca.createElement(Qh, { video: e }),
-                    Ca.createElement($h, { video: e }),
+                    Ca.createElement(Qm, { video: e }),
+                    Ca.createElement($m, { video: e }),
                     Ca.createElement(ng, {
                       video: e,
                       actions: this.props.actions
@@ -74734,7 +74802,7 @@ and limitations under the License.
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        Zh = (function(e) {
+        Zm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74748,14 +74816,14 @@ and limitations under the License.
                       className: "STV_BroadcastClose",
                       onClick: this.props.onClick
                     },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   )
                 : null;
             }),
             t
           );
         })(Ca.PureComponent),
-        Qh = (function(e) {
+        Qm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74780,7 +74848,7 @@ and limitations under the License.
                       "videoControlButton videoControlJump controlFlip",
                     onClick: this.OnJumpBackward
                   },
-                  Ca.createElement(hd.B, {
+                  Ca.createElement(md.B, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -74795,7 +74863,7 @@ and limitations under the License.
                     className: "videoControlButton videoControlJump",
                     onClick: this.OnJumpForward
                   },
-                  Ca.createElement(hd.B, {
+                  Ca.createElement(md.B, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -74806,12 +74874,12 @@ and limitations under the License.
                 Ca.createElement(ig, { video: e })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnJumpBackward", null),
-            ti.c([hn.a], t.prototype, "OnJumpForward", null),
+            ti.c([mn.a], t.prototype, "OnJumpBackward", null),
+            ti.c([mn.a], t.prototype, "OnJumpForward", null),
             t
           );
         })(Ca.Component),
-        $h = (function(e) {
+        $m = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74833,7 +74901,7 @@ and limitations under the License.
                       (e ? " isLiveEdge" : ""),
                     onClick: e ? null : this.OnGoLiveClicked
                   },
-                  Ca.createElement(hd.B, {
+                  Ca.createElement(md.B, {
                     bHidePreArrow: !0,
                     bHidePostArrow: !0,
                     bFlipHorizontal: !1
@@ -74848,7 +74916,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnGoLiveClicked", null),
+            ti.c([mn.a], t.prototype, "OnGoLiveClicked", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -74870,10 +74938,10 @@ and limitations under the License.
                   className: "videoControlButton buttonPlayPause",
                   onClick: this.OnTogglePlayPause
                 },
-                t ? Ca.createElement(hd.H, null) : Ca.createElement(hd.G, null)
+                t ? Ca.createElement(md.H, null) : Ca.createElement(md.G, null)
               );
             }),
-            ti.c([hn.a], t.prototype, "OnTogglePlayPause", null),
+            ti.c([mn.a], t.prototype, "OnTogglePlayPause", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -74916,14 +74984,14 @@ and limitations under the License.
                     (this.has_previous_marker ? "" : " noMarkersInDirection"),
                   onClick: this.OnJumpToPreviousMarkerClicked
                 },
-                Ca.createElement(hd.B, {
+                Ca.createElement(md.B, {
                   bHidePostArrow: !0,
                   bFlipHorizontal: !0
                 })
               );
             }),
             ti.c([di.computed], t.prototype, "has_previous_marker", null),
-            ti.c([hn.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
+            ti.c([mn.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -74966,14 +75034,14 @@ and limitations under the License.
                     (this.has_next_marker ? "" : " noMarkersInDirection"),
                   onClick: this.OnJumpToNextMarkerClicked
                 },
-                Ca.createElement(hd.B, {
+                Ca.createElement(md.B, {
                   bHidePostArrow: !0,
                   bFlipHorizontal: !1
                 })
               );
             }),
             ti.c([di.computed], t.prototype, "has_next_marker", null),
-            ti.c([hn.a], t.prototype, "OnJumpToNextMarkerClicked", null),
+            ti.c([mn.a], t.prototype, "OnJumpToNextMarkerClicked", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -75054,7 +75122,7 @@ and limitations under the License.
                       onClick: this.OnVideoControlClick,
                       ref: this.bindSettingsButton
                     },
-                    Ca.createElement(hd.Q, null)
+                    Ca.createElement(md.Q, null)
                   ),
                   Ca.createElement(og, { video: o }),
                   a &&
@@ -75086,10 +75154,10 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnVideoControlClick", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "bindSettingsButton", null),
-            ti.c([hn.a], t.prototype, "BindSettingsPanel", null),
+            ti.c([mn.a], t.prototype, "OnVideoControlClick", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "bindSettingsButton", null),
+            ti.c([mn.a], t.prototype, "BindSettingsPanel", null),
             t
           );
         })(Ca.Component),
@@ -75167,7 +75235,7 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { className: n, onClick: this.ToggleMute },
-                      Ca.createElement(hd._3, null)
+                      Ca.createElement(md._4, null)
                     ),
                     Ca.createElement(ag, { video: e, onDrag: this.OnChildDrag })
                   )
@@ -75175,10 +75243,10 @@ and limitations under the License.
               );
             }),
             ti.c([di.observable], t.prototype, "m_bShowSlider", void 0),
-            ti.c([hn.a], t.prototype, "ToggleMute", null),
-            ti.c([hn.a], t.prototype, "OnMouseEnter", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeave", null),
-            ti.c([hn.a], t.prototype, "OnChildDrag", null),
+            ti.c([mn.a], t.prototype, "ToggleMute", null),
+            ti.c([mn.a], t.prototype, "OnMouseEnter", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeave", null),
+            ti.c([mn.a], t.prototype, "OnChildDrag", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -75258,9 +75326,9 @@ and limitations under the License.
                 })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
             ti.c([di.action], t.prototype, "SetVolumeWithCoord", null),
             (t = ti.c([Xd.observer], t))
           );
@@ -75354,18 +75422,18 @@ and limitations under the License.
                 u = {},
                 d = {},
                 p = {},
-                m = {},
-                h = {};
+                h = {},
+                m = {};
               i
-                ? ((m.left = s),
+                ? ((h.left = s),
                   (u.width = s),
                   (d.width = c),
                   (p.width = l),
-                  (h.left = s))
-                : ((m.left = c),
+                  (m.left = s))
+                : ((h.left = c),
                   (d.width = c),
                   (p.width = l),
-                  n && (h.left = this.state.nHoverValue + "%"));
+                  n && (m.left = this.state.nHoverValue + "%"));
               var g = O(t.GetPlaybackTime()),
                 f = O(this.state.nGrabberMouseDownTime);
               i || (f = g);
@@ -75383,7 +75451,7 @@ and limitations under the License.
                 r < 0 ||
                   r > 100 ||
                   v.push(
-                    Ca.createElement(mt, {
+                    Ca.createElement(ht, {
                       key: n,
                       pos: r,
                       label: i.strLabel,
@@ -75400,7 +75468,7 @@ and limitations under the License.
                     var o = t.GetPercentOffsetFromTime(i.nTimeEnd, Bl.Timeline);
                     o < 0 ||
                       b.push(
-                        Ca.createElement(ht, {
+                        Ca.createElement(mt, {
                           key: n,
                           startPos: r,
                           endPos: o,
@@ -75451,7 +75519,7 @@ and limitations under the License.
                           "div",
                           {
                             className: "STV_timelineGrabber_Wrapper",
-                            style: m
+                            style: h
                           },
                           Ca.createElement(
                             "div",
@@ -75467,7 +75535,7 @@ and limitations under the License.
                             Ca.createElement(
                               "div",
                               { className: "STV_timelineGrabberArrow" },
-                              Ca.createElement(hd.N, null)
+                              Ca.createElement(md.N, null)
                             )
                           )
                         )
@@ -75477,13 +75545,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnMouseMove", null),
-            ti.c([hn.a], t.prototype, "OnMouseUp", null),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
-            ti.c([hn.a], t.prototype, "OnSegmentClick", null),
-            ti.c([hn.a], t.prototype, "OnMarkerMouseEnter", null),
-            ti.c([hn.a], t.prototype, "OnMarkerMouseLeave", null),
+            ti.c([mn.a], t.prototype, "OnMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnMouseMove", null),
+            ti.c([mn.a], t.prototype, "OnMouseUp", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnSegmentClick", null),
+            ti.c([mn.a], t.prototype, "OnMarkerMouseEnter", null),
+            ti.c([mn.a], t.prototype, "OnMarkerMouseLeave", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -75515,7 +75583,7 @@ and limitations under the License.
                 "div",
                 { className: "BroadcastDetails" },
                 !this.props.bHideThumbnail &&
-                  Ca.createElement(Bm, {
+                  Ca.createElement(Bh, {
                     className: "broadcastDetailsThumbBlur",
                     src: e.m_strThumbnailUrl,
                     draggable: !1,
@@ -75549,7 +75617,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "BroadcastDetailsHeader_ViewerCount" },
-                        Ca.createElement(hd._1, null),
+                        Ca.createElement(md._2, null),
                         Object(la.b)("#Broadcast_ViewerCount", t)
                       )
                   ),
@@ -75606,13 +75674,13 @@ and limitations under the License.
               return Ca.createElement(
                 "div",
                 {
-                  className: "BroadcastChat",
+                  className: wh("BroadcastChat", this.props.className),
                   style: this.props.hidden ? { display: "none" } : void 0
                 },
                 Ca.createElement("iframe", { ref: this.BindChatRef })
               );
             }),
-            ti.c([hn.a], t.prototype, "BindChatRef", null),
+            ti.c([mn.a], t.prototype, "BindChatRef", null),
             t
           );
         })(Ca.Component)),
@@ -75630,7 +75698,7 @@ and limitations under the License.
             Sa.a.createElement(
               "div",
               { className: "ChatRoomListGroupItem_header" },
-              Sa.a.createElement(Dm, { group: t, small: !0 }),
+              Sa.a.createElement(Dh, { group: t, small: !0 }),
               Sa.a.createElement(
                 "div",
                 { className: "groupNameStatusContainer" },
@@ -75731,7 +75799,7 @@ and limitations under the License.
                         Sa.a.createElement(
                           ne,
                           {
-                            svgicon: hd.q,
+                            svgicon: md.q,
                             className: "watchHowButton",
                             onClick: this.WatchAlone
                           },
@@ -75746,7 +75814,7 @@ and limitations under the License.
                                 return e.CreateWatchParty(!0);
                               }
                             },
-                            Sa.a.createElement(gh, {
+                            Sa.a.createElement(gm, {
                               friend: s,
                               context: null,
                               bLarge: !1
@@ -75805,7 +75873,7 @@ and limitations under the License.
                           ne,
                           {
                             className: "watchHowButton newWatchGroup",
-                            svgicon: hd.E,
+                            svgicon: md.E,
                             onClick: function() {
                               return e.CreateWatchParty(!1);
                             }
@@ -75819,8 +75887,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "WatchAlone", null),
-            ti.c([hn.a], t.prototype, "Close", null),
+            ti.c([mn.a], t.prototype, "WatchAlone", null),
+            ti.c([mn.a], t.prototype, "Close", null),
             t
           );
         })(Sa.a.Component),
@@ -75872,7 +75940,7 @@ and limitations under the License.
               return Sa.a.createElement(
                 "div",
                 { className: "BroadcastTab", style: n },
-                Sa.a.createElement(Bm, {
+                Sa.a.createElement(Bh, {
                   className: "FullpageBroadcastBackdrop",
                   src: this.m_broadcastInfo.m_strThumbnailUrl,
                   draggable: !1,
@@ -75912,13 +75980,13 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnWatchWithFriends", null),
-            ti.c([hn.a], t.prototype, "ToggleChat", null),
-            ti.c([hn.a], t.prototype, "ToggleTheaterMode", null),
+            ti.c([mn.a], t.prototype, "OnWatchWithFriends", null),
+            ti.c([mn.a], t.prototype, "ToggleChat", null),
+            ti.c([mn.a], t.prototype, "ToggleTheaterMode", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Sa.a.Component),
-        mg = (function(e) {
+        hg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -75960,7 +76028,7 @@ and limitations under the License.
                         "StandalonePlayer" +
                         (this.state.bTheaterMode ? " TheaterMode" : "")
                     },
-                    Sa.a.createElement(Bm, {
+                    Sa.a.createElement(Bh, {
                       className: "FullpageBroadcastBackdrop",
                       src: t.m_strThumbnailUrl,
                       draggable: !1,
@@ -75972,7 +76040,7 @@ and limitations under the License.
                       Sa.a.createElement(
                         "div",
                         { className: "STV_Logo" },
-                        Sa.a.createElement(hd.T, null)
+                        Sa.a.createElement(md.U, null)
                       ),
                       Sa.a.createElement(
                         "div",
@@ -75998,16 +76066,16 @@ and limitations under the License.
                       Sa.a.createElement(_g, { app: e })
                     )
                   ),
-                Sa.a.createElement(hg, { app: e })
+                Sa.a.createElement(mg, { app: e })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnShowLogin", null),
-            ti.c([hn.a], t.prototype, "ToggleChat", null),
-            ti.c([hn.a], t.prototype, "ToggleTheaterMode", null),
+            ti.c([mn.a], t.prototype, "OnShowLogin", null),
+            ti.c([mn.a], t.prototype, "ToggleChat", null),
+            ti.c([mn.a], t.prototype, "ToggleTheaterMode", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Sa.a.Component),
-        hg = Object(Xd.observer)(function(e) {
+        mg = Object(Xd.observer)(function(e) {
           var t = e.app;
           return t.BIsPerformingLogonCheck()
             ? Sa.a.createElement(
@@ -76056,7 +76124,7 @@ and limitations under the License.
                     "div",
                     { className: "BroadcastContainerSectionVideoContainer" },
                     o &&
-                      Sa.a.createElement(Kh, {
+                      Sa.a.createElement(Km, {
                         key: r,
                         steamID: r,
                         onTheaterMode: this.props.onTheaterMode
@@ -76083,7 +76151,7 @@ and limitations under the License.
               );
             }),
             ti.c([di.observable], t.prototype, "m_strLocalSteamID", void 0),
-            ti.c([hn.a], t.prototype, "OnLocalStreamChange", null),
+            ti.c([mn.a], t.prototype, "OnLocalStreamChange", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Sa.a.Component),
@@ -76110,7 +76178,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "Dismiss", null),
+            ti.c([mn.a], t.prototype, "Dismiss", null),
             t
           );
         })(Sa.a.Component),
@@ -76141,7 +76209,7 @@ and limitations under the License.
         })(Sa.a.Component),
         yg = Object(Xd.observer)(function(e) {
           return Ca.createElement(
-            ph,
+            pm,
             { friend: e.player, context: e.context },
             Ca.createElement("span", null, e.player.display_name)
           );
@@ -76187,7 +76255,7 @@ and limitations under the License.
               } else
                 d = Object(la.d)("#ChatRoom_ServerMessage_Invited", i[0], u);
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "server" },
                 Ca.createElement(
                   "div",
@@ -76237,7 +76305,7 @@ and limitations under the License.
                 l = Object(la.d)(this.props.tokenPrefix + "_Multiple", d, u);
               } else l = Object(la.d)(this.props.tokenPrefix, i[0]);
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "server" },
                 Ca.createElement(
                   "div",
@@ -76308,20 +76376,20 @@ and limitations under the License.
               };
               i && (p.chatGutterWidth = i),
                 this.BIsEmoticonsOnly(c) && (p.bUseLargeEmoticons = !0);
-              var m,
-                h = !1;
+              var h,
+                m = !1;
               "+1" != c
-                ? (m = Ca.createElement(Fa, {
+                ? (h = Ca.createElement(Fa, {
                     bbcode: c,
                     context: p,
                     parser: n.GetBBCodeParser()
                   }))
-                : ((m = Ca.createElement(
+                : ((h = Ca.createElement(
                     "div",
                     { className: "plusOne" },
                     "+1"
                   )),
-                  (h = !0));
+                  (m = !0));
               var g = this.props.children;
               if (!g) {
                 var f = "",
@@ -76329,14 +76397,14 @@ and limitations under the License.
                 a
                   ? ((_ += " spoilerMsgText"), (f = "spoilerMsg"))
                   : s && ((_ += " quoteMsgText"), (f = "quoteMsg")),
-                  h &&
+                  m &&
                     ((_ += " plusOneContainer"),
                     dd.GetServerRTime32() - t.rtTimestamp < 2 &&
                       (_ += " plusOnePlayAnimation")),
                   (g = Ca.createElement(
                     "div",
                     { className: _ },
-                    a || s ? Ca.createElement("div", { className: f }, m) : m
+                    a || s ? Ca.createElement("div", { className: f }, h) : h
                   ));
               }
               return Ca.createElement(
@@ -76361,10 +76429,10 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "ChatMessageErrorPermissionDeniedAlert" },
-                    Ca.createElement(hd.y, null),
+                    Ca.createElement(md.y, null),
                     Object(la.b)("#Chat_ErrorPermissionDenied")
                   ),
-                Ca.createElement(Fh, null, g)
+                Ca.createElement(Fm, null, g)
               );
             }),
             (t = ti.c([Xd.observer], t))
@@ -76417,7 +76485,7 @@ and limitations under the License.
                         (t = Ca.createElement(
                           "div",
                           { className: "rankIcon rankOwner" },
-                          Ca.createElement(hd.h, null)
+                          Ca.createElement(md.h, null)
                         ));
                 }
                 return (
@@ -76443,7 +76511,7 @@ and limitations under the License.
                           })
                         ))),
                   Ca.createElement(
-                    Fh,
+                    Fm,
                     {
                       style: "speaker allow-embedded-newlines",
                       text: [
@@ -76469,7 +76537,7 @@ and limitations under the License.
                         Sg,
                         { friend: e, className: "speaker" },
                         Ca.createElement(
-                          ph,
+                          pm,
                           {
                             friend: e,
                             context: this.props.friendRenderContext
@@ -76527,7 +76595,7 @@ and limitations under the License.
               return (
                 (o.width = this.props.speakerWidth + "px"),
                 Ca.createElement(
-                  Fh,
+                  Fm,
                   {
                     style: "speaker allow-embedded-newlines",
                     text: [
@@ -76551,7 +76619,7 @@ and limitations under the License.
                       style: o
                     },
                     Ca.createElement(
-                      ph,
+                      pm,
                       { friend: e, context: this.props.friendRenderContext },
                       Ca.createElement(
                         Sg,
@@ -76639,13 +76707,13 @@ and limitations under the License.
                       "div",
                       { className: s },
                       Ca.createElement(
-                        ph,
+                        pm,
                         {
                           friend: n,
                           context: { chat: t, chatContext: "message" }
                         },
                         Ca.createElement(
-                          Fh,
+                          Fm,
                           {
                             style: "speaker allow-embedded-newlines",
                             text: [
@@ -76678,7 +76746,7 @@ and limitations under the License.
                         )
                       ),
                       Ca.createElement(
-                        Fh,
+                        Fm,
                         {
                           style: "force-display append-innertext",
                           text: "/me"
@@ -76787,7 +76855,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "BindMsgTxt", null),
+            ti.c([mn.a], t.prototype, "BindMsgTxt", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -76919,7 +76987,7 @@ and limitations under the License.
                   i = Object(la.b)("#ChatRoom_ServerMessage_Unhandled");
               }
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "server" },
                 Ca.createElement(
                   "div",
@@ -77049,7 +77117,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         null,
-                        Ca.createElement(hd.Y, null),
+                        Ca.createElement(md.Z, null),
                         t &&
                           Object(la.d)(
                             "#ChatRoom_TradeRequest_Recipient_Declined",
@@ -77078,7 +77146,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         null,
-                        Ca.createElement(hd.Y, null),
+                        Ca.createElement(md.Z, null),
                         this.GetLocalizedErrorResponseString()
                       )
                     )
@@ -77104,7 +77172,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        Ca.createElement(hd.Y, null)
+                        Ca.createElement(md.Z, null)
                       ),
                       Ca.createElement(
                         "div",
@@ -77150,7 +77218,7 @@ and limitations under the License.
                     Ca.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      Ca.createElement(hd.Y, null)
+                      Ca.createElement(md.Z, null)
                     ),
                     Ca.createElement(
                       "div",
@@ -77195,17 +77263,17 @@ and limitations under the License.
                           className: "closeButton",
                           onClick: this.DeclineTrade
                         },
-                        Ca.createElement(hd._5, null)
+                        Ca.createElement(md._6, null)
                       )
                     )
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "AcceptTrade", null),
-            ti.c([hn.a], t.prototype, "DeclineTrade", null),
-            ti.c([hn.a], t.prototype, "CancelTradeRequest", null),
-            ti.c([hn.a], t.prototype, "ViewAcceptedTrade", null),
+            ti.c([mn.a], t.prototype, "AcceptTrade", null),
+            ti.c([mn.a], t.prototype, "DeclineTrade", null),
+            ti.c([mn.a], t.prototype, "CancelTradeRequest", null),
+            ti.c([mn.a], t.prototype, "ViewAcceptedTrade", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -77217,7 +77285,7 @@ and limitations under the License.
             ti.d(t, e),
             (t.prototype.render = function() {
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "invite", text: this.props.msg.strMessage },
                 Ca.createElement(
                   "div",
@@ -77417,41 +77485,41 @@ and limitations under the License.
                   p < this.props.messages.length;
                   p++
                 ) {
-                  var m = this.props.messages[p],
-                    h = !0;
+                  var h = this.props.messages[p],
+                    m = !0;
                   if (!o) {
-                    var g = Math.floor(m.rtTimestamp / 60);
+                    var g = Math.floor(h.rtTimestamp / 60);
                     u && g != u
-                      ? ((h = !1), (t = !0))
+                      ? ((m = !1), (t = !0))
                       : i &&
                         t &&
                         p == this.props.messages.length - 1 &&
-                        (h = !1),
+                        (m = !1),
                       (u = g);
                   }
                   var f = {
-                    msg: m,
-                    key: m.UniqueKey(),
+                    msg: h,
+                    key: h.UniqueKey(),
                     chatView: this.props.chatView,
-                    hideTimeStamp: h,
+                    hideTimeStamp: m,
                     onUpdate: this.props.onUpdate
                   };
                   if (
-                    m.eDeleteState != Wa.Deleting &&
-                    m.eDeleteState != Wa.Deleted
+                    h.eDeleteState != Wa.Deleting &&
+                    h.eDeleteState != Wa.Deleted
                   ) {
                     d = !1;
-                    var _ = m.GetSlashCommandType();
+                    var _ = h.GetSlashCommandType();
                     if (
                       _ == Ua.k_ESlashCommandType_None ||
                       _ == Ua.k_ESlashCommandType_Giphy ||
                       _ == Ua.k_ESlashCommandType_Spoiler ||
                       _ == Ua.k_ESlashCommandType_Quote
                     )
-                      m instanceof Za
+                      h instanceof Za
                         ? l.push(
                             Ca.createElement(
-                              Fh,
+                              Fm,
                               null,
                               Ca.createElement(
                                 Rg,
@@ -77461,7 +77529,7 @@ and limitations under the License.
                               )
                             )
                           )
-                        : m instanceof Xa
+                        : h instanceof Xa
                           ? ((e = !1),
                             l.push(Ca.createElement(Eg, ti.a({}, f))))
                           : l.push(
@@ -77505,7 +77573,7 @@ and limitations under the License.
                 s && (c += " ChatMessageBlock_HighlightDelete"),
                 1 != l.length || o || (c += " SingletonMsg"),
                 Ca.createElement(
-                  Fh,
+                  Fm,
                   null,
                   Ca.createElement(
                     "div",
@@ -77530,7 +77598,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnHoverDelete", null),
+            ti.c([mn.a], t.prototype, "OnHoverDelete", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -77559,12 +77627,12 @@ and limitations under the License.
                   onClick: this.OnDeleteMessages,
                   title: Object(la.b)("#Chat_Actions_Delete")
                 },
-                Ca.createElement(hd.Z, null)
+                Ca.createElement(md._0, null)
               );
             }),
-            ti.c([hn.a], t.prototype, "OnMouseEnter", null),
-            ti.c([hn.a], t.prototype, "OnMouseLeave", null),
-            ti.c([hn.a], t.prototype, "OnDeleteMessages", null),
+            ti.c([mn.a], t.prototype, "OnMouseEnter", null),
+            ti.c([mn.a], t.prototype, "OnMouseLeave", null),
+            ti.c([mn.a], t.prototype, "OnDeleteMessages", null),
             t
           );
         })(Ca.Component),
@@ -77611,7 +77679,7 @@ and limitations under the License.
                 e = t.toLocaleDateString(la.a.GetPreferredLocales(), n);
               }
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "timestamp", text: e },
                 Ca.createElement(
                   "div",
@@ -78056,16 +78124,16 @@ and limitations under the License.
               "m_bLoadHistoryInProgress",
               void 0
             ),
-            ti.c([hn.a], t.prototype, "DumpChildSizes", null),
-            ti.c([hn.a], t.prototype, "OnHistoryScrollRef", null),
-            ti.c([hn.a], t.prototype, "OnScrollEvent", null),
-            ti.c([hn.a], t.prototype, "OnScroll", null),
-            ti.c([hn.a], t.prototype, "ScrollToBottom", null),
-            ti.c([hn.a], t.prototype, "LoadOlderMessages", null),
-            ti.c([hn.a], t.prototype, "OnFrameChanged", null),
-            ti.c([hn.a], t.prototype, "OnUpdate", null),
-            ti.c([hn.a], t.prototype, "OnResize", null),
-            ti.c([hn.a], t.prototype, "Swallow", null),
+            ti.c([mn.a], t.prototype, "DumpChildSizes", null),
+            ti.c([mn.a], t.prototype, "OnHistoryScrollRef", null),
+            ti.c([mn.a], t.prototype, "OnScrollEvent", null),
+            ti.c([mn.a], t.prototype, "OnScroll", null),
+            ti.c([mn.a], t.prototype, "ScrollToBottom", null),
+            ti.c([mn.a], t.prototype, "LoadOlderMessages", null),
+            ti.c([mn.a], t.prototype, "OnFrameChanged", null),
+            ti.c([mn.a], t.prototype, "OnUpdate", null),
+            ti.c([mn.a], t.prototype, "OnResize", null),
+            ti.c([mn.a], t.prototype, "Swallow", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -78170,8 +78238,8 @@ and limitations under the License.
                         u = l.includes("block"),
                         d = l.includes("timestamp"),
                         p = l.includes("server"),
-                        m = l.includes("invite"),
-                        h = l.includes("emote"),
+                        h = l.includes("invite"),
+                        m = l.includes("emote"),
                         g = l.includes("no-prefix"),
                         f = l.includes("no-suffix"),
                         _ = l.includes("allow-embedded-newlines"),
@@ -78190,9 +78258,9 @@ and limitations under the License.
                       F && (r = !0);
                       var O = "",
                         I = "\n";
-                      d || F || p || m || h
+                      d || F || p || h || m
                         ? (0 != i.length && (O += "\n"),
-                          (p || m) && (O += "\t\t"))
+                          (p || h) && (O += "\t\t"))
                         : (r && (O += "\t"),
                           n.includes("msg") && u && (S = !0),
                           n.includes("block") && !y && (S = !0)),
@@ -78376,7 +78444,7 @@ and limitations under the License.
                   onCopy: this.OnCopy,
                   tabIndex: 0
                 },
-                Ca.createElement(zh, {
+                Ca.createElement(zm, {
                   tabSet: this.props.tabs,
                   popup: this.props.popup,
                   activeTab: t,
@@ -78397,14 +78465,14 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnCopy", null),
-            ti.c([hn.a], t.prototype, "OnChatTabRef", null),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
-            ti.c([hn.a], t.prototype, "OnHTMLKeyEvent", null),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnCopy", null),
+            ti.c([mn.a], t.prototype, "OnChatTabRef", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnHTMLKeyEvent", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -78454,7 +78522,7 @@ and limitations under the License.
                   ? Ca.createElement(
                       pd,
                       { key: t, classNames: "friend-anim", timeout: 320 },
-                      Ca.createElement(mh, {
+                      Ca.createElement(hm, {
                         friend: n,
                         key: t,
                         showVoiceLevel: !0,
@@ -78492,7 +78560,7 @@ and limitations under the License.
                       Ca.createElement(
                         pd,
                         { key: i, classNames: "friend-anim", timeout: 320 },
-                        Ca.createElement(mh, {
+                        Ca.createElement(hm, {
                           friend: a,
                           key: i,
                           showVoiceLevel: !0,
@@ -78558,14 +78626,14 @@ and limitations under the License.
                         Object(la.b)("#Voice_StartTalking")
                       );
               var p = "",
-                m = "OneOnOneVoiceRoomControls",
-                h = !1;
+                h = "OneOnOneVoiceRoomControls",
+                m = !1;
               r && !s
                 ? ((p = Object(la.b)(
                     "#Voice_WaitingForFriendToJoin",
                     a.display_name
                   )),
-                  (m += " WaitingForPartner"))
+                  (h += " WaitingForPartner"))
                 : s && !r
                   ? (o
                       ? (p = Object(la.b)(
@@ -78576,11 +78644,11 @@ and limitations under the License.
                           "#Voice_ChannelAvailable",
                           a.display_name
                         )),
-                        (m += " WaitingForYouFirstTime")),
-                    (m += " WaitingForYou"))
+                        (h += " WaitingForYouFirstTime")),
+                    (h += " WaitingForYou"))
                   : ((p = Object(la.b)("#Voice_ChannelActive", a.display_name)),
-                    (m += " OneOnOneVoiceActive"),
-                    (h = !0));
+                    (h += " OneOnOneVoiceActive"),
+                    (m = !0));
               var g = Ca.createElement(
                 "div",
                 { className: "OneOnOneVoiceStatusLabel" },
@@ -78588,11 +78656,11 @@ and limitations under the License.
               );
               return Ca.createElement(
                 "div",
-                { className: m },
+                { className: h },
                 Ca.createElement(
                   "div",
                   { className: "VoiceToggleIconCtn" },
-                  Ca.createElement(hd._2, null),
+                  Ca.createElement(md._3, null),
                   Ca.createElement(
                     "div",
                     { className: "Sonar" },
@@ -78606,7 +78674,7 @@ and limitations under the License.
                   u,
                   g
                 ),
-                !h &&
+                !m &&
                   Ca.createElement(
                     "div",
                     {
@@ -78616,14 +78684,14 @@ and limitations under the License.
                         ? Object(la.b)("#Voice_EndVoice")
                         : Object(la.b)("#Tooltip_DismissVoice")
                     },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   )
               );
             }),
-            ti.c([hn.a], t.prototype, "InitiateVoiceChat", null),
-            ti.c([hn.a], t.prototype, "VoidOnClick", null),
-            ti.c([hn.a], t.prototype, "EndVoiceChat", null),
-            ti.c([hn.a], t.prototype, "OnCloseClick", null),
+            ti.c([mn.a], t.prototype, "InitiateVoiceChat", null),
+            ti.c([mn.a], t.prototype, "VoidOnClick", null),
+            ti.c([mn.a], t.prototype, "EndVoiceChat", null),
+            ti.c([mn.a], t.prototype, "OnCloseClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -78714,7 +78782,7 @@ and limitations under the License.
                     !!t.BIsClanChatRoom() &&
                     dd.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
                   (a = t.name),
-                  (s = Ca.createElement(Dm, { group: t, name: t.name })),
+                  (s = Ca.createElement(Dh, { group: t, name: t.name })),
                   (d = t.BIsUserGroupMember(n)))
                 : e
                   ? ((u = "#Chat_Actions_DropGroupInvite_1v2_Confirm"),
@@ -78743,13 +78811,13 @@ and limitations under the License.
                     (s = Ca.createElement(
                       "div",
                       { className: "displayRow" },
-                      Ca.createElement(hd._2, null)
+                      Ca.createElement(md._3, null)
                     )));
               var p = null,
-                m = !0;
+                h = !0;
               return (
                 dd.IsInBeta() &&
-                  ((m = !c && !l),
+                  ((h = !c && !l),
                   l && c
                     ? (p = Ca.createElement(
                         "span",
@@ -78811,7 +78879,7 @@ and limitations under the License.
                             "dropGroupInviteDialog displayColumn" +
                             (t || i ? " groupInviteHeight" : "")
                         },
-                        m &&
+                        h &&
                           Ca.createElement(
                             "span",
                             { className: "dropGroupInviteDialog_Desc" },
@@ -78850,16 +78918,16 @@ and limitations under the License.
                               src: n.persona.avatar_url_medium
                             })
                           ),
-                          m
+                          h
                             ? Ca.createElement(
                                 "div",
                                 { className: "movingArrow" },
-                                Ca.createElement(hd.b, { angle: 90 })
+                                Ca.createElement(md.b, { angle: 90 })
                               )
                             : Ca.createElement(
                                 "div",
                                 { className: "staticX" },
-                                Ca.createElement(hd._5, null)
+                                Ca.createElement(md._6, null)
                               ),
                           s,
                           Ca.createElement(
@@ -78905,9 +78973,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "AddMoreFriends", null),
-            ti.c([hn.a], t.prototype, "Cancel", null),
-            ti.c([hn.a], t.prototype, "OnInviteClicked", null),
+            ti.c([mn.a], t.prototype, "AddMoreFriends", null),
+            ti.c([mn.a], t.prototype, "Cancel", null),
+            ti.c([mn.a], t.prototype, "OnInviteClicked", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79122,7 +79190,7 @@ and limitations under the License.
                       onNameWidthChanged: this.OnNameWidthChanged
                     }),
                   Ca.createElement(
-                    md,
+                    hd,
                     null,
                     (i || t) &&
                       Ca.createElement(
@@ -79153,7 +79221,7 @@ and limitations under the License.
                       fnDragOver: this.OnDragOver,
                       fnDrop: this.OnDrop
                     },
-                    Ca.createElement(md, null, o),
+                    Ca.createElement(hd, null, o),
                     n &&
                       Ca.createElement(Zg, {
                         chatView: this.props.chatView,
@@ -79168,7 +79236,7 @@ and limitations under the License.
                     Ca.createElement(Hg, { chatView: this.props.chatView }),
                     Ca.createElement("div", { className: "dropTargetBox" })
                   ),
-                  Ca.createElement(Rh, {
+                  Ca.createElement(Rm, {
                     key: e.unique_id,
                     chatView: this.props.chatView,
                     isActive: this.props.isActive,
@@ -79177,12 +79245,12 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
-            ti.c([hn.a], t.prototype, "OnDropComplete", null),
-            ti.c([hn.a], t.prototype, "OnNameWidthChanged", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnDropComplete", null),
+            ti.c([mn.a], t.prototype, "OnNameWidthChanged", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79221,7 +79289,7 @@ and limitations under the License.
                   : null
               );
             }),
-            ti.c([hn.a], t.prototype, "SpeakerLabel", null),
+            ti.c([mn.a], t.prototype, "SpeakerLabel", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79259,7 +79327,7 @@ and limitations under the License.
                     case 1:
                       return [
                         4,
-                        he(
+                        me(
                           i,
                           "",
                           Object(la.b)(
@@ -79293,11 +79361,11 @@ and limitations under the License.
                     ? this.AddFriendClick
                     : this.AddFriendClickNotInBeta
                 },
-                Ca.createElement(hd.x, null)
+                Ca.createElement(md.x, null)
               );
             }),
-            ti.c([hn.a], t.prototype, "AddFriendClick", null),
-            ti.c([hn.a], t.prototype, "AddFriendClickNotInBeta", null),
+            ti.c([mn.a], t.prototype, "AddFriendClick", null),
+            ti.c([mn.a], t.prototype, "AddFriendClickNotInBeta", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79308,7 +79376,7 @@ and limitations under the License.
               (i.m_msWentInactive = 0),
               (i.m_keyEventListener = "keydown"),
               (i.m_refBroadcastContainer = Ca.createRef()),
-              (i.state = { dropToInviteFriend: void 0 }),
+              (i.state = { dropToInviteFriend: void 0, bShowBothChats: !1 }),
               i.props.popup &&
                 i.props.popup.addEventListener(
                   i.m_keyEventListener,
@@ -79479,7 +79547,8 @@ and limitations under the License.
             (t.prototype.OnGrabberMouseDown = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               t.addEventListener("mousemove", this.HandleMouseMove),
-                t.addEventListener("mouseup", this.UnregisterDragEvents);
+                t.addEventListener("mouseup", this.UnregisterDragEvents),
+                this.setState({ bDraggingChatGrabber: !0 });
             }),
             (t.prototype.HandleMouseMove = function(e) {
               e.preventDefault(), e.stopPropagation();
@@ -79500,7 +79569,8 @@ and limitations under the License.
                 e.view.removeEventListener(
                   "mouseup",
                   this.UnregisterDragEvents
-                );
+                ),
+                this.setState({ bDraggingChatGrabber: !1 });
             }),
             (t.prototype.OnLocalStreamChange = function(e) {
               this.props.groupView.SetLocalBroadcastId(e);
@@ -79523,6 +79593,11 @@ and limitations under the License.
             (t.prototype.SetMainContentRef = function(e) {
               (this.m_elMainContent = e), this.OnLayoutChange();
             }),
+            (t.prototype.ToggleShowBothChats = function() {
+              this.state.bShowBothChats ||
+                this.props.groupView.SetGlobalBroadcastChatShown(!0),
+                this.setState({ bShowBothChats: !this.state.bShowBothChats });
+            }),
             (t.prototype.RenderInnerChatTabs = function() {
               var e = this.props.groupView,
                 t = e.GetGroup();
@@ -79536,7 +79611,7 @@ and limitations under the License.
                     onClick: this.HideChat,
                     title: Object(la.b)("#Broadcast_View_HideChat")
                   },
-                  Ca.createElement(hd.u, { showChat: !1 })
+                  Ca.createElement(md.u, { showChat: !1 })
                 ),
                 Ca.createElement(
                   "div",
@@ -79544,7 +79619,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     {
-                      className: wm(
+                      className: wh(
                         "InnerChatTab",
                         !e.m_bShowGlobalChat && "Active"
                       ),
@@ -79553,31 +79628,47 @@ and limitations under the License.
                       }
                     },
                     Ca.createElement(Ap, { group: t }),
-                    Ca.createElement(Dm, { group: t, micro: !0 }),
+                    Ca.createElement(Dh, { group: t, micro: !0 }),
                     Ca.createElement(
                       "span",
                       { className: "InnerChatTabLabel" },
                       Object(la.b)("#Broadcast_Chat_GroupChatTab", t.name)
                     )
                   ),
-                  Ca.createElement(
-                    "div",
-                    {
-                      className: wm(
-                        "InnerChatTab",
-                        e.m_bShowGlobalChat && "Active"
-                      ),
-                      onClick: function() {
-                        return e.SetGlobalBroadcastChatShown(!0);
-                      }
-                    },
-                    Ca.createElement(hd.r, null),
+                  (!this.state.bShowBothChats ||
+                    (this.state.bShowBothChats &&
+                      this.ShouldShowVerticalBroadcastChat())) &&
                     Ca.createElement(
-                      "span",
-                      { className: "InnerChatTabLabel" },
-                      Object(la.b)("#Broadcast_Chat_PublicChatTab")
+                      "div",
+                      {
+                        className: wh(
+                          "InnerChatTab",
+                          e.m_bShowGlobalChat && "Active"
+                        ),
+                        onClick: function() {
+                          return e.SetGlobalBroadcastChatShown(!0);
+                        }
+                      },
+                      Ca.createElement(md.r, null),
+                      Ca.createElement(
+                        "span",
+                        { className: "InnerChatTabLabel" },
+                        Object(la.b)("#Broadcast_Chat_PublicChatTab")
+                      )
                     )
-                  )
+                ),
+                Ca.createElement(
+                  "div",
+                  {
+                    className: "showBothTabs",
+                    onClick: this.ToggleShowBothChats,
+                    title: Object(la.b)(
+                      this.state.bShowBothChats
+                        ? "#Broadcast_View_ShowSingleChats"
+                        : "#Broadcast_View_ShowBothChats"
+                    )
+                  },
+                  Ca.createElement(md.R, null)
                 )
               );
             }),
@@ -79589,9 +79680,13 @@ and limitations under the License.
                 i = t.GetSelectedChatView(),
                 n = t.GetPopoverChatView(),
                 r = i.chat,
-                o = null;
+                o = this.state.bShowBothChats && t.isBroadcastShown,
+                a = t.m_bShowGlobalChat,
+                s = (a && o) || (!a && !o),
+                c = (o && t.isBroadcastShown) || (!o && a),
+                l = null;
               this.state.dropToInviteFriend &&
-                (o = Ca.createElement(
+                (l = Ca.createElement(
                   pd,
                   {
                     key: "inviteDrop",
@@ -79603,17 +79698,17 @@ and limitations under the License.
                     friend: this.state.dropToInviteFriend
                   })
                 ));
-              var a = !1,
-                s = null,
-                c = this.ShouldShowVerticalBroadcastChat(),
-                l = t.m_bChatHidden;
+              var u = !1,
+                d = null,
+                p = this.ShouldShowVerticalBroadcastChat(),
+                h = t.m_bChatHidden;
               if (IsFeatureBroadcastEnabled())
                 if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-                  var u = H_.UIDisplayPrefs,
-                    d = (u.nWatchPartyBroadcastHeightPercentage,
-                    u.nWatchPartyBroadcastWidthPercentage,
-                    this.CalculateBroadcastSectionStyles(c));
-                  (s = Ca.createElement(
+                  var m = H_.UIDisplayPrefs,
+                    g = (m.nWatchPartyBroadcastHeightPercentage,
+                    m.nWatchPartyBroadcastWidthPercentage,
+                    this.CalculateBroadcastSectionStyles(p));
+                  (d = Ca.createElement(
                     Ca.Fragment,
                     null,
                     Ca.createElement(Yg, {
@@ -79628,188 +79723,236 @@ and limitations under the License.
                           onClick: this.ToggleVerticalBroadcastChat,
                           title:
                             "" +
-                            (c
+                            (p
                               ? Object(la.b)("#Broadcast_View_Stack_H")
                               : Object(la.b)("#Broadcast_View_Stack_V")),
                           className:
                             "BroadcastChatPositionToggle " +
-                            (c ? "right" : "bottom")
+                            (p ? "right" : "bottom")
                         })
                       ],
-                      style: d,
+                      style: g,
                       onTheaterMode: t.ToggleTheaterModeBroadcastChat
                     }),
-                    !l &&
+                    !h &&
                       Ca.createElement("div", {
                         className:
                           "BroadcastChatDivider " +
-                          (c ? "vertical" : "horizontal"),
+                          (p ? "vertical" : "horizontal"),
                         onMouseDown: this.OnGrabberMouseDown
                       }),
-                    l &&
+                    h &&
                       Ca.createElement(Kg, {
                         onClick: this.ShowChat,
-                        edge: c ? "bottom" : "right"
+                        edge: p ? "bottom" : "right"
                       })
                   )),
-                    (a = !0);
-                } else a = !1;
-              var p = !1,
-                m = !1,
-                h = {};
+                    (u = !0);
+                } else u = !1;
+              var f = !1,
+                _ = !1,
+                y = {};
               if (this.props.isActive) r.LoadChatLogs();
               else {
-                h.display = "none";
-                var g = this.m_msWentInactive
+                y.display = "none";
+                var v = this.m_msWentInactive
                   ? performance.now() - this.m_msWentInactive
                   : 6e4;
-                g >= 1e4 && (p = !0), g >= 6e4 && !s && (m = !0);
+                v >= 1e4 && (f = !0), v >= 6e4 && !d && (_ = !0);
               }
-              var f = "chatWindow MultiUserChat",
-                _ = "ChatRoomGroupDialog_contents";
-              n && (_ += " InsetWindowOpen"),
-                e.IsNamedGroupChat() && (f += " namedGroup");
-              var y = "chatBody";
+              var b = "chatWindow MultiUserChat",
+                C = "ChatRoomGroupDialog_contents";
+              n && (C += " InsetWindowOpen"),
+                o && (C += " BothChatsDisplayed"),
+                e.IsNamedGroupChat() && (b += " namedGroup");
+              var S = "chatBody";
               this.state.dropToInviteFriend &&
-                (y = "chatBody chatRoomActiveDrop"),
+                (S = "chatBody chatRoomActiveDrop"),
                 dd.SettingsStore.FriendsSettings.bCompactFriendsList &&
-                  (f += " compactView"),
-                a && (f += " broadcastVisible");
-              var v = Ca.createElement(qp, {
+                  (b += " compactView"),
+                u && (b += " broadcastVisible");
+              var M,
+                F = Ca.createElement(qp, {
                   groupView: this.props.groupView,
-                  inactive: p
+                  inactive: f
                 }),
-                b =
-                  t.isBroadcastShown && (t.m_bShowGlobalChat || l)
+                w =
+                  t.isBroadcastShown && ((!o && t.m_bShowGlobalChat) || h)
                     ? null
-                    : Ca.createElement(Rh, {
+                    : Ca.createElement(Rm, {
                         key: r.unique_id,
                         chatView: t.GetActiveChatView(),
                         isActive: this.props.isActive,
                         disabled: !1
                       }),
-                C = Ca.createElement(
+                B = Ca.createElement(
                   Jd,
                   ti.a(
-                    { style: h, className: "chatHistoryAndMembers" },
+                    { style: y, className: "chatHistoryAndMembers" },
                     this.GetChatBodyDragDropProps()
                   ),
-                  Ca.createElement(md, null, o),
+                  Ca.createElement(hd, null, l),
                   Ca.createElement(
                     "div",
-                    { className: "ChatRoomGroupDialog_history" },
-                    Ca.createElement(Lg, {
-                      chatView: i,
-                      isActive: this.props.isActive
-                    }),
-                    Ca.createElement(
-                      md,
-                      null,
-                      Ca.createElement(Xg, { groupView: t })
-                    )
-                  ),
-                  Ca.createElement("div", { className: "dropTargetBox" }),
-                  v
-                );
-              if (t.isBroadcastShown) {
-                var S = Ca.createElement(lg, {
-                  steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
-                  hidden: !t.m_bShowGlobalChat
-                });
-                C = Ca.createElement(
-                  Ca.Fragment,
-                  null,
-                  S,
-                  !t.m_bShowGlobalChat && C
-                );
-              }
-              return Ca.createElement(
-                Jd,
-                ti.a(
-                  { style: h, className: f },
-                  this.GetTitleBarDragDropProps()
-                ),
-                !m &&
-                  Ca.createElement(
-                    "div",
-                    { className: "chatHeader titleBarContainer" },
-                    Ca.createElement("div", {
-                      className: "chatHeaderGradient"
-                    }),
-                    Ca.createElement(Om, {
-                      groupView: t,
-                      onBroadcastPreviewClick: this.ShowBroadcast
-                    }),
-                    Ca.createElement("div", { className: "disconnectBlocker" })
-                  ),
-                e.readyToRender &&
-                  !m &&
-                  Ca.createElement(
-                    "div",
-                    { className: _ },
-                    Ca.createElement(Hp, { groupView: t, inactive: p }),
+                    { className: "displayColumn fullWidth" },
                     Ca.createElement(
                       "div",
-                      {
-                        className:
-                          "ChatRoomGroup_MainAndChatEntry displayColumn",
-                        ref: this.SetMainContentRef
-                      },
+                      { className: "displayRow fullHeight" },
+                      Ca.createElement(
+                        "div",
+                        { className: "ChatRoomGroupDialog_history" },
+                        Ca.createElement(Lg, {
+                          chatView: i,
+                          isActive: this.props.isActive
+                        }),
+                        Ca.createElement(
+                          hd,
+                          null,
+                          Ca.createElement(Xg, { groupView: t })
+                        )
+                      ),
+                      Ca.createElement("div", { className: "dropTargetBox" }),
+                      F
+                    ),
+                    w
+                  )
+                );
+              if (t.isBroadcastShown) {
+                var O = Ca.createElement(lg, {
+                  steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
+                  hidden: !t.m_bShowGlobalChat,
+                  className: this.state.bDraggingChatGrabber
+                    ? "avoidEvents"
+                    : void 0
+                });
+                M = Ca.createElement(Ca.Fragment, null, O);
+              }
+              var I = "chatStack " + (p ? "displayRow" : "displayColumn");
+              return (
+                c && (I += " GlobalChatVisible"),
+                s && (I += " GroupChatVisible"),
+                Ca.createElement(
+                  Jd,
+                  ti.a(
+                    { style: y, className: b },
+                    this.GetTitleBarDragDropProps()
+                  ),
+                  !_ &&
+                    Ca.createElement(
+                      "div",
+                      { className: "chatHeader titleBarContainer" },
+                      Ca.createElement("div", {
+                        className: "chatHeaderGradient"
+                      }),
+                      Ca.createElement(Oh, {
+                        groupView: t,
+                        onBroadcastPreviewClick: this.ShowBroadcast
+                      }),
+                      Ca.createElement("div", {
+                        className: "disconnectBlocker"
+                      })
+                    ),
+                  e.readyToRender &&
+                    !_ &&
+                    Ca.createElement(
+                      "div",
+                      { className: C },
+                      Ca.createElement(Hp, { groupView: t, inactive: f }),
                       Ca.createElement(
                         "div",
                         {
                           className:
-                            "ChatRoomGroup_Main_ContentAndMembers displayRow"
+                            "ChatRoomGroup_MainAndChatEntry displayColumn",
+                          ref: this.SetMainContentRef
                         },
                         Ca.createElement(
                           "div",
                           {
                             className:
-                              "ChatRoomGroup_Main_Content " +
-                              (c ? "Vertical" : "Horizontal") +
-                              " " +
-                              (l ? "chatHidden" : "")
+                              "ChatRoomGroup_Main_ContentAndMembers displayRow"
                           },
-                          s,
-                          (!t.m_bChatHidden || !t.isBroadcastShown) &&
-                            Ca.createElement(
-                              "div",
-                              { className: y },
-                              t.isBroadcastShown && this.RenderInnerChatTabs(),
-                              C,
-                              b
-                            )
+                          Ca.createElement(
+                            "div",
+                            {
+                              className:
+                                "ChatRoomGroup_Main_Content " +
+                                (p ? "Vertical" : "Horizontal") +
+                                " " +
+                                (h ? "chatHidden" : "")
+                            },
+                            d,
+                            (!t.m_bChatHidden || !t.isBroadcastShown) &&
+                              Ca.createElement(
+                                "div",
+                                { className: S },
+                                t.isBroadcastShown &&
+                                  this.RenderInnerChatTabs(),
+                                Ca.createElement(
+                                  "div",
+                                  { className: I },
+                                  B,
+                                  o &&
+                                    Ca.createElement("div", {
+                                      className: "BothChatsSeperator"
+                                    }),
+                                  o &&
+                                    !this.ShouldShowVerticalBroadcastChat() &&
+                                    Ca.createElement(
+                                      "div",
+                                      {
+                                        className: "InnerChatTab",
+                                        onClick: function() {
+                                          return t.SetGlobalBroadcastChatShown(
+                                            !0
+                                          );
+                                        }
+                                      },
+                                      Ca.createElement(md.r, null),
+                                      Ca.createElement(
+                                        "span",
+                                        { className: "InnerChatTabLabel" },
+                                        Object(la.b)(
+                                          "#Broadcast_Chat_PublicChatTab"
+                                        )
+                                      )
+                                    ),
+                                  M
+                                ),
+                                !s && t.isBroadcastShown && w
+                              )
+                          )
                         )
                       )
+                    ),
+                  !e.readyToRender &&
+                    !_ &&
+                    Ca.createElement(
+                      "div",
+                      { className: C },
+                      Ca.createElement(ih, {
+                        string: Object(la.b)("#Chat_ChatRoomGroup_Requesting")
+                      })
                     )
-                  ),
-                !e.readyToRender &&
-                  !m &&
-                  Ca.createElement(
-                    "div",
-                    { className: _ },
-                    Ca.createElement(im, {
-                      string: Object(la.b)("#Chat_ChatRoomGroup_Requesting")
-                    })
-                  )
+                )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnDragEnter", null),
-            ti.c([hn.a], t.prototype, "OnDragLeave", null),
-            ti.c([hn.a], t.prototype, "OnDragOver", null),
-            ti.c([hn.a], t.prototype, "OnDrop", null),
-            ti.c([hn.a], t.prototype, "OnHTMLKeyEvent", null),
-            ti.c([hn.a], t.prototype, "ShouldShowVerticalBroadcastChat", null),
-            ti.c([hn.a], t.prototype, "OnLayoutChange", null),
-            ti.c([hn.a], t.prototype, "OnGrabberMouseDown", null),
-            ti.c([hn.a], t.prototype, "HandleMouseMove", null),
-            ti.c([hn.a], t.prototype, "UnregisterDragEvents", null),
-            ti.c([hn.a], t.prototype, "OnLocalStreamChange", null),
-            ti.c([hn.a], t.prototype, "ShowBroadcast", null),
-            ti.c([hn.a], t.prototype, "HideChat", null),
-            ti.c([hn.a], t.prototype, "ShowChat", null),
-            ti.c([hn.a], t.prototype, "ToggleVerticalBroadcastChat", null),
-            ti.c([hn.a], t.prototype, "SetMainContentRef", null),
+            ti.c([mn.a], t.prototype, "OnDragEnter", null),
+            ti.c([mn.a], t.prototype, "OnDragLeave", null),
+            ti.c([mn.a], t.prototype, "OnDragOver", null),
+            ti.c([mn.a], t.prototype, "OnDrop", null),
+            ti.c([mn.a], t.prototype, "OnHTMLKeyEvent", null),
+            ti.c([mn.a], t.prototype, "ShouldShowVerticalBroadcastChat", null),
+            ti.c([mn.a], t.prototype, "OnLayoutChange", null),
+            ti.c([mn.a], t.prototype, "OnGrabberMouseDown", null),
+            ti.c([mn.a], t.prototype, "HandleMouseMove", null),
+            ti.c([mn.a], t.prototype, "UnregisterDragEvents", null),
+            ti.c([mn.a], t.prototype, "OnLocalStreamChange", null),
+            ti.c([mn.a], t.prototype, "ShowBroadcast", null),
+            ti.c([mn.a], t.prototype, "HideChat", null),
+            ti.c([mn.a], t.prototype, "ShowChat", null),
+            ti.c([mn.a], t.prototype, "ToggleVerticalBroadcastChat", null),
+            ti.c([mn.a], t.prototype, "SetMainContentRef", null),
+            ti.c([mn.a], t.prototype, "ToggleShowBothChats", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79819,11 +79962,11 @@ and limitations under the License.
           return Ca.createElement(
             "div",
             {
-              className: wm("BroadcastChatExpander", i),
+              className: wh("BroadcastChatExpander", i),
               onClick: t,
               title: Object(la.b)("#Broadcast_View_ShowChat")
             },
-            Ca.createElement(hd.u, { showChat: !0 })
+            Ca.createElement(md.u, { showChat: !0 })
           );
         },
         Yg = Ca.forwardRef(function(e, t) {
@@ -79844,7 +79987,7 @@ and limitations under the License.
             Ca.createElement(
               "div",
               { className: "BroadcastSection" },
-              Ca.createElement(Kh, {
+              Ca.createElement(Km, {
                 key: l,
                 steamID: l,
                 onRequestClose: o,
@@ -79928,7 +80071,7 @@ and limitations under the License.
                               className: "MinimizeTextChat",
                               onClick: this.OnTextChannelCloseClick
                             },
-                            Ca.createElement(hd._5, null)
+                            Ca.createElement(md._6, null)
                           )
                         ),
                         Ca.createElement(
@@ -79946,8 +80089,8 @@ and limitations under the License.
                   )
                 : null;
             }),
-            ti.c([hn.a], t.prototype, "OnTextChannelCloseClick", null),
-            ti.c([hn.a], t.prototype, "OnChatHistoryRef", null),
+            ti.c([mn.a], t.prototype, "OnTextChannelCloseClick", null),
+            ti.c([mn.a], t.prototype, "OnChatHistoryRef", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -79976,7 +80119,7 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "Exclamation" },
-                    Ca.createElement(hd.d, null)
+                    Ca.createElement(md.d, null)
                   ),
                   Ca.createElement(
                     "div",
@@ -80024,8 +80167,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnBlock", null),
-            ti.c([hn.a], t.prototype, "OnAllow", null),
+            ti.c([mn.a], t.prototype, "OnBlock", null),
+            ti.c([mn.a], t.prototype, "OnAllow", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -80058,7 +80201,7 @@ and limitations under the License.
                       Ca.createElement(
                         Ed,
                         null,
-                        Ca.createElement(mh, {
+                        Ca.createElement(hm, {
                           friend: this.props.friend,
                           context: null,
                           avatarQualityFull: !0
@@ -80105,11 +80248,11 @@ and limitations under the License.
                         Ed,
                         { className: "avatarHolder" },
                         this.props.clan
-                          ? Ca.createElement(km, {
+                          ? Ca.createElement(kh, {
                               clan: this.props.clan,
                               large: !0
                             })
-                          : Ca.createElement(Dm, {
+                          : Ca.createElement(Dh, {
                               group: this.props.group,
                               large: !0
                             }),
@@ -80269,9 +80412,9 @@ and limitations under the License.
                 e && Ca.createElement("p", { className: "error_text" }, e)
               );
             }),
-            ti.c([hn.a], t.prototype, "BindTextInput", null),
-            ti.c([hn.a], t.prototype, "OnPINInput", null),
-            ti.c([hn.a], t.prototype, "onOK", null),
+            ti.c([mn.a], t.prototype, "BindTextInput", null),
+            ti.c([mn.a], t.prototype, "OnPINInput", null),
+            ti.c([mn.a], t.prototype, "onOK", null),
             t
           );
         })(Ca.Component),
@@ -80624,7 +80767,7 @@ and limitations under the License.
                                 rgAcceptedTypes: [],
                                 bAcceptsFiles: !0
                               },
-                              Ca.createElement(Qm, {
+                              Ca.createElement(Qh, {
                                 friends: this.props.friends,
                                 chats: this.props.chats,
                                 popup: l,
@@ -80667,13 +80810,13 @@ and limitations under the License.
               "m_nWindowTitleUnreadCycleCount",
               void 0
             ),
-            ti.c([hn.a], t.prototype, "OnWindowResizeEvent", null),
-            ti.c([hn.a], t.prototype, "BindFriendsListContainer", null),
-            ti.c([hn.a], t.prototype, "OnGrabberMouseDown", null),
-            ti.c([hn.a], t.prototype, "OnGrabberTouchStart", null),
-            ti.c([hn.a], t.prototype, "HandleTouchMove", null),
-            ti.c([hn.a], t.prototype, "HandleMouseMove", null),
-            ti.c([hn.a], t.prototype, "UnregisterFriendsListDragEvents", null),
+            ti.c([mn.a], t.prototype, "OnWindowResizeEvent", null),
+            ti.c([mn.a], t.prototype, "BindFriendsListContainer", null),
+            ti.c([mn.a], t.prototype, "OnGrabberMouseDown", null),
+            ti.c([mn.a], t.prototype, "OnGrabberTouchStart", null),
+            ti.c([mn.a], t.prototype, "HandleTouchMove", null),
+            ti.c([mn.a], t.prototype, "HandleMouseMove", null),
+            ti.c([mn.a], t.prototype, "UnregisterFriendsListDragEvents", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -80769,7 +80912,7 @@ and limitations under the License.
                   t
                 );
             }),
-            ti.c([hn.a], t.prototype, "SetTitle", null),
+            ti.c([mn.a], t.prototype, "SetTitle", null),
             t
           );
         })(of),
@@ -80875,13 +81018,13 @@ and limitations under the License.
                       )
                     ))
                   : null
-                : Ca.createElement(mf, null);
+                : Ca.createElement(hf, null);
             }),
-            ti.c([hn.a], t.prototype, "OnKeyDown", null),
+            ti.c([mn.a], t.prototype, "OnKeyDown", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        mf = (function(e) {
+        hf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -81067,7 +81210,7 @@ and limitations under the License.
                                     "connectionThrobber" +
                                     (c ? " showThrobber" : "")
                                 },
-                                Ca.createElement(im, { size: "small" }),
+                                Ca.createElement(ih, { size: "small" }),
                                 " "
                               ),
                               Ca.createElement(
@@ -81143,20 +81286,20 @@ and limitations under the License.
                       )
                     ));
               }
-              return Ca.createElement(md, null, i);
+              return Ca.createElement(hd, null, i);
             }),
             ti.c(
-              [hn.a],
+              [mn.a],
               t.prototype,
               "IntervalUpdateReconnectWaitStatus",
               null
             ),
-            ti.c([hn.a], t.prototype, "OnReconnectNowClick", null),
-            ti.c([hn.a], t.prototype, "OnLoginClick", null),
+            ti.c([mn.a], t.prototype, "OnReconnectNowClick", null),
+            ti.c([mn.a], t.prototype, "OnLoginClick", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
-        hf = (Object(di.observable)({ bEnabled: null }), Z(Ot)),
+        mf = (Object(di.observable)({ bEnabled: null }), Z(Ot)),
         gf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -81214,7 +81357,7 @@ and limitations under the License.
                 return Ca.createElement(
                   "div",
                   { className: "ChatMessageInvite RequestingInfo displayRow" },
-                  Ca.createElement(im, { size: "small" }),
+                  Ca.createElement(ih, { size: "small" }),
                   Ca.createElement(
                     "div",
                     { className: "postedExpiredInvite" },
@@ -81262,19 +81405,19 @@ and limitations under the License.
                   Object(la.b)("#bbcode_invite_never_expires")
                 );
               else {
-                var m = dd.RTime32ToDate(e.time_expires);
+                var h = dd.RTime32ToDate(e.time_expires);
                 p = Ca.createElement(
                   "div",
                   { className: "Invite_ExpireTime" },
                   Object(la.b)(
                     "#bbcode_invite_expires",
-                    m.toLocaleTimeString(),
-                    m.toDateString()
+                    h.toLocaleTimeString(),
+                    h.toDateString()
                   )
                 );
               }
-              var h;
-              h = t
+              var m;
+              m = t
                 ? u
                   ? Object(la.b)("#Voice_StartTalking")
                   : Object(la.b)("#ChatRoom_Invite_Accept_Inviter")
@@ -81297,8 +81440,8 @@ and limitations under the License.
                 e.GetTimeKickExpires() > dd.GetServerRTime32()
               ) {
                 f = !0;
-                var m = dd.RTime32ToDate(e.GetTimeKickExpires()),
-                  _ = m.toLocaleString([], {
+                var h = dd.RTime32ToDate(e.GetTimeKickExpires()),
+                  _ = h.toLocaleString([], {
                     weekday: "long",
                     year: "numeric",
                     month: "numeric",
@@ -81316,20 +81459,20 @@ and limitations under the License.
                 v = !y && !t,
                 b = u ? a : o;
               return Ca.createElement(
-                Fh,
-                { text: [h, b, e.GetURL()] },
+                Fm,
+                { text: [m, b, e.GetURL()] },
                 Ca.createElement(
                   "div",
                   { className: s },
                   Ca.createElement(
                     "div",
                     { className: "leftInviteContainer" },
-                    Ca.createElement(Dm, { group: i, small: y, large: v }),
+                    Ca.createElement(Dh, { group: i, small: y, large: v }),
                     u &&
                       Ca.createElement(
                         "div",
                         null,
-                        Ca.createElement(hd._2, null)
+                        Ca.createElement(md._3, null)
                       )
                   ),
                   Ca.createElement(
@@ -81380,7 +81523,7 @@ and limitations under the License.
                           type: "button",
                           onClick: this.AcceptInvite
                         },
-                        h
+                        m
                       )
                   ),
                   ((!t && !n) || l) && p,
@@ -81388,7 +81531,7 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "AcceptInvite", null),
+            ti.c([mn.a], t.prototype, "AcceptInvite", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -81565,13 +81708,13 @@ and limitations under the License.
                         onClick: this.CopyToClipboard,
                         title: Object(la.b)("#Chat_Copy_Clipboard")
                       },
-                      Ca.createElement(hd.g, null)
+                      Ca.createElement(md.g, null)
                     )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "CopyToClipboard", null),
-            ti.c([hn.a], t.prototype, "HandleFocus", null),
+            ti.c([mn.a], t.prototype, "CopyToClipboard", null),
+            ti.c([mn.a], t.prototype, "HandleFocus", null),
             t
           );
         })(Ca.Component),
@@ -81669,7 +81812,7 @@ and limitations under the License.
                     function(e) {
                       return e != n && e.persona.player_group == a
                         ? (o--,
-                          Ca.createElement(gh, {
+                          Ca.createElement(gm, {
                             key: e.accountid,
                             friend: e,
                             context: null
@@ -81716,12 +81859,12 @@ and limitations under the License.
                       })
                     ),
                     Ca.createElement(
-                      Fh,
+                      Fm,
                       null,
                       Ca.createElement("div", { className: "inviteLabel" }, c)
                     ),
                     Ca.createElement(
-                      Fh,
+                      Fm,
                       null,
                       Ca.createElement(
                         "div",
@@ -81731,7 +81874,7 @@ and limitations under the License.
                     ),
                     n.persona.player_group_size > 0 &&
                       Ca.createElement(
-                        Fh,
+                        Fm,
                         null,
                         Ca.createElement(
                           "div",
@@ -81773,14 +81916,14 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "closeButton", onClick: this.DismissInvite },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "AcceptGameInvite", null),
-            ti.c([hn.a], t.prototype, "DismissInvite", null),
-            ti.c([hn.a], t.prototype, "OnShowGameContextMenu", null),
+            ti.c([mn.a], t.prototype, "AcceptGameInvite", null),
+            ti.c([mn.a], t.prototype, "DismissInvite", null),
+            ti.c([mn.a], t.prototype, "OnShowGameContextMenu", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -83423,10 +83566,10 @@ and limitations under the License.
         function p(e, t) {
           return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, Lf);
         }
-        function m(e, t) {
+        function h(e, t) {
           return e.SendMsg("Broadcast.PostChatMessage#1", t, Pf);
         }
-        function h(e, t) {
+        function m(e, t) {
           return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, xf);
         }
         function g(e, t) {
@@ -83447,11 +83590,11 @@ and limitations under the License.
           (e.SendBroadcastStateToServer = u),
           (e.NotifyBroadcastSessionHeartbeat = d),
           (e.GetBroadcastChatInfo = p),
-          (e.PostChatMessage = m),
-          (e.MuteBroadcastChatUser = h),
+          (e.PostChatMessage = h),
+          (e.MuteBroadcastChatUser = m),
           (e.RemoveUserChatText = g),
           (e.GetBroadcastChatUserNames = f);
-      })(hm || (hm = {}));
+      })(mh || (mh = {}));
       var jf;
       !(function(e) {
         (e.NotifyBroadcastViewerStateHandler = {
@@ -83547,7 +83690,7 @@ and limitations under the License.
                 return (
                   t.Body().set_steamid(this.props.broadcaster.steamid64),
                   t.Body().set_broadcast_id(this.props.broadcastid),
-                  hm.GetBroadcastStatus(e.GetServiceTransport(), t)
+                  mh.GetBroadcastStatus(e.GetServiceTransport(), t)
                 );
               }
               return Promise.reject("No CM interface");
@@ -83559,7 +83702,7 @@ and limitations under the License.
                 var i = ui.Init(wf);
                 i.Body().set_steamid(this.props.broadcaster.steamid64),
                   i.Body().set_broadcast_id(this.props.broadcastid),
-                  hm
+                  mh
                     .GetBroadcastThumbnail(t.GetServiceTransport(), i)
                     .then(function(t) {
                       if (1 == t.GetEResult()) {
@@ -83670,7 +83813,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Ca.createElement(
-                    Fh,
+                    Fm,
                     null,
                     Ca.createElement(
                       "div",
@@ -83696,15 +83839,15 @@ and limitations under the License.
                   Ca.createElement(
                     "div",
                     { className: "closeButton", onClick: this.OnClose },
-                    Ca.createElement(hd._5, null)
+                    Ca.createElement(md._6, null)
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnWatch", null),
-            ti.c([hn.a], t.prototype, "OnClose", null),
-            ti.c([hn.a], t.prototype, "OnOpen", null),
-            ti.c([hn.a], t.prototype, "ShowThumbnail", null),
+            ti.c([mn.a], t.prototype, "OnWatch", null),
+            ti.c([mn.a], t.prototype, "OnClose", null),
+            ti.c([mn.a], t.prototype, "OnOpen", null),
+            ti.c([mn.a], t.prototype, "ShowThumbnail", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -83814,7 +83957,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Ca.createElement(
-                    Fh,
+                    Fm,
                     null,
                     Ca.createElement(
                       "div",
@@ -83842,9 +83985,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnAccept", null),
-            ti.c([hn.a], t.prototype, "OnClose", null),
-            ti.c([hn.a], t.prototype, "ShowThumbnail", null),
+            ti.c([mn.a], t.prototype, "OnAccept", null),
+            ti.c([mn.a], t.prototype, "OnClose", null),
+            ti.c([mn.a], t.prototype, "ShowThumbnail", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ca.Component),
@@ -83923,7 +84066,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Ca.createElement(
-                    Fh,
+                    Fm,
                     null,
                     Ca.createElement(
                       "div",
@@ -83946,8 +84089,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnWatch", null),
-            ti.c([hn.a], t.prototype, "ShowThumbnail", null),
+            ti.c([mn.a], t.prototype, "OnWatch", null),
+            ti.c([mn.a], t.prototype, "ShowThumbnail", null),
             t
           );
         })(Ca.Component);
@@ -84083,12 +84226,12 @@ and limitations under the License.
               );
             }),
             (t.s_nPlayerIndex = 0),
-            ti.c([hn.a], t.prototype, "BindPlayerContainer", null),
-            ti.c([hn.a], t.prototype, "OnYoutubeScriptsReady", null),
-            ti.c([hn.a], t.prototype, "CreatePlayer", null),
-            ti.c([hn.a], t.prototype, "OnPlayerReady", null),
-            ti.c([hn.a], t.prototype, "OnPlayerStateChange", null),
-            ti.c([hn.a], t.prototype, "OnError", null),
+            ti.c([mn.a], t.prototype, "BindPlayerContainer", null),
+            ti.c([mn.a], t.prototype, "OnYoutubeScriptsReady", null),
+            ti.c([mn.a], t.prototype, "CreatePlayer", null),
+            ti.c([mn.a], t.prototype, "OnPlayerReady", null),
+            ti.c([mn.a], t.prototype, "OnPlayerStateChange", null),
+            ti.c([mn.a], t.prototype, "OnError", null),
             t
           );
         })(Ca.Component),
@@ -84111,7 +84254,7 @@ and limitations under the License.
                   ? Ca.createElement(
                       Pt,
                       { href: e },
-                      Ca.createElement(hd.v, null),
+                      Ca.createElement(md.v, null),
                       n
                     )
                   : Ca.createElement(Me, { href: e }, i || t)
@@ -84294,7 +84437,7 @@ and limitations under the License.
                 this.state.bIsMinimizing && (t += " Minimizing");
               var i = this.props.titleInfo ? this.props.titleInfo : "";
               return Ca.createElement(
-                Fh,
+                Fm,
                 {
                   style: this.props["data-copystyle"],
                   text: this.props["data-copytext"]
@@ -84336,7 +84479,7 @@ and limitations under the License.
                         "#bbcode_" + this.props.strMediaType + "_tooltip_resize"
                       )
                     },
-                    Ca.createElement(hd.L, null)
+                    Ca.createElement(md.L, null)
                   ),
                   Ca.createElement(
                     "div",
@@ -84355,19 +84498,19 @@ and limitations under the License.
                               "_tooltip_collapse"
                           )
                     },
-                    Ca.createElement(hd._4, null)
+                    Ca.createElement(md._5, null)
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "BindContainer", null),
-            ti.c([hn.a], t.prototype, "handleCollapse", null),
-            ti.c([hn.a], t.prototype, "OnSizeChanged", null),
-            ti.c([hn.a], t.prototype, "handleRestore", null),
-            ti.c([hn.a], t.prototype, "OnResize", null),
-            ti.c([hn.a], t.prototype, "HandleMouseMove", null),
-            ti.c([hn.a], t.prototype, "HandleTallImages", null),
-            ti.c([hn.a], t.prototype, "HandleMouseUp", null),
+            ti.c([mn.a], t.prototype, "BindContainer", null),
+            ti.c([mn.a], t.prototype, "handleCollapse", null),
+            ti.c([mn.a], t.prototype, "OnSizeChanged", null),
+            ti.c([mn.a], t.prototype, "handleRestore", null),
+            ti.c([mn.a], t.prototype, "OnResize", null),
+            ti.c([mn.a], t.prototype, "HandleMouseMove", null),
+            ti.c([mn.a], t.prototype, "HandleTallImages", null),
+            ti.c([mn.a], t.prototype, "HandleMouseUp", null),
             t
           );
         })(Ca.Component),
@@ -84433,7 +84576,7 @@ and limitations under the License.
                   Ca.createElement(
                     Pt,
                     { href: r },
-                    Ca.createElement(hd._6, null),
+                    Ca.createElement(md._7, null),
                     r
                   )
                 );
@@ -84448,7 +84591,7 @@ and limitations under the License.
                   : (o = parseInt(n));
               }
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "block", text: [t, i] },
                 Ca.createElement(
                   $f,
@@ -84478,7 +84621,7 @@ and limitations under the License.
                       onPlayerReady: this.OnPlayerReady
                     }),
                     Ca.createElement(
-                      Fh,
+                      Fm,
                       { style: "block", text: [t, i] },
                       Ca.createElement("img", {
                         src:
@@ -84504,9 +84647,9 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnVideoInfoChanged", null),
-            ti.c([hn.a], t.prototype, "OnPlayerReady", null),
-            ti.c([hn.a], t.prototype, "OnPlaceholderImageLoad", null),
+            ti.c([mn.a], t.prototype, "OnVideoInfoChanged", null),
+            ti.c([mn.a], t.prototype, "OnPlayerReady", null),
+            ti.c([mn.a], t.prototype, "OnPlaceholderImageLoad", null),
             t
           );
         })(Ma);
@@ -84583,7 +84726,7 @@ and limitations under the License.
                   Ca.createElement(
                     Pt,
                     { href: n, copyText: [r, n] },
-                    Ca.createElement(hd.w, null),
+                    Ca.createElement(md.w, null),
                     l
                   )
                 );
@@ -84608,12 +84751,12 @@ and limitations under the License.
                   null,
                   c &&
                     Ca.createElement(
-                      Fh,
+                      Fm,
                       null,
                       Ca.createElement("div", null, e)
                     ),
                   Ca.createElement(
-                    Fh,
+                    Fm,
                     { style: "block", text: [r, n] },
                     Ca.createElement(
                       $f,
@@ -84678,7 +84821,7 @@ and limitations under the License.
                                   )
                                 : Object(la.b)("#bbcode_image_tooltip_link")
                             },
-                            Ca.createElement(hd.J, null),
+                            Ca.createElement(md.J, null),
                             Ca.createElement(
                               "div",
                               { className: "giphyTag" },
@@ -84699,8 +84842,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OnImageLoad", null),
-            ti.c([hn.a], t.prototype, "OnImageError", null),
+            ti.c([mn.a], t.prototype, "OnImageLoad", null),
+            ti.c([mn.a], t.prototype, "OnImageError", null),
             t
           );
         })(Ma),
@@ -84750,7 +84893,7 @@ and limitations under the License.
                   Ca.createElement(
                     Pt,
                     { href: e },
-                    Ca.createElement(hd._0, null),
+                    Ca.createElement(md._1, null),
                     n
                   )
                 );
@@ -84784,7 +84927,7 @@ and limitations under the License.
                       Object(la.d)("#Chat_VideoLoadError", r)
                     )
                   : Ca.createElement(
-                      Fh,
+                      Fm,
                       { style: "block", text: [t, e] },
                       Ca.createElement(
                         $f,
@@ -84823,7 +84966,7 @@ and limitations under the License.
                             Ca.createElement(
                               "div",
                               { className: "playButtonContainer" },
-                              Ca.createElement(hd.H, null)
+                              Ca.createElement(md.H, null)
                             )
                           ),
                         Ca.createElement(
@@ -84833,18 +84976,18 @@ and limitations under the License.
                             href: e,
                             title: Object(la.b)("#bbcode_video_tooltip_link")
                           },
-                          Ca.createElement(hd.J, null)
+                          Ca.createElement(md.J, null)
                         )
                       )
                     )
               );
             }),
-            ti.c([hn.a], t.prototype, "StartVideo", null),
-            ti.c([hn.a], t.prototype, "BindVideo", null),
-            ti.c([hn.a], t.prototype, "OnVideoPlay", null),
-            ti.c([hn.a], t.prototype, "OnVideoPause", null),
-            ti.c([hn.a], t.prototype, "OnVideoError", null),
-            ti.c([hn.a], t.prototype, "OnVideoLoaded", null),
+            ti.c([mn.a], t.prototype, "StartVideo", null),
+            ti.c([mn.a], t.prototype, "BindVideo", null),
+            ti.c([mn.a], t.prototype, "OnVideoPlay", null),
+            ti.c([mn.a], t.prototype, "OnVideoPause", null),
+            ti.c([mn.a], t.prototype, "OnVideoError", null),
+            ti.c([mn.a], t.prototype, "OnVideoLoaded", null),
             t
           );
         })(Ma),
@@ -84868,7 +85011,7 @@ and limitations under the License.
                 ti.a({}, t, { onLoad: this.OnLoad })
               );
             }),
-            ti.c([hn.a], t.prototype, "OnLoad", null),
+            ti.c([mn.a], t.prototype, "OnLoad", null),
             t
           );
         })(Ca.Component),
@@ -84909,13 +85052,13 @@ and limitations under the License.
                   Ca.createElement(
                     Pt,
                     { href: n, copyText: [o, n] },
-                    Ca.createElement(hd.v, null),
+                    Ca.createElement(md.v, null),
                     o
                   )
                 );
               }
               return Ca.createElement(
-                Fh,
+                Fm,
                 { style: "block", text: [t, i, n] },
                 Ca.createElement(
                   "div",
@@ -85004,15 +85147,15 @@ and limitations under the License.
                         onClick: this.CopyToClipboard,
                         title: Object(la.b)("#Chat_Copy_Link_Clipboard")
                       },
-                      Ca.createElement(hd.g, null)
+                      Ca.createElement(md.g, null)
                     )
                   )
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "CopyToClipboard", null),
-            ti.c([hn.a], t.prototype, "HandleFocus", null),
-            ti.c([hn.a], t.prototype, "OnLoad", null),
+            ti.c([mn.a], t.prototype, "CopyToClipboard", null),
+            ti.c([mn.a], t.prototype, "HandleFocus", null),
+            ti.c([mn.a], t.prototype, "OnLoad", null),
             t
           );
         })(Ma),
@@ -85081,10 +85224,10 @@ and limitations under the License.
                 if ("string" == typeof this.props.children)
                   d = this.props.children;
                 else if (this.props.children instanceof Array)
-                  for (var p = 0, m = this.props.children; p < m.length; p++) {
-                    var h = m[p];
-                    if ("string" == typeof h) {
-                      d = h;
+                  for (var p = 0, h = this.props.children; p < h.length; p++) {
+                    var m = h[p];
+                    if ("string" == typeof m) {
+                      d = m;
                       break;
                     }
                   }
@@ -85107,7 +85250,7 @@ and limitations under the License.
                 "div",
                 { className: "ChatMessageTweet", onClick: this.OpenTweet },
                 Ca.createElement(
-                  Fh,
+                  Fm,
                   { style: "block", text: t + " (@" + i + ")" },
                   Ca.createElement(
                     "div",
@@ -85150,7 +85293,7 @@ and limitations under the License.
                   )
                 ),
                 Ca.createElement(
-                  Fh,
+                  Fm,
                   {
                     style: "block-continue prepend-innertext-with-newline",
                     text: o
@@ -85172,8 +85315,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "OpenTweet", null),
-            ti.c([hn.a], t.prototype, "OnImageLoaded", null),
+            ti.c([mn.a], t.prototype, "OpenTweet", null),
+            ti.c([mn.a], t.prototype, "OnImageLoaded", null),
             t
           );
         })(Ma),
@@ -85212,7 +85355,7 @@ and limitations under the License.
                   Ca.createElement(
                     Pt,
                     { href: e, copyText: [t, e] },
-                    Ca.createElement(hd.v, null),
+                    Ca.createElement(md.v, null),
                     a
                   )
                 );
@@ -85223,7 +85366,7 @@ and limitations under the License.
               return (
                 ("SoundCloud" != n && "Spotify" != n) || (s = !1),
                 Ca.createElement(
-                  Fh,
+                  Fm,
                   { style: "block", text: [t, e] },
                   Ca.createElement(
                     "div",
@@ -85236,7 +85379,7 @@ and limitations under the License.
                           "div",
                           { className: "oembedImgContainer" },
                           Ca.createElement(
-                            Fh,
+                            Fm,
                             { style: "block", text: [t, e] },
                             Ca.createElement("img", {
                               src: o,
@@ -85290,8 +85433,8 @@ and limitations under the License.
                 )
               );
             }),
-            ti.c([hn.a], t.prototype, "Activate", null),
-            ti.c([hn.a], t.prototype, "OnImageLoaded", null),
+            ti.c([mn.a], t.prototype, "Activate", null),
+            ti.c([mn.a], t.prototype, "OnImageLoaded", null),
             t
           );
         })(Ma),
@@ -85304,7 +85447,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.children;
               return Ca.createElement(
-                Fh,
+                Fm,
                 { text: e },
                 Ca.createElement(
                   "div",
@@ -85535,7 +85678,7 @@ and limitations under the License.
             t
           );
         })(Ma),
-        m_ = (function(e) {
+        h_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -85574,7 +85717,7 @@ and limitations under the License.
             t
           );
         })(Ma),
-        h_ = (function(e) {
+        m_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             i.state = {
@@ -85649,14 +85792,14 @@ and limitations under the License.
                     "#bbcode_disable_embed_inlining_steam_workshop",
                     n
                   ));
-                var l = Ca.createElement(hd.v, null);
+                var l = Ca.createElement(md.v, null);
                 switch (a) {
                   case 4:
-                    l = Ca.createElement(hd._0, null);
+                    l = Ca.createElement(md._1, null);
                     break;
                   case 3:
                   case 5:
-                    l = Ca.createElement(hd.w, null);
+                    l = Ca.createElement(md.w, null);
                 }
                 return Ca.createElement(
                   Pt,
@@ -85672,7 +85815,7 @@ and limitations under the License.
               return (
                 (n || r) &&
                   (p = Ca.createElement(
-                    Fh,
+                    Fm,
                     { text: [n, r, i] },
                     Ca.createElement(
                       "div",
@@ -85791,7 +85934,7 @@ and limitations under the License.
                 if (i) {
                   var n = Object(la.b)("#TradeOfferLink_Label");
                   return Ca.createElement(
-                    Fh,
+                    Fm,
                     { style: "block", text: [n, e] },
                     Ca.createElement(
                       "div",
@@ -85802,7 +85945,7 @@ and limitations under the License.
                       Ca.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        Ca.createElement(gh, {
+                        Ca.createElement(gm, {
                           friend: i,
                           context: { chat: this.props.context.chat },
                           bLarge: !0
@@ -85844,7 +85987,7 @@ and limitations under the License.
               }
               return Ca.createElement(Me, { href: e }, e);
             }),
-            ti.c([hn.a], t.prototype, "OnCreateOfferClick", null),
+            ti.c([mn.a], t.prototype, "OnCreateOfferClick", null),
             t
           );
         })(Ma),
@@ -85892,12 +86035,12 @@ and limitations under the License.
                 Ca.createElement(
                   "div",
                   { className: "leftInviteContainer" },
-                  Ca.createElement(gh, {
+                  Ca.createElement(gm, {
                     friend: n ? i.self : i.chat_partner,
                     context: { chat: i },
                     bLarge: !0
                   }),
-                  Ca.createElement(hd.Y, null)
+                  Ca.createElement(md.Z, null)
                 ),
                 Ca.createElement(
                   "div",
@@ -85910,7 +86053,7 @@ and limitations under the License.
                     "div",
                     { className: "rightInviteContainerContent" },
                     Ca.createElement(
-                      Fh,
+                      Fm,
                       null,
                       Ca.createElement(
                         "div",
@@ -85952,8 +86095,8 @@ and limitations under the License.
                 Ca.createElement("div", { style: { clear: "left" } })
               );
             }),
-            ti.c([hn.a], t.prototype, "ViewOfferClick", null),
-            ti.c([hn.a], t.prototype, "ViewMyOffersClick", null),
+            ti.c([mn.a], t.prototype, "ViewOfferClick", null),
+            ti.c([mn.a], t.prototype, "ViewMyOffersClick", null),
             t
           );
         })(Ma),
@@ -86061,9 +86204,9 @@ and limitations under the License.
                   d =
                     ei.a.COMMUNITY_BASE_URL + "economy/image/" + e + "/512x512",
                   p = { color: "" },
-                  m =
-                    ei.a.COMMUNITY_BASE_URL + "market/listings/" + i + "/" + o,
                   h =
+                    ei.a.COMMUNITY_BASE_URL + "market/listings/" + i + "/" + o,
+                  m =
                     ei.a.COMMUNITY_BASE_URL +
                     "tradeoffer/new/?partner=" +
                     a +
@@ -86120,7 +86263,7 @@ and limitations under the License.
                         "div",
                         { className: "ChatMessageOpenGraph_Body" },
                         this.state.bStillLoading &&
-                          Ca.createElement(im, {
+                          Ca.createElement(ih, {
                             size: "medium",
                             position: "center"
                           }),
@@ -86145,7 +86288,7 @@ and limitations under the License.
                               "div",
                               { className: "ChatMessageOpenGraph_Description" },
                               Ca.createElement(
-                                Fh,
+                                Fm,
                                 null,
                                 Ca.createElement(
                                   "div",
@@ -86175,13 +86318,13 @@ and limitations under the License.
                                 a != dd.CMInterface.steamid.GetAccountID() &&
                                 Ca.createElement(
                                   Me,
-                                  { className: "general_btn inline", href: h },
+                                  { className: "general_btn inline", href: m },
                                   Object(la.b)("#bbcode_econ_TradeWithOwner", l)
                                 ),
                               this.state.description.marketable() &&
                                 Ca.createElement(
                                   Me,
-                                  { className: "general_btn inline", href: m },
+                                  { className: "general_btn inline", href: h },
                                   Object(la.b)("#bbcode_econ_ViewInMarket")
                                 )
                             )
@@ -86233,7 +86376,7 @@ and limitations under the License.
                           className: "OpenGraphURLButton CopyToClipboard",
                           onClick: this.CopyToClipboard
                         },
-                        Ca.createElement(hd.g, null)
+                        Ca.createElement(md.g, null)
                       )
                     )
                   )
@@ -86241,8 +86384,8 @@ and limitations under the License.
               }
               return Ca.createElement(Me, { href: t }, t);
             }),
-            ti.c([hn.a], t.prototype, "CopyToClipboard", null),
-            ti.c([hn.a], t.prototype, "OnImageLoaded", null),
+            ti.c([mn.a], t.prototype, "CopyToClipboard", null),
+            ti.c([mn.a], t.prototype, "OnImageLoaded", null),
             (t = ti.c([Xd.observer], t))
           );
         })(Ma),
@@ -86255,7 +86398,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = Object(la.b)("#bbcode_linkremoved");
               return Ca.createElement(
-                Fh,
+                Fm,
                 { text: e },
                 Ca.createElement(
                   "span",
@@ -86297,7 +86440,7 @@ and limitations under the License.
                 if ((i || (i = t && dd.FriendStore.GetPlayer(t)), i)) {
                   var n = i.accountid == this.props.context.chat.self.accountid;
                   return Ca.createElement(
-                    ph,
+                    pm,
                     { friend: i, context: { chat: this.props.context.chat } },
                     Ca.createElement(
                       "span",
@@ -86330,7 +86473,7 @@ and limitations under the License.
                   ? (e = this.props.children)
                   : Ca.Children.forEach(this.props.children, function(e) {}),
                 e
-                  ? Ca.createElement(wh, {
+                  ? Ca.createElement(wm, {
                       emoticon: e,
                       large: this.props.context.bUseLargeEmoticons
                     })
@@ -86366,7 +86509,7 @@ and limitations under the License.
                 return Ca.createElement(
                   Pt,
                   { href: i },
-                  Ca.createElement(hd.v, null),
+                  Ca.createElement(md.v, null),
                   i
                 );
               }
@@ -86385,7 +86528,7 @@ and limitations under the License.
                 onLoad: this.OnFrameLoaded
               });
             }),
-            ti.c([hn.a], t.prototype, "OnFrameLoaded", null),
+            ti.c([mn.a], t.prototype, "OnFrameLoaded", null),
             t
           );
         })(Ma),
@@ -86461,7 +86604,7 @@ and limitations under the License.
               var i = this;
               this.EnsureEmoticonLoaded();
               var n = t.currentTarget,
-                r = Ca.createElement(Bh, { hover: this, target: n });
+                r = Ca.createElement(Bm, { hover: this, target: n });
               e.sm_embeddedElements
                 .ShowElementDelayed(n.ownerDocument, 50, r, this)
                 .then(function() {
@@ -86603,7 +86746,7 @@ and limitations under the License.
                 dd.UIStore.SetSuppressBrowserContextBroadcasting(!1),
                 dd.UIStore.OnOverlayBrowserClosed(e);
             }),
-            ti.c([hn.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
+            ti.c([mn.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
             e
           );
         })(),
@@ -86889,7 +87032,7 @@ and limitations under the License.
               "m_bSupportsAudioWorkletProcessors",
               void 0
             ),
-            ti.c([hn.a], e.prototype, "DelayedCleanupContextIfInactive", null),
+            ti.c([mn.a], e.prototype, "DelayedCleanupContextIfInactive", null),
             ti.c(
               [di.action.bound],
               e.prototype,
@@ -87080,7 +87223,7 @@ and limitations under the License.
               "keypress",
               "focus"
             ]),
-            ti.c([hn.a], t.prototype, "OnUserAction", null),
+            ti.c([mn.a], t.prototype, "OnUserAction", null),
             t
           );
         })(D_),
@@ -87131,9 +87274,9 @@ and limitations under the License.
                 this.m_eActiveState == ol.k_EComputerActiveStateActive &&
                   this.OnUserAction();
             }),
-            ti.c([hn.a], t.prototype, "OnComputerActiveStateChange", null),
-            ti.c([hn.a], t.prototype, "OnUserAction", null),
-            ti.c([hn.a], t.prototype, "UpdateStillActive", null),
+            ti.c([mn.a], t.prototype, "OnComputerActiveStateChange", null),
+            ti.c([mn.a], t.prototype, "OnUserAction", null),
+            ti.c([mn.a], t.prototype, "UpdateStillActive", null),
             t
           );
         })(D_),
@@ -87425,7 +87568,7 @@ and limitations under the License.
         V_ = (function() {
           function e(e) {
             var t = this;
-            (this.m_FriendHoverStore = new Um()),
+            (this.m_FriendHoverStore = new Uh()),
               (this.m_EmoticonHoverStore = new w_()),
               (this.m_DragDropManager = new A_()),
               (this.m_mapModalManagers = new WeakMap()),
@@ -87597,14 +87740,14 @@ and limitations under the License.
                       c,
                       dd.FriendStore.self.accountid
                     );
-                    hf({ invite: l, inviter: null }, e, window);
+                    mf({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "ShowChatRoomGroupInvite":
                   if (dd.ready_to_render) {
                     var u = t.invite_code,
                       l = dd.ChatStore.InviteStore.GetInviteFromCode(u);
-                    hf({ invite: l, inviter: null }, e, window);
+                    mf({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "SetPersonaState":
@@ -87848,8 +87991,8 @@ and limitations under the License.
               "m_bShowFriendsListOnLoadFromLoader",
               void 0
             ),
-            ti.c([hn.a], e.prototype, "HandlePostMessage", null),
-            ti.c([hn.a], e.prototype, "HandleWebLoaderPostMessage", null),
+            ti.c([mn.a], e.prototype, "HandlePostMessage", null),
+            ti.c([mn.a], e.prototype, "HandleWebLoaderPostMessage", null),
             ti.c([X], e.prototype, "SetUserPersonaStateWhenReady", null),
             ti.c([di.computed], e.prototype, "UIDisplayPrefs", null),
             ti.c([di.action], e.prototype, "SetUIDisplayPref", null),
@@ -88069,7 +88212,7 @@ and limitations under the License.
                 (this.m_steamID = q_.steamid),
                 window.addEventListener("message", this.HandlePostMessage),
                 Mn.render(
-                  Ca.createElement(mg, { app: this }),
+                  Ca.createElement(hg, { app: this }),
                   document.getElementById("friendslist-container")
                 ),
                 (this.m_iTimeoutLogin = SetBackgroundTimeout(function() {
@@ -88309,17 +88452,17 @@ and limitations under the License.
               ? n(r + "XMonths", Math.floor(e / d))
               : e >= 2 * p
                 ? n(r + "XWeeks", Math.floor(e / p))
-                : e >= 2 * m
-                  ? n(r + "XDays", Math.floor(e / m))
-                  : e >= m
-                    ? ((e -= m),
-                      e >= 2 * h
-                        ? n(r + "1DayXHours", Math.floor(e / h))
+                : e >= 2 * h
+                  ? n(r + "XDays", Math.floor(e / h))
+                  : e >= h
+                    ? ((e -= h),
+                      e >= 2 * m
+                        ? n(r + "1DayXHours", Math.floor(e / m))
                         : n(r + "1Day"))
-                    : e >= 2 * h
-                      ? n(r + "XHours", Math.floor(e / h))
-                      : e >= h
-                        ? ((e -= h),
+                    : e >= 2 * m
+                      ? n(r + "XHours", Math.floor(e / m))
+                      : e >= m
+                        ? ((e -= m),
                           e >= 2 * g && i
                             ? n(r + "1HourXMinutes", Math.floor(e / g))
                             : n(r + "1Hour"))
@@ -88398,8 +88541,8 @@ and limitations under the License.
         u = 31536e3,
         d = 2628e3,
         p = 604800,
-        m = 86400,
-        h = 3600,
+        h = 86400,
+        m = 3600,
         g = 60,
         f = new l();
       window.LocalizationManager = f;
@@ -88626,7 +88769,7 @@ and limitations under the License.
           return p;
         }),
         i.d(t, "d", function() {
-          return h;
+          return m;
         });
       var n,
         r = i("TToO"),
@@ -88710,7 +88853,7 @@ and limitations under the License.
                   (this.BIsClosed()
                     ? ((this.m_popup = void 0), (this.m_element = void 0))
                     : e && this.Focus());
-              var r = h.GetExistingPopup(this.m_strName);
+              var r = m.GetExistingPopup(this.m_strName);
               if (!r || this.m_rgParams.replace_existing_popup) {
                 this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams);
                 var o, a, s;
@@ -88719,7 +88862,7 @@ and limitations under the License.
                     (o = r.m_popup),
                     r.ReleasePopup(),
                     (s = r.m_renderWhenReady),
-                    h.RemoveTrackedPopup(r),
+                    m.RemoveTrackedPopup(r),
                     o.removeEventListener(
                       "beforeunload",
                       r.OnBeforeUnloadEvent
@@ -88731,7 +88874,7 @@ and limitations under the License.
                     o.removeEventListener("drop", r.OnDrop),
                     o.removeEventListener("dragover", r.OnDragOver),
                     o.removeEventListener("message", this.OnMessage))
-                  : ((i = m.CreatePopup(this.m_strName, this.m_rgParams)),
+                  : ((i = h.CreatePopup(this.m_strName, this.m_rgParams)),
                     (o = i.popup),
                     (a = i.element),
                     (s = new u(o, a))),
@@ -88755,7 +88898,7 @@ and limitations under the License.
                     this.m_renderWhenReady.SetTarget(function() {
                       return t.RenderInternal(t.m_popup, t.m_element, e);
                     })),
-                  h.AddTrackedPopup(this),
+                  m.AddTrackedPopup(this),
                   r && e && this.Focus();
               }
             }),
@@ -88788,7 +88931,7 @@ and limitations under the License.
             }),
             (e.prototype.OnUnload = function() {
               this.RemoveEventListeners(),
-                h.RemoveTrackedPopup(this),
+                m.RemoveTrackedPopup(this),
                 this.OnClose(),
                 a.unmountComponentAtNode(this.m_element);
             }),
@@ -88935,13 +89078,13 @@ and limitations under the License.
                 e.strRestoreDetails
                   ? e.strRestoreDetails &&
                     ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                    h.SetRestoreDetails(
+                    m.SetRestoreDetails(
                       this.m_strInitialSavedDimensionsKey,
                       e.strRestoreDetails,
                       this.m_bExpires
                     ))
                   : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                    (e.strRestoreDetails = h.GetRestoreDetails(
+                    (e.strRestoreDetails = m.GetRestoreDetails(
                       this.m_strInitialSavedDimensionsKey
                     ))),
                 e
@@ -88969,7 +89112,7 @@ and limitations under the License.
                     e.m_strSavedDimensionsKey &&
                     i &&
                     !n &&
-                    (h.SetRestoreDetails(t, i, e.m_bExpires),
+                    (m.SetRestoreDetails(t, i, e.m_bExpires),
                     (e.m_rgParams.strRestoreDetails = i),
                     (e.m_strInitialSavedDimensionsKey = t),
                     e.OnResizeComplete(i));
@@ -88982,14 +89125,14 @@ and limitations under the License.
             }),
             (t.prototype.OnClose = function() {}),
             (t.prototype.SaveWindowPosition = function(e) {
-              h.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+              m.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
                 (this.m_rgParams.strRestoreDetails = e);
             }),
             r.c([l.a], t.prototype, "QueryAndStoreWindowPosition", null),
             t
           );
         })(d),
-        m = (function() {
+        h = (function() {
           function e() {
             var e = this;
             (this.m_bShuttingDown = !1),
@@ -89097,15 +89240,15 @@ and limitations under the License.
               t.html_class && (d = 'class="' + t.html_class + '"');
               var p = "";
               t.body_class && (p = 'class="' + t.body_class + '"');
-              var m =
+              var h =
                 "<!DOCTYPE html><html " +
                 d +
                 "><head><title></title></head><body " +
                 p +
                 '><div id="popup_target"></div></body></html>';
-              u.document.write(m), (u.document.title = o);
+              u.document.write(h), (u.document.title = o);
               for (
-                var h = u.document.getElementsByTagName("head")[0],
+                var m = u.document.getElementsByTagName("head")[0],
                   g = document.getElementsByTagName("link"),
                   f = 0;
                 f < g.length;
@@ -89121,7 +89264,7 @@ and limitations under the License.
                     var b = _.attributes.item(v);
                     y.setAttribute(b.name, b.value);
                   }
-                  h.appendChild(y);
+                  m.appendChild(y);
                 }
               }
               return {
@@ -89213,7 +89356,7 @@ and limitations under the License.
             e
           );
         })(),
-        h = new m();
+        m = new h();
     }
   },
   ["cVBm"]

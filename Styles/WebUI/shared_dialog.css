@@ -1746,6 +1746,16 @@ body.in_global_drag .title-area
 	flex-direction: row;
 }
 
+.fullHeight
+{
+	height: 100%;
+}
+
+.fullWidth
+{
+	width: 100%;
+}
+
 .alignItemsCenter
 {
 	align-items: center;
