@@ -691,7 +691,11 @@
     },
     {
         "name": "Rob Rydberg",
-        "bio": "An FPGA and firmware developer currently playing with VR hardware."
+        "bio": "After years of advising CS1 students to pursue game development as a hobby and brace themselves to get a real job instead, Rob now works at Valve doing FPGA and firmware development on VR hardware.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Rob Rydberg",
+            "https:\/\/steamcommunity.com\/id\/3rcubed\/"
+        ]
     },
     {
         "name": "Robin Walker",

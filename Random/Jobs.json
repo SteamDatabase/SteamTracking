@@ -109,15 +109,15 @@
         "name": "Have a better idea?",
         "description": "<div class='job_description_intro'><p>These job listings are incomplete.  If you don\u2019t see your specialty listed here, but you have years of professional experience, are really talented at what you do, and possess a skillset that would help us create better products and experiences for our customers, apply on the form below.  We are happy to be convinced that we need a molecular biologist or a mathematician or an ironworker, but the onus is on you to do so.<\/p> <p>We don\u2019t have junior-level positions or internships here, so we are looking for highly skilled folks who\u2019ve been in their industry for a few years who can bring in knowledge and expertise we don\u2019t currently possess.<\/p><div class='list_title' >Qualifications<\/div><ul><li>4+ years of professional experience<\/li><li>High-level expertise in your discipline<\/li><\/ul><\/div>"
     },
+    "65": {
+        "reqid": 65,
+        "name": "Human Resources",
+        "description": "<div class='job_description_intro'><p>We aren't hiring any Human Resources specialists at the moment. That said, if you choose to send us your resume we will keep it on file, should our needs change in the future.<\/p> <\/div>"
+    },
     "7": {
         "reqid": 7,
         "name": "Industrial Designer",
         "description": "<div class='job_description_intro'><p>As an Industrial Designer at Valve, you will collaborate with electrical, mechanical, software engineers and designers who are busily defining new entertainment experiences through both hardware and software. We\u2019re hoping to add your expertise in product design and manufacturing, ergonomics, usability, aesthetics, and surfacing to our team.<\/p><p>Valve is an entertainment and technology company driven to design and deliver rewarding experiences to customers. We hire generalists who also exhibit deep expertise. Designers at Valve contribute in a wide variety of ways: We define and articulate goals, we design and ship products, we create and implement user studies, we write press releases and blog posts, we manage projects, and much more. We also recruit designers. People like you.<\/p><p>Valve is traditionally a software company. Open platforms like the PC and Mac are important to us, as they enable us and our partners to have a robust and direct relationship with customers. We\u2019re frustrated by the lack of innovation in the computer hardware space though, so we\u2019re jumping in. Even basic input, the keyboard and mouse, haven\u2019t really changed in any meaningful way over the years. There\u2019s a real void in the marketplace, and opportunities to create compelling user experiences are being overlooked.<\/p><p>At Valve, our design process really gets going once products are in customers\u2019 hands. Our best work is the result of an ongoing dialog with customers. Through years of shipping software as a service through Steam, our digital distribution platform, this has become fundamental to the way we create great products. With an engaged community of millions of users, what will you ship? What will you try, and what will you learn through doing so? <\/p><p>Do you prefer to define the work that you pursue, rather than simply following a vision that\u2019s been set for you? If you\u2019re seeking an opportunity to steer product definition, functional exploration and design decision-making, consider joining Valve. We can\u2019t wait to see where you\u2019ll take us.<\/p><\/div><div class='list_title' >Qualifications<\/div><ul><li>A BS\/BA\/BFA Degree (or equivalent) in Industrial Design (or equivalent)<\/li><li>6+ years of professional experience shipping world-class, high-tech hardware products<\/li><li>A thorough understanding of product design principles<\/li><li>Highly effective multidisciplinary collaboration skills  <\/li><li>Personal commitment to quality, attention to detail<\/li><li>Confidence with 2D and 3D design visualization tools<\/li><li>Effective, articulate design communication and decision-making skills<\/li><\/ul><div class='job_description_intro'><p>Please include with your application an online portfolio of work which conveys your capabilities.<\/p><\/div>"
-    },
-    "68": {
-        "reqid": 68,
-        "name": "Internal Helpdesk",
-        "description": "<div class='job_description_intro'>  <p>Valve is looking for Helpdesk technicians who enjoy working closely with customers and have strong problem solving skills. This role supports all Valve employees, enabling them to ship new and exciting products. Candidates should be excited about learning new technologies and be willing to ask questions. <\/p><\/div><div class='list_title' >Responsibilities<\/div><ul>  <li> Triage helpdesk tickets.<\/li>  <li> Work directly with users to resolve issues. <\/li>  <li> Document resolutions to tickets.<\/li>  <li> Keep inventory of hardware and peripherals. This includes recommending and testing cool new hardware.<\/li>  <li> Maintain shared office resources: Printers, Conference Rooms, Play Test and Virtual Reality areas.<\/li>  <li> Deploy PC's for new hires.<\/li><\/ul><div class='list_title' >Qualifications<\/div><ul>  <li> 2 years of experience with customer facing IT\/Helpdesk<\/li>  <li> Troubleshooting Windows 7\/8\/10 (Linux or MacOS is a bonus)<\/li>  <li> Active Directory user management<\/li>  <li> Building Custom Desktop Gaming Computers<\/li>  <li> Network Troubleshooting<\/li><\/ul>"
     },
     "69": {
         "reqid": 69,
@@ -222,6 +222,11 @@
     "53": {
         "reqid": 53,
         "name": "Writer",
-        "description": "<div class='job_description_intro'><p>We really aren't hiring writers at the moment, but when we do, we tend to seek them out ourselves; we hire writers whose work has caught our interest, and who get us excited about working with them. Don't worry about what you are writing, just write and distinguish yourself. <\/p> <p>While we will normally find you then, feel free to also send us along a note about your future work. If you choose to send us your resume we will keep it on file if our needs change in the future.<\/p> <\/div>"
+        "description": "<div class='job_description_intro'><p>We aren't hiring writers at the moment. That said, if you choose to send us your resume we will keep it on file, should our needs change in the future.<\/p> <\/div>"
+    },
+    "67": {
+        "reqid": 67,
+        "name": "Writing - Other",
+        "description": "<div class='job_description_intro'><p>Valve hires writers whose work has caught our interest. We\u2019re excited to work with them, and to learn from them. In other words: Find your voice. And we\u2019ll find you.<\/p> "
     }
 }
