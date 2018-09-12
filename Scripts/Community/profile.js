@@ -1,4 +1,4 @@
-
+//<script>
 
 /* returns a jquery deferred object, .done() means an invite was sent (or attempted), .fail() indicates they dismissed the modal */
 function PresentGroupInviteOptions( rgFriendsToInvite )
@@ -532,6 +532,8 @@ function ShowAliasPopup(e)
 
 			if( !Aliases || Aliases.length == 0 )
 				Aliases.push( {newname: "This user has no known aliases"} );
+			else
+				$( 'NamePopupClearAliases' ).show();
 
 			for( var x=0; x<Aliases.length; x++ )
 			{
@@ -549,6 +551,29 @@ function ShowAliasPopup(e)
 	} );
 }
 
+function ShowClearAliasDialog()
+{
+	ShowConfirmDialog( 'Clear previous aliases', 'Are you sure you wish to clear your profile name history? This will make it harder for users you have recently played with to find you, and may make it difficult for users in your friends list to identify you.' )
+		.done( function() {
+			$J.ajax( {
+				url: g_rgProfileData['url'] + 'ajaxclearaliashistory/',
+				data: { sessionid: g_sessionID },
+				type: 'POST',
+				dataType: 'json'
+			}).done( function( data ) {
+				if ( data.success != 1 )
+				{
+					ShowAlertDialog( '', 'Error processing your request. Please try again.' );
+				}
+				else
+				{
+					location.reload();
+				}
+			}).fail( function( data ) {
+				ShowAlertDialog( '', 'Error processing your request. Please try again.' );
+			})
+		} );
+}
 
 function IsValidNickname( str )
 {

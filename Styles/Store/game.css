@@ -4466,15 +4466,13 @@ body.v6 .agegate_wizard .subtitle a {
 	text-decoration: underline;
 }
 .sign_in_ctn {
-	display: flex;
 	margin-top: 6px;
-}
-.sign_in_ctn > div {
-	min-width: 100px;
 }
 .sign_in_ctn .btn {
 	top: 5px;
 	position: relative;
+	float: left;
+	margin-right: 14px;
 }
 
 .agegate_wizard_preference_option {

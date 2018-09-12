@@ -2362,6 +2362,19 @@ body.profile_page #footer {
 	padding: 0 12px;
 }
 
+#NamePopupClearAliases {
+	float:right;
+	font-size:12px;
+}
+
+#NamePopupClearAliases > a {
+	color: #b8b6b4;
+}
+
+#NamePopupClearAliases > a:hover {
+	color: #ffffff;
+}
+
 .rightcol_controls {
 	background-color: #1e1e1f;
 	border-radius: 5px;

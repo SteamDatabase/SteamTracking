@@ -6270,6 +6270,7 @@ input.InviteFriendToChatDialog_LinkInput
 .chatSubmitButton.EmoticonPickerButton
 {
 	margin-right: 1px;
+	overflow: hidden;
 }
 
 .chatEntry.compactView .chatEntryControls .chatSubmitButton
@@ -8806,7 +8807,7 @@ a.connectionStatus:visited
 	margin-bottom: 8px;
 }
 
-.chatWindow .chatEntry.compactView > *
+.chatWindow .chatEntry.compactView > .compactableHeight
 {
 	height: 32px;
 }
@@ -17009,6 +17010,33 @@ a.general_btn:hover
 	text-align: center;
 }
 
+.EmoticonSelector_Item_New
+{
+	position: relative;
+}
+
+.NewEmoticonIndicator
+{
+	background: radial-gradient( ellipse farthest-corner at 50% 50%, rgba( 255, 153, 0, 0.8 ) 0%, rgba( 233, 154, 35, 0.2 ) 45%, rgba( 233, 154, 35, 0 ) 85% );
+	position: absolute;
+	top: -5%;
+	right: -5%;
+	left: 55%;
+	bottom: 55%;
+	display: flex;
+	align-items: center;
+}
+
+.NewEmoticonIndicator .NewEmoticonCircle
+{
+	width: 4px;
+	height: 4px;
+	background-color: yellow;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: auto;
+}
+
 .EmoticonSelector_Item:hover
 {
 	background-color: #201f1d;
@@ -17024,9 +17052,12 @@ a.general_btn:hover
 {
 }
 
-.EmoticonSuggestion .emoticon
+.EmoticonSuggestion_Emoticon
 {
-	margin-right: 12px;
+	position: relative;
+	display: inline-block;
+	margin-right: 8px;
+	padding: 0 4px;
 }
 
 .SlashCommandSuggestion

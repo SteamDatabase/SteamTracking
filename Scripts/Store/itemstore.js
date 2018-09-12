@@ -245,10 +245,18 @@ CItemStoreHighlightPlayer.prototype.OnSelected = function( elem, imgURL )
 	this.m_currentElem.addClass( "selected" );
 
 	var player = this;
+
 	this.m_previewImageElem.fadeOut( 250, function() {
 		player.m_previewImageElem.attr( 'src', imgURL );
 		player.m_previewImageElem.attr( 'srcset', imgURL );
-		player.m_previewImageElem.fadeIn( 250 );
+		// Sometimes the Internet is really slow.
+		// Let's show the highlight for 1 timer iteration regardless of how long the download takes.
+		player.StopHighlightTimer();
+		player.m_previewImageElem.load(function()
+			{
+				player.m_previewImageElem.fadeIn( 250 );
+				player.StartHighlightTimer();
+			} );
 	} );
 
 	this.m_scrollbar.EnsureVisible( this.m_currentElem );

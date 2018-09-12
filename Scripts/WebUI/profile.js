@@ -5594,19 +5594,21 @@ and limitations under the License.
               var e = this;
               if (this.m_strInitialRestoreDetails) {
                 var t = this.GetSavedDimensionsKey();
-                this.GetWindowRestoreDetails().then(function(n) {
-                  var r =
-                    e.m_strInitialRestoreDetails == n &&
-                    t == e.m_strInitialSavedDimensionsKey;
-                  e.m_popup &&
-                    e.m_strSavedDimensionsKey &&
-                    n &&
-                    !r &&
-                    (f.SetRestoreDetails(t, n, e.m_bExpires),
-                    (e.m_rgParams.strRestoreDetails = n),
-                    (e.m_strInitialSavedDimensionsKey = t),
-                    e.OnResizeComplete(n));
-                });
+                this.m_popup.setTimeout(function() {
+                  e.GetWindowRestoreDetails().then(function(n) {
+                    var r =
+                      e.m_strInitialRestoreDetails == n &&
+                      t == e.m_strInitialSavedDimensionsKey;
+                    e.m_popup &&
+                      e.m_strSavedDimensionsKey &&
+                      n &&
+                      !r &&
+                      (f.SetRestoreDetails(t, n, e.m_bExpires),
+                      (e.m_rgParams.strRestoreDetails = n),
+                      (e.m_strInitialSavedDimensionsKey = t),
+                      e.OnResizeComplete(n));
+                  });
+                }, 30);
               }
             }),
             (t.prototype.OnBeforeUnload = function() {
