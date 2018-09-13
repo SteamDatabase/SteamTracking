@@ -78117,43 +78117,50 @@ and limitations under the License.
               ),
                 this.LOG("bAtBottom", c, "bWasAtBottom", l);
               var u = i;
-              c ||
-              (l && n != a) ||
-              (i < o && l && Date.now() < this.m_nIgnoreScrollUpUntilTime)
-                ? (this.LogScrollInfo("At bottom"),
-                  i < o &&
-                    l &&
-                    Date.now() < this.m_nIgnoreScrollUpUntilTime &&
-                    this.LOG(
-                      "**** IGNORING APPARENT SCROLL UP WHILE PINNED TO BOTTOM IN LAYOUT"
-                    ),
-                  (u = n - r),
-                  AssertMsg(
-                    u >= 0,
-                    e.GetUniqueID() +
-                      ": Onscroll client height bigger than scroll height"
-                  ),
-                  (e.is_scrolled_to_bottom = !0),
-                  u != i &&
-                    (this.LOG("Setting scrollTop to", u),
-                    (this.m_elHistoryScroll.scrollTop = u)))
-                : r < s && l
-                  ? (this.LogScrollInfo(
-                      "Shrinking window while pinned to bottom"
-                    ),
+              l &&
+                o - u == 1 &&
+                (this.LOG(
+                  "*** Scroll position off by one while pinned, ignoring and setting scrollTop to",
+                  o
+                ),
+                (u = o)),
+                c ||
+                (l && n != a) ||
+                (u < o && l && Date.now() < this.m_nIgnoreScrollUpUntilTime)
+                  ? (this.LogScrollInfo("At bottom"),
+                    u < o &&
+                      l &&
+                      Date.now() < this.m_nIgnoreScrollUpUntilTime &&
+                      this.LOG(
+                        "**** IGNORING APPARENT SCROLL UP WHILE PINNED TO BOTTOM IN LAYOUT"
+                      ),
                     (u = n - r),
+                    AssertMsg(
+                      u >= 0,
+                      e.GetUniqueID() +
+                        ": Onscroll client height bigger than scroll height"
+                    ),
                     (e.is_scrolled_to_bottom = !0),
                     u != i &&
                       (this.LOG("Setting scrollTop to", u),
                       (this.m_elHistoryScroll.scrollTop = u)))
-                  : i < o
-                    ? (this.LogScrollInfo("Detected scroll up"),
-                      (e.is_scrolled_to_bottom = c))
-                    : i != o &&
-                      (this.LogScrollInfo(
-                        "Detected scroll down but not to bottom"
+                  : r < s && l
+                    ? (this.LogScrollInfo(
+                        "Shrinking window while pinned to bottom"
                       ),
-                      (e.is_scrolled_to_bottom = !1)),
+                      (u = n - r),
+                      (e.is_scrolled_to_bottom = !0),
+                      u != i &&
+                        (this.LOG("Setting scrollTop to", u),
+                        (this.m_elHistoryScroll.scrollTop = u)))
+                    : u < o
+                      ? (this.LogScrollInfo("Detected scroll up"),
+                        (e.is_scrolled_to_bottom = c))
+                      : u != o &&
+                        (this.LogScrollInfo(
+                          "Detected scroll down but not to bottom"
+                        ),
+                        (e.is_scrolled_to_bottom = !1)),
                 (e.lastScrollTop = u),
                 (e.lastScrollHeight = n),
                 (e.lastClientHeight = r);
