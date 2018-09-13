@@ -8056,8 +8056,9 @@ a.connectionStatus:visited
 {
 	overflow: auto;
 	position: relative;
-	flex: 1;
 	padding: 14px 6px;
+	min-height: 100%;
+	box-sizing: border-box;
 }
 
 .chatRoomGroupNavColumn
@@ -18909,6 +18910,13 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .chatStack
 {
 	flex: 1;
+	min-height: 0;
+}
+
+.minHeightZero
+{
+	min-height: 0;
+	flex: 1
 }
 
 .BothChatsSeperator

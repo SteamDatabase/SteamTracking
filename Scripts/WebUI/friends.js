@@ -78064,7 +78064,7 @@ and limitations under the License.
                     a +
                     " scrollHeight " +
                     s +
-                    " client " +
+                    " clientHeight " +
                     c +
                     " "
                 );
@@ -78115,13 +78115,7 @@ and limitations under the License.
                 l == e.is_scrolled_to_bottom,
                 e.GetUniqueID() + ": computed and stored at bottom don't match"
               ),
-                this.LOG("bAtBottom", c, "bWasAtBottom", l),
-                -1 == o &&
-                  (this.LOG(
-                    "Onscroll initializing lastScrollTop/lastScrollHeight"
-                  ),
-                  (o = i),
-                  (a = n));
+                this.LOG("bAtBottom", c, "bWasAtBottom", l);
               var u = i;
               c ||
               (l && n != a) ||
@@ -80142,7 +80136,7 @@ and limitations under the License.
                     { className: "displayColumn fullWidth" },
                     Fa.createElement(
                       "div",
-                      { className: "displayRow fullHeight" },
+                      { className: "displayRow minHeightZero" },
                       Fa.createElement(
                         "div",
                         { className: "ChatRoomGroupDialog_history" },
