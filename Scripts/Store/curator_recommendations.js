@@ -299,6 +299,7 @@ function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOv
 {
 		if( !( strFacet in rgFacets ) )
 	{
+		$J( '[id^=' + strElementIDPrefix + ']' ).text( '' );
 		return;
 	}
 
@@ -306,12 +307,12 @@ function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOv
 	var nTotalCount = 0;
 
 	for (var facetIndex in rgFacetToCounts ) {
-		$J( strElementIDPrefix + facetIndex ).text( rgFacetToCounts[facetIndex] );
+		$J( '#' + strElementIDPrefix + facetIndex ).text( rgFacetToCounts[facetIndex] );
 
 		nTotalCount += parseInt( rgFacetToCounts[facetIndex] );
 	}
 
-	$J(strElementIDPrefix +"all").text( nCountOverride ? nCountOverride : nTotalCount );
+	$J( '#' + strElementIDPrefix +"all").text( nCountOverride ? nCountOverride : nTotalCount );
 }
 
 function UpdateRecommendationFilterData( refresh )
@@ -1030,8 +1031,9 @@ $J(function() {
 
 						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {
 				var rgFacets = $J.parseJSON(response.rgFacets);
-				UpdateFilterTagCounts( rgFacets, 'type', '#filter_app_type_num_' );
-				UpdateFilterTagCounts( rgFacets, 'tagids', '#filter_tagid_num_', response.total_count );
+				UpdateFilterTagCounts( rgFacets, 'type', 'filter_app_type_num_' );
+				UpdateFilterTagCounts( rgFacets, 'tagids', 'filter_tagid_num_', response.total_count );
+				UpdateFilterTagCounts( rgFacets, 'recommend', 'filter_recommend_type_', response.total_count );
 			}
 		});
 
