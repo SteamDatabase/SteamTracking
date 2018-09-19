@@ -1028,8 +1028,6 @@ $J(function() {
 		g_oPagingControls.SetResponseHandler( function( response ) {
 			GDynamicStore.DecorateDynamicItems();
 
-			console.log( response );
-
 						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {
 				var rgFacets = $J.parseJSON(response.rgFacets);
 				UpdateFilterTagCounts( rgFacets, 'type', 'filter_app_type_num_' );

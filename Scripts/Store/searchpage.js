@@ -202,7 +202,7 @@ function ExecuteSearch( rgParameters )
 
 	g_rgCurrentParameters = rgParameters;
 	new Effect.Fade( $('search_result_container'), { from: 1.0, to: 0.5, duration: 0.1 } );
-	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', onComplete: SearchCompleted.bind( null, rgParameters ) } );
+	g_ajaxInFlight = new Ajax.Updater( 'search_results', 'https://store.steampowered.com/search/results', { parameters: rgParameters, method: 'get', evalScripts: true, onComplete: SearchCompleted.bind( null, rgParameters ) } );
 }
 
 function HandleFilteredResultsWarning()
