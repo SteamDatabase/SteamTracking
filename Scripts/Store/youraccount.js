@@ -54,7 +54,8 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 		    method:'post',
 		    parameters: { 
 				'agreementid' : agreementid,
-				'packageid' : packageid
+				'packageid' : packageid,
+			    'sessionid' : g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bUpdateSubscriptionRunning = false;
@@ -179,7 +180,8 @@ function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement
 		{
 		    method:'post',
 		    parameters: { 
-				'agreementid' : agreementid
+				'agreementid' : agreementid,
+			    'sessionid' : g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bRenewSubscriptionRunning = false;

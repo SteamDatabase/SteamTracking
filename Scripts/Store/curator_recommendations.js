@@ -292,7 +292,7 @@ function CuratorFieldToggle( elNode, strValue, bForceReset )
 		});
 	}
 
-	UpdateRecommendationFilterData( true );
+	UpdateRecommendationFilterData( true, bForceReset );
 }
 
 function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOverride = 0 )
@@ -315,7 +315,7 @@ function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOv
 	$J( '#' + strElementIDPrefix +"all").text( nCountOverride ? nCountOverride : nTotalCount );
 }
 
-function UpdateRecommendationFilterData( refresh )
+function UpdateRecommendationFilterData( refresh = false, bForceReset = false )
 {
 	var elForm = document.getElementById('filter_box');
 	var elTarget = document.getElementById('RecommendationsTable');
@@ -363,10 +363,13 @@ function UpdateRecommendationFilterData( refresh )
 		"sort": strSort,
 		"app_types": rgAppTypeValues.join(','),
 		"curations": rgCurationValues.join(','),
+		"reset": bForceReset.toString(),
 	});
 
 	if( refresh )
+	{
 		g_oPagingControls.GoToPage(0,true);
+	}
 }
 
 function GetPresentationStyle( rgNodeData, sectionType )
@@ -1012,10 +1015,6 @@ $J(function() {
 	{
 
 		g_oPagingControls = new CAjaxPagingControls ( g_pagingData, g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations/' );
-		g_oPagingControls.SetPreRequestHandler ( function ()
-		{
-			UpdateRecommendationFilterData ();
-		} );
 
 		g_oPagingControls.SetPageChangingHandler ( function ( nPage )
 		{
@@ -1029,15 +1028,21 @@ $J(function() {
 		g_oPagingControls.SetResponseHandler( function( response ) {
 			GDynamicStore.DecorateDynamicItems();
 
+			console.log( response );
+
 						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {
 				var rgFacets = $J.parseJSON(response.rgFacets);
 				UpdateFilterTagCounts( rgFacets, 'type', 'filter_app_type_num_' );
 				UpdateFilterTagCounts( rgFacets, 'tagids', 'filter_tagid_num_', response.total_count );
 				UpdateFilterTagCounts( rgFacets, 'recommend', 'filter_recommend_type_', response.total_count );
 			}
-		});
 
-		UpdateRecommendationFilterData ();
+						if( 'apptypeoverride' in response && response.apptypeoverride )
+			{
+				$J( '#filter_app_type_' + response.apptypeoverride ).addClass('selected');
+				$J( '#filter_app_type_all' ).removeClass('selected');
+			}
+		});
 	}
 });
 

@@ -96,7 +96,8 @@ function ValidateWalletCode()
 			{
 			    method:'post',
 			    parameters: { 
-					'wallet_code' : $('wallet_code').value
+					'wallet_code' : $('wallet_code').value,
+				    'sessionid' : g_sessionID
 				},
 			    onSuccess: function(transport){
 			    	g_bValidateWalletCodeCallRunning = false;
@@ -329,7 +330,8 @@ function CreateWalletAndCheckFunds( bCreateFromAddress )
 					'City' : $('billing_city').value,
 					'Country' : $('billing_country').value,
 					'State' : ($('billing_country').value == 'US' ? $('billing_state_select').value : $('billing_state_text').value),
-					'PostCode' : $('billing_postal_code').value
+					'PostCode' : $('billing_postal_code').value,
+			        'sessionid' : g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bCreateWalletAndCheckFundsRunning = false;
@@ -450,7 +452,8 @@ function RedeemWalletCode()
 		{
 		    method:'post',
 		    parameters: { 
-			'wallet_code' : $('wallet_code').value
+				'wallet_code' : $('wallet_code').value,
+			    'sessionid' : g_sessionID
 			},
 		    onSuccess: function(transport){
 		    	g_bRedeemWalletCodeRunning = false;

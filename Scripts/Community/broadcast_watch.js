@@ -25,7 +25,7 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS )
+var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS, eWatchLocation )
 {
 	this.m_broadcastAccountID = broadcastAccountID;
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
@@ -43,6 +43,7 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_bDisableChatTooltips = false;
 	this.m_IFrameHelper = IFrameHelper;
 	this.m_nVideoLimitFPS = nVideoLimitFPS ? nVideoLimitFPS : 0;
+	this.m_eWatchLocation = eWatchLocation;
 	
 	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
@@ -295,7 +296,8 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
 			viewertoken: _watch.m_ulViewerToken,
-			sessionid: g_sessionID
+			sessionid: g_sessionID,
+			watchlocation: _watch.m_eWatchLocation
 		},
 		type: 'GET'
 	})

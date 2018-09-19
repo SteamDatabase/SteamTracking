@@ -293,8 +293,8 @@ function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 			var rgMatches = [];
 			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 10; i++)
 			{
-				if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
-					( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 ||
+								if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
+					( g_rgAppsCurated[i].app_name && ( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 ) ||
 						(!isNaN( localeTerm ) && g_rgAppsCurated[i].appid.toString().indexOf( localeTerm ) !== -1 ) ) )
 				{
 					rgMatches.push(g_rgAppsCurated[i].app_name);
@@ -824,7 +824,7 @@ function ReviewsManage_Load()
 			var rgMatches = [];
 			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 5; i++)
 			{
-				if( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 )
+								if( g_rgAppsCurated[i].app_name && ( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 ) )
 				{
 					rgMatches.push(g_rgAppsCurated[i].app_name);
 				}

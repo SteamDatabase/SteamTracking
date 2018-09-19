@@ -53,7 +53,7 @@ CBroadcastChat.s_regexEmoticons = new RegExp( '\u02D0([^\u02D0]*)\u02D0', 'g' );
 CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)', 'gi' );
 CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
 CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
-CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","gdcvault.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us","games-workshop.com","steamcontroller.buka.ru","steamlink.buka.ru","e-clubmalaysia.com","gameplanet.com","degica.com","steamstatic.com","community.csgo.com.cn"];
+CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","gdcvault.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us","games-workshop.com","steamcontroller.buka.ru","steamlink.buka.ru","e-clubmalaysia.com","gameplanet.com","degica.com","community.csgo.com.cn","steamcdn-a.akamaihd.net","steamusercontent.com","steamstatic.com","steamuserimages-a.akamaihd.net","steamstore-a.akamaihd.net","steamcommunity-a.akamaihd.net"];
 
 CBroadcastChat.prototype.SetChannelModerators = function ( mapChannelModerators )
 {
@@ -241,7 +241,7 @@ CBroadcastChat.prototype.RequestLoop = function()
 		{
 			for ( var i = 0; i < rgResponse.muted.length; i++ )
 			{
-				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You has been muted and can not post messages to this chat' : '%s has been muted in this chatroom';
+				var strMsg = ( rgResponse.muted[i].muted == _chat.m_steamID ) ? 'You have been muted and can not post messages to this chat' : '%s has been muted in this chatroom';
 				_chat.DisplayChatNotification( strMsg.replace( /%s/, rgResponse.muted[i].persona_name ) );
 			}
 		}
@@ -516,7 +516,9 @@ CBroadcastChat.prototype.ChatSubmit = function()
 		{
 			var strError = "";
 			if ( response.result == 17 )
-				strError = 'You has been muted and can not post messages to this chat';
+				strError = 'You have been muted and can not post messages to this chat';
+			else if( response.result == 84 )
+                strError = 'You are sending messages too fast, try again in %s seconds.'.replace( /%s/, response.cooldown_time_seconds );
 			else if( response.result == 40 ) // Note: The UI should block you from this point, but it is a safety net incase something changes during the broadcast
 				strError = 'Only game owners are allowed to send chat messages during this broadcast.';
 			else

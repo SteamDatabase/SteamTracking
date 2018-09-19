@@ -36115,7 +36115,7 @@ and limitations under the License.
                   (e != this.m_eUserPersonaState ||
                     this.m_bUserSetPersonaState != t))
               ) {
-                if (0 == e && t) return void Cd.SignOutOfFriends();
+                if (0 == e && t) return void Cd.SignOutOfFriends(void 0);
                 (this.m_eUserPersonaState = e),
                   (this.m_bUserSetPersonaState = t),
                   i || this.SendPersonaStateToServer(),
@@ -59774,7 +59774,7 @@ and limitations under the License.
               Cd.FriendStore.SetUserPersonaState(3);
             }),
             (t.prototype.SetUserOffline = function() {
-              Cd.SignOutOfFriends();
+              Cd.SignOutOfFriends(this.props.browserContext);
             }),
             (t.prototype.ToggleUserDND = function() {
               Cd.FriendStore.SetUserDoNotDisturb(
@@ -88282,7 +88282,7 @@ and limitations under the License.
                   "Blocked friends list popup due to parental controls"
                 );
               var n = this.m_mapFriendsListPopups.get(e.m_unPID);
-              if (n) return void (t || n.Focus());
+              if (n) return void (!t && i && n.Focus());
               (n = new _f(
                 this.m_FriendsUIApp.FriendStore,
                 this.m_FriendsUIApp.ChatStore,
@@ -88506,14 +88506,19 @@ and limitations under the License.
             }),
             (t.prototype.ShowPopupFriendsListAtStartup = function(e) {
               var t = e;
-              void 0 !== iy.m_bShowFriendsListOnLoadFromLoader &&
-                (t = iy.m_bShowFriendsListOnLoadFromLoader),
-                t &&
-                  Cd.ShowPopupFriendsList(
-                    vd,
-                    !1,
-                    !0 === iy.m_bShowFriendsListOnLoadFromLoader
-                  );
+              if (
+                (void 0 !== iy.m_bShowFriendsListOnLoadFromLoader &&
+                  (t = iy.m_bShowFriendsListOnLoadFromLoader),
+                t)
+              ) {
+                var i = !0 === iy.m_bShowFriendsListOnLoadFromLoader;
+                Cd.GetDefaultBrowserContext() != vd &&
+                  (console.log(
+                    "Blocked taking focus in root context during ShowPopupFriendsList, because other context is primary"
+                  ),
+                  (i = !1)),
+                  Cd.ShowPopupFriendsList(vd, !1, i);
+              }
             }),
             (t.prototype.ShowPopupFriendsList = function(e, t, i) {
               this.m_DesktopApp.ShowPopupFriendsList(e, t, i);
@@ -88539,12 +88544,16 @@ and limitations under the License.
               this.m_DesktopApp.UIDisplayPrefs.bDontShowVoiceAlert ||
                 mt(t.popup.GetWindow());
             }),
-            (t.prototype.SignOutOfFriends = function() {
-              var e =
+            (t.prototype.SignOutOfFriends = function(e) {
+              var t =
                 Cd.UIStore.GetRootChatPerContextData().friends_list_window &&
                 Cd.UIStore.GetRootChatPerContextData().friends_list_window.BIsVisible();
               window.parent.postMessage(
-                { message: "SignOutRequest", bShowLoaderWindow: e },
+                {
+                  message: "SignOutRequest",
+                  bShowLoaderWindow: t,
+                  browserContext: e
+                },
                 "https://steamloopback.host"
               );
             }),
