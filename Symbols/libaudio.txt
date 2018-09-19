@@ -766,6 +766,7 @@
  dyld_stub_binder
  fcntl
  fcntl$UNIX2003
+ flock
  floor
  free
  fstat$INODE64

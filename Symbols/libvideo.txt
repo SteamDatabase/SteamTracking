@@ -1294,6 +1294,7 @@
  T CClientStructNetPacket::GetEMsg() const
  T CClientStructNetPacket::GetEMsgFormatType() const
  T CClientStructNetPacket::GetHConnection() const
+ T CClientStructNetPacket::GetHdrIP() const
  T CClientStructNetPacket::GetMsgTraceTag() const
  T CClientStructNetPacket::GetSessionID() const
  T CClientStructNetPacket::GetSourceJobID() const
@@ -1303,6 +1304,7 @@
  T CClientStructNetPacket::GetTargetJobName() const
  T CClientStructNetPacket::PubData() const
  T CClientStructNetPacket::SetHConnection(unsigned int)
+ T CClientStructNetPacket::SetHdrIP(unsigned int)
  T CClientStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CClientStructNetPacket::SetSessionID(int)
  T CClientStructNetPacket::SetSourceJobID(unsigned long long)
@@ -1411,7 +1413,7 @@
  T CDummyCnxCallback::RecvPkt(CNetPacket*)
  T CFStringCreate_GuessEncoding(void const*, long)
  T CFileReader::BIsOpen() const
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -2018,6 +2020,7 @@
  T CProtoBufNetPacket::GetEMsg() const
  T CProtoBufNetPacket::GetEMsgFormatType() const
  T CProtoBufNetPacket::GetHConnection() const
+ T CProtoBufNetPacket::GetHdrIP() const
  T CProtoBufNetPacket::GetMsgTraceTag() const
  T CProtoBufNetPacket::GetSessionID() const
  T CProtoBufNetPacket::GetSourceJobID() const
@@ -2028,6 +2031,7 @@
  T CProtoBufNetPacket::PubData() const
  T CProtoBufNetPacket::RebuildPacket()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
+ T CProtoBufNetPacket::SetHdrIP(unsigned int)
  T CProtoBufNetPacket::SetMsgTraceTag(unsigned long long)
  T CProtoBufNetPacket::SetSessionID(int)
  T CProtoBufNetPacket::SetSourceJobID(unsigned long long)
@@ -2275,6 +2279,7 @@
  T CStructNetPacket::GetEMsg() const
  T CStructNetPacket::GetEMsgFormatType() const
  T CStructNetPacket::GetHConnection() const
+ T CStructNetPacket::GetHdrIP() const
  T CStructNetPacket::GetMsgTraceTag() const
  T CStructNetPacket::GetSessionID() const
  T CStructNetPacket::GetSourceJobID() const
@@ -2284,6 +2289,7 @@
  T CStructNetPacket::GetTargetJobName() const
  T CStructNetPacket::PubData() const
  T CStructNetPacket::SetHConnection(unsigned int)
+ T CStructNetPacket::SetHdrIP(unsigned int)
  T CStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CStructNetPacket::SetSessionID(int)
  T CStructNetPacket::SetSourceJobID(unsigned long long)
@@ -3245,7 +3251,7 @@
  T CVideoDecodedFrame::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::~CVideoDecodedFrame()
  T CVideoDecoder::BDecodeFrame(unsigned char const*, int, long long, long long)
- T CVideoDecoder::BDecodeFrameInternal(AVPacket*, bool*)
+ T CVideoDecoder::BDecodeFrameInternal(AVPacket const*, bool*)
  T CVideoDecoder::BInitH264AVCC(unsigned char const*, int)
  T CVideoDecoder::CQueuedOutput::Height() const
  T CVideoDecoder::CQueuedOutput::UPlane() const
@@ -3295,7 +3301,7 @@
  T CVideoDecoderLibav::~CVideoDecoderLibav()
  T CVideoEncoderH264::BEncodeFrame(IVideoYUVFrame*, long long, bool)
  T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
- T CVideoEncoderH264::BInit(int, int, int)
+ T CVideoEncoderH264::BInit(int, int, int, int)
  T CVideoEncoderH264::CVideoEncoderH264()
  T CVideoEncoderH264::Flush()
  T CVideoEncoderH264::GetEncodedFrame()
@@ -4209,7 +4215,7 @@
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesSystemSteam
  T Latin1ToUtf8
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T MD5_Final
  T MD5_Init
  T MD5_Transform
@@ -5259,6 +5265,7 @@
  T name_cmp
  T netadr_t::BlockingResolveAndSetFromString(char const*)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)
@@ -5799,10 +5806,12 @@
  atexit
  atoi
  atoll
+ av_dict_set
  av_find_best_stream
  av_frame_alloc
  av_frame_free
  av_frame_get_buffer
+ av_frame_unref
  av_free
  av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
@@ -6512,6 +6521,7 @@
  fflush
  fgets
  fileno
+ flock
  fopen
  fopen$UNIX2003
  fprintf
@@ -6913,7 +6923,7 @@
  t K512
  t K_XX_XX
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MemInputsrc
  t OSXCertFromOpenSSL(x509_st*, OpaqueSecCertificateRef**)

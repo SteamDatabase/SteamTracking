@@ -483,7 +483,6 @@
  T CBaseSurface::CalculateMouseVisible()
  T CBaseSurface::ClearAllCookies()
  T CBaseSurface::ClearTextColorRangeValues()
- T CBaseSurface::ClearWebCache()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
  T CBaseSurface::CountPopupsViewable()
  T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*, bool)
@@ -650,7 +649,7 @@
  T CDirWatcher::SetDirToWatch(char const*)
  T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -1917,7 +1916,7 @@
  T KeyValuesTextParser::SetFilename(char const*)
  T KeyValuesTextParser::~KeyValuesTextParser()
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T LoadTGA(int, char*, unsigned char**, int*, int*, int*)
  T MouseCode_VGUIToVirtualKey(vgui::MouseCode)
  T MouseCode_VirtualKeyToVGUI(int)
@@ -2468,7 +2467,6 @@
  V_atof
  V_atoi
  V_binarytohex
- V_pretifymem
  V_snprintf
  V_strcat
  V_stristr(char const*, char const*)
@@ -2633,17 +2631,15 @@
  dispatch_async
  dlsym
  dyld_stub_binder
- fclose
  fcntl
- fflush
+ flock
  floor
- fopen
  fprintf
  fputc
  fread
  free
  fstat$INODE64
- fwrite
+ fsync
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
@@ -2808,7 +2804,7 @@
  t K256_shaext
  t K512
  t K_XX_XX
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
@@ -2993,3 +2989,4 @@
  wcslen
  wcsncpy
  wcstol
+ write

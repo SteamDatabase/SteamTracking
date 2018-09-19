@@ -27,4 +27,5 @@ public:
     virtual unknown_ret GetAppBuildId() = 0;
     virtual unknown_ret RequestAllProofOfPurchaseKeys() = 0;
     virtual unknown_ret GetFileDetails(char const*) = 0;
+    virtual unknown_ret GetLaunchCommandLine(char*, int) = 0;
 };

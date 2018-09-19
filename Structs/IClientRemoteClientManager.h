@@ -1,14 +1,12 @@
 class IClientRemoteClientManager
 {
 public:
-    virtual unknown_ret BGetReservedGamepad(int, RemoteClientReservedGamepad_t*) = 0;
-    virtual unknown_ret GamepadReservationComplete() = 0;
     virtual unknown_ret StreamingAudioPreparationComplete(bool) = 0;
     virtual unknown_ret StreamingAudioFinished() = 0;
-    virtual unknown_ret ProcessStreamAvailable(unsigned int) = 0;
-    virtual unknown_ret ProcessStreamShutdown() = 0;
-    virtual unknown_ret ProcessStreamClientConnected(char const*) = 0;
-    virtual unknown_ret ProcessStreamClientDisconnected(char const*) = 0;
+    virtual unknown_ret ProcessStreamAvailable(unsigned int, unsigned int) = 0;
+    virtual unknown_ret ProcessStreamShutdown(unsigned int) = 0;
+    virtual unknown_ret ProcessStreamClientConnected(unsigned int) = 0;
+    virtual unknown_ret ProcessStreamClientDisconnected(unsigned int) = 0;
     virtual unknown_ret ConnectToRemote(unsigned long long) = 0;
     virtual unknown_ret ConnectToRemoteAddress(char const*) = 0;
     virtual unknown_ret RefreshRemoteClients(bool) = 0;
@@ -36,7 +34,7 @@ public:
     virtual unknown_ret BIsStreamingSessionActive() = 0;
     virtual unknown_ret BIsStreamingSessionActiveForGame(CGameID) = 0;
     virtual unknown_ret BIsStreamingClientConnected() = 0;
-    virtual unknown_ret StopStreamingSession() = 0;
+    virtual unknown_ret StopStreamingSession(unsigned int) = 0;
     virtual unknown_ret LaunchAppResult(unsigned int, ERemoteClientLaunchResult) = 0;
     virtual unknown_ret BIsStreamStartInProgress(unsigned long long, unsigned int) = 0;
     virtual unknown_ret LaunchAppResultRequestLaunchOption(unsigned int, int const*, int) = 0;

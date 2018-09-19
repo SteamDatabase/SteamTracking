@@ -21,6 +21,7 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
+ B CMsgClearAllBrowsingData::default_instance_
  B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
@@ -925,6 +926,7 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
+ D typeinfo for CMsgClearAllBrowsingData
  D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
@@ -1788,6 +1790,7 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
+ D vtable for CMsgClearAllBrowsingData
  D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
@@ -2127,6 +2130,7 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
+ R typeinfo name for CMsgClearAllBrowsingData
  R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
@@ -3284,6 +3288,17 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
+ T CMsgClearAllBrowsingData::ByteSize() const
+ T CMsgClearAllBrowsingData::CMsgClearAllBrowsingData()
+ T CMsgClearAllBrowsingData::Clear()
+ T CMsgClearAllBrowsingData::GetCachedSize() const
+ T CMsgClearAllBrowsingData::GetMetadata() const
+ T CMsgClearAllBrowsingData::IsInitialized() const
+ T CMsgClearAllBrowsingData::MergeFrom(CMsgClearAllBrowsingData const&)
+ T CMsgClearAllBrowsingData::New() const
+ T CMsgClearAllBrowsingData::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClearAllBrowsingData::SetCachedSize(int) const
+ T CMsgClearAllBrowsingData::~CMsgClearAllBrowsingData()
  T CMsgClearAllCookies::ByteSize() const
  T CMsgClearAllCookies::CMsgClearAllCookies()
  T CMsgClearAllCookies::Clear()
@@ -5748,6 +5763,7 @@
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T netadr_t::BlockingResolveAndSetFromString(char const*)
+ T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
@@ -8964,6 +8980,8 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_descriptor_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_reflection_
  b (anonymous namespace)::CMsgClearAllCookies_descriptor_
  b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
@@ -9519,6 +9537,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllBrowsingData_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_

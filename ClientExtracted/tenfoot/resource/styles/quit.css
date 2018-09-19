@@ -174,17 +174,47 @@
 	visibility: visible;
 }
 
-.StreamingActive .StreamingVisible
+.StreamingActive0 .StreamingVisible0
 {
 	visibility: visible;
 }
 
-.StreamingActive .StreamingHidden
+.StreamingVisible0
 {
 	visibility: collapse;
 }
 
-.StreamingVisible
+.StreamingActive1 .StreamingVisible1
+{
+    visibility: visible;
+}
+
+.StreamingVisible1
+{
+	visibility: collapse;
+}
+
+.StreamingActive2 .StreamingVisible2
+{
+    visibility: visible;
+}
+
+.StreamingVisible2
+{
+	visibility: collapse;
+}
+
+.StreamingActive3 .StreamingVisible3
+{
+    visibility: visible;
+}
+
+.StreamingVisible3
+{
+	visibility: collapse;
+}
+
+.StreamingActive0 .StreamingHidden
 {
 	visibility: collapse;
 }
@@ -194,14 +224,44 @@
 	visibility: visible;
 }
 
-.StreamingClientCanSuspendVisible
+.StreamingClientCanSuspend0 .StreamingClientCanSuspendVisible0
+{
+    visibility: visible;
+}
+
+.StreamingClientCanSuspendVisible0
 {
     visibility: collapse;
 }
 
-.StreamingClientCanSuspend .StreamingClientCanSuspendVisible
+.StreamingClientCanSuspend1 .StreamingClientCanSuspendVisible1
 {
     visibility: visible;
+}
+
+.StreamingClientCanSuspendVisible1
+{
+    visibility: collapse;
+}
+
+.StreamingClientCanSuspend2 .StreamingClientCanSuspendVisible2
+{
+    visibility: visible;
+}
+
+.StreamingClientCanSuspendVisible2
+{
+    visibility: collapse;
+}
+
+.StreamingClientCanSuspend3 .StreamingClientCanSuspendVisible3
+{
+    visibility: visible;
+}
+
+.StreamingClientCanSuspendVisible3
+{
+    visibility: collapse;
 }
 
 .NVStreamingActive .NVStreamingVisible

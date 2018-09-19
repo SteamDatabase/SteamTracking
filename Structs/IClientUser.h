@@ -195,7 +195,7 @@ public:
     virtual unknown_ret OnBigPictureForStreamingStartResult(bool, void*) = 0;
     virtual unknown_ret OnBigPictureForStreamingDone() = 0;
     virtual unknown_ret OnBigPictureForStreamingRestarting() = 0;
-    virtual unknown_ret StopStreaming() = 0;
+    virtual unknown_ret StopStreaming(unsigned int) = 0;
     virtual unknown_ret LockParentalLock() = 0;
     virtual unknown_ret UnlockParentalLock(char const*) = 0;
     virtual unknown_ret BIsParentalLockEnabled() = 0;

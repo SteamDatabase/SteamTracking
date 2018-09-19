@@ -2,6 +2,17 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EBroadcastWatchLocation {
+	k_EBroadcastWatchLocation_Invalid = 0;
+	k_EBroadcastWatchLocation_SteamTV_Tab = 1;
+	k_EBroadcastWatchLocation_SteamTV_WatchParty = 2;
+	k_EBroadcastWatchLocation_Chat_Tab = 3;
+	k_EBroadcastWatchLocation_Chat_WatchParty = 4;
+	k_EBroadcastWatchLocation_CommunityPage = 5;
+	k_EBroadcastWatchLocation_StoreAppPage = 6;
+	k_EBroadcastWatchLocation_InGame = 7;
+}
+
 message CBroadcast_BeginBroadcastSession_Request {
 	optional int32 permission = 1;
 	optional uint64 gameid = 2;
@@ -52,6 +63,7 @@ message CBroadcast_WatchBroadcast_Request {
 	optional fixed64 viewer_token = 3 [(description) = "viewer token received from last WatchRequest call, from browser storage."];
 	optional uint32 client_ip = 4;
 	optional uint32 client_cell = 5;
+	optional .EBroadcastWatchLocation watch_location = 6 [default = k_EBroadcastWatchLocation_Invalid];
 }
 
 message CBroadcast_WatchBroadcast_Response {
@@ -83,6 +95,11 @@ message CBroadcast_WatchBroadcast_Response {
 	optional string hls_m3u8_master_url = 11;
 }
 
+message CBroadcast_StopWatchingBroadcast_Notification {
+	optional fixed64 steamid = 1 [(description) = "broadcaster steamID."];
+	optional fixed64 viewer_token = 3 [(description) = "viewer token received from last WatchRequest call, from browser storage."];
+}
+
 message CBroadcast_GetBroadcastStatus_Request {
 	optional fixed64 steamid = 1;
 	optional fixed64 broadcast_id = 2;
@@ -96,6 +113,8 @@ message CBroadcast_GetBroadcastStatus_Response {
 	optional bool is_rtmp = 5;
 	optional int32 seconds_delay = 6;
 	optional bool is_publisher = 7;
+	optional string thumbnail_url = 8;
+	optional int32 update_interval = 9;
 }
 
 message CBroadcast_GetBroadcastThumbnail_Request {
@@ -155,6 +174,7 @@ message CBroadcast_PostChatMessage_Response {
 	optional string persona_name = 1;
 	optional bool in_game = 2;
 	optional int32 result = 3;
+	optional int32 cooldown_time_seconds = 4;
 }
 
 message CBroadcast_MuteBroadcastChatUser_Request {
@@ -247,6 +267,9 @@ service Broadcast {
 	}
 	rpc WatchBroadcast (.CBroadcast_WatchBroadcast_Request) returns (.CBroadcast_WatchBroadcast_Response) {
 		option (method_description) = "Request from viewer to watch a broadcast";
+	}
+	rpc StopWatchingBroadcast (.CBroadcast_StopWatchingBroadcast_Notification) returns (.NoResponse) {
+		option (method_description) = "Request to immediately stop watching a broadcast. Optional Method, if not called, viewer will time out.";
 	}
 	rpc GetBroadcastStatus (.CBroadcast_GetBroadcastStatus_Request) returns (.CBroadcast_GetBroadcastStatus_Response) {
 		option (method_description) = "Request from viewer about broadcast details";

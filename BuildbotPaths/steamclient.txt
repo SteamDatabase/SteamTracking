@@ -641,7 +641,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/htmlsurface.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/ingamechat.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/inputgenerator.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/inputgenerator_osx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/installscript.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/installscript_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/interfacemap_client.h
@@ -796,6 +795,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hardware_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicelocal.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicelocal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicepipe.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicepipesteam.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddeviceremote.cpp

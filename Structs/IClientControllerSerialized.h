@@ -82,7 +82,6 @@ public:
     virtual unknown_ret GetConfigFeatures(unsigned int, CUtlVector<EControllerConfigFeature, CUtlMemory<EControllerConfigFeature> >*) = 0;
     virtual unknown_ret GetAllBindings(unsigned int, CUtlVector<BindingAction_t, CUtlMemory<BindingAction_t> >*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*) = 0;
     virtual unknown_ret BIsXInputActiveForController(unsigned int) = 0;
-    virtual unknown_ret SwapXInputSlots(unsigned int, unsigned int) = 0;
     virtual unknown_ret PS4SettingsChanged(bool) = 0;
     virtual unknown_ret SwitchSettingsChanged(bool) = 0;
     virtual unknown_ret ControllerSettingsChanged(unsigned int) = 0;
@@ -94,6 +93,9 @@ public:
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret SetDonglePairingMode(bool, int) = 0;
     virtual unknown_ret ReserveSteamController() = 0;
+    virtual unknown_ret CancelSteamControllerReservations() = 0;
+    virtual unknown_ret OpenStreamingSession(unsigned int) = 0;
+    virtual unknown_ret CloseStreamingSession(unsigned int) = 0;
     virtual unknown_ret InitiateISPFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret InitiateBootloaderFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*) = 0;
@@ -123,6 +125,10 @@ public:
     virtual unknown_ret BControllerHasUniqueConfigForAppID(unsigned int, CUtlString*) = 0;
     virtual unknown_ret DeRegisterController(unsigned int, unsigned int) = 0;
     virtual unknown_ret SendOSKeyboardEvent(char const*) = 0;
+    virtual unknown_ret GetGamepadIndexChangeCounter() = 0;
+    virtual unknown_ret BSwapGamepadIndex(unsigned int, int, int) = 0;
+    virtual unknown_ret GetGamepadIndexForXInputIndex(unsigned int) = 0;
+    virtual unknown_ret GetGamepadIndexForControllerIndex(unsigned int) = 0;
     virtual unknown_ret GetControllerIndexForGamepadIndex(int) = 0;
     virtual unknown_ret GetNumControllersWithDetails() = 0;
     virtual unknown_ret ConvertBindingToNewControllerType(unsigned int, unsigned int) = 0;
@@ -139,6 +145,7 @@ public:
     virtual unknown_ret GetControllerUsageData(unsigned int) = 0;
     virtual unknown_ret BAllowAppConfigForController(unsigned int, unsigned int) = 0;
     virtual unknown_ret ResetControllerEnableCache() = 0;
+    virtual unknown_ret GetControllerEnableSupport(unsigned int) = 0;
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
     virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret BInputGenerated() = 0;
@@ -147,7 +154,7 @@ public:
     virtual unknown_ret GetLastActiveControllerPID() = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
-    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
-    virtual unknown_ret BSaveTouchConfigLayout(unsigned int, CUtlBuffer const*) = 0;
+    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
+    virtual unknown_ret BSaveTouchConfigLayout(unsigned int, unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret SetGyroOn(unsigned int, unsigned long long) = 0;
 };

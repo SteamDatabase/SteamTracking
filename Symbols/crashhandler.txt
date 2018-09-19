@@ -75,6 +75,7 @@
  T BWritingMiniDump
  T Breakpad_SetSteamID
  T CBreakpadFactory::AllocateHandle()
+ T CBreakpadFactory::GetMinidumpDirectory()
  T CBreakpadFactory::Init()
  T CBreakpadFactory::InitHandler(void*, char const*, char const*, char const*, void*, void (*)(void*))
  T CBreakpadFactory::Lookup(void*)
@@ -86,6 +87,7 @@
  T CBreakpadFactory::WriteMiniDumpSetComment(char const*)
  T CBreakpadFactory::~CBreakpadFactory()
  T CCrashHandler::AllocateHandle()
+ T CCrashHandler::GetDirectory()
  T CCrashHandler::GetGlobals()
  T CCrashHandler::InstallExceptionHandler(void*, char const*, char const*, char const*, bool, void*, void (*)(void*))
  T CCrashHandler::RemoveExceptionHandler(void*)

@@ -138,7 +138,7 @@
  T CDefaultCvar::RegisterConCommandBase(ConCommandBase*)
  T CDefaultCvar::Shutdown()
  T CDefaultCvar::UnlinkVariables(int)
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -418,7 +418,7 @@
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T Internal_Coroutine_Continue(int, bool, char const*)
  T KeyValuesSystemSteam
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T OSTypesAreCompatible
  T ReplaceBadFilenameCharacters(char*, char, char const*)
@@ -740,6 +740,7 @@
  dyld_stub_binder
  fcntl
  fcntl$UNIX2003
+ flock
  free
  fstat$INODE64
  g_VProfManager
@@ -822,7 +823,7 @@
  t GetNetAdrResolveCacheMutex()
  t GetStackPtr()
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t StripWhitespaceWorker(int, wchar_t*, bool*, bool)
  t _GLOBAL__sub_I_checksum_crc.cpp
  t _GLOBAL__sub_I_coroutine.cpp

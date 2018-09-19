@@ -209,6 +209,7 @@
  T GetInstalledRAM
  T GetLocalHostname
  T GetMiniDumpBuildID
+ T GetMiniDumpDirectory
  T GetMiniDumpSteamID
  T GetNumberOfSpewAndLogGroups
  T GetNumberOfStackTrackingFilters

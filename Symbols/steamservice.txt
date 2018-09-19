@@ -796,7 +796,7 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -2346,7 +2346,7 @@
  T KeyValuesTextParser::ReportError(char const*, CUtlBuffer const&)
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T MD5_Final
  T MD5_Init
  T MD5_Update
@@ -2964,6 +2964,7 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromSocket(int)
@@ -3704,11 +3705,13 @@
  fcntl
  fflush
  fileno
+ flock
  fopen
  fprintf
  fputc
  free
  fstat$INODE64
+ fsync
  fwrite
  getcwd
  getenv
@@ -3990,7 +3993,7 @@
  t K512
  t K_XX_XX
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)

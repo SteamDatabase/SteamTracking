@@ -179,6 +179,10 @@ message CMsgClearHistory {
 	optional uint32 browser_handle = 1;
 }
 
+message CMsgClearAllBrowsingData {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgCopy {
 	optional uint32 browser_handle = 1;
 }

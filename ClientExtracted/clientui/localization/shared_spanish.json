@@ -103,7 +103,7 @@
 	"ContextMenu_OpenImageInNewWindow": "Abrir imagen en una ventana nueva",
 	"Tooltip_Settings": "Gestionar la configuración de la lista de amigos",
 	"Tooltip_SearchFriends": "Buscar en la lista de amigos",
-	"Tooltip_AddFriend": "Añadir un amigo",
+	"Tooltip_AddFriend": "Añadir a un amigo",
 	"Tooltip_FriendRequest": "%1$s solicitud entrante",
 	"Tooltip_FriendRequest_Plural": "%1$s solicitudes entrantes",
 	"Tooltip_CreateGroupChat": "Crear un chat de grupo",

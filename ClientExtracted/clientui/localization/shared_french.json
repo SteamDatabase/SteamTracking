@@ -48,7 +48,7 @@
 	"OutputDeviceLoading...": "Chargement...",
 	"WindowTitle_FriendsList": "Liste d’amis",
 	"FriendsList_OfflineTitle": "ERREUR",
-	"FriendsList_OfflineOrFailure": "Impossible d'accéder au réseau des amis",
+	"FriendsList_OfflineOrFailure": "Impossible d'accéder au réseau d'amis",
 	"FriendsList_OfflineDetail": "Ceci peut indiquer que votre réseau local est hors ligne ou que les serveurs d'amis Steam sont actuellement hors ligne.",
 	"FriendsList_SignedOut": "Déconnecté du réseau d'amis",
 	"FriendsList_SignedOut_Detail": "Vous êtes actuellement hors ligne. Veuillez vous connecter pour accéder à votre liste d'amis et au chat.",

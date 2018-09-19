@@ -20,6 +20,7 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
+ B CMsgClearAllBrowsingData::default_instance_
  B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
@@ -253,6 +254,7 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
+ D typeinfo for CMsgClearAllBrowsingData
  D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
@@ -487,6 +489,7 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
+ D vtable for CMsgClearAllBrowsingData
  D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
@@ -624,6 +627,7 @@
  D vtable for IPC::PosixSharedMemory
  GetCPUInformation()
  GetMiniDumpBuildID
+ GetMiniDumpDirectory
  GetMiniDumpSteamID
  GetOSType
  Log
@@ -732,6 +736,7 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
+ R typeinfo name for CMsgClearAllBrowsingData
  R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
@@ -909,13 +914,7 @@
  SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
  SteamVProf::CVProfile::OutputReport(int, char const*, int)
  SteamVProf::CVProfile::~CVProfile()
- T BDeleteFileIfExists(char const*)
- T BFileExists(char const*)
- T BIsValidDirectory(char const*)
- T BRemoveDirectory(char const*)
- T BRemoveDirectoryRecursive(char const*)
  T CChromeIPCClient::AbortWaitForPendingData()
- T CChromeIPCClient::BClearCacheAndRestartCEFProcess()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
  T CChromeIPCClient::BRestartMasterCEFProcess()
@@ -963,15 +962,10 @@
  T CCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::~CCookie()
- T CDirIterator::BNextFile()
- T CDirIterator::CDirIterator(char const*, char const*)
- T CDirIterator::Init(char const*)
- T CDirIterator::~CDirIterator()
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CHTMLBaseProtoBufMsg::BDeserializeCrossProc(CUtlBuffer*, EHTMLCommands*, unsigned int*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
  T CHTMLController::AckSharedPaintBuffer(int)
- T CHTMLController::BClearCacheAndRestartCEF()
  T CHTMLController::BDispatchThreadedPaintCommand(HTMLCommandBuffer_t*)
  T CHTMLController::BExitMasterCEFProcess()
  T CHTMLController::BInitialized()
@@ -1448,6 +1442,17 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
+ T CMsgClearAllBrowsingData::ByteSize() const
+ T CMsgClearAllBrowsingData::CMsgClearAllBrowsingData()
+ T CMsgClearAllBrowsingData::Clear()
+ T CMsgClearAllBrowsingData::GetCachedSize() const
+ T CMsgClearAllBrowsingData::GetMetadata() const
+ T CMsgClearAllBrowsingData::IsInitialized() const
+ T CMsgClearAllBrowsingData::MergeFrom(CMsgClearAllBrowsingData const&)
+ T CMsgClearAllBrowsingData::New() const
+ T CMsgClearAllBrowsingData::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClearAllBrowsingData::SetCachedSize(int) const
+ T CMsgClearAllBrowsingData::~CMsgClearAllBrowsingData()
  T CMsgClearAllCookies::ByteSize() const
  T CMsgClearAllCookies::CMsgClearAllCookies()
  T CMsgClearAllCookies::Clear()
@@ -3142,7 +3147,6 @@
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
- T FillDataStruct(_finddata_t*)
  T GetCEFWebHelperExePath()
  T GetLanguageICUName(ELanguage)
  T HTMLCommandBuffer_t::Validate(CValidator&, char const*)
@@ -3175,7 +3179,6 @@
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
- T MakeFileWriteable(char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
@@ -3183,14 +3186,11 @@
  T Sys_GetProcAddress(CSysModule*, char const*)
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
- T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6__initIPcEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueEvE4typeES9_S9_
  T _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendIPKcEENS_9enable_ifIXsr21__is_forward_iteratorIT_EE5valueERS5_E4typeESA_SA_
  T __CreateCHTMLControllerIHTMLChromeController_interface()
  T __clang_call_terminate
- T _findfirst(char const*, _finddata_t*)
- T _findnext(long long, _finddata_t*)
  T int V_sprintf_safe<64ul>(char (&) [64ul], char const*, ...)
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
@@ -3328,8 +3328,6 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __toupper
- alphasort$INODE64
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
  b (anonymous namespace)::CHTMLHeader_descriptor_
@@ -3372,6 +3370,8 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_descriptor_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_reflection_
  b (anonymous namespace)::CMsgClearAllCookies_descriptor_
  b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
@@ -3638,11 +3638,9 @@
  b s_CmdLineParamDisableWinH264
  b s_CmdLineParamStoreURL
  b s_HTMLController
- b selectBuf
  bootstrap_look_up
  bootstrap_port
  ceilf
- chmod
  close
  connect
  d s_LanguageNames
@@ -3650,10 +3648,13 @@
  d s_pConversionArrays_StringCharConversion
  dlsym
  dyld_stub_binder
+ fclose
  fflush
+ fopen
  fprintf
  free
  ftruncate
+ fwrite
  g_ClockSpeed
  g_VProfManager
  g_VProfProfilesRunningCount
@@ -3668,7 +3669,6 @@
  launch_data_free
  launch_data_new_string
  launch_msg
- lstat$INODE64
  mach_msg
  mach_port_allocate
  mach_port_deallocate
@@ -3711,6 +3711,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllBrowsingData_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_
@@ -3836,8 +3837,6 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
  recvmsg
- rmdir
- scandir$INODE64
  sched_yield
  sem_close
  sem_open
@@ -3846,12 +3845,12 @@
  sem_unlink
  sem_wait
  sendmsg
+ setenv
  shm_open
  shm_unlink
  snprintf
  socket
  sprintf
- stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
@@ -3886,7 +3885,6 @@
  strerror
  strlen
  strncpy
- strrchr
  strtod
  strtof
  strtol
@@ -3895,7 +3893,6 @@
  strtoull
  t (anonymous namespace)::protobuf_RegisterTypes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t BlockingWait(int*, unsigned int, int*)
- t FileSelect(dirent const*)
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t _GLOBAL__sub_I_chrome_ipc_client.cpp
  t _GLOBAL__sub_I_chromewrapper.cpp
@@ -3909,7 +3906,6 @@
  t _GLOBAL__sub_I_utlbuffer.cpp
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception
- unlink
  usleep
  vasprintf
  vsnprintf

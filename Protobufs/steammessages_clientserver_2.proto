@@ -721,6 +721,7 @@ message CMsgGCClient {
 	optional bytes payload = 3;
 	optional fixed64 steamid = 4;
 	optional string gcname = 5;
+	optional uint32 ip = 6;
 }
 
 message CMsgClientRequestFreeLicense {

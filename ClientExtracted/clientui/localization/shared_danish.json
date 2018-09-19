@@ -11,7 +11,7 @@
 	"g_DisabledOnWeb": "Utilgængelig i webversion",
 	"VoiceTransmissionType_Disabled": "Kun åben mikrofon for webversion",
 	"VoiceVolume": "Lydstyrke",
-	"VoiceDevice": "Stemme-input enhed",
+	"VoiceDevice": "Stemmeinputenhed",
 	"VoiceOutputDevice": "Stemmeoutputenhed",
 	"VoiceInputGain": "Input lydstyrke/stigning",
 	"VoiceInputGainExplainer": "(min mikrofon)",

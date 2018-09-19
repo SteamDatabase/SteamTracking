@@ -22,6 +22,7 @@
  B CMsgBrowserSize::default_instance_
  B CMsgBuildID::default_instance_
  B CMsgCanGoBackAndForward::default_instance_
+ B CMsgClearAllBrowsingData::default_instance_
  B CMsgClearAllCookies::default_instance_
  B CMsgClearHistory::default_instance_
  B CMsgClose::default_instance_
@@ -2039,7 +2040,9 @@
  D typeinfo for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -2079,6 +2082,7 @@
  D typeinfo for CMsgBrowserSize
  D typeinfo for CMsgBuildID
  D typeinfo for CMsgCanGoBackAndForward
+ D typeinfo for CMsgClearAllBrowsingData
  D typeinfo for CMsgClearAllCookies
  D typeinfo for CMsgClearHistory
  D typeinfo for CMsgClose
@@ -2278,7 +2282,9 @@
  D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -3374,7 +3380,9 @@
  D vtable for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -3414,6 +3422,7 @@
  D vtable for CMsgBrowserSize
  D vtable for CMsgBuildID
  D vtable for CMsgCanGoBackAndForward
+ D vtable for CMsgClearAllBrowsingData
  D vtable for CMsgClearAllCookies
  D vtable for CMsgClearHistory
  D vtable for CMsgClose
@@ -3600,7 +3609,9 @@
  D vtable for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -4096,7 +4107,9 @@
  R typeinfo name for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -4136,6 +4149,7 @@
  R typeinfo name for CMsgBrowserSize
  R typeinfo name for CMsgBuildID
  R typeinfo name for CMsgCanGoBackAndForward
+ R typeinfo name for CMsgClearAllBrowsingData
  R typeinfo name for CMsgClearAllCookies
  R typeinfo name for CMsgClearHistory
  R typeinfo name for CMsgClose
@@ -4446,7 +4460,9 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
+ R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
@@ -5815,7 +5831,7 @@
  T CEmptySectionHeader::KB_ChainToMap()
  T CEmptySectionHeader::SetColor(Color)
  T CEmptySectionHeader::~CEmptySectionHeader()
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -6029,6 +6045,9 @@
  T CFriendSettingsController::SetFriendSettings(char const*)
  T CFriendSettingsController::SetLegacySetting(char const*, int)
  T CFriendSettingsController::SetSettingsJavascriptValueBool(char const*, bool)
+ T CFriendSettingsController::StorageDeleteKey(char const*)
+ T CFriendSettingsController::StorageGetString(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CFriendSettingsController::StorageSetString(char const*, char const*)
  T CFriendSettingsController::Validate(CValidator&, char const*)
  T CFriendSettingsController::~CFriendSettingsController()
  T CFriendsClansPage::CFriendsClansPage(CFriendsDialog*)
@@ -7051,7 +7070,9 @@
  T CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -7365,6 +7386,17 @@
  T CMsgCanGoBackAndForward::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgCanGoBackAndForward::SetCachedSize(int) const
  T CMsgCanGoBackAndForward::~CMsgCanGoBackAndForward()
+ T CMsgClearAllBrowsingData::ByteSize() const
+ T CMsgClearAllBrowsingData::CMsgClearAllBrowsingData()
+ T CMsgClearAllBrowsingData::Clear()
+ T CMsgClearAllBrowsingData::GetCachedSize() const
+ T CMsgClearAllBrowsingData::GetMetadata() const
+ T CMsgClearAllBrowsingData::IsInitialized() const
+ T CMsgClearAllBrowsingData::MergeFrom(CMsgClearAllBrowsingData const&)
+ T CMsgClearAllBrowsingData::New() const
+ T CMsgClearAllBrowsingData::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClearAllBrowsingData::SetCachedSize(int) const
+ T CMsgClearAllBrowsingData::~CMsgClearAllBrowsingData()
  T CMsgClearAllCookies::ByteSize() const
  T CMsgClearAllCookies::CMsgClearAllCookies()
  T CMsgClearAllCookies::Clear()
@@ -10875,7 +10907,7 @@
  T ListPanelDragger::SetMovable(bool)
  T ListPanelDragger::~ListPanelDragger()
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T Localize(char const*)
  T MD5_Final
  T MD5_Init
@@ -11380,6 +11412,7 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::HasIP() const
  T netadr_t::IsLoopback() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromString(char const*)
@@ -12107,7 +12140,9 @@
  T vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -15356,6 +15391,7 @@
  T void JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendSettingsController*, void (CFriendSettingsController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
@@ -15383,6 +15419,7 @@
  T void vgui::JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendSettingsController*, void (CFriendSettingsController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
@@ -15548,6 +15585,8 @@
  b (anonymous namespace)::CMsgBuildID_reflection_
  b (anonymous namespace)::CMsgCanGoBackAndForward_descriptor_
  b (anonymous namespace)::CMsgCanGoBackAndForward_reflection_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_descriptor_
+ b (anonymous namespace)::CMsgClearAllBrowsingData_reflection_
  b (anonymous namespace)::CMsgClearAllCookies_descriptor_
  b (anonymous namespace)::CMsgClearAllCookies_reflection_
  b (anonymous namespace)::CMsgClearHistory_descriptor_
@@ -16386,6 +16425,7 @@
  exit
  fcntl
  fflush
+ flock
  floor
  floorf
  fmod
@@ -16627,6 +16667,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBrowserSize_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgBuildID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCanGoBackAndForward_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllBrowsingData_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearAllCookies_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgClearHistory_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCloseDevTools_offsets_
@@ -16902,7 +16943,7 @@
  t ListFileNameSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileSizeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t ListFileTypeSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)

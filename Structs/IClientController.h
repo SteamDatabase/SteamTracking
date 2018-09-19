@@ -60,6 +60,7 @@ public:
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret BIsStreamingController(unsigned int) = 0;
+    virtual unknown_ret GetControllerEnableSupport(unsigned int) = 0;
     virtual unknown_ret BAllowAppConfigForController(unsigned int, unsigned int) = 0;
     virtual unknown_ret ResetControllerEnableCache() = 0;
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
@@ -123,6 +124,9 @@ public:
     virtual unknown_ret SetControllerKeyboardMouseState(unsigned int, bool) = 0;
     virtual unknown_ret SetLocalControllerConnectionState(unsigned int, EControllerConnectionState) = 0;
     virtual unknown_ret ReserveSteamController() = 0;
+    virtual unknown_ret CancelSteamControllerReservations() = 0;
+    virtual unknown_ret OpenStreamingSession(unsigned int) = 0;
+    virtual unknown_ret CloseStreamingSession(unsigned int) = 0;
     virtual unknown_ret InitiateBootloaderFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret InitiateISPFirmwareUpdate(unsigned int) = 0;
     virtual unknown_ret FlashControllerFirmware(unsigned int, CUtlBuffer*, unsigned int, char const*) = 0;
@@ -139,8 +143,8 @@ public:
     virtual unknown_ret GetPersonalizationFileID(unsigned int) = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
-    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
-    virtual unknown_ret BSaveTouchConfigLayout(unsigned int, CUtlBuffer const*) = 0;
+    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
+    virtual unknown_ret BSaveTouchConfigLayout(unsigned int, unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret GetTouchKeysForPopupMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int) = 0;
     virtual unknown_ret PopupMenuTouchKeyClicked(unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret CheckMappingForEvents() = 0;

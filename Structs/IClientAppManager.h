@@ -82,7 +82,8 @@ public:
     virtual unknown_ret GetLaunchQueryParam(unsigned int, char const*) = 0;
     virtual unknown_ret BeginLaunchQueryParams(unsigned int) = 0;
     virtual unknown_ret SetLaunchQueryParam(unsigned int, char const*, char const*) = 0;
-    virtual unknown_ret CommitLaunchQueryParams(unsigned int) = 0;
+    virtual unknown_ret CommitLaunchQueryParams(unsigned int, char const*) = 0;
+    virtual unknown_ret GetLaunchCommandLine(unsigned int, char*, int) = 0;
     virtual unknown_ret AddContentLogLine(char const*) = 0;
     virtual unknown_ret GetSystemIconFile(unsigned int, char*, int) = 0;
 };

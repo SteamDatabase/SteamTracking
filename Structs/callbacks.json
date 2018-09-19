@@ -147,7 +147,7 @@
     {
         "id": 337,
         "size": 264,
-        "posted_in": "CUserFriends::NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*, bool*)"
+        "posted_in": "CUserFriends::NotifyRichPresenceJoinRequested(unsigned int, CSteamID, char const*)"
     },
     {
         "id": 338,
@@ -388,6 +388,11 @@
         "id": 730,
         "size": 1,
         "posted_in": "void CBaseAPIJob::PostAPIResult<WideVineDownloadCompleted_t>(WideVineDownloadCompleted_t*)"
+    },
+    {
+        "id": 731,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClearAllBrowsingData_t>(ClearAllBrowsingData_t*)"
     },
     {
         "id": 801,
@@ -1057,7 +1062,7 @@
     {
         "id": 1014,
         "size": 1,
-        "posted_in": "CUserAppManager::CommitLaunchQueryParams(unsigned int)"
+        "posted_in": "CUserAppManager::CommitLaunchQueryParams(unsigned int, char const*)"
     },
     {
         "id": 1016,
@@ -1536,7 +1541,7 @@
     },
     {
         "id": 2707,
-        "size": 76,
+        "size": 80,
         "posted_in": "CGetControllerInfoWorkItem::DispatchCompletion()"
     },
     {
@@ -1633,6 +1638,11 @@
         "id": 2732,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerAutosaveBinding_t>(ControllerAutosaveBinding_t*)"
+    },
+    {
+        "id": 2733,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerEnableCacheReset_t>(ControllerEnableCacheReset_t*)"
     },
     {
         "id": 2901,
@@ -1931,12 +1941,12 @@
     },
     {
         "id": 3311,
-        "size": 376,
+        "size": 380,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {
         "id": 3312,
-        "size": 1,
+        "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStopStreamSession_t>(RemoteClientStopStreamSession_t*)"
     },
     {
@@ -1953,11 +1963,6 @@
         "id": 3315,
         "size": 12,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamingEnabledChanged_t>(RemoteClientStreamingEnabledChanged_t*)"
-    },
-    {
-        "id": 3316,
-        "size": 4,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientReserveGamepads_t>(RemoteClientReserveGamepads_t*)"
     },
     {
         "id": 3317,

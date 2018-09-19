@@ -4,7 +4,7 @@ typedef enum EBroadcastUploadResult
     k_EBroadcastUploadResultOK, // OK
     k_EBroadcastUploadResultInitFailed, // Init Failed
     k_EBroadcastUploadResultFrameFailed, // Frame Failed
-    k_EBroadcastUploadResultTimeout, // Timeout
+    k_EBroadcastUploadResultUploadTimeout, // Upload Timeout
     k_EBroadcastUploadResultBandwidthExceeded, // Bandwidth Exceeded
     k_EBroadcastUploadResultLowFPS, // Low FPS
     k_EBroadcastUploadResultMissingKeyFrames, // Missing Key Frames
@@ -17,4 +17,9 @@ typedef enum EBroadcastUploadResult
     k_EBroadcastUploadResultNotAllowedToPlay, // Not allowed to play
     k_EBroadcastUploadResultServerBusy, // Server Busy
     k_EBroadcastUploadResultBanned, // Banned
+    k_EBroadcastUploadResultAlreadyActive, // Already Active
+    k_EBroadcastUploadResultForcedOff, // Forced Off
+    k_EBroadcastUploadResultAudioBehind, // Audio Behind
+    k_EBroadcastUploadResultServerShutdown, // Server Shutdown
+    k_EBroadcastUploadResultUploadDisconnected, // Upload Disconnected
 } EBroadcastUploadResult;

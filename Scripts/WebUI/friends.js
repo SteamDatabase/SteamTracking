@@ -88786,7 +88786,7 @@ and limitations under the License.
                   );
                   break;
                 case "ShowPopupFriendsList":
-                  this.ShowPopupFriendsList(e);
+                  this.ShowPopupFriendsList(e, !1, !0);
                   break;
                 case "ShowFriendChatDialog":
                   var i = new di.a(t.steamid);

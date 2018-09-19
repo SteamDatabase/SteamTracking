@@ -3342,10 +3342,16 @@
 	"Downloads_Status_locked"	"All licenses are in use for this product"
 
 
-	"Quit_LabelStreamingClient"	"{s:streamingclient}"
+	"Quit_LabelStreamingClient0"	"{s:streamingclient0}"
+	"Quit_LabelStreamingClient1"	"{s:streamingclient1}"
+	"Quit_LabelStreamingClient2"	"{s:streamingclient2}"
+	"Quit_LabelStreamingClient3"	"{s:streamingclient3}"
 	"Quit_LabelStreamingServer"	"{s:streamingserver}"
 	"Quit_StopStreaming"		"Stop Streaming"
-	"Quit_StopStreamingAndSuspendClient"		"Turn Off {s:streamingclient}"
+	"Quit_StopStreamingAndSuspendClient0"		"Turn Off {s:streamingclient0}"
+	"Quit_StopStreamingAndSuspendClient1"		"Turn Off {s:streamingclient1}"
+	"Quit_StopStreamingAndSuspendClient2"		"Turn Off {s:streamingclient2}"
+	"Quit_StopStreamingAndSuspendClient3"		"Turn Off {s:streamingclient3}"
 	"Quit_MinimizeBigPicture"	"Minimize Big Picture"
 	"Quit_QuitBigPicture"		"Exit Big Picture"
 	"Quit_ExitBigPicture"		"Return to Desktop"
@@ -4231,6 +4237,8 @@
 	"SteamUI_StreamingSystemShutdownConfirmation_Intro"	"Are you sure you want to do this?\nIf your computer doesn't support Wake On LAN or is on a different subnet, you will need to manually start your computer and make sure you are logged into Steam."
 	"SteamUI_SystemPowerConfirmation_Confirm" "Confirm"
 	"SteamUI_SystemPowerConfirmation_Cancel" "Cancel"
+	"SteamUI_QuitBigPicture_Title" "Cannot Exit - Games are Running"
+	"SteamUI_QuitBigPicture_Intro" "Please quit all games before closing Big Picture Mode"
 
 	"SteamUI_ConfirmPassword_Select" "SELECT"
 	"SteamUI_ConfirmPassword_EnterPassword" "Enter your password to continue"
@@ -6666,6 +6674,7 @@
 	"controller_switch_joycon_pair"						"Nintendo Switch JoyCon Pair"
 	"controller_mobile_touch"							"Steam Link Touch Controller"
 	
+	"controller_xinput"									"XInput Controller"
 	"controller_ps2"									"PlayStation 2 Controller"
 	"controller_switch_joycon"							"Nintendo Switch JoyCon"
 	"controller_switch_pro_generic"						"3rd Party Nintendo Switch Pro Controller"
