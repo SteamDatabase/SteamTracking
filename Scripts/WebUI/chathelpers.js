@@ -5,6 +5,57 @@
 webpackJsonp(
   [4],
   {
+    "1zkO": function(e, t, n) {
+      "use strict";
+      n.d(t, "k", function() {
+        return o;
+      }),
+        n.d(t, "l", function() {
+          return i;
+        }),
+        n.d(t, "d", function() {
+          return r;
+        }),
+        n.d(t, "e", function() {
+          return s;
+        }),
+        n.d(t, "j", function() {
+          return a;
+        }),
+        n.d(t, "f", function() {
+          return c;
+        }),
+        n.d(t, "g", function() {
+          return u;
+        }),
+        n.d(t, "i", function() {
+          return p;
+        }),
+        n.d(t, "h", function() {
+          return l;
+        }),
+        n.d(t, "a", function() {
+          return m;
+        }),
+        n.d(t, "c", function() {
+          return h;
+        }),
+        n.d(t, "b", function() {
+          return d;
+        });
+      var o = 1,
+        i = 4,
+        r = 750,
+        s = 799,
+        a = 7,
+        c = 250820,
+        u = 330050,
+        p = 358510,
+        l = 366490,
+        m = "18446744073709551615",
+        h = 0,
+        d = 2147483647;
+    },
     "3e1Q": function(e, t, n) {
       "use strict";
       function o(e) {
@@ -18,7 +69,7 @@ webpackJsonp(
         (t.a = o);
       var i = n("TToO"),
         r = n("y986"),
-        s = n("DRjr"),
+        s = n("1zkO"),
         a = n("m5yx"),
         c = (function() {
           function e(e) {
@@ -87,19 +138,6 @@ webpackJsonp(
             e
           );
         })();
-    },
-    "4Dav": function(e, t, n) {
-      "use strict";
-      function o(e, t) {
-        for (var n = [], o = 2; o < arguments.length; o++)
-          n[o - 2] = arguments[o];
-        console.assert
-          ? 0 == n.length
-            ? console.assert(!!e, t)
-            : console.assert.apply(console, [!!e, t].concat(n))
-          : e || console.warn.apply(console, [t].concat(n));
-      }
-      t.a = o;
     },
     "6+TJ": function(e, t, n) {
       "use strict";
@@ -194,18 +232,18 @@ webpackJsonp(
       }
       function a(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (E = n) : "shared" == e && (O = n);
+          "friendsui" == e ? (D = n) : "shared" == e && (E = n);
         else if ("shared" == e) L = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
-          void 0 !== E ? ((o = E), (i = n)) : (o = n),
-            void 0 !== O ? ((r = O), (s = L)) : (r = L),
+          void 0 !== D ? ((o = D), (i = n)) : (o = n),
+            void 0 !== E ? ((r = E), (s = L)) : (r = L),
             m.a.InitFromObjects(o, i, r, s),
+            (D = void 0),
             (E = void 0),
-            (O = void 0),
             (L = void 0);
         }
       }
@@ -214,14 +252,14 @@ webpackJsonp(
         u = n("wLXD"),
         p = n("m5yx"),
         l = n("PVtO"),
-        m = (n("kllU"), n("sVhq")),
-        h = n("4Dav"),
+        m = (n("kllU"), n("rZel")),
+        h = n("U3bN"),
         d = n("TToO"),
         f = n("y986"),
         v = n("Mn8c"),
         _ = n("3e1Q"),
-        b = n("wzNa"),
-        g = n("KLxG"),
+        b = n("edqd"),
+        g = n("Bp66"),
         y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -531,66 +569,15 @@ webpackJsonp(
           );
         })(c.Component);
       window.AssertMsg = h.a;
-      var D = new l.a();
-      (window.ClientConnectionAPI = D),
+      var O = new l.a();
+      (window.ClientConnectionAPI = O),
         document.addEventListener("DOMContentLoaded", function() {
           Object(p.c)(), r();
         });
-      var E, O, L;
+      var D, E, L;
       window.LocalizationReady = a;
     },
-    DRjr: function(e, t, n) {
-      "use strict";
-      n.d(t, "k", function() {
-        return o;
-      }),
-        n.d(t, "l", function() {
-          return i;
-        }),
-        n.d(t, "d", function() {
-          return r;
-        }),
-        n.d(t, "e", function() {
-          return s;
-        }),
-        n.d(t, "j", function() {
-          return a;
-        }),
-        n.d(t, "f", function() {
-          return c;
-        }),
-        n.d(t, "g", function() {
-          return u;
-        }),
-        n.d(t, "i", function() {
-          return p;
-        }),
-        n.d(t, "h", function() {
-          return l;
-        }),
-        n.d(t, "a", function() {
-          return m;
-        }),
-        n.d(t, "c", function() {
-          return h;
-        }),
-        n.d(t, "b", function() {
-          return d;
-        });
-      var o = 1,
-        i = 4,
-        r = 750,
-        s = 799,
-        a = 7,
-        c = 250820,
-        u = 330050,
-        p = 358510,
-        l = 366490,
-        m = "18446744073709551615",
-        h = 0,
-        d = 2147483647;
-    },
-    KLxG: function(e, t, n) {
+    Bp66: function(e, t, n) {
       "use strict";
       function o(e, t, n) {
         return {
@@ -1071,462 +1058,20 @@ and limitations under the License.
           );
         };
     },
-    huD9: function(e, t, n) {
+    U3bN: function(e, t, n) {
       "use strict";
-      function o(e) {
-        return function(t, n, o) {
-          var i = o.value;
-          o.value = function() {
-            for (var t = this, o = [], r = 0; r < arguments.length; r++)
-              o[r] = arguments[r];
-            var s = this[n + "_DebounceProperties"];
-            void 0 === s &&
-              (s = this[n + "_DebounceProperties"] = {
-                hTimer: void 0,
-                nPending: 0
-              }),
-              void 0 === s.hTimer
-                ? (i.apply(this, o),
-                  (s.hTimer = window.setInterval(function() {
-                    s.nPending > 0
-                      ? (i.apply(t, o), (s.nPending = 0))
-                      : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
-                  }, e)))
-                : (s.nPending += 1);
-          };
-        };
+      function o(e, t) {
+        for (var n = [], o = 2; o < arguments.length; o++)
+          n[o - 2] = arguments[o];
+        console.assert
+          ? 0 == n.length
+            ? console.assert(!!e, t)
+            : console.assert.apply(console, [!!e, t].concat(n))
+          : e || console.warn.apply(console, [t].concat(n));
       }
       t.a = o;
     },
-    kllU: function(e, t, n) {
-      "use strict";
-      var o = n("mtWM");
-      n.n(o), n("m5yx"), n("z9An");
-    },
-    m5yx: function(e, t, n) {
-      "use strict";
-      function o() {
-        var e = i("config");
-        e && Object.assign(r, e);
-        var t = i("userinfo");
-        t && Object.assign(s, t), (n.p = r.CDN_URL);
-      }
-      function i(e, t) {
-        void 0 === t && (t = a);
-        var n = document.getElementById(t);
-        if (n)
-          try {
-            return JSON.parse(n.getAttribute("data-" + e) || "");
-          } catch (e) {
-            console.error("Failed to parse config", e);
-          }
-        else console.error("Missing config element #" + t);
-      }
-      n.d(t, "a", function() {
-        return r;
-      }),
-        n.d(t, "d", function() {
-          return s;
-        }),
-        (t.c = o),
-        (t.b = i);
-      var r = {
-          EUNIVERSE: 0,
-          WEB_UNIVERSE: "",
-          LANGUAGE: "english",
-          CDN_URL: "",
-          MEDIA_CDN_COMMUNITY_URL: "",
-          MEDIA_CDN_URL: "",
-          COMMUNITY_CDN_URL: "",
-          COMMUNITY_CDN_ASSET_URL: "",
-          PUBLIC_SHARED_URL: "",
-          COMMUNITY_BASE_URL: "",
-          CHAT_BASE_URL: "",
-          STORE_BASE_URL: "",
-          STORE_ICON_BASE_URL: "",
-          IN_CLIENT: !1,
-          USE_POPUPS: !1,
-          IN_MOBILE: !1,
-          WEBAPI_BASE_URL: "",
-          TOKEN_URL: "",
-          SESSIONID: "",
-          BUILD_TIMESTAMP: 0,
-          FRIENDSUI_BETA: !1,
-          STEAM_TV: !1
-        },
-        s = {
-          logged_in: !1,
-          steamid: "",
-          accountid: 0,
-          account_name: "",
-          token: void 0,
-          token_use_id: void 0
-        },
-        a = "webui_config";
-    },
-    sVhq: function(e, t, n) {
-      "use strict";
-      function o(e) {
-        for (var t = [], n = 1; n < arguments.length; n++)
-          t[n - 1] = arguments[n];
-        var o = v.LocalizeString(e);
-        return o
-          ? (t.length > 0 &&
-              (o = o.replace(/%(\d+)\$s/g, function(e, n) {
-                if (n <= t.length && n >= 1) {
-                  var o = t[n - 1];
-                  return String(void 0 === o || null === o ? "" : o);
-                }
-                return e;
-              })),
-            o)
-          : e;
-      }
-      function i(e) {
-        for (var t = [], n = 1; n < arguments.length; n++)
-          t[n - 1] = arguments[n];
-        var o = v.LocalizeString(e);
-        if (!o) return e;
-        for (var i, r = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(o)); ) {
-          (a += i[0].length), r.push(i[1]);
-          var u = parseInt(i[2]);
-          u >= 1 && u <= t.length && r.push(t[u - 1]);
-        }
-        return (
-          r.push(o.substr(a)),
-          c.createElement.apply(c, [c.Fragment, null].concat(r))
-        );
-      }
-      function r(e, t) {
-        for (var n = [], i = 2; i < arguments.length; i++)
-          n[i - 2] = arguments[i];
-        return 1 === t || "1" === t
-          ? o.apply(void 0, [e, t].concat(n))
-          : o.apply(void 0, [e + "_Plural", t].concat(n));
-      }
-      function s(e, t) {
-        return void 0 === t && (t = !1), a(e, !t);
-      }
-      function a(e, t, n) {
-        void 0 === t && (t = !1), void 0 === n && (n = !0);
-        var i = t ? "#TimeSince_" : "#TimeInterval_";
-        return e >= 2 * p
-          ? o(i + "XYears", Math.floor(e / p))
-          : e >= p
-            ? ((e -= p),
-              e >= 2 * l
-                ? o(i + "1YearXMonths", Math.floor(e / l))
-                : o(i + "1Year"))
-            : e >= 2 * l
-              ? o(i + "XMonths", Math.floor(e / l))
-              : e >= 2 * m
-                ? o(i + "XWeeks", Math.floor(e / m))
-                : e >= 2 * h
-                  ? o(i + "XDays", Math.floor(e / h))
-                  : e >= h
-                    ? ((e -= h),
-                      e >= 2 * d
-                        ? o(i + "1DayXHours", Math.floor(e / d))
-                        : o(i + "1Day"))
-                    : e >= 2 * d
-                      ? o(i + "XHours", Math.floor(e / d))
-                      : e >= d
-                        ? ((e -= d),
-                          e >= 2 * f && n
-                            ? o(i + "1HourXMinutes", Math.floor(e / f))
-                            : o(i + "1Hour"))
-                        : n
-                          ? e >= 2 * f
-                            ? o(i + "XMinutes", Math.floor(e / f))
-                            : o(e >= f ? i + "1Minute" : i + "LessThanAMinute")
-                          : o(i + "LessThanAnHour");
-      }
-      (t.b = o),
-        (t.d = i),
-        (t.c = r),
-        (t.e = s),
-        n.d(t, "a", function() {
-          return v;
-        });
-      var c = n("Jmof"),
-        u = (n.n(c),
-        (function() {
-          function e() {
-            (this.m_mapTokens = new Map()),
-              (this.m_mapFallbackTokens = new Map());
-          }
-          return (
-            (e.prototype.InitFromObjects = function(e, t, n, o) {
-              var i = this;
-              this.m_mapTokens.clear(),
-                Object.keys(n).forEach(function(e, t) {
-                  i.m_mapTokens.set(e, n[e]);
-                }),
-                Object.keys(e).forEach(function(t, n) {
-                  i.m_mapTokens.set(t, e[t]);
-                }),
-                t &&
-                  Object.keys(t).forEach(function(e, n) {
-                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, t[e]),
-                      i.m_mapFallbackTokens.set(e, t[e]);
-                  }),
-                o &&
-                  Object.keys(o).forEach(function(e, t) {
-                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
-                      i.m_mapFallbackTokens.has(e) ||
-                        i.m_mapFallbackTokens.set(e, o[e]);
-                  });
-            }),
-            (e.prototype.InitDirect = function(e) {
-              var t = this;
-              this.m_mapTokens.clear(),
-                this.m_mapFallbackTokens.clear(),
-                Object.keys(e).forEach(function(n, o) {
-                  t.m_mapTokens.set(n, e[n]);
-                });
-            }),
-            (e.prototype.GetPreferredLocales = function() {
-              var e = ["en-US"];
-              return (
-                "undefined" != typeof navigator &&
-                  void 0 !== navigator.languages &&
-                  (e = navigator.languages),
-                e
-              );
-            }),
-            (e.prototype.LocalizeString = function(e) {
-              if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-              var t = this.m_mapTokens.get(e.substring(1));
-              return void 0 === t ? "" : t;
-            }),
-            (e.prototype.LocalizeStringFromFallback = function(e) {
-              if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-              var t = this.m_mapFallbackTokens.get(e.substring(1));
-              return void 0 === t ? "" : t;
-            }),
-            e
-          );
-        })()),
-        p = 31536e3,
-        l = 2628e3,
-        m = 604800,
-        h = 86400,
-        d = 3600,
-        f = 60,
-        v = new u();
-      window.LocalizationManager = v;
-    },
-    vwkX: function(e, t, n) {
-      "use strict";
-      function o(e, t, n) {
-        t < 0 ||
-          n < 0 ||
-          (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
-      }
-      function i(e, t) {
-        return r(e, function(e) {
-          return t == e;
-        });
-      }
-      function r(e, t) {
-        var n = e.findIndex(t);
-        return n >= 0 && (e.splice(n, 1), !0);
-      }
-      function s(e, t) {
-        return e.reduce(function(e, n, o, i) {
-          return e + (t(n, o, i) ? 1 : 0);
-        }, 0);
-      }
-      function a(e, t) {
-        return e.filter(function(e) {
-          return t !== e;
-        });
-      }
-      function c(e, t) {
-        if (e.length != t.length) return !1;
-        for (var n = 0; n < e.length; n++) if (e[n] != t[n]) return !1;
-        return !0;
-      }
-      function u(e, t, n) {
-        for (var o = 0, i = e.length - 1; o <= i; ) {
-          var r = Math.floor((o + i) / 2),
-            s = n(e[r], t);
-          if (s < 0) o = r + 1;
-          else if (s > 0) i = r - 1;
-          else {
-            if (i == r) return r;
-            if (r == o) return i > r && n(t, e[r + 1]) < 0 ? r : r + 1;
-            o = r;
-          }
-        }
-        return i;
-      }
-      function p(e, t, n) {
-        var o = u(e, t, n);
-        e.splice(o + 1, 0, t);
-      }
-      (t.e = o),
-        (t.c = i),
-        (t.d = r),
-        (t.b = s),
-        (t.a = a),
-        (t.f = c),
-        (t.g = u),
-        (t.h = p);
-    },
-    wzNa: function(e, t, n) {
-      "use strict";
-      n.d(t, "a", function() {
-        return a;
-      });
-      var o = n("BJf/"),
-        i = n.n(o),
-        r = n("DRjr"),
-        s = n("m5yx"),
-        a = (function() {
-          function e(t, n, o, r) {
-            void 0 === t && (t = 0),
-              t instanceof e
-                ? (this.m_ulSteamID = t.m_ulSteamID)
-                : "string" == typeof t
-                  ? (this.m_ulSteamID = i.a.fromString(t, !0))
-                  : n && o && void 0 !== r
-                    ? this.SetFromComponents(t, r, o, n)
-                    : (this.m_ulSteamID = t
-                        ? i.a.fromNumber(t, !0)
-                        : i.a.UZERO);
-          }
-          return (
-            (e.InitFromAccountID = function(t) {
-              return new e(t, s.a.EUNIVERSE, 1, r.k);
-            }),
-            (e.InitFromClanID = function(t) {
-              return new e(t, s.a.EUNIVERSE, 7, 0);
-            }),
-            (e.prototype.GetAccountID = function() {
-              return this.m_ulSteamID.getLowBitsUnsigned();
-            }),
-            (e.prototype.GetInstance = function() {
-              return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
-            }),
-            (e.prototype.GetAccountType = function() {
-              return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
-            }),
-            (e.prototype.GetUniverse = function() {
-              return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
-            }),
-            (e.prototype.ConvertTo64BitString = function() {
-              return this.m_ulSteamID.toString();
-            }),
-            (e.prototype.Render = function() {
-              switch (this.GetAccountType()) {
-                case 0:
-                  return (
-                    "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-                case 7:
-                  return (
-                    "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-                case 4:
-                  return (
-                    "[A:" +
-                    this.GetUniverse() +
-                    ":" +
-                    this.GetAccountID() +
-                    ":" +
-                    this.GetInstance() +
-                    "]"
-                  );
-                case 3:
-                  return (
-                    "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-                case 2:
-                  return (
-                    "[M:" +
-                    this.GetUniverse() +
-                    ":" +
-                    this.GetAccountID() +
-                    ":" +
-                    this.GetInstance() +
-                    "]"
-                  );
-                case 5:
-                  return (
-                    "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-                case 6:
-                  return (
-                    "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-                default:
-                  return (
-                    "[U:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
-                  );
-              }
-            }),
-            (e.prototype.BIsValid = function() {
-              var e = this.GetAccountType();
-              if (e <= 0 || e >= 11) return !1;
-              var t = this.GetUniverse();
-              if (t <= 0 || t >= 5) return !1;
-              if (1 == e) {
-                if (0 == this.GetAccountID() || this.GetInstance() > r.l)
-                  return !1;
-              } else if (7 == e) {
-                if (0 == this.GetAccountID() || 0 != this.GetInstance())
-                  return !1;
-              } else if (3 == e && 0 == this.GetAccountID()) return !1;
-              return !0;
-            }),
-            (e.prototype.BIsIndividualAccount = function() {
-              return 1 == this.GetAccountType();
-            }),
-            (e.prototype.BIsClanAccount = function() {
-              return 7 == this.GetAccountType();
-            }),
-            (e.prototype.SetAccountID = function(e) {
-              this.m_ulSteamID = new i.a(
-                e,
-                this.m_ulSteamID.getHighBitsUnsigned(),
-                !0
-              );
-            }),
-            (e.prototype.SetInstance = function(e) {
-              this.SetFromComponents(
-                this.GetAccountID(),
-                e,
-                this.GetAccountType(),
-                this.GetUniverse()
-              );
-            }),
-            (e.prototype.SetAccountType = function(e) {
-              this.SetFromComponents(
-                this.GetAccountID(),
-                this.GetInstance(),
-                e,
-                this.GetUniverse()
-              );
-            }),
-            (e.prototype.SetUniverse = function(e) {
-              this.SetFromComponents(
-                this.GetAccountID(),
-                this.GetInstance(),
-                this.GetAccountType(),
-                e
-              );
-            }),
-            (e.prototype.SetFromComponents = function(e, t, n, o) {
-              var r = ((255 & o) << 24) + ((15 & n) << 20) + (1048575 & t),
-                s = 4294967295 & e;
-              this.m_ulSteamID = new i.a(s, r, !0);
-            }),
-            e
-          );
-        })();
-    },
-    z9An: function(e, t, n) {
+    "V/Vt": function(e, t, n) {
       "use strict";
       n.d(t, "c", function() {
         return o;
@@ -1544,9 +1089,9 @@ and limitations under the License.
         i = n("TToO"),
         r = n("y986"),
         s = n("wLXD"),
-        a = (n.n(s), n("vwkX")),
-        c = n("huD9"),
-        u = n("KLxG");
+        a = (n.n(s), n("lEUG")),
+        c = n("x0X8"),
+        u = n("Bp66");
       !(function(e) {
         (e[(e.Minimized = 1)] = "Minimized"),
           (e[(e.Hidden = 2)] = "Hidden"),
@@ -2128,6 +1673,477 @@ and limitations under the License.
           );
         })(),
         d = new h();
+    },
+    edqd: function(e, t, n) {
+      "use strict";
+      n.d(t, "a", function() {
+        return a;
+      });
+      var o = n("BJf/"),
+        i = n.n(o),
+        r = n("1zkO"),
+        s = n("oy0q"),
+        a = (function() {
+          function e(t, n, o, r) {
+            void 0 === t && (t = 0),
+              t instanceof e
+                ? (this.m_ulSteamID = t.m_ulSteamID)
+                : "string" == typeof t
+                  ? (this.m_ulSteamID = i.a.fromString(t, !0))
+                  : n && o && void 0 !== r
+                    ? this.SetFromComponents(t, r, o, n)
+                    : (this.m_ulSteamID = t
+                        ? i.a.fromNumber(t, !0)
+                        : i.a.UZERO);
+          }
+          return (
+            (e.InitFromAccountID = function(t) {
+              return new e(t, s.a.EUNIVERSE, 1, r.k);
+            }),
+            (e.InitFromClanID = function(t) {
+              return new e(t, s.a.EUNIVERSE, 7, 0);
+            }),
+            (e.prototype.GetAccountID = function() {
+              return this.m_ulSteamID.getLowBitsUnsigned();
+            }),
+            (e.prototype.GetInstance = function() {
+              return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
+            }),
+            (e.prototype.GetAccountType = function() {
+              return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
+            }),
+            (e.prototype.GetUniverse = function() {
+              return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
+            }),
+            (e.prototype.ConvertTo64BitString = function() {
+              return this.m_ulSteamID.toString();
+            }),
+            (e.prototype.Render = function() {
+              switch (this.GetAccountType()) {
+                case 0:
+                  return (
+                    "[I:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+                case 7:
+                  return (
+                    "[g:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+                case 4:
+                  return (
+                    "[A:" +
+                    this.GetUniverse() +
+                    ":" +
+                    this.GetAccountID() +
+                    ":" +
+                    this.GetInstance() +
+                    "]"
+                  );
+                case 3:
+                  return (
+                    "[G:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+                case 2:
+                  return (
+                    "[M:" +
+                    this.GetUniverse() +
+                    ":" +
+                    this.GetAccountID() +
+                    ":" +
+                    this.GetInstance() +
+                    "]"
+                  );
+                case 5:
+                  return (
+                    "[P:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+                case 6:
+                  return (
+                    "[C:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+                default:
+                  return (
+                    "[U:" + this.GetUniverse() + ":" + this.GetAccountID() + "]"
+                  );
+              }
+            }),
+            (e.prototype.BIsValid = function() {
+              var e = this.GetAccountType();
+              if (e <= 0 || e >= 11) return !1;
+              var t = this.GetUniverse();
+              if (t <= 0 || t >= 5) return !1;
+              if (1 == e) {
+                if (0 == this.GetAccountID() || this.GetInstance() > r.l)
+                  return !1;
+              } else if (7 == e) {
+                if (0 == this.GetAccountID() || 0 != this.GetInstance())
+                  return !1;
+              } else if (3 == e && 0 == this.GetAccountID()) return !1;
+              return !0;
+            }),
+            (e.prototype.BIsIndividualAccount = function() {
+              return 1 == this.GetAccountType();
+            }),
+            (e.prototype.BIsClanAccount = function() {
+              return 7 == this.GetAccountType();
+            }),
+            (e.prototype.SetAccountID = function(e) {
+              this.m_ulSteamID = new i.a(
+                e,
+                this.m_ulSteamID.getHighBitsUnsigned(),
+                !0
+              );
+            }),
+            (e.prototype.SetInstance = function(e) {
+              this.SetFromComponents(
+                this.GetAccountID(),
+                e,
+                this.GetAccountType(),
+                this.GetUniverse()
+              );
+            }),
+            (e.prototype.SetAccountType = function(e) {
+              this.SetFromComponents(
+                this.GetAccountID(),
+                this.GetInstance(),
+                e,
+                this.GetUniverse()
+              );
+            }),
+            (e.prototype.SetUniverse = function(e) {
+              this.SetFromComponents(
+                this.GetAccountID(),
+                this.GetInstance(),
+                this.GetAccountType(),
+                e
+              );
+            }),
+            (e.prototype.SetFromComponents = function(e, t, n, o) {
+              var r = ((255 & o) << 24) + ((15 & n) << 20) + (1048575 & t),
+                s = 4294967295 & e;
+              this.m_ulSteamID = new i.a(s, r, !0);
+            }),
+            e
+          );
+        })();
+    },
+    kllU: function(e, t, n) {
+      "use strict";
+      var o = n("mtWM");
+      n.n(o), n("m5yx"), n("V/Vt");
+    },
+    lEUG: function(e, t, n) {
+      "use strict";
+      function o(e, t, n) {
+        t < 0 ||
+          n < 0 ||
+          (n >= e.length && (e[n] = void 0), e.splice(n, 0, e.splice(t, 1)[0]));
+      }
+      function i(e, t) {
+        return r(e, function(e) {
+          return t == e;
+        });
+      }
+      function r(e, t) {
+        var n = e.findIndex(t);
+        return n >= 0 && (e.splice(n, 1), !0);
+      }
+      function s(e, t) {
+        return e.reduce(function(e, n, o, i) {
+          return e + (t(n, o, i) ? 1 : 0);
+        }, 0);
+      }
+      function a(e, t) {
+        return e.filter(function(e) {
+          return t !== e;
+        });
+      }
+      function c(e, t) {
+        if (e.length != t.length) return !1;
+        for (var n = 0; n < e.length; n++) if (e[n] != t[n]) return !1;
+        return !0;
+      }
+      function u(e, t, n) {
+        for (var o = 0, i = e.length - 1; o <= i; ) {
+          var r = Math.floor((o + i) / 2),
+            s = n(e[r], t);
+          if (s < 0) o = r + 1;
+          else if (s > 0) i = r - 1;
+          else {
+            if (i == r) return r;
+            if (r == o) return i > r && n(t, e[r + 1]) < 0 ? r : r + 1;
+            o = r;
+          }
+        }
+        return i;
+      }
+      function p(e, t, n) {
+        var o = u(e, t, n);
+        e.splice(o + 1, 0, t);
+      }
+      (t.e = o),
+        (t.c = i),
+        (t.d = r),
+        (t.b = s),
+        (t.a = a),
+        (t.f = c),
+        (t.g = u),
+        (t.h = p);
+    },
+    m5yx: function(e, t, n) {
+      "use strict";
+      var o = n("oy0q");
+      n.d(t, "a", function() {
+        return o.a;
+      }),
+        n.d(t, "d", function() {
+          return o.d;
+        }),
+        n.d(t, "c", function() {
+          return o.c;
+        }),
+        n.d(t, "b", function() {
+          return o.b;
+        });
+    },
+    oy0q: function(e, t, n) {
+      "use strict";
+      function o() {
+        var e = i("config");
+        e && Object.assign(r, e);
+        var t = i("userinfo");
+        t && Object.assign(s, t), (window.__webpack_public_path__ = r.CDN_URL);
+      }
+      function i(e, t) {
+        void 0 === t && (t = a);
+        var n = document.getElementById(t);
+        if (n)
+          try {
+            return JSON.parse(n.getAttribute("data-" + e) || "");
+          } catch (e) {
+            console.error("Failed to parse config", e);
+          }
+        else console.error("Missing config element #" + t);
+      }
+      n.d(t, "a", function() {
+        return r;
+      }),
+        n.d(t, "d", function() {
+          return s;
+        }),
+        (t.c = o),
+        (t.b = i);
+      var r = {
+          EUNIVERSE: 0,
+          WEB_UNIVERSE: "",
+          LANGUAGE: "english",
+          CDN_URL: "",
+          MEDIA_CDN_COMMUNITY_URL: "",
+          MEDIA_CDN_URL: "",
+          COMMUNITY_CDN_URL: "",
+          COMMUNITY_CDN_ASSET_URL: "",
+          PUBLIC_SHARED_URL: "",
+          COMMUNITY_BASE_URL: "",
+          CHAT_BASE_URL: "",
+          STORE_BASE_URL: "",
+          STORE_ICON_BASE_URL: "",
+          IN_CLIENT: !1,
+          USE_POPUPS: !1,
+          IN_MOBILE: !1,
+          WEBAPI_BASE_URL: "",
+          TOKEN_URL: "",
+          SESSIONID: "",
+          BUILD_TIMESTAMP: 0,
+          FRIENDSUI_BETA: !1,
+          STEAM_TV: !1
+        },
+        s = {
+          logged_in: !1,
+          steamid: "",
+          accountid: 0,
+          account_name: "",
+          token: void 0,
+          token_use_id: void 0
+        },
+        a = "webui_config";
+    },
+    rZel: function(e, t, n) {
+      "use strict";
+      function o(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        var o = v.LocalizeString(e);
+        return o
+          ? (t.length > 0 &&
+              (o = o.replace(/%(\d+)\$s/g, function(e, n) {
+                if (n <= t.length && n >= 1) {
+                  var o = t[n - 1];
+                  return String(void 0 === o || null === o ? "" : o);
+                }
+                return e;
+              })),
+            o)
+          : e;
+      }
+      function i(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        var o = v.LocalizeString(e);
+        if (!o) return e;
+        for (var i, r = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(o)); ) {
+          (a += i[0].length), r.push(i[1]);
+          var u = parseInt(i[2]);
+          u >= 1 && u <= t.length && r.push(t[u - 1]);
+        }
+        return (
+          r.push(o.substr(a)),
+          c.createElement.apply(c, [c.Fragment, null].concat(r))
+        );
+      }
+      function r(e, t) {
+        for (var n = [], i = 2; i < arguments.length; i++)
+          n[i - 2] = arguments[i];
+        return 1 === t || "1" === t
+          ? o.apply(void 0, [e, t].concat(n))
+          : o.apply(void 0, [e + "_Plural", t].concat(n));
+      }
+      function s(e, t) {
+        return void 0 === t && (t = !1), a(e, !t);
+      }
+      function a(e, t, n) {
+        void 0 === t && (t = !1), void 0 === n && (n = !0);
+        var i = t ? "#TimeSince_" : "#TimeInterval_";
+        return e >= 2 * p
+          ? o(i + "XYears", Math.floor(e / p))
+          : e >= p
+            ? ((e -= p),
+              e >= 2 * l
+                ? o(i + "1YearXMonths", Math.floor(e / l))
+                : o(i + "1Year"))
+            : e >= 2 * l
+              ? o(i + "XMonths", Math.floor(e / l))
+              : e >= 2 * m
+                ? o(i + "XWeeks", Math.floor(e / m))
+                : e >= 2 * h
+                  ? o(i + "XDays", Math.floor(e / h))
+                  : e >= h
+                    ? ((e -= h),
+                      e >= 2 * d
+                        ? o(i + "1DayXHours", Math.floor(e / d))
+                        : o(i + "1Day"))
+                    : e >= 2 * d
+                      ? o(i + "XHours", Math.floor(e / d))
+                      : e >= d
+                        ? ((e -= d),
+                          e >= 2 * f && n
+                            ? o(i + "1HourXMinutes", Math.floor(e / f))
+                            : o(i + "1Hour"))
+                        : n
+                          ? e >= 2 * f
+                            ? o(i + "XMinutes", Math.floor(e / f))
+                            : o(e >= f ? i + "1Minute" : i + "LessThanAMinute")
+                          : o(i + "LessThanAnHour");
+      }
+      (t.b = o),
+        (t.d = i),
+        (t.c = r),
+        (t.e = s),
+        n.d(t, "a", function() {
+          return v;
+        });
+      var c = n("Jmof"),
+        u = (n.n(c),
+        (function() {
+          function e() {
+            (this.m_mapTokens = new Map()),
+              (this.m_mapFallbackTokens = new Map());
+          }
+          return (
+            (e.prototype.InitFromObjects = function(e, t, n, o) {
+              var i = this;
+              this.m_mapTokens.clear(),
+                Object.keys(n).forEach(function(e, t) {
+                  i.m_mapTokens.set(e, n[e]);
+                }),
+                Object.keys(e).forEach(function(t, n) {
+                  i.m_mapTokens.set(t, e[t]);
+                }),
+                t &&
+                  Object.keys(t).forEach(function(e, n) {
+                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, t[e]),
+                      i.m_mapFallbackTokens.set(e, t[e]);
+                  }),
+                o &&
+                  Object.keys(o).forEach(function(e, t) {
+                    i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
+                      i.m_mapFallbackTokens.has(e) ||
+                        i.m_mapFallbackTokens.set(e, o[e]);
+                  });
+            }),
+            (e.prototype.InitDirect = function(e) {
+              var t = this;
+              this.m_mapTokens.clear(),
+                this.m_mapFallbackTokens.clear(),
+                Object.keys(e).forEach(function(n, o) {
+                  t.m_mapTokens.set(n, e[n]);
+                });
+            }),
+            (e.prototype.GetPreferredLocales = function() {
+              var e = ["en-US"];
+              return (
+                "undefined" != typeof navigator &&
+                  void 0 !== navigator.languages &&
+                  (e = navigator.languages),
+                e
+              );
+            }),
+            (e.prototype.LocalizeString = function(e) {
+              if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+              var t = this.m_mapTokens.get(e.substring(1));
+              return void 0 === t ? "" : t;
+            }),
+            (e.prototype.LocalizeStringFromFallback = function(e) {
+              if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+              var t = this.m_mapFallbackTokens.get(e.substring(1));
+              return void 0 === t ? "" : t;
+            }),
+            e
+          );
+        })()),
+        p = 31536e3,
+        l = 2628e3,
+        m = 604800,
+        h = 86400,
+        d = 3600,
+        f = 60,
+        v = new u();
+      window.LocalizationManager = v;
+    },
+    x0X8: function(e, t, n) {
+      "use strict";
+      function o(e) {
+        return function(t, n, o) {
+          var i = o.value;
+          o.value = function() {
+            for (var t = this, o = [], r = 0; r < arguments.length; r++)
+              o[r] = arguments[r];
+            var s = this[n + "_DebounceProperties"];
+            void 0 === s &&
+              (s = this[n + "_DebounceProperties"] = {
+                hTimer: void 0,
+                nPending: 0
+              }),
+              void 0 === s.hTimer
+                ? (i.apply(this, o),
+                  (s.hTimer = window.setInterval(function() {
+                    s.nPending > 0
+                      ? (i.apply(t, o), (s.nPending = 0))
+                      : (window.clearInterval(s.hTimer), (s.hTimer = void 0));
+                  }, e)))
+                : (s.nPending += 1);
+          };
+        };
+      }
+      t.a = o;
     }
   },
   ["6+TJ"]
