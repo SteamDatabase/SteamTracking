@@ -4793,6 +4793,11 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	visibility: collapse;
 }
 
+#ButtonCancel.ControllerSlot 
+{
+	visibility: visible;
+}
+
 .Parental #ButtonNext,
 .Parental #ButtonBack,
 .Parental #ButtonCancel,

@@ -2456,6 +2456,14 @@ webpackJsonp(
               })
             )
           ),
+          le.createElement("circle", {
+            className: "logoBG",
+            opacity: "0",
+            fill: "#000000",
+            cx: "156.586",
+            cy: "128",
+            r: "125.914"
+          }),
           le.createElement(
             "g",
             { id: "logo" },

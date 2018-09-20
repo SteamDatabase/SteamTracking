@@ -2199,6 +2199,8 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_Install_InstallRetailFiles"			"Steam will now begin installing game content."
 "Steam_Install_WillVerifyExistingFiles"		"Steam will now verify your game install."
 
+"Steam_Install_ChooseLanguage"			"Select language:"
+
 "Steam_MoreInfoLink"				"Tell me more about Steam"
 
 "Steam_RegisterCDKey_ExampleRetail"		"Product codes use :\n             AAAAA-BBBBB-CCCCC-DDDDD-EEEEE"

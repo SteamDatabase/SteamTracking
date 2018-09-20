@@ -1431,14 +1431,9 @@ a.pagelink:hover {
 .dynamiclink_box {
 	position: relative;
 	font-family: Helvetica, Arial, sans-serif;
-	border: 1px solid rgba( 84, 133, 183, 1);
-	background-color: rgba( 84, 133, 183, 0.6);
-	padding: 6px;
-	margin: 10px 15% 10px 0px;
-	height: 88px;
-	-moz-box-shadow:    0 0 10px #000000;
-	-webkit-box-shadow: 0 0 10px #000000;
-	box-shadow: 0 0 3px 0 #000000;
+background: -webkit-linear-gradient( 60deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%););background: linear-gradient( 60deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%););	border-radius: 6px;
+	padding: 8px;
+	margin: 10px 0px 10px 0px;
 
 	cursor: pointer;
 	overflow: hidden;
@@ -1452,24 +1447,6 @@ a.dynamiclink_box {
 .dynamiclink_box.noPopup
 {
 	cursor: default;
-}
-
-.dynamiclink_box.workshop_item {
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/sharedfiles/bg_shared_item_workshop.jpg' );
-}
-
-.dynamiclink_box.greenlight_item {
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/sharedfiles/bg_shared_item_greenlight.jpg' );
-}
-
-.dynamiclink_box.webguide_item {
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/sharedfiles/bg_shared_item_guide.jpg' );
 }
 
 .dynamiclink_box.newspost .dynamiclink_description {
@@ -1487,21 +1464,26 @@ img.dynamiclink_preview {
 	max-width: 75%;
 }
 .dynamiclink_content {
-	overflow: hidden;
-	color: #c6d4df;
-	font-size: 11px;
-	height: 88px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: rgb( 192, 192, 192 );
+	text-shadow: 0 0 16px rgb( 0, 0, 0 );
+	font-size: 13px;
 	line-height: normal;
 	text-align: left;
+	display: flow-root;
 }
 .dynamiclink_name {
-	font-size: 16px;
-	color: #66C0F4;
+	font-size: 15px;
+	color: #aad8ec;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
-			white-space: nowrap;
-	text-overflow: ellipsis;
+			border-bottom: 1px dotted rgba( 109, 207, 246, .6 );
+	padding-bottom: 0px;
+	display: inline-block;
+	margin-bottom: 6px;
 }
 .dynamiclink_name .dynamiclink_type {
 	color: #c6d4df;
@@ -1519,7 +1501,9 @@ img.dynamiclink_preview {
 	}
 .dynamiclink_author {
 	height: 16px;
-	color: #c6d4df;
+	font-size: 12px;
+	color: #95a6b2;
+	margin-bottom: 4px;
 }
 	.dynamiclink_author a {
 		color: #c6d4df;
@@ -1528,6 +1512,9 @@ img.dynamiclink_preview {
 	.dynamiclink_author a:hover {
 		color: #ffffff;
 		text-decoration: underline;
+	}
+	.dynamiclink_author span {
+		color: #809fb7;
 	}
 .dynamiclink_url {
 	margin-top: 8px;

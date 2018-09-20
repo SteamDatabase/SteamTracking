@@ -2456,6 +2456,14 @@ webpackJsonp(
               })
             )
           ),
+          le.createElement("circle", {
+            className: "logoBG",
+            opacity: "0",
+            fill: "#000000",
+            cx: "156.586",
+            cy: "128",
+            r: "125.914"
+          }),
           le.createElement(
             "g",
             { id: "logo" },
@@ -61484,7 +61492,12 @@ and limitations under the License.
               (i.state = {
                 friendDrag: void 0,
                 bStateExpanded: !1,
-                bNonGroupHovered: !1
+                bNonGroupHovered: !1,
+                broadcastInfo:
+                  t.group.watching_broadcast_steamid &&
+                  Vl.StartInfo(
+                    t.group.watching_broadcast_steamid.ConvertTo64BitString()
+                  )
               }),
               i
             );
@@ -61516,6 +61529,9 @@ and limitations under the License.
                   type: "chatroomgroup",
                   group: t
                 });
+            }),
+            (t.prototype.componentWillUnmount = function() {
+              this.state.broadcastInfo && Vl.StopInfo(this.state.broadcastInfo);
             }),
             (t.prototype.OnDragEnd = function(e) {
               ny.DragDropManager.EndDrag();
@@ -61584,15 +61600,27 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.group,
                 t = this.state.bStateExpanded,
-                i = ["ChatRoomListGroupItem"],
-                n = this.props.group.hasVoiceRoom;
+                i = null !== e.watching_broadcast_steamid,
+                n = i && new di.a(e.watching_broadcast_steamid),
+                r =
+                  i && this.state.broadcastInfo
+                    ? this.state.broadcastInfo.m_strTitle ||
+                      this.state.broadcastInfo.m_strAppTitle ||
+                      Object(la.b)(
+                        "#PersonaStateWatchingBroadcast_Player",
+                        Sd.FriendStore.GetPlayer(n.GetAccountID()).display_name
+                      )
+                    : void 0,
+                o = ["ChatRoomListGroupItem"],
+                a = this.props.group.hasVoiceRoom;
               return (
-                n || i.push("NoChannels"),
-                t && i.push("ShowAllChannels"),
-                this.state.bNonGroupHovered && i.push("NonGroupHovered"),
+                a || o.push("NoChannels"),
+                t && o.push("ShowAllChannels"),
+                this.state.bNonGroupHovered && o.push("NonGroupHovered"),
+                i && o.push("HasLinkedBroadcast"),
                 Ca.createElement(
                   "div",
-                  ri.a({ className: i.join(" ") }, this.GetDragDropProps(!0)),
+                  ri.a({ className: o.join(" ") }, this.GetDragDropProps(!0)),
                   Ca.createElement(
                     "div",
                     {
@@ -61601,6 +61629,15 @@ and limitations under the License.
                       onContextMenu: this.OnContextMenu
                     },
                     Ca.createElement(Wh, { group: e, small: !0 }),
+                    i &&
+                      Ca.createElement(
+                        "div",
+                        { className: "steamTVSubtitle" },
+                        Ca.createElement(wd.U, null),
+                        ": ",
+                        r,
+                        " "
+                      ),
                     Ca.createElement(
                       "div",
                       { className: "groupNameStatusContainer" },
@@ -61623,10 +61660,10 @@ and limitations under the License.
                           Ca.createElement(wd.l, null)
                         )
                       ),
-                      !t && n && Ca.createElement(Yp, { group: e })
+                      !t && a && Ca.createElement(Yp, { group: e })
                     ),
                     Ca.createElement(Kp, { group: e }),
-                    n &&
+                    a &&
                       Ca.createElement(
                         "div",
                         {
@@ -61639,7 +61676,7 @@ and limitations under the License.
                         })
                       )
                   ),
-                  n &&
+                  a &&
                     Ca.createElement(
                       "div",
                       { className: "detailsView" },
@@ -66808,37 +66845,46 @@ and limitations under the License.
                 n = this.state.info,
                 r = n.m_strAppTitle,
                 o = n.m_strThumbnailUrl,
-                a = n.m_strTitle;
-              return Ca.createElement(
-                "div",
-                { className: "broadcastInfoContainer", onClick: t },
+                a = n.m_strTitle,
+                s = new di.a(this.props.broadcastId),
+                c = a;
+              return (
+                a ||
+                  (c = Object(la.b)(
+                    "#PersonaStateWatchingBroadcast_Player",
+                    Sd.FriendStore.GetPlayer(s.GetAccountID()).display_name
+                  )),
                 Ca.createElement(
                   "div",
-                  { className: "broadcastDetails" },
+                  { className: "broadcastInfoContainer", onClick: t },
                   Ca.createElement(
                     "div",
-                    { className: "nowWatching" },
-                    Object(la.b)("#Broadcast_NowWatching")
+                    { className: "broadcastDetails" },
+                    Ca.createElement(
+                      "div",
+                      { className: "nowWatching" },
+                      Object(la.b)("#Broadcast_NowWatching")
+                    ),
+                    Ca.createElement("div", { className: "gameTitle" }, r),
+                    Ca.createElement("div", { className: "broadcastTitle" }, c)
                   ),
-                  Ca.createElement("div", { className: "gameTitle" }, r),
-                  Ca.createElement("div", { className: "broadcastTitle" }, a)
-                ),
-                Ca.createElement(
-                  "div",
-                  { className: "thumbnail" },
-                  o &&
-                    Ca.createElement(Ah, {
-                      className: "thumbnailImg",
-                      src: o,
-                      duration: 2500
-                    })
-                ),
-                i &&
                   Ca.createElement(
                     "div",
-                    { className: "actions", onClick: this.OnCloseClick },
-                    Ca.createElement(wd._5, null)
-                  )
+                    { className: "thumbnail" },
+                    o &&
+                      Ca.createElement(Ah, {
+                        className: "thumbnailImg",
+                        src: o,
+                        duration: 2500
+                      })
+                  ),
+                  i &&
+                    Ca.createElement(
+                      "div",
+                      { className: "actions", onClick: this.OnCloseClick },
+                      Ca.createElement(wd._5, null)
+                    )
+                )
               );
             }),
             ri.c([_n.a], t.prototype, "OnCloseClick", null),

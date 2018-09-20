@@ -9609,6 +9609,59 @@ html.web_chat_frame .perf_timing_area
 }
 
 
+.msg .filteredURL.bb_removedlink
+{
+
+	color: rgb(201, 22, 22);
+	background-color: black;
+	border-radius: 4px;
+	padding: 0 4px;
+	border: .5px solid #400;
+	cursor: default;
+}
+
+
+.msg .filteredURL.bb_removedlink .SVGIcon_Caution
+{
+	width: 18px;
+	height: 18px;
+	transform: translateY(3px);
+	margin-right: 4px;
+}
+
+.msg .filteredURL.bb_removedlink .SVGIcon_Caution path,
+.msg .filteredURL.bb_removedlink .SVGIcon_Caution line
+{
+	stroke: red;
+}
+
+
+.msg .filteredURL.bb_removedlink .SVGIcon_Caution .triangle path
+{
+	fill: rgb(104, 12, 0);
+}
+
+
+.msg .filteredURL.bb_removedlink .SVGIcon_Caution .exclamation path
+{
+	fill: red;
+}
+
+.msg .filteredURL.bb_removedlink .threatURL
+{
+	font-weight: bold;
+	color: red;
+	cursor: text;
+}
+
+.msg .filteredURL.bb_removedlink .threatURL::selection
+{
+	font-weight: bold;
+	color: rgb(255, 74, 74);
+	cursor: text;
+	background-color: #800;
+}
+
 .msg.EmojiOnly span.bb_removedlink
 {
 	font-size: 10px;
@@ -14161,6 +14214,41 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 {
 	color: rgb( 197, 214, 212 );
 	font-size: 14px;
+}
+
+
+.ChatRoomListGroupItem.HasLinkedBroadcast
+{
+	position: relative;
+}
+
+.ChatRoomListGroupItem.HasLinkedBroadcast .SVGIcon_SteamTV
+{
+	height: 22px;
+	width: 75px;
+}
+
+.ChatRoomListGroupItem.HasLinkedBroadcast .SVGIcon_SteamTV .logoBG
+{
+	opacity: 1;
+	fill: rgb(34, 41, 49);
+	stroke-width: 20px;
+	stroke: rgb(37, 45, 55);
+}
+
+.ChatRoomListGroupItem.HasLinkedBroadcast .steamTVSubtitle
+{
+	position: absolute;
+	left: 34px;
+	top: 28px;
+	z-index: 10;
+	font-size: 10px;
+	font-weight: thin;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	color: rgb(125, 110, 188);
+	white-space: nowrap;
 }
 
 .compactView .ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName
@@ -18945,4 +19033,550 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .avoidEvents
 {
 	pointer-events: none;
+}
+
+.numberCounterContainer
+{
+	min-width: 12px;
+	text-align: center;
+	display: inline-block;
+	border: 1px solid rgb(28, 28, 29);
+	border-radius: 4px;
+	color: white;
+	background-color: rgba(83, 83, 83, .5);
+
+	position: relative;
+
+	max-height: 16px;
+	overflow: hidden;
+	margin-bottom: -4px;
+}
+
+.numberColumn
+{
+	animation-timing-function: linear;
+	animation-fill-mode: backwards;
+	margin-top: -1px;
+}
+
+.randomNumberLabel
+{
+	text-align: center;
+	transition-property: opacity;
+	transition-duration: 1s;
+	transition-delay: 6s;
+	opacity: 1;
+	user-select: none;
+}
+
+.randomNumberLabel.randomActual
+{
+	user-select: initial;
+}
+
+.msgText:not(.slashRoll) .rollLabel,
+.slashRoll .randomLabel
+{
+	display: none;
+}
+
+.msgText.randomContainer .randomMsg
+{
+	margin-top: 0px;
+}
+
+.randomNumberShadow
+{
+	background: linear-gradient( to bottom, rgba( 57, 58, 62, 1 ) 0px,  rgba( 57, 58, 62, 0 ) 20%, rgba( 57, 58, 62, 0 ) 50%, rgba( 57, 58, 62, 1 ) 100% );
+	position: absolute;
+	top: -1px;
+	left: 0;
+	right: 0;
+	bottom: -1px;
+	border-radius: 3px;
+}
+
+.numberColumn.startingZero
+{
+	opacity: .3;
+	animation-fill-mode: none;
+
+}
+
+.randomContainer:not(.randomPlayAnimation) .numberColumn.startingZero
+{
+	opacity: 0.3;
+}
+
+
+.randomPlayAnimation .numberCounterContainer .randomNumberLabel:before
+{
+	position: absolute;
+	top: -16px;
+
+}
+
+.randomPlayAnimation .numberCounterContainer .randomNumberLabel:after
+{
+	position: absolute;
+	top: 17px;
+	left: 2px;
+}
+
+/*.randomPlayAnimation .numberCounterContainer .randomNumberLabel:before
+{
+	content: attr(data-before);
+}
+
+.randomPlayAnimation .numberCounterContainer .randomNumberLabel:after
+{
+	content: attr(data-after);
+}
+
+.randomPlayAnimation .numberCounterContainer.number0 .randomNumberLabel { animation-name: randomNumbers0; }
+.randomPlayAnimation .numberCounterContainer.number1 .randomNumberLabel { animation-name: randomNumbers1; }
+.randomPlayAnimation .numberCounterContainer.number2 .randomNumberLabel { animation-name: randomNumbers2; }
+.randomPlayAnimation .numberCounterContainer.number3 .randomNumberLabel { animation-name: randomNumbers3; }
+.randomPlayAnimation .numberCounterContainer.number4 .randomNumberLabel { animation-name: randomNumbers4; }
+.randomPlayAnimation .numberCounterContainer.number5 .randomNumberLabel { animation-name: randomNumbers5; }
+.randomPlayAnimation .numberCounterContainer.number6 .randomNumberLabel { animation-name: randomNumbers6; }
+.randomPlayAnimation .numberCounterContainer.number7 .randomNumberLabel { animation-name: randomNumbers7; }
+.randomPlayAnimation .numberCounterContainer.number8 .randomNumberLabel { animation-name: randomNumbers8; }
+.randomPlayAnimation .numberCounterContainer.number9 .randomNumberLabel { animation-name: randomNumbers9; }
+.randomPlayAnimation .numberCounterContainer.number10 .randomNumberLabel { animation-name: randomNumbers10; }
+
+*/
+
+
+@keyframes randomNumbers { 0% { opacity: 1; transform: translateY(-180px); } 100% { opacity: 1; transform: translateY(0px); } }
+
+@keyframes randomNumbers0 { 0% { opacity: 1; transform: translateY(-0px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers1 { 0% { opacity: 1; transform: translateY(-18px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers2 { 0% { opacity: 1; transform: translateY(-36px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers3 { 0% { opacity: 1; transform: translateY(-54px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers4 { 0% { opacity: 1; transform: translateY(-72px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers5 { 0% { opacity: 1; transform: translateY(-90px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers6 { 0% { opacity: 1; transform: translateY(-108px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers7 { 0% { opacity: 1; transform: translateY(-126px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers8 { 0% { opacity: 1; transform: translateY(-144px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers9 { 0% { opacity: 1; transform: translateY(-162px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+@keyframes randomNumbers10 { 0% { opacity: 1; transform: translateY(-180px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
+
+
+.msgText:not(.randomPlayAnimation) .numberColumn
+{
+	animation-name: none !important;
+}
+
+@keyframes randomNumbersZero
+{
+	0%
+	{
+		transform: translateY(-180px);
+		opacity: 1;
+	}
+	100%
+	{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+.randomValues
+{
+	opacity: .7;
+}
+
+
+
+
+.coinLabel
+{
+	text-transform: uppercase;
+	color: black;
+	font-size: 10px;
+	letter-spacing: 0px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.CoinModel
+{
+	border: 1px solid red;
+	width: fit-content;
+}
+
+.flipCoinContainer
+{
+	position: relative;
+	overflow: visible;
+	height: 40px;
+	transition: all .2s ease-in-out;
+
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: both;
+
+	transform-origin: 50% 50%;
+	opacity: 0;
+	filter: saturate(0);
+}
+
+.flipPlayAnimation .flipCoinContainer
+{
+	opacity: 1;
+	animation-name: coinFade;
+}
+
+.flipCoinAndResult
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.coin {
+	margin: -16px 0 0 -16px;
+	width: 32px;
+	height: 32px;
+	-ms-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	margin-left: 8px;
+
+	perspective: 80px;
+	position: absolute;
+	top: 10px;
+
+	left: 0px;
+	transform: rotateY(0deg) rotateX(90deg) scale(1);
+
+	transition: all .2s ease-in;
+	z-index: -1;
+
+  }
+
+  .coin .front {
+	width: 100%;
+	height: 100%;
+	background: #f7941e;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: both;
+  }
+
+  .coin .back {
+	width: 100%;
+	height: 100%;
+	background: #f7941e;
+	border-radius: 50%;
+	transform: rotateY(180deg) translateZ(4px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	filter: brightness(1);
+
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: both;
+  }
+
+  .flipPlayAnimation .coin .back
+  {
+	animation-name: coinFlipBottom;
+  }
+
+  .flipPlayAnimation .coin .front
+  {
+	animation-name: coinFlipTop;
+  }
+
+  .coin .front_b {
+	width: 100%;
+	height: 100%;
+	background: rgb(135, 88, 33);
+	border-radius: 50%;
+	-webkit-transform: translateZ(-1px);
+	transform: translateZ(-.5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+  }
+
+  .coin .back_b {
+	width: 100%;
+	height: 100%;
+	background: rgb(135, 88, 33);
+	border-radius: 50%;
+	transform: translateZ(-3.5px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+  }
+
+
+  .coin:before {
+	content: "";
+	margin-left: -5px;
+	width: 3.5px;
+	height: 100%;
+	background: rgb(135, 88, 33);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	transform-origin: 100% 50%;
+	transform: rotateY(-90deg) translateX(0px);
+	transform-origin: 100% 50%;
+  }
+
+  .coin:after {
+	content: "";
+	width: 3.5px;
+	height: 100%;
+	background: rgb(135, 88, 33);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	transform: rotateZ(90deg) rotateY(90deg) translateX(0px);
+	transform-origin: 0% 50%;
+  }
+
+
+  .coin .mid
+  {
+	content: "";
+	margin-left: -5px;
+	width: 3.5px;
+	height: 100%;
+	background: rgb(135, 88, 33);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	transform-origin: 100% 50%;
+	transform: rotateY(-90deg) rotateX(45deg) translateX(0px);
+	transform-origin: 100% 50%;
+  }
+
+  .coin .mid:before
+  {
+	content: "";
+	margin-left: -5px;
+	width: 3.5px;
+	height: 100%;
+	background: rgb(135, 128, 233);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 1;
+	transform-origin: 100% 50%;
+	transform: rotateY(-90deg) rotateX(-45deg) translateX(0px);
+	transform-origin: 100% 50%;
+  }
+
+.coinFace
+{
+	border-radius: 50%;
+	width: 34px;
+	height: 34px;
+	background-color: gray;
+}
+
+.coinFace .flipCoinWinningSide
+{
+	transform: translateZ(10px);
+}
+
+.coinFace .flipCoinLosingSide
+{
+	transform: translateZ(-10px);
+}
+
+.flipPlayAnimation .coin
+{
+	animation-name: coinFlip;
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	transform-origin: 50% 50%;
+
+	transform-style: preserve-3d;
+}
+
+@keyframes coinSpin
+{
+	0%
+	{
+		transform: rotateY(360deg) rotateX(0deg) translateX(0px);
+	}
+	50%
+	{
+		transform: rotateY(0deg) rotateX(90deg) translateX(0px);
+	}
+	100%
+	{
+		transform: rotateY(360deg) rotateX(0deg) translateX(0px);
+	}
+}
+
+
+@keyframes coinFlip
+{
+	0%
+	{
+		left: -40px;
+		transform: rotateY(6300deg) rotateX(0deg) scale(0.5, 0.5);
+	}
+	10%
+	{
+
+		left: 20px;
+	}
+	30%
+	{
+
+		left: 0px;
+	}
+	90%
+	{
+		left: 0px;
+		transform: rotateY(0deg) rotateX(90deg) scale(1, 1);
+	}
+	100%
+	{
+		left: 0px;
+		transform: rotateY(0deg) rotateX(90deg) scale(1, 0);
+	}
+}
+
+
+@keyframes coinFlipTop
+{
+	0%
+	{
+		filter: brightness(1);
+	}
+	30%
+	{
+		filter: brightness(1);
+	}
+	40%
+	{
+		filter: brightness(2);
+	}
+	50%
+	{
+		filter: brightness(1);
+	}
+	100%
+	{
+		filter: brightness(0.5);
+	}
+}
+
+@keyframes coinFlipBottom
+{
+	0%
+	{
+		filter: brightness(1);
+	}
+	30%
+	{
+		filter: brightness(0.35);
+	}
+	100%
+	{
+		filter: brightness(0);
+	}
+}
+
+
+.flipContainer.flipPlayAnimation
+{
+
+}
+
+.resultLabel
+{
+	margin-left: 6px;
+	text-transform: uppercase;
+	transform-origin: 100% 50%;
+
+	animation-duration: 4s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-fill-mode: both;
+	color: rgb(255, 255, 255);
+}
+
+.flipPlayAnimation .resultLabel
+{
+	animation-name: coinFlipResult;
+}
+
+@keyframes coinFlipResult
+{
+	0%
+	{
+		opacity: 0;
+		transform: rotateX(90deg) translateY(10px);
+	}
+	76%
+	{
+		opacity: 0;
+		transform: rotateX(90deg) translateY(10px);
+		color: rgb(126, 126, 126);
+	}
+	80%
+	{
+		transform: rotateX(45deg) translateY(-8px);
+		color: rgb(126, 126, 126);
+	}
+	84%
+	{
+		opacity: 1;
+		transform: rotateX(0deg) translateY(0px);
+		color: rgb(126, 126, 126);
+	}
+	100%
+	{
+		opacity: 1;
+		transform: rotateX(0deg) translateY(0px);
+		color: rgb(255, 255, 255);
+	}
+}
+
+
+@keyframes coinFade
+{
+	0%
+	{
+		opacity: 1;
+	}
+	75%
+	{
+		opacity: 1;
+	}
+	80%
+	{
+		opacity: 0;
+	}
+	100%
+	{
+		opacity: 0;
+	}
 }

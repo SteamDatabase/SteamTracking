@@ -16,7 +16,7 @@
 				</Panel>
 				
 				<Panel id="MsgBoxButtons">	
-					<Button id="ButtonCancel" class="ButtonCancel MsgBoxButton Button">
+					<Button id="ButtonCancel" class="ControllerSlot ButtonCancel MsgBoxButton Button">
 						<Label id="CancelButtonText" text="#Library_ControllerSaveCancel" />
 					</Button>
 				</Panel>
