@@ -1,5 +1,5 @@
 {
-  "revision": 168,
+  "revision": 169,
   "pops": {
     "ams": {
       "desc": "Amsterdam",
@@ -524,6 +524,14 @@
       ],
       "service_address_ranges": [
         "45.121.186.0/23"
+      ]
+    },
+    "tyo1": {
+      "desc": "Tokyo (TY2)",
+      "geo": [ 139.68, 35.68 ],
+      "relay_addresses": [
+         "155.133.245.34:27015-27068",
+         "155.133.239.35:27015-27068"
       ]
     },
     "vie": {
