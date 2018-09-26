@@ -19400,7 +19400,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 {
 	position: relative;
 	overflow: visible;
-	height: 40px;
 	transition: all .2s ease-in-out;
 
 	animation-duration: 4s;
@@ -19426,7 +19425,8 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	overflow: visible;
 }
 
-.coin {
+.coin
+{
 	margin: -16px 0 0 -16px;
 	width: 32px;
 	height: 32px;
@@ -19445,10 +19445,10 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 	transition: all .2s ease-in;
 	z-index: -1;
+}
 
-  }
-
-  .coin .front {
+.coin .front
+{
 	width: 100%;
 	height: 100%;
 	background: #b3b3b3;
@@ -19459,12 +19459,13 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	z-index: -1;
 
 	animation-duration: 4s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: both;
-  }
+}
 
-  .coin .back {
+.coin .back
+{
 	width: 100%;
 	height: 100%;
 	background: #aaaaaa;
@@ -19477,10 +19478,10 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	filter: brightness(1);
 
 	animation-duration: 4s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: 1;
 	animation-timing-function: ease-out;
 	animation-fill-mode: both;
-  }
+}
 
   .MsgAnimating .coin .back
   {

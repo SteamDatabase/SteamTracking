@@ -87185,7 +87185,7 @@ and limitations under the License.
                 Sa.createElement(
                   "div",
                   { className: "flipCoinAndResult" },
-                  "/flip:",
+                  Sa.createElement("div", null, "/flip:"),
                   Sa.createElement(
                     "div",
                     { className: i },
