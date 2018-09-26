@@ -9733,7 +9733,7 @@ html.web_chat_frame .perf_timing_area
 	line-height: 18px;
 }
 
-.msgText.plusOneContainer
+.msgText.MsgNoUserContent
 {
 	overflow: visible;
 	margin-bottom: 2px;
@@ -9756,7 +9756,7 @@ html.web_chat_frame .perf_timing_area
 
 }
 
-.plusOnePlayAnimation .plusOne
+.MsgAnimating .plusOne
 {
 	animation-name: plusOne;
 }
@@ -19300,17 +19300,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	user-select: initial;
 }
 
-.msgText:not(.slashRoll) .rollLabel,
-.slashRoll .randomLabel
-{
-	display: none;
-}
-
-.msgText.randomContainer .randomMsg
-{
-	margin-top: 0px;
-}
-
 .randomNumberShadow
 {
 	background: linear-gradient( to bottom, rgba( 57, 58, 62, 1 ) 0px,  rgba( 57, 58, 62, 0 ) 20%, rgba( 57, 58, 62, 0 ) 50%, rgba( 57, 58, 62, 1 ) 100% );
@@ -19329,50 +19318,25 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 }
 
-.randomContainer:not(.randomPlayAnimation) .numberColumn.startingZero
+.msgText:not(.MsgAnimating) .numberColumn.startingZero
 {
 	opacity: 0.3;
 }
 
 
-.randomPlayAnimation .numberCounterContainer .randomNumberLabel:before
+.MsgAnimating .numberCounterContainer .randomNumberLabel:before
 {
 	position: absolute;
 	top: -16px;
 
 }
 
-.randomPlayAnimation .numberCounterContainer .randomNumberLabel:after
+.MsgAnimating .numberCounterContainer .randomNumberLabel:after
 {
 	position: absolute;
 	top: 17px;
 	left: 2px;
 }
-
-/*.randomPlayAnimation .numberCounterContainer .randomNumberLabel:before
-{
-	content: attr(data-before);
-}
-
-.randomPlayAnimation .numberCounterContainer .randomNumberLabel:after
-{
-	content: attr(data-after);
-}
-
-.randomPlayAnimation .numberCounterContainer.number0 .randomNumberLabel { animation-name: randomNumbers0; }
-.randomPlayAnimation .numberCounterContainer.number1 .randomNumberLabel { animation-name: randomNumbers1; }
-.randomPlayAnimation .numberCounterContainer.number2 .randomNumberLabel { animation-name: randomNumbers2; }
-.randomPlayAnimation .numberCounterContainer.number3 .randomNumberLabel { animation-name: randomNumbers3; }
-.randomPlayAnimation .numberCounterContainer.number4 .randomNumberLabel { animation-name: randomNumbers4; }
-.randomPlayAnimation .numberCounterContainer.number5 .randomNumberLabel { animation-name: randomNumbers5; }
-.randomPlayAnimation .numberCounterContainer.number6 .randomNumberLabel { animation-name: randomNumbers6; }
-.randomPlayAnimation .numberCounterContainer.number7 .randomNumberLabel { animation-name: randomNumbers7; }
-.randomPlayAnimation .numberCounterContainer.number8 .randomNumberLabel { animation-name: randomNumbers8; }
-.randomPlayAnimation .numberCounterContainer.number9 .randomNumberLabel { animation-name: randomNumbers9; }
-.randomPlayAnimation .numberCounterContainer.number10 .randomNumberLabel { animation-name: randomNumbers10; }
-
-*/
-
 
 @keyframes randomNumbers { 0% { opacity: 1; transform: translateY(-180px); } 100% { opacity: 1; transform: translateY(0px); } }
 
@@ -19389,7 +19353,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 @keyframes randomNumbers10 { 0% { opacity: 1; transform: translateY(-180px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
 
 
-.msgText:not(.randomPlayAnimation) .numberColumn
+.msgText:not(.MsgAnimating) .numberColumn
 {
 	animation-name: none !important;
 }
@@ -19448,7 +19412,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	opacity: 0;
 }
 
-.flipPlayAnimation .flipCoinContainer
+.MsgAnimating .flipCoinContainer
 {
 	opacity: 1;
 	animation-name: coinFade;
@@ -19458,6 +19422,8 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 {
 	display: flex;
 	flex-direction: row;
+	height: 20px;
+	overflow: visible;
 }
 
 .coin {
@@ -19516,12 +19482,12 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	animation-fill-mode: both;
   }
 
-  .flipPlayAnimation .coin .back
+  .MsgAnimating .coin .back
   {
 	animation-name: coinFlipBottom;
   }
 
-  .flipPlayAnimation .coin .front
+  .MsgAnimating .coin .front
   {
 	animation-name: coinFlipTop;
   }
@@ -19631,7 +19597,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	transform: translateZ(-10px);
 }
 
-.flipPlayAnimation .coin
+.MsgAnimating .coin
 {
 	animation-name: coinFlip;
 	animation-duration: 4s;
@@ -19729,12 +19695,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	}
 }
 
-
-.flipContainer.flipPlayAnimation
-{
-
-}
-
 .resultLabel
 {
 	margin-left: 6px;
@@ -19748,7 +19708,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	color: rgb(255, 255, 255);
 }
 
-.flipPlayAnimation .resultLabel
+.MsgAnimating .resultLabel
 {
 	animation-name: coinFlipResult;
 }
