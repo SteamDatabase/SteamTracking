@@ -79,13 +79,14 @@ GDynamicStore = {
 
 		var fnRunOnLoadCallbacks = function() {
 			GDynamicStore.m_bLoadComplete = true;
-			GDynamicStore.DecorateDynamicItems();
-			GDynamicStore.PopulateRecommendedTagList();
 			GDynamicStore.InitAppearHandler();
 
 			for ( var i = 0; i < GDynamicStore.s_rgfnOnReadyCallbacks.length; i++ )
 				GDynamicStore.s_rgfnOnReadyCallbacks[i]();
 			GDynamicStore.s_rgfnOnReadyCallbacks = null;
+
+			GDynamicStore.DecorateDynamicItems();
+			GDynamicStore.PopulateRecommendedTagList();
 		};
 
 		try {
@@ -370,7 +371,6 @@ GDynamicStore = {
 	HandleClusterChange: function( cluster ) {
 		GDynamicStore.s_ImpressionTracker.CheckVisibility();
 		var $ScrollingContainer = $J( cluster.elScrollArea );
-		var $RealContainer = $ScrollingContainer.parent();
 		var capsules = $ScrollingContainer.find( '.cluster_capsule' );
 		GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible( capsules[cluster.nCurCap] );
 	},
@@ -577,16 +577,18 @@ GDynamicStore = {
 				if( g_AccountID && unAppID && $El.data('ds-options') !== 0 ) // Only add if we have an appid
 				{
 					var $elMenu = $J ( '<div></div>', { 'class': 'ds_options' } ).append($J('<div>'));
-					$elMenu.v_tooltip ( {
-						'tooltipClass': 'ds_options_tooltip',
-						'location': 'bottom left',
-						'offsetY': -20,
-						'useClickEvent': true,
-						'useMouseEnterEvent': false,
-						func: GDynamicStore.CapsuleSettingsMenu
-					} );
-
 					$El.append ( $elMenu );
+
+					$El.one( 'mouseenter', function() {
+						$elMenu.v_tooltip ( {
+							'tooltipClass': 'ds_options_tooltip',
+							'location': 'bottom left',
+							'offsetY': -20,
+							'useClickEvent': true,
+							'useMouseEnterEvent': false,
+							func: GDynamicStore.CapsuleSettingsMenu
+						} );
+					} );
 				}
 
 			}
@@ -1298,6 +1300,30 @@ GStoreItemData = {
 		}
 	},
 
+	GetStoreItemDataForElement: function( $el )
+	{
+		var unAppId = $el.data('ds-appid');
+		var unPackageID = $el.data('ds-packageid');
+		var unBundleID = $el.data('ds-bundleid' );
+
+		if ( unBundleID && GStoreItemData.rgBundleData[unBundleID] )
+			return { bundleid: unBundleID, item: GStoreItemData.rgBundleData[unBundleID] };
+
+		if( unPackageID && unPackageID.toString().indexOf(',') !== -1 )
+			unPackageID = unPackageID.split(',')[0];
+
+		if ( unPackageID && GStoreItemData.rgPackageData[unPackageID] )
+			return { packageid: unPackageID, item: GStoreItemData.rgPackageData[unPackageID] };
+
+		if( unAppId && unAppId.toString().indexOf(',') !== -1 )
+			unAppId = unAppId.split(',')[0];
+
+		if ( unAppId && GStoreItemData.rgAppData[unAppId] )
+			return { appid: unAppId, item: GStoreItemData.rgAppData[unAppId] };
+
+		return { item: undefined };
+	},
+
 	AddStoreAccountData: function( rgAccounts )
 	{
 		if ( rgAccounts && rgAccounts.length > 0 )
@@ -1406,20 +1432,40 @@ GStoreItemData = {
 		return GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/bundle/' + unBundleID + '/', strFeatureContext, nDepth )
 	},
 
-	GetHoverParams: function ( unAppID, unPackageID )
+	GetHoverParams: function ( unAppID, unPackageID, unBundleID )
 	{
-		var hoverparams = unAppID ? { type: 'app', id: unAppID } : { type: 'sub', id: unPackageID };
+		var hoverparams;
+
+		if ( unBundleID )
+			hoverparams = { type: 'bundle', id: unBundleID };
+		else if ( unPackageID )
+			hoverparams = { type: 'sub', id: unPackageID };
+		else if ( unAppID )
+			hoverparams = { type: 'app', id: unAppID };
+		else
+			return null;
+
 		hoverparams.v6 = 1;
 		return hoverparams;
 	},
 
-	BindHoverEvents: function( $Element, unAppID, unPackageID )
+	BindHoverEvents: function( $Element, unAppID, unPackageID, unBundleID )
 	{
 		$Element.mouseenter( function( event ) {
-					GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID, unPackageID ) );
+					GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID, unPackageID, unBundleID ) );
 				}).mouseleave( function( event ) {
 					HideGameHover( this, event, $J('#global_hover') );
 				});
+	},
+
+	BindHoverEventsForItem: function( $Element, oItem )
+	{
+		return GStoreItemData.BindHoverEvents( $Element, oItem.appid, oItem.packageid, oItem.bundleid );
+	},
+
+	GetCapParamsForItem: function( strFeatureContext, rgItem, params, nDepth )
+	{
+		return GStoreItemData.GetCapParams( strFeatureContext, rgItem.appid, rgItem.packageid, rgItem.bundleid, params, nDepth );
 	},
 
 	GetCapParams: function( strFeatureContext, unAppID, unPackageID, unBundleID, params, nDepth )
@@ -1557,7 +1603,7 @@ GStoreItemData = {
 		for ( var i = 0; i < rgItems.length; i++ )
 		{
 			var oItem = rgItems[i];
-			var unAppID, unPackageID, unBundleID;
+			var unAppID = null, unPackageID = null, unBundleID = null;
 			if ( oItem instanceof Object )
 			{
 				if ( oItem.appid )
@@ -1624,12 +1670,6 @@ GStoreItemData = {
 		}
 
 		if ( rgItemData.coming_soon && ApplicableSettings.prepurchase && !Settings.prepurchase )
-			return false;
-
-		if ( rgItemData.has_adult_content_violence && Settings.hide_adult_content_violence )
-			return false;
-
-		if ( rgItemData.has_adult_content_sex && Settings.hide_adult_content_sex )
 			return false;
 
 		return true;
@@ -1959,12 +1999,6 @@ GDynamicStorePage = {
 
 			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
 		}
-
-		if ( this.bHideAdultContentViolence )
-			Settings = jQuery.extend({}, Settings, {hide_adult_content_violence: true});
-
-		if ( this.bHideAdultContentSex )
-			Settings = jQuery.extend({}, Settings, {hide_adult_content_sex: true});
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = cMinItemsToDisplay;

@@ -3957,7 +3957,12 @@ webpackJsonp(
                           this.GetPrivacySetting("PrivacyInventory"),
                           this.m_PrivacySettings.PrivacyInventoryGifts
                         )
-                      : this.m_PrivacySettings[e];
+                      : "PrivacyFriendsList" == e
+                        ? o(
+                            this.m_PrivacySettings.PrivacyProfile,
+                            this.m_PrivacySettings.PrivacyFriendsList
+                          )
+                        : this.m_PrivacySettings[e];
             }),
             Object.defineProperty(e.prototype, "CommentPermission", {
               get: function() {
@@ -4118,6 +4123,17 @@ webpackJsonp(
                         },
                         Object(w.b)("#ProfilePrivacy_Playtime")
                       )
+                  ),
+                  v.createElement("div", { className: "ProfilePrivacyHR" }),
+                  v.createElement(
+                    s,
+                    {
+                      PrivacyStore: e,
+                      strLabel: Object(w.b)("#ProfilePrivacy_FriendsList"),
+                      PrivacyKey: "PrivacyFriendsList",
+                      LimitPrivacyKey: "PrivacyProfile"
+                    },
+                    Object(w.b)("#ProfilePrivacy_FriendsList_Desc")
                   ),
                   v.createElement("div", { className: "ProfilePrivacyHR" }),
                   v.createElement(

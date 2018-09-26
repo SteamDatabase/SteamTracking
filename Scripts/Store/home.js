@@ -166,8 +166,6 @@ GHomepage = {
 			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
 			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
 			GHomepage.rgRecommendedAppsByCreators = v_shuffle( rgParams.rgRecommendedAppsByCreators ) || [];
-			GHomepage.bHideAdultContentViolence = rgParams.bHideAdultContentViolence || false;
-			GHomepage.bHideAdultContentSex = rgParams.bHideAdultContentSex || false;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -502,7 +500,7 @@ GHomepage = {
 
 				$CapTarget.append( $MainCap );
 
-				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'summer2018_standardview_recommend_basic', oItem.appid, oItem.packageid, {capsule_size: 'header', no_hover: true} );
+				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'summer2018_standardview_recommend_basic', oItem.appid, oItem.packageid, oItem.bundleid, {capsule_size: 'header', no_hover: true} );
 				$SmallCap.on('mouseenter', (function(index) { return function() {
 					GHomepage.MainCapCarousel.Advance( index );
 				}; })(i));
@@ -532,35 +530,42 @@ GHomepage = {
 		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), GHomepage.bAutumnSaleMainCap ? 0 : 5 );
 	},
 
-	GetAppFromList: function( unAppId, rgList )
+	GetItemFromList: function( oItem, rgList )
 	{
 		if( rgList )
 		{
 
 			for ( var i = 0; i < rgList.length; i++ )
 			{
-				if ( rgList[i].appid == unAppId )
+				if ( oItem.bundleid && rgList[i].bundleid == oItem.bundleid )
+				{
+					return rgList[i];
+				}
+				else if ( oItem.packageid && rgList[i].packageid == oItem.packageid )
+				{
+					return rgList[i];
+				}
+				else if ( oItem.appid && rgList[i].appid == oItem.appid )
 				{
 					return rgList[i];
 				}
 			}
 		}
-
 		return null;
 	},
 
-	GetRecommendationReasons: function( unAppId )
+	GetRecommendationReasons: function( oItem )
 	{
-		if( !unAppId )
-			return false;
+		if( !oItem )
+			return {};
 
 		return {
-			recommended: GHomepage.GetAppFromList( unAppId, GHomepage.rgRecommendedGames ),
-			recommended_by_curator: GHomepage.GetAppFromList( unAppId, GSteamCurators.rgAppsRecommendedByCurators.apps ),
-			recent_release_by_creator: GHomepage.GetAppFromList( unAppId, GHomepage.rgRecentAppsByCreator ),
-			recommended_by_friend: GHomepage.GetAppFromList( unAppId, GHomepage.rgFriendRecommendations ),
-			top_seller: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.top_sellers ),
-			new_release: GHomepage.GetAppFromList( unAppId, GHomepage.oDisplayLists.popular_new ),
+			recommended: GHomepage.GetItemFromList( oItem, GHomepage.rgRecommendedGames ),
+			recommended_by_curator: GHomepage.GetItemFromList( oItem, GSteamCurators.rgAppsRecommendedByCurators.apps ),
+			recent_release_by_creator: GHomepage.GetItemFromList( oItem, GHomepage.rgRecentAppsByCreator ),
+			recommended_by_friend: GHomepage.GetItemFromList( oItem, GHomepage.rgFriendRecommendations ),
+			top_seller: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.top_sellers ),
+			new_release: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.popular_new ),
 		};
 
 	},
@@ -575,12 +580,12 @@ GHomepage = {
 		var unPackageID = rgItem.packageid;
 
 		var params = { 'class': rgOptions.class + ' broadcast_capsule', 'data-manual-tracking': 1 };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, rgItem, params );
 		if ( !rgItemData )
 			return null;
 
 		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+		GStoreItemData.BindHoverEventsForItem( $CapCtn, rgItem );
 
 		var $ImgCtn = $J('<div class="capsule"/>').addClass( 'main_capsule' )
 
@@ -631,29 +636,16 @@ GHomepage = {
 		var $ScreenshotCtn = $J('<div/>').addClass('screenshots');
 
 		var rgScreenshots = rgItemData.screenshots;
-		var unScreenshotAppId = unAppID;
-		if( !rgScreenshots && rgItemData.appids )
-		{
-			for( var i=0; i<rgItemData.appids.length; i++)
-			{
-				var rgAppInfo = GStoreItemData.rgAppData[ rgItemData.appids[i] ];
-				if( rgAppInfo && rgAppInfo.screenshots )
-				{
-					rgScreenshots = rgAppInfo.screenshots;
-					unScreenshotAppId = rgItemData.appids[i];
-					break;
-				}
-			}
-		}
-
 		if( rgScreenshots && rgScreenshots.length )
 		{
 			for ( var i = 0; i < 4 && i < rgScreenshots.length; i++ )
 			{
+				var screenshot = rgScreenshots[i];
+				var unScreenshotAppId = screenshot.appid || unAppID;
 
 				var $elScreenshotThumbWrapper = $J('<div>');
-				var $ImgScreenshotThumb = $J ( '<div/>' ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, rgScreenshots[ i ].filename, '.600x338' ) );
-				var $ImgScreenshot = $J ( '<div/>', {class:'screenshot'} ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, rgScreenshots[ i ].filename, '.600x338' ) );
+				var $ImgScreenshotThumb = $J ( '<div/>' ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.600x338' ) );
+				var $ImgScreenshot = $J ( '<div/>', {class:'screenshot'} ).attr ( 'data-background-image-url', GetScreenshotURL ( unScreenshotAppId, screenshot.filename, '.600x338' ) );
 
 				$ImgCtn.append($ImgScreenshot);
 
@@ -670,7 +662,7 @@ GHomepage = {
 			$CapCtn.addClass('no_screenshots');
 
 		// Recommendation reason block
-		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( unAppID );
+		var rgRecommendationReasons = GHomepage.GetRecommendationReasons( rgItem );
 		var $RecommendedReason = $J('<div/>').addClass('reason');
 
 
@@ -751,6 +743,7 @@ GHomepage = {
 		}
 		else
 		{
+			// TODO: these do not appear to ever be set on the rgItemData themselves.
 			if ( rgItemData.popular_new_on_steam )
 			{
 				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
@@ -844,79 +837,107 @@ GHomepage = {
 	InstrumentTabbedSection: function()
 	{
 		var $elTarget = $J('#tab_preview_container');
+		var iMountTimeout = null;
 
 		$J('.tab_item').each(function(i, j){
 			var $el = $J(j);
-			var unAppId = $el.data('ds-appid');
+			var rgLookup = GStoreItemData.GetStoreItemDataForElement( $el );
+			var $elInfoDiv = null;
 
-			if( unAppId && unAppId.toString().indexOf(',') !== -1 )
-				unAppId = unAppId.split(',')[0];
-
-			if( unAppId && GStoreItemData.rgAppData[ unAppId ] )
+			if( rgLookup.item )
 			{
-				var rgData = GStoreItemData.rgAppData[ unAppId ];
-
-				var $elInfoDiv = $J('<div>',{'class': 'tab_preview'});
-
-				$elInfoDiv.append($J('<h2>').html( rgData.name ));
-
-				if ( rgData['review_summary'] )
-				{
-					var reviewSummary = rgData['review_summary'];
-					var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
-					$elReviewData.append( $J('<div>', {'class': 'title'}).text('Overall user reviews:') );
-					$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
-					if ( reviewSummary['reviewScore'] > 0 )
-					{
-						$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
-					}
-
-					$elInfoDiv.append( $elReviewData );
-				}
-
-				if( rgData.tags )
-				{
-					var $elTagContainer = $J('<div>',{'class': 'tags'});
-
-					for( var i=0; i<rgData.tags.length; i++)
-					{
-						var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
-						$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
-					}
-					$elInfoDiv.append($elTagContainer);
-				}
-
-				if( rgData.screenshots && rgData.screenshots.length > 0 )
-				{
-					for( var i=0; i < rgData.screenshots.length && i < 4; i++ )
-					{
-						var $elScreenshot = $J('<div>', {'class': 'screenshot'}).attr( 'data-background-image-url', GetScreenshotURL( unAppId, rgData.screenshots[i].filename, '.600x338' ) );
-						$elInfoDiv.append($elScreenshot);
-					}
-				}
-				else
-				{
-					for( var i=0; i < 4; i++ )
-					{
-						var $elScreenshot = $J('<div>', {'class': 'screenshot empty'}).append("<div>").text("This screenshot may contain mature content.");
-						$elInfoDiv.append($elScreenshot);
-					}
-				}
-
-				$elTarget.append($elInfoDiv);
-
 				$el.on('hover', function(){
-					$J('.tab_preview', $elTarget).each(function(i, j){ $J(j).removeClass('focus') });
-					$J('.tab_item.focus').each(function(i, j){ $J(j).removeClass('focus') });
 
-					PreloadImages( $elInfoDiv );
-					$el.addClass('focus');
-					$elInfoDiv.addClass('focus');
+					var fnShowElement = function()
+					{
+						if ( iMountTimeout )
+						{
+							// we may have someone showing delayed.  clear them out if that's the case.
+							window.clearTimeout( iMountTimeout );
+							iMountTimeout = null;
+						}
+
+						$el.siblings().removeClass('focus');
+						$elInfoDiv.siblings().removeClass('focus');
+
+						$el.addClass('focus');
+						$elInfoDiv.addClass('focus');
+					};
+
+					if ( $elInfoDiv )
+					{
+						// we've already built the element, show immediately
+						fnShowElement();
+					}
+					else
+					{
+						var rgData = rgLookup.item;
+						$elInfoDiv = $J('<div>',{'class': 'tab_preview'});
+
+						$elInfoDiv.append($J('<h2>').html( rgData.name ));
+
+						if ( rgData['review_summary'] )
+						{
+							var reviewSummary = rgData['review_summary'];
+							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
+							$elReviewData.append( $J('<div>', {'class': 'title'}).text( rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:') );
+							$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
+							if ( reviewSummary['reviewScore'] > 0 )
+							{
+								$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+							}
+
+							$elInfoDiv.append( $elReviewData );
+						}
+
+						if( rgData.tags )
+						{
+							var $elTagContainer = $J('<div>',{'class': 'tags'});
+
+							for( var i=0; i<rgData.tags.length; i++)
+							{
+								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
+								$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
+							}
+							$elInfoDiv.append($elTagContainer);
+						}
+
+						var rgScreenshots = rgData.screenshots;
+						// we show the "this screenshot may contain mature content" mask for missing screenshots.
+						// in the bundle case, we don't really know so we assume it contains mature apps.
+						// For apps, if they have no screenshots we assume mature, but if they have at least one then they probably aren't mature
+						var bMissingScreenshotsMayBeMature = true;
+						if ( !rgLookup.bundleid && !rgLookup.packageid && rgScreenshots && rgScreenshots.length > 0 )
+							bMissingScreenshotsMayBeMature = false;
+
+						for( var i=0; i < 4; i++ )
+						{
+							if ( i < rgScreenshots.length )
+							{
+								var screenshot = rgScreenshots[i];
+								var unAppId = screenshot.appid || rgLookup.appid;
+								var $elScreenshot = $J('<div>', {'class': 'screenshot'}).attr( 'data-background-image-url', GetScreenshotURL( unAppId, screenshot.filename, '.600x338' ) );
+								$elInfoDiv.append($elScreenshot);
+							}
+							else if ( bMissingScreenshotsMayBeMature )
+							{
+								var $elScreenshot = $J('<div>', {'class': 'screenshot empty'}).append("<div>").text("This screenshot may contain mature content.");
+								$elInfoDiv.append($elScreenshot);
+							}
+						}
+
+						$elTarget.append($elInfoDiv);
+						PreloadImages( $elInfoDiv );
+
+						iMountTimeout = window.setTimeout( fnShowElement, 1 );
+					}
 				});
 			}
 		});
 
-		$J('.tab_item:visible').first().trigger('mouseenter');
+		window.setTimeout( function() {
+			$J('.tab_item:visible').first().trigger('mouseenter');
+		}, 10 );
 
 	},
 
@@ -941,7 +962,7 @@ GHomepage = {
 			function( oItem, strFeature, rgOptions )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, 0, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions );
 				var $FriendsCtn = $J('<div class="friends_container" />');
 				$CapCtn.append($FriendsCtn);
 
@@ -1019,7 +1040,7 @@ GHomepage = {
 			function( oItem, strFeature, rgOptions )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, 0, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions );
 				$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
 
 				return $CapCtn;
@@ -1045,7 +1066,7 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopVRTitles,
 			function( oItem, strFeature, rgOptions )
 			{
-				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
 			},	'best_selling_vr', 4
 		);
 	},		
@@ -1128,7 +1149,7 @@ GHomepage = {
 			oItem = rgCapsules[ idx ];
 			var strHTMLID = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_special_timer';
 
-			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, {
+			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 					'discount_class': 'daily_deal_discount discount_block_large',
 					'capsule_size': 'header'
 
@@ -1157,7 +1178,7 @@ GHomepage = {
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
 			function( oItem, strFeature, rgOptions )
 			{
-				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, 0, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions );
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'recently_updated_desc' } ).text ( oItem.description ) );
 				if ( oItem.announcementid.length != 0 )
 				{
@@ -1357,7 +1378,7 @@ GHomepage = {
 		}
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $J('.specials_under10'), function( oItem, strFeature, rgOptions ) {
-			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
 		} , 'under10', 4 );
 	},
 
@@ -1367,7 +1388,7 @@ GHomepage = {
 			return;
 
 		GHomepage.FillPagedCapsuleCarousel( rgItems, $J('.wishlist_on_sale'), function( oItem, strFeature, rgOptions ) {
-			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
 		} , 'sale_fromyourwishlist', 4 );
 
 		GDynamicStore.MarkAppDisplayed ( rgItems.slice( 0, 4 ) );
@@ -1464,7 +1485,7 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	BuildHomePageGenericCap: function( strFeatureContext, unAppID, unPackageID, rgOptions )
+	BuildHomePageGenericCap: function( strFeatureContext, unAppID, unPackageID, unBundleID, rgOptions )
 	{
 		var rgOptions = $J.extend({
 			'class': 'store_capsule',
@@ -1476,14 +1497,14 @@ GHomepage = {
 		}, rgOptions ? rgOptions : {} );
 
 		var params = { 'class': rgOptions.class + ' broadcast_capsule' };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, unBundleID, params );
 		if ( !rgItemData )
 			return null;
 
 		var $CapCtn = $J('<a/>', params );
 
 		if ( !rgOptions.no_hover )
-			GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+			GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID, unBundleID );
 
 		var $ImgCtn = $J('<div class="capsule"/>').addClass( rgOptions.capsule_size );
 
@@ -1532,12 +1553,6 @@ GHomepage = {
 			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
 
 		}
-
-		if ( GHomepage.bHideAdultContentViolence )
-			Settings = jQuery.extend({}, Settings, {hide_adult_content_violence: true});
-
-		if ( GHomepage.bHideAdultContentSex )
-			Settings = jQuery.extend({}, Settings, {hide_adult_content_sex: true});
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = cMinItemsToDisplay;
@@ -2027,7 +2042,7 @@ GSteamCurators = {
 		{
 			params['curator_clanid'] = oItem.rgCurators[0];
 		}
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
 		if ( !rgItemData )
 			return null;
 
@@ -2079,19 +2094,19 @@ GSteamCurators = {
 		{
 			params['curator_clanid'] = oItem.rgCurators[0];
 		}
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
 		if ( !rgItemData )
 			return null;
 
 		var $Item = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $Item, unAppID, unPackageID );
+		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
 
 
 		// app image
 		// app image anchor
 
 		var $CapCtn = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $CapCtn, unAppID, unPackageID );
+		GStoreItemData.BindHoverEventsForItem( $CapCtn, oItem );
 
 		var $ImgCtn = $J('<div class="capsule headerv5"/>');
 
@@ -2134,7 +2149,7 @@ GSteamCurators = {
 		var unAppID = oItem.appid;
 		var unPackageID = 0;
 		var params = { 'class': 'curator_giant_capsule', 'curator_clanid' : unClanId };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, null, params );
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
 
 		var rgRecommendation = oItem.rgRecommendationByCurator[ unClanId ] || '';
 
@@ -2144,7 +2159,7 @@ GSteamCurators = {
 			return null;
 
 		var $Item = $J('<a/>', params );
-		GStoreItemData.BindHoverEvents( $Item, unAppID, unPackageID );
+		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
 
 		// container
 

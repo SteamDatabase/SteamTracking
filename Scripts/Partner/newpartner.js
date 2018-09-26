@@ -210,8 +210,8 @@ function ValidateCompanyInfo( bTransition, nextSection )
 
 	if ( bTransition )
 	{
-        if ( !nextSection )
-            nextSection = 'SignNDA';
+		if ( !nextSection )
+			nextSection = 'SignNDA';
 		GoToSection( nextSection );
 	}
 	return true;
@@ -243,25 +243,25 @@ function ValidateProjectInfo( bTransition, nextSection )
 
 function ValidateSigneeInfo( bTransition, nextSection )
 {
-    var bHasRequiredFields = true;
-    // signee info
-    bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
-    bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
-    bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
 
-    if ( !bHasRequiredFields )
-    {
-        ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
-        return false;
-    }
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
 
-    if ( bTransition )
-    {
-        if ( !nextSection )
-            nextSection = 'SignLicense';
-        GoToSection( nextSection );
-    }
-    return true;
+	if ( bTransition )
+	{
+		if ( !nextSection )
+			nextSection = 'SignLicense';
+		GoToSection( nextSection );
+	}
+	return true;
 }
 
 
@@ -286,14 +286,14 @@ function SignSDA()
 		return;
 	}
 
-    var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
-    var agreedToSDA2 = $J( "#agree_to_sda_checkbox2" );
-    var agreedToSDA3 = $J( "#agree_to_sda_checkbox3" );
-    if ( !agreedToSDA1.prop( "checked" ) || !agreedToSDA2.prop( "checked" ) || !agreedToSDA3.prop( "checked" ) )
-    {
-        ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Distribution Agreement before continuing.'  );
-        return;
-    }
+	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
+	var agreedToSDA2 = $J( "#agree_to_sda_checkbox2" );
+	var agreedToSDA3 = $J( "#agree_to_sda_checkbox3" );
+	if ( !agreedToSDA1.prop( "checked" ) || !agreedToSDA2.prop( "checked" ) || !agreedToSDA3.prop( "checked" ) )
+	{
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Distribution Agreement before continuing.'  );
+		return;
+	}
 
 	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
 	$J.ajax(
@@ -465,12 +465,12 @@ function SignCyberCafeAgreement()
 		return;
 	}
 
-    var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
-    if ( !agreedToSDA1.prop( "checked" ) )
-    {
-        ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Site License Program before continuing.'  );
-        return;
-    }
+	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
+	if ( !agreedToSDA1.prop( "checked" ) )
+	{
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Site License Program before continuing.'  );
+		return;
+	}
 
 	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
 	$J.ajax(
@@ -537,6 +537,57 @@ function SignOEMProductPurchaseAgreement()
 					top.location.href = response.redirect_url;
 				}
 				else
+				{
+					if ( typeof response.captchagid !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'Error verifying humanity' );
+						UpdateCaptcha( response.captchagid );
+						$J( "#input_captcha" ).val('');
+					}
+					else if ( typeof response.errormsg !== 'undefined' )
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.errormsg );
+					}
+					else
+					{
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				}
+			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
+function SignProductBetaParticipationAgreement()
+{
+	if ( !ValidateSigneeInfoOnAgreementPage() )
+	{
+		return;
+	}
+
+	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
+	if ( !agreedToSDA1.prop( "checked" ) )
+	{
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Product Beta Participation Agreement before continuing.'  );
+		return;
+	}
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsave',
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					top.location.href = response.redirect_url;
+				}
+			else
 				{
 					if ( typeof response.captchagid !== 'undefined' )
 					{

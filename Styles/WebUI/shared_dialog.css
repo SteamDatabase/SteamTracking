@@ -1360,6 +1360,7 @@ button.TextButton:focus
 {
 	cursor: default;
 	opacity: .5;
+	filter: saturate(0.35);
 	box-shadow: none;
 }
 

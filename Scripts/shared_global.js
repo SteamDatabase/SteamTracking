@@ -356,6 +356,61 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 /**
  * @returns CModal
  */
+function ShowEditablePrompt( strTitle, obj, onOk, onCancel, locked = true )
+{
+	strEditButton = 'Edit';
+	strOKButton = 'OK';
+	strCancelButton = 'Cancel';
+
+	var $Body = $J('<form/>');
+	var $TextArea = $J('<textarea/>', {'class': 'newmodal_prompt_textarea', 'id': 'json_window'});
+	$TextArea[0].readOnly = locked;
+	$TextArea.text( JSON.stringify(obj, null, 2) );
+	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_with_textarea gray_bevel fullwidth ' } ).append( $TextArea ) );
+
+	$Body.submit( function( event ) { event.preventDefault(); fnOK(); } );
+
+	var elButtonLabel = $J( '<span/>' ).text( strOKButton );
+	var deferredAction = new jQuery.Deferred();
+
+	var editButtonLabel = $J( '<span/>' ).text( strEditButton );
+	var $EditButton = $J('<button/>', {type: 'button', 'class': 'btn_darkred_white_innerfade btn_medium' } ).append( editButtonLabel );
+	$EditButton.click( function() {
+		$EditButton[0].disable();
+		$OKButton[0].enable();
+		$TextArea[0].readOnly = false;
+		$TextArea.focus();
+	})
+
+	var $OKButton = $J('<button/>', {type: 'submit', 'class': 'btn_green_white_innerfade btn_medium' } ).append( elButtonLabel );
+	$OKButton.click( function() { deferredAction.resolve( $TextArea.val() ); } );
+	$OKButton[0].disabled = locked;
+
+	fnCancel = function() { deferredAction.reject(); };
+	var $CancelButton = _BuildDialogButton( strCancelButton );
+	$CancelButton.click( fnCancel );
+
+	var Modal = _BuildDialog( strTitle, $Body, [ $EditButton, $OKButton, $CancelButton ], fnCancel );
+	deferredAction.always( function() { Modal.Dismiss(); } );
+
+	if (onOk)
+		deferredAction.done(onOk);
+	if (onCancel)
+		deferredAction.fail(onCancel);
+
+	Modal.Show();
+
+	$TextArea.focus();
+
+	// attach the deferred's events to the modal
+	deferredAction.promise( Modal );
+
+	return Modal;
+}
+
+/**
+ * @returns CModal
+ */
 function ShowBlockingWaitDialog( strTitle, strDescription )
 {
 	var deferred = new jQuery.Deferred();

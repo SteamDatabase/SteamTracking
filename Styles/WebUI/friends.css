@@ -2977,7 +2977,8 @@ body.in_global_drag .friendlist_titlebar
 }
 
 .friendlistListContainer .friend .avatarHolder .avatarStatus,
-.CompactFriendsList .friend .avatarHolder .avatarStatus
+.CompactFriendsList .friend .avatarHolder .avatarStatus,
+.FriendNotificationsDialog .friend .avatarHolder .avatarStatus
 {
 	display: block;
 	position: absolute;
@@ -3402,6 +3403,44 @@ body.in_global_drag .friendlist_titlebar
 	display: flex;
 }
 
+.chatTabSetContainer
+{
+	display: flex;
+}
+
+.chatTabSetContainer.test
+{
+	outline: 1px solid red;
+}
+
+.chatTabSelector
+{
+	background-color: rgb(57, 62, 69);
+	width: 42px;
+	height: 42px;
+	flex-shrink: 0;
+	border: 1px solid black;
+	border-bottom: 0px solid black;
+	border-right: 0px solid black;
+	-webkit-app-region: no-drag;
+	z-index: 3;
+}
+
+.chatTabSelector:hover
+{
+	background-color: rgb(118, 124, 131);
+	cursor: pointer;
+}
+
+.chatTabSelector .SVGIcon_DownArrowContextMenu
+{
+	width: 16px;
+	height: 16px;
+	margin: auto;
+	margin-left: 16px;
+	margin-top: 16px;
+}
+
 .ChatTabs.HasTabs
 {
 	padding-top: 24px;
@@ -3531,8 +3570,9 @@ body.in_global_drag .friendlist_titlebar
 
 .ChatTabs.compactView .friend .richPresenceLabel
 {
-	line-height: 12px;
+	line-height: 11px;
 	font-size: 10px;
+	margin-top: -1px;
 }
 
 .ChatTabs.compactView .labelHolder:not(.twoLine) .richPresenceLabel:not(.gameName)
@@ -3677,6 +3717,142 @@ body.in_global_drag .friendlist_titlebar
 	flex-direction: column;
 	height: 100%;
 	justify-content: space-between;
+}
+
+.contextMenuContents.ChatTabs .contextMenuItem
+{
+	padding: 0;
+	min-height: 32px;
+}
+
+.contextMenuContents.ChatTabs.compactView .chatTabGroupName
+{
+	margin-top: -2px;
+}
+
+.contextMenuContents .chatTab .ChatTabContent
+{
+	padding-top: 2px;
+	padding-bottom: 0px;
+	padding-left: 2px;
+}
+
+.contextMenuContents .chatTab .ChatTabContent.ChatRoom
+{
+	padding-top: 8px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+}
+
+.contextMenuItem .chatTabHighlight,
+.contextMenuItem .TabRightContainer .chatTabClose.closeButton
+{
+	display: none;
+}
+
+
+.contextMenuItem .TabRightContainer
+{
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+
+
+.contextMenuContents.ChatTabs.compactView .contextMenuItem .TabRightContainer .chatTabUnreadBadge
+{
+	position: absolute;
+	right: 4px;
+	top: 8px;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	padding: 0;
+	padding-right: 6px;
+	text-align: right;
+	margin-right: 2px;
+	background-color: transparent;
+}
+
+.contextMenuContents.ChatTabs.compactView .contextMenuItem .TabRightContainer .chatTabUnreadBadge:before
+{
+	position: absolute;
+	content: '';
+	height: 4px;
+	width: 4px;
+	border-radius: 50%;
+	background-color: rgb(255, 216, 0);
+	right: -2px;
+	top: 4px;
+}
+
+.contextMenuItem .TabRightContainer .UnreadGlow
+{
+	position: absolute;
+	top: 0;
+	height: 32px;
+	background: radial-gradient( ellipse farthest-corner at 98% 50%, rgba( 255, 153, 0, 0.8 ) 0%, rgba( 233, 154, 35, 0.2 ) 40%, rgba( 233, 154, 35, 0 ) 70% );
+	opacity: .5;
+	z-index: 10;
+}
+
+.contextMenuContents.ChatTabs.compactView .ChatTabContent .avatarHolder .avatar
+{
+	width: 24px;
+}
+
+.contextMenuContents.ChatTabs .ChatTabContent .avatarHolder
+{
+	flex-direction: row;
+	height: 24px;
+}
+
+.contextMenuContents.ChatTabs .ChatTabContent .avatarHolder .avatarStatus
+{
+	width: 2px;
+	height: 100%;
+	margin-top: 0;
+}
+
+.contextMenuContents.ChatTabs .friend.awayOrSnooze .avatarHolder .avatarStatus
+{
+	-webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-y;
+	-webkit-mask-size: 2px 4px;
+}
+
+.contextMenuContents.ChatTabs.CompactFriendsList .friend
+{
+	margin-top: 3px;
+	height: 24px;
+}
+
+.contextMenuContents.ChatTabs .ChatUnreadMessageIndicator.ChatTabUnread
+{
+	top: 14px;
+	right: 0;
+}
+
+.contextMenuContents.ChatTabs
+{
+	padding-right: 0;
+	min-width: 160px;
+}
+
+.contextMenuContents.ChatTabs .SnoozeContainer
+{
+	margin-top: -6px;
+	margin-bottom: -4px;
+}
+
+.contextMenuContents.ChatTabs.CompactFriendsList .friend .labelHolder
+{
+	margin-top: 2px;
+}
+
+.contextMenuContents.ChatTabs.CompactFriendsList .friend .playerNicknameBracket
+{
+	line-height: 12px;
+	margin-top: 2px;
 }
 
 .chatTab .chatTabClose
@@ -9618,6 +9794,16 @@ html.web_chat_frame .perf_timing_area
 	padding: 0 4px;
 	border: .5px solid #400;
 	cursor: default;
+	text-transform: uppercase;
+}
+
+
+.msg.ChatMessageDeleted .filteredURL.bb_removedlink
+{
+	color: rgb(42, 104, 122);
+	background-color: #0004;
+	border: .5px solid #234;
+	box-shadow: inset 1px 1px 3px rgba( 0, 0, 0, 1 );
 }
 
 
@@ -11008,6 +11194,7 @@ img.emoticon.large
 	box-shadow: 1px 1px 8px rgba( 0, 0, 0, .3 );
 }
 
+.ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomMultiFriendAvatar,
 .ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomGroupAvatar
 {
 	width: 24px;
@@ -11024,6 +11211,7 @@ img.emoticon.large
 .ChatTabs.compactView .ChatTabContent.ChatRoom .ChatRoomGroupAvatar .ChatRoomGroupAvatar_initials
 {
 	font-size: 12px;
+	padding-top: 2px;
 }
 
 .ModalPosition_Content .DialogContent._DialogLayout.CloseActiveVoiceWindowConfirmation
@@ -11754,6 +11942,17 @@ span.mention.me
 .friend.editNickname.nickNamed.online .labelHolder .mediumName:not( .asNickName )
 {
 	color: rgba( 76, 145, 172, 1 );
+}
+
+.FriendNotificationsDialog .friend .avatarHolder
+{
+	position: relative;
+	padding-right: 2px;
+}
+
+.FriendNotificationsDialog .DialogBodyText
+{
+	margin-bottom: 20px;
 }
 
 .avatarMedium
@@ -14250,6 +14449,18 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess
 	color: rgb(125, 110, 188);
 	white-space: nowrap;
 }
+
+.compactView .ChatRoomListGroupItem.HasLinkedBroadcast .steamTVSubtitle
+{
+	left: 24px;
+	top: 16px;
+}
+
+.compactView .ChatRoomListGroupItem.HasLinkedBroadcast .steamTVSubtitle .SVGIcon_SteamTV #logo
+{
+	transform: scale(.8) translateX(20px) translateY(18px);
+}
+
 
 .compactView .ChatRoomListGroupItem .groupNameStatusContainer .chatRoomName
 {
@@ -18019,6 +18230,21 @@ a.general_btn:hover
 	color: #7e7e7e;
 }
 
+.DialogBody.useDefaults .FriendsSettingsNotificationRow:not(.FriendsSettingsNotificationRow_Header) .FriendsSettingsNotificationRow_Label
+{
+	color: #7e7e7e;
+}
+
+.DialogBody .useDefaultsCheckBox
+{
+	font-size: 14px;
+}
+
+.DialogBody.useDefaults .useDefaultsCheckBox
+{
+	color: white;
+}
+
 .FriendsSettingsNotificationRow.FriendsSettingsNotificationRow_Header .FriendsSettingsNotificationRow_Checkbox
 {
 	text-align: center;
@@ -19220,7 +19446,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 	transform-origin: 50% 50%;
 	opacity: 0;
-	filter: saturate(0);
 }
 
 .flipPlayAnimation .flipCoinContainer
@@ -19260,7 +19485,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   .coin .front {
 	width: 100%;
 	height: 100%;
-	background: #f7941e;
+	background: #b3b3b3;
 	border-radius: 50%;
 	position: absolute;
 	top: 0;
@@ -19276,7 +19501,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   .coin .back {
 	width: 100%;
 	height: 100%;
-	background: #f7941e;
+	background: #aaaaaa;
 	border-radius: 50%;
 	transform: rotateY(180deg) translateZ(4px);
 	position: absolute;
@@ -19304,7 +19529,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   .coin .front_b {
 	width: 100%;
 	height: 100%;
-	background: rgb(135, 88, 33);
+	background: rgb(104, 104, 104);
 	border-radius: 50%;
 	-webkit-transform: translateZ(-1px);
 	transform: translateZ(-.5px);
@@ -19317,7 +19542,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   .coin .back_b {
 	width: 100%;
 	height: 100%;
-	background: rgb(135, 88, 33);
+	background: rgb(110, 110, 110);
 	border-radius: 50%;
 	transform: translateZ(-3.5px);
 	position: absolute;
@@ -19332,7 +19557,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	margin-left: -5px;
 	width: 3.5px;
 	height: 100%;
-	background: rgb(135, 88, 33);
+	background: rgb(107, 107, 107);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -19346,7 +19571,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	content: "";
 	width: 3.5px;
 	height: 100%;
-	background: rgb(135, 88, 33);
+	background: rgb(107, 107, 107);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -19362,7 +19587,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	margin-left: -5px;
 	width: 3.5px;
 	height: 100%;
-	background: rgb(135, 88, 33);
+	background: rgb(105, 105, 105);
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -19378,7 +19603,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 	margin-left: -5px;
 	width: 3.5px;
 	height: 100%;
-	background: rgb(135, 128, 233);
+	background: rgb(136, 136, 136);
 	position: absolute;
 	top: 0;
 	left: 50%;

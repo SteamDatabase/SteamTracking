@@ -1083,8 +1083,6 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, rgUserPreferences
 	g_oSuggestParams = {
 		cc: cc,
 		l:l,
-		no_violence: rgUserPreferences['hide_adult_content_violence'],
-		no_sex: rgUserPreferences['hide_adult_content_sex'],
 		excluded_tags: rgUserPreferences['excluded_tags'],
 		excluded_content_descriptors: rgUserPreferences['excluded_content_descriptors'],
 		v: strPackageXMLVersion
@@ -1911,6 +1909,12 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.$elArrowRight = $J('.arrow.right', this.$elContainer);
 
 	this.UpdateItems();
+	PreloadImages( this.$elItems[ this.nIndex ] );
+
+	// get ready to preload images when we scroll.  Delay this a bit because these are low priority
+	//	and finding them forces layout via a slow jquery :visible call
+	if ( this.nSpeed )
+		setTimeout( this.HintNearbyCapsules.bind(this), this.nSpeed * 750 );
 
 	this.fnOnFocus( this.nIndex );
 
@@ -2003,14 +2007,15 @@ CGenericCarousel.prototype.UpdateControls = function( )
 // Start loading images further down the rotation.
 CGenericCarousel.prototype.HintNearbyCapsules = function( )
 {
-	var nNextIndex = this.GetNextValidIndex();
-	var elNextElement = this.$elItems[ nNextIndex ];
-
 	PreloadImages( this.$elItems[ this.nIndex ] );
 
 	// If we're going to auto-scroll, hint the next item.
 	if( this.nSpeed > 0 )
+	{
+		var nNextIndex = this.GetNextValidIndex();
+		var elNextElement = this.$elItems[ nNextIndex ];
 		PreloadImages( elNextElement );
+	}
 };
 
 
@@ -2019,7 +2024,6 @@ CGenericCarousel.prototype.UpdateItems = function()
 	this.$elThumbs = $J('.carousel_thumbs', this.$elContainer).children();
 	this.$elItems = $J('.carousel_items', this.$elContainer).children();
 	this.nItems = this.$elItems.length;
-	this.HintNearbyCapsules();
 }
 
 CGenericCarousel.prototype.GetNextValidIndex = function( nNewIndex )
@@ -2173,12 +2177,23 @@ CAppearMonitor.prototype.RegisterScrollEvent = function( elTarget )
 			return;
 
 		instance.bRunning = true;
-		setTimeout( instance.CheckVisibility.bind(instance), instance.unTimerFrequency );
+		setTimeout( instance.CheckVisibilityInternal.bind(instance), instance.unTimerFrequency );
 
 	});
 }
 
 CAppearMonitor.prototype.CheckVisibility = function()
+{
+	// when items are added they will schedule an immediate check.  Delay for a bit
+	if ( this.m_iCheckVisibilityRequestInterval )
+	{
+		window.clearTimeout( this.m_iCheckVisibilityRequestInterval );
+	}
+
+	this.m_iCheckVisibilityRequestInterval = setTimeout( this.CheckVisibilityInternal.bind(this), this.unTimerFrequency );
+};
+
+CAppearMonitor.prototype.CheckVisibilityInternal = function()
 {
 	// Walk backwards so we can slice while we iterate
 	for( var i=this.rgMonitoredElements.length-1; i>=0; i--)
@@ -2195,6 +2210,7 @@ CAppearMonitor.prototype.CheckVisibility = function()
 	}
 
 	this.bRunning = false;
+	this.m_iCheckVisibilityRequestInterval = undefined;
 };
 
 CAppearMonitor.prototype.bIsElementVisible = function( elElement )
@@ -2232,11 +2248,16 @@ CAppearMonitor.prototype.RegisterElement = function( elTarget )
 
 CAppearMonitor.prototype.TrackAppearanceIfVisible = function( elTarget )
 {
-	// Ensure we're actually in the viewport (Carousel may be scrolling out of view and calling this)
-	if( !this.bIsElementVisible( elTarget ) )
-		return;
+	var _this = this;
+	window.setTimeout( function() {
+		// Ensure we're actually in the viewport (Carousel may be scrolling out of view and calling this)
+		// this triggers layout, so we delay this check a little bit to give the page time to settle whatever
+		// change may currently be in-flight
+		if( !_this.bIsElementVisible( elTarget ) )
+			return;
 
-	this.TrackAppearance( elTarget );
+		_this.TrackAppearance( elTarget );
+	}, 10);
 };
 
 CAppearMonitor.prototype.TrackAppearance = function( elTarget )

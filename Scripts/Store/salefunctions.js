@@ -286,7 +286,7 @@ function HomeSaleCapsuleCategory( rgItems, $Parent )
 	if ( rgCapsules.length >= 4 )
 	{
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) {
-			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, rgOptions);
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
 		} , 'sale_categories', 4 );
 	}
 	else
@@ -336,10 +336,10 @@ function SaleCap( item, strFeatureContext, strDiscountClass )
 	{
 		strFeatureContext = item.feature;		
 	}
-	var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, item.appid, item.packageid, item.bundleid, params );
+	var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params );
 
 	var $CapCtn = $J('<a/>', params );
-	GStoreItemData.BindHoverEvents( $CapCtn, item.appid, item.packageid );
+	GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
 	var $Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } );
 	$Img.data('src-maincap', rgItemData['main_capsule'] );
@@ -615,6 +615,7 @@ GSteamSalienPlanets = {
 		
 		var $AppLinkContainer = $J('#conquered_planet_apps', $ConqueredPlanet );
 		$J.each( $planet.giveaway_apps, function(idx, oItem) {
+			// oItem is an appid?
 			var params = { 'class': 'home_smallcap app_impression_tracked', 'href': GStoreItemData.GetAppURL( oItem, 'summer2018_salien_giveaway' ), 'data-ds-appid' : oItem };
 						
 			var rgItemData = GStoreItemData.GetCapParams( 'summer2018_salien_giveaway', oItem, 0, null, params );

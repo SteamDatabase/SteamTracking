@@ -277,16 +277,17 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content') );
 }
 
-function RenderSuccessorAppsBlock( rgSuccessorAppIDs )
+function RenderSuccessorRankedAppsBlock( rgSuccessorAppIDs )
 {
-	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 4 || !$J('#successor_apps_block_block_content').length )
+	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 0 || !$J('#successor_ranked_apps_block_block_content').length )
 	{
-		$J('#successor_apps_block').hide();
+		$J('#recommended_ranked_played_after').hide();
 		return;
 	}
 
-	RenderRecommendBlock( rgSuccessorAppIDs, 'recommend_successor', $J('#successor_apps_block_block_content') );
+	RenderRecommendBlock( rgSuccessorAppIDs, 'recommended_ranked_played', $J('#successor_ranked_apps_block_block_content') );
 }
+
 
 function RenderFranchiseAppBlock( rgFranchiseAppIDs )
 {
