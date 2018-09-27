@@ -5891,7 +5891,7 @@
 	"ControllerBinding_GyroButtonMouseJoystick_GyroTriangle" "Gyro Enable Button - Triangle"
 	"ControllerBinding_GyroButtonMouseJoystick_GyroTriangle_Description" "The gyro input will be on only when the Triangle button is pressed."
 	"ControllerBinding_GyroButtonMouseJoystick_GyroLStick" "Gyro Enable Button - Left Stick Click"
-	"ControllerBinding_GyroButtonMouseJoystick_GyroLStick_Description" "The gyro input will be on only when the Right Stick is clicked."	
+	"ControllerBinding_GyroButtonMouseJoystick_GyroLStick_Description" "The gyro input will be on only when the Left Stick is clicked."	
 	"ControllerBinding_GyroButtonMouseJoystick_GyroRStick" "Gyro Enable Button - Right Stick Click"
 	"ControllerBinding_GyroButtonMouseJoystick_GyroRStick_Description" "The gyro input will be on only when the Right Stick is clicked."	
 	"ControllerBinding_GyroAxisMouseJoystick" "Gyro Steering Axis"

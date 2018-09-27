@@ -7,6 +7,8 @@
 @define quadgroupmargin: 435px;
 @define quadgroupmargin2d: 305px;
 
+@define storetitlecolor: gradient( linear, 0% 0%, 0% 100%, from( #d2d2d2ff ), to( #979898 ) );
+
 // item height - width can increase to accomodate content
 @define itemsize: 50px;
 

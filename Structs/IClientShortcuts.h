@@ -13,6 +13,9 @@ public:
     virtual unknown_ret BIsShortcutRemoteByIndex(unsigned int) = 0;
     virtual unknown_ret BIsTemporaryShortcutByIndex(unsigned int) = 0;
     virtual unknown_ret BIsOpenVRShortcutByIndex(unsigned int) = 0;
+    virtual unknown_ret BIsDevkitShortcutByIndex(unsigned int) = 0;
+    virtual unknown_ret GetDevkitGameIDByIndex(unsigned int) = 0;
+    virtual unknown_ret GetDevkitAppIDByDevkitGameID(char const*) = 0;
     virtual unknown_ret GetShortcutAppNameByAppID(unsigned int) = 0;
     virtual unknown_ret GetShortcutExeByAppID(unsigned int) = 0;
     virtual unknown_ret GetShortcutStartDirByAppID(unsigned int) = 0;
@@ -44,6 +47,7 @@ public:
     virtual unknown_ret SetAllowDesktopConfig(unsigned int, bool) = 0;
     virtual unknown_ret SetAllowOverlay(unsigned int, bool) = 0;
     virtual unknown_ret SetOpenVRShortcut(unsigned int, bool) = 0;
+    virtual unknown_ret SetDevkitShortcut(unsigned int, char const*) = 0;
     virtual unknown_ret RemoveShortcut(unsigned int) = 0;
     virtual unknown_ret RemoveAllTemporaryShortcuts() = 0;
     virtual unknown_ret LaunchShortcut(unsigned int) = 0;

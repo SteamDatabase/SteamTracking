@@ -58,6 +58,8 @@
 	"FriendsList_OfflineDetail": "This failure may indicate that your local network is offline or that the Steam Friends servers are currently offline.",
 	"FriendsList_SignedOut": "Signed Out of Friends",
 	"FriendsList_SignedOut_Detail": "You are currently offline.  Sign in to access your friends list and chat.",
+	"FriendsList_OfflineMode": "Signed Out of Friends & Chat",
+	"FriendsList_OfflineMode_Detail": "Friends and chat are not available in Offline Mode. Please go online to access your friends list and chat.",
 	"Friends_RetryLoading": "Retry Connection",
 	"Friends_SignIn": "Sign In",
 	"FriendsList_Offline_Disconnected": "Disconnected",

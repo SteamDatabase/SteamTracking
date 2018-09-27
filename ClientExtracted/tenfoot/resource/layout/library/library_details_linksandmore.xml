@@ -51,7 +51,7 @@
 						<Label id="CDKeyLabel" text="#Library_Details_LegacyCDKey" />
 					</Button>
 
-					<Button id="StopStreamingButton" class="NxLeftNavButtonAction" onactivate="DisableOverlay(); AsyncEvent( 0.5, StopStreaming() )">
+					<Button id="StopStreamingButton" class="NxLeftNavButtonAction">
                         <Image src="file://{images}/exit.png" />
 						<Label id="StopStreamingLabel" text="#Quit_StopStreaming" />
 					</Button>

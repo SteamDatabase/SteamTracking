@@ -764,7 +764,7 @@ This should take less than a minute."
 // selection strings, pre-localized
 // do not localize these strings!
 "SteamUI_Selection_English"			"English"
-"SteamUI_Selection_Spanish"			"Español (Spanish)"
+"SteamUI_Selection_Spanish"			"Español-España (Spanish-Spain)"
 "SteamUI_Selection_French"			"Français (French)"
 "SteamUI_Selection_Italian"			"Italiano (Italian)"
 "SteamUI_Selection_German"			"Deutsch (German)"
@@ -790,6 +790,9 @@ This should take less than a minute."
 "SteamUI_Selection_Turkish"			"Türkçe (Turkish)"
 "SteamUI_Selection_Arabic"			"العربية(Arabic)"
 "SteamUI_Selection_Ukrainian"			"Українська (Ukrainian)"
+"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (Spanish-Latin America)"
+"SteamUI_Selection_Vietnamese"		"Tiếng Việt (Vietnamese)"
+
 
 "SteamUI_Modem_33_6k"		"Modem - 33.6kbps"
 "SteamUI_ISDN_112k"		"ISDN - 112kbps"

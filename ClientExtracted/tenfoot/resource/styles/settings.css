@@ -3086,10 +3086,10 @@ SettingsPanel_Display.Underscan
 	visibility: collapse;
 }
 
-// Disable the "manually change account password" button for now as there's work done to make it work for all cases.
+// updated change pw button to go to help site
 #SettingsAccount_ChangePassword
 {
-	visibility: collapse;
+	visibility: visible;
 }
 
 #AudioCard, #AudioCard_Error, #PortAvailable, #PortUnavailable, #PortNoNext, #CodecsAvailable, #CodecsUnavailable

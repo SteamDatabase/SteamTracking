@@ -12,10 +12,10 @@
 				  <Button id="SettingsAccount_History" onactivate="BrowseToSteamURL( StoreAccount )" class="Button">
 					  <Label class="LongDesc" text="#SettingsAccount_History" />
 				  </Button>
-				  <Button class="Button" id="SettingsAccount_ChangePassword" onactivate="AccountSettingsChangePassword();">
+				  <Button class="Button" id="SettingsAccount_ChangePassword" onactivate="BrowseToSteamURL( HelpChangePassword )" >
 					  <Label class="LongDesc" text="#SettingsAccount_ChangePassword" />
 				  </Button>
-				  <Button class="Button" id="SettingsAccount_ChangeEmail" onactivate="AccountSettingsChangeEmail();">
+				  <Button id="SettingsAccount_ChangeEmail" onactivate="BrowseToSteamURL( HelpChangeEmail )" class="Button" >
 					  <Label class="LongDesc" text="#SettingsAccount_ChangeEmail" />
 				  </Button>
 				  <Button class="Button" id="SettingsAccount_VerifyEmail" onactivate="AccountSettingsVerifyEmail();">
