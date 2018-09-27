@@ -356,7 +356,7 @@ function ShowPromptWithTextAreaDialog( strTitle, strDescription, strOKButton, st
 /**
  * @returns CModal
  */
-function ShowEditablePrompt( strTitle, obj, onOk, onCancel, locked = true )
+function ShowEditablePrompt( strTitle, obj, onOk, onCancel)
 {
 	strEditButton = 'Edit';
 	strOKButton = 'OK';
@@ -364,7 +364,7 @@ function ShowEditablePrompt( strTitle, obj, onOk, onCancel, locked = true )
 
 	var $Body = $J('<form/>');
 	var $TextArea = $J('<textarea/>', {'class': 'newmodal_prompt_textarea', 'id': 'json_window'});
-	$TextArea[0].readOnly = locked;
+	$TextArea[0].readOnly = true;
 	$TextArea.text( JSON.stringify(obj, null, 2) );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_with_textarea gray_bevel fullwidth ' } ).append( $TextArea ) );
 
