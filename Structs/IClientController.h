@@ -12,6 +12,7 @@ public:
     virtual unknown_ret TriggerHapticPulse(unsigned int, ESteamControllerPad, unsigned short, unsigned short, unsigned short, unsigned int) = 0;
     virtual unknown_ret IsControllerConnected(unsigned int, bool) = 0;
     virtual unknown_ret GetConnectedControllers(unsigned long long*) = 0;
+    virtual unknown_ret GetConnectedControllers(unsigned int, unsigned long long*) = 0;
     virtual unknown_ret GetDigitalActionData(unsigned int, unsigned long long, unsigned long long) = 0;
     virtual unknown_ret GetAnalogActionData(unsigned int, unsigned long long, unsigned long long) = 0;
     virtual unknown_ret ActivateActionSet(unsigned int, unsigned long long, unsigned long long) = 0;
