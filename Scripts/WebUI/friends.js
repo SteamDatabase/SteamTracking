@@ -52427,9 +52427,35 @@ and limitations under the License.
                     this.m_AudioContext.currentTime + 0.2
                   );
             }),
+            (e.prototype.DebouncedToggleMicMuting = function() {
+              this.ToggleMicMuting(),
+                this.GetPushToTalkOrMuteSoundsEnabled() &&
+                  (this.IsMicMuted()
+                    ? wd.AudioPlaybackManager.PlayAudioURL(
+                        ai.a.COMMUNITY_CDN_URL +
+                          "public/sounds/webui/steam_ui_ptt_short_02_quiet.m4a"
+                      )
+                    : wd.AudioPlaybackManager.PlayAudioURL(
+                        ai.a.COMMUNITY_CDN_URL +
+                          "public/sounds/webui/steam_ui_ptt_short_01_quiet.m4a"
+                      ));
+            }),
             (e.prototype.OnPushToTalkStateChange = function(e) {
-              e != this.m_bVoicePTTStateEnabled &&
-                ((this.m_bVoicePTTStateEnabled = e),
+              var t = e,
+                i = !1;
+              if (
+                (wd.SettingsStore.BClientHasFeatureOrOnWeb(
+                  "NewVoiceHotKeyState"
+                ) && ((i = !0), this.m_bPushToMuteEnabled && (t = !e)),
+                i && !this.m_bPushToTalkEnabled && !this.m_bPushToMuteEnabled)
+              )
+                return void (
+                  e &&
+                  void 0 != this.m_MicInputGainNode &&
+                  this.DebouncedToggleMicMuting()
+                );
+              t != this.m_bVoicePTTStateEnabled &&
+                ((this.m_bVoicePTTStateEnabled = t),
                 (this.m_bPushToTalkEnabled || this.m_bPushToMuteEnabled) &&
                   void 0 != this.m_MicInputGainNode &&
                   (this.m_bVoicePTTStateEnabled
@@ -54399,6 +54425,12 @@ and limitations under the License.
             si.c([_i.action.bound], e.prototype, "LogMsg", null),
             si.c([_i.action.bound], e.prototype, "GetVoiceLogs", null),
             si.c([_i.action.bound], e.prototype, "OnPushToTalkReleased", null),
+            si.c(
+              [_i.action.bound, Object(Dc.a)(150)],
+              e.prototype,
+              "DebouncedToggleMicMuting",
+              null
+            ),
             si.c(
               [_i.action.bound],
               e.prototype,
@@ -66293,14 +66325,18 @@ and limitations under the License.
                 wd.VoiceStore.GetPushToTalkHotKeyDisplayString()),
                 o = Object(ua.b)("#VoicePushToTalkAssigned"),
                 a = Object(ua.b)("#VoicePushToMuteAssigned"),
-                s = wd.VoiceStore.GetPushToTalkOrMuteSoundsEnabled();
+                s = Object(ua.b)("#VoiceMuteToggleAssigned"),
+                c = wd.VoiceStore.GetPushToTalkOrMuteSoundsEnabled(),
+                l = wd.SettingsStore.BClientHasFeatureOrOnWeb(
+                  "NewVoiceHotKeyState"
+                );
               "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
                 (n = !0),
                 this.state.hotkeyCapturing &&
                   (o = Object(ua.b)("#VoicePushToTalkPressHotKey"));
-              var c = this.props.voiceStore.GetUseNoiseGateLevel();
+              var u = this.props.voiceStore.GetUseNoiseGateLevel();
               return Sa.createElement(
                 Zd,
                 {
@@ -66430,7 +66466,7 @@ and limitations under the License.
                             {
                               className:
                                 "pushToKeyAssignContainer displayColumn" +
-                                (t || i ? " showPTTOptions" : "")
+                                (l || i || t ? " showPTTOptions" : "")
                             },
                             Sa.createElement(
                               "div",
@@ -66438,7 +66474,7 @@ and limitations under the License.
                               Sa.createElement(
                                 jd,
                                 { className: "DialogLabelExplainer" },
-                                t ? o : a
+                                t ? o : i ? a : s
                               ),
                               Sa.createElement(
                                 oe,
@@ -66464,7 +66500,7 @@ and limitations under the License.
                                 label: Object(ua.b)(
                                   "#VoicePushToSomethingSoundOption"
                                 ),
-                                checked: s
+                                checked: c
                               })
                             )
                           )
@@ -66542,7 +66578,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            c <= zu.k_ENoiseGateLevel_Low ? "Primary" : "Off",
+                            u <= zu.k_ENoiseGateLevel_Low ? "Primary" : "Off",
                           onClick: this.SetNoiseGateOff
                         },
                         Object(ua.b)("#VoiceTransmissionThresholdOff")
@@ -66551,7 +66587,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            c == zu.k_ENoiseGateLevel_Medium
+                            u == zu.k_ENoiseGateLevel_Medium
                               ? "Primary"
                               : "Off",
                           onClick: this.SetNoiseGateMedium
@@ -66562,7 +66598,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            c == zu.k_ENoiseGateLevel_High ? "Primary" : "Off",
+                            u == zu.k_ENoiseGateLevel_High ? "Primary" : "Off",
                           onClick: this.SetNoiseGateHigh
                         },
                         Object(ua.b)("#VoiceTransmissionThresholdHigh")
@@ -75305,10 +75341,15 @@ and limitations under the License.
                       Sa.createElement(
                         "div",
                         {
-                          className: "chatTabSelector",
+                          className:
+                            "chatTabSelector" + (o ? " UnreadMessages" : ""),
                           onClick: this.OnTabSelectorClick
                         },
-                        Sa.createElement(Id.l, null)
+                        Sa.createElement(Id.l, null),
+                        o &&
+                          Sa.createElement("div", {
+                            className: "ChatUnreadMessageIndicator"
+                          })
                       )
                   ),
                 this.props.popup &&

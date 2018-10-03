@@ -3416,20 +3416,35 @@ body.in_global_drag .friendlist_titlebar
 
 .chatTabSelector
 {
+	margin-top: 1px;
 	background-color: rgb(57, 62, 69);
 	width: 42px;
 	height: 42px;
 	flex-shrink: 0;
-	border: 1px solid black;
-	border-bottom: 0px solid black;
-	border-right: 0px solid black;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
 	-webkit-app-region: no-drag;
 	z-index: 3;
+	position: relative;
+
+	background: linear-gradient( to bottom, rgba( 57, 62, 69, 1 ) 0px, rgba( 57, 62, 69, 1 ) 80%, rgb(46, 49, 53) 100% );
+}
+
+.compactView .chatTabSelector.UnreadMessages .ChatUnreadMessageIndicator,
+.compactView .chatTabSelector
+{
+	height: 32px;
+}
+
+.compactView .chatTabSelector .SVGIcon_DownArrowContextMenu
+{
+	margin-left: 15px;
+	margin-top: 10px;
 }
 
 .chatTabSelector:hover
 {
-	background-color: rgb(118, 124, 131);
+	background: linear-gradient( to bottom, rgb(96, 102, 110) 0px, rgb(67, 72, 79) 80%, rgb(57, 62, 69) 100% );
 	cursor: pointer;
 }
 
@@ -3440,6 +3455,19 @@ body.in_global_drag .friendlist_titlebar
 	margin: auto;
 	margin-left: 16px;
 	margin-top: 16px;
+}
+
+.chatTabSelector.UnreadMessages .SVGIcon_DownArrowContextMenu
+{
+	fill: rgb(251, 250, 1);
+}
+
+.chatTabSelector.UnreadMessages .ChatUnreadMessageIndicator
+{
+	width: 42px;
+	height: 42px;
+	left: 0;
+	background: radial-gradient( 52px 42px at 22px 100%, rgba( 255, 153, 0, 0.8 ) 0%, rgba( 233, 154, 35, 0.2 ) 40%, rgba( 233, 154, 35, 0 ) 70% );
 }
 
 .ChatTabs.HasTabs
