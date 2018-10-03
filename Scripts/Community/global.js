@@ -1013,9 +1013,15 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 		{
 			var appid = e.data('appid');
 			e.on( 'click', function( e ) {
+				var $Link = $J( e.currentTarget );
+				var bLinkHasAdultContent = $Link.hasClass( 'has_adult_content' );
+				if ( !bLinkHasAdultContent )
+				{
+					return;
+				}
+
 				e.preventDefault();
 				e.stopPropagation();
-				var $Link = $J( e.currentTarget );
 				ShowAdultContentWarningDialog( $Link, appid, publishedFileID, function() {
 					if ( bIsAnchor )
 					{

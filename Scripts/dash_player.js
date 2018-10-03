@@ -7733,7 +7733,7 @@ CDASHPlayerStats.prototype.CalculateTotals = function()
 	this.nDecodedFramesPerSecond = 2 * ( ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount ) - ( this.nLastDecodedFrames || 0 ) )
 	this.nLastDecodedFrames = ( ele.mozDecodedFrames || ele.webkitDecodedFrames || ele.webkitDecodedFrameCount );
 
-	var strFramerate = this.m_videoPlayer.StatsPlaybackFrameRate() + 'fps';
+	var strFramerate = this.m_videoPlayer.StatsPlaybackFrameRate().toFixed(3)  + 'fps';
 	this.strResolution = this.m_videoPlayer.StatsPlaybackWidth() + 'x' + this.m_videoPlayer.StatsPlaybackHeight() + ' ' + strFramerate + ' [' + $J(this.m_elVideoPlayer).innerWidth() + 'x' + $J(this.m_elVideoPlayer).innerHeight() + ']';
 	this.strVideoBuffered = this.m_videoPlayer.StatsVideoBuffer() + 's';
 	this.strAudioBuffered = this.m_videoPlayer.StatsAudioBuffer() + 's';

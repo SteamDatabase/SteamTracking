@@ -12,7 +12,7 @@ center
 /* admin */
 .apphub_NormallyHiddenBanner
 {
-	width: 918px;
+	max-width: 918px;
 	margin: 0px auto;
 	margin-top: 10px;
 	padding: 15px;

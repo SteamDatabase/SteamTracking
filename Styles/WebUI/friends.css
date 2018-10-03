@@ -1149,6 +1149,7 @@ body.in_global_drag .friendlist_titlebar
 {
 	display: flex;
 	flex-direction: row;
+	margin-top: 12px;
 }
 
 .friendInviteButtons
@@ -9756,7 +9757,7 @@ html.web_chat_frame .perf_timing_area
 
 }
 
-.MsgAnimating .plusOne
+.MsgAnimating.plusOne
 {
 	animation-name: plusOne;
 }
@@ -9838,6 +9839,7 @@ html.web_chat_frame .perf_timing_area
 	font-weight: bold;
 	color: red;
 	cursor: text;
+	text-transform: none;
 }
 
 .msg .filteredURL.bb_removedlink .threatURL::selection
@@ -10360,7 +10362,7 @@ img.emoticon.large
  */
 
 
-.msgText.spoilerMsgText
+.msgText .spoilerMsgText
 {
 	max-width: fit-content;
 	border: 1px solid #000;
@@ -10371,7 +10373,7 @@ img.emoticon.large
 }
 
 .spoilerMsg.spoilerMedia .BBCodeResizableComponent .BBCodeResizableElement,
-.msgText.spoilerMsgText .spoilerMsg
+.msgText .spoilerMsgText .spoilerMsg
 {
 	margin-left: 0px;
 	opacity: 0.5;
@@ -10379,7 +10381,7 @@ img.emoticon.large
 	transition: all .1s ease-in-out;
 }
 
-.msgText.spoilerMsgText .spoilerMsg
+.msgText .spoilerMsgText .spoilerMsg
 {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -10395,7 +10397,7 @@ img.emoticon.large
 
 .spoilerMsg.spoilerMedia .BBCodeResizableComponent.ActivelyResizing .BBCodeResizableElement,
 .spoilerMsg.spoilerMedia .BBCodeResizableComponent:hover .BBCodeResizableElement,
-.msgText.spoilerMsgText:hover .spoilerMsg
+.msgText .spoilerMsgText:hover .spoilerMsg
 {
 	filter: blur(0px);
 	opacity: 1;
@@ -10465,7 +10467,7 @@ img.emoticon.large
  * /quote styling
  */
 
-.msgText.quoteMsgText
+.msgText .quoteMsgText
 {
 	color: rgb(188, 195, 207);
 	background: linear-gradient( to bottom, rgba(64, 72, 83, 0.8) 0%, rgba( 64, 72, 83, 0.5 ) 40%, rgba( 64, 72, 83, .2 ) 100% );
@@ -11428,6 +11430,13 @@ img.emoticon.large
 	user-select: none;
 	pointer-events: none;
 }
+
+
+.chatTabSetContainer .HorizontalMiniSliderArrow
+{
+	display: none;
+}
+
 
 .HorizontalMiniSliderArrow:not( .Visible ) .SVGIcon_DoubleArrow
 {
@@ -19318,7 +19327,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 }
 
-.msgText:not(.MsgAnimating) .numberColumn.startingZero
+.randomMsg:not(.MsgAnimating) .numberColumn.startingZero
 {
 	opacity: 0.3;
 }
@@ -19353,7 +19362,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 @keyframes randomNumbers10 { 0% { opacity: 1; transform: translateY(-180px); } 90% { opacity: 1;} 100% { transform: translateY(0px); } }
 
 
-.msgText:not(.MsgAnimating) .numberColumn
+.randomMsg:not(.MsgAnimating) .numberColumn
 {
 	animation-name: none !important;
 }

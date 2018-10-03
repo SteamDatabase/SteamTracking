@@ -90,6 +90,12 @@
 	padding: 4px;
 }
 
+.web_chat_frame .contextMenu
+{
+	max-height: calc( 100% - 128px ) ;
+	overflow-y: scroll;
+}
+
 html.ContextMenuPopup .contextMenu
 {
 	position: static;

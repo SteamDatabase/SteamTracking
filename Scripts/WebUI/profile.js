@@ -4530,7 +4530,7 @@ webpackJsonp(
           return (
             i.d(t, e),
             (t.prototype.Init = function(e, t) {
-              this.m_ownerWindow.innerWidth < 400 &&
+              (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
               this.m_ownerWindow.SteamClient &&
               this.m_ownerWindow.SteamClient.Window
                 ? (this.m_popupContextMenu = new s.a(
