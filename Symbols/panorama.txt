@@ -17092,6 +17092,7 @@
  floor
  floorf
  fmod
+ fnmatch
  fontconfig_ft2_new_face_substitute
  fopen
  fprintf

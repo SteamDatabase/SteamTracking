@@ -1962,7 +1962,7 @@
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
- D typeinfo for CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged
+ D typeinfo for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
  D typeinfo for CFriendsWebChatMsgBaseNotification
  D typeinfo for CFriendsWebChatMsgFriendChatNotification
  D typeinfo for CFriendsWebChatMsgGroupChatNotification
@@ -3303,7 +3303,7 @@
  D vtable for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
  D vtable for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  D vtable for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
- D vtable for CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged
+ D vtable for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
  D vtable for CFriendsWebChatMsgBaseNotification
  D vtable for CFriendsWebChatMsgFriendChatNotification
  D vtable for CFriendsWebChatMsgGroupChatNotification
@@ -4029,7 +4029,7 @@
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnOverlayChatBrowserInfoChanged
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
- R typeinfo name for CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged
+ R typeinfo name for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
  R typeinfo name for CFriendsWebChatMsgBaseNotification
  R typeinfo name for CFriendsWebChatMsgFriendChatNotification
  R typeinfo name for CFriendsWebChatMsgGroupChatNotification
@@ -6590,8 +6590,8 @@
  T CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal::Run(void*)
  T CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite::CCallbackInternal_OnShowChatRoomGroupInvite()
  T CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite::Run(void*)
- T CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged::CCallbackInternal_OnVoiceEnabledStateChanged()
- T CFriendsWebChat::CCallbackInternal_OnVoiceEnabledStateChanged::Run(void*)
+ T CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged::CCallbackInternal_OnVoiceHotKeyStateChanged()
+ T CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged::Run(void*)
  T CFriendsWebChat::CFriendsWebChat()
  T CFriendsWebChat::CheckForFriendsUIUpdates()
  T CFriendsWebChat::DispatchClientUICommand(KeyValues*)
@@ -6617,7 +6617,7 @@
  T CFriendsWebChat::OnSetPersonaNameResponse(SetPersonaNameResponse_t*, bool)
  T CFriendsWebChat::OnSetPersonaStateInternal(SetPersonaStateInternal_t*)
  T CFriendsWebChat::OnShowChatRoomGroupInvite(ShowChatRoomGroupInvite_t*)
- T CFriendsWebChat::OnVoiceEnabledStateChanged(VoiceEnabledStateChanged_t*)
+ T CFriendsWebChat::OnVoiceHotKeyStateChanged(VoiceMutingHotKeyStateChanged_t*)
  T CFriendsWebChat::OpenChatDialog(CSteamID)
  T CFriendsWebChat::OpenChatRoomGroupDialog(unsigned long long, unsigned long long)
  T CFriendsWebChat::OpenInviteToTradeDialog(unsigned long long)
@@ -15537,7 +15537,6 @@
  __stack_chk_guard
  __stderrp
  __tolower
- __toupper
  abort
  alphasort$INODE64
  atexit
@@ -16429,6 +16428,7 @@
  floor
  floorf
  fmod
+ fnmatch
  fprintf
  fputc
  fputs

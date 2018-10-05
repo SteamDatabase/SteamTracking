@@ -6522,6 +6522,8 @@
  fgets
  fileno
  flock
+ fnmatch
+ fnmatch$UNIX2003
  fopen
  fopen$UNIX2003
  fprintf

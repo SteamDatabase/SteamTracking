@@ -14286,7 +14286,6 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __toupper
  abort
  alphasort$INODE64
  atoi
@@ -14893,6 +14892,7 @@
  floor
  floorf
  fmod
+ fnmatch
  fopen
  fprintf
  fputc

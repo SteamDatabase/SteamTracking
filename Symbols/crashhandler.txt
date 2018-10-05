@@ -413,7 +413,6 @@
  __stderrp
  __stdoutp
  __tolower
- __toupper
  __udivdi3
  __umoddi3
  _dyld_get_image_name
@@ -495,6 +494,8 @@
  dlsym
  dyld_stub_binder
  fflush
+ fnmatch
+ fnmatch$UNIX2003
  fork
  fprintf
  fputc

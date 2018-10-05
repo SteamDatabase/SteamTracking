@@ -2351,7 +2351,7 @@
 	"Library_AppControllerSettings_Title"	"Controller Application Options"
 	"Library_Details_EnableRumble"			"[Experimental] Rumble Emulation"
 	"Library_SetAppRumbleFrequency_Label"	"Rumble Emulation Frequency Setting"
-	"Library_Details_EnableConfigurator"		"Use Steam Configuration for Non-Steam Controllers"
+	"Library_Details_EnableConfigurator"		"Steam Input Per-Game Setting"
 	"Library_Details_EnableActionSetDisplay"	"Display Action Set on Change"
 	"Library_Details_EnableActionSetBeep"		"Beep on Change"
 
@@ -4238,7 +4238,8 @@
 	"SteamUI_SystemPowerConfirmation_Confirm" "Confirm"
 	"SteamUI_SystemPowerConfirmation_Cancel" "Cancel"
 	"SteamUI_QuitBigPicture_Title" "Cannot Exit - Games are Running"
-	"SteamUI_QuitBigPicture_Intro" "Please quit all games before closing Big Picture Mode"
+	"SteamUI_QuitBigPicture_Intro" "Please quit all games before closing Big Picture Mode. Force quitting Big Picture Mode will cause Steam features such as controller support to stop working in currently running games."
+	"SteamUI_QuitBigPicture_ForceQuit" "Force Quit"
 
 	"SteamUI_ConfirmPassword_Select" "SELECT"
 	"SteamUI_ConfirmPassword_EnterPassword" "Enter your password to continue"

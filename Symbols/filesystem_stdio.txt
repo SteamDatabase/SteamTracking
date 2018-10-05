@@ -384,7 +384,6 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __toupper
  alphasort$INODE64
  b CUtlSymbol::Initialize()::symbolsInitialized
  b g_CleanupSymbolTable
@@ -405,6 +404,7 @@
  ferror
  fflush
  fgets
+ fnmatch
  fopen
  fprintf
  fputs

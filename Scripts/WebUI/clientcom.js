@@ -317,6 +317,7 @@ webpackJsonp(
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
+          COUNTRY: "",
           CDN_URL: "",
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",

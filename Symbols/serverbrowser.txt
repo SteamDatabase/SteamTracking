@@ -8934,7 +8934,6 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __toupper
  alphasort$INODE64
  atoi
  atoll
@@ -9452,6 +9451,7 @@
  floor
  floorf
  fmod
+ fnmatch
  fprintf
  fputs
  free

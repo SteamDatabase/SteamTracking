@@ -772,7 +772,7 @@ CommunityMarketItemPicker
 }
 Chat
 {
-	url			"%chat%/chat/clientui/?l=%language%&build=%buildid%"
+	url			"%chat%/chat/clientui/?l=%language%&cc=%country%&build=%buildid%"
 	method		"internal"
 }
 FacebookProfilePage

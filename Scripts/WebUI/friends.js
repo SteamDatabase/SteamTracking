@@ -9495,6 +9495,8 @@ and limitations under the License.
             return "ScheduledInitiate";
           case Vu.k_EVoiceCallState_RequestedMicAccess:
             return "RequestedMicAccess";
+          case Vu.k_EVoiceCallState_LocalMicOnly:
+            return "LocalMicOnly";
           case Vu.k_EVoiceCallState_CreatePeerConnection:
             return "CreatePeerConnection";
           case Vu.k_EVoiceCallState_InitatedWebRTCSession:
@@ -46822,6 +46824,7 @@ and limitations under the License.
               if ((e.Stop(), i)) {
                 var n = new FormData();
                 n.append("steamid", t),
+                  n.append("broadcastid", i.m_ulBroadcastID),
                   n.append("token", this.m_broadcastSettings.ulViewerToken),
                   Qi.a.post(ai.a.CHAT_BASE_URL + "broadcast/stopwatching", n),
                   _n.d(i.m_rgVideos, function(t) {
@@ -46886,45 +46889,47 @@ and limitations under the License.
                   n,
                   r,
                   o,
-                  a = this;
-                return si.e(this, function(s) {
-                  switch (s.label) {
+                  a,
+                  s,
+                  c = this;
+                return si.e(this, function(l) {
+                  switch (l.label) {
                     case 0:
-                      (t = {
-                        steamid: e.m_steamIDBroadcast,
-                        sessionid: ai.a.SESSIONID
-                      }),
-                        (s.label = 1);
+                      (t = "0"),
+                        (i = this.m_mapBroadcasts.get(e.m_steamIDBroadcast)),
+                        i && (t = i.m_ulBroadcastID),
+                        (n = { steamid: e.m_steamIDBroadcast, broadcastid: t }),
+                        (l.label = 1);
                     case 1:
                       return (
-                        s.trys.push([1, 3, , 4]),
+                        l.trys.push([1, 3, , 4]),
                         [
                           4,
                           Qi.a.get(
                             ai.a.CHAT_BASE_URL + "/broadcast/getbroadcastinfo/",
-                            { params: t }
+                            { params: n }
                           )
                         ]
                       );
                     case 2:
-                      return (i = s.sent()) && i.data
-                        ? ((n = i.data),
-                          (e.m_strTitle = n.title),
-                          (e.m_strAppId = n.appid),
-                          (e.m_strAppTitle = n.app_title),
-                          (e.m_strThumbnailUrl = n.thumbnail_url),
-                          (e.m_nViewerCount = n.viewer_count),
-                          (e.m_bIsOnline = n.is_online),
-                          (r = n.update_interval),
-                          r &&
-                            "number" == typeof r &&
-                            e.m_schTimeout.Schedule(1e3 * r, function() {
-                              return a.LoadBroadcastInfo(e);
+                      return (r = l.sent()) && r.data
+                        ? ((o = r.data),
+                          (e.m_strTitle = o.title),
+                          (e.m_strAppId = o.appid),
+                          (e.m_strAppTitle = o.app_title),
+                          (e.m_strThumbnailUrl = o.thumbnail_url),
+                          (e.m_nViewerCount = o.viewer_count),
+                          (e.m_bIsOnline = o.is_online),
+                          (a = o.update_interval),
+                          a &&
+                            "number" == typeof a &&
+                            e.m_schTimeout.Schedule(1e3 * a, function() {
+                              return c.LoadBroadcastInfo(e);
                             }),
                           [3, 4])
                         : [2];
                     case 3:
-                      return (o = s.sent()), [3, 4];
+                      return (s = l.sent()), [3, 4];
                     case 4:
                       return [2];
                   }
@@ -51184,17 +51189,19 @@ and limitations under the License.
             "k_EVoiceCallState_ScheduledInitiate"),
           (e[(e.k_EVoiceCallState_RequestedMicAccess = 2)] =
             "k_EVoiceCallState_RequestedMicAccess"),
-          (e[(e.k_EVoiceCallState_CreatePeerConnection = 3)] =
+          (e[(e.k_EVoiceCallState_LocalMicOnly = 3)] =
+            "k_EVoiceCallState_LocalMicOnly"),
+          (e[(e.k_EVoiceCallState_CreatePeerConnection = 4)] =
             "k_EVoiceCallState_CreatePeerConnection"),
-          (e[(e.k_EVoiceCallState_InitatedWebRTCSession = 4)] =
+          (e[(e.k_EVoiceCallState_InitatedWebRTCSession = 5)] =
             "k_EVoiceCallState_InitatedWebRTCSession"),
-          (e[(e.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected = 5)] =
+          (e[(e.k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected = 6)] =
             "k_EVoiceCallState_WebRTCConnectedWaitingOnIceConnected"),
-          (e[(e.k_EVoiceCallState_RequestedPermission = 6)] =
+          (e[(e.k_EVoiceCallState_RequestedPermission = 7)] =
             "k_EVoiceCallState_RequestedPermission"),
-          (e[(e.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession = 7)] =
+          (e[(e.k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession = 8)] =
             "k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession"),
-          (e[(e.k_EVoiceCallState_Connected = 8)] =
+          (e[(e.k_EVoiceCallState_Connected = 9)] =
             "k_EVoiceCallState_Connected");
       })(Vu || (Vu = {}));
       var ju,
@@ -51461,6 +51468,8 @@ and limitations under the License.
               (this.m_mapUserVoiceStatus = _i.observable.map()),
               (this.m_LogVoiceChatDetails = !1),
               (this.m_VoiceEchoLocalMic = !1),
+              (this.m_bLocalMicEchoStateBeforeMicTest = !1),
+              (this.m_bLocalMicTestActive = !1),
               (this.m_bForceConnectingStatus = !1),
               (this.m_bForceReconnectingStatus = !1),
               (this.m_OnWebRTCUpdateRemoteDescriptionHandler = c(
@@ -51856,6 +51865,25 @@ and limitations under the License.
             (e.prototype.InitiateRoomChat = function(e, t) {
               this.InitiateVoiceChat(0, { groupID: e, chatID: t });
             }),
+            (e.prototype.EndLocalMicTest = function() {
+              (this.m_bLocalMicTestActive = !1),
+                this.m_VoiceCallState.m_eState ==
+                  Vu.k_EVoiceCallState_LocalMicOnly &&
+                  this.EndVoiceChatInternal(!1),
+                this.SetVoiceEchoLocalMic(
+                  this.m_bLocalMicEchoStateBeforeMicTest
+                );
+            }),
+            (e.prototype.IsLocalMicTestActive = function() {
+              return this.m_bLocalMicTestActive;
+            }),
+            (e.prototype.InitiateLocalMicTest = function() {
+              (this.m_bLocalMicTestActive = !0),
+                (this.m_bLocalMicEchoStateBeforeMicTest = this.m_VoiceEchoLocalMic),
+                this.SetVoiceEchoLocalMic(!0),
+                this.m_VoiceCallState.m_eState == Vu.k_EVoiceCallState_None &&
+                  this.InitiateVoiceChat(0, null);
+            }),
             (e.prototype.AcceptPartnersOneOnOneChatRequest = function(e) {
               var t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
               if (void 0 == t) return !1;
@@ -52172,6 +52200,15 @@ and limitations under the License.
                   t.muted = !t.muted;
                   for (var i = t.stream.getTracks(), n = 0; n < i.length; n++)
                     i[n].enabled = !t.muted;
+                  t.muted
+                    ? this.m_MicInputGainNode.gain.setValueAtTime(
+                        0,
+                        this.m_AudioContext.currentTime + 0.2
+                      )
+                    : this.m_MicInputGainNode.gain.setValueAtTime(
+                        this.GetCurrentVoiceInputGainTarget(),
+                        this.m_AudioContext.currentTime
+                      );
                 }
               }
               this.SendVoiceStatusUpdate();
@@ -52242,13 +52279,17 @@ and limitations under the License.
               configurable: !0
             }),
             (e.prototype.get_volume = function(e) {
-              if (
+              if (e == this.m_CMInterface.steamid.GetAccountID()) {
+                if (
+                  this.IsMicMuted() ||
+                  (this.m_VoiceCallState.m_eState !=
+                    Vu.k_EVoiceCallState_Connected &&
+                    this.m_VoiceCallState.m_eState !=
+                      Vu.k_EVoiceCallState_LocalMicOnly)
+                )
+                  return 0;
+              } else if (
                 this.m_VoiceCallState.m_eState != Vu.k_EVoiceCallState_Connected
-              )
-                return 0;
-              if (
-                e == this.m_CMInterface.steamid.GetAccountID() &&
-                this.IsMicMuted()
               )
                 return 0;
               for (var t = 0, i = 0; i < this.m_rgAudioStreams.length; ++i) {
@@ -52313,10 +52354,18 @@ and limitations under the License.
                   ),
                   this.RestartVoiceChatIfConnected()));
             }),
+            (e.prototype.IsMicTestActive = function() {
+              return (
+                this.m_VoiceCallState.m_eState ==
+                Vu.k_EVoiceCallState_LocalMicOnly
+              );
+            }),
             (e.prototype.IsAnyVoiceActive = function() {
               return (
-                this.m_VoiceCallState.m_eState != Vu.k_EVoiceCallState_None ||
-                0 != this.m_ScheduledInitiate
+                this.m_VoiceCallState.m_eState !=
+                  Vu.k_EVoiceCallState_LocalMicOnly &&
+                (this.m_VoiceCallState.m_eState != Vu.k_EVoiceCallState_None ||
+                  0 != this.m_ScheduledInitiate)
               );
             }),
             (e.prototype.BSelfHasAcceptedOrInitiatedOneOnOneChat = function(e) {
@@ -52372,6 +52421,8 @@ and limitations under the License.
                 (0 == this.m_VoiceCallState.m_targetAccountID ||
                   this.m_VoiceCallState.m_eState !=
                     Vu.k_EVoiceCallState_RequestedPermission) &&
+                this.m_VoiceCallState.m_eState !=
+                  Vu.k_EVoiceCallState_LocalMicOnly &&
                 this.IsAnyVoiceActive() &&
                 0 == this.m_VoiceCallState.m_nFailuresThisInitiate &&
                 this.m_VoiceCallState.m_eState != Vu.k_EVoiceCallState_Connected
@@ -53086,21 +53137,28 @@ and limitations under the License.
                         ? this.m_MicNoiseGate.output.connect(s.output_gain_node)
                         : this.m_MicNoiseGate.connect(s.output_gain_node));
               }
-              var l = {
-                  offerToReceiveAudio: 1,
-                  offerToReceiveVideo: 0,
-                  voiceActivityDetection: !0
-                },
-                u = this.CreatePeerConnection(e),
-                d = this;
-              u
-                .createOffer(l)
-                .then(function(e) {
-                  d.OnCreateOfferSuccess(u, e);
-                })
-                .catch(function(e) {
-                  d.OnCreateOfferError(e);
-                });
+              if (
+                0 != this.m_VoiceCallState.m_targetAccountID ||
+                null != this.m_VoiceCallState.m_chatRoom
+              ) {
+                var l = {
+                    offerToReceiveAudio: 1,
+                    offerToReceiveVideo: 0,
+                    voiceActivityDetection: !0
+                  },
+                  u = this.CreatePeerConnection(e),
+                  d = this;
+                u
+                  .createOffer(l)
+                  .then(function(e) {
+                    d.OnCreateOfferSuccess(u, e);
+                  })
+                  .catch(function(e) {
+                    d.OnCreateOfferError(e);
+                  });
+              } else
+                this.m_VoiceCallState.m_eState =
+                  Vu.k_EVoiceCallState_LocalMicOnly;
             }),
             (e.prototype.OnGetUserMediaFailure = function(e) {
               if (
@@ -53239,7 +53297,8 @@ and limitations under the License.
                               "(VoiceChat) Call accepted to individual " +
                                 this.m_VoiceCallState.m_targetAccountID
                             ))
-                          : this.LogMsg(
+                          : this.m_VoiceCallState.m_chatRoom &&
+                            this.LogMsg(
                               "(VoiceChat) Call accepted to room " +
                                 this.m_VoiceCallState.m_chatRoom.chatID
                             ),
@@ -53250,7 +53309,8 @@ and limitations under the License.
                               this.m_VoiceCallState.m_targetAccountID
                           ),
                           this.OnUserEndVoiceChat())
-                        : (this.LogMsg(
+                        : this.m_VoiceCallState.m_chatRoom &&
+                          (this.LogMsg(
                             "(VoiceChat) Call rejected to room " +
                               this.m_VoiceCallState.m_chatRoom.chatID
                           ),
@@ -53997,10 +54057,18 @@ and limitations under the License.
                       "Resetting voice chat state and initiating to individual " +
                         e
                     )
-                  : this.LogMsg(
-                      "Resetting voice chat state and initiating to room " +
-                        t.chatID
-                    ),
+                  : t
+                    ? this.LogMsg(
+                        "Resetting voice chat state and initiating to room " +
+                          t.chatID
+                      )
+                    : (AssertMsg(
+                        this.m_VoiceEchoLocalMic,
+                        "Shouldn't hit local mic access only without echo local mic on"
+                      ),
+                      this.LogMsg(
+                        "Resetting voice chat state and initiating local mic access only"
+                      )),
                 this.m_VoiceCallState.m_eState <=
                   Vu.k_EVoiceCallState_ScheduledInitiate &&
                   ((this.m_VoiceCallState.m_targetAccountID = e),
@@ -54009,6 +54077,7 @@ and limitations under the License.
                   (this.m_VoiceCallState.m_timeStartedConnecting = performance.now()),
                   (this.m_VoiceCallState.m_nMostRecentRemoteDescriptionVersion =
                     "0"),
+                  (this.m_VoiceCallState.m_bIsConnectionAttemptOverTwoSeconds = !1),
                   (this.m_ConnectionCheck = SetBackgroundInterval(
                     this.CheckConnection,
                     2e3
@@ -54085,7 +54154,8 @@ and limitations under the License.
                         this.m_VoiceCallState.m_targetAccountID +
                         " now initating getUserMedia/WebRTC"
                     )
-                  : this.LogMsg(
+                  : this.m_VoiceCallState.m_chatRoom &&
+                    this.LogMsg(
                       "(VoiceChat) Call to room " +
                         this.m_VoiceCallState.m_chatRoom.chatID +
                         " now initating getUserMedia/WebRTC"
@@ -54382,6 +54452,7 @@ and limitations under the License.
             si.c([_i.observable], e.prototype, "m_MicInputGainNode", void 0),
             si.c([_i.observable], e.prototype, "m_PeerConnection", void 0),
             si.c([_i.observable], e.prototype, "m_Settings", void 0),
+            si.c([_i.observable], e.prototype, "m_bLocalMicTestActive", void 0),
             si.c(
               [_i.observable],
               e.prototype,
@@ -56215,36 +56286,49 @@ and limitations under the License.
             }),
             (e.prototype.InitAdjustClockDriftFromServer = function() {
               return si.b(this, void 0, void 0, function() {
-                var e,
-                  t = this;
-                return si.e(this, function(i) {
-                  switch (i.label) {
-                    case 0:
-                      return (
-                        i.trys.push([0, 2, , 3]),
-                        [
-                          4,
-                          Object(_i.when)(
-                            function() {
-                              return t.m_CMInterface.BPerformedInitialClockAdjustment();
-                            },
-                            { timeout: 1e3 }
-                          )
-                        ]
-                      );
-                    case 1:
-                      return i.sent(), [2, !0];
-                    case 2:
-                      return (
-                        (e = i.sent()),
-                        console.warn(
-                          "Timed out waiting for initial server clock drift adjustment"
-                        ),
-                        [2, !1]
-                      );
-                    case 3:
-                      return [2];
-                  }
+                var e = this;
+                return si.e(this, function(t) {
+                  return [
+                    2,
+                    new Promise(function(t, i) {
+                      e.m_CMInterface.RunWhenLoggedOn(function() {
+                        return si.b(e, void 0, void 0, function() {
+                          var e,
+                            n = this;
+                          return si.e(this, function(r) {
+                            switch (r.label) {
+                              case 0:
+                                return (
+                                  r.trys.push([0, 2, , 3]),
+                                  [
+                                    4,
+                                    Object(_i.when)(
+                                      function() {
+                                        return n.m_CMInterface.BPerformedInitialClockAdjustment();
+                                      },
+                                      { timeout: 1e3 }
+                                    )
+                                  ]
+                                );
+                              case 1:
+                                return r.sent(), t(), [3, 3];
+                              case 2:
+                                return (
+                                  (e = r.sent()),
+                                  console.warn(
+                                    "Timed out waiting for initial server clock drift adjustment"
+                                  ),
+                                  i(),
+                                  [3, 3]
+                                );
+                              case 3:
+                                return [2];
+                            }
+                          });
+                        });
+                      });
+                    })
+                  ];
                 });
               });
             }),
@@ -66316,6 +66400,16 @@ and limitations under the License.
                 document.body.removeChild(t);
               }
             }),
+            (t.prototype.componentWillUnmount = function() {
+              wd.VoiceStore.IsLocalMicTestActive() &&
+                wd.VoiceStore.EndLocalMicTest();
+            }),
+            (t.prototype.OnStartLocalMicTest = function() {
+              wd.VoiceStore.InitiateLocalMicTest();
+            }),
+            (t.prototype.OnStopLocalMicTest = function() {
+              wd.VoiceStore.EndLocalMicTest();
+            }),
             (t.prototype.render = function() {
               var e = this,
                 t = wd.VoiceStore.GetPushToTalkEnabled(),
@@ -66329,14 +66423,18 @@ and limitations under the License.
                 c = wd.VoiceStore.GetPushToTalkOrMuteSoundsEnabled(),
                 l = wd.SettingsStore.BClientHasFeatureOrOnWeb(
                   "NewVoiceHotKeyState"
-                );
-              "undefined" != typeof SteamClient &&
-                void 0 != SteamClient.WebChat &&
-                void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
-                (n = !0),
+                ),
+                u = wd.VoiceStore.IsLocalMicTestActive(),
+                d = wd.FriendStore.self,
+                p = "voiceSettingsPlayer " + d.persona.online_state;
+              d.persona.is_awayOrSnooze && (p += " isAway"),
+                "undefined" != typeof SteamClient &&
+                  void 0 != SteamClient.WebChat &&
+                  void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
+                  (n = !0),
                 this.state.hotkeyCapturing &&
                   (o = Object(ua.b)("#VoicePushToTalkPressHotKey"));
-              var u = this.props.voiceStore.GetUseNoiseGateLevel();
+              var m = this.props.voiceStore.GetUseNoiseGateLevel();
               return Sa.createElement(
                 Zd,
                 {
@@ -66350,6 +66448,49 @@ and limitations under the License.
                 Sa.createElement(
                   "div",
                   { className: "_FixedHeight" },
+                  Sa.createElement(
+                    "div",
+                    { className: "voiceSelfHeader" },
+                    Sa.createElement(
+                      "div",
+                      { className: "DialogLabel" },
+                      Object(ua.b)("#VoiceSetupHeader")
+                    ),
+                    Sa.createElement(
+                      "div",
+                      { className: "voiceMicTestContainer" },
+                      Sa.createElement(
+                        "div",
+                        {
+                          className: "voiceSelfDirections",
+                          title: Object(ua.b)("#VoiceWhenMicIsWorking")
+                        },
+                        Sa.createElement(Oh, {
+                          friend: d,
+                          key: d.accountid,
+                          showVoiceLevel: !0,
+                          context: void 0,
+                          noActions: !0,
+                          listStatusIndicator: Sa.createElement("div", {
+                            className: "connectionSpinner"
+                          })
+                        }),
+                        Sa.createElement(
+                          oe,
+                          {
+                            className:
+                              "LocalMicTestButton " + (u ? "Primary" : "Off"),
+                            onClick: u
+                              ? this.OnStopLocalMicTest
+                              : this.OnStartLocalMicTest
+                          },
+                          u
+                            ? Object(ua.b)("#VoiceStopLocalMicTest")
+                            : Object(ua.b)("#VoiceStartLocalMicTest")
+                        )
+                      )
+                    )
+                  ),
                   this.state.micOptionsReady &&
                     Sa.createElement(op, {
                       strClassName: "InputDevice",
@@ -66578,7 +66719,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            u <= zu.k_ENoiseGateLevel_Low ? "Primary" : "Off",
+                            m <= zu.k_ENoiseGateLevel_Low ? "Primary" : "Off",
                           onClick: this.SetNoiseGateOff
                         },
                         Object(ua.b)("#VoiceTransmissionThresholdOff")
@@ -66587,7 +66728,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            u == zu.k_ENoiseGateLevel_Medium
+                            m == zu.k_ENoiseGateLevel_Medium
                               ? "Primary"
                               : "Off",
                           onClick: this.SetNoiseGateMedium
@@ -66598,7 +66739,7 @@ and limitations under the License.
                         oe,
                         {
                           className:
-                            u == zu.k_ENoiseGateLevel_High ? "Primary" : "Off",
+                            m == zu.k_ENoiseGateLevel_High ? "Primary" : "Off",
                           onClick: this.SetNoiseGateHigh
                         },
                         Object(ua.b)("#VoiceTransmissionThresholdHigh")
@@ -66695,6 +66836,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "onKeyDown", null),
             si.c([yn.a], t.prototype, "OnPPTSoundChecked", null),
             si.c([yn.a], t.prototype, "CopyVoiceLogsToClipboard", null),
+            si.c([yn.a], t.prototype, "OnStartLocalMicTest", null),
+            si.c([yn.a], t.prototype, "OnStopLocalMicTest", null),
             (t = si.c([up.observer], t))
           );
         })(sp),
@@ -75051,11 +75194,8 @@ and limitations under the License.
                 this.setState({ tabDrag: void 0 });
             }),
             (t.prototype.FixScrollLocation = function() {
-              if (this.m_elScroll) {
-                var e = (this.m_rgOrderedRenderedTabs[
-                  this.m_rgOrderedRenderedTabs.length - 1
-                ],
-                this.m_mapTabs.get(this.props.activeTab.GetUniqueID()));
+              if (this.m_elScroll && this.props.activeTab) {
+                var e = this.m_mapTabs.get(this.props.activeTab.GetUniqueID());
                 if (e) {
                   var t = e.GetChatTabRef();
                   if (t) {
@@ -75174,7 +75314,7 @@ and limitations under the License.
                 e.currentTarget,
                 {
                   bOverlapHorizontal: !0,
-                  bPreferPopLeft: !0,
+                  bPreferPopLeft: !1,
                   bPreferPopTop: !1,
                   bForcePopup: i
                 }
@@ -75273,7 +75413,8 @@ and limitations under the License.
                 t && this.m_elchatTabDiv && this.StartTopbarEventListener();
               var g =
                 (this.m_elchatTabDiv &&
-                  180 * this.props.tabSet.tabCount + 48 >
+                  180 * this.props.tabSet.tabCount +
+                    (ai.a.IN_CLIENT ? 168 : 48) >
                     this.m_elchatTabDiv.clientWidth) ||
                 !1;
               return Sa.createElement(
@@ -75350,6 +75491,17 @@ and limitations under the License.
                           Sa.createElement("div", {
                             className: "ChatUnreadMessageIndicator"
                           })
+                      ),
+                    ai.a.IN_CLIENT &&
+                      Sa.createElement(
+                        Sa.Fragment,
+                        null,
+                        Sa.createElement("div", {
+                          className: "chatTabDraggableSpace"
+                        }),
+                        Sa.createElement("div", {
+                          className: "chatTabDraggableSpace ChromeClearance"
+                        })
                       )
                   ),
                 this.props.popup &&
@@ -90612,6 +90764,7 @@ and limitations under the License.
           EUNIVERSE: 0,
           WEB_UNIVERSE: "",
           LANGUAGE: "english",
+          COUNTRY: "",
           CDN_URL: "",
           MEDIA_CDN_COMMUNITY_URL: "",
           MEDIA_CDN_URL: "",

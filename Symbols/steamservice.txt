@@ -3192,7 +3192,6 @@
  __stderrp
  __stdoutp
  __tolower
- __toupper
  _dispatch_source_type_read
  _exit
  abort
@@ -3706,6 +3705,7 @@
  fflush
  fileno
  flock
+ fnmatch
  fopen
  fprintf
  fputc
