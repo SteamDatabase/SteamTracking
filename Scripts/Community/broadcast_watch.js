@@ -453,7 +453,6 @@ CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 		{
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
-			sessionid: g_sessionID
 		},
 		type: 'GET'
 	}).done( function( data )
