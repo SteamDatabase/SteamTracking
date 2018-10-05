@@ -154,7 +154,7 @@ div.market_restrictions {
 	line-height: 20px;
 }
 
-div.market_restrictions a:hover{
+div.market_restrictions a:hover, #market_newapp_warning a{
 	text-decoration: underline;
 }
 

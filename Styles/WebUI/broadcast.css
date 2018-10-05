@@ -1864,6 +1864,18 @@ iframe.steamTVLogin
 	stroke-width: 0px;
 }
 
+.BroadcastQuakeLiveOffline
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	background-image: url( "../../images/webui/broadcast/quake_live_2018.jpg" );
+	background-size: cover;
+}
+
 .BroadcastCSGOLondonOffline
 {
 	position: absolute;

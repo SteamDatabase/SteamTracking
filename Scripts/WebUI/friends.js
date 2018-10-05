@@ -10640,29 +10640,9 @@ and limitations under the License.
         );
       }
       function Ct(e) {
-        return Ma.a.createElement(
-          "div",
-          { className: "BroadcastCSGOLondonOffline" },
-          Ma.a.createElement(
-            "div",
-            { className: "BroadcastCSGOLondonOffline_Schedule" },
-            Ma.a.createElement(
-              "div",
-              { className: "BroadcastCSGOLondonOffline_Prelims" },
-              "CHALLENGERS STAGE – SEPTEMBER 5-9"
-            ),
-            Ma.a.createElement(
-              "div",
-              { className: "BroadcastCSGOLondonOffline_Group" },
-              "LEGENDS STAGE – SEPTEMBER 12-16"
-            ),
-            Ma.a.createElement(
-              "div",
-              { className: "BroadcastCSGOLondonOffline_Playoffs" },
-              "CHAMPIONS STAGE – SEPTEMBER 20-23"
-            )
-          )
-        );
+        return Ma.a.createElement("div", {
+          className: "BroadcastQuakeLiveOffline"
+        });
       }
       function St(e) {
         switch (e.eServerMsgType) {
@@ -18095,8 +18075,8 @@ and limitations under the License.
           function e() {}
           return e;
         })(),
-        Ln = { "76561198846304683": "#Broadcast_EnglishMain" },
-        An = 730;
+        Ln = { "76561198409181301": "#Broadcast_EnglishMain" },
+        An = 611500;
       !(function(e) {
         (e[(e.Terminator = 0)] = "Terminator"),
           (e[(e.MatchStarted = 1)] = "MatchStarted"),
@@ -18229,7 +18209,7 @@ and limitations under the License.
                     (this.m_strBroadcastTitle = t.watching_broadcast_title()),
                     l.BIsValid() &&
                       (this.m_broadcastAppId || (this.m_broadcastAppId = An),
-                      (this.m_strBroadcastTitle = "CS:GO Major 2018")))
+                      (this.m_strBroadcastTitle = "Quake Champions Open")))
                   : ((this.m_broadcastAccountId = 0),
                     (this.m_broadcastAppId = 0),
                     (this.m_broadcastViewerCount = 0),
@@ -47622,7 +47602,8 @@ and limitations under the License.
             }),
             (t.prototype.GetTabName = function() {
               return (
-                (this.m_info && this.m_info.m_strTitle) || "CS:GO Major 2018"
+                (this.m_info && this.m_info.m_strTitle) ||
+                "Quake Champions Open"
               );
             }),
             (t.prototype.GetUniqueID = function() {
@@ -52361,11 +52342,13 @@ and limitations under the License.
               );
             }),
             (e.prototype.IsAnyVoiceActive = function() {
-              return (
-                this.m_VoiceCallState.m_eState !=
+              return !(
+                (this.m_VoiceCallState.m_eState <=
                   Vu.k_EVoiceCallState_LocalMicOnly &&
-                (this.m_VoiceCallState.m_eState != Vu.k_EVoiceCallState_None ||
-                  0 != this.m_ScheduledInitiate)
+                  0 == this.m_VoiceCallState.m_targetAccountID &&
+                  null == this.m_VoiceCallState.m_chatRoom) ||
+                (this.m_VoiceCallState.m_eState == Vu.k_EVoiceCallState_None &&
+                  0 == this.m_ScheduledInitiate)
               );
             }),
             (e.prototype.BSelfHasAcceptedOrInitiatedOneOnOneChat = function(e) {
@@ -53157,8 +53140,9 @@ and limitations under the License.
                     d.OnCreateOfferError(e);
                   });
               } else
-                this.m_VoiceCallState.m_eState =
-                  Vu.k_EVoiceCallState_LocalMicOnly;
+                (this.m_VoiceCallState.m_eState =
+                  Vu.k_EVoiceCallState_LocalMicOnly),
+                  (this.m_VoiceCallState.m_timeFinishedConnecting = performance.now());
             }),
             (e.prototype.OnGetUserMediaFailure = function(e) {
               if (
@@ -53899,7 +53883,10 @@ and limitations under the License.
             }),
             (e.prototype.CheckConnection = function() {
               if (
-                this.m_VoiceCallState.m_eState == Vu.k_EVoiceCallState_Connected
+                this.m_VoiceCallState.m_eState ==
+                  Vu.k_EVoiceCallState_Connected ||
+                this.m_VoiceCallState.m_eState ==
+                  Vu.k_EVoiceCallState_LocalMicOnly
               )
                 this.LogMsg(
                   "(VoiceChat) Succcess! Voice is fully connected took " +
@@ -54013,8 +54000,9 @@ and limitations under the License.
                   "Cant initiate voice chat for both friend & group"
                 );
               var r = this.m_VoiceCallState.BMatchingCall(e, t);
-              this.m_VoiceCallState.BMatchingCall(e, t) ||
-                this.m_VoiceCallState.m_eState == Vu.k_EVoiceCallState_None ||
+              !this.m_VoiceCallState.BMatchingCall(e, t) &&
+                this.m_VoiceCallState.m_eState >
+                  Vu.k_EVoiceCallState_ScheduledInitiate &&
                 (this.LogMsg(
                   "(VoiceChat) InitiateVoiceChat called for new target account/room while already connected, ending prior session first"
                 ),
@@ -75810,7 +75798,7 @@ and limitations under the License.
                 var i = this.props.tab.GetTabName(),
                   n =
                     ai.a.CHAT_BASE_URL +
-                    "public/images/webui/broadcast/csgo2_tab.jpg";
+                    "public/images/webui/broadcast/quake_logo.jpg";
                 return Sa.createElement(
                   "div",
                   { className: "ChatTabContent ChatRoom" },
@@ -77523,11 +77511,11 @@ and limitations under the License.
                       "div",
                       {
                         onClick: function(e) {
-                          return ht(e, "https://steam.tv/csgo");
+                          return ht(e, "https://steam.tv/quakechampions");
                         },
                         className: "BroadcastLink"
                       },
-                      "steam.tv/csgo"
+                      "steam.tv/quakechampions"
                     ),
                     i &&
                       Sa.createElement(
