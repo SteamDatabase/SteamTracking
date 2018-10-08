@@ -18111,6 +18111,23 @@ a.general_btn:hover
 	height: 274px;
 }
 
+.VoiceSettings ._DialogSection.pushToTalkSection .pushToKeyAssignContainer .DialogButton.ClearHotKeyButton
+{
+	width: 32px;
+	max-width: 32px;
+	min-width: 32px;
+	padding: 0px;
+
+	margin-left: 8px;
+}
+
+.VoiceSettings .DialogButton.ClearHotKeyButton .SVGIcon_X_Line
+{
+	width: 13px;
+	height: 13px;
+	margin: 0px;
+}
+
 .scrollToRef
 {
 	width: 1px;

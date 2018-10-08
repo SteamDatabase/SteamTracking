@@ -51290,6 +51290,8 @@ and limitations under the License.
               (this.m_SelectedMicID = "default"),
               (this.m_SelectedOutputID = "default"),
               (this.m_bPlayPTTSounds = !0),
+              (this.m_bSettingsLoaded = !1),
+              (this.m_bHasResetOpenMicHotkey = !1),
               (this.m_SettingsStore = e);
           }
           return (
@@ -51305,7 +51307,8 @@ and limitations under the License.
                   autoGainControl: this.m_VoiceUseAutoGainControl,
                   selectedMic: this.m_SelectedMicID,
                   selectedOutput: this.m_SelectedOutputID,
-                  pttSoundsEnabled: this.m_bPlayPTTSounds
+                  pttSoundsEnabled: this.m_bPlayPTTSounds,
+                  hasResetOpenMicHotKey: this.m_bHasResetOpenMicHotkey
                 }
               );
             }),
@@ -51335,8 +51338,12 @@ and limitations under the License.
                     void 0 != i.selectedOutput &&
                       (t.m_SelectedOutputID = i.selectedOutput),
                     void 0 != i.pttSoundsEnabled &&
-                      (t.m_bPlayPTTSounds = i.pttSoundsEnabled)),
-                    e.LogMsg("(VoiceChat) Settings loaded from local storage");
+                      (t.m_bPlayPTTSounds = i.pttSoundsEnabled),
+                    void 0 != i.hasResetOpenMicHotKey &&
+                      (t.m_bHasResetOpenMicHotkey = i.hasResetOpenMicHotKey)),
+                    (t.m_bSettingsLoaded = !0),
+                    e.LogMsg("(VoiceChat) Settings loaded from local storage"),
+                    e.RefreshPushToTalkKeySettings();
                 });
             }),
             si.c([_i.observable], e.prototype, "m_VoiceInputGain", void 0),
@@ -51363,6 +51370,13 @@ and limitations under the License.
             si.c([_i.observable], e.prototype, "m_SelectedMicID", void 0),
             si.c([_i.observable], e.prototype, "m_SelectedOutputID", void 0),
             si.c([_i.observable], e.prototype, "m_bPlayPTTSounds", void 0),
+            si.c([_i.observable], e.prototype, "m_bSettingsLoaded", void 0),
+            si.c(
+              [_i.observable],
+              e.prototype,
+              "m_bHasResetOpenMicHotkey",
+              void 0
+            ),
             e
           );
         })(),
@@ -51800,17 +51814,13 @@ and limitations under the License.
               (this.m_Settings = new qu(e)),
               this.m_Settings.LoadFromLocalStorage(this),
               "undefined" != typeof SteamClient &&
-                (void 0 != SteamClient &&
-                  void 0 != SteamClient.WebChat &&
-                  void 0 !=
-                    SteamClient.WebChat.RegisterForPushToTalkStateChange &&
-                  (this.m_hRegisterForPushToTalkStateChange = SteamClient.WebChat.RegisterForPushToTalkStateChange(
-                    this.OnPushToTalkStateChange
-                  )),
                 void 0 != SteamClient &&
-                  void 0 != SteamClient.WebChat &&
-                  void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
-                  this.RefreshPushToTalkKeySettings());
+                void 0 != SteamClient.WebChat &&
+                void 0 !=
+                  SteamClient.WebChat.RegisterForPushToTalkStateChange &&
+                (this.m_hRegisterForPushToTalkStateChange = SteamClient.WebChat.RegisterForPushToTalkStateChange(
+                  this.OnPushToTalkStateChange
+                ));
           }
           return (
             (e.prototype.Init = function(e) {
@@ -51822,7 +51832,7 @@ and limitations under the License.
             }),
             (e.prototype.RefreshPushToTalkKeySettings = function() {
               var e = this;
-              void 0 != SteamClient &&
+              "undefined" != typeof SteamClient &&
                 void 0 != SteamClient.WebChat &&
                 void 0 != SteamClient.WebChat.GetPushToTalkEnabled &&
                 SteamClient.WebChat.GetPushToTalkEnabled().then(function(t) {
@@ -51831,7 +51841,23 @@ and limitations under the License.
                     t.bPushToMute &&
                       ((e.m_bPushToMuteEnabled = t.bEnabled),
                       (e.m_bPushToTalkEnabled = !1)),
-                    (e.m_strPushToTalkDisplayString = t.strKeyName);
+                    (e.m_strPushToTalkDisplayString = t.strKeyName),
+                    e.m_bPushToTalkEnabled ||
+                      e.m_bPushToMuteEnabled ||
+                      (void 0 != SteamClient.WebChat &&
+                        void 0 != SteamClient.WebChat.SetPushToTalkHotKey &&
+                        (AssertMsg(
+                          e.m_Settings.m_bSettingsLoaded,
+                          "Settings not loaded but RefreshPushToTalkKeySettings hit"
+                        ),
+                        e.m_Settings.m_bHasResetOpenMicHotkey ||
+                          ((e.m_Settings.m_bHasResetOpenMicHotkey = !0),
+                          e.m_Settings.SaveToLocalStorage(),
+                          console.log(
+                            "Reset Open Mic hotkey to None on first run of new client in open mic mode"
+                          ),
+                          SteamClient.WebChat.SetPushToTalkHotKey(0),
+                          e.RefreshPushToTalkKeySettings())));
                 });
             }),
             (e.prototype.InitiateFriendChat = function(e) {
@@ -66342,6 +66368,13 @@ and limitations under the License.
             (t.prototype.AssignHotkey = function() {
               0 == this.state.hotkeyCapturing && this.SetHotKeyCaptureState(!0);
             }),
+            (t.prototype.ClearHotKey = function() {
+              "undefined" != typeof SteamClient &&
+                void 0 != SteamClient.WebChat &&
+                void 0 != SteamClient.WebChat.SetPushToTalkHotKey &&
+                (SteamClient.WebChat.SetPushToTalkHotKey(0),
+                wd.VoiceStore.RefreshPushToTalkKeySettings());
+            }),
             (t.prototype.onMouseDown = function(e) {
               0 != this.state.hotkeyCapturing &&
                 0 != e.button &&
@@ -66615,7 +66648,20 @@ and limitations under the License.
                                   onClick: this.AssignHotkey
                                 },
                                 r
-                              )
+                              ),
+                              !t &&
+                                !i &&
+                                Sa.createElement(
+                                  oe,
+                                  {
+                                    className: "ClearHotKeyButton",
+                                    onClick: this.ClearHotKey,
+                                    title: Object(ua.b)(
+                                      "#VoiceClearHotKeyTooltip"
+                                    )
+                                  },
+                                  Sa.createElement(Id._6, null)
+                                )
                             ),
                             Sa.createElement(
                               "div",
@@ -66818,6 +66864,7 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "OnSetPushToTalk", null),
             si.c([yn.a], t.prototype, "OnSetPushToMute", null),
             si.c([yn.a], t.prototype, "AssignHotkey", null),
+            si.c([yn.a], t.prototype, "ClearHotKey", null),
             si.c([yn.a], t.prototype, "onMouseDown", null),
             si.c([yn.a], t.prototype, "onClick", null),
             si.c([yn.a], t.prototype, "onContextMenu", null),
