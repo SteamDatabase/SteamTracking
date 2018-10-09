@@ -7352,7 +7352,7 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"steamLanguage":"french"
 	},
 	"fr-CA":{
-		"displayName":"French-Canada",
+		"displayName":"French - Canada",
 		"steamLanguage":"french_canada"
 	},
 	"de-DE":{
@@ -7364,7 +7364,7 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"steamLanguage":"greek"
 	},
 	"es-ES":{
-		"displayName":"Spanish",
+		"displayName":"Spanish - Spain",
 		"steamLanguage":"spanish"
 	},
 	"es-MX":{
@@ -7400,7 +7400,7 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"steamLanguage":"polish"
 	},
 	"pt-BR":{
-		"displayName":"Portuguese-Brazil",
+		"displayName":"Portuguese - Brazil",
 		"steamLanguage":"brazilian"
 	},
 	"pt-PT":{

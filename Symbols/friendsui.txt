@@ -622,6 +622,16 @@
  D CFriendsNotification::GetMessageMap()::s_pMap
  D CFriendsNotification::KB_ChainToMap()::chained
  D CFriendsNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
+ D CFriendsWebChatFriendInGameNotification::ChainToAnimationMap()::chained
+ D CFriendsWebChatFriendInGameNotification::ChainToMap()::chained
+ D CFriendsWebChatFriendInGameNotification::GetKBMap()::s_pMap
+ D CFriendsWebChatFriendInGameNotification::GetMessageMap()::s_pMap
+ D CFriendsWebChatFriendInGameNotification::KB_ChainToMap()::chained
+ D CFriendsWebChatFriendOnlineNotification::ChainToAnimationMap()::chained
+ D CFriendsWebChatFriendOnlineNotification::ChainToMap()::chained
+ D CFriendsWebChatFriendOnlineNotification::GetKBMap()::s_pMap
+ D CFriendsWebChatFriendOnlineNotification::GetMessageMap()::s_pMap
+ D CFriendsWebChatFriendOnlineNotification::KB_ChainToMap()::chained
  D CFriendsWebChatMsgBaseNotification::ChainToAnimationMap()::chained
  D CFriendsWebChatMsgBaseNotification::ChainToMap()::chained
  D CFriendsWebChatMsgBaseNotification::GetKBMap()::s_pMap
@@ -813,6 +823,8 @@
  D VTT for CFriendsListSectionHeader
  D VTT for CFriendsListSubPanel
  D VTT for CFriendsNotification
+ D VTT for CFriendsWebChatFriendInGameNotification
+ D VTT for CFriendsWebChatFriendOnlineNotification
  D VTT for CFriendsWebChatMsgBaseNotification
  D VTT for CFriendsWebChatMsgFriendChatNotification
  D VTT for CFriendsWebChatMsgGroupChatNotification
@@ -952,6 +964,8 @@
  D construction vtable for CFriendsNotification-in-CFriendInGameNotification
  D construction vtable for CFriendsNotification-in-CFriendInvitationNotification
  D construction vtable for CFriendsNotification-in-CFriendOnlineNotification
+ D construction vtable for CFriendsNotification-in-CFriendsWebChatFriendInGameNotification
+ D construction vtable for CFriendsNotification-in-CFriendsWebChatFriendOnlineNotification
  D construction vtable for CFriendsNotification-in-CFriendsWebChatMsgBaseNotification
  D construction vtable for CFriendsNotification-in-CFriendsWebChatMsgFriendChatNotification
  D construction vtable for CFriendsNotification-in-CFriendsWebChatMsgGroupChatNotification
@@ -961,6 +975,8 @@
  D construction vtable for CFriendsNotification-in-CNewTurnsNotification
  D construction vtable for CFriendsNotification-in-CTradeInviteNotification
  D construction vtable for CFriendsNotification-in-CVoiceChatInviteNotification
+ D construction vtable for CFriendsWebChatMsgBaseNotification-in-CFriendsWebChatFriendInGameNotification
+ D construction vtable for CFriendsWebChatMsgBaseNotification-in-CFriendsWebChatFriendOnlineNotification
  D construction vtable for CFriendsWebChatMsgBaseNotification-in-CFriendsWebChatMsgFriendChatNotification
  D construction vtable for CFriendsWebChatMsgBaseNotification-in-CFriendsWebChatMsgGroupChatNotification
  D construction vtable for CPlayersSubRecentPlayers-in-CPlayersSubCurrentPlayers
@@ -1028,6 +1044,8 @@
  D construction vtable for vgui::EditablePanel-in-CFriendsDialog
  D construction vtable for vgui::EditablePanel-in-CFriendsFriendsPage
  D construction vtable for vgui::EditablePanel-in-CFriendsNotification
+ D construction vtable for vgui::EditablePanel-in-CFriendsWebChatFriendInGameNotification
+ D construction vtable for vgui::EditablePanel-in-CFriendsWebChatFriendOnlineNotification
  D construction vtable for vgui::EditablePanel-in-CFriendsWebChatMsgBaseNotification
  D construction vtable for vgui::EditablePanel-in-CFriendsWebChatMsgFriendChatNotification
  D construction vtable for vgui::EditablePanel-in-CFriendsWebChatMsgGroupChatNotification
@@ -1166,6 +1184,8 @@
  D construction vtable for vgui::NotificationFrame-in-CFriendInvitationNotification
  D construction vtable for vgui::NotificationFrame-in-CFriendOnlineNotification
  D construction vtable for vgui::NotificationFrame-in-CFriendsNotification
+ D construction vtable for vgui::NotificationFrame-in-CFriendsWebChatFriendInGameNotification
+ D construction vtable for vgui::NotificationFrame-in-CFriendsWebChatFriendOnlineNotification
  D construction vtable for vgui::NotificationFrame-in-CFriendsWebChatMsgBaseNotification
  D construction vtable for vgui::NotificationFrame-in-CFriendsWebChatMsgFriendChatNotification
  D construction vtable for vgui::NotificationFrame-in-CFriendsWebChatMsgGroupChatNotification
@@ -1222,6 +1242,8 @@
  D construction vtable for vgui::Panel-in-CFriendsListSectionHeader
  D construction vtable for vgui::Panel-in-CFriendsListSubPanel
  D construction vtable for vgui::Panel-in-CFriendsNotification
+ D construction vtable for vgui::Panel-in-CFriendsWebChatFriendInGameNotification
+ D construction vtable for vgui::Panel-in-CFriendsWebChatFriendOnlineNotification
  D construction vtable for vgui::Panel-in-CFriendsWebChatMsgBaseNotification
  D construction vtable for vgui::Panel-in-CFriendsWebChatMsgFriendChatNotification
  D construction vtable for vgui::Panel-in-CFriendsWebChatMsgGroupChatNotification
@@ -1464,6 +1486,10 @@
  D guard variable for CFriendsListSubPanel::GetMessageMap()::s_pMap
  D guard variable for CFriendsNotification::GetKBMap()::s_pMap
  D guard variable for CFriendsNotification::GetMessageMap()::s_pMap
+ D guard variable for CFriendsWebChatFriendInGameNotification::GetKBMap()::s_pMap
+ D guard variable for CFriendsWebChatFriendInGameNotification::GetMessageMap()::s_pMap
+ D guard variable for CFriendsWebChatFriendOnlineNotification::GetKBMap()::s_pMap
+ D guard variable for CFriendsWebChatFriendOnlineNotification::GetMessageMap()::s_pMap
  D guard variable for CFriendsWebChatMsgBaseNotification::GetKBMap()::s_pMap
  D guard variable for CFriendsWebChatMsgBaseNotification::GetMessageMap()::s_pMap
  D guard variable for CFriendsWebChatMsgFriendChatNotification::GetKBMap()::s_pMap
@@ -1963,6 +1989,8 @@
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
  D typeinfo for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
+ D typeinfo for CFriendsWebChatFriendInGameNotification
+ D typeinfo for CFriendsWebChatFriendOnlineNotification
  D typeinfo for CFriendsWebChatMsgBaseNotification
  D typeinfo for CFriendsWebChatMsgFriendChatNotification
  D typeinfo for CFriendsWebChatMsgGroupChatNotification
@@ -3304,6 +3332,8 @@
  D vtable for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  D vtable for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
  D vtable for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
+ D vtable for CFriendsWebChatFriendInGameNotification
+ D vtable for CFriendsWebChatFriendOnlineNotification
  D vtable for CFriendsWebChatMsgBaseNotification
  D vtable for CFriendsWebChatMsgFriendChatNotification
  D vtable for CFriendsWebChatMsgGroupChatNotification
@@ -4030,6 +4060,8 @@
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnSetPersonaStateInternal
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnShowChatRoomGroupInvite
  R typeinfo name for CFriendsWebChat::CCallbackInternal_OnVoiceHotKeyStateChanged
+ R typeinfo name for CFriendsWebChatFriendInGameNotification
+ R typeinfo name for CFriendsWebChatFriendOnlineNotification
  R typeinfo name for CFriendsWebChatMsgBaseNotification
  R typeinfo name for CFriendsWebChatMsgFriendChatNotification
  R typeinfo name for CFriendsWebChatMsgGroupChatNotification
@@ -6638,6 +6670,28 @@
  T CFriendsWebChat::Shutdown()
  T CFriendsWebChat::UnregisterForMouseXButtonDown()
  T CFriendsWebChat::~CFriendsWebChat()
+ T CFriendsWebChatFriendInGameNotification::CFriendsWebChatFriendInGameNotification(vgui::Panel*, char const*, vgui::Frame*, CSteamID const&, KeyValues*, unsigned int)
+ T CFriendsWebChatFriendInGameNotification::ChainToAnimationMap()
+ T CFriendsWebChatFriendInGameNotification::ChainToMap()
+ T CFriendsWebChatFriendInGameNotification::GetAnimMap()
+ T CFriendsWebChatFriendInGameNotification::GetClassSize() const
+ T CFriendsWebChatFriendInGameNotification::GetKBMap()
+ T CFriendsWebChatFriendInGameNotification::GetMessageMap()
+ T CFriendsWebChatFriendInGameNotification::GetPanelClassName()
+ T CFriendsWebChatFriendInGameNotification::GetPanelTopClassName() const
+ T CFriendsWebChatFriendInGameNotification::KB_ChainToMap()
+ T CFriendsWebChatFriendInGameNotification::~CFriendsWebChatFriendInGameNotification()
+ T CFriendsWebChatFriendOnlineNotification::CFriendsWebChatFriendOnlineNotification(vgui::Panel*, char const*, vgui::Frame*, CSteamID const&, KeyValues*, unsigned int)
+ T CFriendsWebChatFriendOnlineNotification::ChainToAnimationMap()
+ T CFriendsWebChatFriendOnlineNotification::ChainToMap()
+ T CFriendsWebChatFriendOnlineNotification::GetAnimMap()
+ T CFriendsWebChatFriendOnlineNotification::GetClassSize() const
+ T CFriendsWebChatFriendOnlineNotification::GetKBMap()
+ T CFriendsWebChatFriendOnlineNotification::GetMessageMap()
+ T CFriendsWebChatFriendOnlineNotification::GetPanelClassName()
+ T CFriendsWebChatFriendOnlineNotification::GetPanelTopClassName() const
+ T CFriendsWebChatFriendOnlineNotification::KB_ChainToMap()
+ T CFriendsWebChatFriendOnlineNotification::~CFriendsWebChatFriendOnlineNotification()
  T CFriendsWebChatMsgBaseNotification::CFriendsWebChatMsgBaseNotification(vgui::Panel*, char const*, vgui::Frame*, CSteamID const&, KeyValues*, unsigned int)
  T CFriendsWebChatMsgBaseNotification::ChainToAnimationMap()
  T CFriendsWebChatMsgBaseNotification::ChainToMap()

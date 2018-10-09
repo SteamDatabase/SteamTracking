@@ -489,7 +489,7 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "portuguese"} ).text( 'Português (Portuguese)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "brazilian"} ).text( 'Português-Brasil (Portuguese-Brazil)' )
+				$J('<option/>', {value: "brazilian"} ).text( 'Português - Brasil (Portuguese - Brazil)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "russian"} ).text( 'Русский (Russian)' )
@@ -501,7 +501,7 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "schinese"} ).text( '简体中文 (Simplified Chinese)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "spanish"} ).text( 'Español (Spanish)' )
+				$J('<option/>', {value: "spanish"} ).text( 'Español - España (Spanish - Spain)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "swedish"} ).text( 'Svenska (Swedish)' )

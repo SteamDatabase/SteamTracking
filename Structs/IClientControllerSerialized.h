@@ -33,6 +33,7 @@ public:
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
+    virtual unknown_ret WarmOptInStatus(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
