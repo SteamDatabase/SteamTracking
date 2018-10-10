@@ -9728,7 +9728,7 @@ and limitations under the License.
         if (Ld.UIStore.GetPerContextChatData(Zt(t)).BUsePopups() && n && i) {
           var s = new Bp(t, Zt(t), i, n, a);
           s.Show(), (r = s);
-        } else r = Iy.GetModalManager(t).ShowModal(a);
+        } else r = Ry.GetModalManager(t).ShowModal(a);
         return r;
       }
       function he(e) {
@@ -9736,7 +9736,7 @@ and limitations under the License.
           "div",
           { className: "PopupFullWindow", onContextMenu: Et },
           Fa.createElement(Mp, { hideMinMax: !0, popup: e.popup }),
-          Fa.createElement(Nf, { ModalManager: Iy.GetModalManager(e.popup) }),
+          Fa.createElement(Lf, { ModalManager: Ry.GetModalManager(e.popup) }),
           e.children
         );
       }
@@ -9798,7 +9798,7 @@ and limitations under the License.
       }
       function be(e) {
         return Fa.createElement(
-          Ah,
+          Ph,
           { friend: e.friend, context: null },
           Fa.createElement(
             "div",
@@ -10247,7 +10247,7 @@ and limitations under the License.
       }
       function Ze(e, t) {
         me(
-          Fa.createElement(qm, { browserContext: e }),
+          Fa.createElement(Km, { browserContext: e }),
           t,
           Object(pa.b)("#Settings"),
           {
@@ -10263,7 +10263,7 @@ and limitations under the License.
         var n = 60 * i;
         i < 2 && (n -= 32),
           me(
-            Fa.createElement(Jm, { group: t.GetGroup() }),
+            Fa.createElement(Ym, { group: t.GetGroup() }),
             e,
             "ChatRoomGroupNotificationSettings",
             {
@@ -10348,7 +10348,7 @@ and limitations under the License.
       function it(e, t, i, n, r) {
         void 0 === n && (n = !1),
           me(
-            Fa.createElement(dh, {
+            Fa.createElement(ph, {
               browserContext: e,
               chatViewToReplace: i,
               bHideChatNameEntry: n,
@@ -10408,7 +10408,7 @@ and limitations under the License.
         );
       }
       function at(e) {
-        me(Fa.createElement(_h, null), e, "ChangeLog", {
+        me(Fa.createElement(yh, null), e, "ChangeLog", {
           strTitle: Object(pa.b)("#changeLog_Title"),
           popupWidth: 640,
           popupHeight: 680
@@ -10438,7 +10438,7 @@ and limitations under the License.
       }
       function ct(e, t, i) {
         return Object(zd.a)(
-          Fa.createElement(Gh, {
+          Fa.createElement(Nh, {
             browserContext: e,
             appid: t,
             ownerWindow: i.currentTarget.ownerDocument.defaultView
@@ -10448,14 +10448,14 @@ and limitations under the License.
       }
       function lt(e) {
         return Fa.createElement(
-          Wh,
+          Hh,
           {
             target: e.target,
             className: "friendHover miniProfileHover",
             visibilityObserver: e.hoverInstance,
             onNoSpace: e.onNoSpace
           },
-          Fa.createElement(Hh, { hoverInstance: e.hoverInstance })
+          Fa.createElement(qh, { hoverInstance: e.hoverInstance })
         );
       }
       function ut() {
@@ -10511,9 +10511,9 @@ and limitations under the License.
         return Fa.createElement(Gp.c, null, i);
       }
       function mt(e) {
-        Iy.UIDisplayPrefs.bDontShowVoiceAlert ||
+        Ry.UIDisplayPrefs.bDontShowVoiceAlert ||
           (e &&
-            me(Fa.createElement(fg, null), e, "ActiveVoiceAlert", {
+            me(Fa.createElement(_g, null), e, "ActiveVoiceAlert", {
               strTitle: Object(pa.b)("#Chat_StillInVoiceDialog_Title"),
               popupWidth: 650,
               popupHeight: 340
@@ -10595,7 +10595,7 @@ and limitations under the License.
       }
       function _t(e, t, i, n) {
         me(
-          wa.a.createElement(dh, {
+          wa.a.createElement(ph, {
             browserContext: e,
             bHideChatNameEntry: !1,
             vecInvitePlayers: n,
@@ -10706,14 +10706,14 @@ and limitations under the License.
         for (var r = [], o = 0, a = i; o < a.length; o++) {
           var s = a[o];
           s instanceof zc
-            ? r.push(Fa.createElement(Wg, { context: e, player: s }))
+            ? r.push(Fa.createElement(Hg, { context: e, player: s }))
             : r.push(s);
         }
         return pa.d.apply(void 0, [t].concat(r));
       }
       function wt(e) {
         return e.msg.rtTimestamp < Ld.GetLocalMidnightInRTime32()
-          ? Fa.createElement(af, { rtTimestamp: e.msg.rtTimestamp })
+          ? Fa.createElement(sf, { rtTimestamp: e.msg.rtTimestamp })
           : null;
       }
       function Bt(e, t, i) {
@@ -10757,7 +10757,7 @@ and limitations under the License.
           o = function() {
             n.length &&
               (i.push(
-                Fa.createElement(qg, {
+                Fa.createElement(Kg, {
                   key: n[0].UniqueKey(),
                   messages: n,
                   friendRenderContext: t,
@@ -10769,7 +10769,7 @@ and limitations under the License.
           a = function() {
             r.length &&
               (i.push(
-                Fa.createElement(qg, {
+                Fa.createElement(Kg, {
                   key: r[0].UniqueKey(),
                   messages: r,
                   friendRenderContext: t,
@@ -10787,7 +10787,7 @@ and limitations under the License.
                 : (o(),
                   a(),
                   i.push(
-                    Fa.createElement(Qg, {
+                    Fa.createElement($g, {
                       key: e.UniqueKey(),
                       msg: e,
                       friendRenderContext: t
@@ -10814,7 +10814,7 @@ and limitations under the License.
           a.BCanInvite() || a.BHasMember(e.invitee.accountid) || (o = !1);
         }
         o
-          ? me(Fa.createElement(mf, si.a({}, e)), i, "InviteDialog", {
+          ? me(Fa.createElement(hf, si.a({}, e)), i, "InviteDialog", {
               strTitle: r
                 ? Object(pa.b)("#Chat_Actions_InviteFriend_VoiceChat")
                 : Object(pa.b)("#Chat_Actions_DropGroupInvite_Title"),
@@ -10830,11 +10830,11 @@ and limitations under the License.
       function Rt(e, t, i, n, r) {
         if (r);
         else {
-          var o = new Sy(n.ownerDocument.defaultView),
+          var o = new My(n.ownerDocument.defaultView),
             a = Ld.UIStore.GetDefaultTabSetForContext(e);
           Ld.UIStore.GetPerContextChatData(e).SetFriendsListWindow(o),
             On.render(
-              Fa.createElement(kf, {
+              Fa.createElement(Df, {
                 friends: t,
                 chats: i,
                 tabset: a,
@@ -10905,32 +10905,32 @@ and limitations under the License.
       }
       function Tt(e, t, i) {
         me(
-          Fa.createElement(Uf, si.a({}, e, { bIsInviteDialog: !0 })),
+          Fa.createElement(Vf, si.a({}, e, { bIsInviteDialog: !0 })),
           i,
           "InviteDialog",
           { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }
         );
       }
       function kt(e) {
-        if (v_ == h_.Loaded) return void e();
-        if (v_ == h_.NotLoaded) {
+        if (b_ == g_.Loaded) return void e();
+        if (b_ == g_.NotLoaded) {
           var t = document.createElement("script");
           t.src = "https://www.youtube.com/iframe_api";
           var i = document.getElementsByTagName("script")[0];
           i.parentNode.insertBefore(t, i),
             (window.onYouTubeIframeAPIReady = Gt);
         }
-        b_.findIndex(function(t) {
+        C_.findIndex(function(t) {
           return e == t;
-        }) < 0 && b_.push(e);
+        }) < 0 && C_.push(e);
       }
       function Dt(e) {
-        _n.c(b_, e);
+        _n.c(C_, e);
       }
       function Gt() {
-        v_ = h_.Loaded;
-        for (var e = 0, t = b_; e < t.length; e++) (0, t[e])();
-        b_ = [];
+        b_ = g_.Loaded;
+        for (var e = 0, t = C_; e < t.length; e++) (0, t[e])();
+        C_ = [];
       }
       function Nt(e) {
         var t = new RegExp(
@@ -10948,42 +10948,42 @@ and limitations under the License.
         return (t.href = e), t.hostname.indexOf("xn--") >= 0 ? t.href : e;
       }
       function Pt() {
-        return Object.assign(zt(), { mention: iy });
+        return Object.assign(zt(), { mention: ny });
       }
       function xt() {
         return Object.assign(zt(), {
-          invite: H_,
-          gameinvite: q_,
-          lobbyinvite: K_,
-          tradeoffer: Q_,
-          broadcastinvite: J_,
-          broadcastviewrequest: Y_
+          invite: q_,
+          gameinvite: K_,
+          lobbyinvite: J_,
+          tradeoffer: $_,
+          broadcastinvite: Y_,
+          broadcastviewrequest: X_
         });
       }
       function zt() {
         return {
-          url: I_,
-          youtube: E_,
-          filteredurl: ty,
-          emoticon: ny,
-          img: T_,
-          video: k_,
-          og: G_,
-          tweet: N_,
-          inviteurl: W_,
-          publishedfile: X_,
-          tradeofferlink: Z_,
-          econitem: ey,
-          steamstore: ry,
-          broadcast: $_,
-          oembed: L_,
-          spoiler: A_,
-          plusone: P_,
-          flip: x_,
-          random: z_,
-          quote: U_,
-          pre: V_,
-          code: j_
+          url: R_,
+          youtube: T_,
+          filteredurl: iy,
+          emoticon: ry,
+          img: k_,
+          video: D_,
+          og: N_,
+          tweet: L_,
+          inviteurl: H_,
+          publishedfile: Z_,
+          tradeofferlink: Q_,
+          econitem: ty,
+          steamstore: oy,
+          broadcast: ey,
+          oembed: A_,
+          spoiler: P_,
+          plusone: x_,
+          flip: z_,
+          random: U_,
+          quote: V_,
+          pre: j_,
+          code: W_
         };
       }
       function Ut() {
@@ -11000,7 +11000,7 @@ and limitations under the License.
         return (
           null == t && (t = e.href),
           Fa.createElement(
-            Yh,
+            Xh,
             { text: t },
             Fa.createElement(
               "div",
@@ -11019,7 +11019,7 @@ and limitations under the License.
           a = r + "?s=" + i + "x" + n,
           s = a + "dpx2x";
         return Fa.createElement(
-          D_,
+          G_,
           si.a({ context: t }, o, { src: a, srcSet: a + " 1x, " + s + " 2x" })
         );
       }
@@ -11153,7 +11153,7 @@ and limitations under the License.
         window.sessionStorage.setItem(
           "oFriendsUIStartupParam",
           JSON.stringify({
-            command: { command: "ShowWatchBroadcast", steamid: Ry.steamid }
+            command: { command: "ShowWatchBroadcast", steamid: Ey.steamid }
           })
         );
       }
@@ -11162,7 +11162,7 @@ and limitations under the License.
       }
       function ii() {
         var e,
-          t = new By(),
+          t = new Oy(),
           i = null,
           n = !1;
         if (ai.a.IN_CLIENT) {
@@ -11185,25 +11185,25 @@ and limitations under the License.
         t.Init(e, n, i);
       }
       function ni() {
-        new Ey().Init(function() {
+        new Ty().Init(function() {
           window.location = window.location;
         });
       }
       function ri(e, t, i) {
         if ("english" !== t)
-          "friendsui" == e ? (ky = i) : "shared" == e && (Dy = i);
-        else if ("shared" == e) Gy = i;
+          "friendsui" == e ? (Dy = i) : "shared" == e && (Gy = i);
+        else if ("shared" == e) Ny = i;
         else {
           var n = void 0,
             r = null,
             o = void 0,
             a = null;
-          void 0 !== ky ? ((n = ky), (r = i)) : (n = i),
-            void 0 !== Dy ? ((o = Dy), (a = Gy)) : (o = Gy),
+          void 0 !== Dy ? ((n = Dy), (r = i)) : (n = i),
+            void 0 !== Gy ? ((o = Gy), (a = Ny)) : (o = Ny),
             pa.a.InitFromObjects(n, r, o, a),
-            (ky = void 0),
             (Dy = void 0),
-            (Gy = void 0);
+            (Gy = void 0),
+            (Ny = void 0);
         }
       }
       Object.defineProperty(t, "__esModule", { value: !0 });
@@ -58670,12 +58670,12 @@ and limitations under the License.
               configurable: !0
             }),
             (t.prototype.DeliverDeferredDragEnter = function() {
-              var e = Iy.DragDropManager.GetDragData();
+              var e = Ry.DragDropManager.GetDragData();
               return this.props.fnDragEnter(e, this.m_deferredEnter.bFiles);
             }),
             (t.prototype.OnDragEnter = function(e) {
               if (!this.m_bAcceptDrag) {
-                var t = Iy.DragDropManager.GetDragData(),
+                var t = Ry.DragDropManager.GetDragData(),
                   i =
                     this.props.bAcceptsFiles &&
                     -1 != e.dataTransfer.types.indexOf("Files");
@@ -58715,7 +58715,7 @@ and limitations under the License.
                 (this.m_bAcceptDrag = !1),
                   e.preventDefault(),
                   e.stopPropagation();
-                var t = Iy.DragDropManager.GetDragData();
+                var t = Ry.DragDropManager.GetDragData();
                 t && -1 != this.props.rgAcceptedTypes.indexOf(t.type)
                   ? this.props.fnDrop && this.props.fnDrop(t, e)
                   : this.props.bAcceptsFiles &&
@@ -59539,7 +59539,7 @@ and limitations under the License.
                         ref: r ? t.OnFocusFriendRef : null,
                         "data-index": i
                       },
-                      Fa.createElement(Ph, {
+                      Fa.createElement(xh, {
                         noActions: !0,
                         friend: e,
                         context: null
@@ -59570,7 +59570,7 @@ and limitations under the License.
                     return e.friend && !n.has(e.friend.accountid)
                       ? (c++,
                         Fa.createElement(
-                          Ph,
+                          xh,
                           si.a(
                             {
                               friend: e.friend,
@@ -59585,7 +59585,7 @@ and limitations under the License.
                         ))
                       : null;
                   }),
-                  u = Fa.createElement(Dh, {
+                  u = Fa.createElement(Gh, {
                     group: Ld.FriendStore.FriendGroupStore.ingame_group,
                     key: Ld.FriendStore.FriendGroupStore.ingame_group.id,
                     collapsed: !1,
@@ -59597,7 +59597,7 @@ and limitations under the License.
                   }),
                   d = Ld.FriendStore.FriendGroupStore.default_groups.map(
                     function(e) {
-                      return Fa.createElement(Dh, {
+                      return Fa.createElement(Gh, {
                         group: e,
                         key: e.id,
                         collapsed: !1,
@@ -59859,7 +59859,7 @@ and limitations under the License.
                       Fa.createElement(
                         sp,
                         null,
-                        Fa.createElement(Ph, {
+                        Fa.createElement(xh, {
                           friend: this.props.friend,
                           className: "AssignCategoriesDialog_Friend",
                           noActions: !0,
@@ -62289,7 +62289,7 @@ and limitations under the License.
                 i.friend &&
                   (this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                  Iy.DragDropManager.SetDropConsumed(),
+                  Ry.DragDropManager.SetDropConsumed(),
                   this.m_friendPicker &&
                     this.m_friendPicker.SelectFriendSuggestion(i.friend));
               }
@@ -62365,7 +62365,7 @@ and limitations under the License.
                       Fa.createElement(
                         "div",
                         { className: "displayRow" },
-                        Fa.createElement(oh, {
+                        Fa.createElement(ah, {
                           group: this.props.chatRoomGroup,
                           small: !0
                         }),
@@ -62472,7 +62472,7 @@ and limitations under the License.
             Fa.Fragment,
             null,
             Fa.createElement(
-              Ah,
+              Ph,
               { friend: e.friend, context: null },
               Fa.createElement(
                 "div",
@@ -62934,9 +62934,9 @@ and limitations under the License.
               var t = this.props.group;
               if (t.BIsClanChatRoom()) {
                 var i = Ld.FriendStore.ClanStore.GetClan(t.GetClanID());
-                Iy.DragDropManager.StartDrag({ type: "clan", clan: i });
+                Ry.DragDropManager.StartDrag({ type: "clan", clan: i });
               } else
-                Iy.DragDropManager.StartDrag({
+                Ry.DragDropManager.StartDrag({
                   type: "chatroomgroup",
                   group: t
                 });
@@ -62945,10 +62945,10 @@ and limitations under the License.
               this.state.broadcastInfo && eu.StopInfo(this.state.broadcastInfo);
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Iy.DragDropManager.EndDrag();
+              Ry.DragDropManager.EndDrag();
             }),
             (t.prototype.OnDragEnter = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t,
                   n = i.friend;
@@ -62968,14 +62968,14 @@ and limitations under the License.
                 this.state.friendDrag && this.setState({ friendDrag: void 0 }));
             }),
             (t.prototype.OnDrop = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 e.preventDefault(), e.stopPropagation();
                 var i = this.props.group.memberList,
                   n = i.member_list.slice(),
                   r = t;
                 if (void 0 != r.friend && -1 != n.indexOf(r.friend)) return;
-                Iy.DragDropManager.SetDropConsumed(),
+                Ry.DragDropManager.SetDropConsumed(),
                   this.props.group.InviteFriend(r.friend.accountid),
                   this.setState({ friendDrag: void 0 });
               }
@@ -63039,7 +63039,7 @@ and limitations under the License.
                       onClick: this.OnClick,
                       onContextMenu: this.OnContextMenu
                     },
-                    Fa.createElement(oh, { group: e, small: !0 }),
+                    Fa.createElement(ah, { group: e, small: !0 }),
                     i &&
                       Fa.createElement(
                         "div",
@@ -63231,7 +63231,7 @@ and limitations under the License.
                 { className: "voiceChatGroup" },
                 e.rgFriends.map(function(e) {
                   return Fa.createElement(
-                    Ah,
+                    Ph,
                     {
                       key: e.accountid,
                       friend: e,
@@ -64155,7 +64155,7 @@ and limitations under the License.
                 if (n.friend && n.friend != Ld.FriendStore.self) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Iy.DragDropManager.SetDropConsumed();
+                    Ry.DragDropManager.SetDropConsumed();
                   var r = t.currentTarget.ownerDocument.defaultView;
                   this.props.chat.GetGroup().BIsUserGroupMember(n.friend)
                     ? (this.props.chat
@@ -64223,7 +64223,7 @@ and limitations under the License.
                         classNames: "friend-anim",
                         timeout: 320
                       },
-                      Fa.createElement(Ph, {
+                      Fa.createElement(xh, {
                         friend: t,
                         key: t.accountid,
                         context: e.GetFriendContext(),
@@ -64242,7 +64242,7 @@ and limitations under the License.
                   Fa.createElement(
                     Ad,
                     { key: r, classNames: "friend-anim", timeout: 320 },
-                    Fa.createElement(Ph, {
+                    Fa.createElement(xh, {
                       friend: o,
                       key: r,
                       context: this.GetFriendContext(),
@@ -64322,7 +64322,7 @@ and limitations under the License.
                   { className: s },
                   Object(pa.b)("#Chat_VoiceEmptyChannel")
                 ),
-                Fa.createElement(bh, {
+                Fa.createElement(Ch, {
                   name: p,
                   chat: this.props.chat,
                   nostatus: !0
@@ -64579,10 +64579,10 @@ and limitations under the License.
               };
               return r
                 ? Fa.createElement(
-                    Ph,
+                    xh,
                     si.a({}, s, { listStatusIndicatorLeft: e })
                   )
-                : Fa.createElement(zh, si.a({}, s), e);
+                : Fa.createElement(Uh, si.a({}, s), e);
             }),
             si.c([yn.a], t.prototype, "OnFriendSelected", null),
             (t = si.c([Cp.observer], t))
@@ -64701,7 +64701,7 @@ and limitations under the License.
                   t.push({
                     title: Object(pa.b)("#GroupSettings_Channels_Section"),
                     uniqueName: "GroupSettings_Channels",
-                    content: Fa.createElement(Dm, {
+                    content: Fa.createElement(Gm, {
                       groupView: this.props.groupView,
                       enabled: o
                     }),
@@ -64710,14 +64710,14 @@ and limitations under the License.
                   t.push({
                     title: Object(pa.b)("#GroupSettings_Permissions_Section"),
                     uniqueName: "GroupSettings_Permissions",
-                    content: Fa.createElement(Nm, { group: e, enabled: n }),
+                    content: Fa.createElement(Lm, { group: e, enabled: n }),
                     enabled: n,
                     hideTitle: !0
                   }),
                   t.push({
                     title: Object(pa.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Fa.createElement(Lm, {
+                    content: Fa.createElement(Am, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -64727,7 +64727,7 @@ and limitations under the License.
                   t.push({
                     title: Object(pa.b)("#GroupSettings_InvitedUsers_Section"),
                     uniqueName: "GroupSettings_InvitedUsers",
-                    content: Fa.createElement(Am, {
+                    content: Fa.createElement(Pm, {
                       group: e,
                       invitedUsers: this.m_invitedUsers,
                       enabled: r
@@ -64737,7 +64737,7 @@ and limitations under the License.
                   t.push({
                     title: Object(pa.b)("#GroupSettings_Bans_Section"),
                     uniqueName: "GroupSettings_Bans",
-                    content: Fa.createElement(Pm, {
+                    content: Fa.createElement(xm, {
                       group: e,
                       bans: this.m_bans,
                       enabled: a
@@ -64760,7 +64760,7 @@ and limitations under the License.
                   t.push({
                     title: Object(pa.b)("#GroupSettings_Invite_Section"),
                     uniqueName: "GroupSettings_Invite",
-                    content: Fa.createElement(Lm, {
+                    content: Fa.createElement(Am, {
                       group: e,
                       inviteLinks: this.m_inviteLinks,
                       enabled: r
@@ -65038,7 +65038,7 @@ and limitations under the License.
                     " ",
                     Object(pa.b)("#Chat_Settings_General_Owner")
                   ),
-                  Fa.createElement(Ph, {
+                  Fa.createElement(xh, {
                     className: "groupOwnerFriend",
                     friend: t,
                     context: null
@@ -65187,8 +65187,76 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        Dm = (Fa.Component,
-        (function(e) {
+        Dm = (function(e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            si.d(t, e),
+            (t.prototype.render = function() {
+              var e = this,
+                t = this.props.roomList.indexOf(this.props.room);
+              AssertMsg(
+                -1 !== t,
+                "Couldn't find CChatRoom inside of its list?"
+              );
+              var i = t - 1,
+                n = function() {
+                  e.props.room
+                    .GetGroup()
+                    .ReorderRoom(
+                      e.props.roomList[i].GetRoomID(),
+                      e.props.room.GetRoomID()
+                    );
+                },
+                r = t + 1,
+                o = function() {
+                  e.props.room
+                    .GetGroup()
+                    .ReorderRoom(
+                      e.props.room.GetRoomID(),
+                      e.props.roomList[r].GetRoomID()
+                    );
+                };
+              return (
+                (i < 0 || this.props.roomList[i].BIsDefaultRoom()) &&
+                  (n = void 0),
+                r >= this.props.roomList.length && (o = void 0),
+                this.props.room.BIsDefaultRoom() &&
+                  ((n = void 0), (o = void 0)),
+                this.props.enabled || ((n = void 0), (o = void 0)),
+                void 0 === n && void 0 === o
+                  ? null
+                  : Fa.createElement(
+                      "div",
+                      { className: "rolePriorityContainer" },
+                      Fa.createElement(
+                        "div",
+                        {
+                          className:
+                            "rolePriorityButton roleUp" +
+                            (void 0 === n ? " Disabled" : ""),
+                          onClick: n
+                        },
+                        Fa.createElement(xd.n, { angle: 0 })
+                      ),
+                      Fa.createElement(
+                        "div",
+                        {
+                          className:
+                            "rolePriorityButton roleDown" +
+                            (void 0 === o ? " Disabled" : ""),
+                          onClick: o
+                        },
+                        Fa.createElement(xd.n, { angle: 180 })
+                      )
+                    )
+              );
+            }),
+            (t = si.c([Cp.observer], t))
+          );
+        })(Fa.Component),
+        Gm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -65241,51 +65309,59 @@ and limitations under the License.
               var e = this,
                 t = this.props.groupView.GetGroup().textRoomList,
                 i = this.props.groupView.GetGroup().voiceRoomList,
-                n = function(t, i, n) {
+                n = function(n, r, o) {
                   return Fa.createElement(
                     "div",
                     {
-                      key: t.GetRoomID(),
-                      className: "_DialogRow _DialogRowBackground"
+                      key: n.GetRoomID(),
+                      className: "ChatGroupSettingsChannels_Row"
                     },
                     Fa.createElement(
                       "div",
-                      { className: "_DialogRowLabel" },
-                      n
-                        ? Fa.createElement(xd._2, null)
-                        : Fa.createElement(xd.W, null),
+                      { className: "_DialogRow _DialogRowBackground" },
                       Fa.createElement(
                         "div",
-                        {
-                          className: t.IsDefaultRoomForGroup()
-                            ? "HomeChannel"
-                            : "",
-                          style: { alignSelf: "center" }
-                        },
-                        t.name
-                      )
-                    ),
-                    !1,
-                    t.IsDefaultRoomForGroup() &&
-                      Fa.createElement(
-                        "div",
-                        { className: "_DialogRowSecondaryLabel" },
-                        Object(pa.b)(
-                          "#GroupSettings_Channels_HomeChannelDeleteLabel"
+                        { className: "_DialogRowLabel" },
+                        o
+                          ? Fa.createElement(xd._2, null)
+                          : Fa.createElement(xd.W, null),
+                        Fa.createElement(
+                          "div",
+                          {
+                            className: n.IsDefaultRoomForGroup()
+                              ? "HomeChannel"
+                              : "",
+                            style: { alignSelf: "center" }
+                          },
+                          n.name
                         )
                       ),
-                    !t.IsDefaultRoomForGroup() &&
-                      Fa.createElement(
-                        oe,
-                        {
-                          className: "_DialogRowAction",
-                          onClick: function(i) {
-                            return e.OnDeleteChannel(i, t);
+                      n.IsDefaultRoomForGroup() &&
+                        Fa.createElement(
+                          "div",
+                          { className: "_DialogRowSecondaryLabel" },
+                          Object(pa.b)(
+                            "#GroupSettings_Channels_HomeChannelDeleteLabel"
+                          )
+                        ),
+                      !n.IsDefaultRoomForGroup() &&
+                        e.props.enabled &&
+                        Fa.createElement(
+                          "div",
+                          {
+                            className: "ChannelDeleteButton",
+                            onClick: function(t) {
+                              return e.OnDeleteChannel(t, n);
+                            }
                           },
-                          disabled: !e.props.enabled
-                        },
-                        Object(pa.b)("#GroupSettings_Channels_DeleteChannel")
-                      )
+                          Object(pa.b)("#GroupSettings_Channels_Delete")
+                        )
+                    ),
+                    Fa.createElement(Dm, {
+                      room: n,
+                      roomList: o ? i : t,
+                      enabled: e.props.enabled
+                    })
                   );
                 },
                 r = t.map(function(e) {
@@ -65369,8 +65445,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "OnDeleteChannel", null),
             (t = si.c([Cp.observer], t))
           );
-        })(yp)),
-        Gm = (function(e) {
+        })(yp),
+        Nm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return Ld.FriendStore.self, (i.state = { strRoleName: "" }), i;
@@ -65443,7 +65519,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Nm = (function(e) {
+        Lm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -65463,7 +65539,7 @@ and limitations under the License.
             (t.prototype.OnCreateRole = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView;
               me(
-                Fa.createElement(Gm, { ownerWin: t, group: this.props.group }),
+                Fa.createElement(Nm, { ownerWin: t, group: this.props.group }),
                 t
               );
             }),
@@ -65974,7 +66050,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        Lm = (function(e) {
+        Am = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66181,7 +66257,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        Am = (function(e) {
+        Pm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66213,7 +66289,7 @@ and limitations under the License.
               var i = this,
                 n = Ld.FriendStore.GetPlayer(t),
                 r = e.currentTarget.ownerDocument.defaultView,
-                o = Fa.createElement(Ph, {
+                o = Fa.createElement(xh, {
                   className: "friend",
                   friend: n,
                   context: null,
@@ -66278,7 +66354,7 @@ and limitations under the License.
                       "td",
                       { className: "friendCell" },
                       " ",
-                      Fa.createElement(Ph, {
+                      Fa.createElement(xh, {
                         friend: i,
                         context: null,
                         bHideGameName: !0,
@@ -66361,7 +66437,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        Pm = (function(e) {
+        xm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66385,7 +66461,7 @@ and limitations under the License.
               var i = this,
                 n = Ld.FriendStore.GetPlayer(t),
                 r = e.currentTarget.ownerDocument.defaultView,
-                o = Fa.createElement(Ph, {
+                o = Fa.createElement(xh, {
                   className: "friend",
                   friend: n,
                   context: null,
@@ -66446,7 +66522,7 @@ and limitations under the License.
                           "td",
                           { className: "friendCell" },
                           " ",
-                          Fa.createElement(Ph, { friend: i, context: null }),
+                          Fa.createElement(xh, { friend: i, context: null }),
                           " "
                         ),
                         Fa.createElement(
@@ -66522,7 +66598,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        xm = (function(e) {
+        zm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -66684,8 +66760,8 @@ and limitations under the License.
           (e[(e.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
           (e[(e.k_EChatFontSizeLarge = 3)] = "k_EChatFontSizeLarge");
       })(wd || (wd = {}));
-      var zm,
-        Um = (function(e) {
+      var Um,
+        Vm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -66753,7 +66829,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Vm = (function(e) {
+        jm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -66842,8 +66918,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "SetChatFontSize", null),
             (t = si.c([Cp.observer], t))
           );
-        })(xm),
-        jm = (function(e) {
+        })(zm),
+        Wm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -66889,8 +66965,8 @@ and limitations under the License.
             }),
             (t = si.c([Cp.observer], t))
           );
-        })(xm),
-        Wm = (function(e) {
+        })(zm),
+        Hm = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -66913,7 +66989,7 @@ and limitations under the License.
                         "#FriendSettings_ParenthesizeNicknames"
                       )
                     },
-                    Fa.createElement(Um, {
+                    Fa.createElement(Vm, {
                       bParenthesizeNicknames: this.state.communityPreferences
                         .bParenthesizeNicknames
                     })
@@ -66952,8 +67028,8 @@ and limitations under the License.
             }),
             (t = si.c([Cp.observer], t))
           );
-        })(xm),
-        Hm = (function(e) {
+        })(zm),
+        qm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -67246,7 +67322,7 @@ and limitations under the License.
                           className: "voiceSelfDirections",
                           title: Object(pa.b)("#VoiceWhenMicIsWorking")
                         },
-                        Fa.createElement(Ph, {
+                        Fa.createElement(xh, {
                           friend: d,
                           key: d.accountid,
                           showVoiceLevel: !0,
@@ -67636,7 +67712,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(yp),
-        qm = (function(e) {
+        Km = (function(e) {
           function t(t) {
             return e.call(this, t, Object(pa.b)("#Settings")) || this;
           }
@@ -67671,27 +67747,27 @@ and limitations under the License.
                     {
                       title: Object(pa.b)("#FriendSettings_Friends"),
                       uniqueName: "FriendSettings_Friends",
-                      content: Fa.createElement(Wm, si.a({}, t))
+                      content: Fa.createElement(Hm, si.a({}, t))
                     },
                     {
                       title: Object(pa.b)("#FriendSettings_Chat"),
                       uniqueName: "FriendSettings_Chat",
-                      content: Fa.createElement(jm, si.a({}, t))
+                      content: Fa.createElement(Wm, si.a({}, t))
                     },
                     {
                       title: Object(pa.b)("#FriendSettings_SizeAndScaling"),
                       uniqueName: "FriendSettings_SizeAndScaling",
-                      content: Fa.createElement(Vm, si.a({}, t))
+                      content: Fa.createElement(jm, si.a({}, t))
                     },
                     {
                       title: Object(pa.b)("#FriendSettings_Notifications"),
                       uniqueName: "FriendSettings_Notifications",
-                      content: Fa.createElement(Km, si.a({}, t))
+                      content: Fa.createElement(Jm, si.a({}, t))
                     },
                     {
                       title: Object(pa.b)("#FriendSettings_Voice"),
                       uniqueName: "FriendSettings_Voice",
-                      content: Fa.createElement(Hm, {
+                      content: Fa.createElement(qm, {
                         onCancel: this.props.closeModal,
                         voiceStore: Ld.ChatStore.VoiceChat
                       })
@@ -67707,7 +67783,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Km = (function(e) {
+        Jm = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.m_rgOptions = $e(!1)), i;
@@ -67864,8 +67940,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "FriendsSettingsNotificationRow", null),
             (t = si.c([Cp.observer], t))
           );
-        })(xm),
-        Jm = (Fa.createElement(
+        })(zm),
+        Ym = (Fa.createElement(
           "div",
           {
             className:
@@ -67938,7 +68014,7 @@ and limitations under the License.
               var r;
               if (n) {
                 var o = i.map(function(i) {
-                  return Fa.createElement(Ym, {
+                  return Fa.createElement(Xm, {
                     fnHandleSave: e.WrapSavePromise,
                     group: t,
                     chat: i,
@@ -67990,7 +68066,7 @@ and limitations under the License.
                       },
                       "Saving ..."
                     ),
-                    Fa.createElement(Xm, {
+                    Fa.createElement(Zm, {
                       drop_down_options: this.m_rgSelectOptions,
                       get_notification_level: function(t) {
                         return e.props.group.GetDesktopNotificationLevel(t);
@@ -68056,7 +68132,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component)),
-        Ym = (function(e) {
+        Xm = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_rgSelectOptions = $e()), t;
@@ -68092,7 +68168,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Xm = (function(e) {
+        Zm = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68171,7 +68247,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Zm = function() {
+        Qm = function() {
           for (var e = [], t = 0; t < arguments.length; t++)
             e[t] = arguments[t];
           return e.reduce(function(e, t) {
@@ -68182,7 +68258,7 @@ and limitations under the License.
               : e;
           }, "");
         },
-        Qm = (function(e) {
+        $m = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68200,7 +68276,7 @@ and limitations under the License.
                 };
               return Fa.createElement(
                 om.TransitionGroup,
-                si.a({}, r, { className: Zm("crossfade", n) }),
+                si.a({}, r, { className: Qm("crossfade", n) }),
                 Fa.createElement(
                   om.CSSTransition,
                   {
@@ -68216,7 +68292,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        $m = (function(e) {
+        eh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68259,7 +68335,7 @@ and limitations under the License.
                       "chatRoomGroupHeader" + (o ? " notifyBroadcast" : ""),
                     onContextMenu: this.OnContextMenu
                   },
-                  Fa.createElement(oh, { group: t }),
+                  Fa.createElement(ah, { group: t }),
                   Fa.createElement(
                     "div",
                     { className: "chatRoomGroupHeaderNameandTag" },
@@ -68333,9 +68409,9 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           { className: "chatRoomGroupStats" },
-                          Fa.createElement(th, { group: t }),
-                          Fa.createElement(nh, { group: t }),
-                          Fa.createElement(ih, { group: t })
+                          Fa.createElement(ih, { group: t }),
+                          Fa.createElement(rh, { group: t }),
+                          Fa.createElement(nh, { group: t })
                         )
                       )
                     )
@@ -68360,7 +68436,7 @@ and limitations under the License.
                       });
                     }
                   : void 0;
-              return Fa.createElement(eh, {
+              return Fa.createElement(th, {
                 broadcastId: r,
                 key: r,
                 onClick: i,
@@ -68374,7 +68450,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        eh = (function(e) {
+        th = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { info: eu.StartInfo(t.broadcastId) }), i;
@@ -68422,7 +68498,7 @@ and limitations under the License.
                     "div",
                     { className: "thumbnail" },
                     o &&
-                      Fa.createElement(Qm, {
+                      Fa.createElement($m, {
                         className: "thumbnailImg",
                         src: o,
                         duration: 2500
@@ -68441,7 +68517,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        th = Object(Cp.observer)(function(e) {
+        ih = Object(Cp.observer)(function(e) {
           var t = e.group;
           return Fa.createElement(
             "div",
@@ -68450,7 +68526,7 @@ and limitations under the License.
             Object(pa.c)("#Chat_Members", t.memberCountTotal)
           );
         }),
-        ih = Object(Cp.observer)(function(e) {
+        nh = Object(Cp.observer)(function(e) {
           var t = e.group;
           return 0 == t.memberCountInGame
             ? null
@@ -68467,7 +68543,7 @@ and limitations under the License.
                 t.memberCountInGame
               );
         }),
-        nh = Object(Cp.observer)(function(e) {
+        rh = Object(Cp.observer)(function(e) {
           var t = e.group;
           return 0 == t.memberCountOnline
             ? null
@@ -68484,7 +68560,7 @@ and limitations under the License.
                 t.memberCountOnline
               );
         }),
-        rh = Object(Cp.observer)(function(e) {
+        oh = Object(Cp.observer)(function(e) {
           if (!e.small && !e.micro && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
             var t = Ld.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
             return Fa.createElement(
@@ -68513,7 +68589,7 @@ and limitations under the License.
             )
           );
         }),
-        oh = (function(e) {
+        ah = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68524,7 +68600,7 @@ and limitations under the License.
                 t = this.props.group;
               if (t && t.BIsClanChatRoom()) {
                 var i = Ld.FriendStore.ClanStore.GetClan(t.GetClanID());
-                return Fa.createElement(rh, {
+                return Fa.createElement(oh, {
                   clan: i,
                   micro: this.props.micro,
                   small: this.props.small,
@@ -68602,7 +68678,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ah = (function(e) {
+        sh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -68613,7 +68689,7 @@ and limitations under the License.
               (i.m_rgFavoriteElementRefs = []),
               (i.m_bAcceptDrag = !1),
               (i.state = {
-                bHintDismissed: Iy.UIDisplayPrefs.bFavoritesHintDismissed
+                bHintDismissed: Ry.UIDisplayPrefs.bFavoritesHintDismissed
               }),
               i
             );
@@ -68622,7 +68698,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.DismissFavoritesHint = function() {
               this.setState({ bHintDismissed: !0 }),
-                Iy.SetUIDisplayPref("bFavoritesHintDismissed", !0);
+                Ry.SetUIDisplayPref("bFavoritesHintDismissed", !0);
             }),
             (t.prototype.render = function() {
               var e = this,
@@ -68662,7 +68738,7 @@ and limitations under the License.
                       a = t.isActiveDrag;
                     return (
                       a && (r += "dragGhost"),
-                      Fa.createElement(sh, {
+                      Fa.createElement(ch, {
                         favorite: t,
                         index: n,
                         friendRenderContext: e.GetFriendRenderContext(),
@@ -68729,7 +68805,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               !t ||
                 ("friend" != t.type &&
                   "chatroomgroup" != t.type &&
@@ -68738,18 +68814,18 @@ and limitations under the License.
                 (this.m_ActiveDragOut = this.FindItemFromDrag(t)));
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Iy.DragDropManager.GetDragData(),
+              var t = Ry.DragDropManager.GetDragData(),
                 i = this.FindItemFromDrag(t);
               if (
                 i &&
                 "is_favorite" in t &&
                 t.is_favorite &&
-                !Iy.DragDropManager.BWasDropConsumed()
+                !Ry.DragDropManager.BWasDropConsumed()
               ) {
                 var n = e.currentTarget.getBoundingClientRect();
                 Object(Jd.j)(n, e.clientX, e.clientY) > 100 &&
                   (this.props.FavoritesStore.RemoveFromFavorites(i),
-                  Iy.DragDropManager.EndDrag());
+                  Ry.DragDropManager.EndDrag());
               }
               this.m_ActiveDragOut = void 0;
             }),
@@ -68818,7 +68894,7 @@ and limitations under the License.
               var i = this.FindItemFromDrag(e);
               this.m_ActiveDrag,
                 i
-                  ? (Iy.DragDropManager.SetDropConsumed(),
+                  ? (Ry.DragDropManager.SetDropConsumed(),
                     this.props.FavoritesStore.AddToFavorites(
                       i,
                       this.m_iActiveDragIndex
@@ -68839,7 +68915,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        sh = (function(e) {
+        ch = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -68885,20 +68961,20 @@ and limitations under the License.
               this.props.bIsDragOutGhost && (i = { display: "none" });
               var n;
               n = t.friend
-                ? Fa.createElement(ch, {
+                ? Fa.createElement(lh, {
                     key: t.friend.accountid,
                     friend: t.friend,
                     friendRenderContext: this.props.friendRenderContext,
                     className: e
                   })
                 : t.clan
-                  ? Fa.createElement(lh, {
+                  ? Fa.createElement(uh, {
                       key: t.clan.clanid,
                       clan: t.clan,
                       className: e
                     })
                   : t.chat
-                    ? Fa.createElement(uh, {
+                    ? Fa.createElement(dh, {
                         key: t.chat.GetGroupID(),
                         chat: t.chat,
                         className: e
@@ -68916,7 +68992,7 @@ and limitations under the License.
               );
               return t.friend
                 ? Fa.createElement(
-                    Ah,
+                    Ph,
                     {
                       friend: t.friend,
                       context: this.props.friendRenderContext
@@ -68930,7 +69006,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        ch = Object(Cp.observer)(function(e) {
+        lh = Object(Cp.observer)(function(e) {
           var t = e.friend,
             i = Ld.SettingsStore.FriendsSettings.bCompactQuickAccess,
             n = null;
@@ -68970,7 +69046,7 @@ and limitations under the License.
                 Fa.createElement("div", { className: "chatUnreadCircle" })
               )),
             Fa.createElement(
-              Ph,
+              xh,
               {
                 friend: t,
                 key: t.accountid,
@@ -69018,20 +69094,20 @@ and limitations under the License.
             )
           );
         }),
-        lh = (function(e) {
+        uh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             si.d(t, e),
             (t.prototype.OnDragStart = function(e) {
-              Iy.DragDropManager.StartDrag({
+              Ry.DragDropManager.StartDrag({
                 type: "clan",
                 clan: this.props.clan
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Iy.DragDropManager.EndDrag();
+              Ry.DragDropManager.EndDrag();
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessFriend QuickAccessClan",
@@ -69051,7 +69127,7 @@ and limitations under the License.
                   onDragStart: this.OnDragStart,
                   onDragEnd: this.OnDragEnd
                 },
-                Fa.createElement(rh, { clan: this.props.clan, small: !0 }),
+                Fa.createElement(oh, { clan: this.props.clan, small: !0 }),
                 !t &&
                   Fa.createElement(
                     "div",
@@ -69066,20 +69142,20 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        uh = (function(e) {
+        dh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             si.d(t, e),
             (t.prototype.OnDragStart = function(e) {
-              Iy.DragDropManager.StartDrag({
+              Ry.DragDropManager.StartDrag({
                 type: "chatroomgroup",
                 group: this.props.chat
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Iy.DragDropManager.EndDrag();
+              Ry.DragDropManager.EndDrag();
             }),
             (t.prototype.render = function() {
               var e = "QuickAccessChat",
@@ -69097,7 +69173,7 @@ and limitations under the License.
                     onDragStart: this.OnDragStart,
                     onDragEnd: this.OnDragEnd
                   },
-                  Fa.createElement(oh, { group: this.props.chat }),
+                  Fa.createElement(ah, { group: this.props.chat }),
                   !i &&
                     Fa.createElement(
                       "div",
@@ -69113,7 +69189,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        dh = (function(e) {
+        ph = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -69333,7 +69409,7 @@ and limitations under the License.
                       onFriendSelected: this.OnFriendListSelectionChanged,
                       onFriendRemoved: this.OnFriendListSelectionChanged,
                       rgSelectedFriends: this.props.vecInvitePlayers,
-                      chosenFriendComponent: ph
+                      chosenFriendComponent: mh
                     })
                   ),
                   Fa.createElement(
@@ -69355,13 +69431,13 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ph = Object(Cp.observer)(function(e) {
+        mh = Object(Cp.observer)(function(e) {
           var t = e.friend.is_in_beta || void 0 === e.friend.is_in_beta;
           return Fa.createElement(
             Fa.Fragment,
             null,
             Fa.createElement(
-              Ah,
+              Ph,
               { friend: e.friend, context: null },
               Fa.createElement(
                 "div",
@@ -69380,23 +69456,23 @@ and limitations under the License.
             )
           );
         }),
-        mh = (function() {
+        hh = (function() {
           function e() {
             this.m_mapHovers = new WeakMap();
           }
           return (
             (e.prototype.GetHover = function(e) {
               var t = this.m_mapHovers.get(e);
-              return t || ((t = new gh(e)), this.m_mapHovers.set(e, t)), t;
+              return t || ((t = new fh(e)), this.m_mapHovers.set(e, t)), t;
             }),
             e
           );
         })(),
-        hh = (function() {
+        gh = (function() {
           function e() {}
           return si.c([_i.observable], e.prototype, "visible", void 0), e;
         })(),
-        gh = (function() {
+        fh = (function() {
           function e(e) {
             (this.m_bLoadingData = !1), (this.m_friend = e);
           }
@@ -69422,7 +69498,7 @@ and limitations under the License.
                   if (r.m_OwningElement == e) return r;
                 }
               if (t) {
-                var r = new hh();
+                var r = new gh();
                 return (
                   (r.m_OwningElement = e),
                   (r.visible = !1),
@@ -69441,7 +69517,7 @@ and limitations under the License.
                 t.m_OwningElement.ownerDocument.defaultView.setTimeout(
                   function() {
                     t.visible &&
-                      (t.popupWindow || (t.popupWindow = new Kh(e, t, i)),
+                      (t.popupWindow || (t.popupWindow = new Jh(e, t, i)),
                       t.popupWindow.Show());
                   },
                   250
@@ -69465,7 +69541,7 @@ and limitations under the License.
             (e.prototype.Show = function(t, i) {
               var n = this,
                 r = t.currentTarget.ownerDocument.defaultView.innerWidth < 500;
-              if ((!r || ai.a.IN_CLIENT) && !Iy.DragDropManager.BInDrag()) {
+              if ((!r || ai.a.IN_CLIENT) && !Ry.DragDropManager.BInDrag()) {
                 this.EnsureCommunityDataLoaded();
                 var o = t.currentTarget,
                   a = Xt(null, t),
@@ -69616,7 +69692,7 @@ and limitations under the License.
             e
           );
         })(),
-        fh = (Fa.Component,
+        _h = (Fa.Component,
         Fa.Component,
         (function(e) {
           function t(t) {
@@ -70211,7 +70287,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component)),
-        _h = (function(e) {
+        yh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -70236,7 +70312,7 @@ and limitations under the License.
                     Fa.createElement(
                       np,
                       { className: "changeLogDetails" },
-                      Fa.createElement(fh, null)
+                      Fa.createElement(_h, null)
                     )
                   ),
                   Fa.createElement(
@@ -70254,7 +70330,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        yh = (function(e) {
+        vh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -70302,7 +70378,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        vh = (function(e) {
+        bh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70311,7 +70387,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.chats.GetActiveVoiceChat();
               return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-                ? Fa.createElement(bh, {
+                ? Fa.createElement(Ch, {
                     chat: e,
                     name: this.props.chats.GetActiveVoiceChannelName(),
                     nostatus: !1
@@ -70340,12 +70416,12 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          Fa.createElement(Ch, null),
                           Fa.createElement(Sh, null),
+                          Fa.createElement(Mh, null),
                           Fa.createElement("div", {
                             className: "activeVoiceButtonsSpacer"
                           }),
-                          Fa.createElement(Mh, null),
+                          Fa.createElement(Fh, null),
                           Fa.createElement("div", {
                             className: "activeVoiceButtonsSpacerAfter"
                           })
@@ -70357,7 +70433,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        bh = (function(e) {
+        Ch = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -70419,19 +70495,19 @@ and limitations under the License.
                       Fa.createElement(
                         "div",
                         { className: "activeVoiceButtons" },
-                        Fa.createElement(Ch, null),
                         Fa.createElement(Sh, null),
+                        Fa.createElement(Mh, null),
                         Fa.createElement("div", {
                           className: "activeVoiceButtonsSpacer"
                         }),
-                        Fa.createElement(Mh, null),
+                        Fa.createElement(Fh, null),
                         Fa.createElement("div", {
                           className: "activeVoiceButtonsSpacerAfter"
                         })
                       )
                     ),
                     !this.props.nostatus &&
-                      Fa.createElement(yh, { chat: this.props.chat })
+                      Fa.createElement(vh, { chat: this.props.chat })
                   ),
                   (e || t) &&
                     Fa.createElement(
@@ -70449,7 +70525,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ch = (function(e) {
+        Sh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70492,7 +70568,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Sh = (function(e) {
+        Mh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70525,7 +70601,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Mh = (function(e) {
+        Fh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -70549,7 +70625,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Fh = (function(e) {
+        wh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -70613,7 +70689,7 @@ and limitations under the License.
             }),
             (t.prototype.OnDoFriendsListUpdate = function(e) {
               var t = e.currentTarget.ownerDocument.defaultView,
-                i = Iy.GetSecondsOutOfDate(),
+                i = Ry.GetSecondsOutOfDate(),
                 n = Object(pa.e)(i, !0);
               ge(
                 t,
@@ -70622,7 +70698,7 @@ and limitations under the License.
                 Object(pa.b)("#Friends_ConfirmUpdate_Ok")
               )
                 .then(function() {
-                  Iy.PerformFriendsUIUpdate();
+                  Ry.PerformFriendsUIUpdate();
                 })
                 .catch(function() {});
             }),
@@ -70730,9 +70806,9 @@ and limitations under the License.
                 m = !1,
                 h =
                   "friendListButton friendSettingsButton friendsListNeedsUpdate no-drag";
-              void 0 != Iy &&
-                ((d = Iy.BNeedsUpdate()),
-                (p = Iy.GetSecondsOutOfDate()),
+              void 0 != Ry &&
+                ((d = Ry.BNeedsUpdate()),
+                (p = Ry.GetSecondsOutOfDate()),
                 p < 432e3
                   ? (d = !1)
                   : p > 604800 &&
@@ -70776,7 +70852,7 @@ and limitations under the License.
                           Fa.createElement(xd.k, null)
                         )
                       ),
-                    Fa.createElement(Ih, {
+                    Fa.createElement(Rh, {
                       popup: this.props.popup && this.props.popup,
                       currentUser: e
                     }),
@@ -70819,10 +70895,10 @@ and limitations under the License.
                             classNames: "activevoice-anim",
                             timeout: 500
                           },
-                          Fa.createElement(vh, { chats: this.props.chats })
+                          Fa.createElement(bh, { chats: this.props.chats })
                         )
                     ),
-                    Fa.createElement(ah, {
+                    Fa.createElement(sh, {
                       FavoritesStore: this.props.friends.FavoritesStore
                     }),
                     Fa.createElement(
@@ -70957,7 +71033,7 @@ and limitations under the License.
                     ),
                     Fa.createElement("div", { className: "disconnectBlocker" })
                   ),
-                  Fa.createElement(Rh, {
+                  Fa.createElement(Eh, {
                     friends: this.props.friends,
                     chats: this.props.chats,
                     searchString: t,
@@ -70970,7 +71046,7 @@ and limitations under the License.
                   Fa.createElement(
                     "div",
                     { className: "friendListFooter" },
-                    Fa.createElement(Oh, null)
+                    Fa.createElement(Ih, null)
                   )
                 )
               );
@@ -70992,7 +71068,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        wh = (function(e) {
+        Bh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71022,14 +71098,14 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Bh = (function(e) {
+        Oh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
               (i.m_bChangeLogVersion = 8),
               (i.state = {
                 bShowChangeLogViolator:
-                  Iy.UIDisplayPrefs.nChangeLogDismissed < i.m_bChangeLogVersion
+                  Ry.UIDisplayPrefs.nChangeLogDismissed < i.m_bChangeLogVersion
               }),
               i
             );
@@ -71037,7 +71113,7 @@ and limitations under the License.
           return (
             si.d(t, e),
             (t.prototype.OpenChangeLog = function(e) {
-              Iy.SetUIDisplayPref(
+              Ry.SetUIDisplayPref(
                 "nChangeLogDismissed",
                 this.m_bChangeLogVersion
               ),
@@ -71052,7 +71128,7 @@ and limitations under the License.
                 e &&
                   (t =
                     this.m_bChangeLogVersion -
-                    (Iy.UIDisplayPrefs.nChangeLogDismissed || 7)),
+                    (Ry.UIDisplayPrefs.nChangeLogDismissed || 7)),
                 Fa.createElement(
                   "div",
                   {
@@ -71076,7 +71152,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Oh = (function(e) {
+        Ih = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -71091,8 +71167,8 @@ and limitations under the License.
                   "div",
                   { className: "flexRowCentered" },
                   !1,
-                  Fa.createElement(wh, null),
-                  Fa.createElement(Bh, null)
+                  Fa.createElement(Bh, null),
+                  Fa.createElement(Oh, null)
                 )
               );
             }),
@@ -71100,7 +71176,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ih = (function(e) {
+        Rh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71110,7 +71186,7 @@ and limitations under the License.
               return xe(Xt(this, e), e);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
-              Iy.ToggleSingleWindowToggle(this.props.popup);
+              Ry.ToggleSingleWindowToggle(this.props.popup);
             }),
             (t.prototype.ShowCurrentUserProfile = function(e) {
               Ee(e, this.props.currentUser.GetCommunityProfileURL()),
@@ -71170,7 +71246,7 @@ and limitations under the License.
                     })
                   ),
                   Fa.createElement(
-                    Ah,
+                    Ph,
                     {
                       friend: e,
                       context: { chatContext: "friendslist" },
@@ -71187,7 +71263,7 @@ and limitations under the License.
                         src: e.persona.avatar_url_medium,
                         onClick: this.ShowCurrentUserProfile
                       }),
-                      Fa.createElement(Uh, {
+                      Fa.createElement(Vh, {
                         friend: e,
                         strOverrideStatus: i,
                         onShowContextMenu: this.OnShowContextMenu,
@@ -71219,7 +71295,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Rh = (function(e) {
+        Eh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bScrolledFromTop: !1 }), i;
@@ -71453,7 +71529,7 @@ and limitations under the License.
                         )
                       ),
                     Fa.createElement(
-                      Dh,
+                      Gh,
                       si.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -71465,7 +71541,7 @@ and limitations under the License.
                       )
                     ),
                     Fa.createElement(
-                      Dh,
+                      Gh,
                       si.a(
                         {
                           group: this.props.friends.FriendGroupStore
@@ -71479,7 +71555,7 @@ and limitations under the License.
                   );
                 } else if (i)
                   e = Fa.createElement(
-                    Dh,
+                    Gh,
                     si.a(
                       {
                         group: this.props.friends.FriendGroupStore.all_friends,
@@ -71492,7 +71568,7 @@ and limitations under the License.
                   var u = this.props.friends.FriendGroupStore.user_groups.map(
                       function(e) {
                         return Fa.createElement(
-                          Dh,
+                          Gh,
                           si.a(
                             {
                               group: e,
@@ -71509,7 +71585,7 @@ and limitations under the License.
                     d = this.props.friends.FriendGroupStore.default_groups.map(
                       function(e) {
                         return Fa.createElement(
-                          Dh,
+                          Gh,
                           si.a(
                             {
                               group: e,
@@ -71535,13 +71611,13 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           { className: "recentChatsGroup unreadChatsGroup" },
-                          Fa.createElement(jh, {
+                          Fa.createElement(Wh, {
                             friendChatStore: this.props.chats.FriendChatStore,
                             browserContext: this.props.browserContext
                           }),
                           !1
                         ),
-                      Fa.createElement(kh, null),
+                      Fa.createElement(Dh, null),
                       u,
                       d
                     ));
@@ -71562,7 +71638,7 @@ and limitations under the License.
                     className: "friendListInsetShadowTop"
                   })
                 ),
-                Fa.createElement(Vh, {
+                Fa.createElement(jh, {
                   browserContext: this.props.browserContext,
                   bScrolledFromTop: this.state.bScrolledFromTop && !i,
                   onClick: this.ScrollToTop
@@ -71591,7 +71667,7 @@ and limitations under the License.
                     className: "friendListInsetShadowBottom"
                   })
                 ),
-                Fa.createElement(Eh, {
+                Fa.createElement(Th, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   parent: this
@@ -71607,20 +71683,20 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Eh = (function(e) {
+        Th = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
               (i.m_bMouseOver = !1),
               (i.state = {
                 nChatRoomListContainerHeight:
-                  Iy.UIDisplayPrefs.nChatRoomListHeightPx,
+                  Ry.UIDisplayPrefs.nChatRoomListHeightPx,
                 nChatRoomListContainerMaxHeight:
-                  Iy.UIDisplayPrefs.nChatRoomListHeightPx,
+                  Ry.UIDisplayPrefs.nChatRoomListHeightPx,
                 bChatRoomListCollapsed:
-                  Iy.UIDisplayPrefs.bChatRoomListCollapsed,
+                  Ry.UIDisplayPrefs.bChatRoomListCollapsed,
                 nChatRoomListPreCollapseHeight:
-                  Iy.UIDisplayPrefs.nChatRoomListHeightPx,
+                  Ry.UIDisplayPrefs.nChatRoomListHeightPx,
                 bChatRoomListResizing: !1
               }),
               i
@@ -71724,7 +71800,7 @@ and limitations under the License.
                 this.m_elChatRoomTitleContainer.getBoundingClientRect().top),
                 this.setState({
                   nChatRoomListPreCollapseHeight:
-                    Iy.UIDisplayPrefs.nChatRoomListHeightPx
+                    Ry.UIDisplayPrefs.nChatRoomListHeightPx
                 }),
                 t.addEventListener("mousemove", this.HandleMouseMove),
                 t.addEventListener(
@@ -71784,7 +71860,7 @@ and limitations under the License.
                       this.state.nChatRoomListContainerHeight > 0
                     )
                   }),
-                  Iy.SetUIDisplayPref(
+                  Ry.SetUIDisplayPref(
                     "bChatRoomListCollapsed",
                     !(this.state.nChatRoomListContainerHeight > 0)
                   ),
@@ -71800,7 +71876,7 @@ and limitations under the License.
                 this.setState({
                   bChatRoomListCollapsed: !this.state.bChatRoomListCollapsed
                 }),
-                Iy.SetUIDisplayPref(
+                Ry.SetUIDisplayPref(
                   "bChatRoomListCollapsed",
                   !this.state.bChatRoomListCollapsed
                 );
@@ -71817,7 +71893,7 @@ and limitations under the License.
                   this.UnregisterChatRoomListDragEvents
                 ),
                 this.state.nChatRoomListContainerHeight < 1
-                  ? Iy.SetUIDisplayPref(
+                  ? Ry.SetUIDisplayPref(
                       "nChatRoomListHeightPx",
                       this.state.nChatRoomListPreCollapseHeight
                     )
@@ -71825,7 +71901,7 @@ and limitations under the License.
                       nChatRoomListPreCollapseHeight: this.state
                         .nChatRoomListContainerHeight
                     }),
-                    Iy.SetUIDisplayPref(
+                    Ry.SetUIDisplayPref(
                       "nChatRoomListHeightPx",
                       this.state.nChatRoomListContainerHeight
                     )),
@@ -71954,7 +72030,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Th = (function(e) {
+        kh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -71975,7 +72051,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               if (t && "friend" == t.type) {
                 var i = t;
                 (i.group = this.GetGroup()),
@@ -72042,12 +72118,12 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        kh = Object(Cp.observer)(function(e) {
+        Dh = Object(Cp.observer)(function(e) {
           if (!Ld.SettingsStore.FriendsSettings.bCategorizeInGameFriendsByGame)
             return null;
           var t = Ld.FriendStore.FriendGroupStore.game_groups,
             i = t.map(function(e) {
-              return Fa.createElement(Nh, {
+              return Fa.createElement(Lh, {
                 key: e.id,
                 group: e,
                 bSingletonGroup: !1,
@@ -72060,7 +72136,7 @@ and limitations under the License.
           return (
             n &&
               i.push(
-                Fa.createElement(Nh, {
+                Fa.createElement(Lh, {
                   key: "singleton",
                   group: n,
                   bSingletonGroup: !0,
@@ -72072,7 +72148,7 @@ and limitations under the License.
             Fa.createElement(Fa.Fragment, null, i)
           );
         }),
-        Dh = (function(e) {
+        Gh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -72094,7 +72170,7 @@ and limitations under the License.
                 i = e.group,
                 n = this.props.group;
               return (
-                e.is_favorite || Iy.DragDropManager.SetDropConsumed(),
+                e.is_favorite || Ry.DragDropManager.SetDropConsumed(),
                 Ld.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                   t,
                   i,
@@ -72375,7 +72451,7 @@ and limitations under the License.
                           "div",
                           null,
                           Fa.createElement(
-                            Ph,
+                            xh,
                             si.a(
                               {
                                 friend: t,
@@ -72611,8 +72687,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "ToggleOfflineSortMethod", null),
             (t = si.c([Cp.observer], t))
           );
-        })(Th),
-        Gh = (function(e) {
+        })(kh),
+        Nh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72631,7 +72707,7 @@ and limitations under the License.
             t
           );
         })(Fa.PureComponent),
-        Nh = (function(e) {
+        Lh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bLocalCollapsed: i.props.collapsed }), i;
@@ -72800,7 +72876,7 @@ and limitations under the License.
                   }
                   var w = void 0;
                   this.props.bSingletonGroup &&
-                    (w = Fa.createElement(Lh, {
+                    (w = Fa.createElement(Ah, {
                       appid: l.persona.m_unGamePlayedAppID
                     })),
                     e.push(
@@ -72811,7 +72887,7 @@ and limitations under the License.
                           classNames: "friend-anim",
                           timeout: 320
                         },
-                        Fa.createElement(Ph, {
+                        Fa.createElement(xh, {
                           friend: l,
                           key: l.accountid,
                           bHideGameName: u,
@@ -72897,8 +72973,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "OnShowHeaderContextMenu", null),
             (t = si.c([Cp.observer], t))
           );
-        })(Th),
-        Lh = (function(e) {
+        })(kh),
+        Ah = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72936,7 +73012,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ah = (function(e) {
+        Ph = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -72947,7 +73023,7 @@ and limitations under the License.
                 var t = void 0;
                 (t = this.props.onContextMenu
                   ? this.props.onContextMenu(e)
-                  : Iy.FriendHoverStore.GetHover(
+                  : Ry.FriendHoverStore.GetHover(
                       this.props.friend
                     ).OnContextMenu(this.props.context, e)),
                   t &&
@@ -72956,7 +73032,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.componentWillUnmount = function() {
-              Iy.FriendHoverStore.GetHover(this.props.friend).HideByElement(
+              Ry.FriendHoverStore.GetHover(this.props.friend).HideByElement(
                 On.findDOMNode(this)
               );
             }),
@@ -72964,7 +73040,7 @@ and limitations under the License.
               var e = Fa.Children.only(this.props.children);
               if (e) {
                 var t = this.props,
-                  i = Iy.FriendHoverStore.GetHover(t.friend);
+                  i = Ry.FriendHoverStore.GetHover(t.friend);
                 return Fa.cloneElement(e, {
                   onMouseEnter: function(e) {
                     return i.Show(e, t.context);
@@ -72979,7 +73055,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Ph = (function(e) {
+        xh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActive: !1 }), i;
@@ -73009,24 +73085,24 @@ and limitations under the License.
                   this.props.friend.persona.m_steamid.ConvertTo64BitString()
                 ),
                 this.props.friend.is_friend
-                  ? Iy.DragDropManager.StartDrag({
+                  ? Ry.DragDropManager.StartDrag({
                       type: "friend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     })
-                  : Iy.DragDropManager.StartDrag({
+                  : Ry.DragDropManager.StartDrag({
                       type: "nonfriend",
                       source: this.props.context.chatContext,
                       friend: this.props.friend,
                       sourceContext: this.props.context
                     }),
-                Iy.FriendHoverStore.GetHover(
+                Ry.FriendHoverStore.GetHover(
                   this.props.friend
                 ).HideAllInstances();
             }),
             (t.prototype.OnDragEnd = function(e) {
-              Iy.DragDropManager.EndDrag();
+              Ry.DragDropManager.EndDrag();
             }),
             (t.prototype.OnShowContextMenu = function(e) {
               var t = De(Xt(this, e), this.props.context, this.props.friend, e);
@@ -73109,7 +73185,7 @@ and limitations under the License.
                       className: "SteamPlayerGroupLines"
                     }),
                   this.props.bInVoiceList &&
-                    Fa.createElement(xh, { friend: e }),
+                    Fa.createElement(zh, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   Fa.createElement(
                     "div",
@@ -73129,7 +73205,7 @@ and limitations under the License.
                       g &&
                       Fa.createElement(xd._3, null)
                   ),
-                  Fa.createElement(Uh, {
+                  Fa.createElement(Vh, {
                     friend: e,
                     strOverrideStatus: i,
                     strStatusURL: o,
@@ -73153,7 +73229,7 @@ and limitations under the License.
               return this.props.noActions
                 ? d
                 : Fa.createElement(
-                    Ah,
+                    Ph,
                     {
                       friend: e,
                       context: this.props.context,
@@ -73172,7 +73248,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        xh = (function(e) {
+        zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73235,7 +73311,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        zh = (function(e) {
+        Uh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73267,7 +73343,7 @@ and limitations under the License.
                 )
               );
               return Fa.createElement(
-                Ah,
+                Ph,
                 { friend: e, context: this.props.context },
                 i
               );
@@ -73275,7 +73351,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Uh = (function(e) {
+        Vh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73436,7 +73512,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Vh = (function(e) {
+        jh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -73474,7 +73550,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        jh = (function(e) {
+        Wh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { collapsed: !1 }), i;
@@ -73510,7 +73586,7 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           { className: "unreadFriend" },
-                          Fa.createElement(Ph, {
+                          Fa.createElement(xh, {
                             friend: i,
                             key: i.accountid,
                             context: { chat: e },
@@ -73551,7 +73627,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Wh = (Fa.Component,
+        Hh = (Fa.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -73658,7 +73734,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component)),
-        Hh = (function(e) {
+        qh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -73983,7 +74059,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        qh = (function(e) {
+        Kh = (function(e) {
           function t(t, i) {
             var n =
               e.call(this, "hoverpopup", {
@@ -74019,7 +74095,7 @@ and limitations under the License.
               var i = this.InternalRender();
               On.render(
                 Fa.createElement(
-                  Jh,
+                  Yh,
                   si.a({}, this.m_hoverProps, { popup: e }),
                   i
                 ),
@@ -74029,7 +74105,7 @@ and limitations under the License.
             t
           );
         })(Sp.a),
-        Kh = (function(e) {
+        Jh = (function(e) {
           function t(t, i, n) {
             var r =
               e.call(
@@ -74049,12 +74125,12 @@ and limitations under the License.
             (t.prototype.OnResize = function() {}),
             (t.prototype.OnClose = function() {}),
             (t.prototype.InternalRender = function() {
-              return Fa.createElement(Hh, { hoverInstance: this.m_instance });
+              return Fa.createElement(qh, { hoverInstance: this.m_instance });
             }),
             t
           );
-        })(qh),
-        Jh = (function(e) {
+        })(Kh),
+        Yh = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -74172,7 +74248,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Yh = (function(e) {
+        Xh = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -74216,19 +74292,19 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Xh = (function(e) {
+        Zh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             si.d(t, e),
             (t.OnMouseEnter = function(e) {
-              Iy.EmoticonHoverStore.GetEmoticonHover(
+              Ry.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Show(e);
             }),
             (t.OnMouseLeave = function(e) {
-              Iy.EmoticonHoverStore.GetEmoticonHover(
+              Ry.EmoticonHoverStore.GetEmoticonHover(
                 e.currentTarget.getAttribute("data-emoticon")
               ).Hide(e);
             }),
@@ -74237,7 +74313,7 @@ and limitations under the License.
               this.props.large && (e += " large");
               var i = ":" + this.props.emoticon + ":";
               return Fa.createElement(
-                Yh,
+                Xh,
                 { text: i },
                 Fa.createElement("img", {
                   src: fl.GetEmoticonURL(this.props.emoticon, this.props.large),
@@ -74252,7 +74328,7 @@ and limitations under the License.
             t
           );
         })(Fa.PureComponent),
-        Zh = (function(e) {
+        Qh = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74260,7 +74336,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.render = function() {
               return Fa.createElement(
-                Wh,
+                Hh,
                 {
                   visibilityObserver: this.props.hover,
                   target: this.props.target,
@@ -74283,7 +74359,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Qh = (function(e) {
+        $h = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             (i.m_ScrollCoordinator = new Jd.f(40)),
@@ -74311,7 +74387,7 @@ and limitations under the License.
             (t.prototype.OnClick = function(e) {
               var t = e.currentTarget.getAttribute("data-emoticon");
               this.props.OnSelected(t, e.shiftKey),
-                Iy.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
+                Ry.EmoticonHoverStore.GetEmoticonHover(t).Hide(e);
             }),
             (t.prototype.OnSearchInput = function(e) {
               var t = e.currentTarget.value;
@@ -74326,7 +74402,7 @@ and limitations under the License.
               var i = t.name;
               return (
                 e && (i = e + t.name),
-                Fa.createElement($h, {
+                Fa.createElement(eg, {
                   key: i,
                   emoticon: t,
                   onClick: this.OnClick,
@@ -74429,7 +74505,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        $h = (function(e) {
+        eg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { visible: !1 }), i;
@@ -74464,7 +74540,7 @@ and limitations under the License.
                     onClick: this.props.onClick
                   },
                   this.state.visible &&
-                    Fa.createElement(Xh, { emoticon: e.name }),
+                    Fa.createElement(Zh, { emoticon: e.name }),
                   i && Fa.createElement(ut, null)
                 )
               );
@@ -74473,7 +74549,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        eg = (function(e) {
+        tg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -74773,7 +74849,7 @@ and limitations under the License.
                 o = void 0;
               switch (this.state.activeSuggestSearchType) {
                 case "Mention":
-                  o = Fa.createElement(cg, {
+                  o = Fa.createElement(lg, {
                     chat: r,
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnMentionSuggestionSelected,
@@ -74781,7 +74857,7 @@ and limitations under the License.
                   });
                   break;
                 case "Emoticon":
-                  o = Fa.createElement(lg, {
+                  o = Fa.createElement(ug, {
                     emoticonStore: Ld.ChatStore.EmoticonStore,
                     strSearch: this.state.mentionSearch,
                     nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -74790,7 +74866,7 @@ and limitations under the License.
                   });
                   break;
                 case "SlashCommand":
-                  o = Fa.createElement(ug, {
+                  o = Fa.createElement(dg, {
                     strSearch: this.state.mentionSearch,
                     onSuggestionSelected: this.OnSlashCommandSuggestionSelected,
                     ref: this.BindMentionDialog
@@ -74798,13 +74874,13 @@ and limitations under the License.
               }
               var a = t.chat.file_upload_props;
               t.file_upload_data_url
-                ? (n = Fa.createElement(ng, { chatView: t }))
+                ? (n = Fa.createElement(rg, { chatView: t }))
                 : 2 == a.eUploadState ||
                   4 == a.eUploadState ||
                   3 == a.eUploadState
-                  ? (n = Fa.createElement(og, { chatView: t }))
+                  ? (n = Fa.createElement(ag, { chatView: t }))
                   : 0 != a.eUploadState &&
-                    (n = Fa.createElement(rg, { chat: t.chat }));
+                    (n = Fa.createElement(og, { chat: t.chat }));
               var s = Ld.SettingsStore.FriendsSettings.bCompactFriendsList,
                 c = Ld.SettingsStore.FriendsSettings.nChatFontSize,
                 l = "";
@@ -74866,7 +74942,7 @@ and limitations under the License.
                     Fa.createElement(
                       "div",
                       { className: "chatEntryActionsGroup" },
-                      Fa.createElement(tg, {
+                      Fa.createElement(ig, {
                         disabled: i,
                         OnEmoticonSelected: this.OnEmoticonSelected
                       }),
@@ -74884,7 +74960,7 @@ and limitations under the License.
                         Fa.createElement(xd.E, null)
                       )
                     ),
-                    Fa.createElement(ig, { chat: r })
+                    Fa.createElement(ng, { chat: r })
                   ),
                   Fa.createElement("div", {
                     className: "disconnectBlocker compactableHeight"
@@ -74912,7 +74988,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        tg = (function(e) {
+        ig = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -74920,7 +74996,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.OnEmoticonClick = function(e) {
               Object(zd.a)(
-                Fa.createElement(Qh, {
+                Fa.createElement($h, {
                   OnSelected: this.props.OnEmoticonSelected
                 }),
                 e.currentTarget,
@@ -74931,13 +75007,13 @@ and limitations under the License.
                 }
               ),
                 this.BHaveUnseenEmoticons() &&
-                  Iy.SetUIDisplayPref(
+                  Ry.SetUIDisplayPref(
                     "rtLastAckedNewEmoticons",
                     Ld.ChatStore.EmoticonStore.GetTimeReceivedNewestEmoticon()
                   );
             }),
             (t.prototype.BHaveUnseenEmoticons = function() {
-              var e = Iy.UIDisplayPrefs.rtLastAckedNewEmoticons,
+              var e = Ry.UIDisplayPrefs.rtLastAckedNewEmoticons,
                 t = Ld.ChatStore.EmoticonStore.GetTimeReceivedNewestEmoticon();
               return t && (!e || e < t);
             }),
@@ -74968,7 +75044,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ig = (function(e) {
+        ng = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75082,8 +75158,8 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           { className: "activeVoiceButtons" },
-                          Fa.createElement(Ch, null),
-                          Fa.createElement(Sh, null)
+                          Fa.createElement(Sh, null),
+                          Fa.createElement(Mh, null)
                         )
                       )
                     )
@@ -75110,7 +75186,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ng = (function(e) {
+        rg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bSpoilerChecked: !1 }), i;
@@ -75180,7 +75256,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        rg = (function(e) {
+        og = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75216,7 +75292,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        og = (function(e) {
+        ag = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75285,7 +75361,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ag = (function(e) {
+        sg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -75445,7 +75521,7 @@ and limitations under the License.
                     o = i === this.state.selectedIndex;
                   e.push(
                     Fa.createElement(
-                      sg,
+                      cg,
                       {
                         key: r,
                         matchKey: r,
@@ -75491,7 +75567,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        sg = (function(e) {
+        cg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75521,7 +75597,7 @@ and limitations under the License.
             t
           );
         })(Fa.PureComponent),
-        cg = (function(e) {
+        lg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75655,8 +75731,8 @@ and limitations under the License.
             (t.nMaxMatches = 12),
             t
           );
-        })(ag),
-        lg = (function(e) {
+        })(sg),
+        ug = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75680,7 +75756,7 @@ and limitations under the License.
                 Fa.createElement(
                   "div",
                   { className: "EmoticonSuggestion_Emoticon" },
-                  Fa.createElement(Xh, { emoticon: e.name }),
+                  Fa.createElement(Zh, { emoticon: e.name }),
                   e.new && Fa.createElement(ut, null)
                 ),
                 ":",
@@ -75702,8 +75778,8 @@ and limitations under the License.
             }),
             t
           );
-        })(ag),
-        ug = (function(e) {
+        })(sg),
+        dg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -75757,8 +75833,8 @@ and limitations under the License.
             }),
             t
           );
-        })(ag),
-        dg = (function(e) {
+        })(sg),
+        pg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -75929,7 +76005,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        pg = (function(e) {
+        mg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -75970,7 +76046,7 @@ and limitations under the License.
             }),
             (t.prototype.SetDragTab = function(e) {
               void 0 !== e
-                ? (this.m_fnUnregisterDropComplete = Iy.DragDropManager.RegisterForDropComplete(
+                ? (this.m_fnUnregisterDropComplete = Ry.DragDropManager.RegisterForDropComplete(
                     this.HandleDropComplete
                   ))
                 : this.m_fnUnregisterDropComplete &&
@@ -76052,7 +76128,7 @@ and limitations under the License.
               this.props.tabSet.ActivateTab(e);
             }),
             (t.prototype.OnDragStart = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               t && "chattab" == t.type && (t.tabSet = this.props.tabSet);
             }),
             (t.prototype.OnChatTabContianerRef = function(e) {
@@ -76065,7 +76141,7 @@ and limitations under the License.
               this.props.ResponsiveWindowState.SetActiveView(tu.FriendsList);
             }),
             (t.prototype.ToggleSingleWindowToggle = function() {
-              Iy.ToggleSingleWindowToggle(this.props.popup);
+              Ry.ToggleSingleWindowToggle(this.props.popup);
             }),
             (t.prototype.ShowFriendsList = function(e) {
               Ld.UIStore.SetTheaterMode(!1),
@@ -76120,7 +76196,7 @@ and limitations under the License.
                 i++
               ) {
                 var r = n[i],
-                  o = Fa.createElement(mg, {
+                  o = Fa.createElement(hg, {
                     tab: r,
                     active: !0,
                     selectTab: this.SelectTab,
@@ -76242,7 +76318,7 @@ and limitations under the License.
                         "chatTabSetContainer" + (g ? " showTabSelector" : "")
                     },
                     Fa.createElement(
-                      dg,
+                      pg,
                       { className: "chatTabList", ref: this.OnScrollRef },
                       Fa.createElement(
                         Pd,
@@ -76260,7 +76336,7 @@ and limitations under the License.
                               key: t.GetUniqueID(),
                               timeout: 350
                             },
-                            Fa.createElement(mg, {
+                            Fa.createElement(hg, {
                               tab: t,
                               active: n,
                               selectTab: e.SelectTab,
@@ -76356,7 +76432,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        mg = (function(e) {
+        hg = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_bMiddleMouseDown = !1), t;
@@ -76377,7 +76453,7 @@ and limitations under the License.
             (t.prototype.OnDragStart = function(e) {
               var t = e.clientX - e.currentTarget.getBoundingClientRect().left,
                 i = e.clientY - e.currentTarget.getBoundingClientRect().top;
-              Iy.DragDropManager.StartDrag({
+              Ry.DragDropManager.StartDrag({
                 type: "chattab",
                 tab: this.props.tab,
                 offsetX: t,
@@ -76385,7 +76461,7 @@ and limitations under the License.
               });
             }),
             (t.prototype.OnDragEnd = function(e) {
-              var t = Iy.DragDropManager.GetDragData();
+              var t = Ry.DragDropManager.GetDragData();
               if (t && "chattab" == t.type) {
                 var i = t,
                   n = !1;
@@ -76394,7 +76470,7 @@ and limitations under the License.
                     (n = Ld.UIStore.GetPerContextChatData(
                       i.tabSet.GetBrowserContext()
                     ).BUsePopups()),
-                  !Iy.DragDropManager.BWasDropConsumed() &&
+                  !Ry.DragDropManager.BWasDropConsumed() &&
                     i.tabSet &&
                     i.tabSet.tabCount > 1 &&
                     n)
@@ -76422,7 +76498,7 @@ and limitations under the License.
                   }
                 }
               }
-              Iy.DragDropManager.EndDrag();
+              Ry.DragDropManager.EndDrag();
             }),
             (t.prototype.OnMouseDown = function(e) {
               0 == e.button
@@ -76500,7 +76576,7 @@ and limitations under the License.
                   Fa.createElement(
                     Fp,
                     null,
-                    Fa.createElement(gg, { tab: this.props.tab })
+                    Fa.createElement(fg, { tab: this.props.tab })
                   ),
                   Fa.createElement(
                     "div",
@@ -76514,7 +76590,7 @@ and limitations under the License.
                       },
                       Fa.createElement(xd._5, null)
                     ),
-                    Fa.createElement(hg, { tab: this.props.tab })
+                    Fa.createElement(gg, { tab: this.props.tab })
                   )
                 )
               );
@@ -76530,7 +76606,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        hg = (function(e) {
+        gg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -76568,7 +76644,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        gg = (function(e) {
+        fg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -76580,7 +76656,7 @@ and limitations under the License.
                 return Fa.createElement(
                   "div",
                   { className: "ChatTabContent" },
-                  Fa.createElement(Ph, {
+                  Fa.createElement(xh, {
                     friend: e.chat.chat_partner,
                     noActions: !0,
                     context: { chat: e.chat }
@@ -76591,7 +76667,7 @@ and limitations under the License.
                 return Fa.createElement(
                   "div",
                   { className: "ChatTabContent ChatRoom" },
-                  Fa.createElement(oh, { group: t, small: !0 }),
+                  Fa.createElement(ah, { group: t, small: !0 }),
                   Fa.createElement(
                     "div",
                     { className: "chatTabGroupName" },
@@ -76623,7 +76699,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        fg = (function(e) {
+        _g = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -76638,7 +76714,7 @@ and limitations under the License.
               this.props.closeModal();
             }),
             (t.prototype.OnSubmit = function() {
-              Iy.SetUIDisplayPref(
+              Ry.SetUIDisplayPref(
                 "bDontShowVoiceAlert",
                 this.state.bDontShowChecked
               ),
@@ -76690,7 +76766,7 @@ and limitations under the License.
                     Fa.createElement(
                       "div",
                       { className: "voiceControlsExample" },
-                      Fa.createElement(bh, {
+                      Fa.createElement(Ch, {
                         name: this.state.strChatName,
                         chat: Ld.ChatStore.GetActiveVoiceChat(),
                         nostatus: !0
@@ -76736,7 +76812,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        _g = (function(e) {
+        yg = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -76846,14 +76922,14 @@ and limitations under the License.
                     e.GetPlaybackRateForDisplay()
                   )
                 ),
-                Fa.createElement(yg, { stats: e })
+                Fa.createElement(vg, { stats: e })
               );
             }),
             si.c([yn.a], t.prototype, "HideStats", null),
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        yg = (function(e) {
+        vg = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -77048,7 +77124,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        vg = (function(e) {
+        bg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -77321,7 +77397,7 @@ and limitations under the License.
                   onMouseDown: this.OnMouseDown
                 },
                 o &&
-                  Fa.createElement(Qm, {
+                  Fa.createElement($m, {
                     className: "videoBackground",
                     src: o.m_strThumbnailUrl,
                     draggable: !1,
@@ -77335,16 +77411,16 @@ and limitations under the License.
                   playsInline: !0,
                   controls: !1
                 }),
-                l && Fa.createElement(Sg, { video: e, actions: s }),
+                l && Fa.createElement(Mg, { video: e, actions: s }),
                 u &&
-                  Fa.createElement(Mg, { onClick: this.props.onRequestClose }),
+                  Fa.createElement(Fg, { onClick: this.props.onRequestClose }),
                 t &&
-                  Fa.createElement(_g, {
+                  Fa.createElement(yg, {
                     stats: e.GetDASHPlayerStats(),
                     closeStats: this.CloseStats
                   }),
-                Fa.createElement(bg, { video: e }),
-                r && Fa.createElement(Cg, { video: e }),
+                Fa.createElement(Cg, { video: e }),
+                r && Fa.createElement(Sg, { video: e }),
                 c &&
                   Fa.createElement(
                     "div",
@@ -77384,7 +77460,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        bg = (function(e) {
+        Cg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77420,7 +77496,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Cg = (function(e) {
+        Sg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77448,7 +77524,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Sg = (function(e) {
+        Mg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77461,7 +77537,7 @@ and limitations under the License.
               return Fa.createElement(
                 "div",
                 { className: "videoControls" },
-                Fa.createElement(Gg, {
+                Fa.createElement(Ng, {
                   steamID: this.props.video.GetBroadcastSteamID(),
                   bHideThumbnail: !0
                 }),
@@ -77470,16 +77546,16 @@ and limitations under the License.
                   {
                     className: "videoControlsBottom" + (t ? "" : " noSegments")
                   },
-                  Fa.createElement(Dg, { video: e }),
+                  Fa.createElement(Gg, { video: e }),
                   Fa.createElement(
                     "div",
                     { className: "STV_BroadcastController" },
                     Fa.createElement("div", {
                       className: "videoControlsButtons LeftSpacer"
                     }),
-                    Fa.createElement(Fg, { video: e }),
                     Fa.createElement(wg, { video: e }),
-                    Fa.createElement(Rg, {
+                    Fa.createElement(Bg, { video: e }),
+                    Fa.createElement(Eg, {
                       video: e,
                       actions: this.props.actions
                     })
@@ -77490,7 +77566,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Mg = (function(e) {
+        Fg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77511,7 +77587,7 @@ and limitations under the License.
             t
           );
         })(Fa.PureComponent),
-        Fg = (function(e) {
+        wg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77528,7 +77604,7 @@ and limitations under the License.
               return Fa.createElement(
                 "div",
                 { className: "videoControlsButtons PlayControls" },
-                Fa.createElement(Og, { video: e }),
+                Fa.createElement(Ig, { video: e }),
                 Fa.createElement(
                   "div",
                   {
@@ -77544,7 +77620,7 @@ and limitations under the License.
                   }),
                   Fa.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-                Fa.createElement(Bg, { video: e }),
+                Fa.createElement(Og, { video: e }),
                 Fa.createElement(
                   "div",
                   {
@@ -77559,7 +77635,7 @@ and limitations under the License.
                   }),
                   Fa.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-                Fa.createElement(Ig, { video: e })
+                Fa.createElement(Rg, { video: e })
               );
             }),
             si.c([yn.a], t.prototype, "OnJumpBackward", null),
@@ -77567,7 +77643,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        wg = (function(e) {
+        Bg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77608,7 +77684,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Bg = (function(e) {
+        Og = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77633,7 +77709,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Og = (function(e) {
+        Ig = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77683,7 +77759,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ig = (function(e) {
+        Rg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -77733,7 +77809,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Rg = (function(e) {
+        Eg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bSettingsOpen: !1 }), i;
@@ -77812,7 +77888,7 @@ and limitations under the License.
                     },
                     Fa.createElement(xd.P, null)
                   ),
-                  Fa.createElement(Tg, { video: o }),
+                  Fa.createElement(kg, { video: o }),
                   a &&
                     a.map(function(e) {
                       return Fa.createElement(
@@ -77849,13 +77925,13 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Eg = !0,
-        Tg = (function(e) {
+        Tg = !0,
+        kg = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (
               (t.k_nHideSliderTimeout = 1500),
-              (t.m_bShowSlider = Eg),
+              (t.m_bShowSlider = Tg),
               (t.m_schHideSlider = new bn()),
               (t.m_bChildDragging = !1),
               (t.m_bMouseOver = !1),
@@ -77890,7 +77966,7 @@ and limitations under the License.
                 this.m_schHideSlider.Schedule(
                   this.k_nHideSliderTimeout,
                   function() {
-                    return (e.m_bShowSlider = Eg);
+                    return (e.m_bShowSlider = Tg);
                   }
                 );
             }),
@@ -77925,7 +78001,7 @@ and limitations under the License.
                       { className: n, onClick: this.ToggleMute },
                       Fa.createElement(xd._3, null)
                     ),
-                    Fa.createElement(kg, { video: e, onDrag: this.OnChildDrag })
+                    Fa.createElement(Dg, { video: e, onDrag: this.OnChildDrag })
                   )
                 )
               );
@@ -77938,7 +78014,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        kg = (function(e) {
+        Dg = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.m_elSlider = null), (t.m_nVolumeStartOfDrag = 0), t;
@@ -78021,7 +78097,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Dg = (function(e) {
+        Gg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -78243,7 +78319,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Gg = (function(e) {
+        Ng = (function(e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
             return (t.state = { info: null }), t;
@@ -78271,7 +78347,7 @@ and limitations under the License.
                 "div",
                 { className: "BroadcastDetails" },
                 !this.props.bHideThumbnail &&
-                  Fa.createElement(Qm, {
+                  Fa.createElement($m, {
                     className: "broadcastDetailsThumbBlur",
                     src: e.m_strThumbnailUrl,
                     draggable: !1,
@@ -78340,7 +78416,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ng = (Fa.Component,
+        Lg = (Fa.Component,
         (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
@@ -78367,7 +78443,7 @@ and limitations under the License.
               return Fa.createElement(
                 "div",
                 {
-                  className: Zm("BroadcastChat", this.props.className),
+                  className: Qm("BroadcastChat", this.props.className),
                   style: this.props.hidden ? { display: "none" } : void 0
                 },
                 Fa.createElement("iframe", { ref: this.BindChatRef })
@@ -78377,7 +78453,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component)),
-        Lg = function(e) {
+        Ag = function(e) {
           var t = e.group,
             i = e.onClick,
             n = t.watching_broadcast_steamid;
@@ -78391,7 +78467,7 @@ and limitations under the License.
             wa.a.createElement(
               "div",
               { className: "ChatRoomListGroupItem_header" },
-              wa.a.createElement(oh, { group: t, small: !0 }),
+              wa.a.createElement(ah, { group: t, small: !0 }),
               wa.a.createElement(
                 "div",
                 { className: "groupNameStatusContainer" },
@@ -78410,7 +78486,7 @@ and limitations under the License.
             )
           );
         },
-        Ag = (function(e) {
+        Pg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -78507,7 +78583,7 @@ and limitations under the License.
                                 return e.CreateWatchParty(!0);
                               }
                             },
-                            wa.a.createElement(zh, {
+                            wa.a.createElement(Uh, {
                               friend: s,
                               context: null,
                               bLarge: !1
@@ -78534,7 +78610,7 @@ and limitations under the License.
                               )
                             ),
                             o.map(function(t) {
-                              return wa.a.createElement(Lg, {
+                              return wa.a.createElement(Ag, {
                                 key: t.unique_id,
                                 group: t,
                                 onClick: function() {
@@ -78553,7 +78629,7 @@ and limitations under the License.
                               Object(pa.b)("#Broadcast_LinkBroadcastToGroup")
                             ),
                             a.map(function(t) {
-                              return wa.a.createElement(Lg, {
+                              return wa.a.createElement(Ag, {
                                 key: t.unique_id,
                                 group: t,
                                 onClick: function() {
@@ -78585,7 +78661,7 @@ and limitations under the License.
             t
           );
         })(wa.a.Component),
-        Pg = (function(e) {
+        xg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             i.m_broadcastInfo = null;
@@ -78620,7 +78696,7 @@ and limitations under the License.
                 r = t.GetSteamID().ConvertTo64BitString(),
                 o = yt(),
                 a = t.m_bShowWatchPromptDialog
-                  ? wa.a.createElement(Ag, {
+                  ? wa.a.createElement(Pg, {
                       closeModal: function() {
                         return t.HideWatchPromptDialog();
                       },
@@ -78634,7 +78710,7 @@ and limitations under the License.
               return wa.a.createElement(
                 "div",
                 { className: "BroadcastTab", style: n },
-                wa.a.createElement(Qm, {
+                wa.a.createElement($m, {
                   className: "FullpageBroadcastBackdrop",
                   src: this.m_broadcastInfo.m_strThumbnailUrl,
                   draggable: !1,
@@ -78663,7 +78739,7 @@ and limitations under the License.
                     )
                   ),
                   wa.a.createElement(
-                    Ug,
+                    Vg,
                     {
                       steamID: r,
                       watchLocation: o,
@@ -78681,7 +78757,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(wa.a.Component),
-        xg = (function(e) {
+        zg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -78724,7 +78800,7 @@ and limitations under the License.
                         "StandalonePlayer" +
                         (this.state.bTheaterMode ? " TheaterMode" : "")
                     },
-                    wa.a.createElement(Qm, {
+                    wa.a.createElement($m, {
                       className: "FullpageBroadcastBackdrop",
                       src: t.m_strThumbnailUrl,
                       draggable: !1,
@@ -78753,17 +78829,17 @@ and limitations under the License.
                       )
                     ),
                     wa.a.createElement(
-                      Ug,
+                      Vg,
                       {
                         steamID: e.GetSteamIDWatched(),
                         watchLocation: i,
                         bHideChat: this.state.bChatCollapsed,
                         onTheaterMode: this.ToggleTheaterMode
                       },
-                      wa.a.createElement(jg, { app: e })
+                      wa.a.createElement(Wg, { app: e })
                     )
                   ),
-                wa.a.createElement(zg, { app: e })
+                wa.a.createElement(Ug, { app: e })
               );
             }),
             si.c([yn.a], t.prototype, "OnShowLogin", null),
@@ -78772,7 +78848,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(wa.a.Component),
-        zg = Object(Cp.observer)(function(e) {
+        Ug = Object(Cp.observer)(function(e) {
           var t = e.app;
           return t.BIsPerformingLogonCheck()
             ? wa.a.createElement(
@@ -78785,7 +78861,7 @@ and limitations under the License.
               )
             : null;
         }),
-        Ug = (function(e) {
+        Vg = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.m_strLocalSteamID = ""), (i.state = { info: null }), i;
@@ -78821,7 +78897,7 @@ and limitations under the License.
                     "div",
                     { className: "BroadcastContainerSectionVideoContainer" },
                     o &&
-                      wa.a.createElement(vg, {
+                      wa.a.createElement(bg, {
                         key: r,
                         steamID: r,
                         watchLocation: this.props.watchLocation,
@@ -78836,13 +78912,13 @@ and limitations under the License.
                   wa.a.createElement(
                     "div",
                     { className: "BroadcastDetailsSection" },
-                    wa.a.createElement(Gg, {
+                    wa.a.createElement(Ng, {
                       steamID: r,
                       onLocalStreamChange: this.OnLocalStreamChange
                     })
                   )
                 ),
-                wa.a.createElement(Ng, {
+                wa.a.createElement(Lg, {
                   steamID: t,
                   watchLocation: this.props.watchLocation,
                   hidden: this.props.bHideChat
@@ -78854,7 +78930,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(wa.a.Component),
-        Vg = (function(e) {
+        jg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -78881,7 +78957,7 @@ and limitations under the License.
             t
           );
         })(wa.a.Component),
-        jg = (function(e) {
+        Wg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -78889,7 +78965,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.render = function() {
               if (!this.props.app.BIsLogonDialogVisible()) return null;
-              var e = wa.a.createElement(Vg, { app: this.props.app });
+              var e = wa.a.createElement(jg, { app: this.props.app });
               return wa.a.createElement(
                 "div",
                 { className: "chat_full_modaloverlay" },
@@ -78906,14 +78982,14 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(wa.a.Component),
-        Wg = Object(Cp.observer)(function(e) {
+        Hg = Object(Cp.observer)(function(e) {
           return Fa.createElement(
-            Ah,
+            Ph,
             { friend: e.player, context: e.context },
             Fa.createElement("span", null, e.player.display_name)
           );
         }),
-        Hg = (function(e) {
+        qg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -78932,14 +79008,14 @@ and limitations under the License.
                 if (-1 == n.indexOf(s.unServerMsgParamAccountID)) {
                   i.length > 0 && i.push(", ");
                   var c = Ld.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
-                  i.push(Fa.createElement(Wg, { context: t, player: c })),
+                  i.push(Fa.createElement(Hg, { context: t, player: c })),
                     n.push(s.unServerMsgParamAccountID),
                     c.is_ready || (c.LoadIfNecessary(), (r = !1));
                 }
               }
               var l = Ld.FriendStore.GetPlayer(e[0].unAccountID);
               l.is_ready || (l.LoadIfNecessary(), (r = !1));
-              var u = Fa.createElement(Wg, { context: t, player: l }),
+              var u = Fa.createElement(Hg, { context: t, player: l }),
                 d = "";
               if (i.length > 1) {
                 var p = Fa.createElement.apply(
@@ -78954,7 +79030,7 @@ and limitations under the License.
               } else
                 d = Object(pa.d)("#ChatRoom_ServerMessage_Invited", i[0], u);
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "server" },
                 Fa.createElement(
                   "div",
@@ -78966,7 +79042,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        qg = (function(e) {
+        Kg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -78988,7 +79064,7 @@ and limitations under the License.
                       Object(pa.b)("#ChatRoom_ServerMessageMultiple_Separator")
                     );
                   var c = Ld.FriendStore.GetPlayer(s.unServerMsgParamAccountID);
-                  i.push(Fa.createElement(Wg, { context: t, player: c })),
+                  i.push(Fa.createElement(Hg, { context: t, player: c })),
                     n.push(s.unServerMsgParamAccountID),
                     c.is_ready || (c.LoadIfNecessary(), (r = !1));
                 }
@@ -79004,7 +79080,7 @@ and limitations under the License.
                 l = Object(pa.d)(this.props.tokenPrefix + "_Multiple", d, u);
               } else l = Object(pa.d)(this.props.tokenPrefix, i[0]);
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "server" },
                 Fa.createElement(
                   "div",
@@ -79016,7 +79092,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Kg = (function(e) {
+        Jg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79090,7 +79166,7 @@ and limitations under the License.
                         Object(pa.b)("#Chat_ErrorSending")
                       ));
                 }
-              var m = Zm("msg", c, t, {
+              var m = Qm("msg", c, t, {
                   isCurrentUser: l.self.accountid === n.unAccountID,
                   HasTimeStamp: !d,
                   EmojiOnly: H(u)
@@ -79116,13 +79192,13 @@ and limitations under the License.
                     context: f,
                     parser: l.GetBBCodeParser()
                   }),
-                y = Zm("msgText", { MsgNoUserContent: !n.HasUserContent() });
+                y = Qm("msgText", { MsgNoUserContent: !n.HasUserContent() });
               return Fa.createElement(
                 "div",
                 { className: m, style: h },
                 !d &&
                   Fa.createElement(
-                    Jg,
+                    Yg,
                     { className: "FriendChatTimeStamp", friend: p, style: g },
                     Fa.createElement(Ap, {
                       rtime: n.rtTimestamp,
@@ -79131,7 +79207,7 @@ and limitations under the License.
                   ),
                 e,
                 Fa.createElement(
-                  Yh,
+                  Xh,
                   null,
                   Fa.createElement("div", { className: y }, _)
                 )
@@ -79142,9 +79218,9 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Jg = Object(Cp.observer)(function(e) {
+        Yg = Object(Cp.observer)(function(e) {
           var t = e.friend.persona,
-            i = Zm(
+            i = Qm(
               e.className,
               (t.is_ingame && "ingame") ||
                 (t.is_online && "online") ||
@@ -79161,7 +79237,7 @@ and limitations under the License.
             e.children
           );
         }),
-        Yg = (function(e) {
+        Xg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79217,7 +79293,7 @@ and limitations under the License.
                           })
                         ))),
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     {
                       style: "speaker allow-embedded-newlines",
                       text: [
@@ -79240,10 +79316,10 @@ and limitations under the License.
                             : "")
                       },
                       Fa.createElement(
-                        Jg,
+                        Yg,
                         { friend: e, className: "speaker" },
                         Fa.createElement(
-                          Ah,
+                          Ph,
                           {
                             friend: e,
                             context: this.props.friendRenderContext
@@ -79301,7 +79377,7 @@ and limitations under the License.
               return (
                 (o.width = this.props.speakerWidth + "px"),
                 Fa.createElement(
-                  Yh,
+                  Xh,
                   {
                     style: "speaker allow-embedded-newlines",
                     text: [
@@ -79325,10 +79401,10 @@ and limitations under the License.
                       style: o
                     },
                     Fa.createElement(
-                      Ah,
+                      Ph,
                       { friend: e, context: this.props.friendRenderContext },
                       Fa.createElement(
-                        Jg,
+                        Yg,
                         { friend: e, className: "speaker" },
                         Fa.createElement(
                           "div",
@@ -79347,7 +79423,7 @@ and limitations under the License.
                       )
                     ),
                     Fa.createElement(
-                      Jg,
+                      Yg,
                       { className: "FriendChatTimeStamp", friend: e },
                       Fa.createElement(Ap, {
                         rtime: this.props.msg.rtTimestamp,
@@ -79361,7 +79437,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Xg = (function(e) {
+        Zg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79378,7 +79454,7 @@ and limitations under the License.
                 i = Ld.FriendStore.GetPlayer(e.unAccountID),
                 n = e.strMessage.slice(e.strMessage.search(/\s/g) + 1),
                 r = this.props.chatView.IsChatRoom(),
-                o = Zm(
+                o = Qm(
                   "speaker",
                   i.persona.is_ingame
                     ? "ingame"
@@ -79389,7 +79465,7 @@ and limitations under the License.
                     ? this.props.speakerWidth + "px"
                     : void 0
                 },
-                s = Zm(
+                s = Qm(
                   "msg",
                   "ChatMsgSlashEmote",
                   r ? "ChatRoomSlashEmote" : "FriendChatSlashEmote",
@@ -79420,13 +79496,13 @@ and limitations under the License.
                     "div",
                     { className: o },
                     Fa.createElement(
-                      Ah,
+                      Ph,
                       {
                         friend: i,
                         context: { chat: t, chatContext: "message" }
                       },
                       Fa.createElement(
-                        Yh,
+                        Xh,
                         {
                           style: "speaker allow-embedded-newlines",
                           text: [
@@ -79460,7 +79536,7 @@ and limitations under the License.
                       )
                     ),
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       { style: "force-display append-innertext", text: "/me" },
                       Fa.createElement(
                         "div",
@@ -79493,7 +79569,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Zg = (function(e) {
+        Qg = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79501,7 +79577,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.render = function() {
               return Fa.createElement(
-                Kg,
+                Jg,
                 si.a({}, this.props, { extraClassName: "ChatMessageDeleted" }),
                 Fa.createElement(
                   "div",
@@ -79517,7 +79593,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Qg = (function(e) {
+        $g = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79531,7 +79607,7 @@ and limitations under the License.
                   ? Ft.apply(void 0, [t, i.strToken].concat(i.parts))
                   : Object(pa.b)(i.strToken);
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "server" },
                 Fa.createElement(
                   "div",
@@ -79543,7 +79619,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        $g = (function(e) {
+        ef = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79821,7 +79897,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ef = (function(e) {
+        tf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79829,7 +79905,7 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.render = function() {
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "invite", text: this.props.msg.strMessage },
                 Fa.createElement(
                   "div",
@@ -79848,7 +79924,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        tf = (function(e) {
+        nf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79884,17 +79960,17 @@ and limitations under the License.
                   { key: c.UniqueKey() },
                   d &&
                     Fa.createElement(
-                      nf,
+                      rf,
                       si.a({}, i, {
                         block: d,
                         bIsInitialBlock: 0 === e,
                         bShowTimePasses: e === a
                       })
                     ),
-                  Fa.createElement(af, { rtTimestamp: p, bUnread: !0 }),
+                  Fa.createElement(sf, { rtTimestamp: p, bUnread: !0 }),
                   u.messages.length > 0 &&
                     Fa.createElement(
-                      nf,
+                      rf,
                       si.a({}, i, {
                         block: u,
                         bIsInitialBlock: !1,
@@ -79904,7 +79980,7 @@ and limitations under the License.
                 );
               }
               return Fa.createElement(
-                nf,
+                rf,
                 si.a({}, i, {
                   key: c.UniqueKey(),
                   block: c,
@@ -79927,7 +80003,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        nf = (function(e) {
+        rf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -79949,7 +80025,7 @@ and limitations under the License.
                 a = o.friendRenderContext,
                 s = i.messages;
               i.BIsInvite()
-                ? (e = Fa.createElement(Hg, {
+                ? (e = Fa.createElement(qg, {
                     messages: s,
                     friendRenderContext: a
                   }))
@@ -79960,7 +80036,7 @@ and limitations under the License.
                     }))
                   : s.length &&
                     (e = Fa.createElement(
-                      rf,
+                      of,
                       si.a({}, o, {
                         messages: s,
                         bLastMessageBlock: i.is_last_block
@@ -79970,11 +80046,11 @@ and limitations under the License.
               if (i.is_last_block) {
                 var l = Ld.GetLocalMidnightInRTime32();
                 i.GetRTimeMidnightBeforeBlock() != l &&
-                  (c = Fa.createElement(af, { rtTimestamp: l }));
+                  (c = Fa.createElement(sf, { rtTimestamp: l }));
               } else
                 i.GetRTimeMidnightBeforeBlock() !=
                   i.GetRTimeMidnightBeforeNextBlock() &&
-                  (c = Fa.createElement(af, {
+                  (c = Fa.createElement(sf, {
                     rtTimestamp: i.GetRTimeMidnightBeforeNextBlock()
                   }));
               return Fa.createElement(
@@ -79982,7 +80058,7 @@ and limitations under the License.
                 null,
                 n && s.length > 0 && Fa.createElement(wt, { msg: s[0] }),
                 r &&
-                  Fa.createElement(af, {
+                  Fa.createElement(sf, {
                     rtTimestamp: s[0].rtTimestamp,
                     bTimePassesLine: !0
                   }),
@@ -79993,7 +80069,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        rf = (function(e) {
+        of = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bHoveringDelete: !1 }), i;
@@ -80052,7 +80128,7 @@ and limitations under the License.
                       "/me" === m.GetSlashCommand()
                         ? l.push(
                             Fa.createElement(
-                              Xg,
+                              Zg,
                               si.a({}, f, {
                                 speakerWidth: this.props.speakerWidth
                               })
@@ -80061,10 +80137,10 @@ and limitations under the License.
                         : m instanceof is
                           ? l.push(
                               Fa.createElement(
-                                Yh,
+                                Xh,
                                 null,
                                 Fa.createElement(
-                                  $g,
+                                  ef,
                                   si.a({}, f, {
                                     speakerWidth: this.props.speakerWidth
                                   })
@@ -80073,10 +80149,10 @@ and limitations under the License.
                             )
                           : m instanceof ts
                             ? ((e = !1),
-                              l.push(Fa.createElement(ef, si.a({}, f))))
+                              l.push(Fa.createElement(tf, si.a({}, f))))
                             : l.push(
                                 Fa.createElement(
-                                  Kg,
+                                  Jg,
                                   si.a({}, f, {
                                     speakerWidth: this.props.speakerWidth
                                   })
@@ -80085,7 +80161,7 @@ and limitations under the License.
                     : (d ||
                         l.push(
                           Fa.createElement(
-                            Zg,
+                            Qg,
                             si.a({}, f, {
                               speakerWidth: this.props.speakerWidth
                             })
@@ -80101,13 +80177,13 @@ and limitations under the License.
                 s && (c += " ChatMessageBlock_HighlightDelete"),
                 1 != l.length || o || (c += " SingletonMsg"),
                 Fa.createElement(
-                  Yh,
+                  Xh,
                   null,
                   Fa.createElement(
                     "div",
                     { className: c },
                     e &&
-                      Fa.createElement(Yg, {
+                      Fa.createElement(Xg, {
                         friend: r,
                         chatView: this.props.chatView,
                         msg: this.props.messages[0],
@@ -80117,7 +80193,7 @@ and limitations under the License.
                         onUpdate: this.props.onUpdate
                       }),
                     a &&
-                      Fa.createElement(of, {
+                      Fa.createElement(af, {
                         chatRoom: o,
                         messages: this.props.messages,
                         onHover: this.OnHoverDelete
@@ -80131,7 +80207,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        of = (function(e) {
+        af = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80165,7 +80241,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        af = (function(e) {
+        sf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80208,7 +80284,7 @@ and limitations under the License.
                 e = t.toLocaleDateString(pa.a.GetPreferredLocales(), n);
               }
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "timestamp", text: e },
                 Fa.createElement(
                   "div",
@@ -80222,15 +80298,15 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        sf = !1,
-        cf = (function(e) {
+        cf = !1,
+        lf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
               (i.m_bInitialized = !1),
               (i.LOG = Na.create(function() {
                 return i.props.chatView.GetUniqueID();
-              }, sf)),
+              }, cf)),
               (i.m_bLoadHistoryInProgress = !1),
               (i.m_bLoadingOperationInProgress = !1),
               (i.m_bHasPendedLoadOlder = !1),
@@ -80271,7 +80347,7 @@ and limitations under the License.
               return { scrollTop: 0, scrollHeight: 0, clientHeight: 0 };
             }),
             (t.prototype.LogScrollInfo = function(e) {
-              if (sf) {
+              if (cf) {
                 var t = this.GetScrollInfo(),
                   i = t.scrollTop,
                   n = t.scrollHeight,
@@ -80299,7 +80375,7 @@ and limitations under the License.
               }
             }),
             (t.prototype.DumpChildSizes = function() {
-              if (sf) {
+              if (cf) {
                 var e = this.m_elHistoryScroll.children[0],
                   t = e.children.length;
                 if (t < 0) {
@@ -80648,7 +80724,7 @@ and limitations under the License.
                       className: "friendListInsetShadowTop"
                     })
                   ),
-                  Fa.createElement(lf, { chatHistory: this, chatView: t }),
+                  Fa.createElement(uf, { chatHistory: this, chatView: t }),
                   Fa.createElement(
                     "div",
                     {
@@ -80660,7 +80736,7 @@ and limitations under the License.
                     Fa.createElement(
                       "div",
                       { className: "chatHistory" },
-                      Fa.createElement(tf, {
+                      Fa.createElement(nf, {
                         chatView: t,
                         friendRenderContext: o,
                         onUpdate: this.OnUpdate,
@@ -80671,8 +80747,8 @@ and limitations under the License.
                       })
                     )
                   ),
-                  Fa.createElement(wf, { chatView: t }),
-                  Fa.createElement(uf, {
+                  Fa.createElement(Bf, { chatView: t }),
+                  Fa.createElement(df, {
                     chatView: t,
                     action: this.ScrollToBottom
                   }),
@@ -80705,7 +80781,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        lf = (function(e) {
+        uf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80726,7 +80802,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        uf = (function(e) {
+        df = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -80756,7 +80832,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        df = (function(e) {
+        pf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -80907,20 +80983,20 @@ and limitations under the License.
                 var i = e,
                   n = -1;
                 this.m_refChatTabs && (n = this.m_refChatTabs.state.iDragIndex),
-                  Iy.DragDropManager.SetDropConsumed(),
+                  Ry.DragDropManager.SetDropConsumed(),
                   i.tabSet != this.props.tabs &&
                     (i.tabSet.RemoveTab(i.tab),
                     this.props.tabs.AddTab(i.tab),
-                    Iy.DragDropManager.EndDrag()),
+                    Ry.DragDropManager.EndDrag()),
                   -1 != n && this.props.tabs.MoveTabToIndex(i.tab, n),
                   this.props.tabs.ActivateTab(i.tab),
                   this.setState({ tabDrag: void 0 });
               } else if ("friend" == e.type) {
-                Iy.DragDropManager.SetDropConsumed();
+                Ry.DragDropManager.SetDropConsumed();
                 var r = e;
                 r.friend.OpenChatDialog(Xt(this, t));
               } else if ("chatroomgroup" == e.type) {
-                Iy.DragDropManager.SetDropConsumed();
+                Ry.DragDropManager.SetDropConsumed();
                 var o = e;
                 Ld.UIStore.ShowAndOrActivateChatRoomGroup(
                   Xt(this),
@@ -80976,20 +81052,20 @@ and limitations under the License.
                   o = i instanceof nu;
                 return (
                   (n = r
-                    ? Fa.createElement(_f, {
+                    ? Fa.createElement(yf, {
                         groupView: r,
                         isActive: i == t,
                         popup: e.props.popup,
                         showWindowControls: !1
                       })
                     : o && IsFeatureBroadcastEnabled()
-                      ? Fa.createElement(bf, {
+                      ? Fa.createElement(Cf, {
                           broadcastView: i,
                           isActive: i == t,
                           popup: e.props.popup,
                           showWindowControls: !1
                         })
-                      : Fa.createElement(hf, {
+                      : Fa.createElement(gf, {
                           chatView: i.GetChatView(),
                           isActive: i == t,
                           popup: e.props.popup,
@@ -81011,7 +81087,7 @@ and limitations under the License.
                   onCopy: this.OnCopy,
                   tabIndex: 0
                 },
-                Fa.createElement(pg, {
+                Fa.createElement(mg, {
                   tabSet: this.props.tabs,
                   popup: this.props.popup,
                   activeTab: t,
@@ -81043,7 +81119,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        pf = (function(e) {
+        mf = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -81089,7 +81165,7 @@ and limitations under the License.
                   ? Fa.createElement(
                       Ad,
                       { key: t, classNames: "friend-anim", timeout: 320 },
-                      Fa.createElement(Ph, {
+                      Fa.createElement(xh, {
                         friend: n,
                         key: t,
                         showVoiceLevel: !0,
@@ -81127,7 +81203,7 @@ and limitations under the License.
                       Fa.createElement(
                         Ad,
                         { key: i, classNames: "friend-anim", timeout: 320 },
-                        Fa.createElement(Ph, {
+                        Fa.createElement(xh, {
                           friend: a,
                           key: i,
                           showVoiceLevel: !0,
@@ -81262,7 +81338,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        mf = (function(e) {
+        hf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.invitee = i.props.invitee), i;
@@ -81349,7 +81425,7 @@ and limitations under the License.
                     !!t.BIsClanChatRoom() &&
                     Ld.FriendStore.ClanStore.GetClan(t.GetClanID()).BIsOGG()),
                   (a = t.name),
-                  (s = Fa.createElement(oh, { group: t, name: t.name })),
+                  (s = Fa.createElement(ah, { group: t, name: t.name })),
                   (d = t.BIsUserGroupMember(n)))
                 : e
                   ? ((u = "#Chat_Actions_DropGroupInvite_1v2_Confirm"),
@@ -81546,7 +81622,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        hf = (function(e) {
+        gf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -81585,7 +81661,7 @@ and limitations under the License.
               )
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Iy.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Ry.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropToInviteFriend: i }),
@@ -81595,7 +81671,7 @@ and limitations under the License.
               if (n)
                 return (
                   this.m_fnUnregisterDropComplete ||
-                    (this.m_fnUnregisterDropComplete = Iy.DragDropManager.RegisterForDropComplete(
+                    (this.m_fnUnregisterDropComplete = Ry.DragDropManager.RegisterForDropComplete(
                       this.OnDropComplete
                     )),
                   this.setState({ dropGroupToInviteFriend: n }),
@@ -81605,7 +81681,7 @@ and limitations under the License.
               return (
                 !r ||
                 (this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = Iy.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = Ry.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropClanToInvite: r }),
@@ -81652,7 +81728,7 @@ and limitations under the License.
                     (this.m_fnUnregisterDropComplete.Unregister(),
                     (this.m_fnUnregisterDropComplete = void 0),
                     this.setState({ dropToInviteFriend: void 0 })),
-                    Iy.DragDropManager.SetDropConsumed(),
+                    Ry.DragDropManager.SetDropConsumed(),
                     It(
                       { invitee: o, chatview: i, invitedto: r },
                       Xt(this, t),
@@ -81668,7 +81744,7 @@ and limitations under the License.
                         dropGroupToInviteFriend: void 0,
                         dropClanToInvite: void 0
                       })),
-                    Iy.DragDropManager.SetDropConsumed(),
+                    Ry.DragDropManager.SetDropConsumed(),
                     s &&
                       (a = Ld.ChatStore.GetChatRoomGroup(
                         s.GetChatGroupIDIfLoaded()
@@ -81707,7 +81783,7 @@ and limitations under the License.
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    Fa.createElement(Mf, {
+                    Fa.createElement(Ff, {
                       chatView: this.props.chatView,
                       friend: this.state.dropToInviteFriend
                     })
@@ -81721,7 +81797,7 @@ and limitations under the License.
                       classNames: "inviteDrop-anim",
                       timeout: 300
                     },
-                    Fa.createElement(Ff, {
+                    Fa.createElement(wf, {
                       chatView: this.props.chatView,
                       group: this.state.dropGroupToInviteFriend,
                       clan: this.state.dropClanToInvite
@@ -81753,7 +81829,7 @@ and limitations under the License.
                   },
                   Fa.createElement("div", { className: "chatHeader" }),
                   this.props.isActive &&
-                    Fa.createElement(gf, {
+                    Fa.createElement(ff, {
                       chatView: this.props.chatView,
                       onNameWidthChanged: this.OnNameWidthChanged
                     }),
@@ -81771,7 +81847,7 @@ and limitations under the License.
                         Fa.createElement(
                           "div",
                           null,
-                          Fa.createElement(pf, {
+                          Fa.createElement(mf, {
                             chatView: this.props.chatView
                           })
                         )
@@ -81791,20 +81867,20 @@ and limitations under the License.
                     },
                     Fa.createElement(Pd, null, o),
                     n &&
-                      Fa.createElement(Sf, {
+                      Fa.createElement(Mf, {
                         chatView: this.props.chatView,
                         friend: e.chat_partner
                       }),
-                    Fa.createElement(cf, {
+                    Fa.createElement(lf, {
                       chatView: this.props.chatView,
                       isActive: this.props.isActive,
                       speakerLabelWidth: this.state.speakerLabelWidth,
                       blockInteraction: n
                     }),
-                    Fa.createElement(ff, { chatView: this.props.chatView }),
+                    Fa.createElement(_f, { chatView: this.props.chatView }),
                     Fa.createElement("div", { className: "dropTargetBox" })
                   ),
-                  Fa.createElement(eg, {
+                  Fa.createElement(tg, {
                     key: e.unique_id,
                     chatView: this.props.chatView,
                     isActive: this.props.isActive,
@@ -81822,7 +81898,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        gf = (function(e) {
+        ff = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -81861,7 +81937,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        ff = (function(e) {
+        _f = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -81937,7 +82013,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        _f = (function(e) {
+        yf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -81989,7 +82065,7 @@ and limitations under the License.
                 if (n.friend) {
                   this.state.dropToInviteFriend &&
                     this.setState({ dropToInviteFriend: void 0 }),
-                    Iy.DragDropManager.SetDropConsumed();
+                    Ry.DragDropManager.SetDropConsumed();
                   var r = t.currentTarget.ownerDocument.defaultView;
                   n.sourceContext.group != this.props.groupView.GetGroup() &&
                     It(
@@ -82084,7 +82160,7 @@ and limitations under the License.
             (t.prototype.CalculateBroadcastSectionStyles = function(e) {
               if (this.props.groupView.m_bChatHidden)
                 return { width: "100%", height: "100%" };
-              var t = Iy.UIDisplayPrefs,
+              var t = Ry.UIDisplayPrefs,
                 i = t.nWatchPartyBroadcastHeightPercentage,
                 n = t.nWatchPartyBroadcastWidthPercentage,
                 r = {};
@@ -82131,7 +82207,7 @@ and limitations under the License.
                 c = n
                   ? "nWatchPartyBroadcastHeightPercentage"
                   : "nWatchPartyBroadcastWidthPercentage";
-              Iy.SetUIDisplayPref(c, s);
+              Ry.SetUIDisplayPref(c, s);
             }),
             (t.prototype.UnregisterDragEvents = function(e) {
               e.view.removeEventListener("mousemove", this.HandleMouseMove),
@@ -82193,7 +82269,7 @@ and limitations under the License.
                   Fa.createElement(
                     "div",
                     {
-                      className: Zm(
+                      className: Qm(
                         "InnerChatTab",
                         !e.m_bShowGlobalChat && "Active"
                       ),
@@ -82202,7 +82278,7 @@ and limitations under the License.
                       }
                     },
                     Fa.createElement(cm, { group: t }),
-                    Fa.createElement(oh, { group: t, micro: !0 }),
+                    Fa.createElement(ah, { group: t, micro: !0 }),
                     Fa.createElement(
                       "span",
                       { className: "InnerChatTabLabel" },
@@ -82215,7 +82291,7 @@ and limitations under the License.
                     Fa.createElement(
                       "div",
                       {
-                        className: Zm(
+                        className: Qm(
                           "InnerChatTab",
                           e.m_bShowGlobalChat && "Active"
                         ),
@@ -82267,7 +82343,7 @@ and limitations under the License.
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  Fa.createElement(Mf, {
+                  Fa.createElement(Ff, {
                     chatView: i,
                     friend: this.state.dropToInviteFriend
                   })
@@ -82278,14 +82354,14 @@ and limitations under the License.
                 m = t.m_bChatHidden;
               if (IsFeatureBroadcastEnabled())
                 if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-                  var h = Iy.UIDisplayPrefs,
+                  var h = Ry.UIDisplayPrefs,
                     g = (h.nWatchPartyBroadcastHeightPercentage,
                     h.nWatchPartyBroadcastWidthPercentage,
                     this.CalculateBroadcastSectionStyles(p));
                   (d = Fa.createElement(
                     Fa.Fragment,
                     null,
-                    Fa.createElement(vf, {
+                    Fa.createElement(bf, {
                       ref: this.m_refBroadcastContainer,
                       steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                       localSteamID: t.m_strLocalBroadcastId,
@@ -82316,7 +82392,7 @@ and limitations under the License.
                         onMouseDown: this.OnGrabberMouseDown
                       }),
                     m &&
-                      Fa.createElement(yf, {
+                      Fa.createElement(vf, {
                         onClick: this.ShowChat,
                         edge: p ? "bottom" : "right"
                       })
@@ -82353,7 +82429,7 @@ and limitations under the License.
                 w =
                   t.isBroadcastShown && ((!o && t.m_bShowGlobalChat) || m)
                     ? null
-                    : Fa.createElement(eg, {
+                    : Fa.createElement(tg, {
                         key: r.unique_id,
                         chatView: t.GetActiveChatView(),
                         isActive: this.props.isActive,
@@ -82375,14 +82451,14 @@ and limitations under the License.
                       Fa.createElement(
                         "div",
                         { className: "ChatRoomGroupDialog_history" },
-                        Fa.createElement(cf, {
+                        Fa.createElement(lf, {
                           chatView: i,
                           isActive: this.props.isActive
                         }),
                         Fa.createElement(
                           Pd,
                           null,
-                          Fa.createElement(Cf, { groupView: t })
+                          Fa.createElement(Sf, { groupView: t })
                         )
                       ),
                       Fa.createElement("div", { className: "dropTargetBox" }),
@@ -82394,7 +82470,7 @@ and limitations under the License.
               if (e.watching_broadcast_steamid && t.isBroadcastShown) {
                 var O = 4;
                 ai.a.STEAM_TV && (O = 2);
-                var I = Fa.createElement(Ng, {
+                var I = Fa.createElement(Lg, {
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   watchLocation: O,
                   hidden: !t.m_bShowGlobalChat,
@@ -82425,7 +82501,7 @@ and limitations under the License.
                       Fa.createElement("div", {
                         className: "chatHeaderGradient"
                       }),
-                      Fa.createElement($m, {
+                      Fa.createElement(eh, {
                         groupView: t,
                         onBroadcastPreviewClick: this.ShowBroadcast
                       }),
@@ -82537,20 +82613,20 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        yf = function(e) {
+        vf = function(e) {
           var t = e.onClick,
             i = e.edge;
           return Fa.createElement(
             "div",
             {
-              className: Zm("BroadcastChatExpander", i),
+              className: Qm("BroadcastChatExpander", i),
               onClick: t,
               title: Object(pa.b)("#Broadcast_View_ShowChat")
             },
             Fa.createElement(xd.t, { showChat: !0 })
           );
         },
-        vf = Fa.forwardRef(function(e, t) {
+        bf = Fa.forwardRef(function(e, t) {
           var i = e.localSteamID,
             n = e.steamID,
             r = e.style,
@@ -82571,7 +82647,7 @@ and limitations under the License.
               Fa.createElement(
                 "div",
                 { className: "BroadcastSection" },
-                Fa.createElement(vg, {
+                Fa.createElement(bg, {
                   key: l,
                   steamID: l,
                   watchLocation: u,
@@ -82584,12 +82660,12 @@ and limitations under the License.
               Fa.createElement(
                 "div",
                 { className: "BroadcastDetailsSection" },
-                Fa.createElement(Gg, { steamID: l, onLocalStreamChange: c })
+                Fa.createElement(Ng, { steamID: l, onLocalStreamChange: c })
               )
             )
           );
         }),
-        bf = (function(e) {
+        Cf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -82601,7 +82677,7 @@ and limitations under the License.
               var t = {};
               return (
                 this.props.isActive || (t.display = "none"),
-                Fa.createElement(Pg, {
+                Fa.createElement(xg, {
                   style: t,
                   broadcastView: e,
                   popup: this.props.popup
@@ -82611,7 +82687,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Cf = (function(e) {
+        Sf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -82665,7 +82741,7 @@ and limitations under the License.
                           { className: "VoiceChatTextChannelDesc" },
                           Object(pa.b)("#Chat_Scratch_Pad_Desc")
                         ),
-                        Fa.createElement(cf, {
+                        Fa.createElement(lf, {
                           chatView: e,
                           isActive: !0,
                           ref: this.OnChatHistoryRef
@@ -82680,7 +82756,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Sf = (function(e) {
+        Mf = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -82758,7 +82834,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Mf = (function(e) {
+        Ff = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -82787,7 +82863,7 @@ and limitations under the License.
                       Fa.createElement(
                         tp,
                         null,
-                        Fa.createElement(Ph, {
+                        Fa.createElement(xh, {
                           friend: this.props.friend,
                           context: null,
                           avatarQualityFull: !0
@@ -82801,7 +82877,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Ff = (function(e) {
+        wf = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -82834,11 +82910,11 @@ and limitations under the License.
                         tp,
                         { className: "avatarHolder" },
                         this.props.clan
-                          ? Fa.createElement(rh, {
+                          ? Fa.createElement(oh, {
                               clan: this.props.clan,
                               large: !0
                             })
-                          : Fa.createElement(oh, {
+                          : Fa.createElement(ah, {
                               group: this.props.group,
                               large: !0
                             }),
@@ -82856,7 +82932,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        wf = (function(e) {
+        Bf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -82885,7 +82961,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Bf = (function(e) {
+        Of = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -82925,7 +83001,7 @@ and limitations under the License.
             t
           );
         })(Fa.PureComponent),
-        Of = (function(e) {
+        If = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -83004,8 +83080,8 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        If = (i("FHUK"), $(Rt)),
-        Rf = (function(e) {
+        Rf = (i("FHUK"), $(Rt)),
+        Ef = (function(e) {
           function t(t, i, n, r) {
             return e.call(this, t, i, n, r) || this;
           }
@@ -83030,15 +83106,15 @@ and limitations under the License.
             t
           );
         })(Sp.b),
-        Ef = 226,
-        Tf = (function(e) {
+        Tf = 226,
+        kf = (function(e) {
           function t(t, i, n, r) {
             var o = this,
               a = Sp.c.Resizable;
             r && (a |= Sp.c.Minimized);
             var s = {
               dimensions: { width: 300, height: 650 },
-              minWidth: Ef,
+              minWidth: Tf,
               minHeight: 400,
               title: Object(pa.b)("#WindowTitle_FriendsList"),
               html_class: "client_chat_frame fullheight SavedDimensionsPopup",
@@ -83057,9 +83133,9 @@ and limitations under the License.
                 ) || this),
               (o.m_friends = t),
               (o.m_chats = i),
-              Iy.m_strLoaderWindowRestoreDetails &&
-                (o.SaveWindowPosition(Iy.m_strLoaderWindowRestoreDetails),
-                (Iy.m_strLoaderWindowRestoreDetails = void 0)),
+              Ry.m_strLoaderWindowRestoreDetails &&
+                (o.SaveWindowPosition(Ry.m_strLoaderWindowRestoreDetails),
+                (Ry.m_strLoaderWindowRestoreDetails = void 0)),
               o
             );
           }
@@ -83067,12 +83143,12 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.Render = function(e, t) {
               t.setAttribute("class", "fullheight popup_chat_frame");
-              var i = new Sy(e),
+              var i = new My(e),
                 n = this.browser_info || Gd,
                 r = Ld.UIStore.GetDefaultTabSetForContext(n);
               (this.m_browserContext = n),
                 On.render(
-                  Fa.createElement(kf, {
+                  Fa.createElement(Df, {
                     popup: this,
                     friends: this.m_friends,
                     chats: this.m_chats,
@@ -83102,8 +83178,8 @@ and limitations under the License.
             }),
             t
           );
-        })(Rf),
-        kf = (function(e) {
+        })(Ef),
+        Df = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             (i.m_bUsePopups = !1),
@@ -83134,7 +83210,7 @@ and limitations under the License.
                 i.IsMinimized().then(function(e) {
                   if (!e) {
                     var n = i.window;
-                    if (!(n.innerWidth < Ef)) {
+                    if (!(n.innerWidth < Tf)) {
                       var r = n.innerWidth >= t.m_nInlineChatWidth;
                       Ld.UIStore.SetFriendsListSingleWindowMode(
                         t.m_browserContext,
@@ -83244,7 +83320,7 @@ and limitations under the License.
                 var t = this.m_elFriendsListContainer.getBoundingClientRect(),
                   i = t.left,
                   n = F(e - i, 200, 600);
-                Iy.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
+                Ry.SetUIDisplayPref("nFriendsListSingleWindowWidthPx", n);
               }
             }),
             (t.prototype.UnregisterFriendsListDragEvents = function(e) {
@@ -83308,14 +83384,14 @@ and limitations under the License.
                     }
                   : {
                       width:
-                        Iy.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
+                        Ry.UIDisplayPrefs.nFriendsListSingleWindowWidthPx + "px"
                     };
               return Ld.ParentalStore.BIsFriendsBlocked()
                 ? ai.a.IN_CLIENT
                   ? Fa.createElement(
                       "div",
                       { className: s },
-                      Fa.createElement(Of, null)
+                      Fa.createElement(If, null)
                     )
                   : (location.reload(), Fa.createElement("div", null))
                 : Fa.createElement(
@@ -83324,7 +83400,7 @@ and limitations under the License.
                     Fa.createElement(
                       Fp,
                       null,
-                      Fa.createElement(Lf, {
+                      Fa.createElement(Af, {
                         popup: this.props.popup
                           ? this.props.popup.window
                           : void 0
@@ -83338,8 +83414,8 @@ and limitations under the License.
                         Fa.createElement(
                           Fp,
                           null,
-                          Fa.createElement(Nf, {
-                            ModalManager: Iy.GetModalManager(l || window)
+                          Fa.createElement(Lf, {
+                            ModalManager: Ry.GetModalManager(l || window)
                           }),
                           e &&
                             Fa.createElement(
@@ -83353,7 +83429,7 @@ and limitations under the License.
                                 rgAcceptedTypes: [],
                                 bAcceptsFiles: !0
                               },
-                              Fa.createElement(Fh, {
+                              Fa.createElement(wh, {
                                 friends: this.props.friends,
                                 chats: this.props.chats,
                                 popup: l,
@@ -83372,7 +83448,7 @@ and limitations under the License.
                             c
                           ),
                           t &&
-                            Fa.createElement(df, {
+                            Fa.createElement(pf, {
                               tabs: this.props.tabset,
                               popup: l,
                               ResponsiveWindowState: e
@@ -83382,7 +83458,7 @@ and limitations under the License.
                             }),
                           this.props.popup &&
                             ai.a.IN_CLIENT &&
-                            Fa.createElement(Bf, { popup: l }),
+                            Fa.createElement(Of, { popup: l }),
                           Fa.createElement("div", {
                             className: "singleWindowFocusBar"
                           })
@@ -83406,7 +83482,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Df = (function(e) {
+        Gf = (function(e) {
           function t(t, i, n, r, o, a) {
             var s = this,
               c = {
@@ -83491,7 +83567,7 @@ and limitations under the License.
               t.setAttribute("class", "fullheight popup_chat_frame"),
                 this.BindWindowHandlers(),
                 On.render(
-                  Fa.createElement(Gf, {
+                  Fa.createElement(Nf, {
                     popup: this,
                     chatTabs: this.m_tabSet
                   }),
@@ -83501,8 +83577,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "SetTitle", null),
             t
           );
-        })(Rf),
-        Gf = (function(e) {
+        })(Ef),
+        Nf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -83521,22 +83597,22 @@ and limitations under the License.
                 Fa.createElement(
                   "div",
                   { className: r, onContextMenu: Et },
-                  Fa.createElement(Lf, { popup: this.props.popup.window }),
+                  Fa.createElement(Af, { popup: this.props.popup.window }),
                   !1,
-                  Fa.createElement(Nf, { ModalManager: Iy.GetModalManager(e) }),
-                  Fa.createElement(df, {
+                  Fa.createElement(Lf, { ModalManager: Ry.GetModalManager(e) }),
+                  Fa.createElement(pf, {
                     tabs: t,
                     popup: e,
                     ResponsiveWindowState: null
                   }),
-                  ai.a.IN_CLIENT && Fa.createElement(Bf, { popup: e })
+                  ai.a.IN_CLIENT && Fa.createElement(Of, { popup: e })
                 )
               );
             }),
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Nf = (function(e) {
+        Lf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -83567,7 +83643,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Lf = (function(e) {
+        Af = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -83604,13 +83680,13 @@ and limitations under the License.
                       )
                     ))
                   : null
-                : Fa.createElement(Af, null);
+                : Fa.createElement(Pf, null);
             }),
             si.c([yn.a], t.prototype, "OnKeyDown", null),
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Af = (function(e) {
+        Pf = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -83645,7 +83721,7 @@ and limitations under the License.
                   (this.m_iIntervalUpdateReconnectStatus = void 0));
             }),
             (t.prototype.IntervalUpdateReconnectWaitStatus = function() {
-              var e = Iy.WebLogonManager;
+              var e = Ry.WebLogonManager;
               if (e.BIsWaitingToReconnect()) {
                 var t = Math.ceil(e.GetMSUntilNextReconnectAttempt() / 1e3);
                 t != this.state.cReconnectWaitSeconds &&
@@ -83669,14 +83745,14 @@ and limitations under the License.
                 ));
             }),
             (t.prototype.OnReconnectNowClick = function() {
-              Iy.WebLogonManager.ReconnectNow();
+              Ry.WebLogonManager.ReconnectNow();
             }),
             (t.prototype.OnLoginClick = function() {
               window.location.href = window.location.href;
             }),
             (t.prototype.render = function() {
               var e = this,
-                t = Iy.WebLogonManager;
+                t = Ry.WebLogonManager;
               if (
                 (AssertMsg(
                   t,
@@ -83885,8 +83961,8 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Pf = (Object(_i.observable)({ bEnabled: null }), $(Tt)),
-        xf = (function(e) {
+        xf = (Object(_i.observable)({ bEnabled: null }), $(Tt)),
+        zf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -84045,7 +84121,7 @@ and limitations under the License.
                 v = !y && !t,
                 b = u ? a : o;
               return Fa.createElement(
-                Yh,
+                Xh,
                 { text: [h, b, e.GetURL()] },
                 Fa.createElement(
                   "div",
@@ -84053,7 +84129,7 @@ and limitations under the License.
                   Fa.createElement(
                     "div",
                     { className: "leftInviteContainer" },
-                    Fa.createElement(oh, { group: i, small: y, large: v }),
+                    Fa.createElement(ah, { group: i, small: y, large: v }),
                     u &&
                       Fa.createElement(
                         "div",
@@ -84071,7 +84147,7 @@ and limitations under the License.
                     Fa.createElement(
                       "div",
                       { className: "rightInviteContainerContent" },
-                      Fa.createElement(zf, {
+                      Fa.createElement(Uf, {
                         invite: this.props.invite,
                         inviter: this.props.inviter,
                         invitee: this.props.invitee
@@ -84082,7 +84158,7 @@ and limitations under the License.
                         Fa.createElement("div", { className: "groupName" }, b)
                       ),
                       l &&
-                        Fa.createElement(Vf, {
+                        Fa.createElement(jf, {
                           url: e.GetURL(),
                           bDisabled: e.BIsExpired()
                         }),
@@ -84121,7 +84197,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        zf = Object(Cp.observer)(function(e) {
+        Uf = Object(Cp.observer)(function(e) {
           var t = e.invite,
             i = e.inviter,
             n = e.invitee,
@@ -84225,7 +84301,7 @@ and limitations under the License.
             Fa.createElement("div", { className: "inviteLabel" }, c)
           );
         }),
-        Uf = (function(e) {
+        Vf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -84246,7 +84322,7 @@ and limitations under the License.
                   pe,
                   { onEscKeypress: i },
                   Fa.createElement(
-                    xf,
+                    zf,
                     si.a({}, r, { strClassName: n, onAccept: o })
                   )
                 )
@@ -84255,7 +84331,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        Vf = (function(e) {
+        jf = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -84304,7 +84380,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        jf = (function(e) {
+        Wf = (function(e) {
           function t(t) {
             return e.call(this, t) || this;
           }
@@ -84398,7 +84474,7 @@ and limitations under the License.
                     function(e) {
                       return e != n && e.persona.player_group == a
                         ? (o--,
-                          Fa.createElement(zh, {
+                          Fa.createElement(Uh, {
                             key: e.accountid,
                             friend: e,
                             context: null
@@ -84445,12 +84521,12 @@ and limitations under the License.
                       })
                     ),
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       null,
                       Fa.createElement("div", { className: "inviteLabel" }, c)
                     ),
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       null,
                       Fa.createElement(
                         "div",
@@ -84460,7 +84536,7 @@ and limitations under the License.
                     ),
                     n.persona.player_group_size > 0 &&
                       Fa.createElement(
-                        Yh,
+                        Xh,
                         null,
                         Fa.createElement(
                           "div",
@@ -84513,7 +84589,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        Wf = (ui.Message,
+        Hf = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -84609,7 +84685,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        Hf = (ui.Message,
+        qf = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -84645,7 +84721,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        qf = (ui.Message,
+        Kf = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -84741,7 +84817,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        Kf = (function(e) {
+        Jf = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -84803,7 +84879,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        Jf = (function(e) {
+        Yf = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -84964,7 +85040,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        Yf = (function(e) {
+        Xf = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85026,7 +85102,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        Xf = (function(e) {
+        Zf = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85099,7 +85175,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        Zf = (ui.Message,
+        Qf = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -85283,7 +85359,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        Qf = (ui.Message,
+        $f = (ui.Message,
         ui.Message,
         ui.Message,
         (function(e) {
@@ -85336,7 +85412,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        $f = (ui.Message,
+        e_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -85372,7 +85448,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        e_ = (function(e) {
+        t_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85433,7 +85509,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        t_ = (function(e) {
+        i_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85484,7 +85560,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        i_ = (function(e) {
+        n_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85567,7 +85643,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        n_ = (function(e) {
+        r_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85618,7 +85694,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        r_ = (function(e) {
+        o_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85680,7 +85756,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        o_ = (function(e) {
+        a_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -85775,7 +85851,7 @@ and limitations under the License.
             t
           );
         })(ui.Message),
-        a_ = (ui.Message,
+        s_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -85827,7 +85903,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        s_ = (ui.Message,
+        c_ = (ui.Message,
         ui.Message,
         (function(e) {
           function t(t) {
@@ -85902,7 +85978,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        c_ = (ui.Message,
+        l_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -85987,7 +86063,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        l_ = (ui.Message,
+        u_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -86023,7 +86099,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        u_ = (ui.Message,
+        d_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -86059,7 +86135,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        d_ = (ui.Message,
+        p_ = (ui.Message,
         (function(e) {
           function t(t) {
             void 0 === t && (t = null);
@@ -86069,13 +86145,13 @@ and limitations under the License.
           return (
             si.d(t, e),
             (t.prototype.persona_names = function() {
-              return ui.Message.getRepeatedWrapperField(this, p_, 1);
+              return ui.Message.getRepeatedWrapperField(this, m_, 1);
             }),
             (t.prototype.set_persona_names = function(e) {
               ui.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (t.prototype.add_persona_names = function(e, t) {
-              return ui.Message.addToRepeatedWrapperField(this, 1, e, p_, t);
+              return ui.Message.addToRepeatedWrapperField(this, 1, e, m_, t);
             }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
@@ -86092,8 +86168,8 @@ and limitations under the License.
               for (; t.nextField() && !t.isEndGroup(); )
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new p_();
-                    t.readMessage(i, p_.deserializeBinaryFromReader),
+                    var i = new m_();
+                    t.readMessage(i, m_.deserializeBinaryFromReader),
                       e.add_persona_names(i);
                     break;
                   default:
@@ -86109,7 +86185,7 @@ and limitations under the License.
               var i;
               (i = e.persona_names()),
                 i.length > 0 &&
-                  t.writeRepeatedMessage(1, i, p_.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(1, i, m_.serializeBinaryToWriter);
             }),
             (t.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastChatUserNames_Response";
@@ -86117,7 +86193,7 @@ and limitations under the License.
             t
           );
         })(ui.Message)),
-        p_ = (function(e) {
+        m_ = (function(e) {
           function t(t) {
             void 0 === t && (t = null);
             var i = e.call(this) || this;
@@ -86181,19 +86257,19 @@ and limitations under the License.
         })(ui.Message);
       !(function(e) {
         function t(e, t) {
-          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, Wf);
+          return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, Hf);
         }
         function i(e, t) {
-          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, Hf);
+          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, qf);
         }
         function n(e, t) {
-          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, qf);
+          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, Kf);
         }
         function r(e, t) {
           return e.SendNotification("Broadcast.NotifyBroadcastUploadStop#1", t);
         }
         function o(e, t) {
-          return e.SendMsg("Broadcast.WatchBroadcast#1", t, Zf);
+          return e.SendMsg("Broadcast.WatchBroadcast#1", t, Qf);
         }
         function a(e, t) {
           return e.SendNotification("Broadcast.HeartbeatBroadcast#1", t);
@@ -86202,16 +86278,16 @@ and limitations under the License.
           return e.SendNotification("Broadcast.StopWatchingBroadcast#1", t);
         }
         function c(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, Jf);
+          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, Yf);
         }
         function l(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, Xf);
+          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, Zf);
         }
         function u(e, t) {
-          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, Qf);
+          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, $f);
         }
         function d(e, t) {
-          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, $f);
+          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, e_);
         }
         function p(e, t) {
           return e.SendNotification(
@@ -86220,19 +86296,19 @@ and limitations under the License.
           );
         }
         function m(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, s_);
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, c_);
         }
         function h(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, c_);
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, l_);
         }
         function g(e, t) {
-          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, l_);
+          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, u_);
         }
         function f(e, t) {
-          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, u_);
+          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, d_);
         }
         function _(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, d_);
+          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, p_);
         }
         (e.BeginBroadcastSession = t),
           (e.EndBroadcastSession = i),
@@ -86251,40 +86327,40 @@ and limitations under the License.
           (e.MuteBroadcastChatUser = g),
           (e.RemoveUserChatText = f),
           (e.GetBroadcastChatUserNames = _);
-      })(zm || (zm = {}));
-      var m_;
+      })(Um || (Um = {}));
+      var h_;
       !(function(e) {
         (e.NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
-          request: e_
+          request: t_
         }),
           (e.NotifyWaitingBroadcastViewerHandler = {
             name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
-            request: t_
+            request: i_
           }),
           (e.NotifyStopBroadcastUploadHandler = {
             name: "BroadcastClient.NotifyStopBroadcastUpload#1",
-            request: i_
+            request: n_
           }),
           (e.NotifySessionClosedHandler = {
             name: "BroadcastClient.NotifySessionClosed#1",
-            request: n_
+            request: r_
           }),
           (e.NotifyViewerBroadcastInviteHandler = {
             name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-            request: a_
+            request: s_
           }),
           (e.NotifyBroadcastStatusHandler = {
             name: "BroadcastClient.NotifyBroadcastStatus#1",
-            request: r_
+            request: o_
           }),
           (e.SendThumbnailToRelayHandler = {
             name: "BroadcastClient.SendThumbnailToRelay#1",
-            request: o_
+            request: a_
           });
-      })(m_ || (m_ = {}));
-      var h_,
-        g_ = (function(e) {
+      })(h_ || (h_ = {}));
+      var g_,
+        f_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -86343,11 +86419,11 @@ and limitations under the License.
             (t.prototype.FetchBroadcastStatus = function() {
               var e = Ld.CMInterface;
               if (e) {
-                var t = fi.Init(Kf);
+                var t = fi.Init(Jf);
                 return (
                   t.Body().set_steamid(this.props.broadcaster.steamid64),
                   t.Body().set_broadcast_id(this.props.broadcastid),
-                  zm.GetBroadcastStatus(e.GetServiceTransport(), t)
+                  Um.GetBroadcastStatus(e.GetServiceTransport(), t)
                 );
               }
               return Promise.reject("No CM interface");
@@ -86356,12 +86432,11 @@ and limitations under the License.
               var e = this,
                 t = Ld.CMInterface;
               if (t) {
-                var i = fi.Init(Yf);
+                var i = fi.Init(Xf);
                 i.Body().set_steamid(this.props.broadcaster.steamid64),
                   i.Body().set_broadcast_id(this.props.broadcastid),
-                  zm
-                    .GetBroadcastThumbnail(t.GetServiceTransport(), i)
-                    .then(function(t) {
+                  Um.GetBroadcastThumbnail(t.GetServiceTransport(), i).then(
+                    function(t) {
                       if (1 == t.GetEResult()) {
                         var i = t.Body().thumbnail_url(),
                           n = t.Body().update_interval();
@@ -86369,7 +86444,8 @@ and limitations under the License.
                           n &&
                           e.setState({ strThumbnail: i, nUpdateInterval: n });
                       }
-                    });
+                    }
+                  );
               }
             }),
             (t.prototype.OnWatch = function(e) {
@@ -86470,7 +86546,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     null,
                     Fa.createElement(
                       "div",
@@ -86508,7 +86584,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        f_ = (function(e) {
+        __ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -86614,7 +86690,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     null,
                     Fa.createElement(
                       "div",
@@ -86648,7 +86724,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Fa.Component),
-        __ = (function(e) {
+        y_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -86723,7 +86799,7 @@ and limitations under the License.
                   "div",
                   { className: "rightInviteContainer" },
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     null,
                     Fa.createElement(
                       "div",
@@ -86755,11 +86831,11 @@ and limitations under the License.
         (e[(e.NotLoaded = 0)] = "NotLoaded"),
           (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded");
-      })(h_ || (h_ = {}));
-      var y_,
-        v_ = h_.NotLoaded,
-        b_ = [],
-        C_ = (function(e) {
+      })(g_ || (g_ = {}));
+      var v_,
+        b_ = g_.NotLoaded,
+        C_ = [],
+        S_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -86892,10 +86968,10 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        S_ = function(e) {
+        M_ = function(e) {
           var t = e.children;
           return wa.a.createElement(
-            Yh,
+            Xh,
             { text: t },
             wa.a.createElement(
               "div",
@@ -86904,9 +86980,9 @@ and limitations under the License.
             )
           );
         },
-        M_ = i("Q6mk"),
-        F_ = i.n(M_),
-        w_ = (function(e) {
+        F_ = i("Q6mk"),
+        w_ = i.n(F_),
+        B_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -86950,7 +87026,7 @@ and limitations under the License.
                 wa.a.createElement(
                   "pre",
                   {
-                    className: Zm("prettyprint", F_.a.CodeMessage),
+                    className: Qm("prettyprint", w_.a.CodeMessage),
                     ref: this.BindRef
                   },
                   this.props.children
@@ -86961,19 +87037,19 @@ and limitations under the License.
             t
           );
         })(wa.a.Component),
-        B_ = function(e) {
+        O_ = function(e) {
           var t = e.children;
           return wa.a.createElement(
             "div",
             null,
-            wa.a.createElement("pre", { className: F_.a.PreMessage }, t)
+            wa.a.createElement("pre", { className: w_.a.PreMessage }, t)
           );
         },
-        O_ = function(e) {
+        I_ = function(e) {
           var t = e.children;
-          return wa.a.createElement("div", { className: F_.a.QuoteMessage }, t);
+          return wa.a.createElement("div", { className: w_.a.QuoteMessage }, t);
         },
-        I_ = (i("UFzh"),
+        R_ = (i("UFzh"),
         (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -87002,7 +87078,7 @@ and limitations under the License.
             t
           );
         })(Ba)),
-        R_ = (function(e) {
+        E_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this,
               n = Ld.ChatStore.EmbedStore.GetCollapsedState(
@@ -87176,7 +87252,7 @@ and limitations under the License.
                 this.state.bIsMinimizing && (t += " Minimizing");
               var i = this.props.titleInfo ? this.props.titleInfo : "";
               return Fa.createElement(
-                Yh,
+                Xh,
                 {
                   style: this.props["data-copystyle"],
                   text: this.props["data-copytext"]
@@ -87253,7 +87329,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        E_ = (function(e) {
+        T_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -87330,10 +87406,10 @@ and limitations under the License.
                   : (o = parseInt(n));
               }
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "block", text: [t, i] },
                 Fa.createElement(
-                  R_,
+                  E_,
                   {
                     className: "BBCodeYouTubeComponent",
                     unAccountIDSender: this.props.context.unAccountIDSender,
@@ -87348,7 +87424,7 @@ and limitations under the License.
                       className:
                         "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
                     },
-                    Fa.createElement(C_, {
+                    Fa.createElement(S_, {
                       video: this.GetVideoID(),
                       startSeconds: o,
                       width: 640,
@@ -87360,7 +87436,7 @@ and limitations under the License.
                       onPlayerReady: this.OnPlayerReady
                     }),
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       { style: "block", text: [t, i] },
                       Fa.createElement("img", {
                         src:
@@ -87396,11 +87472,11 @@ and limitations under the License.
         (e[(e.Loading = 1)] = "Loading"),
           (e[(e.Loaded = 2)] = "Loaded"),
           (e[(e.Error = 3)] = "Error");
-      })(y_ || (y_ = {}));
-      var T_ = (function(e) {
+      })(v_ || (v_ = {}));
+      var k_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
-            return (i.state = { eLoadingState: y_.Loading }), i;
+            return (i.state = { eLoadingState: v_.Loading }), i;
           }
           return (
             si.d(t, e),
@@ -87410,14 +87486,14 @@ and limitations under the License.
               return !1;
             }),
             (t.prototype.OnImageLoad = function() {
-              this.setState({ eLoadingState: y_.Loaded }),
+              this.setState({ eLoadingState: v_.Loaded }),
                 this.props.context.onLoad &&
                   this.props.context.onLoad(
                     "BBCodeImage " + this.props.args.src
                   );
             }),
             (t.prototype.OnImageError = function() {
-              this.setState({ eLoadingState: y_.Error });
+              this.setState({ eLoadingState: v_.Error });
             }),
             (t.prototype.render = function() {
               var e,
@@ -87474,31 +87550,31 @@ and limitations under the License.
                 ("true" == this.GetArgument("proxied") && (t += "?s=652x652"),
                 this.IsEmbeddedInOtherTag())
               )
-                return Fa.createElement(D_, {
+                return Fa.createElement(G_, {
                   className: "embeddedImg",
                   context: this.props.context,
                   src: t,
                   onContextMenu: Ie
                 });
               var u = "chatImageContainer";
-              c && (u += " giphyImg"), o == y_.Error && (u += " FailedToLoad");
+              c && (u += " giphyImg"), o == v_.Error && (u += " FailedToLoad");
               var d = { display: "none" };
               return (
-                o == y_.Loaded && (d = { display: "block" }),
+                o == v_.Loaded && (d = { display: "block" }),
                 Fa.createElement(
                   Fa.Fragment,
                   null,
                   c &&
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       null,
                       Fa.createElement("div", null, e)
                     ),
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     { style: "block", text: [r, n] },
                     Fa.createElement(
-                      R_,
+                      E_,
                       {
                         className: u,
                         width: a,
@@ -87514,14 +87590,14 @@ and limitations under the License.
                           : n,
                         onSizeChanged: this.props.context.onLoad
                       },
-                      o == y_.Loading &&
+                      o == v_.Loading &&
                         Fa.createElement(
                           "div",
                           { className: "LoadingImage" },
                           "Loading image: ",
                           Fa.createElement(we, { href: n }, n)
                         ),
-                      o == y_.Error &&
+                      o == v_.Error &&
                         Fa.createElement(
                           "div",
                           { className: "FailedToLoadImage" },
@@ -87544,7 +87620,7 @@ and limitations under the License.
                           Re(e, n);
                         }
                       }),
-                      o == y_.Loaded &&
+                      o == v_.Loaded &&
                         Fa.createElement(
                           Fa.Fragment,
                           null,
@@ -87586,7 +87662,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        k_ = (function(e) {
+        D_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bSeeking: !1, bPlay: !1, bError: !1 }), i;
@@ -87666,10 +87742,10 @@ and limitations under the License.
                       Object(pa.d)("#Chat_VideoLoadError", r)
                     )
                   : Fa.createElement(
-                      Yh,
+                      Xh,
                       { style: "block", text: [t, e] },
                       Fa.createElement(
-                        R_,
+                        E_,
                         {
                           className: "chatVideoContainer",
                           strMediaType: "video",
@@ -87732,7 +87808,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        D_ = (function(e) {
+        G_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -87756,7 +87832,7 @@ and limitations under the License.
             t
           );
         })(Fa.Component),
-        G_ = (function(e) {
+        N_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -87799,7 +87875,7 @@ and limitations under the License.
                 );
               }
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "block", text: [t, i, n] },
                 Fa.createElement(
                   "div",
@@ -87900,7 +87976,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        N_ = (function(e) {
+        L_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -87994,7 +88070,7 @@ and limitations under the License.
                 "div",
                 { className: "ChatMessageTweet", onClick: this.OpenTweet },
                 Fa.createElement(
-                  Yh,
+                  Xh,
                   { style: "block", text: t + " (@" + i + ")" },
                   Fa.createElement(
                     "div",
@@ -88037,7 +88113,7 @@ and limitations under the License.
                   )
                 ),
                 Fa.createElement(
-                  Yh,
+                  Xh,
                   {
                     style: "block-continue prepend-innertext-with-newline",
                     text: o
@@ -88064,7 +88140,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        L_ = (function(e) {
+        A_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { bActivated: !1 }), i;
@@ -88114,7 +88190,7 @@ and limitations under the License.
                     "div",
                     { className: "oembedImgContainer" },
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       { style: "block", text: [t, e] },
                       Fa.createElement("img", {
                         src: r,
@@ -88167,7 +88243,7 @@ and limitations under the License.
                 );
               }
               return Fa.createElement(
-                Yh,
+                Xh,
                 { style: "block", text: [t, e] },
                 Fa.createElement(
                   "div",
@@ -88181,18 +88257,6 @@ and limitations under the License.
             t
           );
         })(Ba),
-        A_ = (function(e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            si.d(t, e),
-            (t.prototype.render = function() {
-              return Fa.createElement(S_, null, this.props.children);
-            }),
-            t
-          );
-        })(Ba),
         P_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -88200,19 +88264,7 @@ and limitations under the License.
           return (
             si.d(t, e),
             (t.prototype.render = function() {
-              var e = this.props.context,
-                t = e.bAnimate,
-                i = e.onAnimationStart,
-                n = e.onAnimationEnd;
-              return Fa.createElement(
-                "div",
-                {
-                  className: Zm("plusOne", t && "MsgAnimating"),
-                  onAnimationStart: i,
-                  onAnimationEnd: n
-                },
-                "+1"
-              );
+              return Fa.createElement(M_, null, this.props.children);
             }),
             t
           );
@@ -88227,13 +88279,37 @@ and limitations under the License.
               var e = this.props.context,
                 t = e.bAnimate,
                 i = e.onAnimationStart,
+                n = e.onAnimationEnd;
+              return Fa.createElement(
+                "div",
+                {
+                  className: Qm("plusOne", t && "MsgAnimating"),
+                  onAnimationStart: i,
+                  onAnimationEnd: n
+                },
+                "+1"
+              );
+            }),
+            t
+          );
+        })(Ba),
+        z_ = (function(e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            si.d(t, e),
+            (t.prototype.render = function() {
+              var e = this.props.context,
+                t = e.bAnimate,
+                i = e.onAnimationStart,
                 n = e.onAnimationEnd,
                 r = this.props.children,
                 o = this.GetArgument("result"),
-                a = Zm("flipCoinAndResult", t && "MsgAnimating"),
-                s = Zm("flipCoinContainer", o);
+                a = Qm("flipCoinAndResult", t && "MsgAnimating"),
+                s = Qm("flipCoinContainer", o);
               return Fa.createElement(
-                Yh,
+                Xh,
                 { text: r },
                 Fa.createElement(
                   "div",
@@ -88263,7 +88339,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        z_ = (function(e) {
+        U_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -88377,12 +88453,12 @@ and limitations under the License.
                 m = d.onAnimationStart,
                 h = d.onAnimationEnd;
               return Fa.createElement(
-                Yh,
+                Xh,
                 { text: e },
                 Fa.createElement(
                   "div",
                   {
-                    className: Zm("randomMsg", p && "MsgAnimating"),
+                    className: Qm("randomMsg", p && "MsgAnimating"),
                     onAnimationStart: m,
                     onAnimationEnd: h
                   },
@@ -88402,18 +88478,6 @@ and limitations under the License.
             t
           );
         })(Ba),
-        U_ = (function(e) {
-          function t() {
-            return (null !== e && e.apply(this, arguments)) || this;
-          }
-          return (
-            si.d(t, e),
-            (t.prototype.render = function() {
-              return Fa.createElement(O_, null, this.props.children);
-            }),
-            t
-          );
-        })(Ba),
         V_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -88421,7 +88485,7 @@ and limitations under the License.
           return (
             si.d(t, e),
             (t.prototype.render = function() {
-              return Fa.createElement(B_, null, this.props.children);
+              return Fa.createElement(I_, null, this.props.children);
             }),
             t
           );
@@ -88433,12 +88497,24 @@ and limitations under the License.
           return (
             si.d(t, e),
             (t.prototype.render = function() {
-              return Fa.createElement(w_, null, this.props.children);
+              return Fa.createElement(O_, null, this.props.children);
             }),
             t
           );
         })(Ba),
         W_ = (function(e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            si.d(t, e),
+            (t.prototype.render = function() {
+              return Fa.createElement(B_, null, this.props.children);
+            }),
+            t
+          );
+        })(Ba),
+        H_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { invite: void 0 }), i;
@@ -88457,7 +88533,7 @@ and limitations under the License.
               var e = this.props.context.chat.GetMember(
                 this.props.context.unAccountIDSender
               );
-              return Fa.createElement(xf, {
+              return Fa.createElement(zf, {
                 invite: this.state.invite,
                 inviter: e
               });
@@ -88465,7 +88541,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        H_ = (function(e) {
+        q_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88502,7 +88578,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(xf, {
+              return Fa.createElement(zf, {
                 invite: this.state.invite,
                 inviter: this.state.inviter,
                 invitee: this.state.invitee
@@ -88511,7 +88587,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        q_ = (function(e) {
+        K_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88549,7 +88625,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(jf, {
+              return Fa.createElement(Wf, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -88558,7 +88634,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        K_ = (function(e) {
+        J_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88596,7 +88672,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(jf, {
+              return Fa.createElement(Wf, {
                 inviter: this.state.inviter,
                 inviteTarget: this.state.inviteTarget,
                 gameInvite: this.state.gameInvite
@@ -88605,7 +88681,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        J_ = (function(e) {
+        Y_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88634,7 +88710,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(g_, {
+              return Fa.createElement(f_, {
                 broadcastid: this.state.broadcastid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -88644,7 +88720,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        Y_ = (function(e) {
+        X_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88673,7 +88749,7 @@ and limitations under the License.
               );
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(f_, {
+              return Fa.createElement(__, {
                 requestid: this.state.requestid,
                 appid: this.state.appid,
                 broadcaster: this.state.broadcaster,
@@ -88683,7 +88759,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        X_ = (function(e) {
+        Z_ = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -88793,7 +88869,7 @@ and limitations under the License.
               return (
                 (n || r) &&
                   (p = Fa.createElement(
-                    Yh,
+                    Xh,
                     { text: [n, r, i] },
                     Fa.createElement(
                       "div",
@@ -88820,7 +88896,7 @@ and limitations under the License.
                     Fa.createElement(
                       we,
                       { className: "ChatLargeImageContainer", href: i },
-                      Fa.createElement(D_, {
+                      Fa.createElement(G_, {
                         context: this.props.context,
                         className: "ChatLargeImageContainer_Image",
                         src: o,
@@ -88887,7 +88963,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        Z_ = (function(e) {
+        Q_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -88912,7 +88988,7 @@ and limitations under the License.
                 if (i) {
                   var n = Object(pa.b)("#TradeOfferLink_Label");
                   return Fa.createElement(
-                    Yh,
+                    Xh,
                     { style: "block", text: [n, e] },
                     Fa.createElement(
                       "div",
@@ -88923,7 +88999,7 @@ and limitations under the License.
                       Fa.createElement(
                         "div",
                         { className: "leftInviteContainer" },
-                        Fa.createElement(zh, {
+                        Fa.createElement(Uh, {
                           friend: i,
                           context: { chat: this.props.context.chat },
                           bLarge: !0
@@ -88946,7 +89022,7 @@ and limitations under the License.
                               i.display_name
                             )
                           ),
-                          Fa.createElement(Vf, { url: e, strLabel: n })
+                          Fa.createElement(jf, { url: e, strLabel: n })
                         ),
                         Fa.createElement(
                           "button",
@@ -88969,7 +89045,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        Q_ = (function(e) {
+        $_ = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -88999,7 +89075,7 @@ and limitations under the License.
               var e = this.GetArgument("id"),
                 t = parseInt(this.GetArgument("sender"));
               if (!e && this.GetArgument("url"))
-                return Fa.createElement(Z_, si.a({}, this.props));
+                return Fa.createElement(Q_, si.a({}, this.props));
               var i = this.props.context.chat,
                 n = i.self.accountid == t,
                 r = Fa.createElement(
@@ -89013,7 +89089,7 @@ and limitations under the License.
                 Fa.createElement(
                   "div",
                   { className: "leftInviteContainer" },
-                  Fa.createElement(zh, {
+                  Fa.createElement(Uh, {
                     friend: n ? i.self : i.chat_partner,
                     context: { chat: i },
                     bLarge: !0
@@ -89031,7 +89107,7 @@ and limitations under the License.
                     "div",
                     { className: "rightInviteContainerContent" },
                     Fa.createElement(
-                      Yh,
+                      Xh,
                       null,
                       Fa.createElement(
                         "div",
@@ -89078,7 +89154,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        $_ = (function(e) {
+        ey = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (i.state = { broadcaster: void 0 }), i;
@@ -89092,14 +89168,14 @@ and limitations under the License.
               };
             }),
             (t.prototype.render = function() {
-              return Fa.createElement(__, {
+              return Fa.createElement(y_, {
                 broadcaster: this.state.broadcaster
               });
             }),
             t
           );
         })(Ba),
-        ey = (function(e) {
+        ty = (function(e) {
           function t(t) {
             var i = e.call(this, t) || this;
             return (
@@ -89215,7 +89291,7 @@ and limitations under the License.
                           this.state.description.icon_url() +
                           "/512x512")),
                   Fa.createElement(
-                    Yh,
+                    Xh,
                     { text: t },
                     Fa.createElement(
                       "div",
@@ -89235,7 +89311,7 @@ and limitations under the License.
                         Fa.createElement(
                           we,
                           { className: "OpenGraphImgContainer", href: t },
-                          Fa.createElement(D_, {
+                          Fa.createElement(G_, {
                             context: this.props.context,
                             className: "ChatMessageOpenGraph_Image",
                             src: d,
@@ -89254,7 +89330,7 @@ and limitations under the License.
                             }),
                           this.state.bLoadSuccess &&
                             Fa.createElement(
-                              Yh,
+                              Xh,
                               {
                                 text: [
                                   Object(pa.b)(
@@ -89403,7 +89479,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Ba),
-        ty = (function(e) {
+        iy = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89412,7 +89488,7 @@ and limitations under the License.
             (t.prototype.render = function() {
               var e = this.props.children ? this.props.args[""] : "";
               return Fa.createElement(
-                Yh,
+                Xh,
                 { text: Object(pa.b)("#bbcode_linkremoved") },
                 Fa.createElement(
                   "span",
@@ -89433,7 +89509,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        iy = (function(e) {
+        ny = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89460,7 +89536,7 @@ and limitations under the License.
                 if ((i || (i = t && Ld.FriendStore.GetPlayer(t)), i)) {
                   var n = i.accountid == this.props.context.chat.self.accountid;
                   return Fa.createElement(
-                    Ah,
+                    Ph,
                     { friend: i, context: { chat: this.props.context.chat } },
                     Fa.createElement(
                       "span",
@@ -89480,7 +89556,7 @@ and limitations under the License.
             (t = si.c([Cp.observer], t))
           );
         })(Ba),
-        ny = (function(e) {
+        ry = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89493,7 +89569,7 @@ and limitations under the License.
                   ? (e = this.props.children)
                   : Fa.Children.forEach(this.props.children, function(e) {}),
                 e
-                  ? Fa.createElement(Xh, {
+                  ? Fa.createElement(Zh, {
                       emoticon: e,
                       large: this.props.context.bUseLargeEmoticons
                     })
@@ -89503,7 +89579,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        ry = (function(e) {
+        oy = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89613,7 +89689,7 @@ and limitations under the License.
             t
           );
         })(Ba),
-        oy = (function() {
+        ay = (function() {
           function e() {}
           return (
             (e.prototype.GetObject = function(e) {
@@ -89627,7 +89703,7 @@ and limitations under the License.
             e
           );
         })(),
-        ay = (function(e) {
+        sy = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89648,8 +89724,8 @@ and limitations under the License.
             }),
             t
           );
-        })(oy),
-        sy = (function(e) {
+        })(ay),
+        cy = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89666,8 +89742,8 @@ and limitations under the License.
             }),
             t
           );
-        })(oy),
-        cy = (function() {
+        })(ay),
+        ly = (function() {
           function e() {
             this.m_mapEmoticonHovers = new Map();
           }
@@ -89675,13 +89751,13 @@ and limitations under the License.
             (e.prototype.GetEmoticonHover = function(e) {
               var t = this.m_mapEmoticonHovers.get(e);
               return (
-                t || ((t = new ly(e)), this.m_mapEmoticonHovers.set(e, t)), t
+                t || ((t = new uy(e)), this.m_mapEmoticonHovers.set(e, t)), t
               );
             }),
             e
           );
         })(),
-        ly = (function() {
+        uy = (function() {
           function e(e) {
             (this.m_bVisible = !1),
               (this.m_strEmoticonHoverHTML = void 0),
@@ -89707,7 +89783,7 @@ and limitations under the License.
               var i = this;
               this.EnsureEmoticonLoaded();
               var n = t.currentTarget,
-                r = Fa.createElement(Zh, { hover: this, target: n });
+                r = Fa.createElement(Qh, { hover: this, target: n });
               e.sm_embeddedElements
                 .ShowElementDelayed(n.ownerDocument, 50, r, this)
                 .then(function() {
@@ -89769,7 +89845,7 @@ and limitations under the License.
             e
           );
         })(),
-        uy = (function() {
+        dy = (function() {
           function e() {
             (this.m_mapBrowserInfo = new Map()),
               (this.m_hOverlayChatBrowserInfoChanged = null);
@@ -89832,7 +89908,7 @@ and limitations under the License.
             }),
             (e.prototype.OverlayBrowserCreated = function(e, t, i) {
               Ld.UIStore.OnOverlayBrowserCreated(e, t, i),
-                Iy.ShowPopupFriendsList(e, !1, !1),
+                Ry.ShowPopupFriendsList(e, !1, !1),
                 Ld.SetDefaultPopupContext(e);
             }),
             (e.prototype.OverlayBrowserClosed = function(e) {
@@ -89853,7 +89929,7 @@ and limitations under the License.
             e
           );
         })(),
-        dy = (function() {
+        py = (function() {
           function e(e) {
             this.m_FriendStore = e;
           }
@@ -89879,7 +89955,7 @@ and limitations under the License.
             e
           );
         })(),
-        py = (function(e) {
+        my = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89940,8 +90016,8 @@ and limitations under the License.
             }),
             t
           );
-        })(dy),
-        my = (function(e) {
+        })(py),
+        hy = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -89976,8 +90052,8 @@ and limitations under the License.
             }),
             t
           );
-        })(dy),
-        hy = (function() {
+        })(py),
+        gy = (function() {
           function e() {
             (this.m_mapPlaybackObjs = new Map()),
               (this.m_bVoiceActive = !1),
@@ -90042,7 +90118,7 @@ and limitations under the License.
                   "(CAudioPlaybackManager) web audio playback requested: " + e
                 ),
                 this.CreateContextIfNeeded();
-              var i = new gy(this, e, t);
+              var i = new fy(this, e, t);
               return this.m_mapPlaybackObjs.set(i, !0), i;
             }),
             (e.prototype.PlaybackFinished = function(e) {
@@ -90154,7 +90230,7 @@ and limitations under the License.
             e
           );
         })(),
-        gy = (function() {
+        fy = (function() {
           function e(e, t, i) {
             var n = this;
             (this.m_Source = void 0),
@@ -90235,7 +90311,7 @@ and limitations under the License.
             e
           );
         })(),
-        fy = (function() {
+        _y = (function() {
           function e() {
             this.m_rgActivityCallbacks = [];
           }
@@ -90272,7 +90348,7 @@ and limitations under the License.
             e
           );
         })(),
-        _y = (function(e) {
+        yy = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
@@ -90346,8 +90422,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "OnUserAction", null),
             t
           );
-        })(fy),
-        yy = (function(e) {
+        })(_y),
+        vy = (function(e) {
           function t() {
             var t = e.call(this) || this;
             return (
@@ -90388,8 +90464,8 @@ and limitations under the License.
             si.c([yn.a], t.prototype, "UpdateStillActive", null),
             t
           );
-        })(_y),
-        vy = (function() {
+        })(yy),
+        by = (function() {
           function e() {
             (this.m_bDropConsumed = !1),
               (this.m_onDropCompleteCallbacks = new vn()),
@@ -90474,8 +90550,8 @@ and limitations under the License.
             e
           );
         })(),
-        by = 3,
-        Cy = (function() {
+        Cy = 3,
+        Sy = (function() {
           function e(e) {
             var t = this;
             (this.m_UsabilityHandler = c(
@@ -90491,7 +90567,7 @@ and limitations under the License.
                           t
                             .Body()
                             .set_metrics_run_id(e.Body().metrics_run_id()),
-                          t.Body().set_metrics_version(by),
+                          t.Body().set_metrics_version(Cy),
                           t.Body().set_client_build(ai.a.BUILD_TIMESTAMP),
                           t.Body().set_in_web(!ai.a.IN_CLIENT),
                           Ld.ready_to_render
@@ -90562,7 +90638,7 @@ and limitations under the License.
           }
           return e;
         })(),
-        Sy = (function(e) {
+        My = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_window = t), i;
@@ -90624,7 +90700,7 @@ and limitations under the License.
             t
           );
         })(kd),
-        My = (function(e) {
+        Fy = (function(e) {
           function t(t) {
             var i = e.call(this) || this;
             return (i.m_popup = t), i;
@@ -90636,7 +90712,7 @@ and limitations under the License.
                 return (
                   !this.m_container &&
                     this.m_popup.window &&
-                    (this.m_container = new Sy(this.m_popup.window)),
+                    (this.m_container = new My(this.m_popup.window)),
                   this.m_container
                 );
               },
@@ -90666,7 +90742,7 @@ and limitations under the License.
             t
           );
         })(Dd),
-        Fy = {
+        wy = {
           nChatRoomListHeightPx: 224,
           bChatRoomListCollapsed: !1,
           bDontShowVoiceAlert: !1,
@@ -90674,19 +90750,19 @@ and limitations under the License.
           bFavoritesHintDismissed: !1,
           nChangeLogDismissed: 0
         },
-        wy = (function() {
+        By = (function() {
           function e(e) {
             var t = this;
-            (this.m_FriendHoverStore = new mh()),
-              (this.m_EmoticonHoverStore = new cy()),
-              (this.m_DragDropManager = new vy()),
+            (this.m_FriendHoverStore = new hh()),
+              (this.m_EmoticonHoverStore = new ly()),
+              (this.m_DragDropManager = new by()),
               (this.m_mapModalManagers = new WeakMap()),
-              (this.m_OverlayStore = new uy()),
-              (this.m_UsabilityMetricsStore = new Cy(
+              (this.m_OverlayStore = new dy()),
+              (this.m_UsabilityMetricsStore = new Sy(
                 this.FillInChatUsabilityMetrics.bind(this)
               )),
               (this.m_mapFriendsListPopups = new Map()),
-              (this.m_UIDisplayPrefs = Fy),
+              (this.m_UIDisplayPrefs = wy),
               (this.m_bUpdatedBuildAvailable = !1),
               (this.m_nSecondsOutOfDate = 0),
               (this.m_strLoaderWindowRestoreDetails = void 0),
@@ -90707,7 +90783,7 @@ and limitations under the License.
                     "Config.IN_CLIENT set but SteamClient globals not available"
                   ),
                   window.addEventListener("message", this.HandlePostMessage)),
-              (this.m_IdleTracker = ai.a.IN_CLIENT ? new yy() : new _y()),
+              (this.m_IdleTracker = ai.a.IN_CLIENT ? new vy() : new yy()),
               this.InstrumentWindow(window, Gd),
               Sp.d.AddPopupCreatedCallback(function(e) {
                 t.InstrumentWindow(e.window, e.browser_info || Gd);
@@ -90849,14 +90925,14 @@ and limitations under the License.
                       c,
                       Ld.FriendStore.self.accountid
                     );
-                    Pf({ invite: l, inviter: null }, e, window);
+                    xf({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "ShowChatRoomGroupInvite":
                   if (Ld.ready_to_render) {
                     var u = t.invite_code,
                       l = Ld.ChatStore.InviteStore.GetInviteFromCode(u);
-                    Pf({ invite: l, inviter: null }, e, window);
+                    xf({ invite: l, inviter: null }, e, window);
                   }
                   break;
                 case "SetPersonaState":
@@ -90876,7 +90952,7 @@ and limitations under the License.
                 r = [],
                 o = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                   "UIDisplayPrefs",
-                  Fy
+                  wy
                 ).then(function(e) {
                   Object(_i.runInAction)(function() {
                     n.m_UIDisplayPrefs = e;
@@ -90965,7 +91041,7 @@ and limitations under the License.
             (e.prototype.GetModalManager = function(e) {
               var t = this.m_mapModalManagers.get(e);
               return (
-                t || ((t = new Oy()), this.m_mapModalManagers.set(e, t)), t
+                t || ((t = new Iy()), this.m_mapModalManagers.set(e, t)), t
               );
             }),
             Object.defineProperty(e.prototype, "IdleTrackerWeb", {
@@ -91006,7 +91082,7 @@ and limitations under the License.
                 );
               var n = this.m_mapFriendsListPopups.get(e.m_unPID);
               if (n) return void (!t && i && n.Focus());
-              (n = new Tf(
+              (n = new kf(
                 this.m_FriendsUIApp.FriendStore,
                 this.m_FriendsUIApp.ChatStore,
                 e,
@@ -91014,7 +91090,7 @@ and limitations under the License.
               )),
                 this.m_mapFriendsListPopups.set(e.m_unPID, n),
                 n.Show(!t && i);
-              var r = new My(n);
+              var r = new Fy(n);
               Ld.UIStore.GetPerContextChatData(e).SetFriendsListWindow(
                 r.container
               ),
@@ -91031,14 +91107,14 @@ and limitations under the License.
               var t = Zt(e);
               if (Ld.UIStore.BIsFriendsListSingleWindow(t)) {
                 var i = Math.min(
-                  Iy.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                  Ry.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                   e.screen.availWidth
                 );
                 e.SteamClient.Window.ResizeTo(i, e.innerHeight);
               } else {
                 var i = Math.min(1280, e.screen.availWidth);
                 e.SteamClient.Window.ResizeTo(i, e.innerHeight),
-                  Iy.SetUIDisplayPref(
+                  Ry.SetUIDisplayPref(
                     "nFriendsListSingleWindowWidthPx",
                     e.innerWidth
                   );
@@ -91053,7 +91129,7 @@ and limitations under the License.
               var t = Ld.UIStore.GetPerContextChatData(Gd),
                 i = t.friends_list_window;
               i &&
-                i instanceof Sy &&
+                i instanceof My &&
                 (e.ui_state().set_friends_list_width(i.GetWindow().outerWidth),
                 e
                   .ui_state()
@@ -91109,19 +91185,19 @@ and limitations under the License.
             e
           );
         })(),
-        By = (function(e) {
+        Oy = (function(e) {
           function t() {
             var t =
               e.call(
                 this,
                 ai.a.IN_CLIENT && void 0 !== SteamClient.Storage
-                  ? new ay()
-                  : new sy()
+                  ? new sy()
+                  : new cy()
               ) || this;
             return (
-              (t.m_AudioPlaybackManager = new hy()),
-              (t.m_DesktopApp = new wy(t)),
-              (Iy = t.m_DesktopApp),
+              (t.m_AudioPlaybackManager = new gy()),
+              (t.m_DesktopApp = new By(t)),
+              (Ry = t.m_DesktopApp),
               AssertMsg(
                 !ai.a.IN_MOBILE,
                 "DesktopApp initialized in mobile context"
@@ -91133,11 +91209,11 @@ and limitations under the License.
             si.d(t, e),
             (t.prototype.Init = function(t, i, n) {
               var r = i
-                  ? new my(this.m_FriendStore)
-                  : new py(this.m_FriendStore),
+                  ? new hy(this.m_FriendStore)
+                  : new my(this.m_FriendStore),
                 o = this.m_DesktopApp.Init(t, i, n);
               e.prototype.InitInternal.call(this, t, r, o),
-                If(
+                Rf(
                   Gd,
                   this.m_FriendStore,
                   this.m_ChatStore,
@@ -91223,18 +91299,18 @@ and limitations under the License.
               return Ut();
             }),
             (t.prototype.CreateChatPopup = function(e, t, i, n, r, o) {
-              var a = new Df(e, t, i, n, r, o),
-                s = new My(a);
+              var a = new Gf(e, t, i, n, r, o),
+                s = new Fy(a);
               return new ou(s, a);
             }),
             (t.prototype.ShowPopupFriendsListAtStartup = function(e) {
               var t = e;
               if (
-                (void 0 !== Iy.m_bShowFriendsListOnLoadFromLoader &&
-                  (t = Iy.m_bShowFriendsListOnLoadFromLoader),
+                (void 0 !== Ry.m_bShowFriendsListOnLoadFromLoader &&
+                  (t = Ry.m_bShowFriendsListOnLoadFromLoader),
                 t)
               ) {
-                var i = !0 === Iy.m_bShowFriendsListOnLoadFromLoader;
+                var i = !0 === Ry.m_bShowFriendsListOnLoadFromLoader;
                 Ld.GetDefaultBrowserContext() != Gd &&
                   (console.log(
                     "Blocked taking focus in root context during ShowPopupFriendsList, because other context is primary"
@@ -91283,7 +91359,7 @@ and limitations under the License.
             t
           );
         })(Nd),
-        Oy = (function() {
+        Iy = (function() {
           function e() {
             (this.m_bUsePopups = !1),
               (this.m_rgModals = _i.observable.array(null, { deep: !1 }));
@@ -91321,9 +91397,9 @@ and limitations under the License.
             e
           );
         })(),
-        Iy = void 0,
-        Ry = { steamid: "" },
-        Ey = (function() {
+        Ry = void 0,
+        Ey = { steamid: "" },
+        Ty = (function() {
           function e() {
             (this.m_iTimeoutLogin = void 0),
               (this.m_eLogonState = 0),
@@ -91333,10 +91409,10 @@ and limitations under the License.
             (e.prototype.Init = function(e) {
               var t = this;
               (this.m_fnLaunchChat = e),
-                (this.m_steamID = Ry.steamid),
+                (this.m_steamID = Ey.steamid),
                 window.addEventListener("message", this.HandlePostMessage),
                 On.render(
-                  Fa.createElement(xg, { app: this }),
+                  Fa.createElement(zg, { app: this }),
                   document.getElementById("friendslist-container")
                 ),
                 (this.m_iTimeoutLogin = SetBackgroundTimeout(function() {
@@ -91406,20 +91482,20 @@ and limitations under the License.
             e
           );
         })(),
-        Ty = (i("kllU"), i("U3bN"));
+        ky = (i("kllU"), i("U3bN"));
       i("IgNp"),
-        (window.AssertMsg = Ty.a),
+        (window.AssertMsg = ky.a),
         (window.IsFeatureBroadcastEnabled = ti),
         document.addEventListener("DOMContentLoaded", function() {
           Object(ai.c)();
           var e = !0;
           if (!ai.a.IN_CLIENT && ai.a.STEAM_TV) {
             var t = Object(ai.b)("broadcast");
-            t && Object.assign(Ry, t), ai.d.logged_in ? ei() : ((e = !1), ni());
+            t && Object.assign(Ey, t), ai.d.logged_in ? ei() : ((e = !1), ni());
           }
           e && ii();
         });
-      var ky, Dy, Gy;
+      var Dy, Gy, Ny;
       window.LocalizationReady = ri;
     },
     edqd: function(e, t, i) {

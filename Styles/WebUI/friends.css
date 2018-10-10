@@ -7179,16 +7179,30 @@
   ._DialogRowLabel .HomeChannel {
     font-style: italic;
     font-weight: bold; }
-  .ChatGroupReorderControls {
-    display: flex; }
-  .ChatGroupReorderControls .SVGIcon_Arrow {
-    width: 24px;
-    height: 24px;
-    padding: 5px; }
-  .ChatGroupReorderControls button {
-    margin-right: 5px; }
-  .ChatGroupReorderControls button:disabled {
-    visibility: hidden; }
+  .ChatGroupSettingsChannels_Row {
+    display: flex;
+    width: 100%;
+    position: relative; }
+  .ChatGroupSettingsChannels_Row ._DialogRow {
+    height: 32px;
+    border-radius: 2px;
+    background-color: #373d46;
+    flex-grow: 1;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    padding: 0px 8px 0px 8px;
+    color: #b9bcbd; }
+  .ChatGroupSettingsChannels_Row .ChannelDeleteButton {
+    text-transform: uppercase;
+    color: #777777;
+    font-size: 14px;
+    line-height: 32px;
+    margin-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer; }
+    .ChatGroupSettingsChannels_Row .ChannelDeleteButton:hover {
+      color: #CCCCCC; }
   .nicknameError {
     margin: 20px 0;
     color: #990000; }
