@@ -18,7 +18,7 @@ function GetSupportedLanguages()
 				'french': 'French',
 				'italian': 'Italian',
 				'koreana': 'Korean',
-				'spanish': 'Spanish',
+				'spanish': 'Spanish - Spain',
 				'schinese': 'Simplified Chinese',
 				'tchinese': 'Traditional Chinese',
 				'russian': 'Russian',
@@ -40,6 +40,8 @@ function GetSupportedLanguages()
 				'bulgarian': 'Bulgarian',
 				'greek': 'Greek',
 				'ukrainian': 'Ukrainian',
+				'vietnamese': 'Vietnamese',
+				'latam': 'Spanish - Latin America',
 			};
 	return languages;
 }

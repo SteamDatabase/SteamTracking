@@ -258,7 +258,7 @@ function ResetFieldNode( elNode )
 
 }
 
-function CuratorFieldToggle( elNode, strValue, bForceReset )
+function CuratorFieldToggle( elNode, strValue, bForceReset = false )
 {
 	var bReset = elNode.classList.contains('all') || bForceReset;
 	if( bReset )
@@ -1041,6 +1041,8 @@ $J(function() {
 				$J( '#filter_app_type_all' ).removeClass('selected');
 			}
 		});
+
+				UpdateRecommendationFilterData( false, false );
 	}
 });
 

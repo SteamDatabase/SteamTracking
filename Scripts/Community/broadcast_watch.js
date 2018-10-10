@@ -34,6 +34,7 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_ulBroadcastID = 0;
 	this.m_eClientType = eClientType;
 	this.m_timeoutUpdate = null;
+	this.m_timeoutHeartbeat = null;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
 	this.m_xhrViewUsers = null;
 	this.m_bUnlockingH264 = false;
@@ -44,6 +45,8 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_IFrameHelper = IFrameHelper;
 	this.m_nVideoLimitFPS = nVideoLimitFPS ? nVideoLimitFPS : 0;
 	this.m_eWatchLocation = eWatchLocation;
+	this.m_nHeartbeatInterval = 30;
+	this.m_nUpdateStatusInterval = 120;
 	
 	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
@@ -58,7 +61,6 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	}
 };
 
-CBroadcastWatch.s_UpdateTimeoutSec = 60;
 CBroadcastWatch.k_InBrowser = 1;
 CBroadcastWatch.k_InClient = 2;
 CBroadcastWatch.k_InOverlay = 3;
@@ -346,7 +348,14 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 			{
 				_watch.LoadBroadcastHLSMasterManifest( data.url, data.hls_url );
 			}
-			_watch.UpdateBroadcastInfo();
+
+			_watch.UpdateBroadcastInfo(); // get broadcast info
+
+			_watch.ShowAdminPanel( data ); // set broadcaster admin panel if necessary
+
+			// start the watching heartbeat
+			_watch.m_nHeartbeatInterval = data.heartbeat_interval;
+			_watch.ScheduleBroadcastHeartbeat();
 
 			if ( _watch.m_chat && _watch.m_bChatEnabled )
 			{
@@ -444,6 +453,29 @@ CBroadcastWatch.prototype.HideLoadingPanel = function()
 	$J( '#PageContents' ).addClass( 'ShowPlayer' );
 };
 
+CBroadcastWatch.prototype.BroadcastHeartbeat= function()
+{
+	var _watch = this;
+	$J.ajax( {
+		url: 'https://steamcommunity.com/broadcast/heartbeat/',
+		type: 'POST',
+		data:
+			{
+				steamid: _watch.m_ulBroadcastSteamID,
+				broadcastid: _watch.m_ulBroadcastID,
+				viewertoken: _watch.m_ulViewerToken,
+			}
+
+	}).done( function( data )
+	{
+		_watch.ScheduleBroadcastHeartbeat();
+
+	}).fail( function()
+	{
+		_watch.ScheduleBroadcastHeartbeat();
+	});
+};
+
 CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 {
 	var _watch = this;
@@ -458,11 +490,12 @@ CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 	}).done( function( data )
 	{
 		if ( data.success == 42 )
-			return;
+			return; // stop requesting updates
 
 		if ( data.success == 1 )
 			_watch.SetBroadcastInfo( data );
 
+		_watch.m_nUpdateStatusInterval = data.update_interval;
 		_watch.ScheduleBroadcastInfoUpdate();
 
 	}).fail( function()
@@ -484,6 +517,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 
 	var strStoreURL = 'https://store.steampowered.com/app/' + data.appid;
 	var target = "_blank";
+
 	if ( this.m_eClientType == CBroadcastWatch.k_InClient )
 	{
 		strBroadcastURL = 'steam://url/GameHubBroadcast/' + data.appid;
@@ -517,6 +551,14 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	$J( '#BroadcastGameLink' ).attr( 'href', strStoreURL).attr( 'target', target );
 
 	$J( '#BroadcastInfoButtons' ).show();
+	
+	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged",
+		{ viewer_count: data.viewer_count, title: data.title, app_title: data.app_title, appid: data.appid, permission: data.permission } );
+};
+
+CBroadcastWatch.prototype.ShowAdminPanel = function( data )
+{
+	var strTitle = data.title ? data.title : '';
 
 	if ( this.IsBroadcaster() )
 	{
@@ -535,10 +577,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 
 		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 	}
-
-	this.PostMessageToIFrameParent( "OnBroadcastInfoChanged",
-		{ viewer_count: data.viewer_count, title: data.title, app_title: data.app_title, appid: data.appid, permission: data.permission } );
-};
+}
 
 function OpenBroadcastLink()
 {
@@ -550,7 +589,13 @@ function OpenBroadcastLink()
 CBroadcastWatch.prototype.ScheduleBroadcastInfoUpdate = function()
 {
 	var _watch = this;
-	this.m_timeoutUpdate = setTimeout( function() { _watch.UpdateBroadcastInfo() }, CBroadcastWatch.s_UpdateTimeoutSec * 1000 );
+	this.m_timeoutUpdate = setTimeout( function() { _watch.UpdateBroadcastInfo() }, _watch.m_nUpdateStatusInterval * 1000 );
+};
+
+CBroadcastWatch.prototype.ScheduleBroadcastHeartbeat = function()
+{
+	var _watch = this;
+	this.m_timeoutHeartbeat = setTimeout( function() { _watch.BroadcastHeartbeat() }, _watch.m_nHeartbeatInterval * 1000 );
 };
 
 CBroadcastWatch.prototype.SubmitChat = function()

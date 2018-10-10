@@ -1327,3 +1327,24 @@ td.wht_total {
 	margin-top: 30px;
 	font-size: 12px;
 }
+
+.opt_out_description {
+	font-size: 12px;
+	padding-left: 17px;
+}
+
+.marked_ignore_outer {
+	padding-bottom: 5px;
+}
+
+.marked_ignore_container {
+	background-color: #b2bbc4;
+	color: #ecf5fe;
+	display: flex;
+	flex-direction: row;
+	padding: 20px;
+	font-size: 16px;
+}
+.marked_ignore_img {
+	padding-right: 5px;
+}

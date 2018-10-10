@@ -394,7 +394,7 @@ GHomepage = {
 			{
 				var unAppID = rgApps[i];
 
-				var params = {'class': 'gutter_item'};
+				var params = {'class': 'gutter_item ds_no_flags'};
 				var rgItemData = GStoreItemData.GetCapParams( 'gutter_recent', unAppID, 0, null, params );
 
 				if( !rgItemData || !rgItemData.name )

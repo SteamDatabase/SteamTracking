@@ -984,10 +984,11 @@ a.market_tab_well_tab_inactive:hover {
 	text-align: center;
 }
 
-.market_more_games {
+.market_more_games, .market_unvetted_games {
 	height: 0;
 	overflow: hidden;
 	transition: height 0.5s;
+	visibility: hidden;
 }
 
 .market_search_box_container {

@@ -918,6 +918,10 @@ screen and ( min-resolution: 2dppx)
 	text-transform: uppercase;
 }
 
+.game_nominate_toupper {
+	text-transform: uppercase;
+}
+
 .game_nominate_nonomination {
 	text-align: center;
 	padding-top: 16px;

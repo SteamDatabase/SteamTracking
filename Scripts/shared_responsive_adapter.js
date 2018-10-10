@@ -447,7 +447,7 @@ function Responsive_BuildChangeLanguageOption( $MenuItem )
 				$J('<option/>', {value: "bulgarian"} ).text( 'Български (Bulgarian)' )
 			);
 					$SelectBox.append(
-				$J('<option/>', {value: "czech"} ).text( 'čeština (Czech)' )
+				$J('<option/>', {value: "czech"} ).text( 'Čeština (Czech)' )
 			);
 					$SelectBox.append(
 				$J('<option/>', {value: "danish"} ).text( 'Dansk (Danish)' )

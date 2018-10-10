@@ -728,7 +728,7 @@ function DeleteImage(strClanURL, strFileName)
 			url: strClanURL + '/deleteimage',
 			cache: false,
 			type: "POST",
-			data: { imageid: imageid },
+			data: { imageid: imageid, sessionid: g_sessionID },
 			error: function( jqXHR ) {
 				var json = jqXHR.responseJSON;
 				var error = 16;
@@ -851,7 +851,7 @@ function SwapLanguageFields( nNewLanguage )
 
 function UpdateHighlights()
 {
-	for( var i=0; i < 27; i++ )
+	for( var i=0; i < 29; i++ )
 	{
 		if( $J('#'+i+'_headline').val() &&  $J('#'+i+'_body').val() )
 			$J('#'+i+'_opt').addClass('has_localization');

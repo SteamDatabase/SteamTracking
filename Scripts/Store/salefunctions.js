@@ -506,7 +506,7 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 				return;
 			}
 
-			$J.post( 'https://store.steampowered.com/promotion/nominategame', {
+			$J.post( 'https://store.steampowered.com/steamawards/nominategame', {
 				sessionid: g_sessionID,
 				appid: appid,
 				categoryid: categoryid,

@@ -1179,8 +1179,9 @@ img.movie_thumb {
 
 .blotter_workshopitem_metadata
 {
-	padding-top: 18px;
+	padding-top: 2px;
 	padding-left: 12px;
+	padding-right: 12px;
 }
 
 .blotter_workshopitem_title
@@ -1788,14 +1789,14 @@ div.slider div.handle:hover {
 .blotter_block .control_block .text {
 	display: inline-block;
 	margin-right: 9px;
-	color: #898a8c;
+	color: #7092a5;
 	font-size: 12px;
 }
 
 .apphub_UserReviewCardContent .found_helpful {
 	padding: 0 9px 5px 0px;
 	font-size: 12px;
-	color: #898a8c;
+	color: #7092a5;
 	border-bottom: 1px solid #121b27;
 }
 

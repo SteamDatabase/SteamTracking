@@ -1831,6 +1831,7 @@ function SubscribeToPopularItemUpdates()
 function ShowAllGames()
 {
 	var $elMoreGames = $J('.market_more_games');
+	$elMoreGames.css( 'visibility', 'visible' );
 	$elMoreGames.css( 'height', $elMoreGames.prop( 'scrollHeight' ) );
 	setTimeout(
 		function() {
