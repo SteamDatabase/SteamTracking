@@ -7294,10 +7294,12 @@
  T CMsgBrowserCreate::SetCachedSize(int) const
  T CMsgBrowserCreate::SharedCtor()
  T CMsgBrowserCreate::SharedDtor()
+ T CMsgBrowserCreate::mutable_initial_url()
  T CMsgBrowserCreate::mutable_user_css()
  T CMsgBrowserCreate::mutable_useragent()
  T CMsgBrowserCreate::mutable_vroverlay_key()
  T CMsgBrowserCreate::mutable_window_icon()
+ T CMsgBrowserCreate::set_initial_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserCreate::set_user_css(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserCreate::set_useragent(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgBrowserCreate::set_vroverlay_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -13013,7 +13015,7 @@
  T vgui::HTML::GetResizeGripDimensions(int*, int*) const
  T vgui::HTML::GoBack()
  T vgui::HTML::GoForward()
- T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*, bool)
+ T vgui::HTML::HTML(vgui::Panel*, char const*, bool, char const*, bool, char const*)
  T vgui::HTML::HandleTabSwitching()
  T vgui::HTML::HideFindDialog()
  T vgui::HTML::HidePopup()

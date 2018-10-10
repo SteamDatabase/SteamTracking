@@ -485,7 +485,7 @@
  T CBaseSurface::ClearTextColorRangeValues()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
  T CBaseSurface::CountPopupsViewable()
- T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*, bool)
+ T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*, bool, char const*)
  T CBaseSurface::CreateCursorFromFile(char const*, char const*)
  T CBaseSurface::CreateCursorFromMemory(void const*, int, int, int, int)
  T CBaseSurface::CreateFont()

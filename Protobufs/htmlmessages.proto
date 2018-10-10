@@ -80,6 +80,7 @@ message CMsgBrowserCreate {
 	optional int32 initial_top = 15 [default = -2147483648];
 	optional int32 initial_left = 16 [default = -2147483648];
 	optional bool only_allow_trusted_popups = 17 [default = false];
+	optional string initial_url = 18;
 }
 
 message CMsgBrowserCreateResponse {
