@@ -1191,13 +1191,86 @@ function EditCurator_Load( clanID, rgTags )
 
 function MyGameManage_Load( el )
 {
-	$J( el ).on( 'saveform', function ( e ) { console.log( 'Adil save form' ) ; console.log( e ); return false;} );
+	$J( el ).on( 'saveform', function ( e ) { console.log( 'MyGameManage_Load' ) ; console.log( e ); return false;} );
 	LoadCuratorAssociatedApps();
 }
 
 function CustomizeCreatedApps( elForm )
 {
 	CallFunctionFromForm( elForm, [ 'appid', 'blurb', 'link_url' ], UpdateCustomizationCreatedApp );
+}
+
+function UnlinkedAppFromCreatorHomeAjaxAction( appid )
+{
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxunlinkappfromcreatorhome/',
+		data: {
+			appid: appid,
+			sessionid: g_sessionID
+		},
+		dataType: 'json',
+		type: 'POST'
+	} ).done( function ( data )
+	{
+		window.location = g_strCuratorAdminURL;
+	}).fail( function( data ){
+		var errorText = "";
+		try {
+			response = JSON.parse(data.responseText);
+			errorText = response.success;
+		} catch ( SyntaxError ) {
+			errorText = data.responseText;
+		}
+		ShowAlertDialog( "Oops!", "We failed to unlink the requested app. Please try again later: (%1$s)".replace(/%1\$s/, errorText ) );
+	});
+
+}
+
+function UnlinkAppFromCreatorHome( elForm, elButtonContainer )
+{
+	var lists =  null;
+
+	var appid = elForm.querySelectorAll('*[name="appid"]')[0].value;
+	var appname = elForm.querySelectorAll('*[name="appname"]')[0].value;
+	if( appid != null && appid >= 0 )
+	{
+		var confirmDesc = "Are you sure you want to unlink <a href=\'%1$s\' target=\'_blank\'>%2$s</a> from your creator homepage?"
+			.replace( '%1$s', "https://store.steampowered.com//app/" + appid )
+			.replace( '%2$s', appname );
+
+		var listData = '';
+
+		$J( '.createreview_list').each( function() {
+			listData += $J(this).prop('outerHTML');
+			listData += '<br/>';
+		});
+		if( listData !== '' )
+		{
+			confirmDesc += '<br/><br/>';
+			confirmDesc += "The app will also be removed from the following lists:";
+			confirmDesc += '<br/><br/>';
+			confirmDesc += listData;
+		}
+
+		confirmDesc += '<br/>';
+		confirmDesc += "This operation may take a while, as it will need to unlink and flush the appropriate store pages. It will reload on success or display error alert.";
+
+		var dialog = ShowConfirmDialog( "Unlink App From Creator Home", confirmDesc );
+		dialog.done( function() {
+				var throbber = `<div id="dialog_throbber">
+											<div class="LoadingWrapper">
+			<div class="LoadingThrobber">
+				<div class="Bar Bar1"></div>
+				<div class="Bar Bar2"></div>
+				<div class="Bar Bar3"></div>
+			</div>
+							<div class="LoadingText">Unlinking...</div>
+					</div>
+										</div>`;
+				$J(elButtonContainer).append( throbber );
+				UnlinkedAppFromCreatorHomeAjaxAction( appid, dialog );
+			} );
+	}
 }
 
 function UpdateCustomizationCreatedApp( appid, blurb, link_url )
