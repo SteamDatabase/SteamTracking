@@ -36857,7 +36857,7 @@ and limitations under the License.
         })(),
         Uc = (function() {
           function e() {
-            this.m_currentMsg = null;
+            (this.m_currentMsg = null), (this.m_mapLastSeenApp = new Map());
           }
           return (
             (e.prototype.Init = function(e) {
@@ -36866,23 +36866,37 @@ and limitations under the License.
             }),
             (e.prototype.RecordFriendInGameImpression = function(e) {
               this.m_currentMsg || (this.m_currentMsg = fi.Init(tc));
-              for (
-                var t = null, i = 0;
-                i < this.m_currentMsg.Body().impressions().length;
-                ++i
-              ) {
-                var n = this.m_currentMsg.Body().impressions()[i];
-                if (n.appid() == e) {
-                  t = n;
-                  break;
-                }
+              var t = !0;
+              if (this.m_mapLastSeenApp.has(e)) {
+                var i = this.m_mapLastSeenApp.get(e);
+                t = Date.now() - i > 864e5;
               }
-              t ||
-                ((t = this.m_currentMsg.Body().add_impressions()),
-                t.set_appid(e),
-                t.set_type(1),
-                t.set_num_impressions(0)),
-                t.set_num_impressions(t.num_impressions() + 1);
+              var n = null;
+              if (t)
+                this.m_mapLastSeenApp.set(e, Date.now()),
+                  (n = this.m_currentMsg.Body().add_impressions()),
+                  n.set_appid(e),
+                  n.set_type(2),
+                  n.set_num_impressions(0);
+              else {
+                for (
+                  var r = 0;
+                  r < this.m_currentMsg.Body().impressions().length;
+                  ++r
+                ) {
+                  var o = this.m_currentMsg.Body().impressions()[r];
+                  if (o.appid() == e && 1 == o.type()) {
+                    n = o;
+                    break;
+                  }
+                }
+                n ||
+                  ((n = this.m_currentMsg.Body().add_impressions()),
+                  n.set_appid(e),
+                  n.set_type(1),
+                  n.set_num_impressions(0));
+              }
+              n.set_num_impressions(n.num_impressions() + 1);
             }),
             (e.prototype.NotifyImpressions = function() {
               if (this.m_currentMsg) {
