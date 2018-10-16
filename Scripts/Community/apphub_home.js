@@ -4,6 +4,7 @@ var doneScrolling = false;
 var modalDialogVisible = false;
 var waitingForContent = false;
 var hasAdminPrivileges = false;
+var g_AppID = 0;
 
 window.onbeforeunload = function()
 {
@@ -124,6 +125,7 @@ function CheckForMoreContent()
 		onComplete: function( transport )
 		{
 			RecordAJAXPageView( transport.request.url );
+			RecordAppImpression( g_AppID, g_SNR );
 		},
 		onFailure: function()
 		{

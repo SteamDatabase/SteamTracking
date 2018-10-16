@@ -515,7 +515,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	if ( data.appid == 0 )
 		strBroadcastURL = 'https://steamcommunity.com?subsection=broadcasts';
 
-	var strStoreURL = 'https://store.steampowered.com/app/' + data.appid;
+	var strStoreURL = 'https://store.steampowered.com/app/' + data.appid + '?snr=' + g_SNR;
 	var target = "_blank";
 
 	if ( this.m_eClientType == CBroadcastWatch.k_InClient )
@@ -524,7 +524,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 		if ( data.appid == 0 )
 			strBroadcastURL = 'steam://url/GameHubBroadcasts/';
 
-		strStoreURL = 'steam://store/' + data.appid;
+		strStoreURL = 'steam://store/' + data.appid + '?snr=' + g_SNR;
 		target = "_self";
 	}
 
@@ -537,6 +537,7 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	{
 		$J( '#ViewStorePage' ).show();
 		$J( '#BroadcastGameLink' ).show();
+		RecordAppImpression( data.appid, g_SNR );
 	}
 
 	if ( strTitle.length > 0 && strGameName.length > 0 && data.appid != 0 )

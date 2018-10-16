@@ -36865,38 +36865,40 @@ and limitations under the License.
                 SetBackgroundInterval(this.NotifyImpressions, 12e4);
             }),
             (e.prototype.RecordFriendInGameImpression = function(e) {
-              this.m_currentMsg || (this.m_currentMsg = fi.Init(tc));
-              var t = !0;
-              if (this.m_mapLastSeenApp.has(e)) {
-                var i = this.m_mapLastSeenApp.get(e);
-                t = Date.now() - i > 864e5;
-              }
-              var n = null;
-              if (t)
-                this.m_mapLastSeenApp.set(e, Date.now()),
-                  (n = this.m_currentMsg.Body().add_impressions()),
-                  n.set_appid(e),
-                  n.set_type(2),
-                  n.set_num_impressions(0);
-              else {
-                for (
-                  var r = 0;
-                  r < this.m_currentMsg.Body().impressions().length;
-                  ++r
-                ) {
-                  var o = this.m_currentMsg.Body().impressions()[r];
-                  if (o.appid() == e && 1 == o.type()) {
-                    n = o;
-                    break;
-                  }
+              if (!(e == Xi.j || (e >= Xi.d && e <= Xi.e))) {
+                this.m_currentMsg || (this.m_currentMsg = fi.Init(tc));
+                var t = !0;
+                if (this.m_mapLastSeenApp.has(e)) {
+                  var i = this.m_mapLastSeenApp.get(e);
+                  t = Date.now() - i > 864e5;
                 }
-                n ||
-                  ((n = this.m_currentMsg.Body().add_impressions()),
-                  n.set_appid(e),
-                  n.set_type(1),
-                  n.set_num_impressions(0));
+                var n = null;
+                if (t)
+                  this.m_mapLastSeenApp.set(e, Date.now()),
+                    (n = this.m_currentMsg.Body().add_impressions()),
+                    n.set_appid(e),
+                    n.set_type(2),
+                    n.set_num_impressions(0);
+                else {
+                  for (
+                    var r = 0;
+                    r < this.m_currentMsg.Body().impressions().length;
+                    ++r
+                  ) {
+                    var o = this.m_currentMsg.Body().impressions()[r];
+                    if (o.appid() == e && 1 == o.type()) {
+                      n = o;
+                      break;
+                    }
+                  }
+                  n ||
+                    ((n = this.m_currentMsg.Body().add_impressions()),
+                    n.set_appid(e),
+                    n.set_type(1),
+                    n.set_num_impressions(0));
+                }
+                n.set_num_impressions(n.num_impressions() + 1);
               }
-              n.set_num_impressions(n.num_impressions() + 1);
             }),
             (e.prototype.NotifyImpressions = function() {
               if (this.m_currentMsg) {

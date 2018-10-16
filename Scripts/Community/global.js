@@ -258,6 +258,21 @@ function RecordAJAXPageView( url )
 	}
 }
 
+var g_SNR = false;
+
+function RecordAppImpression( appid, snr )
+{
+	if ( appid == 0 || !snr )
+		return;
+
+	var strImpressions = V_GetCookie( "app_impressions" );
+	var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
+
+	var strImpressionData = appid + '@' + snr;
+	rgImpressions.push( strImpressionData );
+
+	V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
+}
 
 
 // doesn't properly handle cookies with ; in them (needs to look for escape char)
