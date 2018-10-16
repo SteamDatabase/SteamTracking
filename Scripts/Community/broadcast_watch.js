@@ -47,6 +47,7 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_eWatchLocation = eWatchLocation;
 	this.m_nHeartbeatInterval = 30;
 	this.m_nUpdateStatusInterval = 120;
+	this.m_bRecordImpression = false;
 	
 	this.m_ulViewerToken = WebStorage.GetLocal( "broadcastViewerToken" );
 
@@ -537,7 +538,11 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	{
 		$J( '#ViewStorePage' ).show();
 		$J( '#BroadcastGameLink' ).show();
-		RecordAppImpression( data.appid, g_SNR );
+		if ( !this.m_bRecordImpression )
+		{
+			this.m_bRecordImpression = true;
+			RecordAppImpression( data.appid, g_SNR );
+		}
 	}
 
 	if ( strTitle.length > 0 && strGameName.length > 0 && data.appid != 0 )
