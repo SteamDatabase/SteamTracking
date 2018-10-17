@@ -68,89 +68,125 @@ function handleFile(file) {
 	// Each message is immediately followed by (xx.Message) so split on that
 	let protos = [];
 	let protoShortNamesToLongNames = {};
-
-	file.split(/\([_a-zA-Z\$]{1,3}\.Message\)/).forEach((part) => {
-		let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{1,3}\.Message\.initialize.*}\)?$/);
-		if (!match) {
-			return;
-		}
-
-		if (match[1]) {
-			match[0] = match[0].replace(new RegExp('\\((' + match[1] + ')+'), '');
-		}
-
-		// Extract the minified variable name
-		let minVarName = match[0].match(/^[_a-zA-Z\$]{1,3}/);
-		match[0] = match[0].replace(/^[_a-zA-Z\$]{1,3}=/, '');
-
-		let func = match[0].replace(/[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
-		eval('func=(' + func + ')');
-		let proto = decodeProtobuf(func(), minVarName);
-		protos.push(proto);
-		protoShortNamesToLongNames[minVarName] = proto.name;
-	});
-
-	protos.forEach((proto) => {
-		proto.fields.forEach((field) => {
-			if (protoShortNamesToLongNames[field.type]) {
-				field.type = '.' + protoShortNamesToLongNames[field.type];
-			}
-		});
-	});
+	let protoShortNamesAliases = {};
 
 	let svcRex = /(?:SendNotification\()?"(\w+)\.(\w+)#1",(?:request:([_a-zA-Z\$]{1,3})|\w[\),]([_a-zA-Z\$]{1,3})?)/g;
-	let matches, bHasUnknownRequest = false;
+	let bHasUnknownRequest = false;
 	const services = new Map();
 
-	while (matches = svcRex.exec(file)) {
-		let svcName = matches[1],
-			methodName = matches[2],
-			msgRequestName = null, msgResponseName = null;
-		if (matches[3]) { // S->C notification
-			msgRequestName = protoShortNamesToLongNames[matches[3]];
-		} else if (matches[4]) { // response
-			msgResponseName = protoShortNamesToLongNames[matches[4]];
-			msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
+	let moduleNames = file.match(/"?([\w\+]{4})"?:function\([a-z],[a-z],[a-z]\){"use strict";/g).map((module) => {
+		return module.match(/"?([\w\+]{4})"?/)[1];
+	});
 
-			if (!Object.values(protoShortNamesToLongNames).includes(msgRequestName)) {
-				msgRequestName = null;
+	let modules = file.split('"use strict";');
+	modules.shift(); // remove file header
+
+	modules.forEach((module, index) => {
+		let currentModuleProtos = [],
+		currentModuleName = moduleNames[index];
+		protoShortNamesToLongNames[currentModuleName] = {};
+		protoShortNamesAliases[currentModuleName] = {};
+
+		module.match(/[a-z]\.[a-z]\([a-z],"([a-z])",function\(\){return ([a-z])}\)/g).forEach((alias) => {
+			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-z])",function\(\){return ([a-z])}\)/);
+			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
+		});
+
+		module.split(/\([_a-zA-Z\$]{1,3}\.Message\)/).forEach((part) => {
+			let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{1,3}\.Message\.initialize.*}$/);
+			if (!match) {
+				return;
 			}
-		} else { // C->S notification
-			// try to fix it below
-		}
 
-		if (!msgRequestName) {
-			let bFixFound = protos.some((proto) => {
-				if ((proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
-					|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")) {
-					msgRequestName = proto.name;
-					return true;
+			if (match[1]) {
+				match[0] = match[0].replace(new RegExp('\\((' + match[1] + ')+'), '');
+			}
+
+			// Extract the minified variable name
+			let minVarName = match[0].match(/^[_a-zA-Z\$]{1,3}/)[0];
+			match[0] = match[0].replace(/^[_a-zA-Z\$]{1,3}=/, '');
+
+			let func = match[0].replace(/[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
+			eval('func=(' + func + ')');
+			let proto = decodeProtobuf(func(), minVarName);
+			currentModuleProtos.push(proto);
+			protoShortNamesToLongNames[currentModuleName][minVarName] = proto.name;
+		});
+
+		currentModuleProtos.forEach((proto) => {
+			proto.fields.forEach((field) => {
+				if (protoShortNamesToLongNames[currentModuleName][field.type]) {
+					field.type = '.' + protoShortNamesToLongNames[currentModuleName][field.type];
+				} else if (field.type.indexOf('.') != -1) {
+					let [moduleVarName, typeShortNameAlias] = field.type.split('.');
+					let rex = new RegExp(moduleVarName + '=[a-z]\\("([\\w\\+]{4})"\\)');
+					let match = module.match(rex);
+					if (match) {
+						field.type = '.' + protoShortNamesToLongNames[match[1]][
+							protoShortNamesAliases[match[1]][typeShortNameAlias]
+						];
+					} else {
+						field.type = 'UNKNOWN2';
+					}
 				}
-				return false;
 			});
+		});
 
-			if (!bFixFound) {
-				msgRequestName = "NotImplemented";
-				if (!bHasUnknownRequest) {
-					protos.push({ "name": "NotImplemented", "fields": [] });
+		protos = protos.concat(currentModuleProtos);
+
+		let matches;
+
+		while (matches = svcRex.exec(module)) {
+			let svcName = matches[1],
+				methodName = matches[2],
+				msgRequestName = null, msgResponseName = null;
+			if (matches[3]) { // S->C notification
+				msgRequestName = protoShortNamesToLongNames[currentModuleName][matches[3]];
+			} else if (matches[4]) { // response
+				msgResponseName = protoShortNamesToLongNames[currentModuleName][matches[4]];
+				msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
+
+				if (!Object.values(protoShortNamesToLongNames[currentModuleName]).includes(msgRequestName)) {
+					msgRequestName = null;
+				}
+			} else { // C->S notification
+				// try to fix it below
+			}
+
+			if (!msgRequestName) {
+				let bFixFound = protos.some((proto) => {
+					if ((proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
+						|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")) {
+						msgRequestName = proto.name;
+						return true;
+					}
+					return false;
+				});
+
+				if (!bFixFound) {
+					msgRequestName = "NotImplemented";
 					bHasUnknownRequest = true;
 				}
 			}
-		}
 
-		if (!msgResponseName) {
-			msgResponseName = "NoResponse";
-		}
+			if (!msgResponseName) {
+				msgResponseName = "NoResponse";
+			}
 
-		if (!services.has(svcName)) {
-			services.set(svcName, []);
-		}
+			if (!services.has(svcName)) {
+				services.set(svcName, []);
+			}
 
-		services.get(svcName).push({
-			"name": methodName,
-			"request": msgRequestName,
-			"response": msgResponseName
-		});
+			services.get(svcName).push({
+				"name": methodName,
+				"request": msgRequestName,
+				"response": msgResponseName
+			});
+		}
+	});
+
+	if (bHasUnknownRequest) {
+		protos.push({ "name": "NotImplemented", "fields": [] });
 	}
 
 	return {"messages": protos, "services": services};
@@ -176,7 +212,7 @@ function decodeProtobuf(proto, minVarName) {
 			}
 		} else {
 			// It's a nested message of some sort
-			let nestMatch = field.match(/case \d+:var[^;]+new ([_a-zA-Z\$]{1,3})(\(\))?;/);
+			let nestMatch = field.match(/case \d+:(?=var)?[^;]+new ([_a-zA-Z\$]{1,3}(\.[_a-zA-Z\$]{1,3})?)(\(\))?;/);
 			if (nestMatch) {
 				if (nestMatch[1] === proto.name) { // constructor name, special case for recursive messages
 					fieldDesc.type = minVarName;
