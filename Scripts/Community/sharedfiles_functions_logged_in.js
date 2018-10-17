@@ -79,6 +79,9 @@ function CheckVoteResultsJSON( json )
 		case 44:
 			ShowAlertDialog( 'Error', 'Due to a recent password or email change on your account, you will not be able to vote on content. Usually this restriction will expire in 5 days, but can last up to 30 days if the account has been inactive recently.' );
 			return false;
+		case 41:
+			ShowAlertDialog( 'Error', 'Your account has recently voted up multiple items that have been removed for violating Steam\'s Terms of Service. Because of this, you\'ll be temporarily unable to vote on some user generated content.' );
+			return false;
 		case 1:
 			return true;
 		default:
@@ -277,10 +280,15 @@ function ValidateVoteSuccess( transport )
 	{
 		ShowAlertDialog( 'Error', 'There was a problem submitting your request to our servers. Please try again.' );
 	}
+	else if ( transport.responseJSON.success == 41 )
+	{
+		ShowAlertDialog( 'Error', 'Your account has recently voted up multiple items that have been removed for violating Steam\'s Terms of Service. Because of this, you\'ll be temporarily unable to vote on some user generated content.' );
+	}
 	else if ( transport.responseJSON.success != 1 )
 	{
 		ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + transport.responseJSON.success );
 	}
+
 	return transport.responseJSON && transport.responseJSON.success == 1;
 }
 

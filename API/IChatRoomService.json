@@ -1,0 +1,126 @@
+{
+    "name": "IChatRoomService",
+    "methods": [
+        {
+            "name": "CreateAppChatRoomGroup",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "App creating a chat room and inviting players to it",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid_owner",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "AppAddUsersToGroup",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "App invite player(s) to a chat room that it controls, or just extend invite(s)",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "chat_group_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "steamids",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "AppPostSystemMessageToGroup",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "App invite a player to a chat room that it controls, or just extend an invite",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "chat_group_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "message",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "AppRemoveUsersFromGroup",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "App remove player(s) from a chat room that it controls",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "chat_group_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_targets",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "kick_expiration",
+                    "type": "int32",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

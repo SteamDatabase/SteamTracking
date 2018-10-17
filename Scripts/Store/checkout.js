@@ -1215,12 +1215,7 @@ function OnGetFinalPriceSuccess( result )
 			}
 		
 			var method = $('payment_method');
-// hackhack
-if ( method.value == 'cafefunded' )
-{
-	result.externalurl = 'http://kurtisc3.valve.org/store/checkout/cafefundedinstruction';
-	result.useexternalredirect = true;
-}			
+
 			if ( result.externalurl )
 			{
 								var url = result.externalurl.replace( /%/g, '%25' );

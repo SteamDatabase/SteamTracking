@@ -1381,6 +1381,15 @@ span.icon_finances.user_pub_rights { display: inline-block; }
 	font-size: 16px;
 }
 
+a.btn_download {
+	float:right;
+	padding: 4px 8px;
+	border-radius: 3px;
+}
+a.btn_download:hover {
+	background: #444444;
+}
+
 .icon {
 	width: 16px; height: 16px; display: inline-block;
 	background-position: center center; background-repeat: no-repeat;

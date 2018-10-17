@@ -2311,6 +2311,7 @@ function IgnoreCuratorWithCallback( clanID, bIgnore, onComplete )
 		function( data )
 		{
 			onComplete( bIgnore );
+			GDynamicStore.InvalidateCache();
 		},
 		'json'
 	).fail( function()

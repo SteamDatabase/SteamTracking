@@ -7367,9 +7367,9 @@ CVTTCaptionLoader.LanguageCountryCodes = {
 		"displayName":"Spanish - Spain",
 		"steamLanguage":"spanish"
 	},
-	"es-MX":{
+	"es-419":{
 		"displayName":"Spanish - Latin American",
-		"steamLanguage":"mexican"
+		"steamLanguage":"latam"
 	},
 	"hu-HU":{
 		"displayName":"Hungarian",

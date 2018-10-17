@@ -32,6 +32,10 @@ function StartCreationSession()
 			{
 				strError = 'Please enter a valid email address.';
 			}
+			else if ( data.success == 17 )
+			{
+				strError = 'It appears you\'ve entered a disposable email address, or are using an email provider that cannot be used on Steam. Please provide a different email address.';
+			}
 			else if ( data.success == 101 )
 			{
 				new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
@@ -71,16 +75,20 @@ function StartCreationSessionParentalConsent()
 			{
 				var strError = data.details;
 
-			if ( data.success == 62 )
-				{
-					strError = 'This e-mail address must be different from your own.';
-					new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
-				}
-			else if ( data.success == 13 )
-				{
-					strError = 'Please enter a valid email address.';
-				}
-			else if ( data.success == 101 )
+                if ( data.success == 62 )
+                {
+                    strError = 'This e-mail address must be different from your own.';
+                    new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
+                }
+                else if ( data.success == 13 )
+                {
+                    strError = 'Please enter a valid email address.';
+                }
+                else if ( data.success == 17 )
+                {
+                    strError = 'It appears you\'ve entered a disposable email address, or are using an email provider that cannot be used on Steam. Please provide a different email address.';
+                }
+                else if ( data.success == 101 )
 				{
 					new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
 				}

@@ -159,13 +159,13 @@
                     "description": "YYY-MM-DD formatted string"
                 },
                 {
-                    "name": "payment_us_usdx100",
+                    "name": "payment_us_usd",
                     "type": "uint64",
                     "optional": false,
                     "description": "US Payment portion in USDx100"
                 },
                 {
-                    "name": "payment_row_usdx100",
+                    "name": "payment_row_usd",
                     "type": "uint64",
                     "optional": false,
                     "description": "ROW Payment portion in USDx100"
