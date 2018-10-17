@@ -42656,21 +42656,25 @@
                 this.props.chats.FriendChatStore.GetFriendsWithUnreadMessages(
                   this.props.browserContext
                 ).length;
-              this.m_elTabLabel &&
+              if (
+                this.m_elTabLabel &&
                 null !=
                   this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window
-                    .SetWindowIcon &&
-                (e
-                  ? this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window.SetWindowIcon(
-                      "voice"
-                    )
-                  : t
+                    .SetWindowIcon
+              )
+                try {
+                  e
                     ? this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window.SetWindowIcon(
-                        "messages"
+                        "voice"
                       )
-                    : this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window.SetWindowIcon(
-                        "steam"
-                      ));
+                    : t
+                      ? this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window.SetWindowIcon(
+                          "messages"
+                        )
+                      : this.m_elTabLabel.ownerDocument.defaultView.SteamClient.Window.SetWindowIcon(
+                          "steam"
+                        );
+                } catch (e) {}
             }
           }),
           (e.prototype.CollapseTabLabel = function() {
@@ -48228,17 +48232,19 @@
                 0 < i.GetUnreadMessageCount() && (e = !0),
                   i.IsVoiceActive() && (t = !0);
               }
-              t
-                ? this.props.popup.window.SteamClient.Window.SetWindowIcon(
-                    "voice"
-                  )
-                : e
+              try {
+                t
                   ? this.props.popup.window.SteamClient.Window.SetWindowIcon(
-                      "messages"
+                      "voice"
                     )
-                  : this.props.popup.window.SteamClient.Window.SetWindowIcon(
-                      "steam"
-                    );
+                  : e
+                    ? this.props.popup.window.SteamClient.Window.SetWindowIcon(
+                        "messages"
+                      )
+                    : this.props.popup.window.SteamClient.Window.SetWindowIcon(
+                        "steam"
+                      );
+              } catch (e) {}
             }
           }),
           (e.prototype.render = function() {
