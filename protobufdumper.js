@@ -69,8 +69,8 @@ function handleFile(file) {
 	let protos = [];
 	let protoShortNamesToLongNames = {};
 
-	file.split(/\([_a-zA-Z\$]{2}\.Message\)/).forEach((part) => {
-		let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{2,3}\.Message\.initialize.*}\)?$/);
+	file.split(/\([_a-zA-Z\$]{1,3}\.Message\)/).forEach((part) => {
+		let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{1,3}\.Message\.initialize.*}\)?$/);
 		if (!match) {
 			return;
 		}

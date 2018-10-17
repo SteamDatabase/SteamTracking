@@ -304,7 +304,7 @@
 			{
 				file_put_contents( $File, $Data );
 				
-				if( $OriginalFile === 'Scripts/WebUI/friends.js' )
+				if( $OriginalFile === 'Scripts/WebUI/steammessages.js' )
 				{
 					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto' );
 					system( '../ValveProtobufs/update.sh' );
