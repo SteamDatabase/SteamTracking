@@ -9249,6 +9249,7 @@
             (this.m_rgChatMessages = []),
             (this.m_ChatMessageBlockList = new qe()),
             (this.m_cUnreadChatMessages = 0),
+            (this.m_bHasUnreadPriorityChatMessages = !1),
             (this.m_rtFirstUnreadChatMsg = 0),
             (this.m_rtLastAckedChatMsg = 0),
             (this.m_rtLastServerAckedChatMsg = 0),
@@ -9301,6 +9302,7 @@
           }),
           (a.prototype.InitUnreadMessageCountFromServer = function(e, t, n) {
             (this.m_cUnreadChatMessages = e),
+              (this.m_bHasUnreadPriorityChatMessages = !1),
               (this.m_rtLastAckedChatMsg = this.m_rtLastServerAckedChatMsg = t),
               (this.m_rtLastMessageReceived = n),
               this.m_rtLastAckedChatMsg < this.m_rtLastMessageReceived &&
@@ -9393,8 +9395,10 @@
             configurable: !0
           }),
           (a.prototype.OnActivate = function() {
-            this.m_cUnreadChatMessages &&
+            (this.m_cUnreadChatMessages ||
+              this.m_bHasUnreadPriorityChatMessages) &&
               ((this.m_cUnreadChatMessages = 0),
+              (this.m_bHasUnreadPriorityChatMessages = !1),
               this.m_rtLastMessageReceived &&
                 ((this.m_rtLastAckedChatMsg = this.m_rtLastMessageReceived),
                 this.AckChatMsg(this.m_rtLastMessageReceived)),
@@ -9488,30 +9492,37 @@
               a = !1,
               s = this.GetVisibilityState(),
               c = this.BShouldSilentlyAddMessage(e);
-            e.BIsServerMessage()
-              ? (this.m_rtLastServerMessageReceived = e.rtTimestamp)
-              : (i
-                  ? (a = r = !0)
-                  : c && 0 == this.m_cUnreadChatMessages
+            if (e.BIsServerMessage())
+              this.m_rtLastServerMessageReceived = e.rtTimestamp;
+            else {
+              i
+                ? (a = r = !0)
+                : c && 0 == this.m_cUnreadChatMessages
+                  ? (r = !0)
+                  : 4 == s
                     ? (r = !0)
-                    : 4 == s
-                      ? (r = !0)
-                      : 3 == s &&
-                        0 == this.m_cUnreadChatMessages &&
-                        Yo.IdleTracker.AddOnNextActivityCallback(function() {
-                          4 == o.GetVisibilityState() && o.OnActivate();
-                        }),
-                (this.m_rtLastMessageReceived = e.rtTimestamp),
-                this.BShouldTrackUnreadMessages() &&
-                  (r
-                    ? ((this.m_rtLastAckedChatMsg = e.rtTimestamp),
-                      (this.m_cUnreadChatMessages = 0),
-                      a || this.AckChatMsg(e.rtTimestamp))
-                    : (0 == this.m_rtFirstUnreadChatMsg &&
-                        (this.m_rtFirstUnreadChatMsg = this.m_rtLastMessageReceived),
-                      this.m_cUnreadChatMessages++),
-                  Yo.FriendStore.UpdateUnreadMessagesGlobal()),
-                c || this.OnReceivedNewMessage(e, s, t, n));
+                    : 3 == s &&
+                      0 == this.m_cUnreadChatMessages &&
+                      Yo.IdleTracker.AddOnNextActivityCallback(function() {
+                        4 == o.GetVisibilityState() && o.OnActivate();
+                      }),
+                (this.m_rtLastMessageReceived = e.rtTimestamp);
+              var l = this.m_cUnreadChatMessages,
+                p = this.m_bHasUnreadPriorityChatMessages;
+              this.BShouldTrackUnreadMessages() &&
+                (r
+                  ? ((this.m_rtLastAckedChatMsg = e.rtTimestamp),
+                    (this.m_cUnreadChatMessages = 0),
+                    (this.m_bHasUnreadPriorityChatMessages = !1),
+                    a || this.AckChatMsg(e.rtTimestamp))
+                  : (0 == this.m_rtFirstUnreadChatMsg &&
+                      (this.m_rtFirstUnreadChatMsg = this.m_rtLastMessageReceived),
+                    this.m_cUnreadChatMessages++)),
+                c || this.OnReceivedNewMessage(e, s, t, n),
+                (l == this.m_cUnreadChatMessages &&
+                  p == this.m_bHasUnreadPriorityChatMessages) ||
+                  Yo.FriendStore.UpdateUnreadMessagesGlobal();
+            }
           }),
           (a.prototype.AddVoiceChannelInviteMsg = function(e, t, n) {
             this.InternalAppendChatMsg(new He(e, t, n));
@@ -9535,6 +9546,7 @@
               (this.m_rtLastAckedChatMsg = e),
               this.m_rtLastMessageReceived <= e &&
                 ((this.m_cUnreadChatMessages = 0),
+                (this.m_bHasUnreadPriorityChatMessages = !1),
                 Yo.FriendStore.UpdateUnreadMessagesGlobal()));
           }),
           (a.prototype.GetMostRecentChatMsg = function() {
@@ -9800,6 +9812,13 @@
           Object.defineProperty(a.prototype, "unread_message_count", {
             get: function() {
               return this.m_cUnreadChatMessages;
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
+          Object.defineProperty(a.prototype, "has_unread_priority_messages", {
+            get: function() {
+              return this.m_bHasUnreadPriorityChatMessages;
             },
             enumerable: !0,
             configurable: !0
@@ -11313,13 +11332,25 @@
           (e.prototype.UpdateUnreadMessagesGlobal = function() {
             if (
               void 0 !== window.SteamClient &&
-              null != window.SteamClient.WebChat.SetUnreadMessages
+              null !=
+                window.SteamClient.WebChat.SetNumChatsWithUnreadPriorityMessages
             ) {
-              var e =
-                0 <
-                Yo.ChatStore.FriendChatStore.GetFriendsWithUnreadMessages(null)
-                  .length;
-              window.SteamClient.WebChat.SetUnreadMessages(e);
+              for (
+                var e = 0,
+                  t = 0,
+                  n = Yo.ChatStore.FriendChatStore.GetFriendsWithUnreadMessages(
+                    null
+                  );
+                t < n.length;
+                t++
+              ) {
+                n[t].has_unread_priority_messages && ++e;
+              }
+              (e += Yo.ChatStore.GetChatRoomsWithUnreadPriorityMessages()
+                .length),
+                window.SteamClient.WebChat.SetNumChatsWithUnreadPriorityMessages(
+                  e
+                );
             }
           }),
           (e.prototype.GetFriendsList = function() {
@@ -13713,11 +13744,14 @@
                         steamid: a.persona.m_steamid.ConvertTo64BitString()
                       };
                       (e = i.DecorateNotification(t, e, n, o)).body &&
-                        Yo.NotificationManager.DisplayNotification(e, function(
+                        (Yo.NotificationManager.DisplayNotification(e, function(
                           e
                         ) {
                           return Yo.UIStore.ShowAndOrActivateChat(e, i, !0);
-                        });
+                        }),
+                        i.m_bHasUnreadPriorityChatMessages ||
+                          ((i.m_bHasUnreadPriorityChatMessages = !0),
+                          Yo.FriendStore.UpdateUnreadMessagesGlobal()));
                     },
                     { timeout: 1e3 }
                   );
@@ -14350,6 +14384,11 @@
             },
             enumerable: !0,
             configurable: !0
+          }),
+          (e.prototype.GetChatRoomsWithUnreadPriorityMessages = function(t) {
+            this.m_mapRooms.forEach(function(e) {
+              e.has_unread_priority_messages && t.push(e);
+            });
           }),
           (e.prototype.GetMostRecentChatAck = function() {
             var t = 0;
@@ -16789,7 +16828,10 @@
                   Yo.NotificationManager.DisplayNotificationFromFriend(
                     this.chat_partner,
                     i
-                  ));
+                  ),
+                  this.m_bHasUnreadPriorityChatMessages ||
+                    ((this.m_bHasUnreadPriorityChatMessages = !0),
+                    Yo.FriendStore.UpdateUnreadMessagesGlobal()));
               }
               this.chat_partner.BPlayMessageSound() &&
                 t < 4 &&
@@ -17560,6 +17602,18 @@
               })
             ),
               this.m_ChatRoomGroupDisplayPrefs.FillInChatUsabilityMetrics(e);
+          }),
+          (e.prototype.GetChatRoomsWithUnreadPriorityMessages = function() {
+            var n = [],
+              o = this;
+            return (
+              this.m_mapActiveChatGroupsToRefCount.forEach(function(e, t) {
+                o.m_mapChatGroups
+                  .get(t)
+                  .GetChatRoomsWithUnreadPriorityMessages(n);
+              }),
+              n
+            );
           }),
           R.c([m.observable], e.prototype, "m_bReceivedChatGroupList", void 0),
           R.c([jo], e.prototype, "JoinAndShowChatRoomGroup", null),

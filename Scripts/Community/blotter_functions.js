@@ -29,6 +29,7 @@ function StartLoadingBlotter( url )
 				newDiv.setOpacity(0);
 				$('blotter_content').appendChild( newDiv );
 
+				Blotter_RecordAppImpressions();
 				ApplyAdultContentPreferences();
 
 				new Effect.Appear( newDiv, { duration: .75 }  );
@@ -511,9 +512,31 @@ function Blotter_AddHighlightSliders()
 	});
 }
 
+function Blotter_RecordAppImpressions()
+{
+	var elements = $J('[data-appid][data-snr]');
+	if ( elements.length == 0 )
+	{
+		return;
+	}
+	for ( var i = 0; i < elements.length; ++i )
+	{
+		var e = $J( elements[i] );
+		if ( e.data( 'processed_snr' ) )
+		{
+			continue;
+		}
+
+		e.data( 'processed_snr', 1 );
+
+		RecordAppImpression( e.data( 'appid' ), e.data( 'snr' ) );
+	}
+}
+
 // Do the intial replace
 $J(function() {
 	Blotter_InitHighlightSliders();
+	Blotter_RecordAppImpressions();
 });
 
 
