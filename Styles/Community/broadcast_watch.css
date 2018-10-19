@@ -188,6 +188,46 @@ body.flat_page #footer
 	display: none;
 }
 
+.minimized_header
+{
+	display: none;
+	position: absolute;
+
+	top: 3px;
+	margin-left: 284px;
+	z-index: -1000;
+}
+
+.minimized_clickpanel
+{
+	display: none;
+	position: absolute;
+	top: 0px;
+	z-index: -2000;
+}
+
+.SteamClientMinimized .minimized_header
+{
+	display: block;
+	z-index: 10000;
+}
+
+.SteamClientMinimized .minimized_clickpanel
+{
+	display: block;
+	z-index: 9000;
+	cursor: grab;
+	width: 298px;
+	height: 168px;
+}
+
+.SteamClientMinimized .clickpanel_inner
+{
+	display: inline-block;
+	width: 298px;
+	height: 168px;
+}
+
 body.flat_page
 {
 	background-color: black;

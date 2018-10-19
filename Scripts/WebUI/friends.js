@@ -23873,7 +23873,8 @@
       Ao = (function() {
         function o(e) {
           var l = this;
-          (this.m_VoiceCallState = new Do()),
+          if (
+            ((this.m_VoiceCallState = new Do()),
             (this.m_mapOneOnOneCallsWaitingJoinOrAccept = m.observable.map()),
             (this.m_hRegisterForPushToTalkStateChange = null),
             (this.m_bPushToTalkEnabled = !1),
@@ -24246,14 +24247,17 @@
             (this.m_Settings = new Ro(e)),
             this.m_Settings.LoadFromLocalStorage(this),
             "undefined" != typeof SteamClient &&
-              (null != SteamClient &&
-                null != SteamClient.WebChat &&
-                null != SteamClient.WebChat.RegisterForPushToTalkStateChange &&
+              null != SteamClient &&
+              null != SteamClient.WebChat &&
+              (null != SteamClient.WebChat.RegisterForPushToTalkStateChange &&
                 (this.m_hRegisterForPushToTalkStateChange = SteamClient.WebChat.RegisterForPushToTalkStateChange(
                   this.OnPushToTalkStateChange
                 )),
-              null != window.SteamClient.WebChat.SetVoiceChatActive &&
-                window.SteamClient.WebChat.SetVoiceChatActive(!1));
+              null != SteamClient.WebChat.SetVoiceChatActive))
+          )
+            try {
+              SteamClient.WebChat.SetVoiceChatActive(!1);
+            } catch (e) {}
         }
         return (
           (o.prototype.Init = function(e) {
@@ -26464,9 +26468,10 @@
                   ))
                 );
               }
-              (!i ||
-                this.m_VoiceCallState.m_eState <=
-                  Oo.k_EVoiceCallState_ScheduledInitiate) &&
+              if (
+                (!i ||
+                  this.m_VoiceCallState.m_eState <=
+                    Oo.k_EVoiceCallState_ScheduledInitiate) &&
                 (e
                   ? this.LogMsg(
                       "Resetting voice chat state and initiating to individual " +
@@ -26485,13 +26490,18 @@
                         "Resetting voice chat state and initiating local mic access only"
                       )),
                 this.m_VoiceCallState.m_eState <=
-                  Oo.k_EVoiceCallState_ScheduledInitiate &&
-                  ((0 != e ||
-                    (null != t &&
-                      "undefined" != typeof SteamClient &&
-                      null != window.SteamClient.WebChat.SetVoiceChatActive)) &&
-                    window.SteamClient.WebChat.SetVoiceChatActive(!0),
-                  (this.m_VoiceCallState.m_targetAccountID = e),
+                  Oo.k_EVoiceCallState_ScheduledInitiate)
+              ) {
+                if (
+                  0 != e ||
+                  (null != t &&
+                    "undefined" != typeof SteamClient &&
+                    null != SteamClient.WebChat.SetVoiceChatActive)
+                )
+                  try {
+                    SteamClient.WebChat.SetVoiceChatActive(!0);
+                  } catch (e) {}
+                (this.m_VoiceCallState.m_targetAccountID = e),
                   (this.m_VoiceCallState.m_bInitiatedOneOnOneCall = !0),
                   (this.m_VoiceCallState.m_chatRoom = t),
                   (this.m_VoiceCallState.m_timeStartedConnecting = performance.now()),
@@ -26504,7 +26514,8 @@
                   )),
                   0 != e
                     ? this.InitiateOneOnOneVoiceChat(e)
-                    : this.InitiateChatRoomVoice()));
+                    : this.InitiateChatRoomVoice();
+              }
             }
           }),
           (o.prototype.OnRequestMicrophoneAccess = function() {
@@ -26662,10 +26673,12 @@
                 (ClearBackgroundTimeout(this.m_StatsTimeout),
                 (this.m_StatsTimeout = 0)),
               "undefined" != typeof SteamClient &&
-                null != window.SteamClient.WebChat.SetVoiceChatActive &&
-                window.SteamClient.WebChat.SetVoiceChatActive(!1),
-              this.m_VoiceCallState.m_eState != Oo.k_EVoiceCallState_None)
-            ) {
+                null != SteamClient.WebChat.SetVoiceChatActive)
+            )
+              try {
+                SteamClient.WebChat.SetVoiceChatActive(!1);
+              } catch (e) {}
+            if (this.m_VoiceCallState.m_eState != Oo.k_EVoiceCallState_None) {
               if (!e) {
                 if (this.m_VoiceCallState.m_targetAccountID) {
                   var r = this.m_VoiceCallState.m_targetAccountID;
