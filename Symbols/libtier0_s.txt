@@ -245,6 +245,7 @@
  T Plat_Free
  T Plat_GetExecutablePath
  T Plat_GetExecutablePathUTF8
+ T Plat_GetPackageName
  T Plat_GetProcessArgv
  T Plat_GetStackBackTrace
  T Plat_IsInDebugSession

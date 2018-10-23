@@ -126,6 +126,8 @@
 	"Panorama_Lang_Turkish"			"Turkish"
 	"Panorama_Lang_Arabic"			"Arabic"
 	"Panorama_Lang_Ukrainian"			"Ukrainian"
+	"Panorama_Lang_Latam_Spanish"			"Latam"
+	"Panorama_Lang_Latam_Vietnamese"		"Vietnamese"
 
 
 	"Panorama_Lang_Footer_English"			"ENGLISH"
@@ -154,6 +156,8 @@
 	"Panorama_Lang_Footer_Bulgarian"			"BULGARIAN"
 	"Panorama_Lang_Footer_Turkish"			"TURKISH"
 	"Panorama_Lang_Footer_Ukrainian"			"UKRAINIAN"
+	"Panorama_Lang_Footer_Latam_Spanish"			"LATAM"
+	"Panorama_Lang_Footer_Latam_Vietnamese"			"VIETNAMESE"
 
 
 	// selection strings, pre-localized
@@ -178,13 +182,15 @@
 	"Panorama_Selection_Finnish"		"Suomi (Finnish)"
 	"Panorama_Selection_Norwegian"		"Norsk (Norwegian)"
 	"Panorama_Selection_Swedish"		"Svenska (Swedish)"
-	"Panorama_Selection_Czech"		"čeština (Czech)"
+	"Panorama_Selection_Czech"		"Čeština (Czech)"
 	"Panorama_Selection_Hungarian"		"Magyar (Hungarian)"
 	"Panorama_Selection_Romanian"			"Română (Romanian)"
 	"Panorama_Selection_Bulgarian"			"Български (Bulgarian)"
 	"Panorama_Selection_Turkish"			"Türkçe (Turkish)"
 	"Panorama_Selection_Arabic"			"العربية(Arabic)"
 	"Panorama_Selection_Ukrainian"			"Українська (Ukrainian)"
+	"Panorama_Selection_Latam_Spanish"		"Español-Latinoamérica (Spanish-Latin America)"
+	"Panorama_Selection_Vietnamese"			"Tiếng Việt (Vietnamese)"
 
 	"Panorama_MoviePlaybackError"		"An error ocurred during playback"
 
@@ -2351,7 +2357,7 @@
 	"Library_AppControllerSettings_Title"	"Controller Application Options"
 	"Library_Details_EnableRumble"			"[Experimental] Rumble Emulation"
 	"Library_SetAppRumbleFrequency_Label"	"Rumble Emulation Frequency Setting"
-	"Library_Details_EnableConfigurator"		"Steam Input Per-Game Setting"
+	"Library_Details_EnableConfigurator"		"Steam Input Per-Game Setting (requires game re-launch)"
 	"Library_Details_EnableActionSetDisplay"	"Display Action Set on Change"
 	"Library_Details_EnableActionSetBeep"		"Beep on Change"
 

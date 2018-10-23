@@ -775,29 +775,29 @@
  close$UNIX2003
  d CBaseOverlayRenderer::UpdateNotificationToastPosition()::iLastPosition
  d __block_descriptor_tmp
- d __block_descriptor_tmp139
  d __block_descriptor_tmp165
- d __block_descriptor_tmp255
+ d __block_descriptor_tmp167
  d __block_descriptor_tmp267
- d __block_descriptor_tmp32
- d __block_descriptor_tmp34
- d __block_descriptor_tmp361
+ d __block_descriptor_tmp276
  d __block_descriptor_tmp362
- d __block_descriptor_tmp39
+ d __block_descriptor_tmp375
  d __block_descriptor_tmp58
  d __block_descriptor_tmp60
+ d __block_descriptor_tmp61
+ d __block_descriptor_tmp63
  d __block_descriptor_tmp65
+ d __block_descriptor_tmp68
  d __block_literal_global
- d __block_literal_global140
  d __block_literal_global166
- d __block_literal_global256
+ d __block_literal_global168
  d __block_literal_global268
- d __block_literal_global33
- d __block_literal_global35
- d __block_literal_global40
+ d __block_literal_global277
  d __block_literal_global59
  d __block_literal_global61
+ d __block_literal_global62
+ d __block_literal_global64
  d __block_literal_global66
+ d __block_literal_global69
  d _interpose_CFRunLoopRun
  d _interpose_CFRunLoopRunInMode
  d _interpose_CGAssociateMouseAndMouseCursorPosition

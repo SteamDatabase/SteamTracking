@@ -142,6 +142,11 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
           <Slider id="MouseSensitivity_joystick_moveGA" direction="horizontal" />
         </Panel>
+        <Panel class="FieldWrapper SteamV2" modes="joystickmove" gameactions="off" advanced="off" sources="trackpad">
+          <Label class="FieldLabel SteamV2" text="#Library_Details_FieldLabel_AnalogEnable" />
+          <DropDown id="EnableAnalog_joystick_move" />
+        </Panel>
+
         <!-- Joystick Move Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="trackpad" visualization="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_AdaptiveCentering" />
@@ -167,8 +172,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DeadZoneOuterRadius" />
 					<Slider id="DeadZoneOuterRadius_joystick_move" direction="horizontal" />
 				</Panel>
-
-
+				<Panel class="FieldWrapper SteamV2" modes="joystickmove" sources ="trackpad" gameactions="off" visualization="off" advanced="on">
+					<Label class="FieldLabel SteamV2" text="#Library_Details_FieldLabel_MinAnalog" />
+					<Slider id="MinAnalog_joystick_move" direction="horizontal" />
+				</Panel>
 				<!-- Joystick Mouse Mode -->
 				<Panel class="FieldWrapper" modes="joystickmouse" gameactions="off" sources="gyro" advanced="off">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_GyroButton" />
@@ -615,7 +622,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_SensitivityVertScale" />
 					<Slider id="VerticalSensitivity_joystick_move" direction="horizontal" />
 				</Panel>
-
+				<Panel class="FieldWrapper SteamV2" modes="joystickmove" sources ="trackpad" gameactions="off" visualization="off" advanced="on">
+		            <Label class="FieldLabel SteamV2" text="#Library_Details_FieldLabel_MaxAnalog" />
+        		    <Slider id="MaxAnalog_joystick_move" direction="horizontal" />
+	            </Panel>
 				<!-- Joystick Mouse Mode -->
 				<!-- Joystick Mouse Mode Advanced -->
 				<Panel class="FieldWrapper" modes="joystickmouse" advanced="on" sources="gyro" visualization="off">
@@ -1288,11 +1298,11 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuScale" />
 						<Slider id="TouchMenuScale" direction="horizontal" />
 					</Panel>
-          			<Panel class="FieldWrapper OneDimenD" modes="touchmenu" sources="bumper" advanced="off">
+          			<Panel class="FieldWrapper" modes="touchmenu" sources="bumper" advanced="off">
 			            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuInnerDeadzone" />
 			            <Slider id="TouchMenuDeadzoneInner" direction="horizontal" />
 		            </Panel>
-		          	<Panel class="FieldWrapper 1D" modes="touchmenu" sources="bumper" advanced="off">
+		          	<Panel class="FieldWrapper" modes="touchmenu" sources="bumper" advanced="off">
 			            <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchMenuOuterDeadzone" />
 			            <Slider id="TouchMenuDeadzoneOuter" direction="horizontal" />
 		          	</Panel>

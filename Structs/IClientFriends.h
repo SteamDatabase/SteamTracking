@@ -240,4 +240,6 @@ public:
     virtual unknown_ret GetFriendPersonaName_Public(CSteamID) = 0;
     virtual unknown_ret GetPlayerNickname_Public(CSteamID) = 0;
     virtual unknown_ret SetFriendsUIActiveClanChatList(unsigned int*, int) = 0;
+    virtual unknown_ret GetNumChatsWithUnreadPriorityMessages() = 0;
+    virtual unknown_ret SetNumChatsWithUnreadPriorityMessages(int) = 0;
 };

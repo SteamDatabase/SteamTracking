@@ -9,6 +9,7 @@ body
 	display: flex;
 	flex-direction: column;
 	height: calc(100% - 24px);
+	background: radial-gradient( ellipse farthest-corner at 50% 30%, rgb( 33, 35, 41 ) 0%, rgb( 30, 32, 37 ) 50%, rgb( 28, 29, 34 ) 100% );
 }
 
 .fullheight
@@ -36,11 +37,12 @@ body
 
 .FriendsFailureContainer
 {
+	align-self: center;
+	max-width: 324px;
 	flex: 1;
 	margin-top: 0;
 	padding: 8px;
 	height: 100%;
-	background: radial-gradient( ellipse farthest-corner at 50% 30%, rgb( 33, 35, 41 ) 0%, rgb( 30, 32, 37 ) 50%, rgb( 28, 29, 34 ) 100% );
 	display: flex;
 	flex-direction: column;
 }
@@ -170,7 +172,7 @@ body.in_global_drag .friendlist_titlebar
 
 .friends_loading_error .playerName
 {
-    font-size: 18px;
+    font-size: 15px;
     font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
     transition: color .94s ease-in-out;
     text-shadow: 1px 1px 4px #000;
@@ -179,6 +181,7 @@ body.in_global_drag .friendlist_titlebar
     overflow: hidden;
     min-width: 0;
 }
+
 
 .friends_loading_error .gameName.richPresenceLabel
 {

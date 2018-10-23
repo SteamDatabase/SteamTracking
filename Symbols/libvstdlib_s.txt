@@ -408,6 +408,8 @@
  T GCoroutineMgr()
  T GetNameFromOSType
  T GetOSDetailString
+ T GetOSMajorMinorPatchVersion(int*, int*, int*)
+ T GetOSMajorMinorPatchVersion(long*, long*, long*)
  T GetOSType
  T GetPlatformFromOS
  T GetPlatformName

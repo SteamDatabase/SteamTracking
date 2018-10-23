@@ -2002,7 +2002,39 @@ ControllerSourceModeTrigger #BindingSlotContainer,
     horizontal-align: right;
 }
 
+.FieldWrapper.SteamV2,
+.FieldWrapper.DropDown.SteamV2,
+{
+    visibility: collapse;
+}
 
+.FieldLabel.SteamV2
+{
+    visibility: collapse;
+}
+
+.controller_steamcontroller_headcrab .FieldLabel.SteamV2 {
+    visibility: visible;
+}
+
+
+#EnableAnalog_joystick_move,
+#MaxAnalog_joystick_move,
+#MinAnalog_joystick_move
+{
+    visibility: collapse;
+}
+
+.controller_steamcontroller_headcrab #EnableAnalog_joystick_move,
+.controller_steamcontroller_headcrab #MaxAnalog_joystick_move,
+.controller_steamcontroller_headcrab #MinAnalog_joystick_move
+{
+    visibility: visible;
+}
+
+.controller_steamcontroller_headcrab .FieldWrapper.SteamV2 {
+    visibility: visible;
+}
 
 .ABXYLabels,
 .controller_ps3 .ABXYLabelsPS4,

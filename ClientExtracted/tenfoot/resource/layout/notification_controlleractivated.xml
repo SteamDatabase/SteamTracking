@@ -6,7 +6,7 @@
 
 	<Panel class="NotificationRoot ControllerActivatedNotification">
 		<Panel class="NotificationFrameConnected" />
-		<Image class="ControllerImage" src="file://{images}/settings/steam_controller_icon_64.png" />
+		<Panel id="ControllerImage" />
 		<Label class="NotificationTwoLabelBodyLineOne" text="#Notification_Controller_Title" />
 		<Label class="NotificationTwoLabelBodyLineTwo NonGuest" text="#Notification_Controller_Text" />
 		<Label class="NotificationTwoLabelBodyLineTwo Guest" text="#Notification_Controller_Guest" />

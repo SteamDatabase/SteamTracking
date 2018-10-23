@@ -81,6 +81,7 @@ message CMsgBrowserCreate {
 	optional int32 initial_left = 16 [default = -2147483648];
 	optional bool only_allow_trusted_popups = 17 [default = false];
 	optional string initial_url = 18;
+	optional fixed64 hwnd_parent = 19;
 }
 
 message CMsgBrowserCreateResponse {
@@ -132,6 +133,8 @@ message CMsgBrowserPosition {
 	optional uint32 browser_handle = 1;
 	optional int32 x = 2;
 	optional int32 y = 3;
+	optional int32 x_local = 4;
+	optional int32 y_local = 5;
 }
 
 message CMsgBrowserResized {
@@ -261,6 +264,7 @@ message CMsgViewSource {
 message CMsgBrowserReady {
 	optional uint32 browser_handle = 1;
 	optional string vr_overlay_key = 2;
+	optional fixed64 hwnd_browser = 3;
 }
 
 message CMsgURLChanged {
@@ -584,12 +588,11 @@ message CMsgRequestFullScreen {
 	optional uint32 browser_handle = 1;
 }
 
-message CMsgRequestFullScreenResponse {
+message CMsgExitFullScreen {
 	optional uint32 browser_handle = 1;
-	optional bool ballow = 2;
 }
 
-message CMsgExitFullScreen {
+message CMsgToggleFindInPageDialog {
 	optional uint32 browser_handle = 1;
 }
 

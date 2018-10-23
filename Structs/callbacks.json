@@ -200,6 +200,11 @@
         "posted_in": "void CBaseAPIJob::PostAPIResult<SetPersonaNameResponse_t>(SetPersonaNameResponse_t*)"
     },
     {
+        "id": 348,
+        "size": 1,
+        "posted_in": "CUserFriends::SetNumChatsWithUnreadPriorityMessages(int)"
+    },
+    {
         "id": 404,
         "size": 4136,
         "posted_in": "PostPurchaseCallback(CUser*, EResult, EPurchaseResultDetail, CPurchaseReceiptInfo&)"
@@ -740,16 +745,6 @@
         "posted_in": "CClientJobGetAppOwnershipTicketResponse::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
-        "id": 929,
-        "size": 4,
-        "posted_in": "CClientJobChangePassword::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 930,
-        "size": 8,
-        "posted_in": "CClientJobChangeEmail::BYieldingRunAPIJob()"
-    },
-    {
         "id": 933,
         "size": 4,
         "posted_in": "CClientJobRequestForgottenPasswordEmail::BYieldingRunAPIJob()"
@@ -778,11 +773,6 @@
         "id": 938,
         "size": 4,
         "posted_in": "CClientJobRequestValidateMail::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 939,
-        "size": 4,
-        "posted_in": "CClientJobRequestChangeMail::BYieldingRunAPIJob()"
     },
     {
         "id": 940,
@@ -1546,7 +1536,7 @@
     },
     {
         "id": 2707,
-        "size": 80,
+        "size": 84,
         "posted_in": "CGetControllerInfoWorkItem::DispatchCompletion()"
     },
     {
@@ -2438,5 +2428,25 @@
         "id": 5213,
         "size": 20,
         "posted_in": "CAPIJobHostSearch::BYieldingRunAPIJob()"
+    },
+    {
+        "id": 5301,
+        "size": 276,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<JoinPartyCallback_t>(JoinPartyCallback_t*)"
+    },
+    {
+        "id": 5302,
+        "size": 12,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<CreateBeaconCallback_t>(CreateBeaconCallback_t*)"
+    },
+    {
+        "id": 5304,
+        "size": 4,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<ChangeNumOpenSlotsCallback_t>(ChangeNumOpenSlotsCallback_t*)"
+    },
+    {
+        "id": 5401,
+        "size": 16,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<ReservePartySlotCallback_t>(ReservePartySlotCallback_t*)"
     }
 ]

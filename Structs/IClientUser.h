@@ -94,7 +94,6 @@ public:
     virtual unknown_ret GetTwoFactorDetails() = 0;
     virtual unknown_ret BHasTwoFactor() = 0;
     virtual unknown_ret RecoverAuthenticator(char const*, char const*, char const*, char const*, char const*) = 0;
-    virtual unknown_ret ChangePassword(char const*, char const*) = 0;
     virtual unknown_ret GetEmail(char*, int, bool*) = 0;
     virtual unknown_ret RequestForgottenPasswordEmail(char const*, char const*) = 0;
     virtual unknown_ret RequestAccountResetDetails(char const*, char const*) = 0;
@@ -134,10 +133,6 @@ public:
     virtual unknown_ret GetRunningGameID(int) = 0;
     virtual unknown_ret GetRunningGamePID(int) = 0;
     virtual unknown_ret GetAccountSecurityPolicyFlags() = 0;
-    virtual unknown_ret RequestPasswordChangeEmail(char const*, int) = 0;
-    virtual unknown_ret ChangePasswordWithCode(char const*, char const*, char const*) = 0;
-    virtual unknown_ret RequestEmailChange(char const*, char const*) = 0;
-    virtual unknown_ret ChangeEmailWithCode(char const*, char const*, char const*, char const*, char const*) = 0;
     virtual unknown_ret SetClientStat(EClientStat, long long, unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret VerifyPassword(char const*) = 0;
     virtual unknown_ret BSupportUser() = 0;

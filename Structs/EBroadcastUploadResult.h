@@ -22,4 +22,6 @@ typedef enum EBroadcastUploadResult
     k_EBroadcastUploadResultAudioBehind, // Audio Behind
     k_EBroadcastUploadResultServerShutdown, // Server Shutdown
     k_EBroadcastUploadResultUploadDisconnected, // Upload Disconnected
+    k_EBroadcastUploadResultVideoInitFailed, // Video Init Failed
+    k_EBroadcastUploadResultAudioInitFailed, // Audio Init Failed
 } EBroadcastUploadResult;

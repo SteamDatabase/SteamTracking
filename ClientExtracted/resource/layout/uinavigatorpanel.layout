@@ -159,6 +159,7 @@
 			style="WebPanelStyle"
 		}
 
+
 		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=0 group=library align=right }
 		
 		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
@@ -614,8 +615,13 @@
 			image="graphics/icon_button_list_disabled"
 
 		}
+
+		CBroadcastView
+		{
+			inset="0 0 0 0"
+		}
 		
-		WebPanelStyle
+		CWebPanel
 		{
 			bgcolor="none"
 			textcolor="label"
@@ -846,6 +852,9 @@
 		{
 		textcolor="html.insecureurl"
 		}		
+
+
+		
 	}
 	
 	colors
@@ -903,8 +912,8 @@
 		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=20 start=phonereminderbar dir=down }
 		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
 		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=BroadcastPageMin		width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
-		place { control=BroadcastPageMinHoriz	width=300 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
+		place { control=BroadcastPageMin		width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
+		place { control=BroadcastPageMinHoriz	width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
 		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
 
 		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }

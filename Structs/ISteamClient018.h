@@ -39,4 +39,5 @@ public:
     virtual unknown_ret GetISteamInventory(int, int, char const*) = 0;
     virtual unknown_ret GetISteamVideo(int, int, char const*) = 0;
     virtual unknown_ret GetISteamParentalSettings(int, int, char const*) = 0;
+    virtual unknown_ret GetISteamParties(int, int, char const*) = 0;
 };

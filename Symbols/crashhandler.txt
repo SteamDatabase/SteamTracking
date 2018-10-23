@@ -262,6 +262,8 @@
  T FillDataStruct(_finddata_t*)
  T FindSpewGroup(char const*, int*)
  T GetMemAlloc
+ T GetOSMajorMinorPatchVersion(int*, int*, int*)
+ T GetOSMajorMinorPatchVersion(long*, long*, long*)
  T GetOSType
  T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T InitStackWalk()

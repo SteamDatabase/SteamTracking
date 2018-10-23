@@ -67,6 +67,7 @@
  B g_vecTempTextBuffer
  B s_NoEscConversion
  B s_StringCharConversion
+ B s_cmdChildHWNDHTML
  B vgui::__g_CreateVGUISetupIVGuiSetup_reg
  B vgui::g_VGuiSetup
  B vgui::g_pFileSystem
@@ -273,6 +274,7 @@
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
  NSZeroPoint
+ NSZeroRect
  OBJC_CLASS_$_CALayer
  OBJC_CLASS_$_NSAppleEventManager
  OBJC_CLASS_$_NSApplication
@@ -471,8 +473,10 @@
  T CBaseSurface::AddPanel(unsigned long long)
  T CBaseSurface::AddTrackedMenu(unsigned long long)
  T CBaseSurface::AllocTextureForId(int)
+ T CBaseSurface::ApplyHTMLVisibilityChanges()
  T CBaseSurface::AreAnyPopupsViewable()
  T CBaseSurface::BIsGameRunning()
+ T CBaseSurface::BIsPlatformWindowActualDescendantOfParentWindow(unsigned long long, unsigned long long)
  T CBaseSurface::BIsShuttingDown()
  T CBaseSurface::BeginMove(unsigned long long)
  T CBaseSurface::BeginResize(unsigned long long, int, int)
@@ -484,6 +488,7 @@
  T CBaseSurface::ClearAllCookies()
  T CBaseSurface::ClearTextColorRangeValues()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
+ T CBaseSurface::ConvertPopupToPlatformChildWindow(unsigned long long, unsigned long long)
  T CBaseSurface::CountPopupsViewable()
  T CBaseSurface::CreateBrowser(unsigned long long, IHTMLResponses*, bool, char const*, char const*, bool, char const*)
  T CBaseSurface::CreateCursorFromFile(char const*, char const*)
@@ -532,6 +537,7 @@
  T CBaseSurface::GetCharacterWidth(unsigned long, wchar_t)
  T CBaseSurface::GetContextPanelForChildPanel(unsigned long long, bool)
  T CBaseSurface::GetCurrentClipRegion(int&, int&, int&, int&)
+ T CBaseSurface::GetDisplayActualScaleFactor(unsigned long long, float&)
  T CBaseSurface::GetDisplayPixelScaleFactor(unsigned long long, float&)
  T CBaseSurface::GetEmbeddedPanel()
  T CBaseSurface::GetFontAscent(unsigned long, wchar_t)
@@ -550,6 +556,7 @@
  T CBaseSurface::GetTextSize(unsigned long, wchar_t const*, int, float&, float&)
  T CBaseSurface::GetTextSize(unsigned long, wchar_t const*, int, int&, int&)
  T CBaseSurface::GetTextureById(int)
+ T CBaseSurface::GetThinkTraverseCounter()
  T CBaseSurface::GetTitle(unsigned long long)
  T CBaseSurface::GetTopmostPopup()
  T CBaseSurface::GetWebkitHTMLUserAgentString()
@@ -595,9 +602,12 @@
  T CBaseSurface::RecomputeTraversalOrder(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >&, unsigned long long, int, bool)
  T CBaseSurface::ReleasePanel(unsigned long long)
  T CBaseSurface::ReloadRegistryEnvironment()
- T CBaseSurface::RemoveBrowser(unsigned long long, IHTMLResponses*)
+ T CBaseSurface::RemoveBrowser(unsigned long long, IHTMLResponses*, unsigned long long)
+ T CBaseSurface::RemoveChildPlatformWindow(unsigned long long, unsigned long long)
  T CBaseSurface::RemoveTrackedMenu(unsigned long long)
  T CBaseSurface::RestrictPaintToSinglePanel(unsigned long long)
+ T CBaseSurface::SetChildPlatformWindowZPos(unsigned long long, unsigned long long, int)
+ T CBaseSurface::SetChildPlatformWindowZPosDirty(unsigned long long, unsigned long long)
  T CBaseSurface::SetClientBuildID(unsigned long long)
  T CBaseSurface::SetCurrentContextPanel(unsigned long long)
  T CBaseSurface::SetEmbeddedPanel(unsigned long long)
@@ -2136,6 +2146,7 @@
  T png_chunk_unknown_handling
  T png_chunk_warning
  T png_combine_row
+ T png_crc_error
  T png_crc_finish
  T png_crc_read
  T png_create_info_struct
@@ -2610,13 +2621,13 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp706
- d __block_descriptor_tmp723
- d __block_descriptor_tmp726
- d __block_descriptor_tmp728
+ d __block_descriptor_tmp712
+ d __block_descriptor_tmp729
+ d __block_descriptor_tmp732
+ d __block_descriptor_tmp734
  d __block_literal_global
- d __block_literal_global727
- d __block_literal_global729
+ d __block_literal_global733
+ d __block_literal_global735
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2860,9 +2871,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_704
+ t __copy_helper_block_710
  t __destroy_helper_block_
- t __destroy_helper_block_705
+ t __destroy_helper_block_711
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal

@@ -18,4 +18,5 @@ typedef enum ERemoteStorageFileRoot
     k_ERemoteStorageFileRootLinuxHome, // LinuxHome
     k_ERemoteStorageFileRootLinuxXdgDataHome, // LinuxXdgDataHome
     k_ERemoteStorageFileRootLinuxXdgConfigHome, // LinuxXdgConfigHome
+    k_ERemoteStorageFileRootAndroidSteamPackageRoot, // AndroidSteamPackageRoot
 } ERemoteStorageFileRoot;

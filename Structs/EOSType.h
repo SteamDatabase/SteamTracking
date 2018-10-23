@@ -1,6 +1,12 @@
 typedef enum EOSType
 {
     k_EOSTypeWeb = -700, // web
+    k_EOSTypeIos = -600, // ios
+    k_EOSTypeAndroid = -500, // android
+    k_EOSTypeAndroid6, // android6
+    k_EOSTypeAndroid7, // android7
+    k_EOSTypeAndroid8, // android8
+    k_EOSTypeAndroid9, // android9
     k_EOSTypePs3os = -300, // ps3os
     k_EOSTypeLinux = -203, // linux
     k_EOSTypeLinux22, // linux22
