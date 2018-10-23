@@ -85,6 +85,16 @@
                     "name": "message",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "loc_token",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "params",
+                    "type": "{message}",
+                    "optional": false
                 }
             ]
         },
