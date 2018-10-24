@@ -547,6 +547,7 @@
  T CBaseSurface::GetModalPanel()
  T CBaseSurface::GetNotifyPanel()
  T CBaseSurface::GetOverlayInterface()
+ T CBaseSurface::GetPlatformWindowHandleForPanel(unsigned long long)
  T CBaseSurface::GetPopup(int)
  T CBaseSurface::GetPopupCount()
  T CBaseSurface::GetProportionalBase(int&, int&)
