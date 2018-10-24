@@ -4512,6 +4512,35 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_taxes_value').innerHTML = price_data.formattedTax;
 				$('cart_price_summary_taxes').style.display = 'block';
 				$('review_taxes_value').style.display = 'block';
+
+				if ( price_data.taxdetails.billing.state != '' || ( g_bRequiresShipping && price_data.taxdetails.shipping.state != '') )
+				{
+					var taxState = '';
+					if ( price_data.taxdetails.billing.state != '' )
+					{
+						taxState = price_data.taxdetails.billing.state;
+						if ( g_bRequiresShipping && price_data.taxdetails.shipping.state != '' && price_data.taxdetails.shipping.state != taxState )
+						{
+							taxState = taxState + '/' + price_data.taxdetails.shipping.state;
+							$('cart_price_summary_taxes_different_shipping').style.display = 'inline-block';
+						}
+						else
+						{
+							$('cart_price_summary_taxes_different_shipping').style.display = 'none';
+						}
+					}
+					else if ( g_bRequiresShipping )
+					{
+						taxState = price_data.taxdetails.shipping.state;
+						$('cart_price_summary_taxes_different_shipping').style.display = 'inline-block';
+					}
+					$('cart_price_summary_taxes_text').innerHTML = 'Tax' + ' (' + taxState + ')';
+				}
+				else
+				{
+					$('cart_price_summary_taxes_different_shipping').style.display = 'none';
+					$('cart_price_summary_taxes_text').innerHTML = 'Tax';
+				}
 			}
 			else
 			{

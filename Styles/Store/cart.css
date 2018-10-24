@@ -989,6 +989,12 @@ body.v6 .cart_rightcol h2 {
 	padding: 14px;
 }
 
+#cart_price_summary_taxes_different_shipping {
+	margin-left: 3px;
+	margin-right: 3px;
+	vertical-align: middle;
+}
+
 .checkout_cache_text
 {
 	padding-top: 10px;

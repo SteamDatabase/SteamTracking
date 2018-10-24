@@ -669,6 +669,17 @@ div.youraccount_history_home>div.account_wallet {
 	transition: opacity 0.25s;
 }
 
+.email_pref_ctn.individual_pref {
+	padding: 14px 8px 8px 13px;
+	margin-left: 16px;
+	background: rgba(0,0,0,0.2);
+	margin-top: 4px;
+	border-radius: 3px;
+}
+.send_choice_inner.email_pref_ctn.individual_pref label {
+	width: calc(100% - 20px);
+}
+
 .email_pref_ctn.disabled {
 	opacity: 0.5;
 }
@@ -1279,7 +1290,15 @@ td.wht_total {
 
 .ignoredapps > div {
 	display: block;
-	padding: 5px 0;
+	padding: 5px 0 5px 8px;
+	background: rgba(0,0,0,0.3);
+	margin-bottom: 2px;
+}
+.ignoredapps > div:hover {
+	background: rgba(0,0,0,0.4);
+}
+.ignoredapps > div a {
+	color: #b2b5ba;
 }
 
 .ignoredapps .remove {
@@ -1331,6 +1350,7 @@ td.wht_total {
 .opt_out_description {
 	font-size: 12px;
 	padding-left: 17px;
+	color: #a2afb9;
 }
 
 .marked_ignore_outer {
@@ -1338,7 +1358,7 @@ td.wht_total {
 }
 
 .marked_ignore_container {
-	background-color: #b2bbc4;
+	background-color: #808f9d;
 	color: #ecf5fe;
 	display: flex;
 	flex-direction: row;
@@ -1347,4 +1367,8 @@ td.wht_total {
 }
 .marked_ignore_img {
 	padding-right: 5px;
+	width: 32px;
+	height: 32px;
+	margin-top: 16px;
+	margin-right: 16px;
 }

@@ -5,6 +5,9 @@
 
 .admin_container blockquote {
 	margin: 5px 20px;
+	background: #434953;
+	padding: 5px 8px;
+	border-radius: 4px;
 }
 
 .admin_nav {
@@ -272,12 +275,13 @@ p {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			background-color: #0f161f;
-	box-shadow: 1px 1px 1px  rgba( 103, 193, 245, 0.1 );
-	border: none;
+			background: #30353b;
+	box-shadow: inset 0px 0px 4px #0006;
+	border: 0.5px solid rgba(139, 153, 170, 0.4);
+	border-style: inset;
 	padding: 8px;
 	border-radius: 3px;
-	width: 75%;
+	width: calc(100% - 16px);
 	margin: 5px 0;
 	color: #fff;
 }
@@ -298,6 +302,9 @@ p {
 	cursor: grab;
 	cursor: -moz-grab;
 	cursor: -webkit-grab;
+	border-radius: 2px;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	border-left: 1px solid rgba(255,255,255,0.1);
 }
 #apps_container > div:hover {
 	background-color: rgba(255,255,255,0.2);

@@ -84,6 +84,11 @@ body
 	color: white;
 }
 
+.UploadDetailInfo {
+padding: 2px;
+color: white;
+}
+
 .broadcast_upload_note_container
 {
 	border-width: 2px;

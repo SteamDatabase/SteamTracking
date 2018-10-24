@@ -2644,3 +2644,12 @@ background: -webkit-linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 2
 .pubg_banner > img {
 	max-width: 100%;
 }
+
+
+body.v6.steamaward_nominations_categorypage .page_content {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding: 40px 55px;
+	width: 750px;
+}

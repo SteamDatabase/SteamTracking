@@ -2219,6 +2219,17 @@ img.package_header {
 	float: right;
 }
 
+.mature_content_notice {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			width: 940px;
+	background: -webkit-linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%););	color: #fff;
+	padding: 16px;
+	margin: 0px auto 16px auto;
+	font-size: 14px;
+}
+
 .agegate_text_container .btn_next_in_queue {
 	margin-bottom: 0px;
 	margin-right: 0px;
