@@ -18388,7 +18388,6 @@
  v8::Isolate::Exit()
  v8::Isolate::GetCurrentContext()
  v8::Isolate::IdleNotification(int)
- v8::Isolate::LowMemoryNotification()
  v8::Isolate::New(v8::Isolate::CreateParams const&)
  v8::Isolate::ThrowException(v8::Local<v8::Value>)
  v8::JSON::Parse(v8::Local<v8::String>)

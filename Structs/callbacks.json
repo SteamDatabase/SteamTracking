@@ -2445,8 +2445,18 @@
         "posted_in": "void CBaseAPIJob::PostAPIResult<ChangeNumOpenSlotsCallback_t>(ChangeNumOpenSlotsCallback_t*)"
     },
     {
+        "id": 5305,
+        "size": 1,
+        "posted_in": "CClientParties::OnChatGroupUserStateChanged(ChatRoomClient_NotifyChatGroupUserStateChanged_Notification const*)"
+    },
+    {
+        "id": 5306,
+        "size": 1,
+        "posted_in": "CClientParties::OnChatGroupHeaderChange(CChatRoom_ChatRoomHeaderState_Notification const*)"
+    },
+    {
         "id": 5401,
-        "size": 16,
+        "size": 280,
         "posted_in": "void CBaseAPIJob::PostAPIResult<ReservePartySlotCallback_t>(ReservePartySlotCallback_t*)"
     }
 ]
