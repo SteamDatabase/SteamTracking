@@ -307,7 +307,7 @@ function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOv
 	var nTotalCount = 0;
 
 	for (var facetIndex in rgFacetToCounts ) {
-		$J( '#' + strElementIDPrefix + facetIndex ).text( rgFacetToCounts[facetIndex] );
+		$J( '#' + strElementIDPrefix + facetIndex ).text( nCountOverride && rgFacetToCounts[facetIndex] > nCountOverride ? nCountOverride : rgFacetToCounts[facetIndex] );
 
 		nTotalCount += parseInt( rgFacetToCounts[facetIndex] );
 	}
