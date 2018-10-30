@@ -87,53 +87,66 @@
   "0N1H": function(e, t, n) {
     "use strict";
     n.d(t, "k", function() {
-      return i;
+      return r;
     }),
       n.d(t, "l", function() {
-        return o;
-      }),
-      n.d(t, "d", function() {
-        return r;
-      }),
-      n.d(t, "e", function() {
         return s;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "d", function() {
         return a;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return u;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "j", function() {
         return c;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return l;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "i", function() {
         return m;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "h", function() {
         return h;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return d;
+      }),
+      n.d(t, "c", function() {
+        return f;
+      }),
+      n.d(t, "b", function() {
+        return v;
       });
-    var i = 1,
-      o = 4,
-      r = 750,
-      s = 799,
-      a = 7,
-      u = 250820,
-      c = 330050,
-      p = 358510,
-      l = 366490,
-      m = "18446744073709551615",
-      h = 0,
-      d = 2147483647;
+    var i,
+      o,
+      r = 1,
+      s = 4,
+      a = 750,
+      u = 799,
+      c = 7,
+      p = 250820,
+      l = 330050,
+      m = 358510,
+      h = 366490,
+      d = "18446744073709551615",
+      f = 0,
+      v = 2147483647;
+    ((o = i || (i = {}))[(o.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+      (o[(o.k_EGameEvent = 2)] = "k_EGameEvent"),
+      (o[(o.k_EPartyEvent = 3)] = "k_EPartyEvent"),
+      (o[(o.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
+      (o[(o.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
+      (o[(o.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
+      (o[(o.k_ESportsEvent = 7)] = "k_ESportsEvent"),
+      (o[(o.k_ETripEvent = 8)] = "k_ETripEvent"),
+      (o[(o.k_EChatEvent = 9)] = "k_EChatEvent"),
+      (o[(o.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
+      (o[(o.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent");
   },
   "1VtQ": function(e, t, n) {
     "use strict";
@@ -188,6 +201,7 @@
         CHAT_BASE_URL: "",
         STORE_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        STEAMTV_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -1832,8 +1846,8 @@
     var y,
       S,
       C,
-      w = new s.a();
-    function D(e) {
+      E = new s.a();
+    function w(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -1842,7 +1856,7 @@
       var n = new v(t);
       i.render(o.createElement(_, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = w),
+    (window.ClientConnectionAPI = E),
       document.addEventListener("DOMContentLoaded", function() {
         Object(r.c)(),
           (function() {
@@ -1855,7 +1869,7 @@
                 i = n.getAttribute("data-component");
               switch (i) {
                 case "ChatInvite":
-                  D(n);
+                  w(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + i + '"');

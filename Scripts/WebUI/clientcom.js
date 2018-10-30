@@ -85,6 +85,7 @@
         CHAT_BASE_URL: "",
         STORE_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        STEAMTV_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,

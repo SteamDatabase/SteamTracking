@@ -338,53 +338,66 @@
   "0N1H": function(e, t, n) {
     "use strict";
     n.d(t, "k", function() {
-      return o;
+      return r;
     }),
       n.d(t, "l", function() {
-        return i;
-      }),
-      n.d(t, "d", function() {
-        return r;
-      }),
-      n.d(t, "e", function() {
         return a;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "d", function() {
         return s;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return c;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "j", function() {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return u;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "i", function() {
         return m;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "h", function() {
         return d;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return h;
+      }),
+      n.d(t, "c", function() {
+        return _;
+      }),
+      n.d(t, "b", function() {
+        return f;
       });
-    var o = 1,
-      i = 4,
-      r = 750,
-      a = 799,
-      s = 7,
-      c = 250820,
-      l = 330050,
-      p = 358510,
-      u = 366490,
-      m = "18446744073709551615",
-      d = 0,
-      h = 2147483647;
+    var o,
+      i,
+      r = 1,
+      a = 4,
+      s = 750,
+      c = 799,
+      l = 7,
+      p = 250820,
+      u = 330050,
+      m = 358510,
+      d = 366490,
+      h = "18446744073709551615",
+      _ = 0,
+      f = 2147483647;
+    ((i = o || (o = {}))[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+      (i[(i.k_EGameEvent = 2)] = "k_EGameEvent"),
+      (i[(i.k_EPartyEvent = 3)] = "k_EPartyEvent"),
+      (i[(i.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
+      (i[(i.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
+      (i[(i.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
+      (i[(i.k_ESportsEvent = 7)] = "k_ESportsEvent"),
+      (i[(i.k_ETripEvent = 8)] = "k_ETripEvent"),
+      (i[(i.k_EChatEvent = 9)] = "k_EChatEvent"),
+      (i[(i.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
+      (i[(i.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent");
   },
   "1VtQ": function(e, t, n) {
     "use strict";
@@ -439,6 +452,7 @@
         CHAT_BASE_URL: "",
         STORE_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        STEAMTV_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -13962,7 +13976,8 @@
             var n = JSON.parse(t.strMessage) || {},
               o = new Map();
             if (n.params)
-              for (var e in n.params) o.set(e.toString(), n[e].toString());
+              for (var e in n.params)
+                o.set(e.toString(), n.params[e].toString());
             return (
               (t.strServerMsgAppCustomLocalized = "..."),
               $o.AppInfoStore.GetRichPresenceLocAsync(
@@ -18146,6 +18161,9 @@
       mn = (function() {
         return function() {};
       })();
+    ((un = pn || (pn = {}))[(un.k_EPending = 0)] = "k_EPending"),
+      (un[(un.k_EAccepted = 1)] = "k_EAccepted"),
+      (un[(un.k_ERejected = 2)] = "k_ERejected");
     function dn(e, t, n) {
       return Math.max(t, Math.min(n, e));
     }
@@ -18227,9 +18245,6 @@
       var n = En(e);
       return Math.floor(t / n) + 1;
     }
-    ((un = pn || (pn = {}))[(un.k_EPending = 0)] = "k_EPending"),
-      (un[(un.k_EAccepted = 1)] = "k_EAccepted"),
-      (un[(un.k_ERejected = 2)] = "k_ERejected");
     var Mn,
       Dn,
       Tn = (function() {
@@ -27992,44 +28007,31 @@
               }
             }
           }),
-          (e.prototype.OnPlayerGameChanged = function(a, s, c) {
-            var l = this;
+          (e.prototype.OnPlayerGameChanged = function(i, r, a) {
+            var s = this;
             this.m_mapGroupBuckets.forEach(function(e, t) {
-              if ($o.ChatStore.GetChatRoomGroup(t).BHasMember(a)) {
-                var n = $o.FriendStore.GetPlayer(a);
-                n.persona.is_appinfo_ready;
-                var o = s == St ? e.groupSingletons : e.mapBuckets.get(s),
-                  i = c == St ? e.groupSingletons : e.mapBuckets.get(c);
+              if ($o.ChatStore.GetChatRoomGroup(t).BHasMember(i)) {
+                var n = $o.FriendStore.GetPlayer(i);
                 if (
-                  (l.LOG(
-                    "OnPlayerGameChanged",
-                    n.display_name,
-                    o ? o.id : "none",
-                    i ? i.id : "none"
-                  ),
-                  e.bFlatList && o != i)
+                  (n.persona.is_appinfo_ready,
+                  s.LOG("OnPlayerGameChanged", n.display_name, r, a),
+                  e.bFlatList && r != a)
                 )
                   return (
-                    e.mapBuckets.get(0).Remove(a),
+                    e.mapBuckets.get(0).Remove(i),
                     e.mapBuckets
                       .get(0)
-                      .SortedInsert($o.FriendStore.GetPlayer(a)),
-                    void l.FireMemberListChanged(e)
+                      .SortedInsert($o.FriendStore.GetPlayer(i)),
+                    void s.FireMemberListChanged(e)
                   );
-                if ((o && i && s == c) || (i && i.BHasMember(a)))
-                  return void l.UpdatePersonaForGroup(t, n);
-                var r = !1;
-                o &&
-                  o.BHasMember(a) &&
-                  (l.RemoveMemberFromBucket(e, o.id, a), (r = !0)),
-                  i &&
-                    (l.AddMemberToBucketID(
-                      e,
-                      i.id,
-                      $o.FriendStore.GetPlayer(a)
-                    ),
-                    (r = !0)),
-                  r && l.FireMemberListChanged(e);
+                if (r == a) {
+                  var o = a == St ? e.groupSingletons : e.mapBuckets.get(a);
+                  if (o && o.BHasMember(i))
+                    return void s.UpdatePersonaForGroup(t, n);
+                }
+                s.RemoveMemberFromBucket(e, r, i),
+                  s.AddMemberToBucketID(e, a, $o.FriendStore.GetPlayer(i)),
+                  s.FireMemberListChanged(e);
               }
             });
           }),
@@ -28260,7 +28262,7 @@
             if (-2 == t) return this.RemoveFromSingletons(e, n), !0;
             var o = e.mapBuckets.get(t);
             return (
-              !!o.Remove(n) &&
+              !(!o || !o.Remove(n)) &&
               (0 == o.member_list.length
                 ? (this.RemoveFromSingletons(e, n),
                   this.LOG("Deleting bucket", t),
