@@ -126,6 +126,13 @@ function CreateQiwiInvoiceAndFinalizeTransaction( url )
 		return;
 	}
 	
+	if ( $('accept_right_withdrawal') && !$('accept_right_withdrawal').checked )
+	{
+		DisplayErrorMessage( 'You must agree to the terms of your statutory right of withdrawal.' );
+		ValidationMarkFieldBad( $('purchase_confirm_right_withdrawal') );
+		return;
+	}		
+	
 	$J('#purchase_button_bottom').hide();
 	$J('#purchase_button_inprogress_bottom').show();
 
@@ -206,6 +213,13 @@ function PerformExternalFinalizeTransaction( url, useExternalRedirect)
 		return;
 	}
 	
+	if ( $('accept_right_withdrawal') && !$('accept_right_withdrawal').checked )
+	{
+		DisplayErrorMessage( 'You must agree to the terms of your statutory right of withdrawal.' );
+		ValidationMarkFieldBad( $('purchase_confirm_right_withdrawal') );
+		return;
+	}	
+
 	try 
 	{
 				
@@ -5309,6 +5323,13 @@ function FinalizeTransaction()
 		ValidationMarkFieldBad( $('purchase_confirm_ssa') );
 		return;
 	}
+	
+	if ( !g_bIsUpdateBillingInfoForm && $('accept_right_withdrawal') && !$('accept_right_withdrawal').checked )
+	{
+		DisplayErrorMessage( 'You must agree to the terms of your statutory right of withdrawal.' );
+		ValidationMarkFieldBad( $('purchase_confirm_right_withdrawal') );
+		return;
+	}		
 	
 
 	 
