@@ -62,25 +62,33 @@
 			}
 			"Button"
 			{
-				"BrowserSelect"		"#Action_Select"
-				"BrowserForward"		"#Action_Forward"
-				"BrowserBack"		"#Action_Back"
-				"BrowserReload"		"#Action_Reload"
-				"BrowserZoom"		"#Action_Zoom"
-				"BrowserAddToFavorites"		"#Action_AddToFavorites"
-				"BrowserGoToFavorites"		"#Action_OpenFavorites"
-				"BrowserMoreMenu"		"#Action_OpenContextMenu"
-				"BrowserOpenInNewTab"		"#Action_OpenInNewTab"
-				"LEFTSTICK_UP"		"#Action_Up"
-				"LEFTSTICK_DOWN"		"#Action_Down"
-				"LEFTSTICK_LEFT"		"#Action_Left"
-				"LEFTSTICK_RIGHT"		"#Action_Right"
-				"A"		"#Action_Confirm"
-				"B"		"#Action_Cancel"
-				"LSHOULDER"		"#Action_LSilo"
-				"RSHOULDER"		"#Action_RSilo"
-				"BrowserMoveTabLeft"		"#Action_TabLeft"
-				"BrowserMoveTabRight"		"#Action_TabRight"
+				"BrowserSelect"					"#Action_Select"
+				"BrowserDoubleSelect"			"#Action_DoubleSelect"
+				"BrowserForward"				"#Action_Forward"
+				"BrowserBack"					"#Action_Back"
+				"BrowserReload"					"#Action_Reload"
+				"BrowserZoom"					"#Action_Zoom"
+				"BrowserAddToFavorites"			"#Action_AddToFavorites"
+				"BrowserGoToFavorites"			"#Action_OpenFavorites"
+				"BrowserMoreMenu"				"#Action_OpenContextMenu"
+				"BrowserOpenInNewTab"			"#Action_OpenInNewTab"
+				"BrowserCloseTab"				"#Action_CloseTab"
+				"BrowserShowKeyboard"			"#Action_ShowKeyboard"
+				"LEFTSTICK_UP"					"#Action_Up"
+				"LEFTSTICK_DOWN"				"#Action_Down"
+				"LEFTSTICK_LEFT"				"#Action_Left"
+				"LEFTSTICK_RIGHT"				"#Action_Right"
+				"A"								"#Action_Confirm"
+				"B"								"#Action_Cancel"
+				"LSHOULDER"						"#Action_LSilo"
+				"RSHOULDER"						"#Action_RSilo"
+				"BrowserMoveTabLeft"			"#Action_TabLeft"
+				"BrowserMoveTabRight"			"#Action_TabRight"
+				"FriendsUISubmit"				"#Action_Submit"
+				"FriendsUIShowEmoticonPicker"	"#Action_ShowEmoticonPicker"
+				"FriendsUIAcceptGameInvite"		"#Action_AcceptGameInvite"
+				"FriendsUIToggleVoiceChat"		"#Action_ToggleVoiceChat"
+				"FriendsUIToggleFriendsList"	"#Action_ToggleFriendsList"
 			}
 		}
 		"Mouse"
@@ -140,6 +148,17 @@
 			}
 		}
 	}
+	"action_layers"
+	{
+		"WebBrowserChat"
+		{
+			"title"		"Chat"
+			"legacy_set"		"1"
+			"set_layer"		"1"
+			"parent_set_name"		"WebBrowser"
+		}
+	}
+
 	"Localization"
 	{
 		"english"
@@ -158,6 +177,7 @@
 			"Action_Cursor"		"Mouse Cursor"
 			"Action_Scroll"		"Scroll"
 			"Action_Select"		"Select"
+			"Action_DoubleSelect"	"Double-click"
 			"Action_Zoom"		"Zoom"
 			"Action_AddToFavorites"		"Add to Favorites"
 			"Action_OpenFavorites"		"Open Favorites"
@@ -165,6 +185,7 @@
 			"Action_OpenEmptyTab"		"Open empty new tab"
 			"Action_OpenInNewTab"		"Open link in new tab"
 			"Action_CloseTab"		"Close current tab"
+			"Action_ShowKeyboard"		"Show On Screen Keyboard"
 			"Action_Confirm"		"Confirm"
 			"Action_Cancel"		"Back"
 			"Action_Action1"		"UI Action 1"
@@ -194,6 +215,10 @@
 			"Action_Alt"		"Alt"
 			"Action_Contextual"		"Contextual Action"
 			"Action_CursorSelect"		"Mouse Cursor Select"
+			"Action_ShowEmoticonPicker"	"Show Emoticon Picker"
+			"Action_AcceptGameInvite"	"Accept Game Invite"
+			"Action_ToggleVoiceChat"	"Toggle Voice Chat"
+			"Action_ToggleFriendsList"	"Show/Hide Friends List"
 		}
 	}
 	"group"
@@ -1309,6 +1334,231 @@
 			}
 		}
 	}
+	"group"
+	{
+		"id"		"38"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUISubmit, Submit Text"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIShowEmoticonPicker, Show Emoticon Picker"
+						}
+					}
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabLeft, Switch Tab Left"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabRight, Switch Tab Right"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"39"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserShowKeyboard, Show On Screen Keyboard"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"40"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
+	"group"
+	{
+		"id"		"41"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUISubmit, Submit Text"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIShowEmoticonPicker, Show Emoticon Picker"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"42"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"43"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"44"
+		"mode"		"dpad"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"45"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Scroll"
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -1368,6 +1618,22 @@
 			"29"		"joystick active"
 			"26"		"left_trackpad inactive"
 			"27"		"left_trackpad active"
+		}
+	}
+		"preset"
+	{
+		"id"		"4"
+		"name"		"WebBrowserChat"
+		"group_source_bindings"
+		{
+			"38"		"switch active"
+			"39"		"right_trackpad active"
+			"40"		"right_trackpad active modeshift"
+			"41"		"button_diamond active"
+			"42"		"left_trigger active"
+			"43"		"right_trigger active"
+			"44"		"joystick active"
+			"45"		"left_trackpad active"
 		}
 	}
 	"settings"

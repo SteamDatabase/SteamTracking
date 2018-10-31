@@ -6284,7 +6284,7 @@ To enable access to the in-game overlay, open the Security and Privacy > Privacy
 "[english]steam_downloads_auto_update_default"	"Auto-Updates Enabled"
 "steam_downloads_auto_update_disabled"	"Actualizaciones automáticas desactivadas"
 "[english]steam_downloads_auto_update_disabled"	"Auto-Updates Disabled"
-"Steam_Parental_UnlockInstructions"	"Introducid vuestro PIN a continuación para salir del modo familiar."
+"Steam_Parental_UnlockInstructions"	"Introduce tu PIN a continuación para salir del modo familiar."
 "[english]Steam_Parental_UnlockInstructions"	"Enter your PIN below to exit Family View"
 "Steam_Status_DownloadsPaused"	"Descargas en pausa "
 "[english]Steam_Status_DownloadsPaused"	"Downloads Paused "

@@ -2002,6 +2002,18 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_BackgroundDownloadsAllow"	"Always allow background downloads"
 "Steam_BackgroundDownloadsDeny"	"Never allow background downloads"
 
+"Steam_GameProperties_SteamInputSettings"	"Steam Input Settings"
+"Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Steam Input Per-Game Setting (Requires restart of game)"
+"Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Forced Off"
+"Steam_GameProperties_SteamInputSettings_PerGameOptIn_Global"	"Use your global Steam Input settings"
+"Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOn" "Forced On"
+
+"Steam_Controller_Support_PS4" "PS"
+"Steam_Controller_Support_XBox" "Xbox"
+"Steam_Controller_Support_Generic" "Generic"
+"Steam_Controller_Support_Switch" "Switch"
+"Steam_Controller_Support_None" "None"
+
 "Steam_GameProperties_BackgroundDownloadsWhilePlaying$appType=game"	"Background downloads while playing this game"
 
 "Steam_GameProperties_HighPriorityAutoUpdateInfo$appType=application"		"This application and its updates will be automatically acquired as soon as they are available. Steam will prioritize this application over other downloads."

@@ -134,6 +134,10 @@ TextInputDualTouch
 {
 	height: 532px;
 }
+.FriendsUI .TouchPad
+{
+	y: 2px;
+}
 
 
 #RowContainer
@@ -142,6 +146,11 @@ TextInputDualTouch
 	width: 100%;
 	height: 100%;
 	flow-children: down;
+}
+
+.FriendsUI #RowContainer
+{
+	margin-top: 0px;
 }
 
 #TouchPadLeft
@@ -186,11 +195,19 @@ TextInputDualTouch
 {
 	height: 86px;
 }
-
 .NoSuggest #TopRow
 {
 	visibility: collapse;
 }
+.FriendsUI #TopRow
+{
+	height: 13%;
+}
+.FriendsUI #LastRow
+{
+	height: 13%;
+}
+
 
 #DefaultSuggestions4_WrapperLeft,
 #DefaultSuggestions4_WrapperRight
@@ -200,7 +217,7 @@ TextInputDualTouch
 	flow-children: right;
 }
 
-// if we have custom suggestion panels, hide our default suggestion UI
+/* if we have custom suggestion panels, hide our default suggestion UI */
 .SuggestionsCount3 #DefaultSuggestions4_WrapperLeft,
 .SuggestionsCount3 #DefaultSuggestions4_WrapperRight,
 .SuggestionsCount4 #DefaultSuggestions4_WrapperLeft,
@@ -340,31 +357,43 @@ TextInputDualTouch
 }
 
 
-
+#Row1.TouchRow
+{
+	height: 99px;
+}
 #Row1 .TouchKey
 {
 	width: 15.5%;
 }
 
-#Row1.TouchRow
-{
-	height: 99px;
-}
 
 #Row2.TouchRow
 {
 	height: 84px;
 }
-
 #Row2 .TouchKey
 {
 	width: 16.05%;
 }
 
+
 #Row3.TouchRow
 {
 	height: 99px;
 }
+
+.FriendsUI #Row0
+{
+	height: 17%;
+}
+
+.FriendsUI #Row1,
+.FriendsUI #Row2,
+.FriendsUI #Row3
+{
+	height: 19%;
+}
+
 
 .NoSuggest .TouchRow,
 .NoSuggest #LastRow
@@ -374,7 +403,7 @@ TextInputDualTouch
 
 .Left #LastRow
 {
-	//x: 0%;
+	/* x: 0%; */
 	horizontal-align: right;
 	width: 90.8%;
 	margin-right: -14px;
@@ -402,7 +431,7 @@ TextInputDualTouch
 	width: 16.25%;
 }
 
-// 6, 7, B, N
+/* 6, 7, B, N */
 #TouchKey_5_0.TouchKey,
 #TouchKey_6_0.TouchKey,
 #TouchKey_4_3.TouchKey,
@@ -411,7 +440,7 @@ TextInputDualTouch
 	width: 19.9%;
 }
 
-// Q, R, U, P
+/* Q, R, U, P */
 #TouchKey_0_1.TouchKey,
 #TouchKey_3_1.TouchKey,
 #TouchKey_6_1.TouchKey,
@@ -420,14 +449,14 @@ TextInputDualTouch
 	width: 22.05%;
 }
 
-// T, Y
+/* T, Y */
 #TouchKey_4_1.TouchKey,
 #TouchKey_5_1.TouchKey
 {
 	width: 25.05%;
 }
 
-// H, G
+/* H, G */
 #TouchKey_5_2.TouchKey,
 #TouchKey_4_2.TouchKey
 {
@@ -525,7 +554,9 @@ TextInputDualTouch
 	width: 29.07%;
 }
 
-#TouchKey_EnterNoClose.TouchKey
+#TouchKey_EnterNoClose.TouchKey,
+#TouchKey_SubmitNoClose.TouchKey,
+#TouchKey_Return.TouchKey
 {
 	width: 29.07%;
 }
@@ -541,9 +572,11 @@ TextInputDualTouch
 }
 
 
-// most of the time we're using "hardware" pointers that render through the D3D/OpenGL layers, so we don't show
-// our native Panorama elements unless we're specifically asked to (during transitions in/out) and we are actively
-// manipulating that pad
+/*
+ most of the time we're using "hardware" pointers that render through the D3D/OpenGL layers, so we don't show
+ our native Panorama elements unless we're specifically asked to (during transitions in/out) and we are actively
+ manipulating that pad
+*/
 #LeftPointer,
 #RightPointer
 {
@@ -566,6 +599,11 @@ TextInputDualTouch
 	font-size: 30px;
 	color: #ccccccff;
 	wash-color: #ccccccff;
+}
+
+.FriendsUI .TouchKeyLabel
+{
+	font-size: 22px;
 }
 
 .TouchKeyHover #TouchKeyLabel,
@@ -683,13 +721,13 @@ TextInputDualTouch
 	min-width: 100px;
 }
 
-.FriendsChat #HeaderText, .FriendsChat #Legends, .FriendsChat #TextPreviewBackground,
+.FriendsUI #HeaderText, .FriendsUI #Legends, .FriendsUI #TextPreviewBackground,
 .SubmitButton #HeaderText, .SubmitButton #Legends, .SubmitButton #TextPreviewBackground
 {
 	visibility: collapse;
 }
 
-.FriendsChat #BackDrop,
+.FriendsUI #BackDrop,
 .SubmitButton #BackDrop,
 {
 	background-color: white;
@@ -700,14 +738,14 @@ TextInputDualTouch
 	margin-bottom: 0px;
 }
 
-TextInputDualTouch.FriendsChat
+TextInputDualTouch.FriendsUI
 {
 	background-color: #00000000;
 	vertical-align: bottom;
-	height: 49%;
+	height: 25%;
 }
 
-.FriendsChat #BodyContainer,
+.FriendsUI #BodyContainer,
 .SubmitButton #BodyContainer
 {
 	color: #00000000;
@@ -716,7 +754,7 @@ TextInputDualTouch.FriendsChat
 	horizontal-align: center;
 }
 
-.FriendsChat #BackDrop,
+.FriendsUI #BackDrop,
 .SubmitButton #BackDrop
 {
 	margin-top: 0px;
@@ -730,43 +768,57 @@ TextInputDualTouch.FriendsChat
 }
 
 #TouchKey_Enter,
-#TouchKey_EnterNoClose
+#TouchKey_EnterNoClose,
+#TouchKey_SubmitNoClose,
+#TouchKey_Return
 {
 	background-color: #3f643a;
 }
 
 #TouchKey_Enter.TouchKeyHover,
 #TouchKey_EnterNoClose.TouchKeyHover,
+#TouchKey_SubmitNoClose.TouchKeyHover,
+#TouchKey_Return.TouchKeyHover,
 #TouchKey_Submit.TouchKeyHover
 {
 	background-color: #88b51c;
 }
 
-.FriendsChat #TouchKey_Submit,
 .SubmitButton #TouchKey_Submit
 {
 	visibility: visible;
 }
 
-.FriendsChat #TouchKey_Close,
 .SubmitButton #TouchKey_Close
 {
 	visibility: collapse;
 }
 
-.FriendsChat #TouchKey_Enter,
+.FriendsUI #TouchKey_Enter,
 .SubmitButton #TouchKey_Enter
 {
 	visibility: collapse;
 }
 
-#TouchKey_EnterNoClose
+#TouchKey_EnterNoClose,
+#TouchKey_SubmitNoClose,
+#TouchKey_Return
 {
 	visibility: collapse;
 }
 
-.FriendsChat #TouchKey_EnterNoClose,
+.FriendsUI #TouchKey_SubmitNoClose,
 .SubmitButton #TouchKey_EnterNoClose
+{
+	visibility: visible;
+}
+
+.FriendsUI.Shifted #TouchKey_SubmitNoClose
+{
+	visibility: collapse;
+}
+
+.FriendsUI.Shifted #TouchKey_Return
 {
 	visibility: visible;
 }
@@ -791,7 +843,7 @@ TextInputDualTouch.FriendsChat
 	visibility: collapse;
 }
 
-// only show TouchKey_Show_Emoticons and TouchKey_Hide_Emoticons in .AllowEmoticons mode
+/* only show TouchKey_Show_Emoticons and TouchKey_Hide_Emoticons in .AllowEmoticons mode */
 #TouchKey_Show_Emoticons
 {
 	visibility: collapse;

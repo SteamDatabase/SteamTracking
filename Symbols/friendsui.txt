@@ -1822,6 +1822,7 @@
  D typeinfo for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ D typeinfo for CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  D typeinfo for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
@@ -1975,6 +1976,7 @@
  D typeinfo for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ D typeinfo for CFriendsUIModule::CCallback_OnOpenFriendsDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  D typeinfo for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
@@ -3166,6 +3168,7 @@
  D vtable for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ D vtable for CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  D vtable for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
@@ -3318,6 +3321,7 @@
  D vtable for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  D vtable for CFriendsUIModule::CCallback_OnOpenChatDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ D vtable for CFriendsUIModule::CCallback_OnOpenFriendsDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  D vtable for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
@@ -3892,6 +3896,7 @@
  R typeinfo name for CCallback<CFriendsListSubPanel, SteamServersDisconnected_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenChatDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>
+ R typeinfo name for CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenInviteToTradeDialog_t, false>
  R typeinfo name for CCallback<CFriendsUIModule, OpenJoinGameDialog_t, false>
@@ -4045,6 +4050,7 @@
  R typeinfo name for CFriendsUIModule::CCallbackInternal_OnUIModeChanged
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog
+ R typeinfo name for CFriendsUIModule::CCallback_OnOpenFriendsDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenGameInfoDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog
  R typeinfo name for CFriendsUIModule::CCallback_OnOpenJoinGameDialog
@@ -5342,6 +5348,10 @@
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenChatRoomGroupDialog_t*))
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::Run(void*)
  T CCallback<CFriendsUIModule, OpenChatRoomGroupDialog_t, false>::~CCallback()
+ T CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenFriendsDialog_t*))
+ T CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenFriendsDialog_t*))
+ T CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>::Run(void*)
+ T CCallback<CFriendsUIModule, OpenFriendsDialog_t, false>::~CCallback()
  T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::CCallback(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenGameInfoDialog_t*))
  T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::Register(CFriendsUIModule*, void (CFriendsUIModule::*)(OpenGameInfoDialog_t*))
  T CCallback<CFriendsUIModule, OpenGameInfoDialog_t, false>::Run(void*)
@@ -6689,6 +6699,8 @@
  T CFriendsUIModule::CCallback_OnOpenChatDialog::~CCallback_OnOpenChatDialog()
  T CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenChatRoomGroupDialog::~CCallback_OnOpenChatRoomGroupDialog()
+ T CFriendsUIModule::CCallback_OnOpenFriendsDialog::Run(void*)
+ T CFriendsUIModule::CCallback_OnOpenFriendsDialog::~CCallback_OnOpenFriendsDialog()
  T CFriendsUIModule::CCallback_OnOpenGameInfoDialog::Run(void*)
  T CFriendsUIModule::CCallback_OnOpenGameInfoDialog::~CCallback_OnOpenGameInfoDialog()
  T CFriendsUIModule::CCallback_OnOpenInviteToTradeDialog::Run(void*)
@@ -6750,6 +6762,7 @@
  T CFriendsUIModule::IsValid()
  T CFriendsUIModule::OnOpenChatDialog(OpenChatDialog_t*)
  T CFriendsUIModule::OnOpenChatRoomGroupDialog(OpenChatRoomGroupDialog_t*)
+ T CFriendsUIModule::OnOpenFriendsDialog(OpenFriendsDialog_t*)
  T CFriendsUIModule::OnOpenGameInfoDialog(OpenGameInfoDialog_t*)
  T CFriendsUIModule::OnOpenInviteToTradeDialog(OpenInviteToTradeDialog_t*)
  T CFriendsUIModule::OnOpenJoinGameDialog(OpenJoinGameDialog_t*)
@@ -16222,6 +16235,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientParentalSettings
+ b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots

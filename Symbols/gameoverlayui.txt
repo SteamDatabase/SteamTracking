@@ -4677,6 +4677,7 @@
  T CBasePanel::ActivateInGameSettings()
  T CBasePanel::ActivateVoiceSettings()
  T CBasePanel::AppDrivenFriendChange(CBasePanel::EFriendChangeType, CSteamID const&)
+ T CBasePanel::BBringWindowsToFrontInsteadOfOverlay()
  T CBasePanel::CBasePanel()
  T CBasePanel::CCallback_OnAsyncNotificationsRequested::Run(void*)
  T CBasePanel::CCallback_OnAsyncNotificationsRequested::~CCallback_OnAsyncNotificationsRequested()
@@ -14876,6 +14877,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientParentalSettings
+ b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots

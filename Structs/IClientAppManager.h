@@ -3,7 +3,7 @@ class IClientAppManager
 public:
     virtual unknown_ret InstallApp(unsigned int, int, bool) = 0;
     virtual unknown_ret UninstallApp(unsigned int, bool) = 0;
-    virtual unknown_ret LaunchApp(CGameID, unsigned int, char const*) = 0;
+    virtual unknown_ret LaunchApp(CGameID, unsigned int, unsigned int, char const*) = 0;
     virtual unknown_ret ShutdownApp(unsigned int, bool) = 0;
     virtual unknown_ret GetAppInstallState(unsigned int) = 0;
     virtual unknown_ret GetAppBuildID(unsigned int) = 0;

@@ -189,6 +189,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioninstallapps.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionjoinparty.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactions.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameslistpanel.cpp
@@ -272,8 +273,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendscontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendseditpersonadialog.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsinvitetolobbydialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsprofiledetails.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsui.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/friendsui.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/friends/groupscontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/intromovie.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/jsclientaccess.cpp

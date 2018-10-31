@@ -14363,6 +14363,7 @@
             (this.m_strTagLine = ""),
             (this.m_strAvatarSHA = ""),
             (this.m_mapRooms = d.observable.map(null, { deep: !1 })),
+            (this.m_rgPartyBeacons = []),
             (this.m_eUserDesktopNotificationLevel = 4),
             (this.m_eUserMobileNotificationLevel = 4),
             (this.m_bUnreadIndicatorMuted = !1),
@@ -28515,17 +28516,20 @@
             );
           }),
           (e.prototype.GetBucketIdForPlayer = function(e, t, n) {
-            return e.bFlatList
-              ? 0
-              : this.m_mapGroupBeacons.get(n).find(function(e) {
-                  return e.account_id == t.accountid;
-                })
-                ? jo
-                : t.persona.is_ingame
-                  ? t.persona.is_in_nonsteam_game
-                    ? -2
-                    : t.persona.m_unGamePlayedAppID
-                  : 0;
+            if (e.bFlatList) return 0;
+            var o = this.m_mapGroupBeacons.get(n);
+            if (
+              o &&
+              o.find(function(e) {
+                return e.account_id == t.accountid;
+              })
+            )
+              return jo;
+            return t.persona.is_ingame
+              ? t.persona.is_in_nonsteam_game
+                ? -2
+                : t.persona.m_unGamePlayedAppID
+              : 0;
           }),
           (e.prototype.RemoveMemberFromBucket = function(e, t, n) {
             if (-2 == t) return this.RemoveFromSingletons(e, n), !0;

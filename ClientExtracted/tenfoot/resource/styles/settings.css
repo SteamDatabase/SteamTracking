@@ -3351,7 +3351,7 @@ SettingsPanel_AlienFX .SettingsCenterContent
 
 SettingsPanel_Keyboard #LanguageList
 {
-	max-height: 230px;
+	max-height: 400px;
 	margin-bottom: 40px;
 	height: fit-children;
 	padding: 0px;
@@ -3379,7 +3379,7 @@ SettingsPanel_Keyboard #RadioButtonContainer_Suggest
 SettingsPanel_Keyboard .HorzContainer,
 SettingsPanel_Keyboard .HorzContainer Button
 {
-	width: 100%;	
+	width: 100%;
 }
 
 SettingsPanel_Keyboard .HorzContainer Button
@@ -3390,6 +3390,12 @@ SettingsPanel_Keyboard .HorzContainer Button
 SettingsPanel_Keyboard .VertContainer
 {
 	width: 800px;
+}
+
+SettingsPanel_Keyboard Panel:disabled,
+SettingsPanel_Keyboard Label:disabled
+{
+	visibility: collapse;
 }
 
 #LanguageList:descendantfocus,

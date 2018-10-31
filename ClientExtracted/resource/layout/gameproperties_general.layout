@@ -55,6 +55,9 @@
 			"Default"		"0"
 		}
 		
+		"SteamInputPerGameLabel" { controlname=label labeltext="#Steam_GameProperties_SteamInputSettings_PerGameOptIn" style="Highlight" }
+		"SteamInputPerGameCombo" { controlname=combobox }
+
 		"LaunchOptionsButton"
 		{
 			"ControlName"		"Button"
@@ -89,7 +92,10 @@
 			"ControlName"		"Label"
 			"labelText"		"#Steam_ExternalSignupPropertiesLabel"
 		}
-		
+		"Divider2"
+		{
+			"ControlName"		"Divider"
+		}
 		"FamilySharingUnsupportedLabel"
 		{
 			"ControlName"		"Label"
@@ -104,6 +110,10 @@
   
 	styles
 	{
+		Highlight
+		{
+			textcolor=text
+		}
 	}
 	
 	layout
@@ -117,10 +127,11 @@
 		place {controls=ExternalSignupLabel,ExternalSignupButton x=260 margin-top=34 dir=down margin-left=20 width=260 height=24 spacing=0 region=main }
 		
 		place {control=Divider1 start=ManualLabelName dir=down margin-top=20 region=main width=max }
-		
 		place {controls=EnableOverlayCheck,EnableDesktopGameTheater start=Divider1 dir=down margin-top=20 spacing=0 width=max region=main }
-		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 		
+		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
+		place {control=Divider2 start=CreateDesktopShortcutButton dir=down margin-top=20 region=main width=max }
+		place {controls=SteamInputPerGameLabel,SteamInputPerGameCombo start=Divider2 dir=down margin-top=20 spacing=10 width=max region=main }
 		place {controls=FamilySharingUnsupportedLabel margin-top=472 margin-left=20 }
 
 	}

@@ -9324,6 +9324,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientParentalSettings
+ b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
  b g_pClientScreenshots

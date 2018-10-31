@@ -18,6 +18,7 @@ message CMsgKeyDown {
 	optional uint32 browser_handle = 1;
 	optional uint32 keyCode = 2;
 	optional uint32 modifiers = 3;
+	optional bool is_system_key = 4;
 }
 
 message CMsgKeyChar {
@@ -49,8 +50,9 @@ message CMsgMouseDblClick {
 
 message CMsgMouseWheel {
 	optional uint32 browser_handle = 1;
-	optional int32 delta = 2;
-	optional uint32 modifiers = 3;
+	optional int32 deltax = 2;
+	optional int32 deltay = 3;
+	optional uint32 modifiers = 4;
 }
 
 message CMsgMouseMove {
@@ -254,7 +256,7 @@ message CMsgSetVerticalScroll {
 
 message CMsgSetZoomLevel {
 	optional uint32 browser_handle = 1;
-	optional uint32 zoom = 2;
+	optional double zoom = 2;
 }
 
 message CMsgViewSource {

@@ -218,6 +218,12 @@
 							<Panel id="TouchKey_EnterNoClose" class="TouchKey RightQuadrant EnterKey">
 								<Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
 							</Panel>
+							<Panel id="TouchKey_SubmitNoClose" class="TouchKey RightQuadrant EnterKey">
+								<Label id="TouchKey_Submit_Label" class="TouchKeyLabel" text="Submit" />
+							</Panel>
+							<Panel id="TouchKey_Return" class="TouchKey RightQuadrant EnterKey">
+								<Image class="TouchKeyLabel" src="file://{images}/textinput/return.tga" />
+							</Panel>
 						</Panel>
 						<Panel id="Row3" class="TouchRow AlphaNumKeyRow">
 							<Panel id="TouchKey_5_3" class="TouchKey LeftQuadrant" />

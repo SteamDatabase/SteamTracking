@@ -26,7 +26,7 @@ public:
     virtual unknown_ret InitiateGameConnectionOld(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool, void*, int) = 0;
     virtual unknown_ret TerminateGameConnection(unsigned int, unsigned short) = 0;
     virtual unknown_ret TerminateAppMultiStep(unsigned int, unsigned int) = 0;
-    virtual unknown_ret SetSelfAsPrimaryChatDestination() = 0;
+    virtual unknown_ret SetSelfAsChatDestination(bool) = 0;
     virtual unknown_ret IsPrimaryChatDestination() = 0;
     virtual unknown_ret RequestLegacyCDKey(unsigned int) = 0;
     virtual unknown_ret AckGuestPass(char const*) = 0;
@@ -105,7 +105,7 @@ public:
     virtual unknown_ret RunInstallScript(unsigned int, char const*, bool) = 0;
     virtual unknown_ret IsInstallScriptRunning() = 0;
     virtual unknown_ret GetInstallScriptState(char*, unsigned int, unsigned int*, unsigned int*) = 0;
-    virtual unknown_ret SpawnProcess(char const*, char const*, unsigned int, char const*, CGameID, char const*, unsigned int, unsigned int) = 0;
+    virtual unknown_ret SpawnProcess(char const*, char const*, unsigned int, char const*, CGameID, char const*, unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketLength(unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketData(unsigned int, void*, unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketExtendedData(unsigned int, void*, unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*) = 0;

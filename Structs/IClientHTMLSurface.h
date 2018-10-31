@@ -21,7 +21,7 @@ public:
     virtual unknown_ret MouseDoubleClick(unsigned int, ISteamHTMLSurface::EHTMLMouseButton) = 0;
     virtual unknown_ret MouseMove(unsigned int, int, int) = 0;
     virtual unknown_ret MouseWheel(unsigned int, int) = 0;
-    virtual unknown_ret KeyDown(unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers) = 0;
+    virtual unknown_ret KeyDown(unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers, bool) = 0;
     virtual unknown_ret KeyUp(unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers) = 0;
     virtual unknown_ret KeyChar(unsigned int, unsigned int, ISteamHTMLSurface::EHTMLKeyModifiers) = 0;
     virtual unknown_ret SetHorizontalScroll(unsigned int, unsigned int) = 0;
@@ -39,5 +39,6 @@ public:
     virtual unknown_ret SetPageScaleFactor(unsigned int, float, int, int) = 0;
     virtual unknown_ret SetBackgroundMode(unsigned int, bool) = 0;
     virtual unknown_ret SetDPIScalingFactor(unsigned int, float) = 0;
+    virtual unknown_ret OpenDeveloperTools(unsigned int) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
 };

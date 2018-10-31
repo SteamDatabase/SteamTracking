@@ -50,5 +50,5 @@ public:
     virtual unknown_ret SetDevkitShortcut(unsigned int, char const*) = 0;
     virtual unknown_ret RemoveShortcut(unsigned int) = 0;
     virtual unknown_ret RemoveAllTemporaryShortcuts() = 0;
-    virtual unknown_ret LaunchShortcut(unsigned int) = 0;
+    virtual unknown_ret LaunchShortcut(unsigned int, unsigned int) = 0;
 };

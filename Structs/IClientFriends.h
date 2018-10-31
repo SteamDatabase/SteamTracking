@@ -171,6 +171,7 @@ public:
     virtual unknown_ret GetEstimatedBitsPerSecond(int, bool) = 0;
     virtual unknown_ret GetPeakSample(int, bool) = 0;
     virtual unknown_ret SendResumeRequest(int) = 0;
+    virtual unknown_ret OpenFriendsDialog() = 0;
     virtual unknown_ret OpenChatDialog(CSteamID) = 0;
     virtual unknown_ret OpenInviteToTradeDialog(CSteamID) = 0;
     virtual unknown_ret StartChatRoomVoiceSpeaking(CSteamID, CSteamID) = 0;
@@ -194,6 +195,7 @@ public:
     virtual unknown_ret ActivateGameOverlayToWebPage(char const*) = 0;
     virtual unknown_ret ActivateGameOverlayToStore(unsigned int, EOverlayToStoreFlag) = 0;
     virtual unknown_ret ActivateGameOverlayInviteDialog(CSteamID) = 0;
+    virtual unknown_ret ProcessActivateGameOverlayInMainUI(char const*, CSteamID, unsigned int, bool, int) = 0;
     virtual unknown_ret NotifyGameOverlayStateChanged(bool) = 0;
     virtual unknown_ret NotifyGameServerChangeRequested(char const*, char const*) = 0;
     virtual unknown_ret NotifyLobbyJoinRequested(unsigned int, CSteamID, CSteamID) = 0;
