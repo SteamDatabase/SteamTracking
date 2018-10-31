@@ -907,7 +907,13 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'There has been an internal error initializing your transaction.  Please contact support for assistance.';
 					break;
 				case 6:
+					error_text = 'There was a problem using the selected payment method for your purchase.  Please select another payment method for your purchase and try again.';
+					break;
+				case 82:
 					error_text = 'This payment method is currently unavailable for use.  We are working to resolve the issue.  Please select another payment method for your purchase and try again.';
+					break;
+				case 83:
+					error_text = 'The selected payment method is not supported for a product you are purchasing.  Please select another payment method for your purchase and try again.';
 					break;
 				case 33:
 					error_text = 'Your purchase could not be completed because your credit card has expired. Please enter a new credit card and try again.';

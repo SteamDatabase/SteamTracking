@@ -55,6 +55,9 @@ body
 .uploadTable td {
     padding: 5px 14px;
 }
+.uploadHistory td {
+	padding: 0px 0px;
+}
 
 #UploadInfoDelay
 {
@@ -112,4 +115,14 @@ color: white;
 }
 .valveArea.padded {
 	padding: 8px;
+}
+
+.uploadTable .broadcast_history_numeric,
+.broadcast_history_numeric {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.broadcast_row_img {
+	height: 40px;
 }

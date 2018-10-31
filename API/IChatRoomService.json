@@ -56,6 +56,11 @@
                     "name": "appid",
                     "type": "uint32",
                     "optional": false
+                },
+                {
+                    "name": "suppress_log_messages",
+                    "type": "bool",
+                    "optional": false
                 }
             ]
         },
@@ -128,6 +133,16 @@
                 {
                     "name": "appid",
                     "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_kick_actor",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "suppress_log_messages",
+                    "type": "bool",
                     "optional": false
                 }
             ]

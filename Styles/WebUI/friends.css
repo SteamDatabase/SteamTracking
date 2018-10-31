@@ -327,6 +327,1626 @@
   width: 120px;
   height: 120px; }
 
+.emoticon_NewEmoticonIndicator_3NVON {
+  background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  left: 55%;
+  bottom: 55%;
+  display: flex;
+  align-items: center; }
+
+.emoticon_NewEmoticonIndicator_3NVON .emoticon_NewEmoticonCircle_3mNrG {
+  width: 4px;
+  height: 4px;
+  background-color: yellow;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto; }
+
+
+.chatentry_chatEntryControls_1Q6Ut {
+  /* for flyouts */
+  position: relative;
+  /* for children */
+  display: flex;
+  flex-direction: row;
+  /* our layout */
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px; }
+
+.chatentry_chatTextarea_1jyF1 {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  /*flex: 6;*/
+  flex-shrink: 1;
+  width: 100%;
+  min-width: 164px; }
+
+.chatentry_chatEntryActionsGroup_3fkdx {
+  padding: 2px;
+  box-shadow: black 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px; }
+
+.chatentry_chatEntryActionsContainer_1SW3f,
+.chatentry_chatEntryActionsGroup_3fkdx {
+  display: flex;
+  flex-direction: row; }
+
+.chatentry_minHeightZero_3eKqX {
+  min-height: 0; }
+
+.BroadcastView {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column; }
+
+.broadcastHeader {
+  height: 96px;
+  background-color: #393947;
+  border-bottom: 1px solid black; }
+
+.broadcastMainView {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; }
+
+.leftContainer {
+  display: flex;
+  flex: 1 0;
+  align-items: center;
+  flex-direction: column; }
+
+.rightContainer {
+  min-width: 320px;
+  /*flex: 1 0;*/
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black; }
+
+.broadcastChatContainer {
+  background-color: #393947;
+  flex: 1;
+  width: 100%; }
+
+.videoFooter {
+  display: none; }
+
+.videoControls {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  transition-duration: .3s;
+  user-select: none; }
+
+.videoContainer.HidePlayerControls .videoControls,
+.videoContainer.HidePlayerControls .STV_BroadcastClose {
+  opacity: 0;
+  bottom: -24px;
+  transition-duration: .3s;
+  pointer-events: none; }
+
+.videoContainer:hover.HidePlayerControls .videoControls,
+.videoContainer:hover.HidePlayerControls .STV_BroadcastClose {
+  transition-duration: .8s; }
+
+.videoControls .videoControlsBottom {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(29, 30, 35, 0) 100%); }
+
+.STV_BroadcastClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
+  margin: 10px;
+  background-color: #0002;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: .75;
+  z-index: 21; }
+
+.ChatRoomGroup_Main_Content.chatHidden .STV_BroadcastClose {
+  margin-right: 40px; }
+
+.STV_BroadcastClose:hover {
+  background-color: #000a;
+  opacity: 1; }
+
+.videoContainer.HidePlayerControls video {
+  cursor: none; }
+
+.BroadcastVideoWatchState,
+.BroadcastVideoUserInputNeeded {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: default; }
+
+.BroadcastVideoWatchState_Text {
+  text-align: center;
+  margin: 0px 10%; }
+
+.BroadcastVideoUserInputNeeded {
+  cursor: pointer; }
+
+.BroadcastVideoUserInputNeeded:hover {
+  color: white; }
+
+.BroadcastVideoUserInputNeeded .SVGIcon_Play {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #fff1; }
+
+.BroadcastVideoUserInputNeeded .SVGIcon_Play path {
+  fill: #fff4;
+  stroke: white;
+  stroke-width: 6px;
+  stroke-dasharray: 0 576;
+  stroke-linecap: butt;
+  transition: all .12s ease-in-out;
+  transform: translateX(20px); }
+
+.BroadcastVideoUserInputNeeded:hover .SVGIcon_Play path {
+  stroke-dasharray: 512 0;
+  fill: #fffc; }
+
+.videoTimelineMain {
+  width: calc( 100% - 8%);
+  margin-left: 4%;
+  margin-top: 48px;
+  position: relative; }
+
+.videoTimelineMain .STV_timelineContainer {
+  padding-top: 0px;
+  padding-bottom: 6px; }
+
+.videoTimelineMain .STV_timelineContainer:focus {
+  outline: none; }
+
+.videoTimelineMain ._DialogInputContainer {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px; }
+
+.DialogSlider_SliderContainer {
+  height: 22px;
+  padding-top: 6px;
+  cursor: pointer; }
+
+.videoTimelineMain .DialogSlider_Slider {
+  border: none;
+  height: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  background-color: #405358;
+  box-shadow: 0px 1px 8px 2px black, 1px 2px 28px black; }
+
+.videoTimelineMain .STV_timelineGhostValue,
+.videoTimelineMain .STV_timelineValue,
+.videoTimelineMain .STV_timelineNoVideo {
+  border-radius: 2px;
+  background: #368fa7;
+  background: linear-gradient(to right, rgba(54, 143, 167, 0.45) 0px, rgba(54, 143, 167, 0.5) calc( 100% - 64px), #5dc3ff 100%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+
+.videoTimelineMain .STV_timelineValue {
+  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  -webkit-mask-size: 4px 15px;
+  mask: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  mask-size: 5px 5px; }
+
+.videoTimelineMain .STV_timelineGhostValue {
+  background: linear-gradient(to right, #368fa7 0%, #5dc3ff calc( 100% - 4px), #dcf2ff calc( 100% - 1px), #dcf2ff 100%);
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: width .2s linear; }
+
+.videoTimelineMain .STV_timelineNoVideo {
+  background: #3a3e46;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  transition: width .2s linear;
+  background-image: url("../../images/webui/textures/novideo_bg.png");
+  background-size: 8px; }
+
+.STV_timelineContainer.minimapActive .STV_timelineGhostValue {
+  transition: none; }
+
+.STV_BroadcastSettings,
+.videoControlsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+
+.videoControlsButtons.LeftSpacer {
+  width: calc(50% - 85px);
+  flex-shrink: 1; }
+
+.videoControlsButtons.PlayControls {
+  flex-shrink: 0;
+  flex-grow: 0; }
+
+.videoControlsButtons.GoLive {
+  text-align: left;
+  justify-content: flex-start;
+  width: 110px;
+  flex-shrink: 0;
+  flex-grow: 0; }
+
+.STV_BroadcastSettings {
+  justify-content: flex-end;
+  flex-grow: 1; }
+
+.videoControlButton {
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all .12s ease-in-out; }
+
+.videoControlButton:hover {
+  filter: brightness(1.3); }
+
+.STV_BroadcastSettings .videoControlButton {
+  width: 18px;
+  height: 18px; }
+
+.STV_BroadcastSettings .videoControlButton .SVGIcon_Settings path {
+  fill: transparent;
+  stroke: white;
+  stroke: #7e7e7e;
+  stroke-width: 10px; }
+
+.STV_BroadcastSettingsPanel {
+  padding: 8px;
+  text-align: right;
+  border: 1px solid #333e;
+  background: #000c;
+  position: absolute;
+  margin-top: -156px;
+  margin-left: -64px;
+  z-index: 7; }
+
+.STV_BroadcastContextMenuPanel {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #333e;
+  background: #000c;
+  position: absolute;
+  z-index: 22; }
+
+.STV_BroadcastSettingsMenuItems {
+  background: #234e;
+  font-size: 12px; }
+
+.STV_BroadcastSettingsMenuItems .contextMenuItem {
+  cursor: pointer;
+  padding: 2px 12px; }
+
+.STV_BroadcastSettingsMenuItems .contextMenuItem:hover {
+  color: white;
+  background-color: #3d5b79; }
+
+.STV_BroadcastSettingsMenuItems .contextMenuItem.menuChecked {
+  font-weight: bold;
+  position: relative; }
+
+.STV_BroadcastSettingsMenuItems .menuChecked .contextMenuCheckMark {
+  right: 4px;
+  top: 9px;
+  left: initial;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%; }
+
+.videoControlButton .SVGIcon_Button {
+  margin-left: 6px; }
+
+.videoControlButton.controlFlip .SVGIcon_Button {
+  margin-left: -6px; }
+
+.videoControlButton .SVGIcon_Button polyline,
+.videoControlButton .SVGIcon_Button path {
+  fill: #7e7e7e;
+  transition: fill .12s ease-in-out; }
+
+.videoControlButton:hover .SVGIcon_Button polyline,
+.videoControlButton:hover .SVGIcon_Button path,
+.BroadcastVolumeControl:hover .SVGIcon_Button polyline,
+.BroadcastVolumeControl:hover .SVGIcon_Button path {
+  fill: #dadada; }
+
+.STV_BroadcastSettings .videoControlButton.VideoSettingsOpen .SVGIcon_Button polyline,
+.STV_BroadcastSettings .videoControlButton.VideoSettingsOpen .SVGIcon_Button path {
+  fill: #6dcff6;
+  stroke: #6dcff6; }
+
+.videoControlButton.jumpToMarker .Arrow,
+.videoControlButton.jumpToMarker .preArrowBox {
+  fill: #b29a7c; }
+
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .Arrow,
+.videoControlButton.jumpToMarker:not(.noMarkersInDirection):hover .preArrowBox {
+  fill: #ffead1; }
+
+.videoControlButton.jumpToMarker.noMarkersOrSegments {
+  visibility: hidden;
+  display: none; }
+
+.videoControlButton.jumpToMarker.noMarkersInDirection {
+  cursor: default; }
+
+.videoControlButton.jumpToMarker.noMarkersInDirection .Arrow,
+.videoControlButton.jumpToMarker.noMarkersInDirection .preArrowBox {
+  fill: #66635e; }
+
+.videoControlButton.videoControlGoLive {
+  display: flex;
+  width: fit-content; }
+
+.videoControlButton.videoControlGoLive .SVGIcon_Button {
+  width: 32px; }
+
+.videoControlButton.videoControlGoLive .Arrow {
+  fill: #216c91; }
+
+.videoControlButton.videoControlGoLive:hover .Arrow {
+  fill: #3da5da; }
+
+.videoControlButton.videoControlGoLive .jumpGoLive {
+  color: white;
+  font-size: 12px;
+  background-color: #216c91;
+  line-height: 15px;
+  height: 17.5px;
+  margin-top: 7px;
+  padding: 0 6px;
+  padding-top: 1px;
+  text-align: center;
+  border-radius: 2px;
+  margin-left: -6px;
+  transition: all .12s ease-in-out;
+  margin-right: -60px;
+  text-transform: uppercase; }
+
+.videoControlButton.videoControlGoLive:hover .jumpGoLive {
+  background-color: #3da5da; }
+
+.videoControlButton.videoControlGoLive.isLiveEdge:hover .jumpGoLive,
+.videoControlButton.videoControlGoLive.isLiveEdge .jumpGoLive {
+  background-color: transparent;
+  color: #3da5da; }
+
+.videoControlButton.videoControlGoLive.isLiveEdge svg {
+  display: none; }
+
+.videoControlButton.videoControlGoLive.isLiveEdge {
+  cursor: default; }
+
+.videoControlButton .jumpAheadValue {
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  color: #141823;
+  font-size: 12px; }
+
+.videoControlButton.buttonPlayPause {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(126, 126, 126, 0.5);
+  border-radius: 50%;
+  background-color: rgba(126, 126, 126, 0.1); }
+
+.videoControlButton.buttonPlayPause .SVGIcon_Play {
+  width: 80%;
+  height: 80%;
+  margin-top: 3px;
+  margin-left: 5px; }
+
+.videoControlButton.buttonPlayPause .SVGIcon_Pause {
+  width: 75%;
+  height: 75%;
+  margin-top: 4px;
+  margin-left: 4px; }
+
+.videoControlButton.buttonPlayPause .SVGIcon_Button path {
+  fill: white; }
+
+.videoControlButton.buttonPlayPause:hover {
+  border: 1px solid #7e7e7e;
+  background-color: #7e7e7e; }
+
+.BroadcastVolumeControl {
+  /* collapsed width */
+  width: 34px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out; }
+
+.BroadcastVolumeControl.ShowVolumeSlider {
+  /* width must match BroadcastVolumeControl_FixedLayout */
+  width: 99px; }
+
+.BroadcastVolumeControl_FixedLayout {
+  /* width must match BroadcastVolumeControl */
+  width: 99px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.BroadcastVolumeControl .videoControlButton {
+  margin-right: 16px; }
+
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundWaves {
+  display: none; }
+
+.BroadcastVolumeControl.muted .SVGIcon_Volume .SoundX line {
+  stroke: #7e7e7e;
+  stroke-width: 10px; }
+
+.BroadcastVolumeControl.muted:hover .SVGIcon_Volume .SoundX line {
+  stroke: #dadada; }
+
+.BroadcastVolumeControl .videoControlButton .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton .SoundWavesMed {
+  transition: all .32s ease-in-out; }
+
+.BroadcastVolumeControl .videoControlButton.HighVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.MedVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHighest,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesHigh,
+.BroadcastVolumeControl .videoControlButton.LowVolume .SoundWavesMed {
+  opacity: 0; }
+
+.BroadcastVolumeSlider {
+  position: relative;
+  width: 50px;
+  height: 22px;
+  cursor: pointer; }
+
+.BroadcastVolumeSlider_Track {
+  background-color: #7e7e7e;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  bottom: 10px; }
+
+.BroadcastVolumeSlider_Fill {
+  background-color: #dadada;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px; }
+
+.BroadcastVolumeSlider_Thumb {
+  background-color: #dadada;
+  position: absolute;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  left: 100%;
+  margin-left: -6px;
+  top: 50%;
+  margin-top: -6px; }
+
+.STV_timelineGrabber_Wrapper {
+  position: absolute;
+  top: -25px;
+  bottom: -3px;
+  height: 54px;
+  width: 24px;
+  z-index: 6;
+  margin-left: -14px; }
+
+.videoTimelineMain .STV_timelineGrabber {
+  /* shouldn't this be 50%? */
+  margin-left: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  transition: transform .0s ease-in-out;
+  pointer-events: none; }
+
+.STV_timelineContainer .STV_timelineGrabber .rightarrow,
+.STV_timelineContainer .STV_timelineGrabber .leftarrow {
+  transform: scaleX(0);
+  transform-origin: 50% 50%; }
+
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenRight .rightarrow,
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft .leftarrow {
+  opacity: 1;
+  transform: scaleX(1);
+  fill: #5dc2fe;
+  stroke: black;
+  stroke-width: 10px;
+  transition: all .16s ease-in-out; }
+
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenRight .grabber,
+.STV_timelineContainer:not(.grabberDown) .STV_timelineGrabber.grabberOffScreenLeft .grabber {
+  opacity: 1;
+  transform: scale(1);
+  fill: #5dc2fe;
+  stroke: black;
+  stroke-width: 10px;
+  transition: all .16s ease-in-out; }
+
+.STV_timelineGrabberArrow {
+  width: 24px;
+  height: 44px;
+  margin-top: -6px;
+  margin-left: 26px;
+  pointer-events: all; }
+
+.STV_timelineGrabberArrow .SVGIcon_STVTimelineGrabber .grabber {
+  transform: scale(2, 1.25);
+  transform-origin: 50% 50%;
+  fill: #5dc2fe;
+  stroke: black;
+  stroke-width: 6px;
+  vector-effect: non-scaling-stroke; }
+
+.STV_timelineGrabberArrow:hover .SVGIcon_STVTimelineGrabber .grabber {
+  fill: white; }
+
+.STV_timelineMinimapContainer .STV_timelineMapCurTime {
+  display: none;
+  width: 2px;
+  height: 6px;
+  background-color: white;
+  position: absolute;
+  top: 6px;
+  margin-left: -1px; }
+
+.STV_timelineGrabberValue {
+  width: fit-content;
+  padding: 0 3px;
+  text-align: center;
+  white-space: nowrap;
+  background: linear-gradient(to bottom, #5dc3ff 0%, #5dc3ff 80%);
+  box-shadow: 0px -4px 5px 2px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  color: white;
+  flex: 0 1;
+  z-index: 2;
+  margin-bottom: -2px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  margin-left: 24px;
+  margin-top: -4px;
+  margin-bottom: 2px; }
+
+.STV_timelineContainer.grabberDown .STV_timelineGrabberValue,
+.STV_timelineGrabber:not(.grabberOffscreen):hover .STV_timelineGrabberValue {
+  opacity: 1; }
+
+.timelineMarker {
+  width: 8px;
+  height: 32px;
+  z-index: 1;
+  position: absolute;
+  top: -8px;
+  left: 10%; }
+
+.timelineMarkerIcon {
+  width: 24px;
+  height: 32px;
+  margin-left: -8px;
+  pointer-events: none; }
+
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  fill: #b29a7c;
+  stroke: black;
+  stroke-width: 6px; }
+
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  fill: #886b48;
+  transform: scale(0.6) translateY(26px);
+  transform-origin: 50% 50%;
+  transition: all .16s ease-in-out; }
+
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .pointer {
+  transform: scale(1) translateY(0px); }
+
+.timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  transform: scale(2, 1);
+  transform-origin: 50% 50%;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 0.5px; }
+
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker {
+  cursor: pointer; }
+
+.timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
+  fill: #ffe9cd; }
+
+.STV_timelineThumbnailContainer {
+  position: absolute;
+  width: 72px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: #5dc3ff;
+  background: linear-gradient(to top, white 0%, #b29a7c 80%);
+  margin-left: -32px;
+  top: -52px;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: 50% 100%;
+  z-index: 2;
+  pointer-events: none; }
+
+.STV_timelineThumbnailContainer.thumbnailVisible {
+  opacity: 1;
+  transform: scale(1); }
+
+.STV_timelineContainer.grabberDown .STV_timelineThumbnailContainer {
+  opacity: 1;
+  transform: scale(1);
+  top: -64px;
+  background: linear-gradient(to top, #5dc3ff 0%, #166b9c 80%); }
+
+.STV_timelineThumbnail {
+  width: calc( 100% - 4px);
+  height: calc( 100% - 4px);
+  padding: 2px; }
+
+.STV_timelineThumbnail_Img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  /*object-fit: contain;*/ }
+
+.STV_timelineSegmentsContainer {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 16px;
+  width: 100%;
+  position: relative; }
+
+.noSegments .STV_timelineSegmentsContainer {
+  display: none; }
+
+.STV_timelineSegment {
+  margin-right: 2px;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 16px;
+  transition: opacity .1s linear; }
+
+.STV_timelineSegment:hover {
+  z-index: 5;
+  text-shadow: 0px 0px 2px #000, 1px 1px 3px #000; }
+
+.STV_timelineSegment:hover .STV_timelineSegmentBackFill,
+.STV_timelineSegment:hover .STV_timelineSegmentFrontFill {
+  opacity: 1; }
+
+.STV_timelineSegment:hover div {
+  border-color: #cacaca; }
+
+.STV_timelineSegmentFrontFill {
+  width: 8px;
+  height: 100%;
+  border: 1px solid grey;
+  border-bottom: 0px solid transparent;
+  border-right: 0px solid transparent;
+  margin-top: 6px;
+  margin-right: 4px;
+  opacity: .3;
+  pointer-events: none;
+  transition: opacity .1s ease-in-out; }
+
+.STV_timelineSegment.hideFront .STV_timelineSegmentFrontFill {
+  border-left: 0px solid transparent;
+  border-top-style: dotted; }
+
+.STV_timelineSegmentLabel {
+  flex-shrink: 0;
+  transition: color .1s ease-in-out; }
+
+.STV_timelineSegment:hover .STV_timelineSegmentLabel {
+  color: white !important; }
+
+.STV_timelineSegmentBackFill {
+  flex: 1;
+  height: 100%;
+  border: 1px solid grey;
+  border-bottom: 0px solid transparent;
+  border-left: 0px solid transparent;
+  margin-top: 6px;
+  margin-left: 4px;
+  opacity: .3;
+  pointer-events: none;
+  transition: opacity .1s ease-in-out; }
+
+.STV_timelineMinimapContainer {
+  height: 22px;
+  flex: 1;
+  position: relative;
+  margin-top: 72px;
+  margin-right: 32px; }
+
+.STV_timelineMinimap {
+  width: 100%;
+  height: 6px;
+  padding: 6px 0;
+  padding-top: 7px; }
+
+.STV_timelineMinimapLine {
+  width: 100%;
+  height: 3px;
+  background-color: #405358; }
+
+.STV_timelineMinimapLine.Played {
+  background-color: #216c91;
+  background: linear-gradient(to right, #368fa7 0px, #368fa7 calc( 100% - 6px), #5dc3ff 100%);
+  position: absolute;
+  top: 7px;
+  transition: all .2s ease-in-out; }
+
+.STV_timelineMapWindow {
+  height: 100%;
+  border: 0px solid #fff0;
+  border-top: 1px dashed #fff2;
+  border-bottom: 1px dashed #fff2;
+  position: absolute;
+  top: -2px;
+  backdrop-filter: brightness(160%);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: flex; }
+
+.STV_timelineMapWindowCenter {
+  flex: 1;
+  background-color: #06f1;
+  cursor: pointer; }
+
+.STV_timelineMapWindowCenter:hover {
+  background-color: rgba(148, 191, 255, 0.144); }
+
+.STV_timelineMapWindowEdge {
+  width: 4px;
+  height: 100%;
+  background-color: rgba(213, 228, 255, 0.5);
+  flex-shrink: 0;
+  cursor: ew-resize; }
+
+.STV_timelineMapWindowEdge:hover {
+  background-color: white;
+  cursor: ew-resize; }
+
+.STV_BroadcastController {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 64px; }
+
+.STV_BroadcastTooltip {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  padding: 0 4px;
+  border-radius: 4px;
+  user-select: none;
+  background-color: #216c91;
+  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.5), 2px 3px 32px rgba(0, 0, 0, 0.8);
+  z-index: 1000; }
+
+.dash_video_stats {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: block;
+  background: rgba(40, 60, 82, 0.65);
+  /* So we can see it over the video */
+  padding: 8px;
+  color: #cfdae4;
+  font: 14px Sans-Serif;
+  backdrop-filter: blur(8px);
+  margin: 6px;
+  border: 1px solid black;
+  z-index: 21; }
+
+.dash_video_stats .videoStatsValue {
+  color: white; }
+
+.dash_video_stats .dash_stat_close_button {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: #0005;
+  border-radius: 4px;
+  padding: 2px;
+  margin: 0;
+  cursor: pointer; }
+
+.dash_video_stats .dash_stat_close_button:focus,
+.dash_video_stats .dash_stat_close_button:active {
+  outline: none; }
+
+.dash_video_stats .dash_stat_close_button svg {
+  width: 100%;
+  height: 100%; }
+
+.dash_video_stats .dash_stat_close_button svg line {
+  stroke: #c9d3df;
+  stroke-width: 24px; }
+
+.dash_video_stats .dash_stat_close_button:hover svg line {
+  stroke: white; }
+
+.dash_stat_close_button {
+  float: right; }
+
+.BroadcastTab {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.ToggleBroadcastChat {
+  padding: 7px;
+  border-radius: 2px;
+  margin: 8px 8px 8px 0px;
+  align-self: center;
+  background-color: #7a6ebe;
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+  cursor: pointer; }
+
+.ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transform: rotateZ(180deg);
+  transition: all .16s ease-in-out; }
+
+.ChatCollapsed .ToggleBroadcastChat .SVGIcon_DoubleArrow {
+  transform: rotateZ(0deg); }
+
+.BroadcastTabHeaderContainer {
+  display: flex;
+  justify-content: flex-end; }
+
+.TheaterMode .BroadcastTabHeaderContainer {
+  display: none; }
+
+.BroadcastTab_OverBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column; }
+
+.BroadcastTab_HeaderRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  width: 356px; }
+
+.BroadcastContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4px;
+  padding: 18px 16px;
+  padding-top: 0px; }
+
+.TheaterMode .BroadcastContainer {
+  padding: 0;
+  height: 100%; }
+
+.BroadcastChat {
+  max-width: 340px;
+  min-width: 340px;
+  flex: 1;
+  background-color: #22252b;
+  font-size: 0;
+  position: relative; }
+
+.BroadcastChat iframe {
+  border: 0px;
+  height: 100%;
+  width: 100%; }
+
+.BroadcastSection,
+.BroadcastContainerSection {
+  align-self: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+  flex-shrink: 0; }
+
+.BroadcastSection {
+  position: relative; }
+
+.BroadcastContainerSection {
+  flex: 1; }
+
+.BroadcastSection {
+  width: 100%;
+  max-width: 100%;
+  max-height: calc( 100% - 50px); }
+
+.BroadcastDetailsSection {
+  flex: 1;
+  display: flex;
+  user-select: none;
+  min-height: 50px; }
+
+.TheaterMode .BroadcastSection {
+  max-height: 100%;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.TheaterMode .BroadcastDetailsSection {
+  display: none; }
+
+.BroadcastDetailsSection .BroadcastDetails {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: relative;
+  flex: 1;
+  overflow: hidden; }
+
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+  height: 50px;
+  font-size: 16px;
+  padding: 8px 8px;
+  box-sizing: border-box;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.BroadcastDetailsHeader_ViewerCount {
+  margin-top: 6px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 13px;
+  pointer-events: none;
+  text-decoration: none; }
+
+.BroadcastDetailsHeader_ViewerCount .SVGIcon_Viewers {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  margin-bottom: -3px; }
+
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .backGuy {
+  fill: white; }
+
+.BroadcastButton.WatchWithFriends .SVGIcon_Viewers .frontGuy {
+  fill: #b6c3f8; }
+
+.videoContainer .BroadcastDetailsHeader_ViewerCount {
+  margin-left: 0px; }
+
+.videoContainer .videoBackground,
+.BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
+  width: 100%;
+  opacity: 0.6;
+  user-select: none;
+  filter: blur(24px) saturate(2) brightness(1.21);
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) -25%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) -25%, rgba(0, 0, 0, 0) 100%);
+  height: 100%;
+  max-height: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0; }
+
+.videoContainer .videoBackground {
+  opacity: 0.4;
+  mask-image: none;
+  -webkit-mask-image: none; }
+
+.BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #c1c6cf;
+  flex-shrink: 0; }
+
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink {
+  color: #778494;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content; }
+
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLink:hover {
+  color: #AAA; }
+
+.BroadcastDetails .BroadcastDetailsHeader .BroadcastLanguage {
+  color: #8277b1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-shrink: 0;
+  cursor: pointer; }
+
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Info {
+  display: flex;
+  align-items: center; }
+
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .Actions {
+  margin-left: 40px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .ContextMenuButton {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  padding-top: 4px; }
+
+.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader .ContextMenuButton .SVGIcon_DownArrowContextMenu {
+  fill: #8277b1;
+  width: 16px;
+  height: 16px;
+  stroke-width: 8px;
+  stroke: #8277b1;
+  margin-left: 4px; }
+
+.BroadcastChatDivider {
+  background-color: #333741;
+  border: 0.5px solid #121216;
+  z-index: 1; }
+
+.TheaterMode .BroadcastChatDivider {
+  background-color: #121314; }
+
+.TheaterMode .BroadcastChatDivider:hover,
+.BroadcastChatDivider:hover {
+  background-color: #40464f; }
+
+.BroadcastTheaterToggle,
+.BroadcastChatPositionToggle,
+.BroadcastFullscreenToggle {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat; }
+
+.BroadcastChatPositionToggle.bottom {
+  background-image: url("../../images/webui/icon_view_chatbottom.png?v=2");
+  margin-right: 4px; }
+
+.BroadcastChatPositionToggle.right {
+  background-image: url("../../images/webui/icon_view_chatright.png?v=2");
+  margin-right: 4px; }
+
+.BroadcastFullscreenToggle {
+  background-image: url("../../images/webui/icon_view_fullscreen.png?v=2");
+  margin-left: 4px; }
+
+.BroadcastTheaterToggle {
+  background-image: url("../../images/webui/icon_view_theater.png?v=2"); }
+
+.BroadcastChatDivider.horizontal {
+  min-width: 6px;
+  width: 6px;
+  height: 100%;
+  cursor: ew-resize; }
+
+.BroadcastChatDivider.vertical {
+  width: 100%;
+  min-height: 6px;
+  height: 6px;
+  cursor: ns-resize; }
+
+.chatWindow.broadcastVisible .chatBody {
+  /*border: 1px solid red;*/
+  min-height: 200px;
+  flex: 1;
+  flex-shrink: 0; }
+
+.videoContainer {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*border: 2px dotted orange;*/
+  align-items: center;
+  overflow: hidden; }
+
+.videoContainer .BroadcastDetails {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(29, 30, 35, 0) 100%);
+  height: 64px;
+  padding: 8px 16px;
+  font-size: 20px;
+  text-shadow: 0px 0px 2px #000, 1px 1px 3px 4px #000, 1px 1px 8px 6px #000;
+  display: none;
+  transition: all .3s ease-in-out; }
+
+.videoContainer.HidePlayerControls .BroadcastDetails {
+  transform: translateY(-24px); }
+
+.TheaterMode .videoContainer .BroadcastDetails,
+.videoContainer.fullscreenVideo .BroadcastDetails {
+  display: block; }
+
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .BroadcastTitle {
+  color: #ccc; }
+
+.videoContainer .BroadcastDetails .BroadcastDetailsHeader .AppTitle {
+  color: #eceff5; }
+
+.videoContainerSizer {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; }
+
+.videoSrc {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /*border: 2px dashed white;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-color: #18191d; }
+
+iframe.steamTVLogin {
+  border: none;
+  width: 800px;
+  max-width: 100%;
+  height: 60vh;
+  max-height: 500px; }
+
+.DialogContent.SteamTVLoginDialog {
+  width: 800px;
+  padding: 0;
+  max-width: 100%; }
+
+.DialogContent.SteamTVLoginDialog > .DialogContent_InnerWidth {
+  max-width: 800px; }
+
+.FullpageBroadcastBackdrop {
+  filter: blur(50px);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  background-position: center center; }
+
+.StandalonePlayer .FullpageBroadcastBackdrop {
+  z-index: -100; }
+
+.BroadcastButton {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  user-select: none; }
+
+.StandalonePlayerHeader {
+  background-color: rgba(23, 26, 33, 0.3);
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, rgba(51, 102, 122, 0.5), rgba(0, 203, 255, 0.5)) 100% 1;
+  height: 71px;
+  display: flex;
+  justify-content: space-between; }
+
+.StandalonePlayer.TheaterMode .StandalonePlayerHeader {
+  display: none; }
+
+.StandalonePlayerHeader .Logo {
+  margin: 12px 0 0 20px;
+  width: 154px;
+  height: 46px;
+  display: inline-block;
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/images/webui/logo_steamtv.png"); }
+
+.BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px);
+  position: relative; }
+
+.StandalonePlayer .BroadcastContainerSectionVideoContainer {
+  max-height: calc(100vh - 150px); }
+
+.TheaterMode .BroadcastContainerSectionVideoContainer {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 100%; }
+
+.BroadcastStreamDetails {
+  padding: 10px; }
+
+.WatchWithFriends {
+  margin: 0px 16px 0px 4px;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  justify-content: center; }
+
+.WatchWithFriends svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+  vertical-align: top;
+  display: inline-block; }
+
+.BroadcastStreamDetails .BroadcastAppName {
+  color: #fff;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 5px; }
+
+.BroadcastStreamDetails .BroadcastTitle {
+  color: #778494;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 10px; }
+
+.BroadcastStreamDetails .BroadcastLanguage {
+  color: #9582e7;
+  font-size: 18px; }
+
+.StandalonePlayer,
+.StandalonePlayer .BroadcastContainerSection,
+.StandalonePlayer .BroadcastContainer {
+  background: transparent; }
+
+.StandalonePlayer.TheaterMode,
+.TheaterMode .BroadcastContainerSection,
+.TheaterMode .BroadcastContainer {
+  height: 100%; }
+
+.StandalonePlayer .BroadcastStreamDetails {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 5px; }
+
+.STV_Logo {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-left: 16px; }
+
+.STV_Logo .SVGIcon_SteamTV {
+  width: 152px;
+  height: 38px;
+  margin-right: 3px; }
+
+.STV_Logo_STEAM,
+.STV_Logo_TV {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 0;
+  color: #7d6ebc;
+  user-select: none; }
+
+.STV_Logo_TV {
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  margin-top: 1px; }
+
+.STV_Logo_STEAM {
+  font-weight: bold;
+  margin-right: 1px;
+  background: linear-gradient(to right, #5b6adb 0%, #7d6ebc 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.STV_Logo .SVGIcon_Throbber #mainOutline path {
+  stroke-width: 0px; }
+
+.STV_Logo .SVGIcon_Throbber #mainOutline path,
+.STV_Logo .SVGIcon_Throbber #partCircle path {
+  display: none; }
+
+.STV_Logo .SVGIcon_Throbber #mainOutline .steamTV {
+  display: block; }
+
+.STV_Logo .SVGIcon_Throbber #topCircle circle {
+  stroke: #5069e5; }
+
+.STV_Logo .SVGIcon_Throbber #bottomCircle path {
+  fill: #4367f0;
+  stroke-width: 0px; }
+
+.BroadcastQuakeLiveOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../images/webui/broadcast/quake_live_2018.jpg");
+  background-size: cover; }
+
+.BroadcastCSGOLondonOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../images/webui/broadcast/steam_broadcast_london_2018.jpg");
+  background-size: cover; }
+
+.BroadcastCSGOLondonOffline_Schedule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.BroadcastCSGOLondonOffline_Prelims,
+.BroadcastCSGOLondonOffline_Group {
+  color: #d3d3d3;
+  line-height: 36px; }
+
+.BroadcastCSGOLondonOffline_Playoffs {
+  color: #ff6600;
+  line-height: 36px; }
+
+.BroadcastArtifactOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../images/webui/broadcast/ArtifactAtPAX_bg.jpg");
+  background-size: cover; }
+
+.BroadcastArtifactOffline_Schedule {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.BroadcastArtifactOffline_Text {
+  color: #d3d3d3;
+  line-height: 18px; }
+
+@media screen and (max-width: 420px) and (min-height: 420px) {
+  .BroadcastContainer {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between; }
+  .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+    flex: 1; }
+  .BroadcastContainerSection {
+    flex: 0 0 auto;
+    align-self: stretch; }
+  .BroadcastTab_HeaderRow {
+    width: 100%; }
+  .BroadcastDetailsSection {
+    flex-basis: auto;
+    max-height: 32px; }
+  .BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
+    display: none; }
+  .WatchWithFriends {
+    display: none; }
+  .BroadcastChat {
+    max-width: 100%;
+    min-width: 0; }
+  .StandalonePlayerHeader {
+    position: absolute;
+    z-index: 12;
+    right: 0;
+    left: 0;
+    background: none;
+    border: none;
+    display: none; }
+  .StandalonePlayer {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+  .StandalonePlayer .BroadcastContainer {
+    height: 100%;
+    flex: 1; }
+  .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
+    font-size: 12px; }
+  .dash_video_stats {
+    font-size: 10px;
+    line-height: 10px; }
+  .STV_BroadcastController {
+    margin: 0; }
+  .STV_BroadcastSettings {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #0008;
+    border-radius: 8px;
+    padding-right: 16px;
+    filter: brightness(1.3); }
+  .STV_BroadcastSettingsPanel {
+    margin-top: 28px !important; } }
+
+@media screen and (max-width: 830px) and (max-height: 420px) {
+   {
+    /*
+
+
+
+	.BroadcastTab_HeaderRow
+	{
+		width: 100%;
+	}
+
+	.BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur
+	{
+		display: none;
+	}
+
+	#friendslist-container.fullheight
+	{
+	}
+
+
+
+	.StandalonePlayer .BroadcastContainer
+	{
+		height: 100%;
+		flex: 1;
+
+	}
+
+	.BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader
+	{
+		font-size: 12px;
+
+	}
+
+	.dash_video_stats
+	{
+		font-size: 10px;
+		line-height: 10px;
+	}
+
+	.STV_BroadcastController
+	{
+		margin: 0;
+	}
+
+*/ }
+    .BroadcastContainer {
+      padding: 0;
+      margin: 0;
+      justify-content: space-between;
+      height: 100%; }
+    .StandalonePlayerHeader {
+      position: absolute;
+      z-index: 12;
+      right: 0;
+      left: 0;
+      background: none;
+      border: none;
+      display: none; }
+    .STV_BroadcastSettings {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background-color: #0008;
+      border-radius: 8px;
+      padding-right: 16px;
+      filter: brightness(1.3); }
+    .WatchWithFriends {
+      display: none; }
+    .STV_BroadcastSettingsPanel {
+      margin-top: 28px !important; }
+    .StandalonePlayer {
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
+    .StandalonePlayer .BroadcastContainerSectionVideoContainer {
+      flex: 1;
+      max-height: calc(100% - 32px); }
+    .BroadcastContainerSection {
+      flex: 1 1 auto;
+      align-self: stretch; }
+    .BroadcastDetailsSection {
+      flex-basis: auto;
+      max-height: 32px; } }
+
+.broadcastchat_BroadcastChat_1gFzx {
+  max-width: 194px;
+  min-width: 0; }
+
+.broadcastchat_ChatEntry_1UEhD {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: row;
+  padding: 6px;
+  background-color: #22252b;
+  z-index: 4;
+  transition: all .21s ease-in-out;
+  flex-wrap: wrap;
+  justify-content: center; }
+
 .broadcastchat_ChatPanel_1lFRa {
   height: 100%;
   width: 100%;
@@ -334,6 +1954,7 @@
   flex-direction: column; }
 
 .broadcastchat_ChatMessages_1qiVV {
+  flex-grow: 1;
   overflow-y: scroll; }
 
 .broadcastchat_EmoticonContainer_2Royi {
@@ -359,6 +1980,10 @@
 
 .broadcastchat_MessageError_3D08N {
   color: red; }
+
+.broadcastchat_minHeightZero_sRPxY {
+  min-height: 0;
+  flex: 1; }
 
 .main_throbberContainer_29hiv {
   height: 100%;
@@ -473,6 +2098,16 @@
   .bbcode_ChatMessageSteamStore_gwzSZ a:hover,
   .bbcode_ChatMessageSteamStore_gwzSZ a {
     border: none; }
+  .bbcode_ChatMessageSteamStore_Failed_2wa0X.bbcode_ChatMessagesSteamStore_FilteredContent_34k3I,
+  .bbcode_ChatMessageSteamStore_gwzSZ.bbcode_ChatMessagesSteamStore_FilteredContent_34k3I {
+    background: linear-gradient(to right, rgba(104, 87, 87, 0.3) 40%, rgba(104, 87, 87, 0.05) 100%);
+    height: fit-content; }
+  .bbcode_ChatMessageSteamStore_Failed_2wa0X .SteamLogoThrobber,
+  .bbcode_ChatMessageSteamStore_gwzSZ .SteamLogoThrobber {
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .5; }
 
 .bbcode_ChatMessageSteamStore_Failed_2wa0X {
   height: fit-content; }
@@ -498,7 +2133,7 @@
   color: #eee;
   border-bottom: 1px dotted transparent;
   margin-top: 1px; }
-  .bbcode_ChatMessageSteamStore_GameNameAndIcon_qa-O1:hover .bbcode_ChatMessageSteamStore_Name_2-b92 {
+  .bbcode_ChatMessageSteamStore_gwzSZ:not(.bbcode_ChatMessagesSteamStore_FilteredContent_34k3I) .bbcode_ChatMessageSteamStore_GameNameAndIcon_qa-O1:hover .bbcode_ChatMessageSteamStore_Name_2-b92 {
     color: white;
     border-bottom: 1px dotted grey; }
 
@@ -509,37 +2144,69 @@
   background: linear-gradient(to right, rgba(0, 17, 34, 0.5) 60%, rgba(0, 17, 34, 0.2) 100%);
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  padding-right: 8px; }
+  padding-right: 8px;
+  position: relative; }
 
 .bbcode_ChatMessageSteamStore_HeaderImage_2s811 {
+  background-color: #0004;
   width: 160px;
   height: 70px;
   border-top-left-radius: 4px;
-  margin-right: 8px;
   z-index: 1;
-  cursor: pointer; }
+  cursor: pointer;
+  user-select: none; }
   .bbcode_ChatMessageSteamStore_HeaderImage_2s811.bbcode_Blurred_3BKMl {
     transform: scale(3, 1);
     position: absolute;
     filter: blur(12px);
     z-index: -1; }
+  .bbcode_ChatMessagesSteamStore_FilteredContent_34k3I .bbcode_ChatMessageSteamStore_HeaderImage_2s811:not(.bbcode_Blurred_3BKMl) {
+    filter: blur(4px) brightness(0.5);
+    transform: scale(0.95, 0.9);
+    cursor: default; }
+
+.bbcode_ChatMessageSteamStore_HeaderImageFiltered_2GO7- {
+  position: absolute;
+  width: 140px;
+  z-index: 2;
+  text-transform: uppercase;
+  top: 26px;
+  left: 8px;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: rgba(73, 64, 64, 0.51);
+  color: black;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 3px; }
 
 .bbcode_ChatMessageSteamStore_GameDetails_99hwV {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-left: 8px; }
 
 .bbcode_ChatMessageSteamStore_Description_17PwS {
   max-height: 80px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  overflow: hidden; }
+  .bbcode_ChatMessagesSteamStore_FilteredContent_34k3I .bbcode_ChatMessageSteamStore_Description_17PwS {
+    mask-image: none;
+    -webkit-mask-image: none;
+    max-height: none; }
+  .bbcode_ChatMessageSteamStore_Description_17PwS .bbcode_ChatMessageSteamStore_FilteredDescription_3Iqni {
+    padding: 6px;
+    width: calc(100% - 16px);
+    color: #a59090; }
 
 .bbcode_ChatMessageSteamStore_GameNameAndIcon_qa-O1 {
   display: flex;
   margin-top: 4px;
   align-items: center;
   cursor: pointer; }
+  .bbcode_ChatMessagesSteamStore_FilteredContent_34k3I .bbcode_ChatMessageSteamStore_GameNameAndIcon_qa-O1 {
+    cursor: default; }
 
 .bbcode_ChatMessageSteamStore_GameIcon_1EeOf {
   position: initial;
@@ -689,6 +2356,9 @@
   position: absolute;
   bottom: 8px;
   display: flex; }
+  .bbcode_ChatMessagesSteamStore_FilteredContent_34k3I .bbcode_ChatMessageSteamStore_Footer_1mXJd {
+    position: static;
+    margin-top: 16px; }
 
 .bbcode_ChatMessageSteamStore_PricingContainer_fYTQK {
   width: fit-content;
@@ -769,6 +2439,2760 @@
   .bbcode_ChatMessageSteamStore_CopyURL_23S5M:active .SVGIcon_CopyToClipboard polygon {
     fill: #fff7; }
 
+/*
+* Twitter embed
+*/
+.bbcode_ChatMessageTweet_1R69m {
+  padding: 20px;
+  max-width: 616px;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, rgba(253, 253, 253, 0.15) 0%, rgba(181, 183, 189, 0.1) 25%, rgba(181, 183, 189, 0.05) 60%, rgba(87, 92, 104, 0.05) 100%);
+  color: #d3dce6;
+  font-family: "Helvetica";
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden; }
+  .bbcode_ChatMessageTweet_1R69m a, .bbcode_ChatMessageTweet_1R69m a:hover {
+    border-bottom: none !important;
+    /* temporary until .msg is out of global scope */
+    padding: 0; }
+
+.bbcode_ChatMessageTweet_Header_gpcGy {
+  display: flex;
+  margin-bottom: 8px; }
+
+.bbcode_ChatMessageTweet_ProfileImage_wRcpO {
+  width: 48px;
+  height: 48px;
+  margin-right: 06px; }
+
+.bbcode_ChatMessageTweet_ProfileImage_wRcpO > img {
+  border-radius: 48px;
+  box-shadow: 0px 0px 8px #000000; }
+
+.bbcode_ChatMessageTweet_NameSection_3c-Qw {
+  display: flex;
+  flex-direction: column; }
+
+.bbcode_ChatMessageTweet_NameGroup_3VNx1 {
+  display: flex;
+  font-weight: bold; }
+
+.bbcode_ChatMessageTweet_1R69m a.bbcode_ChatMessageTweet_Name_1_swN {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 4px; }
+
+.bbcode_ChatMessageTweet_Logo_1ex2E {
+  background-image: url("../../images/webui/twitter/Twitter_Logo_Blue.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  margin-left: auto; }
+
+.bbcode_ChatMessageTweet_Verified_2roaO {
+  background-image: url("../../images/webui/twitter/Twitter_verified.png");
+  background-image: no-repeat;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  align-self: flex-end; }
+
+.bbcode_ChatMessageTweet_1R69m a.bbcode_ChatMessageTweet_ScreenName_3pM50 {
+  line-height: 24px;
+  color: #AAB8C2; }
+
+a.bbcode_ChatMessageTweet_Body_2mh_n {
+  margin: 8px 0px;
+  color: #d3dce6; }
+
+.bbcode_ChatMessageTweet_Body_2mh_n {
+  cursor: text; }
+
+.bbcode_ChatMessageTweet_Body_2mh_n > img {
+  display: block;
+  margin: 16px;
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 64px #000000cb;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.bbcode_ChatMessageTweet_Footer_11DrN {
+  display: flex; }
+
+.bbcode_ChatMessageTweet_Created_1qrLY {
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 14px; }
+
+.bbcode_numberCounterContainer_mswnK {
+  min-width: 12px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #1c1c1d;
+  border-radius: 4px;
+  color: white;
+  background-color: rgba(83, 83, 83, 0.5);
+  position: relative;
+  max-height: 16px;
+  overflow: hidden;
+  margin-bottom: -4px; }
+
+.bbcode_numberColumn_2SFVv {
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  margin-top: -1px; }
+
+.bbcode_randomNumberLabel_6Nz3l {
+  text-align: center;
+  transition-property: opacity;
+  transition-duration: 1s;
+  transition-delay: 6s;
+  opacity: 1;
+  user-select: none; }
+
+.bbcode_randomNumberLabel_6Nz3l.bbcode_randomActual_1KvCn {
+  user-select: initial; }
+
+.bbcode_randomNumberShadow_3OoiC {
+  background: linear-gradient(to bottom, #393a3e 0px, rgba(57, 58, 62, 0) 20%, rgba(57, 58, 62, 0) 50%, #393a3e 100%);
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  border-radius: 3px; }
+
+.bbcode_numberColumn_2SFVv.bbcode_startingZero_20MSk {
+  opacity: .3;
+  animation-fill-mode: none; }
+
+.bbcode_randomMsg_2x8Cn:not(.bbcode_MsgAnimating_3a9nR) .bbcode_numberColumn_2SFVv.bbcode_startingZero_20MSk {
+  opacity: 0.3; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_numberCounterContainer_mswnK .bbcode_randomNumberLabel_6Nz3l:before {
+  position: absolute;
+  top: -16px; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_numberCounterContainer_mswnK .bbcode_randomNumberLabel_6Nz3l:after {
+  position: absolute;
+  top: 17px;
+  left: 2px; }
+
+@keyframes bbcode_randomNumbers_2IGPW {
+  0% {
+    opacity: 1;
+    transform: translateY(-180px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers0_1UWWl {
+  0% {
+    opacity: 1;
+    transform: translateY(0px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers1_2b7O2 {
+  0% {
+    opacity: 1;
+    transform: translateY(-18px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers2_TxzW6 {
+  0% {
+    opacity: 1;
+    transform: translateY(-36px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers3_1v-a7 {
+  0% {
+    opacity: 1;
+    transform: translateY(-54px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers4_2J19q {
+  0% {
+    opacity: 1;
+    transform: translateY(-72px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers5_2tjCM {
+  0% {
+    opacity: 1;
+    transform: translateY(-90px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers6_behC6 {
+  0% {
+    opacity: 1;
+    transform: translateY(-108px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers7_CGn78 {
+  0% {
+    opacity: 1;
+    transform: translateY(-126px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers8_261Uj {
+  0% {
+    opacity: 1;
+    transform: translateY(-144px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers9_1orHm {
+  0% {
+    opacity: 1;
+    transform: translateY(-162px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes bbcode_randomNumbers10_2bRjg {
+  0% {
+    opacity: 1;
+    transform: translateY(-180px); }
+  90% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0px); } }
+
+.bbcode_randomMsg_2x8Cn:not(.bbcode_MsgAnimating_3a9nR) .bbcode_numberColumn_2SFVv {
+  animation-name: bbcode_none_3qH01 !important; }
+
+@keyframes bbcode_randomNumbersZero_OKABV {
+  0% {
+    transform: translateY(-180px);
+    opacity: 1; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+.bbcode_randomValues_Vpi5G {
+  opacity: .7; }
+
+.bbcode_coinLabel_1GhxZ {
+  text-transform: uppercase;
+  color: black;
+  font-size: 10px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding-top: 10px; }
+
+.bbcode_CoinModel_JExHJ {
+  border: 1px solid red;
+  width: fit-content; }
+
+.bbcode_flipCoinContainer_2PyUD {
+  position: relative;
+  overflow: visible;
+  transition: all .2s ease-in-out;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  transform-origin: 50% 50%;
+  opacity: 0; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_flipCoinContainer_2PyUD {
+  opacity: 1;
+  animation-name: bbcode_coinFade_3vycN; }
+
+.bbcode_flipCoinAndResult_1FjLD {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  overflow: visible; }
+
+.bbcode_coin_AlQa_ {
+  margin: -16px 0 0 -16px;
+  width: 32px;
+  height: 32px;
+  -ms-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin-left: 8px;
+  perspective: 80px;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  transform: rotateY(0deg) rotateX(90deg) scale(1);
+  transition: all .2s ease-in;
+  z-index: -1; }
+
+.bbcode_coin_AlQa_ .bbcode_front_h-0pm {
+  width: 100%;
+  height: 100%;
+  background: #b3b3b3;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+.bbcode_coin_AlQa_ .bbcode_back_22p29 {
+  width: 100%;
+  height: 100%;
+  background: #aaaaaa;
+  border-radius: 50%;
+  transform: rotateY(180deg) translateZ(4px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  filter: brightness(1);
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_coin_AlQa_ .bbcode_back_22p29 {
+  animation-name: bbcode_coinFlipBottom_38MhH; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_coin_AlQa_ .bbcode_front_h-0pm {
+  animation-name: bbcode_coinFlipTop_BnEA6; }
+
+.bbcode_coin_AlQa_ .bbcode_front_b_2ugtx {
+  width: 100%;
+  height: 100%;
+  background: #686868;
+  border-radius: 50%;
+  -webkit-transform: translateZ(-1px);
+  transform: translateZ(-0.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+.bbcode_coin_AlQa_ .bbcode_back_b_3YNs8 {
+  width: 100%;
+  height: 100%;
+  background: #6e6e6e;
+  border-radius: 50%;
+  transform: translateZ(-3.5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2; }
+
+.bbcode_coin_AlQa_:before {
+  content: "";
+  margin-left: -5px;
+  width: 3.5px;
+  height: 100%;
+  background: #6b6b6b;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg) translateX(0px);
+  transform-origin: 100% 50%; }
+
+.bbcode_coin_AlQa_:after {
+  content: "";
+  width: 3.5px;
+  height: 100%;
+  background: #6b6b6b;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: rotateZ(90deg) rotateY(90deg) translateX(0px);
+  transform-origin: 0% 50%; }
+
+.bbcode_coin_AlQa_ .bbcode_mid_10JhA {
+  content: "";
+  margin-left: -5px;
+  width: 3.5px;
+  height: 100%;
+  background: dimgray;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg) rotateX(45deg) translateX(0px);
+  transform-origin: 100% 50%; }
+
+.bbcode_coin_AlQa_ .bbcode_mid_10JhA:before {
+  content: "";
+  margin-left: -5px;
+  width: 3.5px;
+  height: 100%;
+  background: #888888;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg) rotateX(-45deg) translateX(0px);
+  transform-origin: 100% 50%; }
+
+.bbcode_coinFace_3OmQy {
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  background-color: gray; }
+
+.bbcode_coinFace_3OmQy .bbcode_flipCoinWinningSide_17gzn {
+  transform: translateZ(10px); }
+
+.bbcode_coinFace_3OmQy .bbcode_flipCoinLosingSide_g63r6 {
+  transform: translateZ(-10px); }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_coin_AlQa_ {
+  animation-name: bbcode_coinFlip_3klbs;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d; }
+
+@keyframes bbcode_coinSpin_3_X1R {
+  0% {
+    transform: rotateY(360deg) rotateX(0deg) translateX(0px); }
+  50% {
+    transform: rotateY(0deg) rotateX(90deg) translateX(0px); }
+  100% {
+    transform: rotateY(360deg) rotateX(0deg) translateX(0px); } }
+
+@keyframes bbcode_coinFlip_3klbs {
+  0% {
+    left: -40px;
+    transform: rotateY(6300deg) rotateX(0deg) scale(0.5, 0.5); }
+  10% {
+    left: 20px; }
+  30% {
+    left: 0px; }
+  90% {
+    left: 0px;
+    transform: rotateY(0deg) rotateX(90deg) scale(1, 1); }
+  100% {
+    left: 0px;
+    transform: rotateY(0deg) rotateX(90deg) scale(1, 0); } }
+
+@keyframes bbcode_coinFlipTop_BnEA6 {
+  0% {
+    filter: brightness(1); }
+  30% {
+    filter: brightness(1); }
+  40% {
+    filter: brightness(2); }
+  50% {
+    filter: brightness(1); }
+  100% {
+    filter: brightness(0.5); } }
+
+@keyframes bbcode_coinFlipBottom_38MhH {
+  0% {
+    filter: brightness(1); }
+  30% {
+    filter: brightness(0.35); }
+  100% {
+    filter: brightness(0); } }
+
+.bbcode_resultLabel_3Lefr {
+  margin-left: 6px;
+  text-transform: uppercase;
+  transform-origin: 100% 50%;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  color: white; }
+
+.bbcode_MsgAnimating_3a9nR .bbcode_resultLabel_3Lefr {
+  animation-name: bbcode_coinFlipResult_2a-5i; }
+
+@keyframes bbcode_coinFlipResult_2a-5i {
+  0% {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(10px); }
+  76% {
+    opacity: 0;
+    transform: rotateX(90deg) translateY(10px);
+    color: #7e7e7e; }
+  80% {
+    transform: rotateX(45deg) translateY(-8px);
+    color: #7e7e7e; }
+  84% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+    color: #7e7e7e; }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0px);
+    color: white; } }
+
+@keyframes bbcode_coinFade_3vycN {
+  0% {
+    opacity: 1; }
+  75% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+.bbcode_plusOne_3mCUi {
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 1000;
+  color: #d5dbe6;
+  animation-name: bbcode_none_3qH01;
+  animation-duration: 1.5s;
+  animation-delay: .2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.44, 0.11, 0.66, 2.13);
+  animation-timing-function: cubic-bezier(0.53, 1.15, 0.66, 2.13);
+  width: fit-content;
+  animation-fill-mode: both; }
+
+.bbcode_MsgAnimating_3a9nR.bbcode_plusOne_3mCUi {
+  animation-name: bbcode_plusOne_3mCUi; }
+
+@keyframes bbcode_plusOne_3mCUi {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+    text-shadow: 0px 0px 32px #ffff; }
+  26% {
+    opacity: 1;
+    transform: scale(1);
+    color: white;
+    text-shadow: 0px 0px 20px #ffff; }
+  100% {
+    color: #d5dbe6;
+    text-shadow: 0px 0px 0px #fff0; } }
+
+/* Style scrollbar elements */
+::-webkit-scrollbar,
+.iScrollHorizontalScrollbar,
+.iScrollVerticalScrollbar {
+  height: 12px;
+  width: 12px;
+  background: transparent;
+  overflow: visible; }
+
+::selection {
+  background: #54a5d4;
+  text-shadow: 1px 1px 2px #000000aa;
+  color: #fff; }
+
+/*::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}*/
+.iScrollHorizontalScrollbar {
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  width: 100%; }
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  bottom: 2px;
+  top: 2px;
+  right: 2px;
+  height: 100%; }
+
+::-webkit-scrollbar-thumb,
+.iScrollIndicator {
+  background: #373B42;
+  border-radius: 2px;
+  margin: 4px;
+  /*box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .25);*/ }
+
+::-webkit-scrollbar-thumb {
+  min-height: 32px;
+  min-width: 32px; }
+
+.iScrollIndicator {
+  width: 8px;
+  margin: 1px;
+  position: absolute; }
+
+::-webkit-scrollbar-thumb:hover,
+.iScrollIndicator:hover {
+  background: #4E5157; }
+
+::-webkit-scrollbar-corner {
+  background: #202020; }
+
+.contextMenu {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-corner at 50% 0%, #3c4047 0%, #3c4047 50%, #33363d 100%);
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1.0;
+  transition: opacity 200ms;
+  z-index: 200;
+  user-select: none;
+  padding: 4px; }
+
+.web_chat_frame .contextMenu {
+  max-height: calc( 100% - 128px);
+  overflow-y: auto; }
+
+html.ContextMenuPopup .contextMenu {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0; }
+
+html.ContextMenuPopup .contextMenu .contextMenuContents {
+  padding: 4px; }
+
+html.ContextMenuPopup .contextMenu .contextMenuItem {
+  min-width: fit-content; }
+
+.contextMenuItem {
+  min-width: 120px; }
+
+.contextMenuItem.noPermission {
+  opacity: .4;
+  cursor: default;
+  pointer-events: none;
+  user-select: none; }
+
+.contextMenuItem.noPermission .SVGIcon_Lock {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  margin-bottom: -1px; }
+
+.ContextMenuFocusContainer:focus {
+  outline: none; }
+
+.contextMenuContents {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag; }
+
+.contextMenu:not(.visible) {
+  opacity: 0;
+  pointer-events: none; }
+
+.contextMenuContents .contextMenuGameName {
+  color: #cbdde4; }
+
+.contextMenu .contextMenuItem {
+  padding: 4px 6px;
+  line-height: 20px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative; }
+
+.contextMenuContents .contextMenuItem:first-child {
+  border-top: 0.5px solid rgba(80, 87, 94, 0); }
+
+.contextMenu .contextMenuItem:hover,
+.contextMenu .contextMenuItem.active {
+  background: #5a6069;
+  color: #b8c5c9; }
+
+.contextMenu .contextMenuItem.contextMenuUnselectable:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #9ca4a7; }
+
+.contextMenu .contextMenuItem.disabled {
+  background: none;
+  color: #6b7072;
+  cursor: default;
+  pointer-events: none; }
+
+.contextMenu .contextMenuItem.disabled:hover {
+  background: none;
+  color: #6b7072;
+  cursor: default; }
+
+.contextMenuItem.menuChecked {
+  color: #6dcff6; }
+
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none; }
+
+.contextMenuItem.menuChecked .contextMenuCheckMark {
+  display: block; }
+
+.contextMenuSectionHeader {
+  max-width: 190px;
+  line-height: 20px;
+  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
+  white-space: nowrap; }
+
+.contextMenuSectionContent {
+  display: flex;
+  flex-direction: column; }
+
+.contextMenuSectionContent .contextMenuItem {
+  border-top: none;
+  display: block; }
+
+.contextMenuContents .contextMenuLabel {
+  font-size: 12px;
+  line-height: 25px;
+  padding-left: 6px; }
+
+.contextMenuContents .contextMenuLabel.contextMenuNotAFriend {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(184, 156, 80, 0.75); }
+
+.contextMenuContents .recentName {
+  margin: 4px;
+  color: #ccc; }
+
+.contextMenuContents .contextMenuItem.notFriends.disabled {
+  color: #666;
+  border-color: transparent; }
+
+.flexRow {
+  display: flex;
+  flex-direction: row; }
+
+.flexRowCentered {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.flexColumn {
+  display: flex;
+  flex-direction: column; }
+
+.ContextMenuMouseOverlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 199; }
+
+.scrollMaskVertical {
+  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+
+.SVGIcon_Button {
+  fill: #ffffff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px; }
+
+.crossfade {
+  position: relative;
+  overflow: hidden; }
+
+.crossfade-anim-exit {
+  opacity: 1;
+  transition-timing-function: linear;
+  transition-property: opacity; }
+
+.crossfade-anim-exit-active {
+  opacity: 0.01; }
+
+.crossfade-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover; }
+
+.ClientUIControls div {
+  cursor: default; }
+
+.ClientUIControls :focus {
+  outline: none !important; }
+
+#ControlZooContainer {
+  display: flex;
+  flex-direction: column; }
+
+.DevButton {
+  color: yellow;
+  font-size: 18px;
+  text-align: center;
+  height: 32px;
+  border-radius: 4px;
+  padding: 4px 16px;
+  margin: 16px;
+  display: inline-block;
+  max-width: 200px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: green;
+  align-content: center;
+  line-height: 32px;
+  border: 1px solid #00ff00;
+  transition-property: background-color;
+  transition-duration: .32s; }
+
+.DevButton:hover {
+  background-color: yellowgreen; }
+
+.DevButton:active {
+  background-color: black; }
+
+.ClientUIControls input[type="submit"],
+.ButtonLabel,
+.GenericButton {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 200;
+  font-family: 'Motiva Sans';
+  line-height: 32px;
+  letter-spacing: 2px;
+  padding: 0px 16px;
+  text-overflow: ellipsis;
+  background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 100%);
+  transition-property: transform, color, background-color, background-image;
+  transition-duration: .12s;
+  transition-timing-function: ease-in-out; }
+
+.ClientUIControls input[type="submit"],
+.GenericButton {
+  max-height: 32px;
+  min-width: 100px;
+  display: inline-block;
+  border: 1px solid black;
+  background-color: #252930;
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.4) 100%);
+  transition-property: background-color, transform;
+  transition-duration: .16s, .16s;
+  transition-timing-function: ease-in-out;
+  margin: 16px;
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25); }
+
+.ClientUIControls input[type="submit"]:not([disabled]):focus,
+.GenericButton:not([disabled]):focus,
+.ClientUIControls input[type="submit"]:not([disabled]):hover,
+.GenericButton:not([disabled]):hover {
+  background-color: #353d4b;
+  color: white; }
+
+.GenericButton .ButtonLabel {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.ClientUIControls input[type="submit"]:not([disabled]):active,
+.GenericButton:not([disabled]):active {
+  transform: translateY(1px) scale3d(0.98, 0.98, 1); }
+
+/*------------------ POPUPS -------------*/
+.PopupGeneric {
+  max-width: 700px;
+  border-top: solid 1px transparent;
+  border-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg' width='50' height='5'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%2333576C'/><stop offset='0.334' stop-color='%2366C8E4'/><stop offset='1' stop-color='%23314C5A'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+  width: fit-content;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  border-radius: 0px;
+  background: radial-gradient(ellipse farthest-corner at 0 25%, #262A31 0%, #202329 60%, #0A0B0D 140%);
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+  transition-duration: .32s;
+  transition-property: opacity, transform, box-shadow;
+  transition-timing-function: ease-in-out; }
+
+.ModalAnimation-appear .PopupGeneric,
+.ModalAnimation-leave .PopupGeneric {
+  opacity: 0;
+  box-shadow: 0px 4px 18px 3px black;
+  transform: scale3d(0.92, 0.92, 1);
+  transition-duration: .42s; }
+
+.PopupGenericContent {
+  opacity: 0;
+  display: flex;
+  padding: 32px;
+  text-align: center;
+  flex-flow: column nowrap;
+  transform: scale3d(0.85, 0.85, 1);
+  transition-property: opacity, transform;
+  transition-duration: .22s;
+  transition-delay: 0s;
+  transition-timing-function: ease-in-out; }
+
+/* workaround to achieve justify-content without pushing content outside of visible area.
+	see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes#Flex_item_considerations
+*/
+.PopupGenericContent > :first-child {
+  margin-top: auto; }
+
+.PopupGenericContent > :last-child {
+  margin-bottom: auto; }
+
+.PopupGeneric.PopupVisible .PopupGenericContent {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition-delay: 0.05s;
+  transition-duration: .42s; }
+
+.PopupGenericTitle {
+  font-size: 34px;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+  font-family: 'Motiva Sans Light';
+  letter-spacing: 4px;
+  min-width: 300px;
+  margin-bottom: 16px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); }
+
+.PopupGenericSubTitle {
+  color: #7e7e7e;
+  font-size: 13px;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: uppercase; }
+
+.PopupGenericBodyText {
+  color: #7e7e7e;
+  font-size: 16px;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: left; }
+
+.PopupGenericControls {
+  display: flex;
+  align-self: flex-end;
+  overflow: hidden; }
+
+.PopupGeneric.PopupVisible .PopupHangingButton {
+  transform: translateY(0px); }
+
+.PopupHangingButton:hover {
+  background-color: #2C3038; }
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton:not(.NegativeButton):hover,
+.PopupHangingButton:active {
+  background-color: rgba(0, 122, 204, 0.2); }
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton.NegativeButton:hover,
+.PopupHangingButton.NegativeButton:active {
+  background-color: #3b2a30; }
+
+.PopupGeneric:not(.PopupVisible) .PopupHangingButton:hover {
+  transform: translateY(0px);
+  transition-delay: .5s; }
+
+.PopupHangingButton {
+  flex-grow: 1;
+  flex-basis: 100%;
+  height: 64px;
+  transform: translateY(64px);
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: linear-gradient(to top, transparent 80%, rgba(0, 0, 0, 0.1) 90%, rgba(0, 0, 0, 0.4) 100%);
+  transition-property: background-color, transform;
+  transition-duration: 0s, .22s;
+  transition-timing-function: ease-in-out; }
+
+.PopupGenericControls:first-child .PopupHangingButton {
+  border-left: 0px solid black; }
+
+.PopupGenericControls:last-child .PopupHangingButton {
+  border-right: 0px solid black; }
+
+.PopupHangingButton .ButtonLabel {
+  line-height: 64px;
+  font-size: 20px; }
+
+.PopupHangingButton:hover .ButtonLabel {
+  color: white; }
+
+.PopupHangingButton:active .ButtonLabel {
+  transform: translateY(1px) scale3d(0.95, 0.95, 1);
+  color: #9cdcfe; }
+
+.PopupHangingButton.NegativeButton:active .ButtonLabel {
+  color: #ffd29a; }
+
+.PopupGeneric select {
+  width: 100%; }
+
+.ClientUIControls select {
+  -webkit-appearance: menulist;
+  -webkit-rtl-ordering: logical;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  color: #dfe3e6;
+  font-size: 16px;
+  font-family: 'Motiva Sans Light';
+  line-height: 32px;
+  overflow: hidden;
+  padding: 12px 10px;
+  margin-bottom: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+  /*cursor: pointer;*/
+  border-radius: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  background-color: #434953;
+  transition-property: background-color, transform, box-shadow, border;
+  transition-duration: .16s, .16s;
+  transition-timing-function: ease-in-out; }
+
+.ClientUIControls select:disabled {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #1F2023;
+  color: #5D5D5D;
+  cursor: default; }
+
+.ClientUIControls select option {
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 200;
+  font-family: 'Motiva Sans Light';
+  line-height: 32px;
+  display: block;
+  white-space: pre;
+  font-size: 16px;
+  min-height: 1.2em;
+  padding: 0px 2px 1px; }
+
+.ClientUIControls input[type="checkbox"] {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background-color: #252930;
+  background-image: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.4) 100%);
+  background-size: 100%;
+  border: 1px solid black;
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition-property: background-color, border;
+  transition-duration: .32s;
+  transition-timing-function: ease-in-out; }
+
+.ClientUIControls input[type="checkbox"]:checked {
+  background-color: #63C1FF;
+  padding: 4px; }
+
+.ClientUIControls input[type="checkbox"]:hover {
+  border-color: #007ACC; }
+
+.ClientUIControls input[type="checkbox"]:disabled:hover {
+  border-color: black; }
+
+.ClientUIControls input[type="checkbox"]:disabled + label {
+  color: gray; }
+
+.InputLabel {
+  color: #939393;
+  transition: color .32s; }
+
+.InputLabel:hover {
+  color: #63C1FF; }
+
+.ClientUIControls input[type="text"],
+.ClientUIControls input[type="password"] {
+  height: 32px;
+  box-shadow: inset 2px 2px 8px #000000;
+  border: 0px solid transparent;
+  background-color: #181a1e;
+  color: #555;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 14px;
+  transition-property: background-position, box-shadow, background-color, color, padding;
+  transition-duration: .32s;
+  transition-timing-function: ease-in-out; }
+
+.ClientUIControls input[type="password"] {
+  font-weight: 1200;
+  letter-spacing: 6px; }
+
+.ClientUIControls input[type="text"]:focus,
+.ClientUIControls input[type="password"]:focus {
+  background-color: #2c3036;
+  box-shadow: inset 0px 0px 4px #000000;
+  outline-width: 0px;
+  color: #aaa;
+  padding-left: 12px;
+  background-position: 2px; }
+
+.ClientUIControls input[type="text"]:focus::-webkit-input-placeholder {
+  color: #5a5c61; }
+
+.ClientUIControls input[type="text"]:hover::-webkit-input-placeholder {
+  color: #5a5c61; }
+
+.ClientUIControls ::-webkit-input-placeholder {
+  color: #262a2c;
+  font-style: italic;
+  transition: color .32s ease-in-out; }
+
+.ClientUIControls input[type="password"]::selection,
+.ClientUIControls input[type="text"]::selection {
+  background-color: #8aafc0;
+  color: white; }
+
+.SpecularHighlightContainer {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  pointer-events: none; }
+
+.SpecularHighlight {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse farthest-corner at 50% 50%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  transition-property: opacity, transform;
+  transition-duration: .32s;
+  transition-timing-function: ease-in-out; }
+
+.ToggleSlider {
+  width: 40px;
+  height: 26px;
+  background: #333;
+  border-radius: 50px;
+  position: relative;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2); }
+
+.ToggleSlider .Slide {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  transition: all .4s ease;
+  /*cursor: pointer;*/
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  z-index: 1;
+  background-color: #888888; }
+
+.ToggleSlider input[type=checkbox] {
+  display: none; }
+
+.ToggleSlider input[type=checkbox]:checked + .Slide {
+  left: 18px;
+  background-color: #63c1ff; }
+
+.PopupFullWindow .TitleBar {
+  bottom: auto;
+  background-color: rgba(86, 86, 86, 0.1);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 15%, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.03) 95%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 24px; }
+
+.ModalDialogPopup .PopupFullWindow .TitleBar {
+  background: none;
+  background-color: transparent;
+  border: none;
+  height: 64px; }
+
+.PopupFullWindow .PopupGeneric {
+  max-width: none;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.PopupFullWindow .PopupGeneric .PopupGenericContent {
+  flex: auto;
+  overflow-y: auto;
+  padding-top: 48px; }
+
+.PopupFullWindow .PopupGenericControls {
+  align-self: auto;
+  flex-shrink: 0; }
+
+.PopupFullWindow .PopupGenericBodyText {
+  margin: 0;
+  flex: auto; }
+
+.PopupFullWindow .PopupGenericChildren {
+  flex: auto; }
+
+.SettingsPageContainer {
+  width: 100%;
+  height: 100%; }
+
+.SettingsPage {
+  padding: 20px;
+  text-align: left; }
+
+.SettingsPage .SettingsGroup {
+  margin-bottom: 32px; }
+
+.SettingsPage .SettingsGroup > * {
+  margin-left: 32px; }
+
+.SettingsPage .SettingsGroup h1,
+.SettingsPage h1 {
+  width: 100%;
+  max-width: 1280px;
+  color: white;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, #2C323C 50%, #212731 75%, rgba(0, 0, 0, 0) 100%);
+  margin-left: 0px;
+  line-height: 38px;
+  border-radius: 2px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 24px;
+  padding: 4px;
+  padding-left: 16px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  font-size: 24px; }
+
+.SettingsPage .SettingsGroup h2,
+.SettingsPage h2 {
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  margin-left: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 4px;
+  font-weight: lighter; }
+
+.SettingsPage div.SettingsFriendsSubGroup {
+  margin-left: 8px;
+  margin-bottom: 18px; }
+
+.SettingsStringValue {
+  font-weight: bold; }
+
+.SettingsPage a:hover {
+  text-decoration: underline; }
+
+.SettingsPage div {
+  color: #ddd;
+  font-size: 16px;
+  margin-top: 4px;
+  margin-bottom: 4px; }
+
+.SettingsCheckBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.SettingsCheckBox div {
+  margin-left: 4px; }
+
+.SettingsTextInputDiv {
+  display: flex;
+  flex-direction: row; }
+
+/* reset browser styles */
+button.DialogButton {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+button.DialogButton {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  margin: 2px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input.DialogInput::-moz-focus-inner,
+button.DialogButton::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.DialogInputPlaceholder::placeholder,
+.DialogInputPlaceholder::-webkit-input-placeholder {
+  color: #969696;
+  font-style: italic; }
+
+/* for some reason, mixing these with ::placeholder confuses chrome */
+.DialogInputPlaceholder::-ms-input-placeholder,
+.DialogInputPlaceholder:-ms-input-placeholder {
+  color: #969696;
+  font-style: italic; }
+
+.PopupFullWindow {
+  height: 100%; }
+
+.DialogBody {
+  padding-top: 4px;
+  padding-right: 12px;
+  /*border: 2px dotted #f005;*/
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto; }
+
+.ModalDialogPopup .DialogContentTransition .DialogBody {
+  overflow-y: scroll;
+  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+
+.DialogInnerBody {
+  flex: 1;
+  overflow: auto;
+  padding-right: 2px;
+  padding-bottom: 16px; }
+
+.ModalDialogPopup .DialogInnerBody {
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.ModalPosition {
+  display: flex;
+  align-content: center;
+  height: 100%;
+  flex-direction: column; }
+
+.ModalPosition:focus {
+  outline: none; }
+
+.ModalDialogPopup .ModalPosition_Dismiss {
+  display: none; }
+
+.ModalPosition_Dismiss {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1; }
+
+.ModalPosition_Dismiss .closeButton {
+  width: 14px;
+  height: 14px;
+  padding: 4px;
+  background-size: cover;
+  cursor: pointer;
+  background-image: none;
+  background-color: #25282e;
+  border-radius: 4px; }
+
+.ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
+  stroke: #788a92;
+  stroke-width: 24px; }
+
+.ModalPosition_Dismiss .closeButton:hover .SVGIcon_X_Line line {
+  stroke: white; }
+
+.ModalPosition_Dismiss .closeButton:hover {
+  opacity: 1.0; }
+
+.ModalPosition_Content {
+  box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
+  max-width: 80vw;
+  max-height: 90vh;
+  margin: auto;
+  font-weight: 300;
+  color: #969696;
+  font-size: 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+
+.ModalPosition_Content > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
+  min-height: 0;
+  min-width: 0;
+  flex-shrink: 1;
+  flex-grow: 1; }
+
+.PopupFullWindow .ModalPosition_Content > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
+  min-height: initial;
+  flex: 1; }
+
+.DialogContent,
+.DialogContentTransition {
+  background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+  user-select: none; }
+
+.DialogContentTransition {
+  display: flex;
+  width: 664px;
+  max-width: calc( 100% - 64px);
+  flex: 3.3;
+  position: relative; }
+
+.ModalDialogPopup .DialogContentTransition {
+  display: block; }
+
+.ModalDialogPopup .DialogContentTransition > .DialogContent {
+  position: absolute;
+  bottom: 0;
+  top: 0; }
+
+:not(.PopupFullWindow) .DialogContentTransition .opacityfade-anim-exit {
+  position: absolute; }
+
+.DialogContent {
+  padding: 32px;
+  padding-right: 6px;
+  width: 600px;
+  max-width: calc( 100% - 38px);
+  display: flex;
+  overflow: visible;
+  position: relative; }
+
+.PagedSettingsDialog_PageListItem,
+.DialogToggle_Label {
+  user-select: none; }
+
+.contextMenuItem .DialogToggle_Label {
+  white-space: nowrap; }
+
+._DialogNote {
+  font-size: 12px;
+  text-transform: uppercase; }
+
+._DialogCenterVertically {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.DialogContent_InnerWidth {
+  max-width: 600px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  /*border: 0.5px dashed #f805;*/ }
+
+.ModalDialogPopup .DialogContent {
+  width: 100%;
+  overflow: visible; }
+
+.ModalDialogPopup .DialogContent_InnerWidth {
+  max-width: none; }
+
+.DialogContent_InnerWidth > form {
+  display: flex;
+  flex-direction: column;
+  flex: 1; }
+
+.ModalPosition_TopBar {
+  height: 1px;
+  background: linear-gradient(to right, #00ccff, #3366ff); }
+
+.Destructive .ModalPosition_TopBar {
+  background: linear-gradient(to right, #c44848, #c44848); }
+
+.ModalDialogPopup .ModalPosition,
+.ModalDialogPopup .ModalPosition_Content {
+  max-width: none;
+  max-height: none;
+  width: 100%;
+  height: 100%; }
+
+.ModalAnimation-appear .ModalPosition,
+.ModalAnimation-leave .ModalPosition {
+  opacity: 0;
+  box-shadow: 0px 4px 18px 3px black;
+  transform: scale3d(0.92, 0.92, 1);
+  transition-duration: .42s; }
+
+.DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
+  margin-bottom: 16px;
+  margin-right: 0; }
+
+.DialogHeader {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px; }
+
+.DialogContent_InnerWidth .DialogBody .DialogHeader {
+  margin-right: 0px; }
+
+.DialogHeaderSubtitle {
+  color: #6e7985;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: none; }
+
+.DialogHighlight {
+  color: #4297f8; }
+
+.DialogFooter {
+  margin-top: 16px;
+  flex-shrink: 0;
+  margin-right: 26px; }
+
+.DialogBodyText {
+  color: #969696;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 300;
+  margin-bottom: 32px;
+  user-select: none; }
+
+.DialogBodyText a {
+  color: #969696;
+  text-decoration: underline; }
+
+.DialogBodyText a:hover {
+  color: #ffffff; }
+
+.DialogLabel {
+  cursor: default; }
+
+.DialogLabel,
+.DialogLabelStrong {
+  font-weight: 300;
+  color: #969696;
+  text-transform: uppercase;
+  line-height: 19px;
+  font-size: 13px;
+  margin-bottom: 4px;
+  user-select: none;
+  letter-spacing: initial; }
+
+.DialogLabelStrong .DialogLabel,
+.DialogLabel.DialogLabelStrong {
+  text-transform: none;
+  color: #dedede; }
+
+.disabled .DialogLabelStrong .DialogLabel,
+.disabled .DialogLabel.DialogLabelStrong {
+  color: #424853; }
+
+.DialogHBar {
+  flex: 1;
+  min-height: 1px;
+  max-height: 1px;
+  background: linear-gradient(to right, #393e47 0%, #40464f 20%, #393e47 100%);
+  margin-bottom: 16px; }
+
+.OrSeparator .DialogHBar {
+  margin: 0; }
+
+._DialogRow {
+  display: flex;
+  flex-direction: row;
+  padding: 4px;
+  padding-left: 12px;
+  margin-bottom: 6px;
+  justify-content: space-between;
+  flex-shrink: 0; }
+
+._DialogRow._DialogRowBackground {
+  background: linear-gradient(to right, #383d45, #383d45); }
+
+._DialogRow ._DialogRowAction {
+  flex: 1; }
+
+._DialogRow ._DialogRowSecondaryLabel,
+._DialogRow ._DialogRowLabel {
+  flex: 1.5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  align-self: center;
+  display: flex;
+  flex-direction: row; }
+
+._DialogRow ._DialogRowSecondaryLabel {
+  display: block;
+  flex: 1;
+  line-height: 32px;
+  text-align: center;
+  margin: 2px 0; }
+
+._DialogRow ._DialogRowLabel .SVGIcon_Button {
+  width: 24px;
+  height: 24px; }
+
+.disabledNotice {
+  color: rgba(184, 156, 80, 0.75);
+  margin-left: 4px; }
+
+.DialogLabelExplainer {
+  text-transform: none;
+  text-align: center;
+  font-weight: 300;
+  color: #7e7e7e;
+  font-size: 13px;
+  margin-top: 4px; }
+
+.DialogInput {
+  border: 1px solid white; }
+
+.DialogLabelExplainer.Left {
+  text-align: left; }
+
+.DialogInputRequirementLabel {
+  color: #b80505;
+  margin-left: 15px; }
+
+.DialogRequirementLabel {
+  color: #b80505; }
+
+.DialogInputLabelGroup {
+  margin-bottom: 22px; }
+
+._DialogSection {
+  margin-bottom: 26px; }
+
+._DialogTextInputBase,
+._DialogInputContainer {
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+  transition: all .2s ease-in-out; }
+
+._DialogTextInputBase:focus {
+  background: rgba(67, 73, 83, 0.6);
+  box-shadow: inset 1px 1px 8px #000a;
+  padding-left: 11px; }
+
+._DialogTextInputBase:not(disabled):hover {
+  background: rgba(67, 73, 83, 0.6); }
+
+._DialogTextInputBase:disabled:hover {
+  background: rgba(67, 73, 83, 0.3); }
+
+._DialogInputContainer {
+  padding: 12px;
+  line-height: 18px;
+  margin-bottom: 22px; }
+
+._DialogInputContainer:focus {
+  outline: none; }
+
+.DialogOnOffToggle._DialogInputContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+  padding-left: 12px; }
+
+.DialogOnOffToggle.Disabled .DialogToggle_Label {
+  color: #555; }
+
+._DialogInputContainer.Active {
+  /*outline: 1px solid rgba( 31, 141, 254, 1.0 );*/ }
+
+.DialogDropDown._DialogInputContainer.Active {
+  outline: none; }
+
+._DialogTextInputBase.inviteURLLink {
+  padding: 0 12px;
+  background: #30353b;
+  margin-right: 4px;
+  flex-grow: 4;
+  box-shadow: inset 0px 0px 4px #0006;
+  border: 0.5px solid rgba(139, 153, 170, 0.4);
+  border-style: inset; }
+
+._DialogTextInputBase:disabled,
+._DialogTextInputBase:read-only {
+  color: rgba(136, 136, 136, 0.7); }
+
+.InviteLinksTable .DialogInput {
+  padding: 5px;
+  margin: 5px;
+  margin-right: 30px; }
+
+.DialogInput_Wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative; }
+
+.DialogInput_Wrapper > input.DialogInput {
+  flex: 1; }
+
+.DialogInput_Wrapper > input.DialogInput:focus {
+  outline: none; }
+
+button.DialogButton:focus {
+  outline: none; }
+
+button.DialogButton.DialogInput_CopyAction {
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.DialogInput_ClearAction {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  cursor: pointer; }
+
+.DialogInput {
+  display: block;
+  line-height: 22px;
+  padding: 10px; }
+
+button.DialogButton {
+  display: block;
+  line-height: 32px;
+  color: #dfe3e6;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 2px;
+  /*margin-bottom: 22px;*/
+  cursor: pointer;
+  transition: 0.1s all;
+  width: 100%;
+  background: transparent;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  background-position: 99% 1%;
+  background-size: 300% 300%;
+  position: relative; }
+
+button.DialogButton::before {
+  pointer-events: none;
+  user-select: none;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out; }
+
+button.DialogButton:disabled:hover::before,
+button.DialogButton:disabled::before {
+  opacity: 0; }
+
+button.DialogButton:hover::before {
+  opacity: 1; }
+
+button.DialogButton:active::before {
+  opacity: 0; }
+
+button.DialogButton.DialogButtonTall {
+  height: 44px; }
+
+.VoiceSettings .advancedSettingsButton {
+  margin-bottom: 0px;
+  margin-top: 16px; }
+
+.VoiceSettings .advancedSettings {
+  margin-bottom: 16px; }
+
+.DialogBody.VoiceSettings ._FixedHeight {
+  padding-bottom: 16px; }
+
+button.DialogButton.Primary {
+  background: transparent;
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 25%;
+  background-size: 330% 100%; }
+
+button.DialogButton.GreenPlay {
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background-position: 25%;
+  background-size: 330% 100%; }
+
+button.DialogButton.GreenPlay:hover {
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: white; }
+
+button.DialogButton.GreenPlay:active,
+button.DialogButton.GreenPlay:active:hover {
+  background: linear-gradient(to right, #8ac329 0%, #4a7a16 60%);
+  background-position: 40%;
+  transition-duration: .04s; }
+
+button.DialogButton.Secondary.Off {
+  box-shadow: inset 1px 1px 4px #0003; }
+
+button.DialogButton:active,
+button.DialogButton:active:hover {
+  background: #393f49;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
+  transition-duration: .04s; }
+
+button.DialogButton.Primary:hover {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 0%;
+  background-size: 330% 100%;
+  color: white; }
+
+button.DialogButton.Primary:active,
+button.DialogButton.Primary:hover:active {
+  background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+  background-position: 40%;
+  transition-duration: .04s; }
+
+button.DialogButton:hover {
+  background: #464d58;
+  color: white; }
+
+button.DialogButton:disabled,
+button.DialogButton:disabled:hover {
+  background: rgba(61, 67, 77, 0.35);
+  color: #464d58;
+  box-shadow: none;
+  cursor: default; }
+
+button.TextButton {
+  background-color: transparent;
+  border: 0px hidden transparent;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 0;
+  color: white;
+  cursor: pointer;
+  font-weight: 100;
+  border-bottom: 1px dotted #0000; }
+
+button.TextButton .SVGIcon_Button {
+  transition: all .20s ease-in-out;
+  margin-right: 2px; }
+
+button.TextButton:hover {
+  color: white; }
+
+button.TextButton:focus {
+  outline: none; }
+
+.DialogButton .SVGIcon_Button {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 2px; }
+
+.DialogButton:disabled .SVGIcon_Button {
+  opacity: .1; }
+
+.DialogOnOffToggle_Control {
+  float: right;
+  position: relative;
+  line-height: 30px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #3a3f48;
+  color: rgba(223, 227, 230, 0.5);
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  user-select: none;
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-left: 6px; }
+
+.DialogOnOffToggle_Option {
+  text-transform: uppercase;
+  width: 66px;
+  text-align: center;
+  cursor: pointer;
+  transition-property: color, background;
+  transition-duration: 250ms; }
+
+.DialogOnOffToggle_Option:hover:not(.Active) {
+  background: #464d58; }
+
+.Disabled .DialogOnOffToggle_Option:hover:not(.Active),
+.Disabled .DialogOnOffToggle_Option.Active,
+.Disabled .DialogOnOffToggle_Option {
+  background-color: transparent;
+  color: #555;
+  cursor: default; }
+
+.Disabled .DialogOnOffToggle_Option.Active {
+  color: #666; }
+
+.Disabled .DialogOnOffToggle_Option.Active {
+  background-color: #434953; }
+
+.DialogToggle_Description {
+  color: #808080;
+  line-height: 19px;
+  font-size: 13px;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding-top: 8px; }
+
+.DialogOnOffToggle_Option.Active {
+  color: #dfe3e6;
+  background: #2d73ff; }
+
+.DialogOnOffToggle_Option:hover {
+  color: white; }
+
+.PagedSettingsDialog {
+  /*width: 842px;*/
+  display: flex;
+  flex-direction: row;
+  height: 720px; }
+
+.PagedSettingsDialog_PageListColumn {
+  background: #2a2d34;
+  flex: 1;
+  min-width: 140px;
+  max-width: 220px;
+  padding-left: 24px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.PagedSettingsDialog_Title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #4297f8;
+  font-weight: 300;
+  font-size: 13px;
+  user-select: none; }
+
+.PagedSettingsDialog_PageList {
+  line-height: 16px;
+  white-space: nowrap;
+  overflow-y: overlay;
+  flex-shrink: 1; }
+
+.PagedSettingsDialog_PageListItem {
+  white-space: normal;
+  max-width: 180px;
+  text-overflow: ellipsis;
+  color: #7e7e7e;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 14px; }
+
+.PagedSettingsDialog_PageListItem.DisabledItem,
+.PagedSettingsDialog_PageListItem.DisabledItem:hover,
+.PagedSettingsDialog_PageListItem.DisabledItem:not(.Active):hover {
+  color: #414141; }
+
+.PagedSettingsDialog_PageListItem:not(.Active):hover {
+  color: #cccccc; }
+
+.PagedSettingsDialog_PageListItem.Active {
+  color: #ffffff;
+  cursor: default; }
+
+.PagedSettingsDialog_PageContent {
+  flex: 3; }
+
+.PagedSettingsDialog_PageContentTitle {
+  color: #ffffff;
+  font-size: 30px; }
+
+.DialogMenuPosition {
+  position: absolute;
+  transition: opacity 200ms;
+  z-index: 200; }
+
+.DialogMenuPosition:not(.visible) {
+  opacity: 0;
+  pointer-events: none; }
+
+.DialogDropDown {
+  cursor: pointer;
+  position: relative; }
+
+.DialogDropDown:hover {
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16); }
+
+.DialogDropDown._DialogInputContainer {
+  margin-bottom: 0;
+  user-select: none; }
+
+.DialogDropDown_Arrow {
+  position: absolute;
+  width: 18px;
+  top: 14px;
+  right: 10px; }
+
+.DialogDropDown_Arrow .SVGIcon_DownArrowContextMenu {
+  fill: #189cff; }
+
+.DialogDropDownMenu._DialogInputContainer {
+  background: #373c44;
+  box-shadow: 0px 8px 26px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 2px; }
+
+.DialogDropDownMenu_Item {
+  line-height: 40px;
+  padding: 0 16px;
+  cursor: pointer; }
+
+.DialogDropDownMenu_Item:hover {
+  background: #3e444d; }
+
+._DialogColLayout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
+._DialogColLayout > ._DialogLayout {
+  flex: 1;
+  box-sizing: border-box; }
+
+.DialogTwoColLayout > ._DialogLayout {
+  max-width: calc( 50% - 14px);
+  min-width: 200px; }
+
+.DialogThreeColLayout > ._DialogLayout,
+.DialogTwoThirdColLayout > ._DialogLayout:nth-child(2n+1) {
+  max-width: calc( 33.33% - 9px);
+  min-width: 133px; }
+
+.DialogTwoThirdColLayout > ._DialogLayout {
+  max-width: calc( 66.66% - 18px);
+  min-width: 266px; }
+
+.DialogLayout_NoMinWidth > ._DialogLayout,
+.DialogTwoThirdColLayout.DialogLayout_NoMinWidth > ._DialogLayout {
+  min-width: 0; }
+
+.DialogDraggable {
+  cursor: -webkit-grab;
+  cursor: grab;
+  user-select: none; }
+
+.DialogDraggable.DraggedOut {
+  display: none; }
+
+.DialogDraggable_DropGhost {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  opacity: 0.75; }
+
+.DialogDraggable_DragGhost {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  position: fixed;
+  opacity: 0.75;
+  z-index: 5000; }
+
+.DialogDropRegion.Active {
+  /* border: 1px dashed salmon; */ }
+
+.DialogSlider_Container:focus {
+  outline: none; }
+
+.DialogSlider_Slider {
+  border: 4px solid #2a2d33;
+  border-radius: 10px;
+  position: relative;
+  height: 10px;
+  background: #202226;
+  cursor: pointer;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+  user-select: none; }
+
+.DialogSlider_Value {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.DialogSlider_Grabber {
+  position: absolute;
+  top: -1px;
+  bottom: -3px;
+  margin-left: -6px;
+  /* should be half of width */
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(to bottom, #89e7ff 0%, #80aaff 80%);
+  border-radius: 50%;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+
+.DialogProgressBar_ProgressBarContainer {
+  border: 4px solid #2a2d33;
+  border-radius: 10px;
+  position: relative;
+  height: 10px;
+  background: #202226;
+  cursor: pointer;
+  box-shadow: inset 0px 11px 8px -10px #131313;
+  user-select: none;
+  overflow: hidden; }
+
+.DialogProgressBar_Value {
+  height: 100%;
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 0px;
+  transition: all .2s linear; }
+
+.DialogListBuilderInput_List {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  line-height: 26px; }
+
+.DialogListBuilderInput_Input {
+  border: none;
+  background: transparent;
+  color: white;
+  outline: none; }
+
+.DialogListBuilderInput_Input:focus {
+  outline: none; }
+
+.DialogSpanningTable {
+  width: 100%;
+  border-spacing: 0px 6px;
+  table-layout: fixed; }
+
+.DialogSpanningTable th {
+  font-weight: normal;
+  text-align: left;
+  font-size: 12px;
+  height: 20px;
+  text-transform: uppercase; }
+
+.DialogSpanningTable.BannedUsersTable tr.hoverRow,
+.DialogSpanningTable.InvitedUsersTable tr.hoverRow,
+.DialogSpanningTable.InviteLinksTable tbody tr {
+  background: linear-gradient(to right, #383d45, #383d45); }
+
+.DialogSpanningTable tr.hoverRow:hover {
+  background-color: #393d46; }
+
+.DialogSpanningTable td.friendCell {
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.DialogSpanningTable td.dateCell {
+  text-align: left;
+  font-size: 14px; }
+
+.DialogSpanningTable td.buttonCell {
+  padding-left: 5px;
+  padding-right: 10px; }
+
+.BannedUsersTable th.friendColumn,
+.InvitedUsersTable th.friendColumn {
+  width: auto; }
+
+.BannedUsersTable th.dateColumn,
+.InvitedUsersTable th.dateColumn {
+  width: 175px; }
+
+.BannedUsersTable th.buttonColumn,
+.InvitedUsersTable th.buttonColumn {
+  width: 130px; }
+
+.InviteLinksTable .inviteCodeColumn {
+  width: auto; }
+
+.InviteLinksTable .dateColumn {
+  width: 175px; }
+
+.InviteLinksTable .buttonColumn {
+  width: 130px; }
+
+.DialogSpanningTable th.tableAlignRight,
+.DialogSpanningTable td.tableAlignRight {
+  text-align: right; }
+
+.DialogCheckbox_Container {
+  cursor: pointer;
+  padding: 4px;
+  margin-bottom: 8px; }
+
+.DialogCheckbox_Container .DialogCheckbox {
+  float: left;
+  margin-right: 8px; }
+
+.DialogCheckbox {
+  width: 22px;
+  height: 22px;
+  background-color: #0004;
+  padding: 0;
+  box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+  cursor: pointer;
+  border-radius: 2px; }
+
+.DialogCheckbox .SVGIcon_DialogCheck {
+  opacity: 0;
+  transition: all .1s ease-in-out;
+  width: 18px;
+  height: 18px;
+  margin-top: 9%;
+  margin-left: 12%; }
+
+.DialogCheckbox .SVGIcon_DialogCheck path {
+  stroke-width: 40px;
+  stroke-dashoffset: -270.00;
+  transition: all .18s ease-out;
+  transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
+  transition-delay: .3s; }
+
+.DialogCheckbox.Active .SVGIcon_DialogCheck path {
+  stroke-dashoffset: 90.00;
+  transition-timing-function: cubic-bezier(1, 0, 1, 0.65);
+  transition-delay: 0s; }
+
+.DialogCheckbox.Active .SVGIcon_DialogCheck {
+  opacity: 1; }
+
+.DialogCheckbox.Active .SVGIcon_DialogCheck #stop0 {
+  opacity: 1; }
+
+.DialogCheckbox.Disabled {
+  cursor: default;
+  opacity: .5;
+  filter: saturate(0.35);
+  box-shadow: none; }
+
+.DialogCheckbox_Container:hover .DialogCheckbox,
+.DialogCheckbox:hover:not(.Disabled) {
+  background-color: #1e1f23; }
+
+.DialogCheckbox_Container:focus,
+.DialogCheckbox:focus {
+  outline: none; }
+
+.DialogCheckbox .DialogCheck {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.DialogRoundCheckbox {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; }
+
+.DialogRoundCheckbox_Control {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  background-color: #24262b; }
+
+.DialogRoundCheckbox_OuterCircle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  box-shadow: inset 0.5px 1px 3px rgba(1, 1, 1, 0.4);
+  display: flex;
+  justify-content: center;
+  transition: background-color .08s ease-in-out; }
+
+.DialogRoundCheckbox_Control:focus {
+  outline: none; }
+
+.DialogRoundCheckbox_OuterCircle:hover {
+  outline: none;
+  background-color: #1e1f23;
+  cursor: pointer; }
+
+.DialogRoundCheckbox_Control .DialogRoundCheckbox_InnerCircle {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  align-self: center;
+  box-shadow: 0px 0px 8px rgba(31, 141, 254, 0.5);
+  background: linear-gradient(to bottom, #00ccff 0%, #2d73ff 80%);
+  transform: scale(0);
+  opacity: 0;
+  transition: all .1s ease-in-out; }
+
+.DialogRoundCheckbox_Control.Active .DialogRoundCheckbox_InnerCircle {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  opacity: 1; }
+
+.copiedAnimation {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #1b98ff;
+  transition: all 0s ease-out;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none; }
+
+.copiedAnimation.animationComplete {
+  opacity: 0;
+  transition-duration: 1s;
+  transition-delay: 0.5s; }
+
+.copiedAnimation.animationPlaying {
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 0s, 0.6s; }
+
+._FixedHeight {
+  flex-shrink: 0; }
+
+._FillAvailableHeightAndScroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: scroll; }
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside; }
+
+/*
+* Title Bar styles
+*/
+.title-area {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 18px;
+  -webkit-app-region: drag;
+  z-index: 2; }
+
+body.in_global_drag .title-area {
+  -webkit-app-region: no-drag; }
+
+.titleBarContainer {
+  position: relative; }
+
+.titleBarContainer .no-drag {
+  -webkit-app-region: no-drag;
+  z-index: 3; }
+
+.title-area .title-bar-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  bottom: 0;
+  max-height: 24px;
+  -webkit-app-region: no-drag;
+  pointer-events: auto; }
+
+.singleWindowFocusBar {
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(to right, #007896, #1f3d96);
+  -webkit-mask: linear-gradient(to bottom, black 0px, black 1px, rgba(0, 0, 0, 0.4) 1px, rgba(0, 0, 0, 0.2) 8px, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity .18s ease-in-out;
+  pointer-events: none;
+  user-select: none; }
+
+.focused .singleWindowFocusBar {
+  opacity: 1;
+  z-index: 15; }
+
+.title-area-highlight {
+  height: 24px;
+  background: linear-gradient(to right, #007896, #1f3d96);
+  -webkit-mask: linear-gradient(to bottom, black 0px, black 1px, rgba(0, 0, 0, 0.4) 1px, rgba(0, 0, 0, 0.2) 8px, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity .18s ease-in-out;
+  pointer-events: none;
+  user-select: none; }
+
+.focused:not(.singlewindow) .title-area-highlight {
+  opacity: 1; }
+
+.title-area-icon {
+  width: 24px;
+  height: 18px;
+  margin: auto 0px auto 0px;
+  /*background-size: 10px;*/
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-app-region: no-drag; }
+
+.title-area-children {
+  float: right;
+  margin-right: 84px;
+  -webkit-app-region: no-drag;
+  pointer-events: auto;
+  position: absolute;
+  top: 4px;
+  right: 0px;
+  text-align: right; }
+
+.title-area-icon .SVGIcon_Minimize {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px; }
+
+.title-area-icon .SVGIcon_Maximize {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px; }
+
+.title-area-icon .SVGIcon_X_Line {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-left: 4px; }
+
+.title-area-icon .SVGIcon_X_Line line {
+  stroke: #788a92;
+  stroke-width: 24px; }
+
+.title-area-icon:hover .SVGIcon_Button rect,
+.title-area-icon:hover .SVGIcon_Button line,
+.title-area-icon:hover .SVGIcon_Button polyline {
+  stroke: white; }
+
+.maximizeRestoreButton {
+  /*background-image: url( "../../images/sharedui/chrome/icon_window_max.png" );*/ }
+
+.ModalDialogPopup .maximizeRestoreButton {
+  display: none; }
+
+.minimizeButton {
+  /*background-image: url( "../../images/sharedui/chrome/icon_window_min.png" );*/ }
+
+.closeButton:hover {
+  /*background-image: url( "../../images/sharedui/chrome/icon_window_close_hover.png" );*/ }
+
+.maximizeRestoreButton:hover {
+  /*background-image: url( "../../images/sharedui/chrome/icon_window_max_hover.png" );*/ }
+
+.minimizeButton:hover {
+  /*background-image: url( "../../images/sharedui/chrome/icon_window_min_hover.png" );*/ }
+
+.window_resize_grip {
+  background-image: url("../../images/sharedui/chrome/resizehandleicon.png");
+  background-size: 16px 16px;
+  background-position: 4px 4px;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  opacity: .3;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  /* force above other ui. even when fixed, seeing other ui on top */
+  z-index: 1000; }
+
+.DialogBodyNotificationBar {
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #52b8e0;
+  line-height: 18px;
+  height: 18px;
+  display: flex;
+  position: absolute;
+  margin-top: -2px; }
+
+.permissionDetailsPage .DialogBodyNotificationBar {
+  margin-top: -18px; }
+
+.DialogBodyNotificationBar svg {
+  height: 13px;
+  width: 13px;
+  margin-left: 0px;
+  margin-right: 2px;
+  margin-top: 2px; }
+
+.DialogBodyNotificationBar .SVGIcon_Lock .topLock {
+  fill: #52b8e0; }
+
+.DialogBodyNotificationBar .SVGIcon_Lock .baseLock {
+  stroke: #52b8e0; }
+
+.GenericConfirmDialog .friend {
+  margin-top: 10px; }
+
+.displayColumn {
+  display: flex;
+  flex-direction: column; }
+
+.displayRow {
+  display: flex;
+  flex-direction: row; }
+
+.fullHeight {
+  height: 100%; }
+
+.fullWidth {
+  width: 100%; }
+
+.alignItemsCenter {
+  align-items: center; }
+
+.alignSelfCenter {
+  align-self: center; }
+
+.tempText {
+  font-size: 10px;
+  color: #f50;
+  width: 400px;
+  align-self: center; }
+
+.allCaps {
+  text-transform: uppercase; }
+
+.flexShrinkNone {
+  flex-shrink: 0; }
+
+/*
+ * Throbber
+ */
+.throbber {
+  width: 60px;
+  height: 90px;
+  display: inline-block; }
+
+.throbber_small {
+  width: 36px;
+  height: 36px; }
+
+.throbber_medium {
+  width: 60px;
+  height: 60px; }
+
+.throbber_large {
+  width: 92px;
+  height: 92px; }
+
+.throbber_xlarge {
+  width: 120px;
+  height: 120px; }
+
+.throbber_fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.throbber_absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.throbber > div {
+  float: left;
+  width: 25%;
+  height: 100%;
+  background-color: #67c1f5; }
+
+.throbber > div {
+  animation: loading_throbber_bar 1s ease-in-out infinite; }
+
+.throbber > div:nth-child(1) {
+  transform: scaleX(1) scaleY(0.6); }
+
+.throbber > div:nth-child(2) {
+  margin-left: 12%;
+  transform: scaleX(1) scaleY(0.6);
+  animation-delay: 0.16s; }
+
+.throbber > div:nth-child(3) {
+  margin-left: 12%;
+  transform: scaleX(1) scaleY(0.6);
+  animation-delay: 0.32s; }
+
+.WaitingForInterFaceReadyContainer {
+  width: 100%;
+  height: 100%;
+  background-color: #1f2126;
+  display: flex; }
+
+.WaitingForInterFaceReadyThrobber {
+  margin: auto;
+  align-self: center;
+  width: fit-content; }
+
+.Throbber_Blur {
+  position: absolute;
+  filter: blur(12px);
+  transform: scale(1.25); }
+
+@keyframes loading_throbber_bar {
+  0% {
+    transform: scaleX(1) scaleY(0.6); }
+  30% {
+    transform: scaleX(1) scaleY(1); }
+  55% {
+    transform: scaleX(1) scaleY(0.6); }
+  100% {
+    transform: scaleX(1) scaleY(0.6); } }
+
+/*=============TEST STUFF BELOW PLZ DONT DELETE=======================*/
+.innerwidth {
+  border: 3px dashed #f80;
+  flex: 1;
+  color: white; }
+
+.form {
+  border: 1px dotted cyan;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.A {
+  background-color: #F006;
+  height: 40px; }
+
+.B {
+  background-color: #0f06;
+  display: flex;
+  flex-direction: column; }
+
+.ScrollList {
+  border: 2px solid pink;
+  background-color: #000a;
+  margin: 16px 32px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 200px;
+  min-height: 40px; }
+
+.FixedHeight {
+  border: 2px outset red;
+  height: 60px;
+  margin: 4px 32px;
+  background-color: #000a;
+  margin-bottom: 16px; }
+
+.VariableHeight {
+  border: 2px inset blue;
+  height: 60px;
+  margin: 4px 32px;
+  background-color: #000a; }
+
+.C {
+  background-color: #00f6;
+  height: 40px; }
+
+/*=============TEST STUFF ABOVE PLZ DONT DELETE=======================*/
+.largeThrobber {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px; }
+
+.mediumThrobber {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 24px; }
+
+.smallThrobber {
+  width: 16px;
+  height: 24px; }
+
+.throbberHalf {
+  flex: 1; }
+
+.whiteText {
+  color: white; }
+
+.textLink {
+  color: white;
+  text-decoration: underline; }
+
+.allCaps {
+  text-transform: uppercase; }
+
 body {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
@@ -817,27 +5241,6 @@ img {
   color: rgba(213, 231, 229, 0.5);
   text-decoration: none; }
 
-/*
-.friendlistListContainer::-webkit-scrollbar
-{
-	background-color: rgba( 0, 0, 0, .05 );
-	background: linear-gradient( to right, rgba(25, 26, 31, 0) 0%, rgba( 28, 30, 34, 0 ) 6px, rgba( 29, 30, 35, 0 ) 80% );
-
-}
-
-
-.friendlistListContainer:hover::-webkit-scrollbar
-{
-	background: linear-gradient( to right, rgba(25, 26, 31, 1) 0%, rgba( 28, 30, 34, 1 ) 6px, rgba( 29, 30, 35, 1 ) 80% );
-}
-
-
-
-.ChatRoomList::-webkit-scrollbar
-{
-	background: linear-gradient( to right, rgba(30, 34, 41, 1) 0%, rgba( 36, 43, 51, 1 ) 6px, rgba( 36, 43, 51, 1 ) 80% );
-}
-*/
 .ChatRoomList:hover::-webkit-scrollbar-thumb,
 .friendlistListContainer:hover::-webkit-scrollbar-thumb {
   background-color: #434953;
@@ -888,13 +5291,6 @@ img {
 
 .TheaterMode.singlewindow .friendsListContainer {
   display: none; }
-
-.friendgrid {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: relative; }
 
 .singlewindow .friendsListContainer {
   width: 308px; }
@@ -959,12 +5355,6 @@ img {
 .FriendsListContent .friendlistListContainer > .friendGroup:first-child {
   border-top: 0.5px solid transparent;
   margin-top: 0px; }
-
-.friendlist_titlebar {
-  padding: 8px;
-  background-color: red;
-  -webkit-app-region: drag;
-  flex: none; }
 
 body.in_global_drag .friendlist_titlebar {
   -webkit-app-region: no-drag; }
@@ -2712,6 +7102,9 @@ body.in_global_drag .friendlist_titlebar {
   /*opacity: .5;
 	filter: saturate( .5);*/ }
 
+.chatroomBucket_9007199254740990 {
+  background: linear-gradient(to right, rgba(20, 162, 20, 0.3), rgba(20, 162, 20, 0)); }
+
 .CompactFriendsList .avatarHolder .avatarStatus {
   min-width: 1px; }
 
@@ -3918,21 +8311,6 @@ body.in_global_drag .chatWindow .DropTarget.chatBody,
 body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 .chatWindow .chatBody.chatRoomActiveDrop .chatHistoryAndMembers {
   position: relative; }
-
-.chatEntryControls {
-  /* for flyouts */
-  position: relative;
-  /* for children */
-  display: flex;
-  flex-direction: row;
-  /* our layout */
-  flex: 1;
-  background-color: #1b1c20;
-  box-shadow: inset 0px 0px 4px #000000;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  padding-right: 2px; }
 
 .chatFileUploadPreviewContainer {
   position: absolute;
@@ -5312,118 +9690,6 @@ input.InviteFriendToChatDialog_LinkInput {
 .msg .ChatMessageInvite a, .msg .ChatMessageInvite a:hover {
   border-bottom: 0px solid transparent; }
 
-/*
-* Twitter embed
-*/
-.ChatMessageTweet {
-  padding: 20px;
-  max-width: 616px;
-  margin-bottom: 16px;
-  background: linear-gradient(to right, rgba(253, 253, 253, 0.15) 0%, rgba(181, 183, 189, 0.1) 25%, rgba(181, 183, 189, 0.05) 60%, rgba(87, 92, 104, 0.05) 100%);
-  color: #d3dce6;
-  font-family: "Helvetica";
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden; }
-
-.ChatMessageTweet_Header {
-  display: flex;
-  margin-bottom: 8px; }
-
-.ChatMessageTweet_ProfileImage {
-  width: 48px;
-  height: 48px;
-  margin-right: 06px; }
-
-.ChatMessageTweet_ProfileImage > img {
-  border-radius: 48px;
-  box-shadow: 0px 0px 8px #000000; }
-
-.ChatMessageTweet_NameSection {
-  display: flex;
-  flex-direction: column; }
-
-.ChatMessageTweet_NameGroup {
-  display: flex;
-  font-weight: bold; }
-
-.msg .ChatMessageTweet a.ChatMessageTweet_Name {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 4px; }
-
-.ChatMessageTweet_Logo {
-  background-image: url("../../images/webui/twitter/Twitter_Logo_Blue.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  margin-left: auto; }
-
-.msg .ChatMessageTweet a,
-.msg .ChatMessageTweet a:hover {
-  border-bottom: none;
-  padding: 0; }
-
-.ChatMessageTweet_Verified {
-  background-image: url("../../images/webui/twitter/Twitter_verified.png");
-  background-image: no-repeat;
-  background-size: cover;
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
-  align-self: flex-end; }
-
-.msg .ChatMessageTweet a.ChatMessageTweet_ScreenName {
-  line-height: 24px;
-  color: #AAB8C2; }
-
-.msg a.ChatMessageTweet_Body {
-  margin: 8px 0px;
-  color: #d3dce6; }
-
-.ChatMessageTweet_Body {
-  cursor: text; }
-
-.ChatMessageTweet_Body > img {
-  display: block;
-  margin: 16px;
-  max-width: 100%;
-  max-height: 400px;
-  object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0px 10px 64px #000000cb;
-  border-radius: 4px;
-  cursor: pointer; }
-
-.ChatMessageTweet_Footer {
-  display: flex; }
-
-.ChatMessageTweet_Created {
-  margin-left: auto;
-  font-weight: bold;
-  font-size: 14px; }
-
-.chatTextarea {
-  resize: none;
-  margin-right: 4px;
-  height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  padding: 4px 4px 4px 8px;
-  /*flex: 6;*/
-  flex-shrink: 1;
-  width: 100%;
-  min-width: 164px; }
-
 .ChatRoomGroupDialog_contents.BothChatsDisplayed .chatTextarea:focus {
   outline-offset: -2px;
   outline: -webkit-focus-ring-color auto 5px; }
@@ -5448,17 +9714,6 @@ input.InviteFriendToChatDialog_LinkInput {
   background-repeat: no-repeat;
   min-width: 46px;
   cursor: pointer; }
-
-.chatEntryActionsGroup {
-  padding: 2px;
-  box-shadow: black 0px 0px 4px inset;
-  background-color: #1b1c20;
-  margin-left: 8px; }
-
-.chatEntryActionsContainer,
-.chatEntryActionsGroup {
-  display: flex;
-  flex-direction: row; }
 
 .chatSubmitButton.EmoticonPickerButton,
 .chatSubmitButton.EmbedButton {
@@ -6838,6 +11093,17 @@ a.connectionStatus:visited {
 .MemberListColumn .friend:hover .chatMemberFriendIcon .WavingArm {
   animation-name: FriendRequestWave; }
 
+.MemberListColumn .friend .chatMemberPartyBeaconIcon svg {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  left: 29px;
+  padding: 3px;
+  bottom: -2px;
+  z-index: 1;
+  background: green;
+  border-radius: 8px; }
+
 .MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupIcon {
   opacity: 1;
   transform: translateX(0px); }
@@ -7812,37 +12078,6 @@ html.web_chat_frame .perf_timing_area {
   overflow: visible;
   margin-bottom: 2px; }
 
-.msg .plusOne {
-  font-style: normal;
-  font-size: 24px;
-  font-weight: 1000;
-  color: #d5dbe6;
-  animation-name: none;
-  animation-duration: 1.5s;
-  animation-delay: .2s;
-  animation-iteration-count: 1;
-  animation-timing-function: cubic-bezier(0.44, 0.11, 0.66, 2.13);
-  animation-timing-function: cubic-bezier(0.53, 1.15, 0.66, 2.13);
-  width: fit-content;
-  animation-fill-mode: both; }
-
-.MsgAnimating.plusOne {
-  animation-name: plusOne; }
-
-@keyframes plusOne {
-  0% {
-    opacity: 0;
-    transform: scale(0.2);
-    text-shadow: 0px 0px 32px #ffff; }
-  26% {
-    opacity: 1;
-    transform: scale(1);
-    color: white;
-    text-shadow: 0px 0px 20px #ffff; }
-  100% {
-    color: #d5dbe6;
-    text-shadow: 0px 0px 0px #fff0; } }
-
 .msg .filteredURL.bb_removedlink {
   color: #c91616;
   background-color: black;
@@ -8440,7 +12675,7 @@ img.emoticon.large {
 .friendListButtons {
   position: absolute;
   z-index: 3;
-  right: -4px;
+  right: 0px;
   display: flex; }
 
 .compactView .friendListButtons {
@@ -8452,6 +12687,9 @@ img.emoticon.large {
   width: 24px;
   height: 24px;
   margin: 0 5px 0 4px; }
+
+.friendListButton:last-child:not(.addFriendButton) {
+  margin-right: 2px; }
 
 .compactView .friendsTabButtonsContainer .friendRequestButton {
   width: 20px;
@@ -8693,28 +12931,6 @@ img.emoticon.large {
 
 .audioDebug {
   background-image: url("../../images/webui/debug_mic.png"); }
-
-.friendsGridWapper {
-  margin: 20px;
-  overflow: auto; }
-
-.friendsGridWapper .header {
-  font-size: 48px;
-  font-weight: bold;
-  margin-bottom: 20px; }
-
-.friendGroupWrapper {
-  margin-bottom: 20px; }
-
-.friendsGridWapper .tearout {
-  position: fixed;
-  left: 0px;
-  top: 64px;
-  padding: 10px;
-  background-color: lime; }
-
-.friendsGridWapper .tearout:hover {
-  background-color: aqua; }
 
 #friendslist-droptarget {
   display: none; }
@@ -13160,24 +17376,6 @@ a.general_btn:hover {
 .EmoticonSelector_Item_New {
   position: relative; }
 
-.NewEmoticonIndicator {
-  background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
-  position: absolute;
-  top: -5%;
-  right: -5%;
-  left: 55%;
-  bottom: 55%;
-  display: flex;
-  align-items: center; }
-
-.NewEmoticonIndicator .NewEmoticonCircle {
-  width: 4px;
-  height: 4px;
-  background-color: yellow;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto; }
-
 .EmoticonSelector_Item:hover {
   background-color: #201f1d; }
 
@@ -13211,9 +17409,6 @@ a.general_btn:hover {
 
 .contextMenu .currentUserContextMenu .contextMenuSectionContent .contextMenuItem {
   border-color: transparent; }
-
-.contextMenu .currentUserContextMenu .contextMenuSectionContent {
-  /*background-color: rgb(79, 81, 87);*/ }
 
 .contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
   height: 14px;
@@ -13358,16 +17553,6 @@ a.general_btn:hover {
 .watchPartyDialog .DialogLabel {
   margin-top: 16px; }
 
-/*@media screen and (max-height: 640px)
-{
-	.chat_main.responsive_friends .ChatRoomListContainerParent {
-		display: none;
-	}
-
-	.chat_main.responsive_chats .chatRoomGroupHeader {
-		display: none;
-	}
-}*/
 .ChatRoomGroupOGGAvatar {
   flex-shrink: 0;
   width: 124.1px;
@@ -13595,15 +17780,6 @@ a.general_btn:hover {
 .ChatRoomNotificationSettingsDialog .notificationChimeAndToast .DialogCheckbox {
   margin: 0 16px; }
 
-/*.ModalPosition_Content .DialogContent.CreateChatDialog
-{
-	min-height: 286px;
-}
-
-.ModalPosition_Content .DialogContent.ChatRoomGroupInviteDialog
-{
-	min-height: 450px;
-}*/
 .FriendsSettingsVoiceTransmissionType_ButtonRow {
   padding: 8px 8px;
   background-color: rgba(67, 73, 83, 0.3); }
@@ -14563,451 +18739,4 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 .avoidEvents {
   pointer-events: none; }
-
-.numberCounterContainer {
-  min-width: 12px;
-  text-align: center;
-  display: inline-block;
-  border: 1px solid #1c1c1d;
-  border-radius: 4px;
-  color: white;
-  background-color: rgba(83, 83, 83, 0.5);
-  position: relative;
-  max-height: 16px;
-  overflow: hidden;
-  margin-bottom: -4px; }
-
-.numberColumn {
-  animation-timing-function: linear;
-  animation-fill-mode: backwards;
-  margin-top: -1px; }
-
-.randomNumberLabel {
-  text-align: center;
-  transition-property: opacity;
-  transition-duration: 1s;
-  transition-delay: 6s;
-  opacity: 1;
-  user-select: none; }
-
-.randomNumberLabel.randomActual {
-  user-select: initial; }
-
-.randomNumberShadow {
-  background: linear-gradient(to bottom, #393a3e 0px, rgba(57, 58, 62, 0) 20%, rgba(57, 58, 62, 0) 50%, #393a3e 100%);
-  position: absolute;
-  top: -1px;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  border-radius: 3px; }
-
-.numberColumn.startingZero {
-  opacity: .3;
-  animation-fill-mode: none; }
-
-.randomMsg:not(.MsgAnimating) .numberColumn.startingZero {
-  opacity: 0.3; }
-
-.MsgAnimating .numberCounterContainer .randomNumberLabel:before {
-  position: absolute;
-  top: -16px; }
-
-.MsgAnimating .numberCounterContainer .randomNumberLabel:after {
-  position: absolute;
-  top: 17px;
-  left: 2px; }
-
-@keyframes randomNumbers {
-  0% {
-    opacity: 1;
-    transform: translateY(-180px); }
-  100% {
-    opacity: 1;
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers0 {
-  0% {
-    opacity: 1;
-    transform: translateY(0px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers1 {
-  0% {
-    opacity: 1;
-    transform: translateY(-18px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers2 {
-  0% {
-    opacity: 1;
-    transform: translateY(-36px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers3 {
-  0% {
-    opacity: 1;
-    transform: translateY(-54px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers4 {
-  0% {
-    opacity: 1;
-    transform: translateY(-72px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers5 {
-  0% {
-    opacity: 1;
-    transform: translateY(-90px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers6 {
-  0% {
-    opacity: 1;
-    transform: translateY(-108px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers7 {
-  0% {
-    opacity: 1;
-    transform: translateY(-126px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers8 {
-  0% {
-    opacity: 1;
-    transform: translateY(-144px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers9 {
-  0% {
-    opacity: 1;
-    transform: translateY(-162px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes randomNumbers10 {
-  0% {
-    opacity: 1;
-    transform: translateY(-180px); }
-  90% {
-    opacity: 1; }
-  100% {
-    transform: translateY(0px); } }
-
-.randomMsg:not(.MsgAnimating) .numberColumn {
-  animation-name: none !important; }
-
-@keyframes randomNumbersZero {
-  0% {
-    transform: translateY(-180px);
-    opacity: 1; }
-  100% {
-    transform: translateY(0px);
-    opacity: 1; } }
-
-.randomValues {
-  opacity: .7; }
-
-.coinLabel {
-  text-transform: uppercase;
-  color: black;
-  font-size: 10px;
-  letter-spacing: 0px;
-  text-align: center;
-  padding-top: 10px; }
-
-.CoinModel {
-  border: 1px solid red;
-  width: fit-content; }
-
-.flipCoinContainer {
-  position: relative;
-  overflow: visible;
-  transition: all .2s ease-in-out;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-  transform-origin: 50% 50%;
-  opacity: 0; }
-
-.MsgAnimating .flipCoinContainer {
-  opacity: 1;
-  animation-name: coinFade; }
-
-.flipCoinAndResult {
-  display: flex;
-  flex-direction: row;
-  height: 20px;
-  overflow: visible; }
-
-.coin {
-  margin: -16px 0 0 -16px;
-  width: 32px;
-  height: 32px;
-  -ms-transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  margin-left: 8px;
-  perspective: 80px;
-  position: absolute;
-  top: 10px;
-  left: 0px;
-  transform: rotateY(0deg) rotateX(90deg) scale(1);
-  transition: all .2s ease-in;
-  z-index: -1; }
-
-.coin .front {
-  width: 100%;
-  height: 100%;
-  background: #b3b3b3;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both; }
-
-.coin .back {
-  width: 100%;
-  height: 100%;
-  background: #aaaaaa;
-  border-radius: 50%;
-  transform: rotateY(180deg) translateZ(4px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  filter: brightness(1);
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both; }
-
-.MsgAnimating .coin .back {
-  animation-name: coinFlipBottom; }
-
-.MsgAnimating .coin .front {
-  animation-name: coinFlipTop; }
-
-.coin .front_b {
-  width: 100%;
-  height: 100%;
-  background: #686868;
-  border-radius: 50%;
-  -webkit-transform: translateZ(-1px);
-  transform: translateZ(-0.5px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2; }
-
-.coin .back_b {
-  width: 100%;
-  height: 100%;
-  background: #6e6e6e;
-  border-radius: 50%;
-  transform: translateZ(-3.5px);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -2; }
-
-.coin:before {
-  content: "";
-  margin-left: -5px;
-  width: 3.5px;
-  height: 100%;
-  background: #6b6b6b;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform-origin: 100% 50%;
-  transform: rotateY(-90deg) translateX(0px);
-  transform-origin: 100% 50%; }
-
-.coin:after {
-  content: "";
-  width: 3.5px;
-  height: 100%;
-  background: #6b6b6b;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform: rotateZ(90deg) rotateY(90deg) translateX(0px);
-  transform-origin: 0% 50%; }
-
-.coin .mid {
-  content: "";
-  margin-left: -5px;
-  width: 3.5px;
-  height: 100%;
-  background: dimgray;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform-origin: 100% 50%;
-  transform: rotateY(-90deg) rotateX(45deg) translateX(0px);
-  transform-origin: 100% 50%; }
-
-.coin .mid:before {
-  content: "";
-  margin-left: -5px;
-  width: 3.5px;
-  height: 100%;
-  background: #888888;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 1;
-  transform-origin: 100% 50%;
-  transform: rotateY(-90deg) rotateX(-45deg) translateX(0px);
-  transform-origin: 100% 50%; }
-
-.coinFace {
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  background-color: gray; }
-
-.coinFace .flipCoinWinningSide {
-  transform: translateZ(10px); }
-
-.coinFace .flipCoinLosingSide {
-  transform: translateZ(-10px); }
-
-.MsgAnimating .coin {
-  animation-name: coinFlip;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  transform-origin: 50% 50%;
-  transform-style: preserve-3d; }
-
-@keyframes coinSpin {
-  0% {
-    transform: rotateY(360deg) rotateX(0deg) translateX(0px); }
-  50% {
-    transform: rotateY(0deg) rotateX(90deg) translateX(0px); }
-  100% {
-    transform: rotateY(360deg) rotateX(0deg) translateX(0px); } }
-
-@keyframes coinFlip {
-  0% {
-    left: -40px;
-    transform: rotateY(6300deg) rotateX(0deg) scale(0.5, 0.5); }
-  10% {
-    left: 20px; }
-  30% {
-    left: 0px; }
-  90% {
-    left: 0px;
-    transform: rotateY(0deg) rotateX(90deg) scale(1, 1); }
-  100% {
-    left: 0px;
-    transform: rotateY(0deg) rotateX(90deg) scale(1, 0); } }
-
-@keyframes coinFlipTop {
-  0% {
-    filter: brightness(1); }
-  30% {
-    filter: brightness(1); }
-  40% {
-    filter: brightness(2); }
-  50% {
-    filter: brightness(1); }
-  100% {
-    filter: brightness(0.5); } }
-
-@keyframes coinFlipBottom {
-  0% {
-    filter: brightness(1); }
-  30% {
-    filter: brightness(0.35); }
-  100% {
-    filter: brightness(0); } }
-
-.resultLabel {
-  margin-left: 6px;
-  text-transform: uppercase;
-  transform-origin: 100% 50%;
-  animation-duration: 4s;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-out;
-  animation-fill-mode: both;
-  color: white; }
-
-.MsgAnimating .resultLabel {
-  animation-name: coinFlipResult; }
-
-.lineClamp {
-  height: 120px;
-  overflow: scroll; }
-
-@keyframes coinFlipResult {
-  0% {
-    opacity: 0;
-    transform: rotateX(90deg) translateY(10px); }
-  76% {
-    opacity: 0;
-    transform: rotateX(90deg) translateY(10px);
-    color: #7e7e7e; }
-  80% {
-    transform: rotateX(45deg) translateY(-8px);
-    color: #7e7e7e; }
-  84% {
-    opacity: 1;
-    transform: rotateX(0deg) translateY(0px);
-    color: #7e7e7e; }
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg) translateY(0px);
-    color: white; } }
-
-@keyframes coinFade {
-  0% {
-    opacity: 1; }
-  75% {
-    opacity: 1; }
-  80% {
-    opacity: 0; }
-  100% {
-    opacity: 0; } }
 

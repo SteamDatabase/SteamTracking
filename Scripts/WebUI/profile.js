@@ -98,32 +98,35 @@
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return a;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return l;
       }),
       n.d(t, "h", function() {
         return u;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return m;
       }),
       n.d(t, "i", function() {
         return p;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "j", function() {
         return h;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "b", function() {
         return d;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "m", function() {
         return f;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return v;
+      }),
+      n.d(t, "f", function() {
+        return y;
       });
     var r = n("UqDm");
     function i(e) {
@@ -212,24 +215,24 @@
       return e && (t = e.ownerDocument.defaultView), t;
     }
     function p(e) {
-      var t = "steam://openurl/";
-      e.startsWith(t) && (e = e.slice(t.length)),
-        (function(e) {
-          var t = document.createElement("textarea");
-          (t.textContent = e),
-            (t.style.position = "fixed"),
-            document.body.appendChild(t),
-            t.select();
-          try {
-            document.execCommand("copy");
-          } catch (e) {
-            console.warn("Copy to clipboard failed.", e);
-          } finally {
-            document.body.removeChild(t);
-          }
-        })(e);
+      var t = document.createElement("textarea");
+      (t.textContent = e),
+        (t.style.position = "fixed"),
+        document.body.appendChild(t),
+        t.select();
+      try {
+        document.execCommand("copy");
+      } catch (e) {
+        console.warn("Copy to clipboard failed.", e);
+      } finally {
+        document.body.removeChild(t);
+      }
     }
     function h(e) {
+      var t = "steam://openurl/";
+      e.startsWith(t) && (e = e.slice(t.length)), p(e);
+    }
+    function d(e) {
       var t = e.ownerDocument;
       return (
         t.fullscreen ||
@@ -238,7 +241,7 @@
         t.msFullscreenElement
       );
     }
-    function d(e) {
+    function f(e) {
       var t = e;
       t.requestFullscreen
         ? t.requestFullscreen()
@@ -248,7 +251,7 @@
             ? t.mozRequestFullScreen()
             : t.msRequestFullscreen && t.msRequestFullscreen();
     }
-    function f(e) {
+    function v(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
@@ -258,7 +261,7 @@
             ? t.mozCancelFullScreen()
             : t.msExitFullscreen && t.msExitFullscreen();
     }
-    var v = (function() {
+    var y = (function() {
       function e(e) {
         var o = this;
         (this.m_bNeedSort = !1),
