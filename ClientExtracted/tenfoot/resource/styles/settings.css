@@ -432,6 +432,17 @@ SettingsPanel .SettingsContentColumnv2 Button
 	background-color: none;
 }
 
+Slider.ChatScale
+{
+	width: 100%;
+	height: 21px;
+}
+
+Slider.ChatScale:disabled
+{
+	visibility: collapse;
+}
+
 .SettingsBottomPanel
 {
 	margin-left: 170px;

@@ -202,22 +202,40 @@ HTML.HasHorizontalScrollbar .RightMouseScrollRegion
 	opacity: 1.0;
 }
 
-.LoadingPage #ShowKeyboardButton
+.VR #ShowKeyboardButton
+{
+	width: 94%;
+	horizontal-align: right;
+}
+
+.VR #BackButton
+{
+	width: 6%;
+	height: 5%;
+	horizontal-align: left;
+	vertical-align: bottom;
+	opacity: 1.0;
+}
+
+.LoadingPage #ShowKeyboardButton,
+.LoadingPage #BackButton
 {
 	opacity: 0.0;
 
-	transition-property: height, opacity;
-	transition-duration: 0.3s, 3s;
+	transition-property: opacity;
+	transition-duration: 3s;
 	transition-delay: 0.0s;
 	transition-timing-function: ease-in;
 }
 
-.ShowKeyboard #ShowKeyboardButton
+.ShowKeyboard #ShowKeyboardButton,
+.ShowKeyboard #BackButton
 {
 	height: 0%;
 }
 
-#ShowKeyboardLabel
+#ShowKeyboardLabel,
+.VR #BackButtonLabel
 {
 	horizontal-align: center;
 	width: 13%;
@@ -225,7 +243,13 @@ HTML.HasHorizontalScrollbar .RightMouseScrollRegion
 	opacity: 1.0;
 }
 
-.ShowKeyboard #ShowKeyboardLabel
+.VR #BackButtonLabel
+{
+	width: 100%;
+}
+
+.ShowKeyboard #ShowKeyboardLabel,
+.ShowKeyboard #BackButtonLabel
 {
 	opacity: 0.0;
 }

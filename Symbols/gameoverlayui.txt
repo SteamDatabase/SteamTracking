@@ -782,6 +782,7 @@
  D CSettingsSubFriends::GetMessageMap()::s_pMap
  D CSettingsSubFriends::KB_ChainToMap()::chained
  D CSettingsSubFriends::s_rgCheckControlToRegKeys
+ D CSettingsSubFriends::s_rgSliderControlToRegKeys
  D CSettingsSubInGame::ChainToAnimationMap()::chained
  D CSettingsSubInGame::ChainToMap()::chained
  D CSettingsSubInGame::GetKBMap()::s_pMap

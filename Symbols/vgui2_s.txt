@@ -1855,7 +1855,7 @@
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T IsForegroundApp()
  T KV_ResolveSymbol(char const*)
- T KeyCode_CharToVGUI(char)
+ T KeyCode_CharToVGUI(int)
  T KeyCode_VGUICanBeRemapped(vgui::KeyCode)
  T KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T KeyCode_VirtualKeyToVGUI(int)

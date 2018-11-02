@@ -38,7 +38,9 @@ public:
     virtual unknown_ret HasGameMapping(unsigned int) = 0;
     virtual unknown_ret FindControllerByAPIHandle(unsigned long long) = 0;
     virtual unknown_ret GetGlyphForActionOrigin(EControllerActionOrigin) = 0;
+    virtual unknown_ret GetGlyphForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
+    virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetMotionData(unsigned long long) = 0;
     virtual unknown_ret GetMotionDataDisabled(unsigned int, unsigned long long) = 0;

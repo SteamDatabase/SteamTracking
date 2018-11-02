@@ -12,5 +12,6 @@ public:
     virtual unknown_ret CancelReservation(unsigned long long, CSteamID) = 0;
     virtual unknown_ret ChangeNumOpenSlots(unsigned long long, unsigned int) = 0;
     virtual unknown_ret DestroyBeacon(unsigned long long) = 0;
+    virtual unknown_ret GetBeaconLocationData(SteamPartyBeaconLocation_t, ESteamPartyBeaconLocationData, char*, int) = 0;
     virtual unknown_ret ReservePartySlot(unsigned int, unsigned long long) = 0;
 };

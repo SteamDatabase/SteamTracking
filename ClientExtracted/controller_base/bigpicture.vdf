@@ -87,6 +87,7 @@
 				"FriendsUISubmit"				"#Action_Submit"
 				"FriendsUIShowEmoticonPicker"	"#Action_ShowEmoticonPicker"
 				"FriendsUIAcceptGameInvite"		"#Action_AcceptGameInvite"
+				"FriendsUIInviteToGame"			"#Action_InviteToGame"
 				"FriendsUIToggleVoiceChat"		"#Action_ToggleVoiceChat"
 				"FriendsUIToggleFriendsList"	"#Action_ToggleFriendsList"
 			}
@@ -217,6 +218,7 @@
 			"Action_CursorSelect"		"Mouse Cursor Select"
 			"Action_ShowEmoticonPicker"	"Show Emoticon Picker"
 			"Action_AcceptGameInvite"	"Accept Game Invite"
+			"Action_InviteToGame"		"Invite to Game"
 			"Action_ToggleVoiceChat"	"Toggle Voice Chat"
 			"Action_ToggleFriendsList"	"Show/Hide Friends List"
 		}

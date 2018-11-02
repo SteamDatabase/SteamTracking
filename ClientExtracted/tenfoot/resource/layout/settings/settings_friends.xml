@@ -25,7 +25,11 @@
 						<Label class="LongDesc" text="#SettingsFriends_ViewProfile" />
 					</Button>
 
+					<Label class="SettingsStatic" text="#SettingsFriends_ScalingOverride" />
 					<ToggleButton class="CheckBox" id="SettingsFriends_HighVisibilityMode" text="#SettingsFriends_HighVisibilityMode" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
+					<Slider class="Slider ChatScale" id="SettingsFriends_HighVisibilityModeScale"/>
+					<ToggleButton class="CheckBox" id="SettingsFriends_HighVisibilityModeVR" text="#SettingsFriends_HighVisibilityModeVR" selectionpos="auto" onactivate="FriendsSettingCheckBoxSelected()"/>
+					<Slider class="Slider ChatScale" id="SettingsFriends_HighVisibilityModeVRScale"/>
 				</Panel>
 
 				<Panel class="SettingsContentColumnv2" tabindex="auto" selectionpos="auto">
