@@ -2593,10 +2593,17 @@ var g_bDisableAutoloader = false;
 									}
 								}
 							}
-							if( GDynamicStore.BIsAppIgnored( nAppId ) )
+
+							if( $(e).hasClass('gamelink') )
 							{
-								if( $(e).hasClass('gamelink') )
+								if ( GDynamicStore.BIsAppIgnored( nAppId ) )
+								{
 									$(e).parent().parent().hide();
+								}
+								else if ( $( e ).hasClass( 'ds_excluded_by_preferences' ) )
+								{
+									$(e).parent().parent().hide();
+								}
 							}
 						});
 						$(ele).append(newElement);
