@@ -1,4 +1,4 @@
-class IClientUGC
+class ISteamUGC012
 {
 public:
     virtual unknown_ret CreateQueryUserUGCRequest(unsigned int, EUserUGCList, EUGCMatchingUGCType, EUserUGCListSortOrder, unsigned int, unsigned int, unsigned int) = 0;
@@ -8,7 +8,6 @@ public:
     virtual unknown_ret SendQueryUGCRequest(unsigned long long) = 0;
     virtual unknown_ret GetQueryUGCResult(unsigned long long, unsigned int, SteamUGCDetails_t*) = 0;
     virtual unknown_ret GetQueryUGCPreviewURL(unsigned long long, unsigned int, char*, unsigned int) = 0;
-    virtual unknown_ret GetQueryUGCImageURL(unsigned long long, unsigned int, char*, unsigned int, unsigned int*, unsigned int*) = 0;
     virtual unknown_ret GetQueryUGCMetadata(unsigned long long, unsigned int, char*, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCChildren(unsigned long long, unsigned int, unsigned long long*, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCStatistic(unsigned long long, unsigned int, EItemStatistic, unsigned long long*) = 0;
@@ -16,7 +15,6 @@ public:
     virtual unknown_ret GetQueryUGCAdditionalPreview(unsigned long long, unsigned int, unsigned int, char*, unsigned int, char*, unsigned int, EItemPreviewType*) = 0;
     virtual unknown_ret GetQueryUGCNumKeyValueTags(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCKeyValueTag(unsigned long long, unsigned int, unsigned int, char*, unsigned int, char*, unsigned int) = 0;
-    virtual unknown_ret GetQueryUGCIsDepotBuild(unsigned long long, unsigned int, bool*) = 0;
     virtual unknown_ret ReleaseQueryUGCRequest(unsigned long long) = 0;
     virtual unknown_ret AddRequiredTag(unsigned long long, char const*) = 0;
     virtual unknown_ret AddExcludedTag(unsigned long long, char const*) = 0;
@@ -60,21 +58,19 @@ public:
     virtual unknown_ret GetUserItemVote(unsigned long long) = 0;
     virtual unknown_ret AddItemToFavorites(unsigned int, unsigned long long) = 0;
     virtual unknown_ret RemoveItemFromFavorites(unsigned int, unsigned long long) = 0;
-    virtual unknown_ret SubscribeItem(unsigned int, unsigned long long, bool) = 0;
-    virtual unknown_ret UnsubscribeItem(unsigned int, unsigned long long) = 0;
-    virtual unknown_ret GetNumSubscribedItems(unsigned int) = 0;
-    virtual unknown_ret GetSubscribedItems(unsigned int, unsigned long long*, unsigned int) = 0;
-    virtual unknown_ret GetItemState(unsigned int, unsigned long long) = 0;
-    virtual unknown_ret GetItemInstallInfo(unsigned int, unsigned long long, unsigned long long*, char*, unsigned int, unsigned int*) = 0;
-    virtual unknown_ret GetItemDownloadInfo(unsigned int, unsigned long long, unsigned long long*, unsigned long long*) = 0;
-    virtual unknown_ret DownloadItem(unsigned int, unsigned long long, bool) = 0;
-    virtual unknown_ret GetAppItemsStatus(unsigned int, bool*, bool*) = 0;
-    virtual unknown_ret BInitWorkshopForGameServer(unsigned int, unsigned int, char const*) = 0;
-    virtual unknown_ret SuspendDownloads(unsigned int, bool) = 0;
-    virtual unknown_ret GetAllItemsSizeOnDisk(unsigned int) = 0;
-    virtual unknown_ret StartPlaytimeTracking(unsigned int, unsigned long long*, unsigned int) = 0;
-    virtual unknown_ret StopPlaytimeTracking(unsigned int, unsigned long long*, unsigned int) = 0;
-    virtual unknown_ret StopPlaytimeTrackingForAllItems(unsigned int) = 0;
+    virtual unknown_ret SubscribeItem(unsigned long long) = 0;
+    virtual unknown_ret UnsubscribeItem(unsigned long long) = 0;
+    virtual unknown_ret GetNumSubscribedItems() = 0;
+    virtual unknown_ret GetSubscribedItems(unsigned long long*, unsigned int) = 0;
+    virtual unknown_ret GetItemState(unsigned long long) = 0;
+    virtual unknown_ret GetItemInstallInfo(unsigned long long, unsigned long long*, char*, unsigned int, unsigned int*) = 0;
+    virtual unknown_ret GetItemDownloadInfo(unsigned long long, unsigned long long*, unsigned long long*) = 0;
+    virtual unknown_ret DownloadItem(unsigned long long, bool) = 0;
+    virtual unknown_ret BInitWorkshopForGameServer(unsigned int, char const*) = 0;
+    virtual unknown_ret SuspendDownloads(bool) = 0;
+    virtual unknown_ret StartPlaytimeTracking(unsigned long long*, unsigned int) = 0;
+    virtual unknown_ret StopPlaytimeTracking(unsigned long long*, unsigned int) = 0;
+    virtual unknown_ret StopPlaytimeTrackingForAllItems() = 0;
     virtual unknown_ret AddDependency(unsigned long long, unsigned long long) = 0;
     virtual unknown_ret RemoveDependency(unsigned long long, unsigned long long) = 0;
     virtual unknown_ret AddAppDependency(unsigned long long, unsigned int) = 0;

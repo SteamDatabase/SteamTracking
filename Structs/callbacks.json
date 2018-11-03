@@ -2011,7 +2011,7 @@
     },
     {
         "id": 3401,
-        "size": 24,
+        "size": 280,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamUGCQueryCompleted_t>(SteamUGCQueryCompleted_t*)"
     },
     {
