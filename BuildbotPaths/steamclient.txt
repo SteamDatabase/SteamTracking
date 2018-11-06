@@ -273,6 +273,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_hiddevices.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_inventory.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_linkfilter.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_market.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_offline.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_parental.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_parties.steamclient.pb.o
@@ -497,6 +498,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_hiddevices.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_inventory.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_linkfilter.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_market.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_offline.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_parental.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_parties.steamclient.pb.o
@@ -949,6 +951,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_inventory.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_linkfilter.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_linkfilter.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_market.steamclient.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_market.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_offline.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_offline.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_parental.steamclient.pb.cc

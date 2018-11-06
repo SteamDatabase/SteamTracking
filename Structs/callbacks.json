@@ -60,6 +60,11 @@
         "posted_in": "void CBaseAPIJob::PostAPIResult<StoreAuthURLResponse_t>(StoreAuthURLResponse_t*)"
     },
     {
+        "id": 166,
+        "size": 20,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<MarketEligibilityResponse_t>(MarketEligibilityResponse_t*)"
+    },
+    {
         "id": 201,
         "size": 16,
         "posted_in": "CGSClientJobGSApprove::BYieldingRunClientJob(IMsgNetPacket*)"

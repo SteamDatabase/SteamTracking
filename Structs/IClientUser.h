@@ -228,4 +228,5 @@ public:
     virtual unknown_ret RequestSurveySchedule() = 0;
     virtual unknown_ret RequestNewSteamAnnouncementState() = 0;
     virtual unknown_ret UpdateSteamAnnouncementLastRead(unsigned long long, unsigned int) = 0;
+    virtual unknown_ret GetMarketEligibility() = 0;
 };

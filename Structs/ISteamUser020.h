@@ -30,4 +30,5 @@ public:
     virtual unknown_ret BIsTwoFactorEnabled() = 0;
     virtual unknown_ret BIsPhoneIdentifying() = 0;
     virtual unknown_ret BIsPhoneRequiringVerification() = 0;
+    virtual unknown_ret GetMarketEligibility() = 0;
 };
