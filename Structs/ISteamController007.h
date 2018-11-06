@@ -32,4 +32,6 @@ public:
     virtual unknown_ret GetGamepadIndexForController(unsigned long long) = 0;
     virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetGlyphForXboxOrigin(EXboxOrigin) = 0;
+    virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
+    virtual unknown_ret TranslateActionOrigin(ESteamInputType, EControllerActionOrigin) = 0;
 };

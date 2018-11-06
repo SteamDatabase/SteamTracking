@@ -41,6 +41,8 @@ public:
     virtual unknown_ret GetGlyphForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
+    virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
+    virtual unknown_ret TranslateActionOrigin(ESteamInputType, EControllerActionOrigin) = 0;
     virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetMotionData(unsigned long long) = 0;
     virtual unknown_ret GetMotionDataDisabled(unsigned int, unsigned long long) = 0;
