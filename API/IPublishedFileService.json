@@ -75,6 +75,12 @@
                     "description": "Current page"
                 },
                 {
+                    "name": "cursor",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Cursor to paginate through the results (set to '*' for the first request).  Prefer this over using the page parameter, as it will allow you to do deep pagination.  When used, the page parameter will be ignored."
+                },
+                {
                     "name": "numperpage",
                     "type": "uint32",
                     "optional": true,
