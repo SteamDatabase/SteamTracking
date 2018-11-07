@@ -14,6 +14,24 @@ div#main.quiltbg {
 	margin-right: auto;
 }
 
+.main_title {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: 600;
+	font-size: 34px;
+	color: #ffffff;
+	letter-spacing: 1px;
+
+}
+.main_subtitle {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 20px;
+	color: #fff;
+}
+
 #about_header_area {
 	height: 350px;
     background-image: url(/public/images/about/header.png);

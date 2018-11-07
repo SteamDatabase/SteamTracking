@@ -429,17 +429,12 @@ function ShowEditHandles( bIsCreatorHome )
 		}
 		elTypeSelect.val( rgNodeData.type );
 
-		var elSortSelect = null;
-		if( !bIsCreatorHome )
-		{
-			elSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
-		}
-		else
-		{
-			elSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
-		}
+		var elRecSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
 
-		elSortSelect.val( rgNodeData.sort );
+		var elCreatedSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+
+		elRecSortSelect.val( rgNodeData.type == 'featured_recommendations' ? rgNodeData.sort : 'recent' );
+		elCreatedSortSelect.val( rgNodeData.type == 'featured_creations' ? rgNodeData.sort : 'newreleases' );
 
 		var elPresentationSelect = $J("\r\n\t\t\t<select name=\"presentation\">\r\n\t\t\t\t<option value=\"featuredcarousel\">Carousel with custom video or screenshot grid<\/option>\r\n\t\t\t\t<option value=\"circularlist\">List of four small capsules<\/option>\r\n\t\t\t\t<option value=\"bigthengrid\">Large capsule followed by four small capsule grid<\/option>\r\n\t\t\t<\/select>");
 
@@ -518,7 +513,8 @@ function ShowEditHandles( bIsCreatorHome )
 			( bIsCreatorHome ? "They will show the background image assigned to the list or a random screenshot suitable for all ages at the block artwork." :'') + '</p>');
 
 		elTypeSelect.on('change',function(){
-						elSortSelect.parent().addClass('hidden');
+						elRecSortSelect.parent().addClass('hidden');
+			elCreatedSortSelect.parent().addClass('hidden');
 			elPresentationSelect.parent().addClass('hidden');
 			elLinkTitleSelect.parent().addClass( 'hidden' );
 			elListContainer.addClass('hidden');
@@ -530,8 +526,11 @@ function ShowEditHandles( bIsCreatorHome )
 			switch( elTypeSelect.val() )
 			{
 				case 'featured_recommendations':
+					elRecSortSelect.parent().removeClass('hidden');
+					elPresentationSelect.parent().removeClass('hidden');
+					break;
 				case 'featured_creations':
-					elSortSelect.parent().removeClass('hidden');
+					elCreatedSortSelect.parent().removeClass('hidden');
 					elPresentationSelect.parent().removeClass('hidden');
 					break;
 				case 'featured_list':
@@ -576,12 +575,14 @@ function ShowEditHandles( bIsCreatorHome )
 				linkedhomepages.push( $J(this).val() );
 			});
 
+			var inputSort = elTypeSelect.val() == 'featured_creations' ? elCreatedSortSelect.val() : elRecSortSelect.val();
+
 			var requestData = {
 				sessionid: g_sessionID,
 				type: elTypeSelect.val(),
 				listid: elListId.val(),
 				tagid: elTagId.val(),
-				sort: elSortSelect.val(),
+				sort: inputSort,
 				linktitle: elLinkTitleSelect.val(),
 				linkedhomepages: JSON.stringify( linkedhomepages ),
 				tagid_label: elTagName.text(),
@@ -709,7 +710,8 @@ function ShowEditHandles( bIsCreatorHome )
 
 		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Title", elLinkTitleSelect ));
-		elOptions.append( WrapFormFieldWithLabel( "Sort", elSortSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Sort", elRecSortSelect ));
+		elOptions.append( WrapFormFieldWithLabel( "Sort", elCreatedSortSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Homepages", elSelectHomepages ));
 		elOptions.append( WrapFormFieldWithLabel( "Presentation Style", elPresentationSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Description", elListBlockDesc ));

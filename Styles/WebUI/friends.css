@@ -327,6 +327,647 @@
   width: 120px;
   height: 120px; }
 
+.miniProfileHover .miniprofile_arrow.left {
+  border-right: 8px solid #41444e; }
+
+.miniProfileHoverInner {
+  width: fit-content;
+  margin: 11px;
+  box-shadow: 0 10px 32px 0px #000000ab; }
+
+.miniProfileContent {
+  width: 328px;
+  position: relative; }
+
+.miniProfileContent .miniProfileHeader {
+  height: 62px;
+  z-index: 1;
+  padding: 16px;
+  background: none;
+  border: none; }
+
+.miniProfileContent .miniProfilePlayer {
+  display: flex;
+  flex-direction: row; }
+
+.miniProfileContent .miniProfilePlayer .playerContent {
+  padding-left: 16px;
+  margin-bottom: 30px;
+  margin-top: auto; }
+
+.miniProfileContent .playerAvatar {
+  width: 90px;
+  height: 92px;
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65); }
+
+.miniProfileContent .avatarStatus.miniProfileAvatarStatus {
+  width: 100%;
+  height: 2px;
+  z-index: 2; }
+
+.miniProfileContent .miniProfilePlayer.online .avatarStatus.miniProfileAvatarStatus {
+  background: #6dcff6; }
+
+.miniProfileContent .miniProfilePlayer.in-game .avatarStatus.miniProfileAvatarStatus {
+  background: #bff02b; }
+
+.miniProfileContent .miniProfilePlayer.watchingbroadcast .avatarStatus.miniProfileAvatarStatus {
+  background: #9c8fd4; }
+
+.miniProfileContent .miniProfilePlayer.isAway .avatarStatus.miniProfileAvatarStatus {
+  -webkit-mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-x;
+  -webkit-mask-size: 6px 6px;
+  mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  mask-size: 8px 8px;
+  opacity: 1; }
+
+.miniProfileBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -3;
+  background: radial-gradient(ellipse farthest-corner at 20% 30%, #4c505b 0%, #34373f 50%, #282c32 100%); }
+
+.miniProfileBackgroundBlur {
+  width: 380px;
+  height: 380px;
+  filter: blur(10px) saturate(2);
+  position: absolute;
+  left: -60px;
+  top: -60px;
+  opacity: 0.4;
+  -webkit-mask: radial-gradient(ellipse farthest-corner at 150px 150px, black 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 34%, rgba(0, 0, 0, 0) 64%);
+  mask: radial-gradient(ellipse farthest-corner at 150px 150px, black 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 34%, rgba(0, 0, 0, 0) 64%);
+  mix-blend-mode: screen; }
+
+.miniProfileContent .playerContent .personaName {
+  text-shadow: 1px 1px 4px #000;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  display: flex; }
+
+.miniProfileContent .miniProfilePlayer.in-game .personaName:not(.hasNickname) .personaNameLabel,
+.miniProfileContent .miniProfilePlayer.in-game .personaName.nickName .personaNameLabel {
+  color: #e3ffc2; }
+
+.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName:not(.hasNickname) .personaNameLabel,
+.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName.nickName .personaNameLabel {
+  color: #c9bdf7; }
+
+.miniProfileContent .playerContent .persona .personaName.hasNickname {
+  color: #888;
+  font-size: 14px; }
+
+.miniProfileContent .playerContent .persona .personaName.hasNickname .personaNameLabel {
+  color: #bbb;
+  max-width: 154px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.miniProfileContent .playerContent .awayStatusLabel {
+  color: #999;
+  max-width: 154px;
+  text-shadow: 1px 1px 4px #000;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif; }
+
+.miniProfileContent .playerContent .personaName.nickName .personaNameLabel,
+.miniProfileContent .playerContent .personaName:not(.hasNickname) .personaNameLabel {
+  max-width: 160px;
+  text-overflow: ellipsis;
+  max-height: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word; }
+
+.miniProfileContent .miniProfilePlayer.online .nickname,
+.miniProfileContent .miniProfilePlayer.online .persona {
+  color: #6dcff6; }
+
+.miniProfileContent .miniProfilePlayer.offline .nickname,
+.miniProfileContent .miniProfilePlayer.offline .persona {
+  color: #bbb; }
+
+.miniProfileContent .playerNicknameBracket {
+  color: #bbb; }
+
+.miniProfileContent .playerAvatar img {
+  width: 90px;
+  height: 90px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  background: none;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; }
+
+.miniProfileContent.notInOrWatchingGame .miniProfileBottom,
+.miniProfileContent .miniProfileGameContainer {
+  background: linear-gradient(to bottom, rgba(24, 26, 30, 0.7) 5%, rgba(24, 26, 30, 0.4) 95%); }
+
+.miniProfileContent .miniProfileGameContainer {
+  z-index: -1;
+  border: none;
+  min-height: 64px;
+  position: relative; }
+
+.miniProfileContent .miniProfileGameContainer .gameLogo {
+  width: 90px;
+  height: 34px;
+  top: 18px;
+  left: 16px;
+  position: absolute; }
+
+.miniProfileContent .miniProfileGameContainer .in-game .richPresence,
+.miniProfileContent .miniProfileGameContainer .in-game .gameState {
+  font-size: 12px;
+  color: #62813b; }
+
+.miniProfileContent .miniProfileGameContainer .watchingbroadcast .gameState {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #8277b1; }
+
+.miniProfileContent .miniProfileGameContainer .watchingbroadcast .richPresence {
+  font-size: 14px;
+  color: #c9bdf7; }
+
+.miniProfileContent .miniProfileGameContainer .watchingbroadcast .watchingbroadcastThumbnail {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 110px;
+  margin-top: 8px;
+  position: relative; }
+  .miniProfileContent .miniProfileGameContainer .watchingbroadcast .watchingbroadcastThumbnail .crossfade {
+    width: 100%;
+    height: 100%; }
+
+.miniProfileContent .miniProfileGameContainer .gameContent {
+  padding: 8px 8px 8px 122px;
+  font-size: 14px; }
+
+.miniProfileContent .miniProfileBottom {
+  padding: 16px 16px 8px 16px; }
+
+.miniProfileContent.notInOrWatchingGame .miniProfileBottom {
+  padding-top: 26px; }
+
+.miniProfileContent .miniProfileFeaturedContainer {
+  position: relative;
+  height: 34px;
+  display: flex;
+  padding-left: 16px;
+  margin-bottom: 8px; }
+
+.miniProfileContent .miniProfileFeaturedContainer .favoriteBadgeIcon {
+  width: 34px;
+  height: 34px; }
+
+.miniProfileContent .miniProfileFeaturedContainer .badgeIcon {
+  width: 100%;
+  height: 100%; }
+
+.miniProfileContent .miniProfileBottom .featuredLabels {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 12px; }
+
+.miniProfileContent .miniProfileBottom .friendPlayerLevel .friendPlayerLevelNum {
+  font-size: 14px; }
+
+.miniProfileContent .miniProfileBottom .featuredLabels .featuredTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #b1b1b1; }
+
+.miniProfileContent .miniProfileBottom .featuredLabels .featuredSubTitle {
+  color: #6b6a6a;
+  font-size: 12px; }
+
+.miniProfileContent .mutualFriends {
+  background-color: #000a; }
+
+.mutualFriendsContainer {
+  padding: 12px 16px 4px 16px; }
+
+.mutualFriend {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px; }
+
+.mutualFriendAvatar {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-left: 24px; }
+
+.mutualFriendTitle {
+  color: #4c91ac;
+  font-size: 14px;
+  margin-bottom: 12px; }
+
+.mutualFriendLabel {
+  font-size: 14px;
+  color: #b1b1b1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 190px; }
+
+.mutualFriendLabel.plusOthersLabel {
+  margin-left: 48px;
+  color: #5f5f5f; }
+
+.friendPlayerLevel {
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  border: solid white 2px;
+  height: 28px;
+  width: 28px;
+  line-height: 26px;
+  text-align: center;
+  cursor: default;
+  margin-top: 2px; }
+
+.friendPlayerLevel .friendPlayerLevelNum {
+  color: #e5e5e5; }
+
+.friendPlayerLevel.lvl_0 {
+  border-color: #9b9b9b; }
+
+.friendPlayerLevel.lvl_10 {
+  border-color: #c02942; }
+
+.friendPlayerLevel.lvl_20 {
+  border-color: #d95b43; }
+
+.friendPlayerLevel.lvl_30 {
+  border-color: #fecc23; }
+
+.friendPlayerLevel.lvl_40 {
+  border-color: #467a3c; }
+
+.friendPlayerLevel.lvl_50 {
+  border-color: #4e8ddb; }
+
+.friendPlayerLevel.lvl_60 {
+  border-color: #7652c9; }
+
+.friendPlayerLevel.lvl_70 {
+  border-color: #c252c9; }
+
+.friendPlayerLevel.lvl_80 {
+  border-color: #542437; }
+
+.friendPlayerLevel.lvl_90 {
+  border-color: #997c52; }
+
+.friendPlayerLevel.lvl_100, .friendPlayerLevel.lvl_200,
+.friendPlayerLevel.lvl_300, .friendPlayerLevel.lvl_400,
+.friendPlayerLevel.lvl_500, .friendPlayerLevel.lvl_600,
+.friendPlayerLevel.lvl_700, .friendPlayerLevel.lvl_800,
+.friendPlayerLevel.lvl_900, .friendPlayerLevel.lvl_1000,
+.friendPlayerLevel.lvl_1100, .friendPlayerLevel.lvl_1200,
+.friendPlayerLevel.lvl_1300, .friendPlayerLevel.lvl_1400,
+.friendPlayerLevel.lvl_1500, .friendPlayerLevel.lvl_1600,
+.friendPlayerLevel.lvl_1700, .friendPlayerLevel.lvl_1800,
+.friendPlayerLevel.lvl_1900, .friendPlayerLevel.lvl_2000,
+.friendPlayerLevel.lvl_2100, .friendPlayerLevel.lvl_2200,
+.friendPlayerLevel.lvl_2300, .friendPlayerLevel.lvl_2400,
+.friendPlayerLevel.lvl_2500, .friendPlayerLevel.lvl_2600,
+.friendPlayerLevel.lvl_2700, .friendPlayerLevel.lvl_2800,
+.friendPlayerLevel.lvl_2900, .friendPlayerLevel.lvl_3000,
+.friendPlayerLevel.lvl_3100, .friendPlayerLevel.lvl_3200,
+.friendPlayerLevel.lvl_3300, .friendPlayerLevel.lvl_3400,
+.friendPlayerLevel.lvl_3500, .friendPlayerLevel.lvl_3600,
+.friendPlayerLevel.lvl_3700, .friendPlayerLevel.lvl_3800,
+.friendPlayerLevel.lvl_3900, .friendPlayerLevel.lvl_4000,
+.friendPlayerLevel.lvl_4100, .friendPlayerLevel.lvl_4200,
+.friendPlayerLevel.lvl_4300, .friendPlayerLevel.lvl_4400,
+.friendPlayerLevel.lvl_4500, .friendPlayerLevel.lvl_4600,
+.friendPlayerLevel.lvl_4700, .friendPlayerLevel.lvl_4800,
+.friendPlayerLevel.lvl_4900, .friendPlayerLevel.lvl_5000 {
+  border: none;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 14px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-shadow: 1px 1px #1a1a1a; }
+
+.friendPlayerLevel.lvl_100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_hexagons.png"); }
+
+.friendPlayerLevel.lvl_200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shields.png"); }
+
+.friendPlayerLevel.lvl_300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_books.png"); }
+
+.friendPlayerLevel.lvl_400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_chevrons.png"); }
+
+.friendPlayerLevel.lvl_500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_circle2.png"); }
+
+.friendPlayerLevel.lvl_600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_angle.png"); }
+
+.friendPlayerLevel.lvl_700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_flag.png"); }
+
+.friendPlayerLevel.lvl_800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_wings.png"); }
+
+.friendPlayerLevel.lvl_900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_arrows.png"); }
+
+.friendPlayerLevel.lvl_1000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_crystals.png"); }
+
+.friendPlayerLevel.lvl_1100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_space.png"); }
+
+.friendPlayerLevel.lvl_1200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_waterelement.png"); }
+
+.friendPlayerLevel.lvl_1300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_fireelement.png"); }
+
+.friendPlayerLevel.lvl_1400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_earthelement.png"); }
+
+.friendPlayerLevel.lvl_1500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_1-2.png"); }
+
+.friendPlayerLevel.lvl_1600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_3-4.png"); }
+
+.friendPlayerLevel.lvl_1700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_5-6.png"); }
+
+.friendPlayerLevel.lvl_1800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_7-8.png"); }
+
+.friendPlayerLevel.lvl_1900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_airelement_9-10.png"); }
+
+.friendPlayerLevel.lvl_2000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_1-2.png?v=2"); }
+
+.friendPlayerLevel.lvl_2100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_3-4.png?v=2"); }
+
+.friendPlayerLevel.lvl_2200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_5-6.png?v=2"); }
+
+.friendPlayerLevel.lvl_2300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_7-8.png?v=2"); }
+
+.friendPlayerLevel.lvl_2400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_geo_9-10.png?v=2"); }
+
+.friendPlayerLevel.lvl_2500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_1-2.png?v=2"); }
+
+.friendPlayerLevel.lvl_2600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_3-4.png?v=2"); }
+
+.friendPlayerLevel.lvl_2700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_5-6.png?v=2"); }
+
+.friendPlayerLevel.lvl_2800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_7-8.png?v=2"); }
+
+.friendPlayerLevel.lvl_2900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_mandala_9-10.png?v=2"); }
+
+.friendPlayerLevel.lvl_3000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_1-2.png?v=2"); }
+
+.friendPlayerLevel.lvl_3100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_3-4.png?v=2"); }
+
+.friendPlayerLevel.lvl_3200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_5-6.png?v=2"); }
+
+.friendPlayerLevel.lvl_3300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_7-8.png?v=2"); }
+
+.friendPlayerLevel.lvl_3400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_spiro_9-10.png?v=2"); }
+
+.friendPlayerLevel.lvl_3500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_1-2.png?v=2"); }
+
+.friendPlayerLevel.lvl_3600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_3-4.png?v=2"); }
+
+.friendPlayerLevel.lvl_3700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_5-6.png?v=2"); }
+
+.friendPlayerLevel.lvl_3800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_7-8.png?v=2"); }
+
+.friendPlayerLevel.lvl_3900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_patterns_9-10.png?v=2"); }
+
+.friendPlayerLevel.lvl_4000 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_1.png?v=2"); }
+
+.friendPlayerLevel.lvl_4100 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_2.png?v=2"); }
+
+.friendPlayerLevel.lvl_4200 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_3.png?v=2"); }
+
+.friendPlayerLevel.lvl_4300 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_4.png?v=2"); }
+
+.friendPlayerLevel.lvl_4400 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_shapes_5.png?v=2"); }
+
+.friendPlayerLevel.lvl_4500 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_1.png?v=2"); }
+
+.friendPlayerLevel.lvl_4600 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_2.png?v=2"); }
+
+.friendPlayerLevel.lvl_4700 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_3.png?v=2"); }
+
+.friendPlayerLevel.lvl_4800 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_4.png?v=2"); }
+
+.friendPlayerLevel.lvl_4900 {
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/community/levels_grunge_5.png?v=2"); }
+
+.friendPlayerLevel.lvl_plus_10 {
+  background-position: 0 -32px; }
+
+.friendPlayerLevel.lvl_plus_20 {
+  background-position: 0 -64px; }
+
+.friendPlayerLevel.lvl_plus_30 {
+  background-position: 0 -96px; }
+
+.friendPlayerLevel.lvl_plus_40 {
+  background-position: 0 -128px; }
+
+.friendPlayerLevel.lvl_plus_50 {
+  background-position: 0 -160px; }
+
+.friendPlayerLevel.lvl_plus_60 {
+  background-position: 0 -192px; }
+
+.friendPlayerLevel.lvl_plus_70 {
+  background-position: 0 -224px; }
+
+.friendPlayerLevel.lvl_plus_80 {
+  background-position: 0 -256px; }
+
+.friendPlayerLevel.lvl_plus_90 {
+  background-position: 0 -288px; }
+
+@charset "UTF-8";
+.changeLog,
+.betaFeedbackLabel {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  font-size: 10px;
+  user-select: none;
+  cursor: default;
+  text-transform: uppercase;
+  white-space: nowrap; }
+
+.changeLog:hover {
+  color: white;
+  cursor: pointer; }
+
+.changeLog {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: 32px;
+  top: -1px; }
+
+.singlewindow .changeLog {
+  right: 8px; }
+
+.changeLog .SVGIcon_Scroll {
+  width: 20px;
+  height: 20px; }
+
+.changeLog .SVGIcon_Scroll path {
+  fill: #888; }
+
+.changeLog:hover .SVGIcon_Scroll path {
+  fill: #bbb; }
+
+.changeLog.showViolator .SVGIcon_Scroll path {
+  fill: #ddd; }
+
+.changeLog.showViolator:hover .SVGIcon_Scroll path {
+  fill: #fff; }
+
+.changeLog .changeLogViolator {
+  background-color: #e64a35;
+  color: white;
+  border-radius: 50%;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 8px;
+  top: 6px;
+  text-align: center;
+  font-size: 10px; }
+
+.changeLog:hover .changeLogViolator {
+  background-color: #f58374; }
+
+.DialogContent.changeLogPage {
+  max-height: 680px; }
+
+.changeLogDetails {
+  width: calc( 100% - 60px);
+  height: 100%;
+  background-color: #0005;
+  box-shadow: inset 2px 2px 18px #00000075;
+  overflow: scroll scroll;
+  padding: 16px;
+  padding-left: 32px;
+  padding-top: 32px; }
+
+.changeLogPage .changeLogDate {
+  font-size: 12px;
+  margin-bottom: 8px;
+  color: #777; }
+
+.changeLogPage .changeLogTitle {
+  color: white;
+  font-size: 16px; }
+
+.changeLogPage .changeLogDescription {
+  font-size: 14px;
+  padding: 0 16px;
+  margin-bottom: 24px;
+  position: relative; }
+
+.changeLogPage .changeLogItemSubHeader {
+  font-weight: bold;
+  margin-bottom: 8px;
+  margin-left: -8px; }
+
+.changeLogPage .changeLogExtra {
+  font-size: 14px;
+  margin-bottom: 14px; }
+
+.changeLogPage .changeLogItem {
+  clear: left;
+  line-height: 16px;
+  margin-bottom: 12px;
+  padding-left: 10px;
+  user-select: text; }
+
+.changeLogPage .changeLogItem:before {
+  position: absolute;
+  left: 18px;
+  content: "\2022";
+  margin-right: 4px;
+  color: #669abd; }
+
+.betaFeedbackAnchor {
+  color: rgba(0, 217, 255, 0.5);
+  text-decoration: underline; }
+
+.betaFeedbackAnchor:hover {
+  color: #00d9ff; }
+
+.singlewindow .title-area .betaFeedbackLabel {
+  display: none; }
+
 .emoticon_NewEmoticonIndicator_3NVON {
   background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
   position: absolute;
@@ -345,8 +986,59 @@
   overflow: hidden;
   margin: auto; }
 
+.emoticon_hover_arrow {
+  width: 13px;
+  height: 26px;
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 26px; }
 
-.chatentry_chatEntryControls_1Q6Ut {
+.emoticon_hover_arrow.left {
+  background-position: left top;
+  left: 0; }
+
+.emoticon_hover_arrow.right {
+  background-position: right top;
+  right: 0; }
+
+.hover_arrow {
+  position: absolute;
+  top: 30px; }
+
+.emoticon_hover_content {
+  padding: 6px 10px 6px 6px;
+  background-color: #3b3938;
+  border: 1px solid #797979;
+  margin: 12px;
+  box-shadow: 0 0 12px #000000;
+  white-space: nowrap; }
+
+.emoticon_hover_content.client {
+  margin: 0;
+  box-shadow: none;
+  display: inline-block; }
+
+.emoticon_hover_content_inner {
+  position: relative;
+  min-height: 54px;
+  padding-left: 62px;
+  font-size: 13px; }
+
+.emoticon_hover_content_inner img.emoticon_large {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.emoticon_hover_title {
+  padding-top: 8px;
+  color: #898989; }
+
+.emoticon_hover_desc {
+  color: #686868; }
+
+
+.chatentry_chatEntryControls_2O_X7 {
   /* for flyouts */
   position: relative;
   /* for children */
@@ -361,7 +1053,7 @@
   border: 0px solid transparent;
   padding-right: 2px; }
 
-.chatentry_chatTextarea_1jyF1 {
+.chatentry_chatTextarea_3e__5 {
   resize: none;
   margin-right: 4px;
   height: 42px;
@@ -379,18 +1071,18 @@
   width: 100%;
   min-width: 164px; }
 
-.chatentry_chatEntryActionsGroup_3fkdx {
+.chatentry_chatEntryActionsGroup_15mWd {
   padding: 2px;
   box-shadow: black 0px 0px 4px inset;
   background-color: #1b1c20;
   margin-left: 8px; }
 
-.chatentry_chatEntryActionsContainer_1SW3f,
-.chatentry_chatEntryActionsGroup_3fkdx {
+.chatentry_chatEntryActionsContainer_WZNUD,
+.chatentry_chatEntryActionsGroup_15mWd {
   display: flex;
   flex-direction: row; }
 
-.chatentry_minHeightZero_3eKqX {
+.chatentry_minHeightZero_NcZQ_ {
   min-height: 0; }
 
 .BroadcastView {
@@ -1932,56 +2624,65 @@ iframe.steamTVLogin {
       flex-basis: auto;
       max-height: 32px; } }
 
-.broadcastchat_BroadcastChat_1gFzx {
+.broadcastchat_BroadcastChat_25xed {
   max-width: 194px;
   min-width: 0; }
 
-.broadcastchat_ChatEntry_1UEhD {
+.broadcastchat_ChatEntry_3hSYv {
   display: flex;
   flex-shrink: 0;
   flex-direction: row;
   padding: 6px;
   background-color: #22252b;
-  z-index: 4;
   transition: all .21s ease-in-out;
   flex-wrap: wrap;
   justify-content: center; }
 
-.broadcastchat_ChatPanel_1lFRa {
+.broadcastchat_ChatPanel_3jc_d {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column; }
 
-.broadcastchat_ChatMessages_1qiVV {
+.broadcastchat_ChatMessages_PNfmQ {
   flex-grow: 1;
   overflow-y: scroll; }
 
-.broadcastchat_EmoticonContainer_2Royi {
+.broadcastchat_EmoticonContainer_3ArHy {
   width: 15%;
   height: 10%; }
 
-.broadcastchat_ChatSend_3lHR7 {
+.broadcastchat_ChatSend_2szrh {
   width: 15%;
   height: 10%; }
 
-.broadcastchat_ChatBox_2lAie {
+.broadcastchat_ChatBox_3y_AV {
   width: 70%;
   height: 10%; }
 
-.broadcastchat_ChatControls_18LRW {
+.broadcastchat_ChatControls_35ufH {
   display: flex; }
 
-.broadcastchat_MessageChat_1Zj5N {
+.broadcastchat_MessageChat_3eku_ {
+  padding: 4px;
   color: white; }
 
-.broadcastchat_MessageNotification_3jkPV {
+.broadcastchat_MessageName_2P_MO {
+  color: cornflowerblue; }
+
+.broadcastchat_MessageContents_555m- {
+  color: gray;
+  font-size: 10px; }
+  .broadcastchat_MessageContents_555m- a {
+    color: white; }
+
+.broadcastchat_MessageNotification_2LJJp {
   color: gray; }
 
-.broadcastchat_MessageError_3D08N {
+.broadcastchat_MessageError_YWUjL {
   color: red; }
 
-.broadcastchat_minHeightZero_sRPxY {
+.broadcastchat_minHeightZero_3Cgfe {
   min-height: 0;
   flex: 1; }
 
@@ -1996,9 +2697,6 @@ iframe.steamTVLogin {
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
   transition-delay: 1.0s; }
-
-.main_throbberContainer-exit-done_3UAKh {
-  opacity: 0; }
 
 .messages_PreMessage_1jeo-,
 .messages_CodeMessage_1Fe4I,
@@ -3005,6 +3703,644 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   100% {
     color: #d5dbe6;
     text-shadow: 0px 0px 0px #fff0; } }
+
+.chatImageContainer,
+.chatVideoContainer {
+  background-color: #2c3036;
+  padding: 2px;
+  box-shadow: 0 6px 14px 1px #00000063;
+  display: inline-block;
+  margin-bottom: 16px;
+  position: relative;
+  transition-property: background-color, box-shadow;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out; }
+
+.chatImageContainer {
+  max-width: 652px;
+  max-width: 520px;
+  min-height: 50px;
+  transition-property: min-height;
+  transition-duration: 0s;
+  transition-delay: 0.2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+.chatImageContainer img {
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 840px; }
+
+.chatImageContainer.Resized img {
+  max-height: none; }
+
+.chatImageContainer.Minimized,
+.chatVideoContainer.Minimized {
+  min-height: 20px;
+  max-width: 400px;
+  padding-bottom: 2px; }
+
+.chatVideoContainer {
+  width: 600px;
+  padding-bottom: 24px;
+  box-shadow: none;
+  background: none; }
+
+.chatVideoContainer video {
+  border: 2px solid #2c3036;
+  border-radius: 6px; }
+
+.chatVideoContainer .BBCodeResizeControl {
+  width: 24px;
+  height: 14px; }
+
+.chatVideoContainer .BBCodeResizeControl .SVGIcon_Button {
+  bottom: 2px;
+  right: 2px; }
+
+.chatVideoContainer video {
+  width: 100%; }
+
+.chatVideoPlayControl {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  align-items: center; }
+
+.chatVideoPlayControl .playButtonContainer {
+  width: 64px;
+  height: 64px;
+  background-color: #000a;
+  border-radius: 50%;
+  padding: 32px;
+  margin: auto;
+  align-self: center;
+  transition: all .16s ease-in-out; }
+
+.chatVideoPlayControl:hover .playButtonContainer {
+  background-color: #000f; }
+
+.chatVideoPlayControl:hover svg {
+  transform: scale(1.2); }
+
+.chatVideoPlayControl svg {
+  padding-left: 4px;
+  display: block;
+  margin: 0 auto;
+  transition: all .21s ease-in-out; }
+
+.chatImageContainer.Resized {
+  max-width: 1280px; }
+
+.BBCodeResizableComponent.Minimized {
+  background-color: transparent;
+  box-shadow: 0 0 0 0 #00000000;
+  min-height: 0px;
+  transition-delay: 0.0s; }
+
+.BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl {
+  opacity: 1; }
+
+.BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl .SVGIcon_Button {
+  fill: white; }
+
+.BBCodeResizableComponent.Minimized:hover .BBCodeCollapsed {
+  background-color: #5a7585;
+  color: white; }
+
+.BBCodeCollapsed {
+  position: absolute;
+  margin-left: 22px;
+  background-color: #2e3c44;
+  padding-top: 2px;
+  padding-bottom: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 6px;
+  opacity: 0;
+  cursor: pointer;
+  transform: translateX(32px);
+  top: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition-property: opacity, transform;
+  transition-duration: .16s;
+  transition-timing-function: ease-in-out;
+  z-index: 1;
+  pointer-events: none; }
+
+.BBCodeResizableComponent.Minimized .BBCodeCollapsed {
+  opacity: 1;
+  transform: translateX(0px);
+  transition-duration: .46s;
+  pointer-events: initial; }
+
+.chatImageFull {
+  width: 100%;
+  transition: opacity .8s ease-in-out;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; }
+
+.Minimized .BBCodeResizableElement {
+  opacity: 0;
+  transition-duration: .35s;
+  height: 0px; }
+
+.BBCodeResizableComponent.Minimized .HideWhenMinimized,
+.BBCodeResizableComponent.Minimizing .HideWhenMinimized {
+  display: none; }
+
+.chatImage {
+  min-height: 20px;
+  min-width: 20px; }
+
+.chatImageContainer .LoadingImage {
+  padding: 12px;
+  max-width: 1280px;
+  border: 1px dashed rgba(58, 176, 255, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  background-color: #0001;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(58, 176, 255, 0.6); }
+
+.chatImageContainer .LoadingImage a {
+  text-transform: initial;
+  color: rgba(58, 176, 255, 0.4); }
+
+.chatImageContainer .LoadingImage a:hover {
+  text-transform: initial;
+  color: rgba(58, 176, 255, 0.7); }
+
+.chatImageContainer.FailedToLoad {
+  padding: 12px;
+  max-width: 320px;
+  border: 1px dashed rgba(255, 58, 58, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  background-color: #0001; }
+
+.FailedToLoadImage span {
+  color: #bb3827;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px; }
+
+.msg .FailedToLoadImage a {
+  color: #7e3228; }
+
+.msg .FailedToLoadImage a:hover {
+  color: #ac726a; }
+
+.msg .chatVideoContainer a,
+.msg .chatVideoContainer a:-webkit-any-link,
+.msg .chatImageContainer a,
+.msg .chatImageContainer a:-webkit-any-link {
+  outline: none;
+  border: 0px;
+  padding-bottom: 0px; }
+
+.msg .NonInlinedEmbed a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: none; }
+
+.msg .NonInlinedEmbed a:hover {
+  border-bottom: none; }
+
+.NonInlinedEmbed a svg,
+.NonInlinedEmbed a div.NonInlinedEmbedLogo {
+  opacity: 0.8;
+  padding-right: 4px;
+  display: inline-block; }
+
+.NonInlinedEmbed a:hover svg,
+.NonInlinedEmbed a:hover div.NonInlinedEmbedLogo {
+  opacity: 1.0; }
+
+.NonInlinedEmbed .SVGIcon_YouTube {
+  width: 17px;
+  height: 12px; }
+
+.NonInlinedEmbed .SVGIcon_Hyperlink {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  margin-bottom: -3px;
+  fill: #91e0ff; }
+
+.NonInlinedEmbed .SVGIcon_Image {
+  width: 16px;
+  height: 16px;
+  margin-right: 1px;
+  padding-bottom: 2px;
+  vertical-align: middle; }
+
+.NonInlinedEmbed .SVGIcon_Video path,
+.NonInlinedEmbed .SVGIcon_Image path {
+  stroke: #91e0ff;
+  fill: #91e0ff; }
+
+.NonInlinedEmbed .SVGIcon_Video {
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+  padding-bottom: 2px;
+  vertical-align: middle; }
+
+.NonInlinedEmbedLogo_Twitter {
+  background-image: url("../../images/webui/twitter/Twitter_Logo_Blue.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 17px;
+  height: 17px;
+  background-position-y: 1px;
+  background-position-x: -2px;
+  margin-right: -1px; }
+
+.NonInlinedEmbedLogo_Giphy {
+  background-image: url("../../images/webui/giphy_logo.png");
+  width: 12px;
+  height: 16px;
+  margin-top: 2px;
+  margin-bottom: -2px;
+  background-size: contain;
+  background-position: -1px 0px;
+  background-repeat: no-repeat; }
+
+.NonInlinedEmbedSingleLine {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.BBCodeResizeControl {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  width: 45%;
+  height: 45%;
+  right: 0px;
+  bottom: 0px;
+  cursor: nwse-resize;
+  padding: 6px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  stroke: #000; }
+
+.BBCodeResizeControl .SVGIcon_ResizeIcon path {
+  fill: white;
+  stroke-width: 6px; }
+
+.chatImageURL {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  width: 35%;
+  height: 35%;
+  left: 0px;
+  bottom: 0px;
+  cursor: pointer;
+  padding: 0px;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  stroke: #000;
+  stroke-width: 0.5px; }
+
+.giphyImg .chatImageURL {
+  background-image: url("../../images/webui/giphy_logo.png");
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 6px; }
+
+.giphyImg .chatImageURL svg {
+  display: none; }
+
+.giphyImg a.chatImageURL .giphyTag {
+  margin-left: 32px;
+  margin-top: 8px;
+  color: white;
+  text-shadow: -1px -1px 2px black, 1px -1px 2px black, 1px 1px 2px black, 1px 1px 1px black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: -4px;
+  padding-right: 2px;
+  padding-left: 2px;
+  font-weight: bold; }
+
+.NonInlinedEmbed .giphySearch {
+  font-weight: normal; }
+
+.giphyImg a.chatImageURL .giphyTag .giphySearch {
+  color: #eee;
+  font-weight: normal; }
+
+.BBCodeRestoreControl {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  padding: 0px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out; }
+
+.BBCodeResizableComponent.ActivelyResizing .BBCodeRestoreControl,
+.BBCodeResizableComponent:not(.Resized) .BBCodeRestoreControl,
+.BBCodeResizableComponent.Restoring .BBCodeRestoreControl {
+  display: none; }
+
+.Minimized .BBCodeRestoreControl,
+.Minimized .chatImageURL,
+.Minimized .BBCodeResizeControl {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0s; }
+
+.BBCodeCollapseControl {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  padding: 0px;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+  stroke: #000;
+  stroke-width: 0.5px; }
+
+.Minimized .BBCodeCollapseControl {
+  opacity: 1;
+  width: 16px;
+  height: 16px; }
+
+.Minimized .BBCodeCollapseControl .SVGIcon_Button {
+  width: 16px;
+  height: 16px; }
+
+.BBCodeCollapseControl .SVGIcon_Button {
+  transition: opacity 0.21s ease-in-out, transform 0.5s ease-in-out, fill 0.21s ease-in-out, stroke 0.21s ease-in-out;
+  transform-origin: 50% 50%; }
+
+.Minimized .BBCodeCollapseControl .SVGIcon_Button {
+  transform: rotateZ(-45deg);
+  opacity: 1; }
+
+.BBCodeCollapseControl .SVGIcon_Button,
+.chatImageURL .SVGIcon_Button,
+.BBCodeResizeControl .SVGIcon_Button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  bottom: 6px; }
+
+.BBCodeRestoreControl .restoreSize {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 5px;
+  top: 6px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 0px 1px #000000aa, 0 0 0px 1px #000000aa inset;
+  cursor: pointer; }
+
+.BBCodeResizableComponent:hover .BBCodeRestoreControl:hover {
+  opacity: 1; }
+
+.BBCodeRestoreControl:hover .restoreSize {
+  box-shadow: 0 0 0px 1px #000000ff, 0 0 0px 1px #000000ff inset;
+  opacity: 1; }
+
+.chatImageURL .SVGIcon_Button {
+  bottom: 0px;
+  left: 1px; }
+
+.BBCodeCollapseControl .SVGIcon_Button {
+  top: 0px;
+  right: 1px; }
+
+.BBCodeResizableComponent:hover .BBCodeCollapseControl {
+  opacity: 0.5;
+  stroke: #000;
+  stroke-width: 4px; }
+
+.chatVideoContainer .chatImageURL .SVGIcon_Button {
+  bottom: -3px;
+  left: -2px; }
+
+.BBCodeResizableComponent:hover .BBCodeResizeControl,
+.BBCodeResizableComponent:hover .BBCodeRestoreControl,
+.chatVideoContainer:hover .chatImageURL,
+.chatImageContainer:hover .chatImageURL {
+  opacity: 0.5;
+  stroke: #000;
+  stroke-width: 0.5px; }
+
+.BBCodeResizableComponent:hover .BBCodeCollapseControl:hover,
+.BBCodeCollapseControl:hover {
+  opacity: 1; }
+
+.BBCodeResizableComponent.ActivelyResizing .BBCodeResizeControl,
+.BBCodeResizableComponent:hover .BBCodeResizeControl:hover,
+.chatVideoContainer:hover .chatImageURL:hover,
+.chatImageContainer:hover .chatImageURL:hover,
+.chatImageURL:hover,
+.BBCodeResizeControl:hover {
+  opacity: 1;
+  stroke: #000;
+  stroke-width: 0.5px; }
+
+.BBCodeResizableComponent.Minimized .chatImageURL,
+.BBCodeResizableComponent.Minimized .BBCodeRestoreControl,
+.BBCodeResizableComponent.Minimized .BBCodeResizeControl,
+.BBCodeResizableComponent.ActivelyResizing .BBCodeCollapseControl,
+.chatVideoContainer.ActivelyResizing .chatImageURL,
+.chatImageContainer.ActivelyResizing .chatImageURL {
+  opacity: 0; }
+
+.msg .chatVideoContainer a.chatImageURL,
+.msg .chatImageContainer a.chatImageURL {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 5px;
+  bottom: 6px; }
+
+.msg .chatImageContainer.giphyImg a.chatImageURL {
+  width: fit-content;
+  max-width: 80%;
+  display: flex;
+  flex-direction: row;
+  bottom: 3px;
+  left: 8px; }
+
+.BBCodeYouTubeComponent {
+  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
+  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  margin: 8px 0px 8px 0px;
+  position: relative;
+  max-width: 520px; }
+
+.BBCodeYouTubeComponent.ActivelyResizing,
+.BBCodeYouTubeComponent.Resized {
+  max-width: initial; }
+
+.BBCodeYouTubeComponent.Minimized {
+  background: transparent;
+  padding: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.BBCodeYouTubeComponent_Sizer {
+  position: relative; }
+
+.BBCodeYouTubeComponent .BBCodeCollapseControl {
+  right: 10px;
+  top: 12px; }
+
+.BBCodeYouTubeComponent .BBCodeRestoreControl .restoreSize {
+  top: 14px;
+  left: 13px; }
+
+.BBCodeYouTubeComponent.Minimized .BBCodeCollapseControl {
+  right: 2px;
+  top: 4px; }
+
+.BBCodeYouTubeComponent_Sizer > .YoutubePlayer {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.BBCodeYouTubeComponent_Sizer > .YoutubePlayer > iframe {
+  width: 100%;
+  height: 100%; }
+
+.BBCodeYouTubeComponent.ActivelyResizing .YoutubePlayer {
+  pointer-events: none; }
+
+.BBCodeYouTubeComponent .BBCodeResizeControl {
+  height: 18px;
+  width: 48px; }
+
+.BBCodeTitle {
+  font-size: 14px;
+  margin-left: 6px;
+  margin-top: 6px;
+  -webkit-app-region: no-drag;
+  user-select: none;
+  width: calc( 100% - 82px); }
+
+.BBCodeDetails {
+  font-size: 12px;
+  color: #888;
+  margin-left: 6px; }
+
+.BBCodeOEmbedComponent {
+  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
+  max-width: 640px;
+  border-radius: 10px;
+  padding: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px; }
+
+.BBCodeOEmbedComponent .OpenGraphImgContainer {
+  margin: 0;
+  background-color: transparent; }
+
+.BBCodeOEmbedComponent .sketchfab-embed-wrapper p {
+  display: none; }
+
+.BBCodeOEmbedComponent .sketchfab-embed-wrapper {
+  color: #00000000;
+  line-height: 0px; }
+
+.BBCodeOEmbedComponent.Twitch iframe {
+  width: 100%;
+  height: 360px; }
+
+.BBCodeOEmbedComponent.SoundCloud .oembedProvider,
+.BBCodeOEmbedComponent.SoundCloud .oembedTitle {
+  display: none; }
+
+.BBCodeOEmbedComponent.Streamable .oembedInner iframe {
+  width: 100%;
+  height: 330px; }
+
+.oembedInner iframe {
+  width: 100%; }
+
+.OEmbedPreview {
+  position: relative; }
+
+.OEmbedPreview img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .14s ease-in-out; }
+
+.OEmbedPreview .oembedImgContainer:hover img {
+  filter: brightness(1.2); }
+
+.oembedProvider {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  user-select: none; }
+
+.oembedHint {
+  position: absolute;
+  width: 100%;
+  bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #000, 1px 1px 12px #000, 1px 1px 6px #000;
+  color: #efefef;
+  pointer-events: none; }
+
+.oembedImgContainer {
+  position: relative; }
+
+.oembedTitle {
+  color: #888;
+  user-select: none; }
+
+.spoilerLabelContainer .BBCodeResizableComponent:hover .chatVideoPlayControl {
+  opacity: 1; }
+
+.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer {
+  background-color: #0004; }
+
+.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer.Minimized {
+  background-color: #0000; }
 
 /* Style scrollbar elements */
 ::-webkit-scrollbar,
@@ -5180,9 +6516,6 @@ body.in_global_drag .title-area {
   width: 16px;
   height: 24px; }
 
-.throbberHalf {
-  flex: 1; }
-
 .whiteText {
   color: white; }
 
@@ -5197,26 +6530,15 @@ body {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
 
+img {
+  -webkit-user-drag: none; }
+
 /* Style scrollbar elements */
 ::-webkit-scrollbar {
   height: 12px;
   width: 14px;
   background: transparent;
   z-index: 12; }
-
-@charset "UTF-8";
-html.client_chat_frame body,
-html.web_chat_frame body {
-  background: #000000;
-  min-height: 100%;
-  margin: 0;
-  overflow: hidden; }
-
-img {
-  -webkit-user-drag: none; }
-
-.ChatTabs ::-webkit-scrollbar-thumb {
-  background-color: transparent; }
 
 ::-webkit-scrollbar-thumb {
   width: 10px;
@@ -5226,6 +6548,16 @@ img {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   transition: background-color .32s ease-in-out; }
+
+html.client_chat_frame body,
+html.web_chat_frame body {
+  background: #000000;
+  min-height: 100%;
+  margin: 0;
+  overflow: hidden; }
+
+.ChatTabs ::-webkit-scrollbar-thumb {
+  background-color: transparent; }
 
 .ChatRoomList::-webkit-scrollbar-thumb,
 .friendlistListContainer::-webkit-scrollbar-thumb {
@@ -6410,6 +7742,18 @@ body.in_global_drag .friendlist_titlebar {
   stroke: white;
   stroke-width: 26px; }
 
+.friendSearchNoResultsContainer {
+  margin: 15px;
+  font-size: 14px; }
+
+.friendSearchNoResultsContainer .searchSteamSuggestion {
+  margin-top: 20px; }
+
+.friendSearchNoResultsContainer a {
+  color: #969696;
+  text-decoration: underline;
+  font-weight: bold; }
+
 .MemberListOptionsContainer .inputContainer {
   margin: 0px; }
 
@@ -7102,8 +8446,8 @@ body.in_global_drag .friendlist_titlebar {
   /*opacity: .5;
 	filter: saturate( .5);*/ }
 
-.chatroomBucket_9007199254740990 {
-  background: linear-gradient(to right, rgba(20, 162, 20, 0.3), rgba(20, 162, 20, 0)); }
+.chatroomBucket_partybeacon {
+  background: linear-gradient(to right, #35403a, rgba(53, 64, 58, 0)); }
 
 .CompactFriendsList .avatarHolder .avatarStatus {
   min-width: 1px; }
@@ -8403,499 +9747,6 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .chatFileUploadBtn:hover {
   background: #fff; }
-
-.chatImageContainer,
-.chatVideoContainer {
-  background-color: #2c3036;
-  padding: 2px;
-  box-shadow: 0 6px 14px 1px #00000063;
-  display: inline-block;
-  margin-bottom: 16px;
-  position: relative;
-  transition-property: background-color, box-shadow;
-  transition-duration: .5s;
-  transition-timing-function: ease-in-out; }
-
-.chatImageContainer {
-  max-width: 652px;
-  max-width: 520px;
-  min-height: 50px;
-  transition-property: min-height;
-  transition-duration: 0s;
-  transition-delay: 0.2s;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none; }
-
-.chatImageContainer img {
-  min-width: 100%;
-  min-height: 100%;
-  max-height: 840px; }
-
-.chatImageContainer.Resized img {
-  max-height: none; }
-
-.BBCodeResizableComponent.Minimized {
-  background-color: transparent;
-  box-shadow: 0 0 0 0 #00000000;
-  min-height: 0px;
-  transition-delay: 0.0s; }
-
-.chatImageContainer.Resized {
-  max-width: 1280px; }
-
-.BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl {
-  opacity: 1; }
-
-.BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl .SVGIcon_Button {
-  fill: white; }
-
-.BBCodeResizableComponent.Minimized:hover .BBCodeCollapsed {
-  background-color: #5a7585;
-  color: white; }
-
-.BBCodeCollapsed {
-  position: absolute;
-  margin-left: 22px;
-  background-color: #2e3c44;
-  padding-top: 2px;
-  padding-bottom: 1px;
-  padding-left: 6px;
-  padding-right: 6px;
-  border-radius: 6px;
-  opacity: 0;
-  cursor: pointer;
-  transform: translateX(32px);
-  top: 2px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  transition-property: opacity, transform;
-  transition-duration: .16s;
-  transition-timing-function: ease-in-out;
-  z-index: 1;
-  pointer-events: none; }
-
-.BBCodeResizableComponent.Minimized .BBCodeCollapsed {
-  opacity: 1;
-  transform: translateX(0px);
-  transition-duration: .46s;
-  pointer-events: initial; }
-
-.chatImageContainer.Minimized,
-.chatVideoContainer.Minimized {
-  min-height: 20px;
-  max-width: 400px;
-  padding-bottom: 2px; }
-
-.chatVideoContainer {
-  width: 600px;
-  padding-bottom: 24px;
-  box-shadow: none;
-  background: none; }
-
-.chatVideoContainer video {
-  border: 2px solid #2c3036;
-  border-radius: 6px; }
-
-.chatVideoContainer .BBCodeResizeControl {
-  width: 24px;
-  height: 14px; }
-
-.chatVideoContainer .BBCodeResizeControl .SVGIcon_Button {
-  bottom: 2px;
-  right: 2px; }
-
-.chatVideoContainer video {
-  width: 100%; }
-
-.chatVideoPlayControl {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  padding: 0px;
-  background-color: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  display: flex;
-  align-items: center; }
-
-.chatVideoPlayControl .playButtonContainer {
-  width: 64px;
-  height: 64px;
-  background-color: #000a;
-  border-radius: 50%;
-  padding: 32px;
-  margin: auto;
-  align-self: center;
-  transition: all .16s ease-in-out; }
-
-.chatVideoPlayControl:hover .playButtonContainer {
-  background-color: #000f; }
-
-.chatVideoPlayControl:hover svg {
-  transform: scale(1.2); }
-
-.chatVideoPlayControl svg {
-  padding-left: 4px;
-  display: block;
-  margin: 0 auto;
-  transition: all .21s ease-in-out; }
-
-.chatImageFull {
-  width: 100%;
-  transition: opacity .8s ease-in-out;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none; }
-
-.Minimized .BBCodeResizableElement {
-  opacity: 0;
-  transition-duration: .35s;
-  height: 0px; }
-
-.BBCodeResizableComponent.Minimized .HideWhenMinimized,
-.BBCodeResizableComponent.Minimizing .HideWhenMinimized {
-  display: none; }
-
-.chatImage {
-  min-height: 20px;
-  min-width: 20px; }
-
-.chatImageContainer .LoadingImage {
-  padding: 12px;
-  max-width: 1280px;
-  border: 1px dashed rgba(58, 176, 255, 0.15);
-  box-shadow: 2px 3px 14px 1px #00000066 inset;
-  background-color: #0001;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(58, 176, 255, 0.6); }
-
-.chatImageContainer .LoadingImage a {
-  text-transform: initial;
-  color: rgba(58, 176, 255, 0.4); }
-
-.chatImageContainer .LoadingImage a:hover {
-  text-transform: initial;
-  color: rgba(58, 176, 255, 0.7); }
-
-.chatImageContainer.FailedToLoad {
-  padding: 12px;
-  max-width: 320px;
-  border: 1px dashed rgba(255, 58, 58, 0.15);
-  box-shadow: 2px 3px 14px 1px #00000066 inset;
-  background-color: #0001; }
-
-.FailedToLoadImage span {
-  color: #bb3827;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 1px; }
-
-.msg .FailedToLoadImage a {
-  color: #7e3228; }
-
-.msg .FailedToLoadImage a:hover {
-  color: #ac726a; }
-
-.msg .chatVideoContainer a,
-.msg .chatVideoContainer a:-webkit-any-link,
-.msg .chatImageContainer a,
-.msg .chatImageContainer a:-webkit-any-link {
-  outline: none;
-  border: 0px;
-  padding-bottom: 0px; }
-
-.msg .NonInlinedEmbed a {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-bottom: none; }
-
-.msg .NonInlinedEmbed a:hover {
-  border-bottom: none; }
-
-.NonInlinedEmbed a svg,
-.NonInlinedEmbed a div.NonInlinedEmbedLogo {
-  opacity: 0.8;
-  padding-right: 4px;
-  display: inline-block; }
-
-.NonInlinedEmbed a:hover svg,
-.NonInlinedEmbed a:hover div.NonInlinedEmbedLogo {
-  opacity: 1.0; }
-
-.NonInlinedEmbed .SVGIcon_YouTube {
-  width: 17px;
-  height: 12px; }
-
-.NonInlinedEmbed .SVGIcon_Hyperlink {
-  width: 16px;
-  height: 16px;
-  margin-top: 3px;
-  margin-bottom: -3px;
-  fill: #91e0ff; }
-
-.NonInlinedEmbed .SVGIcon_Image {
-  width: 16px;
-  height: 16px;
-  margin-right: 1px;
-  padding-bottom: 2px;
-  vertical-align: middle; }
-
-.NonInlinedEmbed .SVGIcon_Video path,
-.NonInlinedEmbed .SVGIcon_Image path {
-  stroke: #91e0ff;
-  fill: #91e0ff; }
-
-.NonInlinedEmbed .SVGIcon_Video {
-  width: 20px;
-  height: 20px;
-  margin-right: 1px;
-  padding-bottom: 2px;
-  vertical-align: middle; }
-
-.NonInlinedEmbedLogo_Twitter {
-  background-image: url("../../images/webui/twitter/Twitter_Logo_Blue.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 17px;
-  height: 17px;
-  background-position-y: 1px;
-  background-position-x: -2px;
-  margin-right: -1px; }
-
-.NonInlinedEmbedLogo_Giphy {
-  background-image: url("../../images/webui/giphy_logo.png");
-  width: 12px;
-  height: 16px;
-  margin-top: 2px;
-  margin-bottom: -2px;
-  background-size: contain;
-  background-position: -1px 0px;
-  background-repeat: no-repeat; }
-
-.NonInlinedEmbedSingleLine {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
-
-.BBCodeResizeControl {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  width: 45%;
-  height: 45%;
-  right: 0px;
-  bottom: 0px;
-  cursor: nwse-resize;
-  padding: 6px;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  stroke: #000; }
-
-.BBCodeResizeControl .SVGIcon_ResizeIcon path {
-  fill: white;
-  stroke-width: 6px; }
-
-.chatImageURL {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  width: 35%;
-  height: 35%;
-  left: 0px;
-  bottom: 0px;
-  cursor: pointer;
-  padding: 0px;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  stroke: #000;
-  stroke-width: 0.5px; }
-
-.giphyImg .chatImageURL {
-  background-image: url("../../images/webui/giphy_logo.png");
-  width: 32px;
-  height: 32px;
-  background-size: contain;
-  background-position: 0% 50%;
-  background-repeat: no-repeat;
-  margin-bottom: 6px; }
-
-.giphyImg .chatImageURL svg {
-  display: none; }
-
-.giphyImg a.chatImageURL .giphyTag {
-  margin-left: 32px;
-  margin-top: 8px;
-  color: white;
-  text-shadow: -1px -1px 2px black, 1px -1px 2px black, 1px 1px 2px black, 1px 1px 1px black;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: -4px;
-  padding-right: 2px;
-  padding-left: 2px;
-  font-weight: bold; }
-
-.NonInlinedEmbed .giphySearch {
-  font-weight: normal; }
-
-.giphyImg a.chatImageURL .giphyTag .giphySearch {
-  color: #eee;
-  font-weight: normal; }
-
-.BBCodeRestoreControl {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 24px;
-  height: 24px;
-  padding: 0px;
-  opacity: 0;
-  transition: opacity .2s ease-in-out; }
-
-.BBCodeResizableComponent.ActivelyResizing .BBCodeRestoreControl,
-.BBCodeResizableComponent:not(.Resized) .BBCodeRestoreControl,
-.BBCodeResizableComponent.Restoring .BBCodeRestoreControl {
-  display: none; }
-
-.Minimized .BBCodeRestoreControl,
-.Minimized .chatImageURL,
-.Minimized .BBCodeResizeControl {
-  opacity: 0;
-  pointer-events: none;
-  transition-duration: 0s; }
-
-.BBCodeCollapseControl {
-  position: absolute;
-  right: 2px;
-  top: 4px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  padding: 0px;
-  opacity: 0;
-  transition: opacity .2s ease-in-out;
-  stroke: #000;
-  stroke-width: 0.5px; }
-
-.Minimized .BBCodeCollapseControl {
-  opacity: 1;
-  width: 16px;
-  height: 16px; }
-
-.Minimized .BBCodeCollapseControl .SVGIcon_Button {
-  width: 16px;
-  height: 16px; }
-
-.BBCodeCollapseControl .SVGIcon_Button {
-  transition: opacity 0.21s ease-in-out, transform 0.5s ease-in-out, fill 0.21s ease-in-out, stroke 0.21s ease-in-out;
-  transform-origin: 50% 50%; }
-
-.Minimized .BBCodeCollapseControl .SVGIcon_Button {
-  transform: rotateZ(-45deg);
-  opacity: 1; }
-
-.BBCodeCollapseControl .SVGIcon_Button,
-.chatImageURL .SVGIcon_Button,
-.BBCodeResizeControl .SVGIcon_Button {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  right: 5px;
-  bottom: 6px; }
-
-.BBCodeRestoreControl .restoreSize {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 5px;
-  top: 6px;
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0px 1px #000000aa, 0 0 0px 1px #000000aa inset;
-  cursor: pointer; }
-
-.BBCodeResizableComponent:hover .BBCodeRestoreControl:hover {
-  opacity: 1; }
-
-.BBCodeRestoreControl:hover .restoreSize {
-  box-shadow: 0 0 0px 1px #000000ff, 0 0 0px 1px #000000ff inset;
-  opacity: 1; }
-
-.chatImageURL .SVGIcon_Button {
-  bottom: 0px;
-  left: 1px; }
-
-.BBCodeCollapseControl .SVGIcon_Button {
-  top: 0px;
-  right: 1px; }
-
-.BBCodeResizableComponent:hover .BBCodeCollapseControl {
-  opacity: 0.5;
-  stroke: #000;
-  stroke-width: 4px; }
-
-.chatVideoContainer .chatImageURL .SVGIcon_Button {
-  bottom: -3px;
-  left: -2px; }
-
-.BBCodeResizableComponent:hover .BBCodeResizeControl,
-.BBCodeResizableComponent:hover .BBCodeRestoreControl,
-.chatVideoContainer:hover .chatImageURL,
-.chatImageContainer:hover .chatImageURL {
-  opacity: 0.5;
-  stroke: #000;
-  stroke-width: 0.5px; }
-
-.BBCodeResizableComponent:hover .BBCodeCollapseControl:hover,
-.BBCodeCollapseControl:hover {
-  opacity: 1; }
-
-.BBCodeResizableComponent.ActivelyResizing .BBCodeResizeControl,
-.BBCodeResizableComponent:hover .BBCodeResizeControl:hover,
-.chatVideoContainer:hover .chatImageURL:hover,
-.chatImageContainer:hover .chatImageURL:hover,
-.chatImageURL:hover,
-.BBCodeResizeControl:hover {
-  opacity: 1;
-  stroke: #000;
-  stroke-width: 0.5px; }
-
-.BBCodeResizableComponent.Minimized .chatImageURL,
-.BBCodeResizableComponent.Minimized .BBCodeRestoreControl,
-.BBCodeResizableComponent.Minimized .BBCodeResizeControl,
-.BBCodeResizableComponent.ActivelyResizing .BBCodeCollapseControl,
-.chatVideoContainer.ActivelyResizing .chatImageURL,
-.chatImageContainer.ActivelyResizing .chatImageURL {
-  opacity: 0; }
-
-.msg .chatVideoContainer a.chatImageURL,
-.msg .chatImageContainer a.chatImageURL {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  left: 5px;
-  bottom: 6px; }
-
-.msg .chatImageContainer.giphyImg a.chatImageURL {
-  width: fit-content;
-  max-width: 80%;
-  display: flex;
-  flex-direction: row;
-  bottom: 3px;
-  left: 8px; }
 
 .chatFileUploadProgressContainer {
   position: absolute;
@@ -11006,7 +11857,6 @@ a.connectionStatus:visited {
   max-width: 200px;
   min-width: 200px;
   box-shadow: 0 0 22px 0 #00000033;
-  z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
   /*padding-top: 20px;*/
@@ -11101,8 +11951,11 @@ a.connectionStatus:visited {
   padding: 3px;
   bottom: -2px;
   z-index: 1;
-  background: green;
+  background: linear-gradient(to right, #4a8d24, #7aaf2b);
   border-radius: 8px; }
+
+.MemberListColumn .friend .chatMemberPartyBeaconIcon svg .playTriangle {
+  fill: #e1f7c9; }
 
 .MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupIcon {
   opacity: 1;
@@ -11507,7 +12360,6 @@ a.connectionStatus:visited {
   padding-left: 6px;
   padding-right: 6px;
   background-color: #22252b;
-  z-index: 4;
   transition: all .21s ease-in-out;
   flex-wrap: wrap;
   justify-content: center; }
@@ -12495,15 +13347,6 @@ img.emoticon.large {
 .spoilerLabelContainer .chatVideoPlayControl {
   opacity: 0.1;
   transition: opacity .1s ease-in-out; }
-
-.spoilerLabelContainer .BBCodeResizableComponent:hover .chatVideoPlayControl {
-  opacity: 1; }
-
-.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer {
-  background-color: #0004; }
-
-.spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer.Minimized {
-  background-color: #0000; }
 
 .spoilerLabelBlock {
   position: absolute;
@@ -14772,157 +15615,10 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   margin-bottom: -32px;
   transition: opacity 0.1s ease-in-out, margin 0.3s ease-in-out, height 0.3s ease-in-out; }
 
-/*----------------------EMBED BBCODE STYLES---------------------*/
-.BBCodeYouTubeComponent {
-  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
-  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
-  border-radius: 10px;
-  padding: 8px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  margin: 8px 0px 8px 0px;
-  position: relative;
-  max-width: 520px; }
-
-.BBCodeYouTubeComponent.ActivelyResizing,
-.BBCodeYouTubeComponent.Resized {
-  max-width: initial; }
-
-.BBCodeYouTubeComponent.Minimized {
-  background: transparent;
-  padding: 2px;
-  padding-top: 8px;
-  padding-bottom: 8px; }
-
-.BBCodeYouTubeComponent_Sizer {
-  position: relative; }
-
-.BBCodeYouTubeComponent .BBCodeCollapseControl {
-  right: 10px;
-  top: 12px; }
-
-.BBCodeYouTubeComponent .BBCodeRestoreControl .restoreSize {
-  top: 14px;
-  left: 13px; }
-
-.BBCodeYouTubeComponent.Minimized .BBCodeCollapseControl {
-  right: 2px;
-  top: 4px; }
-
 .YoutubePlayer {
   background-color: #16181c;
   border-radius: 6px;
   padding: 4px; }
-
-.BBCodeYouTubeComponent_Sizer > .YoutubePlayer {
-  box-sizing: border-box;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.BBCodeYouTubeComponent_Sizer > .YoutubePlayer > iframe {
-  width: 100%;
-  height: 100%; }
-
-.BBCodeYouTubeComponent.ActivelyResizing .YoutubePlayer {
-  pointer-events: none; }
-
-.BBCodeYouTubeComponent .BBCodeResizeControl {
-  height: 18px;
-  width: 48px; }
-
-.BBCodeTitle {
-  font-size: 14px;
-  margin-left: 6px;
-  margin-top: 6px;
-  -webkit-app-region: no-drag;
-  user-select: none;
-  width: calc( 100% - 82px); }
-
-.BBCodeDetails {
-  font-size: 12px;
-  color: #888;
-  margin-left: 6px; }
-
-.BBCodeOEmbedComponent {
-  background: linear-gradient(to right, rgba(87, 92, 104, 0.3) 40%, rgba(87, 92, 104, 0.05) 100%);
-  max-width: 640px;
-  border-radius: 10px;
-  padding: 8px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 12px; }
-
-.BBCodeOEmbedComponent .OpenGraphImgContainer {
-  margin: 0;
-  background-color: transparent; }
-
-.BBCodeOEmbedComponent .sketchfab-embed-wrapper p {
-  display: none; }
-
-.BBCodeOEmbedComponent .sketchfab-embed-wrapper {
-  color: #00000000;
-  line-height: 0px; }
-
-.BBCodeOEmbedComponent.Twitch iframe {
-  width: 100%;
-  height: 360px; }
-
-.BBCodeOEmbedComponent.SoundCloud .oembedProvider,
-.BBCodeOEmbedComponent.SoundCloud .oembedTitle {
-  display: none; }
-
-.BBCodeOEmbedComponent.Streamable .oembedInner iframe {
-  width: 100%;
-  height: 330px; }
-
-.oembedInner iframe {
-  width: 100%; }
-
-.OEmbedPreview {
-  position: relative; }
-
-.OEmbedPreview img {
-  width: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all .14s ease-in-out; }
-
-.OEmbedPreview .oembedImgContainer:hover img {
-  filter: brightness(1.2); }
-
-.oembedProvider {
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  user-select: none; }
-
-.oembedHint {
-  position: absolute;
-  width: 100%;
-  bottom: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 2px #000, 1px 1px 12px #000, 1px 1px 6px #000;
-  color: #efefef;
-  pointer-events: none; }
-
-.oembedImgContainer {
-  position: relative; }
-
-.oembedTitle {
-  color: #888;
-  user-select: none; }
-
-.VideoCover {
-  background-color: rgba(37, 41, 47, 0);
-  width: 640px;
-  height: 385px;
-  z-index: 100;
-  position: absolute;
-  top: 8px;
-  margin-left: 4px;
-  visibility: collapse; }
 
 .chatRoomListContainer {
   background: radial-gradient(ellipse farthest-corner at 20% 30%, #0a0b0d 0%, #25333a 0%, #182024 100%);
@@ -17379,10 +18075,6 @@ a.general_btn:hover {
 .EmoticonSelector_Item:hover {
   background-color: #201f1d; }
 
-.emoticon_hover.FriendsUIEmoticonHover {
-  /* needs to appear on top of emoticon context menu.  TODO: find a better way to compute z-index on top */
-  z-index: 500; }
-
 .EmoticonSuggestion_Emoticon {
   position: relative;
   display: inline-block;
@@ -18058,269 +18750,6 @@ button.DialogButton.LocalMicTestButton {
 .FriendsSettingsFlashSection_ButtonRow .DialogButton {
   margin: 0; }
 
-.emojiTest {
-  font-size: 9px; }
-
-/* CSS For new Friend Hover ------------------------------------------------------------------*/
-.miniProfileHover .miniprofile_arrow.left {
-  border-right: 8px solid #41444e; }
-
-.miniProfileHoverInner {
-  width: fit-content;
-  margin: 11px;
-  box-shadow: 0 10px 32px 0px #000000ab; }
-
-.miniProfileContent {
-  width: 328px;
-  position: relative; }
-
-.miniProfileContent .miniProfileHeader {
-  height: 62px;
-  z-index: 1;
-  padding: 16px;
-  background: none;
-  border: none; }
-
-.miniProfileContent .miniProfilePlayer {
-  display: flex;
-  flex-direction: row; }
-
-.miniProfileContent .miniProfilePlayer .playerContent {
-  padding-left: 16px;
-  margin-bottom: 30px;
-  margin-top: auto; }
-
-.miniProfileContent .playerAvatar {
-  width: 90px;
-  height: 92px;
-  position: relative;
-  margin: 0;
-  border: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65); }
-
-.miniProfileContent .avatarStatus.miniProfileAvatarStatus {
-  width: 100%;
-  height: 2px;
-  z-index: 2; }
-
-.miniProfileContent .miniProfilePlayer.online .avatarStatus.miniProfileAvatarStatus {
-  background: #6dcff6; }
-
-.miniProfileContent .miniProfilePlayer.in-game .avatarStatus.miniProfileAvatarStatus {
-  background: #bff02b; }
-
-.miniProfileContent .miniProfilePlayer.isAway .avatarStatus.miniProfileAvatarStatus {
-  -webkit-mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-x;
-  -webkit-mask-size: 6px 6px;
-  mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  mask-size: 8px 8px;
-  opacity: 1; }
-
-.miniProfileBackground {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -3;
-  background: radial-gradient(ellipse farthest-corner at 20% 30%, #4c505b 0%, #34373f 50%, #282c32 100%); }
-
-.miniProfileBackgroundBlur {
-  width: 380px;
-  height: 380px;
-  filter: blur(10px) saturate(2);
-  position: absolute;
-  left: -60px;
-  top: -60px;
-  opacity: 0.4;
-  -webkit-mask: radial-gradient(ellipse farthest-corner at 150px 150px, black 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 34%, rgba(0, 0, 0, 0) 64%);
-  mask: radial-gradient(ellipse farthest-corner at 150px 150px, black 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 34%, rgba(0, 0, 0, 0) 64%);
-  mix-blend-mode: screen; }
-
-.miniProfileContent .playerContent .personaName {
-  text-shadow: 1px 1px 4px #000;
-  font-size: 20px;
-  letter-spacing: 1px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-  display: flex; }
-
-.miniProfileContent .miniProfilePlayer.in-game .personaName:not(.hasNickname) .personaNameLabel,
-.miniProfileContent .miniProfilePlayer.in-game .personaName.nickName .personaNameLabel {
-  color: #e3ffc2; }
-
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName:not(.hasNickname) .personaNameLabel,
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName.nickName .personaNameLabel {
-  color: #c9bdf7; }
-
-.miniProfileContent .playerContent .persona .personaName.hasNickname {
-  color: #888;
-  font-size: 14px; }
-
-.miniProfileContent .playerContent .persona .personaName.hasNickname .personaNameLabel {
-  color: #bbb;
-  max-width: 154px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; }
-
-.miniProfileContent .playerContent .awayStatusLabel {
-  color: #999;
-  max-width: 154px;
-  text-shadow: 1px 1px 4px #000;
-  font-size: 14px;
-  letter-spacing: 1px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif; }
-
-.miniProfileContent .playerContent .personaName.nickName .personaNameLabel,
-.miniProfileContent .playerContent .personaName:not(.hasNickname) .personaNameLabel {
-  max-width: 160px;
-  text-overflow: ellipsis;
-  max-height: 48px;
-  overflow: hidden;
-  white-space: nowrap;
-  word-wrap: break-word; }
-
-.miniProfileContent .miniProfilePlayer.online .nickname,
-.miniProfileContent .miniProfilePlayer.online .persona {
-  color: #6dcff6; }
-
-.miniProfileContent .miniProfilePlayer.offline .nickname,
-.miniProfileContent .miniProfilePlayer.offline .persona {
-  color: #bbb; }
-
-.miniProfileContent .playerNicknameBracket {
-  color: #bbb; }
-
-.miniProfileContent .playerAvatar img {
-  width: 90px;
-  height: 90px;
-  border: none;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  background: none;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px; }
-
-.miniProfileContent.notInGame .miniProfileBottom,
-.miniProfileContent .miniProfileGameContainer {
-  background: linear-gradient(to bottom, rgba(24, 26, 30, 0.7) 5%, rgba(24, 26, 30, 0.4) 95%); }
-
-.miniProfileContent .miniProfileGameContainer {
-  z-index: -1;
-  border: none;
-  min-height: 64px;
-  position: relative; }
-
-.miniProfileContent .miniProfileGameContainer .gameLogo {
-  width: 90px;
-  height: 34px;
-  top: 18px;
-  left: 16px;
-  position: absolute; }
-
-.miniProfileContent .miniProfileGameContainer .richPresence,
-.miniProfileContent .miniProfileGameContainer .gameState {
-  font-size: 12px;
-  color: #62813b; }
-
-.miniProfileContent .miniProfileGameContainer .gameContent {
-  padding: 8px 8px 8px 122px;
-  font-size: 14px; }
-
-.miniProfileContent .miniProfileBottom {
-  padding: 16px 16px 8px 16px; }
-
-.miniProfileContent.notInGame .miniProfileBottom {
-  padding-top: 26px; }
-
-.miniProfileContent .miniProfileFeaturedContainer {
-  position: relative;
-  height: 34px;
-  display: flex;
-  padding-left: 16px;
-  margin-bottom: 8px; }
-
-.miniProfileContent .miniProfileFeaturedContainer .favoriteBadgeIcon {
-  width: 34px;
-  height: 34px; }
-
-.miniProfileContent .miniProfileFeaturedContainer .badgeIcon {
-  width: 100%;
-  height: 100%; }
-
-.miniProfileContent .miniProfileBottom .featuredLabels {
-  font-size: 14px;
-  overflow: hidden;
-  white-space: nowrap;
-  justify-content: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 12px; }
-
-.miniProfileContent .miniProfileBottom .friendPlayerLevel .friendPlayerLevelNum {
-  font-size: 14px; }
-
-.miniProfileContent .miniProfileBottom .featuredLabels .featuredTitle {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #b1b1b1; }
-
-.miniProfileContent .miniProfileBottom .featuredLabels .featuredSubTitle {
-  color: #6b6a6a;
-  font-size: 12px; }
-
-.miniProfileContent .mutualFriends {
-  background-color: #000a; }
-
-.mutualFriendsContainer {
-  padding: 12px 16px 4px 16px; }
-
-.mutualFriend {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 12px; }
-
-.mutualFriendAvatar {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  margin-left: 24px; }
-
-.mutualFriendTitle {
-  color: #4c91ac;
-  font-size: 14px;
-  margin-bottom: 12px; }
-
-.mutualFriendLabel {
-  font-size: 14px;
-  color: #b1b1b1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 190px; }
-
-.mutualFriendLabel.plusOthersLabel {
-  margin-left: 48px;
-  color: #5f5f5f; }
-
-.friendPlayerLevel {
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 50%;
-  border: solid white 2px;
-  height: 28px;
-  width: 28px;
-  line-height: 26px;
-  text-align: center;
-  cursor: default;
-  margin-top: 2px; }
-
 .InviteLandingRoot {
   margin: 0 auto;
   max-width: 600px;
@@ -18570,9 +18999,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .SettingsGroup.PermissionsGroup ._DialogInputContainer {
   margin-bottom: 8px; }
 
-.singlewindow .title-area .betaFeedbackLabel {
-  display: none; }
-
 .msg .broadcastInviteSelf,
 .msg .broadcastInviteDismissed,
 .msg .broadcastViewRequestDismissed {
@@ -18587,128 +19013,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 
 .broadcastThumbnail.loaded {
   display: inline-block; }
-
-.changeLog,
-.betaFeedbackLabel {
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 8px;
-  font-size: 10px;
-  user-select: none;
-  cursor: default;
-  text-transform: uppercase;
-  white-space: nowrap; }
-
-.changeLog:hover {
-  color: white;
-  cursor: pointer; }
-
-.changeLog {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  right: 32px;
-  top: -1px; }
-
-.singlewindow .changeLog {
-  right: 8px; }
-
-.changeLog .SVGIcon_Scroll {
-  width: 20px;
-  height: 20px; }
-
-.changeLog .SVGIcon_Scroll path {
-  fill: #888; }
-
-.changeLog:hover .SVGIcon_Scroll path {
-  fill: #bbb; }
-
-.changeLog.showViolator .SVGIcon_Scroll path {
-  fill: #ddd; }
-
-.changeLog.showViolator:hover .SVGIcon_Scroll path {
-  fill: #fff; }
-
-.changeLog .changeLogViolator {
-  background-color: #e64a35;
-  color: white;
-  border-radius: 50%;
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  right: 8px;
-  top: 6px;
-  text-align: center;
-  font-size: 10px; }
-
-.changeLog:hover .changeLogViolator {
-  background-color: #f58374; }
-
-.DialogContent.changeLogPage {
-  max-height: 680px; }
-
-.changeLogDetails {
-  width: calc( 100% - 60px);
-  height: 100%;
-  background-color: #0005;
-  box-shadow: inset 2px 2px 18px #00000075;
-  overflow: scroll scroll;
-  padding: 16px;
-  padding-left: 32px;
-  padding-top: 32px; }
-
-.changeLogPage .changeLogDate {
-  font-size: 12px;
-  margin-bottom: 8px;
-  color: #777; }
-
-.changeLogPage .changeLogTitle {
-  color: white;
-  font-size: 16px; }
-
-.changeLogPage .changeLogDescription {
-  font-size: 14px;
-  padding: 0 16px;
-  margin-bottom: 24px;
-  position: relative; }
-
-.changeLogPage .changeLogItemSubHeader {
-  font-weight: bold;
-  margin-bottom: 8px;
-  margin-left: -8px; }
-
-.changeLogPage .changeLogExtra {
-  font-size: 14px;
-  margin-bottom: 14px; }
-
-.changeLogPage .changeLogItem {
-  clear: left;
-  line-height: 16px;
-  margin-bottom: 12px;
-  padding-left: 10px;
-  user-select: text; }
-
-.changeLogPage .changeLogItem:before {
-  position: absolute;
-  left: 18px;
-  content: "\2022";
-  margin-right: 4px;
-  color: #669abd; }
-
-.audioVoiceLogs {
-  margin-left: 8px;
-  margin-right: 4px;
-  font-size: 10px;
-  user-select: none;
-  cursor: default;
-  white-space: nowrap; }
-
-.betaFeedbackAnchor {
-  color: rgba(0, 217, 255, 0.5);
-  text-decoration: underline; }
-
-.betaFeedbackAnchor:hover {
-  color: #00d9ff; }
 
 .InnerChatTab .SteamLogo {
   float: right; }
@@ -18736,6 +19040,18 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   border-bottom: 0px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black; }
+
+.groupMemberList .friend .playerName, .groupMemberList .CompactFriendsList .friend .playerNickname {
+  font-size: 13px; }
+
+.groupMemberList .friend .twoLine .richPresenceLabel {
+  font-size: 11px; }
+
+.groupMemberList .friend .richPresenceLabel {
+  line-height: 13px; }
+
+.groupMemberList .friend .avatarHolder img.avatar {
+  height: 24px; }
 
 .avoidEvents {
   pointer-events: none; }

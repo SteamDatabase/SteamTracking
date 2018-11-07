@@ -115,11 +115,11 @@ body.v6 {
 
 .friends_nav a.icon_item .title {
     background-repeat: no-repeat;
-    background-size: 16px 176px;
+    background-size: 16px 192px;
     display: inline-block;
     line-height: 16px;
     padding-left: 35px;
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=4' );
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5' );
 }
 
 .invite_row .actions .ico_approve {
@@ -186,7 +186,7 @@ body.v6 {
 		margin-top: 5px;
 	}
 
-	html.responsive .manage_link {
+	html.responsive .manage_link, html.responsive #add_friends_button {
 		text-align: center;
 		margin: 0;
 		flex-grow: 1;
@@ -197,8 +197,8 @@ body.v6 {
 		vertical-align: middle;
 	}
 
-	html.responsive #manage_search_control {
-		margin-right: 10px;
+	html.responsive #add_friends_button {
+		margin-left: 10px;
 	}
 
 	html.responsive .profile_friends.title, html.responsive .profile_groups.title {
@@ -210,9 +210,6 @@ body.v6 {
 		flex-wrap: wrap;
 	}
 
-	html.responsive .profile_friends #manage_search_control {
-		display: block;
-	}
 
 	html.responsive .manage_friends_panel.manage {
 		margin-top: 5px;
@@ -252,6 +249,11 @@ body.v6 {
 		display: block;
 		margin-left: 0;
 	}
+
+	html.responsive .searchBarContainer input {
+		width: 100%;
+		max-width: none;
+	}
 }
 
 
@@ -259,9 +261,6 @@ body.v6 {
 	display: none;
 }
 
-.profile_friends #manage_search_control {
-	display: none;
-}
 
 .SVGIcon_DownArrowContextMenu {
 	fill: rgb( 76, 145, 172 );
@@ -281,7 +280,7 @@ body.v6 {
     background-position: 0 -32px;
 }
 .friends_nav .icon_add_friends .title {
-    background-position: 0 -48px;
+    background-position: 0 -176px;
 }
 .friends_nav .icon_blocked_friends .title {
     background-position: 0 -64px;
@@ -299,7 +298,7 @@ body.v6 {
     background-position: 0 -48px;
 }
 .friends_nav .icon_all_following .title {
-    background-position: 0 -144px;
+    background-position: 0 -145px;
 }
 .friends_nav .icon_games_following .title {
     background-position: 0 -160px;
@@ -508,16 +507,17 @@ body.v6 {
     margin: 5px;
     float: left;
 
-    background-color: #274e68;
+	background: #274e68 url(https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/searchbox_workshop_submit.gif) no-repeat 1px;
     border-radius: 3px;
     border: 1px solid rgba( 0, 0, 0, 0.3);
     box-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.2);
     color: #fff;
 
     outline: none;
-    height: 24px;
-    width: 250px;
-    padding: 0px 6px;
+    height: 28px;
+	font-size: 14px;
+    min-width: 250px;
+    padding: 0 0 0 30px;
 }
 
 .friends_search_text_box::-webkit-input-placeholder,
@@ -637,9 +637,9 @@ body.v6 {
 }
 .invite_section_ctn .header_row span {
     background-repeat: no-repeat;
-    background-size: 16px 176px;
+    background-size: 16px 192px;
     padding-left: 24px;
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=3' );
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5' );
     background-position: 0 -112px;
     display: inline-block;
     line-height: 16px;
@@ -1014,4 +1014,42 @@ span.invite_action_txt {
 
 .profile_friends.title_bar.pending_sent_invites {
 	margin-top: 30px;
+}
+
+.searchBarContainer {
+	display: flex;
+	flex: 1 100%;
+	margin: 10px 0 0 0;
+}
+
+.searchBarContainer input {
+	margin: 0;
+	width: 50%;
+}
+
+#add_friends_button {
+	margin: 0 10px 0 0;
+}
+
+.add_friend_icon {
+	background-repeat: no-repeat;
+	background-size: 16px 192px;
+	padding-left: 24px;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5');
+	background-position: 0 -176px;
+}
+
+#search_players_form {
+	margin: 20px 0;
+}
+
+#search_players_form input[type="text"] {
+	height: 36px;
+	width: 40%;
+	margin: 0;
+	box-shadow: none;
+}
+
+#search_players_form input[type="submit"] {
+	line-height: 38px;
 }

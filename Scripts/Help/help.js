@@ -102,7 +102,7 @@ HelpWizard = {
 				HelpWizard.m_steamid = data.steamid;
 			}
 
-			$J('#wizard_contents').html( data.html );
+			HelpWizard.SetPageContent( data.html );
 			HelpWizard.FinishPageLoad();
 
 			// TODO: really only want this when navigating forward, back would remember where you left off otherwise
@@ -119,6 +119,10 @@ HelpWizard = {
 
        		$J( '#loading_throbber' ).addClass( 'page_loaded' );
 		} );
+	},
+
+	SetPageContent: function( strHTML ) {
+		$J('#wizard_contents').html( '<div class="wizard_content_wrapper">' + strHTML + '</div>' );
 	},
 
 	FinishPageLoad: function() {
@@ -961,7 +965,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1012,7 +1016,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1059,7 +1063,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1102,7 +1106,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1149,7 +1153,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1219,7 +1223,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1259,7 +1263,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 			else
@@ -1290,7 +1294,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 			}
 			else
 			{
@@ -1324,7 +1328,7 @@ HelpWizard = {
 			}
 			else if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 			}
 			else
 			{
@@ -1394,7 +1398,7 @@ HelpWizard = {
 
 			if ( data.html )
 			{
-				$J('#wizard_contents').html( data.html );
+				HelpWizard.SetPageContent( data.html );
 				return;
 			}
 
@@ -2374,9 +2378,6 @@ HelpRequestPage = {
 			return;
 		}
 
-		if ( !$J('#wizard_contents > .wizard_content_wrapper').length )
-			$J('#wizard_contents').wrapInner( '<div class="wizard_content_wrapper"></div>');
-
 		HelpRequestPage.InitHelpRequestAttachmentUpload( $J('#create_help_request_form') );
 
 		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
@@ -2880,7 +2881,7 @@ HelpRequestPage = {
 			{
 				if ( data.html )
 				{
-					$J('#wizard_contents').html( data.html );
+					HelpWizard.SetPageContent( data.html );
 					HelpWizard.FinishPageLoad();
 					window.setTimeout( function() {
 						$J('.help_request_message:not(.from_steam):last').addClass('new');
@@ -2958,7 +2959,7 @@ HelpRequestPage = {
 			{
 				if ( data.html )
 				{
-					$J('#wizard_contents').html( data.html );
+					HelpWizard.SetPageContent( data.html );
 					HelpWizard.FinishPageLoad();
 				}
 			}
