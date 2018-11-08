@@ -2424,6 +2424,15 @@ iframe.steamTVLogin {
   fill: #4367f0;
   stroke-width: 0px; }
 
+.BroadcastDotaKualaLumpurMajorOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../images/webui/broadcast/dota_major_kuala_lumpur_2018.jpg");
+  background-size: cover; }
+
 .BroadcastQuakeLiveOffline {
   position: absolute;
   top: 0;
