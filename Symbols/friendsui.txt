@@ -6857,6 +6857,7 @@
  T CFriendsWebChat::SetPushToTalkHotKey(int)
  T CFriendsWebChat::SetPushToTalkMouseButton(int)
  T CFriendsWebChat::SetSilentStartupMode(bool)
+ T CFriendsWebChat::SetVGUIParent(unsigned long long)
  T CFriendsWebChat::SetVoiceChatActive(bool)
  T CFriendsWebChat::Shutdown()
  T CFriendsWebChat::UnregisterForMouseXButtonDown()
@@ -13323,7 +13324,7 @@
  T vgui::HTMLFramelessPopup::GetPanelTopClassName() const
  T vgui::HTMLFramelessPopup::GetPopupHTML()
  T vgui::HTMLFramelessPopup::HTMLFramelessPopup(bool, bool, bool)
- T vgui::HTMLFramelessPopup::Initialize(vgui::Panel*, char const*)
+ T vgui::HTMLFramelessPopup::Initialize(vgui::Panel*)
  T vgui::HTMLFramelessPopup::KB_ChainToMap()
  T vgui::HTMLFramelessPopup::OnAppearanceChanged(vgui::IAppearance*)
  T vgui::HTMLFramelessPopup::OnBrowserBringWindowToFront()

@@ -338,9 +338,11 @@
  T CAppDepotsUpdater::BRunUpdate(unsigned int)
  T CAppDepotsUpdater::CAppDepotsUpdater()
  T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::Run(void*)
+ T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CAppDepotsUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CAppInstallerBuilder::BRunBuild(char const*, char const*, char const*, char const*)
  T CAppInstallerBuilder::CCallback_OnAppBackupStatus::Run(void*)
+ T CAppInstallerBuilder::CCallback_OnAppBackupStatus::~CCallback_OnAppBackupStatus()
  T CAppInstallerBuilder::OnAppBackupStatus(AppBackupStatus_t*)
  T CAppUpdater::BInit(KeyValues*)
  T CAppUpdater::BRunContentUpdate()
@@ -348,7 +350,9 @@
  T CAppUpdater::BRunWorkshopUpdate()
  T CAppUpdater::CAppUpdater()
  T CAppUpdater::CCallback_OnAppInfoUpdate::Run(void*)
+ T CAppUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse::Run(void*)
+ T CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse::~CCallback_OnCheckAppBetaPasswordResponse()
  T CAppUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CAppUpdater::OnCheckAppBetaPasswordResponse(CheckAppBetaPasswordResponse_t*)
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
@@ -356,51 +360,67 @@
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Register(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::CCallback(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Register(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Run(void*)
+ T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::~CCallback()
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Run(void*)
+ T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::~CCallback()
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::Run(void*)
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallback()
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::CCallback(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
+ T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedClient_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::Run(void*)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedClient_t, false>::~CCallback()
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::CCallback(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Register(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageAppSyncedServer_t*))
  T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::Run(void*)
+ T CCallback<CControllerConfigUploader, RemoteStorageAppSyncedServer_t, false>::~CCallback()
  T CCallback<CSteamUser, PostLogonState_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(PostLogonState_t*))
  T CCallback<CSteamUser, PostLogonState_t, false>::Register(CSteamUser*, void (CSteamUser::*)(PostLogonState_t*))
  T CCallback<CSteamUser, PostLogonState_t, false>::Run(void*)
+ T CCallback<CSteamUser, PostLogonState_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServerConnectFailure_t*))
  T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::Run(void*)
+ T CCallback<CSteamUser, SteamServerConnectFailure_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServersConnected_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServersConnected_t*))
  T CCallback<CSteamUser, SteamServersConnected_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServersConnected_t*))
  T CCallback<CSteamUser, SteamServersConnected_t, false>::Run(void*)
+ T CCallback<CSteamUser, SteamServersConnected_t, false>::~CCallback()
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::CCallback(CSteamUser*, void (CSteamUser::*)(SteamServersDisconnected_t*))
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServersDisconnected_t*))
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Run(void*)
+ T CCallback<CSteamUser, SteamServersDisconnected_t, false>::~CCallback()
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
  T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*)
+ T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::~CCallback()
  T CCallbackImpl<12>::GetCallbackSizeBytes()
  T CCallbackImpl<12>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<12>::~CCallbackImpl()
@@ -439,7 +459,9 @@
  T CConsoleInputThread::Run()
  T CConsoleInputThread::~CConsoleInputThread()
  T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient::Run(void*)
+ T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient::~CCallback_OnRemoteStorageAppSyncedClient()
  T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer::Run(void*)
+ T CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer::~CCallback_OnRemoteStorageAppSyncedServer()
  T CControllerConfigUploader::CControllerConfigUploader()
  T CControllerConfigUploader::OnPublishFileResult(RemoteStoragePublishFileResult_t*, bool)
  T CControllerConfigUploader::OnRemoteStorageAppSyncedClient(RemoteStorageAppSyncedClient_t*)
@@ -455,7 +477,7 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
- T CFileReader::BOpenFile(char const*, int)
+ T CFileReader::BOpenFile(char const*, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
@@ -593,9 +615,13 @@
  T CSteamID::Render() const
  T CSteamUser::AnonymousLogonBlocking()
  T CSteamUser::CCallback_OnLoggedOff::Run(void*)
+ T CSteamUser::CCallback_OnLoggedOff::~CCallback_OnLoggedOff()
  T CSteamUser::CCallback_OnLogonFailure::Run(void*)
+ T CSteamUser::CCallback_OnLogonFailure::~CCallback_OnLogonFailure()
  T CSteamUser::CCallback_OnPostLogonState::Run(void*)
+ T CSteamUser::CCallback_OnPostLogonState::~CCallback_OnPostLogonState()
  T CSteamUser::CCallback_OnSteamLogon::Run(void*)
+ T CSteamUser::CCallback_OnSteamLogon::~CCallback_OnSteamLogon()
  T CSteamUser::CSteamUser()
  T CSteamUser::LogonBlocking(char const*, char const*, char const*)
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
@@ -871,15 +897,19 @@
  T CWorkshopItemBuilder::BInit(char const*)
  T CWorkshopItemBuilder::BRunBuild()
  T CWorkshopItemBuilder::CCallback_OnAppInfoUpdate::Run(void*)
+ T CWorkshopItemBuilder::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CWorkshopItemBuilder::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemBuilderLegacy::BInit(unsigned int, char const*)
  T CWorkshopItemBuilderLegacy::BRunBuild()
  T CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate::Run(void*)
+ T CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CWorkshopItemBuilderLegacy::CWorkshopItemBuilderLegacy()
  T CWorkshopItemBuilderLegacy::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::BDownloadItem()
  T CWorkshopItemDownloader::CCallback_OnAppInfoUpdate::Run(void*)
+ T CWorkshopItemDownloader::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CWorkshopItemDownloader::CCallback_OnDownloadItemResult::Run(void*)
+ T CWorkshopItemDownloader::CCallback_OnDownloadItemResult::~CCallback_OnDownloadItemResult()
  T CWorkshopItemDownloader::CWorkshopItemDownloader()
  T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
@@ -890,8 +920,8 @@
  T CallbackMgr_RunCallbacks(int, bool)
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
- T ClientAPI_InitGlobalInstance()
- T ClientAPI_InitLocalInstance(EAccountType)
+ T ClientAPI_InitGlobalInstance(int, char**)
+ T ClientAPI_InitLocalInstance(EAccountType, int, char**)
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
  T ClientAppManager()
@@ -996,9 +1026,9 @@
  T IPv6AddrToString
  T IPv6IPToString
  T InitializeSpewConfig()
- T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool)
+ T InternalAPI_Init_Internal(CSysModule**, IClientEngine**, bool, int, char**)
  T InternalClient()
- T Internal_ClientAPI_InitInstance(bool, EAccountType, bool)
+ T Internal_ClientAPI_InitInstance(bool, EAccountType, bool, int, char**)
  T KV_ResolveSymbol(char const*)
  T KeyValues::ConvertAndWriteWideString(KeyValues*, CUtlBuffer*, int) const
  T KeyValues::CopySubkeys(KeyValues*) const
@@ -1047,7 +1077,7 @@
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
  T LoadConVarsFromFile(char const*)
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool)
+ T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T LogMsg(char const*, ...)
  T MakeFileWriteable(char const*)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
@@ -1213,7 +1243,6 @@
  __stderrp
  __stdinp
  __stdoutp
- __toupper
  alphasort$INODE64
  atexit
  atoi
@@ -1265,6 +1294,7 @@
  b g_pClientAudio
  b g_pClientBilling
  b g_pClientBluetoothManager
+ b g_pClientCompat
  b g_pClientConfigStore
  b g_pClientController
  b g_pClientControllerSerialized
@@ -1283,6 +1313,7 @@
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
  b g_pClientParentalSettings
+ b g_pClientParties
  b g_pClientProductBuilder
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
@@ -1363,6 +1394,8 @@
  fflush
  fgets
  fileno
+ flock
+ fnmatch
  fopen
  fprintf
  fputs
@@ -1416,6 +1449,7 @@
  rindex
  scandir$INODE64
  setenv
+ snprintf
  sprintf
  sscanf
  stat$INODE64
@@ -1436,7 +1470,7 @@
  t FileSelect(dirent const*)
  t FreeTree(ExprNode*&)
  t GetNetAdrResolveCacheMutex()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool)
+ t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)

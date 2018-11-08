@@ -1097,14 +1097,24 @@ GHomepage = {
 		});
 
 
-		$J('.store_capsule.daily_deal').each( function( i, j){
+		$J('.store_capsule.daily_deal').each( function( i, j) {
+
 			var $elem = $J(j);
 			var unAppId = $elem.data('ds-appid');
+			var unBundleId = $elem.data('ds-bundleid');
 
-			if ( !unAppId )
+			if ( !unAppId && !unBundleId )
 				return;
 
-			if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
+			if ( unBundleId )
+			{
+				if ( !GStoreItemData.BBundlePassesFilters( unBundleId, Settings, ApplicableSettings ) )
+				{
+					$elem.replaceWith( '<div class="specials_target"></div>');
+					return;
+				}
+			}
+			else if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
 			{
 				$elem.replaceWith( '<div class="specials_target"></div>');
 				return;

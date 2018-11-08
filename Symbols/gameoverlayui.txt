@@ -444,6 +444,7 @@
  D CMicroTxnAuthorizeDialog::GetMessageMap()::s_pMap
  D CMicroTxnAuthorizeDialog::KB_ChainToMap()::chained
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnAuthorizeTransaction::InitVar()::bAdded
+ D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnURLClicked::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnUpdateBillingInfo::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()::bAdded
  D CMusicLibraryPanel::ChainToAnimationMap()::chained
@@ -5795,10 +5796,13 @@
  T CMicroTxnAuthorizeDialog::OnAuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::OnClose()
  T CMicroTxnAuthorizeDialog::OnMicroTxnInfoUpdated(MicroTxnInfoUpdated_t*, bool)
+ T CMicroTxnAuthorizeDialog::OnURLClicked(char const*)
  T CMicroTxnAuthorizeDialog::OnUpdateBillingInfo()
  T CMicroTxnAuthorizeDialog::OnWebBrowserClose()
+ T CMicroTxnAuthorizeDialog::OpenBrowserToFullURL(char const*)
  T CMicroTxnAuthorizeDialog::OpenBrowserToPage(char const*)
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnAuthorizeTransaction::InitVar()
+ T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnURLClicked::InitVar()
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnUpdateBillingInfo::InitVar()
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()
  T CMicroTxnAuthorizeDialog::RequestMicroTxnInfo()
