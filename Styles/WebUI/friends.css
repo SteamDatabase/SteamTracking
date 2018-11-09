@@ -2475,7 +2475,7 @@ iframe.steamTVLogin {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("../../images/webui/broadcast/ArtifactAtPAX_bg.jpg");
+  background-image: url("../../images/webui/broadcast/artifact_preview_tournament.png");
   background-size: cover; }
 
 .BroadcastArtifactOffline_Schedule {
