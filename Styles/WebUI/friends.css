@@ -2424,32 +2424,29 @@ iframe.steamTVLogin {
   fill: #4367f0;
   stroke-width: 0px; }
 
-.BroadcastDotaKualaLumpurMajorOffline {
+.BroadcastDotaKualaLumpurMajorOffline,
+.BroadcastQuakeLiveOffline,
+.BroadcastCSGOLondonOffline,
+.BroadcastArtifactOffline,
+.BroadcastInjustice2Offline {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("../../images/webui/broadcast/dota_major_kuala_lumpur_2018.jpg");
   background-size: cover; }
+
+.BroadcastInjustice2Offline {
+  background-image: url("../../images/webui/broadcast/injustice2_grand_finals_2018_splash_screen.jpg"); }
+
+.BroadcastDotaKualaLumpurMajorOffline {
+  background-image: url("../../images/webui/broadcast/dota_major_kuala_lumpur_2018.jpg"); }
 
 .BroadcastQuakeLiveOffline {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("../../images/webui/broadcast/quake_live_2018.jpg");
-  background-size: cover; }
+  background-image: url("../../images/webui/broadcast/quake_live_2018.jpg"); }
 
 .BroadcastCSGOLondonOffline {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("../../images/webui/broadcast/steam_broadcast_london_2018.jpg");
-  background-size: cover; }
+  background-image: url("../../images/webui/broadcast/steam_broadcast_london_2018.jpg"); }
 
 .BroadcastCSGOLondonOffline_Schedule {
   position: absolute;
@@ -2470,13 +2467,7 @@ iframe.steamTVLogin {
   line-height: 36px; }
 
 .BroadcastArtifactOffline {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("../../images/webui/broadcast/artifact_preview_tournament.png");
-  background-size: cover; }
+  background-image: url("../../images/webui/broadcast/artifact_preview_tournament.png"); }
 
 .BroadcastArtifactOffline_Schedule {
   position: absolute;
@@ -9142,7 +9133,7 @@ body.in_global_drag .friendlist_titlebar {
 .title-area-icon .SVGIcon_SingleWindowToggle .leftBox {
   transition: transform .21s ease-in-out; }
 
-.fullheight:not(.chat_main) .ChatTabs .title-area-icon .SVGIcon_SingleWindowToggle {
+.fullheight:not(.chat_main) .ChatTabs .title-area-icon.singleWindowToggle {
   display: none; }
 
 .chat_main.singlewindow .ChatTabs .title-area-icon .SVGIcon_SingleWindowToggle {
@@ -11870,7 +11861,8 @@ a.connectionStatus:visited {
   overflow-x: hidden;
   /*padding-top: 20px;*/
   transition: all .4s ease-in-out;
-  overflow: visible; }
+  overflow: visible;
+  z-index: 1; }
 
 .chatRoomGroupNavColumn.noActiveVoiceChannels.defaultChatOnly {
   min-width: 0px;

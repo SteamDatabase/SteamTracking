@@ -822,7 +822,7 @@
       s = n("q1tI"),
       c = n("i8i4"),
       l = n("JtU4"),
-      R = n("/IDK"),
+      N = n("/IDK"),
       i = n("1VtQ"),
       r = n("e2SU"),
       p = n("WpBz"),
@@ -1052,7 +1052,7 @@
             this.PositionMenu();
           }),
           (e.prototype.OnBlur = function(e) {
-            (e.relatedTarget && R.e(e.currentTarget, e.relatedTarget)) ||
+            (e.relatedTarget && N.e(e.currentTarget, e.relatedTarget)) ||
               (e.relatedTarget &&
                 this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget
@@ -1083,7 +1083,7 @@
               this.state.ready &&
               this.props.instance.visible &&
               (this.props.popup ||
-                !R.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+                !N.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
             ) {
               var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
               e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -1114,7 +1114,7 @@
                 p = n.innerWidth,
                 m = n.innerHeight;
               if (r) {
-                (c += n.screenLeft), (l += n.screenTop), (o = R.h(n, o));
+                (c += n.screenLeft), (l += n.screenTop), (o = N.h(n, o));
                 var u = n.screen,
                   d = 0,
                   h = 0;
@@ -1282,7 +1282,7 @@
         return (
           a.d(r, i),
           (r.prototype.UpdateParamsBeforeShow = function(e) {
-            var t = R.h(
+            var t = N.h(
               this.m_menuProps.element.ownerDocument.defaultView,
               this.m_menuProps.element.getBoundingClientRect()
             );
@@ -2511,10 +2511,10 @@
         return G;
       }),
       n.d(t, "G", function() {
-        return R;
+        return N;
       }),
       n.d(t, "F", function() {
-        return N;
+        return R;
       }),
       n.d(t, "S", function() {
         return k;
@@ -3718,7 +3718,7 @@
         )
       );
     }
-    function R() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -3739,7 +3739,7 @@
         })
       );
     }
-    function N() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -5629,7 +5629,7 @@
     "use strict";
     n.r(t);
     var G = n("tkkQ"),
-      R = n("mrSG"),
+      N = n("mrSG"),
       o = n("wsDK"),
       c = (function() {
         function e(e, t, n) {
@@ -5846,7 +5846,7 @@
           return void 0 === t && (t = 0), i.call(this, t, n, e, o) || this;
         }
         return (
-          R.d(n, i),
+          N.d(n, i),
           (n.InitFromPacket = function(e, t) {
             return new n(e, 0, t);
           }),
@@ -5987,8 +5987,8 @@
               }
             );
           }),
-          R.c([d.observable], e.prototype, "m_rgRegisteredEMsgs", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_rgRegisteredEMsgs", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_rgRegisteredServiceMethodHandlers",
@@ -6025,7 +6025,7 @@
       S = n("0N1H"),
       y = n("vDqi"),
       C = n.n(y),
-      N = n("XaMz"),
+      R = n("XaMz"),
       I = (function() {
         function e() {
           this.m_CMList = { rgCMList: [], rtLastLoaded: 0 };
@@ -6263,9 +6263,9 @@
             );
           }),
           (e.prototype.PingCM = function(l) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o, i, r, a, s, c;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     (t = "https://" + this.FixDevHost(l.strHost) + "/cmping/"),
@@ -6362,7 +6362,7 @@
             var e = this.m_fnCallback;
             (this.m_fnCallback = void 0), e();
           }),
-          R.c([M.a], e.prototype, "ScheduledInternal", null),
+          N.c([M.a], e.prototype, "ScheduledInternal", null),
           e
         );
       })(),
@@ -6668,10 +6668,10 @@
               t[n - 1] = arguments[n];
           }),
           (e.prototype.InternalAdjustClock = function() {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t,
                 r = this;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 return (
                   (t = u.Init(b.f, 9802))
                     .Body()
@@ -6692,7 +6692,7 @@
                           ? ((r.m_bPerformedInitialClockAdjustment = !0),
                             (r.m_nPerfClockServerMSOffset = i - t),
                             (r.m_nWallClockDriftMS = n.getTime() - i))
-                          : Object(N.a)(
+                          : Object(R.a)(
                               !1,
                               "Error computing server time, server echo: " +
                                 o +
@@ -6721,26 +6721,26 @@
           (e.prototype.RTime32ToDate = function(e) {
             return new Date(1e3 * e + this.m_nWallClockDriftMS);
           }),
-          R.c([d.observable], e.prototype, "m_steamid", void 0),
-          R.c([d.observable], e.prototype, "m_bLoggedOn", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_steamid", void 0),
+          N.c([d.observable], e.prototype, "m_bLoggedOn", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bCompletedInitialConnect",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_unAccountFlags", void 0),
-          R.c([d.observable], e.prototype, "m_strIPCountry", void 0),
-          R.c([d.observable], e.prototype, "m_strPersonaName", void 0),
-          R.c([d.observable], e.prototype, "m_steamidLastLoggedOn", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_unAccountFlags", void 0),
+          N.c([d.observable], e.prototype, "m_strIPCountry", void 0),
+          N.c([d.observable], e.prototype, "m_strPersonaName", void 0),
+          N.c([d.observable], e.prototype, "m_steamidLastLoggedOn", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bPerformedInitialClockAdjustment",
             void 0
           ),
-          R.c([d.action], e.prototype, "DispatchMessage", null),
-          R.c([d.action], e.prototype, "OnDisconnect", null),
+          N.c([d.action], e.prototype, "DispatchMessage", null),
+          N.c([d.action], e.prototype, "OnDisconnect", null),
           e
         );
       })(),
@@ -6795,7 +6795,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BIsConnected = function() {
             return this.m_Socket && this.m_Socket.readyState == WebSocket.OPEN;
           }),
@@ -6840,7 +6840,7 @@
                             console.log(
                               "Connected socket to host " + r.strHost
                             ),
-                              Object(N.a)(
+                              Object(R.a)(
                                 !o,
                                 "Socket connection was opened after timing out."
                               ),
@@ -6852,7 +6852,7 @@
                             (a.onerror = function(e) {
                               o ||
                                 (window.clearTimeout(i),
-                                Object(N.a)(!1, "Socket connect failed", e)),
+                                Object(R.a)(!1, "Socket connect failed", e)),
                                 s.m_CMList.LogCMDisconnected(r, s.m_bLoggedOn),
                                 n();
                             });
@@ -6976,7 +6976,7 @@
               }
             }
           }),
-          R.c([d.action], e.prototype, "DecodeAndDispatchMultiMsg", null),
+          N.c([d.action], e.prototype, "DecodeAndDispatchMultiMsg", null),
           e
         );
       })(V),
@@ -6990,7 +6990,7 @@
           );
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.SendMsgAndAwaitResponse = function(n, i) {
             var r = this;
             return new Promise(function(o, e) {
@@ -7134,7 +7134,7 @@
                 (this.m_hEMsgRegistrationObserver(),
                 (this.m_hEMsgRegistrationObserver = void 0));
           }),
-          R.c([d.action], e.prototype, "OnLogonInfoChanged", null),
+          N.c([d.action], e.prototype, "OnLogonInfoChanged", null),
           e
         );
       })(V),
@@ -7291,7 +7291,7 @@
                 (this.m_bForcedDisconnect = !0),
                 void this.m_CMInterface.ForceDisconnect()
               );
-            Object(N.a)(
+            Object(R.a)(
               11 != this.m_eWebLogonState,
               "RetryLogin called while request in flight"
             ),
@@ -7344,9 +7344,9 @@
                 }, c));
             } else this.m_bWaitingToReconnect = !0;
           }),
-          R.c([d.observable], e.prototype, "m_eWebLogonState", void 0),
-          R.c([M.a], e.prototype, "OnCMDisconnected", null),
-          R.c([M.a], e.prototype, "OnCMLoggedOn", null),
+          N.c([d.observable], e.prototype, "m_eWebLogonState", void 0),
+          N.c([M.a], e.prototype, "OnCMDisconnected", null),
+          N.c([M.a], e.prototype, "OnCMLoggedOn", null),
           e
         );
       })(),
@@ -7362,15 +7362,39 @@
       J = (function() {
         return function() {};
       })(),
-      X = {
+      X = new ((function() {
+        function e(e) {
+          this.init(e);
+        }
+        return (
+          (e.prototype.init = function(e) {
+            (this.stream = e.stream),
+              (this.name = e.name),
+              (this.appID = e.appID),
+              (this.link = e.link),
+              (this.linkName = e.linkName),
+              (this.tabIcon = e.tabIcon),
+              (this.offlineClassName = e.offlineClassName);
+          }),
+          N.c([d.observable], e.prototype, "stream", void 0),
+          N.c([d.observable], e.prototype, "name", void 0),
+          N.c([d.observable], e.prototype, "appID", void 0),
+          N.c([d.observable], e.prototype, "link", void 0),
+          N.c([d.observable], e.prototype, "linkName", void 0),
+          N.c([d.observable], e.prototype, "tabIcon", void 0),
+          N.c([d.observable], e.prototype, "offlineClassName", void 0),
+          e
+        );
+      })())({
         stream: { "76561198857153475": "#Broadcast_EnglishMain" },
         name: "The Artifact Preview Tournament",
         appID: 583950,
         link: "https://steam.tv/artifact",
         linkName: "steam.tv/artifact",
         tabIcon:
-          "public/images/webui/broadcast/artifact_icon_preview_tournament.png"
-      };
+          "public/images/webui/broadcast/artifact_icon_preview_tournament.png",
+        offlineClassName: "BroadcastArtifactOffline"
+      });
     ((q = z || (z = {}))[(q.Terminator = 0)] = "Terminator"),
       (q[(q.MatchStarted = 1)] = "MatchStarted"),
       (q[(q.GameStateChanged = 2)] = "GameStateChanged"),
@@ -7683,30 +7707,30 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], e.prototype, "m_bInitialized", void 0),
-          R.c([d.observable], e.prototype, "m_ePersonaState", void 0),
-          R.c([d.observable], e.prototype, "m_unGamePlayedAppID", void 0),
-          R.c([d.observable], e.prototype, "m_gameid", void 0),
-          R.c([d.observable], e.prototype, "m_unPersonaStateFlags", void 0),
-          R.c([d.observable], e.prototype, "m_strPlayerName", void 0),
-          R.c([d.observable], e.prototype, "m_strAvatarHash", void 0),
-          R.c([d.observable], e.prototype, "m_rtLastSeenOnline", void 0),
-          R.c([d.observable], e.prototype, "m_strGameExtraInfo", void 0),
-          R.c([d.observable], e.prototype, "m_unGameServerIP", void 0),
-          R.c([d.observable], e.prototype, "m_unGameServerPort", void 0),
-          R.c([d.observable], e.prototype, "m_game_lobby_id", void 0),
-          R.c([d.observable], e.prototype, "m_broadcastId", void 0),
-          R.c([d.observable], e.prototype, "m_broadcastAccountId", void 0),
-          R.c([d.observable], e.prototype, "m_broadcastAppId", void 0),
-          R.c([d.observable], e.prototype, "m_broadcastViewerCount", void 0),
-          R.c([d.observable], e.prototype, "m_strBroadcastTitle", void 0),
-          R.c([d.computed], e.prototype, "current_game_name", null),
-          R.c([d.computed], e.prototype, "current_game_icon_url", null),
-          R.c([d.computed], e.prototype, "current_game_rich_presence", null),
-          R.c([d.computed], e.prototype, "online_state", null),
-          R.c([d.computed], e.prototype, "avatar_url", null),
-          R.c([d.computed], e.prototype, "avatar_url_medium", null),
-          R.c([d.computed], e.prototype, "avatar_url_full", null),
+          N.c([d.observable], e.prototype, "m_bInitialized", void 0),
+          N.c([d.observable], e.prototype, "m_ePersonaState", void 0),
+          N.c([d.observable], e.prototype, "m_unGamePlayedAppID", void 0),
+          N.c([d.observable], e.prototype, "m_gameid", void 0),
+          N.c([d.observable], e.prototype, "m_unPersonaStateFlags", void 0),
+          N.c([d.observable], e.prototype, "m_strPlayerName", void 0),
+          N.c([d.observable], e.prototype, "m_strAvatarHash", void 0),
+          N.c([d.observable], e.prototype, "m_rtLastSeenOnline", void 0),
+          N.c([d.observable], e.prototype, "m_strGameExtraInfo", void 0),
+          N.c([d.observable], e.prototype, "m_unGameServerIP", void 0),
+          N.c([d.observable], e.prototype, "m_unGameServerPort", void 0),
+          N.c([d.observable], e.prototype, "m_game_lobby_id", void 0),
+          N.c([d.observable], e.prototype, "m_broadcastId", void 0),
+          N.c([d.observable], e.prototype, "m_broadcastAccountId", void 0),
+          N.c([d.observable], e.prototype, "m_broadcastAppId", void 0),
+          N.c([d.observable], e.prototype, "m_broadcastViewerCount", void 0),
+          N.c([d.observable], e.prototype, "m_strBroadcastTitle", void 0),
+          N.c([d.computed], e.prototype, "current_game_name", null),
+          N.c([d.computed], e.prototype, "current_game_icon_url", null),
+          N.c([d.computed], e.prototype, "current_game_rich_presence", null),
+          N.c([d.computed], e.prototype, "online_state", null),
+          N.c([d.computed], e.prototype, "avatar_url", null),
+          N.c([d.computed], e.prototype, "avatar_url_medium", null),
+          N.c([d.computed], e.prototype, "avatar_url_full", null),
           e
         );
       })(),
@@ -7878,13 +7902,13 @@
                   ".jpg"
               : Z(t);
           }),
-          R.c([d.observable], e.prototype, "m_bInitialized", void 0),
-          R.c([d.observable], e.prototype, "m_strName", void 0),
-          R.c([d.observable], e.prototype, "m_strIconURL", void 0),
-          R.c([d.observable], e.prototype, "m_strLogoURL", void 0),
-          R.c([d.observable], e.prototype, "m_bLocalUserOwnsApp", void 0),
-          R.c([d.computed], e.prototype, "icon_url", null),
-          R.c([d.computed], e.prototype, "logo_url", null),
+          N.c([d.observable], e.prototype, "m_bInitialized", void 0),
+          N.c([d.observable], e.prototype, "m_strName", void 0),
+          N.c([d.observable], e.prototype, "m_strIconURL", void 0),
+          N.c([d.observable], e.prototype, "m_strLogoURL", void 0),
+          N.c([d.observable], e.prototype, "m_bLocalUserOwnsApp", void 0),
+          N.c([d.computed], e.prototype, "icon_url", null),
+          N.c([d.computed], e.prototype, "logo_url", null),
           e
         );
       })(),
@@ -7910,7 +7934,7 @@
           (e.prototype.RegisterCallbackOnLoad = function(e) {
             if (!this.BHavePendingAppInfoRequests())
               return (
-                Object(N.a)(
+                Object(R.a)(
                   !1,
                   "Registering for callback on appinfo load, but nothing queued"
                 ),
@@ -7919,7 +7943,7 @@
             this.m_fnCallbackOnAppInfoLoaded.Register(e);
           }),
           (e.prototype.GetAppInfo = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init"
             );
@@ -7960,7 +7984,7 @@
                           ) {
                             var o = n[t],
                               i = r.m_mapAppInfo.get(o.appid());
-                            Object(N.a)(
+                            Object(R.a)(
                               i,
                               "Got appinfo response for unrequest appid " +
                                 o.appid()
@@ -8054,8 +8078,8 @@
               t.m_fetching
             );
           }),
-          R.c([d.action], e.prototype, "OnAppInfoUpdate", null),
-          R.c([d.action], e.prototype, "OnRichPresenceLocUpdate", null),
+          N.c([d.action], e.prototype, "OnAppInfoUpdate", null),
+          N.c([d.action], e.prototype, "OnRichPresenceLocUpdate", null),
           e
         );
       })(),
@@ -8259,15 +8283,15 @@
               active_tab: this.activeTab && this.activeTab.GetUniqueID()
             };
           }),
-          R.c([d.observable], e.prototype, "m_id", void 0),
-          R.c([d.observable], e.prototype, "m_activeTab", void 0),
-          R.c([d.action], e.prototype, "AddTab", null),
-          R.c([d.action], e.prototype, "ActivateTab", null),
-          R.c([d.action], e.prototype, "ActivateNextTab", null),
-          R.c([d.action], e.prototype, "ActivatePreviousTab", null),
-          R.c([d.action], e.prototype, "RemoveTab", null),
-          R.c([d.action], e.prototype, "OnPopupClosed", null),
-          R.c([d.action], e.prototype, "CloseAllTabs", null),
+          N.c([d.observable], e.prototype, "m_id", void 0),
+          N.c([d.observable], e.prototype, "m_activeTab", void 0),
+          N.c([d.action], e.prototype, "AddTab", null),
+          N.c([d.action], e.prototype, "ActivateTab", null),
+          N.c([d.action], e.prototype, "ActivateNextTab", null),
+          N.c([d.action], e.prototype, "ActivatePreviousTab", null),
+          N.c([d.action], e.prototype, "RemoveTab", null),
+          N.c([d.action], e.prototype, "OnPopupClosed", null),
+          N.c([d.action], e.prototype, "CloseAllTabs", null),
           e
         );
       })(),
@@ -8277,7 +8301,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.BIsExpired = function() {
             return Zo.GetServerRTime32() >= this.m_rtTimeExpires;
           }),
@@ -8307,9 +8331,9 @@
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          R.c([d.action], t.prototype, "InitFromInviteLinkInfo", null),
-          R.c([d.action], t.prototype, "InitInvalid", null),
-          R.c([d.action], t.prototype, "InitDirectInvite", null),
+          N.c([d.action], t.prototype, "InitFromInviteLinkInfo", null),
+          N.c([d.action], t.prototype, "InitInvalid", null),
+          N.c([d.action], t.prototype, "InitDirectInvite", null),
           t
         );
       })(me.b),
@@ -8468,10 +8492,10 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], e.prototype, "bDismissed", void 0),
-          R.c([d.observable], e.prototype, "bAccepted", void 0),
-          R.c([d.action], e.prototype, "AcceptGameInvite", null),
-          R.c([d.action], e.prototype, "DismissInvite", null),
+          N.c([d.observable], e.prototype, "bDismissed", void 0),
+          N.c([d.observable], e.prototype, "bAccepted", void 0),
+          N.c([d.action], e.prototype, "AcceptGameInvite", null),
+          N.c([d.action], e.prototype, "DismissInvite", null),
           e
         );
       })(),
@@ -8621,7 +8645,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetArgument = function(e, t) {
             return (
               void 0 === t && (t = !1),
@@ -8639,7 +8663,7 @@
           return (t.state = { failedToRender: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidCatch = function(e, t) {
             this.setState({ failedToRender: !0 });
           }),
@@ -8704,7 +8728,7 @@
                       ? (n += s)
                       : 3 == i || 4 == i
                       ? (o += s)
-                      : Object(N.a)(
+                      : Object(R.a)(
                           !1,
                           "Not expecting to accumulate buffer in state %u",
                           i
@@ -8718,11 +8742,11 @@
         } else (t.args = {}), (t.tag = t.text);
       }
       e.push(t);
-      var a = new Ne();
+      var a = new Re();
       return (a.type = n), a;
     }
     function we(e) {
-      for (var t = [], n = new Ne(), o = !1, i = !1, r = 0; r < e.length; r++) {
+      for (var t = [], n = new Re(), o = !1, i = !1, r = 0; r < e.length; r++) {
         var a = e[r];
         switch (n.type) {
           case 0:
@@ -8785,7 +8809,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.ParseBBCode = function(e, t) {
             var n = we(e);
             return this.Parse_NotificationHandlers(n, t);
@@ -8843,7 +8867,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.AppendText = function(e) {
             for (var t = e.indexOf("\n"); -1 !== t; t = e.indexOf("\n"))
               this.m_rctElements.push(e.substr(0, t)),
@@ -8854,14 +8878,14 @@
           t
         );
       })(Te),
-      Re = (function(o) {
+      Ne = (function(o) {
         function e(e, t) {
           void 0 === t && (t = Te);
           var n = o.call(this, e) || this;
           return (n.m_accumulatorType = t), n;
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.ParseBBCode = function(e, t) {
             var n = we(e);
             return this.Parse_BuildReactComponents(n, t);
@@ -8928,7 +8952,7 @@
           e
         );
       })(Me),
-      Ne = (function() {
+      Re = (function() {
         function e() {
           (this.type = 0), (this.text = "");
         }
@@ -9153,11 +9177,11 @@
           (e.prototype.OnAnimationEnd = function() {
             this.eAnimationState = Ve.None;
           }),
-          R.c([d.observable], e.prototype, "rtTimestamp", void 0),
-          R.c([d.observable], e.prototype, "unOrdinal", void 0),
-          R.c([d.observable], e.prototype, "eDeleteState", void 0),
-          R.c([d.observable], e.prototype, "eAnimationState", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "rtTimestamp", void 0),
+          N.c([d.observable], e.prototype, "unOrdinal", void 0),
+          N.c([d.observable], e.prototype, "eDeleteState", void 0),
+          N.c([d.observable], e.prototype, "eAnimationState", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "strServerMsgAppCustomLocalized",
@@ -9178,7 +9202,7 @@
           );
         }
         return (
-          R.d(r, i),
+          N.d(r, i),
           Object.defineProperty(r.prototype, "strMessage", {
             get: function() {
               return this.strMessageObservable;
@@ -9204,10 +9228,10 @@
             this.m_bServerAcknowledged = !0;
           }),
           (r.sm_iLocalEchoID = 0),
-          R.c([d.observable], r.prototype, "eErrorSending", void 0),
-          R.c([d.observable], r.prototype, "strMessageObservable", void 0),
-          R.c([d.observable], r.prototype, "m_bServerAcknowledged", void 0),
-          R.c([d.action], r.prototype, "OnServerAcknowledged", null),
+          N.c([d.observable], r.prototype, "eErrorSending", void 0),
+          N.c([d.observable], r.prototype, "strMessageObservable", void 0),
+          N.c([d.observable], r.prototype, "m_bServerAcknowledged", void 0),
+          N.c([d.action], r.prototype, "OnServerAcknowledged", null),
           r
         );
       })(ze),
@@ -9215,7 +9239,7 @@
         function i(e, t, n) {
           return o.call(this, e, t, ++i.m_nOrdinal, n) || this;
         }
-        return R.d(i, o), (i.m_nOrdinal = 0), i;
+        return N.d(i, o), (i.m_nOrdinal = 0), i;
       })(ze),
       Ye = (function(r) {
         function e(e, t, n, o) {
@@ -9232,7 +9256,7 @@
           );
         }
         return (
-          R.d(e, r),
+          N.d(e, r),
           (e.prototype.TargetSteamID = function() {
             return this.m_targetSteamID;
           }),
@@ -9251,14 +9275,14 @@
           (e.prototype.ShowPopupBlockedWarning = function() {
             this.m_bPopupBlocked = !0;
           }),
-          R.c([d.observable], e.prototype, "m_bCancelled", void 0),
-          R.c([d.observable], e.prototype, "m_bDeclined", void 0),
-          R.c([d.observable], e.prototype, "m_bAccepted", void 0),
-          R.c([d.observable], e.prototype, "m_bPopupBlocked", void 0),
-          R.c([d.action], e.prototype, "MarkAsCancelled", null),
-          R.c([d.action], e.prototype, "MarkAsDeclined", null),
-          R.c([d.action], e.prototype, "MarkAsAccepted", null),
-          R.c([d.action], e.prototype, "ShowPopupBlockedWarning", null),
+          N.c([d.observable], e.prototype, "m_bCancelled", void 0),
+          N.c([d.observable], e.prototype, "m_bDeclined", void 0),
+          N.c([d.observable], e.prototype, "m_bAccepted", void 0),
+          N.c([d.observable], e.prototype, "m_bPopupBlocked", void 0),
+          N.c([d.action], e.prototype, "MarkAsCancelled", null),
+          N.c([d.action], e.prototype, "MarkAsDeclined", null),
+          N.c([d.action], e.prototype, "MarkAsAccepted", null),
+          N.c([d.action], e.prototype, "ShowPopupBlockedWarning", null),
           e
         );
       })(ze);
@@ -9343,10 +9367,10 @@
             }
             return this.m_rgMessageBlocks.splice(0, t), n;
           }),
-          R.c([d.observable], e.prototype, "m_iIndexLastTimePassesGap", void 0),
-          R.c([d.action], e.prototype, "BuildMessageBlocks", null),
-          R.c([d.action], e.prototype, "AppendNewMessage", null),
-          R.c([d.action], e.prototype, "RemoveOldestMessages", null),
+          N.c([d.observable], e.prototype, "m_iIndexLastTimePassesGap", void 0),
+          N.c([d.action], e.prototype, "BuildMessageBlocks", null),
+          N.c([d.action], e.prototype, "AppendNewMessage", null),
+          N.c([d.action], e.prototype, "RemoveOldestMessages", null),
           e
         );
       })(),
@@ -9450,9 +9474,9 @@
               !this.m_rgMessages[0].BIsInvite()
             );
           }),
-          R.c([d.observable.shallow], a.prototype, "m_rgMessages", void 0),
-          R.c([d.observable.shallow], a.prototype, "m_nextBlock", void 0),
-          R.c([d.action], a.prototype, "CreateVirtualSplitOnTimestamp", null),
+          N.c([d.observable.shallow], a.prototype, "m_rgMessages", void 0),
+          N.c([d.observable.shallow], a.prototype, "m_nextBlock", void 0),
+          N.c([d.action], a.prototype, "CreateVirtualSplitOnTimestamp", null),
           a
         );
       })(),
@@ -9466,9 +9490,9 @@
             (this.uploadProgress = 0);
         }
         return (
-          R.c([d.observable], e.prototype, "eUploadState", void 0),
-          R.c([d.observable], e.prototype, "uploadProgress", void 0),
-          R.c([d.observable], e.prototype, "strErrorDescription", void 0),
+          N.c([d.observable], e.prototype, "eUploadState", void 0),
+          N.c([d.observable], e.prototype, "uploadProgress", void 0),
+          N.c([d.observable], e.prototype, "strErrorDescription", void 0),
           e
         );
       })(),
@@ -9668,7 +9692,7 @@
               if (o) {
                 var i = this.m_rgChatMessages.indexOf(o);
                 i < 0
-                  ? Object(N.a)(!1, "Failed to find message being removed")
+                  ? Object(R.a)(!1, "Failed to find message being removed")
                   : this.m_rgChatMessages.splice(0, i + 1);
               }
             }
@@ -9718,7 +9742,7 @@
                   onLoad: function() {}
                 },
                 a = i.ParseBBCode(o, r);
-              if (a) return R.a({}, t, a);
+              if (a) return N.a({}, t, a);
             }
             return t;
           }),
@@ -9972,8 +9996,8 @@
             11 == e.eServerMsgType && this.SetupAppCustomServerMsg(e);
           }),
           (a.prototype.SetupAppCustomServerMsg = function(e) {
-            return R.b(this, void 0, void 0, function() {
-              return R.e(this, function(e) {
+            return N.b(this, void 0, void 0, function() {
+              return N.e(this, function(e) {
                 return (
                   console.warn(
                     "App custom server message should only be used in a class that knows what to do with it"
@@ -10150,33 +10174,33 @@
           (a.k_KeepLoadedWhenAtScrollBottom =
             2 * (a.k_InitialMessageCount = 100)),
           (a.k_LoadMoreMessageCount = 50),
-          R.c([d.observable], a.prototype, "m_bMoreAvailable", void 0),
-          R.c([d.observable.shallow], a.prototype, "m_rgChatMessages", void 0),
-          R.c([d.observable], a.prototype, "m_cUnreadChatMessages", void 0),
-          R.c([d.observable], a.prototype, "m_rtFirstUnreadChatMsg", void 0),
-          R.c([d.observable], a.prototype, "m_rtLastAckedChatMsg", void 0),
-          R.c([d.observable], a.prototype, "m_rtLastMessageReceived", void 0),
-          R.c(
+          N.c([d.observable], a.prototype, "m_bMoreAvailable", void 0),
+          N.c([d.observable.shallow], a.prototype, "m_rgChatMessages", void 0),
+          N.c([d.observable], a.prototype, "m_cUnreadChatMessages", void 0),
+          N.c([d.observable], a.prototype, "m_rtFirstUnreadChatMsg", void 0),
+          N.c([d.observable], a.prototype, "m_rtLastAckedChatMsg", void 0),
+          N.c([d.observable], a.prototype, "m_rtLastMessageReceived", void 0),
+          N.c(
             [d.observable],
             a.prototype,
             "m_rtLastServerMessageReceived",
             void 0
           ),
-          R.c([d.observable], a.prototype, "m_fileUploadProps", void 0),
-          R.c([d.action], a.prototype, "AddMessagesToHistory", null),
-          R.c([d.action], a.prototype, "OnActivate", null),
-          R.c([d.action], a.prototype, "OnDeactivate", null),
-          R.c([d.action], a.prototype, "AppendChatMsg", null),
-          R.c([d.action], a.prototype, "AppendLocalEchoChatMsg", null),
-          R.c([d.action], a.prototype, "AddNewChatMsgAndNotify", null),
-          R.c([d.action], a.prototype, "UpdateChatMessageDeletedState", null),
-          R.c([d.action], a.prototype, "AddVoiceChannelInviteMsg", null),
-          R.c([d.action], a.prototype, "AddNewServerMsg", null),
-          R.c([d.action], a.prototype, "SetUploadFileError", null),
-          R.c([d.action], a.prototype, "BeginFileUpload", null),
-          R.c([d.action], a.prototype, "DoFileUpload", null),
-          R.c([d.action], a.prototype, "CommitFileUpload", null),
-          R.c([d.action], a.prototype, "ClearFileUploadError", null),
+          N.c([d.observable], a.prototype, "m_fileUploadProps", void 0),
+          N.c([d.action], a.prototype, "AddMessagesToHistory", null),
+          N.c([d.action], a.prototype, "OnActivate", null),
+          N.c([d.action], a.prototype, "OnDeactivate", null),
+          N.c([d.action], a.prototype, "AppendChatMsg", null),
+          N.c([d.action], a.prototype, "AppendLocalEchoChatMsg", null),
+          N.c([d.action], a.prototype, "AddNewChatMsgAndNotify", null),
+          N.c([d.action], a.prototype, "UpdateChatMessageDeletedState", null),
+          N.c([d.action], a.prototype, "AddVoiceChannelInviteMsg", null),
+          N.c([d.action], a.prototype, "AddNewServerMsg", null),
+          N.c([d.action], a.prototype, "SetUploadFileError", null),
+          N.c([d.action], a.prototype, "BeginFileUpload", null),
+          N.c([d.action], a.prototype, "DoFileUpload", null),
+          N.c([d.action], a.prototype, "CommitFileUpload", null),
+          N.c([d.action], a.prototype, "ClearFileUploadError", null),
           a
         );
       })(),
@@ -10385,19 +10409,19 @@
           (e.prototype.SetChatGroupID = function(e) {
             this.m_ulChatRoomGroupID = e;
           }),
-          R.c([d.observable], e.prototype, "m_bInitialized", void 0),
-          R.c([d.observable], e.prototype, "m_bGotInitialState", void 0),
-          R.c([d.observable], e.prototype, "m_eClanRelationship", void 0),
-          R.c([d.observable], e.prototype, "m_strAvatarHash", void 0),
-          R.c([d.observable], e.prototype, "m_ulChatRoomGroupID", void 0),
-          R.c([d.observable], e.prototype, "m_cMemberCount", void 0),
-          R.c([d.observable], e.prototype, "m_cUsersOnline", void 0),
-          R.c([d.observable], e.prototype, "m_cUsersInGame", void 0),
-          R.c([d.observable], e.prototype, "m_cChatRoomMembers", void 0),
-          R.c([d.observable], e.prototype, "m_bChatRoomPrivate", void 0),
-          R.c([d.computed], e.prototype, "avatar_url", null),
-          R.c([d.computed], e.prototype, "avatar_url_medium", null),
-          R.c([d.computed], e.prototype, "avatar_url_full", null),
+          N.c([d.observable], e.prototype, "m_bInitialized", void 0),
+          N.c([d.observable], e.prototype, "m_bGotInitialState", void 0),
+          N.c([d.observable], e.prototype, "m_eClanRelationship", void 0),
+          N.c([d.observable], e.prototype, "m_strAvatarHash", void 0),
+          N.c([d.observable], e.prototype, "m_ulChatRoomGroupID", void 0),
+          N.c([d.observable], e.prototype, "m_cMemberCount", void 0),
+          N.c([d.observable], e.prototype, "m_cUsersOnline", void 0),
+          N.c([d.observable], e.prototype, "m_cUsersInGame", void 0),
+          N.c([d.observable], e.prototype, "m_cChatRoomMembers", void 0),
+          N.c([d.observable], e.prototype, "m_bChatRoomPrivate", void 0),
+          N.c([d.computed], e.prototype, "avatar_url", null),
+          N.c([d.computed], e.prototype, "avatar_url_medium", null),
+          N.c([d.computed], e.prototype, "avatar_url_full", null),
           e
         );
       })(),
@@ -10437,7 +10461,7 @@
             var t;
             return (
               e instanceof E.a
-                ? (Object(N.a)(
+                ? (Object(R.a)(
                     e.BIsClanAccount(),
                     "expected clan steamid in GetClan()"
                   ),
@@ -10524,7 +10548,7 @@
             var n = new E.a(t.friendid());
             this.GetOrCreateClan(n).ReadPersonaStateUpdate(e, t);
           }),
-          R.c([d.computed], e.prototype, "clan_invites", null),
+          N.c([d.computed], e.prototype, "clan_invites", null),
           e
         );
       })();
@@ -10615,7 +10639,7 @@
                 ? i.set_clanid(o.clan.clanid)
                 : o.chat
                 ? i.set_chat_group_id(o.chat.GetGroupID())
-                : Object(N.a)(!1, "empty favorite struct");
+                : Object(R.a)(!1, "empty favorite struct");
             }
             return it.f
               .SetFavorites(this.m_CMInterface.GetServiceTransport(), e)
@@ -10660,10 +10684,10 @@
                 })
               );
           }),
-          R.c([d.action], e.prototype, "AddToFavorites", null),
-          R.c([d.action], e.prototype, "RemoveFromFavorites", null),
-          R.c([d.action], e.prototype, "OnFriendRemoved", null),
-          R.c([d.action], e.prototype, "ReadFavorites", null),
+          N.c([d.action], e.prototype, "AddToFavorites", null),
+          N.c([d.action], e.prototype, "RemoveFromFavorites", null),
+          N.c([d.action], e.prototype, "OnFriendRemoved", null),
+          N.c([d.action], e.prototype, "ReadFavorites", null),
           e
         );
       })(),
@@ -10693,7 +10717,7 @@
             (this.m_unAccountID = e),
             (this.m_persona = new $(E.a.InitFromAccountID(e))),
             0 == e &&
-              (Object(N.a)(!1, "unset accountid"),
+              (Object(R.a)(!1, "unset accountid"),
               (this.m_bPersonaStateReady = !0),
               (this.m_persona.m_bInitialized = !0));
         }
@@ -11009,19 +11033,19 @@
                     e
                   ) {
                     if (
-                      (Object(N.a)(
+                      (Object(R.a)(
                         1 == e.Body().responses().length,
                         "Got an invalid number of responses to CMsgClientAMGetPersonaNameHistory"
                       ),
                       1 == e.Body().responses().length)
                     ) {
                       var o = e.Body().responses()[0];
-                      Object(N.a)(
+                      Object(R.a)(
                         o.steamid() == i.steamid64,
                         "Got a response for the wrong user from CMsgClientAMGetPersonaNameHistory"
                       ),
                         o.steamid() == i.steamid64 &&
-                          (Object(N.a)(
+                          (Object(R.a)(
                             0 == i.m_rgPersonaNameHistory.length,
                             "Got persona name history response for same user twice."
                           ),
@@ -11218,30 +11242,30 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], i.prototype, "m_eFriendRelationship", void 0),
-          R.c([d.observable], i.prototype, "m_bPersonaStateReady", void 0),
-          R.c(
+          N.c([d.observable], i.prototype, "m_eFriendRelationship", void 0),
+          N.c([d.observable], i.prototype, "m_bPersonaStateReady", void 0),
+          N.c(
             [d.observable],
             i.prototype,
             "m_bPersonaNameHistoryLoaded",
             void 0
           ),
-          R.c([d.observable], i.prototype, "m_rgPersonaNameHistory", void 0),
-          R.c(
+          N.c([d.observable], i.prototype, "m_rgPersonaNameHistory", void 0),
+          N.c(
             [d.observable],
             i.prototype,
             "m_strPlayerNicknameNormalized",
             void 0
           ),
-          R.c([d.observable], i.prototype, "m_strNickname", void 0),
-          R.c([d.observable], i.prototype, "m_bBetaStatusStale", void 0),
-          R.c([d.observable], i.prototype, "m_bIsOnlineInBeta", void 0),
-          R.c([d.observable], i.prototype, "m_bIsInBeta", void 0),
-          R.c([d.computed], i.prototype, "display_name", null),
-          R.c([d.computed], i.prototype, "secondary_display_name", null),
-          R.c([d.computed], i.prototype, "persona_name_history", null),
-          R.c([d.computed], i.prototype, "persona_name_history_loaded", null),
-          R.c([d.computed], i.prototype, "localized_online_status", null),
+          N.c([d.observable], i.prototype, "m_strNickname", void 0),
+          N.c([d.observable], i.prototype, "m_bBetaStatusStale", void 0),
+          N.c([d.observable], i.prototype, "m_bIsOnlineInBeta", void 0),
+          N.c([d.observable], i.prototype, "m_bIsInBeta", void 0),
+          N.c([d.computed], i.prototype, "display_name", null),
+          N.c([d.computed], i.prototype, "secondary_display_name", null),
+          N.c([d.computed], i.prototype, "persona_name_history", null),
+          N.c([d.computed], i.prototype, "persona_name_history_loaded", null),
+          N.c([d.computed], i.prototype, "localized_online_status", null),
           i
         );
       })(),
@@ -11301,14 +11325,14 @@
                 );
             }
           }),
-          R.c([d.action.bound], e.prototype, "NotifyImpressions", null),
+          N.c([d.action.bound], e.prototype, "NotifyImpressions", null),
           e
         );
       })(),
       bt = (function() {
         function e() {
           var O = this;
-          (this.m_FriendGroupStore = new Nt(this)),
+          (this.m_FriendGroupStore = new Rt(this)),
             (this.m_ClanStore = new st(this)),
             (this.m_FavoritesStore = new mt(this)),
             (this.m_mapPlayerCache = new Map()),
@@ -11607,9 +11631,9 @@
             }
           }),
           (e.prototype.GetFriendsList = function() {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -11631,7 +11655,7 @@
                             o,
                             "https://steamloopback.host"
                           ),
-                          Object(N.a)(
+                          Object(R.a)(
                             !1,
                             "GetFriendsList returned",
                             n.GetEResult()
@@ -11653,7 +11677,7 @@
                   (this.m_fnOnReadyToRender = void 0))));
           }),
           (e.prototype.ForceReadyToRender = function() {
-            Object(N.a)(
+            Object(R.a)(
               this.m_bReadyToRender,
               "FriendStore: Forcing ready to render, was not ready in time."
             ),
@@ -11801,7 +11825,7 @@
             var t = this.m_mapPlayerCache.get(e);
             if (t) {
               if (!t.is_friend) return null;
-            } else Object(N.a)(!1, "Friend missing from cache: " + e);
+            } else Object(R.a)(!1, "Friend missing from cache: " + e);
             return t;
           }),
           (e.prototype.GetPlayer = function(e) {
@@ -11876,7 +11900,7 @@
                       !i.persona.m_bInitialized &&
                       ((i.m_bPersonaStateReady = !0),
                       i.persona.m_bNameInitialized ||
-                        (Object(N.a)(
+                        (Object(R.a)(
                           i.m_bPersonaStateLoadRequested,
                           "PersonaStateLoadRequested not set"
                         ),
@@ -12283,26 +12307,26 @@
               this.m_FriendGroupStore.FillInChatUsabilityMetrics(e),
               this.m_FavoritesStore.FillInChatUsabilityMetrics(e);
           }),
-          R.c([d.observable], e.prototype, "m_bReceivedFriendsList", void 0),
-          R.c([d.action], e.prototype, "OnParentalLockChanged", null),
-          R.c([d.action], e.prototype, "SetPersonasOffline", null),
-          R.c([M.a, Object(dt.a)(100)], e.prototype, "PlayJoinGameSound", null),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bReceivedFriendsList", void 0),
+          N.c([d.action], e.prototype, "OnParentalLockChanged", null),
+          N.c([d.action], e.prototype, "SetPersonasOffline", null),
+          N.c([M.a, Object(dt.a)(100)], e.prototype, "PlayJoinGameSound", null),
+          N.c(
             [M.a, Object(dt.a)(100)],
             e.prototype,
             "PlayFriendOnlineSound",
             null
           ),
-          R.c([d.action], e.prototype, "SetPlayerNickname", null),
-          R.c([d.action], e.prototype, "SetPlayerNotificationSettings", null),
-          R.c([d.action], e.prototype, "SetPlayerPerFriendPreferences", null),
-          R.c([d.action], e.prototype, "InviteToGame", null),
-          R.c([d.action], e.prototype, "InviteToLobby", null),
-          R.c([d.action], e.prototype, "InviteToWatch", null),
-          R.c([d.action], e.prototype, "InviteToTrade", null),
-          R.c([d.action], e.prototype, "CancelTradeRequest", null),
-          R.c([d.action], e.prototype, "RespondToTradeRequest", null),
-          R.c([d.action], e.prototype, "OpenTradeWindow", null),
+          N.c([d.action], e.prototype, "SetPlayerNickname", null),
+          N.c([d.action], e.prototype, "SetPlayerNotificationSettings", null),
+          N.c([d.action], e.prototype, "SetPlayerPerFriendPreferences", null),
+          N.c([d.action], e.prototype, "InviteToGame", null),
+          N.c([d.action], e.prototype, "InviteToLobby", null),
+          N.c([d.action], e.prototype, "InviteToWatch", null),
+          N.c([d.action], e.prototype, "InviteToTrade", null),
+          N.c([d.action], e.prototype, "CancelTradeRequest", null),
+          N.c([d.action], e.prototype, "RespondToTradeRequest", null),
+          N.c([d.action], e.prototype, "OpenTradeWindow", null),
           e
         );
       })(),
@@ -12464,17 +12488,17 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], e.prototype, "m_strName", void 0),
-          R.c([d.observable], e.prototype, "m_bCollapsed", void 0),
-          R.c([d.computed], e.prototype, "member_count", null),
-          R.c([d.computed], e.prototype, "unfiltered_count", null),
-          R.c([d.computed], e.prototype, "member_counts", null),
-          R.c([d.action], e.prototype, "SetOnHeaderClick", null),
-          R.c([d.action], e.prototype, "Clear", null),
-          R.c([d.action], e.prototype, "AddMember", null),
-          R.c([d.action], e.prototype, "RemoveMember", null),
-          R.c([d.computed], e.prototype, "member_list", null),
-          R.c([d.computed], e.prototype, "member_list_unsorted", null),
+          N.c([d.observable], e.prototype, "m_strName", void 0),
+          N.c([d.observable], e.prototype, "m_bCollapsed", void 0),
+          N.c([d.computed], e.prototype, "member_count", null),
+          N.c([d.computed], e.prototype, "unfiltered_count", null),
+          N.c([d.computed], e.prototype, "member_counts", null),
+          N.c([d.action], e.prototype, "SetOnHeaderClick", null),
+          N.c([d.action], e.prototype, "Clear", null),
+          N.c([d.action], e.prototype, "AddMember", null),
+          N.c([d.action], e.prototype, "RemoveMember", null),
+          N.c([d.computed], e.prototype, "member_list", null),
+          N.c([d.computed], e.prototype, "member_list_unsorted", null),
           e
         );
       })(),
@@ -12494,7 +12518,7 @@
           );
         }
         return (
-          R.d(e, r),
+          N.d(e, r),
           Object.defineProperty(e.prototype, "id", {
             get: function() {
               return this.m_iGroupID;
@@ -12554,7 +12578,7 @@
             }
             return t.sort(_t.DefaultFriendSortComparator), t;
           }),
-          R.c([d.computed], e.prototype, "GetRawMemberList", null),
+          N.c([d.computed], e.prototype, "GetRawMemberList", null),
           e
         );
       })(St),
@@ -12563,7 +12587,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           Object.defineProperty(t.prototype, "display_type", {
             get: function() {
               return Zo.SettingsStore.FriendsSettings
@@ -12583,7 +12607,7 @@
           return (n.m_eDisplayType = lt.eOnlineOnlyNotInGame), n;
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           Object.defineProperty(e.prototype, "unique_id", {
             get: function() {
               return "all";
@@ -12620,7 +12644,7 @@
           return n.call(this, e, t, !1, !0) || this;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "unique_id", {
             get: function() {
               return "offline";
@@ -12650,7 +12674,7 @@
           return n.call(this, e, t, !1, !0) || this;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "unique_id", {
             get: function() {
               return "outgoing";
@@ -12666,7 +12690,7 @@
           return n.call(this, e, t, !1, !0) || this;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "unique_id", {
             get: function() {
               return "ingame";
@@ -12688,7 +12712,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           Object.defineProperty(e.prototype, "unique_id", {
             get: function() {
               return "incominginvites";
@@ -12720,7 +12744,7 @@
           return t.call(this, "", e, !1, !1) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           Object.defineProperty(e.prototype, "is_initialized", {
             get: function() {
               return (
@@ -12800,13 +12824,13 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.computed], e.prototype, "member_list", null),
+          N.c([d.computed], e.prototype, "member_list", null),
           e
         );
       })(yt),
       Tt = { groups: { offline: !0, outgoing: !0 } },
       Gt = "FriendGroupCollapse",
-      Rt = (function() {
+      Nt = (function() {
         function e() {
           this.m_mapCollapsePrefs = d.observable.map();
         }
@@ -12838,14 +12862,14 @@
               groups: this.m_mapCollapsePrefs.toJSON()
             });
           }),
-          R.c([d.action], e.prototype, "SetUserGroupCollapsed", null),
-          R.c([d.action], e.prototype, "ToggleUserGroupCollapsed", null),
+          N.c([d.action], e.prototype, "SetUserGroupCollapsed", null),
+          N.c([d.action], e.prototype, "ToggleUserGroupCollapsed", null),
           e
         );
       })(),
-      Nt = (function() {
+      Rt = (function() {
         function e(e) {
-          (this.m_FriendGroupDisplayPrefs = new Rt()),
+          (this.m_FriendGroupDisplayPrefs = new Nt()),
             (this.m_mapGroups = d.observable.map()),
             (this.m_mapGameGroups = d.observable.map()),
             (this.m_singletonGameGroup = new Dt(0)),
@@ -12878,9 +12902,9 @@
             (this.m_CMInterface = e),
               this.m_FriendGroupDisplayPrefs.Init(),
               this.m_CMInterface.AddOnLogonCallback(function() {
-                return R.b(t, void 0, void 0, function() {
+                return N.b(t, void 0, void 0, function() {
                   var t, n;
-                  return R.e(this, function(e) {
+                  return N.e(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return (
@@ -13331,17 +13355,17 @@
                 w.b(Array.from(this.m_mapGameGroups.values()), n)
               );
           }),
-          R.c([d.computed], e.prototype, "friend_groups", null),
-          R.c([d.computed], e.prototype, "user_groups", null),
-          R.c([d.computed], e.prototype, "game_groups", null),
-          R.c([d.computed], e.prototype, "singleton_game_group", null),
-          R.c([d.computed], e.prototype, "default_groups", null),
-          R.c([d.action], e.prototype, "OnFullFriendsListUpdateComplete", null),
-          R.c([d.action], e.prototype, "OnPersonaStateCacheReset", null),
-          R.c([d.action], e.prototype, "HandleGroupRemoval", null),
-          R.c([d.computed], e.prototype, "categorized_friend_set", null),
-          R.c([d.action], e.prototype, "RecvCategoriesList", null),
-          R.c([d.action], e.prototype, "TransferFriendFromToGroup", null),
+          N.c([d.computed], e.prototype, "friend_groups", null),
+          N.c([d.computed], e.prototype, "user_groups", null),
+          N.c([d.computed], e.prototype, "game_groups", null),
+          N.c([d.computed], e.prototype, "singleton_game_group", null),
+          N.c([d.computed], e.prototype, "default_groups", null),
+          N.c([d.action], e.prototype, "OnFullFriendsListUpdateComplete", null),
+          N.c([d.action], e.prototype, "OnPersonaStateCacheReset", null),
+          N.c([d.action], e.prototype, "HandleGroupRemoval", null),
+          N.c([d.computed], e.prototype, "categorized_friend_set", null),
+          N.c([d.action], e.prototype, "RecvCategoriesList", null),
+          N.c([d.action], e.prototype, "TransferFriendFromToGroup", null),
           e
         );
       })(),
@@ -13369,7 +13393,7 @@
           );
         }
         return (
-          R.d(e, r),
+          N.d(e, r),
           Object.defineProperty(e.prototype, "VoiceChatStore", {
             get: function() {
               return this.ChatStore.VoiceChat;
@@ -13412,7 +13436,7 @@
                 case 0:
                   break;
                 default:
-                  Object(N.a)(!1, "unhandled EChatRoomNotificationLevel: " + e);
+                  Object(R.a)(!1, "unhandled EChatRoomNotificationLevel: " + e);
               }
               return t;
             },
@@ -13569,7 +13593,7 @@
           }),
           (e.prototype.UpdateChatState = function(e) {
             var n = this;
-            Object(N.a)(
+            Object(R.a)(
               this.m_ulChatID == e.chat_id(),
               "State for different chat room"
             ),
@@ -13723,7 +13747,7 @@
             return this.m_unSortOrder;
           }),
           (e.prototype.InsertBBCodeMarkup = function(e) {
-            (e = Re.EscapeBBCode(e)).replace(/＠/g, "@");
+            (e = Ne.EscapeBBCode(e)).replace(/＠/g, "@");
             for (var t = e.indexOf("@"); -1 !== t; ) {
               for (
                 var n = e.indexOf("@", t + 1),
@@ -13741,7 +13765,7 @@
                 c++
               ) {
                 var p = l[c],
-                  m = Re.EscapeBBCode(p.player_name_normalized),
+                  m = Ne.EscapeBBCode(p.player_name_normalized),
                   u = m + "#" + p.accountid.toString(36);
                 if (u.startsWith(r)) {
                   var d = void 0,
@@ -13785,7 +13809,7 @@
                 var y = e.substr(0, t),
                   C = e.substr(t + 1 + v),
                   I =
-                    "[mention=" + g + "]@" + Re.EscapeBBCode(b) + "[/mention]";
+                    "[mention=" + g + "]@" + Ne.EscapeBBCode(b) + "[/mention]";
                 n = (e = y + I + C).indexOf("@", y.length + I.length);
               }
               t = n;
@@ -13860,9 +13884,9 @@
             );
           }),
           (e.prototype.DeleteChatMessges = function(l) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o, i, r, a, s, c;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     for (
@@ -14137,9 +14161,9 @@
             );
           }),
           (e.prototype.SetupAppCustomServerMsg = function(d) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o, i, r, a, s, c, l, p, m, u;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     if (
@@ -14208,43 +14232,43 @@
               });
             });
           }),
-          R.c([d.observable], e.prototype, "m_strName", void 0),
-          R.c([d.observable], e.prototype, "m_unSortOrder", void 0),
-          R.c([d.observable], e.prototype, "m_lastChatLink", void 0),
-          R.c([d.observable], e.prototype, "m_rtLastMention", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_strName", void 0),
+          N.c([d.observable], e.prototype, "m_unSortOrder", void 0),
+          N.c([d.observable], e.prototype, "m_lastChatLink", void 0),
+          N.c([d.observable], e.prototype, "m_rtLastMention", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_eDesktopNotificationLevel",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_eMobileNotificationLevel",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_bUnreadIndicatorMuted", void 0),
-          R.c([d.action], e.prototype, "UpdateUserState", null),
-          R.c([d.action], e.prototype, "UpdateChatState", null),
-          R.c([d.computed], e.prototype, "name", null),
-          R.c([M.a], e.prototype, "StartVoiceChat", null),
-          R.c([d.action], e.prototype, "SendChatMessage", null),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bUnreadIndicatorMuted", void 0),
+          N.c([d.action], e.prototype, "UpdateUserState", null),
+          N.c([d.action], e.prototype, "UpdateChatState", null),
+          N.c([d.computed], e.prototype, "name", null),
+          N.c([M.a], e.prototype, "StartVoiceChat", null),
+          N.c([d.action], e.prototype, "SendChatMessage", null),
+          N.c(
             [M.a, Object(dt.a)(100)],
             e.prototype,
             "PlayChatRoomNotificationSound",
             null
           ),
-          R.c(
+          N.c(
             [M.a, Object(dt.a)(100)],
             e.prototype,
             "PlayAtMentionSound",
             null
           ),
-          R.c([d.action], e.prototype, "CreateInviteLink", null),
-          R.c([d.action], e.prototype, "OnActivate", null),
-          R.c(
+          N.c([d.action], e.prototype, "CreateInviteLink", null),
+          N.c([d.action], e.prototype, "OnActivate", null),
+          N.c(
             [d.action],
             e.prototype,
             "ChangeNameWhileWaitingForRenameRequest",
@@ -14268,8 +14292,8 @@
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_rank", void 0),
-          R.c([d.observable], e.prototype, "m_role_ids", void 0),
+          N.c([d.observable], e.prototype, "m_rank", void 0),
+          N.c([d.observable], e.prototype, "m_role_ids", void 0),
           e
         );
       })(),
@@ -14468,7 +14492,7 @@
                   );
                 default:
                   return (
-                    Object(N.a)(
+                    Object(R.a)(
                       !1,
                       "unexpected number of friends: " + t.length
                     ),
@@ -14789,7 +14813,7 @@
           }),
           (e.prototype.IsInRoom = function(e) {
             return (
-              Object(N.a)(
+              Object(R.a)(
                 this.m_bFullStateLoaded,
                 "Group state not fully loaded"
               ),
@@ -14814,14 +14838,14 @@
             );
           }),
           (e.prototype.ChangeMemberRank = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               this.m_groupMembers.HasMember(e),
               "ChangeMemberRank: missing member"
             ),
               (this.m_groupMembers.GetExtra(e).m_rank = t);
           }),
           (e.prototype.GetMemberRank = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               this.m_groupMembers.HasMember(e),
               "GetMemberRank: missing member"
             );
@@ -14842,7 +14866,7 @@
             });
           }),
           (e.prototype.ChangeMemberRoles = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               this.m_groupMembers.HasMember(e),
               "GetMemberRank: missing member"
             );
@@ -14897,7 +14921,7 @@
             this.m_bFullStateLoaded;
           }),
           (e.prototype.SetInitialGroupState = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               e.chat_group_id() == this.m_ulGroupID,
               "Chat group id doesn't match header"
             ),
@@ -14937,7 +14961,7 @@
               );
           }),
           (e.prototype.UpdateGroupState = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               e.header_state().chat_group_id() == this.m_ulGroupID,
               "Chat group id doesn't match header"
             ),
@@ -15034,7 +15058,7 @@
               (this.m_bUnreadIndicatorMuted = e.unread_indicator_muted());
           }),
           (e.prototype.UpdateChatRoomHeaderState = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               e.chat_group_id() == this.m_ulGroupID,
               "Chat group id doesn't match header"
             ),
@@ -15356,9 +15380,9 @@
             );
           }),
           (e.prototype.SetChatRoomGroupWatchingBroadcast = function(i) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return i == this.m_unWatchingBroadcastAccountID
@@ -15510,7 +15534,7 @@
               ).then(function(e) {
                 var t = e.GetEResult();
                 if (1 != t && 29 != t)
-                  throw (Object(N.a)(!1, "Failed to change ban state " + t), t);
+                  throw (Object(R.a)(!1, "Failed to change ban state " + t), t);
               })
             );
           }),
@@ -15527,7 +15551,7 @@
               ).then(function(e) {
                 var t = e.GetEResult();
                 if (1 != t)
-                  throw (Object(N.a)(
+                  throw (Object(R.a)(
                     !1,
                     "Failed to change muteexpiration " + t
                   ),
@@ -15584,7 +15608,7 @@
                   .chat_room()
                   .chat_id();
                 if (1 != e.GetEResult() || "" == t || "0" == t)
-                  throw (Object(N.a)(!1, "Failed to create chat room"),
+                  throw (Object(R.a)(!1, "Failed to create chat room"),
                   new Error("Failed to create chat room"));
                 return n.AddCreatedRoom(t, e.Body().chat_room());
               })
@@ -15622,7 +15646,7 @@
                     i
                   ).then(function(e) {
                     1 == e.GetEResult() ||
-                      (Object(N.a)(!1, "Failed to change room name"),
+                      (Object(R.a)(!1, "Failed to change room name"),
                       n.ChangeNameWhileWaitingForRenameRequest(o));
                   });
               }
@@ -15638,7 +15662,7 @@
                 n
               ).then(function(e) {
                 1 == e.GetEResult() ||
-                  Object(N.a)(!1, "Failed to reorder room");
+                  Object(R.a)(!1, "Failed to reorder room");
               });
           }),
           (e.prototype.DeleteChatRoom = function(t) {
@@ -15652,7 +15676,7 @@
               ).then(function(e) {
                 1 == e.GetEResult()
                   ? n.RemoveRoom(t)
-                  : Object(N.a)(!1, "Failed to delete chat room");
+                  : Object(R.a)(!1, "Failed to delete chat room");
               });
           }),
           (e.prototype.RemoveRoom = function(e) {
@@ -15882,64 +15906,64 @@
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_rtTimeJoined", void 0),
-          R.c([d.observable], e.prototype, "m_rtLastAck", void 0),
-          R.c([d.observable], e.prototype, "m_unOwnerAccountID", void 0),
-          R.c([d.observable], e.prototype, "m_bFullStateLoaded", void 0),
-          R.c([d.observable], e.prototype, "m_strName", void 0),
-          R.c([d.observable], e.prototype, "m_strTagLine", void 0),
-          R.c([d.observable], e.prototype, "m_strAvatarSHA", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_rtTimeJoined", void 0),
+          N.c([d.observable], e.prototype, "m_rtLastAck", void 0),
+          N.c([d.observable], e.prototype, "m_unOwnerAccountID", void 0),
+          N.c([d.observable], e.prototype, "m_bFullStateLoaded", void 0),
+          N.c([d.observable], e.prototype, "m_strName", void 0),
+          N.c([d.observable], e.prototype, "m_strTagLine", void 0),
+          N.c([d.observable], e.prototype, "m_strAvatarSHA", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_unWatchingBroadcastAccountID",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_eUserDesktopNotificationLevel",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_eUserMobileNotificationLevel",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_bUnreadIndicatorMuted", void 0),
-          R.c([d.observable], e.prototype, "m_roles", void 0),
-          R.c([d.observable], e.prototype, "m_rgGroupMembersSummary", void 0),
-          R.c([d.observable], e.prototype, "m_cMemberSummaryCount", void 0),
-          R.c([d.computed], e.prototype, "name", null),
-          R.c([d.computed], e.prototype, "hasAvatar", null),
-          R.c([d.computed], e.prototype, "hasIcon", null),
-          R.c([d.computed], e.prototype, "avatar_url_small", null),
-          R.c([d.computed], e.prototype, "avatar_url_medium", null),
-          R.c([d.computed], e.prototype, "avatar_url_full", null),
-          R.c([d.computed], e.prototype, "chatRoomList", null),
-          R.c([d.computed], e.prototype, "textRoomList", null),
-          R.c([d.computed], e.prototype, "voiceRoomList", null),
-          R.c([d.computed], e.prototype, "hasVoiceRoom", null),
-          R.c([d.computed], e.prototype, "HasUnreadChatMessage", null),
-          R.c([d.computed], e.prototype, "HasUnreadMention", null),
-          R.c([d.computed], e.prototype, "time_last_activity", null),
-          R.c([d.action], e.prototype, "ChangeMemberRank", null),
-          R.c([d.action], e.prototype, "ChangeMemberRoles", null),
-          R.c([d.action], e.prototype, "SetInitialGroupState", null),
-          R.c([d.action], e.prototype, "UpdateGroupStateFromSummary", null),
-          R.c([d.action], e.prototype, "UpdateGroupState", null),
-          R.c([d.action], e.prototype, "UnloadActiveGroupState", null),
-          R.c([d.action], e.prototype, "UnloadGroupState", null),
-          R.c([d.action], e.prototype, "UnloadAndResetGroupState", null),
-          R.c([d.action], e.prototype, "UpdateChatRoomState", null),
-          R.c([d.action], e.prototype, "UpdateUserState", null),
-          R.c([d.action], e.prototype, "UpdateChatRoomHeaderState", null),
-          R.c([d.action], e.prototype, "OnActivate", null),
-          R.c([d.computed], e.prototype, "members_to_highlight_name", null),
-          R.c([d.computed], e.prototype, "members_to_highlight", null),
-          R.c([d.action], e.prototype, "AddCreatedRoom", null),
-          R.c([d.action], e.prototype, "RemoveRoom", null),
+          N.c([d.observable], e.prototype, "m_bUnreadIndicatorMuted", void 0),
+          N.c([d.observable], e.prototype, "m_roles", void 0),
+          N.c([d.observable], e.prototype, "m_rgGroupMembersSummary", void 0),
+          N.c([d.observable], e.prototype, "m_cMemberSummaryCount", void 0),
+          N.c([d.computed], e.prototype, "name", null),
+          N.c([d.computed], e.prototype, "hasAvatar", null),
+          N.c([d.computed], e.prototype, "hasIcon", null),
+          N.c([d.computed], e.prototype, "avatar_url_small", null),
+          N.c([d.computed], e.prototype, "avatar_url_medium", null),
+          N.c([d.computed], e.prototype, "avatar_url_full", null),
+          N.c([d.computed], e.prototype, "chatRoomList", null),
+          N.c([d.computed], e.prototype, "textRoomList", null),
+          N.c([d.computed], e.prototype, "voiceRoomList", null),
+          N.c([d.computed], e.prototype, "hasVoiceRoom", null),
+          N.c([d.computed], e.prototype, "HasUnreadChatMessage", null),
+          N.c([d.computed], e.prototype, "HasUnreadMention", null),
+          N.c([d.computed], e.prototype, "time_last_activity", null),
+          N.c([d.action], e.prototype, "ChangeMemberRank", null),
+          N.c([d.action], e.prototype, "ChangeMemberRoles", null),
+          N.c([d.action], e.prototype, "SetInitialGroupState", null),
+          N.c([d.action], e.prototype, "UpdateGroupStateFromSummary", null),
+          N.c([d.action], e.prototype, "UpdateGroupState", null),
+          N.c([d.action], e.prototype, "UnloadActiveGroupState", null),
+          N.c([d.action], e.prototype, "UnloadGroupState", null),
+          N.c([d.action], e.prototype, "UnloadAndResetGroupState", null),
+          N.c([d.action], e.prototype, "UpdateChatRoomState", null),
+          N.c([d.action], e.prototype, "UpdateUserState", null),
+          N.c([d.action], e.prototype, "UpdateChatRoomHeaderState", null),
+          N.c([d.action], e.prototype, "OnActivate", null),
+          N.c([d.computed], e.prototype, "members_to_highlight_name", null),
+          N.c([d.computed], e.prototype, "members_to_highlight", null),
+          N.c([d.action], e.prototype, "AddCreatedRoom", null),
+          N.c([d.action], e.prototype, "RemoveRoom", null),
           e
         );
       })(),
@@ -15971,7 +15995,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.GetGroup = function() {
             return this.m_group;
           }),
@@ -16232,55 +16256,55 @@
           (e.prototype.GetChatView = function() {
             return this.GetActiveChatView();
           }),
-          R.c([d.observable], e.prototype, "m_selectedChatView", void 0),
-          R.c([d.observable], e.prototype, "m_popoverChatView", void 0),
-          R.c([d.observable], e.prototype, "m_bShowSettingsDialog", void 0),
-          R.c([d.observable], e.prototype, "m_ulRenameChatRoomID", void 0),
-          R.c([d.observable], e.prototype, "m_bShowBroadcast", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_selectedChatView", void 0),
+          N.c([d.observable], e.prototype, "m_popoverChatView", void 0),
+          N.c([d.observable], e.prototype, "m_bShowSettingsDialog", void 0),
+          N.c([d.observable], e.prototype, "m_ulRenameChatRoomID", void 0),
+          N.c([d.observable], e.prototype, "m_bShowBroadcast", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bShowVerticalBroadcastChat",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_strLocalBroadcastId", void 0),
-          R.c([d.observable], e.prototype, "m_bChatHidden", void 0),
-          R.c([d.observable], e.prototype, "m_bShowGlobalChat", void 0),
-          R.c([d.observable], e.prototype, "m_bMemberSearchActive", void 0),
-          R.c([d.observable], e.prototype, "m_strMemberSearchString", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_strLocalBroadcastId", void 0),
+          N.c([d.observable], e.prototype, "m_bChatHidden", void 0),
+          N.c([d.observable], e.prototype, "m_bShowGlobalChat", void 0),
+          N.c([d.observable], e.prototype, "m_bMemberSearchActive", void 0),
+          N.c([d.observable], e.prototype, "m_strMemberSearchString", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bMemberListCollapsedOverride",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_bChannelListCollapsedOverride",
             void 0
           ),
-          R.c([d.action], e.prototype, "ShowBroadcast", null),
-          R.c([d.action.bound], e.prototype, "HideBroadcast", null),
-          R.c([d.action.bound], e.prototype, "SetVerticalBroadcastChat", null),
-          R.c([d.action], e.prototype, "ToggleTheaterModeBroadcastChat", null),
-          R.c([d.action], e.prototype, "SetChatHidden", null),
-          R.c([d.action], e.prototype, "SetGlobalBroadcastChatShown", null),
-          R.c([d.action], e.prototype, "SetLocalBroadcastId", null),
-          R.c([d.action], e.prototype, "SetMemberListCollapsed", null),
-          R.c([d.action], e.prototype, "SetChannelListCollapsed", null),
-          R.c([d.action], e.prototype, "ClosePopoverChat", null),
-          R.c([d.action], e.prototype, "SelectChat", null),
-          R.c([d.action], e.prototype, "SelectNextChannel", null),
-          R.c([d.action], e.prototype, "SelectPreviousChannel", null),
-          R.c([d.action], e.prototype, "StartRoomRename", null),
-          R.c([d.action], e.prototype, "EndRoomRename", null),
-          R.c([d.action], e.prototype, "OnTabClosed", null),
-          R.c([d.action], e.prototype, "SetMemberSearchEnabled", null),
-          R.c([d.action], e.prototype, "ClearMemberSearch", null),
-          R.c([d.computed], e.prototype, "normalizedMemberSearch", null),
-          R.c([d.computed], e.prototype, "isMemberListExpanded", null),
-          R.c([d.computed], e.prototype, "isChannelListCollapsed", null),
+          N.c([d.action], e.prototype, "ShowBroadcast", null),
+          N.c([d.action.bound], e.prototype, "HideBroadcast", null),
+          N.c([d.action.bound], e.prototype, "SetVerticalBroadcastChat", null),
+          N.c([d.action], e.prototype, "ToggleTheaterModeBroadcastChat", null),
+          N.c([d.action], e.prototype, "SetChatHidden", null),
+          N.c([d.action], e.prototype, "SetGlobalBroadcastChatShown", null),
+          N.c([d.action], e.prototype, "SetLocalBroadcastId", null),
+          N.c([d.action], e.prototype, "SetMemberListCollapsed", null),
+          N.c([d.action], e.prototype, "SetChannelListCollapsed", null),
+          N.c([d.action], e.prototype, "ClosePopoverChat", null),
+          N.c([d.action], e.prototype, "SelectChat", null),
+          N.c([d.action], e.prototype, "SelectNextChannel", null),
+          N.c([d.action], e.prototype, "SelectPreviousChannel", null),
+          N.c([d.action], e.prototype, "StartRoomRename", null),
+          N.c([d.action], e.prototype, "EndRoomRename", null),
+          N.c([d.action], e.prototype, "OnTabClosed", null),
+          N.c([d.action], e.prototype, "SetMemberSearchEnabled", null),
+          N.c([d.action], e.prototype, "ClearMemberSearch", null),
+          N.c([d.computed], e.prototype, "normalizedMemberSearch", null),
+          N.c([d.computed], e.prototype, "isMemberListExpanded", null),
+          N.c([d.computed], e.prototype, "isChannelListCollapsed", null),
           e
         );
       })(ce),
@@ -16289,8 +16313,8 @@
           this.loadingState = "pending";
         }
         return (
-          R.c([d.observable], e.prototype, "loadingState", void 0),
-          R.c([d.observable], e.prototype, "rgBans", void 0),
+          N.c([d.observable], e.prototype, "loadingState", void 0),
+          N.c([d.observable], e.prototype, "rgBans", void 0),
           e
         );
       })(),
@@ -16345,7 +16369,7 @@
                 })
               );
           }),
-          R.c([d.action], e.prototype, "SetChatRoomDisplayPref", null),
+          N.c([d.action], e.prototype, "SetChatRoomDisplayPref", null),
           e
         );
       })(),
@@ -16422,13 +16446,13 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.computed], e.prototype, "unfiltered_count", null),
-          R.c([d.computed], e.prototype, "member_counts", null),
-          R.c([d.action], e.prototype, "Clear", null),
-          R.c([d.action], e.prototype, "AddMember", null),
-          R.c([d.action], e.prototype, "RemoveMember", null),
-          R.c([d.computed], e.prototype, "member_list", null),
-          R.c([d.computed], e.prototype, "member_list_unsorted", null),
+          N.c([d.computed], e.prototype, "unfiltered_count", null),
+          N.c([d.computed], e.prototype, "member_counts", null),
+          N.c([d.action], e.prototype, "Clear", null),
+          N.c([d.action], e.prototype, "AddMember", null),
+          N.c([d.action], e.prototype, "RemoveMember", null),
+          N.c([d.computed], e.prototype, "member_list", null),
+          N.c([d.computed], e.prototype, "member_list_unsorted", null),
           e
         );
       })(),
@@ -16642,9 +16666,9 @@
               ));
           }),
           (e.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
-          R.c([d.observable], e.prototype, "m_bInitialized", void 0),
-          R.c([d.observable], e.prototype, "m_rtMostRecentEmoticon", void 0),
-          R.c([d.action], e.prototype, "TrackEmoticonUsage", null),
+          N.c([d.observable], e.prototype, "m_bInitialized", void 0),
+          N.c([d.observable], e.prototype, "m_rtMostRecentEmoticon", void 0),
+          N.c([d.action], e.prototype, "TrackEmoticonUsage", null),
           e
         );
       })(),
@@ -16892,9 +16916,9 @@
           (e.prototype.GetFriendLastChatTime = function(e) {
             return this.m_mapLastChatTimeByFriend.get(e) || 0;
           }),
-          R.c([d.observable], e.prototype, "m_rgFriendChats", void 0),
-          R.c([d.action], e.prototype, "ClearRecentChatsForFriend", null),
-          R.c([d.computed], e.prototype, "GetRecentlyChattingFriends", null),
+          N.c([d.observable], e.prototype, "m_rgFriendChats", void 0),
+          N.c([d.action], e.prototype, "ClearRecentChatsForFriend", null),
+          N.c([d.computed], e.prototype, "GetRecentlyChattingFriends", null),
           e
         );
       })(),
@@ -16911,7 +16935,7 @@
           );
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           Object.defineProperty(e.prototype, "unread_message_count", {
             get: function() {
               var e = this.m_ChatStore.VoiceChat.BPartnerHasRequestedAndIsInOneOnOneChat(
@@ -17095,7 +17119,7 @@
               Zo.FriendStore.SetApprovedNonFriendMessages(
                 this.chat_partner.accountid
               );
-            var t = Re.EscapeBBCode(e),
+            var t = Ne.EscapeBBCode(e),
               o = this.AppendLocalEchoChatMsg(t),
               i = u.Init(ot.d);
             return (
@@ -17315,22 +17339,22 @@
                   }
                 );
           }),
-          R.c([d.observable], e.prototype, "m_bFriendIsTyping", void 0),
-          R.c([d.observable], e.prototype, "m_bNeedsNonFriendWarning", void 0),
-          R.c([d.action], e.prototype, "ToggleVoiceChat", null),
-          R.c([d.action], e.prototype, "SendChatMessage", null),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bFriendIsTyping", void 0),
+          N.c([d.observable], e.prototype, "m_bNeedsNonFriendWarning", void 0),
+          N.c([d.action], e.prototype, "ToggleVoiceChat", null),
+          N.c([d.action], e.prototype, "SendChatMessage", null),
+          N.c(
             [M.a, Object(dt.a)(100)],
             e.prototype,
             "PlayFriendMessageSound",
             null
           ),
-          R.c([d.action], e.prototype, "ClearFriendIsTypingState", null),
-          R.c([d.action], e.prototype, "AddNewTradeRequestAndNotify", null),
-          R.c([d.action], e.prototype, "CancelTradeRequest", null),
-          R.c([d.action], e.prototype, "MarkTradeRequestDeclined", null),
-          R.c([d.action], e.prototype, "MarkTradeRequestAccepted", null),
-          R.c([d.action], e.prototype, "ViewerNeedsApproval", null),
+          N.c([d.action], e.prototype, "ClearFriendIsTypingState", null),
+          N.c([d.action], e.prototype, "AddNewTradeRequestAndNotify", null),
+          N.c([d.action], e.prototype, "CancelTradeRequest", null),
+          N.c([d.action], e.prototype, "MarkTradeRequestDeclined", null),
+          N.c([d.action], e.prototype, "MarkTradeRequestAccepted", null),
+          N.c([d.action], e.prototype, "ViewerNeedsApproval", null),
           e
         );
       })($e);
@@ -17493,7 +17517,7 @@
                   case 7:
                   case 0:
                     i = s.GetChatRoomGroup(n);
-                    Object(N.a)(
+                    Object(R.a)(
                       i,
                       "Got state change for ChatRoomGroup we don't know about"
                     ),
@@ -17502,7 +17526,7 @@
                   case 4:
                     break;
                   default:
-                    Object(N.a)(
+                    Object(R.a)(
                       !1,
                       "Don't know how to handle state change of type " +
                         Object(ae.ab)(o) +
@@ -17830,7 +17854,7 @@
             var t = this.m_mapActiveChatGroupsToRefCount.get(e),
               n = void 0 !== t && 0 < t;
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 n,
                 "Attempting to DecRef a Chat Group that has no existing references. Doing nothing."
               ),
@@ -17858,7 +17882,7 @@
                 o = u.Init(ae.N);
               this.m_mapActiveChatGroupsToRefCount.forEach(function(e, t) {
                 if (
-                  (Object(N.a)(
+                  (Object(R.a)(
                     0 < e,
                     "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
                   ),
@@ -18055,14 +18079,14 @@
             }
             return a;
           }),
-          R.c([d.observable], e.prototype, "m_bReceivedChatGroupList", void 0),
-          R.c([zo], e.prototype, "JoinAndShowChatRoomGroup", null),
-          R.c([d.action], e.prototype, "AddCreatedChatRoomGroup", null),
-          R.c([d.action], e.prototype, "AddKnownChatRoomGroup", null),
-          R.c([d.action], e.prototype, "AddJoinedChatRoomGroup", null),
-          R.c([d.action], e.prototype, "RemoveChatRoomGroup", null),
-          R.c([d.computed], e.prototype, "currentChatRoomGroups", null),
-          R.c([d.computed], e.prototype, "ClanChatRooms", null),
+          N.c([d.observable], e.prototype, "m_bReceivedChatGroupList", void 0),
+          N.c([zo], e.prototype, "JoinAndShowChatRoomGroup", null),
+          N.c([d.action], e.prototype, "AddCreatedChatRoomGroup", null),
+          N.c([d.action], e.prototype, "AddKnownChatRoomGroup", null),
+          N.c([d.action], e.prototype, "AddJoinedChatRoomGroup", null),
+          N.c([d.action], e.prototype, "RemoveChatRoomGroup", null),
+          N.c([d.computed], e.prototype, "currentChatRoomGroups", null),
+          N.c([d.computed], e.prototype, "ClanChatRooms", null),
           e
         );
       })(),
@@ -18086,7 +18110,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.GetTabName = function() {
             return this.m_chat.name;
           }),
@@ -18374,9 +18398,9 @@
           (e.prototype.BVoiceActive = function() {
             return this.m_chat.BVoiceActive();
           }),
-          R.c([d.observable], e.prototype, "m_bScrolledToBottom", void 0),
-          R.c([d.observable], e.prototype, "m_fileUpload", void 0),
-          R.c([d.observable], e.prototype, "m_fileUploadDataURL", void 0),
+          N.c([d.observable], e.prototype, "m_bScrolledToBottom", void 0),
+          N.c([d.observable], e.prototype, "m_fileUpload", void 0),
+          N.c([d.observable], e.prototype, "m_fileUploadDataURL", void 0),
           e
         );
       })(ce),
@@ -18390,12 +18414,12 @@
             (this.customlist = void 0);
         }
         return (
-          R.c([d.observable], e.prototype, "enabled", void 0),
-          R.c([d.observable], e.prototype, "locked", void 0),
-          R.c([d.observable], e.prototype, "features", void 0),
-          R.c([d.observable], e.prototype, "allowallapps", void 0),
-          R.c([d.observable], e.prototype, "baselist", void 0),
-          R.c([d.observable], e.prototype, "customlist", void 0),
+          N.c([d.observable], e.prototype, "enabled", void 0),
+          N.c([d.observable], e.prototype, "locked", void 0),
+          N.c([d.observable], e.prototype, "features", void 0),
+          N.c([d.observable], e.prototype, "allowallapps", void 0),
+          N.c([d.observable], e.prototype, "baselist", void 0),
+          N.c([d.observable], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -18787,7 +18811,7 @@
                   v < b.length;
                   v++
                 ) {
-                  (N = yn(b[v], "value")) && g.rgRoles.push(N);
+                  (R = yn(b[v], "value")) && g.rgRoles.push(R);
                 }
                 for (
                   var S = h.getElementsByTagName("Representation"), y = 0;
@@ -18839,10 +18863,10 @@
                     };
                   }
                 }
-                var R = h.getElementsByTagName("Role");
-                for (w = 0; w < R.length; w++) {
-                  var N;
-                  (N = yn(R[w], "value")) && g.rgRoles.push(N);
+                var N = h.getElementsByTagName("Role");
+                for (w = 0; w < N.length; w++) {
+                  var R;
+                  (R = yn(N[w], "value")) && g.rgRoles.push(R);
                 }
                 var k = h.getElementsByTagName("SegmentTemplate");
                 if (0 == k.length)
@@ -19232,7 +19256,7 @@
         (e.prototype.DownloadSegment = function(g, b, v, S) {
           return (
             void 0 === S && (S = performance.now()),
-            R.b(this, void 0, void 0, function() {
+            N.b(this, void 0, void 0, function() {
               var t,
                 n,
                 o,
@@ -19249,10 +19273,10 @@
                 h,
                 _,
                 f = this;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    Object(N.a)(
+                    Object(R.a)(
                       null === this.m_xhrDownload,
                       "Trying to download another segment while a download is already in flight"
                     ),
@@ -19537,13 +19561,13 @@
             ? this.m_statsGameData.nAppID
             : 0;
         }),
-        R.c([M.a], e.prototype, "OnSourceBufferUpdateEnd", null),
-        R.c([M.a], e.prototype, "OnSourceBufferError", null),
-        R.c([M.a], e.prototype, "OnSourceBufferAbort", null),
-        R.c([M.a], e.prototype, "ScheduleNextDownload", null),
-        R.c([M.a], e.prototype, "DownloadNextSegment", null),
-        R.c([M.a], e.prototype, "DownloadFailed", null),
-        R.c([M.a], e.prototype, "DownloadGone", null),
+        N.c([M.a], e.prototype, "OnSourceBufferUpdateEnd", null),
+        N.c([M.a], e.prototype, "OnSourceBufferError", null),
+        N.c([M.a], e.prototype, "OnSourceBufferAbort", null),
+        N.c([M.a], e.prototype, "ScheduleNextDownload", null),
+        N.c([M.a], e.prototype, "DownloadNextSegment", null),
+        N.c([M.a], e.prototype, "DownloadFailed", null),
+        N.c([M.a], e.prototype, "DownloadGone", null),
         e
       );
     })();
@@ -19576,11 +19600,11 @@
       }
       return !o && t;
     }
-    function Rn(e) {
+    function Nn(e) {
       var t = e.charCodeAt(0);
       return 65 <= t && t <= 90;
     }
-    var Nn,
+    var Rn,
       kn,
       Ln = 1e6,
       An = (function() {
@@ -19592,13 +19616,13 @@
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
-        return R.d(t, e), t;
+        return N.d(t, e), t;
       })(An),
       Fn = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
-        return R.d(t, e), t;
+        return N.d(t, e), t;
       })(An),
       Bn = (function() {
         function e() {
@@ -20074,9 +20098,9 @@
             }
           }),
           (e.prototype.SendReportToServer = function(a, s) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o, i, r;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 for (
                   t = new URL(s), n = new FormData(), o = 0, i = Object.keys(a);
                   o < i.length;
@@ -20115,42 +20139,42 @@
               (e.useragent = window.navigator.userAgent),
               (e.sessionid = G.a.SESSIONID);
           }),
-          R.c([d.observable], e.prototype, "m_allTimeSnapshot", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_allTimeSnapshot", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_strBufferingVideoResolution",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_strPlaybackVideoResolution",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_strHtmlVideoDisplay", void 0),
-          R.c([d.observable], e.prototype, "m_nBandwidthRequired", void 0),
-          R.c([d.observable], e.prototype, "m_nCurBandwidthVideo", void 0),
-          R.c([d.observable], e.prototype, "m_nAudioBufferedMS", void 0),
-          R.c([d.observable], e.prototype, "m_nVideoBufferedMS", void 0),
-          R.c([d.observable], e.prototype, "m_nActiveDownloads", void 0),
-          R.c([d.observable], e.prototype, "m_nVideoDownloadProgress", void 0),
-          R.c([d.observable], e.prototype, "m_videoBufferedRanges", void 0),
-          R.c([d.observable], e.prototype, "m_audioBufferedRanges", void 0),
-          R.c([d.observable], e.prototype, "m_nPlaybackRate", void 0),
-          R.c([d.action], e.prototype, "SetVideoPlaybackResolution", null),
-          R.c([d.action], e.prototype, "SetRepresentation", null),
-          R.c([d.action], e.prototype, "SetCurrentVideoBandwidth", null),
-          R.c(
+          N.c([d.observable], e.prototype, "m_strHtmlVideoDisplay", void 0),
+          N.c([d.observable], e.prototype, "m_nBandwidthRequired", void 0),
+          N.c([d.observable], e.prototype, "m_nCurBandwidthVideo", void 0),
+          N.c([d.observable], e.prototype, "m_nAudioBufferedMS", void 0),
+          N.c([d.observable], e.prototype, "m_nVideoBufferedMS", void 0),
+          N.c([d.observable], e.prototype, "m_nActiveDownloads", void 0),
+          N.c([d.observable], e.prototype, "m_nVideoDownloadProgress", void 0),
+          N.c([d.observable], e.prototype, "m_videoBufferedRanges", void 0),
+          N.c([d.observable], e.prototype, "m_audioBufferedRanges", void 0),
+          N.c([d.observable], e.prototype, "m_nPlaybackRate", void 0),
+          N.c([d.action], e.prototype, "SetVideoPlaybackResolution", null),
+          N.c([d.action], e.prototype, "SetRepresentation", null),
+          N.c([d.action], e.prototype, "SetCurrentVideoBandwidth", null),
+          N.c(
             [d.action],
             e.prototype,
             "CaptureFrequentlyUpdatingInformation",
             null
           ),
-          R.c([d.action], e.prototype, "LogDownload", null),
-          R.c([d.action], e.prototype, "LogSegmentDownloadFailure", null),
-          R.c([d.action], e.prototype, "LogFrameInfo", null),
-          R.c([d.action], e.prototype, "LogBufferDuration", null),
+          N.c([d.action], e.prototype, "LogDownload", null),
+          N.c([d.action], e.prototype, "LogSegmentDownloadFailure", null),
+          N.c([d.action], e.prototype, "LogFrameInfo", null),
+          N.c([d.action], e.prototype, "LogBufferDuration", null),
           e
         );
       })(),
@@ -20216,26 +20240,26 @@
                 (this.m_nEntries += 1);
             }
           }),
-          R.c([d.observable], e.prototype, "m_nBytesReceived", void 0),
-          R.c([d.observable], e.prototype, "m_nFailedSegments", void 0),
-          R.c([d.observable], e.prototype, "m_nStallEvents", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_nBytesReceived", void 0),
+          N.c([d.observable], e.prototype, "m_nFailedSegments", void 0),
+          N.c([d.observable], e.prototype, "m_nStallEvents", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_nSegmentDownloadTimeMaxMS",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_nSegmentDownloadTimeMinMS",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_nBandwidthMin", void 0),
-          R.c([d.observable], e.prototype, "m_nBandwidthMax", void 0),
-          R.c([d.observable], e.prototype, "m_nFramesDecoded", void 0),
-          R.c([d.observable], e.prototype, "m_nFramesDropped", void 0),
-          R.c([d.action], e.prototype, "SegmentReceived", null),
+          N.c([d.observable], e.prototype, "m_nBandwidthMin", void 0),
+          N.c([d.observable], e.prototype, "m_nBandwidthMax", void 0),
+          N.c([d.observable], e.prototype, "m_nFramesDecoded", void 0),
+          N.c([d.observable], e.prototype, "m_nFramesDropped", void 0),
+          N.c([d.action], e.prototype, "SegmentReceived", null),
           e
         );
       })(),
@@ -20334,13 +20358,13 @@
                 : new xn()).reset(e, t),
               this.m_rgResultsWindow.push(n);
           }),
-          R.c([d.observable], e.prototype, "m_bDroppingFrameDetected", void 0),
-          R.c([d.observable], e.prototype, "m_nCurrentFPS", void 0),
-          R.c([d.action.bound], e.prototype, "TakeReading", null),
+          N.c([d.observable], e.prototype, "m_bDroppingFrameDetected", void 0),
+          N.c([d.observable], e.prototype, "m_nCurrentFPS", void 0),
+          N.c([d.action.bound], e.prototype, "TakeReading", null),
           e
         );
       })();
-    ((kn = Nn || (Nn = {}))[(kn.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
+    ((kn = Rn || (Rn = {}))[(kn.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
       (kn[(kn.HAVE_METADATA = 1)] = "HAVE_METADATA"),
       (kn[(kn.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
       (kn[(kn.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
@@ -20386,9 +20410,9 @@
           this.m_mpd.SetLiveContentStart(n), hn("server time: " + e);
         }),
         (e.prototype.PlayMPD = function(n) {
-          return R.b(this, void 0, void 0, function() {
+          return N.b(this, void 0, void 0, function() {
             var t;
-            return R.e(this, function(e) {
+            return N.e(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (this.m_strMPD = n), [4, this.DownloadMPD()];
@@ -20502,14 +20526,14 @@
           return !!this.m_mpd && "dynamic" == this.m_mpd.GetType();
         }),
         (e.prototype.DownloadMPD = function() {
-          return R.b(this, void 0, void 0, function() {
+          return N.b(this, void 0, void 0, function() {
             var n, o;
-            return R.e(this, function(e) {
+            return N.e(this, function(e) {
               switch (e.label) {
                 case 0:
                   if (this.m_xhrUpdateMPD)
                     return (
-                      Object(N.a)(!1, "Multiple MPD download requests"),
+                      Object(R.a)(!1, "Multiple MPD download requests"),
                       [2, null]
                     );
                   (n = performance.now()), (e.label = 1);
@@ -20557,9 +20581,9 @@
           });
         }),
         (e.prototype.UpdateMPD = function() {
-          return R.b(this, void 0, void 0, function() {
+          return N.b(this, void 0, void 0, function() {
             var t;
-            return R.e(this, function(e) {
+            return N.e(this, function(e) {
               switch (e.label) {
                 case 0:
                   return [4, this.DownloadMPD()];
@@ -21277,32 +21301,32 @@
           }
           t && (this.m_videoRepSelected = null);
         }),
-        R.c([M.a], e.prototype, "UpdateMPD", null),
-        R.c([M.a], e.prototype, "OnMediaSourceOpen", null),
-        R.c([M.a], e.prototype, "OnMediaSourceEnded", null),
-        R.c([M.a], e.prototype, "OnMediaSourceClose", null),
-        R.c([M.a], e.prototype, "OnVideoWaiting", null),
-        R.c([M.a], e.prototype, "OnVideoPause", null),
-        R.c([M.a], e.prototype, "OnVideoResize", null),
-        R.c(
+        N.c([M.a], e.prototype, "UpdateMPD", null),
+        N.c([M.a], e.prototype, "OnMediaSourceOpen", null),
+        N.c([M.a], e.prototype, "OnMediaSourceEnded", null),
+        N.c([M.a], e.prototype, "OnMediaSourceClose", null),
+        N.c([M.a], e.prototype, "OnVideoWaiting", null),
+        N.c([M.a], e.prototype, "OnVideoPause", null),
+        N.c([M.a], e.prototype, "OnVideoResize", null),
+        N.c(
           [M.a],
           e.prototype,
           "OnDebugPrintEventInfoAndAvailableBuffer",
           null
         ),
-        R.c([M.a], e.prototype, "OnVideoError", null),
-        R.c([M.a], e.prototype, "OnVideoCanPlay", null),
-        R.c([M.a], e.prototype, "GetCurrentPlayTime", null),
-        R.c([M.a], e.prototype, "OnVideoTimeUpdate", null),
-        R.c([M.a], e.prototype, "GetPlaybackRate", null),
-        R.c([M.a], e.prototype, "OnSegmentDownloaded", null),
-        R.c([M.a], e.prototype, "PlayOnElement", null),
-        R.c([M.a], e.prototype, "OnSegmentDownloadFailed", null),
-        R.c([M.a], e.prototype, "OnSegmentDownloadGone", null),
-        R.c([M.a], e.prototype, "VerifyFirstSegementDownloadProgress", null),
-        R.c([M.a], e.prototype, "GameDataEventTrigger", null),
-        R.c([M.a], e.prototype, "ReportPlayerStats", null),
-        R.c([d.action.bound], e.prototype, "CaptureStatsForDisplay", null),
+        N.c([M.a], e.prototype, "OnVideoError", null),
+        N.c([M.a], e.prototype, "OnVideoCanPlay", null),
+        N.c([M.a], e.prototype, "GetCurrentPlayTime", null),
+        N.c([M.a], e.prototype, "OnVideoTimeUpdate", null),
+        N.c([M.a], e.prototype, "GetPlaybackRate", null),
+        N.c([M.a], e.prototype, "OnSegmentDownloaded", null),
+        N.c([M.a], e.prototype, "PlayOnElement", null),
+        N.c([M.a], e.prototype, "OnSegmentDownloadFailed", null),
+        N.c([M.a], e.prototype, "OnSegmentDownloadGone", null),
+        N.c([M.a], e.prototype, "VerifyFirstSegementDownloadProgress", null),
+        N.c([M.a], e.prototype, "GameDataEventTrigger", null),
+        N.c([M.a], e.prototype, "ReportPlayerStats", null),
+        N.c([d.action.bound], e.prototype, "CaptureStatsForDisplay", null),
         e
       );
     })();
@@ -21315,7 +21339,7 @@
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
-        return R.d(t, e), t;
+        return N.d(t, e), t;
       })(Error),
       Kn = (function(n) {
         function e(e) {
@@ -21328,7 +21352,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.parseColor = function(e) {
             if ("string" != typeof e || !e.match(/^#[0-9a-fA-F]{6}$/))
               throw new qn("expected color string");
@@ -21512,9 +21536,9 @@
               return e.video == t;
             });
           }),
-          R.c([d.observable], e.prototype, "m_eWatchState", void 0),
-          R.c([d.observable], e.prototype, "m_strStateDescription", void 0),
-          R.c([d.action], e.prototype, "SetState", null),
+          N.c([d.observable], e.prototype, "m_eWatchState", void 0),
+          N.c([d.observable], e.prototype, "m_strStateDescription", void 0),
+          N.c([d.action], e.prototype, "SetState", null),
           e
         );
       })(),
@@ -21532,12 +21556,12 @@
             (this.m_steamIDBroadcast = e);
         }
         return (
-          R.c([d.observable], e.prototype, "m_strTitle", void 0),
-          R.c([d.observable], e.prototype, "m_strAppId", void 0),
-          R.c([d.observable], e.prototype, "m_strAppTitle", void 0),
-          R.c([d.observable], e.prototype, "m_strThumbnailUrl", void 0),
-          R.c([d.observable], e.prototype, "m_nViewerCount", void 0),
-          R.c([d.observable], e.prototype, "m_bIsOnline", void 0),
+          N.c([d.observable], e.prototype, "m_strTitle", void 0),
+          N.c([d.observable], e.prototype, "m_strAppId", void 0),
+          N.c([d.observable], e.prototype, "m_strAppTitle", void 0),
+          N.c([d.observable], e.prototype, "m_strThumbnailUrl", void 0),
+          N.c([d.observable], e.prototype, "m_nViewerCount", void 0),
+          N.c([d.observable], e.prototype, "m_bIsOnline", void 0),
           e
         );
       })(),
@@ -21680,7 +21704,7 @@
               this.m_mapBroadcasts.delete(e.m_steamIDBroadcast));
           }),
           (e.prototype.LoadBroadcastInfo = function(c) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t,
                 n,
                 o,
@@ -21688,7 +21712,7 @@
                 r,
                 a,
                 s = this;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     (t = "0"),
@@ -21734,14 +21758,14 @@
           (e.prototype.GetBroadcastManifest = function(s, c, l) {
             return (
               void 0 === l && (l = Date.now()),
-              R.b(this, void 0, void 0, function() {
+              N.b(this, void 0, void 0, function() {
                 var t,
                   n,
                   o,
                   i,
                   r,
                   a = this;
-                return R.e(this, function(e) {
+                return N.e(this, function(e) {
                   switch (e.label) {
                     case 0:
                       s.SetState(Wn.Loading, ""),
@@ -21827,10 +21851,10 @@
             );
           }),
           (e.prototype.HeartbeatBroadcast = function(o) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t,
                 n = this;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 return (
                   (t = new FormData()).append("steamid", o.m_steamIDBroadcast),
                   t.append("broadcastid", o.m_ulBroadcastID),
@@ -22058,7 +22082,7 @@
             return this.m_info;
           }),
           (e.prototype.Start = function(e, t, n) {
-            Object(N.a)(!this.m_player, "Initialized twice?"),
+            Object(R.a)(!this.m_player, "Initialized twice?"),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
                 "playing",
@@ -22236,25 +22260,25 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], e.prototype, "m_bPaused", void 0),
-          R.c([d.observable], e.prototype, "m_nPlaybackTime", void 0),
-          R.c([d.observable], e.prototype, "m_bBuffering", void 0),
-          R.c([d.observable], e.prototype, "m_bOnLiveEdge", void 0),
-          R.c([d.observable], e.prototype, "m_nVolume", void 0),
-          R.c([d.observable], e.prototype, "m_bMuted", void 0),
-          R.c([d.observable], e.prototype, "m_bUserInputNeeded", void 0),
-          R.c([d.observable], e.prototype, "m_nTimelineDuration", void 0),
-          R.c([d.observable], e.prototype, "m_nVideoStartPos", void 0),
-          R.c([d.observable], e.prototype, "m_nVideoEndPos", void 0),
-          R.c([d.action.bound], e.prototype, "Start", null),
-          R.c([M.a], e.prototype, "OnVideoPlaying", null),
-          R.c([M.a], e.prototype, "OnVideoPause", null),
-          R.c([d.action.bound], e.prototype, "OnVideoTimeUpdate", null),
-          R.c([d.action.bound], e.prototype, "OnGameDataUpdate", null),
-          R.c([M.a], e.prototype, "OnDownloadFailed", null),
-          R.c([M.a], e.prototype, "OnUserInputNeeded", null),
-          R.c([d.computed], e.prototype, "has_markers", null),
-          R.c([d.computed], e.prototype, "has_segments", null),
+          N.c([d.observable], e.prototype, "m_bPaused", void 0),
+          N.c([d.observable], e.prototype, "m_nPlaybackTime", void 0),
+          N.c([d.observable], e.prototype, "m_bBuffering", void 0),
+          N.c([d.observable], e.prototype, "m_bOnLiveEdge", void 0),
+          N.c([d.observable], e.prototype, "m_nVolume", void 0),
+          N.c([d.observable], e.prototype, "m_bMuted", void 0),
+          N.c([d.observable], e.prototype, "m_bUserInputNeeded", void 0),
+          N.c([d.observable], e.prototype, "m_nTimelineDuration", void 0),
+          N.c([d.observable], e.prototype, "m_nVideoStartPos", void 0),
+          N.c([d.observable], e.prototype, "m_nVideoEndPos", void 0),
+          N.c([d.action.bound], e.prototype, "Start", null),
+          N.c([M.a], e.prototype, "OnVideoPlaying", null),
+          N.c([M.a], e.prototype, "OnVideoPause", null),
+          N.c([d.action.bound], e.prototype, "OnVideoTimeUpdate", null),
+          N.c([d.action.bound], e.prototype, "OnGameDataUpdate", null),
+          N.c([M.a], e.prototype, "OnDownloadFailed", null),
+          N.c([M.a], e.prototype, "OnUserInputNeeded", null),
+          N.c([d.computed], e.prototype, "has_markers", null),
+          N.c([d.computed], e.prototype, "has_segments", null),
           e
         );
       })(),
@@ -22423,7 +22447,7 @@
                   s.m_cConsecutiveErrors = 0;
                   var o = n.messages
                     .map(function(e) {
-                      return R.a({}, e, {
+                      return N.a({}, e, {
                         type: F.Chat,
                         client_ts: Number(new Date())
                       });
@@ -22776,11 +22800,11 @@
               (this.m_nFromFirstRequestMS = 0),
               (this.m_nNextChatTS = 0);
           }),
-          R.c([d.observable], e.prototype, "m_rgChatMessages", void 0),
-          R.c([M.a], e.prototype, "OnIframeLoaded", null),
-          R.c([M.a], e.prototype, "PostMessageToIframe", null),
-          R.c([M.a], e.prototype, "RequestLoop", null),
-          R.c([M.a], e.prototype, "MuteUserForSession", null),
+          N.c([d.observable], e.prototype, "m_rgChatMessages", void 0),
+          N.c([M.a], e.prototype, "OnIframeLoaded", null),
+          N.c([M.a], e.prototype, "PostMessageToIframe", null),
+          N.c([M.a], e.prototype, "RequestLoop", null),
+          N.c([M.a], e.prototype, "MuteUserForSession", null),
           e
         );
       })(),
@@ -22885,17 +22909,17 @@
               t.ConvertTo64BitString()
             );
           }),
-          R.c([d.observable], e.prototype, "m_status", void 0),
-          R.c([d.observable], e.prototype, "m_mapPendingRequests", void 0),
-          R.c([d.computed], e.prototype, "status", null),
-          R.c([d.computed], e.prototype, "is_broadcasting", null),
-          R.c([d.computed], e.prototype, "broadcastid", null),
-          R.c([d.computed], e.prototype, "is_broadcast_capable", null),
-          R.c([M.a, d.action], e.prototype, "OnBroadcastStatus", null),
-          R.c([M.a, d.action], e.prototype, "OnViewerRequest", null),
-          R.c([d.action], e.prototype, "ApproveViewerRequest", null),
-          R.c([d.action], e.prototype, "RejectViewerRequest", null),
-          R.c([d.action], e.prototype, "InviteToWatch", null),
+          N.c([d.observable], e.prototype, "m_status", void 0),
+          N.c([d.observable], e.prototype, "m_mapPendingRequests", void 0),
+          N.c([d.computed], e.prototype, "status", null),
+          N.c([d.computed], e.prototype, "is_broadcasting", null),
+          N.c([d.computed], e.prototype, "broadcastid", null),
+          N.c([d.computed], e.prototype, "is_broadcast_capable", null),
+          N.c([M.a, d.action], e.prototype, "OnBroadcastStatus", null),
+          N.c([M.a, d.action], e.prototype, "OnViewerRequest", null),
+          N.c([d.action], e.prototype, "ApproveViewerRequest", null),
+          N.c([d.action], e.prototype, "RejectViewerRequest", null),
+          N.c([d.action], e.prototype, "InviteToWatch", null),
           e
         );
       })(),
@@ -22911,7 +22935,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.GetSteamID = function() {
             return this.m_steamID;
           }),
@@ -22948,15 +22972,15 @@
             (this.m_bShowWatchPromptDialog = !1),
               (this.m_watchPromptInitialFriend = void 0);
           }),
-          R.c([d.observable], e.prototype, "m_bShowWatchPromptDialog", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bShowWatchPromptDialog", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_watchPromptInitialFriend",
             void 0
           ),
-          R.c([d.action], e.prototype, "ShowWatchPromptDialog", null),
-          R.c([d.action], e.prototype, "HideWatchPromptDialog", null),
+          N.c([d.action], e.prototype, "ShowWatchPromptDialog", null),
+          N.c([d.action], e.prototype, "HideWatchPromptDialog", null),
           e
         );
       })(ce),
@@ -23013,7 +23037,7 @@
             if (t instanceof kt) {
               var o = this.m_chatStore.GetChatRoomGroup(t.GetParentGroupID());
               if (!o)
-                return void Object(N.a)(!1, "Can't find group for chat room ");
+                return void Object(R.a)(!1, "Can't find group for chat room ");
               var i = this.ShowAndOrActivateChatRoomGroup(e, o, n);
               i && i.SelectChat(t.GetRoomID());
             } else this.ShowAndOrActivateTabByID(e, t.unique_id, n);
@@ -23074,7 +23098,7 @@
             i ||
               (this.ShowAndOrActivateChatRoomGroup(e, n, !0),
               (i = this.GetTabSetByUniqueID(o, n.unique_id))),
-              Object(N.a)(i, "Failed to find group tab");
+              Object(R.a)(i, "Failed to find group tab");
             var r = this.GetTabSetByUniqueID(o, t.chat.unique_id);
             if (r) {
               var a = i.tab,
@@ -23209,7 +23233,7 @@
             t && !t.BIsClosed() && t.FlashWindow();
           }),
           (e.prototype.GetPerContextChatData = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               Zo.ready_to_render || this.m_bRestoringPopups,
               "GetPerContextChatData called before ready",
               e
@@ -23220,7 +23244,7 @@
               (t = new uo(e)),
                 n
                   ? this.m_mapChatBrowserContexts.set(e.m_unPID, t)
-                  : Object(N.a)(
+                  : Object(R.a)(
                       !1,
                       "Had to prevent instance being added back" + e.m_unPID
                     );
@@ -23262,7 +23286,7 @@
           (e.prototype.OnOverlayBrowserClosed = function(e) {
             var t = this.m_mapChatBrowserContexts.get(e.m_unPID);
             t &&
-              (Object(N.a)(
+              (Object(R.a)(
                 e.m_nBrowserID == t.browser_context.m_nBrowserID,
                 "Mismatch found in OnOverlayBrowserClosed"
               ),
@@ -23450,7 +23474,7 @@
                     t.friends_list_window.BringToFront());
           }),
           (e.prototype.MoveTabToNewPopup = function(e, t, n, o) {
-            Object(N.a)(e, "browserContext");
+            Object(R.a)(e, "browserContext");
             var i = this.GetPerContextChatData(e);
             this.ForEachTabSet(i, function(e) {
               return e.RemoveTab(t);
@@ -23538,17 +23562,17 @@
             this.m_stateToRestoreFrom = e;
           }),
           (e.prototype.RestorePopupState = function() {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
-                      Object(N.a)(
+                      Object(R.a)(
                         !this.m_bRestoredPopupState,
                         "Second restore popup state"
                       ),
-                      Object(N.a)(
+                      Object(R.a)(
                         !this.m_bRestoringPopups,
                         "RestorePopupState called while already restoring"
                       ),
@@ -23595,7 +23619,7 @@
           (e.prototype.RestoreFromStateObject = function(e, t) {
             var n = this.GetPerContextChatData(Xo);
             if (
-              (Object(N.a)(n.BIsEmpty(), "Restoring to non-empty context", n),
+              (Object(R.a)(n.BIsEmpty(), "Restoring to non-empty context", n),
               n.BIsEmpty())
             ) {
               if (
@@ -23694,16 +23718,16 @@
             e.ui_state().set_group_chat_tabs_opened(n),
               e.ui_state().set_friend_chat_tabs_opened(o);
           }),
-          R.c([d.observable], e.prototype, "m_bTheaterMode", void 0),
-          R.c([d.action], e.prototype, "OnFriendsParentalLockChanged", null),
-          R.c([zo], e.prototype, "ShowFriendChatDialogWhenReady", null),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bTheaterMode", void 0),
+          N.c([d.action], e.prototype, "OnFriendsParentalLockChanged", null),
+          N.c([zo], e.prototype, "ShowFriendChatDialogWhenReady", null),
+          N.c(
             [zo],
             e.prototype,
             "ShowAndOrActivateChatRoomGroupWhenReady",
             null
           ),
-          R.c([M.a], e.prototype, "SerializePopupState", null),
+          N.c([M.a], e.prototype, "SerializePopupState", null),
           e
         );
       })(),
@@ -23754,7 +23778,7 @@
           (e.prototype.SetActiveView = function(e) {
             this.m_eActiveView = e;
           }),
-          R.c([d.observable], e.prototype, "m_eActiveView", void 0),
+          N.c([d.observable], e.prototype, "m_eActiveView", void 0),
           e
         );
       })(),
@@ -23804,7 +23828,7 @@
           Object.defineProperty(e.prototype, "default_tabset", {
             get: function() {
               return (
-                Object(N.a)(
+                Object(R.a)(
                   this.m_DefaultTabSet,
                   "Context has no default chat target"
                 ),
@@ -23882,7 +23906,7 @@
             this.m_mapTabSetToPopup.delete(e);
           }),
           (e.prototype.AddPopup = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               !this.m_mapTabSetToPopup.has(e),
               "Added popup for tabset twice"
             ),
@@ -23930,13 +23954,13 @@
               this.friends_list_window && this.m_FriendsListWindow.Close(),
               (this.m_DefaultTabSet = new pe(this.m_browserContext));
           }),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_bFriendsListSingleWindow",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_bFriendsListCollapsed", void 0),
+          N.c([d.observable], e.prototype, "m_bFriendsListCollapsed", void 0),
           e
         );
       })(),
@@ -24027,7 +24051,7 @@
           }),
           (e.prototype.GetAccountSpecificLocalStorageKey = function(e) {
             return (
-              Object(N.a)(
+              Object(R.a)(
                 this.m_CM.steamid.BIsValid(),
                 "CM has never been logged on, can't construct local storage key"
               ),
@@ -24118,14 +24142,14 @@
             configurable: !0
           }),
           (e.prototype.UpdateCommunityPreferences = function(e) {
-            var t = R.a({}, this.m_CommunityPreferences);
+            var t = N.a({}, this.m_CommunityPreferences);
             void 0 !== e.hide_adult_content_violence() &&
               (t.bHideAdultContentViolence = e.hide_adult_content_violence()),
               void 0 !== e.hide_adult_content_sex() &&
                 (t.bHideAdultContentSex = e.hide_adult_content_sex()),
               void 0 !== e.parenthesize_nicknames() &&
                 (t.bParenthesizeNicknames = e.parenthesize_nicknames()),
-              (this.m_ServerCommunityPreferences = R.a({}, t)),
+              (this.m_ServerCommunityPreferences = N.a({}, t)),
               (this.m_CommunityPreferences = t);
           }),
           (e.prototype.CommunityPreferencesToMessage = function(e) {
@@ -24229,13 +24253,13 @@
               t.set_disable_embed_inlining(n.bDisableEmbedInlining),
               t.set_sign_into_friends(n.bSignIntoFriends);
           }),
-          R.c([d.observable], e.prototype, "m_bReady", void 0),
-          R.c([d.observable], e.prototype, "m_FriendsSettings", void 0),
-          R.c([d.observable], e.prototype, "m_CommunityPreferences", void 0),
-          R.c([d.observable], e.prototype, "m_StorePreferences", void 0),
-          R.c([d.action], e.prototype, "BUpdateFriendsSettings", null),
-          R.c([d.action], e.prototype, "UpdateCommunityPreferences", null),
-          R.c([d.action], e.prototype, "SetCommunityPreferences", null),
+          N.c([d.observable], e.prototype, "m_bReady", void 0),
+          N.c([d.observable], e.prototype, "m_FriendsSettings", void 0),
+          N.c([d.observable], e.prototype, "m_CommunityPreferences", void 0),
+          N.c([d.observable], e.prototype, "m_StorePreferences", void 0),
+          N.c([d.action], e.prototype, "BUpdateFriendsSettings", null),
+          N.c([d.action], e.prototype, "UpdateCommunityPreferences", null),
+          N.c([d.action], e.prototype, "SetCommunityPreferences", null),
           e
         );
       })(),
@@ -24250,7 +24274,7 @@
           return (n.m_bClientInitComplete = !1), n.InternalInit(), n;
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.InternalInit = function() {
             this.m_bClientInitComplete ||
               (SteamClient &&
@@ -24260,7 +24284,7 @@
                     this.OnClientSettingsChange.bind(this)
                   ),
                   (this.m_bClientInitComplete = !0))
-                : Object(N.a)(!1, "Can't initialize settings from client"));
+                : Object(R.a)(!1, "Can't initialize settings from client"));
           }),
           (e.prototype.OnClientSettingsChange = function(e) {
             var t,
@@ -24308,7 +24332,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(n, e),
+          N.d(n, e),
           (n.prototype.InternalInit = function() {
             var t = this;
             this.m_SettingsStore
@@ -24508,11 +24532,11 @@
             enumerable: !0,
             configurable: !0
           }),
-          R.c([d.observable], e.prototype, "m_lastTimeNonZero", void 0),
-          R.c([d.observable], e.prototype, "m_flVolume", void 0),
-          R.c([d.observable], e.prototype, "m_flRoundedVolume", void 0),
-          R.c([d.action.bound], e.prototype, "UpdateVolume", null),
-          R.c([d.action.bound], e.prototype, "stop", null),
+          N.c([d.observable], e.prototype, "m_lastTimeNonZero", void 0),
+          N.c([d.observable], e.prototype, "m_flVolume", void 0),
+          N.c([d.observable], e.prototype, "m_flRoundedVolume", void 0),
+          N.c([d.action.bound], e.prototype, "UpdateVolume", null),
+          N.c([d.action.bound], e.prototype, "stop", null),
           e
         );
       })(),
@@ -24536,8 +24560,8 @@
             (this.volume_meter = void 0);
         }
         return (
-          R.c([d.observable], e.prototype, "muted", void 0),
-          R.c([d.observable], e.prototype, "volume_meter", void 0),
+          N.c([d.observable], e.prototype, "muted", void 0),
+          N.c([d.observable], e.prototype, "volume_meter", void 0),
           e
         );
       })();
@@ -24590,7 +24614,7 @@
         "k_EVoiceCallState_NotifyingVoiceChatOfWebRTCSession"),
       (Do[(Do.k_EVoiceCallState_Connected = 9)] =
         "k_EVoiceCallState_Connected");
-    var Ro = (function() {
+    var No = (function() {
         function e() {
           (this.m_eState = Mo.k_EVoiceCallState_None),
             (this.m_targetAccountID = 0),
@@ -24624,20 +24648,20 @@
           (e.prototype.BCallActiveForGroup = function(e) {
             return this.m_chatRoom && this.m_chatRoom.groupID == e;
           }),
-          R.c([d.observable], e.prototype, "m_eState", void 0),
-          R.c([d.observable], e.prototype, "m_targetAccountID", void 0),
-          R.c([d.observable], e.prototype, "m_bInitiatedOneOnOneCall", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_eState", void 0),
+          N.c([d.observable], e.prototype, "m_targetAccountID", void 0),
+          N.c([d.observable], e.prototype, "m_bInitiatedOneOnOneCall", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bWaitingOnOneOnOneRejoin",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_bPostedOneOnOneEndedMsg", void 0),
-          R.c([d.observable], e.prototype, "m_chatRoom", void 0),
-          R.c([d.observable], e.prototype, "m_voiceChatID", void 0),
-          R.c([d.observable], e.prototype, "m_nFailuresThisInitiate", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_bPostedOneOnOneEndedMsg", void 0),
+          N.c([d.observable], e.prototype, "m_chatRoom", void 0),
+          N.c([d.observable], e.prototype, "m_voiceChatID", void 0),
+          N.c([d.observable], e.prototype, "m_nFailuresThisInitiate", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bIsConnectionAttemptOverTwoSeconds",
@@ -24646,7 +24670,7 @@
           e
         );
       })(),
-      No = (function() {
+      Ro = (function() {
         return function() {
           (this.m_SSRC = 0),
             (this.m_MostRecentDelayEstimateMs = 0),
@@ -24726,27 +24750,27 @@
                   t.RefreshPushToTalkKeySettings();
               });
           }),
-          R.c([d.observable], e.prototype, "m_VoiceInputGain", void 0),
-          R.c([d.observable], e.prototype, "m_VoiceOutputGain", void 0),
-          R.c([d.observable], e.prototype, "m_NoiseGateLevel", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_VoiceInputGain", void 0),
+          N.c([d.observable], e.prototype, "m_VoiceOutputGain", void 0),
+          N.c([d.observable], e.prototype, "m_NoiseGateLevel", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_VoiceUseEchoCancellation",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_VoiceUseNoiseCancellation",
             void 0
           ),
-          R.c([d.observable], e.prototype, "m_VoiceUseAutoGainControl", void 0),
-          R.c([d.observable], e.prototype, "m_SelectedMicID", void 0),
-          R.c([d.observable], e.prototype, "m_SelectedOutputID", void 0),
-          R.c([d.observable], e.prototype, "m_bPlayPTTSounds", void 0),
-          R.c([d.observable], e.prototype, "m_bSettingsLoaded", void 0),
-          R.c([d.observable], e.prototype, "m_bHasResetOpenMicHotkey", void 0),
+          N.c([d.observable], e.prototype, "m_VoiceUseAutoGainControl", void 0),
+          N.c([d.observable], e.prototype, "m_SelectedMicID", void 0),
+          N.c([d.observable], e.prototype, "m_SelectedOutputID", void 0),
+          N.c([d.observable], e.prototype, "m_bPlayPTTSounds", void 0),
+          N.c([d.observable], e.prototype, "m_bSettingsLoaded", void 0),
+          N.c([d.observable], e.prototype, "m_bHasResetOpenMicHotkey", void 0),
           e
         );
       })(),
@@ -24755,8 +24779,8 @@
           (this.muted = !1), (this.gain = 1);
         }
         return (
-          R.c([d.observable], e.prototype, "muted", void 0),
-          R.c([d.observable], e.prototype, "gain", void 0),
+          N.c([d.observable], e.prototype, "muted", void 0),
+          N.c([d.observable], e.prototype, "gain", void 0),
           e
         );
       })(),
@@ -24767,9 +24791,9 @@
             (this.has_no_mic_for_session = !1);
         }
         return (
-          R.c([d.observable], e.prototype, "mic_muted_locally", void 0),
-          R.c([d.observable], e.prototype, "output_muted_locally", void 0),
-          R.c([d.observable], e.prototype, "has_no_mic_for_session", void 0),
+          N.c([d.observable], e.prototype, "mic_muted_locally", void 0),
+          N.c([d.observable], e.prototype, "output_muted_locally", void 0),
+          N.c([d.observable], e.prototype, "has_no_mic_for_session", void 0),
           e
         );
       })(),
@@ -24790,9 +24814,9 @@
                 (this.audio_buffer.StopPlayback(),
                 (this.audio_buffer = void 0));
           }),
-          R.c([d.observable], e.prototype, "partner_accountid", void 0),
-          R.c([d.observable], e.prototype, "voice_chatid", void 0),
-          R.c([d.observable], e.prototype, "previously_joined", void 0),
+          N.c([d.observable], e.prototype, "partner_accountid", void 0),
+          N.c([d.observable], e.prototype, "voice_chatid", void 0),
+          N.c([d.observable], e.prototype, "previously_joined", void 0),
           e
         );
       })(),
@@ -24800,7 +24824,7 @@
         function o(e) {
           var l = this;
           if (
-            ((this.m_VoiceCallState = new Ro()),
+            ((this.m_VoiceCallState = new No()),
             (this.m_mapOneOnOneCallsWaitingJoinOrAccept = d.observable.map()),
             (this.m_hRegisterForPushToTalkStateChange = null),
             (this.m_bPushToTalkEnabled = !1),
@@ -25209,7 +25233,7 @@
                     t.m_bPushToMuteEnabled ||
                     (null != SteamClient.WebChat &&
                       null != SteamClient.WebChat.SetPushToTalkHotKey &&
-                      (Object(N.a)(
+                      (Object(R.a)(
                         t.m_Settings.m_bSettingsLoaded,
                         "Settings not loaded but RefreshPushToTalkKeySettings hit"
                       ),
@@ -27103,7 +27127,7 @@
                 e.getStats(function(e) {
                   e.result().forEach(function(t) {
                     if ("ssrc" == t.type) {
-                      var n = new No(),
+                      var n = new Ro(),
                         e = t.names(),
                         o = e.indexOf("mediaType");
                       if (-1 != o && "audio" == t.stat(e[o])) {
@@ -27404,7 +27428,7 @@
                       "Resetting voice chat state and initiating to room " +
                         t.chatID
                     )
-                  : (Object(N.a)(
+                  : (Object(R.a)(
                       this.m_VoiceEchoLocalMic,
                       "Shouldn't hit local mic access only without echo local mic on"
                     ),
@@ -27780,121 +27804,121 @@
           }),
           (o.k_MaxPerUserGainMultiplier = 2),
           (o.k_MaxInputOutputGainValue = 4),
-          R.c([d.observable], o.prototype, "m_VoiceCallState", void 0),
-          R.c([d.observable], o.prototype, "m_bPushToTalkEnabled", void 0),
-          R.c([d.observable], o.prototype, "m_bPushToMuteEnabled", void 0),
-          R.c([d.observable], o.prototype, "m_bVoicePTTStateEnabled", void 0),
-          R.c([d.observable], o.prototype, "m_VKPushToTalkHotKey", void 0),
-          R.c(
+          N.c([d.observable], o.prototype, "m_VoiceCallState", void 0),
+          N.c([d.observable], o.prototype, "m_bPushToTalkEnabled", void 0),
+          N.c([d.observable], o.prototype, "m_bPushToMuteEnabled", void 0),
+          N.c([d.observable], o.prototype, "m_bVoicePTTStateEnabled", void 0),
+          N.c([d.observable], o.prototype, "m_VKPushToTalkHotKey", void 0),
+          N.c(
             [d.observable],
             o.prototype,
             "m_strPushToTalkDisplayString",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             o.prototype,
             "m_bUserHasDeniedMicPermissions",
             void 0
           ),
-          R.c([d.observable], o.prototype, "m_bOutputMuted", void 0),
-          R.c([d.observable], o.prototype, "m_AudioContext", void 0),
-          R.c([d.observable], o.prototype, "m_rgAudioStreams", void 0),
-          R.c([d.observable], o.prototype, "m_MicVolumeMeter", void 0),
-          R.c([d.observable], o.prototype, "m_MicNoiseGate", void 0),
-          R.c([d.observable], o.prototype, "m_MicInputGainNode", void 0),
-          R.c([d.observable], o.prototype, "m_PeerConnection", void 0),
-          R.c([d.observable], o.prototype, "m_Settings", void 0),
-          R.c([d.observable], o.prototype, "m_bLocalMicTestActive", void 0),
-          R.c([d.observable], o.prototype, "m_bForceConnectingStatus", void 0),
-          R.c(
+          N.c([d.observable], o.prototype, "m_bOutputMuted", void 0),
+          N.c([d.observable], o.prototype, "m_AudioContext", void 0),
+          N.c([d.observable], o.prototype, "m_rgAudioStreams", void 0),
+          N.c([d.observable], o.prototype, "m_MicVolumeMeter", void 0),
+          N.c([d.observable], o.prototype, "m_MicNoiseGate", void 0),
+          N.c([d.observable], o.prototype, "m_MicInputGainNode", void 0),
+          N.c([d.observable], o.prototype, "m_PeerConnection", void 0),
+          N.c([d.observable], o.prototype, "m_Settings", void 0),
+          N.c([d.observable], o.prototype, "m_bLocalMicTestActive", void 0),
+          N.c([d.observable], o.prototype, "m_bForceConnectingStatus", void 0),
+          N.c(
             [d.observable],
             o.prototype,
             "m_bForceReconnectingStatus",
             void 0
           ),
-          R.c([d.action.bound], o.prototype, "SetSelectedMic", null),
-          R.c([d.action.bound], o.prototype, "SetSelectedOutput", null),
-          R.c([d.action.bound], o.prototype, "SetUseEchoCancellation", null),
-          R.c([d.action.bound], o.prototype, "SetUseNoiseCancellation", null),
-          R.c([d.action.bound], o.prototype, "SetUseAutoGainControl", null),
-          R.c([d.action.bound], o.prototype, "SetVoiceEchoLocalMic", null),
-          R.c([d.action.bound], o.prototype, "SetVoiceLogDetails", null),
-          R.c([d.action.bound], o.prototype, "GetVoiceLogDetails", null),
-          R.c([d.action.bound], o.prototype, "SetUseNoiseGateLevel", null),
-          R.c([d.action.bound], o.prototype, "SetVoiceInputGain", null),
-          R.c([d.action.bound], o.prototype, "SetVoiceOutputGain", null),
-          R.c([d.action.bound], o.prototype, "ForceReconnectingStatus", null),
-          R.c([d.action.bound], o.prototype, "ForceConnectingStatus", null),
-          R.c([d.action.bound], o.prototype, "LogMsg", null),
-          R.c([d.action.bound], o.prototype, "GetVoiceLogs", null),
-          R.c([d.action.bound], o.prototype, "OnPushToTalkReleased", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "SetSelectedMic", null),
+          N.c([d.action.bound], o.prototype, "SetSelectedOutput", null),
+          N.c([d.action.bound], o.prototype, "SetUseEchoCancellation", null),
+          N.c([d.action.bound], o.prototype, "SetUseNoiseCancellation", null),
+          N.c([d.action.bound], o.prototype, "SetUseAutoGainControl", null),
+          N.c([d.action.bound], o.prototype, "SetVoiceEchoLocalMic", null),
+          N.c([d.action.bound], o.prototype, "SetVoiceLogDetails", null),
+          N.c([d.action.bound], o.prototype, "GetVoiceLogDetails", null),
+          N.c([d.action.bound], o.prototype, "SetUseNoiseGateLevel", null),
+          N.c([d.action.bound], o.prototype, "SetVoiceInputGain", null),
+          N.c([d.action.bound], o.prototype, "SetVoiceOutputGain", null),
+          N.c([d.action.bound], o.prototype, "ForceReconnectingStatus", null),
+          N.c([d.action.bound], o.prototype, "ForceConnectingStatus", null),
+          N.c([d.action.bound], o.prototype, "LogMsg", null),
+          N.c([d.action.bound], o.prototype, "GetVoiceLogs", null),
+          N.c([d.action.bound], o.prototype, "OnPushToTalkReleased", null),
+          N.c(
             [d.action.bound, Object(dt.a)(150)],
             o.prototype,
             "DebouncedToggleMicMuting",
             null
           ),
-          R.c([d.action.bound], o.prototype, "OnPushToTalkStateChange", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "OnPushToTalkStateChange", null),
+          N.c(
             [d.action.bound],
             o.prototype,
             "UpdateNoiseGateOnActiveMic",
             null
           ),
-          R.c([d.action.bound], o.prototype, "OnAudioContextStateChange", null),
-          R.c([d.action.bound], o.prototype, "OnIceCandidate", null),
-          R.c([d.action.bound], o.prototype, "AddRemoteIceCandidate", null),
-          R.c([d.action.bound], o.prototype, "OnSignalingStateChange", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "OnAudioContextStateChange", null),
+          N.c([d.action.bound], o.prototype, "OnIceCandidate", null),
+          N.c([d.action.bound], o.prototype, "AddRemoteIceCandidate", null),
+          N.c([d.action.bound], o.prototype, "OnSignalingStateChange", null),
+          N.c(
             [d.action.bound],
             o.prototype,
             "OnIceConnectionStateChange",
             null
           ),
-          R.c([d.action.bound], o.prototype, "OnIceGatheringStateChange", null),
-          R.c([d.action.bound], o.prototype, "OnRemoveRemoteStream", null),
-          R.c([d.action.bound], o.prototype, "OnAddRemoteStream", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "OnIceGatheringStateChange", null),
+          N.c([d.action.bound], o.prototype, "OnRemoveRemoteStream", null),
+          N.c([d.action.bound], o.prototype, "OnAddRemoteStream", null),
+          N.c(
             [d.action.bound],
             o.prototype,
             "ModifyLocalSDPBeforeSetting",
             null
           ),
-          R.c([d.action.bound], o.prototype, "OnCreateOfferSuccess", null),
-          R.c([d.action.bound], o.prototype, "OnCreateOfferError", null),
-          R.c([d.action.bound], o.prototype, "OnNoiseGateMessage", null),
-          R.c([d.action.bound], o.prototype, "SetupNoiseGateOnMic", null),
-          R.c([d.action.bound], o.prototype, "OnGetUserMediaSuccess", null),
-          R.c([d.action.bound], o.prototype, "OnGetUserMediaFailure", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "OnCreateOfferSuccess", null),
+          N.c([d.action.bound], o.prototype, "OnCreateOfferError", null),
+          N.c([d.action.bound], o.prototype, "OnNoiseGateMessage", null),
+          N.c([d.action.bound], o.prototype, "SetupNoiseGateOnMic", null),
+          N.c([d.action.bound], o.prototype, "OnGetUserMediaSuccess", null),
+          N.c([d.action.bound], o.prototype, "OnGetUserMediaFailure", null),
+          N.c(
             [d.action.bound],
             o.prototype,
             "OnSetUpdatedLocalDescriptionSuccess",
             null
           ),
-          R.c(
+          N.c(
             [d.action.bound],
             o.prototype,
             "OnSetUpdatedLocalDescriptionFailure",
             null
           ),
-          R.c([d.action.bound], o.prototype, "OnCreateAnswerSuccess", null),
-          R.c([d.action.bound], o.prototype, "OnCreateAnswerError", null),
-          R.c([d.action.bound], o.prototype, "OnAcceptOneOnOneVoiceChat", null),
-          R.c([d.action.bound], o.prototype, "OnRejectOneOnOneVoiceChat", null),
-          R.c([d.action.bound], o.prototype, "PlayRingSound", null),
-          R.c([d.action.bound], o.prototype, "ProcessStatsReport", null),
-          R.c(
+          N.c([d.action.bound], o.prototype, "OnCreateAnswerSuccess", null),
+          N.c([d.action.bound], o.prototype, "OnCreateAnswerError", null),
+          N.c([d.action.bound], o.prototype, "OnAcceptOneOnOneVoiceChat", null),
+          N.c([d.action.bound], o.prototype, "OnRejectOneOnOneVoiceChat", null),
+          N.c([d.action.bound], o.prototype, "PlayRingSound", null),
+          N.c([d.action.bound], o.prototype, "ProcessStatsReport", null),
+          N.c(
             [d.action.bound],
             o.prototype,
             "ProcessReceiverStatsReport",
             null
           ),
-          R.c([d.action.bound], o.prototype, "CheckConnection", null),
-          R.c([d.action.bound], o.prototype, "ScheduledInitiate", null),
-          R.c([d.action.bound], o.prototype, "OnRequestMicrophoneAccess", null),
-          R.c([d.action.bound], o.prototype, "UploadClientSideVoiceLogs", null),
+          N.c([d.action.bound], o.prototype, "CheckConnection", null),
+          N.c([d.action.bound], o.prototype, "ScheduledInitiate", null),
+          N.c([d.action.bound], o.prototype, "OnRequestMicrophoneAccess", null),
+          N.c([d.action.bound], o.prototype, "UploadClientSideVoiceLogs", null),
           o
         );
       })(),
@@ -28085,11 +28109,11 @@
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_ParentalState", void 0),
-          R.c([d.action], e.prototype, "UpdateParentalState", null),
-          R.c([d.computed], e.prototype, "isEnabled", null),
-          R.c([d.computed], e.prototype, "isLocked", null),
-          R.c([d.computed], e.prototype, "locked", null),
+          N.c([d.observable], e.prototype, "m_ParentalState", void 0),
+          N.c([d.action], e.prototype, "UpdateParentalState", null),
+          N.c([d.computed], e.prototype, "isEnabled", null),
+          N.c([d.computed], e.prototype, "isLocked", null),
+          N.c([d.computed], e.prototype, "locked", null),
           e
         );
       })(),
@@ -28163,7 +28187,7 @@
             (this.m_rgMembers = e), this.Sort();
           }),
           (e.prototype.SortedInsert = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               !this.BHasMember(e.accountid),
               "Double insert into bucket for accountid",
               e.accountid
@@ -28178,7 +28202,7 @@
           (e.prototype.Sort = function() {
             this.m_rgMembers.sort(this.m_fnSort);
           }),
-          R.c([M.a], e.prototype, "OnAppInfoLoaded", null),
+          N.c([M.a], e.prototype, "OnAppInfoLoaded", null),
           e
         );
       })(),
@@ -28282,7 +28306,7 @@
               n = this.m_mapGroupBuckets.get(e);
             if (n.bFlatList)
               return (
-                Object(N.a)(
+                Object(R.a)(
                   1 == n.mapBuckets.size,
                   "Flat list has too many buckets"
                 ),
@@ -28389,7 +28413,7 @@
               var o = performance.now(),
                 i = !1;
               if (n.bFlatList)
-                Object(N.a)(1 == n.mapBuckets.size, "Flat map is too large"),
+                Object(R.a)(1 == n.mapBuckets.size, "Flat map is too large"),
                   n.mapBuckets.get(0).Remove(t.accountid),
                   n.mapBuckets.get(0).SortedInsert(t),
                   (i = !0);
@@ -28468,7 +28492,7 @@
             var t = this.m_mapGroupBuckets.get(e);
             if (t) {
               if (t.bFlatList) {
-                Object(N.a)(
+                Object(R.a)(
                   1 == t.mapBuckets.size,
                   "Flat list has too many buckets"
                 );
@@ -28512,7 +28536,7 @@
               n = this.m_mapGroupBuckets.get(e);
             n.mapBuckets.clear(),
               n.groupSingletons.ClearMemberList(),
-              Object(N.a)(n, "PerformInitialPopulate didn't find group");
+              Object(R.a)(n, "PerformInitialPopulate didn't find group");
             var o = performance.now(),
               i = Zo.ChatStore.GetChatRoomGroup(
                 e
@@ -28569,14 +28593,14 @@
           (e.prototype.AddMemberToBucketID = function(e, t, n) {
             var o = this;
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 !this.BIsMemberInAnyBucket(e, n.accountid),
                 "Trying to double add accountid",
                 n.accountid,
                 "which is already in bucket",
                 this.FindCurrentBucketForMember(e, n.accountid)
               ),
-              Object(N.a)(
+              Object(R.a)(
                 !e.bFlatList || 0 == t,
                 "Trying to add to non-default bucket in flat list"
               ),
@@ -28604,12 +28628,12 @@
             return -1 != e.id;
           }),
           (e.prototype.AddToSingletons = function(e, t) {
-            Object(N.a)(!e.bFlatList, "Adding to singletons in flat list"),
+            Object(R.a)(!e.bFlatList, "Adding to singletons in flat list"),
               e.groupSingletons.SortedInsert(t);
           }),
           (e.prototype.RemoveFromSingletons = function(e, t) {
             return (
-              Object(N.a)(
+              Object(R.a)(
                 !e.bFlatList,
                 "Removing from singletons in flat list"
               ),
@@ -28678,10 +28702,10 @@
                 this.FireMemberListChanged(n);
             }
           }),
-          R.c([M.a], e.prototype, "ListenForSettingsChanges", null),
-          R.c([M.a], e.prototype, "OnPlayerGameChanged", null),
-          R.c([M.a], e.prototype, "OnPersonaStateChanged", null),
-          R.c([M.a], e.prototype, "OnPartyBeaconsUpdated", null),
+          N.c([M.a], e.prototype, "ListenForSettingsChanges", null),
+          N.c([M.a], e.prototype, "OnPlayerGameChanged", null),
+          N.c([M.a], e.prototype, "OnPersonaStateChanged", null),
+          N.c([M.a], e.prototype, "OnPartyBeaconsUpdated", null),
           e
         );
       })();
@@ -28730,7 +28754,7 @@
             (this.m_GroupMemberStore = new Ho()),
             (this.m_bReadyToRender = !1),
             (this.m_bShuttingDown = !1),
-            Object(N.a)(!Zo, "FriendsUIApp already initialized"),
+            Object(R.a)(!Zo, "FriendsUIApp already initialized"),
             (Zo = this),
             ((window.g_FriendsUIApp = this).m_Storage = e),
             (this.m_SettingsStore = new ho(e)),
@@ -28859,8 +28883,8 @@
             configurable: !0
           }),
           (o.prototype.SetReadyToRender = function() {
-            return R.b(this, void 0, void 0, function() {
-              return R.e(this, function(e) {
+            return N.b(this, void 0, void 0, function() {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return this.m_bReadyToRender
@@ -28899,16 +28923,16 @@
               (this.m_BrowserContextDefaultTarget = e);
           }),
           (o.prototype.InitAdjustClockDriftFromServer = function() {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t = this;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 return [
                   2,
                   new Promise(function(n, o) {
                     t.m_CMInterface.RunWhenLoggedOn(function() {
-                      return R.b(t, void 0, void 0, function() {
+                      return N.b(t, void 0, void 0, function() {
                         var t = this;
-                        return R.e(this, function(e) {
+                        return N.e(this, function(e) {
                           switch (e.label) {
                             case 0:
                               return (
@@ -28957,7 +28981,7 @@
           (o.prototype.GetLocalMidnightInRTime32 = function(e) {
             void 0 === o.sm_tzOffset &&
               ((o.sm_tzOffset = 60 * new Date().getTimezoneOffset()),
-              Object(N.a)(
+              Object(R.a)(
                 o.sm_tzOffset || 0 === o.sm_tzOffset,
                 "Computed invalid timezone offset " + o.sm_tzOffset
               ));
@@ -28973,8 +28997,8 @@
           }),
           (o.prototype.ShowCloseActiveVoiceConfirmation = function(e, t) {}),
           (o.sm_msStartup = performance.now()),
-          R.c([d.observable], o.prototype, "m_bReadyToRender", void 0),
-          R.c([d.computed], o.prototype, "ready_to_render", null),
+          N.c([d.observable], o.prototype, "m_bReadyToRender", void 0),
+          N.c([d.computed], o.prototype, "ready_to_render", null),
           o
         );
       })(),
@@ -28993,7 +29017,7 @@
         return (e.m_coordinator = new si()), e;
       }
       return (
-        R.d(e, t),
+        N.d(e, t),
         (e.prototype.OnDrop = function(e, t) {
           e < t && t--, t != e && this.props.onReorder(e, t);
         }),
@@ -29030,7 +29054,7 @@
             ye.createElement("div", { className: "DialogReorderableList" }, i)
           );
         }),
-        R.c([M.a], e.prototype, "OnDrop", null),
+        N.c([M.a], e.prototype, "OnDrop", null),
         e
       );
     })(ye.Component);
@@ -29138,7 +29162,7 @@
                 });
             }
           }),
-          R.c([M.a], e.prototype, "OnDragGhostRef", null),
+          N.c([M.a], e.prototype, "OnDragGhostRef", null),
           e
         );
       })(),
@@ -29161,7 +29185,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.GetDragDocument = function() {
             return (
               this.m_DragInfo.ownerWin && this.m_DragInfo.ownerWin.document
@@ -29265,7 +29289,7 @@
                   }),
               ye.createElement(
                 "div",
-                R.a({ className: t }, e),
+                N.a({ className: t }, e),
                 this.props.children
               )
             );
@@ -29295,11 +29319,11 @@
               }
             return e;
           }),
-          R.c([M.a], e.prototype, "ProcessDragMove", null),
-          R.c([M.a], e.prototype, "OnMouseDown", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([M.a], e.prototype, "OnTouchStart", null),
-          R.c([M.a], e.prototype, "OnTouchEnd", null),
+          N.c([M.a], e.prototype, "ProcessDragMove", null),
+          N.c([M.a], e.prototype, "OnMouseDown", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([M.a], e.prototype, "OnTouchStart", null),
+          N.c([M.a], e.prototype, "OnTouchEnd", null),
           e
         );
       })(ye.Component),
@@ -29308,7 +29332,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnRef = function(e) {
             e && e.appendChild(this.props.elContent);
           }),
@@ -29318,7 +29342,7 @@
               ref: this.OnRef
             });
           }),
-          R.c([M.a], t.prototype, "OnRef", null),
+          N.c([M.a], t.prototype, "OnRef", null),
           t
         );
       })(ye.Component),
@@ -29330,7 +29354,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnRef = function(e) {
             e && e.appendChild(this.props.elContent);
           }),
@@ -29353,7 +29377,7 @@
               ref: this.OnRef
             });
           }),
-          R.c([M.a], e.prototype, "OnRef", null),
+          N.c([M.a], e.prototype, "OnRef", null),
           e
         );
       })(ye.Component),
@@ -29362,7 +29386,7 @@
           return (null !== t && t.apply(this, arguments)) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnDrop = function(e) {
             t.prototype.OnDrop.call(this, e),
               this.props.onDrop(e.props.data, this.props.index);
@@ -29389,7 +29413,7 @@
             return (t.state = {}), t;
           }
           return (
-            R.d(e, n),
+            N.d(e, n),
             (e.prototype.componentDidMount = function() {
               this.props.coordinator.RegisterDropRegion(this);
             }),
@@ -29517,7 +29541,7 @@
           return (o.m_props = {}), (o.m_object = e), (o.m_propTargets = t), o;
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           (e.prototype.Start = function() {
             for (var e in ((this.m_props = {}), this.m_propTargets)) {
               var t = parseFloat(this.m_object[e]) || 0,
@@ -29548,7 +29572,7 @@
           );
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           (e.prototype.Start = function() {
             for (var e in ((this.m_props = {}), this.m_propTargets)) {
               var t = parseFloat(this.m_component.state[e]) || 0,
@@ -29588,7 +29612,7 @@
     function wi(e) {
       var t = e.children,
         n = e.bCenterVertically,
-        o = R.f(e, ["children", "bCenterVertically"]),
+        o = N.f(e, ["children", "bCenterVertically"]),
         i =
           "DialogContent _DialogLayout" +
           (e.className ? " " + e.className : "");
@@ -29596,7 +29620,7 @@
         n && (i += " _DialogCenterVertically"),
         ye.createElement(
           "div",
-          R.a({}, o, { className: i }),
+          N.a({}, o, { className: i }),
           ye.createElement("div", { className: "DialogContent_InnerWidth" }, t)
         )
       );
@@ -29606,34 +29630,34 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.OnSubmit = function(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }),
         (t.prototype.render = function() {
           return ye.createElement(
             "form",
-            R.a({}, this.props, { onSubmit: this.OnSubmit })
+            N.a({}, this.props, { onSubmit: this.OnSubmit })
           );
         }),
-        R.c([M.a], t.prototype, "OnSubmit", null),
+        N.c([M.a], t.prototype, "OnSubmit", null),
         t
       );
     })(ye.Component);
     function Di(e) {
       var t = e.classNameContent,
         n = e.bCenterVertically,
-        o = R.f(e, ["classNameContent", "bCenterVertically"]);
+        o = N.f(e, ["classNameContent", "bCenterVertically"]);
       return ye.createElement(
         wi,
         { className: t, bCenterVertically: n },
-        ye.createElement(Mi, R.a({}, o))
+        ye.createElement(Mi, N.a({}, o))
       );
     }
     function Ti(e) {
       e.svgicon;
       var t,
-        n = R.f(e, ["svgicon"]),
+        n = N.f(e, ["svgicon"]),
         o =
           "DialogButton _DialogLayout Primary" +
           (e.className ? " " + e.className : ""),
@@ -29642,7 +29666,7 @@
         i && ((o += " hasSVGIcon"), (t = e.svgicon)),
         ye.createElement(
           "button",
-          R.a({ type: e.onClick ? "button" : "submit" }, n, { className: o }),
+          N.a({ type: e.onClick ? "button" : "submit" }, n, { className: o }),
           i && ye.createElement(t, null),
           e.children
         )
@@ -29651,7 +29675,7 @@
     function Gi(e) {
       e.svgicon;
       var t,
-        n = R.f(e, ["svgicon"]),
+        n = N.f(e, ["svgicon"]),
         o =
           "DialogButton _DialogLayout Secondary" +
           (e.className ? " " + e.className : ""),
@@ -29660,31 +29684,31 @@
         i && ((o += " hasSVGIcon"), (t = e.svgicon)),
         ye.createElement(
           "button",
-          R.a({ type: "button" }, n, { className: o }),
-          i && ye.createElement(t, null),
-          e.children
-        )
-      );
-    }
-    function Ri(e) {
-      e.svgicon;
-      var t,
-        n = R.f(e, ["svgicon"]),
-        o = "TextButton" + (e.className ? " " + e.className : ""),
-        i = void 0 !== e.svgicon;
-      return (
-        i && ((o += " hasSVGIcon"), (t = e.svgicon)),
-        ye.createElement(
-          "button",
-          R.a({ type: "button" }, n, { className: o }),
+          N.a({ type: "button" }, n, { className: o }),
           i && ye.createElement(t, null),
           e.children
         )
       );
     }
     function Ni(e) {
+      e.svgicon;
+      var t,
+        n = N.f(e, ["svgicon"]),
+        o = "TextButton" + (e.className ? " " + e.className : ""),
+        i = void 0 !== e.svgicon;
+      return (
+        i && ((o += " hasSVGIcon"), (t = e.svgicon)),
+        ye.createElement(
+          "button",
+          N.a({ type: "button" }, n, { className: o }),
+          i && ye.createElement(t, null),
+          e.children
+        )
+      );
+    }
+    function Ri(e) {
       var t = "DialogHBar" + (e.className ? " " + e.className : "");
-      return ye.createElement("div", R.a({}, e, { className: t }));
+      return ye.createElement("div", N.a({}, e, { className: t }));
     }
     function ki(e) {
       return ye.createElement(
@@ -29716,7 +29740,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnInputRef = function(e) {
             this.m_elInput = e;
           }),
@@ -29772,7 +29796,7 @@
               ));
           }),
           (e.prototype.componentWillReceiveProps = function(e) {
-            Object(N.a)(
+            Object(R.a)(
               !e.bShowClearAction || e.onChange,
               "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
             );
@@ -29783,7 +29807,7 @@
               n = e.explainer,
               o = e.bShowCopyAction,
               i = e.bShowClearAction,
-              r = R.f(e, [
+              r = N.f(e, [
                 "label",
                 "explainer",
                 "bShowCopyAction",
@@ -29814,7 +29838,7 @@
                 { className: "DialogInput_Wrapper _DialogLayout" },
                 ye.createElement(
                   "input",
-                  R.a({ type: "text" }, r, {
+                  N.a({ type: "text" }, r, {
                     className: a,
                     ref: this.OnInputRef
                   })
@@ -29874,9 +29898,9 @@
                 )
               : m;
           }),
-          R.c([M.a], e.prototype, "OnInputRef", null),
-          R.c([M.a], e.prototype, "OnCopyClick", null),
-          R.c([M.a], e.prototype, "OnClearClick", null),
+          N.c([M.a], e.prototype, "OnInputRef", null),
+          N.c([M.a], e.prototype, "OnCopyClick", null),
+          N.c([M.a], e.prototype, "OnClearClick", null),
           e
         );
       })(ye.PureComponent),
@@ -29885,7 +29909,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnBackgroundClick = function() {
             this.m_elInput && this.m_elInput.focus();
           }),
@@ -29903,7 +29927,7 @@
               n = e.explainer,
               o = e.children,
               i = (e.className,
-              R.f(e, ["label", "explainer", "children", "className"]));
+              N.f(e, ["label", "explainer", "children", "className"]));
             return ye.createElement(
               "div",
               {
@@ -29937,7 +29961,7 @@
                     }),
                     ye.createElement(
                       "input",
-                      R.a({ type: "text" }, i, {
+                      N.a({ type: "text" }, i, {
                         className:
                           "DialogListBuilderInput_Input DialogInputPlaceholder",
                         ref: this.OnInputRef,
@@ -29957,9 +29981,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnBackgroundClick", null),
-          R.c([M.a], t.prototype, "OnInputFocus", null),
-          R.c([M.a], t.prototype, "OnInputBlur", null),
+          N.c([M.a], t.prototype, "OnBackgroundClick", null),
+          N.c([M.a], t.prototype, "OnInputFocus", null),
+          N.c([M.a], t.prototype, "OnInputBlur", null),
           t
         );
       })(Li),
@@ -29969,7 +29993,7 @@
           return (t.state = { checked: e.checked, disabled: e.disabled }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.checked != this.state.checked &&
               this.setState({ checked: e.checked }),
@@ -30004,8 +30028,8 @@
             32 == e.keyCode &&
               (this.Toggle(), e.preventDefault(), e.stopPropagation());
           }),
-          R.c([M.a], e.prototype, "Toggle", null),
-          R.c([M.a], e.prototype, "KeyDown", null),
+          N.c([M.a], e.prototype, "Toggle", null),
+          N.c([M.a], e.prototype, "KeyDown", null),
           e
         );
       })(ye.Component),
@@ -30014,7 +30038,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = "DialogCheckbox" + (this.state.checked ? " Active" : "");
             return (
@@ -30066,7 +30090,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.state.checked ? " Active" : "";
             return ye.createElement(
@@ -30097,7 +30121,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnOffKeyDown = function(e) {
             (37 == e.keyCode && this.state.checked) ||
             (39 == e.keyCode && !this.state.checked)
@@ -30161,7 +30185,7 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnOffKeyDown", null),
+          N.c([M.a], t.prototype, "OnOffKeyDown", null),
           t
         );
       })(Pi),
@@ -30171,7 +30195,7 @@
           return (t.state = { value: t.ClampValue(e.value) }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "value", {
             get: function() {
               return this.state.value;
@@ -30296,7 +30320,7 @@
             var o = this.props,
               i = o.label,
               r = o.explainer,
-              a = (R.f(o, ["label", "explainer"]), void 0);
+              a = (N.f(o, ["label", "explainer"]), void 0);
             return (
               r &&
                 (a = ye.createElement(
@@ -30333,13 +30357,13 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnMouseDown", null),
-          R.c([M.a], e.prototype, "OnMouseMove", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([M.a], e.prototype, "OnTouchStart", null),
-          R.c([M.a], e.prototype, "OnTouchMove", null),
-          R.c([M.a], e.prototype, "OnTouchEnd", null),
-          R.c([M.a], e.prototype, "OnKeyDown", null),
+          N.c([M.a], e.prototype, "OnMouseDown", null),
+          N.c([M.a], e.prototype, "OnMouseMove", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([M.a], e.prototype, "OnTouchStart", null),
+          N.c([M.a], e.prototype, "OnTouchMove", null),
+          N.c([M.a], e.prototype, "OnTouchEnd", null),
+          N.c([M.a], e.prototype, "OnKeyDown", null),
           e
         );
       })(ye.Component),
@@ -30355,7 +30379,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.FindAndSetActiveOption = function(e) {
             var t = this.FindActiveOptionIndex(e);
             t !== this.state.iSelectedOption &&
@@ -30495,11 +30519,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnInputRef", null),
-          R.c([M.a], e.prototype, "ToggleMenu", null),
-          R.c([M.a], e.prototype, "OnItemSelected", null),
-          R.c([M.a], e.prototype, "ShowMenu", null),
-          R.c([M.a], e.prototype, "HideMenu", null),
+          N.c([M.a], e.prototype, "OnInputRef", null),
+          N.c([M.a], e.prototype, "ToggleMenu", null),
+          N.c([M.a], e.prototype, "OnItemSelected", null),
+          N.c([M.a], e.prototype, "ShowMenu", null),
+          N.c([M.a], e.prototype, "HideMenu", null),
           e
         );
       })(ye.Component),
@@ -30509,7 +30533,7 @@
           return (t.state = { iFocus: 0 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnItemClicked = function(e) {
             var t = parseInt(
               e.currentTarget.getAttribute("data-dropdown-index")
@@ -30539,7 +30563,7 @@
               e
             );
           }),
-          R.c([M.a], e.prototype, "OnItemClicked", null),
+          N.c([M.a], e.prototype, "OnItemClicked", null),
           e
         );
       })(ye.Component),
@@ -30547,7 +30571,7 @@
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
-        return R.d(t, e), t;
+        return N.d(t, e), t;
       })(ye.Component),
       Wi = (function(n) {
         function e(e) {
@@ -30555,11 +30579,11 @@
           return (t.state = { activePage: -1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnActivePageRef = function(e) {
             e instanceof Hi
               ? (this.m_ActivePage = e)
-              : (Object(N.a)(
+              : (Object(R.a)(
                   !e,
                   'PagedSettingsDialog page "' +
                     this.GetActivePage().title +
@@ -30676,14 +30700,14 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnActivePageRef", null),
+          N.c([M.a], e.prototype, "OnActivePageRef", null),
           e
         );
       })(ye.Component);
     function zi(n) {
       return function(e) {
         var t = n + (e.className ? " " + e.className : "");
-        return ye.createElement("div", R.a({}, e, { className: t }));
+        return ye.createElement("div", N.a({}, e, { className: t }));
       };
     }
     var qi = (function(n) {
@@ -30697,7 +30721,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BindDiv = function(e) {
             this.m_divElement = e;
           }),
@@ -30770,7 +30794,7 @@
               e.fnDragLeave,
               e.fnDragOver,
               e.fnDrop,
-              R.f(e, [
+              N.f(e, [
                 "rgAcceptedTypes",
                 "bAcceptsFiles",
                 "fnDragEnter",
@@ -30780,7 +30804,7 @@
               ]));
             return ye.createElement(
               "div",
-              R.a({}, t, {
+              N.a({}, t, {
                 ref: this.BindDiv,
                 className: "DropTarget " + this.props.className,
                 onDragEnter: this.OnDragEnter,
@@ -30791,12 +30815,12 @@
               this.props.children
             );
           }),
-          R.c([M.a], e.prototype, "BindDiv", null),
-          R.c([M.a], e.prototype, "DeliverDeferredDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "BindDiv", null),
+          N.c([M.a], e.prototype, "DeliverDeferredDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
           e
         );
       })(ye.PureComponent),
@@ -30809,7 +30833,7 @@
           return (t.state = { maximized: t.BIsMaximized() }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BIsMaximized = function() {
             var e =
                 this.props.popup.screen.availWidth -
@@ -30892,7 +30916,7 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "UpdateMaximizeState", null),
+          N.c([M.a], e.prototype, "UpdateMaximizeState", null),
           e
         );
       })(ye.Component),
@@ -30902,7 +30926,7 @@
           return (t.state = { error: null }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidCatch = function(e, t) {
             var n = { error: e, info: t };
             this.setState({ error: n });
@@ -30973,7 +30997,7 @@
             }
             return this.props.children;
           }),
-          R.c([M.a], e.prototype, "clearError", null),
+          N.c([M.a], e.prototype, "clearError", null),
           e
         );
       })(ye.Component);
@@ -30997,7 +31021,7 @@
         t.bDestructiveWarning && o.push("Destructive"),
         ye.createElement(
           "div",
-          R.a({ className: o.join(" ") }, n, { ref: e }),
+          N.a({ className: o.join(" ") }, n, { ref: e }),
           ye.createElement(
             "div",
             { className: "ModalPosition_Content" },
@@ -31022,7 +31046,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.Cancel = function() {
           this.props.onCancel(), this.props.closeModal();
         }),
@@ -31076,8 +31100,8 @@
             )
           );
         }),
-        R.c([M.a], t.prototype, "Cancel", null),
-        R.c([M.a], t.prototype, "OK", null),
+        N.c([M.a], t.prototype, "Cancel", null),
+        N.c([M.a], t.prototype, "OK", null),
         t
       );
     })(ye.Component);
@@ -31118,7 +31142,7 @@
         );
       }
       return (
-        R.d(e, a),
+        N.d(e, a),
         (e.prototype.Close = function() {
           (this.m_bModalInitiatedClose = !0), a.prototype.Close.call(this);
         }),
@@ -31133,7 +31157,7 @@
             void 0 !== a.availLeft &&
               void 0 !== a.availTop &&
               ((i += a.availLeft), (r += a.availTop)),
-            R.a({}, e, { dimensions: { width: t, height: n, left: i, top: r } })
+            N.a({}, e, { dimensions: { width: t, height: n, left: i, top: r } })
           );
         }),
         (e.prototype.OnLoad = function() {}),
@@ -31255,7 +31279,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({ strCurrentNameEntry: e.currentTarget.value });
           }),
@@ -31361,9 +31385,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "HandleTextEntry", null),
-          R.c([M.a], e.prototype, "HandleSubmit", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "HandleTextEntry", null),
+          N.c([M.a], e.prototype, "HandleSubmit", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       lr = (function(n) {
@@ -31377,7 +31401,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "selectedFriendCount", {
             get: function() {
               return this.state.rgFriendsChosen.length;
@@ -31478,7 +31502,7 @@
               })),
                 this.setState({ rgFriendsChosen: e }),
                 this.BuildChosenFriendList(
-                  R.a({}, this.state, { rgFriendsChosen: e })
+                  N.a({}, this.state, { rgFriendsChosen: e })
                 );
             }
           }),
@@ -31546,11 +31570,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnTextInput", null),
-          R.c([M.a], e.prototype, "OnInputKeyDown", null),
-          R.c([M.a], e.prototype, "SelectFriendSuggestion", null),
-          R.c([M.a], e.prototype, "RemoveFriendFromList", null),
-          R.c([M.a], e.prototype, "OnFriendsListRef", null),
+          N.c([M.a], e.prototype, "OnTextInput", null),
+          N.c([M.a], e.prototype, "OnInputKeyDown", null),
+          N.c([M.a], e.prototype, "SelectFriendSuggestion", null),
+          N.c([M.a], e.prototype, "RemoveFriendFromList", null),
+          N.c([M.a], e.prototype, "OnFriendsListRef", null),
           e
         );
       })(ye.Component),
@@ -31562,7 +31586,7 @@
           );
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.BuildFriendsList = function(t) {
             (this.m_rgFriendsList = Zo.FriendStore.all_friends),
               t.setExcludedFriends &&
@@ -31744,7 +31768,7 @@
                     ? (c++,
                       ye.createElement(
                         cc,
-                        R.a(
+                        N.a(
                           {
                             friend: e.friend,
                             key: e.friend.accountid,
@@ -31813,10 +31837,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnFriendSuggestionClicked", null),
-          R.c([M.a], e.prototype, "OnFriendSuggestionMouseEnter", null),
-          R.c([M.a], e.prototype, "OnFriendSelected", null),
-          R.c([M.a], e.prototype, "OnFocusFriendRef", null),
+          N.c([M.a], e.prototype, "OnFriendSuggestionClicked", null),
+          N.c([M.a], e.prototype, "OnFriendSuggestionMouseEnter", null),
+          N.c([M.a], e.prototype, "OnFriendSelected", null),
+          N.c([M.a], e.prototype, "OnFocusFriendRef", null),
           e
         );
       })(ye.Component);
@@ -31862,7 +31886,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({ strNameEntry: e.target.value, strError: null });
           }),
@@ -31977,9 +32001,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "HandleTextEntry", null),
-          R.c([M.a], e.prototype, "HandleSubmit", null),
-          R.c([M.a], e.prototype, "OnFriendPickerRef", null),
+          N.c([M.a], e.prototype, "HandleTextEntry", null),
+          N.c([M.a], e.prototype, "HandleSubmit", null),
+          N.c([M.a], e.prototype, "OnFriendPickerRef", null),
           e
         );
       })(ye.Component),
@@ -31993,7 +32017,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.friend != this.props.friend && this.m_mapCategoryChecks.clear();
           }),
@@ -32091,8 +32115,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "HandleSubmit", null),
-          R.c([M.a], e.prototype, "CreateNew", null),
+          N.c([M.a], e.prototype, "HandleSubmit", null),
+          N.c([M.a], e.prototype, "CreateNew", null),
           e
         );
       })(ye.Component),
@@ -32101,7 +32125,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var t = this,
               e = Zo.FriendStore.FriendGroupStore.user_groups.map(function(e) {
@@ -32127,7 +32151,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       fr = (function(e) {
@@ -32135,7 +32159,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnToggle = function(e) {
             e != this.props.group.HasMember(this.props.friend.accountid)
               ? this.props.mapChecks.set(this.props.group.unique_id, e)
@@ -32163,9 +32187,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnToggle", null),
-          R.c([M.a], t.prototype, "OnContextMenu", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnToggle", null),
+          N.c([M.a], t.prototype, "OnContextMenu", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       gr = {
@@ -32280,12 +32304,12 @@
           void 0 !== SteamClient.SharedConnection,
         n = e.bDisableContextMenu,
         o = e.href,
-        i = R.f(e, ["bDisableContextMenu", "href"]);
+        i = N.f(e, ["bDisableContextMenu", "href"]);
       return (
         t && !o.startsWith("steam://") && (o = "steam://openurl/" + o),
         ye.createElement(
           "a",
-          R.a({}, i, {
+          N.a({}, i, {
             href: o,
             target: "_blank",
             rel: "noopener noreferrer",
@@ -32381,7 +32405,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.render = function() {
           return ye.createElement(
             ye.Fragment,
@@ -32392,7 +32416,7 @@
             })
           );
         }),
-        (t = R.c([Ki.observer], t))
+        (t = N.c([Ki.observer], t))
       );
     })(ye.Component);
     var Mr = (function(o) {
@@ -32408,7 +32432,7 @@
         );
       }
       return (
-        R.d(e, o),
+        N.d(e, o),
         (e.prototype.HandleTextEntry = function(e) {
           this.setState({
             strCurrentNameEntry: e.currentTarget.value,
@@ -32546,9 +32570,9 @@
             )
           );
         }),
-        R.c([M.a], e.prototype, "HandleTextEntry", null),
-        R.c([M.a], e.prototype, "HandleSubmit", null),
-        (e = R.c([Ki.observer], e))
+        N.c([M.a], e.prototype, "HandleTextEntry", null),
+        N.c([M.a], e.prototype, "HandleSubmit", null),
+        (e = N.c([Ki.observer], e))
       );
     })(ye.Component);
     var Dr = (function(n) {
@@ -32562,7 +32586,7 @@
         );
       }
       return (
-        R.d(e, n),
+        N.d(e, n),
         (e.prototype.ConvertENotificationSettingToBoolean = function(e) {
           return 1 == e;
         }),
@@ -32648,7 +32672,7 @@
         (e.prototype.OnSettingToggled = function(e, t) {
           var n;
           this.setState({
-            settings: R.a({}, this.state.settings, ((n = {}), (n[e] = t), n))
+            settings: N.a({}, this.state.settings, ((n = {}), (n[e] = t), n))
           });
         }),
         (e.prototype.FriendsSettingsCheckbox = function(t) {
@@ -32843,17 +32867,17 @@
             )
           );
         }),
-        R.c([M.a], e.prototype, "HandleSubmit", null),
-        R.c([M.a], e.prototype, "OnSettingToggled", null),
-        R.c([M.a], e.prototype, "FriendsSettingsCheckbox", null),
-        R.c([M.a], e.prototype, "NotificationRow", null),
-        R.c([M.a], e.prototype, "OnDefaultToggled", null),
-        (e = R.c([Ki.observer], e))
+        N.c([M.a], e.prototype, "HandleSubmit", null),
+        N.c([M.a], e.prototype, "OnSettingToggled", null),
+        N.c([M.a], e.prototype, "FriendsSettingsCheckbox", null),
+        N.c([M.a], e.prototype, "NotificationRow", null),
+        N.c([M.a], e.prototype, "OnDefaultToggled", null),
+        (e = N.c([Ki.observer], e))
       );
     })(ye.Component);
     function Tr(e, t, n, o) {
       return Object(ni.a)(
-        ye.createElement(Nr, {
+        ye.createElement(Rr, {
           browserContext: e,
           context: t,
           friend: n,
@@ -32905,12 +32929,12 @@
           )
         );
       }),
-      Rr = (function(e) {
+      Nr = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnToggle = function(e) {
             this.props.group.ToggleMemberRoleState(
               this.props.friend.accountid,
@@ -32987,16 +33011,16 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnToggle", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnToggle", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
-      Nr = (function(e) {
+      Rr = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ShowFriendProfile = function(e) {
             Er(e, this.props.friend.GetCommunityProfileURL()),
               e.stopPropagation();
@@ -33577,17 +33601,17 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "ShowFriendProfile", null),
-          R.c([M.a], t.prototype, "InviteFriend", null),
-          R.c([M.a], t.prototype, "AcceptIncomingInvite", null),
-          R.c([M.a], t.prototype, "IgnoreIncomingInvite", null),
-          R.c([M.a], t.prototype, "RemoveFriend", null),
-          R.c([M.a], t.prototype, "BlockFriend", null),
-          R.c([M.a], t.prototype, "UnblockFriend", null),
-          R.c([M.a], t.prototype, "InviteToGame", null),
-          R.c([M.a], t.prototype, "InviteToLobby", null),
-          R.c([M.a], t.prototype, "InviteToWatch", null),
-          R.c([M.a], t.prototype, "InviteToVoice", null),
+          N.c([M.a], t.prototype, "ShowFriendProfile", null),
+          N.c([M.a], t.prototype, "InviteFriend", null),
+          N.c([M.a], t.prototype, "AcceptIncomingInvite", null),
+          N.c([M.a], t.prototype, "IgnoreIncomingInvite", null),
+          N.c([M.a], t.prototype, "RemoveFriend", null),
+          N.c([M.a], t.prototype, "BlockFriend", null),
+          N.c([M.a], t.prototype, "UnblockFriend", null),
+          N.c([M.a], t.prototype, "InviteToGame", null),
+          N.c([M.a], t.prototype, "InviteToLobby", null),
+          N.c([M.a], t.prototype, "InviteToWatch", null),
+          N.c([M.a], t.prototype, "InviteToVoice", null),
           t
         );
       })(ye.PureComponent),
@@ -33601,7 +33625,7 @@
           return (t.state = { volumeNumber: n }), t;
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.OnFriendVolumeChanged = function(e) {
             Zo.VoiceStore.SetPerUserGainLevel(
               this.props.friend.accountid,
@@ -33667,10 +33691,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnFriendVolumeChanged", null),
-          R.c([M.a], e.prototype, "OnMutingClick", null),
-          R.c([M.a], e.prototype, "OnInlineVolumeClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnFriendVolumeChanged", null),
+          N.c([M.a], e.prototype, "OnMutingClick", null),
+          N.c([M.a], e.prototype, "OnInlineVolumeClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Lr = (function(e) {
@@ -33678,7 +33702,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnChange = function(e) {
             this.props.group.SetMemberRoleState(
               this.props.friend.accountid,
@@ -33705,8 +33729,8 @@
               })
             );
           }),
-          R.c([M.a], t.prototype, "OnChange", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnChange", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ar = (function(e) {
@@ -33714,7 +33738,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.SendTradeOffer = function(e) {
             var t = "NewTradeOffer" + this.props.friend.accountid;
             gu(e)
@@ -33749,8 +33773,8 @@
                 )
             );
           }),
-          R.c([M.a], t.prototype, "SendTradeOffer", null),
-          R.c([M.a], t.prototype, "InviteToTrade", null),
+          N.c([M.a], t.prototype, "SendTradeOffer", null),
+          N.c([M.a], t.prototype, "InviteToTrade", null),
           t
         );
       })(ye.Component);
@@ -33770,10 +33794,10 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.BanFriend = function() {
-            return R.b(this, void 0, void 0, function() {
-              return R.e(this, function(e) {
+            return N.b(this, void 0, void 0, function() {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return [
@@ -33868,7 +33892,7 @@
                     ),
                   n &&
                     e.push(
-                      ye.createElement(Rr, {
+                      ye.createElement(Nr, {
                         key: "editroles",
                         friend: t,
                         group: n,
@@ -33885,8 +33909,8 @@
               e
             );
           }),
-          R.c([M.a], t.prototype, "BanFriend", null),
-          R.c([M.a], t.prototype, "OnKickFriend", null),
+          N.c([M.a], t.prototype, "BanFriend", null),
+          N.c([M.a], t.prototype, "OnKickFriend", null),
           t
         );
       })(ye.Component),
@@ -33910,7 +33934,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.ShowStorePage = function(e) {
             Er(e, G.a.STORE_BASE_URL + "app/" + this.props.unAppID),
               e.stopPropagation();
@@ -34153,15 +34177,15 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "ShowStorePage", null),
-          R.c([M.a], e.prototype, "ShowCommunityHub", null),
-          R.c([M.a], e.prototype, "LaunchGame", null),
-          R.c([M.a], e.prototype, "WatchGame", null),
-          R.c([M.a], e.prototype, "JoinGame", null),
-          R.c([M.a], e.prototype, "ViewGameInfo", null),
-          R.c([M.a], e.prototype, "ShowInSteam", null),
-          R.c([M.a], e.prototype, "JoinPartyBeacon", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "ShowStorePage", null),
+          N.c([M.a], e.prototype, "ShowCommunityHub", null),
+          N.c([M.a], e.prototype, "LaunchGame", null),
+          N.c([M.a], e.prototype, "WatchGame", null),
+          N.c([M.a], e.prototype, "JoinGame", null),
+          N.c([M.a], e.prototype, "ViewGameInfo", null),
+          N.c([M.a], e.prototype, "ShowInSteam", null),
+          N.c([M.a], e.prototype, "JoinPartyBeacon", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Vr = (function(e) {
@@ -34169,7 +34193,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.WatchStream = function() {
             var e = this.props.browserContext,
               t = this.props.friend,
@@ -34214,8 +34238,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "WatchStream", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "WatchStream", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     function xr(e, t, n) {
@@ -34296,7 +34320,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.SetUserOnline = function() {
             Zo.FriendStore.SetUserPersonaState(1);
           }),
@@ -34444,14 +34468,14 @@
                 : null
             );
           }),
-          R.c([M.a], e.prototype, "SetUserOnline", null),
-          R.c([M.a], e.prototype, "SetUserInvisible", null),
-          R.c([M.a], e.prototype, "SetUserAway", null),
-          R.c([M.a], e.prototype, "SetUserOffline", null),
-          R.c([M.a], e.prototype, "ToggleUserDND", null),
-          R.c([M.a], e.prototype, "ShowUserProfile", null),
-          R.c([M.a], e.prototype, "EditProfile", null),
-          R.c([M.a], e.prototype, "EditName", null),
+          N.c([M.a], e.prototype, "SetUserOnline", null),
+          N.c([M.a], e.prototype, "SetUserInvisible", null),
+          N.c([M.a], e.prototype, "SetUserAway", null),
+          N.c([M.a], e.prototype, "SetUserOffline", null),
+          N.c([M.a], e.prototype, "ToggleUserDND", null),
+          N.c([M.a], e.prototype, "ShowUserProfile", null),
+          N.c([M.a], e.prototype, "EditProfile", null),
+          N.c([M.a], e.prototype, "EditName", null),
           e
         );
       })(ye.PureComponent),
@@ -34461,7 +34485,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnCancel = function() {
             this.props.OnCancel(), this.props.closeModal();
           }),
@@ -34521,9 +34545,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnCancel", null),
-          R.c([M.a], t.prototype, "OnOK", null),
-          R.c([M.a], t.prototype, "OnDropDownChange", null),
+          N.c([M.a], t.prototype, "OnCancel", null),
+          N.c([M.a], t.prototype, "OnOK", null),
+          N.c([M.a], t.prototype, "OnDropDownChange", null),
           t
         );
       })(ye.Component);
@@ -34553,7 +34577,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.componentDidMount = function() {
             var e = this.props.chat.lastChatLinkInfo;
             (!e || Date.now() >= e.rtExpires) && this.GenerateLink(86400);
@@ -34590,9 +34614,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "GenerateLink", null),
-          R.c([M.a], e.prototype, "OnFocus", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "GenerateLink", null),
+          N.c([M.a], e.prototype, "OnFocus", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Yr = (function(t) {
@@ -34600,7 +34624,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnDropDownChange = function(e, t) {
             this.props.onGenerate(e.data), t.SetSelectedOption(void 0);
           }),
@@ -34646,8 +34670,8 @@
               })
             );
           }),
-          R.c([M.a], e.prototype, "OnDropDownChange", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnDropDownChange", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Jr = (function(n) {
@@ -34664,7 +34688,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.chatRoomGroup != this.props.chatRoomGroup &&
               this.BuildMemberOfGroupSet(e),
@@ -34729,7 +34753,7 @@
           }),
           (e.prototype.OnDragEnter = function(e, t) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 (e && "friend" == e.type) || t,
                 "Invalid data type passed to ChatRoomGroupDialog.OnDragEnter"
               ),
@@ -34753,7 +34777,7 @@
           }),
           (e.prototype.OnDrop = function(e, t) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 e && "friend" == e.type,
                 "Invalid data type passed to ChatRoomGroupDialog.OnDrop"
               ),
@@ -34794,7 +34818,7 @@
                     t.props.chatRoomGroup.BHasMember(e.accountid) ||
                       r.add(e.accountid);
                   })
-                : Object(N.a)(
+                : Object(R.a)(
                     !1,
                     "User should not be able to invite to the group"
                   ),
@@ -34874,7 +34898,7 @@
                       ),
                     ye.createElement(
                       qi,
-                      R.a({ className: "" }, this.GetDragDropProps()),
+                      N.a({ className: "" }, this.GetDragDropProps()),
                       ye.createElement(
                         vi,
                         {
@@ -34927,13 +34951,13 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "DismissDialog", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "OnFriendPickerRef", null),
-          R.c([M.a], e.prototype, "OnFriendPickerChange", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "DismissDialog", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnFriendPickerRef", null),
+          N.c([M.a], e.prototype, "OnFriendPickerChange", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
           e
         );
       })(ye.PureComponent);
@@ -34999,7 +35023,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.OpenChatWindow = function(e) {
           this.props.group
             ? Zo.UIStore.ShowAndOrActivateChatRoomGroup(
@@ -35021,9 +35045,9 @@
         }),
         (t.prototype.LeaveChatRoomGroup = function(e) {
           !(function(o, i) {
-            R.b(this, void 0, void 0, function() {
+            N.b(this, void 0, void 0, function() {
               var t, n;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -35143,9 +35167,9 @@
             )
           );
         }),
-        R.c([M.a], t.prototype, "OpenChatWindow", null),
-        R.c([M.a], t.prototype, "ShowClanProfile", null),
-        R.c([M.a], t.prototype, "LeaveChatRoomGroup", null),
+        N.c([M.a], t.prototype, "OpenChatWindow", null),
+        N.c([M.a], t.prototype, "ShowClanProfile", null),
+        N.c([M.a], t.prototype, "LeaveChatRoomGroup", null),
         t
       );
     })(ye.Component);
@@ -35170,7 +35194,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.ShowInviteDialog = function() {
           var e = this.props.group.GetChatRoom(this.props.roomID);
           zr(
@@ -35283,10 +35307,10 @@
               : ye.createElement(Yi.c, { className: "friendsContextMenu" }, e)
           );
         }),
-        R.c([M.a], t.prototype, "ShowInviteDialog", null),
-        R.c([M.a], t.prototype, "SaveVoiceRoom", null),
-        R.c([M.a], t.prototype, "RemoveRoom", null),
-        R.c([M.a], t.prototype, "ChangeRoomName", null),
+        N.c([M.a], t.prototype, "ShowInviteDialog", null),
+        N.c([M.a], t.prototype, "SaveVoiceRoom", null),
+        N.c([M.a], t.prototype, "RemoveRoom", null),
+        N.c([M.a], t.prototype, "ChangeRoomName", null),
         t
       );
     })(ye.PureComponent);
@@ -35296,7 +35320,7 @@
           return (t.state = { strName: "", strError: void 0 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({ strName: e.target.value });
           }),
@@ -35352,9 +35376,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "HandleTextEntry", null),
-          R.c([M.a], e.prototype, "HandleSubmit", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "HandleTextEntry", null),
+          N.c([M.a], e.prototype, "HandleSubmit", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       oa = n("1w3K"),
@@ -35364,7 +35388,7 @@
           return (t.state = { ulSelectedGroupID: "" }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BindDiv = function(e) {
             this.m_elDiv = e;
           }),
@@ -35439,9 +35463,9 @@
               ye.createElement("div", { className: "disconnectBlocker" })
             );
           }),
-          R.c([M.a], e.prototype, "BindDiv", null),
-          R.c([M.a], e.prototype, "OnGroupSelected", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "BindDiv", null),
+          N.c([M.a], e.prototype, "OnGroupSelected", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ra = (function(n) {
@@ -35463,7 +35487,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.GetDragDropProps = function(e) {
             void 0 === e && (e = !0);
             var t = {};
@@ -35575,7 +35599,7 @@
               n && r.push("HasLinkedBroadcast"),
               ye.createElement(
                 "div",
-                R.a({ className: r.join(" ") }, this.GetDragDropProps(!0)),
+                N.a({ className: r.join(" ") }, this.GetDragDropProps(!0)),
                 ye.createElement(
                   "div",
                   {
@@ -35644,19 +35668,19 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnDragStart", null),
-          R.c([M.a], e.prototype, "OnDragEnd", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          R.c([M.a], e.prototype, "OnClick", null),
-          R.c([M.a], e.prototype, "OnToggleSelected", null),
-          R.c([M.a], e.prototype, "OnOpenGroup", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "OnMouseEnterNonTitle", null),
-          R.c([M.a], e.prototype, "OnMouseLeaveNonTitle", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnDragStart", null),
+          N.c([M.a], e.prototype, "OnDragEnd", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "OnClick", null),
+          N.c([M.a], e.prototype, "OnToggleSelected", null),
+          N.c([M.a], e.prototype, "OnOpenGroup", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "OnMouseEnterNonTitle", null),
+          N.c([M.a], e.prototype, "OnMouseLeaveNonTitle", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       aa = (function(e) {
@@ -35664,7 +35688,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.group,
               t = this.props.chat;
@@ -35685,7 +35709,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     function sa(e) {
@@ -35766,7 +35790,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.friendsInRoom;
             return ye.createElement(
@@ -35791,7 +35815,7 @@
               })
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       ma = n("c7k8"),
@@ -35862,7 +35886,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             this.m_resizeObserver && ha.DeleteObserver(this.m_resizeObserver);
           }),
@@ -35915,8 +35939,8 @@
               t
             );
           }),
-          R.c([M.a], e.prototype, "BindContainerRef", null),
-          R.c([M.a], e.prototype, "OnResize", null),
+          N.c([M.a], e.prototype, "BindContainerRef", null),
+          N.c([M.a], e.prototype, "OnResize", null),
           e
         );
       })(ye.Component);
@@ -35931,7 +35955,7 @@
           return (t.state = { bCollapsed: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnRoomsContextMenu = function(e) {
             var t = this;
             if (this.props.groupView.GetGroup().BCanAdminChannel()) {
@@ -36027,8 +36051,8 @@
                   )
             );
           }),
-          R.c([M.a], e.prototype, "OnRoomsContextMenu", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnRoomsContextMenu", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ba = (function(t) {
@@ -36036,7 +36060,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.GetMembersMatchingSearch = function(e) {
             var t = fa(
               this.props.groupView.GetGroup().memberList.member_list,
@@ -36149,14 +36173,14 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnMemberListToggleViewClick", null),
-          R.c([M.a], e.prototype, "OnSearchInput", null),
-          R.c([M.a], e.prototype, "OnSearchSubmit", null),
-          R.c([M.a], e.prototype, "OnSearchKeyDown", null),
-          R.c([M.a], e.prototype, "OnClearSearch", null),
-          R.c([M.a], e.prototype, "OnSearchFocus", null),
-          R.c([M.a], e.prototype, "OnSearchBlur", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnMemberListToggleViewClick", null),
+          N.c([M.a], e.prototype, "OnSearchInput", null),
+          N.c([M.a], e.prototype, "OnSearchSubmit", null),
+          N.c([M.a], e.prototype, "OnSearchKeyDown", null),
+          N.c([M.a], e.prototype, "OnClearSearch", null),
+          N.c([M.a], e.prototype, "OnSearchFocus", null),
+          N.c([M.a], e.prototype, "OnSearchBlur", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       va = (function(n) {
@@ -36174,7 +36198,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             this.m_disposeGetMemberList.unregister();
           }),
@@ -36329,11 +36353,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnMemberListChanged", null),
-          R.c([M.a], e.prototype, "OnToggleBucketCollapsed", null),
-          R.c([M.a], e.prototype, "GetRowHeight", null),
-          R.c([M.a], e.prototype, "RenderRow", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnMemberListChanged", null),
+          N.c([M.a], e.prototype, "OnToggleBucketCollapsed", null),
+          N.c([M.a], e.prototype, "GetRowHeight", null),
+          N.c([M.a], e.prototype, "RenderRow", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Sa = (function(e) {
@@ -36341,7 +36365,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnSubmit = function() {
             var t = this,
               e = this.m_refInput && this.m_refInput.value;
@@ -36405,7 +36429,7 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnSubmit", null),
+          N.c([M.a], t.prototype, "OnSubmit", null),
           t
         );
       })(ye.Component);
@@ -36414,7 +36438,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnCreateNewTextChannel = function(e) {
             var t,
               n,
@@ -36505,12 +36529,12 @@
               })
             );
           }),
-          R.c([M.a], t.prototype, "OnCreateNewTextChannel", null),
-          R.c([M.a], t.prototype, "OnStartChannelRename", null),
-          R.c([M.a], t.prototype, "OnChannelRename", null),
-          R.c([M.a], t.prototype, "OnEndChannelRename", null),
-          R.c([M.a], t.prototype, "ToggleCollapseExpand", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnCreateNewTextChannel", null),
+          N.c([M.a], t.prototype, "OnStartChannelRename", null),
+          N.c([M.a], t.prototype, "OnChannelRename", null),
+          N.c([M.a], t.prototype, "OnEndChannelRename", null),
+          N.c([M.a], t.prototype, "ToggleCollapseExpand", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ca = (function(e) {
@@ -36518,7 +36542,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ToggleTextChat = function() {
             if (!this.props.bRenameActive) {
               var e = Zo.UIStore.IsChatRoomGroupActive(
@@ -36577,9 +36601,9 @@
                 })
             );
           }),
-          R.c([M.a], t.prototype, "ToggleTextChat", null),
-          R.c([M.a], t.prototype, "OnContextMenu", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "ToggleTextChat", null),
+          N.c([M.a], t.prototype, "OnContextMenu", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ia = (function(e) {
@@ -36587,7 +36611,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.CreateVoiceRoom = function() {
             this.props.groupView.GetGroup().CreateAndJoinTempVoiceRoom();
           }),
@@ -36649,12 +36673,12 @@
               })
             );
           }),
-          R.c([M.a], t.prototype, "CreateVoiceRoom", null),
-          R.c([M.a], t.prototype, "OnVoiceRoomSelected", null),
-          R.c([M.a], t.prototype, "OnStartChannelRename", null),
-          R.c([M.a], t.prototype, "OnChannelRename", null),
-          R.c([M.a], t.prototype, "OnEndChannelRename", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "CreateVoiceRoom", null),
+          N.c([M.a], t.prototype, "OnVoiceRoomSelected", null),
+          N.c([M.a], t.prototype, "OnStartChannelRename", null),
+          N.c([M.a], t.prototype, "OnChannelRename", null),
+          N.c([M.a], t.prototype, "OnEndChannelRename", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Oa = (function(n) {
@@ -36669,7 +36693,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnContextMenu = function(e) {
             this.props.bRenameActive ||
               ea(
@@ -36693,7 +36717,7 @@
           }),
           (e.prototype.OnDragEnter = function(e, t) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 e && "friend" == e.type,
                 "Invalid type passed to VoiceRoom.OnDragEnter"
               ),
@@ -36714,7 +36738,7 @@
           (e.prototype.OnDrop = function(e, t) {
             var n = this;
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 e && "friend" == e.type,
                 "Invalid data type passed to ChatRoomGroupDialog.OnDrop"
               ),
@@ -36830,7 +36854,7 @@
               u = this.props.chat.name;
             return ye.createElement(
               qi,
-              R.a(
+              N.a(
                 { className: p.join(" "), onClick: this.props.onSelect },
                 this.GetDragDropProps()
               ),
@@ -36924,13 +36948,13 @@
               ye.createElement("div", { className: "dropTargetBox" })
             );
           }),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "InviteToChat", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "InviteToChat", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Ea = (function(n) {
@@ -36939,7 +36963,7 @@
           return (t.m_strValue = ""), (t.m_strValue = t.props.chat.name), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             this.props.chat != e.chat && (this.m_strValue = e.chat.name);
           }),
@@ -36984,13 +37008,13 @@
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_strValue", void 0),
-          R.c([M.a], e.prototype, "BindInputRef", null),
-          R.c([M.a], e.prototype, "OnChange", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "OnGlobalKeyDown", null),
-          R.c([M.a], e.prototype, "OnBlur", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_strValue", void 0),
+          N.c([M.a], e.prototype, "BindInputRef", null),
+          N.c([M.a], e.prototype, "OnChange", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnGlobalKeyDown", null),
+          N.c([M.a], e.prototype, "OnBlur", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       wa = (function(e) {
@@ -36998,7 +37022,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnToggleCollapsed = function(e) {
             this.props.onToggleCollapse();
           }),
@@ -37043,7 +37067,7 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnToggleCollapsed", null),
+          N.c([M.a], t.prototype, "OnToggleCollapsed", null),
           t
         );
       })(ye.PureComponent),
@@ -37052,7 +37076,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnFriendSelected = function() {
             this.props.friend.OpenChatDialog(hu(null)),
               this.props.groupView.ClearMemberSearch();
@@ -37153,11 +37177,11 @@
               bHideGameName: this.props.bHideGameName
             };
             return i
-              ? ye.createElement(cc, R.a({}, s, { listStatusIndicatorLeft: e }))
-              : ye.createElement(pc, R.a({}, s), e);
+              ? ye.createElement(cc, N.a({}, s, { listStatusIndicatorLeft: e }))
+              : ye.createElement(pc, N.a({}, s), e);
           }),
-          R.c([M.a], e.prototype, "OnFriendSelected", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnFriendSelected", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Da = n("twdX"),
@@ -37167,7 +37191,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.AddSizeClass = function(e) {
             "small" == this.props.size
               ? e.push(Ta.a.throbber_small)
@@ -37210,8 +37234,8 @@
           e
         );
       })(Ce.a.PureComponent);
-    var Ra,
-      Na,
+    var Na,
+      Ra,
       ka = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -37230,7 +37254,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.DismissDialog = function() {
             this.props.closeModal();
           }),
@@ -37360,12 +37384,12 @@
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_inviteLinks", void 0),
-          R.c([d.observable], e.prototype, "m_invitedUsers", void 0),
-          R.c([M.a], e.prototype, "DismissDialog", null),
-          R.c([M.a], e.prototype, "CloseDialog", null),
-          R.c([M.a], e.prototype, "OnLeave", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_inviteLinks", void 0),
+          N.c([d.observable], e.prototype, "m_invitedUsers", void 0),
+          N.c([M.a], e.prototype, "DismissDialog", null),
+          N.c([M.a], e.prototype, "CloseDialog", null),
+          N.c([M.a], e.prototype, "OnLeave", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       La = (function(n) {
@@ -37374,7 +37398,7 @@
           return (t.m_bSaving = !1), (t.m_strError = ""), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BindInputRef = function(e) {
             this.m_refInput = e;
           }),
@@ -37464,13 +37488,13 @@
               e && ye.createElement(Ga, null)
             );
           }),
-          R.c([d.observable], e.prototype, "m_bSaving", void 0),
-          R.c([d.observable], e.prototype, "m_strError", void 0),
-          R.c([M.a], e.prototype, "BindInputRef", null),
-          R.c([M.a], e.prototype, "AnimateUpgrade_In", null),
-          R.c([M.a], e.prototype, "AnimateUpgrade_Out", null),
-          R.c([M.a], e.prototype, "SaveGroup", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_bSaving", void 0),
+          N.c([d.observable], e.prototype, "m_strError", void 0),
+          N.c([M.a], e.prototype, "BindInputRef", null),
+          N.c([M.a], e.prototype, "AnimateUpgrade_In", null),
+          N.c([M.a], e.prototype, "AnimateUpgrade_Out", null),
+          N.c([M.a], e.prototype, "SaveGroup", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi),
       Aa = (function(n) {
@@ -37486,7 +37510,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -37699,17 +37723,17 @@
               )
             );
           }),
-          R.c([d.observable], e.prototype, "m_strRoomName", void 0),
-          R.c([d.observable], e.prototype, "m_strTagLine", void 0),
-          R.c([M.a], e.prototype, "OnFileChange", null),
-          R.c([M.a], e.prototype, "bindFileUploadControl", null),
-          R.c([M.a], e.prototype, "OnNameChange", null),
-          R.c([M.a], e.prototype, "OnAvatarChange", null),
-          R.c([M.a], e.prototype, "OnTagLineChange", null),
-          R.c([M.a], e.prototype, "OnNameBlur", null),
-          R.c([M.a], e.prototype, "OnTagLineBlur", null),
-          R.c([M.a], e.prototype, "OnSubmitSent", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_strRoomName", void 0),
+          N.c([d.observable], e.prototype, "m_strTagLine", void 0),
+          N.c([M.a], e.prototype, "OnFileChange", null),
+          N.c([M.a], e.prototype, "bindFileUploadControl", null),
+          N.c([M.a], e.prototype, "OnNameChange", null),
+          N.c([M.a], e.prototype, "OnAvatarChange", null),
+          N.c([M.a], e.prototype, "OnTagLineChange", null),
+          N.c([M.a], e.prototype, "OnNameBlur", null),
+          N.c([M.a], e.prototype, "OnTagLineBlur", null),
+          N.c([M.a], e.prototype, "OnSubmitSent", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi),
       Pa = (function(t) {
@@ -37717,7 +37741,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -37755,8 +37779,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnLeave", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnLeave", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi),
       Fa = (function(e) {
@@ -37764,11 +37788,11 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this,
               t = this.props.roomList.indexOf(this.props.room);
-            Object(N.a)(
+            Object(R.a)(
               -1 !== t,
               "Couldn't find CChatRoom inside of its list?"
             );
@@ -37824,7 +37848,7 @@
                   )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ba = (function(t) {
@@ -37832,7 +37856,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -37993,7 +38017,7 @@
                       null,
                       Object(se.b)("#GroupSettings_Channels_TextChannels")
                     ),
-                    ye.createElement(Ni, null),
+                    ye.createElement(Ri, null),
                     e
                   ),
                 0 != n.length &&
@@ -38005,16 +38029,16 @@
                       null,
                       Object(se.b)("#GroupSettings_Channels_VoiceChannels")
                     ),
-                    ye.createElement(Ni, null),
+                    ye.createElement(Ri, null),
                     n
                   )
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnCreateNewTextChannel", null),
-          R.c([M.a], e.prototype, "OnCreateNewVoiceChannel", null),
-          R.c([M.a], e.prototype, "OnDeleteChannel", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnCreateNewTextChannel", null),
+          N.c([M.a], e.prototype, "OnCreateNewVoiceChannel", null),
+          N.c([M.a], e.prototype, "OnDeleteChannel", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi),
       Va = (function(n) {
@@ -38024,7 +38048,7 @@
           return (t.state = { strRoleName: "" }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnSubmit = function() {
             var t = this,
               e = this.m_refInput && this.m_refInput.value.trim();
@@ -38086,8 +38110,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "HandleTextEntry", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "HandleTextEntry", null),
           e
         );
       })(ye.Component),
@@ -38104,7 +38128,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -38246,7 +38270,7 @@
                     Object(se.b)("#GroupSettings_Permissions_Section")
                   ),
                   ye.createElement(
-                    Ri,
+                    Ni,
                     {
                       className: "backToPermissionsButton allCaps",
                       onClick: function() {
@@ -38596,17 +38620,17 @@
                 )
             );
           }),
-          R.c([M.a], e.prototype, "OnCreateRole", null),
-          R.c([M.a], e.prototype, "EditRole", null),
-          R.c([M.a], e.prototype, "RenameRole", null),
-          R.c([M.a], e.prototype, "DeleteRole", null),
-          R.c([M.a], e.prototype, "OnEditRoleNameChange", null),
-          R.c([M.a], e.prototype, "OnEditRoleNameBlur", null),
-          R.c([M.a], e.prototype, "OnSettingToggled", null),
-          R.c([M.a], e.prototype, "PermissionToggleRow", null),
-          R.c([M.a], e.prototype, "MoveRoleUp", null),
-          R.c([M.a], e.prototype, "MoveRoleDown", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnCreateRole", null),
+          N.c([M.a], e.prototype, "EditRole", null),
+          N.c([M.a], e.prototype, "RenameRole", null),
+          N.c([M.a], e.prototype, "DeleteRole", null),
+          N.c([M.a], e.prototype, "OnEditRoleNameChange", null),
+          N.c([M.a], e.prototype, "OnEditRoleNameBlur", null),
+          N.c([M.a], e.prototype, "OnSettingToggled", null),
+          N.c([M.a], e.prototype, "PermissionToggleRow", null),
+          N.c([M.a], e.prototype, "MoveRoleUp", null),
+          N.c([M.a], e.prototype, "MoveRoleDown", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi),
       Ua = (function(e) {
@@ -38614,7 +38638,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -38657,7 +38681,7 @@
                   .DeleteInviteLink(n.invite_code())
                   .then(function(e) {
                     Object(
-                      N.a
+                      R.a
                     )("loaded" == o.loadingState, "somehow got a valid link to delete without links being loaded");
                     var t = o.rgInviteLinks.findIndex(function(e) {
                       return e.invite_code() == n.invite_code();
@@ -38800,14 +38824,14 @@
                 ye.createElement(
                   "div",
                   { className: "OrSeparator" },
-                  ye.createElement(Ni, null)
+                  ye.createElement(Ri, null)
                 ),
               t
             );
           }),
-          R.c([M.a], t.prototype, "OnDeleteLink", null),
-          R.c([M.a], t.prototype, "HandleFocus", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnDeleteLink", null),
+          N.c([M.a], t.prototype, "HandleFocus", null),
+          (t = N.c([Ki.observer], t))
         );
       })(Hi),
       ja = (function(e) {
@@ -38815,7 +38839,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -38977,8 +39001,8 @@
                 : Object(se.b)("#GroupSettings_InvitedUsers_Failed")
             );
           }),
-          R.c([M.a], t.prototype, "RevokeInvite", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "RevokeInvite", null),
+          (t = N.c([Ki.observer], t))
         );
       })(Hi),
       Ha = (function(e) {
@@ -38986,7 +39010,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -39138,8 +39162,8 @@
               ye.createElement(Mi, { className: "DialogBody" }, t)
             );
           }),
-          R.c([M.a], t.prototype, "OnClickUnban", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnClickUnban", null),
+          (t = N.c([Ki.observer], t))
         );
       })(Hi),
       Wa = (function(n) {
@@ -39159,7 +39183,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             for (
               var t = {}, n = 0, o = Object.keys(e.friendsSettingsInitial);
@@ -39182,8 +39206,8 @@
                 (r[i] = e.communityPreferencesInitial[i]);
             }
             this.setState({
-              friendSettings: R.a({}, this.state.friendSettings, t),
-              communityPreferences: R.a({}, this.state.communityPreferences, r)
+              friendSettings: N.a({}, this.state.friendSettings, t),
+              communityPreferences: N.a({}, this.state.communityPreferences, r)
             });
           }),
           (e.prototype.OKToSwitchAway = function() {
@@ -39199,7 +39223,7 @@
           }),
           (e.prototype.HandleRadioChange = function(e) {
             this.setState({
-              friendSettings: R.a({}, this.state.friendSettings, {
+              friendSettings: N.a({}, this.state.friendSettings, {
                 nChatFlashMode: parseInt(e.currentTarget.value)
               })
             }),
@@ -39208,7 +39232,7 @@
           (e.prototype.OnSettingToggled = function(e, t) {
             var n;
             this.setState({
-              friendSettings: R.a(
+              friendSettings: N.a(
                 {},
                 this.state.friendSettings,
                 ((n = {}), (n[e] = t), n)
@@ -39219,7 +39243,7 @@
           (e.prototype.OnCommunityPreferenceToggled = function(e, t) {
             var n;
             this.setState({
-              communityPreferences: R.a(
+              communityPreferences: N.a(
                 {},
                 this.state.communityPreferences,
                 ((n = {}), (n[e] = t), n)
@@ -39278,13 +39302,13 @@
               t.children
             );
           }),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "HandleRadioChange", null),
-          R.c([M.a], e.prototype, "OnSettingToggled", null),
-          R.c([M.a], e.prototype, "OnCommunityPreferenceToggled", null),
-          R.c([M.a], e.prototype, "FriendsSettingsToggleRow", null),
-          R.c([M.a], e.prototype, "FriendsSettingsCheckbox", null),
-          R.c(
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "HandleRadioChange", null),
+          N.c([M.a], e.prototype, "OnSettingToggled", null),
+          N.c([M.a], e.prototype, "OnCommunityPreferenceToggled", null),
+          N.c([M.a], e.prototype, "FriendsSettingsToggleRow", null),
+          N.c([M.a], e.prototype, "FriendsSettingsCheckbox", null),
+          N.c(
             [M.a],
             e.prototype,
             "FriendsSettingsCommunityPreferenceToggleRow",
@@ -39293,16 +39317,16 @@
           e
         );
       })(Hi);
-    ((Na = Ra || (Ra = {}))[(Na.k_EChatFontSizeSmall = 1)] =
+    ((Ra = Na || (Na = {}))[(Ra.k_EChatFontSizeSmall = 1)] =
       "k_EChatFontSizeSmall"),
-      (Na[(Na.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
-      (Na[(Na.k_EChatFontSizeLarge = 3)] = "k_EChatFontSizeLarge");
+      (Ra[(Ra.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
+      (Ra[(Ra.k_EChatFontSizeLarge = 3)] = "k_EChatFontSizeLarge");
     var za = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.bParenthesizeNicknames,
               t = Object(se.b)("#FriendSettings_ExampleFriend"),
@@ -39370,10 +39394,10 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.SetChatFontSize = function(e) {
             this.setState({
-              friendSettings: R.a({}, this.state.friendSettings, {
+              friendSettings: N.a({}, this.state.friendSettings, {
                 nChatFontSize: e
               })
             }),
@@ -39412,9 +39436,9 @@
                     {
                       className:
                         "smallFontSetting " +
-                        (n == Ra.k_EChatFontSizeSmall ? "Primary" : "Off"),
+                        (n == Na.k_EChatFontSizeSmall ? "Primary" : "Off"),
                       onClick: function() {
-                        return e.SetChatFontSize(Ra.k_EChatFontSizeSmall);
+                        return e.SetChatFontSize(Na.k_EChatFontSizeSmall);
                       }
                     },
                     Object(se.b)("#FriendSetting_ChatFontSmall")
@@ -39424,9 +39448,9 @@
                     {
                       className:
                         "defaultFontSetting " +
-                        (n == Ra.k_EChatFontSizeDefault ? "Primary" : "Off"),
+                        (n == Na.k_EChatFontSizeDefault ? "Primary" : "Off"),
                       onClick: function() {
-                        return e.SetChatFontSize(Ra.k_EChatFontSizeDefault);
+                        return e.SetChatFontSize(Na.k_EChatFontSizeDefault);
                       }
                     },
                     Object(se.b)("#FriendSetting_ChatFontDefault")
@@ -39436,9 +39460,9 @@
                     {
                       className:
                         "largeFontSetting " +
-                        (n == Ra.k_EChatFontSizeLarge ? "Primary" : "Off"),
+                        (n == Na.k_EChatFontSizeLarge ? "Primary" : "Off"),
                       onClick: function() {
-                        return e.SetChatFontSize(Ra.k_EChatFontSizeLarge);
+                        return e.SetChatFontSize(Na.k_EChatFontSizeLarge);
                       }
                     },
                     Object(se.b)("#FriendSetting_ChatFontLarge")
@@ -39449,8 +39473,8 @@
                 ye.createElement(ki, { onCancel: this.props.onCancel })
             );
           }),
-          R.c([M.a], e.prototype, "SetChatFontSize", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "SetChatFontSize", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Wa),
       Ka = (function(t) {
@@ -39458,7 +39482,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = this.FriendsSettingsToggleRow,
               t = G.a.IN_CLIENT
@@ -39493,7 +39517,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(Wa),
       Ya = (function(t) {
@@ -39501,7 +39525,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = this.FriendsSettingsToggleRow,
               t = this.FriendsSettingsCommunityPreferenceToggleRow;
@@ -39554,7 +39578,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(Wa),
       Ja = (function(n) {
@@ -39577,7 +39601,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.gotMediaDevices = function(e) {
             for (var t = 0; t < e.length; ++t) {
               var n = e[t];
@@ -40195,37 +40219,37 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "gotMediaDevices", null),
-          R.c([M.a], e.prototype, "gotMediaDevicesError", null),
-          R.c([M.a], e.prototype, "onSubmit", null),
-          R.c([M.a], e.prototype, "VoiceSettingsRefMarker", null),
-          R.c([M.a], e.prototype, "OnShowAdvancedSettings", null),
-          R.c([M.a], e.prototype, "OnMicDropdownChanged", null),
-          R.c([M.a], e.prototype, "OnOutputDeviceDropdownChanged", null),
-          R.c([M.a], e.prototype, "OnInputGainChanged", null),
-          R.c([M.a], e.prototype, "OnOutputGainChanged", null),
-          R.c([M.a], e.prototype, "OnToggleEchoCancellation", null),
-          R.c([M.a], e.prototype, "OnToggleNoiseCancellation", null),
-          R.c([M.a], e.prototype, "OnToggleAutoGainControl", null),
-          R.c([M.a], e.prototype, "SetNoiseGateOff", null),
-          R.c([M.a], e.prototype, "SetNoiseGateMedium", null),
-          R.c([M.a], e.prototype, "SetNoiseGateHigh", null),
-          R.c([M.a], e.prototype, "OnXButtonDown", null),
-          R.c([M.a], e.prototype, "OnTogglePushToTalk", null),
-          R.c([M.a], e.prototype, "OnSetOpenMic", null),
-          R.c([M.a], e.prototype, "OnSetPushToTalk", null),
-          R.c([M.a], e.prototype, "OnSetPushToMute", null),
-          R.c([M.a], e.prototype, "AssignHotkey", null),
-          R.c([M.a], e.prototype, "ClearHotKey", null),
-          R.c([M.a], e.prototype, "onMouseDown", null),
-          R.c([M.a], e.prototype, "onClick", null),
-          R.c([M.a], e.prototype, "onContextMenu", null),
-          R.c([M.a], e.prototype, "onKeyDown", null),
-          R.c([M.a], e.prototype, "OnPPTSoundChecked", null),
-          R.c([M.a], e.prototype, "CopyVoiceLogsToClipboard", null),
-          R.c([M.a], e.prototype, "OnStartLocalMicTest", null),
-          R.c([M.a], e.prototype, "OnStopLocalMicTest", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "gotMediaDevices", null),
+          N.c([M.a], e.prototype, "gotMediaDevicesError", null),
+          N.c([M.a], e.prototype, "onSubmit", null),
+          N.c([M.a], e.prototype, "VoiceSettingsRefMarker", null),
+          N.c([M.a], e.prototype, "OnShowAdvancedSettings", null),
+          N.c([M.a], e.prototype, "OnMicDropdownChanged", null),
+          N.c([M.a], e.prototype, "OnOutputDeviceDropdownChanged", null),
+          N.c([M.a], e.prototype, "OnInputGainChanged", null),
+          N.c([M.a], e.prototype, "OnOutputGainChanged", null),
+          N.c([M.a], e.prototype, "OnToggleEchoCancellation", null),
+          N.c([M.a], e.prototype, "OnToggleNoiseCancellation", null),
+          N.c([M.a], e.prototype, "OnToggleAutoGainControl", null),
+          N.c([M.a], e.prototype, "SetNoiseGateOff", null),
+          N.c([M.a], e.prototype, "SetNoiseGateMedium", null),
+          N.c([M.a], e.prototype, "SetNoiseGateHigh", null),
+          N.c([M.a], e.prototype, "OnXButtonDown", null),
+          N.c([M.a], e.prototype, "OnTogglePushToTalk", null),
+          N.c([M.a], e.prototype, "OnSetOpenMic", null),
+          N.c([M.a], e.prototype, "OnSetPushToTalk", null),
+          N.c([M.a], e.prototype, "OnSetPushToMute", null),
+          N.c([M.a], e.prototype, "AssignHotkey", null),
+          N.c([M.a], e.prototype, "ClearHotKey", null),
+          N.c([M.a], e.prototype, "onMouseDown", null),
+          N.c([M.a], e.prototype, "onClick", null),
+          N.c([M.a], e.prototype, "onContextMenu", null),
+          N.c([M.a], e.prototype, "onKeyDown", null),
+          N.c([M.a], e.prototype, "OnPPTSoundChecked", null),
+          N.c([M.a], e.prototype, "CopyVoiceLogsToClipboard", null),
+          N.c([M.a], e.prototype, "OnStartLocalMicTest", null),
+          N.c([M.a], e.prototype, "OnStopLocalMicTest", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Hi);
     function Xa(e, t) {
@@ -40245,7 +40269,7 @@
           return t.call(this, e, Object(se.b)("#Settings")) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.SaveFriendSettings = function(e, t) {
             Zo.SettingsStore.BUpdateFriendsSettings(e),
               Zo.SettingsStore.SetCommunityPreferences(t);
@@ -40273,22 +40297,22 @@
                   {
                     title: Object(se.b)("#FriendSettings_Friends"),
                     uniqueName: "FriendSettings_Friends",
-                    content: ye.createElement(Ya, R.a({}, t))
+                    content: ye.createElement(Ya, N.a({}, t))
                   },
                   {
                     title: Object(se.b)("#FriendSettings_Chat"),
                     uniqueName: "FriendSettings_Chat",
-                    content: ye.createElement(Ka, R.a({}, t))
+                    content: ye.createElement(Ka, N.a({}, t))
                   },
                   {
                     title: Object(se.b)("#FriendSettings_SizeAndScaling"),
                     uniqueName: "FriendSettings_SizeAndScaling",
-                    content: ye.createElement(qa, R.a({}, t))
+                    content: ye.createElement(qa, N.a({}, t))
                   },
                   {
                     title: Object(se.b)("#FriendSettings_Notifications"),
                     uniqueName: "FriendSettings_Notifications",
-                    content: ye.createElement(Za, R.a({}, t))
+                    content: ye.createElement(Za, N.a({}, t))
                   },
                   {
                     title: Object(se.b)("#FriendSettings_Voice"),
@@ -40303,10 +40327,10 @@
             return ye.createElement(
               Zi,
               { onEscKeypress: this.props.closeModal },
-              ye.createElement(Wi, R.a({}, n))
+              ye.createElement(Wi, N.a({}, n))
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Za = (function(n) {
@@ -40315,7 +40339,7 @@
           return (t.m_rgOptions = $a(!1)), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.FriendsSettingsNotificationRow = function(e) {
             var t = this.FriendsSettingsCheckbox;
             return ye.createElement(
@@ -40460,8 +40484,8 @@
                 ye.createElement(ki, { onCancel: this.props.onCancel })
             );
           }),
-          R.c([M.a], e.prototype, "FriendsSettingsNotificationRow", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "FriendsSettingsNotificationRow", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Wa);
     ye.createElement(
@@ -40513,7 +40537,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.IncrementSavesInFlight = function() {
             this.setState(function(e) {
               return { cSavesInFlight: e.cSavesInFlight + 1 };
@@ -40522,7 +40546,7 @@
           (e.prototype.DecrementSavesInFlight = function() {
             this.setState(function(e) {
               return (
-                Object(N.a)(
+                Object(R.a)(
                   0 < e.cSavesInFlight,
                   "expected " + e.cSavesInFlight + " > 0"
                 ),
@@ -40630,7 +40654,7 @@
                     ye.createElement(
                       ye.Fragment,
                       null,
-                      ye.createElement(Ni, null),
+                      ye.createElement(Ri, null),
                       ye.createElement(
                         Ii,
                         { className: "notificationsChannelHeader" },
@@ -40670,14 +40694,14 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "IncrementSavesInFlight", null),
-          R.c([M.a], e.prototype, "DecrementSavesInFlight", null),
-          R.c([M.a], e.prototype, "WrapSavePromise", null),
-          R.c([M.a], e.prototype, "OnGroupNotificationLevelChanged", null),
-          R.c([M.a], e.prototype, "OnShowUnreadIndicatorChanged", null),
-          R.c([M.a], e.prototype, "DismissDialog", null),
-          R.c([M.a], e.prototype, "OnFriendsSettingsClicked", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "IncrementSavesInFlight", null),
+          N.c([M.a], e.prototype, "DecrementSavesInFlight", null),
+          N.c([M.a], e.prototype, "WrapSavePromise", null),
+          N.c([M.a], e.prototype, "OnGroupNotificationLevelChanged", null),
+          N.c([M.a], e.prototype, "OnShowUnreadIndicatorChanged", null),
+          N.c([M.a], e.prototype, "DismissDialog", null),
+          N.c([M.a], e.prototype, "OnFriendsSettingsClicked", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ts = (function(t) {
@@ -40686,7 +40710,7 @@
           return (e.m_rgSelectOptions = $a()), e;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnChatNotificationLevelChanged = function(e) {
             this.props.fnHandleSave(
               this.props.chat.SetNotificationPreferences(e.data)
@@ -40710,8 +40734,8 @@
               })
             );
           }),
-          R.c([M.a], e.prototype, "OnChatNotificationLevelChanged", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnChatNotificationLevelChanged", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ns = (function(e) {
@@ -40719,7 +40743,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnNotificationLevelChanged = function(e) {
             this.props.set_notification_level(e.data);
           }),
@@ -40788,9 +40812,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnNotificationLevelChanged", null),
-          R.c([M.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnNotificationLevelChanged", null),
+          N.c([M.a], t.prototype, "OnShowUnreadIndicatorChanged", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       os = function() {
@@ -40819,20 +40843,20 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.src,
               n = e.duration,
               o = e.className,
-              i = R.f(e, ["src", "duration", "className"]),
+              i = N.f(e, ["src", "duration", "className"]),
               r = {
                 backgroundImage: "url(" + t + ")",
                 transitionDuration: n / 1e3 + "s"
               };
             return ye.createElement(
               oa.TransitionGroup,
-              R.a({}, i, { className: os("crossfade", o) }),
+              N.a({}, i, { className: os("crossfade", o) }),
               ye.createElement(
                 oa.CSSTransition,
                 {
@@ -40853,7 +40877,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.InviteFriend = function(e) {
             zr(
               hu(this, e),
@@ -41022,11 +41046,11 @@
               onRequestClose: r
             });
           }),
-          R.c([M.a], t.prototype, "InviteFriend", null),
-          R.c([M.a], t.prototype, "OpenSettings", null),
-          R.c([M.a], t.prototype, "OpenNotificationPreferences", null),
-          R.c([M.a], t.prototype, "OnContextMenu", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "InviteFriend", null),
+          N.c([M.a], t.prototype, "OpenSettings", null),
+          N.c([M.a], t.prototype, "OpenNotificationPreferences", null),
+          N.c([M.a], t.prototype, "OnContextMenu", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       ss = (function(n) {
@@ -41035,7 +41059,7 @@
           return (t.state = { info: to.StartInfo(e.broadcastId) }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             to.StopInfo(this.state.info);
           }),
@@ -41092,8 +41116,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnCloseClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnCloseClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       cs = Object(Ki.observer)(function(e) {
@@ -41173,7 +41197,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var n = this,
               e = this.props.group;
@@ -41240,9 +41264,9 @@
             e ? (c = e.name) : this.props.name && (c = this.props.name);
             var l = (function(e) {
                 if (e.length <= 2) return e;
-                for (var t = e.charAt(1), n = Rn(t), o = 2; o < e.length; o++) {
+                for (var t = e.charAt(1), n = Nn(t), o = 2; o < e.length; o++) {
                   var i = e.charAt(o);
-                  if (n || !Rn(i)) {
+                  if (n || !Nn(i)) {
                     if (" " == i) {
                       0 < (i = e.charAt(o + 1)).length && (t = i);
                       break;
@@ -41265,7 +41289,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     var ds = (function(n) {
@@ -41285,7 +41309,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.DismissFavoritesHint = function() {
             this.setState({ bHintDismissed: !0 }),
               Su.SetUIDisplayPref("bFavoritesHintDismissed", !0);
@@ -41310,13 +41334,13 @@
                   void 0 === this.m_iActiveDragIndex ||
                     this.m_iActiveDragIndex >= n.length)
                 )
-                  n = n.concat([R.a({ isActiveDrag: !0 }, a)]);
+                  n = n.concat([N.a({ isActiveDrag: !0 }, a)]);
                 else {
                   this.m_iActiveDragIndex;
                   n = n
                     .slice(0, this.m_iActiveDragIndex)
                     .concat(
-                      [R.a({ isActiveDrag: !0 }, a)],
+                      [N.a({ isActiveDrag: !0 }, a)],
                       n.slice(this.m_iActiveDragIndex)
                     );
                 }
@@ -41349,7 +41373,7 @@
                 o && (s += " compactQuickAccess"),
                 ye.createElement(
                   qi,
-                  R.a({ className: s }, this.GetDragDropProps()),
+                  N.a({ className: s }, this.GetDragDropProps()),
                   i,
                   ye.createElement("div", { className: "dropTargetBox" })
                 )
@@ -41357,7 +41381,7 @@
             }
             return ye.createElement(
               qi,
-              R.a({ className: t }, this.GetDragDropProps()),
+              N.a({ className: t }, this.GetDragDropProps()),
               ye.createElement(
                 "div",
                 { className: "quickAccessFriendsMessage" },
@@ -41498,17 +41522,17 @@
                 this.ResetDragState())
               : this.m_ActiveDrag && this.ResetDragState();
           }),
-          R.c([d.observable], e.prototype, "m_iActiveDragIndex", void 0),
-          R.c([d.observable], e.prototype, "m_ActiveDrag", void 0),
-          R.c([d.observable], e.prototype, "m_ActiveDragOut", void 0),
-          R.c([M.a], e.prototype, "DismissFavoritesHint", null),
-          R.c([M.a], e.prototype, "OnDragStart", null),
-          R.c([M.a], e.prototype, "OnDragEnd", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_iActiveDragIndex", void 0),
+          N.c([d.observable], e.prototype, "m_ActiveDrag", void 0),
+          N.c([d.observable], e.prototype, "m_ActiveDragOut", void 0),
+          N.c([M.a], e.prototype, "DismissFavoritesHint", null),
+          N.c([M.a], e.prototype, "OnDragStart", null),
+          N.c([M.a], e.prototype, "OnDragEnd", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       hs = (function(e) {
@@ -41516,7 +41540,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetBoundingClientRect = function() {
             var e = H.findDOMNode(this);
             return e ? e.getBoundingClientRect() : null;
@@ -41617,8 +41641,8 @@
                 )
               : i;
           }),
-          R.c([M.a], t.prototype, "onFavoriteElementClick", null),
-          R.c([M.a], t.prototype, "OnFavoriteElementContextMenu", null),
+          N.c([M.a], t.prototype, "onFavoriteElementClick", null),
+          N.c([M.a], t.prototype, "OnFavoriteElementContextMenu", null),
           t
         );
       })(ye.Component),
@@ -41715,7 +41739,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnDragStart = function(e) {
             Su.DragDropManager.StartDrag({
               type: "clan",
@@ -41753,9 +41777,9 @@
               n
             );
           }),
-          R.c([M.a], t.prototype, "OnDragStart", null),
-          R.c([M.a], t.prototype, "OnDragEnd", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnDragStart", null),
+          N.c([M.a], t.prototype, "OnDragEnd", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       gs = (function(e) {
@@ -41763,7 +41787,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnDragStart = function(e) {
             Su.DragDropManager.StartDrag({
               type: "chatroomgroup",
@@ -41800,9 +41824,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnDragStart", null),
-          R.c([M.a], t.prototype, "OnDragEnd", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnDragStart", null),
+          N.c([M.a], t.prototype, "OnDragEnd", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     function bs(e, t, n, o, i) {
@@ -41859,7 +41883,7 @@
         );
       }
       return (
-        R.d(e, n),
+        N.d(e, n),
         (e.prototype.HandleTextEntry = function(e) {
           this.setState({ strCurrentNameEntry: e.target.value });
         }),
@@ -42063,11 +42087,11 @@
             )
           );
         }),
-        R.c([M.a], e.prototype, "HandleTextEntry", null),
-        R.c([M.a], e.prototype, "OnFriendPickerRef", null),
-        R.c([M.a], e.prototype, "OnFriendListSelectionChanged", null),
-        R.c([M.a], e.prototype, "HandleSubmit", null),
-        (e = R.c([Ki.observer], e))
+        N.c([M.a], e.prototype, "HandleTextEntry", null),
+        N.c([M.a], e.prototype, "OnFriendPickerRef", null),
+        N.c([M.a], e.prototype, "OnFriendListSelectionChanged", null),
+        N.c([M.a], e.prototype, "HandleSubmit", null),
+        (e = N.c([Ki.observer], e))
       );
     })(ye.Component);
     function ys() {
@@ -42120,7 +42144,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.bindHover = function(e) {
             (this.m_elHover = e || void 0), this.positionHover();
           }),
@@ -42208,8 +42232,8 @@
               }
             }
           }),
-          R.c([M.a], e.prototype, "bindHover", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "bindHover", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component));
     function Os(e) {
@@ -42238,7 +42262,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.componentDidUpdate = function(e) {
             if (this.props.broadcastAccountID !== e.broadcastAccountID) {
               this.state.broadcastInfo && to.StopInfo(this.state.broadcastInfo);
@@ -42260,7 +42284,7 @@
                 })
               : null;
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ws = (function(t) {
@@ -42268,7 +42292,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = this.props.hoverInstance.hover,
               t = e.persona,
@@ -42617,7 +42641,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Ms = (function(i) {
@@ -42635,7 +42659,7 @@
           return (o.m_instance = t), o;
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           (e.prototype.OnLoad = function() {}),
           (e.prototype.OnResize = function() {}),
           (e.prototype.OnClose = function() {}),
@@ -42659,7 +42683,7 @@
             return (n.m_hoverProps = e), n;
           }
           return (
-            R.d(e, o),
+            N.d(e, o),
             (e.prototype.UpdateParamsBeforeShow = function(e) {
               var t = ui.h(
                 this.m_hoverProps.target.ownerDocument.defaultView,
@@ -42682,7 +42706,7 @@
               H.render(
                 ye.createElement(
                   Ds,
-                  R.a({}, this.m_hoverProps, { popup: e }),
+                  N.a({}, this.m_hoverProps, { popup: e }),
                   n
                 ),
                 t
@@ -42708,7 +42732,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.bindHover = function(e) {
             (this.m_elHover = e || void 0), this.positionHover();
           }),
@@ -42804,8 +42828,8 @@
               }
             }
           }),
-          R.c([M.a], e.prototype, "bindHover", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "bindHover", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Ts = (function() {
@@ -42815,16 +42839,16 @@
         return (
           (e.prototype.GetHover = function(e) {
             var t = this.m_mapHovers.get(e);
-            return t || ((t = new Rs(e)), this.m_mapHovers.set(e, t)), t;
+            return t || ((t = new Ns(e)), this.m_mapHovers.set(e, t)), t;
           }),
           e
         );
       })(),
       Gs = (function() {
         function e() {}
-        return R.c([d.observable], e.prototype, "visible", void 0), e;
+        return N.c([d.observable], e.prototype, "visible", void 0), e;
       })(),
-      Rs = (function() {
+      Ns = (function() {
         function p(e) {
           (this.m_bLoadingData = !1), (this.m_friend = e);
         }
@@ -43028,15 +43052,15 @@
                 }));
           }),
           (p.m_embeddedElements = new oi.a("CFriendHoverContainer")),
-          R.c([d.observable], p.prototype, "m_communityData", void 0),
-          R.c([M.a], p.prototype, "Show", null),
-          R.c([M.a], p.prototype, "Hide", null),
-          R.c([M.a], p.prototype, "OnContextMenu", null),
+          N.c([d.observable], p.prototype, "m_communityData", void 0),
+          N.c([M.a], p.prototype, "Show", null),
+          N.c([M.a], p.prototype, "Hide", null),
+          N.c([M.a], p.prototype, "OnContextMenu", null),
           p
         );
       })();
     ye.Component;
-    var Ns = (function(n) {
+    var Rs = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -43062,7 +43086,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -43151,7 +43175,7 @@
                       Oi,
                       null,
                       ye.createElement(Ti, null, "PrimaryButton"),
-                      ye.createElement(Ri, null, "TextButton"),
+                      ye.createElement(Ni, null, "TextButton"),
                       ye.createElement(Gi, { svgicon: ti.h }, "Button w/ Icon")
                     )
                   ),
@@ -43181,10 +43205,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnInputChanged", null),
-          R.c([M.a], e.prototype, "OnToggled", null),
-          R.c([M.a], e.prototype, "OnSelectDropDownChanged", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnInputChanged", null),
+          N.c([M.a], e.prototype, "OnToggled", null),
+          N.c([M.a], e.prototype, "OnSelectDropDownChanged", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
           e
         );
       })(Hi),
@@ -43226,7 +43250,7 @@
           );
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -43250,9 +43274,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "RefTest", null),
-          R.c([M.a], e.prototype, "OnListReordered", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "RefTest", null),
+          N.c([M.a], e.prototype, "OnListReordered", null),
           e
         );
       })(Hi),
@@ -43262,7 +43286,7 @@
           return (t.state = { cSeconds: 0 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidMount = function() {
             var e = this;
             this.m_iInterval = window.setInterval(function() {
@@ -43289,7 +43313,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnCMToggled = function(e) {
             e
               ? window.localStorage.setItem(L, "true")
@@ -43302,9 +43326,9 @@
           (t.prototype.OnMobxDevToolsToggle = function(e) {
             !(function(e) {
               e
-                ? window.sessionStorage.setItem(Rp, "true")
-                : window.sessionStorage.removeItem(Rp);
-              Np.bEnabled = e;
+                ? window.sessionStorage.setItem(Np, "true")
+                : window.sessionStorage.removeItem(Np);
+              Rp.bEnabled = e;
             })(e),
               this.forceUpdate();
           }),
@@ -43344,9 +43368,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnCMToggled", null),
-          R.c([M.a], t.prototype, "OnStickyContextMenuToggle", null),
-          R.c([M.a], t.prototype, "OnMobxDevToolsToggle", null),
+          N.c([M.a], t.prototype, "OnCMToggled", null),
+          N.c([M.a], t.prototype, "OnStickyContextMenuToggle", null),
+          N.c([M.a], t.prototype, "OnMobxDevToolsToggle", null),
           t
         );
       })(Hi),
@@ -43356,7 +43380,7 @@
           return (t.state = { searchString: "" }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OKToSwitchAway = function() {
             return !0;
           }),
@@ -43371,7 +43395,7 @@
               "" == this.state.searchString
                 ? Zo.FriendStore.self.steamid.GetAccountID()
                 : this.state.searchString;
-            var n = new Rs(Zo.FriendStore.GetPlayer(+e));
+            var n = new Ns(Zo.FriendStore.GetPlayer(+e));
             return (
               (t.hover = n),
               (t.visible = !0),
@@ -43449,7 +43473,7 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnSearchInput", null),
+          N.c([M.a], e.prototype, "OnSearchInput", null),
           e
         );
       })(Hi);
@@ -43470,7 +43494,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.PostDate = function(e) {
             return Zo.RTime32ToDate(e).toLocaleDateString(
               se.a.GetPreferredLocales(),
@@ -44051,7 +44075,7 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "PostDate", null),
+          N.c([M.a], e.prototype, "PostDate", null),
           e
         );
       })(ye.Component),
@@ -44060,7 +44084,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             return ye.createElement(
               Zi,
@@ -44104,7 +44128,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = this.props.chat.VoiceChatStore.HasBeenAttemptingOverTwoSeconds(),
               t = this.props.chat.VoiceChatStore.IsAttemptingReconnect();
@@ -44144,7 +44168,7 @@
                 )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component)),
       Us = (function(e) {
@@ -44152,7 +44176,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.chats.GetActiveVoiceChat();
             return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
@@ -44199,7 +44223,7 @@
                   )
                 );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       js = (function(t) {
@@ -44207,7 +44231,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.ActivateActiveVoiceChat = function(e) {
             if (this.props.chat instanceof kt) {
               var t = Zo.ChatStore.GetChatRoomGroup(
@@ -44286,8 +44310,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "ActivateActiveVoiceChat", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "ActivateActiveVoiceChat", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Hs = (function(e) {
@@ -44295,7 +44319,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ToggleMicrophone = function(e) {
             Zo.VoiceStore.IsMicMuted() &&
               Zo.VoiceStore.IsOutputMuted() &&
@@ -44329,8 +44353,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "ToggleMicrophone", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "ToggleMicrophone", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ws = (function(e) {
@@ -44338,7 +44362,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ToggleVoiceOutput = function(e) {
             Zo.VoiceStore.IsOutputMuted() == Zo.VoiceStore.IsMicMuted() &&
               Zo.VoiceStore.ToggleMicMuting(),
@@ -44362,8 +44386,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "ToggleVoiceOutput", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "ToggleVoiceOutput", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       zs = (function(e) {
@@ -44371,7 +44395,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.EndVoiceChat = function(e) {
             Zo.VoiceStore.OnUserEndVoiceChat(), e.stopPropagation();
           }),
@@ -44386,8 +44410,8 @@
               ye.createElement(ti.cb, null)
             );
           }),
-          R.c([M.a], t.prototype, "EndVoiceChat", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "EndVoiceChat", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       qs = (function(n) {
@@ -44405,7 +44429,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnSearchInputRef = function(e) {
             this.m_refSearchInput = e;
           }),
@@ -44836,21 +44860,21 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnSearchInputRef", null),
-          R.c([M.a], e.prototype, "StartSearchOnKeyPress", null),
-          R.c([M.a], e.prototype, "OnSearchInput", null),
-          R.c([M.a], e.prototype, "OnSearchSubmit", null),
-          R.c([M.a], e.prototype, "OnSearchSelection", null),
-          R.c([M.a], e.prototype, "OnSearchKeyDown", null),
-          R.c([M.a], e.prototype, "OnClearSearch", null),
-          R.c([M.a], e.prototype, "OnSettingsClick", null),
-          R.c([M.a], e.prototype, "ToggleCollapseExpand", null),
-          R.c([M.a], e.prototype, "OnDoFriendsListUpdate", null),
-          R.c([M.a], e.prototype, "BindTabLabel", null),
-          R.c([M.a], e.prototype, "CollapseTabLabel", null),
-          R.c([M.a], e.prototype, "OnTabSearchClick", null),
-          R.c([M.a], e.prototype, "ToggleViewingIncomingInvites", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnSearchInputRef", null),
+          N.c([M.a], e.prototype, "StartSearchOnKeyPress", null),
+          N.c([M.a], e.prototype, "OnSearchInput", null),
+          N.c([M.a], e.prototype, "OnSearchSubmit", null),
+          N.c([M.a], e.prototype, "OnSearchSelection", null),
+          N.c([M.a], e.prototype, "OnSearchKeyDown", null),
+          N.c([M.a], e.prototype, "OnClearSearch", null),
+          N.c([M.a], e.prototype, "OnSettingsClick", null),
+          N.c([M.a], e.prototype, "ToggleCollapseExpand", null),
+          N.c([M.a], e.prototype, "OnDoFriendsListUpdate", null),
+          N.c([M.a], e.prototype, "BindTabLabel", null),
+          N.c([M.a], e.prototype, "CollapseTabLabel", null),
+          N.c([M.a], e.prototype, "OnTabSearchClick", null),
+          N.c([M.a], e.prototype, "ToggleViewingIncomingInvites", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Ks = (function(e) {
@@ -44858,7 +44882,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e =
               G.a.COMMUNITY_BASE_URL + "groups/SteamClientBeta/discussions/3/";
@@ -44895,7 +44919,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OpenChangeLog = function(e) {
             var t;
             Su.SetUIDisplayPref(
@@ -44934,7 +44958,7 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OpenChangeLog", null),
+          N.c([M.a], e.prototype, "OpenChangeLog", null),
           e
         );
       })(ye.Component),
@@ -44943,7 +44967,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnSettingsZooClick = function(e) {
             0;
           }),
@@ -44960,8 +44984,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnSettingsZooClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnSettingsZooClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Xs = (function(e) {
@@ -44969,7 +44993,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnShowContextMenu = function(e) {
             return (
               (t = hu(this, e)),
@@ -45085,10 +45109,10 @@
                 )
             );
           }),
-          R.c([M.a], t.prototype, "OnShowContextMenu", null),
-          R.c([M.a], t.prototype, "ToggleSingleWindowToggle", null),
-          R.c([M.a], t.prototype, "ShowCurrentUserProfile", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnShowContextMenu", null),
+          N.c([M.a], t.prototype, "ToggleSingleWindowToggle", null),
+          N.c([M.a], t.prototype, "ShowCurrentUserProfile", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Qs = (function(n) {
@@ -45097,7 +45121,7 @@
           return (t.state = { bScrolledFromTop: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "frame", {
             get: function() {
               return this.m_elFriendsListContent;
@@ -45265,7 +45289,7 @@
                                     )
                                   },
                                   ye.createElement(
-                                    Ri,
+                                    Ni,
                                     {
                                       onClick: function(e) {
                                         o.OnAcceptClanInvite(e, t);
@@ -45283,7 +45307,7 @@
                                     )
                                   },
                                   ye.createElement(
-                                    Ri,
+                                    Ni,
                                     {
                                       onClick: function(e) {
                                         o.OnDeclineClanInvite(e, t);
@@ -45324,7 +45348,7 @@
                     ),
                   ye.createElement(
                     nc,
-                    R.a(
+                    N.a(
                       {
                         group: this.props.friends.FriendGroupStore
                           .incoming_invites_group,
@@ -45336,7 +45360,7 @@
                   ),
                   ye.createElement(
                     nc,
-                    R.a(
+                    N.a(
                       {
                         group: this.props.friends.FriendGroupStore
                           .outgoing_invites_group,
@@ -45350,7 +45374,7 @@
               } else if (t)
                 e = ye.createElement(
                   nc,
-                  R.a(
+                  N.a(
                     {
                       group: this.props.friends.FriendGroupStore.all_friends,
                       collapsed: !1
@@ -45363,7 +45387,7 @@
                     function(e) {
                       return ye.createElement(
                         nc,
-                        R.a(
+                        N.a(
                           {
                             group: e,
                             key: e.id,
@@ -45379,7 +45403,7 @@
                     function(e) {
                       return ye.createElement(
                         nc,
-                        R.a(
+                        N.a(
                           {
                             group: e,
                             key: e.id,
@@ -45465,13 +45489,13 @@
               })
             );
           }),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "BindFriendsListContent", null),
-          R.c([M.a], e.prototype, "OnFriendsListKeyDown", null),
-          R.c([M.a], e.prototype, "OnFriendsListScrollRef", null),
-          R.c([M.a], e.prototype, "ScrollToTop", null),
-          R.c([M.a], e.prototype, "OnScrollFriendsList", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "BindFriendsListContent", null),
+          N.c([M.a], e.prototype, "OnFriendsListKeyDown", null),
+          N.c([M.a], e.prototype, "OnFriendsListScrollRef", null),
+          N.c([M.a], e.prototype, "ScrollToTop", null),
+          N.c([M.a], e.prototype, "OnScrollFriendsList", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Zs = (function(n) {
@@ -45493,11 +45517,11 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.UpdateChatSectionSize = function() {
             var e = this;
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 this.m_elChatSection,
                 "m_elChatRoomListContainer not set"
               ),
@@ -45795,21 +45819,21 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "UpdateChatSectionSize", null),
-          R.c([M.a], e.prototype, "OnChatSectionMutation", null),
-          R.c([M.a], e.prototype, "BindChatRoomTitleContainer", null),
-          R.c([M.a], e.prototype, "BindChatRoomListContainer", null),
-          R.c([M.a], e.prototype, "BindChatSection", null),
-          R.c([M.a], e.prototype, "OnGrabberMouseDown", null),
-          R.c([M.a], e.prototype, "OnGrabberTouchStart", null),
-          R.c([M.a], e.prototype, "HandleTouchMove", null),
-          R.c([M.a], e.prototype, "HandleMouseMove", null),
-          R.c([M.a], e.prototype, "OnMouseEnter", null),
-          R.c([M.a], e.prototype, "OnMouseLeave", null),
-          R.c([M.a], e.prototype, "ToggleChatsList", null),
-          R.c([M.a], e.prototype, "UnregisterChatRoomListDragEvents", null),
-          R.c([M.a], e.prototype, "OnCreateChatRoom", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "UpdateChatSectionSize", null),
+          N.c([M.a], e.prototype, "OnChatSectionMutation", null),
+          N.c([M.a], e.prototype, "BindChatRoomTitleContainer", null),
+          N.c([M.a], e.prototype, "BindChatRoomListContainer", null),
+          N.c([M.a], e.prototype, "BindChatSection", null),
+          N.c([M.a], e.prototype, "OnGrabberMouseDown", null),
+          N.c([M.a], e.prototype, "OnGrabberTouchStart", null),
+          N.c([M.a], e.prototype, "HandleTouchMove", null),
+          N.c([M.a], e.prototype, "HandleMouseMove", null),
+          N.c([M.a], e.prototype, "OnMouseEnter", null),
+          N.c([M.a], e.prototype, "OnMouseLeave", null),
+          N.c([M.a], e.prototype, "ToggleChatsList", null),
+          N.c([M.a], e.prototype, "UnregisterChatRoomListDragEvents", null),
+          N.c([M.a], e.prototype, "OnCreateChatRoom", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       $s = (function(e) {
@@ -45817,7 +45841,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetDragDropProps = function(e) {
             void 0 === e && (e = !0);
             var t = { rgAcceptedTypes: [] };
@@ -45845,7 +45869,7 @@
               this.setState({ friendDraggedOut: null });
           }),
           (t.prototype.OnDragEnter = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               e && "friend" == e.type,
               "Invalid data type passed to FriendGroupDragDrop.OnDragEnter"
             );
@@ -45873,7 +45897,7 @@
           }),
           (t.prototype.OnDrop = function(e, t) {
             var n = this;
-            Object(N.a)(
+            Object(R.a)(
               e && "friend" == e.type,
               "Invalid data type passed to FriendGroupDragDrop.OnDrop"
             );
@@ -45892,11 +45916,11 @@
                 .catch(r);
             }
           }),
-          R.c([M.a], t.prototype, "OnDragStart", null),
-          R.c([M.a], t.prototype, "OnDragEnd", null),
-          R.c([M.a], t.prototype, "OnDragEnter", null),
-          R.c([M.a], t.prototype, "OnDragLeave", null),
-          R.c([M.a], t.prototype, "OnDrop", null),
+          N.c([M.a], t.prototype, "OnDragStart", null),
+          N.c([M.a], t.prototype, "OnDragEnd", null),
+          N.c([M.a], t.prototype, "OnDragEnter", null),
+          N.c([M.a], t.prototype, "OnDragLeave", null),
+          N.c([M.a], t.prototype, "OnDrop", null),
           t
         );
       })(ye.Component);
@@ -45965,7 +45989,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.GetGroup = function() {
             return this.props.group;
           }),
@@ -46008,7 +46032,7 @@
                   this.props.fnOnSearchSelection());
           }),
           (e.prototype.OnAcceptInvite = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "accept invite on non-invite group"
             );
@@ -46021,7 +46045,7 @@
                 });
           }),
           (e.prototype.OnDeclineInvite = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "decline invite on non-invite group"
             );
@@ -46034,7 +46058,7 @@
               : this.m_actions.delete(t.accountid);
           }),
           (e.prototype.OnBlockInvite = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "block invite on non-invite group"
             ),
@@ -46086,7 +46110,7 @@
           }),
           (e.prototype.OnConfirmChanges = function(e) {
             var t = this;
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "confirm changes on non-invite group"
             );
@@ -46103,7 +46127,7 @@
           }),
           (e.prototype.OnIgnoreAllInvites = function(e) {
             var o = this;
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "ignore all invites on non-invite group"
             );
@@ -46127,7 +46151,7 @@
               .catch(function() {});
           }),
           (e.prototype.OnCloseInvites = function() {
-            Object(N.a)(
+            Object(R.a)(
               this.IsInviteGroup(),
               "close invites on non-invite group"
             ),
@@ -46245,7 +46269,7 @@
                           null,
                           ye.createElement(
                             cc,
-                            R.a(
+                            N.a(
                               {
                                 friend: t,
                                 key: t.accountid,
@@ -46378,7 +46402,7 @@
               n && (S += " Collapsed"),
               ye.createElement(
                 qi,
-                R.a(
+                N.a(
                   { className: f },
                   this.GetDragDropProps(
                     this.props.group.modifiable ||
@@ -46496,17 +46520,17 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "ToggleCollapsed", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "OnFriendSelected", null),
-          R.c([M.a], e.prototype, "OnAcceptInvite", null),
-          R.c([M.a], e.prototype, "OnDeclineInvite", null),
-          R.c([M.a], e.prototype, "OnBlockInvite", null),
-          R.c([M.a], e.prototype, "OnConfirmChanges", null),
-          R.c([M.a], e.prototype, "OnIgnoreAllInvites", null),
-          R.c([M.a], e.prototype, "OnCloseInvites", null),
-          R.c([M.a], e.prototype, "ToggleOfflineSortMethod", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "ToggleCollapsed", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "OnFriendSelected", null),
+          N.c([M.a], e.prototype, "OnAcceptInvite", null),
+          N.c([M.a], e.prototype, "OnDeclineInvite", null),
+          N.c([M.a], e.prototype, "OnBlockInvite", null),
+          N.c([M.a], e.prototype, "OnConfirmChanges", null),
+          N.c([M.a], e.prototype, "OnIgnoreAllInvites", null),
+          N.c([M.a], e.prototype, "OnCloseInvites", null),
+          N.c([M.a], e.prototype, "ToggleOfflineSortMethod", null),
+          (e = N.c([Ki.observer], e))
         );
       })($s);
     function oc(e, t, n) {
@@ -46524,7 +46548,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(
               Yi.c,
@@ -46544,7 +46568,7 @@
           return (t.state = { bLocalCollapsed: t.props.collapsed }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.GetGroup = function() {
             return this.props.group;
           }),
@@ -46738,7 +46762,7 @@
                   : Object(se.b)("#FriendGroup_InGame"))),
               ye.createElement(
                 qi,
-                R.a(
+                N.a(
                   { className: E },
                   this.GetDragDropProps(
                     this.props.group.modifiable ||
@@ -46794,9 +46818,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "ToggleCollapsed", null),
-          R.c([M.a], e.prototype, "OnShowHeaderContextMenu", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "ToggleCollapsed", null),
+          N.c([M.a], e.prototype, "OnShowHeaderContextMenu", null),
+          (e = N.c([Ki.observer], e))
         );
       })($s),
       ac = (function(e) {
@@ -46804,7 +46828,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnShowGameIconContextMenu = function(e) {
             oc(hu(this, e), this.props.appid, e);
           }),
@@ -46833,8 +46857,8 @@
                   )
                 );
           }),
-          R.c([M.a], t.prototype, "OnShowGameIconContextMenu", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnShowGameIconContextMenu", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       sc = (function(e) {
@@ -46842,7 +46866,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnContextMenu = function(e) {
             if (!this.props.disableContextMenu) {
               var t = void 0;
@@ -46876,7 +46900,7 @@
             }
             return this.props.children;
           }),
-          R.c([M.a], t.prototype, "OnContextMenu", null),
+          N.c([M.a], t.prototype, "OnContextMenu", null),
           t
         );
       })(ye.Component),
@@ -46886,7 +46910,7 @@
           return (t.state = { bActive: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnDoubleClick = function(e) {
             this.RunAction(!0, e);
           }),
@@ -46989,7 +47013,7 @@
                 (i.draggable = !0)),
               this.props.children)
             )
-              r = ye.createElement("div", R.a({}, i), this.props.children);
+              r = ye.createElement("div", N.a({}, i), this.props.children);
             else {
               var u = {};
               if (this.props.showVoiceLevel && 1 != o) {
@@ -47013,7 +47037,7 @@
               var f = Zo.VoiceStore.GetPerUserMuting(e.accountid);
               r = ye.createElement(
                 "div",
-                R.a({}, i),
+                N.a({}, i),
                 this.props.bInGroup &&
                   ye.createElement("div", {
                     className: "SteamPlayerGroupLines"
@@ -47070,13 +47094,13 @@
                   r
                 );
           }),
-          R.c([M.a], e.prototype, "OnDoubleClick", null),
-          R.c([M.a], e.prototype, "OnClick", null),
-          R.c([M.a], e.prototype, "OnDragStart", null),
-          R.c([M.a], e.prototype, "OnDragEnd", null),
-          R.c([M.a], e.prototype, "OnShowContextMenu", null),
-          R.c([M.a], e.prototype, "OnContextMenuShown", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnDoubleClick", null),
+          N.c([M.a], e.prototype, "OnClick", null),
+          N.c([M.a], e.prototype, "OnDragStart", null),
+          N.c([M.a], e.prototype, "OnDragEnd", null),
+          N.c([M.a], e.prototype, "OnShowContextMenu", null),
+          N.c([M.a], e.prototype, "OnContextMenuShown", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       lc = (function(e) {
@@ -47084,7 +47108,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.friend,
               t = Zo.CMInterface.steamid.GetAccountID() == e.accountid,
@@ -47139,7 +47163,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       pc = (function(e) {
@@ -47147,7 +47171,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.friend,
               t = { className: "friend FriendAvatar " + Fs(e.persona) };
@@ -47156,7 +47180,7 @@
                 (t.className += " " + this.props.className);
             var n = ye.createElement(
               "div",
-              R.a({}, t),
+              N.a({}, t),
               this.props.children,
               ye.createElement(
                 "div",
@@ -47179,7 +47203,7 @@
               n
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       mc = Object(Ki.observer)(function(e) {
@@ -47190,7 +47214,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.friend,
               t = null,
@@ -47337,7 +47361,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       dc = (function(e) {
@@ -47345,7 +47369,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e,
               t = Zo.ChatStore.FriendChatStore.GetUnreadFriendMessageCount(
@@ -47375,7 +47399,7 @@
               ye.createElement(ei, null, e)
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       hc = (function(n) {
@@ -47384,7 +47408,7 @@
           return (t.state = { collapsed: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnHeaderClick = function(e) {
             this.setState({ collapsed: !this.state.collapsed });
           }),
@@ -47451,8 +47475,8 @@
               ye.createElement(ei, null, n)
             );
           }),
-          R.c([M.a], e.prototype, "OnHeaderClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnHeaderClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component);
     ye.Component;
@@ -47461,7 +47485,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             if (null == this.props.text)
               return ye.createElement(ye.Fragment, null, this.props.children);
@@ -47507,7 +47531,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(n, e),
+          N.d(n, e),
           (n.OnMouseEnter = function(e) {
             Su.EmoticonHoverStore.GetEmoticonHover(
               e.currentTarget.getAttribute("data-emoticon")
@@ -47543,7 +47567,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(
               Is,
@@ -47566,7 +47590,7 @@
               })
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Sc = (function(o) {
@@ -47590,7 +47614,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.componentWillUnmount = function() {
             this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
           }),
@@ -47706,11 +47730,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnClick", null),
-          R.c([M.a], e.prototype, "OnSearchInput", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "OnScrollRef", null),
-          R.c([M.a], e.prototype, "OnScroll", null),
+          N.c([M.a], e.prototype, "OnClick", null),
+          N.c([M.a], e.prototype, "OnSearchInput", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnScrollRef", null),
+          N.c([M.a], e.prototype, "OnScroll", null),
           e
         );
       })(ye.Component);
@@ -47727,7 +47751,7 @@
           return (t.state = { visible: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.SetVisible = function(e) {
             e && !this.state.visible && this.setState({ visible: !0 });
           }),
@@ -47761,7 +47785,7 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "SetVisible", null),
+          N.c([M.a], e.prototype, "SetVisible", null),
           e
         );
       })(ye.Component),
@@ -47772,7 +47796,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnEmoticonClick = function(e) {
             var t = this.props,
               n = t.emoticonStore,
@@ -47818,8 +47842,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnEmoticonClick", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnEmoticonClick", null),
+          (t = N.c([Ki.observer], t))
         );
       })(Ce.a.Component),
       wc = (function(n) {
@@ -47833,7 +47857,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnKeyDown = function(e) {
             this.BHandleKeyPress(e.keyCode) && e.preventDefault();
           }),
@@ -48019,10 +48043,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnKeyDown", null),
-          R.c([M.a], e.prototype, "OnClickSuggestion", null),
-          R.c([M.a], e.prototype, "OnMouseOverSuggestion", null),
-          R.c([M.a], e.prototype, "BindSelectedElement", null),
+          N.c([M.a], e.prototype, "OnKeyDown", null),
+          N.c([M.a], e.prototype, "OnClickSuggestion", null),
+          N.c([M.a], e.prototype, "OnMouseOverSuggestion", null),
+          N.c([M.a], e.prototype, "BindSelectedElement", null),
           e
         );
       })(Ce.a.Component),
@@ -48031,7 +48055,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnMouseOver = function(e) {
             this.props.fnOnMouseOver(this.props.matchKey);
           }),
@@ -48051,8 +48075,8 @@
               this.props.children
             );
           }),
-          R.c([M.a], t.prototype, "OnMouseOver", null),
-          R.c([M.a], t.prototype, "OnClick", null),
+          N.c([M.a], t.prototype, "OnMouseOver", null),
+          N.c([M.a], t.prototype, "OnClick", null),
           t
         );
       })(Ce.a.PureComponent),
@@ -48062,7 +48086,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.performSearch = function(e) {
             return this.props.emoticonStore.SearchEmoticons(e, 10);
           }),
@@ -48103,8 +48127,8 @@
         );
       })(Dc),
       Gc = n("UDpV"),
-      Rc = n.n(Gc),
-      Nc = (function(n) {
+      Nc = n.n(Gc),
+      Rc = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -48121,7 +48145,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BindMentionDialog = function(e) {
             this.m_MentionDialog = e;
           }),
@@ -48430,9 +48454,9 @@
               c = Zo.SettingsStore.FriendsSettings.nChatFontSize,
               l = "";
             return (
-              c == Ra.k_EChatFontSizeSmall
+              c == Na.k_EChatFontSizeSmall
                 ? (l = " smallChatFont")
-                : c == Ra.k_EChatFontSizeLarge && (l = " largeChatFont"),
+                : c == Na.k_EChatFontSizeLarge && (l = " largeChatFont"),
               ye.createElement(
                 "div",
                 { className: "chatEntry" + (s ? " compactView" : "") + l },
@@ -48440,13 +48464,13 @@
                 ye.createElement(
                   "form",
                   {
-                    className: Rc.a.chatEntryControls + " compactableHeight",
+                    className: Nc.a.chatEntryControls + " compactableHeight",
                     onSubmit: this.OnSubmit,
                     onBlur: this.OnBlur
                   },
                   r,
                   ye.createElement("textarea", {
-                    className: Rc.a.chatTextarea,
+                    className: Nc.a.chatTextarea,
                     value: this.state.messageInput,
                     onPaste: this.OnPaste,
                     onContextMenu: this.OnContextMenu,
@@ -48483,11 +48507,11 @@
                   "div",
                   {
                     className:
-                      Rc.a.chatEntryActionsContainer + " compactableHeight"
+                      Nc.a.chatEntryActionsContainer + " compactableHeight"
                   },
                   ye.createElement(
                     "div",
-                    { className: Rc.a.chatEntryActionsGroup },
+                    { className: Nc.a.chatEntryActionsGroup },
                     ye.createElement(Ec, {
                       disabled: n,
                       OnEmoticonSelected: this.OnEmoticonSelected,
@@ -48518,24 +48542,24 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "BindMentionDialog", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "OnTextAreaChange", null),
-          R.c([M.a], e.prototype, "OnFocus", null),
-          R.c([M.a], e.prototype, "OnBlur", null),
-          R.c([M.a], e.prototype, "OnKeyDown", null),
-          R.c([M.a], e.prototype, "OnPaste", null),
-          R.c([M.a], e.prototype, "OnFileInputChange", null),
-          R.c([M.a], e.prototype, "OnEmbedClick", null),
-          R.c([M.a], e.prototype, "OnEmoticonSelected", null),
-          R.c([M.a], e.prototype, "OnKeyPress", null),
-          R.c([M.a], e.prototype, "OnClick", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "OnMentionSuggestionSelected", null),
-          R.c([M.a], e.prototype, "OnEmoticonSuggestionSelected", null),
-          R.c([M.a], e.prototype, "OnSlashCommandSuggestionSelected", null),
-          R.c([M.a], e.prototype, "FocusTextInput", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "BindMentionDialog", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnTextAreaChange", null),
+          N.c([M.a], e.prototype, "OnFocus", null),
+          N.c([M.a], e.prototype, "OnBlur", null),
+          N.c([M.a], e.prototype, "OnKeyDown", null),
+          N.c([M.a], e.prototype, "OnPaste", null),
+          N.c([M.a], e.prototype, "OnFileInputChange", null),
+          N.c([M.a], e.prototype, "OnEmbedClick", null),
+          N.c([M.a], e.prototype, "OnEmoticonSelected", null),
+          N.c([M.a], e.prototype, "OnKeyPress", null),
+          N.c([M.a], e.prototype, "OnClick", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "OnMentionSuggestionSelected", null),
+          N.c([M.a], e.prototype, "OnEmoticonSuggestionSelected", null),
+          N.c([M.a], e.prototype, "OnSlashCommandSuggestionSelected", null),
+          N.c([M.a], e.prototype, "FocusTextInput", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       kc = (function(e) {
@@ -48543,7 +48567,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.HandleStartVoice = function(e) {
             var t = this.props.chat;
             if (t instanceof Yt) t.ToggleVoiceChat();
@@ -48675,8 +48699,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "HandleStartVoice", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "HandleStartVoice", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Lc = (function(n) {
@@ -48685,7 +48709,7 @@
           return (t.state = { bSpoilerChecked: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnCancelClick = function(e) {
             this.props.chatView.SetFileToUpload(null);
           }),
@@ -48742,9 +48766,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnCancelClick", null),
-          R.c([M.a], e.prototype, "OnUploadClick", null),
-          R.c([M.a], e.prototype, "OnDialogChecked", null),
+          N.c([M.a], e.prototype, "OnCancelClick", null),
+          N.c([M.a], e.prototype, "OnUploadClick", null),
+          N.c([M.a], e.prototype, "OnDialogChecked", null),
           e
         );
       })(ye.Component),
@@ -48753,7 +48777,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.chat.file_upload_props,
               t = e.file
@@ -48781,7 +48805,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Pc = (function(e) {
@@ -48789,7 +48813,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ClearErrorState = function() {
             this.props.chatView.chat.ClearFileUploadError();
           }),
@@ -48847,9 +48871,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "ClearErrorState", null),
-          R.c([M.a], t.prototype, "OnRetryClick", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "ClearErrorState", null),
+          N.c([M.a], t.prototype, "OnRetryClick", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Fc = (function(t) {
@@ -48857,7 +48881,7 @@
           return (null !== t && t.apply(this, arguments)) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.performSearch = function(e) {
             return this.props.chat.SearchMembers(e, Number.MAX_VALUE);
           }),
@@ -48992,7 +49016,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.performSearch = function(e) {
             var t = "/" + e;
             return Object.keys(He).filter(function(e) {
@@ -49102,7 +49126,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnRef = function(e) {
             this.UnbindWindowHandlers(),
               e &&
@@ -49251,11 +49275,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnRef", null),
-          R.c([M.a], e.prototype, "CheckScrollPosition", null),
-          R.c([M.a], e.prototype, "OnSlideLeftClick", null),
-          R.c([M.a], e.prototype, "OnSlideRightClick", null),
-          R.c([M.a], e.prototype, "OnWheel", null),
+          N.c([M.a], e.prototype, "OnRef", null),
+          N.c([M.a], e.prototype, "CheckScrollPosition", null),
+          N.c([M.a], e.prototype, "OnSlideLeftClick", null),
+          N.c([M.a], e.prototype, "OnSlideRightClick", null),
+          N.c([M.a], e.prototype, "OnWheel", null),
           e
         );
       })(ye.Component),
@@ -49279,7 +49303,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidUpdate = function() {
             this.FixScrollLocation();
           }),
@@ -49689,23 +49713,23 @@
                 )
             );
           }),
-          R.c([d.observable], e.prototype, "m_nTheaterTopHoverHeight", void 0),
-          R.c([M.a], e.prototype, "OnWindowResizeEvent", null),
-          R.c([M.a], e.prototype, "HandleDropComplete", null),
-          R.c([M.a], e.prototype, "OnTabRef", null),
-          R.c([M.a], e.prototype, "OnScrollRef", null),
-          R.c([M.a], e.prototype, "SelectTab", null),
-          R.c([M.a], e.prototype, "OnDragStart", null),
-          R.c([M.a], e.prototype, "OnChatTabContianerRef", null),
-          R.c([M.a], e.prototype, "OnDragEnd", null),
-          R.c([M.a], e.prototype, "OnBackClick", null),
-          R.c([M.a], e.prototype, "ToggleSingleWindowToggle", null),
-          R.c([M.a], e.prototype, "ShowFriendsList", null),
-          R.c([M.a], e.prototype, "StartTopbarEventListener", null),
-          R.c([M.a], e.prototype, "OnTopbarHovered", null),
-          R.c([M.a], e.prototype, "OnTabSelectorClick", null),
-          R.c([M.a], e.prototype, "ChatTabSelectorContextMenu", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_nTheaterTopHoverHeight", void 0),
+          N.c([M.a], e.prototype, "OnWindowResizeEvent", null),
+          N.c([M.a], e.prototype, "HandleDropComplete", null),
+          N.c([M.a], e.prototype, "OnTabRef", null),
+          N.c([M.a], e.prototype, "OnScrollRef", null),
+          N.c([M.a], e.prototype, "SelectTab", null),
+          N.c([M.a], e.prototype, "OnDragStart", null),
+          N.c([M.a], e.prototype, "OnChatTabContianerRef", null),
+          N.c([M.a], e.prototype, "OnDragEnd", null),
+          N.c([M.a], e.prototype, "OnBackClick", null),
+          N.c([M.a], e.prototype, "ToggleSingleWindowToggle", null),
+          N.c([M.a], e.prototype, "ShowFriendsList", null),
+          N.c([M.a], e.prototype, "StartTopbarEventListener", null),
+          N.c([M.a], e.prototype, "OnTopbarHovered", null),
+          N.c([M.a], e.prototype, "OnTabSelectorClick", null),
+          N.c([M.a], e.prototype, "ChatTabSelectorContextMenu", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Hc = (function(t) {
@@ -49714,7 +49738,7 @@
           return (e.m_bMiddleMouseDown = !1), e;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.BindChatTab = function(e) {
             this.m_elChatTab = e;
           }),
@@ -49870,15 +49894,15 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "BindChatTab", null),
-          R.c([M.a], e.prototype, "OnDragStart", null),
-          R.c([M.a], e.prototype, "OnDragEnd", null),
-          R.c([M.a], e.prototype, "OnMouseDown", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([M.a], e.prototype, "OnMouseLeave", null),
-          R.c([M.a], e.prototype, "OnCloseClick", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "BindChatTab", null),
+          N.c([M.a], e.prototype, "OnDragStart", null),
+          N.c([M.a], e.prototype, "OnDragEnd", null),
+          N.c([M.a], e.prototype, "OnMouseDown", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([M.a], e.prototype, "OnMouseLeave", null),
+          N.c([M.a], e.prototype, "OnCloseClick", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Wc = (function(e) {
@@ -49886,7 +49910,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.tab;
             if (e.IsChatRoom() && e instanceof Vt) {
@@ -49916,7 +49940,7 @@
                 )
               : null;
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       zc = (function(e) {
@@ -49924,7 +49948,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.tab.GetChatView();
             if (e && e.chat instanceof Yt)
@@ -49969,7 +49993,7 @@
             }
             return null;
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     var qc = (function(n) {
@@ -49982,7 +50006,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.DismissDialog = function() {
             this.props.closeModal();
           }),
@@ -50078,11 +50102,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "DismissDialog", null),
-          R.c([M.a], e.prototype, "OnSubmit", null),
-          R.c([M.a], e.prototype, "OnDialogChecked", null),
-          R.c([M.a], e.prototype, "OnManualVoiceChatExit", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "DismissDialog", null),
+          N.c([M.a], e.prototype, "OnSubmit", null),
+          N.c([M.a], e.prototype, "OnDialogChecked", null),
+          N.c([M.a], e.prototype, "OnManualVoiceChatExit", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Kc = (function(t) {
@@ -50090,7 +50114,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.HideStats = function() {
             this.props.closeStats && this.props.closeStats();
           }),
@@ -50198,8 +50222,8 @@
               ye.createElement(Yc, { stats: e })
             );
           }),
-          R.c([M.a], e.prototype, "HideStats", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "HideStats", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Yc = (function(t) {
@@ -50207,7 +50231,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.createBufferedRange = function(e) {
             var t = this.props.stats,
               n = [],
@@ -50394,7 +50418,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component);
     function Jc(e, t) {
@@ -50444,7 +50468,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.StopVideo = function() {
             var e = this.state.video;
             e && (to.StopVideo(e), this.setState({ video: null }));
@@ -50730,22 +50754,22 @@
                 )
             );
           }),
-          R.c([M.a], e.prototype, "BindBroadcastPlayerRef", null),
-          R.c([M.a], e.prototype, "BindVideoRef", null),
-          R.c([M.a], e.prototype, "OnMouseDown", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([M.a], e.prototype, "OnMouseMove", null),
-          R.c([M.a], e.prototype, "OnMouseLeave", null),
-          R.c([M.a], e.prototype, "HideControls", null),
-          R.c([M.a], e.prototype, "UmountControls", null),
-          R.c([M.a], e.prototype, "ShowStatsView", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "ToggleStatsView", null),
-          R.c([M.a], e.prototype, "ShowStorePage", null),
-          R.c([M.a], e.prototype, "CloseStats", null),
-          R.c([M.a], e.prototype, "OnToggleFullscreen", null),
-          R.c([M.a], e.prototype, "OnFullscreenChange", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "BindBroadcastPlayerRef", null),
+          N.c([M.a], e.prototype, "BindVideoRef", null),
+          N.c([M.a], e.prototype, "OnMouseDown", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([M.a], e.prototype, "OnMouseMove", null),
+          N.c([M.a], e.prototype, "OnMouseLeave", null),
+          N.c([M.a], e.prototype, "HideControls", null),
+          N.c([M.a], e.prototype, "UmountControls", null),
+          N.c([M.a], e.prototype, "ShowStatsView", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "ToggleStatsView", null),
+          N.c([M.a], e.prototype, "ShowStorePage", null),
+          N.c([M.a], e.prototype, "CloseStats", null),
+          N.c([M.a], e.prototype, "OnToggleFullscreen", null),
+          N.c([M.a], e.prototype, "OnFullscreenChange", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Zc = (function(e) {
@@ -50753,7 +50777,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.video;
             if (e && e.GetUserInputNeeded()) return null;
@@ -50779,7 +50803,7 @@
                 )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       $c = (function(e) {
@@ -50787,7 +50811,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnClick = function() {
             to.UserInputClickVideo(this.props.video);
           }),
@@ -50806,7 +50830,7 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnClick", null),
+          N.c([M.a], t.prototype, "OnClick", null),
           t
         );
       })(ye.Component),
@@ -50815,7 +50839,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.video;
             if (!e) return null;
@@ -50847,7 +50871,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       tl = (function(e) {
@@ -50855,7 +50879,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return this.props.onClick
               ? ye.createElement(
@@ -50876,7 +50900,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnJumpBackward = function() {
             this.props.video.JumpTime(-15);
           }),
@@ -50921,8 +50945,8 @@
               ye.createElement(al, { video: e })
             );
           }),
-          R.c([M.a], t.prototype, "OnJumpBackward", null),
-          R.c([M.a], t.prototype, "OnJumpForward", null),
+          N.c([M.a], t.prototype, "OnJumpBackward", null),
+          N.c([M.a], t.prototype, "OnJumpForward", null),
           t
         );
       })(ye.Component),
@@ -50931,7 +50955,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnGoLiveClicked = function(e) {
             this.props.video.JumpToLiveEdge();
           }),
@@ -50963,8 +50987,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnGoLiveClicked", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnGoLiveClicked", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       il = (function(e) {
@@ -50972,7 +50996,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnTogglePlayPause = function() {
             this.props.video.TogglePlayPause();
           }),
@@ -50987,8 +51011,8 @@
               e ? ye.createElement(ti.G, null) : ye.createElement(ti.F, null)
             );
           }),
-          R.c([M.a], t.prototype, "OnTogglePlayPause", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnTogglePlayPause", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       rl = (function(e) {
@@ -50996,7 +51020,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           Object.defineProperty(t.prototype, "has_previous_marker", {
             get: function() {
               return void 0 !== this.GetPreviousMarkerTime();
@@ -51036,9 +51060,9 @@
               })
             );
           }),
-          R.c([d.computed], t.prototype, "has_previous_marker", null),
-          R.c([M.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
-          (t = R.c([Ki.observer], t))
+          N.c([d.computed], t.prototype, "has_previous_marker", null),
+          N.c([M.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       al = (function(e) {
@@ -51046,7 +51070,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           Object.defineProperty(t.prototype, "has_next_marker", {
             get: function() {
               return void 0 !== this.GetNextMarkerTime();
@@ -51086,9 +51110,9 @@
               })
             );
           }),
-          R.c([d.computed], t.prototype, "has_next_marker", null),
-          R.c([M.a], t.prototype, "OnJumpToNextMarkerClicked", null),
-          (t = R.c([Ki.observer], t))
+          N.c([d.computed], t.prototype, "has_next_marker", null),
+          N.c([M.a], t.prototype, "OnJumpToNextMarkerClicked", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       sl = (function(n) {
@@ -51097,7 +51121,7 @@
           return (t.state = { bSettingsOpen: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnVideoControlClick = function(e) {
             this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
               (this.m_SettingsButtonPos = [
@@ -51202,10 +51226,10 @@
                 )
             );
           }),
-          R.c([M.a], e.prototype, "OnVideoControlClick", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([M.a], e.prototype, "bindSettingsButton", null),
-          R.c([M.a], e.prototype, "BindSettingsPanel", null),
+          N.c([M.a], e.prototype, "OnVideoControlClick", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([M.a], e.prototype, "bindSettingsButton", null),
+          N.c([M.a], e.prototype, "BindSettingsPanel", null),
           e
         );
       })(ye.Component),
@@ -51222,7 +51246,7 @@
           );
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.componentWillUnmount = function() {
             this.m_schHideSlider.Cancel();
           }),
@@ -51289,12 +51313,12 @@
               )
             );
           }),
-          R.c([d.observable], e.prototype, "m_bShowSlider", void 0),
-          R.c([M.a], e.prototype, "ToggleMute", null),
-          R.c([M.a], e.prototype, "OnMouseEnter", null),
-          R.c([M.a], e.prototype, "OnMouseLeave", null),
-          R.c([M.a], e.prototype, "OnChildDrag", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_bShowSlider", void 0),
+          N.c([M.a], e.prototype, "ToggleMute", null),
+          N.c([M.a], e.prototype, "OnMouseEnter", null),
+          N.c([M.a], e.prototype, "OnMouseLeave", null),
+          N.c([M.a], e.prototype, "OnChildDrag", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ll = (function(t) {
@@ -51303,7 +51327,7 @@
           return (e.m_elSlider = null), (e.m_nVolumeStartOfDrag = 0), e;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnMouseDown = function(e) {
             var t = e.currentTarget;
             (this.m_elSlider = t),
@@ -51373,11 +51397,11 @@
               })
             );
           }),
-          R.c([M.a], e.prototype, "OnMouseDown", null),
-          R.c([M.a], e.prototype, "OnMouseMove", null),
-          R.c([M.a], e.prototype, "OnMouseUp", null),
-          R.c([d.action], e.prototype, "SetVolumeWithCoord", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnMouseDown", null),
+          N.c([M.a], e.prototype, "OnMouseMove", null),
+          N.c([M.a], e.prototype, "OnMouseUp", null),
+          N.c([d.action], e.prototype, "SetVolumeWithCoord", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component);
     function pl(e) {
@@ -51445,7 +51469,7 @@
         );
       }
       return (
-        R.d(e, n),
+        N.d(e, n),
         (e.prototype.OnMouseDown = function(e) {
           (this.m_elSlider = e.currentTarget),
             (this.m_rectSlider = this.m_elSlider.getBoundingClientRect()),
@@ -51637,14 +51661,14 @@
             )
           );
         }),
-        R.c([M.a], e.prototype, "OnMouseDown", null),
-        R.c([M.a], e.prototype, "OnMouseMove", null),
-        R.c([M.a], e.prototype, "OnMouseUp", null),
-        R.c([M.a], e.prototype, "OnKeyDown", null),
-        R.c([M.a], e.prototype, "OnSegmentClick", null),
-        R.c([M.a], e.prototype, "OnMarkerMouseEnter", null),
-        R.c([M.a], e.prototype, "OnMarkerMouseLeave", null),
-        (e = R.c([Ki.observer], e))
+        N.c([M.a], e.prototype, "OnMouseDown", null),
+        N.c([M.a], e.prototype, "OnMouseMove", null),
+        N.c([M.a], e.prototype, "OnMouseUp", null),
+        N.c([M.a], e.prototype, "OnKeyDown", null),
+        N.c([M.a], e.prototype, "OnSegmentClick", null),
+        N.c([M.a], e.prototype, "OnMarkerMouseEnter", null),
+        N.c([M.a], e.prototype, "OnMarkerMouseLeave", null),
+        (e = N.c([Ki.observer], e))
       );
     })(ye.Component);
     var dl = (function(t) {
@@ -51653,7 +51677,7 @@
           return (e.state = { info: null }), e;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.getDerivedStateFromProps = function(e, t) {
             return t.info && t.info.m_steamIDBroadcast === e.steamID
               ? null
@@ -51741,7 +51765,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       hl = (ye.Component, n("dcQ8")),
@@ -51766,7 +51790,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidMount = function() {
             0;
           }),
@@ -52042,15 +52066,15 @@
               ye.createElement("iframe", { ref: this.BindChatRef })
             );
           }),
-          R.c([d.observable], e.prototype, "m_rgChatMessages", void 0),
-          R.c([M.a], e.prototype, "BindChatRef", null),
-          R.c([M.a], e.prototype, "ChatBoxChange", null),
-          R.c([M.a], e.prototype, "ChatBoxKeypress", null),
-          R.c([M.a], e.prototype, "SendMessage", null),
-          R.c([M.a], e.prototype, "HandleScroll", null),
-          R.c([M.a], e.prototype, "OnContextMenu", null),
-          R.c([M.a], e.prototype, "OnEmoticonSelected", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_rgChatMessages", void 0),
+          N.c([M.a], e.prototype, "BindChatRef", null),
+          N.c([M.a], e.prototype, "ChatBoxChange", null),
+          N.c([M.a], e.prototype, "ChatBoxKeypress", null),
+          N.c([M.a], e.prototype, "SendMessage", null),
+          N.c([M.a], e.prototype, "HandleScroll", null),
+          N.c([M.a], e.prototype, "OnContextMenu", null),
+          N.c([M.a], e.prototype, "OnEmoticonSelected", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Sl = function(e) {
@@ -52087,7 +52111,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.CreateWatchParty = function(e) {
             void 0 === e && (e = !1);
             var t = this.props,
@@ -52276,8 +52300,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "WatchAlone", null),
-          R.c([M.a], t.prototype, "Close", null),
+          N.c([M.a], t.prototype, "WatchAlone", null),
+          N.c([M.a], t.prototype, "Close", null),
           t
         );
       })(Ce.a.Component);
@@ -52296,7 +52320,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.componentWillUnmount = function() {
             this.m_broadcastInfo &&
               (to.StopInfo(this.m_broadcastInfo),
@@ -52374,10 +52398,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnWatchWithFriends", null),
-          R.c([M.a], e.prototype, "ToggleChat", null),
-          R.c([M.a], e.prototype, "ToggleTheaterMode", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnWatchWithFriends", null),
+          N.c([M.a], e.prototype, "ToggleChat", null),
+          N.c([M.a], e.prototype, "ToggleTheaterMode", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Ce.a.Component),
       Ol = (function(n) {
@@ -52391,7 +52415,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             this.m_broadcastInfo &&
               (to.StopInfo(this.m_broadcastInfo),
@@ -52457,16 +52481,16 @@
                       bHideChat: this.state.bChatCollapsed,
                       onTheaterMode: this.ToggleTheaterMode
                     },
-                    Ce.a.createElement(Nl, { app: e })
+                    Ce.a.createElement(Rl, { app: e })
                   )
                 ),
               Ce.a.createElement(Ml, { app: e })
             );
           }),
-          R.c([M.a], e.prototype, "OnShowLogin", null),
-          R.c([M.a], e.prototype, "ToggleChat", null),
-          R.c([M.a], e.prototype, "ToggleTheaterMode", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnShowLogin", null),
+          N.c([M.a], e.prototype, "ToggleChat", null),
+          N.c([M.a], e.prototype, "ToggleTheaterMode", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Ce.a.Component);
     function El(e) {
@@ -52507,7 +52531,7 @@
           return (t.m_strLocalSteamID = ""), (t.state = { info: null }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             return t.info && t.info.m_steamIDBroadcast === e.steamID
               ? null
@@ -52521,11 +52545,24 @@
             this.m_strLocalSteamID = e;
           }),
           (e.prototype.render = function() {
-            var e = this.props,
-              t = e.steamID,
-              n = e.children,
-              o = this.m_strLocalSteamID || t,
-              i = this.state.info.m_bIsOnline;
+            var e,
+              t = this.props,
+              n = t.steamID,
+              o = t.children,
+              i = this.m_strLocalSteamID || n,
+              r = this.state.info.m_bIsOnline;
+            switch (X.appID) {
+              case 730:
+                e = Ce.a.createElement(Tl, null);
+                break;
+              case 583950:
+                e = Ce.a.createElement(Gl, null);
+                break;
+              default:
+                e = Ce.a.createElement("div", {
+                  className: X.offlineClassName
+                });
+            }
             return Ce.a.createElement(
               "div",
               { className: "BroadcastContainer" },
@@ -52535,47 +52572,64 @@
                 Ce.a.createElement(
                   "div",
                   { className: "BroadcastContainerSectionVideoContainer" },
-                  i &&
+                  r &&
                     Ce.a.createElement(Qc, {
-                      key: o,
-                      steamID: o,
+                      key: i,
+                      steamID: i,
                       watchLocation: this.props.watchLocation,
                       onTheaterMode: this.props.onTheaterMode
                     }),
-                  !i &&
-                    (570 == X.appID
-                      ? Ce.a.createElement(Tl, null)
-                      : Ce.a.createElement(Gl, null)),
+                  !r && e,
                   Ce.a.createElement("div", {
                     className: "videoContainerSizer"
                   })
                 ),
-                n,
+                o,
                 Ce.a.createElement(
                   "div",
                   { className: "BroadcastDetailsSection" },
                   Ce.a.createElement(dl, {
-                    steamID: o,
+                    steamID: i,
                     onLocalStreamChange: this.OnLocalStreamChange
                   })
                 )
               ),
               Ce.a.createElement(vl, {
-                steamID: t,
+                steamID: n,
                 watchLocation: this.props.watchLocation,
                 hidden: this.props.bHideChat
               })
             );
           }),
-          R.c([d.observable], e.prototype, "m_strLocalSteamID", void 0),
-          R.c([M.a], e.prototype, "OnLocalStreamChange", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_strLocalSteamID", void 0),
+          N.c([M.a], e.prototype, "OnLocalStreamChange", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Ce.a.Component);
     function Tl(e) {
-      return Ce.a.createElement("div", {
-        className: "BroadcastDotaKualaLumpurMajorOffline"
-      });
+      return Ce.a.createElement(
+        "div",
+        { className: "BroadcastCSGOLondonOffline" },
+        Ce.a.createElement(
+          "div",
+          { className: "BroadcastCSGOLondonOffline_Schedule" },
+          Ce.a.createElement(
+            "div",
+            { className: "BroadcastCSGOLondonOffline_Prelims" },
+            "CHALLENGERS STAGE – SEPTEMBER 5-9"
+          ),
+          Ce.a.createElement(
+            "div",
+            { className: "BroadcastCSGOLondonOffline_Group" },
+            "LEGENDS STAGE – SEPTEMBER 12-16"
+          ),
+          Ce.a.createElement(
+            "div",
+            { className: "BroadcastCSGOLondonOffline_Playoffs" },
+            "CHAMPIONS STAGE – SEPTEMBER 20-23"
+          )
+        )
+      );
     }
     function Gl(e) {
       return Ce.a.createElement(
@@ -52586,12 +52640,12 @@
         })
       );
     }
-    var Rl = (function(e) {
+    var Nl = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.Dismiss = function() {
             this.props.app.DismissLogonDialog();
           }),
@@ -52609,19 +52663,19 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "Dismiss", null),
+          N.c([M.a], t.prototype, "Dismiss", null),
           t
         );
       })(Ce.a.Component),
-      Nl = (function(e) {
+      Rl = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             if (!this.props.app.BIsLogonDialogVisible()) return null;
-            var e = Ce.a.createElement(Rl, { app: this.props.app });
+            var e = Ce.a.createElement(Nl, { app: this.props.app });
             return Ce.a.createElement(
               "div",
               { className: "chat_full_modaloverlay" },
@@ -52635,7 +52689,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(Ce.a.Component);
     function kl(e) {
@@ -52661,7 +52715,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.messages,
               t = this.props.friendRenderContext;
@@ -52698,7 +52752,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Pl = (function(e) {
@@ -52706,7 +52760,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.messages,
               t = this.props.friendRenderContext;
@@ -52741,7 +52795,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Fl = (function(e) {
@@ -52749,7 +52803,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.BIsEmoticonsOnly = function(e) {
             if (e.startsWith("[emoticon")) {
               var t = e.match(/^(?:\[emoticon\][^\[]+\[\/emoticon\]\s*)+$/);
@@ -52902,11 +52956,11 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnAnimationStart", null),
-          R.c([M.a], t.prototype, "OnAnimationEnd", null),
-          R.c([M.a], t.prototype, "CopyMessage", null),
-          R.c([M.a], t.prototype, "OnMessageContextMenu", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnAnimationStart", null),
+          N.c([M.a], t.prototype, "OnAnimationEnd", null),
+          N.c([M.a], t.prototype, "CopyMessage", null),
+          N.c([M.a], t.prototype, "OnMessageContextMenu", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Bl = Object(Ki.observer)(function(e) {
@@ -52929,7 +52983,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.friend;
             if (this.props.chatView.IsChatRoom()) {
@@ -53117,7 +53171,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       xl = (function(e) {
@@ -53125,7 +53179,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnUpdate = function() {
             this.props.onUpdate(
               "ChatMessageSlashEmote " + this.props.msg.UniqueKey()
@@ -53245,8 +53299,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OnUpdate", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnUpdate", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Ul = (function(e) {
@@ -53254,11 +53308,11 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(
               Fl,
-              R.a({}, this.props, { extraClassName: "ChatMessageDeleted" }),
+              N.a({}, this.props, { extraClassName: "ChatMessageDeleted" }),
               ye.createElement(
                 "div",
                 { className: "msgText" },
@@ -53270,7 +53324,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       jl = (function(e) {
@@ -53278,7 +53332,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e,
               t = this.props.msg,
@@ -53391,7 +53445,7 @@
               ye.createElement("div", { className: "msg serverMsg" }, e)
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Hl = (function(e) {
@@ -53399,7 +53453,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           Object.defineProperty(t.prototype, "TradeRequestMsg", {
             get: function() {
               return this.props.msg;
@@ -53774,11 +53828,11 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "AcceptTrade", null),
-          R.c([M.a], t.prototype, "DeclineTrade", null),
-          R.c([M.a], t.prototype, "CancelTradeRequest", null),
-          R.c([M.a], t.prototype, "ViewAcceptedTrade", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "AcceptTrade", null),
+          N.c([M.a], t.prototype, "DeclineTrade", null),
+          N.c([M.a], t.prototype, "CancelTradeRequest", null),
+          N.c([M.a], t.prototype, "ViewAcceptedTrade", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Wl = (function(e) {
@@ -53786,7 +53840,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(
               _c,
@@ -53805,7 +53859,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       zl = (function(e) {
@@ -53813,7 +53867,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.componentDidUpdate = function() {
             this.props.onUpdate(
               "ChatMessageBlocks " + this.props.chatView.GetUniqueID()
@@ -53834,7 +53888,7 @@
               a > s.GetRTimeFirstMessage() &&
                 ((p = (t = s.CreateVirtualSplitOnTimestamp(a))[0]),
                 (l = t[1]),
-                Object(N.a)(p.messages.length, "No messages in prefix"));
+                Object(R.a)(p.messages.length, "No messages in prefix"));
               var m = a;
               return ye.createElement(
                 ye.Fragment,
@@ -53842,7 +53896,7 @@
                 p &&
                   ye.createElement(
                     ql,
-                    R.a({}, n, {
+                    N.a({}, n, {
                       block: p,
                       bIsInitialBlock: 0 === e,
                       bShowTimePasses: e === r
@@ -53852,7 +53906,7 @@
                 0 < l.messages.length &&
                   ye.createElement(
                     ql,
-                    R.a({}, n, {
+                    N.a({}, n, {
                       block: l,
                       bIsInitialBlock: !1,
                       bShowTimePasses: !1
@@ -53862,7 +53916,7 @@
             }
             return ye.createElement(
               ql,
-              R.a({}, n, {
+              N.a({}, n, {
                 key: s.UniqueKey(),
                 block: s,
                 bIsInitialBlock: 0 === e,
@@ -53879,7 +53933,7 @@
               }
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       ql = (function(e) {
@@ -53887,7 +53941,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.componentDidUpdate = function() {
             this.props.block.is_last_block &&
               this.props.onUpdate(
@@ -53901,7 +53955,7 @@
               o = n.block,
               i = n.bIsInitialBlock,
               r = n.bShowTimePasses,
-              a = R.f(n, ["block", "bIsInitialBlock", "bShowTimePasses"]),
+              a = N.f(n, ["block", "bIsInitialBlock", "bShowTimePasses"]),
               s = a.friendRenderContext,
               c = o.messages;
             if (
@@ -53918,7 +53972,7 @@
                 : c.length &&
                   (e = ye.createElement(
                     Yl,
-                    R.a({}, a, {
+                    N.a({}, a, {
                       messages: c,
                       bLastMessageBlock: o.is_last_block
                     })
@@ -53947,7 +54001,7 @@
               t
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component);
     function Kl(e) {
@@ -53961,7 +54015,7 @@
           return (t.state = { bHoveringDelete: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnHoverDelete = function(e) {
             this.setState({ bHoveringDelete: e });
           }),
@@ -54012,7 +54066,7 @@
                       ? l.push(
                           ye.createElement(
                             xl,
-                            R.a({}, f, {
+                            N.a({}, f, {
                               speakerWidth: this.props.speakerWidth
                             })
                           )
@@ -54024,18 +54078,18 @@
                             null,
                             ye.createElement(
                               Hl,
-                              R.a({}, f, {
+                              N.a({}, f, {
                                 speakerWidth: this.props.speakerWidth
                               })
                             )
                           )
                         )
                       : d instanceof Ke
-                      ? ((e = !1), l.push(ye.createElement(Wl, R.a({}, f))))
+                      ? ((e = !1), l.push(ye.createElement(Wl, N.a({}, f))))
                       : l.push(
                           ye.createElement(
                             Fl,
-                            R.a({}, f, {
+                            N.a({}, f, {
                               speakerWidth: this.props.speakerWidth
                             })
                           )
@@ -54044,7 +54098,7 @@
                       l.push(
                         ye.createElement(
                           Ul,
-                          R.a({}, f, { speakerWidth: this.props.speakerWidth })
+                          N.a({}, f, { speakerWidth: this.props.speakerWidth })
                         )
                       ),
                     (m = !0));
@@ -54083,8 +54137,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnHoverDelete", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnHoverDelete", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Jl = (function(e) {
@@ -54092,7 +54146,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnMouseEnter = function() {
             this.props.onHover(!0);
           }),
@@ -54101,9 +54155,9 @@
           }),
           (t.prototype.OnDeleteMessages = function(e) {
             !(function(c, l, p) {
-              R.b(this, void 0, void 0, function() {
+              N.b(this, void 0, void 0, function() {
                 var t, n, o, i, r, a, s;
-                return R.e(this, function(e) {
+                return N.e(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return 0 == p.length
@@ -54151,9 +54205,9 @@
               ye.createElement(ti.Z, null)
             );
           }),
-          R.c([M.a], t.prototype, "OnMouseEnter", null),
-          R.c([M.a], t.prototype, "OnMouseLeave", null),
-          R.c([M.a], t.prototype, "OnDeleteMessages", null),
+          N.c([M.a], t.prototype, "OnMouseEnter", null),
+          N.c([M.a], t.prototype, "OnMouseLeave", null),
+          N.c([M.a], t.prototype, "OnDeleteMessages", null),
           t
         );
       })(ye.Component);
@@ -54162,7 +54216,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        R.d(t, e),
+        N.d(t, e),
         (t.prototype.shouldComponentUpdate = function(e) {
           return (
             e.rtTimestamp !== this.props.rtTimestamp ||
@@ -54282,7 +54336,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.InitForChatView = function(e) {
             e.AddOnChatFrameChangedCallback(this.OnFrameChanged),
               (this.m_bInitialized = !0);
@@ -54336,7 +54390,7 @@
             if ((this.LogScrollInfo("OnScroll"), 0 != i)) {
               var c = o - n <= i,
                 l = a - r <= s;
-              Object(N.a)(
+              Object(R.a)(
                 l == e.is_scrolled_to_bottom,
                 e.GetUniqueID() + ": computed and stored at bottom don't match"
               ),
@@ -54360,7 +54414,7 @@
                         "**** IGNORING APPARENT SCROLL UP WHILE PINNED TO BOTTOM IN LAYOUT"
                       ),
                     (p = o - i),
-                    Object(N.a)(
+                    Object(R.a)(
                       0 <= p,
                       e.GetUniqueID() +
                         ": Onscroll client height bigger than scroll height"
@@ -54394,7 +54448,7 @@
                 e.lastScrollHeight - e.lastScrollTop <= e.lastClientHeight
               );
               m &&
-                (Object(N.a)(
+                (Object(R.a)(
                   !m,
                   e.GetUniqueID() + ": setting mismatched computed and stored"
                 ),
@@ -54413,7 +54467,7 @@
               n = e.clientHeight;
             this.LogScrollInfo("ScrollToBottom");
             var o = t - n;
-            Object(N.a)(
+            Object(R.a)(
               0 <= o,
               this.props.chatView.GetUniqueID() +
                 ": ScrollToBottom client height bigger than scroll height"
@@ -54487,7 +54541,7 @@
                 (e.lastScrollHeight = n),
                 (e.lastClientHeight = o),
                 (this.m_elHistoryScroll.scrollTop = e.lastScrollTop),
-                Object(N.a)(
+                Object(R.a)(
                   e.is_scrolled_to_bottom ==
                     e.lastScrollHeight - e.lastScrollTop <= e.lastClientHeight,
                   e.GetUniqueID() + ": setting mismatched computed and stored"
@@ -54621,9 +54675,9 @@
             var l = Zo.SettingsStore.FriendsSettings.nChatFontSize,
               p = "ChatHistoryContainer";
             return (
-              l == Ra.k_EChatFontSizeSmall
+              l == Na.k_EChatFontSizeSmall
                 ? (p += " smallChatFont")
-                : l == Ra.k_EChatFontSizeLarge && (p += " largeChatFont"),
+                : l == Na.k_EChatFontSizeLarge && (p += " largeChatFont"),
               ye.createElement(
                 "div",
                 { className: p },
@@ -54676,18 +54730,18 @@
               )
             );
           }),
-          R.c([d.observable], e.prototype, "m_bLoadHistoryInProgress", void 0),
-          R.c([M.a], e.prototype, "DumpChildSizes", null),
-          R.c([M.a], e.prototype, "OnHistoryScrollRef", null),
-          R.c([M.a], e.prototype, "OnScrollEvent", null),
-          R.c([M.a], e.prototype, "OnScroll", null),
-          R.c([M.a], e.prototype, "ScrollToBottom", null),
-          R.c([M.a], e.prototype, "LoadOlderMessages", null),
-          R.c([M.a], e.prototype, "OnFrameChanged", null),
-          R.c([M.a], e.prototype, "OnUpdate", null),
-          R.c([M.a], e.prototype, "OnResize", null),
-          R.c([M.a], e.prototype, "Swallow", null),
-          (e = R.c([Ki.observer], e))
+          N.c([d.observable], e.prototype, "m_bLoadHistoryInProgress", void 0),
+          N.c([M.a], e.prototype, "DumpChildSizes", null),
+          N.c([M.a], e.prototype, "OnHistoryScrollRef", null),
+          N.c([M.a], e.prototype, "OnScrollEvent", null),
+          N.c([M.a], e.prototype, "OnScroll", null),
+          N.c([M.a], e.prototype, "ScrollToBottom", null),
+          N.c([M.a], e.prototype, "LoadOlderMessages", null),
+          N.c([M.a], e.prototype, "OnFrameChanged", null),
+          N.c([M.a], e.prototype, "OnUpdate", null),
+          N.c([M.a], e.prototype, "OnResize", null),
+          N.c([M.a], e.prototype, "Swallow", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       $l = (function(e) {
@@ -54695,7 +54749,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = "LoadingOlderMessages";
             return (
@@ -54708,7 +54762,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       ep = (function(e) {
@@ -54716,7 +54770,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.chatView,
@@ -54738,7 +54792,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       tp = (function(n) {
@@ -54760,7 +54814,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             this.props.popup &&
               this.props.popup.removeEventListener(
@@ -54852,7 +54906,7 @@
           }),
           (e.prototype.OnDragEnter = function(e) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 e &&
                   ("chattab" == e.type ||
                     "friend" == e.type ||
@@ -54880,7 +54934,7 @@
           }),
           (e.prototype.OnDrop = function(e, t) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 e &&
                   ("chattab" == e.type ||
                     "friend" == e.type ||
@@ -55009,15 +55063,15 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnCopy", null),
-          R.c([M.a], e.prototype, "OnChatTabRef", null),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          R.c([M.a], e.prototype, "OnHTMLKeyEvent", null),
-          R.c([M.a], e.prototype, "OnKeyDown", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnCopy", null),
+          N.c([M.a], e.prototype, "OnChatTabRef", null),
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "OnHTMLKeyEvent", null),
+          N.c([M.a], e.prototype, "OnKeyDown", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       np = (function(t) {
@@ -55025,7 +55079,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.InitiateVoiceChat = function() {
             var e = this.props.chatView.chat.accountid_partner;
             Zo.VoiceStore.InitiateFriendChat(e);
@@ -55230,11 +55284,11 @@
                 )
             );
           }),
-          R.c([M.a], e.prototype, "InitiateVoiceChat", null),
-          R.c([M.a], e.prototype, "VoidOnClick", null),
-          R.c([M.a], e.prototype, "EndVoiceChat", null),
-          R.c([M.a], e.prototype, "OnCloseClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "InitiateVoiceChat", null),
+          N.c([M.a], e.prototype, "VoidOnClick", null),
+          N.c([M.a], e.prototype, "EndVoiceChat", null),
+          N.c([M.a], e.prototype, "OnCloseClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component);
     function op(e, t, n) {
@@ -55256,7 +55310,7 @@
             (r = !1);
       }
       r
-        ? er(ye.createElement(ip, R.a({}, e)), n, "InviteDialog", {
+        ? er(ye.createElement(ip, N.a({}, e)), n, "InviteDialog", {
             strTitle: i
               ? Object(se.b)("#Chat_Actions_InviteFriend_VoiceChat")
               : Object(se.b)("#Chat_Actions_DropGroupInvite_Title"),
@@ -55275,7 +55329,7 @@
           return (t.invitee = t.props.invitee), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.AddMoreFriends = function(e) {
             var t = [],
               n = e.currentTarget.ownerDocument.defaultView;
@@ -55541,10 +55595,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "AddMoreFriends", null),
-          R.c([M.a], e.prototype, "Cancel", null),
-          R.c([M.a], e.prototype, "OnInviteClicked", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "AddMoreFriends", null),
+          N.c([M.a], e.prototype, "Cancel", null),
+          N.c([M.a], e.prototype, "OnInviteClicked", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       rp = (function(n) {
@@ -55562,17 +55616,17 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnDragEnter = function(e, t) {
             if (
               (e
-                ? Object(N.a)(
+                ? Object(R.a)(
                     "friend" == e.type ||
                       "chatroomgroup" == e.type ||
                       "clan" == e.type,
                     "Invalid data type passed to FriendChatDialog.OnDrop"
                   )
-                : Object(N.a)(
+                : Object(R.a)(
                     t,
                     "Invalid data type passed to FriendChatDialog.OnDrop"
                   ),
@@ -55627,13 +55681,13 @@
           }),
           (e.prototype.OnDrop = function(e, t) {
             e
-              ? Object(N.a)(
+              ? Object(R.a)(
                   "friend" == e.type ||
                     "chatroomgroup" == e.type ||
                     "clan" == e.type,
                   "Invalid data type passed to FriendChatDialog.OnDrop"
                 )
-              : Object(N.a)(
+              : Object(R.a)(
                   0 != t.dataTransfer.files.length,
                   "Invalid data type passed to FriendChatDialog.OnDrop"
                 );
@@ -55796,7 +55850,7 @@
                   ye.createElement(sp, { chatView: this.props.chatView }),
                   ye.createElement("div", { className: "dropTargetBox" })
                 ),
-                ye.createElement(Nc, {
+                ye.createElement(Rc, {
                   key: t.unique_id,
                   chatView: this.props.chatView,
                   isActive: this.props.isActive,
@@ -55805,13 +55859,13 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          R.c([M.a], e.prototype, "OnDropComplete", null),
-          R.c([M.a], e.prototype, "OnNameWidthChanged", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "OnDropComplete", null),
+          N.c([M.a], e.prototype, "OnNameWidthChanged", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       ap = (function(e) {
@@ -55819,7 +55873,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.SpeakerLabel = function(e) {
             e && this.props.onNameWidthChanged(e.clientWidth);
           }),
@@ -55828,9 +55882,9 @@
               t = Zo.SettingsStore.FriendsSettings.nChatFontSize,
               n = "speakerLabelWidthContainer";
             return (
-              t == Ra.k_EChatFontSizeSmall
+              t == Na.k_EChatFontSizeSmall
                 ? (n += " smallChatFont")
-                : t == Ra.k_EChatFontSizeLarge && (n += " largeChatFont"),
+                : t == Na.k_EChatFontSizeLarge && (n += " largeChatFont"),
               e.chat_partner.is_ready && e.self.is_ready
                 ? ye.createElement(
                     "div",
@@ -55849,8 +55903,8 @@
                 : null
             );
           }),
-          R.c([M.a], t.prototype, "SpeakerLabel", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "SpeakerLabel", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       sp = (function(e) {
@@ -55858,14 +55912,14 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.AddFriendClick = function(e) {
             this.ContinueCreateChat(hu(this, e), gu(e));
           }),
           (t.prototype.AddFriendClickNotInBeta = function(o) {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -55921,9 +55975,9 @@
               ye.createElement(ti.w, null)
             );
           }),
-          R.c([M.a], t.prototype, "AddFriendClick", null),
-          R.c([M.a], t.prototype, "AddFriendClickNotInBeta", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "AddFriendClick", null),
+          N.c([M.a], t.prototype, "AddFriendClickNotInBeta", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       cp = (function(n) {
@@ -55944,10 +55998,10 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnDragEnter = function(e, t) {
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 (e && "friend" == e.type) || t,
                 "Invalid data type passed to ChatRoomGroupDialog.OnDragEnter"
               ),
@@ -55968,7 +56022,7 @@
             e.dataTransfer.dropEffect = "move";
           }),
           (e.prototype.OnDrop = function(e, t) {
-            Object(N.a)(
+            Object(R.a)(
               (e && "friend" == e.type) || 0 != t.dataTransfer.files.length,
               "Invalid data type passed to ChatRoomGroupDialog.OnDrop"
             );
@@ -56339,7 +56393,7 @@
               E =
                 t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || d)
                   ? null
-                  : ye.createElement(Nc, {
+                  : ye.createElement(Rc, {
                       key: i.unique_id,
                       chatView: t.GetActiveChatView(),
                       isActive: this.props.isActive,
@@ -56347,7 +56401,7 @@
                     }),
               w = ye.createElement(
                 qi,
-                R.a(
+                N.a(
                   { style: b, className: "chatHistoryAndMembers" },
                   this.GetChatBodyDragDropProps()
                 ),
@@ -56396,7 +56450,7 @@
               s && (T += " GroupChatVisible"),
               ye.createElement(
                 qi,
-                R.a(
+                N.a(
                   {
                     "data-activechat": this.props.isActive,
                     style: b,
@@ -56501,24 +56555,24 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnDragEnter", null),
-          R.c([M.a], e.prototype, "OnDragLeave", null),
-          R.c([M.a], e.prototype, "OnDragOver", null),
-          R.c([M.a], e.prototype, "OnDrop", null),
-          R.c([M.a], e.prototype, "OnHTMLKeyEvent", null),
-          R.c([M.a], e.prototype, "ShouldShowVerticalBroadcastChat", null),
-          R.c([M.a], e.prototype, "OnLayoutChange", null),
-          R.c([M.a], e.prototype, "OnGrabberMouseDown", null),
-          R.c([M.a], e.prototype, "HandleMouseMove", null),
-          R.c([M.a], e.prototype, "UnregisterDragEvents", null),
-          R.c([M.a], e.prototype, "OnLocalStreamChange", null),
-          R.c([M.a], e.prototype, "ShowBroadcast", null),
-          R.c([M.a], e.prototype, "HideChat", null),
-          R.c([M.a], e.prototype, "ShowChat", null),
-          R.c([M.a], e.prototype, "ToggleVerticalBroadcastChat", null),
-          R.c([M.a], e.prototype, "SetMainContentRef", null),
-          R.c([M.a], e.prototype, "ToggleShowBothChats", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnDragEnter", null),
+          N.c([M.a], e.prototype, "OnDragLeave", null),
+          N.c([M.a], e.prototype, "OnDragOver", null),
+          N.c([M.a], e.prototype, "OnDrop", null),
+          N.c([M.a], e.prototype, "OnHTMLKeyEvent", null),
+          N.c([M.a], e.prototype, "ShouldShowVerticalBroadcastChat", null),
+          N.c([M.a], e.prototype, "OnLayoutChange", null),
+          N.c([M.a], e.prototype, "OnGrabberMouseDown", null),
+          N.c([M.a], e.prototype, "HandleMouseMove", null),
+          N.c([M.a], e.prototype, "UnregisterDragEvents", null),
+          N.c([M.a], e.prototype, "OnLocalStreamChange", null),
+          N.c([M.a], e.prototype, "ShowBroadcast", null),
+          N.c([M.a], e.prototype, "HideChat", null),
+          N.c([M.a], e.prototype, "ShowChat", null),
+          N.c([M.a], e.prototype, "ToggleVerticalBroadcastChat", null),
+          N.c([M.a], e.prototype, "SetMainContentRef", null),
+          N.c([M.a], e.prototype, "ToggleShowBothChats", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       lp = function(e) {
@@ -56550,7 +56604,7 @@
             "div",
             {
               ref: t,
-              style: R.a({ display: "flex", flexDirection: "column" }, i)
+              style: N.a({ display: "flex", flexDirection: "column" }, i)
             },
             ye.createElement(
               "div",
@@ -56578,7 +56632,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.broadcastView;
             if (!e) return null;
@@ -56592,7 +56646,7 @@
               })
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       up = (function(e) {
@@ -56600,7 +56654,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnTextChannelCloseClick = function(e) {
             this.props.groupView.ClosePopoverChat();
           }),
@@ -56659,9 +56713,9 @@
                 )
               : null;
           }),
-          R.c([M.a], t.prototype, "OnTextChannelCloseClick", null),
-          R.c([M.a], t.prototype, "OnChatHistoryRef", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnTextChannelCloseClick", null),
+          N.c([M.a], t.prototype, "OnChatHistoryRef", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       dp = (function(t) {
@@ -56669,7 +56723,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnBlock = function() {
             Zo.FriendStore.BlockPlayer(this.props.friend, !1),
               Zo.UIStore.CloseTabByID(this.props.chatView.GetUniqueID());
@@ -56737,9 +56791,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnBlock", null),
-          R.c([M.a], e.prototype, "OnAllow", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnBlock", null),
+          N.c([M.a], e.prototype, "OnAllow", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       hp = (function(t) {
@@ -56747,7 +56801,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = !1;
             return (
@@ -56782,7 +56836,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       _p = (function(t) {
@@ -56790,7 +56844,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.render = function() {
             var e = "";
             return (
@@ -56832,7 +56886,7 @@
               )
             );
           }),
-          (e = R.c([Ki.observer], e))
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       fp = (function(e) {
@@ -56840,7 +56894,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = !1;
             if (!(this.props.chatView.chat instanceof Yt)) return null;
@@ -56858,7 +56912,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       gp = (function(n) {
@@ -56871,7 +56925,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BindResizeGrip = function(e) {
             var t = 0,
               n = 0;
@@ -56909,7 +56963,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidMount = function() {
             this.m_refTextInput.focus();
           }),
@@ -56974,9 +57028,9 @@
               e && ye.createElement("p", { className: "error_text" }, e)
             );
           }),
-          R.c([M.a], e.prototype, "BindTextInput", null),
-          R.c([M.a], e.prototype, "OnPINInput", null),
-          R.c([M.a], e.prototype, "onOK", null),
+          N.c([M.a], e.prototype, "BindTextInput", null),
+          N.c([M.a], e.prototype, "OnPINInput", null),
+          N.c([M.a], e.prototype, "onOK", null),
           e
         );
       })(ye.Component),
@@ -56987,7 +57041,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.browserContext,
@@ -57038,7 +57092,7 @@
               ]
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Cp = (function(i) {
@@ -57046,7 +57100,7 @@
           return i.call(this, e, t, n, o) || this;
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           (e.prototype.GetSavedDimensionsKey = function() {
             if (this.BIsInOverlay()) {
               var e = Zo.UIStore.GetPerContextChatData(
@@ -57097,7 +57151,7 @@
           );
         }
         return (
-          R.d(e, s),
+          N.d(e, s),
           (e.prototype.Render = function(e, t) {
             t.setAttribute("class", "fullheight popup_chat_frame");
             var n = new lu(e),
@@ -57219,7 +57273,7 @@
           );
         }
         return (
-          R.d(e, o),
+          N.d(e, o),
           (e.prototype.OnCopy = function(e) {
             this.m_refChatDialog &&
               this.m_refChatDialog.current &&
@@ -57498,21 +57552,21 @@
                   )
                 );
           }),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_nWindowTitleUnreadCycleCount",
             void 0
           ),
-          R.c([M.a], e.prototype, "OnCopy", null),
-          R.c([M.a], e.prototype, "OnWindowResizeEvent", null),
-          R.c([M.a], e.prototype, "BindFriendsListContainer", null),
-          R.c([M.a], e.prototype, "OnGrabberMouseDown", null),
-          R.c([M.a], e.prototype, "OnGrabberTouchStart", null),
-          R.c([M.a], e.prototype, "HandleTouchMove", null),
-          R.c([M.a], e.prototype, "HandleMouseMove", null),
-          R.c([M.a], e.prototype, "UnregisterFriendsListDragEvents", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnCopy", null),
+          N.c([M.a], e.prototype, "OnWindowResizeEvent", null),
+          N.c([M.a], e.prototype, "BindFriendsListContainer", null),
+          N.c([M.a], e.prototype, "OnGrabberMouseDown", null),
+          N.c([M.a], e.prototype, "OnGrabberTouchStart", null),
+          N.c([M.a], e.prototype, "HandleTouchMove", null),
+          N.c([M.a], e.prototype, "HandleMouseMove", null),
+          N.c([M.a], e.prototype, "UnregisterFriendsListDragEvents", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       wp = (function(c) {
@@ -57540,7 +57594,7 @@
           );
         }
         return (
-          R.d(e, c),
+          N.d(e, c),
           (e.prototype.SetTitle = function() {
             if (this.m_popup && this.m_popup.document && this.m_tabSet) {
               var e = this.m_tabSet.GetTitle();
@@ -57600,7 +57654,7 @@
                 t
               );
           }),
-          R.c([M.a], e.prototype, "SetTitle", null),
+          N.c([M.a], e.prototype, "SetTitle", null),
           e
         );
       })(Cp),
@@ -57609,7 +57663,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.popup.window,
               t = this.props.chatTabs,
@@ -57633,7 +57687,7 @@
               )
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Dp = (function(e) {
@@ -57641,7 +57695,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.ModalManager.modals;
             if (!e || !e.length) return null;
@@ -57664,7 +57718,7 @@
               t
             );
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Tp = (function(e) {
@@ -57672,7 +57726,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnKeyDown = function(e) {
             e.preventDefault(), e.stopPropagation();
           }),
@@ -57706,8 +57760,8 @@
             }
             return ye.createElement(Gp, null);
           }),
-          R.c([M.a], t.prototype, "OnKeyDown", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "OnKeyDown", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Gp = (function(n) {
@@ -57725,7 +57779,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillMount = function() {
             var e = this;
             if (!Zo.ready_to_render) {
@@ -57778,7 +57832,7 @@
             var e = this,
               t = Su.WebLogonManager;
             if (
-              (Object(N.a)(
+              (Object(R.a)(
                 t,
                 "No WebLogonManager in WebConnectionTroubleOverlay"
               ),
@@ -57840,7 +57894,7 @@
                       r = Object(se.b)("#ConnectionTrouble_LoggedOnElsewhere");
                       break;
                     default:
-                      Object(N.a)(!1, "No message for trouble state " + o);
+                      Object(R.a)(!1, "No message for trouble state " + o);
                   }
                 else a = "InitialConnect";
               else
@@ -57966,22 +58020,22 @@
             }
             return ye.createElement(ei, null, n);
           }),
-          R.c([M.a], e.prototype, "IntervalUpdateReconnectWaitStatus", null),
-          R.c([M.a], e.prototype, "OnReconnectNowClick", null),
-          R.c([M.a], e.prototype, "OnLoginClick", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "IntervalUpdateReconnectWaitStatus", null),
+          N.c([M.a], e.prototype, "OnReconnectNowClick", null),
+          N.c([M.a], e.prototype, "OnLoginClick", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
-      Rp = "DEBUG_MobxDevTools",
-      Np = Object(d.observable)({ bEnabled: null });
+      Np = "DEBUG_MobxDevTools",
+      Rp = Object(d.observable)({ bEnabled: null });
     function kp() {
-      return Np.bEnabled;
+      return Rp.bEnabled;
     }
     var Lp,
       Ap,
       Pp = qo(function(e, t, n) {
         er(
-          ye.createElement(Vp, R.a({}, e, { bIsInviteDialog: !0 })),
+          ye.createElement(Vp, N.a({}, e, { bIsInviteDialog: !0 })),
           n,
           "InviteDialog",
           { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }
@@ -57992,7 +58046,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.AcceptInvite = function(e) {
             var t = this,
               n = gu(e);
@@ -58212,8 +58266,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "AcceptInvite", null),
-          (t = R.c([Ki.observer], t))
+          N.c([M.a], t.prototype, "AcceptInvite", null),
+          (t = N.c([Ki.observer], t))
         );
       })(ye.Component),
       Bp = Object(Ki.observer)(function(e) {
@@ -58324,14 +58378,14 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this,
               t = this.props,
               n = t.closeModal,
               o = t.onAccept,
               i = t.strClassName,
-              r = R.f(t, ["closeModal", "onAccept", "strClassName"]);
+              r = N.f(t, ["closeModal", "onAccept", "strClassName"]);
             return (
               (i = "InviteDialog" + (i ? " " + i : "")),
               ye.createElement(
@@ -58339,7 +58393,7 @@
                 { onEscKeypress: n },
                 ye.createElement(
                   Fp,
-                  R.a({}, r, {
+                  N.a({}, r, {
                     strClassName: i,
                     onAccept: function() {
                       e.props.closeModal && e.props.closeModal(), o && o();
@@ -58357,7 +58411,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.CopyToClipboard = function(e) {
             ui.j(this.props.url);
           }),
@@ -58396,8 +58450,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "CopyToClipboard", null),
-          R.c([M.a], t.prototype, "HandleFocus", null),
+          N.c([M.a], t.prototype, "CopyToClipboard", null),
+          N.c([M.a], t.prototype, "HandleFocus", null),
           t
         );
       })(ye.Component),
@@ -58406,7 +58460,7 @@
           return t.call(this, e) || this;
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.AcceptGameInvite = function() {
             this.props.gameInvite.AcceptGameInvite();
           }),
@@ -58600,10 +58654,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "AcceptGameInvite", null),
-          R.c([M.a], e.prototype, "DismissInvite", null),
-          R.c([M.a], e.prototype, "OnShowGameContextMenu", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "AcceptGameInvite", null),
+          N.c([M.a], e.prototype, "DismissInvite", null),
+          N.c([M.a], e.prototype, "OnShowGameContextMenu", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       jp = n("Nlnv"),
@@ -58624,7 +58678,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentDidMount = function() {
             this.props.broadcaster.accountid != Zo.FriendStore.self.accountid &&
               (this.props.broadcastid
@@ -58818,11 +58872,11 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnWatch", null),
-          R.c([M.a], e.prototype, "OnClose", null),
-          R.c([M.a], e.prototype, "OnOpen", null),
-          R.c([M.a], e.prototype, "ShowThumbnail", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnWatch", null),
+          N.c([M.a], e.prototype, "OnClose", null),
+          N.c([M.a], e.prototype, "OnOpen", null),
+          N.c([M.a], e.prototype, "ShowThumbnail", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       Wp = (function(n) {
@@ -58842,7 +58896,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnAccept = function(e) {
             Zo.BroadcastStore.ApproveViewerRequest(
               this.props.viewer.accountid,
@@ -58959,10 +59013,10 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnAccept", null),
-          R.c([M.a], e.prototype, "OnClose", null),
-          R.c([M.a], e.prototype, "ShowThumbnail", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "OnAccept", null),
+          N.c([M.a], e.prototype, "OnClose", null),
+          N.c([M.a], e.prototype, "ShowThumbnail", null),
+          (e = N.c([Ki.observer], e))
         );
       })(ye.Component),
       zp = (function(n) {
@@ -58982,7 +59036,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnWatch = function(e) {
             if (
               "undefined" != typeof SteamClient &&
@@ -59062,8 +59116,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnWatch", null),
-          R.c([M.a], e.prototype, "ShowThumbnail", null),
+          N.c([M.a], e.prototype, "OnWatch", null),
+          N.c([M.a], e.prototype, "ShowThumbnail", null),
           e
         );
       })(ye.Component);
@@ -59092,7 +59146,7 @@
         );
       }
       return (
-        R.d(e, n),
+        N.d(e, n),
         (e.prototype.componentWillMount = function() {
           this.m_strPlayerID = "YoutubePlayer_" + e.s_nPlayerIndex++;
         }),
@@ -59219,12 +59273,12 @@
           );
         }),
         (e.s_nPlayerIndex = 0),
-        R.c([M.a], e.prototype, "BindPlayerContainer", null),
-        R.c([M.a], e.prototype, "OnYoutubeScriptsReady", null),
-        R.c([M.a], e.prototype, "CreatePlayer", null),
-        R.c([M.a], e.prototype, "OnPlayerReady", null),
-        R.c([M.a], e.prototype, "OnPlayerStateChange", null),
-        R.c([M.a], e.prototype, "OnError", null),
+        N.c([M.a], e.prototype, "BindPlayerContainer", null),
+        N.c([M.a], e.prototype, "OnYoutubeScriptsReady", null),
+        N.c([M.a], e.prototype, "CreatePlayer", null),
+        N.c([M.a], e.prototype, "OnPlayerReady", null),
+        N.c([M.a], e.prototype, "OnPlayerStateChange", null),
+        N.c([M.a], e.prototype, "OnError", null),
         e
       );
     })(ye.Component);
@@ -59258,7 +59312,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.CheckLoadPrettify = function() {
             var e = this;
             if (this.m_preElem) {
@@ -59304,7 +59358,7 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "BindRef", null),
+          N.c([M.a], t.prototype, "BindRef", null),
           t
         );
       })(Ce.a.Component),
@@ -59355,7 +59409,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e,
               t,
@@ -59411,7 +59465,7 @@
           );
         }
         return (
-          R.d(e, i),
+          N.d(e, i),
           (e.prototype.BindContainer = function(e) {
             (this.m_elContainer = e),
               this.m_elContainer &&
@@ -59619,14 +59673,14 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "BindContainer", null),
-          R.c([M.a], e.prototype, "handleCollapse", null),
-          R.c([M.a], e.prototype, "OnSizeChanged", null),
-          R.c([M.a], e.prototype, "handleRestore", null),
-          R.c([M.a], e.prototype, "OnResize", null),
-          R.c([M.a], e.prototype, "HandleMouseMove", null),
-          R.c([M.a], e.prototype, "HandleTallImages", null),
-          R.c([M.a], e.prototype, "HandleMouseUp", null),
+          N.c([M.a], e.prototype, "BindContainer", null),
+          N.c([M.a], e.prototype, "handleCollapse", null),
+          N.c([M.a], e.prototype, "OnSizeChanged", null),
+          N.c([M.a], e.prototype, "handleRestore", null),
+          N.c([M.a], e.prototype, "OnResize", null),
+          N.c([M.a], e.prototype, "HandleMouseMove", null),
+          N.c([M.a], e.prototype, "HandleTallImages", null),
+          N.c([M.a], e.prototype, "HandleMouseUp", null),
           e
         );
       })(ye.Component),
@@ -59636,7 +59690,7 @@
           return (t.state = { strTitle: "", strAuthor: "", strVideoID: "" }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.OnVideoInfoChanged = function(e) {
             var t = e.strTitle,
               n = e.strAuthor,
@@ -59761,9 +59815,9 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnVideoInfoChanged", null),
-          R.c([M.a], e.prototype, "OnPlayerReady", null),
-          R.c([M.a], e.prototype, "OnPlaceholderImageLoad", null),
+          N.c([M.a], e.prototype, "OnVideoInfoChanged", null),
+          N.c([M.a], e.prototype, "OnPlayerReady", null),
+          N.c([M.a], e.prototype, "OnPlaceholderImageLoad", null),
           e
         );
       })(Ie);
@@ -59791,7 +59845,7 @@
           return (t.state = { eLoadingState: am.Loading }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.IsEmbeddedInOtherTag = function() {
             for (var e = 0, t = this.props.parentTags; e < t.length; e++) {
               if ("tweet" == t[e]) return !0;
@@ -59962,8 +60016,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "OnImageLoad", null),
-          R.c([M.a], e.prototype, "OnImageError", null),
+          N.c([M.a], e.prototype, "OnImageLoad", null),
+          N.c([M.a], e.prototype, "OnImageError", null),
           e
         );
       })(Ie),
@@ -59973,7 +60027,7 @@
           return (t.state = { bSeeking: !1, bPlay: !1, bError: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.StartVideo = function() {
             this.m_elVideo && this.m_elVideo.play();
           }),
@@ -60058,7 +60112,7 @@
                       },
                       ye.createElement(
                         "video",
-                        R.a({ className: "BBCodeResizableElement" }, r, {
+                        N.a({ className: "BBCodeResizableElement" }, r, {
                           ref: this.BindVideo,
                           onPause: this.OnVideoPause,
                           onPlay: this.OnVideoPlay,
@@ -60099,12 +60153,12 @@
                   )
             );
           }),
-          R.c([M.a], e.prototype, "StartVideo", null),
-          R.c([M.a], e.prototype, "BindVideo", null),
-          R.c([M.a], e.prototype, "OnVideoPlay", null),
-          R.c([M.a], e.prototype, "OnVideoPause", null),
-          R.c([M.a], e.prototype, "OnVideoError", null),
-          R.c([M.a], e.prototype, "OnVideoLoaded", null),
+          N.c([M.a], e.prototype, "StartVideo", null),
+          N.c([M.a], e.prototype, "BindVideo", null),
+          N.c([M.a], e.prototype, "OnVideoPlay", null),
+          N.c([M.a], e.prototype, "OnVideoPause", null),
+          N.c([M.a], e.prototype, "OnVideoError", null),
+          N.c([M.a], e.prototype, "OnVideoLoaded", null),
           e
         );
       })(Ie),
@@ -60113,7 +60167,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnLoad = function() {
             this.props.context.onLoad &&
               this.props.context.onLoad(
@@ -60122,10 +60176,10 @@
           }),
           (t.prototype.render = function() {
             var e = this.props,
-              t = (e.context, R.f(e, ["context"]));
-            return ye.createElement("img", R.a({}, t, { onLoad: this.OnLoad }));
+              t = (e.context, N.f(e, ["context"]));
+            return ye.createElement("img", N.a({}, t, { onLoad: this.OnLoad }));
           }),
-          R.c([M.a], t.prototype, "OnLoad", null),
+          N.c([M.a], t.prototype, "OnLoad", null),
           t
         );
       })(ye.Component);
@@ -60134,12 +60188,12 @@
         n = e.width,
         o = e.height,
         i = e.src,
-        r = R.f(e, ["context", "width", "height", "src"]),
+        r = N.f(e, ["context", "width", "height", "src"]),
         a = i + "?s=" + n + "x" + o,
         s = a + "dpx2x";
       return ye.createElement(
         hm,
-        R.a({ context: t }, r, { src: a, srcSet: a + " 1x, " + s + " 2x" })
+        N.a({ context: t }, r, { src: a, srcSet: a + " 1x, " + s + " 2x" })
       );
     }
     var fm = (function(e) {
@@ -60147,7 +60201,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.CopyToClipboard = function() {
             var e = this.GetArgument("url");
             e && 0 != e.length && ui.j(e);
@@ -60280,9 +60334,9 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "CopyToClipboard", null),
-          R.c([M.a], t.prototype, "HandleFocus", null),
-          R.c([M.a], t.prototype, "OnLoad", null),
+          N.c([M.a], t.prototype, "CopyToClipboard", null),
+          N.c([M.a], t.prototype, "HandleFocus", null),
+          N.c([M.a], t.prototype, "OnLoad", null),
           t
         );
       })(Ie),
@@ -60291,7 +60345,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.FormatCreatedDate = function(e) {
             var t = new Date(e),
               n = [
@@ -60441,8 +60495,8 @@
               )
             );
           }),
-          R.c([M.a], t.prototype, "OpenTweet", null),
-          R.c([M.a], t.prototype, "OnImageLoaded", null),
+          N.c([M.a], t.prototype, "OpenTweet", null),
+          N.c([M.a], t.prototype, "OnImageLoaded", null),
           t
         );
       })(Ie),
@@ -60452,7 +60506,7 @@
           return (t.state = { bActivated: !1 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.Activate = function() {
             this.setState({ bActivated: !0 });
           }),
@@ -60557,8 +60611,8 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "Activate", null),
-          R.c([M.a], e.prototype, "OnImageLoaded", null),
+          N.c([M.a], e.prototype, "Activate", null),
+          N.c([M.a], e.prototype, "OnImageLoaded", null),
           e
         );
       })(Ie);
@@ -60572,7 +60626,7 @@
         "Vimeo" == t && (o.allowFullScreen = !0),
         ye.createElement(
           "iframe",
-          R.a({}, o, {
+          N.a({}, o, {
             src: i,
             scrolling: "no",
             frameBorder: 0,
@@ -60586,7 +60640,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(Qp, null, this.props.children);
           }),
@@ -60598,7 +60652,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.context,
               t = e.bAnimate,
@@ -60622,7 +60676,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.context,
               t = e.bAnimate,
@@ -60668,7 +60722,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.Pad = function(e, t) {
             for (var n = e + ""; n.length < t; ) n = "0" + n;
             return n;
@@ -60808,7 +60862,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(nm, null, this.props.children);
           }),
@@ -60820,7 +60874,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(tm, null, this.props.children);
           }),
@@ -60832,7 +60886,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             return ye.createElement(em, null, this.props.children);
           }),
@@ -60845,7 +60899,7 @@
           return (t.state = { invite: void 0 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n = e.args.invitecode;
             return {
@@ -60872,7 +60926,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n,
               o,
@@ -60920,7 +60974,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n,
               o,
@@ -60967,7 +61021,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n,
               o,
@@ -61001,7 +61055,7 @@
           e
         );
       })(Ie),
-      Rm = (function(n) {
+      Nm = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -61015,7 +61069,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n,
               o,
@@ -61040,7 +61094,7 @@
           e
         );
       })(Ie),
-      Nm = (function(n) {
+      Rm = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -61054,7 +61108,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n,
               o,
@@ -61094,7 +61148,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.componentWillUnmount = function() {
             this.m_bMounted = !1;
           }),
@@ -61283,7 +61337,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.OnCreateOfferClick = function(e) {
             var t = "NewTradeOffer" + parseInt(this.GetArgument("partner"));
             gu(e)
@@ -61354,7 +61408,7 @@
             }
             return ye.createElement(Sr, { href: e }, e);
           }),
-          R.c([M.a], t.prototype, "OnCreateOfferClick", null),
+          N.c([M.a], t.prototype, "OnCreateOfferClick", null),
           t
         );
       })(Ie),
@@ -61363,7 +61417,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.ViewOfferClick = function(e) {
             var t = this.GetArgument("id"),
               n = G.a.COMMUNITY_BASE_URL + "tradeoffer/" + t + "/",
@@ -61388,7 +61442,7 @@
             var e = this.GetArgument("id"),
               t = parseInt(this.GetArgument("sender"));
             if (!e && this.GetArgument("url"))
-              return ye.createElement(Lm, R.a({}, this.props));
+              return ye.createElement(Lm, N.a({}, this.props));
             var n = this.props.context.chat,
               o = n.self.accountid == t,
               i = ye.createElement(
@@ -61462,8 +61516,8 @@
               ye.createElement("div", { style: { clear: "left" } })
             );
           }),
-          R.c([M.a], t.prototype, "ViewOfferClick", null),
-          R.c([M.a], t.prototype, "ViewMyOffersClick", null),
+          N.c([M.a], t.prototype, "ViewOfferClick", null),
+          N.c([M.a], t.prototype, "ViewMyOffersClick", null),
           t
         );
       })(Ie),
@@ -61473,7 +61527,7 @@
           return (t.state = { broadcaster: void 0 }), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.getDerivedStateFromProps = function(e, t) {
             var n = new E.a(e.args.broadcaster);
             return { broadcaster: Zo.FriendStore.GetPlayer(n.GetAccountID()) };
@@ -61502,7 +61556,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.CopyToClipboard = function() {
             var e = this.GetArgument("url");
             e && 0 != e.length && ui.j(e);
@@ -61775,9 +61829,9 @@
             }
             return ye.createElement(Sr, { href: t }, t);
           }),
-          R.c([M.a], e.prototype, "CopyToClipboard", null),
-          R.c([M.a], e.prototype, "OnImageLoaded", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "CopyToClipboard", null),
+          N.c([M.a], e.prototype, "OnImageLoaded", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Ie),
       Bm = (function(e) {
@@ -61785,7 +61839,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.children ? this.props.args[""] : "";
             return ye.createElement(
@@ -61815,7 +61869,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var e = this.GetArgument();
             if (e) {
@@ -61852,7 +61906,7 @@
             }
             return ye.createElement("span", null, "@" + e);
           }),
-          (t = R.c([Ki.observer], t))
+          (t = N.c([Ki.observer], t))
         );
       })(Ie),
       xm = (function(e) {
@@ -61860,7 +61914,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.render = function() {
             var t = "";
             return (
@@ -61895,7 +61949,7 @@
           );
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.ExtractGameData = function(e, t) {
             var n = e.name,
               o = e.is_free,
@@ -61987,7 +62041,7 @@
           (e.prototype.render = function() {
             var o = this;
             if (Zo.SettingsStore.FriendsSettings.bDisableEmbedInlining) {
-              Object(N.a)(
+              Object(R.a)(
                 "string" == typeof this.props.children,
                 "Weird contents in CBBCodeSteamStore"
               );
@@ -62373,14 +62427,14 @@
               )
             );
           }),
-          R.c([M.a], e.prototype, "ExtractGameData", null),
-          R.c([M.a], e.prototype, "OnFrameLoaded", null),
-          R.c([M.a], e.prototype, "OpenStoreLink", null),
-          R.c([M.a], e.prototype, "PlayVideoClicked", null),
-          R.c([M.a], e.prototype, "OnThumbnailOver", null),
-          R.c([M.a], e.prototype, "OnThumbnailLeave", null),
-          R.c([M.a], e.prototype, "CopyToClipboard", null),
-          (e = R.c([Ki.observer], e))
+          N.c([M.a], e.prototype, "ExtractGameData", null),
+          N.c([M.a], e.prototype, "OnFrameLoaded", null),
+          N.c([M.a], e.prototype, "OpenStoreLink", null),
+          N.c([M.a], e.prototype, "PlayVideoClicked", null),
+          N.c([M.a], e.prototype, "OnThumbnailOver", null),
+          N.c([M.a], e.prototype, "OnThumbnailLeave", null),
+          N.c([M.a], e.prototype, "CopyToClipboard", null),
+          (e = N.c([Ki.observer], e))
         );
       })(Ie);
     function jm(e) {
@@ -62468,7 +62522,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetString = function(n) {
             return SteamClient.Storage.GetString(n).then(function(e) {
               if (e) return e;
@@ -62490,7 +62544,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetString = function(e) {
             return Promise.resolve(localStorage.getItem(e));
           }),
@@ -62595,8 +62649,8 @@
             }
           }),
           (i.sm_embeddedElements = new oi.a("CEmoticonHoverContainer")),
-          R.c([d.observable], i.prototype, "m_bVisible", void 0),
-          R.c([d.observable], i.prototype, "m_strEmoticonHoverHTML", void 0),
+          N.c([d.observable], i.prototype, "m_bVisible", void 0),
+          N.c([d.observable], i.prototype, "m_strEmoticonHoverHTML", void 0),
           i
         );
       })(),
@@ -62680,7 +62734,7 @@
               Zo.UIStore.SetSuppressBrowserContextBroadcasting(!1),
               Zo.UIStore.OnOverlayBrowserClosed(e);
           }),
-          R.c([M.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
+          N.c([M.a], e.prototype, "OnOverlayChatBrowserInfoChanged", null),
           e
         );
       })(),
@@ -62693,7 +62747,7 @@
             return (
               void 0 === n && (n = {}),
               this.DisplayNotification(
-                R.a({ icon: t.persona.avatar_url_medium }, e),
+                N.a({ icon: t.persona.avatar_url_medium }, e),
                 function(e) {
                   return t.OpenChatDialog(e);
                 },
@@ -62715,7 +62769,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.GetNotificationPermissionLevel = function() {
             if ("undefined" == typeof Notification) return "unsupported";
             var e = Notification.permission;
@@ -62729,7 +62783,7 @@
             var i = { body: e.body, icon: e.icon, tag: e.tag, silent: !0 },
               r = new Notification(
                 e.title,
-                R.a(
+                N.a(
                   {
                     badge:
                       G.a.COMMUNITY_CDN_URL +
@@ -62777,7 +62831,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          R.d(t, e),
+          N.d(t, e),
           (t.prototype.DisplayNotification = function(e, t, n) {
             if ((void 0 === n && (n = {}), e.tag)) {
               var o = JSON.stringify(e);
@@ -62959,15 +63013,15 @@
                   this.m_Context.state
               );
           }),
-          R.c([d.observable], e.prototype, "m_nLastObservedSampleRate", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_nLastObservedSampleRate", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_bSupportsAudioWorkletProcessors",
             void 0
           ),
-          R.c([M.a], e.prototype, "DelayedCleanupContextIfInactive", null),
-          R.c([d.action.bound], e.prototype, "OnAudioContextStateChange", null),
+          N.c([M.a], e.prototype, "DelayedCleanupContextIfInactive", null),
+          N.c([d.action.bound], e.prototype, "OnAudioContextStateChange", null),
           e
         );
       })(),
@@ -63047,8 +63101,8 @@
               (this.m_Source = void 0),
               this.m_Manager.PlaybackFinished(this);
           }),
-          R.c([d.action.bound], e.prototype, "OnFailure", null),
-          R.c([d.action.bound], e.prototype, "OnPlaybackEnded", null),
+          N.c([d.action.bound], e.prototype, "OnFailure", null),
+          N.c([d.action.bound], e.prototype, "OnPlaybackEnded", null),
           e
         );
       })(),
@@ -63101,7 +63155,7 @@
           );
         }
         return (
-          R.d(i, t),
+          N.d(i, t),
           (i.prototype.GetUserIdleTime = function() {
             return Math.floor(
               (performance.now() - this.m_msUserLastAction) / 1e3
@@ -63156,7 +63210,7 @@
             }
           }),
           (i.sm_rgUserEvents = ["mousemove", "mousedown", "keypress", "focus"]),
-          R.c([M.a], i.prototype, "OnUserAction", null),
+          N.c([M.a], i.prototype, "OnUserAction", null),
           i
         );
       })(iu),
@@ -63174,7 +63228,7 @@
           );
         }
         return (
-          R.d(e, t),
+          N.d(e, t),
           (e.prototype.OnComputerActiveStateChange = function(e, t) {
             var n = new Date().getTime() / 1e3 - t;
             (this.m_eActiveState = e),
@@ -63197,8 +63251,8 @@
                   1e4
                 )));
           }),
-          R.c([M.a], e.prototype, "OnComputerActiveStateChange", null),
-          R.c([M.a], e.prototype, "UpdateStillActive", null),
+          N.c([M.a], e.prototype, "OnComputerActiveStateChange", null),
+          N.c([M.a], e.prototype, "UpdateStillActive", null),
           e
         );
       })(ru),
@@ -63214,7 +63268,7 @@
           }),
           (e.prototype.StartDrag = function(e) {
             var t, n;
-            Object(N.a)(
+            Object(R.a)(
               !this.m_data,
               "second drag started, existing data discarded",
               this.m_data
@@ -63275,7 +63329,7 @@
             return this.m_bDropConsumed;
           }),
           (e.prototype.SetDropConsumed = function() {
-            Object(N.a)(
+            Object(R.a)(
               this.BInDrag(),
               "Asked to set drop consumed but no active drag"
             ),
@@ -63293,9 +63347,9 @@
           (this.m_UsabilityHandler = a(
             ae.X.NotifyRequestClientUsabilityMetricsHandler,
             function(n) {
-              return R.b(t, void 0, void 0, function() {
+              return N.b(t, void 0, void 0, function() {
                 var t;
-                return R.e(this, function(e) {
+                return N.e(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return (
@@ -63372,7 +63426,7 @@
           return (t.m_window = e), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           (e.prototype.BringToFront = function() {
             null != this.m_window.SteamClient &&
             null != this.m_window.SteamClient.Window &&
@@ -63434,7 +63488,7 @@
           return (t.m_popup = e), t;
         }
         return (
-          R.d(e, n),
+          N.d(e, n),
           Object.defineProperty(e.prototype, "container", {
             get: function() {
               return (
@@ -63509,7 +63563,7 @@
                     "message",
                     this.HandleWebLoaderPostMessage
                   ))
-                : (Object(N.a)(
+                : (Object(R.a)(
                     !G.a.IN_CLIENT,
                     "Config.IN_CLIENT set but SteamClient globals not available"
                   ),
@@ -63897,28 +63951,28 @@
               this.m_FriendsUIApp.UIStore.ShowAndOrActivateChat(e, t, !0);
             }
           }),
-          R.c([d.observable], e.prototype, "m_UIDisplayPrefs", void 0),
-          R.c([d.observable], e.prototype, "m_bUpdatedBuildAvailable", void 0),
-          R.c([d.observable], e.prototype, "m_nSecondsOutOfDate", void 0),
-          R.c(
+          N.c([d.observable], e.prototype, "m_UIDisplayPrefs", void 0),
+          N.c([d.observable], e.prototype, "m_bUpdatedBuildAvailable", void 0),
+          N.c([d.observable], e.prototype, "m_nSecondsOutOfDate", void 0),
+          N.c(
             [d.observable],
             e.prototype,
             "m_strLoaderWindowRestoreDetails",
             void 0
           ),
-          R.c(
+          N.c(
             [d.observable],
             e.prototype,
             "m_bShowFriendsListOnLoadFromLoader",
             void 0
           ),
-          R.c([M.a], e.prototype, "HandlePostMessage", null),
-          R.c([M.a], e.prototype, "HandleWebLoaderPostMessage", null),
-          R.c([zo], e.prototype, "SetUserPersonaStateWhenReady", null),
-          R.c([d.computed], e.prototype, "UIDisplayPrefs", null),
-          R.c([d.action], e.prototype, "SetUIDisplayPref", null),
-          R.c([zo], e.prototype, "ShowPopupFriendsList", null),
-          R.c([zo], e.prototype, "ShowChatUnreadMessages", null),
+          N.c([M.a], e.prototype, "HandlePostMessage", null),
+          N.c([M.a], e.prototype, "HandleWebLoaderPostMessage", null),
+          N.c([zo], e.prototype, "SetUserPersonaStateWhenReady", null),
+          N.c([d.computed], e.prototype, "UIDisplayPrefs", null),
+          N.c([d.action], e.prototype, "SetUIDisplayPref", null),
+          N.c([zo], e.prototype, "ShowPopupFriendsList", null),
+          N.c([zo], e.prototype, "ShowChatUnreadMessages", null),
           e
         );
       })();
@@ -63929,7 +63983,7 @@
         o && o.ownerDocument && (n = o.ownerDocument.defaultView);
       }
       return (
-        Object(N.a)(
+        Object(R.a)(
           n,
           "Couldn't find owning window to determine browser context"
         ),
@@ -63940,7 +63994,7 @@
       var t = Xo;
       return (
         e &&
-          (Object(N.a)(
+          (Object(R.a)(
             e.__FriendsUIBrowserContext,
             "FriendsUI Browser context missing from owner window"
           ),
@@ -63974,18 +64028,18 @@
             (e.m_AudioPlaybackManager = new nu()),
             (e.m_IdleTracker = G.a.IN_CLIENT ? new au() : new ru()),
             (e.m_DesktopApp = Su = new du(e, !1)),
-            (e.m_ChatRoomBBCodeParser = new Re(
+            (e.m_ChatRoomBBCodeParser = new Ne(
               Object.assign(rm(), { mention: Vm }),
               Ge
             )),
-            (e.m_FriendChatBBCodeParser = new Re(
+            (e.m_FriendChatBBCodeParser = new Ne(
               Object.assign(rm(), {
                 invite: Dm,
                 gameinvite: Tm,
                 lobbyinvite: Gm,
                 tradeoffer: Am,
-                broadcastinvite: Rm,
-                broadcastviewrequest: Nm
+                broadcastinvite: Nm,
+                broadcastviewrequest: Rm
               }),
               Ge
             )),
@@ -63997,7 +64051,7 @@
               spoiler: qm
             })),
             (Su = e.m_DesktopApp),
-            Object(N.a)(
+            Object(R.a)(
               !G.a.IN_MOBILE,
               "DesktopApp initialized in mobile context"
             ),
@@ -64005,7 +64059,7 @@
           );
         }
         return (
-          R.d(e, l),
+          N.d(e, l),
           (e.prototype.Init = function(e, t, n) {
             var o,
               i,
@@ -64031,9 +64085,9 @@
               });
           }),
           (e.prototype.OnReadyToRender = function() {
-            return R.b(this, void 0, void 0, function() {
+            return N.b(this, void 0, void 0, function() {
               var t, n, o, i, r, a, s, c;
-              return R.e(this, function(e) {
+              return N.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return [4, this.UIStore.RestorePopupState()];
@@ -64289,40 +64343,53 @@
                 'Ignoring message from untrusted domain "' + e.origin + '"'
               );
           }),
-          R.c([d.observable], e.prototype, "m_eLogonState", void 0),
-          R.c([d.observable], e.prototype, "m_bLogonDialogVisisible", void 0),
-          R.c([d.observable], e.prototype, "m_steamID", void 0),
-          R.c([d.action], e.prototype, "LaunchChat", null),
-          R.c([d.action.bound], e.prototype, "HandlePostMessage", null),
+          N.c([d.observable], e.prototype, "m_eLogonState", void 0),
+          N.c([d.observable], e.prototype, "m_bLogonDialogVisisible", void 0),
+          N.c([d.observable], e.prototype, "m_steamID", void 0),
+          N.c([d.action], e.prototype, "LaunchChat", null),
+          N.c([d.action.bound], e.prototype, "HandlePostMessage", null),
           e
         );
       })();
     n("Y3TG"), n("NM6T"), n("RlUW"), n("MPxB"), n("5QcX"), n("m1EC");
-    (window.AssertMsg = N.a),
+    (window.AssertMsg = R.a),
       document.addEventListener("DOMContentLoaded", function() {
         Object(G.c)();
-        var e = !0;
+        var e,
+          t = !0;
         if (!G.a.IN_CLIENT && G.a.STEAM_TV) {
-          var t = Object(G.b)("broadcast");
-          t &&
-            ("76561198124468676" == t.steamid &&
-              (X = {
-                stream: { "76561198124468676": "#Broadcast_EnglishMain" },
-                name: "The Kuala Lumpur Major",
-                appID: 570,
-                link: "https://steam.tv/dota",
-                linkName: "steam.tv/dota",
-                tabIcon: "public/images/webui/broadcast/ti_tab.png"
-              }),
-            Object.assign(yu, t)),
+          var n = Object(G.b)("broadcast");
+          n &&
+            ("76561198124468676" == (e = n.steamid)
+              ? X.init({
+                  stream: { "76561198124468676": "#Broadcast_EnglishMain" },
+                  name: "The Kuala Lumpur Major",
+                  appID: 570,
+                  link: "https://steam.tv/dota",
+                  linkName: "steam.tv/dota",
+                  tabIcon: "public/images/webui/broadcast/ti_tab.png",
+                  offlineClassName: "BroadcastDotaKualaLumpurMajorOffline"
+                })
+              : "76561197960270087" == e &&
+                X.init({
+                  stream: { "76561197960270087": "#Broadcast_EnglishMain" },
+                  name: "Injustice 2 Pro Series Grand Finals 2018",
+                  appID: 627270,
+                  link: "https://steam.tv/injustice2",
+                  linkName: "steam.tv/injustice2",
+                  tabIcon:
+                    "public/images/webui/broadcast/injustice2_tab_logo.jpg",
+                  offlineClassName: "BroadcastInjustice2Offline"
+                }),
+            Object.assign(yu, n)),
             G.d.logged_in
               ? Cu()
-              : ((e = !1),
+              : ((t = !1),
                 new wu().Init(function() {
                   window.location = window.location;
                 }));
         }
-        e &&
+        t &&
           (function() {
             var e,
               t = new bu(),
