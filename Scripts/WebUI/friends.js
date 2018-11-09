@@ -12849,7 +12849,7 @@
           }),
           (e.prototype.SetUserGroupCollapsed = function(e, t) {
             !!this.m_mapCollapsePrefs.get(e) != t &&
-              (t
+              (t || Tt.groups[e]
                 ? this.m_mapCollapsePrefs.set(e, t)
                 : this.m_mapCollapsePrefs.delete(e),
               this.WritePrefs());
