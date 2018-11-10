@@ -7389,8 +7389,8 @@
         stream: { "76561198857153475": "#Broadcast_EnglishMain" },
         name: "The Artifact Preview Tournament",
         appID: 583950,
-        link: "https://steam.tv/artifact",
-        linkName: "steam.tv/artifact",
+        link: "https://store.steampowered.com/app/583950/Artifact/",
+        linkName: "Artifact on Steam",
         tabIcon:
           "public/images/webui/broadcast/artifact_icon_preview_tournament.png",
         offlineClassName: "BroadcastArtifactOffline"

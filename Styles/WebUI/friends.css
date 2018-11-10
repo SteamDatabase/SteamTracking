@@ -1085,6 +1085,9 @@
 .chatentry_minHeightZero_NcZQ_ {
   min-height: 0; }
 
+.compactView .chatentry_chatTextarea_3e__5 {
+  height: initial; }
+
 .BroadcastView {
   width: 100%;
   height: 100%;
@@ -10544,9 +10547,6 @@ input.InviteFriendToChatDialog_LinkInput {
 .ChatRoomGroupDialog_contents.BothChatsDisplayed .chatTextarea:focus {
   outline-offset: -2px;
   outline: -webkit-focus-ring-color auto 5px; }
-
-.compactView .chatTextarea {
-  height: initial; }
 
 .chatSubmitButton {
   position: relative;
