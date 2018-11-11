@@ -2485,6 +2485,69 @@ iframe.steamTVLogin {
   color: #d3d3d3;
   line-height: 18px; }
 
+.StoreSaleWidgetContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 780px;
+  overflow: hidden;
+  max-height: 170px;
+  z-index: 1; }
+
+.StoreSaleWidgetImage {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  cursor: pointer; }
+
+.StoreSaleWidgetTitle {
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+  color: #c1c6cf;
+  flex-shrink: 0; }
+
+.StoreSaleWidgetTitle:hover {
+  color: #AAA; }
+
+.StoreSaleWidgetRelease {
+  font-size: 10px;
+  color: #919fb1; }
+
+.StoreSaleWidgetShortDesc {
+  font-size: 12px; }
+
+.StoreSalePriceActionWidgetContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+  justify-content: flex-end; }
+
+.StoreSalePriceBox {
+  padding: 5px;
+  background-color: black; }
+
+.StoreSalePriceButton {
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #D2E885 !important;
+  background: #799905;
+  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px; }
+
+.StoreSalePriceButton:hover {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: #a4d007;
+  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
+
 @media screen and (max-width: 420px) and (min-height: 420px) {
   .BroadcastContainer {
     flex-direction: column;
