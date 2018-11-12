@@ -1,6 +1,6 @@
 "win32"
 {
-	"version"		"1541710372"
+	"version"		"1541819441"
 	"csgo_resources_misc_all"
 	{
 		"file"		"csgo_resources_misc_all.zip.1d3b2d3671195d082d51d08924cc5ce87680a9be"
@@ -43,11 +43,11 @@
 	}
 	"csgo_strings_all"
 	{
-		"file"		"csgo_strings_all.zip.b3542e813e70b67cd149644caf440069aa9ccc2b"
-		"size"		"7435926"
-		"sha2"		"923f97ffd898f41573e57569cb1a319351db62ac5040c6e235fd2a729d83cd6f"
-		"zipvz"		"csgo_strings_all.zip.vz.f96919d8c15ed4b60142e6d9dc3887718c9a6542_2240916"
-		"sha2vz"		"c513d3eb7fadd723645ff640764383244c69279ac41839e25af1f975ec91cd07"
+		"file"		"csgo_strings_all.zip.b8cde7815c724e1a07ec4273af02740774ff685d"
+		"size"		"7436943"
+		"sha2"		"978e72b1b4a1125c65c34d69bb8b9a64664370d7f6749db173e41268f1aa39ae"
+		"zipvz"		"csgo_strings_all.zip.vz.3276937465b5d6b9a89c4edf3bd2c4dd55c75ae9_2241241"
+		"sha2vz"		"1462dbeb9098b7510bcc073d9095dde10ae911376723a51b4b4279802a663e90"
 	}
 	"csgo_public_all"
 	{
@@ -73,11 +73,11 @@
 	}
 	"csgo_bins_misc_win32"
 	{
-		"file"		"csgo_bins_misc_win32.zip.49e99baa369346e07a759b551d2c2fceb7074ee5"
-		"size"		"16400165"
-		"sha2"		"45acf636d3b5c67f01e68b164c0614b11e28f87fb80990fc00a185048c037e0c"
-		"zipvz"		"csgo_bins_misc_win32.zip.vz.a800824d7205f54d7c37e7d0f875f909e80c4b94_10462140"
-		"sha2vz"		"b8cafe0bdd1f272c15ae542e80b16ed7c182d7102b7f29fc0825c4692cc3c09c"
+		"file"		"csgo_bins_misc_win32.zip.6424331b1dd3b55565ecf588116e682da9803dba"
+		"size"		"16400172"
+		"sha2"		"540644db16e06f174fba046c46092d33ed7913346dce1172e30d79aa0d26f60f"
+		"zipvz"		"csgo_bins_misc_win32.zip.vz.79f25a747d2b76ccde98bd8127af0aa35cb689de_10463237"
+		"sha2vz"		"b8fda5a58bd4896bab9710026f7314ae55397672ddb3fb9211f4657d9ea717af"
 	}
 	"csgo_bins_cef_win32"
 	{
@@ -128,60 +128,60 @@
 		"sha2vz"		"0b099ce1f19b753aa9ad0b856a58a3175fc79303b5caa3b61de1d272a82db15e"
 		"win8-64"
 		{
-			"file"		"csgo_bins_webhelpers_win32_win8-64.zip.44c7cf177acf7b71bdadf5bc21b8b042c18488bc"
-			"size"		"2601150"
-			"sha2"		"729ff0a7ce4647883b1c48d461e9317be33892ce5c5c28f633e7ff099e8ccc02"
-			"zipvz"		"csgo_bins_webhelpers_win32_win8-64.zip.vz.b8fd6ae398dc4801a1a3ac8973b1da3b109f3e89_1581712"
-			"sha2vz"		"ec3582e15ce97bc6c073141658e5bbec85af1cacdf6a0689dc7a4a255fc6d285"
+			"file"		"csgo_bins_webhelpers_win32_win8-64.zip.17c9cf37818e4eb235e6dda34e0149156d6a3da7"
+			"size"		"2601549"
+			"sha2"		"b6addcf8d612c777f0989c242ebe2bada4043616ec92a89baa0040de9dcbddaf"
+			"zipvz"		"csgo_bins_webhelpers_win32_win8-64.zip.vz.a09759543a8efb4259656269f794bf08ae114c02_1583914"
+			"sha2vz"		"d71d57557f98f3b3714b28306bc4a2ad17dd0891b4708113f4920dbc6a34df67"
 		}
 		"win10-64"
 		{
-			"file"		"csgo_bins_webhelpers_win32_win10-64.zip.54feb5d6eca207b292a19225f7c530c146ab979f"
-			"size"		"3539827"
-			"sha2"		"e62c7c1d906863d27ac87b756900a87e52eeade341058474d682faa320b0154b"
-			"zipvz"		"csgo_bins_webhelpers_win32_win10-64.zip.vz.4c9f04d030110998e7a6edd4d3af7bb6d474e23d_2065357"
-			"sha2vz"		"7a5cfbd85d86fd1b5e87679a77f7a633f7849192a4ada7360615452dcb16c9ae"
+			"file"		"csgo_bins_webhelpers_win32_win10-64.zip.e1baee3563ce6dd8ddec865c4626d154ba2cbc66"
+			"size"		"3540621"
+			"sha2"		"b8adb2886192db2e5bb439b4bf67552683f9569840ea82a01c72aecddacac588"
+			"zipvz"		"csgo_bins_webhelpers_win32_win10-64.zip.vz.6c22e37de491c674a96f732e894fc921dc9d1dc7_2065659"
+			"sha2vz"		"18749f11fa092c1fd4cf9d7d58261314cabdcc829d0876d7aef5e96992f93bb9"
 		}
 		"win7"
 		{
-			"file"		"csgo_bins_webhelpers_win32_win7.zip.44c7cf177acf7b71bdadf5bc21b8b042c18488bc"
-			"size"		"2601150"
-			"sha2"		"729ff0a7ce4647883b1c48d461e9317be33892ce5c5c28f633e7ff099e8ccc02"
-			"zipvz"		"csgo_bins_webhelpers_win32_win7.zip.vz.b8fd6ae398dc4801a1a3ac8973b1da3b109f3e89_1581712"
-			"sha2vz"		"ec3582e15ce97bc6c073141658e5bbec85af1cacdf6a0689dc7a4a255fc6d285"
+			"file"		"csgo_bins_webhelpers_win32_win7.zip.17c9cf37818e4eb235e6dda34e0149156d6a3da7"
+			"size"		"2601549"
+			"sha2"		"b6addcf8d612c777f0989c242ebe2bada4043616ec92a89baa0040de9dcbddaf"
+			"zipvz"		"csgo_bins_webhelpers_win32_win7.zip.vz.a09759543a8efb4259656269f794bf08ae114c02_1583914"
+			"sha2vz"		"d71d57557f98f3b3714b28306bc4a2ad17dd0891b4708113f4920dbc6a34df67"
 		}
 		"win7-64"
 		{
-			"file"		"csgo_bins_webhelpers_win32_win7-64.zip.54feb5d6eca207b292a19225f7c530c146ab979f"
-			"size"		"3539827"
-			"sha2"		"e62c7c1d906863d27ac87b756900a87e52eeade341058474d682faa320b0154b"
-			"zipvz"		"csgo_bins_webhelpers_win32_win7-64.zip.vz.4c9f04d030110998e7a6edd4d3af7bb6d474e23d_2065357"
-			"sha2vz"		"7a5cfbd85d86fd1b5e87679a77f7a633f7849192a4ada7360615452dcb16c9ae"
+			"file"		"csgo_bins_webhelpers_win32_win7-64.zip.e1baee3563ce6dd8ddec865c4626d154ba2cbc66"
+			"size"		"3540621"
+			"sha2"		"b8adb2886192db2e5bb439b4bf67552683f9569840ea82a01c72aecddacac588"
+			"zipvz"		"csgo_bins_webhelpers_win32_win7-64.zip.vz.6c22e37de491c674a96f732e894fc921dc9d1dc7_2065659"
+			"sha2vz"		"18749f11fa092c1fd4cf9d7d58261314cabdcc829d0876d7aef5e96992f93bb9"
 		}
 	}
 	"csgo_bins_win32"
 	{
-		"file"		"csgo_bins_win32.zip.dc6ea43bb176f68f69273bd6a42bc71c879e518c"
-		"size"		"27461104"
-		"sha2"		"39eef4b6b3d7fb09b384fe5b7a0aa98149b6e027a8795cf9fac81d172685ba37"
-		"zipvz"		"csgo_bins_win32.zip.vz.324e770b76830cc2998a1d773b6b349ca4c5f7d9_14405917"
-		"sha2vz"		"91ad73b8186a69d7ef23d1966a4e2760abbc7f3eff71a7cf31ac327fbdded72d"
+		"file"		"csgo_bins_win32.zip.1fb12f3fe56fd0ab5bae095718e24cd4e8a517a5"
+		"size"		"27462194"
+		"sha2"		"4dea893ce7e2b1353fc8e2e7fd5153ca5226c2dd6ca30f36c7ef0b2a9ddc745c"
+		"zipvz"		"csgo_bins_win32.zip.vz.723158e90095f99df5cd4192d24d655d6b1800bb_14405975"
+		"sha2vz"		"98d9d036e442a7464181863a503730032d2d67d4eedc1faec586ff076a74313f"
 	}
 	"csgol_exe_win32"
 	{
-		"file"		"csgol_exe_win32.zip.f9080cf2dec00fb9886c6f54115d5e9dc1ab1822"
-		"size"		"1310730"
-		"sha2"		"2303451cd8a7e7b2949ea8ed3eebfe7b90a9ede270c25754662097363df09280"
-		"zipvz"		"csgol_exe_win32.zip.vz.3ded4981d3f4d641315c6e37bccfec30f734ebb5_1064725"
-		"sha2vz"		"bc29dcb9b79c3653b90a5804abc620299fd8ea0a4e5f1f87dfd7967bfa9f1acb"
+		"file"		"csgol_exe_win32.zip.0a33b6fb02fa47ac4e76b27318a2db9776d5f80e"
+		"size"		"1310729"
+		"sha2"		"e55c1afdb3871472ee8207b878600eafeb9e5e15f7c5593dfd2cfddcfd30b28a"
+		"zipvz"		"csgol_exe_win32.zip.vz.5e4a6b66b7ecb50bb0465dc5458792568012ba33_1064684"
+		"sha2vz"		"0b77c0fadbd2730b2e502dd45c5828cbbf8424036e0185e16b559a42c47dabae"
 		"IsBootstrapperPackage"		"1"
 	}
 }
 "kvsign2"
 {
-	"win32"		"6dc432e644bcf1772cda035dc04b1b4e435b9a821d36a3ce33dd2c8fe48aabc6842a41f37021358a62ae6d884ffd0e4213f48d02a877ceb60ae797abbba56901"
+	"win32"		"663cde5add777ac41743e92d670d6f42a83d54160c038f376a1f9b60c455f107aff574ddb1c297ad9db96e9a8c5c07db3af300bc087bb255bd5dbacf6cfe9b07"
 }
 "kvsignatures"
 {
-	"win32"		"783b502d32af9cbd56397dcf3e9cf0bddc5c58ae0d7429b0819de4529446ddf54c84b0972efcaba17b8accc559b94108124dba24dd0abe6ea45a83c2001bb27e4a983cc846dd77adc94805c4106ef8a3dbb7385a1a71f3d0c127818095dd2041758f6ac902fcfc0e266649b8df71053310561b6e8f687437996d8ce26281620c"
+	"win32"		"7ad7cd66eae82655bb8b51f2364760f2e00b7a357ce166cd244ec911c48367ee56681f7b5412292ac6c79136d47c82e38ac4275d70b5be5e905685012a62c68395111650d91c9fd038b8bb2ae5cfa754ec9b66b36082c821ff4ebf7fc320d82cf0748831f0479bb9af2dee2b25a6b4bde5b602317d2a53343decdaba71610a99"
 }
