@@ -2431,13 +2431,21 @@ iframe.steamTVLogin {
 .BroadcastQuakeLiveOffline,
 .BroadcastCSGOLondonOffline,
 .BroadcastArtifactOffline,
-.BroadcastInjustice2Offline {
+.BroadcastInjustice2Offline,
+.BroadcastSmiteOffline,
+.BroadcastPaladinsOffline,
+.BroadcastRealmRoyaleOffline {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-size: cover; }
+
+.BroadcastSmiteOffline,
+.BroadcastPaladinsOffline,
+.BroadcastRealmRoyaleOffline {
+  background-image: url("../../images/webui/broadcast/hrx_splash_screen_2018.jpg"); }
 
 .BroadcastInjustice2Offline {
   background-image: url("../../images/webui/broadcast/injustice2_grand_finals_2018_splash_screen.jpg"); }

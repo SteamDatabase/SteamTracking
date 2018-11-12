@@ -64524,8 +64524,8 @@
                   tabIcon: "public/images/webui/broadcast/ti_tab.png",
                   offlineClassName: "BroadcastDotaKualaLumpurMajorOffline"
                 })
-              : "76561197960270087" == e &&
-                X.init({
+              : "76561197960270087" == e
+              ? X.init({
                   stream: { "76561197960270087": "#Broadcast_EnglishMain" },
                   name: "Injustice 2 Pro Series Grand Finals 2018",
                   appID: 627270,
@@ -64534,6 +64534,39 @@
                   tabIcon:
                     "public/images/webui/broadcast/injustice2_tab_logo.jpg",
                   offlineClassName: "BroadcastInjustice2Offline"
+                })
+              : "76561198835282120" == e
+              ? X.init({
+                  stream: { "76561198835282120": "#Broadcast_EnglishMain" },
+                  name: "SMITE World Championship",
+                  appID: 386360,
+                  link: "https://steam.tv/smite",
+                  linkName: "steam.tv/smite",
+                  tabIcon:
+                    "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
+                  offlineClassName: "BroadcastSmiteOffline"
+                })
+              : "76561198835114410" == e
+              ? X.init({
+                  stream: { "76561198835114410": "#Broadcast_EnglishMain" },
+                  name: "Paladins World Championship",
+                  appID: 444090,
+                  link: "https://steam.tv/paladins",
+                  linkName: "steam.tv/paladins",
+                  tabIcon:
+                    "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
+                  offlineClassName: "BroadcastPaladinsOffline"
+                })
+              : "76561198838606142" == e &&
+                X.init({
+                  stream: { "76561198838606142": "#Broadcast_EnglishMain" },
+                  name: "Realm Royale",
+                  appID: 813820,
+                  link: "https://steam.tv/realmroyale",
+                  linkName: "steam.tv/realmroyale",
+                  tabIcon:
+                    "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
+                  offlineClassName: "BroadcastRealmRoyaleOffline"
                 }),
             Object.assign(_l, n)),
             G.d.logged_in
