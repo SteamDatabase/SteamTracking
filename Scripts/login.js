@@ -198,7 +198,17 @@ CLoginPromptManager.prototype.UpdateCaptcha = function( gid )
 	if ( gid != -1 )
 	{
 		$J('#captcha_entry').show();
-		$J('#captchaImg').attr( 'src', this.m_strBaseURL + 'rendercaptcha/?gid='+gid );
+
+		var $ImageElement = $J('#captchaImg');
+
+		var strURL = this.m_strBaseURL + 'rendercaptcha/?gid=' + gid;
+
+		if ( $ImageElement.data( 'noborder' ) )
+		{
+			strURL += '&noborder=1';
+		}
+
+		$ImageElement.attr( 'src', strURL );
 		this.$LogonFormElement('captcha_text').val('');
 	}
 	else
