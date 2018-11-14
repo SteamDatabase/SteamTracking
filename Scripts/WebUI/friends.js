@@ -47320,7 +47320,7 @@
                   )),
               ye.createElement(
                 "div",
-                { className: s },
+                { className: s, onContextMenu: this.props.onShowContextMenu },
                 ye.createElement(
                   "div",
                   { className: "statusAndName" },
