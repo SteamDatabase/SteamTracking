@@ -1157,10 +1157,6 @@ function CheckForPopups()
 		if ( !g_bMarketAllowed ) {
 			DisplayPopup( 'MarketRestrictionsPopup',  "https://steamcommunity.com/market/restrictionsdialog" );
 		}
-		else if ( g_bShowSalesLimitDialog )
-		{
-			DisplayPopup( "MarketSalesLimitPopup",  "https://steamcommunity.com/market/saleslimitdialog" );
-		}
 
 		g_bPopupsDisplayed = true;
 	}

@@ -111,10 +111,10 @@
         return m;
       }),
       n.d(t, "h", function() {
-        return h;
+        return d;
       }),
       n.d(t, "a", function() {
-        return d;
+        return h;
       }),
       n.d(t, "c", function() {
         return v;
@@ -132,8 +132,8 @@
       p = 250820,
       l = 330050,
       m = 358510,
-      h = 366490,
-      d = "18446744073709551615",
+      d = 366490,
+      h = "18446744073709551615",
       v = 0,
       _ = 2147483647;
     ((i = o || (o = {}))[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
@@ -206,6 +206,7 @@
       n.d(t, "b", function() {
         return a;
       });
+    n("mrSG");
     var o = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -347,26 +348,26 @@
   JtU4: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return a;
+      return u;
     }),
       n.d(t, "a", function() {
         return m;
       }),
       n.d(t, "b", function() {
-        return h;
+        return d;
       }),
       n.d(t, "d", function() {
         return v;
       });
-    var a,
+    var u,
       o,
       i = n("mrSG"),
       r = n("2vnA"),
       s = n("i8i4"),
-      u = n("UqDm"),
+      a = n("UqDm"),
       c = n("WpBz"),
       p = n("1VtQ");
-    ((o = a || (a = {}))[(o.Minimized = 1)] = "Minimized"),
+    ((o = u || (u = {}))[(o.Minimized = 1)] = "Minimized"),
       (o[(o.Hidden = 2)] = "Hidden"),
       (o[(o.Tooltip = 4)] = "Tooltip"),
       (o[(o.ContextMenu = 8)] = "ContextMenu"),
@@ -392,7 +393,7 @@
           }),
           (e.prototype.OnLinkLoad = function(e) {
             e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-              u.d(this.m_rgLoadingLinks, e.currentTarget),
+              a.d(this.m_rgLoadingLinks, e.currentTarget),
               0 == this.m_rgLoadingLinks.length &&
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }),
@@ -428,60 +429,61 @@
           (e.prototype.OnMessage = function(e) {
             "window_moved" == e.data && this.OnResize();
           }),
-          (e.prototype.Show = function(e) {
-            var t,
-              n = this;
+          (e.prototype.Show = function(e, t) {
+            var n,
+              o = this;
             void 0 === e && (e = !0),
+              void 0 === t && (t = !1),
               window.SteamClient &&
-                (this.m_rgParams.eCreationFlags |= a.Hidden),
-              this.m_rgParams.eCreationFlags & a.Tooltip && (e = !1),
+                (this.m_rgParams.eCreationFlags |= u.Hidden),
+              this.m_rgParams.eCreationFlags & u.Tooltip && (e = !1),
               this.BIsValid() &&
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
-                  : e && this.Focus());
-            var o,
-              i,
+                  : e && this.Focus(t));
+            var i,
               r,
-              s = v.GetExistingPopup(this.m_strName);
-            (s && !this.m_rgParams.replace_existing_popup) ||
+              s,
+              a = v.GetExistingPopup(this.m_strName);
+            (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              s
-                ? ((i = s.m_element),
-                  (o = s.m_popup),
-                  s.ReleasePopup(),
-                  (r = s.m_renderWhenReady),
-                  v.RemoveTrackedPopup(s),
-                  o.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
-                  o.removeEventListener("unload", s.OnUnload),
-                  o.removeEventListener("resize", s.OnResizeEvent),
-                  o.removeEventListener("focus", this.OnFocusInternal),
-                  o.removeEventListener("blur", this.OnBlurInternal),
-                  o.removeEventListener("drop", s.OnDrop),
-                  o.removeEventListener("dragover", s.OnDragOver),
-                  o.removeEventListener("message", this.OnMessage))
-                : ((o = (t = d.CreatePopup(this.m_strName, this.m_rgParams))
+              a
+                ? ((r = a.m_element),
+                  (i = a.m_popup),
+                  a.ReleasePopup(),
+                  (s = a.m_renderWhenReady),
+                  v.RemoveTrackedPopup(a),
+                  i.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
+                  i.removeEventListener("unload", a.OnUnload),
+                  i.removeEventListener("resize", a.OnResizeEvent),
+                  i.removeEventListener("focus", this.OnFocusInternal),
+                  i.removeEventListener("blur", this.OnBlurInternal),
+                  i.removeEventListener("drop", a.OnDrop),
+                  i.removeEventListener("dragover", a.OnDragOver),
+                  i.removeEventListener("message", this.OnMessage))
+                : ((i = (n = h.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
-                  (i = t.element),
-                  (r = new l(o, i))),
-              o &&
-                i &&
-                ((o.document.title = this.m_strTitle),
-                o.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                o.addEventListener("unload", this.OnUnload),
-                o.addEventListener("resize", this.OnResizeEvent),
-                o.addEventListener("focus", this.OnFocusInternal),
-                o.addEventListener("blur", this.OnBlurInternal),
-                o.addEventListener("drop", this.OnDrop),
-                o.addEventListener("dragover", this.OnDragOver),
-                o.addEventListener("message", this.OnMessage),
-                (this.m_popup = o),
-                (this.m_element = i),
-                (this.m_renderWhenReady = r),
+                  (r = n.element),
+                  (s = new l(i, r))),
+              i &&
+                r &&
+                ((i.document.title = this.m_strTitle),
+                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                i.addEventListener("unload", this.OnUnload),
+                i.addEventListener("resize", this.OnResizeEvent),
+                i.addEventListener("focus", this.OnFocusInternal),
+                i.addEventListener("blur", this.OnBlurInternal),
+                i.addEventListener("drop", this.OnDrop),
+                i.addEventListener("dragover", this.OnDragOver),
+                i.addEventListener("message", this.OnMessage),
+                (this.m_popup = i),
+                (this.m_element = r),
+                (this.m_renderWhenReady = s),
                 this.m_renderWhenReady.SetTarget(function() {
-                  return n.RenderInternal(n.m_popup, n.m_element, e);
+                  return o.RenderInternal(o.m_popup, o.m_element, e);
                 })),
               v.AddTrackedPopup(this),
-              s && e && this.Focus());
+              a && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -548,12 +550,15 @@
             enumerable: !0,
             configurable: !0
           }),
-          (e.prototype.Focus = function() {
-            this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
-              ? this.m_popup.SteamClient.Window.BringToFront()
-              : this.m_popup && this.m_popup.focus();
+          (e.prototype.Focus = function(e) {
+            void 0 === e && (e = !1),
+              this.m_popup &&
+              void 0 !== this.m_popup.SteamClient &&
+              void 0 !== this.m_popup.SteamClient.Window
+                ? e
+                  ? this.m_popup.SteamClient.Window.SetForegroundWindow()
+                  : this.m_popup.SteamClient.Window.BringToFront()
+                : this.m_popup && this.m_popup.focus();
           }),
           (e.prototype.Close = function() {
             this.m_popup && this.m_popup.close();
@@ -635,7 +640,7 @@
           e
         );
       })(),
-      h = (function(r) {
+      d = (function(r) {
         function e(e, t, n, o) {
           var i = r.call(this, e, n) || this;
           return i.SetSavedDimensionsKey(t), (i.m_bExpires = o), i;
@@ -714,7 +719,7 @@
           e
         );
       })(m),
-      d = (function() {
+      h = (function() {
         function e() {
           var s = this;
           (this.m_bShuttingDown = !1),
@@ -832,23 +837,23 @@
               '><div id="popup_target"></div></body></html>';
             c.document.write(m), (c.document.title = r);
             for (
-              var h = c.document.getElementsByTagName("head")[0],
-                d = document.getElementsByTagName("link"),
+              var d = c.document.getElementsByTagName("head")[0],
+                h = document.getElementsByTagName("link"),
                 v = 0;
-              v < d.length;
+              v < h.length;
               v++
             ) {
-              var _ = d[v];
+              var _ = h[v];
               if ("stylesheet" == _.rel) {
                 for (
-                  var f = c.document.createElement("link"), b = 0;
-                  b < _.attributes.length;
-                  b++
+                  var f = c.document.createElement("link"), g = 0;
+                  g < _.attributes.length;
+                  g++
                 ) {
-                  var g = _.attributes.item(b);
-                  f.setAttribute(g.name, g.value);
+                  var b = _.attributes.item(g);
+                  f.setAttribute(b.name, b.value);
                 }
-                h.appendChild(f);
+                d.appendChild(f);
               }
             }
             return {
@@ -940,7 +945,7 @@
           e
         );
       })(),
-      v = new d();
+      v = new h();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1383,15 +1388,15 @@
       );
     }
     function s(e, t) {
-      return void 0 === t && (t = !1), d(e, !t);
+      return void 0 === t && (t = !1), h(e, !t);
     }
     var a = 31536e3,
       u = 2628e3,
       p = 604800,
       l = 86400,
       m = 3600,
-      h = 60;
-    function d(e, t, n) {
+      d = 60;
+    function h(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
       var o = t ? "#TimeSince_" : "#TimeInterval_";
       return 2 * a <= e
@@ -1413,13 +1418,13 @@
         : 2 * m <= e
         ? i(o + "XHours", Math.floor(e / m))
         : m <= e
-        ? 2 * h <= (e -= m) && n
-          ? i(o + "1HourXMinutes", Math.floor(e / h))
+        ? 2 * d <= (e -= m) && n
+          ? i(o + "1HourXMinutes", Math.floor(e / d))
           : i(o + "1Hour")
         : n
-        ? 2 * h <= e
-          ? i(o + "XMinutes", Math.floor(e / h))
-          : i(h <= e ? o + "1Minute" : o + "LessThanAMinute")
+        ? 2 * d <= e
+          ? i(o + "XMinutes", Math.floor(e / d))
+          : i(d <= e ? o + "1Minute" : o + "LessThanAMinute")
         : i(o + "LessThanAnHour");
     }
     var v = new ((function() {
@@ -1493,8 +1498,8 @@
       p = n("2vnA"),
       l = n("okNM"),
       m = n("J0bI"),
-      h = n("s+DT");
-    var d = n("1VtQ"),
+      d = n("s+DT");
+    var h = n("1VtQ"),
       v = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -1506,7 +1511,7 @@
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
-            var t = new h.a(e.steamid_sender);
+            var t = new d.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1622,14 +1627,14 @@
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(b, { controller: this.props.controller })
-                : i.createElement(g, { controller: this.props.controller })
+                ? i.createElement(g, { controller: this.props.controller })
+                : i.createElement(b, { controller: this.props.controller })
             );
           }),
           (t = c.c([l.observer], t))
         );
       })(i.Component),
-      b = (function(t) {
+      g = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -1805,13 +1810,13 @@
             );
           }),
           c.c([p.observable], e.prototype, "m_bTriedToLaunchSteam", void 0),
-          c.c([d.a], e.prototype, "LaunchWebChat", null),
-          c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
-          c.c([d.a], e.prototype, "LaunchSteamClient", null),
+          c.c([h.a], e.prototype, "LaunchWebChat", null),
+          c.c([h.a], e.prototype, "OpenInSteamIgnoreAccount", null),
+          c.c([h.a], e.prototype, "LaunchSteamClient", null),
           (e = c.c([l.observer], e))
         );
       })(i.Component),
-      g = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1868,7 +1873,7 @@
       y,
       S,
       C = new s.a();
-    function D(e) {
+    function w(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -1890,7 +1895,7 @@
                 o = n.getAttribute("data-component");
               switch (o) {
                 case "ChatInvite":
-                  D(n);
+                  w(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + o + '"');

@@ -395,11 +395,11 @@ function BindSaleCapAutoSizeEvents( $Container )
  {
  categoryid
  label
- appid	o
+ nominatedid	o
  writein	o
  }
  */
-function InitSteamAwardNominationDialog( appid, appname, rgCategories )
+function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
 {
 	$J('.show_nomination_dialog').click( function() {
 		var $PageElement = $J(this);
@@ -439,7 +439,7 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 					$J(this).parents( '.steamaward_nomination_row' ).removeClass('selected');
 			});
 
-			if ( oCategory.appid == appid )
+			if ( oCategory.appid == nominatedid )
 			{
 				$Radio.prop( 'checked', true ).change();
 				bFoundCurrentApp = true;
@@ -475,10 +475,6 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 			var $Div = $J('<div/>', {'class': 'steamaward_nomination_content'} );
 			var $Radio = $J('<input/>', {type: 'radio', id: id, name: 'nomination_category', value: 0 } );
 
-			$Row.append( $Radio.wrap( $J('<div/>', {'class': 'radio_ctn'} ) ).parent(), $Div );
-
-			$Div.append( $J('<label/>', {'for': id} ).html( 'None - Withdraw nomination for %s'.replace( /%s/, appname ) ) );
-
 			$Radio.change( function() {
 				if ( $J(this).prop('checked') )
 					$J(this).parents( '.steamaward_nomination_row' ).addClass('selected').siblings().removeClass('selected');
@@ -508,7 +504,7 @@ function InitSteamAwardNominationDialog( appid, appname, rgCategories )
 
 			$J.post( 'https://store.steampowered.com/steamawards/nominategame', {
 				sessionid: g_sessionID,
-				appid: appid,
+				nominatedid: nominatedid,
 				categoryid: categoryid,
 				writein: writein
 			} ).done( function( data ) {

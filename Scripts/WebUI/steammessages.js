@@ -1254,8 +1254,6 @@
         s.Message,
         s.Message,
         s.Message,
-        s.Message,
-        s.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3980,13 +3978,13 @@
           );
         })(s.Message);
       ((a = r || (r = {})).GetTradeOfferAccessToken = function(e, t) {
-        return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, p);
+        return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, p, {});
       }),
         (a.ClientGetItemShopOverlayAuthURL = function(e, t) {
-          return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, g);
+          return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, g, {});
         }),
         (a.GetAssetClassInfo = function(e, t) {
-          return e.SendMsg("Econ.GetAssetClassInfo#1", t, _);
+          return e.SendMsg("Econ.GetAssetClassInfo#1", t, _, {});
         });
     },
     K5Io: function(e, t, i) {
@@ -13164,152 +13162,158 @@
           );
         })(s.Message);
       ((a || (a = {})).RequestFriendPersonaStates = function(e, t) {
-        return e.SendMsg("Chat.RequestFriendPersonaStates#1", t, _);
+        return e.SendMsg("Chat.RequestFriendPersonaStates#1", t, _, {});
       }),
         ((d = o || (o = {})).CreateChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.CreateChatRoomGroup#1", t, M);
+          return e.SendMsg("ChatRoom.CreateChatRoomGroup#1", t, M, {});
         }),
         (d.SaveChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.SaveChatRoomGroup#1", t, b);
+          return e.SendMsg("ChatRoom.SaveChatRoomGroup#1", t, b, {});
         }),
         (d.RenameChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.RenameChatRoomGroup#1", t, B);
+          return e.SendMsg("ChatRoom.RenameChatRoomGroup#1", t, B, {});
         }),
         (d.SetChatRoomGroupTagline = function(e, t) {
-          return e.SendMsg("ChatRoom.SetChatRoomGroupTagline#1", t, z);
+          return e.SendMsg("ChatRoom.SetChatRoomGroupTagline#1", t, z, {});
         }),
         (d.SetChatRoomGroupAvatar = function(e, t) {
-          return e.SendMsg("ChatRoom.SetChatRoomGroupAvatar#1", t, k);
+          return e.SendMsg("ChatRoom.SetChatRoomGroupAvatar#1", t, k, {});
         }),
         (d.SetChatRoomGroupWatchingBroadcast = function(e, t) {
           return e.SendMsg(
             "ChatRoom.SetChatRoomGroupWatchingBroadcast#1",
             t,
-            C
+            C,
+            {}
           );
         }),
         (d.MuteUserInGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.MuteUserInGroup#1", t, O);
+          return e.SendMsg("ChatRoom.MuteUserInGroup#1", t, O, {});
         }),
         (d.KickUserFromGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.KickUserFromGroup#1", t, U);
+          return e.SendMsg("ChatRoom.KickUserFromGroup#1", t, U, {});
         }),
         (d.SetUserBanState = function(e, t) {
-          return e.SendMsg("ChatRoom.SetUserBanState#1", t, N);
+          return e.SendMsg("ChatRoom.SetUserBanState#1", t, N, {});
         }),
         (d.RevokeInviteToGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.RevokeInviteToGroup#1", t, G);
+          return e.SendMsg("ChatRoom.RevokeInviteToGroup#1", t, G, {});
         }),
         (d.CreateRole = function(e, t) {
-          return e.SendMsg("ChatRoom.CreateRole#1", t, q);
+          return e.SendMsg("ChatRoom.CreateRole#1", t, q, {});
         }),
         (d.GetRoles = function(e, t) {
-          return e.SendMsg("ChatRoom.GetRoles#1", t, A);
+          return e.SendMsg("ChatRoom.GetRoles#1", t, A, {});
         }),
         (d.RenameRole = function(e, t) {
-          return e.SendMsg("ChatRoom.RenameRole#1", t, V);
+          return e.SendMsg("ChatRoom.RenameRole#1", t, V, {});
         }),
         (d.ReorderRole = function(e, t) {
-          return e.SendMsg("ChatRoom.ReorderRole#1", t, J);
+          return e.SendMsg("ChatRoom.ReorderRole#1", t, J, {});
         }),
         (d.DeleteRole = function(e, t) {
-          return e.SendMsg("ChatRoom.DeleteRole#1", t, Q);
+          return e.SendMsg("ChatRoom.DeleteRole#1", t, Q, {});
         }),
         (d.GetRoleActions = function(e, t) {
-          return e.SendMsg("ChatRoom.GetRoleActions#1", t, Y);
+          return e.SendMsg("ChatRoom.GetRoleActions#1", t, Y, {});
         }),
         (d.ReplaceRoleActions = function(e, t) {
-          return e.SendMsg("ChatRoom.ReplaceRoleActions#1", t, Z);
+          return e.SendMsg("ChatRoom.ReplaceRoleActions#1", t, Z, {});
         }),
         (d.AddRoleToUser = function(e, t) {
-          return e.SendMsg("ChatRoom.AddRoleToUser#1", t, ee);
+          return e.SendMsg("ChatRoom.AddRoleToUser#1", t, ee, {});
         }),
         (d.GetRolesForUser = function(e, t) {
-          return e.SendMsg("ChatRoom.GetRolesForUser#1", t, te);
+          return e.SendMsg("ChatRoom.GetRolesForUser#1", t, te, {});
         }),
         (d.DeleteRoleFromUser = function(e, t) {
-          return e.SendMsg("ChatRoom.DeleteRoleFromUser#1", t, re);
+          return e.SendMsg("ChatRoom.DeleteRoleFromUser#1", t, re, {});
         }),
         (d.JoinChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.JoinChatRoomGroup#1", t, Re);
+          return e.SendMsg("ChatRoom.JoinChatRoomGroup#1", t, Re, {});
         }),
         (d.InviteFriendToChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, We);
+          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, We, {});
         }),
         (d.LeaveChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, Se);
+          return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, Se, {});
         }),
         (d.CreateChatRoom = function(e, t) {
-          return e.SendMsg("ChatRoom.CreateChatRoom#1", t, fe);
+          return e.SendMsg("ChatRoom.CreateChatRoom#1", t, fe, {});
         }),
         (d.DeleteChatRoom = function(e, t) {
-          return e.SendMsg("ChatRoom.DeleteChatRoom#1", t, _e);
+          return e.SendMsg("ChatRoom.DeleteChatRoom#1", t, _e, {});
         }),
         (d.RenameChatRoom = function(e, t) {
-          return e.SendMsg("ChatRoom.RenameChatRoom#1", t, he);
+          return e.SendMsg("ChatRoom.RenameChatRoom#1", t, he, {});
         }),
         (d.ReorderChatRoom = function(e, t) {
-          return e.SendMsg("ChatRoom.ReorderChatRoom#1", t, ve);
+          return e.SendMsg("ChatRoom.ReorderChatRoom#1", t, ve, {});
         }),
         (d.SendChatMessage = function(e, t) {
-          return e.SendMsg("ChatRoom.SendChatMessage#1", t, Ge);
+          return e.SendMsg("ChatRoom.SendChatMessage#1", t, Ge, {});
         }),
         (d.JoinVoiceChat = function(e, t) {
-          return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, je);
+          return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, je, {});
         }),
         (d.LeaveVoiceChat = function(e, t) {
-          return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Te);
+          return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Te, {});
         }),
         (d.GetMessageHistory = function(e, t) {
-          return e.SendMsg("ChatRoom.GetMessageHistory#1", t, Le);
+          return e.SendMsg("ChatRoom.GetMessageHistory#1", t, Le, {});
         }),
         (d.GetMyChatRoomGroups = function(e, t) {
-          return e.SendMsg("ChatRoom.GetMyChatRoomGroups#1", t, we);
+          return e.SendMsg("ChatRoom.GetMyChatRoomGroups#1", t, we, {});
         }),
         (d.GetChatRoomGroupState = function(e, t) {
-          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, me);
+          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, me, {});
         }),
         (d.GetChatRoomGroupSummary = function(e, t) {
-          return e.SendMsg("ChatRoom.GetChatRoomGroupSummary#1", t, ae);
+          return e.SendMsg("ChatRoom.GetChatRoomGroupSummary#1", t, ae, {});
         }),
         (d.AckChatMessage = function(e, t) {
           return e.SendNotification("ChatRoom.AckChatMessage#1", t);
         }),
         (d.CreateInviteLink = function(e, t) {
-          return e.SendMsg("ChatRoom.CreateInviteLink#1", t, Ke);
+          return e.SendMsg("ChatRoom.CreateInviteLink#1", t, Ke, {});
         }),
         (d.GetInviteLinkInfo = function(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, Ye);
+          return e.SendMsg("ChatRoom.GetInviteLinkInfo#1", t, Ye, {});
         }),
         (d.GetInviteInfo = function(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteInfo#1", t, Ze);
+          return e.SendMsg("ChatRoom.GetInviteInfo#1", t, Ze, {});
         }),
         (d.GetInviteLinksForGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteLinksForGroup#1", t, et);
+          return e.SendMsg("ChatRoom.GetInviteLinksForGroup#1", t, et, {});
         }),
         (d.GetBanList = function(e, t) {
-          return e.SendMsg("ChatRoom.GetBanList#1", t, st);
+          return e.SendMsg("ChatRoom.GetBanList#1", t, st, {});
         }),
         (d.GetInviteList = function(e, t) {
-          return e.SendMsg("ChatRoom.GetInviteList#1", t, ut);
+          return e.SendMsg("ChatRoom.GetInviteList#1", t, ut, {});
         }),
         (d.DeleteInviteLink = function(e, t) {
-          return e.SendMsg("ChatRoom.DeleteInviteLink#1", t, rt);
+          return e.SendMsg("ChatRoom.DeleteInviteLink#1", t, rt, {});
         }),
         (d.SetSessionActiveChatRoomGroups = function(e, t) {
-          return e.SendMsg("ChatRoom.SetSessionActiveChatRoomGroups#1", t, ct);
+          return e.SendMsg(
+            "ChatRoom.SetSessionActiveChatRoomGroups#1",
+            t,
+            ct,
+            {}
+          );
         }),
         (d.SetUserChatGroupPreferences = function(e, t) {
-          return e.SendMsg("ChatRoom.SetUserChatGroupPreferences#1", t, yt);
+          return e.SendMsg("ChatRoom.SetUserChatGroupPreferences#1", t, yt, {});
         }),
         (d.DeleteChatMessages = function(e, t) {
-          return e.SendMsg("ChatRoom.DeleteChatMessages#1", t, ht);
+          return e.SendMsg("ChatRoom.DeleteChatMessages#1", t, ht, {});
         }),
         ((l = u || (u = {})).GetClanChatRoomInfo = function(e, t) {
-          return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, vt);
+          return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, vt, {});
         }),
         (l.SetClanChatRoomPrivate = function(e, t) {
-          return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, Bt);
+          return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, Bt, {});
         }),
         ((p = c || (c = {})).NotifyIncomingChatMessageHandler = {
           name: "ChatRoomClient.NotifyIncomingChatMessage#1",
@@ -16348,10 +16352,15 @@
           );
         })(s.Message);
       ((o = r || (r = {})).GetApps = function(e, t) {
-        return e.SendMsg("Community.GetApps#1", t, u);
+        return e.SendMsg("Community.GetApps#1", t, u, {});
       }),
         (o.GetAppRichPresenceLocalization = function(e, t) {
-          return e.SendMsg("Community.GetAppRichPresenceLocalization#1", t, c);
+          return e.SendMsg(
+            "Community.GetAppRichPresenceLocalization#1",
+            t,
+            c,
+            {}
+          );
         });
     },
     Nlnv: function(e, t, i) {
@@ -18042,19 +18051,19 @@
           );
         })(s.Message);
       ((F = _ || (_ = {})).BeginBroadcastSession = function(e, t) {
-        return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, r);
+        return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, r, {});
       }),
         (F.EndBroadcastSession = function(e, t) {
-          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, a);
+          return e.SendMsg("Broadcast.EndBroadcastSession#1", t, a, {});
         }),
         (F.StartBroadcastUpload = function(e, t) {
-          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, o);
+          return e.SendMsg("Broadcast.StartBroadcastUpload#1", t, o, {});
         }),
         (F.NotifyBroadcastUploadStop = function(e, t) {
           return e.SendNotification("Broadcast.NotifyBroadcastUploadStop#1", t);
         }),
         (F.WatchBroadcast = function(e, t) {
-          return e.SendMsg("Broadcast.WatchBroadcast#1", t, p);
+          return e.SendMsg("Broadcast.WatchBroadcast#1", t, p, {});
         }),
         (F.HeartbeatBroadcast = function(e, t) {
           return e.SendNotification("Broadcast.HeartbeatBroadcast#1", t);
@@ -18063,16 +18072,16 @@
           return e.SendNotification("Broadcast.StopWatchingBroadcast#1", t);
         }),
         (F.GetBroadcastStatus = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, u);
+          return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, u, {});
         }),
         (F.GetBroadcastThumbnail = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, c);
+          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, c, {});
         }),
         (F.InviteToBroadcast = function(e, t) {
-          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, g);
+          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, g, {});
         }),
         (F.SendBroadcastStateToServer = function(e, t) {
-          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, f);
+          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, f, {});
         }),
         (F.NotifyBroadcastSessionHeartbeat = function(e, t) {
           return e.SendNotification(
@@ -18081,19 +18090,19 @@
           );
         }),
         (F.GetBroadcastChatInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, R);
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, R, {});
         }),
         (F.PostChatMessage = function(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, k);
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, k, {});
         }),
         (F.MuteBroadcastChatUser = function(e, t) {
-          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, W);
+          return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, W, {});
         }),
         (F.RemoveUserChatText = function(e, t) {
-          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, C);
+          return e.SendMsg("Broadcast.RemoveUserChatText#1", t, C, {});
         }),
         (F.GetBroadcastChatUserNames = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, S);
+          return e.SendMsg("Broadcast.GetBroadcastChatUserNames#1", t, S, {});
         }),
         ((M = h || (h = {})).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
@@ -19736,6 +19745,12 @@
             (r.prototype.set_controller_workshop_file_id = function(e) {
               s.Message.setField(this, 20, e);
             }),
+            (r.prototype.launch_source = function() {
+              return s.Message.getFieldWithDefault(this, 21, 0);
+            }),
+            (r.prototype.set_launch_source = function(e) {
+              s.Message.setField(this, 21, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -19810,6 +19825,9 @@
                   case 20:
                     e.set_controller_workshop_file_id(t.readUint64String());
                     break;
+                  case 21:
+                    e.set_launch_source(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -19858,7 +19876,9 @@
                 void 0 !== (i = s.Message.getField(e, 19)) &&
                   t.writeUint32(19, i),
                 void 0 !== (i = s.Message.getField(e, 20)) &&
-                  t.writeUint64String(20, i);
+                  t.writeUint64String(20, i),
+                void 0 !== (i = s.Message.getField(e, 21)) &&
+                  t.writeUint32(21, i);
             }),
             (r.prototype.getClassName = function() {
               return "CMsgClientGamesPlayed_GamePlayed";
@@ -24563,7 +24583,7 @@
           );
         })(s.Message);
       (r || (r = {})).RespondToClanInvite = function(e, t) {
-        return e.SendMsg("Clan.RespondToClanInvite#1", t, o);
+        return e.SendMsg("Clan.RespondToClanInvite#1", t, o, {});
       };
     },
     jPkp: function(e, t, i) {
@@ -25623,34 +25643,38 @@
           );
         })(d.Message);
       ((n = r || (r = {})).EnableParentalSettings = function(e, t) {
-        return e.SendMsg("Parental.EnableParentalSettings#1", t, c);
+        return e.SendMsg("Parental.EnableParentalSettings#1", t, c, {});
       }),
         (n.DisableParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.DisableParentalSettings#1", t, p);
+          return e.SendMsg("Parental.DisableParentalSettings#1", t, p, {});
         }),
         (n.GetParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.GetParentalSettings#1", t, f);
+          return e.SendMsg("Parental.GetParentalSettings#1", t, f, {
+            bConstMethod: !0
+          });
         }),
         (n.GetSignedParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, y);
+          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, y, {
+            bConstMethod: !0
+          });
         }),
         (n.SetParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.SetParentalSettings#1", t, _);
+          return e.SendMsg("Parental.SetParentalSettings#1", t, _, {});
         }),
         (n.ValidateToken = function(e, t) {
-          return e.SendMsg("Parental.ValidateToken#1", t, h);
+          return e.SendMsg("Parental.ValidateToken#1", t, h, {});
         }),
         (n.ValidatePassword = function(e, t) {
-          return e.SendMsg("Parental.ValidatePassword#1", t, v);
+          return e.SendMsg("Parental.ValidatePassword#1", t, v, {});
         }),
         (n.LockClient = function(e, t) {
-          return e.SendMsg("Parental.LockClient#1", t, B);
+          return e.SendMsg("Parental.LockClient#1", t, B, {});
         }),
         (n.RequestRecoveryCode = function(e, t) {
-          return e.SendMsg("Parental.RequestRecoveryCode#1", t, m);
+          return e.SendMsg("Parental.RequestRecoveryCode#1", t, m, {});
         }),
         (n.DisableWithRecoveryCode = function(e, t) {
-          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, b);
+          return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, b, {});
         }),
         ((a = s || (s = {})).NotifySettingsChangeHandler = {
           name: "ParentalClient.NotifySettingsChange#1",
@@ -27060,28 +27084,28 @@
           );
         })(d.Message);
       ((n = r || (r = {})).UpdateVoiceChatWebRTCData = function(e, t) {
-        return e.SendMsg("VoiceChat.UpdateVoiceChatWebRTCData#1", t, b);
+        return e.SendMsg("VoiceChat.UpdateVoiceChatWebRTCData#1", t, b, {});
       }),
         (n.NotifyUserVoiceStatus = function(e, t) {
           return e.SendNotification("VoiceChat.NotifyUserVoiceStatus#1", t);
         }),
         (n.UploadClientVoiceChatLogs = function(e, t) {
-          return e.SendMsg("VoiceChat.UploadClientVoiceChatLogs#1", t, z);
+          return e.SendMsg("VoiceChat.UploadClientVoiceChatLogs#1", t, z, {});
         }),
         (n.LeaveVoiceChat = function(e, t) {
-          return e.SendMsg("VoiceChat.LeaveVoiceChat#1", t, R);
+          return e.SendMsg("VoiceChat.LeaveVoiceChat#1", t, R, {});
         }),
         (n.RequestOneOnOneChat = function(e, t) {
-          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, l);
+          return e.SendMsg("VoiceChat.RequestOneOnOneChat#1", t, l, {});
         }),
         (n.AnswerOneOnOneChat = function(e, t) {
-          return e.SendMsg("VoiceChat.AnswerOneOnOneChat#1", t, g);
+          return e.SendMsg("VoiceChat.AnswerOneOnOneChat#1", t, g, {});
         }),
         (n.EndOneOnOneChat = function(e, t) {
-          return e.SendMsg("VoiceChat.EndOneOnOneChat#1", t, _);
+          return e.SendMsg("VoiceChat.EndOneOnOneChat#1", t, _, {});
         }),
         (n.LeaveOneOnOneChat = function(e, t) {
-          return e.SendMsg("VoiceChat.LeaveOneOnOneChat#1", t, h);
+          return e.SendMsg("VoiceChat.LeaveOneOnOneChat#1", t, h, {});
         }),
         ((a = s || (s = {})).NotifyUserJoinedVoiceChatHandler = {
           name: "VoiceChatClient.NotifyUserJoinedVoiceChat#1",
@@ -28122,19 +28146,23 @@
           );
         })(d.Message);
       ((n = r || (r = {})).GetRecentMessages = function(e, t) {
-        return e.SendMsg("FriendMessages.GetRecentMessages#1", t, l);
+        return e.SendMsg("FriendMessages.GetRecentMessages#1", t, l, {
+          bConstMethod: !0
+        });
       }),
         (n.GetActiveMessageSessions = function(e, t) {
-          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, g);
+          return e.SendMsg("FriendMessages.GetActiveMessageSessions#1", t, g, {
+            bConstMethod: !0
+          });
         }),
         (n.SendMessage = function(e, t) {
-          return e.SendMsg("FriendMessages.SendMessage#1", t, _);
+          return e.SendMsg("FriendMessages.SendMessage#1", t, _, {});
         }),
         (n.AckMessage = function(e, t) {
           return e.SendNotification("FriendMessages.AckMessage#1", t);
         }),
         (n.IsInFriendsUIBeta = function(e, t) {
-          return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", t, v);
+          return e.SendMsg("FriendMessages.IsInFriendsUIBeta#1", t, v, {});
         }),
         ((a = s || (s = {})).IncomingMessageHandler = {
           name: "FriendMessagesClient.IncomingMessage#1",
@@ -30178,46 +30206,63 @@
           );
         })(s.Message);
       ((a = r || (r = {})).GetMutualFriendsForIncomingInvites = function(e, t) {
-        return e.SendMsg("Player.GetMutualFriendsForIncomingInvites#1", t, g);
+        return e.SendMsg("Player.GetMutualFriendsForIncomingInvites#1", t, g, {
+          bConstMethod: !0
+        });
       }),
         (a.GetGameBadgeLevels = function(e, t) {
-          return e.SendMsg("Player.GetGameBadgeLevels#1", t, f);
+          return e.SendMsg("Player.GetGameBadgeLevels#1", t, f, {
+            bConstMethod: !0
+          });
         }),
         (a.ClientGetLastPlayedTimes = function(e, t) {
-          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", t, u);
+          return e.SendMsg("Player.ClientGetLastPlayedTimes#1", t, u, {
+            bConstMethod: !0
+          });
         }),
         (a.AcceptSSA = function(e, t) {
-          return e.SendMsg("Player.AcceptSSA#1", t, _);
+          return e.SendMsg("Player.AcceptSSA#1", t, _, {});
         }),
         (a.GetNicknameList = function(e, t) {
-          return e.SendMsg("Player.GetNicknameList#1", t, F);
+          return e.SendMsg("Player.GetNicknameList#1", t, F, {
+            bConstMethod: !0
+          });
         }),
         (a.GetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.GetPerFriendPreferences#1", t, B);
+          return e.SendMsg("Player.GetPerFriendPreferences#1", t, B, {
+            bConstMethod: !0
+          });
         }),
         (a.SetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.SetPerFriendPreferences#1", t, b);
+          return e.SendMsg("Player.SetPerFriendPreferences#1", t, b, {});
         }),
         (a.AddFriend = function(e, t) {
-          return e.SendMsg("Player.AddFriend#1", t, z);
+          return e.SendMsg("Player.AddFriend#1", t, z, {});
         }),
         (a.RemoveFriend = function(e, t) {
-          return e.SendMsg("Player.RemoveFriend#1", t, k);
+          return e.SendMsg("Player.RemoveFriend#1", t, k, {});
         }),
         (a.IgnoreFriend = function(e, t) {
-          return e.SendMsg("Player.IgnoreFriend#1", t, C);
+          return e.SendMsg("Player.IgnoreFriend#1", t, C, {});
         }),
         (a.GetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", t, j);
+          return e.SendMsg("Player.GetCommunityPreferences#1", t, j, {});
         }),
         (a.SetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", t, T);
+          return e.SendMsg("Player.SetCommunityPreferences#1", t, T, {});
         }),
         (a.GetNewSteamAnnouncementState = function(e, t) {
-          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, N);
+          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, N, {
+            bConstMethod: !0
+          });
         }),
         (a.UpdateSteamAnnouncementLastRead = function(e, t) {
-          return e.SendMsg("Player.UpdateSteamAnnouncementLastRead#1", t, x);
+          return e.SendMsg(
+            "Player.UpdateSteamAnnouncementLastRead#1",
+            t,
+            x,
+            {}
+          );
         }),
         ((d = o || (o = {})).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
@@ -30739,13 +30784,14 @@
           );
         })(d.Message);
       ((n = r || (r = {})).InitiateWebRTCConnection = function(e, t) {
-        return e.SendMsg("WebRTCClient.InitiateWebRTCConnection#1", t, l);
+        return e.SendMsg("WebRTCClient.InitiateWebRTCConnection#1", t, l, {});
       }),
         (n.AcknowledgeUpdatedRemoteDescription = function(e, t) {
           return e.SendMsg(
             "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
             t,
-            y
+            y,
+            {}
           );
         }),
         ((a = s || (s = {})).NotifyWebRTCSessionConnectedHandler = {
@@ -31364,16 +31410,22 @@
           );
         })(o.Message);
       ((n = r || (r = {})).GetCategories = function(e, t) {
-        return e.SendMsg("FriendsList.GetCategories#1", t, c);
+        return e.SendMsg("FriendsList.GetCategories#1", t, c, {
+          bConstMethod: !0
+        });
       }),
         (n.GetFriendsList = function(e, t) {
-          return e.SendMsg("FriendsList.GetFriendsList#1", t, M);
+          return e.SendMsg("FriendsList.GetFriendsList#1", t, M, {
+            bConstMethod: !0
+          });
         }),
         (n.GetFavorites = function(e, t) {
-          return e.SendMsg("FriendsList.GetFavorites#1", t, f);
+          return e.SendMsg("FriendsList.GetFavorites#1", t, f, {
+            bConstMethod: !0
+          });
         }),
         (n.SetFavorites = function(e, t) {
-          return e.SendMsg("FriendsList.SetFavorites#1", t, _);
+          return e.SendMsg("FriendsList.SetFavorites#1", t, _, {});
         }),
         ((s || (s = {})).FavoritesChangedHandler = {
           name: "FriendsListClient.FavoritesChanged#1",

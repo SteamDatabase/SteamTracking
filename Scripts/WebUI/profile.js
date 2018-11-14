@@ -377,6 +377,7 @@
       n.d(t, "b", function() {
         return s;
       });
+    n("mrSG");
     var r = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -1355,7 +1356,7 @@
   JtU4: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return s;
+      return a;
     }),
       n.d(t, "a", function() {
         return p;
@@ -1366,15 +1367,15 @@
       n.d(t, "d", function() {
         return f;
       });
-    var s,
+    var a,
       r,
       i = n("mrSG"),
       o = n("2vnA"),
       c = n("i8i4"),
-      a = n("UqDm"),
+      s = n("UqDm"),
       l = n("WpBz"),
       u = n("1VtQ");
-    ((r = s || (s = {}))[(r.Minimized = 1)] = "Minimized"),
+    ((r = a || (a = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
@@ -1400,7 +1401,7 @@
           }),
           (e.prototype.OnLinkLoad = function(e) {
             e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-              a.d(this.m_rgLoadingLinks, e.currentTarget),
+              s.d(this.m_rgLoadingLinks, e.currentTarget),
               0 == this.m_rgLoadingLinks.length &&
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }),
@@ -1436,60 +1437,61 @@
           (e.prototype.OnMessage = function(e) {
             "window_moved" == e.data && this.OnResize();
           }),
-          (e.prototype.Show = function(e) {
-            var t,
-              n = this;
+          (e.prototype.Show = function(e, t) {
+            var n,
+              r = this;
             void 0 === e && (e = !0),
+              void 0 === t && (t = !1),
               window.SteamClient &&
-                (this.m_rgParams.eCreationFlags |= s.Hidden),
-              this.m_rgParams.eCreationFlags & s.Tooltip && (e = !1),
+                (this.m_rgParams.eCreationFlags |= a.Hidden),
+              this.m_rgParams.eCreationFlags & a.Tooltip && (e = !1),
               this.BIsValid() &&
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
-                  : e && this.Focus());
-            var r,
-              i,
+                  : e && this.Focus(t));
+            var i,
               o,
-              c = f.GetExistingPopup(this.m_strName);
-            (c && !this.m_rgParams.replace_existing_popup) ||
+              c,
+              s = f.GetExistingPopup(this.m_strName);
+            (s && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              c
-                ? ((i = c.m_element),
-                  (r = c.m_popup),
-                  c.ReleasePopup(),
-                  (o = c.m_renderWhenReady),
-                  f.RemoveTrackedPopup(c),
-                  r.removeEventListener("beforeunload", c.OnBeforeUnloadEvent),
-                  r.removeEventListener("unload", c.OnUnload),
-                  r.removeEventListener("resize", c.OnResizeEvent),
-                  r.removeEventListener("focus", this.OnFocusInternal),
-                  r.removeEventListener("blur", this.OnBlurInternal),
-                  r.removeEventListener("drop", c.OnDrop),
-                  r.removeEventListener("dragover", c.OnDragOver),
-                  r.removeEventListener("message", this.OnMessage))
-                : ((r = (t = d.CreatePopup(this.m_strName, this.m_rgParams))
+              s
+                ? ((o = s.m_element),
+                  (i = s.m_popup),
+                  s.ReleasePopup(),
+                  (c = s.m_renderWhenReady),
+                  f.RemoveTrackedPopup(s),
+                  i.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
+                  i.removeEventListener("unload", s.OnUnload),
+                  i.removeEventListener("resize", s.OnResizeEvent),
+                  i.removeEventListener("focus", this.OnFocusInternal),
+                  i.removeEventListener("blur", this.OnBlurInternal),
+                  i.removeEventListener("drop", s.OnDrop),
+                  i.removeEventListener("dragover", s.OnDragOver),
+                  i.removeEventListener("message", this.OnMessage))
+                : ((i = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
-                  (i = t.element),
-                  (o = new m(r, i))),
-              r &&
-                i &&
-                ((r.document.title = this.m_strTitle),
-                r.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                r.addEventListener("unload", this.OnUnload),
-                r.addEventListener("resize", this.OnResizeEvent),
-                r.addEventListener("focus", this.OnFocusInternal),
-                r.addEventListener("blur", this.OnBlurInternal),
-                r.addEventListener("drop", this.OnDrop),
-                r.addEventListener("dragover", this.OnDragOver),
-                r.addEventListener("message", this.OnMessage),
-                (this.m_popup = r),
-                (this.m_element = i),
-                (this.m_renderWhenReady = o),
+                  (o = n.element),
+                  (c = new m(i, o))),
+              i &&
+                o &&
+                ((i.document.title = this.m_strTitle),
+                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                i.addEventListener("unload", this.OnUnload),
+                i.addEventListener("resize", this.OnResizeEvent),
+                i.addEventListener("focus", this.OnFocusInternal),
+                i.addEventListener("blur", this.OnBlurInternal),
+                i.addEventListener("drop", this.OnDrop),
+                i.addEventListener("dragover", this.OnDragOver),
+                i.addEventListener("message", this.OnMessage),
+                (this.m_popup = i),
+                (this.m_element = o),
+                (this.m_renderWhenReady = c),
                 this.m_renderWhenReady.SetTarget(function() {
-                  return n.RenderInternal(n.m_popup, n.m_element, e);
+                  return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
               f.AddTrackedPopup(this),
-              c && e && this.Focus());
+              s && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -1556,12 +1558,15 @@
             enumerable: !0,
             configurable: !0
           }),
-          (e.prototype.Focus = function() {
-            this.m_popup &&
-            void 0 !== this.m_popup.SteamClient &&
-            void 0 !== this.m_popup.SteamClient.Window
-              ? this.m_popup.SteamClient.Window.BringToFront()
-              : this.m_popup && this.m_popup.focus();
+          (e.prototype.Focus = function(e) {
+            void 0 === e && (e = !1),
+              this.m_popup &&
+              void 0 !== this.m_popup.SteamClient &&
+              void 0 !== this.m_popup.SteamClient.Window
+                ? e
+                  ? this.m_popup.SteamClient.Window.SetForegroundWindow()
+                  : this.m_popup.SteamClient.Window.BringToFront()
+                : this.m_popup && this.m_popup.focus();
           }),
           (e.prototype.Close = function() {
             this.m_popup && this.m_popup.close();

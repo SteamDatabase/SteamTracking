@@ -3037,7 +3037,7 @@ function UpdatePaymentInfoForm()
 			
 						bShowAddressForm = true;
 			bShowCreditCardNumberExp = true;
-									bShowCVV = method.value != 'jcb' && !card_is_stored; 
+						bShowCVV = !card_is_stored; 
 			bShowSaveMyAddress = !g_bIsUpdateBillingInfoForm;
 		}
 		else if ( method.value == 'paypal' )
@@ -3497,7 +3497,7 @@ function SubmitPaymentInfoForm()
 		var card_is_stored = BIsStoredCreditCard(); 
 				if ( BIsCreditCardMethod( method.value ) )
 		{
-						if ( method.value != 'jcb' && !card_is_stored )
+						if ( !card_is_stored )
 			{
 				var val = $( 'security_code' ).value;
 				var len = val.length;
@@ -5383,7 +5383,7 @@ function FinalizeTransaction()
 		    method:'post',
 		    parameters: { 
 								'transid' : g_LastFinalizedTransactionID,
-				'CardCVV2' : ( method.value == 'jcb' ? ' ' : ( BIsStoredCreditCard() ? $('security_code_cached').value : $('security_code').value ) )
+				'CardCVV2' : ( BIsStoredCreditCard() ? $('security_code_cached').value : $('security_code').value )
 			},
 		    onSuccess: function(transport){
 				if ( transport.responseText ){

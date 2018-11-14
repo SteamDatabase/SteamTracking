@@ -1,0 +1,34 @@
+{
+    "name": "IProductInfoService",
+    "methods": [
+        {
+            "name": "SetRichPresenceLocalization",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Save and commit rich presence localization for the given app",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "languages",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

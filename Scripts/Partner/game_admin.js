@@ -998,7 +998,7 @@ function CreateMovieForApp( strForm )
 		}
 
 		var newElements = $J( data.html );
-		$J( '#trailer_list' ).append( newElements );
+		$J( '#trailer_list' ).prepend( newElements );
 		RegisterMovieDragDrop();
 		SetMovieConvertState( $J( '#movie_' + data.itemid ), 'noassociation' );
 		var nameInput = $J( '#movie_' + data.itemid ).find( '.movie_name_input' )[0];

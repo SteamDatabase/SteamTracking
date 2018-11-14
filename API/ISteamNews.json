@@ -29,6 +29,12 @@
                     "type": "uint32",
                     "optional": true,
                     "description": "# of posts to retrieve (default 20)"
+                },
+                {
+                    "name": "tags",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Comma-separated list of tags to filter by (e.g. 'patchnodes')"
                 }
             ]
         },
@@ -65,7 +71,13 @@
                     "name": "feeds",
                     "type": "string",
                     "optional": true,
-                    "description": "Comma-seperated list of feed names to return news for"
+                    "description": "Comma-separated list of feed names to return news for"
+                },
+                {
+                    "name": "tags",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Comma-separated list of tags to filter by (e.g. 'patchnodes')"
                 }
             ]
         },
@@ -103,6 +115,12 @@
                     "type": "uint32",
                     "optional": true,
                     "description": "# of posts to retrieve (default 20)"
+                },
+                {
+                    "name": "tags",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Comma-separated list of tags to filter by (e.g. 'patchnodes')"
                 }
             ]
         },
@@ -146,6 +164,12 @@
                     "type": "string",
                     "optional": true,
                     "description": "Comma-seperated list of feed names to return news for"
+                },
+                {
+                    "name": "tags",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Comma-separated list of tags to filter by (e.g. 'patchnodes')"
                 }
             ]
         }

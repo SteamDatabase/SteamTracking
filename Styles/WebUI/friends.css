@@ -986,6 +986,7 @@
   overflow: hidden;
   margin: auto; }
 
+/* These styles are used within the returned emoticon tooltip, so need to be global for now */
 .emoticon_hover_arrow {
   width: 13px;
   height: 26px;
@@ -2318,7 +2319,7 @@ iframe.steamTVLogin {
   width: 154px;
   height: 46px;
   display: inline-block;
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/images/webui/logo_steamtv.png"); }
+  background-image: url("../../images/webui/logo_steamtv.png"); }
 
 .BroadcastContainerSectionVideoContainer {
   max-height: calc(100vh - 150px);
@@ -2936,6 +2937,9 @@ iframe.steamTVLogin {
     filter: blur(4px) brightness(0.5);
     transform: scale(0.95, 0.9);
     cursor: default; }
+  @media screen and (max-width: 600px) {
+    .bbcode_ChatMessageSteamStore_HeaderImage_2s811 {
+      display: none; } }
 
 .bbcode_ChatMessageSteamStore_HeaderImageFiltered_2GO7- {
   position: absolute;
@@ -3008,6 +3012,9 @@ iframe.steamTVLogin {
 .bbcode_ChatMessageSteamStore_MediaContainer_2i_00 {
   flex: 1;
   min-width: 232px; }
+  @media screen and (max-width: 800px) {
+    .bbcode_ChatMessageSteamStore_MediaContainer_2i_00 {
+      display: none; } }
 
 .bbcode_ChatMessageSteamStore_MainMedia_28eQq {
   margin-top: -46px;
@@ -18162,15 +18169,6 @@ a.general_btn:hover {
 .SlashCommandSuggestion_SlashCommandDescription {
   color: #9ca4a7; }
 
-@media screen and (max-width: 800px) {
-  .chat_main.singlewindow .chatRoomGroupNavColumn {
-    display: none; } }
-
-@media screen and (max-width: 600px) {
-  .chat_main.responsive_chats .chatRoomGroupNavColumn,
-  .popup_chat_frame .chatRoomGroupNavColumn {
-    display: none; } }
-
 .contextMenu .currentUserContextMenu .contextMenuSectionContent .contextMenuItem {
   border-color: transparent; }
 
@@ -19113,11 +19111,14 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   border-left: 1px solid black;
   border-right: 1px solid black; }
 
-.groupMemberList .friend .playerName, .groupMemberList .CompactFriendsList .friend .playerNickname {
+.groupMemberList .friend .playerName, .groupMemberList .friend .playerNickname {
   font-size: 13px; }
 
+.groupMemberList .friend.ingame .gameName.richPresenceLabel {
+  font-size: 12px; }
+
 .groupMemberList .friend .twoLine .richPresenceLabel {
-  font-size: 11px; }
+  font-size: 12px; }
 
 .groupMemberList .friend .richPresenceLabel {
   line-height: 13px; }

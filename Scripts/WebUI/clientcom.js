@@ -2,35 +2,58 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-!(function(n) {
-  var o = {};
-  function i(e) {
-    if (o[e]) return o[e].exports;
-    var t = (o[e] = { i: e, l: !1, exports: {} });
-    return n[e].call(t.exports, t, t.exports, i), (t.l = !0), t.exports;
+!(function(u) {
+  function e(e) {
+    for (
+      var t, n, o = e[0], i = e[1], r = e[2], c = 0, s = [];
+      c < o.length;
+      c++
+    )
+      (n = o[c]), l[n] && s.push(l[n][0]), (l[n] = 0);
+    for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
+    for (d && d(e); s.length; ) s.shift()();
+    return p.push.apply(p, r || []), a();
   }
-  (i.m = n),
-    (i.c = o),
-    (i.d = function(e, t, n) {
-      i.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+  function a() {
+    for (var e, t = 0; t < p.length; t++) {
+      for (var n = p[t], o = !0, i = 1; i < n.length; i++) {
+        var r = n[i];
+        0 !== l[r] && (o = !1);
+      }
+      o && (p.splice(t--, 1), (e = c((c.s = n[0]))));
+    }
+    return e;
+  }
+  var n = {},
+    l = { 3: 0 },
+    p = [];
+  function c(e) {
+    if (n[e]) return n[e].exports;
+    var t = (n[e] = { i: e, l: !1, exports: {} });
+    return u[e].call(t.exports, t, t.exports, c), (t.l = !0), t.exports;
+  }
+  (c.m = u),
+    (c.c = n),
+    (c.d = function(e, t, n) {
+      c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
     }),
-    (i.r = function(e) {
+    (c.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (i.t = function(t, e) {
-      if ((1 & e && (t = i(t)), 8 & e)) return t;
+    (c.t = function(t, e) {
+      if ((1 & e && (t = c(t)), 8 & e)) return t;
       if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var n = Object.create(null);
       if (
-        (i.r(n),
+        (c.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: t }),
         2 & e && "string" != typeof t)
       )
         for (var o in t)
-          i.d(
+          c.d(
             n,
             o,
             function(e) {
@@ -39,7 +62,7 @@
           );
       return n;
     }),
-    (i.n = function(e) {
+    (c.n = function(e) {
       var t =
         e && e.__esModule
           ? function() {
@@ -48,13 +71,18 @@
           : function() {
               return e;
             };
-      return i.d(t, "a", t), t;
+      return c.d(t, "a", t), t;
     }),
-    (i.o = function(e, t) {
+    (c.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (i.p = ""),
-    i((i.s = "x0hG"));
+    (c.p = "");
+  var t = (window.webpackJsonp = window.webpackJsonp || []),
+    o = t.push.bind(t);
+  (t.push = e), (t = t.slice());
+  for (var i = 0; i < t.length; i++) e(t[i]);
+  var d = o;
+  p.push(["x0hG", 0]), a();
 })({
   "1n9R": function(e, t, n) {
     "use strict";
@@ -70,6 +98,7 @@
       n.d(t, "b", function() {
         return s;
       });
+    n("mrSG");
     var o = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
