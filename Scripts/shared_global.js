@@ -4206,7 +4206,7 @@ CAjaxSubPageController.prototype.PaintLinks = function( strLocation )
 	var rgLinks = document.querySelectorAll('[data-'+this.strStateID+']');
 	for( var i=0; i<rgLinks.length; i++)
 	{
-		if( rgLinks[i].dataset[ this.strStateID ] == strLocation )
+		if( rgLinks[i].dataset[ this.strStateID ] == strLocation || rgLinks[i].dataset[ this.strStateID ] + '/' == strLocation )
 			rgLinks[i].classList.add('active');
 		else
 			rgLinks[i].classList.remove('active');
