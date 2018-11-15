@@ -47018,6 +47018,9 @@
                 ((i.onDoubleClick = this.OnDoubleClick),
                 (i.onClick = this.OnClick)),
               this.props.noActions ||
+                this.props.disableContextMenu ||
+                (i.onContextMenu = this.OnShowContextMenu),
+              this.props.noActions ||
                 this.props.notDraggable ||
                 ((i.onDragStart = this.OnDragStart),
                 (i.onDragEnd = this.OnDragEnd),
@@ -47092,10 +47095,6 @@
                     bHideGameName: this.props.bHideGameName,
                     bForcePersonaNameDisplay: this.props
                       .bForcePersonaNameDisplay,
-                    onShowContextMenu:
-                      !this.props.noActions &&
-                      !this.props.disableContextMenu &&
-                      this.OnShowContextMenu,
                     bHidePersona: this.props.bHidePersona,
                     bHideCustomPendingStatus:
                       this.props.context &&

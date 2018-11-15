@@ -9214,8 +9214,11 @@ body.in_global_drag .friendlist_titlebar {
 .title-area-icon .SVGIcon_SingleWindowToggle .leftBox {
   transition: transform .21s ease-in-out; }
 
-.fullheight:not(.chat_main) .ChatTabs .title-area-icon.singleWindowToggle {
+.ChatTabs .title-area-icon.singleWindowToggle {
   display: none; }
+
+.chat_main .ChatTabs .title-area-icon.singleWindowToggle {
+  display: block; }
 
 .chat_main.singlewindow .ChatTabs .title-area-icon .SVGIcon_SingleWindowToggle {
   display: block;
