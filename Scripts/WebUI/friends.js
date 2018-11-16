@@ -47095,6 +47095,10 @@
                     bHideGameName: this.props.bHideGameName,
                     bForcePersonaNameDisplay: this.props
                       .bForcePersonaNameDisplay,
+                    onShowContextMenu:
+                      this.props.noActions || this.props.disableContextMenu
+                        ? void 0
+                        : this.OnShowContextMenu,
                     bHidePersona: this.props.bHidePersona,
                     bHideCustomPendingStatus:
                       this.props.context &&
