@@ -889,6 +889,14 @@ CBroadcastWatch.prototype.RegisterParentBroadcastHooks = function(  )
 					_watch.m_player.SavePlaybackStateFromUI( false );
 					_watch.m_playerUI.m_bPlayingLiveEdge = false;
 					break;
+				case 'play':
+					if ( !! _watch.m_player.m_elVideoPlayer.paused )
+					{
+						_watch.m_playerUI.TogglePlayPause();
+					}
+
+					_watch.m_player.SavePlaybackStateFromUI( false );
+					break;
 				case 'toggleplaypause':
 					if( _watch.IsPlayStateChangeable() ) {
 						_watch.m_playerUI.TogglePlayPause();

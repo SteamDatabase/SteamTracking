@@ -194,17 +194,20 @@
   },
   "1n9R": function(e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "b", function() {
       return o;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return i;
       }),
-      n.d(t, "c", function() {
-        return s;
+      n.d(t, "a", function() {
+        return r;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "d", function() {
         return a;
+      }),
+      n.d(t, "c", function() {
+        return u;
       });
     n("mrSG");
     var o = {
@@ -222,6 +225,7 @@
         CHAT_BASE_URL: "",
         STORE_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        IMG_URL: "",
         STEAMTV_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
@@ -241,15 +245,17 @@
         token: void 0,
         token_use_id: void 0
       },
-      r = "webui_config";
-    function s() {
-      var e = a("config");
-      e && Object.assign(o, e);
-      var t = a("userinfo");
-      t && Object.assign(i, t), (window.__webpack_public_path__ = o.CDN_URL);
+      r = { steamid: "", authwgtoken: "" },
+      s = "webui_config";
+    function a(e) {
+      void 0 === e && (e = s);
+      var t = u("config", e);
+      t && Object.assign(o, t);
+      var n = u("userinfo", e);
+      n && Object.assign(i, n), (window.__webpack_public_path__ = o.CDN_URL);
     }
-    function a(e, t) {
-      void 0 === t && (t = r);
+    function u(e, t) {
+      void 0 === t && (t = s);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -846,12 +852,12 @@
               var _ = h[v];
               if ("stylesheet" == _.rel) {
                 for (
-                  var f = c.document.createElement("link"), g = 0;
-                  g < _.attributes.length;
-                  g++
+                  var f = c.document.createElement("link"), b = 0;
+                  b < _.attributes.length;
+                  b++
                 ) {
-                  var b = _.attributes.item(g);
-                  f.setAttribute(b.name, b.value);
+                  var g = _.attributes.item(b);
+                  f.setAttribute(g.name, g.value);
                 }
                 d.appendChild(f);
               }
@@ -1627,14 +1633,14 @@
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(g, { controller: this.props.controller })
-                : i.createElement(b, { controller: this.props.controller })
+                ? i.createElement(b, { controller: this.props.controller })
+                : i.createElement(g, { controller: this.props.controller })
             );
           }),
           (t = c.c([l.observer], t))
         );
       })(i.Component),
-      g = (function(t) {
+      b = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -1816,7 +1822,7 @@
           (e = c.c([l.observer], e))
         );
       })(i.Component),
-      b = (function(e) {
+      g = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1941,10 +1947,10 @@
         }
         return (
           (i.InitFromAccountID = function(e) {
-            return new i(e, a.a.EUNIVERSE, 1, r.k);
+            return new i(e, a.b.EUNIVERSE, 1, r.k);
           }),
           (i.InitFromClanID = function(e) {
-            return new i(e, a.a.EUNIVERSE, 7, 0);
+            return new i(e, a.b.EUNIVERSE, 7, 0);
           }),
           (i.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2073,16 +2079,16 @@
     "use strict";
     var o = n("1n9R");
     n.d(t, "a", function() {
-      return o.a;
+      return o.b;
     }),
       n.d(t, "d", function() {
-        return o.d;
+        return o.e;
       }),
       n.d(t, "c", function() {
-        return o.c;
+        return o.d;
       }),
       n.d(t, "b", function() {
-        return o.b;
+        return o.c;
       });
   }
 });

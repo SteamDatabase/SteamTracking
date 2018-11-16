@@ -86,17 +86,20 @@
 })({
   "1n9R": function(e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "b", function() {
       return o;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return i;
       }),
-      n.d(t, "c", function() {
-        return c;
+      n.d(t, "a", function() {
+        return r;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "d", function() {
         return s;
+      }),
+      n.d(t, "c", function() {
+        return u;
       });
     n("mrSG");
     var o = {
@@ -114,6 +117,7 @@
         CHAT_BASE_URL: "",
         STORE_BASE_URL: "",
         STORE_ICON_BASE_URL: "",
+        IMG_URL: "",
         STEAMTV_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
@@ -133,15 +137,17 @@
         token: void 0,
         token_use_id: void 0
       },
-      r = "webui_config";
-    function c() {
-      var e = s("config");
-      e && Object.assign(o, e);
-      var t = s("userinfo");
-      t && Object.assign(i, t), (window.__webpack_public_path__ = o.CDN_URL);
+      r = { steamid: "", authwgtoken: "" },
+      c = "webui_config";
+    function s(e) {
+      void 0 === e && (e = c);
+      var t = u("config", e);
+      t && Object.assign(o, t);
+      var n = u("userinfo", e);
+      n && Object.assign(i, n), (window.__webpack_public_path__ = o.CDN_URL);
     }
-    function s(e, t) {
-      void 0 === t && (t = r);
+    function u(e, t) {
+      void 0 === t && (t = c);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -405,16 +411,16 @@
     "use strict";
     var o = n("1n9R");
     n.d(t, "a", function() {
-      return o.a;
+      return o.b;
     }),
       n.d(t, "d", function() {
-        return o.d;
+        return o.e;
       }),
       n.d(t, "c", function() {
-        return o.c;
+        return o.d;
       }),
       n.d(t, "b", function() {
-        return o.b;
+        return o.c;
       });
   },
   x0hG: function(e, t, n) {

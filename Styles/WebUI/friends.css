@@ -2502,11 +2502,43 @@ iframe.steamTVLogin {
   max-height: 170px;
   z-index: 1; }
 
+.StoreSaleWidgetContainer_mini,
+.StoreSaleWidgetContainer_column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 337px; }
+
+.StoreSaleWidgetContainer_mini {
+  max-width: 155px; }
+
+.StoreSaleWidgetContainer_column {
+  max-width: 310px; }
+
 .StoreSaleWidgetImage {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
   cursor: pointer; }
+
+.StoreSaleWidgetImage_mini {
+  cursor: pointer;
+  max-width: 155px; }
+
+.StoreSaleWidgetImage_column {
+  cursor: pointer;
+  max-width: 310px; }
+
+.StoreSaleImage {
+  cursor: pointer; }
+
+.StoreSaleImage_mini {
+  cursor: pointer;
+  width: 155px; }
+
+.StoreSaleImage_column {
+  cursor: pointer;
+  width: 310px; }
 
 .StoreSaleWidgetTitle {
   cursor: pointer;
@@ -2524,6 +2556,15 @@ iframe.steamTVLogin {
 
 .StoreSaleWidgetShortDesc {
   font-size: 12px; }
+
+.StoreSaleWidgetShortDesc_column,
+.StoreSaleWidgetShortDesc_mini {
+  max-height: 160px;
+  overflow-y: scroll;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  padding-bottom: 8px;
+  overflow: hidden; }
 
 .StoreSalePriceActionWidgetContainer {
   display: flex;
