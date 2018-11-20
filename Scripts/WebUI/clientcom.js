@@ -119,6 +119,7 @@
         STORE_ICON_BASE_URL: "",
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
+        HELP_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -135,7 +136,8 @@
         accountid: 0,
         account_name: "",
         token: void 0,
-        token_use_id: void 0
+        token_use_id: void 0,
+        webapi_token: ""
       },
       r = { steamid: "", authwgtoken: "" },
       c = "webui_config";

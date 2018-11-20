@@ -1987,7 +1987,8 @@
   flex-direction: row;
   margin-left: 4px;
   padding: 18px 16px;
-  padding-top: 0px; }
+  padding-top: 0px;
+  height: 100%; }
 
 .TheaterMode .BroadcastContainer {
   padding: 0;
@@ -2008,7 +2009,6 @@
 
 .BroadcastSection,
 .BroadcastContainerSection {
-  align-self: center;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -2019,7 +2019,9 @@
   position: relative; }
 
 .BroadcastContainerSection {
-  flex: 1; }
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: auto; }
 
 .BroadcastSection {
   width: 100%;
@@ -2030,7 +2032,7 @@
   flex: 1;
   display: flex;
   user-select: none;
-  min-height: 50px; }
+  min-height: 195px; }
 
 .TheaterMode .BroadcastSection {
   max-height: 100%;
@@ -2510,10 +2512,12 @@ iframe.steamTVLogin {
   max-height: 337px; }
 
 .StoreSaleWidgetContainer_mini {
-  max-width: 155px; }
+  max-width: 155px;
+  background: #000; }
 
 .StoreSaleWidgetContainer_column {
-  max-width: 310px; }
+  max-width: 310px;
+  padding: 8px; }
 
 .StoreSaleWidgetImage {
   padding-left: 10px;
@@ -2538,21 +2542,23 @@ iframe.steamTVLogin {
 
 .StoreSaleImage_column {
   cursor: pointer;
-  width: 310px; }
+  width: 294px; }
 
 .StoreSaleWidgetTitle {
   cursor: pointer;
   font-size: 14px;
   width: fit-content;
   color: #c1c6cf;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  margin-top: 8px; }
 
 .StoreSaleWidgetTitle:hover {
   color: #AAA; }
 
 .StoreSaleWidgetRelease {
   font-size: 10px;
-  color: #919fb1; }
+  color: #919fb1;
+  margin-bottom: 8px; }
 
 .StoreSaleWidgetShortDesc {
   font-size: 12px; }
@@ -2564,7 +2570,12 @@ iframe.steamTVLogin {
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   padding-bottom: 8px;
-  overflow: hidden; }
+  overflow: hidden;
+  letter-spacing: 0px;
+  line-height: 15px; }
+
+.StoreSaleWidgetRight {
+  padding: 8px; }
 
 .StoreSalePriceActionWidgetContainer {
   display: flex;
@@ -2813,6 +2824,35 @@ iframe.steamTVLogin {
   opacity: 0;
   transition: opacity 1.2s ease-in-out;
   transition-delay: 1.0s; }
+
+.main_SteamPageHeader_3EaXO {
+  display: flex;
+  align-items: center;
+  background-color: #171a21;
+  padding: 10px; }
+
+.main_SteamPageHeaderShortLogo_2KbGi {
+  background-image: url("../../images/webui/globalheader_small_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 24px;
+  width: 119px;
+  height: 21px; }
+  .main_SteamPageHeaderShortLogo_2KbGi:hover {
+    filter: brightness(2); }
+
+.main_SteamPageHeaderTopLink_17wXz {
+  display: block;
+  padding: 0px 7px;
+  color: #b8b6b4;
+  line-height: 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal; }
+  .main_SteamPageHeaderTopLink_17wXz:hover {
+    color: #ffffff; }
 
 .messages_PreMessage_1jeo-,
 .messages_CodeMessage_1Fe4I,
@@ -6755,17 +6795,14 @@ html.web_chat_frame body {
 
 .singleWindowDivider {
   width: 4px;
-  height: calc( 100% - 6px);
-  background-color: #3a3e47;
+  height: calc( 100%);
   background-color: #22252b;
   min-width: 3px;
   cursor: ew-resize;
   border: 0.5px solid #121216;
   border-top: 2px solid rgba(34, 37, 43, 0.8);
   border-bottom: 3px solid rgba(34, 37, 43, 0.9);
-  position: absolute;
-  z-index: 12;
-  top: 1px; }
+  z-index: 12; }
 
 .singleWindowDivider.friendsListCollapsed,
 .TheaterMode .singleWindowDivider {
@@ -8571,6 +8608,9 @@ body.in_global_drag .friendlist_titlebar {
 .chatroomBucket_partybeacon {
   background: linear-gradient(to right, #35403a, rgba(53, 64, 58, 0)); }
 
+.partyBeaconJoin {
+  font-weight: 800; }
+
 .CompactFriendsList .avatarHolder .avatarStatus {
   min-width: 1px; }
 
@@ -8827,6 +8867,26 @@ body.in_global_drag .friendlist_titlebar {
   margin-bottom: -2px;
   flex: 1; }
 
+.PersonaStatusIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px; }
+
+.PersonaStatusIcon.MobilePhoneIcon {
+  margin-top: -2x;
+  margin-left: -1px; }
+
+.friend.ingame .PersonaStatusIcon .SVGIcon_VR path,
+.friend.ingame .PersonaStatusIcon .SVGIcon_MobilePhone path,
+.friend.ingame .PersonaStatusIcon .SVGIcon_BigPicture path {
+  fill: #80aa4d; }
+
+.friend.online .PersonaStatusIcon .SVGIcon_VR path,
+.friend.online .PersonaStatusIcon .SVGIcon_MobilePhone path,
+.friend.online .PersonaStatusIcon .SVGIcon_BigPicture path {
+  fill: #4c91ac; }
+
 .friend.awayOrSnooze .playerNameQuickAccessContainer {
   opacity: .5; }
 
@@ -8933,7 +8993,7 @@ body.in_global_drag .friendlist_titlebar {
 
 .CompactFriendsList .friend.ingame .gameName.richPresenceLabel {
   font-size: 10px;
-  line-height: 11px; }
+  line-height: 14px; }
 
 .titleBarContainer .currentUserContainer .richPresenceLabel {
   font-size: 12px;
@@ -10563,6 +10623,12 @@ input.InviteFriendToChatDialog_LinkInput {
 
 .ChatMessageInvite .inviteLabel {
   margin-bottom: 0px; }
+
+.ChatMessageInvite .inviteLabelButtons {
+  margin-top: 10px; }
+
+.ChatMessageInvite .inviteLabelLaunchPrompt {
+  margin-top: 10px; }
 
 .ChatMessageInvite.Inviter .inviteLabel,
 .ChatMessageInvite.GroupAlreadyJoined .inviteLabel {
@@ -18253,6 +18319,9 @@ a.general_btn:hover {
 
 .contextMenuItem.contextMenuGameOptions.contextMenuPlayButton {
   padding-left: 0px; }
+
+.contextMenuItem.contextMenuGameOptions.contextMenuPartyBeacon {
+  color: #91c257; }
 
 .contextMenuItem.contextMenuGameOptions .SVGIcon_Play {
   width: 18px;

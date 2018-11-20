@@ -87,55 +87,57 @@
   "0N1H": function(e, t, n) {
     "use strict";
     n.d(t, "k", function() {
-      return r;
+      return a;
     }),
       n.d(t, "l", function() {
-        return s;
-      }),
-      n.d(t, "d", function() {
-        return a;
-      }),
-      n.d(t, "e", function() {
         return u;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "d", function() {
         return c;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return p;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "j", function() {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "f", function() {
         return m;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
+        return h;
+      }),
+      n.d(t, "i", function() {
         return d;
       }),
+      n.d(t, "h", function() {
+        return _;
+      }),
       n.d(t, "a", function() {
-        return h;
+        return f;
       }),
       n.d(t, "c", function() {
         return v;
       }),
       n.d(t, "b", function() {
-        return _;
+        return E;
       });
     var o,
       i,
-      r = 1,
-      s = 4,
-      a = 750,
-      u = 799,
-      c = 7,
-      p = 250820,
-      l = 330050,
-      m = 358510,
-      d = 366490,
-      h = "18446744073709551615",
+      r,
+      s,
+      a = 1,
+      u = 4,
+      c = 750,
+      p = 799,
+      l = 7,
+      m = 250820,
+      h = 330050,
+      d = 358510,
+      _ = 366490,
+      f = "18446744073709551615",
       v = 0,
-      _ = 2147483647;
+      E = 2147483647;
     ((i = o || (o = {}))[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
       (i[(i.k_EGameEvent = 2)] = "k_EGameEvent"),
       (i[(i.k_EPartyEvent = 3)] = "k_EPartyEvent"),
@@ -166,7 +168,63 @@
       (i[(i.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
       (i[(i.k_EIRLEvent = 27)] = "k_EIRLEvent"),
       (i[(i.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-      (i[(i.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent");
+      (i[(i.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
+      ((s = r || (r = {}))[(s.k_ELaunchSource_None = 0)] =
+        "k_ELaunchSource_None"),
+      (s[(s.k_ELaunchSource_2ftLibraryDetails = 100)] =
+        "k_ELaunchSource_2ftLibraryDetails"),
+      (s[(s.k_ELaunchSource_2ftLibraryListView = 101)] =
+        "k_ELaunchSource_2ftLibraryListView"),
+      (s[(s.k_ELaunchSource_2ftLibraryGrid = 103)] =
+        "k_ELaunchSource_2ftLibraryGrid"),
+      (s[(s.k_ELaunchSource_InstallSubComplete = 104)] =
+        "k_ELaunchSource_InstallSubComplete"),
+      (s[(s.k_ELaunchSource_DownloadsPage = 105)] =
+        "k_ELaunchSource_DownloadsPage"),
+      (s[(s.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+        "k_ELaunchSource_RemoteClientStartStreaming"),
+      (s[(s.k_ELaunchSource_2ftMiniModeList = 107)] =
+        "k_ELaunchSource_2ftMiniModeList"),
+      (s[(s.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (s[(s.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+        "k_ELaunchSource_DashAppLaunchCmdLine"),
+      (s[(s.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+        "k_ELaunchSource_DashGameIdLaunchCmdLine"),
+      (s[(s.k_ELaunchSource_RunByGameDir = 302)] =
+        "k_ELaunchSource_RunByGameDir"),
+      (s[(s.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+        "k_ELaunchSource_SubCmdRunDashGame"),
+      (s[(s.k_ELaunchSource_SteamURL_Launch = 400)] =
+        "k_ELaunchSource_SteamURL_Launch"),
+      (s[(s.k_ELaunchSource_SteamURL_Run = 401)] =
+        "k_ELaunchSource_SteamURL_Run"),
+      (s[(s.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+        "k_ELaunchSource_SteamURL_JoinLobby"),
+      (s[(s.k_ELaunchSource_SteamURL_RunGame = 403)] =
+        "k_ELaunchSource_SteamURL_RunGame"),
+      (s[(s.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+        "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
+      (s[(s.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+        "k_ELaunchSource_SteamURL_RunSafe"),
+      (s[(s.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (s[(s.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+        "k_ELaunchSource_LibraryLeftColumnContextMenu"),
+      (s[(s.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+        "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
+      (s[(s.k_ELaunchSource_Dota2Launcher = 700)] =
+        "k_ELaunchSource_Dota2Launcher"),
+      (s[(s.k_ELaunchSource_IRunGameEngine = 800)] =
+        "k_ELaunchSource_IRunGameEngine"),
+      (s[(s.k_ELaunchSource_DRMFailureResponse = 801)] =
+        "k_ELaunchSource_DRMFailureResponse"),
+      (s[(s.k_ELaunchSource_DRMDataRequest = 802)] =
+        "k_ELaunchSource_DRMDataRequest"),
+      (s[(s.k_ELaunchSource_CloudFilePanel = 803)] =
+        "k_ELaunchSource_CloudFilePanel"),
+      (s[(s.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+        "k_ELaunchSource_DiscoveredAlreadyRunning"),
+      (s[(s.k_ELaunchSource_GameActionJoinParty = 900)] =
+        "k_ELaunchSource_GameActionJoinParty");
   },
   "1VtQ": function(e, t, n) {
     "use strict";
@@ -227,6 +285,7 @@
         STORE_ICON_BASE_URL: "",
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
+        HELP_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -243,7 +302,8 @@
         accountid: 0,
         account_name: "",
         token: void 0,
-        token_use_id: void 0
+        token_use_id: void 0,
+        webapi_token: ""
       },
       r = { steamid: "", authwgtoken: "" },
       s = "webui_config";
@@ -360,10 +420,10 @@
         return m;
       }),
       n.d(t, "b", function() {
-        return d;
+        return h;
       }),
       n.d(t, "d", function() {
-        return v;
+        return _;
       });
     var u,
       o,
@@ -450,7 +510,7 @@
             var i,
               r,
               s,
-              a = v.GetExistingPopup(this.m_strName);
+              a = _.GetExistingPopup(this.m_strName);
             (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               a
@@ -458,7 +518,7 @@
                   (i = a.m_popup),
                   a.ReleasePopup(),
                   (s = a.m_renderWhenReady),
-                  v.RemoveTrackedPopup(a),
+                  _.RemoveTrackedPopup(a),
                   i.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                   i.removeEventListener("unload", a.OnUnload),
                   i.removeEventListener("resize", a.OnResizeEvent),
@@ -467,7 +527,7 @@
                   i.removeEventListener("drop", a.OnDrop),
                   i.removeEventListener("dragover", a.OnDragOver),
                   i.removeEventListener("message", this.OnMessage))
-                : ((i = (n = h.CreatePopup(this.m_strName, this.m_rgParams))
+                : ((i = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (r = n.element),
                   (s = new l(i, r))),
@@ -488,7 +548,7 @@
                 this.m_renderWhenReady.SetTarget(function() {
                   return o.RenderInternal(o.m_popup, o.m_element, e);
                 })),
-              v.AddTrackedPopup(this),
+              _.AddTrackedPopup(this),
               a && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -520,7 +580,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              v.RemoveTrackedPopup(this),
+              _.RemoveTrackedPopup(this),
               this.OnClose(),
               s.unmountComponentAtNode(this.m_element);
           }),
@@ -646,7 +706,7 @@
           e
         );
       })(),
-      d = (function(r) {
+      h = (function(r) {
         function e(e, t, n, o) {
           var i = r.call(this, e, n) || this;
           return i.SetSavedDimensionsKey(t), (i.m_bExpires = o), i;
@@ -669,13 +729,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  v.SetRestoreDetails(
+                  _.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = v.GetRestoreDetails(
+                  (e.strRestoreDetails = _.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -704,7 +764,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (v.SetRestoreDetails(o, e, n.m_bExpires),
+                    (_.SetRestoreDetails(o, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = o),
                     n.OnResizeComplete(e));
@@ -718,14 +778,14 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            v.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            _.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           i.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
       })(m),
-      h = (function() {
+      d = (function() {
         function e() {
           var s = this;
           (this.m_bShuttingDown = !1),
@@ -843,23 +903,23 @@
               '><div id="popup_target"></div></body></html>';
             c.document.write(m), (c.document.title = r);
             for (
-              var d = c.document.getElementsByTagName("head")[0],
-                h = document.getElementsByTagName("link"),
-                v = 0;
-              v < h.length;
-              v++
+              var h = c.document.getElementsByTagName("head")[0],
+                d = document.getElementsByTagName("link"),
+                _ = 0;
+              _ < d.length;
+              _++
             ) {
-              var _ = h[v];
-              if ("stylesheet" == _.rel) {
+              var f = d[_];
+              if ("stylesheet" == f.rel) {
                 for (
-                  var f = c.document.createElement("link"), b = 0;
-                  b < _.attributes.length;
-                  b++
+                  var v = c.document.createElement("link"), E = 0;
+                  E < f.attributes.length;
+                  E++
                 ) {
-                  var g = _.attributes.item(b);
-                  f.setAttribute(g.name, g.value);
+                  var S = f.attributes.item(E);
+                  v.setAttribute(S.name, S.value);
                 }
-                d.appendChild(f);
+                h.appendChild(v);
               }
             }
             return {
@@ -951,7 +1011,7 @@
           e
         );
       })(),
-      v = new h();
+      _ = new d();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1350,14 +1410,14 @@
         return s;
       }),
       n.d(t, "a", function() {
-        return v;
+        return _;
       });
     var c = n("q1tI");
     n("XaMz");
     function i(e) {
       for (var o = [], t = 1; t < arguments.length; t++)
         o[t - 1] = arguments[t];
-      var n = v.LocalizeString(e);
+      var n = _.LocalizeString(e);
       return n
         ? (0 < o.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -1373,7 +1433,7 @@
     function o(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = v.LocalizeString(e);
+      var o = _.LocalizeString(e);
       if (!o) return e;
       for (var i, r = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(o)); ) {
         (a += i[0].length), r.push(i[1]);
@@ -1394,15 +1454,15 @@
       );
     }
     function s(e, t) {
-      return void 0 === t && (t = !1), h(e, !t);
+      return void 0 === t && (t = !1), d(e, !t);
     }
     var a = 31536e3,
       u = 2628e3,
       p = 604800,
       l = 86400,
       m = 3600,
-      d = 60;
-    function h(e, t, n) {
+      h = 60;
+    function d(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
       var o = t ? "#TimeSince_" : "#TimeInterval_";
       return 2 * a <= e
@@ -1424,16 +1484,16 @@
         : 2 * m <= e
         ? i(o + "XHours", Math.floor(e / m))
         : m <= e
-        ? 2 * d <= (e -= m) && n
-          ? i(o + "1HourXMinutes", Math.floor(e / d))
+        ? 2 * h <= (e -= m) && n
+          ? i(o + "1HourXMinutes", Math.floor(e / h))
           : i(o + "1Hour")
         : n
-        ? 2 * d <= e
-          ? i(o + "XMinutes", Math.floor(e / d))
-          : i(d <= e ? o + "1Minute" : o + "LessThanAMinute")
+        ? 2 * h <= e
+          ? i(o + "XMinutes", Math.floor(e / h))
+          : i(h <= e ? o + "1Minute" : o + "LessThanAMinute")
         : i(o + "LessThanAnHour");
     }
-    var v = new ((function() {
+    var _ = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1489,13 +1549,13 @@
         e
       );
     })())();
-    window.LocalizationManager = v;
+    window.LocalizationManager = _;
   },
   "qM/t": function(e, t, n) {
     "use strict";
     n.r(t);
-    var i = n("q1tI"),
-      o = n("i8i4"),
+    var o = n("q1tI"),
+      i = n("i8i4"),
       r = n("tkkQ"),
       s = n("fGPn"),
       a = (n("Y3TG"), n("oh5H")),
@@ -1504,20 +1564,20 @@
       p = n("2vnA"),
       l = n("okNM"),
       m = n("J0bI"),
-      d = n("s+DT");
-    var h = n("1VtQ"),
-      v = (function(e) {
+      h = n("s+DT");
+    var d = n("1VtQ"),
+      _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           c.d(t, e),
           (t.prototype.BIsExpired = function() {
-            return _.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return f.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
-            var t = new d.a(e.steamid_sender);
+            var t = new h.a(e.steamid_sender);
             t.BIsIndividualAccount() &&
               (this.m_unAccountIDInviter = t.GetAccountID()),
               (this.m_rtTimeExpires = e.time_expires),
@@ -1532,10 +1592,10 @@
           t
         );
       })(m.b),
-      _ = (function() {
+      f = (function() {
         function e(e) {
           (this.m_bConnectingToClient = !1),
-            (this.m_invite = new v(e.strInviteCode)),
+            (this.m_invite = new _(e.strInviteCode)),
             e.Invite
               ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
               : this.m_invite.InitInvalid(),
@@ -1560,11 +1620,7 @@
           }),
           (e.prototype.LaunchWebChat = function() {
             !(function(n) {
-              var o = window.open(
-                "",
-                "SteamWebChat",
-                "height=790,width=1015,resize=yes,scrollbars=yes"
-              );
+              var o = window.open("", "SteamWebChat", "");
               if (o) {
                 var e = !1;
                 try {
@@ -1622,25 +1678,25 @@
           e
         );
       })(),
-      f = (function(e) {
+      v = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           c.d(t, e),
           (t.prototype.render = function() {
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(b, { controller: this.props.controller })
-                : i.createElement(g, { controller: this.props.controller })
+                ? o.createElement(E, { controller: this.props.controller })
+                : o.createElement(S, { controller: this.props.controller })
             );
           }),
           (t = c.c([l.observer], t))
         );
-      })(i.Component),
-      b = (function(t) {
+      })(o.Component),
+      E = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -1662,10 +1718,10 @@
           }),
           (e.prototype.render = function() {
             if (this.props.controller.BIsConnectingToClient())
-              return i.createElement(
+              return o.createElement(
                 "div",
                 { className: "ChatMessageInvite RequestingInfo NoColumns" },
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
                   Object(a.b)("#bbcode_invite_requesting_info")
@@ -1673,25 +1729,24 @@
               );
             var e = this.props.controller.GetConnectResults(),
               t = this.props.controller.GetInvite(),
-              n = r.a.COMMUNITY_BASE_URL + "updates/chatupdate",
-              o = "inviteButton inviteButtonJoinChat";
+              n = (r.a.COMMUNITY_BASE_URL, "inviteButton inviteButtonJoinChat");
             return (
-              t.BIsVoiceChatInvite() && (o += " inviteButtonJoinVoice"),
+              t.BIsVoiceChatInvite() && (n += " inviteButtonJoinVoice"),
               e.success
-                ? i.createElement(
+                ? o.createElement(
                     "div",
                     { className: "ChatMessageInvite NoColumns" },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "groupName" },
                       Object(a.b)("#InviteLanding_SentToSteam")
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Object(a.d)(
                         "#InviteLanding_SentToSteam_Desc",
-                        i.createElement(
+                        o.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
@@ -1705,30 +1760,30 @@
                     )
                   )
                 : e.account_mismatch
-                ? i.createElement(
-                    I,
+                ? o.createElement(
+                    b,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Object(a.b)("#InviteLanding_AccountMismatch")
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: o,
+                          className: n,
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount
                         },
                         Object(a.b)("#InviteLanding_OpenInSteam")
                       ),
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: o,
+                          className: n,
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
@@ -1737,20 +1792,20 @@
                     )
                   )
                 : e.call_unsupported
-                ? i.createElement(
+                ? o.createElement(
                     "div",
                     { className: "ChatMessageInvite" },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "groupName" },
                       Object(a.b)("#InviteLanding_SentToSteam")
                     ),
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: "inviteLabel" },
                       Object(a.d)(
                         "#InviteLanding_SentToSteam_Desc",
-                        i.createElement(
+                        o.createElement(
                           "a",
                           {
                             href: "javascript:void(0);",
@@ -1763,76 +1818,58 @@
                       )
                     )
                   )
-                : i.createElement(
-                    I,
+                : o.createElement(
+                    b,
                     { render: this.props.controller.GetPreRenderedHTML() },
-                    i.createElement(
+                    o.createElement(
                       "div",
-                      { className: "inviteLabel" },
-                      Object(a.d)(
-                        "#InviteLanding_ChatIsInBeta",
-                        i.createElement(
-                          "a",
-                          { href: n },
-                          Object(a.b)("#InviteLanding_BetaLearnMoreLink")
-                        )
-                      ),
-                      " ",
-                      Object(a.b)(
-                        "#InviteLanding_CantTalkToClient",
-                        Object(a.b)("#InviteLanding_OpenInSteam")
-                      )
-                    ),
-                    i.createElement(
-                      "div",
-                      { className: "inviteLabel" },
-                      i.createElement(
+                      { className: "inviteLabel inviteLabelButtons" },
+                      o.createElement(
                         "button",
                         {
-                          className: o,
+                          className: n,
                           type: "button",
                           onClick: this.LaunchSteamClient
                         },
                         Object(a.b)("#InviteLanding_OpenInSteam")
                       ),
-                      i.createElement(
+                      o.createElement(
                         "button",
                         {
-                          className: o,
+                          className: n,
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
                         Object(a.b)("#InviteLanding_OpenInWebChat")
                       )
                     ),
-                    i.createElement("div", { className: "inviteLabel" }),
                     this.m_bTriedToLaunchSteam &&
-                      i.createElement(
+                      o.createElement(
                         "div",
-                        { className: "inviteLabel" },
+                        { className: "inviteLabel inviteLabelLaunchPrompt" },
                         Object(a.b)("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
           }),
           c.c([p.observable], e.prototype, "m_bTriedToLaunchSteam", void 0),
-          c.c([h.a], e.prototype, "LaunchWebChat", null),
-          c.c([h.a], e.prototype, "OpenInSteamIgnoreAccount", null),
-          c.c([h.a], e.prototype, "LaunchSteamClient", null),
+          c.c([d.a], e.prototype, "LaunchWebChat", null),
+          c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
+          c.c([d.a], e.prototype, "LaunchSteamClient", null),
           (e = c.c([l.observer], e))
         );
-      })(i.Component),
-      g = (function(e) {
+      })(o.Component),
+      S = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           c.d(t, e),
           (t.prototype.render = function() {
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: "ChatMessageInvite" },
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
                 Object(a.b)("#InviteLanding_ExpiredOrInvalid")
@@ -1841,31 +1878,31 @@
           }),
           t
         );
-      })(i.Component);
-    function I(e) {
-      return i.createElement(
+      })(o.Component);
+    function b(e) {
+      return o.createElement(
         "div",
         { className: "ChatMessageInvite" },
-        i.createElement("div", {
+        o.createElement("div", {
           className: "leftInviteContainer",
           dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML }
         }),
-        i.createElement(
+        o.createElement(
           "div",
           { className: "rightInviteContainer" },
-          i.createElement(
+          o.createElement(
             "div",
             { className: "inviteLabel" },
             Object(a.d)(
               "#bbcode_invite_description",
-              i.createElement("span", {
+              o.createElement("span", {
                 dangerouslySetInnerHTML: {
                   __html: e.render.strInviterNameLinkHTML
                 }
               })
             )
           ),
-          i.createElement(
+          o.createElement(
             "div",
             { className: "groupName" },
             e.render.strChatRoomGroupName
@@ -1875,20 +1912,20 @@
       );
     }
     window.AssertMsg = u.a;
-    var E,
+    var g,
+      I,
       y,
-      S,
-      C = new s.a();
-    function w(e) {
+      L = new s.a();
+    function C(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      _.sm_rtTimeCur = t.rtTimeCur;
-      var n = new _(t);
-      o.render(i.createElement(f, { controller: n }), e);
+      f.sm_rtTimeCur = t.rtTimeCur;
+      var n = new f(t);
+      i.render(o.createElement(v, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = C),
+    (window.ClientConnectionAPI = L),
       document.addEventListener("DOMContentLoaded", function() {
         Object(r.c)(),
           (function() {
@@ -1901,7 +1938,7 @@
                 o = n.getAttribute("data-component");
               switch (o) {
                 case "ChatInvite":
-                  w(n);
+                  C(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + o + '"');
@@ -1911,17 +1948,17 @@
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (E = n) : "shared" == e && (y = n);
-        else if ("shared" == e) S = n;
+          "friendsui" == e ? (g = n) : "shared" == e && (I = n);
+        else if ("shared" == e) y = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
-          void 0 !== E ? ((o = E), (i = n)) : (o = n),
-            void 0 !== y ? ((r = y), (s = S)) : (r = S),
+          void 0 !== g ? ((o = g), (i = n)) : (o = n),
+            void 0 !== I ? ((r = I), (s = y)) : (r = y),
             a.a.InitFromObjects(o, i, r, s),
-            (S = y = E = void 0);
+            (y = I = g = void 0);
         }
       });
   },
