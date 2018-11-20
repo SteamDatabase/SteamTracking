@@ -406,7 +406,7 @@
     },
     {
         "id": 801,
-        "size": 2068,
+        "size": 2072,
         "posted_in": "CUserFriends::ActivateGameOverlayToUser(char const*, CSteamID)"
     },
     {

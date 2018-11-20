@@ -444,6 +444,7 @@
  D CMicroTxnAuthorizeDialog::GetMessageMap()::s_pMap
  D CMicroTxnAuthorizeDialog::KB_ChainToMap()::chained
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnAuthorizeTransaction::InitVar()::bAdded
+ D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnURLClicked::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnUpdateBillingInfo::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()::bAdded
@@ -633,6 +634,7 @@
  D COverlayWebBrowser::GetKBMap()::s_pMap
  D COverlayWebBrowser::GetMessageMap()::s_pMap
  D COverlayWebBrowser::KB_ChainToMap()::chained
+ D COverlayWebBrowser::PanelMessageFunc_CloseImmediately::InitVar()::bAdded
  D COverlayWebBrowser::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
  D COverlayWebBrowser::PanelMessageFunc_OnEditNewLine::InitVar()::bAdded
  D COverlayWebBrowser::PanelMessageFunc_OnFinishRequest::InitVar()::bAdded
@@ -1980,7 +1982,7 @@
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<2056>
- D typeinfo for CCallbackImpl<2068>
+ D typeinfo for CCallbackImpl<2072>
  D typeinfo for CCallbackImpl<2080>
  D typeinfo for CCallbackImpl<20>
  D typeinfo for CCallbackImpl<24>
@@ -3249,7 +3251,7 @@
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<2056>
- D vtable for CCallbackImpl<2068>
+ D vtable for CCallbackImpl<2072>
  D vtable for CCallbackImpl<2080>
  D vtable for CCallbackImpl<20>
  D vtable for CCallbackImpl<24>
@@ -3766,6 +3768,7 @@
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  Plat_CommandLineParamExists
+ Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
@@ -3936,7 +3939,7 @@
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<2056>
- R typeinfo name for CCallbackImpl<2068>
+ R typeinfo name for CCallbackImpl<2072>
  R typeinfo name for CCallbackImpl<2080>
  R typeinfo name for CCallbackImpl<20>
  R typeinfo name for CCallbackImpl<24>
@@ -4761,6 +4764,7 @@
  T CBasePanel::OpenBrowserToStore(unsigned int, EOverlayToStoreFlag, char const*)
  T CBasePanel::OpenDlcDialog()
  T CBasePanel::OpenFriendsDialog()
+ T CBasePanel::OpenGameTriggeredWebBrowser(char const*, EActivateGameOverlayToWebPageMode)
  T CBasePanel::OpenOverlayCommunityDialog()
  T CBasePanel::OpenOverlayMusicLibraryPanel()
  T CBasePanel::OpenOverlayMusicPlayerPanel()
@@ -5338,9 +5342,9 @@
  T CCallbackImpl<2056>::GetCallbackSizeBytes()
  T CCallbackImpl<2056>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2056>::~CCallbackImpl()
- T CCallbackImpl<2068>::GetCallbackSizeBytes()
- T CCallbackImpl<2068>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<2068>::~CCallbackImpl()
+ T CCallbackImpl<2072>::GetCallbackSizeBytes()
+ T CCallbackImpl<2072>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2072>::~CCallbackImpl()
  T CCallbackImpl<2080>::GetCallbackSizeBytes()
  T CCallbackImpl<2080>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2080>::~CCallbackImpl()
@@ -5795,6 +5799,7 @@
  T CMicroTxnAuthorizeDialog::OnAuthorizeCompleted(MicroTxnAuthResponse_t*, bool)
  T CMicroTxnAuthorizeDialog::OnAuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::OnClose()
+ T CMicroTxnAuthorizeDialog::OnCustomURL(KeyValues*)
  T CMicroTxnAuthorizeDialog::OnMicroTxnInfoUpdated(MicroTxnInfoUpdated_t*, bool)
  T CMicroTxnAuthorizeDialog::OnURLClicked(char const*)
  T CMicroTxnAuthorizeDialog::OnUpdateBillingInfo()
@@ -5802,6 +5807,7 @@
  T CMicroTxnAuthorizeDialog::OpenBrowserToFullURL(char const*)
  T CMicroTxnAuthorizeDialog::OpenBrowserToPage(char const*)
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnAuthorizeTransaction::InitVar()
+ T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnCustomURL::InitVar()
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnURLClicked::InitVar()
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnUpdateBillingInfo::InitVar()
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()
@@ -8237,6 +8243,7 @@
  T COverlayVRState::VRModeBegin(VRModeBeginEvent_t const&, unsigned int)
  T COverlayVRState::VRModeEnd()
  T COverlayVRState::~COverlayVRState()
+ T COverlayWebBrowser::AddCustomURLHandler(char const*, vgui::Panel*)
  T COverlayWebBrowser::AddHeader(char const*, char const*)
  T COverlayWebBrowser::CCallback_OnParentalLockChanged::Run(void*)
  T COverlayWebBrowser::CCallback_OnParentalLockChanged::~CCallback_OnParentalLockChanged()
@@ -8244,6 +8251,8 @@
  T COverlayWebBrowser::ChainToAnimationMap()
  T COverlayWebBrowser::ChainToMap()
  T COverlayWebBrowser::CleanupBrowserPositionList()
+ T COverlayWebBrowser::CloseBasePanelOnClose(bool)
+ T COverlayWebBrowser::CloseImmediately()
  T COverlayWebBrowser::GetAnimMap()
  T COverlayWebBrowser::GetClassSize() const
  T COverlayWebBrowser::GetKBMap()
@@ -8281,6 +8290,7 @@
  T COverlayWebBrowser::OnWebReload()
  T COverlayWebBrowser::OnWebStop()
  T COverlayWebBrowser::OpenURL(char const*, bool)
+ T COverlayWebBrowser::PanelMessageFunc_CloseImmediately::InitVar()
  T COverlayWebBrowser::PanelMessageFunc_OnCloseWindow::InitVar()
  T COverlayWebBrowser::PanelMessageFunc_OnEditNewLine::InitVar()
  T COverlayWebBrowser::PanelMessageFunc_OnFinishRequest::InitVar()
@@ -8303,6 +8313,7 @@
  T COverlayWebBrowser::PanelMessageFunc_OnWebReload::InitVar()
  T COverlayWebBrowser::PanelMessageFunc_OnWebStop::InitVar()
  T COverlayWebBrowser::SetHomeURL(char const*)
+ T COverlayWebBrowser::SetToolWindowParent(vgui::Panel*)
  T COverlayWebBrowser::URLHistory_t::URLHistory_t()
  T COverlayWebBrowser::~COverlayWebBrowser()
  T COverlayWebBrowserHTML::COverlayWebBrowserHTML(vgui::ToolPanel*, char const*, bool)

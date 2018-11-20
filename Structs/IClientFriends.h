@@ -192,7 +192,7 @@ public:
     virtual unknown_ret IsInGameVoiceSpeaking() = 0;
     virtual unknown_ret ActivateGameOverlay(char const*) = 0;
     virtual unknown_ret ActivateGameOverlayToUser(char const*, CSteamID) = 0;
-    virtual unknown_ret ActivateGameOverlayToWebPage(char const*) = 0;
+    virtual unknown_ret ActivateGameOverlayToWebPage(char const*, EActivateGameOverlayToWebPageMode) = 0;
     virtual unknown_ret ActivateGameOverlayToStore(unsigned int, EOverlayToStoreFlag) = 0;
     virtual unknown_ret ActivateGameOverlayInviteDialog(CSteamID) = 0;
     virtual unknown_ret ProcessActivateGameOverlayInMainUI(char const*, CSteamID, unsigned int, bool, int) = 0;

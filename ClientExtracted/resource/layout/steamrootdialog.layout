@@ -53,13 +53,13 @@
 			command="OpenSupportAlertWindow"
 		}
 
-		XPVistaAlert
+		EOLAlert
 		{
 			ControlName=Button
-			labelText="#Steam_XPVistaAlert"
+			labelText="#Steam_EOLAlert"
 			style="support_alert"
 			textAlignment=center
-			command="OpenXPVistaAlertWindow"
+			command="OpenEOLAlertWindow"
 		}
 
 		ParentalLockButton
@@ -787,6 +787,8 @@
 		place [!$OSX] { control="frame_minimize,frame_maximize,frame_close" align=right margin-top=13 margin-right=9 spacing=-5 }
 		place [$OSX]  { control="frame_close,frame_minimize,frame_maximize" align=left margin-top=13 margin-left=11 spacing=-7 }
 
+		place [$OSX]  { control="universe_label, EOLAlert, SupportAlert" spacing=8 start="frame_maximize" align=left margin-top=-4 margin-left=13 height=24 }
+
 		place [!$OSX] { control="fullscreen" align=right end-right="frame_minimize" height=20 width=30 margin-right=8 margin-top=11 }
 		place [$OSX]  { control="fullscreen" align=right height=20 width=30 margin-right=16 margin-top=11 }
 
@@ -796,8 +798,8 @@
 		place { control="InboxButton" align=right end-right="AccountButton" margin-top=9 margin-right=8 height=24 }
 		place { control="AnnouncementButton" align=right end-right="InboxButton" margin-top=9 margin-right=8 height=24 width=34 }
 		place { control="ParentalLockButton" align=right end-right="AnnouncementButton" margin-top=9 margin-right=8 height=24 width=44 }
-		place { control="universe_label, XPVistaAlert, SupportAlert" spacing=8 align=right end-right="ParentalLockButton" margin-top=9 margin-right=8 height=24 }
-		
+		place [!$OSX] { control="universe_label, EOLAlert, SupportAlert" spacing=8 align=right end-right="ParentalLockButton" margin-top=9 margin-right=8 height=24 }
+
 		region { name=bottom align=bottom width=max height=62 }
 
 		place { control="add_game" x=14 y=16 region=bottom height=30}
