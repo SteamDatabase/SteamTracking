@@ -1793,6 +1793,7 @@ a.btn_download:hover {
 
 .ttip {
 	color: #b6c5ca;
+	cursor: help;
 }
 
 tr .faded, .tr.faded {
@@ -2575,17 +2576,18 @@ input#enablevac:disabled {
 	opacity: 0.2;
 }
 
+/* App transfers */
 .landing_pending_apptransfer {
 	color: #ffffff;
 	padding: 10px;
 	background-color: #40a4dd;
 	border: 1px solid #67c1f5;
-	font-size: 14px;
+	font-size: 15px;
 	margin-top: 8px;
 }
 
 .landing_pending_apptransfer div {
-	margin-left: 10px;
+	margin-left: 8px;
 }
 
 .landing_pending_apptransfer a {
@@ -2595,6 +2597,30 @@ input#enablevac:disabled {
 	color: #000000;
 }
 
+.AppTransferMain .section.highlight {
+	background: #23272e;
+	border-radius: 10px;
+	padding: 12px;
+	margin-bottom: 40px;
+}
+ul.transfer_notes {
+	margin-bottom: 10px;
+}
+ul.transfer_notes li {
+	margin-bottom: 8px;
+	border-left: 2px solid #a31515;
+	padding-left: 8px;
+}
+ul.transfer_rights li {
+	margin-bottom: 8px;
+	border-left: 2px solid #ffffff;
+	padding-left: 8px;
+}
+.transfer_apps b{
+	color: #d4d4d4;
+}
+
+/* CD Key Requests */
 .cdkey_requests_header {
 	display: inline-block;
 	font-size: 11px;
