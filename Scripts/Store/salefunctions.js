@@ -227,7 +227,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
 	
 	GSteamBroadcasts.Init();
-	GSteamSalienPlanets.Init();
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )
@@ -250,14 +249,17 @@ function HomeSaleBlock( rgItems, $Parent )
 {
 	var rgRemainingItems = rgItems;
 	var bTwoThirdsRow = true;
+	var bPromoRow = true;
 
 	if ( rgRemainingItems.length > 9 && rgRemainingItems.length % 3 != 0 )
 		rgRemainingItems = rgRemainingItems.slice( 0, rgRemainingItems.length - rgRemainingItems.length % 3 );
 
 	while( rgRemainingItems.length )
 	{
-		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bTwoThirdsRow, 'sale_dailydeals' );
-		bTwoThirdsRow = !bTwoThirdsRow;
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bTwoThirdsRow, 'sale_dailydeals', bPromoRow );
+		if ( !bPromoRow )
+			bTwoThirdsRow = !bTwoThirdsRow;
+		bPromoRow = false;
 	}
 	BindSaleCapAutoSizeEvents( $Parent );
 	GDynamicStore.DecorateDynamicItems( $Parent );
@@ -296,7 +298,7 @@ function HomeSaleCapsuleCategory( rgItems, $Parent )
 }
 
 var g_bRightSide = true;
-function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
+function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext, bPromoRow )
 {
 	var rgItemsThisRow = rgItems.slice( 0, 3 );
 
@@ -305,14 +307,35 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext )
 		g_bRightSide = !g_bRightSide;
 		var $Row = $J('<div/>', {'class': 'twothird_split ' + ( g_bRightSide ? 'right' : 'left' ) } );
 
-		$Row.append( $J('<div/>', {'class': 'large_sale_caps' } ).append(
-			SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_large' )
-		) );
+		if ( bPromoRow )
+		{
+			$Row.append( $J('<div/>', {'class': 'large_sale_caps' } ).append(
+				SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_large' ),
+				$J( '<div/>', {'class': 'three_row small_sale_caps' } ).append(
+					SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
+					SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
+				)
+			) );
 
-		$Row.append( $J('<div/>', {'class': 'small_sale_caps' } ).append(
-			SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
-			SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
-		) );
+			$Row.append( $J('<div/>', {'class': 'small_sale_caps' } ).append(
+				$J( '<a/>', { 'href' : g_strPromoCapsuleURL } ).append(
+					$J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': g_strPromoCapsule } )
+				)
+			) );
+		}
+		else
+		{
+
+			$Row.append( $J('<div/>', {'class': 'large_sale_caps' } ).append(
+				SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_large' )
+			) );
+
+			$Row.append( $J('<div/>', {'class': 'small_sale_caps' } ).append(
+				SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
+				SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
+			) );
+		}
+
 
 		$Row.append( $J('<div/>', {'style': 'clear: both;' } ) );
 		$Parent.append( $Row );
@@ -422,6 +445,10 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
 		for ( var i = 0; i < rgCategories.length; i++ )
 		{
 			var oCategory = rgCategories[i];
+			if ( oCategory.categoryid == 4 )
+				continue;
+
+
 			var id = 'category' + oCategory.categoryid;
 			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row'} );
 
@@ -506,8 +533,8 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
 				sessionid: g_sessionID,
 				nominatedid: nominatedid,
 				categoryid: categoryid,
-				writein: writein
-			} ).done( function( data ) {
+				writein: writein,
+				source: 1			} ).done( function( data ) {
 				// update the metadata
 				rgCategories = data.rgCategories;
 				$PageElement.html( data.page_html );
@@ -577,70 +604,4 @@ function FillCapsuleContainer( rgItems, $Parent, settings )
 		$Parent.hide();
 	}
 }
-
-GSteamSalienPlanets = {
-	Init: function()
-	{
-		GSteamSalienPlanets.rgRecentlyConqueredPlanets = v_shuffle( GHomepage.rgRecentlyConqueredPlanets );
-		GSteamSalienPlanets.Render();
-		
-	},
-
-	Render: function()
-	{
-		if ( GSteamSalienPlanets.rgRecentlyConqueredPlanets.length == 0 )
-		{
-			return;
-		}
-		
-		if ($J('.summer_salien_universe').length == 0 )
-			return;
-
-		var $Container = $J('.summer_salien_universe');
-		$Container.show();
-		
-		// pick a random planet to show
-		var $planet = GSteamSalienPlanets.rgRecentlyConqueredPlanets[Math.floor(Math.random() * Math.floor(GSteamSalienPlanets.rgRecentlyConqueredPlanets.length))];
-		
-		// render this to the container
-		var $ConqueredPlanet = $J('.conquered_planet', $Container);
-		$ConqueredPlanet.css( { "background" : "url('" + $planet.image + "')", "background-repeat" : "no-repeat", "background-position-x" : "-227px", "background-position-y" : "-170px" });
-		
-		var $Title = $J('#conquered_planet_name', $ConqueredPlanet );
-		$Title.html(  $planet.name );
-		
-		var $AppLinkContainer = $J('#conquered_planet_apps', $ConqueredPlanet );
-		$J.each( $planet.giveaway_apps, function(idx, oItem) {
-			// oItem is an appid?
-			var params = { 'class': 'home_smallcap app_impression_tracked', 'href': GStoreItemData.GetAppURL( oItem, 'summer2018_salien_giveaway' ), 'data-ds-appid' : oItem };
-						
-			var rgItemData = GStoreItemData.GetCapParams( 'summer2018_salien_giveaway', oItem, 0, null, params );
-			var $CapCtn = $J('<a/>', params );
-			GStoreItemData.BindHoverEvents( $CapCtn, oItem );
-			var rgImageProperties = { src: rgItemData.small_capsulev5 };
-			$CapCtn.append( $J('<img/>', rgImageProperties ) );
-			$CapCtn.append( $J('<div class="home_smallcap_title ellipsis"/>' ).html( rgItemData.name ) );
-			
-			$AppLinkContainer.append( $CapCtn )
-		});
-		
-		var $BrowseMoreCtn = $J( '<div class="browse_more_games_ctn"/>' );
-		$AppLinkContainer.append( $BrowseMoreCtn );
-		var rgLinkParams = { 'href': $planet.tag_link } ;
-		$BrowseMoreCtn.append( $J('<a/>', rgLinkParams ).html( 'Browse for more games like these' ) );
-
-		var $TopGroups = $J('.top_groups_ctn', $ConqueredPlanet );
-		
-		$J.each( $planet.top_clans, function(idx, oItem) {
-			if ( oItem.clan_info.accountid == null || oItem.clan_info.accountid == 0 )
-				return;
-				
-			var clan = GStoreItemData.GetAccountData( null, oItem.clan_info.accountid, 7 );
-			var $AvatarCap = $J('<a href="https://steamcommunity.com/groups/%1$s" title="%3$s"><img src="%2$s"></a>'.replace(/\%1\$s/g, clan.url).replace(/\%2\$s/g, GetAvatarURL( clan.avatar ) ).replace(/\%3\$s/g, clan.name) );
-			$TopGroups.append( $AvatarCap );
-		});
-		
-		return;
-	}
-};
 

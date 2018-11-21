@@ -65,6 +65,29 @@ body.v6 #game_area_purchase h2.package_group {
 	width: 32px;
 }
 
+.game_name .blockbg.dlc_title {
+	height: 54px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	line-height: 23px;
+}
+
+.game_name .blockbg.dlc_title .dlc_name {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: 400;
+	font-size: 28px;
+	letter-spacing: 0px;
+	text-transform: none;
+
+}
+
 
 #game_highlights {
     background: -moz-linear-gradient(left,  rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%); /* FF3.6+ */
@@ -491,6 +514,61 @@ img.game_header_image_full {
 		font-weight: 500; /* medium */
 
 		}
+
+.franchise_notice {
+	display: block;
+	position: relative;
+	height: 54px;
+	color: #ffffff;
+	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			text-shadow: 1px 1px rgba(0,0,0,0.5);
+	margin-bottom: 15px;
+	border-radius: 6px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	overflow: hidden;
+	background-color: rgba(39,67,88,1);
+
+}
+	.franchise_notice:hover {
+
+	}
+	.franchise_notice > div {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		position: absolute;
+	}
+	.franchise_notice .background_image {
+		height: 54px;
+		transition: filter 0.5s ease, transform 0.5s ease;
+		background-size: cover;
+		background-position-y: 50%;
+		opacity: 0.5;
+	}
+	.franchise_notice:hover .background_image {
+		transform: scale(1.1);
+
+	}
+	.franchise_notice .franchise_name {
+		height: 38px;
+		padding-top: 16px;
+		padding-left: 16px
+	}
+	.franchise_notice:hover .franchise_name {
+		color: #ffffff;
+	}
+	.franchise_notice .franchise_highlight {
+		height: 54px;
+		transition: box-shadow 0.5s ease, transform 0.5s ease;
+		box-shadow: inset 0 0 10px rgba(255,255,255,0.2);
+	}
+	.franchise_notice:hover .franchise_highlight {
+		box-shadow: inset 0 0 10px rgba(255,255,255,1);
+	}
 
 .notice_box_warning_text
 {
@@ -1991,6 +2069,7 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 
 #dlc_purchaseAll {
 	float: right;
+	margin-top: 32px;
 }
 
 

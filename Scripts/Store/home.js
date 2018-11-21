@@ -180,7 +180,6 @@ GHomepage = {
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
-			GHomepage.rgRecentlyConqueredPlanets = rgParams.rgRecentlyConqueredPlanets;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -778,6 +777,10 @@ GHomepage = {
 			else if ( rgItemData && rgItemData.video )
 			{
 				strStatus = 'Now Available to Watch';
+			}
+			else if ( rgItemData && rgItemData.free_weekend && rgItemData.free_weekend_status )
+			{
+				strStatus = rgItemData.free_weekend_status;
 			}
 			else
 			{

@@ -3,6 +3,16 @@ body.v6.autumn2016_home {
 	background: #1b2838;
 }
 
+body.steamaward_nominations_categorypage {
+	background: linear-gradient(to right, rgba(3, 12, 29, 1.0), rgba(26, 34, 50, 1.0))
+}
+
+hr.fade {
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(79, 79, 91, 0.1), rgba(79, 79, 91, 1.0), rgba(79, 79, 91, 1.0), rgba(79, 79, 91, 1.0));
+}
+
 .autumn2016_takeover_sizer {
 	position: relative;
 	min-height: 180px;
@@ -1062,9 +1072,13 @@ a.steamaward_nominate_gamepage_ctn.gamewinner:hover{
 /* faq page */
 
 .faq_background {
-	background-color: #000a1a;
-	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
-	height: 750px;
+	background-color: #111f2c;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2018/faqbg.jpg' );
+	height: 745px;
+}
+
+.faq_header_area {
+	position: relative;
 }
 
 body.steamaward_nominations_faq div#store_header {
@@ -1075,6 +1089,14 @@ body.steamaward_nominations_faq {
 	color: #9eb3cc;
 	font-size: 14px;
 	line-height: 20px;
+}
+
+body.steamaward_nominations_faq .newmodal_content {
+	padding: 0;
+}
+
+iframe {
+	border: none;
 }
 
 .faq_sale_title {
@@ -1146,8 +1168,75 @@ img.faq_section_title {
 .gallery_ctn img.faq_section_title {
 }
 
+.faq_nameanddates {
+	margin-top: 30px;
+	text-align: center;
+	max-width: 620px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 16px;
+	line-height: 150%;
+	text-transform: uppercase;
+}
+
+.faq_salename {
+	color: #c6d4df;
+	letter-spacing: 6px;
+	font-weight: bold;
+}
+
+.faq_featuring {
+	color: #62bbd9;
+	letter-spacing: 3px;
+}
+
+.faq_saledates {
+	letter-spacing: 1px;
+}
+
+.faq_nameanddates sup {
+	font-size: 50%;
+}
+
+.faq_saletitle {
+	display: flex;
+	position: absolute;
+	top: 71px;
+	height: 353px;
+
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+			text-transform: uppercase;
+	font-size: 80px;
+	color: #c6d4df;
+	max-width: 420px;
+	line-height: 71px;
+}
+
+.faq_saletitle > div {
+	margin-top: auto;
+}
+
+.faq_comingsoon {
+	position: absolute;
+	top: 440px;
+	max-width: 620px;
+
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			text-transform: uppercase;
+	font-size: 16px;
+	color: #62bbd9;
+	letter-spacing: 3px;
+}
+
 .faq_intro {
-	max-width: 552px;
+	position: absolute;
+	top: 480px;
+	max-width: 620px;
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -1176,26 +1265,39 @@ background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););backgrou
 
 .nomination_row {
 	padding: 21px 18px;
+	height: 194px;
+	display: flex;
+	background-repeat: no-repeat;
+	background-position: right top;
 }
 
 .nomination_row_left {
-	float: left;
+	display: inline-block;
+	vertical-align: middle;
 	width: 400px;
-	margin-right: 5%;
+	flex-grow: 2;
+}
+
+.center_space {
+	flex-grow: 1;
+	width: 10%;
 }
 
 .nomination_row_right {
-	overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
 	text-align: center;
+	min-width: 328px;
+
+}
+
+.has_nomination .nomination_row_right {
+	text-align: left;
 }
 
 .nomination_row.has_nomination {
 	background: rgba( 158, 179, 204, 0.09 );
-}
-
-.nomination_row.has_nomination .category_title,
-.nomination_row.has_nomination .nomination_row_left {
-	opacity: 0.5;
+	padding-top: 36px;
 }
 
 .category_title {
@@ -1204,41 +1306,76 @@ background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););backgrou
 	line-height: normal;
 }
 
-.younominated {
+.nothingnominated {
 	color: #67c1f5;
 	font-size: 13px;
 	margin-bottom: 8px;
 }
 
-a.younominated_game  {
-	background: rgba( 0, 0, 0, 0.2 );
-	color: #ffffff;
-	font-size: 17px;
-	line-height: 32px;
-	padding: 9px;
+.younominated {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
 
-	display: block;
+			color: #deb0d3;
+	text-shadow: 0 2px 5px #000000;
+	font-size: 18px;
+	margin-bottom: 8px;
+}
+
+a.younominated_game, a.younominated_developer  {
+	display: inline-block;
+	border: 2px solid #c78cb9;
+	box-shadow: 0 5px 10px #000000;
+	height: 151px;
+	width: 324px;
+	background-color: #000;
+}
+a.younominated_developer {
+
+	height: 100px;
 }
 
 .younominated_game img {
-	vertical-align: middle;
-	margin-right: 6px;
+	width: 324px;
+	height: 151px;
 }
 
-.nomination_row_right .btn_medium {
-	margin: 0 8px 8px 0;
+.younominated_developer img {
+	height: 100px;
+	width:auto;
+	border-right: 1px solid #333333;
+	vertical-align: middle;
+	margin-right: 10px;
 }
+
 
 @media screen and ( max-width: 720px )
 {
 	html.responsive .nomination_row_left {
 		float: none;
 		width: auto;
-		margin-bottom: 8px;
+		margin-bottom: 30px;
+	}
+	html.responsive .nomination_row_right {
+		background-color: rgba(0,0,0,0.2);
+		padding: 12px;
+	}
+	html.responsive .has_nomination .nomination_row_right {
+		text-align: left;
+		background-color: transparent;
+		padding: 0px;
+	}
+	html.responsive .nomination_row {
+		display: block;
+		height: auto;
+		background-position-x: 100px;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 
-.faq_section.blue h3 {
+.faq_section.blue h3
+{
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
@@ -2646,10 +2783,50 @@ background: -webkit-linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 2
 }
 
 
-body.v6.steamaward_nominations_categorypage .page_content {
+html.responsive body.v6.steamaward_nominations_categorypage .page_content {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			padding: 40px 55px;
-	width: 750px;
+			padding: 0 0 40px 55px;
+	margin: 0;
+	/* max-width: 715px; */
+}
+
+.steamaward_nominations_categorypage_section_head {
+	margin-top: 20px;
+
+	font-family: Motiva Sans, sans-serif;
+	font-size: 14px;
+	color: #5ec1f5;
+}
+
+.steamaward_options {
+	margin: 10px 0;
+}
+
+.steamaward_suggestion_contents .match {
+	display: inline-block;
+	margin-right: 10px;
+	width:100%;
+	text-align:center;
+}
+
+.steamaward_suggestion_contents .match_price {
+	display: none;
+}
+
+.steamaward_nominations_categorypage_game {
+	display: inline-block;
+	min-width: 120px;
+}
+
+.steamaward_nominations_categorypage .searchbox {
+	margin: 0 !important;
+	border: 1px solid transparent !important;
+	min-width: 245px;
+}
+
+.younominated_edit {
+	float: right;
+	margin-top: -15px;
 }
