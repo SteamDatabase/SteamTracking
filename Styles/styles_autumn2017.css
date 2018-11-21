@@ -2824,7 +2824,7 @@ html body.v6.steamaward_nominations_categorypage .page_content {
 
 .steamaward_nominations_categorypage_game {
 	display: inline-block;
-	margin-right: 10px;
+	margin: 15px 10px 10px 0;
 	min-width: 120px;
 }
 

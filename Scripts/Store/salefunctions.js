@@ -225,8 +225,9 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	// capsule rows
 	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
 	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
-	
-	GSteamBroadcasts.Init();
+
+	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
+	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems )

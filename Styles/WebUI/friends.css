@@ -2813,6 +2813,18 @@ iframe.steamTVLogin {
   min-height: 0;
   flex: 1; }
 
+.messages_SpeakerName_InGame_1vaKy {
+  color: #e3ffc2; }
+
+.messages_SpeakerName_WatchingBroadcast_3DQ_c {
+  color: #c9bdf7; }
+
+.messages_SpeakerName_Online_2nKVN {
+  color: #6dcff6; }
+
+.messages_SpeakerName_Default_1Qo8j {
+  color: white; }
+
 .main_throbberContainer_29hiv {
   height: 100%;
   width: 100%;
@@ -12587,7 +12599,7 @@ html.web_chat_frame .perf_timing_area {
 
 .ChatRoomSpeaker {
   position: relative;
-  margin-top: 8px; }
+  margin-top: 12px; }
 
 .compactView .ChatRoomSpeaker {
   margin-top: 0; }
