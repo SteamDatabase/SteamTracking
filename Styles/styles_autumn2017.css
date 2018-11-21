@@ -2806,7 +2806,6 @@ html.responsive body.v6.steamaward_nominations_categorypage .page_content {
 
 .steamaward_suggestion_contents .match {
 	display: inline-block;
-	margin-right: 10px;
 	width:100%;
 	text-align:center;
 }
@@ -2815,8 +2814,17 @@ html.responsive body.v6.steamaward_nominations_categorypage .page_content {
 	display: none;
 }
 
+.steamaward_suggestion_contents .match_name {
+	max-width: 120px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
 .steamaward_nominations_categorypage_game {
 	display: inline-block;
+	margin-right: 10px;
 	min-width: 120px;
 }
 
@@ -2888,6 +2896,7 @@ html.responsive body.v6.steamaward_nominations_categorypage .page_content {
 	border: 3px solid #deb0d3;
 	width: 64px;
 	height: 64px;
+	margin-right: 15px;
 }
 
 .share_friend_avatar img {
