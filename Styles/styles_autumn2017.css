@@ -833,7 +833,7 @@ screen and ( min-resolution: 2dppx)
 	position: relative;
 	width: 18px;
 	height: 16px;
-	vertical-align: bottom;
+	vertical-align: middle;
 }
 
 .nominate_check {
