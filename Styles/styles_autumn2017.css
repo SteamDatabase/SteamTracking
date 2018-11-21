@@ -1091,10 +1091,6 @@ body.steamaward_nominations_faq {
 	line-height: 20px;
 }
 
-body.steamaward_nominations_faq .newmodal_content {
-	padding: 0;
-}
-
 iframe {
 	border: none;
 }
@@ -1288,7 +1284,7 @@ background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););backgrou
 	vertical-align: middle;
 	text-align: center;
 	min-width: 328px;
-
+	max-width: 400px;
 }
 
 .has_nomination .nomination_row_right {
@@ -1320,6 +1316,10 @@ background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););backgrou
 	text-shadow: 0 2px 5px #000000;
 	font-size: 18px;
 	margin-bottom: 8px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 a.younominated_game, a.younominated_developer  {
@@ -1374,7 +1374,7 @@ a.younominated_developer {
 	}
 }
 
-.faq_section.blue h3
+body.steamaward .blue h3
 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
@@ -2829,4 +2829,101 @@ html.responsive body.v6.steamaward_nominations_categorypage .page_content {
 .younominated_edit {
 	float: right;
 	margin-top: -15px;
+}
+
+.share_section {
+	margin-top: 15px;
+}
+
+.share_link_section {
+	padding: 10px 20px;
+	background: #2d3647;
+}
+
+.share_section .link_head {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 14px;
+	color: #c1c1c1;
+	text-transform: uppercase;
+}
+
+.share_section .input_section {
+	width: 75%;
+	display: inline-block;
+	background: #484f62;
+	padding: 4px;
+}
+
+#share_link {
+	width: calc( 100% - 218px );
+	background: #31363c;
+	color: #c1c1c1;
+	border: 1px black solid;
+	padding: 4px;
+}
+
+.input_section .btn_medium {
+	width: 200px;
+	text-align: center;
+}
+
+.share_head {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+			color: #deb0d3;
+	font-size: 28px;
+	line-height: initial;
+	margin-bottom: 8px;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.share_friend_avatar {
+	display: inline-block;
+	border: 3px solid #deb0d3;
+	width: 64px;
+	height: 64px;
+}
+
+.share_friend_avatar img {
+	width: 64px;
+	height: 64px;
+}
+
+.share_makeown {
+	text-align: right;
+}
+
+.share_makeown_block {
+	display: inline-block;
+	text-align: center;
+}
+
+.share_makeown_block_head {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+			color: #dabad2;
+	font-size: 14px;
+	line-height: initial;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+}
+
+.share_makeown_link {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #c78cb9;
+	font-size: 14px;
+}
+
+.share_makeown_link a {
+	text-decoration: inherit;
+	color: inherit;
 }
