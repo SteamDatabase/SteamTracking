@@ -420,6 +420,11 @@
  D CBroadcastUploadErrorNotification::GetKBMap()::s_pMap
  D CBroadcastUploadErrorNotification::GetMessageMap()::s_pMap
  D CBroadcastUploadErrorNotification::KB_ChainToMap()::chained
+ D CDialogParentalUnlock::ChainToAnimationMap()::chained
+ D CDialogParentalUnlock::ChainToMap()::chained
+ D CDialogParentalUnlock::GetKBMap()::s_pMap
+ D CDialogParentalUnlock::GetMessageMap()::s_pMap
+ D CDialogParentalUnlock::KB_ChainToMap()::chained
  D CEmoticonButton::ChainToAnimationMap()::chained
  D CEmoticonButton::ChainToMap()::chained
  D CEmoticonButton::GetKBMap()::s_pMap
@@ -895,6 +900,7 @@
  D VTT for CBroadcastFirstTimeDialog
  D VTT for CBroadcastLiveBanner
  D VTT for CBroadcastUploadErrorNotification
+ D VTT for CDialogParentalUnlock
  D VTT for CEmoticonButton
  D VTT for CGuideItemPanel
  D VTT for CHintLabel
@@ -1124,6 +1130,7 @@
  D construction vtable for vgui::EditablePanel-in-CBroadcastFirstTimeDialog
  D construction vtable for vgui::EditablePanel-in-CBroadcastLiveBanner
  D construction vtable for vgui::EditablePanel-in-CBroadcastUploadErrorNotification
+ D construction vtable for vgui::EditablePanel-in-CDialogParentalUnlock
  D construction vtable for vgui::EditablePanel-in-CGuideItemPanel
  D construction vtable for vgui::EditablePanel-in-CIngameFPSBanner
  D construction vtable for vgui::EditablePanel-in-CMicroTxnAuthorizeDialog
@@ -1204,6 +1211,7 @@
  D construction vtable for vgui::EditablePanel-in-vgui::TooltipWindow
  D construction vtable for vgui::Frame-in-AppModalQueryBox
  D construction vtable for vgui::Frame-in-CBroadcastFirstTimeDialog
+ D construction vtable for vgui::Frame-in-CDialogParentalUnlock
  D construction vtable for vgui::Frame-in-CMicroTxnAuthorizeDialog
  D construction vtable for vgui::Frame-in-CMusicLibraryPanel
  D construction vtable for vgui::Frame-in-CMusicPlayerPanel
@@ -1307,6 +1315,7 @@
  D construction vtable for vgui::Panel-in-CBroadcastFirstTimeDialog
  D construction vtable for vgui::Panel-in-CBroadcastLiveBanner
  D construction vtable for vgui::Panel-in-CBroadcastUploadErrorNotification
+ D construction vtable for vgui::Panel-in-CDialogParentalUnlock
  D construction vtable for vgui::Panel-in-CEmoticonButton
  D construction vtable for vgui::Panel-in-CGuideItemPanel
  D construction vtable for vgui::Panel-in-CHintLabel
@@ -1528,6 +1537,8 @@
  D guard variable for CBroadcastLiveBanner::GetMessageMap()::s_pMap
  D guard variable for CBroadcastUploadErrorNotification::GetKBMap()::s_pMap
  D guard variable for CBroadcastUploadErrorNotification::GetMessageMap()::s_pMap
+ D guard variable for CDialogParentalUnlock::GetKBMap()::s_pMap
+ D guard variable for CDialogParentalUnlock::GetMessageMap()::s_pMap
  D guard variable for CEmoticonButton::GetKBMap()::s_pMap
  D guard variable for CEmoticonButton::GetMessageMap()::s_pMap
  D guard variable for CGuideItemPanel::GetKBMap()::s_pMap
@@ -1907,6 +1918,7 @@
  D typeinfo for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D typeinfo for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  D typeinfo for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
@@ -1982,7 +1994,6 @@
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<2056>
- D typeinfo for CCallbackImpl<2072>
  D typeinfo for CCallbackImpl<2080>
  D typeinfo for CCallbackImpl<20>
  D typeinfo for CCallbackImpl<24>
@@ -1994,10 +2005,13 @@
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<520>
  D typeinfo for CCallbackImpl<608>
+ D typeinfo for CCallbackImpl<8216>
  D typeinfo for CCallbackImpl<8>
  D typeinfo for CColorProperty
  D typeinfo for CConVarAccessor
  D typeinfo for CCookie
+ D typeinfo for CDialogParentalUnlock
+ D typeinfo for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D typeinfo for CEmoticonButton
  D typeinfo for CFloatProperty
  D typeinfo for CFriendsImageManager
@@ -3177,6 +3191,7 @@
  D vtable for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ D vtable for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  D vtable for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
@@ -3251,7 +3266,6 @@
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<2056>
- D vtable for CCallbackImpl<2072>
  D vtable for CCallbackImpl<2080>
  D vtable for CCallbackImpl<20>
  D vtable for CCallbackImpl<24>
@@ -3263,10 +3277,13 @@
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<520>
  D vtable for CCallbackImpl<608>
+ D vtable for CCallbackImpl<8216>
  D vtable for CCallbackImpl<8>
  D vtable for CColorProperty
  D vtable for CConVarAccessor
  D vtable for CCookie
+ D vtable for CDialogParentalUnlock
+ D vtable for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D vtable for CEmoticonButton
  D vtable for CFloatProperty
  D vtable for CFriendsImageManager
@@ -3864,6 +3881,7 @@
  R typeinfo name for CCallback<CBroadcastLiveBanner, BroadcastUploadStatus_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
+ R typeinfo name for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  R typeinfo name for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
@@ -3939,7 +3957,6 @@
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<2056>
- R typeinfo name for CCallbackImpl<2072>
  R typeinfo name for CCallbackImpl<2080>
  R typeinfo name for CCallbackImpl<20>
  R typeinfo name for CCallbackImpl<24>
@@ -3951,10 +3968,13 @@
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<520>
  R typeinfo name for CCallbackImpl<608>
+ R typeinfo name for CCallbackImpl<8216>
  R typeinfo name for CCallbackImpl<8>
  R typeinfo name for CColorProperty
  R typeinfo name for CConVarAccessor
  R typeinfo name for CCookie
+ R typeinfo name for CDialogParentalUnlock
+ R typeinfo name for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  R typeinfo name for CEmoticonButton
  R typeinfo name for CFloatProperty
  R typeinfo name for CFriendsImageManager
@@ -5053,6 +5073,10 @@
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Register(CCallbackMgr*, void (CCallbackMgr::*)(SteamAPICallCompleted_t*))
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::Run(void*)
  T CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallback()
+ T CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>::CCallback(CDialogParentalUnlock*, void (CDialogParentalUnlock::*)(ParentalLockChangeAttemptComplete_t*))
+ T CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>::Register(CDialogParentalUnlock*, void (CDialogParentalUnlock::*)(ParentalLockChangeAttemptComplete_t*))
+ T CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>::Run(void*)
+ T CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>::~CCallback()
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::CCallback(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*)
@@ -5342,9 +5366,6 @@
  T CCallbackImpl<2056>::GetCallbackSizeBytes()
  T CCallbackImpl<2056>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2056>::~CCallbackImpl()
- T CCallbackImpl<2072>::GetCallbackSizeBytes()
- T CCallbackImpl<2072>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<2072>::~CCallbackImpl()
  T CCallbackImpl<2080>::GetCallbackSizeBytes()
  T CCallbackImpl<2080>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<2080>::~CCallbackImpl()
@@ -5378,6 +5399,9 @@
  T CCallbackImpl<608>::GetCallbackSizeBytes()
  T CCallbackImpl<608>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<608>::~CCallbackImpl()
+ T CCallbackImpl<8216>::GetCallbackSizeBytes()
+ T CCallbackImpl<8216>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<8216>::~CCallbackImpl()
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
@@ -5433,6 +5457,23 @@
  T CDefOps<int>::LessFunc(int const&, int const&)
  T CDefOps<unsigned long long>::LessFunc(unsigned long long const&, unsigned long long const&)
  T CDefOps<void*>::LessFunc(void* const&, void* const&)
+ T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::Run(void*)
+ T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::~CCallback_OnParentalLockChangeAttemptComplete()
+ T CDialogParentalUnlock::CDialogParentalUnlock(vgui::Panel*, char const*)
+ T CDialogParentalUnlock::CDialogParentalUnlock(vgui::Panel*, char const*, MicroTxnAuthRequestCallback_t*)
+ T CDialogParentalUnlock::ChainToAnimationMap()
+ T CDialogParentalUnlock::ChainToMap()
+ T CDialogParentalUnlock::GetAnimMap()
+ T CDialogParentalUnlock::GetClassSize() const
+ T CDialogParentalUnlock::GetKBMap()
+ T CDialogParentalUnlock::GetMessageMap()
+ T CDialogParentalUnlock::GetPanelClassName()
+ T CDialogParentalUnlock::GetPanelTopClassName() const
+ T CDialogParentalUnlock::KB_ChainToMap()
+ T CDialogParentalUnlock::OnClose()
+ T CDialogParentalUnlock::OnCommand(char const*)
+ T CDialogParentalUnlock::OnParentalLockChangeAttemptComplete(ParentalLockChangeAttemptComplete_t*)
+ T CDialogParentalUnlock::~CDialogParentalUnlock()
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsHidden() const
  T CDirIterator::BCurrentIsMarkedForArchive() const
@@ -13915,6 +13956,7 @@
  T vgui::TextEntry::SentenceModeChanged(unsigned long long)
  T vgui::TextEntry::SetAllCaps(bool)
  T vgui::TextEntry::SetAllowNonAsciiCharacters(bool)
+ T vgui::TextEntry::SetAllowNumericInputOnly(bool)
  T vgui::TextEntry::SetAutoProgressOnHittingCharLimit(bool)
  T vgui::TextEntry::SetCatchEnterKey(bool)
  T vgui::TextEntry::SetClearButtonEnabled(bool)
@@ -15669,6 +15711,7 @@
  t _GLOBAL__sub_I_overlayvrstate.cpp
  t _GLOBAL__sub_I_parentalcache.cpp
  t _GLOBAL__sub_I_parentalinterpreter.cpp
+ t _GLOBAL__sub_I_parentalunlockdialog.cpp
  t _GLOBAL__sub_I_pcrecpp.cc
  t _GLOBAL__sub_I_pngloader.cpp
  t _GLOBAL__sub_I_refreshlogindialog.cpp
