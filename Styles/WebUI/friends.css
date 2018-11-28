@@ -4028,7 +4028,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   -moz-user-select: none;
   -webkit-user-drag: none;
   -webkit-user-select: none;
-  -ms-user-select: none; }
+  -ms-user-select: none;
+  cursor: pointer; }
 
 .Minimized .BBCodeResizableElement {
   opacity: 0;
@@ -4515,6 +4516,10 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
 
 .spoilerLabelContainer .BBCodeResizableComponent.chatVideoContainer.Minimized {
   background-color: #0000; }
+
+.bbcode_ImageModalBackground_XfE_W {
+  background-color: #2c3036;
+  padding: 30px; }
 
 /* Style scrollbar elements */
 ::-webkit-scrollbar,
@@ -5354,7 +5359,6 @@ button.DialogButton::-moz-focus-inner {
   background-size: cover;
   cursor: pointer;
   background-image: none;
-  background-color: #25282e;
   border-radius: 4px; }
 
 .ModalPosition_Dismiss .closeButton .SVGIcon_X_Line line {
@@ -12046,7 +12050,8 @@ a.connectionStatus:visited {
   position: relative;
   padding: 14px 6px;
   min-height: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: #303238; }
 
 .chatRoomGroupNavColumn {
   position: relative;

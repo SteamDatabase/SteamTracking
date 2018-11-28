@@ -3677,6 +3677,7 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_elVideoSuggest = null;
 	this.m_oVideoSuggestData = {};
 	this.m_bUseSDLFullScreen = false;
+	this.m_IFrameHelper = null;
 }
 
 CDASHPlayerUI.CLOSED_CAPTIONS_NONE = "none";
@@ -3819,6 +3820,20 @@ CDASHPlayerUI.prototype.BInTenFoot = function()
 {
 	return ( this.m_eUIMode == CDASHPlayerUI.eUIModeTenFoot );
 }
+
+// If we are embedded within an iframe this will be set to non-null
+CDASHPlayerUI.prototype.SetIFrameHelper = function( iframehelper )
+{
+	this.m_IFrameHelper = iframehelper;
+}
+
+CDASHPlayerUI.prototype.PostMessageToIFrameParent = function( strMessage, Data )
+{
+	if ( !this.m_IFrameHelper )
+		return;
+
+	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
+};
 
 // Once the video is playing, init these UI elements
 CDASHPlayerUI.prototype.OnVideoInitialized = function()
@@ -4891,10 +4906,19 @@ CDASHPlayerUI.prototype.OnVolumeClick = function( e, ele )
 		volume = relX / 80;
 	}
 
+	// If we are increasing the volume from zero, send a notification.
+	var bMuted = this.m_player.m_elVideoPlayer.muted;
+	if( ( this.m_player.m_elVideoPlayer.volume <= 0 || bMuted ) && volume >= 0 )
+	{
+		this.PostMessageToIFrameParent( "OnVolumnIncreaseFromZero", { oldvolume: this.m_player.m_elVideoPlayer.volume, newvolume: volume } );
+	}
+
 	this.SetVolume( volume );
 
-	if( this.m_player.m_elVideoPlayer.muted )
+	if( bMuted )
+	{
 		this.ToggleMute();
+	}
 }
 
 CDASHPlayerUI.prototype.SetVolume = function( value )
@@ -4919,9 +4943,21 @@ CDASHPlayerUI.prototype.SetVolume = function( value )
 
 CDASHPlayerUI.prototype.IncrementVolume = function( nAccelerate )
 {
-	this.SetVolume( this.m_player.m_elVideoPlayer.volume + CDASHPlayerUI.VOLUME_STEP_SIZE * nAccelerate );
-	if( this.m_player.m_elVideoPlayer.muted )
+	var volume = this.m_player.m_elVideoPlayer.volume + CDASHPlayerUI.VOLUME_STEP_SIZE * nAccelerate;
+
+	// If we are increasing the volume from zero, send a notification.
+	var bMuted = this.m_player.m_elVideoPlayer.muted;
+	if( ( this.m_player.m_elVideoPlayer.volume <= 0 || bMuted ) && volume >= 0 )
+	{
+		this.PostMessageToIFrameParent( "OnVolumnIncreaseFromZero", { oldvolume: this.m_player.m_elVideoPlayer.volume, newvolume: volume } );
+	}
+
+	this.SetVolume( volume );
+
+	if( bMuted )
+	{
 		this.ToggleMute();
+	}
 }
 
 CDASHPlayerUI.prototype.DecrementVolume = function( nAccelerate )

@@ -25,6 +25,7 @@ var CBroadcastChat = function( broadcastSteamID, strBaseURL )
 
 	this.m_nLastHeight = 0;
 	this.m_mapMutedUsers = {};
+	this.m_IFrameHelper = null;
 
 	// Map SteamID to true or false.
 	this.m_mapChannelModeratorUsers = {};
@@ -54,6 +55,20 @@ CBroadcastChat.s_regexLinks = new RegExp( '(^|[^=\\]\'"])(https?://[^ \'"<>]*)',
 CBroadcastChat.s_regexDomain = new RegExp( '^(?:https?://)?([^/?#]+?\\.)?(([^/?#.]+?)\\.([^/?#]+?))(?=[/?#]|$)', 'i' );
 CBroadcastChat.s_regexValveDomains = new RegExp( '^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)', 'i' );
 CBroadcastChat.m_rgWhitelistedDomains = ["vimeo.com","youtu.be","youtube.com","digg.com","reddit.com","twitter.com","developconference.com","diygamer.com","gdconf.com","indiecade.com","kickstarter.com","indiegogo.com","moddb.com","oculusvr.com","tigsource.com","indiedb.com","gdcvault.com","1up.com","destructoid.com","engadget.com","escapistmagazine.com","gametrailers.com","gizmodo.com","guardiannews.com","guardian.co.uk","ifanzine.com","igf.com","ign.com","indiegamemag.com","kotaku.com","mobot.net","modojo.com","pcgamer.com","rockpapershotgun.com","shacknews.com","toucharcade.com","wired.com","wired.co.uk","imageshack.com","imageshack.us","games-workshop.com","steamcontroller.buka.ru","steamlink.buka.ru","e-clubmalaysia.com","gameplanet.com","degica.com","community.csgo.com.cn","steamcdn-a.akamaihd.net","steamusercontent.com","steamstatic.com","steamuserimages-a.akamaihd.net","steamstore-a.akamaihd.net","steamcommunity-a.akamaihd.net"];
+
+// If we are embedded within an iframe this will be set to non-null
+CBroadcastChat.prototype.SetIFrameHelper = function ( iframehelper )
+{
+	this.m_IFrameHelper = iframehelper;
+}
+CBroadcastChat.prototype.PostMessageToIFrameParent = function( strMessage, Data )
+{
+	if ( !this.m_IFrameHelper )
+		return;
+
+	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
+};
+
 
 CBroadcastChat.prototype.SetChannelModerators = function ( mapChannelModerators )
 {
@@ -530,6 +545,10 @@ CBroadcastChat.prototype.ChatSubmit = function()
 
 		_chat.DisplayChatMessage(response.persona_name, response.in_game, _chat.m_steamID, strMessage, true);
 		$J('.scrollbar').perfectScrollbar('update');
+
+		// Report to the iframe that a chat message was sent. This is to help understand whether a user engaged with a stream.
+		var bContainEmotes = _chat.m_regexUserEmoticons && _chat.m_regexUserEmoticons.test( strMessage );
+		_chat.PostMessageToIFrameParent( "OnSendChatMessage", { bContainEmoticon: bContainEmotes } );
 	})
 	.fail( function( response )
 	{

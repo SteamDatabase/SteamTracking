@@ -198,6 +198,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat, strBaseUR
 	if ( bEnableChat )
 	{
 		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID, strBaseURL );
+		this.m_chat.SetIFrameHelper( this.m_IFrameHelper );
 	}
 
 	if ( bEnableVideo )
@@ -214,6 +215,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat, strBaseUR
 		this.m_player.SetLimitFPS( this.m_nVideoLimitFPS );
 		this.m_playerUI = new CDASHPlayerUI( this.m_player, bIsMobile ? CDASHPlayerUI.eUIModeMobile : CDASHPlayerUI.eUIModeDesktop );
 		this.m_playerUI.Init( );
+		this.m_playerUI.SetIFrameHelper( this.m_IFrameHelper );
 
 		this.m_DASHPlayerStats = new CDASHPlayerStats( this.m_elVideoPlayer, this.m_player, this.m_ulViewerSteamID );
 
