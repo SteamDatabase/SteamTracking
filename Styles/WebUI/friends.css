@@ -12050,8 +12050,7 @@ a.connectionStatus:visited {
   position: relative;
   padding: 14px 6px;
   min-height: 100%;
-  box-sizing: border-box;
-  background-color: #303238; }
+  box-sizing: border-box; }
 
 .chatRoomGroupNavColumn {
   position: relative;
