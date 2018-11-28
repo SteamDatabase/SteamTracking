@@ -65,7 +65,6 @@ function getKnownProtobufMessages(dirName, callback) {
 }
 
 function handleFile(file) {
-	// Each message is immediately followed by (xx.Message) so split on that
 	let protos = [];
 	let protoShortNamesToLongNames = {};
 	let protoShortNamesAliases = {};
@@ -74,24 +73,26 @@ function handleFile(file) {
 	let bHasUnknownRequest = false;
 	const services = new Map();
 
-	let moduleNames = file.match(/"?([\w\+]{4})"?:function\([a-z],[a-z],[a-z]\){"use strict";/g).map((module) => {
-		return module.match(/"?([\w\+]{4})"?/)[1];
+	let moduleNames = file.match(/"?([\w\+\/]{4})"?:function\([a-z],[a-z],[a-z]\){"use strict";/g).map((module) => {
+		return module.match(/"?([\w\+\/]{4})"?:/)[1];
 	});
 
 	let modules = file.split('"use strict";');
 	modules.shift(); // remove file header
 
-	modules.forEach((module, index) => {
+	// 1-st pass
+	modules.forEach((module, moduleIndex) => {
 		let currentModuleProtos = [],
-		currentModuleName = moduleNames[index];
+		currentModuleName = moduleNames[moduleIndex];
 		protoShortNamesToLongNames[currentModuleName] = {};
 		protoShortNamesAliases[currentModuleName] = {};
 
-		module.match(/[a-z]\.[a-z]\([a-z],"([a-z])",function\(\){return ([a-z])}\)/g).forEach((alias) => {
-			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-z])",function\(\){return ([a-z])}\)/);
+		module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/g).forEach((alias) => {
+			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/);
 			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
 		});
 
+		// Each message is immediately followed by (xx.Message) so split on that
 		module.split(/\([_a-zA-Z\$]{1,3}\.Message\)/).forEach((part) => {
 			let match = part.match(/(?![{,])[_a-zA-Z\$]{1,3}=\(?([_a-zA-Z\$]{1,3}\.Message,)*function\([a-zA-Z\$]{1,2}\){function [a-zA-Z\$]\([a-zA-Z\$]\){.{1,50}return [_a-zA-Z\$]{1,3}\.Message\.initialize.*}$/);
 			if (!match) {
@@ -113,26 +114,7 @@ function handleFile(file) {
 			protoShortNamesToLongNames[currentModuleName][minVarName] = proto.name;
 		});
 
-		currentModuleProtos.forEach((proto) => {
-			proto.fields.forEach((field) => {
-				if (protoShortNamesToLongNames[currentModuleName][field.type]) {
-					field.type = '.' + protoShortNamesToLongNames[currentModuleName][field.type];
-				} else if (field.type.indexOf('.') != -1) {
-					let [moduleVarName, typeShortNameAlias] = field.type.split('.');
-					let rex = new RegExp(moduleVarName + '=[a-z]\\("([\\w\\+]{4})"\\)');
-					let match = module.match(rex);
-					if (match) {
-						field.type = '.' + protoShortNamesToLongNames[match[1]][
-							protoShortNamesAliases[match[1]][typeShortNameAlias]
-						];
-					} else {
-						field.type = 'UNKNOWN2';
-					}
-				}
-			});
-		});
-
-		protos = protos.concat(currentModuleProtos);
+		protos.push(currentModuleProtos);
 
 		let matches;
 
@@ -154,7 +136,7 @@ function handleFile(file) {
 			}
 
 			if (!msgRequestName) {
-				let bFixFound = protos.some((proto) => {
+				let bFixFound = currentModuleProtos.some((proto) => {
 					if ((proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
 						|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")) {
 						msgRequestName = proto.name;
@@ -185,11 +167,35 @@ function handleFile(file) {
 		}
 	});
 
+	// 2-nd pass
+	modules.forEach((module, moduleIndex) => {
+		let currentModuleName = moduleNames[moduleIndex];
+		protos[moduleIndex].forEach((proto) => {
+			proto.fields.forEach((field) => {
+				if (protoShortNamesToLongNames[currentModuleName][field.type]) {
+					field.type = '.' + protoShortNamesToLongNames[currentModuleName][field.type];
+				} else if (field.type.indexOf('.') != -1) {
+					let [moduleVarName, typeShortNameAlias] = field.type.split('.');
+					let match = module.match(new RegExp(moduleVarName + '=[a-z]\\("([\\w\\+\\/]{4})"\\)'));
+					if (match) {
+						field.type = '.' + protoShortNamesToLongNames[match[1]][
+							protoShortNamesAliases[match[1]][typeShortNameAlias]
+						];
+					} else {
+						field.type = 'UNKNOWN2';
+					}
+				}
+			});
+		});
+	});
+
+	let messages = protos.reduce((a, b) => a.concat(b));
+
 	if (bHasUnknownRequest) {
-		protos.push({ "name": "NotImplemented", "fields": [] });
+		messages.push({ "name": "NotImplemented", "fields": [] });
 	}
 
-	return {"messages": protos, "services": services};
+	return {messages, services};
 }
 
 function decodeProtobuf(proto, minVarName) {
@@ -205,10 +211,11 @@ function decodeProtobuf(proto, minVarName) {
 		fieldDesc.type = match[4].toLowerCase();
 
 		if (fieldDesc.type.includes('()')) {
-			fieldDesc.type = fieldDesc.type.replace(/(^[a-z]\.read|\(\))/g, '').replace('64string', '64');
+			fieldDesc.type = match[5].toLowerCase().replace('64string', '64');
 			if (fieldDesc.type === 'enum') {
 				// ToDo: RE enums
 				fieldDesc.type = 'int32';
+				fieldDesc.description = 'enum';
 			}
 		} else {
 			// It's a nested message of some sort
@@ -261,8 +268,16 @@ function outputProtos(protos) {
 		console.log(`message ${proto.name} {`);
 		proto.fields.forEach((field) => {
 			process.stdout.write(`\t${field.flag} ${field.type} ${field.name} = ${field.id}`);
+
+			let options = [];
 			if (field.hasOwnProperty("default")) {
-				process.stdout.write(` [default = ${field.default}]`);
+				options.push(`default = ${field.default}`);
+			}
+			if (field.hasOwnProperty("description")) {
+				options.push(`(description) = "${field.description}"`);
+			}
+			if (options.length) {
+				process.stdout.write(` [${options.join(', ')}]`);
 			}
 			console.log(';');
 		});
