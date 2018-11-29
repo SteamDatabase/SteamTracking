@@ -64986,16 +64986,15 @@
         if (!G.a.IN_CLIENT && G.a.STEAM_TV) {
           var n = Object(G.b)("broadcast");
           n &&
-            ("76561198857153475" == (e = n.steamid) &&
+            ("76561198873238444" == (e = n.steamid) &&
               Q.init({
                 bValid: !0,
-                stream: { "76561198857153475": "#Broadcast_EnglishMain" },
-                name: "The Artifact Preview Tournament",
+                stream: { "76561198873238444": "#Broadcast_EnglishMain" },
+                name: "WePlay! Artifact Tournament",
                 appID: 583950,
                 link: "https://store.steampowered.com/app/583950/Artifact/",
                 linkName: "Artifact on Steam",
-                tabIcon:
-                  "public/images/webui/broadcast/artifact_icon_preview_tournament.png",
+                tabIcon: "public/images/webui/broadcast/artifact_icon.png",
                 offlineClassName: "BroadcastArtifactOffline"
               }),
             "76561198124468676" == e
