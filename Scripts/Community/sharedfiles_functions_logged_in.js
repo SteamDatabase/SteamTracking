@@ -414,6 +414,12 @@ function SendSubscribeItemRequest()
 				}
 				break;
 
+				case 25:
+				{
+					ShowAlertDialog( "Error", "You cannot subscribe to this item because you have reached the limit of 15,000 subscriptions across all products on Steam." );
+				}
+				break;
+
 				default:
 				{
 					ShowAlertDialog( "Error", "There was a problem trying to subscribe to this item. Please try again later." );
