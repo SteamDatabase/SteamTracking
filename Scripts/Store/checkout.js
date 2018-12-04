@@ -859,7 +859,7 @@ function OnInitializeTransactionSuccess( result )
 					|| result.paymentmethod == 18 || result.paymentmethod == 19					|| result.paymentmethod == 20 || result.paymentmethod == 21					|| result.paymentmethod == 22 || result.paymentmethod == 23					|| result.paymentmethod == 24 || result.paymentmethod == 25					|| result.paymentmethod == 26 || result.paymentmethod == 27					|| result.paymentmethod == 28 || result.paymentmethod == 29 
 					|| result.paymentmethod == 45 || result.paymentmethod == 46 
 					|| result.paymentmethod == 47 || result.paymentmethod == 121 
-					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 122				)
+					|| result.paymentmethod == 48					|| result.paymentmethod == 49 || result.paymentmethod == 50					|| result.paymentmethod == 51 || result.paymentmethod == 52					|| result.paymentmethod == 53 || result.paymentmethod == 54					|| result.paymentmethod == 55 || result.paymentmethod == 56					|| result.paymentmethod == 57 || result.paymentmethod == 58					|| result.paymentmethod == 59 || result.paymentmethod == 60					|| result.paymentmethod == 61 || result.paymentmethod == 62					|| result.paymentmethod == 66					|| result.paymentmethod == 31					|| result.paymentmethod == 34					|| result.paymentmethod == 36					|| result.paymentmethod == 37					|| result.paymentmethod == 38					|| result.paymentmethod == 65 || result.paymentmethod == 125					|| result.paymentmethod == 39					|| result.paymentmethod == 40					|| result.paymentmethod == 42					|| result.paymentmethod == 35					|| result.paymentmethod == 67					|| result.paymentmethod == 68					|| result.paymentmethod == 69					|| result.paymentmethod == 70					|| result.paymentmethod == 71					|| result.paymentmethod == 72					|| result.paymentmethod == 73					|| result.paymentmethod == 74					|| result.paymentmethod == 75					|| result.paymentmethod == 76					|| result.paymentmethod == 77					|| result.paymentmethod == 79					|| result.paymentmethod == 81					|| result.paymentmethod == 82					|| result.paymentmethod == 83					|| result.paymentmethod == 84					|| result.paymentmethod == 85					|| result.paymentmethod == 86					|| result.paymentmethod == 87					|| result.paymentmethod == 88					|| result.paymentmethod == 89					|| result.paymentmethod == 90					|| result.paymentmethod == 91					|| result.paymentmethod == 92					|| result.paymentmethod == 93					|| result.paymentmethod == 94					|| result.paymentmethod == 95					|| result.paymentmethod == 96					|| result.paymentmethod == 97					|| result.paymentmethod == 98					|| result.paymentmethod == 99					|| result.paymentmethod == 100					|| result.paymentmethod == 101					|| result.paymentmethod == 102					|| result.paymentmethod == 103					|| result.paymentmethod == 104					|| result.paymentmethod == 105					|| result.paymentmethod == 106					|| result.paymentmethod == 107					|| result.paymentmethod == 108					|| result.paymentmethod == 109					|| result.paymentmethod == 110					|| result.paymentmethod == 111					|| result.paymentmethod == 112					|| result.paymentmethod == 113					|| result.paymentmethod == 114					|| result.paymentmethod == 115					|| result.paymentmethod == 119					|| result.paymentmethod == 120					|| result.paymentmethod == 116					|| result.paymentmethod == 117					|| result.paymentmethod == 118					|| result.paymentmethod == 63					|| result.paymentmethod == 122				)
 		{
 						
 						$('is_external_finalize_transaction').value = 1;
@@ -1847,6 +1847,16 @@ function OnGetFinalPriceSuccess( result )
 						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your cultureland account details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
 					}
 				}				
+				else if ( method.value == 'happymoneyvoucher' )
+				{
+					$('purchase_bottom_note_paypalgc').innerHTML = 'Happymoney Voucher transactions are authorized through the Degica website.  Click the button below to open a new web browser to initiate the transaction.';
+					$('purchase_button_bottom_text').innerHTML = 'Continue to Degica';
+					if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') ) 
+					{
+						$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Happymoney Voucher customers';
+						$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Degica website by entering your voucher details.<br/><br/>This process can take up to 60 seconds.  Once you have approved payment, you will receive an email receipt confirming your purchase.';
+					}
+				}
 				else if ( method.value == 'eclubpoints' )
 				{
 					$('purchase_bottom_note_paypalgc').innerHTML = 'eClub Points transactions are authorized through the eClub Store website.  Click the button below to open a new web browser to initiate the transaction.';
@@ -3134,7 +3144,7 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'credit_card_japan' || method.value == 'payeasy' 
 			|| method.value == 'webmoney_japan' || method.value == 'webmoney_japan_steam_card' || method.value == 'bitcash' || method.value == 'netcash'
-			|| method.value == 'nanaco'  || method.value == 'culturevoucher' )
+			|| method.value == 'nanaco'  || method.value == 'culturevoucher' || method.value == 'happymoneyvoucher' )
 		{
 			bShowAddressForm = false;
 			bShowCountryVerification = true;
@@ -4171,6 +4181,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'culturevoucher' && providerPaymentMethod == 40 )
 			{
 				$('payment_method_review_text').innerHTML = 'Culture Voucher';
+				$('checkout_review_payment_info_area').style.display = 'none';
+			}
+			else if ( method.value == 'happymoneyvoucher' && providerPaymentMethod == 42 )
+			{
+				$('payment_method_review_text').innerHTML = 'Happymoney Voucher';
 				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'eclubpoints' && providerPaymentMethod == 35 )
