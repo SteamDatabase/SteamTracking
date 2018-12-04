@@ -49,6 +49,7 @@ public:
     virtual unknown_ret ResetConnectionPriority(int) = 0;
     virtual unknown_ret BHasCachedCredentials(char const*) = 0;
     virtual unknown_ret SetAccountNameForCachedCredentialLogin(char const*, bool) = 0;
+    virtual unknown_ret DestroyCachedCredentials(char const*) = 0;
     virtual unknown_ret GetCurrentWebAuthToken(char*, int, char*, int) = 0;
     virtual unknown_ret RequestWebAuthToken() = 0;
     virtual unknown_ret SetLoginInformation(char const*, char const*, bool) = 0;

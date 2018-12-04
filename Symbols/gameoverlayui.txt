@@ -1901,10 +1901,10 @@
  D typeinfo for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastStatus_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
- D typeinfo for CCallback<CBasePanel, GameOverlayActivateRequested_t, false>
+ D typeinfo for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  D typeinfo for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  D typeinfo for CCallback<CBasePanel, LowBatteryPower_t, false>
- D typeinfo for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>
+ D typeinfo for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>
  D typeinfo for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  D typeinfo for CCallback<CBasePanel, PersonaStateChange_t, false>
  D typeinfo for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
@@ -2396,6 +2396,8 @@
  D typeinfo for SerializedOverlayPumps
  D typeinfo for ZooDialog
  D typeinfo for ZooDialog::ZooPropertyPage
+ D typeinfo for std::__1::__function::__base<void ()>
+ D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for vgui::AnimatingImagePanel
@@ -3174,10 +3176,10 @@
  D vtable for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D vtable for CCallback<CBasePanel, BroadcastStatus_t, false>
  D vtable for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
- D vtable for CCallback<CBasePanel, GameOverlayActivateRequested_t, false>
+ D vtable for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  D vtable for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  D vtable for CCallback<CBasePanel, LowBatteryPower_t, false>
- D vtable for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>
+ D vtable for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>
  D vtable for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  D vtable for CCallback<CBasePanel, PersonaStateChange_t, false>
  D vtable for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
@@ -3652,6 +3654,7 @@
  D vtable for SerializedOverlayPumps
  D vtable for ZooDialog
  D vtable for ZooDialog::ZooPropertyPage
+ D vtable for std::__1::bad_function_call
  D vtable for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D vtable for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D vtable for vgui::AnimatingImagePanel
@@ -3864,10 +3867,10 @@
  R typeinfo name for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastStatus_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
- R typeinfo name for CCallback<CBasePanel, GameOverlayActivateRequested_t, false>
+ R typeinfo name for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  R typeinfo name for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  R typeinfo name for CCallback<CBasePanel, LowBatteryPower_t, false>
- R typeinfo name for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>
+ R typeinfo name for CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>
  R typeinfo name for CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>
  R typeinfo name for CCallback<CBasePanel, PersonaStateChange_t, false>
  R typeinfo name for CCallback<CBasePanel, RemoteStoragePublishFileResult_t, false>
@@ -4440,6 +4443,8 @@
  R typeinfo name for SerializedOverlayPumps
  R typeinfo name for ZooDialog
  R typeinfo name for ZooDialog::ZooPropertyPage
+ R typeinfo name for std::__1::__function::__base<void ()>
+ R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for vgui::AnimatingImagePanel
@@ -4766,13 +4771,13 @@
  T CBasePanel::OnBroadcastUploadsDisabled(BroadcastUploadsDisabled_t*)
  T CBasePanel::OnCancelMicroTxn()
  T CBasePanel::OnFilePublished(RemoteStoragePublishFileResult_t*)
- T CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t*)
+ T CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)
  T CBasePanel::OnGameOverlaySettingsChanged()
  T CBasePanel::OnHotKeyChanged()
  T CBasePanel::OnLegacyCDKeyRegistered(LegacyCDKeyRegistered_t*)
  T CBasePanel::OnLoggedOff(SteamServersDisconnected_t*)
  T CBasePanel::OnLowBattery(LowBatteryPower_t*)
- T CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t*)
+ T CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)
  T CBasePanel::OnMouseClick(KeyValues*)
  T CBasePanel::OnPersonaStateChange(PersonaStateChange_t*)
  T CBasePanel::OnPublishedFileUpdated(RemoteStorageUpdatePublishedFileResult_t*)
@@ -4830,6 +4835,7 @@
  T CBasePanel::ShowLegacyCDKeyDataOnce()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
+ T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>)
  T CBasePanel::TriggerSplashOnce()
  T CBasePanel::UpdatePlaytimeStats()
  T CBasePanel::ViewAchievements()
@@ -5005,10 +5011,10 @@
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastUploadsDisabled_t*))
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Run(void*)
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::~CCallback()
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t*))
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::Register(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t*))
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::Run(void*)
- T CCallback<CBasePanel, GameOverlayActivateRequested_t, false>::~CCallback()
+ T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::CCallback(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t const*))
+ T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::Register(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t const*))
+ T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::Run(void*)
+ T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::~CCallback()
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(LegacyCDKeyRegistered_t*))
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::Register(CBasePanel*, void (CBasePanel::*)(LegacyCDKeyRegistered_t*))
  T CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>::Run(void*)
@@ -5017,10 +5023,10 @@
  T CCallback<CBasePanel, LowBatteryPower_t, false>::Register(CBasePanel*, void (CBasePanel::*)(LowBatteryPower_t*))
  T CCallback<CBasePanel, LowBatteryPower_t, false>::Run(void*)
  T CCallback<CBasePanel, LowBatteryPower_t, false>::~CCallback()
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t*))
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::Register(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t*))
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::Run(void*)
- T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t, false>::~CCallback()
+ T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>::CCallback(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t const*))
+ T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>::Register(CBasePanel*, void (CBasePanel::*)(MicroTxnAuthRequestCallback_t const*))
+ T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>::Run(void*)
+ T CCallback<CBasePanel, MicroTxnAuthRequestCallback_t const, false>::~CCallback()
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(NotifyAsyncNotificationsRequested_t*))
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::Register(CBasePanel*, void (CBasePanel::*)(NotifyAsyncNotificationsRequested_t*))
  T CCallback<CBasePanel, NotifyAsyncNotificationsRequested_t, false>::Run(void*)
@@ -5460,7 +5466,6 @@
  T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::Run(void*)
  T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::~CCallback_OnParentalLockChangeAttemptComplete()
  T CDialogParentalUnlock::CDialogParentalUnlock(vgui::Panel*, char const*)
- T CDialogParentalUnlock::CDialogParentalUnlock(vgui::Panel*, char const*, MicroTxnAuthRequestCallback_t*)
  T CDialogParentalUnlock::ChainToAnimationMap()
  T CDialogParentalUnlock::ChainToMap()
  T CDialogParentalUnlock::GetAnimMap()
@@ -5473,6 +5478,7 @@
  T CDialogParentalUnlock::OnClose()
  T CDialogParentalUnlock::OnCommand(char const*)
  T CDialogParentalUnlock::OnParentalLockChangeAttemptComplete(ParentalLockChangeAttemptComplete_t*)
+ T CDialogParentalUnlock::SetCallbacks(std::__1::function<void ()>, std::__1::function<void ()>)
  T CDialogParentalUnlock::~CDialogParentalUnlock()
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsHidden() const
@@ -11048,6 +11054,7 @@
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
+ T std::__1::bad_function_call::~bad_function_call()
  T std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
@@ -11061,6 +11068,10 @@
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::str(std::__1::basic_string<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> > const&)
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::underflow()
  T std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_stringbuf()
+ T std::__1::function<void ()>::function(std::__1::function<void ()> const&)
+ T std::__1::function<void ()>::operator()() const
+ T std::__1::function<void ()>::operator=(std::__1::function<void ()> const&)
+ T std::__1::function<void ()>::swap(std::__1::function<void ()>&)
  T std::__1::pair<int*, long> std::__1::get_temporary_buffer<int>(long)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int const&>(int const&, int const&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int>(int const&, int&&)
@@ -15116,11 +15127,20 @@
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton
+ d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0
+ d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1
+ d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
+ d typeinfo for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
+ d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
  d vtable for (anonymous namespace)::ScrollBarButton
+ d vtable for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
+ d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  dlclose
  dlopen
  dlsym
@@ -15422,6 +15442,12 @@
  r sub_start_of_word
  r twobppswaptable
  r typeinfo name for (anonymous namespace)::ScrollBarButton
+ r typeinfo name for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0
+ r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1
+ r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
+ r typeinfo name for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
+ r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  r utf8_lead_bits
  r verbnames
  r verbs
@@ -15495,6 +15521,7 @@
  std::__1::locale::locale(std::__1::locale const&)
  std::__1::locale::operator=(std::__1::locale const&)
  std::__1::locale::~locale()
+ std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
@@ -15941,6 +15968,30 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::__clone() const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::destroy()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::operator()()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::target_type() const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::~__func()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::__clone() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::destroy()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::operator()()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::target_type() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::~__func()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::__clone() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::destroy()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::operator()()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::target_type() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::~__func()
  t update_box
  t use_merged_upsample
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
