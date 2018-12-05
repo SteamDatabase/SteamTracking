@@ -5,7 +5,8 @@ var currently_selected_friend_id = 0;
 
 var g_nPaymentMethodStep = 1;			 
 var g_nPurchaseTotal = 0;				var g_strProviderRemaining = '';		  
-var g_strProviderMethod = '';			
+var g_strProviderMethod = '';			var g_bShowAddressForm = true;
+
 var nGetFinalPriceCalls = 0;
 
 var g_bFinalizeTransactionInProgress = false;
@@ -689,7 +690,7 @@ function InitializeTransaction()
 				'AddressTwo' : $('billing_address_two').value,
 				'Country' : $('billing_country').value,
 				'City' : $('billing_city').value,
-				'State' : ($('billing_country').value == 'US' ? $('billing_state_select').value : $('billing_state_text').value),
+				'State' : ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value),
 				'PostalCode' : $('billing_postal_code').value,
 				'Phone' : $('billing_phone').value,
 
@@ -699,7 +700,7 @@ function InitializeTransaction()
 				'ShippingAddressTwo' : $('shipping_address_two').value,
 				'ShippingCountry' : $('shipping_country').value,
 				'ShippingCity' : $('shipping_city').value,
-				'ShippingState' : ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value),
+				'ShippingState' : ( g_bHasBillingStates ? $('shipping_state_select').value : $('shipping_state_text').value),
 				'ShippingPostalCode' : $('shipping_postal_code').value,
 				'ShippingPhone' : $('shipping_phone').value,
 
@@ -2812,7 +2813,7 @@ function UpdateStateSelectState()
 {
 	try 
 	{
-		if ( $('billing_country').value == 'US' )
+		if ( g_bHasBillingStates )
 		{
 			$J('#billing_state_label').show();
 			$J('#billing_state_input').show();
@@ -3000,7 +3001,6 @@ function UpdatePaymentInfoForm()
 		
 		var bShowCVV = false;
 		var bShowCreditCardNumberExp = false;
-		var bShowAddressForm = true;
 		var bShowCountryVerification = false;
 		var bShowBankAccountForm = false;
 		var bShowMobileForm = false;
@@ -3037,22 +3037,24 @@ function UpdatePaymentInfoForm()
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
 
+				g_bShowAddressForm = g_bHasBillingStates;
+
 		if ( BIsStoredCreditCard() )
 		{
-			bShowAddressForm = false;
+			g_bShowAddressForm = false;
 		}
 		else if ( BIsCreditCardMethod( method.value ) )
 		{
 			// For any of these common credit card methods show all the form elements
 			
-						bShowAddressForm = true;
+						g_bShowAddressForm = true;
 			bShowCreditCardNumberExp = true;
 						bShowCVV = !card_is_stored; 
 			bShowSaveMyAddress = !g_bIsUpdateBillingInfoForm;
 		}
 		else if ( method.value == 'paypal' )
 		{
-						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials && !g_bIsUpdateBillingInfoForm;
 			
@@ -3060,7 +3062,7 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'updatepaypal' )
 		{
-						bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
@@ -3069,19 +3071,17 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'storedpaypal' )
 		{
-			bShowAddressForm = false;
+			g_bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowStoredPayPalDetails = true;
 		}
 		else if ( method.value == 'giropay' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowBankAccountForm = true;
 		}
 		else if ( BIsBankChoiceMethod( method.value ) )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowBankSelection = true;
 		}
@@ -3106,84 +3106,63 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'spe' || method.value == 'multicaja' || method.value == 'redcompra' || method.value == 'ziraatbank' || method.value == 'vakiflarbank' 
 			|| method.value == 'kuveytturkbank' || method.value == 'ekonomibank' || method.value == 'pichincha' || method.value == 'pichinchacash' 
 			|| method.value == 'przelewy24' || method.value == 'trustpay' || method.value == 'poli' || method.value == 'mercadopago' || method.value == 'payu' 
-			|| method.value == 'mrcash' || method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio'
+			|| method.value == 'mrcash' || method.value == 'eps' || method.value == 'interac' || method.value == 'santanderrio' || method.value == 'degica_mobile'
+			|| method.value == 'zong' || method.value == 'credit_card_japan' || method.value == 'payeasy' 
+			|| method.value == 'webmoney_japan' || method.value == 'webmoney_japan_steam_card' || method.value == 'bitcash' || method.value == 'netcash'
+			|| method.value == 'nanaco'  || method.value == 'culturevoucher' || method.value == 'happymoneyvoucher'
 		)
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 		}
 		else if ( method.value == 'boleto' || method.value == 'bancodobrasilonline' || method.value == 'itauonline' || method.value == 'bradescoonline' || method.value == 'safetypay' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
-		else if ( method.value == 'korean_mobile' )
-		{
-			bShowAddressForm = false;
-			bShowCountryVerification = true;
-		}
-		else if ( method.value == 'zong' )
-		{
-			bShowAddressForm = false;
-			bShowCountryVerification = true;
-		}
 		else if ( method.value == 'qiwi' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowMobileForm = true;
 		}
 		else if ( method.value == 'konbini' || method.value == 'bank_transfer_japan' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
-		else if ( method.value == 'credit_card_japan' || method.value == 'payeasy' 
-			|| method.value == 'webmoney_japan' || method.value == 'webmoney_japan_steam_card' || method.value == 'bitcash' || method.value == 'netcash'
-			|| method.value == 'nanaco'  || method.value == 'culturevoucher' || method.value == 'happymoneyvoucher' )
-		{
-			bShowAddressForm = false;
-			bShowCountryVerification = true;
-		}		
+		
 		else if ( method.value == 'bitcoin' )
 		{
-						bShowAddressForm = false || $('billing_country').value == 'US';
-			bShowCountryVerification = $('billing_country').value != 'US';
+						bShowCountryVerification = $('billing_country').value != 'US';
 		}
 		else if ( method.value == 'cafefunded' )
 		{
-			bShowAddressForm = false;
+			g_bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowCafeFundedInstructions = true;
 		}	
 		else if ( method.value == 'wechat' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'WeChat payments can only be made from WeChat accounts that have been linked to a valid Chinese bank issued card regardless of your location.  Please visit this <a href=\'http://kf.qq.com/faq/130807me2YZf140909yumYFb.html\' target=\'_blank\'>link</a> for more details.';
 		}
 		else if ( method.value == 'tenpay' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Tenpay payments can only be made from Tenpay accounts that have been linked to a verified phone number.';
 		}
 		else if ( method.value == 'vtcpaywallet' || method.value == 'vtcpaycards' || method.value == 'vtcpayonlinebanking' )
 		{
-			bShowAddressForm = false;
 			bShowCountryVerification = true;			
 			bShowPaymentSpecificNote = true;
 			$('payment_method_specific_note').innerHTML = 'Please be advised that VTCPay will add VAT and corporate income tax for foreign enterprises to your purchase amount.';
 		}
 		else if ( method.value == 'steamaccount' )
 		{
-						bShowAddressForm = false;
+						g_bShowAddressForm = false;
 			$J('#payment_row_eight').show();
 			
 						
@@ -3195,14 +3174,14 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'disabled' )
 		{
-			bShowAddressForm = false;
+			g_bShowAddressForm = false;
 			bShowPaymentSpecificNote = true;
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = 'We are temporarily unable to process transactions with this payment method at this time.  We apologize for the inconvenience.';
 		}
 		else if ( method.value == 'disabled_for_wallet' )
 		{
-			bShowAddressForm = false;
+			g_bShowAddressForm = false;
 			bShowPaymentSpecificNote = true;
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = 'This payment method cannot be used for purchasing wallet credit.';
@@ -3230,7 +3209,7 @@ function UpdatePaymentInfoForm()
 		}
 
 		var $AddressFields = $J('#payment_row_address, #payment_header_title');
-		if ( bShowAddressForm )
+		if ( g_bShowAddressForm )
 			$AddressFields.show();
 		else
 			$AddressFields.hide();
@@ -3580,7 +3559,7 @@ function SubmitPaymentInfoForm()
 				}
 			}
 		}
-		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) )
+		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) || g_bShowAddressForm )
 		{
 			
 			if ( $( 'first_name' ).value.length < 1 )
@@ -3608,19 +3587,22 @@ function SubmitPaymentInfoForm()
 				rgBadFields.billing_city = true;
 			}
 			
-						if  ( $( 'billing_country' ).value == 'US' )
+						if  ( g_bHasBillingStates )
 			{
 				if ( $('billing_state_select').value.length < 1 )
 				{
 					errorString += 'Please enter a State or Province.<br/>';
 					rgBadFields.billing_state_select_trigger = true;
 				}
-								if ( $('billing_state_select').value == 'AE' || $('billing_state_select').value == 'AP' || $('billing_state_select').value == 'AA' )
+								if ( $('billing_country').value == 'US' )
 				{
-					if ( $('billing_city').value != 'APO' && $('billing_city').value != 'FPO' && $('billing_city').value != 'DPO' )
+					if ( $('billing_state_select').value == 'AE' || $('billing_state_select').value == 'AP' || $('billing_state_select').value == 'AA' )
 					{
-						errorString += 'Please enter a valid military address.<br/>';
-						rgBadFields.billing_city = true;
+						if ( $('billing_city').value != 'APO' && $('billing_city').value != 'FPO' && $('billing_city').value != 'DPO' )
+						{
+							errorString += 'Please enter a valid military address.<br/>';
+							rgBadFields.billing_city = true;
+						}
 					}
 				}
 			}
@@ -3841,8 +3823,8 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 
 						$('payment_method_review_provider_total').innerHTML = formattedProviderTotal;
 			$('payment_method_review_steam_account_total').innerHTML = formattedSteamAccountTotal;
-						$('checkout_review_payment_info_area').style.display = '';
-			
+						$('checkout_review_payment_info_area').style.display = g_bShowAddressForm ? '' : 'none';
+
 						if ( method.value == 'visa' && providerPaymentMethod == 2 )
 			{	
 				$('payment_method_review_text').innerHTML = 'Visa'+' ending in '+ (card_number.substr( Math.max( 0, card_number.length-4 ) ) );
@@ -3873,37 +3855,30 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			}
 			else if ( method.value == 'steamaccount' && providerPaymentMethod == 0 )
 			{
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'storedpaypal' && providerPaymentMethod == 4 )
 			{
 				$('payment_method_review_text').innerHTML = 'My PayPal Account (' + $('stored_paypal_email').value + ')';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'paypal' && providerPaymentMethod == 4 )
 			{
 				$('payment_method_review_text').innerHTML = 'PayPal';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'updatepaypal' && providerPaymentMethod == 4 )
 			{
 				$('payment_method_review_text').innerHTML = 'PayPal';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'giropay' && providerPaymentMethod == 3 )
 			{
 				$('payment_method_review_text').innerHTML = 'GiroPay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'paysafe' && providerPaymentMethod == 6 )
 			{
 				$('payment_method_review_text').innerHTML = 'PaySafeCard';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'ideal' && providerPaymentMethod == 5 )
 			{
 				$('payment_method_review_text').innerHTML = 'iDEAL';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'sofort' && providerPaymentMethod == 7 )
 			{
@@ -3916,272 +3891,218 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 					$('payment_method_review_text').innerHTML = 'Sofortüberweisung';					
 				}
 					
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'webmoney' && providerPaymentMethod == 9 )
 			{
 				$('payment_method_review_text').innerHTML = 'WebMoney';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'moneybookers' && providerPaymentMethod == 10 )
 			{
 				$('payment_method_review_text').innerHTML = 'Skrill';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'alipay' && providerPaymentMethod == 11 )
 			{
 				$('payment_method_review_text').innerHTML = 'AliPay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'unionpay' && providerPaymentMethod == 78 )
 			{
 				$('payment_method_review_text').innerHTML = 'UnionPay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'yandex' && providerPaymentMethod == 12 )
 			{
 				$('payment_method_review_text').innerHTML = 'Yandex';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'qiwi' && providerPaymentMethod == 14 )
 			{
 				$('payment_method_review_text').innerHTML = 'QIWI Wallet';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'beeline' && providerPaymentMethod == 33 )
 			{
 				$('payment_method_review_text').innerHTML = 'Mobile Payments';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'boleto' && providerPaymentMethod == 18 )
 			{
 				$('payment_method_review_text').innerHTML = 'Boleto Bancario';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'boacompragold' && providerPaymentMethod == 19 )
 			{
 				$('payment_method_review_text').innerHTML = 'BoaCompra Gold';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bancodobrasilonline' && providerPaymentMethod == 20 )
 			{
 				$('payment_method_review_text').innerHTML = 'Banco Do Brasil Online';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'itauonline' && providerPaymentMethod == 21 )
 			{
 				$('payment_method_review_text').innerHTML = 'Itau Online';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bradescoonline' && providerPaymentMethod == 22 )
 			{
 				$('payment_method_review_text').innerHTML = 'Bradesco Online';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pagseguro' && providerPaymentMethod == 23 )
 			{
 				$('payment_method_review_text').innerHTML = 'Pagseguro';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'visabrazil' && providerPaymentMethod == 24 )
 			{
 				$('payment_method_review_text').innerHTML = 'Visa (National)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'amexbrazil' && providerPaymentMethod == 25 )
 			{
 				$('payment_method_review_text').innerHTML = 'American Express (National)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'aura' && providerPaymentMethod == 26 )
 			{
 				$('payment_method_review_text').innerHTML = 'Aura';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'hipercard' && providerPaymentMethod == 27 )
 			{
 				$('payment_method_review_text').innerHTML = 'Hipercard';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mastercardbrazil' && providerPaymentMethod == 28 )
 			{
 				$('payment_method_review_text').innerHTML = 'Mastercard (National)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'dinerscardbrazil' && providerPaymentMethod == 29 )
 			{
 				$('payment_method_review_text').innerHTML = 'Diner\'s Club (National)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'multibanco' && providerPaymentMethod == 45 )
 			{
 				$('payment_method_review_text').innerHTML = 'Multibanco';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'payshop' && providerPaymentMethod == 46 )
 			{
 				$('payment_method_review_text').innerHTML = 'Payshop';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'maestroboacompra' && providerPaymentMethod == 47 )
 			{
 				$('payment_method_review_text').innerHTML = 'Maestro (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'visaelectronboacompra' && providerPaymentMethod == 121 )
 			{
 				$('payment_method_review_text').innerHTML = 'Visa Electron (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'oxxo' && providerPaymentMethod == 48 )
 			{
 				$('payment_method_review_text').innerHTML = 'OXXO';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'toditocash' && providerPaymentMethod == 49 )
 			{
 				$('payment_method_review_text').innerHTML = 'Todito Cash';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'carnet' && providerPaymentMethod == 50 )
 			{
 				$('payment_method_review_text').innerHTML = 'Carnet';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'spei' && providerPaymentMethod == 51 )
 			{
 				$('payment_method_review_text').innerHTML = 'SPEI';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == '3pay' && providerPaymentMethod == 52 )
 			{
 				$('payment_method_review_text').innerHTML = 'Mobile Payments';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'isbank' && providerPaymentMethod == 53 )
 			{
 				$('payment_method_review_text').innerHTML = 'Is Bank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'garanti' && providerPaymentMethod == 54 )
 			{
 				$('payment_method_review_text').innerHTML = 'Garanti';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'akbank' && providerPaymentMethod == 55 )
 			{
 				$('payment_method_review_text').innerHTML = 'Akbank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'yapikredi' && providerPaymentMethod == 56 )
 			{
 				$('payment_method_review_text').innerHTML = 'Yapi Kredi';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'halkbank' && providerPaymentMethod == 57 )
 			{
 				$('payment_method_review_text').innerHTML = 'Halkbank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bankasya' && providerPaymentMethod == 58 )
 			{
 				$('payment_method_review_text').innerHTML = 'Bank Asya';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'finansbank' && providerPaymentMethod == 59 )
 			{
 				$('payment_method_review_text').innerHTML = 'Finansbank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'denizbank' && providerPaymentMethod == 60 )
 			{
 				$('payment_method_review_text').innerHTML = 'DenizBank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'ptt' && providerPaymentMethod == 61 )
 			{
 				$('payment_method_review_text').innerHTML = 'PTT';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'cashu' && providerPaymentMethod == 62 )
 			{
 				$('payment_method_review_text').innerHTML = 'CashU';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'onecard' && providerPaymentMethod == 66 )
 			{
 				$('payment_method_review_text').innerHTML = 'OneCard';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'tenpay' && providerPaymentMethod == 84 )
 			{
 				$('payment_method_review_text').innerHTML = 'Tenpay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'wechat' && providerPaymentMethod == 85 )
 			{
 				$('payment_method_review_text').innerHTML = 'WeChat';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'molpoints' && providerPaymentMethod == 31 )
 			{
 				$('payment_method_review_text').innerHTML = 'MOL Points';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'konbini' && providerPaymentMethod == 34 )
 			{
 				$('payment_method_review_text').innerHTML = 'Konbini';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'credit_card_japan' && providerPaymentMethod == 36 )
 			{
 				$('payment_method_review_text').innerHTML = 'Credit Card (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bank_transfer_japan' && providerPaymentMethod == 37 )
 			{
 				$('payment_method_review_text').innerHTML = 'Bank Transfer (Japan)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'payeasy' && providerPaymentMethod == 38 )
 			{
 				$('payment_method_review_text').innerHTML = 'Pay Easy';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'webmoney_japan' && providerPaymentMethod == 65 )
 			{
 				$('payment_method_review_text').innerHTML = 'WebMoney';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'webmoney_japan_steam_card' && providerPaymentMethod == 125 )
 			{
 				$('payment_method_review_text').innerHTML = 'Steam Prepaid Card';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bitcash' && providerPaymentMethod == 81 )
 			{
 				$('payment_method_review_text').innerHTML = 'BitCash';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'netcash' && providerPaymentMethod == 82 )
 			{
 				$('payment_method_review_text').innerHTML = 'NetCash';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'nanaco' && providerPaymentMethod == 83 )
 			{
 				$('payment_method_review_text').innerHTML = 'nanacoギフト';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'zong' && providerPaymentMethod == 39 )
 			{
 				$('payment_method_review_text').innerHTML = 'Zong';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'culturevoucher' && providerPaymentMethod == 40 )
 			{
 				$('payment_method_review_text').innerHTML = 'Culture Voucher';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'happymoneyvoucher' && providerPaymentMethod == 42 )
 			{
@@ -4191,252 +4112,202 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'eclubpoints' && providerPaymentMethod == 35 )
 			{
 				$('payment_method_review_text').innerHTML = 'eClub Points';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pse' && providerPaymentMethod == 67 )
 			{
 				$('payment_method_review_text').innerHTML = 'PSE';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'exito' && providerPaymentMethod == 68 )
 			{
 				$('payment_method_review_text').innerHTML = 'Exito';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'efecty' && providerPaymentMethod == 69 )
 			{
 				$('payment_method_review_text').innerHTML = 'Efecty';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'baloto' && providerPaymentMethod == 70 )
 			{
 				$('payment_method_review_text').innerHTML = 'Baloto';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pinvalidda' && providerPaymentMethod == 71 )
 			{
 				$('payment_method_review_text').innerHTML = 'payvalida';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mangirkart' && providerPaymentMethod == 72 )
 			{
 				$('payment_method_review_text').innerHTML = 'MangirKart';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bancocreditodeperu' && providerPaymentMethod == 73 )
 			{
 				$('payment_method_review_text').innerHTML = 'Banco Credito de Peru';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bbvacontinental' && providerPaymentMethod == 74 )
 			{
 				$('payment_method_review_text').innerHTML = 'BBVA Continental';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'safetypay' && providerPaymentMethod == 75 )
 			{
 				$('payment_method_review_text').innerHTML = 'SafetyPay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pagoefectivo' && providerPaymentMethod == 76 )
 			{
 				$('payment_method_review_text').innerHTML = 'PagoEfectivo';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'trustly' && providerPaymentMethod == 77 )
 			{
 				$('payment_method_review_text').innerHTML = 'Trustly';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bitcoin' && providerPaymentMethod == 79 )
 			{
 				$('payment_method_review_text').innerHTML = 'Bitcoin';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}			
 			else if ( method.value == 'nodwin_cod' && providerPaymentMethod == 86 )
 			{
 				$('payment_method_review_text').innerHTML = 'Cash on Delivery';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'credit_card_india' && providerPaymentMethod == 87 )
 			{
 				$('payment_method_review_text').innerHTML = 'Credit Card (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'debit_card_india' && providerPaymentMethod == 88 )
 			{
 				$('payment_method_review_text').innerHTML = 'Debit Card (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'net_banking_india' && providerPaymentMethod == 89 )
 			{
 				$('payment_method_review_text').innerHTML = 'Net Banking';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'cash_card_india' && providerPaymentMethod == 90 )
 			{
 				$('payment_method_review_text').innerHTML = 'Cash Card';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'wallet_india' && providerPaymentMethod == 91 )
 			{
 				$('payment_method_review_text').innerHTML = 'Prepaid Wallet (Domestic)';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'korean_mobile' && providerPaymentMethod == 92 )
 			{
 				$('payment_method_review_text').innerHTML = 'Mobile Payments';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'naranja' && providerPaymentMethod == 93 )
 			{
 				$('payment_method_review_text').innerHTML = 'Naranja';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'cencosud' && providerPaymentMethod == 94 )
 			{
 				$('payment_method_review_text').innerHTML = 'Cencosud';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'cabal' && providerPaymentMethod == 95 )
 			{
 				$('payment_method_review_text').innerHTML = 'Cabal';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pagofacil' && providerPaymentMethod == 96 )
 			{
 				$('payment_method_review_text').innerHTML = 'PagoFacil';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'rapipago' && providerPaymentMethod == 97 )
 			{
 				$('payment_method_review_text').innerHTML = 'Rapipago';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'banconacionaldecostarica' && providerPaymentMethod == 98 )
 			{
 				$('payment_method_review_text').innerHTML = 'Banco Nacional De Costa Rica';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'bancopoplar' && providerPaymentMethod == 99 )
 			{
 				$('payment_method_review_text').innerHTML = 'BancoPoplar';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'redpagos' && providerPaymentMethod == 100 )
 			{
 				$('payment_method_review_text').innerHTML = 'RedPagos';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'spe' && providerPaymentMethod == 101 )
 			{
 				$('payment_method_review_text').innerHTML = 'SPE';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'multicaja' && providerPaymentMethod == 102 )
 			{
 				$('payment_method_review_text').innerHTML = 'Multicaja';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'redcompra' && providerPaymentMethod == 103 )
 			{
 				$('payment_method_review_text').innerHTML = 'RedCompra';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'ziraatbank' && providerPaymentMethod == 104 )
 			{
 				$('payment_method_review_text').innerHTML = 'ZiraatBank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'vakiflarbank' && providerPaymentMethod == 105 )
 			{
 				$('payment_method_review_text').innerHTML = 'VakiflarBank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'kuveytturkbank' && providerPaymentMethod == 106 )
 			{
 				$('payment_method_review_text').innerHTML = 'KuveytTurkBank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'ekonomibank' && providerPaymentMethod == 107 )
 			{
 				$('payment_method_review_text').innerHTML = 'EkonomiBank';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pichincha' && providerPaymentMethod == 108 )
 			{
 				$('payment_method_review_text').innerHTML = 'Pichincha';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'pichinchacash' && providerPaymentMethod == 109 )
 			{
 				$('payment_method_review_text').innerHTML = 'PichinchaCash';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'przelewy24' && providerPaymentMethod == 110 )
 			{
 				$('payment_method_review_text').innerHTML = 'Przelewy24';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'trustpay' && providerPaymentMethod == 111 )
 			{
 				$('payment_method_review_text').innerHTML = 'Trustpay';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'poli' && providerPaymentMethod == 112 )
 			{
 				$('payment_method_review_text').innerHTML = 'POLi';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mercadopago' && providerPaymentMethod == 113 )
 			{
 				$('payment_method_review_text').innerHTML = 'MercadoPago';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'payu' && providerPaymentMethod == 114 )
 			{
 				$('payment_method_review_text').innerHTML = 'PayU';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'vtcpaywallet' && providerPaymentMethod == 115 )
 			{
 				$('payment_method_review_text').innerHTML = 'VTC Pay e-Wallet';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'vtcpaycards' && providerPaymentMethod == 119 )
 			{
 				$('payment_method_review_text').innerHTML = 'Local Credit Cards';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'vtcpayonlinebanking' && providerPaymentMethod == 120 )
 			{
 				$('payment_method_review_text').innerHTML = 'Online Banking';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'mrcash' && providerPaymentMethod == 116 )
 			{
 				$('payment_method_review_text').innerHTML = 'MrCash';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'eps' && providerPaymentMethod == 117 )
 			{
 				$('payment_method_review_text').innerHTML = 'EPS';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'interac' && providerPaymentMethod == 118 )
 			{
 				$('payment_method_review_text').innerHTML = 'Interac';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'santanderrio' && providerPaymentMethod == 63 )
 			{
 				$('payment_method_review_text').innerHTML = 'Santander Rio';
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}
 			else if ( method.value == 'cafefunded' && providerPaymentMethod == 122 )
 			{
 				$('payment_method_review_text').innerHTML = 'In Person Transaction: ' + sSiteName;
-				$('checkout_review_payment_info_area').style.display = 'none';
 			}			
 		}
 		
@@ -4447,7 +4318,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			$J('#review_address_body').append( '<br>', document.createTextNode($('billing_address_two').value ) );
 		}
 			
-		if ( $('billing_country').value == 'US' )
+		if ( g_bHasBillingStates )
 		{
 			$J('#review_address_body').append( '<br>', document.createTextNode( $('billing_city').value+', '+$('billing_state_select').value ) );
 		}
@@ -4466,7 +4337,7 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$J('#review_shipping_address_body').append( '<br>', document.createTextNode( $('shipping_address_two').value ) );
 			}
 			
-			if ( $('shipping_country').value == 'US' )
+			if ( g_bHasBillingStates )
 			{
 				$J('#review_shipping_address_body').append( '<br>', document.createTextNode( $('shipping_city').value+', '+$('shipping_state_select').value ) );
 			}
