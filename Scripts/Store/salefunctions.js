@@ -116,8 +116,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 			if ( rgSeenAppIds.indexOf( rgRecommendedGames[i].appid ) !== -1 )
 				continue;
 			
-			rgRecommendedGames[i].feature = 'summer2018_mergedview_recommend_neural';
-			
 			// 7 from recommendation into tier1, then overflow into tier2
 			if ( rgTier1.length < k_nTier1RecommendationMax )		
 			{
@@ -156,8 +154,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		{
 			if ( rgSeenAppIds.indexOf( rgTier2Candidates[i].appid ) !== -1 )
 				continue;
-
-			rgTier2Candidates[i].feature = 'summer2018_mergedview_curated';
 				
 			rgTier2.push( rgTier2Candidates[i] );
 			rgSeenAppIds.push( rgTier2Candidates[i].appid );
@@ -175,16 +171,6 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 		rgTier2 = GHomepage.FilterItemsForDisplay(
 			rgDisplayLists.sale_tier2, 'home', 9, k_nTier2Max, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true }
 		);
-		
-		for ( var i = 0; i < rgTier1.length; i++ )
-		{
-			rgTier1[i].feature = 'summer2018_standardview_curated';
-		}
-
-		for ( var i = 0; i < rgTier2.length; i++ )
-		{
-			rgTier2[i].feature = 'summer2018_standardview_curated';
-		}
 	}
 
 	var rgItemsPromotedToTier1 = [];
@@ -223,8 +209,12 @@ function HomeRenderFeaturedItems( rgDisplayLists )
 	HomeSaleBlock( rgTier2, $J('#tier2_target' ) );
 
 	// capsule rows
-	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent() );
-	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr') );
+	HomeSaleCapsuleCategory( rgDisplayLists.controller, $J('#hardware_carousel').parent(), 'sale_hardware' );
+	HomeSaleCapsuleCategory( rgDisplayLists.virtualreality, $J('.category_caps_vr'), 'sale_vr' );
+	HomeSaleCapsuleCategory( rgDisplayLists.bundles, $J('.category_caps_bundles'), 'sale_bundles' );
+	HomeSaleCapsuleCategory( rgDisplayLists.franchises, $J('.category_caps_franchises'), 'sale_franchises' );
+	HomeSaleCapsuleCategory( rgDisplayLists.moddable, $J('.category_caps_moddable'), 'sale_moddable' );
+
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
@@ -267,13 +257,16 @@ function HomeSaleBlock( rgItems, $Parent )
 	$Parent.css('height','');
 }
 
-function HomeSaleCapsuleCategory( rgItems, $Parent )
+function HomeSaleCapsuleCategory( rgItems, $Parent, strFeatureContext )
 {
 	if ( !rgItems )
 	{
 		$Parent.hide();
 		return;
 	}
+
+	if ( !strFeatureContext )
+		strFeatureContext = 'sale_categories';
 
 	var rgCapsules = GHomepage.FilterItemsForDisplay(
 		rgItems, 'home', 4, 16, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
@@ -290,7 +283,7 @@ function HomeSaleCapsuleCategory( rgItems, $Parent )
 	{
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) {
 			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
-		} , 'sale_categories', 4 );
+		} , strFeatureContext, 4 );
 	}
 	else
 	{
