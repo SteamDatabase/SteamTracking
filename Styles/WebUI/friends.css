@@ -1069,8 +1069,7 @@
   padding: 4px 4px 4px 8px;
   /*flex: 6;*/
   flex-shrink: 1;
-  width: 100%;
-  min-width: 164px; }
+  width: 100%; }
 
 .chatentry_chatEntryActionsGroup_15mWd {
   padding: 2px;
@@ -2799,7 +2798,7 @@ iframe.steamTVLogin {
 
 .broadcastchat_MessageContents_555m- {
   color: gray;
-  font-size: 10px; }
+  font-size: 11px; }
   .broadcastchat_MessageContents_555m- a {
     color: white; }
 
@@ -4519,7 +4518,10 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
 
 .bbcode_ImageModalBackground_XfE_W {
   background-color: #2c3036;
-  padding: 30px; }
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 /* Style scrollbar elements */
 ::-webkit-scrollbar,
@@ -6726,6 +6728,15 @@ img {
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
   transition: background-color .32s ease-in-out; }
+
+.shared_common_SubText_iXOar {
+  color: gray;
+  font-size: 10px; }
+
+.shared_common_AvatarImage_HVcru {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px; }
 
 html.client_chat_frame body,
 html.web_chat_frame body {

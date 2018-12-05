@@ -385,6 +385,7 @@
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
+        SUPPORTED_LANGUAGES: [],
         COUNTRY: "",
         CDN_URL: "",
         MEDIA_CDN_COMMUNITY_URL: "",
@@ -402,6 +403,7 @@
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
+        IN_TENFOOT: !1,
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         SESSIONID: "",
@@ -2860,10 +2862,10 @@
         return T;
       }),
       n.d(t, "e", function() {
-        return D;
+        return G;
       }),
       n.d(t, "y", function() {
-        return G;
+        return D;
       }),
       n.d(t, "Z", function() {
         return z;
@@ -4296,7 +4298,7 @@
         })
       );
     }
-    function D() {
+    function G() {
       return r.createElement(
         "svg",
         {
@@ -4354,7 +4356,7 @@
         )
       );
     }
-    function G() {
+    function D() {
       return r.createElement(
         "svg",
         {
