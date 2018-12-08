@@ -21,6 +21,7 @@ public:
     virtual unknown_ret GetISteamRemoteStorage(int, int, char const*) = 0;
     virtual unknown_ret GetISteamScreenshots(int, int, char const*) = 0;
     virtual unknown_ret GetISteamGameSearch(int, int, char const*) = 0;
+    virtual unknown_ret GetISteamParties(int, int, char const*) = 0;
     virtual unknown_ret RunFrame() = 0;
     virtual unknown_ret GetIPCCallCount() = 0;
     virtual unknown_ret SetWarningMessageHook(void (*)(int, char const*)) = 0;
@@ -39,5 +40,4 @@ public:
     virtual unknown_ret GetISteamInventory(int, int, char const*) = 0;
     virtual unknown_ret GetISteamVideo(int, int, char const*) = 0;
     virtual unknown_ret GetISteamParentalSettings(int, int, char const*) = 0;
-    virtual unknown_ret GetISteamParties(int, int, char const*) = 0;
 };

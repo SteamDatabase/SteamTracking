@@ -28,7 +28,9 @@ public:
     virtual unknown_ret GetDigitalActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetAnalogActionHandle(unsigned int, char const*) = 0;
     virtual unknown_ret GetDigitalActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
+    virtual unknown_ret GetDigitalActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EInputActionOrigin*) = 0;
     virtual unknown_ret GetAnalogActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
+    virtual unknown_ret GetAnalogActionOrigins(unsigned int, unsigned long long, unsigned long long, unsigned long long, EInputActionOrigin*) = 0;
     virtual unknown_ret GetDigitalActionOrigins_Legacy(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
     virtual unknown_ret GetAnalogActionOrigins_Legacy(unsigned int, unsigned long long, unsigned long long, unsigned long long, EControllerActionOrigin*) = 0;
     virtual unknown_ret TriggerHapticPulseOnHandle(unsigned long long, ESteamControllerPad, unsigned short) = 0;
@@ -44,6 +46,8 @@ public:
     virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
     virtual unknown_ret TranslateActionOrigin(ESteamInputType, EControllerActionOrigin) = 0;
     virtual unknown_ret GetInputTypeForHandle(unsigned long long) = 0;
+    virtual unknown_ret TranslateSteamInputOriginToSteamControllerOrigin(EInputActionOrigin) = 0;
+    virtual unknown_ret TranslateSteamControllerOriginToSteamInputOrigin(EControllerActionOrigin) = 0;
     virtual unknown_ret GetMotionData(unsigned long long) = 0;
     virtual unknown_ret GetMotionDataDisabled(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetCurrentFocusedAppID(unsigned long long) = 0;
