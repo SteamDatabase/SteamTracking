@@ -5030,8 +5030,13 @@ CDASHPlayerUI.prototype.HideVolumeBar = function()
 CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 {
 	var nLastVolume = WebStorage.GetLocal( 'video_volume' );
+
+	// No volume set, then choose zero and mute the player. This is help get past autoplay blockers in chrome
 	if( nLastVolume == null )
-		nLastVolume = 1;
+	{
+		this.m_player.m_elVideoPlayer.muted = true;
+		nLastVolume = 0;
+	}
 
 	// If I start out muted, actually set the volume to zero. At some point, I cannot pinpoint where,
 	// the muted setting on the html video element is ignored.
@@ -5042,12 +5047,23 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 
 	this.SetVolume( nLastVolume );
 
+	// Assume muted to prevent autoplaying in chrome
 	var nLastMute = WebStorage.GetLocal( 'video_mute' );
 	if ( nLastMute == null )
-		nLastMute = false;
+	{
+		nLastMute = true;
+	}
+
+	// If the volume is zero, overwrite the video to be muted
+	if( nLastVolume == 0 )
+	{
+		nLastMute = true;
+	}
 
 	if ( nLastMute != this.m_player.m_elVideoPlayer.muted )
+	{
 		this.ToggleMute();
+	}
 }
 
 CDASHPlayerUI.prototype.PanelSelectShift = function( elSelect, bMoveRight )
