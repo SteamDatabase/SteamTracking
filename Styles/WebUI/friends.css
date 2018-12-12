@@ -327,6 +327,58 @@
   width: 120px;
   height: 120px; }
 
+.steamavatar_avatarHolder_1G7LI {
+  height: 36px;
+  display: flex;
+  margin: 0px 0px;
+  transform: scale(0.86, 0.86) translateX(0px);
+  transition-property: transform;
+  transition-duration: 0.34s;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
+  flex-direction: row;
+  flex-shrink: 0; }
+  .steamavatar_avatarHolder_1G7LI .Large {
+    height: 84px; }
+
+.ingame .steamavatar_avatarStatus_1Pwr6 {
+  background: linear-gradient(to bottom, #8cd61d 0%, #a1f410 30%, #a1f410 70%, #8cd61d 100%); }
+
+.watchingbroadcast .steamavatar_avatarStatus_1Pwr6 {
+  background: linear-gradient(to bottom, #9c8fd4 0%, #9c8fd4 30%, #9c8fd4 70%, #9c8fd4 100%); }
+
+.online .steamavatar_avatarStatus_1Pwr6 {
+  background: linear-gradient(to bottom, #6dcff6 0%, #6dcff6 30%, #6dcff6 70%, #6dcff6 100%); }
+
+.awayOrSnooze .steamavatar_avatarStatus_1Pwr6 {
+  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
+  -webkit-mask-size: 5px 5px;
+  mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
+  mask-size: 5px 5px;
+  opacity: .75; }
+
+.steamavatar_avatarStatus_1Pwr6.right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2px; }
+
+.steamavatar_avatarStatus_1Pwr6.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px; }
+
+.steamavatar_avatar_f2laR {
+  border: 1px solid #383c43;
+  height: calc( 100% - 2px);
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
+  transition: filter .24s ease-in-out; }
+
+.steamavatar_friendavatar_2yzw2 {
+  display: block; }
+
 .miniProfileHover .miniprofile_arrow.left {
   border-right: 8px solid #41444e; }
 
@@ -6710,6 +6762,9 @@ body {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
 
+button {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
+
 img {
   -webkit-user-drag: none; }
 
@@ -8377,13 +8432,6 @@ body.in_global_drag .friendlist_titlebar {
 .friend.dragOriginGhost {
   opacity: 0.25; }
 
-.friend .avatarHolder img.avatar {
-  border: 1px solid #383c43;
-  height: calc( 100% - 2px);
-  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
-  transition: filter .24s ease-in-out;
-  /*cursor: pointer;*/ }
-
 /*.friendsContainer .friend .avatarHolder img.avatar:hover
 {
 	box-shadow: 2px 1px 6px 0px rgb(120, 131, 146);
@@ -8498,7 +8546,6 @@ body.in_global_drag .friendlist_titlebar {
   .friend .avatarHolder img.avatar {
     border-width: 0.5px; } }
 
-.friend .avatarHolder,
 .SteamPlayerGroupFooter .SteamPlayerGroupFooterCount {
   height: 36px;
   display: flex;
@@ -11750,15 +11797,6 @@ a.connectionStatus:visited {
 .chatTab .avatarHolder:hover img {
   transform: scale(1, 1) translateX(0px); }
 
-.friend.ingame .avatarHolder .avatarStatus {
-  background: linear-gradient(to bottom, #8cd61d 0%, #a1f410 30%, #a1f410 70%, #8cd61d 100%); }
-
-.friend.watchingbroadcast .avatarHolder .avatarStatus {
-  background: linear-gradient(to bottom, #9c8fd4 0%, #9c8fd4 30%, #9c8fd4 70%, #9c8fd4 100%); }
-
-.friend.online .avatarHolder .avatarStatus {
-  background: linear-gradient(to bottom, #6dcff6 0%, #6dcff6 30%, #6dcff6 70%, #6dcff6 100%); }
-
 .MemberListColumn .friend.online .avatarHolder .avatarStatus {
   background: linear-gradient(to right, #6dcff6 0%, #6dcff6 2px, rgba(109, 207, 246, 0) 2px, rgba(109, 207, 246, 0) 100%);
   background-color: rgba(109, 207, 246, 0); }
@@ -11780,13 +11818,6 @@ a.connectionStatus:visited {
   width: 10px;
   transform: translateX(8px);
   background-color: rgba(140, 214, 29, 0.45); }
-
-.friend.awayOrSnooze .avatarHolder .avatarStatus {
-  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
-  -webkit-mask-size: 5px 5px;
-  mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
-  mask-size: 5px 5px;
-  opacity: .75; }
 
 .friendInviteContainer .SnoozeContainer {
   display: none; }
@@ -15239,9 +15270,6 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 
 .quickAccessFriends .friend.friend.awayOrSnooze .avatarHolder img {
   opacity: .5; }
-
-.avatarHolder.Large {
-  height: 84px; }
 
 .msg.isCurrentUser .TradeOfferInvite {
   background: radial-gradient(256px 256px at 20% 20%, rgba(61, 68, 78, 0.5) 0%, rgba(41, 44, 51, 0.5) 50%, rgba(36, 39, 46, 0.5) 100%), #1e2329;

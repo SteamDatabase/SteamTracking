@@ -311,7 +311,7 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext, bPromoRow 
 				)
 			) );
 
-			$Row.append( $J('<div/>', {'class': 'small_sale_caps' } ).append(
+			$Row.append( $J('<div/>', {'class': 'small_sale_caps steam_awards_cta' } ).append(
 				$J( '<a/>', { 'href' : g_strPromoCapsuleURL } ).append(
 					$J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': g_strPromoCapsule } )
 				)

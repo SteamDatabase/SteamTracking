@@ -27,6 +27,11 @@
                     "name": "name",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "room_type",
+                    "type": "uint32",
+                    "optional": false
                 }
             ]
         },

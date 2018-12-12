@@ -1,0 +1,36 @@
+{
+    "name": "IContentServerDirectoryService",
+    "methods": [
+        {
+            "name": "GetServersForSteamPipe",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "cell_id",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "client Cell ID"
+                },
+                {
+                    "name": "max_servers",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "max servers in response list"
+                },
+                {
+                    "name": "ip_override",
+                    "type": "string",
+                    "optional": true,
+                    "description": "client IP address"
+                },
+                {
+                    "name": "launcher_type",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "launcher type"
+                }
+            ]
+        }
+    ]
+}

@@ -180,6 +180,7 @@ GHomepage = {
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
+			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -343,7 +344,7 @@ GHomepage = {
 		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
 		if( window.hasOwnProperty('GSteamBroadcasts')) {
 			try {
-				GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
+				GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, GHomepage.nMaxBroadcasts );
 			} catch (e) { OnHomepageException(e); }
 		}
 

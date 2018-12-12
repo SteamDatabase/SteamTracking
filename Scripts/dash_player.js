@@ -4979,16 +4979,10 @@ CDASHPlayerUI.prototype.OnVolumeStopDrag = function( e, ele )
 	$J( '.volume_slider', this.m_elOverlay ).off( 'mousemove' );
 }
 
-CDASHPlayerUI.prototype.ToggleMute = function( e, ele )
+// Make sure the UI matches the mute state
+CDASHPlayerUI.prototype.UpdateUIBasedOnMute = function()
 {
-	if ( !this.m_player.BPlayingAudio() )
-		return;
-
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
-	elVideoPlayer.muted = !elVideoPlayer.muted;
-
-	WebStorage.SetLocal( 'video_mute', elVideoPlayer.muted );
-
 	if( elVideoPlayer.muted )
 	{
 		$J( '.volume_icon',this.m_elOverlay ).addClass( 'muted' );
@@ -5005,6 +4999,22 @@ CDASHPlayerUI.prototype.ToggleMute = function( e, ele )
 	else
 	{
 		$J( '.volume_icon',this.m_elOverlay ).removeClass( 'muted' );
+	}
+}
+
+CDASHPlayerUI.prototype.ToggleMute = function( e, ele )
+{
+	if ( !this.m_player.BPlayingAudio() )
+		return;
+
+	var elVideoPlayer = this.m_player.m_elVideoPlayer;
+	elVideoPlayer.muted = !elVideoPlayer.muted;
+
+	WebStorage.SetLocal( 'video_mute', elVideoPlayer.muted );
+
+	this.UpdateUIBasedOnMute();
+	if( !elVideoPlayer.muted )
+	{
 		this.SetVolume( elVideoPlayer.volume );
 	}
 }
@@ -5031,30 +5041,33 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 {
 	var nLastVolume = WebStorage.GetLocal( 'video_volume' );
 
-	// No volume set, then choose zero and mute the player. This is help get past autoplay blockers in chrome
+	// The DASH player is shared between Broadcast and VOD. We want VOD to have volume by default. For embedded
+	// broadcasts on the store want to initialize as mute to prevent chrome/browser autoplay blocks.  Use the
+	// 'muted' attribute on the video element to determine the right default .
 	if( nLastVolume == null )
 	{
-		this.m_player.m_elVideoPlayer.muted = true;
-		nLastVolume = 0;
-	}
-
-	// If I start out muted, actually set the volume to zero. At some point, I cannot pinpoint where,
-	// the muted setting on the html video element is ignored.
-	if( this.m_player.m_elVideoPlayer.muted )
-	{
-		nLastVolume = 0;
+		nLastVolume = this.m_player.m_elVideoPlayer.muted ? 0 : 1;
 	}
 
 	this.SetVolume( nLastVolume );
 
-	// Assume muted to prevent autoplaying in chrome
+	// If the element is muted, then default to mute to prevent autoplay blockage
 	var nLastMute = WebStorage.GetLocal( 'video_mute' );
 	if ( nLastMute == null )
 	{
-		nLastMute = true;
+		// If the volume is zero or we have requested elemented to be muted, set the default to mute.
+		if( this.m_player.m_elVideoPlayer.muted || nLastVolume == 0 )
+		{
+
+			nLastMute = true;
+		}
+		else
+		{
+			nLastMute = false;
+		}
 	}
 
-	// If the volume is zero, overwrite the video to be muted
+	// No volumne, better to treat it as mute as it is clearer in the UI
 	if( nLastVolume == 0 )
 	{
 		nLastMute = true;
@@ -5063,6 +5076,11 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 	if ( nLastMute != this.m_player.m_elVideoPlayer.muted )
 	{
 		this.ToggleMute();
+	}
+	else
+	{
+		// Make sure the UI represented the current volume and muted states.
+		this.UpdateUIBasedOnMute();
 	}
 }
 
