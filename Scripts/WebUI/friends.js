@@ -15181,8 +15181,7 @@
               this.UpdateChatRoomState(e.default_chat_id(), e.chat_rooms());
           }),
           (e.prototype.UpdateGroupStateFromSummary = function(e) {
-            (this.m_strName = e.chat_group_name()),
-              (this.m_strTagLine = e.chat_group_tagline()),
+            (this.m_strTagLine = e.chat_group_tagline()),
               null != e.chat_group_avatar_sha() &&
                 (this.m_strAvatarSHA = u(e.chat_group_avatar_sha())),
               (this.m_unWatchingBroadcastAccountID = e.watching_broadcast_accountid()),
@@ -15199,6 +15198,7 @@
                 new Bt(e.rank(), e.role_ids())
               ),
               this.SetOwnerAppID(e.appid()),
+              this.SetNameCheckingForAppLocalization(e.chat_group_name()),
               (this.m_rgPartyBeacons = e.party_beacons().map(function(e) {
                 return {
                   account_id: new O.a(e.steamid_owner()).GetAccountID(),
@@ -15211,6 +15211,27 @@
                 this.m_ulGroupID,
                 this.m_rgPartyBeacons
               );
+          }),
+          (e.prototype.SetNameCheckingForAppLocalization = function(e) {
+            var o = this,
+              i = null;
+            !this.m_unOwnerAccountID &&
+              this.GetOwnerAppID() &&
+              ("#" == e[0]
+                ? (i = { tok: e })
+                : "{" == e[0] && (i = JSON.parse(e))),
+              i && i.tok
+                ? ((this.m_strName = "..."),
+                  ei.AppInfoStore.GetRichPresenceLocAsync(
+                    this.GetOwnerAppID()
+                  ).then(function(e) {
+                    var t = new Map();
+                    if (i.params)
+                      for (var n in i.params)
+                        t.set(n.toString(), i.params[n].toString());
+                    o.m_strName = e.Localize(i.tok, t);
+                  }))
+                : (this.m_strName = e);
           }),
           (e.prototype.UpdateGroupState = function(e) {
             Object(N.a)(
@@ -15314,7 +15335,6 @@
               e.chat_group_id() == this.m_ulGroupID,
               "Chat group id doesn't match header"
             ),
-              (this.m_strName = e.chat_name()),
               (this.m_strTagLine = e.tagline()),
               null != e.avatar_sha() &&
                 (this.m_strAvatarSHA = u(e.avatar_sha())),
@@ -15341,6 +15361,7 @@
               this.LOG("role/action " + a.toString());
             }
             this.SetOwnerAppID(e.appid()),
+              this.SetNameCheckingForAppLocalization(e.chat_name()),
               (this.m_rgPartyBeacons = e.party_beacons().map(function(e) {
                 return {
                   account_id: new O.a(e.steamid_owner()).GetAccountID(),
@@ -16205,6 +16226,12 @@
           R.c([h.action], e.prototype, "ChangeMemberRoles", null),
           R.c([h.action], e.prototype, "SetInitialGroupState", null),
           R.c([h.action], e.prototype, "UpdateGroupStateFromSummary", null),
+          R.c(
+            [h.action],
+            e.prototype,
+            "SetNameCheckingForAppLocalization",
+            null
+          ),
           R.c([h.action], e.prototype, "UpdateGroupState", null),
           R.c([h.action], e.prototype, "UnloadActiveGroupState", null),
           R.c([h.action], e.prototype, "UnloadGroupState", null),
