@@ -5,7 +5,18 @@ var k_nTier1RecommendationMax = 7;
 var k_nTier2Max = 18;
 var k_nTier1RecommendationMax = 12;
 
-function OnVoteClick( voteid, appid )
+
+function OnDeveloperVoteClick( voteid, developerid )
+{
+	OnVoteClick(voteid, 0, developerid );
+}
+
+function OnAppVoteClick( voteid, appid )
+{
+	OnVoteClick( voteid, appid, 0 );
+}
+
+function OnVoteClick( voteid, appid, developerid )
 {
 	if ( !g_AccountID )
 	{
@@ -25,19 +36,21 @@ function OnVoteClick( voteid, appid )
 		g_bVoteInFlight = true;
 		$J.post(
 			'https://store.steampowered.com/salevote',
-			{sessionid: g_sessionID, voteid: voteid, appid: appid }
+			{sessionid: g_sessionID, voteid: voteid, appid: appid,  developerid: developerid }
 		).done( function (data) {
 				// update display
-				HighlightSelectedVote( voteid, appid );
+				// HighlightSelectedVote( voteid, appid );
+				var $dialog = null;
 				if ( data )
 				{
-					ShowAlertDialog( 'The Steam Awards', data );
+					$dialog = ShowAlertDialog( 'The Steam Awards', data );
 				}
 				else
 				{
 					// show something generic
-					ShowAlertDialog( 'The Steam Awards', 'Thanks for voting!' );
+					$dialog = ShowAlertDialog( 'The Steam Awards', 'Thanks for voting!' );
 				}
+				$dialog.done( function() { window.location.reload(); } );
 			}).fail( function() {
 				ShowAlertDialog(
 					'The Steam Awards',
@@ -598,4 +611,70 @@ function FillCapsuleContainer( rgItems, $Parent, settings )
 		$Parent.hide();
 	}
 }
+
+var CVideoScrollController = function( $container )
+{
+	this.rgVideos = [];
+	var _this = this;
+
+	// Store off the query results locally, so we don't need to re-query every time we scroll (which is slow)
+	$J( 'video', $container ).each(function(i,j){
+		_this.rgVideos.push(j);
+	});
+
+	document.addEventListener('scroll', this.onScroll.bind(this) );
+	window.addEventListener('resize', this.onScroll.bind(this) );
+
+	this.update();
+};
+
+/**
+ * Called on scroll.
+ *
+ * Right now this just calls update, but adding an explicit method since we may want to be smarter later.
+ */
+CVideoScrollController.prototype.onScroll = function(  )
+{
+	this.update();
+};
+
+/** Called on scroll, resize, and once on load.
+ * This function has three basic jobs:
+ * 1) Determine which video we should be playing, and play it (if it's not already)
+ * 2) Stop any videos we shouldn't be playing
+ * 3) Start preloading the *next* video, so it will be ready when we scroll further.
+ *
+ * The "best" video in this context is the highest video on the screen that is fully visible in the viewport.
+ * If no video is "best", we should accept partially occluded videos, though this may not be implemented in v1.
+ */
+CVideoScrollController.prototype.update = function()
+{
+	var idxBest = -1;
+
+	// Find the first fully-visible video.
+	// Note this assumes our array is in order. It *probably* is, but we don't currently do an explicit sort,
+	// so if you're getting weird results, check that first.
+	for( var i=0; i<this.rgVideos.length; i++ )
+	{
+		var rect = this.rgVideos[i].getBoundingClientRect();
+		if( rect.top > 0 && rect.bottom < window.innerHeight )
+		{
+			idxBest = i;
+			break;
+		}
+	}
+
+	// Toggle play/pause statuses.
+	for( var i=0; i<this.rgVideos.length; i++ )
+	{
+		if ( i == idxBest )
+			this.rgVideos[ i ].play ();
+		else
+		{
+			this.rgVideos[ i ].pause ();
+		}
+	}
+
+
+};
 
