@@ -9258,7 +9258,11 @@
           (e.prototype.AppendText = function(e) {
             e.length &&
               this.m_rctElements.push(
-                Ie.createElement("span", { "data-copytext": "" }, e)
+                Ie.createElement(
+                  "span",
+                  { "data-copytext": "", "bbcode-text": e },
+                  e
+                )
               );
           }),
           (e.prototype.AppendNode = function(e, t) {
@@ -9283,7 +9287,11 @@
                 (e = e.substr(t + 1));
             e.length &&
               this.m_rctElements.push(
-                Ie.createElement("span", { "data-copytext": "" }, e)
+                Ie.createElement(
+                  "span",
+                  { "data-copytext": "", "bbcode-text": e },
+                  e
+                )
               );
           }),
           t
@@ -63194,16 +63202,22 @@
         return (
           R.d(t, e),
           (t.prototype.render = function() {
-            var t = "";
+            var n = "";
             return (
               "string" == typeof this.props.children
-                ? (t = this.props.children)
+                ? (n = this.props.children)
                 : Ie.Children.forEach(this.props.children, function(e) {
-                    "string" == typeof e && (t += e);
+                    if (
+                      ("string" == typeof e && (n += e),
+                      "object" == typeof e && e.props)
+                    ) {
+                      var t = e.props["bbcode-text"];
+                      t && (n += t);
+                    }
                   }),
-              t
+              n
                 ? Ie.createElement(Fc, {
-                    emoticon: t,
+                    emoticon: n,
                     large: this.props.context.bUseLargeEmoticons
                   })
                 : null
