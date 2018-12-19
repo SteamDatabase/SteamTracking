@@ -10493,7 +10493,8 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   overflow: hidden;
   flex: 1;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  width: 30%; }
 
 .ChatMessageInvite.broadcastInviteMsg .leftInviteContainer {
   background-color: #000c;
@@ -12050,7 +12051,7 @@ a.connectionStatus:visited {
   border-radius: 50%;
   display: block;
   position: absolute;
-  top: 16px;
+  top: 8px;
   right: 16px;
   background-color: #1f2126;
   cursor: pointer;
