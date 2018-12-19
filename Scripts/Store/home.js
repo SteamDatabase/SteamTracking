@@ -1862,8 +1862,16 @@ GHomepage = {
 			j++;
 		}
 
-		$J('.marketingmessage_area').show();
-
+		// wait until the tabs (top sellers, etc.) are on the screen before we load the IM's
+		$J( window ).scroll( function()
+		{
+			var nCurrentScroll = $J( window ).scrollTop() + $J( window ).height();
+			var showMarketing = $J('.home_tabs_row_ctn').offset().top;
+			if( ! $J('.marketingmessage_area').is(':visible') && nCurrentScroll > showMarketing )
+			{
+				$J('.marketingmessage_area').show();
+			}
+		});
 	}
 };
 

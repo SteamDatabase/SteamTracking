@@ -11,7 +11,7 @@
     )
       (n = o[c]), l[n] && s.push(l[n][0]), (l[n] = 0);
     for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
-    for (_ && _(e); s.length; ) s.shift()();
+    for (d && d(e); s.length; ) s.shift()();
     return p.push.apply(p, r || []), a();
   }
   function a() {
@@ -81,7 +81,7 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var i = 0; i < t.length; i++) e(t[i]);
-  var _ = o;
+  var d = o;
   p.push(["x0hG", 0]), a();
 })({
   "1n9R": function(e, t, n) {
@@ -139,7 +139,8 @@
         account_name: "",
         token: void 0,
         token_use_id: void 0,
-        webapi_token: ""
+        webapi_token: "",
+        authwgtoken: ""
       },
       r = { steamid: "", authwgtoken: "" },
       c = "webui_config";
@@ -148,7 +149,7 @@
       var t = u("config", e);
       t && Object.assign(o, t);
       var n = u("userinfo", e);
-      n && Object.assign(i, n), (window.__webpack_public_path__ = o.CDN_URL);
+      n && Object.assign(i, n);
     }
     function u(e, t) {
       void 0 === t && (t = c);

@@ -5058,7 +5058,6 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 		// If the volume is zero or we have requested elemented to be muted, set the default to mute.
 		if( this.m_player.m_elVideoPlayer.muted || nLastVolume == 0 )
 		{
-
 			nLastMute = true;
 		}
 		else
@@ -5068,7 +5067,9 @@ CDASHPlayerUI.prototype.LoadVolumeSettings = function()
 	}
 
 	// No volumne, better to treat it as mute as it is clearer in the UI
-	if( nLastVolume == 0 )
+	// Or if we explicitly requested the player be treated as muted, then switch to muted. The latter reason is
+	// to avoid being blocked from autoplay.
+	if( nLastVolume == 0 || this.m_player.m_elVideoPlayer.muted )
 	{
 		nLastMute = true;
 	}

@@ -305,7 +305,8 @@
         account_name: "",
         token: void 0,
         token_use_id: void 0,
-        webapi_token: ""
+        webapi_token: "",
+        authwgtoken: ""
       },
       r = { steamid: "", authwgtoken: "" },
       s = "webui_config";
@@ -314,7 +315,7 @@
       var t = u("config", e);
       t && Object.assign(o, t);
       var n = u("userinfo", e);
-      n && Object.assign(i, n), (window.__webpack_public_path__ = o.CDN_URL);
+      n && Object.assign(i, n);
     }
     function u(e, t) {
       void 0 === t && (t = s);

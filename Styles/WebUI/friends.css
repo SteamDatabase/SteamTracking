@@ -337,11 +337,16 @@
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0; }
-  .steamavatar_avatarHolder_1G7LI .Large {
+  .steamavatar_avatarHolder_1G7LI.Large {
     height: 84px; }
+  .steamavatar_avatarHolder_1G7LI.X-Large {
+    height: 92px; }
 
 .ingame .steamavatar_avatarStatus_1Pwr6 {
   background: linear-gradient(to bottom, #8cd61d 0%, #a1f410 30%, #a1f410 70%, #8cd61d 100%); }
+
+.ingame .X-Large .steamavatar_avatarStatus_1Pwr6 {
+  background: #bff02b; }
 
 .watchingbroadcast .steamavatar_avatarStatus_1Pwr6 {
   background: linear-gradient(to bottom, #9c8fd4 0%, #9c8fd4 30%, #9c8fd4 70%, #9c8fd4 100%); }
@@ -370,6 +375,14 @@
   right: 0;
   height: 2px; }
 
+.awayOrSnooze .steamavatar_avatarStatus_1Pwr6.bottom {
+  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  mask: url("../../images/webui/masks/dashed_mask.png") repeat-x; }
+
+.awayOrSnooze .X-Large .steamavatar_avatarStatus_1Pwr6.bottom {
+  mask-size: 6px 6px;
+  opacity: 1.0; }
+
 .steamavatar_avatar_f2laR {
   border: 1px solid #383c43;
   height: calc( 100% - 2px);
@@ -379,68 +392,109 @@
 .steamavatar_friendavatar_2yzw2 {
   display: block; }
 
-.miniProfileHover .miniprofile_arrow.left {
-  border-right: 8px solid #41444e; }
+.friendsnooze_SnoozeContainer_1OfTa {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 2px;
+  margin-left: 4px;
+  flex-shrink: 0; }
+  .friendsnooze_SnoozeContainer_1OfTa .friendsnooze_SnoozeZ_29fyi {
+    font-size: 6px;
+    animation-name: friendsnooze_none_lZX-E;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite; }
+  .friendsnooze_SnoozeContainer_1OfTa.friendsnooze_Medium_2NSIM .friendsnooze_SnoozeZ_29fyi {
+    font-size: 8px; }
+  .friendsnooze_SnoozeContainer_1OfTa.friendsnooze_Large_2QDqq .friendsnooze_SnoozeZ_29fyi {
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px 2px #000; }
+  .friendsnooze_SnoozeContainer_1OfTa.friendsnooze_Dim_10sPU .friendsnooze_SnoozeZ_29fyi {
+    filter: brightness(0.75); }
+  .friendsnooze_SnoozeContainer_1OfTa .friendsnooze_Z1_GU6T2 {
+    animation-delay: .0s;
+    margin-top: 0px;
+    z-index: 1; }
+  .friendsnooze_SnoozeContainer_1OfTa .friendsnooze_Z2_277XL {
+    animation-delay: .2s;
+    margin-top: 2px;
+    z-index: 2; }
+  .friendsnooze_SnoozeContainer_1OfTa .friendsnooze_Z3_1gXQi {
+    animation-delay: .4s;
+    margin-top: 4px;
+    z-index: 3; }
+  .friendsnooze_SnoozeContainer_1OfTa.online .friendsnooze_SnoozeZ_29fyi {
+    color: #4c91ac; }
+  .friendsnooze_SnoozeContainer_1OfTa.watchingbroadcast .friendsnooze_SnoozeZ_29fyi {
+    color: #c9bdf7; }
+  .friendsnooze_SnoozeContainer_1OfTa.in-game .friendsnooze_SnoozeZ_29fyi {
+    color: #91c257; }
+  .friendsnooze_SnoozeContainer_1OfTa.online.friendsnooze_Dim_10sPU .friendsnooze_SnoozeZ_29fyi {
+    color: #6dcff6; }
+  .friendsnooze_SnoozeContainer_1OfTa.in-game.friendsnooze_Dim_10sPU .friendsnooze_SnoozeZ_29fyi {
+    color: #a1f410; }
 
-.miniProfileHoverInner {
+.friendsnooze_SnoozeContainer_1OfTa.friendsnooze_animating_1pImE .friendsnooze_SnoozeZ_29fyi,
+.friendsnooze_hoverParent_3SgRH:hover * .friendsnooze_SnoozeZ_29fyi {
+  animation-name: friendsnooze_Snoring_6q8Na; }
+
+@keyframes friendsnooze_Snoring_6q8Na {
+  0% {
+    transform: translateY(0px); }
+  50% {
+    transform: translateY(-2px); }
+  100% {
+    transform: translateY(0px); } }
+
+.personastatusicons_PersonaStatusIcon_2rP7f {
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+  margin-left: 2px; }
+
+.personastatusicons_PersonaStatusIcon_2rP7f.personastatusicons_MobilePhoneIcon_2ZlAW {
+  margin-top: -2x;
+  margin-left: -1px; }
+
+.personastatusicons_PersonaStatusIcon_2rP7f.ingame .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_2rP7f.ingame .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_2rP7f.ingame .SVGIcon_BigPicture path {
+  fill: #80aa4d; }
+
+.personastatusicons_PersonaStatusIcon_2rP7f.online .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_2rP7f.online .SVGIcon_MobilePhone path,
+.personastatusicons_PersonaStatusIcon_2rP7f.online .SVGIcon_BigPicture path {
+  fill: #4c91ac; }
+
+.miniprofile_miniProfile_s5zcg {
   width: fit-content;
   margin: 11px;
   box-shadow: 0 10px 32px 0px #000000ab; }
 
-.miniProfileContent {
+.miniprofile_miniProfileContent_25Sge {
   width: 328px;
   position: relative; }
 
-.miniProfileContent .miniProfileHeader {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileHeader_3oBIW {
   height: 62px;
   z-index: 1;
   padding: 16px;
   background: none;
   border: none; }
 
-.miniProfileContent .miniProfilePlayer {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K {
   display: flex;
   flex-direction: row; }
 
-.miniProfileContent .miniProfilePlayer .playerContent {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K .miniprofile_playerContent_PV11V {
   padding-left: 16px;
   margin-bottom: 30px;
   margin-top: auto; }
 
-.miniProfileContent .playerAvatar {
-  width: 90px;
-  height: 92px;
-  position: relative;
-  margin: 0;
-  border: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65); }
-
-.miniProfileContent .avatarStatus.miniProfileAvatarStatus {
-  width: 100%;
-  height: 2px;
-  z-index: 2; }
-
-.miniProfileContent .miniProfilePlayer.online .avatarStatus.miniProfileAvatarStatus {
-  background: #6dcff6; }
-
-.miniProfileContent .miniProfilePlayer.in-game .avatarStatus.miniProfileAvatarStatus {
-  background: #bff02b; }
-
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .avatarStatus.miniProfileAvatarStatus {
-  background: #9c8fd4; }
-
-.miniProfileContent .miniProfilePlayer.isAway .avatarStatus.miniProfileAvatarStatus {
-  -webkit-mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-x;
-  -webkit-mask-size: 6px 6px;
-  mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  mask-size: 8px 8px;
-  opacity: 1; }
-
-.miniProfileBackground {
+.miniprofile_miniProfileBackground_3gfFJ {
   position: absolute;
   top: 0;
   right: 0;
@@ -450,7 +504,7 @@
   z-index: -3;
   background: radial-gradient(ellipse farthest-corner at 20% 30%, #4c505b 0%, #34373f 50%, #282c32 100%); }
 
-.miniProfileBackgroundBlur {
+.miniprofile_miniProfileBackgroundBlur_G000o {
   width: 380px;
   height: 380px;
   filter: blur(10px) saturate(2);
@@ -462,33 +516,92 @@
   mask: radial-gradient(ellipse farthest-corner at 150px 150px, black 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.3) 34%, rgba(0, 0, 0, 0) 64%);
   mix-blend-mode: screen; }
 
-.miniProfileContent .playerContent .personaName {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBlocked_1fKEq,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileNotFriends_7gGbH {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(184, 156, 80, 0.75); }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBlocked_1fKEq {
+  color: rgba(195, 74, 72, 0.75); }
+
+.miniprofile_miniProfileContent_25Sge.miniprofile_notFriends_nfBN5 .miniprofile_miniProfileBlocked_1fKEq {
+  top: 18px; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_SnoozeContainer_2HCB2 {
+  position: absolute;
+  overflow: visible;
+  z-index: 3;
+  left: 4px;
+  top: 8px; }
+
+.miniprofile_miniProfileHover_2P8wD .miniprofile_miniprofile_arrow_38UVn.miniprofile_left_qVPF2 {
+  border-right: 8px solid #41444e; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerAvatar_1dzWG {
+  width: 90px;
+  height: 92px;
+  position: relative;
+  margin: 0;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65);
+  transform: scale(1); }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  width: 100%;
+  height: 2px;
+  z-index: 2; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.online .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  background: #6dcff6; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  background: #bff02b; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  background: #9c8fd4; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_isAway_3MeF9 .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  -webkit-mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-x;
+  -webkit-mask-size: 6px 6px;
+  mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
+  mask-size: 8px 8px;
+  opacity: 1; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS {
   text-shadow: 1px 1px 4px #000;
   font-size: 20px;
   letter-spacing: 1px;
   font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
   display: flex; }
 
-.miniProfileContent .miniProfilePlayer.in-game .personaName:not(.hasNickname) .personaNameLabel,
-.miniProfileContent .miniProfilePlayer.in-game .personaName.nickName .personaNameLabel {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4 {
   color: #e3ffc2; }
 
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName:not(.hasNickname) .personaNameLabel,
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .personaName.nickName .personaNameLabel {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4 {
   color: #c9bdf7; }
 
-.miniProfileContent .playerContent .persona .personaName.hasNickname {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_persona_1Z3Ey .miniprofile_personaName_W3QjS.miniprofile_hasNickname_dgG-l {
   color: #888;
   font-size: 14px; }
 
-.miniProfileContent .playerContent .persona .personaName.hasNickname .personaNameLabel {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_persona_1Z3Ey .miniprofile_personaName_W3QjS.miniprofile_hasNickname_dgG-l .miniprofile_personaNameLabel_390p4 {
   color: #bbb;
   max-width: 154px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden; }
 
-.miniProfileContent .playerContent .awayStatusLabel {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
   color: #999;
   max-width: 154px;
   text-shadow: 1px 1px 4px #000;
@@ -496,8 +609,8 @@
   letter-spacing: 1px;
   font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif; }
 
-.miniProfileContent .playerContent .personaName.nickName .personaNameLabel,
-.miniProfileContent .playerContent .personaName:not(.hasNickname) .personaNameLabel {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4,
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4 {
   max-width: 160px;
   text-overflow: ellipsis;
   max-height: 48px;
@@ -505,18 +618,18 @@
   white-space: nowrap;
   word-wrap: break-word; }
 
-.miniProfileContent .miniProfilePlayer.online .nickname,
-.miniProfileContent .miniProfilePlayer.online .persona {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_online_3Bk5s .miniprofile_nickname_1W3dU,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_online_3Bk5s .miniprofile_persona_1Z3Ey {
   color: #6dcff6; }
 
-.miniProfileContent .miniProfilePlayer.offline .nickname,
-.miniProfileContent .miniProfilePlayer.offline .persona {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_offline_eQh4B .miniprofile_nickname_1W3dU,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_offline_eQh4B .miniprofile_persona_1Z3Ey {
   color: #bbb; }
 
-.miniProfileContent .playerNicknameBracket {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerNicknameBracket_1bkKo {
   color: #bbb; }
 
-.miniProfileContent .playerAvatar img {
+.miniprofile_miniProfileContent_25Sge .miniprofile_playerAvatar_1dzWG img {
   width: 90px;
   height: 90px;
   border: none;
@@ -527,73 +640,72 @@
   border-top-left-radius: 2px;
   border-top-right-radius: 2px; }
 
-.miniProfileContent.notInOrWatchingGame .miniProfileBottom,
-.miniProfileContent .miniProfileGameContainer {
+.miniprofile_miniProfileContent_25Sge.miniprofile_notInOrWatchingGame_3AIC2 .miniprofile_miniProfileBottom_3Agb6,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH {
   background: linear-gradient(to bottom, rgba(24, 26, 30, 0.7) 5%, rgba(24, 26, 30, 0.4) 95%); }
 
-.miniProfileContent .miniProfileGameContainer {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH {
   z-index: -1;
   border: none;
   min-height: 64px;
   position: relative; }
 
-.miniProfileContent .miniProfileGameContainer .gameLogo {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_gameLogo_2B0di {
   width: 90px;
   height: 34px;
   top: 18px;
   left: 16px;
   position: absolute; }
 
-.miniProfileContent .miniProfileGameContainer .in-game .richPresence,
-.miniProfileContent .miniProfileGameContainer .in-game .gameState {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_ingame_3H2mq {
+  color: #90ba3c; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_ingame_3H2mq .miniprofile_richPresence_1rud4,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_ingame_3H2mq .miniprofile_gameState_2Va3_ {
   font-size: 12px;
   color: #62813b; }
 
-.miniProfileContent .miniProfileGameContainer .watchingbroadcast .gameState {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_watchingbroadcast_24vwG .miniprofile_gameState_2Va3_ {
   padding-top: 6px;
   font-size: 12px;
   color: #8277b1; }
 
-.miniProfileContent .miniProfileGameContainer .watchingbroadcast .richPresence {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_watchingbroadcast_24vwG .miniprofile_richPresence_1rud4 {
   font-size: 14px;
   color: #c9bdf7; }
 
-.miniProfileContent .miniProfileGameContainer .watchingbroadcast .watchingbroadcastThumbnail {
-  background-color: rgba(0, 0, 0, 0.5);
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_watchingbroadcast_24vwG .miniprofile_watchingbroadcastThumbnail_3EoM- {
   width: 200px;
   height: 110px;
   margin-top: 8px;
   position: relative; }
-  .miniProfileContent .miniProfileGameContainer .watchingbroadcast .watchingbroadcastThumbnail .crossfade {
-    width: 100%;
-    height: 100%; }
 
-.miniProfileContent .miniProfileGameContainer .gameContent {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_gameContent_3x24t {
   padding: 8px 8px 8px 122px;
   font-size: 14px; }
 
-.miniProfileContent .miniProfileBottom {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBottom_3Agb6 {
   padding: 16px 16px 8px 16px; }
 
-.miniProfileContent.notInOrWatchingGame .miniProfileBottom {
+.miniprofile_miniProfileContent_25Sge.miniprofile_notInOrWatchingGame_3AIC2 .miniprofile_miniProfileBottom_3Agb6 {
   padding-top: 26px; }
 
-.miniProfileContent .miniProfileFeaturedContainer {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileFeaturedContainer_3ljT4 {
   position: relative;
   height: 34px;
   display: flex;
   padding-left: 16px;
   margin-bottom: 8px; }
 
-.miniProfileContent .miniProfileFeaturedContainer .favoriteBadgeIcon {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileFeaturedContainer_3ljT4 .miniprofile_favoriteBadgeIcon_icnrU {
   width: 34px;
   height: 34px; }
 
-.miniProfileContent .miniProfileFeaturedContainer .badgeIcon {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileFeaturedContainer_3ljT4 .miniprofile_badgeIcon_2TBf0 {
   width: 100%;
   height: 100%; }
 
-.miniProfileContent .miniProfileBottom .featuredLabels {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBottom_3Agb6 .miniprofile_featuredLabels_1dGw1 {
   font-size: 14px;
   overflow: hidden;
   white-space: nowrap;
@@ -602,52 +714,40 @@
   margin-bottom: auto;
   margin-left: 12px; }
 
-.miniProfileContent .miniProfileBottom .friendPlayerLevel .friendPlayerLevelNum {
-  font-size: 14px; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBottom_3Agb6 .friendPlayerLevel .miniprofile_friendPlayerLevelNum_2Ni_1 {
+  font-size: 14px;
+  color: #e5e5e5; }
 
-.miniProfileContent .miniProfileBottom .featuredLabels .featuredTitle {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBottom_3Agb6 .miniprofile_featuredLabels_1dGw1 .miniprofile_featuredTitle_2_2RA {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #b1b1b1; }
 
-.miniProfileContent .miniProfileBottom .featuredLabels .featuredSubTitle {
+.miniprofile_mutualFriends_36Vl4 {
+  background-color: #000a; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileBottom_3Agb6 .miniprofile_featuredLabels_1dGw1 .miniprofile_featuredSubTitle_2p8kJ {
   color: #6b6a6a;
   font-size: 12px; }
 
-.miniProfileContent .mutualFriends {
-  background-color: #000a; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #c9bdf7; }
 
-.mutualFriendsContainer {
-  padding: 12px 16px 4px 16px; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #91c257; }
 
-.mutualFriend {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 12px; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.offline .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  font-size: 10px;
+  letter-spacing: 0; }
 
-.mutualFriendAvatar {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  margin-left: 24px; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #8277b1; }
 
-.mutualFriendTitle {
-  color: #4c91ac;
-  font-size: 14px;
-  margin-bottom: 12px; }
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.online .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #4c91ac; }
 
-.mutualFriendLabel {
-  font-size: 14px;
-  color: #b1b1b1;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  max-width: 190px; }
-
-.mutualFriendLabel.plusOthersLabel {
-  margin-left: 48px;
-  color: #5f5f5f; }
-
+/* These are all also in community's shared_global.css but we don't necessarily have that file available where we're using
+	this component. */
 .friendPlayerLevel {
   display: inline-block;
   font-size: 16px;
@@ -659,9 +759,6 @@
   text-align: center;
   cursor: default;
   margin-top: 2px; }
-
-.friendPlayerLevel .friendPlayerLevelNum {
-  color: #e5e5e5; }
 
 .friendPlayerLevel.lvl_0 {
   border-color: #9b9b9b; }
@@ -901,6 +998,45 @@
 
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px; }
+
+.mutualFriendsContainer {
+  padding: 12px 16px 4px 16px; }
+
+.mutualFriend {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px; }
+
+.mutualFriendAvatar {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  margin-left: 24px; }
+
+.mutualFriendTitle {
+  color: #4c91ac;
+  font-size: 14px;
+  margin-bottom: 12px; }
+
+.mutualFriendLabel {
+  font-size: 14px;
+  color: #b1b1b1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 190px; }
+
+.mutualFriendLabel.plusOthersLabel {
+  margin-left: 48px;
+  color: #5f5f5f; }
+
+.miniProfileHoverInner .watchingbroadcastThumbnail {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%; }
+  .miniProfileHoverInner .watchingbroadcastThumbnail .crossfade {
+    width: 100%;
+    height: 100%; }
 
 @charset "UTF-8";
 .changeLog,
@@ -2866,15 +3002,23 @@ iframe.steamTVLogin {
 
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
+  .isCurrentUser .messages_SpeakerName_InGame_1vaKy {
+    color: #6a8f40; }
 
 .messages_SpeakerName_WatchingBroadcast_3DQ_c {
   color: #c9bdf7; }
+  .isCurrentUser .messages_SpeakerName_WatchingBroadcast_3DQ_c {
+    color: #8277b1; }
 
 .messages_SpeakerName_Online_2nKVN {
   color: #6dcff6; }
+  .isCurrentUser .messages_SpeakerName_Online_2nKVN {
+    color: #4f96b3; }
 
 .messages_SpeakerName_Default_1Qo8j {
-  color: white; }
+  color: #b8b8b8; }
+  .isCurrentUser .messages_SpeakerName_Default_1Qo8j {
+    color: #6e6e6e; }
 
 .main_throbberContainer_29hiv {
   height: 100%;
@@ -4574,6 +4718,10 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.bbcode_ImageModalContent_1jjqt {
+  max-width: 100%;
+  max-height: 100%; }
 
 /* Style scrollbar elements */
 ::-webkit-scrollbar,
@@ -8691,71 +8839,6 @@ body.in_global_drag .friendlist_titlebar {
 .friend.Grid .avatarHolder {
   height: 200px; }
 
-.SnoozeContainer {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-top: 2px;
-  margin-left: 4px;
-  flex-shrink: 0; }
-
-.miniProfileContent .SnoozeContainer {
-  position: absolute;
-  overflow: visible;
-  z-index: 3;
-  left: 4px;
-  top: 8px; }
-
-.miniProfileContent .SnoozeContainer .SnoozeZ {
-  font-size: 14px;
-  font-weight: 500;
-  animation-duration: 1s;
-  text-shadow: -1px -1px 4px #000, 1px -1px 4px #000, -1px 1px 2px #000, 1px 1px 2px #000; }
-
-/* TODO: this needs styling */
-.currentUserContainer .SnoozeContainer {
-  display: none; }
-
-.friend.online .SnoozeZ {
-  color: #4c91ac; }
-
-.miniProfileContent .online .SnoozeZ,
-.quickAccessFriends .friend.online .SnoozeZ {
-  color: #6dcff6; }
-
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .playerContent .awayStatusLabel,
-.miniProfileContent .watchingbroadcast .SnoozeZ,
-.friend.watchingbroadcast .SnoozeZ {
-  color: #c9bdf7; }
-
-.miniProfileContent .miniProfilePlayer.in-game .playerContent .awayStatusLabel,
-.miniProfileContent .in-game .SnoozeZ,
-.friend.ingame .SnoozeZ {
-  color: #91c257; }
-
-.miniProfileContent .miniProfilePlayer.offline .playerContent .awayStatusLabel {
-  font-size: 10px;
-  letter-spacing: 0; }
-
-.miniProfileContent .miniProfileBlocked,
-.miniProfileContent .miniProfileNotFriends {
-  position: absolute;
-  top: 4px;
-  right: 6px;
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(184, 156, 80, 0.75); }
-
-.miniProfileContent .miniProfileBlocked {
-  color: rgba(195, 74, 72, 0.75); }
-
-.miniProfileContent.notFriends .miniProfileBlocked {
-  top: 18px; }
-
-.quickAccessFriends .friend.ingame .SnoozeZ {
-  color: #a1f410; }
-
 .quickAccessFriends .friend .SnoozeContainer {
   position: absolute;
   margin: 0px;
@@ -8764,75 +8847,8 @@ body.in_global_drag .friendlist_titlebar {
   overflow: visible;
   text-shadow: 1px 1px 1px #000, 1px 1px 2px #000, 1px 1px 3px #000; }
 
-.SnoozeBackground {
-  visibility: collapse;
-  position: absolute; }
-
-.quickAccessFriends .friend .SnoozeContainer .SnoozeBackground {
-  width: 48px;
-  height: 48px;
-  left: 0px;
-  top: 0px;
-  margin-top: 6px; }
-
-.quickAccessFriends .friend .SnoozeContainer .SnoozeZ {
-  font-size: 8px;
-  margin-left: -3px;
-  filter: brightness(0.75); }
-
-.SnoozeContainer .SnoozeZ {
-  font-size: 6px;
-  animation-name: none;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; }
-
-.miniProfileContent .SnoozeContainer .SnoozeZ,
-.friend:hover .SnoozeContainer .SnoozeZ {
-  animation-name: Snoring; }
-
-.miniProfileContent .SnoozeContainer .Z1,
-.friend:hover .SnoozeContainer .Z1 {
-  animation-delay: .0s; }
-
-.miniProfileContent .SnoozeContainer .Z2,
-.friend:hover .SnoozeContainer .Z2 {
-  animation-delay: .2s; }
-
-.miniProfileContent .SnoozeContainer .Z3,
-.friend:hover .SnoozeContainer .Z3 {
-  animation-delay: .4s; }
-
-@keyframes Snoring {
-  0% {
-    transform: translateY(0px); }
-  50% {
-    transform: translateY(-2px); }
-  100% {
-    transform: translateY(0px); } }
-
-.SnoozeContainer .Z1 {
-  margin-top: 0px; }
-
-.SnoozeContainer .Z2 {
-  margin-top: 2px; }
-
-.SnoozeContainer .Z3 {
-  margin-top: 4px; }
-
-.quickAccessFriends .friend .SnoozeContainer .Z1 {
-  margin-left: 0px;
-  margin-top: 2px;
-  z-index: 1; }
-
-.quickAccessFriends .friend .SnoozeContainer .Z2 {
-  margin-left: 0px;
-  margin-top: 4px;
-  z-index: 2; }
-
-.quickAccessFriends .friend .SnoozeContainer .Z3 {
-  margin-top: 6px;
-  z-index: 3; }
+.quickAccessFriends .friend .SnoozeContainer {
+  padding-top: 2px; }
 
 .DialogBodyText .friend .statusAndName {
   line-height: 10px; }
@@ -8940,26 +8956,6 @@ body.in_global_drag .friendlist_titlebar {
   margin-top: 2px;
   margin-bottom: -2px;
   flex: 1; }
-
-.PersonaStatusIcon {
-  width: 16px;
-  height: 16px;
-  margin-top: -1px;
-  margin-left: 2px; }
-
-.PersonaStatusIcon.MobilePhoneIcon {
-  margin-top: -2x;
-  margin-left: -1px; }
-
-.friend.ingame .PersonaStatusIcon .SVGIcon_VR path,
-.friend.ingame .PersonaStatusIcon .SVGIcon_MobilePhone path,
-.friend.ingame .PersonaStatusIcon .SVGIcon_BigPicture path {
-  fill: #80aa4d; }
-
-.friend.online .PersonaStatusIcon .SVGIcon_VR path,
-.friend.online .PersonaStatusIcon .SVGIcon_MobilePhone path,
-.friend.online .PersonaStatusIcon .SVGIcon_BigPicture path {
-  fill: #4c91ac; }
 
 .friend.awayOrSnooze .playerNameQuickAccessContainer {
   opacity: .5; }
@@ -9108,7 +9104,6 @@ body.in_global_drag .friendlist_titlebar {
 .friend.ingame .richPresenceLabel a:visited {
   color: #62813b; }
 
-.miniProfileContent .miniProfilePlayer.watchingbroadcast .playerContent .awayStatusLabel,
 .currentUserContainer.watchingbroadcast .richPresenceLabel,
 .friend.watchingbroadcast .richPresenceLabel,
 .friend.watchingbroadcast .gameName.richPresenceLabel a,
@@ -9117,7 +9112,6 @@ body.in_global_drag .friendlist_titlebar {
 .friend.watchingbroadcast .gameName.richPresenceLabel a:visited {
   color: #8277b1; }
 
-.miniProfileContent .miniProfilePlayer.online .playerContent .awayStatusLabel,
 .currentUserContainer.online .richPresenceLabel,
 .friend.online .richPresenceLabel,
 .friend.online .gameName.richPresenceLabel a,
@@ -13037,18 +13031,6 @@ html.web_chat_frame .perf_timing_area {
   margin-top: 4px;
   padding-top: 4px; }
 
-.FriendChatSpeaker {
-  float: left;
-  z-index: 1; }
-
-.FriendChatSpeaker .speaker .speakerName {
-  flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  text-align: right; }
-
 .nameAndColon {
   display: flex;
   flex-direction: row;
@@ -13063,7 +13045,8 @@ html.web_chat_frame .perf_timing_area {
   background-color: #636363;
   margin-left: 0px;
   margin-right: 8px;
-  flex-shrink: 0; }
+  flex-shrink: 0;
+  transition: background-color .6s ease-in-out; }
 
 .ChatMsgSlashEmote .speaker .speakerStatus {
   align-self: normal; }
@@ -13294,7 +13277,8 @@ html.web_chat_frame .perf_timing_area {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 2px; }
+  margin-top: 2px;
+  transition: color .6s ease-in-out; }
 
 .ChatRoomSpeaker .speaker .speakerName .playerNickname {
   color: #555; }
@@ -13350,32 +13334,6 @@ html.web_chat_frame .perf_timing_area {
   flex-direction: row;
   cursor: default;
   color: #777; }
-
-.FriendChatSpeaker .speaker {
-  display: flex;
-  flex-direction: row; }
-
-.SingleUserChat .FriendChatSpeaker .speaker {
-  line-height: 18px; }
-
-.FriendChatSpeaker .speaker.ingame {
-  color: #91c257; }
-
-.FriendChatSpeaker .speaker.online {
-  color: #6dcff6; }
-
-.FriendChatSpeaker .speaker.watchingbroadcast {
-  color: #9c8fd4; }
-
-.FriendChatSpeaker.isCurrentUser .speaker.online {
-  color: #4f96b3; }
-
-.FriendChatSpeaker.isCurrentUser .speaker.watchingbroadcast.online,
-.FriendChatSpeaker.isCurrentUser .speaker.watchingbroadcast {
-  color: #8277b1; }
-
-.FriendChatSpeaker.isCurrentUser .speaker.ingame {
-  color: #6a8f40; }
 
 .msg {
   position: relative;
@@ -13536,7 +13494,7 @@ html.web_chat_frame .perf_timing_area {
   color: #5097b4;
   line-height: 18px; }
 
-.SingleUserChat .isCurrentUser .msgText {
+.MultiUserChat .isCurrentUser .msgText {
   color: #969aa1; }
 
 .SingleUserChat .ChatMessageBlock {

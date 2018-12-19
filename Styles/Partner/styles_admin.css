@@ -65,6 +65,32 @@ ul.bullets li {
 	padding: 0px 20px;
 }
 
+body.contact_page {
+	background-image: radial-gradient(
+		circle at top left,
+		#37393f 50%,
+		#1a1a1a 80%
+	);
+	background-repeat: no-repeat;
+	background-color: #1a1a1a;
+}
+body.contact_page .AdminPageContent {
+	max-width: 600px;
+}
+body.contact_page #landingNav > a.active {
+	background-color: #37393f;
+}
+
+#appHeaderFindInput {
+	background-color: rgba(0,0,0,0.3);
+	border: 1px #3f3f40 solid;
+	box-shadow: 1px 1px 0px #cfcfcf;
+}
+#appHeaderFindInput::placeholder {
+	color: #bbbbbb;
+	font-style: italic;
+}
+
 .small {
 	font-size: 85%;
 }
@@ -2987,13 +3013,9 @@ h2.giveawayFilter_titleArea {
 
 .contact_new_ctn {
 	background: #252525;
-	border-left: 2px solid #a3cf06;
 	padding: 8px 16px 16px 16px;
 }
 
-.contact_new_ctn .contact_new_highlight {
-	color: #a3cf06;
-}
 .contact_new_btn span strong {
 	font-size: 20px;
 	color: #fff;

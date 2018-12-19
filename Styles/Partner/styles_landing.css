@@ -435,10 +435,16 @@ body{
 		font-size: 11px;
 	}
 
-	.panel.announcementPanel h1 {
+	.panel.announcementPanel h1,
+	.panel.announcementPanel h1 a {
 		color: #A4D007;
 		font-weight: normal;
 		font-size: 17px;
+		text-decoration: none;
+	}
+	.panel.announcementPanel a.readMore:hover,
+	.panel.announcementPanel h1 a:hover {
+		color: #ffffff;
 	}
 
 	.panel.announcementPanel .limited {
