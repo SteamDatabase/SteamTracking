@@ -37,10 +37,6 @@
 	display: block;
 }
 
-.home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {
-	background: rgba( 48, 95, 128, 0.9 );
-}
-
 .home_ctn {
 	overflow: hidden;
 }

@@ -121,6 +121,7 @@ GHomepage = {
 			
 			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
 			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
+			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
 
 			if ( g_AccountID == 0 )
 			{
@@ -235,9 +236,12 @@ GHomepage = {
 		try {
 			if ( g_AccountID != 0 )
 			{
-				$J('#discovery_queue').append( $J('#static_discovery_queue_elements').children() );
-				$J('#static_discovery_queeue_elements').remove();
-				$J('.discovery_queue_ctn').show();
+				if ( !GHomepage.bAutumnSaleMainCap || ( GHomepage.bAutumnSaleMainCap && !GHomepage.bIsLimitedUser ) )
+				{
+					$J('#discovery_queue').append($J('#static_discovery_queue_elements').children());
+					$J('#static_discovery_queeue_elements').remove();
+					$J('.discovery_queue_ctn').show();
+				}
 			}
 
 		} catch(e) { OnHomepageException(e); }
@@ -472,7 +476,7 @@ GHomepage = {
 
 		var rgMainCaps = rgDisplayListCombined.slice( 0, GHomepage.bAutumnSaleMainCap ? 8 : 12 );
 
-		if ( GHomepage.bAutumnSaleMainCap && rgMainCaps.length < 5 )
+		if ( GHomepage.bAutumnSaleMainCap && rgMainCaps.length < 4 )
 		{
 			$J('.home_cluster_ctn').hide();
 			return;
@@ -486,7 +490,8 @@ GHomepage = {
 		var $CapTarget = $J('#home_maincap_v7 .carousel_items');
 		var $CapThumbs = $J('#home_maincap_v7 .carousel_thumbs');
 
-		for ( var i = 0; i < rgMainCaps.length && i < 12; i++ )
+		var nMainCaps = rgMainCaps.length;
+		for ( var i = 0; i < nMainCaps && i < 12; i++ )
 		{
 			var oItem = rgMainCaps[i];
 			GHomepage.oFeaturedMainCapItems[ GHomepage.ItemKey( oItem ) ] = true;
@@ -494,20 +499,29 @@ GHomepage = {
 
 			if ( GHomepage.bAutumnSaleMainCap )
 			{
-				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster' );
+				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster_recommended' );
 				if( !$MainCap )
 					continue;
 
 				$CapTarget.append( $MainCap );
 
-				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'summer2018_standardview_recommend_basic', oItem.appid, oItem.packageid, oItem.bundleid, {capsule_size: 'header', no_hover: true} );
+				var $SmallCap = GHomepage.BuildHomePageGenericCap( GHomepage.bNewRecommendations ? 'summer2018_standardview_recommend_neural' : 'main_cluster_recommended', oItem.appid, oItem.packageid, oItem.bundleid, {capsule_size: 'header', no_hover: true} );
 				$SmallCap.on('mouseenter', (function(index) { return function() {
 					GHomepage.MainCapCarousel.Advance( index );
 				}; })(i));
 
-				$J('.maincap_list .carousel_items').append(
-					$SmallCap
-				);
+				if ( i < 4 )
+				{
+					$J('.maincap_list .carousel_items_top').append(
+						$SmallCap
+					);
+				}
+				else if ( nMainCaps >= 8 )
+				{
+					$J('.maincap_list .carousel_items_bottom').append(
+						$SmallCap
+					);
+				}
 			}
 			else
 			{
@@ -525,7 +539,10 @@ GHomepage = {
 
 		GDynamicStore.DecorateDynamicItems( $CapTarget );
 		if ( GHomepage.bAutumnSaleMainCap )
-			GDynamicStore.DecorateDynamicItems( $J('.maincap_list .carousel_items') );
+		{
+			GDynamicStore.DecorateDynamicItems($J('.maincap_list .carousel_items_top'));
+			GDynamicStore.DecorateDynamicItems( $J('.maincap_list .carousel_items_bottom' ));
+		}
 
 		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), GHomepage.bAutumnSaleMainCap ? 0 : 5 );
 	},
@@ -728,18 +745,9 @@ GHomepage = {
 				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
-			
-			if ( GHomepage.bAutumnSaleMainCap )
-			{
-				if ( GHomepage.bNewRecommendations )
-					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'summer2018_standardview_recommend_neural' ));
-				else
-					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'summer2018_standardview_recommend_basic' ));
-			}
-			else
-			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
-			}
+
+			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
+
 		}
 		else
 		{

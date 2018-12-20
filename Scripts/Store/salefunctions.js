@@ -318,7 +318,7 @@ function SaleRow( rgItems, $Parent, bTwoThirdsRow, strFeatureContext, bPromoRow 
 		{
 			$Row.append( $J('<div/>', {'class': 'large_sale_caps' } ).append(
 				SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_large' ),
-				$J( '<div/>', {'class': 'three_row small_sale_caps' } ).append(
+				$J( '<div/>', {'class': 'three_row two small_sale_caps' } ).append(
 					SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
 					SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
 				)

@@ -1964,6 +1964,11 @@ var CGenericCarousel = function( $elContainer, nSpeed, fnOnFocus, fnOnBlur, fnCl
 	this.$elArrowLeft.click( function(e){ instance.Advance(-1); e.preventDefault(); return true; });
 	this.$elArrowRight.click( function(e){ instance.Advance(); e.preventDefault(); return true; });
 
+	if( this.$elThumbs.length < 2 )
+	{
+		this.$elThumbs.parent().css({'visibility':'hidden'})
+	}
+
 	this.UpdateControls();
 
 };
