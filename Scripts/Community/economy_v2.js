@@ -3434,6 +3434,33 @@ function PopulateMarketActions( elActions, item )
 
 		elActions.appendChild( elPriceInfo );
 
+		var buybackid = 'market_item_action_buyback_at_price_'+Math.ceil(Math.random()*1000000);
+		var elBuybackInfoContent = new Element( 'div', { 'id': buybackid, 'class': 'market_item_action_buyback_at_price' } );
+		elPriceInfo.appendChild( elBuybackInfoContent );
+
+		if ( item.appid == 583950 ) {
+			$(buybackid).hide();
+			new Ajax.Request('https://steamcommunity.com/market/canbuyback/', {
+				method: 'get',
+				parameters: {
+					appid: item.appid,
+					assetid: item.assetid,
+					contextid: item.contextid
+				},
+				onSuccess: function (transport) {
+					if ( transport.responseJSON && transport.responseJSON.canbuyback && transport.responseJSON.price ) {
+						// Get real price here somehow...
+							var buybackprice = transport.responseJSON.price;
+
+						$(buybackid).update('You can sell this to Artifact for %price% until 1/4/19'.replace( '%price%', buybackprice ) );
+						$(buybackid).show();
+					}
+				},
+				onFailure: function (transport) {}
+			});
+
+		}
+
 		if ( !bIsTrading )
 		{
 			var elSellButton = CreateMarketActionButton('green', 'javascript:SellCurrentSelection()', 'Sell' );
@@ -3570,6 +3597,13 @@ SellItemDialog = {
 		$('market_sell_currency_input').observe( 'keyup', this.OnInputKeyUp.bindAsEventListener(this) );
 		$('market_sell_buyercurrency_input').observe( 'keypress', this.OnInputKeyPress.bindAsEventListener(this) );
 		$('market_sell_buyercurrency_input').observe( 'keyup', this.OnBuyerPriceInputKeyUp.bindAsEventListener(this) );
+		$('market_sell_dialog_acceptbuyback').observe( 'click', this.OnBuybackAccept.bindAsEventListener(this) );
+		$('market_sell_dialog_declinebuyback').observe( 'click', this.OnBuybackDecline.bindAsEventListener(this) );
+
+
+		$('market_sell_dialog_buyback').hide();
+		$('market_sell_dialog_buyback_buttons').hide();
+		$('market_sell_dialog_buyback_throbber').hide();
 
 		$('market_sell_dialog').style.visibility = 'hidden';
 		$('market_sell_dialog').show();
@@ -3653,6 +3687,28 @@ SellItemDialog = {
 			$('market_sell_dialog_item_name').style.color = '';
 		}
 
+		var bShowingBuyback = false;
+		if ( item.appid == 583950 ) {
+			$('market_sell_dialog_input_area').hide();
+			bShowingBuyback = true;
+
+			new Ajax.Request('https://steamcommunity.com/market/canbuyback/', {
+				method: 'get',
+				parameters: {
+					appid: item.appid,
+					assetid: item.assetid,
+					contextid: item.contextid
+				},
+				onSuccess: function (transport) {
+					SellItemDialog.OnCanBuyBackSuccess(transport);
+				},
+				onFailure: function (transport) {
+					SellItemDialog.OnCanBuyBackFailure(transport);
+				}
+			});
+
+		}
+
 		if ( item.appid && g_rgAppContextData[item.appid] )
 		{
 			var rgAppData = g_rgAppContextData[item.appid];
@@ -3697,8 +3753,11 @@ SellItemDialog = {
 		this.m_modal = new CModal( $elDialogContent );
 		this.m_modal.Show();
 
-		// Make sure the dialog doesn't get wider when the user presses OK.
-		this.m_modal.SetMaxWidth( $elDialogContent.width() );
+		// Make sure the dialog doesn't get wider when the user presses OK, but not if we haven't loaded all the buyback data yet
+		// or we will force too small
+		if ( !bShowingBuyback )
+			this.m_modal.SetMaxWidth( $elDialogContent.width() );
+
 
 		var _this = this;
 		$J(this.m_elDialogContent).find('.newmodal_close' ).click( function() { _this.m_modal.m_fnBackgroundClick(); } );
@@ -3748,6 +3807,47 @@ SellItemDialog = {
 			onSuccess: function( transport ) { SellItemDialog.OnPriceHistorySuccess( transport ); },
 			onFailure: function( transport ) { SellItemDialog.OnPriceHistoryFailure( transport ); }
 		} );
+	},
+
+	OnCanBuyBackSuccess: function( transport ) {
+		$('market_sell_dialog_input_area').show();
+
+		if ( transport.responseJSON && transport.responseJSON.canbuyback && transport.responseJSON.price )
+		{
+			// Get real price here somehow...
+			var buybackprice = transport.responseJSON.price;
+
+			$('market_sell_buyback_details').update( 'You can sell this back to Artifact for:' );
+			$('market_sell_buypback_price').value = buybackprice;
+			$('market_sell_dialog_buyback').show();
+			$('market_sell_dialog_input_boxes').hide();
+			$('market_sell_dialog_buyback_buttons').show();
+			$('market_sell_dialog_accept').hide();
+			$('market_sell_dialog_acceptbuyback').show();
+			$('market_sell_dialog_declinebuyback').show();
+			$('market_sell_dialog_buyback_throbber').hide();
+		}
+		else
+		{
+			$('market_sell_dialog_buyback').hide();
+			$('market_sell_dialog_input_boxes').show();
+			$('market_sell_dialog_buyback_buttons').hide();
+			$('market_sell_dialog_accept').show();
+		}
+
+		var $elDialogContent = $J(this.m_elDialogContent);
+		this.m_modal.SetMaxWidth( $elDialogContent.width() );
+	},
+
+	OnCanBuyBackFailure: function( transport ) {
+		$('market_sell_dialog_input_area').show();
+		$('market_sell_dialog_buyback').hide();
+		$('market_sell_dialog_input_boxes').show();
+		$('market_sell_dialog_buyback_buttons').hide();
+		$('market_sell_dialog_accept').show();
+
+		var $elDialogContent = $J(this.m_elDialogContent);
+		this.m_modal.SetMaxWidth( $elDialogContent.width() );
 	},
 
 	OnPriceHistorySuccess: function( transport ) {
@@ -3826,6 +3926,80 @@ SellItemDialog = {
 		}
 
 		return nAmount;
+	},
+
+	OnBuybackAccept: function( event ) {
+		event.stop();
+
+				if ( !$('market_sell_dialog_accept_ssa') || !$('market_sell_dialog_accept_ssa').checked )
+		{
+			this.DisplayError( 'You must agree to the terms of the Steam Subscriber Agreement to sell this item.' );
+			return;
+		}
+
+		// Show throbber...
+		$('market_sell_dialog_acceptbuyback').hide();
+		$('market_sell_dialog_declinebuyback').hide();
+		$('market_sell_dialog_buyback_throbber').show();
+
+		// Make call to do buyback on backend, show success/error...
+		$J.ajax( {
+			url: 'https://steamcommunity.com/market/dobuyback/',
+			type: 'POST',
+			data: {
+				sessionid: g_sessionID,
+				appid: this.m_item.appid,
+				contextid: this.m_item.contextid,
+				assetid: this.m_item.assetid,
+			},
+			crossDomain: true,
+			xhrFields: { withCredentials: true }
+		} ).done( function ( data ) {
+			if ( data.success )
+			{
+				SellItemDialog.OnBuyBackSuccess( { responseJSON: data } );
+			}
+			else
+			{
+				SellItemDialog.OnBuybackFailure( { responseJSON: data } );
+			}
+		} ).fail( function( jqxhr ) {
+			// jquery doesn't parse json on fail
+			var data = $J.parseJSON( jqxhr.responseText );
+			SellItemDialog.OnFailure( { responseJSON: data } );
+		} );
+	},
+
+	OnBuyBackSuccess: function( transport ) {
+		this.m_bWaitingForUserToConfirm = false;
+		this.m_bWaitingOnServer = false;
+
+		if ( transport.responseJSON && transport.responseJSON.success )
+		{
+			this.Dismiss();
+			UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid );
+		}
+		else
+		{
+			this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
+		}
+	},
+
+	OnBuybackFailure: function( transport ) {
+		this.m_bWaitingForUserToConfirm = false;
+		this.m_bWaitingOnServer = false;
+
+		this.DisplayError( 'There was a problem listing your item. Refresh the page and try again.' );
+	},
+
+	OnBuybackDecline: function( event ) {
+		event.stop();
+
+		// Switch into normal mode
+		$('market_sell_dialog_buyback').hide();
+		$('market_sell_dialog_input_boxes').show();
+		$('market_sell_dialog_buyback_buttons').hide();
+		$('market_sell_dialog_accept').show();
 	},
 
 	OnAccept: function( event ) {

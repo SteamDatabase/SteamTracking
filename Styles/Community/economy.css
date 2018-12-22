@@ -867,11 +867,80 @@ input.market_dialog_input:focus {
 	min-height: 32px;
 }
 
-#market_sell_dialog_accept {
+#market_sell_dialog_buyback_details_wrapper
+{
+	float: left;
+	margin-top: 8px;
+}
+
+#market_sell_dialog_buyback
+{
+	margin-bottom: -2px;
+	color: #799905;
+}
+
+#market_sell_dialog_buyback input[type=text]
+{
+	color: #799905;
+	border-color: #799905;
+	padding-left: 2px;
+}
+
+.market_item_action_buyback_at_price
+{
+	color: #799905;
+	margin-bottom: 12px;
+}
+
+#market_buyback_warning
+{
+	color: #799905;
+	border-color: #799905;
+	border-style: solid;
+	border-width: 1px;
+	padding: 20px;
+	text-align: center;
+	width: calc( 100% - 40px );
+}
+
+#market_buyback_warning a
+{
+
+}
+
+#market_sell_buyback_until
+{
+	color: #8f98a0;
+	text-align: left;
+	padding-top: 10px;
+	clear: both;
+}
+
+#market_sell_dialog_accept, #market_sell_dialog_buyback_buttons {
 	float: right;
 	margin: 0.4em 0 0 1em;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+#market_sell_dialog_declinebuyback
+{
+	padding-right: 4px;
+}
+
+#market_sell_dialog_buyback_buttons
+{
+	padding-top: 4px;
+}
+
+#market_sell_dialog_buyback
+{
+	 width: 650px;
+}
+
+#market_sell_buyback_details b
+{
+	color: #ffffff;
 }
 
 #market_sell_dialog_throbber {
