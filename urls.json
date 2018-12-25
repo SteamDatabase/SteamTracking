@@ -38,11 +38,16 @@
 "Styles/Store/account.css"                       : "https://store.steampowered.com/public/css/v6/account.css?__TIME__",
 "Styles/Store/browse.css"                        : "https://store.steampowered.com/public/css/v6/browse.css?__TIME__",
 "Styles/Store/cart.css"                          : "https://store.steampowered.com/public/css/v6/cart.css?__TIME__",
+"Styles/Store/creator_hub.css"                   : "https://store.steampowered.com/public/css/v6/creator_hub.css?__TIME__",
 "Styles/Store/curator_admin.css"                 : "https://store.steampowered.com/public/css/v6/curator_admin.css?__TIME__",
+"Styles/Store/curator_announcements.css"         : "https://store.steampowered.com/public/css/v6/curator_announcements.css?__TIME__",
 "Styles/Store/curator_recommendations.css"       : "https://store.steampowered.com/public/css/v6/curator_recommendations.css?__TIME__",
 "Styles/Store/curators_browse.css"               : "https://store.steampowered.com/public/css/v6/curators_browse.css?__TIME__",
 "Styles/Store/curators_common.css"               : "https://store.steampowered.com/public/css/v6/curators_common.css?__TIME__",
+"Styles/Store/curators_home.css"                 : "https://store.steampowered.com/public/css/v6/curators_home.css?__TIME__",
 "Styles/Store/contenthub.css"                    : "https://store.steampowered.com/public/css/v6/contenthub.css?__TIME__",
+"Styles/Store/digitalgiftcards.css"              : "https://store.steampowered.com/public/css/v6/digitalgiftcards.css?__TIME__",
+"Styles/Store/discoveryqueue.css"                : "https://store.steampowered.com/public/css/v6/discoveryqueue.css?__TIME__",
 "Styles/Store/explore_queue.css"                 : "https://store.steampowered.com/public/css/v6/explore_queue.css?__TIME__",
 "Styles/Store/game.css"                          : "https://store.steampowered.com/public/css/v6/game.css?__TIME__",
 "Styles/Store/genre.css"                         : "https://store.steampowered.com/public/css/v6/genre.css?__TIME__",
@@ -54,10 +59,10 @@
 "Styles/Store/sale.css"                          : "https://store.steampowered.com/public/css/v6/sale.css?__TIME__",
 "Styles/Store/search.css"                        : "https://store.steampowered.com/public/css/v6/search.css?__TIME__",
 "Styles/Store/steamaccount.css"                  : "https://store.steampowered.com/public/css/v6/steamaccount.css?__TIME__",
+"Styles/Store/steamlink_about.css"               : "https://store.steampowered.com/public/css/v6/steamlink_about.css?__TIME__",
 "Styles/Store/store.css"                         : "https://store.steampowered.com/public/css/v6/store.css?__TIME__",
 "Styles/Store/tags.css"                          : "https://store.steampowered.com/public/css/v6/tags.css?__TIME__",
 "Styles/Store/updated_apps.css"                  : "https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__",
-"Styles/Store/digitalgiftcards.css"              : "https://store.steampowered.com/public/css/v6/digitalgiftcards.css?__TIME__",
 "Styles/Store/wishlist.css"                      : "https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__",
 
 //
@@ -68,6 +73,8 @@
 "Styles/styles_parental.css"                     : "https://store.steampowered.com/public/css/styles_parental.css?__TIME__",
 "Styles/styles_phone.css"                        : "https://store.steampowered.com/public/css/styles_phone.css?__TIME__",
 "Styles/styles_ssav5.css"                        : "https://store.steampowered.com/public/css/styles_ssav5.css?__TIME__",
+"Styles/styles_stats.css"                        : "https://store.steampowered.com/public/css/styles_stats.css?__TIME__",
+"Styles/styles_storev5.css"                      : "https://store.steampowered.com/public/css/styles_storev5.css?__TIME__",
 "Styles/styles_supportmessages.css"              : "https://store.steampowered.com/public/css/styles_supportmessages.css?__TIME__",
 "Styles/styles_twofactor.css"                    : "https://store.steampowered.com/public/css/styles_twofactor.css?__TIME__",
 "Styles/styles_video.css"                        : "https://store.steampowered.com/public/css/styles_video.css?__TIME__",
@@ -76,6 +83,12 @@
 "Styles/styles_autumn2016.css"                   : "https://store.steampowered.com/public/css/promo/autumn2016.css?__TIME__",
 "Styles/styles_autumn2017.css"                   : "https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__",
 "Styles/styles_autumn2018.css"                   : "https://store.steampowered.com/public/css/promo/autumn2018.css?__TIME__",
+"Styles/curator_announce.css"                    : "https://store.steampowered.com/public/css/promo/curator_announce.css?__TIME__",
+"Styles/newstore2016.css"                        : "https://store.steampowered.com/public/css/promo/newstore2016.css?__TIME__",
+"Styles/storev6.css"                             : "https://store.steampowered.com/public/css/promo/storev6.css?__TIME__",
+"Styles/winter_2015_main.css"                    : "https://store.steampowered.com/public/css/promo/winter_2015_main.css?__TIME__",
+"Styles/winter2018.css"                          : "https://store.steampowered.com/public/css/promo/winter2018.css?__TIME__",
+"Styles/winter2018_cottage.css"                  : "https://store.steampowered.com/public/css/promo/winter2018_cottage.css?__TIME__",
 
 //
 // Community CSS
@@ -86,6 +99,7 @@
 "Styles/Community/apphub_home.css"               : "https://steamcommunity.com/public/css/skin_1/apphub_home.css?__TIME__",
 "Styles/Community/apphub_images.css"             : "https://steamcommunity.com/public/shared/css/apphub_images.css?__TIME__",
 "Styles/Community/apphub_workshop.css"           : "https://steamcommunity.com/public/css/skin_1/apphub_workshop.css?__TIME__",
+"Styles/Community/apphubs.css"                   : "https://steamcommunity.com/public/css/skin_1/apphubs.css?__TIME__",
 "Styles/Community/badges.css"                    : "https://steamcommunity.com/public/css/skin_1/badges.css?__TIME__",
 "Styles/Community/broadcast_upload.css"          : "https://steamcommunity.com/public/css/skin_1/broadcast_upload.css?__TIME__",
 "Styles/Community/broadcast_watch.css"           : "https://steamcommunity.com/public/shared/css/skin_1/broadcast_watch.css?__TIME__",
@@ -99,6 +113,7 @@
 "Styles/Community/economy_history.css"           : "https://steamcommunity.com/public/css/skin_1/economy_history.css?__TIME__",
 "Styles/Community/economy_inventory.css"         : "https://steamcommunity.com/public/css/skin_1/economy_inventory.css?__TIME__",
 "Styles/Community/economy_market.css"            : "https://steamcommunity.com/public/css/skin_1/economy_market.css?__TIME__",
+"Styles/Community/fatalerror.css"                : "https://steamcommunity.com/public/css/skin_1/fatalerror.css?__TIME__",
 "Styles/Community/forums.css"                    : "https://steamcommunity.com/public/css/skin_1/forums.css?__TIME__",
 "Styles/Community/friendsv2.css"                 : "https://steamcommunity.com/public/css/friendsv2.css?__TIME__",
 "Styles/Community/game_achievements.css"         : "https://steamcommunity.com/public/css/skin_1/game_achievements.css?__TIME__",
@@ -106,12 +121,18 @@
 "Styles/Community/global.css"                    : "https://steamcommunity.com/public/css/skin_1/global.css?__TIME__",
 "Styles/Community/greenlight.css"                : "https://steamcommunity.com/public/css/skin_1/greenlight.css?__TIME__",
 "Styles/Community/group_list.css"                : "https://steamcommunity.com/public/css/skin_1/group_list.css?__TIME__",
+"Styles/Community/group_members_list.css"        : "https://steamcommunity.com/public/css/skin_1/group_members_list.css?__TIME__",
+"Styles/Community/group_ogg.css"                 : "https://steamcommunity.com/public/css/skin_1/group_ogg.css?__TIME__",
 "Styles/Community/group_permissions_edit.css"    : "https://steamcommunity.com/public/css/skin_1/group_permissions_edit.css?__TIME__",
 "Styles/Community/groupadmin.css"                : "https://steamcommunity.com/public/css/skin_1/groupadmin.css?__TIME__",
 "Styles/Community/groupv2.css"                   : "https://steamcommunity.com/public/css/skin_1/groupv2.css?__TIME__",
 "Styles/Community/header.css"                    : "https://steamcommunity.com/public/css/skin_1/header.css?__TIME__",
+"Styles/Community/headerless_page.css"           : "https://steamcommunity.com/public/css/skin_1/headerless_page.css?__TIME__",
 "Styles/Community/home.css"                      : "https://steamcommunity.com/public/css/skin_1/home.css?__TIME__",
 "Styles/Community/login.css"                     : "https://steamcommunity.com/public/css/skin_1/login.css?__TIME__",
+"Styles/Community/modalContent.css"              : "https://steamcommunity.com/public/css/skin_1/modalContent.css?__TIME__",
+"Styles/Community/openid.css"                    : "https://steamcommunity.com/public/css/skin_1/openid.css?__TIME__",
+"Styles/Community/parental.css"                  : "https://steamcommunity.com/public/css/skin_1/parental.css?__TIME__",
 "Styles/Community/playerstats_generic.css"       : "https://steamcommunity.com/public/css/skin_1/playerstats_generic.css?__TIME__",
 "Styles/Community/profile.css"                   : "https://steamcommunity.com/public/css/skin_1/profile.css?__TIME__",
 "Styles/Community/profile_commentnotifications.css": "https://steamcommunity.com/public/css/skin_1/profile_commentnotifications.css?__TIME__",
@@ -121,6 +142,7 @@
 "Styles/Community/profile_friends_list.css"      : "https://steamcommunity.com/public/css/skin_1/profile_friends_list.css?__TIME__",
 "Styles/Community/profile_friends_list_self.css" : "https://steamcommunity.com/public/css/skin_1/profile_friends_list_self.css?__TIME__",
 "Styles/Community/profile_gamenotifications.css" : "https://steamcommunity.com/public/css/skin_1/profile_gamenotifications.css?__TIME__",
+"Styles/Community/profile_gamenotificationsettings.css": "https://steamcommunity.com/public/css/skin_1/profile_gamenotificationsettings.css?__TIME__",
 "Styles/Community/profile_games_list.css"        : "https://steamcommunity.com/public/css/skin_1/profile_games_list.css?__TIME__",
 "Styles/Community/profile_recommended.css"       : "https://steamcommunity.com/public/css/skin_1/profile_recommended.css?__TIME__",
 "Styles/Community/profile_reviews.css"           : "https://steamcommunity.com/public/css/skin_1/profile_reviews.css?__TIME__",
@@ -129,10 +151,14 @@
 "Styles/Community/profile_videos.css"            : "https://steamcommunity.com/public/css/skin_1/profile_videos.css?__TIME__",
 "Styles/Community/profilev2.css"                 : "https://steamcommunity.com/public/css/skin_1/profilev2.css?__TIME__",
 "Styles/Community/reportphishing.css"            : "https://steamcommunity.com/public/css/skin_1/reportphishing.css?__TIME__",
+"Styles/Community/search.css"                    : "https://steamcommunity.com/public/css/skin_1/search.css?__TIME__",
 "Styles/Community/sharedfiles_guide.css"         : "https://steamcommunity.com/public/css/skin_1/sharedfiles_guide.css?__TIME__",
 "Styles/Community/sharedfiles_imagewall.css"     : "https://steamcommunity.com/public/css/skin_1/sharedfiles_imagewall.css?__TIME__",
+"Styles/Community/sharedfiles_itemedittext_media.css": "https://steamcommunity.com/public/css/skin_1/sharedfiles_itemedittext_media.css?__TIME__",
 "Styles/Community/sharedfiles_manage_image.css"  : "https://steamcommunity.com/public/css/skin_1/sharedfiles_manage_image.css?__TIME__",
 "Styles/Community/stickers.css"                  : "https://steamcommunity.com/public/css/promo/summer2017/stickers.css?__TIME__",
+"Styles/Community/trade.css"                     : "https://steamcommunity.com/public/css/skin_1/trade.css?__TIME__",
+"Styles/Community/welcome.css"                   : "https://steamcommunity.com/public/css/skin_1/welcome.css?__TIME__",
 "Styles/Community/workshop.css"                  : "https://steamcommunity.com/public/css/skin_1/workshop.css?__TIME__",
 "Styles/Community/workshop_about.css"            : "https://steamcommunity.com/public/css/skin_1/workshop_about.css?__TIME__",
 "Styles/Community/workshop_browse_menu.css"      : "https://steamcommunity.com/public/css/skin_1/workshop_browse_menu.css?__TIME__",
@@ -140,6 +166,7 @@
 "Styles/Community/workshop_home.css"             : "https://steamcommunity.com/public/css/skin_1/workshop_home.css?__TIME__",
 "Styles/Community/workshop_hover.css"            : "https://steamcommunity.com/public/css/skin_1/workshop_hover.css?__TIME__",
 "Styles/Community/workshop_itemdetails.css"      : "https://steamcommunity.com/public/css/skin_1/workshop_itemdetails.css?__TIME__",
+"Styles/Community/workshop_itemedittext.css"     : "https://steamcommunity.com/public/css/skin_1/workshop_itemedittext.css?__TIME__",
 "Styles/Community/workshop_managecollection.css" : "https://steamcommunity.com/public/css/skin_1/workshop_managecollection.css?__TIME__",
 "Styles/Community/workshop_userfiles.css"        : "https://steamcommunity.com/public/css/skin_1/workshop_userfiles.css?__TIME__",
 
@@ -155,9 +182,11 @@
 "Styles/buttons.css"                             : "https://steamcommunity.com/public/shared/css/buttons.css?__TIME__",
 "Styles/dash_player.css"                         : "https://steamcommunity.com/public/shared/css/dash_player.css?__TIME__",
 "Styles/globalv2.css"                            : "https://steamcommunity.com/public/css/globalv2.css?__TIME__",
+"Styles/login.css"                               : "https://steamcommunity.com/public/shared/css/login.css?__TIME__",
 "Styles/shared_global.css"                       : "https://steamcommunity.com/public/shared/css/shared_global.css?__TIME__",
 "Styles/user_reviews.css"                        : "https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__",
 "Styles/shared_responsive.css"                   : "https://steamcommunity.com/public/shared/css/shared_responsive.css?__TIME__",
+"Styles/store_game_shared.css"                   : "https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__",
 
 //
 // WebUI
@@ -176,6 +205,9 @@
 "Scripts/WebUI/chathelpers.js"                   : "https://steamcommunity.com/public/javascript/webui/chathelpers.js?__TIME__&l=english",
 "Scripts/WebUI/clientcom.js"                     : "https://steamcommunity.com/public/javascript/webui/clientcom.js?__TIME__&l=english",
 "Scripts/WebUI/steammessages.js"                 : "https://steamcommunity.com/public/javascript/webui/steammessages.js?__TIME__&l=english",
+"Scripts/WebUI/friendsui_english.js"             : "https://steamcommunity.com/public/javascript/webui/localization/friendsui_english.js?__TIME__",
+"Scripts/WebUI/profile_manifest.js"              : "https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english",
+"Scripts/WebUI/shared_english.js"                : "https://steamcommunity.com/public/javascript/webui/localization/shared_english.js?__TIME__",
 
 //
 // Holiday CSS
@@ -195,6 +227,7 @@
 // Store JS
 //
 "Scripts/Store/app_tagging.js"                   : "https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=english",
+"Scripts/Store/broadcast_carousel.js"            : "https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english",
 "Scripts/Store/cart.js"                          : "https://store.steampowered.com/public/javascript/cart.js?__TIME__&l=english",
 "Scripts/Store/checkout.js"                      : "https://store.steampowered.com/public/javascript/checkout.js?__TIME__&l=english",
 "Scripts/Store/cluster.js"                       : "https://store.steampowered.com/public/javascript/cluster.js?__TIME__&l=english",
@@ -224,6 +257,7 @@
 "Scripts/Store/video_watch.js"                   : "https://store.steampowered.com/public/javascript/video_watch.js?__TIME__&l=english",
 "Scripts/Store/youraccount.js"                   : "https://store.steampowered.com/public/javascript/youraccount.js?__TIME__&l=english",
 "Scripts/Store/wishlist.js"                      : "https://store.steampowered.com/public/javascript/wishlist.js?__TIME__&l=english",
+"Scripts/Store/winter2018_cottage.js"            : "https://store.steampowered.com/public/javascript/promo/winter2018_cottage.js?__TIME__&l=english",
 
 //
 // Community JS
@@ -240,6 +274,8 @@
 "Scripts/Community/discussions.js"               : "https://steamcommunity.com/public/javascript/discussions.js?__TIME__&l=english",
 "Scripts/Community/dmca.js"                      : "https://steamcommunity.com/public/javascript/dmca.js?__TIME__&l=english",
 "Scripts/Community/economy.js"                   : "https://steamcommunity.com/public/javascript/economy.js?__TIME__&l=english",
+"Scripts/Community/economy_common.js"            : "https://steamcommunity.com/public/javascript/economy_common.js?__TIME__&l=english",
+"Scripts/Community/economy_history.js"           : "https://steamcommunity.com/public/javascript/economy_history.js?__TIME__&l=english",
 "Scripts/Community/economy_trade.js"             : "https://steamcommunity.com/public/javascript/economy_trade.js?__TIME__&l=english",
 "Scripts/Community/economy_tradeoffer.js"        : "https://steamcommunity.com/public/javascript/economy_tradeoffer.js?__TIME__&l=english",
 "Scripts/Community/economy_v2.js"                : "https://steamcommunity.com/public/javascript/economy_v2.js?__TIME__&l=english",
@@ -249,17 +285,27 @@
 "Scripts/Community/global.js"                    : "https://steamcommunity.com/public/javascript/global.js?__TIME__&l=english",
 "Scripts/Community/group.js"                     : "https://steamcommunity.com/public/javascript/group.js?__TIME__&l=english",
 "Scripts/Community/group_admin_functions.js"     : "https://steamcommunity.com/public/javascript/group_admin_functions.js?__TIME__&l=english",
+"Scripts/Community/group_announcements.js"       : "https://steamcommunity.com/public/javascript/group_announcements.js?__TIME__&l=english",
+"Scripts/Community/group_event_edit_functions.js": "https://steamcommunity.com/public/javascript/group_event_edit_functions.js?__TIME__&l=english",
+"Scripts/Community/group_functions.js"           : "https://steamcommunity.com/public/javascript/group_functions.js?__TIME__&l=english",
+"Scripts/Community/group_members_manage_functions.js": "https://steamcommunity.com/public/javascript/group_members_manage_functions.js?__TIME__&l=english",
+"Scripts/Community/infinitescroll.js"            : "https://steamcommunity.com/public/javascript/infinitescroll.js?__TIME__&l=english",
 "Scripts/Community/login.js"                     : "https://steamcommunity.com/public/javascript/login.js?__TIME__&l=english",
 "Scripts/Community/market.js"                    : "https://steamcommunity.com/public/javascript/market.js?__TIME__&l=english",
+"Scripts/Community/modal.js"                     : "https://steamcommunity.com/public/javascript/modal.js?__TIME__&l=english",
+"Scripts/Community/modalContent.js"              : "https://steamcommunity.com/public/javascript/modalContent.js?__TIME__&l=english",
+"Scripts/Community/modalv2.js"                   : "https://steamcommunity.com/public/javascript/modalv2.js?__TIME__&l=english",
 "Scripts/Community/profile.js"                   : "https://steamcommunity.com/public/javascript/profile.js?__TIME__&l=english",
 "Scripts/Community/profile_edit_functions.js"    : "https://steamcommunity.com/public/javascript/profile_edit_functions.js?__TIME__&l=english",
 "Scripts/Community/profile_friends_list_functions.js": "https://steamcommunity.com/public/javascript/profile_friends_list_functions.js?__TIME__&l=english",
 "Scripts/Community/profile_functions.js"         : "https://steamcommunity.com/public/javascript/profile_functions.js?__TIME__&l=english",
 "Scripts/Community/profile_gameslist_functions.js": "https://steamcommunity.com/public/javascript/profile_gameslist_functions.js?__TIME__&l=english",
 "Scripts/Community/profile_home_functions.js"    : "https://steamcommunity.com/public/javascript/profile_home_functions.js?__TIME__&l=english",
+"Scripts/Community/reportedcontent.js"           : "https://steamcommunity.com/public/javascript/reportedcontent.js?__TIME__&l=english",
 "Scripts/Community/screenshot_functions.js"      : "https://steamcommunity.com/public/javascript/screenshot_functions.js?__TIME__&l=english",
 "Scripts/Community/screenshot_functions_v2.js"   : "https://steamcommunity.com/public/javascript/screenshot_functions_v2.js?__TIME__&l=english",
 "Scripts/Community/search.js"                    : "https://steamcommunity.com/public/javascript/search.js?__TIME__&l=english",
+"Scripts/Community/sharedfiles_editor.js"        : "https://steamcommunity.com/public/javascript/sharedfiles_editor.js?__TIME__&l=english",
 "Scripts/Community/sharedfiles_functions_logged_in.js": "https://steamcommunity.com/public/javascript/sharedfiles_functions_logged_in.js?__TIME__&l=english",
 "Scripts/Community/sharedfiles_guide_functions.js": "https://steamcommunity.com/public/javascript/sharedfiles_guide_functions.js?__TIME__&l=english",
 "Scripts/Community/steamguard.js"                : "https://steamcommunity.com/public/javascript/steamguard.js?__TIME__&l=english",
@@ -280,12 +326,14 @@
 //
 // Global and shared JS
 //
+"Scripts/account_linking.js"                     : "https://steamcommunity.com/public/shared/javascript/account_linking.js?__TIME__&l=english",
 "Scripts/apphub.js"                              : "https://steamcommunity.com/public/shared/javascript/apphub.js?__TIME__&l=english",
-"Scripts/shared_global.js"                       : "https://steamcommunity.com/public/shared/javascript/shared_global.js?__TIME__&l=english",
-"Scripts/user_reviews.js"                        : "https://steamcommunity.com/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 "Scripts/dash_player.js"                         : "https://steamcommunity.com/public/shared/javascript/dash_player.js?__TIME__&l=english",
 "Scripts/login.js"                               : "https://steamcommunity.com/public/shared/javascript/login.js?__TIME__&l=english",
+"Scripts/mobileappapi.js"                        : "https://steamcommunity.com/public/shared/javascript/mobileappapi.js?__TIME__&l=english&mobileClientType=android",
+"Scripts/shared_global.js"                       : "https://steamcommunity.com/public/shared/javascript/shared_global.js?__TIME__&l=english",
 "Scripts/shared_responsive_adapter.js"           : "https://steamcommunity.com/public/shared/javascript/shared_responsive_adapter.js?__TIME__&l=english",
+"Scripts/user_reviews.js"                        : "https://steamcommunity.com/public/shared/javascript/user_reviews.js?__TIME__&l=english",
 
 //
 // Mini game
@@ -337,6 +385,7 @@
 // Mobile CSS (mixed)
 //
 "Styles/Mobile/shared_mobile.css"                : "https://steamcommunity.com/public/shared/css/shared_mobile.css?__TIME__",
+"Styles/Mobile/styles_mobileconf.css"            : "https://steamcommunity.com/public/css/mobile/styles_mobileconf.css?__TIME__",
 "Styles/Mobile/styles_profile.css"               : "https://steamcommunity.com/public/css/mobile/styles_profile.css?__TIME__",
 "Styles/Mobile/styles_steamguard.css"            : "https://steamcommunity.com/public/css/mobile/styles_steamguard.css?__TIME__",
 
