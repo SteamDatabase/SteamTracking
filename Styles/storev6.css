@@ -1,0 +1,417 @@
+body.v6 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+body.v6.promoannounce {
+
+}
+
+body.v6.promoannounce .page_content_container {
+	background: url(/public/images/promo/v6announce/bg.jpg?v=1) top center, #000;
+
+	background-repeat: no-repeat;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		
+}
+
+.page_content.announce {
+	height: 4206px;
+}
+
+#breadcrumbs, #breadcrumbs a {
+	font-size: 13px;
+	color: #9099a0;
+	padding-top: 20px;
+}
+
+#breadcrumbs.nopad {
+	padding: 0;
+	margin-top: -5px;
+}
+
+body.v6.promoannounce .page_content a {
+	color: #66c0f4;
+}
+body.v6.promoannounce .page_content a:hover {
+	color: #ffffff;
+}
+
+.page_content.plain {
+	background: transparent;
+}
+
+.promoannounce .page_content {
+	position: relative;
+}
+
+#title_flag {
+	width: 400px;
+	height: 36px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	position: absolute;
+	top: 85px;
+	left: -2px;
+	z-index: 10;
+}
+.title_flag {
+	margin: 50px 0 15px 0;
+	z-index: 10;
+
+	height: 36px;
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.heading {
+	font-size: 44px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: #fff;
+	text-transform: uppercase;
+}
+
+.heading > span {
+	color: #66c0f4;
+}
+
+.heading2 {
+	font-size: 30px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #fff;
+	line-height: 35px;
+}
+
+
+#avatar {
+	border: 5px solid #67c1f5;
+	width: 92px;
+	height: 92px;
+	box-shadow: 0 0 5px #67c1f5;
+	position: absolute;
+	top: 102px;
+	z-index: 5;
+}
+
+#avatar > img {
+	width: 92px;
+	height: 92px;
+}
+
+#title_text {
+	position: absolute;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 44px;
+	color: #fff;
+	top: 123px;
+	left: 115px;
+	width: 750px;
+	text-transform: uppercase;
+	line-height: 44px;
+}
+
+#title_text > div {
+	color: #66c0f4;
+}
+
+#title_desc {
+	position: absolute;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			width: 940px;
+	left: 0;
+	top: 233px;
+	font-size: 19px;
+}
+
+.title_feature {
+	font-size: 44px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #fff;
+}
+
+.desc_feature {
+	font-size: 17px;
+	line-height: 23px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.subfeature_title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 17px;
+	color: #66c0f4;
+	text-transform: uppercase;
+}
+.subfeature_desc {
+	margin-top: 9px;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+#your_home_title {
+	top: 544px;
+	position: absolute;
+}
+
+#your_home_desc {
+	top: 604px;
+	position: absolute;
+	width: 430px;
+}
+
+.center_btn {
+	width: 100%;
+	text-align: center;
+}
+#your_home_btn {
+	margin-top: 18px;
+}
+
+#your_home_left {
+	position: absolute;
+	top: 1083px;
+	left: 17px;
+	width: 450px;
+}
+
+#your_home_right {
+	position: absolute;
+	top: 1083px;
+	left: 477px;
+	width: 450px;
+}
+
+#your_queue {
+	position: absolute;
+	top: 1580px;
+}
+
+#your_queue_desc {
+	position: absolute;
+	top: 1633px;
+}
+
+#your_queue_btn {
+	position: absolute;
+	top: 1848px;
+	right: 5px;
+	text-align: right;
+}
+
+#your_queue_left {
+	position: absolute;
+	top: 2015px;
+	left: 17px;
+	width: 450px;
+}
+
+#your_queue_right {
+	position: absolute;
+	top: 2015px;
+	left: 477px;
+	width: 450px;
+}
+
+#curators_title {
+	position: absolute;
+	top: 2446px;
+}
+
+#curators_desc {
+	position: absolute;
+	top: 2510px;
+	width: 392px;
+}
+
+#curators_btn {
+	margin-top: 18px;
+}
+
+#search_title {
+	position: absolute;
+	top: 3060px;
+}
+
+#search_desc {
+	position: absolute;
+	top: 3114px;
+}
+
+#search_left {
+	position: absolute;
+	top: 3245px;
+	left: 17px;
+	width: 450px;
+}
+
+#search_right {
+	position: absolute;
+	top: 3245px;
+	left: 477px;
+	width: 450px;
+}
+
+#go_btn {
+	left: 0px;
+	width: 940px;
+	text-align: center;
+	margin-top: 41px;
+}
+
+
+#go_title {
+	position: absolute;
+	top: 3780px;
+}
+
+#go_desc {
+	position: absolute;
+	top: 3835px;
+}
+
+#explore_box{
+
+	background-color: #c7d5e0;
+	padding: 5px 15px 25px 15px;
+	margin-top: -47px;
+	position: relative;
+}
+
+#explore_box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(199, 213, 224, 0);
+	border-top-color: #c7d5e0;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+#explore_box > div {
+	color: #262626;
+}
+
+.updatetitle {
+	color: #fff;
+	font-size: 28px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.updatetitle > span {
+	color: #9099a0;
+	font-size: 22px;
+}
+
+.listhead, .heading3 {
+	color: #66c0f4;
+	margin: 25px 0 5px 0;
+	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+ul {
+	margin-left: 16px;
+	list-style-position: outside;
+}
+
+ul li:before {
+
+	font-size: 45px;
+	line-height: 18px;
+
+	padding-right: 5px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+li {
+	font-size: 15px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #c6d4df;
+	line-height: 19px;
+	vertical-align: top;
+	padding-bottom: 10px;
+}
+
+body.v6.curatorsannounce .page_content_container {
+	padding: 25px 0;
+}
+
+body.v6 .page_content_container.dark {
+	background-color: #000;
+
+}
+
+p {
+	font-size: 17px;
+	line-height: 23px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			padding: 5px 0;
+}
+
+p a {
+	color: #66c0f4;
+}
+p a:hover {
+	color: #ffffff;
+}
+
+blockquote {
+	margin: 25px;
+}
+
+blockquote p {
+	color: #8f98a0;
+	font-size: 15px;
+	width: 620px;
+	line-height: 18px;
+}
+blockquote ol {
+	width: 620px;
+	margin-left: 40px;
+}
+blockquote ol li {
+	color: #8f98a0;
+	font-size: 15px;
+	line-height: 18px;
+}
+#statsimg {
+	float: right;
+	margin: -75px -50px 0 12px;
+}
+.promosmallbody {
+	font-size: 15px;
+	line-height: 19px;
+}
+.v6changelist {
+	margin-top: 80px;
+	width: 700px;
+}

@@ -1,0 +1,125 @@
+
+
+
+body {
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/economy/noheader_content.png );
+	background-repeat: repeat-x;
+	background-color: #000000;
+	text-align: left;
+}
+
+body.headerless_page {
+	position: relative;
+}
+
+.pagecontent {
+	width: 958px;
+	margin: 0 auto;
+	background: none;
+	padding-bottom: 0;
+}
+
+#headerrow {
+	height: 88px;
+	padding-top: 32px;
+}
+
+#headerlogo {
+	float: right;
+}
+
+#mainContent {
+	margin: 0px auto;
+}
+
+.black_square_btn, .black_square_btn .cap.left, .black_square_btn .cap.right {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/tradereceipt_button.png' );
+	height: 26px;
+}
+
+.black_square_btn {
+	background-repeat: repeat-x;
+	background-position: center bottom;
+	position: relative;
+	display: inline-block;
+	padding: 0px 12px;
+	line-height: 26px;
+	font-size: 12px;
+	color: #c9c9c9;
+	cursor: pointer;
+	
+	margin: 0px 20px;
+}
+
+.black_square_btn .cap.left, .black_square_btn .cap.right {
+	position: absolute;
+	top: 0px;
+	width: 3px;
+	background-repeat: no-repeat;
+}
+
+.black_square_btn .cap.left {
+	background-position: left top;
+	left: 0px;
+}
+
+.black_square_btn .cap.right {
+	background-position: right top;
+	right: 0px;
+}
+
+#error_page_bg {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/headerless_error_bg.png' );
+	width: 940px;
+	height: 482px;
+	margin: 0px auto 24px auto;
+}
+
+.error_page_content {
+	text-align: center;
+	color: #c4c4c4;
+	padding: 112px 211px 0px 211px;
+
+}
+
+#error_page_bg h3 {
+	font-size: 18px;
+}
+#error_page_bg h2 {
+	font-size: 23px;
+}
+#error_msg {
+	display: inline-block;
+	background-color: #1d1d1d;
+	padding: 15px 24px;
+	font-size: 18px;
+	margin-top: 54px;
+}
+.error_page_links {
+	text-align: center;
+}
+
+.popup_page {
+	width: 500px;
+	margin: 0px auto;
+}
+
+.popup_page.buttons {
+	text-align: right;
+	margin-top: 12px;
+	margin-bottom: 48px;
+}
+
+.popup_page_content {
+	margin-top: 24px;
+
+	background-color: #262626;
+	border: 1px solid #4D4B49;
+	padding: 16px;
+}
+
+.popup_page_content h2 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffffff;
+}

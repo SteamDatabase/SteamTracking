@@ -1,0 +1,140 @@
+
+.header
+{
+	padding-top: 10px;
+	padding-bottom: 16px;
+}
+
+.header #rightContents
+{
+	padding-top: 45px;
+}
+.header #ig_bottom .sidebar .panel.owner {
+	padding: 0px 10px;
+	background: rgba( 163, 207, 6, 0.2);
+}
+
+.pageTitle
+{
+	font-size: 30px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+}
+
+.editTextBody
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/bg_highlight_EditFields.jpg');
+	background-repeat:no-repeat;
+	width: 864px;
+	height: 420px;
+	margin-top: 20px;
+	margin-right: 17px;
+	padding: 18px;
+}
+
+.no_language_override
+{
+	color: #FF7B00;
+	font-size: 13px;
+	padding-bottom: 20px;
+	padding-left: 159px;
+}
+
+.language
+{
+	font-size: 14px;
+	padding-bottom: 10px;
+	float: left;
+	line-height: 27px;
+	width: 158px;
+}
+
+select.languageField
+{
+	float: left;
+	font-size: 14px;
+	line-height: 27px;
+	height: 27px;
+	width: 340px;
+	top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	color: #67c1f5;
+	background-color: #2c495f;
+	border: none;
+	border-radius: 3px;
+
+	box-shadow: 0 0 3px #000;
+}
+
+
+.language_option {
+	color: #8AC43E;
+}
+
+.language_option.no_content
+{
+	color: #497a9e;
+}
+
+.title
+{
+	font-size: 14px;
+	padding-bottom: 10px;
+	float: left;
+	line-height: 27px;
+}
+
+input.titleField
+{
+	float: right;
+	font-size: 14px;
+	line-height: 27px;
+	height: 27px;
+	width: 750px;
+	top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	color: #c6d4df;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	border-radius: 3px;
+}
+
+.description
+{
+	font-size: 14px;
+	margin-top: 35px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.descField
+{
+	font-size: 14px;
+	margin-top: 25px;
+	float: right;
+	width: 750px;
+	height: 255px;
+	padding: 10px;
+
+	color: #c6d4df;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	border-radius: 3px;
+}
+
+.submit_btn
+{
+	float: right;
+	margin-top: 15px;
+	margin-right: 0px;
+	padding-left: 25px;
+	padding-right: 25px;
+}

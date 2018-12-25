@@ -1,0 +1,45 @@
+
+.discover_queue_empty.winter_sale {
+	height: auto;
+}
+
+.discovery_queue_winter_sale_cards_header {
+	position: relative;
+	padding: 10px;
+	margin-bottom: 10px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align: left;
+	min-height: 91px;
+}
+
+.discovery_queue_winter_sale_cards_header .subtext {
+	padding-top: 5px;
+	font-size: 14px;
+	color: #8F98A0;
+}
+
+.discovery_queue_winter_sale_where_trading_cards {
+	font-size: 15px;
+	color: #478ab9;
+	padding-top: 20px;
+}
+.discovery_queue_winter_sale_where_trading_cards a {
+	text-decoration: underline;
+	color: #478ab9;
+}
+
+.discovery_queue_winter_sale_cards_header img
+{
+	float: left;
+	margin-right: 10px;
+}
+.discovery_queue_winter_sale_cards_header h3
+{
+	font-size: 22px;
+	margin-top: 10px;
+}
+h3.keepGoing
+{
+	margin-top: 40px;
+}

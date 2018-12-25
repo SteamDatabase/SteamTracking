@@ -1,0 +1,674 @@
+
+/* override the background for now */
+body
+{
+	background: #1b2838;
+	background-position: 0 105px;
+}
+
+
+.appHubsHeaderBG
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/home_banner_top.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	min-width: 948px;
+}
+
+.appHubsHeader
+{
+	width: 948px;
+	height: 170px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.appHubsHeaderText
+{
+	width: 535px;
+	font-size: 14px;
+	line-height: 18px;
+	color: #aac8f3;
+	position: absolute;
+	left: 365px;
+	top: 32px;
+	text-align: left;
+}
+
+/* stats */
+.appHubsHeaderCommunityStats
+{
+	top: 110px;
+	left: 55px;
+	text-align: left;
+	position: absolute;
+}
+
+#userNumbers
+{
+	font-size: 15px;
+	font-weight: bold;
+	color:#4d4d4d;
+}
+
+#iContributions
+{
+	color: #ffffff;
+}
+
+#iAccountsInGame
+{
+	color: #8BC53F;
+}
+
+#iAccountsOnline
+{
+	color: #62A7E3;
+}
+
+/* page itself */
+.appHubsPage
+{
+	width: 948px;
+	min-height: 1250px;
+	margin: 0px auto;
+	position: relative;
+}
+
+/* right column */
+.appHubsRightContentWrapper
+{
+	float: right;
+	position: relative;
+	width: 281px;
+}
+
+.appHubsRightContent
+{
+	width: 281px;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+.fixedRightColumn
+{
+	position: fixed !important;
+}
+
+.appHubsRightContent h2
+{
+	font-size: 14px;
+	font-weight: normal;
+	color: #494947;
+	padding-top: 5px;
+	margin-bottom: 10px;
+}
+
+.appHubsRightContent .panel
+{
+	background: #1b1b1b;
+	background: rgba(27,27,27,.36);
+	border-radius: 4px;
+	padding: 10px 10px 10px 11px;
+	margin: 0 0 10px 0;
+	border: 1px solid #1f1f20;
+	box-shadow: 1px 1px 0 0 #39393a;
+}
+
+.appHubsRightContentDivider
+{
+	position: relative;
+	width: 281px;
+	height: 0px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid #333333;
+	background-color: black;
+	left: -12px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.appHubsFilter
+{
+	display: block;
+	font-size: 14px;
+	color: white;
+	line-height: 34px;
+	cursor: pointer;
+	position: relative;
+}
+
+.appHubsFilterCurrentSelectionImage
+{
+	position: absolute;
+	height: 35px;
+	width: 267px;
+	left: -6px;
+}
+
+/* community details */
+
+.appHubCommunityDetails
+{
+	color: #aeaeae;
+	font-size: 13px;
+	text-align: left;
+	background-color: #303031;
+	padding-top: 18px;
+	padding-bottom: 21px;
+	padding-left: 13px;
+	padding-right: 13px;
+	-moz-box-shadow: 0px 0px 3px #000000 inset;
+	-webkit-box-shadow: 0px 0px 3px #000000 inset;
+	box-shadow: 0px 0px 3px #000000 inset;
+}
+
+.community_activity_signin_buttons
+{
+	padding-top: 16px;
+}
+
+.community_activity_signin_buttons .btn_login_green, .community_activity_signin_buttons .community_activity_or
+{
+	float: left;
+	line-height: 32px;
+	margin-right: 8px;
+	margin-left: 8px;
+}
+
+.btn_login_green
+{
+	display: block;
+	position: relative;
+	height: 28px;
+	background-repeat: repeat-x;
+
+	padding: 0px 17px;
+	text-transform: uppercase;
+
+	font-size: 11px;
+	color: #ffffff;
+	line-height: 24px;
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+.btn_login_green
+{
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_bg.png');
+}
+.btn_login_green .leftcap, .btn_login_green .rightcap
+{
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_login_corners.png');
+}
+
+.appHubsSteamDesc
+{
+	padding: 13px;
+	font-size: 13px;
+	color: #aeaeae;
+	text-align: left;
+}
+
+/* shortcuts */
+.appHubShortcut
+{
+	height: 46px;
+}
+
+.appHubShortcut_Icon
+{
+	width: 28px;
+	height: 28px;
+	float: left;
+	margin-right: 5px;
+}
+
+.appHubShortcut_Title
+{
+	display: block;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.appHubShortcut_SeeAll
+{
+	font-size: 12px;
+	color: #58769f;
+	text-transform: uppercase;
+	float: right;
+}
+
+.appHubShortcut_SeeAll:hover
+{
+	color: #58769f;
+}
+
+.appHubShortcut_SeeAll:visited
+{
+	color: #58769f;
+}
+
+/* main page */
+.appHubs
+{
+	float: left;
+	width: 646px;
+	margin-right: 9px;
+}
+
+.appHubSearchTextInput
+{
+	height: 24px;
+	line-height: 24px;
+	width: 262px;
+	border: 1px solid #6283b2;
+	background-color: #2f3e55;
+	font-size: 11px;
+	color: white;
+	left: -6px;
+	padding-left: 5px;
+}
+
+.appHubSearchTextImage
+{
+	position: absolute;
+	top: 6px;
+	right: 0px;
+	width: 23px;
+	height: 18px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	cursor: pointer;
+}
+
+.appHubLoadingImageSearch
+{
+	vertical-align: middle;
+	height: 14px;
+	padding-left: 10px;
+}
+
+.appHubLoadingImage
+{
+	height: 20px;
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+a.appHubContainerLink:hover
+{
+	text-decoration: none;
+}
+
+.appHub
+{
+	display: block;
+	position: relative;
+	text-align: left;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.apphubTopContainer
+{
+	display: block;
+	position: relative;
+	height: 7px;
+	width: 646px;
+}
+
+.apphubTop
+{
+	position: absolute;
+	width: 2px;
+	height: 7px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/tab_hubheader.png');
+	background-repeat: no-repeat;
+}
+
+.apphubTop.middle
+{
+	left: 2px;
+	width: 642px;
+	background-position: 0px -7px;
+	background-repeat: repeat-x;
+}
+
+.apphubTop.leftcap
+{
+	left: 0px;
+	background-position: 0px 0px;
+}
+
+.apphubTop.rightcap
+{
+	right: 0px;
+	background-position: 0px -14px;
+}
+
+.appHubOutlineContainer
+{
+	display: block;
+	position: relative;
+	background-color: #1b1b1b;
+	border: 1px solid #394c67;
+	height: 356px;
+	overflow: hidden;
+}
+
+.appHub:hover .appHubOutlineContainer
+{
+	border: 1px solid #97c0e3;
+}
+
+.appHub_TitleArea
+{
+	display: block;
+	background-color: #1b1b1b;
+	border-bottom: 1px solid #333333;
+}
+
+.apphub_AppIcon
+{
+	margin-top: 11px;
+	margin-right: 12px;
+}
+
+.appHubTitle
+{
+	display: block;
+	font-size: 26px;
+	color: white;
+	padding: 11px;
+}
+
+.appHubStatBar
+{
+	position: absolute;
+	top: 100px;
+	left: 2px;
+	text-transform: uppercase;
+}
+
+.appHubStatContainer
+{
+	float: left;
+	height: 103px;
+	padding-left: 10px;
+	padding-right: 20px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_center.png' );
+	background-repeat: repeat-x;
+}
+
+.appHubStatBarEndCap
+{
+	float: left;
+	width: 6px;
+	height: 103px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_right.png' );
+}
+
+.appHub:hover .appHubStatContainer
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_center_hover.png' );
+}
+
+.appHub:hover .appHubStatBarEndCap
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_hub_right_hover.png' );
+}
+
+.appHubStat
+{
+	display: block;
+	color: #ffffff;
+	font-size: 34px;
+	padding-top: 10px;
+}
+
+.appHubStatTitle
+{
+	color: #9cb1cf;
+	font-size: 14px;
+}
+
+.appHubViewAll
+{
+	display: block;
+	position: absolute;
+	top: 75px;
+	font-size: 12px;
+	color: #d2d2d2;
+}
+
+.appHubs_ImageWall
+{
+	display: block;
+	border-top: 1px solid #000000;
+	padding: 2px;
+}
+
+.appHubs_ImageWallImageContainer
+{
+	display: block;
+	float: left;
+	overflow: hidden;
+	margin: 2px;
+}
+
+.appHubs_ImageWallImage
+{
+}
+
+.appHubContentOverlay
+{
+	position: absolute;
+	top: 56px;
+	width: 644px;
+	height: 300px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/apphubs/overlay_hub.png' );
+}
+
+/* quick list filter */
+.appHubsQuickList
+{
+	padding-top: 5px;
+	float: left;
+}
+
+div.quicklistselect
+{
+	position: relative;
+	cursor: pointer;
+	width: 269px;
+	height: 26px;
+	line-height: 26px;
+	color: white;
+	font-size: 12px;
+	background-color: #7095ca;
+	border: 1px solid #79a1db;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+div.quicklistselect_options {
+	text-align: left;
+	width: 269px;
+	line-height: 26px;
+	color: white;
+	font-size: 12px;
+	background-color: #7095ca;
+	border: 1px solid #79a1db;
+	cursor: pointer;
+	text-transform: uppercase;
+	z-index: 3;
+}
+
+div.quicklistselect #quicklistselect_arrow {
+	position: absolute;
+	right: 0px;
+	top: 2px;
+	width: 17px;
+	height: 20px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/workshop_dateselect_arrow.png' );
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+div.quicklistselect.focus #quicklistselect_arrow{
+	background-position: bottom;
+}
+
+div.quicklistselect #quicklistselect_active
+{
+	cursor: pointer;
+}
+
+div.quicklistselect div.option, div.quicklistselect_options div.option {
+	padding-left: 7px;
+	height: 24px;
+	line-height: 24px;
+	cursor: default;
+	border-bottom: none;
+}
+
+div.quicklistselect #quicklistselect_activestats
+{
+	background-color: #719F33;
+	color: #ffffff;
+	border-bottom: 1px solid #707070;
+}
+
+div.quicklistselect_options div.option{
+	border-bottom: none;
+	cursor: pointer;
+}
+
+div.quicklistselect_options div.option:hover {
+	background-color: #333333;
+}
+
+div.quicklistselect div.option img, div.quicklistselect_options div.option img {
+	vertical-align: middle;
+}
+
+/* loading */
+
+
+.apphub_GetMoreContent
+{
+	max-width: 948px;
+	height: 300px;
+	line-height: 300px;
+	margin: 0px auto;
+	border:  1px solid transparent;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+
+.apphub_GetMoreContentWait
+{
+	position: relative;
+	max-width: 948px;
+	height: 300px;
+	line-height: 300px;
+	margin: 0 auto;
+	border:  1px solid transparent;
+	padding: 10px 1%;
+	margin-bottom: 10px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.apphub_GetMoreContentWait img
+{
+	vertical-align: middle;
+	padding-right: 10px;
+}
+
+.apphub_ProgressBarBG
+{
+	position: absolute;
+	top: 200px;
+	left: 15%;
+	right: 15%;
+	height: 25px;
+	background-color: #000000;
+	border: 2px solid #cccccc;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.apphub_ProgressBar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 25px;
+	background-color: #cccccc;
+}
+
+/* not logged in */
+#NotLoggedInWarning
+{
+}
+
+.notLoggedInText
+{
+	padding-top: 0px;
+	font-size: 20px;
+	padding-bottom: 20px;
+}
+
+.notLoggedInButtons
+{
+	display: block;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.general_btn {
+	display: block;
+	background-color: #1A1A1A;
+	padding: 5px 8px 5px 8px;
+	margin-right: 5px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	cursor: pointer;
+}
+
+a.general_btn {
+	color: #939393;
+}
+
+a.general_btn:hover {
+	text-decoration: none;
+	color: #AAA;
+}
+
+.notLoggedInButtons a.general_btn
+{
+	display: inline;
+	text-decoration: none;
+}
+
+.notLoggedInButtons a.general_btn.green
+{
+	color: #ffffff;
+	padding-left: 24px;
+	padding-right: 24px;
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/btn_green.png);
+}
+
+.notLoggedInButtons a.general_btn.green:hover
+{
+	color: #000000;
+}

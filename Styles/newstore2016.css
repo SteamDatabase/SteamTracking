@@ -1,0 +1,231 @@
+
+body.v6.promoannounce {
+
+}
+
+body.v6.promoannounce .page_content_container {
+	background-image: none;
+	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);background: linear-gradient( to bottom, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);	background-repeat: no-repeat;
+	background-color: rgba( 27, 40, 56, 1 );
+
+}
+
+.page_header_bg {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background-color: #66c0f4;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/newstore2016/header_background.jpg' );
+	background-repeat: repeat-x;
+}
+
+.page_content.announce {
+    height: auto;
+}
+
+#title_text {
+    left: 0px;
+    top: 90px;
+    z-index: 1;
+}
+
+#title_desc {
+    top: 210px;
+    z-index: 1;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			color: #fff;
+}
+
+#callouts {
+    position: relative;
+    height: 3723px;
+
+    background: url(https://steamcdn-a.akamaihd.net/store/promo/newstore2016/homepage_long_01.jpg?v=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 365px;
+}
+
+.callout {
+    position: absolute;
+	background: -webkit-linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%););background: linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%););    padding: 16px;
+    border-radius: 3px;
+    color: black;
+	box-shadow: 0 0 8px #000;
+	border: 1px solid #fff;
+}
+
+.callout_title {
+    font-size: 17px;
+	color: #2a3e59;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.callout_desc {
+    font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+#callout_quick_access {
+	top: 373px;
+    width: 310px;
+}
+#callout_personalize {
+	top: 337px;
+    right: 0px;
+    width: 310px;
+}
+#callout_great_deals {
+	top: 673px;
+    width: 300px;
+}
+#callout_smarter {
+	top: 770px;
+    right: 0px;
+    width: 235px;
+}
+#callout_recently_viewed {
+	top: 821px;
+    width: 150px;
+}
+#callout_friends_activity {
+	top: 1118px;
+    width: 310px;
+}
+#callout_discovery_queue {
+	top: 1253px;
+    right: 0px;
+    width: 310px;
+}
+#callout_blue_buttons {
+	top: 1483px;
+    width: 150px;
+}
+#callout_top_new_releases {
+    top: 1523px;
+    right: 0px;
+    width: 235px;
+}
+#callout_curators {
+	top: 1679px;
+	right: 0px;
+     width: 235px;
+}
+#callout_your_updated_games {
+	top: 1954px;
+    width: 150px;
+}
+#callout_lists {
+	top: 2318px;
+    width: 310px;
+}
+#callout_more_personalization {
+	top: 2572px;
+    width: 310px;
+    right: 0px;
+}
+#callout_offers {
+	top: 2946px;
+    right: 0px;
+    width: 310px;
+}
+#callout_more_to_browse {
+	top: 3028px;
+    width: 150px;
+}
+
+#recent_updates_container {
+    position: relative;
+	margin-top: -44px;
+}
+
+.recent_updates_header_bg {
+    position: absolute;
+    background-color: #66c0f4;
+    background: -webkit-linear-gradient( 160deg, #66c0f4 5%,#111923 95%););background: linear-gradient( 160deg, #66c0f4 5%,#111923 95%););    height: 350px;
+    width: 100%;
+}
+
+#recent_updates_header {
+    position: relative;
+    height: 225px;
+    padding-top: 50px;
+}
+#recent_updates_header #title_text {
+    position: relative;
+    top: 0px;
+}
+#recent_updates_header #title_desc {
+    position: relative;
+    top: 0px;
+    padding-top: 20px;
+}
+
+#recent_updates {
+    position: relative;
+    padding: 15px;
+    background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);}
+
+#recent_updates:before {
+    left: 25%;
+    border: transparent solid;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(199, 213, 224, 0);
+    border-bottom-color: #000000;
+    border-width: 30px;
+    margin-left: -30px;
+    margin-top: -60px;
+}
+
+.recent_update_section {
+    border-bottom: 1px solid #7092a5;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.recent_update_section .title_feature {
+    font-size: 17px;
+	padding-top: 9px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.date_feature {
+    padding-bottom: 20px;
+}
+
+.desc_feature {
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.update_image {
+
+}
+.update_image.left {
+    float: left;
+    padding-right: 50px;
+}
+.update_image.right {
+    float: right;
+    padding-left: 50px;
+}
+
+#explore_box {
+    margin-top: 0px;
+}

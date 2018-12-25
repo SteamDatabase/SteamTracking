@@ -1,0 +1,107 @@
+
+#parental_main
+{
+	padding-left: 16px;
+	padding-right: 16px;
+	min-height: 300px;
+	background: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
+	background-size: contain;
+	font-size: 12px;
+}
+
+#parental_main_content
+{
+	padding-top: 16px;
+}
+
+.mobileBody #parental_main_content
+{
+	width: inherit;
+}
+
+#parental_notice
+{
+	max-width: 656px;
+	height: 220px;
+	padding: 20px;
+	margin: 20px auto;
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/parental/keybg.png' );
+	background-repeat: no-repeat;
+	background-position: 80% 50%;
+	background-color: rgba(0, 0, 0, 0.3);
+
+	text-align: center;
+	position: relative;
+}
+
+.mobileBody #parental_notice
+{
+	border: none;
+	margin-top: 16px;
+	width: inherit;
+	background-image: inherit;
+}
+
+#parental_notice_text
+{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#parental_notice_instructions
+{
+	margin-bottom: 30px;
+	color: #c6d4df;
+}
+
+#parental_notice input
+{
+	background-color: #2a3f5a;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0 #45556c;
+	color: #fff;
+	height: 20px;
+	height: 24px;
+	padding-left: 5px;
+	margin-right: 10px;
+	font-size: 16px;
+	margin-bottom: 8px;
+}
+
+.mobileBody #parental_notice input
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+
+
+#parental_notice button
+{
+	display: inline-block;
+}
+
+#parental_error, .parental_error
+{
+	color: red;
+	margin-left: 10px;
+}
+
+#parental_notice #parental_error
+{
+	margin-left: 0px;
+	margin-top: 10px;
+}
+
+#parental_recovery
+{
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+}

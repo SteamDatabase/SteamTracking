@@ -1,0 +1,156 @@
+#mainBody {
+	width:958px;
+	margin:0;
+	padding:0;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+}
+
+#mainContents {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:946px;
+	min-width:946px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:21px;
+}
+
+#mainContents h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+}
+
+#mainContents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+}
+
+h2 {
+	color:#89ADBA;
+	font-size:11px;
+	font-weight:bolder;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+#memberList {
+	margin:0;
+	padding:0;
+	margin-left:31px;
+}
+
+#bottomLinks {
+	position:relative;
+	width:894px;
+	margin:0;
+	padding:0;
+	margin-bottom:6px;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
+	position:relative;
+	float:left;
+	width:286px;
+	height:40px;
+	padding:0;
+	margin:0;
+	padding-left:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-bottom:4px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG.gif');
+	font-size:10px;
+	margin-right:8px;
+}
+
+.friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG_over.gif');
+	cursor:pointer;
+}
+
+.officerBlock	{
+	position:relative;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG.gif');
+}
+
+.officerBlock:hover {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG_over.gif');
+	cursor:pointer;
+}
+
+.officerIcon {
+	position:absolute;
+	left:264px;
+	top:15px;
+}
+
+.friendSmallTextO {
+	display:block;
+	width:210px;
+}
+
+.infoBar {
+	position:relative;
+	width:894px;
+	height:17px;
+	background-color:#000000;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+.infoBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+#searchArea {
+	padding-left:27px;
+	padding-bottom:10px;
+}
+
+#searchKey {
+	width:200px;
+}
+
+#searchAreaField {
+	float:left;
+}
+
+#searchAreaSubmit {
+	float:left;
+	padding-left:10px;
+}
+
+#searchAreaClear {
+	float:left;
+	padding:7px 0 0 10px;
+}

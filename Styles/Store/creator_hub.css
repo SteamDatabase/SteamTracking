@@ -1,0 +1,82 @@
+
+/* Recommended creators widget */
+ .recommended_creators_ctn .home_smallcaps a.home_smallcap .recommended_creators_container img {
+	 width: 32px;
+	 height: 32px;
+ }
+
+.recommended_creators_ctn .home_smallcaps a.home_smallcap {
+	float: none;
+	display: inline-block;
+	white-space: normal;	/* override the nowrap we set above */
+}
+
+.recommended_creators_ctn {
+	 margin: 20px auto 25px auto;
+ }
+
+.recommended_creators_ctn .store_capsule {
+	width: 228px;
+	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
+}
+
+.recommended_creators_ctn .store_capsule .capsule_header {
+	height: 107px;
+}
+
+.recommended_creators_ctn .store_capsule:not(:last-child) {
+	margin-right: 9px; /* 9 * 2 + 3 * 200 = 618 */
+}
+
+.recommended_creators_ctn .store_capsule .discount_block {
+	min-height: 18px;
+}
+
+.recommended_creators_ctn .carousel_container .arrow {
+	top: 27px;
+}
+
+.recommended_creators_ctn .recommended_creators_container {
+	border-top: 1px solid #213749;
+	padding: 8px 7px 5px;
+	position: relative;
+	height: 20px;
+	background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);background: linear-gradient( to right, #223b4f 5%,#25435b 95%);}
+
+.recommended_creators_ctn .recommended_creators_container .avatars {
+	position: relative;
+	top: -30px;
+}
+.recommended_creators_ctn .recommended_creators_container .avatars > a {
+	margin-right: 3px;
+	height: 32px;
+	display: inline-block;
+}
+.recommended_creators_ctn .recommended_creators_container .avatars > a img {
+	height:48px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.5);
+	border-radius: 3px;
+}
+.recommended_creators_ctn .recommended_creators_container .avatars > .actions {
+	display: inline-block;
+	position: relative;
+	bottom: 7px;
+}
+.recommended_creators_ctn .recommended_creators_container .following_button span {
+	border: 1px solid rgba(255,255,255,0.5);
+	opacity: 0.4;
+}
+.recommended_creators_ctn .recommended_creators_container .following_button img {
+	position: relative;
+	top: 1px;
+	left: -1px;
+	opacity: 0.8;
+	width: 11px;
+	margin-right: 2px;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive .recommended_creators_ctn .store_capsule {
+		padding-bottom: 20px;
+	}
+}

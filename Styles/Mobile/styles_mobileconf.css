@@ -1,0 +1,377 @@
+
+body {
+	background-color: #060F18;
+}
+
+html.responsive body .responsive_page_template_content {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+	padding-bottom: 0;
+	min-height: 0;
+}
+
+/* confirmation page */
+
+.mobileconf_header {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.mobileconf_header > div:first-of-type  {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.mobileconf_title_verbiage {
+	margin-top: 20px;
+	text-align: center;
+	font-size: 14px;
+	text-shadow: none;
+}
+
+.mobileconf_list_entry {
+	cursor: default;
+	font-size: 15px;
+	text-shadow: none;
+
+	width: 100%; 	-webkit-transition: opacity 0.1s, top 0.4s;
+	transition: opacity 0.1s, top 0.4s;
+}
+
+.mobileconf_list_entry.copy {
+	-webkit-transition: opacity 0.4s, top 0.4s;
+	transition: opacity 0.4s, top 0.4s;
+}
+
+.mobileconf_list_entry_content {
+	padding: 10px 20px;
+}
+
+.mobileconf_list_entry_icon {
+	float: left;
+	height: 3.5em;
+	margin-right: 10px;
+}
+
+.mobileconf_list_entry_icon > div {
+	width: 32px;
+}
+
+.mobileconf_list_entry_description > div {
+	color: #7A7A7A;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.mobileconf_list_entry_description > div:first-of-type {
+	color: white;
+}
+
+.mobileconf_list_entry_sep {
+	border-top: 1px solid #303030;
+}
+
+#mobileconf_details
+{
+	width: 100%; 	-webkit-transition: opacity 0.4s, top 0.4s;
+	transition: opacity 0.4s, top 0.4s;
+}
+
+#mobileconf_buttons
+{
+	position: fixed;
+	display: inline-block;
+	vertical-align: middle;
+	height: 3.3em;
+	line-height: 3.3em;	width: 100%;
+	font-size: 20px;
+	background: #324056;
+	background-image: radial-gradient(ellipse farthest-corner at 50% 0px , rgb(74, 107, 152) 0%, transparent 50%);
+	bottom: -3em;
+	left: 0;
+	z-index: 10;
+
+	-webkit-transition-property: bottom;
+	transition-property: bottom;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+
+.mobileconf_button
+{
+	width: 50%;
+	display: inline-block;
+	overflow: hidden;
+	text-align: center;
+	vertical-align: middle;
+	line-height: normal;
+	cursor: pointer;
+}
+
+/*
+ * Offers
+ */
+
+.mobileconf_offers {
+}
+
+.mobileconf_offers_summary {
+	background-color: #303030;
+	margin-top: 10px;
+}
+
+.mobileconf_offers_summary_header {
+	margin-top: 10px;
+	float: left;
+	display: inline-block;
+}
+
+.mobileconf_offers_summary_header_text {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.mobileconf_offers_summary_info {
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #203060;
+}
+
+.mobileconf_offers_summary_chevron {
+	width: 0.8em;
+	overflow: hidden;
+	margin: 13px 0 0 4px;
+	float: right;
+	font-size: 25px;
+	text-shadow: none;
+	color: #ffffff;
+	font-weight: 900;
+	vertical-align: middle;
+	display: inline-block;
+
+	transition-property: transform;
+	transition-duration: 0.1s;
+}
+
+.mobileconf_list_checkbox {
+	overflow: hidden;
+	float: right;
+	vertical-align: middle;
+	display: inline-block;
+	color: #ffffff;
+	width: 3em;
+	height: 3em;
+	transform: scale(1.5);
+
+	transition-property: transform;
+	transition-duration: 0.1s;
+}
+
+.mobileconf_list_checkbox input {
+	width: 3em;
+	height: 3em;
+}
+
+.mobileconf_offers_list {
+}
+
+.mobileconf_offer_wrapper {
+	background-color: #1f1f1f;
+	padding-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.mobileconf_offer_header {
+	margin-bottom: 5px;
+}
+
+.mobileconf_offer_header_persona_icon {
+	float: left;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.mobileconf_offer_header_persona_text {
+	float: left;
+}
+
+.mobileconf_offer_item_list {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.mobileconf_offer_item_icon {
+}
+
+.mobileconf_offer_footer {
+}
+
+.mobileconf_offer_footer_expiration {
+	float: right;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	text-shadow: none;
+	color: #203060;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+
+.mobileconf_trade_action_button_cancel {
+	margin-left: 30px;
+}
+
+.mobileconf_trade_action_button_confirm {
+	margin-right: 30px;
+}
+
+.mobileconf_trade_action_buttons {
+	margin-top: 10px;
+}
+
+.mobileconf_trade_action_ctn {
+    position: relative;
+    background-color: #1d1d1d;
+    border: 1px solid #3d3d3e;
+    border-radius: 5px;
+    padding: 9px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.mobileconf_trade_action_header {
+	font-size: 22px;
+	color: #63B7E7;
+}
+
+
+
+/* ---------------- */
+
+.mobileconf_trade_area .trade_partner_header {
+	margin-bottom: 0;
+}
+
+.mobileconf_confirm_link {
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+.mobileconf_trade_partner_info {
+	padding: 8px 8px 0 8px;
+}
+
+
+. mobileconf_trade_box {
+}
+
+.mobileconf_trade_rule {
+	width: 100%;
+}
+
+.mobileconf_trade_items_whose {
+	font-size: 22px;
+	color: #ffffff;
+}
+
+.mobileconf_trade_items_whose_note {
+	font-size: 12px;
+	color: #aaaaaa;
+}
+
+.mobileconf_trade_no_items_warning {
+	padding-top: 10px;
+	font-size: 14px;
+	color: #ff9900;
+}
+
+.mobileconf_listing_prices {
+	padding: 10px;
+	background-color: #2a3349
+}
+
+#confiteminfo {
+	display: inline-block;
+	text-align: left;
+	border: none;
+}
+
+@media screen and (max-width: 366px)
+{
+	.mobileconf_listing_prices
+	{
+		margin: 0 10px;
+	}
+
+	#confiteminfo
+	{
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 366px)
+{
+	.mobileconf_listing_prices
+	{
+		max-width: 326px;
+		margin: auto;
+	}
+
+	#confiteminfo
+	{
+		width: 346px;
+	}
+}
+
+@media screen and (min-width: 590px)
+{
+	.mobileconf_listing_prices
+	{
+		max-width: 100%;
+		margin: 0 10px;
+	}
+
+	#confiteminfo_content
+	{
+		background: none;
+	}
+
+	#confiteminfo
+	{
+		width: 100%;
+	}
+
+	#confiteminfo_content
+	{
+		padding: 11px;
+	}
+
+	.item_desc_icon
+	{
+		max-width: 48%;
+		float: left;
+		position: static;
+	}
+
+	.item_desc_description
+	{
+		float: right;
+		width: 48%;
+	}
+}

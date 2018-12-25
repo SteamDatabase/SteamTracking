@@ -1,0 +1,239 @@
+.body_text {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 13px;
+}
+
+.chart_center {
+	margin: 0 auto;
+	max-width: 670px;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+div.statsTop {
+	width:auto;
+	text-align:center;
+	margin-top: 20px;
+}
+
+.statsTop td {
+	padding-top:2px;
+	padding-bottom:3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.backlogTopHi {
+	color:#ca4848;
+	font-weight:bold;
+}
+.statsTopHi {
+	color:#66c0f4;
+	font-weight:bold;
+}
+.statsTopHi2 {
+	color:#2f89bc;
+	font-weight:bold;
+}
+.statsTopSmall {
+	font-size:11px;
+	color: #8f98a0;
+}
+.centeredDiv {
+	text-align:center;
+}
+.player_count_row {
+	height: 18px;
+}
+#detailStats td a {
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+#detailStats td b {
+	color: #67c1f5;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+a#detailLink, #detailLink{
+	font-size:11px;
+	text-decoration:underline;
+	color:#ffffff;
+	font-weight:bold;
+}
+.hrnormal {
+	width: 680px;
+	border-top-width: 2px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #282828;
+	height: 2px;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+.gameLink, a.gameLink, a:visited.gameLink {
+	color:#787878;
+	font-weight:bold;
+	padding-right: 8px;
+}
+.currentPlayers {
+	color:#c98d33;
+}
+.currentServers {
+	color:#8f98a0;
+	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.supportDetail {
+	color:#8f98a0;
+	font-weight: normal;
+	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.supportDetail.strong
+{
+	color: #ffffff;
+}
+
+
+#legenddivsupport
+{
+	margin-left: 46px;
+}
+
+#legenddivsupport .legendLabel
+{
+	padding-right: 20px;
+}
+
+.averageMinutes {
+	color:#a5a5a5;
+}
+
+.stats_links .block_content.block_content_inner
+{
+	padding-bottom: 0px;
+}
+
+
+.leftCol_4 > P { 
+	color:#C5CAB6;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size:1.1em;
+	font-weight:normal;
+	line-height:1.4em;
+	margin:10px 20px 15px 25px;
+	padding:0;
+	text-align:left;
+	text-decoration:none;
+}
+
+.statsOverview table td a {
+	font-size: 12px;
+}
+
+tr.bottom td {
+    border-bottom: thin solid;
+    border-color: #787878;
+}
+
+.block_header {
+	color: #67c1f5;
+	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-top: 20px;
+	margin-bottom: 5px;
+}
+.block_header .header_inline {
+	color: #9099a1;
+	font-size: 15px;
+}
+.block_content.block_content_inner {
+	padding: 12px;
+}
+.block_content.block_content_inner.dark {
+	background-color: black;
+	padding: 12px;
+}
+.block_content a.linkbar {
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			display: block;
+	color: #ffffff;
+	line-height: 24px;
+}
+.block_content a.linkbar:hover {
+	color: #67c1f5;
+}
+
+.chartdiv
+{
+	width: auto;
+	min-width: 600px;
+	height: 300px;
+	background-color: black;
+	margin-bottom: 80px;
+}
+
+.dateAxis
+{
+	color: white;
+}
+
+.flot-tick-label, .legendLabel {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#8f98a0;
+}
+
+.flot-x-axis .flot-tick-label {
+	white-space: nowrap;
+	transform:  translate( 45px,90px ) rotate(-90deg);
+	transform-origin: top left;
+	text-align: right;
+	width:100px;
+}
+
+.users_count_table {
+	margin-left: 24px;
+	font-size:16px;
+	font-weight:normal;
+	color:#8f98a0;
+}
+
+.users_count_table .users_count {
+	padding-left: 12px;
+}
+
+@media screen and (max-width: 400px)
+{
+	html.responsive .users_count_table {
+		margin-left: 0;
+	}
+}
+
+.topgames_col {
+	overflow: hidden;
+}
+
+#detailStats > table {
+	max-width: 663px;
+}

@@ -1,0 +1,192 @@
+.full {
+	position: relative;
+	width: 948px;
+	height: 800px;
+	margin: 0px auto;
+	text-align: left;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+.footer {
+	height: 7px;
+	min-height: 7px;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/contentBG_bottom.gif');
+	background-repeat: no-repeat;
+}
+
+#rightTextContainer {
+	float: right;
+	margin-top: 8px;
+	padding-right: 12px;
+	text-align:left;
+	width: 304px;
+	height: 414;
+}
+#info {
+	margin: 12px;
+	margin-top: 32px;
+}
+h1 {
+	font-size: 14px;
+	color: #cccccc;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+h2 {
+	color: #67c1f5;
+	text-decoration: none;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-weight: normal;
+	font-size: 18px;
+}
+p {
+	font-size: 13px;
+	color: #9099a1;
+	margin-top: 2px;
+	margin-bottom: 12px;
+	padding: 0px;
+}
+ul {
+	font-size: 12px;
+	line-height: 1.5em;
+	color: #9099a1;
+	text-indent: 0px;
+	list-style-position: outside;
+	list-style-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/arrow.gif');
+	list-style-type: square;
+	padding-left: 12px;
+	margin: 2px;
+}
+#btn {
+	padding-top: 4px;
+}
+#description {
+	margin-top: 40px;
+	font-weight: normal;	
+	text-align: left;
+	width: 450px;
+	padding-right: 80px;
+	padding-left: 80px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	float: left;
+	background: -webkit-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
+}
+#description h2 {
+	font-size: 20px;
+}
+#description p {
+	font-size: 16px;
+	line-height: 22px;
+}
+#comingSoon {
+	font-style:italic;
+	font-weight:bold;
+	color: #cccccc;
+}
+.Info_break {
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/1px_welcome.gif');
+	background-repeat:repeat-x;
+	height: 1px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	margin-right: -12px;
+	margin-left: -12px;
+}
+#alphaEdition {
+	text-align:left;
+	margin-left: -3px;
+	padding-bottom:12px;
+}
+#welcomeFooter {
+	padding-top: 96px;
+	padding-left: 12px;
+	text-align: left;
+}
+#footerNotes {
+	color: #5d5d5d;
+	text-align: left;
+	font-size:10px;
+	position:relative;
+	top:auto;
+	margin-bottom: 12px;
+}
+a.footerUnderline, a.footerUnderline:hover, a.footerUnderline:visited, a.footerUnderline:active {
+	font-size: 10px;
+	color: #b0b1b0;
+}
+a.Underline:hover {
+}
+
+#hello {
+	text-align: left;
+	margin: 8px 0px 0px 12px;
+	font-size: 48px;
+	color: #fff;
+	font-weight: bold;	
+}
+#subHead {
+	text-align: left;
+	margin: 0px 0px 0px 16px;
+	color: #9099a1;
+	font-size:22px;
+}
+	
+#modalBG {
+	display:none;
+	position:absolute;
+	z-index:100;
+	background-color:#000000;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+
+#setupConfirmModal {
+	display:none;
+	position:absolute;
+	z-index:1000;
+	width:340px;
+	background-color:#404040;
+	border:solid #111111 3px;
+}
+
+
+#setupConfirmModal h1 {
+	font-size:18px;
+	padding:5px;
+}
+
+#setupConfirmModal p {
+	color: #9d9d9d;
+	font-size:12px;
+	padding:0px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.welcome_header_ctn {
+	background: url('https://steamcommunity-a.akamaihd.net/public/images//bg_highlight.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	position: relative;
+	margin: 0px auto;
+	text-align: left;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			height: 113px;
+	padding-top: 30px;
+}
+.welcome_header {
+	width: 948px;
+	position: relative;
+	padding: 0 16px;
+	margin: 0 auto;
+}

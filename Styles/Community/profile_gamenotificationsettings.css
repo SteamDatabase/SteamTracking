@@ -1,0 +1,187 @@
+
+.profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent  {
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	min-height: 441px;
+	margin-top: -5px;
+}
+
+#gamenotificationsettings_top {
+	position:relative;
+	z-index:10;
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#gamenotificationsettings_maincontents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:12px;
+	padding-top:21px;
+}
+#gamenotificationsettings_maincontents h2 {
+	padding-top:20px;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+	padding-left:5px;
+}
+#gamenotificationsettings_maincontents h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-bottom:13px;
+	padding-left:5px;
+}
+
+.gamenotifications_settings_top_content {
+	width: 940px;
+	height: 72px
+	padding-top: 15px;
+	font-size: 26px;
+	margin-left: 10px;
+	margin-bottom: 25px;
+	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
+	color: white;
+}
+
+.gamenotifications_settings_title_area {
+	width: 632px;
+	height: 15px;
+}
+
+.gamenotifications_settings_title_left {
+	float: left;
+	margin-left: 5px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: Arial, Tahoma;
+	color: white;
+}
+
+.gamenotifications_settings_title_right {
+	float: right;
+	margin-right: 5px;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: Arial, Tahoma;
+	color: white;
+}
+
+
+.gamenotifications_settings_shadow_section {
+	border: 1px solid black;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	background: rgba(15,15,14,.36);
+	box-shadow: 1px 1px 0 0 #2f2f30;
+}
+
+#gamenotifications_left_content {
+	width: 632px;
+}
+
+#gamenotifications_settings_right_content {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/icons/icon_arrow_left.png');
+	background-repeat: no-repeat;
+	background-position: 13px 21px;
+	width: 249px;
+	height: 65px;
+	padding-left: 41px;
+	padding-top: 20px;
+	margin-top: 16px;
+	float: right;
+}
+
+.gamenotifications_settings_right_title {
+	font-family: Arial, Tahoma;
+	font-size: 16px;
+	color: #d6d7d8;
+}
+
+.gamenotifications_settings_right_desc {
+	font-family: Arial, Tahoma;
+	font-size: 11px;
+	color: #626366;
+}
+
+.gamenotifications_settings_app_area {
+	width: 632px;
+	background: rgba(15,15,14,.36);
+	box-shadow: 1px 1px 0 0 #2f2f30;
+}
+
+.gamenotifications_settings_app_separator {
+	width: 632px;
+	height: 1px;
+	background-color: #313539;
+}
+
+.gamenotifications_settings_app_header {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.gamenotifications_settings_app_image {
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 5px;
+	float: left;
+}
+
+.gamenotifications_settings_app_name {
+	font-size: 20px;
+	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
+	color: white;
+	margin-top: 25px;
+}
+
+.gamenotifications_settings_app_checkbox {
+	float: right;
+	margin-top: -20px;
+	margin-right: 20px;
+}
+
+.gamenotifications_no_notifications {
+	margin-left: 10px;
+	font-size: 12px;
+	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
+	color: white;
+}
+
+.gamenotifications_settings_save_result {
+	margin-left: 1px;
+	padding-left: 5px;
+	width: 625px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+	font-family: 'MotivaSans ExtraLight', Arial, Tahoma;
+	clear: both;
+}
+
+#gamenotifications_settings_save_success {
+	background-color: #314a67;
+	border: 1px solid #567397;
+	color: #7cb0f1;
+}
+
+#gamenotifications_settings_save_working {
+	color: #FFC369;
+	border: 1px solid #ff9900;;
+	background-color: #CA7900;
+}
+
+#gamenotifications_settings_save_error {
+	color: #000000;
+	border: 1px solid #4c2c2a;
+	background-color: #b33b32;
+}

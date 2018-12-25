@@ -1,0 +1,393 @@
+
+body.v6 #footer {
+	background-color: rgba(0,0,0,0.95);
+}
+
+.cottage_area {
+    min-height: 100em;
+}
+
+.alldoors_container_outer {
+    margin: 0 auto;
+}
+
+.alldoors_container {
+    /*min-height: 1000px;*/
+    position: relative;
+    left: 50%;
+    transform: translate( -50%, 0% );
+}
+
+.cottage_doorset {
+    /* stuff for each set of doors - each one has its own scene */
+    perspective: 1000px;
+
+    /* unset overflow so 3d doors can go outside of bounding boxes as viewed in 2d */
+    overflow: unset;
+
+    display: inline-block;
+}
+
+/* left door */
+.cottage_door_left {
+    position: absolute; left: 0; top: 0; right: 0; bottom: 0;
+    transform-origin: left center;
+}
+
+/* right door */
+.cottage_door_right {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    transform-origin: right center;
+}
+
+/* Delay right door to make it floppy like cardboard */
+.cottage_doorset .cottage_door_double + .cottage_door_right {
+    transition-duration: 540ms;
+}
+
+/* opening transition */
+.cottage_doorset .cottage_door {
+    transform-style: preserve-3d;
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in;
+}
+
+/* hover transition over closed door */
+.cottage_doorset:not(.cottage_door_open):hover .cottage_door_left {
+    transform: rotateY(-15deg);
+	cursor: pointer;
+}
+.cottage_doorset:not(.cottage_door_open):hover .cottage_door_right {
+    transform: rotateY(15deg);
+	cursor: pointer;
+}
+
+.cottage_door_open:hover+.reveal_content {
+    /*display:block;*/
+    visibility: visible;
+    opacity: 1;
+}
+
+.cottage_door_open > .cottage_door  {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.6s;
+}
+
+.cottage_door {
+    width: 100%;
+}
+
+.cottage_door.cottage_door_double {
+    width: calc(50%);
+}
+
+.cottage_door_face {
+    backface-visibility: hidden;
+        position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/* opened doors */
+.cottage_doorset.cottage_door_open .cottage_door_left {
+    transform: rotateY(-135deg);
+}
+.cottage_doorset.cottage_door_open .cottage_door_right {
+    transform: rotateY(135deg);
+}
+
+/* revealed image, displayed inline within parent APO */
+.cottage_door_revealed {
+}
+
+.cottage_door_interior {
+    background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/cardboard-paper-background.jpg');
+    transform: rotateY(.5turn);
+}
+
+
+/* containers are relatively positioned within parent, to offset doors to the right spot in the art */
+.door_container {
+    position: absolute;
+    left: var(--door-x);
+    top: var(--door-y);
+
+    width: var(--door-width);
+    height: var(--door-height);
+}
+
+/* doors draw using CSS atlasing of the background image. A little arithmetic required to get the right door in the right place */
+.door_container .cottage_door_left .cottage_door_exterior {
+    background-position: calc(-1 * var(--door-x)) calc(-1 * var(--door-y));
+}
+.door_container .cottage_door_right .cottage_door_exterior {
+    background-position: calc(-1 * var(--door-x) - var(--door-width)/2) calc(-1 * var(--door-y));
+}
+
+.cottage_door_number {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    font-size: 18pt;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align:center;
+    font-family: 'Lusitana', serif;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+
+.cottage_moretocome {
+    position: absolute;
+    bottom: 3em;
+    left: 36%;
+    font-weight: bold;
+    font-size: 17px;
+    opacity: 0.6;
+    margin: 0 auto;
+}
+
+
+.cottage_door_unopenable .cottage_door_number {
+    display: none;
+}
+
+.sale_page_background {
+    background-color: #283647;
+    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/bg-pattern.jpg');
+    background-size: 100% 100%;
+}
+
+
+/*  modal to receive surprises  */
+
+.surprise_modal {
+    width: 450px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.surprises {
+    height: auto;
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+}
+
+.surprise {
+    width: 100px;
+    height: 100px;
+    border: solid 3px rgba(255,255,255,0.2);
+    display: inline-block;
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.surprise img {
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-5%);
+}
+
+
+.item_container {
+    float: left;
+    margin: 5px;
+    width: 31%;
+}
+
+.surprise_received_title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.surprise_title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+}
+
+.surprise_desc {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+
+/*opened door overlay */
+
+
+.reveal_content {
+    visibility: hidden;
+    opacity:0;
+    position: fixed;
+    background-color: #1e2936;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+    z-index: 1;
+    width: 230px;
+    padding: 20px;
+    text-align: center;
+    float: inherit;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.reveal_content a {
+    text-decoration: none;
+    display: block;
+}
+
+
+.label_day {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.label_feat {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-top: 3px;
+    opacity: 0.8;
+}
+
+.label_items_acquired {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+.label_game_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    line-height: 28px;
+}
+
+.reveal_content:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+.door_container_4 .reveal_content,.door_container_5 .reveal_content,.door_container_12 .reveal_content {
+    right: 0;
+}
+
+
+    /*
+    ---------------------
+    FAQ SECTION
+    ---------------------
+    */
+.faq_qa_intro {
+    text-align: left;
+    margin: 0px 18px 20px 18px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.steamaward_header_title_rule {
+    width: 60px;
+    height: 1px;
+    margin: 8px auto 0 auto;
+    background: rgba( 255, 255, 255, 0.2 );
+    margin-bottom: 8px;
+}
+
+.badge_tasks_left, .badge_tasks_right {
+    float: left;
+    width: calc( 50% - 20px );
+}
+
+.badge_task {
+    margin-bottom: 14px;
+    line-height: 17px;
+}
+
+.badge_tasks_left {
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 600px )
+{
+    html.responsive .badge_tasks_left,
+    html.responsive .badge_tasks_right {
+        float: none;
+    }
+
+}
+
+.faq_q {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.faq_a {
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 4px;
+    color: #c6d4df;
+}
+
+.faqentry {
+    margin-bottom: 50px;
+}
+
+.faq_background {
+    background-color: #000a1a;
+    background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+    height: 750px;
+}
+.faq_section {
+    width: 100%;
+    max-width: 1500px;
+    /*background: #768da2;*/
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/*.alldoors_faq {*/
+    /*box-shadow: 5px 5px 5px #000000;*/
+/*}*/
+
+
+
+
+@media screen and (max-width: 600px )
+{
+    .cottage_header {
+        margin: 0 auto;
+        height: 400px;
+        background-position: center;
+        background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2018/header/title_mobile.png');
+        background-repeat: no-repeat;
+        background-position-y: 50px;
+        background-position-x: 50%;
+    }
+
+    .faq_content {
+        width: 50%;
+    }
+
+
+}

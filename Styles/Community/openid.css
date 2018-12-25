@@ -1,0 +1,262 @@
+
+
+.oauthLoginButton {
+	margin-top: 12px;
+	border: 0;
+
+}
+
+#mainBody {
+	margin: 30px auto 100px auto;
+}
+
+.OpenID_MainHeader {
+	background-color: rgba( 0, 0, 0, 0.3 );
+	width: 950px;
+	height: 110px;
+	margin-bottom: 5px;
+}
+
+.OpenID_MainHeader h1{
+	font-size: 24px;
+	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-weight: normal;
+	padding: 24px 0px 6px 18px;
+	word-wrap: break-word;
+}
+
+.OpenID_MainHeader h2{
+	font-size: 16px;
+	color: #e1b54a;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-weight: normal;
+	padding: 10px 8px 8px 0px;
+	min-height: 45px;
+	word-wrap: break-word;
+	overflow: hidden;	/* so it doesn't wrap below the floated icon */
+}
+
+.OpenID_MainHeader .logo {
+	float:right;
+	padding: 30px 20px;
+}
+
+.OpenID_LowerContents {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	width: 950px;
+	padding: 24px 0 30px 0;
+}
+
+.OpenIDCol {
+	width: 50%;
+}
+
+.OpenIDCol.right {
+	float: right;
+}
+
+.OpenIDCol.left {
+	overflow: hidden;
+}
+
+.OpenID_LowerContents_right {
+	padding: 0px 18px 0px 18px;
+	border-left: 1px solid #374862;
+}
+.OpenID_LowerContents_right h2 {
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: normal;
+	font-family: Arial, Tahoma;
+}
+
+.OpenID_LowerContents_left {
+	padding: 0px 18px 0px 18px;
+}
+
+.OpenID_loggedInText {
+
+}
+.OpenID_LowerContents h2 {
+	color: #67c1f5;
+	font-size: 15px;
+	font-weight: normal;
+	font-family: Arial, Tahoma;
+	margin-bottom: 10px;
+}
+
+.OpenID_UserContainer {
+	background-color: #000000;
+	border-radius: 3px;
+	padding: 8px;
+	margin-left: -8px;
+	margin-right: -8px;
+}
+.OpenID_UserName {
+	float: left;
+}
+.OpenID_loggedInName {
+	color: #86b5d9;
+	font-size: 14px;
+	display: block;
+	margin-top: 3px;
+}
+.OpenID_loggedInAccount {
+}
+.playerAvatar {
+	float: left;
+	margin-right: 12px;
+}
+
+.OpenID_Logout {
+	float: right;
+	text-decoration:underline;
+	margin-top: 21px;
+}
+
+.OpenID_linkLoggedInAccount {
+
+}
+
+.OpenID_list
+{
+	font-size: 13px;
+}
+
+.OpenID_listitem
+{
+	margin-bottom: 8px;
+}
+
+.oauthAuthBody {
+	margin: 0px 5px;
+	padding: 20px;
+	background-color: #222222;
+}
+
+.oauthPermissionHeading {
+	font-weight: bold;
+	font-size: 13px;
+	color: #FFF;
+	margin-bottom: 20px;
+}
+
+.oauthPermissionBlock {
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.oauthPermissionText {
+	font-weight: normal;
+	font-size: 13px;
+	color: #999;
+	margin-bottom: 5px;
+}
+
+.oauthStandardButton {
+	background-color:#222;
+	color: #EEE;
+	border: 1px #777777 solid;
+	padding: 0px 4px;
+	margin: 2px 0px 0px 0px;
+	display: inline-block;
+	height: 26px;
+	font-size: 15px;
+}
+
+.oauthStandardButton:active {
+	background-color:#666;
+}
+
+.authFormLabel {
+	display: inline-block;
+	width: 150px;
+}
+
+.oauthTesterLabel {
+	display: inline-block;
+	width: 150px;
+}
+
+.oauthTesterValue {
+	display: inline-block;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .OpenID_MainHeader {
+		width: auto;
+		height: auto;
+
+		max-width: 950px;
+		min-height: 110px;
+		margin: 0 2%;
+	}
+
+	html.responsive .OpenID_LowerContents {
+		width: auto;
+		max-width: 950px;
+		margin: 0 2%;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .OpenIDCol {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .OpenID_LowerContents_right {
+		border-left: none;
+		margin-bottom: 24px;
+	}
+
+	html.responsive .OpenID_MainHeader .logo {
+		float: none;
+		text-align: center;
+		padding: 12px 0;
+	}
+
+	html.responsive .OpenID_MainHeader h1 {
+		padding-top: 0;
+	}
+}
+
+div#blacklist_takeover {
+	display: none;
+}
+
+body.openid_blacklisted_domain div#mainBody {
+	display: none;
+}
+
+body.openid_blacklisted_domain div#blacklist_takeover {
+	display: block;
+
+	text-align: center;
+	background: #1b2838;
+	padding-bottom: 48px;
+}
+
+.blacklist_takeover_content {
+	padding: 10vh 15%;
+	margin: 60px auto 8px auto;
+	width: 60%;
+	background: -webkit-linear-gradient( top, #820200 5%, #602020 95%);background: linear-gradient( to bottom, #820200 5%, #602020 95%);	box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 15px rgba(0,0,0,0.4);
+}
+
+.blacklist_takeover_title {
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.blacklist_takeover_continueanyway {
+	font-size: 10px;
+	color: #cccccc;
+}

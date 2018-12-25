@@ -1,0 +1,559 @@
+
+.login_modal {
+	max-width: 502px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.auth_modal_h1 {
+	color: #67c1f5;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.auth_button_h3 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 22px;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.auth_button_h5 {
+	font-size: 13px;
+	color: #66C0F4;
+	font-weight: bold;
+}
+
+.auth_message_area, .twofactorauth_message_area {
+	position: relative;
+	padding-left: 70px;
+	min-height: 92px;
+}
+
+.auth_icon {
+	position: absolute;
+	top: 6px;
+	left: 0px;
+	width: 67px;
+	height: 48px;
+
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/emailauth_icons2.png');
+	background-repeat: no-repeat;
+}
+
+.auth_icon.auth_icon_trash {
+	background-position: center 0px;
+}
+
+.auth_icon.auth_icon_key {
+	background-position: center -48px;
+}
+
+.auth_icon.auth_icon_lock {
+	background-position: center -96px;
+}
+
+.auth_icon.auth_icon_unlock {
+	background-position: center -144px;
+}
+
+.auth_icon.auth_icon_steam {
+	background-position: center -192px;
+}
+
+.auth_icon.auth_icon_phone {
+	background-position: center -240px;
+}
+
+.auth_icon.auth_icon_mail {
+	background-position: center -288px;
+}
+
+.auth_icon.ipt_icon {
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/ipt_lockout_icon.png');
+	height: 62px;
+	width: 53px;
+
+	left: 12px;
+	top: 6px;
+}
+
+.auth_details_messages {
+	color: #8F98A0;
+	font-size: 12px;
+	min-height: 38px;
+}
+.notice {
+	color: #ff7b00;
+}
+
+.authcode_entry_area, .twofactorauthcode_entry_area {
+	min-height: 32px;
+	margin-top: 4px;
+	margin-bottom: 6px;
+}
+
+#login_twofactor_authcode_entry {
+	padding-bottom: 1.5em;
+}
+
+.authcode_entry_box, .twofactorauthcode_entry_box {
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/code_box.png?v=1');
+	background-repeat: no-repeat;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+	width: 220px;
+	height: 27px;
+}
+
+.friendly_name_box
+{
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/friendlyname_box.png?v=1');
+	background-repeat: no-repeat;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+	width: 220px;
+	height: 27px;
+	margin-top: 6px;
+}
+
+input.authcode_entry_input, input.twofactorauthcode_entry_input {
+	border: none;
+	background-color: transparent;
+	margin-left: 8px;
+	margin-top: 6px;
+	color: #cdcac1;
+	outline: none;
+	width: 220px;
+	text-transform: uppercase;
+
+	/* clear any stupid global styles */
+	box-shadow: none;
+	padding: 0;
+}
+
+.authcode_placeholder::-webkit-input-placeholder {
+	text-align: left;
+	font-style: italic;
+	text-transform: none;
+}
+.authcode_placeholder::-moz-placeholder {
+	text-align: left;
+	font-style: italic;
+	text-transform: none;
+}
+.authcode_placeholder:-ms-input-placeholder {
+	text-align: left;
+	font-style: italic;
+	text-transform: none;
+}
+
+#auth_buttonset_waiting, #login_twofactorauth_buttonset_waiting {
+	height: 85px;
+
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/throbber.gif');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.auth_button, .twofactorauth_button {
+	background: rgba(47, 137, 188, 0.2);
+	width: 219px;
+	max-width: 47%;
+	min-height: 58px;
+	cursor: pointer;
+}
+
+.auth_button.auth_button_spacer, .twofactorauth_button.auth_button_spacer {
+	visibility: hidden;
+}
+
+.auth_button, .auth_button:hover, .twofactorauth_button, .twofactorauth_button:hover {
+	display: block;
+	text-decoration: none;
+}
+
+.auth_button h3, .twofactorauth_button h3 {
+	font-weight: normal;
+	font-size: 22px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color: #66C0F4;
+}
+
+.auth_button h5, .twofactorauth_button h5 {
+	font-size: 13px;
+	color: #66C0F4;
+	text-transform: none;
+}
+.twofactorauth_button h5, .twofactorauth_button h3 {
+	margin-left: 16px;
+}
+.auth_button:hover h3,
+.twofactorauth_button:hover h3,
+.auth_button:hover h5,
+.twofactorauth_button:hover h5
+{
+	color: #ffffff;
+}
+
+.modal_buttons .auth_button, .modal_buttons .twofactorauth_button, .modal_buttons .twofactorauth_button.leftbtn, .modal_buttons .twofactorauth_button.leftbtn {
+	float: left;
+}
+
+.modal_buttons .auth_button.leftbtn {
+	margin-right: 4%;
+}
+
+.modal_buttons .auth_button {
+	background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);	padding: 12px 0 15px 0;
+	border-radius: 2px;
+	box-sizing: content-box;	/* some user agents style "button" elements with border-box */
+}
+
+.modal_buttons .auth_button > * {
+	padding: 0 5%;
+}
+
+.modal_buttons .auth_button:hover {
+	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);}
+
+#loginIPTModal .modal_box {
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/shared/images/login/ipt_lockout_bg.png');
+	width: 466px;
+	height: 231px;
+}
+
+button.auth_button {
+	border: none;
+}
+
+#captchaRefreshLink {
+	cursor: pointer;
+}
+
+#auth_details_computer_name {
+	height: auto;
+	margin: 32px 0 12px 0;
+}
+
+@media screen and (max-width: 480px) {
+	html.responsive .auth_button_h3 {
+		font-size: 16px;
+	}
+	html.responsive .auth_button_h5 {
+		font-size: 12px;
+		font-weight: normal;
+	}
+}
+
+.login_client_waitforauth {
+	display: none;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	padding: 180px 20%;
+	text-align: center;
+	background: #1b2838;
+	z-index: 1000;
+}
+
+body.waitforauth .login_client_waitforauth {
+	display: block;
+}
+
+.login_client_waitforauth_title {
+	font-size: 32px;
+	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.login_client_waitforauth_desc {
+	font-size: 24px;
+	color: #cccccc;
+
+}
+
+.text_input,
+.checkout_content_box input[type=text],
+.checkout_content_box input[type=password],
+.parental_consent_email_body_container input[type=text] {
+	background-color: rgba( 0, 0, 0, 0.2 );
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	width: 500px;
+	padding: 5px;
+	margin: 4px 0;
+}
+
+.gray_bevel  {
+	margin: 4px 0;
+}
+/* register */
+
+.joinsteam_page a {
+	color: #B0AEAC;
+	text-decoration: underline;
+}
+
+.joinsteam_page a:hover {
+	color: #ffffff;
+}
+
+.join_form {
+	padding: 20px 16px;
+	position: relative;
+}
+
+.join_form .rule {
+	border-top: 1px solid #364c59;
+	margin: 15px 0px;
+}
+
+.form_row {
+
+}
+
+.form_area {
+	float: left;
+	width: 212px;
+}
+
+.form_notes {
+	float: left;
+	margin-left: 21px;
+	width: 346px;
+	padding-top: 6px;
+}
+
+.form_notes p {
+	line-height: 14px;
+}
+
+.form_area_password {
+	width: 580px;
+}
+
+.reenter_row {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.country_select {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+.password_tag {
+	opacity: 0.0;
+	background-color: #a0382b;
+	color: white;
+	padding: 8px;
+	border-radius: 4px;
+	margin-left: 6px;
+	max-width: 330px;
+
+	display: inline-block;
+	position: relative;
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.3s;
+	-webkit-transition-property: opacity;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-duration: 0.3s;
+}
+
+.password_tag:before {
+	display: inline-block;
+	content: "";
+	position: absolute;
+	right: 100%;
+	top: 5px;
+	width: 0px;
+	height: 0px;
+	border-top: 10px solid transparent;
+	border-right: 11px solid #a0382b;
+	border-bottom: 10px solid transparent;
+}
+
+.password_tag.visible {
+	opacity: 1.0;
+}
+
+.password_tag.error {
+	background-color: #a0382b;
+}
+
+.password_tag.error:before {
+	border-right: 11px solid #a0382b;
+}
+
+.password_tag.warning {
+	background-color: #b78124;
+}
+
+.password_tag.warning:before {
+	border-right: 11px solid #b78124;
+}
+
+.join_form input[type="text"], .join_form input[type="password"], .join_form select {
+	width: 212px;
+	padding: 2px 4px 3px 4px;
+}
+
+.join_form select#country {
+	width: 223px;
+	margin-top: 3px;
+}
+
+.join_form input[type="text"], .join_form input[type="password"] {
+	height: 18px;
+}
+
+.joinsteam_page .btn_checkout_large {
+	position: absolute;
+	bottom: -20px;
+	right: 19px;
+}
+
+.ssa_box {
+	height: 337px;
+	overflow: auto;
+	border: 1px solid #364c59;
+	padding: 9px;
+	line-height: 15px;
+}
+
+.ssa_box p {
+	margin: 9px 0px;
+}
+
+#ssa_agree {
+	margin-top: 8px;
+}
+
+#label_agree {
+	margin-left: 4px;
+}
+
+#captchaRefreshImg {
+	vertical-align: middle;
+}
+
+.game_name .blockbg {
+	height: 40px;
+	line-height: 40px;
+}
+.game_name {
+	position: relative;
+	font-size: 30px;
+	color: #d6d7d8;
+	margin-bottom: 16px;
+	overflow: hidden;
+}
+
+.block {
+	margin: 0px;
+	background: none;
+}
+.checkout_content_box, .block_content_inner {
+	background-color: #000;
+	background-color: rgba(0,0,0,0.2)
+}
+.checkout_content_box.free_game {
+	background-color: rgba(0,0,0,0);
+}
+.checkout_content_box {
+	line-height:
+}
+.block_content {
+	border: none;
+}
+
+.block_content_inner
+{
+	padding: 16px 2px 4px 16px;
+}
+
+#join_sys_req_title {
+	display: block;
+}
+
+#join_sys_req br, #join_sys_req_title  {
+	margin-bottom: 12px;
+}
+
+ul#why_list {
+	list-style-position: inside;
+	list-style-type: square;
+	line-height: 22px;
+}
+
+ul#why_list li {
+}
+
+#privacy_link {
+	padding-top: 12px;
+}
+
+.age_gate_buttons_container {
+	height: 110px;
+
+}
+
+.age_gate_buttons_container a {
+	padding: 40px 0px;
+}
+.age_gate_footer_container {
+	margin-top: 25px;
+}
+.age_gate_footer_container p,
+.parental_consent_email_footer_container p {
+	font-size: 12px;
+	color: #89939f;
+	bottom: 12px;
+	position: absolute;
+}
+.parental_consent_email_container {
+	max-width: 500px;
+	font-size: 15px;
+	color: #c6d4df;
+}
+.parental_consent_email_container .form_area {
+	width: auto;
+}
+.parental_consent_email_body_container input[type=text] {
+	width: 487px;
+}
+.parental_consent_email_body_container label {
+	color: #99b8c9;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+#error_display_parental {
+	background-color: #f4b786;
+	box-shadow: 0 0 15px #e47419 inset;
+	border-radius: 2px;
+	padding: 5px 8px;
+	padding: 3px 8px;
+	font-size: 13px;
+	color: #000;
+}
+.parental_consent_requested_container {
+	max-width: 500px;
+}

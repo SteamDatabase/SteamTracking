@@ -431,7 +431,6 @@
 "Scripts/Partner/apps.js"                        : "https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english",
 "Scripts/Partner/doc.js"                         : "https://partner.steamgames.com/public/javascript/doc.js?__TIME__&l=english",
 "Scripts/Partner/doc_admin.js"                   : "https://partner.steamgames.com/public/javascript/doc_admin.js?__TIME__&l=english",
-"Scripts/Partner/econutils.js"                   : "https://partner.steamgames.com/economy/econutils.js",
 "Scripts/Partner/game_admin.js"                  : "https://partner.steamgames.com/public/javascript/game_admin.js?__TIME__&l=english",
 "Scripts/Partner/marketing.js"                   : "https://partner.steamgames.com/public/javascript/marketing.js?__TIME__&l=english",
 "Scripts/Partner/newpartner.js"                  : "https://partner.steamgames.com/public/javascript/newpartner.js?__TIME__&l=english",

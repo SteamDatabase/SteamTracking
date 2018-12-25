@@ -1,0 +1,134 @@
+.error_ctn {
+	margin: 60px auto;
+	max-width:958px;
+	background: -webkit-linear-gradient( top, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);background: linear-gradient( to bottom, rgba( 64, 128, 183, 0.4) 5%, rgba( 64, 128, 183, 0.2) 95%);	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
+}
+#BG_top {
+	position:relative;
+	height:54px;
+	text-align: left;
+	background: rgba( 0, 0, 0, 0.2 );
+	border-bottom: 1px rgba( 0, 0, 0, 0.6 );
+}
+#BG_bottom {
+	text-align:left;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:21px;
+	font-size: 26px;
+	color: #898989;
+	padding-left:17px;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 26px;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:0px;
+	padding-bottom:5px;
+	padding-left:17px;
+}
+#mainContents {
+	max-width:936px;
+	text-align:left;
+	padding: 10px 17px 0 17px;
+}
+#mainContents h2 {
+	font-weight:normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #fff;
+}
+#message {
+	text-align: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			
+}
+#message h1 {
+	font-weight:normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin:0;
+	padding:0;
+	padding-top: 36px;
+	font-size: 18px;
+	color: #c6d4df;
+}
+p.sectionText {
+	color: #c6d4df;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	margin-bottom:12px;
+}
+
+
+h3 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: normal;
+	margin:0;
+	padding:0;
+	font-size:16px;
+	color:#66c0f4;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+p.returnLink {
+	padding-bottom:12px;
+	font-size:12px;
+	color:#c6d4df;
+	margin-top: 100px;
+}
+
+a.linkStandard {
+	font-size:13px;
+}
+a.linkStandard:hover {
+	font-size: 13px;
+
+}
+
+#soldierHolder {
+	position:relative;
+	width:700px;
+	height:921px;
+}
+
+#soldierText {
+	position:absolute;
+	line-height:26px;
+	font-size:16px;
+	font-weight:bold;
+	color:#ffffff;
+	top:70px;
+	left:50px;
+	width:600px;
+}
+
+#soldierText a,#soldierText a:hover,#soldierText a:visited,#soldierText a:active {
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#ffffff;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .error_ctn {
+		margin: 60px 2%;
+	}
+}

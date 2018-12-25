@@ -1,0 +1,79 @@
+
+.titleLabel
+{
+	font-size: 14px;
+	line-height: 27px;
+}
+
+.titleField
+{
+	font-size: 14px;
+	line-height: 27px;
+	height: 27px;
+	border: solid 1px #313131;
+	border-top-color: #666666;
+	border-left-color: #666666;
+	background-color: #888888;
+	color: #000000;
+	padding: 5px;
+	width: 100%;
+}
+
+.descriptionLabel
+{
+	font-size: 14px;
+}
+
+#item_text_editor {
+	width: 638px;
+	float: left;
+}
+
+.itemEditFieldContainer
+{
+	margin-top: 5px;
+	padding-left: 5px;
+	overflow: hidden;
+}
+
+.caption_quotebox {
+	border: none;
+	padding: 4px 6px 4px 6px;
+	font-size: 12px;
+	background-color: rgba( 0, 0, 0, 0.4 );
+	border-radius: 4px;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-right: 1px solid #354357;
+	border-bottom: 1px solid #354357;
+	overflow: hidden;
+}
+
+.descField
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 18px;
+	font-style: italic;
+	background: transparent;
+	border: none;
+	color: #7cc5fb;
+	padding: 5px;
+	width: 100%;
+}
+
+.item_text_edit_button
+{
+	float: right;
+	margin-left: 5px;
+}
+
+.item_text_editor
+{
+}
+
+#mediaBottom
+{
+	overflow: hidden;
+}

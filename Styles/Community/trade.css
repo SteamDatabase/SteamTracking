@@ -1,0 +1,1622 @@
+
+.pagecontent {
+	width: 936px;
+}
+
+body.tutorial_mode .pagecontent {
+	width: 932px;
+}
+
+#mainContent {
+	margin-top: 6px;
+	min-height: 24px; /* Firefox likes to take the footer margin and put it at the top of the page because of our floats and clear:both. This prevents that from having an effect. */
+}
+
+.nickname_block {
+	color: #828282;
+}
+
+.trade_box {
+	position: relative;
+	background-color: #1d1d1d;
+	width: 458px;
+}
+
+.trade_box_contents {
+	padding: 19px 16px;
+	border: 1px solid #494949;
+}
+
+.trade_box.trade_box_withbg > .trade_box_contents {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_tradebox_headerbg.png' );
+	background-position: -1px 0;
+	background-repeat: no-repeat;
+	/*border-top: 1px solid #000000;*/
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.trade_box_bgheader {
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	right: 1px;
+	height: 34px;
+	
+	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);}
+
+.trade_box_bgheader.active {
+	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);}
+
+.trade_box#inventory_box.ready > .trade_box_contents {
+	background-image: none;
+	border-top: 1px solid #333333;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-topright: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.item_description_hover {
+	text-align: center;
+	font-size: 16px;
+}
+
+.econ_tag_filter_category {
+	float: left;
+	margin-right: 18px;
+	margin-bottom: 12px;
+}
+
+.econ_tag_filter_category_label {
+	font-size: 14px;
+}
+
+.filter_tag_options.filter_expanded {
+	display: block;
+}
+
+.trade_escrow_header {
+	background-color: #a6801b;
+	padding: 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+}
+.trade_escrow_header .trade_hold_time {
+	font-size: 20px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.trade_escrow_header a {
+	text-decoration: underline;
+}
+#trade_escrow_notice_near_button {
+	background-color: #a6801b;
+	padding: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+}
+
+/* trade partner header */
+.trade_partner_header {
+	background-color: #324056;
+	padding: 12px;
+	margin-bottom: 10px;
+	font-size: 13px;
+}
+.trade_partner_headline {
+	color: #63b7e7;
+	font-size: 18px;
+	padding-bottom: 5px;
+}
+.trade_partner_headline_sub {
+	color: white;
+}
+.trade_partner_recently_changed_name {
+	color: #bf6160;
+	font-size: 13px;
+}
+.trade_partner_info_block {
+	color: #63b7e7;
+	background-color: rgba( 0, 0, 0, 0.25 );
+	float: left;
+	padding: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+	min-height: 35px;
+}
+.trade_partner_inline_hack {
+	display: inline-block;
+}
+.trade_partner_info_text {
+	white-space: nowrap;
+}
+.trade_partner_info_block.limited {
+	position: relative;
+	right: 0px;
+	margin-right: 0px;
+}
+.trade_partner_info_block.group {
+	margin-top: 5px;
+	position: relative;
+	width: 898px;
+}
+.trade_partner_limited {
+	color: #d5d476;
+}
+.trade_partner_limited_desc {
+	min-width: 400px;
+}
+.trade_partner_icon
+{
+	float: left;
+	margin-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	height: 25px;
+}
+.trade_partner_icon.years_of_service {
+	padding-top: 5px;
+	margin-right: 10px;
+}
+.trade_partner_icon.group {
+	padding-top: 5px;
+}
+.trade_partner_icon img
+{
+	height: 25px;
+}
+.trade_partner_not_friends_for_long {
+	color: #bf6160;
+}
+.trade_partner_not_friends {
+	color: #bf6160;
+}
+.trade_partner_steam_level {
+	padding-top: 2px;
+	float: left;
+	margin-right: 10px;
+}
+.trade_partner_member_since {
+	min-width: 400px;
+}
+.trade_partner_member_since.warning {
+	color: #d5d476;
+}
+
+/* other */
+
+.trade_area {
+}
+
+.trade_area .trade_left {
+	width: 458px;
+	float: left;
+}
+
+.trade_area .trade_right {
+	float: right;
+}
+
+.trade_box#inventory_box > .trade_box_contents {
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#inventories {
+	position: relative;
+	margin-bottom: 8px;
+	height: 416px;
+	width: 416px;
+}
+
+#inventory_box.ready .inventory_disabled {
+	display: block;
+}
+
+#trade_yours.ready .inventory_disabled {
+	display: block;
+}
+
+#inventories #dropmsg, .inventory_disabled {
+	position: absolute;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/transparentbg.png' );
+	z-index: 10;
+}
+
+.inventorymsg_content {
+	font-size: 20px;
+	text-align: center;
+	padding: 116px 40px 0;
+}
+
+#inventories.readyForDrop #dropmsg {
+	display: block;
+}
+
+#trade_inventory_unavailable {
+	font-size: 24px;
+	text-align: center;
+	background-color: #000000;
+}
+
+#trade_inventory_message_not_allowed_alerts {
+	font-size: 16px;
+}
+
+#pagebtn_next, #pagebtn_previous {
+	line-height: 20px;
+}
+
+.trade_area .inventory_ctn {
+	position: relative;
+	width: 416px;
+	height: 416px;
+}
+
+.trade_area .inventory_ctn .inventory_page {
+	float: left;
+	width: 416px;
+	height: 416px;
+}
+
+.trade_box.ready > .trade_box_contents {
+	border-color: #333333;
+}
+
+.trade_offer.ready .itemHolder {
+	background-position: 0 -98px;
+}
+
+.trade_area .item.hover {
+	background-position: -1px -197px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_itemholder.png' );
+	background-repeat: no-repeat;
+}
+
+
+#your_slots .item a.inventory_item_link, #inventories .item a.inventory_item_link {
+	cursor: pointer;
+	cursor: grab;
+	cursor: -moz-grab;	
+}
+
+.trade_offer.ready #your_slots .item a.inventory_item_link, .trade_offer.ready #their_slots .item a.inventory_item_link {
+	cursor: default;
+}
+
+.trade_offer.readyForDrop .itemHolder.nextTarget {
+	background-position: 0 -294px;
+}
+
+h2 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.offerheader {
+	margin-bottom: 12px;
+	color: #595959;
+}
+
+.offerheader h2 {
+	margin-bottom: 0;
+	word-wrap: break-word;
+}
+
+.offerheader .offericon {
+	float: left;
+	margin-right: 12px;
+}
+
+.trade_area .your_items, .trade_area .their_items  {
+	margin-bottom: 20px;
+}
+
+.your_items .trade_item_box, .their_items .trade_item_box {
+	position: relative;
+	margin-bottom: 12px;
+}
+
+.slot_applogo {
+	position: absolute;
+	z-index: 20;
+	right: 1px;
+	bottom: 1px;
+	width: 16px;
+	height: 16px;
+	pointer-events: none;	/* click/hover go through to item */
+}
+
+.slot_applogo_img {
+	width: 16px;
+	height: 16px;
+}
+
+.slot_actionmenu_button {
+	position: absolute;
+	z-index: 21;
+	right: 1px;
+	bottom: 1px;
+	width: 16px;
+	height: 16px;
+
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/info_btn.png' );
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+.slot_actionmenu_button:hover {
+	background-position: left bottom;
+}
+
+.slot_actionmenu_button {
+	display: none;
+}
+
+.itemHolder:hover .slot_applogo {
+	display: none;
+}
+
+.itemHolder:not(.in_touch):hover .slot_actionmenu_button {
+	display: block;
+}
+
+.readystate {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_readystates.png' );
+	background-repeat: no-repeat;
+	width: 424px;
+	height: 28px;
+	line-height: 26px;
+	font-size: 14px;
+	max-width: 100%;
+}
+
+.readystate.short {
+	display: inline-block;
+	width: 226px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-bottom: 8px;
+}
+
+#modify_trade_offer_opts {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.modify_trade_offer_or {
+	display: inline-block;
+	line-height: 28px;
+	width: 48px;
+	text-align: center;
+}
+
+.readystate.modify_trade_offer {
+	display: inline-block;
+	border-radius: 3px;
+	background-position: -32px 0;
+	width: 136px;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.readystate.modify_trade_offer.disabled {
+	opacity: 0.4;
+	cursor: default;
+}
+
+.readystate.modify_trade_offer .content {
+	text-align: center;
+	color: #bbbbbb;
+}
+
+.readystate .content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.readystate#them_notready .content, .readystate#them_ready .content, .readystate#you_cantready .content {
+	padding-left: 12px;
+}
+
+.readystate#you_notready .content, .readystate#you_ready .content {
+	padding-left: 34px;
+}
+
+.readystate#you_notready {
+	background-position: 0 0;
+	color: #bbbbbb;
+	cursor: pointer;
+}
+
+.readystate#you_ready {
+	background-position: 0 -28px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.readystate#them_notready, .readystate#you_cantready {
+	background-position: 0 -56px;
+	color: #7f7f7f;
+}
+
+.readystate#them_ready {
+	background-position: 0 -84px;
+	color: #ffffff;
+}
+
+#notready_tradechanged_message {
+	color: #bd4847;
+}
+
+#trade_theirs {
+	position: relative;
+}
+
+#trade_theirs_timeout {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba( 29, 29, 29, 0.7 );
+	z-index: 100;
+	text-align: center;
+
+	padding-top: 120px;
+}
+
+#trade_theirs_timeout h2 {
+	margin-top: 10px;
+}
+
+
+
+
+/* app/context selecting dropdown */
+
+div.appselect {
+	height: 40px;
+
+	border: 1px solid #707070;
+	position: relative;
+
+	cursor: default;
+
+	margin-bottom: 22px;
+}
+
+div.appselect_options, div.appselect {
+	width: 414px;
+	line-height: 40px;
+	color: #8a8a8a;
+	font-size: 12px;
+	background-color: #000000;
+	border-left: 1px solid #707070;
+	border-right: 1px solid #707070;
+}
+
+div.appselect #appselect_arrow {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 17px;
+	height: 40px;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_appselect_arrow.png' );
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+div.appselect.focus #appselect_arrow{
+	background-position: bottom;
+}
+
+div.appselect div.option, div.appselect_options div.option {
+	padding: 4px;
+	height: 32px;
+	line-height: 32px;
+	cursor: pointer;
+
+	white-space: nowrap;
+}
+
+div.appselect_options div.option{
+	border-bottom: 1px solid #707070;
+}
+
+div.appselect_options div.option.has_submenu {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAYAAADeM14FAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADdJREFUeNpiOHr40H8gYIBhJgYgOHbk8H8GKGCCMWCCcAGYIIoAhgorG1tGJmQOXAWMAwIAAQYA3yQYT7cmV9YAAAAASUVORK5CYII= );
+	background-repeat: no-repeat;
+	background-position: 98% 50%;
+}
+
+.appselect_flyout.popup_block .popup_body {
+	border-bottom: none;
+	min-width: 240px;
+}
+
+.popup_block .appselect_options.popup_body {
+	border-bottom: none;
+}
+
+div.appselect_options div.option:hover {
+}
+
+div.appselect div.option img, div.appselect_options div.option img {
+	vertical-align: middle;
+}
+
+.trade_box.log > .trade_box_contents {
+	padding: 0;
+	width: 454px;
+
+}
+
+div.log_bg {
+	background-color: #141414;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAC0CAIAAAAM1Qt9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMNJREFUeNrs2kEOwjAQQ9FJlOuAuP/hOsCatSUGXg9gVfb/SRddj/utMs+pWqnotVLRu2LPq5CORY8sJDfjiVX97roGvnWs6iQhQ+G7rh5YyN6xQronFlITlTk9Er6RN3p0xonKiP6YMfjN17qeP2P0AkMI0c1IdIQQXTTREYIQM5rRjPMLQQhCEIIQhCAEIWYkOkKIbkYzzp8RIQj5RULMSHSEEN2MzhBnCELM+AeE+JOZ6EQnuq6JTnSi6/o7op8CDAAicmEvDizxNAAAAABJRU5ErkJggg==');
+	background-repeat: repeat-x;
+	background-position: top center;
+	padding: 3px;
+
+}
+
+#log {
+	height: 160px;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 11px;
+	word-wrap: break-word;
+}
+
+.tradeoffer_log_ctn #log {
+	height: auto;
+	max-height: 160px;
+	padding: 0;
+	margin-bottom: 12px;
+}
+
+#log .logevent {
+	color: #989797;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+#log .logevent .item {
+	font-weight: normal;
+	color: #c6c6c6;
+}
+
+#log .logevent .timestamp {
+	font-weight: normal;
+	color: #595959;
+	font-size: 11px;
+}
+
+#log .logevent .warning {
+	color: #ff0000;
+}
+
+.playerchatname {
+	color: #8bb9e0;
+}
+
+.log_chat_entry_area {
+	background-color: #363636;
+	padding: 8px 6px;
+	border-top: 1px solid #2d2b2a;
+}
+
+table.chat_entry_table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td.chat_entry_cell {
+	width: 99%;
+	padding-right: 8px;
+}
+
+td.chat_entry_cell div {
+	border: 1px solid #4d4b48;
+	background-color: #1d1d1d;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 2px 6px 2px 2px;
+	height: 36px;
+}
+
+.log_chat_entry_area textarea {
+	background-color: #1d1d1d;
+	border-color: #4d4b48;
+	color: #909090;
+	resize: none;
+	outline: none;
+	height: 34px;
+	width: 100%;
+}
+
+textarea#chat_text_entry {
+	border: none;
+}
+
+textarea#trade_offer_note {
+	padding: 4px;
+	border-radius: 3px;
+	width: calc( 100% - 10px )
+}
+
+.included_trade_offer_note_header .tooltip_hint {
+	float: right;
+	padding-top: 11px;
+}
+
+div.included_trade_offer_note {
+	color: #909090;
+	font-size: 14px;
+}
+div.included_trade_offer_note_ctn {
+	position: relative;
+	padding-left: 58px;
+	min-height: 40px;
+}
+.quote
+{
+	padding: 13px 13px;
+	border: 1px solid #3c3d3e;
+	color: #d6d7d8;
+	font-size: 14px;
+	font-style: italic;
+	line-height: 19px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin-bottom: 5px;
+	background-color: #262626;
+}
+
+.quote_arrow
+{
+	position: absolute;
+	width: 17px;
+	height: 18px;
+	background-repeat: no-repeat;
+	background-image: url( https://steamcommunity-a.akamaihd.net/public/images/skin_1/quotearrow_graybg_flipped.png);
+}
+
+.included_trade_offer_note_ctn .included_trade_offer_note_sender
+{
+	position: absolute;
+	left:0;
+	top: 0;
+}
+
+.included_trade_offer_note_ctn .quote_arrow
+{
+	left: 42px;
+	top: 12px;
+}
+
+
+td.chat_send_btn_cell {
+	white-space: nowrap;
+	width: 1%;
+}
+
+div#chat_send_btn {
+	white-space: nowrap;
+	font-size: 11px;
+
+	border: 1px solid #4c4a47;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+
+	padding: 0 16px;
+	cursor: default;
+	height: 40px;
+	line-height: 40px;
+
+	text-transform: uppercase;
+}
+
+div#chat_send_btn.active {
+	border: 1px solid #99938d;
+	color: #e5e2df;
+
+	background-repeat: repeat-x;
+
+	background-color: #4c4a48;
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/item_action_btn.png');
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpiyExLZvr//z8G/vcPRP8D0/+A9H8o/e8fMhuhBk0/QIABALdaQAnvsp4ZAAAAAElFTkSuQmCC');
+}
+
+.currency_in_trade_descriptor {
+	font-size: 24px;
+	margin-top: 16px;
+}
+
+#trade_confirm_throbber {
+	height: 50px;
+	margin: 0 54px 12px 54px;
+	text-align: center;
+}
+
+.trade_confirmbtn .cap, .trade_confirmbtn {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_bigbutton.png' );
+	height: 50px;
+}
+
+.trade_confirm_box {
+	text-align: center;
+	
+	color: #7f7f7f;
+	font-size: 14px;
+
+	padding-bottom: 13px;
+}
+
+.trade_confirmbtn {
+	margin: 0 auto 12px auto;
+	display: inline-block;
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	color: #7f7f7f;
+	background-repeat: repeat-x;
+	background-position: 0 -50px;
+	padding: 0 50px;
+	cursor: default; 
+	
+	max-width: 248px;
+	
+}
+
+.trade_confirmbtn .cap {
+	position: absolute;
+	width: 5px;
+	height: 50px;
+	top: 0;
+	background-repeat: no-repeat;
+}
+
+.trade_confirmbtn .cap.left {
+	left: 0;
+	background-position: 0 0;
+}
+
+.trade_confirmbtn .cap.right {
+	right: 0;
+	background-position: -5px 0;
+}
+
+.trade_confirmbtn.active .cap.left {
+	background-position: -10px 0;
+}
+
+.trade_confirmbtn.active .cap.right {
+	background-position: -15px 0;
+}
+
+.trade_confirmbtn.active {
+	background-position: 0 -100px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+#trade_confirm_message {
+	padding: 0 45px;
+}
+
+
+.received_items_header {
+	text-align: center;
+	margin-bottom: 32px;
+}
+
+.received_items_header h1 {
+	font-size: 26px;
+	color: #ffffff;
+	font-weight: normal;
+}
+
+.received_items_header h3 {
+	font-size: 18px;
+	color: #a4a4a4;
+	font-weight: normal;
+}
+.received_items {
+}
+
+.recieved_item {
+	width: 500px;
+	margin: 0 auto 12px auto;
+}
+
+.receipt_buttons {
+	text-align: center;
+	padding-top: 22px;
+}
+
+.trade_rule {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAAZCAIAAADWo0yVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAIVJREFUeNrs3LENgCAQQFHPuAZDsP9unCZEgnEC5b2CQEJ1xS8oiFLKBsDTbgQA4gggjgDiCCCOAOIIII4A4gggjgDiCPBpcclMgwAWzN+8iVvfH7XWcQNgHTnpx9baWMPHEwBv3hwBxBFAHAHEEUAcAcQRQBwBxBFAHAHEEUAcAX7nFGAAc9kfZ4qJQtgAAAAASUVORK5CYII= );
+	height: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 6px 0;
+}
+
+.trade_rule.trade_rule_swap {
+	background-image: url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbQAAAAZCAIAAADWo0yVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAvJJREFUeNrsnd2OqjAURv0jqKDRB/AhfP/X8c7EBBSEgDr70AzhFPDATDsDOWtdkFIJkAJfv80udXo4HCYANnFd13GcLMvSNDW+c8/z4jh+vV60M5hlQROAPVYF8/n8drtZUsb1ei37D8OQ1gbEEcZwYy0W2+1WZEvKSZLc73cbhlSUURVEJaMootkBcYRBs1wuN5uNKj8eD7GNNsS3PIQgKpnnuQ1zCv8tM5oA7CmjIIbO+AvB6XQqh5BltVJqRDFpf0AcYQTKKLbRhptr1MFGxQRAHOH30UJdIY5j40fxPM913Y4nAIA4wu/j+75Wk2WZ2UOUSZg3G4h6ci0AcYQB2UbHcao1eZ5LWG3VmTYi6tlmLQEQR/hpVquVVmNWGXu9UiQ5AwY649PpxNcFY6FNGsr6eqEsa0tFW/mfm2lLQbONyjmqW8tIkqSX3skRJca/XC5KoNVpvD5pK7f9pO2hXK0W2iqrSL2cGI/bAB+oxpt8cTweSfCNiDcPWOODWn9oG5e9Vuv7nM1mary3dudJvREtEFvaN1IWsd7tdlEUtfUN3Vfb+pjGHutNB6auHffwoJ4mrS98Pp/lcnE+n2kj+CZ1ZXzvofpyL6jWqA8Htc3CMGQcOBgLq2kC+AKiTdU4WhxifRs134SmcVbFy+xbTkAcAXoTx/F+v28zjKWdrG5gaVaeqkvN85xLA6YgWw1fVCKJYbtHzeLpgiAweePWvCoBNSCOMAjEpnWcUaKvknYKeWqZ6yRJuCiAOMIg6DgXmWio2YD3zzCLv8UxK+CKAOIIQ0GE770qiXoa93T1YT02ZkUDxBHgWwRB0JYmFt20IVva1zjX65VUDCCOMDjaXikaT8IoHMepxtRJAVcBEEcYIvXkjI0kzOTzC+tqNC22kfYHGzDOEcwg9k0MXRnwGk/CKHzfV2MnxZaKLJKEAcQRRoAIopq4zEYSZlJMMy6IG5X983esgDjCmAiCwPM8S/+oJbIrbjFNU2QRfoAPAQYAm1Tmij+S9agAAAAASUVORK5CYII= );
+}
+
+.trade_rule.maketrade {
+	margin-top: 17px;
+	margin-bottom: 22px;
+	
+}
+
+.cancelbtn_ctn {
+	text-align: center;
+}
+
+.cancelbtn {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: left top;
+	height: 21px;
+	line-height: 21px;
+	margin-top: 12px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #EBEBEB;
+}
+
+.cancelbtn:hover {
+	color: white;
+	text-decoration: underline;
+}
+.tutorial_arrow_ctn {
+	position: relative;
+}
+
+.tutorial_arrow {
+	position: absolute;
+	height: 36px;
+	z-index: 5;
+}
+.tutorial_arrow .content {
+	background-position: bottom;
+	background-repeat: repeat-x;
+	padding-bottom: 5px;
+	height: 31px;
+	line-height: 31px;
+
+	font-weight: bold;
+	font-size: 11px;
+	color: #ffffff;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	white-space: nowrap;
+	cursor: default;
+}
+.tutorial_arrow .leftcap, .tutorial_arrow .rightcap {
+	position: absolute;
+	top: 0;
+	height: 36px;
+	background-repeat: no-repeat;
+}
+
+.tutorial_arrow.right {
+	padding-left: 5px;
+	padding-right: 16px;
+}
+.tutorial_arrow.right .leftcap {
+	left: 0;
+	width: 5px;
+	background-position: 0 0;
+}
+
+.tutorial_arrow.right .rightcap {
+	right: 0;
+	width: 16px;
+	background-position: -26px 0;
+}
+
+
+
+.tutorial_arrow.left {
+	padding-right: 5px;
+	padding-left: 16px;
+}
+.tutorial_arrow.left .leftcap {
+	left: 0;
+	width: 16px;
+	background-position: -10px 0;
+}
+
+.tutorial_arrow.left .rightcap {
+	right: 0;
+	width: 5px;
+	background-position: -5px 0;
+}
+
+
+.tutorial_arrow .leftcap, .tutorial_arrow .rightcap, .tutorial_arrow .content {
+	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/trade_tutorial_arrow.png');
+}
+
+#tutorial_arrow_step1 {
+	right: 410px;
+	top: 5px;
+}
+
+#tutorial_arrow_step2 {
+	right: 407px;
+	top: -8px;
+}
+
+#tutorial_arrow_step3 {
+	left: 400px;
+	top: -2px;
+}
+
+#tutorial_arrow_step4 {
+	left: 380px;
+	top: 55px;
+}
+
+#tutorial_arrow_ctn_2.activeArrow {
+	padding-left: 18px;
+}
+
+
+
+.trade_offer_tutorial#tutorial_arrow_step1 {
+	right: 443px;
+	top: 23px;
+}
+
+.trade_offer_tutorial#tutorial_arrow_step2 {
+	right: -50px;
+	top: 23px;
+}
+
+.trade_offer_tutorial#tutorial_arrow_step3 {
+	left: -52px;
+	top: 35px;
+}
+
+.trade_offer_tutorial#tutorial_arrow_step4 {
+	left: 400px;
+	top: -2px;
+}
+
+.trade_offer_tutorial#tutorial_arrow_step5 {
+	left: 380px;
+	top: 55px;
+}
+
+
+#trade_currency_dialog {
+	width: 436px;
+	max-width: 100%;
+
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.trade_wallet#trade_currency_dialog {
+	height: 388px;
+}
+
+#trade_currency_dialog_conversion {
+	position: absolute;
+	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	border: 1px solid black;
+	width: 436px;
+	height: 418px;
+	z-index: 1000;
+
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.trade_currency_dialog_corner {
+	position: absolute;
+	right: -1px;
+	bottom: -1px;
+	background: right bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog_corner.png?v=1' );
+	width: 174px;
+	height: 153px;
+}
+
+.trade_currency_dialog_title {
+	margin-bottom: 24px;
+}
+
+.trade_wallet #trade_currency_dialog_title {
+	display: none;
+}
+
+#trade_currency_dialog_title_wallet {
+	display: none;
+}
+
+.trade_wallet #trade_currency_dialog_title_wallet {
+	display: block;
+}
+
+#trade_currency_dialog_conversion_title {
+	top: 12px;
+}
+
+.trade_currency_dialog_info {
+	padding: 0 8px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #767676;
+}
+
+.currency_dialog_input_area {
+	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_background.png?v=1' );
+	width: 136px;
+	height: 54px;
+	padding-left: 54px;
+	text-align: left;
+	margin: 0 auto 24px auto;
+}
+
+.currency_dialog_input_area_short {
+	background: no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_entry_short_background.png?v=1' );
+	padding-left: 6px;
+}
+
+#trade_currency_dialog_input_area {
+	position: relative;
+}
+
+#trade_currency_dialog_conversion_input_area_you {
+	position: relative;
+}
+
+#trade_currency_dialog_conversion_equals_sign {
+	width: 36px;
+	line-height: 54px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 24px;
+}
+
+#trade_currency_dialog_conversion_input_area_them {
+	position: absolute;
+	left: 232px;
+	top: 129px;
+}
+
+#trade_currency_dialog_input_icon_area {
+	position: absolute;
+	left: 4px;
+	top: 6px;
+	width: 42px;
+	height: 42px;
+}
+
+.currency_dialog_input_area input {
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	font-weight: bold;
+	padding: 2px 0 0;
+	margin: 0;
+	line-height: 44px;
+	height: 44px;
+	width: 130px;
+	outline: none;
+}
+
+.trade_currency_dialog_error {
+	width: 434px;
+	line-height: 32px;
+	color: #ff0000;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#trade_currency_dialog_error {
+	position: absolute;
+	top: 118px;
+	left: 0;
+}
+
+#trade_currency_dialog_conversion_error {
+	position: absolute;
+	top: 178px;
+	left: 0;
+}
+
+.trade_currency_fee_information {
+	width: 434px;
+	line-height: 1.5em;
+	font-weight: normal;
+	font-size: 20px;
+	text-align: center;
+}
+
+#trade_currency_fee_information {
+	position: absolute;
+	top: 150px;
+	left: 0;
+	display: none;
+}
+
+#trade_currency_conversion_fee_information {
+	position: absolute;
+	top: 210px;
+	left: 0;
+}
+
+.trade_wallet #trade_currency_fee_information {
+	display: block;
+}
+
+.trade_currency_fee_information_lines {
+	display: inline-block;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.trade_currency_fee_total {
+	font-weight: bold;
+	padding-left: 0.6em;
+}
+
+.trade_currency_dialog_remaining {
+	line-height: 42px;
+	margin-bottom: 18px;
+}
+
+.trade_wallet #trade_currency_dialog_remaining {
+	top: 297px;
+	font-size: 14px;
+}
+
+#trade_currency_dialog_conversion_remaining {
+	position: absolute;
+	top: 327px;
+	left: 0;
+	
+	font-size: 14px;
+}
+
+#trade_currency_dialog_remaining img {
+	vertical-align: middle;
+}
+
+.trade_wallet #trade_currency_dialog_symbol2 {
+	display: none;
+}
+
+#trade_currency_dialog_fundsavailable_wallet {
+	display: none;
+}
+
+.trade_wallet #trade_currency_dialog_fundsavailable_wallet {
+	display: inline;
+}
+
+.trade_wallet #trade_currency_dialog_fundsavailable {
+	display: none;
+}
+
+.trade_currency_dialog_footer {
+	position: absolute;
+	bottom: 12px;
+	left: 9px;
+
+	width: 416px;
+	text-align: right;
+}
+
+.trade_currency_dialog_footer a.item_action {
+	margin-right: 0;
+	margin-left: 5px;
+	text-align: left;
+	padding: 0 5px;
+	width: 82px;
+}
+
+.trade_currency_slider_ctn {
+	padding-top: 20px;
+}
+
+#trade_currency_slider_ctn {
+	position: relative;
+}
+
+.trade_wallet #trade_currency_slider_ctn {
+	top: 216px;
+}
+
+#trade_currency_conversion_slider_ctn {
+	position: absolute;
+	top: 276px;
+	left: 28px;
+}
+
+.trade_currency_slider_count {
+	position: absolute;
+	top: 0;
+	line-height: 20px;
+	color: #b7b7b7;
+
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.trade_currency_slider_ctn .slider {
+	position: relative;
+	height: 42px;
+}
+
+.trade_currency_slider_ctn .slider_background {
+	position: absolute;
+	top: 20px;
+	left: 12px;
+	right: 12px;
+	height: 4px;
+	background: #3b3938;
+	border: 1px solid #222327;
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+.trade_currency_slider_ctn .slider_background .slider_progress {
+	background: #496784;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 4px;
+}
+
+.trade_currency_slider_ctn .slider_progress {
+	background-position: -357px 0;
+}
+
+.trade_currency_slider_ctn .slider .handle {
+	position: absolute;
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/slider_handle.png' );
+	background-position: left top;
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 35px;
+	top: 5px;
+}
+
+.trade_currency_slider_ctn .slider .handle.active {
+	background-position: right;
+}
+
+#trade_currency_dialog_warning {
+	position: absolute;
+	background: #383635 bottom no-repeat url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_currency_dialog.png?v=3' );
+	border: 1px solid black;
+	width: 436px;
+	height: 164px;
+	z-index: 1000;
+
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+#trade_currency_dialog_warning_title {
+	top: 12px;
+}
+
+#trade_currency_dialog_warning_contents {
+	position: absolute;
+	top: 52px;
+	left: 0;
+	width: 418px;
+
+	padding: 0 8px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #CCCCCC;
+}
+
+.trade_box .itemHolder {
+	margin-right: 5.2px; /* 6px causes premature wrapping when zooming the page */
+}
+
+.inventory_user_tabs {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 20px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41Ljg3O4BdAAAADUlEQVQYV2Pw8PD4DwADjAHYmbnDeAAAAABJRU5ErkJggg==) repeat-x bottom;
+}
+
+.inventory_user_tab_gap {
+	width: 18px;
+	height: 56px;
+	border-bottom: none;
+}
+
+.inventory_user_tab_gap > div {
+	line-height: 55px;
+	height: 55px;
+	border-bottom: 1px solid #484848;
+}
+
+.inventory_user_tab, a.inventory_user_tab {
+	float: left;
+	line-height: 55px;
+	height: 55px;
+	width: 218px;
+
+	border: 1px solid #484848;
+	border-bottom: none;
+
+	background-color: #1D1D1D;
+	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);
+	text-decoration: none;
+	border-radius: 2px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	-moz-border-radius: 2px;
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-bottomright: 0;
+}
+
+.inventory_user_tab > div {
+	padding: 0 12px;
+	line-height: 54px;
+	height: 54px;
+	border-bottom: 1px solid #484848;
+}
+
+.inventory_user_tab.active {
+	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);}
+
+.inventory_user_tab.active > div {
+	border-bottom: none;
+}
+
+.trade_warning_bold {
+	color: #ffffff;
+}
+
+.trade_warn_dialog_content {
+	max-width: 450px;
+}
+
+.trade_warning_item_type {
+	font-style: italic;
+	color: #767676;
+}
+
+#trade_confirm_captchaentry
+{
+	margin-bottom: 8px;
+}
+
+.captcha_img_ctn {
+	float: left;
+	width: 206px;
+	text-align: center;
+	margin-right: 8px;
+}
+
+img#trade_confirm_captcha {
+	width: 206px;
+	height: 40px;
+}
+
+.captcha_entry_ctn {
+	text-align: left;
+	padding-top: 4px;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+#trade_captcha_refresh {
+	cursor: pointer;
+}
+
+#captcha_entry {
+	position: static;
+	top: 0;
+
+	font-size: 24px;
+	line-height: 38px;
+	width: 90px;
+	color: #ffffff;
+	padding: 0 16px;
+}
+
+.your_inventory_active .their_inventory_only {
+	display: none;
+}
+
+.their_inventory_active .your_inventory_only {
+	display: none;
+}
+
+html.responsive .trade_area,
+html.responsive .trade_left,
+html.responsive .trade_right {
+	position: relative;
+}
+
+html.responsive .responsive_fixonscroll_ctn div.appselect {
+	margin: 0 auto;
+}
+
+.responsive_trade_prompt {
+	font-size: 22px;
+	margin: 4px auto;
+	line-height: 36px;
+	color: #c6c6c6;
+	padding: 6px 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.responsive_trade_prompt .playerAvatar {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+.responsivetrade_backtooffer_ctn {
+	position: fixed;
+	padding: 8px;
+	bottom: 0;
+	right: 0;
+	background: #171a21;
+	box-shadow: -1px -1px 6px 0 #000000;
+	z-index: 20;
+}
+
+.trade_nonresponsive_hidden {
+	display: none;
+}
+
+@media screen and (max-width: 600px)
+{
+	html.responsive .trade_partner_info_block {
+		float: none;
+		margin-right: 0;
+	}
+	html.responsive .trade_partner_info_block.group {
+		width: auto;
+	}
+
+	html.responsive .trade_partner_inline_hack {
+		display: block;
+	}
+
+	html.responsive .trade_partner_info_text {
+		display: inline;
+		white-space: normal;
+	}
+
+	html.responsive .trade_partner_info_text ~ .trade_partner_info_text {
+		white-space: nowrap;
+	}
+
+	html.responsive .trade_partner_member_since {
+		min-width: 0;
+	}
+
+
+	html.responsive .pagecontent {
+		max-width: 936px;
+		width: auto;
+		padding: 0 1%;
+	}
+
+	html.responsive .trade_area .trade_left,
+	html.responsive .trade_area .trade_right {
+		width: auto;
+		float: none;
+	}
+
+	html.responsive .trade_box {
+		width: auto;
+	}
+
+	html.responsive #inventories {
+		width: auto;
+		height: auto;
+		min-height: 416px;
+	}
+
+	html.responsive .trade_box_contents {
+		padding: 4px 1%;
+	}
+
+	html.responsive .trade_slot:not(.has_item) {
+
+	}
+
+	html.responsive .trade_responsive_hidden {
+		display: none;
+	}
+
+	html.responsive .trade_nonresponsive_hidden {
+		display: block;
+	}
+
+	html.responsive .responsive_trade_fixedcontents {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: #171a21;
+		box-shadow: 0 2px 4px 0 #000000;
+		z-index: 15;
+	}
+
+	html.responsive .responsive_trade_fixedcontents_spacer {
+		height: 129px;
+	}
+
+	html.responsive input.filter_search_box {
+		font-size: 16px;
+	}
+
+	html.responsive .trade_offer:not(.ready) .trade_slot:not(.has_item) .slot_inner {
+		background: url( 'https://steamcommunity-a.akamaihd.net/public/images/economy/trade_slot_additem.png' ) no-repeat;
+		background-size: 100% 100%;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .filter_right_controls,
+	html.responsive .filter_control_ctn {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive #filter_control {
+		width: calc( 100% - 8px - 2px );
+	}
+}
+
+@media screen and (min-width: 480px)
+{
+	html.responsive .responsive_trade_fixedcontents .responsive_tab_control select {
+		min-width: 400px;
+	}
+}
+
+.tradeoffer_limited_nomessage {
+	font-size: 12px;
+}

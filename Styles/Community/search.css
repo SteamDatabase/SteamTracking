@@ -1,0 +1,683 @@
+  
+
+#BG_top {
+	position:relative;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+	width:958px;
+	height:98px;
+	text-align: left;
+}
+#BG_bottom {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	width:958px;
+	text-align:left;
+}
+#BG_top h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:29px;
+	font-size: 26px;
+	color: #898989;
+}
+#BG_top h1 {
+	font-weight:normal;
+	font-size: 24px;
+	line-height:1em;
+	color: #e1e1e1;
+	margin:0;
+	padding:0;
+	padding-top:5px;
+	padding-bottom:13px;
+}
+#mainContents {
+	width:936px;
+	min-width:936px;
+	margin:0;
+	padding:0;
+	text-align:left;
+	padding-left:17px;
+	padding-top:24px;
+}
+
+#searchBtn {
+	position:absolute;
+	left:170px;
+	top:4px;
+	border:none;
+}
+
+#errMsg {
+	margin-left:136px;
+	color:#f26c4f;
+	font-size:12px;
+	font-weight:bold;
+}
+
+#resultsMsg {
+	margin-left:136px;
+	color:#959595;
+	font-size:12px;
+	margin-bottom:8px;
+}
+
+.resultItem,.resultItemOGG {
+	position:relative;
+	margin-left:72px;
+	width:645px;
+	background-color:#2e2e2e;
+	color:#959595;
+	font-size:11px;
+	padding:5px 0px 5px 130px;
+	height:72px;
+	margin-bottom:1px;
+	line-height:16px;
+}
+
+.pgtag {
+	position:absolute;
+	left:10px;
+	top:30px;
+	color:#4a4a4a;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.resultItemOGG {
+	height:77px;
+	width:766px;
+	padding-left:9px;
+}
+
+.resultItem>p,.resultItemOGG>p {
+	margin:0;
+	padding:0;
+	padding-top:6px;
+}
+
+.resultItemOGG .gameHubTitle
+{
+	color: #959595;
+}
+
+.resultItemOGG.gameHub
+{
+	border: 1px solid #364050;
+	height: 122px;
+	width: 764px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/bg_search_hubs.png');
+}
+
+.gameHubContentCount
+{
+	position: relative;
+	width: 166px;
+	height: 45px;
+	padding-left: 10px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/apphubs/btn_search_hub.png');
+	float: left;
+	left: -11px;
+	top: 7px;
+}
+
+.gameHubContentCount .appHubStat
+{
+	padding-top: 5px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.gameHubContentCount .appHubStatTitle
+{
+	padding-top: 5px;
+	font-size: 11px;
+	color: #9cb1cf;
+}
+
+.listOGGTag
+{
+	padding-top: 7px;
+	padding-left: 202px;
+}
+
+.groupBlockMedium {
+	float:left;
+	width:72px;
+	height:72px;
+	margin:0;
+	padding:0;
+	margin-right:11px;
+}
+
+.groupBlockOGG {
+	float:left;
+	width:192px;
+	height:78px;
+	margin:0;
+	padding:0;
+	margin-right:11px;
+}
+
+.resultItem>a,.resultItem>a:hover,.resultItem>a:visited,.resultItem>a:active {
+	color:#e1e1e1;
+	font-size:12px;
+	text-decoration:underline;
+}
+
+.resultSubtext {
+	font-size:10px;
+	font-weight:bold;
+}
+
+.darkBG {
+	background-color:#2c2c2c;
+}
+
+.resultIcon {
+	position:absolute;
+	top:8px;
+	left:8px;
+}
+
+.pageLinks {
+	float:right;
+	margin-right:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.pageLinks>a,.pageLinks>a:hover,.pageLinks>a:visisted,.pageLinks>a:active {
+	font-size:10px;
+}
+
+#bottomLinks {
+	position:relative;
+	width:894px;
+	margin:0;
+	padding:0;
+	margin-left:23px;
+	border:solid #252525 4px;
+}
+
+#bottomRightLinks {
+	float:right;
+}
+
+.friendBlock_offline,.friendBlock_online,.friendBlock_in-game {
+	position:relative;
+	float:left;
+	width:244px;
+	height:40px;
+	padding:0;
+	margin:0;
+	padding-left:4px;
+	padding-top:4px;
+	padding-bottom:4px;
+	margin-bottom:4px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG.gif');
+	font-size:10px;
+	margin-right:8px;
+}
+
+.friendBlock_offline:hover,.friendBlock_online:hover,.friendBlock_in-game:hover {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/playerBlockBG_over.gif');
+	cursor:pointer;
+}
+
+.officerBlock	{
+	position:relative;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG.gif');
+}
+
+.officerBlock:hover {
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/officerBlockBG_over.gif');
+	cursor:pointer;
+}
+
+.officerIcon {
+	position:absolute;
+	left:222px;
+	top:15px;
+}
+
+.friendSmallTextO {
+	display:block;
+	width:168px;
+}
+
+.infoBar {
+	position:relative;
+	margin:0;
+	padding:0;
+	margin-left:68px;
+	width:775px;
+	height:38px;
+	line-height: 38px;
+	background-color:#000000;
+	border:solid #252525 4px;
+}
+
+.infoBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:10px;
+	color:#959595;
+}
+
+.searchMsg {
+	margin-left:146px;
+	color:#b2b2b2;
+	font-size:12px;
+}
+
+.matchingText {
+	font-weight:bold;
+	color:#e1e1e1;
+}
+
+#searchArea,#searchArea2 {
+	width:775px;
+	margin-left:72px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_grey_diag.gif');
+	height:72px;
+	position:relative;
+}
+
+#searchField {
+	position:absolute;
+	top:26px;
+	left:10px;
+}
+
+
+#tabs {
+	margin:0;
+	width:775px;
+	margin-left:72px;
+	border-bottom:solid #4d4d4e 1px;
+	height:29px;
+}
+.tab {
+	float:left;
+}
+.tab a,.tab a:hover,.tab a:visited,.tab a:active {
+	font-size:11px;
+	color: #ffffff;
+	text-decoration:none;
+	font-weight:bold;
+}
+.tabOff,.tabOn {
+	float:left;
+	padding:8px 16px 6px 16px;
+	height:15px;
+	font-size:11px;
+	color: #ffffff;
+	background-color:#4f4f4e;
+	font-weight:bold;
+}
+.tabOff {
+	background-color:#3a3a3a;
+}
+.tabOnL,.tabOnR,.tabOffL,.tabOffR {
+	float:left;
+	width:2px;
+	background-color:#4f4f4e;
+	height:29px;
+}
+.tabOffL,.tabOffR {
+	background-color:#3a3a3a;
+}
+.tabOnR,.tabOffR {
+	margin-right:6px;
+}
+.vbreak {
+	height:71px;
+}
+
+#tabHolder {
+	padding-left:14px;
+}
+
+
+.searchRow {
+	background-color:#2e2e2e;
+	position:relative;
+	padding:12px 18px 12px 10px;
+	margin-bottom:4px;
+	width:747px;
+	margin-left:72px;
+}
+.searchResultType {
+	width:90px;
+	padding-top:26px;
+	float:left;
+	font-weight:bold;
+	font-size:18px;
+}
+.searchPersonaInfo {
+	padding-left:12px;
+	float:left;
+	padding-top:6px;
+	line-height:18px;
+}
+.searchPersonaName,.searchPersonaName:active,.searchPersonaName:visited,.searchPersonaName:hover {
+	text-decoration:none;
+	color:#ffffff;
+	font-size:24px;
+	line-height:28px;
+}
+.searchAddFriend {
+	position:absolute;
+	top:12px;
+	right:18px;
+}
+.searchMatchInfo {
+	margin-top:6px;
+	margin-left:90px;
+	padding:12px 18px 12px 10px;
+	background-color:#363636;
+}
+
+.search_results_container {
+	margin: 0 auto;
+	min-height: 2000px;
+	background-color: #242426;
+	border: solid 1px #242426;
+	border-radius: 2px;
+	border-right-color: #343436;
+	border-bottom-color: #343436;
+	padding-bottom: 20px;
+}
+
+.searchReport {
+	float:right;
+}
+
+#search_results {
+}
+
+.search_row {
+	background-color: rgba( 0, 0, 0, 0.4 );
+	padding: 12px 18px 12px 10px;
+	margin-bottom: 4px;
+}
+
+
+.search_match_info {
+	margin-top:6px;
+	margin-left:00px;
+	padding:12px 18px 12px 10px;
+	background-color: rgba( 255, 255, 255, 0.1);
+	line-height: 18px;
+}
+
+.search_result_friend {
+	float: right;
+	padding: 10px 0 10px 10px;
+	color: whitesmoke;
+}
+
+.search_result_friend img {
+	margin-right: 4px;
+}
+
+.search_group_summary_text {
+	max-height: 40px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.search_group_avatar_holder img {
+	float: left;
+	width: 96px;
+	height: 96px;
+}
+
+.search_gamegroup_avatar_holder img {
+	float: left;
+	width: 320px;
+}
+
+.search_group_type {
+	font-size: 16px;
+	padding-left: 4px;
+}
+
+.community_search_paging_controls {
+	float: right;
+}
+
+#asearch_text_box {
+	font-size: 16px;
+	padding: 4px;
+	width: 300px;
+	margin-bottom: 16px;
+}
+
+.search_filters {
+	padding-bottom: 10px;
+}
+
+.search_filters a {
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.search_filters a.selected {
+	text-decoration: underline;
+	cursor: default;
+}
+
+.search_results_error {
+	padding: 20px;
+}
+
+.search_results_error h2 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			text-align: center;
+}
+
+.matchHighlight {
+	color:#85b4d8;
+	font-weight:bold;
+}
+.centerContainer {
+	width:775px;
+	margin-left:72px;
+	text-align:center;
+}
+.centerContainer h1 {
+	font-weight:normal;
+	font-size:24px;
+	margin-bottom:10px;
+}
+#friendSearchBox {
+	background-color:#000000;
+	padding:20px 0px 20px 0px;
+	margin-bottom:12px;
+}
+#friendSearchField {
+	width:450px;
+	margin:auto;
+	text-align:left;
+	position:relative;
+	margin-bottom:14px;
+}
+#friendSearchFieldInput {
+	width:350px;
+}
+#friendSearchBtn {
+	position:absolute;
+	right:0px;
+	top:3px;
+}
+
+.search_invite_link_tip {
+	margin-top: 10px;
+	color: #fff;
+	text-align: left;
+}
+
+.search_invite_link_tip a{
+	text-decoration: underline;
+}
+
+.search_breadcrumbs {
+	color: #b8b6b4;
+}
+
+	/* --------------[ pagination block ] ----------------- */
+.pagingBar {
+	position:relative;
+	padding:4px 10px;
+	font-size:12px;
+	color:#c9c9c9;
+	width:755px;
+	margin-left:72px;
+	margin-bottom:4px;
+	background-color:#000000;
+}
+
+.pagingBar p {
+	margin:0;
+	padding:0;
+	margin-left:8px;
+	padding-top:2px;
+	font-size:12px;
+	color:#959595;
+}	
+
+.pagingPageLinks {
+	float:right;
+	margin-right:0px;
+	padding-top:2px;
+	font-size:12px;
+	color:#959595;
+}
+
+.pagingCurrentPage {
+	padding:0px 3px;
+	background-color:#c9c9c9;
+	color:#262627;
+}
+
+.pagingArrowImg {
+	padding:0px 5px 1px 5px;
+}
+
+a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLink:active {
+	font-size:12px;
+	text-decoration:none;
+	color:#c9c9c9;
+	padding:0px 3px;
+}
+
+/* --------------[ /pagination block ] ----------------- */
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .maincontent, html.responsive .page_content {
+		margin: 0 2%;
+		width: auto;
+	}
+
+	html.responsive .community_search_container {
+		min-width: auto;
+		width: auto;
+	}
+
+	html.responsive .search_result_friend {
+
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .search_group_summary_text {
+		max-height: 60px;
+	}
+}
+
+@media screen and (max-width: 480px)
+{
+	html.responsive .search_group_summary_text {
+		max-height: 80px;
+	}
+}
+
+/* --------------------[ search page ] -------------------- */
+.community_search_title
+{
+	text-align: center;
+	top: 5px;
+	bottom: 5px;
+	border: none;
+	font-size: 18px;
+}
+
+.community_search_container
+{
+	min-width:936px;
+	width:775px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+    padding-bottom: 25px;
+}
+
+.grouppage_content_area .community_search_container>h2 {
+	font-size: 28px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.community_search_results_container {
+}
+
+.community_searchresults_title{
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0 0 10px;
+	font-size: 17px;
+	letter-spacing: 2px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			padding-top: 2px;
+    float: left;
+}
+
+.community_searchresults_paging{
+	float: right;
+	padding-bottom: 2px
+}
+
+.community_search_text_box
+{
+	text-align: left;
+	height: 33px;
+	margin-top: 5px;
+	top: 15px;
+	bottom: 15px;
+	font-size: 17px;
+	width: calc( 100% - 15px );
+	outline: none;
+	font-style: italic;
+	background-color: #1b2838;
+	background: -webkit-linear-gradient( top, #1b2838 5%, #203342 95%);background: linear-gradient( to bottom, #1b2838 5%, #203342 95%);	border: 1px solid #56707f;
+	border-radius: 3px;
+	box-shadow: 0 0 50px rgba(103,193,245,0.3);
+	color: #abdaf4;
+	padding: 5px 5px 5px 10px;
+	text-indent: 3px;
+}

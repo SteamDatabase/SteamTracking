@@ -1,0 +1,122 @@
+
+.modalBody
+{
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+#modalContent.modal_frame
+{
+	min-width: 310px;
+	height: 600px;
+	border: 2px solid #304a66;
+	border-radius: 2px;
+	-moz-border-radius: 2px;
+	background-color: black;
+}
+
+#modalContentTitleBar
+{
+	color: white;
+	padding: 4px 2px 4px 8px;
+	text-align: left;
+    background-color: #304a66;
+	/*background: rgb(88,88,88); /* Old browsers */
+	/*background: -moz-linear-gradient(top,  rgba(88,88,88,1) 0%, rgba(76,76,76,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(88,88,88,1)), color-stop(100%,rgba(76,76,76,1))); /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top,  rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%); /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top,  rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%); /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top,  rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%); /* IE10+ */
+	/*background: linear-gradient(to bottom,  rgba(88,88,88,1) 0%,rgba(76,76,76,1) 100%); /* W3C */*/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#585858', endColorstr='#4c4c4c',GradientType=0 ); /* IE6-9 */
+}
+
+.modalContentDismissImage
+{
+	position: absolute;
+	top: 5px;
+	right: -4px;
+	cursor: pointer;
+	width: 18px;
+	height: 14px;
+}
+
+#modalContentWait
+{
+	position: absolute;
+	top: 24px;
+	bottom: 11px;
+	right: 11px;
+	left: 11px;
+	background-color: black;
+	padding-top: 267px;
+	text-align: center;
+}
+
+#modalContentScrollbarHack
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	overflow-x: auto;
+	z-index:901;
+}
+
+#modalContentFrameContainer
+{
+	background-color: black;
+}
+
+.modalContent_iFrame
+{
+	width: 100%;
+	border: none;
+}
+
+.communityBanDialog_label {
+	width: 100px;
+	display: inline-block;
+
+}
+
+.communityBanDialog_data {
+	display: inline-block;
+}
+
+.communityBanDialog_row {
+	margin-bottom: 5px;
+}
+
+.communityBanDialog_description {
+	margin-top: 10px;
+}
+
+.reset_content_container {
+	width: 600px;
+}
+
+.reset_content_all {
+	border-right: 1px solid #FFF;
+	text-align: center;
+	float: left;
+	height: 200px;
+	margin-right: 25px;
+	padding-right: 25px;
+}
+
+.reset_content_all div {
+	margin-top: 90%;
+}
+
+.reset_content_checbox_container {
+	margin: 10px 0;
+}
+
+.reset_content_checkboxes {
+	margin-bottom: 5px;
+	float: left;
+	width: 38%;
+}
