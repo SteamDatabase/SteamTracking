@@ -292,6 +292,7 @@
 "Scripts/Community/infinitescroll.js"            : "https://steamcommunity.com/public/javascript/infinitescroll.js?__TIME__&l=english",
 "Scripts/Community/login.js"                     : "https://steamcommunity.com/public/javascript/login.js?__TIME__&l=english",
 "Scripts/Community/market.js"                    : "https://steamcommunity.com/public/javascript/market.js?__TIME__&l=english",
+"Scripts/Community/market_multisell.js"          : "https://steamcommunity.com/public/javascript/market_multisell.js?__TIME__&l=english",
 "Scripts/Community/modal.js"                     : "https://steamcommunity.com/public/javascript/modal.js?__TIME__&l=english",
 "Scripts/Community/modalContent.js"              : "https://steamcommunity.com/public/javascript/modalContent.js?__TIME__&l=english",
 "Scripts/Community/modalv2.js"                   : "https://steamcommunity.com/public/javascript/modalv2.js?__TIME__&l=english",
