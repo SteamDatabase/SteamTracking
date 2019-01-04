@@ -4066,28 +4066,3 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 
 /* END Store curator capsule */
-
-
-/* Things just for winter sale. Remove after sale */
-
-#store_nav_area .store_nav_bg, .home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {
-
-	background-image: radial-gradient(
-		ellipse at top left,
-		#5f6972,
-		#7b858e 60%
-	);
-	background-repeat-y: no-repeat;
-	box-shadow: 0 0 10px rgba( 0, 0, 0, 0.4);
-	border-radius: 2px;
-}
-.searchbox {
-	background-color: #5f6972;
-}
-.searchbox:hover {
-	border: 1px solid #98a3a9;
-}
-
-a#store_search_link img {
-	filter: saturate(0.2);
-}

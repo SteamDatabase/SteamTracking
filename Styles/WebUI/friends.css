@@ -567,14 +567,6 @@
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
   background: #9c8fd4; }
 
-.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_isAway_3MeF9 .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
-  -webkit-mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-x;
-  -webkit-mask-size: 6px 6px;
-  mask-image: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  mask-size: 8px 8px;
-  opacity: 1; }
-
 .miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS {
   text-shadow: 1px 1px 4px #000;
   font-size: 20px;
@@ -618,12 +610,12 @@
   white-space: nowrap;
   word-wrap: break-word; }
 
-.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_online_3Bk5s .miniprofile_nickname_1W3dU,
-.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_online_3Bk5s .miniprofile_persona_1Z3Ey {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.online .miniprofile_nickname_1W3dU,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.online .miniprofile_persona_1Z3Ey {
   color: #6dcff6; }
 
-.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_offline_eQh4B .miniprofile_nickname_1W3dU,
-.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.miniprofile_offline_eQh4B .miniprofile_persona_1Z3Ey {
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.offline .miniprofile_nickname_1W3dU,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.offline .miniprofile_persona_1Z3Ey {
   color: #bbb; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_playerNicknameBracket_1bkKo {
@@ -2985,7 +2977,6 @@ iframe.steamTVLogin {
   color: cornflowerblue; }
 
 .broadcastchat_MessageContents_555m- {
-  color: gray;
   font-size: 11px; }
   .broadcastchat_MessageContents_555m- a {
     color: white; }
@@ -4790,7 +4781,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
 
 .web_chat_frame .contextMenu {
   max-height: calc( 100% - 128px);
-  overflow-y: auto; }
+  overflow-y: auto;
+  overflow-x: hidden; }
 
 html.ContextMenuPopup .contextMenu {
   position: static;
@@ -9670,9 +9662,21 @@ body.in_global_drag .friendlist_titlebar {
   margin: 0;
   box-shadow: 0px 0px 14px 1px #ffae00, 0px 0px 32px 1px #da9500; }
 
-.quickAccessFriends .friend.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle {
-  right: 3px;
-  bottom: 0; }
+.quickAccessFriends:not(.compactQuickAccess) .friend.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle {
+  right: 5px;
+  bottom: -4px; }
+
+.quickAccessFriends:not(.compactQuickAccess) .friend.ingame.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle {
+  right: 0px;
+  bottom: -2px; }
+
+.quickAccessFriends.compactQuickAccess .friend.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle {
+  right: -2px;
+  bottom: -6px; }
+
+.quickAccessFriends.compactQuickAccess .friend.ingame.quickAccessFriend .ChatUnreadMessageIndicator .chatUnreadCircle {
+  right: -8px;
+  bottom: -7px; }
 
 .ChatUnreadMessageIndicator .chatUnreadCircle {
   width: 4px;
@@ -12056,6 +12060,9 @@ a.connectionStatus:visited {
   background-color: #1f2126;
   cursor: pointer;
   transition: top .32s ease-in-out; }
+
+.inviteAnotherFriendButton.broadcastVisible {
+  top: unset; }
 
 .errorDisconnected .inviteAnotherFriendButton {
   display: none; }
@@ -18342,9 +18349,12 @@ a.general_btn:hover {
   height: 18px;
   margin-left: 6px;
   margin-right: 6px;
-  margin-top: 0px;
+  margin-bottom: -5px;
   border: 1px solid #788294;
   border-radius: 50%; }
+
+.contextMenuContents .contextMenuItem.contextMenuGameOptions:first-child {
+  border-top: 0px solid transparent; }
 
 .contextMenuItem.contextMenuGameOptions .SVGIcon_Play .playTriangle {
   transform: scale(0.6) translateX(20px);

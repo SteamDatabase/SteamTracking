@@ -417,7 +417,10 @@ body.v6 .account_settings_container h2 {
 	box-shadow: 1px 1px 0 0 #000000;
 
 	margin-bottom: 3px;
+}
 
+.tag_downvoted > div > div {
+	display: inline-block;
 	max-width: 200px;
 	white-space: nowrap;
 	overflow: hidden;

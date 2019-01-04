@@ -2626,10 +2626,10 @@
         return P;
       }),
       n.d(t, "y", function() {
-        return F;
+        return B;
       }),
       n.d(t, "Z", function() {
-        return B;
+        return F;
       }),
       n.d(t, "db", function() {
         return V;
@@ -4117,7 +4117,7 @@
         )
       );
     }
-    function F() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -4147,7 +4147,7 @@
         })
       );
     }
-    function B(e) {
+    function F(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -6603,7 +6603,7 @@
         e
       );
     })();
-    function F(e, t) {
+    function B(e, t) {
       return function() {
         try {
           e();
@@ -6612,7 +6612,7 @@
         }
       };
     }
-    var B,
+    var F,
       V,
       x = (function() {
         function e() {
@@ -6728,7 +6728,7 @@
             return this.m_ServiceTransport;
           }),
           (e.prototype.RunWhenLoggedOn = function(e, t) {
-            var n = F(e, "RunWhenLoggedOn");
+            var n = B(e, "RunWhenLoggedOn");
             this.BConnectedToServer(t)
               ? n()
               : this.m_callbacksOnConnectOneTime.AddCallback(n, t);
@@ -6740,7 +6740,7 @@
             });
           }),
           (e.prototype.AddOnLogonCallback = function(e, t) {
-            var n = F(e, "AddOnLogonCallback");
+            var n = B(e, "AddOnLogonCallback");
             return (
               this.BConnectedToServer(t) && n(),
               this.m_callbacksOnConnect.AddCallback(n, t)
@@ -7537,7 +7537,7 @@
       })(),
       W = n("i8i4"),
       z = n("+9/f");
-    ((V = B || (B = {}))[(V.Chat = 0)] = "Chat"),
+    ((V = F || (F = {}))[(V.Chat = 0)] = "Chat"),
       (V[(V.Notification = 1)] = "Notification"),
       (V[(V.Error = 2)] = "Error");
     var q,
@@ -7929,9 +7929,7 @@
       })(),
       ne = (function() {
         function e(e) {
-          (this.m_bInitialized = !1),
-            (this.m_bLocalUserOwnsApp = void 0),
-            (this.m_unAppID = e);
+          (this.m_bInitialized = !1), (this.m_unAppID = e);
         }
         return (
           Object.defineProperty(e.prototype, "appid", {
@@ -8009,7 +8007,6 @@
           R.c([d.observable], e.prototype, "m_strIconURL", void 0),
           R.c([d.observable], e.prototype, "m_strLogoURL", void 0),
           R.c([d.observable], e.prototype, "m_dtUpdatedFromServer", void 0),
-          R.c([d.observable], e.prototype, "m_bLocalUserOwnsApp", void 0),
           R.c([d.computed], e.prototype, "icon_url", null),
           R.c([d.computed], e.prototype, "logo_url", null),
           e
@@ -8114,7 +8111,7 @@
             (this.m_setPendingAppInfo = new Set()),
             (this.m_CacheStorage = null),
             (this.m_fnCallbackOnAppInfoLoaded = new N()),
-            G.a.IN_CLIENT;
+            _.b.IN_CLIENT;
         }
         return (
           (e.prototype.Init = function(e) {
@@ -8457,7 +8454,7 @@
                     var e = m.Init(z.a);
                     return (
                       e.Body().set_appid(t.GetAppID()),
-                      e.Body().set_language(G.a.LANGUAGE),
+                      e.Body().set_language(_.b.LANGUAGE),
                       z.c.GetAppRichPresenceLocalization(
                         n.m_CMInterface.GetServiceTransport(),
                         e
@@ -9255,15 +9252,22 @@
           this.m_rctElements = [];
         }
         return (
-          (e.prototype.AppendText = function(e) {
-            e.length &&
-              this.m_rctElements.push(
-                Ie.createElement(
-                  "span",
-                  { "data-copytext": "", "bbcode-text": e },
-                  e
-                )
-              );
+          (e.prototype.AppendText = function(e, t) {
+            void 0 === t && (t = !1),
+              e.length &&
+                (t
+                  ? this.m_rctElements.push(
+                      Ie.createElement(
+                        "span",
+                        {
+                          "data-copytext": "",
+                          "data-copystyle": "merge-adjacent",
+                          "bbcode-text": e
+                        },
+                        e
+                      )
+                    )
+                  : this.m_rctElements.push(e));
           }),
           (e.prototype.AppendNode = function(e, t) {
             this.m_rctElements.push(e);
@@ -9280,19 +9284,32 @@
         }
         return (
           R.d(t, e),
-          (t.prototype.AppendText = function(e) {
-            for (var t = e.indexOf("\n"); -1 !== t; t = e.indexOf("\n"))
-              this.m_rctElements.push(e.substr(0, t)),
-                this.m_rctElements.push(Ie.createElement("br")),
-                (e = e.substr(t + 1));
-            e.length &&
-              this.m_rctElements.push(
-                Ie.createElement(
-                  "span",
-                  { "data-copytext": "", "bbcode-text": e },
-                  e
-                )
-              );
+          (t.prototype.AppendText = function(e, t) {
+            void 0 === t && (t = !1);
+            for (
+              var n = e, o = [], i = n.indexOf("\n");
+              -1 !== i;
+              i = n.indexOf("\n")
+            )
+              o.push(n.substr(0, i)),
+                o.push(Ie.createElement("br")),
+                (n = n.substr(i + 1));
+            n.length && o.push(n),
+              t
+                ? this.m_rctElements.push(
+                    Ie.createElement.apply(
+                      Ie,
+                      [
+                        "span",
+                        {
+                          "data-copytext": "",
+                          "data-copystyle": "merge-adjacent",
+                          "bbcode-text": e
+                        }
+                      ].concat(o)
+                    )
+                  )
+                : this.m_rctElements.push(e);
           }),
           t
         );
@@ -9315,7 +9332,7 @@
               u = void 0,
               m = this.dictComponents();
             e.forEach(function(e, t) {
-              if (1 == e.type) p.AppendText(e.text);
+              if (1 == e.type) p.AppendText(e.text, !u || 0 == u.length);
               else if (2 == e.type)
                 u || (u = []),
                   u.push({ accumulator: p, node: e }),
@@ -9412,7 +9429,7 @@
         );
       })(),
       Pe = n("rrR9"),
-      Fe = (function() {
+      Be = (function() {
         function e() {}
         return (
           (e.prototype.Init = function(e) {
@@ -9455,7 +9472,7 @@
           e
         );
       })(),
-      Be = (function() {
+      Fe = (function() {
         return function(e) {
           (this.result = 50),
             (this.steamguard_required_days = 0),
@@ -9673,7 +9690,7 @@
             (i.m_bDeclined = !1),
             (i.m_bAccepted = !1),
             (i.m_bPopupBlocked = !1),
-            (i.m_ErrorDetails = new Be(50)),
+            (i.m_ErrorDetails = new Fe(50)),
             i
           );
         }
@@ -9686,7 +9703,7 @@
             return this.m_tradeRequestID;
           }),
           (e.prototype.MarkAsCancelled = function(e) {
-            (this.m_bCancelled = !0), (this.m_ErrorDetails = e || new Be(7));
+            (this.m_bCancelled = !0), (this.m_ErrorDetails = e || new Fe(7));
           }),
           (e.prototype.MarkAsDeclined = function() {
             this.m_bDeclined = !0;
@@ -11967,7 +11984,7 @@
                 case 26:
                 case 22:
                   var o,
-                    i = new Be(e.Body().response());
+                    i = new Fe(e.Body().response());
                   (i.steamguard_required_days = e
                     .Body()
                     .steamguard_required_days()),
@@ -14800,8 +14817,8 @@
         );
       })(tt),
       Pt = n("2lpH"),
-      Ft = n.n(Pt);
-    var Bt = (function() {
+      Bt = n.n(Pt);
+    var Ft = (function() {
         function e(e, t) {
           void 0 === e && (e = 20), (this.m_rank = e), (this.m_role_ids = t);
         }
@@ -15189,8 +15206,8 @@
                 e.sort(function(e, t) {
                   if (e.GetSortOrder() < t.GetSortOrder()) return -1;
                   if (e.GetSortOrder() > t.GetSortOrder()) return 1;
-                  var n = Ft.a.fromString(e.GetRoomID()),
-                    o = Ft.a.fromString(t.GetRoomID());
+                  var n = Bt.a.fromString(e.GetRoomID()),
+                    o = Bt.a.fromString(t.GetRoomID());
                   return n.lessThan(o) ? -1 : n.greaterThan(o) ? 1 : 0;
                 }),
                 e
@@ -15465,7 +15482,7 @@
               })),
               this.m_groupMembers.AddMember(
                 ti.CMInterface.steamid.GetAccountID(),
-                new Bt(e.rank(), e.role_ids())
+                new Ft(e.rank(), e.role_ids())
               ),
               this.SetOwnerAppID(e.appid()),
               this.SetNameCheckingForAppLocalization(e.chat_group_name()),
@@ -15513,7 +15530,7 @@
             for (var t = [], n = 0, o = e.members(); n < o.length; n++) {
               var i = o[n],
                 r = i.accountid();
-              this.m_groupMembers.AddMember(r, new Bt(i.rank(), i.role_ids())),
+              this.m_groupMembers.AddMember(r, new Ft(i.rank(), i.role_ids())),
                 t.length < 10 && t.push(r);
             }
             (!this.m_rgGroupMembersSummary ||
@@ -15546,7 +15563,7 @@
                 ),
                 this.m_groupMembers.AddMember(
                   n,
-                  new Bt(e.rank(), e.role_ids())
+                  new Ft(e.rank(), e.role_ids())
                 ),
                 ti.GroupMemberStore.OnMemberAdded(this.m_ulGroupID, n),
                 this.m_rgGroupMembersSummary.length < 10 &&
@@ -19386,11 +19403,11 @@
                   y++
                 ) {
                   var C = {
-                      strID: In((F = S[y]), "id"),
-                      nBandwidth: Cn(F, "bandwidth"),
+                      strID: In((B = S[y]), "id"),
+                      nBandwidth: Cn(B, "bandwidth"),
                       strClosedCaptionFile: ""
                     },
-                    I = vn(F, "BaseURL"),
+                    I = vn(B, "BaseURL"),
                     E = I ? I.textContent : "";
                   if (!E)
                     return (
@@ -19462,8 +19479,8 @@
                   return fn("MPD - Segment Template Data Missing"), !1;
                 var P = h.getElementsByTagName("Representation");
                 for (w = 0; w < P.length; w++) {
-                  var F = P[w];
-                  if (!(C = this.ParseRepresentation(F, g))) return !1;
+                  var B = P[w];
+                  if (!(C = this.ParseRepresentation(B, g))) return !1;
                   g.rgRepresentations.push(C);
                 }
               }
@@ -20174,23 +20191,23 @@
     var kn,
       An,
       Pn = 1e6,
-      Fn = (function() {
+      Bn = (function() {
         return function() {
           this.playback_speed = 1;
         };
       })(),
-      Bn = (function(e) {
+      Fn = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return R.d(t, e), t;
-      })(Fn),
+      })(Bn),
       Vn = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return R.d(t, e), t;
-      })(Fn),
+      })(Bn),
       xn = (function() {
         function e() {
           (this.m_steamIDBroadcast = ""),
@@ -20631,7 +20648,7 @@
                     .m_nBytesReceived
               ) {
                 this.LogFrameInfo(n), this.LogBufferDuration(e, t);
-                var o = new Bn(),
+                var o = new Fn(),
                   i = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
                 (o.frames_decoded = i.m_nFramesDecoded),
                   (o.frames_dropped = i.m_nFramesDropped),
@@ -22351,7 +22368,7 @@
                           4,
                           I.a.get(
                             G.a.CHAT_BASE_URL + "broadcast/getbroadcastmpd/",
-                            { params: t }
+                            { params: t, withCredentials: !0 }
                           )
                         ]
                       );
@@ -22383,21 +22400,21 @@
                           );
                         (r = 3e4 < i ? o.retry : 5e3),
                           s.m_schManifestTimeout.Schedule(r, function() {
-                            return a.GetBroadcastManifest(s, l);
+                            return a.GetBroadcastManifest(s, c, l);
                           });
                       } else
                         "waiting_for_start" == o.success
                           ? s.m_schManifestTimeout.Schedule(
                               o.retry,
                               function() {
-                                return a.GetBroadcastManifest(s, l);
+                                return a.GetBroadcastManifest(s, c, l);
                               }
                             )
                           : "waiting_for_reconnect" == o.success
                           ? s.m_schManifestTimeout.Schedule(
                               o.retry,
                               function() {
-                                return a.GetBroadcastManifest(s, l);
+                                return a.GetBroadcastManifest(s, c, l);
                               }
                             )
                           : "ready" == o.success &&
@@ -22915,55 +22932,65 @@
               t.append("chat_id", this.m_ulChatID),
                 t.append("message", i),
                 t.append("instance_id", this.m_unInstanceID.toString()),
-                I.a
-                  .post(
-                    G.a.WEBAPI_BASE_URL +
-                      "IBroadcastService/PostChatMessage/v0001?access_token=" +
-                      this.m_webApiToken,
-                    t
-                  )
-                  .then(function(e) {
-                    var t = e.data;
-                    if (t.result && 1 != t.result) {
-                      var n = "";
-                      return (
-                        (n =
-                          17 == t.result
-                            ? Object(le.b)("#BroadcastChat_YouMuted")
-                            : 84 == t.result
-                            ? Object(le.b)(
-                                "#BroadcastChat_Cooldown",
-                                t.cooldown_time_seconds
-                              )
-                            : 40 == t.result
-                            ? Object(le.b)("#BroadcastChat_Blocked")
-                            : Object(le.b)(
-                                "#BroadcastChat_FailedToSendMsg",
-                                i
-                              )),
-                        void o.m_rgChatMessages.push({
-                          type: B.Error,
-                          msg: n,
+                this.m_webApiToken
+                  ? I.a
+                      .post(
+                        G.a.WEBAPI_BASE_URL +
+                          "IBroadcastService/PostChatMessage/v0001?access_token=" +
+                          this.m_webApiToken,
+                        t
+                      )
+                      .then(function(e) {
+                        var t = e.data;
+                        if (t.result && 1 != t.result) {
+                          var n = "";
+                          return (
+                            (n =
+                              17 == t.result
+                                ? Object(le.b)("#BroadcastChat_YouMuted")
+                                : 84 == t.result
+                                ? Object(le.b)(
+                                    "#BroadcastChat_Cooldown",
+                                    t.cooldown_time_seconds
+                                  )
+                                : 40 == t.result
+                                ? Object(le.b)("#BroadcastChat_Blocked")
+                                : Object(le.b)(
+                                    "#BroadcastChat_FailedToSendMsg",
+                                    i
+                                  )),
+                            void o.m_rgChatMessages.push({
+                              type: F.Error,
+                              msg: n,
+                              client_ts: Number(new Date()),
+                              instance_id: o.m_unInstanceID,
+                              in_game: t.in_game,
+                              persona_name: t.persona_name,
+                              steamid: ""
+                            })
+                          );
+                        }
+                      })
+                      .catch(function(e) {
+                        o.m_rgChatMessages.push({
+                          type: F.Error,
+                          msg: Object(le.b)(
+                            "#BroadcastChat_FailedToSendMsg",
+                            i
+                          ),
                           client_ts: Number(new Date()),
                           instance_id: o.m_unInstanceID,
-                          in_game: t.in_game,
-                          persona_name: t.persona_name,
+                          in_game: e.in_game,
+                          persona_name: e.persona_name,
                           steamid: ""
-                        })
-                      );
-                    }
-                  })
-                  .catch(function(e) {
-                    o.m_rgChatMessages.push({
-                      type: B.Error,
-                      msg: Object(le.b)("#BroadcastChat_FailedToSendMsg", i),
+                        });
+                      })
+                  : this.m_rgChatMessages.push({
+                      type: F.Error,
+                      msg: Object(le.b)("#SteamTV_ChatNotLoggedIn"),
                       client_ts: Number(new Date()),
-                      instance_id: o.m_unInstanceID,
-                      in_game: e.in_game,
-                      persona_name: e.persona_name,
-                      steamid: ""
+                      instance_id: this.m_unInstanceID
                     });
-                  });
             }
           }),
           (e.prototype.RequestChatInfo = function() {
@@ -22976,7 +23003,8 @@
                     steamid: this.m_broadcastSteamID,
                     broadcastid: this.m_ulBroadcastID,
                     sessionid: G.a.SESSIONID
-                  }
+                  },
+                  withCredentials: !0
                 })
                 .then(function(e) {
                   var t = e.data;
@@ -22989,7 +23017,7 @@
                     t.token && (n.m_webApiToken = t.token),
                     t.emoticons && n.SetOwnedEmoticons(t.emoticons),
                     n.m_rgChatMessages.push({
-                      type: B.Notification,
+                      type: F.Notification,
                       msg: Object(le.b)("#BroadcastChat_DefaultMessage"),
                       client_ts: Number(new Date()),
                       instance_id: n.m_unInstanceID,
@@ -23023,7 +23051,7 @@
                   var o = n.messages
                     .map(function(e) {
                       return R.a({}, e, {
-                        type: B.Chat,
+                        type: F.Chat,
                         client_ts: Number(new Date())
                       });
                     })
@@ -23042,7 +23070,7 @@
                     for (var i = 0; i < n.joined.length; i++)
                       n.joined[i].steamid != s.m_strUserSteamID &&
                         s.m_rgChatMessages.push({
-                          type: B.Notification,
+                          type: F.Notification,
                           msg: Object(le.b)(
                             "#BroadcastChat_UserJoined",
                             n.joined[i].persona_name
@@ -23057,7 +23085,7 @@
                     for (i = 0; i < n.left.length; i++)
                       n.left[i].steamid != s.m_strUserSteamID &&
                         s.m_rgChatMessages.push({
-                          type: B.Notification,
+                          type: F.Notification,
                           msg: Object(le.b)(
                             "#BroadcastChat_UserLeft",
                             n.left[i].persona_name
@@ -23081,7 +23109,7 @@
                               n.muted[i].persona_name
                             );
                       s.m_rgChatMessages.push({
-                        type: B.Notification,
+                        type: F.Notification,
                         msg: r,
                         client_ts: Number(new Date()),
                         instance_id: s.m_unInstanceID,
@@ -23121,7 +23149,7 @@
                   }
                   s.m_bReconnecting &&
                     (s.m_rgChatMessages.push({
-                      type: B.Notification,
+                      type: F.Notification,
                       msg: Object(le.b)("#BroadcastChat_Reconnected"),
                       client_ts: Number(new Date()),
                       instance_id: s.m_unInstanceID,
@@ -23151,7 +23179,7 @@
                   ) {
                     if (null == s.m_tsFirstRequest)
                       return void s.m_rgChatMessages.push({
-                        type: B.Error,
+                        type: F.Error,
                         msg: Object(le.b)("#BroadcastChat_UnableToJoinChat"),
                         client_ts: Number(new Date()),
                         instance_id: s.m_unInstanceID,
@@ -23252,7 +23280,7 @@
                     .catch(function() {
                       o &&
                         (n.m_rgChatMessages.push({
-                          type: B.Error,
+                          type: F.Error,
                           msg: Object(le.b)("#BroadcastChat_UserMuteFailed", t),
                           client_ts: Number(new Date()),
                           instance_id: n.m_unInstanceID,
@@ -23265,7 +23293,7 @@
               }
               o ||
                 this.m_rgChatMessages.push({
-                  type: B.Notification,
+                  type: F.Notification,
                   msg: Object(le.b)("#BroadcastChat_UserMutedLocal", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
@@ -23295,7 +23323,7 @@
                     )
                     .then(function(e) {
                       n.m_rgChatMessages.push({
-                        type: B.Notification,
+                        type: F.Notification,
                         msg: Object(le.b)("#BroadcastChat_UserUnmutedLocal", t),
                         client_ts: Number(new Date()),
                         instance_id: n.m_unInstanceID,
@@ -23306,7 +23334,7 @@
                     })
                     .catch(function() {
                       n.m_rgChatMessages.push({
-                        type: B.Error,
+                        type: F.Error,
                         msg: Object(le.b)("#BroadcastChat_UserUnmuteFailed", t),
                         client_ts: Number(new Date()),
                         instance_id: n.m_unInstanceID,
@@ -23317,7 +23345,7 @@
                     });
               } else
                 this.m_rgChatMessages.push({
-                  type: B.Notification,
+                  type: F.Notification,
                   msg: Object(le.b)("#BroadcastChat_UserUnmutedLocal", t),
                   client_ts: Number(new Date()),
                   instance_id: this.m_unInstanceID,
@@ -23347,7 +23375,7 @@
                   .then(function() {})
                   .catch(function() {
                     n.m_rgChatMessages.push({
-                      type: B.Error,
+                      type: F.Error,
                       msg: Object(le.b)(
                         "#BroadcastChat_RemoveMessagesFailed",
                         t
@@ -23572,6 +23600,7 @@
             (this.m_bRestoringPopups = !1),
             (this.m_bShuttingDown = !1),
             (this.m_bTheaterMode = !1),
+            (this.m_mapFriendChatBroadcastVisible = new Map()),
             (this.m_chatStore = e);
         }
         return (
@@ -23636,6 +23665,12 @@
           }),
           (e.prototype.GetTheaterMode = function() {
             return this.m_bTheaterMode;
+          }),
+          (e.prototype.SetFriendBroadcastVisible = function(e, t) {
+            this.m_mapFriendChatBroadcastVisible.set(e, t);
+          }),
+          (e.prototype.IsFriendBroadcastVisible = function(e) {
+            return this.m_mapFriendChatBroadcastVisible.get(e);
           }),
           (e.prototype.ShowAndOrActivateChatRoomGroup = function(e, t, n) {
             return t.BIsCurrentUserAMember()
@@ -24298,6 +24333,12 @@
               e.ui_state().set_friend_chat_tabs_opened(o);
           }),
           R.c([d.observable], e.prototype, "m_bTheaterMode", void 0),
+          R.c(
+            [d.observable],
+            e.prototype,
+            "m_mapFriendChatBroadcastVisible",
+            void 0
+          ),
           R.c([d.action], e.prototype, "OnFriendsParentalLockChanged", null),
           R.c([Yo], e.prototype, "ShowFriendChatDialogWhenReady", null),
           R.c(
@@ -25272,7 +25313,7 @@
         };
       })(),
       Po = "SteamVoiceSettings",
-      Fo = (function() {
+      Bo = (function() {
         function e(e) {
           (this.m_VoiceInputGain = 1),
             (this.m_VoiceOutputGain = 1),
@@ -25354,7 +25395,7 @@
           e
         );
       })(),
-      Bo = (function() {
+      Fo = (function() {
         function e() {
           (this.muted = !1), (this.gain = 1);
         }
@@ -25774,7 +25815,7 @@
                 );
               }
             )),
-            (this.m_Settings = new Fo(e)),
+            (this.m_Settings = new Bo(e)),
             this.m_Settings.LoadFromLocalStorage(this),
             "undefined" != typeof SteamClient &&
               null != SteamClient &&
@@ -26279,7 +26320,7 @@
           }),
           (o.prototype.SetPerUserMuting = function(e, t) {
             var n = this.m_mapPerUserOutputGain.get(e);
-            null == n && (n = new Bo()),
+            null == n && (n = new Fo()),
               (n.muted = t || this.m_bOutputMuted),
               this.m_mapPerUserOutputGain.set(e, n),
               this.UpdateStreamsForPerUseGainChange(e);
@@ -26287,7 +26328,7 @@
           (o.prototype.SetPerUserGainLevel = function(e, t) {
             var n = Math.max(0, Math.min(4, t)),
               o = this.m_mapPerUserOutputGain.get(e);
-            null == o && (o = new Bo()),
+            null == o && (o = new Fo()),
               (o.gain = n),
               o.gain < 0.001 ? (o.muted = !0) : (o.muted = !1),
               this.m_mapPerUserOutputGain.set(e, o),
@@ -26295,7 +26336,7 @@
           }),
           (o.prototype.UpdateStreamsForPerUseGainChange = function(e) {
             var t = this.m_mapPerUserOutputGain.get(e);
-            null == t && (t = new Bo());
+            null == t && (t = new Fo());
             for (var n = 0; n < this.m_rgAudioStreams.length; ++n) {
               var o = this.m_rgAudioStreams[n];
               if (o.accountid == e && null != o.output_gain_node) {
@@ -29325,11 +29366,8 @@
         function o(e, t) {
           void 0 === t && (t = {}),
             (this.m_BrowserContextDefaultTarget = $o),
-            (this.m_FriendStore = new St()),
-            (this.m_ChatStore = new en(this.m_FriendStore)),
-            (this.m_UIStore = new lo(this.m_ChatStore)),
             (this.m_AppInfoStore = new se()),
-            (this.m_EconomyStore = new Fe()),
+            (this.m_EconomyStore = new Be()),
             (this.m_ParentalStore = new Ho()),
             (this.m_BroadcastStore = new ao()),
             (this.m_GroupMemberStore = new qo()),
@@ -29339,6 +29377,9 @@
             (ti = this),
             ((window.g_FriendsUIApp = this).m_Storage = e),
             (this.m_SettingsStore = t.SettingsStore || new go(e)),
+            (this.m_FriendStore = t.FriendStore || new St()),
+            (this.m_ChatStore = t.ChatStore || new en(this.m_FriendStore)),
+            (this.m_UIStore = t.UIStore || new lo(this.m_ChatStore)),
             (this.m_VoiceChatStore = new Uo(this.m_SettingsStore));
         }
         return (
@@ -30314,7 +30355,7 @@
         )
       );
     }
-    var Fi = (function(n) {
+    var Bi = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -30491,7 +30532,7 @@
           e
         );
       })(Ie.PureComponent),
-      Bi = (function(e) {
+      Fi = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -30573,7 +30614,7 @@
           R.c([T.a], t.prototype, "OnInputBlur", null),
           t
         );
-      })(Fi),
+      })(Bi),
       Vi = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -31947,7 +31988,7 @@
                           Ie.createElement(
                             "div",
                             { className: "mediumName asNickName" },
-                            Ie.createElement(Fi, {
+                            Ie.createElement(Bi, {
                               placeholder: t
                                 ? Object(le.b)("#Nickname_PlaceHolderNickName")
                                 : Object(le.b)(
@@ -32128,7 +32169,7 @@
                 "div",
                 { className: t.join(" ") },
                 Ie.createElement(
-                  Bi,
+                  Fi,
                   {
                     onChange: this.OnTextInput,
                     onKeyDown: this.OnInputKeyDown,
@@ -32566,7 +32607,7 @@
                       { className: "nicknameError" },
                       this.state.strError
                     ),
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     type: "text",
                     label: Object(le.b)("#FriendGroup_CategoryName"),
                     className: "nicknameInput",
@@ -33136,7 +33177,7 @@
                             Ie.createElement(
                               "div",
                               { className: "mediumName" },
-                              Ie.createElement(Fi, {
+                              Ie.createElement(Bi, {
                                 placeholder: Object(le.b)(
                                   "#ChangePersona_PlaceHolder"
                                 ),
@@ -33287,7 +33328,7 @@
           (t = R.c([Xi.observer], t))
         );
       })(Ie.Component);
-    var Fr = (function(n) {
+    var Br = (function(n) {
       function e(e) {
         var t = n.call(this, e) || this;
         return (
@@ -33579,7 +33620,7 @@
         (e = R.c([Xi.observer], e))
       );
     })(Ie.Component);
-    function Br(e, t, n, o) {
+    function Fr(e, t, n, o) {
       return Object(ri.a)(
         Ie.createElement(Ur, {
           browserContext: e,
@@ -34107,7 +34148,7 @@
                             (e = o.friend),
                             (t = o.ownerWindow),
                             void or(
-                              Ie.createElement(Fr, { player: e }),
+                              Ie.createElement(Br, { player: e }),
                               t,
                               "FriendNotificationsDialog",
                               {
@@ -34677,22 +34718,11 @@
               e.stopPropagation();
           }),
           (e.prototype.WatchGame = function(e) {
-            if (
-              "undefined" != typeof SteamClient &&
-              void 0 !== SteamClient.WebChat
-            ) {
-              var t = "steam://broadcast/watch/" + this.props.friend.steamid64,
-                n = Wm(this, e);
-              SteamClient.WebChat.OpenURLInClient(t, n.m_unPID);
-            } else {
-              Dr(
-                e,
-                G.a.COMMUNITY_BASE_URL +
-                  "broadcast/watch/" +
-                  this.props.friend.steamid64
-              ),
-                e.stopPropagation();
-            }
+            ti.UIStore.SetFriendBroadcastVisible(
+              this.props.friend.steamid64,
+              !0
+            ),
+              this.props.friend.OpenChatDialog(Wm(this, e));
           }),
           (e.prototype.JoinGame = function(t) {
             var n = this,
@@ -35322,7 +35352,7 @@
               Ie.createElement(
                 Ie.Fragment,
                 null,
-                Ie.createElement(Fi, {
+                Ie.createElement(Bi, {
                   label: Object(le.b)("#Chat_Invite_Linkheader"),
                   className: "InviteFriendToChatDialog_LinkInput",
                   type: "text",
@@ -36085,7 +36115,7 @@
                     null,
                     Object(le.b)("#Chat_SaveVoiceRoom_Description")
                   ),
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     type: "text",
                     label: Object(le.b)("#Chat_SaveVoiceRoom_Name"),
                     className: "nicknameInput",
@@ -37140,7 +37170,7 @@
                 Ie.createElement(
                   Ii,
                   null,
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     ref: function(e) {
                       t.m_refInput = e;
                     },
@@ -37911,8 +37941,8 @@
           (e = R.c([Xi.observer], e))
         );
       })(Ie.Component),
-      Fa = n("twdX"),
-      Ba = n.n(Fa),
+      Ba = n("twdX"),
+      Fa = n.n(Ba),
       Va = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
@@ -37921,37 +37951,37 @@
           R.d(e, t),
           (e.prototype.AddSizeClass = function(e) {
             "small" == this.props.size
-              ? e.push(Ba.a.throbber_small)
+              ? e.push(Fa.a.throbber_small)
               : "medium" == this.props.size
-              ? e.push(Ba.a.throbber_medium)
+              ? e.push(Fa.a.throbber_medium)
               : "xlarge" == this.props.size
-              ? e.push(Ba.a.throbber_xlarge)
-              : e.push(Ba.a.throbber_large);
+              ? e.push(Fa.a.throbber_xlarge)
+              : e.push(Fa.a.throbber_large);
           }),
           (e.prototype.render = function() {
-            var e = [Ba.a.LoadingWrapper, "SteamLogoThrobber"];
+            var e = [Fa.a.LoadingWrapper, "SteamLogoThrobber"];
             this.AddSizeClass(e),
-              void 0 === this.props.string && e.push(Ba.a.noString),
+              void 0 === this.props.string && e.push(Fa.a.noString),
               this.props.className && e.push(this.props.className);
             var t = Ee.a.createElement(
               "div",
               { className: e.join(" ") },
               Ee.a.createElement(
                 "div",
-                { className: Ba.a.Throbber },
-                Ee.a.createElement(ii.Z, { className: Ba.a.base }),
-                Ee.a.createElement(ii.Z, { className: Ba.a.blur })
+                { className: Fa.a.Throbber },
+                Ee.a.createElement(ii.Z, { className: Fa.a.base }),
+                Ee.a.createElement(ii.Z, { className: Fa.a.blur })
               )
             );
             return (
               "center" == this.props.position &&
                 (t = Ee.a.createElement(
                   "div",
-                  { className: Ba.a.throbber_center_wrapper },
+                  { className: Fa.a.throbber_center_wrapper },
                   t,
                   Ee.a.createElement(
                     "div",
-                    { className: Ba.a.ThrobberText },
+                    { className: Fa.a.ThrobberText },
                     this.props.string
                   )
                 )),
@@ -38190,7 +38220,7 @@
                   )
                 )
               ),
-              Ie.createElement(Fi, {
+              Ie.createElement(Bi, {
                 ref: this.BindInputRef,
                 autoFocus: !0,
                 label: Object(le.b)("#GroupSettings_Save_NameGroup"),
@@ -38418,7 +38448,7 @@
                 Ie.createElement(
                   "div",
                   { className: "GeneralChatSettings" },
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     autoComplete: "off",
                     id: "b1",
                     className: "groupChatName",
@@ -38434,7 +38464,7 @@
                     type: "submit",
                     style: { display: "none" }
                   }),
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     autoComplete: "off",
                     id: "b2",
                     className: "groupChatTag",
@@ -38814,7 +38844,7 @@
                 Ie.createElement(
                   Ii,
                   null,
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     ref: function(e) {
                       t.m_refInput = e;
                     },
@@ -39022,7 +39052,7 @@
                     "div",
                     { className: "roleEditHeader" },
                     !s &&
-                      Ie.createElement(Fi, {
+                      Ie.createElement(Bi, {
                         autoComplete: "off",
                         id: "b1",
                         className: "editRoleName",
@@ -39467,7 +39497,7 @@
                       "td",
                       null,
                       " ",
-                      Ie.createElement(Fi, {
+                      Ie.createElement(Bi, {
                         className: "inviteURLLink",
                         value: Object(de.a)(t.invite_code()),
                         readOnly: !0,
@@ -42348,7 +42378,7 @@
               r,
               a = this.props.favorite;
             if (a.friend)
-              Br(Wm(this, e), this.props.friendRenderContext, a.friend, e);
+              Fr(Wm(this, e), this.props.friendRenderContext, a.friend, e);
             else if (a.clan)
               (t = e),
                 (n = a.clan),
@@ -42820,7 +42850,7 @@
                     this.state.strError
                   ),
                 !this.props.bHideChatNameEntry &&
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     type: "text",
                     label: Object(le.b)("#Chat_Settings_Room_Name"),
                     className: "nicknameInput",
@@ -42976,8 +43006,8 @@
         );
       }),
       Ps = n("r6f6"),
-      Fs = n.n(Ps),
-      Bs = (function() {
+      Bs = n.n(Ps),
+      Fs = (function() {
         function e(e) {
           (this.m_bLoadingData = !1), (this.m_accountid = e);
         }
@@ -43064,31 +43094,31 @@
             return e
               ? Ie.createElement(
                   "div",
-                  { className: Fs.a.miniProfileFeaturedContainer },
+                  { className: Bs.a.miniProfileFeaturedContainer },
                   Ie.createElement(
                     "div",
-                    { className: Fs.a.favoriteBadgeIcon },
+                    { className: Bs.a.favoriteBadgeIcon },
                     Ie.createElement("img", {
                       src: e.icon,
-                      className: Fs.a.badgeIcon
+                      className: Bs.a.badgeIcon
                     })
                   ),
                   Ie.createElement(
                     "div",
                     {
                       className: Rr(
-                        Fs.a.featuredLabels,
-                        Fs.a.favoriteBadgeDescription
+                        Bs.a.featuredLabels,
+                        Bs.a.favoriteBadgeDescription
                       )
                     },
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.featuredTitle },
+                      { className: Bs.a.featuredTitle },
                       e.name
                     ),
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.featuredSubTitle },
+                      { className: Bs.a.featuredSubTitle },
                       Object(le.b)("#Hover_BadgeXP", e.xp)
                     )
                   )
@@ -43108,22 +43138,22 @@
             return this.props.community_data_ready
               ? Ie.createElement(
                   "div",
-                  { className: Fs.a.miniProfileFeaturedContainer },
+                  { className: Bs.a.miniProfileFeaturedContainer },
                   Ie.createElement(
                     "div",
                     { className: this.props.community_data.level_class },
                     Ie.createElement(
                       "span",
-                      { className: Fs.a.friendPlayerLevelNum },
+                      { className: Bs.a.friendPlayerLevelNum },
                       this.props.community_data.level
                     )
                   ),
                   Ie.createElement(
                     "div",
-                    { className: Fs.a.featuredLabels },
+                    { className: Bs.a.featuredLabels },
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.featuredTitle },
+                      { className: Bs.a.featuredTitle },
                       Object(le.b)("#Hover_SteamLevel") + " "
                     )
                   )
@@ -43143,25 +43173,25 @@
             var e = this.props.persona;
             return Ie.createElement(
               "div",
-              { className: Fs.a.miniProfileGameContainer },
+              { className: Bs.a.miniProfileGameContainer },
               this.props.game_logo_url &&
                 Ie.createElement("img", {
-                  className: Fs.a.gameLogo,
+                  className: Bs.a.gameLogo,
                   src: this.props.game_logo_url
                 }),
               Ie.createElement(
                 "div",
                 {
                   className: Rr(
-                    Fs.a.gameContent,
-                    Fs.a.persona,
-                    Fs.a.ingame,
-                    Fs.a.ellipsis
+                    Bs.a.gameContent,
+                    Bs.a.persona,
+                    Bs.a.ingame,
+                    Bs.a.ellipsis
                   )
                 },
                 Ie.createElement(
                   "div",
-                  { className: Fs.a.gameState },
+                  { className: Bs.a.gameState },
                   Object(le.b)(
                     e.is_in_nonsteam_game
                       ? "#PersonaStateInNonSteamGame"
@@ -43172,7 +43202,7 @@
                 this.props.game_rich_presence &&
                   Ie.createElement(
                     "div",
-                    { className: Fs.a.richPresence },
+                    { className: Bs.a.richPresence },
                     this.props.game_rich_presence
                   )
               )
@@ -43196,32 +43226,32 @@
                 ((e = Object(le.b)("#PersonaStateWatchingBroadcast")), (t = n)),
               Ie.createElement(
                 "div",
-                { className: Fs.a.miniProfileGameContainer },
+                { className: Bs.a.miniProfileGameContainer },
                 this.props.game_logo_url &&
                   Ie.createElement("img", {
-                    className: Fs.a.gameLogo,
+                    className: Bs.a.gameLogo,
                     src: this.props.game_logo_url
                   }),
                 Ie.createElement(
                   "div",
                   {
                     className: Rr(
-                      Fs.a.gameContent,
-                      Fs.a.persona,
-                      Fs.a.watchingbroadcast,
-                      Fs.a.ellipsis
+                      Bs.a.gameContent,
+                      Bs.a.persona,
+                      Bs.a.watchingbroadcast,
+                      Bs.a.ellipsis
                     )
                   },
-                  Ie.createElement("div", { className: Fs.a.gameState }, e),
+                  Ie.createElement("div", { className: Bs.a.gameState }, e),
                   t &&
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.richPresence },
+                      { className: Bs.a.richPresence },
                       t
                     ),
                   Ie.createElement(
                     "div",
-                    { className: Fs.a.watchingbroadcastThumbnail },
+                    { className: Bs.a.watchingbroadcastThumbnail },
                     this.props.broadcast_thumbnail
                   )
                 )
@@ -43271,17 +43301,17 @@
                 "mutual_friends"
               ])),
               a = void 0,
-              s = Fs.a.miniProfileContent;
+              s = Bs.a.miniProfileContent;
             t.is_ingame
               ? (a = Ie.createElement(Us, R.a({}, this.props)))
               : t.is_watchingbroadcast
               ? (a = Ie.createElement(js, R.a({}, this.props)))
-              : (s += " " + Fs.a.notInOrWatchingGame);
+              : (s += " " + Bs.a.notInOrWatchingGame);
             var c = !0,
               l = !1,
               p = !1;
-            o || ((s += " " + Fs.a.notFriends), (c = !1)),
-              i && ((s += " " + Fs.a.communicationBlocked), (p = !0));
+            o || ((s += " " + Bs.a.notFriends), (c = !1)),
+              i && ((s += " " + Bs.a.communicationBlocked), (p = !0));
             var u = void 0 !== n,
               m = void 0,
               d = t.is_awayOrSnooze;
@@ -43289,21 +43319,21 @@
               (m = u
                 ? Ie.createElement(
                     "div",
-                    { className: Rr(Fs.a.personaName, Fs.a.hasNickname) },
+                    { className: Rr(Bs.a.personaName, Bs.a.hasNickname) },
                     "(",
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.personaNameLabel },
+                      { className: Bs.a.personaNameLabel },
                       t.m_strPlayerName
                     ),
                     ")"
                   )
                 : Ie.createElement(
                     "div",
-                    { className: Fs.a.personaName },
+                    { className: Bs.a.personaName },
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.personaNameLabel },
+                      { className: Bs.a.personaNameLabel },
                       t.m_strPlayerName
                     )
                   )),
@@ -43314,7 +43344,7 @@
                 Ie.createElement(
                   "div",
                   R.a(
-                    { className: Rr(this.props.className, Fs.a.miniProfile) },
+                    { className: Rr(this.props.className, Bs.a.miniProfile) },
                     r
                   ),
                   Ie.createElement(
@@ -43322,22 +43352,22 @@
                     { className: s },
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.miniProfileBackground },
+                      { className: Bs.a.miniProfileBackground },
                       Ie.createElement("img", {
-                        className: Fs.a.miniProfileBackgroundBlur,
+                        className: Bs.a.miniProfileBackgroundBlur,
                         src: t.avatar_url
                       })
                     ),
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.miniProfileHeader },
+                      { className: Bs.a.miniProfileHeader },
                       Ie.createElement(
                         "div",
                         {
                           className: Rr(
-                            Fs.a.miniProfilePlayer,
+                            Bs.a.miniProfilePlayer,
                             t.online_state,
-                            d && Fs.a.isAway,
+                            d && Bs.a.isAway,
                             ee(t)
                           )
                         },
@@ -43345,42 +43375,42 @@
                           persona: this.props.persona,
                           size: "X-Large",
                           statusPosition: "bottom",
-                          className: Fs.a.playerAvatar
+                          className: Bs.a.playerAvatar
                         }),
                         d &&
                           Ie.createElement(Cs, {
                             persona: t,
                             animating: !0,
-                            className: Fs.a.SnoozeContainer,
+                            className: Bs.a.SnoozeContainer,
                             size: "large"
                           }),
                         Ie.createElement(
                           "div",
-                          { className: Fs.a.playerContent },
+                          { className: Bs.a.playerContent },
                           Ie.createElement(
                             "div",
-                            { className: Fs.a.playerName },
+                            { className: Bs.a.playerName },
                             Ie.createElement(
                               "div",
-                              { className: Fs.a.persona },
+                              { className: Bs.a.persona },
                               u &&
                                 Ie.createElement(
                                   "div",
                                   {
                                     className: Rr(
-                                      Fs.a.personaName,
-                                      Fs.a.nickName
+                                      Bs.a.personaName,
+                                      Bs.a.nickName
                                     )
                                   },
                                   Ie.createElement(
                                     "div",
-                                    { className: Fs.a.personaNameLabel },
+                                    { className: Bs.a.personaNameLabel },
                                     this.props.nickname
                                   ),
                                   Ie.createElement(
                                     "div",
                                     {
-                                      className: Fs.a.playerNicknameBracket,
+                                      className: Bs.a.playerNicknameBracket,
                                       title: Object(le.b)("#isNickname")
                                     },
                                     "*"
@@ -43391,26 +43421,26 @@
                               d &&
                                 Ie.createElement(
                                   "div",
-                                  { className: Fs.a.awayStatusLabel },
+                                  { className: Bs.a.awayStatusLabel },
                                   Object(le.b)("#PersonaStateAway")
                                 ),
                               "offline" == t.online_state &&
                                 Ie.createElement(
                                   "div",
-                                  { className: Fs.a.awayStatusLabel },
+                                  { className: Bs.a.awayStatusLabel },
                                   this.props.localized_status
                                 ),
                               "online" == t.online_state &&
                                 !d &&
                                 Ie.createElement(
                                   "div",
-                                  { className: Fs.a.awayStatusLabel },
+                                  { className: Bs.a.awayStatusLabel },
                                   Object(le.b)("#PersonaStateOnline")
                                 ),
                               !c &&
                                 Ie.createElement(
                                   "div",
-                                  { className: Fs.a.miniProfileNotFriends },
+                                  { className: Bs.a.miniProfileNotFriends },
                                   l
                                     ? Object(le.b)(
                                         "#Friend_Menu_NotAFriendRequesting"
@@ -43422,7 +43452,7 @@
                               p &&
                                 Ie.createElement(
                                   "div",
-                                  { className: Fs.a.miniProfileBlocked },
+                                  { className: Bs.a.miniProfileBlocked },
                                   Object(le.b)("#PersonaStateBlocked")
                                 )
                             )
@@ -43433,13 +43463,13 @@
                     a,
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.miniProfileBottom },
+                      { className: Bs.a.miniProfileBottom },
                       Ie.createElement(Vs, R.a({}, this.props)),
                       Ie.createElement(xs, R.a({}, this.props))
                     ),
                     Ie.createElement(
                       "div",
-                      { className: Fs.a.mutualFriends },
+                      { className: Bs.a.mutualFriends },
                       this.props.mutual_friends
                     )
                   )
@@ -44082,7 +44112,7 @@
             }
           }),
           (p.prototype.OnContextMenu = function(e, t) {
-            var n = Br(Wm(null, t), e, this.m_friend, t);
+            var n = Fr(Wm(null, t), e, this.m_friend, t);
             return this.Hide(t), n;
           }),
           (p.prototype.HideAllInstances = function() {
@@ -44097,7 +44127,7 @@
           R.c([T.a], p.prototype, "OnContextMenu", null),
           p
         );
-      })(Bs);
+      })(Fs);
     Ie.Component;
     var ec = (function(n) {
         function e(e) {
@@ -44152,12 +44182,12 @@
                   "div",
                   { className: "_FixedHeight" },
                   Ie.createElement(Ci, null, "Text input"),
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     label: "INPUT TITLE",
                     value: this.state.inputText,
                     onChange: this.OnInputChanged
                   }),
-                  Ie.createElement(Fi, {
+                  Ie.createElement(Bi, {
                     label: "READ ONLY",
                     value: "You can't change this",
                     disabled: !0
@@ -44221,11 +44251,11 @@
                   Ie.createElement(
                     wi,
                     null,
-                    Ie.createElement(Fi, {
+                    Ie.createElement(Bi, {
                       label: "Left input",
                       placeholder: "Placeholder"
                     }),
-                    Ie.createElement(Fi, {
+                    Ie.createElement(Bi, {
                       label: "Right input",
                       placeholder: "Placeholder"
                     })
@@ -44338,7 +44368,7 @@
             window.clearInterval(this.m_iInterval);
           }),
           (e.prototype.render = function() {
-            return Ie.createElement(Fi, {
+            return Ie.createElement(Bi, {
               value: this.state.cSeconds,
               disabled: !0,
               label: "COUNTER"
@@ -47960,7 +47990,7 @@
             Xm.DragDropManager.EndDrag();
           }),
           (e.prototype.OnShowContextMenu = function(e) {
-            var t = Br(Wm(this, e), this.props.context, this.props.friend, e);
+            var t = Fr(Wm(this, e), this.props.context, this.props.friend, e);
             t && this.OnContextMenuShown(t);
           }),
           (e.prototype.OnContextMenuShown = function(e) {
@@ -48531,7 +48561,7 @@
       })(Ie.Component),
       Ac = n("HVDT"),
       Pc = n.n(Ac),
-      Fc = (function(e) {
+      Bc = (function(e) {
         function n() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -48553,7 +48583,7 @@
             var t = ":" + this.props.emoticon + ":";
             return Ie.createElement(
               kc,
-              { text: t },
+              { text: t, style: "merge-adjacent" },
               Ie.createElement("img", {
                 src: Kt.GetEmoticonURL(this.props.emoticon, this.props.large),
                 alt: t,
@@ -48567,7 +48597,7 @@
           n
         );
       })(Ie.PureComponent),
-      Bc = (function(e) {
+      Fc = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -48785,7 +48815,7 @@
                   onClick: this.props.onClick
                 },
                 this.state.visible &&
-                  Ie.createElement(Fc, { emoticon: e.name }),
+                  Ie.createElement(Bc, { emoticon: e.name }),
                 n && Ie.createElement(xc, null)
               )
             );
@@ -49108,7 +49138,7 @@
               Ee.a.createElement(
                 "div",
                 { className: "EmoticonSuggestion_Emoticon" },
-                Ee.a.createElement(Fc, { emoticon: e.name }),
+                Ee.a.createElement(Bc, { emoticon: e.name }),
                 e.new && Ee.a.createElement(xc, null)
               ),
               ":",
@@ -50835,7 +50865,7 @@
                 }
               } else {
                 var n = this.props.tab.GetChatView();
-                Br(
+                Fr(
                   Wm(this, e),
                   { tab: this.props.tab },
                   n.chat.chat_partner,
@@ -53000,8 +53030,8 @@
           (e = R.c([Xi.observer], e))
         );
       })(Ie.Component),
-      Fl = (Ie.Component, n("dcQ8")),
-      Bl = n.n(Fl),
+      Bl = (Ie.Component, n("dcQ8")),
+      Fl = n.n(Bl),
       Vl = new RegExp("ː([^ː]*)ː", "g"),
       xl = new RegExp("(^|[^=\\]'\"])(https?://[^ '\"<>]*)", "gi"),
       Ul = new RegExp(
@@ -53089,7 +53119,7 @@
                     )
                 : s
                 ? i.push(
-                    Ie.createElement(Fc, { key: r, emoticon: s[1], large: !1 })
+                    Ie.createElement(Bc, { key: r, emoticon: s[1], large: !1 })
                   )
                 : i.push(o[r]),
                 r < o.length - 1 && i.push(" ");
@@ -53109,7 +53139,7 @@
           }),
           (e.prototype.OnContextMenu = function(e, t) {
             var n = this;
-            if (t.type !== B.Chat) return null;
+            if (t.type !== F.Chat) return null;
             var o = [];
             return (
               this.m_chat.IsUserBroadcaster(t.steamid) ||
@@ -53282,11 +53312,11 @@
                 this.textInput.current.focus();
           }),
           (e.prototype.GetTypeClassName = function(e) {
-            return e.type === B.Notification
-              ? Bl.a.MessageNotification
-              : e.type === B.Error
-              ? Bl.a.MessageError
-              : Bl.a.MessageChat;
+            return e.type === F.Notification
+              ? Fl.a.MessageNotification
+              : e.type === F.Error
+              ? Fl.a.MessageError
+              : Fl.a.MessageChat;
           }),
           (e.prototype.render = function() {
             return Ie.createElement(
@@ -55997,62 +56027,70 @@
                     a = (
                       r.querySelector("[data-activechat=true]") || r
                     ).querySelectorAll("[data-copytext]"),
-                    s = 0;
-                  s < a.length;
-                  ++s
+                    s = Array.from(a).map(function(e) {
+                      return e.getAttribute("data-copystyle") || "msg";
+                    }),
+                    c = 0;
+                  c < a.length;
+                  ++c
                 ) {
-                  var c = a[s];
-                  if (!(s + 1 < a.length && Object(_i.d)(c, a[s + 1]))) {
-                    var l = c.tagName.toLowerCase(),
-                      p = c.getAttribute("data-copystyle") || "msg",
-                      u = p.includes("block"),
-                      m = p.includes("timestamp"),
-                      d = p.includes("server"),
-                      h = p.includes("invite"),
-                      _ = p.includes("emote"),
-                      f = p.includes("no-prefix"),
-                      g = p.includes("no-suffix"),
-                      b = p.includes("allow-embedded-newlines"),
-                      v = p.includes("block-continue"),
-                      S = p.includes("force-display"),
-                      y = p.includes("prepend-innertext"),
-                      C = p.includes("append-innertext"),
-                      I = p.includes("prepend-newline"),
-                      E = p.includes("append-newline"),
-                      O = p.includes("speaker");
-                    if (!S) {
-                      var w = null != l.match(/img|iframe/),
-                        M = null != c.querySelector("img,iframe");
-                      if (!c.innerText && !w && !M) continue;
+                  var l = a[c],
+                    p = s[c];
+                  if (!(c + 1 < a.length && Object(_i.d)(l, a[c + 1]))) {
+                    var u = l.tagName.toLowerCase(),
+                      m = p.includes("block"),
+                      d = p.includes("timestamp"),
+                      h = p.includes("server"),
+                      _ = p.includes("invite"),
+                      f = p.includes("emote"),
+                      g = p.includes("no-prefix"),
+                      b = p.includes("no-suffix"),
+                      v = p.includes("allow-embedded-newlines"),
+                      S = p.includes("block-continue"),
+                      y = p.includes("merge-adjacent"),
+                      C = p.includes("force-display"),
+                      I = p.includes("prepend-innertext"),
+                      E = p.includes("append-innertext"),
+                      O = p.includes("prepend-newline"),
+                      w = p.includes("append-newline"),
+                      M = p.includes("speaker");
+                    if (!C) {
+                      var D = null != u.match(/img|iframe/),
+                        T = null != l.querySelector("img,iframe");
+                      if (!l.innerText && !D && !T) continue;
                     }
-                    O && (i = !0);
-                    var D = "",
-                      T = "\n";
-                    m || O || d || h || _
-                      ? (0 != n.length && (D += "\n"),
-                        (d || h) && (D += "\t\t"))
-                      : (i && (D += "\t"),
-                        o.includes("msg") && u && (I = !0),
-                        o.includes("block") && !v && (I = !0)),
-                      f && (D = ""),
-                      g && (T = "");
-                    var G = c.getAttribute("data-copytext");
-                    0 == G.length
-                      ? (G = c.innerText)
-                      : y && 0 < c.innerText.length
-                      ? (G =
-                          c.innerText +
+                    y &&
+                      (0 < c && s[c - 1].includes("merge-adjacent") && (g = !0),
+                      c + 1 < s.length &&
+                        s[c + 1].includes("merge-adjacent") &&
+                        (b = !0)),
+                      M && (i = !0);
+                    var G = "";
+                    d || M || h || _ || f
+                      ? (0 != n.length && (G += "\n"),
+                        (h || _) && (G += "\t\t"))
+                      : (i && (G += "\t"),
+                        o.includes("msg") && m && (O = !0),
+                        o.includes("block") && !S && (O = !0));
+                    var R = l.getAttribute("data-copytext");
+                    0 == R.length
+                      ? (R = l.innerText)
+                      : I && 0 < l.innerText.length
+                      ? (R =
+                          l.innerText +
                           (p.includes("-with-newline") ? "\n" : " ") +
-                          G)
-                      : C &&
-                        0 < c.innerText.length &&
-                        (G +=
+                          R)
+                      : E &&
+                        0 < l.innerText.length &&
+                        (R +=
                           (p.includes("-with-newline") ? "\n" : " ") +
-                          c.innerText),
-                      0 != G.length &&
-                        (I && (n += "\n"),
-                        (n += D + (b ? G : G.replace(/\n/g, T + D)) + T),
-                        E && (n += "\n")),
+                          l.innerText),
+                      0 != R.length &&
+                        (O && (n += "\n"),
+                        g || (n += G),
+                        (n += v ? R : R.replace(/\n/g, "\n" + G)),
+                        b || (n += "\n"),
+                        w && (n += "\n")),
                       (o = p);
                   }
                 }
@@ -56769,12 +56807,17 @@
           var t = n.call(this, e) || this;
           return (
             (t.m_fnUnregisterDropComplete = void 0),
+            (t.m_bChatHidden = !1),
+            (t.m_refBroadcastContainer = Ie.createRef()),
             (t.state = {
               dropToInviteFriend: void 0,
               dropGroupToInviteFriend: void 0,
               dropClanToInvite: void 0,
               speakerLabelWidth: 0
             }),
+            (t.m_friendSteamId = M.a
+              .InitFromAccountID(e.chatView.chat.accountid_partner)
+              .ConvertTo64BitString()),
             t
           );
         }
@@ -56899,6 +56942,144 @@
           (e.prototype.OnNameWidthChanged = function(e) {
             this.setState({ speakerLabelWidth: e });
           }),
+          (e.prototype.componentDidMount = function() {
+            window.addEventListener("resize", this.OnLayoutChange);
+          }),
+          (e.prototype.componentWillUnmount = function() {
+            window.removeEventListener("resize", this.OnLayoutChange);
+          }),
+          (e.prototype.CalculateBroadcastSectionStyles = function(e) {
+            if (this.m_bChatHidden) return { width: "100%", height: "100%" };
+            var t = Xm.UIDisplayPrefs,
+              n = t.nWatchPartyBroadcastHeightPercentage,
+              o = t.nWatchPartyBroadcastWidthPercentage,
+              i = {};
+            if (e) {
+              var r = n || 66;
+              if (((i.height = r + "%"), this.m_elMainContent)) {
+                var a = this.m_elMainContent,
+                  s = hn(
+                    r,
+                    1,
+                    (((9 / 16) * a.clientWidth + 50) / a.clientHeight) * 100
+                  );
+                i.height = s + "%";
+              }
+            } else (i.width = o ? o + "%" : "66%"), (i.overflowY = "auto");
+            return i;
+          }),
+          (e.prototype.ShouldShowVerticalBroadcastChat = function() {
+            return void 0 !== this.m_bShowVerticalBroadcastChat
+              ? this.m_bShowVerticalBroadcastChat
+              : !!this.m_elMainContent &&
+                  this.m_elMainContent.clientHeight /
+                    this.m_elMainContent.clientWidth >
+                    5 / 7;
+          }),
+          (e.prototype.OnLayoutChange = function() {
+            this.forceUpdate();
+          }),
+          (e.prototype.OnGrabberMouseDown = function(e) {
+            var t = e.currentTarget.ownerDocument.defaultView;
+            t.addEventListener("mousemove", this.HandleMouseMove),
+              t.addEventListener("mouseup", this.UnregisterDragEvents);
+          }),
+          (e.prototype.HandleMouseMove = function(e) {
+            e.preventDefault(), e.stopPropagation();
+            var t = this.m_refBroadcastContainer.current.getBoundingClientRect(),
+              n = this.m_refBroadcastContainer.current.parentElement.getBoundingClientRect(),
+              o = this.ShouldShowVerticalBroadcastChat(),
+              i = o ? t.top : t.left,
+              r = hn(
+                (((o ? e.clientY : e.clientX) - i) / (o ? n.height : n.width)) *
+                  100,
+                1,
+                100
+              ),
+              a = o
+                ? "nWatchPartyBroadcastHeightPercentage"
+                : "nWatchPartyBroadcastWidthPercentage";
+            Xm.SetUIDisplayPref(a, r);
+          }),
+          (e.prototype.UnregisterDragEvents = function(e) {
+            e.view.removeEventListener("mousemove", this.HandleMouseMove),
+              e.view.removeEventListener("mouseup", this.UnregisterDragEvents);
+          }),
+          (e.prototype.HideChat = function() {
+            this.SetChatHidden(!0);
+          }),
+          (e.prototype.ShowChat = function() {
+            this.SetChatHidden(!1);
+          }),
+          (e.prototype.SetChatHidden = function(e) {
+            (this.m_bChatHidden = e), this.forceUpdate();
+          }),
+          (e.prototype.ShowBroadcast = function() {
+            var e = this;
+            ti.UIStore.SetFriendBroadcastVisible(this.m_friendSteamId, !0),
+              SetBackgroundTimeout(function() {
+                e.props.chatView.OnChatFrameChanged();
+              }, 30);
+          }),
+          (e.prototype.HideBroadcast = function() {
+            var e = this;
+            ti.UIStore.SetFriendBroadcastVisible(this.m_friendSteamId, !1),
+              ti.UIStore.SetTheaterMode(!1),
+              SetBackgroundTimeout(function() {
+                e.props.chatView.OnChatFrameChanged();
+              }, 30);
+          }),
+          (e.prototype.ToggleVerticalBroadcastChat = function() {
+            this.SetVerticalBroadcastChat(
+              !this.ShouldShowVerticalBroadcastChat()
+            ),
+              this.SetChatHidden(!1);
+          }),
+          (e.prototype.ToggleTheaterModeBroadcastChat = function() {
+            ti.UIStore.SetTheaterMode(!ti.UIStore.GetTheaterMode());
+          }),
+          (e.prototype.SetVerticalBroadcastChat = function(e) {
+            this.m_bShowVerticalBroadcastChat = e;
+          }),
+          (e.prototype.SetLocalBroadcastId = function(e) {
+            this.m_strLocalBroadcastId = e;
+          }),
+          (e.prototype.SetMainContentRef = function(e) {
+            (this.m_elMainContent = e), this.OnLayoutChange();
+          }),
+          (e.prototype.GetTitleBarDragDropProps = function() {
+            var e = { rgAcceptedTypes: [], bAcceptsFiles: !0 };
+            return (e.fnDrop = this.OnDrop), e;
+          }),
+          (e.prototype.GetChatBodyDragDropProps = function() {
+            var e = { rgAcceptedTypes: ["friend"], bAcceptsFiles: !0 };
+            return (
+              (e.fnDragEnter = this.OnDragEnter),
+              (e.fnDragLeave = this.OnDragLeave),
+              (e.fnDragOver = this.OnDragOver),
+              (e.fnDrop = this.OnDrop),
+              e
+            );
+          }),
+          (e.prototype.RenderInnerChatTabs = function() {
+            return Ie.createElement(
+              "div",
+              { className: "ChatBodyControls" },
+              Ie.createElement(
+                "div",
+                {
+                  className: "Close",
+                  onClick: this.HideChat,
+                  title: Object(le.b)("#Broadcast_View_HideChat")
+                },
+                Ie.createElement(ii.u, { showChat: !1 })
+              ),
+              Ie.createElement(Np, {
+                chatView: this.props.chatView,
+                additionalClasses: "broadcastVisible"
+              })
+            );
+          }),
           (e.prototype.render = function() {
             if (!this.props.chatView) return null;
             var e,
@@ -56907,118 +57088,224 @@
                 t.accountid_partner
               ),
               o = this.props.chatView.BVoiceActive(),
-              i = t.GetShowNonFriendWarning(),
-              r = {};
-            this.props.isActive || (r.display = "none"),
-              this.state.dropToInviteFriend
-                ? (e = Ie.createElement(
-                    ni,
-                    {
-                      key: "inviteDrop",
-                      classNames: "inviteDrop-anim",
-                      timeout: 300
-                    },
-                    Ie.createElement(Vp, {
-                      chatView: this.props.chatView,
-                      friend: this.state.dropToInviteFriend
+              i = ti.UIStore.IsFriendBroadcastVisible(this.m_friendSteamId),
+              r = t.GetShowNonFriendWarning();
+            this.state.dropToInviteFriend
+              ? (e = Ie.createElement(
+                  ni,
+                  {
+                    key: "inviteDrop",
+                    classNames: "inviteDrop-anim",
+                    timeout: 300
+                  },
+                  Ie.createElement(Vp, {
+                    chatView: this.props.chatView,
+                    friend: this.state.dropToInviteFriend
+                  })
+                ))
+              : (this.state.dropGroupToInviteFriend ||
+                  this.state.dropClanToInvite) &&
+                (e = Ie.createElement(
+                  ni,
+                  {
+                    key: "inviteDrop",
+                    classNames: "inviteDrop-anim",
+                    timeout: 300
+                  },
+                  Ie.createElement(xp, {
+                    chatView: this.props.chatView,
+                    group: this.state.dropGroupToInviteFriend,
+                    clan: this.state.dropClanToInvite
+                  })
+                ));
+            var a = !1,
+              s = null,
+              c = this.ShouldShowVerticalBroadcastChat(),
+              l = this.m_bChatHidden;
+            if (i) {
+              var p = Xm.UIDisplayPrefs,
+                u = (p.nWatchPartyBroadcastHeightPercentage,
+                p.nWatchPartyBroadcastWidthPercentage,
+                this.CalculateBroadcastSectionStyles(c));
+              (s = Ie.createElement(
+                Ie.Fragment,
+                null,
+                Ie.createElement(Ap, {
+                  ref: this.m_refBroadcastContainer,
+                  steamID: M.a
+                    .InitFromAccountID(t.accountid_partner)
+                    .ConvertTo64BitString(),
+                  localSteamID: this.m_strLocalBroadcastId,
+                  onRequestClose: this.HideBroadcast,
+                  onLocalStreamChange: this.SetLocalBroadcastId,
+                  actions: [
+                    Ie.createElement("div", {
+                      key: "ChatPosToggle",
+                      onClick: this.ToggleVerticalBroadcastChat,
+                      title:
+                        "" +
+                        (c
+                          ? Object(le.b)("#Broadcast_View_Stack_H")
+                          : Object(le.b)("#Broadcast_View_Stack_V")),
+                      className:
+                        "BroadcastChatPositionToggle " +
+                        (c ? "right" : "bottom")
                     })
-                  ))
-                : (this.state.dropGroupToInviteFriend ||
-                    this.state.dropClanToInvite) &&
-                  (e = Ie.createElement(
-                    ni,
-                    {
-                      key: "inviteDrop",
-                      classNames: "inviteDrop-anim",
-                      timeout: 300
-                    },
-                    Ie.createElement(xp, {
-                      chatView: this.props.chatView,
-                      group: this.state.dropGroupToInviteFriend,
-                      clan: this.state.dropClanToInvite
-                    })
-                  ));
-            var a = "chatWindow MultiUserChat";
+                  ],
+                  style: u,
+                  onTheaterMode: this.ToggleTheaterModeBroadcastChat,
+                  bVerticalBroadcastChat: !c
+                }),
+                !l &&
+                  Ie.createElement("div", {
+                    className:
+                      "BroadcastChatDivider " + (c ? "vertical" : "horizontal"),
+                    onMouseDown: this.OnGrabberMouseDown
+                  }),
+                l &&
+                  Ie.createElement(kp, {
+                    onClick: this.ShowChat,
+                    edge: c ? "bottom" : "right"
+                  })
+              )),
+                (a = !0);
+            } else a = !1;
+            var m = {};
+            this.props.isActive || (m.display = "none");
+            var d = "chatWindow MultiUserChat";
             o &&
-              ((a += " VoiceActive"),
-              ti.ChatStore.VoiceChat.IsMicMuted() && (a += " MicMuted")),
-              n && (a += " VoiceRequested"),
-              i && (a += " NotAFriendOrApproved");
-            var s = "chatBody";
-            return (
-              (this.state.dropToInviteFriend ||
-                this.state.dropGroupToInviteFriend ||
-                this.state.dropClanToInvite) &&
-                (s = "chatBody chatRoomActiveDrop"),
+              ((d += " VoiceActive"),
+              ti.ChatStore.VoiceChat.IsMicMuted() && (d += " MicMuted")),
+              n && (d += " VoiceRequested"),
+              r && (d += " NotAFriendOrApproved");
+            var h = "chatBody";
+            (this.state.dropToInviteFriend ||
+              this.state.dropGroupToInviteFriend ||
+              this.state.dropClanToInvite) &&
+              (h = "chatBody chatRoomActiveDrop"),
               ti.SettingsStore.FriendsSettings.bCompactFriendsList &&
-                (a += " compactView"),
-              Ie.createElement(
+                (d += " compactView"),
+              a && (d += " broadcastVisible");
+            var _ =
+                this.m_bChatHidden && i
+                  ? null
+                  : Ie.createElement(Qc, {
+                      key: t.unique_id,
+                      chatView: this.props.chatView,
+                      isActive: this.props.isActive,
+                      disabled: !1
+                    }),
+              f = Ie.createElement(
                 Ji,
+                R.a(
+                  { style: m, className: "chatHistoryAndMembers" },
+                  this.GetChatBodyDragDropProps()
+                ),
+                Ie.createElement(oi, null, e),
+                Ie.createElement(
+                  "div",
+                  { className: "displayColumn fullWidth" },
+                  Ie.createElement(
+                    "div",
+                    { className: "displayRow minHeightZero" },
+                    r &&
+                      Ie.createElement(Fp, {
+                        chatView: this.props.chatView,
+                        friend: t.chat_partner
+                      }),
+                    Ie.createElement(
+                      "div",
+                      { className: "ChatRoomGroupDialog_history" },
+                      Ie.createElement(Ip, {
+                        chatView: this.props.chatView,
+                        isActive: this.props.isActive,
+                        speakerLabelWidth: this.state.speakerLabelWidth,
+                        blockInteraction: r
+                      })
+                    ),
+                    !i &&
+                      Ie.createElement(Np, {
+                        chatView: this.props.chatView,
+                        additionalClasses: void 0
+                      }),
+                    Ie.createElement("div", { className: "dropTargetBox" })
+                  ),
+                  _
+                )
+              ),
+              g =
+                "chatStack " +
+                (c ? "displayRow" : "displayColumn") +
+                " GroupChatVisible";
+            return Ie.createElement(
+              Ji,
+              R.a(
                 {
                   "data-activechat": this.props.isActive,
-                  style: r,
-                  className: a,
-                  rgAcceptedTypes: [],
-                  bAcceptsFiles: !0,
-                  fnDrop: this.OnDrop
+                  style: m,
+                  className: d
                 },
-                Ie.createElement("div", { className: "chatHeader" }),
-                this.props.isActive &&
-                  Ie.createElement(Rp, {
-                    chatView: this.props.chatView,
-                    onNameWidthChanged: this.OnNameWidthChanged
-                  }),
-                Ie.createElement(
-                  oi,
-                  null,
-                  (o || n) &&
-                    Ie.createElement(
-                      ni,
-                      {
-                        key: "OneOnOneVoiceHeader",
-                        classNames: "OneOnOneVoice-anim",
-                        timeout: 300
-                      },
-                      Ie.createElement(
-                        "div",
-                        null,
-                        Ie.createElement(Mp, { chatView: this.props.chatView })
-                      )
-                    )
-                ),
-                Ie.createElement(
-                  Ji,
-                  {
-                    style: r,
-                    className: s,
-                    rgAcceptedTypes: ["friend", "chatroomgroup", "clan"],
-                    bAcceptsFiles: !0,
-                    fnDragEnter: this.OnDragEnter,
-                    fnDragLeave: this.OnDragLeave,
-                    fnDragOver: this.OnDragOver,
-                    fnDrop: this.OnDrop
-                  },
-                  Ie.createElement(oi, null, e),
-                  i &&
-                    Ie.createElement(Bp, {
-                      chatView: this.props.chatView,
-                      friend: t.chat_partner
-                    }),
-                  Ie.createElement(Ip, {
-                    chatView: this.props.chatView,
-                    isActive: this.props.isActive,
-                    speakerLabelWidth: this.state.speakerLabelWidth,
-                    blockInteraction: i
-                  }),
-                  Ie.createElement(Np, { chatView: this.props.chatView }),
-                  Ie.createElement("div", { className: "dropTargetBox" })
-                ),
-                Ie.createElement(Qc, {
-                  key: t.unique_id,
+                this.GetTitleBarDragDropProps()
+              ),
+              Ie.createElement("div", { className: "chatHeader" }),
+              this.props.isActive &&
+                Ie.createElement(Rp, {
                   chatView: this.props.chatView,
-                  isActive: this.props.isActive,
-                  disabled: i
-                })
+                  onNameWidthChanged: this.OnNameWidthChanged
+                }),
+              Ie.createElement(
+                oi,
+                null,
+                (o || n) &&
+                  Ie.createElement(
+                    ni,
+                    {
+                      key: "OneOnOneVoiceHeader",
+                      classNames: "OneOnOneVoice-anim",
+                      timeout: 300
+                    },
+                    Ie.createElement(
+                      "div",
+                      null,
+                      Ie.createElement(Mp, { chatView: this.props.chatView })
+                    )
+                  )
+              ),
+              Ie.createElement(
+                "div",
+                { className: "ChatRoomGroupDialog_contents" },
+                Ie.createElement(
+                  "div",
+                  {
+                    className: "ChatRoomGroup_MainAndChatEntry displayColumn",
+                    ref: this.SetMainContentRef
+                  },
+                  Ie.createElement(
+                    "div",
+                    {
+                      className:
+                        "ChatRoomGroup_Main_ContentAndMembers displayRow"
+                    },
+                    Ie.createElement(
+                      "div",
+                      {
+                        className:
+                          "ChatRoomGroup_Main_Content " +
+                          (c ? "Vertical" : "Horizontal") +
+                          " " +
+                          (l ? "chatHidden" : "")
+                      },
+                      s,
+                      (!this.m_bChatHidden || !i) &&
+                        Ie.createElement(
+                          "div",
+                          { className: h },
+                          i && this.RenderInnerChatTabs(),
+                          Ie.createElement("div", { className: g }, f)
+                        )
+                    )
+                  )
+                )
               )
             );
           }),
@@ -57028,6 +57315,21 @@
           R.c([T.a], e.prototype, "OnDrop", null),
           R.c([T.a], e.prototype, "OnDropComplete", null),
           R.c([T.a], e.prototype, "OnNameWidthChanged", null),
+          R.c([T.a], e.prototype, "ShouldShowVerticalBroadcastChat", null),
+          R.c([T.a], e.prototype, "OnLayoutChange", null),
+          R.c([T.a], e.prototype, "OnGrabberMouseDown", null),
+          R.c([T.a], e.prototype, "HandleMouseMove", null),
+          R.c([T.a], e.prototype, "UnregisterDragEvents", null),
+          R.c([T.a], e.prototype, "HideChat", null),
+          R.c([T.a], e.prototype, "ShowChat", null),
+          R.c([T.a], e.prototype, "SetChatHidden", null),
+          R.c([T.a], e.prototype, "ShowBroadcast", null),
+          R.c([T.a], e.prototype, "HideBroadcast", null),
+          R.c([T.a], e.prototype, "ToggleVerticalBroadcastChat", null),
+          R.c([T.a], e.prototype, "ToggleTheaterModeBroadcastChat", null),
+          R.c([T.a], e.prototype, "SetVerticalBroadcastChat", null),
+          R.c([T.a], e.prototype, "SetLocalBroadcastId", null),
+          R.c([T.a], e.prototype, "SetMainContentRef", null),
           (e = R.c([Xi.observer], e))
         );
       })(Ie.Component),
@@ -57125,17 +57427,22 @@
             Ds(e, t, this.props.chatView, !0);
           }),
           (t.prototype.render = function() {
-            var e = this.props.chatView.chat.chat_partner;
-            return Ie.createElement(
-              "div",
-              {
-                title: Object(le.b)("#Chat_AddFriend_Hint"),
-                className: "inviteAnotherFriendButton",
-                onClick: e.is_in_beta
-                  ? this.AddFriendClick
-                  : this.AddFriendClickNotInBeta
-              },
-              Ie.createElement(ii.x, null)
+            var e = this.props.chatView.chat.chat_partner,
+              t = "inviteAnotherFriendButton";
+            return (
+              this.props.additionalClasses &&
+                (t += " " + this.props.additionalClasses),
+              Ie.createElement(
+                "div",
+                {
+                  title: Object(le.b)("#Chat_AddFriend_Hint"),
+                  className: t,
+                  onClick: e.is_in_beta
+                    ? this.AddFriendClick
+                    : this.AddFriendClickNotInBeta
+                },
+                Ie.createElement(ii.x, null)
+              )
             );
           }),
           R.c([T.a], t.prototype, "AddFriendClick", null),
@@ -57530,8 +57837,7 @@
             var f = !1,
               g = !1,
               b = {};
-            if (this.props.isActive) i.LoadChatLogs();
-            else {
+            if (!this.props.isActive) {
               b.display = "none";
               var v = this.m_msWentInactive
                 ? performance.now() - this.m_msWentInactive
@@ -57586,7 +57892,7 @@
                       Ie.createElement(
                         oi,
                         null,
-                        Ie.createElement(Fp, { groupView: t })
+                        Ie.createElement(Bp, { groupView: t })
                       )
                     ),
                     Ie.createElement("div", { className: "dropTargetBox" }),
@@ -57819,7 +58125,7 @@
           (t = R.c([Xi.observer], t))
         );
       })(Ie.Component),
-      Fp = (function(e) {
+      Bp = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57888,7 +58194,7 @@
           (t = R.c([Xi.observer], t))
         );
       })(Ie.Component),
-      Bp = (function(t) {
+      Fp = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -60619,7 +60925,7 @@
       Nu = n.n(Ru);
     function Lu() {
       return {
-        url: Fu,
+        url: Bu,
         youtube: Vu,
         filteredurl: hm,
         emoticon: fm,
@@ -60660,7 +60966,7 @@
     }
     var Au,
       Pu,
-      Fu = (function(e) {
+      Bu = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -60686,13 +60992,17 @@
                     Ie.createElement(ii.v, null),
                     r
                   )
-                : Ie.createElement(Ir, { href: n }, i || o)
+                : Ie.createElement(
+                    kc,
+                    { text: n, style: "merge-adjacent" },
+                    Ie.createElement(Ir, { href: n }, i || o)
+                  )
             );
           }),
-          t
+          (t = R.c([Xi.observer], t))
         );
       })(Oe),
-      Bu = (function(i) {
+      Fu = (function(i) {
         function e(e) {
           var t = i.call(this, e) || this,
             n = ti.ChatStore.EmbedStore.GetCollapsedState(
@@ -61020,7 +61330,7 @@
               kc,
               { style: "block", text: [t, n] },
               Ie.createElement(
-                Bu,
+                Fu,
                 {
                   className: "BBCodeYouTubeComponent",
                   unAccountIDSender: this.props.context.unAccountIDSender,
@@ -61076,7 +61386,7 @@
           R.c([T.a], e.prototype, "OnVideoInfoChanged", null),
           R.c([T.a], e.prototype, "OnPlayerReady", null),
           R.c([T.a], e.prototype, "OnPlaceholderImageLoad", null),
-          e
+          (e = R.c([Xi.observer], e))
         );
       })(Oe);
     function xu(e) {
@@ -61085,7 +61395,7 @@
         null == t && (t = e.href),
         Ie.createElement(
           kc,
-          { text: t },
+          { text: t, style: "merge-adjacent" },
           Ie.createElement(
             "div",
             { className: "NonInlinedEmbed" },
@@ -61211,7 +61521,7 @@
                   kc,
                   { style: "block", text: [r, i] },
                   Ie.createElement(
-                    Bu,
+                    Fu,
                     {
                       className: u,
                       width: s,
@@ -61296,7 +61606,7 @@
           R.c([T.a], e.prototype, "OnImageLoad", null),
           R.c([T.a], e.prototype, "OnImageError", null),
           R.c([T.a], e.prototype, "ShowModal", null),
-          e
+          (e = R.c([Xi.observer], e))
         );
       })(Oe),
       ju = (function(e) {
@@ -61402,7 +61712,7 @@
                     kc,
                     { style: "block", text: [t, e] },
                     Ie.createElement(
-                      Bu,
+                      Fu,
                       {
                         className: "chatVideoContainer",
                         strMediaType: "video",
@@ -61460,7 +61770,7 @@
           R.c([T.a], e.prototype, "OnVideoPause", null),
           R.c([T.a], e.prototype, "OnVideoError", null),
           R.c([T.a], e.prototype, "OnVideoLoaded", null),
-          e
+          (e = R.c([Xi.observer], e))
         );
       })(Oe),
       Wu = (function(e) {
@@ -61638,7 +61948,7 @@
           R.c([T.a], t.prototype, "CopyToClipboard", null),
           R.c([T.a], t.prototype, "HandleFocus", null),
           R.c([T.a], t.prototype, "OnLoad", null),
-          t
+          (t = R.c([Xi.observer], t))
         );
       })(Oe),
       Ku = (function(e) {
@@ -61798,7 +62108,7 @@
           }),
           R.c([T.a], t.prototype, "OpenTweet", null),
           R.c([T.a], t.prototype, "OnImageLoaded", null),
-          t
+          (t = R.c([Xi.observer], t))
         );
       })(Oe),
       Yu = (function(n) {
@@ -61914,7 +62224,7 @@
           }),
           R.c([T.a], e.prototype, "Activate", null),
           R.c([T.a], e.prototype, "OnImageLoaded", null),
-          e
+          (e = R.c([Xi.observer], e))
         );
       })(Oe);
     function Ju(e) {
@@ -62630,7 +62940,7 @@
               )
             );
           }),
-          e
+          (e = R.c([Xi.observer], e))
         );
       })(Oe),
       pm = (function(e) {
@@ -63231,7 +63541,7 @@
                     }
                   }),
               n
-                ? Ie.createElement(Fc, {
+                ? Ie.createElement(Bc, {
                     emoticon: n,
                     large: this.props.context.bUseLargeEmoticons
                   })
@@ -63916,7 +64226,7 @@
             var t = this;
             this.EnsureEmoticonLoaded();
             var n = e.currentTarget,
-              o = Ie.createElement(Bc, { hover: this, target: n });
+              o = Ie.createElement(Fc, { hover: this, target: n });
             i.sm_embeddedElements
               .ShowElementDelayed(n.ownerDocument, 50, o, this)
               .then(function() {
@@ -64575,7 +64885,7 @@
           e
         );
       })(Am),
-      Fm = (function() {
+      Bm = (function() {
         function e() {
           (this.m_bDropConsumed = !1),
             (this.m_onDropCompleteCallbacks = new N()),
@@ -64660,7 +64970,7 @@
           e
         );
       })(),
-      Bm = (function() {
+      Fm = (function() {
         return function(e) {
           var t = this;
           (this.m_UsabilityHandler = a(
@@ -64857,10 +65167,10 @@
           var n = this;
           (this.m_FriendHoverStore = new Qs()),
             (this.m_EmoticonHoverStore = new wm()),
-            (this.m_DragDropManager = new Fm()),
+            (this.m_DragDropManager = new Bm()),
             (this.m_mapModalManagers = new WeakMap()),
             (this.m_OverlayStore = new Dm()),
-            (this.m_UsabilityMetricsStore = new Bm(
+            (this.m_UsabilityMetricsStore = new Fm(
               this.FillInChatUsabilityMetrics.bind(this)
             )),
             (this.m_mapFriendsListPopups = new Map()),
@@ -65982,16 +66292,13 @@
       playerAvatar: "miniprofile_playerAvatar_1dzWG",
       avatarStatus: "miniprofile_avatarStatus_23H45",
       miniProfileAvatarStatus: "miniprofile_miniProfileAvatarStatus_1VgK8",
-      isAway: "miniprofile_isAway_3MeF9",
       personaName: "miniprofile_personaName_W3QjS",
       hasNickname: "miniprofile_hasNickname_dgG-l",
       personaNameLabel: "miniprofile_personaNameLabel_390p4",
       nickName: "miniprofile_nickName_2E8Iz",
       persona: "miniprofile_persona_1Z3Ey",
       awayStatusLabel: "miniprofile_awayStatusLabel_2UzRy",
-      online: "miniprofile_online_3Bk5s",
       nickname: "miniprofile_nickname_1W3dU",
-      offline: "miniprofile_offline_eQh4B",
       playerNicknameBracket: "miniprofile_playerNicknameBracket_1bkKo",
       notInOrWatchingGame: "miniprofile_notInOrWatchingGame_3AIC2",
       miniProfileBottom: "miniprofile_miniProfileBottom_3Agb6",

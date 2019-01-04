@@ -30079,7 +30079,9 @@
           return e.SendMsg("Broadcast.SetRTMPInfo#1", t, j, {});
         }),
         (F.GetRTMPInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, U, {});
+          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, U, {
+            bConstMethod: !0
+          });
         }),
         ((M = h || (h = {})).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",

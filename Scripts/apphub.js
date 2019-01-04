@@ -574,3 +574,21 @@ function SizeCards( cards, nMaxWidth )
 		}
 	}
 }
+
+function joinOGG( appid )
+{
+	var url =  "https://steamcommunity.com/app/" + appid + "/joinOGG/";
+
+	$J.post( url, {'sessionid' : g_sessionID } ).done( function( response ) {
+		location.reload();
+	} );
+}
+
+function leaveOGG( appid )
+{
+	var url =  "https://steamcommunity.com/app/" + appid + "/leaveOGG/";
+
+	$J.post( url, {'sessionid' : g_sessionID } ).done( function( response ) {
+		location.reload();
+	});
+}

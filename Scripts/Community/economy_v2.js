@@ -3438,7 +3438,7 @@ function PopulateMarketActions( elActions, item )
 		var elBuybackInfoContent = new Element( 'div', { 'id': buybackid, 'class': 'market_item_action_buyback_at_price' } );
 		elPriceInfo.appendChild( elBuybackInfoContent );
 
-		if ( item.appid == 583950 ) {
+		if ( item.appid == 583950 || item.appid == 273050 ) {
 			$(buybackid).hide();
 			new Ajax.Request('https://steamcommunity.com/market/canbuyback/', {
 				method: 'get',
@@ -3688,7 +3688,7 @@ SellItemDialog = {
 		}
 
 		var bShowingBuyback = false;
-		if ( item.appid == 583950 ) {
+		if ( item.appid == 583950 || item.appid == 273050 ) {
 			$('market_sell_dialog_input_area').hide();
 			bShowingBuyback = true;
 

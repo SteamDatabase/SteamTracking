@@ -31,6 +31,7 @@ GDynamicStore = {
 	s_rgWishlist: {},
 	s_rgOwnedPackages: {},
 	s_rgOwnedApps: {},
+	s_rgAutoGrantApps: {},
 	s_rgPackagesInCart: {},
 	s_rgAppsInCart: {},
 	s_rgRecommendedTags: [],
@@ -166,6 +167,7 @@ GDynamicStore = {
 				GDynamicStore.s_rgWishlist = fnConvertToMap( data.rgWishlist );
 				GDynamicStore.s_rgOwnedPackages = fnConvertToMap( data.rgOwnedPackages );
 				GDynamicStore.s_rgOwnedApps = fnConvertToMap( data.rgOwnedApps );
+				GDynamicStore.s_rgAutoGrantApps = fnConvertToMap( data.rgAutoGrantApps );
 				GDynamicStore.s_rgPackagesInCart = fnConvertToMap( data.rgPackagesInCart );
 				GDynamicStore.s_rgAppsInCart = fnConvertToMap( data.rgAppsInCart );
 				GDynamicStore.s_rgRecommendedTags = data.rgRecommendedTags || [];
@@ -1012,9 +1014,22 @@ GDynamicStore = {
 		WebStorage.SetLocal( 'unUserdataVersion', parseInt( WebStorage.GetLocal( 'unUserdataVersion', true ) || 0 ) + 1, true );
 	},
 
-	BIsAppOwned: function( appid )
+	BIsAppOwned: function( appid, bExcludeIfAutoGrant = true )
 	{
-		return GDynamicStore.s_rgOwnedApps[appid] ? true : false;
+		if ( GDynamicStore.s_rgOwnedApps[appid] )
+		{
+			if ( !bExcludeIfAutoGrant )
+			{
+				return true;
+			}
+			return !this.BIsAutoGrantedApp( appid );
+		}
+		return false;
+	},
+
+	BIsAutoGrantedApp: function( appid )
+	{
+		return GDynamicStore.s_rgAutoGrantApps[appid] ? true : false;
 	},
 
 	BIsPackageOwned: function( packageid )
@@ -1695,7 +1710,7 @@ GStoreItemData = {
 			return false;
 
 		if ( rgAppData.dlc && ( ( ApplicableSettings.dlc && !Settings.dlc ) ||
-			( ApplicableSettings.dlc_for_you && ( !Settings.dlc_for_you || !rgAppData.dlc_for_app || !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app ) ) ) ) )
+			( ApplicableSettings.dlc_for_you && ( !Settings.dlc_for_you || !rgAppData.dlc_for_app || !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) ) ) ) )
 			return false;
 
 		if ( ApplicableSettings.games_already_in_library && !Settings.games_already_in_library && GDynamicStore.BIsAppOwned( appid ) )
@@ -1927,7 +1942,7 @@ GDynamicStorePage = {
 			// If the user owns the base game already, only show the DLC
 			if( rgAppData && rgAppData.dlc_for_app )
 			{
-				if( !GDynamicStore.BIsAppOwned(rgAppData.dlc_for_app) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+				if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
 				{
 					$capsule.remove();
 					continue;

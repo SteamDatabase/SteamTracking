@@ -1258,7 +1258,7 @@ GHomepage = {
 			// If the user owns the base game already, only show the DLC
 			if( rgAppData && rgAppData.dlc_for_app )
 			{
-				if( !GDynamicStore.BIsAppOwned(rgAppData.dlc_for_app) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+				if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
 				{
 					$capsule.remove();
 					continue;
@@ -1776,7 +1776,7 @@ GHomepage = {
 		for( var i=0; i<rgMessages.length; i++)
 		{
 			var message = rgMessages[i];
-			if( message.must_own_appid && !GDynamicStore.BIsAppOwned( message.must_own_appid ) )
+			if( message.must_own_appid && !GDynamicStore.BIsAppOwned( message.must_own_appid, false ) )
 				continue;
 
 			if( message.must_not_own_appid && GDynamicStore.BIsAppOwned( message.must_not_own_appid ) )

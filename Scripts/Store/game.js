@@ -232,7 +232,7 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget )
 		var unAppID = rgRecommendedAppIDs[i];
 		if ( GDynamicStore.BIsAppIgnored( unAppID ) )
 			continue;
-		else if ( GDynamicStore.BIsAppOwned( unAppID ) )
+		else if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
 			rgRecommendationsToShow.push( { score: 3 + nCurScore++, appid: unAppID } );
 		else
 			rgRecommendationsToShow.push( { score: nCurScore++, appid: unAppID } );
