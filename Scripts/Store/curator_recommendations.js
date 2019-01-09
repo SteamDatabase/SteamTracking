@@ -432,7 +432,7 @@ function GetPresentationStyle( rgNodeData, sectionType )
 
 function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 {
-	$J('.page_section:not(.editing):not(.header_area)').each(function( i, j ){
+	$J('.editable > .page_section:not(.editing):not(.header_area)').each(function( i, j ){
 
 		$J('.navigation_bar > a').removeClass('selected');
 		$J('.navigation_bar > a:last-child').addClass('selected');
