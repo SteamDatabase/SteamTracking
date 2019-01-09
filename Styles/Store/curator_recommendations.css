@@ -11,8 +11,8 @@ body.v6.creatorhome.game_bg {
 
 .creatorhome .page_background {
 	background-size: contain;
-	background-color: rgba(188, 151, 78, 0.2);
-	background-blend-mode: lighten;
+	background-color: rgba(146, 137, 119, 0.2);
+	background-blend-mode: difference;
 }
 .creatorhome .page_background.lowtint {
 	background: -webkit-linear-gradient( 160deg, rgba(188, 151, 78, 0.2) 5%,rgba( 266, 244, 255, 0.2) 95%););background: linear-gradient( 160deg, rgba(188, 151, 78, 0.2) 5%,rgba( 266, 244, 255, 0.2) 95%););	background-blend-mode: unset;
@@ -66,6 +66,10 @@ body.v6.creatorhome.game_bg {
 	width: 184px;
 	margin-top: -33px;
 }
+.dlc_curator .curator_avatar_image {
+	width: 392px;
+	margin-top: -33px;
+}
 .curator_avatar_image
 {
 	padding: 5px 14px 0 0;
@@ -79,6 +83,10 @@ body.v6.creatorhome.game_bg {
 }
 .creatorhome .curator_avatar {
 	width: 184px;
+	border-radius: 2px;
+}
+.dlc_curator .curator_avatar {
+	width: 392px;
 	border-radius: 2px;
 }
 .curator_details
@@ -202,7 +210,7 @@ body.v6 .section_title_ctn p {
 	
 }
 .creatorhome .light_container.bezel {
-background: -webkit-linear-gradient( top, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 400px);background: linear-gradient( to bottom, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 400px);
+background: -webkit-linear-gradient( top, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 200px);background: linear-gradient( to bottom, rgba(63, 66, 74, 1) 10px, rgba(46, 49, 56, 0) 200px);
 	box-shadow: 0 -5px 10px -5px  rgba(0,0,0,0.2);
 	background-repeat: no-repeat;
 	background-size: 100% 500px, 2000px 100%;
@@ -344,13 +352,23 @@ body.v6 .dark_container h4 {
 	margin-top: 8px;
 }
 
-body.v6 h2.curator_name
-{
-
+body.v6 h2.curator_name {
 	font-size: 36px;
 	padding-top: 0px;
 	margin: 5px 0 13px 0;
 	line-height: 32px;
+}
+
+body.v6.dlc_curator h2.curator_name {
+	font-size: 30px;
+	margin-top: 0px;
+}
+body.v6.dlc_curator h4 {
+	font-size: 14px;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #ffffff;
 }
 
 body.v6 .about_section .tagline {
@@ -401,10 +419,22 @@ body.v6 .page_desc p {
 	height: 348px;
 }
 
+
 .creatorhome .curator_featured > div {
-	background: #2e3138;
-	border: 1px solid #383b42;
+background: -webkit-linear-gradient( -45deg, rgb(46, 49, 56) 5%,rgb(57, 61, 70) 95%););background: linear-gradient( -45deg, rgb(46, 49, 56) 5%,rgb(57, 61, 70) 95%););	border: none;
+	padding: 16px;
 }
+
+.single_item .curator_featured > div {
+	background: none;
+	box-shadow: none;
+	padding: 0px;
+	border: none;
+}
+.single_item .curator_featured .contents {
+	flex-shrink: 3.4;
+}
+
 
 .curator_featured .capsule {
 
@@ -421,6 +451,7 @@ body.v6 .page_desc p {
 
 	background: rgba(0, 0, 0, 0.1);
 }
+
 .curator .store_capsule .discount_block {
 	padding: 0px;
 }
@@ -545,8 +576,16 @@ body.v6 .page_desc p {
 	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
-	box-shadow: 0 0 1px #000 inset;
+
+	box-shadow: 1px 1px 0px #1b2838 inset;
+
 }
+
+.creatorhome .curator_featured .screenshots > div {
+
+	box-shadow: 1px 1px 0px rgb(46, 49, 56) inset;
+}
+
 
 .curator_featured .screenshots img {
 	width: 100%;
@@ -1150,20 +1189,21 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 .socialmedia_accounts {
 	color: #fff;
 	font-size: 12px;
-	background: rgba( 0, 0, 0, 0.2);
-	display: inline-flex;
 }
 .socialmedia_accounts a {
 	display: inline-flex;
 	margin-top: 6px;
 	margin-bottom: 6px;
+	vertical-align: bottom;
 }
 
 .socialmedia_accounts > * {
-	margin-left: 8px;
+	padding-left: 8px;
+	background: rgba( 0, 0, 0, 0.2);
+	display: table-cell;
 }
 .socialmedia_accounts > *:not(:first-child) {
-	margin-left: 20px;
+	padding-left: 20px;
 }
 
 .socialmedia_accounts a img {
@@ -1394,18 +1434,20 @@ body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment 
 }
 
 .creator_beta_ctn {
-background: -webkit-linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%););background: linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149, 40) 95%););		font-family: "Motiva Sans", Sans-serif;
+background: -webkit-linear-gradient( #dcc984 10%, #ab8b44 80%,#7b5f24 100%);background: linear-gradient( #dcc984 10%, #ab8b44 80%,#7b5f24 100%);		font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
 			width: 100px;
 	height: 33px;
 	text-align: center;
 	font-size: 18px;
+	font-style: italic;
+
 	padding-top: 8px;
 	color: #000;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
-	box-shadow: 0 0 5px #000;
+	box-shadow: 0 -5px 5px -5px #000;
 	bottom: 5px;
 	position: absolute;
 	right: 0;
@@ -1585,6 +1627,9 @@ background: -webkit-linear-gradient( -45deg, rgb(220, 201, 132) 5%,rgb(200, 149,
 	}
 	html.responsive .creatorhome .curator_details {
 		background: #3f424a;
+	}
+	html.responsive .socialmedia_accounts {
+		display: inline;
 	}
 
 	html.responsive .curator_avatar_image {

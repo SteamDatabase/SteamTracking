@@ -210,6 +210,7 @@ LocalizationReady("friendsui", "english", {
     "Voice unavailable: %1$s is not currently online.",
   VoiceChat_Unavailable_NotInBeta:
     "Voice unavailable: %1$s is not running the new chat beta.",
+  VoiceChat_Unavailable_MobileChat: "Voice chat is not supported on mobile.",
 
   ChatEntry_UploadImage: "Upload an Image",
   ChatEntry_SendTradeURL: "Share Your Trade Offer URL",

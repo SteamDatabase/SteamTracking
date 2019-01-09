@@ -82,8 +82,7 @@ background: -webkit-linear-gradient( top, rgba(27,40,56,0) 5%, rgba(27,40,56,1.0
 }
 
 
-.store_capsule_frame.highlighted_app {
-	margin-top: 104px;
+.store_capsule_frame.highlighted_app {	
 	background: #1b2838;
 	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);}
 
@@ -167,8 +166,6 @@ body.v6 .creator_home .page_content.dev_row_ctn {
 	height: 440px;
 background: -webkit-linear-gradient( top, rgba(40,43,49,0) 60%, rgba(0,0,0,0.9) 100%);background: linear-gradient( to bottom, rgba(40,43,49,0) 60%, rgba(0,0,0,0.9) 100%);}
 .page_content.steam_curator_header_text .header_area {
-	position: absolute;
-	bottom: 30px;
 	width: 520px;
 }
 .page_content.steam_curator_header_text .header_area span {

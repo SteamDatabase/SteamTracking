@@ -114,7 +114,7 @@ body.tag_page h3 {
 
 	padding: 0 6px;
 	margin-bottom: 2px;
-	width: 188px;
+	width: 100%;
 
 	overflow: hidden;
 	white-space: nowrap;
@@ -139,14 +139,19 @@ body.tag_page h3 {
 
 .tag_browse_right_ctn {
 	position: absolute;
-	right: 0;
+	left: 220px;
 	top: -5px;
-	width: 725px;
 }
 
 .tag_browse_games_ctn {
 	position: absolute;
 	top: 5px;
+}
+
+.game_grid {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 15px;
 }
 
 .browse_tag_loading {
@@ -170,8 +175,8 @@ body.tag_page h3 {
 	background-color: rgba( 0, 0, 0, 0.20 );
 	padding-left: 16px;
 	padding-right: 0px;
-	width: 709px;
 	margin-bottom: 2px;
+	width: 712px;
 }
 
 .browse_tag_game_total {
@@ -207,8 +212,6 @@ body.tag_page h3 {
 }
 
 .browse_tag_game_cap {
-	width: 222px;
-	height: 83px;
 	margin-bottom: 2px;
 	position: relative;
 }
@@ -218,8 +221,7 @@ body.tag_page h3 {
 }
 
 .browse_tag_game_cap img {
-	width: 222px;
-	height: 83px;
+
 }
 
 .browse_tag_game_name {
@@ -498,4 +500,84 @@ body.tag_page.tag_announce_page h3 {
 
 #discovery_queue1 {
 	height: 250px;
+}
+
+
+/* 910px fallback responsive */
+@media screen and (max-width: 910px)
+{
+	html.responsive .browse_tag_games, .browse_tag_game_total {
+		width: auto;
+
+	}
+	html.responsive .sticky .browse_tag_games {
+		padding-bottom: 0px;
+		height: calc(100vh - 124px);
+		min-height: auto;
+		overflow: hidden;
+		margin-right: 10px;
+	}
+	html.responsive .browse_tag_game {
+		padding-bottom: 0px;
+		width: calc(50% - 10px);
+		height: auto;
+	}
+
+	.browse_tag_game_cap {
+		height: auto;
+		width: auto;
+	}
+	.browse_tag_game_cap img {
+		width: 100%;
+	}
+	html.responsive .browse_tag_game_name {
+		display: none;
+	}
+	html.responsive .browse_tag_game_price {
+		display: none;
+	}
+}
+/* Smaller fallback responsive */
+@media screen and (max-width: 650px) {
+	html.responsive .game_grid {
+		
+	}
+	html.responsive .browse_tag_game {
+		width: 100%;
+	}
+
+
+}
+
+/* Smaller fallback responsive */
+@media screen and (max-width: 510px) {
+
+
+	html.responsive .tag_browse_tags {
+		width: calc(50% - 20px);
+	}
+	html.responsive .browse_tag_game {
+		padding-top: 2px;
+	}
+	html.responsive .tag_browse_right_ctn {
+		left: 50%;
+		width: calc(50% - 10px);
+	}
+	html.responsive .tag_browse_games_ctn.sticky {
+		width: calc(50% - 10px);
+		top: 50px;
+	}
+	html.responsive .browse_tag_game_cap {
+		width: 100%;
+		height: 100%;
+	}
+	html.responsive .browse_tag_game_cap img {
+		width: 100%;
+		height: auto;
+	}
+	.browse_tag_games h3 a {
+		font-size: 14px;
+	}
+
+
 }

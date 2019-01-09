@@ -264,6 +264,19 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+a.linkbar > img {
+	max-width: 12px;
+	max-height: 12px;
+	padding-right: 4px;
+	vertical-align: middle;
+}
+a.linkbar .social_account {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	max-width: 224px;
+	vertical-align: text-top;
+}
 
 table.game_language_options {
 	border-collapse: collapse;
@@ -288,6 +301,10 @@ table.game_language_options {
 	padding: 3px 0px 3px 0px;
 	text-align: center;
 	font-size: 12px;
+}
+.game_language_options td span {
+	font-weight: bold;
+	color: #67c1f5;
 }
 
 .game_language_options td.checkcol, .game_language_options th.checkcol {

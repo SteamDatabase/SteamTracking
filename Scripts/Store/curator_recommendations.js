@@ -67,6 +67,45 @@ function FollowCurator( clanID, bFollow )
 	return false;
 }
 
+function FollowDLCPage( appid, clanID, bFollow )
+{
+	var bHaveUser = ( g_AccountID != 0 );
+	if ( !bHaveUser )
+	{
+		ShowAlertDialog("Please log in", "You must be logged in to follow a game");
+		return;
+	}
+
+	$J.post(
+		'https://store.steampowered.com/explore/followgame/', {
+			'appid' : appid,
+			'sessionid' : g_sessionID,
+			'unfollow' : bFollow ? 0 : 1
+		},
+		function( data )
+		{
+			if ( bFollow )
+			{
+				UpdateFormattedNumber( $J( "#CuratorNumFollowers_" + clanID ), 1 );
+				$J( "#CuratorFollowBtn_" + clanID).hide();
+				$J( "#CuratorUnFollowBtn_" + clanID).show();
+			}
+			else
+			{
+				UpdateFormattedNumber( $J( "#CuratorNumFollowers_" + clanID ), -1 );
+				$J( "#CuratorFollowBtn_" + clanID).show();
+				$J( "#CuratorUnFollowBtn_" + clanID).hide();
+			}
+		},
+		'json'
+	).fail( function()
+		{
+			ShowAlertDialog( 'Error', 'There was a problem trying to following this game. Please try again later.' );
+		}
+	);
+	return false;
+}
+
 function IgnoreCurator( clanID, bIgnore )
 {
 	IgnoreCuratorWithCallback( clanID, bIgnore, function( bIgnored ){
@@ -381,6 +420,7 @@ function GetPresentationStyle( rgNodeData, sectionType )
 	{
 		case 'featured_recommendations':
 		case 'featured_creations':
+		case 'featured_single_creation':
 			return 'featuredcarousel';
 		case 'featured_list':
 			return 'bigthengrid';
@@ -390,7 +430,7 @@ function GetPresentationStyle( rgNodeData, sectionType )
 	return 'circularlist';
 }
 
-function ShowEditHandles( bIsCreatorHome )
+function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 {
 	$J('.page_section:not(.editing):not(.header_area)').each(function( i, j ){
 
@@ -422,16 +462,28 @@ function ShowEditHandles( bIsCreatorHome )
 		{
 			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Feature A Tag<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted<\/option>\r\n\t\t\t\t<\/select>");
 		}
+		else if ( bIsDLCPage )
+		{
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_creations\">Games DLCs<\/option>\r\n\t\t\t\t<option value=\"featured_single_creation\">Feature Single DLC<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t<option value=\"featured_tag_creation\">Feature A Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t<option value=\"discounted_creations\">Discounted<\/option>\r\n\t\t\t<\/select>");
+		}
 		else
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t\t<option value=\"featured_creations\">Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_recommendations\">Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"featured_single_creation\">Feature A Single Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag_creation\">Featured Tag For Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"featured_tag\">Featured Tag For Games You've Recommended<\/option>\r\n\t\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t\t<option value=\"discounted_creations\">Discounted Games You've Made<\/option>\r\n\t\t\t\t\t<option value=\"discounted_curations\">Discounted Games You've Recommended<\/option>\r\n\t\t\t\t<\/select>");
 
 		}
 		elTypeSelect.val( rgNodeData.type );
 
 		var elRecSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"recent\">Recent reviews<\/option>\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
 
-		var elCreatedSortSelect = $J("\r\n\t\t\t<select name=\"sort\">\r\n\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t<\/select>");
+		var elCreatedSortSelect = null;
+		if( bIsDLCPage )
+		{
+			elCreatedSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"app_dlc_rank\">DLC order from Store Edit Special Setting<\/option>\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+		}
+		else
+		{
+			elCreatedSortSelect = $J("\r\n\t\t\t\t<select name=\"sort\">\r\n\t\t\t\t\t<option value=\"topsellers\">Top Sellers<\/option>\r\n\t\t\t\t\t<option value=\"newreleases\">Release Date<\/option>\r\n\t\t\t\t<\/select>");
+		}
 
 		elRecSortSelect.val( rgNodeData.type == 'featured_recommendations' ? rgNodeData.sort : 'recent' );
 		elCreatedSortSelect.val( rgNodeData.type == 'featured_creations' ? rgNodeData.sort : 'newreleases' );
@@ -490,8 +542,12 @@ function ShowEditHandles( bIsCreatorHome )
 		var elTagName = $J('<span class="fieldvalue"></span>').text( rgNodeData.tagid_label ? rgNodeData.tagid_label : "Select..." );
 		var elTagEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
 
+		var elAppName = $J('<span class="fieldvalue"></span>').text( rgNodeData.appid ? rgNodeData.appid : "Select..." );
+		var elTagAppButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
+
 		var elListId = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
 		var elTagId = $J('<input type="hidden" name="tagid">').val( rgNodeData.tagid );
+		var elAppID = $J('<input type="hidden" name="appid">').val( rgNodeData.appid );
 
 		elListSelect.on( 'change', function( ){
 			var unListId = elListSelect.val();
@@ -522,12 +578,16 @@ function ShowEditHandles( bIsCreatorHome )
 			elSelectHomepages.parent().addClass('hidden' );
 			elListBlockDesc.parent().addClass( 'hidden' );
 			elListSelect.parent().addClass( 'hidden' );
+			elAppContainer.addClass( 'hidden' );
 
 			switch( elTypeSelect.val() )
 			{
 				case 'featured_recommendations':
 					elRecSortSelect.parent().removeClass('hidden');
 					elPresentationSelect.parent().removeClass('hidden');
+					break;
+				case 'featured_single_creation':
+					elAppContainer.removeClass( 'hidden' );
 					break;
 				case 'featured_creations':
 					elCreatedSortSelect.parent().removeClass('hidden');
@@ -588,7 +648,8 @@ function ShowEditHandles( bIsCreatorHome )
 				tagid_label: elTagName.text(),
 				listid_label: elListName.text(),
 				presentation: elPresentationSelect.val(),
-				index: elForm.parentNode.dataset.index
+				index: elForm.parentNode.dataset.index,
+				appid: elAppID.val()
 			};
 
 			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
@@ -603,12 +664,12 @@ function ShowEditHandles( bIsCreatorHome )
 			} ).done( function ( data )
 			{
 				$container.replaceWith( data );
-				ShowEditHandles( g_bIsCreatorHome );
+				ShowEditHandles( g_bIsCreatorHome, g_bIsDLCPage );
 			} ).fail(function(xhr, status, thrown)
 			{
 				data = $J.parseJSON( xhr.responseText );
 				ShowAlertDialog( 'Error', 'Error attempting to update with following message:<br/>%1$s'.replace( /%1\$s/g, data.msg ) );
-				ShowEditHandles( g_bIsCreatorHome );
+				ShowEditHandles( g_bIsCreatorHome, g_bIsDLCPage );
 			} );
 
 			return false;
@@ -705,8 +766,51 @@ function ShowEditHandles( bIsCreatorHome )
 			CTagAutoComplete.prototype.LoadPopularTags(false);
 		});
 
+		elTagAppButton.on( 'click', function() {
+			var unAppID = false;
+			var strAppName = false;
+
+						var modal = ShowAutocompleteDialog( "Select An App Name or AppID", "Type Appid of the Game or DLC to have it singularly featured. Incorrent Appid will not appear on the page.",
+				function(term, fnResponse)
+				{
+					var rgMatches = [];
+					if( !isNaN( term ) && term > 10  )
+					{
+						unAppID = term;
+						strAppName = term;
+						modal.EnableInput();
+					}
+					else
+					{
+						modal.DisableInput();
+					}
+
+					fnResponse( rgMatches );
+				},
+				function( suggestion )
+				{
+				},
+				function(){
+					if( !unAppID )
+						return;
+
+					elAppID.val(unAppID);
+					elAppName.text(strAppName);
+					modal.Dismiss();
+				},
+				function( )
+				{
+					unTagId = false;
+				}
+		);
+
+			CTagAutoComplete.prototype.LoadPopularTags(false);
+
+		});
+
 		var elListContainer = WrapFormFieldWithLabel( "Featured list", $J('<div></div>').append(elListName, elListEditButton) );
 		var elTagContainer = WrapFormFieldWithLabel( "Featured tag", $J('<div></div>').append(elTagName, elTagEditButton) );
+		var elAppContainer = WrapFormFieldWithLabel( "Featured Game", $J('<div></div>').append(elAppName, elTagAppButton) );
 
 		elOptions.append( WrapFormFieldWithLabel( "Section type", elTypeSelect ));
 		elOptions.append( WrapFormFieldWithLabel( "Title", elLinkTitleSelect ));
@@ -718,9 +822,11 @@ function ShowEditHandles( bIsCreatorHome )
 		elOptions.append( WrapFormFieldWithLabel( "Featured list", elListSelect ));
 		elOptions.append( elListContainer );
 		elOptions.append( elTagContainer );
+		elOptions.append( elAppContainer );
 		elOptions.append( WrapFormFieldWithLabel( '', $J('<div></div>').append( elSave ).append(elCancel) ) );
 		elOptions.append( elListId );
 		elOptions.append( elTagId );
+		elOptions.append( elAppID );
 		elOptions.hide();
 
 		elTypeSelect.trigger('change');
@@ -741,7 +847,10 @@ function ShowEditHandles( bIsCreatorHome )
 	{
 		ShowHeaderImageHandle();
 	}
-	ShowAvatarHandle();
+	if( g_bCanUpdateAvatar )
+	{
+		ShowAvatarHandle();
+	}
 }
 
 
@@ -1008,7 +1117,7 @@ function ShowHeaderImageHandle( )
 $J(function() {
 	if( location.hash == "#edit" && g_bCanCurateApps)
 	{
-		ShowEditHandles ( g_bIsCreatorHome );
+		ShowEditHandles ( g_bIsCreatorHome, g_bIsDLCPage );
 		$J('.tag_edit_control').show();
 	}
 

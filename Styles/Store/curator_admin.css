@@ -1,6 +1,7 @@
 
 .admin_container {
 	display: flex;
+	margin-top: 16px;
 }
 
 .admin_container blockquote {

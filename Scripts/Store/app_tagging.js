@@ -914,11 +914,13 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 
 		if ( offsetTop > window.scrollY )
 		{
-			$Ctn.css( 'position', 'absolute' );
+			$Ctn.css( 'position', 'relative' );
+			$Ctn.removeClass( 'sticky' );
 		}
 		else
 		{
 			$Ctn.css( 'position', 'fixed' );
+			$Ctn.addClass( 'sticky' );
 		}
 	});
 
