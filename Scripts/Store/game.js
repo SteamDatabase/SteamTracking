@@ -300,6 +300,18 @@ function RenderFranchiseAppBlock( rgFranchiseAppIDs )
 	RenderRecommendBlock( rgFranchiseAppIDs, 'recommend_franchise', $J('#franchise_app_block_content') );
 }
 
+function RenderMoreDLCFromBaseGameBlock( rgMoreDLCsFromBaseGameAppIDs )
+{
+	if( !rgMoreDLCsFromBaseGameAppIDs || !rgMoreDLCsFromBaseGameAppIDs.length > 0 || !$J('#moredlcfrombasegame_block_content').length )
+	{
+		$J('#moredlcfrombasegame_block').hide();
+		return;
+	}
+
+	RenderRecommendBlock( rgMoreDLCsFromBaseGameAppIDs, 'other_dlc', $J('#moredlcfrombasegame_block_content') );
+}
+
+
 function ShowEULA( elLink )
 {
 	var win = window.open( elLink.href,'eula','height=584,width=475,resize=yes,scrollbars=yes');

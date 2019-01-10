@@ -1,6 +1,9 @@
 
 var g_rgAppsCurated = [];
 
+// Track all of the app ids that we have in the array so that we don't suggest an existing app in the list back to the user
+var g_rgAppsInLists = [];
+
 function CreateListFromForm( elForm, fnOnComplete )
 {
 	CallFunctionFromForm( elForm, [ 'listid', 'title', 'description', 'visibility', 'appids', 'type', 'background', 'listtileimage', 'order', 'page_bg_offset' ], EditList, fnOnComplete);
@@ -291,13 +294,17 @@ function ShowAppSuggestForm( elTarget, bOnlyCreatedApps, fnDoneAction )
 		{
 			var localeTerm = term.toLocaleLowerCase();
 			var rgMatches = [];
-			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 10; i++)
+			for( var i=0; i<g_rgAppsCurated.length && rgMatches.length < 20; i++)
 			{
 								if( ( !bOnlyCreatedApps || g_rgAppsCurated[i].curated == false ) &&
 					( g_rgAppsCurated[i].app_name && ( g_rgAppsCurated[i].app_name.toLocaleLowerCase().indexOf( localeTerm ) !== -1 ) ||
 						(!isNaN( localeTerm ) && g_rgAppsCurated[i].appid.toString().indexOf( localeTerm ) !== -1 ) ) )
 				{
-					rgMatches.push(g_rgAppsCurated[i].app_name);
+					// Skip adding an app to the suggest list for somethign that is already in the array
+					if( g_rgAppsInLists.indexOf( g_rgAppsCurated[i].appid ) == -1 )
+					{
+						rgMatches.push(g_rgAppsCurated[i].app_name);
+					}
 				}
 			}
 			fnResponse( rgMatches );
@@ -350,6 +357,8 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 		if( g_rgAppsCurated[i].appid == appid )
 			appInfo = g_rgAppsCurated[i];
 	}
+
+	g_rgAppsInLists.push( appid );
 
 	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'https://steamcdn-a.akamaihd.net/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
 		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
@@ -428,7 +437,11 @@ function ListEdit_RemoveApp( unListId, unAppId )
 		dataType: 'json',
 		type: 'POST'
 	} ).done( function ( data )
-	{
+	{   // Remote it from our memory tracker
+		var lookupIndex = g_rgAppsInLists.indexOf( unAppId );
+		if( lookupIndex > -1 ) {
+			g_rgAppsCurated.split( lookupIndex, 1 );
+		}
 		$J('#app_' + unAppId).hide();
 	}).fail( function( data ){
 		var response = JSON.parse(data.responseText);
@@ -1160,7 +1173,7 @@ function ListManage_AddRows( rgLists )
 	$J.each(rgLists, function(idx, list ){
 
 		var $el = $J(template.replace(/%1\$s/g, list.listid)
-			.replace(/%2\$s/g, list.title ? V_EscapeHTML( JSON.stringify( list.title ) ) : "Untitled List" )
+			.replace(/%2\$s/g, list.title ? V_EscapeHTML( JSON.stringify( list.title ) ) : V_EscapeHTML( '"Untitled List"' ) )
 			.replace(/%3\$s/g, list.apps.length )
 			.replace(/%4\$s/g, list.list_state == 0 ? "Unlisted" : '' )
 		);
@@ -1305,5 +1318,45 @@ function UpdateCustomizationCreatedApp( appid, blurb, link_url )
 		}
 		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
 	});
+
+}
+
+function CloneList()
+{
+	var content = $J('<div/>', {'class': 'app_report_dialog' } );
+	content.append( $J( '<div>Enter Clan Account ID</div>') );
+	content.append( $J( '<input id="clanid" type="text" placeholder="Clan Account ID">') );
+	content.append( $J( '<div>Enter ListID</div>') );
+	content.append( $J( '<input id="listid" type="text" placeholder="ListID">') );
+	var Modal = ShowConfirmDialog( 'Clone List VO', content );
+
+	Modal.done( function() {
+		var clanid = content.find( 'input[id=clanid]').val();
+		var listid = content.find( 'input[id=listid]').val();
+		console.log( clanid );
+		console.log( listid );
+
+		$J.ajax ( {
+			url: g_strCuratorAdminURL + 'ajaxclonelist/',
+			data: {
+				origclan: clanid,
+				listid: listid,
+				sessionid: g_sessionID
+			},
+			dataType: 'json',
+			type: 'POST'
+		} ).done( function ( data )	{
+			ShowConfirmDialog( "Clone Success", "Clone Success, please Reload Page to see new list");
+		}).fail( function( data ){
+			var errorText = "";
+			try {
+				response = JSON.parse(data.responseText);
+				errorText = response.success;
+			} catch ( SyntaxError ) {
+				errorText = data.responseText;
+			}
+			ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
+		});
+	} );
 
 }

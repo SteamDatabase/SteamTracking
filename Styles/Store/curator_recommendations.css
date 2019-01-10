@@ -426,13 +426,17 @@ background: -webkit-linear-gradient( -45deg, rgb(46, 49, 56) 5%,rgb(57, 61, 70) 
 }
 
 .single_item .curator_featured > div {
-	background: none;
-	box-shadow: none;
-	padding: 0px;
+background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 92, 104, 0.1) 95%););background: linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 92, 104, 0.1) 95%););	box-shadow: none;
+	padding: 8px;
 	border: none;
+	border-radius: 5px;
 }
 .single_item .curator_featured .contents {
-	flex-shrink: 3.4;
+	flex-shrink: 3.2;
+	margin-left: 8px;
+}
+.single_item .curator_featured .screenshot > div {
+	box-shadow: 1px 1px 0px #283341 inset;
 }
 
 
@@ -932,6 +936,10 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	position: relative;
 }
 
+.page_section.single_item {
+	margin-top: 16px;
+}
+
 .page_section.featured_list a:hover,
 .page_section.featured_list a:hover h2 {
 	color: #fff;
@@ -1007,6 +1015,9 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 .page_section #header_curator_details .edit_overlay {
 	width: 600px;
 	left: auto;
+}
+.dlc_curator .page_section #header_curator_details .edit_overlay {
+	width: 100%;
 }
 
 .page_section .edit_button {
@@ -1215,11 +1226,16 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 }
 
 .infobox .socialmedia_accounts {
-	display: block;
+	display: flex;
 	background: transparent;
+	flex-direction: column;
 }
 .infobox .socialmedia_accounts a {
 	display: block;
+}
+.infobox .socialmedia_accounts > * {
+	padding-left: 6px;
+	margin-bottom: 3px;
 }
 
 
@@ -1454,6 +1470,10 @@ background: -webkit-linear-gradient( #dcc984 10%, #ab8b44 80%,#7b5f24 100%);back
 }
 .creator_beta_ctn:hover {
 	color: #fff;
+}
+
+.page_content_ctn.dlc_associated_franchise {
+background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 102, 115, 0) 95%);background: linear-gradient( to bottom, rgba(78, 102, 115, 0.3) 5%, rgba(78, 102, 115, 0) 95%);	padding-top: 20px;
 }
 
 /* Responsive ============================================================ */

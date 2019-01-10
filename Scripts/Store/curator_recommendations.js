@@ -542,7 +542,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 		var elTagName = $J('<span class="fieldvalue"></span>').text( rgNodeData.tagid_label ? rgNodeData.tagid_label : "Select..." );
 		var elTagEditButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
 
-		var elAppName = $J('<span class="fieldvalue"></span>').text( rgNodeData.appid ? rgNodeData.appid : "Select..." );
+		var elAppName = $J('<span class="fieldvalue"></span>').text( rgNodeData.app_name ? rgNodeData.app_name : "Select..." );
 		var elTagAppButton = $J('<img src="https://steamstore-a.akamaihd.net/public/images/v6/curator_edit_section.png">');
 
 		var elListId = $J('<input type="hidden" name="listid">').val( rgNodeData.listid );
@@ -769,26 +769,68 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 		elTagAppButton.on( 'click', function() {
 			var unAppID = false;
 			var strAppName = false;
+			var loading = false;
 
 						var modal = ShowAutocompleteDialog( "Select An App Name or AppID", "Type Appid of the Game or DLC to have it singularly featured. Incorrent Appid will not appear on the page.",
 				function(term, fnResponse)
 				{
-					var rgMatches = [];
-					if( !isNaN( term ) && term > 10  )
+					if( g_mapAppIDToAppNameSearch )
 					{
-						unAppID = term;
-						strAppName = term;
-						modal.EnableInput();
+						var lowerTerm = term.toLocaleLowerCase();
+						var rgMatches = [];
+						for( var key in g_mapAppIDToAppNameSearch )
+						{
+							if( g_mapAppIDToAppNameSearch.hasOwnProperty( key ) )
+							{
+								var testTerm = g_mapAppIDToAppNameSearch[key].toLocaleLowerCase();
+								if( key.indexOf( lowerTerm ) != -1 || testTerm.indexOf( lowerTerm ) != -1 )
+								{
+									rgMatches.push( g_mapAppIDToAppNameSearch[key] + ' (appid:' + key + ')' );
+								}
+							}
+						}
+						fnResponse( rgMatches );
 					}
-					else
+					else if( !loading )
 					{
-						modal.DisableInput();
+						loading = true;
+						$J.ajax ( {
+							url: g_strCuratorAdminURL + 'ajaxgetassociatedappslist/',
+							data: {
+								sessionid: g_sessionID,
+								count: 25,
+								term: term,
+							},
+							type: 'POST'
+						} ).done( function ( data )
+						{
+							loading = false;
+							var rgMatches = [];
+							var rgAppsCurated = data.recommendations;
+							for( var i = 0; i < rgAppsCurated.length; ++i )
+							{
+								rgMatches.push( rgAppsCurated[i].app_name + ' (appid:' + rgAppsCurated[i].appid + ')' );
+							}
+							fnResponse( rgMatches );
+						})
+
+
 					}
 
-					fnResponse( rgMatches );
 				},
 				function( suggestion )
 				{
+					if( suggestion )
+					{
+						var match = suggestion.match( /(.*) \(appid:(\d+)\)$/ );
+						if( match )
+						{
+							strAppName = match[1];
+							unAppID = match[2];
+							modal.EnableInput();
+							return;
+						}
+					}
 				},
 				function(){
 					if( !unAppID )
@@ -800,7 +842,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 				},
 				function( )
 				{
-					unTagId = false;
+					unAppID = false;
 				}
 		);
 
