@@ -528,6 +528,16 @@
         "218.78.184.0/24"
       ]
     }, 
+    "shab": {
+      "desc": "Shanghai (sha-2) Backbone", 
+      "geo": [
+        121.53, 
+        31.23
+      ], 
+      "service_address_ranges": [
+        "180.153.252.0/24"
+      ]
+    }, 
     "sham": {
       "partners": 2, 
       "relay_addresses": [
@@ -726,5 +736,5 @@
       ]
     }
   }, 
-  "revision": 181
+  "revision": 182
 }
