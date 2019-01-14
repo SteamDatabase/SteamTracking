@@ -2616,7 +2616,8 @@ iframe.steamTVLogin {
 .BroadcastInjustice2Offline,
 .BroadcastSmiteOffline,
 .BroadcastPaladinsOffline,
-.BroadcastRealmRoyaleOffline {
+.BroadcastRealmRoyaleOffline,
+.BroadcastDOTATrueSight {
   position: absolute;
   top: 0;
   right: 0;
@@ -2640,6 +2641,9 @@ iframe.steamTVLogin {
 
 .BroadcastCSGOLondonOffline {
   background-image: url("../../images/webui/broadcast/steam_broadcast_london_2018.jpg"); }
+
+.BroadcastDOTATrueSight {
+  background-image: url("../../images/webui/broadcast/true_sight_logo.png"); }
 
 .BroadcastCSGOLondonOffline_Schedule {
   position: absolute;

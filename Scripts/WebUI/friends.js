@@ -66099,16 +66099,17 @@
                 tabIcon: "public/images/webui/broadcast/artifact_icon.png",
                 offlineClassName: "BroadcastArtifactOffline"
               }),
-            "76561198124468676" == e
+            "76561198198486997" == e ||
+            ("148618792083695635" == e && "beta" != G.a.WEB_UNIVERSE)
               ? Q.init({
                   bValid: !0,
                   stream: { "76561198124468676": "#Broadcast_EnglishMain" },
-                  name: "The Kuala Lumpur Major",
+                  name: "True Sight",
                   appID: 570,
                   link: "https://steam.tv/dota",
                   linkName: "steam.tv/dota",
-                  tabIcon: "public/images/webui/broadcast/ti_tab.png",
-                  offlineClassName: "BroadcastDotaKualaLumpurMajorOffline"
+                  tabIcon: "public/images/webui/broadcast/true_sight_tab.png",
+                  offlineClassName: "BroadcastDOTATrueSight"
                 })
               : "76561197960270087" == e
               ? Q.init({
