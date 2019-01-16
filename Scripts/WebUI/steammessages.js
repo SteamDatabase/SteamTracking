@@ -3,7 +3,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [7],
+  [6],
   {
     "+9/f": function(e, t, i) {
       "use strict";
@@ -1114,7 +1114,7 @@
           return O;
         }),
         i.d(t, "h", function() {
-          return U;
+          return T;
         }),
         i.d(t, "k", function() {
           return r;
@@ -2552,7 +2552,7 @@
             r
           );
         })(s.Message),
-        U = (function(i) {
+        T = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2606,7 +2606,7 @@
             r
           );
         })(s.Message),
-        T = (function(i) {
+        U = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -3163,7 +3163,7 @@
           return e.SendMsg("Player.GetCommunityPreferences#1", t, j, {});
         }),
         (a.SetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", t, T, {});
+          return e.SendMsg("Player.SetCommunityPreferences#1", t, U, {});
         }),
         (a.GetNewSteamAnnouncementState = function(e, t) {
           return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, N, {
@@ -7851,7 +7851,7 @@
             r
           );
         })(s.Message)),
-        U = (s.Message,
+        T = (s.Message,
         s.Message,
         (function(i) {
           function r(e) {
@@ -7946,13 +7946,13 @@
               s.Message.setField(this, 15, e);
             }),
             (r.prototype.dlcs = function() {
-              return s.Message.getRepeatedWrapperField(this, T, 9);
+              return s.Message.getRepeatedWrapperField(this, U, 9);
             }),
             (r.prototype.set_dlcs = function(e) {
               s.Message.setRepeatedWrapperField(this, 9, e);
             }),
             (r.prototype.add_dlcs = function(e, t) {
-              return s.Message.addToRepeatedWrapperField(this, 9, e, T, t);
+              return s.Message.addToRepeatedWrapperField(this, 9, e, U, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -8011,8 +8011,8 @@
                     e.set_available_on_platform(t.readBool());
                     break;
                   case 9:
-                    var i = new T();
-                    t.readMessage(i, T.deserializeBinaryFromReader),
+                    var i = new U();
+                    t.readMessage(i, U.deserializeBinaryFromReader),
                       e.add_dlcs(i);
                     break;
                   default:
@@ -8052,7 +8052,7 @@
                 void 0 !== (i = s.Message.getField(e, 15)) &&
                   t.writeBool(15, i),
                 0 < (i = e.dlcs()).length &&
-                  t.writeRepeatedMessage(9, i, T.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(9, i, U.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CMsgClientGetClientAppListResponse_App";
@@ -8060,7 +8060,7 @@
             r
           );
         })(s.Message)),
-        T = (function(i) {
+        U = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -10718,7 +10718,7 @@
           return k;
         }),
         i.d(t, "c", function() {
-          return T;
+          return U;
         }),
         i.d(t, "d", function() {
           return N;
@@ -12819,7 +12819,7 @@
             r
           );
         })(s.Message)),
-        U = (s.Message,
+        T = (s.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -12912,7 +12912,7 @@
             r
           );
         })(s.Message)),
-        T = (function(i) {
+        U = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -15654,7 +15654,7 @@
           return j;
         }),
         i.d(t, "O", function() {
-          return T;
+          return U;
         }),
         i.d(t, "H", function() {
           return x;
@@ -15717,7 +15717,7 @@
           return Oe;
         }),
         i.d(t, "z", function() {
-          return Ue;
+          return Te;
         }),
         i.d(t, "J", function() {
           return xe;
@@ -16816,7 +16816,7 @@
             r
           );
         })(s.Message),
-        U = (function(i) {
+        T = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -16853,7 +16853,7 @@
             r
           );
         })(s.Message),
-        T = (function(i) {
+        U = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -20618,7 +20618,7 @@
             r
           );
         })(s.Message),
-        Ue = (function(i) {
+        Te = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -20681,7 +20681,7 @@
             r
           );
         })(s.Message),
-        Te = (function(i) {
+        Ue = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -24825,7 +24825,7 @@
           return e.SendMsg("ChatRoom.MuteUserInGroup#1", t, O, {});
         }),
         (d.KickUserFromGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.KickUserFromGroup#1", t, U, {});
+          return e.SendMsg("ChatRoom.KickUserFromGroup#1", t, T, {});
         }),
         (d.SetUserBanState = function(e, t) {
           return e.SendMsg("ChatRoom.SetUserBanState#1", t, N, {});
@@ -24891,7 +24891,7 @@
           return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, je, {});
         }),
         (d.LeaveVoiceChat = function(e, t) {
-          return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Te, {});
+          return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Ue, {});
         }),
         (d.GetMessageHistory = function(e, t) {
           return e.SendMsg("ChatRoom.GetMessageHistory#1", t, Le, {});
@@ -28833,6 +28833,24 @@
             (r.prototype.set_thumbnail_url = function(e) {
               s.Message.setField(this, 13, e);
             }),
+            (r.prototype.is_webrtc = function() {
+              return s.Message.getField(this, 14);
+            }),
+            (r.prototype.set_is_webrtc = function(e) {
+              s.Message.setField(this, 14, e);
+            }),
+            (r.prototype.webrtc_session_id = function() {
+              return s.Message.getField(this, 15);
+            }),
+            (r.prototype.set_webrtc_session_id = function(e) {
+              s.Message.setField(this, 15, e);
+            }),
+            (r.prototype.webrtc_offer_sdp = function() {
+              return s.Message.getField(this, 16);
+            }),
+            (r.prototype.set_webrtc_offer_sdp = function(e) {
+              s.Message.setField(this, 16, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -28886,6 +28904,15 @@
                   case 13:
                     e.set_thumbnail_url(t.readString());
                     break;
+                  case 14:
+                    e.set_is_webrtc(t.readBool());
+                    break;
+                  case 15:
+                    e.set_webrtc_session_id(t.readFixed64String());
+                    break;
+                  case 16:
+                    e.set_webrtc_offer_sdp(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -28919,7 +28946,13 @@
                 void 0 !== (i = s.Message.getField(e, 12)) &&
                   t.writeInt32(12, i),
                 void 0 !== (i = s.Message.getField(e, 13)) &&
-                  t.writeString(13, i);
+                  t.writeString(13, i),
+                void 0 !== (i = s.Message.getField(e, 14)) &&
+                  t.writeBool(14, i),
+                void 0 !== (i = s.Message.getField(e, 15)) &&
+                  t.writeFixed64String(15, i),
+                void 0 !== (i = s.Message.getField(e, 16)) &&
+                  t.writeString(16, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_WatchBroadcast_Response";
@@ -29873,7 +29906,7 @@
             r
           );
         })(s.Message)),
-        U = (s.Message,
+        T = (s.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -30020,7 +30053,561 @@
             }),
             r
           );
-        })(s.Message));
+        })(s.Message)),
+        U = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCStartResult_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        N = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCStopped_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        x = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCSetAnswer_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        G = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.sdp_mid = function() {
+              return s.Message.getField(this, 1);
+            }),
+            (r.prototype.set_sdp_mid = function(e) {
+              s.Message.setField(this, 1, e);
+            }),
+            (r.prototype.sdp_mline_index = function() {
+              return s.Message.getField(this, 2);
+            }),
+            (r.prototype.set_sdp_mline_index = function(e) {
+              s.Message.setField(this, 2, e);
+            }),
+            (r.prototype.candidate = function() {
+              return s.Message.getField(this, 3);
+            }),
+            (r.prototype.set_candidate = function(e) {
+              s.Message.setField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_sdp_mid(t.readString());
+                    break;
+                  case 2:
+                    e.set_sdp_mline_index(t.readInt32());
+                    break;
+                  case 3:
+                    e.set_candidate(t.readString());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = s.Message.getField(e, 1)) && t.writeString(1, i),
+                void 0 !== (i = s.Message.getField(e, 2)) && t.writeInt32(2, i),
+                void 0 !== (i = s.Message.getField(e, 3)) &&
+                  t.writeString(3, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTC_Candidate";
+            }),
+            r
+          );
+        })(s.Message),
+        E = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCAddHostCandidate_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        I = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCAddViewerCandidate_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        P = (s.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, [2], null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.candidate_generation = function() {
+              return s.Message.getField(this, 1);
+            }),
+            (r.prototype.set_candidate_generation = function(e) {
+              s.Message.setField(this, 1, e);
+            }),
+            (r.prototype.candidates = function() {
+              return s.Message.getRepeatedWrapperField(this, G, 2);
+            }),
+            (r.prototype.set_candidates = function(e) {
+              s.Message.setRepeatedWrapperField(this, 2, e);
+            }),
+            (r.prototype.add_candidates = function(e, t) {
+              return s.Message.addToRepeatedWrapperField(this, 2, e, G, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_candidate_generation(t.readUint32());
+                    break;
+                  case 2:
+                    var i = new G();
+                    t.readMessage(i, G.deserializeBinaryFromReader),
+                      e.add_candidates(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = s.Message.getField(e, 1)) && t.writeUint32(1, i),
+                0 < (i = e.candidates()).length &&
+                  t.writeRepeatedMessage(2, i, G.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCGetHostCandidates_Response";
+            }),
+            r
+          );
+        })(s.Message)),
+        q = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.broadcast_session_id = function() {
+              return s.Message.getField(this, 1);
+            }),
+            (r.prototype.set_broadcast_session_id = function(e) {
+              s.Message.setField(this, 1, e);
+            }),
+            (r.prototype.webrtc_session_id = function() {
+              return s.Message.getField(this, 2);
+            }),
+            (r.prototype.set_webrtc_session_id = function(e) {
+              s.Message.setField(this, 2, e);
+            }),
+            (r.prototype.viewer_steamid = function() {
+              return s.Message.getField(this, 3);
+            }),
+            (r.prototype.set_viewer_steamid = function(e) {
+              s.Message.setField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_broadcast_session_id(t.readFixed64String());
+                    break;
+                  case 2:
+                    e.set_webrtc_session_id(t.readFixed64String());
+                    break;
+                  case 3:
+                    e.set_viewer_steamid(t.readFixed64String());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = s.Message.getField(e, 1)) &&
+                t.writeFixed64String(1, i),
+                void 0 !== (i = s.Message.getField(e, 2)) &&
+                  t.writeFixed64String(2, i),
+                void 0 !== (i = s.Message.getField(e, 3)) &&
+                  t.writeFixed64String(3, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCStart_Notification";
+            }),
+            r
+          );
+        })(s.Message),
+        L = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.broadcast_session_id = function() {
+              return s.Message.getField(this, 1);
+            }),
+            (r.prototype.set_broadcast_session_id = function(e) {
+              s.Message.setField(this, 1, e);
+            }),
+            (r.prototype.webrtc_session_id = function() {
+              return s.Message.getField(this, 2);
+            }),
+            (r.prototype.set_webrtc_session_id = function(e) {
+              s.Message.setField(this, 2, e);
+            }),
+            (r.prototype.answer = function() {
+              return s.Message.getField(this, 3);
+            }),
+            (r.prototype.set_answer = function(e) {
+              s.Message.setField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_broadcast_session_id(t.readFixed64String());
+                    break;
+                  case 2:
+                    e.set_webrtc_session_id(t.readFixed64String());
+                    break;
+                  case 3:
+                    e.set_answer(t.readString());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = s.Message.getField(e, 1)) &&
+                t.writeFixed64String(1, i),
+                void 0 !== (i = s.Message.getField(e, 2)) &&
+                  t.writeFixed64String(2, i),
+                void 0 !== (i = s.Message.getField(e, 3)) &&
+                  t.writeString(3, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCSetAnswer_Notification";
+            }),
+            r
+          );
+        })(s.Message),
+        A = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return s.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            n.d(r, i),
+            (r.prototype.broadcast_session_id = function() {
+              return s.Message.getField(this, 1);
+            }),
+            (r.prototype.set_broadcast_session_id = function(e) {
+              s.Message.setField(this, 1, e);
+            }),
+            (r.prototype.webrtc_session_id = function() {
+              return s.Message.getField(this, 2);
+            }),
+            (r.prototype.set_webrtc_session_id = function(e) {
+              s.Message.setField(this, 2, e);
+            }),
+            (r.prototype.candidate = function() {
+              return s.Message.getWrapperField(this, G, 3, 1);
+            }),
+            (r.prototype.set_candidate = function(e) {
+              s.Message.setWrapperField(this, 3, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              return {};
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new s.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_broadcast_session_id(t.readFixed64String());
+                    break;
+                  case 2:
+                    e.set_webrtc_session_id(t.readFixed64String());
+                    break;
+                  case 3:
+                    var i = new G();
+                    t.readMessage(i, G.deserializeBinaryFromReader),
+                      e.set_candidate(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new s.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = s.Message.getField(e, 1)) &&
+                t.writeFixed64String(1, i),
+                void 0 !== (i = s.Message.getField(e, 2)) &&
+                  t.writeFixed64String(2, i),
+                null != (i = e.candidate()) &&
+                  t.writeMessage(3, i, G.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CBroadcast_WebRTCAddViewerCandidate_Notification";
+            }),
+            r
+          );
+        })(s.Message);
       ((F = _ || (_ = {})).BeginBroadcastSession = function(e, t) {
         return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, r, {});
       }),
@@ -30079,9 +30666,27 @@
           return e.SendMsg("Broadcast.SetRTMPInfo#1", t, j, {});
         }),
         (F.GetRTMPInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, U, {
+          return e.SendMsg("Broadcast.GetRTMPInfo#1", t, T, {
             bConstMethod: !0
           });
+        }),
+        (F.WebRTCStartResult = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCStartResult#1", t, U, {});
+        }),
+        (F.WebRTCStopped = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCStopped#1", t, N, {});
+        }),
+        (F.WebRTCSetAnswer = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCSetAnswer#1", t, x, {});
+        }),
+        (F.WebRTCAddHostCandidate = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCAddHostCandidate#1", t, E, {});
+        }),
+        (F.WebRTCAddViewerCandidate = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCAddViewerCandidate#1", t, I, {});
+        }),
+        (F.WebRTCGetHostCandidates = function(e, t) {
+          return e.SendMsg("Broadcast.WebRTCGetHostCandidates#1", t, P, {});
         }),
         ((M = h || (h = {})).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
@@ -30110,6 +30715,18 @@
         (M.SendThumbnailToRelayHandler = {
           name: "BroadcastClient.SendThumbnailToRelay#1",
           request: w
+        }),
+        (M.NotifyWebRTCStartHandler = {
+          name: "BroadcastClient.NotifyWebRTCStart#1",
+          request: q
+        }),
+        (M.NotifyWebRTCSetAnswerHandler = {
+          name: "BroadcastClient.NotifyWebRTCSetAnswer#1",
+          request: L
+        }),
+        (M.NotifyWebRTCAddViewerCandidateHandler = {
+          name: "BroadcastClient.NotifyWebRTCAddViewerCandidate#1",
+          request: A
         });
     },
     nRcY: function(e, t, i) {

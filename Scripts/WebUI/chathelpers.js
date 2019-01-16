@@ -25,7 +25,7 @@
     return e;
   }
   var n = {},
-    p = { 4: 0 },
+    p = { 1: 0 },
     l = [];
   function s(e) {
     if (n[e]) return n[e].exports;
@@ -86,144 +86,156 @@
 })({
   "0N1H": function(e, t, n) {
     "use strict";
-    n.d(t, "k", function() {
-      return a;
+    function o(e) {
+      return 3 == e || 6 == e;
+    }
+    function i(e) {
+      return 5 == e || 6 == e;
+    }
+    n.d(t, "b", function() {
+      return o;
     }),
-      n.d(t, "l", function() {
-        return u;
+      n.d(t, "a", function() {
+        return i;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "m", function() {
         return c;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "n", function() {
         return p;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "f", function() {
         return l;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return m;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "l", function() {
         return h;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "h", function() {
         return d;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return _;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "k", function() {
         return f;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "j", function() {
         return v;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return E;
+      }),
+      n.d(t, "e", function() {
+        return S;
+      }),
+      n.d(t, "d", function() {
+        return b;
       });
-    var o,
-      i,
-      r,
+    var r,
       s,
-      a = 1,
-      u = 4,
-      c = 750,
-      p = 799,
-      l = 7,
-      m = 250820,
-      h = 330050,
-      d = 358510,
-      _ = 366490,
-      f = "18446744073709551615",
-      v = 0,
-      E = 2147483647;
-    ((i = o || (o = {}))[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-      (i[(i.k_EGameEvent = 2)] = "k_EGameEvent"),
-      (i[(i.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-      (i[(i.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-      (i[(i.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-      (i[(i.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-      (i[(i.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-      (i[(i.k_ETripEvent = 8)] = "k_ETripEvent"),
-      (i[(i.k_EChatEvent = 9)] = "k_EChatEvent"),
-      (i[(i.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-      (i[(i.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-      (i[(i.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-      (i[(i.k_EPreAnnounceMajorUpdateEvent = 13)] =
+      a,
+      u,
+      c = 1,
+      p = 4,
+      l = 750,
+      m = 799,
+      h = 7,
+      d = 250820,
+      _ = 330050,
+      f = 358510,
+      v = 366490,
+      E = "18446744073709551615",
+      S = 0,
+      b = 2147483647;
+    ((s = r || (r = {}))[(s.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+      (s[(s.k_EGameEvent = 2)] = "k_EGameEvent"),
+      (s[(s.k_EPartyEvent = 3)] = "k_EPartyEvent"),
+      (s[(s.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
+      (s[(s.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
+      (s[(s.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
+      (s[(s.k_ESportsEvent = 7)] = "k_ESportsEvent"),
+      (s[(s.k_ETripEvent = 8)] = "k_ETripEvent"),
+      (s[(s.k_EChatEvent = 9)] = "k_EChatEvent"),
+      (s[(s.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
+      (s[(s.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
+      (s[(s.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
+      (s[(s.k_EPreAnnounceMajorUpdateEvent = 13)] =
         "k_EPreAnnounceMajorUpdateEvent"),
-      (i[(i.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-      (i[(i.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
-      (i[(i.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-      (i[(i.k_EESportTournamentStreamEvent = 17)] =
+      (s[(s.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
+      (s[(s.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
+      (s[(s.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
+      (s[(s.k_EESportTournamentStreamEvent = 17)] =
         "k_EESportTournamentStreamEvent"),
-      (i[(i.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-      (i[(i.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-      (i[(i.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-      (i[(i.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-      (i[(i.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-      (i[(i.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-      (i[(i.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-      (i[(i.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-      (i[(i.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-      (i[(i.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-      (i[(i.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-      (i[(i.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-      ((s = r || (r = {}))[(s.k_ELaunchSource_None = 0)] =
+      (s[(s.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
+      (s[(s.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
+      (s[(s.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
+      (s[(s.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
+      (s[(s.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
+      (s[(s.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
+      (s[(s.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
+      (s[(s.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
+      (s[(s.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
+      (s[(s.k_EIRLEvent = 27)] = "k_EIRLEvent"),
+      (s[(s.k_ENewsEvent = 28)] = "k_ENewsEvent"),
+      (s[(s.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
+      ((u = a || (a = {}))[(u.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
-      (s[(s.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (u[(u.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (s[(s.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (u[(u.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (s[(s.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (u[(u.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (s[(s.k_ELaunchSource_InstallSubComplete = 104)] =
+      (u[(u.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (s[(s.k_ELaunchSource_DownloadsPage = 105)] =
+      (u[(u.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (s[(s.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (u[(u.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (s[(s.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (u[(u.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (s[(s.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (s[(s.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (u[(u.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (u[(u.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (s[(s.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (u[(u.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (s[(s.k_ELaunchSource_RunByGameDir = 302)] =
+      (u[(u.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (s[(s.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (u[(u.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (s[(s.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (u[(u.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (s[(s.k_ELaunchSource_SteamURL_Run = 401)] =
+      (u[(u.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (s[(s.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (u[(u.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (s[(s.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (u[(u.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (s[(s.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (u[(u.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (s[(s.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (u[(u.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (s[(s.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (s[(s.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (u[(u.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (u[(u.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (s[(s.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (u[(u.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (s[(s.k_ELaunchSource_Dota2Launcher = 700)] =
+      (u[(u.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (s[(s.k_ELaunchSource_IRunGameEngine = 800)] =
+      (u[(u.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (s[(s.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (u[(u.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (s[(s.k_ELaunchSource_DRMDataRequest = 802)] =
+      (u[(u.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (s[(s.k_ELaunchSource_CloudFilePanel = 803)] =
+      (u[(u.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (s[(s.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (u[(u.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (s[(s.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (u[(u.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty");
   },
   "1VtQ": function(e, t, n) {
@@ -361,7 +373,7 @@
             return this.m_strInviteCode;
           }),
           (e.prototype.BNeverExpires = function() {
-            return this.m_rtTimeExpires == r.b;
+            return this.m_rtTimeExpires == r.d;
           }),
           (e.prototype.GetChatRoomGroupID = function() {
             return this.m_ulChatRoomGroupID;
@@ -398,7 +410,7 @@
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = o),
-              (this.m_rtTimeExpires = r.b),
+              (this.m_rtTimeExpires = r.d),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
@@ -1987,20 +1999,27 @@
       s = n.n(o),
       r = n("0N1H"),
       a = n("1n9R"),
+      u = n("XaMz"),
       i = (function() {
         function i(e, t, n, o) {
           void 0 === e && (e = 0),
             e instanceof i
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? (this.m_ulSteamID = s.a.fromString(e, !0))
+              ? ((this.m_ulSteamID = s.a.fromString(e, !0)),
+                Object(u.a)(
+                  0 != this.m_ulSteamID.getHighBits(),
+                  "String " +
+                    e +
+                    " was provided as a steam ID as a string, but had no high bits set. This is likely actually an account ID or was meant to be passed as a number"
+                ))
               : t && n && void 0 !== o
               ? this.SetFromComponents(e, o, n, t)
               : (this.m_ulSteamID = e ? s.a.fromNumber(e, !0) : s.a.UZERO);
         }
         return (
           (i.InitFromAccountID = function(e) {
-            return new i(e, a.b.EUNIVERSE, 1, r.k);
+            return new i(e, a.b.EUNIVERSE, 1, r.m);
           }),
           (i.InitFromClanID = function(e) {
             return new i(e, a.b.EUNIVERSE, 7, 0);
@@ -2074,7 +2093,7 @@
             var t = this.GetUniverse();
             if (t <= 0 || 5 <= t) return !1;
             if (1 == e) {
-              if (0 == this.GetAccountID() || this.GetInstance() > r.l)
+              if (0 == this.GetAccountID() || this.GetInstance() > r.n)
                 return !1;
             } else if (7 == e) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())

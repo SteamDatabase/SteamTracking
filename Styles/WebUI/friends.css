@@ -355,9 +355,9 @@
   background: linear-gradient(to bottom, #6dcff6 0%, #6dcff6 30%, #6dcff6 70%, #6dcff6 100%); }
 
 .awayOrSnooze .steamavatar_avatarStatus_1Pwr6 {
-  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC") repeat-y;
   -webkit-mask-size: 5px 5px;
-  mask: url("../../images/webui/masks/dashed_mask.png") repeat-y;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC") repeat-y;
   mask-size: 5px 5px;
   opacity: .75; }
 
@@ -376,8 +376,8 @@
   height: 2px; }
 
 .awayOrSnooze .steamavatar_avatarStatus_1Pwr6.bottom {
-  -webkit-mask: url("../../images/webui/masks/dashed_mask.png") repeat-x;
-  mask: url("../../images/webui/masks/dashed_mask.png") repeat-x; }
+  -webkit-mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC") repeat-x;
+  mask: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAACXBIWXMAAAsSAAALEgHS3X78AAAAIUlEQVQI12P8/5+BgYGBgZGBgYGBiQEJoHAY/+OSQeEAAMCCAwlfJ3DmAAAAAElFTkSuQmCC") repeat-x; }
 
 .awayOrSnooze .X-Large .steamavatar_avatarStatus_1Pwr6.bottom {
   mask-size: 6px 6px;
@@ -990,6 +990,17 @@
 
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px; }
+
+.hoverposition_HoverPosition_3gYNB {
+  position: fixed;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none; }
+  .hoverposition_HoverPosition_3gYNB.hoverposition_ready_3d6MD {
+    opacity: 1; }
+  .hoverposition_HoverPosition_3gYNB.hoverposition_nospace_39IjN {
+    display: none; }
 
 .mutualFriendsContainer {
   padding: 12px 16px 4px 16px; }
@@ -2684,7 +2695,7 @@ iframe.steamTVLogin {
   flex-direction: row;
   max-width: 780px;
   overflow: hidden;
-  max-height: 170px;
+  max-height: 200px;
   z-index: 1; }
 
 .StoreSaleWidgetContainer_mini,
@@ -2949,14 +2960,15 @@ iframe.steamTVLogin {
   justify-content: center; }
 
 .broadcastchat_ChatPanel_3jc_d {
-  height: 100%;
-  width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: #1b1c20; }
 
 .broadcastchat_ChatMessages_PNfmQ {
   flex-grow: 1;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  flex-basis: 1px; }
 
 .broadcastchat_EmoticonContainer_3ArHy {
   width: 15%;
@@ -2978,10 +2990,11 @@ iframe.steamTVLogin {
   color: white; }
 
 .broadcastchat_MessageName_2P_MO {
-  color: cornflowerblue; }
+  color: cornflowerblue;
+  font-size: 14px; }
 
 .broadcastchat_MessageContents_555m- {
-  font-size: 11px; }
+  font-size: 12px; }
   .broadcastchat_MessageContents_555m- a {
     color: white; }
 
@@ -2994,6 +3007,24 @@ iframe.steamTVLogin {
 .broadcastchat_minHeightZero_3Cgfe {
   min-height: 0;
   flex: 1; }
+
+.broadcastchat_ChatLoginButton_7EQxy {
+  background: linear-gradient(to right, #3366ff, #7d6ebc);
+  display: inline-block;
+  padding: 0;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  width: auto;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  height: 42px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  min-width: 340px; }
 
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
@@ -6934,9 +6965,26 @@ img {
   font-size: 10px; }
 
 .shared_common_AvatarImage_HVcru {
-  border-radius: 50%;
   width: 64px;
   height: 64px; }
+
+.shared_common_EditButton_DLPvj {
+  text-transform: uppercase;
+  /*background: linear-gradient(to right, #3366ff, #7d6ebc);*/
+  background: rgba(0, 0, 0, 0);
+  border: 1px #7d6ebc solid;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #7d6ebc;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-right: 4px; }
+  .shared_common_EditButton_DLPvj.shared_common_Small_lUt7Z {
+    font-size: 9px;
+    padding: 4px 8px; }
 
 html.client_chat_frame body,
 html.web_chat_frame body {
@@ -14532,13 +14580,6 @@ span.mention.me {
   color: white;
   border: 0.5px solid #7b93a7; }
 
-.HoverPosition {
-  position: fixed;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 0.25s;
-  pointer-events: none; }
-
 .HoverPositionPopup {
   /* force hover position to match size of contents. Javascript will then use this element to tell Steam what size to make the popup */
   display: inline-block; }
@@ -14548,12 +14589,6 @@ span.mention.me {
   box-shadow: none; }
 
 .HoverPositionPopup .hover_arrow {
-  display: none; }
-
-.HoverPosition.ready {
-  opacity: 1; }
-
-.HoverPosition.nospace {
   display: none; }
 
 .nicknameEntryDialog .friend {
