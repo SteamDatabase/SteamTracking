@@ -35,6 +35,7 @@
  B CMemoryPool::g_ReportFunc
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
+ B CMsgIPAddress::default_instance_
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
  B CMsgProtobufWrapped::default_instance_
@@ -235,6 +236,7 @@
  D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
+ D typeinfo for CMsgIPAddress
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
  D typeinfo for CMsgProtobufWrapped
@@ -311,6 +313,7 @@
  D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
+ D vtable for CMsgIPAddress
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
@@ -378,6 +381,7 @@
  R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
+ R typeinfo name for CMsgIPAddress
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
  R typeinfo name for CMsgProtobufWrapped
@@ -756,7 +760,7 @@
  T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
- T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
+ T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, CRSAPublicKey const&)
  T CCryptoKeyBase::EnsureCapacity(unsigned int)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
  T CCuratorPreferences::ByteSize() const
@@ -915,7 +919,6 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
- T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -973,6 +976,21 @@
  T CMsgAuthTicket::mutable_ticket()
  T CMsgAuthTicket::set_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAuthTicket::~CMsgAuthTicket()
+ T CMsgIPAddress::ByteSize() const
+ T CMsgIPAddress::CMsgIPAddress()
+ T CMsgIPAddress::Clear()
+ T CMsgIPAddress::GetCachedSize() const
+ T CMsgIPAddress::GetMetadata() const
+ T CMsgIPAddress::IsInitialized() const
+ T CMsgIPAddress::MergeFrom(CMsgIPAddress const&)
+ T CMsgIPAddress::New() const
+ T CMsgIPAddress::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgIPAddress::SetCachedSize(int) const
+ T CMsgIPAddress::SharedCtor()
+ T CMsgIPAddress::clear_ip()
+ T CMsgIPAddress::mutable_v6()
+ T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgIPAddress::~CMsgIPAddress()
  T CMsgMulti::ByteSize() const
  T CMsgMulti::CMsgMulti()
  T CMsgMulti::Clear()
@@ -1000,10 +1018,15 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::clear_ip_addr()
  T CMsgProtoBufHeader::mutable_error_message()
+ T CMsgProtoBufHeader::mutable_ip_v6()
  T CMsgProtoBufHeader::mutable_target_job_name()
+ T CMsgProtoBufHeader::mutable_wg_token()
  T CMsgProtoBufHeader::set_error_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_ip_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::set_target_job_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_wg_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::~CMsgProtoBufHeader()
  T CMsgProtobufWrapped::ByteSize() const
  T CMsgProtobufWrapped::CMsgProtobufWrapped()
@@ -1275,26 +1298,31 @@
  T CSteamID::Render() const
  T CTCPConnection::ThreadedCompletionFunc(CompletionData_t*)
  T CTHash<CTCPConnection*, unsigned int>::Purge()
+ T CTHash<CTCPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CTCPConnection*, unsigned int>::RemoveAll()
  T CTHash<CTCPConnection*, unsigned int>::RemoveFromHash(CTCPConnection**)
  T CTHash<CTCPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CTCPConnection*, unsigned int>::~CTHash()
  T CTHash<CUDPConnection*, unsigned int>::Purge()
+ T CTHash<CUDPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::RemoveAll()
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
  T CTHash<CUDPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::~CTHash()
  T CTHash<CWebSocketConnection*, unsigned int>::Purge()
+ T CTHash<CWebSocketConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
  T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
  T CTHash<ITCPHostCallback*, unsigned int>::Purge()
+ T CTHash<ITCPHostCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
  T CTHash<ITCPHostCallback*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<ITCPHostCallback*, unsigned int>::~CTHash()
  T CTHash<IUDPSocketCallback*, unsigned int>::Purge()
+ T CTHash<IUDPSocketCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
  T CTHash<IUDPSocketCallback*, unsigned int>::Validate(CValidator&, char const*)
@@ -1317,7 +1345,6 @@
  T CTSQueue<CompletionData_t*>::Purge()
  T CTSQueue<CompletionData_t*>::~CTSQueue()
  T CTestHarness::~CTestHarness()
- T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
  T CThreadSafeMemoryPool::Alloc(unsigned int)
  T CThreadSafeMemoryPool::CThreadSafeMemoryPool(int, int, int)
@@ -1769,6 +1796,7 @@
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::ClaimMemory(void*)
+ T CValidator::IsClaimed(void*)
  T CValidator::Pop()
  T CValidator::Push(char const*, void*, char const*)
  T CVariableBitStringBase::AllocInts(int)
@@ -1811,6 +1839,7 @@
  T CWorkThreadPool::HasWorkItemsToProcess() const
  T CWorkThreadPool::OnWorkItemCompleted(CWorkItem*)
  T CWorkThreadPool::PreallocateThreads()
+ T CWorkThreadPool::ReleaseAllWorkItems()
  T CWorkThreadPool::SetWorkThreadAutoConstruct(int, IWorkThreadFactory*, EWorkThreadPoolHeuristic)
  T CWorkThreadPool::StartWorkThread(CWorkThread*, int)
  T CWorkThreadPool::StartWorkThreads()
@@ -1860,6 +1889,7 @@
  T ClientProcessMonitor::CMonitoredProcess::~CMonitoredProcess()
  T CloseIPCSpew()
  T ClosePlatformSocket(int)
+ T CompletionData_t* CThreadSafeClassMemoryPool<CompletionData_t>::Alloc<>()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
  T CompletionPortManagerFioFinalize(int, unsigned int)
  T ConCommandBase::AddFlags(unsigned int)
@@ -2965,6 +2995,7 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::CompareAdr(netadr_t const&, bool) const
  T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)
@@ -3133,6 +3164,7 @@
  T unsigned int std::__1::__sort4<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort5<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T void Destruct<CUtlString>(CUtlString*)
  T void PipeDebugParam<ERegKeyRoot>(ERegKeyRoot)
  T void PipeDebugParam<EUniverse>(EUniverse)
  T void PipeDebugParam<bool>(bool)
@@ -3141,6 +3173,11 @@
  T void PipeDebugParam<unsigned char>(unsigned char*)
  T void PipeDebugParam<unsigned int>(unsigned int)
  T void PipeDebugParam<unsigned int>(unsigned int*)
+ T void RecursiveValidate<CTCPConnection>(CTCPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CUDPConnection>(CUDPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*)
+ T void RecursiveValidate<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*)
+ T void RecursiveValidate<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__insertion_sort_3<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T void std::__1::__sort<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -3212,8 +3249,12 @@
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
  b (anonymous namespace)::CMsgAuthTicket_reflection_
+ b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
+ b (anonymous namespace)::CMsgIPAddress_descriptor_
+ b (anonymous namespace)::CMsgIPAddress_reflection_
  b (anonymous namespace)::CMsgMulti_descriptor_
  b (anonymous namespace)::CMsgMulti_reflection_
+ b (anonymous namespace)::CMsgProtoBufHeader_default_oneof_instance_
  b (anonymous namespace)::CMsgProtoBufHeader_descriptor_
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
@@ -3256,7 +3297,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_375_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_50_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
@@ -3350,6 +3391,8 @@
  b guard variable for SteamStdLib::CommandLine()::g_CmdLine
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b hksKVNameRequestHeaders
  b hksSetCookie
  b id_callback
@@ -3377,6 +3420,8 @@
  b num_disable
  b pbe_algs
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b realloc_debug_func
  b s_AssertFailedNotifyFunc
  b s_CurrentRoutingIDPtr
@@ -3395,6 +3440,7 @@
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
  b s_bSetSigHandler
+ b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_objCloseSocket
  b s_objDisconnect
@@ -3895,7 +3941,6 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
- r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r s_rgCRCTable_Standard
  r s_szSignature2Name
@@ -4034,6 +4079,7 @@
  t _GLOBAL__sub_I_cookiecontainer.cpp
  t _GLOBAL__sub_I_coroutine.cpp
  t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
@@ -4052,6 +4098,7 @@
  t _GLOBAL__sub_I_ipcserver.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
+ t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_keyvaluesignature.cpp
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_memstd.cpp

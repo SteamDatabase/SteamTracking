@@ -332,7 +332,7 @@
     {
         "id": 717,
         "size": 2,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ShutdownLauncher_t>(ShutdownLauncher_t*)"
+        "posted_in": "CSiteServerUIQuitJob::BYieldingRunJobFromHTTPRequest(CHTTPServerRequest*, char const*)"
     },
     {
         "id": 718,
@@ -671,8 +671,8 @@
     },
     {
         "id": 856,
-        "size": 1,
-        "posted_in": "CUserFriends::OpenFriendsDialog()"
+        "size": 2,
+        "posted_in": "CUserFriends::OpenFriendsDialog(bool, bool)"
     },
     {
         "id": 901,
@@ -735,16 +735,6 @@
         "posted_in": "CUser::NewLoginKeyFromServer(char const*)"
     },
     {
-        "id": 922,
-        "size": 4,
-        "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
-    },
-    {
-        "id": 923,
-        "size": 4,
-        "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
-    },
-    {
         "id": 924,
         "size": 12,
         "posted_in": "CClientDRMDownloadJob::BYieldingRunAPIJob()"
@@ -753,21 +743,6 @@
         "id": 928,
         "size": 4,
         "posted_in": "CClientJobGetAppOwnershipTicketResponse::BYieldingRunClientJob(IMsgNetPacket*)"
-    },
-    {
-        "id": 933,
-        "size": 4,
-        "posted_in": "CClientJobRequestForgottenPasswordEmail::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 934,
-        "size": 4,
-        "posted_in": "CClientJobResetForgottenPassword::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 935,
-        "size": 4,
-        "posted_in": "CCMInterface::RecvPkt(CNetPacket*)"
     },
     {
         "id": 936,
@@ -880,11 +855,6 @@
         "posted_in": "CClientJobReceiveFriendMessageHistory::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
-        "id": 964,
-        "size": 36,
-        "posted_in": "CClientJobTestAvailablePassword::BYieldingRunAPIJob()"
-    },
-    {
         "id": 965,
         "size": 256,
         "posted_in": "CClientJobVanityURLChangedNotification::BYieldingRunClientJob(IMsgNetPacket*)"
@@ -953,21 +923,6 @@
         "id": 981,
         "size": 8,
         "posted_in": "CClientJobGetTwoFactorDetails::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 982,
-        "size": 8,
-        "posted_in": "CClientJobRecoverAuthenticator::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 983,
-        "size": 4,
-        "posted_in": "CClientJobValidatePasswordResetCodeAndSendSms::BYieldingRunAPIJob()"
-    },
-    {
-        "id": 984,
-        "size": 8,
-        "posted_in": "CClientJobRequestGetAccountResetDetails::BYieldingRunAPIJob()"
     },
     {
         "id": 985,
@@ -2373,6 +2328,26 @@
         "id": 4626,
         "size": 4,
         "posted_in": "CClientJobUploadBroadcastThumbnail::StopUploading(EBroadcastUploadResult)"
+    },
+    {
+        "id": 4627,
+        "size": 1,
+        "posted_in": "CClientVideo::WebRTCStartSession(unsigned long long, CSteamID const&)"
+    },
+    {
+        "id": 4628,
+        "size": 1,
+        "posted_in": "CClientVideo::WebRTCStopSession()"
+    },
+    {
+        "id": 4629,
+        "size": 1,
+        "posted_in": "CClientVideo::WebRTCSetAnswer(char const*)"
+    },
+    {
+        "id": 4630,
+        "size": 1284,
+        "posted_in": "CClientVideo::WebRTCAddRemoteCandidate(char const*, int, char const*)"
     },
     {
         "id": 4700,

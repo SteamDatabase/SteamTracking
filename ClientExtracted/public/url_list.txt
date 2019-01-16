@@ -100,6 +100,12 @@ SteamIDAppTradingCardsPage
 	method		"internal"
 	filter		"profile"
 }
+SteamIDBadgeInfo
+{
+	url			"%community%/%mystuff%/ajaxgetbadgeinfo/%p1%/"
+	method		"internal"
+	filter		"profile"
+}
 SteamDiscussions
 {
 	url			"%community%/discussions/"
@@ -769,6 +775,12 @@ CommunityMarketItemPicker
 	url			"%community%/profiles/%p1%/inventory/?market=1&appid=%p2%&hashname=%p3%&moveupevent=%p4%"
 	method		"internal"
 	filter		"profile"
+}
+ChatRoot
+{
+	url			"%chat%"
+	method		"internal"
+	filter		"friends"
 }
 Chat
 {

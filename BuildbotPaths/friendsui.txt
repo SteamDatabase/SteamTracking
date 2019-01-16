@@ -1,9 +1,9 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/friendsettingscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowcontroller.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/sharedconnectioncontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
@@ -12,7 +12,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/../clientui/sharedconnectioncontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/ChatRoomDlg.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/FriendsListSubPanel.cpp
@@ -40,6 +39,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/DialogManager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp

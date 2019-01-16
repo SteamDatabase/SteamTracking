@@ -171,7 +171,7 @@ public:
     virtual unknown_ret GetEstimatedBitsPerSecond(int, bool) = 0;
     virtual unknown_ret GetPeakSample(int, bool) = 0;
     virtual unknown_ret SendResumeRequest(int) = 0;
-    virtual unknown_ret OpenFriendsDialog() = 0;
+    virtual unknown_ret OpenFriendsDialog(bool, bool) = 0;
     virtual unknown_ret OpenChatDialog(CSteamID) = 0;
     virtual unknown_ret OpenInviteToTradeDialog(CSteamID) = 0;
     virtual unknown_ret StartChatRoomVoiceSpeaking(CSteamID, CSteamID) = 0;

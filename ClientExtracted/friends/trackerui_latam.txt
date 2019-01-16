@@ -1285,7 +1285,11 @@
 "[english]Steam_Settings_Browser_ClearWebCacheMsg"	"Delete all files in the built-in web browser cache?"
 "Friends_WhenGroupEventsOrAnnouncementsHappen"	"Para anuncios y eventos de grupo"
 "[english]Friends_WhenGroupEventsOrAnnouncementsHappen"	"For Group events and announcements"
+"Voice_Settings_NewTabTitle"	"Voz en la partida"
+"[english]Voice_Settings_NewTabTitle"	"In-Game Voice"
 "Friends_Voice_PushToMute"	"Utilizar una tecla \"pulsar para silenciar\" para dejar de transmitir la voz"
 "[english]Friends_Voice_PushToMute"	"Use a push-to-mute key to mute voice"
+"Friends_ChatNoTextNotification_Info"	"te envió un mensaje"
+"[english]Friends_ChatNoTextNotification_Info"	"sent you a message"
 }
 }

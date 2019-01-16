@@ -36,6 +36,7 @@
  B CMemoryPool::g_ReportFunc
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
+ B CMsgIPAddress::default_instance_
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
  B CMsgProtobufWrapped::default_instance_
@@ -411,6 +412,7 @@
  D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
+ D typeinfo for CMsgIPAddress
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
  D typeinfo for CMsgProtobufWrapped
@@ -430,6 +432,7 @@
  D typeinfo for COpenSSLTicketKeyMgr
  D typeinfo for CPathString
  D typeinfo for CProtoBufNetPacket
+ D typeinfo for CRTMPStream
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CRefCounted1<IHTTPStreamingResponseHandler, CRefCountServiceBase<true, CRefMT> >
@@ -457,10 +460,10 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for CVideoDecoder
- D typeinfo for CVideoDecoder::CQueuedOutput
+ D typeinfo for CVideoDecoderFFmpeg
+ D typeinfo for CVideoDecoderFFmpeg::CQueuedOutput
  D typeinfo for CVideoDecoderLibav
- D typeinfo for CVideoEncoderH264
+ D typeinfo for CVideoEncoderX264
  D typeinfo for CVideoFileStream
  D typeinfo for CVideoMPDParser
  D typeinfo for CVideoManifest
@@ -489,12 +492,14 @@
  D typeinfo for IAudioResampler
  D typeinfo for IConnectionCallback
  D typeinfo for IDebugStatsSystem
+ D typeinfo for IDecodedVideoFrame
  D typeinfo for IHTTPRedirectHandler
  D typeinfo for IHTTPStreamingResponseHandler
  D typeinfo for IKeyValuesSystem
  D typeinfo for IMemAlloc
  D typeinfo for IMsgNetPacket
  D typeinfo for INetSSLConnectionCallback
+ D typeinfo for IRTMPStream
  D typeinfo for ISSLCertificate
  D typeinfo for ISSLConnection
  D typeinfo for ISSLConnectionCallback
@@ -503,7 +508,7 @@
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
  D typeinfo for IVideoDecoder
- D typeinfo for IVideoEncoderH264
+ D typeinfo for IVideoEncoder
  D typeinfo for IVideoPlayer
  D typeinfo for IVideoYUVFrame
  D typeinfo for IWorkThreadFactory
@@ -576,6 +581,7 @@
  D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
+ D vtable for CMsgIPAddress
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
@@ -594,6 +600,7 @@
  D vtable for COpenSSLTicketKeyMgr
  D vtable for CPathString
  D vtable for CProtoBufNetPacket
+ D vtable for CRTMPStream
  D vtable for CScheduledFunction<CHTTPClientConnection>
  D vtable for CScheduledFunction<CNetConnection>
  D vtable for CScheduledFunction<COpenSSLConnection>
@@ -617,10 +624,10 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for CVideoDecoder
- D vtable for CVideoDecoder::CQueuedOutput
+ D vtable for CVideoDecoderFFmpeg
+ D vtable for CVideoDecoderFFmpeg::CQueuedOutput
  D vtable for CVideoDecoderLibav
- D vtable for CVideoEncoderH264
+ D vtable for CVideoEncoderX264
  D vtable for CVideoFileStream
  D vtable for CVideoMPDParser
  D vtable for CVideoManifest
@@ -655,6 +662,7 @@
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
  R DES_SPtrans
+ R k_ipv6Bytes_Any
  R k_rgchSystemKey
  R k_rgchUnknown
  R typeinfo name for CAlignedBufferBase
@@ -694,6 +702,7 @@
  R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
+ R typeinfo name for CMsgIPAddress
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
  R typeinfo name for CMsgProtobufWrapped
@@ -713,6 +722,7 @@
  R typeinfo name for COpenSSLTicketKeyMgr
  R typeinfo name for CPathString
  R typeinfo name for CProtoBufNetPacket
+ R typeinfo name for CRTMPStream
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CRefCounted1<IHTTPStreamingResponseHandler, CRefCountServiceBase<true, CRefMT> >
@@ -811,10 +821,10 @@
  R typeinfo name for CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
  R typeinfo name for CVideoDecodedFrame
- R typeinfo name for CVideoDecoder
- R typeinfo name for CVideoDecoder::CQueuedOutput
+ R typeinfo name for CVideoDecoderFFmpeg
+ R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutput
  R typeinfo name for CVideoDecoderLibav
- R typeinfo name for CVideoEncoderH264
+ R typeinfo name for CVideoEncoderX264
  R typeinfo name for CVideoFileStream
  R typeinfo name for CVideoMPDParser
  R typeinfo name for CVideoManifest
@@ -844,12 +854,14 @@
  R typeinfo name for IAudioResampler
  R typeinfo name for IConnectionCallback
  R typeinfo name for IDebugStatsSystem
+ R typeinfo name for IDecodedVideoFrame
  R typeinfo name for IHTTPRedirectHandler
  R typeinfo name for IHTTPStreamingResponseHandler
  R typeinfo name for IKeyValuesSystem
  R typeinfo name for IMemAlloc
  R typeinfo name for IMsgNetPacket
  R typeinfo name for INetSSLConnectionCallback
+ R typeinfo name for IRTMPStream
  R typeinfo name for ISSLCertificate
  R typeinfo name for ISSLConnection
  R typeinfo name for ISSLConnectionCallback
@@ -858,7 +870,7 @@
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
  R typeinfo name for IVideoDecoder
- R typeinfo name for IVideoEncoderH264
+ R typeinfo name for IVideoEncoder
  R typeinfo name for IVideoPlayer
  R typeinfo name for IVideoYUVFrame
  R typeinfo name for IWorkThreadFactory
@@ -1155,6 +1167,7 @@
  T BRemoveDirectory(char const*)
  T BRemoveDirectoryRecursive(char const*)
  T BRenameFile(char const*, char const*)
+ T BScaleImageNV12
  T BScaleImageYUV
  T BUF_MEM_free
  T BUF_MEM_grow
@@ -1307,7 +1320,7 @@
  T CClientStructNetPacket::GetTargetJobName() const
  T CClientStructNetPacket::PubData() const
  T CClientStructNetPacket::SetHConnection(unsigned int)
- T CClientStructNetPacket::SetHdrIP(unsigned int)
+ T CClientStructNetPacket::SetHdrIP(netadr_t const&)
  T CClientStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CClientStructNetPacket::SetSessionID(int)
  T CClientStructNetPacket::SetSourceJobID(unsigned long long)
@@ -1349,7 +1362,7 @@
  T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::GetSymmetricEncryptedSize(unsigned int)
- T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
+ T CCrypto::RSAEncrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, CRSAPublicKey const&)
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::ValidateStatics(CValidator&, char const*)
@@ -1657,7 +1670,6 @@
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogInstance::_LogEvent(char const*, char*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
- T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -1732,6 +1744,21 @@
  T CMsgBase_t<MsgHdr_t>::~CMsgBase_t()
  T CMsgBase_t<UDPPktHdr_t>::CMsgBase_t(unsigned int, unsigned int, unsigned char*, unsigned int, unsigned int)
  T CMsgBase_t<UDPPktHdr_t>::~CMsgBase_t()
+ T CMsgIPAddress::ByteSize() const
+ T CMsgIPAddress::CMsgIPAddress()
+ T CMsgIPAddress::Clear()
+ T CMsgIPAddress::GetCachedSize() const
+ T CMsgIPAddress::GetMetadata() const
+ T CMsgIPAddress::IsInitialized() const
+ T CMsgIPAddress::MergeFrom(CMsgIPAddress const&)
+ T CMsgIPAddress::New() const
+ T CMsgIPAddress::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgIPAddress::SetCachedSize(int) const
+ T CMsgIPAddress::SharedCtor()
+ T CMsgIPAddress::clear_ip()
+ T CMsgIPAddress::mutable_v6()
+ T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgIPAddress::~CMsgIPAddress()
  T CMsgMulti::ByteSize() const
  T CMsgMulti::CMsgMulti()
  T CMsgMulti::Clear()
@@ -1759,10 +1786,16 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::clear_ip_addr()
  T CMsgProtoBufHeader::mutable_error_message()
+ T CMsgProtoBufHeader::mutable_ip_v6()
  T CMsgProtoBufHeader::mutable_target_job_name()
+ T CMsgProtoBufHeader::mutable_wg_token()
  T CMsgProtoBufHeader::set_error_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_ip_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_ip_v6(void const*, unsigned long)
  T CMsgProtoBufHeader::set_target_job_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_wg_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::~CMsgProtoBufHeader()
  T CMsgProtobufWrapped::ByteSize() const
  T CMsgProtobufWrapped::CMsgProtobufWrapped()
@@ -2034,7 +2067,7 @@
  T CProtoBufNetPacket::PubData() const
  T CProtoBufNetPacket::RebuildPacket()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
- T CProtoBufNetPacket::SetHdrIP(unsigned int)
+ T CProtoBufNetPacket::SetHdrIP(netadr_t const&)
  T CProtoBufNetPacket::SetMsgTraceTag(unsigned long long)
  T CProtoBufNetPacket::SetSessionID(int)
  T CProtoBufNetPacket::SetSourceJobID(unsigned long long)
@@ -2046,6 +2079,14 @@
  T CRC32_ProcessBuffer(unsigned int*, void const*, int)
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRL_DIST_POINTS_free
+ T CRTMPStream::BWriteAVCCInitData(unsigned char const*, int, unsigned char const*, int, CUtlBuffer&)
+ T CRTMPStream::CRTMPStream()
+ T CRTMPStream::CloseStream()
+ T CRTMPStream::ConnectStream(char const*)
+ T CRTMPStream::InitAudio(int, int, int, int, int, unsigned char const*, int)
+ T CRTMPStream::InitVideo(int, int, int, int, int, int, unsigned char const*, int, unsigned char const*, int)
+ T CRTMPStream::SendFrame(bool, bool, long long, long long, unsigned char const*, int)
+ T CRTMPStream::~CRTMPStream()
  T CRTime::CRTime()
  T CRTime::CSecsPassed() const
  T CRTime::RTime32BeginningOfDay(unsigned int)
@@ -2292,7 +2333,7 @@
  T CStructNetPacket::GetTargetJobName() const
  T CStructNetPacket::PubData() const
  T CStructNetPacket::SetHConnection(unsigned int)
- T CStructNetPacket::SetHdrIP(unsigned int)
+ T CStructNetPacket::SetHdrIP(netadr_t const&)
  T CStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CStructNetPacket::SetSessionID(int)
  T CStructNetPacket::SetSourceJobID(unsigned long long)
@@ -2358,6 +2399,7 @@
  T CTHash<CTCPConnection*, unsigned int>::PvRecordFind(unsigned int) const
  T CTHash<CTCPConnection*, unsigned int>::PvRecordInsert(unsigned int)
  T CTHash<CTCPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CTCPConnection*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<CTCPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CTCPConnection*, unsigned int>::Remove(unsigned int)
  T CTHash<CTCPConnection*, unsigned int>::RemoveAll()
  T CTHash<CTCPConnection*, unsigned int>::RemoveFromHash(CTCPConnection**)
@@ -2368,6 +2410,7 @@
  T CTHash<CUDPConnection*, unsigned int>::PvRecordFind(unsigned int) const
  T CTHash<CUDPConnection*, unsigned int>::PvRecordInsert(unsigned int)
  T CTHash<CUDPConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CUDPConnection*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<CUDPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::Remove(unsigned int)
  T CTHash<CUDPConnection*, unsigned int>::RemoveAll()
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
@@ -2379,6 +2422,7 @@
  T CTHash<CWebSocketConnection*, unsigned int>::PvRecordFind(unsigned int) const
  T CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsert(unsigned int)
  T CTHash<CWebSocketConnection*, unsigned int>::PvRecordInsertInternal(CTHash<CWebSocketConnection*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<CWebSocketConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::Remove(unsigned int)
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
@@ -2387,6 +2431,7 @@
  T CTHash<ITCPHostCallback*, unsigned int>::Init(int, int)
  T CTHash<ITCPHostCallback*, unsigned int>::Purge()
  T CTHash<ITCPHostCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<ITCPHostCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<ITCPHostCallback*, unsigned int>::Remove(unsigned int)
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
@@ -2398,6 +2443,7 @@
  T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordFind(unsigned int) const
  T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsert(unsigned int)
  T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsertInternal(CTHash<IUDPSocketCallback*, unsigned int>::RecHdr_t*, unsigned int)
+ T CTHash<IUDPSocketCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<IUDPSocketCallback*, unsigned int>::Remove(unsigned int)
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
@@ -2443,7 +2489,6 @@
  T CTSQueue<CompletionData_t*>::ValidateDataStructureOnly(CValidator&, char const*)
  T CTSQueue<CompletionData_t*>::~CTSQueue()
  T CTestHarness::~CTestHarness()
- T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
  T CThreadSafeMemoryPool::Alloc(unsigned int)
  T CThreadSafeMemoryPool::CThreadSafeMemoryPool(int, int, int)
@@ -3139,10 +3184,11 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::GrowVector(int)
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::InsertBefore(int, CVideoDecoder::CQueuedOutput* const&)
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::Remove(int)
- T CUtlVector<CVideoDecoder::CQueuedOutput*, CUtlMemory<CVideoDecoder::CQueuedOutput*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::GrowVector(int)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::InsertBefore(int, CVideoDecoderFFmpeg::CQueuedOutput* const&)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::PurgeAndDeleteElements()
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::Remove(int)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::GrowVector(int)
@@ -3254,23 +3300,28 @@
  T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::~CVideoDecodedFrame()
- T CVideoDecoder::BDecodeFrame(unsigned char const*, int, long long, long long)
- T CVideoDecoder::BDecodeFrameInternal(AVPacket const*, bool*)
- T CVideoDecoder::BInitH264AVCC(unsigned char const*, int)
- T CVideoDecoder::CQueuedOutput::Height() const
- T CVideoDecoder::CQueuedOutput::UPlane() const
- T CVideoDecoder::CQueuedOutput::UStride() const
- T CVideoDecoder::CQueuedOutput::VPlane() const
- T CVideoDecoder::CQueuedOutput::VStride() const
- T CVideoDecoder::CQueuedOutput::Width() const
- T CVideoDecoder::CQueuedOutput::YPlane() const
- T CVideoDecoder::CQueuedOutput::YStride() const
- T CVideoDecoder::CQueuedOutput::~CQueuedOutput()
- T CVideoDecoder::CVideoDecoder()
- T CVideoDecoder::FlushDecoder()
- T CVideoDecoder::FreeDecodedFrame(IVideoYUVFrame*)
- T CVideoDecoder::GetDecodedFrame(long long*)
- T CVideoDecoder::~CVideoDecoder()
+ T CVideoDecoderFFmpeg::BDecodeFrame(unsigned char const*, int, long long, long long)
+ T CVideoDecoderFFmpeg::BDecodeFrameInternal(AVPacket const*, bool*)
+ T CVideoDecoderFFmpeg::BInitH264AVCC(unsigned char const*, int)
+ T CVideoDecoderFFmpeg::CQueuedOutput::GetNV12Frame() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::GetPTS() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::GetPixelFormat() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::GetYUV420Frame() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::Height() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::UPlane() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::UStride() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::VPlane() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::VStride() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::Width() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::YPlane() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::YStride() const
+ T CVideoDecoderFFmpeg::CQueuedOutput::~CQueuedOutput()
+ T CVideoDecoderFFmpeg::CVideoDecoderFFmpeg()
+ T CVideoDecoderFFmpeg::FlushDecoder()
+ T CVideoDecoderFFmpeg::FreeDecodedFrame(IDecodedVideoFrame const*)
+ T CVideoDecoderFFmpeg::GetDecodedFrame()
+ T CVideoDecoderFFmpeg::Shutdown()
+ T CVideoDecoderFFmpeg::~CVideoDecoderFFmpeg()
  T CVideoDecoderLibav::BAtEndOfStream()
  T CVideoDecoderLibav::BDecodeAudio(CUtlBuffer*, long long*, AVPacket&)
  T CVideoDecoderLibav::BDecodeAudioQueueVideo(CUtlBuffer*, long long*, long long*, bool*)
@@ -3303,17 +3354,19 @@
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
  T CVideoDecoderLibav::~CVideoDecoderLibav()
- T CVideoEncoderH264::BEncodeFrame(IVideoYUVFrame*, long long, bool)
- T CVideoEncoderH264::BEncodeFrameInternal(x264_picture_t*)
- T CVideoEncoderH264::BInit(int, int, int, int)
- T CVideoEncoderH264::CVideoEncoderH264()
- T CVideoEncoderH264::Flush()
- T CVideoEncoderH264::GetEncodedFrame()
- T CVideoEncoderH264::GetHeight()
- T CVideoEncoderH264::GetPPS(unsigned char**, int*)
- T CVideoEncoderH264::GetSPS(unsigned char**, int*)
- T CVideoEncoderH264::GetWidth()
- T CVideoEncoderH264::~CVideoEncoderH264()
+ T CVideoEncoderX264::BEncodeFrame(IDecodedVideoFrame const*, bool)
+ T CVideoEncoderX264::BEncodeFrameInternal(x264_picture_t*)
+ T CVideoEncoderX264::BInit(int, int, int, int, char const*)
+ T CVideoEncoderX264::CVideoEncoderX264()
+ T CVideoEncoderX264::Flush()
+ T CVideoEncoderX264::FreeEncodedFrame(VideoEncodedFrame_t const*)
+ T CVideoEncoderX264::GetEncodedFrame()
+ T CVideoEncoderX264::GetHeight()
+ T CVideoEncoderX264::GetPPS(unsigned char**, int*)
+ T CVideoEncoderX264::GetSPS(unsigned char**, int*)
+ T CVideoEncoderX264::GetWidth()
+ T CVideoEncoderX264::Shutdown()
+ T CVideoEncoderX264::~CVideoEncoderX264()
  T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
  T CVideoFileStream::BLoadFromExternalBuffer(CUtlBuffer*)
@@ -3610,6 +3663,7 @@
  T CWorkThreadPool::HasWorkItemsToProcess() const
  T CWorkThreadPool::OnWorkItemCompleted(CWorkItem*)
  T CWorkThreadPool::PreallocateThreads()
+ T CWorkThreadPool::ReleaseAllWorkItems()
  T CWorkThreadPool::SetThreadStackSize(unsigned long)
  T CWorkThreadPool::SetWorkThreadAutoConstruct(int, IWorkThreadFactory*, EWorkThreadPoolHeuristic)
  T CWorkThreadPool::StartWorkThread(CWorkThread*, int)
@@ -3636,6 +3690,7 @@
  T ClearWritingMiniDump
  T ClosePlatformSocket(int)
  T Common_FreeGlobals()
+ T CompletionData_t* CThreadSafeClassMemoryPool<CompletionData_t>::Alloc<>()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
  T CompletionPortManagerFioFinalize(int, unsigned int)
  T ConCommandBase::AddFlags(unsigned int)
@@ -3690,11 +3745,12 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
+ T CreateRTMPStream
  T CreateTempFileName(CUtlString*)
  T CreateThreadMutex()
  T CreateVProfile
- T CreateVideoDecoder
- T CreateVideoEncoderH264
+ T CreateVideoDecoderFFmpeg
+ T CreateVideoEncoderX264
  T CreateVideoPlayer
  T DES_SPtrans
  T DES_cfb64_encrypt
@@ -3755,9 +3811,10 @@
  T DefaultSpewFunc(SpewType_t, char const*)
  T DeleteAudioFileDecoder
  T DeleteAudioResampler
+ T DeleteRTMPStream
  T DeleteThreadMutex(SteamThreadTools::CThreadMutex*)
  T DeleteVideoDecoder
- T DeleteVideoEncoderH264
+ T DeleteVideoEncoder
  T DeleteVideoPlayer
  T DeleteVideoPlayerManager()
  T DeserializeVaArgs(char const*, char const*, char*, int)
@@ -4132,7 +4189,6 @@
  T FioWrite(int, void const*, unsigned long, unsigned long*)
  T FreeCircularBuffer(CCircularBuffer*)
  T FreeDeletedPackets()
- T FreeEncodedFrame
  T FreeImageYUV
  T GCoroutineMgr()
  T GENERAL_NAMES_free
@@ -4514,7 +4570,6 @@
  T ShouldUseNewAssertDialog
  T ShutdownPlatformSocket(int, int)
  T SortRepresentationByBandwidth(VideoRepresentation_t* const&, VideoRepresentation_t* const&)
- T SpewOutputFunc
  T StaticFileWriterThread()
  T SteamThreadTools::CRWLockAutoRead<SteamThreadTools::CThreadRWLock>::~CRWLockAutoRead()
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
@@ -5268,17 +5323,20 @@
  T md5_block_asm_data_order
  T n_ssl3_mac
  T name_cmp
- T netadr_t::BlockingResolveAndSetFromString(char const*)
+ T netadr_t::BConvertMappedToIPv4()
+ T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
  T netadr_t::HasIP() const
  T netadr_t::IsLoopback() const
+ T netadr_t::IsMappedIPv4() const
+ T netadr_t::IsReservedAdr() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToSockadr(void*, unsigned long) const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T netadr_t::operator<(netadr_t const&) const
- T netmask_t::SetFromString(char const*)
+ T netmask_t::SetFromString(char const*, bool)
  T non-virtual thunk to CHTTPClientConnection::BVerifyCertificate(COpenSSLConnection*, COpenSSLCertificate const&)
  T non-virtual thunk to CHTTPClientConnection::HandleSSLFailure(EResult)
  T non-virtual thunk to CHTTPClientConnection::RecvPlaintext(unsigned char*, unsigned int)
@@ -5299,6 +5357,15 @@
  T non-virtual thunk to COpenSSLConnection::ShutdownConnection()
  T non-virtual thunk to CUDPConnection::OnUDPFatalError(int, unsigned int)
  T non-virtual thunk to CUDPConnection::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::Height() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::UPlane() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::UStride() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::VPlane() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::VStride() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::Width() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::YPlane() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::YStride() const
+ T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutput::~CQueuedOutput()
  T non-virtual thunk to CVideoFileStream::~CVideoFileStream()
  T non-virtual thunk to CWebSocketConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
  T non-virtual thunk to CWebSocketConnection::ConnectCompleted(unsigned int)
@@ -5738,6 +5805,12 @@
  T v2i_GENERAL_NAME_ex
  T void Destruct<CCookieContainer::CCookieInfo>(CCookieContainer::CCookieInfo*)
  T void Destruct<CHTTPRequestCache::CachedFileLRUData_t>(CHTTPRequestCache::CachedFileLRUData_t*)
+ T void Destruct<CUtlString>(CUtlString*)
+ T void RecursiveValidate<CTCPConnection>(CTCPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CUDPConnection>(CUDPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*)
+ T void RecursiveValidate<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*)
+ T void RecursiveValidate<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*)
  T void std::__1::__insertion_sort_3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -5832,6 +5905,7 @@
  av_lockmgr_register
  av_log_set_callback
  av_malloc_tracked
+ av_new_packet
  av_opt_set_int
  av_packet_unref
  av_read_frame
@@ -5842,6 +5916,7 @@
  av_sample_fmt_is_planar
  av_samples_get_buffer_size
  av_seek_frame
+ av_write_frame
  avcodec_alloc_context3
  avcodec_close
  avcodec_decode_audio4
@@ -5851,12 +5926,21 @@
  avcodec_free_context
  avcodec_open2
  avcodec_parameters_to_context
+ avcodec_receive_frame
  avcodec_register_all
+ avcodec_send_packet
  avformat_alloc_context
+ avformat_alloc_output_context2
  avformat_close_input
  avformat_find_stream_info
+ avformat_free_context
+ avformat_network_init
+ avformat_new_stream
  avformat_open_input
+ avformat_write_header
  avio_alloc_context
+ avio_close
+ avio_open2
  avresample_alloc_context
  avresample_close
  avresample_convert
@@ -5873,8 +5957,12 @@
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
  b (anonymous namespace)::CMsgAuthTicket_reflection_
+ b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
+ b (anonymous namespace)::CMsgIPAddress_descriptor_
+ b (anonymous namespace)::CMsgIPAddress_reflection_
  b (anonymous namespace)::CMsgMulti_descriptor_
  b (anonymous namespace)::CMsgMulti_reflection_
+ b (anonymous namespace)::CMsgProtoBufHeader_default_oneof_instance_
  b (anonymous namespace)::CMsgProtoBufHeader_descriptor_
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
@@ -5931,7 +6019,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_375_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_50_26
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b SHA1.m
@@ -6023,6 +6111,8 @@
  b guard variable for StaticFileWriterThread()::s_pFileWriterThread
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b hksKVNameRequestHeaders
  b hksSetCookie
  b id_callback
@@ -6034,6 +6124,7 @@
  b intr_signal
  b is_a_tty
  b k_InvalidClientID
+ b k_uNALUStartCodeLong
  b libyuv::use_reference_impl_
  b locking_callback
  b locking_threadid
@@ -6050,6 +6141,8 @@
  b pbe_algs
  b prompt_string
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b read_string_inner.ps
  b realloc_debug_func
  b s_AssertFailedNotifyFunc
@@ -6549,9 +6642,9 @@
  ftell
  fwrite
  fwrite$UNIX2003
+ getaddrinfo
  getcwd
  getenv
- gethostbyname
  getpid
  getsockname
  getsockname$UNIX2003
@@ -6780,7 +6873,6 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
- r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r rand8
  r s_rgCRCTable_Standard
@@ -6978,7 +7070,6 @@
  t SCT_free
  t SanitizeHostNameForSSL(char const*)
  t SetEncoding
- t SpewOutputFunc(SpewType_t, char const*)
  t StaticCharacters(void*, unsigned char const*, int)
  t StaticEndElement(void*, unsigned char const*, unsigned char const*, unsigned char const*)
  t StaticErrorHandler(tagXMLPARSER*)
@@ -7009,6 +7100,7 @@
  t _GLOBAL__sub_I_cookiecontainer.cpp
  t _GLOBAL__sub_I_coroutine.cpp
  t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
@@ -7024,6 +7116,7 @@
  t _GLOBAL__sub_I_iopollinghelpers_osx.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
+ t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_memstd.cpp
  t _GLOBAL__sub_I_minidump.cpp
@@ -7072,6 +7165,7 @@
  t _GLOBAL__sub_I_videompdparser.cpp
  t _GLOBAL__sub_I_videoplayer.cpp
  t _GLOBAL__sub_I_videoplayermanager.cpp
+ t _GLOBAL__sub_I_videortmp.cpp
  t _GLOBAL__sub_I_videoutils.cpp
  t _GLOBAL__sub_I_videowebmcuesparser.cpp
  t _GLOBAL__sub_I_vprof.cpp

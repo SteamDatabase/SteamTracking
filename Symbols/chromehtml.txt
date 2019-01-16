@@ -57,6 +57,7 @@
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
  B CMsgImeSetComposition::default_instance_
+ B CMsgInspectElement::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -110,6 +111,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetForegroundWindow::default_instance_
  B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
@@ -218,6 +220,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgSearchResults>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetCookie>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetCursor>
+ D typeinfo for CHTMLProtoBufMsg<CMsgSetForegroundWindow>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
@@ -292,6 +295,7 @@
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
  D typeinfo for CMsgImeSetComposition
+ D typeinfo for CMsgInspectElement
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -345,6 +349,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetForegroundWindow
  D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
@@ -454,6 +459,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgSearchResults>
  D vtable for CHTMLProtoBufMsg<CMsgSetCookie>
  D vtable for CHTMLProtoBufMsg<CMsgSetCursor>
+ D vtable for CHTMLProtoBufMsg<CMsgSetForegroundWindow>
  D vtable for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  D vtable for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  D vtable for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
@@ -528,6 +534,7 @@
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
  D vtable for CMsgImeSetComposition
+ D vtable for CMsgInspectElement
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -581,6 +588,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetForegroundWindow
  D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
@@ -702,6 +710,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgSearchResults>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetCookie>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetCursor>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgSetForegroundWindow>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
@@ -776,6 +785,7 @@
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
  R typeinfo name for CMsgImeSetComposition
+ R typeinfo name for CMsgInspectElement
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -829,6 +839,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetForegroundWindow
  R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
@@ -1155,6 +1166,8 @@
  T CHTMLProtoBufMsg<CMsgSetCookie>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetCursor>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetCursor>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgSetForegroundWindow>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgSetForegroundWindow>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetHTMLTitle>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetHTMLTitle>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -1900,6 +1913,17 @@
  T CMsgImeSetComposition::mutable_text()
  T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
+ T CMsgInspectElement::ByteSize() const
+ T CMsgInspectElement::CMsgInspectElement()
+ T CMsgInspectElement::Clear()
+ T CMsgInspectElement::GetCachedSize() const
+ T CMsgInspectElement::GetMetadata() const
+ T CMsgInspectElement::IsInitialized() const
+ T CMsgInspectElement::MergeFrom(CMsgInspectElement const&)
+ T CMsgInspectElement::New() const
+ T CMsgInspectElement::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgInspectElement::SetCachedSize(int) const
+ T CMsgInspectElement::~CMsgInspectElement()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -2605,6 +2629,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetForegroundWindow::ByteSize() const
+ T CMsgSetForegroundWindow::CMsgSetForegroundWindow()
+ T CMsgSetForegroundWindow::Clear()
+ T CMsgSetForegroundWindow::GetCachedSize() const
+ T CMsgSetForegroundWindow::GetMetadata() const
+ T CMsgSetForegroundWindow::IsInitialized() const
+ T CMsgSetForegroundWindow::MergeFrom(CMsgSetForegroundWindow const&)
+ T CMsgSetForegroundWindow::New() const
+ T CMsgSetForegroundWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetForegroundWindow::SetCachedSize(int) const
+ T CMsgSetForegroundWindow::~CMsgSetForegroundWindow()
  T CMsgSetGameOverlayTargetPIDs::ByteSize() const
  T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
  T CMsgSetGameOverlayTargetPIDs::Clear()
@@ -3453,6 +3488,8 @@
  b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
  b (anonymous namespace)::CMsgImeSetComposition_descriptor_
  b (anonymous namespace)::CMsgImeSetComposition_reflection_
+ b (anonymous namespace)::CMsgInspectElement_descriptor_
+ b (anonymous namespace)::CMsgInspectElement_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -3559,6 +3596,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetForegroundWindow_descriptor_
+ b (anonymous namespace)::CMsgSetForegroundWindow_reflection_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
@@ -3686,6 +3725,7 @@
  memcpy
  memmove
  memset
+ mkdir
  mmap
  munmap
  open
@@ -3758,6 +3798,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgInspectElement_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
@@ -3811,6 +3852,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetForegroundWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_

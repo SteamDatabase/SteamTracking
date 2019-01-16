@@ -3188,7 +3188,7 @@ DropDownMenu.DropDownMenuVisible
 {
 	visibility: collapse;
 	vertical-align: bottom;
-	margin-bottom: 0px;
+	margin-bottom: -10px;
 }
 
 .AdvancedPropertiesButtonVisible #ShowAdvancedProperties

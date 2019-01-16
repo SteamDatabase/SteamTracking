@@ -491,6 +491,7 @@
  T V_FormatAndAppend
  T V_FormatAndAppendTail
  T V_FormatAndAppendV
+ T V_Get2LDFromDomainName
  T V_GetCurrentDirectory
  T V_GetFileExtension
  T V_HtmlEntityDecodeToUTF8
@@ -721,6 +722,7 @@
  b s_UniformStream
  b s_bCPUHasFastREPMOVSB
  b s_bHWAccelCRC32
+ b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  chdir
  close

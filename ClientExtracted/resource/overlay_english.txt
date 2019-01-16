@@ -55,7 +55,11 @@
 "Overlay_Taskbar_Workshop"	"Workshop"
 "Overlay_Taskbar_SteamGuides"		"Community Guides"
 "Overlay_Taskbar_Music"	"Music"
+"Overlay_Taskbar_ForceQuit"	"Force Quit"
 "Overlay_Hotkey_Explain"		"also closes the overlay"
+
+"Overlay_ForceQuit_Title"		"Close Application"
+"Overlay_ForceQuit_Description"		"Unsaved data will be lost."
 
 "Overlay_Playtime_Stats"		"Playtime Stats"
 "Overlay_Playtime_Intro"		"You've played this game"

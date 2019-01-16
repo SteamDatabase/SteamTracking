@@ -94,6 +94,7 @@
 {
 	max-height: calc( 100% - 128px ) ;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 html.ContextMenuPopup .contextMenu

@@ -227,5 +227,6 @@
 "vgui_choosedirectoryname"	"Choose directory name"
 "vgui_HTMLCloseDevTools"	"Close Developer Tools"
 "vgui_HTMLOpenDevTools"		"Open Developer Tools"
+"vgui_HTMLInspectElement"	"Inspect Element"
 }
 }

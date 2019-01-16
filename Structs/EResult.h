@@ -111,4 +111,5 @@ typedef enum EResult
     k_EResultNetworkSendExceeded, // Network send exceeded
     k_EResultAccountsNotFriends, // Accounts not friends
     k_EResultLimitedUserAccount, // Limited user account
+    k_EResultCantRemoveItem, // Cant remove item
 } EResult;

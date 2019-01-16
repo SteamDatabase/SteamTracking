@@ -838,6 +838,10 @@ message CMsgBringWindowToFront {
 	optional uint32 browser_handle = 1;
 }
 
+message CMsgSetForegroundWindow {
+	optional uint32 browser_handle = 1;
+}
+
 message CMsgMaximizeRestoreWindow {
 	optional uint32 browser_handle = 1;
 }
@@ -865,6 +869,12 @@ message CMsgImeCancelComposition {
 }
 
 message CMsgImeCompositionRangeChanged {
+	optional uint32 browser_handle = 1;
+	optional uint32 x = 2;
+	optional uint32 y = 3;
+}
+
+message CMsgInspectElement {
 	optional uint32 browser_handle = 1;
 	optional uint32 x = 2;
 	optional uint32 y = 3;

@@ -45,4 +45,7 @@ public:
     virtual unknown_ret GetVideoURL(unsigned int) = 0;
     virtual unknown_ret GetOPFSettings(unsigned int) = 0;
     virtual unknown_ret GetOPFStringForApp(unsigned int, char*, int, int*) = 0;
+    virtual unknown_ret WebRTCStartResult(bool, char const*) = 0;
+    virtual unknown_ret WebRTCAddCandidate(char const*, int, char const*) = 0;
+    virtual unknown_ret WebRTCGetAnswer(CUtlString*) = 0;
 };

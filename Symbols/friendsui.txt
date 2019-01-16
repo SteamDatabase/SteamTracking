@@ -59,6 +59,7 @@
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
  B CMsgImeSetComposition::default_instance_
+ B CMsgInspectElement::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -112,6 +113,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetForegroundWindow::default_instance_
  B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
@@ -1902,6 +1904,8 @@
  D typeinfo for CColorProperty
  D typeinfo for CCookie
  D typeinfo for CDLLValidate
+ D typeinfo for CDirContentsWatcher
+ D typeinfo for CDirWatcher
  D typeinfo for CEditFriendsGroupsDialog
  D typeinfo for CEditFriendsGroupsPage
  D typeinfo for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -2024,6 +2028,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCommitText>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D typeinfo for CHTMLProtoBufMsg<CMsgInspectElement>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -2150,6 +2155,7 @@
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
  D typeinfo for CMsgImeSetComposition
+ D typeinfo for CMsgInspectElement
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -2203,6 +2209,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetForegroundWindow
  D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
@@ -2255,6 +2262,7 @@
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CSetNicknameDialog
+ D typeinfo for CSharedConnectionController
  D typeinfo for CSharedConnectionController::CCallback_OnMessageReady
  D typeinfo for CSharedConnectionController::CCallback_OnServersConnected
  D typeinfo for CSharedConnectionController::CCallback_OnServersDisconnected
@@ -2668,6 +2676,7 @@
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserMaximizeRestoreWindow::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserMinimizeWindow::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserResizeGripChanged::InitVar()::bAdded
+ D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserSetForegroundWindow::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserSetWindowPosition::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserShowWindow::InitVar()::bAdded
  D vgui::HTMLFramelessPopup::PanelMessageFunc_OnCloseWindow::InitVar()::bAdded
@@ -3247,6 +3256,8 @@
  D vtable for CColorProperty
  D vtable for CCookie
  D vtable for CDLLValidate
+ D vtable for CDirContentsWatcher
+ D vtable for CDirWatcher
  D vtable for CEditFriendsGroupsDialog
  D vtable for CEditFriendsGroupsPage
  D vtable for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -3368,6 +3379,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D vtable for CHTMLProtoBufMsg<CMsgImeCommitText>
  D vtable for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D vtable for CHTMLProtoBufMsg<CMsgInspectElement>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -3494,6 +3506,7 @@
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
  D vtable for CMsgImeSetComposition
+ D vtable for CMsgInspectElement
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -3547,6 +3560,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetForegroundWindow
  D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
@@ -3597,6 +3611,7 @@
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
  D vtable for CSetNicknameDialog
+ D vtable for CSharedConnectionController
  D vtable for CSharedConnectionController::CCallback_OnMessageReady
  D vtable for CSharedConnectionController::CCallback_OnServersConnected
  D vtable for CSharedConnectionController::CCallback_OnServersDisconnected
@@ -3790,6 +3805,7 @@
  Plat_IsInDebugSession
  Plat_IsSteamConsoleMode
  Plat_MSTime64
+ Plat_OutputDebugString
  Plat_localtime
  R DES_SPtrans
  R jpeg_aritab
@@ -3976,6 +3992,8 @@
  R typeinfo name for CColorProperty
  R typeinfo name for CCookie
  R typeinfo name for CDLLValidate
+ R typeinfo name for CDirContentsWatcher
+ R typeinfo name for CDirWatcher
  R typeinfo name for CEditFriendsGroupsDialog
  R typeinfo name for CEditFriendsGroupsPage
  R typeinfo name for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -4098,6 +4116,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCommitText>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgInspectElement>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -4224,6 +4243,7 @@
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
  R typeinfo name for CMsgImeSetComposition
+ R typeinfo name for CMsgInspectElement
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -4277,6 +4297,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetForegroundWindow
  R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
@@ -4329,6 +4350,7 @@
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CSetNicknameDialog
+ R typeinfo name for CSharedConnectionController
  R typeinfo name for CSharedConnectionController::CCallback_OnMessageReady
  R typeinfo name for CSharedConnectionController::CCallback_OnServersConnected
  R typeinfo name for CSharedConnectionController::CCallback_OnServersDisconnected
@@ -4373,6 +4395,7 @@
  R typeinfo name for CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >
  R typeinfo name for CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >
  R typeinfo name for CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >
+ R typeinfo name for CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>
  R typeinfo name for CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>
@@ -4385,9 +4408,12 @@
  R typeinfo name for CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<int, vgui::IImage*, int, CDefLess<int> >
  R typeinfo name for CUtlMap<short, int, int, CDefLess<short> >
+ R typeinfo name for CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >
+ R typeinfo name for CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CFriendListItemBase*, int, bool (*)(CFriendListItemBase* const&, CFriendListItemBase* const&), CDefRBTreeBalanceListener<int> >
@@ -4395,6 +4421,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -4407,6 +4434,8 @@
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<short, int, int, CDefLess<short> >::Node_t, int, CUtlMap<short, int, int, CDefLess<short> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
@@ -4972,7 +5001,7 @@
  T CBroadcastController::RegisterForBroadcastStatus(CSmartPtr<CJSCallbackFunc>)
  T CBroadcastController::RegisterForViewerRequests(CSmartPtr<CJSCallbackFunc>)
  T CBroadcastController::RegisterJSMethods(IHTMLWindow*)
- T CBroadcastController::RegisterJSMethodsForVGUI(vgui::HTML*)
+ T CBroadcastController::RegisterJSMethods(vgui::HTML*)
  T CBroadcastController::RejectViewerRequest(char const*, unsigned int)
  T CBroadcastController::RunFrame()
  T CBroadcastController::Validate(CValidator&, char const*)
@@ -5903,7 +5932,7 @@
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
- T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char const*, unsigned int)
+ T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, CRSAPublicKey const&)
  T CCryptoKeyBase::EnsureCapacity(unsigned int)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
  T CDLLValidate::Validate(CValidator&)
@@ -5912,6 +5941,10 @@
  T CDefOps<CUtlString>::LessFunc(CUtlString const&, CUtlString const&)
  T CDefOps<unsigned long long>::LessFunc(unsigned long long const&, unsigned long long const&)
  T CDefOps<void*>::LessFunc(void* const&, void* const&)
+ T CDirContentsWatcher::AddFileToChangeList(char const*)
+ T CDirContentsWatcher::PopulateFileWatchData(char const*)
+ T CDirContentsWatcher::SetDirToWatch(char const*)
+ T CDirContentsWatcher::Validate(CValidator&, char const*)
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsHidden() const
  T CDirIterator::BCurrentIsMarkedForArchive() const
@@ -5929,6 +5962,7 @@
  T CDirWatcher::CDirWatcher()
  T CDirWatcher::GetChangedFile(CUtlString*)
  T CDirWatcher::SetDirToWatch(char const*)
+ T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
  T CEditFriendsGroupsDialog::CEditFriendsGroupsDialog(vgui::Panel*, char const*, CSteamID)
  T CEditFriendsGroupsDialog::ChainToAnimationMap()
@@ -6685,8 +6719,9 @@
  T CFriendsNotification::SetCommand(KeyValues*)
  T CFriendsNotification::~CFriendsNotification()
  T CFriendsUIModule::Activate()
+ T CFriendsUIModule::ActivateAndFocus(bool)
  T CFriendsUIModule::ActivateFriendInviteDialog(CSteamID)
- T CFriendsUIModule::ActivateFriendsDialog()
+ T CFriendsUIModule::ActivateFriendsDialog(bool)
  T CFriendsUIModule::ActivatePlayersDialog()
  T CFriendsUIModule::BHideOfflineFriendsInFriendsList()
  T CFriendsUIModule::BIsVisibleAndFocused()
@@ -6780,7 +6815,7 @@
  T CFriendsUIModule::Shutdown()
  T CFriendsUIModule::StartInviteToTrade(CSteamID)
  T CFriendsUIModule::~CFriendsUIModule()
- T CFriendsWebChat::Activate()
+ T CFriendsWebChat::Activate(bool)
  T CFriendsWebChat::BNeedsRunFrame()
  T CFriendsWebChat::BSuppressPopupsInRestore(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::CCallbackInternal_OnChatRoomDlgClose::CCallbackInternal_OnChatRoomDlgClose()
@@ -7049,6 +7084,8 @@
  T CHTMLProtoBufMsg<CMsgImeCommitText>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgInspectElement>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgInspectElement>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -7158,6 +7195,7 @@
  T CHTMLWindow::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T CHTMLWindow::BrowserSearchResults(CMsgSearchResults const*)
  T CHTMLWindow::BrowserSetCursor(CMsgSetCursor const*)
+ T CHTMLWindow::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T CHTMLWindow::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T CHTMLWindow::BrowserSetIndex(int)
  T CHTMLWindow::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -8086,6 +8124,17 @@
  T CMsgImeSetComposition::set_text(char const*)
  T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
+ T CMsgInspectElement::ByteSize() const
+ T CMsgInspectElement::CMsgInspectElement()
+ T CMsgInspectElement::Clear()
+ T CMsgInspectElement::GetCachedSize() const
+ T CMsgInspectElement::GetMetadata() const
+ T CMsgInspectElement::IsInitialized() const
+ T CMsgInspectElement::MergeFrom(CMsgInspectElement const&)
+ T CMsgInspectElement::New() const
+ T CMsgInspectElement::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgInspectElement::SetCachedSize(int) const
+ T CMsgInspectElement::~CMsgInspectElement()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -8793,6 +8842,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetForegroundWindow::ByteSize() const
+ T CMsgSetForegroundWindow::CMsgSetForegroundWindow()
+ T CMsgSetForegroundWindow::Clear()
+ T CMsgSetForegroundWindow::GetCachedSize() const
+ T CMsgSetForegroundWindow::GetMetadata() const
+ T CMsgSetForegroundWindow::IsInitialized() const
+ T CMsgSetForegroundWindow::MergeFrom(CMsgSetForegroundWindow const&)
+ T CMsgSetForegroundWindow::New() const
+ T CMsgSetForegroundWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetForegroundWindow::SetCachedSize(int) const
+ T CMsgSetForegroundWindow::~CMsgSetForegroundWindow()
  T CMsgSetGameOverlayTargetPIDs::ByteSize() const
  T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
  T CMsgSetGameOverlayTargetPIDs::Clear()
@@ -9431,6 +9491,10 @@
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
  T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
+ T CSHA1::Final()
+ T CSHA1::HashFile(char const*, bool)
+ T CSHA1::Transform(unsigned int*, unsigned char const*)
+ T CSHA1::Update(unsigned char const*, unsigned int)
  T CSetNicknameDialog::CSetNicknameDialog(vgui::Panel*, CSteamID)
  T CSetNicknameDialog::ChainToAnimationMap()
  T CSetNicknameDialog::ChainToMap()
@@ -9453,9 +9517,9 @@
  T CSharedConnectionController::CCallback_OnServersDisconnected::Run(void*)
  T CSharedConnectionController::CCallback_OnServersDisconnected::~CCallback_OnServersDisconnected()
  T CSharedConnectionController::CSharedConnectionController()
- T CSharedConnectionController::CloseSharedConnection(unsigned int)
  T CSharedConnectionController::ForwardReceivedMessages(unsigned int, CSharedConnectionController::SharedConnectionInfo_t*)
  T CSharedConnectionController::GetConnectionInfo(unsigned int)
+ T CSharedConnectionController::Initialize()
  T CSharedConnectionController::JSAllocateSharedConnection(CSmartPtr<CJSCallbackPromise>)
  T CSharedConnectionController::JSClose(unsigned int)
  T CSharedConnectionController::JSRegisterOnLogonInfoChanged(unsigned int, CSmartPtr<CJSCallbackFunc>)
@@ -9467,8 +9531,13 @@
  T CSharedConnectionController::OnMessageReady(SharedConnectionMessageReady_t*)
  T CSharedConnectionController::OnServersConnected(SteamServersConnected_t*)
  T CSharedConnectionController::OnServersDisconnected(SteamServersDisconnected_t*)
+ T CSharedConnectionController::RegisterJSMethods(IHTMLWindow*)
+ T CSharedConnectionController::RegisterJSMethods(IHTMLWindowController*)
+ T CSharedConnectionController::RegisterJSMethods(vgui::HTML*)
+ T CSharedConnectionController::RunFrame()
  T CSharedConnectionController::SendCurrentUserInfo(CSharedConnectionController::SharedConnectionInfo_t*)
  T CSharedConnectionController::ShutDown()
+ T CSharedConnectionController::Validate(CValidator&, char const*)
  T CSharedLibraryNotifications::CCallback_OnAuthorizeDevice::Run(void*)
  T CSharedLibraryNotifications::CCallback_OnAuthorizeDevice::~CCallback_OnAuthorizeDevice()
  T CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice::Run(void*)
@@ -9509,7 +9578,7 @@
  T CSteamParentalController::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
  T CSteamParentalController::RegisterForParentalSettingsChanged(CSmartPtr<CJSCallbackFunc>)
  T CSteamParentalController::RegisterJSMethods(IHTMLWindow*)
- T CSteamParentalController::RegisterJSMethodsForVGUI(vgui::HTML*)
+ T CSteamParentalController::RegisterJSMethods(vgui::HTML*)
  T CSteamParentalController::RunFrame()
  T CSteamParentalController::UnlockParentalLock(char const*, bool, CSmartPtr<CJSCallbackPromise>)
  T CSteamParentalController::Validate(CValidator&, char const*)
@@ -9668,6 +9737,7 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::AddHandle()
  T CUtlHandleTable<vgui::BuildGroup, 20>::CUtlHandleTable()
  T CUtlHandleTable<vgui::BuildGroup, 20>::GetEntry(unsigned int) const
+ T CUtlHandleTable<vgui::BuildGroup, 20>::RecursiveValidate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::RemoveHandle(unsigned int)
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
@@ -9783,6 +9853,7 @@
  T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
  T CUtlLinkedList<CUtlString, int>::RemoveAll()
  T CUtlLinkedList<CUtlString, int>::Unlink(int)
+ T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
@@ -9880,6 +9951,9 @@
  T CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::Validate(CValidator&, char const*)
  T CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >::Validate(CValidator&, char const*)
  T CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Find(CUtlString const&) const
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CDirContentsWatcher::FileWatchData const&)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Find(CUtlString const&) const
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>* const&)
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Validate(CValidator&, char const*)
@@ -9898,8 +9972,10 @@
  T CUtlMap<short, int, int, CDefLess<short> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CSmartPtr<CJSCallbackFunc>, int, CDefLess<unsigned int> >::Insert(unsigned int const&, CSmartPtr<CJSCallbackFunc> const&)
  T CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Insert(unsigned int const&, CSmartPtr<CJSCallbackPromise> const&)
+ T CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Insert(unsigned int const&, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t> const&)
  T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Remove(unsigned int const&)
+ T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::CUtlMemoryBase(int, void*, int)
@@ -9915,6 +9991,7 @@
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::CUtlPtr(CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t> const&)
  T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::Release()
+ T CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<int>::Validate(CValidator&, char const*)
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(BestMatch_t const&, bool, int&, bool&, bool&)
@@ -9966,6 +10043,14 @@
  T CUtlRBTree<CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, bool (*)(CSteamID const&, CSteamID const&)>*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool)
@@ -10070,6 +10155,7 @@
  T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&, bool)
@@ -10077,6 +10163,7 @@
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t const&)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::FindInsertionPosition(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t const&, bool, short&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::Insert(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::NewNode(bool)
@@ -10188,6 +10275,7 @@
  T CUtlVector<CSteamParentalController::UnlockPromise_t, CUtlMemory<CSteamParentalController::UnlockPromise_t> >::~CUtlVector()
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::GrowVector(int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::InsertBefore(int)
+ T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
@@ -10993,6 +11081,7 @@
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
  T GetCommunityImagesURLForUniverse(EUniverse, bool)
+ T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetLocalSteamClientURL()
  T GetNoEscCharConversion()
@@ -11729,7 +11818,7 @@
  T non-virtual thunk to CFriendsListSectionHeader::OnOpened()
  T non-virtual thunk to CFriendsListSectionHeader::SetColor(Color)
  T non-virtual thunk to CFriendsUIModule::ActivateFriendInviteDialog(CSteamID)
- T non-virtual thunk to CFriendsUIModule::ActivateFriendsDialog()
+ T non-virtual thunk to CFriendsUIModule::ActivateFriendsDialog(bool)
  T non-virtual thunk to CFriendsUIModule::ActivatePlayersDialog()
  T non-virtual thunk to CFriendsUIModule::BHideOfflineFriendsInFriendsList()
  T non-virtual thunk to CFriendsUIModule::BIsVisibleAndFocused()
@@ -11797,6 +11886,7 @@
  T non-virtual thunk to CHTMLWindow::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to CHTMLWindow::BrowserSearchResults(CMsgSearchResults const*)
  T non-virtual thunk to CHTMLWindow::BrowserSetCursor(CMsgSetCursor const*)
+ T non-virtual thunk to CHTMLWindow::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T non-virtual thunk to CHTMLWindow::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to CHTMLWindow::BrowserSetIndex(int)
  T non-virtual thunk to CHTMLWindow::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -11862,6 +11952,7 @@
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T non-virtual thunk to vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
  T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -13173,6 +13264,7 @@
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
  T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -13211,7 +13303,9 @@
  T vgui::HTML::CHTMLFindBar::~CHTMLFindBar()
  T vgui::HTML::ChainToAnimationMap()
  T vgui::HTML::ChainToMap()
+ T vgui::HTML::CheckForClientChanges()
  T vgui::HTML::ClearRegisteredJSMethods()
+ T vgui::HTML::ClientStyleFileChanged(char const*)
  T vgui::HTML::DisableBackgroundThrottling()
  T vgui::HTML::DismissJSDialog(int)
  T vgui::HTML::ExitFullScreen()
@@ -13334,6 +13428,7 @@
  T vgui::HTMLFramelessPopup::OnBrowserMaximizeRestoreWindow()
  T vgui::HTMLFramelessPopup::OnBrowserMinimizeWindow()
  T vgui::HTMLFramelessPopup::OnBrowserResizeGripChanged(KeyValues*)
+ T vgui::HTMLFramelessPopup::OnBrowserSetForegroundWindow()
  T vgui::HTMLFramelessPopup::OnBrowserSetWindowPosition(KeyValues*)
  T vgui::HTMLFramelessPopup::OnBrowserShowWindow()
  T vgui::HTMLFramelessPopup::OnCloseWindow()
@@ -13352,6 +13447,7 @@
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserMaximizeRestoreWindow::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserMinimizeWindow::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserResizeGripChanged::InitVar()
+ T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserSetForegroundWindow::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserSetWindowPosition::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnBrowserShowWindow::InitVar()
  T vgui::HTMLFramelessPopup::PanelMessageFunc_OnCloseWindow::InitVar()
@@ -15655,8 +15751,9 @@
  T void CFriendSettingsController::RegisterJSMethods<vgui::HTML>(vgui::HTML*)
  T void CFriendsWebChat::RegisterJSMethods<IHTMLWindow>(IHTMLWindow*)
  T void CFriendsWebChat::RegisterJSMethods<vgui::HTML>(vgui::HTML*)
- T void CSharedConnectionController::Initialize<IHTMLWindow>(IHTMLWindow*)
- T void CSharedConnectionController::Initialize<vgui::HTML>(vgui::HTML*)
+ T void CSharedConnectionController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
+ T void CSharedConnectionController::RegisterJSMethodsInternal<IHTMLWindowController>(IHTMLWindowController*)
+ T void CSharedConnectionController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
  T void CSteamParentalController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
  T void CSteamParentalController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
  T void Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
@@ -15933,6 +16030,8 @@
  b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
  b (anonymous namespace)::CMsgImeSetComposition_descriptor_
  b (anonymous namespace)::CMsgImeSetComposition_reflection_
+ b (anonymous namespace)::CMsgInspectElement_descriptor_
+ b (anonymous namespace)::CMsgInspectElement_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -16039,6 +16138,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetForegroundWindow_descriptor_
+ b (anonymous namespace)::CMsgSetForegroundWindow_reflection_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
@@ -16149,7 +16250,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_375_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_50_26
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b SHA1.m
  b SYS_str_reasons
@@ -16328,6 +16429,7 @@
  b s_cmdSilentMode
  b s_cmdUnhideFriendsUI
  b s_hKeyvalue
+ b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_pfnBootstrapperVersion
  b selectBuf
@@ -16699,6 +16801,7 @@
  dup
  dyld_stub_binder
  exit
+ fclose
  fcntl
  fflush
  flock
@@ -16706,12 +16809,15 @@
  floorf
  fmod
  fnmatch
+ fopen
  fprintf
  fputc
  fputs
  fread
  free
+ fseek
  fstat$INODE64
+ ftell
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount
@@ -16981,6 +17087,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgInspectElement_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
@@ -17034,6 +17141,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetForegroundWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
@@ -17306,6 +17414,7 @@
  t _GLOBAL__sub_I_constants.cpp
  t _GLOBAL__sub_I_controls.cpp
  t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
@@ -17327,6 +17436,7 @@
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
+ t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_keyvaluesignature.cpp
  t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_limiteduserdialog.cpp

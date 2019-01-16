@@ -582,18 +582,6 @@
         "server_type": -1
     },
     {
-        "emsg": 891,
-        "name": "k_EMsgClientEmailChangeResponse",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 892,
-        "name": "k_EMsgClientSecretQAChangeResponse",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 896,
         "name": "k_EMsgClientDRMBlobRequest",
         "flags": 2,
@@ -1668,18 +1656,6 @@
         "server_type": -1
     },
     {
-        "emsg": 5544,
-        "name": "k_EMsgClientEmailChange4",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 5545,
-        "name": "k_EMsgClientEmailChangeResponse4",
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 5546,
         "name": "k_EMsgClientGetCDNAuthToken",
         "flags": 2,
@@ -2595,13 +2571,13 @@
         "emsg": 7901,
         "name": "k_EMsgClientUGSGetGlobalStats",
         "flags": 6,
-        "server_type": 50
+        "server_type": 119
     },
     {
         "emsg": 7902,
         "name": "k_EMsgClientUGSGetGlobalStatsResponse",
         "flags": 6,
-        "server_type": 50
+        "server_type": 119
     },
     {
         "emsg": 8503,

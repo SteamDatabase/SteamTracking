@@ -19,6 +19,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(cookiecontainer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(countrycodeutils.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(crypto.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(crypto_25519.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(crypto_textencode.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(cryptoworkitem.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(debugstats.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(ed25519_VALVE.o)
@@ -37,6 +39,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(iopollinghelpers_osx.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(job.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(jobmgr.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(keypair.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(keyvalueexpression.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(keyvaluesignature.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(language.o)
@@ -249,6 +252,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/singleprocesspipe_any.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/sitelicenseclient.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/siteserverui.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/spotifycontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/sqlitecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/stdafx.o
@@ -262,6 +266,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_chat.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_clientlanp2p.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_cloud.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_contentsystem.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_credentials.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_datapublisher.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_depotbuilder.steamclient.pb.o
@@ -287,6 +292,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_shader.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_site_license.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_sitelicenseclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_siteserverui.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_store.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_twofactor.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_unified_base.steamclient.pb.o
@@ -474,6 +480,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/singleprocesspipe_any.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/sitelicenseclient.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/siteserverui.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/spotifycontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/sqlitecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/stdafx.o
@@ -487,6 +494,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_chat.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_clientlanp2p.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_cloud.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_contentsystem.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_credentials.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_datapublisher.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_depotbuilder.steamclient.pb.o
@@ -512,6 +520,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_shader.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_site_license.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_sitelicenseclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_siteserverui.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_store.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_twofactor.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_unified_base.steamclient.pb.o
@@ -712,6 +721,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercachemanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/sitelicenseclient.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/siteserverui.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/stdafx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamclient.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/steamclient.h
@@ -797,6 +807,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cookiecontainer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cryptoworkitem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/depotbuildbase.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/depotbuildbase.h
@@ -847,6 +858,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jobmgr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logfile.cpp
@@ -899,6 +911,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/socket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/socket.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/../amount.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/../clientenums.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/../constants.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientApps.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientEngine.h
@@ -929,6 +942,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_cloud.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_cloud.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_contentsystem.steamclient.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_contentsystem.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_credentials.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_credentials.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_datapublisher.steamclient.pb.cc
@@ -979,6 +994,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_site_license.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_sitelicenseclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_sitelicenseclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_siteserverui.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_siteserverui.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_store.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_store.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_twofactor.steamclient.pb.cc
@@ -1009,6 +1026,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnpkt.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/vconnudp.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videotypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/websocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/websocket.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
@@ -1659,6 +1677,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlops.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpair.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlptr.h

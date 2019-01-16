@@ -58,6 +58,7 @@
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
  B CMsgImeSetComposition::default_instance_
+ B CMsgInspectElement::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -111,6 +112,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetForegroundWindow::default_instance_
  B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
@@ -225,6 +227,7 @@
  B vgui::g_ButtonSoundNames
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ CFArrayCreate
  CFBooleanGetTypeID
  CFBooleanGetValue
  CFDateCreate
@@ -234,7 +237,9 @@
  CFLocaleCopyCurrent
  CFPreferencesCopyValue
  CFRelease
+ CFRunLoopGetCurrent
  CFStringCompare
+ CFStringCreateWithCString
  CFStringGetCString
  CFStringGetTypeID
  CValidator::ClaimArrayMemory(void*)
@@ -854,6 +859,8 @@
  D typeinfo for CDialogGameInfo::CCallback_OnPersonaStateChange
  D typeinfo for CDialogGameInfo::CCallback_OnRichPresenceChange
  D typeinfo for CDialogServerPassword
+ D typeinfo for CDirContentsWatcher
+ D typeinfo for CDirWatcher
  D typeinfo for CFavoriteGames
  D typeinfo for CFloatProperty
  D typeinfo for CFriendsGames
@@ -876,6 +883,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCommitText>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D typeinfo for CHTMLProtoBufMsg<CMsgInspectElement>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
@@ -964,6 +972,7 @@
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
  D typeinfo for CMsgImeSetComposition
+ D typeinfo for CMsgInspectElement
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -1017,6 +1026,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetForegroundWindow
  D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
@@ -1719,6 +1729,8 @@
  D vtable for CDialogGameInfo::CCallback_OnPersonaStateChange
  D vtable for CDialogGameInfo::CCallback_OnRichPresenceChange
  D vtable for CDialogServerPassword
+ D vtable for CDirContentsWatcher
+ D vtable for CDirWatcher
  D vtable for CFavoriteGames
  D vtable for CFloatProperty
  D vtable for CFriendsGames
@@ -1740,6 +1752,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D vtable for CHTMLProtoBufMsg<CMsgImeCommitText>
  D vtable for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D vtable for CHTMLProtoBufMsg<CMsgInspectElement>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D vtable for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
@@ -1828,6 +1841,7 @@
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
  D vtable for CMsgImeSetComposition
+ D vtable for CMsgInspectElement
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -1881,6 +1895,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetForegroundWindow
  D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
@@ -2024,6 +2039,12 @@
  D vtable for vgui::TreeViewSubPanel
  D vtable for vgui::URLLabel
  Error
+ FSEventStreamCreate
+ FSEventStreamInvalidate
+ FSEventStreamRelease
+ FSEventStreamScheduleWithRunLoop
+ FSEventStreamStart
+ FSEventStreamStop
  GetOSType
  KeyValuesSystemSteam
  Msg
@@ -2033,6 +2054,8 @@
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_IsInDebugSession
+ Plat_MSTime64
+ Plat_OutputDebugString
  Plat_localtime
  R typeinfo name for BlankImage
  R typeinfo name for CBaseGamesPage
@@ -2057,6 +2080,8 @@
  R typeinfo name for CDialogGameInfo::CCallback_OnPersonaStateChange
  R typeinfo name for CDialogGameInfo::CCallback_OnRichPresenceChange
  R typeinfo name for CDialogServerPassword
+ R typeinfo name for CDirContentsWatcher
+ R typeinfo name for CDirWatcher
  R typeinfo name for CFavoriteGames
  R typeinfo name for CFloatProperty
  R typeinfo name for CFriendsGames
@@ -2079,6 +2104,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCommitText>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgInspectElement>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
@@ -2167,6 +2193,7 @@
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
  R typeinfo name for CMsgImeSetComposition
+ R typeinfo name for CMsgInspectElement
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -2220,6 +2247,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetForegroundWindow
  R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
@@ -2272,6 +2300,7 @@
  R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
+ R typeinfo name for CUtlLinkedList<CUtlString, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::GraphPanel::Sample_t, int>
  R typeinfo name for CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>
@@ -2279,6 +2308,7 @@
  R typeinfo name for CUtlLinkedList<vgui::ListViewItem*, int>
  R typeinfo name for CUtlLinkedList<vgui::MenuItem*, int>
  R typeinfo name for CUtlLinkedList<vgui::TreeNode*, int>
+ R typeinfo name for CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>
@@ -2296,6 +2326,7 @@
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2313,6 +2344,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >
  R typeinfo name for CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >
+ R typeinfo name for CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
@@ -2502,6 +2534,7 @@
  T BlankImage::SetSize(int, int)
  T BlankImage::~BlankImage()
  T BotsCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
+ T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
  T CBaseGamesPage::ApplyGameFilters()
  T CBaseGamesPage::ApplySchemeSettings(vgui::IScheme*)
  T CBaseGamesPage::BShowServer(serverdisplay_t&)
@@ -2737,6 +2770,10 @@
  T CDialogServerPassword::CDialogServerPassword(vgui::Panel*)
  T CDialogServerPassword::OnCommand(char const*)
  T CDialogServerPassword::~CDialogServerPassword()
+ T CDirContentsWatcher::AddFileToChangeList(char const*)
+ T CDirContentsWatcher::PopulateFileWatchData(char const*)
+ T CDirContentsWatcher::SetDirToWatch(char const*)
+ T CDirContentsWatcher::Validate(CValidator&, char const*)
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsHidden() const
  T CDirIterator::BCurrentIsMarkedForArchive() const
@@ -2750,6 +2787,12 @@
  T CDirIterator::CurrentFileWriteTime() const
  T CDirIterator::Init(char const*)
  T CDirIterator::~CDirIterator()
+ T CDirWatcher::AddFileToChangeList(char const*)
+ T CDirWatcher::CDirWatcher()
+ T CDirWatcher::GetChangedFile(CUtlString*)
+ T CDirWatcher::SetDirToWatch(char const*)
+ T CDirWatcher::Validate(CValidator&, char const*)
+ T CDirWatcher::~CDirWatcher()
  T CFavoriteGames::CFavoriteGames(vgui::Panel*)
  T CFavoriteGames::ChainToAnimationMap()
  T CFavoriteGames::ChainToMap()
@@ -2878,6 +2921,8 @@
  T CHTMLProtoBufMsg<CMsgImeCommitText>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgInspectElement>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgInspectElement>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2986,6 +3031,9 @@
  T CInternetGames::SupportsItem(IGameList::InterfaceItem_e)
  T CInternetGames::Validate(CValidator&, char const*)
  T CInternetGames::~CInternetGames()
+ T CJSArray::AddString(char const*)
+ T CJSMethodArgs::AddArray()
+ T CJSMethodArgs::CJSMethodArgs()
  T CJSMethodArgument::ByteSize() const
  T CJSMethodArgument::CJSMethodArgument()
  T CJSMethodArgument::Clear()
@@ -3749,6 +3797,17 @@
  T CMsgImeSetComposition::set_text(char const*)
  T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
+ T CMsgInspectElement::ByteSize() const
+ T CMsgInspectElement::CMsgInspectElement()
+ T CMsgInspectElement::Clear()
+ T CMsgInspectElement::GetCachedSize() const
+ T CMsgInspectElement::GetMetadata() const
+ T CMsgInspectElement::IsInitialized() const
+ T CMsgInspectElement::MergeFrom(CMsgInspectElement const&)
+ T CMsgInspectElement::New() const
+ T CMsgInspectElement::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgInspectElement::SetCachedSize(int) const
+ T CMsgInspectElement::~CMsgInspectElement()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -3872,6 +3931,7 @@
  T CMsgJSValue::SharedCtor()
  T CMsgJSValue::SharedDtor()
  T CMsgJSValue::mutable_string_value()
+ T CMsgJSValue::set_string_value(char const*)
  T CMsgJSValue::set_string_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgJSValue::~CMsgJSValue()
  T CMsgJSValue_JSObjectProperty::ByteSize() const
@@ -4454,6 +4514,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetForegroundWindow::ByteSize() const
+ T CMsgSetForegroundWindow::CMsgSetForegroundWindow()
+ T CMsgSetForegroundWindow::Clear()
+ T CMsgSetForegroundWindow::GetCachedSize() const
+ T CMsgSetForegroundWindow::GetMetadata() const
+ T CMsgSetForegroundWindow::IsInitialized() const
+ T CMsgSetForegroundWindow::MergeFrom(CMsgSetForegroundWindow const&)
+ T CMsgSetForegroundWindow::New() const
+ T CMsgSetForegroundWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetForegroundWindow::SetCachedSize(int) const
+ T CMsgSetForegroundWindow::~CMsgSetForegroundWindow()
  T CMsgSetGameOverlayTargetPIDs::ByteSize() const
  T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
  T CMsgSetGameOverlayTargetPIDs::Clear()
@@ -4919,6 +4990,11 @@
  T CProportionalIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CRefCountServiceBase<true, CRefMT>::DoRelease() const
+ T CSHA1::Final()
+ T CSHA1::HashFile(char const*, bool)
+ T CSHA1::Transform(unsigned int*, unsigned char const*)
+ T CSHA1::Update(unsigned char const*, unsigned int)
  T CServerBrowser::Activate()
  T CServerBrowser::CloseAllGameInfoDialogs()
  T CServerBrowser::CloseGameInfoDialog(unsigned long long)
@@ -5071,6 +5147,7 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::AddHandle()
  T CUtlHandleTable<vgui::BuildGroup, 20>::CUtlHandleTable()
  T CUtlHandleTable<vgui::BuildGroup, 20>::GetEntry(unsigned int) const
+ T CUtlHandleTable<vgui::BuildGroup, 20>::RecursiveValidate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::RemoveHandle(unsigned int)
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
@@ -5105,6 +5182,13 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<CUtlString, int>::AllocInternal(bool)
+ T CUtlLinkedList<CUtlString, int>::Free(int)
+ T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
+ T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RemoveAll()
+ T CUtlLinkedList<CUtlString, int>::Unlink(int)
+ T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
@@ -5148,6 +5232,9 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::RemoveAll()
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Find(CUtlString const&) const
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CDirContentsWatcher::FileWatchData const&)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlString const&)
  T CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
@@ -5181,6 +5268,14 @@
  T CUtlRBTree<BestMatch_t, int, bool (*)(BestMatch_t const&, BestMatch_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(CKeyBindingsMgr::KBContext_t const&, CKeyBindingsMgr::KBContext_t const&), CDefRBTreeBalanceListener<int> >::Find(CKeyBindingsMgr::KBContext_t const&) const
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, bool (*)(CKeyBindingsMgr::KBContext_t const&, CKeyBindingsMgr::KBContext_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -5291,6 +5386,8 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::Replace(char const*, char const*)
+ T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
@@ -5316,8 +5413,13 @@
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::InsertBefore(int, CModList::mod_t const&)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::~CUtlVector()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::Remove(int)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::RemoveAll()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::Validate(CValidator&, char const*)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::~CUtlVector()
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::GrowVector(int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::InsertBefore(int)
+ T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
@@ -5567,6 +5669,7 @@
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
+ T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
  T ClientAPI_Init()
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
@@ -5588,6 +5691,7 @@
  T GameCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T GetAttributesAsString(CDirIterator const&)
  T GetCStringCharConversion()
+ T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetMostCommonQueryPorts(CUtlVector<unsigned short, CUtlMemory<unsigned short> >&)
  T GetNoEscCharConversion()
@@ -5761,6 +5865,7 @@
  T Sys_ValidateModules(CValidator*, bool)
  T URLLabel_Factory()
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T V_strstr(char const*, char const*)
  T __CreateCDLLValidateIValidate_interface()
  T __CreateCServerBrowserIServerBrowser_interface()
  T __CreateCServerBrowserIVGuiModule_interface()
@@ -5770,9 +5875,10 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
- T netadr_t::BlockingResolveAndSetFromString(char const*)
+ T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
  T netadr_t::HasIP() const
  T netadr_t::IsValid() const
+ T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
  T netadr_t::operator<(netadr_t const&) const
@@ -5868,6 +5974,7 @@
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T non-virtual thunk to vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
  T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -6801,6 +6908,7 @@
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
  T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -6839,7 +6947,9 @@
  T vgui::HTML::CHTMLFindBar::~CHTMLFindBar()
  T vgui::HTML::ChainToAnimationMap()
  T vgui::HTML::ChainToMap()
+ T vgui::HTML::CheckForClientChanges()
  T vgui::HTML::ClearRegisteredJSMethods()
+ T vgui::HTML::ClientStyleFileChanged(char const*)
  T vgui::HTML::DismissJSDialog(int)
  T vgui::HTML::ExitFullScreen()
  T vgui::HTML::Find(char const*)
@@ -9072,6 +9182,8 @@
  b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
  b (anonymous namespace)::CMsgImeSetComposition_descriptor_
  b (anonymous namespace)::CMsgImeSetComposition_reflection_
+ b (anonymous namespace)::CMsgInspectElement_descriptor_
+ b (anonymous namespace)::CMsgInspectElement_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -9178,6 +9290,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetForegroundWindow_descriptor_
+ b (anonymous namespace)::CMsgSetForegroundWindow_reflection_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
@@ -9438,6 +9552,7 @@
  bootstrap_port
  ceilf
  close
+ closedir
  cos
  d VTT for (anonymous namespace)::ScrollBarButton
  d boolconverter
@@ -9466,23 +9581,29 @@
  dlsym
  dup
  dyld_stub_binder
+ fclose
  fcntl
  fflush
  floor
  floorf
  fmod
  fnmatch
+ fopen
  fprintf
  fputs
+ fread
  free
+ fseek
+ ftell
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam
+ getaddrinfo
  getcwd
- gethostbyname
  getpid
+ gettimeofday
  glBegin
  glBindTexture
  glClear
@@ -9506,6 +9627,7 @@
  kCFPreferencesAnyApplication
  kCFPreferencesAnyHost
  kCFPreferencesCurrentUser
+ kCFRunLoopDefaultMode
  kill
  launch_data_alloc
  launch_data_dict_insert
@@ -9525,6 +9647,7 @@
  memset_pattern16
  mmap
  munmap
+ opendir$INODE64
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -9594,6 +9717,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgInspectElement_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
@@ -9647,6 +9771,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetForegroundWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
@@ -9684,6 +9809,8 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
  r std::__1::piecewise_construct
  r typeinfo name for (anonymous namespace)::ScrollBarButton
+ readdir$INODE64
+ realpath$DARWIN_EXTSN
  rindex
  scandir$INODE64
  sched_yield
@@ -9823,6 +9950,7 @@
  t _GLOBAL__sub_I_FriendsGames.cpp
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
+ t _GLOBAL__sub_I_HTML_js.cpp
  t _GLOBAL__sub_I_HistoryGames.cpp
  t _GLOBAL__sub_I_IMEPanel.cpp
  t _GLOBAL__sub_I_Image.cpp
@@ -9872,6 +10000,7 @@
  t _GLOBAL__sub_I_extension_set.cc
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
+ t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_typingjump.cpp
@@ -9879,6 +10008,7 @@
  t _GLOBAL__sub_I_utlsymbol.cpp
  t _GLOBAL__sub_I_validate_globals.cpp
  t _GLOBAL__sub_I_vgui_controls.cpp
+ t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)
  t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
  t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)

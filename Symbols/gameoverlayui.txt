@@ -88,6 +88,7 @@
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
  B CMsgImeSetComposition::default_instance_
+ B CMsgInspectElement::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -141,6 +142,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetForegroundWindow::default_instance_
  B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
@@ -313,6 +315,7 @@
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ CFArrayCreate
  CFBooleanGetTypeID
  CFBooleanGetValue
  CFDateCreate
@@ -322,7 +325,9 @@
  CFLocaleCopyCurrent
  CFPreferencesCopyValue
  CFRelease
+ CFRunLoopGetCurrent
  CFStringCompare
+ CFStringCreateWithCString
  CFStringGetCString
  CFStringGetFileSystemRepresentation
  CFStringGetTypeID
@@ -368,16 +373,18 @@
  D CBasePanel::KB_ChainToMap()::chained
  D CBasePanel::PanelMessageFunc_Close::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_DelayedClose::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_ForceQuit::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_InitiateForceQuit::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnAddActionSignalTarget::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnCancelMicroTxn::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_OnOpenFriendsDialog::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnViewGuide::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnWebSteamURL::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenBroadcastChatDialog::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenDlcDialog::InitVar()::bAdded
- D CBasePanel::PanelMessageFunc_OpenFriendsDialog::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenOverlayCommunityDialog::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenOverlayMusicLibraryPanel::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OpenOverlayMusicPlayerPanel::InitVar()::bAdded
@@ -2012,6 +2019,8 @@
  D typeinfo for CCookie
  D typeinfo for CDialogParentalUnlock
  D typeinfo for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
+ D typeinfo for CDirContentsWatcher
+ D typeinfo for CDirWatcher
  D typeinfo for CEmoticonButton
  D typeinfo for CFloatProperty
  D typeinfo for CFriendsImageManager
@@ -2036,6 +2045,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeCommitText>
  D typeinfo for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D typeinfo for CHTMLProtoBufMsg<CMsgInspectElement>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -2129,6 +2139,7 @@
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
  D typeinfo for CMsgImeSetComposition
+ D typeinfo for CMsgInspectElement
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -2182,6 +2193,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetForegroundWindow
  D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
@@ -3286,6 +3298,8 @@
  D vtable for CCookie
  D vtable for CDialogParentalUnlock
  D vtable for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
+ D vtable for CDirContentsWatcher
+ D vtable for CDirWatcher
  D vtable for CEmoticonButton
  D vtable for CFloatProperty
  D vtable for CFriendsImageManager
@@ -3309,6 +3323,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  D vtable for CHTMLProtoBufMsg<CMsgImeCommitText>
  D vtable for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ D vtable for CHTMLProtoBufMsg<CMsgInspectElement>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -3402,6 +3417,7 @@
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
  D vtable for CMsgImeSetComposition
+ D vtable for CMsgInspectElement
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -3455,6 +3471,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetForegroundWindow
  D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
@@ -3761,6 +3778,12 @@
  D vtable for vgui::URLLabel
  D vtable for vgui::WrapPanel
  Error
+ FSEventStreamCreate
+ FSEventStreamInvalidate
+ FSEventStreamRelease
+ FSEventStreamScheduleWithRunLoop
+ FSEventStreamStart
+ FSEventStreamStop
  FSGetVolumeInfo
  GetCPUInformation()
  GetCrashHandlerFactory
@@ -3780,6 +3803,7 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
@@ -3793,8 +3817,9 @@
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
- Plat_IsSteamConsoleMode
  Plat_MSTime
+ Plat_MSTime64
+ Plat_OutputDebugString
  Plat_OutputDebugStringRaw
  Plat_RelativeTickFrequency
  Plat_RelativeTicks
@@ -3978,6 +4003,8 @@
  R typeinfo name for CCookie
  R typeinfo name for CDialogParentalUnlock
  R typeinfo name for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
+ R typeinfo name for CDirContentsWatcher
+ R typeinfo name for CDirWatcher
  R typeinfo name for CEmoticonButton
  R typeinfo name for CFloatProperty
  R typeinfo name for CFriendsImageManager
@@ -4002,6 +4029,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCancelComposition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeCommitText>
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeSetComposition>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgInspectElement>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
@@ -4095,6 +4123,7 @@
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
  R typeinfo name for CMsgImeSetComposition
+ R typeinfo name for CMsgInspectElement
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -4148,6 +4177,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetForegroundWindow
  R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
@@ -4333,6 +4363,7 @@
  R typeinfo name for CUtlLinkedList<BrowserPosition_t, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>
+ R typeinfo name for CUtlLinkedList<CUtlString, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<vgui::GraphPanel::Sample_t, int>
  R typeinfo name for CUtlLinkedList<vgui::ListPanel::column_t, unsigned char>
@@ -4341,6 +4372,7 @@
  R typeinfo name for CUtlLinkedList<vgui::MenuItem*, int>
  R typeinfo name for CUtlLinkedList<vgui::TreeNode*, int>
  R typeinfo name for CUtlMap<CGameID, int, int, CDefLess<CGameID> >
+ R typeinfo name for CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>
  R typeinfo name for CUtlMap<char const*, CURLManager::URL_t, int, bool (*)(char const* const&, char const* const&)>
@@ -4358,6 +4390,7 @@
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -4376,6 +4409,7 @@
  R typeinfo name for CUtlVector<CMusicPage_Details_Content::PlaylistData_t, CUtlMemory<CMusicPage_Details_Content::PlaylistData_t> >
  R typeinfo name for CUtlVector<CMusicPage_Details_Playlist*, CUtlMemory<CMusicPage_Details_Playlist*> >
  R typeinfo name for CUtlVector<CScreenshotImageClickPanel*, CUtlMemory<CScreenshotImageClickPanel*> >
+ R typeinfo name for CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >
  R typeinfo name for CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
@@ -4749,6 +4783,7 @@
  T CBasePanel::EnsureOverlayMusicLibraryPanelCreated()
  T CBasePanel::EnsureOverlayMusicPlayerPanelCreated()
  T CBasePanel::EnsureOverlayScreenshotDialogCreated()
+ T CBasePanel::ForceQuit()
  T CBasePanel::GetAnimMap()
  T CBasePanel::GetClassSize() const
  T CBasePanel::GetKBMap()
@@ -4756,6 +4791,7 @@
  T CBasePanel::GetPanelClassName()
  T CBasePanel::GetPanelTopClassName() const
  T CBasePanel::InitializeWebBrowser()
+ T CBasePanel::InitiateForceQuit()
  T CBasePanel::IsOverlayVisible(bool)
  T CBasePanel::KB_ChainToMap()
  T CBasePanel::LaunchBrowser(char const*, char const*, char const*, vgui::Panel*)
@@ -4779,6 +4815,7 @@
  T CBasePanel::OnLowBattery(LowBatteryPower_t*)
  T CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)
  T CBasePanel::OnMouseClick(KeyValues*)
+ T CBasePanel::OnOpenFriendsDialog()
  T CBasePanel::OnPersonaStateChange(PersonaStateChange_t*)
  T CBasePanel::OnPublishedFileUpdated(RemoteStorageUpdatePublishedFileResult_t*)
  T CBasePanel::OnScreenshotHotKeyChanged()
@@ -4788,7 +4825,6 @@
  T CBasePanel::OpenBroadcastChatDialog()
  T CBasePanel::OpenBrowserToStore(unsigned int, EOverlayToStoreFlag, char const*)
  T CBasePanel::OpenDlcDialog()
- T CBasePanel::OpenFriendsDialog()
  T CBasePanel::OpenGameTriggeredWebBrowser(char const*, EActivateGameOverlayToWebPageMode)
  T CBasePanel::OpenOverlayCommunityDialog()
  T CBasePanel::OpenOverlayMusicLibraryPanel()
@@ -4801,16 +4837,18 @@
  T CBasePanel::OpenSteamDialog(char const*)
  T CBasePanel::PanelMessageFunc_Close::InitVar()
  T CBasePanel::PanelMessageFunc_DelayedClose::InitVar()
+ T CBasePanel::PanelMessageFunc_ForceQuit::InitVar()
+ T CBasePanel::PanelMessageFunc_InitiateForceQuit::InitVar()
  T CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()
  T CBasePanel::PanelMessageFunc_OnAddActionSignalTarget::InitVar()
  T CBasePanel::PanelMessageFunc_OnCancelMicroTxn::InitVar()
  T CBasePanel::PanelMessageFunc_OnGameOverlaySettingsChanged::InitVar()
  T CBasePanel::PanelMessageFunc_OnMouseClick::InitVar()
+ T CBasePanel::PanelMessageFunc_OnOpenFriendsDialog::InitVar()
  T CBasePanel::PanelMessageFunc_OnViewGuide::InitVar()
  T CBasePanel::PanelMessageFunc_OnWebSteamURL::InitVar()
  T CBasePanel::PanelMessageFunc_OpenBroadcastChatDialog::InitVar()
  T CBasePanel::PanelMessageFunc_OpenDlcDialog::InitVar()
- T CBasePanel::PanelMessageFunc_OpenFriendsDialog::InitVar()
  T CBasePanel::PanelMessageFunc_OpenOverlayCommunityDialog::InitVar()
  T CBasePanel::PanelMessageFunc_OpenOverlayMusicLibraryPanel::InitVar()
  T CBasePanel::PanelMessageFunc_OpenOverlayMusicPlayerPanel::InitVar()
@@ -5480,6 +5518,10 @@
  T CDialogParentalUnlock::OnParentalLockChangeAttemptComplete(ParentalLockChangeAttemptComplete_t*)
  T CDialogParentalUnlock::SetCallbacks(std::__1::function<void ()>, std::__1::function<void ()>)
  T CDialogParentalUnlock::~CDialogParentalUnlock()
+ T CDirContentsWatcher::AddFileToChangeList(char const*)
+ T CDirContentsWatcher::PopulateFileWatchData(char const*)
+ T CDirContentsWatcher::SetDirToWatch(char const*)
+ T CDirContentsWatcher::Validate(CValidator&, char const*)
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsHidden() const
  T CDirIterator::BCurrentIsMarkedForArchive() const
@@ -5495,6 +5537,12 @@
  T CDirIterator::Init(char const*)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
+ T CDirWatcher::AddFileToChangeList(char const*)
+ T CDirWatcher::CDirWatcher()
+ T CDirWatcher::GetChangedFile(CUtlString*)
+ T CDirWatcher::SetDirToWatch(char const*)
+ T CDirWatcher::Validate(CValidator&, char const*)
+ T CDirWatcher::~CDirWatcher()
  T CEmoticonButton::CEmoticonButton(vgui::Panel*, char const*)
  T CEmoticonButton::ChainToAnimationMap()
  T CEmoticonButton::ChainToMap()
@@ -5618,6 +5666,8 @@
  T CHTMLProtoBufMsg<CMsgImeCommitText>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgImeSetComposition>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgInspectElement>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgInspectElement>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5722,11 +5772,13 @@
  T CItemImageManager::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CItemImageManager::Validate(CValidator&, char const*)
  T CItemImageManager::~CItemImageManager()
+ T CJSArray::AddString(char const*)
  T CJSCallbackFunc::CJSCallbackFunc(int, unsigned long long)
  T CJSCallbackFunc::IsValid()
  T CJSCallbackFunc::MarkInvalid()
  T CJSCallbackFunc::OnFinalRelease()
  T CJSCallbackFunc::~CJSCallbackFunc()
+ T CJSMethodArgs::AddArray()
  T CJSMethodArgs::AddBoolean(bool)
  T CJSMethodArgs::AddObject()
  T CJSMethodArgs::CJSMethodArgs()
@@ -5777,7 +5829,6 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
- T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -6536,6 +6587,17 @@
  T CMsgImeSetComposition::set_text(char const*)
  T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
+ T CMsgInspectElement::ByteSize() const
+ T CMsgInspectElement::CMsgInspectElement()
+ T CMsgInspectElement::Clear()
+ T CMsgInspectElement::GetCachedSize() const
+ T CMsgInspectElement::GetMetadata() const
+ T CMsgInspectElement::IsInitialized() const
+ T CMsgInspectElement::MergeFrom(CMsgInspectElement const&)
+ T CMsgInspectElement::New() const
+ T CMsgInspectElement::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgInspectElement::SetCachedSize(int) const
+ T CMsgInspectElement::~CMsgInspectElement()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -7243,6 +7305,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetForegroundWindow::ByteSize() const
+ T CMsgSetForegroundWindow::CMsgSetForegroundWindow()
+ T CMsgSetForegroundWindow::Clear()
+ T CMsgSetForegroundWindow::GetCachedSize() const
+ T CMsgSetForegroundWindow::GetMetadata() const
+ T CMsgSetForegroundWindow::IsInitialized() const
+ T CMsgSetForegroundWindow::MergeFrom(CMsgSetForegroundWindow const&)
+ T CMsgSetForegroundWindow::New() const
+ T CMsgSetForegroundWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetForegroundWindow::SetCachedSize(int) const
+ T CMsgSetForegroundWindow::~CMsgSetForegroundWindow()
  T CMsgSetGameOverlayTargetPIDs::ByteSize() const
  T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
  T CMsgSetGameOverlayTargetPIDs::Clear()
@@ -8687,6 +8760,10 @@
  T CRunGameEngine::IsRunning(unsigned int, char const*)
  T CRunGameEngine::RunEngine(int, char const*, char const*, bool)
  T CRunGameEngine::~CRunGameEngine()
+ T CSHA1::Final()
+ T CSHA1::HashFile(char const*, bool)
+ T CSHA1::Transform(unsigned int*, unsigned char const*)
+ T CSHA1::Update(unsigned char const*, unsigned int)
  T CSTime::CSTime()
  T CSavedMemStream::BWaitForDataToGet(bool)
  T CSavedMemStream::CSavedMemStream(unsigned int)
@@ -9258,6 +9335,7 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::AddHandle()
  T CUtlHandleTable<vgui::BuildGroup, 20>::CUtlHandleTable()
  T CUtlHandleTable<vgui::BuildGroup, 20>::GetEntry(unsigned int) const
+ T CUtlHandleTable<vgui::BuildGroup, 20>::RecursiveValidate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::RemoveHandle(unsigned int)
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
@@ -9364,6 +9442,13 @@
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlRBTree<void*, int, bool (*)(void* const&, void* const&), CDefRBTreeBalanceListener<int> >*, int>::Validate(CValidator&, char const*)
+ T CUtlLinkedList<CUtlString, int>::AllocInternal(bool)
+ T CUtlLinkedList<CUtlString, int>::Free(int)
+ T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
+ T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RemoveAll()
+ T CUtlLinkedList<CUtlString, int>::Unlink(int)
+ T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<int, int>::AllocInternal(bool)
@@ -9417,6 +9502,9 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
  T CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Find(CUtlString const&) const
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CDirContentsWatcher::FileWatchData const&)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Insert(CUtlString const&, CUtlString const&)
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
@@ -9493,6 +9581,14 @@
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t const&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlString, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -9727,6 +9823,10 @@
  T CUtlVector<CScreenshotImageClickPanel*, CUtlMemory<CScreenshotImageClickPanel*> >::SortedFindLessOrEqual(CScreenshotImageClickPanel* const&, bool (*)(CScreenshotImageClickPanel* const&, CScreenshotImageClickPanel* const&, void*), void*, int, int) const
  T CUtlVector<CScreenshotImageClickPanel*, CUtlMemory<CScreenshotImageClickPanel*> >::Validate(CValidator&, char const*)
  T CUtlVector<CScreenshotImageClickPanel*, CUtlMemory<CScreenshotImageClickPanel*> >::~CUtlVector()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::Remove(int)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::RemoveAll()
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::Validate(CValidator&, char const*)
+ T CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >::~CUtlVector()
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::AddMultipleToTail(int, CSteamID const*)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::GrowVector(int)
  T CUtlVector<CSteamID, CUtlMemory<CSteamID> >::InsertBefore(int, CSteamID const&)
@@ -9739,6 +9839,7 @@
  T CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >::~CUtlVector()
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::GrowVector(int)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::InsertBefore(int)
+ T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
@@ -10063,6 +10164,7 @@
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T ChatIDFromClanID(CSteamID const&)
+ T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
  T ClientAPI_Init()
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
@@ -10182,6 +10284,7 @@
  T GetChatBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
+ T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetGameOverlayUIBasePanel()
  T GetHelpBaseURLForUniverse(EUniverse, CUtlString&, ELanguage)
@@ -10690,7 +10793,10 @@
  T jround_up
  T jzero_far
  T md5_block_asm_data_order
- T netadr_t::BlockingResolveAndSetFromString(char const*)
+ T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
+ T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::HasIP() const
+ T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)
  T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser
@@ -10750,6 +10856,7 @@
  T non-virtual thunk to vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T non-virtual thunk to vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T non-virtual thunk to vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T non-virtual thunk to vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T non-virtual thunk to vgui::HTML::BrowserSetIndex(int)
  T non-virtual thunk to vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -12042,6 +12149,7 @@
  T vgui::HTML::BrowserScalePageToValueResponse(CMsgScalePageToValueResponse const*)
  T vgui::HTML::BrowserSearchResults(CMsgSearchResults const*)
  T vgui::HTML::BrowserSetCursor(CMsgSetCursor const*)
+ T vgui::HTML::BrowserSetForegroundWindow(CMsgSetForegroundWindow const*)
  T vgui::HTML::BrowserSetHTMLTitle(CMsgSetHTMLTitle const*)
  T vgui::HTML::BrowserSetIndex(int)
  T vgui::HTML::BrowserSetSharedPaintBuffers(CMsgSetSharedPaintBuffers const*)
@@ -12080,7 +12188,9 @@
  T vgui::HTML::CHTMLFindBar::~CHTMLFindBar()
  T vgui::HTML::ChainToAnimationMap()
  T vgui::HTML::ChainToMap()
+ T vgui::HTML::CheckForClientChanges()
  T vgui::HTML::ClearRegisteredJSMethods()
+ T vgui::HTML::ClientStyleFileChanged(char const*)
  T vgui::HTML::DismissJSDialog(int)
  T vgui::HTML::ExitFullScreen()
  T vgui::HTML::Find(char const*)
@@ -14658,6 +14768,8 @@
  b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
  b (anonymous namespace)::CMsgImeSetComposition_descriptor_
  b (anonymous namespace)::CMsgImeSetComposition_reflection_
+ b (anonymous namespace)::CMsgInspectElement_descriptor_
+ b (anonymous namespace)::CMsgInspectElement_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -14764,6 +14876,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetForegroundWindow_descriptor_
+ b (anonymous namespace)::CMsgSetForegroundWindow_reflection_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
@@ -15094,6 +15208,7 @@
  ceil
  ceilf
  close
+ closedir
  cos
  crc32
  d .memset_pattern
@@ -15162,18 +15277,21 @@
  fputs
  fread
  free
+ fseek
  fstat$INODE64
+ ftell
  ftruncate
  fwrite
  g_VProfManager
  g_VProfProfilesRunningCount
  g_VProfile
  g_pMemAllocSteam
+ getaddrinfo
  getcwd
  getenv
- gethostbyname
  getpid
  getpwuid
+ gettimeofday
  getuid
  glBegin
  glBindTexture
@@ -15203,6 +15321,7 @@
  kCFPreferencesAnyApplication
  kCFPreferencesAnyHost
  kCFPreferencesCurrentUser
+ kCFRunLoopDefaultMode
  kill
  launch_data_alloc
  launch_data_dict_insert
@@ -15231,6 +15350,7 @@
  munmap
  objc_msgSend
  open
+ opendir$INODE64
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -15343,6 +15463,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgInspectElement_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
@@ -15396,6 +15517,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetForegroundWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
@@ -15452,6 +15574,8 @@
  r verbnames
  r verbs
  read
+ readdir$INODE64
+ realpath$DARWIN_EXTSN
  remove
  rename
  rindex
@@ -15698,6 +15822,7 @@
  t _GLOBAL__sub_I_constants.cpp
  t _GLOBAL__sub_I_controls.cpp
  t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_enum_names.cpp
@@ -15711,6 +15836,7 @@
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
+ t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_logfile.cpp
  t _GLOBAL__sub_I_logger.cpp
@@ -15873,6 +15999,7 @@
  t finish_pass_1_quant
  t format_message
  t free_pool
+ t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t fullsize_upsample
  t get_chr_property_list
  t get_interesting_appn

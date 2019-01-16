@@ -157,10 +157,12 @@
  B CMsgHueShift::animation_frame_data
  B CMsgHueShift::default_instance_
  B CMsgHueShift_AnimationFrameData::default_instance_
+ B CMsgIPAddress::default_instance_
  B CMsgImeCancelComposition::default_instance_
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
  B CMsgImeSetComposition::default_instance_
+ B CMsgInspectElement::default_instance_
  B CMsgJSAlert::default_instance_
  B CMsgJSConfirm::default_instance_
  B CMsgJSDialogResponse::default_instance_
@@ -262,6 +264,7 @@
  B CMsgSetCookie::default_instance_
  B CMsgSetCursor::default_instance_
  B CMsgSetFocus::default_instance_
+ B CMsgSetForegroundWindow::default_instance_
  B CMsgSetGameOverlayTargetPIDs::default_instance_
  B CMsgSetHTMLTitle::default_instance_
  B CMsgSetHorizontalScroll::default_instance_
@@ -1194,6 +1197,7 @@
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCookie
  D typeinfo for CCuratorPreferences
+ D typeinfo for CDirWatcher
  D typeinfo for CDragStartCallbacks
  D typeinfo for CDynamicFunc<bool (*)()>
  D typeinfo for CDynamicFunc<char const* (*)(vr::EVRInitError)>
@@ -1305,10 +1309,12 @@
  D typeinfo for CMsgHorizontalScrollBarSizeResponse
  D typeinfo for CMsgHueShift
  D typeinfo for CMsgHueShift_AnimationFrameData
+ D typeinfo for CMsgIPAddress
  D typeinfo for CMsgImeCancelComposition
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
  D typeinfo for CMsgImeSetComposition
+ D typeinfo for CMsgInspectElement
  D typeinfo for CMsgJSAlert
  D typeinfo for CMsgJSConfirm
  D typeinfo for CMsgJSDialogResponse
@@ -1403,6 +1409,7 @@
  D typeinfo for CMsgSetCookie
  D typeinfo for CMsgSetCursor
  D typeinfo for CMsgSetFocus
+ D typeinfo for CMsgSetForegroundWindow
  D typeinfo for CMsgSetGameOverlayTargetPIDs
  D typeinfo for CMsgSetHTMLTitle
  D typeinfo for CMsgSetHorizontalScroll
@@ -1868,6 +1875,7 @@
  D vtable for CCallbackImpl<4>
  D vtable for CCookie
  D vtable for CCuratorPreferences
+ D vtable for CDirWatcher
  D vtable for CDragStartCallbacks
  D vtable for CDynamicFunc<bool (*)()>
  D vtable for CDynamicFunc<char const* (*)(vr::EVRInitError)>
@@ -1979,10 +1987,12 @@
  D vtable for CMsgHorizontalScrollBarSizeResponse
  D vtable for CMsgHueShift
  D vtable for CMsgHueShift_AnimationFrameData
+ D vtable for CMsgIPAddress
  D vtable for CMsgImeCancelComposition
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
  D vtable for CMsgImeSetComposition
+ D vtable for CMsgInspectElement
  D vtable for CMsgJSAlert
  D vtable for CMsgJSConfirm
  D vtable for CMsgJSDialogResponse
@@ -2077,6 +2087,7 @@
  D vtable for CMsgSetCookie
  D vtable for CMsgSetCursor
  D vtable for CMsgSetFocus
+ D vtable for CMsgSetForegroundWindow
  D vtable for CMsgSetGameOverlayTargetPIDs
  D vtable for CMsgSetHTMLTitle
  D vtable for CMsgSetHorizontalScroll
@@ -2507,6 +2518,7 @@
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSURL
  OBJC_CLASS_$_NSUserDefaults
@@ -2655,10 +2667,12 @@
  R typeinfo name for CMsgHorizontalScrollBarSizeResponse
  R typeinfo name for CMsgHueShift
  R typeinfo name for CMsgHueShift_AnimationFrameData
+ R typeinfo name for CMsgIPAddress
  R typeinfo name for CMsgImeCancelComposition
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
  R typeinfo name for CMsgImeSetComposition
+ R typeinfo name for CMsgInspectElement
  R typeinfo name for CMsgJSAlert
  R typeinfo name for CMsgJSConfirm
  R typeinfo name for CMsgJSDialogResponse
@@ -2753,6 +2767,7 @@
  R typeinfo name for CMsgSetCookie
  R typeinfo name for CMsgSetCursor
  R typeinfo name for CMsgSetFocus
+ R typeinfo name for CMsgSetForegroundWindow
  R typeinfo name for CMsgSetGameOverlayTargetPIDs
  R typeinfo name for CMsgSetHTMLTitle
  R typeinfo name for CMsgSetHorizontalScroll
@@ -4050,7 +4065,6 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
- T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -5367,6 +5381,21 @@
  T CMsgHueShift_AnimationFrameData::SetCachedSize(int) const
  T CMsgHueShift_AnimationFrameData::default_instance()
  T CMsgHueShift_AnimationFrameData::~CMsgHueShift_AnimationFrameData()
+ T CMsgIPAddress::ByteSize() const
+ T CMsgIPAddress::CMsgIPAddress()
+ T CMsgIPAddress::Clear()
+ T CMsgIPAddress::GetCachedSize() const
+ T CMsgIPAddress::GetMetadata() const
+ T CMsgIPAddress::IsInitialized() const
+ T CMsgIPAddress::MergeFrom(CMsgIPAddress const&)
+ T CMsgIPAddress::New() const
+ T CMsgIPAddress::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgIPAddress::SetCachedSize(int) const
+ T CMsgIPAddress::SharedCtor()
+ T CMsgIPAddress::clear_ip()
+ T CMsgIPAddress::mutable_v6()
+ T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgIPAddress::~CMsgIPAddress()
  T CMsgImeCancelComposition::ByteSize() const
  T CMsgImeCancelComposition::CMsgImeCancelComposition()
  T CMsgImeCancelComposition::Clear()
@@ -5419,6 +5448,17 @@
  T CMsgImeSetComposition::mutable_text()
  T CMsgImeSetComposition::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgImeSetComposition::~CMsgImeSetComposition()
+ T CMsgInspectElement::ByteSize() const
+ T CMsgInspectElement::CMsgInspectElement()
+ T CMsgInspectElement::Clear()
+ T CMsgInspectElement::GetCachedSize() const
+ T CMsgInspectElement::GetMetadata() const
+ T CMsgInspectElement::IsInitialized() const
+ T CMsgInspectElement::MergeFrom(CMsgInspectElement const&)
+ T CMsgInspectElement::New() const
+ T CMsgInspectElement::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgInspectElement::SetCachedSize(int) const
+ T CMsgInspectElement::~CMsgInspectElement()
  T CMsgJSAlert::ByteSize() const
  T CMsgJSAlert::CMsgJSAlert()
  T CMsgJSAlert::Clear()
@@ -6275,10 +6315,15 @@
  T CMsgProtoBufHeader::SetCachedSize(int) const
  T CMsgProtoBufHeader::SharedCtor()
  T CMsgProtoBufHeader::SharedDtor()
+ T CMsgProtoBufHeader::clear_ip_addr()
  T CMsgProtoBufHeader::mutable_error_message()
+ T CMsgProtoBufHeader::mutable_ip_v6()
  T CMsgProtoBufHeader::mutable_target_job_name()
+ T CMsgProtoBufHeader::mutable_wg_token()
  T CMsgProtoBufHeader::set_error_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_ip_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::set_target_job_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgProtoBufHeader::set_wg_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgProtoBufHeader::~CMsgProtoBufHeader()
  T CMsgProtobufWrapped::ByteSize() const
  T CMsgProtobufWrapped::CMsgProtobufWrapped()
@@ -6744,6 +6789,17 @@
  T CMsgSetFocus::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSetFocus::SetCachedSize(int) const
  T CMsgSetFocus::~CMsgSetFocus()
+ T CMsgSetForegroundWindow::ByteSize() const
+ T CMsgSetForegroundWindow::CMsgSetForegroundWindow()
+ T CMsgSetForegroundWindow::Clear()
+ T CMsgSetForegroundWindow::GetCachedSize() const
+ T CMsgSetForegroundWindow::GetMetadata() const
+ T CMsgSetForegroundWindow::IsInitialized() const
+ T CMsgSetForegroundWindow::MergeFrom(CMsgSetForegroundWindow const&)
+ T CMsgSetForegroundWindow::New() const
+ T CMsgSetForegroundWindow::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgSetForegroundWindow::SetCachedSize(int) const
+ T CMsgSetForegroundWindow::~CMsgSetForegroundWindow()
  T CMsgSetGameOverlayTargetPIDs::ByteSize() const
  T CMsgSetGameOverlayTargetPIDs::CMsgSetGameOverlayTargetPIDs()
  T CMsgSetGameOverlayTargetPIDs::Clear()
@@ -7524,22 +7580,26 @@
  T CTCPConnection::ValidateGlobals(CValidator&)
  T CTCPHost::ValidateGlobals(CValidator&)
  T CTHash<CTCPConnection*, unsigned int>::Purge()
+ T CTHash<CTCPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CTCPConnection*, unsigned int>::RemoveAll()
  T CTHash<CTCPConnection*, unsigned int>::RemoveFromHash(CTCPConnection**)
  T CTHash<CTCPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CTCPConnection*, unsigned int>::~CTHash()
  T CTHash<CUDPConnection*, unsigned int>::Purge()
+ T CTHash<CUDPConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::RemoveAll()
  T CTHash<CUDPConnection*, unsigned int>::RemoveFromHash(CUDPConnection**)
  T CTHash<CUDPConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CUDPConnection*, unsigned int>::~CTHash()
  T CTHash<CWebSocketConnection*, unsigned int>::Purge()
+ T CTHash<CWebSocketConnection*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveAll()
  T CTHash<CWebSocketConnection*, unsigned int>::RemoveFromHash(CWebSocketConnection**)
  T CTHash<CWebSocketConnection*, unsigned int>::Validate(CValidator&, char const*)
  T CTHash<CWebSocketConnection*, unsigned int>::~CTHash()
  T CTHash<ITCPHostCallback*, unsigned int>::Purge()
  T CTHash<ITCPHostCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<ITCPHostCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<ITCPHostCallback*, unsigned int>::Remove(unsigned int)
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveAll()
  T CTHash<ITCPHostCallback*, unsigned int>::RemoveFromHash(ITCPHostCallback**)
@@ -7547,6 +7607,7 @@
  T CTHash<ITCPHostCallback*, unsigned int>::~CTHash()
  T CTHash<IUDPSocketCallback*, unsigned int>::Purge()
  T CTHash<IUDPSocketCallback*, unsigned int>::PvRecordFind(unsigned int) const
+ T CTHash<IUDPSocketCallback*, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CTHash<IUDPSocketCallback*, unsigned int>::Remove(unsigned int)
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveAll()
  T CTHash<IUDPSocketCallback*, unsigned int>::RemoveFromHash(IUDPSocketCallback**)
@@ -7701,8 +7762,6 @@
  T CTextShadowData::SerializeWithCachedSizesToArray(unsigned char*) const
  T CTextShadowData::SetCachedSize(int) const
  T CTextShadowData::~CTextShadowData()
- T CThreadSafeClassMemoryPool<CompletionData_t>::Alloc()
- T CThreadSafeClassMemoryPool<panorama::CUITextLayoutPango>::Alloc()
  T CThreadSafeMemoryPool::Alloc()
  T CThreadSafeMemoryPool::Alloc(unsigned int)
  T CThreadSafeMemoryPool::CThreadSafeMemoryPool(int, int, int)
@@ -9654,12 +9713,13 @@
  T ClientVR()
  T ClosePlatformSocket(int)
  T Common_FreeGlobals()
+ T CompletionData_t* CThreadSafeClassMemoryPool<CompletionData_t>::Alloc<>()
  T CompletionPortManagerFioEnqueue(int, CompletionData_t*)
  T CompletionPortManagerFioFinalize(int, unsigned int)
  T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T ConCommand::CanAutoComplete()
- T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
- T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
  T ConCommand::Dispatch(void*, ConParams&)
  T ConCommand::IsCommand() const
  T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&))
@@ -10286,6 +10346,8 @@
  T jpeg_std_error
  T jround_up
  T jzero_far
+ T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::HasIP() const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser
  T non-virtual thunk to panorama::CLayoutFile::ApplyMatchedStylesToPanelStyle(panorama::IUIPanelStyle*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> > const&, panorama::EStyleRepaint&, bool&)
@@ -14070,6 +14132,7 @@
  T panorama::CUISoundSystem::UnpauseAudioIfNeeded()
  T panorama::CUISoundSystem::VolumeRampSoundSample(void*, float, float)
  T panorama::CUISoundSystem::~CUISoundSystem()
+ T panorama::CUITextLayoutPango* CThreadSafeClassMemoryPool<panorama::CUITextLayoutPango>::Alloc<>()
  T panorama::CUITextLayoutPango::BDraw(CUtlVector<panorama::UITextOpacityMaskDataRange_t, CUtlMemory<panorama::UITextOpacityMaskDataRange_t> >&, panorama::UITextFormatProperties_t const*, int, panorama::IUITextTextureStorage*, float, float, void*)
  T panorama::CUITextLayoutPango::BInitialize(void const*, int, int, panorama::EPanoramaTextEncoding, panorama::IUITextServices::TextLayoutParams_t const*)
  T panorama::CUITextLayoutPango::CUITextLayoutPango()
@@ -15523,6 +15586,7 @@
  T v8::platform::WorkerThread::WorkerThread(v8::platform::TaskQueue*)
  T v8::platform::WorkerThread::~WorkerThread()
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
+ T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::LocEntry_t>(panorama::CLocalization::LocEntry_t*)
  T void Destruct<panorama::CUIEngine::ScheduledItem_t>(panorama::CUIEngine::ScheduledItem_t*)
@@ -15546,6 +15610,11 @@
  T void GetRenderCmdDataAnimation<CMsgTransformOriginData const*, CMsg3DTransformOrigin>(CMsgTransformOriginData const**, CMsg3DTransformOrigin const&, int, int)
  T void GetRenderCmdDataAnimation<CRadiusData const*, CMsgBorderRadius>(CRadiusData const**, CMsgBorderRadius const&, int, int)
  T void GetRenderCmdDataAnimation<CTextShadowData const*, CMsgTextShadow>(CTextShadowData const**, CMsgTextShadow const&, int, int)
+ T void RecursiveValidate<CTCPConnection>(CTCPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CUDPConnection>(CUDPConnection*, CValidator&, char const*)
+ T void RecursiveValidate<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*)
+ T void RecursiveValidate<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*)
+ T void RecursiveValidate<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*)
  T void RegisterForUnhandledEvent<panorama::CImageResourceManager, panorama::CImageResourceManager>(ImageUnreferenced const&, panorama::CImageResourceManager*, bool (panorama::CImageResourceManager::*)(panorama::CImageProxySource*))
  T void RegisterForUnhandledEvent<panorama::CLayoutManager, panorama::CLayoutManager>(AutoReloadFailedLayoutReloads const&, panorama::CLayoutManager*, bool (panorama::CLayoutManager::*)())
  T void RegisterForUnhandledEvent<panorama::CVideoPlayerAudioRenderer, panorama::CVideoPlayerAudioRenderer>(VideoPlayerFreeAudio const&, panorama::CVideoPlayerAudioRenderer*, bool (panorama::CVideoPlayerAudioRenderer::*)(panorama::CVideoPlayerAudioRenderer*))
@@ -16234,6 +16303,9 @@
  b (anonymous namespace)::CMsgHueShift_AnimationFrameData_reflection_
  b (anonymous namespace)::CMsgHueShift_descriptor_
  b (anonymous namespace)::CMsgHueShift_reflection_
+ b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
+ b (anonymous namespace)::CMsgIPAddress_descriptor_
+ b (anonymous namespace)::CMsgIPAddress_reflection_
  b (anonymous namespace)::CMsgImeCancelComposition_descriptor_
  b (anonymous namespace)::CMsgImeCancelComposition_reflection_
  b (anonymous namespace)::CMsgImeCommitText_descriptor_
@@ -16242,6 +16314,8 @@
  b (anonymous namespace)::CMsgImeCompositionRangeChanged_reflection_
  b (anonymous namespace)::CMsgImeSetComposition_descriptor_
  b (anonymous namespace)::CMsgImeSetComposition_reflection_
+ b (anonymous namespace)::CMsgInspectElement_descriptor_
+ b (anonymous namespace)::CMsgInspectElement_reflection_
  b (anonymous namespace)::CMsgJSAlert_descriptor_
  b (anonymous namespace)::CMsgJSAlert_reflection_
  b (anonymous namespace)::CMsgJSConfirm_descriptor_
@@ -16368,6 +16442,7 @@
  b (anonymous namespace)::CMsgPopupHTMLWindow_reflection_
  b (anonymous namespace)::CMsgPostURL_descriptor_
  b (anonymous namespace)::CMsgPostURL_reflection_
+ b (anonymous namespace)::CMsgProtoBufHeader_default_oneof_instance_
  b (anonymous namespace)::CMsgProtoBufHeader_descriptor_
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
@@ -16430,6 +16505,8 @@
  b (anonymous namespace)::CMsgSetCursor_reflection_
  b (anonymous namespace)::CMsgSetFocus_descriptor_
  b (anonymous namespace)::CMsgSetFocus_reflection_
+ b (anonymous namespace)::CMsgSetForegroundWindow_descriptor_
+ b (anonymous namespace)::CMsgSetForegroundWindow_reflection_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_descriptor_
  b (anonymous namespace)::CMsgSetGameOverlayTargetPIDs_reflection_
  b (anonymous namespace)::CMsgSetHTMLTitle_descriptor_
@@ -16752,6 +16829,8 @@
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWhiteSpace()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyWidth()::s_pool
  b guard variable for panorama::GetPropertyMemPool_CStylePropertyZIndex()::s_pool
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b hksKVNameRequestHeaders
  b hksSetCookie
  b k_InvalidClientID
@@ -17022,6 +17101,8 @@
  b protobuf_AddDesc_renderer_2frendermessages_2eproto()::already_here
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
  b protobuf_AddDesc_uifontfile_5fformat_2eproto()::already_here
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
+ b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b s_ClientTenfoot720p
  b s_CurrentRoutingIDPtr
  b s_NoBinaryShaders
@@ -17037,6 +17118,7 @@
  b s_bHWAccelCRC32
  b s_bInitializedKeyMap
  b s_bMathlibInitializedGlobalConstructorOnly
+ b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_objCloseSocket
  b s_objDisconnect
@@ -17501,6 +17583,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCommitText_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeCompositionRangeChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgImeSetComposition_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgInspectElement_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSAlert_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSConfirm_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgJSDialogResponse_offsets_
@@ -17554,6 +17637,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCookie_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetCursor_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetFocus_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetForegroundWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetGameOverlayTargetPIDs_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHTMLTitle_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSetHorizontalScroll_offsets_
@@ -17695,7 +17779,6 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
- r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r protobuf_AssignDesc_uifontfile_5fformat_2eproto()::CUIFontFilePB_offsets_
  r protobuf_AssignDesc_uifontfile_5fformat_2eproto()::CUIFontFilePackagePB_CUIEncryptedFontFilePB_offsets_
@@ -17897,6 +17980,7 @@
  t _GLOBAL__sub_I_controller.cpp
  t _GLOBAL__sub_I_cookiecontainer.cpp
  t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_csshelpers.cpp
  t _GLOBAL__sub_I_debugstats.cpp
  t _GLOBAL__sub_I_descriptor.cc
@@ -17917,6 +18001,7 @@
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
+ t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_layoutfile.cpp
  t _GLOBAL__sub_I_localize.cpp

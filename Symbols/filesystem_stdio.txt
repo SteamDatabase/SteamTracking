@@ -327,6 +327,7 @@
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::Remove(int)
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::Validate(CValidator&, char const*)
  T CUtlVector<void (*)(char const*, char const*), CUtlMemory<void (*)(char const*, char const*)> >::~CUtlVector()
+ T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CaselessStringLessThan(char const* const&, char const* const&)
  T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CreateInterface
