@@ -2139,7 +2139,7 @@ function CAjaxPagingControls( rgSearchData, url )
 	this.m_cPageSize = rgSearchData['pagesize'];
 	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
 	this.m_strDefaultAction = typeof rgSearchData['action'] != 'undefined' ? rgSearchData['action'] : 'render';
-
+	this.m_rgAvailableSizes = [];
 
 	if ( rgSearchData['prefix'] )
 		this.m_strElementPrefix = rgSearchData['prefix'];
@@ -2149,6 +2149,13 @@ function CAjaxPagingControls( rgSearchData, url )
 
 	$(this.m_strElementPrefix + '_btn_prev').observe( 'click', this.PrevPage.bind( this ) );
 	$(this.m_strElementPrefix + '_btn_next').observe( 'click', this.NextPage.bind( this ) );
+	var elPageSizeCtn = $(this.m_strElementPrefix + '_paging_size_ctn');
+	for( var i = 0; elPageSizeCtn && i < $( elPageSizeCtn ).children.length; ++i )
+	{
+		$(this.m_strElementPrefix + '_paging_size_' + i ).observe( 'click', this.OnChangeSize.bind( this ) );
+
+		this.m_rgAvailableSizes.push( $( elPageSizeCtn ).children[i].dataset.size );
+	}
 
 	this.UpdatePagingDisplay();
 }
@@ -2187,6 +2194,15 @@ CAjaxPagingControls.prototype.SetStaticParameters = function ( rgParams )
 CAjaxPagingControls.prototype.OnAJAXComplete = function()
 {
 	this.m_bLoading = false;
+};
+
+CAjaxPagingControls.prototype.OnChangeSize = function( event )
+{
+	if( event.target && event.target.dataset.size != this.m_cPageSize )
+	{
+		this.m_cPageSize = event.target.dataset.size;
+		this.GoToPage( 0, true );
+	}
 };
 
 CAjaxPagingControls.prototype.NextPage = function()
@@ -2304,6 +2320,18 @@ CAjaxPagingControls.prototype.UpdatePagingDisplay = function()
 		$(this.m_strElementPrefix + '_end').update( Math.min( ( this.m_iCurrentPage + 1 ) * this.m_cPageSize, this.m_cTotalCount ) );
 	}
 
+		if( this.m_rgAvailableSizes && this.m_rgAvailableSizes.length > 0 )
+	{
+		if( this.m_cTotalCount <= this.m_rgAvailableSizes[0] )
+		{
+			$(this.m_strElementPrefix + '_per_page_ctn').hide();
+		}
+		else
+		{
+			$(this.m_strElementPrefix + '_per_page_ctn').show();
+		}
+	}
+
 	if ( this.m_cMaxPages <= 1 )
 	{
 		$(this.m_strElementPrefix + '_controls').hide();
@@ -2343,6 +2371,22 @@ CAjaxPagingControls.prototype.UpdatePagingDisplay = function()
 		if ( lastPageLink != this.m_cMaxPages - 2 )
 			elPageLinks.insert( ' ... ' );
 		this.AddPageLink( elPageLinks, this.m_cMaxPages - 1 );
+	}
+
+		if( this.m_rgAvailableSizes.indexOf( this.m_cPageSize ) > -1 )
+	{
+		for( var i = 0; i < this.m_rgAvailableSizes.length; ++ i )
+		{
+			var elSizeItem = $(this.m_strElementPrefix + '_paging_size_' + i );
+			if( elSizeItem.dataset.size == this.m_cPageSize )
+			{
+				elSizeItem.addClassName( 'size_selected' );
+			}
+			else
+			{
+				elSizeItem.removeClassName( 'size_selected' );
+			}
+		}
 	}
 
 	if ( this.m_fnPageChangedHandler != null )

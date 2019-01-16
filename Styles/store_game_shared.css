@@ -217,6 +217,9 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 .game_area_details_specs.learning_about a.name {
 	color: #acb2b8;
 }
+.game_area_details_specs.learning_about a.name:hover {
+	background: rgba( 103, 193, 245, 0.1 );
+}
 .game_area_details_specs.learning_about a.name .tooltip {
 	vertical-align: middle;
 }

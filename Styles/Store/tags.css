@@ -3,6 +3,11 @@ html {
 	height: 100%;
 }
 
+body.v6 {
+	background: url( '/public/images/v6/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+	/* background: #1b2838; */
+}
+
 body.tag_page > .perf_timing_area .perf_timing_link {
 	position: absolute;
 	left: 15px;

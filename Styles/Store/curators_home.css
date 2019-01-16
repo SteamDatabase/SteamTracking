@@ -3,6 +3,7 @@ body.v6 {
 	background-image: none;
 }
 
+
 body.v6 h2.pageheader {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -49,8 +50,8 @@ body.v6 .header_area .page_desc {
 	content: ' ';
 	position: absolute;
 	z-index: 10;
-	width: 100px;
-	height: 475px;
+	width: 300px;
+	height: 600px;
 	left: -1px;
 	top: 0;
 background: -webkit-linear-gradient( left, rgba(27,40,56,1.0) 5%,rgba(27,40,56,0) 95%);background: linear-gradient( to right, rgba(27,40,56,1.0) 5%,rgba(27,40,56,0) 95%);}
@@ -59,21 +60,13 @@ background: -webkit-linear-gradient( left, rgba(27,40,56,1.0) 5%,rgba(27,40,56,0
 	content: ' ';
 	position: absolute;
 	z-index: 10;
-	width: 100px;
-	height: 475px;
+	width: 300px;
+	height: 600px;
 	right: -1px;
 	top: 0;
 background: -webkit-linear-gradient( left, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0) 95%);background: linear-gradient( to right, rgba(27,40,56,0) 5%,rgba(27,40,56,1.0) 95%);}
 
-.screenshot_bottom_fade {
-	position: absolute;
-	z-index: -1;
-	overflow: hidden;
-	height: 200px;
-	width: 1800px;
-	margin-left: -430px;
-	margin-top: 412px;
-background: -webkit-linear-gradient( top, rgba(27,40,56,0) 5%, rgba(27,40,56,1.0) 95%);background: linear-gradient( to bottom, rgba(27,40,56,0) 5%, rgba(27,40,56,1.0) 95%);}
+
 
 .screenshot_container img {
 	position: absolute;
@@ -638,7 +631,7 @@ body.v6 .store_capsule_frame.curator_spotlight h2 b {
 	margin-bottom: 2px;
 }
 .curator_buttons_ctn {
-	background: rgba( 0, 0, 0, 0.6 );
+	background: rgba( 0, 0, 0, 1 );
 	padding-top: 42px;
 	margin-top: 30px;
 	margin-bottom: 40px;

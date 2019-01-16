@@ -99,7 +99,7 @@ GSteamBroadcasts = {
 
 					$Contents = $J('<div/>', {'class': 'title' } );
 					$Contents.append( $J('<span/>', {'class': 'live_stream_app' } ).html( oItem.app_name ) );
-					$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( oItem.viewer_count ) );
+					$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( Number( oItem.viewer_count ).toLocaleString() ) );
 
 					$CapCtn.append( $Contents );
 					$CapCtn.append(

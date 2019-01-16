@@ -220,7 +220,7 @@ body.v6 {
 	}
 
 	html.responsive .invite_row {
-		padding: 0;
+		padding: 0 0 10px 0;
 	}
 
 	html.responsive .invite_row .actions {
@@ -228,7 +228,11 @@ body.v6 {
 		display: flex;
 		justify-content: space-evenly;
 		flex-grow: 1;
-		background: rgba( 255, 255, 255, .05 );
+		text-align: center;
+	}
+
+	html.responsive .fb_invite_friend {
+		width: 100%;
 	}
 
 	html.responsive .invite_row_left .invite_block_icon {
@@ -253,6 +257,18 @@ body.v6 {
 	html.responsive .searchBarContainer input {
 		width: 100%;
 		max-width: none;
+	}
+
+	html.responsive .addfriend_column1 {
+		margin: 0;
+	}
+
+	html.responsive #friends_add .title_bar {
+		display: none;
+	}
+
+	html.responsive .copy_button {
+		top: 15px;
 	}
 }
 
@@ -610,55 +626,54 @@ body.v6 {
 }
 
 /* Add friends page */
-.invite_section_ctn {
+#friends_add {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
+	flex-flow: row wrap;
 }
 
-.invite_section_ctn.invite_link {
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friendsinvite_link_bg.png' );
-    background-position: top right;
-    background-repeat: no-repeat;
+#friends_add .title_bar {
+	margin-bottom: 20px;
+}
+
+.addfriend_column1 {
+	flex: 2 0 0;
+	margin-right: 20px;
+}
+
+.addfriend_column2 {
+	flex: 1 0 0;
+}
+
+.invite_section_ctn {
+	font-size: 13px;
+	color: rgb(235, 235, 235);
+	background-color: rgba( 0, 0, 0, 0.2);
+	margin-bottom: 25px;
 }
 
 .invite_section_ctn .header_row {
-    flex: 1 100%;
-    background-color: #015e80;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-
-    font-size: 14px;
-    color: #fff;
-    font-weight: normal;
-    width: 20%;
-    padding: 10px;
-}
-.invite_section_ctn .header_row span {
-    background-repeat: no-repeat;
-    background-size: 16px 192px;
-    padding-left: 24px;
-    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/iconsheet_friends.png?v=5' );
-    background-position: 0 -112px;
-    display: inline-block;
-    line-height: 16px;
-}
-.invite_section_ctn .header_row span.search_friends {
-    background-position: 0 -96px;
-}
-.invite_section_ctn .header_row span.facebook_link {
-    background-position: 0 -128px;
+	padding: 20px 20px 0 20px;
+	font-weight: 600;
 }
 
 .invite_section_ctn .content {
-    flex: 1 100%;
-    font-size: 13px;
-    color: rgb(235, 235, 235);
-    background-color: rgba( 0, 0, 0, 0.2);
-    padding: 16px;
-    border-style: none;
-    min-height: 120px;
+	padding: 10px 20px 20px 20px;
+	font-size: 14px;
+}
+
+.invite_section_ctn .quickinvite_img_ctn {
+    background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/icn-quickinvite.svg' );
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: 30%;
+	background-color: rgba( 0, 0, 0, .35 );
+	height: 175px;
+}
+
+.invite_section_ctn .header_row {
+    font-size: 16px;
+    color: #fff;
 }
 
 .noCoplayHistory {
@@ -669,16 +684,11 @@ body.v6 {
 	width: 100%;
 }
 
-.invite_section_ctn .generate_button {
-    margin: 20px 0;
-    /* TODO: put a little arrow on it */
-}
-
 .invite_section_ctn .table_header {
     color: #92afba;
     font-size: 11px;
     text-transform: uppercase;
-    padding: 8px 0px;
+    padding: 8px 0;
 }
 
 .invite_section_ctn .table {
@@ -689,6 +699,7 @@ body.v6 {
     /*color: #252525;*/
     margin-bottom: 4px;
     border-radius: 3px;
+	color: #000000;
 }
 .invite_section_ctn .table .tr {
     display: table-row;
@@ -698,11 +709,10 @@ body.v6 {
 
 .invite_section_ctn .table .date_cell {
     display: table-cell;
-    width: 10%;
+    width: 15%;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 10px;
-    color: #7092a5;
     border-right: 1px solid #68828c;
     padding: 1px 8px;
     vertical-align: middle;
@@ -710,14 +720,13 @@ body.v6 {
 
 .invite_section_ctn .table .copy_cell {
     display: table-cell;
-    width: 18px;
+    width: 16px;
     border-right: 1px solid #68828c;
-    padding: 4px 8px;
+    padding: 7px 12px;
 }
 
 .invite_section_ctn .table .url_cell {
     display: table-cell;
-    color: #abdaf4;
     border-right: 1px solid #68828c;
     vertical-align: middle;
     padding: 0px 8px;
@@ -725,8 +734,8 @@ body.v6 {
 
 .invite_section_ctn .table .revoke_cell {
     display: table-cell;
-    width: 8px;
-    padding: 4px 8px;
+    width: 16px;
+    padding: 7px 12px;
 }
 
 .invite_section_ctn .content .loading {
@@ -741,13 +750,8 @@ body.v6 {
 }
 
 .url_cell_inner {
-    padding: 6px;
-    margin: 10px 6px;
-    box-shadow: inset 0px 0px 4px #6d8690;
-    border: 1px solid #68828c;
-    border-radius: 4px;
-    background-color: #b8ceda;
-    color: #101c21;
+	padding: 6px;
+	margin: 5px;
 	word-wrap: break-word;
 	word-break: break-all;
 	-webkit-user-select: all;
@@ -757,15 +761,10 @@ body.v6 {
 }
 
 .copy_button {
-    border-radius: 2px;
-    border: none;
-    padding: 1px;
-    display: inline-block;
-    cursor: pointer;
-    padding: 0 15px;
-    font-size: 12px;
-    position: relative;
-    top: 12px;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	top: 5px;
 }
 
 .invite_token_list {
@@ -778,12 +777,6 @@ body.v6 {
     display: table-row-group;
 }
 
-.description {
-    max-width: 75%;
-    color: rgb(235, 235, 235);
-
-}
-
 .description a {
 	text-decoration: underline;
 }
@@ -791,12 +784,43 @@ body.v6 {
 .description_note {
     color: #7092a5;
     margin: 10px 0 20px 0;
-    max-width: 75%
 }
-/* Invites page */
+
+.facebook_link {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/friends/icn-fb.svg' );
+	background-position: left;
+	background-repeat: no-repeat;
+	padding-left: 30px;
+}
+
+.link_fb_btn {
+	margin-top: 15px;
+}
+
+.fb_unlink_btn {
+	margin-top: 10px;
+}
+
+
+.fb_invite_ctn .invite_row .invite_block_icon {
+	padding-left: 0;
+}
+	/* Invites page */
 
 .section_text {
     flex: 1 100%;
+}
+
+.fb_invite_ctn .invite_row{
+	border-top: 1px solid rgba( 112, 112, 112, .2 );
+}
+
+.fb_invite_ctn .invite_row .actions {
+	padding: 0 8px;
+}
+
+.fb_invite_ctn .inviterSmallText {
+	color: #989898;
 }
 
 /* --- Display of pending invites --- */
@@ -1040,7 +1064,7 @@ span.invite_action_txt {
 }
 
 #search_players_form {
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 #search_players_form input[type="text"] {
@@ -1048,6 +1072,7 @@ span.invite_action_txt {
 	width: 40%;
 	margin: 0;
 	box-shadow: none;
+	float: none;
 }
 
 #search_players_form input[type="submit"] {

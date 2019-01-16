@@ -55,6 +55,7 @@ ul li {
 
 ul.bullets li {
 	list-style-type: square;
+	margin-bottom: 15px;
 }
 
 .grayRule {
@@ -65,7 +66,8 @@ ul.bullets li {
 	padding: 0px 20px;
 }
 
-body.contact_page {
+body.contact_page,
+body.ban_keys {
 	background-image: radial-gradient(
 		circle at top left,
 		#37393f 50%,
@@ -77,7 +79,8 @@ body.contact_page {
 body.contact_page .AdminPageContent {
 	max-width: 600px;
 }
-body.contact_page #landingNav > a.active {
+body.contact_page #landingNav > a.active,
+body.ban_keys #landingNav > a.active {
 	background-color: #37393f;
 }
 

@@ -2,6 +2,11 @@
 .updated_apps {
 }
 
+body.v6 {
+	background: url( '/public/images/v6/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+	/* background: #1b2838; */
+}
+
 #tab_preview_container {
 	height: 500px;
 }

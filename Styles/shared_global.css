@@ -1285,7 +1285,7 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 	color: #66c0f4;
 }
 
-.pagebtn:hover, a.pagebtn:hover {
+.pagebtn:not(.disabled):hover, a.pagebtn:not(.disabled):hover {
 	background-color: #66c0f4;
 	border-color: #66c0f4;
 	color: #fff;
@@ -1293,10 +1293,8 @@ div#global_header .submenuitem.active.moderator, div#global_header .submenuitem.
 }
 
 .pagebtn.disabled, .pagebtn.disabled:hover, a.pagebtn.disabled, a.pagebtn.disabled:hover {
-	border: 1px solid #253e4c;
-	background-color: transparent;
-	color: #253e4c;
 	cursor: default;
+	opacity: 0.2;
 }
 
 a.pagelink:hover {

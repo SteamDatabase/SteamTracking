@@ -45,11 +45,6 @@ body.v6.in_client {
 	background-position: center top;
 }
 
-body.v6 {
-	 background: url( '/public/images/v6/colored_body_top.png?v=2' ) center top no-repeat #1b2838;
-	 /* background: #1b2838; */
-}
-
 body.v6.game_bg {
     background: #1b2838;
 }
@@ -202,8 +197,13 @@ body.v6 h2 {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			font-size: 18px;
-	color: #67c1f5;
+			font-size: 14px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0 0 10px;
+	letter-spacing: 2px;
+	font-weight: normal;
+	padding-top: 2px;
 }
 body.v6 h2 a {
     color: #67c1f5;
@@ -2968,17 +2968,6 @@ a.cluster_capsule:hover {
 }
 
 
-body.v6 .store_capsule_frame h2, body.v6 .store_capsule_frame h3 {
-	text-transform: uppercase;
-	color: #fff;
-	margin: 0 0 10px;
-	font-size: 17px;
-	letter-spacing: 2px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-		}
-
 body.v6 .store_capsule_frame h2 span.right {
 	float: right;
 	text-transform: none;
@@ -3096,8 +3085,7 @@ body.v6 .store_capsule_frame > h3, body.v6 .store_capsule_frame > h3 > a {
 
 
 body.v6 {
-	background: url( '/public/images/v6/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
-	/* background: #1b2838; */
+	background: #1b2838;
 }
 
 .page_header_ctn {

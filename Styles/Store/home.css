@@ -110,8 +110,14 @@ body:not(.no_home_gutter) .home_page_content {
 	transition: padding 0.25s;
 }
 
-body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder,
+div#global_header .content {
 	transition: right 0.25s;
+}
+
+div#global_header .content {
+	position: relative;
+	right: 0;
 }
 
 body:not(.no_home_gutter) .home_page_gutter {
@@ -131,6 +137,10 @@ body:not(.no_home_gutter) .home_page_gutter {
 	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
 		right: -218px;
 	}
+	div#global_header .content {
+		position: relative;
+		right: -90px;
+	}
 }
 
 @media all and (min-width: 1442px) {
@@ -138,6 +148,9 @@ body:not(.no_home_gutter) .home_page_gutter {
 		padding-right: 234px;
 	}
 	body:not(.no_home_gutter) .home_page_body_ctn .page_background_holder {
+		right: 0;
+	}
+	div#global_header .content {
 		right: 0;
 	}
 }
@@ -1923,6 +1936,12 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 
 /* home_v2.css */
+
+body.v6 {
+	background: url( '/public/images/v6/colored_body_top2.png?v=2' ) center top no-repeat #1b2838;
+	/* background: #1b2838; */
+}
+
 .friends_recently_purchased .home_smallcaps a.home_smallcap .friends_container img {
 	width: 32px;
 	height: 32px;
@@ -2388,18 +2407,6 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%););backgroun
 	display: inline-block;
 	vertical-align: top;
 }
-
-body.v6 .marketingmessage_area h2 {
-	text-transform: uppercase;
-	color: #fff;
-	margin: 0 0 10px;
-	font-size: 17px;
-	letter-spacing: 2px;
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-		}
-
 
 .home_marketing_message, .home_marketing_message:hover {
 	display: block;
@@ -3233,19 +3240,6 @@ body.v6 .home_rightcol.recommended h2, body.v6 .home_leftcol h2 {
 	box-shadow: 0 0 3px 0 #000000;
 	margin-top: 6px;
 	background-image: url( '/public/images/v6/home/background_spotlight.jpg' );
-}
-
-body.v6 h2 {
-	text-transform: uppercase;
-	color: #fff;
-	margin: 0 0 10px;
-	font-size: 17px;
-	letter-spacing: 2px;
-		font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-			padding-top: 2px;
-
 }
 
 body.v6 h2 .header_inline {

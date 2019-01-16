@@ -2684,7 +2684,7 @@ iframe.steamTVLogin {
   flex-direction: row;
   max-width: 780px;
   overflow: hidden;
-  max-height: 200px;
+  max-height: 170px;
   z-index: 1; }
 
 .StoreSaleWidgetContainer_mini,
