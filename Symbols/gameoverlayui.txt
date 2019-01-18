@@ -373,6 +373,7 @@
  D CBasePanel::KB_ChainToMap()::chained
  D CBasePanel::PanelMessageFunc_Close::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_DelayedClose::InitVar()::bAdded
+ D CBasePanel::PanelMessageFunc_EditControllerConfig::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_ForceQuit::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_InitiateForceQuit::InitVar()::bAdded
  D CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()::bAdded
@@ -4779,6 +4780,7 @@
  T CBasePanel::CreateStoreBrowser(char const*)
  T CBasePanel::DelayedClose()
  T CBasePanel::DisableOverlayUI()
+ T CBasePanel::EditControllerConfig()
  T CBasePanel::EnableOverlayUI(CBasePanel::EOverlayDisplayMode)
  T CBasePanel::EnsureOverlayMusicLibraryPanelCreated()
  T CBasePanel::EnsureOverlayMusicPlayerPanelCreated()
@@ -4837,6 +4839,7 @@
  T CBasePanel::OpenSteamDialog(char const*)
  T CBasePanel::PanelMessageFunc_Close::InitVar()
  T CBasePanel::PanelMessageFunc_DelayedClose::InitVar()
+ T CBasePanel::PanelMessageFunc_EditControllerConfig::InitVar()
  T CBasePanel::PanelMessageFunc_ForceQuit::InitVar()
  T CBasePanel::PanelMessageFunc_InitiateForceQuit::InitVar()
  T CBasePanel::PanelMessageFunc_OnActivateModule::InitVar()
@@ -10171,6 +10174,7 @@
  T ClientApps()
  T ClientAudio()
  T ClientConfigStore()
+ T ClientController()
  T ClientFriends()
  T ClientGameStats()
  T ClientHTTP()

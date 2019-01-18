@@ -101,6 +101,17 @@
 			"ControlName"		"Label"
 			"labelText"		"#Steam_Game_Family_Sharing_Unsupported"
 		}
+		"Divider3"
+		{
+			"ControlName"		"Divider"
+		}
+		"SteamPlayOverrideCheck"
+		{
+			"ControlName"		"CheckButton"
+			"labelText"		"#Steam_GameProperties_SteamPlaySettings_Override"
+			"Default"		"0"
+		}
+		"SteamPlayOverrideCombo" { controlname=combobox }
 	}
     
     
@@ -132,6 +143,8 @@
 		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 		place {control=Divider2 start=CreateDesktopShortcutButton dir=down margin-top=20 region=main width=max }
 		place {controls=SteamInputPerGameLabel,SteamInputPerGameCombo start=Divider2 dir=down margin-top=20 spacing=10 width=max region=main }
+		place [$LINUX] {control=Divider3 start=SteamInputPerGameCombo dir=down margin-top=20 region=main width=max }
+		place [$LINUX] {controls=SteamPlayOverrideCheck,SteamPlayOverrideCombo start=Divider3 dir=down margin-top=20 spacing=10 width=max region=main }
 		place {controls=FamilySharingUnsupportedLabel margin-top=472 margin-left=20 }
 
 	}

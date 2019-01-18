@@ -2008,6 +2008,8 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_Global"	"Use your global Steam Input settings"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOn" "Forced On"
 
+"Steam_GameProperties_SteamPlaySettings_Override" "Force the use of a specific Steam Play compatibility tool"
+
 "Steam_Controller_Support_PS4" "PS"
 "Steam_Controller_Support_XBox" "Xbox"
 "Steam_Controller_Support_Generic" "Generic"
@@ -4405,15 +4407,19 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Compat_Enable"			    "Enable Steam Play for supported titles"
 "Steam_Settings_Compat_Advanced_Title"		"Advanced"
 "Steam_Settings_Compat_Forced_Info"		    "You can use Steam Play to test games in your library that have not been verified with a supported compatibility tool."
-"Steam_Settings_Compat_Forced_Enable"		"Enable Steam Play for all titles"
-"Steam_Settings_Compat_Forced_Override"		"Use this tool instead of game-specific selections from Steam"
+"Steam_Settings_Compat_Forced_Enable"		"Enable Steam Play for all other titles"
 "Steam_Settings_Compat_Advanced_Info"		"You may select a compatibility tool to use with games that have not been tested or verified to work on this platform.\n\nThis may not work as expected, and can cause issues with your games, including crashes and breaking save games."
-"Steam_Settings_Compat_Default_Tool"		"Compatibility tool:"
+"Steam_Settings_Compat_Default_Tool"		"Run other titles with:"
 "Steam_Settings_Compat_Info_Link"		    "Steam Play FAQ"
 "Steam_Settings_Compat_No_Default"		    "None selected"
 
 "Steam_Settings_Compat_Launch_Prefix"   "Runs on this computer via "
 "Steam_Settings_Compat_Launch_Name"     "Steam Play"
+
+"Steam_Settings_Compat_Launch_Whitelisted"     "selected by Valve testing"
+"Steam_Settings_Compat_Launch_Wildcard"     "selected by you for all titles"
+"Steam_Settings_Compat_Launch_Forced"     "selected by you for this title"
+
 
 "Steam_Settings_StreamingTitle" "In-Home Streaming"
 

@@ -3,11 +3,12 @@ class IClientControllerSerialized
 public:
     virtual unknown_ret ~IClientControllerSerializedMap() = 0;
     virtual unknown_ret ~IClientControllerSerializedMap() = 0;
-    virtual unknown_ret ShowBindingPanel(unsigned long long) = 0;
+    virtual unknown_ret ShowBindingPanel(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetControllerTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(unsigned long long) = 0;
     virtual unknown_ret GetHandleForGamepadIndex(int) = 0;
     virtual unknown_ret GetActionSetHandle(unsigned int, char const*) = 0;
+    virtual unknown_ret GetActionSetHandleByTitle(unsigned int, char const*) = 0;
     virtual unknown_ret ActivateActionSet(unsigned int, unsigned long long, unsigned long long) = 0;
     virtual unknown_ret ActivateActionSetLayer(unsigned int, unsigned long long, unsigned long long) = 0;
     virtual unknown_ret DeactivateActionSetLayer(unsigned int, unsigned long long, unsigned long long) = 0;
@@ -34,6 +35,7 @@ public:
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret WarmOptInStatus(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
+    virtual unknown_ret BAnyControllerOptedInAndAvailible(unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;
     virtual unknown_ret FreeBindingInstance(unsigned int) = 0;
     virtual unknown_ret IsModified(unsigned int) = 0;

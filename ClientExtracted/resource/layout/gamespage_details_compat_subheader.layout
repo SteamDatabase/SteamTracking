@@ -29,18 +29,16 @@
 
 	layout
 	{
-		region { name="header" y=0 x=0 width=max height=max }
+		region { name="header" y=0 x=0 width=max height=120 }
 
 		place { 
 			control=compatdescription
 			region=header
-			dir=right
-			align=left-top
-			margin-top=8
+			margin-top=0
 			margin-left=0
 			margin-right=0
-			spacing=10
 			width=380
+			dir=down
 		}
 	}
 }

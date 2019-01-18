@@ -21,7 +21,7 @@ public:
     virtual unknown_ret DeactivateActionSetLayer(unsigned int, unsigned long long, unsigned long long) = 0;
     virtual unknown_ret DeactivateAllActionSetLayers(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetActiveActionSetLayers(unsigned int, unsigned long long, unsigned long long*) = 0;
-    virtual unknown_ret ShowBindingPanel(unsigned long long) = 0;
+    virtual unknown_ret ShowBindingPanel(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetControllerTypeForHandle(unsigned long long) = 0;
     virtual unknown_ret GetGamepadIndexForHandle(unsigned long long) = 0;
     virtual unknown_ret GetHandleForGamepadIndex(int) = 0;
@@ -155,12 +155,14 @@ public:
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
     virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(unsigned int, unsigned int, CUtlBuffer const*) = 0;
+    virtual unknown_ret BAnyControllerOptedInAndAvailible(unsigned int) = 0;
     virtual unknown_ret GetTouchKeysForPopupMenu(unsigned int, unsigned int, PopupMenuTouchKey_t*, unsigned int) = 0;
     virtual unknown_ret PopupMenuTouchKeyClicked(unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret CheckMappingForEvents() = 0;
     virtual unknown_ret AccessControllerInputGeneratorMouseButton(unsigned int, Voltroller::MouseButtons, bool) = 0;
     virtual unknown_ret GetEmulatedOutputState() = 0;
     virtual unknown_ret GetActionSetHandle(unsigned int, char const*) = 0;
+    virtual unknown_ret GetActionSetHandleByTitle(unsigned int, char const*) = 0;
     virtual unknown_ret StopAnalogActionMomentum(unsigned long long, unsigned long long) = 0;
     virtual unknown_ret StartTrackingCallback(unsigned int, unsigned long long) = 0;
     virtual unknown_ret GetControllerUsageData(unsigned int) = 0;

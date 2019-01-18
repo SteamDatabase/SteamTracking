@@ -61,6 +61,8 @@
 "Overlay_ForceQuit_Title"		"Close Application"
 "Overlay_ForceQuit_Description"		"Unsaved data will be lost."
 
+"Overlay_Taskbar_EditControllerConfig"	"Controller Configuration"
+
 "Overlay_Playtime_Stats"		"Playtime Stats"
 "Overlay_Playtime_Intro"		"You've played this game"
 "Overlay_Playtime_IntroApp"		"You've run this application"
