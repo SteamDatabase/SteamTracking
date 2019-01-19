@@ -1172,3 +1172,8 @@ message CMsgClientClanState {
 	optional bool chat_room_private = 8;
 }
 
+message CMsgClientUnsignedInstallScript {
+	optional uint32 app_id = 1;
+	optional string file_name = 2;
+}
+

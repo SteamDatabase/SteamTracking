@@ -227,5 +227,59 @@
 		"wrap"		"0"
 		"Default"		"0"
 	}
-
+	"SteamPlayDivider" [$LINUX]
+	{
+		"ControlName"		"Divider"
+		"fieldName"		"SteamPlayDivider"
+		"xpos"		"12"
+		"ypos"		"300"
+		"wide"		"400"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	"SteamPlayForcedCheckbox" [$LINUX]
+	{
+		"ControlName"	"CheckButton"
+		"fieldName"		"SteamPlayForcedCheckbox"
+		"xpos"		"12"
+		"ypos"		"336"
+		"wide"		"400"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"labelText"		"#Steam_GameProperties_SteamPlaySettings_Override"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
+	"SteamPlayForcedComboBox" [$LINUX]
+	{
+		"ControlName"	"ComboBox"
+		"fieldName"		"SteamPlayForcedComboBox"
+		"xpos"		"12"
+		"ypos"		"372"
+		"wide"		"400"
+		"tall"		"24"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"textAlignment"		"west"
+		"wrap"		"0"
+		"Default"		"0"
+	}
 }

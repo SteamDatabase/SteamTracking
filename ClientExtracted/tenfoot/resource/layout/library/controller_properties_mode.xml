@@ -24,14 +24,10 @@
 				</Panel>
 
 				<!-- Dpad Mode -->
-				<Panel class="FieldWrapper" modes="DPad" sources="trackpad" advanced="off" gameactions="off" legacy_ga="off" >
+				<Panel class="FieldWrapper" modes="DPad" sources="trackpad" normal_but_ga_advanced ="on">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 					<DropDown id="RequiresClick" />
 				</Panel>
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad" advanced="on" gameactions="on" advanced_ga="on" >
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
-          <DropDown id="RequiresClickGA" />
-        </Panel>
 				<Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick gyro ABXY" advanced="off" gameactions="off" sourcedropdownoverride="DPadLayout DPad ABXY" sourcedropdownentries="0 1 3">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DPadLayout" />
 					<DropDown id="DPadLayout" />
@@ -50,11 +46,11 @@
 				</Panel>
         <Panel class="FieldWrapper" modes="DPad" legacy_ga="on" gameactions="on">
           <Label class="FieldLabel" text="#Gamepad_Up" />
-          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGA" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadUpButtonGALeg" />
         </Panel>
         <Panel class="FieldWrapper" modes="DPad" legacy_ga="on" gameactions="on">
           <Label class="FieldLabel" text="#Gamepad_Left" />
-          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGA" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGALeg" />
         </Panel>
 
         <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" legacy_ga="off" advanced_ga="off" gameactions="off" dependency="OverlapRegion">
@@ -113,13 +109,13 @@
           <Label class="FieldLabel ABXYLabels" text="#Gamepad_Y" />
           <Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_X" />
           <Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Triangle" />
-          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="YButtonGA" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="YButtonGALeg" />
         </Panel>
         <Panel class="FieldWrapper" modes="ABXY" legacy_ga="on" gameactions="on">
           <Label class="FieldLabel ABXYLabels" text="#Gamepad_X" />
           <Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_Y" />
           <Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Square" />
-          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="XButtonGA" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="XButtonGALeg" />
         </Panel>
         
 				<Panel class="FieldWrapper" modes="ABXY" advanced="off" sources="trackpad joystick">
@@ -597,10 +593,6 @@
             </Panel>
           </Panel>
         </Panel>
-        <Panel class="FieldWrapper" modes="dpad"  advanced="on" advanced_ga="on" sources="trackpad joystick">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
-          <DropDown id="HapticIntensityDpadGA" />
-        </Panel>
 				<!-- ABXY Mode -->
 				<Panel id="CenterImageABXY" class="CenterImageABXYPanel CenterImage" modes="ABXY" advanced="off" gameactions="off" legacy_ga="off">
 					<Panel id="DpadButtonContainer" class="FlowDown">
@@ -681,7 +673,7 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_InvertY" />
 					<DropDown id="InvertY_joystick_move" />
 				</Panel>
-				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" gameactions="off" visualization="off" dependency="MouseOutput" >
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" visualization="off" dependency="MouseOutput" >
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseSensitivity" />
 					<Slider id="MouseSensitivity_joystick_move" direction="horizontal" />
 				</Panel>
@@ -1117,7 +1109,7 @@
 					</Panel>
 
 					<!-- Dpad Mode -->
-					<Panel class="FieldWrapper" modes="dpad" gameactions="off" advanced="off" legacy_ga="off">
+					<Panel class="FieldWrapper" modes="dpad" advanced ="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityDpad" />
 					</Panel>
@@ -1139,11 +1131,11 @@
 					</Panel>
           <Panel class="FieldWrapper" modes="dpad" gameactions="on" legacy_ga="on">
             <Label class="FieldLabel" text="#Gamepad_Right" />
-            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGA" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGALeg" />
           </Panel>
           <Panel class="FieldWrapper" modes="dpad" gameactions="on" legacy_ga="on">
             <Label class="FieldLabel" text="#Gamepad_Down" />
-            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGA" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGALeg" />
           </Panel>
 					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick bumper" advanced="off" gameactions="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
@@ -1171,31 +1163,23 @@
             <Label class="FieldLabel ABXYLabels" text="#Gamepad_B" />
             <Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_A" />
             <Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_Circle" />
-            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="BButtonGA" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="BButtonGALeg" />
           </Panel>
           <Panel class="FieldWrapper" modes="ABXY" legacy_ga="on" gameactions="on">
             <Label class="FieldLabel ABXYLabels" text="#Gamepad_A" />
             <Label class="FieldLabel ABXYLabelsNintendo" text="#Gamepad_B" />
             <Label class="FieldLabel ABXYLabelsPS4" text="#Gamepad_X" />
-            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGA" />
+            <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="AButtonGALeg" />
           </Panel>
 					<Panel class="FieldWrapper" modes="ABXY" devonly="on" gameactions="off" advanced="off" legacy_ga="off">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityFourButtons" />
 					</Panel>
 					
-					<Panel class="FieldWrapper" modes="ABXY" gameactions="off" advanced="off" legacy_ga="off" sources="trackpad joystick">
+					<Panel class="FieldWrapper" modes="ABXY" normal_but_ga_advanced ="on" sources="trackpad joystick">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 						<DropDown id="RequiresClickFourButtons" />
 					</Panel>
-          <Panel class="FieldWrapper" modes="ABXY" advanced="on" advanced_ga="on" sources="trackpad joystick">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
-            <DropDown id="RequiresClickFourButtonsGA" />
-          </Panel>
-          <Panel class="FieldWrapper" modes="ABXY" advanced="on" advanced_ga="on" sources="trackpad joystick">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
-            <DropDown id="HapticIntensityFourButtonsGA" />
-          </Panel>
 
           <Panel class="FieldWrapper" modes="ABXY" gameactions="on" advanced="off">
 						<Label class="FieldLabel ABXYLabels" text="#Gamepad_B" />
