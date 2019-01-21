@@ -66796,19 +66796,30 @@
         if (!G.a.IN_CLIENT && G.a.STEAM_TV) {
           var n = Object(G.b)("broadcast");
           n &&
-            ("76561198873238444" == (e = n.steamid) &&
-              Q.init({
-                bValid: !0,
-                stream: { "76561198873238444": "#Broadcast_EnglishMain" },
-                name: "WePlay! Artifact Tournament",
-                appID: 583950,
-                link: "https://store.steampowered.com/app/583950/Artifact/",
-                linkName: "Artifact on Steam",
-                tabIcon: "public/images/webui/broadcast/artifact_icon.png",
-                offlineClassName: "BroadcastArtifactOffline"
-              }),
-            "76561198198486997" == e ||
-            ("148618792083695635" == e && "beta" != _.b.WEB_UNIVERSE)
+            ("76561198873238444" == (e = n.steamid)
+              ? Q.init({
+                  bValid: !0,
+                  stream: { "76561198873238444": "#Broadcast_EnglishMain" },
+                  name: "WePlay! Artifact Tournament",
+                  appID: 583950,
+                  link: "https://store.steampowered.com/app/583950/Artifact/",
+                  linkName: "Artifact on Steam",
+                  tabIcon: "public/images/webui/broadcast/artifact_icon.png",
+                  offlineClassName: "BroadcastArtifactOffline"
+                })
+              : "76561198871875463" == e
+              ? Q.init({
+                  bValid: !0,
+                  stream: { "76561198871875463": "#Broadcast_EnglishMain" },
+                  name: "The Chongqing Major",
+                  appID: 570,
+                  link: "https://store.steampowered.com/app/570/Dota_2/",
+                  linkName: "steam.tv/dota",
+                  tabIcon: "public/images/webui/broadcast/chongqing_icon.png",
+                  offlineClassName: "BroadcastDOTAChongqingOffline"
+                })
+              : "76561198198486997" == e ||
+                ("148618792083695635" == e && "beta" != _.b.WEB_UNIVERSE)
               ? Q.init({
                   bValid: !0,
                   stream: { "76561198124468676": "#Broadcast_EnglishMain" },

@@ -2656,6 +2656,15 @@ iframe.steamTVLogin {
 .BroadcastDOTATrueSight {
   background-image: url("../../images/webui/broadcast/true_sight_logo.png"); }
 
+.BroadcastDOTAChongqingOffline {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-image: url("../../images/webui/broadcast/dota_chongqing_splash_screen_2019.png"); }
+
 .BroadcastCSGOLondonOffline_Schedule {
   position: absolute;
   left: 0;
