@@ -2758,6 +2758,10 @@ div.early_access_header .heading h2 {
 	height: auto;
     margin-bottom: 2px;
     color: #fff;
+	letter-spacing: 0px;
+	padding-top: 0px;
+	text-transform: none;
+	margin-bottom: 0px;
 }
 
 div.early_access_header .heading a {

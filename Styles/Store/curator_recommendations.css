@@ -951,6 +951,8 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	flex-grow: 1;
 	padding: 0 10px;
 	position: relative;
+	max-height: 87px;
+	overflow: hidden;
 }
 .browse_content .recommendation .recommendation_app_small_cap {
 	width: 231px;
@@ -1606,6 +1608,15 @@ background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 1
 	html.responsive .socialmedia_accounts .fan_count {
 		display: none;
 	}
+	html.responsive .curator #RecommendationsRows .store_capsule.price_inline .discount_block {
+		left: calc(30vw + 10px);
+	}
+	html.responsive .recommendation_desc {
+		display: none;
+	}
+	html.responsive .browse_content .recommendation .recommendation_midcol {
+		top: 20%;
+	}
 
 }
 /* Smaller fallback responsive */
@@ -1644,7 +1655,12 @@ background: -webkit-linear-gradient( top, rgba(78, 102, 115, 0.3) 5%, rgba(78, 1
 	html.responsive .count_block .label {
 		display: inline-block;
 	}
-	
+	html.responsive .browse_content .recommendation .recommendation_midcol {
+		top: 0px;
+	}
+
+
+
 }
 
 /* Smaller, mobile-centric format responsive */

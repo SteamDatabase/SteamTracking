@@ -366,6 +366,13 @@ CWishlistController.prototype.BuildElements = function()
 			setTimeout ( YieldingCreateElements, 0 ); // Reschedule after 2ms so the browser has a chance to paint if it wants to.
 		} else {
 			console.log("Finished building wishlist. Yielded %s times for browser painting", nYields);
+
+			var idx = g_rgWishlistData[ Math.floor( Math.random() * g_rgWishlistData.length ) ];
+			var bgApp = g_rgAppInfo[idx.appid];
+
+			if( bgApp )
+				$J(".game_page_background").css({'background-image': 'url(' + bgApp.background + ')' });
+
 			_this.LoadSettings();
 			_this.Update();
 			$J('#throbber').hide();
