@@ -158,6 +158,8 @@ LocalizationReady("shared", "english", {
   Tooltip_MemberExpand: "Expand member list",
   Tooltip_ChatsCollapse: "Collapse chats list",
   Tooltip_ChatsExpand: "Expand chats list",
+  Tooltip_MinimizeList: "Minimize List",
+  Tooltip_ExpandList: "Expand List",
   Tooltip_TextChannel: "Text chat with group members",
   Tooltip_TextChannelCreate: "Create new text channel",
   Tooltip_NoPermissionChannelCreate:
@@ -279,5 +281,14 @@ LocalizationReady("shared", "english", {
   DASHPlayerStats_AudioNoRangeInformation: "No Buffered Audio Segments",
   DASHPlayerControls_GoLive: "Go Live",
   DASHPlayerControls_IsLive: "Live",
-  DASHPlayerControls_ClickToPlay: "Click to Play"
+  DASHPlayerControls_ClickToPlay: "Click to Play",
+
+  Broadcast_View_Stack_H: "Horizontal View",
+  Broadcast_View_Stack_V: "Vertical View",
+  Broadcast_View_Theater: "Theater Mode",
+  Broadcast_View_Fullscreen: "Fullscreen",
+  Broadcast_View_HideChat: "Hide Chat",
+  Broadcast_View_ShowBothChats: "Show Both Chats",
+  Broadcast_View_ShowSingleChats: "Show Single Chat",
+  Broadcast_View_ShowChat: "Show Chat"
 });

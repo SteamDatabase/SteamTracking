@@ -348,6 +348,9 @@
 .ingame .X-Large .steamavatar_avatarStatus_1Pwr6 {
   background: #bff02b; }
 
+.golden .steamavatar_avatarStatus_1Pwr6 {
+  background: linear-gradient(to bottom, #d5bf6a 0%, #ffe2a9 40%, #ba995c 52%, #ba995c 61%, #d5bf6a 85%); }
+
 .watchingbroadcast .steamavatar_avatarStatus_1Pwr6 {
   background: linear-gradient(to bottom, #9c8fd4 0%, #9c8fd4 30%, #9c8fd4 70%, #9c8fd4 100%); }
 
@@ -428,6 +431,8 @@
     z-index: 3; }
   .friendsnooze_SnoozeContainer_1OfTa.online .friendsnooze_SnoozeZ_29fyi {
     color: #4c91ac; }
+  .friendsnooze_SnoozeContainer_1OfTa.golden .friendsnooze_SnoozeZ_29fyi {
+    color: #d5bf6a; }
   .friendsnooze_SnoozeContainer_1OfTa.watchingbroadcast .friendsnooze_SnoozeZ_29fyi {
     color: #c9bdf7; }
   .friendsnooze_SnoozeContainer_1OfTa.in-game .friendsnooze_SnoozeZ_29fyi {
@@ -468,6 +473,323 @@
 .personastatusicons_PersonaStatusIcon_2rP7f.online .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_2rP7f.online .SVGIcon_BigPicture path {
   fill: #4c91ac; }
+
+.personanameandstatus_statusAndName_9U-hi {
+  display: flex;
+  margin-top: -2px; }
+
+.personanameandstatus_blocked_138jh .personanameandstatus_richPresenceLabel_3Q6g1 {
+  color: rgba(195, 74, 72, 0.75); }
+
+.personanameandstatus_playerName_1uxaf,
+.personanameandstatus_playerNickname_3-32P {
+  flex: 1;
+  line-height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+  font-size: 14px;
+  transition: text-overflow 0s linear; }
+
+.personanameandstatus_playerName_1uxaf {
+  -webkit-mask: linear-gradient(to right, black calc( 100% - 6px), rgba(0, 0, 0, 0.15) 100%);
+  mask: linear-gradient(to right, black calc( 100% - 6px), rgba(0, 0, 0, 0.15) 100%);
+  flex: initial;
+  padding-right: 6px;
+  margin-right: -6px; }
+
+.personanameandstatus_playerNickname_3-32P {
+  padding-left: 5px;
+  color: #666666; }
+
+.personanameandstatus_playerNicknameBracket_1lu-g {
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 1px;
+  opacity: 0.5;
+  line-height: 16px; }
+
+.personanameandstatus_richPresenceContainer_21cNf {
+  display: flex;
+  flex-direction: column; }
+
+.personanameandstatus_richPresenceLabel_3Q6g1 {
+  display: flex;
+  flex-direction: row;
+  line-height: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  margin-top: -1px;
+  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0.15) 100%); }
+
+.personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  line-height: 18px;
+  font-size: 12px; }
+
+.personanameandstatus_DNDContainer_3h0SR {
+  width: 12px;
+  height: 12px;
+  margin-top: -3px;
+  margin-left: 3px; }
+
+.personanameandstatus_partyBeaconJoin__ugTP {
+  font-weight: 800; }
+
+/* Styles that change based on persona state */
+.ingame .personanameandstatus_playerName_1uxaf {
+  color: #e3ffc2; }
+
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1,
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited,
+.ingame.personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  color: #91c257; }
+
+.ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px; }
+
+.ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_3Q6g1,
+.ingame .personanameandstatus_richPresenceLabel_3Q6g1,
+.ingame .personanameandstatus_richPresenceLabel_3Q6g1 a,
+.ingame .personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.ingame .personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.ingame .personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
+  color: #62813b; }
+
+.ingame .SVGIcon_DoNotDisturb circle,
+.ingame .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67; }
+
+.golden .personanameandstatus_playerName_1uxaf {
+  color: #e4ca63; }
+
+.golden .personanameandstatus_richPresenceLabel_3Q6g1,
+.golden .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
+.golden .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.golden .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.golden .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
+  color: #e4ca63; }
+
+.watchingbroadcast .personanameandstatus_playerName_1uxaf {
+  color: #c9bdf7; }
+
+.watchingbroadcast .personanameandstatus_richPresenceLabel_3Q6g1,
+.watchingbroadcast .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
+.watchingbroadcast .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.watchingbroadcast .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.watchingbroadcast .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
+  color: #8277b1; }
+
+.online .personanameandstatus_playerName_1uxaf {
+  color: #ccccd5;
+  color: #6dcff6; }
+
+.online .personanameandstatus_richPresenceLabel_3Q6g1,
+.online .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
+.online .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.online .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.online .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
+  color: #4c91ac; }
+
+.online .SVGIcon_DoNotDisturb circle,
+.online .SVGIcon_DoNotDisturb line {
+  stroke: #a0545a; }
+
+.offline .personanameandstatus_playerName_1uxaf {
+  color: #7a7a7a; }
+
+.offline .personanameandstatus_statusAndName_9U-hi {
+  filter: saturate(0); }
+
+.offline .personanameandstatus_richPresenceLabel_3Q6g1,
+.offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
+.offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
+.offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
+.offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
+  color: #555; }
+
+.offline .SVGIcon_DoNotDisturb circle,
+.offline .SVGIcon_DoNotDisturb line {
+  stroke: #cf7f67; }
+
+.offline .personanameandstatus_DNDContainer_3h0SR {
+  display: none; }
+
+/* Styles that change based on props */
+.personanameandstatus_hidePersona_1-otV .ContextMenuButton {
+  transform: translateY(6px); }
+
+.personanameandstatus_hidePersona_1-otV .personanameandstatus_statusAndName_9U-hi {
+  height: 100%; }
+
+.personanameandstatus_hidePersona_1-otV .personanameandstatus_playerName_1uxaf {
+  margin-top: 8px;
+  line-height: 100%; }
+
+.personanameandstatus_compactView_2PCWF.personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 10px;
+  margin-top: 1px; }
+
+.personanameandstatus_compactView_2PCWF .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 10px;
+  line-height: 11px; }
+
+.personanameandstatus_compactView_2PCWF .ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 10px;
+  line-height: 14px; }
+
+.personanameandstatus_compactView_2PCWF .speaking .personanameandstatus_playerName_1uxaf {
+  filter: brightness(1.5); }
+
+.personanameandstatus_compactView_2PCWF .personanameandstatus_playerName_1uxaf,
+.personanameandstatus_compactView_2PCWF .personanameandstatus_playerNickname_3-32P {
+  margin-bottom: -6px;
+  font-size: 12px; }
+
+.personanameandstatus_compactView_2PCWF .personanameandstatus_noContextMenu_35VFv .personanameandstatus_playerName_1uxaf,
+.personanameandstatus_compactView_2PCWF .personanameandstatus_noContextMenu_35VFv .personanameandstatus_playerNickname_3-32P {
+  margin-bottom: -2px; }
+
+/* These are styles yanked out of friends.global.css that should probably be fixed up to be more moduly */
+.currentUserContainer .personanameandstatus_playerName_1uxaf {
+  font-size: 15px;
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  transition: color .94s ease-in-out;
+  text-shadow: 1px 1px 4px #000;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0; }
+
+.currentUserContainer .personanameandstatus_statusAndName_9U-hi {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: -4px;
+  margin-right: 10px;
+  -webkit-app-region: no-drag; }
+
+.currentUserContainer .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 13px; }
+
+.currentUserContainer .personanameandstatus_richPresenceLabel_3Q6g1 {
+  -webkit-app-region: no-drag; }
+
+.currentUserContainer .personanameandstatus_richPresenceContainer_21cNf {
+  margin-top: 2px; }
+
+.currentUserContainer .personanameandstatus_compactView_2PCWF .personanameandstatus_playerName_1uxaf {
+  font-size: 14px;
+  margin-bottom: 0px; }
+
+.currentUserContainer .personanameandstatus_compactView_2PCWF .personanameandstatus_richPresenceLabel_3Q6g1 {
+  line-height: initial; }
+
+.currentUserContainer .personanameandstatus_compactView_2PCWF .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF .personanameandstatus_playerName_1uxaf,
+.ChatTabs .personanameandstatus_compactView_2PCWF .personanameandstatus_playerNickname_3-32P {
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-overflow: clip; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF .personanameandstatus_playerNickname_3-32P {
+  color: #a2a6ac; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF .personanameandstatus_richPresenceLabel_3Q6g1 {
+  line-height: 11px;
+  font-size: 10px;
+  margin-top: -1px; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF:not(.personanameandstatus_twoLine_2wZNn) .personanameandstatus_richPresenceLabel_3Q6g1:not(.personanameandstatus_gameName_qvibF) {
+  display: none; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF .offline .personanameandstatus_statusAndName_9U-hi {
+  color: #cccccc; }
+
+.ChatTabs .personanameandstatus_compactView_2PCWF .offline .personanameandstatus_richPresenceLabel_3Q6g1 {
+  color: #888; }
+
+.titleBarContainer .currentUserContainer .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px;
+  display: inline-block;
+  transition: color .94s ease-in-out;
+  text-shadow: 1px 1px 3px #000; }
+
+.titleBarContainer .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  margin-top: 0px; }
+
+.titleBarContainer .currentUserContainer .personanameandstatus_richPresenceLabel_3Q6g1:not(.personanameandstatus_gameName_qvibF) {
+  margin-top: -2px;
+  margin-bottom: 1px; }
+
+.singlewindow .currentUserContainer .personanameandstatus_statusAndName_9U-hi {
+  margin-right: 4px; }
+
+.singlewindow .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_statusAndName_9U-hi,
+.singlewindow .currentUserContainer .personanameandstatus_twoLine_2wZNn {
+  margin-right: 10px; }
+
+.needsUpdate .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_statusAndName_9U-hi {
+  margin-right: 48px; }
+
+.friendRequests .bright .moMutualFriends .personanameandstatus_playerName_1uxaf,
+.friendRequests .personanameandstatus_playerName_1uxaf {
+  color: white;
+  transition: color .2s ease-in-out; }
+
+.friendRequests .noMutualFriends .personanameandstatus_playerName_1uxaf {
+  color: #aaa;
+  transition: color .2s ease-in-out; }
+
+.MemberListColumn .personanameandstatus_statusAndName_9U-hi .personanameandstatus_richPresenceLabel_3Q6g1,
+.MemberListColumn .personanameandstatus_statusAndName_9U-hi .personanameandstatus_playerNickname_3-32P,
+.MemberListColumn .personanameandstatus_statusAndName_9U-hi .personanameandstatus_playerName_1uxaf {
+  text-overflow: clip;
+  transition-delay: 0.4s; }
+
+.MemberListColumn.MemberListViewCompact .personanameandstatus_statusAndName_9U-hi .personanameandstatus_richPresenceLabel_3Q6g1,
+.MemberListColumn.MemberListViewCompact .personanameandstatus_statusAndName_9U-hi .personanameandstatus_playerNickname_3-32P,
+.MemberListColumn.MemberListViewCompact .personanameandstatus_statusAndName_9U-hi .personanameandstatus_playerName_1uxaf {
+  text-overflow: clip;
+  transition-delay: 0s; }
+
+.chatModalCover.inviteDrop .personanameandstatus_statusAndName_9U-hi {
+  width: 220px;
+  opacity: 1; }
+
+.chatModalCover.inviteDrop .personanameandstatus_playerNickname_3-32P,
+.chatModalCover.inviteDrop .personanameandstatus_playerName_1uxaf {
+  font-size: 24px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: visible;
+  text-shadow: 0px 6px 6px #000, 0px 2px 12px #000;
+  line-height: normal; }
+
+.chatModalCover.inviteDrop .personanameandstatus_richPresenceContainer_21cNf,
+.chatModalCover.inviteDrop .personanameandstatus_SnoozeContainer_2xgNz,
+.chatModalCover.inviteDrop .ContextMenuButton,
+.chatModalCover.inviteDrop .personanameandstatus_ModalPosition_TopBar_1Y6m1 {
+  display: none; }
+
+.groupMemberList .personanameandstatus_playerName_1uxaf,
+.groupMemberList .personanameandstatus_playerNickname_3-32P {
+  font-size: 13px; }
+
+.groupMemberList .ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px; }
+
+.groupMemberList .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px; }
+
+.groupMemberList .personanameandstatus_richPresenceLabel_3Q6g1 {
+  line-height: 13px; }
 
 .miniprofile_miniProfile_s5zcg {
   width: fit-content;
@@ -561,6 +883,9 @@
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.online .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
   background: #6dcff6; }
 
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.golden .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
+  background: #e4ca63; }
+
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_avatarStatus_23H45.miniprofile_miniProfileAvatarStatus_1VgK8 {
   background: #bff02b; }
 
@@ -577,6 +902,10 @@
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4 {
   color: #e3ffc2; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.golden .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.golden .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4 {
+  color: #e4ca63; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4 {
@@ -657,6 +986,12 @@
   font-size: 12px;
   color: #62813b; }
 
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_golden_3cUbZ .miniprofile_gameState_2Va3_ {
+  color: #e4ca63; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_golden_3cUbZ .miniprofile_richPresence_1rud4 {
+  color: #e4ca63; }
+
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfileGameContainer_2FyZH .miniprofile_watchingbroadcast_24vwG .miniprofile_gameState_2Va3_ {
   padding-top: 6px;
   font-size: 12px;
@@ -722,6 +1057,9 @@
   color: #6b6a6a;
   font-size: 12px; }
 
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.golden .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #e4ca63; }
+
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
   color: #c9bdf7; }
 
@@ -731,6 +1069,9 @@
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.offline .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
   font-size: 10px;
   letter-spacing: 0; }
+
+.miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.golden .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
+  color: #e4ca63; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.watchingbroadcast .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
   color: #8277b1; }
@@ -1317,6 +1658,20 @@
 .videoFooter {
   display: none; }
 
+.videoContainer .videoBlur {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .5;
+  /*opacity: 1;
+	image-rendering: pixelated;
+
+	-webkit-mask: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
+	-webkit-mask-size: 64px 32px;
+	-webkit-mask-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
+	mask-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
+	mask-size: 64px 32px;*/ }
+
 .videoControls {
   z-index: 20;
   position: absolute;
@@ -1386,7 +1741,8 @@
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  cursor: default; }
+  cursor: default;
+  z-index: 5; }
 
 .BroadcastVideoWatchState_Text {
   text-align: center;
@@ -2446,10 +2802,12 @@
   padding-bottom: 56.25%; }
 
 .videoSrc {
+  z-index: 2;
   max-width: 100%;
   height: 100%;
   object-fit: contain;
-  /*border: 2px dashed white;*/
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -3039,6 +3397,11 @@ iframe.steamTVLogin {
   color: #e3ffc2; }
   .isCurrentUser .messages_SpeakerName_InGame_1vaKy {
     color: #6a8f40; }
+
+.messages_SpeakerName_Golden_hZgKn {
+  color: #e4ca63; }
+  .isCurrentUser .messages_SpeakerName_Golden_hZgKn {
+    color: #ad901e; }
 
 .messages_SpeakerName_WatchingBroadcast_3DQ_c {
   color: #c9bdf7; }
@@ -4793,7 +5156,6 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
 
 ::-webkit-scrollbar-thumb,
 .iScrollIndicator {
-  background: #373B42;
   border-radius: 2px;
   margin: 4px;
   /*box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .25);*/ }
@@ -5728,6 +6090,17 @@ button.DialogButton::-moz-focus-inner {
 .DialogHeader {
   font-weight: 300;
   font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px; }
+
+.DialogSubHeader {
+  font-weight: 300;
+  font-size: 24px;
   line-height: 36px;
   letter-spacing: 2px;
   color: #ffffff;
@@ -7169,6 +7542,13 @@ body.in_global_drag .friendlist_titlebar {
   stop-color: rgba(140, 188, 84, 0);
   stop-opacity: 0; }
 
+.currentUserContainer.golden .statusHeaderGlow stop:first-child {
+  stop-color: rgba(228, 202, 99, 0.3); }
+
+.currentUserContainer.golden .statusHeaderGlow stop:last-child {
+  stop-color: rgba(228, 202, 99, 0);
+  stop-opacity: 0; }
+
 .currentUserContainer.offline .statusHeaderGlow {
   opacity: 0; }
 
@@ -7219,47 +7599,8 @@ body.in_global_drag .friendlist_titlebar {
 .currentUserAvatarLink {
   -webkit-app-region: no-drag; }
 
-.compactView .currentUserContainer .playerName {
-  font-size: 14px; }
-
-.compactView .currentUserContainer .gameName.richPresenceLabel {
-  font-size: 12px; }
-
 .compactView .currentUserContainer .labelHolder {
   margin-left: 8px; }
-
-.compactView .currentUserContainer .statusAndName.twoLine .statusAndName {
-  margin-right: 8px; }
-
-.statusAndName .DNDContainer {
-  width: 12px;
-  height: 12px;
-  margin-top: -3px;
-  margin-left: 3px; }
-
-/*.statusAndName .SVGIcon_DoNotDisturb line
-{
-	transform: rotateZ(-45deg);
-	transform-origin: 50% 50%;
-}*/
-.currentUserContainer.online .statusAndName .SVGIcon_DoNotDisturb circle,
-.currentUserContainer.online .statusAndName .SVGIcon_DoNotDisturb line,
-.friend.online .statusAndName .SVGIcon_DoNotDisturb circle,
-.friend.online .statusAndName .SVGIcon_DoNotDisturb line {
-  stroke: #a0545a; }
-
-.currentUserContainer.ingame .statusAndName .SVGIcon_DoNotDisturb circle,
-.currentUserContainer.ingame .statusAndName .SVGIcon_DoNotDisturb line,
-.friend.ingame .statusAndName .SVGIcon_DoNotDisturb circle,
-.friend.ingame .statusAndName .SVGIcon_DoNotDisturb line {
-  stroke: #cf7f67; }
-
-.currentUserContainer.offline .statusAndName .SVGIcon_DoNotDisturb circle,
-.currentUserContainer.offline .statusAndName .SVGIcon_DoNotDisturb line {
-  stroke: #cf7f67; }
-
-.friend.offline .DNDContainer {
-  display: none; }
 
 .compactView .AvatarAndUser {
   padding: 8px; }
@@ -7280,26 +7621,6 @@ body.in_global_drag .friendlist_titlebar {
 .smallAvatar {
   width: 32px;
   height: 32px; }
-
-/*.currentUserContainer.ingame .currentUserAvatar
-{
-	box-shadow: 1px 2px 18px rgba( 177, 255, 134, .8 );
-}
-
-.currentUserContainer.offline .currentUserAvatar
-{
-	box-shadow: 1px 1px 4px rgba( 0, 0, 0, .8 );
-	transition-duration: 1s;
-}*/
-.currentUserContainer .playerName {
-  font-size: 15px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
-  transition: color .94s ease-in-out;
-  text-shadow: 1px 1px 4px #000;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  min-width: 0; }
 
 .socialTabSearchContainer {
   width: 100%;
@@ -7776,12 +8097,12 @@ body.in_global_drag .friendlist_titlebar {
   padding-right: 8px;
   cursor: pointer; }
 
-.friendInviteContainer .friend .richPresenceLabel {
+.friendInviteContainer .friend .inviteLabel {
   -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
   mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
   color: #4c91ac; }
 
-.friendInviteContainer .friend .richPresenceLabel {
+.friendInviteContainer .friend .inviteLabel {
   color: #4f6168 !important; }
 
 .friendInviteContainer {
@@ -8092,15 +8413,6 @@ body.in_global_drag .friendlist_titlebar {
 /* override any persona state colors if a friend request*/
 .friendGroup.friendRequests .friend:hover {
   background-color: transparent; }
-
-.friendGroup.friendRequests .friend.bright .noMutualFriends .playerName,
-.friendGroup.friendRequests .friend .playerName {
-  color: white;
-  transition: color .2s ease-in-out; }
-
-.friendGroup.friendRequests .friend .noMutualFriends .playerName {
-  color: #aaa;
-  transition: color .2s ease-in-out; }
 
 .friendGroup.friendRequests .friend .avatarHolder img.avatar {
   filter: brightness(1) saturate(1); }
@@ -8569,20 +8881,23 @@ body.in_global_drag .friendlist_titlebar {
   width: 220px;
   flex-direction: column; }
 
-.currentUserContainer.online .playerName,
-.friend.online {
-  color: #ccccd5;
-  color: #6dcff6; }
-
 .currentUserContainer.online .status,
 .friend.online .status {
   color: #4c91ac; }
 
-.currentUserContainer.ingame .playerName,
+.friend.offline {
+  color: #7a7a7a; }
+
+.friend.online {
+  color: #6dcff6; }
+
 .friend.ingame {
   color: #e3ffc2; }
 
-.currentUserContainer.watchingbroadcast .playerName,
+.currentUserContainer.golden .playerName,
+.friend.golden {
+  color: #e4ca63; }
+
 .friend.watchingbroadcast {
   color: #c9bdf7; }
 
@@ -8613,9 +8928,6 @@ body.in_global_drag .friendlist_titlebar {
 
 .quickAccessFriends .favoriteElement:hover .friend .playerName {
   color: white; }
-
-.friend.offline {
-  color: #7a7a7a; }
 
 .FriendPicker_Suggestions .friend.offline {
   color: #aaa; }
@@ -8684,9 +8996,6 @@ body.in_global_drag .friendlist_titlebar {
 .CompactFriendsList .friend.speaking .avatarHolder img.avatar {
   filter: brightness(1.75) contrast(0.9);
   transition-duration: 0s; }
-
-.CompactFriendsList .friend.speaking .playerName {
-  filter: brightness(1.5); }
 
 .CompactFriendsList .friend.slowconnecting,
 .CompactFriendsList .friend.reconnecting {
@@ -8884,9 +9193,6 @@ body.in_global_drag .friendlist_titlebar {
 .chatroomBucket_partybeacon {
   background: linear-gradient(to right, #35403a, rgba(53, 64, 58, 0)); }
 
-.partyBeaconJoin {
-  font-weight: 800; }
-
 .CompactFriendsList .avatarHolder .avatarStatus {
   min-width: 1px; }
 
@@ -8906,16 +9212,6 @@ body.in_global_drag .friendlist_titlebar {
 
 .DialogBodyText .friend .statusAndName {
   line-height: 10px; }
-
-.friend .statusAndName {
-  display: flex;
-  margin-top: -2px; }
-
-.friend.offline .statusAndName {
-  filter: saturate(0); }
-
-.friend .labelHolder.HidePersona .ContextMenuButton {
-  transform: translateY(6px); }
 
 .friend .avatarHolder .avatarStatus {
   display: none; }
@@ -8945,48 +9241,14 @@ body.in_global_drag .friendlist_titlebar {
   cursor: pointer; }
 
 .quickAccessFriend .clanName,
-.friend .playerName,
-.friend .playerNickname {
-  flex: 1;
+.quickAccessFriend .playerName,
+.quickAccessFriend .playerNickname {
   line-height: 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: clip;
   font-size: 14px;
   transition: text-overflow 0s linear; }
-
-.friend .playerName {
-  -webkit-mask: linear-gradient(to right, black calc( 100% - 6px), rgba(0, 0, 0, 0.15) 100%);
-  mask: linear-gradient(to right, black calc( 100% - 6px), rgba(0, 0, 0, 0.15) 100%);
-  flex: initial;
-  padding-right: 6px;
-  margin-right: -6px; }
-
-.ChatTabContent .friend .playerName {
-  text-overflow: clip; }
-
-.CompactFriendsList .friend .playerName,
-.CompactFriendsList .friend .playerNickname {
-  margin-bottom: -6px;
-  font-size: 12px; }
-
-.CompactFriendsList .friend .NoContextMenu .playerName,
-.CompactFriendsList .friend .NoContextMenu .playerNickname {
-  margin-bottom: -2px; }
-
-.friend .HidePersona .statusAndName {
-  height: 100%; }
-
-.friend .HidePersona .playerName {
-  margin-top: 8px;
-  line-height: 100%; }
-
-.friend .playerNickname {
-  padding-left: 5px;
-  color: #666666; }
-
-.chatTab .friend .playerNickname {
-  color: #a2a6ac; }
 
 .ChatMsgSpeaker .speaker.friendChat .playerNickname {
   /*	display: inline-block;*/ }
@@ -9009,7 +9271,12 @@ body.in_global_drag .friendlist_titlebar {
   margin-left: 0px;
   margin-top: 2px;
   margin-bottom: -2px;
-  flex: 1; }
+  flex: 1;
+  color: #999;
+  font-size: 18px;
+  display: inline-block;
+  opacity: 0.5;
+  line-height: 16px; }
 
 .friend.awayOrSnooze .playerNameQuickAccessContainer {
   opacity: .5; }
@@ -9024,10 +9291,6 @@ body.in_global_drag .friendlist_titlebar {
   transition-duration: .24s;
   transition-delay: .2s;
   transition-timing-function: ease-in-out; }
-
-.labelHolder .richPresenceContainer {
-  display: flex;
-  flex-direction: column; }
 
 .AvatarAndUser .labelHolder .richPresenceContainer {
   margin-top: 2px; }
@@ -9064,129 +9327,15 @@ body.in_global_drag .friendlist_titlebar {
 .currentUserContainer .labelHolder {
   margin: 0px 0px 0px 8px;
   min-width: 0;
+  display: flex;
   flex-shrink: 1;
   margin-right: 84px;
   flex-direction: column;
   justify-content: flex-end;
-  display: flex;
   margin-bottom: -4px; }
 
-.singlewindow .currentUserContainer .labelHolder .statusAndName,
 .singlewindow .currentUserContainer .labelHolder {
   margin-right: 4px; }
-
-.singlewindow .currentUserContainer .labelHolder.twoLine .statusAndName,
-.singlewindow .currentUserContainer .labelHolder.twoLine,
-.currentUserContainer .labelHolder.twoLine {
-  margin-right: 10px; }
-
-.currentUserContainer .statusAndName.twoLine .labelHolder {
-  margin-right: 14px; }
-
-.singlewindow .needsUpdate .currentUserContainer .labelHolder.twoLine .statusAndName,
-.needsUpdate .currentUserContainer .labelHolder.twoLine .statusAndName {
-  margin-right: 48px; }
-
-.friend.ingame .gameName.richPresenceLabel {
-  font-size: 12px; }
-
-.friend .richPresenceLabel {
-  display: flex;
-  flex-direction: row;
-  line-height: 12px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 10px;
-  margin-top: -1px;
-  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0.15) 100%); }
-
-.friend .twoLine .richPresenceLabel {
-  line-height: 18px;
-  font-size: 12px; }
-
-.CompactFriendsList .friend .twoLine .richPresenceLabel {
-  font-size: 10px;
-  margin-top: 1px; }
-
-.friend.ingame .twoLine .richPresenceLabel {
-  color: #91c257; }
-
-.CompactFriendsList .friend .richPresenceLabel {
-  font-size: 10px;
-  line-height: 11px; }
-
-.CompactFriendsList .friend.ingame .gameName.richPresenceLabel {
-  font-size: 10px;
-  line-height: 14px; }
-
-.titleBarContainer .currentUserContainer .richPresenceLabel {
-  font-size: 12px;
-  display: inline-block;
-  transition: color .94s ease-in-out;
-  text-shadow: 1px 1px 3px #000; }
-
-.titleBarContainer .currentUserContainer .labelHolder.twoLine .richPresenceLabel {
-  margin-top: 0px; }
-
-.titleBarContainer .currentUserContainer .richPresenceLabel:not(.gameName) {
-  margin-top: -2px;
-  margin-bottom: 1px; }
-
-.compactView .titleBarContainer .currentUserContainer .richPresenceLabel {
-  margin-top: -2px; }
-
-.compactView .titleBarContainer .currentUserContainer .richPresenceLabel:not(.gameName) {
-  margin-top: -4px; }
-
-.currentUserContainer .gameName.richPresenceLabel {
-  font-size: 13px; }
-
-.currentUserContainer.ingame .gameName.richPresenceLabel,
-.friend.ingame .gameName.richPresenceLabel,
-.friend.ingame .gameName.richPresenceLabel a,
-.friend.ingame .gameName.richPresenceLabel a:hover,
-.friend.ingame .gameName.richPresenceLabel a:active,
-.friend.ingame .gameName.richPresenceLabel a:visited {
-  color: #91c257; }
-
-.friend.ingame.awayOrSnooze .richPresenceLabel,
-.currentUserContainer.ingame .richPresenceLabel,
-.friend.ingame .richPresenceLabel,
-.friend.ingame .richPresenceLabel a,
-.friend.ingame .richPresenceLabel a:hover,
-.friend.ingame .richPresenceLabel a:active,
-.friend.ingame .richPresenceLabel a:visited {
-  color: #62813b; }
-
-.currentUserContainer.watchingbroadcast .richPresenceLabel,
-.friend.watchingbroadcast .richPresenceLabel,
-.friend.watchingbroadcast .gameName.richPresenceLabel a,
-.friend.watchingbroadcast .gameName.richPresenceLabel a:hover,
-.friend.watchingbroadcast .gameName.richPresenceLabel a:active,
-.friend.watchingbroadcast .gameName.richPresenceLabel a:visited {
-  color: #8277b1; }
-
-.currentUserContainer.online .richPresenceLabel,
-.friend.online .richPresenceLabel,
-.friend.online .gameName.richPresenceLabel a,
-.friend.online .gameName.richPresenceLabel a:hover,
-.friend.online .gameName.richPresenceLabel a:active,
-.friend.online .gameName.richPresenceLabel a:visited {
-  color: #4c91ac; }
-
-.currentUserContainer.offline .richPresenceLabel,
-.friend.offline .richPresenceLabel,
-.friend.offline .gameName.richPresenceLabel a,
-.friend.offline .gameName.richPresenceLabel a:hover,
-.friend.offline .gameName.richPresenceLabel a:active,
-.friend.offline .gameName.richPresenceLabel a:visited {
-  color: #555; }
-
-.ChatTabContent .friend.offline .richPresenceLabel {
-  color: #888; }
-
-.ChatTabContent .friend.offline .statusAndName {
-  color: #ccc; }
 
 .multiChatDialog {
   flex: 2;
@@ -9385,16 +9534,8 @@ body.in_global_drag .friendlist_titlebar {
 .ChatTabs.compactView .ChatTabContent .avatarHolder .avatar {
   width: 32px; }
 
-.ChatTabs.compactView .clanName, .ChatTabs.compactView .friend .playerName, .ChatTabs.compactView .friend .playerNickname {
+.ChatTabs.compactView .clanName {
   font-size: 12px; }
-
-.ChatTabs.compactView .friend .richPresenceLabel {
-  line-height: 11px;
-  font-size: 10px;
-  margin-top: -1px; }
-
-.ChatTabs.compactView .labelHolder:not(.twoLine) .richPresenceLabel:not(.gameName) {
-  display: none; }
 
 .ChatTabs.compactView .labelHolder {
   margin-top: 4px; }
@@ -11871,6 +12012,10 @@ a.connectionStatus:visited {
   background: linear-gradient(to right, #8cd61d 0%, #8cd61d 2px, rgba(140, 214, 29, 0) 2px, rgba(140, 214, 29, 0) 100%);
   background-color: rgba(140, 214, 29, 0); }
 
+.MemberListColumn .friend.golden .avatarHolder .avatarStatus {
+  background: linear-gradient(to bottom, #d5bf6a 0%, #ffe2a9 40%, #ba995c 52%, #ba995c 61%, #d5bf6a 85%);
+  background-color: rgba(213, 191, 106, 0); }
+
 .MemberListColumn .friend.watchingbroadcast .avatarHolder .avatarStatus {
   background: linear-gradient(to right, #9c8fd4 0%, #9c8fd4 2px, rgba(156, 143, 212, 0) 2px, rgba(156, 143, 212, 0) 100%);
   background-color: rgba(156, 143, 212, 0); }
@@ -12271,18 +12416,6 @@ a.connectionStatus:visited {
 .MemberListColumn.MemberListViewCompact .friendGroup .groupName .groupIcon {
   opacity: 1;
   transform: translateX(0px); }
-
-.MemberListColumn .friend .labelHolder .statusAndName .richPresenceLabel,
-.MemberListColumn .friend .labelHolder .statusAndName .playerNickname,
-.MemberListColumn .friend .labelHolder .statusAndName .playerName {
-  text-overflow: clip;
-  transition-delay: 0.4s; }
-
-.MemberListColumn.MemberListViewCompact .friend .labelHolder .statusAndName .richPresenceLabel,
-.MemberListColumn.MemberListViewCompact .friend .labelHolder .statusAndName .playerNickname,
-.MemberListColumn.MemberListViewCompact .friend .labelHolder .statusAndName .playerName {
-  text-overflow: clip;
-  transition-delay: 0s; }
 
 .MemberListViewCompact .CompactFriendsList .friend .labelHolder {
   opacity: 0;
@@ -12826,9 +12959,6 @@ html.web_chat_frame .perf_timing_area {
   color: #787d85;
   font-style: italic; }
 
-.friend .labelHolder.StatusLabel_Blocked .richPresenceLabel {
-  color: rgba(195, 74, 72, 0.75); }
-
 .SingleUserChat .msg.gameInviteMsg,
 .SingleUserChat .msg.broadcastInviteMsg,
 .SingleUserChat .msg.broadcastViewRequestMsg {
@@ -13179,6 +13309,10 @@ html.web_chat_frame .perf_timing_area {
   color: #3b768d;
   border-color: rgba(59, 118, 141, 0.25); }
 
+.FriendChatTimeStamp.online.golden {
+  color: #e4ca63;
+  border-color: rgba(228, 202, 99, 0.25); }
+
 .FriendChatTimeStamp.online.watchingbroadcast {
   color: #8277b1;
   border-color: rgba(130, 119, 177, 0.25); }
@@ -13376,6 +13510,9 @@ html.web_chat_frame .perf_timing_area {
 
 .speaker.online .speakerStatus {
   background-color: #0295ca; }
+
+.speaker.golden .speakerStatus {
+  background: linear-gradient(to bottom, #d5bf6a 0%, #ffe2a9 40%, #ba995c 52%, #ba995c 61%, #d5bf6a 85%); }
 
 .speaker.watchingbroadcast .speakerStatus {
   background: linear-gradient(to right, #9c8fd4 0%, #9c8fd4 2px, rgba(156, 143, 212, 0) 2px, rgba(156, 143, 212, 0) 100%); }
@@ -13999,8 +14136,8 @@ img.emoticon.large {
 .friendSettingsFakeFriend {
   margin-top: 10px; }
 
-.friendSettingsFakeFriend img {
-  height: 40px; }
+.friendSettingsFakeFriend .fakeFriendAvatar {
+  transform: none; }
 
 @keyframes SlowSpin {
   0% {
@@ -14990,30 +15127,11 @@ span.mention.me {
   border-radius: 50%;
   padding: 0px; }
 
-.chatModalCover.inviteDrop .statusAndName,
 .chatModalCover.inviteDrop .labelHolder {
   width: 220px;
-  opacity: 1; }
-
-.chatModalCover.inviteDrop .labelHolder {
+  opacity: 1;
   margin: 0px;
   margin-top: 2px; }
-
-.chatModalCover.inviteDrop .playerNickname,
-.chatModalCover.inviteDrop .playerName {
-  font-size: 24px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: visible;
-  text-shadow: 0px 6px 6px #000, 0px 2px 12px #000;
-  line-height: normal; }
-
-.chatModalCover.inviteDrop .richPresenceContainer,
-.chatModalCover.inviteDrop .SnoozeContainer,
-.chatModalCover.inviteDrop .ContextMenuButton,
-.chatModalCover.inviteDrop .ModalPosition_TopBar {
-  display: none; }
 
 .dropTargetBox {
   border: 2px dashed rgba(0, 217, 255, 0.4);
@@ -16210,6 +16328,10 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
   margin-top: 13px;
   margin-bottom: 14px; }
 
+.compactView .ChatRoomListGroupItem.HasLinkedBroadcast .groupNameStatusContainer .displayRow {
+  margin-top: 0px;
+  margin-bottom: 10px; }
+
 .groupNameStatusContainer .chatRoomName {
   font-size: 14px;
   line-height: 16px;
@@ -16527,16 +16649,6 @@ button.chatRoomHeaderButton:hover {
 
 :not(.friendInviteContainer) .ingame .ContextMenuButton .SVGIcon_DownArrowContextMenu {
   fill: #91c257; }
-
-.currentUserContainer .statusAndName {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: -4px;
-  margin-right: 10px;
-  -webkit-app-region: no-drag; }
-
-.currentUserContainer .richPresenceLabel {
-  -webkit-app-region: no-drag; }
 
 .currentUserContainer .ContextMenuButton {
   opacity: 0.5;
@@ -19296,18 +19408,6 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
   border-bottom: 0px solid black;
   border-left: 1px solid black;
   border-right: 1px solid black; }
-
-.groupMemberList .friend .playerName, .groupMemberList .friend .playerNickname {
-  font-size: 13px; }
-
-.groupMemberList .friend.ingame .gameName.richPresenceLabel {
-  font-size: 12px; }
-
-.groupMemberList .friend .twoLine .richPresenceLabel {
-  font-size: 12px; }
-
-.groupMemberList .friend .richPresenceLabel {
-  line-height: 13px; }
 
 .groupMemberList .friend .avatarHolder img.avatar {
   height: 24px; }

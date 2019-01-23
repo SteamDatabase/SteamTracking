@@ -81,14 +81,6 @@ LocalizationReady("friendsui", "english", {
   Broadcast_VideoContext_ToggleStats: "Toggle Stats",
   Broadcast_VideoContext_OpenStore: "Visit Store",
   Broadcast_ToggleChat: "Toggle Chat",
-  Broadcast_View_Stack_H: "Horizontal View",
-  Broadcast_View_Stack_V: "Vertical View",
-  Broadcast_View_Theater: "Theater Mode",
-  Broadcast_View_Fullscreen: "Fullscreen",
-  Broadcast_View_HideChat: "Hide Chat",
-  Broadcast_View_ShowBothChats: "Show Both Chats",
-  Broadcast_View_ShowSingleChats: "Show Single Chat",
-  Broadcast_View_ShowChat: "Show Chat",
   Broadcast_Chat_PublicChatTab: "Public Chat",
   Broadcast_Chat_GroupChatTab: "%1$s Chat",
 
@@ -143,6 +135,8 @@ LocalizationReady("friendsui", "english", {
   BroadcastChat_Tooltip_Popout_Chat: "Pop-out the chat into a new window",
   BroadcastChat_ChatOnly_Title: "Broadcast Chat Only",
   BroadcastChat_DefaultMessage: "Welcome to the chat!",
+  BroadcastChat_Moderator: "Moderator",
+  BroadcastChat_Broadcaster: "Broadcaster",
 
   Broadcast_CSGO_Stage1: "Challengers Stage - September 5 – 9",
   Broadcast_CSGO_Stage2: "Legends Stage - September 12 – 16",
@@ -683,6 +677,7 @@ LocalizationReady("friendsui", "english", {
   bbcode_econ_UnknownItem: "Unknown Item",
   bbcode_econ_LoadFail: "Failed to load more information about this item",
   bbcode_econ_TradeWithOwner: "Trade with %1$s",
+  bbcode_econ_TradeTitle: "Trade",
   bbcode_econ_ViewInMarket: "View in Community Market",
 
   bbcode_disable_embed_inlining_parenthetical: "%1$s (%2$s)",
@@ -1188,6 +1183,7 @@ LocalizationReady("friendsui", "english", {
 
   ChatEntryButton_Submit: "Submit",
   ChatEntryButton_Emoticon: "Emoticon Picker",
+  ChatEntryButton_Flair: "Flair Picker",
   ChatEntryButton_SendEmbed: "Send Special",
 
   ChatMentionSuggest_MembersMatching: "Chat members matching @%1$s",

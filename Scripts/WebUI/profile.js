@@ -2772,10 +2772,10 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "v", function() {
+    n.d(t, "w", function() {
       return c;
     }),
-      n.d(t, "R", function() {
+      n.d(t, "S", function() {
         return s;
       }),
       n.d(t, "f", function() {
@@ -2787,73 +2787,73 @@
       n.d(t, "m", function() {
         return u;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "A", function() {
         return m;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "D", function() {
         return p;
       }),
       n.d(t, "n", function() {
         return h;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "X", function() {
         return d;
       }),
-      n.d(t, "M", function() {
+      n.d(t, "N", function() {
         return f;
       }),
-      n.d(t, "K", function() {
+      n.d(t, "L", function() {
         return v;
       }),
-      n.d(t, "hb", function() {
+      n.d(t, "ib", function() {
         return y;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "jb", function() {
         return b;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "gb", function() {
         return _;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "Z", function() {
         return g;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "u", function() {
         return w;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "t", function() {
         return x;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "K", function() {
         return E;
       }),
       n.d(t, "a", function() {
         return S;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return k;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "y", function() {
         return M;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "H", function() {
         return P;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "hb", function() {
         return C;
       }),
-      n.d(t, "F", function() {
+      n.d(t, "G", function() {
         return I;
       }),
       n.d(t, "i", function() {
         return L;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "J", function() {
         return O;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "I", function() {
         return B;
       }),
-      n.d(t, "U", function() {
+      n.d(t, "V", function() {
         return N;
       }),
       n.d(t, "g", function() {
@@ -2863,100 +2863,103 @@
         return T;
       }),
       n.d(t, "e", function() {
+        return F;
+      }),
+      n.d(t, "z", function() {
         return G;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "ab", function() {
         return D;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "eb", function() {
         return z;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "x", function() {
         return W;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "c", function() {
         return H;
       }),
-      n.d(t, "c", function() {
-        return R;
-      }),
       n.d(t, "b", function() {
-        return F;
+        return R;
       }),
       n.d(t, "l", function() {
         return j;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "Y", function() {
         return A;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "B", function() {
         return U;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "E", function() {
         return K;
       }),
-      n.d(t, "N", function() {
+      n.d(t, "O", function() {
         return Y;
       }),
-      n.d(t, "T", function() {
+      n.d(t, "U", function() {
         return X;
       }),
-      n.d(t, "L", function() {
+      n.d(t, "M", function() {
         return q;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "bb", function() {
         return J;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "cb", function() {
         return Q;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "R", function() {
         return Z;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return $;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return ee;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "kb", function() {
         return te;
       }),
       n.d(t, "k", function() {
         return ne;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "C", function() {
         return re;
       }),
-      n.d(t, "V", function() {
+      n.d(t, "W", function() {
         return ie;
       }),
-      n.d(t, "eb", function() {
+      n.d(t, "fb", function() {
         return oe;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return ce;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "P", function() {
         return se;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "Q", function() {
         return ae;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "v", function() {
         return le;
       }),
-      n.d(t, "S", function() {
+      n.d(t, "T", function() {
         return ue;
       }),
       n.d(t, "d", function() {
         return me;
       }),
-      n.d(t, "E", function() {
+      n.d(t, "F", function() {
         return pe;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "db", function() {
         return he;
+      }),
+      n.d(t, "o", function() {
+        return de;
       });
     var r = n("q1tI"),
       i = n("twdX"),
@@ -4299,7 +4302,7 @@
         })
       );
     }
-    function G() {
+    function F() {
       return r.createElement(
         "svg",
         {
@@ -4357,7 +4360,7 @@
         )
       );
     }
-    function D() {
+    function G() {
       return r.createElement(
         "svg",
         {
@@ -4387,7 +4390,7 @@
         })
       );
     }
-    function z(e) {
+    function D(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -4631,7 +4634,7 @@
         )
       );
     }
-    function W() {
+    function z() {
       return r.createElement(
         "svg",
         {
@@ -4656,7 +4659,7 @@
         })
       );
     }
-    function H() {
+    function W() {
       return r.createElement(
         "svg",
         {
@@ -4682,7 +4685,7 @@
         })
       );
     }
-    function R() {
+    function H() {
       return r.createElement(
         "svg",
         {
@@ -4702,7 +4705,7 @@
         })
       );
     }
-    function F(e) {
+    function R(e) {
       return r.createElement(
         "svg",
         {
@@ -5784,6 +5787,116 @@
           d:
             "M187.784,100.298c-2.812-2.312-7.391-3.468-13.735-3.468h-14.415v28.966h15.639c5.257,0,9.36-1.336,12.308-4.012 c2.945-2.673,4.42-6.368,4.42-11.083C192,106.078,190.593,102.61,187.784,100.298z"
         })
+      );
+    }
+    function de() {
+      return r.createElement(
+        "svg",
+        {
+          version: "1.1",
+          x: "0px",
+          y: "0px",
+          width: "32px",
+          height: "32px",
+          viewBox: "0 0 32 32",
+          "enable-background": "new 0 0 32 32"
+        },
+        r.createElement(
+          "symbol",
+          { id: "dude-transit", viewBox: "0 -25.1 21.25 25.118" },
+          r.createElement("path", {
+            "fill-rule": "evenodd",
+            "clip-rule": "evenodd",
+            fill: "#FFFFFF",
+            d:
+              "M15.5-4.2l0.75-1.05l1-3.1l3.9-2.65v-0.05\r\n\t\t\tc0.067-0.1,0.1-0.233,0.1-0.4c0-0.2-0.05-0.383-0.15-0.55c-0.167-0.233-0.383-0.35-0.65-0.35l-4.3,1.8l-1.2,1.65l-1.5-3.95\r\n\t\t\tl2.25-5.05l-3.25-6.9c-0.267-0.2-0.633-0.3-1.1-0.3c-0.3,0-0.55,0.15-0.75,0.45c-0.1,0.133-0.15,0.25-0.15,0.35\r\n\t\t\tc0,0.067,0.017,0.15,0.05,0.25c0.033,0.1,0.067,0.184,0.1,0.25l2.55,5.6L10.7-14l-3.05-4.9L0.8-18.7\r\n\t\t\tc-0.367,0.033-0.6,0.184-0.7,0.45c-0.067,0.3-0.1,0.467-0.1,0.5c0,0.5,0.2,0.767,0.6,0.8l5.7,0.15l2.15,5.4l3.1,5.65L9.4-5.6\r\n\t\t\tc-1.367-2-2.1-3.033-2.2-3.1C7.1-8.8,6.95-8.85,6.75-8.85C6.35-8.85,6.1-8.667,6-8.3C5.9-8,5.9-7.8,6-7.7H5.95l2.5,4.4l3.7,0.3\r\n\t\t\tL14-3.5L15.5-4.2z M14.55-2.9c-0.333,0.4-0.45,0.85-0.35,1.35c0.033,0.5,0.25,0.9,0.65,1.2S15.7,0.066,16.2,0\r\n\t\t\tc0.5-0.067,0.9-0.3,1.2-0.7c0.333-0.4,0.467-0.85,0.4-1.35c-0.066-0.5-0.3-0.9-0.7-1.2c-0.4-0.333-0.85-0.45-1.35-0.35\r\n\t\t\tC15.25-3.533,14.85-3.3,14.55-2.9z"
+          })
+        ),
+        r.createElement("g", { id: "Layer_1" }),
+        r.createElement(
+          "g",
+          { id: "Layer_2" },
+          r.createElement(
+            "g",
+            null,
+            r.createElement("circle", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.9059",
+              "stroke-miterlimit": "10",
+              cx: "16.023",
+              cy: "8.383",
+              r: "4.948"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.9059",
+              "stroke-miterlimit": "10",
+              d:
+                "M24.248,20.166\r\n\t\t\t\tc-0.323-2.28-3.851-4.078-8.166-4.078s-7.843,1.798-8.165,4.078H7.886v8.244c0,0-0.025,0.241,0.181,0.241\r\n\t\t\t\tc0.326,0,16.004,0,16.004,0s0.208,0.057,0.208-0.227s0-8.259,0-8.259H24.248z"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d:
+                "\r\n\t\t\t\tM12.445,13.957c-0.857,0.865-2.048,1.402-3.362,1.402c-2.614,0-4.732-2.119-4.732-4.733s2.118-4.731,4.732-4.731\r\n\t\t\t\tc0.269,0,0.531,0.021,0.786,0.064"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d:
+                "\r\n\t\t\t\tM7.328,17.208c-3.473,0.46-6.095,2.082-6.373,4.059H0.922v5.5h4.76"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d: "\r\n\t\t\t\tM17.914,20.559"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d:
+                "\r\n\t\t\t\tM19.588,13.957c0.856,0.865,2.048,1.402,3.362,1.402c2.614,0,4.731-2.119,4.731-4.733s-2.117-4.731-4.731-4.731\r\n\t\t\t\tc-0.268,0-0.531,0.021-0.787,0.064"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d:
+                "\r\n\t\t\t\tM24.672,17.208c3.474,0.46,6.095,2.082,6.373,4.059h0.033v5.5h-4.76"
+            }),
+            r.createElement("path", {
+              fill: "none",
+              stroke: "#FFFFFF",
+              "stroke-width": "0.885",
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-miterlimit": "10",
+              d: "\r\n\t\t\t\tM14.822,20.559"
+            }),
+            r.createElement("path", { fill: "#FFFFFF", d: "M5.25,24.985" })
+          )
+        )
       );
     }
   },
