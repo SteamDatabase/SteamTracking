@@ -151,7 +151,6 @@ body #footer .responsive_optin_link {
 body.flat_page #footer_spacer, body.headerless_page #footer_spacer {
 	height: 78px;
 	padding-top: 16px;
-	clear: both;
 }
 
 #footer .footer_content {
