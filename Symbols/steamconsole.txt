@@ -88,6 +88,7 @@
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
+ CreateSimpleProcess
  CreateVProfile
  D g_BitStringEndMasks
  D g_pchHelpStringAppBuild
@@ -123,6 +124,7 @@
  D typeinfo for CCallbackImpl<12>
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<1>
+ D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<40>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<72>
@@ -142,6 +144,7 @@
  D typeinfo for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D typeinfo for CPathString
  D typeinfo for CSteamUser
+ D typeinfo for CSteamUser::CCallbackInternal_OnShutdownLauncher
  D typeinfo for CSteamUser::CCallback_OnLoggedOff
  D typeinfo for CSteamUser::CCallback_OnLogonFailure
  D typeinfo for CSteamUser::CCallback_OnPostLogonState
@@ -181,6 +184,7 @@
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<1>
+ D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<40>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<72>
@@ -200,6 +204,7 @@
  D vtable for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  D vtable for CPathString
  D vtable for CSteamUser
+ D vtable for CSteamUser::CCallbackInternal_OnShutdownLauncher
  D vtable for CSteamUser::CCallback_OnLoggedOff
  D vtable for CSteamUser::CCallback_OnLogonFailure
  D vtable for CSteamUser::CCallback_OnPostLogonState
@@ -222,6 +227,7 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
+ Plat_GetExecutablePathUTF8
  Plat_MSTime
  Plat_RelativeTicks
  Plat_ctime
@@ -253,6 +259,7 @@
  R typeinfo name for CCallbackImpl<12>
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<1>
+ R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<40>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<72>
@@ -272,6 +279,7 @@
  R typeinfo name for CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>
  R typeinfo name for CPathString
  R typeinfo name for CSteamUser
+ R typeinfo name for CSteamUser::CCallbackInternal_OnShutdownLauncher
  R typeinfo name for CSteamUser::CCallback_OnLoggedOff
  R typeinfo name for CSteamUser::CCallback_OnLogonFailure
  R typeinfo name for CSteamUser::CCallback_OnPostLogonState
@@ -302,6 +310,7 @@
  SteamThreadTools::CThread::Init()
  SteamThreadTools::CThread::IsAlive() const
  SteamThreadTools::CThread::IsThreadRunning() const
+ SteamThreadTools::CThread::Join(unsigned int)
  SteamThreadTools::CThread::OnExit()
  SteamThreadTools::CThread::SetName(char const*)
  SteamThreadTools::CThread::Start(unsigned long)
@@ -430,6 +439,9 @@
  T CCallbackImpl<1>::GetCallbackSizeBytes()
  T CCallbackImpl<1>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<1>::~CCallbackImpl()
+ T CCallbackImpl<2>::GetCallbackSizeBytes()
+ T CCallbackImpl<2>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<2>::~CCallbackImpl()
  T CCallbackImpl<40>::GetCallbackSizeBytes()
  T CCallbackImpl<40>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<40>::~CCallbackImpl()
@@ -523,7 +535,6 @@
  T CLogInstance::WriteToTextLog(char const*, int)
  T CLogInstance::_LogEvent(char const*, __va_list_tag*)
  T CLogWatchParam::BMeetsMyCriteria(CLogWatchParam const&) const
- T CLogWatchParam::SetNetAdr(netadr_t const&)
  T CLogWatchParam::operator==(CLogWatchParam const&) const
  T CLogger::BThreadSafeCheckLogWatches(CLogWatchParam&)
  T CLogger::CLogAutoRef::~CLogAutoRef()
@@ -590,7 +601,9 @@
  T CPackedStoreReadCache::CPackedStoreReadCache()
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
+ T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
+ T CPathString::~CPathString()
  T CPreDepotOperations::CEGWrap(ConParams&)
  T CPreDepotOperations::CPreDepotOperations()
  T CPreDepotOperations::DRMWrap(ConParams&)
@@ -614,6 +627,9 @@
  T CSimpleMachClient::~CSimpleMachClient()
  T CSteamID::Render() const
  T CSteamUser::AnonymousLogonBlocking()
+ T CSteamUser::CCallbackInternal_OnShutdownLauncher::CCallbackInternal_OnShutdownLauncher()
+ T CSteamUser::CCallbackInternal_OnShutdownLauncher::Run(void*)
+ T CSteamUser::CCallbackInternal_OnShutdownLauncher::~CCallbackInternal_OnShutdownLauncher()
  T CSteamUser::CCallback_OnLoggedOff::Run(void*)
  T CSteamUser::CCallback_OnLoggedOff::~CCallback_OnLoggedOff()
  T CSteamUser::CCallback_OnLogonFailure::Run(void*)
@@ -627,6 +643,7 @@
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
  T CSteamUser::OnLogonFailure(SteamServerConnectFailure_t*)
  T CSteamUser::OnPostLogonState(PostLogonState_t*)
+ T CSteamUser::OnShutdownLauncher(ShutdownLauncher_t*)
  T CSteamUser::OnSteamLogon(SteamServersConnected_t*)
  T CSteamUser::PromptForAndSetPassword(char const*)
  T CSteamUser::Validate(CValidator&, char const*)
@@ -937,8 +954,8 @@
  T ClientUtils()
  T ConCommand::AutoCompleteSuggest(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
  T ConCommand::CanAutoComplete()
- T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
- T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::ConCommand(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
+ T ConCommand::Create(char const*, void (*)(void*, ConParams&, ConCommand&), char const*, char const*, unsigned long long, int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&), void (*)(void*, CRemoteCmd*))
  T ConCommand::Dispatch(void*, ConParams&)
  T ConCommand::IsCommand() const
  T ConCommand::SetCompletionFunc(int (*)(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&))
@@ -1099,6 +1116,7 @@
  T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
  T SerializeVaArgs(char const*, __va_list_tag*, CUtlBuffer&)
  T SetAppLogID(unsigned int, char const*)
+ T ShutdownClient(int)
  T SignalConCommandError(int)
  T SplitFileComponents(char const*, char*, char*, char*)
  T StaticFileWriterThread()
@@ -1139,6 +1157,8 @@
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
+ T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::HasIP() const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
@@ -1176,6 +1196,7 @@
  TSQueue_PopIntoFreeList
  Test_IsActive
  Test_SetFailed
+ ThreadCloseProcess
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
@@ -1187,6 +1208,7 @@
  ThreadInterlockedIncrement
  ThreadIsThreadRunning
  ThreadSleep
+ ThreadTerminateProcessCode
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FileBase
@@ -1360,6 +1382,8 @@
  b s_bCallbackManagerInitialized
  b s_bHWAccelCRC32
  b s_convarSiteLicenseServer
+ b s_convarSiteLicenseServerGUI
+ b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b selectBuf
  b set_spew_command
