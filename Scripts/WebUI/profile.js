@@ -84,6 +84,31 @@
   var p = r;
   m.push(["WC1h", 0]), l();
 })({
+  "/7KC": function(e, t, n) {
+    "use strict";
+    function r(e, t) {
+      return (
+        (e = Math.ceil(e)),
+        (t = Math.floor(t)),
+        Math.floor(Math.random() * (t - e + 1)) + e
+      );
+    }
+    function i(e, t, n) {
+      return Math.max(t, Math.min(n, e));
+    }
+    function o(e, t, n, r, i) {
+      return r + ((i - r) * (e - t)) / (n - t);
+    }
+    n.d(t, "b", function() {
+      return r;
+    }),
+      n.d(t, "a", function() {
+        return i;
+      }),
+      n.d(t, "c", function() {
+        return o;
+      });
+  },
   "/IDK": function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
@@ -365,23 +390,24 @@
   },
   "1n9R": function(e, t, n) {
     "use strict";
+    n("mrSG");
+    var r = n("/7KC");
     n.d(t, "b", function() {
-      return r;
+      return i;
     }),
       n.d(t, "e", function() {
-        return i;
-      }),
-      n.d(t, "a", function() {
         return o;
       }),
+      n.d(t, "a", function() {
+        return c;
+      }),
       n.d(t, "d", function() {
-        return s;
+        return l;
       }),
       n.d(t, "c", function() {
-        return a;
+        return u;
       });
-    n("mrSG");
-    var r = {
+    var i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -411,7 +437,7 @@
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
-      i = {
+      o = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -421,17 +447,43 @@
         webapi_token: "",
         authwgtoken: ""
       },
-      o = { steamid: "", authwgtoken: "" },
-      c = "webui_config";
-    function s(e) {
-      void 0 === e && (e = c);
-      var t = a("config", e);
-      t && Object.assign(r, t);
-      var n = a("userinfo", e);
-      n && Object.assign(i, n);
+      c = { steamid: "", authwgtoken: "" },
+      s = "webui_config";
+    function a() {
+      if (i.IN_CLIENT) {
+        var e = (function() {
+          for (var e = "", t = 0; t < 24; t++)
+            e += Object(r.b)(0, 35).toString(36);
+          return e;
+        })();
+        !(function(e, t, n, r) {
+          r || (r = "/");
+          var i = "";
+          if (void 0 !== n && n) {
+            var o = new Date();
+            o.setTime(o.getTime() + 864e5 * n),
+              (i = "; expires=" + o.toUTCString());
+          }
+          document.cookie =
+            encodeURIComponent(e) +
+            "=" +
+            encodeURIComponent(t) +
+            i +
+            ";path=" +
+            r;
+        })("sessionid", e, 0),
+          (i.SESSIONID = e);
+      }
     }
-    function a(e, t) {
-      void 0 === t && (t = c);
+    function l(e) {
+      void 0 === e && (e = s);
+      var t = u("config", e);
+      t && Object.assign(i, t);
+      var n = u("userinfo", e);
+      n && Object.assign(o, n), a();
+    }
+    function u(e, t) {
+      void 0 === t && (t = s);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -2857,19 +2909,19 @@
         return N;
       }),
       n.d(t, "g", function() {
-        return V;
+        return T;
       }),
       n.d(t, "j", function() {
-        return T;
+        return V;
       }),
       n.d(t, "e", function() {
         return F;
       }),
       n.d(t, "z", function() {
-        return G;
+        return D;
       }),
       n.d(t, "ab", function() {
-        return D;
+        return G;
       }),
       n.d(t, "eb", function() {
         return z;
@@ -4199,7 +4251,7 @@
         )
       );
     }
-    function V() {
+    function T() {
       return r.createElement(
         "svg",
         {
@@ -4224,7 +4276,7 @@
         })
       );
     }
-    function T() {
+    function V() {
       return r.createElement(
         "svg",
         {
@@ -4360,7 +4412,7 @@
         )
       );
     }
-    function G() {
+    function D() {
       return r.createElement(
         "svg",
         {
@@ -4390,7 +4442,7 @@
         })
       );
     }
-    function D(e) {
+    function G(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),

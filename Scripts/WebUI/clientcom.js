@@ -5,20 +5,20 @@
 !(function(u) {
   function e(e) {
     for (
-      var t, n, o = e[0], i = e[1], r = e[2], c = 0, s = [];
+      var t, n, o = e[0], r = e[1], i = e[2], c = 0, s = [];
       c < o.length;
       c++
     )
       (n = o[c]), l[n] && s.push(l[n][0]), (l[n] = 0);
-    for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
-    for (d && d(e); s.length; ) s.shift()();
-    return p.push.apply(p, r || []), a();
+    for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (u[t] = r[t]);
+    for (f && f(e); s.length; ) s.shift()();
+    return p.push.apply(p, i || []), a();
   }
   function a() {
     for (var e, t = 0; t < p.length; t++) {
-      for (var n = p[t], o = !0, i = 1; i < n.length; i++) {
-        var r = n[i];
-        0 !== l[r] && (o = !1);
+      for (var n = p[t], o = !0, r = 1; r < n.length; r++) {
+        var i = n[r];
+        0 !== l[i] && (o = !1);
       }
       o && (p.splice(t--, 1), (e = c((c.s = n[0]))));
     }
@@ -80,29 +80,55 @@
   var t = (window.webpackJsonp = window.webpackJsonp || []),
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
-  for (var i = 0; i < t.length; i++) e(t[i]);
-  var d = o;
+  for (var r = 0; r < t.length; r++) e(t[r]);
+  var f = o;
   p.push(["x0hG", 0]), a();
 })({
-  "1n9R": function(e, t, n) {
+  "/7KC": function(e, t, n) {
     "use strict";
+    function o(e, t) {
+      return (
+        (e = Math.ceil(e)),
+        (t = Math.floor(t)),
+        Math.floor(Math.random() * (t - e + 1)) + e
+      );
+    }
+    function r(e, t, n) {
+      return Math.max(t, Math.min(n, e));
+    }
+    function i(e, t, n, o, r) {
+      return o + ((r - o) * (e - t)) / (n - t);
+    }
     n.d(t, "b", function() {
       return o;
+    }),
+      n.d(t, "a", function() {
+        return r;
+      }),
+      n.d(t, "c", function() {
+        return i;
+      });
+  },
+  "1n9R": function(e, t, n) {
+    "use strict";
+    n("mrSG");
+    var o = n("/7KC");
+    n.d(t, "b", function() {
+      return r;
     }),
       n.d(t, "e", function() {
         return i;
       }),
       n.d(t, "a", function() {
-        return r;
+        return c;
       }),
       n.d(t, "d", function() {
-        return s;
+        return a;
       }),
       n.d(t, "c", function() {
-        return u;
+        return l;
       });
-    n("mrSG");
-    var o = {
+    var r = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -142,17 +168,43 @@
         webapi_token: "",
         authwgtoken: ""
       },
-      r = { steamid: "", authwgtoken: "" },
-      c = "webui_config";
-    function s(e) {
-      void 0 === e && (e = c);
-      var t = u("config", e);
-      t && Object.assign(o, t);
-      var n = u("userinfo", e);
-      n && Object.assign(i, n);
+      c = { steamid: "", authwgtoken: "" },
+      s = "webui_config";
+    function u() {
+      if (r.IN_CLIENT) {
+        var e = (function() {
+          for (var e = "", t = 0; t < 24; t++)
+            e += Object(o.b)(0, 35).toString(36);
+          return e;
+        })();
+        !(function(e, t, n, o) {
+          o || (o = "/");
+          var r = "";
+          if (void 0 !== n && n) {
+            var i = new Date();
+            i.setTime(i.getTime() + 864e5 * n),
+              (r = "; expires=" + i.toUTCString());
+          }
+          document.cookie =
+            encodeURIComponent(e) +
+            "=" +
+            encodeURIComponent(t) +
+            r +
+            ";path=" +
+            o;
+        })("sessionid", e, 0),
+          (r.SESSIONID = e);
+      }
     }
-    function u(e, t) {
-      void 0 === t && (t = c);
+    function a(e) {
+      void 0 === e && (e = s);
+      var t = l("config", e);
+      t && Object.assign(r, t);
+      var n = l("userinfo", e);
+      n && Object.assign(i, n), u();
+    }
+    function l(e, t) {
+      void 0 === t && (t = s);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -166,14 +218,14 @@
   fGPn: function(e, t, n) {
     "use strict";
     n.d(t, "a", function() {
-      return r;
+      return i;
     }),
       n.d(t, "b", function() {
         return s;
       });
     var o = n("tkkQ"),
-      i = { success: !0, result: 1 },
-      r = (function() {
+      r = { success: !0, result: 1 },
+      i = (function() {
         function e() {
           (this.m_connection = new c()),
             (this.m_bAllowAccountMismatch = !1),
@@ -201,7 +253,7 @@
             var e = this;
             return this.m_connection.Connect().then(
               function() {
-                return i;
+                return r;
               },
               function() {
                 return e.FailureResult();
@@ -262,7 +314,7 @@
               .then(function() {
                 return t.m_bAllowAccountMismatch || t.BClientAccountMatches()
                   ? t.m_connection.SendMsgAndAwaitResponse(e).then(function(e) {
-                      return 1 === e.success ? i : t.FailureResult(e.success);
+                      return 1 === e.success ? r : t.FailureResult(e.success);
                     })
                   : { success: !1, result: 19, account_mismatch: !0 };
               })
@@ -319,11 +371,11 @@
             configurable: !0
           }),
           (e.prototype.SendMsgAndAwaitResponse = function(o) {
-            var i = this;
+            var r = this;
             return new Promise(function(e, t) {
-              var n = i.m_iCallSeq++;
-              i.BSendMsg(o, n)
-                ? i.m_mapWaitingCallbacks.set(n, {
+              var n = r.m_iCallSeq++;
+              r.BSendMsg(o, n)
+                ? r.m_mapWaitingCallbacks.set(n, {
                     iSeq: n,
                     fnCallback: e,
                     fnError: t
@@ -409,7 +461,7 @@
           e
         );
       })(),
-      s = new r();
+      s = new i();
     window.ClientConnectionAPI = s;
   },
   tkkQ: function(e, t, n) {
@@ -432,9 +484,9 @@
     "use strict";
     n.r(t);
     var o = n("tkkQ"),
-      i = n("fGPn");
+      r = n("fGPn");
     document.addEventListener("DOMContentLoaded", function() {
-      Object(o.c)(), (window.ClientConnectionAPI = i.b);
+      Object(o.c)(), (window.ClientConnectionAPI = r.b);
     });
   }
 });

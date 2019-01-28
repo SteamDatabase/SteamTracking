@@ -11,22 +11,22 @@
     )
       (n = o[s]), p[n] && a.push(p[n][0]), (p[n] = 0);
     for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
-    for (m && m(e); a.length; ) a.shift()();
-    return l.push.apply(l, r || []), c();
+    for (l && l(e); a.length; ) a.shift()();
+    return m.push.apply(m, r || []), c();
   }
   function c() {
-    for (var e, t = 0; t < l.length; t++) {
-      for (var n = l[t], o = !0, i = 1; i < n.length; i++) {
+    for (var e, t = 0; t < m.length; t++) {
+      for (var n = m[t], o = !0, i = 1; i < n.length; i++) {
         var r = n[i];
         0 !== p[r] && (o = !1);
       }
-      o && (l.splice(t--, 1), (e = s((s.s = n[0]))));
+      o && (m.splice(t--, 1), (e = s((s.s = n[0]))));
     }
     return e;
   }
   var n = {},
     p = { 1: 0 },
-    l = [];
+    m = [];
   function s(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
@@ -81,9 +81,34 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var i = 0; i < t.length; i++) e(t[i]);
-  var m = o;
-  l.push(["qM/t", 0]), c();
+  var l = o;
+  m.push(["qM/t", 0]), c();
 })({
+  "/7KC": function(e, t, n) {
+    "use strict";
+    function o(e, t) {
+      return (
+        (e = Math.ceil(e)),
+        (t = Math.floor(t)),
+        Math.floor(Math.random() * (t - e + 1)) + e
+      );
+    }
+    function i(e, t, n) {
+      return Math.max(t, Math.min(n, e));
+    }
+    function r(e, t, n, o, i) {
+      return o + ((i - o) * (e - t)) / (n - t);
+    }
+    n.d(t, "b", function() {
+      return o;
+    }),
+      n.d(t, "a", function() {
+        return i;
+      }),
+      n.d(t, "c", function() {
+        return r;
+      });
+  },
   "0N1H": function(e, t, n) {
     "use strict";
     function o(e) {
@@ -105,10 +130,10 @@
         return p;
       }),
       n.d(t, "f", function() {
-        return l;
+        return m;
       }),
       n.d(t, "g", function() {
-        return m;
+        return l;
       }),
       n.d(t, "l", function() {
         return h;
@@ -140,8 +165,8 @@
       u,
       c = 1,
       p = 4,
-      l = 750,
-      m = 799,
+      m = 750,
+      l = 799,
       h = 7,
       d = 250820,
       _ = 330050,
@@ -264,23 +289,24 @@
   },
   "1n9R": function(e, t, n) {
     "use strict";
+    n("mrSG");
+    var o = n("/7KC");
     n.d(t, "b", function() {
-      return o;
+      return i;
     }),
       n.d(t, "e", function() {
-        return i;
-      }),
-      n.d(t, "a", function() {
         return r;
       }),
+      n.d(t, "a", function() {
+        return s;
+      }),
       n.d(t, "d", function() {
-        return a;
+        return c;
       }),
       n.d(t, "c", function() {
-        return u;
+        return p;
       });
-    n("mrSG");
-    var o = {
+    var i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -310,7 +336,7 @@
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
-      i = {
+      r = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -320,17 +346,43 @@
         webapi_token: "",
         authwgtoken: ""
       },
-      r = { steamid: "", authwgtoken: "" },
-      s = "webui_config";
-    function a(e) {
-      void 0 === e && (e = s);
-      var t = u("config", e);
-      t && Object.assign(o, t);
-      var n = u("userinfo", e);
-      n && Object.assign(i, n);
+      s = { steamid: "", authwgtoken: "" },
+      a = "webui_config";
+    function u() {
+      if (i.IN_CLIENT) {
+        var e = (function() {
+          for (var e = "", t = 0; t < 24; t++)
+            e += Object(o.b)(0, 35).toString(36);
+          return e;
+        })();
+        !(function(e, t, n, o) {
+          o || (o = "/");
+          var i = "";
+          if (void 0 !== n && n) {
+            var r = new Date();
+            r.setTime(r.getTime() + 864e5 * n),
+              (i = "; expires=" + r.toUTCString());
+          }
+          document.cookie =
+            encodeURIComponent(e) +
+            "=" +
+            encodeURIComponent(t) +
+            i +
+            ";path=" +
+            o;
+        })("sessionid", e, 0),
+          (i.SESSIONID = e);
+      }
     }
-    function u(e, t) {
-      void 0 === t && (t = s);
+    function c(e) {
+      void 0 === e && (e = a);
+      var t = p("config", e);
+      t && Object.assign(i, t);
+      var n = p("userinfo", e);
+      n && Object.assign(r, n), u();
+    }
+    function p(e, t) {
+      void 0 === t && (t = a);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -432,7 +484,7 @@
       return u;
     }),
       n.d(t, "a", function() {
-        return m;
+        return l;
       }),
       n.d(t, "b", function() {
         return h;
@@ -453,7 +505,7 @@
       (o[(o.Tooltip = 4)] = "Tooltip"),
       (o[(o.ContextMenu = 8)] = "ContextMenu"),
       (o[(o.Resizable = 16)] = "Resizable");
-    var l = (function() {
+    var m = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -482,7 +534,7 @@
           e
         );
       })(),
-      m = (function() {
+      l = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -545,7 +597,7 @@
                 : ((i = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (r = n.element),
-                  (s = new l(i, r))),
+                  (s = new m(i, r))),
               i &&
                 r &&
                 ((i.document.title = this.m_strTitle),
@@ -799,7 +851,7 @@
           i.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(m),
+      })(l),
       d = (function() {
         function e() {
           var s = this;
@@ -908,15 +960,15 @@
               );
             var p = "";
             t.html_class && (p = 'class="' + t.html_class + '"');
-            var l = "";
-            t.body_class && (l = 'class="' + t.body_class + '"');
-            var m =
+            var m = "";
+            t.body_class && (m = 'class="' + t.body_class + '"');
+            var l =
               "<!DOCTYPE html><html " +
               p +
               "><head><title></title></head><body " +
-              l +
+              m +
               '><div id="popup_target"></div></body></html>';
-            c.document.write(m), (c.document.title = r);
+            c.document.write(l), (c.document.title = r);
             for (
               var h = c.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
@@ -1055,7 +1107,7 @@
         return p;
       }),
       n.d(t, "c", function() {
-        return l;
+        return m;
       });
     n("XaMz");
     function o(e, t, n) {
@@ -1105,7 +1157,7 @@
       var o = c(e, t, n);
       e.splice(o + 1, 0, t);
     }
-    function l(e, t) {
+    function m(e, t) {
       for (var n = 0, o = 0; n < e.length; ) {
         var i = e[n];
         t(i, n, e) && (e[o++] = i), n++;
@@ -1474,8 +1526,8 @@
     var a = 31536e3,
       u = 2628e3,
       p = 604800,
-      l = 86400,
-      m = 3600,
+      m = 86400,
+      l = 3600,
       h = 60;
     function d(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
@@ -1490,16 +1542,16 @@
         ? i(o + "XMonths", Math.floor(e / u))
         : 2 * p <= e
         ? i(o + "XWeeks", Math.floor(e / p))
-        : 2 * l <= e
-        ? i(o + "XDays", Math.floor(e / l))
-        : l <= e
-        ? 2 * m <= (e -= l)
-          ? i(o + "1DayXHours", Math.floor(e / m))
-          : i(o + "1Day")
         : 2 * m <= e
-        ? i(o + "XHours", Math.floor(e / m))
+        ? i(o + "XDays", Math.floor(e / m))
         : m <= e
-        ? 2 * h <= (e -= m) && n
+        ? 2 * l <= (e -= m)
+          ? i(o + "1DayXHours", Math.floor(e / l))
+          : i(o + "1Day")
+        : 2 * l <= e
+        ? i(o + "XHours", Math.floor(e / l))
+        : l <= e
+        ? 2 * h <= (e -= l) && n
           ? i(o + "1HourXMinutes", Math.floor(e / h))
           : i(o + "1Hour")
         : n
@@ -1577,8 +1629,8 @@
       u = n("XaMz"),
       c = n("mrSG"),
       p = n("2vnA"),
-      l = n("okNM"),
-      m = n("J0bI"),
+      m = n("okNM"),
+      l = n("J0bI"),
       h = n("s+DT");
     var d = n("1VtQ"),
       _ = n("K4CH"),
@@ -1608,7 +1660,7 @@
           c.c([p.action], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
-      })(m.b),
+      })(l.b),
       E = (function() {
         function e(e) {
           (this.m_bConnectingToClient = !1),
@@ -1710,7 +1762,7 @@
                 : i.createElement(g, { controller: this.props.controller })
             );
           }),
-          (t = c.c([l.observer], t))
+          (t = c.c([m.observer], t))
         );
       })(i.Component),
       b = (function(t) {
@@ -1884,7 +1936,7 @@
           c.c([d.a], e.prototype, "LaunchWebChat", null),
           c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
           c.c([d.a], e.prototype, "LaunchSteamClient", null),
-          (e = c.c([l.observer], e))
+          (e = c.c([m.observer], e))
         );
       })(i.Component),
       g = (function(e) {
