@@ -1055,6 +1055,8 @@ function ListEdit_Onload( listid, listDetails )
 		return Math.sign(a.sort_order - b.sort_order)
 	});
 
+		g_rgAppsInLists = [];
+
 	LoadCuratorAssociatedApps (function(){
 		for( var i=0; i<listDetails.apps.length; i++)
 		{

@@ -206,6 +206,8 @@
       (s[(s.k_EIRLEvent = 27)] = "k_EIRLEvent"),
       (s[(s.k_ENewsEvent = 28)] = "k_ENewsEvent"),
       (s[(s.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
+      (s[(s.k_EInGameContentReleaseEvent = 30)] =
+        "k_EInGameContentReleaseEvent"),
       ((u = a || (a = {}))[(u.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (u[(u.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -346,7 +348,7 @@
         webapi_token: "",
         authwgtoken: ""
       },
-      s = { steamid: "", authwgtoken: "" },
+      s = { steamid: "" },
       a = "webui_config";
     function u() {
       if (i.IN_CLIENT) {

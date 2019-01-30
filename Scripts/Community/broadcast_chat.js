@@ -132,14 +132,7 @@ CBroadcastChat.prototype.RequestChatInfo = function( ulBroadcastID )
 	})
 	.done( function( rgResult )
 	{
-		if ( rgResult.view_url_template != undefined )
-		{
-			_chat.m_strChatURL = rgResult.view_url_template;
-		}
-		else
-		{
-			_chat.m_strChatURL = rgResult.view_url;
-		}
+		_chat.m_strChatURL = rgResult.view_url_template;
 		_chat.m_ulChatID = rgResult.chat_id;
 
 		if( rgResult.blocked ) 		{

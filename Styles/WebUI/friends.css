@@ -3393,6 +3393,15 @@ iframe.steamTVLogin {
   cursor: pointer;
   min-width: 340px; }
 
+.broadcastchat_RateLimitProgressBarContainer_fFamE {
+  width: 100%;
+  height: 8px; }
+
+.broadcastchat_RateLimitProgressBar_kaFIe {
+  background-color: #7d6ebc;
+  height: 100%;
+  width: 0%; }
+
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
   .isCurrentUser .messages_SpeakerName_InGame_1vaKy {
@@ -7347,8 +7356,26 @@ img {
   font-size: 10px; }
 
 .shared_common_AvatarImage_HVcru {
-  width: 64px;
-  height: 64px; }
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative; }
+  .shared_common_AvatarImage_HVcru:after {
+    content: "N/A";
+    display: block;
+    color: #555;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: #201e25; }
+  .shared_common_STV_HomeGridPreviewDetails_1FyZE .shared_common_AvatarImage_HVcru {
+    border: 2px solid red; }
 
 .shared_common_EditButton_DLPvj {
   text-transform: uppercase;

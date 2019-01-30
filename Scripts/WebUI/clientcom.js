@@ -168,7 +168,7 @@
         webapi_token: "",
         authwgtoken: ""
       },
-      c = { steamid: "", authwgtoken: "" },
+      c = { steamid: "" },
       s = "webui_config";
     function u() {
       if (r.IN_CLIENT) {
