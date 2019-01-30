@@ -413,5 +413,7 @@
 "[english]vgui_continue"	"Continue"
 "vgui_ShuttingDown"	"Apagando..."
 "[english]vgui_ShuttingDown"	"Shutting down..."
+"vgui_HTMLInspectElement"	"Inspeccionar elemento"
+"[english]vgui_HTMLInspectElement"	"Inspect Element"
 }
 }

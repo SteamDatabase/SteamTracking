@@ -621,6 +621,7 @@
  D vpx_codec_vp9_cx_algo
  D vpx_codec_vp9_dx_algo
  D vtable for CWebRTCSession
+ D vtable for CWebRTCTURNServer
  D vtable for CustomAudioSource
  D vtable for CustomVideoSource
  D vtable for WelsCommon::CMemoryAlign
@@ -735,6 +736,10 @@
  D vtable for cricket::TurnPort
  D vtable for cricket::TurnPortFactory
  D vtable for cricket::TurnRefreshRequest
+ D vtable for cricket::TurnServer
+ D vtable for cricket::TurnServerAllocation
+ D vtable for cricket::TurnServerAllocation::Channel
+ D vtable for cricket::TurnServerAllocation::Permission
  D vtable for cricket::UDPPort
  D vtable for cricket::UDPPort::AddressResolver
  D vtable for cricket::VideoAdapter
@@ -786,6 +791,7 @@
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::SctpTransport, void (cricket::SctpTransport::*)(rtc::CopyOnWriteBuffer const&), void, rtc::CopyOnWriteBuffer const&> >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::SctpTransport, void (cricket::SctpTransport::*)(rtc::CopyOnWriteBuffer const&, cricket::ReceiveDataParams, int), void, rtc::CopyOnWriteBuffer const&, cricket::ReceiveDataParams, int> >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnPort, void (cricket::TurnPort::*)(cricket::TurnEntry*, long long), void, cricket::TurnEntry*, long long> >
+ D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnServer, void (cricket::TurnServer::*)(), void> >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<sigslot::signal_with_thread_policy<sigslot::single_threaded, int>, void (sigslot::signal_with_thread_policy<sigslot::single_threaded, int>::*)(int), void, int> >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::BasicRegatheringController, void (webrtc::BasicRegatheringController::*)(bool), void, bool> >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::RTCStatsCollector, void (webrtc::RTCStatsCollector::*)(long long), void, long long> >
@@ -793,6 +799,7 @@
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::RTCStatsCollector, void (webrtc::RTCStatsCollector::*)(rtc::scoped_refptr<webrtc::RTCStatsReport>), void, rtc::scoped_refptr<webrtc::RTCStatsReport> > >
  D vtable for rtc::FireAndForgetAsyncClosure<rtc::UnretainedMethodFunctor<webrtc::VideoCapturerTrackSource, void (webrtc::VideoCapturerTrackSource::*)(cricket::VideoCapturer*, cricket::CaptureState), void, cricket::VideoCapturer*, cricket::CaptureState> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >
+ D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel const, bool (cricket::BaseChannel::*)() const, bool> >
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel, bool (cricket::BaseChannel::*)(cricket::MediaContentDescription const*, webrtc::SdpType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*), bool, cricket::MediaContentDescription const*, webrtc::SdpType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> const&>
  D vtable for rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::DataMediaChannel, bool (cricket::DataMediaChannel::*)(cricket::SendDataParams const&, rtc::CopyOnWriteBuffer const&, cricket::SendDataResult*), bool, cricket::SendDataParams const&, rtc::CopyOnWriteBuffer const&, cricket::SendDataResult*> const&>
@@ -1746,10 +1753,16 @@
  R cricket::SSLTCP_PROTOCOL_NAME
  R cricket::STRONG_AND_STABLE_WRITABLE_CONNECTION_PING_INTERVAL
  R cricket::STRONG_PING_INTERVAL
+ R cricket::STUN_ERROR_REASON_ALLOCATION_MISMATCH
  R cricket::STUN_ERROR_REASON_BAD_REQUEST
+ R cricket::STUN_ERROR_REASON_FORBIDDEN
  R cricket::STUN_ERROR_REASON_ROLE_CONFLICT
  R cricket::STUN_ERROR_REASON_SERVER_ERROR
+ R cricket::STUN_ERROR_REASON_STALE_NONCE
+ R cricket::STUN_ERROR_REASON_TRY_ALTERNATE_SERVER
  R cricket::STUN_ERROR_REASON_UNAUTHORIZED
+ R cricket::STUN_ERROR_REASON_UNSUPPORTED_PROTOCOL
+ R cricket::STUN_ERROR_REASON_WRONG_CREDENTIALS
  R cricket::STUN_KEEPALIVE_INTERVAL
  R cricket::STUN_PORT_TYPE
  R cricket::TCPTYPE_ACTIVE_STR
@@ -2755,6 +2768,14 @@
  T CWebRTCSession::OnStateChange()
  T CWebRTCSession::Release()
  T CWebRTCSession::~CWebRTCSession()
+ T CWebRTCTURNServer::AddCredentials(char const*, char const*)
+ T CWebRTCTURNServer::AddRef()
+ T CWebRTCTURNServer::BInitialize()
+ T CWebRTCTURNServer::BInitializeOnSocketThread()
+ T CWebRTCTURNServer::CWebRTCTURNServer(IWebRTCTURNServerDelegate*)
+ T CWebRTCTURNServer::GetKey(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
+ T CWebRTCTURNServer::Release()
+ T CWebRTCTURNServer::~CWebRTCTURNServer()
  T CavlcParamCal_c
  T ChaCha20_ctr32
  T Convert16To8Plane
@@ -2777,6 +2798,7 @@
  T CopyRow_ERMS
  T CopyRow_SSE2
  T CreateWebRTCSession
+ T CreateWebRTCTURNServer
  T CustomAudioSource::ActiveAudioLayer(webrtc::AudioDeviceModule::AudioLayer*) const
  T CustomAudioSource::BSendData(unsigned char const*, unsigned long)
  T CustomAudioSource::BuiltInAECIsAvailable() const
@@ -5028,6 +5050,7 @@
  T bool rtc::Base64::DecodeFromArrayTemplate<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(char const*, unsigned long, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, unsigned long*)
  T bool rtc::Base64::DecodeFromArrayTemplate<std::__1::vector<unsigned char, std::__1::allocator<unsigned char> > >(char const*, unsigned long, int, std::__1::vector<unsigned char, std::__1::allocator<unsigned char> >*, unsigned long*)
  T bool rtc::Thread::Invoke<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >(rtc::Location const&, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool>&&)
+ T bool rtc::Thread::Invoke<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >(rtc::Location const&, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool>&&)
  T bool rtc::Thread::Invoke<bool, rtc::MethodFunctor<webrtc::PeerConnection, bool (webrtc::PeerConnection::*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&> >(rtc::Location const&, rtc::MethodFunctor<webrtc::PeerConnection, bool (webrtc::PeerConnection::*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), bool, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>&&)
  T bool rtc::Thread::Invoke<bool, rtc::MethodFunctor<webrtc::PeerConnection, bool (webrtc::PeerConnection::*)(std::__1::set<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> > const&, std::__1::vector<cricket::RelayServerConfig, std::__1::allocator<cricket::RelayServerConfig> > const&, webrtc::PeerConnectionInterface::IceTransportsType, int, bool, webrtc::TurnCustomizer*, absl::optional<int>), bool, std::__1::set<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> > const&, std::__1::vector<cricket::RelayServerConfig, std::__1::allocator<cricket::RelayServerConfig> > const&, webrtc::PeerConnectionInterface::IceTransportsType, int, bool, webrtc::TurnCustomizer*, absl::optional<int> > >(rtc::Location const&, rtc::MethodFunctor<webrtc::PeerConnection, bool (webrtc::PeerConnection::*)(std::__1::set<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> > const&, std::__1::vector<cricket::RelayServerConfig, std::__1::allocator<cricket::RelayServerConfig> > const&, webrtc::PeerConnectionInterface::IceTransportsType, int, bool, webrtc::TurnCustomizer*, absl::optional<int>), bool, std::__1::set<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> > const&, std::__1::vector<cricket::RelayServerConfig, std::__1::allocator<cricket::RelayServerConfig> > const&, webrtc::PeerConnectionInterface::IceTransportsType, int, bool, webrtc::TurnCustomizer*, absl::optional<int> >&&)
  T bool std::__1::__insertion_sort_incomplete<bool (*&)(cricket::SenderOptions const&, cricket::SenderOptions const&), cricket::SenderOptions*>(cricket::SenderOptions*, cricket::SenderOptions*, bool (*&)(cricket::SenderOptions const&, cricket::SenderOptions const&))
@@ -5694,6 +5717,7 @@
  T cricket::IsRtpPacket(void const*, unsigned long)
  T cricket::IsRtpProtocol(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T cricket::IsSameCodec(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::map<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > > > const&)
+ T cricket::IsStunRequestType(int)
  T cricket::IsStunSuccessResponseType(int)
  T cricket::IsValidRtpPayloadType(int)
  T cricket::IsValidRtpRtcpPacketSize(bool, unsigned long)
@@ -6120,6 +6144,7 @@
  T cricket::StringToConnectionRole(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, cricket::ConnectionRole*)
  T cricket::StringToProto(char const*, cricket::ProtocolType*)
  T cricket::StunAddressAttribute::Read(rtc::ByteBufferReader*)
+ T cricket::StunAddressAttribute::StunAddressAttribute(unsigned short, rtc::SocketAddress const&)
  T cricket::StunAddressAttribute::Write(rtc::ByteBufferWriter*) const
  T cricket::StunAddressAttribute::value_type() const
  T cricket::StunAddressAttribute::~StunAddressAttribute()
@@ -6145,6 +6170,7 @@
  T cricket::StunErrorCodeAttribute::Read(rtc::ByteBufferReader*)
  T cricket::StunErrorCodeAttribute::SetCode(int)
  T cricket::StunErrorCodeAttribute::SetReason(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T cricket::StunErrorCodeAttribute::StunErrorCodeAttribute(unsigned short, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T cricket::StunErrorCodeAttribute::Write(rtc::ByteBufferWriter*) const
  T cricket::StunErrorCodeAttribute::code() const
  T cricket::StunErrorCodeAttribute::value_type() const
@@ -6343,6 +6369,45 @@
  T cricket::TurnRefreshRequest::OnTimeout()
  T cricket::TurnRefreshRequest::Prepare(cricket::StunMessage*)
  T cricket::TurnRefreshRequest::~TurnRefreshRequest()
+ T cricket::TurnServer::AddInternalSocket(rtc::AsyncPacketSocket*, cricket::ProtocolType)
+ T cricket::TurnServer::CheckAuthorization(cricket::TurnServerConnection*, cricket::StunMessage const*, char const*, unsigned long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T cricket::TurnServer::CreateAllocation(cricket::TurnServerConnection*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T cricket::TurnServer::DestroyInternalSocket(rtc::AsyncPacketSocket*)
+ T cricket::TurnServer::FreeSockets()
+ T cricket::TurnServer::GenerateNonce(long long) const
+ T cricket::TurnServer::GetKey(cricket::StunMessage const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
+ T cricket::TurnServer::HandleAllocateRequest(cricket::TurnServerConnection*, cricket::TurnMessage const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T cricket::TurnServer::HandleBindingRequest(cricket::TurnServerConnection*, cricket::StunMessage const*)
+ T cricket::TurnServer::HandleStunMessage(cricket::TurnServerConnection*, char const*, unsigned long)
+ T cricket::TurnServer::OnAllocationDestroyed(cricket::TurnServerAllocation*)
+ T cricket::TurnServer::OnInternalPacket(rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
+ T cricket::TurnServer::SendErrorResponseWithAlternateServer(cricket::TurnServerConnection*, cricket::StunMessage const*, rtc::SocketAddress const&)
+ T cricket::TurnServer::SendErrorResponseWithRealmAndNonce(cricket::TurnServerConnection*, cricket::StunMessage const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T cricket::TurnServer::SendStun(cricket::TurnServerConnection*, cricket::StunMessage*)
+ T cricket::TurnServer::SetExternalSocketFactory(rtc::PacketSocketFactory*, rtc::SocketAddress const&)
+ T cricket::TurnServer::TurnServer(rtc::Thread*)
+ T cricket::TurnServer::ValidateNonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T cricket::TurnServer::~TurnServer()
+ T cricket::TurnServerAllocation::AddPermission(rtc::IPAddress const&)
+ T cricket::TurnServerAllocation::Channel::OnMessage(rtc::Message*)
+ T cricket::TurnServerAllocation::Channel::~Channel()
+ T cricket::TurnServerAllocation::HandleAllocateRequest(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::HandleChannelBindRequest(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::HandleChannelData(char const*, unsigned long)
+ T cricket::TurnServerAllocation::HandleCreatePermissionRequest(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::HandleRefreshRequest(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::HandleSendIndication(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::HandleTurnMessage(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::OnChannelDestroyed(cricket::TurnServerAllocation::Channel*)
+ T cricket::TurnServerAllocation::OnExternalPacket(rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
+ T cricket::TurnServerAllocation::OnMessage(rtc::Message*)
+ T cricket::TurnServerAllocation::OnPermissionDestroyed(cricket::TurnServerAllocation::Permission*)
+ T cricket::TurnServerAllocation::Permission::OnMessage(rtc::Message*)
+ T cricket::TurnServerAllocation::Permission::~Permission()
+ T cricket::TurnServerAllocation::SendBadRequestResponse(cricket::TurnMessage const*)
+ T cricket::TurnServerAllocation::ToString() const
+ T cricket::TurnServerAllocation::~TurnServerAllocation()
+ T cricket::TurnServerConnection::ToString() const
  T cricket::UDPPort::AddressResolver::OnResolveResult(rtc::AsyncResolverInterface*)
  T cricket::UDPPort::AddressResolver::Resolve(rtc::SocketAddress const&)
  T cricket::UDPPort::AddressResolver::~AddressResolver()
@@ -7642,6 +7707,8 @@
  T non-virtual thunk to CWebRTCSession::OnSignalingChange(webrtc::PeerConnectionInterface::SignalingState)
  T non-virtual thunk to CWebRTCSession::OnStateChange()
  T non-virtual thunk to CWebRTCSession::~CWebRTCSession()
+ T non-virtual thunk to CWebRTCTURNServer::GetKey(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
+ T non-virtual thunk to CWebRTCTURNServer::~CWebRTCTURNServer()
  T non-virtual thunk to CustomAudioSource::OnMessage(rtc::Message*)
  T non-virtual thunk to CustomAudioSource::~CustomAudioSource()
  T non-virtual thunk to CustomVideoSource::~CustomVideoSource()
@@ -7676,6 +7743,7 @@
  T non-virtual thunk to cricket::TurnCreatePermissionRequest::~TurnCreatePermissionRequest()
  T non-virtual thunk to cricket::TurnPort::OnMessage(rtc::Message*)
  T non-virtual thunk to cricket::TurnPort::~TurnPort()
+ T non-virtual thunk to cricket::TurnServerAllocation::~TurnServerAllocation()
  T non-virtual thunk to cricket::UDPPort::~UDPPort()
  T non-virtual thunk to cricket::VideoCapturer::AddOrUpdateSink(rtc::VideoSinkInterface<webrtc::VideoFrame>*, rtc::VideoSinkWants const&)
  T non-virtual thunk to cricket::VideoCapturer::RemoveSink(rtc::VideoSinkInterface<webrtc::VideoFrame>*)
@@ -8194,6 +8262,7 @@
  T rtc::AsyncTCPSocketBase::~AsyncTCPSocketBase()
  T rtc::AsyncUDPSocket::AsyncUDPSocket(rtc::AsyncSocket*)
  T rtc::AsyncUDPSocket::Close()
+ T rtc::AsyncUDPSocket::Create(rtc::SocketFactory*, rtc::SocketAddress const&)
  T rtc::AsyncUDPSocket::GetError() const
  T rtc::AsyncUDPSocket::GetLocalAddress() const
  T rtc::AsyncUDPSocket::GetOption(rtc::Socket::Option, int*)
@@ -8224,6 +8293,7 @@
  T rtc::BasicNetworkManager::StopUpdating()
  T rtc::BasicNetworkManager::UpdateNetworksOnce()
  T rtc::BasicNetworkManager::~BasicNetworkManager()
+ T rtc::BasicPacketSocketFactory::BasicPacketSocketFactory(rtc::SocketFactory*)
  T rtc::BasicPacketSocketFactory::BasicPacketSocketFactory(rtc::Thread*)
  T rtc::BasicPacketSocketFactory::CreateAsyncResolver()
  T rtc::BasicPacketSocketFactory::CreateClientTcpSocket(rtc::SocketAddress const&, rtc::SocketAddress const&, rtc::ProxyInfo const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, int)
@@ -8283,6 +8353,8 @@
  T rtc::ComputeDigest(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
  T rtc::ComputeDigest(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, void const*, unsigned long, void*, unsigned long)
  T rtc::ComputeHmac(rtc::MessageDigest*, void const*, unsigned long, void const*, unsigned long, void*, unsigned long)
+ T rtc::ComputeHmac(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T rtc::ComputeHmac(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*)
  T rtc::ComputeHmac(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, void const*, unsigned long, void const*, unsigned long, void*, unsigned long)
  T rtc::CopyOnWriteBuffer::Clear()
  T rtc::CopyOnWriteBuffer::CloneDataIfReferenced(unsigned long)
@@ -8369,6 +8441,8 @@
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::SctpTransport, void (cricket::SctpTransport::*)(rtc::CopyOnWriteBuffer const&, cricket::ReceiveDataParams, int), void, rtc::CopyOnWriteBuffer const&, cricket::ReceiveDataParams, int> >::~FireAndForgetAsyncClosure()
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnPort, void (cricket::TurnPort::*)(cricket::TurnEntry*, long long), void, cricket::TurnEntry*, long long> >::Execute()
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnPort, void (cricket::TurnPort::*)(cricket::TurnEntry*, long long), void, cricket::TurnEntry*, long long> >::~FireAndForgetAsyncClosure()
+ T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnServer, void (cricket::TurnServer::*)(), void> >::Execute()
+ T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<cricket::TurnServer, void (cricket::TurnServer::*)(), void> >::~FireAndForgetAsyncClosure()
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<sigslot::signal_with_thread_policy<sigslot::single_threaded, int>, void (sigslot::signal_with_thread_policy<sigslot::single_threaded, int>::*)(int), void, int> >::Execute()
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<sigslot::signal_with_thread_policy<sigslot::single_threaded, int>, void (sigslot::signal_with_thread_policy<sigslot::single_threaded, int>::*)(int), void, int> >::~FireAndForgetAsyncClosure()
  T rtc::FireAndForgetAsyncClosure<rtc::MethodFunctor<webrtc::BasicRegatheringController, void (webrtc::BasicRegatheringController::*)(bool), void, bool> >::Execute()
@@ -8384,6 +8458,8 @@
  T rtc::FromString(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, bool*)
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCSession, bool (CWebRTCSession::*)(), bool> >::~FunctorMessageHandler()
+ T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >::OnMessage(rtc::Message*)
+ T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<CWebRTCTURNServer, bool (CWebRTCTURNServer::*)(), bool> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel const, bool (cricket::BaseChannel::*)() const, bool> >::OnMessage(rtc::Message*)
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel const, bool (cricket::BaseChannel::*)() const, bool> >::~FunctorMessageHandler()
  T rtc::FunctorMessageHandler<bool, rtc::MethodFunctor<cricket::BaseChannel, bool (cricket::BaseChannel::*)(cricket::MediaContentDescription const*, webrtc::SdpType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*), bool, cricket::MediaContentDescription const*, webrtc::SdpType, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> const&>::OnMessage(rtc::Message*)
@@ -9183,6 +9259,7 @@
  T rtc::VideoSourceBase::RemoveSink(rtc::VideoSinkInterface<webrtc::VideoFrame>*)
  T rtc::VideoSourceBase::VideoSourceBase()
  T rtc::VideoSourceBase::~VideoSourceBase()
+ T rtc::hex_decode(char*, unsigned long, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T rtc::hex_decode_with_delimiter(char*, unsigned long, char const*, unsigned long, char)
  T rtc::hex_encode(char const*, unsigned long)
  T rtc::hex_encode(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -9875,6 +9952,8 @@
  T std::__1::__tree<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> >::destroy(std::__1::__tree_node<rtc::SocketAddress, void*>*)
  T std::__1::__tree<sigslot::_signal_base_interface*, std::__1::less<sigslot::_signal_base_interface*>, std::__1::allocator<sigslot::_signal_base_interface*> >::destroy(std::__1::__tree_node<sigslot::_signal_base_interface*, void*>*)
  T std::__1::__tree<std::__1::__value_type<cricket::DtlsTransportState, int>, std::__1::__map_value_compare<cricket::DtlsTransportState, std::__1::__value_type<cricket::DtlsTransportState, int>, std::__1::less<cricket::DtlsTransportState>, true>, std::__1::allocator<std::__1::__value_type<cricket::DtlsTransportState, int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<cricket::DtlsTransportState, int>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__map_value_compare<cricket::TurnServerConnection, std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::less<cricket::TurnServerConnection>, true>, std::__1::allocator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > > > >::destroy(std::__1::__tree_node<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, void*>*)
+ T std::__1::__tree<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__map_value_compare<cricket::TurnServerConnection, std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::less<cricket::TurnServerConnection>, true>, std::__1::allocator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > > > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__tree_node<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, void*>*, long>)
  T std::__1::__tree<std::__1::__value_type<cricket::VideoMediaChannel*, std::__1::unique_ptr<cricket::VideoMediaInfo, std::__1::default_delete<cricket::VideoMediaInfo> > >, std::__1::__map_value_compare<cricket::VideoMediaChannel*, std::__1::__value_type<cricket::VideoMediaChannel*, std::__1::unique_ptr<cricket::VideoMediaInfo, std::__1::default_delete<cricket::VideoMediaInfo> > >, std::__1::less<cricket::VideoMediaChannel*>, true>, std::__1::allocator<std::__1::__value_type<cricket::VideoMediaChannel*, std::__1::unique_ptr<cricket::VideoMediaInfo, std::__1::default_delete<cricket::VideoMediaInfo> > > > >::destroy(std::__1::__tree_node<std::__1::__value_type<cricket::VideoMediaChannel*, std::__1::unique_ptr<cricket::VideoMediaInfo, std::__1::default_delete<cricket::VideoMediaInfo> > >, void*>*)
  T std::__1::__tree<std::__1::__value_type<cricket::VideoReceiverInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, std::__1::__map_value_compare<cricket::VideoReceiverInfo const*, std::__1::__value_type<cricket::VideoReceiverInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, std::__1::less<cricket::VideoReceiverInfo const*>, true>, std::__1::allocator<std::__1::__value_type<cricket::VideoReceiverInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> > > >::destroy(std::__1::__tree_node<std::__1::__value_type<cricket::VideoReceiverInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, void*>*)
  T std::__1::__tree<std::__1::__value_type<cricket::VideoSenderInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, std::__1::__map_value_compare<cricket::VideoSenderInfo const*, std::__1::__value_type<cricket::VideoSenderInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, std::__1::less<cricket::VideoSenderInfo const*>, true>, std::__1::allocator<std::__1::__value_type<cricket::VideoSenderInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> > > >::destroy(std::__1::__tree_node<std::__1::__value_type<cricket::VideoSenderInfo const*, rtc::scoped_refptr<webrtc::VideoTrackInterface> >, void*>*)
@@ -9898,6 +9977,8 @@
  T std::__1::__tree<std::__1::__value_type<long long, unsigned short>, std::__1::__map_value_compare<long long, std::__1::__value_type<long long, unsigned short>, std::__1::less<long long>, true>, std::__1::allocator<std::__1::__value_type<long long, unsigned short> > >::destroy(std::__1::__tree_node<std::__1::__value_type<long long, unsigned short>, void*>*)
  T std::__1::__tree<std::__1::__value_type<long long, webrtc::PacketFeedback>, std::__1::__map_value_compare<long long, std::__1::__value_type<long long, webrtc::PacketFeedback>, std::__1::less<long long>, true>, std::__1::allocator<std::__1::__value_type<long long, webrtc::PacketFeedback> > >::destroy(std::__1::__tree_node<std::__1::__value_type<long long, webrtc::PacketFeedback>, void*>*)
  T std::__1::__tree<std::__1::__value_type<long long, webrtc::video_coding::RtpFrameReferenceFinder::GofInfo>, std::__1::__map_value_compare<long long, std::__1::__value_type<long long, webrtc::video_coding::RtpFrameReferenceFinder::GofInfo>, std::__1::less<long long>, true>, std::__1::allocator<std::__1::__value_type<long long, webrtc::video_coding::RtpFrameReferenceFinder::GofInfo> > >::destroy(std::__1::__tree_node<std::__1::__value_type<long long, webrtc::video_coding::RtpFrameReferenceFinder::GofInfo>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<rtc::AsyncPacketSocket*, cricket::ProtocolType>, std::__1::__map_value_compare<rtc::AsyncPacketSocket*, std::__1::__value_type<rtc::AsyncPacketSocket*, cricket::ProtocolType>, std::__1::less<rtc::AsyncPacketSocket*>, true>, std::__1::allocator<std::__1::__value_type<rtc::AsyncPacketSocket*, cricket::ProtocolType> > >::destroy(std::__1::__tree_node<std::__1::__value_type<rtc::AsyncPacketSocket*, cricket::ProtocolType>, void*>*)
+ T std::__1::__tree<std::__1::__value_type<rtc::AsyncSocket*, cricket::ProtocolType>, std::__1::__map_value_compare<rtc::AsyncSocket*, std::__1::__value_type<rtc::AsyncSocket*, cricket::ProtocolType>, std::__1::less<rtc::AsyncSocket*>, true>, std::__1::allocator<std::__1::__value_type<rtc::AsyncSocket*, cricket::ProtocolType> > >::destroy(std::__1::__tree_node<std::__1::__value_type<rtc::AsyncSocket*, cricket::ProtocolType>, void*>*)
  T std::__1::__tree<std::__1::__value_type<rtc::Network*, cricket::Connection*>, std::__1::__map_value_compare<rtc::Network*, std::__1::__value_type<rtc::Network*, cricket::Connection*>, std::__1::less<rtc::Network*>, true>, std::__1::allocator<std::__1::__value_type<rtc::Network*, cricket::Connection*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<rtc::Network*, cricket::Connection*>, void*>*)
  T std::__1::__tree<std::__1::__value_type<rtc::Socket::Option, int>, std::__1::__map_value_compare<rtc::Socket::Option, std::__1::__value_type<rtc::Socket::Option, int>, std::__1::less<rtc::Socket::Option>, true>, std::__1::allocator<std::__1::__value_type<rtc::Socket::Option, int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<rtc::Socket::Option, int>, void*>*)
  T std::__1::__tree<std::__1::__value_type<rtc::SocketAddress, cricket::Connection*>, std::__1::__map_value_compare<rtc::SocketAddress, std::__1::__value_type<rtc::SocketAddress, cricket::Connection*>, std::__1::less<rtc::SocketAddress>, true>, std::__1::allocator<std::__1::__value_type<rtc::SocketAddress, cricket::Connection*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<rtc::SocketAddress, cricket::Connection*>, void*>*)
@@ -10040,6 +10121,7 @@
  T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*> > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > const&) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
  T std::__1::__tree_iterator<rtc::SocketAddress, std::__1::__tree_node<rtc::SocketAddress, void*>*, long> std::__1::__tree<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> >::__emplace_multi<rtc::SocketAddress const&>(rtc::SocketAddress const&)
+ T std::__1::__tree_iterator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__tree_node<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, void*>*, long> std::__1::__tree<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__map_value_compare<cricket::TurnServerConnection, std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::less<cricket::TurnServerConnection>, true>, std::__1::allocator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > > > >::find<cricket::TurnServerConnection>(cricket::TurnServerConnection const&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RtpCodecParameters>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__map_value_compare<int, std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, webrtc::RtpCodecParameters> > >::__emplace_hint_unique_key_args<int, std::__1::pair<int const, webrtc::RtpCodecParameters> const&>(std::__1::__tree_const_iterator<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RtpCodecParameters>, void*>*, long>, int const&, std::__1::pair<int const, webrtc::RtpCodecParameters> const&)
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*> > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -10061,6 +10143,7 @@
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, webrtc::RtpPacketSinkInterface*> > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > const&)
  T std::__1::__tree_iterator<std::__1::__value_type<webrtc::SdpAudioFormat, int>, std::__1::__tree_node<std::__1::__value_type<webrtc::SdpAudioFormat, int>, void*>*, long> std::__1::__tree<std::__1::__value_type<webrtc::SdpAudioFormat, int>, std::__1::__map_value_compare<webrtc::SdpAudioFormat, std::__1::__value_type<webrtc::SdpAudioFormat, int>, cricket::PayloadTypeMapper::SdpAudioFormatOrdering, true>, std::__1::allocator<std::__1::__value_type<webrtc::SdpAudioFormat, int> > >::__emplace_hint_unique_key_args<webrtc::SdpAudioFormat, std::__1::pair<webrtc::SdpAudioFormat const, int> const&>(std::__1::__tree_const_iterator<std::__1::__value_type<webrtc::SdpAudioFormat, int>, std::__1::__tree_node<std::__1::__value_type<webrtc::SdpAudioFormat, int>, void*>*, long>, webrtc::SdpAudioFormat const&, std::__1::pair<webrtc::SdpAudioFormat const, int> const&)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__map_value_compare<cricket::TurnServerConnection, std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::less<cricket::TurnServerConnection>, true>, std::__1::allocator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > > > >::__find_equal<cricket::TurnServerConnection>(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, cricket::TurnServerConnection const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__map_value_compare<int, std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, webrtc::RtpCodecParameters> > >::__find_equal<int>(std::__1::__tree_const_iterator<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RtpCodecParameters>, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, int const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::JsepTransport*> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*>, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, cricket::StunRequest*> > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
@@ -10170,6 +10253,7 @@
  T std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
  T std::__1::pair<std::__1::__tree_iterator<rtc::SocketAddress, std::__1::__tree_node<rtc::SocketAddress, void*>*, long>, bool> std::__1::__tree<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> >::__emplace_unique_key_args<rtc::SocketAddress, rtc::SocketAddress const&>(rtc::SocketAddress const&, rtc::SocketAddress const&)
  T std::__1::pair<std::__1::__tree_iterator<rtc::SocketAddress, std::__1::__tree_node<rtc::SocketAddress, void*>*, long>, bool> std::__1::__tree<rtc::SocketAddress, std::__1::less<rtc::SocketAddress>, std::__1::allocator<rtc::SocketAddress> >::__emplace_unique_key_args<rtc::SocketAddress, rtc::SocketAddress>(rtc::SocketAddress const&, rtc::SocketAddress&&)
+ T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__tree_node<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::__map_value_compare<cricket::TurnServerConnection, std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > >, std::__1::less<cricket::TurnServerConnection>, true>, std::__1::allocator<std::__1::__value_type<cricket::TurnServerConnection, std::__1::unique_ptr<cricket::TurnServerAllocation, std::__1::default_delete<cricket::TurnServerAllocation> > > > >::__emplace_unique_key_args<cricket::TurnServerConnection, std::__1::piecewise_construct_t const&, std::__1::tuple<cricket::TurnServerConnection const&>, std::__1::tuple<> >(cricket::TurnServerConnection const&, std::__1::piecewise_construct_t const&, std::__1::tuple<cricket::TurnServerConnection const&>&&, std::__1::tuple<>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::__map_value_compare<int, std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats> > >::__emplace_unique_key_args<int, std::__1::piecewise_construct_t const&, std::__1::tuple<int const&>, std::__1::tuple<> >(int const&, std::__1::piecewise_construct_t const&, std::__1::tuple<int const&>&&, std::__1::tuple<>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::__map_value_compare<int, std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, webrtc::RTPSenderVideo::TemporalLayerStats> > >::__emplace_unique_key_args<int, std::__1::piecewise_construct_t const&, std::__1::tuple<int&&>, std::__1::tuple<> >(int const&, std::__1::piecewise_construct_t const&, std::__1::tuple<int&&>&&, std::__1::tuple<>&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__tree_node<std::__1::__value_type<int, webrtc::RtpCodecParameters>, void*>*, long>, bool> std::__1::__tree<std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::__map_value_compare<int, std::__1::__value_type<int, webrtc::RtpCodecParameters>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, webrtc::RtpCodecParameters> > >::__emplace_unique_key_args<int, std::__1::pair<int, webrtc::RtpCodecParameters> >(int const&, std::__1::pair<int, webrtc::RtpCodecParameters>&&)
@@ -10416,6 +10500,11 @@
  T void sigslot::_opaque_connection::emitter<cricket::TurnPort, rtc::AsyncPacketSocket*>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*)
  T void sigslot::_opaque_connection::emitter<cricket::TurnPort, rtc::AsyncResolverInterface*>(sigslot::_opaque_connection const*, rtc::AsyncResolverInterface*)
  T void sigslot::_opaque_connection::emitter<cricket::TurnPort, void const*, unsigned long, cricket::StunRequest*>(sigslot::_opaque_connection const*, void const*, unsigned long, cricket::StunRequest*)
+ T void sigslot::_opaque_connection::emitter<cricket::TurnServer, cricket::TurnServerAllocation*>(sigslot::_opaque_connection const*, cricket::TurnServerAllocation*)
+ T void sigslot::_opaque_connection::emitter<cricket::TurnServer, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
+ T void sigslot::_opaque_connection::emitter<cricket::TurnServerAllocation, cricket::TurnServerAllocation::Channel*>(sigslot::_opaque_connection const*, cricket::TurnServerAllocation::Channel*)
+ T void sigslot::_opaque_connection::emitter<cricket::TurnServerAllocation, cricket::TurnServerAllocation::Permission*>(sigslot::_opaque_connection const*, cricket::TurnServerAllocation::Permission*)
+ T void sigslot::_opaque_connection::emitter<cricket::TurnServerAllocation, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
  T void sigslot::_opaque_connection::emitter<cricket::UDPPort, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, char const*, unsigned long, rtc::SocketAddress const&, rtc::PacketTime const&)
  T void sigslot::_opaque_connection::emitter<cricket::UDPPort, rtc::AsyncPacketSocket*, rtc::SentPacket const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, rtc::SentPacket const&)
  T void sigslot::_opaque_connection::emitter<cricket::UDPPort, rtc::AsyncPacketSocket*, rtc::SocketAddress const&>(sigslot::_opaque_connection const*, rtc::AsyncPacketSocket*, rtc::SocketAddress const&)
@@ -10589,6 +10678,7 @@
  T void std::__1::vector<std::__1::unique_ptr<cricket::StunAttribute, std::__1::default_delete<cricket::StunAttribute> >, std::__1::allocator<std::__1::unique_ptr<cricket::StunAttribute, std::__1::default_delete<cricket::StunAttribute> > > >::__push_back_slow_path<std::__1::unique_ptr<cricket::StunAttribute, std::__1::default_delete<cricket::StunAttribute> > >(std::__1::unique_ptr<cricket::StunAttribute, std::__1::default_delete<cricket::StunAttribute> >&&)
  T void std::__1::vector<std::__1::unique_ptr<cricket::VideoChannel, std::__1::default_delete<cricket::VideoChannel> >, std::__1::allocator<std::__1::unique_ptr<cricket::VideoChannel, std::__1::default_delete<cricket::VideoChannel> > > >::__push_back_slow_path<std::__1::unique_ptr<cricket::VideoChannel, std::__1::default_delete<cricket::VideoChannel> > >(std::__1::unique_ptr<cricket::VideoChannel, std::__1::default_delete<cricket::VideoChannel> >&&)
  T void std::__1::vector<std::__1::unique_ptr<cricket::VoiceChannel, std::__1::default_delete<cricket::VoiceChannel> >, std::__1::allocator<std::__1::unique_ptr<cricket::VoiceChannel, std::__1::default_delete<cricket::VoiceChannel> > > >::__push_back_slow_path<std::__1::unique_ptr<cricket::VoiceChannel, std::__1::default_delete<cricket::VoiceChannel> > >(std::__1::unique_ptr<cricket::VoiceChannel, std::__1::default_delete<cricket::VoiceChannel> >&&)
+ T void std::__1::vector<std::__1::unique_ptr<rtc::AsyncPacketSocket, std::__1::default_delete<rtc::AsyncPacketSocket> >, std::__1::allocator<std::__1::unique_ptr<rtc::AsyncPacketSocket, std::__1::default_delete<rtc::AsyncPacketSocket> > > >::__push_back_slow_path<std::__1::unique_ptr<rtc::AsyncPacketSocket, std::__1::default_delete<rtc::AsyncPacketSocket> > >(std::__1::unique_ptr<rtc::AsyncPacketSocket, std::__1::default_delete<rtc::AsyncPacketSocket> >&&)
  T void std::__1::vector<std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> >, std::__1::allocator<std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> > > >::__emplace_back_slow_path<rtc::OpenSSLCertificate*>(rtc::OpenSSLCertificate*&&)
  T void std::__1::vector<std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> >, std::__1::allocator<std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> > > >::__push_back_slow_path<std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> > >(std::__1::unique_ptr<rtc::SSLCertificate, std::__1::default_delete<rtc::SSLCertificate> >&&)
  T void std::__1::vector<std::__1::unique_ptr<webrtc::AudioConverter, std::__1::default_delete<webrtc::AudioConverter> >, std::__1::allocator<std::__1::unique_ptr<webrtc::AudioConverter, std::__1::default_delete<webrtc::AudioConverter> > > >::__push_back_slow_path<std::__1::unique_ptr<webrtc::AudioConverter, std::__1::default_delete<webrtc::AudioConverter> > >(std::__1::unique_ptr<webrtc::AudioConverter, std::__1::default_delete<webrtc::AudioConverter> >&&)
@@ -19699,6 +19789,7 @@
  d cricket::AllocationSequence::OnMessage(rtc::Message*)::PHASE_NAMES
  d cricket::FilterRtpExtensions(std::__1::vector<webrtc::RtpExtension, std::__1::allocator<webrtc::RtpExtension> > const&, bool (*)(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&), bool)::kBweExtensionPriorities
  d cricket::PROTO_NAMES
+ d cricket::TurnServerConnection::ToString() const::kProtos
  d crl_reasons
  d dc_128
  d decoder_ctrl_maps
@@ -22496,6 +22587,7 @@
  t cricket::FindByUriAndEncryption(std::__1::vector<webrtc::RtpExtension, std::__1::allocator<webrtc::RtpExtension> > const&, webrtc::RtpExtension const&, webrtc::RtpExtension*)
  t cricket::FindByUriWithEncryptionPreference(std::__1::vector<webrtc::RtpExtension, std::__1::allocator<webrtc::RtpExtension> > const&, webrtc::RtpExtension const&, bool, webrtc::RtpExtension*)
  t cricket::GenerateSsrcs(std::__1::vector<cricket::StreamParams, std::__1::allocator<cricket::StreamParams> > const&, int, std::__1::vector<unsigned int, std::__1::allocator<unsigned int> >*)
+ t cricket::InitErrorResponse(cricket::StunMessage const*, int, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, cricket::StunMessage*)
  t cricket::IsDtlsRtp(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t cricket::IsDtlsSctp(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  t cricket::IsPlainRtp(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)

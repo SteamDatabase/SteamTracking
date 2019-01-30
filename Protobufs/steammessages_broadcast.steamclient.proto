@@ -112,6 +112,7 @@ message CBroadcast_WatchBroadcast_Response {
 	optional bool is_webrtc = 14;
 	optional fixed64 webrtc_session_id = 15;
 	optional string webrtc_offer_sdp = 16;
+	optional string webrtc_turn_server = 17;
 }
 
 message CBroadcast_HeartbeatBroadcast_Notification {
@@ -270,6 +271,11 @@ message CBroadcast_GetRTMPInfo_Response {
 	optional uint32 chat_rate_limit = 10 [(description) = "Seconds required between chat messages"];
 }
 
+message CBroadcast_WebRTCHaveTURNServer_Notification {
+	optional fixed64 broadcast_session_id = 1;
+	optional string turn_server = 2;
+}
+
 message CBroadcast_WebRTCStartResult_Request {
 	optional fixed64 webrtc_session_id = 1;
 	optional bool started = 2;
@@ -296,6 +302,14 @@ message CBroadcast_WebRTCSetAnswer_Request {
 }
 
 message CBroadcast_WebRTCSetAnswer_Response {
+}
+
+message CBroadcast_WebRTCLookupTURNServer_Request {
+	optional uint32 cellid = 1;
+}
+
+message CBroadcast_WebRTCLookupTURNServer_Response {
+	optional string turn_server = 1;
 }
 
 message CBroadcast_WebRTC_Candidate {
@@ -375,10 +389,15 @@ message CBroadcast_SendThumbnailToRelay_Notification {
 	optional uint32 thumbnail_height = 5;
 }
 
+message CBroadcast_WebRTCNeedTURNServer_Notification {
+	optional fixed64 broadcast_session_id = 1;
+}
+
 message CBroadcast_WebRTCStart_Notification {
 	optional fixed64 broadcast_session_id = 1;
 	optional fixed64 webrtc_session_id = 2;
 	optional fixed64 viewer_steamid = 3;
+	optional fixed64 viewer_token = 4;
 }
 
 message CBroadcast_WebRTCSetAnswer_Notification {
@@ -452,6 +471,9 @@ service Broadcast {
 	rpc GetRTMPInfo (.CBroadcast_GetRTMPInfo_Request) returns (.CBroadcast_GetRTMPInfo_Response) {
 		option (method_description) = "Gets RTMP broadcast info";
 	}
+	rpc NotifyWebRTCHaveTURNServer (.CBroadcast_WebRTCHaveTURNServer_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from client to server with the client's TURN server";
+	}
 	rpc WebRTCStartResult (.CBroadcast_WebRTCStartResult_Request) returns (.CBroadcast_WebRTCStartResult_Response) {
 		option (method_description) = "Notify the server that a WebRTC session has been created by the host";
 	}
@@ -460,6 +482,9 @@ service Broadcast {
 	}
 	rpc WebRTCSetAnswer (.CBroadcast_WebRTCSetAnswer_Request) returns (.CBroadcast_WebRTCSetAnswer_Response) {
 		option (method_description) = "Notify the server that a WebRTC session has been created by the viewer";
+	}
+	rpc WebRTCLookupTURNServer (.CBroadcast_WebRTCLookupTURNServer_Request) returns (.CBroadcast_WebRTCLookupTURNServer_Response) {
+		option (method_description) = "Lookup the best TURN server for this client";
 	}
 	rpc WebRTCAddHostCandidate (.CBroadcast_WebRTCAddHostCandidate_Request) returns (.CBroadcast_WebRTCAddHostCandidate_Response) {
 		option (method_description) = "Add an ICE candidate for the host side of a WebRTC session";
@@ -493,6 +518,9 @@ service BroadcastClient {
 	}
 	rpc SendThumbnailToRelay (.CBroadcast_SendThumbnailToRelay_Notification) returns (.NoResponse) {
 		option (method_description) = "Send thumbnails to relay";
+	}
+	rpc NotifyWebRTCNeedTURNServer (.CBroadcast_WebRTCNeedTURNServer_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from server to client that it needs the client's TURN server";
 	}
 	rpc NotifyWebRTCStart (.CBroadcast_WebRTCStart_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client that it should start a WebRTC session";

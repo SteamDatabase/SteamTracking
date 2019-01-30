@@ -1,0 +1,41 @@
+import "steammessages_unified_base.steamclient.proto";
+
+option cc_generic_services = true;
+
+message CRemoteClient_GetPairingInfo_Request {
+	optional uint32 pin = 1;
+}
+
+message CRemoteClient_GetPairingInfo_Response {
+	optional fixed64 session_id = 1;
+	optional fixed64 device_id = 2;
+	optional bytes request = 3;
+}
+
+message CRemoteClient_ReplyPacket_Notification {
+	optional fixed64 session_id = 1;
+	optional bytes payload = 2;
+}
+
+message CRemoteClient_RemotePacket_Notification {
+	optional fixed64 session_id = 1;
+	optional fixed64 steamid = 2;
+	optional bytes payload = 4;
+}
+
+service RemoteClient {
+	option (service_description) = "Methods for Steam remote client operations";
+	rpc GetPairingInfo (.CRemoteClient_GetPairingInfo_Request) returns (.CRemoteClient_GetPairingInfo_Response) {
+		option (method_description) = "Get pairing info for an entered PIN";
+	}
+	rpc NotifyReplyPacket (.CRemoteClient_ReplyPacket_Notification) returns (.NoResponse) {
+		option (method_description) = "Send a reply to a remote client";
+	}
+}
+service RemoteClientSteamClient {
+	option (service_description) = "Methods for Steam remote client operations";
+	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+	rpc NotifyRemotePacket (.CRemoteClient_RemotePacket_Notification) returns (.NoResponse) {
+		option (method_description) = "Send a packet to a Steam client";
+	}
+}

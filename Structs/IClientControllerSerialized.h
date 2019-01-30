@@ -138,6 +138,7 @@ public:
     virtual unknown_ret SetControllerActiveAccount(unsigned int, unsigned int) = 0;
     virtual unknown_ret StartControllerRegistrationToAccount(unsigned int, unsigned int) = 0;
     virtual unknown_ret CompleteControllerRegistrationToAccount(unsigned int, unsigned int) = 0;
+    virtual unknown_ret AutoRegisterControllerRegistrationToAccount(unsigned int, unsigned int) = 0;
     virtual unknown_ret GetConfigForAppAndController(unsigned int, char const*, unsigned long long*, CUtlString*) = 0;
     virtual unknown_ret SetControllerPersonalization(unsigned int, ControllerPersonalizationData_t*, bool) = 0;
     virtual unknown_ret SetPersonalizationFile(unsigned int, unsigned int, unsigned long long) = 0;

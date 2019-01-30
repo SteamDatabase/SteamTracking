@@ -1175,5 +1175,10 @@ message CMsgClientClanState {
 message CMsgClientUnsignedInstallScript {
 	optional uint32 app_id = 1;
 	optional string file_name = 2;
+	optional uint32 file_size = 3;
+	optional bool signature_broken = 4;
+	optional uint32 depot_id = 5;
+	optional uint64 manifest_id = 6;
+	optional uint32 file_flags = 7;
 }
 

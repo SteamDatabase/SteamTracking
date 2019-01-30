@@ -117,6 +117,7 @@ message CMsgRemoteDeviceAuthorizationCancelRequest {
 
 message CMsgRemoteDeviceAuthorizationResponse {
 	required .ERemoteDeviceAuthorizationResult result = 1 [default = k_ERemoteDeviceAuthorizationSuccess];
+	optional fixed64 steamid = 2;
 }
 
 message CMsgRemoteDeviceStreamingRequest {

@@ -1,0 +1,54 @@
+{
+    "name": "IQuestService",
+    "methods": [
+        {
+            "name": "PublisherAddCommunityItemsToPlayer",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Add game items to a user",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "match_item_type",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "match_item_class",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "prefix_item_name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "attributes",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "note",
+                    "type": "string",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

@@ -393,5 +393,13 @@
 "[english]Overlay_MicroTxnAuth_UpdateBillingInformation"	"Update Billing Info"
 "Overlay_MicroTxnAuth_SubscriptionText"	"Steam cargará automáticamente la renovación de la suscripción en el método de pago que tengas guardado. Si no hay información de facturación registrada en tu cuenta, Steam intentará utilizar los fondos de tu cartera."
 "[english]Overlay_MicroTxnAuth_SubscriptionText"	"Steam will automatically bill your stored payment method when your subscription renews. If you do not have billing information on file, Steam will attempt to use any funds in your wallet."
+"Overlay_Taskbar_ForceQuit"	"Forzar cierre"
+"[english]Overlay_Taskbar_ForceQuit"	"Force Quit"
+"Overlay_ForceQuit_Title"	"Cerrar aplicación"
+"[english]Overlay_ForceQuit_Title"	"Close Application"
+"Overlay_ForceQuit_Description"	"Los datos no guardados se perderán."
+"[english]Overlay_ForceQuit_Description"	"Unsaved data will be lost."
+"Overlay_Taskbar_EditControllerConfig"	"Configuración del control"
+"[english]Overlay_Taskbar_EditControllerConfig"	"Controller Configuration"
 }
 }
