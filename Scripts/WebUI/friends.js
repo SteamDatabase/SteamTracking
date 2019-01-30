@@ -23455,7 +23455,7 @@
             return this.m_bUserInputNeeded;
           }),
           (e.prototype.GetVideoRepresentations = function() {
-            return this.m_player.GetVideoRepresentations();
+            return this.m_player ? this.m_player.GetVideoRepresentations() : [];
           }),
           (e.prototype.SetVideoRepresentation = function(e) {
             this.m_player.SetVideoRepresentation(e);
@@ -24714,6 +24714,61 @@
                       [3, 7]
                     );
                   case 7:
+                    return [2];
+                }
+              });
+            });
+          }),
+          (e.prototype.UpdateChatMessageFlair = function(n) {
+            return R.b(this, void 0, void 0, function() {
+              var t;
+              return R.e(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return this.m_webApiToken
+                      ? ((t = new FormData()).append(
+                          "chat_id",
+                          this.m_ulChatID
+                        ),
+                        t.append(
+                          "flair",
+                          "^" + this.m_nFlairGroupID + "^:" + n + ":"
+                        ),
+                        [
+                          4,
+                          C.a.post(
+                            _.b.WEBAPI_BASE_URL +
+                              "IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=" +
+                              this.m_webApiToken,
+                            t
+                          )
+                        ])
+                      : [3, 2];
+                  case 1:
+                    return e.sent(), [3, 3];
+                  case 2:
+                    !(function(n) {
+                      R.b(this, void 0, void 0, function() {
+                        var t;
+                        return R.e(this, function(e) {
+                          switch (e.label) {
+                            case 0:
+                              return (
+                                (t = m.Init(Jn.i)),
+                                Zn(t, n),
+                                [4, Jn.a.UpdateChatMessageFlair(Qn(), t)]
+                              );
+                            case 1:
+                              return [2, e.sent().Body()];
+                          }
+                        });
+                      });
+                    })({
+                      chat_id: this.m_ulChatID,
+                      flair: "^" + this.m_nFlairGroupID + "^:" + n + ":"
+                    }),
+                      (e.label = 3);
+                  case 3:
                     return [2];
                 }
               });
@@ -55063,26 +55118,7 @@
                 this.textInput.current.focus();
           }),
           (e.prototype.OnFlairSelected = function(e) {
-            !(function(n) {
-              R.b(this, void 0, void 0, function() {
-                var t;
-                return R.e(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return (
-                        (t = m.Init(Jn.i)),
-                        Zn(t, n),
-                        [4, Jn.a.UpdateChatMessageFlair(Qn(), t)]
-                      );
-                    case 1:
-                      return [2, e.sent().Body()];
-                  }
-                });
-              });
-            })({
-              chat_id: this.m_chat.m_ulChatID,
-              flair: "^" + this.m_chat.m_nFlairGroupID + "^:" + e + ":"
-            }),
+            this.m_chat.UpdateChatMessageFlair(e),
               this.textInput &&
                 this.textInput.current &&
                 this.textInput.current.focus();
