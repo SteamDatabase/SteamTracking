@@ -23571,13 +23571,7 @@
                   return R.e(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        return [
-                          4,
-                          C.a.get(
-                            _.b.COMMUNITY_BASE_URL +
-                              "public/steamawards_offset.json"
-                          )
-                        ];
+                        return [4, C.a.get("/public/steamawards_offset.json")];
                       case 1:
                         return (
                           (n = e.sent().data.offsetSeconds),
@@ -23600,11 +23594,7 @@
                 var t = document.createElement("track");
                 (t.kind = "subtitles"),
                   (t.srclang = e),
-                  (t.src =
-                    _.b.COMMUNITY_BASE_URL +
-                    "public/steamawards_" +
-                    e +
-                    ".vtt"),
+                  (t.src = "/public/steamawards_" + e + ".vtt"),
                   n.m_elVideo.appendChild(t);
               }),
               "english" !== _.b.LANGUAGE && this.SetSubtitles(_.b.LANGUAGE);
