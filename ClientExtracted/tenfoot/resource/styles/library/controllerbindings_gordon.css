@@ -1171,6 +1171,11 @@ SelectMousePosition
 	visibility: collapse;
 }
 
+.BottomPanelVisible #Gyro
+{
+    visibility: collapse;
+}
+
 .ModeWrapper
 {
 	border-radius: 16px;

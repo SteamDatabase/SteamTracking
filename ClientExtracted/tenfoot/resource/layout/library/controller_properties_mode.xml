@@ -53,14 +53,10 @@
           <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadLeftButtonGALeg" />
         </Panel>
 
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="off" legacy_ga="off" advanced_ga="off" gameactions="off" dependency="OverlapRegion">
+        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" normal_but_ga_advanced="on" dependency="OverlapRegion">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_OverlapRegion" />
 					<Slider id="OverlapRegion" direction="horizontal" />
 				</Panel>
-        <Panel class="FieldWrapper" modes="DPad" sources="trackpad joystick" advanced="on" advanced_ga="on" dependency="OverlapRegion">
-          <Label class="FieldLabel" text="#Library_Details_FieldLabel_OverlapRegion" />
-          <Slider id="OverlapRegion" direction="horizontal" />
-        </Panel>
         <!-- Dpad Mode Advanced -->
 				<!-- Now In Activators
 				<Panel class="FieldWrapper" modes="DPad" advanced="on">
@@ -571,6 +567,18 @@
 						</Panel>
 					</Panel>
 				</Panel>
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
+						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
+					</Panel>
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
+						<DropDown id="EdgeBindingInvertDpad" />
+					</Panel>
+			<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
+						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
+					</Panel>
         <Panel id="CenterImageDpad_GA_Advanced" class="CenterImageDpadPanel CenterImage" modes="DPad" legacy_ga="on" gameactions="on">
           <Panel id="DpadButtonContainer" class="FlowDown">
             <Panel id="DpadUpButton" class="FakeDpadButtonPanel" >
@@ -1113,14 +1121,7 @@
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_HapticIntensity" />
 						<DropDown id="HapticIntensityDpad" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="off" legacy_ga="off" advanced_ga="off" gameactions="off" >
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
-						<Slider id="Deadzone" direction="horizontal" />
-					</Panel>
-          <Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced_ga="on" gameactions="on" legacy_ga="off">
-            <Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
-            <Slider id="Deadzone" direction="horizontal" />
-          </Panel>
+
           <Panel class="FieldWrapper" modes="dpad" gameactions="on" advanced="off">
 						<Label class="FieldLabel" text="#Gamepad_Right" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadRightButtonGA" />
@@ -1137,7 +1138,7 @@
             <Label class="FieldLabel" text="#Gamepad_Down" />
             <ControllerBindingButton class="BindingButtonPropertiesMode GAButton" id="DpadDownButtonGALeg" />
           </Panel>
-					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick bumper" advanced="off" gameactions="off">
+					<Panel class="FieldWrapper" modes="DPad" sources="ABXY trackpad joystick bumper" normal_but_ga_advanced="on">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_DpadClick" />
 						<ControllerBindingButton class="BindingButtonPropertiesMode" id="DpadClick" />
 					</Panel>
@@ -1146,18 +1147,12 @@
             <Slider id="GyroNeutralAngleDpad" direction="horizontal" />
           </Panel>          
 					<!-- Dpad Mode Advanced -->
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeRadius" />
-						<Slider id="EdgeBindingRadiusDpad" direction="horizontal" />
+		
+					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger" normal_but_ga_advanced="on" >
+						<Label class="FieldLabel" text="#Library_Details_FieldLabel_Deadzone" />
+						<Slider id="Deadzone" direction="horizontal" />
 					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBinding" />
-						<ControllerBindingButton class="BindingButtonPropertiesMode" id="EdgeBindingDpad" />
-					</Panel>
-					<Panel class="FieldWrapper" modes="dpad" sources="trackpad joystick trigger ABXY" advanced="on">
-						<Label class="FieldLabel" text="#Library_Details_FieldLabel_EdgeBindingInvert" />
-						<DropDown id="EdgeBindingInvertDpad" />
-					</Panel>
+
 					<!-- ABXY Mode -->
           <Panel class="FieldWrapper" modes="ABXY" legacy_ga="on" gameactions="on">
             <Label class="FieldLabel ABXYLabels" text="#Gamepad_B" />
@@ -1176,7 +1171,7 @@
 						<DropDown id="HapticIntensityFourButtons" />
 					</Panel>
 					
-					<Panel class="FieldWrapper" modes="ABXY" normal_but_ga_advanced ="on" sources="trackpad joystick">
+					<Panel class="FieldWrapper" modes="ABXY" advanced="off" sources="trackpad joystick">
 						<Label class="FieldLabel" text="#Library_Details_FieldLabel_RequiresClick" />
 						<DropDown id="RequiresClickFourButtons" />
 					</Panel>
