@@ -1620,6 +1620,11 @@
 .compactView .chatentry_chatTextarea_3e__5 {
   height: initial; }
 
+.BroadcastContainer .chatentry_chatEntryControls_2O_X7 .chatSubmitButton.EmbedButton {
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px; }
+
 .BroadcastView {
   width: 100%;
   height: 100%;
@@ -2536,6 +2541,10 @@
   padding-top: 0px;
   height: 100%; }
 
+.multiChatDialog .BroadcastContainer {
+  padding: 0;
+  padding-right: 2px; }
+
 .TheaterMode .BroadcastContainer {
   padding: 0;
   height: 100%; }
@@ -2565,7 +2574,6 @@
   position: relative; }
 
 .BroadcastContainerSection {
-  flex: 1;
   overflow-y: scroll;
   overflow-x: auto; }
 
@@ -3325,21 +3333,28 @@ iframe.steamTVLogin {
   flex-shrink: 0;
   flex-direction: row;
   padding: 6px;
+  padding-bottom: 8px;
   background-color: #22252b;
   transition: all .21s ease-in-out;
   flex-wrap: wrap;
   justify-content: center; }
+  .broadcastchat_ChatEntry_3hSYv .chatSubmitButton.EmbedButton {
+    margin-top: 2px;
+    max-width: 46px;
+    max-height: 46px; }
 
 .broadcastchat_ChatPanel_3jc_d {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  background-color: #1b1c20; }
+  background-color: #1b1c20;
+  position: relative; }
 
 .broadcastchat_ChatMessages_PNfmQ {
   flex-grow: 1;
   overflow-y: scroll;
-  flex-basis: 1px; }
+  flex-basis: 1px;
+  position: relative; }
 
 .broadcastchat_EmoticonContainer_3ArHy {
   width: 15%;
@@ -3358,22 +3373,42 @@ iframe.steamTVLogin {
 
 .broadcastchat_MessageChat_3eku_ {
   padding: 4px;
-  color: white; }
+  color: #c1c6cf; }
 
 .broadcastchat_MessageName_2P_MO {
-  color: cornflowerblue;
-  font-size: 14px; }
+  color: #6dcff6;
+  font-size: 14px;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: #6dcff63d; }
+  .broadcastchat_MessageName_2P_MO:hover {
+    color: #9edff8;
+    text-decoration-color: #6dcff6b4; }
 
 .broadcastchat_MessageContents_555m- {
-  font-size: 12px; }
+  font-size: 14px; }
   .broadcastchat_MessageContents_555m- a {
     color: white; }
+  .broadcastchat_MessageContents_555m- img.emoticon.large {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 4px;
+    pointer-events: all;
+    margin-top: -3px;
+    margin-bottom: -3px;
+    margin-right: -3px; }
 
 .broadcastchat_MessageNotification_2LJJp {
-  color: gray; }
+  color: gray;
+  padding: 6px; }
 
 .broadcastchat_MessageError_YWUjL {
-  color: red; }
+  color: #812819;
+  padding: 6px;
+  border: 1px dashed rgba(255, 58, 58, 0.15);
+  box-shadow: 2px 3px 14px 1px #00000066 inset;
+  margin: 8px; }
 
 .broadcastchat_minHeightZero_3Cgfe {
   min-height: 0;
@@ -3386,7 +3421,7 @@ iframe.steamTVLogin {
   border-radius: 2px;
   font-size: 14px;
   color: #fff;
-  width: auto;
+  width: 100%;
   left: 4px;
   right: 4px;
   bottom: 4px;
@@ -3405,6 +3440,92 @@ iframe.steamTVLogin {
   background-color: #7d6ebc;
   height: 100%;
   width: 0%; }
+
+.broadcastchat_TimedProgressBarContainer_321-Z {
+  width: 44px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #2c3036;
+  z-index: 2; }
+
+.broadcastchat_wrapper_1iiJF {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  background: #2c3036; }
+  .broadcastchat_wrapper_1iiJF .SVGIcon_Submit {
+    z-index: 500; }
+
+.broadcastchat_pie_2q7aN {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: #2c3036;
+  border: 2px solid #00ccff;
+  box-sizing: border-box; }
+
+.broadcastchat_spinner_2u1pz {
+  border-radius: 45px 0 0 45px;
+  z-index: 200;
+  border-right: none;
+  animation: broadcastchat_rota_1D2nd 0s linear infinite;
+  transform-origin: 100% 50%; }
+
+.broadcastchat_filler_ZTWuH {
+  border-radius: 0 45px 45px 0;
+  z-index: 100;
+  border-left: none;
+  animation: broadcastchat_fill_1uXHe 0s steps(1, end) infinite;
+  transform-origin: 50% 50%;
+  left: 50%;
+  opacity: 0; }
+
+.broadcastchat_mask_xcUAc {
+  width: calc(50% + 1px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  position: absolute;
+  z-index: 300;
+  opacity: 1;
+  background: inherit;
+  animation: broadcastchat_mask_xcUAc 0s steps(1, end) infinite;
+  transform-origin: 50% 50%; }
+
+@keyframes broadcastchat_rota_1D2nd {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes broadcastchat_fill_1uXHe {
+  0% {
+    opacity: 0; }
+  50%, 100% {
+    opacity: 1; } }
+
+@keyframes broadcastchat_mask_xcUAc {
+  0% {
+    opacity: 1; }
+  50%, 100% {
+    opacity: 0; } }
+
+.broadcastchat_FlairContainer_tqyZ3 {
+  width: 24px;
+  height: 24px;
+  pointer-events: none; }
+  .broadcastchat_FlairContainer_tqyZ3 img.emoticon.large {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 4px;
+    pointer-events: all;
+    margin-top: -3px;
+    margin-bottom: -3px; }
 
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
@@ -11061,6 +11182,9 @@ input.InviteFriendToChatDialog_LinkInput {
   min-width: 46px;
   cursor: pointer; }
 
+.chatSubmitButton:focus {
+  outline: none; }
+
 .chatSubmitButton.EmoticonPickerButton,
 .chatSubmitButton.EmbedButton {
   flex: 0;
@@ -11075,6 +11199,13 @@ input.InviteFriendToChatDialog_LinkInput {
 .chatSubmitButton.EmoticonPickerButton {
   margin-right: 1px;
   overflow: hidden; }
+
+.chatSubmitButton.EmoticonPickerButton .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px; }
 
 .chatEntry.compactView .chatEntryControls .chatSubmitButton {
   margin-bottom: 2px; }
@@ -12850,8 +12981,8 @@ html.client_chat_frame .chatWindow .chatEntry {
   padding-right: 24px; }
 
 .singlewindow .chatWindow .chatEntry {
-  padding-left: 10px;
-  padding-right: 10px; }
+  /*padding-left: 10px;
+	padding-right: 10px;*/ }
 
 .chatWindow .InsetWindowOpen .chatEntry {
   background-color: #0c0d0f;
@@ -13741,12 +13872,17 @@ html.web_chat_frame .perf_timing_area {
 img.emoticon {
   vertical-align: middle;
   width: 18px;
-  height: 18px; }
+  height: 18px;
+  transition: all .1s ease-in-out; }
 
 /* Actual source is 54px, 36px is 2/3 scale */
 img.emoticon.large {
   width: 36px;
   height: 36px; }
+
+.EmoticonSelector img.emoticon.large {
+  width: 27px;
+  height: 27px; }
 
 /*
  * /spoiler styling
@@ -14954,7 +15090,8 @@ span.mention.me {
   height: 32px; }
 
 .chat_main_flex {
-  height: 100%; }
+  height: 100%;
+  min-height: 0; }
 
 .ConnectionTrouble:focus {
   outline: none; }
@@ -18431,7 +18568,7 @@ a.general_btn:hover {
   max-width: 40vw;
   display: flex;
   flex-direction: column;
-  width: 302px; }
+  max-width: 302px; }
 
 .EmoticonSelector_Emoticons {
   display: flex;
@@ -18466,7 +18603,7 @@ a.general_btn:hover {
 .EmoticonSelector_Item {
   margin: 2px;
   width: 28px;
-  height: 18px;
+  height: 28px;
   padding: 5px 0;
   cursor: pointer;
   text-align: center; }
@@ -18474,8 +18611,9 @@ a.general_btn:hover {
 .EmoticonSelector_Item_New {
   position: relative; }
 
-.EmoticonSelector_Item:hover {
-  background-color: #201f1d; }
+.EmoticonSelector_Item:hover .emoticon.large {
+  transform: scale(1.25);
+  filter: brightness(1.25); }
 
 .EmoticonSuggestion_Emoticon {
   position: relative;
