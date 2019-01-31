@@ -22953,7 +22953,11 @@
               i = new co(t, e);
             return (
               o.m_rgChats.push(i),
-              (this.m_activeChat = i).StartForBroadcastID("0"),
+              (this.m_activeChat = i),
+              o.m_eWatchState == eo.None && t
+                ? this.GetBroadcastManifest(o, n)
+                : o.m_eWatchState == eo.Ready &&
+                  i.StartForBroadcastID(o.m_ulBroadcastID),
               i
             );
           }),
@@ -23723,7 +23727,9 @@
           }),
           (e.prototype.StartForBroadcastID = function(e) {
             (this.m_ulBroadcastID = e),
-              this.m_bIframeLoaded && this.PostMessageToIframe();
+              this.m_iframe
+                ? this.m_bIframeLoaded && this.PostMessageToIframe()
+                : this.RequestChatInfo();
           }),
           (e.prototype.StartForChannel = function(e) {
             (this.m_ulBroadcastChannelID = e),
