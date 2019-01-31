@@ -2986,13 +2986,17 @@ iframe.steamTVLogin {
 .BroadcastSmiteOffline,
 .BroadcastPaladinsOffline,
 .BroadcastRealmRoyaleOffline,
-.BroadcastDOTATrueSight {
+.BroadcastDOTATrueSight,
+.BroadcastSteamAwardsOffline {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-size: cover; }
+
+.BroadcastSteamAwardsOffline {
+  background-image: url("../../images/webui/broadcast/steam_awards_2018.png"); }
 
 .BroadcastSmiteOffline,
 .BroadcastPaladinsOffline,
