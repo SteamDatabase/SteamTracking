@@ -122,7 +122,7 @@ CWishlistController.prototype.LoadAdditionalPages = function()
 	this.nPagesToLoad = g_nAdditionalPages;
 	this.nPagesLoaded = 0;
 	var _this = this;
-	console.log(g_nAdditionalPages);
+
 	for( var i=0; i < this.nPagesToLoad; i++ )
 	{
 		$J.ajax ( {
@@ -366,12 +366,14 @@ CWishlistController.prototype.BuildElements = function()
 			setTimeout ( YieldingCreateElements, 0 ); // Reschedule after 2ms so the browser has a chance to paint if it wants to.
 		} else {
 			console.log("Finished building wishlist. Yielded %s times for browser painting", nYields);
+			if( g_rgWishlistData.length > 0 )
+			{
+				var idx = g_rgWishlistData[ Math.floor ( Math.random () * g_rgWishlistData.length ) ];
+				var bgApp = g_rgAppInfo[ idx.appid ];
 
-			var idx = g_rgWishlistData[ Math.floor( Math.random() * g_rgWishlistData.length ) ];
-			var bgApp = g_rgAppInfo[idx.appid];
-
-			if( bgApp )
-				$J(".game_page_background").css({'background-image': 'url(' + bgApp.background + ')' });
+				if ( bgApp )
+					$J ( ".game_page_background" ).css ( { 'background-image': 'url(' + bgApp.background + ')' } );
+			}
 
 			_this.LoadSettings();
 			_this.Update();
