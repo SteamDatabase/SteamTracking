@@ -326,10 +326,12 @@ p {
 
 }
 #apps_container h2 {
-	font-size: 16px;
-	font-weight: 300;
-	padding-bottom: 0px;
-	padding-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 0px;
+    padding-top: 8px;
+    text-transform: none;
+    letter-spacing: 0px;
 }
 
 .list_item {
