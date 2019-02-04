@@ -203,6 +203,8 @@ GDynamicStore = {
 					}
 				}
 
+				GDynamicStore.s_nRemainingCartDiscount = data.nRemainingCartDiscount ? data.nRemainingCartDiscount : 0;
+
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
 		else
@@ -405,6 +407,13 @@ GDynamicStore = {
 
 		// locate elements with dynamic store data
 		var strSelector = '[data-ds-appid], [data-ds-packageid], [data-ds-bundleid]';
+
+		// update prices for cart
+		if ( GDynamicStore.s_nRemainingCartDiscount != 'undefined ')
+		{
+			UpdatePricesForAdditionalCartDiscount($Selector, GDynamicStore.s_nRemainingCartDiscount);
+			UpdateStoreBannerForAdditionalCartDiscount( GDynamicStore.s_nRemainingCartDiscount );
+		}
 
 		var $DynamicElements;
 		if ( $Selector )
@@ -2047,5 +2056,94 @@ function GetScreenshotURL( appid, filename, sizeStr )
 		return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
 	return 'https://steamcdn-a.akamaihd.net/steam/' + 'apps/' + appid + '/' + filename;
+}
+
+
+function UpdatePricesForAdditionalCartDiscount( $Selector, nCartDiscount )
+{
+	if ( !nCartDiscount )
+		return;
+
+	var strSelector = '[data-price-final]';
+	var $DynamicElements = [];
+	if ( $Selector )
+	{
+		if ( $Selector.is( strSelector ) )
+			$DynamicElements = $Selector;
+		else
+			$DynamicElements = $Selector.find( strSelector );
+	}
+	else
+	{
+		$DynamicElements = $J( strSelector );
+	}
+
+	for ( var i = 0; i < $DynamicElements.length; i++ )
+	{
+		$element = $J($DynamicElements[i]);
+		var nFinalPrice = parseInt($element.attr('data-price-final'));
+		$element.addClass( 'additional_cart_discount_container' );
+
+		if (!nFinalPrice)
+			continue;
+
+		var nToSubtract = Math.min(nFinalPrice, nCartDiscount);
+		var bNowFree = (nFinalPrice - nToSubtract) <= 0;
+
+		var strAdditionalDiscountBlock = '<div class="additional_cart_discount_amount">-' + GStoreItemData.fnFormatCurrency(nToSubtract) + '</div>';
+		var strFinalPriceBlock = '<div class="additional_cart_discount_final">' + GStoreItemData.fnFormatCurrency(nFinalPrice - nToSubtract) + '</div>';
+  		var $additionalDiscount = $J('<div class="additional_cart_discount' + ( bNowFree ? ' NowFree"' : '"' ) + ' data-test="' + nFinalPrice + '">' + strAdditionalDiscountBlock + strFinalPriceBlock + '</div>');
+		//var $additionalDiscount = $J('<div class="additional_cart_discount" data-test="' + nFinalPrice + '">' + strAdditionalDiscountBlock + strFinalPriceBlock + '</div>');
+		var $basePriceStrikeout = $J('<div class="basePriceStrikeout" />');
+		$element.append($basePriceStrikeout);
+		$element.append($additionalDiscount);
+	}
+}
+
+
+function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
+{
+	if ( !nCartDiscount )
+		return;
+
+	var strTemplate = ' \
+	<div class="placeHolder_lunarSale2019_giftActiveBar">	\
+		<div class="lunarSale2019_contentContainer"> \
+		<div class="lunar_sale_poinks01"> \
+		<div class="lunar_sale_sparkle sparkle01"> \
+			<div class="sparkleStar star1"></div> \
+			<div class="sparkleStar star2"></div> \
+			<div class="sparkleStar star3"></div> \
+		</div> \
+		</div> \
+		<div class="lunar_sale_title"><img src="https://steamstore-a.akamaihd.net/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
+		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
+		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
+		<div class="lunar_sale_spacer lunar_rightspacer">\
+		<div class="lunar_sale_poinks02"> \
+			<div class="lunar_sale_sparkle sparkle02"> \
+				<div class="sparkleStar star1"></div> \
+				<div class="sparkleStar star2"></div> \
+				<div class="sparkleStar star3"></div> \
+			</div> \
+		</div> \
+		</div> \
+		</div> \
+	</div> \
+	';
+
+
+	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
+	var strHeader = 'Bonus Savings Mode Active';
+	var strDiscount = '%amount% will be taken off your cart!'.replace( '%amount%', strAmount );
+	strTemplate = strTemplate.replace( '%header%', strHeader );
+	strTemplate = strTemplate.replace( '%discount%', strDiscount );
+
+	$Elements = $J( '[data-cart-banner-spot]' );
+	for ( var i = 0; i < $Elements.length; i++ )
+	{
+		$element = $J( $Elements[i] );
+		$element.replaceWith( $J( strTemplate ) );
+	}
 }
 

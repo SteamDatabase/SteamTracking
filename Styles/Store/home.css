@@ -375,6 +375,10 @@ a.home_block_footer_btn:hover {
 	margin-bottom: 22px;
 }
 
+.has_takeover div#store_header {
+	margin-bottom: 0;
+}
+
 /*
  * SMALL CAPS (new on steam, recently updated)
  */
@@ -3638,5 +3642,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 
 	html.responsive .store_main_capsule .capsule {
 		box-shadow: none;
+	}
+
+	/* takeover BG color in responsive mode */
+	html.responsive .home_page_body_ctn.has_takeover .page_background_holder {
+		background-color: inherit;
 	}
 }

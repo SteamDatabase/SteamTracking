@@ -1056,6 +1056,580 @@ a#store_search_link img {
 	line-height: 32px;
 }
 
+/* lunar sale 2019 */
+
+.additional_cart_discount {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+	pointer-events: none;
+	user-select: none;
+
+	font-family: "Motiva Sans", Sans-serif;
+
+	background-image: url( '/public/images/v6/events/lunarsale_2019/redenvelope_blank.png?v=1' );
+	background-size: 100% 100%;
+	
+	color: rgb(255, 212, 26);
+	background-color: rgb(168, 28, 28);
+	padding: 4px 8px;
+
+	box-shadow: 1px 4px 16px 0 #000000;
+	transform: rotateZ( 20deg );
+	
+	
+	z-index: 300;
+
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+.additional_cart_discount.NowFree {
+	background-image: url( '/public/images/v6/events/lunarsale_2019/redenvelope_free.png?v=1' );
+	box-shadow: 0px 0px 16px 0 #ff9c1b;
+}
+
+.special_discount .discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount
+{
+/*	transform: rotateZ(0deg);
+    top: 0;
+    right: 0;*/
+}
+
+.dailydeal_ctn:hover .additional_cart_discount,
+.main:hover .additional_cart_discount,
+.tab_item:hover .additional_cart_discount,
+.store_capsule.daily_deal:hover .additional_cart_discount,
+.home_area_spotlight:hover .additional_cart_discount,
+.store_main_capsule.broadcast_capsule:hover .additional_cart_discount,
+.tab_item:hover .additional_cart_discount,
+.info:hover .additional_cart_discount {
+	animation-name: animatePrice20deg;
+}
+
+.search_result_row:hover .additional_cart_discount,
+.gamelink:hover .additional_cart_discount,
+.store_capsule:hover .additional_cart_discount,
+.home_marketing_message:hover .additional_cart_discount,
+.store_capsule.broadcast_capsule:hover c {
+	animation-name: animatePrice11deg;
+}
+
+.small_cap:hover .additional_cart_discount,
+.home_content_item:hover .discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
+	animation-name: animatePrice8deg;
+}
+
+.game_area_purchase_game_wrapper:hover .additional_cart_discount {
+	animation-name: animatePrice-6deg;
+}
+
+
+@keyframes animatePrice-6deg
+{
+	0%
+	{
+		transform: rotateZ(-6deg);
+	}
+
+	50%
+	{
+		transform: rotateZ(10deg);
+	}
+
+	100%
+	{
+		transform: rotateZ(-6deg);
+	}
+}
+
+@keyframes animatePrice20deg
+{
+	0%
+	{
+		transform: rotateZ(20deg);
+	}
+
+	50%
+	{
+		transform: rotateZ(-10deg);
+	}
+
+	100%
+	{
+		transform: rotateZ(20deg);
+	}
+}
+
+@keyframes animatePrice11deg
+{
+	0%
+	{
+		transform: rotateZ(11deg);
+	}
+
+	50%
+	{
+		transform: rotateZ(-10deg);
+	}
+
+	100%
+	{
+		transform: rotateZ(11deg);
+	}
+}
+
+@keyframes animatePrice8deg
+{
+	0%
+	{
+		transform: rotateZ(8deg);
+	}
+
+	50%
+	{
+		transform: rotateZ(-8deg);
+	}
+
+	100%
+	{
+		transform: rotateZ(8deg);
+	}
+}
+
+
+.additional_cart_discount_final {
+	font-size: 16px;
+	color: rgb(255, 212, 26);
+	white-space: nowrap;
+}
+
+.additional_cart_discount_amount {
+	font-size: 11px;
+	color: rgb(210, 140, 25);
+	margin-bottom: -3px;
+	margin-top: -2px;
+}
+
+.basePriceStrikeout {
+	position: absolute;
+	height: 22px;
+	top: 22%;
+	left: -10px;
+	width: calc( 100% + 46px );
+	opacity: .875;
+
+	background-image: url( '/public/images/v6/events/lunarsale_2019/brushstrikeout.png?v=1' );
+	background-size: 100% 100%;
+	pointer-events: none;
+	user-select: none;
+}
+
+
+.main .appTitle .additional_cart_discount {
+	top: -38px;
+    right: 0px;
+}
+
+.discount_block.tab_item_discount.additional_cart_discount_container .discount_prices {
+	float: left;
+	margin-left: 4px;
+}
+
+
+.discount_block.tab_item_discount.no_discount.additional_cart_discount_container .discount_prices {
+	margin-right: 14px;
+}
+
+
+.discount_block.tab_item_discount.no_discount.additional_cart_discount_container .discount_prices {
+	margin-right: 36px;
+}
+
+
+.discount_block.tab_item_discount.additional_cart_discount_container .additional_cart_discount {
+	top: -8px;
+    right: -21px;
+}
+
+.carousel_container.maincap .discount_block.no_discount.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
+
+	top: -20px;
+    right: -58px;
+    transform: rotateZ( 11deg );
+}
+
+
+.discount_block.discount_block_spotlight.discount_block_large.additional_cart_discount_container {
+	width: fit-content;
+}
+
+.discount_block.discount_block_spotlight.discount_block_large.additional_cart_discount_container .additional_cart_discount {
+	right: -46px;
+	top: -3px;
+}
+
+.discount_block.daily_deal_discount.discount_block_large.additional_cart_discount_container  .additional_cart_discount{
+	right: -19px;
+	top: -8px;
+}
+
+.dailydeal_ctn .discount_block.daily_deal_discount.discount_block_large.additional_cart_discount_container  .additional_cart_discount{
+	top: -16px;
+}
+
+.discount_block.discount_block_inline.additional_cart_discount_container {
+	width: fit-content;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.home_content_item .discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
+	top: -32px;
+}
+
+.discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
+	transform: rotateZ(8deg);
+    top: -28px;
+    right: -8px;
+}
+
+.contenthub_featured_item_spotlight .discount_block.discount_block_inline.additional_cart_discount_container .additional_cart_discount {
+	transform: rotateZ(8deg);
+    top: -1px;
+    right: -6px;
+}
+
+.discount_block.discount_block_inline.additional_cart_discount_container .basePriceStrikeout {
+	height: 10px;
+	top: 32%;
+	left: -2px;
+	opacity: .8;
+	width: 100%;
+}
+
+.contenthub_featured_item_spotlight .discount_block.discount_block_inline.additional_cart_discount_container .basePriceStrikeout {
+	top: 66%;
+    left: 28px;
+}
+
+.tab_item .basePriceStrikeout
+{
+	height: 10px;
+    opacity: 0.7;
+	top: 43%;
+	width: calc( 100% + 26px );
+}
+
+.search_result_row .col.additional_cart_discount_container {
+	position: relative;
+}
+
+.search_result_row .col.additional_cart_discount_container .additional_cart_discount {
+	right: -33px;
+    top: 4px;
+	transform: rotateZ(11deg);
+}
+
+.search_result_row .col.additional_cart_discount_container .col.search_price
+{
+	width: fit-content;
+	margin-top: -2px;
+	margin-left: 34px;
+}
+
+.search_result_row .col.additional_cart_discount_container .additional_cart_discount_amount {
+	font-size: 10px;
+}
+
+.search_result_row .col.additional_cart_discount_container .additional_cart_discount_final {
+	font-size: 12px;
+}
+
+.search_result_row .col.additional_cart_discount_container .basePriceStrikeout {
+	top: 41%;
+	opacity: .8;
+	height: 12px;
+}
+
+.game_purchase_discount.additional_cart_discount_container .additional_cart_discount,
+.game_purchase_price.price.additional_cart_discount_container .additional_cart_discount {
+	top: -8px;
+    transform: rotateZ(-6deg);
+    right: auto;
+    left: -56px;
+}
+
+.game_purchase_discount.additional_cart_discount_container .additional_cart_discount {
+	left: 17px;
+}
+
+.game_purchase_discount.additional_cart_discount_container .basePriceStrikeout,
+.game_purchase_price.price.additional_cart_discount_container .basePriceStrikeout {
+	height: 9px;
+    top: 36%;
+}
+
+.game_purchase_discount.additional_cart_discount_container .basePriceStrikeout {
+	transform: rotateZ(12deg);	
+}
+
+.game_purchase_discount.additional_cart_discount_container {
+	overflow: visible;
+}
+
+
+.placeHolder_lunarSale2019_giftActiveBar {
+	background-color: rgb(146, 31, 30);
+	width: 100%;
+	height: 42px;
+	z-index: 400;
+
+	position: sticky;
+	top: 0;
+
+	
+
+	background: rgb(148,24,24); /* Old browsers */
+	background: -moz-linear-gradient(left, rgb(100, 13, 12) 0%, rgb(208,5,1) 45%, rgb(208,5,1) 55%, rgb(100, 13, 12) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#640D0C', endColorstr='#640D0C',GradientType=1 ); /* IE6-9 */
+}
+
+.lunarSale2019_contentContainer {
+	max-width: 940px;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	justify-content: center;
+}
+
+.lunar_sale_spacer
+{
+	flex: 1;
+}
+
+.lunar_sale_spacer.lunar_leftspacer
+{
+	min-width: 225px;
+}
+
+
+.lunar_sale_spacer.lunar_rightspacer
+{
+	position: relative;
+}
+
+.lunar_sale_title
+{
+	width: 205px;
+	height: 36px;
+	position: absolute;
+	top: 4px;
+    left: -14px;
+	pointer-events: none;
+	user-select: none;
+	margin-left: 32px;
+}
+
+
+.lunar_sale_title img
+{
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+	color: rgb(255, 212, 26);
+	font-size: 14px;
+}
+
+.lunar_sale_title object
+{
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+	color: rgb(255, 212, 26);
+	font-size: 14px;
+}
+
+.lunar_sale_poinks01
+{
+	width: 128px;
+	height: 128px;
+	position: absolute;
+	top: -34px;
+    left: -89px;
+	background-image: url( '/public/images/v6/events/lunarsale_2019/poinks_01.png?v=1' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	user-select: none;
+}
+
+
+.lunar_sale_poinks02
+{
+	width: 141px;
+    height: 64px;
+    position: absolute;
+    top: -13px;
+	left: 73%;
+	background-image: url( '/public/images/v6/events/lunarsale_2019/poinks_02.png?v=1' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	user-select: none;
+}
+
+.lunar_sale_supersavings_label
+{
+	width: fit-content;
+	min-width: fit-content;
+	font-family: "Motiva Sans", Sans-serif;
+}
+
+.lunar_sale_supersavings_label .highlight {
+	color: #FFD33B;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: -4px;
+	margin-bottom: -4px;
+	
+	animation-name: savingsModeGlow;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes savingsModeGlow
+{
+	0%
+	{
+		color: rgb(248, 173, 34);
+		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 14px rgba(255, 200, 0, 0);
+	}
+
+	50%
+	{
+		color: #FFD33Bff;
+		text-shadow: 0px 0px 14px rgb(255, 200, 0), 0px 0px 14px rgb(255, 200, 0);
+	}
+
+	100%
+	{   
+		color: rgb(248, 173, 34);
+		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 14px rgba(255, 200, 0, 0);
+	}
+
+}
+
+.lunar_sale_supersavings_label .subtitle {
+	color: rgb(255, 187, 85);
+	font-weight: 100;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+.lunar_sale_sparkle {
+	position: relative;
+}
+
+.sparkleStar
+{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	
+	background-image: url( '/public/images/v6/events/lunarsale_2019/poink_sparkle_01.png?v=1' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	user-select: none;
+
+	animation-name: sparkle01;
+	animation-duration: 6s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+.sparkle01 .sparkleStar.star1 {
+	left: 10px;
+    top: -2px;
+	animation-delay: 1.35s;
+}
+
+.sparkle01 .sparkleStar.star2 {
+	left: 58px;
+    top: 38px;
+	animation-delay: 0.17s;
+}
+
+.sparkle01 .sparkleStar.star3 {
+	left: 15px;
+    top: 17px;
+	animation-delay: 4.07s;
+}
+
+.sparkle02 .sparkleStar.star1 {
+	left: 10px;
+    top: -5px;
+	animation-delay: 0.35s;
+}
+
+.sparkle02 .sparkleStar.star2 {
+	left: 15px;
+    top: 10px;
+	animation-delay: 2.97s;
+}
+
+.sparkle02 .sparkleStar.star3 {
+	left: 38px;
+    top: 19px;
+	animation-delay: 3.86s;
+}
+
+
+@keyframes sparkle01
+{
+	0%
+	{
+		opacity: 0;
+		transform: rotateZ(0deg) scale(.3);
+	}
+
+	20%
+	{
+		opacity: 1;
+		transform: rotateZ(360deg) scale(1);
+	}
+
+	40%
+	{   opacity: 0;
+		transform: rotateZ(720deg) scale(.3);
+	}
+
+	100%
+	{   opacity: 0;
+		transform: rotateZ(720deg) scale(.3);
+	}
+
+}
+
+
+
 /* spotlight styles */
 .spotlight_img {
     width: 306px;

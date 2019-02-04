@@ -4321,7 +4321,11 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			else if ( method.value == 'cafefunded' && providerPaymentMethod == 122 )
 			{
 				$('payment_method_review_text').innerHTML = 'In Person Transaction: ' + sSiteName;
-			}			
+			}
+			else if ( method.value == 'valve' && providerPaymentMethod == 129 )
+			{
+				$('payment_method_review_text').innerHTML = 'None';
+			}
 		}
 		
 		$J('#review_address_body').text( $('first_name').value+' '+$('last_name').value );
@@ -4425,6 +4429,47 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_subtotal_value').innerHTML = price_data.formattedSubTotal;
 			else
 				$('review_subtotal_value').innerHTML = '';
+			
+			// deal with promotion elements
+			var promotionNodes = document.getElementsByClassName('cart_total_row_promotion');
+
+			for (var i = 0; i < promotionNodes.length; i++)
+			{
+				promotionNodes[i].parentNode.removeChild(element);
+			}
+			
+			if ( price_data.promotions )
+			{
+				var insertNode = $( 'cart_price_summary' );
+				
+				for ( var i = 0; i < price_data.promotions.length; i++ )
+				{
+					var newElement = document.createElement('div');
+					newElement.className = 'cart_total_row cart_total_row_promotion';
+					newElement.setAttribute( 'id', 'cart_price_summary_text' );
+					
+					var newPrice = document.createElement('div');
+					newPrice.className = 'price';
+					newPrice.innerHTML = price_data.promotions[i].formattedDiscount;
+					newElement.appendChild(newPrice);
+					
+					var newDescription = document.createElement('div');
+					newDescription.innerHTML = price_data.promotions[i].description;
+					newElement.appendChild( newDescription);
+					insertNode.parentNode.insertBefore( newElement, insertNode.nextSibling );
+					
+					insertNode = newElement;
+				}
+				
+				$('cart_price_summary_discounted_subtotal').style.display =  'block';
+				$('review_discounted_subtotal_value').style.display = 'block';
+				$('review_discounted_subtotal_value').innerHTML = price_data.formattedDiscountedSubTotal;	
+			}
+			else
+			{
+				$('cart_price_summary_discounted_subtotal').style.display =  'none';
+				$('review_discounted_subtotal_value').style.display = 'none';
+			}
 				
 			if ( price_data.formattedTax && price_data.formattedTax != '' )
 			{
@@ -4485,6 +4530,8 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_total_value').innerHTML = '';
 				
 			$('checkout_review_cart_area').innerHTML = price_data.lineItemsHTML;
+			
+			// bugbug - kurt - show promotion discount data?
 			
 			if ( price_data.taxNotice && price_data.taxNotice != '' )
 			{
@@ -4827,6 +4874,12 @@ function OnPurchaseSuccess( result )
 		$('receipt_total_price').innerHTML = result.purchasereceipt.formattedTotal;
 		$('receipt_confirmation_code').innerHTML = result.purchasereceipt.transactionid;
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
+		
+		if ( result.purchasereceipt.points_earned )
+		{
+			$('lny_tokens').style.display = 'block';
+			$('lny_tokens_text').innerHTML = result.purchasereceipt.points_earned;
+		}
 	
 		DisplayReceiptPage();
 		

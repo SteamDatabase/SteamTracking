@@ -906,6 +906,10 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	height: 24px;
 }
 
+.game_purchase_price {
+    position: relative;
+}
+
 .game_purchase_action .game_purchase_qty {
 	background-color: #000000;
 	font-size: 13px;
@@ -923,7 +927,8 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	color: #7cb8e4;
 }
 
-.game_area_purchase_not_refundable {
+.game_area_purchase_not_refundable,
+.game_area_purchase_custom_cart_credit  {
 	height: 26px;
 	padding: 25px 16px 0px 0px;
 
@@ -932,6 +937,14 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	color: #acb5be;
 	text-align: right;
 	background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););}
+
+.game_area_purchase_custom_cart_credit {
+	height: 40px;
+	text-align: center;
+}
+.game_area_purchase_custom_cart_credit, .game_area_purchase_asterisk {
+	color: #ffcc6a;
+}
 
 .game_area_purchase_not_refundable a {
 	font-size: 12px;

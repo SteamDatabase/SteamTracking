@@ -527,6 +527,18 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	margin-bottom: 32px;
 }
 
+.pending_gift_template_1
+{
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/lny2019/bg_gift_pending.jpg' ) !important;	
+	background-position: 0% 0% !important;
+	background-size: cover;
+}
+
+.pending_gift_template_1 .content
+{
+	border: 1px solid #d8753b !important;
+}
+
 .pending_gift .item_desc_icon img {
 	max-width: 100%;
 }
