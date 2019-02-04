@@ -1279,6 +1279,15 @@ body.v6 .help_refund_request_area h2 a:hover {
 	color: #67c1f5;
 }
 
+.refund_value_details {
+	color: #67c1f5;
+	text-align: left;
+}
+
+.promotion_details {
+	color: rgb( 255, 128, 0 ) !important;
+}
+
 .refund_info_box {
 	padding: 10px;
 	background-color: #1d2a3b;
