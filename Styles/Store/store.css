@@ -1628,7 +1628,34 @@ a#store_search_link img {
 
 }
 
+.sale_page_n_section_block.lunar2019 .promo_item_list .item {
+	overflow: visible;
+}
 
+
+.sale_page_n_section_block.lunar2019 .promo_item_list .item .additional_cart_discount_container .basePriceStrikeout {
+	left: -63px;
+    top: 8px;
+    height: 11px;
+}
+
+
+.sale_page_n_section_block.lunar2019 .promo_item_list .item .additional_cart_discount{
+	top: -15px;
+	min-height: 24px;
+}
+
+
+.sale_page_n_section_block.lunar2019 .promo_item_list .item .additional_cart_discount .additional_cart_discount_amount{
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+
+.sale_page_n_section_block.lunar2019 .promo_item_list .item .additional_cart_discount .additional_cart_discount_final{
+	font-size: 14px;
+	margin-top: 4px;
+}
 
 /* spotlight styles */
 .spotlight_img {
