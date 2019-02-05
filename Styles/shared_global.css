@@ -1898,6 +1898,7 @@ blockquote.bb_blockquote, .bb_wysiwyg blockquote {
 	margin: 8px;
 
 	font-size: 92%;
+    display: table;
 }
 
 blockquote.bb_blockquote.with_author {
