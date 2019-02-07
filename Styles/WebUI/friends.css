@@ -3349,7 +3349,7 @@ iframe.steamTVLogin {
 
 .broadcastchat_ChatPanel_3jc_d {
   display: flex;
-  flex-grow: 1;
+  flex: 1;
   flex-direction: column;
   background-color: #1b1c20;
   position: relative; }

@@ -54976,7 +54976,7 @@
             for (var n = e.split(ip), o = [], i = 0; i < n.length; i += 1)
               if (i % 2 == 1)
                 o.push(
-                  Ee.createElement($c, { key: i, emoticon: n[i], large: !1 })
+                  Ee.createElement($c, { key: i, emoticon: n[i], large: !0 })
                 );
               else {
                 for (var r = n[i].split(rp), a = 1; a < r.length; a += 2)
