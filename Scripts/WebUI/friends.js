@@ -54812,101 +54812,14 @@
         );
       })(Ee.Component),
       ep = (Ee.Component, n("dcQ8")),
-      tp = n.n(ep);
-    function np() {
-      window.sessionStorage.setItem(
-        "oFriendsUIStartupParam",
-        JSON.stringify({
-          command: { command: "ShowWatchBroadcast", steamid: _.a.steamid }
-        })
-      );
-    }
-    var op = (function() {
-        function e() {
-          (this.m_iTimeoutLogin = void 0),
-            (this.m_eLogonState = 0),
-            (this.m_bLogonDialogVisisible = !1);
-        }
-        return (
-          (e.prototype.Init = function(e) {
-            var t = this;
-            (this.m_fnLaunchChat = e),
-              (this.m_steamID = _.a.steamid),
-              window.addEventListener("message", this.HandlePostMessage),
-              W.render(
-                Ee.createElement(dp, { app: this }),
-                document.getElementById("friendslist-container")
-              ),
-              (this.m_iTimeoutLogin = SetBackgroundTimeout(function() {
-                0 == t.m_eLogonState && (t.m_eLogonState = 1);
-              }, 2500));
-          }),
-          (e.prototype.LaunchChat = function() {
-            W.unmountComponentAtNode(
-              document.getElementById("friendslist-container")
-            ),
-              window.removeEventListener("message", this.HandlePostMessage),
-              window.clearTimeout(this.m_iTimeoutLogin),
-              np(),
-              this.m_fnLaunchChat();
-          }),
-          (e.prototype.GetLoginURL = function() {
-            return _.b.STORE_BASE_URL + "login/?steamtv";
-          }),
-          (e.prototype.BIsPerformingLogonCheck = function() {
-            return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
-          }),
-          (e.prototype.BIsLogonDialogVisible = function() {
-            return this.m_bLogonDialogVisisible;
-          }),
-          (e.prototype.ShowLogonDialog = function() {
-            this.m_bLogonDialogVisisible = !0;
-          }),
-          (e.prototype.BReadyToRender = function() {
-            return 0 != this.m_eLogonState;
-          }),
-          (e.prototype.DismissLogonDialog = function() {
-            this.m_bLogonDialogVisisible = !1;
-          }),
-          (e.prototype.GetSteamIDWatched = function() {
-            return this.m_steamID;
-          }),
-          (e.prototype.ExtractOrigin = function(e) {
-            return e.replace(/^(https?:\/\/[^/]*).*$/, "$1");
-          }),
-          (e.prototype.HandlePostMessage = function(e) {
-            if (
-              e.origin == this.ExtractOrigin(_.b.STORE_BASE_URL) ||
-              e.origin == this.ExtractOrigin(_.b.CHAT_BASE_URL)
-            ) {
-              var t = e.data;
-              if (t)
-                if ("OnLoginButtonClicked" == t.msg)
-                  console.log("Login button clicked"),
-                    (this.m_bLogonDialogVisisible = !0);
-                else if ("LoginNeeded" == t.command) this.m_eLogonState = 2;
-                else if ("LogonComplete" == t.command)
-                  return void this.LaunchChat();
-            } else
-              console.warn(
-                'Ignoring message from untrusted domain "' + e.origin + '"'
-              );
-          }),
-          R.c([d.observable], e.prototype, "m_eLogonState", void 0),
-          R.c([d.observable], e.prototype, "m_bLogonDialogVisisible", void 0),
-          R.c([d.observable], e.prototype, "m_steamID", void 0),
-          R.c([d.action], e.prototype, "LaunchChat", null),
-          R.c([d.action.bound], e.prototype, "HandlePostMessage", null),
-          e
-        );
-      })(),
-      ip = new RegExp("ː([^ː]*)ː", "g"),
-      rp = new RegExp("(https?://[^ '\"<>]*)", "gi"),
-      ap = new RegExp(
+      tp = n.n(ep),
+      np = new RegExp("ː([^ː]*)ː", "g"),
+      op = new RegExp("(https?://[^ '\"<>]*)", "gi"),
+      ip = new RegExp(
         "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
         "i"
       ),
-      sp = (function(n) {
+      rp = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -54969,17 +54882,17 @@
               e && e.preventDefault());
           }),
           (e.prototype.IsTrustedDomain = function(e) {
-            return !!e.match(ap);
+            return !!e.match(ip);
           }),
           (e.prototype.AddLinksEmoticons = function(e, t) {
             t && this.m_chat.GetUserEmoticons();
-            for (var n = e.split(ip), o = [], i = 0; i < n.length; i += 1)
+            for (var n = e.split(np), o = [], i = 0; i < n.length; i += 1)
               if (i % 2 == 1)
                 o.push(
                   Ee.createElement($c, { key: i, emoticon: n[i], large: !0 })
                 );
               else {
-                for (var r = n[i].split(rp), a = 1; a < r.length; a += 2)
+                for (var r = n[i].split(op), a = 1; a < r.length; a += 2)
                   this.IsTrustedDomain(r[a])
                     ? (r[a] = Ee.createElement(
                         "a",
@@ -55201,23 +55114,6 @@
           }),
           (e.prototype.render = function() {
             var n = this;
-            var e = new op(),
-              t = Ee.createElement(
-                "div",
-                null,
-                Ee.createElement(
-                  "a",
-                  {
-                    onClick: function() {
-                      return e.ShowLogonDialog();
-                    },
-                    className: tp.a.ChatLoginButton,
-                    href: "javascript:void(0);"
-                  },
-                  Object($.b)("#BroadcastChat_Login")
-                ),
-                Ee.createElement(yp, { app: e })
-              );
             return Ee.createElement(
               "div",
               {
@@ -55331,7 +55227,7 @@
                           ref: this.textInput
                         }),
                         this.m_chat.m_bRateLimited &&
-                          Ee.createElement(cp, {
+                          Ee.createElement(ap, {
                             nSeconds: this.m_chat.m_nRateLimitSeconds,
                             bRateLimited: this.m_chat.m_bRateLimited
                           }),
@@ -55381,7 +55277,7 @@
                       )
                     )
                   )
-                : t
+                : null
             );
           }),
           R.c([d.observable], e.prototype, "m_rgChatMessages", void 0),
@@ -55396,7 +55292,7 @@
           (e = R.c([or.observer], e))
         );
       })(Ee.Component),
-      cp = (function(e) {
+      ap = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55427,7 +55323,7 @@
           t
         );
       })(Ee.Component),
-      lp = function(e) {
+      sp = function(e) {
         var t = e.group,
           n = e.onClick,
           o = t.watching_broadcast_steamid;
@@ -55456,7 +55352,7 @@
           )
         );
       },
-      pp = (function(e) {
+      cp = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55605,7 +55501,7 @@
                             )
                           ),
                           r.map(function(e) {
-                            return Oe.a.createElement(lp, {
+                            return Oe.a.createElement(sp, {
                               key: e.unique_id,
                               group: e,
                               onClick: function() {
@@ -55624,7 +55520,7 @@
                             Object($.b)("#Broadcast_LinkBroadcastToGroup")
                           ),
                           a.map(function(e) {
-                            return Oe.a.createElement(lp, {
+                            return Oe.a.createElement(sp, {
                               key: e.unique_id,
                               group: e,
                               onClick: function() {
@@ -55656,6 +55552,93 @@
           t
         );
       })(Oe.a.Component);
+    function lp() {
+      window.sessionStorage.setItem(
+        "oFriendsUIStartupParam",
+        JSON.stringify({
+          command: { command: "ShowWatchBroadcast", steamid: _.a.steamid }
+        })
+      );
+    }
+    var pp = (function() {
+      function e() {
+        (this.m_iTimeoutLogin = void 0),
+          (this.m_eLogonState = 0),
+          (this.m_bLogonDialogVisisible = !1);
+      }
+      return (
+        (e.prototype.Init = function(e) {
+          var t = this;
+          (this.m_fnLaunchChat = e),
+            (this.m_steamID = _.a.steamid),
+            window.addEventListener("message", this.HandlePostMessage),
+            W.render(
+              Ee.createElement(dp, { app: this }),
+              document.getElementById("friendslist-container")
+            ),
+            (this.m_iTimeoutLogin = SetBackgroundTimeout(function() {
+              0 == t.m_eLogonState && (t.m_eLogonState = 1);
+            }, 2500));
+        }),
+        (e.prototype.LaunchChat = function() {
+          W.unmountComponentAtNode(
+            document.getElementById("friendslist-container")
+          ),
+            window.removeEventListener("message", this.HandlePostMessage),
+            window.clearTimeout(this.m_iTimeoutLogin),
+            lp(),
+            this.m_fnLaunchChat();
+        }),
+        (e.prototype.GetLoginURL = function() {
+          return _.b.STORE_BASE_URL + "login/?steamtv";
+        }),
+        (e.prototype.BIsPerformingLogonCheck = function() {
+          return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
+        }),
+        (e.prototype.BIsLogonDialogVisible = function() {
+          return this.m_bLogonDialogVisisible;
+        }),
+        (e.prototype.ShowLogonDialog = function() {
+          this.m_bLogonDialogVisisible = !0;
+        }),
+        (e.prototype.BReadyToRender = function() {
+          return 0 != this.m_eLogonState;
+        }),
+        (e.prototype.DismissLogonDialog = function() {
+          this.m_bLogonDialogVisisible = !1;
+        }),
+        (e.prototype.GetSteamIDWatched = function() {
+          return this.m_steamID;
+        }),
+        (e.prototype.ExtractOrigin = function(e) {
+          return e.replace(/^(https?:\/\/[^/]*).*$/, "$1");
+        }),
+        (e.prototype.HandlePostMessage = function(e) {
+          if (
+            e.origin == this.ExtractOrigin(_.b.STORE_BASE_URL) ||
+            e.origin == this.ExtractOrigin(_.b.CHAT_BASE_URL)
+          ) {
+            var t = e.data;
+            if (t)
+              if ("OnLoginButtonClicked" == t.msg)
+                console.log("Login button clicked"),
+                  (this.m_bLogonDialogVisisible = !0);
+              else if ("LoginNeeded" == t.command) this.m_eLogonState = 2;
+              else if ("LogonComplete" == t.command)
+                return void this.LaunchChat();
+          } else
+            console.warn(
+              'Ignoring message from untrusted domain "' + e.origin + '"'
+            );
+        }),
+        R.c([d.observable], e.prototype, "m_eLogonState", void 0),
+        R.c([d.observable], e.prototype, "m_bLogonDialogVisisible", void 0),
+        R.c([d.observable], e.prototype, "m_steamID", void 0),
+        R.c([d.action], e.prototype, "LaunchChat", null),
+        R.c([d.action.bound], e.prototype, "HandlePostMessage", null),
+        e
+      );
+    })();
     function up() {
       return _.b.STEAM_TV ? 1 : 3;
     }
@@ -55694,7 +55677,7 @@
               i = t.GetSteamID().ConvertTo64BitString(),
               r = up(),
               a = t.m_bShowWatchPromptDialog
-                ? Oe.a.createElement(pp, {
+                ? Oe.a.createElement(cp, {
                     closeModal: function() {
                       return t.HideWatchPromptDialog();
                     },
@@ -55972,6 +55955,23 @@
                     className: Q.offlineClassName
                   });
               }
+            var s = new pp(),
+              c = Oe.a.createElement(
+                "div",
+                null,
+                Oe.a.createElement(
+                  "a",
+                  {
+                    onClick: function() {
+                      return s.ShowLogonDialog();
+                    },
+                    className: tp.a.ChatLoginButton,
+                    href: "javascript:void(0);"
+                  },
+                  Object($.b)("#BroadcastChat_Login")
+                ),
+                Oe.a.createElement(yp, { app: s })
+              );
             return Oe.a.createElement(
               "div",
               { className: "BroadcastContainer" },
@@ -56018,16 +56018,17 @@
                 {
                   style: {
                     display: "flex",
-                    flexDirection: "row",
+                    flexDirection: "column",
                     width: "100%",
                     minWidth: "300px"
                   }
                 },
-                Oe.a.createElement(sp, {
+                Oe.a.createElement(rp, {
                   steamID: t,
                   watchLocation: this.props.watchLocation,
                   hidden: this.props.bHideChat
-                })
+                }),
+                _.e && _.e.logged_in ? null : c
               )
             );
           }),
@@ -60073,7 +60074,7 @@
                 )
               );
             if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-              var D = Ee.createElement(sp, {
+              var D = Ee.createElement(rp, {
                 steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                 watchLocation: h,
                 hidden: !t.m_bShowGlobalChat,
@@ -67998,9 +67999,9 @@
                 }),
             Object.assign(_.a, n)),
             G.d.logged_in
-              ? np()
+              ? lp()
               : ((t = !1),
-                new op().Init(function() {
+                new pp().Init(function() {
                   window.location = window.location;
                 }));
         }
