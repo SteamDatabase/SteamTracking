@@ -55789,49 +55789,53 @@
               null,
               e.BReadyToRender() &&
                 Oe.a.createElement(
-                  "div",
-                  {
-                    className:
-                      "StandalonePlayer" +
-                      (this.state.bTheaterMode ? " TheaterMode" : "")
-                  },
-                  Oe.a.createElement(Ls, {
-                    className: "FullpageBroadcastBackdrop",
-                    src: t.m_strThumbnailUrl,
-                    draggable: !1,
-                    duration: 2500
-                  }),
+                  or.Provider,
+                  { emoticonStore: null, emoticonHoverStore: null },
                   Oe.a.createElement(
                     "div",
-                    { className: "StandalonePlayerHeader" },
+                    {
+                      className:
+                        "StandalonePlayer" +
+                        (this.state.bTheaterMode ? " TheaterMode" : "")
+                    },
+                    Oe.a.createElement(Ls, {
+                      className: "FullpageBroadcastBackdrop",
+                      src: t.m_strThumbnailUrl,
+                      draggable: !1,
+                      duration: 2500
+                    }),
                     Oe.a.createElement(
                       "div",
-                      { className: "STV_Logo" },
-                      Oe.a.createElement(ui.W, null)
+                      { className: "StandalonePlayerHeader" },
+                      Oe.a.createElement(
+                        "div",
+                        { className: "STV_Logo" },
+                        Oe.a.createElement(ui.W, null)
+                      ),
+                      Oe.a.createElement(
+                        "div",
+                        {
+                          className:
+                            "BroadcastTab_HeaderRow" +
+                            (this.state.bChatCollapsed ? " ChatCollapsed" : "")
+                        },
+                        Oe.a.createElement(hp, { onClick: this.OnShowLogin }),
+                        Oe.a.createElement(_p, {
+                          onClick: this.ToggleChat,
+                          hideIcon: this.state.bChatCollapsed
+                        })
+                      )
                     ),
                     Oe.a.createElement(
-                      "div",
+                      gp,
                       {
-                        className:
-                          "BroadcastTab_HeaderRow" +
-                          (this.state.bChatCollapsed ? " ChatCollapsed" : "")
+                        steamID: e.GetSteamIDWatched(),
+                        watchLocation: n,
+                        bHideChat: this.state.bChatCollapsed,
+                        onTheaterMode: this.ToggleTheaterMode
                       },
-                      Oe.a.createElement(hp, { onClick: this.OnShowLogin }),
-                      Oe.a.createElement(_p, {
-                        onClick: this.ToggleChat,
-                        hideIcon: this.state.bChatCollapsed
-                      })
+                      Oe.a.createElement(yp, { app: e })
                     )
-                  ),
-                  Oe.a.createElement(
-                    gp,
-                    {
-                      steamID: e.GetSteamIDWatched(),
-                      watchLocation: n,
-                      bHideChat: this.state.bChatCollapsed,
-                      onTheaterMode: this.ToggleTheaterMode
-                    },
-                    Oe.a.createElement(yp, { app: e })
                   )
                 ),
               Oe.a.createElement(fp, { app: e })
@@ -67916,6 +67920,18 @@
                   linkName: "Artifact on Steam",
                   tabIcon: "public/images/webui/broadcast/artifact_icon.png",
                   offlineClassName: "BroadcastArtifactOffline"
+                })
+              : "76561198888084799" == e
+              ? Q.init({
+                  bValid: !0,
+                  stream: { "76561198888084799": "#Broadcast_EnglishMain" },
+                  name: "CSGO: IEM Katowice 2019",
+                  appID: 730,
+                  link: "https://store.steampowered.com/app/730",
+                  linkName: "CSGO on Steam",
+                  tabIcon:
+                    "public/images/webui/broadcast/csgo_esl_2019_icon.png",
+                  offlineClassName: "BroadcastCSGOKatowiceOffline"
                 })
               : "76561198894692971" == e
               ? Q.init({

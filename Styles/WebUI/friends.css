@@ -2995,7 +2995,8 @@ iframe.steamTVLogin {
 .BroadcastPaladinsOffline,
 .BroadcastRealmRoyaleOffline,
 .BroadcastDOTATrueSight,
-.BroadcastSteamAwardsOffline {
+.BroadcastSteamAwardsOffline,
+.BroadcastCSGOKatowiceOffline {
   position: absolute;
   top: 0;
   right: 0;
@@ -3022,6 +3023,9 @@ iframe.steamTVLogin {
 
 .BroadcastCSGOLondonOffline {
   background-image: url("../../images/webui/broadcast/steam_broadcast_london_2018.jpg"); }
+
+.BroadcastCSGOKatowiceOffline {
+  background-image: url("../../images/webui/broadcast/csgo_esl_2019.jpg"); }
 
 .BroadcastDOTATrueSight {
   background-image: url("../../images/webui/broadcast/true_sight_logo.png"); }
