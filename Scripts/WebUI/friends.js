@@ -22953,11 +22953,7 @@
               i = new co(t, e);
             return (
               o.m_rgChats.push(i),
-              (this.m_activeChat = i),
-              o.m_eWatchState == eo.None && t
-                ? this.GetBroadcastManifest(o, n)
-                : o.m_eWatchState == eo.Ready &&
-                  i.StartForBroadcastID(o.m_ulBroadcastID),
+              (this.m_activeChat = i).StartForBroadcastID(o.m_ulBroadcastID),
               i
             );
           }),
