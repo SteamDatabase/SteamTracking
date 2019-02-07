@@ -42,7 +42,7 @@ GHomepage = {
 			var $Menu = $J('#store_header');
 
 			var k_nContentWidth = 940 + 32;
-			var k_nMenuHeight = 66;
+			var k_nMenuHeight = 0;
 
 			var nTakeoverWidth = $Background.data( 'backgroundWidth' ) || 1880;
 			var flTakeoverRatio = nTakeoverWidth / k_nContentWidth;
