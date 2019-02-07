@@ -23497,7 +23497,12 @@
                   return R.e(this, function(e) {
                     switch (e.label) {
                       case 0:
-                        return [4, C.a.get("/public/steamawards_offset.json")];
+                        return [
+                          4,
+                          C.a.get(
+                            "https://steamconfig.blob.core.windows.net/config/steamawards_offset.json"
+                          )
+                        ];
                       case 1:
                         return (
                           (n = e.sent().data.offsetSeconds),
@@ -56040,29 +56045,9 @@
         );
       })(Oe.a.Component);
     function bp(e) {
-      return Oe.a.createElement(
-        "div",
-        { className: "BroadcastCSGOLondonOffline" },
-        Oe.a.createElement(
-          "div",
-          { className: "BroadcastCSGOLondonOffline_Schedule" },
-          Oe.a.createElement(
-            "div",
-            { className: "BroadcastCSGOLondonOffline_Prelims" },
-            "CHALLENGERS STAGE – SEPTEMBER 5-9"
-          ),
-          Oe.a.createElement(
-            "div",
-            { className: "BroadcastCSGOLondonOffline_Group" },
-            "LEGENDS STAGE – SEPTEMBER 12-16"
-          ),
-          Oe.a.createElement(
-            "div",
-            { className: "BroadcastCSGOLondonOffline_Playoffs" },
-            "CHAMPIONS STAGE – SEPTEMBER 20-23"
-          )
-        )
-      );
+      return Oe.a.createElement("div", {
+        className: "BroadcastCSGOKatowiceOffline"
+      });
     }
     function vp(e) {
       return Oe.a.createElement(
