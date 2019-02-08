@@ -23520,7 +23520,10 @@
                 (t.kind = "subtitles"),
                   (t.srclang = e),
                   (t.src = "/public/steamawards_" + e + ".vtt"),
-                  n.m_elVideo.appendChild(t);
+                  n.m_elVideo.appendChild(t),
+                  t.addEventListener("load", function() {
+                    n.ListSubtitles()[0].mode = "disabled";
+                  });
               }),
               "english" !== _.b.LANGUAGE && this.SetSubtitles(_.b.LANGUAGE);
           }),
