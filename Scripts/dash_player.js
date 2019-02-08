@@ -643,7 +643,7 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		if( _player.m_bUseHLSManifest && (numRepresentations !== _player.m_mpd.GetMPDRepresentationCount() ) && _player.BIsLiveContent() )
 		{
 			_player.m_elVideoPlayer.load();
-			_player.m_elVideoPlayer.play();
+			_player.InternalPlayVideo();
 		}
 
 		// if dynamic, schedule mpd reload
@@ -657,6 +657,25 @@ CDASHPlayer.prototype.UpdateMPD = function()
 		PlayerLog( 'Failed to download: ' + _player.m_strMPD );
 		_player.m_schUpdateMPD = setTimeout( function() { _player.UpdateMPD(); }, CDASHPlayer.MANIFEST_RETRY_MS );
 	});
+}
+
+CDASHPlayer.prototype.InternalPlayVideo = function()
+{
+	var playPromise = this.m_elVideoPlayer.play();
+	if ( !playPromise )
+		return;
+
+	playPromise.then( this.OnPlaySucceeded ).catch( this.OnPlayFailed );
+}
+
+CDASHPlayer.prototype.OnPlaySucceeded = function()
+{
+
+}
+
+CDASHPlayer.prototype.OnPlayFailed = function( error )
+{
+	PlayerLog( 'Failed to play video:', error.toString() );
 }
 
 CDASHPlayer.prototype.BCreateLoaders = function()
@@ -942,7 +961,7 @@ CDASHPlayer.prototype.OnVideoBufferProgress = function()
 
 		if ( this.m_bIsPlayingInUI )
 		{
-			this.m_elVideoPlayer.play();
+			this.InternalPlayVideo();
 		}
 
 		this.m_elVideoPlayer.playbackRate = this.m_nSavedPlaybackRate;
@@ -4827,7 +4846,7 @@ CDASHPlayerUI.prototype.TogglePlayPause = function()
 	var elVideoPlayer = this.m_player.m_elVideoPlayer;
 	if( elVideoPlayer.paused )
 	{
-		elVideoPlayer.play();
+		this.m_player.InternalPlayVideo();
 		elVideoPlayer.playbackRate = this.m_player.GetPlaybackRate();
 		$J( '.play_button', this.m_elOverlay ).addClass( 'pause' );
 		$J( '.play_button', this.m_elOverlay ).removeClass( 'play' );

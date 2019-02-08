@@ -870,6 +870,12 @@ CBroadcastWatch.prototype.PostMessageToIFrameParent = function( strMessage, Data
 	this.m_IFrameHelper.PostMessageToIFrameParent( strMessage, Data );
 };
 
+CBroadcastWatch.prototype.PlayVideo = function()
+{
+	if ( this.m_player.m_elVideoPlayer.paused )
+		this.m_playerUI.TogglePlayPause();
+}
+
 CBroadcastWatch.prototype.RegisterParentBroadcastHooks = function(  )
 {
 	var _watch = this;
