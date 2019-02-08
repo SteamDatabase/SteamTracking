@@ -23485,8 +23485,10 @@
           }),
           (e.prototype.InitSubtitles = function() {
             var n = this;
-            "76561198894692971" === this.m_steamID &&
-              ((this.m_rgSubtitles = ["english", "spanish"]),
+            ("76561198894692971" !== this.m_steamID &&
+              "148618792083695635" !== this.m_steamID &&
+              "148618792083694878" !== this.m_steamID) ||
+              ((this.m_rgSubtitles = _.b.SUPPORTED_LANGUAGES || []),
               setInterval(function() {
                 return R.b(n, void 0, void 0, function() {
                   var n, o;
@@ -23518,8 +23520,10 @@
               this.m_rgSubtitles.forEach(function(e) {
                 var t = document.createElement("track");
                 (t.kind = "subtitles"),
-                  (t.srclang = e),
-                  (t.src = "/public/steamawards_" + e + ".vtt"),
+                  (t.label = e.displayName),
+                  (t.srclang = e.value),
+                  (t.src =
+                    "/public/steamawards_" + e.value + ".vtt?t=1549644543"),
                   n.m_elVideo.appendChild(t),
                   t.addEventListener("load", function() {
                     n.ListSubtitles()[0].mode = "disabled";
