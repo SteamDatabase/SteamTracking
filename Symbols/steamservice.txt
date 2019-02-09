@@ -225,6 +225,8 @@
  D typeinfo for CClientModuleManagerBase
  D typeinfo for CClientSecureDesktop
  D typeinfo for CCrossProcessPipe
+ D typeinfo for CCryptoKeyBase
+ D typeinfo for CCryptoKeyBase_RawBuffer
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CFrameFunction<CJobMgr>
@@ -244,6 +246,8 @@
  D typeinfo for CPipeEvent
  D typeinfo for CPipeEventCallbackHelper
  D typeinfo for CPipeWaiter
+ D typeinfo for CRSAKeyBase
+ D typeinfo for CRSAPublicKey
  D typeinfo for CRefCountServiceBase<false, CRefST>
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<false, CRefST> >
@@ -302,6 +306,7 @@
  D vtable for CClientModuleManagerBase
  D vtable for CClientSecureDesktop
  D vtable for CCrossProcessPipe
+ D vtable for CCryptoKeyBase_RawBuffer
  D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
  D vtable for CFrameFunction<CJobMgr>
@@ -320,6 +325,7 @@
  D vtable for CPathString
  D vtable for CPipeEventCallbackHelper
  D vtable for CPipeWaiter
+ D vtable for CRSAPublicKey
  D vtable for CScheduledFunction<CIPCServer>
  D vtable for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  D vtable for CServiceEngine
@@ -370,6 +376,8 @@
  R typeinfo name for CClientModuleManagerBase
  R typeinfo name for CClientSecureDesktop
  R typeinfo name for CCrossProcessPipe
+ R typeinfo name for CCryptoKeyBase
+ R typeinfo name for CCryptoKeyBase_RawBuffer
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CFrameFunction<CJobMgr>
@@ -389,6 +397,8 @@
  R typeinfo name for CPipeEvent
  R typeinfo name for CPipeEventCallbackHelper
  R typeinfo name for CPipeWaiter
+ R typeinfo name for CRSAKeyBase
+ R typeinfo name for CRSAPublicKey
  R typeinfo name for CRefCountServiceBase<false, CRefST>
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<false, CRefST> >
@@ -636,6 +646,7 @@
  T BN_ucmp
  T BN_usub
  T BN_value_one
+ T BParsePEMHeaderOrFooter(char const*&, char const*, char const*, char const*)
  T BRegistryKeyExists(ERegKeyRoot, char const*)
  T BSetRegistryValueBin(ERegKeyRoot, char const*, char const*, unsigned char const*, unsigned int)
  T BSetRegistryValueStr(ERegKeyRoot, char const*, char const*, char const*)
@@ -646,6 +657,8 @@
  T BUF_strlcat
  T BUF_strlcpy
  T BWritingMiniDump
+ T CAutoWipeBuffer::Clear()
+ T CAutoWipeBuffer::~CAutoWipeBuffer()
  T CBaseFrameFunction::AddToRunTimeHistory(unsigned int)
  T CBaseFrameFunction::CBaseFrameFunction(char const*, EFrameType)
  T CBaseFrameFunction::SetFrameType(EFrameType)
@@ -752,17 +765,25 @@
  T CCrossProcessPipe::Shutdown()
  T CCrossProcessPipe::Validate(CValidator&, char const*)
  T CCrossProcessPipe::~CCrossProcessPipe()
- T CCrypto::Base64Decode(char const*, unsigned char*, unsigned int*, bool)
- T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)
+ T CCrypto::Base64Decode(char const*, void*, unsigned int*, bool)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
- T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
+ T CCrypto::HexDecode(char const*, void*, unsigned int*)
+ T CCrypto::LocatePEMBody(char const*, unsigned int*, char const*)
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, CRSAPublicKey const&)
- T CCryptoKeyBase::EnsureCapacity(unsigned int)
+ T CCryptoKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
+ T CCryptoKeyBase::SetFromBase64EncodedString(char const*)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
+ T CCryptoKeyBase_RawBuffer::GetRawData(void*) const
+ T CCryptoKeyBase_RawBuffer::IsValid() const
+ T CCryptoKeyBase_RawBuffer::SetRawData(void const*, unsigned long)
+ T CCryptoKeyBase_RawBuffer::Validate(CValidator&, char const*) const
+ T CCryptoKeyBase_RawBuffer::Wipe()
+ T CCryptoKeyBase_RawBuffer::~CCryptoKeyBase_RawBuffer()
  T CCuratorPreferences::ByteSize() const
  T CCuratorPreferences::CCuratorPreferences()
  T CCuratorPreferences::Clear()
@@ -1079,6 +1100,9 @@
  T CPosixRegistryManager::SaveRegistryVDF()
  T CPosixRegistryManager::~CPosixRegistryManager()
  T CRC32_ProcessSingleBuffer(void const*, int)
+ T CRSAKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
+ T CRSAKeyBase::ParsePEM(char const*, unsigned long)
+ T CRSAPublicKey::~CRSAPublicKey()
  T CRTime::CRTime()
  T CRTime::RTime32BeginningOfDay(unsigned int)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
@@ -3297,7 +3321,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_50_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_51_26
  b PchGetRegPath(ERegKeyRoot, char const*, char const*)::szRegLocation
  b PosixRegistryManager()::s_PosixRegMgr
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
@@ -3829,7 +3853,7 @@
  r BN_kronecker.tab
  r BN_num_bits_word.bits
  r BN_value_one.data_one
- r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
+ r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r Hex
  r IPv6IPToString.hexdigits
  r SQR_tb
@@ -4028,6 +4052,8 @@
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
+ t DecodeBase64ToBuf(char const*, unsigned int, CAutoWipeBuffer&)
+ t DecodePEMBody(char const*, unsigned long, CAutoWipeBuffer&, char const*)
  t FileSelect(dirent const*)
  t FindSignaturePeer(KeyValues*, char const*, bool)
  t FreeTree(ExprNode*&)

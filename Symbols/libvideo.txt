@@ -1355,8 +1355,8 @@
  T CCoroutineMgr::CCoroutineMgr()
  T CCoroutineMgr::PopCoroutineStack()
  T CCrashHandlerScope::~CCrashHandlerScope()
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateHMAC(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [20])
  T CCrypto::GenerateRandomBlock(void*, int)
@@ -6019,7 +6019,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_50_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_51_26
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
  b SHA1.m

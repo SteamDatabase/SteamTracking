@@ -3878,7 +3878,7 @@
  T CCopyableUtlVector<panorama::MouseTrackingResults_t, CUtlMemory<panorama::MouseTrackingResults_t> >::CCopyableUtlVector(CCopyableUtlVector<panorama::MouseTrackingResults_t, CUtlMemory<panorama::MouseTrackingResults_t> > const&)
  T CCopyableUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::CCopyableUtlVector(CCopyableUtlVector<unsigned long long, CUtlMemory<unsigned long long> > const&)
  T CCopyableUtlVectorFixed<panorama::CFillBrushCollection::FillBrush_t, 8ul>::CCopyableUtlVectorFixed(CCopyableUtlVectorFixed<panorama::CFillBrushCollection::FillBrush_t, 8ul> const&)
- T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
+ T CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)
  T CCrypto::SymmetricDecrypt(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CCuratorPreferences::ByteSize() const
@@ -17459,7 +17459,7 @@
  r BValveDomain(char const*)::k_pchSteamPowered
  r BValveDomain(char const*)::k_pchValveOrg
  r BValveDomain(char const*)::k_pchValveSoftware
- r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
+ r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r IPv6IPToString.hexdigits
  r arrControllers

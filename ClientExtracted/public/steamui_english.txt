@@ -515,7 +515,7 @@ This should take less than a minute."
 "Steam_MustRestart_Language"		"You must restart Steam now to change your language settings."
 
 "Steam_ChangeBeta_Title"		"Steam - Beta Participation"
-"Steam_ChangeBeta_Text"			"Do you want to participate in the Steam beta program ?\nSteam will restart in order to receive the beta client."
+"Steam_ChangeBeta_Text"			"Do you want to participate in the Steam beta program?\nSteam will restart in order to receive the beta client."
 "Steam_RemoveBeta_Text"			"Do you want to remove yourself from all beta programs?\nSteam will restart in order to restore the regular client."
 "Steam_ChangeBeta_Button"		"Change Beta"
 

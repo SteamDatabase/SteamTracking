@@ -1903,6 +1903,8 @@
  D typeinfo for CClanPanel
  D typeinfo for CColorProperty
  D typeinfo for CCookie
+ D typeinfo for CCryptoKeyBase
+ D typeinfo for CCryptoKeyBase_RawBuffer
  D typeinfo for CDLLValidate
  D typeinfo for CDirContentsWatcher
  D typeinfo for CDirWatcher
@@ -2259,6 +2261,8 @@
  D typeinfo for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
+ D typeinfo for CRSAKeyBase
+ D typeinfo for CRSAPublicKey
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CSetNicknameDialog
@@ -3255,6 +3259,7 @@
  D vtable for CClanPanel
  D vtable for CColorProperty
  D vtable for CCookie
+ D vtable for CCryptoKeyBase_RawBuffer
  D vtable for CDLLValidate
  D vtable for CDirContentsWatcher
  D vtable for CDirWatcher
@@ -3610,6 +3615,7 @@
  D vtable for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
+ D vtable for CRSAPublicKey
  D vtable for CSetNicknameDialog
  D vtable for CSharedConnectionController
  D vtable for CSharedConnectionController::CCallback_OnMessageReady
@@ -3991,6 +3997,8 @@
  R typeinfo name for CClanPanel
  R typeinfo name for CColorProperty
  R typeinfo name for CCookie
+ R typeinfo name for CCryptoKeyBase
+ R typeinfo name for CCryptoKeyBase_RawBuffer
  R typeinfo name for CDLLValidate
  R typeinfo name for CDirContentsWatcher
  R typeinfo name for CDirWatcher
@@ -4347,6 +4355,8 @@
  R typeinfo name for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
+ R typeinfo name for CRSAKeyBase
+ R typeinfo name for CRSAPublicKey
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CSetNicknameDialog
@@ -4867,6 +4877,7 @@
  T BN_usub
  T BN_value_one
  T BParseOpenDevTools(CUtlString*, unsigned int*, CUtlString*, char const*)
+ T BParsePEMHeaderOrFooter(char const*&, char const*, char const*, char const*)
  T BUF_MEM_grow_clean
  T BUF_memdup
  T BUF_reverse
@@ -4924,6 +4935,8 @@
  T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
  T CAutoRelease<CJSCallbackPromise>::Reset(CJSCallbackPromise*)
  T CAutoRelease<CJSCallbackPromise>::~CAutoRelease()
+ T CAutoWipeBuffer::Clear()
+ T CAutoWipeBuffer::~CAutoWipeBuffer()
  T CAvatarOverlayImage::CAvatarOverlayImage(vgui::Panel*, char const*, CSteamID)
  T CAvatarOverlayImage::ChainToAnimationMap()
  T CAvatarOverlayImage::ChainToMap()
@@ -5926,15 +5939,24 @@
  T CCrossProcessSharedMemory::CCrossProcessSharedMemory()
  T CCrossProcessSharedMemory::Close()
  T CCrossProcessSharedMemory::~CCrossProcessSharedMemory()
- T CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int*, char const*)
- T CCrypto::Base64Encode(unsigned char const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)
+ T CCrypto::Base64Decode(char const*, void*, unsigned int*, bool)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
+ T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::GenerateSHA1Digest(unsigned char const*, int, unsigned char (*) [20])
- T CCrypto::HexDecode(char const*, unsigned char*, unsigned int*)
+ T CCrypto::HexDecode(char const*, void*, unsigned int*)
+ T CCrypto::LocatePEMBody(char const*, unsigned int*, char const*)
  T CCrypto::RSAVerifySignature(unsigned char const*, unsigned int, unsigned char const*, unsigned int, CRSAPublicKey const&)
- T CCryptoKeyBase::EnsureCapacity(unsigned int)
+ T CCryptoKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
+ T CCryptoKeyBase::SetFromBase64EncodedString(char const*)
  T CCryptoKeyBase::SetFromHexEncodedString(char const*)
+ T CCryptoKeyBase_RawBuffer::GetRawData(void*) const
+ T CCryptoKeyBase_RawBuffer::IsValid() const
+ T CCryptoKeyBase_RawBuffer::SetRawData(void const*, unsigned long)
+ T CCryptoKeyBase_RawBuffer::Validate(CValidator&, char const*) const
+ T CCryptoKeyBase_RawBuffer::Wipe()
+ T CCryptoKeyBase_RawBuffer::~CCryptoKeyBase_RawBuffer()
  T CDLLValidate::Validate(CValidator&)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDefOps<CSteamID>::LessFunc(CSteamID const&, CSteamID const&)
@@ -9432,6 +9454,9 @@
  T CProportionalIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CRSAKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
+ T CRSAKeyBase::ParsePEM(char const*, unsigned long)
+ T CRSAPublicKey::~CRSAPublicKey()
  T CRYPTO_128_unwrap
  T CRYPTO_128_wrap
  T CRYPTO_THREADID_cmp
@@ -16250,7 +16275,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_50_26
+ b OneTimeCryptoInitOpenSSL()::threadonce_51_26
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b SHA1.m
  b SYS_str_reasons
@@ -16896,7 +16921,7 @@
  r BN_kronecker.tab
  r BN_num_bits_word.bits
  r BN_value_one.data_one
- r CCrypto::Base64Decode(char const*, unsigned int, unsigned char*, unsigned int*, bool)::rgchInvBase64
+ r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r Hex
  r SQR_tb
  r _EC_IPSEC_155_ID3
@@ -17308,6 +17333,8 @@
  t Create_ToggleButton()
  t Create_TreeView()
  t DecimalToUint64(char const*, unsigned long long, unsigned long long*)
+ t DecodeBase64ToBuf(char const*, unsigned int, CAutoWipeBuffer&)
+ t DecodePEMBody(char const*, unsigned long, CAutoWipeBuffer&, char const*)
  t DefaultSortFunc(KeyValues*, KeyValues*)
  t DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  t FileSelect(dirent const*)
