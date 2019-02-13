@@ -9,6 +9,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/interfacemap_service.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/ipcserver.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/job.cpp
