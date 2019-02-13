@@ -29688,6 +29688,8 @@
               ? t.persona.is_in_nonsteam_game
                 ? -2
                 : t.persona.m_unGamePlayedAppID
+              : t.persona.m_broadcastAppId
+              ? t.persona.m_broadcastAppId
               : 0;
           }),
           (e.prototype.RemoveMemberFromBucket = function(e, t, n) {
