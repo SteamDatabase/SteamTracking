@@ -250,7 +250,7 @@ function ReloadNewsPostImages( nId )
 	new Ajax.Updater(
 		'uploaded_images',
 		g_szBaseUrl + '/admin/news/postimages/' + nId,
-		{ parameters: { imageid: imageId, sessionid: g_sessionID } }
+		{ parameters: { sessionid: g_sessionID } }
 	);
 }
 
