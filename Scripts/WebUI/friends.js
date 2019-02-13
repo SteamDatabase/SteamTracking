@@ -46862,99 +46862,107 @@
               });
             var o = !1;
             this.props.popup && (o = fd(this.props.popup) != ni);
-            return Oe.createElement(
-              "div",
-              { className: t },
-              Oe.createElement(
-                "svg",
-                {
-                  className: "statusHeaderGlow",
-                  width: "100%",
-                  height: "132",
-                  xmlns: "http://www.w3.org/2000/svg"
-                },
-                Oe.createElement(
-                  "defs",
-                  null,
-                  Oe.createElement(
-                    "radialGradient",
-                    {
-                      id: "exampleGradient",
-                      cx: "50%",
-                      cy: "50%",
-                      r: "50%",
-                      fx: "35%",
-                      fy: "30%"
-                    },
-                    Oe.createElement("stop", {
-                      offset: "10%",
-                      stopColor: "gold"
-                    }),
-                    Oe.createElement("stop", {
-                      offset: "95%",
-                      stopColor: "green"
-                    })
-                  )
-                ),
-                Oe.createElement("ellipse", {
-                  cx: "5%",
-                  cy: "28%",
-                  rx: "65%",
-                  ry: "60%",
-                  fill: "url(#exampleGradient)"
-                })
-              ),
+            var i = null;
+            return (
+              e.persona.m_broadcastAccountId &&
+                (i = function() {
+                  return e.GetBroadcastDescription();
+                }),
               Oe.createElement(
                 "div",
-                {
-                  className: "AvatarAndUser",
-                  onContextMenu: this.OnShowContextMenu
-                },
+                { className: t },
                 Oe.createElement(
-                  Uc,
+                  "svg",
                   {
-                    friend: e,
-                    context: { chatContext: "friendslist" },
-                    onContextMenu: this.OnShowContextMenu
+                    className: "statusHeaderGlow",
+                    width: "100%",
+                    height: "132",
+                    xmlns: "http://www.w3.org/2000/svg"
                   },
-                  Oe.createElement("img", {
-                    className: "currentUserAvatar",
-                    src: e.persona.avatar_url_medium,
-                    onClick: this.ShowCurrentUserProfile
+                  Oe.createElement(
+                    "defs",
+                    null,
+                    Oe.createElement(
+                      "radialGradient",
+                      {
+                        id: "exampleGradient",
+                        cx: "50%",
+                        cy: "50%",
+                        r: "50%",
+                        fx: "35%",
+                        fy: "30%"
+                      },
+                      Oe.createElement("stop", {
+                        offset: "10%",
+                        stopColor: "gold"
+                      }),
+                      Oe.createElement("stop", {
+                        offset: "95%",
+                        stopColor: "green"
+                      })
+                    )
+                  ),
+                  Oe.createElement("ellipse", {
+                    cx: "5%",
+                    cy: "28%",
+                    rx: "65%",
+                    ry: "60%",
+                    fill: "url(#exampleGradient)"
                   })
                 ),
-                Oe.createElement(fs, {
-                  className: "labelHolder",
-                  persona: e.persona,
-                  bIsSelf: !0,
-                  eFriendRelationship: e.efriendrelationship,
-                  strNickname: e.nickname,
-                  bParenthesizeNicknames:
-                    ii.SettingsStore.CommunityPreferences
-                      .bParenthesizeNicknames,
-                  bCompactView:
-                    ii.SettingsStore.FriendsSettings.bCompactFriendsList,
-                  bHideSnooze: !0,
-                  renderStatus: n,
-                  onContextMenu: this.OnShowContextMenu,
-                  bDNDSet: ii.FriendStore.GetUserDoNotDisturb()
-                })
-              ),
-              this.props.popup &&
-                G.a.IN_CLIENT &&
                 Oe.createElement(
                   "div",
                   {
-                    className:
-                      "title-area-icon singleWindowToggle" +
-                      (o ? " inOverlay" : ""),
-                    title: Object(ee.b)(
-                      "#FriendsList_TitleArea_SingleWindowButton"
-                    ),
-                    onClick: this.ToggleSingleWindowToggle
+                    className: "AvatarAndUser",
+                    onContextMenu: this.OnShowContextMenu
                   },
-                  Oe.createElement(si.V, null)
-                )
+                  Oe.createElement(
+                    Uc,
+                    {
+                      friend: e,
+                      context: { chatContext: "friendslist" },
+                      onContextMenu: this.OnShowContextMenu
+                    },
+                    Oe.createElement("img", {
+                      className: "currentUserAvatar",
+                      src: e.persona.avatar_url_medium,
+                      onClick: this.ShowCurrentUserProfile
+                    })
+                  ),
+                  Oe.createElement(fs, {
+                    className: "labelHolder",
+                    persona: e.persona,
+                    bIsSelf: !0,
+                    eFriendRelationship: e.efriendrelationship,
+                    strNickname: e.nickname,
+                    bParenthesizeNicknames:
+                      ii.SettingsStore.CommunityPreferences
+                        .bParenthesizeNicknames,
+                    bCompactView:
+                      ii.SettingsStore.FriendsSettings.bCompactFriendsList,
+                    bHideSnooze: !0,
+                    renderStatus: n,
+                    renderRichPresence: i,
+                    onContextMenu: this.OnShowContextMenu,
+                    bDNDSet: ii.FriendStore.GetUserDoNotDisturb()
+                  })
+                ),
+                this.props.popup &&
+                  G.a.IN_CLIENT &&
+                  Oe.createElement(
+                    "div",
+                    {
+                      className:
+                        "title-area-icon singleWindowToggle" +
+                        (o ? " inOverlay" : ""),
+                      title: Object(ee.b)(
+                        "#FriendsList_TitleArea_SingleWindowButton"
+                      ),
+                      onClick: this.ToggleSingleWindowToggle
+                    },
+                    Oe.createElement(si.V, null)
+                  )
+              )
             );
           }),
           R.c([L.a], t.prototype, "OnShowContextMenu", null),
