@@ -564,7 +564,7 @@ a.showcase_stat:hover .label {
 	line-height: 64px;
 	float: left;
 
-	margin-left: 25px;
+	margin-left: 20px;
 }
 
 .showcase_achievement img {
@@ -1043,13 +1043,12 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 }
 
 .workshop_showcase_item .showcase_openslot_placeholder, .workshop_showcase_multiitem .showcase_openslot_placeholder {
-	line-height: 160px;
+	line-height: 114px;
 }
 
 .workshop_showcase_mutiitem_ctn {
 	float: left;
-	max-width: 25%;
-	width: 154px;
+	max-width: 20%;
 }
 
 .workshop_showcase_multiitem.showcase_slot {
@@ -1063,7 +1062,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 }
 
 .workshop_showcase_multiitem.openslot {
-	margin: 0;
+	margin: 0px 4px 0px 0px;
+    height: 115px;
+    width: 115px;
 }
 
 .workshop_showcase_item img.workshop_showcase_item_image {
@@ -1261,6 +1262,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .screenshot_showcase_primary {
 	width: 508px;
+    min-height: 358px;
 	max-width: 83%;
 	float: left;
 }
@@ -1333,6 +1335,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	background-position: 0 -65px;
 	width: 17px;
 	height: 17px;
+}
+.screenshot_showcase .screenshot_showcase_primary.showcase_slot.openslot .showcase_openslot_placeholder {
+    line-height: 337px !important;
 }
 
 .profile_recentgame_header {

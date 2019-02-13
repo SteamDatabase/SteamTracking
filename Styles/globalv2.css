@@ -1056,8 +1056,8 @@ select.gray_bevel {
 #SharePopup
 {
 	min-width: 550px;
-	background-color: #323232;
-	border: 1px solid #4a4943;
+	background-color: rgba(59, 63, 72, 0.5);
+	border-radius: 3px;
 	padding: 10px;
 	text-align: left;
 }
@@ -1128,9 +1128,11 @@ select.gray_bevel {
 	top: 0px;
 	padding: 5px;
 	min-width: 500px;
-	background-color: #272626;
-	border: 1px solid #000000;
-	color: #8f8f8f;
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	border: 1px solid #000;
+	border-radius: 3px;
+	color: #C6D4DF;
 }
 
 #ShareOnSteamDialog

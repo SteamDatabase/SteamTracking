@@ -122,8 +122,7 @@
 }
 
 .newmodal.badge_craft_modal .newmodal_content {
-	background-color: #24242c;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/badge_craft_bg.jpg?v=2');
+	background-image: radial-gradient( circle, #6696e1, rgba(40, 44, 56, 0) 48% );
 	background-position: center top;
 	background-repeat: no-repeat;
 }

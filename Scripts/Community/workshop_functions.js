@@ -17,7 +17,7 @@ function DownloadFile( publishFileID )
         }
         else
         {
-            ShowAlertDialog( 'Error', 'Unable to download file: ' + response.success );
+            ShowAlertDialog( 'Error', 'Unable to download file: ' + response.message );
         }
     });
 }

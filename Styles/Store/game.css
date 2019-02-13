@@ -842,6 +842,18 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	margin-left: 2px;
 	vertical-align: middle;
 }
+.game_purchase_action_bg > .discount_pct {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    padding: 0 6px;
+}
+.game_purchase_action_bg > .discount_prices {
+    margin: 0 8px;
+}
 
 .game_purchase_action_qty {
 	height: 32px;
@@ -3198,28 +3210,24 @@ h2.bb_tag + br {
 }
 
 #EmbedModal textarea {
-	width: 646px; height: 80px;
+	width: 634px;
+	height: 80px;
 	font-size: 13px;
 	line-height: 15px;
 	margin: 0 0 15px 0;
-	background-color: #303030;
-	border-top: 1px solid #000;
-	border-left: 1px solid #000;
-	border-right: 1px solid #292929;
-	border-bottom: 1px solid #292929;
-	border-radius: 3px;
-	box-shadow: -4px -4px 4px -4px #292929 inset;
-	color: #fff;
+	background-color: transparent;
+	border: none;
+	color: #8f98a0;
 }
 
 #EmbedModal p {
 	margin: 0 0 15px 0;
-	font-size: 13px;
+	font-size: 14px;
 }
 
 #EmbedModal p.small {
 	margin: 0 0 3px 0;
-	font-size: 11px;
+	font-size: 14px;
 }
 
 #widget_finished, #widget_create {
@@ -3231,11 +3239,12 @@ h2.bb_tag + br {
 }
 
 #EmbedModal .w_option {
-	border: 1px solid #4a4943;
+
 	padding: 12px 12px;
-	margin: 1px 0 0 0;
-	background-color: #323232;
-	color: #fff;
+	margin: 3px 0 0 0;
+	background-color: rgba(59, 63, 72, 0.5);
+	border-radius: 3px;
+	color: #dfe3e6;
 }
 #EmbedModal .w_options {
 	margin-bottom: 15px;
@@ -3332,7 +3341,7 @@ h2.bb_tag + br {
 	line-height: 19px;
 	color: #626366;
 	padding: 2px;
-	background-color: #19191b;
+	background-color: #222225;
 	margin-bottom: 2px;
 }
 
@@ -3406,18 +3415,22 @@ h2.bb_tag + br {
 .app_report_dialog_option_text {
 	margin-left: 25px;
 }
-.app_report_dialog_reason
+.app_report_dialog_reason,
+.app_embed_dialog_description
 {
-	display: inline-block;
-	padding: 5px;
-	width: 590px;
-	height: 90px;
-	border: none;
+	background-color: rgba( 0, 0, 0, 0.2 );
+	border-radius: 3px;
+	border: 1px solid #000;
+	box-shadow: 1px 1px 0 0 rgba( 91, 132, 181, 0.2 );
+	color: #C6D4DF;
+	margin-bottom: 6px;
 	outline: none;
-	background-color: #565658;
-	font-size: 13px;
-	color: #BFBFBF;
+	padding: 4px 6px;
+	display: block;
+	width: calc(100% - 12px);
+	height: 100px;
 }
+
 
 .app_report_dialog_dmca
 {
@@ -3503,12 +3516,16 @@ h2.bb_tag + br {
 	width: 546px;
 }
 
-.app_tag_modal h2 {
-	color: #4d6d8c;
+body.v6 .app_tag_modal h2 {
+	color: #969696;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 20px;
 	margin-bottom: 6px;
+	text-transform: none;
+	letter-spacing: 0px;
+	padding: 0;
+	margin: 0;
 }
 
 .app_tag_modal p {
@@ -3521,11 +3538,6 @@ h2.bb_tag + br {
 	margin-bottom: 8px;
 	font-size: 12px;
 	color: #626467;
-}
-
-.app_tag_modal_frame .newmodal_content_border {
-	padding: 1px;
-	background: #557dab;
 }
 
 .app_tag_form_ctn button {
@@ -3583,27 +3595,36 @@ form#app_tag_form {
 		font-weight: 300; /* light */
 
 			font-size: 16px;
-	color: #ffffff;
+	color: #969696;
 }
 
+.queue_options_ctn {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 32px;
+	border-bottom: 1px solid #000000;
+}
 .dq_settings_section {
-	margin: 12px 0;
+	margin: 12px 32px 0px 0px;
 }
 
 .dq_settings_content .dq_settings_section_title {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
-			color: #67c1f5;
+			color: #969696;
 	padding: 10px 0px 3px 0px;
+	font-size: 13px;
+	text-transform: uppercase;
 }
 
 .dq_settings_checkrow {
 	max-width: 300px;
-	background-color: #19191b;
+	background-color: #3d4450;
 	line-height: 21px;
 	font-size: 14px;
-	padding: 0 6px;
+	padding: 2px 6px;
+	border-radius: 3px;
 	margin-bottom: 1px;
 
 	cursor: pointer;
@@ -3654,7 +3675,7 @@ input.gray_bevel::-webkit-input-placeholder, textarea.gray_bevel::-webkit-input-
 }
 
 input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_textarea_ctn {
-	background-color: #565658;
+	background-color: rgba(0,0,0,0.2);
 	border-radius: 3px;
 	border: 1px solid #262627;
 	box-shadow: 1px 1px 0px #39393a;
@@ -3682,9 +3703,10 @@ input.gray_bevel, textarea.gray_bevel, .gray_bevel, .commentthread_comment_edit_
 .gray_bevel input, .gray_bevel textarea {
 	border: none;
 	outline: none;
-	background-color: #565658;
+	background-color: transparent;
 	font-size: 13px;
 	color: #BFBFBF;
+	box-shadow: none;
 }
 
 .gray_bevel.fullwidth {

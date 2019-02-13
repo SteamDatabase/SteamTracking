@@ -450,9 +450,10 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	var $Dialog = $J('<div/>', {'class': 'newmodal'} );
 	var $CloseButton = $J('<div/>', {'class': 'newmodal_close' });
 	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
-	$Header.append( $CloseButton ).append( $J('<div/>', {'class': 'ellipsis' } ).text( strTitle ) );
+	var $TopBar = ( $J('<div/>', {'class': 'modal_top_bar' }) );
+	$Header.append( $CloseButton ).append( $J('<div/>', {'class': 'title_text' } ).text( strTitle ) );
 	$Header = $J('<div/>', {'class': 'newmodal_header_border'}).append( $Header );
-	$Dialog.append( $Header );
+	$Dialog.append( $TopBar ).append( $Header );
 	var $Content = $J('<div/>', {'class': 'newmodal_content' } );
 	$Content.append( $J('<div/>').append( strDescription ) );
 

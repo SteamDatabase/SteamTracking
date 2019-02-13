@@ -333,8 +333,18 @@
         IN_TENFOOT: !1,
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
-        SESSIONID: "",
         BUILD_TIMESTAMP: 0,
+        get SESSIONID() {
+          return (function() {
+            var e = (function(e) {
+              if (!window.document || !window.document.cookie) return null;
+              var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+              return t && t[2] ? decodeURIComponent(t[2]) : null;
+            })("sessionid");
+            e || (e = u());
+            return e;
+          })();
+        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
@@ -346,42 +356,45 @@
         token: void 0,
         token_use_id: void 0,
         webapi_token: "",
-        authwgtoken: ""
+        authwgtoken: "",
+        is_support: !1
       },
       s = { steamid: "" },
       a = "webui_config";
     function u() {
-      if (i.IN_CLIENT) {
-        var e = (function() {
-          for (var e = "", t = 0; t < 24; t++)
-            e += Object(o.b)(0, 35).toString(36);
-          return e;
-        })();
-        !(function(e, t, n, o) {
-          o || (o = "/");
-          var i = "";
-          if (void 0 !== n && n) {
-            var r = new Date();
-            r.setTime(r.getTime() + 864e5 * n),
-              (i = "; expires=" + r.toUTCString());
+      var e = (function() {
+        for (var e = "", t = 0; t < 24; t++)
+          e += Object(o.b)(0, 35).toString(36);
+        return e;
+      })();
+      return (
+        (function(e, t, n, o) {
+          if (window.document) {
+            o || (o = "/");
+            var i = "";
+            if (void 0 !== n && n) {
+              var r = new Date();
+              r.setTime(r.getTime() + 864e5 * n),
+                (i = "; expires=" + r.toUTCString());
+            }
+            document.cookie =
+              encodeURIComponent(e) +
+              "=" +
+              encodeURIComponent(t) +
+              i +
+              ";path=" +
+              o;
           }
-          document.cookie =
-            encodeURIComponent(e) +
-            "=" +
-            encodeURIComponent(t) +
-            i +
-            ";path=" +
-            o;
         })("sessionid", e, 0),
-          (i.SESSIONID = e);
-      }
+        e
+      );
     }
     function c(e) {
       void 0 === e && (e = a);
       var t = p("config", e);
-      t && Object.assign(i, t);
+      t && (delete t.SESSIONID, Object.assign(i, t));
       var n = p("userinfo", e);
-      n && Object.assign(r, n), u();
+      n && Object.assign(r, n), i.IN_CLIENT && u();
     }
     function p(e, t) {
       void 0 === t && (t = a);
@@ -1995,8 +2008,8 @@
     }
     window.AssertMsg = u.a;
     var y,
-      L,
       C,
+      L,
       k = new s.a();
     function D(e) {
       var t;
@@ -2030,17 +2043,17 @@
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (y = n) : "shared" == e && (L = n);
-        else if ("shared" == e) C = n;
+          "friendsui" == e ? (y = n) : "shared" == e && (C = n);
+        else if ("shared" == e) L = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
           void 0 !== y ? ((o = y), (i = n)) : (o = n),
-            void 0 !== L ? ((r = L), (s = C)) : (r = C),
+            void 0 !== C ? ((r = C), (s = L)) : (r = L),
             a.a.InitFromObjects(o, i, r, s),
-            (C = L = y = void 0);
+            (L = C = y = void 0);
         }
       });
   },

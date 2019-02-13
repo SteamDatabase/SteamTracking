@@ -206,6 +206,11 @@ input.authcode_entry_input, input.twofactorauthcode_entry_input {
 	color: #ffffff;
 }
 
+.auth_buttonset {
+	display: flex;
+	flex-direction: row;
+}
+
 .modal_buttons .auth_button, .modal_buttons .twofactorauth_button, .modal_buttons .twofactorauth_button.leftbtn, .modal_buttons .twofactorauth_button.leftbtn {
 	float: left;
 }

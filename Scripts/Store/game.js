@@ -1186,7 +1186,7 @@ function ShowReportDialog( nAppId )
 		content.append( rgReportOptionElements[i] );
 	}
 
-	var textArea = $J('<textarea/>', { 'class': 'app_report_dialog_reason', 'id' : 'ReportReason',  'name' : 'report_reason' } );
+	var textArea = $J('<textarea/>', { 'class': 'app_report_dialog_reason grey_bevel fullwidth', 'id' : 'ReportReason',  'name' : 'report_reason' } );
 	var maxReasonLength = 512;
 	textArea.attr( 'maxlength', maxReasonLength );
 	textArea.bind( "keyup change",

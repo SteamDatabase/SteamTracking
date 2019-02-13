@@ -2,37 +2,37 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-!(function(u) {
+!(function(s) {
   function e(e) {
     for (
-      var t, n, o = e[0], r = e[1], i = e[2], c = 0, s = [];
+      var t, n, o = e[0], r = e[1], i = e[2], c = 0, u = [];
       c < o.length;
       c++
     )
-      (n = o[c]), l[n] && s.push(l[n][0]), (l[n] = 0);
-    for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (u[t] = r[t]);
-    for (f && f(e); s.length; ) s.shift()();
-    return p.push.apply(p, i || []), a();
+      (n = o[c]), l[n] && u.push(l[n][0]), (l[n] = 0);
+    for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (s[t] = r[t]);
+    for (p && p(e); u.length; ) u.shift()();
+    return d.push.apply(d, i || []), a();
   }
   function a() {
-    for (var e, t = 0; t < p.length; t++) {
-      for (var n = p[t], o = !0, r = 1; r < n.length; r++) {
+    for (var e, t = 0; t < d.length; t++) {
+      for (var n = d[t], o = !0, r = 1; r < n.length; r++) {
         var i = n[r];
         0 !== l[i] && (o = !1);
       }
-      o && (p.splice(t--, 1), (e = c((c.s = n[0]))));
+      o && (d.splice(t--, 1), (e = c((c.s = n[0]))));
     }
     return e;
   }
   var n = {},
     l = { 2: 0 },
-    p = [];
+    d = [];
   function c(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
-    return u[e].call(t.exports, t, t.exports, c), (t.l = !0), t.exports;
+    return s[e].call(t.exports, t, t.exports, c), (t.l = !0), t.exports;
   }
-  (c.m = u),
+  (c.m = s),
     (c.c = n),
     (c.d = function(e, t, n) {
       c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
@@ -81,8 +81,8 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var r = 0; r < t.length; r++) e(t[r]);
-  var f = o;
-  p.push(["x0hG", 0]), a();
+  var p = o;
+  d.push(["x0hG", 0]), a();
 })({
   "/7KC": function(e, t, n) {
     "use strict";
@@ -153,8 +153,18 @@
         IN_TENFOOT: !1,
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
-        SESSIONID: "",
         BUILD_TIMESTAMP: 0,
+        get SESSIONID() {
+          return (function() {
+            var e = (function(e) {
+              if (!window.document || !window.document.cookie) return null;
+              var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+              return t && t[2] ? decodeURIComponent(t[2]) : null;
+            })("sessionid");
+            e || (e = s());
+            return e;
+          })();
+        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
@@ -166,45 +176,48 @@
         token: void 0,
         token_use_id: void 0,
         webapi_token: "",
-        authwgtoken: ""
+        authwgtoken: "",
+        is_support: !1
       },
       c = { steamid: "" },
-      s = "webui_config";
-    function u() {
-      if (r.IN_CLIENT) {
-        var e = (function() {
-          for (var e = "", t = 0; t < 24; t++)
-            e += Object(o.b)(0, 35).toString(36);
-          return e;
-        })();
-        !(function(e, t, n, o) {
-          o || (o = "/");
-          var r = "";
-          if (void 0 !== n && n) {
-            var i = new Date();
-            i.setTime(i.getTime() + 864e5 * n),
-              (r = "; expires=" + i.toUTCString());
+      u = "webui_config";
+    function s() {
+      var e = (function() {
+        for (var e = "", t = 0; t < 24; t++)
+          e += Object(o.b)(0, 35).toString(36);
+        return e;
+      })();
+      return (
+        (function(e, t, n, o) {
+          if (window.document) {
+            o || (o = "/");
+            var r = "";
+            if (void 0 !== n && n) {
+              var i = new Date();
+              i.setTime(i.getTime() + 864e5 * n),
+                (r = "; expires=" + i.toUTCString());
+            }
+            document.cookie =
+              encodeURIComponent(e) +
+              "=" +
+              encodeURIComponent(t) +
+              r +
+              ";path=" +
+              o;
           }
-          document.cookie =
-            encodeURIComponent(e) +
-            "=" +
-            encodeURIComponent(t) +
-            r +
-            ";path=" +
-            o;
         })("sessionid", e, 0),
-          (r.SESSIONID = e);
-      }
+        e
+      );
     }
     function a(e) {
-      void 0 === e && (e = s);
+      void 0 === e && (e = u);
       var t = l("config", e);
-      t && Object.assign(r, t);
+      t && (delete t.SESSIONID, Object.assign(r, t));
       var n = l("userinfo", e);
-      n && Object.assign(i, n), u();
+      n && Object.assign(i, n), r.IN_CLIENT && s();
     }
     function l(e, t) {
-      void 0 === t && (t = s);
+      void 0 === t && (t = u);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -221,7 +234,7 @@
       return i;
     }),
       n.d(t, "b", function() {
-        return s;
+        return u;
       });
     var o = n("tkkQ"),
       r = { success: !0, result: 1 },
@@ -461,8 +474,8 @@
           e
         );
       })(),
-      s = new i();
-    window.ClientConnectionAPI = s;
+      u = new i();
+    window.ClientConnectionAPI = u;
   },
   tkkQ: function(e, t, n) {
     "use strict";

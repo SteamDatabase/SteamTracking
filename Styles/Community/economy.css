@@ -698,8 +698,9 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 }
 
 .market_dialog_content_frame {
-	border: 1px solid #414141;
-	background: #333333;
+
+	background: rgba(0,0,0,0.3);
+	border-radius: 3px;
 }
 
 .market_dialog_content {

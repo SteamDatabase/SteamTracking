@@ -1667,18 +1667,10 @@
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: .5;
-  /*opacity: 1;
-	image-rendering: pixelated;
-
-	-webkit-mask: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
-	-webkit-mask-size: 64px 32px;
-	-webkit-mask-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
-	mask-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/webui/pattern_griddots_thick.png' );
-	mask-size: 64px 32px;*/ }
+  opacity: .5; }
 
 .videoControls {
-  z-index: 20;
+  z-index: 31;
   position: absolute;
   top: 0;
   left: 0;
@@ -1689,7 +1681,8 @@
   opacity: 1;
   transition: all .3s ease-in-out;
   transition-duration: .3s;
-  user-select: none; }
+  user-select: none;
+  pointer-events: none; }
 
 .videoContainer.HidePlayerControls .videoControls,
 .videoContainer.HidePlayerControls .STV_BroadcastClose {
@@ -1706,7 +1699,8 @@
   margin-top: auto;
   margin-bottom: 0;
   padding-bottom: 8px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(29, 30, 35, 0) 100%); }
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(29, 30, 35, 0) 100%);
+  pointer-events: all; }
 
 .STV_BroadcastClose {
   position: absolute;
@@ -1747,7 +1741,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: default;
-  z-index: 5; }
+  z-index: 45; }
 
 .BroadcastVideoWatchState_Text {
   text-align: center;
@@ -1903,13 +1897,17 @@
   margin-left: -64px;
   z-index: 7; }
 
+.STV_BroadcastSettingsPanel.SubtitlesMenu {
+  overflow: hidden scroll;
+  padding-right: 0px; }
+
 .STV_BroadcastContextMenuPanel {
   padding: 8px;
   text-align: center;
   border: 1px solid #333e;
   background: #000c;
   position: absolute;
-  z-index: 22; }
+  z-index: 44; }
 
 .STV_BroadcastSettingsMenuItems {
   background: #234e;
@@ -1934,6 +1932,12 @@
   height: 4px;
   width: 4px;
   border-radius: 50%; }
+
+.settingsMenuSeparator {
+  width: calc(100% - 8px);
+  height: 1px;
+  background-color: #536d84;
+  margin: 4px; }
 
 .videoControlButton .SVGIcon_Button {
   margin-left: 6px; }
@@ -2051,6 +2055,24 @@
 .videoControlButton.buttonPlayPause:hover {
   border: 1px solid #7e7e7e;
   background-color: #7e7e7e; }
+
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption {
+  width: 24px;
+  height: 24px;
+  margin-top: -2px;
+  margin-left: -2px; }
+
+.videoControlButton .SVGIcon_Button.SVGIcon_ClosedCaption path.CCBox {
+  fill: transparent;
+  stroke: #7e7e7e; }
+
+.videoControlButton.ClosedCaptionsActive .SVGIcon_Button.SVGIcon_ClosedCaption path.CCBox {
+  fill: #ccc;
+  stroke: #000; }
+
+.videoControlButton.ClosedCaptionsActive .SVGIcon_Button.SVGIcon_ClosedCaption path.C1 {
+  fill: #000;
+  stroke: #7e7e7e; }
 
 .BroadcastVolumeControl {
   /* collapsed width */
@@ -2451,7 +2473,7 @@
   backdrop-filter: blur(8px);
   margin: 6px;
   border: 1px solid black;
-  z-index: 21; }
+  z-index: 40; }
 
 .dash_video_stats .videoStatsValue {
   color: white; }
@@ -2778,9 +2800,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /*border: 2px dotted orange;*/
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  box-sizing: border-box; }
 
 .videoContainer .BroadcastDetails {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(29, 30, 35, 0) 100%);
@@ -2810,6 +2832,7 @@
   padding-bottom: 56.25%; }
 
 .videoSrc {
+  transition: all .06s ease-in-out;
   z-index: 2;
   max-width: 100%;
   height: 100%;
@@ -2820,6 +2843,9 @@
   top: 0;
   bottom: 0;
   background-color: #18191d; }
+
+.videoContainer.VideoPaused .videoSrc {
+  filter: saturate(0.5) brightness(0.96); }
 
 iframe.steamTVLogin {
   border: none;
@@ -3186,6 +3212,177 @@ iframe.steamTVLogin {
   background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
   background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
 
+.LinkOverlayContainer {
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 30;
+  -webkit-app-region: no-drag; }
+
+.LinkRegion {
+  left: 15%;
+  top: 20%;
+  width: 20%;
+  height: 10%;
+  opacity: 0.1;
+  background-color: yellow;
+  display: table;
+  position: absolute; }
+
+.LinkRegion:hover {
+  opacity: 0.5; }
+
+.LinkRegionText {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+.LinkRegionDragBox {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  right: 32px;
+  bottom: 32px;
+  -webkit-app-region: no-drag;
+  z-index: 50; }
+
+.LinkRegionDragBox.EdgeDown {
+  z-index: 52; }
+
+.LinkRegionGridBox {
+  width: calc( 100% + 30px);
+  height: calc( 100% + 30px);
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-rows: 16px auto 16px;
+  grid-gap: 0;
+  grid-row-gap: 0;
+  margin-left: -16px;
+  margin-top: -16px;
+  -webkit-app-region: no-drag; }
+
+.LinkRegionEdge {
+  background-color: rgba(92, 191, 230, 0.192);
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: no-drag; }
+
+.LinkRegionEdge.TopLeft {
+  border-right: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nwse-resize; }
+
+.LinkRegionEdge.Top {
+  border-bottom: 2px dotted #008ada;
+  background: linear-gradient(to top, rgba(1, 153, 255, 0.5) -50%, rgba(29, 30, 35, 0) 100%);
+  cursor: ns-resize; }
+
+.LinkRegionEdge.TopRight {
+  border-left: 2px dotted #008ada;
+  border-bottom: 2px dotted #008ada;
+  cursor: nesw-resize; }
+
+.LinkRegionEdge.Left {
+  border-right: 2px dotted #008ada;
+  background: linear-gradient(to left, rgba(1, 153, 255, 0.5) -50%, rgba(29, 30, 35, 0) 100%);
+  cursor: ew-resize; }
+
+.LinkRegionEdge.Middle {
+  cursor: move; }
+
+.LinkRegionEdge.Middle .LinkRegionDelete {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all .21s ease-in-out; }
+
+.LinkRegionEdge.Middle .LinkRegionDelete line {
+  stroke-width: 26px;
+  stroke: #008ada;
+  transition: all .21s ease-in-out; }
+
+.LinkRegionEdge.Middle:hover .LinkRegionDelete:hover line {
+  stroke: #cce0ff; }
+
+.LinkRegionEdge.Middle:hover .LinkRegionDelete {
+  opacity: 1; }
+
+.LinkRegionEdge.Right {
+  border-left: 2px dotted #008ada;
+  background: linear-gradient(to right, rgba(1, 153, 255, 0.5) -50%, rgba(29, 30, 35, 0) 100%);
+  cursor: ew-resize; }
+
+.LinkRegionEdge.BottomLeft {
+  border-right: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nesw-resize; }
+
+.LinkRegionEdge.Bottom {
+  border-top: 2px dotted #008ada;
+  background: linear-gradient(to bottom, rgba(1, 153, 255, 0.5) -50%, rgba(29, 30, 35, 0) 100%);
+  cursor: ns-resize; }
+
+.LinkRegionEdge.BottomRight {
+  border-left: 2px dotted #008ada;
+  border-top: 2px dotted #008ada;
+  cursor: nwse-resize; }
+
+.AddLinkRegion {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding: 8px;
+  background: #000a;
+  border: 1px solid rgba(59, 127, 238, 0.541);
+  color: #3b7fee;
+  z-index: 51;
+  user-select: none;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.AddLinkRegion:hover {
+  border: 1px solid white;
+  color: white; }
+
+.LinkRegionDragBox.topleft .LinkRegionEdge.TopLeft,
+.LinkRegionDragBox.top .LinkRegionEdge.Top,
+.LinkRegionDragBox.topright .LinkRegionEdge.TopRight,
+.LinkRegionDragBox.left .LinkRegionEdge.Left,
+.LinkRegionDragBox.right .LinkRegionEdge.Right,
+.LinkRegionDragBox.bottomleft .LinkRegionEdge.BottomLeft,
+.LinkRegionDragBox.bottom .LinkRegionEdge.Bottom,
+.LinkRegionDragBox.bottomright .LinkRegionEdge.BottomRight {
+  border-color: white; }
+
+.LinkRegionEdge:hover {
+  border-color: #7eadf8; }
+
+.LinkRegionEdge.Middle {
+  background-color: rgba(191, 202, 250, 0.133); }
+
+.EdgeDown.middle .LinkRegionEdge.Middle,
+.LinkRegionEdge.Middle:hover {
+  z-index: 10;
+  background-color: rgba(133, 156, 255, 0.171); }
+
+.EdgeDown.middle .LinkRegionEdge.Right,
+.EdgeDown.middle .LinkRegionEdge.Bottom,
+.EdgeDown.middle .LinkRegionEdge.Top,
+.EdgeDown.middle .LinkRegionEdge.Left {
+  border-color: white; }
+
 @media screen and (max-width: 420px) and (min-height: 420px) {
   .BroadcastContainer {
     flex-direction: column;
@@ -3194,6 +3391,9 @@ iframe.steamTVLogin {
     justify-content: space-between; }
   .StandalonePlayer .BroadcastContainerSectionVideoContainer {
     flex: 1; }
+  .StandalonePlayer .BroadcastContainerSection {
+    width: 100% !important;
+    max-width: 100% !important; }
   .BroadcastContainerSection {
     flex: 0 0 auto;
     align-self: stretch; }
@@ -3201,7 +3401,15 @@ iframe.steamTVLogin {
     width: 100%; }
   .BroadcastDetailsSection {
     flex-basis: auto;
-    max-height: 32px; }
+    max-height: 32px;
+    display: none; }
+  .BroadcastChatDivider.horizontal {
+    height: 6px;
+    width: 100%;
+    display: none; }
+  .BroadcastChatDiv {
+    height: 100%; }
+  .StandalonePlayer .LoginDiv,
   .BroadcastDetailsSection .BroadcastDetails .broadcastDetailsThumbBlur {
     display: none; }
   .WatchWithFriends {
@@ -3223,7 +3431,15 @@ iframe.steamTVLogin {
     height: 100%; }
   .StandalonePlayer .BroadcastContainer {
     height: 100%;
-    flex: 1; }
+    flex: 1;
+    flex-direction: column; }
+  .StandalonePlayer .FullpageBroadcastBackdrop {
+    position: absolute; }
+  .StandalonePlayer .videoSrc {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0; }
   .BroadcastDetailsSection .BroadcastDetails .BroadcastDetailsHeader {
     font-size: 12px; }
   .dash_video_stats {
@@ -3321,6 +3537,14 @@ iframe.steamTVLogin {
     .StandalonePlayer .BroadcastContainerSectionVideoContainer {
       flex: 1;
       max-height: calc(100% - 32px); }
+    .StandalonePlayer .FullpageBroadcastBackdrop {
+      position: absolute; }
+    .StandalonePlayer .BroadcastContainerSection {
+      width: 100% !important;
+      max-width: 100% !important; }
+    .StandalonePlayer .BroadcastChatDivider.horizontal,
+    .StandalonePlayer .BroadcastChatDiv {
+      display: none !important; }
     .BroadcastContainerSection {
       flex: 1 1 auto;
       align-self: stretch; }
@@ -5405,6 +5629,15 @@ html.ContextMenuPopup .contextMenu .contextMenuItem {
   color: #6b7072;
   cursor: default; }
 
+.contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
+  height: 14px;
+  width: 14px;
+  transform: rotateZ(-90deg);
+  position: absolute;
+  right: 2px;
+  top: 6px;
+  fill: #9ca4a7; }
+
 .contextMenuItem.menuChecked {
   color: #6dcff6; }
 
@@ -5422,7 +5655,18 @@ html.ContextMenuPopup .contextMenu .contextMenuItem {
 .contextMenuItem.menuChecked .contextMenuCheckMark {
   display: block; }
 
-.contextMenuSectionHeader {
+.contextMenu .SVGIcon_Button {
+  height: 10px;
+  width: 10px;
+  margin-right: 4px; }
+
+/* Separate menu sections with extra space and different header text style. */
+.contextMenuItem.MenuSectionHeader {
+  padding-top: 16px;
+  font-size: 12px;
+  text-transform: uppercase; }
+
+.contextMenuGameItem {
   max-width: 190px;
   line-height: 20px;
   -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
@@ -6049,6 +6293,43 @@ button.DialogButton::-moz-focus-inner {
 .PopupFullWindow {
   height: 100%; }
 
+.FullModalOverlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1500; }
+
+.FullModalOverlay.NotReadyToRender {
+  background: black; }
+
+.FullModalOverlay .ModalPosition_Content {
+  height: initial;
+  width: initial;
+  max-width: 80vw;
+  max-height: 90vh; }
+
+.ModalOverlayContent {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.ModalOverlayContent.inactive {
+  z-index: 5; }
+
+.ModalOverlayContent.active {
+  z-index: 10; }
+
+.ModalOverlayBackground {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 7; }
+
+.ModalOverlayBackground.NotificationBrowserWarning {
+  background: rgba(0, 0, 0, 0.9); }
+
 .DialogBody {
   padding-top: 4px;
   padding-right: 12px;
@@ -6068,6 +6349,13 @@ button.DialogButton::-moz-focus-inner {
   overflow: auto;
   padding-right: 2px;
   padding-bottom: 16px; }
+
+.ModalDialogPopup .ModalDialogBody {
+  margin: 0px; }
+
+/* We need .title-area for dragging the window, but if it covers the entire dialog, it blocks click events from the buttons. */
+.ModalDialogPopup .ModalDialogBody .title-area {
+  height: 80px; }
 
 .ModalDialogPopup .DialogInnerBody {
   overflow-y: scroll;
@@ -6112,8 +6400,6 @@ button.DialogButton::-moz-focus-inner {
 
 .ModalPosition_Content {
   box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, 0.75);
-  max-width: 80vw;
-  max-height: 90vh;
   margin: auto;
   font-weight: 300;
   color: #969696;
@@ -6213,13 +6499,6 @@ button.DialogButton::-moz-focus-inner {
   max-height: none;
   width: 100%;
   height: 100%; }
-
-.ModalAnimation-appear .ModalPosition,
-.ModalAnimation-leave .ModalPosition {
-  opacity: 0;
-  box-shadow: 0px 4px 18px 3px black;
-  transform: scale3d(0.92, 0.92, 1);
-  transition-duration: .42s; }
 
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
   margin-bottom: 16px;
@@ -7274,8 +7553,10 @@ body.in_global_drag .title-area {
   display: flex;
   flex-direction: row; }
 
-.fullHeight {
-  height: 100%; }
+.fullheight {
+  height: 100%;
+  top: 0px;
+  bottom: 0px; }
 
 .fullWidth {
   width: 100%; }
@@ -10262,7 +10543,8 @@ body.in_global_drag .friendlist_titlebar {
   display: flex;
   flex-direction: row;
   flex: 1;
-  min-height: 0; }
+  min-height: 0;
+  min-width: 0; }
 
 .broadcastVisible .chatStack:not(.GroupChatVisible) .chatHistoryAndMembers {
   display: none; }
@@ -10274,8 +10556,9 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
 
 .chatFileUploadPreviewContainer {
   position: absolute;
-  bottom: 55px;
-  min-width: 40px;
+  bottom: 72px;
+  left: 16px;
+  min-width: 260px;
   background: #2c3036;
   padding: 8px;
   border-radius: 4px;
@@ -14675,7 +14958,7 @@ img.emoticon.large {
   top: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 20;
+  z-index: 50;
   font-size: 16px;
   -webkit-app-region: no-drag; }
 
@@ -15022,49 +15305,6 @@ span.mention.me {
 .nicknameError {
   margin: 20px 0;
   color: #990000; }
-
-.chat_full_modaloverlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 150; }
-
-.chat_modal_position {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-
-.chat_modal_background {
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 7; }
-
-.chat_modal_background.NotificationBrowserWarning {
-  background: rgba(0, 0, 0, 0.9); }
-
-.chat_modal_position.inactive {
-  z-index: 5; }
-
-.chat_modal_position.active {
-  z-index: 10; }
-
-.chat_full_modaloverlay.NotReadyToRender {
-  background: black; }
-
-.chat_full_modaloverlay .PopupGeneric {
-  max-height: 75%;
-  display: flex;
-  flex-direction: column; }
-
-.chat_full_modaloverlay .PopupGeneric .PopupGenericControls {
-  align-self: auto;
-  flex-shrink: 0; }
-
-.chat_full_modaloverlay .PopupGeneric .PopupGenericContent {
-  overflow-y: auto; }
 
 .disconnectBlocker {
   display: none;
@@ -18637,15 +18877,6 @@ a.general_btn:hover {
 .contextMenu .currentUserContextMenu .contextMenuSectionContent .contextMenuItem {
   border-color: transparent; }
 
-.contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
-  height: 14px;
-  width: 14px;
-  transform: rotateZ(-90deg);
-  position: absolute;
-  right: 2px;
-  top: 6px;
-  fill: #9ca4a7; }
-
 .contextMenuGameIcon {
   width: 20px;
   height: 20px;
@@ -18904,12 +19135,6 @@ a.general_btn:hover {
 .ChatRoomMultiFriendAvatar.Large .ChatRoomMultiFriendMore {
   line-height: 40px;
   font-size: 16px; }
-
-.PopupFullWindow .chat_full_modaloverlay .ModalPosition_Content {
-  height: initial;
-  width: initial;
-  max-width: 80vw;
-  max-height: 90vh; }
 
 .ChannelSpecificNotificationSettings_Inherit {
   font-style: italic; }
