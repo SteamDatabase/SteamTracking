@@ -6,6 +6,7 @@ public:
     virtual unknown_ret CreateGlobalUser(int*) = 0;
     virtual unknown_ret ConnectToGlobalUser(int) = 0;
     virtual unknown_ret CreateLocalUser(int*, EAccountType) = 0;
+    virtual unknown_ret CreatePipeToLocalUser(int, int*) = 0;
     virtual unknown_ret ReleaseUser(int, int) = 0;
     virtual unknown_ret IsValidHSteamUserPipe(int, int) = 0;
     virtual unknown_ret GetIClientUser(int, int) = 0;
@@ -66,14 +67,14 @@ public:
     virtual unknown_ret GetIClientBluetoothManager(int) = 0;
     virtual unknown_ret GetIClientSharedConnection(int, int) = 0;
     virtual unknown_ret GetIClientShader(int, int) = 0;
-    virtual unknown_ret GetIClientNetworkingMessages(int, int) = 0;
-    virtual unknown_ret GetIClientNetworkingSockets(int, int) = 0;
     virtual unknown_ret GetIClientNetworkingSocketsSerialized(int, int) = 0;
-    virtual unknown_ret GetIClientNetworkingUtils(int) = 0;
-    virtual unknown_ret GetIClientNetworkingUtilsSerialized(int) = 0;
     virtual unknown_ret GetIClientCompat(int, int) = 0;
     virtual unknown_ret SetClientCommandLine(int, char**) = 0;
     virtual unknown_ret GetIClientParties(int, int) = 0;
+    virtual unknown_ret GetIClientNetworkingMessages(int, int) = 0;
+    virtual unknown_ret GetIClientNetworkingSockets(int, int) = 0;
+    virtual unknown_ret GetIClientNetworkingUtils(int) = 0;
+    virtual unknown_ret GetIClientNetworkingUtilsSerialized(int) = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret GetIPCServerMap() = 0;
