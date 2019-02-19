@@ -180,6 +180,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csteamnetworkingmessages.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csteamnetworkingsockets.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csteamnetworkingsockets_sdr.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csteamnetworkingsockets_steam.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/csteamnetworkingsockets_steamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/datatracker.o
@@ -431,6 +432,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csinterface.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csteamnetworkingmessages.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csteamnetworkingsockets.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csteamnetworkingsockets_sdr.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csteamnetworkingsockets_steam.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/csteamnetworkingsockets_steamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/datatracker.o
@@ -1772,6 +1774,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingmessages.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steam.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steamclient.cpp

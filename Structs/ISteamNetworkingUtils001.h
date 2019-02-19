@@ -18,4 +18,8 @@ public:
     virtual unknown_ret GetConfigValue(ESteamNetworkingConfigValue, ESteamNetworkingConfigScope, long, ESteamNetworkingConfigDataType*, void*, unsigned long*) = 0;
     virtual unknown_ret GetConfigValueInfo(ESteamNetworkingConfigValue, char const**, ESteamNetworkingConfigDataType*, ESteamNetworkingConfigScope*, ESteamNetworkingConfigValue*) = 0;
     virtual unknown_ret GetFirstConfigValue() = 0;
+    virtual unknown_ret SteamNetworkingIPAddr_ToString(SteamNetworkingIPAddr const&, char*, unsigned long, bool) = 0;
+    virtual unknown_ret SteamNetworkingIPAddr_ParseString(SteamNetworkingIPAddr*, char const*) = 0;
+    virtual unknown_ret SteamNetworkingIdentity_ToString(SteamNetworkingIdentity const&, char*, unsigned long) = 0;
+    virtual unknown_ret SteamNetworkingIdentity_ParseString(SteamNetworkingIdentity*, char const*) = 0;
 };
