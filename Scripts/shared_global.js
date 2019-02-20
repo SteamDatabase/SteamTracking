@@ -452,6 +452,10 @@ function _BuildDialog( strTitle, strDescription, rgButtons, fnOnCancel, rgModalP
 	var $Header = ( $J('<div/>', {'class': 'newmodal_header' }) );
 	var $TopBar = ( $J('<div/>', {'class': 'modal_top_bar' }) );
 	$Header.append( $CloseButton ).append( $J('<div/>', {'class': 'title_text' } ).text( strTitle ) );
+    if ( rgModalParams && rgModalParams.strSubTitle ) {
+        var $SubTitle = (rgModalParams.strSubTitle);
+        $Header.append( $J('<div/>', {'class': 'subtitle_text' } ).text( $SubTitle ) )
+    }
 	$Header = $J('<div/>', {'class': 'newmodal_header_border'}).append( $Header );
 	$Dialog.append( $TopBar ).append( $Header );
 	var $Content = $J('<div/>', {'class': 'newmodal_content' } );

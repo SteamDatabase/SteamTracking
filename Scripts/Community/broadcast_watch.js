@@ -342,6 +342,8 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 				WebStorage.SetLocal( "broadcastViewerToken", _watch.m_ulViewerToken );
 			}
 
+			_watch.m_player.SetBroadcastReplay( data.is_replay ? true : false );
+
 			// We prefer DASHMPEG playback ahead of HLS support. For DASH we have a lot more control and features.
 			if( _watch.BCanPlayDashMpeg() )
 			{
@@ -546,6 +548,8 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 			RecordAppImpression( data.appid, g_SNR );
 		}
 	}
+
+	this.m_player.SetBroadcastReplay( data.is_replay ? true : false );
 
 	if ( strTitle.length > 0 && strGameName.length > 0 && data.appid != 0 )
 		$J( '#BroadcastTitleSeparator' ).show();

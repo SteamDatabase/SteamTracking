@@ -1518,6 +1518,60 @@
   overflow: hidden;
   margin: auto; }
 
+.emoticon_EmoticonSelector_177nw {
+  max-height: 25vh;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 302px; }
+  .emoticon_EmoticonSelector_177nw img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    width: 27px;
+    height: 27px; }
+
+.emoticon_EmoticonSelector_Emoticons_1OTXW {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  flex: 1; }
+
+.emoticon_EmoticonSelector_Separator_1_yzI {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px; }
+  .emoticon_EmoticonSelector_Separator_1_yzI .emoticon_EmoticonSelector_SeparatorBackground_13bYy {
+    height: 2px;
+    background: #8492a4; }
+
+.emoticon_EmoticonSelector_Controls_1hOWv {
+  display: flex;
+  align-content: flex-start;
+  padding: 5px;
+  flex-shrink: 0; }
+
+.emoticon_EmoticonSelector_Item_3muLb {
+  margin: 2px;
+  width: 28px;
+  height: 28px;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center; }
+  .emoticon_EmoticonSelector_Item_3muLb:hover .emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    transform: scale(1.25);
+    filter: brightness(1.25); }
+
+.emoticon_EmoticonSelector_Item_New_spFg_ {
+  position: relative; }
+
+img.emoticon_emoticon_9hYGN {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  transition: all .1s ease-in-out;
+  /* Actual source is 54px, 36px is 2/3 scale */ }
+  img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    width: 36px;
+    height: 36px; }
+
 /* These styles are used within the returned emoticon tooltip, so need to be global for now */
 .emoticon_hover_arrow {
   width: 13px;
@@ -1722,6 +1776,24 @@
 .STV_BroadcastClose:hover {
   background-color: #000a;
   opacity: 1; }
+
+.STV_ReplayBanner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 10px;
+  z-index: 20;
+  color: black;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  background-image: url("../../images/webui/textures/rebroadcast.png");
+  box-shadow: 0 0 10px black; }
+
+.videoContainer.fullscreenVideo .STV_ReplayBanner {
+  font-size: 1.5vh;
+  line-height: 2vh; }
 
 .videoContainer.HidePlayerControls video {
   cursor: none; }
@@ -3213,15 +3285,45 @@ iframe.steamTVLogin {
   background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
 
 .LinkOverlayContainer {
-  width: 100%;
-  height: 85%;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 30;
-  -webkit-app-region: no-drag; }
+  -webkit-app-region: no-drag;
+  display: flex;
+  flex-direction: column; }
+
+.LinkOverlayValidRegion {
+  width: 100%;
+  height: 85%;
+  -webkit-app-region: no-drag;
+  position: relative; }
+
+.LinkOverlayInvalidRegion {
+  width: 100%;
+  height: 15%;
+  background-image: url("../../images/webui/textures/diagonal_bg_transparent.png");
+  background-size: 16px;
+  border-top: 1px solid rgba(101, 164, 212, 0.25);
+  border-bottom: 1px solid rgba(101, 164, 212, 0.25);
+  background-color: #0003;
+  opacity: 1;
+  display: flex;
+  justify-content: center; }
+
+.LinkOverlayInvalidRegion > div {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #80c1f3;
+  text-align: center;
+  width: fit-content;
+  vertical-align: middle;
+  font-size: 16px;
+  text-shadow: 1px 1px 2px 4px #000, 1px 1px 3px 3px #000;
+  font-weight: 100;
+  align-self: center; }
 
 .LinkRegion {
   left: 15%;
@@ -3582,7 +3684,8 @@ iframe.steamTVLogin {
   flex-grow: 1;
   overflow-y: scroll;
   flex-basis: 1px;
-  position: relative; }
+  position: relative;
+  padding: 8px; }
 
 .broadcastchat_EmoticonContainer_3ArHy {
   width: 15%;
@@ -6473,6 +6576,12 @@ button.DialogButton::-moz-focus-inner {
   flex-direction: column;
   overflow: auto;
   /*border: 0.5px dashed #f805;*/ }
+
+.DialogContent.DialogContentFullSize {
+  width: max-content; }
+
+.DialogContentFullSize .DialogContent_InnerWidth {
+  max-width: none; }
 
 .ModalDialogPopup .DialogContent {
   width: 100%;
@@ -14156,21 +14265,6 @@ html.web_chat_frame .perf_timing_area {
 .SingleUserChat .ChatMessageBlock {
   clear: left; }
 
-img.emoticon {
-  vertical-align: middle;
-  width: 18px;
-  height: 18px;
-  transition: all .1s ease-in-out; }
-
-/* Actual source is 54px, 36px is 2/3 scale */
-img.emoticon.large {
-  width: 36px;
-  height: 36px; }
-
-.EmoticonSelector img.emoticon.large {
-  width: 27px;
-  height: 27px; }
-
 /*
  * /spoiler styling
  */
@@ -18807,34 +18901,6 @@ a.general_btn:hover {
   white-space: nowrap;
   font-size: 12px; }
 
-.EmoticonSelector {
-  max-height: 25vh;
-  max-width: 40vw;
-  display: flex;
-  flex-direction: column;
-  max-width: 302px; }
-
-.EmoticonSelector_Emoticons {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  flex: 1; }
-
-.EmoticonSelector_Separator {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px; }
-
-.EmoticonSelector_Separator .EmoticonSelector_SeparatorBackground {
-  height: 2px;
-  background: #8492a4; }
-
-.EmoticonSelector_Controls {
-  display: flex;
-  align-content: flex-start;
-  padding: 5px;
-  flex-shrink: 0; }
-
 .EmoticonSelector_Toggle {
   margin-right: 8px;
   border-radius: 3px;
@@ -18843,21 +18909,6 @@ a.general_btn:hover {
 
 .EmoticonSelector_Toggle.Active {
   background: #777777; }
-
-.EmoticonSelector_Item {
-  margin: 2px;
-  width: 28px;
-  height: 28px;
-  padding: 5px 0;
-  cursor: pointer;
-  text-align: center; }
-
-.EmoticonSelector_Item_New {
-  position: relative; }
-
-.EmoticonSelector_Item:hover .emoticon.large {
-  transform: scale(1.25);
-  filter: brightness(1.25); }
 
 .EmoticonSuggestion_Emoticon {
   position: relative;

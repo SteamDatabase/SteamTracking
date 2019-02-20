@@ -290,6 +290,7 @@ LocalizationReady("shared", "english", {
   DASHPlayerControls_GoLive: "Go Live",
   DASHPlayerControls_IsLive: "Live",
   DASHPlayerControls_ClickToPlay: "Click to Play",
+  DASHPlayerControls_IsReplay: "RE-BROADCAST",
 
   Broadcast_View_Stack_H: "Horizontal View",
   Broadcast_View_Stack_V: "Vertical View",

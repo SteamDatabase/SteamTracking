@@ -402,22 +402,26 @@
     "use strict";
     n("mrSG");
     var r = n("/7KC");
+    function c() {
+      return !!window.document;
+    }
     n.d(t, "b", function() {
-      return o;
+      return i;
     }),
       n.d(t, "e", function() {
-        return i;
+        return s;
       }),
       n.d(t, "a", function() {
-        return c;
+        return a;
       }),
       n.d(t, "d", function() {
-        return l;
+        return m;
       }),
       n.d(t, "c", function() {
-        return u;
+        return p;
       });
-    var o = {
+    var o,
+      i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -443,21 +447,23 @@
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
+        PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
+            if (!c()) return o || (o = u()), o;
             var e = (function(e) {
-              if (!window.document || !window.document.cookie) return null;
+              if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = a());
+            e || (e = u());
             return e;
           })();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
-      i = {
+      s = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -468,9 +474,9 @@
         authwgtoken: "",
         is_support: !1
       },
-      c = { steamid: "" },
-      s = "webui_config";
-    function a() {
+      a = { steamid: "" },
+      l = "webui_config";
+    function u() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(r.b)(0, 35).toString(36);
@@ -478,7 +484,7 @@
       })();
       return (
         (function(e, t, n, r) {
-          if (window.document) {
+          if (c()) {
             r || (r = "/");
             var o = "";
             if (void 0 !== n && n) {
@@ -498,15 +504,15 @@
         e
       );
     }
-    function l(e) {
-      void 0 === e && (e = s);
-      var t = u("config", e);
-      t && (delete t.SESSIONID, Object.assign(o, t));
-      var n = u("userinfo", e);
-      n && Object.assign(i, n), o.IN_CLIENT && a();
+    function m(e) {
+      void 0 === e && (e = l);
+      var t = p("config", e);
+      t && (delete t.SESSIONID, Object.assign(i, t));
+      var n = p("userinfo", e);
+      n && Object.assign(s, n), i.IN_CLIENT && u();
     }
-    function u(e, t) {
-      void 0 === t && (t = s);
+    function p(e, t) {
+      void 0 === t && (t = l);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -1149,17 +1155,17 @@
                   : (s.menuRight = u - (c.bOverlapHorizontal ? v : f));
               var E = l || r.top,
                 S = l || r.bottom,
-                k = o.height;
-              c.bMatchHeight && ((k = S - E), (s.menuHeight = k));
-              var M = (c.bOverlapVertical ? S : E) - k,
-                C = 0 < M,
-                P = m - (c.bOverlapVertical ? E : S) - k,
+                M = o.height;
+              c.bMatchHeight && ((M = S - E), (s.menuHeight = M));
+              var k = (c.bOverlapVertical ? S : E) - M,
+                C = 0 < k,
+                P = m - (c.bOverlapVertical ? E : S) - M,
                 I = 0 < P,
                 L = (c.bPreferPopTop || !I) && C;
               C ||
                 I ||
-                ((L = P < M),
-                c.bFitToWindow && ((k += (L ? M : P) - 8), (s.menuHeight = k))),
+                ((L = P < k),
+                c.bFitToWindow && ((M += (L ? k : P) - 8), (s.menuHeight = M))),
                 L
                   ? (s.menuBottom = m - (c.bOverlapVertical ? S : E))
                   : (s.menuTop = c.bOverlapVertical ? E : S),
@@ -2406,7 +2412,7 @@
                   Object(s.b)("#ProfilePrivacy_GameLibrary_Desc"),
                   1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                     i.createElement(
-                      M,
+                      k,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyPlaytime",
@@ -2450,7 +2456,7 @@
                   ),
                   1 != e.GetPrivacySetting("PrivacyInventory") &&
                     i.createElement(
-                      M,
+                      k,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyInventoryGifts",
@@ -2577,7 +2583,7 @@
                   "public/images/skin_1/actionArrowDnWhite.gif"
               })
             ),
-            i.createElement(k, {
+            i.createElement(M, {
               eSaveState: this.props.PrivacyStore.GetSaveState(
                 this.props.PrivacyKey
               )
@@ -2589,7 +2595,7 @@
         (t = a.c([_.observer], t))
       );
     })(i.Component);
-    function k(e) {
+    function M(e) {
       switch (e.eSaveState) {
         case 1:
           return i.createElement(
@@ -2614,7 +2620,7 @@
           return null;
       }
     }
-    var M = (function(e) {
+    var k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2711,7 +2717,7 @@
                     "public/images/skin_1/actionArrowDnWhite.gif"
                 })
               ),
-              i.createElement(k, {
+              i.createElement(M, {
                 eSaveState: this.props.PrivacyStore.GetCommentSaveState()
               })
             );
@@ -2970,10 +2976,10 @@
         return S;
       }),
       n.d(t, "s", function() {
-        return k;
+        return M;
       }),
       n.d(t, "z", function() {
-        return M;
+        return k;
       }),
       n.d(t, "I", function() {
         return C;
@@ -3965,7 +3971,7 @@
         })
       );
     }
-    function k() {
+    function M() {
       return r.createElement(
         "svg",
         {
@@ -4009,7 +4015,7 @@
         })
       );
     }
-    function M() {
+    function k() {
       return r.createElement(
         "svg",
         {

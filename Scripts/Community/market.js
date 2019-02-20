@@ -1407,7 +1407,7 @@ AdvancedSearchDialog = {
 		$(document).observe( 'keydown', this.m_fnDocumentKeyHandler );
 
 		var _this = this;
-		this.m_modal = ShowDialog( '', $J('#market_advancedsearch_dialog' ).show() );
+		this.m_modal = ShowDialog( "Search Community Market", $J('#market_advancedsearch_dialog' ).show() );
 		this.m_modal.SetRemoveContentOnDismissal( false );
 		this.m_modal.always( function() { _this.Dismiss(); } );
 		$('market_advancedsearch_dialog').focus();

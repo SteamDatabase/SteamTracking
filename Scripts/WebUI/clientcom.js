@@ -11,22 +11,22 @@
     )
       (n = o[c]), l[n] && u.push(l[n][0]), (l[n] = 0);
     for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (s[t] = r[t]);
-    for (p && p(e); u.length; ) u.shift()();
-    return d.push.apply(d, i || []), a();
+    for (d && d(e); u.length; ) u.shift()();
+    return p.push.apply(p, i || []), a();
   }
   function a() {
-    for (var e, t = 0; t < d.length; t++) {
-      for (var n = d[t], o = !0, r = 1; r < n.length; r++) {
+    for (var e, t = 0; t < p.length; t++) {
+      for (var n = p[t], o = !0, r = 1; r < n.length; r++) {
         var i = n[r];
         0 !== l[i] && (o = !1);
       }
-      o && (d.splice(t--, 1), (e = c((c.s = n[0]))));
+      o && (p.splice(t--, 1), (e = c((c.s = n[0]))));
     }
     return e;
   }
   var n = {},
     l = { 2: 0 },
-    d = [];
+    p = [];
   function c(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
@@ -81,8 +81,8 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var r = 0; r < t.length; r++) e(t[r]);
-  var p = o;
-  d.push(["x0hG", 0]), a();
+  var d = o;
+  p.push(["x0hG", 0]), a();
 })({
   "/7KC": function(e, t, n) {
     "use strict";
@@ -113,22 +113,26 @@
     "use strict";
     n("mrSG");
     var o = n("/7KC");
+    function c() {
+      return !!window.document;
+    }
     n.d(t, "b", function() {
-      return r;
+      return i;
     }),
       n.d(t, "e", function() {
-        return i;
+        return u;
       }),
       n.d(t, "a", function() {
-        return c;
+        return s;
       }),
       n.d(t, "d", function() {
-        return a;
+        return p;
       }),
       n.d(t, "c", function() {
-        return l;
+        return d;
       });
-    var r = {
+    var r,
+      i = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -154,21 +158,23 @@
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
+        PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
+            if (!c()) return r || (r = l()), r;
             var e = (function(e) {
-              if (!window.document || !window.document.cookie) return null;
+              if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = s());
+            e || (e = l());
             return e;
           })();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
-      i = {
+      u = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -179,9 +185,9 @@
         authwgtoken: "",
         is_support: !1
       },
-      c = { steamid: "" },
-      u = "webui_config";
-    function s() {
+      s = { steamid: "" },
+      a = "webui_config";
+    function l() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(o.b)(0, 35).toString(36);
@@ -189,7 +195,7 @@
       })();
       return (
         (function(e, t, n, o) {
-          if (window.document) {
+          if (c()) {
             o || (o = "/");
             var r = "";
             if (void 0 !== n && n) {
@@ -209,15 +215,15 @@
         e
       );
     }
-    function a(e) {
-      void 0 === e && (e = u);
-      var t = l("config", e);
-      t && (delete t.SESSIONID, Object.assign(r, t));
-      var n = l("userinfo", e);
-      n && Object.assign(i, n), r.IN_CLIENT && s();
+    function p(e) {
+      void 0 === e && (e = a);
+      var t = d("config", e);
+      t && (delete t.SESSIONID, Object.assign(i, t));
+      var n = d("userinfo", e);
+      n && Object.assign(u, n), i.IN_CLIENT && l();
     }
-    function l(e, t) {
-      void 0 === t && (t = u);
+    function d(e, t) {
+      void 0 === t && (t = a);
       var n = document.getElementById(t);
       if (n)
         try {

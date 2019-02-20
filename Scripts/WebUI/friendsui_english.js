@@ -213,6 +213,16 @@ LocalizationReady("friendsui", "english", {
 
   ChatEntry_UploadImage: "Upload an Image",
   ChatEntry_SendTradeURL: "Share Your Trade Offer URL",
+  ChatEntry_TagAsSpoiler: "Tag as Spoiler",
+  ChatEntry_TakePhoto: "Take Photo",
+  ChatEntry_ChooseFromLibrary: "Choose Photo From Library",
+
+  MobilePermission_TakePhoto:
+    "Oops, looks like your device was told to deny us camera or photo library access!",
+  MobilePermission_ChoosePhoto:
+    "Oops, looks like your device was told to deny us photo library access!",
+  MobilePermission_Ensure:
+    "Please ensure your device grants us the necessary permissions and try again.",
 
   PersonaStateOfflineSignOut: "Offline/Sign Out",
   PersonaStateOnlineIngame: "Online/In Game",
@@ -335,6 +345,7 @@ LocalizationReady("friendsui", "english", {
     "Any group chats you are part of will be listed here.",
   Chat_ChatRoomList_Empty_How: "You can start a chat with friends or %1$s",
   Chat_ChatRoomList_Empty_HowLink: "join a Steam group chat.",
+  Chat_ChatRoomList_Empty_StartNew: "Start a new group chat",
 
   Chat_ChatRoomGroup_Requesting: "Requesting group chat information...",
 
@@ -602,6 +613,7 @@ LocalizationReady("friendsui", "english", {
   Chat_UnreadMessages: "1 new message",
   Chat_UnreadMessages_Plural: "%1$s new messages",
   Chat_MessageDeleted: "Message Deleted",
+  Chat_MessageRenderError: "There was a problem displaying this message.",
 
   Chat_Members: "1 member",
   Chat_Members_Plural: "%1$s members",

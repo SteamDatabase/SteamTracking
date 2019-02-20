@@ -1699,7 +1699,7 @@ input.filter_search_box:focus {
 	}
 
 #market_action_popup {
-	z-index: 1000;
+	z-index: 1600;
 }
 
 .market_arrow_up {
@@ -1866,7 +1866,7 @@ input.filter_search_box:focus {
 	border-width: 1px;
 	border-style: solid;
 	border-color: #182636 #45566A #45566A #182636;
-	background-color: #324965;
+	background-color: rgba(0,0,0,0.4);;
 	box-shadow: 1px 1px 2px black inset;
 	padding: 10px;
 
@@ -1893,7 +1893,6 @@ input.filter_search_box:focus {
 
 .market_advancedsearch_bottombuttons {
 	text-align: right;
-	margin-right: 24px;
 	margin-top: 20px;
 }
 
@@ -1910,7 +1909,7 @@ input.filter_search_box:focus {
 	width: 100%;}
 
 #market_advancedsearch_appselect {
-		background-color: #333;
+		background-color: #33383f;
 	background-image: url('https://steamcommunity-a.akamaihd.net/public/images/economy/filter_dropdown.png');
 	background-repeat: no-repeat;
 	background-position: right top;
@@ -1973,7 +1972,7 @@ input.filter_search_box:focus {
 	padding: 10px 10px;
 	height: 310px;
 			border: 1px solid #4D4D4D;
-	background-color: #333;
+	background-color: #33383f;
 	box-shadow: 1px 1px 1px black inset;
 	overflow-y: auto;
 	max-height: 75vh;	/* don't make it more than 75% of the viewport height */

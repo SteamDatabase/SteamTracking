@@ -67,6 +67,7 @@ function CDASHPlayer( elVideoPlayer )
 	this.m_nInitializationTime = Date.now();
 	this.m_timeToFirstFrame = -1; // Uninitialized
 	this.m_broadcastAccountID = 0;
+	this.m_bBroadcastReplay = 0;
 
 	// For Server Event Logging
 	this.m_nBandwidthTotal = 0;
@@ -218,10 +219,14 @@ CDASHPlayer.prototype.SetUniqueId = function( strUniqueId )
 	this.m_strUniqueId = strUniqueId.toString();
 }
 
-// Function should take the nEventType and bVideoStalled.
 CDASHPlayer.prototype.SetBroadcastAccountID = function( accountid )
 {
 	this.m_broadcastAccountID = accountid;
+}
+
+CDASHPlayer.prototype.SetBroadcastReplay = function( bIsReplay )
+{
+	this.m_bBroadcastReplay = bIsReplay;
 }
 
 CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments, tsFirstAttempt )
@@ -1123,6 +1128,11 @@ CDASHPlayer.prototype.BIsLiveContent = function()
 	{
 		return true;
 	}
+}
+
+CDASHPlayer.prototype.BIsBroadcastReplay = function()
+{
+	return this.m_bBroadcastReplay;
 }
 
 CDASHPlayer.prototype.GetTrackBufferMS = function()
@@ -3660,6 +3670,7 @@ function CDASHPlayerUI( player, eUIMode )
 	this.m_player = player;
 	this.m_elOverlay = null;
 	this.m_elLiveBanner = null;
+	this.m_elReplayBanner = null;
 	this.m_elContainer = null;
 	this.m_timeoutHide = null;
 	this.m_bPlayingLiveEdge = true;
@@ -3796,6 +3807,7 @@ CDASHPlayerUI.prototype.Init = function()
 	}
 
 	$J( '.live_button', _overlay ).on('click', function() { _ui.JumpToLive(); } );
+	$J( '.replay_button', _overlay ).on('click', function() { _ui.JumpToLive(); } );
 	$J( '.play_button', _overlay ).on('click', function() { _ui.TogglePlayPause(); } );
 	$J( '.stop_button', _overlay ).on('click', function() { _ui.StopVideo(); } );
 	$J( '.volume_slider', _overlay ).on( 'click', function(e) { _ui.OnVolumeClick( e, this ); } );
@@ -3869,14 +3881,16 @@ CDASHPlayerUI.prototype.OnVideoInitialized = function()
 			this.m_elLiveBanner.on( 'click', function() { _ui.JumpToLive(); } );
 			this.m_elContainer.append( this.m_elLiveBanner );
 		}
+		
+		if ( !this.m_elReplayBanner )
+		{
+			this.m_elReplayBanner = $J( '.dash_video_replay_banner' );
+			this.m_elReplayBanner.on( 'click', function() { _ui.JumpToLive(); } );
+			this.m_elContainer.append( this.m_elReplayBanner );
+		}
+		
 	}
-	else if ( this.m_elLiveBanner )
-	{
-		this.m_elLiveBanner.remove();
-		this.m_elLiveBanner = null;
-	}
-
-	if ( !this.m_player.BIsLiveContent() )
+	else
 	{
 		if ( !this.m_elBufferingMessage )
 		{
@@ -4718,9 +4732,10 @@ CDASHPlayerUI.prototype.UpdateCurrentTimeProgressInUI = function()
 	var nProgressPct = (( elVideoPlayer.currentTime - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
 	var nLoadedPct = (( rgData.nBufferedEnd - rgData.nTimeStart ) / (rgData.nTimeEnd - rgData.nTimeStart)) * 100;
 
-	if ( this.m_player.BIsLiveContent() )
+	if ( this.m_player.BIsLiveContent() && !this.m_player.BIsBroadcastReplay() )
 	{
 		$J( '.live_button' ).show();
+		$J( '.dash_video_live_banner' ).show();
 
 		if ( this.m_bPlayingLiveEdge )
 		{
@@ -4735,6 +4750,18 @@ CDASHPlayerUI.prototype.UpdateCurrentTimeProgressInUI = function()
 	else
 	{
 		$J( '.live_button' ).hide();
+		$J( '.dash_video_live_banner' ).hide();
+	}
+
+	if ( this.m_player.BIsBroadcastReplay() )
+	{
+		$J( '.replay_button' ).show();
+		$J( '.dash_video_replay_banner' ).show();
+	}
+	else
+	{
+		$J( '.replay_button' ).hide();
+		$J( '.dash_video_replay_banner' ).hide();
 	}
 
 	$J( '.progress_bar', this.m_elOverlay ).stop().css( { 'width': nProgressPct + '%' }, 200 );

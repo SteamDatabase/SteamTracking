@@ -231,6 +231,21 @@
 	background-position: center center;
 }
 
+.dash_overlay .replay_button {
+	color: #9d9d9d;
+	font-size: 12px;
+	margin-right: 8px;
+	margin-top: 2px;
+	float: right;
+	cursor: pointer;
+	height: 19px;
+}
+
+.dash_overlay .replay_button:hover
+{
+	color: white;
+}
+
 .dash_live_edge .dash_overlay .live_button
 {
 	color: white;
@@ -792,6 +807,21 @@
 	transition-duration: 0.2s;
 }
 
+.dash_video_replay_banner
+{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	padding: 2px;
+	font-size: 16px;
+	color: #9d9d9d;
+	background-color: #00000099;
+
+	opacity: 0.0;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+}
+
 .dash_big_playpause_indicator
 {
 	width: 100px;
@@ -895,6 +925,11 @@
 .dash_show_player_ui .dash_video_live_banner
 {
 	opacity: 1.0;
+}
+
+.dash_show_player_ui .dash_video_replay_banner
+{
+opacity: 1.0;
 }
 
 .dash_live_edge .dash_video_live_banner

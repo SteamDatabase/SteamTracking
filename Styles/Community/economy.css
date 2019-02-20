@@ -606,32 +606,11 @@ body.compact_trading_ui .appselect {
 	background-position: right top;
 }
 
-.market_modal_dialog {
-	position: absolute;
-	background: #1D1D1D;
-	box-shadow: 0 0 5px black;
-	width: 774px;
-	z-index: 1000;
-
-	text-align: left;
+#market_buynow_dialog_contents {
+    min-width: 800px;
 }
-
-.market_dialog_title {
-	height: 15px;
-
-	text-align: left;
-	padding: 14px;
-	font-size: 12pt;
-	color: #ffffff;
-	line-height: 1em;
-
-	background: -webkit-linear-gradient( top, #484848 5%, #262626 95%);background: linear-gradient( to bottom, #484848 5%, #262626 95%);	border: 1px solid #797272;
-	border-bottom: none;
-
-	border-top-left-radius: 3px;
-	-moz-border-radius-topleft: 3px;
-	border-top-right-radius: 3px;
-	-moz-border-radius-topright: 3px;
+#market_buynow_dialog_paymentinfo_bottomactions {
+    margin-top: 20px;
 }
 
 .market_dialog_topwarning {

@@ -11,22 +11,22 @@
     )
       (n = o[s]), p[n] && a.push(p[n][0]), (p[n] = 0);
     for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
-    for (l && l(e); a.length; ) a.shift()();
-    return m.push.apply(m, r || []), c();
+    for (m && m(e); a.length; ) a.shift()();
+    return l.push.apply(l, r || []), c();
   }
   function c() {
-    for (var e, t = 0; t < m.length; t++) {
-      for (var n = m[t], o = !0, i = 1; i < n.length; i++) {
+    for (var e, t = 0; t < l.length; t++) {
+      for (var n = l[t], o = !0, i = 1; i < n.length; i++) {
         var r = n[i];
         0 !== p[r] && (o = !1);
       }
-      o && (m.splice(t--, 1), (e = s((s.s = n[0]))));
+      o && (l.splice(t--, 1), (e = s((s.s = n[0]))));
     }
     return e;
   }
   var n = {},
     p = { 1: 0 },
-    m = [];
+    l = [];
   function s(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
@@ -81,8 +81,8 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var i = 0; i < t.length; i++) e(t[i]);
-  var l = o;
-  m.push(["qM/t", 0]), c();
+  var m = o;
+  l.push(["qM/t", 0]), c();
 })({
   "/7KC": function(e, t, n) {
     "use strict";
@@ -130,10 +130,10 @@
         return p;
       }),
       n.d(t, "f", function() {
-        return m;
+        return l;
       }),
       n.d(t, "g", function() {
-        return l;
+        return m;
       }),
       n.d(t, "l", function() {
         return h;
@@ -165,8 +165,8 @@
       u,
       c = 1,
       p = 4,
-      m = 750,
-      l = 799,
+      l = 750,
+      m = 799,
       h = 7,
       d = 250820,
       _ = 330050,
@@ -187,8 +187,7 @@
       (s[(s.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
       (s[(s.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
       (s[(s.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-      (s[(s.k_EPreAnnounceMajorUpdateEvent = 13)] =
-        "k_EPreAnnounceMajorUpdateEvent"),
+      (s[(s.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
       (s[(s.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
       (s[(s.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
       (s[(s.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
@@ -293,22 +292,26 @@
     "use strict";
     n("mrSG");
     var o = n("/7KC");
+    function s() {
+      return !!window.document;
+    }
     n.d(t, "b", function() {
-      return i;
+      return r;
     }),
       n.d(t, "e", function() {
-        return r;
+        return a;
       }),
       n.d(t, "a", function() {
-        return s;
+        return u;
       }),
       n.d(t, "d", function() {
-        return c;
+        return l;
       }),
       n.d(t, "c", function() {
-        return p;
+        return m;
       });
-    var i = {
+    var i,
+      r = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -334,21 +337,23 @@
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
+        PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
+            if (!s()) return i || (i = p()), i;
             var e = (function(e) {
-              if (!window.document || !window.document.cookie) return null;
+              if (!s() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = u());
+            e || (e = p());
             return e;
           })();
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1
       },
-      r = {
+      a = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -359,9 +364,9 @@
         authwgtoken: "",
         is_support: !1
       },
-      s = { steamid: "" },
-      a = "webui_config";
-    function u() {
+      u = { steamid: "" },
+      c = "webui_config";
+    function p() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(o.b)(0, 35).toString(36);
@@ -369,7 +374,7 @@
       })();
       return (
         (function(e, t, n, o) {
-          if (window.document) {
+          if (s()) {
             o || (o = "/");
             var i = "";
             if (void 0 !== n && n) {
@@ -389,15 +394,15 @@
         e
       );
     }
-    function c(e) {
-      void 0 === e && (e = a);
-      var t = p("config", e);
-      t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = p("userinfo", e);
-      n && Object.assign(r, n), i.IN_CLIENT && u();
+    function l(e) {
+      void 0 === e && (e = c);
+      var t = m("config", e);
+      t && (delete t.SESSIONID, Object.assign(r, t));
+      var n = m("userinfo", e);
+      n && Object.assign(a, n), r.IN_CLIENT && p();
     }
-    function p(e, t) {
-      void 0 === t && (t = a);
+    function m(e, t) {
+      void 0 === t && (t = c);
       var n = document.getElementById(t);
       if (n)
         try {
@@ -499,7 +504,7 @@
       return u;
     }),
       n.d(t, "a", function() {
-        return l;
+        return m;
       }),
       n.d(t, "b", function() {
         return h;
@@ -520,7 +525,7 @@
       (o[(o.Tooltip = 4)] = "Tooltip"),
       (o[(o.ContextMenu = 8)] = "ContextMenu"),
       (o[(o.Resizable = 16)] = "Resizable");
-    var m = (function() {
+    var l = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -549,7 +554,7 @@
           e
         );
       })(),
-      l = (function() {
+      m = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -612,7 +617,7 @@
                 : ((i = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (r = n.element),
-                  (s = new m(i, r))),
+                  (s = new l(i, r))),
               i &&
                 r &&
                 ((i.document.title = this.m_strTitle),
@@ -866,7 +871,7 @@
           i.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(l),
+      })(m),
       d = (function() {
         function e() {
           var s = this;
@@ -975,15 +980,15 @@
               );
             var p = "";
             t.html_class && (p = 'class="' + t.html_class + '"');
-            var m = "";
-            t.body_class && (m = 'class="' + t.body_class + '"');
-            var l =
+            var l = "";
+            t.body_class && (l = 'class="' + t.body_class + '"');
+            var m =
               "<!DOCTYPE html><html " +
               p +
               "><head><title></title></head><body " +
-              m +
+              l +
               '><div id="popup_target"></div></body></html>';
-            c.document.write(l), (c.document.title = r);
+            c.document.write(m), (c.document.title = r);
             for (
               var h = c.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
@@ -1122,7 +1127,7 @@
         return p;
       }),
       n.d(t, "c", function() {
-        return m;
+        return l;
       });
     n("XaMz");
     function o(e, t, n) {
@@ -1172,7 +1177,7 @@
       var o = c(e, t, n);
       e.splice(o + 1, 0, t);
     }
-    function m(e, t) {
+    function l(e, t) {
       for (var n = 0, o = 0; n < e.length; ) {
         var i = e[n];
         t(i, n, e) && (e[o++] = i), n++;
@@ -1541,8 +1546,8 @@
     var a = 31536e3,
       u = 2628e3,
       p = 604800,
-      m = 86400,
-      l = 3600,
+      l = 86400,
+      m = 3600,
       h = 60;
     function d(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
@@ -1557,16 +1562,16 @@
         ? i(o + "XMonths", Math.floor(e / u))
         : 2 * p <= e
         ? i(o + "XWeeks", Math.floor(e / p))
-        : 2 * m <= e
-        ? i(o + "XDays", Math.floor(e / m))
-        : m <= e
-        ? 2 * l <= (e -= m)
-          ? i(o + "1DayXHours", Math.floor(e / l))
-          : i(o + "1Day")
         : 2 * l <= e
-        ? i(o + "XHours", Math.floor(e / l))
+        ? i(o + "XDays", Math.floor(e / l))
         : l <= e
-        ? 2 * h <= (e -= l) && n
+        ? 2 * m <= (e -= l)
+          ? i(o + "1DayXHours", Math.floor(e / m))
+          : i(o + "1Day")
+        : 2 * m <= e
+        ? i(o + "XHours", Math.floor(e / m))
+        : m <= e
+        ? 2 * h <= (e -= m) && n
           ? i(o + "1HourXMinutes", Math.floor(e / h))
           : i(o + "1Hour")
         : n
@@ -1644,20 +1649,19 @@
       u = n("XaMz"),
       c = n("mrSG"),
       p = n("2vnA"),
-      m = n("okNM"),
-      l = n("J0bI"),
+      l = n("okNM"),
+      m = n("J0bI"),
       h = n("s+DT");
     var d = n("1VtQ"),
       _ = n("K4CH"),
-      f = n.n(_),
-      v = (function(e) {
+      f = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           c.d(t, e),
           (t.prototype.BIsExpired = function() {
-            return E.sm_rtTimeCur >= this.m_rtTimeExpires;
+            return v.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
           (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
             this.m_ulChatID = e.chat_id;
@@ -1675,11 +1679,11 @@
           c.c([p.action], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
-      })(l.b),
-      E = (function() {
+      })(m.b),
+      v = (function() {
         function e(e) {
           (this.m_bConnectingToClient = !1),
-            (this.m_invite = new v(e.strInviteCode)),
+            (this.m_invite = new f(e.strInviteCode)),
             e.Invite
               ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
               : this.m_invite.InitInvalid(),
@@ -1762,7 +1766,7 @@
           e
         );
       })(),
-      S = (function(e) {
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1773,14 +1777,14 @@
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? i.createElement(b, { controller: this.props.controller })
-                : i.createElement(g, { controller: this.props.controller })
+                ? i.createElement(S, { controller: this.props.controller })
+                : i.createElement(b, { controller: this.props.controller })
             );
           }),
-          (t = c.c([m.observer], t))
+          (t = c.c([l.observer], t))
         );
       })(i.Component),
-      b = (function(t) {
+      S = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -1801,7 +1805,7 @@
               }, 1e3);
           }),
           (e.prototype.IsMobileDevice = function() {
-            switch (f()(navigator.userAgent).os.name) {
+            switch (new _.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -1855,7 +1859,7 @@
                   )
                 : e.account_mismatch
                 ? i.createElement(
-                    I,
+                    g,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
@@ -1913,7 +1917,7 @@
                     )
                   )
                 : i.createElement(
-                    I,
+                    g,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     i.createElement(
                       "div",
@@ -1951,10 +1955,10 @@
           c.c([d.a], e.prototype, "LaunchWebChat", null),
           c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
           c.c([d.a], e.prototype, "LaunchSteamClient", null),
-          (e = c.c([m.observer], e))
+          (e = c.c([l.observer], e))
         );
       })(i.Component),
-      g = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1974,7 +1978,7 @@
           t
         );
       })(i.Component);
-    function I(e) {
+    function g(e) {
       return i.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2007,20 +2011,20 @@
       );
     }
     window.AssertMsg = u.a;
-    var y,
+    var I,
+      y,
       C,
-      L,
-      k = new s.a();
-    function D(e) {
+      L = new s.a();
+    function k(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
       } catch (e) {}
-      E.sm_rtTimeCur = t.rtTimeCur;
-      var n = new E(t);
-      o.render(i.createElement(S, { controller: n }), e);
+      v.sm_rtTimeCur = t.rtTimeCur;
+      var n = new v(t);
+      o.render(i.createElement(E, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = k),
+    (window.ClientConnectionAPI = L),
       document.addEventListener("DOMContentLoaded", function() {
         Object(r.c)(),
           (function() {
@@ -2033,7 +2037,7 @@
                 o = n.getAttribute("data-component");
               switch (o) {
                 case "ChatInvite":
-                  D(n);
+                  k(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + o + '"');
@@ -2043,17 +2047,17 @@
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (y = n) : "shared" == e && (C = n);
-        else if ("shared" == e) L = n;
+          "friendsui" == e ? (I = n) : "shared" == e && (y = n);
+        else if ("shared" == e) C = n;
         else {
           var o = void 0,
             i = null,
             r = void 0,
             s = null;
-          void 0 !== y ? ((o = y), (i = n)) : (o = n),
-            void 0 !== C ? ((r = C), (s = L)) : (r = L),
+          void 0 !== I ? ((o = I), (i = n)) : (o = n),
+            void 0 !== y ? ((r = y), (s = C)) : (r = C),
             a.a.InitFromObjects(o, i, r, s),
-            (L = C = y = void 0);
+            (C = y = I = void 0);
         }
       });
   },

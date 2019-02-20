@@ -228,7 +228,7 @@ function PreviewShowcaseConfig( eShowcase, rgSlotData )
 
 function ShowcaseGamePicker( elSlot, eShowcase, iSlot, fnOnChange )
 {
-	var $DialogContent = $J('<div/>', {'class': 'newmodal_content_innerbg' });
+	var $DialogContent = $J('<div/>', {'class': '' });
 	$DialogContent.append( $J('<div/>', {'class': 'featured_game_dialog_header' }).text( 'Select one of your games to display as a Featured Game on your profile.' ) );
 	$DialogContent.append( $J('<p/>', {'class': '' }).text( 'Enter the game\'s name' ) );
 	var $Input = $J( '<input/>', {type: 'text', value: '', placeholder: 'Search games' } );
@@ -405,13 +405,13 @@ function ShowcaseClearItem( elSlot, eShowcase, iSlot )
 	$J(elSlot).addClass( 'openslot' );
 }
 
-function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, strType )
+function ShowcasePublishedFilePicker( elSlot, eShowcase, iSlot, strDialogTitle, strType, strDialogSubTitle )
 {
 	var url = g_rgProfileData['url'] + 'publishedfilebrowsepopup/' + strType + '/';
 
 	var $Content = $J('<div/>', {'class': 'publishedfile_modal_content newmodal_sized_content' } );
 	var $IFrame = $J('<iframe/>', {'class': 'publishedfile_modal_iframe', 'src': url } );
-	var Modal = ShowDialog( strDialogTitle, $Content.append( $IFrame ) );
+	var Modal = ShowDialog( strDialogTitle, $Content.append( $IFrame ), { strSubTitle: strDialogSubTitle } );
 
 	$IFrame.load( Modal.GetBoundOnResizeEvent() );
 
