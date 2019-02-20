@@ -890,13 +890,19 @@ GHomepage = {
 
 						if ( rgData['review_summary'] )
 						{
-							var reviewSummary = rgData['review_summary'];
-							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-text": reviewSummary['sReviewScoreTooltip'] } );
+							var pref = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+							var reviewSummary = pref != 1 ? rgData['review_summary_filtered'] : rgData['review_summary'];
+							var $elReviewData = $J('<div>', {'class': 'tab_review_summary', "data-tooltip-html": reviewSummary['sReviewScoreTooltip'] } );
 							$elReviewData.append( $J('<div>', {'class': 'title'}).text( rgData.appids ? 'Overall user reviews for items in this bundle:' : 'Overall user reviews:') );
 							$elReviewData.append( $J('<span>', {'class': 'game_review_summary ' + reviewSummary['sReviewSummaryClass']}).text(reviewSummary['reviewSummaryDesc']) );
 							if ( reviewSummary['reviewScore'] > 0 )
 							{
 								$elReviewData.append( $J('<span>').html('&nbsp;(' + v_numberformat( reviewSummary['cReviews'] ) + ')') );
+							}
+							if ( rgData['review_anomaly'] )
+							{
+								var imgSrc = pref != 1 ? 'https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_review_anomaly_filtered.png' : 'https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_review_anomaly_filtered.png';
+								$elReviewData.append( $J( '<img>', { 'class' : "review_anomaly_icon", 'src' : imgSrc } ) );
 							}
 
 							$elInfoDiv.append( $elReviewData );

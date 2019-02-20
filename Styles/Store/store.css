@@ -2395,6 +2395,9 @@ div.game_hover {
 	color: #c6d4df;
 	background-color: rgba( 38, 54, 69, 0.6);
 }
+.review_anomaly_icon {
+	height: 10px;
+}
 
 .review_score_icon.positive {
 	background-image: url( '/public/images/v6/user_reviews_positive.png' );

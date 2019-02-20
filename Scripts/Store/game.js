@@ -490,7 +490,6 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 				{
 					filteredReviewScore.addClass( "visible" );
 					filteredReviewScore.html( data.review_score );
-
 				}
 				else
 				{
@@ -642,6 +641,24 @@ function ClearReviewDateRangeFilter()
 {
 	$J('#review_date_range_all').attr( 'checked', true );
 	ClearReviewDateFilter();
+}
+
+function SetUserReviewScorePreference( pref )
+{
+	var rgData = {
+		pref: pref,
+		sessionid : g_sessionID
+	};
+	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
+		function( json )
+		{
+		}
+	).fail(
+		function( json )
+		{
+			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
+		}
+	);
 }
 
 function BuildReviewHistogram()
@@ -965,6 +982,26 @@ function BuildReviewHistogram()
 			graphRecent.bind("plotunselected", funcUnSelected );
 		}
 
+		var funcViewReviewsDuringEvent = function( bCountAllReviews, startDate, endDate ) {
+			$J( '#review_type_all' ).attr( 'checked', true );
+			FilterReviewsGraph( bCountAllReviews, startDate, endDate, false );
+			if ( flotRecent )
+			{
+				flotRecent.clearSelection();
+			}
+			flotRollup.clearSelection();
+		};
+
+		var funcViewReviewsExcludingEvent = function( bCountAllReviews, startDate, endDate ) {
+			$J( '#review_type_all' ).attr( 'checked', true );
+			FilterReviewsGraph( bCountAllReviews, startDate, endDate, true );
+			if ( flotRecent )
+			{
+				flotRecent.clearSelection();
+			}
+			flotRollup.clearSelection();
+		};
+
 		// recent events
 		if ( data.results.recent_events && data.results.recent_events.length > 0 )
 		{
@@ -975,23 +1012,12 @@ function BuildReviewHistogram()
 			$J( "#recent_review_event_dates" ).text( data.results.recent_event_dates );
 			$J( "#recent_review_event_text" ).text( data.results.recent_events_text );
 			$J( "#filter_reviews_to_event_btn" ).click( function() {
-				$J( '#review_type_all' ).attr( 'checked', true );
-				FilterReviewsGraph( bCountAllReviews, event.start_date, event.end_date, false );
-				if ( flotRecent )
-				{
-					flotRecent.clearSelection();
-				}
-				flotRollup.clearSelection();
+				funcViewReviewsDuringEvent( bCountAllReviews, event.start_date, event.end_date );
 			});
 			$J( "#filter_reviews_exclude_event_btn" ).click( function() {
-				$J( '#review_type_all' ).attr( 'checked', true );
-				FilterReviewsGraph( bCountAllReviews, event.start_date, event.end_date, true );
-				if ( flotRecent )
-				{
-					flotRecent.clearSelection();
-				}
-				flotRollup.clearSelection();
+				funcViewReviewsExcludingEvent( bCountAllReviews, event.start_date, event.end_date );
 			});
+			$J( "#review_recent_events_controls" ).show();
 			container.show();
 		}
 		else
@@ -999,6 +1025,24 @@ function BuildReviewHistogram()
 			$J( "#review_histograms_container" ).addClass( "collapsed" );
 			$J( "#reviews_filter_options" ).addClass( "graph_collapsed" );
 		}
+
+		$J( ".filter_reviews_to_event_btn" ).each( function( index, value ) {
+			var $elem = $J( value );
+			$elem.click( function() {
+				var startDate = $J( this ).data( 'startDate' );
+				var endDate = $J( this ).data( 'endDate' );
+				funcViewReviewsDuringEvent( bCountAllReviews, startDate, endDate );
+			} );
+		} );
+
+		$J( ".filter_reviews_exclude_event_btn" ).each( function( index, value ) {
+			var $elem = $J( value );
+			$elem.click( function() {
+				var startDate = $J( this ).data( 'startDate' );
+				var endDate = $J( this ).data( 'endDate' );
+				funcViewReviewsExcludingEvent( bCountAllReviews, startDate, endDate );
+			} );
+		} );
 
 	} );
 }

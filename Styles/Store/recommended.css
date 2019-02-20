@@ -2530,18 +2530,45 @@ body.recommendgame #review_create h1  {
 
 /* review events */
 
-#review_recent_events_container {
+.review_recent_events {
 	box-shadow: 0 0 5px #000;
 	display: none;
 	position: relative;
 
 	padding: 10px 15px;
 	margin-bottom: 10px;
-}
-#review_recent_events_container.high_volume_all {
+
 	background: -webkit-linear-gradient( top, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);background: linear-gradient( to bottom, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);}
-#review_recent_events_container.high_volume_negative {
+
+.review_recent_events.high_volume_all {
+	background: -webkit-linear-gradient( top, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);background: linear-gradient( to bottom, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);}
+.review_recent_events.high_volume_negative {
 	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
+.review_recent_events.force_display {
+	display: block;
+}
+
+#review_recent_events_controls {
+	display: none;
+}
+
+.review_recent_event_detail {
+	margin-left: 51px;
+}
+
+.review_events_preferences_controls {
+	padding-top: 10px;
+	margin-left: 51px;
+	color: #d3dade;
+}
+
+.review_events_preferences_radio_btns {
+	padding-top: 5px;
+}
+
+.review_event_preference input[type="radio"] {
+	vertical-align: baseline;
+}
 
 .review_recent_events_icon {
 	float: left;

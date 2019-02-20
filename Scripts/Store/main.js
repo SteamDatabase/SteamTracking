@@ -357,6 +357,11 @@ function GameHover( elem, event, divHover, rgHoverData )
 		{
 			return;
 		}
+
+		if ( typeof GDynamicStore != 'undefined' )
+		{
+			strUrlTarget += '?review_score_preference=' + ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+		}
 			
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );

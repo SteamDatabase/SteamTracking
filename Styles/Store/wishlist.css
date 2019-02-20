@@ -1,14 +1,15 @@
 
 .wishlist_header {
 	display: flex;
+    align-items: center;
 	margin: 15px 0 25px 0;
 }
 
 body.v6 .wishlist_header h2 {
 	color: #fff;
 	font-size: 26px;
-	line-height: 67px;
 	margin-left: 15px;
+    margin-bottom: 0px;
 }
 
 #wishlist_ctn {
