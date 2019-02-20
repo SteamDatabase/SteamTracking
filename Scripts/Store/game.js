@@ -645,8 +645,14 @@ function ClearReviewDateRangeFilter()
 
 function SetUserReviewScorePreference( pref )
 {
+	if ( g_AccountID == 0 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		return;
+	}
+
 	var rgData = {
-		pref: pref,
+		preference: pref,
 		sessionid : g_sessionID
 	};
 	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
