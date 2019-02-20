@@ -115,10 +115,6 @@
         "bio": "Brett has been working at Valve since 2011 and has worked on multiple teams contributing to different projects. He's a passionate game developer who enjoys gaming, outdoors, and snowmobiling in his spare time."
     },
     {
-        "name": "Brian Hensley",
-        "bio": "Brian makes things, like the Steam Controller and boxes."
-    },
-    {
         "name": "Brian Jacobson",
         "bio": "As a child, Brian learned how to program by cracking all the computer games he couldn't afford to buy. As an adult, he decided to join the games industry as a way to make up for his reprehensible childhood. At LookingGlass, he worked on Flight Unlimited. He went on to co-found GameFX, and was a Lead Engineer on Sinistar Unleashed. He joined Valve in 2000 and has contributed to just about everything the company has shipped since then. Brian focuses mostly on engine and graphics technology, with the occasional foray into game design.",
         "links": [
@@ -376,13 +372,6 @@
         ]
     },
     {
-        "name": "Ian Campbell",
-        "bio": "Design engineer. Number cruncher. Third baseman.",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ian Campbell"
-        ]
-    },
-    {
         "name": "Ido Magal",
         "bio": "Ido joined Valve in 2001. He's much older now."
     },
@@ -522,6 +511,13 @@
         "bio": "John is an animator most of the time. He\u2019s been a gamer since his parents bought their Commodore 64. As a high-schooler he made small Quake mods and became addicted to Team Fortress. After graduating, his brother introduced him to the guys on the Day of Defeat team. They wanted to ship their mod, but they needed animation help. John jumped in. Valve eventually invited John and the rest of the team to continue DoD development at Valve\u2019s offices. At this point, John has worked on nearly every product we've shipped. His TF obsession is over - replaced by an addiction to DotA, and lapping his Ducati at local road courses."
     },
     {
+        "name": "Johnny Deng",
+        "bio": "Electrical Engineer with experience in Signal Integrity and Semiconductor product development. I work a lot in the lab.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/diredesire\/"
+        ]
+    },
+    {
         "name": "Jon Blakeley",
         "bio": "Jon joined the ranks of Valve in 2011. We got a lot more strict about hiring after that."
     },
@@ -568,25 +564,15 @@
         ]
     },
     {
-        "name": "Levi Miller",
-        "bio": "Levi earned his PhD in mechanical engineering with a focus in control and robotics.  He is interested in the human machine interface\/interaction, and has worked on surgical robots, wearable robots and is currently working on developing technology for next generation VR devices."
-    },
-    {
         "name": "Liam Lavery",
         "bio": "Liam showed early promise in his summer job at General Motors making car transmissions. Twice, GM and the UAW awarded him a Certificate of Perfect Attendance. But Liam left the assembly line for the classroom, teaching college and junior high math until a professor named Yau (that would be the Fields Medal-winning Shing-Tung Yau) convinced him to look for other work. Liam's interest in understanding the rules that govern society led him to law school, and then to Seattle's K&L Gates firm where he specialized in technology and business law and worked with a number of game companies, including Valve. Right before joining Valve, Liam served as general counsel of Zillow.com."
     },
     {
-        "name": "Marco Micheletti",
-        "bio": "Marco works on all aspects of Steam Hardware including strategic partner relationships and hardware operations.",
-        "links": [
-            "https:\/\/youtu.be\/uCgnWqoP4MM"
-        ]
-    },
-    {
         "name": "Markus Emmerling",
-        "bio": "After obtaining a business diploma in Melbourne, Australia, Markus moved to Seattle to attend Embry Riddle Aeronautical University, where he graduated with a B\/S in Technical Management. At Valve, he's working on improving customer support, localization processes and everything that involves the Steam Site License program.",
+        "bio": "After obtaining a business diploma in Melbourne, Australia, Markus moved to Seattle to attend Embry Riddle Aeronautical University, where he graduated with a B\/S in Technical Management. At Valve, he's working on localization related things, supporting partners and everything that involves the Steam PC Cafe Program.",
         "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Markus Emmerling"
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Markus Emmerling",
+            "https:\/\/steamcommunity.com\/id\/ineedanewid\/"
         ]
     },
     {
@@ -656,10 +642,6 @@
         ]
     },
     {
-        "name": "Molly Carroll",
-        "bio": "Molly spent six years working at London-based independent game studio Chucklefish before landing at Valve in 2018. Now she's working on the Steam business team, hoping to help developers find success on the platform!"
-    },
-    {
         "name": "Patricia Zavalza",
         "bio": "After working in manufacturing for almost a decade focusing on Program and Account Management, Patricia joined the Customer Support team at Valve where she is working on improving the quality of our interactions with our users and partners. If you have feedback regarding your experience with Steam Support, she would love to hear it!"
     },
@@ -670,10 +652,6 @@
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Phil Co",
             "https:\/\/steamcommunity.com\/id\/philco\/"
         ]
-    },
-    {
-        "name": "Phil King",
-        "bio": "Phil's first games were written on a Commodore PET in the 1970s.  He first got paid for working on games at Stormfront Studios in the mid 90s, before eventually chucking that to return to hardware engineering.  He subsequently worked on free-space optical networking of laptops for kids, metropolitan area router boxes, educational toys, acoustic gunshot location, and light field cameras, before finally returning to the games industry to work on VR at Valve."
     },
     {
         "name": "Pierre-Loup Griffais",
@@ -702,14 +680,6 @@
         "bio": "Ricky finds every subject wildly interesting. Prior to Valve, he spent years as an engineer and designer before joining Netflix to create the UI used on game consoles and TVs. Now he works on Steam platform growth, contracts, licensing, and helping developers craft awesome things for gamers. Ricky has an MBA from Wharton and a B.S. in Computer Science from the University of Virginia. When not at work, he's probably in the ocean or getting tackled by his Border Collies.",
         "links": [
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Ricky Uy"
-        ]
-    },
-    {
-        "name": "Rob Rydberg",
-        "bio": "After years of advising CS1 students to pursue game development as a hobby and brace themselves to get a real job instead, Rob now works at Valve doing FPGA and firmware development on VR hardware.",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Rob Rydberg",
-            "https:\/\/steamcommunity.com\/id\/3rcubed\/"
         ]
     },
     {
@@ -775,14 +745,6 @@
     {
         "name": "Shreya Liu",
         "bio": "Shreya graduated with a degree in Electrical Engineering from the University of Illinois at Urbana Champaign but got working on strategic business partnerships for Surface while at Microsoft. She used to dream about lightsabers but now she's working on making them a [virtual] reality."
-    },
-    {
-        "name": "Staci Elaan",
-        "bio": "Engineer, cook with chemistry training, power electronics geek, amateur lifter of heavy things, designer of circuits of distinction since 1985, and inventor for hire.",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Staci Elaan",
-            "LightningGunGirl"
-        ]
     },
     {
         "name": "Steve Jaros",
