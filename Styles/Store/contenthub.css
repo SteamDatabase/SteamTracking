@@ -300,10 +300,6 @@ div#page_section_container,
 		float: left;
 	}
 
-	html.responsive .contenthub_background_holder {
-		background-size: 125%;
-	}
-
 	html.responsive .contenthub_specials_see_more a {
 		min-width: unset;
 	}
@@ -349,10 +345,6 @@ div#page_section_container,
 }
 
 @media screen and (max-width: 680px) {
-
-	html.responsive .contenthub_background_holder {
-		background-size: 200%;
-	}
 
 	html.responsive span.header_inline {
 		display: block;

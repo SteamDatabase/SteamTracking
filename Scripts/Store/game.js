@@ -658,6 +658,9 @@ function SetUserReviewScorePreference( pref )
 	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
 		function( json )
 		{
+			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
+			window.location.href = h + '#app_reviews_hash';
+			window.location.reload( true );
 		}
 	).fail(
 		function( json )
