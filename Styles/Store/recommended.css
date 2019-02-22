@@ -2567,7 +2567,10 @@ body.recommendgame #review_create h1  {
 }
 
 .review_event_preference input[type="radio"] {
-	vertical-align: baseline;
+	vertical-align: middle;
+}
+.review_event_preference label {
+	vertical-align: middle;
 }
 
 .review_recent_events_icon {

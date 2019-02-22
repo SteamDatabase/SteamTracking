@@ -677,7 +677,13 @@ function BuildReviewHistogram()
 
 	var appid = $J( "#review_appid" ).val();
 
-	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english' }
+	var review_score_preference = 0;
+	if ( typeof GDynamicStore != 'undefined' )
+	{
+		review_score_preference = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
+	}
+
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference }
 	).done( function( data ) {
 
 		$J( "#review_histograms_container" ).addClass( "has_data" );
@@ -687,6 +693,7 @@ function BuildReviewHistogram()
 		$J( "#reviews_filter_options" ).removeClass( "graph_collapsed" );
 
 		var bCountAllReviews = data.count_all_reviews;
+		var bExpandGraph = data.expand_graph;
 		// language
 		var elemLanguageBreakdown = $J( "#review_language_breakdown" );
 
@@ -1012,7 +1019,7 @@ function BuildReviewHistogram()
 		};
 
 		// recent events
-		if ( data.results.recent_events && data.results.recent_events.length > 0 )
+		if ( bExpandGraph )
 		{
 			var event = data.results.recent_events[0];
 			var container = $J( "#review_recent_events_container" );

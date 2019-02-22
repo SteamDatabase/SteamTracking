@@ -62,7 +62,7 @@ GDynamicStore = {
 
 	s_ImpressionTracker: false,
 
-	Init: function( accountid, bForceRefresh, strOS )
+	Init: function( accountid, bForceRefresh, strOS, preferences )
 	{
 
 		var rgDesiredOSTypes = strOS ? strOS.split(',') : 'any';
@@ -77,6 +77,8 @@ GDynamicStore = {
 				case 'win': GDynamicStore.s_bUserOnWindows = true; break;
 			}
 		}
+
+		GDynamicStore.s_preferences = preferences || {};
 
 		var fnRunOnLoadCallbacks = function() {
 			GDynamicStore.m_bLoadComplete = true;
@@ -185,7 +187,6 @@ GDynamicStore = {
 					GDynamicStore.s_rgPlaytestData.previous_active_tests = fnConvertToMap( GDynamicStore.s_rgPlaytestData.previous_active_tests );
 				}
 
-				GDynamicStore.s_preferences = data.preferences || {};
 				if ( data.rgExcludedTags && data.rgExcludedTags.length > 0 )
 				{
 					for ( var i = i = 0; i < data.rgExcludedTags.length; ++i )
