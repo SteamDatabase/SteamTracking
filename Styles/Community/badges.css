@@ -500,9 +500,30 @@ a.badge_row:hover .badge_view_details {
 	margin-right: 12px;
 }
 
-.gamecard_badge_craftbtn_ctn .badge_craft_button {
+.gamecard_badge_craftbtn_ctn .badge_craft_button_ctn {
 	float: left;
 	width: 166px;
+	display: flex;
+	flex-direction: column;
+	height: 70px;
+}
+
+.gamecard_badge_craftbtn_ctn .badge_craft_button {
+	height: auto;
+	line-height: normal;
+	flex: 2;
+	display: flex;
+	align-items: center;
+}
+
+.gamecard_badge_craftbtn_ctn .badge_craft_button.multicraft {
+	flex: 1;
+	margin-top: 4px;
+}
+
+.gamecard_badge_craftbtn_ctn .badge_craft_button > div {
+	text-align: center;
+	flex: 1;
 }
 
 @media screen and (max-width: 890px )
@@ -513,7 +534,7 @@ a.badge_row:hover .badge_view_details {
 		padding-top: 8px;
 	}
 
-	html.responsive .gamecard_badge_craftbtn_ctn .badge_craft_button {
+	html.responsive .gamecard_badge_craftbtn_ctn .badge_craft_button_ctn {
 		width: 40%;
 		max-width: 166px;
 	}

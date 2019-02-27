@@ -7,14 +7,15 @@ var g_CraftModal;
 var g_rgBadgeCraftData = null;
 var g_bBadgeCraftAnimationReady = false;
 
-function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
+function Profile_CraftGameBadge( profileUrl, appid, series, border_color, levels )
 {
 	var submitUrl = profileUrl + "/ajaxcraftbadge/";
 	g_rgBadgeCraftData = null;
 	g_bBadgeCraftAnimationReady = false;
+	levels = levels || 1;
 
 	// fire off the ajax request to craft the badge
-	$J.post(submitUrl,{ appid: appid, series: series, border_color: border_color, sessionid: g_sessionID } )
+	$J.post(submitUrl,{ appid: appid, series: series, border_color: border_color, levels: levels, sessionid: g_sessionID } )
 		.done( function( data ) {
 			g_rgBadgeCraftData = data;
 			FinishCraft();
@@ -46,7 +47,27 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 	$J('#badge_craft_header_crafted').hide();
 	$J('#badge_completed').hide();
 
-	var nAnimationTiming = 500;
+	// spend about 4 seconds animating the card spin - this used to vary based on # of cards in set, this
+	//	value is equivalent to the time for an 8 card set the old way
+	var nCardAnimationTiming = 4000 / $J('#card_image_set').children().length;
+
+	if ( levels > 1 )
+	{
+		// for multi-level crafting, show more cards - up to 5 sets.  The animation will speed up accordingly
+		//	so the total time taken is the same.
+		var nAnimLevel = Math.min( levels, 5 );
+		nCardAnimationTiming = nCardAnimationTiming / nAnimLevel;
+		var rgClones = [];
+		for ( var i = 1; i < nAnimLevel; i++ )
+		{
+			rgClones.push( $J('#card_image_set').children().clone() );
+		}
+		for( var i = 0; i < rgClones.length; i++ )
+			$J('#card_image_set').append( rgClones[i] );
+	}
+
+	// shuffle the order the cards will appear in
+	$J('#card_image_set').append( v_shuffle( $J('#card_image_set').children().detach() ) );
 
 	// start the animation for each card, staggered
 	var iCard = 0;
@@ -58,11 +79,11 @@ function Profile_CraftGameBadge( profileUrl, appid, series, border_color )
 		window.setTimeout( function() {
 			$Card.show();
 			$Card.addClass( 'card_craft_combined' );
-		}, iCard++ * nAnimationTiming );
+		}, iCard++ * nCardAnimationTiming );
 	} );
 
 	// we start the next phase half a second before the animation would end, so we can animate the badge appearing on top.
-	var nAnimationTimeMS = ( ( iCard - 1 ) * nAnimationTiming ) + (4000 - 500);
+	var nAnimationTimeMS = ( ( iCard - 1 ) * nCardAnimationTiming ) + (4000 - 500);
 	window.setTimeout( function() {
 		$Throbber.removeClass( 'loop_throbber_hide' );
 		g_bBadgeCraftAnimationReady = true;
