@@ -11,6 +11,10 @@ LocalizationReady("friendsui", "english", {
   tab_friends_capital: "FRIENDS",
   tab_chats_capital: "GROUPS",
 
+  Label_Friends: "Friends",
+  Label_Chats: "Chats",
+  Label_Groups: "Groups",
+
   Generic_Error: "Error",
   Generic_Edit: "Edit",
   Generic_View: "View",
@@ -72,11 +76,12 @@ LocalizationReady("friendsui", "english", {
   Broadcast_EndWatchPartyPrompt:
     "Are you sure you want to end this watch party?",
   Broadcast_EnglishMain: "English",
-  Broadcast_EnglishB: "English B",
   Broadcast_EnglishNewbie: "English - Newcomer",
   Broadcast_ChineseMain: "Chinese",
   Broadcast_ChineseNewbie: "Chinese - Newcomer",
   Broadcast_RussianMain: "Russian",
+  Broadcast_Stream1: "Stream 1",
+  Broadcast_Stream2: "Stream 2",
   Broadcast_ViewerCount: "%1$s viewers",
   Broadcast_AutomaticResolution: "Automatic",
   Broadcast_ChannelLive: "%1$s is now live on SteamTV",
@@ -224,6 +229,11 @@ LocalizationReady("friendsui", "english", {
   MobilePermission_Ensure:
     "Please ensure your device grants us the necessary permissions and try again.",
 
+  WelcomeScreen_Title: "Welcome",
+  WelcomeScreen_Subtitle: "to Steam Chat",
+  Button_Done: "Done",
+  Button_Skip: "Skip",
+
   PersonaStateOfflineSignOut: "Offline/Sign Out",
   PersonaStateOnlineIngame: "Online/In Game",
   PersonaStatePartyBeacon: "Wants to Play",
@@ -307,6 +317,7 @@ LocalizationReady("friendsui", "english", {
   Chat_Actions_LeaveChatRoomGroup_ClanConfirm:
     "Are you sure you want to leave the Group Chat: '%1$s'?",
   Chat_Actions_DeleteChatMessages: "Delete Messages",
+  Chat_Actions_Select_Message: "Select Message",
   Chat_Actions_Delete: "Delete",
   Chat_Actions_DeleteChatMessages_Confirm:
     "Are you sure you want to delete these messages from %1$s?",

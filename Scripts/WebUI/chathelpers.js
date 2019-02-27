@@ -207,6 +207,9 @@
       (s[(s.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (s[(s.k_EInGameContentReleaseEvent = 30)] =
         "k_EInGameContentReleaseEvent"),
+      (s[(s.k_EFreeTrial = 31)] = "k_EFreeTrial"),
+      (s[(s.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
+      (s[(s.k_ESeasonUpdate = 33)] = "k_ESeasonUpdate"),
       ((u = a || (a = {}))[(u.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (u[(u.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -546,7 +549,7 @@
           }),
           (e.prototype.OnLinkLoad = function(e) {
             e.currentTarget.removeEventListener("load", this.OnLinkLoad),
-              a.d(this.m_rgLoadingLinks, e.currentTarget),
+              a.c(this.m_rgLoadingLinks, e.currentTarget),
               0 == this.m_rgLoadingLinks.length &&
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }),
@@ -1102,13 +1105,13 @@
   },
   UqDm: function(e, t, n) {
     "use strict";
-    n.d(t, "f", function() {
+    n.d(t, "e", function() {
       return o;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return i;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return r;
       }),
       n.d(t, "b", function() {
@@ -1117,17 +1120,14 @@
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "f", function() {
         return u;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return c;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "h", function() {
         return p;
-      }),
-      n.d(t, "c", function() {
-        return l;
       });
     n("XaMz");
     function o(e, t, n) {
@@ -1176,13 +1176,6 @@
     function p(e, t, n) {
       var o = c(e, t, n);
       e.splice(o + 1, 0, t);
-    }
-    function l(e, t) {
-      for (var n = 0, o = 0; n < e.length; ) {
-        var i = e[n];
-        t(i, n, e) && (e[o++] = i), n++;
-      }
-      return (e.length = o), e;
     }
   },
   WpBz: function(e, t, n) {

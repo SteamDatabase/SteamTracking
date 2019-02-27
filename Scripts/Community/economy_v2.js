@@ -41,6 +41,10 @@ function InitInventoryPage( bHasPendingGifts, showAppId, bShowTradableItemsOnly 
 	g_bShowTradableItemsOnly = bShowTradableItemsOnly;
 	g_bAllowHighDPIItemImages = $J('html').hasClass('responsive');
 
+	// disable the global tooltip mutation observer.  We don't use tooltips and it has perf implications
+	//	for how frequently we move items around.
+	DisableTooltipMutationObserver();
+
 	// set up the filter control
 	if ( $( 'filter_control' ) )
 		Filter.InitFilter( $('filter_control') );
@@ -233,6 +237,7 @@ function OnLocationChange ( elIgnored, hash )
 /*
  *		Inventory
  */
+/** @type {CInventory } */
 var g_ActiveInventory = null;
 
 function InventoryNextPage()
@@ -326,8 +331,211 @@ function CreateItemContextMenuButton( elItemHolder, strCompositeId, owner )
 	} );
 }
 
-APPWIDE_CONTEXT = 0;
 
+
+function CPage( inventory, iPage )
+{
+	this.m_inventory = inventory;
+	this.m_iPage = iPage;
+	this.m_$Page = null;
+	this.m_bImagesLoaded = false;
+	this.m_bPageItemsCreated = false;
+}
+
+CPage.prototype.hide = function()
+{
+	if ( this.m_$Page )
+		this.m_$Page.hide();
+}
+
+CPage.prototype.show = function()
+{
+	this.GetElement();
+	this.m_$Page.show();
+}
+
+CPage.prototype.GetElement = function()
+{
+	if ( !this.m_$Page )
+	{
+		this.m_$Page = $J('<div/>', {'class': 'inventory_page'} ).hide();
+
+		this.EnsurePageItemsCreated();
+
+		this.m_inventory.AppendPage( this.m_$Page, this.m_iPage );
+	}
+
+	return this.m_$Page;
+}
+
+// returns true if new elements were added to the page
+CPage.prototype.EnsurePageItemsCreated = function( bFiltering )
+{
+	if ( !this.m_bPageItemsCreated )
+	{
+		var rgItems = this.m_inventory.GetPageItems( this.m_iPage );
+
+		for ( var i = 0; i < INVENTORY_PAGE_ITEMS; i++ )
+		{
+			if ( i < rgItems.length )
+			{
+				this.m_$Page.append( rgItems[i] );
+			}
+			else
+			{
+				this.m_$Page.append( $J('<div/>', {'class': 'itemHolder disabled'} ) );
+			}
+		}
+
+		this.m_bPageItemsCreated = true;
+		return true;
+	}
+
+	return false;
+}
+
+CPage.prototype.LoadPageImages = function()
+{
+	var $Page = this.GetElement()
+
+	if ( !this.m_bImagesLoaded )
+	{
+		var bNeedToLoadMoreData = false;
+		var inventory = this.m_inventory;
+		$Page.children().each( function() {
+			// from the Filter class...
+			if ( this.filtered )
+				return;
+
+			var $Item = $J(this).children('.item');
+			if ( $Item.hasClass('pendingItem') )
+			{
+				bNeedToLoadMoreData = true;
+			}
+			else
+			{
+				inventory.LoadItemImage( $Item );
+			}
+		});
+
+		if ( bNeedToLoadMoreData )
+		{
+			var _this = this;
+			inventory.LoadUntilConditionMet( function() {
+				if ( $Page.children().children('.item.pendingItem').length == 0 )
+				{
+					window.setTimeout( function() { _this.m_bImagesLoaded = false; _this.LoadPageImages() }, 10 );
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			});
+		}
+
+		this.m_bImagesLoaded = true;
+	}
+}
+
+CPage.prototype.PostFilterCleanUp = function()
+{
+	// do nothing, this is used for responsive
+}
+
+function CSingleResponsivePage( inventory )
+{
+	CPage.call( this, inventory, 0 );
+
+	this.m_$Page = $J('<div/>', {'class': 'inventory_page'} );
+	this.m_bMounted = false;
+
+	this.m_cPagesLoaded = 0;
+}
+
+// subclass the base page class
+CSingleResponsivePage.prototype = Object.create( CPage.prototype );
+
+CSingleResponsivePage.prototype.show = function()
+{
+	if ( !this.m_bMounted )
+	{
+		this.m_inventory.AppendPage( this.m_$Page, 0 );
+		this.m_bMounted = true;
+		this.EnsurePageItemsCreated();
+		this.LoadPageImages();
+	}
+}
+
+CSingleResponsivePage.prototype.hide = function()
+{
+	this.m_$Page.detach();
+	this.m_bMounted = false;
+}
+
+CSingleResponsivePage.prototype.EnsurePageItemsCreated = function( bFiltering )
+{
+	if ( !this.m_bMounted )
+		return false;
+
+	var cMaxPages = Math.floor( this.m_inventory.GetCountTotalItems() / INVENTORY_PAGE_ITEMS );
+
+	if ( cMaxPages > this.m_cPagesLoaded )
+	{
+		var elLastItem = this.m_$Page[0].lastElementChild;
+		if ( !bFiltering && elLastItem && elLastItem.getBoundingClientRect().top > window.innerHeight )
+			return false;
+
+		var bAddedItems = false;
+
+		for ( var iPage = this.m_cPagesLoaded; iPage < cMaxPages; iPage++ )
+		{
+			var rgItems = this.m_inventory.GetPageItems( iPage );
+
+			for ( var i = 0; i < rgItems.length; i++ )
+			{
+				this.m_$Page.append( rgItems[i] );
+			}
+
+			this.m_cPagesLoaded++;
+			bAddedItems = true;
+
+			if ( rgItems.length )
+			{
+				elLastItem = rgItems[ rgItems.length - 1 ][0];
+
+				// if this isn't loaded yet, return.  We'll get called again when more data is ready.
+				if ( $J(elLastItem).children('.pendingItem').length )
+				{
+					break;
+				}
+				else if ( !bFiltering && elLastItem && elLastItem.getBoundingClientRect().top > window.innerHeight )
+					break;
+			}
+		}
+
+		if ( bAddedItems )
+		{
+			this.m_bImagesLoaded = false;
+			return true;
+		}
+	}
+
+	return false;
+}
+
+CSingleResponsivePage.prototype.PostFilterCleanUp = function()
+{
+	if ( !this.m_bMounted )
+		return;
+
+	this.m_$Page.empty();
+	this.m_cPagesLoaded = 0;
+	this.EnsurePageItemsCreated();
+}
+
+
+APPWIDE_CONTEXT = 0;
 
 function CInventory( owner, appid, contextid, rgContextData )
 {
@@ -346,9 +554,8 @@ function CInventory( owner, appid, contextid, rgContextData )
 
 	this.m_strCompositeID = this.m_steamid + '_' + this.appid + '_' + this.contextid;
 
-	this.m_$Inventory = $J('<div/>', {id: 'inventory_' + this.m_strCompositeID, 'class': 'inventory_ctn' } );
+	this.m_$Inventory = $J('<div/>', {id: 'inventory_' + this.m_strCompositeID, 'class': 'inventory_ctn clearfix' } );
 	this.m_rgItemElements = [];
-	this.m_rgLazyLoadImages = [];
 	this.m_iNextEmptyItemElement = 0;
 
 	// metadata from the context
@@ -361,9 +568,14 @@ function CInventory( owner, appid, contextid, rgContextData )
 	// things we'll know after the initial load
 	this.m_ulLastAssetID = 0;
 	this.m_bFullyLoaded = false;
+	this.m_promiseLoadCompleteInventory = null;
 	this.m_bPerformedInitialLoad = false;
 
+	/** @type {CPage[]} */
 	this.m_rgPages = [];
+
+	this.m_SingleResponsivePage = new CSingleResponsivePage( this );
+
 	this.m_cPages = 0;
 	this.m_iCurrentPage = 0;
 	this.m_bNeedsRepagination = true;
@@ -373,12 +585,16 @@ function CInventory( owner, appid, contextid, rgContextData )
 	this.m_tsLastError = 0;
 	this.m_$ErrorDisplay = null;
 
+	this.m_bNeedsReload = false;
+
 	// appwide parent inventory, if viewing "all {gamename} items"
-	this.m_parentInventory;
+	/** @type {CAppwideInventory} */
+	this.m_parentInventory = null;
 
 	this.m_bActive = false;
 
 	this.m_ActivePromise = null;
+	this.m_rgOnItemsLoadedCallbacks = [];
 }
 
 CInventory.prototype.SetActivePromise = function( promise )
@@ -443,6 +659,9 @@ CInventory.prototype.hide = function() {
 	if ( this.m_$ErrorDisplay )
 		this.m_$ErrorDisplay.hide();
 
+	if ( this.m_$ReloadDisplay )
+		this.m_$ReloadDisplay.hide();
+
 	this.m_bActive = false;
 };
 
@@ -459,60 +678,16 @@ CInventory.prototype.show = function()
 	if ( this.m_tsLastError && this.m_$ErrorDisplay )
 		this.m_$ErrorDisplay.show();
 
+	if ( this.m_bNeedsReload )
+		this.ShowInventoryReloadMessage();
+
 	var _this = this;
-
-	$J(window).on('scroll.LazyLoad_' + this.m_strCompositeID, function() {
-
-		if ( !_this.m_rgLazyLoadImages || !_this.m_rgLazyLoadImages.length )
-			return;
-
-		var nPageHeight = $J(window).height();
-		var nStartOffset = $J(window).scrollTop() - ( nPageHeight * 0.5 );
-		var nEndOffset = $J(window).scrollTop() + ( nPageHeight * 1.5  );
-		var rgLazyLoadImages = _this.m_rgLazyLoadImages;
-
-		var iStart, iEnd;
-		for ( iStart = 0; iStart < rgLazyLoadImages.length; iStart++ )
-		{
-			if ( rgLazyLoadImages[iStart].offset().top > nStartOffset )
-				break;
-		}
-		if ( iStart < rgLazyLoadImages.length )
-		{
-			for ( iEnd = iStart; iEnd < rgLazyLoadImages.length; iEnd++ )
-			{
-				if ( rgLazyLoadImages[iEnd].offset().top > nEndOffset )
-					break;
-			}
-
-			if ( iStart != iEnd )
-			{
-				_this.LazyLoadImageRange( iStart, iEnd );
-			}
-		}
-	});
 };
 
-// appwide inventory has special logic here
-CInventory.prototype.LazyLoadImageRange = function( iStart, iEnd )
+CInventory.prototype.GetCountTotalItems = function()
 {
-	// we could have loaded these in the loop above, but there is better
-	// perf doing it all at once rather than alternating between loading images and querying position()
-	var $LastItem;
-	for ( var i = iStart; i < iEnd; i++ )
-	{
-		$LastItem = $J( this.m_rgLazyLoadImages[i][0].firstChild );
-		this.LoadItemImage( $LastItem );
-	}
-
-	// make sure we've loaded inventory up until where they've scrolled
-	if ( $LastItem.hasClass( 'pendingItem' ) )
-	{
-		this.LoadUntilConditionMet( function() { return !$LastItem.hasClass( 'pendingItem' ); } );
-	}
-
-	this.m_rgLazyLoadImages.splice( iStart, iEnd - iStart );
-};
+	return this.m_cItems;
+}
 
 CInventory.prototype.AddInventoryData = function( data )
 {
@@ -687,7 +862,7 @@ CInventory.prototype.EnsureItemHoldersCreated = function()
 
 		if ( this.m_rgItemElements.length < this.m_cItems )
 		{
-			while ( this.m_rgItemElements.length < this.m_cItems && (this.m_rgItemElements.length < INVENTORY_PAGE_ITEMS * 3 || g_bEnableDynamicSizing) )
+			while ( this.m_rgItemElements.length < this.m_cItems && (this.m_rgItemElements.length < INVENTORY_PAGE_ITEMS * 3 ))//|| g_bEnableDynamicSizing) )
 			{
 				var $ItemHolder = this.CreateEmptyItemHolder( Math.floor( this.m_rgItemElements.length/INVENTORY_PAGE_ITEMS ) );
 				this.m_rgItemElements.push( $ItemHolder );
@@ -748,6 +923,19 @@ CInventory.prototype.PerformInitialLoad = function( count )
 		return this.LoadMoreAssets( count );
 };
 
+CInventory.prototype.AddOnItemsLoadedCallback = function( fnCallback )
+{
+	if ( this.m_rgOnItemsLoadedCallbacks.indexOf( fnCallback ) === -1 )
+		this.m_rgOnItemsLoadedCallbacks.push( fnCallback );
+}
+
+CInventory.prototype.RemoveOnItemsLoadedCallback = function( fnCallback )
+{
+	var iIndex = this.m_rgOnItemsLoadedCallbacks.indexOf( fnCallback );
+	if ( iIndex !== -1 )
+		this.m_rgOnItemsLoadedCallbacks.splice( iIndex, 1 );
+}
+
 CInventory.prototype.LoadMoreAssets = function( count )
 {
 	if ( this.m_ActivePromise )
@@ -786,12 +974,21 @@ CInventory.prototype.LoadMoreAssets = function( count )
 		_this.AddInventoryData( data );
 		_this.m_tsLastError = 0;
 		_this.HideInventoryLoadError();
+		_this.m_SingleResponsivePage.EnsurePageItemsCreated();
+
+		if ( _this.m_parentInventory )
+			_this.m_parentInventory.m_SingleResponsivePage.EnsurePageItemsCreated();
+
 	}).fail( function() {
 		_this.m_tsLastError = $J.now();
 		_this.ShowInventoryLoadError();
 	}).always( function() {
 		_this.m_owner.HideLoadingIndicator();
-	}) ).promise();
+	}) ).done( function() {
+		// intentionally done outside SetActivePromise so active promise will bset.
+		for ( var i = 0; i < _this.m_rgOnItemsLoadedCallbacks.length; i++ )
+			_this.m_rgOnItemsLoadedCallbacks[i]();
+	}).promise();
 };
 
 CInventory.prototype.ShowInventoryLoadError = function()
@@ -801,7 +998,7 @@ CInventory.prototype.ShowInventoryLoadError = function()
 		/*
 				*/
 
-		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\r\n\t\t\t\t<div class=\"inventory_load_error_header\">\r\n\t\t\t\t\t<img src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\r\n\t\t\t\t\tThis inventory is not available at this time.  Please try again later.\t\t\t\t\t&nbsp;\r\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\r\n\t\t\t\t\t\t<span>Try Again<\/span>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t\t&nbsp;\r\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\r\n\t\t\t\t\t\t<img src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t\t<\/span>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t" ).hide();
+		this.m_$ErrorDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\r\n\t\t\t\t<div class=\"inventory_load_error_header\">\r\n\t\t\t\t\t<img src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\r\n\t\t\t\t\t<div class=\"message\">This inventory is not available at this time.  Please try again later.<\/div>\r\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small retry_load_btn\">\r\n\t\t\t\t\t\t<span>Try Again<\/span>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t\t<span class=\"inventory_loading_indicator\">\r\n\t\t\t\t\t\t<img src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t\t<\/span>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t" ).hide();
 
 		var _this = this;
 		this.m_$ErrorDisplay.find( '.retry_load_btn').click( function() { _this.RetryLoad(); } );
@@ -816,6 +1013,8 @@ CInventory.prototype.ShowInventoryLoadError = function()
 		this.m_parentInventory.ShowInventoryLoadError();
 };
 
+
+
 CInventory.prototype.HideInventoryLoadError = function()
 {
 	if ( this.m_$ErrorDisplay && this.m_$ErrorDisplay.is(':visible') )
@@ -824,6 +1023,37 @@ CInventory.prototype.HideInventoryLoadError = function()
 	if ( this.m_parentInventory )
 		this.m_parentInventory.HideInventoryLoadError();
 };
+
+
+CInventory.prototype.ShowInventoryReloadMessage = function()
+{
+	this.m_bNeedsReload = true;
+
+	if ( !this.m_$ReloadDisplay )
+	{
+		/*
+				*/
+
+		this.m_$ReloadDisplay = $J('<div/>').html( "\t\t\t<div class=\"inventory_load_error\">\r\n\t\t\t\t<div class=\"inventory_load_error_header\">\r\n\t\t\t\t\t<img src=\"https:\/\/steamcommunity-a.akamaihd.net\/public\/images\/economy\/market\/icon_alertlistings.png\" class=\"load_error_icon\">\r\n\t\t\t\t\t <div class=\"message\">Items in this inventory may be out of date and displaying old data.  For performance reasons, automatic refresh has been disabled.<\/div>\r\n\t\t\t\t\t<div class=\"btnv6_blue_hoverfade btn_small reload_btn\">\r\n\t\t\t\t\t\t<span>Refresh<\/span>\r\n\t\t\t\t\t<\/div>\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t" ).hide();
+
+		var _this = this;
+		this.m_$ReloadDisplay.find( '.reload_btn').click( function() { _this.ReloadIfNeeded() } );
+
+		this.m_owner.GetInventoryLoadDisplayElement().append( this.m_$ReloadDisplay );
+	}
+
+	if ( this.m_bActive )
+		this.m_$ReloadDisplay.slideDown();
+
+	if ( this.m_parentInventory )
+		this.m_parentInventory.ShowInventoryReloadMessage();
+};
+
+CInventory.prototype.ReloadIfNeeded = function()
+{
+	if ( this.m_bNeedsReload )
+		this.m_owner.ReloadInventory( this.m_appid, this.m_contextid );
+}
 
 CInventory.prototype.LoadUntilConditionMet = function( fnCondition, count )
 {
@@ -861,8 +1091,16 @@ CInventory.prototype.LoadUntilConditionMetInternal = function( fnCondition, coun
 
 CInventory.prototype.LoadCompleteInventory = function()
 {
-	var _this = this;
-	return this.LoadUntilConditionMet( function() { return _this.m_bFullyLoaded; }, 5000 /* a lot at a time */ );
+	if ( this.m_bFullyLoaded )
+		return $J.Deferred().resolve();
+
+	if ( !this.m_promiseLoadCompleteInventory )
+	{
+		var _this = this;
+		this.m_promiseLoadCompleteInventory = this.LoadUntilConditionMet( function() { return _this.m_bFullyLoaded; }, 5000 /* a lot at a time */ );
+	}
+
+	return this.m_promiseLoadCompleteInventory;
 };
 
 CInventory.prototype.BuildItemElement = function( asset, $Item )
@@ -1153,35 +1391,39 @@ CInventory.prototype.TagCheckboxChanged = function( )
 	Filter.UpdateTagFiltering( rgCategories );
 };
 
-CInventory.prototype.EnsurePageItemsCreated = function( iPage )
+CInventory.prototype.GetPageItems = function( iPage )
 {
-	if ( iPage < 0 || iPage >= this.m_cPages )
-		return;
-
-	$Page = this.m_rgPages[iPage];
-	if ( !$Page.hasClass( 'missing_item_holders' ) )
-		return;
-
-	$Page.children().detach();
-	$Page.removeClass( 'missing_item_holders' );
 	var iStart = iPage * INVENTORY_PAGE_ITEMS;
 	var iEnd = iStart + INVENTORY_PAGE_ITEMS;
-	var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
+	var rgItemHolders = [];
 	for ( var iItem = iStart; iItem < this.m_rgItemElements.length && iItem < iEnd; iItem++ )
 	{
 		var $ItemHolder = this.GetItemElement( iItem );
-		$Page.append( $ItemHolder );
-		cPageItemsRemaining--;
+		rgItemHolders.push( $ItemHolder );
 	}
 
-	if ( !g_bEnableDynamicSizing )
+	return rgItemHolders;
+}
+
+CInventory.prototype.AppendPage = function( $Page, iPage )
+{
+	var elInventory = this.m_$Inventory[0];
+	var rgChildElements = elInventory.childElements();
+
+	$Page[0].iPage = iPage;
+
+	for ( var i = rgChildElements.length - 1; i >= 0; i-- )
 	{
-		for ( var i = 0; i < cPageItemsRemaining; i++ )
+		if ( rgChildElements[i].iPage < iPage )
 		{
-			$Page.append( $J('<div/>', {'class': 'itemHolder disabled'} ) );
+			elInventory.insertBefore( $Page[0], i + 1 < rgChildElements.length ? rgChildElements[ i + 1 ] : null );
+			return;
 		}
 	}
-};
+
+	// insert at the start
+	elInventory.insertBefore( $Page[0], rgChildElements.length ? rgChildElements[0] : null );
+}
 
 CInventory.prototype.SetActivePage = function( iPage )
 {
@@ -1193,7 +1435,6 @@ CInventory.prototype.SetActivePage = function( iPage )
 		this.m_rgPages[this.m_iCurrentPage].hide();
 	}
 
-	this.EnsurePageItemsCreated( iPage );
 	this.m_rgPages[iPage].show();
 	this.m_iCurrentPage = iPage;
 	this.UpdatePageCounts();
@@ -1201,15 +1442,24 @@ CInventory.prototype.SetActivePage = function( iPage )
 	this.PreloadPageImages( this.m_iCurrentPage );
 };
 
+CInventory.prototype.OnPageChangeTo = function( iPage )
+{
+	if ( iPage == this.m_cPages - 1 && this.bFilterApplied && !this.BIsFullyLoaded() )
+	{
+		// we tabbed to the last page, and there's a filter applied.  Keep loading more stuff.
+		this.LoadMoreAssets( Filter.FILTER_ASSETS_PER_LOAD );
+	}
+};
+
 CInventory.prototype.PrepPageTransition = function( nPageWidth, iCurPage, iNextPage )
 {
 	$J('#inventories').css( 'overflow', 'hidden' );
 	this.m_$Inventory.css( 'width', ( 2 * nPageWidth ) + 'px' );
 
-	this.EnsurePageItemsCreated( iNextPage );
-	this.m_rgPages[iCurPage].add( this.m_rgPages[iNextPage] ).css('width', nPageWidth + 'px' );
+	this.m_rgPages[iCurPage].GetElement().add( this.m_rgPages[iNextPage].GetElement() ).css('width', nPageWidth + 'px' );
 	this.m_rgPages[iNextPage].show();
-	this.LoadPageImages( this.m_rgPages[iNextPage] );
+	this.m_rgPages[iNextPage].LoadPageImages();
+	this.OnPageChangeTo( iNextPage );
 
 	this.m_$Inventory.addClass('paging_transition');
 };
@@ -1268,7 +1518,7 @@ CInventory.prototype.FinishPageTransition = function( iLastPage, iCurPage )
 	$J('#inventories').css( 'overflow', '' );
 	this.m_rgPages[iLastPage].hide();
 	this.m_$Inventory.css( 'left', '0' ).css( 'width', '' );
-	this.m_rgPages[iLastPage].add( this.m_rgPages[iCurPage] ).css('width', '' );
+	this.m_rgPages[iLastPage].GetElement().add( this.m_rgPages[iCurPage].GetElement() ).css('width', '' );
 	this.m_$Inventory.removeClass('paging_transition');
 
 	this.UpdatePageCounts();
@@ -1283,26 +1533,22 @@ CInventory.prototype.FinishPageTransition = function( iLastPage, iCurPage )
 
 CInventory.prototype.PreloadPageImages = function( iPage )
 {
-	this.EnsurePageItemsCreated( iPage - 1 );
-	this.EnsurePageItemsCreated( iPage );
-	this.EnsurePageItemsCreated( iPage + 1 );
-
 	// this page
-	this.LoadPageImages( this.m_rgPages[ iPage ] );
+	this.m_rgPages[ iPage ].LoadPageImages();
 	
 	// next page
 	if ( iPage < this.m_cPages - 1 )
-		this.LoadPageImages( this.m_rgPages[ iPage + 1 ] );
+		this.m_rgPages[ iPage + 1 ].LoadPageImages();
 		
 	// previous page
 	if ( iPage > 0 )
-		this.LoadPageImages( this.m_rgPages[ iPage - 1 ] );
+		this.m_rgPages[ iPage - 1 ].LoadPageImages();
 };
 
 CInventory.prototype.UpdatePageCounts = function()
 {
-	$J('#pagecontrol_cur').text( this.m_iCurrentPage + 1 );
-	$J('#pagecontrol_max').text( this.m_cPages );
+	$J('#pagecontrol_cur').text( v_numberformat( this.m_iCurrentPage + 1 ) );
+	$J('#pagecontrol_max').text( v_numberformat( this.m_cPages ) );
 
 	if ( this.m_iCurrentPage > 0 )
 		$J('#pagebtn_previous').removeClass( 'disabled' );
@@ -1321,58 +1567,31 @@ CInventory.prototype.LayoutPages = function()
 
 	this.m_$Inventory.children().detach();
 
-	this.m_rgLazyLoadImages = [];
-	this.m_rgPages = [];
-
-	var $Page = $J('<div/>', {'class': 'inventory_page'} );
-	this.m_rgPages.push( $Page );
-	var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
-
-	for ( var iItem = 0; iItem < this.m_rgItemElements.length; iItem++ )
+	if ( g_bEnableDynamicSizing )
 	{
-		var $ItemHolder = this.m_rgItemElements[iItem];
-		if ( g_bEnableDynamicSizing )
+		this.m_SingleResponsivePage.hide();
+		this.m_rgPages = [ this.m_SingleResponsivePage ];
+	}
+	else
+	{
+		this.m_rgPages = [];
+
+		var iPage = 0;
+		this.m_rgPages.push( new CPage( this, iPage++ ) );
+		var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
+
+		for ( var iItem = 0; iItem < this.m_rgItemElements.length; iItem++ )
 		{
-			var $Item = $J($ItemHolder[0].firstChild);
-			if ( $Item.data('lazyLoadImage' ) || $Item.hasClass( 'pendingItem' ) )
+			var $ItemHolder = this.m_rgItemElements[iItem];
+			if ( cPageItemsRemaining-- <= 0 )
 			{
-				this.m_rgLazyLoadImages.push( $ItemHolder );
+				this.m_rgPages.push( new CPage( this, iPage++ ) );
+				cPageItemsRemaining = INVENTORY_PAGE_ITEMS - 1;
 			}
 		}
-		else if ( cPageItemsRemaining-- <= 0 )
-		{
-			$Page.hide();
-			this.m_$Inventory.append( $Page );
-			$Page = $J('<div/>', {'class': 'inventory_page'} );
-			if ( $ItemHolder == null )
-			{
-				$Page.addClass( 'missing_item_holders' );
-			}
-			this.m_rgPages.push( $Page );
-			cPageItemsRemaining = INVENTORY_PAGE_ITEMS - 1;
-		}
-
-		if ( $ItemHolder != null )
-		{
-			$Page.append( $ItemHolder );
-		}
 	}
-
-	if ( !g_bEnableDynamicSizing )
-	{
-		for ( var i = 0; i < cPageItemsRemaining; i++ )
-		{
-			$Page.append( $J('<div/>', {'class': 'itemHolder disabled'} ) );
-		}
-	}
-	$Page.hide();
-	this.m_$Inventory.append( $Page );
 
 	this.m_cPages = this.m_rgPages.length;
-	for ( var i = 0; i < this.m_rgPages.length; i++ )
-		this.m_rgPages[i].data( 'iPage', i );
-
-	this.m_$Inventory.append( $J('<div/>', {'style': 'clear: left;'} ) );
 
 	this.m_bNeedsRepagination = false;
 	this.SetActivePage( this.m_iCurrentPage );
@@ -1480,14 +1699,14 @@ CInventory.prototype.FindFirstAssetOnPage = function( iPage )
 		if ( iPage >= _this.m_rgPages.length )
 			return _this.m_bPerformedInitialLoad;
 
-		var $Page = _this.m_rgPages[iPage];
+		var $Page = _this.m_rgPages[iPage].GetElement();
 		var $Item = $Page.children('.itemHolder:first').children('.item');
 
 		return !$Item.hasClass('pendingItem');
 	}).done( function() {
 		if ( iPage < _this.m_rgPages.length )
 		{
-			var $Page = _this.m_rgPages[iPage];
+			var $Page = _this.m_rgPages[iPage].GetElement();
 			var $Item = $Page.children('.itemHolder:first').children('.item');
 
 			if ( !$Item.hasClass('pendingItem') )
@@ -1533,39 +1752,6 @@ CInventory.prototype.LocateAssetElement = function( assetid )
 		return null;
 };
 
-CInventory.prototype.LoadPageImages = function( $Page )
-{
-	if ( g_bEnableDynamicSizing )
-	{
-		window.setTimeout( function() { $Page.trigger('scroll'); }, 1 );
-	}
-	else if ( !$Page.data('imagesLoaded') )
-	{
-		var bNeedToLoadMoreData = false;
-		var _this = this;
-		$Page.children().each( function() {
-			var $Item = $J(this).children('.item');
-			if ( $Item.hasClass('pendingItem') )
-			{
-				$Item.data( 'imageLoaded', true );
-				bNeedToLoadMoreData = true;
-			}
-			else
-			{
-				_this.LoadItemImage( $Item );
-			}
-		});
-
-		if ( bNeedToLoadMoreData )
-		{
-			this.LoadUntilConditionMet( function() {
-				return $Page.children().children('.item.pendingItem').length == 0;
-			});
-		}
-
-		$Page.data( 'imagesLoaded', true );
-	}
-};
 
 CInventory.prototype.LoadItemImage = function( $Item )
 {
@@ -1728,6 +1914,21 @@ CAppwideInventory.prototype.GetContextIds = function()
 	return this.m_rgContextIds;
 };
 
+CAppwideInventory.prototype.GetCountTotalItems = function()
+{
+	this.EnsureChildInventoriesReady();
+
+	var cItems = 0;
+	for ( var iContext = 0; iContext < this.m_rgContextIds.length; iContext++ )
+	{
+		var contextid = this.m_rgContextIds[iContext];
+		var inventory = this.m_rgChildInventories[contextid];
+		cItems += inventory.GetCountTotalItems();
+	}
+
+	return cItems;
+}
+
 CAppwideInventory.prototype.AddChildInventory = function( inventory )
 {
 	if ( !this.m_rgChildInventories[ inventory.contextid ] )
@@ -1739,6 +1940,12 @@ CAppwideInventory.prototype.AddChildInventory = function( inventory )
 	this.m_bFullyLoaded = false;
 	this.m_bNeedsRepagination = true;
 	this.m_rgChildInventories[ inventory.contextid ] = inventory;
+
+	var _this = this;
+	inventory.AddOnItemsLoadedCallback( function() {
+		for ( var i = 0; i < _this.m_rgOnItemsLoadedCallbacks.length; i++ )
+			_this.m_rgOnItemsLoadedCallbacks[i]();
+	});
 };
 
 CAppwideInventory.prototype.EnsureChildInventoriesReady = function()
@@ -1785,16 +1992,21 @@ CAppwideInventory.prototype.LoadCompleteInventory = function()
 	if ( this.m_bFullyLoaded )
 		return $J.Deferred().resolve();
 
-	this.EnsureChildInventoriesReady();
-
-	var rgDeferreds = [];
-	for ( var contextid in this.m_rgChildInventories )
+	if ( !this.m_promiseLoadCompleteInventory )
 	{
-		rgDeferreds.push( this.m_rgChildInventories[contextid].LoadCompleteInventory() );
+		this.EnsureChildInventoriesReady();
+
+		var rgDeferreds = [];
+		for ( var contextid in this.m_rgChildInventories )
+		{
+			rgDeferreds.push( this.m_rgChildInventories[contextid].LoadCompleteInventory() );
+		}
+
+		var _this = this;
+		this.m_promiseLoadCompleteInventory = $J.when.apply( $J, rgDeferreds ).done( function() {  _this.m_bFullyLoaded = true; } );
 	}
 
-	var _this = this;
-	return $J.when.apply( $J, rgDeferreds ).done( function() {  _this.m_bFullyLoaded = true; } );
+	return this.m_promiseLoadCompleteInventory;
 };
 
 CAppwideInventory.prototype.ReadTags = function()
@@ -1865,108 +2077,52 @@ CAppwideInventory.prototype.LayoutPages = function()
 
 	this.m_$Inventory.children().detach();
 
-	this.m_rgLazyLoadImages = [];
 	this.m_rgPages = [];
 
-	var $Page = $J('<div/>', {'class': 'inventory_page'} );
-	this.m_rgPages.push( $Page );
-	var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
-
-	var bAnyMissing = false;
-	for ( var iContext = 0; iContext < this.m_rgContextIds.length; iContext++ )
+	if ( g_bEnableDynamicSizing )
 	{
-		var contextid = this.m_rgContextIds[iContext];
-		var inventory = this.m_rgChildInventories[contextid];
+		this.m_SingleResponsivePage.hide();
+		this.m_rgPages = [ this.m_SingleResponsivePage ];
+	}
+	else
+	{
+		var iPage = 0;
+		this.m_rgPages.push( new CPage( this, iPage++  ) );
+		var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
 
-		inventory.EnsureItemHoldersCreated();
-
-		for ( var iItem = 0; iItem < inventory.m_rgItemElements.length; iItem++ )
+		var bAnyMissing = false;
+		for ( var iContext = 0; iContext < this.m_rgContextIds.length; iContext++ )
 		{
-			var $ItemHolder = inventory.m_rgItemElements[iItem];
+			var contextid = this.m_rgContextIds[iContext];
+			var inventory = this.m_rgChildInventories[contextid];
 
-			if ( $ItemHolder == null )
-			{
-				bAnyMissing = true;
-			}
-			else
-			{
-				// remember where this came from
-				$ItemHolder.data( 'contextid', contextid );
-			}
+			inventory.EnsureItemHoldersCreated();
 
-			if ( g_bEnableDynamicSizing )
+			for ( var iItem = 0; iItem < inventory.m_rgItemElements.length; iItem++ )
 			{
-				var $Item = $J($ItemHolder[0].firstChild);
-				if ( $Item.data('lazyLoadImage' ) || $Item.hasClass( 'pendingItem' ) )
+				if ( cPageItemsRemaining-- <= 0 )
 				{
-					this.m_rgLazyLoadImages.push( $ItemHolder );
+					this.m_rgPages.push( new CPage( this, iPage++  ) );
+					cPageItemsRemaining = INVENTORY_PAGE_ITEMS - 1;
 				}
-			}
-			else if ( cPageItemsRemaining-- <= 0 )
-			{
-				if ( bAnyMissing )
-				{
-					$Page.addClass( 'missing_item_holders' );
-				}
-
-				bAnyMissing = false;
-
-				$Page.hide();
-				this.m_$Inventory.append( $Page );
-				$Page = $J('<div/>', {'class': 'inventory_page'} );
-				this.m_rgPages.push( $Page );
-				cPageItemsRemaining = INVENTORY_PAGE_ITEMS - 1;
-			}
-
-			if ( $ItemHolder != null )
-			{
-				$Page.append( $ItemHolder );
 			}
 		}
 	}
-
-	if ( bAnyMissing )
-	{
-		$Page.addClass( 'missing_item_holders' );
-	}
-
-	if ( !g_bEnableDynamicSizing )
-	{
-		for ( var i = 0; i < cPageItemsRemaining; i++ )
-		{
-			$Page.append( $J('<div/>', {'class': 'itemHolder disabled'} ) );
-		}
-	}
-	$Page.hide();
-	this.m_$Inventory.append( $Page );
 
 	this.m_cPages = this.m_rgPages.length;
-	for ( var i = 0; i < this.m_rgPages.length; i++ )
-		this.m_rgPages[i].data( 'iPage', i );
-
-	this.m_$Inventory.append( $J('<div/>', {'style': 'clear: left;'} ) );
 
 	this.m_bNeedsRepagination = false;
 	this.SetActivePage( this.m_iCurrentPage );
 };
 
-CAppwideInventory.prototype.EnsurePageItemsCreated = function( iPage )
+CAppwideInventory.prototype.GetPageItems = function( iPage )
 {
-	if ( iPage < 0 || iPage >= this.m_cPages )
-		return;
-
-		$Page = this.m_rgPages[iPage];
-	if ( !$Page.hasClass( 'missing_item_holders' ) )
-		return;
-
-		$Page.children().detach();
-	$Page.removeClass( 'missing_item_holders' );
 	var iStart = iPage * INVENTORY_PAGE_ITEMS;
 	var iCur = iStart;
 	var cHandled = 0;
 	var iEnd = iStart + INVENTORY_PAGE_ITEMS;
-	var cPageItemsRemaining = INVENTORY_PAGE_ITEMS;
-	
+		var rgItems = [];
+
 	for ( var iContext = 0; iContext < this.m_rgContextIds.length; iContext++ )
 	{
 		var contextid = this.m_rgContextIds[iContext];
@@ -1985,8 +2141,7 @@ CAppwideInventory.prototype.EnsurePageItemsCreated = function( iPage )
 				for ( var iItem = iCur; iItem < inventory.m_rgItemElements.length && cHandled < iEnd; iItem++ )
 		{
 			var $ItemHolder = inventory.GetItemElement( iItem );
-			$Page.append( $ItemHolder );
-			cPageItemsRemaining--;
+			rgItems.push($ItemHolder);
 			cHandled++;
 		}
 
@@ -1995,13 +2150,7 @@ CAppwideInventory.prototype.EnsurePageItemsCreated = function( iPage )
 			break;
 	}
 
-	if ( !g_bEnableDynamicSizing )
-	{
-		for ( var i = 0; i < cPageItemsRemaining; i++ )
-		{
-			$Page.append( $J('<div/>', {'class': 'itemHolder disabled'} ) );
-		}
-	}
+	return rgItems;
 };
 
 CAppwideInventory.prototype.LocateAsset = function( itemid )
@@ -2069,6 +2218,26 @@ CAppwideInventory.prototype.FindFirstAsset = function()
 	return deferred.promise();
 };
 
+
+CAppwideInventory.prototype.ReloadIfNeeded = function()
+{
+	if ( this.m_bNeedsReload )
+	{
+		// hide message and remove flag first, so when the reload activate the appwide inventory again we don't
+		//	briefly show the reload message
+		if ( this.m_$ReloadDisplay )
+			this.m_$ReloadDisplay.slideUp();
+		this.m_bNeedsReload = false;
+
+		for ( var contextid in this.m_rgChildInventories )
+		{
+			if ( this.m_rgChildInventories[contextid].m_bNeedsReload )
+				this.m_owner.ReloadInventory( this.m_appid, contextid );
+		}
+	}
+
+}
+
 CAppwideInventory.prototype.LoadUntilConditionMet = function( fnCondition )
 {
 	this.EnsureChildInventoriesReady();
@@ -2102,72 +2271,19 @@ CAppwideInventory.prototype.LoadUntilConditionMet = function( fnCondition )
 	return deferred.promise();
 };
 
-CAppwideInventory.prototype.LoadPageImages = function( $Page )
+
+
+CAppwideInventory.prototype.LoadMoreAssets = function( count )
 {
-	if ( g_bEnableDynamicSizing )
+	this.EnsureChildInventoriesReady();
+
+	for ( var contextid in this.m_rgChildInventories )
 	{
-		window.setTimeout( function() { $Page.trigger('scroll'); }, 1 );
-	}
-	else if ( !$Page.data('imagesLoaded') )
-	{
-		var rgContextsNeedingData = [];
-		var _this = this;
-		$Page.children().each( function() {
-			var $ItemHolder = $J(this);
-			var $Item = $ItemHolder.children('.item');
-			if ( $Item.hasClass('pendingItem') )
-			{
-				$Item.data( 'imageLoaded', true );
-				var contextid = $ItemHolder.data('contextid');
-				if ( rgContextsNeedingData.indexOf( contextid ) === -1 )
-					rgContextsNeedingData.push( contextid );
-			}
-			else
-				_this.LoadItemImage( $Item );
-		});
-
-		for ( var i =0; i < rgContextsNeedingData.length; i++ )
-		{
-			var inventory = this.m_rgChildInventories[ rgContextsNeedingData[i] ];
-
-			inventory.LoadUntilConditionMet( function( contextid ) { return function() {
-				return $Page.children().children('.item.pendingItem.context' + contextid ).length == 0;
-			}; }( inventory.contextid ) );
-		}
-
-		$Page.data( 'imagesLoaded', true );
-	}
-};
-
-// appwide inventory has special logic here
-CAppwideInventory.prototype.LazyLoadImageRange = function( iStart, iEnd )
-{
-	var rgLastItemByContext = {};
-	for ( var i = iStart; i < iEnd; i++ )
-	{
-		var $ItemHolder = this.m_rgLazyLoadImages[i];
-		var contextid = $ItemHolder.data('contextid');
-
-		var $Item = $J( $ItemHolder[0].firstChild );
-		this.LoadItemImage( $Item );
-
-		rgLastItemByContext[contextid] = $Item;
+		if ( !this.m_rgChildInventories[contextid].m_bFullyLoaded )
+			return this.m_rgChildInventories[contextid].LoadMoreAssets( count );
 	}
 
-	// make sure we've loaded inventory up until where they've scrolled
-	for ( var contextid in rgLastItemByContext )
-	{
-		if ( rgLastItemByContext[contextid].hasClass('pendingItem') )
-		{
-			this.m_rgChildInventories[contextid].LoadUntilConditionMet( (function($Item) { return function() { return !$Item.hasClass('pendingItem'); }; } )( rgLastItemByContext[contextid] ) );
-		}
-	}
-
-	this.m_rgLazyLoadImages.splice( iStart, iEnd - iStart );
-};
-
-CAppwideInventory.prototype.LoadMoreAssets = function()
-{
+	return $J.Deferred().resolve().promise();
 };
 
 CAppwideInventory.prototype.BIsEmptyInventory = function()
@@ -2299,7 +2415,7 @@ var CUser = Class.create( {
 
 			if ( g_bEnableDynamicSizing )
 			{
-				rgInventories[i].m_bNeedsItemHolders = true;
+				//rgInventories[i].m_bNeedsItemHolders = true;
 			}
 		}
 
@@ -2539,25 +2655,57 @@ CUserYou = Class.create( CUser, {
 		this.rgActiveContextIdByApp = {};
 	},
 
-	ReloadInventory: function( appid, contextid )
+	ReloadInventory: function( appid, contextid, assetid )
 	{
 		// force a reload of an inventory that's already been loaded
 		var context = this.GetContext( appid, contextid );
 		if ( context && context.inventory )
 		{
-			this.rgReapplyFilterTags = Filter.rgCurrentTags;
-			var NewInventory = this.loadInventory( appid, contextid, context );
+			var asset = null;
+			if ( assetid )
+				asset = context.inventory.GetLoadedAsset( assetid );
 
-			if ( !this.BIsSingleContextApp( appid ) )
+			// for large inventories, if we have an idea of what asset was modified, just mark that asset "disabled"
+			if ( asset && context.inventory.GetCountTotalItems() > 1000 )
 			{
-				var appwideContext = this.GetContext( appid, APPWIDE_CONTEXT );
-				var appwideInventory = appwideContext.inventory;
-				appwideInventory.AddChildInventory( NewInventory );
+				// just mark this item as invalid
+				asset.consumed_item = true;
+				if ( asset && asset.element )
+					$J(asset.element).parent().addClass('consumed_item');
+
+				context.inventory.ShowInventoryReloadMessage();
+
+				if ( g_ActiveItemPopupModal )
+					g_ActiveItemPopupModal.Dismiss();
+
+				if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT )
+					&& g_ActiveInventory.selectedItem && g_ActiveInventory.selectedItem.consumed_item )
+				{
+					var page = g_ActiveInventory.m_rgPages[ g_ActiveInventory.m_iCurrentPage ];
+					var $ItemHolder = page.GetElement().children(':not(.consumed_item):first');
+					if ( $ItemHolder.length && $ItemHolder[0].rgItem )
+					{
+						var item = $ItemHolder[0].rgItem;
+						g_ActiveInventory.SelectItem( null, item.element, item, false );
+					}
+				}
 			}
-
-			if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
+			else
 			{
-				ShowItemInventory( appid, g_ActiveInventory.contextid, g_ActiveInventory.selectedItem ? g_ActiveInventory.selectedItem.id : null, true );
+				this.rgReapplyFilterTags = Filter.rgCurrentTags;
+				var NewInventory = this.loadInventory( appid, contextid, context );
+
+				if ( !this.BIsSingleContextApp( appid ) )
+				{
+					var appwideContext = this.GetContext( appid, APPWIDE_CONTEXT );
+					var appwideInventory = appwideContext.inventory;
+					appwideInventory.AddChildInventory( NewInventory );
+				}
+
+				if ( g_ActiveInventory && g_ActiveInventory.appid == appid && ( g_ActiveInventory.contextid == contextid || g_ActiveInventory.contextid == APPWIDE_CONTEXT ) )
+				{
+					ShowItemInventory( appid, g_ActiveInventory.contextid, g_ActiveInventory.selectedItem ? g_ActiveInventory.selectedItem.id : null, true );
+				}
 			}
 		}
 	},
@@ -4232,7 +4380,7 @@ SellItemDialog = {
 			}
 			else
 			{
-				UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid );
+				UserYou.ReloadInventory( this.m_item.appid, this.m_item.contextid, this.m_item.assetid );
 			}
 		}
 		else
@@ -4432,6 +4580,7 @@ var Filter = {
 	elFilter: null,
 	rgLastTags: {},
 	rgCurrentTags: {},
+	FILTER_ASSETS_PER_LOAD: 5000,
 
 	InitFilter: function( elFilter )
 	{
@@ -4448,8 +4597,11 @@ var Filter = {
 
 	ClearTextFilter: function()
 	{
-		this.elFilter.value = '';
-		this.OnFilterChange();
+		if ( this.elFilter.value != '' )
+		{
+			this.elFilter.value = '';
+			this.OnFilterChange();
+		}
 	},
 
 	ClearFilter: function()
@@ -4475,7 +4627,7 @@ var Filter = {
 		/* erase the filter so visibilty will be recalculated - should store last filter at inventory level */
 		if ( g_ActiveInventory.bFilterApplied && this.strLastFilter.length == 0 )
 		{
-			this.strLastFilter = 'x';
+			this.strLastFilter = this.elFilter.value && this.elFilter.value[0] == 'x' ? 'y' : 'x';
 			this.ApplyFilter( this.elFilter.value );
 		}
 		else
@@ -4492,17 +4644,18 @@ var Filter = {
 		this.ApplyFilter( this.elFilter.value );
 	},
 
+	OnMoreInventoryLoaded: function()
+	{
+		if ( Filter.elFilter.value != '' )
+			Filter.ReApplyFilter();
+	},
+
 	ApplyFilter: function( filterValue, elInsertedItem )
 	{
 		if ( !g_ActiveInventory || g_ActiveInventory.BIsEmptyInventory() )
 			return;
 
-		if ( filterValue && !g_ActiveInventory.BIsFullyLoaded() )
-		{
-			var _this = this;
-			g_ActiveInventory.LoadCompleteInventory().done( function() { _this.OnFilterChange(); } );
-			return;
-		}
+		var bInventoryFullyLoaded = g_ActiveInventory.BIsFullyLoaded();
 
 		var filter = v_trim( filterValue );
 
@@ -4524,7 +4677,7 @@ var Filter = {
 		}
 
 		this.strLastFilter = filter;
-
+		
 		var rgTerms = filter.length ? filter.split( ' ' ) : false;
 		for( var i = 0; i < rgTerms.length; i++ )
 		{
@@ -4532,15 +4685,16 @@ var Filter = {
 			rgTerms[i] = new RegExp( RegExp.escape( rgTerms[i] ), 'i' );
 		}
 
+		var rgTags = Object.values( this.rgCurrentTags ).length ? this.rgCurrentTags : null;
 
-		var rgNewItemList = Array();
+		var bDisplayAll = !rgTerms && !rgTags;
+
 		var rgPages = g_ActiveInventory.m_rgPages;
 		var rgForwardInserts = { };
 		var cElementsDisplayed = 0;
 		for (var iPage = 0; iPage < rgPages.length; iPage++ )
 		{
-			g_ActiveInventory.EnsurePageItemsCreated( iPage );
-			var $Page = rgPages[iPage];
+			var $Page = rgPages[iPage].GetElement();
 			var iCarryoverInserts = 0;
 
 			if ( rgForwardInserts[iPage] )
@@ -4551,9 +4705,12 @@ var Filter = {
 					$Page.prepend( rgForwardInserts[iPage][i] );
 					iCarryoverInserts++;
 				}
+				//we mucked with elements, check for images again
+				rgPages[iPage].m_bImagesLoaded = false;
 			}
 
 			var rgChildren = $Page.children();
+			var bPageMissingItems = false;
 			for ( var iChild = 0; iChild < rgChildren.length; iChild++ )
 			{
 				// skip any items that were pushed on to this page from the previous page - they've already been processed
@@ -4565,10 +4722,18 @@ var Filter = {
 
 				var elItemHolder = rgChildren[iChild];
 				var elItem = elItemHolder.firstChild;
+
+				// not loaded yet
+				if ( !elItem || !elItem.rgItem  )
+				{
+					bPageMissingItems = true;
+					break;
+				}
+
 				var bVisible = !elItemHolder.filtered;
 				if ( bVisible && bRestricting )
 				{
-					var bHide = !this.MatchItem( elItem, rgTerms, this.rgCurrentTags );
+					var bHide = !this.MatchItem( elItem, rgTerms, rgTags );
 					if ( bHide )
 					{
 						$J(elItemHolder).hide();
@@ -4577,15 +4742,17 @@ var Filter = {
 				}
 				else if ( !bVisible && ( bLoosening || elInsertedItem && elItem == elInsertedItem ) )
 				{
-					var bShow = this.MatchItem( elItem, rgTerms, this.rgCurrentTags );
+					var bShow = bDisplayAll || this.MatchItem( elItem, rgTerms, rgTags );
 					if ( bShow )
 					{
 						$J(elItemHolder).show();
 						elItemHolder.filtered=false;
 					}
 				}
+				
 				if ( !elItemHolder.filtered )
 					cElementsDisplayed++;
+
 				var iCorrectPage = Math.floor( (cElementsDisplayed > 0 ? cElementsDisplayed - 1 : 0 ) / INVENTORY_PAGE_ITEMS );
 				if ( iCorrectPage != iPage )
 				{
@@ -4597,15 +4764,15 @@ var Filter = {
 					}
 					else
 					{
-						rgPages[iCorrectPage].append( elItemHolder );
-						g_ActiveInventory.LoadItemImage( $J(elItem) );
+						rgPages[iCorrectPage].GetElement().append( elItemHolder );
+						rgPages[iCorrectPage].m_bImagesLoaded = false;
 					}
 				}
 			}
-		}
 
-		if ( g_bEnableDynamicSizing )
-			rgPages[0].trigger('scroll');
+			if ( bPageMissingItems )
+				break;
+		}
 
 		// blue border around filtered items
 		if ( filter.length || Object.values( this.rgCurrentTags ).length )
@@ -4649,7 +4816,7 @@ var Filter = {
 				$('filter_options').removeClassName( 'filtered' );
 		}
 
-		if( cElementsDisplayed == 0 )
+		if( cElementsDisplayed == 0 && bInventoryFullyLoaded )
 		{
 			if( $( 'empty_filtered_inventory_page' ) )
 			{
@@ -4667,7 +4834,7 @@ var Filter = {
 		}
 
 		// adjust page controls.  If the active page no longer has any items, dump the user on the first (0th) page
-		var cNewMaxPages = Math.floor( (cElementsDisplayed + INVENTORY_PAGE_ITEMS - 1 ) / INVENTORY_PAGE_ITEMS );
+		var cNewMaxPages = bDisplayAll ? g_ActiveInventory.m_rgPages.length : Math.floor( (cElementsDisplayed + INVENTORY_PAGE_ITEMS - 1 ) / INVENTORY_PAGE_ITEMS );
 		if ( cNewMaxPages <= 1 )
 			cNewMaxPages = 1;
 		g_ActiveInventory.m_cPages = cNewMaxPages;
@@ -4676,18 +4843,48 @@ var Filter = {
 			g_ActiveInventory.m_rgPages[g_ActiveInventory.m_iCurrentPage].hide();
 			g_ActiveInventory.SetActivePage(0);
 		}
+
+		var CurrentPage =g_ActiveInventory.m_rgPages[g_ActiveInventory.m_iCurrentPage];
+		var bAddedItems = false;
+
+		if ( bDisplayAll )
+		{
+			CurrentPage.PostFilterCleanUp();	//for responsive
+			CurrentPage.LoadPageImages();
+		}
+		else
+		{
+			CurrentPage.LoadPageImages();
+			bAddedItems = CurrentPage.EnsurePageItemsCreated( true /* keep going */ );	// also for responsive, we may need more items.
+			if ( bAddedItems )
+				window.setTimeout( function() { Filter.ReApplyFilter() }, 10 );
+		}
+
+		// if we haven't loaded inventory and there are more slots available, keep loading more data.
+		if ( !bDisplayAll && !bInventoryFullyLoaded )
+		{
+			g_ActiveInventory.AddOnItemsLoadedCallback( this.OnMoreInventoryLoaded );
+
+			if ( g_ActiveInventory.m_iCurrentPage == cNewMaxPages - 1 )
+				g_ActiveInventory.LoadMoreAssets( Filter.FILTER_ASSETS_PER_LOAD );
+		}
+		else if ( bDisplayAll )
+		{
+			g_ActiveInventory.RemoveOnItemsLoadedCallback( this.OnMoreInventoryLoaded );
+		}
+
 		g_ActiveInventory.UpdatePageCounts();
 	},
 
 	MatchItem: function( elItem, rgTerm, rgCategories )
 	{
-		if ( !rgTerm && !Object.values( rgCategories ).length)
+		if ( !rgTerm && !rgCategories)
 			return true;
 
 		if ( !elItem || !elItem.rgItem || !elItem.rgItem.description )
 			return false;
 
-		return this.MatchItemCategories( elItem, rgCategories )
+		return ( !rgCategories || this.MatchItemCategories( elItem, rgCategories ) )
 			&& this.MatchItemTerms( elItem, rgTerm );
 	},
 
@@ -5376,25 +5573,20 @@ function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRe
 		}
 	} ).trigger('resize.EconomyRepaginateInventory');
 
+	$J(window).off('scroll.EconomyResponsive' ).on('scroll.EconomyResponsive', function() {
+		if ( g_bEnableDynamicSizing && g_ActiveInventory )
+		{
+			g_ActiveInventory.m_SingleResponsivePage.EnsurePageItemsCreated();
+			g_ActiveInventory.m_SingleResponsivePage.LoadPageImages();
+		}
+	} ).trigger('scroll.EconomyResponsive');
 
-	var elStyle = document.createElement('style');
-	$J(document.head ).append(elStyle);
-
-	var styles = elStyle.sheet;
-
-	var bAddedRules = false;
 
 	$J(window ).on('resize.DynamicInventorySizing', function() {
 
 		if ( !Economy_UseResponsiveLayout() )
 		{
 			$InventoryCtn.removeClass('dynamicSizing');
-			if ( bAddedRules )
-			{
-				bAddedRules = false;
-				while ( styles.rules.length )
-					styles.deleteRule(0);
-			}
 			return;
 		}
 
@@ -5406,37 +5598,6 @@ function InitDynamicInventoryItemAutosizing( $InventoryCtn, strCSSClass, bAutoRe
 
 			return;
 		}
-
-		var nDesiredItemCtnWidth = 98;
-		var flMarginPct = 0.0625;
-		var flDesiredItemCtnWidthWithMargin = nDesiredItemCtnWidth + ( ( nDesiredItemCtnWidth - 2 ) * flMarginPct );
-
-		var nRowWidth = Math.max( $InventoryCtn.width() - 1, nDesiredItemCtnWidth );
-		// the -0.3 here creates a window where we'll use the smaller number of items but at pixel-perfect size
-		var cDesiredItemsPerRow = Math.max( Math.ceil( nRowWidth / flDesiredItemCtnWidthWithMargin - 0.3 ), 3 );
-
-		// now re-do the math at that rate
-		var flItemWidthWithMargin = nRowWidth / cDesiredItemsPerRow;
-
-		var flMargin, flItemCtnWidth;
-		if ( flItemWidthWithMargin > flDesiredItemCtnWidthWithMargin )
-			flItemWidthWithMargin = flDesiredItemCtnWidthWithMargin;
-
-		var flMargin = Math.floor( ( flItemWidthWithMargin - 2 ) * flMarginPct / ( 1 + flMarginPct ) );
-		var flItemCtnWidth = flItemWidthWithMargin - flMargin;
-
-		$InventoryCtn.addClass('dynamicSizing');
-		styles.insertRule( 'html.responsive ' + strCSSClass + '.dynamicSizing .itemHolder { width: ' + flItemCtnWidth + 'px; height: ' + flItemCtnWidth + 'px; margin: ' + ( flMargin / 2 ) + 'px; }', 0 );
-		styles.insertRule( 'html.responsive ' + strCSSClass + '.dynamicSizing .inventory_page { width: ' + nRowWidth + 'px }', 0 );
-
-
-		if ( bAddedRules )
-		{
-			styles.deleteRule(2);
-			styles.deleteRule(2);
-		}
-
-		bAddedRules = true;
 	});
 	$J(window).trigger('resize.DynamicInventorySizing');
 

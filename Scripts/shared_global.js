@@ -533,8 +533,8 @@ function CModal( $Content, rgParams )
 	this.m_fnOnDismiss = null;
 	this.m_bRemoveContentOnDismissal = false;
 
-	this.m_nInitialOffsetTop = $J(document.body).scrollTop();
-	this.m_nInitialOffsetLeft = $J(document.body).scrollLeft();
+	this.m_nInitialOffsetTop = $J(window).scrollTop();
+	this.m_nInitialOffsetLeft = $J(window).scrollLeft();
 	this.m_$Content.css( 'position', 'fixed' );
 	this.m_$Content.css( 'z-index', 1000 );
 
@@ -4347,8 +4347,13 @@ CAjaxSubPageController.prototype.OnWindowPopState = function( event )
 function BindTooltips(selector, rgOptions)
 {
 	// Standard tooltips
-	$J( '[data-tooltip-text]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false } );
-	$J( '[data-tooltip-html]', selector).v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false } );
+	var $TextTooltips = $J( '[data-tooltip-text]', selector);
+	if ( $TextTooltips.length )
+		$TextTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipText', 'defaultType': 'text', 'replaceExisting': false } );
+
+	var $HTMLTooltips = $J( '[data-tooltip-html]', selector);
+	if ( $HTMLTooltips.length )
+		$HTMLTooltips.v_tooltip( { 'tooltipClass': rgOptions.tooltipCSSClass, 'dataName': 'tooltipHtml', 'defaultType': 'html', 'replaceExisting': false } );
 }
 
 /**
@@ -4356,15 +4361,19 @@ function BindTooltips(selector, rgOptions)
  * @param strCSSClass
  * @constructor
  */
-
+var g_TooltipMutationObserver;
+var g_bTooltipMutationObserverDisabled = false;
 function SetupTooltips( rgOptions )
 {
-	BindTooltips(document, rgOptions)
+	BindTooltips(document, rgOptions);
+
+	if ( g_TooltipMutationObserver || g_bTooltipMutationObserverDisabled )
+		return;
 
 	try
 	{
 		var config = {
-			attributes: true,
+			attributes: true,	// not clear if we actually support this, as we only look at addedNodes
 			childList: true,
 			subtree: true,
 			attributeFilter: [ "data-tooltip-html", "data-tooltip-text" ]
@@ -4372,23 +4381,35 @@ function SetupTooltips( rgOptions )
 
 		var callback = function ( mutationsList )
 		{
-
 			for ( var i=0; i<mutationsList.length; i++ )
 			{
 				var mutation = mutationsList[i];
-				BindTooltips( mutation.addedNodes, rgOptions );
+				if ( mutation.addedNodes && mutation.addedNodes.length )
+					BindTooltips( mutation.addedNodes, rgOptions );
 			}
 		};
 
 		// Create an observer instance linked to the callback function
-		var observer = new MutationObserver ( callback );
+		g_TooltipMutationObserver = new MutationObserver ( callback );
 
 		// Start observing the target node for configured mutations
-		observer.observe ( document, config );
+		g_TooltipMutationObserver.observe ( document, config );
 	}
 	catch( e )
 	{
 		// Swallow exceptions for browsers that don't support mutationobservers
+	}
+}
+
+// for perf sensitive pages
+function DisableTooltipMutationObserver()
+{
+	g_bTooltipMutationObserverDisabled = true;
+
+	if ( g_TooltipMutationObserver )
+	{
+		g_TooltipMutationObserver.disconnect();
+		g_TooltipMutationObserver = null;
 	}
 }
 

@@ -1566,11 +1566,12 @@ img.emoticon_emoticon_9hYGN {
   vertical-align: middle;
   width: 18px;
   height: 18px;
-  transition: all .1s ease-in-out;
-  /* Actual source is 54px, 36px is 2/3 scale */ }
+  transition: all .1s ease-in-out; }
   img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
-    width: 36px;
-    height: 36px; }
+    width: 32px;
+    height: 32px;
+    margin-top: -14px;
+    margin-bottom: -14px; }
 
 /* These styles are used within the returned emoticon tooltip, so need to be global for now */
 .emoticon_hover_arrow {
@@ -1779,10 +1780,11 @@ img.emoticon_emoticon_9hYGN {
 
 .STV_ReplayBanner {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0px 10px;
-  z-index: 20;
+  top: 6px;
+  right: 4px;
+  border-radius: 3px;
+  padding: 0px 8px;
+  z-index: 46;
   color: black;
   font-size: 16px;
   line-height: 20px;
@@ -3409,15 +3411,31 @@ iframe.steamTVLogin {
   -webkit-app-region: no-drag;
   transition: all .21s ease-in-out; }
 
-.LinkRegionEdge.Middle .LinkRegionDelete line {
+.LinkRegionEdge.Middle .LinkRegionSettings {
+  width: 20px;
+  height: 20px;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  cursor: default;
+  opacity: 0;
+  -webkit-app-region: no-drag;
+  transition: all .21s ease-in-out; }
+
+.LinkRegionEdge.Middle .LinkRegionDelete line,
+.LinkRegionEdge.Middle .LinkRegionSettings line {
   stroke-width: 26px;
   stroke: #008ada;
   transition: all .21s ease-in-out; }
 
-.LinkRegionEdge.Middle:hover .LinkRegionDelete:hover line {
+.LinkRegionEdge.Middle:hover .LinkRegionDelete:hover line,
+.LinkRegionEdge.Middle:hover .LinkRegionSettings:hover line {
   stroke: #cce0ff; }
 
-.LinkRegionEdge.Middle:hover .LinkRegionDelete {
+.LinkRegionEdge.Middle:hover .LinkRegionDelete,
+.LinkRegionEdge.Middle:hover .LinkRegionSettings {
   opacity: 1; }
 
 .LinkRegionEdge.Right {
@@ -3440,7 +3458,7 @@ iframe.steamTVLogin {
   border-top: 2px dotted #008ada;
   cursor: nwse-resize; }
 
-.AddLinkRegion {
+.AddLinkRegion, .SaveLinkRegion {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -3454,9 +3472,12 @@ iframe.steamTVLogin {
   cursor: pointer;
   text-transform: uppercase; }
 
-.AddLinkRegion:hover {
+.AddLinkRegion:hover, .SaveLinkRegion:hover {
   border: 1px solid white;
   color: white; }
+
+.SaveLinkRegion {
+  top: 45px; }
 
 .LinkRegionDragBox.topleft .LinkRegionEdge.TopLeft,
 .LinkRegionDragBox.top .LinkRegionEdge.Top,
@@ -3484,6 +3505,23 @@ iframe.steamTVLogin {
 .EdgeDown.middle .LinkRegionEdge.Top,
 .EdgeDown.middle .LinkRegionEdge.Left {
   border-color: white; }
+
+.LinkRegionEdge.Middle {
+  display: table; }
+
+.LinkRegionButtonContainer .DialogButton {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px; }
+
+.LinkRegionInfo {
+  background-color: black;
+  padding: 10px; }
+
+.LinkText {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell; }
 
 @media screen and (max-width: 420px) and (min-height: 420px) {
   .BroadcastContainer {
@@ -7877,7 +7915,7 @@ img {
 .shared_common_AvatarImage_HVcru {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 25%;
   position: relative; }
   .shared_common_AvatarImage_HVcru:after {
     content: "N/A";
@@ -14140,6 +14178,9 @@ html.web_chat_frame .perf_timing_area {
 .msgText {
   color: #c1c6cf;
   overflow: hidden; }
+
+.msgText.EmoticonOnly {
+  overflow: visible; }
 
 .msg.EmojiOnly {
   font-size: 28px;

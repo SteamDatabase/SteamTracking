@@ -287,10 +287,10 @@ function ShowCardDropInfo( strGameName, id )
 
 }
 
-function ReloadCommunityInventory()
+function ReloadCommunityInventory( itemid )
 {
 	if ( typeof UserYou != 'undefined' )
-		UserYou.ReloadInventory( 753, 6 );
+		UserYou.ReloadInventory( 753, 6, itemid );
 }
 
 var CARDS_PER_BOOSTER = 3;
@@ -472,7 +472,7 @@ function ActivateCommunityItemConsumable( unAppID, rgParams, unItemType, ulAsset
 		if ( data.bActivated )
 		{
 			ShowAlertDialog( strDialogTitle, data.strHTML );
-			ReloadCommunityInventory();
+			ReloadCommunityInventory( ulAssetID );
 		}
 		else
 		{
@@ -486,7 +486,7 @@ function ActivateCommunityItemConsumable( unAppID, rgParams, unItemType, ulAsset
 
 				$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 					ShowAlertDialog( strDialogTitle, data.strHTML );
-					ReloadCommunityInventory();
+					ReloadCommunityInventory( ulAssetID );
 				}).fail( function() {
 					ShowAlertDialog( strDialogTitle, 'There was an error using your item.  The item may have already been used.  Please try again later.' );
 				});
@@ -516,7 +516,7 @@ function GrindIntoGoo( appid, contextid, itemid )
 
 			$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 				ShowAlertDialog( strDialogTitle, data.strHTML );
-				ReloadCommunityInventory();
+				ReloadCommunityInventory( itemid );
 			}).fail( function( xhr ) {
 				if ( xhr.responseJSON && xhr.responseJSON.message )
 				{

@@ -43,6 +43,11 @@ h2 {
 	background-position: 0 -98px;
 }
 
+.itemHolder.consumed_item {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: default;
+}
 
 .item_currency_amount, .item_currency_name {
 	position: absolute;
@@ -1414,7 +1419,7 @@ a.game_button {
 	height: 96%;
 	height: calc( 100% - 16px );
 	max-width: 346px;
-	margin: 16px auto 16px auto;
+	margin: 0 auto;
 }
 
 .economy_item_popup_dismiss {
@@ -1554,10 +1559,22 @@ body.inventory_loading .inventory_loading_indicator {
 }
 
 .inventory_load_error_header {
-	line-height: 38px;
+	display: flex;
+	align-items: center;
 }
 
-.inventory_load_error_header img,
-.inventory_load_error .inventory_loading_indicator {
-	vertical-align: middle;
+.inventory_load_error_header .message {
+	padding: 0 8px;
+}
+
+
+@media screen and (max-width: 910px) {
+
+	html.responsive .inventory_load_error_header {
+		flex-wrap: wrap;
+	}
+	html.responsive .inventory_load_error_header .message {
+		flex: 1;
+		min-width: 75%;
+	}
 }

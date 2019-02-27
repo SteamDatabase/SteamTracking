@@ -1514,7 +1514,7 @@ GStoreItemData = {
 		if ( unAppID )
 		{
 			params['data-ds-appid'] = unAppID;
-			params['href'] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth );
+			params[ 'href' ] = GStoreItemData.GetAppURL( unAppID, strFeatureContext, nDepth, params['curator_clanid'] );
 
 		}
 		else if ( unPackageID )
@@ -1547,11 +1547,8 @@ GStoreItemData = {
 
 		// override with item-specific URL
 		if ( rgItemData.url )
-			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth );
+			params['href'] = GStoreItemData.AddNavEventParamsToURL( rgItemData.url, strFeatureContext, nDepth, params['curator_clanid'] );
 		
-		if ( params['curator_clanid'] )
-			params['href'] += "&curator_clanid=" + params['curator_clanid'];
-
 		return rgItemData;
 	},
 
