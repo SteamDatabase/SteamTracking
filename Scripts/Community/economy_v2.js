@@ -478,7 +478,7 @@ CSingleResponsivePage.prototype.EnsurePageItemsCreated = function( bFiltering )
 	if ( !this.m_bMounted )
 		return false;
 
-	var cMaxPages = Math.floor( this.m_inventory.GetCountTotalItems() / INVENTORY_PAGE_ITEMS );
+	var cMaxPages = Math.ceil( this.m_inventory.GetCountTotalItems() / INVENTORY_PAGE_ITEMS );
 
 	if ( cMaxPages > this.m_cPagesLoaded )
 	{
@@ -2129,16 +2129,16 @@ CAppwideInventory.prototype.GetPageItems = function( iPage )
 		var inventory = this.m_rgChildInventories[contextid];
 		
 		// Skip this context if this page contains no items from it
-		if ( inventory.m_rgItemElements.length <= iCur )
+		if ( inventory.GetCountTotalItems() <= iCur )
 		{
-						iCur -= inventory.m_rgItemElements.length;
-			cHandled += inventory.m_rgItemElements.length;
+						iCur -= inventory.GetCountTotalItems();
+			cHandled += inventory.GetCountTotalItems();
 						continue;
 		}
 
 		cHandled += iCur;
 
-				for ( var iItem = iCur; iItem < inventory.m_rgItemElements.length && cHandled < iEnd; iItem++ )
+				for ( var iItem = iCur; iItem < inventory.GetCountTotalItems() && cHandled < iEnd; iItem++ )
 		{
 			var $ItemHolder = inventory.GetItemElement( iItem );
 			rgItems.push($ItemHolder);
