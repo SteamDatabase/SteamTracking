@@ -7,6 +7,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libp2pjinglewrapper.a(p2pjinglewrapper.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libp2pjinglewrapper.a(socketclient.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(accountutils.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(amount.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(appownershipticket.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(chunkfinder.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(clientkeymgr.o)
@@ -823,6 +824,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/RateLimiter.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appownershipticket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h

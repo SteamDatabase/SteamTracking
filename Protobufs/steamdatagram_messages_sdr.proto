@@ -203,7 +203,7 @@ message CMsgSteamDatagramConnectionStatsClientToRouter {
 	optional uint32 flags = 6;
 	optional fixed32 client_connection_id = 8;
 	optional uint32 seq_num_c2r = 9;
-	optional uint32 seq_num_c2s = 10;
+	optional uint32 seq_num_e2e = 10;
 }
 
 message CMsgSteamDatagramConnectionStatsRouterToClient {
@@ -224,7 +224,7 @@ message CMsgSteamDatagramConnectionStatsRouterToClient {
 	optional uint32 flags = 15;
 	optional fixed32 client_connection_id = 7;
 	optional uint32 seq_num_r2c = 8;
-	optional uint32 seq_num_s2c = 9;
+	optional uint32 seq_num_e2e = 9;
 }
 
 message CMsgSteamDatagramConnectionStatsRouterToServer {
@@ -240,7 +240,7 @@ message CMsgSteamDatagramConnectionStatsRouterToServer {
 	repeated fixed32 legacy_ack_e2e = 11;
 	optional uint32 flags = 12;
 	optional uint32 seq_num_r2s = 5;
-	optional uint32 seq_num_c2s = 6;
+	optional uint32 seq_num_e2e = 6;
 	optional fixed64 client_steam_id = 7;
 	optional uint32 relay_session_id = 8;
 	optional fixed32 client_connection_id = 9;
@@ -260,7 +260,7 @@ message CMsgSteamDatagramConnectionStatsServerToRouter {
 	repeated fixed32 legacy_ack_e2e = 9;
 	optional uint32 flags = 10;
 	optional uint32 seq_num_s2r = 3;
-	optional uint32 seq_num_s2c = 4;
+	optional uint32 seq_num_e2e = 4;
 	optional fixed64 client_steam_id = 5;
 	optional uint32 relay_session_id = 6;
 	optional fixed32 client_connection_id = 7;
