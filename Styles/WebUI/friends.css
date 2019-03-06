@@ -327,6 +327,94 @@
   width: 120px;
   height: 120px; }
 
+.contextmenu_ContextMenuMouseOverlay_3H7og {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1599; }
+
+.contextmenu_ContextMenuFocusContainer_2thYU:focus {
+  outline: none; }
+
+.contextmenu_contextMenu_3_a2Z {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-corner at 50% 0%, #3c4047 0%, #3c4047 50%, #33363d 100%);
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1.0;
+  transition: opacity 200ms;
+  z-index: 1600;
+  user-select: none;
+  padding: 4px; }
+
+.web_chat_frame .contextmenu_contextMenu_3_a2Z {
+  max-height: calc( 100% - 128px);
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenu_3_a2Z {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuContents_1yyTu {
+  padding: 4px; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
+  min-width: fit-content; }
+
+.contextmenu_contextMenuContents_1yyTu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag; }
+
+.contextmenu_contextMenu_3_a2Z:not(.visible) {
+  opacity: 0;
+  pointer-events: none; }
+
+.contextmenu_contextMenuItem_CBC-y {
+  padding: 4px 6px;
+  line-height: 20px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative;
+  min-width: 120px; }
+  .contextmenu_contextMenuItem_CBC-y:first-child {
+    border-top: 0.5px solid rgba(80, 87, 94, 0); }
+  .contextmenu_contextMenuItem_CBC-y:hover, .contextmenu_contextMenuItem_CBC-y.contextmenu_active_3vYUp {
+    background: #5a6069;
+    color: #b8c5c9; }
+  .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq {
+    background: none;
+    color: #6b7072;
+    cursor: default;
+    pointer-events: none; }
+    .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq:hover {
+      background: none;
+      color: #6b7072;
+      cursor: default; }
+  .contextmenu_contextMenuItem_CBC-y.menuChecked {
+    color: #6dcff6; }
+    .contextmenu_contextMenuItem_CBC-y.menuChecked.contextMenuCheckMark {
+      display: block; }
+
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none; }
+
 .steamavatar_avatarHolder_1G7LI {
   height: 36px;
   display: flex;
@@ -715,16 +803,27 @@
   color: #888; }
 
 .titleBarContainer .currentUserContainer .personanameandstatus_richPresenceLabel_3Q6g1 {
+  margin-top: -1px;
+  margin-bottom: 1px;
   font-size: 12px;
   display: inline-block;
   transition: color .94s ease-in-out;
   text-shadow: 1px 1px 3px #000; }
 
+.titleBarContainer .currentUserContainer .personanameandstatus_compactView_2PCWF .personanameandstatus_richPresenceLabel_3Q6g1 {
+  margin-top: -4px;
+  margin-bottom: -2px; }
+
 .titleBarContainer .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
   margin-top: 0px; }
 
+.titleBarContainer .currentUserContainer .personanameandstatus_compactView_2PCWF.personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  margin-top: -4px;
+  margin-bottom: 0px; }
+
 .titleBarContainer .currentUserContainer .personanameandstatus_richPresenceLabel_3Q6g1:not(.personanameandstatus_gameName_qvibF) {
-  margin-top: -2px;
+  font-size: 10px;
+  margin-top: -1px;
   margin-bottom: 1px; }
 
 .singlewindow .currentUserContainer .personanameandstatus_statusAndName_9U-hi {
@@ -783,7 +882,13 @@
   font-size: 13px; }
 
 .groupMemberList .ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
-  font-size: 12px; }
+  font-size: 10px;
+  margin-top: -3px;
+  margin-bottom: -3px; }
+
+.groupMemberList .ingame.personanameandstatus_twoLine_2wZNn .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px;
+  margin-top: -1px; }
 
 .groupMemberList .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
   font-size: 12px; }
@@ -1769,7 +1874,7 @@ img.emoticon_emoticon_9hYGN {
   border-radius: 50%;
   cursor: pointer;
   opacity: .75;
-  z-index: 21; }
+  z-index: 55; }
 
 .ChatRoomGroup_Main_Content.chatHidden .STV_BroadcastClose {
   margin-right: 40px; }
@@ -5679,98 +5784,19 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
 ::-webkit-scrollbar-corner {
   background: #202020; }
 
-.contextMenu {
-  position: absolute;
-  background: radial-gradient(ellipse farthest-corner at 50% 0%, #3c4047 0%, #3c4047 50%, #33363d 100%);
-  box-shadow: 0 10px 32px 0px #000000ab;
-  opacity: 1.0;
-  transition: opacity 200ms;
-  z-index: 200;
-  user-select: none;
-  padding: 4px; }
-
-.web_chat_frame .contextMenu {
-  max-height: calc( 100% - 128px);
-  overflow-y: auto;
-  overflow-x: hidden; }
-
-html.ContextMenuPopup .contextMenu {
-  position: static;
-  box-shadow: none;
-  display: inline-block;
-  padding: 0; }
-
-html.ContextMenuPopup .contextMenu .contextMenuContents {
-  padding: 4px; }
-
-html.ContextMenuPopup .contextMenu .contextMenuItem {
-  min-width: fit-content; }
-
-.contextMenuItem {
-  min-width: 120px; }
-
-.contextMenuItem.noPermission {
+.ChatRoomContextNoPermission {
   opacity: .4;
   cursor: default;
   pointer-events: none;
   user-select: none; }
 
-.contextMenuItem.noPermission .SVGIcon_Lock {
+.ChatRoomContextNoPermission .SVGIcon_Lock {
   width: 12px;
   height: 12px;
   margin-right: 4px;
   margin-bottom: -1px; }
 
-.ContextMenuFocusContainer:focus {
-  outline: none; }
-
-.contextMenuContents {
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  font-size: 14px;
-  -webkit-app-region: no-drag; }
-
-.contextMenu:not(.visible) {
-  opacity: 0;
-  pointer-events: none; }
-
-.contextMenuContents .contextMenuGameName {
-  color: #cbdde4; }
-
-.contextMenu .contextMenuItem {
-  padding: 4px 6px;
-  line-height: 20px;
-  color: #9ca4a7;
-  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
-  cursor: default;
-  position: relative; }
-
-.contextMenuContents .contextMenuItem:first-child {
-  border-top: 0.5px solid rgba(80, 87, 94, 0); }
-
-.contextMenu .contextMenuItem:hover,
-.contextMenu .contextMenuItem.active {
-  background: #5a6069;
-  color: #b8c5c9; }
-
-.contextMenu .contextMenuItem.contextMenuUnselectable:hover {
-  background: rgba(0, 0, 0, 0);
-  color: #9ca4a7; }
-
-.contextMenu .contextMenuItem.disabled {
-  background: none;
-  color: #6b7072;
-  cursor: default;
-  pointer-events: none; }
-
-.contextMenu .contextMenuItem.disabled:hover {
-  background: none;
-  color: #6b7072;
-  cursor: default; }
-
-.contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
+.contextMenuItem .SVGIcon_DownArrowContextMenu {
   height: 14px;
   width: 14px;
   transform: rotateZ(-90deg);
@@ -5779,66 +5805,10 @@ html.ContextMenuPopup .contextMenu .contextMenuItem {
   top: 6px;
   fill: #9ca4a7; }
 
-.contextMenuItem.menuChecked {
-  color: #6dcff6; }
-
-.contextMenuCheckMark {
-  width: 4px;
-  height: 18px;
-  background-color: #6dcff6;
-  min-height: 1px;
-  display: inline-block;
-  position: absolute;
-  left: -4px;
-  margin-top: 0px;
-  display: none; }
-
-.contextMenuItem.menuChecked .contextMenuCheckMark {
-  display: block; }
-
 .contextMenu .SVGIcon_Button {
   height: 10px;
   width: 10px;
   margin-right: 4px; }
-
-/* Separate menu sections with extra space and different header text style. */
-.contextMenuItem.MenuSectionHeader {
-  padding-top: 16px;
-  font-size: 12px;
-  text-transform: uppercase; }
-
-.contextMenuGameItem {
-  max-width: 190px;
-  line-height: 20px;
-  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
-  white-space: nowrap; }
-
-.contextMenuSectionContent {
-  display: flex;
-  flex-direction: column; }
-
-.contextMenuSectionContent .contextMenuItem {
-  border-top: none;
-  display: block; }
-
-.contextMenuContents .contextMenuLabel {
-  font-size: 12px;
-  line-height: 25px;
-  padding-left: 6px; }
-
-.contextMenuContents .contextMenuLabel.contextMenuNotAFriend {
-  text-transform: uppercase;
-  font-size: 12px;
-  color: rgba(184, 156, 80, 0.75); }
-
-.contextMenuContents .recentName {
-  margin: 4px;
-  color: #ccc; }
-
-.contextMenuContents .contextMenuItem.notFriends.disabled {
-  color: #666;
-  border-color: transparent; }
 
 .flexRow {
   display: flex;
@@ -5852,14 +5822,6 @@ html.ContextMenuPopup .contextMenu .contextMenuItem {
 .flexColumn {
   display: flex;
   flex-direction: column; }
-
-.ContextMenuMouseOverlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 199; }
 
 .scrollMaskVertical {
   -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
@@ -7160,7 +7122,7 @@ button.TextButton:focus {
 .DialogMenuPosition {
   position: absolute;
   transition: opacity 200ms;
-  z-index: 200; }
+  z-index: 1600; }
 
 .DialogMenuPosition:not(.visible) {
   opacity: 0;
@@ -7934,6 +7896,16 @@ img {
   .shared_common_STV_HomeGridPreviewDetails_1FyZE .shared_common_AvatarImage_HVcru {
     border: 2px solid red; }
 
+.shared_common_ChatAvatarImage_3n4wV {
+  width: 48px;
+  height: 48px;
+  border-radius: 25%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #201e25; }
+
 .shared_common_EditButton_DLPvj {
   text-transform: uppercase;
   /*background: linear-gradient(to right, #3366ff, #7d6ebc);*/
@@ -8155,7 +8127,7 @@ body.in_global_drag .friendlist_titlebar {
 .currentUserContextMenu {
   min-width: 220px; }
 
-.contextMenuItem:hover .persona_menu_descriptor, .contextMenuItem:hover .persona_menu_dnd_descriptor {
+.personaContextMenuItem:hover .persona_menu_descriptor, .personaContextMenuItem:hover .persona_menu_dnd_descriptor {
   color: #93969c; }
 
 .currentUserAvatar {
@@ -10222,33 +10194,33 @@ body.in_global_drag .friendlist_titlebar {
   height: 100%;
   justify-content: space-between; }
 
-.contextMenuContents.ChatTabs .contextMenuItem {
+.ChatTabsContextMenu .ChatTabContextMenuItem {
   padding: 0;
   min-height: 32px; }
 
-.contextMenuContents.ChatTabs.compactView .chatTabGroupName {
+.ChatTabsContextMenu.compactView .chatTabGroupName {
   margin-top: -2px; }
 
-.contextMenuContents .chatTab .ChatTabContent {
+.ChatTabsContextMenu .chatTab .ChatTabContent {
   padding-top: 2px;
   padding-bottom: 0px;
   padding-left: 2px; }
 
-.contextMenuContents .chatTab .ChatTabContent.ChatRoom {
+.ChatTabsContextMenu .chatTab .ChatTabContent.ChatRoom {
   padding-top: 8px;
   padding-bottom: 2px;
   padding-left: 5px; }
 
-.contextMenuItem .chatTabHighlight,
-.contextMenuItem .TabRightContainer .chatTabClose.closeButton {
+.ChatTabContextMenuItem .chatTabHighlight,
+.ChatTabContextMenuItem .TabRightContainer .chatTabClose.closeButton {
   display: none; }
 
-.contextMenuItem .TabRightContainer {
+.ChatTabContextMenuItem .TabRightContainer {
   position: absolute;
   width: 100%;
   top: 0; }
 
-.contextMenuContents.ChatTabs.compactView .contextMenuItem .TabRightContainer .chatTabUnreadBadge {
+.ChatTabsContextMenu.compactView .ChatTabContextMenuItem .TabRightContainer .chatTabUnreadBadge {
   position: absolute;
   right: 4px;
   top: 8px;
@@ -10261,7 +10233,7 @@ body.in_global_drag .friendlist_titlebar {
   margin-right: 2px;
   background-color: transparent; }
 
-.contextMenuContents.ChatTabs.compactView .contextMenuItem .TabRightContainer .chatTabUnreadBadge:before {
+.ChatTabsContextMenu.compactView .ChatTabContextMenuItem .TabRightContainer .chatTabUnreadBadge:before {
   position: absolute;
   content: '';
   height: 4px;
@@ -10271,7 +10243,7 @@ body.in_global_drag .friendlist_titlebar {
   right: -2px;
   top: 4px; }
 
-.contextMenuItem .TabRightContainer .UnreadGlow {
+.ChatTabContextMenuItem .TabRightContainer .UnreadGlow {
   position: absolute;
   top: 0;
   height: 32px;
@@ -10279,42 +10251,42 @@ body.in_global_drag .friendlist_titlebar {
   opacity: .5;
   z-index: 10; }
 
-.contextMenuContents.ChatTabs.compactView .ChatTabContent .avatarHolder .avatar {
+.ChatTabsContextMenu.compactView .ChatTabContent .avatarHolder .avatar {
   width: 24px; }
 
-.contextMenuContents.ChatTabs .ChatTabContent .avatarHolder {
+.ChatTabsContextMenu .ChatTabContent .avatarHolder {
   flex-direction: row;
   height: 24px; }
 
-.contextMenuContents.ChatTabs .ChatTabContent .avatarHolder .avatarStatus {
+.ChatTabsContextMenu .ChatTabContent .avatarHolder .avatarStatus {
   width: 2px;
   height: 100%;
   margin-top: 0; }
 
-.contextMenuContents.ChatTabs .friend.awayOrSnooze .avatarHolder .avatarStatus {
+.ChatTabsContextMenu .friend.awayOrSnooze .avatarHolder .avatarStatus {
   -webkit-mask: url(../../images/webui/masks/dashed_mask.png) repeat-y;
   -webkit-mask-size: 2px 4px; }
 
-.contextMenuContents.ChatTabs.CompactFriendsList .friend {
+.ChatTabsContextMenu.CompactFriendsList .friend {
   margin-top: 3px;
   height: 24px; }
 
-.contextMenuContents.ChatTabs .ChatUnreadMessageIndicator.ChatTabUnread {
+.ChatTabsContextMenu .ChatUnreadMessageIndicator.ChatTabUnread {
   top: 14px;
   right: 0; }
 
-.contextMenuContents.ChatTabs {
+.ChatTabsContextMenu {
   padding-right: 0;
   min-width: 160px; }
 
-.contextMenuContents.ChatTabs .SnoozeContainer {
+.ChatTabsContextMenu .SnoozeContainer {
   margin-top: -6px;
   margin-bottom: -4px; }
 
-.contextMenuContents.ChatTabs.CompactFriendsList .friend .labelHolder {
+.ChatTabsContextMenu.CompactFriendsList .friend .labelHolder {
   margin-top: 2px; }
 
-.contextMenuContents.ChatTabs.CompactFriendsList .friend .playerNicknameBracket {
+.ChatTabsContextMenu.CompactFriendsList .friend .playerNicknameBracket {
   line-height: 12px;
   margin-top: 2px; }
 
@@ -16898,11 +16870,11 @@ body.in_global_drag .quickAccessFriends.emptyQuickAccess {
 .ChatRoomListGroupItem .ContextMenuButton:hover .SVGIcon_DownArrowContextMenu {
   fill: white; }
 
-.contextMenu .contextMenuItem.contextVoiceInvite {
+.contextVoiceInvite {
   background: radial-gradient(ellipse 100% 132px at 24px 10px, rgba(122, 245, 91, 0.5) 0%, rgba(122, 245, 91, 0.26) 25%, rgba(122, 245, 91, 0.22) 34%, rgba(122, 245, 91, 0.1) 50%, rgba(122, 245, 91, 0) 70%);
   color: #b0b8bb; }
 
-.contextMenu .contextMenuItem.contextVoiceInvite:hover {
+.contextVoiceInvite:hover {
   background: radial-gradient(ellipse 100% 132px at 24px 10px, rgba(122, 245, 91, 0.5) 0%, rgba(122, 245, 91, 0.26) 25%, rgba(122, 245, 91, 0.22) 34%, rgba(122, 245, 91, 0.1) 50%, rgba(122, 245, 91, 0) 70%);
   background-color: #5a6069;
   color: white; }
@@ -18966,8 +18938,42 @@ a.general_btn:hover {
 .SlashCommandSuggestion_SlashCommandDescription {
   color: #9ca4a7; }
 
-.contextMenu .currentUserContextMenu .contextMenuSectionContent .contextMenuItem {
+/* this is all in friendmenu.tsx, even the stuff with super generic names */
+.currentUserContextMenu .contextMenuSectionContent .contextMenuItem {
   border-color: transparent; }
+
+.contextMenuSectionContent {
+  display: flex;
+  flex-direction: column; }
+
+.contextMenuSectionContent > * {
+  border-top: none;
+  display: block; }
+
+.contextMenuLabel {
+  font-size: 12px;
+  line-height: 25px;
+  padding-left: 6px; }
+
+.contextMenuLabel.contextMenuNotAFriend {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: rgba(184, 156, 80, 0.75); }
+
+.recentName {
+  margin: 4px;
+  color: #ccc; }
+
+.SendMessageContextNotFriends.disabled {
+  color: #666;
+  border-color: transparent; }
+
+.contextMenuGameItem {
+  max-width: 190px;
+  line-height: 20px;
+  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0) 100%);
+  white-space: nowrap; }
 
 .contextMenuGameIcon {
   width: 20px;
@@ -18979,29 +18985,29 @@ a.general_btn:hover {
   width: 184px;
   height: 69px; }
 
-.contextMenu .contextMenuItem.contextMenuUnselectable:hover,
-.contextMenuItem.contextMenuGameTitle,
-.contextMenuItem.contextMenuBroadcast,
-.contextMenuItem.contextMenuGameOptions {
+.contextMenuUnselectable:hover,
+.contextMenuGameTitle,
+.contextMenuBroadcast,
+.contextMenuGameOptions {
   background-color: #00000066; }
 
-.contextMenuItem .contextMenuBroadcastTitle {
+.contextMenuBroadcastTitle {
   color: #c9bdf7; }
 
-.contextMenuItem .contextMenuBroadcastSubtitle {
+.contextMenuBroadcastSubtitle {
   color: #8277b1;
   font-size: 10px; }
 
-.contextMenuItem.contextMenuGameOptions {
+.contextMenuGameOptions {
   padding-left: 32px; }
 
-.contextMenuItem.contextMenuGameOptions.contextMenuPlayButton {
+.contextMenuGameOptions.contextMenuPlayButton {
   padding-left: 0px; }
 
-.contextMenuItem.contextMenuGameOptions.contextMenuPartyBeacon {
+.contextMenuGameOptions.contextMenuPartyBeacon {
   color: #91c257; }
 
-.contextMenuItem.contextMenuGameOptions .SVGIcon_Play {
+.contextMenuGameOptions .SVGIcon_Play {
   width: 18px;
   height: 18px;
   margin-left: 6px;
@@ -19010,17 +19016,25 @@ a.general_btn:hover {
   border: 1px solid #788294;
   border-radius: 50%; }
 
-.contextMenuContents .contextMenuItem.contextMenuGameOptions:first-child {
+.contextMenuGameOptions:first-child {
   border-top: 0px solid transparent; }
 
-.contextMenuItem.contextMenuGameOptions .SVGIcon_Play .playTriangle {
+.contextMenuGameOptions .SVGIcon_Play .playTriangle {
   transform: scale(0.6) translateX(20px);
   transform-origin: 50% 50%;
   fill: #8b97ac; }
 
-.contextMenuItem.contextMenuGameOptions:hover .SVGIcon_Play .playTriangle {
+.contextMenuGameOptions:hover .SVGIcon_Play .playTriangle {
   fill: #d0d9e9; }
 
+.contextMenuGameName {
+  color: #cbdde4; }
+
+.contextMenuItem.contextMenuUnselectable:hover {
+  background: rgba(0, 0, 0, 0);
+  color: #9ca4a7; }
+
+/* end friendmenu.tsx stuff */
 .GameHeader,
 .GameIcon {
   width: 100%;

@@ -1610,10 +1610,7 @@
         (e.prototype.GetPreferredLocales = function() {
           var e = ["en-US"];
           return (
-            "undefined" != typeof navigator &&
-              void 0 !== navigator.languages &&
-              (e = navigator.languages),
-            e
+            navigator && navigator.languages && (e = navigator.languages), e
           );
         }),
         (e.prototype.LocalizeString = function(e) {

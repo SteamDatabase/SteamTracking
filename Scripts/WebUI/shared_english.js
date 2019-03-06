@@ -101,7 +101,7 @@ LocalizationReady("shared", "english", {
   FriendsList_LoadingTitle: "LOADING",
   FriendsList_StillLoadingSummary: "Friends Network Loading...",
   FriendsList_StillLoadingDetail:
-    "Steam is trying to connect to the friends network, this may take a few seconds longer.",
+    "Steam is trying to connect to the friends network.  This may take a few seconds longer.",
 
   Dialog_On: "ON",
   Dialog_Off: "OFF",
@@ -322,5 +322,12 @@ LocalizationReady("shared", "english", {
   PartnerEvent_4: "Meeting Event",
   PartnerEvent_28: "News Event",
   PartnerEvent_27: "IRL Event",
-  PartnerEvent_Other: "Other Event"
+  PartnerEvent_Other: "Other Event",
+  Emoticon_Search: "Search Emoticons",
+  Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",
+  Chat_Settings_Error_ChatFileTypeNotSupported:
+    "Cannot upload %1$s.  Only jpg, png, gif, webm, mpg, and ogv file types are supported.",
+  ConnectionTrouble_FailedToConnect: "Failed to connect to Steam",
+  Chat_Upload_ErrorCloud: "Failed to upload image data to cloud server.",
+  Chat_Settings_Error_ServerError: "A server error occurred"
 });

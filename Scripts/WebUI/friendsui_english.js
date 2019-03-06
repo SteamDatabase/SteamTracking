@@ -265,7 +265,6 @@ LocalizationReady("friendsui", "english", {
   ConnectionTrouble_Connecting: "Connecting to Steam...",
   ConnectionTrouble_LoggingIn: "Logging in to Steam...",
   ConnectionTrouble_RetrievingLogin: "Verifying Login...",
-  ConnectionTrouble_FailedToConnect: "Failed to connect to Steam",
   ConnectionTrouble_FailedToLogIn: "Failed to log in to Steam",
   ConnectionTrouble_DisconnectedFinal: "Disconnected.",
   ConnectionTrouble_ReconnectingInSeconds:
@@ -342,7 +341,6 @@ LocalizationReady("friendsui", "english", {
   Chat_Upload: "Upload",
   Chat_Uploading: "Uploading: %1$s",
   Chat_Upload_ErrorStart: "Failed to start upload: %1$s",
-  Chat_Upload_ErrorCloud: "Failed to upload image data to cloud server.",
   Chat_Upload_ErrorCommit: "Failed to finish upload: %1$s",
   Chat_Upload_ErrorAction_Retry: "Retry",
   Chat_Upload_ErrorAction_Close: "Close",
@@ -418,10 +416,6 @@ LocalizationReady("friendsui", "english", {
   Chat_Settings_Error_FailedToUpload: "Image failed to upload",
   Chat_Settings_Error_FileTooLarge: "Image too large",
   Chat_Settings_Error_InvalidImage: "Invalid image",
-  Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",
-  Chat_Settings_Error_ChatFileTypeNotSupported:
-    "Cannot upload %1$s.  Only jpg, png, gif, webm, mpg, and ogv file types are supported.",
-  Chat_Settings_Error_ServerError: "A server error occurred",
   Chat_Settings_Error_NotAdmin: "Only group admins can perform this action",
 
   GroupSettings_Permissions_Section: "Permissions",
@@ -1219,7 +1213,6 @@ LocalizationReady("friendsui", "english", {
   ChatMentionSuggest_ManyMatchesPlural: "+ %1$s More Matches",
   ChatMentionSuggest_NoPermission: "you don't have permission to mention",
 
-  Emoticon_Search: "Search Emoticons",
   Contacts_Search_Title: "Search",
   Contacts_Search_Placeholder: "Search Friends and Groups",
 

@@ -25,7 +25,7 @@
     return e;
   }
   var n = {},
-    u = { 5: 0 },
+    u = { 6: 0 },
     m = [];
   function c(e) {
     if (n[e]) return n[e].exports;
@@ -123,7 +123,7 @@
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return a;
       }),
       n.d(t, "k", function() {
@@ -132,10 +132,10 @@
       n.d(t, "h", function() {
         return u;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return m;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return p;
       }),
       n.d(t, "i", function() {
@@ -144,17 +144,20 @@
       n.d(t, "j", function() {
         return d;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "l", function() {
         return f;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "b", function() {
         return v;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "o", function() {
         return y;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return b;
+      }),
+      n.d(t, "f", function() {
+        return _;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -269,6 +272,19 @@
       e.startsWith(t) && (e = e.slice(t.length)), h(e);
     }
     function f(e) {
+      return e
+        ? 0 == e.clipboardData.files.length
+          ? null
+          : e.clipboardData.types.some(function(e) {
+              return (
+                ("text" == e || e.startsWith("text/")) && "text/html" !== e
+              );
+            })
+          ? null
+          : e.clipboardData.files[0]
+        : null;
+    }
+    function v(e) {
       var t = e.ownerDocument;
       return (
         t.fullscreen ||
@@ -277,7 +293,7 @@
         t.msFullscreenElement
       );
     }
-    function v(e) {
+    function y(e) {
       var t = e;
       t.requestFullscreen
         ? t.requestFullscreen()
@@ -287,7 +303,7 @@
         ? t.mozRequestFullScreen()
         : t.msRequestFullscreen && t.msRequestFullscreen();
     }
-    function y(e) {
+    function b(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
@@ -297,7 +313,7 @@
         ? t.mozCancelFullScreen()
         : t.msExitFullscreen && t.msExitFullscreen();
     }
-    var b = (function() {
+    var _ = (function() {
       function e(e) {
         var i = this;
         (this.m_bNeedSort = !1),
@@ -522,6 +538,18 @@
         }
       else console.error("Missing config element #" + t);
     }
+  },
+  "7Vyq": function(e, t, n) {
+    e.exports = {
+      ContextMenuMouseOverlay: "contextmenu_ContextMenuMouseOverlay_3H7og",
+      ContextMenuFocusContainer: "contextmenu_ContextMenuFocusContainer_2thYU",
+      contextMenu: "contextmenu_contextMenu_3_a2Z",
+      ContextMenuPopup: "contextmenu_ContextMenuPopup_1exss",
+      contextMenuContents: "contextmenu_contextMenuContents_1yyTu",
+      contextMenuItem: "contextmenu_contextMenuItem_CBC-y",
+      active: "contextmenu_active_3vYUp",
+      disabled: "contextmenu_disabled_molnq"
+    };
   },
   "8o0Y": function(e, t, n) {
     "use strict";
@@ -798,34 +826,34 @@
   EGkk: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return d;
+      return y;
     }),
       n.d(t, "d", function() {
-        return f;
-      }),
-      n.d(t, "b", function() {
-        return v;
-      }),
-      n.d(t, "e", function() {
-        return y;
-      }),
-      n.d(t, "g", function() {
         return b;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return _;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return g;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "g", function() {
         return w;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "a", function() {
+        return x;
+      }),
+      n.d(t, "f", function() {
         return E;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "i", function() {
         return S;
+      }),
+      n.d(t, "h", function() {
+        return k;
+      }),
+      n.d(t, "j", function() {
+        return C;
       });
     var c = n("mrSG"),
       r = n("okNM"),
@@ -839,7 +867,10 @@
       m = n("WpBz"),
       p = n("oh5H"),
       h = n("1n9R"),
-      d = (function(e) {
+      d = n("7Vyq"),
+      f = n.n(d),
+      v = n("QHER"),
+      y = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -854,7 +885,7 @@
                 this.context.contextMenuInstance &&
                 this.context.contextMenuInstance.options.bUseWebStyles
                   ? "popup_menu popup_body"
-                  : "contextMenuContents";
+                  : f.a.contextMenuContents;
             return (
               n && (o += " " + n),
               s.createElement("div", c.a({}, r, { className: o }), t)
@@ -868,7 +899,7 @@
           t
         );
       })(s.PureComponent),
-      f = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -891,13 +922,12 @@
               t = (e.onSelected,
               e.bInteractableItem,
               c.f(e, ["onSelected", "bInteractableItem"])),
-              n = [
-                this.context.contextMenuInstance &&
-                this.context.contextMenuInstance.options.bUseWebStyles
-                  ? "popup_menu_item"
-                  : "contextMenuItem"
-              ];
+              n = [];
             return (
+              this.context.contextMenuInstance &&
+              this.context.contextMenuInstance.options.bUseWebStyles
+                ? n.push("popup_menu_item")
+                : n.push(f.a.contextMenuItem, "contextMenuItem"),
               this.props.className && n.push(this.props.className),
               this.props.disabled && n.push("disabled"),
               s.createElement(
@@ -905,7 +935,7 @@
                 c.a({ onMouseEnter: this.OnMouseEnter }, t, {
                   onClick: this.OnClick,
                   unselectable: this.props.unselectable,
-                  className: n.join(" ")
+                  className: v.a.apply(void 0, n)
                 }),
                 this.props.children
               )
@@ -921,7 +951,7 @@
           t
         );
       })(s.PureComponent),
-      v = (function(e) {
+      _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -931,10 +961,11 @@
             var e = this.props,
               t = e.bChecked,
               n = e.children,
-              r = c.f(e, ["bChecked", "children"]);
+              r = e.className,
+              o = c.f(e, ["bChecked", "children", "className"]);
             return s.createElement(
-              f,
-              c.a({}, r, { className: t && "menuChecked" }),
+              b,
+              c.a({}, o, { className: Object(v.a)(r, t && "menuChecked") }),
               s.createElement("div", { className: "contextMenuCheckMark" }),
               n
             );
@@ -942,7 +973,7 @@
           t
         );
       })(s.PureComponent),
-      y = (function(n) {
+      g = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bActive: !1 }), t;
@@ -954,7 +985,7 @@
           }),
           (e.prototype.RenderSubMenu = function() {
             return s.createElement(
-              d,
+              y,
               { onMouseEnter: this.OnSubMenuMouseEnter },
               this.props.children
             );
@@ -982,9 +1013,9 @@
               n = (e.children, e.className),
               r = c.f(e, ["label", "children", "className"]);
             return (
-              this.state.bActive && (n = (n || "") + " active"),
+              this.state.bActive && (n = (n || "") + " " + f.a.active),
               s.createElement(
-                f,
+                b,
                 c.a({}, r, {
                   onClick: this.OnClick,
                   className: n,
@@ -1010,7 +1041,7 @@
           e
         );
       })(s.PureComponent),
-      b = (function(n) {
+      w = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -1243,12 +1274,12 @@
               this.props.options.strClassName ||
               (this.props.options.bUseWebStyles
                 ? "popup_block_new popup_block_hidden_until_visible"
-                : "contextMenu");
+                : f.a.contextMenu);
             return (
               this.props.instance.visible &&
                 this.state.ready &&
                 (t += " visible"),
-              (t += " ContextMenuFocusContainer"),
+              (t += " " + f.a.ContextMenuFocusContainer),
               s.createElement(
                 "div",
                 {
@@ -1279,12 +1310,12 @@
           (e = c.c([r.observer], e))
         );
       })(s.Component),
-      _ = (function(o) {
+      x = (function(o) {
         function i(e, t, n) {
           var r =
             o.call(this, "contextmenu_" + i.sm_iContextMenuInstance++, {
               title: "Menu",
-              html_class: "ContextMenuPopup client_chat_frame",
+              html_class: f.a.ContextMenuPopup + " client_chat_frame",
               body_class: "ContextMenuPopupBody",
               replace_existing_popup: !1,
               target_browser: n,
@@ -1314,7 +1345,7 @@
           (i.prototype.Render = function(e, t) {
             a.render(
               s.createElement(
-                b,
+                w,
                 c.a({}, this.m_menuProps, { popup: this }),
                 this.m_children
               ),
@@ -1330,12 +1361,12 @@
           i
         );
       })(u.a);
-    function g(e) {
-      return s.createElement("div", { className: "ContextMenuMouseOverlay" });
+    function E(e) {
+      return s.createElement("div", { className: f.a.ContextMenuMouseOverlay });
     }
-    function w(e) {
+    function S(e) {
       var t = [],
-        n = O.m(e),
+        n = O.n(e),
         r = n.getSelection(),
         o = r && 0 < r.rangeCount && 0 < r.toString().length,
         i = e.target,
@@ -1347,7 +1378,7 @@
         (n.document.queryCommandEnabled("cut") || (o && c)) &&
           t.push(
             s.createElement(
-              f,
+              b,
               {
                 key: "cut",
                 onSelected: function() {
@@ -1360,7 +1391,7 @@
         (document.queryCommandEnabled("copy") || o) &&
           t.push(
             s.createElement(
-              f,
+              b,
               {
                 key: "copy",
                 onSelected: function() {
@@ -1374,7 +1405,7 @@
           c &&
           t.push(
             s.createElement(
-              f,
+              b,
               {
                 key: "paste",
                 onSelected: function() {
@@ -1386,22 +1417,22 @@
           ),
         t.length)
       )
-        Object(l.a)(s.createElement(d, null, t), e);
+        Object(l.a)(s.createElement(y, null, t), e);
       else {
         if (e.shiftKey) return;
         e.preventDefault(), e.stopPropagation();
       }
     }
-    var x = "DEBUG_StickyContextMenus";
-    function E() {
+    var M = "DEBUG_StickyContextMenus";
+    function k() {
       return (
-        window.sessionStorage && "true" == window.sessionStorage.getItem(x)
+        window.sessionStorage && "true" == window.sessionStorage.getItem(M)
       );
     }
-    function S(e) {
+    function C(e) {
       e
-        ? window.sessionStorage.setItem(x, "true")
-        : window.sessionStorage.removeItem(x);
+        ? window.sessionStorage.setItem(M, "true")
+        : window.sessionStorage.removeItem(M);
     }
   },
   "G+3Z": function(e, t, n) {
@@ -2112,6 +2143,30 @@
       })(),
       f = new d();
   },
+  QHER: function(e, t, n) {
+    "use strict";
+    function r(n) {
+      return Object.keys(n).reduce(function(e, t) {
+        return n[t] ? (e ? e + " " + t : t) : e;
+      }, "");
+    }
+    t.a = function() {
+      for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
+      return e.reduce(function(e, t) {
+        return t
+          ? "string" == typeof t
+            ? e
+              ? e + " " + t
+              : t
+            : "object" == typeof t
+            ? e
+              ? e + " " + r(t)
+              : r(t)
+            : e
+          : e;
+      }, "");
+    };
+  },
   UqDm: function(e, t, n) {
     "use strict";
     n.d(t, "e", function() {
@@ -2540,7 +2595,7 @@
               eMinPrivacy: this.GetMinPrivacy()
             }),
             e,
-            { bOverlapHorizontal: !0, bUseWebStyles: !0 }
+            { bOverlapHorizontal: !0 }
           );
         }),
         (t.prototype.OnSettingChanged = function(e) {
@@ -2670,7 +2725,7 @@
                 )
               }),
               e,
-              { bOverlapHorizontal: !0, bUseWebStyles: !0 }
+              { bOverlapHorizontal: !0 }
             );
           }),
           (e.prototype.OnSettingChanged = function(e) {
@@ -6111,10 +6166,7 @@
         (e.prototype.GetPreferredLocales = function() {
           var e = ["en-US"];
           return (
-            "undefined" != typeof navigator &&
-              void 0 !== navigator.languages &&
-              (e = navigator.languages),
-            e
+            navigator && navigator.languages && (e = navigator.languages), e
           );
         }),
         (e.prototype.LocalizeString = function(e) {

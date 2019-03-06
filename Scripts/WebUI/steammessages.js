@@ -3,7 +3,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [6],
+  [7],
   {
     "+9/f": function(e, t, i) {
       "use strict";
@@ -12424,6 +12424,18 @@
             (r.prototype.set_is_live = function(e) {
               n.Message.setField(this, 16, e);
             }),
+            (r.prototype.language = function() {
+              return n.Message.getField(this, 17);
+            }),
+            (r.prototype.set_language = function(e) {
+              n.Message.setField(this, 17, e);
+            }),
+            (r.prototype.reports = function() {
+              return n.Message.getField(this, 18);
+            }),
+            (r.prototype.set_reports = function(e) {
+              n.Message.setField(this, 18, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -12444,7 +12456,9 @@
                 background_url: n.Message.getField(t, 13),
                 is_featured: n.Message.getField(t, 14),
                 is_disabled: n.Message.getField(t, 15),
-                is_live: n.Message.getField(t, 16)
+                is_live: n.Message.getField(t, 16),
+                language: n.Message.getField(t, 17),
+                reports: n.Message.getField(t, 18)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -12504,6 +12518,12 @@
                   case 16:
                     e.set_is_live(t.readBool());
                     break;
+                  case 17:
+                    e.set_language(t.readString());
+                    break;
+                  case 18:
+                    e.set_reports(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -12547,7 +12567,11 @@
                 void 0 !== (i = n.Message.getField(e, 15)) &&
                   t.writeBool(15, i),
                 void 0 !== (i = n.Message.getField(e, 16)) &&
-                  t.writeBool(16, i);
+                  t.writeBool(16, i),
+                void 0 !== (i = n.Message.getField(e, 17)) &&
+                  t.writeString(17, i),
+                void 0 !== (i = n.Message.getField(e, 18)) &&
+                  t.writeUint32(18, i);
             }),
             (r.prototype.getClassName = function() {
               return "GetBroadcastChannelEntry";
@@ -14223,6 +14247,67 @@
             }),
             r
           );
+        })(n.Message)),
+        H = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, [1], null), t;
+          }
+          return (
+            s.d(r, i),
+            (r.prototype.results = function() {
+              return n.Message.getRepeatedWrapperField(this, h, 1);
+            }),
+            (r.prototype.set_results = function(e) {
+              n.Message.setRepeatedWrapperField(this, 1, e);
+            }),
+            (r.prototype.add_results = function(e, t) {
+              return n.Message.addToRepeatedWrapperField(this, 1, e, h, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                results: n.Message.toObjectList(t.results(), h.toObject, e)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    var i = new h();
+                    t.readMessage(i, h.deserializeBinaryFromReader),
+                      e.add_results(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              0 < (i = e.results()).length &&
+                t.writeRepeatedMessage(1, i, h.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CSteamTV_GetMyBroadcastChannels_Response";
+            }),
+            r
+          );
         })(n.Message));
       ((a = r || (r = {})).CreateBroadcastChannel = function(e, t) {
         return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, o, {});
@@ -14334,6 +14419,11 @@
         }),
         (a.SetSteamTVUserSettings = function(e, t) {
           return e.SendMsg("SteamTV.SetSteamTVUserSettings#1", t, A, {});
+        }),
+        (a.GetMyBroadcastChannels = function(e, t) {
+          return e.SendMsg("SteamTV.GetMyBroadcastChannels#1", t, H, {
+            bConstMethod: !0
+          });
         });
     },
     HxRt: function(e, t, i) {
