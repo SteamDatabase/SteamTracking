@@ -9,16 +9,17 @@ a, a:hover {
 }
 
 #widget {
-	border: 1px solid #4d4b49;
-	background-color: #262626;
+    border: 1px solid #2d3139;
+    background-color: #282e39;
 	/*width: 614px;*/
 	height: 146px;
 	padding: 10px 15px;
 	position: relative;
 	margin: 0 auto;
-	background-image: url(/public/images/v5/SteamPistonForWidget.png);
+	background-image: url(/public/images/v6/steam_ico.png);
 	background-repeat: no-repeat;
-	background-position: top right;
+    background-position-x: 99%;
+    background-position-y: 5px;
 }
 
 #widget .game_purchase_action {
@@ -31,7 +32,7 @@ a, a:hover {
 }
 
 #widget h1 {
-	font-size: 23px;
+	font-size: 21px;
 	font-weight: normal;
 	vertical-align: top;
 	display: inline-block;
@@ -113,4 +114,36 @@ background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);background: l
 
 #widget .coming_soon .btn_addtocart {
 	margin-left: 10px;
+}
+.discount_pct {
+    color: #a4d007;
+}
+.discount_final_price {
+    color: #acdbf5;
+}
+#widget .btn_addtocart .btn_addtocart_content {
+    display: inline-block;
+    height: 34px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    padding: 0px 11px;
+    line-height: 34px;
+    border-radius: 2px;
+    text-transform: unset;
+    background: #75b022;
+    background: -webkit-linear-gradient( top, #75b022 5%, #588a1b 95%);
+    background: linear-gradient( to bottom, #75b022 5%, #588a1b 95%);
+    background: linear-gradient( to right, #75b022 5%, #588a1b 95%);
+    cursor: pointer;
+}
+#widget .game_purchase_action .game_purchase_price,
+#widget .game_purchase_action .game_purchase_discount,
+#widget .game_purchase_action .btn_addtocart,
+#widget .game_purchase_action .btn_packageinfo,
+#widget .game_purchase_action .game_purchase_action_bg .game_purchase_action .game_purchase_action_qty {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+#widget .game_purchase_action_bg {
+    background: transparent;
 }

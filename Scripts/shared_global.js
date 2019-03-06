@@ -2031,7 +2031,8 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 			if ( typeof sParamName != "string" )
 				continue;
 
-			if ( typeof this.m_rgStaticParams[sParamName] != "string" )
+			var typeOfParam = typeof this.m_rgStaticParams[sParamName];
+			if ( typeOfParam != "string" && typeOfParam != "number" && typeOfParam != "boolean" )
 				continue;
 
 			params[sParamName] = this.m_rgStaticParams[sParamName];

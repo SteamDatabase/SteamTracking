@@ -681,14 +681,8 @@ a.market_dialog_title_cancel:hover .market_dialog_title_cancel_X {
 	color: #ffffff;
 }
 
-.market_dialog_content_frame {
-
-	background: rgba(0,0,0,0.3);
-	border-radius: 3px;
-}
-
 .market_dialog_content {
-	padding: 11px;
+	padding: 11px 0px 11px 0px;
 }
 
 .market_sell_dialog_input_area {
@@ -844,7 +838,6 @@ input.market_dialog_input:focus {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 100px;
 }
 
 #market_sell_dialog_confirm_buttons .market_dialog_bottom_buttons {
@@ -1151,16 +1144,31 @@ a.game_button {
 }
 
 .jqplot-highlighter-tooltip {
-	background: #121b27;
+    background: #303030;
+    border-radius: 2px;
+    box-shadow: 2px 2px 10px #000000;
 	color: white;
-	border: 1px solid #797272;
 	padding: 5px;
+}
+.jqplot-highlighter-tooltip:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(48, 48, 48, 0);
+    border-top-color: #303030;
+    border-width: 10px;
+    margin-left: -10px;
 }
 
 .jqplot-yaxis {
 	text-align: right;
 	right: 0 !important;
-	width: 52px !important;
+	width: 60px !important;
 }
 
 .jqplot-yaxis-tick {

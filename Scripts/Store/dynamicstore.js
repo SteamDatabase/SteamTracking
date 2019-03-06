@@ -94,6 +94,7 @@ GDynamicStore = {
 
 		try {
 			this.RemoveSNRFromURL();
+			this.RemoveUTMFromURL();
 		} catch ( e )
 		{
 		}
@@ -260,6 +261,39 @@ GDynamicStore = {
 		if ( strRemove.length > 0 )
 		{
 			var strNewURL = window.location.href.replace( strRemove, '' );
+			window.history.replaceState( history.state, null, strNewURL );
+		}
+	},
+
+	RemoveUTMFromURL: function()
+	{
+		if ( !window.history || !window.history.replaceState || !window.location.search )
+			return;
+
+		var strSearch = window.location.search;
+		if ( strSearch.indexOf( '?' ) == 0 )
+			strSearch = strSearch.slice( 1 );
+
+		var rgParams = strSearch.split( '&' );
+		var rgNewParams = [];
+
+		for ( var i = 0; i < rgParams.length; ++i )
+		{
+			var strParam = rgParams[i];
+			if ( strParam.indexOf( 'utm_') == -1 )
+			{
+				rgNewParams.push( strParam );
+			}
+		}
+
+		if ( rgParams.length != rgNewParams.length )
+		{
+			var strNewURL = window.location.href.replace( window.location.search, '' );
+			for ( var i = 0; i < rgNewParams.length; ++i )
+			{
+				var strParam = rgNewParams[i];
+				strNewURL += ( i == 0 ? '?' : '&' ) + strParam;
+			}
 			window.history.replaceState( history.state, null, strNewURL );
 		}
 	},

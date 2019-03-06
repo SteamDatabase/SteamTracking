@@ -991,7 +991,6 @@ div#global_header {
 			font-size: 14px;
 }
 
-/**/
 div#global_header .content {
 	background: #171a21;
 	position: relative;
@@ -999,7 +998,7 @@ div#global_header .content {
 	height: 104px;
 	margin: 0px auto;
 
-	z-index: 402;
+	z-index: 102;
 }
 
 div#global_actions {
@@ -1013,7 +1012,7 @@ div#global_actions {
 	color: #b8b6b4;
 	font-size: 11px;
 
-	z-index: 401;
+	z-index: 101;
 }
 
 div#global_actions a.global_action_link {
