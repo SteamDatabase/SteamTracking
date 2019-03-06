@@ -31,6 +31,33 @@
                     "description": "launcher type"
                 }
             ]
+        },
+        {
+            "name": "GetDepotPatchInfo",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "depotid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "source_manifestid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "target_manifestid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
         }
     ]
 }
