@@ -92,8 +92,6 @@ public:
     virtual unknown_ret TriggerHapticPulse(unsigned int, ESteamControllerPad, unsigned short, unsigned short, unsigned short, unsigned int) = 0;
     virtual unknown_ret TriggerVibration(unsigned int, unsigned short, unsigned short) = 0;
     virtual unknown_ret SetLEDColor(unsigned int, unsigned char, unsigned char, unsigned char, unsigned int) = 0;
-    virtual unknown_ret GetStringForActionOrigin(EControllerActionOrigin) = 0;
-    virtual unknown_ret GetStringForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret SetDonglePairingMode(bool, int) = 0;
     virtual unknown_ret ReserveSteamController() = 0;
     virtual unknown_ret CancelSteamControllerReservations() = 0;

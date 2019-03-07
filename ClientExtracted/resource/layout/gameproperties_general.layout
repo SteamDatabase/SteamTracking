@@ -148,7 +148,7 @@
 		place {controls=SteamInputPerGameLabel,SteamInputPerGameCombo start=Divider2 dir=down margin-top=20 spacing=10 width=max region=main }
 		place [$LINUX] {control=Divider3 start=SteamInputPerGameCombo dir=down margin-top=20 region=main width=max }
 		place [$LINUX] {controls=SteamPlayOverrideCheck,SteamPlayOverrideCombo start=Divider3 dir=down margin-top=20 spacing=10 width=max region=main }
-		place {controls=FamilySharingUnsupportedLabel margin-top=472 margin-left=20 }
+		place {controls=FamilySharingUnsupportedLabel margin-top=493 margin-left=20 }
 
 	}
 }

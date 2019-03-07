@@ -1860,6 +1860,7 @@
  D typeinfo for CCallbackImpl<288>
  D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<32>
+ D typeinfo for CCallbackImpl<4288>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<76>
@@ -1929,6 +1930,7 @@
  D typeinfo for CFriendPanelAffordance
  D typeinfo for CFriendPanelLabel
  D typeinfo for CFriendSettingsController
+ D typeinfo for CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged
  D typeinfo for CFriendsClansPage
  D typeinfo for CFriendsDialog
  D typeinfo for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -2078,11 +2080,7 @@
  D typeinfo for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendSettingsController, char const*>
- D typeinfo for CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -2102,6 +2100,11 @@
  D typeinfo for CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSteamParentalController>
+ D typeinfo for CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CLimitedUserDialog
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMsgAckPIDShuttingDown
@@ -2279,6 +2282,9 @@
  D typeinfo for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  D typeinfo for CSteamParentalController::CCallback_OnParentalLockChangeComplete
  D typeinfo for CSteamParentalController::CCallback_OnParentalWebTokenChanged
+ D typeinfo for CSteamUIMessagingController
+ D typeinfo for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
+ D typeinfo for CSteamUIStorageController
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTradeInviteBar
@@ -2325,11 +2331,7 @@
  D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -2348,6 +2350,11 @@
  D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController>
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
@@ -3216,6 +3223,7 @@
  D vtable for CCallbackImpl<288>
  D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<32>
+ D vtable for CCallbackImpl<4288>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<76>
@@ -3284,6 +3292,7 @@
  D vtable for CFriendPanelAffordance
  D vtable for CFriendPanelLabel
  D vtable for CFriendSettingsController
+ D vtable for CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged
  D vtable for CFriendsClansPage
  D vtable for CFriendsDialog
  D vtable for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -3432,11 +3441,7 @@
  D vtable for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D vtable for CJSMethodCallHandler<CFriendSettingsController, char const*>
- D vtable for CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -3456,6 +3461,11 @@
  D vtable for CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSteamParentalController>
+ D vtable for CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ D vtable for CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CLimitedUserDialog
  D vtable for CMSgJumpListMRUApp
  D vtable for CMsgAckPIDShuttingDown
@@ -3630,6 +3640,9 @@
  D vtable for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  D vtable for CSteamParentalController::CCallback_OnParentalLockChangeComplete
  D vtable for CSteamParentalController::CCallback_OnParentalWebTokenChanged
+ D vtable for CSteamUIMessagingController
+ D vtable for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
+ D vtable for CSteamUIStorageController
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTradeInviteBar
@@ -3665,11 +3678,7 @@
  D vtable for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -3688,6 +3697,11 @@
  D vtable for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CSteamParentalController>
+ D vtable for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ D vtable for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
@@ -3954,6 +3968,7 @@
  R typeinfo name for CCallbackImpl<288>
  R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<32>
+ R typeinfo name for CCallbackImpl<4288>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<76>
@@ -4023,6 +4038,7 @@
  R typeinfo name for CFriendPanelAffordance
  R typeinfo name for CFriendPanelLabel
  R typeinfo name for CFriendSettingsController
+ R typeinfo name for CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged
  R typeinfo name for CFriendsClansPage
  R typeinfo name for CFriendsDialog
  R typeinfo name for CFriendsDialog::CCallback_OnBroadcastCantStart
@@ -4172,11 +4188,7 @@
  R typeinfo name for CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, char const*>
- R typeinfo name for CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -4196,6 +4208,11 @@
  R typeinfo name for CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSteamParentalController>
+ R typeinfo name for CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CLimitedUserDialog
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMsgAckPIDShuttingDown
@@ -4373,6 +4390,9 @@
  R typeinfo name for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CSteamParentalController::CCallback_OnParentalLockChangeComplete
  R typeinfo name for CSteamParentalController::CCallback_OnParentalWebTokenChanged
+ R typeinfo name for CSteamUIMessagingController
+ R typeinfo name for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
+ R typeinfo name for CSteamUIStorageController
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTradeInviteBar
@@ -4537,11 +4557,7 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, int>
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
@@ -4560,6 +4576,11 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController>
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
@@ -5515,6 +5536,9 @@
  T CCallbackImpl<32>::GetCallbackSizeBytes()
  T CCallbackImpl<32>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<32>::~CCallbackImpl()
+ T CCallbackImpl<4288>::GetCallbackSizeBytes()
+ T CCallbackImpl<4288>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<4288>::~CCallbackImpl()
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
@@ -6249,6 +6273,9 @@
  T CFriendPanelLabel::GetStyleFlags()
  T CFriendPanelLabel::KB_ChainToMap()
  T CFriendPanelLabel::~CFriendPanelLabel()
+ T CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged::CCallbackInternal_OnClientSettingsChanged()
+ T CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged::Run(void*)
+ T CFriendSettingsController::CCallbackInternal_OnClientSettingsChanged::~CCallbackInternal_OnClientSettingsChanged()
  T CFriendSettingsController::CFriendSettingsController()
  T CFriendSettingsController::DispatchSettingsChanged()
  T CFriendSettingsController::FillFriendSettings(CJSMethodArgs*)
@@ -6257,14 +6284,11 @@
  T CFriendSettingsController::Initialize()
  T CFriendSettingsController::LoadFriendSettings()
  T CFriendSettingsController::RegisterForSettingsChanges(CSmartPtr<CJSCallbackFunc>)
+ T CFriendSettingsController::RegisterJSMethods(IHTMLWindow*)
+ T CFriendSettingsController::RegisterJSMethods(vgui::HTML*)
  T CFriendSettingsController::RunFrame()
- T CFriendSettingsController::SetChatFlashMode(int)
  T CFriendSettingsController::SetFriendSettings(char const*)
  T CFriendSettingsController::SetLegacySetting(char const*, int)
- T CFriendSettingsController::SetSettingsJavascriptValueBool(char const*, bool)
- T CFriendSettingsController::StorageDeleteKey(char const*)
- T CFriendSettingsController::StorageGetString(char const*, CSmartPtr<CJSCallbackPromise>)
- T CFriendSettingsController::StorageSetString(char const*, char const*)
  T CFriendSettingsController::Validate(CValidator&, char const*)
  T CFriendSettingsController::~CFriendSettingsController()
  T CFriendsClansPage::CFriendsClansPage(CFriendsDialog*)
@@ -6838,6 +6862,7 @@
  T CFriendsUIModule::StartInviteToTrade(CSteamID)
  T CFriendsUIModule::~CFriendsUIModule()
  T CFriendsWebChat::Activate(bool)
+ T CFriendsWebChat::AddControllers()
  T CFriendsWebChat::BNeedsRunFrame()
  T CFriendsWebChat::BSuppressPopupsInRestore(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::CCallbackInternal_OnChatRoomDlgClose::CCallbackInternal_OnChatRoomDlgClose()
@@ -7376,11 +7401,7 @@
  T CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
- T CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
- T CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>::~CJSMethodCallHandler()
@@ -7400,6 +7421,11 @@
  T CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSteamParentalController>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSObject::AddObjectProperty(char const*)
  T CJSObject::SetBoolean(char const*, bool)
  T CJSObject::SetNumber(char const*, int)
@@ -9607,6 +9633,43 @@
  T CSteamParentalController::RunFrame()
  T CSteamParentalController::UnlockParentalLock(char const*, bool, CSmartPtr<CJSCallbackPromise>)
  T CSteamParentalController::Validate(CValidator&, char const*)
+ T CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage::CCallbackInternal_OnClientPostMessage()
+ T CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage::Run(void*)
+ T CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage::~CCallbackInternal_OnClientPostMessage()
+ T CSteamUIMessagingController::CSteamUIMessagingController()
+ T CSteamUIMessagingController::Initialize()
+ T CSteamUIMessagingController::OnClientPostMessage(ClientPostMessage_t*)
+ T CSteamUIMessagingController::PostMessage(char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIMessagingController::RegisterForMessages(char const*, CSmartPtr<CJSCallbackFunc>)
+ T CSteamUIMessagingController::RegisterJSMethods(IHTMLWindow*)
+ T CSteamUIMessagingController::RegisterJSMethods(vgui::HTML*)
+ T CSteamUIMessagingController::RunFrame()
+ T CSteamUIMessagingController::Validate(CValidator&, char const*)
+ T CSteamUIMessagingController::~CSteamUIMessagingController()
+ T CSteamUIStorageController::CSteamUIStorageController()
+ T CSteamUIStorageController::DeleteKeyHelper(EConfigStore, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::GetJSONHelper(EConfigStore, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::GetKeyValues(EConfigStore, KeyValues*, char const*)
+ T CSteamUIStorageController::GetStringHelper(EConfigStore, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::Initialize()
+ T CSteamUIStorageController::InternalSetObject(EConfigStore, CUtlStringBuilder*, CMsgJSValue const&)
+ T CSteamUIStorageController::LocalDeleteKey(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::LocalGetJSON(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::LocalGetString(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::LocalSetObject(char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::LocalSetString(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RegisterJSMethods(IHTMLWindow*)
+ T CSteamUIStorageController::RegisterJSMethods(vgui::HTML*)
+ T CSteamUIStorageController::RoamingDeleteKey(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RoamingGetJSON(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RoamingGetString(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RoamingSetObject(char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RoamingSetString(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::RunFrame()
+ T CSteamUIStorageController::SetObjectHelper(EConfigStore, char const*, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::SetStringHelper(EConfigStore, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CSteamUIStorageController::Validate(CValidator&, char const*)
+ T CSteamUIStorageController::~CSteamUIStorageController()
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
@@ -9774,7 +9837,6 @@
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, CHTMLWindow::JSMethodRegistration_t const&)
- T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
@@ -9787,11 +9849,21 @@
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, CHTMLWindowController::JSRegisteredMethod_t const&)
- T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&)
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
@@ -9799,7 +9871,6 @@
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, bool const&)
- T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
@@ -9811,7 +9882,6 @@
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
@@ -9823,7 +9893,6 @@
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, bool const&)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
@@ -9835,7 +9904,6 @@
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, CUtlString const&)
- T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed(unsigned long long const&, int*, bool)
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Remove(unsigned long long const&)
@@ -9850,7 +9918,6 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::FindInBucket(int, vgui::CFontWidthCache::key_t const&) const
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::IncrementalRehash()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertOrReplace(vgui::CFontWidthCache::key_t const&, float const&)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed(vgui::CFontWidthCache::key_t const&, int*, bool)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Purge()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::RehashNodesInBucket(int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::UnlinkNodeFromBucket(int, int)
@@ -9876,9 +9943,9 @@
  T CUtlLinkedList<CUtlString, int>::Free(int)
  T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
  T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<CUtlString, int>::RemoveAll()
  T CUtlLinkedList<CUtlString, int>::Unlink(int)
- T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertBefore(int, int const&)
@@ -10243,6 +10310,7 @@
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Access()
+ T CUtlStringBuilder::AppendFormat(char const*, ...)
  T CUtlStringBuilder::Data::Clear()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
@@ -10252,6 +10320,8 @@
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::Replace(char const*, char const*)
  T CUtlStringBuilder::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlStringBuilder::Truncate(unsigned long)
+ T CUtlStringBuilder::VAppendFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
@@ -10309,6 +10379,9 @@
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
@@ -10345,6 +10418,9 @@
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::GrowVector(int)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::InsertBefore(int, HTMLCommandBuffer_t* const&)
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::~CUtlVector()
+ T CUtlVector<IUIController*, CUtlMemory<IUIController*> >::AddToTail(IUIController*&&)
+ T CUtlVector<IUIController*, CUtlMemory<IUIController*> >::GrowVector(int)
+ T CUtlVector<IUIController*, CUtlMemory<IUIController*> >::~CUtlVector()
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::GrowVector(int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::InsertBefore(int)
  T CUtlVector<KVJSONParserStackEntry_t, CUtlMemory<KVJSONParserStackEntry_t> >::Remove(int)
@@ -10716,6 +10792,7 @@
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
+ T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
@@ -10727,6 +10804,7 @@
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
+ T ConVar::SetValue(long long)
  T ConVar::Validate(CValidator&, char const*)
  T ConVar::~ConVar()
  T ConvertJpegToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&, int*)
@@ -11091,11 +11169,15 @@
  T FlushPNGDataToBuffer(png_struct_def*)
  T FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<2, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&, bool*)
+ T FreeArgsInTuple<3, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T FreeArgsInTuple<3, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FriendAlias_t::IsLess(void*, FriendAlias_t const*, FriendAlias_t const*)
  T FriendsDialog()
  T FriendsUIGetLauncherType()
@@ -11105,7 +11187,7 @@
  T GetCStringCharConversion()
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
- T GetCommunityImagesURLForUniverse(EUniverse, bool)
+ T GetCommunityImagesURLForUniverse(EUniverse)
  T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetLocalSteamClientURL()
@@ -11515,6 +11597,7 @@
  T bn_sub_part_words
  T bn_sub_words
  T bool BConvertArray<unsigned int>(IHTMLWindow*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
+ T bool BConvertMsgJSValue<CMsgJSValue const*>(IHTMLWindow*, CMsgJSValue const*, CMsgJSValue const**)
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
  T bool BConvertMsgJSValue<CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>(IHTMLWindow*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
@@ -11523,6 +11606,7 @@
  T bool BConvertMsgJSValue<int>(IHTMLWindow*, CMsgJSValue const*, int*)
  T bool BConvertMsgJSValue<unsigned int>(IHTMLWindow*, CMsgJSValue const*, unsigned int*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
+ T bool vgui::BConvertMsgJSValue<CMsgJSValue const*>(vgui::HTML*, CMsgJSValue const*, CMsgJSValue const**)
  T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
  T bool vgui::BConvertMsgJSValue<CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>(vgui::HTML*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
@@ -11699,6 +11783,14 @@
  T i2d_X509_SIG
  T i2o_ECPublicKey
  T init_JSON_config
+ T int CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, CUtlString, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T int_rsa_verify
@@ -12523,11 +12615,7 @@
  T vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, bool>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*, char const*>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>::~CJSMethodCallHandler()
@@ -12546,6 +12634,11 @@
  T vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CSteamParentalController>::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -13191,14 +13284,19 @@
  T vgui::FrameTitle::~FrameTitle()
  T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T vgui::FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<2, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&, bool*)
+ T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
+ T vgui::FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeStaticAnimationController()
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
+ T vgui::GetHTMLFramelessPopup(char const*, int, int, int, int, vgui::Panel*, bool)
  T vgui::GetINotificationManager()
  T vgui::GraphPanel::ChainToAnimationMap()
  T vgui::GraphPanel::ChainToMap()
@@ -13441,7 +13539,6 @@
  T vgui::HTMLFramelessPopup::GetMessageMap()
  T vgui::HTMLFramelessPopup::GetPanelClassName()
  T vgui::HTMLFramelessPopup::GetPanelTopClassName() const
- T vgui::HTMLFramelessPopup::GetPopupHTML()
  T vgui::HTMLFramelessPopup::HTMLFramelessPopup(bool, bool, bool)
  T vgui::HTMLFramelessPopup::Initialize(vgui::Panel*)
  T vgui::HTMLFramelessPopup::KB_ChainToMap()
@@ -15772,8 +15869,8 @@
  T vgui::system()
  T void CBroadcastController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
  T void CBroadcastController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
- T void CFriendSettingsController::RegisterJSMethods<IHTMLWindow>(IHTMLWindow*)
- T void CFriendSettingsController::RegisterJSMethods<vgui::HTML>(vgui::HTML*)
+ T void CFriendSettingsController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
+ T void CFriendSettingsController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
  T void CFriendsWebChat::RegisterJSMethods<IHTMLWindow>(IHTMLWindow*)
  T void CFriendsWebChat::RegisterJSMethods<vgui::HTML>(vgui::HTML*)
  T void CSharedConnectionController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
@@ -15781,6 +15878,10 @@
  T void CSharedConnectionController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
  T void CSteamParentalController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
  T void CSteamParentalController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
+ T void CSteamUIMessagingController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
+ T void CSteamUIMessagingController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
+ T void CSteamUIStorageController::RegisterJSMethodsInternal<IHTMLWindow>(IHTMLWindow*)
+ T void CSteamUIStorageController::RegisterJSMethodsInternal<vgui::HTML>(vgui::HTML*)
  T void Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<FriendAlias_t>(FriendAlias_t*)
@@ -15788,7 +15889,6 @@
  T void JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendSettingsController*, void (CFriendSettingsController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
@@ -15799,6 +15899,11 @@
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamParentalController*, void (CSteamParentalController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamParentalController*, void (CSteamParentalController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, CSmartPtr<CJSCallbackFunc>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&)
+ T void JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2, 3>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2, 3>, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void std::__1::__insertion_sort_3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__sort<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -15816,7 +15921,6 @@
  T void vgui::JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendSettingsController*, void (CFriendSettingsController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
@@ -15826,6 +15930,11 @@
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamParentalController*, void (CSteamParentalController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamParentalController*, void (CSteamParentalController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2, 3>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2, 3>, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -17478,6 +17587,8 @@
  t _GLOBAL__sub_I_steamfriends_test.cpp
  t _GLOBAL__sub_I_steamid.cpp
  t _GLOBAL__sub_I_steamparentalcontroller.cpp
+ t _GLOBAL__sub_I_steamuimessagingcontroller.cpp
+ t _GLOBAL__sub_I_steamuistoragecontroller.cpp
  t _GLOBAL__sub_I_typingjump.cpp
  t _GLOBAL__sub_I_urlhelper.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp

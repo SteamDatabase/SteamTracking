@@ -4074,6 +4074,18 @@ KeyboardShortcut Image
 	max-height: 170px;
 }
 
+.EditAppSteamPlayOptions_Dropdown
+{
+	z-index: msgbox_contextmenu_zindex;
+	width: 770px;
+	max-height: 170px;
+}
+
+.EditAppSteamPlayOptions_Dropdown:disabled
+{
+	visibility: collapse;
+}
+
 #CategoryStack
 {
 	margin-top: 0px;
@@ -5621,6 +5633,7 @@ LibrarySuggestionsRow:descendantfocus
 	padding-left: 20px;
 	padding-top: 40px;
 	position: 0 0 0 0;
+	height: 100%;
 }
 .SettingsContent
 {
@@ -5661,6 +5674,16 @@ LibrarySuggestionsRow:descendantfocus
 .SupportSection #SupportSection,
 .ContentSection #ContentSection,
 .MiscSection #MiscSection
+{
+	visibility: visible;
+}
+
+#SteamPlayOptionsButton
+{
+	visibility: collapse;
+}
+
+.Linux #SteamPlayOptionsButton
 {
 	visibility: visible;
 }

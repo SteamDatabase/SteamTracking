@@ -28,7 +28,10 @@
 					<Label id="PreferencesLabel" class="LibrarySettingsHeader" text="#Library_Settings_Preferences" />	
 					<Button id="UpdateOptionsButton" class="Button">
 						<Label id="UpdateOptionsLabel" class="LongDesc" text="#Library_Details_EditUpdateOptions" />
-					</Button>					
+					</Button>
+					<Button id="SteamPlayOptionsButton" class="Button">
+						<Label id="SteamPlayOptionsLabel" class="LongDesc" text="#Library_Details_EditSteamPlayOptions" />
+					</Button>
 					<Button id="LaunchOptionsButton" class="Button">
 						<Label id="LaunchOptionsLabel" class="LongDesc" text="#Library_Details_EditLaunchCommandLine" />
 					</Button>

@@ -215,7 +215,6 @@
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::FindInBucket(int, char const* const&) const
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::IncrementalRehash()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertOrReplace(char const* const&, bool const&)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertUnconstructed(char const* const&, int*, bool)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Purge()
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::RehashNodesInBucket(int)
  T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::UnlinkNodeFromBucket(int, int)
@@ -655,6 +654,7 @@
  T __clang_call_terminate
  T _strlwr
  T _strupr
+ T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
  T void Destruct<CUtlString>(CUtlString*)

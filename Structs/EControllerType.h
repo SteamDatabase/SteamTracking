@@ -5,6 +5,7 @@ typedef enum EControllerType
     k_EControllerTypeController_steamcontroller_unknown, // controller_steamcontroller_unknown
     k_EControllerTypeController_steamcontroller_gordon, // controller_steamcontroller_gordon
     k_EControllerTypeController_steamcontroller_headcrab, // controller_steamcontroller_headcrab
+    k_EControllerTypeController_ps4, // controller_ps4
     k_EControllerTypeController_front_panel_board = 20, // controller_front_panel_board
     k_EControllerTypeController_generic = 30, // controller_generic
     k_EControllerTypeController_xbox360, // controller_xbox360

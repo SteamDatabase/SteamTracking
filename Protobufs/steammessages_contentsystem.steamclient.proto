@@ -29,7 +29,19 @@ message CContentServerDirectory_GetServersForSteamPipe_Response {
 	repeated .CContentServerDirectory_ServerInfo servers = 1;
 }
 
+message CContentServerDirectory_GetDepotPatchInfo_Request {
+	optional uint32 appid = 1;
+	optional uint32 depotid = 2;
+	optional uint64 source_manifestid = 3;
+	optional uint64 target_manifestid = 4;
+}
+
+message CContentServerDirectory_GetDepotPatchInfo_Response {
+	optional bool is_available = 1;
+}
+
 service ContentServerDirectory {
 	option (service_description) = "Content Server and CDN directory";
 	rpc GetServersForSteamPipe (.CContentServerDirectory_GetServersForSteamPipe_Request) returns (.CContentServerDirectory_GetServersForSteamPipe_Response);
+	rpc GetDepotPatchInfo (.CContentServerDirectory_GetDepotPatchInfo_Request) returns (.CContentServerDirectory_GetDepotPatchInfo_Response);
 }

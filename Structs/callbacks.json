@@ -405,6 +405,16 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClearAllBrowsingData_t>(ClearAllBrowsingData_t*)"
     },
     {
+        "id": 732,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClientSettingsChanged_t>(ClientSettingsChanged_t*)"
+    },
+    {
+        "id": 733,
+        "size": 4288,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ClientPostMessage_t>(ClientPostMessage_t*)"
+    },
+    {
         "id": 801,
         "size": 8216,
         "posted_in": "CUserFriends::ActivateGameOverlayToUser(char const*, CSteamID)"
@@ -1042,7 +1052,7 @@
     {
         "id": 1019,
         "size": 4,
-        "posted_in": "CUserAppInfo::SetUserAppConfig(unsigned int, KeyValues*)"
+        "posted_in": "CUserAppInfo::SetUserAppConfig(unsigned int, KeyValues*, bool)"
     },
     {
         "id": 1020,
@@ -1901,7 +1911,7 @@
     },
     {
         "id": 3311,
-        "size": 380,
+        "size": 512,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {
@@ -1968,6 +1978,11 @@
         "id": 3325,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientSiteAssociation_t>(RemoteClientSiteAssociation_t*)"
+    },
+    {
+        "id": 3326,
+        "size": 4,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamTransportSignal_t>(RemoteClientStreamTransportSignal_t*)"
     },
     {
         "id": 3401,
@@ -2348,6 +2363,11 @@
         "id": 4630,
         "size": 1284,
         "posted_in": "CClientVideo::WebRTCAddRemoteCandidate(char const*, int, char const*)"
+    },
+    {
+        "id": 4631,
+        "size": 128,
+        "posted_in": "CBroadcastClient_BroadcastChannelLive_Job::YieldingRunMethod(CUser*, CBroadcast_BroadcastChannelLive_Notification const&)"
     },
     {
         "id": 4700,

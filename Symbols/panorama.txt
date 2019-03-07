@@ -7890,7 +7890,6 @@
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::IncrementalRehash()
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::InsertOrReplace(CUtlString const&, int const&)
- T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::Purge()
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::RemoveAll()
@@ -7905,7 +7904,6 @@
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, int const&)
- T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAt(int)
@@ -7919,7 +7917,6 @@
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, panorama::CLocalization::DialogVariableHandler_t const&)
- T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Remove(CUtlString const&)
@@ -7934,7 +7931,6 @@
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, panorama::CSteamGameControllerNew::ActionSetData_t const&)
- T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
@@ -7946,7 +7942,6 @@
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::FindInBucket(int, char const* const&) const
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::IncrementalRehash()
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::InsertOrReplace(char const* const&, bool const&)
- T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::InsertUnconstructed(char const* const&, int*, bool)
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::RehashNodesInBucket(int)
  T CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::UnlinkNodeFromBucket(int, int)
@@ -7966,7 +7961,6 @@
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::FindInBucket(int, panorama::ActionInput_t const&) const
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::IncrementalRehash()
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::InsertOrReplace(panorama::ActionInput_t const&, panorama::InputAction_t const&)
- T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::InsertUnconstructed(panorama::ActionInput_t const&, int*, bool)
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::Purge()
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::RemoveAll()
@@ -7980,7 +7974,6 @@
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::FindInBucket(int, panorama::CPanelPtr<panorama::IUIPanel> const&) const
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertOrReplace(panorama::CPanelPtr<panorama::IUIPanel> const&, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >* const&)
- T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertUnconstructed(panorama::CPanelPtr<panorama::IUIPanel> const&, int*, bool)
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::Purge()
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::UnlinkNodeFromBucket(int, int)
@@ -7992,7 +7985,6 @@
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::FindInBucket(int, panorama::CPanelPtr<panorama::IUIPanel> const&) const
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertOrReplace(panorama::CPanelPtr<panorama::IUIPanel> const&, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >* const&)
- T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertUnconstructed(panorama::CPanelPtr<panorama::IUIPanel> const&, int*, bool)
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::Purge()
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::RemoveAt(int)
@@ -8006,7 +7998,6 @@
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertOrReplace(panorama::CPanoramaSymbol const&, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >* const&)
- T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed(panorama::CPanoramaSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Purge()
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RemoveAll()
@@ -8019,7 +8010,6 @@
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertOrReplace(panorama::CPanoramaSymbol const&, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >* const&)
- T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed(panorama::CPanoramaSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Purge()
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RemoveAll()
@@ -8034,7 +8024,6 @@
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertOrReplace(panorama::CPanoramaSymbol const&, panorama::CUIEngine::HandlerCount_t const&)
- T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed(panorama::CPanoramaSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Purge()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::UnlinkNodeFromBucket(int, int)
@@ -8046,7 +8035,6 @@
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertOrReplace(panorama::CPanoramaSymbol const&, panorama::CUIEngine::PanelTypeEventHandler_t const&)
- T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed(panorama::CPanoramaSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Purge()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::UnlinkNodeFromBucket(int, int)
@@ -8058,7 +8046,6 @@
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Find(panorama::CPanoramaSymbol const&) const
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertOrReplace(panorama::CPanoramaSymbol const&, panorama::CUIWindowInput::ActionRepeatData_t const&)
- T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed(panorama::CPanoramaSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::Purge()
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::UnlinkNodeFromBucket(int, int)
@@ -8071,7 +8058,6 @@
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::Find(panorama::CStyleSymbol const&) const
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::IncrementalRehash()
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::InsertOrReplace(panorama::CStyleSymbol const&, panorama::CStyleProperty* const&)
- T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::InsertUnconstructed(panorama::CStyleSymbol const&, int*, bool)
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::Purge()
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::RehashNodesInBucket(int)
  T CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::RemoveAt(int)
@@ -8085,7 +8071,6 @@
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, CUtlBuffer* const&)
- T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::PurgeAndDeleteElements()
  T CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
@@ -8098,7 +8083,6 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, int const&)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
@@ -8111,7 +8095,6 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, int const&)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed(unsigned long long const&, int*, bool)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
@@ -8123,7 +8106,6 @@
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, unsigned long long const&)
- T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed(unsigned long long const&, int*, bool)
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::UnlinkNodeFromBucket(int, int)
@@ -8143,7 +8125,6 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Find(unsigned short const&) const
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::IncrementalRehash()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertOrReplace(unsigned short const&, int const&)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed(unsigned short const&, int*, bool)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
@@ -8155,7 +8136,6 @@
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::Find(void* const&) const
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::IncrementalRehash()
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::InsertOrReplace(void* const&, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >* const&)
- T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::InsertUnconstructed(void* const&, int*, bool)
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::Purge()
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::RehashNodesInBucket(int)
  T CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::RemoveAll()
@@ -8196,6 +8176,7 @@
  T CUtlLinkedList<CUtlString, int>::Free(int)
  T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
  T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<CUtlString, int>::RemoveAll()
  T CUtlLinkedList<CUtlString, int>::Unlink(int)
  T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
@@ -9750,6 +9731,7 @@
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
+ T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
@@ -9761,6 +9743,7 @@
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
+ T ConVar::SetValue(long long)
  T ConVar::~ConVar()
  T ConstructRelativeDateString(char*, int, char const*, unsigned int, char const*, bool)
  T ConvertJSStylePropNameToRealName(char const*, CUtlStringBuilder&)
@@ -10264,6 +10247,26 @@
  T float panorama::CUIAnimationEngine::lerp<float>(unsigned int, CMsgTransitionData const&, float, float, panorama::CUIAnimationEngine::EAnimatingFlags&, panorama::CUIAnimationEngine::EAnimatingFlags)
  T float panorama::CUIAnimationEngineNew::lerp<float>(unsigned int, panorama::TransitionData_t const&, float, float, panorama::CUIAnimationEngineNew::EAnimatingFlags&, panorama::CUIAnimationEngineNew::EAnimatingFlags)
  T init_JSON_config
+ T int CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless>::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, int, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, panorama::CLocalization::DialogVariableHandler_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<CUtlString, panorama::CSteamGameControllerNew::ActionSetData_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<char const*, bool, CDefEquals<char const*>, HashFunctor<char const*> >::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
+ T int CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >::InsertUnconstructed<panorama::ActionInput_t const&>(panorama::ActionInput_t const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlHashMap<panorama::ActionInput_t, panorama::InputAction_t, CDefEquals<panorama::ActionInput_t>, HashFunctor<panorama::ActionInput_t> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertUnconstructed<panorama::CPanelPtr<panorama::IUIPanel> const&>(panorama::CPanelPtr<panorama::IUIPanel> const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanelPtr<panorama::IUIPanel>, CUtlVector<panorama::IInputCapture*, CUtlMemory<panorama::IInputCapture*> >*, CDefEquals<panorama::CPanelPtr<panorama::IUIPanel> >, HashFunctor<panorama::CPanelPtr<panorama::IUIPanel> > >::InsertUnconstructed<panorama::CPanelPtr<panorama::IUIPanel> const&>(panorama::CPanelPtr<panorama::IUIPanel> const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanoramaSymbol, CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed<panorama::CPanoramaSymbol const&>(panorama::CPanoramaSymbol const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanoramaSymbol, CUtlVector<panorama::EventHandler_t, CUtlMemory<panorama::EventHandler_t> >*, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed<panorama::CPanoramaSymbol const&>(panorama::CPanoramaSymbol const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::HandlerCount_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed<panorama::CPanoramaSymbol const&>(panorama::CPanoramaSymbol const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIEngine::PanelTypeEventHandler_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed<panorama::CPanoramaSymbol const&>(panorama::CPanoramaSymbol const&, int*, bool)
+ T int CUtlHashMap<panorama::CPanoramaSymbol, panorama::CUIWindowInput::ActionRepeatData_t, CDefEquals<panorama::CPanoramaSymbol>, HashFunctor<panorama::CPanoramaSymbol> >::InsertUnconstructed<panorama::CPanoramaSymbol const&>(panorama::CPanoramaSymbol const&, int*, bool)
+ T int CUtlHashMap<panorama::CStyleSymbol, panorama::CStyleProperty*, CDefEquals<panorama::CStyleSymbol>, HashFunctor<panorama::CStyleSymbol> >::InsertUnconstructed<panorama::CStyleSymbol const&>(panorama::CStyleSymbol const&, int*, bool)
+ T int CUtlHashMap<unsigned int, CUtlBuffer*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, unsigned long long, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
+ T int CUtlHashMap<void*, CUtlVector<panorama::CPanoramaSymbol, CUtlMemory<panorama::CPanoramaSymbol> >*, CDefEquals<void*>, HashFunctor<void*> >::InsertUnconstructed<void* const&>(void* const&, int*, bool)
  T int CUtlSortVector<panorama::CUIEngine::QueuedEvent_t>::FindGreater<panorama::CUIEngine::QueuedEvent_t>(panorama::CUIEngine::QueuedEvent_t const&) const
  T int V_sprintf_safe<1000ul>(char (&) [1000ul], char const*, ...)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
@@ -15610,11 +15613,6 @@
  T void GetRenderCmdDataAnimation<CMsgTransformOriginData const*, CMsg3DTransformOrigin>(CMsgTransformOriginData const**, CMsg3DTransformOrigin const&, int, int)
  T void GetRenderCmdDataAnimation<CRadiusData const*, CMsgBorderRadius>(CRadiusData const**, CMsgBorderRadius const&, int, int)
  T void GetRenderCmdDataAnimation<CTextShadowData const*, CMsgTextShadow>(CTextShadowData const**, CMsgTextShadow const&, int, int)
- T void RecursiveValidate<CTCPConnection>(CTCPConnection*, CValidator&, char const*)
- T void RecursiveValidate<CUDPConnection>(CUDPConnection*, CValidator&, char const*)
- T void RecursiveValidate<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*)
- T void RecursiveValidate<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*)
- T void RecursiveValidate<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*)
  T void RegisterForUnhandledEvent<panorama::CImageResourceManager, panorama::CImageResourceManager>(ImageUnreferenced const&, panorama::CImageResourceManager*, bool (panorama::CImageResourceManager::*)(panorama::CImageProxySource*))
  T void RegisterForUnhandledEvent<panorama::CLayoutManager, panorama::CLayoutManager>(AutoReloadFailedLayoutReloads const&, panorama::CLayoutManager*, bool (panorama::CLayoutManager::*)())
  T void RegisterForUnhandledEvent<panorama::CVideoPlayerAudioRenderer, panorama::CVideoPlayerAudioRenderer>(VideoPlayerFreeAudio const&, panorama::CVideoPlayerAudioRenderer*, bool (panorama::CVideoPlayerAudioRenderer::*)(panorama::CVideoPlayerAudioRenderer*))
@@ -15627,6 +15625,11 @@
  T void UnregisterForUnhandledEvent<panorama::CVideoPlayerAudioRenderer, panorama::CVideoPlayerAudioRenderer>(VideoPlayerFreeAudio const&, panorama::CVideoPlayerAudioRenderer*, bool (panorama::CVideoPlayerAudioRenderer::*)(panorama::CVideoPlayerAudioRenderer*))
  T void UnregisterForUnhandledEvent<panorama::CVideoPlayerAudioRenderer, panorama::CVideoPlayerAudioRenderer>(VideoPlayerInitAudio const&, panorama::CVideoPlayerAudioRenderer*, bool (panorama::CVideoPlayerAudioRenderer::*)(panorama::CVideoPlayerAudioRenderer*, int, int))
  T void UnregisterForUnhandledEvent<panorama::CVideoPlayerEventDispatcher, panorama::CVideoPlayerEventDispatcher>(DispatchVideoPlayerEvent const&, panorama::CVideoPlayerEventDispatcher*, bool (panorama::CVideoPlayerEventDispatcher::*)(panorama::CVideoPlayerEventDispatcher*, EVideoPlayerEvent))
+ T void _ValidateSelectType<CTCPConnection>(CTCPConnection*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUDPConnection>(CUDPConnection*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*, fallback_)
  T void panorama::CPanelStyle::FillRenderData<panorama::CStylePropertyBackgroundColor, panorama::FillBrushCollectionWithTransition_t>(panorama::FillBrushCollectionWithTransition_t&, panorama::CRenderCommandList&, void*)
  T void panorama::CPanelStyle::FillRenderData<panorama::CStylePropertyBackgroundImage, panorama::OpacityWithTransition_t>(panorama::OpacityWithTransition_t&, panorama::CRenderCommandList&, void*)
  T void panorama::CPanelStyle::FillRenderData<panorama::CStylePropertyBlur, panorama::GaussianBlurWithTransition_t>(panorama::GaussianBlurWithTransition_t&, panorama::CRenderCommandList&, void*)
@@ -16083,6 +16086,7 @@
  alphasort$INODE64
  atan2f
  atoi
+ atoll
  b (anonymous namespace)::CBorderData_CBorderSide_descriptor_
  b (anonymous namespace)::CBorderData_CBorderSide_reflection_
  b (anonymous namespace)::CBorderData_descriptor_

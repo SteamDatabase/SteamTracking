@@ -7,6 +7,8 @@ public:
     virtual unknown_ret ProcessStreamShutdown(unsigned int) = 0;
     virtual unknown_ret ProcessStreamClientConnected(unsigned int) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(unsigned int) = 0;
+    virtual unknown_ret BGetStreamTransportSignal(unsigned int, CUtlBuffer*) = 0;
+    virtual unknown_ret SendStreamTransportSignal(unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret ConnectToRemote(unsigned long long) = 0;
     virtual unknown_ret ConnectToRemoteAddress(char const*) = 0;
     virtual unknown_ret RefreshRemoteClients(bool) = 0;

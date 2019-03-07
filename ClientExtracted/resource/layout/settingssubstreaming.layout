@@ -17,6 +17,8 @@
 		}
 		"EnableStreaming" { ControlName="CheckButton" fieldName="EnableStreaming" labelText="#Steam_Settings_Streaming_EnableStreaming" }
 
+		"Pair" { ControlName="Button" fieldName="Pair" command="Pair" labelText="#Steam_Settings_Streaming_Pair" }
+
 		"SetPIN" { ControlName="Button" fieldName="SetPIN" command="SetPIN" labelText="#Steam_Settings_Streaming_SetPIN" }
 
 		"HostDivider" { ControlName="divider" }
@@ -85,13 +87,14 @@
 		place
 		{
 			control="EnableStreaming"
-			width=220
+			width=150
 			margin-left=20
 			margin-right=20
 			margin-top=205
 		}
 		
-		place { control=SetPIN width=244 x=270 y=210 z=4 }
+		place { control=Pair width=160 x=180 y=205 z=4 }
+		place { control=SetPIN width=160 x=350 y=205 z=4 }
 
 		place { region=bottom control=HostDivider width=max x=20 y=0 }
 		place { region=bottom control=HostLabel width=max x=20 y=10 }

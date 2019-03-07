@@ -54,6 +54,59 @@ button.DialogButton::-moz-focus-inner
 	height: 100%;
 }
 
+.FullModalOverlay
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1500;
+}
+
+.FullModalOverlay.NotReadyToRender
+{
+	background: rgba( 0, 0, 0, 1.0 );
+}
+
+.FullModalOverlay .ModalPosition_Content
+{
+	height: initial;
+	width: initial;
+	max-width: 80vw;
+	max-height: 90vh;
+}
+
+.ModalOverlayContent
+{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.ModalOverlayContent.inactive
+{
+	z-index: 5;
+}
+
+.ModalOverlayContent.active
+{
+	z-index: 10;
+}
+
+.ModalOverlayBackground
+{
+	background: rgba( 0, 0, 0, 0.9 );
+	z-index: 7;
+}
+
+.ModalOverlayBackground.NotificationBrowserWarning
+{
+	background: rgba( 0, 0, 0, 0.9 );
+}
+
 .DialogBody
 {
 	padding-top: 4px;
@@ -78,6 +131,17 @@ button.DialogButton::-moz-focus-inner
 	overflow: auto;
 	padding-right: 2px;
 	padding-bottom: 16px;
+}
+
+.ModalDialogPopup .ModalDialogBody
+{
+	margin: 0px;
+}
+
+/* We need .title-area for dragging the window, but if it covers the entire dialog, it blocks click events from the buttons. */
+.ModalDialogPopup .ModalDialogBody .title-area
+{
+	height: 80px;
 }
 
 .ModalDialogPopup .DialogInnerBody
@@ -142,8 +206,6 @@ button.DialogButton::-moz-focus-inner
 .ModalPosition_Content
 {
 	box-shadow: 0px 8px 38px 5px rgba( 0, 0, 0, 0.75 );
-	max-width: 80vw;
-	max-height: 90vh;
 	margin: auto;
 	font-weight: 300;
 	color: #969696;
@@ -245,6 +307,16 @@ button.DialogButton::-moz-focus-inner
 	/*border: 0.5px dashed #f805;*/
 }
 
+.DialogContent.DialogContentFullSize
+{
+	width: max-content;
+}
+
+.DialogContentFullSize .DialogContent_InnerWidth
+{
+	max-width: none;
+}
+
 .ModalDialogPopup .DialogContent
 {
 	width: 100%;
@@ -283,15 +355,6 @@ button.DialogButton::-moz-focus-inner
 	height: 100%;
 }
 
-.ModalAnimation-appear .ModalPosition,
-.ModalAnimation-leave .ModalPosition
-{
-	opacity: 0;
-	box-shadow: 0px 4px 18px 3px rgba( 0, 0, 0, 1 );
-	transform: scale3d( .92, .92, 1 );
-	transition-duration: .42s;
-}
-
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader
 {
 	margin-bottom: 16px;
@@ -302,6 +365,19 @@ button.DialogButton::-moz-focus-inner
 {
 	font-weight: 300;
 	font-size: 32px;
+	line-height: 36px;
+	letter-spacing: 2px;
+	color: #ffffff;
+	text-transform: uppercase;
+	flex-shrink: 0;
+	user-select: none;
+	margin-right: 26px;
+}
+
+.DialogSubHeader
+{
+	font-weight: 300;
+	font-size: 24px;
 	line-height: 36px;
 	letter-spacing: 2px;
 	color: #ffffff;
@@ -1746,9 +1822,11 @@ body.in_global_drag .title-area
 	flex-direction: row;
 }
 
-.fullHeight
+.fullheight
 {
 	height: 100%;
+	top: 0px;
+	bottom: 0px;
 }
 
 .fullWidth

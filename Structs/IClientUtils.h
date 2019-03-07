@@ -73,4 +73,6 @@ public:
     virtual unknown_ret DispatchOpenURLInClient(char const*, unsigned int, bool) = 0;
     virtual unknown_ret UpdateWideVineCDM(char const*) = 0;
     virtual unknown_ret DispatchClearAllBrowsingData() = 0;
+    virtual unknown_ret DispatchClientSettingsChanged() = 0;
+    virtual unknown_ret DispatchClientPostMessage(char const*, char const*, char const*) = 0;
 };

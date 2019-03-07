@@ -629,8 +629,8 @@
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::FindAndRemove(CMilesAudioDevice* const&)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::GrowVector(int)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::InsertBefore(int, CMilesAudioDevice* const&)
+ T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Remove(int)
- T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Validate(CValidator&, char const*)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
@@ -677,6 +677,7 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
+ T void _ValidateSelectType<CMilesAudioDevice>(CMilesAudioDevice*, CValidator&, char const*, fallback_)
  V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath

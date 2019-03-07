@@ -671,6 +671,7 @@ message CChatRoom_IncomingChatMessage_Notification {
 	optional uint32 ordinal = 7;
 	optional .ServerMessage server_message = 8;
 	optional string message_no_bbcode = 9;
+	optional string chat_name = 10 [(description) = "A name to use for the chat, intended for notifications"];
 }
 
 message CChatRoom_ChatMessageModified_Notification {

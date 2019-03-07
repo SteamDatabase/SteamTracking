@@ -70,6 +70,9 @@
        	<Button id="InGameSettingsButton" class="Button" onactivate="ShowSettings( InGame );">
 		      <Label class="LongDesc" text="#Settings_InGame" />
 	      </Button>
+        <Button id="SteamPlayButton" class="Button" onactivate="ShowSettings( SteamPlay );" >
+			<Label class="LongDesc" text="#Settings_SteamPlay" />
+		</Button>
         <Button id="WebBrowserSettingsButton" class="Button" onactivate="ShowSettings( Web );">
     			<Label class="LongDesc" text="#Settings_Web" />
 		    </Button>

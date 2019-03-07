@@ -321,6 +321,7 @@ message CStartNetworkTestMsg {
 	optional uint32 framerate = 2;
 	optional uint32 bitrate_kbps = 3;
 	optional uint32 burst_bitrate_kbps = 4;
+	optional bool bandwidth_test = 5;
 }
 
 message CStreamVideoMode {
@@ -670,5 +671,24 @@ message CLogMsg {
 message CLogUploadMsg {
 	optional .ELogFileType type = 1 [default = k_ELogFileSystemBoot];
 	optional bytes data = 3;
+}
+
+message CTransportSignalMsg {
+	message WebRTCMessage {
+		message Candidate {
+			optional string sdp_mid = 1;
+			optional int32 sdp_mline_index = 2;
+			optional string candidate = 3;
+		}
+
+		oneof msg {
+			bool greeting = 1;
+			string offer = 2;
+			string answer = 3;
+			.CTransportSignalMsg.WebRTCMessage.Candidate candidate = 4;
+		}
+	}
+
+	optional .CTransportSignalMsg.WebRTCMessage webrtc = 1;
 }
 

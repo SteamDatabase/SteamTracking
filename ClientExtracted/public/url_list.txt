@@ -226,6 +226,18 @@ SteamIDProfileBG
 	method		"internal"
 	filter		"profile"
 }
+AllPartnerEvents
+{
+	url			"%community%/games/%p1%/partnerevents"
+	method		"internal"
+	filter		"news"
+}
+PartnerEvent
+{
+	url			"%community%/games/%p1%/partnerevents/view/%p2%"
+	method		"internal"
+	filter		"news"
+}
 GroupSteamIDPage
 {
 	url			"%community%/gid/%p1%"
@@ -241,6 +253,12 @@ GroupOGGPage
 GroupEventsPage
 {
 	url			"%community%/gid/%p1%/events"
+	method		"internal"
+	filter		"friends"
+}
+GroupEventDetailPage
+{
+	url			"%community%/gid/%p1%/events/%p2%"
 	method		"internal"
 	filter		"friends"
 }
@@ -787,6 +805,12 @@ Chat
 	url			"%chat%/chat/clientui/?l=%language%&cc=%country%&build=%buildid%"
 	method		"internal"
 }
+BigPictureChat
+{
+	url			"%community%/chat"
+	method		"internal"
+	filter		"friends"
+}
 FacebookProfilePage
 {
 	url			"http://www.facebook.com/profile.php?id=%p1%"
@@ -1083,6 +1107,20 @@ SteamControllerHelp
 LibrarySuggestions
 {
 	url			"%community%/library/suggestions/%p1%/%p2%"
+	method		"internal"
+	filter		"community"
+}
+
+LibraryFeaturedBroadcasts
+{
+	url			"%store%/broadcast/ajaxgetstreamersforpage?appid=%p1%"
+	method		"internal"
+	filter		"community"
+}
+
+LibraryAppReview
+{
+	url			"%store%/recommended/ajaxgetrecommendation?appid=%p1%"
 	method		"internal"
 	filter		"community"
 }

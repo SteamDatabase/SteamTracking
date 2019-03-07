@@ -244,11 +244,22 @@
 						"bindings"
 						{
 							"binding"		"key_press LEFT_ALT, Alt-Tab"
+						}
+						"settings"
+						{
+							"toggle"			"1"
+							"interruptable"		"0"
+						}
+					}
+					"Full_Press"
+					{
+						"bindings"
+						{
 							"binding"		"key_press TAB, Alt-Tab"
 						}
 						"settings"
 						{
-							"toggle"		"1"
+							"toggle"			"0"
 							"interruptable"		"0"
 						}
 					}

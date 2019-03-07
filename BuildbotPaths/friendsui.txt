@@ -1,4 +1,3 @@
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/friendsettingscontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp

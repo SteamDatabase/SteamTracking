@@ -18,5 +18,6 @@ typedef enum EAppType
     k_EAppTypeMusic = 8192, // music
     k_EAppTypeSeries = 16384, // series
     k_EAppTypeComic = 32768, // comic
+    k_EAppTypeBeta = 65536, // beta
     k_EAppTypeShortcut = 1073741824, // shortcut
 } EAppType;

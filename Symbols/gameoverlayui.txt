@@ -9353,7 +9353,6 @@
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed(CUtlString const&, int*, bool)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
@@ -9368,7 +9367,6 @@
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, bool const&)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
@@ -9381,7 +9379,6 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, int const&)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
@@ -9394,7 +9391,6 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, int const&)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed(unsigned long long const&, int*, bool)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
@@ -9407,7 +9403,6 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Find(unsigned short const&) const
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::IncrementalRehash()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertOrReplace(unsigned short const&, int const&)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed(unsigned short const&, int*, bool)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
@@ -9420,7 +9415,6 @@
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::FindInBucket(int, vgui::CFontWidthCache::key_t const&) const
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::IncrementalRehash()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertOrReplace(vgui::CFontWidthCache::key_t const&, float const&)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed(vgui::CFontWidthCache::key_t const&, int*, bool)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Purge()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::RehashNodesInBucket(int)
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::UnlinkNodeFromBucket(int, int)
@@ -9449,9 +9443,9 @@
  T CUtlLinkedList<CUtlString, int>::Free(int)
  T CUtlLinkedList<CUtlString, int>::InsertBefore(int, CUtlString const&)
  T CUtlLinkedList<CUtlString, int>::LinkBefore(int, int)
+ T CUtlLinkedList<CUtlString, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<CUtlString, int>::RemoveAll()
  T CUtlLinkedList<CUtlString, int>::Unlink(int)
- T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<int, int>::AllocInternal(bool)
@@ -10213,6 +10207,7 @@
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
+ T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
@@ -10224,6 +10219,7 @@
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
+ T ConVar::SetValue(long long)
  T ConVar::~ConVar()
  T ConvertImageToRGB(unsigned char const*, int, CUtlBuffer&, int&, int&)
  T ConvertImageToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&)
@@ -10715,6 +10711,12 @@
  T gcm_init_avx
  T gcm_init_clmul
  T init_JSON_config
+ T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
+ T int CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
+ T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
  T int RoundToIntegerType<int>(double, ERoundingMethod)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)

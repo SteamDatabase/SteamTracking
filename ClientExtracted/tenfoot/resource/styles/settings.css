@@ -153,6 +153,16 @@ SettingsPanel
 	width: 100%;
 }
 
+#SteamPlayButton
+{
+	visibility: collapse;
+}
+
+.Linux #SteamPlayButton
+{
+	visibility: visible;
+}
+
 
 .LongDesc
 {
@@ -1568,21 +1578,29 @@ KeyboardShortcut .Graphic
 	padding-bottom: 20px;
 	visibility: collapse;
 }
+
 #SettingsSteamController_ShutdownTime_Dropdown
 {
 	horizontal-align: left;
 }
 
-.SteamControllerConnected #SettingsSteamController_ShutdownTime_Panel
+.CanTurnOffController #SettingsSteamController_ShutdownTime_Panel
 {
-	visibility: visible;
+    visibility: visible;
 }
 
-#GameControllerContent
-{
+#SettingsController_TurnOffOnQuit {
+    visibility: collapse;
+}
 
-	height: 100%;
-	visibility: visible;
+.CanTurnOffController #SettingsController_TurnOffOnQuit 
+{
+    visibility: visible;
+}
+
+#GameControllerContent {
+    height: 100%;
+    visibility: visible;
 }
 
 .NonSteamControllerDetails .SteamControllerDetails
@@ -3024,6 +3042,32 @@ SettingsPanel_Display.Underscan
 .SettingsPanel_Family_Sharing_Borrower:descendantfocus
 {
 	background-color: none;
+}
+
+.SettingsSteamPlayPanels
+{
+	width: 100%;
+	margin-top: 0px;
+	//padding-bottom: 20px;
+	visibility: visible;
+}
+
+.SettingsSteamPlayPanels_Dropdown
+{
+	horizontal-align: left;
+}
+
+.SettingsSteamPlayPanels_Dropdown:disabled
+{
+	visibility: collapse;
+}
+
+#SettingsSteamPlay_HR
+{
+	horizontal-align: left;
+	width: 1200px;
+	margin-top: 25px;
+	margin-bottom: 8px;
 }
 
 // Steam Controller Settings styles

@@ -401,6 +401,7 @@
 "Friends_PostNotification_Info"			"posted:"
 "Friends_GameInvitation_Info"				"has invited you to play"
 "Friends_ChatNoTextNotification_Info"		"sent you a message"
+"Friends_BroadcastChannelLive"		"is now live on SteamTV"
 
 "Friends_OnlineNotification_Hotkey"		"Press %hotkey% to view"
 "Friends_InviteNotification_Hotkey"		"Press %hotkey% to view"

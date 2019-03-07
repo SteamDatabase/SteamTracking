@@ -681,6 +681,7 @@
 	"Settings_Web"					"Web Browser"
 	"Settings_Bluetooth"			"Bluetooth"
 	"Settings_VRSettings"		"VR Settings"
+	"Settings_SteamPlay"		"Steam Play"
 
 	"Settings_Network_Wizard"		"Network Configuration"
 	"Settings_AuthorizeLocalDevice"	"Family Library Sharing"
@@ -798,8 +799,8 @@
 	"SettingsDisplay_WindowSizeValue"			"{s:windowsize}"
 	"SettingsDisplay_SurfaceSizeValue"			"{s:surfacesize}"
 	"SettingsDisplay_Resolution"			"Target resolution"
-	"SettingsDisplay_RestartNow"			"Reset Steam now to apply your new display resolution?"
-	"SettingsDisplay_RestartNowMonitor"		"Reset Steam now to apply your monitor selection?"
+	"SettingsDisplay_RestartNow"			"Restart Steam now to apply your new display resolution?"
+	"SettingsDisplay_RestartNowMonitor"		"Restart Steam now to apply your monitor selection?"
 	"SettingsDisplay_Warning"			"Warning"
 	"SettingsDisplay_StrongWarningVideoMemory"	"Your display device has only {s:dedicatedgpumem} of dedicated GPU memory.  You are likely to have poor performance at {s:selectedres}.\n\nAre you sure you want to set it anyway?"
 	"SettingsDisplay_WarningVideoMemory"	"Your display device has {s:dedicatedgpumem} of dedicated GPU memory. You might experience decreased performance at {s:selectedres}.\n\nAre you sure you want to set it anyway?"
@@ -918,6 +919,14 @@
 	"SettingsNetwork_Connected_Wireless"	"Success! You're now connected to {s:network}."
 	"SettingsNetwork_Connected_Wired"		"Success! You're now connected to your wired network."
 	"SettingsNetwork_Finished"				"FINISH"
+
+	// Settings, Steam Play
+	"SettingsSteamPlay_Enable_Label"		"Steam Play will automatically install compatibility tools that allow you to play games from your library that were built for other operating systems."
+	"SettingsSteamPlay_Enable"			"Enable Steam Play for supported titles"
+	"SettingsSteamPlay_EnableTool_Label"		"You can use Steam Play to test games in your library that have not been verified with a supported compatibility tool."
+	"SettingsSteamPlay_EnableTool"			"Enable Steam Play for all other titles"
+	"SettingsSteamPlay_Tool"			"Run other titles with:"
+	"SettingsSteamPlay_RestartNow"			"Restart Steam now to apply your Steam Play settings?"
 
 	// Settings, voice screen
 	"SettingsVoice_WhenActive"				"When voice chat is active"
@@ -2732,6 +2741,10 @@
 	"Library_AutoUpdate_Disabled"	"Do not automatically update this {s:apptype}"
 	"Library_AutoUpdate_HighPriority"	"High Priority - Always auto-update this {s:apptype} ASAP"
 	"Library_BackgroundUpdates_Label" "While {s:gamename} is running"
+
+	"Library_Details_EditSteamPlayOptions" "Set Steam Play Options..."
+	"Library_EditSteamPlayOptions_Title"	"Steam Play"
+	"Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Force the use of a specific Steam Play compatibility tool"
 
 	"Library_AppAllowDownloadsDuringGameplay_DefaultEnable" "Follow my global setting (allow background downloads)"
 	"Library_AppAllowDownloadsDuringGameplay_DefaultDisable" "Follow my global setting (stop background downloads)"

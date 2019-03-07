@@ -44,7 +44,7 @@
 ::-webkit-scrollbar-thumb,
 .iScrollIndicator
 {
-	background: #373B42;
+
 	border-radius: 2px;
 	margin: 4px;
 
@@ -202,6 +202,16 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	cursor: default;
 }
 
+.contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
+    height: 14px;
+    width: 14px;
+    transform: rotateZ( -90deg );
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    fill: #9ca4a7;
+}
+
 .contextMenuItem.menuChecked
 {
 	color: rgb(109, 207, 246);
@@ -225,7 +235,22 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	display: block;
 }
 
-.contextMenuSectionHeader
+.contextMenu .SVGIcon_Button
+{
+	height: 10px;
+	width: 10px;
+	margin-right: 4px;
+}
+
+/* Separate menu sections with extra space and different header text style. */
+.contextMenuItem.MenuSectionHeader
+{
+	padding-top: 16px;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.contextMenuGameItem
 {
 	max-width: 190px;
 	line-height: 20px;

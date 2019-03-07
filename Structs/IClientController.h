@@ -3,7 +3,7 @@ class IClientController
 public:
     virtual unknown_ret ~CSteamController() = 0;
     virtual unknown_ret ~CSteamController() = 0;
-    virtual unknown_ret Init(bool, IClientControllerSerialized*) = 0;
+    virtual unknown_ret Init(bool, IClientControllerSerialized*, unsigned int) = 0;
     virtual unknown_ret Shutdown() = 0;
     virtual unknown_ret RunFrame() = 0;
     virtual unknown_ret GetAllControllersStatus(ControllersStatus_t*) = 0;

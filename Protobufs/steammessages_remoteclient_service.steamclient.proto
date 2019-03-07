@@ -12,9 +12,42 @@ message CRemoteClient_GetPairingInfo_Response {
 	optional bytes request = 3;
 }
 
+message CRemoteClient_Online_Notification {
+	optional fixed64 steamid = 1;
+}
+
 message CRemoteClient_ReplyPacket_Notification {
 	optional fixed64 session_id = 1;
 	optional bytes payload = 2;
+}
+
+message CRemoteClient_AllocateTURNServer_Request {
+	optional uint32 cellid = 1;
+	optional string credentials = 2;
+}
+
+message CRemoteClient_AllocateTURNServer_Response {
+	optional string turn_server = 1;
+}
+
+message CRemoteClient_AllocateRelayServer_Request {
+	optional uint32 cellid = 1;
+	optional string credentials = 2;
+}
+
+message CRemoteClient_AllocateRelayServer_Response {
+	optional string relay_server = 1;
+}
+
+message CRemoteClient_RegisterStatusUpdate_Notification {
+	optional fixed64 session_id = 1;
+	optional fixed64 steamid = 2;
+	optional fixed64 device_id = 3;
+}
+
+message CRemoteClient_UnregisterStatusUpdate_Notification {
+	optional fixed64 session_id = 1;
+	optional fixed64 steamid = 2;
 }
 
 message CRemoteClient_RemotePacket_Notification {
@@ -28,13 +61,28 @@ service RemoteClient {
 	rpc GetPairingInfo (.CRemoteClient_GetPairingInfo_Request) returns (.CRemoteClient_GetPairingInfo_Response) {
 		option (method_description) = "Get pairing info for an entered PIN";
 	}
+	rpc NotifyOnline (.CRemoteClient_Online_Notification) returns (.NoResponse) {
+		option (method_description) = "Let the service know we're available for status listeners";
+	}
 	rpc NotifyReplyPacket (.CRemoteClient_ReplyPacket_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a reply to a remote client";
+	}
+	rpc AllocateTURNServer (.CRemoteClient_AllocateTURNServer_Request) returns (.CRemoteClient_AllocateTURNServer_Response) {
+		option (method_description) = "Allocate a TURN server for a streaming session";
+	}
+	rpc AllocateRelayServer (.CRemoteClient_AllocateRelayServer_Request) returns (.CRemoteClient_AllocateRelayServer_Response) {
+		option (method_description) = "Allocate a UDP relay server for a streaming session";
 	}
 }
 service RemoteClientSteamClient {
 	option (service_description) = "Methods for Steam remote client operations";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+	rpc NotifyRegisterStatusUpdate (.CRemoteClient_RegisterStatusUpdate_Notification) returns (.NoResponse) {
+		option (method_description) = "Register for status updates with a Steam client";
+	}
+	rpc NotifyUnregisterStatusUpdate (.CRemoteClient_UnregisterStatusUpdate_Notification) returns (.NoResponse) {
+		option (method_description) = "Unregister for status updates with a Steam client";
+	}
 	rpc NotifyRemotePacket (.CRemoteClient_RemotePacket_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a packet to a Steam client";
 	}

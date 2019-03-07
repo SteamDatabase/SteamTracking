@@ -254,6 +254,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplamd.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplfossilize.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplmesa.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplnvidia.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/shadercacheimplsteamdepot.o
@@ -506,6 +507,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/remoteclientstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplamd.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplfossilize.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplmesa.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplnvidia.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/shadercacheimplsteamdepot.o
@@ -762,6 +764,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/../user.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplamd.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplamd.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplfossilize.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplfossilize.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplmesa.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplmesa.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/shadercachemanager/shadercacheimplnvidia.cpp
