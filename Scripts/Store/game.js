@@ -1155,6 +1155,12 @@ function BuildReviewHistogram()
 			});
 			$J( "#review_recent_events_controls" ).show();
 			container.show();
+
+			flotRollup.draw();
+			if ( flotRecent )
+			{
+				flotRecent.draw();
+			}
 		}
 		else
 		{
