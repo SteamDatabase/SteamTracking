@@ -727,7 +727,7 @@ function BuildReviewHistogram()
 		review_score_preference = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 	}
 
-	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference }
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference, cache: 1 }
 	).done( function( data ) {
 
 		$J( "#review_histograms_container" ).addClass( "has_data" );
