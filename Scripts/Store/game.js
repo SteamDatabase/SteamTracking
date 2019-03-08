@@ -643,6 +643,7 @@ function ClearReviewDateRangeFilter()
 	ClearReviewDateFilter();
 }
 
+
 function SetUserReviewScorePreference( pref )
 {
 	if ( g_AccountID == 0 )
@@ -668,6 +669,64 @@ function SetUserReviewScorePreference( pref )
 			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
 		}
 	);
+}
+
+function IntervalDistance( min1, max1, min2, max2 )
+{
+	return Math.max( 0, Math.max( min2 - max1, min1 - max2 ) );
+}
+
+function DrawPastEvents( flotRollup, rgPastEvents, bAddIconElements )
+{
+	var ctx = flotRollup.getCanvas().getContext("2d");
+	var rollupPoints = flotRollup.getData();
+	var seriesPositive = rollupPoints[0];
+	var axes = flotRollup.getAxes();
+
+	for ( var i = 0; i < rgPastEvents.length; ++i )
+	{
+		var event = rgPastEvents[i];
+		var midDate = ( event.start_date + ( event.end_date - event.start_date ) / 2 ) * 1000;
+
+		var o = flotRollup.pointOffset( { x: midDate, y: axes.yaxis.max } );
+
+		var topY = seriesPositive.yaxis.p2c( event.recommendations_up );
+
+		if ( bAddIconElements )
+		{
+			var eventIcon = $J( '<div/>', { class: 'review_event_graph_icon', style: 'left:' + ( o.left - 6 ) + 'px;top:' + ( o.top - 20 ) + 'px;', html: '*' } );
+			eventIcon.data( 'startDate', event.start_date );
+			eventIcon.data( 'endDate', event.end_date );
+			var startDate = new Date( event.start_date * 1000 );
+			var endDate = new Date( event.end_date * 1000 );
+			var strToolTip = 'Abnormal review traffic detected:<br>' +	startDate.toLocaleDateString( undefined, { timeZone: "UTC" } ) + " - " + endDate.toLocaleDateString( undefined, { timeZone: "UTC" } );
+			eventIcon.data( 'tooltipContent', strToolTip );
+			eventIcon.v_tooltip();
+			flotRollup.getPlaceholder().append( eventIcon );
+		}
+
+		ctx.beginPath();
+		ctx.moveTo(o.left-1, o.top);
+		ctx.lineTo(o.left, topY);
+		ctx.lineTo(o.left+1, o.top);
+		ctx.lineTo(o.left-1, o.top);
+		ctx.fillStyle = "#fff";
+		ctx.fill();
+	}
+}
+
+function AddOrUpdatePastEvent( rgPastEvents, event )
+{
+	for ( var i = 0; i < rgPastEvents.length; ++i )
+	{
+		if ( rgPastEvents[i].start_date == event.start_date )
+		{
+			rgPastEvents[i].recommendations_up = Math.max( rgPastEvents[i].recommendations_up, event.recommendations_up );
+			return;
+		}
+	}
+
+	rgPastEvents.push( { start_date: event.start_date, end_date: event.end_date, recommendations_up: event.recommendations_up } );
 }
 
 function BuildReviewHistogram()
@@ -733,6 +792,11 @@ function BuildReviewHistogram()
 		var chartDataPositive = [];
 		var chartDataNegative = [];
 
+		var chartDataPositiveEvent = [];
+		var chartDataNegativeEvent = [];
+		var rgPastEventsRollup = [];
+		var rgPastEventsRecent = [];
+
 		for ( var i = 0; i < data.results.rollups.length; ++i )
 		{
 			var rollup = data.results.rollups[i];
@@ -740,14 +804,46 @@ function BuildReviewHistogram()
 			var barDataDown = [ rollup.date * 1000, -rollup.recommendations_down ];
 			chartDataPositive.push( barDataUp );
 			chartDataNegative.push( barDataDown );
+
+			if ( data.past_events && data.past_events.length != 0 )
+			{
+				for ( var j = 0; j < data.past_events.length; ++j )
+				{
+					var event = data.past_events[j];
+					var rollupDateEnd = new Date( rollup.date * 1000 );
+					if ( data.results.rollup_type == 'week' )
+					{
+						rollupDateEnd = new Date( ( rollup.date + 86400*7 ) * 1000 );
+					}
+					else if ( data.results.rollup_type == 'month' )
+					{
+						rollupDateEnd.setMonth( rollupDateEnd.getMonth() + 1 );
+					}
+					if ( IntervalDistance( event.start_date, event.end_date, rollup.date, rollupDateEnd.getTime() / 1000 ) == 0 )
+					{
+						chartDataPositiveEvent.push( barDataUp );
+						chartDataNegativeEvent.push( barDataDown );
+
+						AddOrUpdatePastEvent( rgPastEventsRollup, { start_date: event.start_date, end_date : event.end_date, recommendations_up: rollup.recommendations_up } );
+						break;
+					}
+				}
+			}
 		}
-		var seriesRollup = [ { label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive }, { label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative } ];
+		var seriesRollup = [
+			{ label: "Positive", color: "#66c0f4", fillColor: "#66c0f4", data: chartDataPositive },
+			{ label: "Negative", color: "#A34C25", fillColor: "#A34C25", data: chartDataNegative },
+			{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent },
+			{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent },
+		];
 
 		var seriesRecent = null;
 		if ( data.results.recent )
 		{
 			chartDataPositive = [];
 			chartDataNegative = [];
+			chartDataPositiveEvent = [];
+			chartDataNegativeEvent = [];
 			for ( var i = 0; i < data.results.recent.length; ++i )
 			{
 				var recentDay = data.results.recent[i];
@@ -755,8 +851,28 @@ function BuildReviewHistogram()
 				var barDataDown = [ recentDay.date * 1000, -recentDay.recommendations_down ];
 				chartDataPositive.push( barDataUp );
 				chartDataNegative.push( barDataDown );
+				if ( data.past_events && data.past_events.length != 0 )
+				{
+					for ( var j = 0; j < data.past_events.length; ++j )
+					{
+						var event = data.past_events[j];
+						if ( IntervalDistance( event.start_date, event.end_date, recentDay.date, recentDay.date + 86400 ) == 0 )
+						{
+							chartDataPositiveEvent.push( barDataUp );
+							chartDataNegativeEvent.push( barDataDown );
+
+							AddOrUpdatePastEvent( rgPastEventsRecent, { start_date: event.start_date, end_date : event.end_date, recommendations_up: recentDay.recommendations_up } );
+							break;
+						}
+					}
+				}
 			}
-			seriesRecent = [ { color: "#66c0f4", label: "Positive", data: chartDataPositive }, { color: "#A34C25", label: "Negative", data: chartDataNegative } ];
+			seriesRecent = [
+				{ color: "#66c0f4", label: "Positive", data: chartDataPositive },
+				{ color: "#A34C25", label: "Negative", data: chartDataNegative },
+				{ label: "Positive", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataPositiveEvent },
+				{ label: "Negative", color: "#FFFFFF", fillColor: "#FFFFFF", data: chartDataNegativeEvent },
+			];
 		}
 
 		var options = {
@@ -827,6 +943,17 @@ function BuildReviewHistogram()
 		var graphRollup =  $J( "#review_histogram_rollup" );
 		var flotRollup = $J.plot( graphRollup, seriesRollup, rollupOptions );
 
+		if ( rgPastEventsRollup.length != 0 )
+		{
+			var bAddEventIcons = true;
+			var funcDrawPastEvents = function() {
+				DrawPastEvents( flotRollup, rgPastEventsRollup, bAddEventIcons );
+				bAddEventIcons = false;
+			};
+			flotRollup.hooks.draw.push( funcDrawPastEvents );
+			funcDrawPastEvents();
+		}
+
 		// recent
 		var graphRecent = null;
 		if ( seriesRecent )
@@ -887,6 +1014,14 @@ function BuildReviewHistogram()
 					ctx.lineTo(offsetLeft * scaleX, offsetTop * scaleY);
 					ctx.fill();
 				};
+
+				var bAddEventIcons = true;
+				var funcDrawPastEvents = function() {
+					DrawPastEvents( flotRecent, rgPastEventsRecent, bAddEventIcons );
+					bAddEventIcons = false;
+				};
+				flotRecent.hooks.draw.push( funcDrawPastEvents );
+				funcDrawPastEvents();
 
 				$J("#review_graph_canvas").resize( funcDrawGraphOverlay );
 				funcDrawGraphOverlay();
@@ -1042,22 +1177,12 @@ function BuildReviewHistogram()
 			$J( "#reviews_filter_options" ).addClass( "graph_collapsed" );
 		}
 
-		$J( ".filter_reviews_to_event_btn" ).each( function( index, value ) {
+		$J( ".review_event_graph_icon" ).each( function( index, value ) {
 			var $elem = $J( value );
 			$elem.click( function() {
 				var startDate = $J( this ).data( 'startDate' );
 				var endDate = $J( this ).data( 'endDate' );
-				funcViewReviewsDuringEvent( bCountAllReviews, startDate, endDate );
-			} );
-		} );
-
-		$J( ".filter_reviews_exclude_event_btn" ).each( function( index, value ) {
-			var $elem = $J( value );
-			$elem.click( function() {
-				var startDate = $J( this ).data( 'startDate' );
-				var endDate = $J( this ).data( 'endDate' );
-				funcViewReviewsExcludingEvent( bCountAllReviews, startDate, endDate );
-			} );
+							} );
 		} );
 
 	} );

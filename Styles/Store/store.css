@@ -2396,7 +2396,11 @@ div.game_hover {
 	background-color: rgba( 38, 54, 69, 0.6);
 }
 .review_anomaly_icon {
-	height: 10px;
+	vertical-align: sub;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	display: inline-block;
 }
 
 .review_score_icon.positive {

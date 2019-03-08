@@ -2536,15 +2536,10 @@ body.recommendgame #review_create h1  {
 	position: relative;
 
 	padding: 10px 15px;
-	margin-bottom: 10px;
-
-	background: -webkit-linear-gradient( top, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);background: linear-gradient( to bottom, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);}
-
-.review_recent_events.high_volume_all {
-	background: -webkit-linear-gradient( top, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);background: linear-gradient( to bottom, rgba( 212, 212, 212, 0.67) 5%, rgba( 214, 214, 214, 0.75) 95%);}
-.review_recent_events.high_volume_negative {
-	background: -webkit-linear-gradient( top, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);background: linear-gradient( to bottom, rgba( 225, 196, 138, 0.67) 5%, rgba( 225, 196, 138, 0.75) 95%);}
-.review_recent_events.force_display {
+	margin-bottom: 3px;
+	background-color: #2a475e;
+}
+.review_recent_events.has_events {
 	display: block;
 }
 
@@ -2554,23 +2549,6 @@ body.recommendgame #review_create h1  {
 
 .review_recent_event_detail {
 	margin-left: 51px;
-}
-
-.review_events_preferences_controls {
-	padding-top: 10px;
-	margin-left: 51px;
-	color: #d3dade;
-}
-
-.review_events_preferences_radio_btns {
-	padding-top: 5px;
-}
-
-.review_event_preference input[type="radio"] {
-	vertical-align: middle;
-}
-.review_event_preference label {
-	vertical-align: middle;
 }
 
 .review_recent_events_icon {
@@ -2593,6 +2571,66 @@ body.recommendgame #review_create h1  {
 }
 .high_volume_all .recent_review_event_text {
 	color: #d3dade;
+}
+
+.review_anomalous_events_icon
+{
+	height: 48px;
+	font-size: 80px;
+	color: #fff;
+	float: left;
+}
+
+.review_anomalous_events_dialog .review_anomalous_events_icon
+{
+	line-height: 70px;
+}
+
+.review_anomalous_events_title, .review_anomalous_events_desc
+{
+	padding-top: 10px;
+	margin-left: 51px;
+	color: #d3dade;
+	font-size: 16px;
+}
+.review_anomalous_events_dialog .review_anomalous_events_title
+{
+	font-size: 20px;
+	padding-bottom: 30px;
+}
+
+.review_events_preferences_radio_btns {
+	padding: 10px;
+	background: rgba( 255, 255, 255, 0.2 );
+}
+
+.review_event_graph_icon {
+	position: absolute;
+	font-size: 28px;
+	color: #fff;
+	cursor: pointer;
+}
+.review_event_graph_icon:hover {
+	color: #4191bf;
+}
+
+#review_event_tooltip {
+	position: absolute;
+	display: none;
+	padding: 5px;
+	box-shadow: 0 0 5px #000;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	color: #4191bf;
+	font-weight: bold;
+	z-index: 1;
+	pointer-events:none;
+}
+
+.review_anomalous_events_dialog {
+	max-width: 600px;
+}
+
+.review_anomalous_events_dialog p {
+	padding-bottom: 10px;
 }
 
 /* review histogram */
