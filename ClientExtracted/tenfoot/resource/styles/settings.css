@@ -1570,6 +1570,15 @@ KeyboardShortcut .Graphic
 	horizontal-align: left;
 }
 
+#AddController
+{
+    visibility: collapse;
+}
+
+.SteamControllerDonglePresent #AddController
+{
+    visibility: visible;
+}
 
 #SettingsSteamController_ShutdownTime_Panel
 {
