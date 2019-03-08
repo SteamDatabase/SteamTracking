@@ -97,7 +97,7 @@
       return Math.max(t, Math.min(n, e));
     }
     function i(e, t, n, r, o) {
-      return r + ((o - r) * (e - t)) / (n - t);
+      return r + (o - r) * (e - t) / (n - t);
     }
     n.d(t, "b", function() {
       return r;
@@ -280,8 +280,8 @@
                 ("text" == e || e.startsWith("text/")) && "text/html" !== e
               );
             })
-          ? null
-          : e.clipboardData.files[0]
+            ? null
+            : e.clipboardData.files[0]
         : null;
     }
     function v(e) {
@@ -298,20 +298,20 @@
       t.requestFullscreen
         ? t.requestFullscreen()
         : t.webkitRequestFullScreen
-        ? t.webkitRequestFullScreen()
-        : t.mozRequestFullScreen
-        ? t.mozRequestFullScreen()
-        : t.msRequestFullscreen && t.msRequestFullscreen();
+          ? t.webkitRequestFullScreen()
+          : t.mozRequestFullScreen
+            ? t.mozRequestFullScreen()
+            : t.msRequestFullscreen && t.msRequestFullscreen();
     }
     function b(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
         : t.webkitCancelFullScreen
-        ? t.webkitCancelFullScreen()
-        : t.mozCancelFullScreen
-        ? t.mozCancelFullScreen()
-        : t.msExitFullscreen && t.msExitFullscreen();
+          ? t.webkitCancelFullScreen()
+          : t.mozCancelFullScreen
+            ? t.mozCancelFullScreen()
+            : t.msExitFullscreen && t.msExitFullscreen();
     }
     var _ = (function() {
       function e(e) {
@@ -2155,14 +2155,8 @@
       return e.reduce(function(e, t) {
         return t
           ? "string" == typeof t
-            ? e
-              ? e + " " + t
-              : t
-            : "object" == typeof t
-            ? e
-              ? e + " " + r(t)
-              : r(t)
-            : e
+            ? e ? e + " " + t : t
+            : "object" == typeof t ? (e ? e + " " + r(t) : r(t)) : e
           : e;
       }, "");
     };
@@ -2285,26 +2279,26 @@
                   this.m_PrivacySettings.PrivacyOwnedGames
                 )
               : "PrivacyPlaytime" == e
-              ? d(
-                  this.GetPrivacySetting("PrivacyOwnedGames"),
-                  this.m_PrivacySettings.PrivacyPlaytime
-                )
-              : "PrivacyInventory" == e
-              ? d(
-                  this.m_PrivacySettings.PrivacyProfile,
-                  this.m_PrivacySettings.PrivacyInventory
-                )
-              : "PrivacyInventoryGifts" == e
-              ? d(
-                  this.GetPrivacySetting("PrivacyInventory"),
-                  this.m_PrivacySettings.PrivacyInventoryGifts
-                )
-              : "PrivacyFriendsList" == e
-              ? d(
-                  this.m_PrivacySettings.PrivacyProfile,
-                  this.m_PrivacySettings.PrivacyFriendsList
-                )
-              : this.m_PrivacySettings[e];
+                ? d(
+                    this.GetPrivacySetting("PrivacyOwnedGames"),
+                    this.m_PrivacySettings.PrivacyPlaytime
+                  )
+                : "PrivacyInventory" == e
+                  ? d(
+                      this.m_PrivacySettings.PrivacyProfile,
+                      this.m_PrivacySettings.PrivacyInventory
+                    )
+                  : "PrivacyInventoryGifts" == e
+                    ? d(
+                        this.GetPrivacySetting("PrivacyInventory"),
+                        this.m_PrivacySettings.PrivacyInventoryGifts
+                      )
+                    : "PrivacyFriendsList" == e
+                      ? d(
+                          this.m_PrivacySettings.PrivacyProfile,
+                          this.m_PrivacySettings.PrivacyFriendsList
+                        )
+                      : this.m_PrivacySettings[e];
           }),
           Object.defineProperty(e.prototype, "CommentPermission", {
             get: function() {
@@ -6104,30 +6098,30 @@
       return 2 * s <= e
         ? o(r + "XYears", Math.floor(e / s))
         : s <= e
-        ? 2 * a <= (e -= s)
-          ? o(r + "1YearXMonths", Math.floor(e / a))
-          : o(r + "1Year")
-        : 2 * a <= e
-        ? o(r + "XMonths", Math.floor(e / a))
-        : 2 * u <= e
-        ? o(r + "XWeeks", Math.floor(e / u))
-        : 2 * m <= e
-        ? o(r + "XDays", Math.floor(e / m))
-        : m <= e
-        ? 2 * p <= (e -= m)
-          ? o(r + "1DayXHours", Math.floor(e / p))
-          : o(r + "1Day")
-        : 2 * p <= e
-        ? o(r + "XHours", Math.floor(e / p))
-        : p <= e
-        ? 2 * h <= (e -= p) && n
-          ? o(r + "1HourXMinutes", Math.floor(e / h))
-          : o(r + "1Hour")
-        : n
-        ? 2 * h <= e
-          ? o(r + "XMinutes", Math.floor(e / h))
-          : o(h <= e ? r + "1Minute" : r + "LessThanAMinute")
-        : o(r + "LessThanAnHour");
+          ? 2 * a <= (e -= s)
+            ? o(r + "1YearXMonths", Math.floor(e / a))
+            : o(r + "1Year")
+          : 2 * a <= e
+            ? o(r + "XMonths", Math.floor(e / a))
+            : 2 * u <= e
+              ? o(r + "XWeeks", Math.floor(e / u))
+              : 2 * m <= e
+                ? o(r + "XDays", Math.floor(e / m))
+                : m <= e
+                  ? 2 * p <= (e -= m)
+                    ? o(r + "1DayXHours", Math.floor(e / p))
+                    : o(r + "1Day")
+                  : 2 * p <= e
+                    ? o(r + "XHours", Math.floor(e / p))
+                    : p <= e
+                      ? 2 * h <= (e -= p) && n
+                        ? o(r + "1HourXMinutes", Math.floor(e / h))
+                        : o(r + "1Hour")
+                      : n
+                        ? 2 * h <= e
+                          ? o(r + "XMinutes", Math.floor(e / h))
+                          : o(h <= e ? r + "1Minute" : r + "LessThanAMinute")
+                        : o(r + "LessThanAnHour");
     }
     var f = new ((function() {
       function e() {

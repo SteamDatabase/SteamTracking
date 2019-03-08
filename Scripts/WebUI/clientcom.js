@@ -97,7 +97,7 @@
       return Math.max(t, Math.min(n, e));
     }
     function i(e, t, n, o, r) {
-      return o + ((r - o) * (e - t)) / (n - t);
+      return o + (r - o) * (e - t) / (n - t);
     }
     n.d(t, "b", function() {
       return o;
@@ -449,7 +449,8 @@
               }),
                 (o.m_socket.onmessage = o.OnSocketMessage.bind(o)),
                 (o.m_socket.onopen = function(e) {
-                  o.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                  o
+                    .SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(e) {
                       1 == e.success
                         ? ((o.m_ClientInfo.ulVersion = e.clientversion),

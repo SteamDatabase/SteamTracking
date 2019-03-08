@@ -644,44 +644,18 @@ function ClearReviewDateRangeFilter()
 }
 
 
-function SetUserReviewScorePreference( pref )
-{
-	if ( g_AccountID == 0 )
-	{
-		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
-		return;
-	}
-
-	var rgData = {
-		preference: pref,
-		sessionid : g_sessionID
-	};
-	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
-		function( json )
-		{
-			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
-			window.location.href = h + '#app_reviews_hash';
-			window.location.reload( true );
-		}
-	).fail(
-		function( json )
-		{
-			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
-		}
-	);
-}
-
 function IntervalDistance( min1, max1, min2, max2 )
 {
 	return Math.max( 0, Math.max( min2 - max1, min1 - max2 ) );
 }
 
-function DrawPastEvents( flotRollup, rgPastEvents, bAddIconElements )
+function DrawPastEvents( flotRollup, rgPastEvents )
 {
 	var ctx = flotRollup.getCanvas().getContext("2d");
 	var rollupPoints = flotRollup.getData();
 	var seriesPositive = rollupPoints[0];
 	var axes = flotRollup.getAxes();
+	var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: "UTC" };
 
 	for ( var i = 0; i < rgPastEvents.length; ++i )
 	{
@@ -692,17 +666,28 @@ function DrawPastEvents( flotRollup, rgPastEvents, bAddIconElements )
 
 		var topY = seriesPositive.yaxis.p2c( event.recommendations_up );
 
-		if ( bAddIconElements )
+		var eventIconID = flotRollup.getPlaceholder()[0].id + "_review_anomaly_" + event.start_date;
+		var eventIcon = $J( "#" + eventIconID );
+		var newStyle = {
+			left: (o.left - 6) + 'px',
+			top: (o.top - 20) + 'px'
+		};
+
+		if ( eventIcon.length == 0 )
 		{
-			var eventIcon = $J( '<div/>', { class: 'review_event_graph_icon', style: 'left:' + ( o.left - 6 ) + 'px;top:' + ( o.top - 20 ) + 'px;', html: '*' } );
+			eventIcon = $J( '<div/>', { id: eventIconID, class: 'review_event_graph_icon', style: JSON.stringify( newStyle ), html: '*' } );
 			eventIcon.data( 'startDate', event.start_date );
 			eventIcon.data( 'endDate', event.end_date );
 			var startDate = new Date( event.start_date * 1000 );
 			var endDate = new Date( event.end_date * 1000 );
-			var strToolTip = 'Abnormal review traffic detected:<br>' +	startDate.toLocaleDateString( undefined, { timeZone: "UTC" } ) + " - " + endDate.toLocaleDateString( undefined, { timeZone: "UTC" } );
+			var strToolTip = 'Abnormal review traffic detected:<br>' +	startDate.toLocaleDateString( undefined, dateOptions ) + " - " + endDate.toLocaleDateString( undefined, dateOptions );
 			eventIcon.data( 'tooltipContent', strToolTip );
 			eventIcon.v_tooltip();
 			flotRollup.getPlaceholder().append( eventIcon );
+		}
+		else
+		{
+			eventIcon.css( newStyle );
 		}
 
 		ctx.beginPath();
@@ -945,13 +930,13 @@ function BuildReviewHistogram()
 
 		if ( rgPastEventsRollup.length != 0 )
 		{
-			var bAddEventIcons = true;
 			var funcDrawPastEvents = function() {
-				DrawPastEvents( flotRollup, rgPastEventsRollup, bAddEventIcons );
-				bAddEventIcons = false;
+				DrawPastEvents( flotRollup, rgPastEventsRollup );
 			};
 			flotRollup.hooks.draw.push( funcDrawPastEvents );
 			funcDrawPastEvents();
+
+			$J("#review_graph_canvas").resize( funcDrawPastEvents );
 		}
 
 		// recent
@@ -1015,15 +1000,14 @@ function BuildReviewHistogram()
 					ctx.fill();
 				};
 
-				var bAddEventIcons = true;
 				var funcDrawPastEvents = function() {
-					DrawPastEvents( flotRecent, rgPastEventsRecent, bAddEventIcons );
-					bAddEventIcons = false;
+					DrawPastEvents( flotRecent, rgPastEventsRecent );
 				};
 				flotRecent.hooks.draw.push( funcDrawPastEvents );
 				funcDrawPastEvents();
 
 				$J("#review_graph_canvas").resize( funcDrawGraphOverlay );
+				$J("#review_graph_canvas").resize( funcDrawPastEvents );
 				funcDrawGraphOverlay();
 			}
 		}
@@ -1044,7 +1028,8 @@ function BuildReviewHistogram()
 
 				var date = new Date( parseInt(x) );
 
-				var strDate = ( date.getUTCMonth() + 1 ) + "/" + ( date.getUTCDate() ) + "/" + date.getUTCFullYear();
+				var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: "UTC" };
+				var strDate = date.toLocaleDateString( undefined, dateOptions );
 				tooltip.html( numReviews + " " + item.series.label + " (" + strDate + ")" );
 				tooltip.css( {top: item.pageY+yDelta, left: item.pageX+xDelta} );
 				tooltip.fadeIn( 10 );
