@@ -426,6 +426,11 @@ CLoginPromptManager.prototype.OnLoginResponse = function( results )
 		{
 			if( results.redirect_uri )
 			{
+				// Special case dota dev universe work
+				if ( results.redirect_uri.startsWith( "http://www.dota2.com" ) )
+				{
+									}
+
 				this.m_sOAuthRedirectURI = results.redirect_uri;
 			}
 
