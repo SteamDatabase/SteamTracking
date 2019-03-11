@@ -670,7 +670,7 @@ function DrawPastEvents( flotRollup, rgPastEvents )
 		var eventIcon = $J( "#" + eventIconID );
 		var newStyle = {
 			left: (o.left - 6) + 'px',
-			top: (o.top - 20) + 'px'
+			top: (o.top - 10) + 'px'
 		};
 
 		if ( eventIcon.length == 0 )
@@ -680,7 +680,7 @@ function DrawPastEvents( flotRollup, rgPastEvents )
 			eventIcon.data( 'endDate', event.end_date );
 			var startDate = new Date( event.start_date * 1000 );
 			var endDate = new Date( event.end_date * 1000 );
-			var strToolTip = 'Abnormal review traffic detected:<br>' +	startDate.toLocaleDateString( undefined, dateOptions ) + " - " + endDate.toLocaleDateString( undefined, dateOptions );
+			var strToolTip = 'Unrelated review activity detected:<br><br>' +	startDate.toLocaleDateString( undefined, dateOptions ) + " - " + endDate.toLocaleDateString( undefined, dateOptions ) + '<br><br>Click for more details.';
 			eventIcon.data( 'tooltipContent', strToolTip );
 			eventIcon.v_tooltip();
 			flotRollup.getPlaceholder().append( eventIcon );
@@ -689,6 +689,8 @@ function DrawPastEvents( flotRollup, rgPastEvents )
 		{
 			eventIcon.css( newStyle );
 		}
+
+		o.top += 10;
 
 		ctx.beginPath();
 		ctx.moveTo(o.left-1, o.top);
@@ -946,6 +948,7 @@ function BuildReviewHistogram()
 			var recentOptions = $J.extend( true, {}, options );
 			recentOptions.series.bars.barWidth = 86400*1000 * 0.5;
 			recentOptions.xaxis.timeformat = "%b %d";
+						recentOptions.yaxis.autoscaleMargin = rgPastEventsRecent.length != 0 ? 0.2 : null;
 			var graphRecent =  $J( "#review_histogram_recent" );
 			var flotRecent = $J.plot( graphRecent, seriesRecent, recentOptions );
 
