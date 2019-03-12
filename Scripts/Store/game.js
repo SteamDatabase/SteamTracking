@@ -680,7 +680,7 @@ function DrawPastEvents( flotRollup, rgPastEvents )
 			eventIcon.data( 'endDate', event.end_date );
 			var startDate = new Date( event.start_date * 1000 );
 			var endDate = new Date( event.end_date * 1000 );
-			var strToolTip = 'Unrelated review activity detected:<br><br>' +	startDate.toLocaleDateString( undefined, dateOptions ) + " - " + endDate.toLocaleDateString( undefined, dateOptions ) + '<br><br>Click for more details.';
+			var strToolTip = 'Off-topic review activity detected:<br><br>' +	startDate.toLocaleDateString( undefined, dateOptions ) + " - " + endDate.toLocaleDateString( undefined, dateOptions ) + '<br><br>Click for more details.';
 			eventIcon.data( 'tooltipContent', strToolTip );
 			eventIcon.v_tooltip();
 			flotRollup.getPlaceholder().append( eventIcon );
@@ -927,6 +927,9 @@ function BuildReviewHistogram()
 			rollupOptions.xaxis.timeformat = numTotalDays > 365 ? "%b %Y": "%b";
 			rollupOptions.series.bars.barWidth = 86400*1000 * 30 * 0.5;
 		}
+
+		rollupOptions.yaxis.autoscaleMargin = rgPastEventsRollup.length != 0 ? 0.2 : null;
+
 		var graphRollup =  $J( "#review_histogram_rollup" );
 		var flotRollup = $J.plot( graphRollup, seriesRollup, rollupOptions );
 
