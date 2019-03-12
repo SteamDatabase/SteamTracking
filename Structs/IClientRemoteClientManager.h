@@ -50,5 +50,6 @@ public:
     virtual unknown_ret SetRemoteDeviceAuthorized(bool, char const*) = 0;
     virtual unknown_ret SetStreamingDriversInstalled(bool) = 0;
     virtual unknown_ret SetStreamingPIN(char const*) = 0;
+    virtual unknown_ret GetStreamingPINSize(int*) = 0;
     virtual unknown_ret UnlockHEVC() = 0;
 };
