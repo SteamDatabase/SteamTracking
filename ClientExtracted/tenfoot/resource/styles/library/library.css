@@ -6043,6 +6043,11 @@ ParentalButton #ParentalLockImageLocked
 	background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }
 
+.ControllerOrderContainer.controller_mobile_touch
+{
+	background-image: url( "file://{images}/controller_icon_mobile_touch.png" );
+}
+
 .ControllerOrderContainer:descendantfocus
 {
 	background-color: button_focus_color;
@@ -6150,6 +6155,11 @@ ControllerConfigSelectController #ButtonCancel
 #SelectControllerButton.Button.controller_apple,
 {
 	background-image: url( "file://{images}/controller_generic_nobattery.png" );
+}
+
+#SelectControllerButton.Button.controller_mobile_touch
+{
+	background-image: url( "file://{images}/controller_icon_mobile_touch.png" );
 }
 
 #SelectControllerOwnerLabel
