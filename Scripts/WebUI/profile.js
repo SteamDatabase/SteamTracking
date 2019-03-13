@@ -154,10 +154,10 @@
         return y;
       }),
       n.d(t, "g", function() {
-        return b;
+        return _;
       }),
       n.d(t, "f", function() {
-        return _;
+        return b;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -303,7 +303,7 @@
             ? t.mozRequestFullScreen()
             : t.msRequestFullscreen && t.msRequestFullscreen();
     }
-    function b(e) {
+    function _(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
@@ -313,7 +313,7 @@
             ? t.mozCancelFullScreen()
             : t.msExitFullscreen && t.msExitFullscreen();
     }
-    var _ = (function() {
+    var b = (function() {
       function e(e) {
         var i = this;
         (this.m_bNeedSort = !1),
@@ -553,11 +553,14 @@
   },
   "8o0Y": function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return a;
     }),
       n.d(t, "a", function() {
         return u;
+      }),
+      n.d(t, "b", function() {
+        return m;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
@@ -590,10 +593,14 @@
           (o = c.clientX),
           (i = c.clientY);
       } else r = t;
-      var s = new p(e, r, o, i, n);
+      var s = new h(e, r, o, i, n);
       return s.Show(), s;
     }
-    var m = (function(n) {
+    function m(e, t, n, r) {
+      var o = new h(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
+      return o.Show(), o;
+    }
+    var p = (function(n) {
         function e(e) {
           var t = n.call(this) || this;
           return (
@@ -672,7 +679,7 @@
                 null)
               : (this.InternalHideSubMenu(),
                 (this.m_elSubmenuItem = e),
-                (this.m_submenu = new h(this, t(), e)),
+                (this.m_submenu = new d(this, t(), e)),
                 this.m_submenu.Show(),
                 this.m_submenu);
           }),
@@ -745,11 +752,11 @@
           (e.prototype.BIsSubMenuVisible = function() {
             return !!this.m_submenu;
           }),
-          r.c([s.observable], e.prototype, "m_bVisible", void 0),
+          r.c([s.x], e.prototype, "m_bVisible", void 0),
           e
         );
       })(a),
-      p = (function(s) {
+      h = (function(s) {
         function a(e, t, n, r, o) {
           var i = s.call(this, t.ownerDocument.defaultView) || this;
           a.sm_iActiveContextMenuInstance &&
@@ -787,8 +794,8 @@
           (a.sm_mapEmbeddedMouseOverlays = new l.a("ContextMenuMouseOverlay")),
           a
         );
-      })(m),
-      h = (function(i) {
+      })(p),
+      d = (function(i) {
         function e(e, t, n) {
           var r = i.call(this, n.ownerDocument.defaultView) || this;
           (r.m_parentInstance = e),
@@ -821,7 +828,7 @@
           }),
           e
         );
-      })(m);
+      })(p);
   },
   EGkk: function(e, t, n) {
     "use strict";
@@ -829,10 +836,10 @@
       return y;
     }),
       n.d(t, "d", function() {
-        return b;
+        return _;
       }),
       n.d(t, "b", function() {
-        return _;
+        return b;
       }),
       n.d(t, "e", function() {
         return g;
@@ -899,7 +906,7 @@
           t
         );
       })(s.PureComponent),
-      b = (function(e) {
+      _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -951,7 +958,7 @@
           t
         );
       })(s.PureComponent),
-      _ = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -964,7 +971,7 @@
               r = e.className,
               o = c.f(e, ["bChecked", "children", "className"]);
             return s.createElement(
-              b,
+              _,
               c.a({}, o, { className: Object(v.a)(r, t && "menuChecked") }),
               s.createElement("div", { className: "contextMenuCheckMark" }),
               n
@@ -1015,7 +1022,7 @@
             return (
               this.state.bActive && (n = (n || "") + " " + f.a.active),
               s.createElement(
-                b,
+                _,
                 c.a({}, r, {
                   onClick: this.OnClick,
                   className: n,
@@ -1158,7 +1165,9 @@
                 u = n.innerWidth,
                 m = n.innerHeight;
               if (i) {
-                (a += n.screenLeft), (l += n.screenTop), (r = O.h(n, r));
+                this.props.options.bScreenCoordinates ||
+                  ((a += n.screenLeft), (l += n.screenTop)),
+                  (r = O.h(n, r));
                 var p = n.screen,
                   h = 0,
                   d = 0;
@@ -1172,16 +1181,16 @@
                 v = a || r.right,
                 y = o.width;
               c.bMatchWidth && ((y = v - f), (s.menuWidth = y));
-              var b = (c.bOverlapHorizontal ? v : f) - y,
-                _ = 0 < b,
+              var _ = (c.bOverlapHorizontal ? v : f) - y,
+                b = 0 < _,
                 g = u - (c.bOverlapHorizontal ? f : v) - y,
                 w = 0 < g,
-                x = (c.bPreferPopLeft || !w) && _;
-              _ ||
+                x = (c.bPreferPopLeft || !w) && b;
+              b ||
                 w ||
-                ((x = w < _),
-                c.bFitToWindow && ((y += (x ? b : g) - 8), (s.menuWidth = y))),
-                (!c.bPreferPopLeft && w) || !_
+                ((x = w < b),
+                c.bFitToWindow && ((y += (x ? _ : g) - 8), (s.menuWidth = y))),
+                (!c.bPreferPopLeft && w) || !b
                   ? (s.menuLeft = c.bOverlapHorizontal ? f : v)
                   : (s.menuRight = u - (c.bOverlapHorizontal ? v : f));
               var E = l || r.top,
@@ -1307,7 +1316,7 @@
           c.c([o.a], e.prototype, "OnWindowResize", null),
           c.c([o.a], e.prototype, "OnBlur", null),
           c.c([o.a], e.prototype, "OnKeyDown", null),
-          (e = c.c([r.observer], e))
+          (e = c.c([r.a], e))
         );
       })(s.Component),
       x = (function(o) {
@@ -1326,17 +1335,26 @@
         return (
           c.d(i, o),
           (i.prototype.UpdateParamsBeforeShow = function(e) {
-            var t = O.h(
-              this.m_menuProps.element.ownerDocument.defaultView,
-              this.m_menuProps.element.getBoundingClientRect()
-            );
-            return (
-              (e.dimensions = {
+            if (this.m_menuProps.options.bScreenCoordinates)
+              e.dimensions = {
+                left: this.m_menuProps.clientX,
+                top: this.m_menuProps.clientY,
+                width: 350,
+                height: 1
+              };
+            else {
+              var t = O.h(
+                this.m_menuProps.element.ownerDocument.defaultView,
+                this.m_menuProps.element.getBoundingClientRect()
+              );
+              e.dimensions = {
                 left: t.right,
                 top: t.top,
                 width: 350,
                 height: 1
-              }),
+              };
+            }
+            return (
               (e.availscreenwidth = this.m_menuProps.element.ownerDocument.defaultView.screen.availWidth),
               (e.availscreenheight = this.m_menuProps.element.ownerDocument.defaultView.screen.availHeight),
               e
@@ -1378,7 +1396,7 @@
         (n.document.queryCommandEnabled("cut") || (o && c)) &&
           t.push(
             s.createElement(
-              b,
+              _,
               {
                 key: "cut",
                 onSelected: function() {
@@ -1391,7 +1409,7 @@
         (document.queryCommandEnabled("copy") || o) &&
           t.push(
             s.createElement(
-              b,
+              _,
               {
                 key: "copy",
                 onSelected: function() {
@@ -1405,7 +1423,7 @@
           c &&
           t.push(
             s.createElement(
-              b,
+              _,
               {
                 key: "paste",
                 onSelected: function() {
@@ -1825,14 +1843,14 @@
           (e.prototype.OnBeforeUnload = function() {}),
           (e.prototype.OnFocus = function() {}),
           (e.prototype.OnBlur = function() {}),
-          o.c([i.observable], e.prototype, "m_bFocused", void 0),
+          o.c([i.x], e.prototype, "m_bFocused", void 0),
           o.c([u.a], e.prototype, "OnMessage", null),
           o.c([u.a], e.prototype, "OnResizeEvent", null),
           o.c([u.a], e.prototype, "OnBeforeUnloadEvent", null),
           o.c([u.a], e.prototype, "OnUnload", null),
           o.c([u.a], e.prototype, "OnFocusInternal", null),
           o.c([u.a], e.prototype, "OnBlurInternal", null),
-          o.c([i.computed], e.prototype, "focused", null),
+          o.c([i.i], e.prototype, "focused", null),
           e
         );
       })(),
@@ -2042,12 +2060,12 @@
               var v = d[f];
               if ("stylesheet" == v.rel) {
                 for (
-                  var y = l.document.createElement("link"), b = 0;
-                  b < v.attributes.length;
-                  b++
+                  var y = l.document.createElement("link"), _ = 0;
+                  _ < v.attributes.length;
+                  _++
                 ) {
-                  var _ = v.attributes.item(b);
-                  y.setAttribute(_.name, _.value);
+                  var b = v.attributes.item(_);
+                  y.setAttribute(b.name, b.value);
                 }
                 h.appendChild(y);
               }
@@ -2369,7 +2387,7 @@
                     n &&
                       n.PrivacySettings &&
                       n.eCommentPermission &&
-                      Object(l.runInAction)(function() {
+                      Object(l.A)(function() {
                         (r.m_PrivacySettings = n.PrivacySettings),
                           (r.m_eCommentPermission = n.eCommentPermission);
                       }),
@@ -2387,17 +2405,17 @@
                 })
             );
           }),
-          a.c([l.observable], e.prototype, "m_PrivacySettings", void 0),
-          a.c([l.observable], e.prototype, "m_eCommentPermission", void 0),
-          a.c([l.observable], e.prototype, "m_eSaveStateByKey", void 0),
-          a.c([l.observable], e.prototype, "m_eCommentSaveState", void 0),
+          a.c([l.x], e.prototype, "m_PrivacySettings", void 0),
+          a.c([l.x], e.prototype, "m_eCommentPermission", void 0),
+          a.c([l.x], e.prototype, "m_eSaveStateByKey", void 0),
+          a.c([l.x], e.prototype, "m_eCommentSaveState", void 0),
           e
         );
       })(),
       v = n("1VtQ"),
       y = n("8o0Y"),
-      b = n("EGkk"),
-      _ = n("okNM"),
+      _ = n("EGkk"),
+      b = n("okNM"),
       g = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -2537,7 +2555,7 @@
               )
             );
           }),
-          (t = a.c([_.observer], t))
+          (t = a.c([b.a], t))
         );
       })(i.Component);
     function w(e) {
@@ -2631,7 +2649,7 @@
         }),
         a.c([v.a], t.prototype, "OnClick", null),
         a.c([v.a], t.prototype, "OnSettingChanged", null),
-        (t = a.c([_.observer], t))
+        (t = a.c([b.a], t))
       );
     })(i.Component);
     function M(e) {
@@ -2698,7 +2716,7 @@
             );
           }),
           a.c([v.a], t.prototype, "OnCheckboxChecked", null),
-          (t = a.c([_.observer], t))
+          (t = a.c([b.a], t))
         );
       })(S),
       C = (function(n) {
@@ -2763,7 +2781,7 @@
           }),
           a.c([v.a], e.prototype, "OnClick", null),
           a.c([v.a], e.prototype, "OnSettingChanged", null),
-          (e = a.c([_.observer], e))
+          (e = a.c([b.a], e))
         );
       })(i.Component);
     function P(e) {
@@ -2783,11 +2801,11 @@
             var e = this,
               t = this.props.eMinPrivacy;
             return i.createElement(
-              b.c,
+              _.c,
               null,
               (!t || 3 <= t) &&
                 i.createElement(
-                  b.d,
+                  _.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(3);
@@ -2797,7 +2815,7 @@
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
-                  b.d,
+                  _.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(2);
@@ -2806,7 +2824,7 @@
                   Object(s.b)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
-                b.d,
+                _.d,
                 {
                   onSelected: function() {
                     return e.props.OnChange(1);
@@ -2829,11 +2847,11 @@
             var e = this,
               t = this.props.eMinPrivacy;
             return i.createElement(
-              b.c,
+              _.c,
               null,
               (!t || 3 <= t) &&
                 i.createElement(
-                  b.d,
+                  _.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(1);
@@ -2844,7 +2862,7 @@
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
-                  b.d,
+                  _.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(0);
@@ -2856,7 +2874,7 @@
                   Object(s.b)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
-                b.d,
+                _.d,
                 {
                   onSelected: function() {
                     return e.props.OnChange(2);
@@ -2957,10 +2975,10 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "x", function() {
+    n.d(t, "y", function() {
       return c;
     }),
-      n.d(t, "T", function() {
+      n.d(t, "U", function() {
         return s;
       }),
       n.d(t, "g", function() {
@@ -2972,34 +2990,34 @@
       n.d(t, "o", function() {
         return u;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "C", function() {
         return m;
       }),
-      n.d(t, "E", function() {
+      n.d(t, "F", function() {
         return p;
       }),
       n.d(t, "p", function() {
         return h;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "Z", function() {
         return d;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "P", function() {
         return f;
       }),
-      n.d(t, "M", function() {
+      n.d(t, "N", function() {
         return v;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "kb", function() {
         return y;
       }),
-      n.d(t, "kb", function() {
-        return b;
-      }),
-      n.d(t, "hb", function() {
+      n.d(t, "lb", function() {
         return _;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "ib", function() {
+        return b;
+      }),
+      n.d(t, "bb", function() {
         return g;
       }),
       n.d(t, "v", function() {
@@ -3008,7 +3026,7 @@
       n.d(t, "u", function() {
         return x;
       }),
-      n.d(t, "L", function() {
+      n.d(t, "M", function() {
         return E;
       }),
       n.d(t, "a", function() {
@@ -3017,28 +3035,28 @@
       n.d(t, "s", function() {
         return M;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "A", function() {
         return k;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "J", function() {
         return C;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "jb", function() {
         return P;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "I", function() {
         return I;
       }),
       n.d(t, "k", function() {
         return L;
       }),
-      n.d(t, "K", function() {
+      n.d(t, "L", function() {
         return O;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "K", function() {
         return N;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "X", function() {
         return B;
       }),
       n.d(t, "h", function() {
@@ -3050,52 +3068,52 @@
       n.d(t, "f", function() {
         return G;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "B", function() {
         return z;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "cb", function() {
         return D;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "gb", function() {
         return W;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "z", function() {
         return H;
       }),
       n.d(t, "c", function() {
-        return R;
+        return F;
       }),
       n.d(t, "b", function() {
-        return F;
+        return R;
       }),
       n.d(t, "n", function() {
         return j;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "ab", function() {
         return A;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "D", function() {
         return U;
       }),
-      n.d(t, "F", function() {
+      n.d(t, "G", function() {
         return K;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "Q", function() {
         return Y;
       }),
-      n.d(t, "V", function() {
+      n.d(t, "W", function() {
         return X;
       }),
-      n.d(t, "N", function() {
+      n.d(t, "O", function() {
         return q;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "db", function() {
         return J;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "eb", function() {
         return Q;
       }),
-      n.d(t, "S", function() {
+      n.d(t, "T", function() {
         return Z;
       }),
       n.d(t, "q", function() {
@@ -3107,40 +3125,40 @@
       n.d(t, "m", function() {
         return te;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "E", function() {
         return ne;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "Y", function() {
         return re;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "hb", function() {
         return oe;
       }),
       n.d(t, "t", function() {
         return ie;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "R", function() {
         return ce;
       }),
-      n.d(t, "R", function() {
+      n.d(t, "S", function() {
         return se;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "x", function() {
         return ae;
       }),
-      n.d(t, "U", function() {
+      n.d(t, "V", function() {
         return le;
       }),
       n.d(t, "d", function() {
         return ue;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "H", function() {
         return me;
       }),
-      n.d(t, "eb", function() {
+      n.d(t, "fb", function() {
         return pe;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "mb", function() {
         return he;
       }),
       n.d(t, "e", function() {
@@ -3148,6 +3166,9 @@
       }),
       n.d(t, "i", function() {
         return fe;
+      }),
+      n.d(t, "w", function() {
+        return ve;
       });
     var r = n("q1tI"),
       o = n("twdX"),
@@ -3627,7 +3648,7 @@
         )
       );
     }
-    function b() {
+    function _() {
       return r.createElement(
         "svg",
         {
@@ -3663,7 +3684,7 @@
         })
       );
     }
-    function _(e) {
+    function b(e) {
       return r.createElement(
         "svg",
         {
@@ -4875,7 +4896,7 @@
         })
       );
     }
-    function R() {
+    function F() {
       return r.createElement(
         "svg",
         {
@@ -4895,7 +4916,7 @@
         })
       );
     }
-    function F(e) {
+    function R(e) {
       return r.createElement(
         "svg",
         {
@@ -6021,6 +6042,76 @@
           className: "C1",
           d:
             "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z"
+        })
+      );
+    }
+    function ve() {
+      return r.createElement(
+        "svg",
+        {
+          version: "1.1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Hidden",
+          x: "0px",
+          y: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256"
+        },
+        r.createElement("path", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          d: "M62.499,172.263 c-32.755-16.197-47.415-39.509-47.415-39.509"
+        }),
+        r.createElement("path", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          d:
+            "M177.948,85.392 c48.213,14.998,68.451,47.362,68.451,47.362s-36.393,54.737-115.689,54.737c-17.938,0-33.591-2.671-47.096-6.832"
+        }),
+        r.createElement("path", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          d:
+            "M15.084,132.754 c0,0,32.933-56.576,115.674-54.785c8.505,0.185,16.486,0.913,23.96,2.072"
+        }),
+        r.createElement("path", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          d:
+            "M93.981,141.131 c-0.475-2.385-0.725-4.852-0.725-7.377c0-20.711,16.789-37.5,37.5-37.5c2.42,0,4.787,0.229,7.08,0.668"
+        }),
+        r.createElement("path", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          d:
+            "M156.528,106.512 c7.223,6.836,11.729,16.513,11.729,27.242c0,20.711-16.789,37.5-37.5,37.5c-10.609,0-20.189-4.405-27.012-11.487"
+        }),
+        r.createElement("line", {
+          fill: "none",
+          stroke: "#FFFFFF",
+          strokeWidth: "10",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          x1: "53.007",
+          y1: "210.504",
+          x2: "208.507",
+          y2: "55.004"
         })
       );
     }

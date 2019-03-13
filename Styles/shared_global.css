@@ -998,7 +998,7 @@ div#global_header .content {
 	height: 104px;
 	margin: 0px auto;
 
-	z-index: 102;
+	z-index: 402;
 }
 
 div#global_actions {
@@ -1012,7 +1012,7 @@ div#global_actions {
 	color: #b8b6b4;
 	font-size: 11px;
 
-	z-index: 101;
+	z-index: 401;
 }
 
 div#global_actions a.global_action_link {

@@ -403,6 +403,18 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     color: #6dcff6; }
     .contextmenu_contextMenuItem_CBC-y.menuChecked.contextMenuCheckMark {
       display: block; }
+  .contextmenu_contextMenuItem_CBC-y .SVGIcon_Button {
+    height: 10px;
+    width: 10px;
+    margin-right: 4px; }
+  .contextmenu_contextMenuItem_CBC-y .SVGIcon_DownArrowContextMenu {
+    height: 14px;
+    width: 14px;
+    transform: rotateZ(-90deg);
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    fill: #9ca4a7; }
 
 .contextMenuCheckMark {
   width: 4px;
@@ -640,6 +652,24 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .ingame .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 {
   font-size: 12px; }
 
+.VoiceChannelParticipants .ingame .personanameandstatus_playerName_1uxaf {
+  font-size: 11px;
+  margin-bottom: -2px;
+  margin-top: -2px; }
+
+.VoiceChannelParticipants .ingame .personanameandstatus_twoLine_2wZNn .personanameandstatus_playerName_1uxaf {
+  font-size: 14px;
+  margin-top: 0px; }
+
+.VoiceChannelParticipants .ingame .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 3px; }
+
+.VoiceChannelParticipants .ingame .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
+  font-size: 12px;
+  margin-top: 0px; }
+
 .ingame.awayOrSnooze .personanameandstatus_richPresenceLabel_3Q6g1,
 .ingame .personanameandstatus_richPresenceLabel_3Q6g1,
 .ingame .personanameandstatus_richPresenceLabel_3Q6g1 a,
@@ -826,6 +856,10 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   margin-top: -1px;
   margin-bottom: 1px; }
 
+.titleBarContainer .currentUserContainer .ContextMenuButton {
+  margin-top: -4px;
+  margin-bottom: 4px; }
+
 .singlewindow .currentUserContainer .personanameandstatus_statusAndName_9U-hi {
   margin-right: 4px; }
 
@@ -895,6 +929,19 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 
 .groupMemberList .personanameandstatus_richPresenceLabel_3Q6g1 {
   line-height: 13px; }
+
+.personanameandstatus_gameIsPrivateIcon_1cu1a {
+  width: 28px;
+  height: 20px;
+  margin-top: -3px;
+  margin-left: 0px;
+  display: inline-block; }
+  .personanameandstatus_gameIsPrivateIcon_1cu1a svg {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px; }
+    .personanameandstatus_gameIsPrivateIcon_1cu1a svg line, .personanameandstatus_gameIsPrivateIcon_1cu1a svg path {
+      stroke: #6e8d50; }
 
 .miniprofile_miniProfile_s5zcg {
   width: fit-content;
@@ -5796,20 +5843,6 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   margin-right: 4px;
   margin-bottom: -1px; }
 
-.contextMenuItem .SVGIcon_DownArrowContextMenu {
-  height: 14px;
-  width: 14px;
-  transform: rotateZ(-90deg);
-  position: absolute;
-  right: 2px;
-  top: 6px;
-  fill: #9ca4a7; }
-
-.contextMenu .SVGIcon_Button {
-  height: 10px;
-  width: 10px;
-  margin-right: 4px; }
-
 .flexRow {
   display: flex;
   flex-direction: row; }
@@ -7899,7 +7932,6 @@ img {
 .shared_common_ChatAvatarImage_3n4wV {
   width: 48px;
   height: 48px;
-  border-radius: 25%;
   position: relative;
   display: flex;
   align-items: center;

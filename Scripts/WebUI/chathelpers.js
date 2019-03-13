@@ -11,22 +11,22 @@
     )
       (n = o[s]), p[n] && a.push(p[n][0]), (p[n] = 0);
     for (t in i) Object.prototype.hasOwnProperty.call(i, t) && (u[t] = i[t]);
-    for (m && m(e); a.length; ) a.shift()();
-    return l.push.apply(l, r || []), c();
+    for (l && l(e); a.length; ) a.shift()();
+    return m.push.apply(m, r || []), c();
   }
   function c() {
-    for (var e, t = 0; t < l.length; t++) {
-      for (var n = l[t], o = !0, i = 1; i < n.length; i++) {
+    for (var e, t = 0; t < m.length; t++) {
+      for (var n = m[t], o = !0, i = 1; i < n.length; i++) {
         var r = n[i];
         0 !== p[r] && (o = !1);
       }
-      o && (l.splice(t--, 1), (e = s((s.s = n[0]))));
+      o && (m.splice(t--, 1), (e = s((s.s = n[0]))));
     }
     return e;
   }
   var n = {},
     p = { 1: 0 },
-    l = [];
+    m = [];
   function s(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
@@ -81,8 +81,8 @@
     o = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var i = 0; i < t.length; i++) e(t[i]);
-  var m = o;
-  l.push(["qM/t", 0]), c();
+  var l = o;
+  m.push(["qM/t", 0]), c();
 })({
   "/7KC": function(e, t, n) {
     "use strict";
@@ -130,10 +130,10 @@
         return p;
       }),
       n.d(t, "f", function() {
-        return l;
+        return m;
       }),
       n.d(t, "g", function() {
-        return m;
+        return l;
       }),
       n.d(t, "l", function() {
         return h;
@@ -157,7 +157,7 @@
         return S;
       }),
       n.d(t, "d", function() {
-        return b;
+        return g;
       });
     var r,
       s,
@@ -165,8 +165,8 @@
       u,
       c = 1,
       p = 4,
-      l = 750,
-      m = 799,
+      m = 750,
+      l = 799,
       h = 7,
       d = 250820,
       _ = 330050,
@@ -174,7 +174,7 @@
       v = 366490,
       E = "18446744073709551615",
       S = 0,
-      b = 2147483647;
+      g = 2147483647;
     ((s = r || (r = {}))[(s.k_EOtherEvent = 1)] = "k_EOtherEvent"),
       (s[(s.k_EGameEvent = 2)] = "k_EGameEvent"),
       (s[(s.k_EPartyEvent = 3)] = "k_EPartyEvent"),
@@ -308,10 +308,10 @@
         return u;
       }),
       n.d(t, "d", function() {
-        return l;
+        return m;
       }),
       n.d(t, "c", function() {
-        return m;
+        return l;
       });
     var i,
       r = {
@@ -397,14 +397,14 @@
         e
       );
     }
-    function l(e) {
+    function m(e) {
       void 0 === e && (e = c);
-      var t = m("config", e);
+      var t = l("config", e);
       t && (delete t.SESSIONID, Object.assign(r, t));
-      var n = m("userinfo", e);
+      var n = l("userinfo", e);
       n && Object.assign(a, n), r.IN_CLIENT && p();
     }
-    function m(e, t) {
+    function l(e, t) {
       void 0 === t && (t = c);
       var n = document.getElementById(t);
       if (n)
@@ -489,9 +489,9 @@
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          o.c([i.observable], e.prototype, "m_bReady", void 0),
-          o.c([i.action], e.prototype, "InitInvalid", null),
-          o.c([i.action], e.prototype, "InitDirectInvite", null),
+          o.c([i.x], e.prototype, "m_bReady", void 0),
+          o.c([i.g], e.prototype, "InitInvalid", null),
+          o.c([i.g], e.prototype, "InitDirectInvite", null),
           e
         );
       })();
@@ -507,7 +507,7 @@
       return u;
     }),
       n.d(t, "a", function() {
-        return m;
+        return l;
       }),
       n.d(t, "b", function() {
         return h;
@@ -528,7 +528,7 @@
       (o[(o.Tooltip = 4)] = "Tooltip"),
       (o[(o.ContextMenu = 8)] = "ContextMenu"),
       (o[(o.Resizable = 16)] = "Resizable");
-    var l = (function() {
+    var m = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -557,7 +557,7 @@
           e
         );
       })(),
-      m = (function() {
+      l = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -620,7 +620,7 @@
                 : ((i = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (r = n.element),
-                  (s = new l(i, r))),
+                  (s = new m(i, r))),
               i &&
                 r &&
                 ((i.document.title = this.m_strTitle),
@@ -785,14 +785,14 @@
           (e.prototype.OnBeforeUnload = function() {}),
           (e.prototype.OnFocus = function() {}),
           (e.prototype.OnBlur = function() {}),
-          i.c([r.observable], e.prototype, "m_bFocused", void 0),
+          i.c([r.x], e.prototype, "m_bFocused", void 0),
           i.c([p.a], e.prototype, "OnMessage", null),
           i.c([p.a], e.prototype, "OnResizeEvent", null),
           i.c([p.a], e.prototype, "OnBeforeUnloadEvent", null),
           i.c([p.a], e.prototype, "OnUnload", null),
           i.c([p.a], e.prototype, "OnFocusInternal", null),
           i.c([p.a], e.prototype, "OnBlurInternal", null),
-          i.c([r.computed], e.prototype, "focused", null),
+          i.c([r.i], e.prototype, "focused", null),
           e
         );
       })(),
@@ -874,7 +874,7 @@
           i.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(m),
+      })(l),
       d = (function() {
         function e() {
           var s = this;
@@ -983,15 +983,15 @@
               );
             var p = "";
             t.html_class && (p = 'class="' + t.html_class + '"');
-            var l = "";
-            t.body_class && (l = 'class="' + t.body_class + '"');
-            var m =
+            var m = "";
+            t.body_class && (m = 'class="' + t.body_class + '"');
+            var l =
               "<!DOCTYPE html><html " +
               p +
               "><head><title></title></head><body " +
-              l +
+              m +
               '><div id="popup_target"></div></body></html>';
-            c.document.write(m), (c.document.title = r);
+            c.document.write(l), (c.document.title = r);
             for (
               var h = c.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
@@ -1540,8 +1540,8 @@
     var a = 31536e3,
       u = 2628e3,
       p = 604800,
-      l = 86400,
-      m = 3600,
+      m = 86400,
+      l = 3600,
       h = 60;
     function d(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
@@ -1556,16 +1556,16 @@
             ? i(o + "XMonths", Math.floor(e / u))
             : 2 * p <= e
               ? i(o + "XWeeks", Math.floor(e / p))
-              : 2 * l <= e
-                ? i(o + "XDays", Math.floor(e / l))
-                : l <= e
-                  ? 2 * m <= (e -= l)
-                    ? i(o + "1DayXHours", Math.floor(e / m))
+              : 2 * m <= e
+                ? i(o + "XDays", Math.floor(e / m))
+                : m <= e
+                  ? 2 * l <= (e -= m)
+                    ? i(o + "1DayXHours", Math.floor(e / l))
                     : i(o + "1Day")
-                  : 2 * m <= e
-                    ? i(o + "XHours", Math.floor(e / m))
-                    : m <= e
-                      ? 2 * h <= (e -= m) && n
+                  : 2 * l <= e
+                    ? i(o + "XHours", Math.floor(e / l))
+                    : l <= e
+                      ? 2 * h <= (e -= l) && n
                         ? i(o + "1HourXMinutes", Math.floor(e / h))
                         : i(o + "1Hour")
                       : n
@@ -1640,8 +1640,8 @@
       u = n("XaMz"),
       c = n("mrSG"),
       p = n("2vnA"),
-      l = n("okNM"),
-      m = n("J0bI"),
+      m = n("okNM"),
+      l = n("J0bI"),
       h = n("s+DT");
     var d = n("1VtQ"),
       _ = n("K4CH"),
@@ -1667,10 +1667,10 @@
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          c.c([p.action], t.prototype, "InitFromPHPInviteLinkInfo", null),
+          c.c([p.g], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
-      })(m.b),
+      })(l.b),
       v = (function() {
         function e(e) {
           (this.m_bConnectingToClient = !1),
@@ -1745,15 +1745,15 @@
               s.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(e) {
-                  Object(p.runInAction)(function() {
+                  Object(p.A)(function() {
                     (t.m_bConnectingToClient = !1),
                       (t.m_connectResult = e),
                       console.log(e);
                   });
                 }));
           }),
-          c.c([p.observable], e.prototype, "m_bConnectingToClient", void 0),
-          c.c([p.observable], e.prototype, "m_connectResult", void 0),
+          c.c([p.x], e.prototype, "m_bConnectingToClient", void 0),
+          c.c([p.x], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
@@ -1769,10 +1769,10 @@
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
                 ? i.createElement(S, { controller: this.props.controller })
-                : i.createElement(b, { controller: this.props.controller })
+                : i.createElement(g, { controller: this.props.controller })
             );
           }),
-          (t = c.c([l.observer], t))
+          (t = c.c([m.a], t))
         );
       })(i.Component),
       S = (function(t) {
@@ -1850,7 +1850,7 @@
                   )
                 : e.account_mismatch
                   ? i.createElement(
-                      g,
+                      b,
                       { render: this.props.controller.GetPreRenderedHTML() },
                       i.createElement(
                         "div",
@@ -1908,7 +1908,7 @@
                         )
                       )
                     : i.createElement(
-                        g,
+                        b,
                         { render: this.props.controller.GetPreRenderedHTML() },
                         i.createElement(
                           "div",
@@ -1944,14 +1944,14 @@
                       )
             );
           }),
-          c.c([p.observable], e.prototype, "m_bTriedToLaunchSteam", void 0),
+          c.c([p.x], e.prototype, "m_bTriedToLaunchSteam", void 0),
           c.c([d.a], e.prototype, "LaunchWebChat", null),
           c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
           c.c([d.a], e.prototype, "LaunchSteamClient", null),
-          (e = c.c([l.observer], e))
+          (e = c.c([m.a], e))
         );
       })(i.Component),
-      b = (function(e) {
+      g = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -1971,7 +1971,7 @@
           t
         );
       })(i.Component);
-    function g(e) {
+    function b(e) {
       return i.createElement(
         "div",
         { className: "ChatMessageInvite" },

@@ -231,6 +231,15 @@ LocalizationReady("friendsui", "english", {
 
   WelcomeScreen_Title: "Welcome",
   WelcomeScreen_Subtitle: "to Steam Chat",
+  MobileWelcomePage_Chat_Title: "Chat with friends and groups",
+  MobileWelcomePage_Chat_Body:
+    "Check in with friends, coordinate a time to play with your group, or check out official game chats.",
+  MobileWelcomePage_Friends_Title: "See who's playing now",
+  MobileWelcomePage_Friends_Body:
+    "Quickly see who is playing or is ready to play, so you never miss an opportunity",
+  MobileWelcomePage_FriendLink_Title: "Add friends with a link",
+  MobileWelcomePage_FriendLink_Body:
+    "Adding a friend on Steam is now as easy as texting or emailing a custom link.",
   Button_Done: "Done",
   Button_Skip: "Skip",
 
@@ -1264,6 +1273,8 @@ LocalizationReady("friendsui", "english", {
 
   changeLog_Button: "Change Log",
   changeLog_Value_Button: "New Change Log updates: %1$s",
+
+  changeLog_WhatsNew: "What's New",
 
   changeLog_Title: "Beta Change Log",
   changeLog_SubTitle:

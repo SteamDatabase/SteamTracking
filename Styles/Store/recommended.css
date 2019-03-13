@@ -2595,6 +2595,7 @@ body.recommendgame #review_create h1  {
 }
 .review_anomalous_events_dialog .review_anomalous_events_title
 {
+	line-height: 15px;
 	font-size: 20px;
 	padding-bottom: 30px;
 }

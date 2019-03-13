@@ -112,6 +112,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Percent cache hits"
+                },
+                {
+                    "name": "num_connected_ips",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "Number of unique connected IP addresses"
                 }
             ]
         }

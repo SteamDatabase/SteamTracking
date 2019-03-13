@@ -2203,6 +2203,12 @@ div.game_hover {
 	padding: 5px 12px 0 12px;
 }
 
+.game_hover_iframe {
+	overflow: hidden;
+	width: fit-content;
+	height: fit-content;
+}
+
 .game_hover_box {
     background: rgb(227,234,239); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(227,234,239,1) 0%, rgba(199,213,224,1) 100%); /* FF3.6+ */
@@ -2221,6 +2227,10 @@ div.game_hover {
 	overflow: hidden;
 
 	box-shadow: 0 0 12px #000000;
+}
+
+.game_hover_iframe .game_hover_box {
+	margin: 0;
 }
 
 .game_hover_box .content {

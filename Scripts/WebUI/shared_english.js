@@ -257,6 +257,8 @@ LocalizationReady("shared", "english", {
 
   User_WantsToPlay: "Join",
   User_ToggleDoNotDisturb: "Do Not Disturb",
+  User_GameInfoHidden:
+    "Your game status is hidden from friends because of your privacy settings",
 
   isNickname: "Your nickname for this friend",
   Friend_Menu_NotAFriendLabel: "Not Friends",

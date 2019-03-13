@@ -587,7 +587,7 @@ CBroadcastWatch.prototype.ShowAdminPanel = function( data )
 			$J( '#BroadcastAdminMatchID' ).hide();
 		}
 
-		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
+		$J( '#BroadcastAdminViewerCount' ).text( LocalizeCount( '1 viewer', '%s viewers', data.num_viewers ) );
 	}
 }
 
