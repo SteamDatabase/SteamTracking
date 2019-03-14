@@ -105,6 +105,9 @@ public:
     virtual unknown_ret GetControllerStatusEvent(unsigned int, Voltroller::SteamControllerStatusEvent_t*) = 0;
     virtual unknown_ret GetActualControllerDetails(unsigned int, ControllerDetails_t*) = 0;
     virtual unknown_ret GetControllerIdentity(unsigned int, ControllerIdentity_t*) = 0;
+    virtual unknown_ret GetControllerPersonalization(unsigned int, ControllerPersonalizationData_t*) = 0;
+    virtual unknown_ret BRumbleEnabledByUser(unsigned int) = 0;
+    virtual unknown_ret BHapticsEnabledByUser(unsigned int) = 0;
     virtual unknown_ret GetControllerSerialNumber(unsigned int, char*, int) = 0;
     virtual unknown_ret GetControllerChipID(unsigned int, char*, int) = 0;
     virtual unknown_ret BSupportsControllerLEDBrightness(unsigned int) = 0;

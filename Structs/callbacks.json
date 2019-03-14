@@ -1571,7 +1571,7 @@
     },
     {
         "id": 2724,
-        "size": 4,
+        "size": 80,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPersonalizationUpdated_t>(ControllerPersonalizationUpdated_t*)"
     },
     {

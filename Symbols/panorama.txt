@@ -1195,6 +1195,7 @@
  D typeinfo for CCallbackBase
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<4>
+ D typeinfo for CCallbackImpl<80>
  D typeinfo for CCookie
  D typeinfo for CCuratorPreferences
  D typeinfo for CDirWatcher
@@ -1873,6 +1874,7 @@
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<4>
+ D vtable for CCallbackImpl<80>
  D vtable for CCookie
  D vtable for CCuratorPreferences
  D vtable for CDirWatcher
@@ -2553,6 +2555,7 @@
  R typeinfo name for CCallbackBase
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<4>
+ R typeinfo name for CCallbackImpl<80>
  R typeinfo name for CCookie
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDirWatcher
@@ -3737,6 +3740,9 @@
  T CCallbackImpl<4>::GetCallbackSizeBytes()
  T CCallbackImpl<4>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4>::~CCallbackImpl()
+ T CCallbackImpl<80>::GetCallbackSizeBytes()
+ T CCallbackImpl<80>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<80>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
