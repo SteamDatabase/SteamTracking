@@ -643,6 +643,48 @@ function ClearReviewDateRangeFilter()
 	ClearReviewDateFilter();
 }
 
+function EditUserReviewScorePreference()
+{
+	if ( g_AccountID == 0 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		return;
+	}
+	
+	$J.post(
+		'https://store.steampowered.com/account/edituserreviewscorepreference/', { sessionid: g_sessionID }
+	).done( function( response ) {
+		var dialogContent = $J( response.html );
+		var dialog = ShowAlertDialog( 'Review Score Settings', dialogContent, 'Cancel' );
+	});
+}
+
+function SetUserReviewScorePreference( pref )
+{
+	if ( g_AccountID == 0 )
+	{
+		ShowAlertDialog( 'Error', 'You must be logged in to perform that action.' );
+		return;
+	}
+
+	var rgData = {
+		preference: pref,
+		sessionid : g_sessionID
+	};
+	$J.post( 'https://store.steampowered.com/account/saveuserreviewscorepreference', rgData ).done(
+		function( json )
+		{
+			var h = window.location.href.substr( 0, window.location.href.indexOf('#') );
+			window.location.href = h + '#app_reviews_hash';
+			window.location.reload( true );
+		}
+	).fail(
+		function( json )
+		{
+			ShowAlertDialog( "Error", "Your preferences have not been saved. Please try again later." );
+		}
+	);
+}
 
 function IntervalDistance( min1, max1, min2, max2 )
 {
@@ -729,7 +771,7 @@ function BuildReviewHistogram()
 		review_score_preference = ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 	}
 
-	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference, cache: 1 }
+	$J.get( 'https://store.steampowered.com/appreviewhistogram/' + appid, { l: 'english', review_score_preference: review_score_preference }
 	).done( function( data ) {
 
 		$J( "#review_histograms_container" ).addClass( "has_data" );
@@ -1179,7 +1221,29 @@ function BuildReviewHistogram()
 			$elem.click( function() {
 				var startDate = $J( this ).data( 'startDate' );
 				var endDate = $J( this ).data( 'endDate' );
-							} );
+
+				var startDateObj = new Date( startDate * 1000 );
+				var endDateObj = new Date( endDate * 1000 );
+				var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: "UTC" };
+				var strDateRange = startDateObj.toLocaleDateString( undefined, dateOptions ) + " - " + endDateObj.toLocaleDateString( undefined, dateOptions );
+
+				var dialogContent = $J( "<div/>", { class: "review_anomalous_events_dialog" } );
+				dialogContent.append( $J( "<div/>", { class: 'review_anomalous_events_icon', html: '*' } ) );
+				dialogContent.append( $J( "<div/>", { class: 'review_anomalous_events_title', html: strDateRange } ) );
+				dialogContent.append( $J( "<div/>", { style: "clear: left" } ) );
+				dialogContent.append( $J( "<div/>", { html: '<p>This time range has been marked as containing an abnormal set of reviews that we believe are largely unrelated to the likelihood that you would enjoy the product.  The reviews within this period are excluded from the Review Score by default.</p><p>You can learn more about how these time periods are selected by reading <a href="https://steamcommunity.com/games/593110/announcements/detail/1808664240333155775">our Steam blog post.</a></p><p>If you want to dig deeper, you can still read the reviews posted within this time period, or edit your preferences to always include off-topic review periods in Review Scores.</p>' } ) );
+				var dialog = ShowConfirmDialog( 'Off-topic Review Activity', dialogContent, 'Read the Reviews', 'Cancel', 'Edit Preferences' );
+				dialog.done( function( type ) {
+					if ( type == 'OK' )
+					{
+						funcViewReviewsDuringEvent( bCountAllReviews, startDate, endDate );
+					}
+					else if ( type == 'SECONDARY' )
+					{
+						EditUserReviewScorePreference();
+					}
+				} );
+			} );
 		} );
 
 	} );
