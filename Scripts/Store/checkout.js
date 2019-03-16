@@ -3128,7 +3128,7 @@ function UpdatePaymentInfoForm()
 		{
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
+			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_boacompra';
 		}
 		else if ( method.value == 'qiwi' )
 		{
@@ -3139,7 +3139,7 @@ function UpdatePaymentInfoForm()
 		{
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
+			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_degica';
 		}
 		
 		else if ( method.value == 'bitcoin' )
