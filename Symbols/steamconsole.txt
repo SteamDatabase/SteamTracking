@@ -102,10 +102,12 @@
  D s_LogWatchesAllWithType
  D typeinfo for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ D typeinfo for CAppLauncher::CCallback_OnAppLifetimeNotice
  D typeinfo for CAppUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  D typeinfo for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
+ D typeinfo for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
  D typeinfo for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -163,10 +165,12 @@
  D typeinfo for SteamClientConVarAccessor
  D vtable for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  D vtable for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ D vtable for CAppLauncher::CCallback_OnAppLifetimeNotice
  D vtable for CAppUpdater::CCallback_OnAppInfoUpdate
  D vtable for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  D vtable for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
+ D vtable for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
  D vtable for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -237,10 +241,12 @@
  R k_rgchPublicManifest
  R typeinfo name for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CAppInstallerBuilder::CCallback_OnAppBackupStatus
+ R typeinfo name for CAppLauncher::CCallback_OnAppLifetimeNotice
  R typeinfo name for CAppUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
  R typeinfo name for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
+ R typeinfo name for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
  R typeinfo name for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
@@ -349,10 +355,15 @@
  T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::Run(void*)
  T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CAppDepotsUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
- T CAppInstallerBuilder::BRunBuild(char const*, char const*, char const*, char const*)
+ T CAppInstallerBuilder::BBuildBackup(unsigned int, unsigned long long, char const*)
+ T CAppInstallerBuilder::BBuildInstaller(char const*, char const*, char const*, char const*)
  T CAppInstallerBuilder::CCallback_OnAppBackupStatus::Run(void*)
  T CAppInstallerBuilder::CCallback_OnAppBackupStatus::~CCallback_OnAppBackupStatus()
  T CAppInstallerBuilder::OnAppBackupStatus(AppBackupStatus_t*)
+ T CAppLauncher::BRunApp(unsigned int, unsigned int, char const*)
+ T CAppLauncher::CCallback_OnAppLifetimeNotice::Run(void*)
+ T CAppLauncher::CCallback_OnAppLifetimeNotice::~CCallback_OnAppLifetimeNotice()
+ T CAppLauncher::OnAppLifetimeNotice(AppLifetimeNotice_t*)
  T CAppUpdater::BInit(KeyValues*)
  T CAppUpdater::BRunContentUpdate()
  T CAppUpdater::BRunPasswordCheck()
@@ -374,6 +385,10 @@
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Register(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Run(void*)
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::~CCallback()
+ T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::CCallback(CAppLauncher*, void (CAppLauncher::*)(AppLifetimeNotice_t*))
+ T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::Register(CAppLauncher*, void (CAppLauncher::*)(AppLifetimeNotice_t*))
+ T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::Run(void*)
+ T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::~CCallback()
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
  T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
@@ -639,6 +654,7 @@
  T CSteamUser::CCallback_OnSteamLogon::Run(void*)
  T CSteamUser::CCallback_OnSteamLogon::~CCallback_OnSteamLogon()
  T CSteamUser::CSteamUser()
+ T CSteamUser::LogOffBlocking()
  T CSteamUser::LogonBlocking(char const*, char const*, char const*)
  T CSteamUser::OnLoggedOff(SteamServersDisconnected_t*)
  T CSteamUser::OnLogonFailure(SteamServerConnectFailure_t*)
@@ -712,7 +728,6 @@
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, int const&)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed(unsigned int const&, int*, bool)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
@@ -725,7 +740,6 @@
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, int const&)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed(unsigned long long const&, int*, bool)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
@@ -738,7 +752,6 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Find(unsigned short const&) const
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::IncrementalRehash()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertOrReplace(unsigned short const&, int const&)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed(unsigned short const&, int*, bool)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
@@ -996,6 +1009,7 @@
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
  T ConVar::InternalSetFloatValue(float)
+ T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
  T ConVar::IsCommand() const
@@ -1008,6 +1022,7 @@
  T ConVar::SetValue(char const*)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
+ T ConVar::SetValue(long long)
  T ConVar::~ConVar()
  T CreateDirRecursive(char const*)
  T CreateInterface
@@ -1155,6 +1170,9 @@
  T bool BWaitGetAPICallResult<RemoteStoragePublishFileResult_t>(unsigned long long, RemoteStoragePublishFileResult_t*, int)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
@@ -1294,11 +1312,13 @@
  b api_logging_command
  b app_build_all_depots_command
  b app_info_request_command
+ b app_install_script_command
  b app_license_request_command
  b app_run_command
  b app_set_config_command
  b app_uninstall_command
  b app_update_command
+ b build_backup_command
  b build_installer_command
  b ceg_wrap_command
  b download_depot_command
@@ -1528,11 +1548,13 @@
  t api_logging(void*, ConParams&, ConCommand&)
  t app_build_all_depots(void*, ConParams&, ConCommand&)
  t app_info_request(void*, ConParams&, ConCommand&)
+ t app_install_script(void*, ConParams&, ConCommand&)
  t app_license_request(void*, ConParams&, ConCommand&)
  t app_run(void*, ConParams&, ConCommand&)
  t app_set_config(void*, ConParams&, ConCommand&)
  t app_uninstall(void*, ConParams&, ConCommand&)
  t app_update(void*, ConParams&, ConCommand&)
+ t build_backup(void*, ConParams&, ConCommand&)
  t build_installer(void*, ConParams&, ConCommand&)
  t ceg_wrap(void*, ConParams&, ConCommand&)
  t download_depot(void*, ConParams&, ConCommand&)
