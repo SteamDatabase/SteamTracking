@@ -678,7 +678,7 @@ SelectMousePosition
 
 .controller_mobile_touch #BackgroundBaseLinesLeft
 {
-    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_mobile_touch.png");
     background-position: 140px -84px;
 }
 
@@ -690,16 +690,15 @@ SelectMousePosition
 .controller_switch_pro #BackgroundBaseLinesRight,
 .controller_android #BackgroundBaseLinesRight,
 .controller_apple #BackgroundBaseLinesRight,
-.controller_mobile_touch #BackgroundBaseLinesRight 
 {
     background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
     background-position: 190px -70px;
     transform: scalex( -1 );
 }
 
-.controller_mobile_touch #BackgroundBaseLinesRight 
+.controller_mobile_touch #BackgroundBaseLinesRight
 {
-    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_ps4.png");
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_mobile_touch.png");
     background-position: 140px -84px;
     transform: scalex( -1 );
 }
@@ -800,9 +799,8 @@ SelectMousePosition
     visibility: collapse;
 }
 
-#BackgroundLines.LeftGripSelected
-{
-	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
+#BackgroundLines.LeftGripSelected {
+    background-image: url("file://{images}/library/controller/cropped_controller_config_lines_3.png");
 }
 
 .controller_steamcontroller_headcrab #BackgroundLines.LeftGripSelected 
@@ -890,7 +888,7 @@ SelectMousePosition
 .controller_mobile_touch #BackgroundLines.GyroSelected
 {
     background-size: 75%;
-    background-position: 210px 110px;
+    background-position: 220px 110px;
 }
 
 #BackgroundLines.SlotOneSelected
@@ -1137,7 +1135,9 @@ SelectMousePosition
 
 .controller_mobile_touch #PS4TrackpadContainer
 {
-    margin-top: 144px;
+    margin-top: 120px;
+    height: fit-children;
+    z-index: 1000;
 }
 
 .controller_ps4 #PS4TrackpadContainer,
@@ -1157,6 +1157,7 @@ SelectMousePosition
 
 .controller_mobile_touch #GyroModeContainer {
     height: 94px;
+    margin-left: 20px;
 }
 
 
@@ -1233,6 +1234,15 @@ SelectMousePosition
     visibility: collapse;
 }
 
+.controller_mobile_touch .CenterTrackpad
+{
+    visibility: visible;
+    height: 92px;
+    border-color: #0f99bc44;
+    background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
+    margin-bottom: -5px;
+}
+
 .CenterTrackpadHalf
 {
 	height: 96px;
@@ -1245,6 +1255,23 @@ SelectMousePosition
     visibility: visible;
 }
 
+.controller_mobile_touch .CenterTrackpadHalf
+{
+    visibility: visible;
+    height: 96px;
+    border-color: #0f99bc44;
+    background-color: gradient( radial, 50% 90%, 0px 0px, 1000% 100%, from( #102f4b ), to( #080f20aa ) );
+}
+
+.controller_mobile_touch #SwapCenterPadModeToUnified
+{
+    visibility: collapse;
+}
+
+.controller_mobile_touch #SwapCenterPadModeToSplit
+{
+    visibility: collapse;
+}
 
 .SwapCenterPadMode
 {

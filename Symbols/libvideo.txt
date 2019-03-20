@@ -1,5 +1,7 @@
 
  B CCDDBAppDetailCommon::default_instance_
+ B CClanEventUserNewsTuple::default_instance_
+ B CClanMatchEventByRange::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLocalizationToken::default_instance_
@@ -385,6 +387,8 @@
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
+ D typeinfo for CClanEventUserNewsTuple
+ D typeinfo for CClanMatchEventByRange
  D typeinfo for CClientStructNetPacket
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
@@ -558,6 +562,8 @@
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
+ D vtable for CClanEventUserNewsTuple
+ D vtable for CClanMatchEventByRange
  D vtable for CClientStructNetPacket
  D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
@@ -682,6 +688,8 @@
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
+ R typeinfo name for CClanEventUserNewsTuple
+ R typeinfo name for CClanMatchEventByRange
  R typeinfo name for CClientStructNetPacket
  R typeinfo name for CCompletionPortManager
  R typeinfo name for CCookieContainer::CCookieInfo
@@ -1317,6 +1325,28 @@
  T CCircularBuffer::Peek(char*, int)
  T CCircularBuffer::Read(void*, int)
  T CCircularBuffer::Write(void const*, int)
+ T CClanEventUserNewsTuple::ByteSize() const
+ T CClanEventUserNewsTuple::CClanEventUserNewsTuple()
+ T CClanEventUserNewsTuple::Clear()
+ T CClanEventUserNewsTuple::GetCachedSize() const
+ T CClanEventUserNewsTuple::GetMetadata() const
+ T CClanEventUserNewsTuple::IsInitialized() const
+ T CClanEventUserNewsTuple::MergeFrom(CClanEventUserNewsTuple const&)
+ T CClanEventUserNewsTuple::New() const
+ T CClanEventUserNewsTuple::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanEventUserNewsTuple::SetCachedSize(int) const
+ T CClanEventUserNewsTuple::~CClanEventUserNewsTuple()
+ T CClanMatchEventByRange::ByteSize() const
+ T CClanMatchEventByRange::CClanMatchEventByRange()
+ T CClanMatchEventByRange::Clear()
+ T CClanMatchEventByRange::GetCachedSize() const
+ T CClanMatchEventByRange::GetMetadata() const
+ T CClanMatchEventByRange::IsInitialized() const
+ T CClanMatchEventByRange::MergeFrom(CClanMatchEventByRange const&)
+ T CClanMatchEventByRange::New() const
+ T CClanMatchEventByRange::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanMatchEventByRange::SetCachedSize(int) const
+ T CClanMatchEventByRange::~CClanMatchEventByRange()
  T CClassMemoryPool<CNetPacket>::Alloc()
  T CClassMemoryPool<CNetPacket>::Free(CNetPacket*)
  T CClassMemoryPool<CNetPacket>::~CClassMemoryPool()
@@ -1684,8 +1714,8 @@
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
+ T CLogInstance::BCleanupOldLogFiles()
  T CLogInstance::BCloseLog()
- T CLogInstance::BRenameOldLogFiles(bool*)
  T CLogInstance::BStartNewLog(bool)
  T CLogInstance::BTearOffLogFile()
  T CLogInstance::EmitEventNow(CLogEvent*, bool)
@@ -3612,8 +3642,6 @@
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::GetWorkItemName() const
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess(CWorkThread*)
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::~CWebSocketConnectionDelayedCloseConnectionWorkItem()
- T CWorkItem::CWorkItem()
- T CWorkItem::CWorkItem(unsigned long long)
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
  T CWorkItem::Validate(CValidator&, char const*)
  T CWorkItem::~CWorkItem()
@@ -3629,6 +3657,7 @@
  T CWorkItemNetEncryptionHandshakeEncrypt::GetWorkItemName() const
  T CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess(CWorkThread*)
  T CWorkItemNetEncryptionHandshakeEncrypt::~CWorkItemNetEncryptionHandshakeEncrypt()
+ T CWorkItemNetFilterDecrypt::CWorkItemNetFilterDecrypt(CNetFilterEncryption*, unsigned int, CNetPacket*)
  T CWorkItemNetFilterDecrypt::DispatchCompletedWorkItem(CJobMgr*)
  T CWorkItemNetFilterDecrypt::GetThreadProcessName() const
  T CWorkItemNetFilterDecrypt::GetWorkItemName() const
@@ -6024,6 +6053,10 @@
  avresample_open
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CClanEventUserNewsTuple_descriptor_
+ b (anonymous namespace)::CClanEventUserNewsTuple_reflection_
+ b (anonymous namespace)::CClanMatchEventByRange_descriptor_
+ b (anonymous namespace)::CClanMatchEventByRange_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CLocalizationToken_descriptor_
@@ -6054,7 +6087,7 @@
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b CJob::Continue()::s_bCurrentlyProfilingJob
- b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
+ b CLogInstance::BCleanupOldLogFiles()::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
@@ -6943,6 +6976,8 @@
  r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventUserNewsTuple_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanMatchEventByRange_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_

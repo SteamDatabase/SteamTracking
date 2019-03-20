@@ -8,4 +8,5 @@ typedef enum ELauncherType
     k_ELauncherTypeClientui, // clientui
     k_ELauncherTypeSteamhdl, // steamhdl
     k_ELauncherTypeSteamchina, // steamchina
+    k_ELauncherTypeSingleapp, // singleapp
 } ELauncherType;

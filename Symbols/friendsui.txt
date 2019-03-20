@@ -11242,6 +11242,7 @@
  T HTMLFramelessWrapper::OnSetHTMLTitle(char const*)
  T HTMLFramelessWrapper::~HTMLFramelessWrapper()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
+ T HashFunctor<CUtlString>::operator()(CUtlString const&) const
  T IFriendPanelContainer::BInviteUserToGame(CSteamID const&)
  T IFriendPanelContainer::BOpenProfile()
  T IFriendPanelContainer::BRightAligned()
@@ -16474,6 +16475,7 @@
  b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
+ b g_pClientSTARInternal
  b g_pClientScreenshots
  b g_pClientShader
  b g_pClientSharedConnection

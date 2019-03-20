@@ -5819,8 +5819,8 @@
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
+ T CLogInstance::BCleanupOldLogFiles()
  T CLogInstance::BCloseLog()
- T CLogInstance::BRenameOldLogFiles(bool*)
  T CLogInstance::BStartNewLog(bool)
  T CLogInstance::BTearOffLogFile()
  T CLogInstance::EmitEventNow(CLogEvent*, bool)
@@ -10327,6 +10327,7 @@
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
+ T HashFunctor<CUtlString>::operator()(CUtlString const&) const
  T IHTMLResponses::~IHTMLResponses()
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -14968,7 +14969,7 @@
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings
- b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
+ b CLogInstance::BCleanupOldLogFiles()::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
@@ -15069,6 +15070,7 @@
  b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
+ b g_pClientSTARInternal
  b g_pClientScreenshots
  b g_pClientShader
  b g_pClientSharedConnection

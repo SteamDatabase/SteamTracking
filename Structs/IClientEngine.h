@@ -75,6 +75,7 @@ public:
     virtual unknown_ret GetIClientNetworkingSockets(int, int) = 0;
     virtual unknown_ret GetIClientNetworkingUtils(int) = 0;
     virtual unknown_ret GetIClientNetworkingUtilsSerialized(int) = 0;
+    virtual unknown_ret GetIClientSTARInternal(int, int) = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret ~CSteamClient() = 0;
     virtual unknown_ret GetIPCServerMap() = 0;

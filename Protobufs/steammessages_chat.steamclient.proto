@@ -66,6 +66,7 @@ message CChatRoom_CreateChatRoomGroup_Request {
 	optional string name = 3;
 	repeated fixed64 steamid_invitees = 4;
 	optional uint32 watching_broadcast_accountid = 6;
+	optional uint64 watching_broadcast_channel_id = 7;
 }
 
 message CChatRole {
@@ -109,6 +110,7 @@ message CChatRoomGroupHeaderState {
 	repeated .CChatRoleActions role_actions = 19;
 	optional uint32 watching_broadcast_accountid = 20;
 	repeated .CChatPartyBeacon party_beacons = 22;
+	optional uint64 watching_broadcast_channel_id = 23;
 }
 
 message CChatRoomMember {
@@ -198,6 +200,7 @@ message CChatRoom_SetChatRoomGroupAvatar_Response {
 message CChatRoom_SetChatRoomGroupWatchingBroadcast_Request {
 	optional uint64 chat_group_id = 1;
 	optional uint32 watching_broadcast_accountid = 2;
+	optional uint64 watching_broadcast_channel_id = 3;
 }
 
 message CChatRoom_SetChatRoomGroupWatchingBroadcast_Response {
@@ -473,6 +476,7 @@ message CChatRoom_GetChatRoomGroupSummary_Response {
 	optional uint32 watching_broadcast_accountid = 16;
 	optional uint32 appid = 17;
 	repeated .CChatPartyBeacon party_beacons = 18;
+	optional uint64 watching_broadcast_channel_id = 19;
 }
 
 message CChatRoomSummaryPair {

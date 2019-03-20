@@ -1302,17 +1302,17 @@
     {
         "id": 1321,
         "size": 12,
-        "posted_in": "CClientJobPublishedFileSubscribed::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CClientJobPublishedFileSubscribed::YieldingRunMethod(CUser*, CPublishedFile_FileSubscribed_Notification const&)"
     },
     {
         "id": 1322,
         "size": 12,
-        "posted_in": "CClientJobPublishedFileUnsubscribed::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CClientJobPublishedFileUnsubscribed::YieldingRunMethod(CUser*, CPublishedFile_FileUnsubscribed_Notification const&)"
     },
     {
         "id": 1323,
         "size": 12,
-        "posted_in": "CClientJobPublishedFileDeleted::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CClientJobPublishedFileDeleted::YieldingRunMethod(CUser*, CPublishedFile_FileDeleted_Client_Notification const&)"
     },
     {
         "id": 1324,
@@ -2463,5 +2463,10 @@
         "id": 5401,
         "size": 280,
         "posted_in": "void CBaseAPIJob::PostAPIResult<ReservePartySlotCallback_t>(ReservePartySlotCallback_t*)"
+    },
+    {
+        "id": 5500,
+        "size": 16,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<SendSerializedMessageResult_t>(SendSerializedMessageResult_t*)"
     }
 ]

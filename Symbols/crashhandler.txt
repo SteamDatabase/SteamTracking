@@ -613,3 +613,5 @@
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
+ waitpid
+ waitpid$UNIX2003

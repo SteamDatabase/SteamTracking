@@ -1157,3 +1157,34 @@ BLEFirmwareLearnMore
 	url			"http://link.steampowered.com"
 	method		"external"
 }
+CommunityMarketMultiBuy
+{
+	url			"%community%/market/multibuy?appid=%p1%&%p2%"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketMultiSell
+{
+	url			"%community%/market/multisell?appid=%p1%&contextid=%p2%&%p3%"
+	method		"internal"
+	filter		"community"
+}
+CommunityMarketSearch
+{
+	url		"%community%/market/listings/%p1%/%p2%"
+	method		"internal"
+	filter		"community"
+}
+GameHubTradingForum
+{
+	url			"%community%/app/%p1%/tradingforum/"
+	method		"internal"
+	filter		"community"
+}
+StoreAppHover
+{
+	url			"%store%/application/hover/%p1%/?iframe=1"
+	method		"internal"
+	filter		"store"
+}
+

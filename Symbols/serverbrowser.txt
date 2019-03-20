@@ -5721,6 +5721,7 @@
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
+ T HashFunctor<CUtlString>::operator()(CUtlString const&) const
  T IHTMLResponses::~IHTMLResponses()
  T IPAddressCompare(vgui::ListPanelItem const&, vgui::ListPanelItem const&)
  T IPv6AddrToString
@@ -9441,6 +9442,7 @@
  b g_pClientParties
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
+ b g_pClientSTARInternal
  b g_pClientScreenshots
  b g_pClientShader
  b g_pClientSharedConnection

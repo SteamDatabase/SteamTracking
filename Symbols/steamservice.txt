@@ -1,4 +1,6 @@
  B CCDDBAppDetailCommon::default_instance_
+ B CClanEventUserNewsTuple::default_instance_
+ B CClanMatchEventByRange::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLocalizationToken::default_instance_
@@ -219,6 +221,8 @@
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
+ D typeinfo for CClanEventUserNewsTuple
+ D typeinfo for CClanMatchEventByRange
  D typeinfo for CClientInstallUtils
  D typeinfo for CClientModuleManager
  D typeinfo for CClientModuleManagerAsync
@@ -301,6 +305,8 @@
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
+ D vtable for CClanEventUserNewsTuple
+ D vtable for CClanMatchEventByRange
  D vtable for CClientInstallUtils
  D vtable for CClientModuleManager
  D vtable for CClientModuleManagerAsync
@@ -372,6 +378,8 @@
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
+ R typeinfo name for CClanEventUserNewsTuple
+ R typeinfo name for CClanMatchEventByRange
  R typeinfo name for CClientInstallUtils
  R typeinfo name for CClientModuleManager
  R typeinfo name for CClientModuleManagerAsync
@@ -698,6 +706,28 @@
  T CCDDBAppDetailCommon::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::set_propagation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::~CCDDBAppDetailCommon()
+ T CClanEventUserNewsTuple::ByteSize() const
+ T CClanEventUserNewsTuple::CClanEventUserNewsTuple()
+ T CClanEventUserNewsTuple::Clear()
+ T CClanEventUserNewsTuple::GetCachedSize() const
+ T CClanEventUserNewsTuple::GetMetadata() const
+ T CClanEventUserNewsTuple::IsInitialized() const
+ T CClanEventUserNewsTuple::MergeFrom(CClanEventUserNewsTuple const&)
+ T CClanEventUserNewsTuple::New() const
+ T CClanEventUserNewsTuple::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanEventUserNewsTuple::SetCachedSize(int) const
+ T CClanEventUserNewsTuple::~CClanEventUserNewsTuple()
+ T CClanMatchEventByRange::ByteSize() const
+ T CClanMatchEventByRange::CClanMatchEventByRange()
+ T CClanMatchEventByRange::Clear()
+ T CClanMatchEventByRange::GetCachedSize() const
+ T CClanMatchEventByRange::GetMetadata() const
+ T CClanMatchEventByRange::IsInitialized() const
+ T CClanMatchEventByRange::MergeFrom(CClanMatchEventByRange const&)
+ T CClanMatchEventByRange::New() const
+ T CClanMatchEventByRange::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanMatchEventByRange::SetCachedSize(int) const
+ T CClanMatchEventByRange::~CClanMatchEventByRange()
  T CClassMemoryPool<CNetPacket>::~CClassMemoryPool()
  T CClientInstallUtils::AddInstallScriptToWhiteList(char const*, char const*)
  T CClientInstallUtils::AddShortcut(char const*, char const*, char const*, char const*, char const*)
@@ -930,8 +960,8 @@
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
+ T CLogInstance::BCleanupOldLogFiles()
  T CLogInstance::BCloseLog()
- T CLogInstance::BRenameOldLogFiles(bool*)
  T CLogInstance::BStartNewLog(bool)
  T CLogInstance::BTearOffLogFile()
  T CLogInstance::EmitEventNow(CLogEvent*, bool)
@@ -1831,7 +1861,6 @@
  T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
- T CWorkItem::CWorkItem()
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
  T CWorkItem::Validate(CValidator&, char const*)
  T CWorkItem::~CWorkItem()
@@ -3272,6 +3301,10 @@
  atoll
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CClanEventUserNewsTuple_descriptor_
+ b (anonymous namespace)::CClanEventUserNewsTuple_reflection_
+ b (anonymous namespace)::CClanMatchEventByRange_descriptor_
+ b (anonymous namespace)::CClanMatchEventByRange_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CLocalizationToken_descriptor_
@@ -3303,7 +3336,7 @@
  b CIPCServer::Thread_MainLoop()::fAsserted
  b CIPCServer::Thread_MainLoop()::signalWorkThreadPool
  b CJob::Continue()::s_bCurrentlyProfilingJob
- b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
+ b CLogInstance::BCleanupOldLogFiles()::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
@@ -3967,6 +4000,8 @@
  r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventUserNewsTuple_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanMatchEventByRange_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_

@@ -204,6 +204,22 @@ message CPlayer_UpdateSteamAnnouncementLastRead_Request {
 message CPlayer_UpdateSteamAnnouncementLastRead_Response {
 }
 
+message CPlayer_GetPrivacySettings_Request {
+}
+
+message CPrivacySettings {
+	optional int32 privacy_state = 1;
+	optional int32 privacy_state_inventory = 2;
+	optional int32 privacy_state_gifts = 3;
+	optional int32 privacy_state_ownedgames = 4;
+	optional int32 privacy_state_playtime = 5;
+	optional int32 privacy_state_friendslist = 6;
+}
+
+message CPlayer_GetPrivacySettings_Response {
+	optional .CPrivacySettings privacy_settings = 1;
+}
+
 message CPlayer_LastPlayedTimes_Notification {
 	repeated .CPlayer_GetLastPlayedTimes_Response.Game games = 1;
 }
@@ -229,6 +245,10 @@ message CPlayer_CommunityPreferencesChanged_Notification {
 message CPlayer_PerFriendPreferencesChanged_Notification {
 	optional fixed32 accountid = 1;
 	optional .PerFriendPreferences preferences = 2;
+}
+
+message CPlayer_PrivacySettingsChanged_Notification {
+	optional .CPrivacySettings privacy_settings = 1;
 }
 
 service Player {
@@ -281,6 +301,9 @@ service Player {
 	rpc UpdateSteamAnnouncementLastRead (.CPlayer_UpdateSteamAnnouncementLastRead_Request) returns (.CPlayer_UpdateSteamAnnouncementLastRead_Response) {
 		option (method_description) = "Marks latest announcement timestamp read by user";
 	}
+	rpc GetPrivacySettings (.CPlayer_GetPrivacySettings_Request) returns (.CPlayer_GetPrivacySettings_Response) {
+		option (method_description) = "Get current privacy settings.";
+	}
 }
 service PlayerClient {
 	option (service_description) = "Steam player data client notifications";
@@ -299,5 +322,8 @@ service PlayerClient {
 	}
 	rpc NotifyPerFriendPreferencesChanged (.CPlayer_PerFriendPreferencesChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server that per-friend preferences have changed";
+	}
+	rpc NotifyPrivacyPrivacySettingsChanged (.CPlayer_PrivacySettingsChanged_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from server that privacy settings changed";
 	}
 }
