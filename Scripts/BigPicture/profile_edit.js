@@ -372,7 +372,8 @@ function SavePrivacySettings()
 		PrivacyOwnedGames: $('#gameLibraryPrivacySetting_private').GetSelectedButton().GetAttributeString('value', ''),
 		PrivacyPlaytime: $('#PlaytimePrivacy').checked ? 1 : 3,
 		PrivacyInventory: $('#inventoryPrivacySetting_private').GetSelectedButton().GetAttributeString('value', ''),
-		PrivacyInventoryGifts: $('#InventoryGiftPrivacy').checked ? 1 : 0
+		PrivacyInventoryGifts: $('#InventoryGiftPrivacy').checked ? 1 : 0,
+		PrivacyFriendsList: $('#friendsListPrivacySetting_private').GetSelectedButton().GetAttributeString('value', '')
 	};
 
 	var rgData = {

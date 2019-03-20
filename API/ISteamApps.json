@@ -121,6 +121,25 @@
             ]
         },
         {
+            "name": "GetSDRConfig",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game"
+                },
+                {
+                    "name": "partner",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Partner type"
+                }
+            ]
+        },
+        {
             "name": "GetServerList",
             "version": 1,
             "httpmethod": "GET",

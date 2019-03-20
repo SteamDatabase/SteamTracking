@@ -3105,7 +3105,7 @@ function UpdatePaymentInfoForm()
 			|| method.value == 'halkbank' || method.value == 'bankasya' || method.value == 'finansbank'
 			|| method.value == 'denizbank' || method.value == 'ptt' || method.value == 'cashu'
 			|| method.value == 'onecard'
-			|| method.value == 'molpoints' || method.value == 'beeline' || method.value == 'eclubpoints'
+			|| method.value == 'molpoints' || method.value == 'eclubpoints'
 			|| method.value == 'oxxo' || method.value == 'toditocash' || method.value == 'pse' || method.value == 'exito' || method.value == 'efecty'
 			|| method.value == 'baloto' || method.value == 'pinvalidda' || method.value == 'mangirkart' || method.value == 'bancocreditodeperu'  
 			|| method.value == 'bbvacontinental' || method.value == 'pagoefectivo' || method.value == 'trustly' 
@@ -3128,7 +3128,7 @@ function UpdatePaymentInfoForm()
 		{
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_boacompra';
+			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
 		else if ( method.value == 'qiwi' )
 		{
@@ -3139,9 +3139,14 @@ function UpdatePaymentInfoForm()
 		{
 			bShowCountryVerification = true;
 			bShowPaymentSpecificNote = true;
-			$('payment_method_specific_note').innerHTML = '#checkout_payment_method_specific_note_degica';
+			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
 		}
-		
+		else if ( method.value == 'beeline' )
+		{
+			bShowCountryVerification = true;
+			bShowPaymentSpecificNote = true;
+			$('payment_method_specific_note').innerHTML = 'Your bank or payment processor may charge an additional service fee for using this payment method';
+		}		
 		else if ( method.value == 'bitcoin' )
 		{
 						bShowCountryVerification = $('billing_country').value != 'US';
@@ -3365,6 +3370,10 @@ function OnVerifyShippingAddressSuccess( result )
 {
 	try 
 	{
+		ValidationMarkFieldOk( $('shipping_address') );
+		ValidationMarkFieldOk( $('shipping_address_two') );
+		ValidationMarkFieldOk( $('shipping_postal_code') );
+		
 				if ( result.eShippingAddressVerificationDetail != 0 )
 		{
 						SetTabEnabled( 'shipping_info' );
@@ -3382,6 +3391,8 @@ function OnVerifyShippingAddressSuccess( result )
 				case 1:
 				case 5:
 					error_text = 'We cannot ship your order to P.O. Box, APO, FPO, or DPO address that you\'ve provided.';
+					ValidationMarkFieldBad( $('shipping_address') );
+					ValidationMarkFieldBad( $('shipping_address_two') );
 					break;
 
 				case 6:
@@ -3390,10 +3401,16 @@ function OnVerifyShippingAddressSuccess( result )
 					
 				case 7:
 					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
+					ValidationMarkFieldBad( $('shipping_postal_code') );
 					break;					
 
 				case 2:
 					error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
+					break;
+					
+				case 8:
+					error_text = 'Your postal code appears to be incorrect and should match this format \'%1$s\'.<br>Please verify and re-enter your postal code to complete the order.'.replace( /%1\$s/, result.verificationDetailExample );
+					ValidationMarkFieldBad( $('shipping_postal_code') );
 					break;
 			}
 			DisplayErrorMessage( error_text );		

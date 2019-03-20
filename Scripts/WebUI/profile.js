@@ -154,10 +154,10 @@
         return y;
       }),
       n.d(t, "g", function() {
-        return _;
+        return b;
       }),
       n.d(t, "f", function() {
-        return b;
+        return _;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -303,7 +303,7 @@
             ? t.mozRequestFullScreen()
             : t.msRequestFullscreen && t.msRequestFullscreen();
     }
-    function _(e) {
+    function b(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
@@ -313,7 +313,7 @@
             ? t.mozCancelFullScreen()
             : t.msExitFullscreen && t.msExitFullscreen();
     }
-    var b = (function() {
+    var _ = (function() {
       function e(e) {
         var i = this;
         (this.m_bNeedSort = !1),
@@ -836,10 +836,10 @@
       return y;
     }),
       n.d(t, "d", function() {
-        return _;
+        return b;
       }),
       n.d(t, "b", function() {
-        return b;
+        return _;
       }),
       n.d(t, "e", function() {
         return g;
@@ -857,7 +857,7 @@
         return S;
       }),
       n.d(t, "h", function() {
-        return k;
+        return M;
       }),
       n.d(t, "j", function() {
         return C;
@@ -906,7 +906,7 @@
           t
         );
       })(s.PureComponent),
-      _ = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -958,7 +958,7 @@
           t
         );
       })(s.PureComponent),
-      b = (function(e) {
+      _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -971,7 +971,7 @@
               r = e.className,
               o = c.f(e, ["bChecked", "children", "className"]);
             return s.createElement(
-              _,
+              b,
               c.a({}, o, { className: Object(v.a)(r, t && "menuChecked") }),
               s.createElement("div", { className: "contextMenuCheckMark" }),
               n
@@ -1022,7 +1022,7 @@
             return (
               this.state.bActive && (n = (n || "") + " " + f.a.active),
               s.createElement(
-                _,
+                b,
                 c.a({}, r, {
                   onClick: this.OnClick,
                   className: n,
@@ -1181,31 +1181,31 @@
                 v = a || r.right,
                 y = o.width;
               c.bMatchWidth && ((y = v - f), (s.menuWidth = y));
-              var _ = (c.bOverlapHorizontal ? v : f) - y,
-                b = 0 < _,
+              var b = (c.bOverlapHorizontal ? v : f) - y,
+                _ = 0 < b,
                 g = u - (c.bOverlapHorizontal ? f : v) - y,
                 w = 0 < g,
-                x = (c.bPreferPopLeft || !w) && b;
-              b ||
+                x = (c.bPreferPopLeft || !w) && _;
+              _ ||
                 w ||
-                ((x = w < b),
-                c.bFitToWindow && ((y += (x ? _ : g) - 8), (s.menuWidth = y))),
-                (!c.bPreferPopLeft && w) || !b
+                ((x = w < _),
+                c.bFitToWindow && ((y += (x ? b : g) - 8), (s.menuWidth = y))),
+                (!c.bPreferPopLeft && w) || !_
                   ? (s.menuLeft = c.bOverlapHorizontal ? f : v)
                   : (s.menuRight = u - (c.bOverlapHorizontal ? v : f));
               var E = l || r.top,
                 S = l || r.bottom,
-                M = o.height;
-              c.bMatchHeight && ((M = S - E), (s.menuHeight = M));
-              var k = (c.bOverlapVertical ? S : E) - M,
-                C = 0 < k,
-                P = m - (c.bOverlapVertical ? E : S) - M,
+                k = o.height;
+              c.bMatchHeight && ((k = S - E), (s.menuHeight = k));
+              var M = (c.bOverlapVertical ? S : E) - k,
+                C = 0 < M,
+                P = m - (c.bOverlapVertical ? E : S) - k,
                 I = 0 < P,
                 L = (c.bPreferPopTop || !I) && C;
               C ||
                 I ||
-                ((L = P < k),
-                c.bFitToWindow && ((M += (L ? k : P) - 8), (s.menuHeight = M))),
+                ((L = P < M),
+                c.bFitToWindow && ((k += (L ? M : P) - 8), (s.menuHeight = k))),
                 L
                   ? (s.menuBottom = m - (c.bOverlapVertical ? S : E))
                   : (s.menuTop = c.bOverlapVertical ? E : S),
@@ -1396,7 +1396,7 @@
         (n.document.queryCommandEnabled("cut") || (o && c)) &&
           t.push(
             s.createElement(
-              _,
+              b,
               {
                 key: "cut",
                 onSelected: function() {
@@ -1409,7 +1409,7 @@
         (document.queryCommandEnabled("copy") || o) &&
           t.push(
             s.createElement(
-              _,
+              b,
               {
                 key: "copy",
                 onSelected: function() {
@@ -1423,7 +1423,7 @@
           c &&
           t.push(
             s.createElement(
-              _,
+              b,
               {
                 key: "paste",
                 onSelected: function() {
@@ -1441,16 +1441,16 @@
         e.preventDefault(), e.stopPropagation();
       }
     }
-    var M = "DEBUG_StickyContextMenus";
-    function k() {
+    var k = "DEBUG_StickyContextMenus";
+    function M() {
       return (
-        window.sessionStorage && "true" == window.sessionStorage.getItem(M)
+        window.sessionStorage && "true" == window.sessionStorage.getItem(k)
       );
     }
     function C(e) {
       e
-        ? window.sessionStorage.setItem(M, "true")
-        : window.sessionStorage.removeItem(M);
+        ? window.sessionStorage.setItem(k, "true")
+        : window.sessionStorage.removeItem(k);
     }
   },
   "G+3Z": function(e, t, n) {
@@ -2060,12 +2060,12 @@
               var v = d[f];
               if ("stylesheet" == v.rel) {
                 for (
-                  var y = l.document.createElement("link"), _ = 0;
-                  _ < v.attributes.length;
-                  _++
+                  var y = l.document.createElement("link"), b = 0;
+                  b < v.attributes.length;
+                  b++
                 ) {
-                  var b = v.attributes.item(_);
-                  y.setAttribute(b.name, b.value);
+                  var _ = v.attributes.item(b);
+                  y.setAttribute(_.name, _.value);
                 }
                 h.appendChild(y);
               }
@@ -2414,8 +2414,8 @@
       })(),
       v = n("1VtQ"),
       y = n("8o0Y"),
-      _ = n("EGkk"),
-      b = n("okNM"),
+      b = n("EGkk"),
+      _ = n("okNM"),
       g = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -2469,7 +2469,7 @@
                   Object(s.b)("#ProfilePrivacy_GameLibrary_Desc"),
                   1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                     i.createElement(
-                      k,
+                      M,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyPlaytime",
@@ -2513,7 +2513,7 @@
                   ),
                   1 != e.GetPrivacySetting("PrivacyInventory") &&
                     i.createElement(
-                      k,
+                      M,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyInventoryGifts",
@@ -2555,7 +2555,7 @@
               )
             );
           }),
-          (t = a.c([b.a], t))
+          (t = a.c([_.a], t))
         );
       })(i.Component);
     function w(e) {
@@ -2640,7 +2640,7 @@
                   "public/images/skin_1/actionArrowDnWhite.gif"
               })
             ),
-            i.createElement(M, {
+            i.createElement(k, {
               eSaveState: this.props.PrivacyStore.GetSaveState(
                 this.props.PrivacyKey
               )
@@ -2649,10 +2649,10 @@
         }),
         a.c([v.a], t.prototype, "OnClick", null),
         a.c([v.a], t.prototype, "OnSettingChanged", null),
-        (t = a.c([b.a], t))
+        (t = a.c([_.a], t))
       );
     })(i.Component);
-    function M(e) {
+    function k(e) {
       switch (e.eSaveState) {
         case 1:
           return i.createElement(
@@ -2677,7 +2677,7 @@
           return null;
       }
     }
-    var k = (function(e) {
+    var M = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2716,7 +2716,7 @@
             );
           }),
           a.c([v.a], t.prototype, "OnCheckboxChecked", null),
-          (t = a.c([b.a], t))
+          (t = a.c([_.a], t))
         );
       })(S),
       C = (function(n) {
@@ -2774,14 +2774,14 @@
                     "public/images/skin_1/actionArrowDnWhite.gif"
                 })
               ),
-              i.createElement(M, {
+              i.createElement(k, {
                 eSaveState: this.props.PrivacyStore.GetCommentSaveState()
               })
             );
           }),
           a.c([v.a], e.prototype, "OnClick", null),
           a.c([v.a], e.prototype, "OnSettingChanged", null),
-          (e = a.c([b.a], e))
+          (e = a.c([_.a], e))
         );
       })(i.Component);
     function P(e) {
@@ -2801,11 +2801,11 @@
             var e = this,
               t = this.props.eMinPrivacy;
             return i.createElement(
-              _.c,
+              b.c,
               null,
               (!t || 3 <= t) &&
                 i.createElement(
-                  _.d,
+                  b.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(3);
@@ -2815,7 +2815,7 @@
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
-                  _.d,
+                  b.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(2);
@@ -2824,7 +2824,7 @@
                   Object(s.b)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
-                _.d,
+                b.d,
                 {
                   onSelected: function() {
                     return e.props.OnChange(1);
@@ -2847,11 +2847,11 @@
             var e = this,
               t = this.props.eMinPrivacy;
             return i.createElement(
-              _.c,
+              b.c,
               null,
               (!t || 3 <= t) &&
                 i.createElement(
-                  _.d,
+                  b.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(1);
@@ -2862,7 +2862,7 @@
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
-                  _.d,
+                  b.d,
                   {
                     onSelected: function() {
                       return e.props.OnChange(0);
@@ -2874,7 +2874,7 @@
                   Object(s.b)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
-                _.d,
+                b.d,
                 {
                   onSelected: function() {
                     return e.props.OnChange(2);
@@ -3012,10 +3012,10 @@
         return y;
       }),
       n.d(t, "lb", function() {
-        return _;
+        return b;
       }),
       n.d(t, "ib", function() {
-        return b;
+        return _;
       }),
       n.d(t, "bb", function() {
         return g;
@@ -3033,10 +3033,10 @@
         return S;
       }),
       n.d(t, "s", function() {
-        return M;
+        return k;
       }),
       n.d(t, "A", function() {
-        return k;
+        return M;
       }),
       n.d(t, "J", function() {
         return C;
@@ -3069,10 +3069,10 @@
         return G;
       }),
       n.d(t, "B", function() {
-        return z;
+        return D;
       }),
       n.d(t, "cb", function() {
-        return D;
+        return z;
       }),
       n.d(t, "gb", function() {
         return W;
@@ -3648,7 +3648,7 @@
         )
       );
     }
-    function _() {
+    function b() {
       return r.createElement(
         "svg",
         {
@@ -3684,7 +3684,7 @@
         })
       );
     }
-    function b(e) {
+    function _(e) {
       return r.createElement(
         "svg",
         {
@@ -4031,7 +4031,7 @@
         })
       );
     }
-    function M() {
+    function k() {
       return r.createElement(
         "svg",
         {
@@ -4075,7 +4075,7 @@
         })
       );
     }
-    function k() {
+    function M() {
       return r.createElement(
         "svg",
         {
@@ -4571,7 +4571,7 @@
         )
       );
     }
-    function z() {
+    function D() {
       return r.createElement(
         "svg",
         {
@@ -4601,7 +4601,7 @@
         })
       );
     }
-    function D(e) {
+    function z(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -6114,6 +6114,214 @@
           y2: "55.004"
         })
       );
+    }
+  },
+  mrSG: function(e, t, n) {
+    "use strict";
+    n.d(t, "d", function() {
+      return o;
+    }),
+      n.d(t, "a", function() {
+        return i;
+      }),
+      n.d(t, "f", function() {
+        return c;
+      }),
+      n.d(t, "c", function() {
+        return s;
+      }),
+      n.d(t, "b", function() {
+        return a;
+      }),
+      n.d(t, "e", function() {
+        return l;
+      });
+    /*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+    var r = function(e, t) {
+      return (r =
+        Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &&
+          function(e, t) {
+            e.__proto__ = t;
+          }) ||
+        function(e, t) {
+          for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+        })(e, t);
+    };
+    function o(e, t) {
+      function n() {
+        this.constructor = e;
+      }
+      r(e, t),
+        (e.prototype =
+          null === t
+            ? Object.create(t)
+            : ((n.prototype = t.prototype), new n()));
+    }
+    var i = function() {
+      return (i =
+        Object.assign ||
+        function(e) {
+          for (var t, n = 1, r = arguments.length; n < r; n++)
+            for (var o in (t = arguments[n]))
+              Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
+          return e;
+        }).apply(this, arguments);
+    };
+    function c(e, t) {
+      var n = {};
+      for (var r in e)
+        Object.prototype.hasOwnProperty.call(e, r) &&
+          t.indexOf(r) < 0 &&
+          (n[r] = e[r]);
+      if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
+        var o = 0;
+        for (r = Object.getOwnPropertySymbols(e); o < r.length; o++)
+          t.indexOf(r[o]) < 0 && (n[r[o]] = e[r[o]]);
+      }
+      return n;
+    }
+    function s(e, t, n, r) {
+      var o,
+        i = arguments.length,
+        c =
+          i < 3
+            ? t
+            : null === r ? (r = Object.getOwnPropertyDescriptor(t, n)) : r;
+      if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
+        c = Reflect.decorate(e, t, n, r);
+      else
+        for (var s = e.length - 1; 0 <= s; s--)
+          (o = e[s]) &&
+            (c = (i < 3 ? o(c) : 3 < i ? o(t, n, c) : o(t, n)) || c);
+      return 3 < i && c && Object.defineProperty(t, n, c), c;
+    }
+    function a(i, c, s, a) {
+      return new (s || (s = Promise))(function(e, t) {
+        function n(e) {
+          try {
+            o(a.next(e));
+          } catch (e) {
+            t(e);
+          }
+        }
+        function r(e) {
+          try {
+            o(a.throw(e));
+          } catch (e) {
+            t(e);
+          }
+        }
+        function o(t) {
+          t.done
+            ? e(t.value)
+            : new s(function(e) {
+                e(t.value);
+              }).then(n, r);
+        }
+        o((a = a.apply(i, c || [])).next());
+      });
+    }
+    function l(n, r) {
+      var o,
+        i,
+        c,
+        e,
+        s = {
+          label: 0,
+          sent: function() {
+            if (1 & c[0]) throw c[1];
+            return c[1];
+          },
+          trys: [],
+          ops: []
+        };
+      return (
+        (e = { next: t(0), throw: t(1), return: t(2) }),
+        "function" == typeof Symbol &&
+          (e[Symbol.iterator] = function() {
+            return this;
+          }),
+        e
+      );
+      function t(t) {
+        return function(e) {
+          return (function(t) {
+            if (o) throw new TypeError("Generator is already executing.");
+            for (; s; )
+              try {
+                if (
+                  ((o = 1),
+                  i &&
+                    (c =
+                      2 & t[0]
+                        ? i.return
+                        : t[0]
+                          ? i.throw || ((c = i.return) && c.call(i), 0)
+                          : i.next) &&
+                    !(c = c.call(i, t[1])).done)
+                )
+                  return c;
+                switch (((i = 0), c && (t = [2 & t[0], c.value]), t[0])) {
+                  case 0:
+                  case 1:
+                    c = t;
+                    break;
+                  case 4:
+                    return s.label++, { value: t[1], done: !1 };
+                  case 5:
+                    s.label++, (i = t[1]), (t = [0]);
+                    continue;
+                  case 7:
+                    (t = s.ops.pop()), s.trys.pop();
+                    continue;
+                  default:
+                    if (
+                      !(c = 0 < (c = s.trys).length && c[c.length - 1]) &&
+                      (6 === t[0] || 2 === t[0])
+                    ) {
+                      s = 0;
+                      continue;
+                    }
+                    if (3 === t[0] && (!c || (t[1] > c[0] && t[1] < c[3]))) {
+                      s.label = t[1];
+                      break;
+                    }
+                    if (6 === t[0] && s.label < c[1]) {
+                      (s.label = c[1]), (c = t);
+                      break;
+                    }
+                    if (c && s.label < c[2]) {
+                      (s.label = c[2]), s.ops.push(t);
+                      break;
+                    }
+                    c[2] && s.ops.pop(), s.trys.pop();
+                    continue;
+                }
+                t = r.call(n, s);
+              } catch (e) {
+                (t = [6, e]), (i = 0);
+              } finally {
+                o = c = 0;
+              }
+            if (5 & t[0]) throw t[1];
+            return { value: t[0] ? t[1] : void 0, done: !0 };
+          })([t, e]);
+        };
+      }
     }
   },
   oh5H: function(e, t, n) {

@@ -69,7 +69,7 @@ LocalizationReady("friendsui", "english", {
   Broadcast_LinkBroadcastToGroup_New: "Watch with friends in a new group",
   Broadcast_WatchWithExistingWatchParty: "Watch with group",
   Broadcast_WatchWithFriends: "Watch with friends",
-  Broadcast_WatchParty_Viewers_NoneActive: "Watch with this group",
+  Broadcast_WatchParty_Viewers_NoneActive: "Watching a broadcast",
   Broadcast_WatchParty_Viewers: "%1$s person watching this broadcast",
   Broadcast_WatchParty_Viewers_Plural: "%1$s people watching this broadcast",
   Broadcast_EndWatchParty: "End Watch Party",
@@ -1042,6 +1042,8 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Mobile_BlockDesc:
     "They'll see you as offline and you won't receive chat messages from them",
   FriendSettings_Mobile_Notifications: "Mobile Notifications",
+  FriendSettings_Mobile_InlineEmbedOnWifiOnly:
+    "Only embed images and other media when on wifi",
 
   TradeOfferLink_SendUserOffer: "Send %1$s a trade offer",
   TradeOfferLink_SendOffer: "Send a trade offer",

@@ -2,58 +2,35 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-!(function(s) {
-  function e(e) {
-    for (
-      var t, n, o = e[0], r = e[1], i = e[2], c = 0, u = [];
-      c < o.length;
-      c++
-    )
-      (n = o[c]), l[n] && u.push(l[n][0]), (l[n] = 0);
-    for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (s[t] = r[t]);
-    for (d && d(e); u.length; ) u.shift()();
-    return p.push.apply(p, i || []), a();
+!(function(n) {
+  var o = {};
+  function r(e) {
+    if (o[e]) return o[e].exports;
+    var t = (o[e] = { i: e, l: !1, exports: {} });
+    return n[e].call(t.exports, t, t.exports, r), (t.l = !0), t.exports;
   }
-  function a() {
-    for (var e, t = 0; t < p.length; t++) {
-      for (var n = p[t], o = !0, r = 1; r < n.length; r++) {
-        var i = n[r];
-        0 !== l[i] && (o = !1);
-      }
-      o && (p.splice(t--, 1), (e = c((c.s = n[0]))));
-    }
-    return e;
-  }
-  var n = {},
-    l = { 2: 0 },
-    p = [];
-  function c(e) {
-    if (n[e]) return n[e].exports;
-    var t = (n[e] = { i: e, l: !1, exports: {} });
-    return s[e].call(t.exports, t, t.exports, c), (t.l = !0), t.exports;
-  }
-  (c.m = s),
-    (c.c = n),
-    (c.d = function(e, t, n) {
-      c.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+  (r.m = n),
+    (r.c = o),
+    (r.d = function(e, t, n) {
+      r.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
     }),
-    (c.r = function(e) {
+    (r.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (c.t = function(t, e) {
-      if ((1 & e && (t = c(t)), 8 & e)) return t;
+    (r.t = function(t, e) {
+      if ((1 & e && (t = r(t)), 8 & e)) return t;
       if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var n = Object.create(null);
       if (
-        (c.r(n),
+        (r.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: t }),
         2 & e && "string" != typeof t)
       )
         for (var o in t)
-          c.d(
+          r.d(
             n,
             o,
             function(e) {
@@ -62,7 +39,7 @@
           );
       return n;
     }),
-    (c.n = function(e) {
+    (r.n = function(e) {
       var t =
         e && e.__esModule
           ? function() {
@@ -71,18 +48,13 @@
           : function() {
               return e;
             };
-      return c.d(t, "a", t), t;
+      return r.d(t, "a", t), t;
     }),
-    (c.o = function(e, t) {
+    (r.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (c.p = "");
-  var t = (window.webpackJsonp = window.webpackJsonp || []),
-    o = t.push.bind(t);
-  (t.push = e), (t = t.slice());
-  for (var r = 0; r < t.length; r++) e(t[r]);
-  var d = o;
-  p.push(["x0hG", 0]), a();
+    (r.p = ""),
+    r((r.s = "x0hG"));
 })({
   "/7KC": function(e, t, n) {
     "use strict";
@@ -126,10 +98,10 @@
         return s;
       }),
       n.d(t, "d", function() {
-        return p;
+        return l;
       }),
       n.d(t, "c", function() {
-        return d;
+        return p;
       });
     var r,
       i = {
@@ -161,13 +133,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return r || (r = l()), r;
+            if (!c()) return r || (r = f()), r;
             var e = (function(e) {
               if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = l());
+            e || (e = f());
             return e;
           })();
         },
@@ -187,7 +159,7 @@
       },
       s = { steamid: "" },
       a = "webui_config";
-    function l() {
+    function f() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(o.b)(0, 35).toString(36);
@@ -215,14 +187,14 @@
         e
       );
     }
-    function p(e) {
+    function l(e) {
       void 0 === e && (e = a);
-      var t = d("config", e);
+      var t = p("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = d("userinfo", e);
-      n && Object.assign(u, n), i.IN_CLIENT && l();
+      var n = p("userinfo", e);
+      n && Object.assign(u, n), i.IN_CLIENT && f();
     }
-    function d(e, t) {
+    function p(e, t) {
       void 0 === t && (t = a);
       var n = document.getElementById(t);
       if (n)
@@ -483,6 +455,214 @@
       })(),
       u = new i();
     window.ClientConnectionAPI = u;
+  },
+  mrSG: function(e, t, n) {
+    "use strict";
+    n.d(t, "d", function() {
+      return r;
+    }),
+      n.d(t, "a", function() {
+        return i;
+      }),
+      n.d(t, "f", function() {
+        return c;
+      }),
+      n.d(t, "c", function() {
+        return u;
+      }),
+      n.d(t, "b", function() {
+        return s;
+      }),
+      n.d(t, "e", function() {
+        return a;
+      });
+    /*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+    var o = function(e, t) {
+      return (o =
+        Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array &&
+          function(e, t) {
+            e.__proto__ = t;
+          }) ||
+        function(e, t) {
+          for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
+        })(e, t);
+    };
+    function r(e, t) {
+      function n() {
+        this.constructor = e;
+      }
+      o(e, t),
+        (e.prototype =
+          null === t
+            ? Object.create(t)
+            : ((n.prototype = t.prototype), new n()));
+    }
+    var i = function() {
+      return (i =
+        Object.assign ||
+        function(e) {
+          for (var t, n = 1, o = arguments.length; n < o; n++)
+            for (var r in (t = arguments[n]))
+              Object.prototype.hasOwnProperty.call(t, r) && (e[r] = t[r]);
+          return e;
+        }).apply(this, arguments);
+    };
+    function c(e, t) {
+      var n = {};
+      for (var o in e)
+        Object.prototype.hasOwnProperty.call(e, o) &&
+          t.indexOf(o) < 0 &&
+          (n[o] = e[o]);
+      if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
+        var r = 0;
+        for (o = Object.getOwnPropertySymbols(e); r < o.length; r++)
+          t.indexOf(o[r]) < 0 && (n[o[r]] = e[o[r]]);
+      }
+      return n;
+    }
+    function u(e, t, n, o) {
+      var r,
+        i = arguments.length,
+        c =
+          i < 3
+            ? t
+            : null === o ? (o = Object.getOwnPropertyDescriptor(t, n)) : o;
+      if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
+        c = Reflect.decorate(e, t, n, o);
+      else
+        for (var u = e.length - 1; 0 <= u; u--)
+          (r = e[u]) &&
+            (c = (i < 3 ? r(c) : 3 < i ? r(t, n, c) : r(t, n)) || c);
+      return 3 < i && c && Object.defineProperty(t, n, c), c;
+    }
+    function s(i, c, u, s) {
+      return new (u || (u = Promise))(function(e, t) {
+        function n(e) {
+          try {
+            r(s.next(e));
+          } catch (e) {
+            t(e);
+          }
+        }
+        function o(e) {
+          try {
+            r(s.throw(e));
+          } catch (e) {
+            t(e);
+          }
+        }
+        function r(t) {
+          t.done
+            ? e(t.value)
+            : new u(function(e) {
+                e(t.value);
+              }).then(n, o);
+        }
+        r((s = s.apply(i, c || [])).next());
+      });
+    }
+    function a(n, o) {
+      var r,
+        i,
+        c,
+        e,
+        u = {
+          label: 0,
+          sent: function() {
+            if (1 & c[0]) throw c[1];
+            return c[1];
+          },
+          trys: [],
+          ops: []
+        };
+      return (
+        (e = { next: t(0), throw: t(1), return: t(2) }),
+        "function" == typeof Symbol &&
+          (e[Symbol.iterator] = function() {
+            return this;
+          }),
+        e
+      );
+      function t(t) {
+        return function(e) {
+          return (function(t) {
+            if (r) throw new TypeError("Generator is already executing.");
+            for (; u; )
+              try {
+                if (
+                  ((r = 1),
+                  i &&
+                    (c =
+                      2 & t[0]
+                        ? i.return
+                        : t[0]
+                          ? i.throw || ((c = i.return) && c.call(i), 0)
+                          : i.next) &&
+                    !(c = c.call(i, t[1])).done)
+                )
+                  return c;
+                switch (((i = 0), c && (t = [2 & t[0], c.value]), t[0])) {
+                  case 0:
+                  case 1:
+                    c = t;
+                    break;
+                  case 4:
+                    return u.label++, { value: t[1], done: !1 };
+                  case 5:
+                    u.label++, (i = t[1]), (t = [0]);
+                    continue;
+                  case 7:
+                    (t = u.ops.pop()), u.trys.pop();
+                    continue;
+                  default:
+                    if (
+                      !(c = 0 < (c = u.trys).length && c[c.length - 1]) &&
+                      (6 === t[0] || 2 === t[0])
+                    ) {
+                      u = 0;
+                      continue;
+                    }
+                    if (3 === t[0] && (!c || (t[1] > c[0] && t[1] < c[3]))) {
+                      u.label = t[1];
+                      break;
+                    }
+                    if (6 === t[0] && u.label < c[1]) {
+                      (u.label = c[1]), (c = t);
+                      break;
+                    }
+                    if (c && u.label < c[2]) {
+                      (u.label = c[2]), u.ops.push(t);
+                      break;
+                    }
+                    c[2] && u.ops.pop(), u.trys.pop();
+                    continue;
+                }
+                t = o.call(n, u);
+              } catch (e) {
+                (t = [6, e]), (i = 0);
+              } finally {
+                r = c = 0;
+              }
+            if (5 & t[0]) throw t[1];
+            return { value: t[0] ? t[1] : void 0, done: !0 };
+          })([t, e]);
+        };
+      }
+    }
   },
   tkkQ: function(e, t, n) {
     "use strict";

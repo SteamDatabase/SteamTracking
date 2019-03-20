@@ -1652,186 +1652,6 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .singlewindow .title-area .betaFeedbackLabel {
   display: none; }
 
-.emoticon_NewEmoticonIndicator_3NVON {
-  background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
-  position: absolute;
-  top: -5%;
-  right: -5%;
-  left: 55%;
-  bottom: 55%;
-  display: flex;
-  align-items: center; }
-
-.emoticon_NewEmoticonIndicator_3NVON .emoticon_NewEmoticonCircle_3mNrG {
-  width: 4px;
-  height: 4px;
-  background-color: yellow;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto; }
-
-.emoticon_EmoticonSelector_177nw {
-  max-height: 25vh;
-  max-width: 40vw;
-  display: flex;
-  flex-direction: column;
-  max-width: 302px; }
-  .emoticon_EmoticonSelector_177nw img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
-    width: 27px;
-    height: 27px; }
-
-.emoticon_EmoticonSelector_Emoticons_1OTXW {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  flex: 1; }
-
-.emoticon_EmoticonSelector_Separator_1_yzI {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px; }
-  .emoticon_EmoticonSelector_Separator_1_yzI .emoticon_EmoticonSelector_SeparatorBackground_13bYy {
-    height: 2px;
-    background: #8492a4; }
-
-.emoticon_EmoticonSelector_Controls_1hOWv {
-  display: flex;
-  align-content: flex-start;
-  padding: 5px;
-  flex-shrink: 0; }
-
-.emoticon_EmoticonSelector_Item_3muLb {
-  margin: 2px;
-  width: 28px;
-  height: 28px;
-  padding: 5px 0;
-  cursor: pointer;
-  text-align: center; }
-  .emoticon_EmoticonSelector_Item_3muLb:hover .emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
-    transform: scale(1.25);
-    filter: brightness(1.25); }
-
-.emoticon_EmoticonSelector_Item_New_spFg_ {
-  position: relative; }
-
-img.emoticon_emoticon_9hYGN {
-  vertical-align: middle;
-  width: 18px;
-  height: 18px;
-  transition: all .1s ease-in-out; }
-  img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
-    width: 32px;
-    height: 32px;
-    margin-top: -14px;
-    margin-bottom: -14px; }
-
-/* These styles are used within the returned emoticon tooltip, so need to be global for now */
-.emoticon_hover_arrow {
-  width: 13px;
-  height: 26px;
-  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 26px; }
-
-.emoticon_hover_arrow.left {
-  background-position: left top;
-  left: 0; }
-
-.emoticon_hover_arrow.right {
-  background-position: right top;
-  right: 0; }
-
-.hover_arrow {
-  position: absolute;
-  top: 30px; }
-
-.emoticon_hover_content {
-  padding: 6px 10px 6px 6px;
-  background-color: #3b3938;
-  border: 1px solid #797979;
-  margin: 12px;
-  box-shadow: 0 0 12px #000000;
-  white-space: nowrap; }
-
-.emoticon_hover_content.client {
-  margin: 0;
-  box-shadow: none;
-  display: inline-block; }
-
-.emoticon_hover_content_inner {
-  position: relative;
-  min-height: 54px;
-  padding-left: 62px;
-  font-size: 13px; }
-
-.emoticon_hover_content_inner img.emoticon_large {
-  position: absolute;
-  left: 0;
-  top: 0; }
-
-.emoticon_hover_title {
-  padding-top: 8px;
-  color: #898989; }
-
-.emoticon_hover_desc {
-  color: #686868; }
-
-
-.chatentry_chatEntryControls_2O_X7 {
-  /* for flyouts */
-  position: relative;
-  /* for children */
-  display: flex;
-  flex-direction: row;
-  /* our layout */
-  flex: 1;
-  background-color: #1b1c20;
-  box-shadow: inset 0px 0px 4px #000000;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  padding-right: 2px; }
-
-.chatentry_chatTextarea_3e__5 {
-  resize: none;
-  margin-right: 4px;
-  height: 42px;
-  background-color: transparent;
-  box-shadow: inset 0px 0px 4px transparent;
-  outline-width: 0px;
-  color: #aaa;
-  border: 0px solid transparent;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  padding: 4px 4px 4px 8px;
-  /*flex: 6;*/
-  flex-shrink: 1;
-  width: 100%; }
-
-.chatentry_chatEntryActionsGroup_15mWd {
-  padding: 2px;
-  box-shadow: black 0px 0px 4px inset;
-  background-color: #1b1c20;
-  margin-left: 8px; }
-
-.chatentry_chatEntryActionsContainer_WZNUD,
-.chatentry_chatEntryActionsGroup_15mWd {
-  display: flex;
-  flex-direction: row; }
-
-.chatentry_minHeightZero_NcZQ_ {
-  min-height: 0; }
-
-.compactView .chatentry_chatTextarea_3e__5 {
-  height: initial; }
-
-.BroadcastContainer .chatentry_chatEntryControls_2O_X7 .chatSubmitButton.EmbedButton {
-  margin-top: 2px;
-  max-width: 46px;
-  max-height: 46px; }
-
 .BroadcastView {
   width: 100%;
   height: 100%;
@@ -4047,6 +3867,186 @@ iframe.steamTVLogin {
     pointer-events: all;
     margin-top: -3px;
     margin-bottom: -3px; }
+
+.chatentry_chatEntryControls_2O_X7 {
+  /* for flyouts */
+  position: relative;
+  /* for children */
+  display: flex;
+  flex-direction: row;
+  /* our layout */
+  flex: 1;
+  background-color: #1b1c20;
+  box-shadow: inset 0px 0px 4px #000000;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  padding-right: 2px; }
+
+.chatentry_chatTextarea_3e__5 {
+  resize: none;
+  margin-right: 4px;
+  height: 42px;
+  background-color: transparent;
+  box-shadow: inset 0px 0px 4px transparent;
+  outline-width: 0px;
+  color: #aaa;
+  border: 0px solid transparent;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 4px 4px 4px 8px;
+  /*flex: 6;*/
+  flex-shrink: 1;
+  width: 100%; }
+
+.chatentry_chatEntryActionsGroup_15mWd {
+  padding: 2px;
+  box-shadow: black 0px 0px 4px inset;
+  background-color: #1b1c20;
+  margin-left: 8px; }
+
+.chatentry_chatEntryActionsContainer_WZNUD,
+.chatentry_chatEntryActionsGroup_15mWd {
+  display: flex;
+  flex-direction: row; }
+
+.chatentry_minHeightZero_NcZQ_ {
+  min-height: 0; }
+
+.compactView .chatentry_chatTextarea_3e__5 {
+  height: initial; }
+
+.BroadcastContainer .chatentry_chatEntryControls_2O_X7 .chatSubmitButton.EmbedButton {
+  margin-top: 2px;
+  max-width: 46px;
+  max-height: 46px; }
+
+.emoticon_NewEmoticonIndicator_3NVON {
+  background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
+  position: absolute;
+  top: -5%;
+  right: -5%;
+  left: 55%;
+  bottom: 55%;
+  display: flex;
+  align-items: center; }
+
+.emoticon_NewEmoticonIndicator_3NVON .emoticon_NewEmoticonCircle_3mNrG {
+  width: 4px;
+  height: 4px;
+  background-color: yellow;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto; }
+
+.emoticon_EmoticonSelector_177nw {
+  max-height: 25vh;
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 302px; }
+  .emoticon_EmoticonSelector_177nw img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    width: 27px;
+    height: 27px; }
+
+.emoticon_EmoticonSelector_Emoticons_1OTXW {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  flex: 1; }
+
+.emoticon_EmoticonSelector_Separator_1_yzI {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px; }
+  .emoticon_EmoticonSelector_Separator_1_yzI .emoticon_EmoticonSelector_SeparatorBackground_13bYy {
+    height: 2px;
+    background: #8492a4; }
+
+.emoticon_EmoticonSelector_Controls_1hOWv {
+  display: flex;
+  align-content: flex-start;
+  padding: 5px;
+  flex-shrink: 0; }
+
+.emoticon_EmoticonSelector_Item_3muLb {
+  margin: 2px;
+  width: 28px;
+  height: 28px;
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center; }
+  .emoticon_EmoticonSelector_Item_3muLb:hover .emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    transform: scale(1.25);
+    filter: brightness(1.25); }
+
+.emoticon_EmoticonSelector_Item_New_spFg_ {
+  position: relative; }
+
+img.emoticon_emoticon_9hYGN {
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  transition: all .1s ease-in-out; }
+  img.emoticon_emoticon_9hYGN.emoticon_large_p8Q42 {
+    width: 32px;
+    height: 32px;
+    margin-top: -14px;
+    margin-bottom: -14px; }
+
+/* These styles are used within the returned emoticon tooltip, so need to be global for now */
+.emoticon_hover_arrow {
+  width: 13px;
+  height: 26px;
+  background-image: url("https://steamcommunity-a.akamaihd.net/public/shared/images/popups/hover_arrow_both.gif");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 26px; }
+
+.emoticon_hover_arrow.left {
+  background-position: left top;
+  left: 0; }
+
+.emoticon_hover_arrow.right {
+  background-position: right top;
+  right: 0; }
+
+.hover_arrow {
+  position: absolute;
+  top: 30px; }
+
+.emoticon_hover_content {
+  padding: 6px 10px 6px 6px;
+  background-color: #3b3938;
+  border: 1px solid #797979;
+  margin: 12px;
+  box-shadow: 0 0 12px #000000;
+  white-space: nowrap; }
+
+.emoticon_hover_content.client {
+  margin: 0;
+  box-shadow: none;
+  display: inline-block; }
+
+.emoticon_hover_content_inner {
+  position: relative;
+  min-height: 54px;
+  padding-left: 62px;
+  font-size: 13px; }
+
+.emoticon_hover_content_inner img.emoticon_large {
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.emoticon_hover_title {
+  padding-top: 8px;
+  color: #898989; }
+
+.emoticon_hover_desc {
+  color: #686868; }
+
 
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
@@ -7955,6 +7955,12 @@ img {
   .shared_common_EditButton_DLPvj.shared_common_Small_lUt7Z {
     font-size: 9px;
     padding: 4px 8px; }
+
+.shared_common_FlexCenter_2xt9g {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
 
 html.client_chat_frame body,
 html.web_chat_frame body {
