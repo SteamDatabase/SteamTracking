@@ -54147,7 +54147,7 @@
       })(Oe.a.Component);
     function ol(e) {
       return Oe.a.createElement("div", {
-        className: "BroadcastCSGOKatowiceOffline"
+        className: "BroadcastCSGOFaceitOffline"
       });
     }
     function il(e) {
@@ -67208,111 +67208,125 @@
                 tabIcon: "public/images/webui/broadcast/artifact_icon.png",
                 offlineClassName: "BroadcastArtifactOffline"
               })
-            : "76561198888084799" == e || "148618792083695635" == e
+            : "76561198846304683" == e || "148618792083695635" == e
               ? J.init({
                   bValid: !0,
-                  stream: { "76561198888084799": "#Broadcast_Stream1" },
-                  name: "CSGO: IEM Katowice 2019",
+                  stream: { "76561198846304683": "#Broadcast_Stream1" },
+                  name: "CSGO: FaceIT ECS",
                   appID: 730,
                   link: "https://store.steampowered.com/app/730",
                   linkName: "CSGO on Steam",
                   tabIcon:
                     "public/images/webui/broadcast/csgo_esl_2019_icon.png",
-                  offlineClassName: "BroadcastCSGOKatowiceOffline"
+                  offlineClassName: "BroadcastCSGOFaceitOffline"
                 })
-              : "76561198894692971" == e
+              : "76561198888084799" == e
                 ? J.init({
                     bValid: !0,
-                    stream: { "76561198894692971": "#Broadcast_EnglishMain" },
-                    name: "The Steam Awards 2018",
-                    appID: 1025790,
-                    link: "https://steam.tv/steamawards",
-                    linkName: "steam.tv/steamawards",
-                    tabIcon: "public/images/webui/broadcast/awards_icon.png",
-                    offlineClassName: "BroadcastSteamAwardsOffline"
+                    stream: { "76561198888084799": "#Broadcast_Stream1" },
+                    name: "CSGO: IEM Katowice 2019",
+                    appID: 730,
+                    link: "https://store.steampowered.com/app/730",
+                    linkName: "CSGO on Steam",
+                    tabIcon:
+                      "public/images/webui/broadcast/csgo_esl_2019_icon.png",
+                    offlineClassName: "BroadcastCSGOKatowiceOffline"
                   })
-                : "76561198871875463" == e
+                : "76561198894692971" == e
                   ? J.init({
                       bValid: !0,
-                      stream: { "76561198871875463": "#Broadcast_EnglishMain" },
-                      name: "The Chongqing Major",
-                      appID: 570,
-                      link: "https://store.steampowered.com/app/570/Dota_2/",
-                      linkName: "steam.tv/dota",
-                      tabIcon:
-                        "public/images/webui/broadcast/chongqing_icon.png",
-                      offlineClassName: "BroadcastDOTAChongqingOffline"
+                      stream: { "76561198894692971": "#Broadcast_EnglishMain" },
+                      name: "The Steam Awards 2018",
+                      appID: 1025790,
+                      link: "https://steam.tv/steamawards",
+                      linkName: "steam.tv/steamawards",
+                      tabIcon: "public/images/webui/broadcast/awards_icon.png",
+                      offlineClassName: "BroadcastSteamAwardsOffline"
                     })
-                  : "76561198198486997" == e
+                  : "76561198871875463" == e
                     ? J.init({
                         bValid: !0,
                         stream: {
-                          "76561198124468676": "#Broadcast_EnglishMain"
+                          "76561198871875463": "#Broadcast_EnglishMain"
                         },
-                        name: "True Sight",
+                        name: "The Chongqing Major",
                         appID: 570,
-                        link: "https://steam.tv/dota",
+                        link: "https://store.steampowered.com/app/570/Dota_2/",
                         linkName: "steam.tv/dota",
                         tabIcon:
-                          "public/images/webui/broadcast/true_sight_tab.png",
-                        offlineClassName: "BroadcastDOTATrueSight"
+                          "public/images/webui/broadcast/chongqing_icon.png",
+                        offlineClassName: "BroadcastDOTAChongqingOffline"
                       })
-                    : "76561197960270087" == e
+                    : "76561198198486997" == e
                       ? J.init({
                           bValid: !0,
                           stream: {
-                            "76561197960270087": "#Broadcast_EnglishMain"
+                            "76561198124468676": "#Broadcast_EnglishMain"
                           },
-                          name: "Injustice 2 Pro Series Grand Finals 2018",
-                          appID: 627270,
-                          link: "https://steam.tv/injustice2",
-                          linkName: "steam.tv/injustice2",
+                          name: "True Sight",
+                          appID: 570,
+                          link: "https://steam.tv/dota",
+                          linkName: "steam.tv/dota",
                           tabIcon:
-                            "public/images/webui/broadcast/injustice2_tab_logo.jpg",
-                          offlineClassName: "BroadcastInjustice2Offline"
+                            "public/images/webui/broadcast/true_sight_tab.png",
+                          offlineClassName: "BroadcastDOTATrueSight"
                         })
-                      : "76561198835282120" == e
+                      : "76561197960270087" == e
                         ? J.init({
                             bValid: !0,
                             stream: {
-                              "76561198835282120": "#Broadcast_EnglishMain"
+                              "76561197960270087": "#Broadcast_EnglishMain"
                             },
-                            name: "SMITE World Championship",
-                            appID: 386360,
-                            link: "https://steam.tv/smite",
-                            linkName: "steam.tv/smite",
+                            name: "Injustice 2 Pro Series Grand Finals 2018",
+                            appID: 627270,
+                            link: "https://steam.tv/injustice2",
+                            linkName: "steam.tv/injustice2",
                             tabIcon:
-                              "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
-                            offlineClassName: "BroadcastSmiteOffline"
+                              "public/images/webui/broadcast/injustice2_tab_logo.jpg",
+                            offlineClassName: "BroadcastInjustice2Offline"
                           })
-                        : "76561198835114410" == e
+                        : "76561198835282120" == e
                           ? J.init({
                               bValid: !0,
                               stream: {
-                                "76561198835114410": "#Broadcast_EnglishMain"
+                                "76561198835282120": "#Broadcast_EnglishMain"
                               },
-                              name: "Paladins World Championship",
-                              appID: 444090,
-                              link: "https://steam.tv/paladins",
-                              linkName: "steam.tv/paladins",
+                              name: "SMITE World Championship",
+                              appID: 386360,
+                              link: "https://steam.tv/smite",
+                              linkName: "steam.tv/smite",
                               tabIcon:
                                 "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
-                              offlineClassName: "BroadcastPaladinsOffline"
+                              offlineClassName: "BroadcastSmiteOffline"
                             })
-                          : "76561198838606142" == e &&
-                            J.init({
-                              bValid: !0,
-                              stream: {
-                                "76561198838606142": "#Broadcast_EnglishMain"
-                              },
-                              name: "Realm Royale",
-                              appID: 813820,
-                              link: "https://steam.tv/realmroyale",
-                              linkName: "steam.tv/realmroyale",
-                              tabIcon:
-                                "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
-                              offlineClassName: "BroadcastRealmRoyaleOffline"
-                            }),
+                          : "76561198835114410" == e
+                            ? J.init({
+                                bValid: !0,
+                                stream: {
+                                  "76561198835114410": "#Broadcast_EnglishMain"
+                                },
+                                name: "Paladins World Championship",
+                                appID: 444090,
+                                link: "https://steam.tv/paladins",
+                                linkName: "steam.tv/paladins",
+                                tabIcon:
+                                  "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
+                                offlineClassName: "BroadcastPaladinsOffline"
+                              })
+                            : "76561198838606142" == e &&
+                              J.init({
+                                bValid: !0,
+                                stream: {
+                                  "76561198838606142": "#Broadcast_EnglishMain"
+                                },
+                                name: "Realm Royale",
+                                appID: 813820,
+                                link: "https://steam.tv/realmroyale",
+                                linkName: "steam.tv/realmroyale",
+                                tabIcon:
+                                  "public/images/webui/broadcast/hrx_tab_icon_2018.jpg",
+                                offlineClassName: "BroadcastRealmRoyaleOffline"
+                              }),
           Object.assign(_.a, n)),
           !G.a.IN_CLIENT &&
             G.a.STEAM_TV &&
