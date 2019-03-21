@@ -1,6 +1,6 @@
 "ubuntu12"
 {
-	"version"		"1553121671"
+	"version"		"1553209175"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.1ca83d76835b4613170f5cead778b176b11f2b0c"
@@ -117,27 +117,27 @@
 	}
 	"bins_ubuntu12"
 	{
-		"file"		"bins_ubuntu12.zip.c22a867b56b9204a5a9ec06feb9170b487dc3dd2"
-		"size"		"35153707"
-		"sha2"		"a8a08b121f3b52c00eef11986a7a5461e47c285bb49f61c75bb5561ec7a9885b"
-		"zipvz"		"bins_ubuntu12.zip.vz.74c95bfe15291141cd946863eb1964b75c45d7ff_19134553"
-		"sha2vz"		"0807f02edb1da7652b79e997d57dfbcb8b675f2b3bf4d0a5885347bacfe2a686"
+		"file"		"bins_ubuntu12.zip.8197ccb9a6976e5f5c045cd23cba2ad178372b88"
+		"size"		"35153235"
+		"sha2"		"d52fa64ae5759830043a5154145ff100cdff84bb36c72382c3e6ef983e866f77"
+		"zipvz"		"bins_ubuntu12.zip.vz.1a0660a9cf5e9655a2436bb227877a14cdaa2581_19111885"
+		"sha2vz"		"b95adb1a624b9e84f97c3b6db565d6e0b4c48d2c29ff1c7ea1bc18dc8dd6e326"
 	}
 	"bins_pub_ubuntu12"
 	{
-		"file"		"bins_pub_ubuntu12.zip.ffca107cbca333b3bfd76693a26df68d77335af1"
-		"size"		"12910544"
-		"sha2"		"2a65b4ceb1b09ad2d94fce1afdb79bd01761ca45b2fb0cbe63a114491f71818f"
-		"zipvz"		"bins_pub_ubuntu12.zip.vz.94a5e99abeb5797012cd1567613aae6f47e6c926_9044644"
-		"sha2vz"		"cf5ddc13b258cb91a7ee5f6e7448582aa4607bdb20f662035d1da60f2641f63f"
+		"file"		"bins_pub_ubuntu12.zip.6ac43dfa75a23e43b1e4e361e13faad76bce8116"
+		"size"		"12910545"
+		"sha2"		"596e61511dee9d7c06968bd701068e2f5f4a20f9a25946e6f4d95a804e980ad8"
+		"zipvz"		"bins_pub_ubuntu12.zip.vz.fc2a0069c8288d9d3f26023fb7417a0d0b9da110_9042316"
+		"sha2vz"		"a140fcd1ad2c0d668c49fc1f5075986284694a15cd4989112ca385c5c6bedc8b"
 	}
 	"bins_sdk_ubuntu12"
 	{
-		"file"		"bins_sdk_ubuntu12.zip.054562882af2383cd334268599917b2c05aee509"
-		"size"		"19266791"
-		"sha2"		"f1880b0744ecf8dfe83c5ab869301d1867be4f6e6a4d91bc931cbf2f2119f7bd"
-		"zipvz"		"bins_sdk_ubuntu12.zip.vz.c24ced03ad23b603acf60f21ea1189b0a8b846a8_13247049"
-		"sha2vz"		"e26f7789c91da16f6d0bc091945385f1974d1b0b90051189f15eaf013c085b97"
+		"file"		"bins_sdk_ubuntu12.zip.4550cab1cc0e563392a68476577a6280b1254687"
+		"size"		"19264253"
+		"sha2"		"85cc49ead1cfa9383b8ceb61ed15538bf11aa1c46c66dd3a147c4902b2a88474"
+		"zipvz"		"bins_sdk_ubuntu12.zip.vz.66547bc0edd7a4ad9385701e3b1e8af340f63cbe_13247294"
+		"sha2vz"		"4bd0607cb7428640d357f10fdad6e78ecffc82b9882147ff28df48b8ae98c69e"
 	}
 	"bins_codecs_ubuntu12"
 	{
@@ -149,11 +149,11 @@
 	}
 	"bins_misc_ubuntu12"
 	{
-		"file"		"bins_misc_ubuntu12.zip.dd95a7c77754b1e1b7f4635d6d701f0fefa98ec2"
-		"size"		"5983161"
-		"sha2"		"64e4b460c6a4282844874891b1c1bca87b253aeaec93571dfcf433275cbed85a"
-		"zipvz"		"bins_misc_ubuntu12.zip.vz.4ba934b663e11340e3194271cf9a8457641d2378_4388522"
-		"sha2vz"		"a608541e47ab7f1ce1e857df8f33c2f642e9168b2707b2bae5ef7ee9c1c83bda"
+		"file"		"bins_misc_ubuntu12.zip.5a587e905e1a80d5615cbd759ae9f7f3fb2a874f"
+		"size"		"5983167"
+		"sha2"		"7437c9987c4e3ac49ae3e778d2e149cc53e10590f9967847eea86dc650ad982d"
+		"zipvz"		"bins_misc_ubuntu12.zip.vz.32498359a86543ae196137ddc09e182bdf54aa67_4388040"
+		"sha2vz"		"f9a8632d98c2e2a081444839e32d6c4893ab024eef3c5e94358eca5b3a597a06"
 	}
 	"webkit_ubuntu12"
 	{
@@ -181,37 +181,37 @@
 	}
 	"steam_ubuntu12"
 	{
-		"file"		"steam_ubuntu12.zip.5031f0e49078db447287bbb9a29563d0aab2fe4f"
-		"size"		"1948097"
-		"sha2"		"7c406a446392704b8b942cffac2e8e8e55c124b2ab4599e984e1bdeec6563fb6"
-		"zipvz"		"steam_ubuntu12.zip.vz.9979ee14f59313e822c7adfa8abfb6b253267ce7_1515298"
-		"sha2vz"		"2f7db2411be421dc36cb3a7b308730f6b93b0e614ae75793adaf8f14c899176f"
+		"file"		"steam_ubuntu12.zip.c0b19b0a0170da914022f0259f583c81ae8aaf1e"
+		"size"		"1948250"
+		"sha2"		"54f34f2bf39d691b8c809f97f8caa8817e06e4fda1daba63968670012cc06e3a"
+		"zipvz"		"steam_ubuntu12.zip.vz.240c2eb0efa48fb5ffcb11c38491d06e04499c50_1515556"
+		"sha2vz"		"71e050ab9871a2052991bd2d43b20b7fe407ee38f72aff48621ced91e755a46e"
 		"IsBootstrapperPackage"		"1"
 	}
 	"runtime_part0_ubuntu12"
 	{
-		"file"		"runtime_part0_ubuntu12.zip.12c9bccb8bde783897df05db268c69e45a2176b9"
-		"size"		"52439540"
-		"sha2"		"a35455df55093e5d4d9c51d3558eefb407c959b13f919494088fef53dd511fb9"
+		"file"		"runtime_part0_ubuntu12.zip.b24602650dc8b83de9717f1ff187f8a6a1681c4d"
+		"size"		"50011176"
+		"sha2"		"61d611048c7f6b635c0d697a9805f0b01c23c16dbdd771890bb8a7127f73eada"
 	}
 	"runtime_part1_ubuntu12"
 	{
-		"file"		"runtime_part1_ubuntu12.zip.b3d5e46bc03338be8e8a6f692cf6e89cb3df1548"
-		"size"		"41109930"
-		"sha2"		"f25be138dceb32f95aa274c1ccca199baa9562c8270f5a9d28dec2d57d978579"
+		"file"		"runtime_part1_ubuntu12.zip.ced39cf4afe570ec7cfe83bfad15e09d1a8ed104"
+		"size"		"43550299"
+		"sha2"		"53c0637d0001ad0785540e002e4b549b4b54114789081b5a7443d42ec0a00fbe"
 	}
 	"runtime_part2_ubuntu12"
 	{
-		"file"		"runtime_part2_ubuntu12.zip.664e3fddd6190205cbb0bd90e33ce9929203b00f"
-		"size"		"397"
-		"sha2"		"759fffe94e1f9040f2fc91aa22b2764935657ed40fe5b39e2045bf997c33b7a8"
+		"file"		"runtime_part2_ubuntu12.zip.62fab85050e88af798819dc34c1cd8e7a520db0e"
+		"size"		"395"
+		"sha2"		"4bdca3e60a6e4b2e4bf8d4e45d643d7081ab62210bd0fb69117176454a4895d5"
 	}
 }
 "kvsign2"
 {
-	"ubuntu12"		"38aaa014ba47a3a5de9746f7c6d7d5922a3d22ba786455c163b77a1831d11da178b566c5bd14f86f6c3b6354be6ed23f9de36566ca3446222e48935d2c266f02"
+	"ubuntu12"		"6b2ba9e59712e0feb44ce1f6987e1887d77ebeb08cb2733540a89ccbff995e13342516277bb05c8a77b4d3dc46207c85cd9d2feb1adeea6d38212c61a7f4f304"
 }
 "kvsignatures"
 {
-	"ubuntu12"		"326ffd364e2cdb6cb2605d20ec52d0e7b70781a67a6d874cfb622971c47e6ec3a98d8fee5c95edead250f439588f193eed7e3cfe6348a408a60be7fe03a989d3a1cad779f445ab933b2cfa10003c792b260d788e42b6c72055769e19bb375f498d663a42681294c4abd580370ca27b4e065825a49dd25ffa7534fb1bba78263e"
+	"ubuntu12"		"95385bdd0fa416d12be9fd11f91344fc31a3a883c3120d42948b58e52797cf765d420743a179ad17fd1c5cf8043ac3360551a2edc708fec8aa4d480d7da79b95b1d634c9a4449f3c13bd4ece7516611444175af5f5cff3377bac5d44161407d3566cc59dff145e6f181cff4127a91c948e591b10e55567442be6032083888025"
 }

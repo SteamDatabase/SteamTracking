@@ -91,16 +91,19 @@
     n.d(t, "b", function() {
       return i;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return u;
       }),
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
+        return f;
+      }),
+      n.d(t, "e", function() {
         return l;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return p;
       });
     var r,
@@ -192,7 +195,7 @@
       var t = p("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
       var n = p("userinfo", e);
-      n && Object.assign(u, n), i.IN_CLIENT && f();
+      n && Object.assign(u, n);
     }
     function p(e, t) {
       void 0 === t && (t = a);
@@ -671,13 +674,13 @@ and limitations under the License.
       return o.b;
     }),
       n.d(t, "d", function() {
-        return o.e;
+        return o.f;
       }),
       n.d(t, "c", function() {
-        return o.d;
+        return o.e;
       }),
       n.d(t, "b", function() {
-        return o.c;
+        return o.d;
       });
   },
   x0hG: function(e, t, n) {

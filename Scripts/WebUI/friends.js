@@ -977,16 +977,19 @@
     n.d(t, "b", function() {
       return r;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return s;
       }),
       n.d(t, "a", function() {
         return c;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
+        return p;
+      }),
+      n.d(t, "e", function() {
         return u;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return m;
       });
     var i,
@@ -1078,7 +1081,7 @@
       var t = m("config", e);
       t && (delete t.SESSIONID, Object.assign(r, t));
       var n = m("userinfo", e);
-      n && Object.assign(s, n), r.IN_CLIENT && p();
+      n && Object.assign(s, n);
     }
     function m(e, t) {
       void 0 === t && (t = l);
@@ -9170,10 +9173,10 @@
               e.strSteamid
                 ? ((this.m_steamid = new D.a(e.strSteamid)),
                   (this.m_steamidLastLoggedOn = this.m_steamid),
-                  (_.e.logged_in = !0),
-                  (_.e.steamid = e.strSteamid),
-                  (_.e.accountid = this.m_steamid.GetAccountID()),
-                  (_.e.account_name = e.strAccountName))
+                  (_.f.logged_in = !0),
+                  (_.f.steamid = e.strSteamid),
+                  (_.f.accountid = this.m_steamid.GetAccountID()),
+                  (_.f.account_name = e.strAccountName))
                 : 0 != this.m_steamid.GetAccountID() &&
                   (this.m_steamid = new D.a()),
               this.m_bLoggedOn
@@ -24634,7 +24637,7 @@
             t &&
               (t.SetBroadcasterAndViewerInfo(
                 this.m_steamID,
-                _.e.steamid,
+                _.f.steamid,
                 e.m_ulBroadcastID,
                 e.m_ulViewerToken
               ),
@@ -49540,7 +49543,7 @@
               var n = new FormData();
               n.append("action", "add_to_cart"),
                 n.append("subid", "" + t.subid);
-              var o = _.e.authwgtoken;
+              var o = _.f.authwgtoken;
               n.append("authwgtoken", o), n.append("quantity", "1");
               var i = t.add_to_cart_url;
               try {
@@ -51989,7 +51992,7 @@
             (this.m_rgChatMessages = []),
             (this.m_webAPIInterface = new Rc(
               _.b.WEBAPI_BASE_URL,
-              _.e.webapi_token
+              _.f.webapi_token
             ));
         }
         return (
@@ -52002,7 +52005,7 @@
           (e.prototype.StartForSteamID = function(e) {
             (this.m_webAPIInterface = new Rc(
               _.b.WEBAPI_BASE_URL,
-              _.e.webapi_token
+              _.f.webapi_token
             )),
               (this.m_ulBroadcastSteamID = e),
               this.RequestChatInfo();
@@ -52010,10 +52013,10 @@
           (e.prototype.StartForChannel = function(e) {
             (this.m_webAPIInterface = new Rc(
               _.b.WEBAPI_BASE_URL,
-              _.e.webapi_token
+              _.f.webapi_token
             )),
               (this.m_ulBroadcastChannelID = e),
-              (this.m_strUserSteamID = _.e.steamid),
+              (this.m_strUserSteamID = _.f.steamid),
               this.JoinChannelChat();
           }),
           (e.prototype.Stop = function() {
@@ -53063,7 +53066,7 @@
             if (t.type !== F.Chat) return null;
             var o = [];
             return (
-              (_.e && _.e.is_support) ||
+              (_.f && _.f.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()) ||
               this.m_chat.IsUserChannelModerator(this.m_chat.GetUserSteamID())
                 ? o.push(
@@ -53193,7 +53196,7 @@
                         Object(Q.b)("#BroadcastChat_MuteLocal")
                       )
                     ),
-              ((_.e && _.e.is_support) ||
+              ((_.f && _.f.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 o.push(
                   Ie.createElement(
@@ -53341,7 +53344,7 @@
                   className: "friendListInsetShadowBottom"
                 })
               ),
-              _.e && _.e.logged_in && this.m_chat
+              _.f && _.f.logged_in && this.m_chat
                 ? Ie.createElement(
                     "div",
                     null,
@@ -54132,7 +54135,7 @@
                   watchLocation: this.props.watchLocation,
                   hidden: this.props.bHideChat
                 }),
-                _.e && _.e.logged_in ? null : c
+                _.f && _.f.logged_in ? null : c
               )
             );
           }),
@@ -67343,6 +67346,7 @@
                 n = null,
                 o = !1;
               if (G.a.IN_CLIENT) {
+                Object(_.c)();
                 var i = {
                   message: "ChatJavascriptInitialized",
                   data: G.a.BUILD_TIMESTAMP
@@ -70327,13 +70331,13 @@ and limitations under the License.
       return o.b;
     }),
       n.d(t, "d", function() {
-        return o.e;
+        return o.f;
       }),
       n.d(t, "c", function() {
-        return o.d;
+        return o.e;
       }),
       n.d(t, "b", function() {
-        return o.c;
+        return o.d;
       });
   },
   twdX: function(e, t, n) {
