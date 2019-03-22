@@ -205,6 +205,12 @@ function InitImageTypes( type )
 	];
 }
 
+function AddAdditonalImageTypes( rgExtraTypes )
+{
+	for ( var i = 0; i < rgExtraTypes.length; i++ )
+		g_ImageTypes.push( rgExtraTypes[i] );
+}
+
 // called when an image is dragged into drop box
 function OnImageDragEnter( evt )
 {
