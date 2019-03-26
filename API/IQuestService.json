@@ -47,6 +47,11 @@
                     "name": "note",
                     "type": "string",
                     "optional": false
+                },
+                {
+                    "name": "broadcast_channel_id",
+                    "type": "uint64",
+                    "optional": false
                 }
             ]
         }
