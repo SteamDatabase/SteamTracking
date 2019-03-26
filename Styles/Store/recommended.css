@@ -2539,7 +2539,7 @@ body.recommendgame #review_create h1  {
 	margin-bottom: 3px;
 	background-color: #2a475e;
 }
-.review_recent_events.has_events {
+.review_recent_events.has_events, .review_recent_events.can_edit_app {
 	display: block;
 }
 
