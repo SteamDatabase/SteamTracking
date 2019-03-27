@@ -924,7 +924,7 @@
               r.startsWith("^")
                 ? this.m_rgFlairs.push({
                     name: r.match(new RegExp(/:(.*):/))[1],
-                    flairGroupID: Number(r.match(new RegExp(/\^(.*)\^/))[1])
+                    flairGroupID: r.match(new RegExp(/\^(.*)\^/))[1]
                   })
                 : (!i.last_used && i.time_received > t
                     ? (!this.m_rtMostRecentEmoticon ||
@@ -3832,7 +3832,7 @@
               r.a.createElement(l.b, {
                 emoticonStore: this.props.emoticonStore,
                 emoticonHoverStore: this.props.emoticonHoverStore,
-                nFlairGroupID: this.props.nFlairGroupID,
+                strFlairGroupID: this.props.strFlairGroupID,
                 OnSelected: this.props.OnEmoticonSelected
               }),
               e.currentTarget,
@@ -8964,7 +8964,9 @@
                                 "Socket connection timed out after 3000ms"
                               ),
                                 (o = !0),
-                                a.close(4e3);
+                                a.close(4e3),
+                                s.m_CMList.LogCMDisconnected(r, s.m_bLoggedOn),
+                                n();
                             }, 3e3);
                           (a.onopen = function(e) {
                             console.log(
@@ -8982,9 +8984,9 @@
                             (a.onerror = function(e) {
                               o ||
                                 (window.clearTimeout(i),
-                                Object(I.a)(!1, "Socket connect failed", e)),
+                                Object(I.a)(!1, "Socket connect failed", e),
                                 s.m_CMList.LogCMDisconnected(r, s.m_bLoggedOn),
-                                n();
+                                n());
                             });
                         })
                       );
@@ -18948,7 +18950,7 @@
                     var o = n[t];
                     i.m_mapLastChatTimeByFriend.set(
                       o.accountid_friend(),
-                      o.last_view()
+                      o.last_message()
                     ),
                       i
                         .GetFriendChat(o.accountid_friend())
@@ -23367,6 +23369,7 @@
           return (this.m_bUserPlayChoice = !0), this.Seek(e);
         }),
         (e.prototype.Seek = function(e) {
+          if (!this.m_mpd) return 0;
           var t = this.GetAvailableVideoStartTime(),
             n = this.GetBufferedLiveEdgeTime();
           (e = dn.a(e, t, n)), (this.m_bUserLiveEdgeChoice = n - 5 <= e);
@@ -23965,11 +23968,6 @@
               (this.m_strStateDescription = t),
               e == qn.Error && console.log(this.m_strStateDescription);
           }),
-          (e.prototype.GetVideoData = function(t) {
-            return this.m_rgVideos.find(function(e) {
-              return e.video == t;
-            });
-          }),
           R.c([h.x], e.prototype, "m_eWatchState", void 0),
           R.c([h.x], e.prototype, "m_strStateDescription", void 0),
           R.c([h.g], e.prototype, "SetState", null),
@@ -24021,18 +24019,16 @@
             var t = this.m_mapBroadcasts.get(e);
             return t ? t.m_strStateDescription : "";
           }),
-          (e.prototype.StartVideo = function(e, t, n, o) {
-            console.log("Starting video for " + t), this.PauseAllVideo();
+          (e.prototype.CreateVideo = function(e, t, n, o) {
             var i,
               r = this.GetOrCreateBroadcast(t),
               a = this.m_broadcastSettings,
               s = a.nVolume,
               c = a.bMuted,
-              l = new eo(this, t, e, s, c);
+              l = new eo(this, t, e, s, c, n);
             return (
-              r.m_rgVideos.push({ video: l, eWatchLocation: n }),
+              r.m_rgVideos.push(l),
               (r.m_bWebRTC = o),
-              (this.m_activeVideo = l),
               (function() {
                 var e = !1;
                 try {
@@ -24042,82 +24038,86 @@
                 } catch (e) {}
                 return e;
               })() ||
-              "probably" ===
-                (i = document
-                  .createElement("video")
-                  .canPlayType(
-                    'application/vnd.apple.mpegurl;codecs="avc1.64001f,mp4a.40.02"'
-                  )) ||
-              "maybe" === i
-                ? (r.m_eWatchState == qn.None
-                    ? this.GetBroadcastManifest(r, n)
-                    : r.m_eWatchState == qn.Ready && l.Start(r),
-                  l.InitSubtitles(),
-                  l)
-                : (r.SetState(
-                    qn.Error,
-                    Object(Q.b)("#BroadcastWatch_MinBrowser")
-                  ),
-                  null)
+                ("probably" ===
+                  (i = document
+                    .createElement("video")
+                    .canPlayType(
+                      'application/vnd.apple.mpegurl;codecs="avc1.64001f,mp4a.40.02"'
+                    )) ||
+                  "maybe" === i) ||
+                r.SetState(qn.Error, Object(Q.b)("#BroadcastWatch_MinBrowser")),
+              l
             );
+          }),
+          (e.prototype.StartVideo = function(e) {
+            console.log("Starting video for " + e.GetBroadcastSteamID());
+            var t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
+            t &&
+              (this.PauseAllVideo(),
+              (this.m_activeVideo = e),
+              t.m_eWatchState == qn.None
+                ? this.GetBroadcastManifest(t, e.GetWatchLocation())
+                : t.m_eWatchState == qn.Ready && e.Start(t));
           }),
           (e.prototype.PauseAllVideo = function() {
             this.m_mapBroadcasts.forEach(function(e) {
               for (var t = 0, n = e.m_rgVideos; t < n.length; t++) {
-                n[t].video.StopPlaybackTillUserInput();
+                n[t].StopPlaybackTillUserInput();
               }
             });
           }),
-          (e.prototype.StopVideo = function(i) {
+          (e.prototype.StopVideo = function(o) {
             return R.b(this, void 0, void 0, function() {
-              var t, n, o;
+              var t, n;
               return R.e(this, function(e) {
-                switch (e.label) {
-                  case 0:
-                    if (
-                      ((t = i.GetBroadcastSteamID()),
-                      (n = this.m_mapBroadcasts.get(t)),
-                      i.Stop(),
-                      !n)
-                    )
-                      return [2];
-                    (o = new FormData()).append("steamid", t),
-                      o.append("broadcastid", n.m_ulBroadcastID),
-                      o.append(
-                        "viewertoken",
+                return (
+                  (t = o.GetBroadcastSteamID()),
+                  (n = this.m_mapBroadcasts.get(t)),
+                  o.Stop(),
+                  n &&
+                    (n.m_ulBroadcastID &&
+                      (function(n, o, i) {
+                        R.b(this, void 0, void 0, function() {
+                          var t;
+                          return R.e(this, function(e) {
+                            switch (e.label) {
+                              case 0:
+                                if (!o) return [2];
+                                (t = new FormData()).append("steamid", n),
+                                  t.append("broadcastid", o),
+                                  t.append("viewertoken", i),
+                                  (e.label = 1);
+                              case 1:
+                                return (
+                                  e.trys.push([1, 3, , 4]),
+                                  [
+                                    4,
+                                    C.a.post(
+                                      _.b.CHAT_BASE_URL +
+                                        "broadcast/stopwatching",
+                                      t
+                                    )
+                                  ]
+                                );
+                              case 2:
+                              case 3:
+                                return e.sent(), [3, 4];
+                              case 4:
+                                return [2];
+                            }
+                          });
+                        });
+                      })(
+                        t,
+                        n.m_ulBroadcastID,
                         this.m_broadcastSettings.ulViewerToken
                       ),
-                      (e.label = 1);
-                  case 1:
-                    return (
-                      e.trys.push([1, 3, , 4]),
-                      [
-                        4,
-                        C.a.post(
-                          _.b.CHAT_BASE_URL + "broadcast/stopwatching",
-                          o
-                        )
-                      ]
-                    );
-                  case 2:
-                    return e.sent(), [3, 4];
-                  case 3:
-                    return (
-                      e.sent(),
-                      console.error(
-                        "Attempted to stop video that was not started"
-                      ),
-                      [3, 4]
-                    );
-                  case 4:
-                    return (
-                      M.d(n.m_rgVideos, function(e) {
-                        return e.video == i;
-                      }),
-                      this.RemoveBroadcastIfUnused(n),
-                      [2]
-                    );
-                }
+                    M.d(n.m_rgVideos, function(e) {
+                      return e == o;
+                    }),
+                    this.RemoveBroadcastIfUnused(n)),
+                  [2]
+                );
               });
             });
           }),
@@ -24399,26 +24399,24 @@
             var t = this;
             0 <=
               e.m_rgVideos.findIndex(function(e) {
-                return e.video == t.m_activeVideo;
+                return e == t.m_activeVideo;
               }) && this.m_activeVideo.Start(e);
           }),
           (e.prototype.BroadcastDownloadFailed = function(e, t) {
             void 0 === t && (t = !0), e.Stop();
             var n = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            if (n && n.m_eWatchState != qn.Loading) {
-              n.m_bWebRTC && t && (n.m_bWebRTC = !1);
-              var o = n.GetVideoData(e);
-              this.GetBroadcastManifest(n, o.eWatchLocation);
-            }
+            n &&
+              n.m_eWatchState != qn.Loading &&
+              (n.m_bWebRTC && t && (n.m_bWebRTC = !1),
+              this.GetBroadcastManifest(n, e.GetWatchLocation()));
           }),
           (e.prototype.UserInputClickVideo = function(e) {
             if (this.m_activeVideo != e) {
               this.PauseAllVideo();
-              var t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID()),
-                n = t.GetVideoData(e);
+              var t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
               return (
                 (this.m_activeVideo = e),
-                void this.GetBroadcastManifest(t, n.eWatchLocation)
+                void this.GetBroadcastManifest(t, e.GetWatchLocation())
               );
             }
             e.UserInputClick();
@@ -24469,7 +24467,7 @@
     ((Xn = Jn || (Jn = {}))[(Xn.Timeline = 1)] = "Timeline"),
       (Xn[(Xn.Minimap = 2)] = "Minimap");
     var eo = (function() {
-        function e(e, t, n, o, i) {
+        function e(e, t, n, o, i, r) {
           (this.m_store = null),
             (this.m_steamID = null),
             (this.m_elVideo = null),
@@ -24478,6 +24476,7 @@
             (this.m_gameDataParser = null),
             (this.m_info = null),
             (this.m_rgSubtitles = []),
+            (this.m_eWatchLocation = 0),
             (this.m_bPaused = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_bBuffering = !1),
@@ -24495,11 +24494,15 @@
             (this.m_steamID = t),
             (this.m_elVideo = n),
             (this.m_nVolume = o),
-            (this.m_bMuted = i);
+            (this.m_bMuted = i),
+            (this.m_eWatchLocation = r);
         }
         return (
           (e.prototype.GetBroadcastSteamID = function() {
             return this.m_steamID;
+          }),
+          (e.prototype.GetWatchLocation = function() {
+            return this.m_eWatchLocation;
           }),
           (e.prototype.IsPaused = function() {
             return this.m_bPaused;
@@ -24564,6 +24567,12 @@
               var n = this.m_elVideo.textTracks[t];
               n.language === e ? (n.mode = "showing") : (n.mode = "disabled");
             }
+          }),
+          (e.prototype.GetBroadcastState = function() {
+            return this.m_store.GetBroadcastState(this.m_steamID);
+          }),
+          (e.prototype.GetBroadcastStateDescription = function() {
+            return this.m_store.GetBroadcastStateDescription(this.m_steamID);
           }),
           (e.prototype.Start = function(e) {
             Object(I.a)(!this.m_player, "Initialized twice?"),
@@ -24702,9 +24711,18 @@
               this.m_player && (this.m_player.Close(), (this.m_player = null));
           }),
           (e.prototype.TogglePlayPause = function() {
-            this.m_player.IsPaused()
-              ? this.m_player.Play()
-              : this.m_player.Pause();
+            !this.m_player || this.m_player.IsPaused()
+              ? this.Play()
+              : this.Pause();
+          }),
+          (e.prototype.Play = function() {
+            var e = this.GetBroadcastState();
+            e != qn.None
+              ? e == qn.Ready && this.m_player && this.m_player.Play()
+              : to.StartVideo(this);
+          }),
+          (e.prototype.Pause = function() {
+            this.m_player.Pause();
           }),
           (e.prototype.JumpTime = function(e) {
             this.m_player.JumpTime(e);
@@ -31444,30 +31462,30 @@
                   onEscKeypress: this.props.closeModal
                 },
                 Ie.createElement(
-                  ii.g,
+                  ii.h,
                   {
                     classNameContent: "NicknameDialog",
                     onSubmit: this.HandleSubmit
                   },
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     null,
                     t
                       ? Object(Q.b)("#Friend_Menu_ChangeNickname")
                       : Object(Q.b)("#Friend_Menu_AddNickname")
                   ),
                   Ie.createElement(
-                    ii.a,
+                    ii.b,
                     null,
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       null,
                       t
                         ? Object(Q.b)("#Nickname_EditNickname")
                         : Object(Q.b)("#Nickname_AddANickname")
                     ),
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       null,
                       Ie.createElement(
                         "div",
@@ -31492,7 +31510,7 @@
                           Ie.createElement(
                             "div",
                             { className: "mediumName asNickName" },
-                            Ie.createElement(ii.n, {
+                            Ie.createElement(ii.o, {
                               placeholder: t
                                 ? Object(Q.b)("#Nickname_PlaceHolderNickName")
                                 : Object(Q.b)(
@@ -31510,9 +31528,9 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.i,
+                    ii.j,
                     null,
-                    Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                    Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                   )
                 )
               )
@@ -31697,7 +31715,7 @@
               Ie.createElement(
                 Ie.Fragment,
                 null,
-                Ie.createElement(ii.n, {
+                Ie.createElement(ii.o, {
                   label: Object(Q.b)("#Chat_Invite_Linkheader"),
                   className: "InviteFriendToChatDialog_LinkInput",
                   type: "text",
@@ -31756,11 +31774,11 @@
               "div",
               { className: "expireLinkInContainer" },
               Ie.createElement(
-                ii.o,
+                ii.p,
                 null,
                 Object(Q.b)("#InviteLink_ExpireDropDownLabel")
               ),
-              Ie.createElement(ii.h, {
+              Ie.createElement(ii.i, {
                 strClassName: "inviteLinkDropDown",
                 rgOptions: t,
                 strDefaultLabel: e
@@ -31932,7 +31950,7 @@
                 ci.a,
                 { onEscKeypress: this.DismissDialog },
                 Ie.createElement(
-                  ii.g,
+                  ii.h,
                   {
                     classNameContent:
                       "ChatRoomGroupInviteDialog" +
@@ -31940,7 +31958,7 @@
                     onSubmit: this.OnSubmit
                   },
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     null,
                     i
                       ? Ie.createElement(
@@ -31973,7 +31991,7 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.a,
+                    ii.b,
                     null,
                     !this.props.bIsDropInvite &&
                       a &&
@@ -32001,7 +32019,7 @@
                       si,
                       R.a({ className: "" }, this.GetDragDropProps()),
                       Ie.createElement(
-                        ii.b,
+                        ii.c,
                         {
                           className:
                             "CreateChat_NonBetaFriendsWarning" +
@@ -32031,18 +32049,18 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.i,
+                    ii.j,
                     null,
                     Ie.createElement(
                       "div",
                       { className: "DialogTwoColLayout _DialogColLayout" },
                       Ie.createElement(
-                        ii.x,
+                        ii.y,
                         { disabled: !this.state.bShowSubmit },
                         Object(Q.b)("#Chat_Invite")
                       ),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         { onClick: this.DismissDialog },
                         Object(Q.b)("#Button_Close")
                       )
@@ -32554,13 +32572,13 @@
               ci.a,
               { onEscKeypress: this.props.closeModal },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "CreateChatChannelDialog",
                   onSubmit: this.OnSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)(
                     this.props.bVoiceChannel
@@ -32569,9 +32587,9 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     ref: function(e) {
                       t.m_refInput = e;
                     },
@@ -32580,9 +32598,9 @@
                   })
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                  Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                 )
               )
             );
@@ -34889,18 +34907,18 @@
             ci.a,
             { onEscKeypress: this.props.closeModal },
             Ie.createElement(
-              ii.g,
+              ii.h,
               {
                 classNameContent: "CreateChatDialog",
                 onSubmit: this.HandleSubmit
               },
-              Ie.createElement(ii.l, null, i),
+              Ie.createElement(ii.m, null, i),
               Ie.createElement(
-                ii.a,
+                ii.b,
                 null,
                 e &&
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Ie.createElement(
                       "span",
@@ -34921,12 +34939,12 @@
                   ),
                 this.state.strError &&
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     { className: "nicknameError" },
                     this.state.strError
                   ),
                 !this.props.bHideChatNameEntry &&
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     type: "text",
                     label: Object(Q.b)("#Chat_Settings_Room_Name"),
                     className: "nicknameInput",
@@ -34935,7 +34953,7 @@
                     autoFocus: !0
                   }),
                 Ie.createElement(
-                  ii.b,
+                  ii.c,
                   {
                     className:
                       "CreateChat_NonBetaFriendsWarning " +
@@ -34962,9 +34980,9 @@
                 })
               ),
               Ie.createElement(
-                ii.i,
+                ii.j,
                 null,
-                Ie.createElement(ii.s, {
+                Ie.createElement(ii.t, {
                   strOKText: t,
                   onCancel: this.props.closeModal,
                   bOKDisabled: !o
@@ -35380,7 +35398,7 @@
           }),
           (e.prototype.FriendsSettingsToggleRow = function(t) {
             var n = this;
-            return Ie.createElement(ii.u, {
+            return Ie.createElement(ii.v, {
               key: t.strName,
               onChange: function(e) {
                 n.OnSettingToggled(t.strName, e);
@@ -35392,7 +35410,7 @@
           }),
           (e.prototype.FriendsSettingsCheckbox = function(t) {
             var n = this;
-            return Ie.createElement(ii.d, {
+            return Ie.createElement(ii.e, {
               key: t.strName,
               onChange: function(e) {
                 n.OnSettingToggled(t.strName, e);
@@ -35405,7 +35423,7 @@
           ) {
             var n = this;
             return Ie.createElement(
-              ii.u,
+              ii.v,
               {
                 key: "CommunityPreference" + t.strName,
                 onChange: function(e) {
@@ -35432,7 +35450,7 @@
           ),
           e
         );
-      })(ii.w);
+      })(ii.x);
     ((Lr = Rr || (Rr = {}))[(Lr.k_EChatFontSizeSmall = 1)] =
       "k_EChatFontSizeSmall"),
       (Lr[(Lr.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
@@ -35494,7 +35512,7 @@
               t = this.FriendsSettingsToggleRow,
               n = this.state.friendSettings.nChatFontSize;
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.OnSubmit },
               Ie.createElement(
                 "div",
@@ -35508,15 +35526,15 @@
                   strLabel: Object(Q.b)("#FriendSettings_CompactQuickAccess")
                 }),
                 Ie.createElement(
-                  ii.o,
+                  ii.p,
                   { className: "friendSettingsSubheader" },
                   Object(Q.b)("#FriendSettings_ChatFontSize")
                 ),
                 Ie.createElement(
-                  ii.C,
+                  ii.D,
                   { className: "FriendsSettingsChatFontSizeSection_ButtonRow" },
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className:
                         "smallFontSetting " +
@@ -35528,7 +35546,7 @@
                     Object(Q.b)("#FriendSetting_ChatFontSmall")
                   ),
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className:
                         "defaultFontSetting " +
@@ -35540,7 +35558,7 @@
                     Object(Q.b)("#FriendSetting_ChatFontDefault")
                   ),
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className:
                         "largeFontSetting " +
@@ -35554,7 +35572,7 @@
                 )
               ),
               !this.props.bSubmitImmediate &&
-                Ie.createElement(ii.s, { onCancel: this.props.onCancel })
+                Ie.createElement(ii.t, { onCancel: this.props.onCancel })
             );
           }),
           R.c([T.a], e.prototype, "SetChatFontSize", null),
@@ -35573,7 +35591,7 @@
                 ? "#FriendSettings_RememberOpenChats_DescClient"
                 : "#FriendSettings_RememberOpenChats_Desc";
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.OnSubmit },
               Ie.createElement(
                 "div",
@@ -35616,7 +35634,7 @@
             var e = this.FriendsSettingsToggleRow,
               t = this.FriendsSettingsCommunityPreferenceToggleRow;
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.OnSubmit },
               Ie.createElement(
                 "div",
@@ -35927,7 +35945,7 @@
                 (r = Object(Q.b)("#VoicePushToTalkPressHotKey"));
             var m = this.props.voiceStore.GetUseNoiseGateLevel();
             return Ie.createElement(
-              ii.j,
+              ii.k,
               {
                 className: "DialogBody VoiceSettings",
                 onContextMenu: this.onContextMenu,
@@ -35967,7 +35985,7 @@
                         })
                       }),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           className:
                             "LocalMicTestButton " + (p ? "Primary" : "Off"),
@@ -35983,7 +36001,7 @@
                   )
                 ),
                 this.state.micOptionsReady &&
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     strClassName: "InputDevice",
                     label: Object(Q.b)("#VoiceDevice"),
                     rgOptions: this.m_rgMicOptions,
@@ -35992,13 +36010,13 @@
                     onChange: this.OnMicDropdownChanged
                   }),
                 !this.state.micOptionsReady &&
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     label: Object(Q.b)("#VoiceDevice"),
                     rgOptions: this.m_rgMicOptions,
                     strDefaultLabel: Object(Q.b)("#MicLoading...")
                   }),
                 this.state.outputOptionsReady &&
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     label: Object(Q.b)("#VoiceOutputDevice"),
                     rgOptions: this.m_rgOutputOptions,
                     strDefaultLabel: Object(Q.b)("#DefaultOutputDevice"),
@@ -36006,16 +36024,16 @@
                     onChange: this.OnOutputDeviceDropdownChanged
                   }),
                 !this.state.outputOptionsReady &&
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     label: Object(Q.b)("#VoiceOutputDevice"),
                     rgOptions: this.m_rgOutputOptions,
                     strDefaultLabel: Object(Q.b)("#OutputDeviceLoading...")
                   }),
-                Ie.createElement(ii.o, null, Object(Q.b)("#VoiceVolume")),
+                Ie.createElement(ii.p, null, Object(Q.b)("#VoiceVolume")),
                 Ie.createElement(
-                  ii.D,
+                  ii.E,
                   { className: "DialogLabelStrong" },
-                  Ie.createElement(ii.A, {
+                  Ie.createElement(ii.B, {
                     min: 0,
                     max: 100,
                     label: Object(Q.b)("#VoiceInputGain"),
@@ -36026,7 +36044,7 @@
                     ),
                     onChange: this.OnInputGainChanged
                   }),
-                  Ie.createElement(ii.A, {
+                  Ie.createElement(ii.B, {
                     min: 0,
                     max: 100,
                     label: Object(Q.b)("#VoiceOutputGain"),
@@ -36049,7 +36067,7 @@
                           (o ? "" : " disabled")
                       },
                       Ie.createElement(
-                        ii.o,
+                        ii.p,
                         null,
                         Object(Q.b)("#VoiceTransmissionType_Label"),
                         !o &&
@@ -36062,13 +36080,13 @@
                           )
                       ),
                       Ie.createElement(
-                        ii.C,
+                        ii.D,
                         {
                           className:
                             "FriendsSettingsVoiceTransmissionType_ButtonRow"
                         },
                         Ie.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             className: e || n ? "Off" : "Primary",
                             onClick: this.OnSetOpenMic
@@ -36076,7 +36094,7 @@
                           Object(Q.b)("#VoiceTransmissionType_OpenMic")
                         ),
                         Ie.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             className: e ? "Primary" : "Off",
                             disabled: !o,
@@ -36085,7 +36103,7 @@
                           Object(Q.b)("#VoiceTransmissionType_PushToTalk")
                         ),
                         Ie.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             className: n ? "Primary" : "Off",
                             disabled: !o,
@@ -36104,12 +36122,12 @@
                             "div",
                             { className: "displayRow" },
                             Ie.createElement(
-                              ii.o,
+                              ii.p,
                               { className: "DialogLabelExplainer" },
                               e ? r : n ? a : s
                             ),
                             Ie.createElement(
-                              ii.c,
+                              ii.d,
                               {
                                 disabled: !o,
                                 className:
@@ -36121,7 +36139,7 @@
                             !e &&
                               !n &&
                               Ie.createElement(
-                                ii.c,
+                                ii.d,
                                 {
                                   className: "ClearHotKeyButton",
                                   onClick: this.ClearHotKey,
@@ -36135,7 +36153,7 @@
                             {
                               className: "PPTSoundOption DialogLabelExplainer"
                             },
-                            Ie.createElement(ii.d, {
+                            Ie.createElement(ii.e, {
                               onChange: function(e) {
                                 t.OnPPTSoundChecked(e);
                               },
@@ -36156,7 +36174,7 @@
                           (o ? "" : " disabled")
                       },
                       Ie.createElement(
-                        ii.o,
+                        ii.p,
                         null,
                         Object(Q.b)("#VoiceTransmissionType"),
                         !o &&
@@ -36168,7 +36186,7 @@
                             ") "
                           )
                       ),
-                      Ie.createElement(ii.u, {
+                      Ie.createElement(ii.v, {
                         disabled: !o,
                         label: Object(Q.b)("#VoiceTransmissionTypeExplainer"),
                         checked: e,
@@ -36181,12 +36199,12 @@
                             className: "pushtoTalkKeyAssignContainer displayRow"
                           },
                           Ie.createElement(
-                            ii.o,
+                            ii.p,
                             { className: "DialogLabelExplainer" },
                             r
                           ),
                           Ie.createElement(
-                            ii.c,
+                            ii.d,
                             {
                               disabled: !o,
                               className:
@@ -36201,20 +36219,20 @@
                   "div",
                   { className: "_DialogSection" },
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     null,
                     Object(Q.b)("#VoiceTransmisionThreshold")
                   ),
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     { className: "DialogLabelStrong" },
                     Object(Q.b)("#VoiceTransmissionThresholdExplainer")
                   ),
                   Ie.createElement(
-                    ii.C,
+                    ii.D,
                     { className: "FriendsSettingsFlashSection_ButtonRow" },
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       {
                         className:
                           m <= To.k_ENoiseGateLevel_Low ? "Primary" : "Off",
@@ -36223,7 +36241,7 @@
                       Object(Q.b)("#VoiceTransmissionThresholdOff")
                     ),
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       {
                         className:
                           m == To.k_ENoiseGateLevel_Medium ? "Primary" : "Off",
@@ -36232,7 +36250,7 @@
                       Object(Q.b)("#VoiceTransmissionThresholdMedium")
                     ),
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       {
                         className:
                           m == To.k_ENoiseGateLevel_High ? "Primary" : "Off",
@@ -36242,13 +36260,13 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     { className: "DialogLabelExplainer" },
                     Object(Q.b)("#VoiceTransmissionThresholdRecommended")
                   )
                 ),
                 Ie.createElement(
-                  ii.c,
+                  ii.d,
                   {
                     className: "advancedSettingsButton",
                     onClick: this.OnShowAdvancedSettings
@@ -36265,32 +36283,32 @@
                       (this.state.showAdvanced ? " showAdvanced" : "")
                   },
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     null,
                     Object(Q.b)("#VoiceAdvancedSettings")
                   ),
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     { className: "DialogLabelExplainer Left" },
                     Object(Q.b)("#VoiceAdvancedSettingsExplainer")
                   ),
-                  Ie.createElement(ii.u, {
+                  Ie.createElement(ii.v, {
                     label: Object(Q.b)("#VoiceEchoCancellation"),
                     checked: this.props.voiceStore.GetUseEchoCancellation(),
                     onChange: this.OnToggleEchoCancellation
                   }),
-                  Ie.createElement(ii.u, {
+                  Ie.createElement(ii.v, {
                     label: Object(Q.b)("#VoiceNoiseCancellation"),
                     checked: this.props.voiceStore.GetUseNoiseCancellation(),
                     onChange: this.OnToggleNoiseCancellation
                   }),
-                  Ie.createElement(ii.u, {
+                  Ie.createElement(ii.v, {
                     label: Object(Q.b)("#VoiceAutoGainControl"),
                     checked: this.props.voiceStore.GetUseAutoGainControl(),
                     onChange: this.OnToggleAutoGainControl
                   }),
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className: "copyVoiceLogsButton",
                       onClick: this.CopyVoiceLogsToClipboard
@@ -36337,12 +36355,12 @@
           R.c([T.a], e.prototype, "OnStopLocalMicTest", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w);
+      })(ii.x);
     Ie.createElement(
       "div",
       { className: "notificationChimeAndToast FriendsSettingsNotificationRow" },
-      Ie.createElement(ii.d, null),
-      Ie.createElement(ii.d, null)
+      Ie.createElement(ii.e, null),
+      Ie.createElement(ii.e, null)
     );
     function Vr(e) {
       void 0 === e && (e = !0);
@@ -36464,15 +36482,15 @@
               ci.a,
               { onEscKeypress: this.DismissDialog },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 { classNameContent: "ChatRoomNotificationSettingsDialog" },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)("#NotificationSettings_Title")
                 ),
                 Ie.createElement(
-                  ii.o,
+                  ii.p,
                   null,
                   Object(Q.d)(
                     "#NotificationSettings_SubTitle",
@@ -36480,10 +36498,10 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     {
                       className:
                         "NotificationSettingsSavingIndicator " +
@@ -36507,30 +36525,30 @@
                     Ie.createElement(
                       Ie.Fragment,
                       null,
-                      Ie.createElement(ii.k, null),
+                      Ie.createElement(ii.l, null),
                       Ie.createElement(
-                        ii.D,
+                        ii.E,
                         { className: "notificationsChannelHeader" },
                         Ie.createElement(
-                          ii.o,
+                          ii.p,
                           { className: "NotificationChannelNameLabel" },
                           Object(Q.b)("#GroupSettings_Channels_TextChannels")
                         ),
                         Ie.createElement(
-                          ii.o,
+                          ii.p,
                           { className: "OverrideChannelLabel" },
                           Object(Q.b)("#NotificationSetting_ShortLabel")
                         )
                       ),
                       Ie.createElement(
-                        ii.m,
+                        ii.n,
                         { className: "scrollMaskVertical" },
                         e
                       )
                     )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
                   Object(Q.d)(
                     "#NotificationSetting_Footer_Desc",
@@ -36573,14 +36591,14 @@
             var e = this.props.chat;
             e.GetDesktopNotificationLevelSetting();
             return Ie.createElement(
-              ii.C,
+              ii.D,
               { className: "notificationsChannel" },
               Ie.createElement(
                 "div",
                 { className: "NotificationChannelName" },
                 e.name
               ),
-              Ie.createElement(ii.h, {
+              Ie.createElement(ii.i, {
                 rgOptions: this.m_rgSelectOptions,
                 selectedOption: e.GetDesktopNotificationLevelSetting(),
                 onChange: this.OnChatNotificationLevelChanged
@@ -36620,7 +36638,7 @@
                       (this.props.bIsDefault ? " isDefault" : "")
                   },
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     null,
                     this.props.bIsDefault
                       ? Object(Q.b)("#NotificationSetting_DefaultLabel")
@@ -36633,7 +36651,7 @@
                   Ie.createElement(
                     "div",
                     { className: "notificationRow" },
-                    Ie.createElement(ii.h, {
+                    Ie.createElement(ii.i, {
                       rgOptions: this.props.drop_down_options,
                       selectedOption: e,
                       onChange: this.OnNotificationLevelChanged
@@ -36643,7 +36661,7 @@
                     Ie.createElement(
                       "div",
                       { className: "indicatorOptionContainer" },
-                      Ie.createElement(ii.u, {
+                      Ie.createElement(ii.v, {
                         classname: "indicatorOption",
                         label: Object(Q.b)("#NotificationSetting_Indicator"),
                         onChange: this.OnShowUnreadIndicatorChanged,
@@ -36746,7 +36764,7 @@
             return Ie.createElement(
               ci.a,
               { onEscKeypress: this.props.closeModal },
-              Ie.createElement(ii.v, R.a({}, n))
+              Ie.createElement(ii.w, R.a({}, n))
             );
           }),
           (e = R.c([hi.a], e))
@@ -36789,7 +36807,7 @@
             var e = this.state.friendSettings,
               t = this.FriendsSettingsNotificationRow;
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.OnSubmit },
               Ie.createElement(
                 "div",
@@ -36862,15 +36880,15 @@
                     "div",
                     { className: "FriendsSettingsFlashSection" },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       { className: "FriendsSettingsFlashSection_Header" },
                       Object(Q.b)("#FriendSettings_Flash_Header")
                     ),
                     Ie.createElement(
-                      ii.C,
+                      ii.D,
                       { className: "FriendsSettingsFlashSection_ButtonRow" },
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           className: 0 == e.nChatFlashMode ? "Primary" : "Off",
                           value: 0,
@@ -36879,7 +36897,7 @@
                         Object(Q.b)("#FriendSettings_Flash_Always")
                       ),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           className: 1 == e.nChatFlashMode ? "Primary" : "Off",
                           value: 1,
@@ -36888,7 +36906,7 @@
                         Object(Q.b)("#FriendSettings_Flash_Minimized")
                       ),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           className: 2 == e.nChatFlashMode ? "Primary" : "Off",
                           value: 2,
@@ -36900,7 +36918,7 @@
                   )
                 ),
               !this.props.bSubmitImmediate &&
-                Ie.createElement(ii.s, { onCancel: this.props.onCancel })
+                Ie.createElement(ii.t, { onCancel: this.props.onCancel })
             );
           }),
           R.c([T.a], e.prototype, "FriendsSettingsNotificationRow", null),
@@ -38042,30 +38060,30 @@
               Ie.Fragment,
               null,
               Ie.createElement(
-                ii.j,
+                ii.k,
                 { className: "DialogBody", onSubmit: this.OnSubmit },
                 Ie.createElement(
                   "div",
                   { className: "_FixedHeight" },
-                  Ie.createElement(ii.b, null, "Text input"),
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.c, null, "Text input"),
+                  Ie.createElement(ii.o, {
                     label: "INPUT TITLE",
                     value: this.state.inputText,
                     onChange: this.OnInputChanged
                   }),
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     label: "READ ONLY",
                     value: "You can't change this",
                     disabled: !0
                   }),
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     label: "Drop down",
                     rgOptions: this.m_rgSelectOptions,
                     strDefaultLabel: "Select one...",
                     selectedOption: this.state.selectedOption,
                     onChange: this.OnSelectDropDownChanged
                   }),
-                  Ie.createElement(ii.u, {
+                  Ie.createElement(ii.v, {
                     label: "On Off Toggle",
                     checked: this.state.checkboxChecked,
                     onChange: this.OnToggled
@@ -38083,7 +38101,7 @@
                           verticalAlign: "middle"
                         }
                       },
-                      Ie.createElement(ii.d, null)
+                      Ie.createElement(ii.e, null)
                     )
                   ),
                   Ie.createElement(
@@ -38099,38 +38117,38 @@
                           verticalAlign: "middle"
                         }
                       },
-                      Ie.createElement(ii.z, null)
+                      Ie.createElement(ii.A, null)
                     )
                   ),
-                  Ie.createElement(ii.A, { min: 0, max: 100, value: 25 }),
+                  Ie.createElement(ii.B, { min: 0, max: 100, value: 25 }),
                   Ie.createElement(
                     "div",
                     { style: { marginBottom: "20px" } },
                     Ie.createElement(
-                      ii.C,
+                      ii.D,
                       null,
-                      Ie.createElement(ii.x, null, "PrimaryButton"),
-                      Ie.createElement(ii.B, null, "TextButton"),
+                      Ie.createElement(ii.y, null, "PrimaryButton"),
+                      Ie.createElement(ii.C, null, "TextButton"),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         { svgicon: ri.k },
                         "Button w/ Icon"
                       )
                     )
                   ),
                   Ie.createElement(
-                    ii.D,
+                    ii.E,
                     null,
-                    Ie.createElement(ii.n, {
+                    Ie.createElement(ii.o, {
                       label: "Left input",
                       placeholder: "Placeholder"
                     }),
-                    Ie.createElement(ii.n, {
+                    Ie.createElement(ii.o, {
                       label: "Right input",
                       placeholder: "Placeholder"
                     })
                   ),
-                  Ie.createElement(ii.u, {
+                  Ie.createElement(ii.v, {
                     label: "Another toggle",
                     description:
                       "This one has a longer description with more details."
@@ -38138,9 +38156,9 @@
                 )
               ),
               Ie.createElement(
-                ii.i,
+                ii.j,
                 null,
-                Ie.createElement(ii.s, { onCancel: this.props.onCancel })
+                Ie.createElement(ii.t, { onCancel: this.props.onCancel })
               )
             );
           }),
@@ -38150,39 +38168,39 @@
           R.c([T.a], e.prototype, "OnSubmit", null),
           e
         );
-      })(ii.w),
+      })(ii.x),
       ba = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
             (e.rgDragDropOptions = [
               Ie.createElement(
-                ii.q,
+                ii.r,
                 { key: "key1", id: "key1" },
-                Ie.createElement(ii.u, { label: "Draggable toggle #1" })
+                Ie.createElement(ii.v, { label: "Draggable toggle #1" })
               ),
               Ie.createElement(
-                ii.q,
+                ii.r,
                 { key: "key2", id: "key2" },
-                Ie.createElement(ii.u, {
+                Ie.createElement(ii.v, {
                   ref: e.RefTest,
                   label: "Draggable toggle #2"
                 })
               ),
               Ie.createElement(
-                ii.q,
+                ii.r,
                 { key: "key3", id: "key3" },
-                Ie.createElement(ii.u, { label: "Draggable toggle #3" })
+                Ie.createElement(ii.v, { label: "Draggable toggle #3" })
               ),
               Ie.createElement(
-                ii.q,
+                ii.r,
                 { key: "keyz", id: "keyz" },
                 Ie.createElement(va, null)
               ),
               Ie.createElement(
-                ii.q,
+                ii.r,
                 { key: "key4", id: "key4" },
-                Ie.createElement(ii.u, { label: "Draggable toggle #4" })
+                Ie.createElement(ii.v, { label: "Draggable toggle #4" })
               )
             ]),
             e
@@ -38204,10 +38222,10 @@
           }),
           (e.prototype.render = function() {
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.OnSubmit },
               Ie.createElement(
-                ii.y,
+                ii.z,
                 { onReorder: this.OnListReordered },
                 this.rgDragDropOptions
               )
@@ -38218,7 +38236,7 @@
           R.c([T.a], e.prototype, "OnListReordered", null),
           e
         );
-      })(ii.w),
+      })(ii.x),
       va = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -38238,7 +38256,7 @@
             window.clearInterval(this.m_iInterval);
           }),
           (e.prototype.render = function() {
-            return Ie.createElement(ii.n, {
+            return Ie.createElement(ii.o, {
               value: this.state.cSeconds,
               disabled: !0,
               label: "COUNTER"
@@ -38279,23 +38297,23 @@
               Ie.Fragment,
               null,
               Ie.createElement(
-                ii.a,
+                ii.b,
                 null,
-                Ie.createElement(ii.u, {
+                Ie.createElement(ii.v, {
                   label: '"Sticky" Context Menus',
                   description:
                     "Context menus will stay open to allow inspecting CSS",
                   checked: Object(bi.h)(),
                   onChange: this.OnStickyContextMenuToggle
                 }),
-                Ie.createElement(ii.u, {
+                Ie.createElement(ii.v, {
                   label: "Enable Mobx Dev Tools",
                   description:
                     "Display mobx devtools in the top right of each window",
                   checked: Dp.bEnabled,
                   onChange: this.OnMobxDevToolsToggle
                 }),
-                Ie.createElement(ii.u, {
+                Ie.createElement(ii.v, {
                   label: "Log all CM Traffic",
                   description:
                     "All messages to and from the steam servers will be logged to the browser console (F12)",
@@ -38312,7 +38330,7 @@
           R.c([T.a], t.prototype, "OnMobxDevToolsToggle", null),
           t
         );
-      })(ii.w),
+      })(ii.x),
       ya = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -38340,15 +38358,15 @@
               (t.visible = !0),
               n.EnsureCommunityDataLoaded(),
               Ie.createElement(
-                ii.j,
+                ii.k,
                 { className: "DialogBody" },
                 Ie.createElement(
-                  ii.D,
+                  ii.E,
                   null,
                   Ie.createElement(
                     "div",
                     { style: { flex: 1 } },
-                    Ie.createElement(ii.o, null, "Old Throbber"),
+                    Ie.createElement(ii.p, null, "Old Throbber"),
                     Ie.createElement(
                       "div",
                       { className: "LoadingWrapper" },
@@ -38365,7 +38383,7 @@
                   Ie.createElement(
                     "div",
                     { style: { flex: 2 } },
-                    Ie.createElement(ii.o, null, "New Throbber (W.I.P.)"),
+                    Ie.createElement(ii.p, null, "New Throbber (W.I.P.)"),
                     Ie.createElement(
                       "div",
                       { className: "displayRow" },
@@ -38383,9 +38401,9 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
-                  Ie.createElement(ii.o, null, "Miniprofile Tester:"),
+                  Ie.createElement(ii.p, null, "Miniprofile Tester:"),
                   Ie.createElement(
                     "form",
                     null,
@@ -38415,7 +38433,7 @@
           R.c([T.a], e.prototype, "OnSearchInput", null),
           e
         );
-      })(ii.w),
+      })(ii.x),
       Ca = n("0wLp");
     var Ia = (function(t) {
         function e(e) {
@@ -39017,28 +39035,28 @@
               ci.a,
               { onEscKeypress: this.props.closeModal },
               Ie.createElement(
-                ii.f,
+                ii.g,
                 { className: "changeLogPage" },
-                Ie.createElement(ii.l, null, Object(Q.b)("#changeLog_Title")),
+                Ie.createElement(ii.m, null, Object(Q.b)("#changeLog_Title")),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Object(Q.b)("#changeLog_SubTitle")
                   ),
                   Ie.createElement(
-                    ii.m,
+                    ii.n,
                     { className: "changeLogDetails" },
                     Ie.createElement(Ia, null)
                   )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
                   Ie.createElement(
-                    ii.x,
+                    ii.y,
                     { onClick: this.props.closeModal },
                     Object(Q.b)("#Button_Close")
                   )
@@ -40257,7 +40275,7 @@
                                     )
                                   },
                                   Ie.createElement(
-                                    ii.B,
+                                    ii.C,
                                     {
                                       onClick: function(e) {
                                         o.OnAcceptClanInvite(e, t);
@@ -40275,7 +40293,7 @@
                                     )
                                   },
                                   Ie.createElement(
-                                    ii.B,
+                                    ii.C,
                                     {
                                       onClick: function(e) {
                                         o.OnDeclineClanInvite(e, t);
@@ -41265,7 +41283,7 @@
                             Ie.createElement(
                               "div",
                               { className: "friendInviteBlockContainer" },
-                              Ie.createElement(ii.d, {
+                              Ie.createElement(ii.e, {
                                 onChange: function(e) {
                                   return s.OnBlockInvite(e, t);
                                 }
@@ -42465,7 +42483,7 @@
                 "div",
                 { className: t.join(" ") },
                 Ie.createElement(
-                  ii.p,
+                  ii.q,
                   {
                     onChange: this.OnTextInput,
                     onKeyDown: this.OnInputKeyDown,
@@ -42883,28 +42901,28 @@
               ci.a,
               { onEscKeypress: this.props.closeModal },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "ManageGroupDialog",
                   onSubmit: this.HandleSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   this.props.group
                     ? Object(Q.b)("#FriendGroup_Menu_Manage")
                     : Object(Q.b)("#FriendGroup_Menu_CreateGroup")
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   this.state.strError &&
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     type: "text",
                     label: Object(Q.b)("#FriendGroup_CategoryName"),
                     className: "nicknameInput",
@@ -42920,9 +42938,9 @@
                   })
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                  Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                 )
               )
             );
@@ -42986,30 +43004,30 @@
               ci.a,
               { onEscKeypress: this.props.closeModal },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "AssignCategoriesDialog",
                   onSubmit: this.HandleSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)("#FriendGroup_Categorize_Title")
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   this.state.strError &&
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
                   Ie.createElement(
-                    ii.D,
+                    ii.E,
                     null,
                     Ie.createElement(
-                      ii.e,
+                      ii.f,
                       null,
                       Ie.createElement(qa, {
                         friend: this.props.friend,
@@ -43024,19 +43042,19 @@
                     mapChecks: this.m_mapCategoryChecks
                   }),
                   Ie.createElement(
-                    ii.D,
+                    ii.E,
                     { className: "AssignCategoriesDialog_AddNewButton" },
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       { onClick: this.CreateNew },
                       Object(Q.b)("#FriendGroup_Categorize_AddNew")
                     )
                   )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                  Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                 )
               )
             );
@@ -43066,7 +43084,7 @@
               Ie.Fragment,
               null,
               Ie.createElement(
-                ii.o,
+                ii.p,
                 null,
                 Object(Q.b)("#FriendGroup_Categorize_Categories")
               ),
@@ -43105,7 +43123,7 @@
               Ie.createElement(
                 "div",
                 { onContextMenu: this.OnContextMenu },
-                Ie.createElement(ii.d, {
+                Ie.createElement(ii.e, {
                   label: t.name,
                   checked: e,
                   onChange: this.OnToggle
@@ -43197,26 +43215,26 @@
                 onEscKeypress: this.props.closeModal
               },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "ChangePersonaNameDialog",
                   onSubmit: this.HandleSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)("#ChangePersona_Title")
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Object(Q.b)("#ChangePersona_Description")
                   ),
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Ie.createElement(
                       "div",
@@ -43245,7 +43263,7 @@
                           Ie.createElement(
                             "div",
                             { className: "mediumName" },
-                            Ie.createElement(ii.n, {
+                            Ie.createElement(ii.o, {
                               placeholder: Object(Q.b)(
                                 "#ChangePersona_PlaceHolder"
                               ),
@@ -43261,9 +43279,9 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                  Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                 )
               )
             )
@@ -43377,7 +43395,7 @@
         }),
         (e.prototype.FriendsSettingsCheckbox = function(t) {
           var n = this;
-          return Ie.createElement(ii.d, {
+          return Ie.createElement(ii.e, {
             key: t.strName,
             disabled: this.state.bUseDefaults,
             onChange: function(e) {
@@ -43434,21 +43452,21 @@
                 onEscKeypress: this.props.closeModal
               },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "FriendNotificationsDialog",
                   onSubmit: this.HandleSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)("#Friend_Menu_NotificationsTitle")
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   { className: n ? "useDefaults" : "" },
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Object(Q.b)(
                       "#FriendNotifications_Instructions",
@@ -43456,7 +43474,7 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Ie.createElement(
                       "div",
@@ -43490,7 +43508,7 @@
                       )
                     )
                   ),
-                  Ie.createElement(ii.d, {
+                  Ie.createElement(ii.e, {
                     classname: "useDefaultsCheckBox",
                     label: Object(Q.b)("#FriendNotifications_UseDefaults"),
                     onChange: function(e) {
@@ -43551,9 +43569,9 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                  Ie.createElement(ii.t, { onCancel: this.props.closeModal })
                 )
               )
             )
@@ -44390,7 +44408,7 @@
                     { className: t, onClick: this.OnMutingClick },
                     Ie.createElement(ri.jb, null)
                   ),
-                  Ie.createElement(ii.A, {
+                  Ie.createElement(ii.B, {
                     min: 0,
                     max: 100,
                     label: "",
@@ -44437,7 +44455,7 @@
                 onSelected: function() {},
                 bInteractableItem: !0
               },
-              Ie.createElement(ii.d, {
+              Ie.createElement(ii.e, {
                 label: this.props.roleName,
                 checked: this.props.bHasRole,
                 onChange: this.OnChange,
@@ -45148,7 +45166,7 @@
                     bChecked: !1,
                     onSelected: this.ToggleUserDND
                   },
-                  Ie.createElement(ii.d, {
+                  Ie.createElement(ii.e, {
                     key: "dnd_checkbox",
                     classname: "DNDCheckBox",
                     checked: a,
@@ -45221,28 +45239,28 @@
               ci.a,
               { onEscKeypress: this.OnCancel },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "KickUserDialog",
                   onSubmit: this.OnOK,
                   bCenterVertically: !0
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   " ",
                   Object(Q.b)("#Friend_Kick"),
                   " "
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     null,
                     Object(Q.b)("#Friend_Kick_How_Long")
                   ),
-                  Ie.createElement(ii.h, {
+                  Ie.createElement(ii.i, {
                     strDefaultLabel: Object(Q.b)("#Friend_Kick_Hour"),
                     rgOptions: e,
                     onChange: this.OnDropDownChange,
@@ -45250,9 +45268,9 @@
                   })
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, {
+                  Ie.createElement(ii.t, {
                     onCancel: this.OnCancel,
                     strOKText: Object(Q.b)("#Friend_Kick_Button"),
                     strCancelText: Object(Q.b)("#Button_Cancel")
@@ -45607,27 +45625,27 @@
             ci.a,
             { onEscKeypress: this.props.closeModal },
             Ie.createElement(
-              ii.g,
+              ii.h,
               {
                 classNameContent: "SaveVoiceRoomDialog",
                 onSubmit: this.HandleSubmit
               },
-              Ie.createElement(ii.l, null, Object(Q.b)("#Chat_SaveVoiceRoom")),
+              Ie.createElement(ii.m, null, Object(Q.b)("#Chat_SaveVoiceRoom")),
               Ie.createElement(
-                ii.a,
+                ii.b,
                 null,
                 this.state.strError &&
                   Ie.createElement(
-                    ii.b,
+                    ii.c,
                     { className: "nicknameError" },
                     this.state.strError
                   ),
                 Ie.createElement(
-                  ii.b,
+                  ii.c,
                   null,
                   Object(Q.b)("#Chat_SaveVoiceRoom_Description")
                 ),
-                Ie.createElement(ii.n, {
+                Ie.createElement(ii.o, {
                   type: "text",
                   label: Object(Q.b)("#Chat_SaveVoiceRoom_Name"),
                   className: "nicknameInput",
@@ -45637,9 +45655,9 @@
                 })
               ),
               Ie.createElement(
-                ii.i,
+                ii.j,
                 null,
-                Ie.createElement(ii.s, { onCancel: this.props.closeModal })
+                Ie.createElement(ii.t, { onCancel: this.props.closeModal })
               )
             )
           );
@@ -45790,7 +45808,7 @@
             return Ie.createElement(
               ci.a,
               { onEscKeypress: this.DismissDialog },
-              Ie.createElement(ii.v, {
+              Ie.createElement(ii.w, {
                 title: Object(Q.b)("#GroupSettings"),
                 className: "ChatRoomSettingsDialog",
                 pages: e
@@ -45841,10 +45859,10 @@
             var e = this.m_bSaving,
               t = this.m_strError;
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody", onSubmit: this.SaveGroup },
               Ie.createElement(
-                ii.b,
+                ii.c,
                 null,
                 Object(Q.b)("#GroupSettings_Save_Desc"),
                 Ie.createElement(
@@ -45876,7 +45894,7 @@
                   )
                 )
               ),
-              Ie.createElement(ii.n, {
+              Ie.createElement(ii.o, {
                 ref: this.BindInputRef,
                 autoFocus: !0,
                 label: Object(Q.b)("#GroupSettings_Save_NameGroup"),
@@ -45893,7 +45911,7 @@
                       t
                     ),
                   Ie.createElement(
-                    ii.x,
+                    ii.y,
                     { className: "_FixedHeight" },
                     Object(Q.b)("#GroupSettings_Save_Section")
                   )
@@ -45909,7 +45927,7 @@
           R.c([T.a], e.prototype, "SaveGroup", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w),
+      })(ii.x),
       Gs = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -46042,7 +46060,7 @@
                 "div",
                 null,
                 Ie.createElement(
-                  ii.o,
+                  ii.p,
                   null,
                   " ",
                   Object(Q.b)("#Chat_Settings_General_Owner")
@@ -46055,16 +46073,16 @@
               );
             }
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { onSubmit: this.OnSubmitSent, className: "DialogBody" },
               Ie.createElement(
-                ii.D,
+                ii.E,
                 null,
                 Ie.createElement(
                   "div",
                   { className: "AvatarAndUser" },
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     null,
                     Object(Q.b)("#Chat_Settings_General_Icon")
                   ),
@@ -46089,7 +46107,7 @@
                     onChange: this.OnFileChange
                   }),
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       onClick: this.OnAvatarChange,
                       disabled: !this.props.enabled
@@ -46104,7 +46122,7 @@
                 Ie.createElement(
                   "div",
                   { className: "GeneralChatSettings" },
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     autoComplete: "off",
                     id: "b1",
                     className: "groupChatName",
@@ -46120,7 +46138,7 @@
                     type: "submit",
                     style: { display: "none" }
                   }),
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     autoComplete: "off",
                     id: "b2",
                     className: "groupChatTag",
@@ -46148,7 +46166,7 @@
           R.c([T.a], e.prototype, "OnSubmitSent", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w),
+      })(ii.x),
       Rs = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
@@ -46186,7 +46204,7 @@
               null,
               Object(Q.b)("#GroupSettings_Leave_Confirm"),
               Ie.createElement(
-                ii.c,
+                ii.d,
                 { onClick: this.OnLeave },
                 Object(Q.b)("#GroupSettings_Leave_Button")
               )
@@ -46195,7 +46213,7 @@
           R.c([T.a], e.prototype, "OnLeave", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w),
+      })(ii.x),
       Ls = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -46379,16 +46397,16 @@
                 return t(e, name, !0);
               });
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody" },
               Ie.createElement(
-                ii.l,
+                ii.m,
                 null,
                 Ie.createElement(
-                  ii.D,
+                  ii.E,
                   null,
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className: "DialogButtonTall",
                       svgicon: ri.bb,
@@ -46400,7 +46418,7 @@
                     " "
                   ),
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       className: "DialogButtonTall",
                       svgicon: function() {
@@ -46416,7 +46434,7 @@
                 )
               ),
               Ie.createElement(
-                ii.m,
+                ii.n,
                 null,
                 0 != e.length &&
                   Ie.createElement(
@@ -46426,11 +46444,11 @@
                       style: { marginBottom: "32px" }
                     },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       null,
                       Object(Q.b)("#GroupSettings_Channels_TextChannels")
                     ),
-                    Ie.createElement(ii.k, null),
+                    Ie.createElement(ii.l, null),
                     e
                   ),
                 0 != n.length &&
@@ -46438,11 +46456,11 @@
                     "div",
                     { className: "displayColumn flexShrinkNone" },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       null,
                       Object(Q.b)("#GroupSettings_Channels_VoiceChannels")
                     ),
-                    Ie.createElement(ii.k, null),
+                    Ie.createElement(ii.l, null),
                     n
                   )
               )
@@ -46453,7 +46471,7 @@
           R.c([T.a], e.prototype, "OnDeleteChannel", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w),
+      })(ii.x),
       Ns = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -46487,20 +46505,20 @@
               ci.a,
               { onEscKeypress: this.props.closeModal },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "CreateChatChannelDialog",
                   onSubmit: this.OnSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Object(Q.b)("#GroupSettings_CreateRole_Title")
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
-                  Ie.createElement(ii.n, {
+                  Ie.createElement(ii.o, {
                     ref: function(e) {
                       t.m_refInput = e;
                     },
@@ -46511,9 +46529,9 @@
                   })
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
-                  Ie.createElement(ii.s, {
+                  Ie.createElement(ii.t, {
                     onCancel: this.props.closeModal,
                     bOKDisabled: !e
                   })
@@ -46629,7 +46647,7 @@
               o = this.props.group.GetRoleActions(this.state.editRoleID);
             return (
               o && (e = o.BCanPerformAction(t.eAction)),
-              Ie.createElement(ii.u, {
+              Ie.createElement(ii.v, {
                 key: t.eAction,
                 onChange: function(e) {
                   n.OnSettingToggled(t.eAction, e);
@@ -46670,18 +46688,18 @@
                     : this.state.editRoleName,
                 o = this.BCanLocalUserEditRole(this.state.editRoleID);
               return Ie.createElement(
-                ii.j,
+                ii.k,
                 { onSubmit: this.OnEditRoleNameBlur },
                 Ie.createElement(
                   "div",
                   null,
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     { style: { opacity: 0.25, marginBottom: 0 } },
                     Object(Q.b)("#GroupSettings_Permissions_Section")
                   ),
                   Ie.createElement(
-                    ii.B,
+                    ii.C,
                     {
                       className: "backToPermissionsButton allCaps",
                       onClick: function() {
@@ -46693,11 +46711,11 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   { className: "permissionDetailsPage" },
                   !o &&
                     Ie.createElement(
-                      ii.r,
+                      ii.s,
                       null,
                       Ie.createElement(ri.B, null),
                       Object(Q.b)("#Chat_Settings_Permission_Denied")
@@ -46706,7 +46724,7 @@
                     "div",
                     { className: "roleEditHeader" },
                     !s &&
-                      Ie.createElement(ii.n, {
+                      Ie.createElement(ii.o, {
                         autoComplete: "off",
                         id: "b1",
                         className: "editRoleName",
@@ -46723,13 +46741,13 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
                     "div",
                     { className: "SettingsGroup PermissionsGroup" },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       { className: "PermissionsSectionHeader" },
                       Object(Q.b)("#GroupSettings_Permissions_Heading_General")
                     ),
@@ -46757,7 +46775,7 @@
                     "div",
                     { className: "SettingsGroup PermissionsGroup" },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       { className: "PermissionsSectionHeader" },
                       Object(Q.b)(
                         "#GroupSettings_Permissions_Heading_MembersAndRoles"
@@ -46800,7 +46818,7 @@
                     "div",
                     { className: "SettingsGroup PermissionsGroup" },
                     Ie.createElement(
-                      ii.o,
+                      ii.p,
                       { className: "PermissionsSectionHeader" },
                       Object(Q.b)(
                         "#GroupSettings_Permissions_Heading_RoomManagement"
@@ -46823,13 +46841,13 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
                   !s &&
                     !t &&
                     o &&
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       {
                         className: "deleteButton",
                         onClick: function(e) {
@@ -46877,7 +46895,7 @@
                     "div",
                     { className: "roleRow", key: t.role_id },
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       {
                         className:
                           "roleButton" + (n && !u ? " currentUserRole" : ""),
@@ -46957,48 +46975,48 @@
               "div",
               { className: "roleList" },
               Ie.createElement(
-                ii.l,
+                ii.m,
                 null,
                 Object(Q.b)("#GroupSettings_Permissions_Section"),
                 !this.props.enabled &&
                   !m &&
                   Ie.createElement(
-                    ii.r,
+                    ii.s,
                     null,
                     Ie.createElement(ri.B, null),
                     Object(Q.b)("#Chat_Settings_Permission_Denied_Permissions")
                   )
               ),
-              Ie.createElement(ii.b, null, h),
+              Ie.createElement(ii.c, null, h),
               Ie.createElement(
                 "div",
                 { className: "roleEditHeader" },
                 Ie.createElement(
-                  ii.o,
+                  ii.p,
                   null,
                   Object(Q.b)("#GroupSettings_Permissions_RolesTitle"),
                   " "
                 ),
                 !u &&
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     { className: "meKey" },
                     Ie.createElement(ri.l, null),
                     Object(Q.b)("#GroupSettings_meKey_Desc")
                   ),
                 u &&
                   Ie.createElement(
-                    ii.o,
+                    ii.p,
                     { className: "meKey" },
                     Ie.createElement(ri.k, null),
                     Object(Q.b)("#GroupSettings_meKey_Desc_Owner")
                   )
               ),
               Ie.createElement(
-                ii.j,
+                ii.k,
                 { className: "DialogBody" },
                 Ie.createElement(
-                  ii.c,
+                  ii.d,
                   {
                     disabled: !0,
                     className: "roleButton owner",
@@ -47016,7 +47034,7 @@
               ),
               !s &&
                 Ie.createElement(
-                  ii.x,
+                  ii.y,
                   {
                     className: "createNewRoleButton",
                     svgicon: function() {
@@ -47041,7 +47059,7 @@
           R.c([T.a], e.prototype, "MoveRoleDown", null),
           (e = R.c([hi.a], e))
         );
-      })(ii.w),
+      })(ii.x),
       Bs = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -47149,7 +47167,7 @@
                       "td",
                       null,
                       " ",
-                      Ie.createElement(ii.n, {
+                      Ie.createElement(ii.o, {
                         className: "inviteURLLink",
                         value: Object(de.a)(t.invite_code()),
                         readOnly: !0,
@@ -47169,7 +47187,7 @@
                       "td",
                       { className: "buttonCell" },
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           onClick: function(e) {
                             return n.OnDeleteLink(t);
@@ -47220,7 +47238,7 @@
                     );
             }
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody" },
               this.props.enabled &&
                 Ie.createElement(
@@ -47235,7 +47253,7 @@
                 Ie.createElement(
                   "div",
                   { className: "OrSeparator" },
-                  Ie.createElement(ii.k, null)
+                  Ie.createElement(ii.l, null)
                 ),
               t
             );
@@ -47244,7 +47262,7 @@
           R.c([T.a], t.prototype, "HandleFocus", null),
           (t = R.c([hi.a], t))
         );
-      })(ii.w),
+      })(ii.x),
       As = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -47324,7 +47342,7 @@
             var n = this;
             if ("loaded" != this.props.invitedUsers.loadingState)
               return Ie.createElement(
-                ii.j,
+                ii.k,
                 null,
                 "pending" == this.props.invitedUsers.loadingState
                   ? Ie.createElement(Jr, { size: "medium" })
@@ -47335,7 +47353,7 @@
               0 == this.props.invitedUsers.rgInvitedUsers.length
             )
               return Ie.createElement(
-                ii.j,
+                ii.k,
                 null,
                 Object(Q.b)("#GroupSettings_InvitedUsers_Noone")
               );
@@ -47367,7 +47385,7 @@
                   "td",
                   { className: "buttonCell" },
                   Ie.createElement(
-                    ii.c,
+                    ii.d,
                     {
                       onClick: function(e) {
                         return n.RevokeInvite(e, t.accountid());
@@ -47380,7 +47398,7 @@
               );
             });
             return Ie.createElement(
-              ii.j,
+              ii.k,
               { className: "DialogBody" },
               Ie.createElement(
                 "table",
@@ -47414,7 +47432,7 @@
           R.c([T.a], t.prototype, "RevokeInvite", null),
           (t = R.c([hi.a], t))
         );
-      })(ii.w),
+      })(ii.x),
       Fs = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -47489,7 +47507,7 @@
             if ("loaded" == this.props.bans.loadingState)
               return 0 == this.props.bans.rgBans.length
                 ? Ie.createElement(
-                    ii.j,
+                    ii.k,
                     null,
                     Object(Q.b)("#GroupSettings_Bans_NoOneBanned")
                   )
@@ -47517,7 +47535,7 @@
                         { className: "buttonCell" },
                         " ",
                         Ie.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             onClick: function(e) {
                               return n.OnClickUnban(e, t.accountid());
@@ -47529,7 +47547,7 @@
                     );
                   })),
                   Ie.createElement(
-                    ii.j,
+                    ii.k,
                     { className: "DialogBody" },
                     Ie.createElement(
                       "table",
@@ -47571,13 +47589,13 @@
                   : "denied" == this.props.bans.loadingState
                     ? Object(Q.b)("#GroupSettings_Bans_AccessDenied")
                     : Object(Q.b)("#GroupSettings_Bans_Failed")),
-              Ie.createElement(ii.j, { className: "DialogBody" }, t)
+              Ie.createElement(ii.k, { className: "DialogBody" }, t)
             );
           }),
           R.c([T.a], t.prototype, "OnClickUnban", null),
           (t = R.c([hi.a], t))
         );
-      })(ii.w),
+      })(ii.x),
       xs = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -48931,13 +48949,13 @@
               ci.a,
               { onEscKeypress: this.DismissDialog },
               Ie.createElement(
-                ii.g,
+                ii.h,
                 {
                   classNameContent: "CloseActiveVoiceWindowConfirmation",
                   onSubmit: this.OnSubmit
                 },
                 Ie.createElement(
-                  ii.l,
+                  ii.m,
                   null,
                   Ie.createElement(
                     "div",
@@ -48946,7 +48964,7 @@
                   )
                 ),
                 Ie.createElement(
-                  ii.a,
+                  ii.b,
                   null,
                   Ie.createElement(
                     "div",
@@ -48973,13 +48991,13 @@
                   !1
                 ),
                 Ie.createElement(
-                  ii.i,
+                  ii.j,
                   null,
                   Ie.createElement(
                     "div",
                     { className: "_DialogColLayout" },
                     Ie.createElement(
-                      ii.x,
+                      ii.y,
                       { onClick: this.OnSubmit },
                       Object(Q.b)("#Chat_StillInVoiceDialog_KeepChatting")
                     )
@@ -48990,7 +49008,7 @@
                       className: "dontShowConfirmation",
                       onClick: this.OnDialogChecked
                     },
-                    Ie.createElement(ii.d, {
+                    Ie.createElement(ii.e, {
                       checked: this.state.bDontShowChecked,
                       onChange: this.OnDialogChecked
                     }),
@@ -49007,7 +49025,8 @@
           (e = R.c([hi.a], e))
         );
       })(Ie.Component),
-      $s = (function(t) {
+      $s = (n("FuJV"),
+      (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49123,7 +49142,7 @@
           R.c([T.a], e.prototype, "HideStats", null),
           (e = R.c([hi.a], e))
         );
-      })(Ie.Component),
+      })(Ie.Component)),
       ec = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
@@ -49319,7 +49338,6 @@
           (e = R.c([hi.a], e))
         );
       })(Ie.Component);
-    n("FuJV");
     function tc(e, t) {
       var n;
       (n =
@@ -49640,9 +49658,50 @@
           R.c([T.a], e.prototype, "updateCanvas", null),
           e
         );
+      })(Ie.Component);
+    function ac() {
+      return Ie.createElement(
+        "div",
+        { className: "STV_ReplayBanner" },
+        Object(Q.b)("#DASHPlayerControls_IsReplay")
+      );
+    }
+    var sc = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          R.d(t, e),
+          (t.prototype.render = function() {
+            var e = this.props.video,
+              t = qn.Loading,
+              n = "";
+            if (e) {
+              (t = e.GetBroadcastState()),
+                (n = e.GetBroadcastStateDescription());
+              var o = e.IsBuffering();
+              t == qn.Ready && o && ((t = qn.Loading), (n = ""));
+            }
+            if (e && t != qn.Error && e.GetUserInputNeeded()) return null;
+            if (t == qn.Ready) return null;
+            var i = t == qn.Loading;
+            return Ie.createElement(
+              "div",
+              { className: "BroadcastVideoWatchState" },
+              i && Ie.createElement(Jr, null),
+              !i &&
+                Ie.createElement(
+                  "div",
+                  { className: "BroadcastVideoWatchState_Text" },
+                  n
+                )
+            );
+          }),
+          (t = R.c([hi.a], t))
+        );
       })(Ie.Component),
-      ac = "broadcastplayercontextmenu",
-      sc = (function(n) {
+      cc = "broadcastplayercontextmenu",
+      lc = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -49654,7 +49713,6 @@
             (t.m_listeners = new N()),
             (t.m_strContextMenuLeft = "0px"),
             (t.m_strContextMenuTop = "0px"),
-            console.log(t.props.steamID),
             (t.state = {
               bMountControls: !1,
               bControlsVisible: !1,
@@ -49705,13 +49763,13 @@
           }),
           (e.prototype.BindVideoRef = function(e) {
             if (this.props.steamID && (this.StopVideo(), e)) {
-              var t = to.StartVideo(
+              var t = to.CreateVideo(
                 e,
                 this.props.steamID,
                 this.props.watchLocation,
                 this.props.bWebRTC
               );
-              this.setState({ video: t });
+              t.Play(), this.setState({ video: t });
             }
             this.m_elVideo = e;
           }),
@@ -49733,7 +49791,7 @@
               !this.state.bShowContextMenu ||
                 (e.srcElement &&
                   e.srcElement.parentElement &&
-                  e.srcElement.parentElement.id == ac) ||
+                  e.srcElement.parentElement.id == cc) ||
                 this.setState({ bShowContextMenu: !1 });
           }),
           (e.prototype.OnMouseMove = function(e) {
@@ -49920,7 +49978,7 @@
                 onContextMenu: this.OnContextMenu,
                 onMouseDown: this.OnMouseDown
               },
-              o && Ie.createElement(mc, null),
+              o && Ie.createElement(ac, null),
               this.props.showVideoBackgroundBlur &&
                 Ie.createElement(rc, {
                   className: "videoBlur",
@@ -49948,20 +50006,20 @@
                 : null,
               this.props.linkElement,
               p &&
-                Ie.createElement(pc, {
+                Ie.createElement(uc, {
                   video: e,
                   actions: c,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView
                 }),
-              u && Ie.createElement(uc, { onClick: this.props.onRequestClose }),
+              u && Ie.createElement(mc, { onClick: this.props.onRequestClose }),
               n &&
                 Ie.createElement($s, {
                   stats: e.GetDASHPlayerStats(),
                   closeStats: this.CloseStats
                 }),
-              Ie.createElement(cc, { video: e }),
-              a && Ie.createElement(lc, { video: e }),
+              Ie.createElement(sc, { video: e }),
+              a && Ie.createElement(pc, { video: e }),
               l &&
                 Ie.createElement(
                   "div",
@@ -49974,7 +50032,7 @@
                   },
                   Ie.createElement(
                     "div",
-                    { id: ac, className: "STV_BroadcastSettingsMenuItems" },
+                    { id: cc, className: "STV_BroadcastSettingsMenuItems" },
                     this.GetContextMenuItems()
                   )
                 )
@@ -49998,41 +50056,7 @@
           (e = R.c([hi.a], e))
         );
       })(Ie.Component),
-      cc = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          R.d(t, e),
-          (t.prototype.render = function() {
-            var e = this.props.video;
-            if (e && e.GetUserInputNeeded()) return null;
-            var t = qn.Loading,
-              n = "";
-            if (e) {
-              (t = to.GetBroadcastState(e.GetBroadcastSteamID())),
-                (n = to.GetBroadcastStateDescription(e.GetBroadcastSteamID()));
-              var o = e.IsBuffering();
-              t == qn.Ready && o && ((t = qn.Loading), (n = ""));
-            }
-            if (t == qn.Ready) return null;
-            var i = t == qn.Loading;
-            return Ie.createElement(
-              "div",
-              { className: "BroadcastVideoWatchState" },
-              i && Ie.createElement(Jr, null),
-              !i &&
-                Ie.createElement(
-                  "div",
-                  { className: "BroadcastVideoWatchState_Text" },
-                  n
-                )
-            );
-          }),
-          (t = R.c([hi.a], t))
-        );
-      })(Ie.Component),
-      lc = (function(e) {
+      pc = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -50060,7 +50084,7 @@
           t
         );
       })(Ie.Component),
-      pc = (function(e) {
+      uc = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -50103,7 +50127,7 @@
           (t = R.c([hi.a], t))
         );
       })(Ie.Component),
-      uc = (function(e) {
+      mc = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -50123,15 +50147,8 @@
           }),
           t
         );
-      })(Ie.PureComponent);
-    function mc() {
-      return Ie.createElement(
-        "div",
-        { className: "STV_ReplayBanner" },
-        Object(Q.b)("#DASHPlayerControls_IsReplay")
-      );
-    }
-    var dc = (function(e) {
+      })(Ie.PureComponent),
+      dc = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -51762,7 +51779,7 @@
                   Ie.createElement(
                     "div",
                     { className: "LinkRegionInfo" },
-                    Ie.createElement(ii.n, {
+                    Ie.createElement(ii.o, {
                       className: "LinkRegionInput",
                       type: "text",
                       name: "link_url",
@@ -51772,7 +51789,7 @@
                       onChange: this.OnSetLinkURLChange,
                       mustBeURL: !0
                     }),
-                    Ie.createElement(ii.n, {
+                    Ie.createElement(ii.o, {
                       className: "LinkRegionInput",
                       type: "text",
                       name: "link_description",
@@ -51787,7 +51804,7 @@
                       "div",
                       { className: "LinkRegionButtonContainer" },
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           disabled: !this.state.valid_link,
                           onClick: this.OnSaveLink
@@ -51797,7 +51814,7 @@
                         " "
                       ),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         { onClick: this.OnEditLink },
                         " ",
                         Object(Q.b)("#Button_Cancel")
@@ -51969,7 +51986,7 @@
         function e() {
           (this.m_ulBroadcastChannelID = ""),
             (this.m_ulChatID = ""),
-            (this.m_nFlairGroupID = 0),
+            (this.m_strFlairGroupID = ""),
             (this.m_bAutoScroll = !0),
             (this.m_ulBroadcastID = ""),
             (this.m_ulBroadcastSteamID = ""),
@@ -52173,8 +52190,6 @@
                       (n = t.data),
                       (this.m_strChatURL = n.view_url_template),
                       (this.m_ulChatID = n.chat_id),
-                      (this.m_nFlairGroupID =
-                        n.flair_group_ids && n.flair_group_ids[0]),
                       n.blocked && console.log("User is blocked from chat"),
                       n.steamid && (this.m_strUserSteamID = n.steamid),
                       n.token && (this.m_webApiToken = n.token),
@@ -52230,6 +52245,9 @@
                       n.Body().view_url_template
                       ? ((this.m_strChatURL = n.Body().view_url_template()),
                         (this.m_ulChatID = n.Body().chat_id()),
+                        (this.m_strFlairGroupID =
+                          n.Body().flair_group_ids() &&
+                          n.Body().flair_group_ids()[0]),
                         this.FetchChatModerators(),
                         (this.m_rgChatMessages = []),
                         this.m_rgChatMessages.push({
@@ -52909,7 +52927,7 @@
                         ),
                         t.append(
                           "flair",
-                          "^" + this.m_nFlairGroupID + "^:" + o + ":"
+                          "^" + this.m_strFlairGroupID + "^:" + o + ":"
                         ),
                         [
                           4,
@@ -52927,7 +52945,7 @@
                     return (
                       (n = d.Init(io.g)).SetBodyFields({
                         chat_id: this.m_ulChatID,
-                        flair: "^" + this.m_nFlairGroupID + "^:" + o + ":"
+                        flair: "^" + this.m_strFlairGroupID + "^:" + o + ":"
                       }),
                       [
                         4,
@@ -53397,9 +53415,10 @@
                             emoticonStore: this.props.emoticonStore,
                             emoticonHoverStore: Uc.b
                           }),
-                          this.m_chat.m_nFlairGroupID &&
+                          this.m_chat.m_strFlairGroupID &&
+                          this.props.emoticonStore.flair_list &&
                           this.props.emoticonStore.GetFlairListByGroupID(
-                            this.m_chat.m_nFlairGroupID
+                            this.m_chat.m_strFlairGroupID
                           ).length
                             ? Ie.createElement(xc.a, {
                                 disabled: !1,
@@ -53407,7 +53426,7 @@
                                 rtLastAckedNewEmoticons: Number.MAX_VALUE,
                                 emoticonStore: this.props.emoticonStore,
                                 emoticonHoverStore: Uc.b,
-                                nFlairGroupID: this.m_chat.m_nFlairGroupID,
+                                strFlairGroupID: this.m_chat.m_strFlairGroupID,
                                 title: Object(Q.b)("#ChatEntryButton_Flair"),
                                 buttonIcon: Ie.createElement(ri.e, null)
                               })
@@ -53570,10 +53589,10 @@
                 ci.a,
                 { onEscKeypress: n },
                 Oe.a.createElement(
-                  ii.f,
+                  ii.g,
                   { className: "watchPartyDialog" },
                   Oe.a.createElement(
-                    ii.a,
+                    ii.b,
                     null,
                     Oe.a.createElement(
                       "div",
@@ -53581,11 +53600,11 @@
                       Object(Q.b)("#Broadcast_WatchPrompt")
                     ),
                     Oe.a.createElement(
-                      ii.m,
+                      ii.n,
                       null,
                       !this.props.bIsNewSteamTVDialog &&
                         Oe.a.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             svgicon: ri.s,
                             className: "watchHowButton",
@@ -53595,7 +53614,7 @@
                         ),
                       r &&
                         Oe.a.createElement(
-                          ii.c,
+                          ii.d,
                           {
                             className: "watchHowButton",
                             onClick: function() {
@@ -53622,7 +53641,7 @@
                           Oe.a.Fragment,
                           null,
                           Oe.a.createElement(
-                            ii.o,
+                            ii.p,
                             null,
                             Object(Q.b)(
                               "#Broadcast_WatchWithExistingWatchParty"
@@ -53639,7 +53658,7 @@
                           })
                         ),
                       Oe.a.createElement(
-                        ii.c,
+                        ii.d,
                         {
                           className: "watchHowButton newWatchGroup",
                           svgicon: ri.I,
@@ -53651,7 +53670,7 @@
                       )
                     )
                   ),
-                  Oe.a.createElement(ii.i, null)
+                  Oe.a.createElement(ii.j, null)
                 )
               )
             );
@@ -54091,7 +54110,7 @@
                   "div",
                   { className: "BroadcastContainerSectionVideoContainer" },
                   i &&
-                    Oe.a.createElement(sc, {
+                    Oe.a.createElement(lc, {
                       key: o,
                       steamID: o,
                       watchLocation: this.props.watchLocation,
@@ -54176,7 +54195,7 @@
               li.c,
               { onEscKeypress: this.Dismiss },
               Oe.a.createElement(
-                ii.f,
+                ii.g,
                 { className: "SteamTVLoginDialog" },
                 Oe.a.createElement("iframe", {
                   className: "steamTVLogin",
@@ -56648,7 +56667,7 @@
                   },
                   Object(Q.b)("#Chat_Upload")
                 ),
-                Ie.createElement(ii.d, {
+                Ie.createElement(ii.e, {
                   classname: "spoilerCheckBox",
                   label: Object(Q.b)("#ChatEntry_TagAsSpoiler"),
                   checked: this.state.bSpoilerChecked,
@@ -56732,7 +56751,7 @@
             return (
               3 == e.eUploadState &&
                 (o = Ie.createElement(
-                  ii.x,
+                  ii.y,
                   { onClick: this.OnRetryClick },
                   Object(Q.b)("#Chat_Upload_ErrorAction_Retry")
                 )),
@@ -56753,11 +56772,11 @@
                   "div",
                   { className: "chatFileUploadActions" },
                   Ie.createElement(
-                    ii.D,
+                    ii.E,
                     { className: "DialogLayout_NoMinWidth" },
                     o,
                     Ie.createElement(
-                      ii.c,
+                      ii.d,
                       { onClick: this.ClearErrorState },
                       Object(Q.b)("#Chat_Upload_ErrorAction_Close")
                     )
@@ -59382,21 +59401,21 @@
                 ci.a,
                 { onEscKeypress: this.Cancel },
                 Ie.createElement(
-                  ii.g,
+                  ii.h,
                   {
                     classNameContent: "GenericConfirmDialog",
                     onSubmit: this.OnInviteClicked,
                     bCenterVertically: !0
                   },
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     null,
                     n
                       ? Object(Q.b)("#Chat_Actions_InviteFriend_VoiceChat")
                       : Object(Q.b)("#Chat_Actions_DropGroupInvite_Title")
                   ),
                   Ie.createElement(
-                    ii.a,
+                    ii.b,
                     null,
                     Ie.createElement(
                       "div",
@@ -59473,13 +59492,13 @@
                     )
                   ),
                   Ie.createElement(
-                    ii.i,
+                    ii.j,
                     null,
                     Ie.createElement(
-                      ii.D,
+                      ii.E,
                       null,
                       Ie.createElement(
-                        ii.x,
+                        ii.y,
                         { disabled: c || l, onClick: this.OnInviteClicked },
                         u
                           ? Object(Q.b)("#Chat_SendLink")
@@ -59487,7 +59506,7 @@
                         " "
                       ),
                       Ie.createElement(
-                        ii.c,
+                        ii.d,
                         { onClick: this.Cancel },
                         Object(Q.b)("#Button_Cancel")
                       )
@@ -59615,7 +59634,7 @@
           Ie.createElement(
             "div",
             { className: "BroadcastSection" },
-            Ie.createElement(sc, {
+            Ie.createElement(lc, {
               key: m,
               steamID: m,
               watchLocation: i,
@@ -59824,17 +59843,17 @@
                   ci.a,
                   null,
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     null,
                     e
                       ? Object(Q.b)("#Chat_DropToInviteGroup")
                       : Object(Q.b)("#Chat_DropToInvite")
                   ),
                   Ie.createElement(
-                    ii.f,
+                    ii.g,
                     null,
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       null,
                       Ie.createElement(qa, {
                         friend: this.props.friend,
@@ -59871,15 +59890,15 @@
                   ci.a,
                   null,
                   Ie.createElement(
-                    ii.l,
+                    ii.m,
                     null,
                     Object(Q.b)("#Chat_DropGroupToInviteFriend")
                   ),
                   Ie.createElement(
-                    ii.f,
+                    ii.g,
                     null,
                     Ie.createElement(
-                      ii.b,
+                      ii.c,
                       { className: "avatarHolder" },
                       this.props.clan
                         ? Ie.createElement(Ws, {
@@ -67508,7 +67527,7 @@
                 bDestructiveWarning: this.props.bDestructiveWarning
               },
               l.createElement(
-                a.g,
+                a.h,
                 {
                   classNameContent: Object(d.a)(
                     this.props.strClassNameOverride
@@ -67519,22 +67538,22 @@
                   onSubmit: this.OK,
                   bCenterVertically: !0
                 },
-                l.createElement(a.l, null, this.props.strTitle),
+                l.createElement(a.m, null, this.props.strTitle),
                 l.createElement(
-                  a.a,
+                  a.b,
                   null,
                   l.createElement(
-                    a.b,
+                    a.c,
                     null,
                     this.props.strDescription,
                     this.props.children
                   )
                 ),
                 l.createElement(
-                  a.i,
+                  a.j,
                   null,
                   this.props.onMiddleAction &&
-                    l.createElement(a.t, {
+                    l.createElement(a.u, {
                       bOKDisabled: this.props.bOKDisabled,
                       onCancel: this.Cancel,
                       strOKText: this.props.strOKButtonText,
@@ -67545,7 +67564,7 @@
                     }),
                   !this.props.onMiddleAction &&
                     !this.props.bAlertDialog &&
-                    l.createElement(a.s, {
+                    l.createElement(a.t, {
                       bOKDisabled: this.props.bOKDisabled,
                       onCancel: this.Cancel,
                       strOKText: this.props.strOKButtonText,
@@ -67553,7 +67572,7 @@
                     }),
                   !this.props.onMiddleAction &&
                     this.props.bAlertDialog &&
-                    l.createElement(a.x, null, e)
+                    l.createElement(a.y, null, e)
                 )
               )
             );
@@ -68035,7 +68054,10 @@
         return (
           m.d(e, n),
           (e.prototype.OnInputRef = function(e) {
-            this.m_elInput = e;
+            (this.m_elInput = e),
+              this.m_elInput &&
+                this.props.focusOnMount &&
+                this.m_elInput.focus();
           }),
           Object.defineProperty(e.prototype, "element", {
             get: function() {
@@ -69339,96 +69361,216 @@
           m.c([o.a], e.prototype, "OnActivePageRef", null),
           e
         );
+      })(d.Component),
+      ee = (function(t) {
+        function e() {
+          var e = (null !== t && t.apply(this, arguments)) || this;
+          return (
+            (e.m_refTextArea = d.createRef()),
+            (e.m_cEntryLength = Number.MAX_VALUE),
+            e
+          );
+        }
+        return (
+          m.d(e, t),
+          Object.defineProperty(e.prototype, "textarea", {
+            get: function() {
+              return this.m_refTextArea.current;
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
+          Object.defineProperty(e.prototype, "value", {
+            get: function() {
+              return (
+                this.m_refTextArea.current && this.m_refTextArea.current.value
+              );
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
+          (e.prototype.focus = function() {
+            this.m_refTextArea.current.focus();
+          }),
+          (e.prototype.InternalOnInput = function() {
+            var e,
+              t = this.m_refTextArea.current,
+              n = this.GetMinHeight(),
+              o = this.GetMaxHeight(),
+              i = t.value.length;
+            if (
+              (void 0 === this.m_nTextAreaPadding && this.CalculatePadding(),
+              i < this.m_cEntryLength &&
+                ((e = window.scrollY), (t.style.height = n + "px")),
+              t.scrollHeight > o)
+            )
+              (t.style.height = o + "px"), (t.style.overflow = "auto");
+            else if (t.scrollHeight != t.clientHeight) {
+              var r = Math.max(t.scrollHeight, n);
+              (t.style.height = r - this.m_nTextAreaPadding + "px"),
+                "auto" == t.style.overflow && (t.style.overflow = "hidden");
+            }
+            void 0 !== e && window.scrollTo(window.scrollX, e),
+              (this.m_cEntryLength = i);
+          }),
+          (e.prototype.CalculatePadding = function() {
+            var e = getComputedStyle(this.m_refTextArea.current);
+            this.m_nTextAreaPadding =
+              parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
+          }),
+          (e.prototype.GetMinHeight = function() {
+            return this.props.nMinHeight || 20;
+          }),
+          (e.prototype.GetMaxHeight = function() {
+            return this.props.nMaxHeight || 500;
+          }),
+          (e.prototype.DeferredInternalOnInput = function() {
+            window.setTimeout(this.InternalOnInput, 1);
+          }),
+          (e.prototype.OnKeyUp = function(e) {
+            this.InternalOnInput(), this.props.onKeyUp && this.props.onKeyUp(e);
+          }),
+          (e.prototype.OnBlur = function(e) {
+            this.DeferredInternalOnInput(),
+              this.props.onBlur && this.props.onBlur(e);
+          }),
+          (e.prototype.OnClick = function(e) {
+            this.InternalOnInput(), this.props.onClick && this.props.onClick(e);
+          }),
+          (e.prototype.OnPaste = function(e) {
+            this.DeferredInternalOnInput(),
+              this.props.onPaste && this.props.onPaste(e);
+          }),
+          (e.prototype.OnCut = function(e) {
+            this.InternalOnInput(), this.props.onCut && this.props.onCut(e);
+          }),
+          (e.prototype.componentDidMount = function() {
+            (this.m_refTextArea.current.style.overflow = "hidden"),
+              (this.m_refTextArea.current.style.resize = "none"),
+              this.InternalOnInput();
+          }),
+          (e.prototype.componentDidUpdate = function() {
+            this.m_refTextArea.current.value.length != this.m_cEntryLength &&
+              this.InternalOnInput();
+          }),
+          (e.prototype.render = function() {
+            var e = this.props,
+              t = (e.nMinHeight,
+              e.nMaxHeight,
+              m.f(e, ["nMinHeight", "nMaxHeight"]));
+            return d.createElement(
+              "textarea",
+              m.a({}, t, {
+                ref: this.m_refTextArea,
+                onKeyUp: this.OnKeyUp,
+                onBlur: this.OnBlur,
+                onClick: this.OnClick,
+                onPaste: this.OnPaste,
+                onCut: this.OnCut
+              })
+            );
+          }),
+          m.c([o.a], e.prototype, "InternalOnInput", null),
+          m.c([o.a], e.prototype, "OnKeyUp", null),
+          m.c([o.a], e.prototype, "OnBlur", null),
+          m.c([o.a], e.prototype, "OnClick", null),
+          m.c([o.a], e.prototype, "OnPaste", null),
+          m.c([o.a], e.prototype, "OnCut", null),
+          e
+        );
       })(d.Component);
-    n.d(t, "l", function() {
+    n.d(t, "m", function() {
       return r;
     }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return i;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return a;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return s;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return c;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return l;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return u;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "E", function() {
         return p;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "D", function() {
         return f;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return g;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return b;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return v;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return S;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "y", function() {
         return y;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return C;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "C", function() {
         return I;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return O;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "t", function() {
         return E;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "u", function() {
         return w;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return D;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "A", function() {
         return T;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "v", function() {
         return G;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return N;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return P;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "B", function() {
         return B;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return F;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return H;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "z", function() {
         return W;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "x", function() {
         return Z;
       }),
-      n.d(t, "v", function() {
+      n.d(t, "w", function() {
         return $;
+      }),
+      n.d(t, "a", function() {
+        return ee;
       });
   },
   m1EC: function(e, t, n) {},
@@ -70191,9 +70333,9 @@ and limitations under the License.
                     this.RenderEmoticon.bind(this, "")
                   )),
                   (this.m_strFirstEmoticon = t.length ? t[0].name : null);
-              else if (this.props.nFlairGroupID)
+              else if (this.props.strFlairGroupID)
                 (n = e
-                  .GetFlairListByGroupID(this.props.nFlairGroupID)
+                  .GetFlairListByGroupID(this.props.strFlairGroupID)
                   .map(this.RenderEmoticon.bind(this, ""))),
                   (this.m_strFirstEmoticon = null);
               else {

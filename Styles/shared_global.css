@@ -1914,6 +1914,10 @@ blockquote.bb_blockquote, .bb_wysiwyg blockquote {
 
 	font-size: 92%;
     display: table;
+    word-break: break-word;
+}
+.forumtopic_answer .answer_quote blockquote.bb_blockquote, .bb_wysiwyg blockquote {
+    border: 1px solid #457592;
 }
 
 blockquote.bb_blockquote.with_author {
@@ -1925,9 +1929,10 @@ div.bb_quoteauthor {
 }
 
 div.bb_h1, .bb_wysiwyg h1 {
-	font-size: 15px;
+	font-size: 16px;
 	color: #5aa9d6;
 	font-weight: normal;
+    margin-bottom: 4px;
 }
 
 span.bb_strike {
@@ -1936,7 +1941,7 @@ span.bb_strike {
 
 span.bb_link_host {
 	font-size: 10px;
-	color: #888;
+	color: #7e8391;
 	padding: 4px;
 	top: -1px;
 }
@@ -1999,6 +2004,9 @@ div.bb_table div.bb_table_td img.sharedFilePreviewImage
 
 video.bb_video {
 	width: 100%;
+}
+.bb_ul > li {
+    list-style-position: outside;
 }
 
 /* V6 */

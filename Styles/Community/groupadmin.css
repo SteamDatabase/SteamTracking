@@ -474,10 +474,25 @@ html.responsive .formRowFields .gray_bevel {
 }
 
 .forum_dragdrop_body {
-	padding: 16px 8px;
+	padding: 8px 8px;
 	background-color: rgba( 0, 0, 0, 0.2);
 }
 
+.forum_dragdrop_row {
+	clear: both;
+	padding: 8px 0;
+}
+
+.forum_dragdrop_row.flexrow {
+	display: flex;
+	flex-direction: row;
+	line-height:18px;
+}
+
+.forum_flex_checkbox {
+	margin: 0;
+	vertical-align: middle;
+}
 
 /* group permissions page */
 

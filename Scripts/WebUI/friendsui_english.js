@@ -1045,6 +1045,13 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Mobile_InlineEmbedOnWifiOnly:
     "Only embed images and other media when on wifi",
 
+  InterfaceSettings_Title: "Interface",
+  LanguageSettings_SystemDefault: "System Default",
+  LanguageSettings_Label: "Language",
+  LanguageSettings_ConfirmTitle: "Change Language",
+  LanguageSettings_ConfirmDescription:
+    "Changing the language requires restarting Steam Chat.\n\nContinue?",
+
   TradeOfferLink_SendUserOffer: "Send %1$s a trade offer",
   TradeOfferLink_SendOffer: "Send a trade offer",
   TradeOfferLink_SharedTradeLink: "%1$s is accepting trades",
@@ -1267,11 +1274,16 @@ LocalizationReady("friendsui", "english", {
   InviteLanding_OpenInSteam_Help:
     "We've attempted to open the invite link in the Steam Client.  You may be prompted by your browser to allow the Steam Client to launch.",
 
+  MobileDisconnect_Reconnecting: "Reconnecting",
+
   InviteLanding_AccountMismatch:
     "We've detected your running Steam Client is logged in with a different account than you are logged in with here in your browser.",
 
   GiveFeedbackToSteam_Desc: " GIVE %1$s TO STEAM",
   GiveFeedbackToSteam_URL: "BETA FEEDBACK",
+
+  GiveFeedback_Desc: "GIVE %1$s FEEDBACK",
+  GiveFeedback_URL: "BETA",
 
   changeLog_Button: "Change Log",
   changeLog_Value_Button: "New Change Log updates: %1$s",

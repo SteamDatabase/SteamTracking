@@ -218,6 +218,8 @@ LocalizationReady("shared", "english", {
   Language_latam: "Spanish - Latin America",
   Language_vietnamese: "Vietnamese",
 
+  Language_koreana: "Korean",
+
   Editor_Bold: "Bold",
   Editor_Underline: "Underline",
   Editor_Italics: "Italics",

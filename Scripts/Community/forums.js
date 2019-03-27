@@ -815,7 +815,7 @@ CForumTopic = Class.create( {
 
 	CheckTextAreaSize: function()
 	{
-		this.m_oTextAreaSizer.OnTextInput();
+		this.m_oTextAreaSizer && this.m_oTextAreaSizer.OnTextInput();
 	},
 
 	GetActionURL: function( action )
