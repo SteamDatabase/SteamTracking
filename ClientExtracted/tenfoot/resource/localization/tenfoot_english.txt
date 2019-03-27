@@ -2851,6 +2851,9 @@
 	"Notification_Controller_Title"		"{s:controllername}"
 	"Notification_Controller_Text"		"Using configs from {s:accountname}"
 	"Notification_Controller_Guest"		"Using a Guest account."
+	"Notification_ControllerConfigActivated_Text1" "CONFIG LOADED"
+	"Notification_ControllerConfigActivated_Text2" "{s:configname}"
+	"Notification_ControllerConfigActivated_Text3" "Edit it from the Big Picture Overlay"
 
 	"Notification_VirtualHere"			"VirtualHere"
 	"Notification_PurchaseVirtualHere"	"Available in the Steam Store for USB sharing"

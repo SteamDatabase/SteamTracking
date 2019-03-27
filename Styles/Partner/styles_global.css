@@ -8,7 +8,7 @@ body {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			background-color:#1a1a1a;
+			background-color: #1a1a1a;
 	background-position:center;
 	background-repeat:repeat-y;
 }
@@ -493,8 +493,10 @@ a.contentsLink.updated::after {
 /* Do not use :not() on this selector, It will end up more specific than other selectors. */
 input, select , textarea, button, .likeButton {
 	background-color:#565658;
-	font-family:tahoma, arial, helvetica, trebuchet ms, sans-serif;
-	color:#e1e1e1;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color:#e1e1e1;
 	font-size:13px;
 	border: 1px #262627 solid;
 	border-radius: 3px;
@@ -793,11 +795,11 @@ a.tab, .tab a {
 }
 
 .perf_timing_area {
-	width: 936px;
-	margin: 0px auto 48px auto;
+	margin: 0 auto;
 	text-align: center;
 	color: #B0AEAC;
 	padding-bottom: 10px;
+	background: #000000;
 }
 
 .newmodal_content .perf_timing_area
@@ -1082,8 +1084,6 @@ p.deprecated.star::before {
 	margin-left: -12px;
 }
 
-
-
 /* Select2 Overrides */
 .select2-container--default .select2-selection--single {
 	background-color: #3a4655;
@@ -1108,4 +1108,143 @@ p.deprecated.star::before {
 	border: 1px #262627 solid;
 	background-color: rgba(0,0,0,0.2);
 	box-shadow: 1px 1px 0px #6a6a6c;
+}
+
+/* hide when not used */
+#ui-datepicker-div {
+	display: none;
+}
+
+/* FOOTER */
+
+.responsive_footer_ctn {
+	background: #000000;
+	padding: 0 0 40px 0;
+}
+
+.responsive_footer_ctn .responsive_footer_content {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+	/*justify-content: center;*/
+	flex-wrap: wrap;
+	color: #ffffff;
+	padding-top: 40px;
+    max-width: 1280px;
+}
+
+.responsive_footer_ctn img.logo {
+	max-width: 140px;
+	margin-bottom: 20px;
+}
+
+.responsive_footer_ctn .footer_content_right {
+	display: flex;
+	padding: 0 40px 40px 40px;
+}
+
+.footer_content_right li {
+	font-size: 11px;
+	line-height: 1.7em;
+}
+
+.footer_content_right em {
+	font-size: 12px;
+	color: #999999;
+	text-transform: uppercase;
+	font-weight: 600;
+	line-height: 2.2em;
+    font-style: normal;
+    letter-spacing: 0.5px;
+}
+
+.footer_content_left {
+	font-size: 1.3em;
+	font-weight: 300;
+	line-height: 1.7em;
+	max-width: 400px;
+}
+
+.footer_content_right {
+    float: right;
+}
+
+.footer_content_right a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.footer_content_right a:hover {
+    text-decoration: underline;
+    color: #999999;
+}
+
+
+.footer_content_right ul {
+    margin-right: 20px;
+}
+
+.responsive_footer_ctn > .bleed {
+	display: none;
+}
+.responsive_footer_ctn .column.left {
+	padding-right: 40px;
+}
+.responsive_footer_ctn h2.middle {
+	padding-bottom: 20px;
+}
+.responsive_footer_ctn .documentation h4, .megafooter .documentation p, .megafooter .documentation footer {
+	font-size: 1.82em;
+	line-height: 1.4em;
+}
+.responsive_footer_ctn .documentation p {
+	font-weight: 300;
+}
+.responsive_footer_ctn .documentation footer {
+	padding-top: 10px;
+}
+.responsive_footer_ctn nav.bottom {
+	padding-bottom: 20px;
+}
+
+.responsive_footer_ctn .corporate a img {
+	transition: opacity 0.05s;
+}
+.responsive_footer_ctn .corporate a:hover img {
+	opacity: 0.7;
+}
+.responsive_footer_ctn .corporate img {
+	max-width: 55px;
+	margin-top: 30px;
+}
+.responsive_footer_ctn .corporate .vr {
+	border-right: 1px solid #fff;
+	vertical-align: -3px;
+	height: 22px;
+	display: inline-block;
+	width: 0;
+	margin-left: 30px;
+	margin-right: 25px;
+}
+
+.responsive_footer_ctn .footer_confidentiality_ctn {
+	margin: 0 auto;
+	display: flex;
+	align-items: left;
+	padding: 30px 0 0 0;
+	flex-direction: column;
+	/*background: #385a88;*/
+    max-width: 1280px;
+}
+
+.footer_confidentiality_ctn h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.footer_confidentiality_ctn p {
+    font-size: 13px;
 }

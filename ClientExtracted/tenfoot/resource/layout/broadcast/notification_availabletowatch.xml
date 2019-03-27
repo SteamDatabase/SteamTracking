@@ -6,7 +6,7 @@
 
 	<Panel class="NotificationRoot BroadcastAvailableToWatch">
 		<Panel class="NotificationFrame" />
-		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png"/>
+		<Image class="SteamCogTwoImageNotification" src="file://{images}/overlay/notification_steamcog.png"/>
 		<Label class="NotificationTitle" text="#Broadcast_Notification_AvailableToWatch_Title" />
 		<Label id="Description" class="NotificationMessage" />
 	</Panel>

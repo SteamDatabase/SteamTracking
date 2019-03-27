@@ -838,6 +838,12 @@
  D CSteamAuthedHTMLPopup::GetKBMap()::s_pMap
  D CSteamAuthedHTMLPopup::GetMessageMap()::s_pMap
  D CSteamAuthedHTMLPopup::KB_ChainToMap()::chained
+ D CSteamInputControllerConfigNotification::ChainToAnimationMap()::chained
+ D CSteamInputControllerConfigNotification::ChainToMap()::chained
+ D CSteamInputControllerConfigNotification::GetKBMap()::s_pMap
+ D CSteamInputControllerConfigNotification::GetMessageMap()::s_pMap
+ D CSteamInputControllerConfigNotification::KB_ChainToMap()::chained
+ D CSteamInputControllerConfigNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
  D CTrackItemPanel::ChainToAnimationMap()::chained
  D CTrackItemPanel::ChainToMap()::chained
  D CTrackItemPanel::GetKBMap()::s_pMap
@@ -974,6 +980,7 @@
  D VTT for CSoundSystemSelect
  D VTT for CSteamAuthedHTML
  D VTT for CSteamAuthedHTMLPopup
+ D VTT for CSteamInputControllerConfigNotification
  D VTT for CTrackItemPanel
  D VTT for CTrackLabel
  D VTT for CTradeDialog
@@ -1191,6 +1198,7 @@
  D construction vtable for vgui::EditablePanel-in-CSettingsSubVoice
  D construction vtable for vgui::EditablePanel-in-CSoundSystemSelect
  D construction vtable for vgui::EditablePanel-in-CSteamAuthedHTMLPopup
+ D construction vtable for vgui::EditablePanel-in-CSteamInputControllerConfigNotification
  D construction vtable for vgui::EditablePanel-in-CTrackItemPanel
  D construction vtable for vgui::EditablePanel-in-CTradeDialog
  D construction vtable for vgui::EditablePanel-in-CreateDirectoryDialog
@@ -1311,6 +1319,7 @@
  D construction vtable for vgui::NotificationFrame-in-COverlayLowBattery
  D construction vtable for vgui::NotificationFrame-in-COverlaySplash
  D construction vtable for vgui::NotificationFrame-in-CScreenshotNotification
+ D construction vtable for vgui::NotificationFrame-in-CSteamInputControllerConfigNotification
  D construction vtable for vgui::NotificationFrame-in-vgui::EasyNotification
  D construction vtable for vgui::Panel-in-AppModalQueryBox
  D construction vtable for vgui::Panel-in-CAchievementImagePanel
@@ -1389,6 +1398,7 @@
  D construction vtable for vgui::Panel-in-CSoundSystemSelect
  D construction vtable for vgui::Panel-in-CSteamAuthedHTML
  D construction vtable for vgui::Panel-in-CSteamAuthedHTMLPopup
+ D construction vtable for vgui::Panel-in-CSteamInputControllerConfigNotification
  D construction vtable for vgui::Panel-in-CTrackItemPanel
  D construction vtable for vgui::Panel-in-CTrackLabel
  D construction vtable for vgui::Panel-in-CTradeDialog
@@ -1652,6 +1662,8 @@
  D guard variable for CSteamAuthedHTML::GetMessageMap()::s_pMap
  D guard variable for CSteamAuthedHTMLPopup::GetKBMap()::s_pMap
  D guard variable for CSteamAuthedHTMLPopup::GetMessageMap()::s_pMap
+ D guard variable for CSteamInputControllerConfigNotification::GetKBMap()::s_pMap
+ D guard variable for CSteamInputControllerConfigNotification::GetMessageMap()::s_pMap
  D guard variable for CTrackItemPanel::GetKBMap()::s_pMap
  D guard variable for CTrackItemPanel::GetMessageMap()::s_pMap
  D guard variable for CTrackLabel::GetKBMap()::s_pMap
@@ -2367,6 +2379,7 @@
  D typeinfo for CSteamAuthedHTML
  D typeinfo for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  D typeinfo for CSteamAuthedHTMLPopup
+ D typeinfo for CSteamInputControllerConfigNotification
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
  D typeinfo for CTrackItemPanel
@@ -3643,6 +3656,7 @@
  D vtable for CSteamAuthedHTML
  D vtable for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  D vtable for CSteamAuthedHTMLPopup
+ D vtable for CSteamInputControllerConfigNotification
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
  D vtable for CTrackItemPanel
@@ -4351,6 +4365,7 @@
  R typeinfo name for CSteamAuthedHTML
  R typeinfo name for CSteamAuthedHTML::CCallback_OnParentalWebTokenChanged
  R typeinfo name for CSteamAuthedHTMLPopup
+ R typeinfo name for CSteamInputControllerConfigNotification
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
  R typeinfo name for CTrackItemPanel
@@ -4872,6 +4887,7 @@
  T CBasePanel::SetIngameFPS(unsigned int)
  T CBasePanel::ShellExecuteHook(char const*, char const*)
  T CBasePanel::ShowBroadcastAvailableNotification()
+ T CBasePanel::ShowControllerConfigNotification()
  T CBasePanel::ShowLegacyCDKey()
  T CBasePanel::ShowLegacyCDKeyDataOnce()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
@@ -9163,6 +9179,19 @@
  T CSteamAuthedHTMLPopup::NewPopupHTML(bool)
  T CSteamAuthedHTMLPopup::~CSteamAuthedHTMLPopup()
  T CSteamID::Render() const
+ T CSteamInputControllerConfigNotification::CSteamInputControllerConfigNotification(vgui::Panel*, char const*, unsigned int, EControllerType, char const*)
+ T CSteamInputControllerConfigNotification::ChainToAnimationMap()
+ T CSteamInputControllerConfigNotification::ChainToMap()
+ T CSteamInputControllerConfigNotification::GetAnimMap()
+ T CSteamInputControllerConfigNotification::GetClassSize() const
+ T CSteamInputControllerConfigNotification::GetKBMap()
+ T CSteamInputControllerConfigNotification::GetMessageMap()
+ T CSteamInputControllerConfigNotification::GetPanelClassName()
+ T CSteamInputControllerConfigNotification::GetPanelTopClassName() const
+ T CSteamInputControllerConfigNotification::KB_ChainToMap()
+ T CSteamInputControllerConfigNotification::OnNotificationClickPanelClicked()
+ T CSteamInputControllerConfigNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()
+ T CSteamInputControllerConfigNotification::~CSteamInputControllerConfigNotification()
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
@@ -10532,6 +10561,7 @@
  T ParseFile(char*, char*, bool*)
  T ParseIPv6Addr
  T PchLanguageToELanguage(char const*, ELanguage)
+ T PchNameFromEControllerType(int)
  T PchNameFromECurrencyCode(int)
  T PchNameFromEResult(int)
  T PchNameFromEUniverse(int)
@@ -15238,6 +15268,7 @@
  d p_intconverter
  d s_DebugDumpPtr
  d s_EAppReleaseState
+ d s_EControllerType
  d s_ECurrencyCode
  d s_EParentalFeature
  d s_EResult

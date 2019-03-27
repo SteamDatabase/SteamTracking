@@ -77,6 +77,7 @@ public:
     virtual unknown_ret SetBindingTitle(unsigned int, char const*) = 0;
     virtual unknown_ret GetBindingDescription(unsigned int, bool) = 0;
     virtual unknown_ret SetBindingDescription(unsigned int, char const*) = 0;
+    virtual unknown_ret GetBindingTitleForIndex(unsigned int, unsigned int, char*, int) = 0;
     virtual unknown_ret SetBindingControllerType(unsigned int, EControllerType) = 0;
     virtual unknown_ret GetBindingControllerType(unsigned int) = 0;
     virtual unknown_ret SetBindingCreator(unsigned int, unsigned long long) = 0;

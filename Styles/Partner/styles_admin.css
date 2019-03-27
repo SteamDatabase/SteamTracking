@@ -886,8 +886,6 @@ div.popup_block_new {
 	padding: 0px;
 	position: absolute;
 	color: #ACACAC;
-	max-height: 288px;
-	overflow-y: auto;
 	z-index: 10;
 }
 

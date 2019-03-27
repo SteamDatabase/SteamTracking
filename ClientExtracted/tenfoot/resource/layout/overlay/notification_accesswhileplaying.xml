@@ -6,7 +6,7 @@
 
 	<Panel class="NotificationRoot">
 		<Panel class="NotificationFrame" />
-		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
+		<Image class="SteamCogTwoImageNotification" src="file://{images}/overlay/notification_steamcog.png" />
 		<Image class="HintButton" src="file://{images}/overlay/notification_middlebutton.png" />
 		<Label class="NotificationTitle" text="#Notification_TheSteamCommunity" />
 		<Label class="NotificationMessage" text="#Notification_AccessWhilePlaying" />

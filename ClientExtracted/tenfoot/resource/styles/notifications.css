@@ -206,6 +206,17 @@
 	margin-top: 92px;
 }
 
+#ConfigActivatedTitle.NotificationTitle
+{
+    margin-right: 100px;
+    margin-left: 153px;
+}
+
+#ConfigActivatedMessage.NotificationMessage {
+    margin-right: 100px;
+    margin-left: 153px;
+}
+
 .NotificationOneLabelBody
 {
 	width: 100%;
@@ -318,7 +329,7 @@
 {
 	horizontal-align: right;
 	vertical-align: center;
-	margin-right: 120px;
+	margin-right: 132px;
 	margin-bottom: frame_margin_bottom;
 	margin-top: frame_margin_top;
 	z-index: notification2_zindex;
@@ -327,11 +338,20 @@
 .SteamCog
 {
 	horizontal-align: left;
-	margin-left: 24px;
+	margin-left: 25px;
 	vertical-align: center;
 	margin-top: frame_margin_top;
 	margin-bottom: frame_margin_bottom;
 	z-index: notification2_zindex;
+}
+
+.SteamCogTwoImageNotification {
+    margin-left: 48px;
+    horizontal-align: left;
+    vertical-align: center;
+    margin-top: frame_margin_top;
+    margin-bottom: frame_margin_bottom;
+    z-index: notification2_zindex;
 }
 
 .AvatarImage
@@ -458,54 +478,83 @@
 
 #ControllerImage
 {
-	horizontal-align: left;
-	margin-left: 25px;
-	vertical-align: center;
-	margin-top: frame_margin_top;
-	margin-bottom: frame_margin_bottom;
-	z-index: notification2_zindex;
-	width: 100px;
-	height: 100px;
-	background-repeat: no-repeat;
-	background-size: 100px 100px;
+    horizontal-align: left;
+    margin-left: 25px;
+    vertical-align: center;
+    margin-top: frame_margin_top;
+    margin-bottom: frame_margin_bottom;
+    z-index: notification2_zindex;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
 }
 
+#ControllerConfigImage {
+    horizontal-align: left;
+    margin-left: 34px;
+    vertical-align: center;
+    margin-top: frame_margin_top;
+    margin-bottom: frame_margin_bottom;
+    z-index: notification2_zindex;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+}
+
+#ControllerConfigImage.controller_steamcontroller_gordon,
+#ControllerConfigImage.controller_steamcontroller_headcrab,
 #ControllerImage.controller_steamcontroller_gordon,
 #ControllerImage.controller_steamcontroller_headcrab,
 {
-	background-image: url( "file://{images}/settings/steam_controller_icon_64.png" );
+    background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
 }
 
+#ControllerConfigImage.controller_ps4,
 #ControllerImage.controller_ps4
 {
-	background-image: url( "file://{images}/controller_icon_ps4.png" );
+    background-image: url( "file://{images}/controller_icon_ps4.png" );
 }
 
+#ControllerConfigImage.controller_switch_pro,
+#ControllerConfigImage.controller_switch_pro_generic,
 #ControllerImage.controller_switch_pro,
 #ControllerImage.controller_switch_pro_generic,
 {
     background-image: url( "file://{images}/controller_icon_switch_pro.png" );
 }
 
-#ControllerImage.controller_ps3 
+#ControllerConfigImage.controller_ps3,
+#ControllerImage.controller_ps3
 {
     background-image: url( "file://{images}/controller_icon_ps3.png" );
 }
 
+#ControllerConfigImage.controller_xbox360,
 #ControllerImage.controller_xbox360
 {
-	background-image: url( "file://{images}/controller_icon_xbox_360.png" );
+    background-image: url( "file://{images}/controller_icon_xbox_360.png" );
 }
 
+#ControllerConfigImage.controller_xboxone,
 #ControllerImage.controller_xboxone
 {
-	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
+    background-image: url( "file://{images}/controller_icon_xbox_one.png" );
 }
 
+#ControllerConfigImage.controller_generic,
+#ControllerConfigImage.controller_apple,
 #ControllerImage.controller_generic,
 #ControllerImage.controller_apple
 {
-	background-image: url( "file://{images}/controller_generic_nobattery.png" );
+    background-image: url( "file://{images}/controller_generic_nobattery.png" );
+}
+
+#ControllerConfigImage.controller_mobile_touch,
+#ControllerImage.controller_mobile_touch,
+{
+     background-image: url( "file://{images}/controller_icon_mobile_touch.png" );
 }
 
 .ControllerActivatedNotification .NotificationTwoLabelBodyLineOne,

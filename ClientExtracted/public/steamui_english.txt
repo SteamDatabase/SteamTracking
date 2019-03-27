@@ -4608,10 +4608,11 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_VGUIControllerWarningHeader" "Using a controller?"
 
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"
-"Steam_VGUIVRHMDWarning" "Install SteamVR to make full use of your headset with Steam, then use this same button each time you'd like to launch or exit VR using Steam."
+"Steam_VGUIVRHMDWarning" "Install SteamVR to make full use of your headset with Steam, then use this button each time you'd like to launch or exit VR using Steam."
 "Steam_VGUIVRHMDWarningHeader" "Using a VR Headset?"
 "Steam_VGUIVRHMDOculusHelp" "If you want to use an Oculus Rift with SteamVR <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">follow these instructions</a>."
 "SteamUI_InstallSteamVR" "Install SteamVR"
+"SteamUI_LaunchSteamVR" "Launch SteamVR"
 
 "Steam_BLEControllerFirmware_Title" "Bluetooth Firmware Update"
 "Steam_BLEControllerFirmware_Header" "Steam Link App"

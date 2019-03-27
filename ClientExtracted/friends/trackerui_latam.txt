@@ -1291,5 +1291,7 @@
 "[english]Friends_Voice_PushToMute"	"Use a push-to-mute key to mute voice"
 "Friends_ChatNoTextNotification_Info"	"te envió un mensaje"
 "[english]Friends_ChatNoTextNotification_Info"	"sent you a message"
+"Friends_BroadcastChannelLive"	"está en directo en SteamTV"
+"[english]Friends_BroadcastChannelLive"	"is now live on SteamTV"
 }
 }
