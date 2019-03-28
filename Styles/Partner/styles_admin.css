@@ -84,11 +84,6 @@ body.ban_keys #landingNav > a.active {
 	background-color: #37393f;
 }
 
-#appHeaderFindInput {
-	background-color: rgba(0,0,0,0.3);
-	border: 1px #3f3f40 solid;
-	box-shadow: 1px 1px 0px #cfcfcf;
-}
 #appHeaderFindInput::placeholder {
 	color: #bbbbbb;
 	font-style: italic;

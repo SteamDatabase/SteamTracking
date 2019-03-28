@@ -1119,7 +1119,7 @@ p.deprecated.star::before {
 
 .responsive_footer_ctn {
 	background: #000000;
-	padding: 0 0 40px 0;
+	padding: 40px;
 }
 
 .responsive_footer_ctn .responsive_footer_content {
@@ -1247,4 +1247,16 @@ p.deprecated.star::before {
 
 .footer_confidentiality_ctn p {
     font-size: 13px;
+}
+
+@media screen and (max-width: 910px) {
+
+	.responsive_footer_content .footer_content_right {
+		margin-top: 40px;
+		padding: 0;
+	}
+
+	.responsive_footer_content .footer_content_right > ul:first-child {
+		padding-left: 0;
+	}
 }
