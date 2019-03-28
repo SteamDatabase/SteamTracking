@@ -248,7 +248,7 @@ textarea.gray {
 /* message edit: edit forms */
 
 .formlabel {
-	width: 12em;
+	min-width: 12em;
 	float: left;
 	line-height: 15px;
 }
