@@ -5,8 +5,8 @@ body {
 	padding:0;
 	font-size: 0.7em; 
 	line-height:1.5;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+	 		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
 
 			background-color: #1a1a1a;
 	background-position:center;
@@ -17,7 +17,7 @@ h1 {
 	font-weight:bold;
 	color:#67c1f5;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 			font-size:24px;
 	margin:0px;
@@ -26,7 +26,7 @@ h1 {
 h2, .title2 {
 	color:#67c1f5;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 			font-weight: normal;
 	font-size: 20px;
@@ -35,7 +35,7 @@ h2, .title2 {
 h3, .title3 {
 	color:#ccc;
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
 			font-weight: normal;
 	font-size: 16px;
