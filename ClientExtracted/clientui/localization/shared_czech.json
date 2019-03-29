@@ -121,6 +121,8 @@
 	"TimeSince_XMinutes": "před %1$s minutami",
 	"TimeSince_1Minute": "před 1 minutou",
 	"TimeSince_LessThanAMinute": "před méně než minutou",
+	"Time_Today": "Dnes",
+	"Time_Yesterday": "Včera",
 	"ContextMenu_Copy": "Kopírovat",
 	"ContextMenu_Cut": "Vyjmout",
 	"ContextMenu_Paste": "Vložit",
@@ -191,6 +193,7 @@
 	"Language_ukrainian": "Ukrajinština",
 	"Language_latam": "Latinskoamerická španělština",
 	"Language_vietnamese": "Vietnamština",
+	"Language_koreana": "Korejština",
 	"Editor_Bold": "Tučný text",
 	"Editor_Underline": "Podtržený text",
 	"Editor_Italics": "Kurzíva",
@@ -225,6 +228,7 @@
 	"PersonaStateLastSeen_JustNow": "Naposledy Online: před okamžikem",
 	"User_WantsToPlay": "Připojit se",
 	"User_ToggleDoNotDisturb": "Nerušit",
+	"User_GameInfoHidden": "V závislosti na Vašem nastavení soukromí jsou před přáteli skryty údaje o produktech.",
 	"isNickname": "Vaše přezdívka pro tohoto přítele",
 	"Friend_Menu_NotAFriendLabel": "Nejste přátelé",
 	"Friend_Menu_NotAFriendRequesting": "Chce se spřátelit",
@@ -286,5 +290,11 @@
 	"PartnerEvent_4": "Událost (setkání)",
 	"PartnerEvent_28": "Událost (oznámení novinek)",
 	"PartnerEvent_27": "Událost (setkání naživo)",
-	"PartnerEvent_Other": "Jiná událost"
+	"PartnerEvent_Other": "Jiná událost",
+	"Emoticon_Search": "Hledat emotikony",
+	"Chat_Settings_Error_ChatFileTooLarge": "Soubor „%1$s“ je příliš velký (max. 10 MB)",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Nelze nahrát soubor „%1$s“. Jsou podporovány pouze formáty JPG, PNG, GIF, WEBM, MPG a OGV",
+	"ConnectionTrouble_FailedToConnect": "Připojení ke službě Steam se nezdařilo",
+	"Chat_Upload_ErrorCloud": "Nepodařilo se nahrát data obrázku na cloudový server.",
+	"Chat_Settings_Error_ServerError": "Došlo k chybě serveru"
 }

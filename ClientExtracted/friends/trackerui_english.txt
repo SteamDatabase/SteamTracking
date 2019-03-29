@@ -528,6 +528,8 @@
 "Friends_SteamInputControllerConfigNotification_Info" "CONFIG LOADED:"
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
 "Friends_SteamInputControllerConfigNotification_Info3" "Edit it from the Steam Overlay"
+"Library_ControllerSaveDefaultTitle" "Official Configuration"
+"SettingsController_AutosaveName" "Personal Autosave"
 "SettingsController_SteamController" "Steam Controller"
 "controller_none"									"None"
 "controller_unknown"								"Unknown Controller"

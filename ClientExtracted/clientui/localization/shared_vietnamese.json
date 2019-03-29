@@ -121,6 +121,8 @@
 	"TimeSince_XMinutes": "%1$s phút trước",
 	"TimeSince_1Minute": "1 phút trước",
 	"TimeSince_LessThanAMinute": "ít hơn một phút trước",
+	"Time_Today": "Hôm nay",
+	"Time_Yesterday": "Hôm qua",
 	"ContextMenu_Copy": "Chép",
 	"ContextMenu_Cut": "Cắt",
 	"ContextMenu_Paste": "Dán",
@@ -191,6 +193,7 @@
 	"Language_ukrainian": "Tiếng Ukraina",
 	"Language_latam": "Tây Ban Nha - Mỹ La Tinh",
 	"Language_vietnamese": "Tiếng Việt",
+	"Language_koreana": "Tiếng Hàn",
 	"Editor_Bold": "In đậm",
 	"Editor_Underline": "Gạch chân",
 	"Editor_Italics": "In nghiêng",
@@ -225,6 +228,7 @@
 	"PersonaStateLastSeen_JustNow": "Vừa trên mạng tức thì",
 	"User_WantsToPlay": "Tham gia",
 	"User_ToggleDoNotDisturb": "Đừng làm phiền",
+	"User_GameInfoHidden": "Trạng thái trò chơi của bạn được ẩn khỏi bạn bè, theo như thiết lập bảo mật của bạn",
 	"isNickname": "Biệt danh bạn đặt cho người này",
 	"Friend_Menu_NotAFriendLabel": "Không phải bạn bè",
 	"Friend_Menu_NotAFriendRequesting": "Đang yêu cầu kết bạn",
@@ -286,5 +290,11 @@
 	"PartnerEvent_4": "Sự kiện giao lưu",
 	"PartnerEvent_28": "Sự kiện tin tức",
 	"PartnerEvent_27": "Sự kiện đời thực",
-	"PartnerEvent_Other": "Sự kiện khác"
+	"PartnerEvent_Other": "Sự kiện khác",
+	"Emoticon_Search": "Tìm biểu tượng cảm xúc",
+	"Chat_Settings_Error_ChatFileTooLarge": "Kích thước của %1$s quá lớn (không quá 10MB).",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Không thể tải %1$s lên. Chỉ hỗ trợ các định dạng jpg, png, gif, webm, mpg, và ogv.",
+	"ConnectionTrouble_FailedToConnect": "Kết nối tới Steam thất bại",
+	"Chat_Upload_ErrorCloud": "Không thể tải dữ liệu ảnh lên máy chủ cloud.",
+	"Chat_Settings_Error_ServerError": "Xảy ra lỗi máy chủ"
 }

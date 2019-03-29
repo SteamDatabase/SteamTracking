@@ -121,6 +121,8 @@
 	"TimeSince_XMinutes": "%1$s perce",
 	"TimeSince_1Minute": "1 perce",
 	"TimeSince_LessThanAMinute": "kevesebb mint egy perce",
+	"Time_Today": "Ma",
+	"Time_Yesterday": "Tegnap",
 	"ContextMenu_Copy": "Másolás",
 	"ContextMenu_Cut": "Kivágás",
 	"ContextMenu_Paste": "Beillesztés",
@@ -191,6 +193,7 @@
 	"Language_ukrainian": "Ukrán",
 	"Language_latam": "Latin-amerikai spanyol",
 	"Language_vietnamese": "Vietnami",
+	"Language_koreana": "Koreai",
 	"Editor_Bold": "Félkövér",
 	"Editor_Underline": "Aláhúzott",
 	"Editor_Italics": "Dőlt",
@@ -225,6 +228,7 @@
 	"PersonaStateLastSeen_JustNow": "Legutóbb online épp most",
 	"User_WantsToPlay": "Csatlakozás",
 	"User_ToggleDoNotDisturb": "Ne zavarjanak",
+	"User_GameInfoHidden": "Adatvédelmi beállításaid miatt játékállapotod rejtve van barátaid előtt",
 	"isNickname": "A beceneved ehhez a baráthoz",
 	"Friend_Menu_NotAFriendLabel": "Nem barát",
 	"Friend_Menu_NotAFriendRequesting": "Barátkérelem küldése",
@@ -286,5 +290,11 @@
 	"PartnerEvent_4": "Találkozóesemény",
 	"PartnerEvent_28": "Hírek esemény",
 	"PartnerEvent_27": "Személyes találkozásos esemény",
-	"PartnerEvent_Other": "Egyéb esemény"
+	"PartnerEvent_Other": "Egyéb esemény",
+	"Emoticon_Search": "Hangulatjelek keresése",
+	"Chat_Settings_Error_ChatFileTooLarge": "A(z) %1$s túl nagy (10 MB a maximum).",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Nem lehet feltölteni a(z) %1$s fájlt. Csak jpg, png, gif, webm, mpg és ogv fájltípusok támogatottak.",
+	"ConnectionTrouble_FailedToConnect": "Nem sikerült csatlakozni a Steamhez",
+	"Chat_Upload_ErrorCloud": "Nem sikerült a képadat feltöltése a felhőszerverre.",
+	"Chat_Settings_Error_ServerError": "Szerverhiba történt."
 }

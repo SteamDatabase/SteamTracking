@@ -121,6 +121,8 @@
 	"TimeSince_XMinutes": "%1$s хв. тому",
 	"TimeSince_1Minute": "1 хв. тому",
 	"TimeSince_LessThanAMinute": "менше хвилини тому",
+	"Time_Today": "Сьогодні",
+	"Time_Yesterday": "Учора",
 	"ContextMenu_Copy": "Копіювати",
 	"ContextMenu_Cut": "Вирізати",
 	"ContextMenu_Paste": "Вставити",
@@ -191,6 +193,7 @@
 	"Language_ukrainian": "українська",
 	"Language_latam": "іспанська (Латинська Америка)",
 	"Language_vietnamese": "в’єтнамська",
+	"Language_koreana": "корейська",
 	"Editor_Bold": "Жирний",
 	"Editor_Underline": "Підкреслений",
 	"Editor_Italics": "Курсив",
@@ -225,6 +228,7 @@
 	"PersonaStateLastSeen_JustNow": "Востаннє в мережі: щойно",
 	"User_WantsToPlay": "Приєднатися",
 	"User_ToggleDoNotDisturb": "Не турбувати",
+	"User_GameInfoHidden": "Ваш ігровий статус приховано від друзів через налаштування приватності",
 	"isNickname": "Ваше прізвисько для цього друга",
 	"Friend_Menu_NotAFriendLabel": "Не друзі",
 	"Friend_Menu_NotAFriendRequesting": "Хоче стати другом",
@@ -286,5 +290,11 @@
 	"PartnerEvent_4": "Зустріч",
 	"PartnerEvent_28": "Новини",
 	"PartnerEvent_27": "Події у реальному житті",
-	"PartnerEvent_Other": "Інша подія"
+	"PartnerEvent_Other": "Інша подія",
+	"Emoticon_Search": "Пошук смайликів",
+	"Chat_Settings_Error_ChatFileTooLarge": "%1$s має завеликий розмір (до 10МБ максимум).",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Неможливо вивантажити %1$s. Підтримуються лише формати файлів jpg, png, gif, webm, mpg, та ogv.",
+	"ConnectionTrouble_FailedToConnect": "Не вдалося підключитися до Steam",
+	"Chat_Upload_ErrorCloud": "Не вдалося вивантажити дані зображення до хмари.",
+	"Chat_Settings_Error_ServerError": "На сервері сталася помилка"
 }

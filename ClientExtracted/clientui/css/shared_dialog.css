@@ -1062,7 +1062,7 @@ button.TextButton:focus
 {
 	position: absolute;
 	transition: opacity 200ms;
-	z-index: 200;
+	z-index: 1600;
 }
 
 .DialogMenuPosition:not( .visible )

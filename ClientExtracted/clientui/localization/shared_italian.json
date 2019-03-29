@@ -121,6 +121,8 @@
 	"TimeSince_XMinutes": "%1$s minuti fa",
 	"TimeSince_1Minute": "1 minuto fa",
 	"TimeSince_LessThanAMinute": "meno di un minuto fa",
+	"Time_Today": "Today",
+	"Time_Yesterday": "Yesterday",
 	"ContextMenu_Copy": "Copia",
 	"ContextMenu_Cut": "Taglia",
 	"ContextMenu_Paste": "Incolla",
@@ -191,6 +193,7 @@
 	"Language_ukrainian": "Ucraino",
 	"Language_latam": "Spagnolo - America Latina",
 	"Language_vietnamese": "Vietnamita",
+	"Language_koreana": "Coreano",
 	"Editor_Bold": "Grassetto",
 	"Editor_Underline": "Sottolineato",
 	"Editor_Italics": "Corsivo",
@@ -225,6 +228,7 @@
 	"PersonaStateLastSeen_JustNow": "Ultimo accesso un momento fa",
 	"User_WantsToPlay": "Unisciti",
 	"User_ToggleDoNotDisturb": "Non disturbare",
+	"User_GameInfoHidden": "Il tuo stato di gioco è nascosto agli amici in base alle tue impostazioni sulla privacy",
 	"isNickname": "Soprannome scelto per questo amico",
 	"Friend_Menu_NotAFriendLabel": "Non siete amici",
 	"Friend_Menu_NotAFriendRequesting": "Ti ha richiesto l'amicizia",
@@ -286,5 +290,11 @@
 	"PartnerEvent_4": "Evento: riunione",
 	"PartnerEvent_28": "Evento: notizie",
 	"PartnerEvent_27": "Evento: IRL",
-	"PartnerEvent_Other": "Altro evento"
+	"PartnerEvent_Other": "Altro evento",
+	"Emoticon_Search": "Cerca emoticon",
+	"Chat_Settings_Error_ChatFileTooLarge": "%1$s è troppo grande (massimo 10 MB).",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Impossibile caricare %1$s.  Solo i file .jpg, .png, .gif, .webm, .mpg e .ogv sono supportati.",
+	"ConnectionTrouble_FailedToConnect": "Impossibile connettersi a Steam",
+	"Chat_Upload_ErrorCloud": "Impossibile inviare i dati dell'immagine al server cloud.",
+	"Chat_Settings_Error_ServerError": "Si è verificato un errore del server"
 }

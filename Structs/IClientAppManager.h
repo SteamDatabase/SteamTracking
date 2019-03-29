@@ -15,6 +15,7 @@ public:
     virtual unknown_ret GetNumInstalledApps() = 0;
     virtual unknown_ret GetInstalledApps(unsigned int*, unsigned int) = 0;
     virtual unknown_ret GetAppDependency(unsigned int) = 0;
+    virtual unknown_ret GetAppDependencies(unsigned int, unsigned int*, unsigned int) = 0;
     virtual unknown_ret GetDependentApps(unsigned int, unsigned int*, unsigned int) = 0;
     virtual unknown_ret GetUpdateInfo(unsigned int, AppUpdateInfo_s*) = 0;
     virtual unknown_ret GetAppConfigValue(unsigned int, char const*, char*, int) = 0;

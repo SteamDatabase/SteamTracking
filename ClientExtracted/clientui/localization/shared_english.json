@@ -92,7 +92,7 @@
 
 	"FriendsList_LoadingTitle": "LOADING",
 	"FriendsList_StillLoadingSummary": "Friends Network Loading...",
-	"FriendsList_StillLoadingDetail": "Steam is trying to connect to the friends network, this may take a few seconds longer.",
+	"FriendsList_StillLoadingDetail": "Steam is trying to connect to the friends network.  This may take a few seconds longer.",
 
 	"Dialog_On": "ON",
 	"Dialog_Off": "OFF",
@@ -132,6 +132,9 @@
 	"TimeSince_XMinutes":		"%1$s minutes ago",
 	"TimeSince_1Minute":			"1 minute ago",
 	"TimeSince_LessThanAMinute":	"less than a minute ago",
+
+	"Time_Today": "Today",
+	"Time_Yesterday": "Yesterday",
 
 	"ContextMenu_Copy":		"Copy",
 	"ContextMenu_Cut":		"Cut",
@@ -206,6 +209,8 @@
 	"Language_latam": "Spanish - Latin America",
 	"Language_vietnamese": "Vietnamese",
 
+	"Language_koreana": "Korean",
+
 	"Editor_Bold": "Bold",
 	"Editor_Underline": "Underline",
 	"Editor_Italics": "Italics",
@@ -245,6 +250,7 @@
 
 	"User_WantsToPlay": "Join",
 	"User_ToggleDoNotDisturb": "Do Not Disturb",
+	"User_GameInfoHidden": "Your game status is hidden from friends because of your privacy settings",
 
 	"isNickname": "Your nickname for this friend",
 	"Friend_Menu_NotAFriendLabel": "Not Friends",
@@ -310,5 +316,11 @@
 	"PartnerEvent_4":		"Meeting Event",
 	"PartnerEvent_28":		"News Event",
 	"PartnerEvent_27":		"IRL Event",
-	"PartnerEvent_Other":	"Other Event"
+	"PartnerEvent_Other":	"Other Event",
+	"Emoticon_Search": "Search Emoticons",
+	"Chat_Settings_Error_ChatFileTooLarge": "%1$s is too large (10MB maximum).",
+	"Chat_Settings_Error_ChatFileTypeNotSupported": "Cannot upload %1$s.  Only jpg, png, gif, webm, mpg, and ogv file types are supported.",
+	"ConnectionTrouble_FailedToConnect": "Failed to connect to Steam",
+	"Chat_Upload_ErrorCloud": "Failed to upload image data to cloud server.",
+	"Chat_Settings_Error_ServerError": "A server error occurred"
 }

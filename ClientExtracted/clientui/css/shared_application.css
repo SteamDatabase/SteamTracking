@@ -75,53 +75,7 @@
 	background: #202020;
 }
 
-.contextMenu
-{
-	position: absolute;
-
-	background: radial-gradient(ellipse farthest-corner at 50% 0%, rgb(60, 64, 71) 0%, rgb(60, 64, 71) 50%, rgb(51, 54, 61) 100%);
-	box-shadow: 0 10px 32px 0px #000000ab;
-	opacity: 1.0;
-
-	transition: opacity 200ms;
-
-	z-index: 200;
-	user-select: none;
-	padding: 4px;
-}
-
-.web_chat_frame .contextMenu
-{
-	max-height: calc( 100% - 128px ) ;
-	overflow-y: auto;
-	overflow-x: hidden;
-}
-
-html.ContextMenuPopup .contextMenu
-{
-	position: static;
-	box-shadow: none;
-	display: inline-block;
-	padding: 0;
-}
-
-html.ContextMenuPopup .contextMenu .contextMenuContents
-{
-	padding: 4px;
-}
-
-html.ContextMenuPopup .contextMenu .contextMenuItem
-{
-	min-width: fit-content;
-
-}
-
-.contextMenuItem
-{
-	min-width: 120px;
-}
-
-.contextMenuItem.noPermission
+.ChatRoomContextNoPermission
 {
 	opacity: .4;
 	cursor: default;
@@ -129,172 +83,12 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 	user-select: none;
 }
 
-.contextMenuItem.noPermission .SVGIcon_Lock
+.ChatRoomContextNoPermission .SVGIcon_Lock
 {
 	width: 12px;
 	height: 12px;
 	margin-right: 4px;
 	margin-bottom: -1px;
-}
-
-.ContextMenuFocusContainer:focus
-{
-	outline: none;
-}
-
-.contextMenuContents
-{
-	display: flex;
-	flex-direction: column;
-	padding: 0px;
-	font-size: 14px;
-	-webkit-app-region: no-drag;
-}
-
-.contextMenu:not(.visible)
-{
-	opacity: 0;
-	pointer-events: none;
-}
-
-.contextMenuContents .contextMenuGameName
-{
-	color: #cbdde4;
-}
-
-.contextMenu .contextMenuItem {
-	padding: 4px 6px;
-	line-height: 20px;
-	color: #9ca4a7;
-	border-top: 0.5px solid rgba(80, 87, 94, 0.5);
-	border-bottom: 0.5px solid rgba( 80, 87, 94, 0);
-	cursor: default;
-	position: relative;
-}
-
-.contextMenuContents .contextMenuItem:first-child
-{
-	border-top: 0.5px solid rgba( 80, 87, 94, 0);
-}
-
-.contextMenu .contextMenuItem:hover,
-.contextMenu .contextMenuItem.active
- {
-	background: rgb(90, 96, 105);
-	color: #b8c5c9;
-}
-
-.contextMenu .contextMenuItem.contextMenuUnselectable:hover {
-	background: rgba(0, 0, 0, 0);
-	color: #9ca4a7;
-}
-
-.contextMenu .contextMenuItem.disabled {
-	background: none;
-	color: #6b7072;
-	cursor: default;
-	pointer-events: none;
-}
-
-.contextMenu .contextMenuItem.disabled:hover {
-	background: none;
-	color: #6b7072;
-	cursor: default;
-}
-
-.contextMenu .contextMenuItem .SVGIcon_DownArrowContextMenu {
-    height: 14px;
-    width: 14px;
-    transform: rotateZ( -90deg );
-    position: absolute;
-    right: 2px;
-    top: 6px;
-    fill: #9ca4a7;
-}
-
-.contextMenuItem.menuChecked
-{
-	color: rgb(109, 207, 246);
-}
-
-.contextMenuCheckMark
-{
-	width: 4px;
-	height: 18px;
-	background-color: rgb(109, 207, 246);
-	min-height: 1px;
-	display: inline-block;
-	position: absolute;
-	left: -4px;
-	margin-top: 0px;
-	display: none;
-}
-
-.contextMenuItem.menuChecked .contextMenuCheckMark
-{
-	display: block;
-}
-
-.contextMenu .SVGIcon_Button
-{
-	height: 10px;
-	width: 10px;
-	margin-right: 4px;
-}
-
-/* Separate menu sections with extra space and different header text style. */
-.contextMenuItem.MenuSectionHeader
-{
-	padding-top: 16px;
-	font-size: 12px;
-	text-transform: uppercase;
-}
-
-.contextMenuGameItem
-{
-	max-width: 190px;
-	line-height: 20px;
-	-webkit-mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0 ) 100% );
-	mask: linear-gradient( to right, rgba( 0, 0, 0, 1 ) 85%,rgba( 0, 0, 0, 0 ) 100% );
-	white-space: nowrap;
-}
-
-.contextMenuSectionContent
-{
-	display: flex;
-	flex-direction: column;
-}
-
-.contextMenuSectionContent .contextMenuItem
-{
-	border-top: none;
-	display: block;
-}
-
-.contextMenuContents .contextMenuLabel
-{
-	font-size: 12px;
-	line-height: 25px;
-	padding-left: 6px;
-}
-
-.contextMenuContents .contextMenuLabel.contextMenuNotAFriend
-{
-	text-transform: uppercase;
-	font-size: 12px;
-	color: rgba( 184, 156, 80, .75 );
-}
-
-.contextMenuContents .recentName
-{
-	margin: 4px;
-	color: #ccc;
-}
-
-.contextMenuContents .contextMenuItem.notFriends.disabled
-{
-	color: #666;
-	border-color: transparent;
 }
 
 .flexRow
@@ -316,15 +110,6 @@ html.ContextMenuPopup .contextMenu .contextMenuItem
 {
 	display: flex;
 	flex-direction: column;
-}
-
-.ContextMenuMouseOverlay {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	z-index: 199;
 }
 
 .scrollMaskVertical
