@@ -583,6 +583,8 @@ GHomepage = {
 			recommended_by_friend: GHomepage.GetItemFromList( oItem, GHomepage.rgFriendRecommendations ),
 			top_seller: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.top_sellers ),
 			new_release: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.popular_new ),
+			featured: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster ) ||
+						GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster_legacy ),
 		};
 
 	},
@@ -751,14 +753,18 @@ GHomepage = {
 		}
 		else
 		{
-			// TODO: these do not appear to ever be set on the rgItemData themselves.
-			if ( rgItemData.popular_new_on_steam )
+			// featured items use the default nav event "main-cluster", if it wasn't featured,
+			// it must be a new release or top seller.
+			if ( !rgRecommendationReasons.featured )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
-			}
-			else if ( rgItemData.top_seller )
-			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+				if ( rgRecommendationReasons.new_release )
+				{
+					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
+				}
+				else if ( rgRecommendationReasons.top_seller )
+				{
+					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+				}
 			}
 
 			var strStatus = '';

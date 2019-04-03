@@ -651,7 +651,10 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 
 .game_area_purchase_game_dropdown_selection
 {
-	min-width: 200px;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			min-width: 200px;
 	cursor: pointer;
 	float: left;
 	position: relative;
@@ -666,17 +669,18 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 
 .game_area_purchase_game_dropdown_menu_container
 {
-	z-index: 100;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			z-index: 100;
 	top: 0px;
 	position: absolute;
-	background-color: rgb(60, 61, 62);
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	margin-top: 13px;
+	background-color: #546270;
+	border-radius: 3px;
+	margin-top: 0px;
 	margin-left: 10px;
 	padding: 3px;
+    box-shadow: 0 0 10px #000;
 }
 
 .game_area_purchase_game_dropdown_menu_items_container
@@ -693,7 +697,7 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 
 .game_area_purchase_game_dropdown_menu_item_no_discount
 {
-	background-color: rgb(60, 61, 62);
+	background-color: #546270;
 }
 
 .game_area_purchase_game_dropdown_menu_items_container tr
@@ -709,7 +713,7 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 
 .game_area_purchase_game_dropdown_menu_items_container tr:hover
 {
-	background-color: rgb(70,102,140);
+	background-color: #8894a0;
 }
 
 .game_area_purchase_game_dropdown_menu_item_text
@@ -738,6 +742,9 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	border-bottom: 1px solid rgb(38,38,38);
 	border-right: 2px solid rgb(38,38,38);
 	min-width: 50px;
+    color: #a3ce08;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .game_area_purchase_game_dropdown_right_panel .btn_addtocart

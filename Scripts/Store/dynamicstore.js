@@ -94,7 +94,7 @@ GDynamicStore = {
 
 		try {
 			this.RemoveSNRFromURL();
-			this.RemoveUTMFromURL();
+			// this.RemoveUTMFromURL();
 		} catch ( e )
 		{
 		}
