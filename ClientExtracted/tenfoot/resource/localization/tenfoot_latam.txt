@@ -14386,4 +14386,6 @@ Por favor, inténtalo de nuevo más tarde."
 "[english]Library_EditSteamPlayOptions_Title"	"Steam Play"
 "Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Forzar el uso de una herramienta de compatibilidad de Steam Play específica"
 "[english]Library_EditSteamPlayOptions_SteamPlayOverrideTool"	"Force the use of a specific Steam Play compatibility tool"
+"Notification_ControllerConfigActivated_Text2"	"{s:configname}"
+"[english]Notification_ControllerConfigActivated_Text2"	"{s:configname}"
 }

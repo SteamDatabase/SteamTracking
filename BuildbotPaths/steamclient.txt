@@ -1790,6 +1790,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_sdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steam.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steam.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets_steamclient.cpp

@@ -28,4 +28,5 @@
 	"origin_xboxone_shoulder_r"						"Right Shoulder"
 	"origin_xboxone_button_menu"					"Menu Button"
 	"origin_xboxone_button_view"					"View Button"
+	"origin_xboxone_button_dpad_move"				"D-Pad Movement"
 }

@@ -10606,6 +10606,7 @@
  T panorama::CGamepadController::GetButtonValue(panorama::CGamepadController::xdevice_t*, SDL_GameControllerButton)
  T panorama::CGamepadController::GetConnectGamePadPowerLevel(int)
  T panorama::CGamepadController::GetDeadZoneValue(panorama::GamePadCode)
+ T panorama::CGamepadController::GetGamePadVidPid(int, unsigned int*, unsigned int*)
  T panorama::CGamepadController::GetNumGamepadsConnected() const
  T panorama::CGamepadController::GotWindowFocus()
  T panorama::CGamepadController::HandleXDeviceAxis(panorama::CGamepadController::xdevice_t*, int, panorama::GamePadCode, panorama::GamePadCode, int)
@@ -13080,6 +13081,7 @@
  T panorama::CUIInputEngine::GetCurrentActionSetLayerParent() const
  T panorama::CUIInputEngine::GetDeadZoneValue(panorama::GamePadCode)
  T panorama::CUIInputEngine::GetGamePadBindForEvent(char const*, panorama::IUIPanel const*)
+ T panorama::CUIInputEngine::GetGamePadVidPid(int, unsigned int*, unsigned int*)
  T panorama::CUIInputEngine::GetHapticFeedbackPositionForInteraction()
  T panorama::CUIInputEngine::GetInputCapture()
  T panorama::CUIInputEngine::GetLastGamePadControllerActiveTime() const

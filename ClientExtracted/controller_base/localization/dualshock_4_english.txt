@@ -53,4 +53,5 @@
 	"origin_ps4_shoulder_r"						"Right Shoulder (R1)"
 	"origin_ps4_button_options"					"Options Button"
 	"origin_ps4_button_share"					"Share Button"
+	"origin_ps4_button_dpad_move"				"D-Pad Movement"
 }

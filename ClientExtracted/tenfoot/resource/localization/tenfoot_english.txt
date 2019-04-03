@@ -4931,7 +4931,8 @@
 	"SettingsController_GuideButtonSetupText" "Note: On Windows you may need to adjust your Xbox DVR application settings in order for the Guide Button to register"
 	"SettingsController_TurnOffSetupText" "If \"Turn off on Big Picture Exit\" is enabled Steam will turn off wirelessly connected controllers when shutting down"
 	"SettingsController_IdleTurnOffSetupText" "Steam will turn off your controller after it has been idle for this amount of time"
-
+	"SettingsController_ToggleShowHiddenDevices"	"UNHIDE DEVICES"
+	"SettingsController_ToggleDeviceHideState"	"HIDE DEVICE"
 	"ControllerNameOnAccount"		"{s:controllername}"
 	"ControllerTypeOnAccount"		"{s:accountname}'s {s:controllertype}"
 	"ControllersOnAccount"			"{s:accountname}'s Controllers"

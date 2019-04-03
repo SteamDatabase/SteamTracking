@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Right Shoulder"
 	"origin_xbox360_button_start"					"Start Button"
 	"origin_xbox360_button_back"					"Back Button"
+	"origin_xbox360_button_dpad_move"				"D-Pad Movement"
 }
