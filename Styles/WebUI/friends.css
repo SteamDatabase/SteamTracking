@@ -12928,7 +12928,7 @@ a.connectionStatus:visited {
   overflow: visible;
   z-index: 1; }
 
-.chatRoomGroupNavColumn.noActiveVoiceChannels.defaultChatOnly {
+.chatRoomGroupNavColumn.defaultChatOnly {
   min-width: 0px;
   max-width: 0px;
   opacity: 0;
@@ -17851,13 +17851,12 @@ img.ChatRoomGroupAvatar_Avatar {
 .chatRoomTextChannelsGroup {
   color: #686e73; }
 
+.chatRoomTextChannelsGroup {
+  margin-bottom: 12px; }
+
 .chatRoomVoiceChannelsGroup {
-  margin-top: 12px;
   padding-left: 0px;
   padding-bottom: 32px; }
-
-.defaultChatOnly .chatRoomVoiceChannelsGroup {
-  margin-top: 0px; }
 
 .ChannelTypeTitle {
   color: #7a8d99;
