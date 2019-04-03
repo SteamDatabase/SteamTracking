@@ -112,7 +112,8 @@ LocalizationReady("shared", "english", {
   TimeInterval_XMonths: "%1$s months",
   TimeInterval_1Month: "1 month",
   TimeInterval_1MonthX: "1 month and %1$s days",
-  TimeInterval_XWeeks: "%1$s weeks ",
+  TimeInterval_XWeeks: "%1$s weeks",
+  TimeInterval_1Week: "1 week",
   TimeInterval_XDays: "%1$s days",
   TimeInterval_1Day: "1 day",
   TimeInterval_1DayXHours: "1 day and %1$s hours",
@@ -131,6 +132,7 @@ LocalizationReady("shared", "english", {
   TimeSince_1Month: "1 month ago",
   TimeSince_1MonthXDays: "1 month and %1$s days ago",
   TimeSince_XWeeks: "%1$s weeks ago",
+  TimeSince_1Week: "1 week ago",
   TimeSince_XDays: "%1$s days ago",
   TimeSince_1Day: "1 day ago",
   TimeSince_1DayXHours: "1 day and %1$s hours ago",
@@ -141,6 +143,9 @@ LocalizationReady("shared", "english", {
   TimeSince_XMinutes: "%1$s minutes ago",
   TimeSince_1Minute: "1 minute ago",
   TimeSince_LessThanAMinute: "less than a minute ago",
+
+  Time_Today: "Today",
+  Time_Yesterday: "Yesterday",
 
   ContextMenu_Copy: "Copy",
   ContextMenu_Cut: "Cut",
@@ -166,6 +171,8 @@ LocalizationReady("shared", "english", {
   Tooltip_ChatsExpand: "Expand chats list",
   Tooltip_MinimizeList: "Minimize List",
   Tooltip_ExpandList: "Expand List",
+  Tooltip_PinChannelList: "Pin Channel List",
+  Tooltip_UnpinChannelList: "Unpin Channel List",
   Tooltip_TextChannel: "Text chat with group members",
   Tooltip_TextChannelCreate: "Create new text channel",
   Tooltip_NoPermissionChannelCreate:

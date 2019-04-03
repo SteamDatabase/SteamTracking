@@ -271,7 +271,10 @@ body{
 		margin:0px;
 	}
 
-	
+.landingPartnerName {
+	color: #acacac;
+	margin: 5px 0;
+}
 
 /* Utility styles */
 .break { /* Used to prevent CSS from collapsing margins */

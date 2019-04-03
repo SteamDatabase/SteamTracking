@@ -666,7 +666,7 @@
                           e.props.OnClose && e.props.OnClose(), t && t.close();
                         }
                       },
-                      i.createElement(r.lb, null)
+                      i.createElement(r.mb, null)
                     ),
                     !this.props.hideMinMax &&
                       i.createElement(
@@ -677,7 +677,7 @@
                             t.SteamClient.Window.ToggleMaximize();
                           }
                         },
-                        this.state.maximized && i.createElement(r.Q, null),
+                        this.state.maximized && i.createElement(r.R, null),
                         !this.state.maximized && i.createElement(r.D, null)
                       ),
                     !this.props.hideMinMax &&
@@ -1033,7 +1033,9 @@
           })();
         },
         FRIENDSUI_BETA: !1,
-        STEAM_TV: !1
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        OFFLINE_MODE: !1
       },
       s = {
         logged_in: !1,
@@ -1558,7 +1560,7 @@
       contextMenuContents: "contextmenu_contextMenuContents_1yyTu",
       contextMenuItem: "contextmenu_contextMenuItem_CBC-y",
       active: "contextmenu_active_3vYUp",
-      disabled: "contextmenu_disabled_molnq"
+      MenuSectionHeader: "contextmenu_MenuSectionHeader_x3Kot"
     };
   },
   "7oej": function(e, t, n) {},
@@ -4347,7 +4349,7 @@
     n.d(t, "y", function() {
       return a;
     }),
-      n.d(t, "U", function() {
+      n.d(t, "V", function() {
         return s;
       }),
       n.d(t, "g", function() {
@@ -4368,25 +4370,25 @@
       n.d(t, "p", function() {
         return d;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "ab", function() {
         return h;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "Q", function() {
         return _;
       }),
-      n.d(t, "N", function() {
+      n.d(t, "O", function() {
         return f;
       }),
-      n.d(t, "kb", function() {
+      n.d(t, "lb", function() {
         return g;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "mb", function() {
         return b;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "jb", function() {
         return v;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "cb", function() {
         return S;
       }),
       n.d(t, "v", function() {
@@ -4395,149 +4397,152 @@
       n.d(t, "u", function() {
         return C;
       }),
-      n.d(t, "M", function() {
+      n.d(t, "L", function() {
         return I;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "N", function() {
         return O;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "a", function() {
         return E;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "s", function() {
         return w;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "A", function() {
         return M;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "J", function() {
         return D;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "kb", function() {
         return T;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "I", function() {
         return G;
       }),
-      n.d(t, "L", function() {
+      n.d(t, "k", function() {
         return R;
       }),
-      n.d(t, "K", function() {
+      n.d(t, "M", function() {
         return L;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "K", function() {
         return k;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "Y", function() {
         return N;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "h", function() {
         return P;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "l", function() {
         return B;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "f", function() {
         return A;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "B", function() {
         return F;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "db", function() {
         return x;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "hb", function() {
         return V;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "z", function() {
         return U;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return j;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "b", function() {
         return H;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "n", function() {
         return W;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "bb", function() {
         return z;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "D", function() {
         return q;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "G", function() {
         return K;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "R", function() {
         return Y;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "X", function() {
         return J;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "P", function() {
         return X;
       }),
       n.d(t, "eb", function() {
         return Q;
       }),
-      n.d(t, "T", function() {
+      n.d(t, "fb", function() {
         return Z;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "U", function() {
         return $;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "q", function() {
         return ee;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "r", function() {
         return te;
       }),
-      n.d(t, "E", function() {
+      n.d(t, "m", function() {
         return ne;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "E", function() {
         return oe;
       }),
-      n.d(t, "hb", function() {
+      n.d(t, "Z", function() {
         return ie;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "ib", function() {
         return re;
       }),
-      n.d(t, "R", function() {
+      n.d(t, "t", function() {
         return ae;
       }),
       n.d(t, "S", function() {
         return se;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "T", function() {
         return ce;
       }),
-      n.d(t, "V", function() {
+      n.d(t, "x", function() {
         return le;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "W", function() {
         return pe;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "d", function() {
         return ue;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "H", function() {
         return me;
       }),
-      n.d(t, "mb", function() {
+      n.d(t, "gb", function() {
         return de;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "nb", function() {
         return he;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "e", function() {
         return _e;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "i", function() {
         return fe;
+      }),
+      n.d(t, "w", function() {
+        return ge;
       });
     var o = n("q1tI"),
       i = n("twdX"),
@@ -5320,6 +5325,48 @@
       );
     }
     function I(e) {
+      var t = "SVGIcon_Button SVGIcon_Pin";
+      return (
+        e.bPinned && (t += " Pinned"),
+        o.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          o.createElement("path", {
+            className: "point",
+            d:
+              "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z"
+          }),
+          o.createElement("path", {
+            className: "head",
+            d:
+              "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z"
+          }),
+          o.createElement("line", {
+            className: "ground",
+            opacity: e.bPinned ? 1 : 0,
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "16",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            x1: "33.833",
+            y1: "238.5",
+            x2: "221.834",
+            y2: "238.5"
+          })
+        )
+      );
+    }
+    function O(e) {
       return o.createElement(
         "svg",
         {
@@ -5366,7 +5413,7 @@
           })
       );
     }
-    function O() {
+    function E() {
       return o.createElement(
         "svg",
         {
@@ -5400,7 +5447,7 @@
         })
       );
     }
-    function E() {
+    function w() {
       return o.createElement(
         "svg",
         {
@@ -5444,7 +5491,7 @@
         })
       );
     }
-    function w() {
+    function M() {
       return o.createElement(
         "svg",
         {
@@ -5492,7 +5539,7 @@
         )
       );
     }
-    function M() {
+    function D() {
       return o.createElement(
         "svg",
         {
@@ -5516,7 +5563,7 @@
         })
       );
     }
-    function D() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -5585,7 +5632,7 @@
         )
       );
     }
-    function T() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -5623,7 +5670,7 @@
         })
       );
     }
-    function G() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -5647,7 +5694,7 @@
         )
       );
     }
-    function R() {
+    function L() {
       return o.createElement(
         "svg",
         {
@@ -5668,7 +5715,7 @@
         })
       );
     }
-    function L() {
+    function k() {
       return o.createElement(
         "svg",
         {
@@ -5692,7 +5739,7 @@
         })
       );
     }
-    function k() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -5779,7 +5826,7 @@
         )
       );
     }
-    function N() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -5804,7 +5851,9 @@
         })
       );
     }
-    function P() {
+    function B(e) {
+      var t = e.highlightColor || "#00ccff",
+        n = e.color || "#2d73ff";
       return o.createElement(
         "svg",
         {
@@ -5827,12 +5876,12 @@
             o.createElement("stop", {
               id: "stop0",
               offset: "0%",
-              stopColor: "#00ccff"
+              stopColor: t
             }),
             o.createElement("stop", {
               id: "stop1",
               offset: "100%",
-              stopColor: "#2d73ff"
+              stopColor: n
             })
           ),
           o.createElement(
@@ -5882,7 +5931,7 @@
         })
       );
     }
-    function B() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -5940,7 +5989,7 @@
         )
       );
     }
-    function A() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5970,7 +6019,7 @@
         })
       );
     }
-    function F(e) {
+    function x(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -6214,7 +6263,7 @@
         )
       );
     }
-    function x() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -6239,7 +6288,7 @@
         })
       );
     }
-    function V() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -6265,7 +6314,7 @@
         })
       );
     }
-    function U() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -6285,7 +6334,7 @@
         })
       );
     }
-    function j(e) {
+    function H(e) {
       return o.createElement(
         "svg",
         {
@@ -6320,7 +6369,7 @@
         })
       );
     }
-    function H(e) {
+    function W(e) {
       var t = "";
       return (
         e.angle && (t = "rotate(" + e.angle + ")"),
@@ -6359,7 +6408,7 @@
         )
       );
     }
-    function W() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -6393,7 +6442,7 @@
         })
       );
     }
-    function z() {
+    function q() {
       return o.createElement(
         "svg",
         {
@@ -6429,7 +6478,7 @@
         })
       );
     }
-    function q() {
+    function K() {
       return o.createElement(
         "svg",
         {
@@ -6455,7 +6504,7 @@
         })
       );
     }
-    function K() {
+    function Y() {
       return o.createElement(
         "svg",
         {
@@ -6488,7 +6537,7 @@
         })
       );
     }
-    function Y() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -6552,7 +6601,7 @@
         )
       );
     }
-    function J() {
+    function X() {
       return o.createElement(
         "svg",
         {
@@ -6580,7 +6629,7 @@
         })
       );
     }
-    function X() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -6604,7 +6653,7 @@
         })
       );
     }
-    function Q() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -6683,7 +6732,7 @@
         )
       );
     }
-    function Z() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -6707,7 +6756,7 @@
         )
       );
     }
-    function $(e) {
+    function ee(e) {
       return o.createElement(
         "svg",
         {
@@ -6728,7 +6777,7 @@
         })
       );
     }
-    function ee(e) {
+    function te(e) {
       return o.createElement(
         "svg",
         {
@@ -6792,7 +6841,7 @@
         )
       );
     }
-    function te() {
+    function ne() {
       return o.createElement(
         "svg",
         {
@@ -6827,7 +6876,7 @@
         })
       );
     }
-    function ne(e) {
+    function oe(e) {
       return o.createElement(
         "svg",
         {
@@ -6865,7 +6914,7 @@
         })
       );
     }
-    function oe() {
+    function ie() {
       return o.createElement(
         "svg",
         {
@@ -6979,7 +7028,7 @@
         )
       );
     }
-    function ie() {
+    function re() {
       return o.createElement(
         "svg",
         {
@@ -7007,7 +7056,7 @@
         })
       );
     }
-    function re() {
+    function ae() {
       return o.createElement(
         "svg",
         {
@@ -7029,7 +7078,7 @@
         )
       );
     }
-    function ae() {
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -7066,7 +7115,7 @@
         )
       );
     }
-    function se() {
+    function ce() {
       return o.createElement(
         "svg",
         {
@@ -7094,7 +7143,7 @@
         })
       );
     }
-    function ce(e) {
+    function le(e) {
       return o.createElement(
         "svg",
         {
@@ -7206,7 +7255,7 @@
         )
       );
     }
-    function le() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -7273,7 +7322,7 @@
         })
       );
     }
-    function pe() {
+    function ue() {
       return o.createElement(
         "svg",
         {
@@ -7294,7 +7343,7 @@
         })
       );
     }
-    function ue() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -7314,7 +7363,7 @@
         })
       );
     }
-    function me() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -7338,7 +7387,7 @@
         })
       );
     }
-    function de() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -7358,7 +7407,7 @@
         })
       );
     }
-    function he() {
+    function _e() {
       return o.createElement(
         "svg",
         {
@@ -7380,7 +7429,7 @@
         })
       );
     }
-    function _e() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -7414,7 +7463,7 @@
         })
       );
     }
-    function fe() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -12037,7 +12086,7 @@
             return null;
           }),
           (a.prototype.InitMessageSessionFromServer = function(e, t, n) {
-            (this.m_cUnreadChatMessages = e),
+            4 !== this.GetVisibilityState() && (this.m_cUnreadChatMessages = e),
               (this.m_bHasUnreadPriorityChatMessages = !1),
               (this.m_rtLastAckedChatMsg = this.m_rtLastServerAckedChatMsg = t),
               (this.m_rtLastMessageReceived = n),
@@ -23076,6 +23125,7 @@
           return dn.a(e - n + 10, 0, t);
         }),
         (e.prototype.GetBufferedLiveEdgeTime = function() {
+          if (!this.m_mpd) return 0;
           return this.IsLiveContent()
             ? Math.floor(
                 (performance.now() -
@@ -24053,11 +24103,19 @@
             console.log("Starting video for " + e.GetBroadcastSteamID());
             var t = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             t &&
-              (this.PauseAllVideo(),
-              (this.m_activeVideo = e),
+              (this.SetActiveBroadcast(e),
               t.m_eWatchState == qn.None
                 ? this.GetBroadcastManifest(t, e.GetWatchLocation())
                 : t.m_eWatchState == qn.Ready && e.Start(t));
+          }),
+          (e.prototype.SetActiveBroadcast = function(i) {
+            this.m_mapBroadcasts.forEach(function(e) {
+              for (var t = 0, n = e.m_rgVideos; t < n.length; t++) {
+                var o = n[t];
+                o != i && o.StopPlaybackTillUserInput();
+              }
+            }),
+              (this.m_activeVideo = i);
           }),
           (e.prototype.PauseAllVideo = function() {
             this.m_mapBroadcasts.forEach(function(e) {
@@ -24151,6 +24209,9 @@
               this.m_mapBroadcasts.set(e, t),
               t)
             );
+          }),
+          (e.prototype.GetBroadcast = function(e) {
+            return this.m_mapBroadcasts.get(e);
           }),
           (e.prototype.RemoveBroadcastIfUnused = function(e) {
             e.m_rgVideos.length ||
@@ -24716,13 +24777,19 @@
               : this.Pause();
           }),
           (e.prototype.Play = function() {
+            console.log("Play ", this.m_steamID);
             var e = this.GetBroadcastState();
             e != qn.None
-              ? e == qn.Ready && this.m_player && this.m_player.Play()
+              ? e == qn.Ready &&
+                (to.SetActiveBroadcast(this),
+                this.m_player
+                  ? this.m_player.Play()
+                  : this.Start(to.GetBroadcast(this.m_steamID)))
               : to.StartVideo(this);
           }),
           (e.prototype.Pause = function() {
-            this.m_player.Pause();
+            console.log("Pause ", this.m_steamID),
+              this.m_player && this.m_player.Pause();
           }),
           (e.prototype.JumpTime = function(e) {
             this.m_player.JumpTime(e);
@@ -32114,7 +32181,7 @@
             },
             !t && Ie.createElement(Ti, null),
             Ie.createElement("span", null, e.friend.display_name),
-            Ie.createElement(ri.lb, null)
+            Ie.createElement(ri.mb, null)
           )
         )
       );
@@ -32127,7 +32194,7 @@
     var Li = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
-          return (t.state = { bCollapsed: !1 }), t;
+          return (t.state = { bCollapsed: !1, bMouseHover: !1 }), t;
         }
         return (
           R.d(e, n),
@@ -32184,49 +32251,74 @@
               e
             );
           }),
+          (e.prototype.OnMouseEnter = function(e) {
+            this.setState({ bMouseHover: !0 });
+          }),
+          (e.prototype.OnMouseLeave = function(e) {
+            this.setState({ bMouseHover: !1 });
+          }),
+          (e.prototype.ToggleCollapseExpand = function() {
+            var e = this.props.groupView;
+            e.SetChannelListCollapsed(!e.isChannelListCollapsed);
+          }),
           (e.prototype.render = function() {
             var e = this.props.groupView.GetGroup(),
               t = e.GetDefaultChatRoom(),
-              n = e.IsNamedGroupChat(),
+              n = !1,
               o = !1,
-              i = !1,
-              r = "chatRoomGroupNavColumn",
-              a = this.props.groupView.IsVoiceActive(),
-              s = this.props.groupView.isChannelListCollapsed;
+              i = "chatRoomGroupNavColumn",
+              r = this.props.groupView.IsVoiceActive(),
+              a = this.props.groupView.isChannelListCollapsed;
             return (
               e.voiceRoomList.length < 1 &&
-                !n &&
-                ((o = !0), (r += " defaultChatOnly")),
+                ((n = !0), (i += " defaultChatOnly")),
               (t && 0 != t.voice_active_member_list.member_count) ||
                 !(e.voiceRoomList.length < 1) ||
-                a ||
-                ((i = !0), (r += " noActiveVoiceChannels")),
-              s && (r += " chatRoomGroupNavCollapsed"),
-              this.props.inactive || (i && o)
-                ? Ie.createElement("div", { className: r })
+                r ||
+                ((o = !0), (i += " noActiveVoiceChannels")),
+              a &&
+                !this.state.bMouseHover &&
+                (i += " chatRoomGroupNavCollapsed"),
+              this.props.inactive || (o && n)
+                ? Ie.createElement("div", { className: i })
                 : Ie.createElement(
                     "div",
-                    { className: r },
+                    { className: i },
                     Ie.createElement(
                       "div",
                       {
                         className: "chatRoomChannelGroups",
-                        onContextMenu: this.OnRoomsContextMenu
+                        onContextMenu: this.OnRoomsContextMenu,
+                        onMouseEnter: this.OnMouseEnter,
+                        onMouseLeave: this.OnMouseLeave
                       },
-                      n &&
-                        Ie.createElement(Bi, {
-                          groupView: this.props.groupView
-                        }),
-                      (!i || !o) &&
+                      Ie.createElement(Bi, { groupView: this.props.groupView }),
+                      (!o || !n) &&
                         Ie.createElement(Fi, {
                           groupView: this.props.groupView
-                        })
+                        }),
+                      Ie.createElement(
+                        "div",
+                        {
+                          className: "chatRoomGroupNavCollapseExpand",
+                          title: Object(Q.b)(
+                            a
+                              ? "#Tooltip_PinChannelList"
+                              : "#Tooltip_UnpinChannelList"
+                          ),
+                          onClick: this.ToggleCollapseExpand
+                        },
+                        Ie.createElement(ri.L, { bPinned: !a })
+                      )
                     ),
                     Ie.createElement("div", { className: "disconnectBlocker" })
                   )
             );
           }),
           R.c([T.a], e.prototype, "OnRoomsContextMenu", null),
+          R.c([T.a], e.prototype, "OnMouseEnter", null),
+          R.c([T.a], e.prototype, "OnMouseLeave", null),
+          R.c([T.a], e.prototype, "ToggleCollapseExpand", null),
           (e = R.c([hi.a], e))
         );
       })(Ie.Component),
@@ -32335,7 +32427,7 @@
                           className: "friendSearchClear",
                           onClick: this.OnClearSearch
                         },
-                        Ie.createElement(ri.lb, null)
+                        Ie.createElement(ri.mb, null)
                       )
                     )
                   )
@@ -32650,16 +32742,12 @@
           (t.prototype.OnEndChannelRename = function() {
             this.props.groupView.EndRoomRename();
           }),
-          (t.prototype.ToggleCollapseExpand = function() {
-            var e = this.props.groupView;
-            e.SetChannelListCollapsed(!e.isChannelListCollapsed);
-          }),
           (t.prototype.render = function() {
             var t = this,
               n = this.props.groupView,
               e = n.GetGroup().textRoomList,
-              o = n.GetGroup().BCanAdminChannel(),
-              i = n.isChannelListCollapsed;
+              o = n.GetGroup().BCanAdminChannel();
+            n.isChannelListCollapsed;
             return Ie.createElement(
               "div",
               { className: "chatRoomTextChannelsGroup" },
@@ -32681,17 +32769,6 @@
                   o
                     ? Object(Q.b)("#Chat_AddTextChat")
                     : Object(Q.b)("#Chat_CreateTextChannel_DefaultName")
-                ),
-                Ie.createElement(
-                  "div",
-                  {
-                    className: "chatRoomGroupNavCollapseExpand",
-                    title: Object(Q.b)(
-                      i ? "#Tooltip_ExpandList" : "#Tooltip_MinimizeList"
-                    ),
-                    onClick: this.ToggleCollapseExpand
-                  },
-                  Ie.createElement(ri.n, null)
                 )
               ),
               e.map(function(e) {
@@ -32712,7 +32789,6 @@
           R.c([T.a], t.prototype, "OnStartChannelRename", null),
           R.c([T.a], t.prototype, "OnChannelRename", null),
           R.c([T.a], t.prototype, "OnEndChannelRename", null),
-          R.c([T.a], t.prototype, "ToggleCollapseExpand", null),
           (t = R.c([hi.a], t))
         );
       })(Ie.Component),
@@ -32768,7 +32844,7 @@
               Ie.createElement(
                 "div",
                 { className: "chatRoomTextChannelIcon" },
-                Ie.createElement(ri.bb, null)
+                Ie.createElement(ri.cb, null)
               ),
               !o && Ie.createElement("div", { className: n }, e.name),
               !this.props.bDefaultRoom &&
@@ -32833,7 +32909,7 @@
                     className: "ChatRoomAddRoomBtn",
                     title: Object(Q.b)("#Tooltip_VoiceChannelCreate")
                   },
-                  Ie.createElement(ri.M, null)
+                  Ie.createElement(ri.N, null)
                 )
               ),
               e.map(function(e) {
@@ -33049,7 +33125,7 @@
                 Ie.createElement(
                   "div",
                   { className: "chatRoomVoiceChannelIcon" },
-                  Ie.createElement(ri.ib, null)
+                  Ie.createElement(ri.jb, null)
                 ),
                 !this.props.bRenameActive &&
                   Ie.createElement(
@@ -33229,7 +33305,7 @@
                   Ie.createElement(
                     "div",
                     { className: "ExpandPlusMinus" },
-                    Ie.createElement(ri.M, null)
+                    Ie.createElement(ri.N, null)
                   ),
                 Ie.createElement(
                   "span",
@@ -33348,7 +33424,7 @@
                 Ie.createElement(
                   "div",
                   { key: "playIcon", className: "chatMemberPartyBeaconIcon" },
-                  Ie.createElement(ri.L, null)
+                  Ie.createElement(ri.M, null)
                 )
               );
             var s = {
@@ -33813,7 +33889,7 @@
                     Ie.createElement(
                       "div",
                       { className: "steamTVSubtitle" },
-                      Ie.createElement(ri.Y, null),
+                      Ie.createElement(ri.Z, null),
                       ": ",
                       i,
                       " "
@@ -33975,7 +34051,7 @@
               Ie.createElement(
                 "div",
                 { className: "voiceChannelIcon" },
-                Ie.createElement(ri.ib, null)
+                Ie.createElement(ri.jb, null)
               ),
               t.map(function(e) {
                 return Ie.createElement(rr, {
@@ -35032,7 +35108,7 @@
               },
               !t && Ie.createElement(Ir, null),
               Ie.createElement("span", null, e.friend.display_name),
-              Ie.createElement(ri.lb, null)
+              Ie.createElement(ri.mb, null)
             )
           )
         );
@@ -35083,7 +35159,7 @@
                 },
                 o
               ),
-              Ie.createElement(ri.fb, null)
+              Ie.createElement(ri.gb, null)
             ),
           a &&
             Ie.createElement(
@@ -36145,7 +36221,7 @@
                                   onClick: this.ClearHotKey,
                                   title: Object(Q.b)("#VoiceClearHotKeyTooltip")
                                 },
-                                Ie.createElement(ri.lb, null)
+                                Ie.createElement(ri.mb, null)
                               )
                           ),
                           Ie.createElement(
@@ -36953,8 +37029,8 @@
               Oe.a.createElement(
                 "div",
                 { className: Yr.a.Throbber },
-                Oe.a.createElement(ri.cb, { className: Yr.a.base }),
-                Oe.a.createElement(ri.cb, { className: Yr.a.blur })
+                Oe.a.createElement(ri.db, { className: Yr.a.base }),
+                Oe.a.createElement(ri.db, { className: Yr.a.blur })
               )
             );
             return (
@@ -39356,7 +39432,7 @@
                 onClick: this.EndVoiceChat,
                 title: Object(Q.b)("#VoiceChat_Leave")
               },
-              Ie.createElement(ri.ib, null)
+              Ie.createElement(ri.jb, null)
             );
           }),
           R.c([T.a], t.prototype, "EndVoiceChat", null),
@@ -39637,7 +39713,7 @@
                             ? Object(Q.b)("#Tooltip_FriendsListUpdate_VeryOld")
                             : Object(Q.b)("#Tooltip_FriendsListUpdate")
                         },
-                        Ie.createElement(ri.O, null)
+                        Ie.createElement(ri.P, null)
                       ),
                     Ie.createElement(
                       "div",
@@ -39647,7 +39723,7 @@
                         onClick: this.OnSettingsClick,
                         title: Object(Q.b)("#Tooltip_Settings")
                       },
-                      Ie.createElement(ri.U, null)
+                      Ie.createElement(ri.V, null)
                     )
                   ),
                   Ie.createElement(
@@ -39742,7 +39818,7 @@
                                             className: "friendSearchClear",
                                             onClick: this.OnClearSearch
                                           },
-                                          Ie.createElement(ri.lb, null)
+                                          Ie.createElement(ri.mb, null)
                                         )
                                       )
                                     )
@@ -39910,7 +39986,7 @@
                     ? Object(Q.b)("#changeLog_Value_Button", t)
                     : Object(Q.b)("#changeLog_Button")
                 },
-                Ie.createElement(ri.T, null),
+                Ie.createElement(ri.U, null),
                 e &&
                   Ie.createElement("div", { className: "changeLogViolator" }, t)
               )
@@ -40089,7 +40165,7 @@
                     ),
                     onClick: this.ToggleSingleWindowToggle
                   },
-                  Ie.createElement(ri.W, null)
+                  Ie.createElement(ri.X, null)
                 )
             );
           }),
@@ -41276,7 +41352,7 @@
                                   },
                                   title: Object(Q.b)("#FriendGroup_Tip_Decline")
                                 },
-                                Ie.createElement(ri.lb, null)
+                                Ie.createElement(ri.mb, null)
                               )
                             ),
                           l &&
@@ -41388,7 +41464,7 @@
                       Ie.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        Ie.createElement(ri.M, null)
+                        Ie.createElement(ri.N, null)
                       ),
                       this.props.group.icon_url &&
                         Ie.createElement("img", {
@@ -41420,7 +41496,7 @@
                           ? Object(Q.b)("#FriendGroup_Tip_SortByRecent")
                           : Object(Q.b)("#FriendGroup_Tip_SortByAlphabet")
                       },
-                      Ie.createElement(ri.X, null)
+                      Ie.createElement(ri.Y, null)
                     )
                 ),
                 Ie.createElement(
@@ -41750,7 +41826,7 @@
                     Ie.createElement(
                       "div",
                       { className: "ExpandPlusMinus" },
-                      Ie.createElement(ri.M, null)
+                      Ie.createElement(ri.N, null)
                     ),
                     M,
                     this.props.group.icon_url &&
@@ -42028,7 +42104,7 @@
                     size: this.props.avatarQualityFull ? "Large" : "Medium",
                     statusStyle: m
                   },
-                  this.props.bInVoiceList && f && Ie.createElement(ri.jb, null)
+                  this.props.bInVoiceList && f && Ie.createElement(ri.kb, null)
                 );
               this.props.noActions ||
                 (g = Ie.createElement(
@@ -42313,7 +42389,7 @@
                 Ie.createElement(
                   "div",
                   { className: "ExpandPlusMinus" },
-                  Ie.createElement(ri.M, null)
+                  Ie.createElement(ri.N, null)
                 ),
                 Object(Q.b)("#FriendGroup_UnreadMessages"),
                 Ie.createElement(
@@ -42800,7 +42876,7 @@
             }
           },
           Ie.createElement("span", null, e.friend.display_name),
-          Ie.createElement(ri.lb, null)
+          Ie.createElement(ri.mb, null)
         )
       );
     }
@@ -43981,7 +44057,7 @@
                               t.InviteToVoice(v, n);
                             }
                           },
-                          Ie.createElement(ri.ib, null),
+                          Ie.createElement(ri.jb, null),
                           Object(Q.b)("#Chat_Actions_InviteFriend_VoiceChat")
                         )
                       )
@@ -44406,7 +44482,7 @@
                   Ie.createElement(
                     "button",
                     { className: t, onClick: this.OnMutingClick },
-                    Ie.createElement(ri.jb, null)
+                    Ie.createElement(ri.kb, null)
                   ),
                   Ie.createElement(ii.B, {
                     min: 0,
@@ -44787,7 +44863,7 @@
                         key: "showinsteam",
                         onSelected: this.ShowInSteam
                       },
-                      Ie.createElement(ri.L, null),
+                      Ie.createElement(ri.M, null),
                       Object(Q.b)("#Friend_Menu_ShowInSteam")
                     )
                   )
@@ -44802,7 +44878,7 @@
                             key: "joinparty",
                             onSelected: this.JoinPartyBeacon
                           },
-                          Ie.createElement(ri.L, null),
+                          Ie.createElement(ri.M, null),
                           Object(Q.b)("#Friend_Menu_JoinFriendPartyBeacon")
                         )
                       )
@@ -44818,7 +44894,7 @@
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          Ie.createElement(ri.L, null),
+                          Ie.createElement(ri.M, null),
                           Object(Q.b)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -44831,7 +44907,7 @@
                         key: "launchgame",
                         onSelected: this.LaunchGame
                       },
-                      Ie.createElement(ri.L, null),
+                      Ie.createElement(ri.M, null),
                       Object(Q.b)("#Friend_Menu_LaunchFriendGame")
                     )
                   )),
@@ -46349,8 +46425,8 @@
                       "div",
                       { className: "_DialogRowLabel" },
                       n
-                        ? Ie.createElement(ri.ib, null)
-                        : Ie.createElement(ri.bb, null),
+                        ? Ie.createElement(ri.jb, null)
+                        : Ie.createElement(ri.cb, null),
                       Ie.createElement(
                         "div",
                         {
@@ -46409,7 +46485,7 @@
                     ii.d,
                     {
                       className: "DialogButtonTall",
-                      svgicon: ri.bb,
+                      svgicon: ri.cb,
                       onClick: this.OnCreateNewTextChannel,
                       disabled: !this.props.enabled
                     },
@@ -46422,7 +46498,7 @@
                     {
                       className: "DialogButtonTall",
                       svgicon: function() {
-                        return ri.ib({});
+                        return ri.jb({});
                       },
                       onClick: this.OnCreateNewVoiceChannel,
                       disabled: !this.props.enabled
@@ -46705,7 +46781,7 @@
                       onClick: function() {
                         a.setState({ editRoleID: void 0 });
                       },
-                      svgicon: ri.ab
+                      svgicon: ri.bb
                     },
                     Object(Q.b)("#GroupSettings_Permissions_BackButton")
                   )
@@ -47038,7 +47114,7 @@
                   {
                     className: "createNewRoleButton",
                     svgicon: function() {
-                      return ri.M({ minus: !1, nocircle: !1 });
+                      return ri.N({ minus: !1, nocircle: !1 });
                     },
                     onClick: this.OnCreateRole,
                     disabled: !this.props.group.BCanICreateRoles()
@@ -47837,7 +47913,7 @@
                   Ie.createElement(
                     "div",
                     { className: "actions", onClick: this.OnCloseClick },
-                    Ie.createElement(ri.kb, null)
+                    Ie.createElement(ri.lb, null)
                   )
               )
             );
@@ -48605,7 +48681,7 @@
                     ),
                     onClick: this.ToggleSingleWindowToggle
                   },
-                  Ie.createElement(ri.W, null)
+                  Ie.createElement(ri.X, null)
                 ),
               Ie.createElement("div", { className: "dropTargetBox" }),
               e &&
@@ -48803,7 +48879,7 @@
                       className: "chatTabClose closeButton",
                       onClick: this.OnCloseClick
                     },
-                    Ie.createElement(ri.lb, null)
+                    Ie.createElement(ri.mb, null)
                   ),
                   Ie.createElement(Xs, { tab: this.props.tab })
                 )
@@ -49046,7 +49122,7 @@
                   className: "dash_stat_close_button",
                   onClick: this.HideStats
                 },
-                Ie.createElement(ri.lb, null)
+                Ie.createElement(ri.mb, null)
               ),
               Ie.createElement(
                 "div",
@@ -50072,7 +50148,7 @@
                 className: "BroadcastVideoUserInputNeeded",
                 onClick: this.OnClick
               },
-              Ie.createElement(ri.L, null),
+              Ie.createElement(ri.M, null),
               Ie.createElement(
                 "span",
                 null,
@@ -50141,7 +50217,7 @@
                     className: "STV_BroadcastClose",
                     onClick: this.props.onClick
                   },
-                  Ie.createElement(ri.lb, null)
+                  Ie.createElement(ri.mb, null)
                 )
               : null;
           }),
@@ -50265,7 +50341,7 @@
                 className: "videoControlButton buttonPlayPause",
                 onClick: this.OnTogglePlayPause
               },
-              e ? Ie.createElement(ri.L, null) : Ie.createElement(ri.K, null)
+              e ? Ie.createElement(ri.M, null) : Ie.createElement(ri.K, null)
             );
           }),
           R.c([T.a], t.prototype, "OnTogglePlayPause", null),
@@ -50547,7 +50623,7 @@
                   onClick: this.OnVideoControlClick,
                   ref: this.bindSettingsButton
                 },
-                Ie.createElement(ri.U, null)
+                Ie.createElement(ri.V, null)
               ),
               Ie.createElement(vc, { video: a }),
               s &&
@@ -50679,7 +50755,7 @@
                   Ie.createElement(
                     "div",
                     { className: o, onClick: this.ToggleMute },
-                    Ie.createElement(ri.jb, null)
+                    Ie.createElement(ri.kb, null)
                   ),
                   Ie.createElement(Sc, { video: e, onDrag: this.OnChildDrag })
                 )
@@ -50792,7 +50868,7 @@
         Ie.createElement(
           "div",
           { className: "timelineMarkerIcon" },
-          Ie.createElement(ri.S, null)
+          Ie.createElement(ri.T, null)
         )
       );
     }
@@ -51024,7 +51100,7 @@
                         Ie.createElement(
                           "div",
                           { className: "STV_timelineGrabberArrow" },
-                          Ie.createElement(ri.R, null)
+                          Ie.createElement(ri.S, null)
                         )
                       )
                     )
@@ -51120,7 +51196,7 @@
                     Ie.createElement(
                       "div",
                       { className: "BroadcastDetailsHeader_ViewerCount" },
-                      Ie.createElement(ri.hb, null),
+                      Ie.createElement(ri.ib, null),
                       Object(Q.b)("#Broadcast_ViewerCount", n)
                     )
                 ),
@@ -51728,7 +51804,7 @@
                         className: "LinkRegionDelete",
                         onClick: this.HandleDelete
                       },
-                      Ie.createElement(ri.lb, null)
+                      Ie.createElement(ri.mb, null)
                     ),
                     Ie.createElement(
                       "div",
@@ -53394,7 +53470,7 @@
                             title: Object(Q.b)("#ChatEntryButton_Submit"),
                             onClick: this.SendMessage
                           },
-                          Ie.createElement(ri.Z, null)
+                          Ie.createElement(ri.ab, null)
                         )
                       ),
                       Ie.createElement(
@@ -53919,7 +53995,7 @@
                     Oe.a.createElement(
                       "div",
                       { className: "STV_Logo" },
-                      Oe.a.createElement(ri.Y, null)
+                      Oe.a.createElement(ri.Z, null)
                     ),
                     Oe.a.createElement(
                       "div",
@@ -53959,7 +54035,7 @@
       return Oe.a.createElement(
         "div",
         { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
-        Oe.a.createElement(ri.hb, null),
+        Oe.a.createElement(ri.ib, null),
         Object(Q.b)("#Broadcast_WatchWithFriends")
       );
     }
@@ -55120,7 +55196,7 @@
                     Ie.createElement(
                       "div",
                       null,
-                      Ie.createElement(ri.db, null),
+                      Ie.createElement(ri.eb, null),
                       t &&
                         Object(Q.d)(
                           "#ChatRoom_TradeRequest_Recipient_Declined",
@@ -55146,7 +55222,7 @@
                     Ie.createElement(
                       "div",
                       null,
-                      Ie.createElement(ri.db, null),
+                      Ie.createElement(ri.eb, null),
                       this.GetLocalizedErrorResponseString()
                     )
                   )
@@ -55170,7 +55246,7 @@
                     Ie.createElement(
                       "div",
                       { className: "leftInviteContainer" },
-                      Ie.createElement(ri.db, null)
+                      Ie.createElement(ri.eb, null)
                     ),
                     Ie.createElement(
                       "div",
@@ -55216,7 +55292,7 @@
                   Ie.createElement(
                     "div",
                     { className: "leftInviteContainer" },
-                    Ie.createElement(ri.db, null)
+                    Ie.createElement(ri.eb, null)
                   ),
                   Ie.createElement(
                     "div",
@@ -55258,7 +55334,7 @@
                     Ie.createElement(
                       "div",
                       { className: "closeButton", onClick: this.DeclineTrade },
-                      Ie.createElement(ri.lb, null)
+                      Ie.createElement(ri.mb, null)
                     )
                   )
                 )
@@ -55667,7 +55743,7 @@
                 onClick: this.OnDeleteMessages,
                 title: Object(Q.b)("#Chat_Actions_Delete")
               },
-              Ie.createElement(ri.eb, null)
+              Ie.createElement(ri.fb, null)
             );
           }),
           R.c([T.a], t.prototype, "OnMouseEnter", null),
@@ -56638,7 +56714,7 @@
                     src: this.props.fileUploadManager.file_upload_data_url
                   }))
                 : -1 != t.type.indexOf("video") &&
-                  (e = Ie.createElement(ri.gb, null)),
+                  (e = Ie.createElement(ri.hb, null)),
               Ie.createElement(
                 "div",
                 { className: "chatFileUploadPreviewContainer" },
@@ -56656,7 +56732,7 @@
                     className: "chatFileUploadCancel",
                     onClick: this.OnCancelClick
                   },
-                  Ie.createElement(ri.lb, null)
+                  Ie.createElement(ri.mb, null)
                 ),
                 Ie.createElement(
                   "button",
@@ -57143,7 +57219,7 @@
                       disabled: !this.state.submitEnabled,
                       title: Object(Q.b)("#ChatEntryButton_Submit")
                     },
-                    Ie.createElement(ri.Z, null)
+                    Ie.createElement(ri.ab, null)
                   ),
                   Ie.createElement("input", {
                     type: "file",
@@ -57317,7 +57393,7 @@
                     Ie.createElement(
                       "div",
                       { className: "VoiceToggleIconCtn" },
-                      Ie.createElement(ri.ib, null)
+                      Ie.createElement(ri.jb, null)
                     )
                   ),
                   Ie.createElement(
@@ -57892,7 +57968,7 @@
                       : "#Broadcast_View_ShowBothChats"
                   )
                 },
-                Ie.createElement(ri.V, null)
+                Ie.createElement(ri.W, null)
               )
             );
           }),
@@ -59164,7 +59240,7 @@
               Ie.createElement(
                 "div",
                 { className: "VoiceToggleIconCtn" },
-                Ie.createElement(ri.ib, null),
+                Ie.createElement(ri.jb, null),
                 Ie.createElement(
                   "div",
                   { className: "Sonar" },
@@ -59188,7 +59264,7 @@
                       ? Object(Q.b)("#Voice_EndVoice")
                       : Object(Q.b)("#Tooltip_DismissVoice")
                   },
-                  Ie.createElement(ri.lb, null)
+                  Ie.createElement(ri.mb, null)
                 )
             );
           }),
@@ -59356,7 +59432,7 @@
                   (s = Ie.createElement(
                     "div",
                     { className: "displayRow" },
-                    Ie.createElement(ri.ib, null)
+                    Ie.createElement(ri.jb, null)
                   )));
             var m = null,
               d = !0;
@@ -59472,7 +59548,7 @@
                           : Ie.createElement(
                               "div",
                               { className: "staticX" },
-                              Ie.createElement(ri.lb, null)
+                              Ie.createElement(ri.mb, null)
                             ),
                         s,
                         Ie.createElement(
@@ -59725,7 +59801,7 @@
                             className: "MinimizeTextChat",
                             onClick: this.OnTextChannelCloseClick
                           },
-                          Ie.createElement(ri.lb, null)
+                          Ie.createElement(ri.mb, null)
                         )
                       ),
                       Ie.createElement(
@@ -61207,7 +61283,7 @@
                   { className: "leftInviteContainer" },
                   Ie.createElement(zs, { group: n, small: b, large: v }),
                   m &&
-                    Ie.createElement("div", null, Ie.createElement(ri.ib, null))
+                    Ie.createElement("div", null, Ie.createElement(ri.jb, null))
                 ),
                 Ie.createElement(
                   "div",
@@ -61648,7 +61724,7 @@
                 Ie.createElement(
                   "div",
                   { className: "closeButton", onClick: this.DismissInvite },
-                  Ie.createElement(ri.lb, null)
+                  Ie.createElement(ri.mb, null)
                 )
               )
             );
@@ -61811,7 +61887,7 @@
                 Ie.createElement(
                   "div",
                   { className: "closeButton", onClick: this.OnClose },
-                  Ie.createElement(ri.lb, null)
+                  Ie.createElement(ri.mb, null)
                 )
               )
             );
@@ -62691,7 +62767,7 @@
                       "#bbcode_" + this.props.strMediaType + "_tooltip_resize"
                     )
                   },
-                  Ie.createElement(ri.P, null)
+                  Ie.createElement(ri.Q, null)
                 ),
                 Ie.createElement(
                   "div",
@@ -62710,7 +62786,7 @@
                             "_tooltip_collapse"
                         )
                   },
-                  Ie.createElement(ri.kb, null)
+                  Ie.createElement(ri.lb, null)
                 )
               )
             );
@@ -62785,7 +62861,7 @@
                 Ie.createElement(
                   mu,
                   { href: i },
-                  Ie.createElement(ri.mb, null),
+                  Ie.createElement(ri.nb, null),
                   i
                 )
               );
@@ -63068,7 +63144,7 @@
                                 )
                               : Object(Q.b)("#bbcode_image_tooltip_link")
                           },
-                          Ie.createElement(ri.N, null),
+                          Ie.createElement(ri.O, null),
                           Ie.createElement(
                             "div",
                             { className: "giphyTag" },
@@ -63165,7 +63241,7 @@
                 Ie.createElement(
                   mu,
                   { href: e },
-                  Ie.createElement(ri.gb, null),
+                  Ie.createElement(ri.hb, null),
                   o
                 )
               );
@@ -63234,7 +63310,7 @@
                           Ie.createElement(
                             "div",
                             { className: "playButtonContainer" },
-                            Ie.createElement(ri.L, null)
+                            Ie.createElement(ri.M, null)
                           )
                         ),
                       Ie.createElement(
@@ -63244,7 +63320,7 @@
                           href: e,
                           title: Object(Q.b)("#bbcode_video_tooltip_link")
                         },
-                        Ie.createElement(ri.N, null)
+                        Ie.createElement(ri.O, null)
                       )
                     )
                   )
@@ -64311,7 +64387,7 @@
               var l = Ie.createElement(ri.y, null);
               switch (a) {
                 case 4:
-                  l = Ie.createElement(ri.gb, null);
+                  l = Ie.createElement(ri.hb, null);
                   break;
                 case 3:
                 case 5:
@@ -64549,7 +64625,7 @@
                   context: { chat: n },
                   bLarge: !0
                 }),
-                Ie.createElement(ri.db, null)
+                Ie.createElement(ri.eb, null)
               ),
               Ie.createElement(
                 "div",
@@ -65467,7 +65543,7 @@
                                     className:
                                       Zp.a.ChatMessageSteamStore_VideoPlayButton
                                   },
-                                  Ie.createElement(ri.L, null)
+                                  Ie.createElement(ri.M, null)
                                 )
                               )
                             : Ie.createElement("img", {
@@ -65513,7 +65589,7 @@
                   Ie.createElement(
                     "div",
                     { onClick: this.PlayVideoClicked },
-                    Ie.createElement(ri.lb, null)
+                    Ie.createElement(ri.mb, null)
                   )
                 )
               )
@@ -67490,7 +67566,7 @@
                 l.createElement(
                   "div",
                   { className: "closeButton", onClick: t.onEscKeypress },
-                  l.createElement(p.lb, null)
+                  l.createElement(p.mb, null)
                 )
               ),
             l.createElement(s.a, null, t.children)
@@ -67887,7 +67963,10 @@
                     d.createElement(
                       "div",
                       { className: e },
-                      d.createElement(h.l, null)
+                      d.createElement(h.l, {
+                        color: this.props.color,
+                        highlightColor: this.props.highlightColor
+                      })
                     ),
                     d.createElement(
                       "div",
@@ -68219,7 +68298,7 @@
                       className: "DialogInput_ClearAction",
                       onClick: this.OnClearClick
                     },
-                    d.createElement(h.kb, null)
+                    d.createElement(h.lb, null)
                   )
               ),
               p
@@ -68525,7 +68604,8 @@
                 "div",
                 {
                   className:
-                    "DialogSlider_Container _DialogInputContainer _DialogLayout",
+                    "DialogSlider_Container _DialogInputContainer _DialogLayout" +
+                    (this.props.classname ? " " + this.props.classname : ""),
                   onKeyDown: this.OnKeyDown,
                   tabIndex: this.props.tabIndex || 0
                 },
@@ -68662,7 +68742,9 @@
                 (this.m_iMenuInstance = Object(A.a)(
                   d.createElement(x, {
                     rgOptions: this.props.rgOptions,
-                    fnOnItemSelected: this.OnItemSelected
+                    fnOnItemSelected: this.OnItemSelected,
+                    strDropDownItemClassName: this.props
+                      .strDropDownItemClassName
                   }),
                   this.m_elInput,
                   {
@@ -68712,7 +68794,11 @@
                     { className: "DialogDropDown_Arrow" },
                     d.createElement(h.o, null)
                   ),
-                  t
+                  d.createElement(
+                    "div",
+                    { className: "DialogDropDown_CurrentDisplay" },
+                    t
+                  )
                 )
               )
             );
@@ -68743,18 +68829,21 @@
           }),
           (e.prototype.render = function() {
             var n = this,
-              e = this.props.rgOptions.map(function(e, t) {
-                return d.createElement(
-                  "div",
-                  {
-                    className: "DialogDropDownMenu_Item",
-                    key: t,
-                    "data-dropdown-index": t,
-                    onClick: n.OnItemClicked
-                  },
-                  e.label
-                );
-              });
+              o = "DialogDropDownMenu_Item";
+            this.props.strDropDownItemClassName &&
+              (o += " " + this.props.strDropDownItemClassName);
+            var e = this.props.rgOptions.map(function(e, t) {
+              return d.createElement(
+                "div",
+                {
+                  className: o,
+                  key: t,
+                  "data-dropdown-index": t,
+                  onClick: n.OnItemClicked
+                },
+                e.label
+              );
+            });
             return d.createElement(
               "div",
               { className: "DialogDropDownMenu _DialogInputContainer" },
@@ -69283,7 +69372,7 @@
                       d.createElement(
                         "div",
                         { className: r.join(" "), key: t.title, onClick: i },
-                        a && d.createElement(h.ib, null),
+                        a && d.createElement(h.jb, null),
                         t.title
                       )
                     );
@@ -69862,23 +69951,25 @@ and limitations under the License.
             ? i(o + "XMonths", Math.floor(e / c))
             : 2 * p <= e
               ? i(o + "XWeeks", Math.floor(e / p))
-              : 2 * u <= e
-                ? i(o + "XDays", Math.floor(e / u))
-                : u <= e
-                  ? 2 * m <= (e -= u)
-                    ? i(o + "1DayXHours", Math.floor(e / m))
-                    : i(o + "1Day")
-                  : 2 * m <= e
-                    ? i(o + "XHours", Math.floor(e / m))
-                    : m <= e
-                      ? 2 * d <= (e -= m) && n
-                        ? i(o + "1HourXMinutes", Math.floor(e / d))
-                        : i(o + "1Hour")
-                      : n
-                        ? 2 * d <= e
-                          ? i(o + "XMinutes", Math.floor(e / d))
-                          : i(d <= e ? o + "1Minute" : o + "LessThanAMinute")
-                        : i(o + "LessThanAnHour");
+              : p <= e
+                ? i(o + "1Week", Math.floor(e / p))
+                : 2 * u <= e
+                  ? i(o + "XDays", Math.floor(e / u))
+                  : u <= e
+                    ? 2 * m <= (e -= u)
+                      ? i(o + "1DayXHours", Math.floor(e / m))
+                      : i(o + "1Day")
+                    : 2 * m <= e
+                      ? i(o + "XHours", Math.floor(e / m))
+                      : m <= e
+                        ? 2 * d <= (e -= m) && n
+                          ? i(o + "1HourXMinutes", Math.floor(e / d))
+                          : i(o + "1Hour")
+                        : n
+                          ? 2 * d <= e
+                            ? i(o + "XMinutes", Math.floor(e / d))
+                            : i(d <= e ? o + "1Minute" : o + "LessThanAMinute")
+                          : i(o + "LessThanAnHour");
     }
     var _ = new ((function() {
       function e() {

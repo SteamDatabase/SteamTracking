@@ -751,3 +751,17 @@ function RemoveTaggedUser( publishedfileid, accountid )
 	});
 }
 
+function ResendItemSubmissionVerificationEmail( publishedfileid )
+{
+	$J.post( 'https://steamcommunity.com/sharedfiles/ajaxresendverificationemail/', {
+			'sessionid' : g_sessionID,
+			'id' : publishedfileid
+		}
+	).done( function( json ){
+		ShowAlertDialog( 'Verification Email Sent', 'An email was sent to the email associated with your account.  Please click the link in there to verify you created this content.' );
+	} ).fail( function( jqxhr )	{
+		ShowAlertDialog( 'Error', 'There was a problem sending the verification email for this content. Please try again later.' );
+	} );
+}
+
+

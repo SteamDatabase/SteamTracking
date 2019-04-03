@@ -147,7 +147,9 @@
           })();
         },
         FRIENDSUI_BETA: !1,
-        STEAM_TV: !1
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        OFFLINE_MODE: !1
       },
       u = {
         logged_in: !1,

@@ -480,7 +480,9 @@
           })();
         },
         FRIENDSUI_BETA: !1,
-        STEAM_TV: !1
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        OFFLINE_MODE: !1
       },
       s = {
         logged_in: !1,
@@ -551,7 +553,7 @@
       contextMenuContents: "contextmenu_contextMenuContents_1yyTu",
       contextMenuItem: "contextmenu_contextMenuItem_CBC-y",
       active: "contextmenu_active_3vYUp",
-      disabled: "contextmenu_disabled_molnq"
+      MenuSectionHeader: "contextmenu_MenuSectionHeader_x3Kot"
     };
   },
   "8o0Y": function(e, t, n) {
@@ -860,7 +862,7 @@
         return S;
       }),
       n.d(t, "h", function() {
-        return M;
+        return k;
       }),
       n.d(t, "j", function() {
         return C;
@@ -1198,17 +1200,17 @@
                   : (s.menuRight = u - (c.bOverlapHorizontal ? v : f));
               var E = l || r.top,
                 S = l || r.bottom,
-                k = o.height;
-              c.bMatchHeight && ((k = S - E), (s.menuHeight = k));
-              var M = (c.bOverlapVertical ? S : E) - k,
-                C = 0 < M,
-                P = m - (c.bOverlapVertical ? E : S) - k,
+                M = o.height;
+              c.bMatchHeight && ((M = S - E), (s.menuHeight = M));
+              var k = (c.bOverlapVertical ? S : E) - M,
+                C = 0 < k,
+                P = m - (c.bOverlapVertical ? E : S) - M,
                 I = 0 < P,
                 L = (c.bPreferPopTop || !I) && C;
               C ||
                 I ||
-                ((L = P < M),
-                c.bFitToWindow && ((k += (L ? M : P) - 8), (s.menuHeight = k))),
+                ((L = P < k),
+                c.bFitToWindow && ((M += (L ? k : P) - 8), (s.menuHeight = M))),
                 L
                   ? (s.menuBottom = m - (c.bOverlapVertical ? S : E))
                   : (s.menuTop = c.bOverlapVertical ? E : S),
@@ -1444,16 +1446,16 @@
         e.preventDefault(), e.stopPropagation();
       }
     }
-    var k = "DEBUG_StickyContextMenus";
-    function M() {
+    var M = "DEBUG_StickyContextMenus";
+    function k() {
       return (
-        window.sessionStorage && "true" == window.sessionStorage.getItem(k)
+        window.sessionStorage && "true" == window.sessionStorage.getItem(M)
       );
     }
     function C(e) {
       e
-        ? window.sessionStorage.setItem(k, "true")
-        : window.sessionStorage.removeItem(k);
+        ? window.sessionStorage.setItem(M, "true")
+        : window.sessionStorage.removeItem(M);
     }
   },
   "G+3Z": function(e, t, n) {
@@ -2472,7 +2474,7 @@
                   Object(s.b)("#ProfilePrivacy_GameLibrary_Desc"),
                   1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                     i.createElement(
-                      M,
+                      k,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyPlaytime",
@@ -2516,7 +2518,7 @@
                   ),
                   1 != e.GetPrivacySetting("PrivacyInventory") &&
                     i.createElement(
-                      M,
+                      k,
                       {
                         PrivacyStore: e,
                         PrivacyKey: "PrivacyInventoryGifts",
@@ -2643,7 +2645,7 @@
                   "public/images/skin_1/actionArrowDnWhite.gif"
               })
             ),
-            i.createElement(k, {
+            i.createElement(M, {
               eSaveState: this.props.PrivacyStore.GetSaveState(
                 this.props.PrivacyKey
               )
@@ -2655,7 +2657,7 @@
         (t = a.c([_.a], t))
       );
     })(i.Component);
-    function k(e) {
+    function M(e) {
       switch (e.eSaveState) {
         case 1:
           return i.createElement(
@@ -2680,7 +2682,7 @@
           return null;
       }
     }
-    var M = (function(e) {
+    var k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2777,7 +2779,7 @@
                     "public/images/skin_1/actionArrowDnWhite.gif"
                 })
               ),
-              i.createElement(k, {
+              i.createElement(M, {
                 eSaveState: this.props.PrivacyStore.GetCommentSaveState()
               })
             );
@@ -2981,7 +2983,7 @@
     n.d(t, "y", function() {
       return c;
     }),
-      n.d(t, "U", function() {
+      n.d(t, "V", function() {
         return s;
       }),
       n.d(t, "g", function() {
@@ -3002,25 +3004,25 @@
       n.d(t, "p", function() {
         return h;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "ab", function() {
         return d;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "Q", function() {
         return f;
       }),
-      n.d(t, "N", function() {
+      n.d(t, "O", function() {
         return v;
       }),
-      n.d(t, "kb", function() {
+      n.d(t, "lb", function() {
         return y;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "mb", function() {
         return b;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "jb", function() {
         return _;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "cb", function() {
         return g;
       }),
       n.d(t, "v", function() {
@@ -3029,149 +3031,152 @@
       n.d(t, "u", function() {
         return x;
       }),
-      n.d(t, "M", function() {
+      n.d(t, "L", function() {
         return E;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "N", function() {
         return S;
+      }),
+      n.d(t, "a", function() {
+        return M;
       }),
       n.d(t, "s", function() {
         return k;
       }),
       n.d(t, "A", function() {
-        return M;
-      }),
-      n.d(t, "J", function() {
         return C;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "J", function() {
         return P;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "kb", function() {
         return I;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "I", function() {
         return L;
       }),
-      n.d(t, "L", function() {
+      n.d(t, "k", function() {
         return O;
       }),
-      n.d(t, "K", function() {
+      n.d(t, "M", function() {
         return N;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "K", function() {
         return B;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "Y", function() {
         return V;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "h", function() {
         return T;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "l", function() {
         return G;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "f", function() {
         return D;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "B", function() {
         return z;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "db", function() {
         return W;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "hb", function() {
         return H;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "z", function() {
         return F;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return R;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "b", function() {
         return j;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "n", function() {
         return A;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "bb", function() {
         return U;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "D", function() {
         return K;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "G", function() {
         return Y;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "R", function() {
         return X;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "X", function() {
         return q;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "P", function() {
         return J;
       }),
       n.d(t, "eb", function() {
         return Q;
       }),
-      n.d(t, "T", function() {
+      n.d(t, "fb", function() {
         return Z;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "U", function() {
         return $;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "q", function() {
         return ee;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "r", function() {
         return te;
       }),
-      n.d(t, "E", function() {
+      n.d(t, "m", function() {
         return ne;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "E", function() {
         return re;
       }),
-      n.d(t, "hb", function() {
+      n.d(t, "Z", function() {
         return oe;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "ib", function() {
         return ie;
       }),
-      n.d(t, "R", function() {
+      n.d(t, "t", function() {
         return ce;
       }),
       n.d(t, "S", function() {
         return se;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "T", function() {
         return ae;
       }),
-      n.d(t, "V", function() {
+      n.d(t, "x", function() {
         return le;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "W", function() {
         return ue;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "d", function() {
         return me;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "H", function() {
         return pe;
       }),
-      n.d(t, "mb", function() {
+      n.d(t, "gb", function() {
         return he;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "nb", function() {
         return de;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "e", function() {
         return fe;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "i", function() {
         return ve;
+      }),
+      n.d(t, "w", function() {
+        return ye;
       });
     var r = n("q1tI"),
       o = n("twdX"),
@@ -3954,6 +3959,48 @@
       );
     }
     function E(e) {
+      var t = "SVGIcon_Button SVGIcon_Pin";
+      return (
+        e.bPinned && (t += " Pinned"),
+        r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          r.createElement("path", {
+            className: "point",
+            d:
+              "M134.787,129.241v52.051v26.025c0.041,4.334-0.092,8.677,0.094,13.009c-1.493,4.332-3.129,8.675-5.239,13.009 c-2.109-4.334-3.734-8.677-5.237-13.009c0.186-4.333,0.05-8.677,0.092-33.009v-26.025v-32.051v-5.146h10.291V129.241z"
+          }),
+          r.createElement("path", {
+            className: "head",
+            d:
+              "M186.55,151.049H73.351l-5.146-5.146c0-23.791,11.186-40.359,30.871-46.091V39.394 c-6.843-3.478-17.164-10.034-17.154-27.312l5.146-5.146h85.167l5.146,5.146c0,17.227-9.828,23.803-16.537,27.292v60.521 c19.664,6.062,30.852,22.609,30.852,46.01L186.55,151.049z"
+          }),
+          r.createElement("line", {
+            className: "ground",
+            opacity: e.bPinned ? 1 : 0,
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "16",
+            strokeLinecap: "round",
+            strokeMiterlimit: "10",
+            x1: "33.833",
+            y1: "238.5",
+            x2: "221.834",
+            y2: "238.5"
+          })
+        )
+      );
+    }
+    function S(e) {
       return r.createElement(
         "svg",
         {
@@ -4000,7 +4047,7 @@
           })
       );
     }
-    function S() {
+    function M() {
       return r.createElement(
         "svg",
         {
@@ -4078,7 +4125,7 @@
         })
       );
     }
-    function M() {
+    function C() {
       return r.createElement(
         "svg",
         {
@@ -4126,7 +4173,7 @@
         )
       );
     }
-    function C() {
+    function P() {
       return r.createElement(
         "svg",
         {
@@ -4150,7 +4197,7 @@
         })
       );
     }
-    function P() {
+    function I() {
       return r.createElement(
         "svg",
         {
@@ -4219,7 +4266,7 @@
         )
       );
     }
-    function I() {
+    function L() {
       return r.createElement(
         "svg",
         {
@@ -4257,7 +4304,7 @@
         })
       );
     }
-    function L() {
+    function O() {
       return r.createElement(
         "svg",
         {
@@ -4281,7 +4328,7 @@
         )
       );
     }
-    function O() {
+    function N() {
       return r.createElement(
         "svg",
         {
@@ -4302,7 +4349,7 @@
         })
       );
     }
-    function N() {
+    function B() {
       return r.createElement(
         "svg",
         {
@@ -4326,7 +4373,7 @@
         })
       );
     }
-    function B() {
+    function V() {
       return r.createElement(
         "svg",
         {
@@ -4413,7 +4460,7 @@
         )
       );
     }
-    function V() {
+    function T() {
       return r.createElement(
         "svg",
         {
@@ -4438,7 +4485,9 @@
         })
       );
     }
-    function T() {
+    function G(e) {
+      var t = e.highlightColor || "#00ccff",
+        n = e.color || "#2d73ff";
       return r.createElement(
         "svg",
         {
@@ -4461,12 +4510,12 @@
             r.createElement("stop", {
               id: "stop0",
               offset: "0%",
-              stopColor: "#00ccff"
+              stopColor: t
             }),
             r.createElement("stop", {
               id: "stop1",
               offset: "100%",
-              stopColor: "#2d73ff"
+              stopColor: n
             })
           ),
           r.createElement(
@@ -4516,7 +4565,7 @@
         })
       );
     }
-    function G() {
+    function D() {
       return r.createElement(
         "svg",
         {
@@ -4574,7 +4623,7 @@
         )
       );
     }
-    function D() {
+    function z() {
       return r.createElement(
         "svg",
         {
@@ -4604,7 +4653,7 @@
         })
       );
     }
-    function z(e) {
+    function W(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -4848,7 +4897,7 @@
         )
       );
     }
-    function W() {
+    function H() {
       return r.createElement(
         "svg",
         {
@@ -4873,7 +4922,7 @@
         })
       );
     }
-    function H() {
+    function F() {
       return r.createElement(
         "svg",
         {
@@ -4899,7 +4948,7 @@
         })
       );
     }
-    function F() {
+    function R() {
       return r.createElement(
         "svg",
         {
@@ -4919,7 +4968,7 @@
         })
       );
     }
-    function R(e) {
+    function j(e) {
       return r.createElement(
         "svg",
         {
@@ -4954,7 +5003,7 @@
         })
       );
     }
-    function j(e) {
+    function A(e) {
       var t = "";
       return (
         e.angle && (t = "rotate(" + e.angle + ")"),
@@ -4993,7 +5042,7 @@
         )
       );
     }
-    function A() {
+    function U() {
       return r.createElement(
         "svg",
         {
@@ -5027,7 +5076,7 @@
         })
       );
     }
-    function U() {
+    function K() {
       return r.createElement(
         "svg",
         {
@@ -5063,7 +5112,7 @@
         })
       );
     }
-    function K() {
+    function Y() {
       return r.createElement(
         "svg",
         {
@@ -5089,7 +5138,7 @@
         })
       );
     }
-    function Y() {
+    function X() {
       return r.createElement(
         "svg",
         {
@@ -5122,7 +5171,7 @@
         })
       );
     }
-    function X() {
+    function q() {
       return r.createElement(
         "svg",
         {
@@ -5186,7 +5235,7 @@
         )
       );
     }
-    function q() {
+    function J() {
       return r.createElement(
         "svg",
         {
@@ -5214,7 +5263,7 @@
         })
       );
     }
-    function J() {
+    function Q() {
       return r.createElement(
         "svg",
         {
@@ -5238,7 +5287,7 @@
         })
       );
     }
-    function Q() {
+    function Z() {
       return r.createElement(
         "svg",
         {
@@ -5317,7 +5366,7 @@
         )
       );
     }
-    function Z() {
+    function $() {
       return r.createElement(
         "svg",
         {
@@ -5341,7 +5390,7 @@
         )
       );
     }
-    function $(e) {
+    function ee(e) {
       return r.createElement(
         "svg",
         {
@@ -5362,7 +5411,7 @@
         })
       );
     }
-    function ee(e) {
+    function te(e) {
       return r.createElement(
         "svg",
         {
@@ -5426,7 +5475,7 @@
         )
       );
     }
-    function te() {
+    function ne() {
       return r.createElement(
         "svg",
         {
@@ -5461,7 +5510,7 @@
         })
       );
     }
-    function ne(e) {
+    function re(e) {
       return r.createElement(
         "svg",
         {
@@ -5499,7 +5548,7 @@
         })
       );
     }
-    function re() {
+    function oe() {
       return r.createElement(
         "svg",
         {
@@ -5613,7 +5662,7 @@
         )
       );
     }
-    function oe() {
+    function ie() {
       return r.createElement(
         "svg",
         {
@@ -5641,7 +5690,7 @@
         })
       );
     }
-    function ie() {
+    function ce() {
       return r.createElement(
         "svg",
         {
@@ -5663,7 +5712,7 @@
         )
       );
     }
-    function ce() {
+    function se() {
       return r.createElement(
         "svg",
         {
@@ -5700,7 +5749,7 @@
         )
       );
     }
-    function se() {
+    function ae() {
       return r.createElement(
         "svg",
         {
@@ -5728,7 +5777,7 @@
         })
       );
     }
-    function ae(e) {
+    function le(e) {
       return r.createElement(
         "svg",
         {
@@ -5840,7 +5889,7 @@
         )
       );
     }
-    function le() {
+    function ue() {
       return r.createElement(
         "svg",
         {
@@ -5907,7 +5956,7 @@
         })
       );
     }
-    function ue() {
+    function me() {
       return r.createElement(
         "svg",
         {
@@ -5928,7 +5977,7 @@
         })
       );
     }
-    function me() {
+    function pe() {
       return r.createElement(
         "svg",
         {
@@ -5948,7 +5997,7 @@
         })
       );
     }
-    function pe() {
+    function he() {
       return r.createElement(
         "svg",
         {
@@ -5972,7 +6021,7 @@
         })
       );
     }
-    function he() {
+    function de() {
       return r.createElement(
         "svg",
         {
@@ -5992,7 +6041,7 @@
         })
       );
     }
-    function de() {
+    function fe() {
       return r.createElement(
         "svg",
         {
@@ -6014,7 +6063,7 @@
         })
       );
     }
-    function fe() {
+    function ve() {
       return r.createElement(
         "svg",
         {
@@ -6048,7 +6097,7 @@
         })
       );
     }
-    function ve() {
+    function ye() {
       return r.createElement(
         "svg",
         {
@@ -6407,23 +6456,25 @@ and limitations under the License.
             ? o(r + "XMonths", Math.floor(e / a))
             : 2 * u <= e
               ? o(r + "XWeeks", Math.floor(e / u))
-              : 2 * m <= e
-                ? o(r + "XDays", Math.floor(e / m))
-                : m <= e
-                  ? 2 * p <= (e -= m)
-                    ? o(r + "1DayXHours", Math.floor(e / p))
-                    : o(r + "1Day")
-                  : 2 * p <= e
-                    ? o(r + "XHours", Math.floor(e / p))
-                    : p <= e
-                      ? 2 * h <= (e -= p) && n
-                        ? o(r + "1HourXMinutes", Math.floor(e / h))
-                        : o(r + "1Hour")
-                      : n
-                        ? 2 * h <= e
-                          ? o(r + "XMinutes", Math.floor(e / h))
-                          : o(h <= e ? r + "1Minute" : r + "LessThanAMinute")
-                        : o(r + "LessThanAnHour");
+              : u <= e
+                ? o(r + "1Week", Math.floor(e / u))
+                : 2 * m <= e
+                  ? o(r + "XDays", Math.floor(e / m))
+                  : m <= e
+                    ? 2 * p <= (e -= m)
+                      ? o(r + "1DayXHours", Math.floor(e / p))
+                      : o(r + "1Day")
+                    : 2 * p <= e
+                      ? o(r + "XHours", Math.floor(e / p))
+                      : p <= e
+                        ? 2 * h <= (e -= p) && n
+                          ? o(r + "1HourXMinutes", Math.floor(e / h))
+                          : o(r + "1Hour")
+                        : n
+                          ? 2 * h <= e
+                            ? o(r + "XMinutes", Math.floor(e / h))
+                            : o(h <= e ? r + "1Minute" : r + "LessThanAMinute")
+                          : o(r + "LessThanAnHour");
     }
     var f = new ((function() {
       function e() {

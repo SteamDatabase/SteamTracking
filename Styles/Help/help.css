@@ -2539,6 +2539,27 @@ a.guide_row {
 	overflow: hidden;
 }
 
+.help_section_alert {
+	max-width: 710px;
+	border: 2px solid #95423a;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: table;
+	font-size: 12px;
+	margin: 10px 0;
+	padding: 10px 20px 10px 20px;
+}
+
+.help_section_alert .title {
+	color: #5eafde;
+	margin-bottom: 8px;
+	font-size: 18px;
+}
+
+.help_section_alert .body {
+	margin-bottom: 8px;
+	line-height: 16px;
+}
+
 .captcha_section {
 	margin-top: 20px;
 }

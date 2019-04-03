@@ -397,6 +397,7 @@ LocalizationReady("friendsui", "english", {
   Chat_Invite_Linkheader: "Send a link",
   Chat_Invite_Loading: "Loading...",
   Chat_Invite_ExpiresOneDay: "Expires: 1 day",
+  Chat_Invite_ExpiresSetting: "Expires: %1$s",
 
   Chat_Settings_Room_Name: "Chat Name",
 
@@ -879,6 +880,7 @@ LocalizationReady("friendsui", "english", {
 
   BBTag_Spoiler: "Spoiler",
   Notification_Spoiler: "<spoiler>",
+  TapToReveal_Spoiler: "Tap to reveal spoiler",
 
   Friend_Emote_Note:
     "Note: This is a user generated emote using /me.  This is not a server message.",
@@ -1275,6 +1277,16 @@ LocalizationReady("friendsui", "english", {
     "We've attempted to open the invite link in the Steam Client.  You may be prompted by your browser to allow the Steam Client to launch.",
 
   MobileDisconnect_Reconnecting: "Reconnecting",
+
+  Friends_Empty01: "Your friends will show up here.",
+  Friends_Empty02: "You can easily add friends by using an %1$s.",
+  Friends_Empty02_Filler: "Invite Link",
+
+  RecentChats_Empty: "Recent chats will show up here.",
+
+  Search_NonFriend01: "Searching for someone who isn't a friend yet?",
+  Search_NonFriend02: "The best way to add friends on Steam is with an %1$s.",
+  Search_NonFriend02_Filler: "Invite Link",
 
   InviteLanding_AccountMismatch:
     "We've detected your running Steam Client is logged in with a different account than you are logged in with here in your browser.",

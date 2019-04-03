@@ -384,18 +384,19 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   border-bottom: 0.5px solid rgba(80, 87, 94, 0);
   cursor: default;
   position: relative;
-  min-width: 120px; }
+  min-width: 120px;
+  /* Separate menu sections with extra space and different header text style. */ }
   .contextmenu_contextMenuItem_CBC-y:first-child {
     border-top: 0.5px solid rgba(80, 87, 94, 0); }
   .contextmenu_contextMenuItem_CBC-y:hover, .contextmenu_contextMenuItem_CBC-y.contextmenu_active_3vYUp {
     background: #5a6069;
     color: #b8c5c9; }
-  .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq {
+  .contextmenu_contextMenuItem_CBC-y.disabled {
     background: none;
     color: #6b7072;
     cursor: default;
     pointer-events: none; }
-    .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq:hover {
+    .contextmenu_contextMenuItem_CBC-y.disabled:hover {
       background: none;
       color: #6b7072;
       cursor: default; }
@@ -403,6 +404,10 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     color: #6dcff6; }
     .contextmenu_contextMenuItem_CBC-y.menuChecked.contextMenuCheckMark {
       display: block; }
+  .contextmenu_contextMenuItem_CBC-y.contextmenu_MenuSectionHeader_x3Kot {
+    padding-top: 16px;
+    font-size: 12px;
+    text-transform: uppercase; }
   .contextmenu_contextMenuItem_CBC-y .SVGIcon_Button {
     height: 10px;
     width: 10px;
@@ -6584,8 +6589,6 @@ button.DialogButton::-moz-focus-inner {
 .DialogContent {
   padding: 32px;
   padding-right: 6px;
-  width: 600px;
-  max-width: calc( 100% - 38px);
   display: flex;
   overflow: visible;
   position: relative; }
@@ -6621,7 +6624,6 @@ button.DialogButton::-moz-focus-inner {
   max-width: none; }
 
 .ModalDialogPopup .DialogContent {
-  width: 100%;
   overflow: visible; }
 
 .ModalDialogPopup .DialogContent_InnerWidth {
@@ -12922,9 +12924,6 @@ a.connectionStatus:visited {
   max-width: 200px;
   min-width: 200px;
   box-shadow: 0 0 22px 0 #00000033;
-  overflow-y: auto;
-  overflow-x: hidden;
-  /*padding-top: 20px;*/
   transition: all .4s ease-in-out;
   overflow: visible;
   z-index: 1; }
@@ -13101,6 +13100,10 @@ a.connectionStatus:visited {
   padding: 4px;
   transition: all .4s ease-in-out; }
 
+.chatRoomGroupNavCollapseExpand {
+  width: 26px;
+  height: 26px; }
+
 .MemberListOptionsContainer .MemberListOption {
   padding-right: 0;
   padding-left: 12px; }
@@ -13117,7 +13120,7 @@ a.connectionStatus:visited {
   right: -4px; }
 
 .chatRoomGroupNavColumn.chatRoomGroupNavCollapsed .chatRoomGroupNavCollapseExpand {
-  right: -56px; }
+  opacity: 0; }
 
 .chatRoomGroupNavColumn.chatRoomGroupNavCollapsed {
   min-width: 46px;
@@ -13303,7 +13306,6 @@ a.connectionStatus:visited {
 .chatRoomGroupNavCollapsed .chatRoomVoiceChannelsGroup .chatRoomVoiceChannel.ActiveVoiceChannel:hover .friend .labelHolder {
   opacity: 1; }
 
-.chatRoomGroupNavCollapseExpand .SVGIcon_DoubleArrow,
 .MemberListOption .SVGIcon_DoubleArrow {
   transform: rotateZ(180deg);
   width: 16px;
@@ -13315,13 +13317,6 @@ a.connectionStatus:visited {
   transition: all .21s ease-in-out;
   transition-duration: .24s;
   cursor: pointer; }
-
-.chatRoomGroupNavCollapseExpand .SVGIcon_DoubleArrow {
-  transform: rotateZ(0deg);
-  opacity: .35; }
-
-.chatRoomGroupNavCollapseExpand:hover .SVGIcon_DoubleArrow {
-  opacity: 1; }
 
 .MemberListColumn.MemberListViewCompact .MemberListOption .SVGIcon_DoubleArrow {
   transform: rotateZ(0deg); }
@@ -17843,7 +17838,14 @@ img.ChatRoomGroupAvatar_Avatar {
   stroke-width: 18px; }
 
 .chatRoomChannelGroups {
-  min-height: 0; }
+  min-height: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+
+.chatRoomChannelGroups::-webkit-scrollbar {
+  display: none; }
 
 .chatRoomVoiceChannelsGroup,
 .chatRoomTextChannelsGroup {
@@ -17851,7 +17853,8 @@ img.ChatRoomGroupAvatar_Avatar {
 
 .chatRoomVoiceChannelsGroup {
   margin-top: 12px;
-  padding-left: 0px; }
+  padding-left: 0px;
+  padding-bottom: 32px; }
 
 .defaultChatOnly .chatRoomVoiceChannelsGroup {
   margin-top: 0px; }
@@ -18020,12 +18023,30 @@ img.ChatRoomGroupAvatar_Avatar {
   opacity: 1; }
 
 .SVGIcon_Pin {
-  opacity: 0; }
+  opacity: 1; }
+  .SVGIcon_Pin .ground,
+  .SVGIcon_Pin .point,
+  .SVGIcon_Pin .head {
+    transition: all .21s ease-in-out;
+    fill: #505561; }
+  .SVGIcon_Pin .head {
+    fill: #1d1f24;
+    stroke-width: 10px;
+    stroke: #505561;
+    z-index: 2; }
+  .SVGIcon_Pin .ground {
+    stroke: #3a3d46; }
+  .SVGIcon_Pin.Pinned .head {
+    transform: translateY(64px);
+    fill: #2d3038; }
+  .SVGIcon_Pin.Pinned .point {
+    transform: translateY(8px); }
+  .SVGIcon_Pin:hover {
+    filter: brightness(2); }
 
 .ActiveVoiceChannel .SVGIcon_Pin {
   opacity: 1; }
 
-.SVGIcon_Pin,
 .SVGIcon_Headphones,
 .SVGIcon_Microphone {
   width: 20px;

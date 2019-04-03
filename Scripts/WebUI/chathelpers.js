@@ -357,7 +357,9 @@
           })();
         },
         FRIENDSUI_BETA: !1,
-        STEAM_TV: !1
+        STEAM_TV: !1,
+        DEV_MODE: !1,
+        OFFLINE_MODE: !1
       },
       s = {
         logged_in: !1,
@@ -1767,23 +1769,25 @@ and limitations under the License.
             ? r(o + "XMonths", Math.floor(e / u))
             : 2 * p <= e
               ? r(o + "XWeeks", Math.floor(e / p))
-              : 2 * l <= e
-                ? r(o + "XDays", Math.floor(e / l))
-                : l <= e
-                  ? 2 * m <= (e -= l)
-                    ? r(o + "1DayXHours", Math.floor(e / m))
-                    : r(o + "1Day")
-                  : 2 * m <= e
-                    ? r(o + "XHours", Math.floor(e / m))
-                    : m <= e
-                      ? 2 * h <= (e -= m) && n
-                        ? r(o + "1HourXMinutes", Math.floor(e / h))
-                        : r(o + "1Hour")
-                      : n
-                        ? 2 * h <= e
-                          ? r(o + "XMinutes", Math.floor(e / h))
-                          : r(h <= e ? o + "1Minute" : o + "LessThanAMinute")
-                        : r(o + "LessThanAnHour");
+              : p <= e
+                ? r(o + "1Week", Math.floor(e / p))
+                : 2 * l <= e
+                  ? r(o + "XDays", Math.floor(e / l))
+                  : l <= e
+                    ? 2 * m <= (e -= l)
+                      ? r(o + "1DayXHours", Math.floor(e / m))
+                      : r(o + "1Day")
+                    : 2 * m <= e
+                      ? r(o + "XHours", Math.floor(e / m))
+                      : m <= e
+                        ? 2 * h <= (e -= m) && n
+                          ? r(o + "1HourXMinutes", Math.floor(e / h))
+                          : r(o + "1Hour")
+                        : n
+                          ? 2 * h <= e
+                            ? r(o + "XMinutes", Math.floor(e / h))
+                            : r(h <= e ? o + "1Minute" : o + "LessThanAMinute")
+                          : r(o + "LessThanAnHour");
     }
     var _ = new ((function() {
       function e() {
@@ -2217,8 +2221,8 @@ and limitations under the License.
     window.AssertMsg = u.a;
     var y,
       I,
-      C,
-      L = new a.a();
+      L,
+      C = new a.a();
     function k(e) {
       var t;
       try {
@@ -2228,7 +2232,7 @@ and limitations under the License.
       var n = new v(t);
       o.render(r.createElement(E, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = L),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function() {
         Object(i.c)(),
           (function() {
@@ -2252,16 +2256,16 @@ and limitations under the License.
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
           "friendsui" == e ? (y = n) : "shared" == e && (I = n);
-        else if ("shared" == e) C = n;
+        else if ("shared" == e) L = n;
         else {
           var o = void 0,
             r = null,
             i = void 0,
             a = null;
           void 0 !== y ? ((o = y), (r = n)) : (o = n),
-            void 0 !== I ? ((i = I), (a = C)) : (i = C),
+            void 0 !== I ? ((i = I), (a = L)) : (i = L),
             s.a.InitFromObjects(o, r, i, a),
-            (C = I = y = void 0);
+            (L = I = y = void 0);
         }
       });
   },
