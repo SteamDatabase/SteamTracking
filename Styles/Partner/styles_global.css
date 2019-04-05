@@ -1267,3 +1267,11 @@ p.deprecated.star::before {
 		padding-left: 0;
 	}
 }
+
+@media screen and (max-width: 1380px) {
+
+	.responsive_footer_content {
+		padding: 0 40px;
+	}
+
+}

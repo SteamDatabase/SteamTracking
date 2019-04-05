@@ -276,6 +276,10 @@ body{
 	margin: 5px 0;
 }
 
+.landingPartnerName button {
+	margin-left: 15px;
+}
+
 /* Utility styles */
 .break { /* Used to prevent CSS from collapsing margins */
 	overflow: hidden;
