@@ -32194,7 +32194,11 @@
     var ki = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
-          return (t.state = { bCollapsed: !1, bMouseHover: !1 }), t;
+          return (
+            (t.m_schHoverDelay = new L()),
+            (t.state = { bCollapsed: !1, bMouseHover: !1 }),
+            t
+          );
         }
         return (
           R.d(e, n),
@@ -32252,10 +32256,13 @@
             );
           }),
           (e.prototype.OnMouseEnter = function(e) {
-            this.setState({ bMouseHover: !0 });
+            var t = this;
+            this.m_schHoverDelay.Schedule(400, function() {
+              t.setState({ bMouseHover: !0 });
+            });
           }),
           (e.prototype.OnMouseLeave = function(e) {
-            this.setState({ bMouseHover: !1 });
+            this.setState({ bMouseHover: !1 }), this.m_schHoverDelay.Cancel();
           }),
           (e.prototype.ToggleCollapseExpand = function() {
             var e = this.props.groupView;
