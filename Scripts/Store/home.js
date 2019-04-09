@@ -907,8 +907,7 @@ GHomepage = {
 							}
 							if ( rgData['review_anomaly'] )
 							{
-								var imgSrc = pref != 1 ? 'https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_review_anomaly_filtered.png' : 'https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_review_anomaly_filtered.png';
-								$elReviewData.append( $J( '<img>', { 'class' : "review_anomaly_icon", 'src' : imgSrc } ) );
+								$elReviewData.append( $J( '<span class="review_anomaly_icon">&nbsp;*</span>' ) );
 							}
 
 							$elInfoDiv.append( $elReviewData );
