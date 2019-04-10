@@ -290,6 +290,7 @@ textarea.gray {
 	left: 0px;
 	width: 72px;
 	overflow: hidden;
+	min-width: auto;
 }
 .formrow_small .formlabelwide {
 	position: absolute;
@@ -354,6 +355,7 @@ select.hourselect,  select.minuteselect {
 	position: absolute;
 	left: 0px;
 	top: 0px;
+	min-width: auto;
 }
 
 .newformrow.widelabel .formlabel, .newformrow.widelabel .formlabelwide {
