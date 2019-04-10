@@ -1465,13 +1465,13 @@ function ChangePrimaryPublisher()
 	if ( !g_rgAllAffiliatedPublishers || !g_nPrimaryPublisher )
 		return;
 
-	var $dialogHTML = '<div class="dialog_change_partner_desc">#change_partner_dialog_desc</div><form id="change_partner_form" ><select name="partnerid">';
+	var $dialogHTML = '<div class="dialog_change_partner_desc">It looks like you belong to multiple Steamworks organizations. Please select the Steamworks account you\'d like to switch to:</div><form id="change_partner_form" ><select name="partnerid">';
 	$J.each( g_rgAllAffiliatedPublishers, function( partnerID, strPartnerName ) {
 		$dialogHTML += '<option' + ( ( g_nPrimaryPublisher == partnerID ) ? ' selected' : '' ) + ' value="' + parseInt( partnerID ) + '" >' + V_EscapeHTML( strPartnerName ) + '</option>';
 	} );
 	$dialogHTML += '</select>';
 
-	var $dialog = ShowConfirmDialog( '#change_partner_dialog_title', $dialogHTML, '#change_partner_dialog_submit' );
+	var $dialog = ShowConfirmDialog( 'Switch Organization', $dialogHTML, 'Switch' );
 	var $elNewPartnerID = $dialog.GetContent().find('#change_partner_form select');
 	$dialog.done( function() {
 		window.location = 'https://partner.steamgames.com/dashboard/?requestedPrimaryPublisher=' + $elNewPartnerID.val();
