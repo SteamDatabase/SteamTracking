@@ -11895,6 +11895,7 @@
  T vgui::FocusNavGroup::SetFocusTopLevel(bool)
  T vgui::FocusNavGroup::~FocusNavGroup()
  T vgui::Frame::Activate()
+ T vgui::Frame::ActivateBackground()
  T vgui::Frame::ActivateMinimized()
  T vgui::Frame::ApplyLayoutTemplate(vgui::IScheme*, char const*)
  T vgui::Frame::ApplySchemeSettings(vgui::IScheme*)

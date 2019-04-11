@@ -593,6 +593,7 @@
  T CBaseSurface::OnScreenSizeChanged()
  T CBaseSurface::OnTraverseChangePopup(unsigned long long)
  T CBaseSurface::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int)
+ T CBaseSurface::OrderBottom(unsigned long long)
  T CBaseSurface::PaintTraverse(unsigned long long)
  T CBaseSurface::PaintTraverseEx(unsigned long long, bool)
  T CBaseSurface::PopMakeCurrent(unsigned long long)
