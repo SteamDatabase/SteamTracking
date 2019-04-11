@@ -865,7 +865,7 @@
         return k;
       }),
       n.d(t, "j", function() {
-        return C;
+        return P;
       });
     var c = n("mrSG"),
       r = n("okNM"),
@@ -1203,14 +1203,14 @@
                 M = o.height;
               c.bMatchHeight && ((M = S - E), (s.menuHeight = M));
               var k = (c.bOverlapVertical ? S : E) - M,
-                C = 0 < k,
-                P = m - (c.bOverlapVertical ? E : S) - M,
-                I = 0 < P,
-                L = (c.bPreferPopTop || !I) && C;
-              C ||
+                P = 0 < k,
+                C = m - (c.bOverlapVertical ? E : S) - M,
+                I = 0 < C,
+                L = (c.bPreferPopTop || !I) && P;
+              P ||
                 I ||
-                ((L = P < k),
-                c.bFitToWindow && ((M += (L ? k : P) - 8), (s.menuHeight = M))),
+                ((L = C < k),
+                c.bFitToWindow && ((M += (L ? k : C) - 8), (s.menuHeight = M))),
                 L
                   ? (s.menuBottom = m - (c.bOverlapVertical ? S : E))
                   : (s.menuTop = c.bOverlapVertical ? E : S),
@@ -1452,7 +1452,7 @@
         window.sessionStorage && "true" == window.sessionStorage.getItem(M)
       );
     }
-    function C(e) {
+    function P(e) {
       e
         ? window.sessionStorage.setItem(M, "true")
         : window.sessionStorage.removeItem(M);
@@ -2533,7 +2533,7 @@
                   null,
                   Object(s.b)("#ProfilePrivacy_Comments"),
                   ":",
-                  i.createElement(C, { PrivacyStore: e })
+                  i.createElement(P, { PrivacyStore: e })
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
@@ -2567,7 +2567,7 @@
       var t;
       return (
         (t = e.strReadOnlySetting
-          ? i.createElement(P, { strLabel: e.strReadOnlySetting })
+          ? i.createElement(C, { strLabel: e.strReadOnlySetting })
           : i.createElement(S, {
               PrivacyStore: e.PrivacyStore,
               PrivacyKey: e.PrivacyKey,
@@ -2724,7 +2724,7 @@
           (t = a.c([_.a], t))
         );
       })(S),
-      C = (function(n) {
+      P = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { eSaveState: 0 }), t;
@@ -2789,7 +2789,7 @@
           (e = a.c([_.a], e))
         );
       })(i.Component);
-    function P(e) {
+    function C(e) {
       return i.createElement(
         "div",
         { className: "ProfilePrivacyDropDown readonly" },
@@ -3044,10 +3044,10 @@
         return k;
       }),
       n.d(t, "A", function() {
-        return C;
+        return P;
       }),
       n.d(t, "J", function() {
-        return P;
+        return C;
       }),
       n.d(t, "kb", function() {
         return I;
@@ -3071,10 +3071,10 @@
         return T;
       }),
       n.d(t, "l", function() {
-        return G;
+        return D;
       }),
       n.d(t, "f", function() {
-        return D;
+        return G;
       }),
       n.d(t, "B", function() {
         return z;
@@ -4125,7 +4125,7 @@
         })
       );
     }
-    function C() {
+    function P() {
       return r.createElement(
         "svg",
         {
@@ -4173,7 +4173,7 @@
         )
       );
     }
-    function P() {
+    function C() {
       return r.createElement(
         "svg",
         {
@@ -4485,7 +4485,7 @@
         })
       );
     }
-    function G(e) {
+    function D(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return r.createElement(
@@ -4565,7 +4565,7 @@
         })
       );
     }
-    function D() {
+    function G() {
       return r.createElement(
         "svg",
         {
@@ -6378,27 +6378,20 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
-      return o;
-    }),
-      n.d(t, "d", function() {
-        return r;
-      }),
-      n.d(t, "c", function() {
-        return i;
-      }),
-      n.d(t, "e", function() {
-        return c;
-      }),
-      n.d(t, "a", function() {
-        return f;
+    var l = n("q1tI"),
+      o = (n("XaMz"),
+      {
+        PerYear: 31536e3,
+        PerMonth: 2628e3,
+        PerWeek: 604800,
+        PerDay: 86400,
+        PerHour: 3600,
+        PerMinute: 60
       });
-    var l = n("q1tI");
-    n("XaMz");
-    function o(e) {
+    function i(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = f.LocalizeString(e);
+      var n = u.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -6414,7 +6407,7 @@ and limitations under the License.
     function r(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = f.LocalizeString(e);
+      var r = u.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], c = /(.*?)%(\d+)\$s/g, s = 0; (o = c.exec(r)); ) {
         (s += o[0].length), i.push(o[1]);
@@ -6426,57 +6419,68 @@ and limitations under the License.
         l.createElement.apply(l, [l.Fragment, null].concat(i))
       );
     }
-    function i(e, t) {
+    function c(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
-      return o.apply(
+      return i.apply(
         void 0,
         1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
       );
     }
-    function c(e, t) {
-      return void 0 === t && (t = !1), d(e, !t);
+    function s(e, t) {
+      return void 0 === t && (t = !1), a(e, !t);
     }
-    var s = 31536e3,
-      a = 2628e3,
-      u = 604800,
-      m = 86400,
-      p = 3600,
-      h = 60;
-    function d(e, t, n) {
+    function a(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
       var r = t ? "#TimeSince_" : "#TimeInterval_";
-      return 2 * s <= e
-        ? o(r + "XYears", Math.floor(e / s))
-        : s <= e
-          ? 2 * a <= (e -= s)
-            ? o(r + "1YearXMonths", Math.floor(e / a))
-            : o(r + "1Year")
-          : 2 * a <= e
-            ? o(r + "XMonths", Math.floor(e / a))
-            : 2 * u <= e
-              ? o(r + "XWeeks", Math.floor(e / u))
-              : u <= e
-                ? o(r + "1Week", Math.floor(e / u))
-                : 2 * m <= e
-                  ? o(r + "XDays", Math.floor(e / m))
-                  : m <= e
-                    ? 2 * p <= (e -= m)
-                      ? o(r + "1DayXHours", Math.floor(e / p))
-                      : o(r + "1Day")
-                    : 2 * p <= e
-                      ? o(r + "XHours", Math.floor(e / p))
-                      : p <= e
-                        ? 2 * h <= (e -= p) && n
-                          ? o(r + "1HourXMinutes", Math.floor(e / h))
-                          : o(r + "1Hour")
+      return e >= 2 * o.PerYear
+        ? i(r + "XYears", Math.floor(e / o.PerYear))
+        : e >= o.PerYear
+          ? (e -= o.PerYear) >= 2 * o.PerMonth
+            ? i(r + "1YearXMonths", Math.floor(e / o.PerMonth))
+            : i(r + "1Year")
+          : e >= 2 * o.PerMonth
+            ? i(r + "XMonths", Math.floor(e / o.PerMonth))
+            : e >= 2 * o.PerWeek
+              ? i(r + "XWeeks", Math.floor(e / o.PerWeek))
+              : e >= o.PerWeek
+                ? i(r + "1Week", Math.floor(e / o.PerWeek))
+                : e >= 2 * o.PerDay
+                  ? i(r + "XDays", Math.floor(e / o.PerDay))
+                  : e >= o.PerDay
+                    ? (e -= o.PerDay) >= 2 * o.PerHour
+                      ? i(r + "1DayXHours", Math.floor(e / o.PerHour))
+                      : i(r + "1Day")
+                    : e >= 2 * o.PerHour
+                      ? i(r + "XHours", Math.floor(e / o.PerHour))
+                      : e >= o.PerHour
+                        ? (e -= o.PerHour) >= 2 * o.PerMinute && n
+                          ? i(r + "1HourXMinutes", Math.floor(e / o.PerMinute))
+                          : i(r + "1Hour")
                         : n
-                          ? 2 * h <= e
-                            ? o(r + "XMinutes", Math.floor(e / h))
-                            : o(h <= e ? r + "1Minute" : r + "LessThanAMinute")
-                          : o(r + "LessThanAnHour");
+                          ? e >= 2 * o.PerMinute
+                            ? i(r + "XMinutes", Math.floor(e / o.PerMinute))
+                            : e >= o.PerMinute
+                              ? i(r + "1Minute")
+                              : i(r + "LessThanAMinute")
+                          : i(r + "LessThanAnHour");
     }
-    var f = new ((function() {
+    n.d(t, "b", function() {
+      return i;
+    }),
+      n.d(t, "d", function() {
+        return r;
+      }),
+      n.d(t, "c", function() {
+        return c;
+      }),
+      n.d(t, "e", function() {
+        return s;
+      }),
+      n.d(t, "a", function() {
+        return u;
+      });
+    var u = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -6529,7 +6533,7 @@ and limitations under the License.
         e
       );
     })())();
-    window.LocalizationManager = f;
+    window.LocalizationManager = u;
   },
   "s4p+": function(e, t) {},
   tkkQ: function(e, t, n) {

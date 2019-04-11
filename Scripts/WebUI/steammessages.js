@@ -35528,6 +35528,12 @@
             (r.prototype.set_enable_replay = function(e) {
               n.Message.setField(this, 6, e);
             }),
+            (r.prototype.http_address = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_http_address = function(e) {
+              n.Message.setField(this, 7, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -35538,7 +35544,8 @@
                 broadcast_upload_id: n.Message.getField(t, 3),
                 thumbnail_upload_address: n.Message.getField(t, 4),
                 thumbnail_interval_seconds: n.Message.getField(t, 5),
-                enable_replay: n.Message.getField(t, 6)
+                enable_replay: n.Message.getField(t, 6),
+                http_address: n.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -35568,6 +35575,9 @@
                   case 6:
                     e.set_enable_replay(t.readBool());
                     break;
+                  case 7:
+                    e.set_http_address(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -35589,7 +35599,9 @@
                   t.writeString(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) &&
                   t.writeUint32(5, i),
-                void 0 !== (i = n.Message.getField(e, 6)) && t.writeBool(6, i);
+                void 0 !== (i = n.Message.getField(e, 6)) && t.writeBool(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) &&
+                  t.writeString(7, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_StartBroadcastUpload_Response";
@@ -35623,23 +35635,29 @@
             (r.prototype.set_upload_address = function(e) {
               n.Message.setField(this, 3, e);
             }),
-            (r.prototype.broadcast_upload_id = function() {
+            (r.prototype.http_address = function() {
               return n.Message.getField(this, 4);
             }),
-            (r.prototype.set_broadcast_upload_id = function(e) {
+            (r.prototype.set_http_address = function(e) {
               n.Message.setField(this, 4, e);
             }),
-            (r.prototype.heartbeat_interval_seconds = function() {
+            (r.prototype.broadcast_upload_id = function() {
               return n.Message.getField(this, 5);
             }),
-            (r.prototype.set_heartbeat_interval_seconds = function(e) {
+            (r.prototype.set_broadcast_upload_id = function(e) {
               n.Message.setField(this, 5, e);
             }),
-            (r.prototype.is_rtmp = function() {
+            (r.prototype.heartbeat_interval_seconds = function() {
               return n.Message.getField(this, 6);
             }),
-            (r.prototype.set_is_rtmp = function(e) {
+            (r.prototype.set_heartbeat_interval_seconds = function(e) {
               n.Message.setField(this, 6, e);
+            }),
+            (r.prototype.is_rtmp = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_is_rtmp = function(e) {
+              n.Message.setField(this, 7, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -35649,9 +35667,10 @@
                 broadcast_id: n.Message.getField(t, 1),
                 upload_token: n.Message.getField(t, 2),
                 upload_address: n.Message.getField(t, 3),
-                broadcast_upload_id: n.Message.getField(t, 4),
-                heartbeat_interval_seconds: n.Message.getField(t, 5),
-                is_rtmp: n.Message.getField(t, 6)
+                http_address: n.Message.getField(t, 4),
+                broadcast_upload_id: n.Message.getField(t, 5),
+                heartbeat_interval_seconds: n.Message.getField(t, 6),
+                is_rtmp: n.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -35673,12 +35692,15 @@
                     e.set_upload_address(t.readString());
                     break;
                   case 4:
-                    e.set_broadcast_upload_id(t.readFixed64String());
+                    e.set_http_address(t.readString());
                     break;
                   case 5:
-                    e.set_heartbeat_interval_seconds(t.readUint32());
+                    e.set_broadcast_upload_id(t.readFixed64String());
                     break;
                   case 6:
+                    e.set_heartbeat_interval_seconds(t.readUint32());
+                    break;
+                  case 7:
                     e.set_is_rtmp(t.readBool());
                     break;
                   default:
@@ -35700,10 +35722,12 @@
                 void 0 !== (i = n.Message.getField(e, 3)) &&
                   t.writeString(3, i),
                 void 0 !== (i = n.Message.getField(e, 4)) &&
-                  t.writeFixed64String(4, i),
+                  t.writeString(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) &&
-                  t.writeUint32(5, i),
-                void 0 !== (i = n.Message.getField(e, 6)) && t.writeBool(6, i);
+                  t.writeFixed64String(5, i),
+                void 0 !== (i = n.Message.getField(e, 6)) &&
+                  t.writeUint32(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) && t.writeBool(7, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_BroadcastUploadStarted_Notification";

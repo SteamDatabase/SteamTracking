@@ -1089,7 +1089,7 @@ LocalizationReady("friendsui", "english", {
     "When someone clicks on the link, you'll be added to each other's Friends List.",
   FriendInviteLink_Generate: "Generate a link",
   FriendInviteLink_FailedToLoadLinks: "Failed to load invite links!",
-  FriendInviteLink_SingleUse: "Links are single-use",
+  FriendInviteLink_SingleUse: "Links are single-use and don't expire.",
   FriendInviteLink_Copied: "Link Copied!",
   FriendInviteLink_DeleteLink_Title: "Delete link",
   FriendInviteLink_DeleteLink_Prompt:

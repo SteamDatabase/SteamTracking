@@ -1691,27 +1691,20 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
-      return r;
-    }),
-      n.d(t, "d", function() {
-        return o;
-      }),
-      n.d(t, "c", function() {
-        return i;
-      }),
-      n.d(t, "e", function() {
-        return a;
-      }),
-      n.d(t, "a", function() {
-        return _;
+    var c = n("q1tI"),
+      r = (n("XaMz"),
+      {
+        PerYear: 31536e3,
+        PerMonth: 2628e3,
+        PerWeek: 604800,
+        PerDay: 86400,
+        PerHour: 3600,
+        PerMinute: 60
       });
-    var c = n("q1tI");
-    n("XaMz");
-    function r(e) {
+    function i(e) {
       for (var o = [], t = 1; t < arguments.length; t++)
         o[t - 1] = arguments[t];
-      var n = _.LocalizeString(e);
+      var n = p.LocalizeString(e);
       return n
         ? (0 < o.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -1727,7 +1720,7 @@ and limitations under the License.
     function o(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = _.LocalizeString(e);
+      var o = p.LocalizeString(e);
       if (!o) return e;
       for (var r, i = [], a = /(.*?)%(\d+)\$s/g, s = 0; (r = a.exec(o)); ) {
         (s += r[0].length), i.push(r[1]);
@@ -1739,57 +1732,68 @@ and limitations under the License.
         c.createElement.apply(c, [c.Fragment, null].concat(i))
       );
     }
-    function i(e, t) {
+    function a(e, t) {
       for (var n = [], o = 2; o < arguments.length; o++)
         n[o - 2] = arguments[o];
-      return r.apply(
+      return i.apply(
         void 0,
         1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
       );
     }
-    function a(e, t) {
-      return void 0 === t && (t = !1), d(e, !t);
+    function s(e, t) {
+      return void 0 === t && (t = !1), u(e, !t);
     }
-    var s = 31536e3,
-      u = 2628e3,
-      p = 604800,
-      l = 86400,
-      m = 3600,
-      h = 60;
-    function d(e, t, n) {
+    function u(e, t, n) {
       void 0 === t && (t = !1), void 0 === n && (n = !0);
       var o = t ? "#TimeSince_" : "#TimeInterval_";
-      return 2 * s <= e
-        ? r(o + "XYears", Math.floor(e / s))
-        : s <= e
-          ? 2 * u <= (e -= s)
-            ? r(o + "1YearXMonths", Math.floor(e / u))
-            : r(o + "1Year")
-          : 2 * u <= e
-            ? r(o + "XMonths", Math.floor(e / u))
-            : 2 * p <= e
-              ? r(o + "XWeeks", Math.floor(e / p))
-              : p <= e
-                ? r(o + "1Week", Math.floor(e / p))
-                : 2 * l <= e
-                  ? r(o + "XDays", Math.floor(e / l))
-                  : l <= e
-                    ? 2 * m <= (e -= l)
-                      ? r(o + "1DayXHours", Math.floor(e / m))
-                      : r(o + "1Day")
-                    : 2 * m <= e
-                      ? r(o + "XHours", Math.floor(e / m))
-                      : m <= e
-                        ? 2 * h <= (e -= m) && n
-                          ? r(o + "1HourXMinutes", Math.floor(e / h))
-                          : r(o + "1Hour")
+      return e >= 2 * r.PerYear
+        ? i(o + "XYears", Math.floor(e / r.PerYear))
+        : e >= r.PerYear
+          ? (e -= r.PerYear) >= 2 * r.PerMonth
+            ? i(o + "1YearXMonths", Math.floor(e / r.PerMonth))
+            : i(o + "1Year")
+          : e >= 2 * r.PerMonth
+            ? i(o + "XMonths", Math.floor(e / r.PerMonth))
+            : e >= 2 * r.PerWeek
+              ? i(o + "XWeeks", Math.floor(e / r.PerWeek))
+              : e >= r.PerWeek
+                ? i(o + "1Week", Math.floor(e / r.PerWeek))
+                : e >= 2 * r.PerDay
+                  ? i(o + "XDays", Math.floor(e / r.PerDay))
+                  : e >= r.PerDay
+                    ? (e -= r.PerDay) >= 2 * r.PerHour
+                      ? i(o + "1DayXHours", Math.floor(e / r.PerHour))
+                      : i(o + "1Day")
+                    : e >= 2 * r.PerHour
+                      ? i(o + "XHours", Math.floor(e / r.PerHour))
+                      : e >= r.PerHour
+                        ? (e -= r.PerHour) >= 2 * r.PerMinute && n
+                          ? i(o + "1HourXMinutes", Math.floor(e / r.PerMinute))
+                          : i(o + "1Hour")
                         : n
-                          ? 2 * h <= e
-                            ? r(o + "XMinutes", Math.floor(e / h))
-                            : r(h <= e ? o + "1Minute" : o + "LessThanAMinute")
-                          : r(o + "LessThanAnHour");
+                          ? e >= 2 * r.PerMinute
+                            ? i(o + "XMinutes", Math.floor(e / r.PerMinute))
+                            : e >= r.PerMinute
+                              ? i(o + "1Minute")
+                              : i(o + "LessThanAMinute")
+                          : i(o + "LessThanAnHour");
     }
-    var _ = new ((function() {
+    n.d(t, "b", function() {
+      return i;
+    }),
+      n.d(t, "d", function() {
+        return o;
+      }),
+      n.d(t, "c", function() {
+        return a;
+      }),
+      n.d(t, "e", function() {
+        return s;
+      }),
+      n.d(t, "a", function() {
+        return p;
+      });
+    var p = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1842,7 +1846,7 @@ and limitations under the License.
         e
       );
     })())();
-    window.LocalizationManager = _;
+    window.LocalizationManager = p;
   },
   "qM/t": function(e, t, n) {
     "use strict";
