@@ -537,8 +537,8 @@
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
+ T CLogInstance::BCleanupOldLogFiles()
  T CLogInstance::BCloseLog()
- T CLogInstance::BRenameOldLogFiles(bool*)
  T CLogInstance::BStartNewLog(bool)
  T CLogInstance::BTearOffLogFile()
  T CLogInstance::EmitEventNow(CLogEvent*, bool)
@@ -1290,7 +1290,7 @@
  b (anonymous namespace)::_CLEANUP
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
- b CLogInstance::BRenameOldLogFiles(bool*)::fAsserted
+ b CLogInstance::BCleanupOldLogFiles()::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::fAsserted
  b CLogger::EmitEventInternal(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool, bool)::sbAbsoluteMaxHit
@@ -1359,6 +1359,7 @@
  b g_pClientProductBuilder
  b g_pClientRemoteClientManager
  b g_pClientRemoteStorage
+ b g_pClientSTARInternal
  b g_pClientScreenshots
  b g_pClientShader
  b g_pClientSharedConnection
