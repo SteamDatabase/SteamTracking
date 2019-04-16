@@ -1088,6 +1088,10 @@ p.deprecated.star::before {
 	margin-left: -12px;
 }
 
+#change_partner_form select {
+	width: 300px;
+}
+
 /* Select2 Overrides */
 .select2-container--default .select2-selection--single {
 	background-color: #3a4655;
