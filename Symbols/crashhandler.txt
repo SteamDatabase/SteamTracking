@@ -71,7 +71,11 @@
  R typeinfo name for IUniformRandomStream
  T AssertMsgImplementation
  T BBlockingGetMiniDumpLock
+ T BCreateDirectory(char const*)
+ T BFileExists(char const*)
  T BGetMiniDumpLock
+ T BIsDirectoryWritable(char const*)
+ T BIsValidDirectory(char const*)
  T BWritingMiniDump
  T Breakpad_SetSteamID
  T CBreakpadFactory::AllocateHandle()
@@ -231,11 +235,16 @@
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::Format(char const*, ...)
+ T CUtlString::VFormat(char const*, __va_list_tag*)
+ T CUtlString::VFormat(char const*, char*)
  T CUtlStringBuilder::AppendChar(char)
+ T CUtlStringBuilder::Data::DetachHeapString(unsigned long&, unsigned long&)
  T CUtlStringBuilder::Data::FreeHeap()
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
+ T CUtlStringBuilder::DetachString()
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
@@ -253,6 +262,7 @@
  T CallFlushLogFunc
  T ClearWritingMiniDump
  T CrashOnPurpose()
+ T CreateDirRecursive(char const*)
  T CreateInterface
  T CreateSimpleProcess
  T CreateVProfile
@@ -281,6 +291,7 @@
  T RTANoteFree(void*, char const*)
  T RealGetCallStack
  T RealPrintCallStack
+ T SetFileTimestamp(char const*, long long)
  T SetInAssert
  T SetWritingMiniDump(bool)
  T SetWrittenMinidumpForFileLine(char const*, unsigned int)
@@ -331,6 +342,8 @@
  T ThreadIsThreadRunning
  T ThreadSleep
  T ThreadWaitForProcessExit
+ T TouchFile(char const*)
+ T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
@@ -345,6 +358,7 @@
  T V_strncat_length
  T V_strncpy
  T V_vsnprintf
+ T WeakRandomUint32
  T WriteMiniDump
  T _DMsg
  T _ExitOnFatalAssert
@@ -481,8 +495,6 @@
  bootstrap_look_up
  bootstrap_port
  ceilf
- chmod
- chmod$UNIX2003
  d CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::keys
  d GetOSType::eOSVersion
  d TestForAppleGraphicsUpdateInstalled()::attribs
@@ -490,14 +502,18 @@
  d s_SpewOutputFunc
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d s_pUniformStream
  dladdr
  dlclose
  dlopen
  dlsym
  dyld_stub_binder
+ fclose
  fflush
  fnmatch
  fnmatch$UNIX2003
+ fopen
+ fopen$UNIX2003
  fork
  fprintf
  fputc
@@ -517,6 +533,7 @@
  launch_data_free
  launch_data_new_string
  launch_msg
+ lchmod
  lstat$INODE64
  mach_absolute_time
  mach_msg
@@ -608,8 +625,11 @@
  t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
  time
+ unlink
  usleep
  usleep$UNIX2003
+ utime
+ vasprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
  vtable for __cxxabiv1::__si_class_type_info
