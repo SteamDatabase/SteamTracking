@@ -945,7 +945,7 @@ h2.incomplete {
 
 .AdminPageContent {
 	margin: 12px 0 0 0;
-	padding-bottom: 128px;
+	min-height: calc( 100vh - 128px );
 }
 
 .AdminPageContent.FullWidth {
@@ -1120,9 +1120,6 @@ div + #landingFooter.nonconfidential {
 #landingFooter {
 	background-color: #695B40;
 	color: #E2C58B;
-	position: absolute;
-	bottom:0;
-    	left: 0;
 	height: 128px;
 	width: 100%;
 }
