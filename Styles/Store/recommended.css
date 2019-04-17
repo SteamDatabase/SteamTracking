@@ -2575,10 +2575,12 @@ body.recommendgame #review_create h1  {
 
 .review_anomalous_events_icon
 {
-	height: 48px;
+	height: 36px;
 	font-size: 80px;
 	color: #fff;
 	float: left;
+    cursor: default;
+    line-height: 73px;
 }
 
 .review_anomalous_events_dialog .review_anomalous_events_icon
@@ -2588,10 +2590,13 @@ body.recommendgame #review_create h1  {
 
 .review_anomalous_events_title, .review_anomalous_events_desc
 {
-	padding-top: 10px;
-	margin-left: 51px;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			margin-left: 51px;
 	color: #d3dade;
-	font-size: 16px;
+    font-size: 15px;
+    line-height: 17px;
 }
 .review_anomalous_events_dialog .review_anomalous_events_title
 {

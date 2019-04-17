@@ -4933,6 +4933,15 @@ a.workshop_announcement_title:hover
 	margin-bottom: 14px;
 	word-wrap: break-word;
 }
+.announcement_body b:lang(zh-cn),
+.announcement_body b:lang(zh-tw),
+.announcement_body b:lang(ko),
+.announcement_body b:lang(ja) {
+	color: #b7a085;
+}
+.announcement_body div.bb_h1 b {
+    color: #5aa9d6;
+}
 
 .announcement_readmore
 {

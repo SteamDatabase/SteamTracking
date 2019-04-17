@@ -7537,6 +7537,7 @@
   eeM7: function(e, t, n) {
     e.exports = {
       SubText: "shared_common_SubText_iXOar",
+      AvatarImageContainer: "shared_common_AvatarImageContainer_2-Mc0",
       AvatarImage: "shared_common_AvatarImage_HVcru",
       STV_HomeGridPreviewDetails:
         "shared_common_STV_HomeGridPreviewDetails_1FyZE",
@@ -9039,10 +9040,10 @@
                             });
                         })
                       );
-                    })
-                    .catch(function() {
-                      (s.m_bLoadingCMList = !1), s.OnDisconnect();
-                    }))),
+                    })),
+                  this.m_onConnect.catch(function() {
+                    (s.m_bLoadingCMList = !1), s.OnDisconnect();
+                  })),
               this.m_onConnect
             );
           }),
@@ -13531,6 +13532,7 @@
           R.c([h.x], i.prototype, "m_bBetaStatusStale", void 0),
           R.c([h.x], i.prototype, "m_bIsOnlineInBeta", void 0),
           R.c([h.x], i.prototype, "m_bIsInBeta", void 0),
+          R.c([h.x], i.prototype, "m_NotificationSettings", void 0),
           R.c([h.i], i.prototype, "display_name", null),
           R.c([h.i], i.prototype, "secondary_display_name", null),
           R.c([h.i], i.prototype, "current_game_name", null),
@@ -35379,7 +35381,38 @@
           (t = R.c([hi.a], t))
         );
       })(Ie.Component),
-      Nr = (function(n) {
+      Nr = (Object(hi.a)(function(e) {
+        var t = e.persona,
+          n = e.bParenthesizeNicknames,
+          o = e.strNickname,
+          i = e.className,
+          r = R.f(e, [
+            "persona",
+            "bParenthesizeNicknames",
+            "strNickname",
+            "className"
+          ]),
+          a = o && !n ? o : t.m_strPlayerName;
+        return Ie.createElement(
+          "span",
+          R.a({}, r, { className: Object(ar.a)(i, ee(t)) }),
+          Ie.createElement(
+            "span",
+            { className: Tr.a.playerName },
+            a || " ",
+            n &&
+              o &&
+              Ie.createElement(
+                "span",
+                { className: Tr.a.playerNickname },
+                "(",
+                o,
+                ")"
+              )
+          )
+        );
+      }),
+      (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -35529,7 +35562,7 @@
           ),
           e
         );
-      })(ii.x);
+      })(ii.x));
     ((kr = Rr || (Rr = {}))[(kr.k_EChatFontSizeSmall = 1)] =
       "k_EChatFontSizeSmall"),
       (kr[(kr.k_EChatFontSizeDefault = 2)] = "k_EChatFontSizeDefault"),
@@ -49511,6 +49544,7 @@
                             var n = t[e];
                             i.m_appStoreData.social.push(n);
                           }
+                          i.m_bLoaded = !0;
                         }),
                         (e.label = 2);
                     case 2:
@@ -56452,7 +56486,7 @@
           (e.prototype.SetSelectedIndexDelta = function(e) {
             void 0 !== this.state.selectedIndex
               ? this.SetSelectedIndex(this.state.selectedIndex + e)
-              : this.SetSelectedIndex(e);
+              : this.SetSelectedIndex(1 === e ? 0 : e);
           }),
           (e.prototype.SetSelectedIndex = function(e) {
             if (this.m_rgCurrentMatches.length) {
@@ -57030,7 +57064,7 @@
                     (s && " " != s && "\n" != s) || ((i = a), (r = "Mention"));
                     break;
                   }
-                  if (":" == o[a]) {
+                  if (":" == o[a] && 2 < o.length) {
                     (s && " " != s && "\n" != s && ":" != s) ||
                       ((i = a), (r = "Emoticon"));
                     break;
@@ -62311,13 +62345,14 @@
     function Wp(e) {
       var t,
         n,
-        o = ((t = e),
+        o,
+        i = ((t = e),
         (n = new RegExp(
-          "^(steam://openurl(_external)?/)?(f|ht)tps?://([^@/?#]*@)?([^/#?]+)",
+          "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
           "im"
         )),
-        t.match(n)[5].toString());
-      return o.startsWith("www.") && (o = o.slice(4)), o;
+        (o = t.match(n)) && 5 < o.length ? o[6].toString() : t);
+      return i.startsWith("www.") && (i = i.slice(4)), i;
     }
     var zp = function(e) {
         var t = e.children;
@@ -65126,8 +65161,9 @@
         }
         return (
           R.d(e, n),
-          (e.prototype.ExtractGameData = function(e, t) {
-            var n = e.name,
+          (e.prototype.ExtractGameData = function(e) {
+            var t,
+              n = e.name,
               o = e.is_free,
               i = e.short_description,
               r = e.header_image,
@@ -65136,11 +65172,16 @@
               c = e.movies,
               l = e.release_date,
               p = e.price_overview,
-              u = e.content_descriptors;
+              u = e.content_descriptors,
+              m = e.steam_appid;
             return {
               name: n,
               is_free: o,
-              description: i,
+              description: ((t = i),
+              DOMParser
+                ? new DOMParser().parseFromString(t, "text/html")
+                    .documentElement.textContent
+                : t),
               header_image: r,
               developer: a && a[0],
               screenshot: s && s[0] && s[0].path_thumbnail,
@@ -65153,7 +65194,7 @@
                 c[0].webm[480].replace("http://", "https://"),
               thumbnail: c && c[0] && c[0].thumbnail,
               release_date: l && l.date,
-              url: G.a.STORE_BASE_URL + "app/" + t,
+              url: G.a.STORE_BASE_URL + "app/" + m,
               price: p && p.final_formatted,
               initial_price: p && p.initial_formatted,
               discount: p && p.discount_percent && p.discount_percent,
@@ -65167,36 +65208,50 @@
               );
           }),
           (e.prototype.componentDidMount = function() {
-            var o = this,
-              i = this.GetArgument("app"),
-              e = G.a.COUNTRY || "US";
-            C.a
-              .get(
-                G.a.STORE_BASE_URL +
-                  "api/appdetails?appids=" +
-                  i +
-                  "&cc=" +
-                  e +
-                  "&language=" +
-                  G.a.LANGUAGE +
-                  "&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors"
-              )
-              .then(function(e) {
-                var t = null;
-                if (e && e.data) {
-                  var n = o.GetArgument("app");
-                  t = e.data[n];
+            return R.b(this, void 0, void 0, function() {
+              var t, n, o, i, r;
+              return R.e(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return (
+                      (t = this.GetArgument("app")),
+                      "basic,price_overview,developers,screenshots,movies,release_date,content_descriptors",
+                      (n = G.a.COUNTRY || "US"),
+                      [
+                        4,
+                        C.a.get(
+                          G.a.STORE_BASE_URL +
+                            "api/appdetails?appids=" +
+                            t +
+                            "&cc=" +
+                            n +
+                            "&language=" +
+                            G.a.LANGUAGE +
+                            "&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors"
+                        )
+                      ]
+                    );
+                  case 1:
+                    return (
+                      (o = e.sent()),
+                      (i = null),
+                      o &&
+                        o.data &&
+                        ((r = this.GetArgument("app")), (i = o.data[r])),
+                      i && i.success
+                        ? this.setState(
+                            {
+                              SteamStoreItem: this.ExtractGameData(i.data),
+                              bStoreRequestFailed: !1
+                            },
+                            this.OnFrameLoaded
+                          )
+                        : this.setState({ bStoreRequestFailed: !0 }),
+                      [2]
+                    );
                 }
-                t && t.success
-                  ? o.setState(
-                      {
-                        SteamStoreItem: o.ExtractGameData(t.data, i),
-                        bStoreRequestFailed: !1
-                      },
-                      o.OnFrameLoaded
-                    )
-                  : o.setState({ bStoreRequestFailed: !0 });
               });
+            });
           }),
           (e.prototype.OpenStoreLink = function(e) {
             Qi(e, this.state.SteamStoreItem.url);
@@ -67293,7 +67348,7 @@
       dm,
       hm,
       _m = void 0;
-    n("Y3TG"), n("yLAU"), n("w/TS"), n("whIR"), n("eeM7"), n("m1EC");
+    n("Y3TG"), n("w/TS"), n("whIR"), n("eeM7"), n("m1EC");
     (window.AssertMsg = I.a),
       document.addEventListener("DOMContentLoaded", function() {
         Object(G.c)();
@@ -68248,7 +68303,7 @@
                 "bShowClearAction"
               ]),
               a =
-                "DialogInput DialogInputPlaceholder _DialogTextInputBase" +
+                "DialogInput DialogInputPlaceholder DialogTextInputBase" +
                 (r.className ? " " + r.className : ""),
               s = "copiedAnimation",
               c = this.state.m_bCompletedCopiedAnimation;
@@ -70800,66 +70855,70 @@ and limitations under the License.
           }),
           (e.prototype.render = function() {
             var e = this.state.error;
-            if (e) {
-              var t = e.error ? e.error.stack : "Stack missing",
-                n = e.info ? e.info.componentStack : "",
-                o = (e.error && e.error.message) || "unknown error";
-              return i.createElement(
-                "div",
-                { style: { overflow: "auto" } },
-                i.createElement(
-                  "h1",
-                  {
-                    style: {
-                      marginTop: "15px",
-                      marginLeft: "15px",
-                      color: "white",
-                      fontSize: "20px",
-                      display: "inline-block"
-                    }
-                  },
-                  'Error: "',
-                  o,
-                  '"'
-                ),
-                "   ",
-                i.createElement(
-                  "span",
-                  {
-                    style: { textDecoration: "underline", cursor: "pointer" },
-                    onClick: this.clearError
-                  },
-                  "(x) Dismiss"
-                ),
-                i.createElement("br", null),
-                i.createElement(
-                  "pre",
-                  {
-                    style: {
-                      marginTop: "15px",
-                      marginLeft: "15px",
-                      color: "white",
-                      fontSize: "16px"
-                    }
-                  },
-                  t
-                ),
-                i.createElement(
-                  "pre",
-                  {
-                    style: {
-                      marginTop: "15px",
-                      marginLeft: "15px",
-                      color: "white",
-                      fontSize: "16px"
-                    }
-                  },
-                  "The error occurred while rendering:",
-                  n
-                )
-              );
-            }
-            return this.props.children;
+            return e
+              ? this.props.renderError
+                ? this.props.renderError(e)
+                : this.defaultErrorRender(e)
+              : this.props.children;
+          }),
+          (e.prototype.defaultErrorRender = function(e) {
+            var t = e.error ? e.error.stack : "Stack missing",
+              n = e.info ? e.info.componentStack : "",
+              o = (e.error && e.error.message) || "unknown error";
+            return i.createElement(
+              "div",
+              { style: { overflow: "auto" } },
+              i.createElement(
+                "h1",
+                {
+                  style: {
+                    marginTop: "15px",
+                    marginLeft: "15px",
+                    color: "white",
+                    fontSize: "20px",
+                    display: "inline-block"
+                  }
+                },
+                'Error: "',
+                o,
+                '"'
+              ),
+              "   ",
+              i.createElement(
+                "span",
+                {
+                  style: { textDecoration: "underline", cursor: "pointer" },
+                  onClick: this.clearError
+                },
+                "(x) Dismiss"
+              ),
+              i.createElement("br", null),
+              i.createElement(
+                "pre",
+                {
+                  style: {
+                    marginTop: "15px",
+                    marginLeft: "15px",
+                    color: "white",
+                    fontSize: "16px"
+                  }
+                },
+                t
+              ),
+              i.createElement(
+                "pre",
+                {
+                  style: {
+                    marginTop: "15px",
+                    marginLeft: "15px",
+                    color: "white",
+                    fontSize: "16px"
+                  }
+                },
+                "The error occurred while rendering:",
+                n
+              )
+            );
           }),
           o.c([r.a], e.prototype, "clearError", null),
           e
@@ -70867,6 +70926,5 @@ and limitations under the License.
       })(i.Component);
   },
   "w/TS": function(e, t, n) {},
-  whIR: function(e, t, n) {},
-  yLAU: function(e, t, n) {}
+  whIR: function(e, t, n) {}
 });

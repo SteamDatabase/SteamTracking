@@ -1933,6 +1933,7 @@ div.bb_h1, .bb_wysiwyg h1 {
 	color: #5aa9d6;
 	font-weight: normal;
     margin-bottom: 4px;
+    clear: both;
 }
 
 span.bb_strike {

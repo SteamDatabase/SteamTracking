@@ -83,6 +83,77 @@ LocalizationReady("shared", "english", {
   DefaultOutputDevice: "Default",
   "OutputDeviceLoading...": "Loading...",
 
+  EventBrowse_MoreEventsTitle: "More events from %1$s",
+  EventBrowse_MoreEventsBtn: "View All",
+
+  EventCalendar_Title: "events",
+  EventCalendar_SubTitle:
+    "Upcoming events and activities hosted by game creators",
+  EventCalendar_LiveNow: "live now",
+  EventCalendar_Upcoming: "upcoming",
+  EventCalendar_LaterToday: "later today",
+  EventCalendar_ThisWeek: "this week",
+  EventCalendar_ThisMonth: "this month",
+  EventCalendar_MuchLater: "much later",
+
+  EventCalender_Type_Global: "global",
+  EventCalender_Type_Recommended: "recommended",
+
+  EventCalender_Show: "show",
+  EventCalender_Show_All: "all",
+
+  EventDisplay_Admin_Title: "Admin:",
+
+  EventDisplay_CallToAction_LearnMore: "Learn More",
+  EventDisplay_CallToAction_InLibrary: "In Library",
+  EventDisplay_CallToAction_PlayNow: "Play Now",
+
+  EventDisplay_Events: "Event Admin Dashboard",
+
+  EventDisplay_RightColumnTitle_Game: "Game",
+  EventDisplay_RightColumnTitle_DateAndTime: "Date and Time",
+  EventDisplay_RightColumnTitle_EventType: "Type",
+
+  EventDisplay_Reminder_SetReminder: "Set a reminder",
+  EventDisplay_Reminder_FollowEvent: "Follow Event",
+  EventDisplay_Reminder_FollowEvent_ttip:
+    "Follow an event to be notified when the event starts.",
+  EventDisplay_Reminder_RemindAtStart: "When the event starts",
+  EventDisplay_Reminder_RemindAtStart_ttip:
+    "Steam will notify you at the time the event starts.",
+  EventDisplay_Reminder_IgnoreEvent: "Ignore This Event",
+  EventDisplay_Reminder_IgnoreStop: "Stop Reminders",
+  EventDisplay_Reminder_IgnoreEvent_ttip:
+    "Ignoring an event will tell Steam to exclude this event for future suggestion and recommendations.",
+  EventDisplay_Reminder_FollowEvent_Error: "Follow Event Error",
+  EventDisplay_Reminder_FollowEvent_ErrorDesc:
+    "Changing the event follow state hit the following error:",
+  EventDisplay_Reminder_IgnoreEvent_Error: "Ignore Event Error",
+  EventDisplay_Reminder_IgnoreEvent_ErrorDesc:
+    "Changing the event ignore state hit the following error:",
+  EventDisplay_Reminder_Toast: "Steam Desktop Toast at Start",
+  EventDisplay_Reminder_AddToCalendar: "Add to calendar",
+  EventDisplay_Reminder_AddToApple: "Add to Apple Calendar",
+  EventDisplay_Reminder_AddToGoogle: "Add to Google Calendar",
+  EventDisplay_Reminder_AddToOutlook: "Add to Outlook Calendar",
+  EventDisplay_Reminder_AddToYahoo: "Add to Yahoo Calendar",
+  EventDisplay_Reminder_Preferences: "Edit Reminder Preferences...",
+
+  EventDisplay_TimeDisplay: "From %1$s to %2$s",
+  EventDisplay_TimeDisplayNone: "No Date and Time Information",
+  EventDisplay_TimeBeginsOn: "Upcoming Event Starts",
+  EventDisplay_TimeBeginsOn_Past: "Started",
+  EventDisplay_TimeBeginsOn_StartAndEnd_Past: "Past Event Started",
+  EventDisplay_TimeEndsOn: "Ends",
+  EventDisplay_TimeEndsOn_Past: "Ended",
+  EventDisplay_TimeRange: "Event Time",
+  EventDisplay_TimeInPast: "Posted",
+  EventDisplay_TimeUpcoming: "Event Starts",
+  EventDisplay_TimeEventActive: "Event is running now",
+
+  EventEditor_Edit: "Edit Event",
+  EventDisplay_DeleteEvent: "Delete Event",
+
   WindowTitle_FriendsList: "Friends List",
   FriendsList_OfflineTitle: "ERROR",
   FriendsList_OfflineOrFailure: "Friends Network Unreachable",
@@ -227,6 +298,8 @@ LocalizationReady("shared", "english", {
 
   Language_koreana: "Korean",
 
+  Bbcode_Originally_Posted_By: "Originally posted by",
+
   Editor_Bold: "Bold",
   Editor_Underline: "Underline",
   Editor_Italics: "Italics",
@@ -235,6 +308,39 @@ LocalizationReady("shared", "english", {
   Editor_Unordered: "Unordered List",
   Editor_Ordered: "Ordered List",
   Editor_Header: "Header",
+
+  EventEditor_ConvertHTML_Error: "Failed Converting HTML",
+  EventEditor_ConvertHTML_Error_Desc:
+    "Failed Converting HTML to bbcode with the following error: '%1$s'",
+  EventEditor_InsertLinkURL: "Insert URL",
+  EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
+  EventEditor_ImportHTML: "Import HTML",
+  EventEditor_ImportFromHTML: "Import from HTML",
+  EventEditor_ImportFromHTML_ttip:
+    "Import from HTML. Will automatically convert your html to Steam formatting tags.",
+  EventEditor_ImportFromHTML_Instruction: "Type of parse HTML below.",
+  EventEditor_ImportFromHTML_PreserveNewlines: "Preserve newlines",
+  EventEditor_ImportFromHTML_PreserveNewlines_Hint:
+    "In HTML, newlines usually have no effect, but in BBCode they will show as blank lines.  If you used <p> or <br> tags, leave this unchecked.  If you usually use blog software that automatically adds <br> tags for newlines, you will probably want to check this box.",
+  EventEditor_ImportFromHTML_ConvertToBBCode: "Convert to BBCode:",
+  EventEditor_ImportFromHTML_ConversionInProgress:
+    "Conversion in progress. Please do not close dialog.",
+  EventEditor_ImportFromHTML_ConvertFinished:
+    "Convervsion Finished. You can now safely close this dialog.",
+  EventEditor_InsertYouTube: "Insert YouTube™ Video",
+  EventEditor_InsertYouTube_Left: "Left-aligned",
+  EventEditor_InsertYouTube_Right: "Right-aligned",
+  EventEditor_InsertYouTube_Full: "Full width",
+  EventEditor_InsertYouTube_URL: "Full URL",
+  EventEditor_InsertYouTube_Position: "Position",
+  EventEditor_InsertYouTube_Placholder: "Enter YouTube™ URL",
+  EventEditor_InsertYouTube_NoURL: "Please enter a valid YouTube™ URL.",
+  EventEditor_InsertYouTube_Summary: "Descriptive summary version",
+  EventEditor_LinkDescription: "Text To Display",
+  EventEditor_LinkURL: "URL",
+  EventEditor_YouTubeVideoTitle: "YouTube™ Video: %1$s",
+  EventEditor_YouTubeVideoViews: "Views: %1$s",
+  EventEditor_Author: "By: %1$s",
 
   Error_Message: "Error Message",
   Warning_Message: "Warning Message",
@@ -312,28 +418,43 @@ LocalizationReady("shared", "english", {
   Broadcast_View_ShowSingleChats: "Show Single Chat",
   Broadcast_View_ShowChat: "Show Chat",
 
-  PartnerEvent_12: "Game Update",
-  PartnerEvent_13: "Pre-Announce Major Update",
+  PartnerEvent_1: "Other Event",
+  PartnerEvent_4: "Meeting Event",
+  PartnerEvent_9: "Chat",
+  PartnerEvent_10: "Game Release",
+  PartnerEvent_11: "Live-Stream / Broadcast",
+  PartnerEvent_12: "Small Updates/Patches",
+  PartnerEvent_13: "Update",
   PartnerEvent_14: "Major Update",
   PartnerEvent_15: "DLC Release",
-  PartnerEvent_30: "In-Game Content Release",
-  PartnerEvent_10: "Game Release",
-  PartnerEvent_16: "Future Release",
-  PartnerEvent_29: "Beta Release",
+  PartnerEvent_16: "Upcoming Release",
   PartnerEvent_17: "ESport Tournament Broadcast",
   PartnerEvent_18: "Dev Stream Broadcast",
   PartnerEvent_19: "Famous Broadcast",
   PartnerEvent_20: "Game Sales",
+  PartnerEvent_21: "In-game Item Discounts",
   PartnerEvent_22: "Bonus XP",
   PartnerEvent_23: "Loot Event",
   PartnerEvent_24: "Perks Event",
   PartnerEvent_25: "Challenge Event",
   PartnerEvent_26: "Contest Event",
-  PartnerEvent_9: "Chat",
-  PartnerEvent_4: "Meeting Event",
-  PartnerEvent_28: "News Event",
   PartnerEvent_27: "IRL Event",
+  PartnerEvent_28: "News Event",
+  PartnerEvent_29: "Beta Release",
+  PartnerEvent_30: "In-Game Content Updated",
+  PartnerEvent_31: "Free Trial",
+  PartnerEvent_32: "New Season Launch",
+  PartnerEvent_33: "Season Update",
   PartnerEvent_Other: "Other Event",
+
+  SocialMedia_Type_ShortName_1: "Steam",
+  SocialMedia_Type_ShortName_2: "Google",
+  SocialMedia_Type_ShortName_3: "Facebook",
+  SocialMedia_Type_ShortName_4: "Twitter",
+  SocialMedia_Type_ShortName_5: "Twitch",
+  SocialMedia_Type_ShortName_6: "YouTube",
+  SocialMedia_Type_ShortName_7: "Facebook",
+
   Emoticon_Search: "Search Emoticons",
   Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",
   Chat_Settings_Error_ChatFileTypeNotSupported:

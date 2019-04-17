@@ -5786,117 +5786,6 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   width: 100%;
   object-fit: contain; }
 
-/* Style scrollbar elements */
-::-webkit-scrollbar,
-.iScrollHorizontalScrollbar,
-.iScrollVerticalScrollbar {
-  height: 12px;
-  width: 12px;
-  background: transparent;
-  overflow: visible; }
-
-::selection {
-  background: #54a5d4;
-  text-shadow: 1px 1px 2px #000000aa;
-  color: #fff; }
-
-/*::-webkit-scrollbar-track
-{
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}*/
-.iScrollHorizontalScrollbar {
-  position: absolute;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  width: 100%; }
-
-.iScrollVerticalScrollbar {
-  position: absolute;
-  bottom: 2px;
-  top: 2px;
-  right: 2px;
-  height: 100%; }
-
-::-webkit-scrollbar-thumb,
-.iScrollIndicator {
-  border-radius: 2px;
-  margin: 4px;
-  /*box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .25);*/ }
-
-::-webkit-scrollbar-thumb {
-  min-height: 32px;
-  min-width: 32px; }
-
-.iScrollIndicator {
-  width: 8px;
-  margin: 1px;
-  position: absolute; }
-
-::-webkit-scrollbar-thumb:hover,
-.iScrollIndicator:hover {
-  background: #4E5157; }
-
-::-webkit-scrollbar-corner {
-  background: #202020; }
-
-.ChatRoomContextNoPermission {
-  opacity: .4;
-  cursor: default;
-  pointer-events: none;
-  user-select: none; }
-
-.ChatRoomContextNoPermission .SVGIcon_Lock {
-  width: 12px;
-  height: 12px;
-  margin-right: 4px;
-  margin-bottom: -1px; }
-
-.flexRow {
-  display: flex;
-  flex-direction: row; }
-
-.flexRowCentered {
-  display: flex;
-  flex-direction: row;
-  align-items: center; }
-
-.flexColumn {
-  display: flex;
-  flex-direction: column; }
-
-.scrollMaskVertical {
-  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
-
-.SVGIcon_Button {
-  fill: #ffffff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px; }
-
-.crossfade {
-  position: relative;
-  overflow: hidden; }
-
-.crossfade-anim-exit {
-  opacity: 1;
-  transition-timing-function: linear;
-  transition-property: opacity; }
-
-.crossfade-anim-exit-active {
-  opacity: 0.01; }
-
-.crossfade-img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-size: cover; }
-
 .ClientUIControls div {
   cursor: default; }
 
@@ -6807,7 +6696,7 @@ button.DialogButton::-moz-focus-inner {
 ._DialogSection {
   margin-bottom: 26px; }
 
-._DialogTextInputBase,
+.DialogTextInputBase,
 ._DialogInputContainer {
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
@@ -6820,15 +6709,15 @@ button.DialogButton::-moz-focus-inner {
   box-shadow: inset 0px 0px 0px #0000;
   transition: all .2s ease-in-out; }
 
-._DialogTextInputBase:focus {
+.DialogTextInputBase:focus {
   background: rgba(67, 73, 83, 0.6);
   box-shadow: inset 1px 1px 8px #000a;
   padding-left: 11px; }
 
-._DialogTextInputBase:not(disabled):hover {
+.DialogTextInputBase:not(disabled):hover {
   background: rgba(67, 73, 83, 0.6); }
 
-._DialogTextInputBase:disabled:hover {
+.DialogTextInputBase:disabled:hover {
   background: rgba(67, 73, 83, 0.3); }
 
 ._DialogInputContainer {
@@ -6854,7 +6743,7 @@ button.DialogButton::-moz-focus-inner {
 .DialogDropDown._DialogInputContainer.Active {
   outline: none; }
 
-._DialogTextInputBase.inviteURLLink {
+.DialogTextInputBase.inviteURLLink {
   padding: 0 12px;
   background: #30353b;
   margin-right: 4px;
@@ -6863,8 +6752,8 @@ button.DialogButton::-moz-focus-inner {
   border: 0.5px solid rgba(139, 153, 170, 0.4);
   border-style: inset; }
 
-._DialogTextInputBase:disabled,
-._DialogTextInputBase:read-only {
+.DialogTextInputBase:disabled,
+.DialogTextInputBase:read-only {
   color: rgba(136, 136, 136, 0.7); }
 
 .InviteLinksTable .DialogInput {
@@ -7871,6 +7760,63 @@ body.in_global_drag .title-area {
 .allCaps {
   text-transform: uppercase; }
 
+.ChatRoomContextNoPermission {
+  opacity: .4;
+  cursor: default;
+  pointer-events: none;
+  user-select: none; }
+
+.ChatRoomContextNoPermission .SVGIcon_Lock {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+  margin-bottom: -1px; }
+
+.flexRow {
+  display: flex;
+  flex-direction: row; }
+
+.flexRowCentered {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
+.flexColumn {
+  display: flex;
+  flex-direction: column; }
+
+.scrollMaskVertical {
+  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
+  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+
+.SVGIcon_Button {
+  fill: #ffffff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px; }
+
+.crossfade {
+  position: relative;
+  overflow: hidden; }
+
+.crossfade-anim-exit {
+  opacity: 1;
+  transition-timing-function: linear;
+  transition-property: opacity; }
+
+.crossfade-anim-exit-active {
+  opacity: 0.01; }
+
+.crossfade-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover; }
+
 body {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
@@ -7886,7 +7832,8 @@ img {
   height: 12px;
   width: 14px;
   background: transparent;
-  z-index: 12; }
+  z-index: 12;
+  overflow: visible; }
 
 ::-webkit-scrollbar-thumb {
   width: 10px;
@@ -7895,15 +7842,36 @@ img {
   z-index: 12;
   border: 4px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  transition: background-color .32s ease-in-out; }
+  transition: background-color .32s ease-in-out;
+  margin: 4px;
+  min-height: 32px;
+  min-width: 32px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4E5157; }
+
+::-webkit-scrollbar-corner {
+  background: #202020; }
+
+::selection {
+  background: #54a5d4;
+  text-shadow: 1px 1px 2px #000000aa;
+  color: #fff; }
 
 .shared_common_SubText_iXOar {
   color: gray;
   font-size: 10px; }
 
+.shared_common_AvatarImageContainer_2-Mc0 {
+  width: 34px;
+  height: 34px;
+  border-radius: 25%;
+  overflow: hidden;
+  margin-right: 4px; }
+
 .shared_common_AvatarImage_HVcru {
-  width: 48px;
-  height: 48px;
+  width: 100%;
+  height: 100%;
   border-radius: 25%;
   position: relative; }
   .shared_common_AvatarImage_HVcru:after {
@@ -15367,26 +15335,26 @@ span.mention.me {
   box-shadow: 0px 4px 24px #0008;
   margin-right: 6px; }
 
-.Dialog_EditNickName .friend ._DialogTextInputBase,
-.Dialog_ChangePersonaName .friend ._DialogTextInputBase {
+.Dialog_EditNickName .friend .DialogTextInputBase,
+.Dialog_ChangePersonaName .friend .DialogTextInputBase {
   font-size: 24px;
   padding: 4px;
   padding-left: 8px; }
 
-.Dialog_EditNickName .friend .DialogInput.DialogInputPlaceholder._DialogTextInputBase.nicknameInput::-webkit-input-placeholder,
-.Dialog_ChangePersonaName .friend .DialogInput.DialogInputPlaceholder._DialogTextInputBase.nicknameInput::-webkit-input-placeholder {
+.Dialog_EditNickName .friend .DialogInput.DialogInputPlaceholder.DialogTextInputBase.nicknameInput::-webkit-input-placeholder,
+.Dialog_ChangePersonaName .friend .DialogInput.DialogInputPlaceholder.DialogTextInputBase.nicknameInput::-webkit-input-placeholder {
   font-size: 16px; }
 
-.Dialog_EditNickName .friend ._DialogTextInputBase,
-.Dialog_ChangePersonaName .friend ._DialogTextInputBase {
+.Dialog_EditNickName .friend .DialogTextInputBase,
+.Dialog_ChangePersonaName .friend .DialogTextInputBase {
   padding: 2px; }
 
-.Dialog_EditNickName .friend.ingame ._DialogTextInputBase,
-.Dialog_ChangePersonaName .friend.ingame ._DialogTextInputBase {
+.Dialog_EditNickName .friend.ingame .DialogTextInputBase,
+.Dialog_ChangePersonaName .friend.ingame .DialogTextInputBase {
   color: #e3ffc2; }
 
-.Dialog_EditNickName .friend.online ._DialogTextInputBase,
-.Dialog_ChangePersonaName .friend.online ._DialogTextInputBase {
+.Dialog_EditNickName .friend.online .DialogTextInputBase,
+.Dialog_ChangePersonaName .friend.online .DialogTextInputBase {
   color: #6dcff6;
   padding-left: 8px; }
 

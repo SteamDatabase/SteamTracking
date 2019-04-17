@@ -620,16 +620,16 @@ RemotePanel
 
 .DiscoveryQueueAppBanner
 {
-	width: 95%;
-	height: 114px;
+	width: 680px;
+	height: 80px;
 	vertical-align: center;
 	flow-children: right;
-	margin-left: 5%;
-
-	background-image: url( /public/images/bigpicture/queue_banner.png );
+	margin-left: 120px;
+	background-color: #8D7541;
 	background-position: 0px bottom;
 	background-repeat: no-repeat;
 	background-size: 100%;
+ 	border: 5px solid #b6e1fa00;
 }
 
 .DiscoveryQueueAppBanner Label
@@ -638,6 +638,21 @@ RemotePanel
 	color: #ffcd6b;
 	vertical-align: center;
 	margin-left: 40px;
+}
+
+.DiscoveryQueueAppBannerCap
+{
+    height: 57px;
+    width: 57px;
+	vertical-align: center;
+	flow-children: right;
+    margin-left: 772px;
+    background-color: #8D7541;
+	background-position: 0px bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+    transform: rotateZ(45deg);
+    border: 5px solid #b6e1fa00;
 }
 
 .ExploreSectionHeader

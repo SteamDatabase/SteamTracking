@@ -2929,7 +2929,7 @@ CSegmentLoader.prototype.SeekToSegment = function( nSeekTime, bForceBufferClear 
 
 		// Set the next segment based on nSeekTime
 		var nSegmentForTime = CMPDParser.GetSegmentForTime( this.m_adaptation, nSeekTime * 1000 );
-		this.m_nNextSegment = Math.min( Math.max( nSegmentForTime, this.m_adaptation.segmentTemplate.startNumber ), this.m_nTotalSegments - 1 );
+		this.m_nNextSegment = Math.min( nSegmentForTime, this.m_nTotalSegments - 1 );
 
 		// PlayerLog("Set Next Segment: " + this.m_nNextSegment + " at approx. " + SecondsToTime(this.m_nNextSegment * CMPDParser.GetSegmentDuration(this.m_adaptation) / 1000) + " seconds.");
 
@@ -3644,7 +3644,7 @@ CMPDParser.GetSegmentForTime = function( adaptationSet, unTime )
 {
 	// currently only support all segments having the same duration
 	var unSegmentDuration = CMPDParser.GetSegmentDuration( adaptationSet );
-	return Math.floor( unTime / unSegmentDuration ) + 1;
+	return Math.floor( unTime / unSegmentDuration ) + adaptationSet.segmentTemplate.startNumber;
 }
 
 CMPDParser.prototype.GetPeriodDuration = function( unPeriod )
