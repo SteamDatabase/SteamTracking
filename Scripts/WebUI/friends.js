@@ -2957,7 +2957,7 @@
         return p;
       });
     var o = n("mrSG"),
-      a = n("tkkQ"),
+      a = n("1n9R"),
       i = n("2vnA"),
       s = n("q1tI"),
       c = n("G+3Z"),
@@ -3023,13 +3023,13 @@
               this.m_bLoadingData = !0;
               var e = "OnLoadEmoticon_" + this.m_strEmoticonName,
                 n =
-                  a.a.COMMUNITY_CDN_URL +
+                  a.b.COMMUNITY_CDN_URL +
                   "economy/emoticonhover/" +
                   encodeURIComponent(this.m_strEmoticonName) +
                   "/jsonp.js?callback=" +
                   encodeURIComponent(e) +
                   "&l=" +
-                  encodeURIComponent(a.a.LANGUAGE),
+                  encodeURIComponent(a.b.LANGUAGE),
                 o = void 0,
                 i = void 0,
                 r = function() {
@@ -3861,20 +3861,29 @@
                 ? n.push("disabled")
                 : this.BHaveUnseenEmoticons() &&
                   (n.push(d.a.EmoticonButton_NewEmoticons), (o = !0)),
-              r.a.createElement(
-                "button",
-                {
-                  className: h.a.apply(void 0, n),
-                  type: "button",
-                  onClick: this.OnEmoticonClick,
-                  title:
-                    this.props.title ||
-                    Object(u.b)("#ChatEntryButton_Emoticon"),
-                  disabled: t
-                },
-                this.props.buttonIcon || r.a.createElement(p.p, null),
-                o && r.a.createElement(l.c, null)
-              )
+              this.props.useImg
+                ? r.a.createElement("img", {
+                    src: this.props.useImg,
+                    className: h.a.apply(void 0, n),
+                    onClick: this.OnEmoticonClick,
+                    title:
+                      this.props.title ||
+                      Object(u.b)("#ChatEntryButton_Emoticon")
+                  })
+                : r.a.createElement(
+                    "button",
+                    {
+                      className: h.a.apply(void 0, n),
+                      type: "button",
+                      onClick: this.OnEmoticonClick,
+                      title:
+                        this.props.title ||
+                        Object(u.b)("#ChatEntryButton_Emoticon"),
+                      disabled: t
+                    },
+                    this.props.buttonIcon || r.a.createElement(p.p, null),
+                    o && r.a.createElement(l.c, null)
+                  )
             );
           }),
           o.c([s.a], t.prototype, "OnEmoticonClick", null),
@@ -49533,6 +49542,8 @@
                             (i.m_appStoreData.tiny_capsule =
                               o.data.tiny_capsule),
                             (i.m_appStoreData.screenshot = o.data.screenshot),
+                            (i.m_appStoreData.screenshot_list =
+                              o.data.screenshot_list),
                             (i.m_appStoreData.age_safe_screenshot =
                               o.data.age_safe_screenshot),
                             (i.m_appStoreData.social = new Array());

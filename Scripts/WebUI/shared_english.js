@@ -308,6 +308,7 @@ LocalizationReady("shared", "english", {
   Editor_Unordered: "Unordered List",
   Editor_Ordered: "Ordered List",
   Editor_Header: "Header",
+  Editor_Emoticon: "Insert Emoticon",
 
   EventEditor_ConvertHTML_Error: "Failed Converting HTML",
   EventEditor_ConvertHTML_Error_Desc:
