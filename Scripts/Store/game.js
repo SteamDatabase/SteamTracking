@@ -842,7 +842,7 @@ function BuildReviewHistogram()
 					var rollupDateEnd = new Date( rollup.date * 1000 );
 					if ( data.results.rollup_type == 'week' )
 					{
-						rollupDateEnd = new Date( ( rollup.date + 86400*7 ) * 1000 );
+						rollupDateEnd = new Date( ( rollup.date + 86400*7 - 1 ) * 1000 );
 					}
 					else if ( data.results.rollup_type == 'month' )
 					{
@@ -885,7 +885,7 @@ function BuildReviewHistogram()
 					for ( var j = 0; j < data.past_events.length; ++j )
 					{
 						var event = data.past_events[j];
-						if ( IntervalDistance( event.start_date, event.end_date, recentDay.date, recentDay.date + 86400 ) == 0 )
+						if ( IntervalDistance( event.start_date, event.end_date, recentDay.date, recentDay.date + 86400 - 1 ) == 0 )
 						{
 							chartDataPositiveEvent.push( barDataUp );
 							chartDataNegativeEvent.push( barDataDown );
@@ -925,7 +925,6 @@ function BuildReviewHistogram()
 			xaxis: {
 				mode: "time",
 				timeformat: "%b %d",
-				timezone: "utc",
 				tickLength: 0
 			},
 			yaxis: {
