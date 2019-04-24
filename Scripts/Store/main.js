@@ -1298,6 +1298,38 @@ function AddFreeLicense( subid, strDisplayName )
 	});
 }
 
+
+function AddFreeBundle( bundleid, strDisplayName )
+{
+	if ( window.g_bAddFreeLicenseInFlight )
+		return;
+
+	window.g_bAddFreeLicenseInFlight = true;
+
+	var posts = [];
+	posts.push( $J.post( 'https://store.steampowered.com/checkout/addfreebundle/' + bundleid, { ajax: true, sessionid: g_sessionID }) );
+
+	$J.when.apply( $J, posts ).done( function() {
+		ShowAlertDialog(
+			strDisplayName,
+			'%s has been added to your account.  It is now available in your Steam Library.'.replace( /%s/, strDisplayName )
+		).done( function() {
+			window.location.reload();
+		});
+		if ( typeof GDynamicStore != 'undefined' )
+			GDynamicStore.InvalidateCache();
+	}).fail( function( jqXHR ) {
+		var data = V_ParseJSON( jqXHR.responseText );
+		if ( data && data.purchaseresultdetail == 9 )
+			ShowAlertDialog( strDisplayName, 'This product is already available in your Steam library.' );
+		else
+			ShowAlertDialog( strDisplayName, 'There was a problem adding this product to your account.  Please try again later.' );
+	}).always( function () {
+		delete window.g_bAddFreeLicenseInFlight;
+	});
+}
+
+
 function ChangeLanguage( strTargetLanguage, bStayOnPage )
 {
 	var Modal = ShowBlockingWaitDialog( 'Change language', '' );

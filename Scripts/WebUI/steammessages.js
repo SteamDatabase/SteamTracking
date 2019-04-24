@@ -25319,6 +25319,12 @@
             (r.prototype.set_sort_order = function(e) {
               n.Message.setField(this, 6, e);
             }),
+            (r.prototype.last_message = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_last_message = function(e) {
+              n.Message.setField(this, 7, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25329,7 +25335,8 @@
                 voice_allowed: n.Message.getField(t, 3),
                 members_in_voice: n.Message.getField(t, 4),
                 time_last_message: n.Message.getField(t, 5),
-                sort_order: n.Message.getField(t, 6)
+                sort_order: n.Message.getField(t, 6),
+                last_message: n.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -25359,6 +25366,9 @@
                   case 6:
                     e.set_sort_order(t.readUint32());
                     break;
+                  case 7:
+                    e.set_last_message(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -25381,7 +25391,9 @@
                 void 0 !== (i = n.Message.getField(e, 5)) &&
                   t.writeUint32(5, i),
                 void 0 !== (i = n.Message.getField(e, 6)) &&
-                  t.writeUint32(6, i);
+                  t.writeUint32(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) &&
+                  t.writeString(7, i);
             }),
             (r.prototype.getClassName = function() {
               return "CChatRoomState";
@@ -25927,6 +25939,12 @@
             (r.prototype.set_unread_indicator_muted = function(e) {
               n.Message.setField(this, 7, e);
             }),
+            (r.prototype.time_first_unread = function() {
+              return n.Message.getField(this, 8);
+            }),
+            (r.prototype.set_time_first_unread = function(e) {
+              n.Message.setField(this, 8, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25946,7 +25964,8 @@
                   0
                 ),
                 time_last_mention: n.Message.getField(t, 6),
-                unread_indicator_muted: n.Message.getFieldWithDefault(t, 7, !1)
+                unread_indicator_muted: n.Message.getFieldWithDefault(t, 7, !1),
+                time_first_unread: n.Message.getField(t, 8)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -25979,6 +25998,9 @@
                   case 7:
                     e.set_unread_indicator_muted(t.readBool());
                     break;
+                  case 8:
+                    e.set_time_first_unread(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -26001,7 +26023,9 @@
                 void 0 !== (i = n.Message.getField(e, 5)) && t.writeEnum(5, i),
                 void 0 !== (i = n.Message.getField(e, 6)) &&
                   t.writeUint32(6, i),
-                void 0 !== (i = n.Message.getField(e, 7)) && t.writeBool(7, i);
+                void 0 !== (i = n.Message.getField(e, 7)) && t.writeBool(7, i),
+                void 0 !== (i = n.Message.getField(e, 8)) &&
+                  t.writeUint32(8, i);
             }),
             (r.prototype.getClassName = function() {
               return "CUserChatRoomState";
@@ -36934,13 +36958,20 @@
             (r.prototype.set_broadcast_channel_name = function(e) {
               n.Message.setField(this, 2, e);
             }),
+            (r.prototype.broadcast_channel_avatar = function() {
+              return n.Message.getField(this, 3);
+            }),
+            (r.prototype.set_broadcast_channel_avatar = function(e) {
+              n.Message.setField(this, 3, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
                 broadcast_channel_id: n.Message.getField(t, 1),
-                broadcast_channel_name: n.Message.getField(t, 2)
+                broadcast_channel_name: n.Message.getField(t, 2),
+                broadcast_channel_avatar: n.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -36958,6 +36989,9 @@
                   case 2:
                     e.set_broadcast_channel_name(t.readString());
                     break;
+                  case 3:
+                    e.set_broadcast_channel_avatar(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -36973,7 +37007,9 @@
               void 0 !== (i = n.Message.getField(e, 1)) &&
                 t.writeFixed64String(1, i),
                 void 0 !== (i = n.Message.getField(e, 2)) &&
-                  t.writeString(2, i);
+                  t.writeString(2, i),
+                void 0 !== (i = n.Message.getField(e, 3)) &&
+                  t.writeString(3, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_BroadcastChannelLive_Notification";

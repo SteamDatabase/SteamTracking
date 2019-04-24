@@ -430,6 +430,11 @@ td {
 	max-width: 1280px;
 }
 
+.documentation_bbcode .bb_docvideo {
+    width: 100%;
+    max-width: 600px;
+}
+
 h2.editorOnly {
 	color: #ca5029;
 }

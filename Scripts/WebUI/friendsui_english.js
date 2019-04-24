@@ -267,6 +267,7 @@ LocalizationReady("friendsui", "english", {
   Menu_InviteToChat: "Invite to chat",
   Menu_SearchMembers: "Search members",
   Menu_FriendInvites: "Friend Invites",
+  Menu_FriendInvite: "Friend Invite",
   Menu_FriendInvitesCount: "%1$s Friend Invite",
   Menu_FriendInvitesCount_Plural: "%1$s Friend Invites",
   Menu_LogOut_Prompt: "Are you sure you want to log out?",
@@ -1095,6 +1096,12 @@ LocalizationReady("friendsui", "english", {
   FriendInviteLink_DeleteLink_Prompt:
     "Are you sure you want to delete this invite link?",
   FriendInviteLink_CreatedTime: "Created %1$s",
+  FriendInviteLink_AddFriend: "Add Friend",
+  FriendInviteLink_InvalidLink: "Invalid Link",
+  FriendInviteLink_SelfLink:
+    "You followed a valid friend invite for your own account.",
+  FriendInviteLink_AlreadyFriends: "You are already friends with %1$s",
+  FriendInviteLink_RedeemError: "There was a problem accepting this invite.",
 
   ChatRoom_Invite_Accept: "Join Group Chat",
   ChatRoom_Invite_Accept_Inviter: "Go to Group Chat",
@@ -1302,9 +1309,9 @@ LocalizationReady("friendsui", "english", {
 
   changeLog_WhatsNew: "What's New",
 
-  changeLog_Title: "Beta Change Log",
+  changeLog_Title: "Change Log",
   changeLog_SubTitle:
-    "Here's what's been happening with the Steam Friends & Chat Beta lately",
+    "Here's what's been happening with Steam Friends & Chat lately",
 
   changeLog_UpdateItem01:
     "Fixed a bug in the new chat where sometimes chats would auto-close right after opening if you'd previously played a game.",
@@ -1459,10 +1466,20 @@ LocalizationReady("friendsui", "english", {
   changeLog_UpdateItem71:
     "Changed Steam Chat to load from a new dedicated domain.  %1$s This will reset many chat user interface settings to their defaults, such as open chat windows, chat room member list collapsing, and voice settings. This is a one-time reset when you update, and we regret the inconvenience.  Thank you for your continued help in testing the beta.",
 
+  changeLog_UpdateItem72:
+    "The emoticon selector now requires 3 characters to open, so you can send emoticons such as :D directly.",
+  changeLog_UpdateItem73:
+    "Fixed an issue with text formatting on some Steam store embeds in chat.",
+  changeLog_UpdateItem74:
+    "Fixed an issue with consecutive emoticons overlapping.",
+
   changeLog_UpdateExtraInfo01:
     "We’ve released an update to the new chat. As part of the new chat update, your client will automatically receive friends and chat user interface updates when your computer is idle, or you can initiate an update by choosing “Check for Steam Client Updates” under the Steam menu in the client. These updates do not require a full Steam restart and will apply to just Friends/Chat in real-time while the rest of your client is running.",
 
   changeLog_UpdateSubHeader_General: "General",
   changeLog_UpdateSubHeader_Linux: "Linux",
-  changeLog_GenericUpdateTitle: "Steam Friends/Chat Beta Update"
+  changeLog_GenericUpdateTitle: "Steam Friends and Chat Update",
+
+  BBCode_Loading: "Loading",
+  BBCode_Failed: "Failed to load"
 });

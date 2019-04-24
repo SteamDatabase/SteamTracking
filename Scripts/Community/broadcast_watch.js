@@ -31,7 +31,7 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
 	this.m_strBroadcastName = name;
-	this.m_ulBroadcastID = 0;
+	this.m_ulBroadcastID = 0; // broadcast session ID
 	this.m_eClientType = eClientType;
 	this.m_timeoutUpdate = null;
 	this.m_timeoutHeartbeat = null;
@@ -79,7 +79,7 @@ CBroadcastWatch.prototype.GetChat = function()
 
 CBroadcastWatch.prototype.GetBroadcastID = function()
 {
-	return this.m_ulBroadcastID;
+	return this.m_ulBroadcastID;  // broadcast session ID
 };
 
 CBroadcastWatch.prototype.IsBroadcaster = function()

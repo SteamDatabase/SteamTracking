@@ -14286,7 +14286,7 @@ html.web_chat_frame .perf_timing_area {
 .msgText .spoilerMsgText .spoilerMsg {
   margin-left: 0px;
   opacity: 0.5;
-  filter: blur(6px);
+  filter: blur(20px);
   transition: all .1s ease-in-out; }
 
 .msgText .spoilerMsgText .spoilerMsg {

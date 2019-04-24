@@ -265,7 +265,9 @@
       (u[(u.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
       (u[(u.k_ELaunchSource_GameActionJoinParty = 900)] =
-        "k_ELaunchSource_GameActionJoinParty");
+        "k_ELaunchSource_GameActionJoinParty"),
+      (u[(u.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+        "k_ELaunchSource_AppPortraitContextMenu");
   },
   "1VtQ": function(e, t, n) {
     "use strict";

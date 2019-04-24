@@ -1122,6 +1122,7 @@ function OnLocTextChanged( id )
 	var textArea = document.getElementById( id + '_textarea' );
 	var hiddenInput = document.getElementById( id + currentLanguage + '__hidden' );
 	hiddenInput.value = textArea.value;
+	$J( hiddenInput ).data( 'changed', true );
 }
 
 // called to set styles on text area select

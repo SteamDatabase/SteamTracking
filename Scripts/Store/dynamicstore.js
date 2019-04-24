@@ -900,13 +900,11 @@ GDynamicStore = {
 	UpdateDynamicBundleElements: function( Bundle, $El )
 	{
 
+		var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
 		var $DiscountBlocks = $El.find('.discount_block');
 
 		if ( !Bundle.m_bIsCommercial && ( !Bundle.m_rgBundleItems.length || ( Bundle.m_bMustPurchaseAsSet && Bundle.m_cUserItemsInBundle < Bundle.m_cTotalItemsInBundle ) ) )
 		{
-
-			var $CartBtn = $El.find('.btn_addtocart:not(.btn_packageinfo)' ).children();
-
 			var strTooltip = 'This bundle is not available for purchase on your account since you already have all included items.';
 
 			if ( Bundle.m_bMustPurchaseAsSet && !Bundle.m_bRestrictGifting )
@@ -942,6 +940,17 @@ GDynamicStore = {
 				var nDiscountPct = Math.round( ( Bundle.m_nPackageBasePriceInCents - Bundle.m_nFinalPriceInCentsWithBundleDiscount ) / Bundle.m_nPackageBasePriceInCents * 100 );
 				$DiscountBlocks.find('.discount_pct' ).text( '-' + nDiscountPct + '%' );
 				$DiscountBlocks.find('.discount_final_price' ).removeClass('your_price').text( strFormattedFinalPrice );
+			}
+
+			if ( Bundle.m_nFinalPriceInCentsWithBundleDiscount == 0 && Bundle.m_cUserItemsInBundle )
+			{
+				// Complete the set bundle with only free items remaining
+				var $AddToAcctBtn = $El.find('.btn_addtoaccount' );
+				if ( $AddToAcctBtn.length )
+				{
+					$CartBtn.hide();
+					$AddToAcctBtn.show();
+				}
 			}
 		}
 

@@ -749,7 +749,7 @@ function LoadCuratorAssociatedApps( fnOnComplete )
 		url: g_strCuratorAdminURL + 'ajaxgetassociatedappslist/',
 		data: {
 			sessionid: g_sessionID,
-			count: 1000, 		},
+			count: g_kMaxCurations, 		},
 		type: 'POST'
 	} ).done( function ( data )
 	{

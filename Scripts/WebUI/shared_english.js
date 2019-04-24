@@ -19,6 +19,11 @@ LocalizationReady("shared", "english", {
   Button_Save: "Save",
   Button_Update: "Update",
   Button_SaveAndContinue: "Save and Continue",
+  Button_Follow: "Follow",
+  Button_Ignore: "Ingore",
+  Button_NotifyMe: "Notify Me",
+  Button_NotInterested: "Not Interested",
+
   Input_Error_NumberTooSmall: "Number too small.",
   Input_Error_NumberTooLarge: "Number too large.",
   Input_Error_MustBeURL: "Field is not a valid URL.",
@@ -150,6 +155,10 @@ LocalizationReady("shared", "english", {
   EventDisplay_TimeInPast: "Posted",
   EventDisplay_TimeUpcoming: "Event Starts",
   EventDisplay_TimeEventActive: "Event is running now",
+
+  EventEditor_Publish_VisibleNow: "Make Visible Now",
+  EventEditor_Publish_VisibleNow_ttip:
+    "This event will automatically become visible at the scheduled time. This button forces the event to become immediately visible.",
 
   EventEditor_Edit: "Edit Event",
   EventDisplay_DeleteEvent: "Delete Event",
