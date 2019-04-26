@@ -388,6 +388,16 @@ function OnAssociationChange()
 			if ( results )
 			{
 				ReadAssociationValues( results );
+
+				// check if the message type is On Demo Quit and adjust UI
+				if ( hashParams.messageType === "7" )
+				{
+					$J( '#btnDemoQuit' ).show();
+				}
+				else
+				{
+					$J( '#btnDemoQuit' ).hide();
+				}
 			}
 		}
 	});
@@ -674,5 +684,44 @@ function AddCountryOffsitePurchasePriceOverride( country, currency, min, max )
 	newRow += '<td><span tabindex="0" style="cursor: pointer;" class="icon icon_delete" onkeypress="if (event.keyCode==13) $J( this ).click();" onclick="SubmitQuickMessageUpdate({ \'app[content][offsite_purchase][countries][' + country + '][pricingoverride]\': \'\' });"></span></td>';
 	newRow += '</tr>';
 	$J( '#offsite_purchase_country_price_override_addnew' ).before( newRow );
+}
+
+function UpdateDemoQuit( messageID )
+{
+	var associationType = GetFormValue( 'message[associationtype]' );
+	var hashParams = {
+		associationType: 	associationType,
+		association:  		GetFormValue( 'association_' + associationType ),
+		messageType:		GetFormValue( 'message[marketingmessagetype]' ),
+		messageID: 			messageID
+	};
+
+	// basic check everything is in place.
+	if ( hashParams.association === undefined || hashParams.association === "0" || hashParams.associationType !== "1" || hashParams.messageType !== "7" )
+	{
+		alert( "Cannot Update Demo Quit Setting\n\nPlease set the General Association to Application, with a valid Application and the Message Type to On Demo Quit and try again." );
+		return false;
+	}
+
+	new Ajax.Request(szBaseUrl + '/marketing/updatedemoquit', {
+		method: 'get',
+		requestHeaders: { 'Accept': 'application/json' },
+		parameters: hashParams,
+		onSuccess: function( response )
+		{
+			var responseJSON = response.responseJSON;
+			if ( responseJSON.success )
+			{
+				if ( responseJSON.success == 1 )
+				{
+					alert( 'Update Demo Quit Setting Completed. Please publish the Steamworks Settings for the associated app.' );
+				}
+				else
+				{
+					alert( 'Update Demo Quit Setting Failed with Message. ' + responseJSON.message );
+				}
+			}
+		}
+	});
 }
 
