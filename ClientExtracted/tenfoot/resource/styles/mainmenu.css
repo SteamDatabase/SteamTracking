@@ -1502,15 +1502,12 @@ transform: none;
 	transition-timing-function: linear;
 }
 
-#StoreHidden,
-.StoreHidden #StoreButton
+.StreamingToAppleDevice #WebButton,
+.StreamingToAppleDevice #StoreButton,
+.StreamingToAppleDevice #CommunityButton,
+.StreamingToAppleDevice #FriendsButton
 {
     visibility: collapse;
-}
-
-.StoreHidden #StoreHidden
-{
-    visibility: visible;
 }
 
 
