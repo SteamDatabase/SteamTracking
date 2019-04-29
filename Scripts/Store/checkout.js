@@ -5423,6 +5423,12 @@ function HardwareAgreementPopup()
 	win.focus();
 }
 
+function HardwareLimitedWarrantyPopup()
+{
+		var win = OpenUrlInNewBlankWindow( 'https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223','steam_limited_warranty_terms' );
+	win.focus();
+}
+
 function DisplayErrorMessage( strMessage )
 {
 	$('error_display').innerHTML = strMessage;
