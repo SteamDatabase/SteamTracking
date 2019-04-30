@@ -1067,8 +1067,11 @@ GDynamicStore = {
 		WebStorage.SetLocal( 'unUserdataVersion', parseInt( WebStorage.GetLocal( 'unUserdataVersion', true ) || 0 ) + 1, true );
 	},
 
-	BIsAppOwned: function( appid, bExcludeIfAutoGrant = true )
+	BIsAppOwned: function( appid, bExcludeIfAutoGrant )
 	{
+		if ( bExcludeIfAutoGrant === undefined )
+			bExcludeIfAutoGrant = true;
+
 		if ( GDynamicStore.s_rgOwnedApps[appid] )
 		{
 			if ( !bExcludeIfAutoGrant )
