@@ -635,6 +635,10 @@
         ]
     },
     {
+        "name": "Nathaniel Blue",
+        "bio": "Nathaniel Blue works on the Steam Team at Valve. He works with game developers and publishers across the globe and spends most of his time working on Steam features, new business opportunities, and events. He has a variety of experience in the gaming industry, advertising, and the music industry."
+    },
+    {
         "name": "Patricia Zavalza",
         "bio": "After working in manufacturing for almost a decade focusing on Program and Account Management, Patricia joined the Customer Support team at Valve where she is working on improving the quality of our interactions with our users and partners. If you have feedback regarding your experience with Steam Support, she would love to hear it!"
     },
@@ -700,10 +704,6 @@
     {
         "name": "Scott Nietfeld",
         "bio": "After studying Cognitive Science in college, Scott worked on rockets in the desert for five years because the regular guy left and they couldn't afford to hire someone qualified to replace him. Now he works at Valve in the hardware department, tinkering with VR controllers and bolting tactical-grade IMUs to anything that isn't nailed down."
-    },
-    {
-        "name": "Sean Jenkin",
-        "bio": "Sean spent his youth on the beaches of Wollongong, Australia before the lure of Microsoft brought him to Seattle. After 12 years working at Microsoft Game Studios, Xbox Live Indie Games and MSDN\/Technet, Sean joined Disney to take advantage of the free entry to Disneyland (used twice, doh!). After a few years commuting back and forth to California, Sean came to Valve where he now works with Game Developers around the world supporting their integration with Steam. Sean also spends parts of his day working on Steam, Video and VR."
     },
     {
         "name": "Sean Vanaman",
