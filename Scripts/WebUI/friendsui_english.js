@@ -215,6 +215,7 @@ LocalizationReady("friendsui", "english", {
   VoiceChat_Unavailable_NotInBeta:
     "Voice unavailable: %1$s is not running the new chat beta.",
   VoiceChat_Unavailable_MobileChat: "Voice chat is not supported on mobile.",
+  VoiceChat_Unavailable_NotSupported: "Not Supported",
 
   ChatEntry_UploadImage: "Upload an Image",
   ChatEntry_SendTradeURL: "Share Your Trade Offer URL",
@@ -365,6 +366,7 @@ LocalizationReady("friendsui", "english", {
   Chat_ChatRoomList_Empty_How: "You can start a chat with friends or %1$s",
   Chat_ChatRoomList_Empty_HowLink: "join a Steam group chat.",
   Chat_ChatRoomList_Empty_StartNew: "Start a new group chat",
+  Chat_ChannelOptions: "Channel Options",
 
   Chat_ChatRoomGroup_Requesting: "Requesting group chat information...",
 
@@ -699,6 +701,8 @@ LocalizationReady("friendsui", "english", {
   bbcode_invite_you_invited_friend_voice:
     "You invited %1$s to a voice channel in %2$s",
   bbcode_invite_already_group_member: "Already a member",
+  bbcode_invite_already_group_member_long:
+    "You are already a member of this group",
   bbcode_invite_requesting_info: "Requesting Info...",
   bbcode_invite_link_text_expired: "EXPIRED",
   bbcode_invite_banned_forever: "You are currently banned from this group",
@@ -875,6 +879,7 @@ LocalizationReady("friendsui", "english", {
   SlashCommandDescription_Flip: "Flip a coin",
   SlashCommandDescription_Random:
     "Pick a random number ( i.e. /random 1000 or /random 500-1000 )",
+  SlashCommandDescription_Store: "Send a link to a game on the Steam Store",
 
   SlashCommandCoinFlip_Result_heads: "Heads",
   SlashCommandCoinFlip_Result_tails: "Tails",
@@ -1047,6 +1052,8 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Mobile_Notifications: "Mobile Notifications",
   FriendSettings_Mobile_InlineEmbedOnWifiOnly:
     "Only embed images and other media when on wifi",
+  FriendSettings_Mobile_UploadCurrentLogs: "Upload Current Session Logs",
+  FriendSettings_Mobile_UploadPreviousLogs: "Upload Previous Session Logs",
 
   InterfaceSettings_Title: "Interface",
   LanguageSettings_SystemDefault: "System Default",
@@ -1083,6 +1090,7 @@ LocalizationReady("friendsui", "english", {
   InviteLink_ExpiresHour_Short: "One Hour",
   InviteLink_ExpiresHour_Long: "This link will expire within one hour",
   InviteLink_Copied: "Copied",
+  InviteLink_ChatInvite: "Chat Invite",
 
   FriendInviteLink_MobileDescription:
     "Generate a link you can drop into a text message or email.",
@@ -1224,6 +1232,7 @@ LocalizationReady("friendsui", "english", {
 
   ChatRoom_GenericWithOthers: "Chat with %1$s members",
   ChatRoom_GenericEmpty: "(empty chat)",
+  ChatRoom_NoMessages: "There are no messages in this channel.",
 
   ChatRoom_New_Messages: "New messages since %1$s",
 
@@ -1233,6 +1242,8 @@ LocalizationReady("friendsui", "english", {
   ChatEntryButton_Emoticon: "Emoticon Picker",
   ChatEntryButton_Flair: "Flair Picker",
   ChatEntryButton_SendEmbed: "Send Special",
+
+  EmoticonPicker_RecentlyUsed: "Recently Used",
 
   ChatMentionSuggest_MembersMatching: "Chat members matching @%1$s",
   ChatMentionSuggest_NoMatches: "No matches",
@@ -1290,6 +1301,15 @@ LocalizationReady("friendsui", "english", {
   Friends_Empty02_Filler: "Invite Link",
 
   RecentChats_Empty: "Recent chats will show up here.",
+  RecentChats_Hide: "Hide",
+  RecentChats_HideFriend_Description1:
+    "This chat will be hidden from the list until a new message is sent to the chat.",
+  RecentChats_HideFriend_Description2:
+    "You can still access it from the friends list.",
+  RecentChats_HideGroup_Description1:
+    "This chat will be hidden from the list until you interact with it again.",
+  RecentChats_HideGroup_Description2:
+    "You can still access it from the groups list.",
 
   Search_NonFriend01: "Searching for someone who isn't a friend yet?",
   Search_NonFriend02: "The best way to add friends on Steam is with an %1$s.",

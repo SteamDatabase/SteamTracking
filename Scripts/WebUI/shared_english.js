@@ -308,6 +308,7 @@ LocalizationReady("shared", "english", {
   Language_koreana: "Korean",
 
   Bbcode_Originally_Posted_By: "Originally posted by",
+  Bbcode_No_Match: "No matches to supported BBCode",
 
   Editor_Bold: "Bold",
   Editor_Underline: "Underline",

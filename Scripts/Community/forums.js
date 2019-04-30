@@ -972,7 +972,15 @@ CForumTopic = Class.create( {
 	OnModeratorActionFailed: function( transport )
 	{
 		this.m_bAJAXInFlight = false;
-		ShowForumSuccessDialog( '', 'Failed to modify the topic.  Please try again later.' );
+		if( transport.responseJSON && 'msg' in transport.responseJSON )
+		{
+			ShowForumSuccessDialog( '', 'Failed to modify the topic.  Error message:' +
+			 "<br><br>" + transport.responseJSON.msg );
+		}
+		else
+		{
+			ShowForumSuccessDialog( '', 'Failed to modify the topic.  Please try again later.' );
+		}
 	},
 
 	RecordTopicViewed: function( timelastpost )

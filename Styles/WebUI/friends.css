@@ -951,7 +951,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .miniprofile_miniProfile_s5zcg {
   width: fit-content;
   margin: 11px;
-  box-shadow: 0 10px 32px 0px #000000ab; }
+  box-shadow: 0 10px 32px 0px #000000ab;
+  overflow: hidden; }
 
 .miniprofile_miniProfileContent_25Sge {
   width: 328px;
@@ -1078,6 +1079,14 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden; }
+
+.miniprofile_personaAndIcons_2OhlV {
+  display: flex;
+  flex-direction: row; }
+
+.miniprofile_persona_1Z3Ey {
+  display: flex;
+  flex-direction: column; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_awayStatusLabel_2UzRy {
   color: #999;
@@ -1499,6 +1508,9 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     opacity: 1; }
   .hoverposition_HoverPosition_3gYNB.hoverposition_nospace_39IjN {
     display: none; }
+
+.hoverposition_EnablePointerEvents_JX-6A {
+  pointer-events: all; }
 
 .mutualFriendsContainer {
   padding: 12px 16px 4px 16px; }
@@ -4081,6 +4093,70 @@ img.emoticon_emoticon_9hYGN {
   color: #b8b8b8; }
   .isCurrentUser .messages_SpeakerName_Default_1Qo8j {
     color: #6e6e6e; }
+
+.suggestdialog_mentionDialogPosition_3I0f3 {
+  position: absolute;
+  left: 0;
+  right: 0; }
+
+.suggestdialog_mentionDialog_2hRnz {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  background: #2c3036;
+  padding: 12px 0px 12px 12px;
+  box-shadow: 0 0 32px 0px #000000ab;
+  overflow-y: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.suggestdialog_mentionDialog_2hRnz:focus {
+  outline: none; }
+
+.suggestdialog_mentionSearchText_26-gv {
+  color: #818181;
+  margin-bottom: 10px;
+  font-size: 12px; }
+
+.suggestdialog_suggestOption_t54xp {
+  color: #adaeaf;
+  transition-property: padding-left, color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+  line-height: 26px;
+  cursor: pointer;
+  margin-top: -0px;
+  padding-left: 22px;
+  margin-right: 12px;
+  overflow: hidden; }
+
+.suggestdialog_suggestOption_t54xp .suggestdialog_nickname_NtV85 {
+  color: #6e6e6e; }
+
+.suggestdialog_suggestOption_t54xp.suggestdialog_selected_e-sy7 {
+  color: #dfe3e6;
+  background-color: #434953;
+  padding-left: 30px; }
+
+span.suggestdialog_mentionSearchMatch_m3oS2 {
+  color: #dfe3e6; }
+
+.emoticonsuggestion_Emoticon_Toggle_2zKUt {
+  margin-right: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 4px 6px; }
+
+.emoticonsuggestion_Emoticon_Toggle_2zKUt.emoticonsuggestion_Active_20wFc {
+  background: #777777; }
+
+.emoticonsuggestion_Emoticon_2h16s {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 0 4px; }
 
 .main_throbberContainer_29hiv {
   height: 100%;
@@ -18931,21 +19007,6 @@ a.general_btn:hover {
   overflow: hidden;
   white-space: nowrap;
   font-size: 12px; }
-
-.EmoticonSelector_Toggle {
-  margin-right: 8px;
-  border-radius: 3px;
-  cursor: pointer;
-  padding: 4px 6px; }
-
-.EmoticonSelector_Toggle.Active {
-  background: #777777; }
-
-.EmoticonSuggestion_Emoticon {
-  position: relative;
-  display: inline-block;
-  margin-right: 8px;
-  padding: 0 4px; }
 
 .SlashCommandSuggestion {
   margin-left: -14px; }

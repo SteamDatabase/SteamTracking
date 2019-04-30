@@ -1064,8 +1064,7 @@ select.gray_bevel {
 
 .share_controls_steam, .share_controls_steam a
 {
-	float: left;
-	display: inline-block;
+
 	width: 328px;
 	height: 50px;
 	margin-right: 15px;
@@ -1085,7 +1084,7 @@ select.gray_bevel {
 
 .share_controls_other
 {
-	padding-top: 10px;
+    display: flex;
 }
 
 .share_controls_divider
@@ -1106,16 +1105,27 @@ select.gray_bevel {
 	color: #8f8f8f;
 }
 
+.share_ctn {
+    display: flex;
+}
+
 .shareItemLink
 {
-	float: left;
 	padding-left: 5px;
+}
+
+.shareItemLink .btn_medium {
+    height: 48px;
 }
 
 .shareItemLink .btn_medium > span
 {
-	padding: 0px 10px;
-	line-height: 28px;
+    padding: 8px 10px 0px 10px;
+}
+
+.shareItemLink .btn_medium > span > img {
+    height: 32px;
+    width: 32px;
 }
 
 .share_controls_page_link form
@@ -1258,15 +1268,18 @@ img.emoticon {
 /* formatting help dialog */
 .tagrow {
 	margin-bottom: 8px;
-	padding: 0 4px;
+	padding: 0 4px 4px 4px;
 	position: relative;
 	font-size: 12px;
+    border-bottom: 1px solid #444;
 }
 
 .tagrow.tagrow_header {
 	background-color: #1E1E1F;
 	color: #626467;
+    padding-bottom: 0px;
 	line-height: 18px;
+    border-bottom: none;
 }
 
 .tagrow .tag {
@@ -1276,7 +1289,6 @@ img.emoticon {
 .tagsyntax {
 	float: left;
 	width: 57%;
-	margin-left: 1%;
 	margin-right: 3%;
 }
 

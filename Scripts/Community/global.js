@@ -2994,7 +2994,6 @@ function ShowSharePopup( url, baseSocialShareURL )
 	$( "SharePopupLink_Facebook" ).href = baseSocialShareURL + appendQueryParam + "site=facebook&t=" + Math.random();
 	$( "SharePopupLink_Twitter" ).href = baseSocialShareURL + appendQueryParam + "site=twitter";
 	$( "SharePopupLink_Reddit" ).href = baseSocialShareURL + appendQueryParam + "site=reddit";
-	$( "SharePopupLink_Digg" ).href = baseSocialShareURL + appendQueryParam + "site=digg";
 
 	$( "SharePopupInput" ).value = url;
 

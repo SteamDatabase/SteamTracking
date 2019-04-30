@@ -1,8 +1,18 @@
 
 
 GSteamBroadcasts = {
-		Init: function( fnFilterFunction, tagid = 0, genreid = 0, maxBroadcasts = 6 )
+		Init: function( fnFilterFunction, tagid, genreid, maxBroadcasts )
 	{
+		if ( tagid === undefined )
+			tagid = 0;
+
+		if ( genreid === undefined )
+			genreid = 0;
+
+		if ( maxBroadcasts === undefined )
+			maxBroadcasts = 6;
+
+
 		GSteamBroadcasts.m_fnFilterItemToDisplayFunction = fnFilterFunction;
 		GSteamBroadcasts.m_tagid = tagid;
 		GSteamBroadcasts.m_genreid = genreid;
