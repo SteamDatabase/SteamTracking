@@ -1488,6 +1488,43 @@ function addToCart( subid, dedupe )
 
 }
 
+// Function to handle quantity box changes per keystroke, largely to show error style if above max quantity
+function qtyBoxInputChanged( formName, id_suffix )
+{
+	let elField = jQuery( "#quantity_update_" + id_suffix );
+	let elButton = jQuery( "#btn_quantity_update_" + id_suffix );
+
+	try
+	{
+		let sQty = elField.val();
+		let sQtyMax = elField.attr( 'max' );
+		let nQty = parseInt( sQty );
+		let nQtyMax = parseInt( sQtyMax );
+
+		const sInvalidClass = 'qty_invalid';
+
+		if ( nQty !== undefined )
+		{
+			if ( ( nQtyMax === undefined || isNaN( nQtyMax ) ) || ( !isNaN( nQty ) && nQty > 0 && nQty <= nQtyMax ) )
+			{
+				elField.removeClass( sInvalidClass );
+				elButton.prop( 'disabled', false );
+			}
+			else
+			{
+				elField.addClass( sInvalidClass );
+				elButton.prop( 'disabled', true );
+			}
+
+			elButton.show();
+		}
+	}
+	catch( e )
+	{
+		// ignore
+	}
+}
+
 // Function to add a package to a cart, assumes form setup on the page
 function updateQtyCart( formName, id )
 {

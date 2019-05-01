@@ -4671,3 +4671,17 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 
 
 /* END Store curator capsule */
+
+.cart_item_qty .quantity.qty_invalid,
+.game_purchase_action_qty .quantity.qty_invalid,
+.quantity.qty_invalid
+{
+	background-color: #5a0000;
+	outline: #ff000091;
+	color: red;
+}
+
+.btn_quantity_update[disabled]
+{
+	pointer-events: none;
+}
