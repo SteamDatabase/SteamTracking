@@ -81,6 +81,7 @@ public:
     virtual unknown_ret GetAvailableSeats(unsigned int) = 0;
     virtual unknown_ret GetAssociatedSiteName() = 0;
     virtual unknown_ret BIsRunningInCafe() = 0;
+    virtual unknown_ret BAllowCachedCredentialsInCafe() = 0;
     virtual unknown_ret RequiresLegacyCDKey(unsigned int, bool*) = 0;
     virtual unknown_ret GetLegacyCDKey(unsigned int, char*, int) = 0;
     virtual unknown_ret SetLegacyCDKey(unsigned int, char const*) = 0;

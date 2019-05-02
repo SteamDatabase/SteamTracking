@@ -109,6 +109,8 @@ message SiteServerUI_ContentCacheStatus_Response {
 	optional string cache_location = 3;
 	optional uint32 max_size_gb = 4;
 	optional bool p2p_enabled = 5;
+	optional string explicit_ip_address = 9;
+	optional bool external_process = 10;
 	optional uint32 current_size_gb = 6;
 	optional uint64 current_bw = 7;
 	optional uint64 total_bytes_served = 8;
@@ -120,6 +122,8 @@ message SiteServerUI_ContentCacheConfig_Request {
 	optional string cache_location = 3;
 	optional uint32 max_size_gb = 4;
 	optional bool p2p_enabled = 5;
+	optional bool external_process = 6;
+	optional string explicit_ip_address = 7;
 }
 
 message SiteServerUI_ContentCacheConfig_Response {

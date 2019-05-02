@@ -270,7 +270,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamclientogs.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_messages_auth.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_messages_sdr.pb.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_network.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_network_config.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_pinglocation.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamdatagram_tickets.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamengine.o
@@ -317,6 +317,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_video.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_virtualcontroller.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_certs.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_certstore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_connections.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_lowlevel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_messages.pb.o
@@ -525,7 +526,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamclientogs.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_messages_auth.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_messages_sdr.pb.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_network.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_network_config.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_pinglocation.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamdatagram_tickets.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamengine.o
@@ -572,6 +573,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_video.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_virtualcontroller.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_certs.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_certstore.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_connections.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_lowlevel.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_messages.pb.o
@@ -1811,13 +1813,15 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/steamnetworkingsockets_udp.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/percentile_generator.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network_config.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_network_config.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_pinglocation.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamdatagram_tickets.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworking_stats.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworking_statsutils.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_certs.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_certstore.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_certstore.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_internal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/

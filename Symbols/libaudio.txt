@@ -591,9 +591,8 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&) const
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
@@ -677,6 +676,7 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
+ T int CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlSymbol, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess>(CUtlSymbol const&, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess const&) const
  T void _ValidateSelectType<CMilesAudioDevice>(CMilesAudioDevice*, CValidator&, char const*, fallback_)
  V_FixDoubleSlashes
  V_FixSlashes

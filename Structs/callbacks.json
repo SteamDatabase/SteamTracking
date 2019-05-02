@@ -475,11 +475,6 @@
         "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
     },
     {
-        "id": 814,
-        "size": 16,
-        "posted_in": "CUserFriends::UpdateChatMemberState(CSteamID, CSteamID, unsigned int, unsigned int, CSteamID, bool)"
-    },
-    {
         "id": 815,
         "size": 20,
         "posted_in": "CClientJobChatCreate::BYieldingRunClientJob(IMsgNetPacket*)"

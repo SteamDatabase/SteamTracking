@@ -23,7 +23,6 @@ message CMsgSteamDatagramRelayAuthTicket {
 	optional fixed64 legacy_gameserver_steam_id = 4;
 	optional fixed64 legacy_gameserver_net_id = 5;
 	optional fixed32 legacy_gameserver_pop_id = 9;
-	optional bytes DELETED_signature = 6;
 }
 
 message CMsgSteamDatagramSignedRelayAuthTicket {
@@ -39,7 +38,7 @@ message CMsgSteamDatagramCachedCredentialsForApp {
 	repeated bytes relay_tickets = 3;
 }
 
-message CMsgSteamDatagramHostedServerAppBackendLogin {
+message CMsgSteamDatagramGameCoordinatorServerLogin {
 	optional uint32 time_generated = 1;
 	optional uint32 appid = 2;
 	optional bytes routing = 3;
@@ -47,9 +46,16 @@ message CMsgSteamDatagramHostedServerAppBackendLogin {
 	optional bytes identity = 5;
 }
 
-message CMsgSteamDatagramSignedHostedServerAppBackendLogin {
+message CMsgSteamDatagramSignedGameCoordinatorServerLogin {
 	optional .CMsgSteamDatagramCertificateSigned cert = 1;
 	optional bytes login = 2;
 	optional bytes signature = 3;
+}
+
+message CMsgSteamDatagramHostedServerAddressPlaintext {
+	optional fixed32 ipv4 = 1;
+	optional bytes ipv6 = 2;
+	optional uint32 port = 3;
+	optional fixed64 routing_secret = 4;
 }
 

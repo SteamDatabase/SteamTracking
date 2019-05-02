@@ -29,5 +29,5 @@ public:
     virtual unknown_ret GetHostedDedicatedServerPOPID() = 0;
     virtual unknown_ret GetHostedDedicatedServerAddress(SteamDatagramHostedAddress*) = 0;
     virtual unknown_ret CreateHostedDedicatedServerListenSocket(int) = 0;
-    virtual unknown_ret GetHostedServerAppBackendLogin(SteamDatagramHostedServerAppBackendLogin*, int*, void*) = 0;
+    virtual unknown_ret GetGameCoordinatorServerLogin(SteamDatagramGameCoordinatorServerLogin*, int*, void*) = 0;
 };

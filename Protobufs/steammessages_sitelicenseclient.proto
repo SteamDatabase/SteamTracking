@@ -6,6 +6,7 @@ option cc_generic_services = false;
 message CMsgClientSiteInfo {
 	optional uint64 site_id = 1;
 	optional string site_name = 2;
+	optional bool allow_cached_credentials = 3;
 }
 
 message CMsgClientSiteLicenseCheckout {
