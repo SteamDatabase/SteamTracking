@@ -4681,6 +4681,7 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	color: red;
 }
 
+.btn_disabled,
 .btn_quantity_update[disabled]
 {
 	pointer-events: none;

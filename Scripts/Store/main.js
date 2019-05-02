@@ -1447,6 +1447,7 @@ function addToCart( subid, dedupe )
 				var filterStringForm = 'form[name=add_to_cart_'+subid+']';
 				var formSelector = jQuery( filterStringForm );
 				var begintime = jQuery.data(document, 'x_readytime');
+
 				var selecttime = 0.0;
 				if ( begintime !== undefined )
 				{
@@ -1489,10 +1490,11 @@ function addToCart( subid, dedupe )
 }
 
 // Function to handle quantity box changes per keystroke, largely to show error style if above max quantity
-function qtyBoxInputChanged( formName, id_suffix )
+function qtyBoxInputChanged( sIdSuffix, sAddToCartID )
 {
-	let elField = jQuery( "#quantity_update_" + id_suffix );
-	let elButton = jQuery( "#btn_quantity_update_" + id_suffix );
+	let elField = jQuery( "#quantity_update_" + sIdSuffix );
+	let elCartButton = jQuery( "#" + sAddToCartID );
+	let elUpdateButton = jQuery( "#btn_quantity_update_" + sIdSuffix );
 
 	try
 	{
@@ -1501,6 +1503,7 @@ function qtyBoxInputChanged( formName, id_suffix )
 		let nQty = parseInt( sQty );
 		let nQtyMax = parseInt( sQtyMax );
 
+		const sDisabledClass = 'btn_disabled';
 		const sInvalidClass = 'qty_invalid';
 
 		if ( nQty !== undefined )
@@ -1508,15 +1511,19 @@ function qtyBoxInputChanged( formName, id_suffix )
 			if ( ( nQtyMax === undefined || isNaN( nQtyMax ) ) || ( !isNaN( nQty ) && nQty > 0 && nQty <= nQtyMax ) )
 			{
 				elField.removeClass( sInvalidClass );
-				elButton.prop( 'disabled', false );
+				elCartButton.removeClass( sDisabledClass );
+				elCartButton.prop( 'disabled', false );
+				elUpdateButton.prop( 'disabled', false );
 			}
 			else
 			{
 				elField.addClass( sInvalidClass );
-				elButton.prop( 'disabled', true );
+				elCartButton.addClass( sDisabledClass );
+				elCartButton.prop( 'disabled', true );
+				elUpdateButton.prop( 'disabled', true );
 			}
 
-			elButton.show();
+			elUpdateButton.show();
 		}
 	}
 	catch( e )
