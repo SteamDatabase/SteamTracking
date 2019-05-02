@@ -862,6 +862,9 @@
       ]
     },
     "pww": {
+      "aliases": [
+        "wuh"
+      ],
       "geo": [ 114.2, 30.4 ],
       "partners": 2,
       "relay_addresses": [
@@ -1569,7 +1572,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 223,
+  "revision": 224,
   "revoked_keys": [
     "123456789"
   ]
