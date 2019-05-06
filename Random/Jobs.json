@@ -217,11 +217,11 @@
     "53": {
         "reqid": 53,
         "name": "Writer",
-        "description": "<div class='job_description_intro'><p>We aren't hiring writers at the moment. That said, if you choose to send us your resume we will keep it on file, should our needs change in the future.<\/p> <\/div>"
+        "description": "<div class=\"job_description_intro\"><p>We aren't hiring writers at the moment. That said, if you choose to send us your resume we will keep it on file, should our needs change in the future.<\/p> <p>Valve typically hires writers who have achieved a high level of success in the entertainment field. Please provide a link to your public work when applying.<\/p><\/div>"
     },
     "67": {
         "reqid": 67,
         "name": "Writing - Other",
-        "description": "<div class='job_description_intro'><p>Valve hires writers whose work has caught our interest. We\u2019re excited to work with them, and to learn from them. In other words: Find your voice. And we\u2019ll find you.<\/p> "
+        "description": "<div class=\"job_description_intro\"><p>Valve hires writers whose work has caught our interest. We're excited to work with them, and to learn from them.<\/p><p>We're looking for writers who have succeeded at the highest level in the field of entertainment. While we typically reach out to writers directly, we'd love to hear from you if you believe you're someone we've overlooked.<\/p><p>A link to your public work is all that's needed to apply.<\/p><\/div>"
     }
 }
