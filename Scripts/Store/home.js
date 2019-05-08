@@ -735,9 +735,9 @@ GHomepage = {
 			var rgMatchedTags = [];
 			bShowAdditionalReasons = false;
 
-			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length <= 3; i++ )
+			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length < 4; i++ )
 			{
-				if( rgItemData.tags.indexOf( GDynamicStore.s_rgRecommendedTags[i].name ) !== -1 )
+				if( rgItemData.tagids.indexOf( GDynamicStore.s_rgRecommendedTags[i].tagid ) !== -1 )
 					rgMatchedTags.push( '<span>' + GDynamicStore.s_rgRecommendedTags[i].name + '</span>' );
 
 			}
@@ -745,6 +745,7 @@ GHomepage = {
 				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you play similar games" );
 			else
 				var $ReasonMain = $J('<div/>').addClass('main').addClass('bytags').html( "<strong>Recommended<\/strong> because you played games tagged with" );
+
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
 
