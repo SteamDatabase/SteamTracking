@@ -58,6 +58,19 @@
         "155.133.234.0/24"
       ]
     },
+    "auw2": {
+      "desc": "AWS us-west-2 (Oregon)",
+      "ping_only": true,
+      "relay_addresses": [
+        "34.212.218.15:27015-27019"
+      ],
+      "relays": [
+        {
+          "ipv4": "34.212.218.15",
+          "port_range": [ 27015, 27019 ]
+        }
+      ]
+    },
     "bom": {
       "desc": "Mumbai",
       "geo": [ 72.49, 18.58 ],
@@ -1028,6 +1041,7 @@
       ]
     },
     "sham": {
+      "desc": "Shanghai (Mobile)",
       "partners": 2,
       "relay_addresses": [
         "117.184.42.132:27015-27068",
@@ -1065,6 +1079,7 @@
       ]
     },
     "shat": {
+      "desc": "Shanghai (Telecom)",
       "partners": 2,
       "relay_addresses": [
         "121.46.225.11:27015-27068",
@@ -1102,6 +1117,7 @@
       ]
     },
     "shau": {
+      "desc": "Shanghai (Unicom)",
       "partners": 2,
       "relay_addresses": [
         "211.95.37.141:27015-27068",
@@ -1572,7 +1588,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 224,
+  "revision": 225,
   "revoked_keys": [
     "123456789"
   ]
