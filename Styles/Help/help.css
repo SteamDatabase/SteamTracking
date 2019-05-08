@@ -4368,3 +4368,17 @@ table {
 		    font-size: 12px;
     margin-bottom: 4px;
 }
+
+.bb_ul
+{
+	padding-left: 0px;
+	margin-left: 1em;
+}
+
+.bb_ul > li
+{
+	position: relative;
+	left: 1em;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}

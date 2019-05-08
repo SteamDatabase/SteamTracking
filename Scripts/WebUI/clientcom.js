@@ -200,15 +200,17 @@
       n && Object.assign(u, n);
     }
     function p(e, t) {
-      void 0 === t && (t = a);
-      var n = document.getElementById(t);
-      if (n)
+      var n;
+      if (
+        (void 0 === t && (t = a),
+        (n = "string" == typeof t ? document.getElementById(t) : t))
+      )
         try {
           return JSON.parse(n.getAttribute("data-" + e) || "");
         } catch (e) {
           console.error("Failed to parse config", e);
         }
-      else console.error("Missing config element #" + t);
+      else console.error("Missing config element #", t);
     }
   },
   fGPn: function(e, t, n) {

@@ -925,6 +925,14 @@ a#store_search_link img {
 	text-decoration: line-through;
 	color: #626366;
 }
+.discount_block.discount_block_spotlight .bundle_base_discount {
+    color: #2a2b2c;
+    background: rgba(0,0,0,0.1);
+}
+.discount_block.no_discount.daily_deal_discount .bundle_base_discount {
+    color: #2a2b2c;
+    background: rgba(0,0,0,0.1);
+}
 
 .discount_block.no_discount .bundle_base_discount {
 	text-decoration: none;

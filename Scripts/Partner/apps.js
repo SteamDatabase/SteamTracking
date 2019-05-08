@@ -3418,6 +3418,61 @@ function UpdateReleaseRequest( nAppId, rgChanges, bReload )
 	});
 }
 
+function ShowBanAppDialog( appid, callbackFunc )
+{
+	var dialog = ShowPromptWithTextAreaDialog( "Ban app", '', null, null, 1000 );
+
+	var text_area = $J( dialog.m_$Content ).find( "textarea" );
+	var ban_checkbox = document.createElement( "input" );
+	ban_checkbox.id = "retireapp_mark_banned";
+	ban_checkbox.type = "checkbox";
+	ban_checkbox.checked = true;
+	var ban_label = document.createElement( "label" );
+	ban_label.htmlFor = "retireapp_mark_banned";
+	ban_label.textContent = 'Mark as banned internally - ignored in game count, hidden for non-owners in community profile.';
+
+	text_area.before( $J( "<div/>", { html: "This will ban the appID from Steam. This includes the following actions:<br><br><ul><li>Hide the store page<li>Hide all store packages that the appID is in<li>Diable key requests<li>Set free on-demand packages to not available<li>Remove the appID from the trading card coupon program<li>Mark any trading cards or Inventory Service items as unmarketable<\/ul><br>Please leave a note below on why this app is being banned, which will be saved in the internal notes field.", style: "font-size: 16px; padding-bottom: 10px" } ),
+		ban_checkbox,
+		ban_label);
+	text_area.css({ height: '200px' });
+
+	dialog.done( function( data ) {
+		data = v_trim( data );
+
+		var rgChanges = { sessionid: g_sessionID, notes: data };
+		var bBanned = $J( ban_checkbox ).prop('checked');
+
+		UpdateReleaseRequest( appid, rgChanges, false ); // This will set the internal notes field with the text from data
+
+		$J.ajax({
+			url: 'https://partner.steamgames.com/apps/banapp/' + appid,
+			cache: false,
+			data: { sessionid: g_sessionID, notes: data, banned: bBanned ? 1 : 0},
+			type: "POST",
+			error: onAjaxFail,
+			success: function( response )
+			{
+				if( response.success == 1 )
+				{
+					if ( callbackFunc )
+					{
+						callbackFunc();
+					}
+					else
+					{
+						location.reload();
+					}
+				}
+				else
+				{
+					ShowAlertDialog( 'Error', response.errors );
+				}
+
+			}
+		});
+	} );
+}
+
 var rgUrls = [];
 var nFailureCount = 0;
 

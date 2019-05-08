@@ -4,6 +4,18 @@ var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
 var g_parentalConsentDialog = null;
 
+function ResetReCaptcha()
+{
+	if (typeof grecaptcha !== 'undefined') {
+		grecaptcha.reset();
+	}
+}
+
+function CaptchaText()
+{
+	return $J('#captcha_text').val() || $J('#g-recaptcha-response').val();
+}
+
 function StartCreationSession()
 {
 	if ( g_parentalConsentDialog )
@@ -12,7 +24,11 @@ function StartCreationSession()
 	$J.ajax( {
 		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
-		data: { 'email' : $J( '#email' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
+		data: {
+			'email': $J( '#email' ).val(),
+			'captchagid' : $J('#captchagid').val(),
+			'captcha_text' : CaptchaText()
+		}
 	})
 	.done( function( data ) {
 
@@ -67,7 +83,12 @@ function StartCreationSessionParentalConsent()
 	$J.ajax( {
 		type: 'POST',
 		url: g_sBaseURL + 'join/ajaxverifyemail',
-		data: { 'email' : $J( '#email' ).val(), 'parental_email' : $J( '#parental_email' ).val(), 'captchagid' : $('captchagid').value, 'captcha_text' : $('captcha_text').value }
+		data: {
+			'email': $J( '#email' ).val(),
+			'parental_email': $J( '#parental_email' ).val(),
+			'captchagid': $J('#captchagid').val(),
+			'captcha_text' : CaptchaText(),
+		}
 	})
 		.done( function( data ) {
 
@@ -203,30 +224,7 @@ function CreateAccount()
 		return;
 	}
 
-	++iAjaxCalls;
-	new Ajax.Request( g_sBaseURL + 'join/verifycaptcha/',
-	  {
-	    type: 'POST',
-	    parameters: { captchagid : $('captchagid').value, 'captcha_text' : $('captcha_text').value,
-					  email: $('email').value, count : iAjaxCalls },
-	    onSuccess: function(transport){
-	      if ( transport.responseText ){
-	        
-	        try {
-	      	  var result = transport.responseText.evalJSON(true);
-	      	} catch ( e ) {
-	      	  //alert(e);
-	      	  	      	  return FinishFormVerification( false );
-	      	}
-	      	return FinishFormVerification( result.bCaptchaMatches );
-		  }
-		  
-		  		  return FinishFormVerification( false );
-	    },
-	    onFailure: function(){
-	      	      return FinishFormVerification( false );
-	    }
-	  });
+	FinishFormVerification(true);
 }
 
 
@@ -563,6 +561,8 @@ function ShowError( strError )
 	$J('#' + error_div).show();
 	Effect.ScrollTo( error_div );
 	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#f4b786' } );
+
+	ResetReCaptcha();
 }
 
 

@@ -511,6 +511,25 @@ pre.results {
 	width: 1004px;
 }
 
+.gameimagepreview.library_logo > img,
+.gameimagepreview.library_hero > img,
+.gameimagepreview.library_capsule > img
+{
+	max-width: 100%;
+	display: block;
+}
+
+.gameimagepreview.library_capsule
+{
+	width: 300px;
+}
+
+.gameimagepreview.library_logo,
+.gameimagepreview.library_hero
+{
+	width: 640px;
+}
+
 .partner_broadcast_side_panel {
 	width: 155px;
 	height: 337px; /* Flush with the bottom */

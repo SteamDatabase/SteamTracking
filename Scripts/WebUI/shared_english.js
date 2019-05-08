@@ -7,22 +7,27 @@ LocalizationReady("shared", "english", {
   Button_Clone: "Clone",
   Button_Confirm: "Confirm",
   Button_Copy: "Copy",
+  Button_CopyClipboard: "Copy to Clipboard",
   Button_CopyLink: "Copy Link",
   Button_Create: "Create",
   Button_Delete: "Delete",
+  Button_Discuss: "Discuss",
   Button_Dismiss: "Dismiss",
   Button_Edit: "Edit",
   Button_Publish: "Publish",
+  Button_Post: "Post",
   Button_OK: "OK",
   Button_Overwrite: "Overwrite",
   Button_Retry: "Retry",
   Button_Save: "Save",
+  Button_Share: "Share",
   Button_Update: "Update",
   Button_SaveAndContinue: "Save and Continue",
   Button_Follow: "Follow",
-  Button_Ignore: "Ingore",
+  Button_Ignore: "Ignore",
   Button_NotifyMe: "Notify Me",
   Button_NotInterested: "Not Interested",
+  Button_RateUp: "Rate Up",
 
   Input_Error_NumberTooSmall: "Number too small.",
   Input_Error_NumberTooLarge: "Number too large.",
@@ -107,7 +112,7 @@ LocalizationReady("shared", "english", {
   EventCalender_Show: "show",
   EventCalender_Show_All: "all",
 
-  EventDisplay_Admin_Title: "Admin:",
+  EventDisplay_Admin_Title: "Admin tools:",
 
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
@@ -155,6 +160,21 @@ LocalizationReady("shared", "english", {
   EventDisplay_TimeInPast: "Posted",
   EventDisplay_TimeUpcoming: "Event Starts",
   EventDisplay_TimeEventActive: "Event is running now",
+
+  EventDisplay_Share_Link: "Link: ",
+  EventDisplay_Share_OnMyStatus: "Share directly to my status",
+  EventDisplay_Share_OnMyStatus_Details:
+    "Post this status to your Friends Activity feed. Steam will include the message and item preview shown below.",
+  EventDisplay_Share_OnMyStatus_Placeholder:
+    "Say something about this to your friends...",
+  EventDisplay_Share_OnSteam: "Share on Steam Community as a status update",
+  EventDisplay_Share_OnFaceBook: "Share on Facebook",
+  EventDisplay_Share_OnTwitter: "Share on Twitter",
+  EventDisplay_Share_OnReddit: "Share on Reddit",
+  EventDisplay_Share_Success: "Success!",
+  EventDisplay_Share_Failure: "Failed with following message: ",
+  EventDisplay_Share_Announcement: "%1$s Announcement",
+  EventDisplay_Share_Event: "%1$s Event",
 
   EventEditor_Publish_VisibleNow: "Make Visible Now",
   EventEditor_Publish_VisibleNow_ttip:
@@ -419,6 +439,40 @@ LocalizationReady("shared", "english", {
   DASHPlayerControls_IsLive: "Live",
   DASHPlayerControls_ClickToPlay: "Click to Play",
   DASHPlayerControls_IsReplay: "RE-BROADCAST",
+  DASHPlayerControls_Start: "Start",
+  DASHPlayerControls_End: "End",
+
+  Played_Minutes: "%1$s minutes",
+  Played_Hours: "%1$s hours",
+
+  WriteReview_Dialog_PostReview: "Post review",
+  WriteReview_Dialog_Title: "Review",
+  WriteReview_Dialog_Playtime: "You've played for %1$s",
+  WriteReview_Dialog_RecommendGame:
+    "Would you recommend this game to other players?",
+  WriteReview_Dialog_GetHelp_Btn: "Get help with your purchase",
+  WriteReview_Dialog_Visibility: "Visibility:",
+  WriteReview_Dialog_Public: "Public",
+  WriteReview_Dialog_Friends: "Friends Only",
+  WriteReview_Dialog_Yes: "Yes",
+  WriteReview_Dialog_No: "No",
+  WriteReview_Dialog_GetSupport_Btn: "Get help with your purchase",
+  WriteReview_Dialog_GetSupport_Desc:
+    "Get technical advice, official customer support, or request a refund.",
+  WriteReview_Dialog_AddReview_Btn: "Post a review",
+  WriteReview_Dialog_AddReview_Desc: "Share your thoughts with other players.",
+  WriteReview_Dialog_AddReview_Header: "Would you like to post a review?",
+  WriteReview_Dialog_ReviewInstructions_Link: "Rules and Guidelines",
+  WriteReview_Dialog_ReviewInstructions:
+    "Please describe what you liked or disliked about this product and whether you recommend it to others. Please remember to be polite and follow the %1$s.",
+  WriteReview_Dialog_AllowComments: "Allow comments",
+  WriteReview_Dialog_FreeDisclaimer:
+    "Check this box if you receieved this product for free",
+  WriteReview_Dialog_FreeDisclaimer_Tooltip:
+    "Check this box if you were given this product for free. Will show Product received for free alongside your review. If you received additional compensation for the review of this game, you must disclose that in the text of your review.",
+  WriteReview_Dialog_FormattingHelp: "Formatting Help",
+  WriteReview_Dialog_GenericError:
+    "We encountered a problem while posting your review. Please try again later.",
 
   Broadcast_View_Stack_H: "Horizontal View",
   Broadcast_View_Stack_V: "Vertical View",
@@ -465,6 +519,27 @@ LocalizationReady("shared", "english", {
   SocialMedia_Type_ShortName_5: "Twitch",
   SocialMedia_Type_ShortName_6: "YouTube",
   SocialMedia_Type_ShortName_7: "Facebook",
+
+  MobileLogin_NoSteamAccount: "Don't have a Steam account?",
+  MobileLogin_CreateAccount: "Create a Free Account",
+  MobileLogin_ForgotPassword: "Forgot your account name or password?",
+  MobileLogin_RefreshCaptcha: "Refresh",
+  MobileLogin_SignIn: "Sign in",
+  MobileLogin_SigningIn: "Signing in",
+  MobileLogin_AccountName: "Steam Account Name",
+  MobileLogin_Password: "Password",
+  MobileLogin_CaptchaVerification: "Verification",
+  MobileLogin_Enter2FA:
+    "Enter the code generated on the Steam Guard section of your Steam Mobile App.",
+  MobileLogin_Enter2FAHelp: "I cannot access my Steam Guard code",
+  MobileLogin_EnterSteamguard: "I did not received my Steam Guard code e-mail",
+  MobileLogin_SteamguardCode: "Steam Guard Code",
+  MobileLogin_SteamguardSubmit: "Submit & Sign In",
+  MobileLogin_SentSteamguard_1: "We sent a message to your",
+  MobileLogin_SentSteamguard_2: "e-mail. Enter the Steam Guard code provided.",
+
+  MobileLogin_Error_RateLimitExceeded:
+    "There have been too many login failures from your network in a short time period. Please wait and try again later.",
 
   Emoticon_Search: "Search Emoticons",
   Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",

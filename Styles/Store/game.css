@@ -376,13 +376,17 @@ img.game_header_image_full {
 
 	color: #d5d6d8;
 	margin-bottom: 28px;
-	background: -moz-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%, rgba(102,192,244,0.4) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(64,120,152,0.4)), color-stop(100%,rgba(102,192,244,0.4))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-60deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* IE10+ */
-	background: linear-gradient(135deg,  rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66407898', endColorstr='#6667c1f5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    background: -moz-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%, rgba(102,192,244,0.4) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(64,120,152,0.4)), color-stop(100%,rgba(102,192,244,0.4)));
+    background: -webkit-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%);
+    background: -o-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%);
+    background: -ms-linear-gradient(-60deg, rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%);
+    background: linear-gradient(135deg, rgba(64,120,152,0.4) 10%,rgba(102,192,244,0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66407898', endColorstr='#6667c1f5',GradientType=1 );
+
+
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    border-radius: 4px;
 }
 
 .game_area_comingsoon p, {
@@ -429,14 +433,37 @@ img.game_header_image_full {
 	overflow: visible;
 	padding-left: 16px;
 	padding-top: 12px;
-	min-height: 51px;
+	min-height: 38px;
 	position: relative;
 }
+.game_area_comingsoon .wishlist_add_reminder {
+    height: 32px;
+    padding: 16px;
+    color: #90a0ad;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: -moz-linear-gradient(-60deg, rgba(15, 28, 36, 0.4) 10%, rgba(0, 0, 0, 0.4) 100%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(10%,rgba(15, 28, 36, 0.4)), color-stop(100%,rgba(0, 0, 0, 0.4)));
+    background: -webkit-linear-gradient(-60deg, rgba(15, 28, 36, 0.4) 10%,rgba(0, 0, 0, 0.4) 100%);
+    background: -o-linear-gradient(-60deg, rgba(15, 28, 36, 0.4) 10%,rgba(0, 0, 0, 0.4) 100%);
+    background: -ms-linear-gradient(-60deg, rgba(15, 28, 36, 0.4) 10%,rgba(0, 0, 0, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(15, 28, 36, 0.4) 10%,rgba(0, 0, 0, 0.4) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1c2466', endColorstr='#00000066',GradientType=1 );
+}
+.wishlist_note {
+    line-height: 15px;
+}
+
 
 .game_area_comingsoon h1 {
 	font-size: 24px;
     font-weight: normal;
     color: #d5d6d8;
+}
+.game_area_comingsoon .not_yet {
+    color: #90aabb;
 }
 
 .notice_box_content {
@@ -2000,6 +2027,35 @@ a.friend_block_holder:hover {
 
 #add_to_wishlist_area, #add_to_wishlist_area_success, #add_to_wishlist_fail {
     display: inline-block;
+    position: relative;
+}
+
+#add_to_wishlist_area_success .wishlist_added_temp_notice {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background: #bbc9d3;
+    z-index: 2;
+    padding: 16px;
+    width: 200px;
+    box-shadow: 2px 2px 10px #000;
+    color: #222;
+    font-size: 14px;
+    border-radius: 2px;
+}
+#add_to_wishlist_area_success .wishlist_added_temp_notice:after {
+    bottom: 100%;
+    left: 40px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #bbc9d3;
+    border-width: 11px;
+    margin-left: -11px;
 }
 
 .game_area_demo_btn, .game_area_wishlist_btn {
@@ -2262,7 +2318,7 @@ img.package_header {
 }
 
 .queue_overflow_ctn {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .queue_ctn {

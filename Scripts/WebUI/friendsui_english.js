@@ -1233,6 +1233,7 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_GenericWithOthers: "Chat with %1$s members",
   ChatRoom_GenericEmpty: "(empty chat)",
   ChatRoom_NoMessages: "There are no messages in this channel.",
+  FriendChat_NoMessages: "You have no recent messages with this friend.",
 
   ChatRoom_New_Messages: "New messages since %1$s",
 

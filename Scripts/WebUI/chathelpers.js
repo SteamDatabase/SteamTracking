@@ -412,15 +412,17 @@
       n && Object.assign(s, n);
     }
     function m(e, t) {
-      void 0 === t && (t = c);
-      var n = document.getElementById(t);
-      if (n)
+      var n;
+      if (
+        (void 0 === t && (t = c),
+        (n = "string" == typeof t ? document.getElementById(t) : t))
+      )
         try {
           return JSON.parse(n.getAttribute("data-" + e) || "");
         } catch (e) {
           console.error("Failed to parse config", e);
         }
-      else console.error("Missing config element #" + t);
+      else console.error("Missing config element #", t);
     }
   },
   J0bI: function(e, t, n) {
@@ -799,7 +801,6 @@
           r.c([p.a], e.prototype, "OnUnload", null),
           r.c([p.a], e.prototype, "OnFocusInternal", null),
           r.c([p.a], e.prototype, "OnBlurInternal", null),
-          r.c([i.i], e.prototype, "focused", null),
           e
         );
       })(),
@@ -1703,99 +1704,22 @@ and limitations under the License.
         PerHour: 3600,
         PerMinute: 60
       });
-    function i(e) {
-      for (var o = [], t = 1; t < arguments.length; t++)
-        o[t - 1] = arguments[t];
-      var n = p.LocalizeString(e);
-      return n
-        ? (0 < o.length &&
-            (n = n.replace(/%(\d+)\$s/g, function(e, t) {
-              if (t <= o.length && 1 <= t) {
-                var n = o[t - 1];
-                return String(null == n ? "" : n);
-              }
-              return e;
-            })),
-          n)
-        : e;
-    }
-    function o(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      var o = p.LocalizeString(e);
-      if (!o) return e;
-      for (var r, i = [], a = /(.*?)%(\d+)\$s/g, s = 0; (r = a.exec(o)); ) {
-        (s += r[0].length), i.push(r[1]);
-        var u = parseInt(r[2]);
-        1 <= u && u <= t.length && i.push(t[u - 1]);
-      }
-      return (
-        i.push(o.substr(s)),
-        c.createElement.apply(c, [c.Fragment, null].concat(i))
-      );
-    }
-    function a(e, t) {
-      for (var n = [], o = 2; o < arguments.length; o++)
-        n[o - 2] = arguments[o];
-      return i.apply(
-        void 0,
-        1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
-      );
-    }
-    function s(e, t) {
-      return void 0 === t && (t = !1), u(e, !t);
-    }
-    function u(e, t, n) {
-      void 0 === t && (t = !1), void 0 === n && (n = !0);
-      var o = t ? "#TimeSince_" : "#TimeInterval_";
-      return e >= 2 * r.PerYear
-        ? i(o + "XYears", Math.floor(e / r.PerYear))
-        : e >= r.PerYear
-          ? (e -= r.PerYear) >= 2 * r.PerMonth
-            ? i(o + "1YearXMonths", Math.floor(e / r.PerMonth))
-            : i(o + "1Year")
-          : e >= 2 * r.PerMonth
-            ? i(o + "XMonths", Math.floor(e / r.PerMonth))
-            : e >= 2 * r.PerWeek
-              ? i(o + "XWeeks", Math.floor(e / r.PerWeek))
-              : e >= r.PerWeek
-                ? i(o + "1Week", Math.floor(e / r.PerWeek))
-                : e >= 2 * r.PerDay
-                  ? i(o + "XDays", Math.floor(e / r.PerDay))
-                  : e >= r.PerDay
-                    ? (e -= r.PerDay) >= 2 * r.PerHour
-                      ? i(o + "1DayXHours", Math.floor(e / r.PerHour))
-                      : i(o + "1Day")
-                    : e >= 2 * r.PerHour
-                      ? i(o + "XHours", Math.floor(e / r.PerHour))
-                      : e >= r.PerHour
-                        ? (e -= r.PerHour) >= 2 * r.PerMinute && n
-                          ? i(o + "1HourXMinutes", Math.floor(e / r.PerMinute))
-                          : i(o + "1Hour")
-                        : n
-                          ? e >= 2 * r.PerMinute
-                            ? i(o + "XMinutes", Math.floor(e / r.PerMinute))
-                            : e >= r.PerMinute
-                              ? i(o + "1Minute")
-                              : i(o + "LessThanAMinute")
-                          : i(o + "LessThanAnHour");
-    }
     n.d(t, "b", function() {
       return i;
     }),
       n.d(t, "d", function() {
-        return o;
-      }),
-      n.d(t, "c", function() {
         return a;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "c", function() {
         return s;
       }),
+      n.d(t, "e", function() {
+        return u;
+      }),
       n.d(t, "a", function() {
-        return p;
+        return l;
       });
-    var p = new ((function() {
+    var o = (function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -1847,8 +1771,87 @@ and limitations under the License.
         }),
         e
       );
-    })())();
-    window.LocalizationManager = p;
+    })();
+    function i(e) {
+      for (var o = [], t = 1; t < arguments.length; t++)
+        o[t - 1] = arguments[t];
+      var n = l.LocalizeString(e);
+      return n
+        ? (0 < o.length &&
+            (n = n.replace(/%(\d+)\$s/g, function(e, t) {
+              if (t <= o.length && 1 <= t) {
+                var n = o[t - 1];
+                return String(null == n ? "" : n);
+              }
+              return e;
+            })),
+          n)
+        : e;
+    }
+    function a(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      var o = l.LocalizeString(e);
+      if (!o) return e;
+      for (var r, i = [], a = /(.*?)%(\d+)\$s/g, s = 0; (r = a.exec(o)); ) {
+        (s += r[0].length), i.push(r[1]);
+        var u = parseInt(r[2]);
+        1 <= u && u <= t.length && i.push(t[u - 1]);
+      }
+      return (
+        i.push(o.substr(s)),
+        c.createElement.apply(c, [c.Fragment, null].concat(i))
+      );
+    }
+    function s(e, t) {
+      for (var n = [], o = 2; o < arguments.length; o++)
+        n[o - 2] = arguments[o];
+      return i.apply(
+        void 0,
+        1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
+      );
+    }
+    function u(e, t) {
+      return void 0 === t && (t = !1), p(e, !t);
+    }
+    function p(e, t, n) {
+      void 0 === t && (t = !1), void 0 === n && (n = !0);
+      var o = t ? "#TimeSince_" : "#TimeInterval_";
+      return e >= 2 * r.PerYear
+        ? i(o + "XYears", Math.floor(e / r.PerYear))
+        : e >= r.PerYear
+          ? (e -= r.PerYear) >= 2 * r.PerMonth
+            ? i(o + "1YearXMonths", Math.floor(e / r.PerMonth))
+            : i(o + "1Year")
+          : e >= 2 * r.PerMonth
+            ? i(o + "XMonths", Math.floor(e / r.PerMonth))
+            : e >= 2 * r.PerWeek
+              ? i(o + "XWeeks", Math.floor(e / r.PerWeek))
+              : e >= r.PerWeek
+                ? i(o + "1Week", Math.floor(e / r.PerWeek))
+                : e >= 2 * r.PerDay
+                  ? i(o + "XDays", Math.floor(e / r.PerDay))
+                  : e >= r.PerDay
+                    ? (e -= r.PerDay) >= 2 * r.PerHour
+                      ? i(o + "1DayXHours", Math.floor(e / r.PerHour))
+                      : i(o + "1Day")
+                    : e >= 2 * r.PerHour
+                      ? i(o + "XHours", Math.floor(e / r.PerHour))
+                      : e >= r.PerHour
+                        ? (e -= r.PerHour) >= 2 * r.PerMinute && n
+                          ? i(o + "1HourXMinutes", Math.floor(e / r.PerMinute))
+                          : i(o + "1Hour")
+                        : n
+                          ? e >= 2 * r.PerMinute
+                            ? i(o + "XMinutes", Math.floor(e / r.PerMinute))
+                            : e >= r.PerMinute
+                              ? i(o + "1Minute")
+                              : i(o + "LessThanAMinute")
+                          : i(o + "LessThanAnHour");
+    }
+    new Map(), new Map(), new Map(), new Map();
+    var l = new o();
+    window.LocalizationManager = l;
   },
   "qM/t": function(e, t, n) {
     "use strict";
