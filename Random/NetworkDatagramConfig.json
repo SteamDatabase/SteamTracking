@@ -58,19 +58,6 @@
         "155.133.234.0/24"
       ]
     },
-    "auw2": {
-      "desc": "AWS us-west-2 (Oregon)",
-      "ping_only": true,
-      "relay_addresses": [
-        "34.212.218.15:27015-27019"
-      ],
-      "relays": [
-        {
-          "ipv4": "34.212.218.15",
-          "port_range": [ 27015, 27019 ]
-        }
-      ]
-    },
     "bom": {
       "desc": "Mumbai",
       "geo": [ 72.49, 18.58 ],
@@ -1588,7 +1575,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 225,
+  "revision": 226,
   "revoked_keys": [
     "123456789"
   ]
