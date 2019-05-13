@@ -68,6 +68,7 @@
 //
 // Store CSS (v5, current)
 //
+"Styles/styles_about.css"                        : "https://store.steampowered.com/public/css/styles_about.css?__TIME__",
 "Styles/styles_aboutv5.css"                      : "https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__",
 "Styles/styles_hwsurvey.css"                     : "https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__",
 "Styles/styles_parental.css"                     : "https://store.steampowered.com/public/css/styles_parental.css?__TIME__",
@@ -438,6 +439,8 @@
 // Steamworks CSS
 //
 "Styles/Partner/doc.css"                         : "https://partner.steamgames.com/public/css/doc.css?__TIME__",
+"Styles/Partner/header.css"                      : "https://partner.steamgames.com/public/css/header.css?__TIME__",
+"Styles/Partner/home.css"                        : "https://partner.steamgames.com/public/css/home.css?__TIME__",
 "Styles/Partner/styles_admin.css"                : "https://partner.steamgames.com/public/css/styles_admin.css?__TIME__",
 "Styles/Partner/styles_apps.css"                 : "https://partner.steamgames.com/public/css/styles_apps.css?__TIME__",
 "Styles/Partner/styles_global.css"               : "https://partner.steamgames.com/public/css/styles_global.css?__TIME__",
