@@ -1189,7 +1189,7 @@ p.deprecated.star::before {
 }
 
 
-.footer_content_right ul {
+.footer_content_right ul:not(:nth-child(3n)) {
     margin-right: 20px;
 }
 
@@ -1258,7 +1258,7 @@ p.deprecated.star::before {
 
 @media screen and (max-width: 910px) {
 
-	html.responsive .responsive_footer_ctn {
+	html .responsive_footer_ctn {
 		padding: 40px;
 	}
 
@@ -1270,12 +1270,9 @@ p.deprecated.star::before {
 	.responsive_footer_content .footer_content_right > ul:first-child {
 		padding-left: 0;
 	}
-}
 
-@media screen and (max-width: 1380px) {
-
-	.responsive_footer_content {
-		padding: 0 40px;
+	html .responsive_footer_ctn .responsive_footer_content .footer_content_right ul {
+		margin-right: 0;
 	}
-
 }
+

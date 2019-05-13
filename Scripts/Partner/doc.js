@@ -119,6 +119,13 @@ function updateSelectedSection()
 	}
 }
 
+function HideDocMenuOnMobile()
+{
+	if ( $J(window).width() <= 750 )
+		$J( '#docToc' ).addClass( 'closed' );
+
+}
+
 $J( function() {
 	// Restrict default languages to those we often use - other languages can still be picked with [code=lang]
 	hljs.configure({

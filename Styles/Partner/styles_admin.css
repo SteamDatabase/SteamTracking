@@ -1,11 +1,11 @@
 
 .AdminPageContent {
-	padding: 0px 46px;
-	margin: 12px auto 64px auto;
+	padding: 0 46px;
 	position: relative;
 	max-width: 1280px;
-	min-width: 800px;
 	text-align: left;
+	margin: 0 auto 64px auto;
+	min-height: calc( 100vh - 388px );
 }
 
 .AdminPageContent strong {

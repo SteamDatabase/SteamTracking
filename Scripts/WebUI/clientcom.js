@@ -69,7 +69,7 @@
       return Math.max(t, Math.min(n, e));
     }
     function i(e, t, n, o, r) {
-      return o + (r - o) * (e - t) / (n - t);
+      return o + ((r - o) * (e - t)) / (n - t);
     }
     n.d(t, "b", function() {
       return o;
@@ -428,8 +428,7 @@
               }),
                 (o.m_socket.onmessage = o.OnSocketMessage.bind(o)),
                 (o.m_socket.onopen = function(e) {
-                  o
-                    .SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                  o.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(e) {
                       1 == e.success
                         ? ((o.m_ClientInfo.ulVersion = e.clientversion),
@@ -547,7 +546,9 @@ and limitations under the License.
         c =
           i < 3
             ? t
-            : null === o ? (o = Object.getOwnPropertyDescriptor(t, n)) : o;
+            : null === o
+            ? (o = Object.getOwnPropertyDescriptor(t, n))
+            : o;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         c = Reflect.decorate(e, t, n, o);
       else
@@ -617,8 +618,8 @@ and limitations under the License.
                       2 & t[0]
                         ? i.return
                         : t[0]
-                          ? i.throw || ((c = i.return) && c.call(i), 0)
-                          : i.next) &&
+                        ? i.throw || ((c = i.return) && c.call(i), 0)
+                        : i.next) &&
                     !(c = c.call(i, t[1])).done)
                 )
                   return c;
