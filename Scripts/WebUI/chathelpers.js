@@ -97,7 +97,7 @@
       return Math.max(t, Math.min(n, e));
     }
     function i(e, t, n, o, r) {
-      return o + ((r - o) * (e - t)) / (n - t);
+      return o + (r - o) * (e - t) / (n - t);
     }
     n.d(t, "b", function() {
       return o;
@@ -1449,7 +1449,8 @@
               }),
                 (o.m_socket.onmessage = o.OnSocketMessage.bind(o)),
                 (o.m_socket.onopen = function(e) {
-                  o.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                  o
+                    .SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(e) {
                       1 == e.success
                         ? ((o.m_ClientInfo.ulVersion = e.clientversion),
@@ -1567,9 +1568,7 @@ and limitations under the License.
         a =
           i < 3
             ? t
-            : null === o
-            ? (o = Object.getOwnPropertyDescriptor(t, n))
-            : o;
+            : null === o ? (o = Object.getOwnPropertyDescriptor(t, n)) : o;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         a = Reflect.decorate(e, t, n, o);
       else
@@ -1639,8 +1638,8 @@ and limitations under the License.
                       2 & t[0]
                         ? i.return
                         : t[0]
-                        ? i.throw || ((a = i.return) && a.call(i), 0)
-                        : i.next) &&
+                          ? i.throw || ((a = i.return) && a.call(i), 0)
+                          : i.next) &&
                     !(a = a.call(i, t[1])).done)
                 )
                   return a;
@@ -1821,34 +1820,34 @@ and limitations under the License.
       return e >= 2 * r.PerYear
         ? i(o + "XYears", Math.floor(e / r.PerYear))
         : e >= r.PerYear
-        ? (e -= r.PerYear) >= 2 * r.PerMonth
-          ? i(o + "1YearXMonths", Math.floor(e / r.PerMonth))
-          : i(o + "1Year")
-        : e >= 2 * r.PerMonth
-        ? i(o + "XMonths", Math.floor(e / r.PerMonth))
-        : e >= 2 * r.PerWeek
-        ? i(o + "XWeeks", Math.floor(e / r.PerWeek))
-        : e >= r.PerWeek
-        ? i(o + "1Week", Math.floor(e / r.PerWeek))
-        : e >= 2 * r.PerDay
-        ? i(o + "XDays", Math.floor(e / r.PerDay))
-        : e >= r.PerDay
-        ? (e -= r.PerDay) >= 2 * r.PerHour
-          ? i(o + "1DayXHours", Math.floor(e / r.PerHour))
-          : i(o + "1Day")
-        : e >= 2 * r.PerHour
-        ? i(o + "XHours", Math.floor(e / r.PerHour))
-        : e >= r.PerHour
-        ? (e -= r.PerHour) >= 2 * r.PerMinute && n
-          ? i(o + "1HourXMinutes", Math.floor(e / r.PerMinute))
-          : i(o + "1Hour")
-        : n
-        ? e >= 2 * r.PerMinute
-          ? i(o + "XMinutes", Math.floor(e / r.PerMinute))
-          : e >= r.PerMinute
-          ? i(o + "1Minute")
-          : i(o + "LessThanAMinute")
-        : i(o + "LessThanAnHour");
+          ? (e -= r.PerYear) >= 2 * r.PerMonth
+            ? i(o + "1YearXMonths", Math.floor(e / r.PerMonth))
+            : i(o + "1Year")
+          : e >= 2 * r.PerMonth
+            ? i(o + "XMonths", Math.floor(e / r.PerMonth))
+            : e >= 2 * r.PerWeek
+              ? i(o + "XWeeks", Math.floor(e / r.PerWeek))
+              : e >= r.PerWeek
+                ? i(o + "1Week", Math.floor(e / r.PerWeek))
+                : e >= 2 * r.PerDay
+                  ? i(o + "XDays", Math.floor(e / r.PerDay))
+                  : e >= r.PerDay
+                    ? (e -= r.PerDay) >= 2 * r.PerHour
+                      ? i(o + "1DayXHours", Math.floor(e / r.PerHour))
+                      : i(o + "1Day")
+                    : e >= 2 * r.PerHour
+                      ? i(o + "XHours", Math.floor(e / r.PerHour))
+                      : e >= r.PerHour
+                        ? (e -= r.PerHour) >= 2 * r.PerMinute && n
+                          ? i(o + "1HourXMinutes", Math.floor(e / r.PerMinute))
+                          : i(o + "1Hour")
+                        : n
+                          ? e >= 2 * r.PerMinute
+                            ? i(o + "XMinutes", Math.floor(e / r.PerMinute))
+                            : e >= r.PerMinute
+                              ? i(o + "1Minute")
+                              : i(o + "LessThanAMinute")
+                          : i(o + "LessThanAnHour");
     }
     new Map(), new Map(), new Map(), new Map();
     var l = new o();
@@ -2074,97 +2073,99 @@ and limitations under the License.
                     )
                   )
                 : e.account_mismatch
-                ? r.createElement(
-                    g,
-                    { render: this.props.controller.GetPreRenderedHTML() },
-                    r.createElement(
-                      "div",
-                      { className: "inviteLabel" },
-                      Object(s.b)("#InviteLanding_AccountMismatch")
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: "inviteLabel" },
+                  ? r.createElement(
+                      g,
+                      { render: this.props.controller.GetPreRenderedHTML() },
                       r.createElement(
-                        "button",
-                        {
-                          className: o,
-                          type: "button",
-                          onClick: this.OpenInSteamIgnoreAccount
-                        },
-                        Object(s.b)("#InviteLanding_OpenInSteam")
+                        "div",
+                        { className: "inviteLabel" },
+                        Object(s.b)("#InviteLanding_AccountMismatch")
                       ),
                       r.createElement(
-                        "button",
-                        {
-                          className: o,
-                          type: "button",
-                          onClick: this.LaunchWebChat
-                        },
-                        Object(s.b)("#InviteLanding_OpenInWebChat")
-                      )
-                    )
-                  )
-                : e.call_unsupported
-                ? r.createElement(
-                    "div",
-                    { className: "ChatMessageInvite" },
-                    r.createElement(
-                      "div",
-                      { className: "groupName" },
-                      Object(s.b)("#InviteLanding_SentToSteam")
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: "inviteLabel" },
-                      Object(s.d)(
-                        "#InviteLanding_SentToSteam_Desc",
-                        r.createElement(
-                          "a",
-                          {
-                            href: "javascript:void(0);",
-                            onClick: this.LaunchWebChat
-                          },
-                          Object(s.b)(
-                            "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
-                          )
-                        )
-                      )
-                    )
-                  )
-                : r.createElement(
-                    g,
-                    { render: this.props.controller.GetPreRenderedHTML() },
-                    r.createElement(
-                      "div",
-                      { className: "inviteLabel inviteLabelButtons" },
-                      !n &&
+                        "div",
+                        { className: "inviteLabel" },
                         r.createElement(
                           "button",
                           {
                             className: o,
                             type: "button",
-                            onClick: this.LaunchSteamClient
+                            onClick: this.OpenInSteamIgnoreAccount
                           },
                           Object(s.b)("#InviteLanding_OpenInSteam")
                         ),
-                      r.createElement(
-                        "button",
-                        {
-                          className: o,
-                          type: "button",
-                          onClick: this.LaunchWebChat
-                        },
-                        Object(s.b)("#InviteLanding_OpenInWebChat")
+                        r.createElement(
+                          "button",
+                          {
+                            className: o,
+                            type: "button",
+                            onClick: this.LaunchWebChat
+                          },
+                          Object(s.b)("#InviteLanding_OpenInWebChat")
+                        )
                       )
-                    ),
-                    this.m_bTriedToLaunchSteam &&
-                      r.createElement(
+                    )
+                  : e.call_unsupported
+                    ? r.createElement(
                         "div",
-                        { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Object(s.b)("#InviteLanding_OpenInSteam_Help")
+                        { className: "ChatMessageInvite" },
+                        r.createElement(
+                          "div",
+                          { className: "groupName" },
+                          Object(s.b)("#InviteLanding_SentToSteam")
+                        ),
+                        r.createElement(
+                          "div",
+                          { className: "inviteLabel" },
+                          Object(s.d)(
+                            "#InviteLanding_SentToSteam_Desc",
+                            r.createElement(
+                              "a",
+                              {
+                                href: "javascript:void(0);",
+                                onClick: this.LaunchWebChat
+                              },
+                              Object(s.b)(
+                                "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
+                              )
+                            )
+                          )
+                        )
                       )
-                  )
+                    : r.createElement(
+                        g,
+                        { render: this.props.controller.GetPreRenderedHTML() },
+                        r.createElement(
+                          "div",
+                          { className: "inviteLabel inviteLabelButtons" },
+                          !n &&
+                            r.createElement(
+                              "button",
+                              {
+                                className: o,
+                                type: "button",
+                                onClick: this.LaunchSteamClient
+                              },
+                              Object(s.b)("#InviteLanding_OpenInSteam")
+                            ),
+                          r.createElement(
+                            "button",
+                            {
+                              className: o,
+                              type: "button",
+                              onClick: this.LaunchWebChat
+                            },
+                            Object(s.b)("#InviteLanding_OpenInWebChat")
+                          )
+                        ),
+                        this.m_bTriedToLaunchSteam &&
+                          r.createElement(
+                            "div",
+                            {
+                              className: "inviteLabel inviteLabelLaunchPrompt"
+                            },
+                            Object(s.b)("#InviteLanding_OpenInSteam_Help")
+                          )
+                      )
             );
           }),
           c.c([p.x], e.prototype, "m_bTriedToLaunchSteam", void 0),
@@ -2293,16 +2294,16 @@ and limitations under the License.
             e instanceof r
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? ((this.m_ulSteamID = a.a.fromString(e, !0)),
-                Object(u.a)(
-                  0 != this.m_ulSteamID.getHighBits(),
-                  "String " +
-                    e +
-                    " was provided as a steam ID as a string, but had no high bits set. This is likely actually an account ID or was meant to be passed as a number"
-                ))
-              : t && n && void 0 !== o
-              ? this.SetFromComponents(e, o, n, t)
-              : (this.m_ulSteamID = e ? a.a.fromNumber(e, !0) : a.a.UZERO);
+                ? ((this.m_ulSteamID = a.a.fromString(e, !0)),
+                  Object(u.a)(
+                    0 != this.m_ulSteamID.getHighBits(),
+                    "String " +
+                      e +
+                      " was provided as a steam ID as a string, but had no high bits set. This is likely actually an account ID or was meant to be passed as a number"
+                  ))
+                : t && n && void 0 !== o
+                  ? this.SetFromComponents(e, o, n, t)
+                  : (this.m_ulSteamID = e ? a.a.fromNumber(e, !0) : a.a.UZERO);
         }
         return (
           (r.InitFromAccountID = function(e) {
