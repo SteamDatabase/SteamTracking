@@ -29,6 +29,8 @@ LocalizationReady("shared", "english", {
   Button_NotInterested: "Not Interested",
   Button_RateUp: "Rate Up",
 
+  ToolTip_CopyLinkToClipboard: "Copy link to clipboard",
+
   Input_Error_NumberTooSmall: "Number too small.",
   Input_Error_NumberTooLarge: "Number too large.",
   Input_Error_MustBeURL: "Field is not a valid URL.",
@@ -342,14 +344,14 @@ LocalizationReady("shared", "english", {
 
   EventEditor_ConvertHTML_Error: "Failed Converting HTML",
   EventEditor_ConvertHTML_Error_Desc:
-    "Failed Converting HTML to bbcode with the following error: '%1$s'",
+    "Failed Converting HTML to BBCode with the following error: '%1$s'",
   EventEditor_InsertLinkURL: "Insert URL",
   EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
   EventEditor_ImportHTML: "Import HTML",
   EventEditor_ImportFromHTML: "Import from HTML",
   EventEditor_ImportFromHTML_ttip:
     "Import from HTML. Will automatically convert your html to Steam formatting tags.",
-  EventEditor_ImportFromHTML_Instruction: "Type of parse HTML below.",
+  EventEditor_ImportFromHTML_Instruction: "Type or paste HTML below.",
   EventEditor_ImportFromHTML_PreserveNewlines: "Preserve newlines",
   EventEditor_ImportFromHTML_PreserveNewlines_Hint:
     "In HTML, newlines usually have no effect, but in BBCode they will show as blank lines.  If you used <p> or <br> tags, leave this unchecked.  If you usually use blog software that automatically adds <br> tags for newlines, you will probably want to check this box.",
@@ -357,7 +359,7 @@ LocalizationReady("shared", "english", {
   EventEditor_ImportFromHTML_ConversionInProgress:
     "Conversion in progress. Please do not close dialog.",
   EventEditor_ImportFromHTML_ConvertFinished:
-    "Convervsion Finished. You can now safely close this dialog.",
+    "Conversion Finished. You can now safely close this dialog.",
   EventEditor_InsertYouTube: "Insert YouTube™ Video",
   EventEditor_InsertYouTube_Left: "Left-aligned",
   EventEditor_InsertYouTube_Right: "Right-aligned",
@@ -467,7 +469,7 @@ LocalizationReady("shared", "english", {
     "Please describe what you liked or disliked about this product and whether you recommend it to others. Please remember to be polite and follow the %1$s.",
   WriteReview_Dialog_AllowComments: "Allow comments",
   WriteReview_Dialog_FreeDisclaimer:
-    "Check this box if you receieved this product for free",
+    "Check this box if you received this product for free",
   WriteReview_Dialog_FreeDisclaimer_Tooltip:
     "Check this box if you were given this product for free. Will show Product received for free alongside your review. If you received additional compensation for the review of this game, you must disclose that in the text of your review.",
   WriteReview_Dialog_FormattingHelp: "Formatting Help",
@@ -532,11 +534,13 @@ LocalizationReady("shared", "english", {
   MobileLogin_Enter2FA:
     "Enter the code generated on the Steam Guard section of your Steam Mobile App.",
   MobileLogin_Enter2FAHelp: "I cannot access my Steam Guard code",
-  MobileLogin_EnterSteamguard: "I did not received my Steam Guard code e-mail",
+  MobileLogin_EnterSteamguard: "I did not receive my Steam Guard code e-mail",
   MobileLogin_SteamguardCode: "Steam Guard Code",
   MobileLogin_SteamguardSubmit: "Submit & Sign In",
   MobileLogin_SentSteamguard_1: "We sent a message to your",
   MobileLogin_SentSteamguard_2: "e-mail. Enter the Steam Guard code provided.",
+  MobileLogin_IncorrectSteamGuard:
+    "The entered Steam Guard code is incorrect. Please double check the code and try again.",
 
   MobileLogin_Error_RateLimitExceeded:
     "There have been too many login failures from your network in a short time period. Please wait and try again later.",

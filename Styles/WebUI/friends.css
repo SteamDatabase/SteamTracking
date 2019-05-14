@@ -432,6 +432,21 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   margin-top: 0px;
   display: none; }
 
+.contextmenu_PopoutSubMenu_29Zea {
+  position: relative;
+  width: 100%;
+  overflow: visible; }
+  .contextmenu_PopoutSubMenu_29Zea .contextmenu_PopoutSubMenuItems_1cXx5 {
+    position: absolute;
+    width: 60%;
+    height: fit-content;
+    left: 100%;
+    top: 0;
+    background: radial-gradient(ellipse farthest-corner at 50% 0%, #3c4047 0%, #3c4047 50%, #33363d 100%);
+    box-shadow: 0 10px 32px 0px #000000ab;
+    opacity: 1.0;
+    word-wrap: break-word; }
+
 .steamavatar_avatarHolder_1G7LI {
   height: 36px;
   display: flex;
@@ -442,6 +457,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   transition-timing-function: cubic-bezier(0.42, 0, 0.19, 2.28);
   flex-direction: row;
   flex-shrink: 0; }
+  .steamavatar_avatarHolder_1G7LI.Medium {
+    height: 36px; }
   .steamavatar_avatarHolder_1G7LI.Large {
     height: 84px; }
   .steamavatar_avatarHolder_1G7LI.X-Large {
@@ -5855,7 +5872,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   padding: 30px;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  height: 100%; }
 
 .bbcode_ImageModalContent_1jjqt {
   height: 100%;
@@ -7999,6 +8017,30 @@ img {
   align-items: center;
   justify-content: center;
   height: 100%; }
+
+.shared_common_MarkdownLink_KOE6T {
+  text-decoration: underline;
+  color: inherit; }
+
+.shared_common_SummaryTextArea_3Ar18 {
+  width: 100%;
+  resize: none;
+  max-height: 100px;
+  background: rgba(59, 63, 72, 0.5);
+  color: #dfe3e6;
+  font-size: 14px;
+  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 4px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px #0000;
+  transition: all .2s ease-in-out; }
+  .shared_common_SummaryTextArea_3Ar18:focus {
+    background: rgba(67, 73, 83, 0.6);
+    box-shadow: inset 1px 1px 8px #000a;
+    padding-left: 6px;
+    outline: none; }
 
 html.client_chat_frame body,
 html.web_chat_frame body {

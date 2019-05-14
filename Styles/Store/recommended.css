@@ -2355,11 +2355,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	padding: 2px 4px;
 	border-radius: 2px;
 }
-.user_reviews_beta_explanation a {
+.user_reviews_offtopic_activity_explanation a {
 	color: #556772;
 	text-decoration: underline;
 }
-.user_reviews_beta_explanation a:hover {
+.user_reviews_offtopic_activity_explanation a:hover {
 	color: #000000;
 	text-decoration: underline;
 }
@@ -2862,7 +2862,7 @@ div.graph_toggle_icon.down {
 	border-bottom: 1px solid #4582a5;
 }
 
-.user_reviews_beta_explanation {
+.user_reviews_offtopic_activity_explanation {
 	white-space: normal;
 	padding-bottom: 10px;
 	margin-bottom: 10px;

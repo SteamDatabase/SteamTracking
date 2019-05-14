@@ -533,7 +533,7 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 	
 }
 
-function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref )
+function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )
 {
 	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
@@ -544,6 +544,10 @@ function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navr
 	$J.post( url, {sessionid: g_sessionID, appid: appid} )
 		.done( function( data ) {
 			$JFromIDOrElement(divToHide).hide();
+
+			if ( divToHide2 )
+				$JFromIDOrElement(divToHide2).hide();
+
 			if ( data && data.success ) {
 				$JFromIDOrElement(divToShowSuccess).show();
 				if ( data.saleTaskCompleted ) {

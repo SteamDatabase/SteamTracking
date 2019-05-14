@@ -1,33 +1,109 @@
 
 body
 {
-	
+	background-color: #1f2126;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+h1 {
+    color: white;
+    font-size: 27px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h3 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #b2b5ba;
+}
+h4 {
+    font-size: 13px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+#PageContents {
+    width: 950px;
+    margin: auto;
+    background: none;
+    text-align: left;
+    min-height: 100%;
+    padding-top: 40px;
+    margin-top: 00px;
+    padding-left: 0;
+}
+#PageColumns
+{
+  display: flex;
+    flex-direction: row;
+  position: relative;
+}
+#PageColumns .rightCol {
+    width: 30%;
+    margin-left: 16px;
+}
+#PageColumns .leftCol {
+    width: 70%
+}
+.sectionCtn {
+    background: rgba(59, 63, 72, 0.5);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.subCtn {
+    background: #363b45;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #b2b5ba;
+
+}
+.subCtn P {
+    font-size: 12px;
+    color: #90949d;
+}
+.subCtn input {
+    height: 24px;
+    padding-left: 6px;
+    margin-left: 4px;
 }
 
+.rightSectionTitle {
+    color: #7e7e7e;
+    font-size: 14px;
+    text-transform: uppercase;
 
-#PageContents
-{
-  width: 950px;
-  margin: auto;
-  background: none;
-  text-align: left;
-  min-height: 100%;
-  padding-top: 40px;
-  margin-top: 00px;
-  padding-left: 0;
-  display: block;
-  position: relative;
+}
+.rightSectionHolder {
+    background: #25282e;
+    padding: 12px;
+    border-radius: 4px;
+}
+.rightSectionHolder.quickLinks span {
+    display: flex;
+}
+.rightSectionHolder.quickLinks a {
+    display: block;
+    flex-grow: 1;
+    margin-bottom: 8px;
 }
 
 
 .uploadTable {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #4d4b49;
+    background: rgba(59, 63, 72, 0.5);
+    border-radius: 4px;
 
 }
+.uploadTable p {
+    margin: 0px;
+}
 .uploadTable > thead > tr {
-    background-color: #2a3f5a;
+    background-color: rgba(55, 65, 78, 0.6);
     border-left: 1px solid #4d4b49;
     border-right: 1px solid #4d4b49;
 }
@@ -75,33 +151,17 @@ body
 	background-color: #0b2337;
 }
 
-#UploadInfoUrl {
-	font-weight: bolder;
-	padding: 2px;
-	color: white;
-}
 
-#UploadInfoToken {
-	font-weight: bolder;
-	padding: 2px;
-	color: white;
-}
 
 .UploadDetailInfo {
 padding: 2px;
 color: white;
 }
 
-.broadcast_upload_note_container
-{
-	border-width: 2px;
-	padding-left: 20px;
-	border: white;
-}
-
 .broadcast_upload_note {
-	background-color: #0b5a7a;
-	padding: 10px;
+	color: #c79b57;
+    padding: 0px;
+    margin-top: 0px;
 }
 
 .valveOnly {
@@ -125,4 +185,17 @@ color: white;
 
 .broadcast_row_img {
 	height: 40px;
+}
+.tokenCtn {
+    display: flex;
+}
+.infoField {
+    background: rgba(0,0,0,0.2);
+    padding: 6px 10px;
+    border-radius: 3px;
+    color: #fff;
+}
+#UploadInfoToken {
+    flex-grow: 1;
+    margin-right: 10px;
 }

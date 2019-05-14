@@ -452,7 +452,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 	var reviewType = $J('input[name="review_type"]:checked').val();
 	var purchaseType = $J('input[name="purchase_type"]:checked').val();
 	var language = $J('input[name="review_language"]:checked').val();
-	var reviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
+	var filterOfftopicActivity = $J( "#reviews_offtopic_activity_checkbox" ).is( ":checked" ) ? 1 : 0;
 	var dateRangeType = $J('input[name="review_date_range"]:checked').val();
 	var summaryNumPositiveReviews = $J( "#review_summary_num_positive_reviews" ).val();
 	var summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
@@ -471,7 +471,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 		'l' : 'english',
 		'review_type' : reviewType,
 		'purchase_type' : purchaseType,
-		'review_beta_enabled' : reviewBetaEnabled,
+		'filter_offtopic_activity' : filterOfftopicActivity,
 		'summary_num_positive_reviews' : summaryNumPositiveReviews,
 		'summary_num_reviews' : summaryNumReviews
 	}).done( function( data ) {
@@ -1339,16 +1339,15 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_graph" ).hide();
 	}
 	
-	// beta
-	var context = $J( "#review_context" ).val();
-	if ( $J( "#ReviewBetaCheckbox" ).attr( "checked" ) && ( context == 'summary' || context == 'all' ) )
+	// off-topic review activity
+	if ( $J( "#user_reviews_offtopic_activity_menu" ).is( ":visible" ) && $J( "#reviews_offtopic_activity_checkbox" ).attr( "checked" ) )
 	{
 		bAnyActiveFilters = true;
-		$J( "#reviews_beta" ).show();
+		$J( "#reviews_filter_offtopic_activity" ).show();
 	}
 	else
 	{
-		$J( "#reviews_beta" ).hide();
+		$J( "#reviews_filter_offtopic_activity" ).hide();
 	}
 
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
@@ -1373,18 +1372,14 @@ function ChangeReviewPurchaseTypeFilter()
 	ShowFilteredReviews();
 }
 
-function ChangedReviewHelpfulnessFilter()
+function ChangedOfftopicReviewActivityFilter()
 {
-	var bReviewBetaEnabled = $J( "#ReviewBetaCheckbox" ).is( ":checked" ) ? 1 : 0;
-	V_SetCookie( "review_beta_enabled", bReviewBetaEnabled, 7, "app/" );
 	ShowFilteredReviews();
 }
 
-function ClearReviewBetaFilter()
+function ClearOfftopicReviewActivityFilter()
 {
-	$J('#ReviewBetaCheckbox').attr( 'checked', false );
-	var bReviewBetaEnabled = false;
-	V_SetCookie( "review_beta_enabled", bReviewBetaEnabled, 7, "app/" );
+	$J('#reviews_offtopic_activity_checkbox').attr( 'checked', false );
 	ShowFilteredReviews();
 }
 

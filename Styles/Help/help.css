@@ -4324,6 +4324,10 @@ table {
 	max-width: 712px;
 }
 
+.dropdown_help_btn_container {
+	max-width: 712px;
+}
+
 .AccountDataPage
 {
 	padding-bottom: 40px;

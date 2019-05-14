@@ -461,6 +461,7 @@ img.game_header_image_full {
 	font-size: 24px;
     font-weight: normal;
     color: #d5d6d8;
+    line-height: 26px;
 }
 .game_area_comingsoon .not_yet {
     color: #90aabb;
@@ -1985,6 +1986,16 @@ a.friend_block_holder:hover {
 	html.responsive .bundle .tab_item_discount.no_discount {
 		margin-top: 45px;
 	}
+    html.responsive .game_area_comingsoon .wishlist_add_reminder {
+        display: block;
+        height: auto;
+    }
+    html.responsive .game_area_comingsoon .wishlist_add_reminder #add_to_wishlist_area2 {
+        margin-top: 10px;
+    }
+    html.responsive .game_area_comingsoon h1 span {
+        display: block;
+    }
 }
 
 .DRM_notice {

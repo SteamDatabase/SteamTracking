@@ -425,6 +425,8 @@ LocalizationReady("friendsui", "english", {
   Chat_Settings_Error_Unknown: "Image failed to upload",
   Chat_Settings_Error_NotLoggedOn: "Not logged on",
   Chat_Settings_Error_LimitedUser: "Limited users cannot upload images",
+  Chat_Settings_Error_LimitedUserInvite:
+    "Limited users cannot send invite links",
   Chat_Settings_Error_AccessDenied: "Bad session",
   Chat_Settings_Error_FailedToUpload: "Image failed to upload",
   Chat_Settings_Error_FileTooLarge: "Image too large",
@@ -567,6 +569,9 @@ LocalizationReady("friendsui", "english", {
   GroupSettings_Save_GenericError: "An error occurred while saving this group",
   GroupSettings_Save_NameError: "The provided name is not valid",
 
+  GroupSettings_Mobile_FavoritesDesc:
+    "Display this group at the top of my friends list so it's easy to find",
+
   Chat_Create: "Create a new Steam chat",
   Chat_CreateChatRoom: "Create a new chat",
   Chat_CreateChatRoom_Button: "Create chat",
@@ -596,11 +601,11 @@ LocalizationReady("friendsui", "english", {
     "%1$s changed the group chat avatar",
   ChatRoom_ServerMessage_Invited: "%1$s has been invited by %2$s",
   ChatRoom_ServerMessage_Invited_Multiple: "%1$s have been invited by %2$s",
-  ChatRoom_ServerMessage_Joined: "%1$s has joined the Chat",
-  ChatRoom_ServerMessage_Joined_Multiple: "%1$s and %2$s have joined the Chat",
-  ChatRoom_ServerMessage_Parted: "%1$s has left the Chat",
-  ChatRoom_ServerMessage_Parted_Multiple: "%1$s and %2$s have left the Chat",
-  ChatRoom_ServerMessage_Kicked: "%1$s was kicked from the Chat by %2$s",
+  ChatRoom_ServerMessage_Joined: "%1$s has joined the chat",
+  ChatRoom_ServerMessage_Joined_Multiple: "%1$s and %2$s have joined the chat",
+  ChatRoom_ServerMessage_Parted: "%1$s has left the chat",
+  ChatRoom_ServerMessage_Parted_Multiple: "%1$s and %2$s have left the chat",
+  ChatRoom_ServerMessage_Kicked: "%1$s was kicked from the chat by %2$s",
   ChatRoom_ServerMessage_Unhandled: "Unknown Server Message format",
   ChatRoom_ServerMessageMultiple_Separator: ", ",
 
@@ -1015,6 +1020,10 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_ExampleFriend: "Example Friend",
   FriendSettings_ExampleNickname: "Nickname",
   FriendSettings_DisableSpellcheck: "Disable spellcheck in chat message entry",
+  FriendSettings_Notification_ChatMessageDesc:
+    "Disable push notifications from friends that don't have friend specific settings",
+  FriendSettings_Notification_ChatRoomNotificationDesc:
+    "Disable all push notifications from group chats",
 
   FriendSettings_ChatFontSize: "Chat Font Size",
   FriendSetting_ChatFontSmall: "Small",
@@ -1038,6 +1047,8 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Notification_GroupEvent: "Group events and announcements",
   FriendSettings_Notification_ChatRoomNotification:
     "When I receive a chat room notification",
+  FriendSettings_Notification_Explanation:
+    "We'll try not to send you notifications if you're using Steam on your PC.",
 
   FriendSettings_Flash_Header: "Flash window when I receive a chat message:",
   FriendSettings_Flash_Always: "Always",
@@ -1324,6 +1335,8 @@ LocalizationReady("friendsui", "english", {
 
   GiveFeedback_Desc: "GIVE %1$s FEEDBACK",
   GiveFeedback_URL: "BETA",
+
+  GiveFeedback: "Give Feedback",
 
   changeLog_Button: "Change Log",
   changeLog_Value_Button: "New Change Log updates: %1$s",
