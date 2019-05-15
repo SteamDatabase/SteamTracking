@@ -787,7 +787,6 @@
  T CCrossProcessPipe::BIsDisconnected()
  T CCrossProcessPipe::BPeek(unsigned char*)
  T CCrossProcessPipe::BRead(CUtlBuffer&)
- T CCrossProcessPipe::BResetPipeState()
  T CCrossProcessPipe::BSetIpPortFromName(char const*)
  T CCrossProcessPipe::BWait(unsigned int, bool)
  T CCrossProcessPipe::BWrite(CUtlBuffer&, bool)
@@ -800,10 +799,10 @@
  T CCrossProcessPipe::Validate(CValidator&, char const*)
  T CCrossProcessPipe::~CCrossProcessPipe()
  T CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)
- T CCrypto::Base64Decode(char const*, void*, unsigned int*, bool)
+ T CCrypto::Base64Decode_Legacy(char const*, void*, unsigned int*, bool)
  T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
- T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
+ T CCrypto::Base64Encode_Legacy(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(void const*, unsigned long, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, void*, unsigned int*)
@@ -848,8 +847,6 @@
  T CDebugStatsSystem::~CDebugStatsSystem()
  T CDebugStatsValue::CDebugStatsValue(char const*)
  T CDebugStatsValue::~CDebugStatsValue()
- T CDefOps<int>::LessFunc(int const&, int const&)
- T CDefOps<unsigned int>::LessFunc(unsigned int const&, unsigned int const&)
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(char const*)
  T CDirIterator::CurrentFileName()
@@ -1670,22 +1667,18 @@
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&) const
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&)
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t const&)
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -1738,15 +1731,15 @@
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
+ T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::AddToTail(AllowRegistryAccess_s const&)
  T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::GrowVector(int)
- T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::InsertBefore(int, AllowRegistryAccess_s const&)
  T CUtlVector<AllowRegistryAccess_s, CUtlMemory<AllowRegistryAccess_s> >::~CUtlVector()
+ T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::AddToTail(CBaseFrameFunction* const&)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::InsertBefore(int, CBaseFrameFunction* const&)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::Remove(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::~CUtlVector()
+ T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::AddToTail(CCoroutine::vprofNode_t const&)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::InsertBefore(int, CCoroutine::vprofNode_t const&)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
@@ -1758,10 +1751,9 @@
  T CUtlVector<CJobMgr::JobSleeping_t, CUtlMemory<CJobMgr::JobSleeping_t> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
- T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::InsertBefore(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::AddToTail(CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
- T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t, CUtlMemory<CUtlHashMap<EMsg, int, CDefEquals<EMsg>, HashFunctor<EMsg> >::HashBucket_t> >::~CUtlVector()
@@ -1785,45 +1777,43 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertMultipleBefore(int, int, CUtlString const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
+ T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::AddToTail(CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
- T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::InsertBefore(int, CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::~CUtlVector()
+ T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::AddToTail(CWorkThread* const&)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::FastRemove(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::GrowVector(int)
- T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::InsertBefore(int, CWorkThread* const&)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::~CUtlVector()
+ T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::AddToTail(ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t const&)
  T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::GrowVector(int)
- T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::InsertBefore(int, ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t const&)
  T CUtlVector<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t, CUtlMemory<ClientProcessMonitor::CClientProcessMonitor::DelayedRegistration_t> >::~CUtlVector()
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::FastRemove(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::GrowVector(int)
- T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::InsertBefore(int)
  T CUtlVector<ClientProcessMonitor::CMonitoredProcess*, CUtlMemory<ClientProcessMonitor::CMonitoredProcess*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::AddToTail(EventHeader_t const*&&)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::GrowVector(int)
  T CUtlVector<EventHeader_t const*, CUtlMemory<EventHeader_t const*> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::AddToTail(KeyValues* const&)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::AddToTail(ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
@@ -1832,10 +1822,11 @@
  T CUtlVector<char, CUtlMemory<char> >::AddToTail(char&&)
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
  T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
+ T CUtlVector<int, CUtlMemory<int> >::AddToTail(int const&)
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
- T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
  T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
@@ -3039,9 +3030,8 @@
  T int CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::InsertUnconstructed<unsigned long const&>(unsigned long const&, int*, bool)
  T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
  T int CUtlRBTree<CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, IIPCServer*, int, CDefLess<CUtlString> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess>(int const&, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, DynamicModule_s*, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, bool (*)(unsigned int const&, unsigned int const&)>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, DynamicModule_s*, int, CDefLess<unsigned int> >::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, VacProcessMonitor::ActiveProcessData_t, int, CDefLess<unsigned int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess const&) const
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int_rsa_verify
@@ -3224,6 +3214,7 @@
  T unsigned int std::__1::__sort4<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
  T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort5<bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), SteamVProf::TimeSums_t*>(SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, SteamVProf::TimeSums_t*, bool (*&)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&))
+ T void Destruct<CUtlString>(CUtlString*)
  T void PipeDebugParam<ERegKeyRoot>(ERegKeyRoot)
  T void PipeDebugParam<EUniverse>(EUniverse)
  T void PipeDebugParam<bool>(bool)
@@ -3457,8 +3448,25 @@
  b guard variable for _SpewMessageType::autoMutex__
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
+ b hksAccept
+ b hksAcceptCharset
+ b hksAcceptEncoding
+ b hksCacheControl
+ b hksConnection
+ b hksContentDisposition
+ b hksContentEncoding
+ b hksContentLength
+ b hksContentTransferEncoding
+ b hksContentType
+ b hksCookie
+ b hksDate
+ b hksExpires
+ b hksHost
  b hksKVNameRequestHeaders
+ b hksPragma
  b hksSetCookie
+ b hksTransferEncoding
+ b hksUserAgent
  b id_callback
  b impl
  b initialized

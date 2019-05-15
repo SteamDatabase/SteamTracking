@@ -34,4 +34,5 @@ public:
     virtual unknown_ret GetGlyphForXboxOrigin(EXboxOrigin) = 0;
     virtual unknown_ret GetActionOriginFromXboxOrigin(unsigned long long, EXboxOrigin) = 0;
     virtual unknown_ret TranslateActionOrigin(ESteamInputType, EInputActionOrigin) = 0;
+    virtual unknown_ret GetDeviceBindingRevision(unsigned long long, int*, int*) = 0;
 };

@@ -228,13 +228,19 @@ SteamIDProfileBG
 }
 AllPartnerEvents
 {
-	url			"%community%/games/%p1%/partnerevents"
+	url			"%store%/events/app/%p1%"
 	method		"internal"
 	filter		"news"
 }
 PartnerEvent
 {
-	url			"%community%/games/%p1%/partnerevents/view/%p2%"
+	url			"%community%/ogg/%p1%/partnerevents/view/%p2%"
+	method		"internal"
+	filter		"news"
+}
+PartnerEventOld
+{
+	url			"%community%/ogg/%p1%/partnerevents/view_old_announcement/%p2%"
 	method		"internal"
 	filter		"news"
 }
@@ -860,9 +866,15 @@ SteamWorkshopPage
 	method		"internal"
 	filter		"community"
 }
+SteamWorkshopSubscriptions
+{
+	url		"%community%/%mystuff%/myworkshopfiles/?appid=%p1%&browsefilter=mysubscriptions"
+	method		"internal"
+	filter		"community"
+}
 SteamWorkshopUpdatedSubscriptions
 {
-	url		"%community%/workshop/browse?appid=%p1%&browsesort=mysubscriptions&browsefilter=mysubscriptions&p=1&sortmethod=lastupdated"
+	url			"%community%/%mystuff%/myworkshopfiles?appid=%p1%&browsefilter=mysubscriptions&p=1&sortmethod=lastupdated"
 	method		"internal"
 	filter		"community"
 }
@@ -1120,7 +1132,7 @@ LibraryFeaturedBroadcasts
 
 LibraryAppReview
 {
-	url			"%store%/recommended/ajaxgetrecommendation?appid=%p1%"
+	url			"%storehttps%/recommended/ajaxgetrecommendation?appid=%p1%"
 	method		"internal"
 	filter		"community"
 }
@@ -1187,4 +1199,9 @@ StoreAppHover
 	method		"internal"
 	filter		"store"
 }
-
+AppHoverPublic
+{
+	url			"%store%/apphoverpublic/%p1%/?l=%language%&json=1"
+	method		"internal"
+	filter		"store"
+}

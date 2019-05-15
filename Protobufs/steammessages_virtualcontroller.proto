@@ -35,7 +35,8 @@ enum EControllerElementType {
 	k_EControllerElementTypeTrackpadCenter = 25;
 	k_EControllerElementTypeTrackpadLeft = 26;
 	k_EControllerElementTypeTrackpadRight = 27;
-	k_EControllerElementTypeMax = 28;
+	k_EControllerElementTypeKeyboard = 28;
+	k_EControllerElementTypeMax = 29;
 }
 
 message CVirtualControllerElement {
@@ -55,7 +56,7 @@ message CVirtualControllerLayout {
 
 message CVirtualControllerLayouts {
 	repeated .CVirtualControllerLayout layouts = 1;
-	optional .EInputMode input_mode = 2 [default = k_EInputModeUnknown];
+	optional .EInputMode input_mode = 2 [default = k_EInputModeController];
 }
 
 message CVirtualControllerConfig {

@@ -103,6 +103,7 @@ message CMsgClientUCMUpdatePublishedFile {
 	repeated .CMsgClientUCMUpdatePublishedFile.AdditionalPreview previews = 25;
 	repeated int32 previews_to_remove = 26;
 	optional bool clear_in_progress = 27;
+	optional bool remove_all_kvtags = 28;
 }
 
 message CMsgClientUCMUpdatePublishedFileResponse {
@@ -511,6 +512,7 @@ message CMsgClientUpdateAppJobReport {
 	optional uint64 total_bytes_legacy = 19;
 	optional uint64 total_bytes_patched = 20;
 	optional uint64 total_bytes_saved = 21;
+	optional uint32 cell_id = 22;
 }
 
 message CMsgClientDPContentStatsReport {

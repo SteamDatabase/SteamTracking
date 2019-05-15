@@ -865,7 +865,7 @@
 	
 	layout
 	{
-		place { control="label_store,label_library,label_community,label_me,label_news,label_console,label_new_library" x=72 y=9 spacing=9 margin=2 height=40 } 
+		place { control="label_store,label_library,label_community,label_me,label_news,label_console,label_oldlibrary" x=72 y=9 spacing=9 margin=2 height=40 } 
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" x="84" y="40" x="10" }
 

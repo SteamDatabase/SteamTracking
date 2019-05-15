@@ -63,10 +63,9 @@ message CBroadcast_StartBroadcastUpload_Request {
 message CBroadcast_StartBroadcastUpload_Response {
 	optional string upload_token = 1;
 	optional string upload_address = 2;
-	optional fixed64 upload_relay_id = 3;
-	optional string thumbnail_upload_address = 4;
-	optional uint32 thumbnail_interval_seconds = 5;
+	optional fixed64 broadcast_upload_id = 3;
 	optional bool enable_replay = 6;
+	optional string http_address = 7;
 }
 
 message CBroadcast_NotifyBroadcastUploadStop_Notification {
@@ -257,6 +256,42 @@ message CBroadcast_GetBroadcastChatUserNames_Response {
 	repeated .CBroadcast_GetBroadcastChatUserNames_Response.PersonaName persona_names = 1;
 }
 
+message CBroadcast_StartBuildClip_Request {
+	optional fixed64 steamid = 1;
+	optional fixed64 broadcast_session_id = 2;
+	optional int32 first_segment = 3;
+	optional int32 num_segments = 4;
+	optional string clip_description = 5;
+}
+
+message CBroadcast_StartBuildClip_Response {
+	optional fixed64 broadcast_clip_id = 1;
+}
+
+message CBroadcast_GetBuildClipStatus_Request {
+	optional fixed64 broadcast_clip_id = 1;
+}
+
+message CBroadcast_GetBuildClipStatus_Response {
+}
+
+message CBroadcast_GetClipDetails_Request {
+	optional uint64 broadcast_clip_id = 1 [(description) = "List of clip IDs we want details for"];
+}
+
+message CBroadcast_GetClipDetails_Response {
+	optional uint64 broadcast_clip_id = 1 [(description) = "broadcast clip ID"];
+	optional uint64 video_id = 2 [(description) = "matching unique video ID"];
+	optional uint64 channel_id = 3 [(description) = "Broadcast Channel ID"];
+	optional uint32 app_id = 4 [(description) = "App ID stream is tagged with"];
+	optional uint32 accountid_broadcaster = 5 [(description) = "Account ID of broadcaster"];
+	optional uint32 accountid_clipmaker = 6 [(description) = "Account ID of clip-maker"];
+	optional string video_description = 7 [(description) = "Short name or description of this clip"];
+	optional uint32 start_time = 8 [(description) = "Wall time at beginning of this clip"];
+	optional uint32 length_milliseconds = 9 [(description) = "length of video in MS"];
+	optional string thumbnail_path = 10 [(description) = "relative path for thumbnail URL (no host)"];
+}
+
 message CBroadcast_SetRTMPInfo_Request {
 	optional int32 broadcast_permission = 1;
 	optional bool update_token = 2;
@@ -433,6 +468,16 @@ message CBroadcast_WaitingBroadcastViewer_Notification {
 	optional fixed64 broadcast_id = 1;
 }
 
+message CBroadcast_BroadcastUploadStarted_Notification {
+	optional fixed64 broadcast_id = 1;
+	optional string upload_token = 2;
+	optional string upload_address = 3;
+	optional string http_address = 4;
+	optional fixed64 broadcast_upload_id = 5;
+	optional uint32 heartbeat_interval_seconds = 6 [(description) = "how many seconds between session heartbeats"];
+	optional bool is_rtmp = 7;
+}
+
 message CBroadcast_StopBroadcastUpload_Notification {
 	optional fixed64 broadcast_id = 1;
 	optional fixed64 broadcast_relay_id = 2;
@@ -456,6 +501,7 @@ message CBroadcast_BroadcastStatus_Notification {
 message CBroadcast_BroadcastChannelLive_Notification {
 	optional fixed64 broadcast_channel_id = 1;
 	optional string broadcast_channel_name = 2;
+	optional string broadcast_channel_avatar = 3;
 }
 
 message CBroadcast_SendThumbnailToRelay_Notification {
@@ -545,6 +591,15 @@ service Broadcast {
 	rpc GetBroadcastChatUserNames (.CBroadcast_GetBroadcastChatUserNames_Request) returns (.CBroadcast_GetBroadcastChatUserNames_Response) {
 		option (method_description) = "Get names for list of users in chat";
 	}
+	rpc StartBuildClip (.CBroadcast_StartBuildClip_Request) returns (.CBroadcast_StartBuildClip_Response) {
+		option (method_description) = "Start building a broadcast clip";
+	}
+	rpc GetBuildClipStatus (.CBroadcast_GetBuildClipStatus_Request) returns (.CBroadcast_GetBuildClipStatus_Response) {
+		option (method_description) = "Start building a broadcast clip";
+	}
+	rpc GetClipDetails (.CBroadcast_GetClipDetails_Request) returns (.CBroadcast_GetClipDetails_Response) {
+		option (method_description) = "Get details for Broadcast Clips";
+	}
 	rpc SetRTMPInfo (.CBroadcast_SetRTMPInfo_Request) returns (.CBroadcast_SetRTMPInfo_Response) {
 		option (method_description) = "Sets RTMP broadcast info";
 	}
@@ -589,6 +644,9 @@ service BroadcastClient {
 	}
 	rpc NotifyWaitingBroadcastViewer (.CBroadcast_WaitingBroadcastViewer_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client one or more users is waiting for user to start broadcast";
+	}
+	rpc NotifyBroadcastUploadStarted (.CBroadcast_BroadcastUploadStarted_Notification) returns (.NoResponse) {
+		option (method_description) = "Notification from server to client with information about a broadcast";
 	}
 	rpc NotifyStopBroadcastUpload (.CBroadcast_StopBroadcastUpload_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client telling it to stop uploading when the last viewer has disconnected from their broadcast";

@@ -326,5 +326,105 @@
   width: 120px;
   height: 120px; }
 
+.contextmenu_ContextMenuMouseOverlay_3H7og {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1599; }
+
+.contextmenu_ContextMenuFocusContainer_2thYU:focus {
+  outline: none; }
+
+.contextmenu_contextMenu_3_a2Z {
+  position: absolute;
+  background: radial-gradient(ellipse farthest-corner at 50% 0%, #3c4047 0%, #3c4047 50%, #33363d 100%);
+  box-shadow: 0 10px 32px 0px #000000ab;
+  opacity: 1.0;
+  transition: opacity 200ms;
+  z-index: 1600;
+  user-select: none;
+  padding: 4px; }
+
+.web_chat_frame .contextmenu_contextMenu_3_a2Z {
+  max-height: calc( 100% - 128px);
+  overflow-y: auto;
+  overflow-x: hidden; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenu_3_a2Z {
+  position: static;
+  box-shadow: none;
+  display: inline-block;
+  padding: 0; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuContents_1yyTu {
+  padding: 4px; }
+
+html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
+  min-width: fit-content; }
+
+.contextmenu_contextMenuContents_1yyTu {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  font-size: 14px;
+  -webkit-app-region: no-drag; }
+
+.contextmenu_contextMenu_3_a2Z:not(.visible) {
+  opacity: 0;
+  pointer-events: none; }
+
+.contextmenu_contextMenuItem_CBC-y {
+  padding: 4px 6px;
+  line-height: 20px;
+  color: #9ca4a7;
+  border-top: 0.5px solid rgba(80, 87, 94, 0.5);
+  border-bottom: 0.5px solid rgba(80, 87, 94, 0);
+  cursor: default;
+  position: relative;
+  min-width: 120px; }
+  .contextmenu_contextMenuItem_CBC-y:first-child {
+    border-top: 0.5px solid rgba(80, 87, 94, 0); }
+  .contextmenu_contextMenuItem_CBC-y:hover, .contextmenu_contextMenuItem_CBC-y.contextmenu_active_3vYUp {
+    background: #5a6069;
+    color: #b8c5c9; }
+  .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq {
+    background: none;
+    color: #6b7072;
+    cursor: default;
+    pointer-events: none; }
+    .contextmenu_contextMenuItem_CBC-y.contextmenu_disabled_molnq:hover {
+      background: none;
+      color: #6b7072;
+      cursor: default; }
+  .contextmenu_contextMenuItem_CBC-y.menuChecked {
+    color: #6dcff6; }
+    .contextmenu_contextMenuItem_CBC-y.menuChecked.contextMenuCheckMark {
+      display: block; }
+  .contextmenu_contextMenuItem_CBC-y .SVGIcon_Button {
+    height: 10px;
+    width: 10px;
+    margin-right: 4px; }
+  .contextmenu_contextMenuItem_CBC-y .SVGIcon_DownArrowContextMenu {
+    height: 14px;
+    width: 14px;
+    transform: rotateZ(-90deg);
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    fill: #9ca4a7; }
+
+.contextMenuCheckMark {
+  width: 4px;
+  height: 18px;
+  background-color: #6dcff6;
+  min-height: 1px;
+  display: inline-block;
+  position: absolute;
+  left: -4px;
+  margin-top: 0px;
+  display: none; }
+
 
 /*# sourceMappingURL=bundle.css.map*/

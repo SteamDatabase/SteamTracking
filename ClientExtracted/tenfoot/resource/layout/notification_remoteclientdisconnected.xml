@@ -7,7 +7,7 @@
 	<Panel class="NotificationRoot RemoteClientDisconnectNotification">
 		<Panel class="NotificationFrameDisconnected" />
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png" />
-		<Label class="NotificationTwoLabelBodyLineOne" text="#Settings_RemoteClients" />
+		<Label class="NotificationTwoLabelBodyLineOne" text="#Notification_RemoteClientTitle" />
 		<Label class="NotificationTwoLabelBodyLineTwo" text="#Notification_RemoteClientDisconnected" />
 	</Panel>
 </root>

@@ -27,6 +27,11 @@ public:
     virtual unknown_ret BRemoteClientHasStreamingSupported(unsigned long long) = 0;
     virtual unknown_ret BRemoteClientHasStreamingEnabled(unsigned long long) = 0;
     virtual unknown_ret GetRemoteClientAppState(unsigned long long, unsigned int) = 0;
+    virtual unknown_ret GetRemoteDeviceCount() = 0;
+    virtual unknown_ret GetRemoteDeviceIDByIndex(unsigned int) = 0;
+    virtual unknown_ret GetRemoteDeviceNameByIndex(unsigned int) = 0;
+    virtual unknown_ret GetRemoteDeviceName(unsigned long long) = 0;
+    virtual unknown_ret UnpairRemoteDevices() = 0;
     virtual unknown_ret BIsStreamingSupported() = 0;
     virtual unknown_ret BIsStreamingEnabled() = 0;
     virtual unknown_ret SetStreamingEnabled(bool) = 0;

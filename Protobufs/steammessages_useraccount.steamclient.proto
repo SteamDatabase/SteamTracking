@@ -49,6 +49,25 @@ message CUserAccount_GetFriendInviteTokens_Response {
 	repeated .CUserAccount_CreateFriendInviteToken_Response tokens = 1;
 }
 
+message CUserAccount_ViewFriendInviteToken_Request {
+	optional fixed64 steamid = 1;
+	optional string invite_token = 2;
+}
+
+message CUserAccount_ViewFriendInviteToken_Response {
+	optional bool valid = 1;
+	optional uint64 steamid = 2;
+	optional uint64 invite_duration = 3;
+}
+
+message CUserAccount_RedeemFriendInviteToken_Request {
+	optional fixed64 steamid = 1;
+	optional string invite_token = 2;
+}
+
+message CUserAccount_RedeemFriendInviteToken_Response {
+}
+
 message CUserAccount_RevokeFriendInviteToken_Request {
 	optional string invite_token = 1;
 }
@@ -94,6 +113,12 @@ service UserAccount {
 	}
 	rpc GetFriendInviteTokens (.CUserAccount_GetFriendInviteTokens_Request) returns (.CUserAccount_GetFriendInviteTokens_Response) {
 		option (method_description) = "Get the set of active tokens for the user";
+	}
+	rpc ViewFriendInviteToken (.CUserAccount_ViewFriendInviteToken_Request) returns (.CUserAccount_ViewFriendInviteToken_Response) {
+		option (method_description) = "View details about an invite token ";
+	}
+	rpc RedeemFriendInviteToken (.CUserAccount_RedeemFriendInviteToken_Request) returns (.CUserAccount_RedeemFriendInviteToken_Response) {
+		option (method_description) = "Create a friend relationship using the given invite token";
 	}
 	rpc RevokeFriendInviteToken (.CUserAccount_RevokeFriendInviteToken_Request) returns (.CUserAccount_RevokeFriendInviteToken_Response) {
 		option (method_description) = "Revoke an active friend invite token";

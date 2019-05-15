@@ -44,6 +44,7 @@ public:
     virtual unknown_ret BOverlayNeedsPresent() = 0;
     virtual unknown_ret GetIClientGameStats(int, int) = 0;
     virtual unknown_ret GetIClientHTTP(int, int) = 0;
+    virtual unknown_ret FlushBeforeValidate() = 0;
     virtual unknown_ret BShutdownIfAllPipesClosed() = 0;
     virtual unknown_ret GetIClientAudio(int, int) = 0;
     virtual unknown_ret GetIClientMusic(int, int) = 0;

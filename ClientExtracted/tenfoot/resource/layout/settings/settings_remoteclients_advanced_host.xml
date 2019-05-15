@@ -13,10 +13,9 @@
 			
 			  <Panel class="FlowDown">
 					<Panel class="Spacer" />
+					<ToggleButton class="CheckBox" id="HostPlayAudioAlways" onactivate="ToggleHostPlayAudioAlways();" text="#Settings_RemoteClients_HostPlayAudioAlways" />
 					<ToggleButton class="CheckBox" id="ChangeDesktopResolution" onactivate="ToggleChangeDesktopResolution()" text="#Settings_RemoteClients_ChangeDesktopResolution" />
-					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="DynamicallyAdjustResolution" onactivate="ToggleDynamicallyAdjustResolution()" text="#Settings_RemoteClients_DynamicallyAdjustResolution" />
-					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableCaptureNVFBC" onactivate="ToggleCaptureNVFBC()" text="#Settings_RemoteClients_EnableCaptureNVFBC" />
 					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableHardwareEncoding" onactivate="ToggleHardwareEncoding()" text="#Settings_RemoteClients_EnableHardwareEncoding" />

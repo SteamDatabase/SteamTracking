@@ -115,7 +115,7 @@
 "[english]Steam_Login_RateLimited"	"There have been too many login failures from your network in a short time period.  Please wait and try again later."
 "Steam_Login_CloseSteam"	"Salir de Steam"
 "[english]Steam_Login_CloseSteam"	"Exit Steam"
-"app_task_stop_streaming"	"Detener la retransmisión"
-"[english]app_task_stop_streaming"	"Stop Streaming"
+"app_task_stop_streaming"	"Detener Remote Play"
+"[english]app_task_stop_streaming"	"Stop Remote Play"
 }
 }

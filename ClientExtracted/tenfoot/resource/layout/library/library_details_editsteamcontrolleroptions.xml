@@ -18,21 +18,21 @@
 			<Panel id="EnableConfiguratorPanel">
 				<Label class="SubTitle" text="#Library_Details_EnableConfigurator" />
 				<DropDown id="EnableConfigurator" class="AppControllerSettingsDropdown"/>
-			</Panel>			
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />
+			</Panel>
+			<Panel class="RumbleHorizontalSpace" />
+			<Panel class="RumbleHorizontalSpace" />		
 			<Panel id="RumbleOn">
-				<Label class="SubTitle" text="#Library_Details_EnableRumble" />
+				<Label id="EmulatedRumbleText" class="SubTitle" text="#Library_Details_EnableRumble" />
+				<Label id="RumbleText" class="SubTitle" text="#Library_Details_EnableRealRumble" />
 				<DropDown id="RumbleEnable" class="AppControllerSettingsDropdown"/>
 			</Panel>
-			<Panel id="" class="HorizontalSpace" />
-			<Panel id="" class="HorizontalSpace" />			
+			<Panel id="" class="RumbleSCIntensityHorizontalSpace" />
+			<Panel id="" class="RumbleSCIntensityHorizontalSpace" />			
 			<Panel id="RumbleSCIntensity">
 				<Label class="SubTitle" text="#Library_SetAppRumbleFrequency_Label" />
 				<DropDown id="RumbleFrequency" class="AppControllerSettingsDropdown"/>
 			</Panel>
-
-
+			<Panel id="" class="HorizontalSpace" />
 			<Panel id="MsgBoxButtons">
                 <Button class="Button" onactivate="SetAppSteamControllerSettings();">
                     <Label text="#UI_OK" />

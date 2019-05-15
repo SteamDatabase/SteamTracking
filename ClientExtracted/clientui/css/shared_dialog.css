@@ -266,8 +266,6 @@ button.DialogButton::-moz-focus-inner
 {
 	padding: 32px;
 	padding-right: 6px;
-	width: 600px;
-	max-width: calc( 100% - 38px );
 	display: flex;
 	overflow: visible;
 	position: relative;
@@ -319,7 +317,6 @@ button.DialogButton::-moz-focus-inner
 
 .ModalDialogPopup .DialogContent
 {
-	width: 100%;
 	overflow: visible;
 }
 
@@ -574,7 +571,7 @@ button.DialogButton::-moz-focus-inner
 	margin-bottom: 26px;
 }
 
-._DialogTextInputBase,
+.DialogTextInputBase,
 ._DialogInputContainer
 {
 	background: rgba( 59, 63, 72, 0.5 );
@@ -589,19 +586,19 @@ button.DialogButton::-moz-focus-inner
 	transition: all .2s ease-in-out;
 }
 
-._DialogTextInputBase:focus
+.DialogTextInputBase:focus
 {
 	background: rgba( 67, 73, 83, .6 );
 	box-shadow: inset 1px 1px 8px #000a;
 	padding-left: 11px;
 }
 
-._DialogTextInputBase:not( disabled ):hover
+.DialogTextInputBase:not( disabled ):hover
 {
 	background: rgba( 67, 73, 83, .6 );
 }
 
-._DialogTextInputBase:disabled:hover
+.DialogTextInputBase:disabled:hover
 {
 	background: rgba( 67, 73, 83, .3 );
 }
@@ -641,7 +638,7 @@ button.DialogButton::-moz-focus-inner
 	outline: none;
 }
 
-._DialogTextInputBase.inviteURLLink
+.DialogTextInputBase.inviteURLLink
 {
 	padding: 0 12px;
 	background: rgb( 48, 53, 59 );
@@ -652,8 +649,8 @@ button.DialogButton::-moz-focus-inner
 	border-style: inset;
 }
 
-._DialogTextInputBase:disabled,
-._DialogTextInputBase:read-only
+.DialogTextInputBase:disabled,
+.DialogTextInputBase:read-only
 {
 	color: rgba( 136, 136, 136, 0.7 );
 }
@@ -1718,42 +1715,14 @@ body.in_global_drag .title-area
 	stroke: white;
 }
 
-
-.maximizeRestoreButton
-{
-	/*background-image: url( "../../images/sharedui/chrome/icon_window_max.png" );*/
-}
-
 .ModalDialogPopup .maximizeRestoreButton
 {
 	display: none;
 }
 
-.minimizeButton
-{
-	/*background-image: url( "../../images/sharedui/chrome/icon_window_min.png" );*/
-}
-
-.closeButton:hover
-{
-	/*background-image: url( "../../images/sharedui/chrome/icon_window_close_hover.png" );*/
-}
-
-.maximizeRestoreButton:hover
-{
-	/*background-image: url( "../../images/sharedui/chrome/icon_window_max_hover.png" );*/
-}
-
-.minimizeButton:hover
-{
-	/*background-image: url( "../../images/sharedui/chrome/icon_window_min_hover.png" );*/
-}
-
-
-
 .window_resize_grip
 {
-	background-image: url( "../../images/sharedui/chrome/resizehandleicon.png" );
+	background-image: url( "../../images/chrome/resizehandleicon.png" );
 	background-size: 16px 16px;
 	background-position: 4px 4px;
 	background-repeat: no-repeat;
@@ -1808,6 +1777,11 @@ body.in_global_drag .title-area
 .GenericConfirmDialog .friend
 {
 	margin-top: 10px;
+}
+
+.GenericConfirmDialog .DialogButton
+{
+	min-width: 120px;
 }
 
 .displayColumn

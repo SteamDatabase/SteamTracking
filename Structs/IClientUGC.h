@@ -16,6 +16,7 @@ public:
     virtual unknown_ret GetQueryUGCAdditionalPreview(unsigned long long, unsigned int, unsigned int, char*, unsigned int, char*, unsigned int, EItemPreviewType*) = 0;
     virtual unknown_ret GetQueryUGCNumKeyValueTags(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCKeyValueTag(unsigned long long, unsigned int, unsigned int, char*, unsigned int, char*, unsigned int) = 0;
+    virtual unknown_ret GetQueryUGCKeyValueTag(unsigned long long, unsigned int, char const*, char*, unsigned int) = 0;
     virtual unknown_ret GetQueryUGCIsDepotBuild(unsigned long long, unsigned int, bool*) = 0;
     virtual unknown_ret ReleaseQueryUGCRequest(unsigned long long) = 0;
     virtual unknown_ret AddRequiredTag(unsigned long long, char const*) = 0;
@@ -47,6 +48,7 @@ public:
     virtual unknown_ret SetItemContent(unsigned long long, char const*) = 0;
     virtual unknown_ret SetItemPreview(unsigned long long, char const*) = 0;
     virtual unknown_ret SetAllowLegacyUpload(unsigned long long, bool) = 0;
+    virtual unknown_ret RemoveAllItemKeyValueTags(unsigned long long) = 0;
     virtual unknown_ret RemoveItemKeyValueTags(unsigned long long, char const*) = 0;
     virtual unknown_ret AddItemKeyValueTag(unsigned long long, char const*, char const*) = 0;
     virtual unknown_ret AddItemPreviewFile(unsigned long long, char const*, EItemPreviewType) = 0;

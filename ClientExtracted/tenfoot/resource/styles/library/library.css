@@ -3620,22 +3620,70 @@ DropDown Label
     z-index: msgbox_contextmenu_zindex;
 }
 
-
-.GridBackground
+#RumbleOn
 {
-	width: 100%;
-	height: 100%;
+    visibility: collapse;
+}
+
+.HasRumble #RumbleOn {
+    visibility: visible;
+}
+#RumbleSCIntensity
+{
+    visibility: collapse;
+}
+
+.EmulatedRumble #RumbleSCIntensity {
+    visibility: visible;
+}
+
+.RumbleSCIntensityHorizontalSpace {
+    height: 14px;
+    width: 100%;
+    margin: 1px 22px;
+    background-color: #ffffff00;
+    visibility: collapse;
+}
+
+.EmulatedRumble .RumbleSCIntensityHorizontalSpace {
+    visibility: visible;
+}
+
+.RumbleHorizontalSpace {
+    height: 14px;
+    width: 100%;
+    margin: 1px 22px;
+    background-color: #ffffff00;
+    visibility: collapse;
+}
+
+.EmulatedRumble #RumbleText {
+    visibility: collapse;
+}
 
 
-	margin-top: 4px;
-	box-shadow: #000000aa -2px -2px 4px 4px;
+.HasRumble.EmulatedRumble #EmulatedRumbleText {
+    visibility: visible;
+}
 
-	background-color: bgcolor;
-	background-image: url( "file://{images}/store/store_app_bg.png" );
-	background-position: 0px 0px;
-	background-repeat: no-repeat;
-	background-size: 1920px 1080px;
+.HasRumble #EmulatedRumbleText {
+    visibility: collapse;
+}
 
+.HasRumble .RumbleHorizontalSpace {
+    visibility: visible;
+}
+
+.GridBackground {
+    width: 100%;
+    height: 100%;
+    margin-top: 4px;
+    box-shadow: #000000aa -2px -2px 4px 4px;
+    background-color: bgcolor;
+    background-image: url( "file://{images}/store/store_app_bg.png" );
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
 }
 
 LibraryAllGames .BottomMouseScrollRegion
@@ -4822,10 +4870,11 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 .Parental #RecomendedFilter,
 .Parental #MusicFilter,
 .Parental #AddSteamContent,
-.Parental #AddSteamProduct
- {
-	 visibility: collapse;
- }
+.Parental #AddSteamProduct,
+.StreamingToAppleDevice #AddSteamProduct
+{
+    visibility: collapse;
+}
 
 .Parental #Options
 {

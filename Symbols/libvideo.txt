@@ -465,6 +465,7 @@
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
  D typeinfo for CVideoDecoderFFmpeg
+ D typeinfo for CVideoDecoderFFmpeg::CQueuedOutput
  D typeinfo for CVideoDecoderFFmpeg::CQueuedOutputNV12
  D typeinfo for CVideoDecoderFFmpeg::CQueuedOutputYUV
  D typeinfo for CVideoDecoderLibav
@@ -635,6 +636,7 @@
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
  D vtable for CVideoDecoderFFmpeg
+ D vtable for CVideoDecoderFFmpeg::CQueuedOutput
  D vtable for CVideoDecoderFFmpeg::CQueuedOutputNV12
  D vtable for CVideoDecoderFFmpeg::CQueuedOutputYUV
  D vtable for CVideoDecoderLibav
@@ -847,6 +849,7 @@
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
  R typeinfo name for CVideoDecodedFrame
  R typeinfo name for CVideoDecoderFFmpeg
+ R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutput
  R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutputNV12
  R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutputYUV
  R typeinfo name for CVideoDecoderLibav
@@ -1410,8 +1413,8 @@
  T CCoroutineMgr::PopCoroutineStack()
  T CCrashHandlerScope::~CCrashHandlerScope()
  T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
- T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
+ T CCrypto::Base64Encode_Legacy(void const*, unsigned int, char*, unsigned int, bool)
  T CCrypto::GenerateHMAC(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char (*) [20])
  T CCrypto::GenerateRandomBlock(void*, int)
  T CCrypto::GenerateSHA1Digest(void const*, unsigned long, unsigned char (*) [20])
@@ -1457,7 +1460,6 @@
  T CDebugStatsValue::CDebugStatsValue(char const*)
  T CDebugStatsValue::Increment()
  T CDebugStatsValue::~CDebugStatsValue()
- T CDefOps<int>::LessFunc(int const&, int const&)
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(char const*)
@@ -1554,6 +1556,7 @@
  T CHTTPClient::Validate(CValidator&, char const*)
  T CHTTPClient::~CHTTPClient()
  T CHTTPClientConnection::AbortAbsoluteTimeout()
+ T CHTTPClientConnection::AbortRequest()
  T CHTTPClientConnection::AbortStaleConnection()
  T CHTTPClientConnection::AsyncPerformDisconnect()
  T CHTTPClientConnection::AsyncSendCurrentRequest()
@@ -3046,10 +3049,6 @@
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -3124,67 +3123,66 @@
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::Count() const
  T CUtlThreadSafeQueue<CWorkItemHTTPClientRequest*>::OnItemAdded()
+ T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::AddToTail(CBaseFrameFunction* const&)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
- T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::InsertBefore(int, CBaseFrameFunction* const&)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::Remove(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::~CUtlVector()
+ T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::AddToTail(CCookieContainer::CCookieInfo const&)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Find(CCookieContainer::CCookieInfo const&) const
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::GrowVector(int)
- T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::InsertBefore(int, CCookieContainer::CCookieInfo const&)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Remove(int)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::RemoveAll()
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Validate(CValidator&, char const*)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::~CUtlVector()
+ T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::AddToTail(CCoroutine::vprofNode_t const&)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::GrowVector(int)
- T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::InsertBefore(int, CCoroutine::vprofNode_t const&)
  T CUtlVector<CCoroutine::vprofNode_t, CUtlMemory<CCoroutine::vprofNode_t> >::~CUtlVector()
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::AddToTail(CCoroutineMgr*&&)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::GrowVector(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::AddToTail(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Remove(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
+ T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::AddToTail(CHTTPClient* const&)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FastRemove(int)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::FindAndFastRemove(CHTTPClient* const&)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::GrowVector(int)
- T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::InsertBefore(int, CHTTPClient* const&)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >::~CUtlVector()
+ T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::AddToTail(CHTTPClientConnection* const&)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::GrowVector(int)
- T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::InsertBefore(int, CHTTPClientConnection* const&)
  T CUtlVector<CHTTPClientConnection*, CUtlMemory<CHTTPClientConnection*> >::~CUtlVector()
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::GrowVector(int)
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::RemoveAll()
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::SortedFindLessOrEqual(CHTTPRequestCache::CachedFileLRUData_t const&, bool (*)(CHTTPRequestCache::CachedFileLRUData_t const&, CHTTPRequestCache::CachedFileLRUData_t const&, void*), void*, int, int) const
  T CUtlVector<CHTTPRequestCache::CachedFileLRUData_t, CUtlMemory<CHTTPRequestCache::CachedFileLRUData_t> >::~CUtlVector()
+ T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::AddToTail(CHTTPRequestHandle* const&)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::GrowVector(int)
- T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::InsertBefore(int, CHTTPRequestHandle* const&)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::~CUtlVector()
+ T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::AddToTail()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::GrowVector(int)
- T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::InsertBefore(int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::RemoveAll()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
- T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::InsertBefore(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
+ T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::AddToTail(CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
- T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::InsertBefore(int, CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
+ T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::AddToTail(CUDPConnection::ConnectPingResults_t const&)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::GrowVector(int)
- T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::InsertBefore(int, CUDPConnection::ConnectPingResults_t const&)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::~CUtlVector()
+ T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::AddToTail(CUtlDelegate<void ()> const&)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::FastRemove(int)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::Find(CUtlDelegate<void ()> const&) const
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::FindAndFastRemove(CUtlDelegate<void ()> const&)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::GrowVector(int)
- T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::InsertBefore(int, CUtlDelegate<void ()> const&)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
@@ -3217,31 +3215,35 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::Remove(int)
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::SetCount(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::AddToTail(CVideoDecoderFFmpeg::CQueuedOutput* const&)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::GrowVector(int)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::PurgeAndDeleteElements()
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::Remove(int)
+ T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::~CUtlVector()
+ T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::AddToTail(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::GrowVector(int)
- T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::InsertBefore(int, CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::~CUtlVector()
+ T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::AddToTail(CVideoFileStream::AvailableByteRange_t const&)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::GrowVector(int)
- T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::InsertBefore(int, CVideoFileStream::AvailableByteRange_t const&)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >::~CUtlVector()
+ T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::AddToTail(CVideoPlayer* const&)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::FastRemove(int)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::FindAndFastRemove(CVideoPlayer* const&)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::GrowVector(int)
- T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::InsertBefore(int)
- T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::InsertBefore(int, CVideoPlayer* const&)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoPlayer*, CUtlMemory<CVideoPlayer*> >::~CUtlVector()
  T CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >::AddToTail(CVideoPlayerManager::CVideoThread*&&)
@@ -3249,45 +3251,37 @@
  T CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVideoPlayerManager::CVideoThread*, CUtlMemory<CVideoPlayerManager::CVideoThread*> >::~CUtlVector()
  T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::GrowVector(int)
- T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::InsertBefore(int)
  T CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >::~CUtlVector()
+ T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::AddToTail(CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
- T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::InsertBefore(int, CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::Validate(CValidator&, char const*)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::~CUtlVector()
+ T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::AddToTail(CWorkThread* const&)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::FastRemove(int)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::GrowVector(int)
- T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::InsertBefore(int, CWorkThread* const&)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::Validate(CValidator&, char const*)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
- T CUtlVector<IDecodedVideoFrame*, CUtlMemory<IDecodedVideoFrame*> >::GrowVector(int)
- T CUtlVector<IDecodedVideoFrame*, CUtlMemory<IDecodedVideoFrame*> >::InsertBefore(int, IDecodedVideoFrame* const&)
- T CUtlVector<IDecodedVideoFrame*, CUtlMemory<IDecodedVideoFrame*> >::PurgeAndDeleteElements()
- T CUtlVector<IDecodedVideoFrame*, CUtlMemory<IDecodedVideoFrame*> >::Remove(int)
- T CUtlVector<IDecodedVideoFrame*, CUtlMemory<IDecodedVideoFrame*> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::AddToTail(KeyValues* const&)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::GrowVector(int)
- T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::InsertBefore(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::Validate(CValidator&, char const*)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::~CUtlVector()
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::AddToTail(ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::AddToTail(NetConnectPingResults_t const&)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
- T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::InsertBefore(int, NetConnectPingResults_t const&)
+ T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::AddToTail(SteamThreadTools::CThreadMutex* const&)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::GrowVector(int)
- T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::InsertBefore(int, SteamThreadTools::CThreadMutex* const&)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Remove(int)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::Validate(CValidator&, char const*)
  T CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >::~CUtlVector()
@@ -3296,32 +3290,33 @@
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::InsertBefore(int, TLSTicketKey_t const&)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >::~CUtlVector()
+ T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::AddToTail(VideoAdaptationSet_t* const&)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::GrowVector(int)
- T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::InsertBefore(int, VideoAdaptationSet_t* const&)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::PurgeAndDeleteElements()
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoAdaptationSet_t*, CUtlMemory<VideoAdaptationSet_t*> >::~CUtlVector()
+ T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::AddToTail(VideoRepresentation_t* const&)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::GrowVector(int)
- T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::InsertBefore(int, VideoRepresentation_t* const&)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::PurgeAndDeleteElements()
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::~CUtlVector()
+ T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::AddToTail(VideoSegmentTemplate_t::TimelineSegment_t const&)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::GrowVector(int)
- T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::InsertBefore(int, VideoSegmentTemplate_t::TimelineSegment_t const&)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >::~CUtlVector()
+ T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::AddToTail(VideoSegment_t* const&)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::GrowVector(int)
- T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::InsertBefore(int, VideoSegment_t* const&)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::PurgeAndDeleteElements()
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
+ T CUtlVector<int, CUtlMemory<int> >::AddToTail(int const&)
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
- T CUtlVector<int, CUtlMemory<int> >::InsertBefore(int, int const&)
  T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
@@ -3345,7 +3340,10 @@
  T CVideoDecodedFrame::~CVideoDecodedFrame()
  T CVideoDecoderFFmpeg::BDecodeFrame(unsigned char const*, int, long long, long long)
  T CVideoDecoderFFmpeg::BDecodeFrameInternal(AVPacket const*, bool*)
+ T CVideoDecoderFFmpeg::BFixupDecodedPTS(long long, long long)
  T CVideoDecoderFFmpeg::BInitH264AVCC(unsigned char const*, int)
+ T CVideoDecoderFFmpeg::CQueuedOutput::~CQueuedOutput()
+ T CVideoDecoderFFmpeg::CQueuedOutputNV12::CQueuedOutputNV12(AVFrame*)
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetNV12Frame() const
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetPTS() const
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetPixelFormat() const
@@ -3357,6 +3355,7 @@
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::YPlane() const
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::YStride() const
  T CVideoDecoderFFmpeg::CQueuedOutputNV12::~CQueuedOutputNV12()
+ T CVideoDecoderFFmpeg::CQueuedOutputYUV::CQueuedOutputYUV(AVFrame*)
  T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetNV12Frame() const
  T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetPTS() const
  T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetPixelFormat() const
@@ -4311,10 +4310,12 @@
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
  T KeyValues::GetFirstSubKey() const
+ T KeyValues::GetIntFromString(char const*, int, KeyValues::EConversionState*)
  T KeyValues::GetName() const
  T KeyValues::GetNextKey() const
  T KeyValues::GetUint64FromString(char const*, unsigned long long, KeyValues::EConversionState*)
  T KeyValues::InternalGetAsString(char*, int, KeyValues*)
+ T KeyValues::InternalGetInt(KeyValues*, int, KeyValues::EConversionState*)
  T KeyValues::InternalGetString(KeyValues*, char const*)
  T KeyValues::InternalGetUint64(KeyValues*, unsigned long long, KeyValues::EConversionState*)
  T KeyValues::InternalSetString(KeyValues*, char const*)
@@ -5378,7 +5379,6 @@
  T int CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CVideoPlayer::InitSegmentKey_t, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess>(CVideoPlayer::InitSegmentKey_t const&, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess>(int const&, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned long long, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess>(unsigned long long const&, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess const&) const
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
@@ -6216,8 +6216,25 @@
  b guard variable for _SpewMessageType::autoMutex__
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
+ b hksAccept
+ b hksAcceptCharset
+ b hksAcceptEncoding
+ b hksCacheControl
+ b hksConnection
+ b hksContentDisposition
+ b hksContentEncoding
+ b hksContentLength
+ b hksContentTransferEncoding
+ b hksContentType
+ b hksCookie
+ b hksDate
+ b hksExpires
+ b hksHost
  b hksKVNameRequestHeaders
+ b hksPragma
  b hksSetCookie
+ b hksTransferEncoding
+ b hksUserAgent
  b id_callback
  b impl
  b initialized
@@ -8093,6 +8110,7 @@
  vtable for std::length_error
  wcscmp
  wcslen
+ wcstol
  wcstoull
  write
  write$UNIX2003

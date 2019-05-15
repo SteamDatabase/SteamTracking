@@ -27,6 +27,7 @@ public:
     virtual unknown_ret CalibrateIMU(unsigned int) = 0;
     virtual unknown_ret SetAudioMapping(unsigned int, CUtlVector<signed char, CUtlMemory<signed char> >*) = 0;
     virtual unknown_ret PlayAudio(unsigned int, unsigned int) = 0;
+    virtual unknown_ret ResetStickExtents(unsigned int) = 0;
     virtual unknown_ret BIsStreamingController(unsigned int) = 0;
     virtual unknown_ret SetUserLedColor(unsigned int, unsigned char, unsigned char, unsigned char) = 0;
     virtual unknown_ret SetRumble(unsigned int, int, int, unsigned short, unsigned short) = 0;
@@ -76,6 +77,8 @@ public:
     virtual unknown_ret GetBindingTitle(unsigned int, bool) = 0;
     virtual unknown_ret SetBindingTitle(unsigned int, char const*) = 0;
     virtual unknown_ret GetBindingDescription(unsigned int, bool) = 0;
+    virtual unknown_ret GetBindingRevision(unsigned int, int*, int*) = 0;
+    virtual unknown_ret BBindingMajorRevisionMismatch(unsigned int) = 0;
     virtual unknown_ret SetBindingDescription(unsigned int, char const*) = 0;
     virtual unknown_ret GetBindingTitleForIndex(unsigned int, unsigned int, char*, int) = 0;
     virtual unknown_ret SetBindingControllerType(unsigned int, EControllerType) = 0;

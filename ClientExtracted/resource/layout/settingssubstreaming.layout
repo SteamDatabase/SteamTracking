@@ -19,6 +19,8 @@
 
 		"Pair" { ControlName="Button" fieldName="Pair" command="Pair" labelText="#Steam_Settings_Streaming_Pair" }
 
+		"Unpair" { ControlName="Button" fieldName="Unpair" command="Unpair" labelText="#Steam_Settings_Streaming_Unpair" }
+
 		"SetPIN" { ControlName="Button" fieldName="SetPIN" command="SetPIN" labelText="#Steam_Settings_Streaming_SetPIN" }
 
 		"HostDivider" { ControlName="divider" }
@@ -74,7 +76,7 @@
 
 		place
 		{
-			control="DescriptionLabel,RemoteClientList"
+			control="DescriptionLabel,EnableStreaming,RemoteClientList"
 			dir=down
 			align=top
 			width=max
@@ -83,26 +85,18 @@
 			margin-top=20
 			spacing=10
 		}
-
-		place
-		{
-			control="EnableStreaming"
-			width=150
-			margin-left=20
-			margin-right=20
-			margin-top=205
-		}
 		
-		place { control=Pair width=160 x=180 y=205 z=4 }
-		place { control=SetPIN width=160 x=350 y=205 z=4 }
+		place { control=Pair width=155 x=20 y=240 z=4 }
+		place { control=Unpair width=155 x=180 y=240 z=4 }
+		place { control=SetPIN width=155 x=340 y=240 z=4 }
 
-		place { region=bottom control=HostDivider width=max x=20 y=0 }
-		place { region=bottom control=HostLabel width=max x=20 y=10 }
-		place { region=bottom control=UnsupportedPlatform width=max x=20 y=35 }
-		place { region=bottom control=AdvancedHostOptions x=20 y=35 }
+		place { region=bottom control=HostDivider width=max x=20 y=35 }
+		place { region=bottom control=HostLabel width=max x=20 y=45 }
+		place { region=bottom control=UnsupportedPlatform width=max x=20 y=70 }
+		place { region=bottom control=AdvancedHostOptions x=20 y=70 }
 		
-		place { region=bottom control=ClientDivider width=max x=20 y=70 }
-		place { region=bottom control=ClientLabel width=max x=20 y=80 }
+		place { region=bottom control=ClientDivider width=max x=20 y=105 }
+		place { region=bottom control=ClientLabel width=max x=20 y=115 }
 		place
 		{
 			control="QualityFast,QualityBalanced,QualityBeautiful"
@@ -112,9 +106,9 @@
 			width=max
 			spacing=10
 			x=20
-			y=100
+			y=135
 		}
-		place { region=bottom control=AdvancedClientOptions x=20 y=140 }
+		place { region=bottom control=AdvancedClientOptions x=20 y=175 }
 		
 		place { region=bottom control=SupportInformationLabel x=20 y=230 }
 	}

@@ -336,7 +336,7 @@
  R typeinfo name for CSystem
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
- R typeinfo name for CUtlDict<Color, int>
+ R typeinfo name for CUtlDict<Color, CDefCaselessStringLess, int>
  R typeinfo name for CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>
  R typeinfo name for CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>
  R typeinfo name for CUtlLinkedList<CFontTextureCache::CacheLRUEntry_t, int>
@@ -351,10 +351,10 @@
  R typeinfo name for CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >
  R typeinfo name for CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >
  R typeinfo name for CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >
- R typeinfo name for CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>
- R typeinfo name for CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>
- R typeinfo name for CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>
- R typeinfo name for CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>
+ R typeinfo name for CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>
+ R typeinfo name for CUtlMap<char const*, Color, int, CDefCaselessStringLess>
+ R typeinfo name for CUtlMap<char const*, bool, int, CDefStringLessFilename>
+ R typeinfo name for CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >
@@ -370,10 +370,10 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::Node_t, int, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -381,7 +381,7 @@
  R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<int, int, CSchemeManager::CObjLessFunc<int, CSchemeManager>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >
  R typeinfo name for CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >
@@ -644,7 +644,6 @@
  T CBaseSurface::SupportsFeature(vgui::ISurface::SurfaceFeature_e)
  T CBaseSurface::SurfaceGetCursorPos(int&, int&)
  T CBaseSurface::SurfaceSetCursorPos(int, int)
- T CBaseSurface::TextureLessFunc(vgui::Texture const&, vgui::Texture const&)
  T CBaseSurface::UnlockCursor()
  T CBaseSurface::Validate(CValidator&, char const*)
  T CBaseSurface::WakeMainThread(bool)
@@ -654,7 +653,6 @@
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CCopyableUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::CCopyableUtlVector(CCopyableUtlVector<SFontDescription, CUtlMemory<SFontDescription> > const&)
- T CDefOps<int>::LessFunc(int const&, int const&)
  T CDirWatcher::AddFileToChangeList(char const*)
  T CDirWatcher::CDirWatcher()
  T CDirWatcher::GetChangedFile(CUtlString*)
@@ -712,7 +710,6 @@
  T CFontManager::Validate(CValidator&, char const*)
  T CFontTextureCache::AllocatePageForString(int, int, int&, int&, int&, int&, int&, int&, int&)
  T CFontTextureCache::CFontTextureCache(ISurfaceHelper*)
- T CFontTextureCache::CacheStringEntryLessFunc(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&)
  T CFontTextureCache::Clear()
  T CFontTextureCache::ComputeStringPageType(int, int) const
  T CFontTextureCache::GetTextureForString(unsigned long, wchar_t const*, int, int&, int&, int&, float**)
@@ -1197,6 +1194,8 @@
  T CSystem::GetTimeMillis()
  T CSystem::GetTimeSinceLastUse()
  T CSystem::GetUserConfigFileData(char const*, int)
+ T CSystem::KeyCode_CharToVGUI(int)
+ T CSystem::KeyCode_VGUIToScanCode(vgui::KeyCode)
  T CSystem::KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T CSystem::KeyCode_VirtualKeyToVGUI(int)
  T CSystem::KeyCode_WindowsVirtualKeyToVirtualKey(int)
@@ -1248,35 +1247,31 @@
  T CUtlCStringConversion::FindConversion(char const*, int*)
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
- T CUtlDict<CLayoutFile*, int>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<CLayoutFile*, int>::Insert(char const*, CLayoutFile* const&)
- T CUtlDict<CLayoutFile*, int>::RemoveAll()
- T CUtlDict<CLayoutFile*, int>::Validate(CValidator&, char const*)
- T CUtlDict<CLayoutFile*, int>::~CUtlDict()
- T CUtlDict<Color, int>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<Color, int>::Insert(char const*, Color const&)
- T CUtlDict<Color, int>::Insert(char const*, Color&&)
- T CUtlDict<Color, int>::RecursiveValidate(CValidator&, char const*)
- T CUtlDict<Color, int>::RemoveAll()
- T CUtlDict<Color, int>::~CUtlDict()
- T CUtlDict<bool, int>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<bool, int>::Insert(char const*, bool&&)
- T CUtlDict<bool, int>::RemoveAll()
- T CUtlDict<bool, int>::Validate(CValidator&, char const*)
- T CUtlDict<bool, int>::~CUtlDict()
- T CUtlDict<int, int>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<int, int>::Insert(char const*)
- T CUtlDict<int, int>::RemoveAll()
- T CUtlDict<int, int>::~CUtlDict()
- T CUtlDict<vgui::Bitmap*, int>::CUtlDict(EDictCompareType, int, int)
- T CUtlDict<vgui::Bitmap*, int>::Insert(char const*, vgui::Bitmap*&&)
- T CUtlDict<vgui::Bitmap*, int>::RemoveAll()
- T CUtlDict<vgui::Bitmap*, int>::Validate(CValidator&, char const*)
- T CUtlDict<vgui::Bitmap*, int>::~CUtlDict()
+ T CUtlDict<CLayoutFile*, CDefStringLessFilename, int>::Insert(char const*, CLayoutFile* const&)
+ T CUtlDict<CLayoutFile*, CDefStringLessFilename, int>::RemoveAll()
+ T CUtlDict<CLayoutFile*, CDefStringLessFilename, int>::Validate(CValidator&, char const*)
+ T CUtlDict<CLayoutFile*, CDefStringLessFilename, int>::~CUtlDict()
+ T CUtlDict<Color, CDefCaselessStringLess, int>::Insert(char const*, Color const&)
+ T CUtlDict<Color, CDefCaselessStringLess, int>::Insert(char const*, Color&&)
+ T CUtlDict<Color, CDefCaselessStringLess, int>::RecursiveValidate(CValidator&, char const*)
+ T CUtlDict<Color, CDefCaselessStringLess, int>::RemoveAll()
+ T CUtlDict<Color, CDefCaselessStringLess, int>::~CUtlDict()
+ T CUtlDict<bool, CDefStringLessFilename, int>::Insert(char const*, bool&&)
+ T CUtlDict<bool, CDefStringLessFilename, int>::RemoveAll()
+ T CUtlDict<bool, CDefStringLessFilename, int>::Validate(CValidator&, char const*)
+ T CUtlDict<bool, CDefStringLessFilename, int>::~CUtlDict()
+ T CUtlDict<int, CDefCaselessStringLess, int>::Insert(char const*)
+ T CUtlDict<int, CDefCaselessStringLess, int>::RemoveAll()
+ T CUtlDict<int, CDefCaselessStringLess, int>::~CUtlDict()
+ T CUtlDict<vgui::Bitmap*, CDefStringLessFilename, int>::Insert(char const*, vgui::Bitmap*&&)
+ T CUtlDict<vgui::Bitmap*, CDefStringLessFilename, int>::RemoveAll()
+ T CUtlDict<vgui::Bitmap*, CDefStringLessFilename, int>::Validate(CValidator&, char const*)
+ T CUtlDict<vgui::Bitmap*, CDefStringLessFilename, int>::~CUtlDict()
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::AllocNode()
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::CUtlHashMap()
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::EnsureCapacity(int)
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::FindInBucket(int, CUtlPtr<CStyleAppearance> const&) const
+ T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::FindOrInsert(CUtlPtr<CStyleAppearance> const&)
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::IncrementalRehash()
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::Purge()
  T CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::RecursiveValidate(CValidator&, char const*)
@@ -1356,10 +1351,10 @@
  T CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Insert(CSchemeManager::FontKey_t const&, unsigned long const&)
  T CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Validate(CValidator&, char const*)
  T CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Validate(CValidator&, char const*)
- T CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::RecursiveValidate(CValidator&, char const*)
- T CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, Color, int, CDefCaselessStringLess>::RecursiveValidate(CValidator&, char const*)
+ T CUtlMap<char const*, bool, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
@@ -1385,12 +1380,12 @@
  T CUtlPtr<CStyleAppearance>::CUtlPtr(CUtlPtr<CStyleAppearance> const&)
  T CUtlPtr<CStyleAppearance>::RecursiveValidate(CValidator&, char const*)
  T CUtlPtr<CStyleAppearance>::Release()
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::Find(CFontTextureCache::CacheStringEntry_t const&) const
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CFontTextureCache::CacheStringEntry_t const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::Insert(CFontTextureCache::CacheStringEntry_t const&, bool)
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, bool (*)(CFontTextureCache::CacheStringEntry_t const&, CFontTextureCache::CacheStringEntry_t const&), CDefRBTreeBalanceListener<unsigned short> >::RemoveAt(unsigned short)
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::Find(CFontTextureCache::CacheStringEntry_t const&) const
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CFontTextureCache::CacheStringEntry_t const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::Insert(CFontTextureCache::CacheStringEntry_t const&, bool)
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short> >::RemoveAt(unsigned short)
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::Find(CLocalizedStringTable::fastvalue_t const&) const
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CLocalizedStringTable::fastvalue_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >::Insert(CLocalizedStringTable::fastvalue_t const&, bool)
@@ -1432,39 +1427,35 @@
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -1528,13 +1519,13 @@
  T CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::Find(vgui::Texture const&) const
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(vgui::Texture const&, bool, int&, bool&, bool&)
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::Insert(vgui::Texture const&, bool)
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<vgui::Texture, int, bool (*)(vgui::Texture const&, vgui::Texture const&), CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::Find(vgui::Texture const&) const
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(vgui::Texture const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::Insert(vgui::Texture const&, bool)
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -1579,21 +1570,20 @@
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::GrowVector(int)
- T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::InsertBefore(int)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::~CUtlVector()
+ T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::AddToTail()
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::GrowVector(int)
- T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::InsertBefore(int)
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::RemoveAll()
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::Validate(CValidator&, char const*)
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::~CUtlVector()
+ T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::AddToTail()
  T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::GrowVector(int)
- T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::InsertBefore(int)
  T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::RemoveAll()
  T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::ValidateSelfAndElements(CValidator&, char const*)
  T CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >::~CUtlVector()
+ T CUtlVector<CFontTextureCache::Page_t, CUtlMemory<CFontTextureCache::Page_t> >::AddToTail()
  T CUtlVector<CFontTextureCache::Page_t, CUtlMemory<CFontTextureCache::Page_t> >::GrowVector(int)
- T CUtlVector<CFontTextureCache::Page_t, CUtlMemory<CFontTextureCache::Page_t> >::InsertBefore(int)
  T CUtlVector<CFontTextureCache::Page_t, CUtlMemory<CFontTextureCache::Page_t> >::~CUtlVector()
  T CUtlVector<CNotificationManager::NotificationPanel*, CUtlMemory<CNotificationManager::NotificationPanel*> >::AddToTail(CNotificationManager::NotificationPanel*&&)
  T CUtlVector<CNotificationManager::NotificationPanel*, CUtlMemory<CNotificationManager::NotificationPanel*> >::GrowVector(int)
@@ -1603,24 +1593,23 @@
  T CUtlVector<CNotificationManager::NotificationPanel, CUtlMemory<CNotificationManager::NotificationPanel> >::Remove(int)
  T CUtlVector<CNotificationManager::NotificationPanel, CUtlMemory<CNotificationManager::NotificationPanel> >::Validate(CValidator&, char const*)
  T CUtlVector<CNotificationManager::NotificationPanel, CUtlMemory<CNotificationManager::NotificationPanel> >::~CUtlVector()
+ T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::AddToTail(CScheme* const&)
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::GrowVector(int)
- T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::InsertBefore(int, CScheme* const&)
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::Validate(CValidator&, char const*)
  T CUtlVector<CScheme*, CUtlMemory<CScheme*> >::~CUtlVector()
  T CUtlVector<CScheme::fontalias_t, CUtlMemory<CScheme::fontalias_t> >::GrowVector(int)
- T CUtlVector<CScheme::fontalias_t, CUtlMemory<CScheme::fontalias_t> >::InsertBefore(int)
  T CUtlVector<CScheme::fontalias_t, CUtlMemory<CScheme::fontalias_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CScheme::fontalias_t, CUtlMemory<CScheme::fontalias_t> >::~CUtlVector()
+ T CUtlVector<CSerializedSurface::TitleEntry, CUtlMemory<CSerializedSurface::TitleEntry> >::AddToTail()
  T CUtlVector<CSerializedSurface::TitleEntry, CUtlMemory<CSerializedSurface::TitleEntry> >::GrowVector(int)
- T CUtlVector<CSerializedSurface::TitleEntry, CUtlMemory<CSerializedSurface::TitleEntry> >::InsertBefore(int)
  T CUtlVector<CSerializedSurface::TitleEntry, CUtlMemory<CSerializedSurface::TitleEntry> >::Remove(int)
  T CUtlVector<CSerializedSurface::TitleEntry, CUtlMemory<CSerializedSurface::TitleEntry> >::~CUtlVector()
+ T CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >::AddToTail(CStyleAppearance::DrawOp_t const&)
  T CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >::GrowVector(int)
- T CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >::InsertBefore(int, CStyleAppearance::DrawOp_t const&)
  T CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CStyleAppearance::DrawOp_t, CUtlMemory<CStyleAppearance::DrawOp_t> >::~CUtlVector()
+ T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::AddToTail(CStyleSet* const&)
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::GrowVector(int)
- T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::InsertBefore(int, CStyleSet* const&)
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::Validate(CValidator&, char const*)
  T CUtlVector<CStyleSet*, CUtlMemory<CStyleSet*> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlPtr<CStyleAppearance>, bool, CLayoutFile::StyleEquals, CLayoutFile::StyleHash>::HashBucket_t> >::GrowVector(int)
@@ -1636,25 +1625,24 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
+ T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::AddToTail(CUtlSymbol const&)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::AddToTail(CUtlSymbol&&)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::CopyArray(CUtlSymbol const*, int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::GrowVector(int)
- T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::InsertBefore(int, CUtlSymbol const&)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::Remove(int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::SetCount(int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::~CUtlVector()
+ T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::InsertBefore(int, CUtlSymbolTable::StringPool_t* const&)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::AddToTail(CVGui::Tick_t* const&)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::GrowVector(int)
- T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::InsertBefore(int, CVGui::Tick_t* const&)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::Remove(int)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::~CUtlVector()
  T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::GrowVector(int)
- T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::InsertBefore(int)
  T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >::~CUtlVector()
  T CUtlVector<Color, CUtlMemory<Color> >::GrowVector(int)
@@ -1663,53 +1651,53 @@
  T CUtlVector<Color, CUtlMemory<Color> >::SetCount(int)
  T CUtlVector<Color, CUtlMemory<Color> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::AddToTail(KeyValues const* const&)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::GrowVector(int)
- T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::InsertBefore(int, KeyValues const* const&)
  T CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::AddToTail(KeyValues* const&)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::FastRemove(int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::GrowVector(int)
- T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::InsertBefore(int)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::Validate(CValidator&, char const*)
  T CUtlVector<MessageItem_t, CUtlMemory<MessageItem_t> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::AddToTail(OpaqueATSUStyle* const&)
  T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::GrowVector(int)
- T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::InsertBefore(int, OpaqueATSUStyle* const&)
  T CUtlVector<OpaqueATSUStyle*, CUtlMemory<OpaqueATSUStyle*> >::~CUtlVector()
  T CUtlVector<PaintState_t, CUtlMemory<PaintState_t> >::GrowVector(int)
- T CUtlVector<PaintState_t, CUtlMemory<PaintState_t> >::InsertBefore(int)
  T CUtlVector<PaintState_t, CUtlMemory<PaintState_t> >::Remove(int)
  T CUtlVector<PaintState_t, CUtlMemory<PaintState_t> >::~CUtlVector()
+ T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::AddToTail(SFontDescription const&)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::CopyArray(SFontDescription const*, int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::GrowVector(int)
- T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::InsertBefore(int, SFontDescription const&)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::RemoveAll()
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::SetCount(int)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::ValidateSelfAndElements(CValidator&, char const*)
  T CUtlVector<SFontDescription, CUtlMemory<SFontDescription> >::~CUtlVector()
+ T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::AddToTail(SFontSpan const&)
  T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::GrowVector(int)
- T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::InsertBefore(int, SFontSpan const&)
  T CUtlVector<SFontSpan, CUtlMemory<SFontSpan> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
  T CUtlVector<char, CUtlMemory<char> >::InsertMultipleBefore(int, int, char const*)
  T CUtlVector<char, CUtlMemory<char> >::Validate(CValidator&, char const*)
  T CUtlVector<char, CUtlMemory<char> >::~CUtlVector()
+ T CUtlVector<style_t, CUtlMemory<style_t> >::AddToTail()
  T CUtlVector<style_t, CUtlMemory<style_t> >::GrowVector(int)
  T CUtlVector<style_t, CUtlMemory<style_t> >::InsertBefore(int)
  T CUtlVector<style_t, CUtlMemory<style_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<style_t, CUtlMemory<style_t> >::RemoveAll()
  T CUtlVector<style_t, CUtlMemory<style_t> >::~CUtlVector()
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int&&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::CopyArray(unsigned int const*, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
- T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::RemoveMultiple(int, int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::SetCount(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::AddToTail(unsigned long long const&)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::AddToTail(unsigned long long&&)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::FindAndRemove(unsigned long long const&)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::GrowVector(int)
@@ -1720,15 +1708,16 @@
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::AddToTail(unsigned long&&)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::GrowVector(int)
  T CUtlVector<unsigned long, CUtlMemory<unsigned long> >::~CUtlVector()
+ T CUtlVector<vgui::IVGuiSetup::EGraphicsOption, CUtlMemory<vgui::IVGuiSetup::EGraphicsOption> >::AddToTail(vgui::IVGuiSetup::EGraphicsOption const&)
  T CUtlVector<vgui::IVGuiSetup::EGraphicsOption, CUtlMemory<vgui::IVGuiSetup::EGraphicsOption> >::GrowVector(int)
- T CUtlVector<vgui::IVGuiSetup::EGraphicsOption, CUtlMemory<vgui::IVGuiSetup::EGraphicsOption> >::InsertBefore(int, vgui::IVGuiSetup::EGraphicsOption const&)
  T CUtlVector<vgui::IVGuiSetup::EGraphicsOption, CUtlMemory<vgui::IVGuiSetup::EGraphicsOption> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::IVGuiSetup::EGraphicsOption, CUtlMemory<vgui::IVGuiSetup::EGraphicsOption> >::~CUtlVector()
+ T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::AddToTail()
+ T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::AddToTail(vgui::TextColorRange_t const&)
  T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::GrowVector(int)
- T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::InsertBefore(int)
- T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::InsertBefore(int, vgui::TextColorRange_t const&)
  T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::TextColorRange_t, CUtlMemory<vgui::TextColorRange_t> >::~CUtlVector()
+ T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::AddToTail(vgui::VPanel* const&)
  T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::AddToTail(vgui::VPanel*&&)
  T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::FindAndRemove(vgui::VPanel* const&)
  T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::GrowVector(int)
@@ -1737,12 +1726,11 @@
  T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::Validate(CValidator&, char const*)
  T CUtlVector<vgui::VPanel*, CUtlMemory<vgui::VPanel*> >::~CUtlVector()
  T CUtlVector<vgui::layoutcmd_base_t, CUtlMemory<vgui::layoutcmd_base_t> >::GrowVector(int)
- T CUtlVector<vgui::layoutcmd_base_t, CUtlMemory<vgui::layoutcmd_base_t> >::InsertBefore(int)
  T CUtlVector<vgui::layoutcmd_base_t, CUtlMemory<vgui::layoutcmd_base_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<vgui::layoutcmd_base_t, CUtlMemory<vgui::layoutcmd_base_t> >::RemoveAll()
  T CUtlVector<vgui::layoutcmd_base_t, CUtlMemory<vgui::layoutcmd_base_t> >::~CUtlVector()
+ T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::AddToTail(void* (* const&)(char const*, int*))
  T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::GrowVector(int)
- T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::InsertBefore(int, void* (* const&)(char const*, int*))
  T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::Validate(CValidator&, char const*)
  T CUtlVector<void* (*)(char const*, int*), CUtlMemory<void* (*)(char const*, int*)> >::~CUtlVector()
  T CUtlVector<wchar_t, CUtlMemory<wchar_t> >::AddMultipleToTail(int, wchar_t const*)
@@ -1812,8 +1800,6 @@
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
- T CaselessStringLessThan(char const* const&, char const* const&)
- T CaselessStringLessThanIgnoreSlashes(char const* const&, char const* const&)
  T CharacterSetBuild(characterset_s*, char const*)
  T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
  T ClipRect(vgui::Vertex_t const&, vgui::Vertex_t const&, vgui::Vertex_t*, vgui::Vertex_t*)
@@ -1847,6 +1833,7 @@
  T KV_ResolveSymbol(char const*)
  T KeyCode_CharToVGUI(int)
  T KeyCode_VGUICanBeRemapped(vgui::KeyCode)
+ T KeyCode_VGUIToScanCode(vgui::KeyCode)
  T KeyCode_VGUIToVirtualKey(vgui::KeyCode)
  T KeyCode_VirtualKeyToVGUI(int)
  T KeyCode_WindowsVirtualKeyToVirtualKey(int)
@@ -1944,7 +1931,6 @@
  T SetScissorRect(int, int, int, int)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
- T StringLessThan(char const* const&, char const* const&)
  T Sys_GetFactory(CSysModule*)
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
@@ -2040,12 +2026,12 @@
  T int CUtlRBTree<CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::Node_t, int, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CLayoutFile::AppearanceKey_t, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess>(CLayoutFile::AppearanceKey_t const&, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CSchemeManager::FontKey_t, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess>(CSchemeManager::FontKey_t const&, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<HotKey_t, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess>(HotKey_t const&, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess>(char const* const&, CUtlMap<char const*, CLayoutFile*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess>(char const* const&, CUtlMap<char const*, Color, int, bool (*)(char const* const&, char const* const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess>(char const* const&, CUtlMap<char const*, bool, int, bool (*)(char const* const&, char const* const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess>(char const* const&, CUtlMap<char const*, int, int, bool (*)(char const* const&, char const* const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess>(char const* const&, CUtlMap<char const*, vgui::Bitmap*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<int, int, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess>(int const&, CUtlMap<int, int, int, bool (*)(int const&, int const&)>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess>(char const* const&, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess>(char const* const&, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess>(char const* const&, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess>(char const* const&, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess>(char const* const&, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess const&) const
+ T int CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess>(int const&, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned long long, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess>(unsigned long long const&, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned long long, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess>(unsigned long long const&, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess const&) const
@@ -2402,6 +2388,7 @@
  V_binarytohex
  V_snprintf
  V_strcat
+ V_stricmp_filename
  V_stristr(char const*, char const*)
  V_strlower_fast
  V_strncat
@@ -2529,13 +2516,14 @@
  b s_pInvisibleFocusEatingNSWindow
  b s_pVGUIHasCharForLayoutResolution
  b s_pVGUIKeyWindow
+ b s_pVGUIToScanCode
  b s_pVGUIToVirtualKey
  b s_pVirtualKeyToVGUI
  b s_pWindowsToVirtualKey
  b vec2_invalid
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
- b vgui::InitKeyTranslation()::threadonce_538_17
+ b vgui::InitKeyTranslation()::threadonce_587_17
  ceilf
  close
  closedir
@@ -2543,15 +2531,15 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp710
- d __block_descriptor_tmp729
- d __block_descriptor_tmp746
+ d __block_descriptor_tmp709
+ d __block_descriptor_tmp728
+ d __block_descriptor_tmp744
+ d __block_descriptor_tmp748
  d __block_descriptor_tmp750
- d __block_descriptor_tmp752
  d __block_literal_global
- d __block_literal_global747
+ d __block_literal_global745
+ d __block_literal_global749
  d __block_literal_global751
- d __block_literal_global753
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2797,9 +2785,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_727
+ t __copy_helper_block_726
  t __destroy_helper_block_
- t __destroy_helper_block_728
+ t __destroy_helper_block_727
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t png_build_16bit_table
  t png_format_buffer

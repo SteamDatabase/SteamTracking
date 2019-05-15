@@ -117,13 +117,18 @@ message CAppOverview {
 	optional uint32 rt_steam_release_date = 26 [default = 0];
 	optional string icon_hash = 27;
 	optional string icon_path = 28;
-	optional string icon_bitmap = 29;
 	optional string logo_hash = 30;
 	optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];
 	optional bool vr_supported = 32;
 	optional uint32 vr_controller_support = 33;
 	optional uint32 vr_play_area_support = 34;
 	optional .CAppOverview_PlayAreaDimensions vr_play_area_dimensions = 35;
+	optional uint32 metacritic_score = 36;
+	optional uint64 size_on_disk = 37;
+	optional bool third_party_mod = 38;
+	optional string icon_data = 39;
+	optional string icon_data_format = 40;
+	optional string gameid = 41;
 }
 
 message CAppOverview_Change {

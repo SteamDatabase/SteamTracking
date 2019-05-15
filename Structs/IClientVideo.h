@@ -42,6 +42,12 @@ public:
     virtual unknown_ret GetWatchBroadcastMPD(CSteamID) = 0;
     virtual unknown_ret GetApprovalRequestCount() = 0;
     virtual unknown_ret GetApprovalRequests(CSteamID*, unsigned int) = 0;
+    virtual unknown_ret AddBroadcastGameData(char const*, char const*) = 0;
+    virtual unknown_ret RemoveBroadcastGameData(char const*) = 0;
+    virtual unknown_ret AddTimelineMarker(char const*, bool, unsigned char, unsigned char, unsigned char) = 0;
+    virtual unknown_ret RemoveTimelineMarker() = 0;
+    virtual unknown_ret AddRegion(char const*, char const*, SteamTVRegion_t const*, ESteamTVRegionBehavior) = 0;
+    virtual unknown_ret RemoveRegion(unsigned int) = 0;
     virtual unknown_ret GetVideoURL(unsigned int) = 0;
     virtual unknown_ret GetOPFSettings(unsigned int) = 0;
     virtual unknown_ret GetOPFStringForApp(unsigned int, char*, int, int*) = 0;

@@ -155,7 +155,7 @@
  T CValObject::Init(char const*, void*, char const*, CValObject*, CValObject*)
  T CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
  T CValidator::BExcludeAllocationFromTracking(char const*, int)
- T CValidator::CValidator(int, bool)
+ T CValidator::CValidator(int, bool, IMemBlockClaimedList*)
  T CValidator::ClaimArrayMemory(void*)
  T CValidator::ClaimConnection(unsigned int)
  T CValidator::ClaimMemory(void*)

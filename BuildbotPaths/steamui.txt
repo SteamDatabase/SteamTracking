@@ -4,6 +4,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cellmap.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp

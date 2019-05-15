@@ -450,6 +450,7 @@ message CMsgClientMMSLobbyData {
 	optional bytes metadata = 8;
 	repeated .CMsgClientMMSLobbyData.Member members = 9;
 	optional uint32 lobby_cellid = 10;
+	optional bool owner_should_accept_changes = 11;
 }
 
 message CMsgClientMMSSendLobbyChatMsg {
