@@ -50137,7 +50137,12 @@
                         strErrorMsg: e.response.data.err_msg,
                         errorCode: e.response.data.success
                       };
-                  }
+                    if ("message" in e.response.data)
+                      return {
+                        strErrorMsg: e.response.data.message,
+                        errorCode: e.response.data.success
+                      };
+                  } else console.error(e);
                   return "status" in e
                     ? {
                         strErrorMsg:
