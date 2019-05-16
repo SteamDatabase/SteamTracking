@@ -60,6 +60,9 @@
     },
     "auw2": {
       "desc": "AWS us-west-2 (Oregon)",
+      "groups": [
+        "cloud-test"
+      ],
       "ping_only": true,
       "relay_addresses": [
         "34.212.218.15:27015-27019"
@@ -1588,7 +1591,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 227,
+  "revision": 228,
   "revoked_keys": [
     "123456789"
   ]

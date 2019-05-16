@@ -89,7 +89,7 @@ body.v6 h2.pageheader.itemtitle
 	margin: 0 auto;
 	margin-bottom: 10px;
 	padding: 6px 0px 0px 12px;
-	height: 33px;
+	min-height: 33px;
 	background-color: rgba(255, 255, 255, 0.13 );
 }
 .searchbox
@@ -126,15 +126,7 @@ a#store_search_link img:hover {
 }
 .itemstore_tabbar_ctn
 {
-	height: 35px;
-}
-.itemstore_tabbar
-{
-	white-space: nowrap;
-	margin-bottom: 0px;
-	overflow-x: auto;
-	overflow-y: hidden;
-	height: 35px;
+	min-height: 35px;
 }
 
 .itemstore_tabarea .itemstore_tab {
