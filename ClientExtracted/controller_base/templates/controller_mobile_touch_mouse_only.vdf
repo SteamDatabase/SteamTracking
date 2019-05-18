@@ -15,22 +15,22 @@
 			"title"		"Mouse point and click"
 			"description"		"This template works great for the games on Steam that were designed for point and click interaction"
 		}
-		"korean"
+		"koreana"
 		{
 			"title"		"마우스 포인트 및 클릭"
 			"description"		"이 템플릿은 Steam에 있는 게임 중 특정 지점을 마우스로 가리키고 클릭하는 동작을 위해 설계된 게임에서 유용합니다."
 		}
-		"chinese traditional"
+		"tchinese"
 		{
 			"title"		"滑鼠瞄準點擊"
 			"description"		"此模板適用於 Steam 上的滑鼠點擊類遊戲"
 		}
-		"chinese simplified"
+		"schinese"
 		{
 			"title"		"鼠标指向与点击"
 			"description"		"此模板适用于 Steam 上指向与点击互动类游戏。"
 		}
-		"czeh"
+		"czech"
 		{
 			"title"		"Myš s přesným zaměřováním"
 			"description"		"Tato šablona je pro hry ve službě Steam, které byly vytvořeny pro ovládání myší (např. hry žánru „Point and Click“)."
@@ -85,7 +85,7 @@
 			"title"		"Ratón - Apuntar y hacer clic"
 			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción de apuntar y hacer clic."
 		}
-		"spanish, mexico"
+		"latam"
 		{
 			"title"		"Mouse: apuntar y hacer clic"
 			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción de apuntar y hacer clic."
@@ -105,7 +105,7 @@
 			"title"		"Osoita ja klikkaa hiirellä"
 			"description"		"Malli sopii erityisesti osoita ja klikkaa -tyyppisiin Steam-peleihin"
 		}
-		"ukranian"
+		"ukrainian"
 		{
 			"title"		"Взаємодія мишкою"
 			"description"		"Цей шаблон чудово працює з іграми у Steam, які розроблені для взаємодії мишкою"
@@ -125,7 +125,7 @@
 			"title"		"Di và nhấp chuột"
 			"description"		"Bản đồ phím mẫu này rất phù hợp với các trò chơi trên Steam được thiết kế dành cho tương tác di và nhấp chuột"
 		}
-		"portuguese, brazilian"
+		"brazilian"
 		{
 			"title"		"\"Apontar e clicar\" com mouse"
 			"description"		"Este modelo é ótimo para jogos no Steam que se baseiam em interações no estilo apontar e clicar."
