@@ -804,6 +804,7 @@ SelectMousePosition
 }
 
 .controller_steamcontroller_headcrab #BackgroundLines.LeftGripSelected 
+.cap_grips #BackgroundLines.LeftGripSelected 
 {
     background-position: 0px 20px;
     z-index: -10;
@@ -864,7 +865,8 @@ SelectMousePosition
 	background-image: url("file://{images}/library/controller/cropped_controller_config_lines_7.png");
 }
 
-.controller_steamcontroller_headcrab #BackgroundLines.RightGripSelected
+.controller_steamcontroller_headcrab #BackgroundLines.RightGripSelected,
+.cap_additonal_buttons #BackgroundLines.RightGripSelected
 {
     background-position: -100px 20px;
     z-index: -10;
@@ -1460,6 +1462,26 @@ ControllerBindingButton#LeftGripUpperButton.BindingButton,
 ControllerBindingButton#RightGripUpperButton.BindingButton
 {
     margin-top: 120px;
+}
+
+.cap_additonal_buttons #LeftGripUpperButton.BindingButton{
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.cap_grip_buttons #LeftGripButton{
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.cap_additonal_buttons #RightGripUpperButton.BindingButton{
+    visibility: visible;
+    margin-top: 0px;
+}
+
+.cap_grip_buttons #RightGripButton{
+    visibility: visible;
+    margin-top: 0px;
 }
 
 .ControllerMode
