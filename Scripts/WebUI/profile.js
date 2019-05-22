@@ -97,7 +97,7 @@
       return Math.max(t, Math.min(n, e));
     }
     function i(e, t, n, r, o) {
-      return r + ((o - r) * (e - t)) / (n - t);
+      return r + (o - r) * (e - t) / (n - t);
     }
     n.d(t, "b", function() {
       return r;
@@ -280,8 +280,8 @@
                 ("text" == e || e.startsWith("text/")) && "text/html" !== e
               );
             })
-          ? null
-          : e.clipboardData.files[0]
+            ? null
+            : e.clipboardData.files[0]
         : null;
     }
     function v(e) {
@@ -298,20 +298,20 @@
       t.requestFullscreen
         ? t.requestFullscreen()
         : t.webkitRequestFullScreen
-        ? t.webkitRequestFullScreen()
-        : t.mozRequestFullScreen
-        ? t.mozRequestFullScreen()
-        : t.msRequestFullscreen && t.msRequestFullscreen();
+          ? t.webkitRequestFullScreen()
+          : t.mozRequestFullScreen
+            ? t.mozRequestFullScreen()
+            : t.msRequestFullscreen && t.msRequestFullscreen();
     }
     function b(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
         : t.webkitCancelFullScreen
-        ? t.webkitCancelFullScreen()
-        : t.mozCancelFullScreen
-        ? t.mozCancelFullScreen()
-        : t.msExitFullscreen && t.msExitFullscreen();
+          ? t.webkitCancelFullScreen()
+          : t.mozCancelFullScreen
+            ? t.mozCancelFullScreen()
+            : t.msExitFullscreen && t.msExitFullscreen();
     }
     var _ = (function() {
       function e(e) {
@@ -2181,14 +2181,8 @@
       return e.reduce(function(e, t) {
         return t
           ? "string" == typeof t
-            ? e
-              ? e + " " + t
-              : t
-            : "object" == typeof t
-            ? e
-              ? e + " " + r(t)
-              : r(t)
-            : e
+            ? e ? e + " " + t : t
+            : "object" == typeof t ? (e ? e + " " + r(t) : r(t)) : e
           : e;
       }, "");
     };
@@ -2311,26 +2305,26 @@
                   this.m_PrivacySettings.PrivacyOwnedGames
                 )
               : "PrivacyPlaytime" == e
-              ? d(
-                  this.GetPrivacySetting("PrivacyOwnedGames"),
-                  this.m_PrivacySettings.PrivacyPlaytime
-                )
-              : "PrivacyInventory" == e
-              ? d(
-                  this.m_PrivacySettings.PrivacyProfile,
-                  this.m_PrivacySettings.PrivacyInventory
-                )
-              : "PrivacyInventoryGifts" == e
-              ? d(
-                  this.GetPrivacySetting("PrivacyInventory"),
-                  this.m_PrivacySettings.PrivacyInventoryGifts
-                )
-              : "PrivacyFriendsList" == e
-              ? d(
-                  this.m_PrivacySettings.PrivacyProfile,
-                  this.m_PrivacySettings.PrivacyFriendsList
-                )
-              : this.m_PrivacySettings[e];
+                ? d(
+                    this.GetPrivacySetting("PrivacyOwnedGames"),
+                    this.m_PrivacySettings.PrivacyPlaytime
+                  )
+                : "PrivacyInventory" == e
+                  ? d(
+                      this.m_PrivacySettings.PrivacyProfile,
+                      this.m_PrivacySettings.PrivacyInventory
+                    )
+                  : "PrivacyInventoryGifts" == e
+                    ? d(
+                        this.GetPrivacySetting("PrivacyInventory"),
+                        this.m_PrivacySettings.PrivacyInventoryGifts
+                      )
+                    : "PrivacyFriendsList" == e
+                      ? d(
+                          this.m_PrivacySettings.PrivacyProfile,
+                          this.m_PrivacySettings.PrivacyFriendsList
+                        )
+                      : this.m_PrivacySettings[e];
           }),
           Object.defineProperty(e.prototype, "CommentPermission", {
             get: function() {
@@ -6263,9 +6257,7 @@ and limitations under the License.
         c =
           i < 3
             ? t
-            : null === r
-            ? (r = Object.getOwnPropertyDescriptor(t, n))
-            : r;
+            : null === r ? (r = Object.getOwnPropertyDescriptor(t, n)) : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         c = Reflect.decorate(e, t, n, r);
       else
@@ -6335,8 +6327,8 @@ and limitations under the License.
                       2 & t[0]
                         ? i.return
                         : t[0]
-                        ? i.throw || ((c = i.return) && c.call(i), 0)
-                        : i.next) &&
+                          ? i.throw || ((c = i.return) && c.call(i), 0)
+                          : i.next) &&
                     !(c = c.call(i, t[1])).done)
                 )
                   return c;
@@ -6447,8 +6439,8 @@ and limitations under the License.
             return this.m_rgLocalesToUse
               ? this.m_rgLocalesToUse
               : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
+                ? navigator.languages
+                : ["en-US"];
           }),
           (e.prototype.SetPreferredLocales = function(e) {
             this.m_rgLocalesToUse = e;
@@ -6514,34 +6506,37 @@ and limitations under the License.
       return e >= 2 * o.a.PerYear
         ? i(r + "XYears", Math.floor(e / o.a.PerYear))
         : e >= o.a.PerYear
-        ? (e -= o.a.PerYear) >= 2 * o.a.PerMonth
-          ? i(r + "1YearXMonths", Math.floor(e / o.a.PerMonth))
-          : i(r + "1Year")
-        : e >= 2 * o.a.PerMonth
-        ? i(r + "XMonths", Math.floor(e / o.a.PerMonth))
-        : e >= 2 * o.a.PerWeek
-        ? i(r + "XWeeks", Math.floor(e / o.a.PerWeek))
-        : e >= o.a.PerWeek
-        ? i(r + "1Week", Math.floor(e / o.a.PerWeek))
-        : e >= 2 * o.a.PerDay
-        ? i(r + "XDays", Math.floor(e / o.a.PerDay))
-        : e >= o.a.PerDay
-        ? (e -= o.a.PerDay) >= 2 * o.a.PerHour
-          ? i(r + "1DayXHours", Math.floor(e / o.a.PerHour))
-          : i(r + "1Day")
-        : e >= 2 * o.a.PerHour
-        ? i(r + "XHours", Math.floor(e / o.a.PerHour))
-        : e >= o.a.PerHour
-        ? (e -= o.a.PerHour) >= 2 * o.a.PerMinute && n
-          ? i(r + "1HourXMinutes", Math.floor(e / o.a.PerMinute))
-          : i(r + "1Hour")
-        : n
-        ? e >= 2 * o.a.PerMinute
-          ? i(r + "XMinutes", Math.floor(e / o.a.PerMinute))
-          : e >= o.a.PerMinute
-          ? i(r + "1Minute")
-          : i(r + "LessThanAMinute")
-        : i(r + "LessThanAnHour");
+          ? (e -= o.a.PerYear) >= 2 * o.a.PerMonth
+            ? i(r + "1YearXMonths", Math.floor(e / o.a.PerMonth))
+            : i(r + "1Year")
+          : e >= 2 * o.a.PerMonth
+            ? i(r + "XMonths", Math.floor(e / o.a.PerMonth))
+            : e >= 2 * o.a.PerWeek
+              ? i(r + "XWeeks", Math.floor(e / o.a.PerWeek))
+              : e >= o.a.PerWeek
+                ? i(r + "1Week", Math.floor(e / o.a.PerWeek))
+                : e >= 2 * o.a.PerDay
+                  ? i(r + "XDays", Math.floor(e / o.a.PerDay))
+                  : e >= o.a.PerDay
+                    ? (e -= o.a.PerDay) >= 2 * o.a.PerHour
+                      ? i(r + "1DayXHours", Math.floor(e / o.a.PerHour))
+                      : i(r + "1Day")
+                    : e >= 2 * o.a.PerHour
+                      ? i(r + "XHours", Math.floor(e / o.a.PerHour))
+                      : e >= o.a.PerHour
+                        ? (e -= o.a.PerHour) >= 2 * o.a.PerMinute && n
+                          ? i(
+                              r + "1HourXMinutes",
+                              Math.floor(e / o.a.PerMinute)
+                            )
+                          : i(r + "1Hour")
+                        : n
+                          ? e >= 2 * o.a.PerMinute
+                            ? i(r + "XMinutes", Math.floor(e / o.a.PerMinute))
+                            : e >= o.a.PerMinute
+                              ? i(r + "1Minute")
+                              : i(r + "LessThanAMinute")
+                          : i(r + "LessThanAnHour");
     }
     new Map(), new Map(), new Map(), new Map();
     var m = new r();
