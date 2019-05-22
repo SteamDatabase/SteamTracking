@@ -1669,6 +1669,9 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   padding-left: 10px;
   user-select: text; }
 
+.changeLogPage .changeLogItem a {
+  color: inherit; }
+
 .changeLogPage .changeLogItem:before {
   position: absolute;
   left: 18px;

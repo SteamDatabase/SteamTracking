@@ -1526,6 +1526,13 @@ LocalizationReady("friendsui", "english", {
   changeLog_UpdateItem74:
     "Fixed an issue with consecutive emoticons overlapping.",
 
+  changeLog_UpdateItem75:
+    "Increased the blur on spoiler-tagged images in chat.",
+  changeLog_UpdateItem76:
+    "Added a /store command, which allows quickly sending links to Steam store games.",
+  changeLog_UpdateItem77:
+    "The Steam Chat mobile app is now available for %1$s and %2$s!",
+
   changeLog_UpdateExtraInfo01:
     "We’ve released an update to the new chat. As part of the new chat update, your client will automatically receive friends and chat user interface updates when your computer is idle, or you can initiate an update by choosing “Check for Steam Client Updates” under the Steam menu in the client. These updates do not require a full Steam restart and will apply to just Friends/Chat in real-time while the rest of your client is running.",
 

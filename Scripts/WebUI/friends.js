@@ -39993,6 +39993,38 @@
           (e.Posts = function() {
             return [
               {
+                date: "2019-05-17",
+                content: k.createElement(
+                  "div",
+                  { className: "changeLogDescription" },
+                  k.createElement(
+                    "div",
+                    { className: "changeLogItem" },
+                    Object(L.d)(
+                      "#changeLog_UpdateItem77",
+                      k.createElement(
+                        "a",
+                        {
+                          target: "_blank",
+                          href:
+                            "https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.friendsui"
+                        },
+                        "Android"
+                      ),
+                      k.createElement(
+                        "a",
+                        {
+                          target: "_blank",
+                          href:
+                            "https://itunes.apple.com/app/steam-chat/id1434890245"
+                        },
+                        "iOS"
+                      )
+                    )
+                  )
+                )
+              },
+              {
                 date: "2019-05-01",
                 content: k.createElement(
                   "div",
@@ -40000,7 +40032,7 @@
                   k.createElement(
                     "div",
                     { className: "changeLogItem" },
-                    "Added a /store command, which allows quickly sending links to Steam store games."
+                    Object(L.b)("#changeLog_UpdateItem76")
                   )
                 )
               },
@@ -40012,7 +40044,7 @@
                   k.createElement(
                     "div",
                     { className: "changeLogItem" },
-                    "Increased the blur on spoiler-tagged images in chat."
+                    Object(L.b)("#changeLog_UpdateItem75")
                   )
                 )
               },
