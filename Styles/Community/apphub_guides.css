@@ -65,6 +65,10 @@
 	margin-bottom: 4px;
 }
 
+.apphub_ContentGuides .backgroundImg {
+	display: none;
+}
+
 .apphub_ContentGuides .workshopItemCollection
 {
 	display: block;
