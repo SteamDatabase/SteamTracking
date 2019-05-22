@@ -836,7 +836,7 @@ function SignLatestCafeWalletFundingAgreement( returnURL )
 
 	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
 	if ( !agreedToSDA1.prop("checked") ) {
-		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Cafe Wallet Funding License Agreement before continuing.');
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Café Wallet Funding License Agreement before continuing.');
 		return;
 	}
 	
@@ -852,7 +852,7 @@ function SignLatestCafeWalletFundingAgreement( returnURL )
 				waitingDialog.Dismiss();
 				if ( response.success == 1 )
 				{
-					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam Cafe Wallet Funding License Agreement. Click OK to continue.' );
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam Café Wallet Funding License Agreement. Click OK to continue.' );
 					dialog.done( function() {
 						top.location.href = returnURL;
 					} );
