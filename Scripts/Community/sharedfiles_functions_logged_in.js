@@ -1,4 +1,6 @@
 
+"use strict";
+
 // I know what you're thinking. No, it won't work.
 function WorkshopSetAccepted(item_id)
 {
@@ -90,28 +92,67 @@ function CheckVoteResultsJSON( json )
 	}
 }
 
+// Find a button for a given item_id, or use a fallback.
+// This can still return an empty result if neither exist.
+function FindButton( item_id, prefix, fallback, bUseFallback = true )
+{
+    const button = $(prefix + item_id);
+
+    if (button == null && bUseFallback)
+    {
+        return $(fallback);
+    }
+
+    return button;
+}
+
+// Locate our various buttons, so we don't need to care if we're on
+// a page with one item, or many.
+// TODO: All this functionality should be in a class, and lazily evaluated.
+
+function FindVoteButtons(item_id, bUseFallback = true)
+{
+	return {
+        voteUp:    FindButton( item_id, 'vote_up_',     'VoteUpBtn'  ,      bUseFallback ),
+        voteDown:  FindButton( item_id, 'vote_down_',   'VoteDownBtn',      bUseFallback ),
+        favorite:  FindButton( item_id, 'favorite_',    'FavoriteItemBtn',  bUseFallback ),
+        wait:      FindButton( item_id, 'action_wait_', 'action_wait',      bUseFallback ),
+        subscribe: FindButton( item_id, 'subscribed_',  'SubscribeItemBtn', bUseFallback )
+    };
+}
+
+// Sets or unsets the 'toggled' class on the given element.
+// Returns the *new* item state.
+function ToggleElement( element )
+{
+    if (element.hasClassName('toggled')) {
+        element.removeClassName('toggled');
+        return false;
+    }
+    else
+    {
+        element.addClassName('toggled');
+        return true;
+    }
+}
+
 function ToggleChildItemVoteBtns( transport, bVotedUp )
 {
-	var json = transport.responseText.evalJSON();
+	const json = transport.responseText.evalJSON();
 	if ( json['items'] )
 	{
-		for ( var i = 0; i < json['items'].length; ++i )
+		for ( let i = 0; i < json['items'].length; ++i )
 		{
-			var id = json['items'][i];
-			var childVoteUpBtn = $('vote_up_' + id);
-			var childVoteDownBtn = $('vote_down_' + id);
-			if ( childVoteUpBtn &&childVoteDownBtn  )
-			{
-				if ( bVotedUp )
-				{
-					childVoteUpBtn.addClassName('btn_active');
-					childVoteDownBtn.removeClassName('btn_active');
-				}
-				else
-				{
-					childVoteUpBtn.removeClassName('btn_active');
-					childVoteDownBtn.addClassName('btn_active');
-				}
+            const id = json['items'][i];
+
+            const buttons  = FindVoteButtons(id, false);
+            const voteUp   = buttons.voteUp;
+            const voteDown = buttons.voteDown;
+
+            if ( voteUp && voteDown )
+            {
+                (bVotedUp ? voteUp   : voteDown).addClassName( 'btn_active');
+                (bVotedUp ? voteDown : voteUp).removeClassName('btn_active');
 			}
 		}
 	}
@@ -119,16 +160,18 @@ function ToggleChildItemVoteBtns( transport, bVotedUp )
 
 function VoteUp(item_id)
 {
-	if ( !$('VoteUpBtn').hasClassName( 'toggled' ) )
+	const buttons = FindVoteButtons(item_id);
+
+	if ( ! buttons.voteUp.hasClassName( 'toggled' ) )
 	{
-		$('action_wait').show();
+		buttons.wait.show();
 		var options = {
 			method: 'post',
 			postBody: 'id=' + item_id + '&sessionid=' + g_sessionID,
 			onSuccess: (function(item_id){
 				return function(transport)
 				{
-					$('action_wait').hide();
+					buttons.wait.hide();
 
 					if ( !CheckVoteResults( transport ) )
 						return;
@@ -142,8 +185,9 @@ function VoteUp(item_id)
 						$('VotesUpCountContainer').show();
 					}
 
-					$('VoteUpBtn').addClassName('toggled');
-					$('VoteDownBtn').removeClassName('toggled');
+					buttons.voteUp.addClassName('toggled');
+					buttons.voteDown.removeClassName('toggled');
+
 					var voteLaterBtn = $('VoteLaterBtn');
 					if ( voteLaterBtn )
 					{
@@ -170,13 +214,15 @@ function VoteUp(item_id)
 
 function VoteDown(item_id)
 {
-	if ( !$('VoteDownBtn').hasClassName( "toggled" ) )
+	const buttons = FindVoteButtons(item_id);
+
+	if ( ! buttons.voteDown.hasClassName( "toggled" ) )
 	{
 		var blurb = $('rated_blurb');
 		if( blurb != null )
 			blurb.hide();
 
-		$('action_wait').show();
+        buttons.wait.show();
 
 		var options = {
 			method: 'post',
@@ -184,7 +230,7 @@ function VoteDown(item_id)
 			onSuccess: (function(item_id){
 				return function(transport)
 				{
-					$('action_wait').hide();
+					buttons.wait.hide();
 
 					if ( !CheckVoteResults( transport ) )
 						return;
@@ -192,7 +238,7 @@ function VoteDown(item_id)
 					ToggleChildItemVoteBtns( transport, false );
 
 					var votesUpCount = $('VotesUpCount');
-					if ( votesUpCount && $('VoteUpBtn').hasClassName( 'toggled' ) )
+					if ( votesUpCount && buttons.voteUp.hasClassName( 'toggled' ) )
 					{
 						UpdateFormattedNumber( votesUpCount, -1 );
 						if ( parseInt( votesUpCount.innerHTML ) == 0 )
@@ -200,8 +246,10 @@ function VoteDown(item_id)
 							$('VotesUpCountContainer').hide();
 						}
 					}
-					$('VoteUpBtn').removeClassName('toggled');
-					$('VoteDownBtn').addClassName('toggled');
+
+					buttons.voteUp.removeClassName('toggled');
+					buttons.voteDown.addClassName('toggled');
+
 					var voteLaterBtn = $('VoteLaterBtn');
 					if ( voteLaterBtn )
 					{
@@ -221,6 +269,49 @@ function VoteDown(item_id)
 	}
 
 	return false;
+}
+
+function ToggleItemState(item_id, app_id, buttonType, activate, deactivate) {
+    const buttons = FindVoteButtons(item_id);
+
+    buttons.wait.show();
+
+    const clickedButton = buttons[buttonType];
+
+    const options = {
+        method: 'post',
+        parameters: {
+            'id': item_id,
+            'appid': app_id,
+            'sessionid': g_sessionID
+        },
+        onSuccess: function () {
+            buttons.wait.hide();
+            const buttonNowOn = ToggleElement(clickedButton);
+
+            // If the button is now on, and there's a panel to switch in...
+            if (clickedButton.hasClassName("panelSwitch") && ! buttonNowOn)
+            {
+                $("Unsubscribed" + item_id).show();
+                $("Subscription" + item_id).hide();
+            }
+        }
+    };
+
+    let endpoint = "https://steamcommunity.com";
+    endpoint += clickedButton.hasClassName("toggled") ? deactivate : activate;
+
+    new Ajax.Request(endpoint, options);
+}
+
+function ToggleFavorite(item_id, app_id)
+{
+    ToggleItemState(item_id, app_id, 'favorite', '/sharedfiles/favorite', '/sharedfiles/unfavorite');
+}
+
+function ToggleSubscribed(item_id, app_id)
+{
+    ToggleItemState(item_id, app_id, 'subscribe', '/sharedfiles/subscribe', '/sharedfiles/unsubscribe');
 }
 
 function VoteLater(item_id)

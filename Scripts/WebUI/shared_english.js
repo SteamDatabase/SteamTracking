@@ -534,16 +534,36 @@ LocalizationReady("shared", "english", {
   MobileLogin_Enter2FA:
     "Enter the code generated on the Steam Guard section of your Steam Mobile App.",
   MobileLogin_Enter2FAHelp: "I cannot access my Steam Guard code",
-  MobileLogin_EnterSteamguard: "I did not receive my Steam Guard code e-mail",
+  MobileLogin_EnterSteamguard: "I did not receive a Steam Guard e-mail",
   MobileLogin_SteamguardCode: "Steam Guard Code",
   MobileLogin_SteamguardSubmit: "Submit & Sign In",
   MobileLogin_SentSteamguard_1: "We sent a message to your",
   MobileLogin_SentSteamguard_2: "e-mail. Enter the Steam Guard code provided.",
   MobileLogin_IncorrectSteamGuard:
-    "The entered Steam Guard code is incorrect. Please double check the code and try again.",
+    "The entered Steam Guard code is incorrect. Please check the code and try again.",
 
   MobileLogin_Error_RateLimitExceeded:
     "There have been too many login failures from your network in a short time period. Please wait and try again later.",
+
+  Login_SignIn: "Sign in",
+  Login_SigningIn: "Signing in",
+  Login_AccountName: "Steam Account Name",
+  Login_Password: "Password",
+  Login_RememberMe: "Remember me on this computer",
+  Login_ForgotPassword: "Forgot your account name or password?",
+  Login_NoSteamAccount: "Don't have a Steam account?",
+  Login_CreateAccount: "Create a Free Account",
+  Login_CaptchaVerification:
+    "Please verify your humanity by re-entering the characters in the captcha.",
+  Login_RefreshCaptcha: "Refresh",
+  Login_Enter2FA:
+    "Enter the code generated on the Steam Guard section of your Steam Mobile App.",
+  Login_Enter2FAHelp: "I cannot access my Steam Guard code",
+  Login_EnterSteamguard: "I did not receive a Steam Guard e-mail",
+  Login_SteamguardSubmit: "Submit & Sign In",
+  Login_SentSteamguard:
+    "We sent a message to your %1$s e-mail. Enter the Steam Guard code provided.",
+  Login_SignOut: "Sign out",
 
   Emoticon_Search: "Search Emoticons",
   Chat_Settings_Error_ChatFileTooLarge: "%1$s is too large (10MB maximum).",

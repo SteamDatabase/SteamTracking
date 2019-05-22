@@ -153,6 +153,9 @@
 	-moz-border-radius: 3px;
 	cursor: pointer;
 }
+.general_btn:last-child {
+    margin-right: 0px;
+}
 
 a.general_btn {
 	color: #939393;
@@ -1495,7 +1498,7 @@ textarea {
 	position: relative;
 	background-color: rgba( 84, 133, 183, 0.2);
 	margin-bottom: 4px;
-	padding: 5px;
+	padding: 10px;
 	cursor: pointer;
 	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
 }
@@ -1558,6 +1561,32 @@ textarea {
 .workshopItemCollection .workshopItemAuthorName
 {
 	color: #ffffff;
+}
+
+.workshopItemCollectionContainer {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    font-size: 13px;
+    line-height: 15px;
+    position: relative;
+    background-color: #273b52;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+    margin-right: 0px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.backgroundImg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    filter: blur(30px);
+    top: -30%;
+    opacity: 0.3;
+    -webkit-mask-image: linear-gradient(90deg, black -25%, rgba(0, 0, 0, 0) 80%);
+    mask-image: linear-gradient(90deg, black -25%, rgba(0, 0, 0, 0) 100%);
 }
 
 #detailsHeaderRight
@@ -2620,8 +2649,7 @@ div.hover {
 }
 
 .hover_box {
-	border: 1px solid #82807c;
-	background-color: #3b3938;
+	background-color: #363c45;
 	width: 300px;
 
 	color: #b0aeac;
@@ -2667,13 +2695,37 @@ div.hover {
 }
 
 .hover_arrow_left {
-	border-right: 14px solid #3A3A3A;
-	left: 0px;
+	border-right: 14px solid #363c45;
+
+    right: 96%;
+    top: 54px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(54, 60, 69, 0);
+    border-right-color: #363c45;
+    border-width: 16px;
+    margin-top: -16px;
 }
 
 .hover_arrow_right {
-	border-left: 14px solid #3A3A3A;
-	right: 0px;
+	border-left: 14px solid #363c45;
+
+    left: 96%;
+    top: 54px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(54, 60, 69, 0);
+    border-left-color: #363c45;
+    border-width: 16px;
+    margin-top: -16px;
 }
 
 .hover_arrow_inner {
@@ -2682,7 +2734,7 @@ div.hover {
 	background-repeat: no-repeat;
 	width: 13px;
 	height: 26px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/hover_arrow_both.gif' );
+
 }
 
 .hover_arrow_left .hover_arrow_inner {
@@ -2945,6 +2997,10 @@ div.hover {
 	float: left;
 }
 
+.follower_tt {
+    cursor: default;
+}
+
 .followStat
 {
 	color: #67c1f5;
@@ -2953,6 +3009,10 @@ div.hover {
 		font-weight: 300; /* light */
 
 		}
+.followStat_sm {
+    font-size: 14px;
+    display: inline-block;
+}
 
 .followStatsTitleContainer
 {
@@ -2969,6 +3029,10 @@ div.hover {
 		font-weight: 300; /* light */
 
 		}
+.followStatName_sm {
+    font-size: 14px;
+    display: inline-block;
+}
 
 .workshopAuthorHeader
 {

@@ -197,6 +197,25 @@
             ]
         },
         {
+            "name": "GetPublisherAppOwnership",
+            "version": 3,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "SteamID of user"
+                }
+            ]
+        },
+        {
             "name": "GetPublisherAppOwnershipChanges",
             "version": 1,
             "httpmethod": "GET",

@@ -586,6 +586,7 @@ LocalizationReady("friendsui", "english", {
   Chat_CreateTextChannel_DefaultName: "Text Channel",
   Chat_CreateChatChannel_DefaultName: "Voice Channel",
   Chat_NewChat_Capital: "NEW CHAT",
+  Chat_DefaultChannelName: "Home",
 
   Chat_SaveVoiceRoom: "Save this voice channel",
   Chat_SaveVoiceRoom_Name: "Name for this channel:",
@@ -765,6 +766,7 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_InviteToLobby: "Invite to Lobby",
   Friend_Menu_InviteToTrade: "Invite to Trade",
   Friend_Menu_InviteToWatch: "Invite to Watch",
+  Friend_Menu_InviteToRemotePlay: "Invite for Remote Play",
   Friend_Menu_KickFromChatRoom: "Kick",
   Friend_Menu_LaunchGame: "Launch ",
   Friend_Menu_HasLeftChat: "No Longer in Chat",
@@ -868,6 +870,9 @@ LocalizationReady("friendsui", "english", {
   Friend_Notification_Invite: "%1$s invited you to chat in '%2$s'",
   Friend_Notification_InviteVoice: "%1$s invited you to voice chat in '%2$s'",
   Friend_Notification_GameInvite: "%1$s invited you to play %2$s",
+  Friend_Notification_GameInviteYouInvited: "You invited %1$s to play %2$s",
+  Friend_Notification_GameInviteRemotePlay:
+    "%1$s invited you to play %2$s via Steam Remote Play",
 
   Friend_StateChange_Online: "is now online",
   Friend_StateChange_InGame: "is now playing %1$s",
@@ -968,6 +973,10 @@ LocalizationReady("friendsui", "english", {
   Nickname_NickNameAsDialog: "current nickname set as",
   Nickname_PlaceHolderNickNameFresh: "Enter a nickname",
   Nickname_PlaceHolderNickName: "No nickname",
+
+  MobileChatUploadLogs: "Upload Logs",
+  MobileChatUploadLogsDesc:
+    "Would you like to upload your app logs to help us diagnose this issue?",
 
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",
@@ -1072,6 +1081,7 @@ LocalizationReady("friendsui", "english", {
   LanguageSettings_ConfirmTitle: "Change Language",
   LanguageSettings_ConfirmDescription:
     "Changing the language requires restarting Steam Chat.\n\nContinue?",
+  InterfaceSettings_DefaultHomeTab_Title: "Default Tab",
 
   TradeOfferLink_SendUserOffer: "Send %1$s a trade offer",
   TradeOfferLink_SendOffer: "Send a trade offer",
@@ -1134,6 +1144,15 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_GameInvite_YouInvited: "You invited %1$s to play %2$s%3$s",
   ChatRoom_GameInvite_Accepted: "You accepted an invitation to play %1$s%2$s",
   ChatRoom_GameInvite_AcceptOnPC: "You can accept this invite from your PC.",
+
+  ChatRoom_GameInviteRemotePlay_Invite: "%1$s invited you to play remotely",
+  ChatRoom_GameInviteRemotePlay_Accept: "Connect",
+  ChatRoom_GameInviteRemotePlay_Dismissed:
+    "%1$s invited you to play %2$s%3$s via Steam Remote Play",
+  ChatRoom_GameInviteRemotePlay_YouInvited:
+    "You invited %1$s to play %2$s%3$s via Steam Remote Play",
+  ChatRoom_GameInviteRemotePlay_Accepted:
+    "You accepted an invitation to play %1$s%2$s via Steam Remote Play",
 
   ChatRoom_BroadcastInvite_YouInvited:
     "You invited %1$s to watch your broadcast of %2$s",

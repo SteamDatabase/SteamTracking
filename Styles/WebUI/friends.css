@@ -6498,6 +6498,9 @@ button.DialogButton::-moz-focus-inner {
 .ModalPosition:focus {
   outline: none; }
 
+.ModalPosition.Hidden .ModalPosition_Content {
+  visibility: hidden; }
+
 .ModalDialogPopup .ModalPosition_Dismiss {
   display: none; }
 
@@ -13768,14 +13771,9 @@ html.web_chat_frame .perf_timing_area {
   background: radial-gradient(256px 256px at 20% 20%, rgba(61, 68, 78, 0.5) 0%, rgba(41, 44, 51, 0.5) 50%, rgba(36, 39, 46, 0.5) 100%), #1e2329;
   box-shadow: 0 6px 14px 1px #00000011; }
 
-.tradeInviteMsg .leftInviteContainer {
-  background-color: #1026;
-  background: radial-gradient(300px 228px at 50% 45%, #514764 0%, rgba(20, 16, 22, 0.5) 50%, #102 100%); }
-
 .tradeInviteMsg.tradeInviteSender .leftInviteContainer {
-  min-width: 66px;
-  flex: 0;
-  padding: 0; }
+  height: 36px;
+  width: 36px; }
 
 .tradeInviteMsg.tradeInviteSender .centerBlock {
   flex: 1;
@@ -13784,20 +13782,18 @@ html.web_chat_frame .perf_timing_area {
 .tradeInviteMsg.tradeInviteSender .rightInviteContainer {
   flex-direction: row; }
 
-.tradeInviteMsg.tradeInviteSender .leftInviteContainer .SVGIcon_Trade {
-  width: 48px;
-  margin: 0;
-  padding-left: 8px;
-  float: left; }
-
 .tradeInviteMsg.tradeInviteSender .DialogButton.Primary {
   margin-right: 0;
   align-self: center;
   flex: 0.4; }
 
-.tradeInviteMsg .SVGIcon_Trade {
-  width: 104px;
-  margin: auto; }
+.tradeInviteMsg.tradeInviteSender .leftInviteContainer .SVGIcon_Trade {
+  height: 36px;
+  width: 36px; }
+
+.tradeInviteMsg .leftInviteContainer .SVGIcon_Trade {
+  height: 64px;
+  width: 64px; }
 
 .msg.tradeRequest {
   max-width: 656px;
@@ -13821,17 +13817,14 @@ html.web_chat_frame .perf_timing_area {
   background-size: 100px 100px;
   background-position: 4px 4px; }
 
-.SingleUserChat .msg.tradeRequest {
-  padding: 0 0 3px 0px; }
-
-.SingleUserChat .tradeInviteDismissed {
+.tradeInviteDismissed {
   font-style: italic;
   color: #c1c6cf; }
 
-.SingleUserChat .isCurrentUser .tradeInviteDismissed {
+.isCurrentUser .tradeInviteDismissed {
   color: #969aa1; }
 
-.SingleUserChat .tradeInviteDismissed .SVGIcon_Trade {
+.tradeInviteDismissed .SVGIcon_Trade {
   width: 16px;
   height: 16px;
   margin-right: 4px;

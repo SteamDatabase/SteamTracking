@@ -25,7 +25,7 @@
     return e;
   }
   var n = {},
-    u = { 6: 0 },
+    u = { 7: 0 },
     m = [];
   function c(e) {
     if (n[e]) return n[e].exports;
@@ -3184,6 +3184,7 @@
     var r = n("q1tI"),
       o = n("twdX"),
       i = n.n(o);
+    n("QHER");
     function c() {
       return r.createElement(
         "svg",
@@ -4376,7 +4377,7 @@
         })
       );
     }
-    function V() {
+    function V(e) {
       return r.createElement(
         "svg",
         {
@@ -4390,25 +4391,58 @@
           height: "256px",
           viewBox: "0 0 256 256"
         },
-        r.createElement(
-          "g",
-          { className: "time" },
-          r.createElement("circle", {
-            fill: "none",
-            strokeWidth: "10",
-            strokeMiterlimit: "10",
-            cx: "91.735",
-            cy: "128.014",
-            r: "64"
-          }),
-          r.createElement("polyline", {
-            fill: "none",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
-          })
-        ),
+        e.bytime
+          ? r.createElement(
+              "g",
+              { className: "time" },
+              r.createElement("circle", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeMiterlimit: "10",
+                cx: "91.735",
+                cy: "128.014",
+                r: "64"
+              }),
+              r.createElement("polyline", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeMiterlimit: "10",
+                points: "91.735,90.833 91.735,128.014 116.58,152.086 \t"
+              })
+            )
+          : r.createElement(
+              "g",
+              { className: "alphabet" },
+              r.createElement("polyline", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points: "70.268,109.934 94.483,63.635 119.77,109.934"
+              }),
+              r.createElement("line", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                x1: "77.458",
+                y1: "97.861",
+                x2: "112.135",
+                y2: "97.861"
+              }),
+              r.createElement("polyline", {
+                fill: "none",
+                strokeWidth: "10",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeMiterlimit: "10",
+                points:
+                  "70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032"
+              })
+            ),
         r.createElement(
           "g",
           { className: "arrow" },
@@ -4427,38 +4461,6 @@
             strokeLinejoin: "round",
             strokeMiterlimit: "10",
             points: "199.735,63.66 199.735,192.366 228.266,163.675"
-          })
-        ),
-        r.createElement(
-          "g",
-          { className: "alphabet" },
-          r.createElement("polyline", {
-            fill: "none",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            points: "70.268,109.934 94.483,63.635 119.77,109.934"
-          }),
-          r.createElement("line", {
-            fill: "none",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            x1: "77.458",
-            y1: "97.861",
-            x2: "112.135",
-            y2: "97.861"
-          }),
-          r.createElement("polyline", {
-            fill: "none",
-            strokeWidth: "10",
-            strokeLinecap: "round",
-            strokeLinejoin: "round",
-            strokeMiterlimit: "10",
-            points:
-              "70.045,145.379 119.547,145.379 70.045,192.032 119.547,192.032"
           })
         )
       );
@@ -6434,10 +6436,14 @@ and limitations under the License.
               });
           }),
           (e.prototype.GetPreferredLocales = function() {
-            var e = ["en-US"];
-            return (
-              navigator && navigator.languages && (e = navigator.languages), e
-            );
+            return this.m_rgLocalesToUse
+              ? this.m_rgLocalesToUse
+              : navigator && navigator.languages
+                ? navigator.languages
+                : ["en-US"];
+          }),
+          (e.prototype.SetPreferredLocales = function(e) {
+            this.m_rgLocalesToUse = e;
           }),
           (e.prototype.LocalizeString = function(e) {
             if (!e || 0 == e.length || "#" != e.charAt(0)) return "";

@@ -5,7 +5,7 @@
 	max-width: 1280px;
 	text-align: left;
 	margin: 0 auto 64px auto;
-	min-height: calc( 100vh - 388px );
+    min-height: calc( 100vh - 409px );
 }
 
 .AdminPageContent strong {
@@ -3113,4 +3113,46 @@ span.new {
 #restrictions_list_wrapper .cdkeyrestriction .cdkeyrestriction_last_mod_info {
 	float: right;
 	max-width: 270px;
+}
+
+.adminFlexColumns {
+	display: flex;
+	flex-direction: row;
+}
+
+.adminFlexColumns > div {
+}
+
+.adminFlexColumns > div:not(:first-child) {
+	margin-left: 24px;
+}
+
+.adminLocalizedNames {
+	padding-left: 20px;
+}
+
+.adminLocalizedNameTwoCol {
+	margin-top: 12px;
+}
+
+.adminLocalizedRemoveLink {
+	float: right;
+	visibility: hidden;
+}
+
+.adminLocalizedNameTwoCol:hover .adminLocalizedRemoveLink {
+	visibility: visible;
+}
+
+.adminLocalizedNameTwoCol .localizedName {
+	display: flex;
+}
+
+.adminLocalizedNameTwoCol .localizedName > input {
+	flex: 1;
+}
+
+.adminLocalizedNameSave {
+	padding-top: 8px;
+	text-align: right;
 }

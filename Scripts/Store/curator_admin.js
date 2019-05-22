@@ -232,7 +232,7 @@ function UpdateCurator( bAsync, description, google_id, platform_windows, platfo
 		async: bAsync
 	} ).done( function ( data ) { }).fail( function( data ){
 		var response = JSON.parse(data.responseText);
-		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.success ) );
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, response.msg ) );
 	});
 }
 
