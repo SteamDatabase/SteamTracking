@@ -61555,8 +61555,10 @@
           (e.prototype.FlashWindow = function(e) {
             null != this.m_window.SteamClient &&
               null != this.m_window.SteamClient.Window &&
-              null != this.m_window.SteamClient.Window.FlashWindow &&
-              this.m_window.SteamClient.Window.FlashWindow(e);
+              (e && null != this.m_window.SteamClient.Window.FlashWindow
+                ? this.m_window.SteamClient.Window.FlashWindow()
+                : null != this.m_window.SteamClient.Window.StopFlashWindow &&
+                  this.m_window.SteamClient.Window.StopFlashWindow());
           }),
           (e.prototype.Close = function() {
             this.m_window && this.m_window.close();
