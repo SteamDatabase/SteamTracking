@@ -328,6 +328,13 @@ message CMsgClientStat2 {
 	repeated .CMsgClientStat2.StatDetail stat_detail = 1;
 }
 
+message CMsgClientMMSSetRatelimitPolicyOnClient {
+	optional uint32 app_id = 1;
+	optional bool enable_rate_limits = 2;
+	optional int32 seconds_per_message = 3;
+	optional int32 milliseconds_per_data_update = 4;
+}
+
 message CMsgClientMMSCreateLobby {
 	optional uint32 app_id = 1;
 	optional int32 max_members = 2;

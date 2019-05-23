@@ -2178,6 +2178,12 @@
         "server_type": 42
     },
     {
+        "emsg": 6625,
+        "name": "k_EMsgClientMMSSetRatelimitPolicyOnClient",
+        "flags": 6,
+        "server_type": 42
+    },
+    {
         "emsg": 6801,
         "name": "k_EMsgNonStdMsgMemcached",
         "flags": 0,
