@@ -230,6 +230,8 @@ LocalizationReady("friendsui", "english", {
   MobilePermission_Ensure:
     "Please ensure your device grants us the necessary permissions and try again.",
 
+  MobilePage_LoadFail: "Oops, something went wrong while loading this page.",
+
   WelcomeScreen_Title: "Welcome",
   WelcomeScreen_Subtitle: "to Steam Chat",
   MobileWelcomePage_Chat_Title: "Chat with friends and groups",
@@ -762,9 +764,9 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_AddToQuickAccess: "Add to Favorites",
   Friend_Menu_Ban: "Ban",
   Friend_Menu_ChangeNickname: "Change Nickname",
+  Friend_Menu_RemotePlay: "Remote Play",
   Friend_Menu_InviteToGame: "Invite to Play",
   Friend_Menu_InviteToLobby: "Invite to Lobby",
-  Friend_Menu_InviteToTrade: "Invite to Trade",
   Friend_Menu_InviteToWatch: "Invite to Watch",
   Friend_Menu_InviteToRemotePlay: "Invite for Remote Play",
   Friend_Menu_KickFromChatRoom: "Kick",
@@ -978,6 +980,11 @@ LocalizationReady("friendsui", "english", {
   MobileChatUploadLogsDesc:
     "Would you like to upload your app logs to help us diagnose this issue?",
 
+  RemotePlay_Host: "Host",
+  RemotePlay_Players: "Players",
+  RemotePlay_SharedInput: "Shared Input",
+  RemotePlay_DisableIncomingAudio: "Disable Incoming Audio",
+
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",
 
@@ -1048,6 +1055,17 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Notification_FriendOnline: "When a friend comes online",
   FriendSettings_Notification_ChatMessage:
     "When I receive a direct chat message",
+  FriendSettings_Notification_DirectChat:
+    "Notify me when I receive a direct message",
+  FriendSettings_Notification_DirectChatDescOn:
+    "Unless I have specific settings for that friend",
+  FriendSettings_Notification_DirectChatDescOff:
+    "You're only receiving notifications from friends you've specifically allowed",
+  FriendSettings_Notification_GroupChat: "Notify me for group chat activity",
+  FriendSettings_Notification_GroupChatDescOn:
+    "Unless I have specific settings for that group chat",
+  FriendSettings_Notification_GroupChatDescOff:
+    "You're not receiving notifications for group chats",
   FriendSettings_FriendNotification_FriendJoins:
     "When this friend joins a game",
   FriendSettings_FriendNotification_FriendOnline:
@@ -1057,7 +1075,7 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Notification_ChatRoomNotification:
     "When I receive a chat room notification",
   FriendSettings_Notification_Explanation:
-    "We'll try not to send you notifications if you're using Steam on your PC.",
+    "We'll try not to send you notifications if you're using Steam somewhere else.",
 
   FriendSettings_Flash_Header: "Flash window when I receive a chat message:",
   FriendSettings_Flash_Always: "Always",

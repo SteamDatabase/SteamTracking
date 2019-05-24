@@ -2104,25 +2104,6 @@
             );
             T.f.BroadcastStore.InviteToWatch(e.accountid).then(function(e) {});
           }),
-          (e.prototype.InviteToTrade = function(e) {
-            var t = p.b.Init(i.g, 7701);
-            t.Body().set_other_steamid(
-              e.persona.m_steamid.ConvertTo64BitString()
-            );
-            var n = T.f.ShowFriendChatDialog(
-              T.f.GetDefaultBrowserContext(),
-              e.accountid,
-              !0
-            );
-            n &&
-              n.AddNewTradeRequestAndNotify(
-                this.self.accountid,
-                T.f.GetServerRTime32(),
-                e.persona.m_steamid.ConvertTo64BitString(),
-                0
-              ),
-              this.m_CMInterface.Send(t);
-          }),
           (e.prototype.CancelTradeRequest = function(e) {
             var t = p.b.Init(i.f, 7706);
             t.Body().set_other_steamid(e), this.m_CMInterface.Send(t);
@@ -2180,7 +2161,6 @@
           r.c([b.g], e.prototype, "InviteToGame", null),
           r.c([b.g], e.prototype, "InviteToLobby", null),
           r.c([b.g], e.prototype, "InviteToWatch", null),
-          r.c([b.g], e.prototype, "InviteToTrade", null),
           r.c([b.g], e.prototype, "CancelTradeRequest", null),
           r.c([b.g], e.prototype, "RespondToTradeRequest", null),
           r.c([b.g], e.prototype, "OpenTradeWindow", null),
@@ -3459,7 +3439,15 @@
             strErrorMsg: e.response.data.message,
             errorCode: e.response.data.success
           };
-      } else console.error(e);
+      } else {
+        if (void 0 !== e.success && void 0 !== e.msg)
+          return { strErrorMsg: e.msg, errorCode: e.success };
+        if (void 0 !== e.success && void 0 !== e.message)
+          return { strErrorMsg: e.message, errorCode: e.success };
+        if (void 0 !== e.success && void 0 !== e.err_msg)
+          return { strErrorMsg: e.err_msg, errorCode: e.success };
+        console.error("GetMsgAndErrorCodeFromResponse: ", e);
+      }
       return "status" in e
         ? {
             strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
@@ -17404,126 +17392,126 @@
       );
     }
     var o = (function(n) {
-        function e(e) {
-          var t = n.call(this, e) || this;
-          return (
-            (t.state = { strCurrentNameEntry: t.props.player.nickname || "" }),
-            t
-          );
-        }
+      function e(e) {
+        var t = n.call(this, e) || this;
         return (
-          i.d(e, n),
-          (e.prototype.HandleTextEntry = function(e) {
-            this.setState({ strCurrentNameEntry: e.currentTarget.value });
-          }),
-          (e.prototype.HandleSubmit = function(e) {
-            var t = this;
-            C.f.FriendStore.SetPlayerNickname(
-              this.props.player,
-              this.state.strCurrentNameEntry
-            ).then(function(e) {
-              1 == e && t.props.closeModal && t.props.closeModal();
-            });
-          }),
-          (e.prototype.componentWillReceiveProps = function(e) {
-            e.player != this.props.player &&
-              this.setState({ strCurrentNameEntry: e.player.nickname });
-          }),
-          (e.prototype.render = function() {
-            var e = "friend editNickname",
-              t = this.props.player.has_nickname;
-            return (
-              this.props.player.persona.is_ingame
-                ? (e += " ingame")
-                : this.props.player.persona.is_online && (e += " online"),
-              t && (e += " nickNamed"),
+          (t.state = { strCurrentNameEntry: t.props.player.nickname || "" }), t
+        );
+      }
+      return (
+        i.d(e, n),
+        (e.prototype.HandleTextEntry = function(e) {
+          this.setState({ strCurrentNameEntry: e.currentTarget.value });
+        }),
+        (e.prototype.HandleSubmit = function(e) {
+          var t = this;
+          C.f.FriendStore.SetPlayerNickname(
+            this.props.player,
+            this.state.strCurrentNameEntry
+          ).then(function(e) {
+            1 == e && t.props.closeModal && t.props.closeModal();
+          });
+        }),
+        (e.prototype.componentWillReceiveProps = function(e) {
+          e.player != this.props.player &&
+            this.setState({ strCurrentNameEntry: e.player.nickname });
+        }),
+        (e.prototype.render = function() {
+          var e = "friend editNickname",
+            t = this.props.player.has_nickname;
+          return (
+            this.props.player.persona.is_ingame
+              ? (e += " ingame")
+              : this.props.player.persona.is_online && (e += " online"),
+            t && (e += " nickNamed"),
+            E.createElement(
+              O.a,
+              {
+                className: "Dialog_EditNickName",
+                onEscKeypress: this.props.closeModal
+              },
               E.createElement(
-                O.a,
+                s.h,
                 {
-                  className: "Dialog_EditNickName",
-                  onEscKeypress: this.props.closeModal
+                  classNameContent: "NicknameDialog",
+                  onSubmit: this.HandleSubmit
                 },
                 E.createElement(
-                  s.h,
-                  {
-                    classNameContent: "NicknameDialog",
-                    onSubmit: this.HandleSubmit
-                  },
+                  s.m,
+                  null,
+                  t
+                    ? Object(M.b)("#Friend_Menu_ChangeNickname")
+                    : Object(M.b)("#Friend_Menu_AddNickname")
+                ),
+                E.createElement(
+                  s.b,
+                  null,
                   E.createElement(
-                    s.m,
+                    s.c,
                     null,
                     t
-                      ? Object(M.b)("#Friend_Menu_ChangeNickname")
-                      : Object(M.b)("#Friend_Menu_AddNickname")
+                      ? Object(M.b)("#Nickname_EditNickname")
+                      : Object(M.b)("#Nickname_AddANickname")
                   ),
                   E.createElement(
-                    s.b,
+                    s.c,
                     null,
                     E.createElement(
-                      s.c,
-                      null,
-                      t
-                        ? Object(M.b)("#Nickname_EditNickname")
-                        : Object(M.b)("#Nickname_AddANickname")
-                    ),
-                    E.createElement(
-                      s.c,
-                      null,
+                      "div",
+                      { className: e },
+                      E.createElement("img", {
+                        className: "avatarMedium",
+                        src: this.props.player.persona.avatar_url_full
+                      }),
                       E.createElement(
                         "div",
-                        { className: e },
-                        E.createElement("img", {
-                          className: "avatarMedium",
-                          src: this.props.player.persona.avatar_url_full
-                        }),
+                        { className: "labelHolder" },
                         E.createElement(
                           "div",
-                          { className: "labelHolder" },
-                          E.createElement(
-                            "div",
-                            { className: "mediumName" },
-                            this.props.player.secondary_display_name
-                          ),
-                          E.createElement(
-                            "div",
-                            { className: "nickNamedAs" },
-                            Object(M.b)("#Nickname_NickNameAsDialog")
-                          ),
-                          E.createElement(
-                            "div",
-                            { className: "mediumName asNickName" },
-                            E.createElement(s.o, {
-                              placeholder: t
-                                ? Object(M.b)("#Nickname_PlaceHolderNickName")
-                                : Object(M.b)(
-                                    "#Nickname_PlaceHolderNickNameFresh"
-                                  ),
-                              className: "nicknameInput",
-                              value: this.state.strCurrentNameEntry,
-                              onChange: this.HandleTextEntry,
-                              autoFocus: !0,
-                              bShowClearAction: !0
-                            })
-                          )
+                          { className: "mediumName" },
+                          this.props.player.secondary_display_name
+                        ),
+                        E.createElement(
+                          "div",
+                          { className: "nickNamedAs" },
+                          Object(M.b)("#Nickname_NickNameAsDialog")
+                        ),
+                        E.createElement(
+                          "div",
+                          { className: "mediumName asNickName" },
+                          E.createElement(s.o, {
+                            placeholder: t
+                              ? Object(M.b)("#Nickname_PlaceHolderNickName")
+                              : Object(M.b)(
+                                  "#Nickname_PlaceHolderNickNameFresh"
+                                ),
+                            className: "nicknameInput",
+                            value: this.state.strCurrentNameEntry,
+                            onChange: this.HandleTextEntry,
+                            autoFocus: !0,
+                            bShowClearAction: !0
+                          })
                         )
                       )
                     )
-                  ),
-                  E.createElement(
-                    s.j,
-                    null,
-                    E.createElement(s.t, { onCancel: this.props.closeModal })
                   )
+                ),
+                E.createElement(
+                  s.j,
+                  null,
+                  E.createElement(s.t, { onCancel: this.props.closeModal })
                 )
               )
-            );
-          }),
-          i.c([a.a], e.prototype, "HandleTextEntry", null),
-          i.c([a.a], e.prototype, "HandleSubmit", null),
-          (e = i.c([r.a], e))
-        );
-      })(E.Component),
-      c = n("y4mg"),
+            )
+          );
+        }),
+        i.c([a.a], e.prototype, "HandleTextEntry", null),
+        i.c([a.a], e.prototype, "HandleSubmit", null),
+        (e = i.c([r.a], e))
+      );
+    })(E.Component);
+    E.Component;
+    var c = n("y4mg"),
       u = n("s+DT"),
       l = n("/IDK"),
       p = n("bbBM"),
@@ -19280,9 +19268,6 @@
               )
               .focus();
           }),
-          (t.prototype.InviteToTrade = function() {
-            C.f.FriendStore.InviteToTrade(this.props.friend);
-          }),
           (t.prototype.render = function() {
             var e = this.props.friend;
             return E.createElement(
@@ -19293,17 +19278,10 @@
                 G.d,
                 { onSelected: this.SendTradeOffer },
                 Object(M.b)("#FriendMenu_SendTradeOffer")
-              ),
-              e.persona.is_online &&
-                E.createElement(
-                  G.d,
-                  { onSelected: this.InviteToTrade },
-                  Object(M.b)("#Friend_Menu_InviteToTrade")
-                )
+              )
             );
           }),
           i.c([a.a], t.prototype, "SendTradeOffer", null),
-          i.c([a.a], t.prototype, "InviteToTrade", null),
           t
         );
       })(E.Component);
@@ -61852,78 +61830,65 @@
                 );
                 break;
               case "ShowFriendChatDialog":
-                (i = new J.a(t.steamid)).BIsValid()
-                  ? i.BIsIndividualAccount()
+                (n = new J.a(t.steamid)).BIsValid()
+                  ? n.BIsIndividualAccount()
                     ? this.m_FriendsUIApp.UIStore.ShowFriendChatDialogWhenReady(
                         e,
-                        i.GetAccountID()
+                        n.GetAccountID()
                       )
-                    : i.BIsClanAccount() &&
+                    : n.BIsClanAccount() &&
                       this.m_FriendsUIApp.FriendStore.ClanStore.JoinClanChatRoom(
                         e,
-                        i
+                        n
                       )
                   : this.ShowChatUnreadMessages(e);
                 break;
               case "CloseChatDialog":
-                if ((i = new J.a(t.steamid)).BIsIndividualAccount()) {
-                  var n = this.m_FriendsUIApp.ChatStore.GetFriendChat(
-                    i.GetAccountID(),
+                var n;
+                if ((n = new J.a(t.steamid)).BIsIndividualAccount()) {
+                  var o = this.m_FriendsUIApp.ChatStore.GetFriendChat(
+                    n.GetAccountID(),
                     !1
                   );
-                  n && this.m_FriendsUIApp.UIStore.CloseTabByID(n.unique_id);
-                } else if (i.BIsClanAccount()) {
-                  var o = this.m_FriendsUIApp.FriendStore.ClanStore.GetClan(i);
-                  if (o && o.GetChatGroupIDIfLoaded())
-                    (a = this.m_FriendsUIApp.ChatStore.GetChatRoomGroup(
-                      o.GetChatGroupIDIfLoaded()
-                    )) && this.m_FriendsUIApp.UIStore.CloseTabByID(a.unique_id);
-                }
-                break;
-              case "ShowInviteToTradeDialog":
-                var i;
-                if ((i = new J.a(t.steamid)).BIsIndividualAccount()) {
-                  var r = this.m_FriendsUIApp.FriendStore.GetFriend(
-                    i.GetAccountID()
-                  );
-                  r &&
-                    (this.m_FriendsUIApp.UIStore.ShowFriendChatDialogWhenReady(
-                      e,
-                      r.accountid
-                    ),
-                    this.m_FriendsUIApp.FriendStore.InviteToTrade(r));
+                  o && this.m_FriendsUIApp.UIStore.CloseTabByID(o.unique_id);
+                } else if (n.BIsClanAccount()) {
+                  var i = this.m_FriendsUIApp.FriendStore.ClanStore.GetClan(n);
+                  if (i && i.GetChatGroupIDIfLoaded())
+                    (r = this.m_FriendsUIApp.ChatStore.GetChatRoomGroup(
+                      i.GetChatGroupIDIfLoaded()
+                    )) && this.m_FriendsUIApp.UIStore.CloseTabByID(r.unique_id);
                 }
                 break;
               case "ShowChatRoomGroupDialog":
-                var a,
-                  s = t.chat_group_id,
-                  c = t.chat_room_id;
+                var r,
+                  a = t.chat_group_id,
+                  s = t.chat_room_id;
                 if (
-                  (a = this.m_FriendsUIApp.ChatStore.GetChatRoomGroup(s)) &&
-                  a.BIsCurrentUserAMember() &&
-                  !c
+                  (r = this.m_FriendsUIApp.ChatStore.GetChatRoomGroup(a)) &&
+                  r.BIsCurrentUserAMember() &&
+                  !s
                 )
                   this.m_FriendsUIApp.UIStore.ShowAndOrActivateChatRoomGroupWhenReady(
                     e,
-                    a,
+                    r,
                     !0
                   );
                 else {
-                  var l = this.m_FriendsUIApp.ChatStore.InviteStore.GetDirectInviteInfo(
+                  var c = this.m_FriendsUIApp.ChatStore.InviteStore.GetDirectInviteInfo(
+                    a,
                     s,
-                    c,
                     this.m_FriendsUIApp.FriendStore.self.accountid
                   );
-                  I({ invite: l, inviter: null }, e, window);
+                  I({ invite: c, inviter: null }, e, window);
                 }
                 break;
               case "ShowChatRoomGroupInvite":
                 if (this.m_FriendsUIApp.ready_to_render) {
-                  var p = t.invite_code;
-                  l = this.m_FriendsUIApp.ChatStore.InviteStore.GetInviteFromCode(
-                    p
+                  var l = t.invite_code;
+                  c = this.m_FriendsUIApp.ChatStore.InviteStore.GetInviteFromCode(
+                    l
                   );
-                  I({ invite: l, inviter: null }, e, window);
+                  I({ invite: c, inviter: null }, e, window);
                 }
                 break;
               case "SetPersonaState":
@@ -61932,10 +61897,10 @@
                 );
                 break;
               case "ShowWatchBroadcast":
-                var u = new J.a(t.steamid);
+                var p = new J.a(t.steamid);
                 this.m_FriendsUIApp.UIStore.ShowOrActivateBroadcast(
                   e,
-                  u.GetAccountID(),
+                  p.GetAccountID(),
                   !0
                 ).ShowWatchPromptDialog();
             }
@@ -67761,11 +67726,11 @@ and limitations under the License.
         return c;
       }),
       n.d(t, "a", function() {
-        return u;
+        return p;
       });
     var l = n("q1tI"),
-      i = (n("XaMz"), n("ujHl")),
-      o = (function() {
+      o = (n("Gp1o"), n("XaMz"), n("ujHl")),
+      i = (function() {
         function e() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map());
@@ -67792,13 +67757,18 @@ and limitations under the License.
                       a.m_mapFallbackTokens.set(e, r[e]);
                 });
           }),
-          (e.prototype.InitDirect = function(n) {
-            var o = this;
+          (e.prototype.InitDirect = function(n, o) {
+            var i = this;
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
               Object.keys(n).forEach(function(e, t) {
-                o.m_mapTokens.set(e, n[e]);
-              });
+                i.m_mapTokens.set(e, n[e]);
+              }),
+              o &&
+                Object.keys(o).forEach(function(e, t) {
+                  i.m_mapTokens.has(e) || i.m_mapTokens.set(e, o[e]),
+                    i.m_mapFallbackTokens.set(e, o[e]);
+                });
           }),
           (e.prototype.GetPreferredLocales = function() {
             return this.m_rgLocalesToUse
@@ -67826,7 +67796,7 @@ and limitations under the License.
     function r(e) {
       for (var o = [], t = 1; t < arguments.length; t++)
         o[t - 1] = arguments[t];
-      var n = u.LocalizeString(e);
+      var n = p.LocalizeString(e);
       return n
         ? (0 < o.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -67842,7 +67812,7 @@ and limitations under the License.
     function a(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = u.LocalizeString(e);
+      var o = p.LocalizeString(e);
       if (!o) return e;
       for (var i, r = [], a = /(.*?)%(\d+)\$s/g, s = 0; (i = a.exec(o)); ) {
         (s += i[0].length), r.push(i[1]);
@@ -67863,46 +67833,42 @@ and limitations under the License.
       );
     }
     function c(e, t) {
-      return void 0 === t && (t = !1), p(e, !t);
+      void 0 === t && (t = !1);
+      var n = t ? "#TimeInterval_" : "#TimeSince_";
+      return e >= 2 * o.a.PerYear
+        ? r(n + "XYears", Math.floor(e / o.a.PerYear))
+        : e >= o.a.PerYear
+        ? (e -= o.a.PerYear) >= 2 * o.a.PerMonth
+          ? r(n + "1YearXMonths", Math.floor(e / o.a.PerMonth))
+          : r(n + "1Year")
+        : e >= 2 * o.a.PerMonth
+        ? r(n + "XMonths", Math.floor(e / o.a.PerMonth))
+        : e >= 2 * o.a.PerWeek
+        ? r(n + "XWeeks", Math.floor(e / o.a.PerWeek))
+        : e >= o.a.PerWeek
+        ? r(n + "1Week", Math.floor(e / o.a.PerWeek))
+        : e >= 2 * o.a.PerDay
+        ? r(n + "XDays", Math.floor(e / o.a.PerDay))
+        : e >= o.a.PerDay
+        ? (e -= o.a.PerDay) >= 2 * o.a.PerHour
+          ? r(n + "1DayXHours", Math.floor(e / o.a.PerHour))
+          : r(n + "1Day")
+        : e >= 2 * o.a.PerHour
+        ? r(n + "XHours", Math.floor(e / o.a.PerHour))
+        : e >= o.a.PerHour
+        ? (e -= o.a.PerHour) >= 2 * o.a.PerMinute
+          ? r(n + "1HourXMinutes", Math.floor(e / o.a.PerMinute))
+          : r(n + "1Hour")
+        : e >= 2 * o.a.PerMinute
+        ? r(n + "XMinutes", Math.floor(e / o.a.PerMinute))
+        : e >= o.a.PerMinute
+        ? r(n + "1Minute")
+        : r(n + "LessThanAMinute");
     }
-    function p(e, t, n) {
-      void 0 === t && (t = !1), void 0 === n && (n = !0);
-      var o = t ? "#TimeSince_" : "#TimeInterval_";
-      return e >= 2 * i.a.PerYear
-        ? r(o + "XYears", Math.floor(e / i.a.PerYear))
-        : e >= i.a.PerYear
-        ? (e -= i.a.PerYear) >= 2 * i.a.PerMonth
-          ? r(o + "1YearXMonths", Math.floor(e / i.a.PerMonth))
-          : r(o + "1Year")
-        : e >= 2 * i.a.PerMonth
-        ? r(o + "XMonths", Math.floor(e / i.a.PerMonth))
-        : e >= 2 * i.a.PerWeek
-        ? r(o + "XWeeks", Math.floor(e / i.a.PerWeek))
-        : e >= i.a.PerWeek
-        ? r(o + "1Week", Math.floor(e / i.a.PerWeek))
-        : e >= 2 * i.a.PerDay
-        ? r(o + "XDays", Math.floor(e / i.a.PerDay))
-        : e >= i.a.PerDay
-        ? (e -= i.a.PerDay) >= 2 * i.a.PerHour
-          ? r(o + "1DayXHours", Math.floor(e / i.a.PerHour))
-          : r(o + "1Day")
-        : e >= 2 * i.a.PerHour
-        ? r(o + "XHours", Math.floor(e / i.a.PerHour))
-        : e >= i.a.PerHour
-        ? (e -= i.a.PerHour) >= 2 * i.a.PerMinute && n
-          ? r(o + "1HourXMinutes", Math.floor(e / i.a.PerMinute))
-          : r(o + "1Hour")
-        : n
-        ? e >= 2 * i.a.PerMinute
-          ? r(o + "XMinutes", Math.floor(e / i.a.PerMinute))
-          : e >= i.a.PerMinute
-          ? r(o + "1Minute")
-          : r(o + "LessThanAMinute")
-        : r(o + "LessThanAnHour");
-    }
+    new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var u = new o();
-    window.LocalizationManager = u;
+    var p = new i();
+    window.LocalizationManager = p;
   },
   qa7T: function(e, t, n) {
     "use strict";

@@ -121,6 +121,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_CallToAction_PlayNow: "Play Now",
 
   EventDisplay_Events: "Event Admin Dashboard",
+  EventDisplay_SeeOldVersion: "View Current Customer Version",
 
   EventDisplay_RightColumnTitle_Game: "Game",
   EventDisplay_RightColumnTitle_DateAndTime: "Date and Time",
@@ -177,6 +178,19 @@ LocalizationReady("shared", "english", {
   EventDisplay_Share_Failure: "Failed with following message: ",
   EventDisplay_Share_Announcement: "%1$s Announcement",
   EventDisplay_Share_Event: "%1$s Event",
+
+  EventDisplay_AreYouSure:
+    "Are you sure you want to delete this event (%1$s)? This action cannot be undone.",
+  EventDisplay_AreYouSure_Visible:
+    "Are you sure you want to delete this event (%1$s)? This action cannot be undone. This event will be removed from all places a user can discover it within a few minutes.",
+  EventDisplay_DeleteEvent_InProgress: "Delete in progress. Please wait.",
+  EventDisplay_DeleteEvent_Error:
+    "There was an error processing the delete request:",
+  EventDisplay_DeleteEvent_ForumTopicError:
+    "The event was successfully deleted. We failed when attempting to delete the forum topic thread for the event. You can always try against in %1$s site. Error details:",
+  EventDisplay_DeleteEvent_Success: "The event was successfully deleted.",
+  EventDisplay_DeleteEvent_Comment:
+    "Also delete the discussion forum comment thread for this event?",
 
   EventEditor_Publish_VisibleNow: "Make Visible Now",
   EventEditor_Publish_VisibleNow_ttip:

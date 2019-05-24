@@ -2295,16 +2295,20 @@ div.game_hover {
 	opacity: 1;
 }
 
-.game_hover_box h4 {
+.game_hover_box h4.hover_title {
 	color: #222d3d;
 	font-weight: normal;
-	font-size: 17px;
-	margin-bottom: 0;
+	font-size: 15px;
 
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-		}
+		    text-transform: unset;
+    letter-spacing: 0px;
+    margin-top: -4px;
+    line-height: 17px;
+    margin-bottom: 4px;
+}
 
 .game_hover_box .hover_release {
 	font-size: 10px;
@@ -2376,7 +2380,7 @@ div.game_hover {
 
 .hover_tag_row .app_tag {
 	background-color: #96a3ae;
-	color: #ffffff;
+	color: rgba(227,234,239,1);
 	box-shadow: none;
 	padding: 0 4px;
     font-size: 11px;

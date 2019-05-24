@@ -371,7 +371,7 @@ body.v6.dlc_curator h2.curator_name {
 	font-size: 30px;
 	margin-top: 0px;
 }
-body.v6.dlc_curator h4 {
+.dlc_curator h4 {
 	font-size: 14px;
 	font-weight: 200;
 	text-transform: uppercase;
